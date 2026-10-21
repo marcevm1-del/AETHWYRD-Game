@@ -28,8 +28,10 @@
 | 09 | [legendary_artifacts.md](09_Equipment/legendary_artifacts.md) | Divine artifacts, sentient weapons, legendaries |
 | 10 | [world.md](10_World/world.md) | All 40 regions with inspirations, Underworld, Deepgates, deep dives, traversal, living dungeons |
 | 11 | [quests_and_encounters.md](11_Quests_Encounters/quests_and_encounters.md) | Quest framework, encounters, world events, tournaments, the Academy |
+| 12 | [combat.md](12_Systems/combat.md) | **Combat spec**: camera, movement, combos, hit-stop, parry, reactions, Style Rank, damage, Ring 0 fun test |
 | 12 | [systems.md](12_Systems/systems.md) | Status Window, combat, economy, crafting, housing, difficulty, taming, prosperity, inventory, UI, loss safety |
 | 13 | [production.md](13_Production/production.md) | Engine, pipeline, build rings, release (deferred) |
+| 13 | [ring0_plan.md](13_Production/ring0_plan.md) | Ring 0 prototype: tech setup, 10-week milestones, your checklist |
 | 13 | [opening_music_and_memories.md](13_Production/opening_music_and_memories.md) | Anime opening, music direction, Memory Reel, story presentation |
 | 00 | [00_Questions/](00_Questions/) | Questionnaires and answers (**historical record**; folded into the docs above) |
 

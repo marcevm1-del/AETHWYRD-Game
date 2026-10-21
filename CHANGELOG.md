@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.8 — Combat spec & Ring 0 plan (2026-10-22)
+- New `12_Systems/combat.md`: full combat spec (camera, lock-on/free aim, dodge and Flash Time, combo grammar, hit-stop table, poise and break, parry and telegraph colors, element reactions, Style Rank, damage formula, Ring 0 monster AI, fun test).
+- New `Data/Combat/combat_tuning.json`: every feel number in one file.
+- New `13_Production/ring0_plan.md`: 10-week Ring 0 plan. Blocker found: the installed Unity editor is missing its Package Manager.
+
 Version history of the design bible and data. Git history has the exact diffs.
 
 ## v0.7 — Consolidation & data layer (2026-10-22)

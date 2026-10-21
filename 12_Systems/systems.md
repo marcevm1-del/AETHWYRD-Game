@@ -37,6 +37,8 @@ A translucent blue holographic panel with soft chimes; it opens in a burst of ru
 **Discovery XP:** finding vistas, ruins, lore and secrets gives meaningful XP. Exploration is a valid way to level.
 
 ## 3. Combat Feel
+> Overview only. The full, numbered spec is **`12_Systems/combat.md`** (tuning values in `Data/Combat/combat_tuning.json`); it wins on any detail.
+
 - **Third-person action:** light/heavy attack, dodge (i-frames), block/parry, jump, sprint, lock-on.
 - **Skill palette:** 4 slots + Ultimate (6 at B, 8 at S); hold a trigger to open the second palette.
 - **Companion commands:** a quick wheel (Focus, Defend, Heal, Hold, Union Skill).
@@ -125,6 +127,8 @@ A translucent blue holographic panel with soft chimes; it opens in a burst of ru
 - **Steam:** achievements (150+), cloud saves, Steam Deck controls, rich presence ("Exploring Whisperwood · Rank D").
 
 ## Combat Pillars
+> Summary of the pillars detailed in `12_Systems/combat.md`.
+
 1. **Fluid:** every attack can cancel into a dodge; skills cancel into skills (on a combo budget).
 2. **Fast:** quick base speed, dash, air dash, launch → juggle → slam.
 3. **Heavy:** hit-stop on impact, camera shake, enemies get knocked back, ground cracks, sound punches.
