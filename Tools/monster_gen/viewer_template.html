@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bestiary Viewer</title>
+<style>
+:root{--bg:#f6f4ef;--panel:#ffffff;--ink:#1d1b19;--muted:#6b6560;--line:#e2ddd4;--accent:#3d5afe;--chip:#efeae1;--sel:#e8edff}
+@media (prefers-color-scheme:dark){:root{--bg:#141317;--panel:#1d1c21;--ink:#ecebef;--muted:#9a97a3;--line:#2e2c35;--accent:#8c9eff;--chip:#29272f;--sel:#252a44}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+h1{font-size:18px;margin:0}
+.count{color:var(--muted)}
+.tabs button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px 12px;border-radius:6px;cursor:pointer}
+.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line)}
+.filters input,.filters select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit}
+.filters input[type=search]{min-width:220px;flex:1}
+main{display:grid;grid-template-columns:minmax(0,1fr) 420px;height:calc(100vh - 112px)}
+@media (max-width:900px){main{grid-template-columns:1fr;height:auto}#detail{border-left:none;border-top:1px solid var(--line)}}
+.list{overflow:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel);font-weight:600;z-index:1}
+tr{cursor:pointer}
+tr:hover td{background:var(--chip)}
+tr.sel td{background:var(--sel)}
+.rk{font-weight:700;font-variant-numeric:tabular-nums}
+#detail{border-left:1px solid var(--line);overflow:auto;padding:16px;background:var(--panel)}
+#detail h2{margin:0 0 4px;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:12px}
+.sw{display:inline-block;width:18px;height:18px;border-radius:4px;border:1px solid var(--line);vertical-align:middle;margin-right:4px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0}
+.stats div{background:var(--chip);border-radius:6px;padding:6px;text-align:center}
+.stats b{display:block;font-size:15px}
+.muted{color:var(--muted)}
+.more{padding:10px 16px}
+.more button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <h1>Bestiary Viewer</h1>
+  <span class="count" id="count"></span>
+  <span class="tabs"><button id="tSp" class="on">Species</button> <button id="tPop">Population</button></span>
+</header>
+<div class="filters">
+  <input type="search" id="q" placeholder="Search names, looks, families…">
+  <select id="fFam"><option value="">All families</option></select>
+  <select id="fRank"><option value="">All ranks</option></select>
+  <select id="fMen"><option value="">All menace</option></select>
+  <select id="fEl"><option value="">All elements</option></select>
+  <select id="fRing"><option value="">All rings</option></select>
+  <select id="fReg"><option value="">All regions</option></select>
+</div>
+<main>
+  <div class="list"><table><thead id="th"></thead><tbody id="tb"></tbody></table><div class="more" id="more"></div></div>
+  <aside id="detail"><p class="muted">Select a row to see details.</p></aside>
+</main>
+<script>
+const D = /*__DATA__*/null;
+const RANKS=['F','E','D','C','B','A','S','SS','SSS','EX'];
+const rv=r=>{const m=r.match(/^(SSS|SS|S|EX|F|E|D|C|B|A)([+-]?)$/);return RANKS.indexOf(m[1])*3+(m[2]==='-'?0:m[2]==='+'?2:1)};
+const spById=Object.fromEntries(D.species.map(s=>[s.i,s]));
+const $=id=>document.getElementById(id);
+let tab='sp',limit=300,selected=null;
+function opts(el,vals){vals.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;el.appendChild(o)})}
+opts($('fFam'),[...new Set(D.species.map(s=>s.f))]);
+opts($('fRank'),RANKS);
+opts($('fMen'),['Charming','Wild','Menacing','Dread','Horror']);
+opts($('fEl'),[...new Set(D.species.map(s=>s.e))].sort());
+opts($('fRing'),[...new Set(D.species.map(s=>s.ring))].sort((a,b)=>a-b).map(String));
+const regSel=$('fReg');Object.entries(D.regions).forEach(([id,n])=>{const o=document.createElement('option');o.value=id;o.textContent=n;regSel.appendChild(o)});
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function speciesRows(){
+  const q=$('q').value.toLowerCase(),f=$('fFam').value,r=$('fRank').value,m=$('fMen').value,e=$('fEl').value,ring=$('fRing').value,reg=$('fReg').value;
+  return D.species.filter(s=>(!f||s.f===f)&&(!r||s.r.replace(/[+-]$/,'')===r)&&(!m||s.m===m)&&(!e||s.e===e)&&(!ring||String(s.ring)===ring)&&(!reg||s.h.includes(reg))&&(!q||(s.n+' '+s.f+' '+s.x).toLowerCase().includes(q))).sort((a,b)=>rv(a.r)-rv(b.r)||a.n.localeCompare(b.n));
+}
+function popRows(){
+  const q=$('q').value.toLowerCase(),f=$('fFam').value,r=$('fRank').value,m=$('fMen').value,e=$('fEl').value,ring=$('fRing').value,reg=$('fReg').value;
+  return D.population.filter(p=>{const s=spById[p[2]];return(!f||s.f===f)&&(!r||p[5].replace(/[+-]$/,'')===r)&&(!m||s.m===m)&&(!e||s.e===e)&&(!ring||String(p[7])===ring)&&(!reg||p[3]===reg)&&(!q||(p[1]+' '+p[8]).toLowerCase().includes(q))});
+}
+function render(){
+  limit=Math.max(limit,300);
+  if(tab==='sp'){
+    const rows=speciesRows();$('count').textContent=rows.length+' species';
+    $('th').innerHTML='<tr><th>Name</th><th>Rank</th><th>Lv</th><th>Family</th><th>Menace</th><th>Element</th><th>Build</th><th>Ring</th></tr>';
+    $('tb').innerHTML=rows.slice(0,limit).map(s=>`<tr data-i="${s.i}" class="${selected===s.i?'sel':''}"><td>${esc(s.n)}</td><td class="rk">${s.r}</td><td>${s.l}</td><td>${esc(s.f)}</td><td>${s.m}</td><td>${s.e}</td><td>${s.b.replace('rig_','')}</td><td>${s.ring}</td></tr>`).join('');
+    $('more').innerHTML=rows.length>limit?`<button id="mb">Show more (${rows.length-limit} hidden)</button>`:'';
+  } else {
+    const rows=popRows();$('count').textContent=rows.length+' population variants';
+    $('th').innerHTML='<tr><th>Name</th><th>Rank</th><th>Lv</th><th>Region</th><th>Tier</th><th>Spawn</th><th>Ring</th></tr>';
+    $('tb').innerHTML=rows.slice(0,limit).map(p=>`<tr data-i="${p[2]}" data-p="${p[0]}"><td>${esc(p[1])}</td><td class="rk">${p[5]}</td><td>${p[6]}</td><td>${esc(D.regions[p[3]])}</td><td>${p[4]}</td><td>${p[9]}</td><td>${p[7]}</td></tr>`).join('');
+    $('more').innerHTML=rows.length>limit?`<button id="mb">Show more (${rows.length-limit} hidden)</button>`:'';
+  }
+  const mb=$('mb');if(mb)mb.onclick=()=>{limit+=500;render()};
+}
+function detail(id,popId){
+  const s=spById[id];selected=id;
+  const p=popId?D.population.find(x=>x[0]===popId):null;
+  const d=s.d;
+  $('detail').innerHTML=`<h2>${esc(p?p[1]:s.n)}</h2>
+  <div class="muted">${esc(s.f)} · ${esc(s.t)} · ${esc(s.g)}${s.k==='variant'?' · '+s.v+' variant':''}${s.u?' · Unique':''}</div>
+  <div class="chips"><span class="chip">Rank ${p?p[5]:s.r}</span><span class="chip">Lv ${p?p[6]:s.l}</span><span class="chip">${s.m}</span><span class="chip">${s.e} · weak ${s.w}</span><span class="chip">${s.z} m</span><span class="chip">Ring ${p?p[7]:s.ring}</span></div>
+  ${p?`<p><b>Population variant:</b> ${esc(p[8])} <span class="muted">(${esc(D.regions[p[3]])}, ${p[9]})</span></p>`:''}
+  <p>${esc(s.x)}</p>
+  <p class="muted">${esc(s.fn)}</p>
+  <div class="stats">${Object.entries(s.st).map(([k,v])=>`<div><b>${v}</b>${k.toUpperCase()}</div>`).join('')}</div>
+  <p><b>AI:</b> ${s.ai}<br><b>Attacks:</b> ${s.a.map(a=>esc(D.attacks[a])).join(', ')}</p>
+  <p><b>Habitats:</b> ${s.h.map(h=>esc(D.regions[h])).join(', ')}</p>
+  <h3>Design recipe</h3>
+  <p><b>Rig:</b> ${d.rigId} · <b>Parts:</b> ${d.parts.join(', ')}<br><b>Material:</b> ${d.material} · <b>VFX:</b> ${d.vfx}<br><b>Menace style:</b> ${esc(d.menaceStyle)}<br><b>Palette:</b> ${d.palette.map(c=>`<span class="sw" style="background:${c}"></span>${c}`).join(' ')}</p>
+  <p class="muted">ID: ${s.i}</p>`;
+  render();
+}
+$('tb').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr)detail(tr.dataset.i,tr.dataset.p)});
+['q','fFam','fRank','fMen','fEl','fRing','fReg'].forEach(id=>$(id).addEventListener('input',()=>{limit=300;render()}));
+$('tSp').onclick=()=>{tab='sp';$('tSp').classList.add('on');$('tPop').classList.remove('on');limit=300;render()};
+$('tPop').onclick=()=>{tab='pop';$('tPop').classList.add('on');$('tSp').classList.remove('on');limit=300;render()};
+render();
+</script>
+</body>
+</html>

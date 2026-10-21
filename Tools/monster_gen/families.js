@@ -21,6 +21,7 @@ module.exports = {
       'Ember Ooze|C|3|Fire|1.5|molten trails that harden into glass behind it',
       'Storm Slime|B|2|Lightning|1.2|a storm-cloud interior that flashes with tiny lightning',
       'Abyss Slime|S|5|Void|4.0|starless black jelly that swallows all light',
+      'Prismatic Slime Sovereign|SSS|2|Light|8.0|a crown of rainbow light refracted through its whole body',
       'Primordial Ooze|EX|5|Void|40|an ocean-sized mass that shows the faces of everything it has eaten'
     ]
   },
@@ -80,6 +81,7 @@ module.exports = {
       'Behemoth Calf|B+|2|Earth|4.0|a stone-plated back and stump-like legs',
       'Sabretooth King|A|3|Ice|3.2|two sabre fangs as long as swords',
       'Silver Fenrir|S|2|Light|6.0|silver fur that glows like moonlight',
+      'Behemoth Ascendant|SSS|3|Earth|40|a back that carries the ruins of a fortress it once trampled',
       'Jackalope|E|1|None|0.4|tiny antlers on a fluffy rabbit|quad_small',
       'Moon Hare|D|1|Light|0.5|white fur that glows under the full moon|quad_small',
       'Garmrok, the World-Eater|EX|4|Void|120|a wolf so vast its broken chains drag across the sky'
@@ -160,6 +162,7 @@ module.exports = {
       'Lich|A|4|Ice|2.2|a crowned skull with a phylactery chained to its chest|floating',
       'Vampire Lord|S|3|Blood|2.2|a cape that dissolves into bats',
       'Bone Dragon|S|4|Dark|20|a dragon skeleton held together by green fire|dragon',
+      'Lich Emperor|SSS|4|Ice|3.0|a crown of frozen souls and a phylactery the size of a castle tower|floating',
       'No-Life King|EX|4|Dark|3.0|a king of bone on a throne of a thousand skulls'
     ]
   },
@@ -197,6 +200,7 @@ module.exports = {
       'Frost Giant|A|3|Ice|9.0|a beard of icicles and armor of glacier ice',
       'Fire Giant|A+|3|Fire|9.0|skin like cooling lava and a forge-hammer',
       'Orc Disaster|S|3|Dark|4.0|a body bloated with devoured power and a crown of bones',
+      'Primeval Titan-Kin|SSS|3|Earth|40|a body of living bedrock wearing fragments of Titan armor',
       'Titan Remnant|EX|2|Earth|300|a mountain with a slow heartbeat'
     ]
   },
@@ -248,6 +252,7 @@ module.exports = {
       'Young Dragon|A|3|Fire|12|a proud crest and scales that shine like new coins',
       'Drake Lord|A+|3|Fire|10|a crown of broken horns from rivals it killed|wyvern',
       'Adult Dragon|S|3|Lightning|25|cathedral wings and a voice that shakes stone',
+      'Starfall Wyrm|SSS|3|Light|60|scales flecked with fallen starmetal that glitter like a night sky',
       'Ignivar, the Ember Throne|EX|3|Fire|80|a hoard of molten gold fused into its scales',
       'Glacirra, the White Silence|EX|2|Ice|80|wings like frozen waterfalls',
       'Zephyros, the Endless Sky|EX|2|Wind|90|a body made half of clouds',
@@ -276,6 +281,7 @@ module.exports = {
       'Crystal Golem|B+|2|Light|3.5|a body of prisms that splits light into rainbows',
       'Mimic King|A|5|None|6.0|a treasure vault that walks on a hundred stolen legs|mimic',
       'Mithril Colossus|S|2|Light|50|silver plating and a face like a temple mask',
+      'Starmetal Colossus|SSS|2|Light|120|a starmetal body that hums with Titan songs',
       'Titan of the First Age|EX|3|Earth|500|a walking continent of machinery and stone'
     ]
   },
@@ -296,6 +302,7 @@ module.exports = {
       'Ifrit|B|3|Fire|5.0|a torso of fire rising from a smoking lamp',
       'Storm Djinn|B+|3|Lightning|4.0|a cloud body with lightning tattoos',
       'Spirit King|S|2|Light|6.0|a crowned elemental giant of pure mana|medium_biped',
+      'Elemental Sovereign|SSS|3|Lightning|20|four orbiting crowns of fire, ice, storm and stone',
       'Elemental Primarch|EX|3|Void|40|four elements orbiting a void core'
     ]
   },
@@ -316,6 +323,7 @@ module.exports = {
       'Corpse Flower|B|4|Dark|4.0|a rotting bloom the size of a cart',
       'Elder Treant|A|2|Nature|12|a moss beard and owls living in its branches|plant_walker',
       'Ancient Treant|S|2|Nature|30|a forest growing from its shoulders|plant_walker',
+      'Worldroot Behemoth|SSS|3|Nature|80|a walking forest with a glowing heartwood core|plant_walker',
       'Blighted World Root|EX|5|Dark|300|black roots that pulse like veins'
     ]
   },
@@ -335,6 +343,7 @@ module.exports = {
       'Nightmare Steed|B+|3|Fire|2.5|flame hooves and a mane of smoke|quad_large',
       'Demon Knight|A|3|Dark|2.5|black-steel armor engraved with the Overlord\'s sigil',
       'Arch Demon|S|3|Dark|8.0|four wings and a voice like a choir|wyvern',
+      'Abyss Prince|SSS|3|Void|4.0|a crown of black flame and wings of torn night',
       'Abyss Herald|SS|4|Void|10|a tall figure with a void where its face should be'
     ]
   },
@@ -355,6 +364,7 @@ module.exports = {
       'Kraken Spawn|B+|4|Water|25|a galleon-sized body with hooked tentacles|cephalopod',
       'Merfolk Warden|A|2|Water|2.2|coral armor and a trident|naga',
       'Leviathan Young|S|3|Water|60|fins like the sails of a warship',
+      'Abyssal Kraken Queen|SSS|4|Void|200|tentacles that can wrap around whole islands|cephalopod',
       'Leviathan|EX|3|Water|600|a body so vast it moves the horizon'
     ]
   },
@@ -374,6 +384,7 @@ module.exports = {
       'Roc|A|3|Wind|30|a shadow as big as a cloud',
       'Phoenix|S|1|Fire|6.0|feathers of living flame that fall as embers',
       'Simurrah|S|1|Light|20|a healing bird with peacock-eyed plumage',
+      'Eternal Phoenix|SSS|1|Fire|30|a sun-bright body that rises again from its own ash',
       'Aethernax, the Sky Devourer|EX|4|Void|400|wings that leave holes in the sky'
     ]
   },
@@ -474,12 +485,13 @@ module.exports = {
       'Earth Weaver|B|4|Earth|6.0|a tiger-striped spider the size of a house|octopod',
       'Oni|B+|3|Fire|3.5|horns, a tiger-skin wrap and an iron club|large_biped',
       'Hunger Colossus|A|4|Dark|30|a skeleton giant built from the bones of the starved|large_biped',
+      'Great Tengu King|SSS|2|Wind|6.0|a mask of red lacquer and a fan that summons typhoons|avian',
       'Nine-Tailed Vixen Queen|S|2|Fire|8.0|nine tails that each hold a different spell|quad_large'
     ]
   },
   floorborn: {
     name: 'Floor-born', type: 'Dungeon-born', rig: 'golem', genre: 'Dungeon Crawl',
-    regions: ['Great Labyrinth', 'Aurumdeep', 'The Maw', 'Umbravel'],
+    regions: ['Great Labyrinth (Floors 1-40)', 'Great Labyrinth (Floors 41-90)', 'Great Labyrinth (Floors 91-120)', 'Aurumdeep', 'The Maw', 'Umbravel'],
     covering: 'stone-like hide', material: 'dungeon_stone', drops: ['Dungeon Core Shard'],
     behaviors: ['Aggressive', 'Swarm', 'Guardian'],
     trope: 'Monsters born directly from dungeon walls (DanMachi); dungeon as ecosystem (Dungeon Meshi)',

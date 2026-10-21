@@ -1,0 +1,12 @@
+{
+  "name": "project-ascend-data",
+  "private": true,
+  "description": "Design data tools for Project Ascend (no dependencies).",
+  "scripts": {
+    "gen": "node Tools/monster_gen/generate.js",
+    "schemas": "node Tools/validate/build_schemas.js",
+    "validate": "node Tools/validate/validate.js",
+    "build": "node Tools/validate/build_schemas.js && node Tools/monster_gen/generate.js && node Tools/validate/validate.js",
+    "viewer": "node Tools/serve.js"
+  }
+}

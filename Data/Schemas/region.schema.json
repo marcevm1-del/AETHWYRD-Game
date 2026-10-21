@@ -1,0 +1,81 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Region",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "biomes",
+  "rankMin",
+  "rankMax",
+  "ring",
+  "layer"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^reg_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "biomes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string"
+   }
+  },
+  "rankMin": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "rankMax": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "ring": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 9
+  },
+  "layer": {
+   "type": "string",
+   "enum": [
+    "surface",
+    "underworld",
+    "post-game"
+   ]
+  },
+  "allowedFamilies": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

@@ -1,0 +1,758 @@
+[
+ {
+  "id": "atk_body_slam",
+  "name": "Body Slam",
+  "kind": "melee",
+  "power": 1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_engulf",
+  "name": "Engulf",
+  "kind": "grab",
+  "power": 1.4,
+  "cooldownSec": 8,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
+  "id": "atk_split",
+  "name": "Split",
+  "kind": "summon",
+  "power": 0,
+  "cooldownSec": 20,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_tide_lash",
+  "name": "Tide Lash",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Water"
+ },
+ {
+  "id": "atk_thorn_volley",
+  "name": "Thorn Volley",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Nature"
+ },
+ {
+  "id": "atk_ember_burst",
+  "name": "Ember Burst",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Fire"
+ },
+ {
+  "id": "atk_venom_spit",
+  "name": "Venom Spit",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Poison"
+ },
+ {
+  "id": "atk_stone_spike",
+  "name": "Stone Spike",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Earth"
+ },
+ {
+  "id": "atk_frost_breath",
+  "name": "Frost Breath",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Ice"
+ },
+ {
+  "id": "atk_static_arc",
+  "name": "Static Arc",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Lightning"
+ },
+ {
+  "id": "atk_null_rift",
+  "name": "Null Rift",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Void"
+ },
+ {
+  "id": "atk_radiant_pulse",
+  "name": "Radiant Pulse",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Light"
+ },
+ {
+  "id": "atk_stab",
+  "name": "Stab",
+  "kind": "melee",
+  "power": 1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_thrown_junk",
+  "name": "Thrown Junk",
+  "kind": "ranged",
+  "power": 0.8,
+  "cooldownSec": 4,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_frenzied_lunge",
+  "name": "Frenzied Lunge",
+  "kind": "melee",
+  "power": 1.5,
+  "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_slash",
+  "name": "Slash",
+  "kind": "melee",
+  "power": 1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_heavy_swing",
+  "name": "Heavy Swing",
+  "kind": "melee",
+  "power": 1.6,
+  "cooldownSec": 6,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_guard_counter",
+  "name": "Guard Counter",
+  "kind": "counter",
+  "power": 1.3,
+  "cooldownSec": 10,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_stomp",
+  "name": "Stomp",
+  "kind": "aoe",
+  "power": 1.3,
+  "cooldownSec": 6,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_club_slam",
+  "name": "Club Slam",
+  "kind": "melee",
+  "power": 1.8,
+  "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_grab_and_throw",
+  "name": "Grab and Throw",
+  "kind": "grab",
+  "power": 2,
+  "cooldownSec": 14,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
+  "id": "atk_shadow_grasp",
+  "name": "Shadow Grasp",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Dark"
+ },
+ {
+  "id": "atk_bite",
+  "name": "Bite",
+  "kind": "melee",
+  "power": 1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_charge",
+  "name": "Charge",
+  "kind": "dash",
+  "power": 1.3,
+  "cooldownSec": 5,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_leap",
+  "name": "Leap",
+  "kind": "dash",
+  "power": 1.2,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_maul",
+  "name": "Maul",
+  "kind": "melee",
+  "power": 1.2,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_pounce",
+  "name": "Pounce",
+  "kind": "dash",
+  "power": 1.6,
+  "cooldownSec": 6,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_howl",
+  "name": "Howl",
+  "kind": "buff",
+  "power": 0,
+  "cooldownSec": 18,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_blood_lance",
+  "name": "Blood Lance",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Blood"
+ },
+ {
+  "id": "atk_mandible_crush",
+  "name": "Mandible Crush",
+  "kind": "melee",
+  "power": 1.1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_burrow_ambush",
+  "name": "Burrow Ambush",
+  "kind": "dash",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_acid_spray",
+  "name": "Acid Spray",
+  "kind": "ranged",
+  "power": 1,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_fang_bite",
+  "name": "Fang Bite",
+  "kind": "melee",
+  "power": 1.1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_web_shot",
+  "name": "Web Shot",
+  "kind": "ranged",
+  "power": 0.5,
+  "cooldownSec": 8,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_ceiling_drop",
+  "name": "Ceiling Drop",
+  "kind": "dash",
+  "power": 1.7,
+  "cooldownSec": 12,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_nibble",
+  "name": "Nibble",
+  "kind": "melee",
+  "power": 0.6,
+  "cooldownSec": 0,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_scatter",
+  "name": "Scatter",
+  "kind": "evade",
+  "power": 0,
+  "cooldownSec": 10,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_gale_cutter",
+  "name": "Gale Cutter",
+  "kind": "magic",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "Wind"
+ },
+ {
+  "id": "atk_grasp",
+  "name": "Grasp",
+  "kind": "melee",
+  "power": 1.2,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_unfold",
+  "name": "Unfold",
+  "kind": "aoe",
+  "power": 1.8,
+  "cooldownSec": 12,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_mimic_voice",
+  "name": "Mimic Voice",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 18,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_nip",
+  "name": "Nip",
+  "kind": "melee",
+  "power": 0.9,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_dart",
+  "name": "Dart",
+  "kind": "dash",
+  "power": 1.1,
+  "cooldownSec": 4,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_swarm_call",
+  "name": "Swarm Call",
+  "kind": "summon",
+  "power": 0,
+  "cooldownSec": 20,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_strike",
+  "name": "Strike",
+  "kind": "melee",
+  "power": 1.2,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_constrict",
+  "name": "Constrict",
+  "kind": "grab",
+  "power": 1.8,
+  "cooldownSec": 12,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
+  "id": "atk_tail_sweep",
+  "name": "Tail Sweep",
+  "kind": "aoe",
+  "power": 1.2,
+  "cooldownSec": 7,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_talon_rake",
+  "name": "Talon Rake",
+  "kind": "melee",
+  "power": 1.2,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_dive_bomb",
+  "name": "Dive Bomb",
+  "kind": "dash",
+  "power": 1.9,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_tail_whip",
+  "name": "Tail Whip",
+  "kind": "aoe",
+  "power": 1.3,
+  "cooldownSec": 6,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_chill_touch",
+  "name": "Chill Touch",
+  "kind": "melee",
+  "power": 0.9,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_phase_lunge",
+  "name": "Phase Lunge",
+  "kind": "dash",
+  "power": 1.3,
+  "cooldownSec": 7,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_wail",
+  "name": "Wail",
+  "kind": "aoe",
+  "power": 1.2,
+  "cooldownSec": 12,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_claw",
+  "name": "Claw",
+  "kind": "melee",
+  "power": 1.4,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_breath",
+  "name": "Breath",
+  "kind": "aoe",
+  "power": 2.2,
+  "cooldownSec": 14,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_wing_gust",
+  "name": "Wing Gust",
+  "kind": "aoe",
+  "power": 1,
+  "cooldownSec": 10,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_tail_blade",
+  "name": "Tail Blade",
+  "kind": "melee",
+  "power": 1.8,
+  "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_breach_lunge",
+  "name": "Breach Lunge",
+  "kind": "dash",
+  "power": 1.7,
+  "cooldownSec": 9,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_thrash",
+  "name": "Thrash",
+  "kind": "aoe",
+  "power": 1.3,
+  "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_chomp",
+  "name": "Chomp",
+  "kind": "melee",
+  "power": 1.6,
+  "cooldownSec": 0,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_tongue_lash",
+  "name": "Tongue Lash",
+  "kind": "grab",
+  "power": 1.4,
+  "cooldownSec": 6,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
+  "id": "atk_disguise",
+  "name": "Disguise",
+  "kind": "stealth",
+  "power": 0,
+  "cooldownSec": 20,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_slam",
+  "name": "Slam",
+  "kind": "melee",
+  "power": 1.4,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_ground_pound",
+  "name": "Ground Pound",
+  "kind": "aoe",
+  "power": 1.8,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_guard_stance",
+  "name": "Guard Stance",
+  "kind": "buff",
+  "power": 0,
+  "cooldownSec": 15,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_branch_sweep",
+  "name": "Branch Sweep",
+  "kind": "melee",
+  "power": 1.1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_root_slam",
+  "name": "Root Slam",
+  "kind": "aoe",
+  "power": 1.5,
+  "cooldownSec": 9,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_regrow",
+  "name": "Regrow",
+  "kind": "heal",
+  "power": 0,
+  "cooldownSec": 20,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_vine_lash",
+  "name": "Vine Lash",
+  "kind": "melee",
+  "power": 1.1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_snap_jaw",
+  "name": "Snap Jaw",
+  "kind": "grab",
+  "power": 1.7,
+  "cooldownSec": 9,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
+  "id": "atk_spore_burst",
+  "name": "Spore Burst",
+  "kind": "aoe",
+  "power": 1,
+  "cooldownSec": 10,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_coil_strike",
+  "name": "Coil Strike",
+  "kind": "melee",
+  "power": 1.1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_hypnotic_gaze",
+  "name": "Hypnotic Gaze",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 14,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_tentacle_slap",
+  "name": "Tentacle Slap",
+  "kind": "melee",
+  "power": 1.1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_drag_under",
+  "name": "Drag Under",
+  "kind": "grab",
+  "power": 1.8,
+  "cooldownSec": 12,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
+  "id": "atk_ink_cloud",
+  "name": "Ink Cloud",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 14,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_peck",
+  "name": "Peck",
+  "kind": "melee",
+  "power": 1,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_swoop",
+  "name": "Swoop",
+  "kind": "dash",
+  "power": 1.4,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_screech",
+  "name": "Screech",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 14,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_spear_thrust",
+  "name": "Spear Thrust",
+  "kind": "melee",
+  "power": 1.2,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_trample",
+  "name": "Trample",
+  "kind": "dash",
+  "power": 1.7,
+  "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_volley",
+  "name": "Volley",
+  "kind": "ranged",
+  "power": 1,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_sweep",
+  "name": "Sweep",
+  "kind": "melee",
+  "power": 1.3,
+  "cooldownSec": 0,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_head_throw",
+  "name": "Head Throw",
+  "kind": "ranged",
+  "power": 1.4,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ }
+]

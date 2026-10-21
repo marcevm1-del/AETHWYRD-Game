@@ -1,0 +1,77 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Item",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "category"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^itm_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "category": {
+   "type": "string",
+   "enum": [
+    "material",
+    "core",
+    "weapon",
+    "armor",
+    "accessory",
+    "consumable",
+    "key",
+    "relic"
+   ]
+  },
+  "rank": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "rarity": {
+   "type": "string",
+   "enum": [
+    "Common",
+    "Uncommon",
+    "Rare",
+    "Epic",
+    "Legendary",
+    "Mythic",
+    "Divine"
+   ]
+  },
+  "slot": {
+   "type": "string"
+  },
+  "value": {
+   "type": "integer",
+   "minimum": 0
+  },
+  "stats": {
+   "type": "object"
+  },
+  "flavor": {
+   "type": "string"
+  },
+  "setId": {
+   "type": "string"
+  }
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "NPC",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "tier",
+  "homeRegion",
+  "role",
+  "backstory"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^npc_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string"
+  },
+  "tier": {
+   "type": "string",
+   "enum": [
+    "core",
+    "major",
+    "townsfolk"
+   ]
+  },
+  "race": {
+   "type": "string"
+  },
+  "homeRegion": {
+   "type": "string",
+   "pattern": "^reg_[a-z0-9_]+$"
+  },
+  "settlement": {
+   "type": "string"
+  },
+  "role": {
+   "type": "string"
+  },
+  "backstory": {
+   "type": "string",
+   "minLength": 20
+  },
+  "secret": {
+   "type": "string"
+  },
+  "faction": {
+   "type": "string"
+  },
+  "romanceable": {
+   "type": "boolean"
+  },
+  "canDie": {
+   "type": "boolean"
+  },
+  "relationships": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "npcId",
+     "kind"
+    ],
+    "properties": {
+     "npcId": {
+      "type": "string",
+      "pattern": "^npc_[a-z0-9_]+$"
+     },
+     "kind": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

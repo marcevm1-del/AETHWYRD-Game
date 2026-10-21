@@ -1,0 +1,10 @@
+[
+ {"id": "itm_guild_issue_sword", "name": "Guild Issue Sword", "category": "weapon", "rank": "F", "rarity": "Common", "slot": "main_hand", "value": 20, "stats": {"atk": 8}, "flavor": "Free with registration. You get what you pay for."},
+ {"id": "itm_hollis_practice_blade", "name": "Hollis's Practice Blade", "category": "weapon", "rank": "E", "rarity": "Rare", "slot": "main_hand", "value": 180, "stats": {"atk": 22, "crit": 3}, "flavor": "Bent from a thousand swings. Still true."},
+ {"id": "itm_grukk_cleaver", "name": "Grukk's Cleaver", "category": "weapon", "rank": "E", "rarity": "Legendary", "slot": "main_hand", "value": 650, "stats": {"atk": 30, "bonusVsGoblinoid": 0.25}, "flavor": "He named it \"Hungry.\" It was."},
+ {"id": "itm_rookie_hood", "name": "Guild Rookie Hood", "category": "armor", "rank": "F", "rarity": "Common", "slot": "head", "value": 15, "stats": {"def": 3}, "setId": "set_guild_rookie", "flavor": "Brown leather, a little too big. Everyone's first hood."},
+ {"id": "itm_minor_hp_potion", "name": "Minor Healing Potion", "category": "consumable", "rank": "F", "rarity": "Common", "value": 10, "stats": {"heal": 120}, "flavor": "Tastes like mint and regret."},
+ {"id": "itm_silver_wolf_pelt", "name": "Silver Wolf Pelt", "category": "material", "rank": "C", "rarity": "Rare", "value": 400, "flavor": "It still glows faintly under the moon."},
+ {"id": "itm_moonfang_dagger", "name": "Moonfang Dagger", "category": "weapon", "rank": "C", "rarity": "Epic", "slot": "main_hand", "value": 2200, "stats": {"atk": 64, "nightCritBonus": 0.5}, "flavor": "One fang for revenge, one for mercy."},
+ {"id": "itm_guild_card_f", "name": "Oak Guild Card", "category": "key", "rank": "F", "rarity": "Common", "value": 0, "flavor": "Rank F. Burned stamp. Your name, spelled almost right."}
+]

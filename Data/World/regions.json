@@ -1,0 +1,617 @@
+[
+ {
+  "id": "reg_aldmere",
+  "name": "Aldmere",
+  "biomes": [
+   "plains",
+   "forest",
+   "swamp",
+   "ruins",
+   "city"
+  ],
+  "rankMin": "F",
+  "rankMax": "C",
+  "ring": 2,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_whisperwood",
+  "name": "Whisperwood",
+  "biomes": [
+   "forest",
+   "ruins"
+  ],
+  "rankMin": "F",
+  "rankMax": "E",
+  "ring": 1,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_greymoor",
+  "name": "Greymoor",
+  "biomes": [
+   "swamp"
+  ],
+  "rankMin": "D",
+  "rankMax": "C",
+  "ring": 2,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_labyrinth_upper",
+  "name": "Great Labyrinth (Floors 1-40)",
+  "biomes": [
+   "cave",
+   "ruins",
+   "underworld"
+  ],
+  "rankMin": "F",
+  "rankMax": "C",
+  "ring": 2,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_labyrinth_deep",
+  "name": "Great Labyrinth (Floors 41-90)",
+  "biomes": [
+   "cave",
+   "ruins",
+   "underworld"
+  ],
+  "rankMin": "B",
+  "rankMax": "S",
+  "ring": 6,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_labyrinth_abyss",
+  "name": "Great Labyrinth (Floors 91-120)",
+  "biomes": [
+   "cave",
+   "ruins",
+   "underworld"
+  ],
+  "rankMin": "SS",
+  "rankMax": "EX",
+  "ring": 8,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_sylvaran",
+  "name": "Sylvaran",
+  "biomes": [
+   "forest"
+  ],
+  "rankMin": "D",
+  "rankMax": "B",
+  "ring": 3,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_mossdeep",
+  "name": "Mossdeep",
+  "biomes": [
+   "forest"
+  ],
+  "rankMin": "D",
+  "rankMax": "C",
+  "ring": 3,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_lirian",
+  "name": "Lirian",
+  "biomes": [
+   "coast",
+   "city"
+  ],
+  "rankMin": "D",
+  "rankMax": "B",
+  "ring": 3,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_fanghold",
+  "name": "Fanghold",
+  "biomes": [
+   "plains",
+   "steppe"
+  ],
+  "rankMin": "D",
+  "rankMax": "B",
+  "ring": 4,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_iron_hold",
+  "name": "Iron Hold",
+  "biomes": [
+   "mountain",
+   "volcanic",
+   "cave"
+  ],
+  "rankMin": "C",
+  "rankMax": "A",
+  "ring": 4,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_moraveil",
+  "name": "Moraveil",
+  "biomes": [
+   "forest",
+   "plains",
+   "cave"
+  ],
+  "rankMin": "C",
+  "rankMax": "S",
+  "ring": 4,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_strife_marches",
+  "name": "Strife Marches",
+  "biomes": [
+   "plains",
+   "ruins",
+   "forest"
+  ],
+  "rankMin": "C",
+  "rankMax": "B",
+  "ring": 4,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_velmark",
+  "name": "Velmark",
+  "biomes": [
+   "plains",
+   "city"
+  ],
+  "rankMin": "C",
+  "rankMax": "B",
+  "ring": 4,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_hoshizora",
+  "name": "Hoshizora",
+  "biomes": [
+   "forest",
+   "mountain",
+   "coast",
+   "spirit"
+  ],
+  "rankMin": "C",
+  "rankMax": "A",
+  "ring": 5,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_kitsune_isles",
+  "name": "Kitsune Isles",
+  "biomes": [
+   "coast",
+   "spirit",
+   "forest"
+  ],
+  "rankMin": "C",
+  "rankMax": "A",
+  "ring": 5,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_frostveil",
+  "name": "Frostveil",
+  "biomes": [
+   "tundra",
+   "mountain"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 5,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_shen_lu",
+  "name": "Shen-Lu",
+  "biomes": [
+   "mountain",
+   "forest",
+   "spirit"
+  ],
+  "rankMin": "B",
+  "rankMax": "S",
+  "ring": 5,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_haneul",
+  "name": "Haneul",
+  "biomes": [
+   "mountain",
+   "city"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 5,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_whitewater_reach",
+  "name": "Whitewater Reach",
+  "biomes": [
+   "tundra",
+   "coast",
+   "sea"
+  ],
+  "rankMin": "A",
+  "rankMax": "S",
+  "ring": 5,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_umbravel",
+  "name": "Umbravel",
+  "biomes": [
+   "underworld",
+   "cave"
+  ],
+  "rankMin": "C",
+  "rankMax": "B",
+  "ring": 5,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_sunscar",
+  "name": "Sunscar",
+  "biomes": [
+   "desert",
+   "ruins"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_goldmere_coast",
+  "name": "Goldmere Coast",
+  "biomes": [
+   "coast",
+   "sea"
+  ],
+  "rankMin": "B",
+  "rankMax": "S",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_zarvan",
+  "name": "Zarvan",
+  "biomes": [
+   "desert",
+   "mountain",
+   "city"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_zaruma",
+  "name": "Zaruma",
+  "biomes": [
+   "plains",
+   "desert"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_dunewhale_drift",
+  "name": "Dunewhale Drift",
+  "biomes": [
+   "desert"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_xochitl_mire",
+  "name": "Xochitl Mire",
+  "biomes": [
+   "swamp",
+   "jungle"
+  ],
+  "rankMin": "C",
+  "rankMax": "B",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_lumbaya",
+  "name": "Lumbaya",
+  "biomes": [
+   "jungle",
+   "coast",
+   "ruins"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_stormreach",
+  "name": "Stormreach",
+  "biomes": [
+   "coast",
+   "mountain"
+  ],
+  "rankMin": "B",
+  "rankMax": "S",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_true_name_isles",
+  "name": "True-Name Isles",
+  "biomes": [
+   "coast",
+   "sea"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_hollow_sea",
+  "name": "Hollow Sea",
+  "biomes": [
+   "underworld",
+   "sea"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 6,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_ashira_vale",
+  "name": "Ashira Vale",
+  "biomes": [
+   "plains",
+   "forest"
+  ],
+  "rankMin": "B",
+  "rankMax": "B",
+  "ring": 6,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_dragon_spine",
+  "name": "Dragon Spine",
+  "biomes": [
+   "mountain",
+   "volcanic"
+  ],
+  "rankMin": "A",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_sky_archipelago",
+  "name": "Sky Archipelago",
+  "biomes": [
+   "sky",
+   "ruins"
+  ],
+  "rankMin": "S",
+  "rankMax": "SS",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_heavenreach",
+  "name": "Heavenreach",
+  "biomes": [
+   "mountain",
+   "sky"
+  ],
+  "rankMin": "A",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_vharlen",
+  "name": "Vharlen",
+  "biomes": [
+   "plains",
+   "city",
+   "mountain"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_gearholm",
+  "name": "Gearholm",
+  "biomes": [
+   "city",
+   "mountain"
+  ],
+  "rankMin": "B",
+  "rankMax": "A",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_cinderhole",
+  "name": "Cinderhole",
+  "biomes": [
+   "city",
+   "cave"
+  ],
+  "rankMin": "A",
+  "rankMax": "A",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_bastion",
+  "name": "Bastion",
+  "biomes": [
+   "steppe",
+   "city"
+  ],
+  "rankMin": "B",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_everdusk",
+  "name": "Everdusk",
+  "biomes": [
+   "forest",
+   "spirit"
+  ],
+  "rankMin": "A",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_apu_highlands",
+  "name": "Apu Highlands",
+  "biomes": [
+   "mountain"
+  ],
+  "rankMin": "A",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_lustrine_shores",
+  "name": "Lustrine Shores",
+  "biomes": [
+   "coast"
+  ],
+  "rankMin": "A",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_quaking_lands",
+  "name": "Quaking Lands",
+  "biomes": [
+   "mountain",
+   "plains"
+  ],
+  "rankMin": "S",
+  "rankMax": "S",
+  "ring": 7,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_aurumdeep",
+  "name": "Aurumdeep",
+  "biomes": [
+   "underworld",
+   "ruins"
+  ],
+  "rankMin": "A",
+  "rankMax": "A",
+  "ring": 7,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_nox_dominion",
+  "name": "Nox Dominion",
+  "biomes": [
+   "demon",
+   "volcanic",
+   "ruins"
+  ],
+  "rankMin": "S",
+  "rankMax": "SSS",
+  "ring": 8,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_calamity_steppe",
+  "name": "Calamity Steppe",
+  "biomes": [
+   "steppe"
+  ],
+  "rankMin": "S",
+  "rankMax": "SS",
+  "ring": 8,
+  "layer": "surface"
+ },
+ {
+  "id": "reg_the_maw",
+  "name": "The Maw",
+  "biomes": [
+   "underworld",
+   "cave"
+  ],
+  "rankMin": "S",
+  "rankMax": "SS",
+  "ring": 8,
+  "layer": "underworld"
+ },
+ {
+  "id": "reg_root_of_the_world",
+  "name": "Root of the World",
+  "biomes": [
+   "underworld"
+  ],
+  "rankMin": "SS",
+  "rankMax": "EX",
+  "ring": 8,
+  "layer": "underworld",
+  "allowedFamilies": [
+   "elemental",
+   "aberration",
+   "plant",
+   "construct",
+   "draconic",
+   "slime"
+  ]
+ },
+ {
+  "id": "reg_vesper",
+  "name": "Vesper",
+  "biomes": [
+   "demon",
+   "ruins",
+   "sky"
+  ],
+  "rankMin": "SS",
+  "rankMax": "EX",
+  "ring": 9,
+  "layer": "post-game",
+  "allowedFamilies": [
+   "vesperite",
+   "undead",
+   "shadow",
+   "aberration",
+   "construct",
+   "demon"
+  ]
+ }
+]

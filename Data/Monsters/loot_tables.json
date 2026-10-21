@@ -1,0 +1,6204 @@
+[
+ {
+  "id": "loot_slime_f",
+  "family": "Slimes",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_e",
+  "family": "Slimes",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_d",
+  "family": "Slimes",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_c",
+  "family": "Slimes",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_b",
+  "family": "Slimes",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_s",
+  "family": "Slimes",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_sss",
+  "family": "Slimes",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_ex",
+  "family": "Slimes",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_f",
+  "family": "Goblinoids",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_e",
+  "family": "Goblinoids",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_d",
+  "family": "Goblinoids",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_c",
+  "family": "Goblinoids",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_b",
+  "family": "Goblinoids",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_a",
+  "family": "Goblinoids",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_goblinoid_s",
+  "family": "Goblinoids",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_goblin_ear",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_crude_blade",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_stolen_trinket",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_kobold_f",
+  "family": "Kobolds",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_kobold_fang",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_scrap_metal",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_candle_stub",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_kobold_e",
+  "family": "Kobolds",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_kobold_fang",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_scrap_metal",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_candle_stub",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_kobold_d",
+  "family": "Kobolds",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_kobold_fang",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_scrap_metal",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_candle_stub",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_kobold_c",
+  "family": "Kobolds",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_kobold_fang",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_scrap_metal",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_candle_stub",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_kobold_b",
+  "family": "Kobolds",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_kobold_fang",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_scrap_metal",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_candle_stub",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_f",
+  "family": "Beasts",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_e",
+  "family": "Beasts",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_d",
+  "family": "Beasts",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_c",
+  "family": "Beasts",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_b",
+  "family": "Beasts",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_a",
+  "family": "Beasts",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_s",
+  "family": "Beasts",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_sss",
+  "family": "Beasts",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_ex",
+  "family": "Beasts",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_lycan_d",
+  "family": "Lycanthropes",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_cursed_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silver_bane_claw",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_lycan_c",
+  "family": "Lycanthropes",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_cursed_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silver_bane_claw",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_lycan_b",
+  "family": "Lycanthropes",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_cursed_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silver_bane_claw",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_lycan_a",
+  "family": "Lycanthropes",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_cursed_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silver_bane_claw",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_f",
+  "family": "Insects & Arachnids",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_e",
+  "family": "Insects & Arachnids",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_d",
+  "family": "Insects & Arachnids",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_c",
+  "family": "Insects & Arachnids",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_b",
+  "family": "Insects & Arachnids",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_a",
+  "family": "Insects & Arachnids",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_s",
+  "family": "Insects & Arachnids",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_ex",
+  "family": "Insects & Arachnids",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_killer_insect_e",
+  "family": "Killer Insects",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_killer_mandible",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_stinger",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_killer_insect_d",
+  "family": "Killer Insects",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_killer_mandible",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_stinger",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_killer_insect_c",
+  "family": "Killer Insects",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_killer_mandible",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_stinger",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_killer_insect_a",
+  "family": "Killer Insects",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_killer_mandible",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_stinger",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_f",
+  "family": "Undead",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_e",
+  "family": "Undead",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_d",
+  "family": "Undead",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_c",
+  "family": "Undead",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_b",
+  "family": "Undead",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_a",
+  "family": "Undead",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_s",
+  "family": "Undead",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_sss",
+  "family": "Undead",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_ex",
+  "family": "Undead",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_e",
+  "family": "Shadows",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_d",
+  "family": "Shadows",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_c",
+  "family": "Shadows",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_b",
+  "family": "Shadows",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_a",
+  "family": "Shadows",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_s",
+  "family": "Shadows",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_e",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_d",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_c",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_b",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_a",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_s",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_sss",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_ex",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_minotaur_d",
+  "family": "Minotaurs & Beastmen",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_horn",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_labyrinth_bronze",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_minotaur_c",
+  "family": "Minotaurs & Beastmen",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_horn",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_labyrinth_bronze",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_minotaur_b",
+  "family": "Minotaurs & Beastmen",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_horn",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_labyrinth_bronze",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_minotaur_s",
+  "family": "Minotaurs & Beastmen",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_horn",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_labyrinth_bronze",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_f",
+  "family": "Reptiles",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_e",
+  "family": "Reptiles",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_d",
+  "family": "Reptiles",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_c",
+  "family": "Reptiles",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_b",
+  "family": "Reptiles",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_s",
+  "family": "Reptiles",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_f",
+  "family": "Dragons",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_e",
+  "family": "Dragons",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_d",
+  "family": "Dragons",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_b",
+  "family": "Dragons",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_a",
+  "family": "Dragons",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_s",
+  "family": "Dragons",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_sss",
+  "family": "Dragons",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_ex",
+  "family": "Dragons",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_f",
+  "family": "Constructs & Mimics",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_e",
+  "family": "Constructs & Mimics",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_d",
+  "family": "Constructs & Mimics",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_c",
+  "family": "Constructs & Mimics",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_b",
+  "family": "Constructs & Mimics",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_a",
+  "family": "Constructs & Mimics",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_s",
+  "family": "Constructs & Mimics",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_sss",
+  "family": "Constructs & Mimics",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_ex",
+  "family": "Constructs & Mimics",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_f",
+  "family": "Elementals & Spirits",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_e",
+  "family": "Elementals & Spirits",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_d",
+  "family": "Elementals & Spirits",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_b",
+  "family": "Elementals & Spirits",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_s",
+  "family": "Elementals & Spirits",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_sss",
+  "family": "Elementals & Spirits",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_ex",
+  "family": "Elementals & Spirits",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_f",
+  "family": "Plants & Fungi",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_e",
+  "family": "Plants & Fungi",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_d",
+  "family": "Plants & Fungi",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_c",
+  "family": "Plants & Fungi",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_b",
+  "family": "Plants & Fungi",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_a",
+  "family": "Plants & Fungi",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_s",
+  "family": "Plants & Fungi",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_sss",
+  "family": "Plants & Fungi",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_plant_ex",
+  "family": "Plants & Fungi",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_sap",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_seed",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_spore_cap",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_e",
+  "family": "Demons",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_d",
+  "family": "Demons",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_c",
+  "family": "Demons",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_b",
+  "family": "Demons",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_a",
+  "family": "Demons",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_s",
+  "family": "Demons",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_sss",
+  "family": "Demons",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_ss",
+  "family": "Demons",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_f",
+  "family": "Aquatic",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_e",
+  "family": "Aquatic",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_d",
+  "family": "Aquatic",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_c",
+  "family": "Aquatic",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_b",
+  "family": "Aquatic",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_a",
+  "family": "Aquatic",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_s",
+  "family": "Aquatic",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_sss",
+  "family": "Aquatic",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aquatic_ex",
+  "family": "Aquatic",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_fish_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_ink_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_f",
+  "family": "Avians",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_e",
+  "family": "Avians",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_d",
+  "family": "Avians",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_c",
+  "family": "Avians",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_b",
+  "family": "Avians",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_a",
+  "family": "Avians",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_s",
+  "family": "Avians",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_sss",
+  "family": "Avians",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_ex",
+  "family": "Avians",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_chimera_b",
+  "family": "Chimeras & Mythic Beasts",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_chimera_heart",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_mythic_horn",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_chimera_a",
+  "family": "Chimeras & Mythic Beasts",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_chimera_heart",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_mythic_horn",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_chimera_s",
+  "family": "Chimeras & Mythic Beasts",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_chimera_heart",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_mythic_horn",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_chimera_ex",
+  "family": "Chimeras & Mythic Beasts",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_chimera_heart",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_mythic_horn",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_serpentfolk_c",
+  "family": "Serpentfolk",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_serpent_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_temple_gold",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_serpentfolk_b",
+  "family": "Serpentfolk",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_serpent_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_temple_gold",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_serpentfolk_s",
+  "family": "Serpentfolk",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_serpent_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_temple_gold",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_centaur_c",
+  "family": "Centaurs & Taurs",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_horsehair",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_painted_barding",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_centaur_b",
+  "family": "Centaurs & Taurs",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_horsehair",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_painted_barding",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_centaur_a",
+  "family": "Centaurs & Taurs",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_horsehair",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_painted_barding",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_headless_c",
+  "family": "The Headless",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_rider_s_lantern",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_cursed_iron",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_headless_b",
+  "family": "The Headless",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_rider_s_lantern",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_cursed_iron",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_headless_s",
+  "family": "The Headless",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_rider_s_lantern",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_cursed_iron",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_gremlin_f",
+  "family": "Gremlins",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_stolen_bolt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gremlin_ear",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_gremlin_e",
+  "family": "Gremlins",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_stolen_bolt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gremlin_ear",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_gremlin_c",
+  "family": "Gremlins",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_stolen_bolt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gremlin_ear",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aberration_f",
+  "family": "Aberrations",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_unreal_fragment",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_eye_of_nothing",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aberration_d",
+  "family": "Aberrations",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_unreal_fragment",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_eye_of_nothing",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aberration_c",
+  "family": "Aberrations",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_unreal_fragment",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_eye_of_nothing",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aberration_b",
+  "family": "Aberrations",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_unreal_fragment",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_eye_of_nothing",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_aberration_a",
+  "family": "Aberrations",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_unreal_fragment",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_eye_of_nothing",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_f",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_e",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_d",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_c",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_b",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_a",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_sss",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "SSS",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_sss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_yokai_s",
+  "family": "Yokai-Inspired Spirits",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_spirit_paper",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fox_fire",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_f",
+  "family": "Floor-born",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_e",
+  "family": "Floor-born",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_d",
+  "family": "Floor-born",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_c",
+  "family": "Floor-born",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_b",
+  "family": "Floor-born",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_a",
+  "family": "Floor-born",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_vesperite_c",
+  "family": "Vesperites (Moon Raiders)",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_vesper_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_captured_soul_light",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_vesperite_b",
+  "family": "Vesperites (Moon Raiders)",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_vesper_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_captured_soul_light",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_vesperite_a",
+  "family": "Vesperites (Moon Raiders)",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_vesper_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_captured_soul_light",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_vesperite_s",
+  "family": "Vesperites (Moon Raiders)",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_vesper_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_captured_soul_light",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_f",
+  "family": "Sandborne",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_d",
+  "family": "Sandborne",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_c",
+  "family": "Sandborne",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_b",
+  "family": "Sandborne",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_ex",
+  "family": "Sandborne",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_f",
+  "family": "Humanoid Enemies",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_d",
+  "family": "Humanoid Enemies",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_c",
+  "family": "Humanoid Enemies",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_b",
+  "family": "Humanoid Enemies",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_a",
+  "family": "Humanoid Enemies",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_s",
+  "family": "Humanoid Enemies",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_ex",
+  "family": "Humanoid Enemies",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_familiar_f",
+  "family": "Familiars & Gentle Creatures",
+  "rank": "F",
+  "entries": [
+   {
+    "itemId": "itm_mat_soft_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_shed_scale",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_f",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_familiar_e",
+  "family": "Familiars & Gentle Creatures",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_soft_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_shed_scale",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_familiar_a",
+  "family": "Familiars & Gentle Creatures",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_soft_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_shed_scale",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_kobold_a",
+  "family": "Kobolds",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_kobold_fang",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_scrap_metal",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_candle_stub",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_beast_ss",
+  "family": "Beasts",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_pelt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_fang",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_prime_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_insect_ss",
+  "family": "Insects & Arachnids",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_carapace_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_silk",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_venom_sac",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_killer_insect_b",
+  "family": "Killer Insects",
+  "rank": "B",
+  "entries": [
+   {
+    "itemId": "itm_mat_killer_mandible",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_stinger",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_b",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_shadow_ss",
+  "family": "Shadows",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_shade_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_night_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_orc_giant_ss",
+  "family": "Orcs, Ogres & Giants",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_tusk",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_giant_s_hide",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_crude_iron",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_minotaur_a",
+  "family": "Minotaurs & Beastmen",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_horn",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_labyrinth_bronze",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_a",
+  "family": "Reptiles",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_reptile_ss",
+  "family": "Reptiles",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_reptile_eye",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_tail_meat",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_c",
+  "family": "Dragons",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_draconic_ss",
+  "family": "Dragons",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_dragon_scale",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_dragon_blood",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_dragon_heart",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_construct_ss",
+  "family": "Constructs & Mimics",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_golem_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_rune_plate",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_gear",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_c",
+  "family": "Elementals & Spirits",
+  "rank": "C",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_c",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_a",
+  "family": "Elementals & Spirits",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_elemental_ss",
+  "family": "Elementals & Spirits",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_elemental_essence",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_spirit_mote",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_demon_ex",
+  "family": "Demons",
+  "rank": "EX",
+  "entries": [
+   {
+    "itemId": "itm_mat_demon_core",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_horn_shard",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_brimstone",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ex",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_avian_ss",
+  "family": "Avians",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_feather",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_talon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_egg",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_chimera_ss",
+  "family": "Chimeras & Mythic Beasts",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_chimera_heart",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_mythic_horn",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_headless_a",
+  "family": "The Headless",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_rider_s_lantern",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_cursed_iron",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_gremlin_d",
+  "family": "Gremlins",
+  "rank": "D",
+  "entries": [
+   {
+    "itemId": "itm_mat_stolen_bolt",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gremlin_ear",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_d",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_floorborn_s",
+  "family": "Floor-born",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_dungeon_core_shard",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_vesperite_ss",
+  "family": "Vesperites (Moon Raiders)",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_vesper_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_captured_soul_light",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_e",
+  "family": "Sandborne",
+  "rank": "E",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_e",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_sandborne_a",
+  "family": "Sandborne",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_desert_glass",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_sand_pearl",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_humanoid_enemy_ss",
+  "family": "Humanoid Enemies",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_coin_purse",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_weapon",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_bounty_proof",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_familiar_s",
+  "family": "Familiars & Gentle Creatures",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_soft_fur",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_shed_scale",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_slime_a",
+  "family": "Slimes",
+  "rank": "A",
+  "entries": [
+   {
+    "itemId": "itm_mat_slime_jelly",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_gel_core",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_a",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_killer_insect_s",
+  "family": "Killer Insects",
+  "rank": "S",
+  "entries": [
+   {
+    "itemId": "itm_mat_killer_mandible",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_stinger",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_s",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ },
+ {
+  "id": "loot_undead_ss",
+  "family": "Undead",
+  "rank": "SS",
+  "entries": [
+   {
+    "itemId": "itm_mat_bone_dust",
+    "weight": 60,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "itemId": "itm_mat_grave_cloth",
+    "weight": 30,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_soul_ember",
+    "weight": 15,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_core_ss",
+    "weight": 100,
+    "min": 1,
+    "max": 1
+   }
+  ]
+ }
+]

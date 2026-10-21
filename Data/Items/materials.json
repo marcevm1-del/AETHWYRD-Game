@@ -1,0 +1,597 @@
+[
+ {
+  "id": "itm_mat_slime_jelly",
+  "name": "Slime Jelly",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_gel_core",
+  "name": "Gel Core",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_core_f",
+  "name": "F-Rank Monster Core",
+  "category": "core",
+  "rank": "F",
+  "value": 10
+ },
+ {
+  "id": "itm_core_e",
+  "name": "E-Rank Monster Core",
+  "category": "core",
+  "rank": "E",
+  "value": 18
+ },
+ {
+  "id": "itm_core_d",
+  "name": "D-Rank Monster Core",
+  "category": "core",
+  "rank": "D",
+  "value": 32
+ },
+ {
+  "id": "itm_core_c",
+  "name": "C-Rank Monster Core",
+  "category": "core",
+  "rank": "C",
+  "value": 58
+ },
+ {
+  "id": "itm_core_b",
+  "name": "B-Rank Monster Core",
+  "category": "core",
+  "rank": "B",
+  "value": 105
+ },
+ {
+  "id": "itm_core_s",
+  "name": "S-Rank Monster Core",
+  "category": "core",
+  "rank": "S",
+  "value": 340
+ },
+ {
+  "id": "itm_core_sss",
+  "name": "SSS-Rank Monster Core",
+  "category": "core",
+  "rank": "SSS",
+  "value": 1102
+ },
+ {
+  "id": "itm_core_ex",
+  "name": "EX-Rank Monster Core",
+  "category": "core",
+  "rank": "EX",
+  "value": 1984
+ },
+ {
+  "id": "itm_mat_goblin_ear",
+  "name": "Goblin Ear",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_crude_blade",
+  "name": "Crude Blade",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_stolen_trinket",
+  "name": "Stolen Trinket",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_core_a",
+  "name": "A-Rank Monster Core",
+  "category": "core",
+  "rank": "A",
+  "value": 189
+ },
+ {
+  "id": "itm_mat_kobold_fang",
+  "name": "Kobold Fang",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_scrap_metal",
+  "name": "Scrap Metal",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_candle_stub",
+  "name": "Candle Stub",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_pelt",
+  "name": "Pelt",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_fang",
+  "name": "Fang",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_prime_meat",
+  "name": "Prime Meat",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_cursed_fur",
+  "name": "Cursed Fur",
+  "category": "material",
+  "rank": "D",
+  "value": 8
+ },
+ {
+  "id": "itm_mat_silver_bane_claw",
+  "name": "Silver-Bane Claw",
+  "category": "material",
+  "rank": "D",
+  "value": 8
+ },
+ {
+  "id": "itm_mat_carapace_shard",
+  "name": "Carapace Shard",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_silk",
+  "name": "Silk",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_venom_sac",
+  "name": "Venom Sac",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_killer_mandible",
+  "name": "Killer Mandible",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_stinger",
+  "name": "Stinger",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_bone_dust",
+  "name": "Bone Dust",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_grave_cloth",
+  "name": "Grave Cloth",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_soul_ember",
+  "name": "Soul Ember",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_shade_essence",
+  "name": "Shade Essence",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_night_shard",
+  "name": "Night Shard",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_tusk",
+  "name": "Tusk",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_giant_s_hide",
+  "name": "Giant's Hide",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_crude_iron",
+  "name": "Crude Iron",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_horn",
+  "name": "Horn",
+  "category": "material",
+  "rank": "D",
+  "value": 8
+ },
+ {
+  "id": "itm_mat_labyrinth_bronze",
+  "name": "Labyrinth Bronze",
+  "category": "material",
+  "rank": "D",
+  "value": 8
+ },
+ {
+  "id": "itm_mat_scale",
+  "name": "Scale",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_reptile_eye",
+  "name": "Reptile Eye",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_tail_meat",
+  "name": "Tail Meat",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_dragon_scale",
+  "name": "Dragon Scale",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_dragon_blood",
+  "name": "Dragon Blood",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_dragon_heart",
+  "name": "Dragon Heart",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_golem_core",
+  "name": "Golem Core",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_rune_plate",
+  "name": "Rune Plate",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_gear",
+  "name": "Gear",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_elemental_essence",
+  "name": "Elemental Essence",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_spirit_mote",
+  "name": "Spirit Mote",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_sap",
+  "name": "Sap",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_seed",
+  "name": "Seed",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_spore_cap",
+  "name": "Spore Cap",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_demon_core",
+  "name": "Demon Core",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_horn_shard",
+  "name": "Horn Shard",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_mat_brimstone",
+  "name": "Brimstone",
+  "category": "material",
+  "rank": "E",
+  "value": 6
+ },
+ {
+  "id": "itm_core_ss",
+  "name": "SS-Rank Monster Core",
+  "category": "core",
+  "rank": "SS",
+  "value": 612
+ },
+ {
+  "id": "itm_mat_fish_scale",
+  "name": "Fish Scale",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_pearl",
+  "name": "Pearl",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_ink_sac",
+  "name": "Ink Sac",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_feather",
+  "name": "Feather",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_talon",
+  "name": "Talon",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_egg",
+  "name": "Egg",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_chimera_heart",
+  "name": "Chimera Heart",
+  "category": "material",
+  "rank": "B",
+  "value": 18
+ },
+ {
+  "id": "itm_mat_mythic_horn",
+  "name": "Mythic Horn",
+  "category": "material",
+  "rank": "B",
+  "value": 18
+ },
+ {
+  "id": "itm_mat_serpent_scale",
+  "name": "Serpent Scale",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_temple_gold",
+  "name": "Temple Gold",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_horsehair",
+  "name": "Horsehair",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_painted_barding",
+  "name": "Painted Barding",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_rider_s_lantern",
+  "name": "Rider's Lantern",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_cursed_iron",
+  "name": "Cursed Iron",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_stolen_bolt",
+  "name": "Stolen Bolt",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_gremlin_ear",
+  "name": "Gremlin Ear",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_unreal_fragment",
+  "name": "Unreal Fragment",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_eye_of_nothing",
+  "name": "Eye of Nothing",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_spirit_paper",
+  "name": "Spirit Paper",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_fox_fire",
+  "name": "Fox Fire",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_dungeon_core_shard",
+  "name": "Dungeon Core Shard",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_vesper_glass",
+  "name": "Vesper Glass",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_captured_soul_light",
+  "name": "Captured Soul-Light",
+  "category": "material",
+  "rank": "C",
+  "value": 12
+ },
+ {
+  "id": "itm_mat_desert_glass",
+  "name": "Desert Glass",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_sand_pearl",
+  "name": "Sand Pearl",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_coin_purse",
+  "name": "Coin Purse",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_weapon",
+  "name": "Weapon",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_bounty_proof",
+  "name": "Bounty Proof",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_soft_fur",
+  "name": "Soft Fur",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ },
+ {
+  "id": "itm_mat_shed_scale",
+  "name": "Shed Scale",
+  "category": "material",
+  "rank": "F",
+  "value": 4
+ }
+]
