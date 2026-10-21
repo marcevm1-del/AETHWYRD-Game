@@ -36,7 +36,7 @@
 | **The Long Night** | ~3,000 | First Demon Lord; Valdrisia vanishes in one night | Cursed dunes, sealed tombs |
 | **The First Summoning** | Year 0 S.C. | Ilvaris teaches the Church the Summoning Rite; the first Hero wins | Summoning Cathedral, Aldmere City |
 | **The Cycle** | 0–1024 S.C. | A Demon Lord rises roughly every ~300 yrs; a Hero is summoned each time | Statues of 3 Heroes… one with its face smashed |
-| **Now** | **1024 S.C.** | Vesper, the red moon, waxes early. The fourth Demon Lord stirs | — |
+| **Now** | **1024 S.C.** | Vesper, the red moon, waxes early. The Demon Overlord Azrael stirs | — |
 
 ## 4. The System (Status)
 - **Official truth:** Ilvaris created Status after the Sundering so that mortals could grow strong enough to face Calamities.
@@ -44,9 +44,9 @@
 - **The secret (Act V):**
   - When a soul reaches SSS, part of its growth is **harvested** to re-stitch the fraying Weave.
   - Otherworld souls are summoned because they have **unbound growth capacity**. They're fuel.
-  - The current Demon Lord is the **second summoned Hero** (the smashed statue). He learned the truth and chose to become a monster instead.
+  - The current **Demon Overlord, Azrael**, is the **second summoned Hero** (the smashed statue). He learned the truth and chose to become a monster instead.
   - Ilvaris isn't evil. She's desperately keeping the world from unraveling, at a terrible price.
-- This gives all five endings real moral weight.
+- This gives every ending (11 main + 1 secret) real moral weight.
 
 ## 5. Magic Theory
 | Term | Meaning |
@@ -63,7 +63,7 @@
 
 ## 6. Moons, Sky & Calendar
 - **Lumen** (silver, large): 30-day cycle. Full Lumen means healing +, undead −.
-- **Vesper** (red, small): erratic cycle. **Blood Vesper** (full red moon) means all monsters +1 sub-rank, rare spawns, demon activity.
+- **Vesper** (red, small): erratic cycle. **Blood Vesper** (full red moon) means all monsters +1 sub-rank, rare spawns, demon activity. *Secret (Act V):* Vesper is the lost capital of **Valdrisia**, torn into the sky by the Night of Unweaving; its erratic cycle is the trapped souls pulling against Malgareth's spell.
 - **Twin Eclipse** (both moons cover the sun): yearly world event. The veil thins and spirits walk.
 - **The Shattered Sky:** a scar across the northern sky from the Sundering; it shimmers like an aurora at night.
 
@@ -99,4 +99,41 @@ Otherworlders get **[Comprehension]** for spoken Common, but reading other scrip
 7. Why do slimes appear in no record before the Sundering?
 8. Why has the cat at the Brindlewick inn been alive for 400 years? *(Vex in disguise.)*
 
-> **v0.5 retcon:** Vesper is the lost capital of **Valdrisia**, torn into the sky by the Night of Unweaving. Malgareth Vey (the Red Prophet) still lives. See `red_prophet_and_nocturne.md`.
+> Spoilers for Vesper, Malgareth and the System: see `Canon.md` §3 and `story.md`.
+
+## The System's 8 Personalities
+The System **adapts to how you live**. Its personality shifts over time as you play (with a hidden score per type). Voice: **male or female**, chosen at creation.
+| Personality | Grows when you… | Sample line |
+|---|---|---|
+| **Administrator** (default) | Play neutrally | *"Level up confirmed. Proceed."* |
+| **Mentor** | Help people, do quests carefully | *"Well done. Rest now, you've earned it."* |
+| **Companion** | Build bonds, camp often | *"Level up! They'd be proud of you, you know."* |
+| **Archivist** | Read books, find lore, explore | *"New record! Did you know this ruin is 3,000 years old?"* |
+| **Zealot** | High Devotion to any god | *"Praise be. The heavens witnessed your strength."* |
+| **Warden** | Dark Karma, cruelty | *"Threat level of user: rising. Noted."* |
+| **Duelist** | Seek strong enemies, hunt bosses | *"Finally, a worthy opponent. Don't disappoint me."* |
+| **Fractured** | Forbidden magic, truth-seeking, Ezrath | *"Lev—el up. W̷h̷y̷ do you keep asking what I am?"* |
+In Act V, the System's personality **decides how it reacts to the truth**: it may beg, help, resist, or ask you to free it.
+
+## Talking to Gods
+| Devotion | Communion |
+|---|---|
+| 0–2 | Shrines only give blessings |
+| 3 | **Dreams**: the god appears in symbolic dreams |
+| 5 | **Omens**: signs in the world; the god's voice at their shrines |
+| 7 | **Divine quests**: the god asks things of you |
+| 9 | **Avatar Audience**: speak face to face (unique location per god) |
+| 10 | **Chosen**: the god's ending branch opens (and possibly a fight *against* another god) |
+- Each god has **unique requirements** too: Thorgrim needs masterwork crafts, Vex needs you to win a rigged game, Morrowyn needs you to guide lost spirits, Kaelthas needs you to never retreat from a Worthy fight.
+- **Devotion is a full life path:** Pilgrim → Acolyte → Devotee → Saint/Champion of [God] → Chosen.
+- **Fourth-wall rule:** gods and the System speak to your **character**. Only two endings (*Unwoven Sky* and *Thirteenth Star*) briefly address **the player** directly.
+
+## Dragons: The Wyrmconclave
+- **The Wyrmconclave:** three **Ancient Dragons**, older than the Elder Dragons. They were born from the first threads before the Weave was finished and they judge the world. They sit in a hall outside time, reached only through the Sky Archipelago's highest island.
+| Ancient Dragon | Aspect | Personality |
+|---|---|---|
+| **Solvoryn, the Dawnwyrm** | Aurelion's thread: order, memory | Stern judge; remembers every oath ever broken |
+| **Nythraxa, the Duskwyrm** | Nyxara's thread: dream, change | Kind, strange, speaks in riddles |
+| **Kaelumbra, the Twilight Arbiter** | The space between | Neutral; casts the deciding vote |
+- The **Five Elder Dragons** (Ignivar, Glacirra, Zephyros, Terragon, Umbrael) answer to the Conclave. All five can be befriended or fought.
+- The Conclave **judges your choices** at three points in the story; its verdict changes which endings are possible. You can even **fight the Conclave** (an optional super-boss trial; it's nearly impossible).

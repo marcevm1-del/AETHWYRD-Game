@@ -124,3 +124,18 @@ Dates: **BSC** = Before the Summoning Calendar · **SC** = Summoning Calendar. *
 4. **Is Ezrath good?** He gives truth and freedom, but freedom could unravel the world.
 5. **Why can otherworld souls grow without limit?** (Theory: the World Beyond the Veil has no System.)
 6. **What happened to Kaede's companions' descendants?** (The current royal family, and someone else.)
+
+## The Heroes & Veilborn Legends (expanded)
+| # | Name | From | Era | Legacy |
+|---|---|---|---|---|
+| Hero 1 | **Kaede Aoyama** | Japan · gamer | 0–61 SC | Founded the Guild, invented the F–SSS ranks; harvested |
+| Hero 2 | **Adrian Vale** | Canada · medical student | 309–332 SC | Freed the beastkin; became **Demon Overlord Azrael** |
+| Hero 3 | **Tomás Reyes** | Mexico · firefighter | 641–648 SC | Sealed Azrael with the Lantern Seal |
+| Hero ½ *(new)* | **Amara Okonkwo** | Nigeria · history teacher | 120–158 SC | A **"failed" summoning**: arrived with no combat skill. She wrote the first true history of Aetheria, founded the **Great Library of Lothaniel** and warned against the harvest. Erased by the Church |
+| Hero 2.5 *(new)* | **Lukas Brandt** | Germany · engineer | 470–495 SC | Summoned by the **Imperium of Vharlen** to build war machines; built the first airships and the Gearholm undercity; vanished into the Sky Archipelago |
+| Legend | **Ingrid Halvorsen** | Norway · mountain guide | ~780 SC | Transported by accident; became the **Frost Queen** of the Northfolk; her ice palace still stands |
+| Legend | **Chen Wei** | China · martial arts coach | ~550 SC | Founded the first **cultivation sect** in the Jade Dynasty; the sects rank disciples by his rules |
+| Legend | **Priya Raman** | India · chef | ~860 SC | Brought spices and curry to Port Goldmere; founded the Gourmet Guild. Her recipe book is a relic |
+| Legend | **Diego Alvarez** *(evil Veilborn, Q60)* | Argentina · a con man in his old life | Present day | A Veilborn who arrived 20 years ago, built a slaver empire in the Strife Marches, and now works for the Red Prophet |
+
+All Hero journals are **major collectibles** (5 journals, 20+ pages each, found across the world).

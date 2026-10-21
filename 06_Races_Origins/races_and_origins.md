@@ -67,7 +67,7 @@
 | **Reborn Monster** | Hatch in the Hollow Nursery; survive and evolve | Underground dungeon | Predator, Monster Speech, Blood Pact | Evolution system, Monster Council |
 | **Native** | Childhood dream of becoming an adventurer; your village burns in a goblin raid | Brindlewick | **None at start** → Act II awakening (pick from 5, all upgraded) | Best local reputation, "local legend" arc |
 | **Fallen Noble** *(unlock)* | Exiled after your "useless" skill appraisal; disowned by your house | Border road with a bounty | Nothing, Lucky Star, Crafting God's Hands | Revenge vs your family, hidden class guaranteed |
-| **Demon Lord's Heir** *(unlock after 1st clear)* | Wake in the Demon Realm as a child of the last Demon Lord | Nox Dominion | Demon Heart, Shade Harvest | Play from the other side; unique ending variants |
+| **Overlord's Heir** *(unlock after 1st clear)* | Wake in the Demon Realm as a ward of the Demon Overlord's court | Nox Dominion | Demon Heart, Shade Harvest | Play from the other side; unique ending variants |
 
 ## 3. Character Creator
 - Anime-styled 3D creator: face presets + sliders, hair (60+ styles, physics), eyes (heterochromia, glowing), marks/tattoos, horns/ears/tails by race, height/body sliders, 20 voice sets (VA lines), personality tone for chosen dialogue (*Polite / Cocky / Cold / Cheerful*).

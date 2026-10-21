@@ -2,7 +2,7 @@
 
 ## 1. Companion Rules
 - **Party:** you + 1 (F) → 2 (E) → 3 (D) → 4 (B). Extra companions wait at your home/guild house.
-- Each companion has: a **class tree** (you guide it), a **personal questline** (5–8 quests), a **Bond meter** (0–10), a **Loyalty** state (can leave), **opinions** on your choices, **Union Skills** with you, and an optional **romance** (no gameplay gating).
+- Each companion has: a **class tree** (you guide it), a **personal questline** (5–8 quests), a **Bond meter** (0–10), a **Loyalty** state (can leave), **opinions** on your choices, **Union Skills** with you, and (for the adult companions listed in `Canon.md` §4) an optional **romance** (no gameplay gating). **Nyx and Mochi are never romanceable.**
 - **Camp scenes:** at night you can camp. Party banter, cooking, stories by the fire. This is the heart of the fantasy feel.
 
 ## 2. The Twelve Companions
@@ -47,7 +47,7 @@
 ### 7. KAITO HAYASE — *the Rival Hero*
 - **Race/Class:** Human (summoned), Hero candidate
 - **Personality:** arrogant, desperate to be "the main character"; secretly terrified.
-- **Arc:** rival → enemy → ally *or* fallen villain (corrupted by the Demon Lord) depending on your choices. One of the most branching characters.
+- **Arc:** rival → enemy → ally *or* fallen villain (corrupted by Lady Nocturne and the Red Moon Cult) depending on your choices. One of the most branching characters.
 
 ### 8. MOCHI — *the Slime*
 - **Race/Class:** Slime, evolving familiar
@@ -83,7 +83,7 @@
 | **Guildmaster Rodrick "Old Bear" Hale** | Brindlewick Guild Master | Retired S-Rank, bear-kin; the father figure |
 | **Grand Guildmaster Celestine Ar'Vael** | Head of the Guild (capital) | Elf, SS-Rank; knows the System's secret |
 | **King Alaric IV** | King of Aldmere | Weak, controlled by the Archbishop |
-| **Princess Elowen** | Heir of Aldmere | Brave, wants to fight; escort and romance options |
+| **Princess Elowen** | Heir of Aldmere | Brave, wants to fight; escort quests and a friendship arc (not a companion, not romanceable) |
 | **Archbishop Valerian Crowe** | Holy Church leader | Public villain #1; zealot serving Ilvaris |
 | **Old Hollis** | Sword trainer | Teaches with a broom; former teacher of a Blade Master |
 | **Granny Mabel** | Tamer trainer | Keeps cockatrices as "chickens" |
@@ -106,13 +106,15 @@
 ## 4. Villains
 | Villain | Role | Motive |
 |---|---|---|
-| **Azrael Noxveil, the Demon Lord** | Main antagonist | The second summoned Hero; fights the System that feeds on souls |
+| **Azrael Noxveil, the Demon Overlord** | Main antagonist | The second summoned Hero; fights the System that feeds on souls |
 | **General Ignarok** (Flame) | Iron Hold invader | Warrior honor; wants a worthy death |
 | **General Morthis** (Rot) | Sunscar undead plague | Former Valdrisian queen, wants her people back |
 | **General Zephiel** (Storms) | Sky Archipelago | Arrogant genius, wants the Titans' tech |
 | **General Rhaka** (Beasts) | Beastkin Plains | Wants freedom for monsters; morally grey; recruitable |
+| **General Lady Nocturne** (Mirrors) | Vharlen, human courts | Shapeshifting spymaster with no face of her own; impersonates Mina from Act III; not redeemable |
+| **Malchior Vane, the Red Prophet** | Cult leader | Malgareth Vey, the first Demon Lord, hiding in Brother Caspian's body; wants to devour Vesper. Not redeemable |
 | **Archbishop Crowe** | Human antagonist | Keeps the Summoning going at any cost |
-| **The Cult of the Red Moon** | Act II enemies | Want to bring the Demon Lord back early |
+| **The Cult of the Red Moon** | Act II enemies | Led by the Red Prophet (Malgareth Vey, hiding as Brother Caspian); want Vesper full forever. See `02_Lore/story.md` |
 | **Ilvaris** | Possible final boss | Tragic. She is trying to save the world |
 
 ## 5. Factions & Reputation
@@ -132,3 +134,50 @@ Tiers: **Hated · Hostile · Unfriendly · Neutral · Friendly · Honored · Rev
 | Mages' Academy | *Arcanum Spire* | Church | Archmagister robes |
 | Monster Council | Underground | Church | Monster nation (Monster Origin) |
 | Nox Dominion | Demon Realm | Church, Kingdom | Crimson Throne path |
+
+## Companion Pacing
+| Rank | New companions available | Notes |
+|---|---|---|
+| F | 1 (Lyra) + Mochi as a pet | Learn the basics |
+| E | +1 | First choice (Kiri *or* Sir Aldric) |
+| D | +1 | |
+| C | +1 | |
+| B | +1–2 | First Named-monster companion possible |
+| A | +1–2 | |
+| S | +1–2 | |
+| SS / SSS | +1 | Legendary companions (e.g. Nyx's true form) |
+Some companions are **mutually exclusive** (recruiting one closes another's path), so each playthrough's party feels different.
+
+## Mortal Bonds: Companion Death
+- **Story deaths:** certain choices can get a companion killed, on any difficulty. Permanent.
+- **Combat deaths are opt-in.** A downed companion has a **bleed-out timer**. If it expires they're "gravely wounded" (out for a few in-game days) on every setting **unless** the player turned on the **Mortal Bonds** option at the start (Hardcore turns it on automatically). Only with Mortal Bonds on do companions **die permanently** in combat. Story deaths are always telegraphed by a clear choice, never by a missed dodge.
+- Dead companions get a grave at your home, a memorial scene, and their weapon as an heirloom item. Morrowyn's Lantern (Divine artifact) can bring back exactly **one** fallen companion in the whole game.
+
+## Mascots
+| Mascot | Creature | Personality | Role |
+|---|---|---|---|
+| **Mochi** | Slime | Bouncy, hungry, brave | Evolving companion |
+| **Whiskers** | Inn cat (Vex in disguise) | Smug, lazy, all-knowing | Secret companion, luck events |
+| **Pip** | Jackalope | Shy, lucky | Collectible-finder; catchable only on your birthday |
+| **Kindle** | Ember kitten (salamander-cat) | Playful, sets small fires | Home mascot, lights forges, warms you in Frostveil |
+| **Bramble** | Moss tortoise | Ancient, slow, wise | Walking garden; grows rare herbs on its shell |
+
+## Childhood Friends
+| Friend | Origins | Who they are | Path |
+|---|---|---|---|
+| **Tobin Ashgrove** | Reincarnated / Native | Blacksmith's son, loyal, always one step behind you | Guardian → Fortress Knight; can surpass you in one arc |
+| **Elsie Marrow** | Reincarnated / Native | Herbalist's daughter, bright, quietly ambitious | Cleric/Alchemist; secretly gets recruited by the Church Inquisition. Your choices decide which side she ends up on |
+*(Transported and Summoned players can meet them later as adventurers.)*
+
+## Guild Master Succession
+- **Rodrick "Old Bear" Hale** can die (Siege of Marrowgate, a Cult assassination, or a sacrifice in Act IV).
+- **Succession:** Mina Feathersby (ex-A-Rank) → Captain Bryndis Oakshield → a guild election among the NPCs you've helped. There is always a Guild Master. The player is **never** the Guild Master (Q59).
+
+## NPCs: ~2,500 Named, Each with a Backstory
+| Tier | Count | Content |
+|---|---|---|
+| **Core** (companions, villains, trainers, rulers) | ~150 | Fully written arcs, voiced lines |
+| **Major** (quest givers, shopkeepers, recurring) | ~600 | Hand-written backstory, schedule, 1–3 quests, relationships |
+| **Townsfolk** | ~1,750 | Name, family, job, schedule, 3–5 sentence backstory, 1 secret, likes/dislikes, gossip lines |
+- Townsfolk are authored as **data** (JSON); Claude writes them in batches per town, checked for consistency (family trees, town history).
+- NPCs **react** to prosperity, war, your rank, and deaths in their families; some can die, move, marry, or become adventurers.

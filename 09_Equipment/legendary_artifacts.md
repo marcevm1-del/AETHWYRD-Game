@@ -6,7 +6,7 @@ Every item here has a **source**, a **lore line**, a **signature effect**, and m
 | Artifact | Type | Source | Effect | Lore |
 |---|---|---|---|---|
 | **Solgrace, the Holy Sword** | Sword | Summoning Cathedral (Hero path) | Holy dmg ×2; *Light of Hope* ultimate | *Pulled from the altar by three heroes before you. One of them put it back in tears.* |
-| **The Crimson Crown** | Head | Demon Lord's throne | Command demons; red moon power | *It whispers your old name.* |
+| **The Crimson Crown** | Head | The Overlord's throne | Command demons; red moon power | *It whispers your old name.* |
 | **Codex of Valdrisia** | Grimoire | Sunscar pyramid | Read Old Weave-tongue; Forbidden spells | *The book that ended an empire in one night.* |
 | **Thorgrim's First Hammer** | Hammer | Iron Hold's deepest forge | Craft Divine-tier items | *The god forgot it here. He's been looking for it.* |
 | **Sylvara's Seed** | Charm | World Tree heart | Revive the land; World Tree Warden path | *Plant it, and a world begins again.* |

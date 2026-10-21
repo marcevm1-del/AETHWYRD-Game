@@ -145,3 +145,18 @@ Zone: Whisperwood (E)
 | **Fairy Wedding** | Random spring | Tiny guests, huge consequences |
 | **Calamity Awakening** | Late game | EX-tier raid encounter |
 | **Rift Storm** | Random | Rifts spawn all over a region with high-tier loot |
+
+## Recurring Tournament Circuit
+| Tournament | Where | Frequency | Brackets |
+|---|---|---|---|
+| Brindlewick Rookie Cup | Brindlewick | Monthly | F–E |
+| Fanghold Grand Arena | Beastkin Plains | Seasonal | D–A |
+| Academy Duel League | Arcanum Spire | Weekly during term | Students |
+| Jade Dynasty Sect Trials | Shen-Lu | Seasonal | Cultivation ranks |
+| **The Grand Tournament** | Aldmere City | Yearly (summer) | F–SS, all brackets |
+| Abyssal Pit Fights | Gearholm undercity | Nightly (illegal) | Any; Karma risk |
+**Prize money, betting, titles, relic prizes, rival rankings.** Rivals return each season, stronger.
+
+## The Academy (~50 Hours)
+- **Arcanum Spire Academy:** 3 school years (in-game seasons), classes as minigames (alchemy, history exams using real lore, dueling, familiar care), student clubs, a rival dorm, festivals, a dorm-house cup, exams, a student council, and the **Academy Incident** (a Forbidden magic disaster in Year 3).
+- Teachers and students are full NPCs; Seraphine's arc runs through it.

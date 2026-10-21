@@ -193,3 +193,21 @@ Basic: Shadow Bolt, Darkness, Fear · Intermediate: Shadow Bind, Life Drain, Cur
 | Mana Burn | Lose MP |
 | Corruption | Aether Saturation builds; monster mutations if maxed (Forbidden users) |
 | **Positive:** Haste, Regen, Protect, Shell, Berserk, Blessed, Inspired, Invisible, Float, Reflect | |
+
+## Unique Skills: Chosen vs Fated
+| Pool | How | Power | Count |
+|---|---|---|---|
+| **Chosen** | Pick freely at creation | Strong, reliable | 10 |
+| **Fated** | **Roll the Fate Dice** once (no reroll). You may refuse it and pick Chosen instead, but only before seeing the result | Game-changing | 10 |
+
+**Chosen:** Infinite Storage, Appraisal Eye, Growth Acceleration, Monster Speech, Otherworld Knowledge, Crafting God's Hands, Charm Aura, Hero's Light, Gravity Heart, Lucky Star.
+**Fated:** Predator, Second Dawn, Copy, Great Sage's Voice, Status Manipulation, Time Sense, Shade Harvest, Demon Heart, Blood Pact, **Nothing → Zero**.
+
+**Limits on game-changers (examples):**
+| Skill | Limits |
+|---|---|
+| Second Dawn (time rewind) | 3 rewinds per in-game day; each one leaves a "Fate Scar" (−5% max HP until you rest); doesn't work in Trials |
+| Copy | Slots are limited; copied skills run at 70% power; Ultimates can't be copied until Stage 3 |
+| Predator | Must consume the body within 10 s; skill gain chance 5–25%; bosses only drop "fragments" |
+| Status Manipulation | Once a day; can't exceed rank caps |
+| Time Sense | Long cooldown; the time stop gets shorter against higher-rank enemies |

@@ -98,7 +98,7 @@ A translucent blue holographic panel with soft chimes; it opens in a burst of ru
 ## 8. Bonds & Romance
 - Bond 0–10 with each companion. Raise it through camp talks, gifts, shared battles, choices they approve of, and personal quests.
 - **Bond rewards:** Union Skills, new outfits, their ultimate class, and their ending epilogue.
-- **Romance:** optional, available with most adult companions, no gender locks, no gameplay gating. A marriage ceremony is possible at your home.
+- **Romance:** optional, available with the adult companions listed in `Canon.md` §4 (not Nyx, Mochi or Named-monster companions), for male and female player characters, no gender locks, no gameplay gating. A marriage ceremony is possible at your home.
 - **Rivalries:** some NPCs have rival meters too (Kaito).
 
 ## 9. Karma & Morality
@@ -123,3 +123,90 @@ A translucent blue holographic panel with soft chimes; it opens in a burst of ru
 - **Photo mode:** with poses, filters, companions.
 - **Accessibility:** subtitles, colorblind palettes, combat assist, remappable controls, difficulty sliders.
 - **Steam:** achievements (150+), cloud saves, Steam Deck controls, rich presence ("Exploring Whisperwood · Rank D").
+
+## Combat Pillars
+1. **Fluid:** every attack can cancel into a dodge; skills cancel into skills (on a combo budget).
+2. **Fast:** quick base speed, dash, air dash, launch → juggle → slam.
+3. **Heavy:** hit-stop on impact, camera shake, enemies get knocked back, ground cracks, sound punches.
+4. **Flashy:** elemental VFX trails, a short cinematic camera for ultimates, glowing magic circles, screen-wide explosions.
+5. **Stylish:** a **Style Rank** meter (C → B → A → S → SS → SSS, fitting our rank theme!) rewards variety; higher style gives bonus XP and drops.
+6. **Combinational:** weapon arts + spells + elemental reactions + companion Union Skills chain together.
+
+---
+
+## Difficulty: Player Choice + the S-Rank Floor
+| Setting | F → A content | S → SSS content |
+|---|---|---|
+| Story | Gentle | **Brutal** |
+| Adventurer | Balanced | **Brutal** |
+| Veteran | Hard | **Brutal+** |
+| Hardcore (permadeath) | Hard | **Nightmare** |
+- **"Brutal"** = full enemy AI aggression, unique mechanics, unblockable combos, and boss enrage timers. Easy-mode assists (auto-dodge, damage reduction) **switch off** in S+ zones and fights.
+- The game tells you this ahead of time: an in-world Guild warning at A-rank. *"Beyond this point, the world will not go easy on you."*
+
+## Respec
+| Level | Stat/skill reset |
+|---|---|
+| 1–10 | **Free**, unlimited (learning phase) |
+| 11+ | **Tome of Forgetting** (rare drop or craft) + gold scaling with level + a 1-day cooldown |
+| 100+ | Also requires a **Shrine of Ilvaris trial** |
+
+## Taming Roster
+- **3 active monsters max** (always), plus a **Ranch** for stored monsters (capacity grows with home upgrades).
+- **Trade-up loop:** tame a low-rank partner → evolve it, or release it, or retire it to the ranch → tame higher-ranked ones as you climb.
+- **Taming rank cap:** you can tame monsters up to **your rank +0** (Tamer line: +1).
+- **Bond and evolution:** partners gain Bond; at Bond 5 they can evolve; at Bond 10 with a Name-Giving Ribbon they become **Named** (a full companion with a personality).
+- **Monster Collector Codex:** tame one of every species for titles and relics (*Crown of the Beast God* Apex Relic).
+
+## Settlement Prosperity
+Every town/village has persistent stats:
+| Stat | Raised by | Lowered by |
+|---|---|---|
+| **Wealth** | Quest rewards spent locally, trade routes, your investments | Raids, taxes, neglect |
+| **Safety** | Clearing nearby dens, defending in Stampedes, hiring guards | Ignored threats, monster dens growing |
+| **Faith/Morale** | Festivals, healing plagues, shrines restored | Disasters, cult activity |
+| **Population** | Safety + Wealth over time; rescued refugees | Deaths, fleeing |
+
+**Visual state stages** (the 3D town actually changes):
+| Stage | What you see |
+|---|---|
+| 0 · Ruined | Burned houses, no NPCs |
+| 1 · Struggling | Broken fences, boarded windows, beggars |
+| 2 · Stable | Default |
+| 3 · Thriving | Repaired roofs, new market stalls, children playing, music |
+| 4 · Prosperous | New buildings, stone walls, a bigger guild branch, a festival plaza |
+| 5 · Renowned | A statue of **you**, a new district, unique shops and rare traders |
+
+Higher stages unlock better shops, quests, residents and trainers. Neglected towns can fall back.
+
+## Named Nemesis System
+- A Named monster that **defeats you, or escapes you**, levels up, gains a scar/title, learns a counter to your favorite skill, and may **evolve** a rank.
+- It **hunts you**: it shows up on the rumor board, ambushes you in its region, and sometimes follows you to other regions.
+- **Resolve it any way:** kill it (relic-grade drop), tame it, or **name it** (Name-Giving Ribbon after earning its respect: win while sparing it, feed it, or save it from a bigger threat) → it becomes a **full companion** with its own voice, personality, arc and evolution.
+- Named monster companions count toward the companion roster.
+
+## Inventory Model
+| Difficulty | Base inventory |
+|---|---|
+| Story | Unlimited bag |
+| Adventurer | Weight-limited, generous |
+| Veteran / Hardcore | Strict weight; encumbrance slows you and drains stamina |
+
+**Expansions:** backpacks (Satchel → Explorer's Pack → Bag of Holding) · **Item Box** (skill, Unique Skill or relic: weightless storage) · **pack animals** (mule, carry-lizard, giant tortoise, Fluffcap ram) that carry a lot but **can be attacked and killed**, dropping their cargo as a lootable pile monsters may steal · a hireable **Porter NPC** (who can also die).
+
+## UI Style Guide
+- The classic anime **System window**: translucent blue-glass panels, thin glowing borders, angled corners, small ornate filigree at the corners, crisp sans-serif text with a fantasy display font for headers.
+- Pop-ups appear in a burst of runes, with soft chimes (*"Skill acquired!"*).
+- Rank colors are consistent everywhere (F grey → SSS gold).
+- HUD is minimal in exploration and expands in combat.
+
+## Loss Safety (protecting a 1,000-hour investment)
+Several systems can take things away from the player. These rules keep any single mistake from costing 100+ hours:
+| System | Default settings | Only on Hardcore / Mortal Bonds |
+|---|---|---|
+| Companion combat death | Gravely wounded, back in a few days | Permanent death |
+| Pack animals & hired porters | Knocked out; cargo dropped in a lootable pile that stays for 3 in-game days | Can die |
+| Respec | Always possible: free before Lv 10, then a Tome of Forgetting + gold; **one free respec token** at every class-tier change | Same |
+| Class change | Costly (Rebirth Sigil + trial), but character level and learned skills are never lost | Same |
+| Story deaths | Only through a clearly signposted choice | Same |
+| Character death | Respawn at a waystone (gold can be recovered from your death spot) | Hardcore: permadeath |

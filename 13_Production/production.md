@@ -29,7 +29,7 @@ A full 3D open-world RPG of this size is something studios of 50–300 people bu
 | Environments | Place, art-direct in editor | Procedural tools, placement scripts |
 | Writing (dialogue, lore, flavor) | Review voice, tone | Draft everything |
 | Music/SFX | Choose, commission, or license | Specify needs per region and event |
-| Steam page, marketing | Account, trailers, posting | Copy, descriptions, update notes |
+| Release & marketing (later) | Account, trailers, posting | Copy, descriptions, update notes |
 
 ## 4. Project Structure (Unity)
 ```
@@ -58,40 +58,41 @@ ProjectAscend/
 **Version control:** Git + Git LFS (GitHub private repo). Commit often; I can manage commits.
 
 ## 5. Build Rings (roadmap)
+Rings are **internal milestones**, not release dates. Each ring adds regions (see `ring` in `Data/World/regions.json`) and the monsters tagged for it (`ring` in `Data/Monsters/species.json`).
+
 | Ring | Name | Content | Goal |
 |---|---|---|---|
-| **0** | *Graybox Prototype* | One test field: movement, camera, combat (light/heavy/dodge/parry/skills), 3 monsters, Status Window, level-up | **Is combat fun?** |
-| **1** | *Vertical Slice: "The Wooden Card"* | Brindlewick + Whisperwood, F→E, 4 base classes, Transported Origin, Lyra + Mochi, Goblin Chief trial, 1 dungeon, guild board, 20 monsters, basic crafting | **Steam page + demo for Steam Next Fest** |
-| **2** | *Early Access 1.0: "Heartland"* | All of Aldmere F→C, all 8 base + 16 advanced classes, 3 Origins, 5 companions, Labyrinth 1–20, Stampede event, housing stage 1, ~20–25 hrs | **Paid Early Access launch** (one-time purchase) |
-| **3** | *"Green Cathedral"* | Sylvaran Forest, B rank, Expert classes, 3 more companions | EA update |
-| **4** | *"Endless Gold & Iron"* | Beastkin Plains + Iron Hold, A rank, arena, forging | EA update |
-| **5** | *"Isles & Ice"* | Eastern Isles + Frostveil, Monster Origin | EA update |
-| **6** | *"Sand & Sea"* | Sunscar + Abyssal Coast, sailing, S rank | EA update |
-| **7** | *"The Generals"* | Act IV full, Dragon Spine, Sky Archipelago, SS | EA update |
-| **8** | *"Ascension" (1.0)* | Demon Realm, Acts V–VI, SSS, all endings, Labyrinth 120 | **Full release** |
+| **0** | *Graybox Prototype* | One test field: movement, camera, lock-on/free aim, combat (light/heavy/dodge/parry/skills, hit-stop), **3 monsters** (Blue Slime, Goblin, Horned Rabbit), one elemental combo, Status Window, level-ups | **Is combat fun?** |
+| **1** | *Vertical Slice: "The Wooden Card"* | Brindlewick + Whisperwood, ranks F→E, 4 of the 12 base classes, Transported Origin, Lyra + Mochi, Goblin Chief trial, 1 dungeon, guild board, **20 monsters** | **Is the whole loop fun?** |
+| **2** | *"Heartland"* | All of Aldmere + Greymoor + Labyrinth floors 1–40, ranks F→C, all 12 base + 24 advanced classes, 3 Origins, 5 companions, Stampede event, housing stage 1 | First big content milestone (playtest build) |
+| **3** | *"Green Cathedral"* | Sylvaran, Mossdeep, Lirian | Rank B, Expert classes |
+| **4** | *"Gold, Iron & Monsters"* | Fanghold, Iron Hold, Moraveil, Strife Marches, Velmark | Arena, forging, monster nation |
+| **5** | *"East & North"* | Hoshizora, Kitsune Isles, Shen-Lu, Haneul, Frostveil, Whitewater Reach, Umbravel | Monster Origin, cultivation |
+| **6** | *"Sand & Sea"* | Sunscar, Zarvan, Zaruma, Dunewhale, Xochitl, Lumbaya, Stormreach, Goldmere, True-Name Isles, Hollow Sea, Ashira Vale, Labyrinth 41–90 | Rank S, sailing |
+| **7** | *"The Generals"* | Dragon Spine, Sky Archipelago, Heavenreach, Vharlen, Gearholm, Cinderhole, Bastion, Everdusk, Apu, Lustrine, Quaking Lands, Aurumdeep | Act IV complete, rank SS |
+| **8** | *"Ascension"* | Nox Dominion, Calamity Steppe, The Maw, Root of the World, Labyrinth 91–120 | Acts V–VI, SSS, all endings |
+| **9** | *Post-game* | Vesper, the Drowned Sky-City | Malgareth, the 1,000-hour secret ending |
 
-> **Recommendation:** use **Steam Early Access** with a one-time price. It fits "buy once", funds development, builds a community, and matches the ring structure. (Your decision, see Open Questions.)
+**Art budget per ring:** the species counts per ring (from the generator) are an upper bound. Ring 2's ~145 tagged species will be trimmed during Ring 2 planning; core designs come first, variants follow.
 
-## 6. Steam Checklist
-- Steamworks account + **$100 app fee**.
-- **Coming Soon page early** (wishlists are everything): at Ring 1.
-- Capsule art, trailer, screenshots, a "Status Granted" hook trailer.
-- **Steam Next Fest** demo (Ring 1 slice).
-- Achievements, Cloud Save, Steam Deck verification, controller support.
-- Price: decide at Ring 2 (EA usually a bit lower than 1.0 price).
+## 6. Release & Steam (deferred, Q49)
+Steam and release planning are **parked until we're near the end** (your decision). Notes for then:
+- Steamworks account + $100 app fee; Coming Soon page; trailers; achievements, Cloud Save, Steam Deck, controller support.
+- **Open decision:** full 1.0 release vs Early Access. Ring 2 is far too small to sell against a 1,000-hour promise, so if Early Access is chosen, the earliest sensible point is after Ring 4–5.
+- Realistic timeline: Ring 0 (first prototype) is the January 2027 target. A public release is years away at 4–5 hrs/week.
 
 ## 7. Immediate Next Steps
-1. ✅ Design bible v0.2 (this).
-2. Lock the **combat feel** spec (moveset, timings, camera) → Ring 0 design doc.
-3. Install **Unity 6 LTS** + Unity Hub; create the project; set up Git.
-4. I write the core: player controller, camera, combat skeleton, stats, Status Window.
-5. Make your character in **VRoid Studio**, import it via UniVRM, and run around a graybox field.
-6. First playable within the first milestone; then iterate on fun.
+1. ✅ Design bible consolidated (v0.7), data layer validated (`npm run build`).
+2. Write the **combat feel** spec (moveset, timings, camera) → Ring 0 design doc.
+3. Install **Unity 6 LTS** + Unity Hub **on E:**; create the Unity project inside this repo.
+4. Claude writes the core: player controller, camera, combat skeleton, stats, Status Window, JSON data importer.
+5. Make your character in **VRoid Studio**, import via UniVRM, and run around a graybox field.
 
 ## 8. Open Questions
-1. **Early Access**, or wait for a full 1.0 launch? (Recommend EA.)
-2. ~~Art direction~~ **DECIDED:** bright, flowing **Genshin-style cel-shaded anime**: vivid colors, flowing cloth and hair physics, stylized skies, glowing elemental VFX.
-3. **Voice acting:** none, partial (key lines/System Voice), or full? (Partial recommended for budget.)
-4. Romance: keep as designed (optional, all companions), or trim?
-5. What's your experience with Unity and 3D tools? That tells me how much I should script vs explain.
-6. **Title:** revisit around **Nov 1, 2026**.
+1. Release model (Early Access vs full 1.0): **deferred** until near the end.
+2. **Voice acting:** none, partial (key lines/System Voice), or full? (You'll decide later.)
+3. **Companion count lock:** see Canon.md (proposed: 12 companions + Mochi).
+4. **Title:** revisit around **Nov 1, 2026**.
+
+## Reality Check: January 2027
+At 4–5 hrs/week (~50 hours by January), an Early Access 3D open-world RPG isn't achievable. What **is** realistic: the **Ring 0 playable prototype**: your VRoid character in a graybox field; run, climb, lock-on/free aim, light/heavy/dodge combos with hit-stop; Blue Slime, Goblin and Horned Rabbit; one elemental combo; the Status Window; level-ups.

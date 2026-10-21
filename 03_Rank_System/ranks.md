@@ -81,7 +81,7 @@ Monsters and quests also use sub-grades **−/normal/+** (e.g. *C+ Named Ogre*).
 | T9 | **Unweave**: erase a Calamity permanently |
 | T10 | **The Thirteenth Star**: final ending condition |
 
-## 6. Rank Concealment & "The Reveal" (minor feature; see Relics in systems_addendum_v03)
+## 6. Rank Concealment & "The Reveal" (minor feature; the main power fantasy is Relics, see 09_Equipment)
 - **[Concealment]** skill, the *Mask of the Humble*, or a guild favor makes your card show a lower rank.
 - NPCs react to your *displayed* rank: tavern bullies, snobbish nobles, merchants overcharging rookies.
 - **Reveal Events (20+ scripted):** when your real rank is exposed, there's a cinematic beat. The bully drops his mug, the hall goes silent, Mina faints.
@@ -98,7 +98,41 @@ Monsters and quests also use sub-grades **−/normal/+** (e.g. *C+ Named Ogre*).
 | Syndicate Mark | Rat → Blade → Shade → Shadow Hand | Criminal path |
 | Monster Rank | Evolution stages (see Monster Evolution) | Reborn Monster Origin |
 
-## 8. v0.3 Additions
-- **Level cap 300**; bands above. Pacing to SSS ≈ 1,000 hrs (see `12_Systems/systems_addendum_v03.md`).
-- **Exceptional Promotion:** beat content 2+ ranks above you → Guild Master's *Trial of Merit* → skip one rank (max one per band; not into SS/SSS).
-- **S-Rank difficulty floor:** S+ content is brutal on every difficulty setting.
+**Level cap 300** (bands in §1). **S-Rank difficulty floor:** S+ content is brutal on every difficulty setting (see `12_Systems/systems.md` → Difficulty).
+
+## Exceptional Promotion
+- Completing a quest or boss **2+ ranks above your rank** (rated Perilous or higher) triggers **"Exceptional Feat"**.
+- The Guild Master summons you to a **Trial of Merit**: a duel against the Guild Master or an SS-ranked examiner. Win (any grade) → **skip one rank**.
+- Maximum **one skip per rank band**. It can't be used to reach SS or SSS (those require their full trials).
+
+## Pacing to ~1,000 Hours
+| Rank | Levels | Target cumulative hours |
+|---|---|---|
+| F | 1–15 | ~10 |
+| E | 16–35 | ~30 |
+| D | 36–60 | ~70 |
+| C | 61–90 | ~140 |
+| B | 91–125 | ~240 |
+| A | 126–165 | ~380 |
+| S | 166–210 | ~560 |
+| SS | 211–260 | ~780 |
+| SSS | 261–300 + T1–T10 | ~1,000+ |
+These are **explorer-pace** hours (doing most side content). A **focused** player who mostly follows the story gains GP and XP faster and finishes the main story (Act VI, around S rank) in ~200–250 hrs. The road to SSS is the long-haul adventurer's journey: Labyrinth to floor 120, Relics, Elder Dragons, the taming codex, and the Calamities.
+
+## Parallel Track: Cultivation
+Research: xianxia realm lists vary by work. Common stages are Body Refinement, Qi Condensation, Foundation Establishment, Core Formation, Nascent Soul, Soul/Spirit Formation and Void Refinement, each with early/middle/late/peak sub-stages, and breakthroughs that can require a heavenly lightning tribulation.
+
+| Realm | Sub-stages | Unlocks | Breakthrough trial |
+|---|---|---|---|
+| 1 · **Body Tempering** | Early/Mid/Late/Peak | Body passives | Waterfall training |
+| 2 · **Qi Condensation** | ×4 | Qi meter, Qi skills | Meditation minigame |
+| 3 · **Foundation Establishment** | ×4 | Flying sword *techniques* (combat only, not travel) | **Lightning Tribulation** boss fight |
+| 4 · **Core Formation** | ×4 | Golden Core: +regen, pill alchemy | Inner-demon duel |
+| 5 · **Nascent Soul** | ×4 | Soul projection (scout as a spirit) | Tribulation II |
+| 6 · **Spirit Severing** | ×4 | Domains | Sever an attachment (story choice) |
+| 7 · **Void Refinement** | ×4 | Space techniques | Tribulation III |
+| 8 · **Immortal Ascension** | — | Sect Ancestor title | The Heavens' Trial (ties into the System's truth: the System *fears* cultivators) |
+- **Lore:** cultivation was taught by the Veilborn Chen Wei. It grows power **without the System's harvest channel**, so the Church and Ilvaris quietly fear it. That gives it a big role in the *Unwoven Sky* ending.
+- **Balance:** cultivation realms add their own power layer. Guild rank stays the world's main "language," but sects respect only realms.
+
+---

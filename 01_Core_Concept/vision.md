@@ -3,7 +3,7 @@
 ## 1. High Concept
 **Aetheria** is a world woven from living magic, and for a thousand years it has been pulling souls in from other worlds. You are the newest one. The Goddess of Fate grants you a **Status**. The Adventurers' Guild stamps a wooden card with an **F**, and after that nobody is telling you what to do.
 
-The game takes the whole isekai/high-fantasy genre and builds it as **one hand-built 3D world** where every trope is a playable system. You can play the summoned hero, the reincarnated slime, the exiled noble with a "useless" skill, the frontier farmer, the dungeon diver, the dragon tamer, or the next Demon Lord.
+The game takes the whole isekai/high-fantasy genre and builds it as **one hand-built 3D world** where every trope is a playable system. You can play the summoned hero, the reincarnated slime, the exiled noble with a "useless" skill, the frontier farmer, the dungeon diver, the dragon tamer, or the next Demon Overlord.
 
 ## 2. Pillars
 1. **Every adventure fantasy is playable.** Each fantasy needs its own systems, rewards and story beats, not just a cosmetic label.
@@ -28,7 +28,7 @@ The game takes the whole isekai/high-fantasy genre and builds it as **one hand-b
 - **Moment-to-moment (seconds):** stylish third-person action combat. Dodge, parry, chain skills, swap targets, call companion arts.
 - **Activity (5–20 min):** guild contract → travel (discover things on the way) → resolve (fight, talk, sneak, tame) → loot → return.
 - **Session (1–3 hrs):** clear a dungeon, finish a quest chain, class-change, upgrade the home, fall into a rabbit hole of secrets.
-- **Campaign (60–150 hrs):** F → SSS, six acts, companion arcs, the Great Labyrinth, one of five endings.
+- **Campaign:** main story ~200–250 hrs at a focused pace (~600–800 hrs exploring everything); F → SSS and the secret ending ≈ 1,000+ hrs. Six acts, companion arcs, the Great Labyrinth, 11 endings + 1 secret.
 
 ```
  GUILD BOARD ─▶ OPEN WORLD ─▶ ENCOUNTER ─▶ REWARDS ─▶ GROWTH ─▶ PROMOTION TRIAL ─▶ NEW RANK
@@ -43,23 +43,17 @@ The game takes the whole isekai/high-fantasy genre and builds it as **one hand-b
 | I | F–E | *The Wooden Card* | Brindlewick frontier town. First party, first dungeon, the goblin "that shouldn't exist" |
 | II | D–C | *The Red Moon Rises* | Vesper, the red moon, turns full early. Stampedes increase. A Demon cult in the capital |
 | III | C–B | *Kingdoms of Ash and Leaf* | Diplomacy and war across the elves, dwarves and beastkin. A companion betrays or is betrayed |
-| IV | A–S | *The Four Generals* | Each region falls to a Demon General. Liberate them in any order (open structure) |
-| V | S–SS | *The Weaver's Lie* | The truth about the System and the summonings. The Demon Lord's true identity |
+| IV | A–S | *The Five Generals* | Five regions fall to the Demon Overlord's Generals. Liberate them in any order (open structure) |
+| V | S–SS | *The Weaver's Lie* | The truth about the System and the summonings. The Demon Overlord's true identity; the Red Prophet unmasked |
 | VI | SS–SSS | *Ascension* | Your choice reshapes the world |
 
 ### Endings
-| Ending | Requirement (draft) | Result |
-|---|---|---|
-| **The Hero's Dawn** | Defeat the Demon Lord, side with the gods | Peace, but the summonings continue |
-| **The Crimson Throne** | Become the Demon Lord | You rule the world, and become the next "Calamity" |
-| **The Unwoven Sky** | Great Sage path, destroy/rewrite the System | Status disappears from the world; magic becomes free and wild |
-| **The Quiet Field** | Slow-Life path, refuse the final battle | Hidden ending; the world finds another way, and you farm |
-| **The Thirteenth Star** | SSS T10 + all Elder Dragons + all companions bonded | You become a new god. True ending |
+**11 main endings + 1 secret (The Thirteenth Star, ~1,000 hrs)**, with epilogue variations bringing the total to ~100. The full list and requirements live in `02_Lore/story.md` → Endings. Headline examples: *The Hero's Dawn* (side with the gods), *The Crimson Throne* (become the Demon Overlord), *The Unwoven Sky* (destroy the System), *The Quiet Field* (walk away), *The Harvest* (the beautiful bad ending).
 
 ## 6. Product Facts
 - **Platform:** PC (Steam), target **Steam Deck Verified**, full controller + mouse/keyboard.
 - **Price target:** premium indie tier (~$24.99–$34.99, decide near launch).
-- **Length target:** main story ~80–120 hrs; **SSS ≈ 1,000 hrs** (long-haul adventurer journey); max level 300.
+- **Length target:** main story ~200–250 hrs focused (~600–800 hrs at explorer pace); **SSS + secret ending ≈ 1,000+ hrs**; max level 300. See `03_Rank_System/ranks.md` → Pacing.
 - **Rating target:** Teen (fantasy violence, mature themes, optional romance; no fanservice).
 - **No:** microtransactions, loot boxes, stamina timers, gacha, always-online.
 - **Yes:** Steam Achievements, Cloud Saves, mod-friendly data files (possible Steam Workshop later).

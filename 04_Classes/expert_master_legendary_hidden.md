@@ -1,42 +1,58 @@
-# 04b — Expert, Master, Legendary & Hidden Classes (v0.2)
+# 04b — Expert, Master, Legendary & Hidden Classes
 
-## 1. Expert Classes (Tier 3, B–A) — 32 classes
-Each Advanced class branches into two Experts. Each has a **signature mechanic** and an **Ultimate**.
+## 1. Expert Classes (Tier 3, B–A): 48 classes
+Each of the 24 Advanced classes branches into two Experts. Each has a **signature mechanic** and an **Ultimate**.
 
-| Advanced | Expert | Signature mechanic | Ultimate |
-|---|---|---|---|
-| Blademaster | **Sword Saint** | *Mushin*: auto-parry while the meter is full | *Severing Heaven* (cut a line through the sky) |
-| Blademaster | **Spellblade** | Imbue the blade with any spell you know | *Arcane Edge Unleashed* |
-| Berserker | **Warlord** | Rage buffs the whole party; war-cries | *Banner of Ten Thousand* (ghost army charge) |
-| Berserker | **Blood Reaver** | Spend HP as a resource; lifesteal heals overflow into a shield | *Sanguine Tempest* |
-| Paladin | **Holy Knight** | Holy vow buffs (choose 3 oaths; breaking one costs power) | *Sun Descends* |
-| Paladin | **Crusader** | Smites build "Zeal"; zealous strikes cleave | *Purging Crusade* |
-| Fortress Knight | **Aegis** | Shields project onto allies at range | *Bastion of Ages* |
-| Fortress Knight | **Dragoon** | Jump attacks from the sky; lance dives | *Skyfall Lance* |
-| Elementalist | **Archmage** | Triple-element combos; spell overcharge | *Convergence* |
-| Elementalist | **Storm Caller** | Weather manipulation in combat | *Eye of the Hurricane* |
-| Warlock | **Necromancer** | Raise defeated enemies as minions (max 6) | *Legion of the Grave* |
-| Warlock | **Hexblade** | Curses empower your melee pact weapon | *Doom Brand* |
-| Priest | **Saint/Saintess** | Healing overflow becomes holy damage | *Heaven's Gate* (party immortal 6s) |
-| Priest | **Oracle** | See 2 seconds into the future (enemy attack previews) | *Fate Reversal* (rewind the last 5 seconds) |
-| Battle Monk | **Ki Master** | Ki projectiles, flight bursts | *Dragon Palm of the Void* |
-| Battle Monk | **Divine Fist** | Fists carry god-blessings | *Eight Heavens Barrage* |
-| Assassin | **Shadow Lord** | Merge with shadows; shadow clones | *Night Without Stars* |
-| Assassin | **Ninja** (Eastern Isles) | Ninjutsu hand seals (input combos) | *Storm of a Thousand Shades* |
-| Phantom Thief | **Gentleman Thief** | Charm + steal; dueling cane | *Final Act: The Vanishing* |
-| Phantom Thief | **Trickster** | Swap positions, illusions, curses of bad luck | *Vex's Grand Joke* (random huge effect) |
-| Sniper | **Hawkeye** | Ricochet shots; tag weak points through walls | *Eye of Heaven* |
-| Sniper | **Arcane Archer** | Elemental arrows, homing magic shots | *Constellation Barrage* |
-| Beastwarden | **Wild Hunter** | Trophy system: killed beasts grant permanent buffs | *Apex Predator* |
-| Beastwarden | **Druid** | Shapeshift: wolf, bear, owl, treant | *Avatar of Sylvara* |
-| Summoner | **Spirit King's Contractor** | One of 4 Spirit Kings contracted | *Spirit King Descent* |
-| Summoner | **Gatekeeper** | Summon beings from other dimensions (random rolls) | *Open the Ninth Gate* |
-| Beast Lord | **Dragon Tamer** | Contract a dragon; ride it | *Dragonsoul Union* |
-| Beast Lord | **Monster Commander** | Command a squad of 10 monsters | *Stampede* |
-| Blacksmith | **Runesmith** | Inscribe Khazdûr runes on gear mid-combat | *Rune of Creation* |
-| Blacksmith | **Golem Engineer** | Build and pilot a custom golem | *Titan Protocol* |
-| Alchemist | **Grand Alchemist** | Homunculus assistant; equivalent exchange | *Philosopher's Stone* |
-| Alchemist | **Plague Doctor** | Diseases and cures; enemy debuff stacking | *Black Bloom* |
+| Base | Advanced | Expert | Signature mechanic | Ultimate |
+|---|---|---|---|---|
+| Swordsman | Blademaster | **Sword Saint** | *Mushin*: auto-parry while the meter is full | *Severing Heaven* (cut a line through the sky) |
+| Swordsman | Blademaster | **Spellblade** | Imbue the blade with any spell you know | *Arcane Edge Unleashed* |
+| Swordsman | Berserker | **Warlord** | Rage buffs the whole party; war-cries | *Banner of Ten Thousand* (ghost army charge) |
+| Swordsman | Berserker | **Blood Reaver** | Spend HP as a resource; lifesteal overflow becomes a shield | *Sanguine Tempest* |
+| Guardian | Paladin | **Holy Knight** | Holy vows (choose 3 oaths; breaking one costs power) | *Sun Descends* |
+| Guardian | Paladin | **Crusader** | Smites build Zeal; zealous strikes cleave | *Purging Crusade* |
+| Guardian | Fortress Knight | **Aegis** | Shields project onto allies at range | *Bastion of Ages* |
+| Guardian | Fortress Knight | **Chain Warden** | Chain-and-shield crowd control; pull and pin enemies | *Prison of Iron Stars* |
+| Mage | Elementalist | **Archmage** | Triple-element combos; spell overcharge | *Convergence* |
+| Mage | Elementalist | **Storm Caller** | Weather manipulation in combat | *Eye of the Hurricane* |
+| Mage | Spellweaver | **Glyph Sage** | Save custom glyph-spells to quick slots | *Library of Living Sigils* |
+| Mage | Spellweaver | **Chronomancer** | Time glyphs: haste, slow, short rewinds | *Hour of Stillness* |
+| Cleric | Priest | **Saint/Saintess** | Healing overflow becomes holy damage | *Heaven's Gate* (party immortal 6s) |
+| Cleric | Priest | **Oracle** | See 2 seconds into the future (attack previews) | *Fate Reversal* (rewind the last 5 seconds) |
+| Cleric | Templar | **Exorcist** | Seal spirits and demons; bonus vs undead | *Thousand Talisman Seal* |
+| Cleric | Templar | **Sun Champion** | Weapon heals allies on hit; radiant aura | *Noon Eternal* |
+| Rogue | Assassin | **Shadow Lord** | Merge with shadows; shadow clones | *Night Without Stars* |
+| Rogue | Assassin | **Ninja** (Eastern Isles) | Hand-seal input combos | *Storm of a Thousand Shades* |
+| Rogue | Phantom Thief | **Gentleman Thief** | Charm and steal; dueling cane | *Final Act: The Vanishing* |
+| Rogue | Phantom Thief | **Trickster** | Swap positions, illusions, curses of bad luck | *Vex's Grand Joke* (random huge effect) |
+| Ranger | Sniper | **Hawkeye** | Ricochet shots; tag weak points through walls | *Eye of Heaven* |
+| Ranger | Sniper | **Arcane Archer** | Elemental arrows, homing magic shots | *Constellation Barrage* |
+| Ranger | Beastwarden | **Wild Hunter** | Trophies: killed beasts grant permanent buffs | *Apex Predator* |
+| Ranger | Beastwarden | **Druid** | Shapeshift: wolf, bear, owl, treant | *Avatar of Sylvara* |
+| Tamer | Summoner | **Spirit King's Contractor** | One of 4 Spirit Kings contracted | *Spirit King Descent* |
+| Tamer | Summoner | **Gatekeeper** | Summon beings from other dimensions (random rolls) | *Open the Ninth Gate* |
+| Tamer | Beast Lord | **Dragon Tamer** | A contracted dragon fights beside you (never ridden) | *Dragonsoul Union* |
+| Tamer | Beast Lord | **Monster Commander** | Command a squad of 10 monsters | *Stampede* |
+| Artisan | Blacksmith | **Runesmith** | Inscribe Khazdûr runes on gear mid-combat | *Rune of Creation* |
+| Artisan | Blacksmith | **Golem Engineer** | Build and pilot a custom golem | *Titan Protocol* |
+| Artisan | Alchemist | **Grand Alchemist** | Homunculus assistant; equivalent exchange | *Philosopher's Stone* |
+| Artisan | Alchemist | **Plague Doctor** | Diseases and cures; enemy debuff stacking | *Black Bloom* |
+| Lancer | Dragoon | **Sky Dragoon** | Jumps carry you above the battlefield; lance dives | *Skyfall Lance* |
+| Lancer | Dragoon | **Wyrmspear** | Draconic lance arts; breath-charged thrusts | *Wyrm's Last Word* |
+| Lancer | Spear Saint | **Thousand-Spear Master** | Afterimage spears repeat every thrust | *Rain of a Thousand Spears* |
+| Lancer | Spear Saint | **Halberd Warlord** | Wide sweeps, armor-shattering chops | *Fall of the Iron Tide* |
+| Martial Artist | Battle Monk | **Ki Master** | Ki projectiles and flight bursts | *Dragon Palm of the Void* |
+| Martial Artist | Battle Monk | **Divine Fist** | Fists carry god-blessings | *Eight Heavens Barrage* |
+| Martial Artist | Brawler | **Grappler King** | Throw anything, including big monsters | *Mountain-Toss Suplex* |
+| Martial Artist | Brawler | **Iron Colossus** | Unflinching body; counters grow with hits taken | *Unbreakable Form* |
+| Bard | Skald | **War Chanter** | Battle songs stack party buffs per beat | *Saga of the Unbroken* |
+| Bard | Skald | **Saga-Keeper** | Recite legends to borrow a fallen hero's skill | *The Ballad Remembers* |
+| Bard | Diva | **Siren Idol** | Charm crowds of enemies into fighting each other | *Final Encore* |
+| Bard | Diva | **Illusion Maestro** | Sound-based illusions and decoys | *Theater of Mirages* |
+| Occultist | Warlock | **Hexblade** | Curses empower your melee pact weapon | *Doom Brand* |
+| Occultist | Warlock | **Pactlord** | Hold two patron pacts at once | *Patrons' Concord* |
+| Occultist | Necromancer | **Grave Lord** | Raise defeated enemies as minions (max 6) | *Legion of the Grave* |
+| Occultist | Necromancer | **Deathspeaker** | Question the dead; spirit allies instead of corpses | *Choir of the Departed* |
 
 ## 2. Master Classes (Tier 4, S–SS)
 | Master | Reached from | Fantasy | Signature |
@@ -46,11 +62,11 @@ Each Advanced class branches into two Experts. Each has a **signature mechanic**
 | **Conqueror** | Warlord | One man army | Allied NPC soldiers follow you in the open world |
 | **Crimson Duke** | Blood Reaver | Vampiric noble | Blood magic, bat form, night-power |
 | **Paladin of the Sun** | Holy Knight | Living sunrise | Permanent holy aura that weakens undead |
-| **Immortal Bastion** | Aegis | Cannot fall | Cheat death 3× per fight |
-| **Heavenly Dragoon** | Dragoon | Lord of the sky | Jump to the clouds; aerial combat |
+| **Immortal Bastion** | Aegis / Chain Warden | Cannot fall | Cheat death 3× per fight |
+| **Heavenly Dragoon** | Sky Dragoon | Lord of the sky | Jump to the clouds; aerial combat |
 | **Grand Sage** | Archmage | Chantless, triple-cast | Write custom spells with no limit |
 | **Tempest Sovereign** | Storm Caller | Weather god-touched | Permanent storm crown |
-| **Lord of the Umbral Host** | Necromancer | Army of the dead | Store up to 100 shadow soldiers |
+| **Lord of the Umbral Host** | Grave Lord | Army of the dead | Store up to 100 shadow soldiers |
 | **Divine Saint** | Saint | Mass resurrection | Revive the fallen, including NPCs |
 | **Fatebinder** | Oracle | Rewrites outcomes | Pick one of 3 rolled outcomes for any attack |
 | **Ki Sovereign** | Ki Master | Flight + world-cracking fists | True flight in the open world |
@@ -70,7 +86,7 @@ NPC rivals can claim them first. If an NPC takes one, you can defeat them to tak
 | Legendary | Unlock | Signature power | Rival NPC who also seeks it |
 |---|---|---|---|
 | **The Hero** | Summoned Hero Origin (or *steal the Hero's fate*) + Holy Sword Solgrace + Act VI | *Light of Hope*: party can't be killed while you stand | Kaito (rival hero) |
-| **Demon Lord** | Absorb the Demon Lord's core, or Karma −1000 + Demon Realm Exalted | *Dominion*: command all demons; red-moon power | Vexmor's father |
+| **Demon Overlord** | Absorb the Overlord's core, or Karma −1000 + Demon Realm Exalted | *Dominion*: command all demons; red-moon power | Vexmor's father |
 | **Great Sage** | One skill of every element + Labyrinth Floor 100 + read the Valdrisian codex | *Omniscience*: all enemy data; edit spells mid-cast | Magistra Eolande |
 | **Sword Saint of Heaven** | Defeat all 9 Blade Masters scattered in the world | *The Final Cut*: cut through concepts (curses, barriers, fate) | Old Hollis's former student |
 | **Dragon Emperor** | Befriend or defeat all 5 Elder Dragons | *Dragon Decree*: summon an Elder Dragon | Nyx (complicated) |

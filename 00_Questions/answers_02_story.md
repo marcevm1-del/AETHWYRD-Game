@@ -1,5 +1,6 @@
 # Questionnaire #2: Answers & Design Impact (2026-10-22)
-Authoritative. Overrides older lore where they conflict.
+> **Historical record.** These answers have been folded into the design docs. Where anything here differs, **Canon.md** and the topic docs win.
+
 
 | # | Answer | Impact |
 |---|---|---|

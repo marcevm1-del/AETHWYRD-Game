@@ -121,3 +121,17 @@ Each category has its own **moveset**, its own Weapon Arts (see Skills), and a M
 | Food | Hunter's Stew, Dragon Steak, Elven Waybread, Dwarven Stout, Isles Ramen, Honey Cake |
 | Monster Cores | F–EX cores: currency, crafting, awakening fuel |
 | Special | Status Reset Tome, Skill Book, Evolution Catalyst, Name-Giving Ribbon (for monsters) |
+
+## Relics & Chase Items
+The "overpowered" fantasy now comes from **grinding for legendary-tier items**. They're hard to get, worth it, and every one has a story.
+
+| Tier | How you get it | Example |
+|---|---|---|
+| **Relic** (Legendary+) | Multi-step chain: rare drop → quest → forge | *Fang of the First Wolf*: 0.5% drop from Alpha wolves → hunt the Silver Fenrir → Torvald forges it |
+| **Grand Relic** (Mythic) | 3–5 chains across regions + a boss at Worthy+ rating | *Starfall Edge*: collect 7 meteor shards that fall during Twin Eclipses |
+| **Apex Relic** (Mythic+, 50+ hrs each) | Account-long chase: crafting, taming, Labyrinth floors, a world event | *Crown of the Beast God* |
+| **Divine Artifact** | Story + endgame | *Solgrace* |
+
+- **Relic Codex** (in the Journal) shows silhouettes of undiscovered relics with cryptic hints, so players know the chase exists.
+- Relics **level up** with you (Relic Lv 1 → 50) through use and feeding materials.
+- **Rank concealment** stays only as one optional relic (*Mask of the Humble*). It's a fun extra, not a theme.

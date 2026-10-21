@@ -1,5 +1,7 @@
 # Questionnaire #1: Answers & Design Impact (2026-10-22)
-Answers 1–34 received. **35–50 still open.** These answers override anything older in the bible.
+> **Historical record.** These answers have been folded into the design docs. Where anything here differs, **Canon.md** and the topic docs win.
+
+Answers 1–50.
 
 | # | Answer | Design impact |
 |---|---|---|

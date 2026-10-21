@@ -62,3 +62,10 @@ Music intensity also scales with the **Style Rank** meter: the higher your combo
 - **Your Photo Mode shots** can be **pinned** to the Memory Reel (up to 50).
 - **Ending credits:** auto-captures and your photos play as a slideshow-montage to the ending theme, with companion epilogue cards interleaved.
 - The Memory Reel is viewable any time from the Journal, as an "album" of your journey.
+
+## Story Presentation
+- Big moments: **cinematic cutscenes**. Normal talk: in-world dialogue with choices. Camp: VN-style portrait scenes.
+- **Memory Reel:** the game silently captures key moments (first rank-up, companion recruitments, boss kills, weddings, losses) and plays them during the ending credits.
+- **Anime Opening per Act:** a 90-second OP with a song, changing visuals (it updates to show the companions *you* have and the ones you lost).
+- **Playable flashbacks** for companions and previous Heroes.
+- **System Voice is the only narrator.**

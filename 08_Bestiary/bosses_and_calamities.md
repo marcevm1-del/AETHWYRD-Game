@@ -46,7 +46,9 @@
 | **Frost Sovereign Ymgrir** | S | Frostveil | Blizzard | Frost giant king |
 | **Ashen Phoenix** | S | Iron Hold volcano | Eruption event | Resurrects once; break the egg |
 
-## 5. The Four Demon Generals (Act IV)
+## 5. The Five Demon Generals (Act IV)
+
+The fifth General, **Lady Nocturne, the Veiled Mirror**, is fought in a hall of mirrors after her infiltration arc (see `02_Lore/story.md`).
 ### GENERAL IGNAROK, the Flame Unbroken — *Iron Hold*
 - **Rank:** S → SS (true form). **Race:** Fire Demon (former dwarf champion).
 - **Motive:** wants a death worthy of a warrior; respects duels.
@@ -77,7 +79,7 @@
 |---|---|---|---|---|---|
 | **Ignivar, the Ember Throne** | Fire | Heart of the volcano under Iron Hold | Proud, vain, loves gold and flattery | Bring a gift worthy of a dragon (crafted masterwork) | Lava lake rises each phase |
 | **Glacirra, the White Silence** | Ice | Frozen lake above Frostveil | Melancholic, poetic | Answer her three questions about loss | Time freezes; you move between frames |
-| **Zephyros, the Endless Sky** | Storm | Eye of a permanent hurricane | Playful, chaotic | Win a sky race on a mount | Fought mid-air on your flying mount |
+| **Zephyros, the Endless Sky** | Storm | Eye of a permanent hurricane | Playful, chaotic | Win a sky race (flight ability or airship) | Fought on falling cloud-islands inside the storm |
 | **Terragon, the Mountain That Breathes** | Earth | He IS the Dragon Spine mountain range | Sleepy, ancient, wise | Climb him without waking him | Climb his body while he shakes the world |
 | **Umbrael, the Hollow Star** | Void | Rift in the Shattered Sky | Nyx's father; tragic; corrupting | Requires Nyx's arc completion | Reality breaks; arena shifts dimensions |
 
@@ -98,7 +100,7 @@ Befriend or defeat all 5 → **Dragon Emperor** legendary class.
 ## 8. Final Bosses (by ending)
 | Ending | Final encounter |
 |---|---|
-| Hero's Dawn | **Azrael Noxveil** (3 phases: Demon Lord → Fallen Hero → both at once) |
+| Hero's Dawn | **Azrael Noxveil** (3 phases: Demon Overlord → Fallen Hero → both at once) |
 | Crimson Throne | **Archbishop Crowe + the Avatar of Ilvaris** |
 | Unwoven Sky | **The System** itself: a fight inside the Status Window UI (meta battle) |
 | Quiet Field | No fight; a final quiet conversation with Ilvaris on your farm |
