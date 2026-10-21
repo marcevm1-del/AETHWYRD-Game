@@ -3,22 +3,111 @@
  "notes": "Feel-tuning values referenced by 12_Systems/combat.md (marked with a gear icon). Units: seconds, meters, meters/second, degrees.",
  "inputBufferSec": 0.2,
  "softLockAngleDeg": 45,
- "camera": { "distance": 4.5, "fov": 60, "groupPullBackDistance": 6.0, "shakeMax": 0.6 },
- "movement": { "walkSpeed": 2.2, "runSpeed": 6.5, "sprintSpeed": 9.5, "sprintStaminaPerSec": 12, "jumpHeight": 1.6 },
- "dodge": { "durationSec": 0.42, "iframeSec": 0.24, "distance": 4.2, "staminaCost": 20, "maxChain": 2, "perfectDodgeWindowSec": 0.15 },
- "flashTime": { "timeScale": 0.25, "durationSec": 0.8 },
- "parry": { "parryWindowSec": 0.12, "blockDamageReduction": 0.7, "riposteHitstopSec": 0.16 },
- "combo": { "budgetPerString": 3, "budgetRefillSec": 2.0, "chargeLevels": [0.4, 0.9, 1.5] },
- "hitstop": { "light": 0.04, "medium": 0.07, "heavy": 0.11, "launch": 0.08, "ultimate": 0.18 },
- "reactions": { "auraDurationSec": 6.0, "freezeDurationSec": 2.5, "shatterBonus": 1.8, "stormPrisonStunSec": 1.2 },
- "poise": { "small_biped": 30, "quad_small": 20, "blob": 25, "medium_biped": 50, "quad_large": 70, "large_biped": 140, "golem": 200, "dragon": 400 },
- "bossBreakKnockdownSec": 4.0,
- "ai": { "maxSimultaneousAttackers": 2 },
- "style": {
-  "thresholds": { "C": 0, "B": 100, "A": 250, "S": 450, "SS": 700, "SSS": 1000 },
-  "varietyMultiplier": 1.5, "varietyWindowHits": 6,
-  "bonus": { "reaction": 40, "perfectDodge": 60, "parry": 60, "launchToSlam": 50 },
-  "decayPerSec": 20, "decayDelaySec": 2.0, "repeatPenaltyAfter": 4, "dropRanksOnHit": 1
+ "camera": {
+  "distance": 4.5,
+  "fov": 60,
+  "groupPullBackDistance": 6,
+  "shakeMax": 0.6
  },
- "damage": { "defenseConstant": 100, "weaknessMult": 1.5, "resistMult": 0.5, "critBaseMult": 1.5, "variance": [0.95, 1.05], "stealthMult": 2.0 }
+ "movement": {
+  "walkSpeed": 2.2,
+  "runSpeed": 6.5,
+  "sprintSpeed": 9.5,
+  "sprintStaminaPerSec": 12,
+  "jumpHeight": 1.6
+ },
+ "dodge": {
+  "durationSec": 0.42,
+  "iframeSec": 0.24,
+  "distance": 4.2,
+  "staminaCost": 20,
+  "maxChain": 2,
+  "perfectDodgeWindowSec": 0.15
+ },
+ "flashTime": {
+  "timeScale": 0.25,
+  "durationSec": 0.8
+ },
+ "parry": {
+  "parryWindowSec": 0.12,
+  "blockDamageReduction": 0.7,
+  "riposteHitstopSec": 0.16
+ },
+ "combo": {
+  "budgetPerString": 3,
+  "budgetRefillSec": 2,
+  "chargeLevels": [
+   0.4,
+   0.9,
+   1.5
+  ]
+ },
+ "hitstop": {
+  "light": 0.04,
+  "medium": 0.07,
+  "heavy": 0.11,
+  "launch": 0.08,
+  "ultimate": 0.18
+ },
+ "reactions": {
+  "auraDurationSec": 6,
+  "freezeDurationSec": 2.5,
+  "shatterBonus": 1.8,
+  "stormPrisonStunSec": 1.2
+ },
+ "poise": {
+  "small_biped": 30,
+  "quad_small": 20,
+  "blob": 25,
+  "medium_biped": 50,
+  "quad_large": 70,
+  "large_biped": 140,
+  "golem": 200,
+  "dragon": 400
+ },
+ "bossBreakKnockdownSec": 4,
+ "ai": {
+  "maxSimultaneousAttackers": 2
+ },
+ "style": {
+  "thresholds": {
+   "C": 0,
+   "B": 100,
+   "A": 250,
+   "S": 450,
+   "SS": 700,
+   "SSS": 1000
+  },
+  "hitPoints": {
+   "light": 10,
+   "medium": 15,
+   "heavy": 25,
+   "launch": 20,
+   "ultimate": 80,
+   "skill": 20
+  },
+  "varietyMultiplier": 1.5,
+  "varietyWindowHits": 6,
+  "bonus": {
+   "reaction": 40,
+   "perfectDodge": 60,
+   "parry": 60,
+   "launchToSlam": 50
+  },
+  "decayPerSec": 20,
+  "decayDelaySec": 2,
+  "repeatPenaltyAfter": 4,
+  "dropRanksOnHit": 1
+ },
+ "damage": {
+  "defenseConstant": 100,
+  "weaknessMult": 1.5,
+  "resistMult": 0.5,
+  "critBaseMult": 1.5,
+  "variance": [
+   0.95,
+   1.05
+  ],
+  "stealthMult": 2
+ }
 }

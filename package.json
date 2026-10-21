@@ -6,7 +6,8 @@
     "gen": "node Tools/monster_gen/generate.js",
     "schemas": "node Tools/validate/build_schemas.js",
     "validate": "node Tools/validate/validate.js",
-    "build": "node Tools/validate/build_schemas.js && node Tools/monster_gen/generate.js && node Tools/validate/validate.js",
-    "viewer": "node Tools/serve.js"
+    "build": "node Tools/validate/build_schemas.js && node Tools/monster_gen/generate.js && node Tools/validate/validate.js && node Tools/run_tests.js",
+    "viewer": "node Tools/serve.js",
+    "test": "node Tools/run_tests.js"
   }
 }

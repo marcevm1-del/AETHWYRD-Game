@@ -107,6 +107,7 @@ Attacks apply an **element aura** to the target for ⚙ 6 s. Hitting an aura wit
 | S | 450 | +15% XP, music adds a layer |
 | SS | 700 | +20% XP, +10% drop rate |
 | SSS | 1,000 | +30% XP, vocal chorus kicks in |
+- **Base points per hit** ⚙ `style.hitPoints`: light 10 · medium 15 · heavy 25 · launch 20 · skill 20 · ultimate 80.
 - **Gain:** varied hits (a new move type in the last 6 hits ⚙ ×1.5), reactions (+40), perfect dodges (+60), parries (+60), launch-to-slam (+50).
 - **Loss:** points decay ⚙ 20/s after 2 s idle; **getting hit drops one full rank**; repeating the same move 4+ times in a row gives half points.
 - The **Style meter matches the rank theme** (C→SSS), and it drives music intensity (see `13_Production/opening_music_and_memories.md`).

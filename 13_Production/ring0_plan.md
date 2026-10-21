@@ -16,6 +16,9 @@
 | Animation | Mixamo (free) to start | Placeholder combat animations; upgrade later |
 | Data | JSON in `Data/` read at runtime by a C# importer | Same files the validator checks |
 
+## Already done (while Unity is blocked)
+- **`Code/Ascend.Core`**: the combat rules as plain C# (no Unity dependency): ranks and levels, element auras and reactions, damage formula, Style Rank meter, loot rolls, poise, aggro tokens, and data models for every JSON file. **22 tests pass** (`npm test`), including a cross-check that every monster's level matches the rank rules. Unity will use this code directly.
+
 ## Milestones
 | Week | Milestone | You | Claude |
 |---|---|---|---|

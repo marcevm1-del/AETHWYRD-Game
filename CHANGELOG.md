@@ -2,6 +2,11 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.9 — Game rules in C# (2026-10-22)
+- New `Code/Ascend.Core` (.NET Standard 2.1 / C# 9, Unity-compatible, no engine dependency): ranks and levels, elements and reactions with aura timing, damage formula, Style Rank meter, loot roller, poise meter, aggro tokens, data models and an indexed `GameDatabase`.
+- New `Code/Ascend.Core.Tests`: 22 tests incl. loading all real data and cross-checking generator levels against the C# rank rules. `npm test`; `npm run build` now runs them too.
+- `combat_tuning.json` gains Style base points per hit weight.
+
 ## v0.8 — Combat spec & Ring 0 plan (2026-10-22)
 - New `12_Systems/combat.md`: full combat spec (camera, lock-on/free aim, dodge and Flash Time, combo grammar, hit-stop table, poise and break, parry and telegraph colors, element reactions, Style Rank, damage formula, Ring 0 monster AI, fun test).
 - New `Data/Combat/combat_tuning.json`: every feel number in one file.

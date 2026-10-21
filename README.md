@@ -40,7 +40,8 @@ All game content lives in `Data/` as JSON, checked against `Data/Schemas/`.
 
 | Command | What it does |
 |---|---|
-| `npm run build` | Rebuild schemas, regenerate monsters, validate everything |
+| `npm run build` | Rebuild schemas, regenerate monsters, validate data, run the C# rules tests |
+| `npm test` | Run the C# rules tests (`Code/Ascend.Core.Tests`) |
 | `npm run validate` | Validate all data (schema + unique IDs + cross-references) |
 | `npm run gen` | Regenerate monsters from `Tools/monster_gen/families.js` |
 | `npm run viewer` | Serve the bestiary viewer at http://localhost:8137 |
@@ -51,5 +52,7 @@ All game content lives in `Data/` as JSON, checked against `Data/Schemas/`.
 | Monsters | `Data/Monsters/` (species, population, attacks, loot tables) |
 | Items | `Data/Items/` (materials generated, items hand-written) |
 | NPCs / Quests | `Data/NPCs/npcs.json`, `Data/Quests/quests.json` |
+| Combat tuning | `Data/Combat/combat_tuning.json` |
+| Game rules (C#) | `Code/Ascend.Core`: engine-agnostic rules (ranks, levels, elements and reactions, damage, Style Rank, loot, poise, aggro). Drops into Unity as-is |
 
 **ID rules:** `reg_`, `mon_`, `pop_00000`, `atk_`, `loot_`, `itm_`, `npc_`, `qst_` + lowercase snake_case. IDs are unique across all data.
