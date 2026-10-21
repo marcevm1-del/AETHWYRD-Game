@@ -1,0 +1,12 @@
+node_modules/
+*.tmp
+.DS_Store
+Thumbs.db
+# Unity (later)
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
