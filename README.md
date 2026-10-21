@@ -26,6 +26,7 @@
 | 08 | [bestiary_viewer.html](08_Bestiary/bestiary_viewer.html) | Filterable view of all monster data (`npm run viewer`) |
 | 09 | [gear_systems_and_sets.md](09_Equipment/gear_systems_and_sets.md) | Slots, rarity, materials, sets, upgrades, Relics |
 | 09 | [legendary_artifacts.md](09_Equipment/legendary_artifacts.md) | Divine artifacts, sentient weapons, legendaries |
+| 10 | [brindlewick.md](10_World/brindlewick.md) | Ring 1 hub town: history, districts, daily rhythm, people, quests, secrets |
 | 10 | [world.md](10_World/world.md) | All 40 regions with inspirations, Underworld, Deepgates, deep dives, traversal, living dungeons |
 | 11 | [quests_and_encounters.md](11_Quests_Encounters/quests_and_encounters.md) | Quest framework, encounters, world events, tournaments, the Academy |
 | 12 | [combat.md](12_Systems/combat.md) | **Combat spec**: camera, movement, combos, hit-stop, parry, reactions, Style Rank, damage, Ring 0 fun test |

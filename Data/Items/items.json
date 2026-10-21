@@ -1,10 +1,161 @@
 [
- {"id": "itm_guild_issue_sword", "name": "Guild Issue Sword", "category": "weapon", "rank": "F", "rarity": "Common", "slot": "main_hand", "value": 20, "stats": {"atk": 8}, "flavor": "Free with registration. You get what you pay for."},
- {"id": "itm_hollis_practice_blade", "name": "Hollis's Practice Blade", "category": "weapon", "rank": "E", "rarity": "Rare", "slot": "main_hand", "value": 180, "stats": {"atk": 22, "crit": 3}, "flavor": "Bent from a thousand swings. Still true."},
- {"id": "itm_grukk_cleaver", "name": "Grukk's Cleaver", "category": "weapon", "rank": "E", "rarity": "Legendary", "slot": "main_hand", "value": 650, "stats": {"atk": 30, "bonusVsGoblinoid": 0.25}, "flavor": "He named it \"Hungry.\" It was."},
- {"id": "itm_rookie_hood", "name": "Guild Rookie Hood", "category": "armor", "rank": "F", "rarity": "Common", "slot": "head", "value": 15, "stats": {"def": 3}, "setId": "set_guild_rookie", "flavor": "Brown leather, a little too big. Everyone's first hood."},
- {"id": "itm_minor_hp_potion", "name": "Minor Healing Potion", "category": "consumable", "rank": "F", "rarity": "Common", "value": 10, "stats": {"heal": 120}, "flavor": "Tastes like mint and regret."},
- {"id": "itm_silver_wolf_pelt", "name": "Silver Wolf Pelt", "category": "material", "rank": "C", "rarity": "Rare", "value": 400, "flavor": "It still glows faintly under the moon."},
- {"id": "itm_moonfang_dagger", "name": "Moonfang Dagger", "category": "weapon", "rank": "C", "rarity": "Epic", "slot": "main_hand", "value": 2200, "stats": {"atk": 64, "nightCritBonus": 0.5}, "flavor": "One fang for revenge, one for mercy."},
- {"id": "itm_guild_card_f", "name": "Oak Guild Card", "category": "key", "rank": "F", "rarity": "Common", "value": 0, "flavor": "Rank F. Burned stamp. Your name, spelled almost right."}
+ {
+  "id": "itm_guild_issue_sword",
+  "name": "Guild Issue Sword",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 8
+  },
+  "flavor": "Free with registration. You get what you pay for."
+ },
+ {
+  "id": "itm_hollis_practice_blade",
+  "name": "Hollis's Practice Blade",
+  "category": "weapon",
+  "rank": "E",
+  "rarity": "Rare",
+  "slot": "main_hand",
+  "value": 180,
+  "stats": {
+   "atk": 22,
+   "crit": 3
+  },
+  "flavor": "Bent from a thousand swings. Still true."
+ },
+ {
+  "id": "itm_grukk_cleaver",
+  "name": "Grukk's Cleaver",
+  "category": "weapon",
+  "rank": "E",
+  "rarity": "Legendary",
+  "slot": "main_hand",
+  "value": 650,
+  "stats": {
+   "atk": 30,
+   "bonusVsGoblinoid": 0.25
+  },
+  "flavor": "He named it \"Hungry.\" It was."
+ },
+ {
+  "id": "itm_rookie_hood",
+  "name": "Guild Rookie Hood",
+  "category": "armor",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "head",
+  "value": 15,
+  "stats": {
+   "def": 3
+  },
+  "setId": "set_guild_rookie",
+  "flavor": "Brown leather, a little too big. Everyone's first hood."
+ },
+ {
+  "id": "itm_minor_hp_potion",
+  "name": "Minor Healing Potion",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 10,
+  "stats": {
+   "heal": 120
+  },
+  "flavor": "Tastes like mint and regret."
+ },
+ {
+  "id": "itm_silver_wolf_pelt",
+  "name": "Silver Wolf Pelt",
+  "category": "material",
+  "rank": "C",
+  "rarity": "Rare",
+  "value": 400,
+  "flavor": "It still glows faintly under the moon."
+ },
+ {
+  "id": "itm_moonfang_dagger",
+  "name": "Moonfang Dagger",
+  "category": "weapon",
+  "rank": "C",
+  "rarity": "Epic",
+  "slot": "main_hand",
+  "value": 2200,
+  "stats": {
+   "atk": 64,
+   "nightCritBonus": 0.5
+  },
+  "flavor": "One fang for revenge, one for mercy."
+ },
+ {
+  "id": "itm_guild_card_f",
+  "name": "Oak Guild Card",
+  "category": "key",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 0,
+  "flavor": "Rank F. Burned stamp. Your name, spelled almost right."
+ },
+ {
+  "id": "itm_healing_herb",
+  "name": "Healing Herb",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 3,
+  "flavor": "Smells like mint. Fennick will tell you if you picked the wrong one."
+ },
+ {
+  "id": "itm_minas_earring",
+  "name": "Mina's Silver Earring",
+  "category": "key",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A gift from her sister. She'll pretend it's not important."
+ },
+ {
+  "id": "itm_rookie_pouch",
+  "name": "Rookie's Pouch",
+  "category": "accessory",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "belt",
+  "value": 25,
+  "flavor": "Holds three potions and a lot of hope."
+ },
+ {
+  "id": "itm_copper_compass",
+  "name": "Copper Compass",
+  "category": "accessory",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "slot": "charm",
+  "value": 120,
+  "flavor": "Points to the nearest unfinished promise."
+ },
+ {
+  "id": "itm_fire_bomb",
+  "name": "Fire Bomb",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 15,
+  "stats": {
+   "applyElement": "Fire",
+   "power": 1.2
+  },
+  "flavor": "Throw it at something you don't like. Ring 0's Firestorm starter."
+ },
+ {
+  "id": "itm_mandrake_root",
+  "name": "Mandrake Root",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 30,
+  "flavor": "Still screaming, very quietly."
+ }
 ]

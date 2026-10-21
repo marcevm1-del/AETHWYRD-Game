@@ -1,6 +1,452 @@
 [
- {"id": "qst_gld_f_rabbit_season", "title": "Rabbit Season", "rank": "F", "type": "Subjugation", "giver": "npc_mina_feathersby", "region": "reg_aldmere", "summary": "Horned rabbits ate a farmer's carrots. One of them is enormous.", "requirements": {"minRank": "F", "minLevel": 1, "partySize": "1-2"}, "objectives": [{"kind": "kill", "target": "mon_horned_rabbit", "count": 8}], "rewards": {"gold": 60, "gp": 8, "xp": 120, "items": ["itm_minor_hp_potion"]}},
- {"id": "qst_gld_f_slime_cleanup", "title": "Slime in the Well", "rank": "F", "type": "OddJob", "giver": "npc_farmer_odo", "region": "reg_aldmere", "summary": "Blue slimes have moved into Millbrook's well. Gently remove them, or don't be gentle.", "requirements": {"minRank": "F", "minLevel": 1}, "objectives": [{"kind": "kill", "target": "mon_blue_slime", "count": 5}, {"kind": "choice", "target": "relocate_or_slay"}], "rewards": {"gold": 40, "gp": 6, "xp": 90}},
- {"id": "qst_trial_f_goblin_chief", "title": "The Goblin Chief of Hollowpine", "rank": "E", "type": "Trial", "giver": "npc_rodrick_hale", "region": "reg_whisperwood", "summary": "The F→E promotion trial: defeat the goblin chief leading organized raids from Hollowpine.", "requirements": {"minRank": "F", "minLevel": 12, "prerequisites": ["qst_gld_f_rabbit_season"]}, "objectives": [{"kind": "kill", "target": "mon_goblin", "count": 12}, {"kind": "kill", "target": "mon_hobgoblin", "count": 1}], "rewards": {"gold": 300, "gp": 40, "xp": 900, "items": ["itm_grukk_cleaver"]}},
- {"id": "qst_gld_c_silver_wolf", "title": "The Silver Wolf of Mistvale", "rank": "C", "type": "Bounty", "giver": "npc_mina_feathersby", "region": "reg_aldmere", "summary": "Livestock vanish under the full moon. Witnesses describe a wolf of silver light.", "requirements": {"minRank": "D", "minLevel": 61, "partySize": "1-4"}, "objectives": [{"kind": "reach", "target": "mistvale_farms", "count": 3}, {"kind": "choice", "target": "slay_tame_or_parley"}], "rewards": {"gold": 4500, "gp": 260, "xp": 18000, "items": ["itm_silver_wolf_pelt", "itm_moonfang_dagger"]}}
+ {
+  "id": "qst_gld_f_rabbit_season",
+  "title": "Rabbit Season",
+  "rank": "F",
+  "type": "Subjugation",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_aldmere",
+  "summary": "Horned rabbits ate a farmer's carrots. One of them is enormous.",
+  "requirements": {
+   "minRank": "F",
+   "minLevel": 1,
+   "partySize": "1-2"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_horned_rabbit",
+    "count": 8
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "gp": 8,
+   "xp": 120,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  }
+ },
+ {
+  "id": "qst_gld_f_slime_cleanup",
+  "title": "Slime in the Well",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_farmer_odo",
+  "region": "reg_aldmere",
+  "summary": "Blue slimes have moved into Millbrook's well. Gently remove them, or don't be gentle.",
+  "requirements": {
+   "minRank": "F",
+   "minLevel": 1
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_blue_slime",
+    "count": 5
+   },
+   {
+    "kind": "choice",
+    "target": "relocate_or_slay"
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "gp": 6,
+   "xp": 90
+  }
+ },
+ {
+  "id": "qst_trial_f_goblin_chief",
+  "title": "The Goblin Chief of Hollowpine",
+  "rank": "E",
+  "type": "Trial",
+  "giver": "npc_rodrick_hale",
+  "region": "reg_whisperwood",
+  "summary": "The F→E promotion trial: defeat the goblin chief leading organized raids from Hollowpine.",
+  "requirements": {
+   "minRank": "F",
+   "minLevel": 12,
+   "prerequisites": [
+    "qst_gld_f_rabbit_season"
+   ]
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_goblin",
+    "count": 12
+   },
+   {
+    "kind": "kill",
+    "target": "mon_hobgoblin",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 300,
+   "gp": 40,
+   "xp": 900,
+   "items": [
+    "itm_grukk_cleaver"
+   ]
+  }
+ },
+ {
+  "id": "qst_gld_c_silver_wolf",
+  "title": "The Silver Wolf of Mistvale",
+  "rank": "C",
+  "type": "Bounty",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_aldmere",
+  "summary": "Livestock vanish under the full moon. Witnesses describe a wolf of silver light.",
+  "requirements": {
+   "minRank": "D",
+   "minLevel": 61,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "mistvale_farms",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "slay_tame_or_parley"
+   }
+  ],
+  "rewards": {
+   "gold": 4500,
+   "gp": 260,
+   "xp": 18000,
+   "items": [
+    "itm_silver_wolf_pelt",
+    "itm_moonfang_dagger"
+   ]
+  }
+ },
+ {
+  "id": "qst_main_status_granted",
+  "title": "Status Granted",
+  "rank": "F",
+  "type": "Main",
+  "giver": "npc_lyra_brightwood",
+  "region": "reg_whisperwood",
+  "summary": "You wake in a Whisperwood clearing under two moons. A slime watches you. Survive the night, then follow Lyra to town.",
+  "requirements": {
+   "minLevel": 1
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 3
+   },
+   {
+    "kind": "reach",
+    "target": "brindlewick_north_gate"
+   }
+  ],
+  "rewards": {
+   "xp": 80,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  }
+ },
+ {
+  "id": "qst_main_wooden_card",
+  "title": "The Wooden Card",
+  "rank": "F",
+  "type": "Main",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_aldmere",
+  "summary": "Register at the Guild. The appraisal crystal flickers strangely, and Mina covers for it.",
+  "requirements": {
+   "minLevel": 1,
+   "prerequisites": [
+    "qst_main_status_granted"
+   ]
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_mina_feathersby"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_rodrick_hale"
+   }
+  ],
+  "rewards": {
+   "gold": 20,
+   "items": [
+    "itm_guild_card_f",
+    "itm_rookie_pouch"
+   ]
+  }
+ },
+ {
+  "id": "qst_main_bowl_of_stew",
+  "title": "A Bowl of Stew",
+  "rank": "F",
+  "type": "Main",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Marta feeds you on credit. Brother Caspian arrives with the orphans and offers you a blanket and a place to sleep.",
+  "requirements": {
+   "prerequisites": [
+    "qst_main_wooden_card"
+   ]
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brother_caspian"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_tamsin_orphan"
+   }
+  ],
+  "rewards": {
+   "xp": 40
+  }
+ },
+ {
+  "id": "qst_odd_minas_earring",
+  "title": "Mina's Lost Earring",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "A giant crow stole Mina's earring. Its nest is full of shiny things.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_giant_crow",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_minas_earring",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "gp": 6,
+   "xp": 150
+  }
+ },
+ {
+  "id": "qst_gather_crying_mandrake",
+  "title": "The Crying Mandrake",
+  "rank": "F",
+  "type": "Gathering",
+  "giver": "npc_fennick_reed",
+  "region": "reg_whisperwood",
+  "summary": "Fennick needs mandrake roots. One of them is a baby, and its mother is very large.",
+  "requirements": {
+   "minLevel": 4
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mandrake_root",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "spare_or_harvest_the_baby"
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "gp": 8,
+   "xp": 200,
+   "items": [
+    "itm_healing_herb"
+   ]
+  }
+ },
+ {
+  "id": "qst_class_thousand_swings",
+  "title": "A Thousand Swings",
+  "rank": "F",
+  "type": "Class",
+  "giver": "npc_old_hollis",
+  "region": "reg_aldmere",
+  "summary": "Swing at the training post at dawn for seven days, then beat Hollis. He uses a broom.",
+  "requirements": {
+   "minLevel": 5
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "hollis_yard_dawn",
+    "count": 7
+   },
+   {
+    "kind": "talk",
+    "target": "npc_old_hollis"
+   }
+  ],
+  "rewards": {
+   "xp": 400,
+   "items": [
+    "itm_hollis_practice_blade"
+   ]
+  }
+ },
+ {
+  "id": "qst_hidden_tavern_brawl",
+  "title": "The Tavern Brawl",
+  "rank": "E",
+  "type": "Hidden",
+  "giver": "npc_brutus_kale",
+  "region": "reg_aldmere",
+  "summary": "Brutus mocks your wooden card one time too many. One punch later, the whole tavern learns what you really are.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "fight_or_walk_away"
+   }
+  ],
+  "rewards": {
+   "gp": 10,
+   "xp": 250
+  }
+ },
+ {
+  "id": "qst_def_goblins_granary",
+  "title": "Goblins in the Granary",
+  "rank": "E",
+  "type": "Defense",
+  "giver": "npc_farmer_hesk",
+  "region": "reg_aldmere",
+  "summary": "Goblins raid Hesk's granary every night. One of them is a starving child sent to scout.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "defend",
+    "target": "millbrook_granary"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_goblin",
+    "count": 8
+   },
+   {
+    "kind": "choice",
+    "target": "spare_the_goblin_child"
+   }
+  ],
+  "rewards": {
+   "gold": 180,
+   "gp": 15,
+   "xp": 600
+  }
+ },
+ {
+  "id": "qst_inv_smiling_scarecrow",
+  "title": "Night of the Smiling Scarecrow",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_farmer_odo",
+  "region": "reg_aldmere",
+  "summary": "The scarecrow in Odo's east field is in a different field every morning. Watch it at night. Don't look away.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "millbrook_fields_night",
+    "count": 3
+   },
+   {
+    "kind": "kill",
+    "target": "mon_smiling_scarecrow",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 220,
+   "gp": 18,
+   "xp": 700,
+   "items": [
+    "itm_fire_bomb"
+   ]
+  }
+ },
+ {
+  "id": "qst_explore_nine_thrones",
+  "title": "The Mural of Nine Thrones",
+  "rank": "E",
+  "type": "Exploration",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_whisperwood",
+  "summary": "Eolande wants a sketch of the mural in the Whisperwood ruins. It shows nine thrones. One has been scratched out.",
+  "requirements": {
+   "minLevel": 8
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_ruins_mural"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_skeleton",
+    "count": 4
+   }
+  ],
+  "rewards": {
+   "xp": 500,
+   "gp": 12
+  }
+ },
+ {
+  "id": "qst_rival_crimson_wolves",
+  "title": "The Crimson Wolves",
+  "rank": "E",
+  "type": "Subjugation",
+  "giver": "npc_dax_rowan",
+  "region": "reg_whisperwood",
+  "summary": "Dax challenges you to a race: whoever clears the wolf den first takes the bounty. Pim has already cheated.",
+  "requirements": {
+   "minLevel": 11
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 10
+   },
+   {
+    "kind": "kill",
+    "target": "mon_wild_boar",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 800,
+   "items": [
+    "itm_copper_compass"
+   ]
+  }
+ }
 ]

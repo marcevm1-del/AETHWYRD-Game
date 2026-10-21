@@ -1,12 +1,608 @@
 [
- {"id": "npc_mina_feathersby", "name": "Mina Feathersby", "tier": "core", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Guild receptionist", "backstory": "A cheerful receptionist who comments on every rank-up and faints at absurd feats. She was an A-Rank adventurer before an injury retired her.", "secret": "From early Act III she is replaced by Lady Nocturne; the real Mina is imprisoned beneath Vharlen.", "faction": "Adventurers' Guild", "romanceable": false, "canDie": false, "relationships": [{"npcId": "npc_nobody", "kind": "sister"}]},
- {"id": "npc_nobody", "name": "\"Nobody\"", "tier": "core", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Rogue trainer, Syndicate leader", "backstory": "A voice behind a tavern curtain who trains rogues and runs the Shadow Syndicate's frontier branch.", "secret": "Mina's sister; the first to realize Mina has been replaced.", "faction": "Shadow Syndicate", "romanceable": false, "canDie": true, "relationships": [{"npcId": "npc_mina_feathersby", "kind": "sister"}]},
- {"id": "npc_rodrick_hale", "name": "Rodrick \"Old Bear\" Hale", "tier": "core", "race": "Bear-kin", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Guild Master", "backstory": "A retired S-Rank adventurer who runs the Brindlewick branch like a gruff father figure.", "faction": "Adventurers' Guild", "romanceable": false, "canDie": true},
- {"id": "npc_old_hollis", "name": "Old Hollis", "tier": "core", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Swordsman trainer", "backstory": "A one-armed former B-Rank who teaches swordsmanship with a broomstick and once trained a Blade Master.", "faction": "Adventurers' Guild", "romanceable": false, "canDie": true},
- {"id": "npc_brother_caspian", "name": "Brother Caspian", "tier": "core", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Orphanage keeper, Morrowyn's shrine", "backstory": "A gentle, blindfolded monk who runs the Orphanage of the Small Lantern and gives newcomers their first meal.", "secret": "Host body of Malgareth Vey, the Red Prophet.", "faction": "Red Moon Cult", "romanceable": false, "canDie": true},
- {"id": "npc_lyra_brightwood", "name": "Lyra Brightwood", "tier": "core", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Companion (Swordsman)", "backstory": "A loud, cheerful rookie swordswoman who registers at the Guild the same day you do, to pay off her village's debt.", "faction": "Adventurers' Guild", "romanceable": true, "canDie": true},
- {"id": "npc_granny_mabel", "name": "Granny Mabel", "tier": "major", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Millbrook", "role": "Tamer trainer", "backstory": "A farmer who keeps forty \"chickens\" that are actually cockatrices, and teaches taming with endless patience.", "romanceable": false, "canDie": true},
- {"id": "npc_torvald_stonebeard", "name": "Torvald Stonebeard", "tier": "core", "race": "Dwarf", "homeRegion": "reg_aldmere", "settlement": "Brindlewick", "role": "Smith, companion (Artisan)", "backstory": "A grumpy old dwarf smith who sings forge songs and keeps an unfinished blade wrapped in cloth.", "faction": "Iron Hold", "romanceable": true, "canDie": true},
- {"id": "npc_farmer_odo", "name": "Odo Hensley", "tier": "townsfolk", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Millbrook", "role": "Wheat farmer", "backstory": "Third-generation wheat farmer who swears the scarecrow in his east field moved last night.", "secret": "He's right.", "romanceable": false, "canDie": true},
- {"id": "npc_examiner_garrick", "name": "Garrick \"Ironjaw\"", "tier": "major", "race": "Human", "homeRegion": "reg_aldmere", "settlement": "Aldmere City", "role": "Guild examiner", "backstory": "A C-Rank examiner who has broken his jaw eleven times and judges promotion trials with brutal honesty.", "faction": "Adventurers' Guild", "romanceable": false, "canDie": false}
+ {
+  "id": "npc_mina_feathersby",
+  "name": "Mina Feathersby",
+  "tier": "core",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Guild receptionist",
+  "backstory": "A cheerful receptionist who comments on every rank-up and faints at absurd feats. She was an A-Rank adventurer before an injury retired her.",
+  "secret": "From early Act III she is replaced by Lady Nocturne; the real Mina is imprisoned beneath Vharlen.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": false,
+  "relationships": [
+   {
+    "npcId": "npc_nobody",
+    "kind": "sister"
+   }
+  ]
+ },
+ {
+  "id": "npc_nobody",
+  "name": "\"Nobody\"",
+  "tier": "core",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Rogue trainer, Syndicate leader",
+  "backstory": "A voice behind a tavern curtain who trains rogues and runs the Shadow Syndicate's frontier branch.",
+  "secret": "Mina's sister; the first to realize Mina has been replaced.",
+  "faction": "Shadow Syndicate",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_mina_feathersby",
+    "kind": "sister"
+   }
+  ]
+ },
+ {
+  "id": "npc_rodrick_hale",
+  "name": "Rodrick \"Old Bear\" Hale",
+  "tier": "core",
+  "race": "Bear-kin",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Guild Master",
+  "backstory": "A retired S-Rank adventurer who runs the Brindlewick branch like a gruff father figure.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_old_hollis",
+  "name": "Old Hollis",
+  "tier": "core",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Swordsman trainer",
+  "backstory": "A one-armed former B-Rank who teaches swordsmanship with a broomstick and once trained a Blade Master.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_brother_caspian",
+  "name": "Brother Caspian",
+  "tier": "core",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Orphanage keeper, Morrowyn's shrine",
+  "backstory": "A gentle, blindfolded monk who runs the Orphanage of the Small Lantern and gives newcomers their first meal.",
+  "secret": "Host body of Malgareth Vey, the Red Prophet.",
+  "faction": "Red Moon Cult",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_lyra_brightwood",
+  "name": "Lyra Brightwood",
+  "tier": "core",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Companion (Swordsman)",
+  "backstory": "A loud, cheerful rookie swordswoman who registers at the Guild the same day you do, to pay off her village's debt.",
+  "faction": "Adventurers' Guild",
+  "romanceable": true,
+  "canDie": true
+ },
+ {
+  "id": "npc_granny_mabel",
+  "name": "Granny Mabel",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Millbrook",
+  "role": "Tamer trainer",
+  "backstory": "A farmer who keeps forty \"chickens\" that are actually cockatrices, and teaches taming with endless patience.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_torvald_stonebeard",
+  "name": "Torvald Stonebeard",
+  "tier": "core",
+  "race": "Dwarf",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Smith, companion (Artisan)",
+  "backstory": "A grumpy old dwarf smith who sings forge songs and keeps an unfinished blade wrapped in cloth.",
+  "faction": "Iron Hold",
+  "romanceable": true,
+  "canDie": true
+ },
+ {
+  "id": "npc_farmer_odo",
+  "name": "Odo Hensley",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Millbrook",
+  "role": "Wheat farmer",
+  "backstory": "Third-generation wheat farmer who swears the scarecrow in his east field moved last night.",
+  "secret": "He's right.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_examiner_garrick",
+  "name": "Garrick \"Ironjaw\"",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Aldmere City",
+  "role": "Guild examiner",
+  "backstory": "A C-Rank examiner who has broken his jaw eleven times and judges promotion trials with brutal honesty.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": false
+ },
+ {
+  "id": "npc_marta_gruel",
+  "name": "Marta Gruel",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Innkeeper, the Sleeping Griffon",
+  "backstory": "A broad, loud widow who feeds every rookie on credit and remembers every debt to the copper. She lost her husband to a wyvern twenty years ago and keeps his sword over the bar.",
+  "secret": "She has never once collected a debt from an adventurer who died.",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_teo_gruel",
+    "kind": "son"
+   }
+  ]
+ },
+ {
+  "id": "npc_teo_gruel",
+  "name": "Teo Gruel",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Stable boy, the Sleeping Griffon",
+  "backstory": "Marta's fourteen-year-old son, who wants to be an adventurer more than anything and practices with a broom in the stables.",
+  "secret": "He has been secretly training with Old Hollis at night.",
+  "romanceable": false,
+  "canDie": false,
+  "relationships": [
+   {
+    "npcId": "npc_marta_gruel",
+    "kind": "mother"
+   },
+   {
+    "npcId": "npc_old_hollis",
+    "kind": "secret student"
+   }
+  ]
+ },
+ {
+  "id": "npc_whiskers",
+  "name": "Whiskers",
+  "tier": "core",
+  "race": "Cat (Vex in disguise)",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "The inn cat",
+  "backstory": "A fat orange cat who sleeps on the warmest table in the Sleeping Griffon and has, according to the town records, been doing so for four hundred years.",
+  "secret": "Vex, the Laughing Coin, god of luck and travel.",
+  "romanceable": false,
+  "canDie": false
+ },
+ {
+  "id": "npc_sister_pell",
+  "name": "Sister Pell",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Cleric trainer, Solenne's shrine",
+  "backstory": "A cheerful nun from a fishing village who heals in the morning, teaches in the afternoon, and boxes in the barn behind the shrine on weekends.",
+  "secret": "She was an Inquisitor once and left after refusing an order to burn a village.",
+  "faction": "Holy Church of Lumina",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_eolande_fairweather",
+  "name": "Magistra Eolande Fairweather",
+  "tier": "major",
+  "race": "Elf",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Mage trainer, town librarian",
+  "backstory": "A tired elven scholar who was fired from the Mages' Academy for asking why the System exists. She now runs the Brindlewick library and teaches rookies to chant.",
+  "secret": "Her research notes on the harvest are hidden inside a cookbook in the library.",
+  "faction": "Mages' Academy",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_brannoc_emberfist",
+  "name": "Brannoc Emberfist",
+  "tier": "major",
+  "race": "Dwarf",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Artisan trainer, blacksmith",
+  "backstory": "A forge-dwarf who weeps openly at good steel and refuses to sell a blade to anyone who hasn't told him its name.",
+  "faction": "Iron Hold",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_torvald_stonebeard",
+    "kind": "old friend"
+   }
+  ]
+ },
+ {
+  "id": "npc_rosie_quill",
+  "name": "Rosalind \"Rosie\" Quill",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Bard trainer, tavern singer",
+  "backstory": "A flamboyant singer who knows every song in Aldmere and every secret in Brindlewick, and charges for neither.",
+  "secret": "She reports to the Shadow Syndicate, and through it to \"Nobody\".",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_nobody",
+    "kind": "informant for"
+   }
+  ]
+ },
+ {
+  "id": "npc_wren_ashbourne",
+  "name": "Wren Ashbourne",
+  "tier": "major",
+  "race": "Half-elf",
+  "homeRegion": "reg_whisperwood",
+  "settlement": "Whisperwood edge",
+  "role": "Ranger trainer, Whisperwood hunter",
+  "backstory": "A quiet half-elf who lives in a treehouse at the edge of Whisperwood and has tracked the White Stag for ten years without ever drawing her bow.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_bertrand_pike",
+  "name": "Mayor Bertrand Pike",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Mayor of Brindlewick",
+  "backstory": "A nervous former mill clerk who became mayor because nobody else wanted the job, and who now has to deal with goblin raids, a red moon and a town full of rookies.",
+  "secret": "He has been quietly paying the Strife Marches mercenaries to patrol the north road.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_captain_holt",
+  "name": "Captain Agnes Holt",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Captain of the town guard",
+  "backstory": "A grey-haired gate captain who has watched three generations of rookies walk out the north gate and counts every one that comes back.",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_bertrand_pike",
+    "kind": "reports to"
+   }
+  ]
+ },
+ {
+  "id": "npc_gilda_marsh",
+  "name": "Gilda Marsh",
+  "tier": "townsfolk",
+  "race": "Halfling",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Owner, Gilda's General Goods",
+  "backstory": "A halfling shopkeeper with an abacus she claims was a gift from a Veilborn hero; she haggles for fun and loses on purpose to children.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_fennick_reed",
+  "name": "Fennick Reed",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Herbalist",
+  "backstory": "A gentle herbalist who buys every herb rookies bring him and quietly throws away the poisonous ones they mistook for healing grass.",
+  "secret": "He supplies Elira, the excommunicated Saint, with medicine.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_hugo_brand",
+  "name": "Hugo Brand",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Baker",
+  "backstory": "A huge, soft-spoken baker who starts work at four in the morning and gives yesterday's bread to the orphanage every noon.",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_brother_caspian",
+    "kind": "friend"
+   }
+  ]
+ },
+ {
+  "id": "npc_ines_valbuena",
+  "name": "Ines Valbuena",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Tailor",
+  "backstory": "A sharp-tongued tailor from the south who mends adventurers' cloaks and lectures them about bloodstains.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_old_sal",
+  "name": "Old Sal",
+  "tier": "townsfolk",
+  "race": "Lizard-kin",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Fisherman, Millrace dock",
+  "backstory": "An ancient lizard-kin fisherman who claims to have caught a legendary fish in every river of Aldmere and has the scales to prove it.",
+  "secret": "One of his scales is from the Rainbow Koi that grants luck; he will trade it for a story.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_dax_rowan",
+  "name": "Dax Rowan",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Leader of the Crimson Wolves (rival party)",
+  "backstory": "An arrogant E-Rank swordsman from a minor noble family who registered a week before you and has decided you are his rival.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_isolde_marr",
+    "kind": "party member"
+   },
+   {
+    "npcId": "npc_pim_tallow",
+    "kind": "party member"
+   }
+  ]
+ },
+ {
+  "id": "npc_isolde_marr",
+  "name": "Isolde Marr",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Crimson Wolves mage",
+  "backstory": "A sleepy mage who joined Dax's party because he paid for her spellbooks, and who secretly thinks you're cooler.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_dax_rowan",
+    "kind": "party leader"
+   }
+  ]
+ },
+ {
+  "id": "npc_pim_tallow",
+  "name": "Pim Tallow",
+  "tier": "townsfolk",
+  "race": "Halfling",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Crimson Wolves scout",
+  "backstory": "A halfling scout who steals bounties out from under other parties and apologizes every time.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_dax_rowan",
+    "kind": "party leader"
+   }
+  ]
+ },
+ {
+  "id": "npc_brutus_kale",
+  "name": "Brutus Kale",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Tavern bully, D-Rank adventurer",
+  "backstory": "A loud D-Rank brawler who has been stuck at D for six years and takes it out on every rookie with a wooden card.",
+  "secret": "He is terrified of failing his C-Rank trial again and drinks to avoid trying.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_tamsin_orphan",
+  "name": "Tamsin",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Orphan, Orphanage of the Small Lantern",
+  "backstory": "A sharp eight-year-old who runs the other orphans like a small general and wants to be a guild receptionist like Mina.",
+  "romanceable": false,
+  "canDie": false,
+  "relationships": [
+   {
+    "npcId": "npc_brother_caspian",
+    "kind": "guardian"
+   }
+  ]
+ },
+ {
+  "id": "npc_bo_orphan",
+  "name": "Bo",
+  "tier": "townsfolk",
+  "race": "Rabbit-kin",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Orphan, Orphanage of the Small Lantern",
+  "backstory": "A shy six-year-old rabbit-kin who only speaks to Whiskers and draws pictures of the two moons.",
+  "secret": "He draws the red moon with buildings on it.",
+  "romanceable": false,
+  "canDie": false,
+  "relationships": [
+   {
+    "npcId": "npc_brother_caspian",
+    "kind": "guardian"
+   }
+  ]
+ },
+ {
+  "id": "npc_lark_orphan",
+  "name": "Lark",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Orphan, Orphanage of the Small Lantern",
+  "backstory": "A ten-year-old who has been told she will be \"adopted\" soon and is so happy about it that she tells everyone.",
+  "secret": "Her name is on the cult ledger found in Act II. If the player solves the mystery early, she is saved.",
+  "romanceable": false,
+  "canDie": false,
+  "relationships": [
+   {
+    "npcId": "npc_brother_caspian",
+    "kind": "guardian"
+   }
+  ]
+ },
+ {
+  "id": "npc_miller_jory",
+  "name": "Jory Thatch",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Miller",
+  "backstory": "The miller on the Brindle river, whose family has ground the town's flour for six generations and who knows every flood mark on the wheel.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_guard_tomlin",
+  "name": "Tomlin Harker",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "North gate guard",
+  "backstory": "A young guard who failed the Guild registration and now waves rookies through the north gate with quiet envy.",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_captain_holt",
+    "kind": "captain"
+   }
+  ]
+ },
+ {
+  "id": "npc_widow_aster",
+  "name": "Widow Aster",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Candlemaker, Temple Hill",
+  "backstory": "A candlemaker who makes the lanterns for Lantern Night and lights one every evening for a son who never came back from Whisperwood.",
+  "secret": "Her son's Guild card is in the Hall of Cards. He was the first victim of the Named hobgoblin Scarjaw.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_fiddler_corwin",
+  "name": "Corwin Fiddle",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Street musician",
+  "backstory": "A blind fiddler who plays in Guild Square for coins and can tell an adventurer's rank by the sound of their footsteps.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_guild_clerk_wendel",
+  "name": "Wendel Pratt",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "role": "Guild clerk",
+  "backstory": "Mina's overworked assistant, who files every report in triplicate and has a crush on the Guild Master's handwriting.",
+  "faction": "Adventurers' Guild",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_mina_feathersby",
+    "kind": "colleague"
+   }
+  ]
+ },
+ {
+  "id": "npc_farmer_hesk",
+  "name": "Hesk Molloway",
+  "tier": "townsfolk",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Millbrook",
+  "role": "Turnip farmer, Millbrook",
+  "backstory": "A farmer whose granary is raided by goblins every autumn and who has started leaving out food for them, without telling anyone.",
+  "secret": "A goblin child has been eating the food. It is Grukk the Younger.",
+  "romanceable": false,
+  "canDie": true
+ },
+ {
+  "id": "npc_traveling_merchant_pell",
+  "name": "Wandering Merchant Ottoline",
+  "tier": "major",
+  "race": "Fox-kin",
+  "homeRegion": "reg_whisperwood",
+  "settlement": "Whisperwood edge",
+  "role": "Traveling merchant",
+  "backstory": "A fox-kin peddler whose cart appears at the edge of Whisperwood on foggy mornings, selling things she swears she found.",
+  "secret": "Some of her wares come from Vesper.",
+  "romanceable": false,
+  "canDie": true
+ }
 ]

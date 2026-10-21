@@ -107,7 +107,12 @@ for (const q of rows.quests) {
   ref(`${q.id}.giver`, q.giver, 'npcs'); ref(`${q.id}.region`, q.region, 'regions');
   ((q.requirements || {}).prerequisites || []).forEach(p => ref(`${q.id}.prerequisites`, p, 'quests'));
   ((q.rewards || {}).items || []).forEach(i => ref(`${q.id}.rewards.items`, i, 'items'));
-  (q.objectives || []).forEach((o, i) => { if (o.kind === 'kill' || o.kind === 'tame') ref(`${q.id}.objectives[${i}]`, o.target, 'species'); });
+  (q.objectives || []).forEach((o, i) => {
+    const where = `${q.id}.objectives[${i}]`;
+    if (o.kind === 'kill' || o.kind === 'tame') ref(where, o.target, 'species');
+    else if (o.kind === 'talk') ref(where, o.target, 'npcs');
+    else if (o.kind === 'collect' && String(o.target).startsWith('itm_')) ref(where, o.target, 'items');
+  });
 }
 
 // 3) Report
