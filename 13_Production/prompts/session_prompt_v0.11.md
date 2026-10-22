@@ -1,16 +1,16 @@
-# Session Prompt — v0.11: Review Fixes + Regional Siege System
+# Session Prompt — v0.11: Siege System, Weekly Board & Inns in Code + Review Fixes
 
-You're working on **Project Ascend**, a single-player 3D open-world isekai RPG (Unity 6, data-driven JSON), in the folder `E:\Ideas\Project-Ascend` (a Git repo). Read `README.md`, `Canon.md` and `CHANGELOG.md` first. **Canon.md wins every conflict.** I'm the creative director and I prefer you to decide and build rather than ask. Flag anything that needs my OK in `Canon.md` §6 (Proposed Locks) and keep going. Keep docs concise.
+You're working on **Project Ascend**, a single-player 3D open-world isekai RPG (Unity 6, data-driven JSON), in the folder `E:\Ideas\Project-Ascend` (a Git repo). Read `README.md`, `Canon.md` and `CHANGELOG.md` first, then `12_Systems/systems.md` (Regional Siege & Liberation), `11_Quests_Encounters/weekly_board.md` and `12_Systems/inns.md`. **Canon.md wins every conflict.** I'm the creative director and I prefer you to decide and build rather than ask. Flag anything that needs my OK in `Canon.md` §6 (Proposed Locks) and keep going. Keep docs concise.
 
-Do the work in this order. Commit after each part.
+Do the work in this order. Commit after each part. **This session is code and data**: build what's already designed; don't redesign it. The feature docs (`01_Core_Concept/the_big_upgrade.md`, `borrowed_features.md`, `12_Systems/hud_and_ui.md`) are proposals in Canon §6; don't implement them yet unless a task below says so.
 
 ---
 
-## Part A — New feature: Regional Siege → Liberation
+## Part A — Regional Siege → Liberation (designed; now build it)
 
 **The rule:** every region has a **Tyrant**, its "big bad". Until the Tyrant is slain, the region is **Besieged**: its settlements (cities, towns, villages) face **defence events 1–2 times per in-game week**. Once the Tyrant dies, the region becomes **Liberated**: the attacks stop, and the region's quest board switches to normal **monster-hunting contracts**.
 
-### Design (write it into `12_Systems/systems.md` as a new section "Regional Siege & Liberation", and link it from `11_Quests_Encounters/quests_and_encounters.md`)
+### Design (already written in `12_Systems/systems.md` → Regional Siege & Liberation and Canon §4b; summary below. Link it from `11_Quests_Encounters/quests_and_encounters.md`)
 1. **Region states:** `Besieged` → `Liberated` (permanent). Optional middle state `Weakened` once the Tyrant's lieutenants/dens are cleared (defences get easier).
 2. **Weekly defence:** a Besieged region attacks one of its settlements **1–2 times per in-game week**, at random, usually at dusk, never two days in a row.
    - The week is **7 days** (Canon §2, Solenday → Vexday). At 90 real minutes per day, that's roughly one attack every 5–10.5 hours of play.
@@ -24,7 +24,7 @@ Do the work in this order. Commit after each part.
 6. **Liberation:** killing the Tyrant triggers a liberation scene and festival in the region's main settlement, a Prosperity jump, and a music change.
    - From then on the board offers hunting contracts: Subjugation, bounties, Named-monster hunts, escort and gathering.
    - Normal world events still happen (Stampedes, Calamities). Rare **remnant raids** can come back as story beats (e.g. Grukk the Younger's revenge), never as a recurring cycle again.
-7. **Ring 1 / Brindlewick:** use the **Goblin Chief of Hollowpine** as the Tyrant of the Brindlewick area (it fits "goblin raids grow organized"). Check this against its role as the F→E rank trial in `02_Lore/story.md`. If it clashes, propose an alternative in Canon §6. Propose Tyrants for every other region too, from existing bosses in `08_Bestiary/bosses_and_calamities.md` where possible.
+7. **Ring 1 / Brindlewick:** the **Goblin Chief of Hollowpine** is the proposed Tyrant of the Brindlewick area (Canon §6). Check this against its role as the F→E rank trial in `02_Lore/story.md`. If it clashes, propose an alternative in Canon §6. Propose Tyrants for every other region too, from existing bosses in `08_Bestiary/bosses_and_calamities.md` where possible.
 
 ### Data
 - `Data/World/regions.json` and its schema: add `tyrantSpeciesId`, `siegeFaction`, `defenceSettlements` and `initialState`.
@@ -62,8 +62,17 @@ Do the work in this order. Commit after each part.
 
 ---
 
+## Part C — Weekly Board & Inns in code (data already exists)
+1. **C# models** in `Code/Ascend.Core` for `Data/Quests/weekly_board.json` (schema `weekly_quest`) and `Data/World/inns.json` (schema `inn`). Load them in `GameDatabase`.
+2. **Calendar:** a `GameCalendar` helper: day number → weekday (Solenday…Vexday), week number, time of day, from the 90-minute day in `combat_tuning.json` or a new `world_tuning.json`.
+3. **`WeeklyBoard`:** given the day, region, its siege state and a seed → that dawn's board: the weekday's **Day Special** (once per week), **3 dailies** from that day's pool plus the `Any` pool, filtered by `regionState` (`besieged` / `liberated`) and time of day. On a siege attack day, the defence goes on top.
+4. **`InnStay`:** room tier → rest buff and duration (Rested / Well Rested, + meal and bath bonuses from `inns.md` §2), and **regular status** from nights stayed (Stranger 0 · Guest 3 · Regular 10 · Family 30 + quest flag). Marta's **tab**: a credit limit at F–E rank that never blocks anything.
+5. **Tests:** every weekday produces a special plus 3 dailies; Besieged-only quests vanish after Liberation and hunting contracts appear; a Day Special can't repeat in the same week; rest buffs stack correctly; regular thresholds work.
+
+---
+
 ## Finish
 - Run `npm run build` (it regenerates, validates and runs the tests). If no .NET SDK is reachable from your shell, say so and leave the tests for me to run with `npm test` on Windows.
-- Update `Canon.md` (Siege/Liberation rules go in §4 or a new section), add a `CHANGELOG.md` entry for **v0.11**, and update the README index.
-- **Do not** add new Ring 1 lore, NPCs or quests beyond what Part A needs. Ring 0 is the priority.
+- Siege/Liberation, the 7-day week and inns are already in Canon (§2, §4b, §4c). Update Canon only if something changes. Add a `CHANGELOG.md` entry for **v0.11** and update the README index.
+- Don't write new lore, NPCs or quests in this session; it's code and data only. Ring 0 is still the priority.
 - End with a short summary: what changed, what needs my OK, and the next step.
