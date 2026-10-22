@@ -21,3 +21,10 @@ Data/Monsters/*.csv
 
 # .NET build output (redirected by Code/Directory.Build.props)
 Code/.build/
+
+# Unity-generated IDE files
+Game/*.csproj
+Game/*.sln
+Game/*.slnx
+Game/.vs/
+Game/.idea/
