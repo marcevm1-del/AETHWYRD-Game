@@ -1,0 +1,969 @@
+[
+ {
+  "id": "inn_sleeping_griffon",
+  "name": "The Sleeping Griffon",
+  "regionId": "reg_aldmere",
+  "settlement": "Brindlewick",
+  "tier": "town",
+  "ring": 1,
+  "keeperNpcId": "npc_marta_gruel",
+  "keeperName": "Marta Gruel",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 20,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 100,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 1500,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Rookie Loft",
+    "priceCopper": 60,
+    "rest": "Well Rested (4h)",
+    "perk": "+10% XP for your first 7 days in Aetheria; the walls are carved with the names of every Veilborn who slept here first"
+   }
+  ],
+  "dish": {
+   "name": "Marta's Rookie Stew",
+   "effect": "+HP regen; the first bowl is always free"
+  },
+  "drink": {
+   "name": "Griffon Gold (or honey milk)",
+   "effect": "+5% Style points for 30 min"
+  },
+  "quirk": "Feeds every rookie on credit and remembers every debt",
+  "rumorTheme": "Whisperwood, goblin raids, newcomers",
+  "events": [
+   "Payday brawl",
+   "Rosie sings",
+   "A confused Veilborn stumbles in",
+   "Sir Aldric asleep on a table"
+  ],
+  "secret": "Among the carved names in the Rookie Loft are all three previous Heroes. Kaede's is carved twice. And the cat has lived here for 400 years."
+ },
+ {
+  "id": "inn_crooked_lantern",
+  "name": "The Crooked Lantern",
+  "regionId": "reg_greymoor",
+  "settlement": "Greymoor Stilts",
+  "tier": "village",
+  "ring": 2,
+  "keeperName": "Mother Bramble (swamp witch)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 15,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 80,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 900,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Room That Moves",
+    "priceCopper": 300,
+    "rest": "Well Rested (4h)",
+    "perk": "Each night it opens onto a different hallway; one night it opens onto a hidden lore room"
+   }
+  ],
+  "dish": {
+   "name": "Bog-eel Pie",
+   "effect": "+Poison resist"
+  },
+  "drink": {
+   "name": "Dreamwater Tea",
+   "effect": "Guarantees a Maelis dream tonight"
+  },
+  "quirk": "The building leans more every year; nobody admits it",
+  "rumorTheme": "The Witchwood, curses, missing travelers",
+  "events": [
+   "A curse-removal request",
+   "Frogs sing at midnight",
+   "A guest is a cursed frog prince"
+  ],
+  "secret": "Mother Bramble is the one who cursed half of her guests, by accident, decades ago."
+ },
+ {
+  "id": "inn_leafhall_rest",
+  "name": "Leafhall Rest",
+  "regionId": "reg_sylvaran",
+  "settlement": "Sylvaran court city",
+  "tier": "city",
+  "ring": 3,
+  "keeperName": "Thalion Veyraleth (elf)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 40,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 200,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 3000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "Heartwood Bower",
+    "priceCopper": 2500,
+    "rest": "Well Rested (8h)",
+    "perk": "Sleep inside a living tree: +Spirit regen and a Sylvara Devotion point once a week"
+   }
+  ],
+  "dish": {
+   "name": "Moonleaf Salad",
+   "effect": "+MP regen"
+  },
+  "drink": {
+   "name": "Starbloom Wine",
+   "effect": "+Nature magic for 30 min"
+  },
+  "quirk": "Charges humans double until they earn elven reputation (the court-elf snobbery, Canon)",
+  "rumorTheme": "Court politics, the World Tree",
+  "events": [
+   "A poet insults your accent",
+   "A noble asks you to carry a secret letter"
+  ],
+  "secret": "Thalion is a disgraced court mage hiding in plain sight."
+ },
+ {
+  "id": "inn_thimble_thistle",
+  "name": "The Thimble & Thistle",
+  "regionId": "reg_mossdeep",
+  "settlement": "Mossdeep",
+  "tier": "village",
+  "ring": 2,
+  "keeperName": "Pipwick Burr (Thimblefolk)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 5,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 30,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 400,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Acorn Room",
+    "priceCopper": 100,
+    "rest": "Well Rested (4h)",
+    "perk": "Only reachable while shrunk; one crumb of bread feeds the whole party"
+   }
+  ],
+  "dish": {
+   "name": "One Blueberry (whole)",
+   "effect": "A full meal for the tiny; +stamina"
+  },
+  "drink": {
+   "name": "Dewdrop Cordial",
+   "effect": "+evasion while shrunk"
+  },
+  "quirk": "You must drink a shrinking draught at the door",
+  "rumorTheme": "Beetle riders, giant cats, the \"big folk\"",
+  "events": [
+   "A spider at the window is a dragon to them",
+   "A wedding in a teacup"
+  ],
+  "secret": "The inn is built inside the lost boot of a previous Hero."
+ },
+ {
+  "id": "inn_anvils_rest",
+  "name": "The Anvil's Rest",
+  "regionId": "reg_iron_hold",
+  "settlement": "Khazdûr Gate",
+  "tier": "city",
+  "ring": 4,
+  "keeperName": "Brunhild Coalbeard (dwarf)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 30,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 150,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 2000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Forge Room",
+    "priceCopper": 800,
+    "rest": "Well Rested (8h)",
+    "perk": "Heated by the forge below: +1 crafting quality on your next Blacksmithing job"
+   }
+  ],
+  "dish": {
+   "name": "Stone-oven Mutton",
+   "effect": "+DEF"
+  },
+  "drink": {
+   "name": "Deep Stout",
+   "effect": "+STR, slight camera sway"
+  },
+  "quirk": "Drinking contests every night; the record holder is 300 years old",
+  "rumorTheme": "Mines, rune-smiths, deep things waking",
+  "events": [
+   "Drinking contest",
+   "A rune-smith wants a rare ore",
+   "Miners sing"
+  ],
+  "secret": "A sealed door in the cellar leads to an Underworld Deepgate."
+ },
+ {
+  "id": "inn_howling_hearth",
+  "name": "The Howling Hearth",
+  "regionId": "reg_fanghold",
+  "settlement": "Fanghold",
+  "tier": "town",
+  "ring": 3,
+  "keeperName": "Grandma Ruka (wolfkin)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 10,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 60,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 700,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Pack Den",
+    "priceCopper": 150,
+    "rest": "Well Rested (4h)",
+    "perk": "Sleep in the shared fur-pile: +Bond with every companion present"
+   }
+  ],
+  "dish": {
+   "name": "Fire-roasted Boar Haunch",
+   "effect": "+ATK"
+  },
+  "drink": {
+   "name": "Fermented Mare Milk",
+   "effect": "+stamina regen"
+  },
+  "quirk": "No chairs; everyone eats on the floor and arm-wrestles for the last piece",
+  "rumorTheme": "Hunts, the Federation, stampedes",
+  "events": [
+   "Arm-wrestling",
+   "A hunting challenge at dawn",
+   "Howling at Full Lumen"
+  ],
+  "secret": "Grandma Ruka was an S-rank adventurer who retired after the Siege of Marrowgate."
+ },
+ {
+  "id": "inn_moon_on_water",
+  "name": "Ryokan Moon-on-Water",
+  "regionId": "reg_hoshizora",
+  "settlement": "Hoshizora City",
+  "tier": "city",
+  "ring": 5,
+  "keeperName": "Okami Sayo",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 50,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 250,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 4000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Lantern Garden Suite",
+    "priceCopper": 5000,
+    "rest": "Well Rested (12h)",
+    "perk": "Private hot spring: full HP/MP/SP, removes debuffs, a quiet companion scene"
+   }
+  ],
+  "dish": {
+   "name": "Seasonal Course",
+   "effect": "+all stats (small), changes each season"
+  },
+  "drink": {
+   "name": "Plum Tea",
+   "effect": "+Spirit Magic"
+  },
+  "quirk": "Guests wear the inn's robes; spirits check in after midnight",
+  "rumorTheme": "Shrines, the Oni Volcano, the spirit world",
+  "events": [
+   "A spirit guest asks for help",
+   "Lantern-floating night"
+  ],
+  "secret": "One of the staff is a fox spirit from the Kitsune Isles."
+ },
+ {
+  "id": "inn_ninth_tail",
+  "name": "The Ninth Tail Teahouse",
+  "regionId": "reg_kitsune_isles",
+  "settlement": "Fox Shrine Isle",
+  "tier": "special",
+  "ring": 5,
+  "keeperName": "Lady Kuzunoha (spirit)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 0,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 0,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 0,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "Contract Room",
+    "priceCopper": 0,
+    "rest": "Well Rested (8h)",
+    "perk": "Paid with a memory or a story, not coins. A binding contract (Canon: spirit contracts are magic)"
+   }
+  ],
+  "dish": {
+   "name": "Fox-fire Tofu",
+   "effect": "+Fire and illusion resist"
+  },
+  "drink": {
+   "name": "Moonlit Sake (or tea)",
+   "effect": "Lets you see spirits for the night"
+  },
+  "quirk": "Spirits run it; humans are guests. Breaking house rules breaks a contract",
+  "rumorTheme": "Spirit contracts, Suzune's family, the veil",
+  "events": [
+   "A contract dispute",
+   "A tanuki tries to pay with leaves"
+  ],
+  "secret": "The memories guests pay with are stored in the teahouse's cellar, and one belongs to you from Earth."
+ },
+ {
+  "id": "inn_wandering_dragon",
+  "name": "The Wandering Dragon Inn",
+  "regionId": "reg_shen_lu",
+  "settlement": "Jade Crossroads",
+  "tier": "town",
+  "ring": 6,
+  "keeperName": "Old Man Feng",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 30,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 150,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 2000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Quiet Room",
+    "priceCopper": 1200,
+    "rest": "Well Rested (8h)",
+    "perk": "Meditation room: +cultivation progress overnight"
+   }
+  ],
+  "dish": {
+   "name": "Thousand-layer Noodles",
+   "effect": "+SPD"
+  },
+  "drink": {
+   "name": "Cloud-mist Tea",
+   "effect": "+MP regen, +cultivation focus"
+  },
+  "quirk": "Martial artists fight over tables; the inn charges for broken furniture in advance",
+  "rumorTheme": "Sects, tournaments, secret manuals",
+  "events": [
+   "A sect duel breaks out",
+   "A beggar who is a grandmaster",
+   "A manual hidden in a teapot"
+  ],
+  "secret": "Feng is a sealed martial saint guarding a forbidden manual."
+ },
+ {
+  "id": "inn_cloud_gate",
+  "name": "Cloud Gate Guesthouse",
+  "regionId": "reg_haneul",
+  "settlement": "Haneul capital",
+  "tier": "city",
+  "ring": 6,
+  "keeperName": "Madam Seo",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 30,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 150,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 2000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Warm Floor Room",
+    "priceCopper": 900,
+    "rest": "Well Rested (8h)",
+    "perk": "Heated stone floors: full climate comfort and +stamina for the next day"
+   }
+  ],
+  "dish": {
+   "name": "Fermented-pot Stew",
+   "effect": "+HP and +cold resist"
+  },
+  "drink": {
+   "name": "Barley Tea",
+   "effect": "+stamina regen"
+  },
+  "quirk": "Shoes off at the door; the keeper remembers every guest's favorite side dish",
+  "rumorTheme": "Mountain spirits, scholars' exams",
+  "events": [
+   "A scholar studying for the exams asks you to quiz them"
+  ],
+  "secret": "The guesthouse's jars hold a mountain spirit's tears."
+ },
+ {
+  "id": "inn_last_fire",
+  "name": "The Last Fire",
+  "regionId": "reg_frostveil",
+  "settlement": "Frostveil hold",
+  "tier": "town",
+  "ring": 5,
+  "keeperName": "Skald Hrafna",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 20,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 100,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 1500,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "Hearthside Bench",
+    "priceCopper": 50,
+    "rest": "Well Rested (8h)",
+    "perk": "Sleep by the great fire: full cold comfort and a skald's story (lore)"
+   }
+  ],
+  "dish": {
+   "name": "Smoked Whale Broth",
+   "effect": "+cold resist"
+  },
+  "drink": {
+   "name": "Honey Mead",
+   "effect": "+courage (fear resist)"
+  },
+  "quirk": "The fire has never gone out in 600 years; letting it die is a crime",
+  "rumorTheme": "The Shattered Sky, frost giants, lost ships",
+  "events": [
+   "Saga night",
+   "A frozen traveler at the door"
+  ],
+  "secret": "The fire is a bound fire spirit who wants to be free."
+ },
+ {
+  "id": "inn_oasis_caravanserai",
+  "name": "The Oasis Caravanserai",
+  "regionId": "reg_sunscar",
+  "settlement": "Oasis of Seven Wells",
+  "tier": "town",
+  "ring": 6,
+  "keeperName": "Saeed al-Najm",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 20,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 100,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 1500,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Star Roof",
+    "priceCopper": 400,
+    "rest": "Well Rested (4h)",
+    "perk": "Sleep under the stars: reveals a hidden desert ruin on your map once"
+   }
+  ],
+  "dish": {
+   "name": "Date-and-lamb Tagine",
+   "effect": "+heat resist"
+  },
+  "drink": {
+   "name": "Mint Tea",
+   "effect": "+stamina regen in heat"
+  },
+  "quirk": "Every trade route in the desert passes through; caravans arrive with news",
+  "rumorTheme": "The vanished empire, sandworms, trade",
+  "events": [
+   "A caravan arrives",
+   "A storyteller night",
+   "A camel race"
+  ],
+  "secret": "Its oldest well leads to the ruins of the empire below."
+ },
+ {
+  "id": "inn_drowned_mermaid",
+  "name": "The Drowned Mermaid",
+  "regionId": "reg_goldmere_coast",
+  "settlement": "Port Goldmere",
+  "tier": "city",
+  "ring": 6,
+  "keeperName": "\"One-Eyed\" Delphine",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 15,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 80,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 1200,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Captain's Cabin",
+    "priceCopper": 600,
+    "rest": "Well Rested (4h)",
+    "perk": "A smuggler's trapdoor: leave town unseen (clears pursuit by bounty hunters)"
+   }
+  ],
+  "dish": {
+   "name": "Kraken Fritters",
+   "effect": "+water resist"
+  },
+  "drink": {
+   "name": "Black Rum (or limewater)",
+   "effect": "+LUK, slight sway"
+  },
+  "quirk": "Sea shanties every night; card sharks at every table",
+  "rumorTheme": "Pirates, the Abyss, sunken treasure",
+  "events": [
+   "Shanty contest",
+   "A Kaede's Cards hustler",
+   "A press-gang tries to recruit you"
+  ],
+  "secret": "Delphine runs the smugglers' ring; she'll trade secrets for favors."
+ },
+ {
+  "id": "inn_whales_belly",
+  "name": "The Whale's Belly",
+  "regionId": "reg_dunewhale_drift",
+  "settlement": "Dunewhale town",
+  "tier": "town",
+  "ring": 6,
+  "keeperName": "Captain Ossa",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 20,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 100,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 1500,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Blowhole View",
+    "priceCopper": 500,
+    "rest": "Well Rested (4h)",
+    "perk": "Wake up somewhere new: the whale moved overnight, revealing a new map area"
+   }
+  ],
+  "dish": {
+   "name": "Sand-shrimp Skewers",
+   "effect": "+heat resist"
+  },
+  "drink": {
+   "name": "Cactus Water",
+   "effect": "+HP regen"
+  },
+  "quirk": "The whole inn sways; first-time guests get seasick (a short debuff)",
+  "rumorTheme": "Where the whale is going, sand pirates",
+  "events": [
+   "The whale sings and everyone stops",
+   "Sand pirates attack the town"
+  ],
+  "secret": "The whale is old and dying, and the town doesn't know."
+ },
+ {
+  "id": "inn_friendly_goblin",
+  "name": "The Friendly Goblin",
+  "regionId": "reg_moraveil",
+  "settlement": "Moraveil market town",
+  "tier": "town",
+  "ring": 7,
+  "keeperName": "Grukk the Younger (if spared twice) or Old Snaggle",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 10,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 50,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 600,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Peace Room",
+    "priceCopper": 200,
+    "rest": "Well Rested (4h)",
+    "perk": "Humans and monsters share a table: +monster-town reputation"
+   }
+  ],
+  "dish": {
+   "name": "Mystery Meat (it's fine)",
+   "effect": "+random buff"
+  },
+  "drink": {
+   "name": "Mushroom Brew",
+   "effect": "Understand Goblin for an hour"
+  },
+  "quirk": "Monster-run; humans welcome if they're polite. Weapons stay at the door",
+  "rumorTheme": "The Commonwealth, human bandits, tribes",
+  "events": [
+   "A slime asks you to settle a dispute",
+   "An ogre poetry night"
+  ],
+  "secret": "If you spared Grukk twice, he runs it, and he named it after his father."
+ },
+ {
+  "id": "inn_deep_pint",
+  "name": "The Deep Pint",
+  "regionId": "reg_labyrinth_upper",
+  "settlement": "Labyrinth Floor 30 safe town",
+  "tier": "special",
+  "ring": 4,
+  "keeperName": "Dorgrim Underbrow (dwarf)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 50,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 250,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 3000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "Bunk 30",
+    "priceCopper": 300,
+    "rest": "Well Rested (4h)",
+    "perk": "Save point and Labyrinth checkpoint; restocks your belt"
+   }
+  ],
+  "dish": {
+   "name": "Cave-mushroom Hash",
+   "effect": "+dark vision"
+  },
+  "drink": {
+   "name": "Glowmoss Ale",
+   "effect": "+trap detection"
+  },
+  "quirk": "The only bar 30 floors down; prices are 3× and nobody complains",
+  "rumorTheme": "Deeper floors, lost parties, the Maze King",
+  "events": [
+   "A party crawls in wounded",
+   "Bets on who reaches floor 40"
+  ],
+  "secret": "Dorgrim has never been to the surface."
+ },
+ {
+  "id": "inn_lantern_wake",
+  "name": "The Lantern Wake",
+  "regionId": "reg_labyrinth_upper",
+  "settlement": "Labyrinth Floor 40 ghost market",
+  "tier": "special",
+  "ring": 4,
+  "keeperName": "The Hostess (a ghost)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 0,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 0,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 0,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Quiet Bed",
+    "priceCopper": 0,
+    "rest": "Well Rested (4h)",
+    "perk": "Paid in candle stubs (itm_mat_candle_stub). You dream of the adventurers who died in the Labyrinth"
+   }
+  ],
+  "dish": {
+   "name": "Memory Soup",
+   "effect": "Shows one ghost's last memory (lore)"
+  },
+  "drink": {
+   "name": "Cold Tea",
+   "effect": "+Dark resist"
+  },
+  "quirk": "All guests are ghosts except you",
+  "rumorTheme": "How people died down here (warnings)",
+  "events": [
+   "A ghost asks you to deliver a last letter upstairs"
+  ],
+  "secret": "The Hostess is waiting for one specific living adventurer."
+ },
+ {
+  "id": "inn_imperial_grand",
+  "name": "The Imperial Grand Hotel",
+  "regionId": "reg_vharlen",
+  "settlement": "Vharlen capital",
+  "tier": "city",
+  "ring": 7,
+  "keeperName": "Director Aurel Kass",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 100,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 500,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 8000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Ambassador Suite",
+    "priceCopper": 10000,
+    "rest": "Well Rested (12h)",
+    "perk": "Status symbol: +Renown with Imperium nobles; every wall has ears"
+   }
+  ],
+  "dish": {
+   "name": "Seven-course Imperial Dinner",
+   "effect": "+CHA"
+  },
+  "drink": {
+   "name": "Vintage of the Empire",
+   "effect": "+CHA, nobles notice you"
+  },
+  "quirk": "Luxurious, cold and full of spies",
+  "rumorTheme": "Imperial politics, the war, the real Mina's prison",
+  "events": [
+   "A spy plants a note in your coat",
+   "A ball you weren't invited to"
+  ],
+  "secret": "The hotel basement connects to the prison where the real Mina is held."
+ },
+ {
+  "id": "inn_hour_that_isnt",
+  "name": "The Hour That Isn't",
+  "regionId": "reg_everdusk",
+  "settlement": "Everdusk court",
+  "tier": "special",
+  "ring": 7,
+  "keeperName": "Mistress Thistledown (fey)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 0,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 0,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 0,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Forever Room",
+    "priceCopper": 0,
+    "rest": "Well Rested (24h)",
+    "perk": "Paid with a name, a laugh or a color. One night here can pass as a week outside (the inn warns you, sometimes)"
+   }
+  ],
+  "dish": {
+   "name": "Fairy Feast",
+   "effect": "+all stats; never eat the third course"
+  },
+  "drink": {
+   "name": "Dew of Never",
+   "effect": "Unknown (rolls a random fey effect)"
+  },
+  "quirk": "Fey hospitality: politeness is law, thanks are debts",
+  "rumorTheme": "Fey bargains, stolen children, the courts",
+  "events": [
+   "A riddle at dinner",
+   "A fey noble wants to buy your shadow"
+  ],
+  "secret": "The inn is a fey lord's pocket world, and he wants to keep a guest forever."
+ },
+ {
+  "id": "inn_crimson_rest",
+  "name": "The Crimson Rest",
+  "regionId": "reg_nox_dominion",
+  "settlement": "Nox Dominion border town",
+  "tier": "town",
+  "ring": 8,
+  "keeperName": "Madam Vessa (demon)",
+  "rooms": [
+   {
+    "tier": "common",
+    "priceCopper": 30,
+    "rest": "Rested (2h)"
+   },
+   {
+    "tier": "private",
+    "priceCopper": 150,
+    "rest": "Well Rested (4h)"
+   },
+   {
+    "tier": "suite",
+    "priceCopper": 2000,
+    "rest": "Well Rested (8h) + meal"
+   },
+   {
+    "tier": "signature",
+    "name": "The Neutral Room",
+    "priceCopper": 1000,
+    "rest": "Well Rested (8h)",
+    "perk": "Sanctuary: no fighting allowed, even for the Overlord's soldiers"
+   }
+  ],
+  "dish": {
+   "name": "Ember Bread",
+   "effect": "+fire resist"
+  },
+  "drink": {
+   "name": "Blood-orange Cordial",
+   "effect": "+demon reputation"
+  },
+  "quirk": "Demon civilians live ordinary lives here (Canon: consequences on every side)",
+  "rumorTheme": "The war from the other side, the Generals",
+  "events": [
+   "A demon family hides a deserter",
+   "Refugees from your own victories"
+  ],
+  "secret": "Madam Vessa lost a son to a human adventurer. She knows it was you, or someone like you."
+ }
+]

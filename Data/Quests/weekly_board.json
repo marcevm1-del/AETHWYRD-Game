@@ -1240,6 +1240,43 @@
   "regionState": "any",
   "rankMin": "F",
   "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [
+   "Brutus starts a fight over the last stew",
+   "A big tipper is a noble in disguise",
+   "Whiskers trips you on purpose",
+   "Paying off your tab with work instead of coins"
+  ],
+  "id": "qst_wk_any_griffon_rush",
+  "title": "Rush Hour at the Griffon",
+  "day": "Any",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Part-time job at the inn",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Payday crowd, one cook, zero patience. Marta hands you an apron: take orders, carry stew, stop the brawl before it starts.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Serving minigame: 12 orders"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_teo_gruel"
+   }
+  ],
+  "rewards": {
+   "gold": 45,
+   "xp": 80,
+   "gp": 1
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
   "timeOfDay": "any",
   "twists": [
    "Clearing all 7 day specials in one week earns a title: \"Seven Days of Errands\""

@@ -20,7 +20,8 @@ const COLLECTIONS = {
   items: { files: ['Items/materials.json', 'Items/items.json'], schema: 'item' },
   npcs: { files: ['NPCs/npcs.json'], schema: 'npc' },
   quests: { files: ['Quests/quests.json'], schema: 'quest' },
-  weekly: { files: ['Quests/weekly_board.json'], schema: 'weekly_quest' }
+  weekly: { files: ['Quests/weekly_board.json'], schema: 'weekly_quest' },
+  inns: { files: ['World/inns.json'], schema: 'inn' }
 };
 
 const errors = [];
@@ -114,6 +115,11 @@ for (const q of [...rows.quests, ...rows.weekly]) {
     else if (o.kind === 'talk') ref(where, o.target, 'npcs');
     else if (o.kind === 'collect' && String(o.target).startsWith('itm_')) ref(where, o.target, 'items');
   });
+}
+
+for (const i of rows.inns) {
+  ref(`${i.id}.regionId`, i.regionId, 'regions'); ref(`${i.id}.keeperNpcId`, i.keeperNpcId, 'npcs', true);
+  if (i.rooms.filter(r => r.tier === 'signature').length > 1) err(i.id, 'at most one signature room');
 }
 
 // Weekly board: every weekday needs a special and at least 3 dailies (board shows 3 per day)

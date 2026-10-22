@@ -124,6 +124,21 @@ const SCHEMAS = {
       twists: { type: 'array', items: { type: 'string' } }
     }
   }
+,
+  inn: {
+    title: 'Inn', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'regionId', 'settlement', 'tier', 'ring', 'keeperName', 'rooms', 'dish', 'drink', 'quirk', 'rumorTheme', 'events', 'secret'],
+    properties: {
+      id: id('inn_'), name: { type: 'string', minLength: 1 }, regionId: id('reg_'), settlement: { type: 'string' },
+      tier: { type: 'string', enum: ['village', 'town', 'city', 'special'] }, ring: { type: 'integer', minimum: 0, maximum: 9 },
+      keeperNpcId: id('npc_'), keeperName: { type: 'string' },
+      rooms: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['tier', 'priceCopper', 'rest'], properties: {
+        tier: { type: 'string', enum: ['common', 'private', 'suite', 'signature'] }, name: { type: 'string' }, priceCopper: { type: 'integer', minimum: 0 }, rest: { type: 'string' }, perk: { type: 'string' } } } },
+      dish: { type: 'object', required: ['name', 'effect'], properties: { name: { type: 'string' }, effect: { type: 'string' } } },
+      drink: { type: 'object', required: ['name', 'effect'], properties: { name: { type: 'string' }, effect: { type: 'string' } } },
+      quirk: { type: 'string' }, rumorTheme: { type: 'string' }, events: { type: 'array', items: { type: 'string' } }, secret: { type: 'string' }
+    }
+  }
 };
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
