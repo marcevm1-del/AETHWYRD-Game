@@ -74,7 +74,7 @@
 | Autumn (*Harvestwane*) | Reaping, Lanternfall, Ashmoon | **Lantern Night** (spirits of the dead visit) |
 | Winter (*Deepfrost*) | Hearthmonth, Starfrost, Lastlight | **Starfire Eve** (gifts, snow festival, Twin Eclipse) |
 
-12 months × 30 days. Seasons drive crop cycles, migrations, spawns and festivals.
+12 months × 30 days, and a **7-day week** named for seven of the Eight: Solenday, Maelsday, Thorsday, Sylvasday, Kaelsday, Morrowsday, Vexday (Ilvaris has no day; see `11_Quests_Encounters/weekly_board.md`). Seasons drive crop cycles, migrations, spawns and festivals.
 
 ## 7. Languages & Scripts
 | Language | Speakers | Gameplay |

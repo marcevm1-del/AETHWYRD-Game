@@ -29,6 +29,7 @@
 | 10 | [brindlewick.md](10_World/brindlewick.md) | Ring 1 hub town: history, districts, daily rhythm, people, quests, secrets |
 | 10 | [world.md](10_World/world.md) | All 40 regions with inspirations, Underworld, Deepgates, deep dives, traversal, living dungeons |
 | 11 | [quests_and_encounters.md](11_Quests_Encounters/quests_and_encounters.md) | Quest framework, encounters, world events, tournaments, the Academy |
+| 11 | [weekly_board.md](11_Quests_Encounters/weekly_board.md) | The 7-day week and its anime daily quests: day specials, dailies, weekly commission |
 | 12 | [combat.md](12_Systems/combat.md) | **Combat spec**: camera, movement, combos, hit-stop, parry, reactions, Style Rank, damage, Ring 0 fun test |
 | 12 | [systems.md](12_Systems/systems.md) | Status Window, combat, economy, crafting, housing, difficulty, taming, prosperity, inventory, UI, loss safety |
 | 13 | [production.md](13_Production/production.md) | Engine, pipeline, build rings, release (deferred) |

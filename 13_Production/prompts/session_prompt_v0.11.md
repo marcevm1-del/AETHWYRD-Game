@@ -12,8 +12,8 @@ Do the work in this order. Commit after each part.
 
 ### Design (write it into `12_Systems/systems.md` as a new section "Regional Siege & Liberation", and link it from `11_Quests_Encounters/quests_and_encounters.md`)
 1. **Region states:** `Besieged` → `Liberated` (permanent). Optional middle state `Weakened` once the Tyrant's lieutenants/dens are cleared (defences get easier).
-2. **Weekly defence:** a Besieged region attacks one of its settlements **1–2 times per in-game week**, at random, usually at dusk, never two days in a row. At 90 real minutes per day, that's roughly one attack every 4.5–9 hours of play.
-   - The calendar has no week yet (Canon: 12 months × 30 days). Use a **6-day week** (5 weeks a month) and add it to Canon §6 as a proposed lock.
+2. **Weekly defence:** a Besieged region attacks one of its settlements **1–2 times per in-game week**, at random, usually at dusk, never two days in a row.
+   - The week is **7 days** (Canon §2, Solenday → Vexday). At 90 real minutes per day, that's roughly one attack every 5–10.5 hours of play.
    - Each attack is posted on the guild board and the rumor board **one in-game day ahead**, so the player can travel there and prepare.
    - Waves are themed to the Tyrant's faction (e.g. goblin warbands for a goblin Tyrant). They scale to the region's rank band, and the last wave has a lieutenant.
    - Target length: 5–8 minutes. Rewards: gold, GP, XP, Prosperity Safety, and settlement reputation.
@@ -29,6 +29,7 @@ Do the work in this order. Commit after each part.
 ### Data
 - `Data/World/regions.json` and its schema: add `tyrantSpeciesId`, `siegeFaction`, `defenceSettlements` and `initialState`.
 - New `Data/World/siege_waves.json` + schema: wave templates per faction × rank band (species IDs, counts, lieutenant, escalation step).
+- The weekly board (`Data/Quests/weekly_board.json`, `11_Quests_Encounters/weekly_board.md`) already has a `regionState` field (`any`/`besieged`/`liberated`); use the same rule. On an attack day, post the defence as the top contract.
 - Extend `Data/Quests/quests.json` + schema: a `siege_defence` quest type, plus a `regionState` condition so hunting contracts only appear when `Liberated` and defences only appear when `Besieged`.
 - Validator: every Tyrant exists and is a unique species; wave species live in that region; every region has a Tyrant or is explicitly marked `noSiege` (e.g. Vesper, Labyrinth bands).
 
@@ -36,7 +37,7 @@ Do the work in this order. Commit after each part.
 - `RegionThreat`: state machine (Besieged/Weakened/Liberated) plus escalation level.
 - `SiegeScheduler`: given the day number, region and seed → whether an attack happens this week (1–2 per week, never on consecutive days), which settlement, which day and time, and with which wave set.
 - `SiegeAutoResolve`: outcome and Prosperity/building damage from Safety + guards + escalation. It never destroys a settlement.
-- Tests for all three, including that every 6-day week has 1 or 2 attacks and none on consecutive days.
+- Tests for all three, including that every 7-day week has 1 or 2 attacks and none on consecutive days.
 
 ---
 

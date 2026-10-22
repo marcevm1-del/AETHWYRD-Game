@@ -1,0 +1,1271 @@
+[
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "The target is wearing a stolen guard helmet",
+   "A rival party claims the bounty first",
+   "The \"monster\" on the poster is a misdrawn rabbit"
+  ],
+  "id": "qst_wk_sol_fresh_posters",
+  "title": "Fresh Posters",
+  "day": "Solenday",
+  "slot": "special",
+  "type": "Bounty",
+  "trope": "The new week's wanted posters",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_whisperwood",
+  "summary": "Wendel pins up the week's wanted posters at dawn. One sketch looks suspiciously like a goblin wearing a hat.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_hobgoblin",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_bounty_proof",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 150,
+   "xp": 320,
+   "gp": 12,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "night",
+  "twists": [
+   "A lost child arrives at the gate",
+   "Tomlin really is asleep",
+   "Undead come from the road, not the forest"
+  ],
+  "id": "qst_wk_sol_gate_watch",
+  "title": "Gate Watch",
+  "day": "Solenday",
+  "slot": "daily",
+  "type": "Defense",
+  "trope": "Rookie guard duty",
+  "giver": "npc_guard_tomlin",
+  "region": "reg_aldmere",
+  "summary": "Tomlin needs someone awake on the north gate while he \"rests his eyes.\"",
+  "objectives": [
+   {
+    "kind": "defend",
+    "target": "North Gate",
+    "count": 1
+   },
+   {
+    "kind": "kill",
+    "target": "mon_zombie",
+    "count": 4
+   }
+  ],
+  "rewards": {
+   "gold": 45,
+   "xp": 110,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [],
+  "id": "qst_wk_sol_oath_witness",
+  "title": "Witness to an Oath",
+  "day": "Solenday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Formal ceremony, nervous rookie",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "Two farmers settling a fence dispute need an adventurer to witness their oath at Solenne's shrine.",
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_farmer_odo"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_farmer_hesk"
+   },
+   {
+    "kind": "choice",
+    "target": "Who owns the fence?"
+   }
+  ],
+  "rewards": {
+   "gold": 30,
+   "xp": 80,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "The cart is carrying something alive",
+   "Goblins only want the cheese",
+   "Pell takes a \"shortcut\""
+  ],
+  "id": "qst_wk_sol_escort_cart",
+  "title": "The First-Day Cart",
+  "day": "Solenday",
+  "slot": "daily",
+  "type": "Escort",
+  "trope": "Merchant escort, bandit ambush",
+  "giver": "npc_traveling_merchant_pell",
+  "region": "reg_aldmere",
+  "summary": "Pell's cart leaves for Millbrook at first light and he swears this road is cursed.",
+  "objectives": [
+   {
+    "kind": "escort",
+    "target": "npc_traveling_merchant_pell"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_goblin",
+    "count": 5
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "xp": 140,
+   "gp": 5
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [
+   "The crow is hoarding a companion's keepsake",
+   "The nest has a cult rune in it",
+   "The fortune was about someone else"
+  ],
+  "id": "qst_wk_mae_fortune_teller",
+  "title": "The Fortune Is Always Bad",
+  "day": "Maelsday",
+  "slot": "special",
+  "type": "Investigation",
+  "trope": "Ominous fortune that comes true (sort of)",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "Eolande reads your week in tea leaves: \"a crow will steal what you love.\" Then something actually goes missing.",
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "Old Watchtower"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_giant_crow",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_stolen_trinket",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 90,
+   "xp": 220,
+   "gp": 6,
+   "items": [
+    "itm_copper_compass"
+   ]
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "night",
+  "twists": [
+   "Full Lumen: double yield",
+   "Blood Vesper: the flowers turn red and bite"
+  ],
+  "id": "qst_wk_mae_moonbloom",
+  "title": "Moonbloom Picking",
+  "day": "Maelsday",
+  "slot": "daily",
+  "type": "Gathering",
+  "trope": "Night-only rare herb",
+  "giver": "npc_fennick_reed",
+  "region": "reg_whisperwood",
+  "summary": "Moonbloom only opens under Lumen and the wisps love it too.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_healing_herb",
+    "count": 6
+   },
+   {
+    "kind": "kill",
+    "target": "mon_wisp",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "xp": 100,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "Whiskers is sitting on the guild roof watching you",
+   "He leads you to a lucky coin",
+   "He was never lost; you were"
+  ],
+  "id": "qst_wk_mae_lost_and_found",
+  "title": "The Lost Cat (Again)",
+  "day": "Maelsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Find the lost cat",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Whiskers is missing. Again. Marta insists he's \"never been gone this long\" (he has).",
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "Rooftops of Brindlewick"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_whiskers"
+   }
+  ],
+  "rewards": {
+   "gold": 20,
+   "xp": 60,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "night",
+  "twists": [
+   "It really is just a wisp",
+   "The tapping spells a word",
+   "Caspian is awake, and smiling"
+  ],
+  "id": "qst_wk_mae_bad_dreams",
+  "title": "Bad Dreams at the Orphanage",
+  "day": "Maelsday",
+  "slot": "daily",
+  "type": "Investigation",
+  "trope": "Kids' ghost story turns real",
+  "giver": "npc_tamsin_orphan",
+  "region": "reg_aldmere",
+  "summary": "Tamsin says something taps on the window every Maelsday night. Brother Caspian says it's the wind.",
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "Orphanage of the Small Lantern"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_wisp",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 25,
+   "xp": 90,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "Torvald drops by and critiques your hammering",
+   "A perfect score earns Brannoc's rare smile",
+   "The order is for the Crimson Wolves"
+  ],
+  "id": "qst_wk_tho_forge_rush",
+  "title": "Forge Rush",
+  "day": "Thorsday",
+  "slot": "special",
+  "type": "OddJob",
+  "trope": "Crafting minigame with a grumpy master",
+  "giver": "npc_brannoc_emberfist",
+  "region": "reg_aldmere",
+  "summary": "Brannoc has a rush order of guild swords and one apprentice who fainted. Pump the bellows, hit the beat, don't burn your eyebrows.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_crude_iron",
+    "count": 4
+   },
+   {
+    "kind": "choice",
+    "target": "Forge minigame: 3 blades"
+   }
+  ],
+  "rewards": {
+   "gold": 80,
+   "xp": 150,
+   "gp": 4,
+   "items": [
+    "itm_guild_issue_sword"
+   ]
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [],
+  "id": "qst_wk_tho_scrap_run",
+  "title": "Scrap Run",
+  "day": "Thorsday",
+  "slot": "daily",
+  "type": "Gathering",
+  "trope": "Looting goblin junk piles",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_whisperwood",
+  "summary": "Goblins hoard surprisingly good metal. Torvald wants it back, preferably without the goblins.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_scrap_metal",
+    "count": 6
+   },
+   {
+    "kind": "kill",
+    "target": "mon_goblin_trapper",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "xp": 130,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "A dog follows the smell",
+   "One customer moved house",
+   "Mochi eats a loaf"
+  ],
+  "id": "qst_wk_tho_bread_delivery",
+  "title": "Hot Bread Delivery",
+  "day": "Thorsday",
+  "slot": "daily",
+  "type": "Delivery",
+  "trope": "Timed delivery across town",
+  "giver": "npc_hugo_brand",
+  "region": "reg_aldmere",
+  "summary": "Six loaves, six doors, before they go cold. Hugo is timing you.",
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bertrand_pike"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_holt"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_widow_aster"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_miller_jory"
+   }
+  ],
+  "rewards": {
+   "gold": 30,
+   "xp": 70,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [],
+  "id": "qst_wk_tho_tailor_thread",
+  "title": "Silk for a Dress",
+  "day": "Thorsday",
+  "slot": "daily",
+  "type": "Gathering",
+  "trope": "Spider silk for the tailor",
+  "giver": "npc_ines_valbuena",
+  "region": "reg_whisperwood",
+  "summary": "Ines needs cave-spider silk for a festival dress. The spiders need it more.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_cave_spider",
+    "count": 4
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_silk",
+    "count": 5
+   }
+  ],
+  "rewards": {
+   "gold": 55,
+   "xp": 140,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "A companion forgets their earmuffs",
+   "One mandrake is a baby and follows you home",
+   "Puffcaps join the screaming"
+  ],
+  "id": "qst_wk_syl_mandrake_harvest",
+  "title": "Mandrake Harvest",
+  "day": "Sylvasday",
+  "slot": "special",
+  "type": "Gathering",
+  "trope": "Screaming plant, earmuffs required",
+  "giver": "npc_fennick_reed",
+  "region": "reg_whisperwood",
+  "summary": "Fennick hands you earmuffs that are clearly for a child. The mandrake patch is ready.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mandrake_root",
+    "count": 5
+   },
+   {
+    "kind": "kill",
+    "target": "mon_mandrake",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 90,
+   "xp": 200,
+   "gp": 5,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "A slime is guarding a lost ring",
+   "One slime refuses to fight and hops after you",
+   "They merge into a big one"
+  ],
+  "id": "qst_wk_syl_slime_patrol",
+  "title": "Slime Patrol",
+  "day": "Sylvasday",
+  "slot": "daily",
+  "type": "Subjugation",
+  "trope": "The classic F-rank slime quest",
+  "giver": "npc_farmer_odo",
+  "region": "reg_aldmere",
+  "summary": "Slimes are back in Odo's cabbages. They always come back.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_blue_slime",
+    "count": 6
+   },
+   {
+    "kind": "kill",
+    "target": "mon_green_slime",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 30,
+   "xp": 90,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [],
+  "id": "qst_wk_syl_rabbit_fence",
+  "title": "Fix the Fence",
+  "day": "Sylvasday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Farm chores between fights",
+  "giver": "npc_farmer_hesk",
+  "region": "reg_aldmere",
+  "summary": "Horned rabbits punched holes in Hesk's turnip fence. Mend it before they come back.",
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "Millbrook turnip field"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_horned_rabbit",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 30,
+   "xp": 80,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "It bonds with Mochi instead",
+   "Its mother shows up",
+   "It was already someone's pet"
+  ],
+  "id": "qst_wk_syl_tame_practice",
+  "title": "Granny's Taming Lesson",
+  "day": "Sylvasday",
+  "slot": "daily",
+  "type": "Capture",
+  "trope": "Tamer lesson with a stubborn critter",
+  "giver": "npc_granny_mabel",
+  "region": "reg_whisperwood",
+  "summary": "Granny Mabel wants you to calm a wild creature without hurting it. \"Patience, dearie. And snacks.\"",
+  "objectives": [
+   {
+    "kind": "tame",
+    "target": "mon_horned_rabbit",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 25,
+   "xp": 100,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [],
+  "id": "qst_wk_syl_mushroom_basket",
+  "title": "A Basket of Mushrooms",
+  "day": "Sylvasday",
+  "slot": "daily",
+  "type": "Gathering",
+  "trope": "Which mushroom is the monster?",
+  "giver": "npc_marta_gruel",
+  "region": "reg_whisperwood",
+  "summary": "Marta needs mushrooms for stew. Half the mushrooms in Whisperwood have legs.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_spore_cap",
+    "count": 6
+   },
+   {
+    "kind": "kill",
+    "target": "mon_walking_mushroom",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 35,
+   "xp": 90,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "Pim sabotages your path, then feels bad",
+   "An Alpha boar ambushes both parties",
+   "Losing on purpose raises a rival bond"
+  ],
+  "id": "qst_wk_kae_rival_race",
+  "title": "Race the Crimson Wolves",
+  "day": "Kaelsday",
+  "slot": "special",
+  "type": "Subjugation",
+  "trope": "Rival party competition",
+  "giver": "npc_dax_rowan",
+  "region": "reg_whisperwood",
+  "summary": "Dax bets his party can clear the boar den faster than yours. Loser buys dinner and admits it out loud.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_wild_boar",
+    "count": 5
+   },
+   {
+    "kind": "reach",
+    "target": "Boar den, Whisperwood"
+   }
+  ],
+  "rewards": {
+   "gold": 120,
+   "xp": 280,
+   "gp": 8
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "Lyra joins and turns it into a contest",
+   "A perfect drill unlocks a Hollis anecdote"
+  ],
+  "id": "qst_wk_kae_sparring",
+  "title": "Morning Sparring",
+  "day": "Kaelsday",
+  "slot": "daily",
+  "type": "Class",
+  "trope": "Training montage with the old master",
+  "giver": "npc_old_hollis",
+  "region": "reg_aldmere",
+  "summary": "Hollis wants a dozen clean parries before breakfast. He will not say \"good job.\" He might nod.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Sparring drill: 12 parries"
+   }
+  ],
+  "rewards": {
+   "gold": 0,
+   "xp": 160,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "Well-drilled militia raise town Safety for the week",
+   "Brutus heckles from the fence"
+  ],
+  "id": "qst_wk_kae_guard_drills",
+  "title": "Drill the Militia",
+  "day": "Kaelsday",
+  "slot": "daily",
+  "type": "Defense",
+  "trope": "Training nervous villagers",
+  "giver": "npc_captain_holt",
+  "region": "reg_aldmere",
+  "summary": "Captain Holt wants the town militia ready for the next raid. They are farmers holding spears backwards.",
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_captain_holt"
+   },
+   {
+    "kind": "defend",
+    "target": "Training yard mock raid",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "xp": 120,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "night",
+  "twists": [
+   "Torvald takes your turn",
+   "Winning three weeks running earns Brutus's respect"
+  ],
+  "id": "qst_wk_kae_tavern_challenge",
+  "title": "Arm-Wrestling Night",
+  "day": "Kaelsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Tavern strength contest",
+  "giver": "npc_brutus_kale",
+  "region": "reg_aldmere",
+  "summary": "Brutus challenges anyone to arm-wrestle. Losers pay for drinks; nobody has won in a month.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Arm-wrestling minigame"
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "xp": 60,
+   "gp": 1
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "night",
+  "twists": [
+   "The spirit is one of the 3 previous Heroes' companions",
+   "Aster's husband appears",
+   "A companion lights a lantern for someone from Earth"
+  ],
+  "id": "qst_wk_mor_lantern_vigil",
+  "title": "Lantern Vigil",
+  "day": "Morrowsday",
+  "slot": "special",
+  "type": "Divine",
+  "trope": "Quiet night at the graveyard, ghosts with unfinished business",
+  "giver": "npc_widow_aster",
+  "region": "reg_aldmere",
+  "summary": "Every Morrowsday the town lights lanterns for the dead. Some of the dead come to look.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_candle_stub",
+    "count": 5
+   },
+   {
+    "kind": "kill",
+    "target": "mon_skeleton",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "Help a lingering spirit move on"
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "xp": 200,
+   "gp": 5
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "Tamsin quizzes you on guild rules",
+   "Lark wants to see a real sword",
+   "Caspian returns early and watches quietly"
+  ],
+  "id": "qst_wk_mor_orphan_day",
+  "title": "Babysitting Day",
+  "day": "Morrowsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Adventurer vs. small children",
+  "giver": "npc_brother_caspian",
+  "region": "reg_aldmere",
+  "summary": "Brother Caspian needs the afternoon off. The orphans need supervising. You will lose.",
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bo_orphan"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_lark_orphan"
+   },
+   {
+    "kind": "choice",
+    "target": "Game: tag, story or \"be the monster\""
+   }
+  ],
+  "rewards": {
+   "gold": 15,
+   "xp": 80,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [
+   "Bond scene with whoever helps most",
+   "Mochi \"seasons\" the pot",
+   "Food buff lasts into Vexday"
+  ],
+  "id": "qst_wk_mor_party_stew",
+  "title": "Party Stew Night",
+  "day": "Morrowsday",
+  "slot": "daily",
+  "type": "Companion",
+  "trope": "Cozy campfire meal with the party",
+  "giver": "npc_lyra_brightwood",
+  "region": "reg_aldmere",
+  "summary": "No contracts tonight. Lyra wants everyone to cook together, which is a terrible idea.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_prime_meat",
+    "count": 2
+   },
+   {
+    "kind": "choice",
+    "target": "Cooking minigame"
+   }
+  ],
+  "rewards": {
+   "gold": 0,
+   "xp": 60,
+   "gp": 0
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "One gravestone has a Japanese name on it",
+   "A grave is freshly empty"
+  ],
+  "id": "qst_wk_mor_grave_tidy",
+  "title": "Tidy the Graves",
+  "day": "Morrowsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Humble chore, hidden lore",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "Sweep leaves, wipe names, set flowers. Old gravestones tell old stories.",
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "Temple Hill graveyard"
+   },
+   {
+    "kind": "collect",
+    "target": "itm_healing_herb",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 15,
+   "xp": 70,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "The pickpocket is an orphan",
+   "A noble in disguise buys everything",
+   "Vex's luck: a stranger pays in gold"
+  ],
+  "id": "qst_wk_vex_market_day",
+  "title": "Market Day Mayhem",
+  "day": "Vexday",
+  "slot": "special",
+  "type": "OddJob",
+  "trope": "Market-stall part-time job",
+  "giver": "npc_gilda_marsh",
+  "region": "reg_aldmere",
+  "summary": "Gilda's assistant quit on market day. Run the stall, haggle, and catch the pickpocket working the crowd.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Shop minigame: sell 10 items"
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_coin_purse",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 140,
+   "xp": 180,
+   "gp": 5,
+   "items": [
+    "itm_rookie_pouch"
+   ]
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "night",
+  "twists": [
+   "Whiskers watches every roll",
+   "Winning ten Vexdays earns a Vex Devotion point",
+   "The stranger is the Hooded Traveler"
+  ],
+  "id": "qst_wk_vex_dice_night",
+  "title": "Dice with a Stranger",
+  "day": "Vexday",
+  "slot": "daily",
+  "type": "Hidden",
+  "trope": "Gambling with a suspicious lucky stranger",
+  "giver": "npc_traveling_merchant_pell",
+  "region": "reg_aldmere",
+  "summary": "A hooded stranger at the Sleeping Griffon plays dice and never seems to lose. Pell wants his money back.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Dice minigame: best of 5"
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "xp": 50,
+   "gp": 0
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [
+   "Rosie joins and it turns into a duet",
+   "A Bard trainee crowd raises town Prosperity"
+  ],
+  "id": "qst_wk_vex_street_song",
+  "title": "Busking with Corwin",
+  "day": "Vexday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Street performance rhythm game",
+  "giver": "npc_fiddler_corwin",
+  "region": "reg_aldmere",
+  "summary": "Corwin needs a second performer for the market crowd. Can you sing? Doesn't matter.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Rhythm minigame"
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "xp": 70,
+   "gp": 1
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "Old Gnasher is real",
+   "Mochi catches a bigger fish than you"
+  ],
+  "id": "qst_wk_vex_fishing_contest",
+  "title": "Old Sal's Fishing Contest",
+  "day": "Vexday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Fishing contest, legendary fish",
+  "giver": "npc_old_sal",
+  "region": "reg_aldmere",
+  "summary": "Biggest fish by noon wins Sal's lucky hook. Sal has been talking about \"Old Gnasher\" for forty years.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_fish_scale",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "Fishing minigame"
+   }
+  ],
+  "rewards": {
+   "gold": 35,
+   "xp": 60,
+   "gp": 1
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "besieged",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "any",
+  "twists": [],
+  "id": "qst_wk_any_goblin_cull",
+  "title": "Goblin Cull",
+  "day": "Any",
+  "slot": "daily",
+  "type": "Subjugation",
+  "trope": "Standard goblin extermination",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "Goblin scouts keep testing the town. Thin them out.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_goblin",
+    "count": 8
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_goblin_ear",
+    "count": 8
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "xp": 140,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "A rare golden herb grows among them",
+   "Something is watching from the trees"
+  ],
+  "id": "qst_wk_any_herb_run",
+  "title": "Herb Run",
+  "day": "Any",
+  "slot": "daily",
+  "type": "Gathering",
+  "trope": "The F-rank herb gathering quest",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "The clinic always needs healing herbs. Always.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_healing_herb",
+    "count": 10
+   }
+  ],
+  "rewards": {
+   "gold": 25,
+   "xp": 70,
+   "gp": 2
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "any",
+  "twists": [
+   "A lost tunnel leads somewhere old",
+   "The queen is bigger than the tunnel"
+  ],
+  "id": "qst_wk_any_sewer_rats",
+  "title": "Sewer Duty",
+  "day": "Any",
+  "slot": "daily",
+  "type": "Subjugation",
+  "trope": "The sewer job nobody wants",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_aldmere",
+  "summary": "Giant ants have nested in the old drains. The smell is included free.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_giant_ant",
+    "count": 8
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "xp": 110,
+   "gp": 3
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [],
+  "id": "qst_wk_any_wolf_pack",
+  "title": "Wolves on the Road",
+  "day": "Any",
+  "slot": "daily",
+  "type": "Subjugation",
+  "trope": "Pack hunt on the trade road",
+  "giver": "npc_wren_ashbourne",
+  "region": "reg_whisperwood",
+  "summary": "A wolf pack is shadowing travelers on the Whisperwood road.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 5
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_pelt",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 55,
+   "xp": 150,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "liberated",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "any",
+  "twists": [
+   "A Named boar takes an interest in you",
+   "Drops feed the town's Prosperity"
+  ],
+  "id": "qst_wk_any_hunting_contract",
+  "title": "Open Hunting Contract",
+  "day": "Any",
+  "slot": "daily",
+  "type": "Subjugation",
+  "trope": "Normal monster hunting after liberation",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "With the Tyrant gone, the guild posts standing hunts to keep the roads safe and the larders full.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_wild_boar",
+    "count": 4
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_tusk",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "xp": 150,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "any",
+  "twists": [
+   "Clearing all 7 day specials in one week earns a title: \"Seven Days of Errands\""
+  ],
+  "id": "qst_wk_weekly_commission",
+  "title": "The Guild's Weekly Commission",
+  "day": "Week",
+  "slot": "weekly",
+  "type": "Faction",
+  "trope": "Weekly guild point target",
+  "giver": "npc_rodrick_hale",
+  "region": "reg_aldmere",
+  "summary": "Rodrick posts a weekly goal: finish any 7 board quests before the week ends. Meet it and the guild remembers.",
+  "objectives": [
+   {
+    "kind": "choice",
+    "target": "Complete 7 weekly-board quests"
+   }
+  ],
+  "rewards": {
+   "gold": 200,
+   "xp": 400,
+   "gp": 15,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  }
+ }
+]

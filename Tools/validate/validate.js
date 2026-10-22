@@ -19,7 +19,8 @@ const COLLECTIONS = {
   loot: { files: ['Monsters/loot_tables.json'], schema: 'loot_table' },
   items: { files: ['Items/materials.json', 'Items/items.json'], schema: 'item' },
   npcs: { files: ['NPCs/npcs.json'], schema: 'npc' },
-  quests: { files: ['Quests/quests.json'], schema: 'quest' }
+  quests: { files: ['Quests/quests.json'], schema: 'quest' },
+  weekly: { files: ['Quests/weekly_board.json'], schema: 'weekly_quest' }
 };
 
 const errors = [];
@@ -103,7 +104,7 @@ for (const s of rows.species) {
 for (const p of rows.population) { ref(`${p.id}.speciesId`, p.speciesId, 'species'); ref(`${p.id}.regionId`, p.regionId, 'regions'); }
 for (const l of rows.loot) (l.entries || []).forEach((e, i) => ref(`${l.id}.entries[${i}]`, e.itemId, 'items'));
 for (const n of rows.npcs) { ref(`${n.id}.homeRegion`, n.homeRegion, 'regions'); (n.relationships || []).forEach(r => ref(`${n.id}.relationships`, r.npcId, 'npcs')); }
-for (const q of rows.quests) {
+for (const q of [...rows.quests, ...rows.weekly]) {
   ref(`${q.id}.giver`, q.giver, 'npcs'); ref(`${q.id}.region`, q.region, 'regions');
   ((q.requirements || {}).prerequisites || []).forEach(p => ref(`${q.id}.prerequisites`, p, 'quests'));
   ((q.rewards || {}).items || []).forEach(i => ref(`${q.id}.rewards.items`, i, 'items'));
@@ -113,6 +114,14 @@ for (const q of rows.quests) {
     else if (o.kind === 'talk') ref(where, o.target, 'npcs');
     else if (o.kind === 'collect' && String(o.target).startsWith('itm_')) ref(where, o.target, 'items');
   });
+}
+
+// Weekly board: every weekday needs a special and at least 3 dailies (board shows 3 per day)
+const WEEKDAYS = ['Solenday', 'Maelsday', 'Thorsday', 'Sylvasday', 'Kaelsday', 'Morrowsday', 'Vexday'];
+for (const d of WEEKDAYS) {
+  const wk = rows.weekly.filter(q => q.day === d);
+  if (wk.filter(q => q.slot === 'special').length !== 1) err(`weekly ${d}`, 'needs exactly one day special');
+  if (wk.filter(q => q.slot === 'daily').length < 3) err(`weekly ${d}`, 'needs at least 3 dailies');
 }
 
 // 3) Report

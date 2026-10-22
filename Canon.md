@@ -26,6 +26,7 @@
 | Level cap | **300**, then Transcendence T1–T10 at SSS. Bands: F 1–15 · E 16–35 · D 36–60 · C 61–90 · B 91–125 · A 126–165 · S 166–210 · SS 211–260 · SSS 261–300 |
 | Pacing | Main story **~200–250 hrs focused**, ~600–800 hrs at explorer pace; **SSS + secret ending ≈ 1,000+ hrs** |
 | In-game day | 90 real minutes (tunable 60–120) |
+| Week | **7 days**: Solenday, Maelsday, Thorsday, Sylvasday, Kaelsday, Morrowsday, Vexday (Ilvaris has none). ≈10.5 hrs of play per week. Each day has its own quest board theme (`11_Quests_Encounters/weekly_board.md`) |
 | Classes | **12 base → 24 advanced → 48 expert** → master → legendary (one per world) + hidden (scenario-unlocked) + monster evolution |
 | Endings | **11 main + 1 secret** (*The Thirteenth Star*, ~1,000 hrs); ~100 epilogue variations |
 | Villain structure | **Demon Overlord Azrael** + **5 Generals**: Ignarok, Morthis, Zephiel, Rhaka, Lady Nocturne |

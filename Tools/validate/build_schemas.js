@@ -106,6 +106,23 @@ const SCHEMAS = {
       objectives: { type: 'array', minItems: 1, items: { type: 'object', required: ['kind'], properties: { kind: { type: 'string', enum: ['kill', 'collect', 'talk', 'escort', 'reach', 'defend', 'tame', 'choice'] }, target: { type: 'string' }, count: { type: 'integer', minimum: 1 } } } },
       rewards: { type: 'object', properties: { gold: { type: 'integer', minimum: 0 }, gp: { type: 'integer', minimum: 0 }, xp: { type: 'integer', minimum: 0 }, items: { type: 'array', items: id('itm_') } } }
     }
+  },
+  weekly_quest: {
+    title: 'Weekly board quest (repeatable, tied to a weekday)', type: 'object', additionalProperties: false,
+    required: ['id', 'title', 'day', 'slot', 'type', 'trope', 'giver', 'region', 'rankMin', 'rankMax', 'timeOfDay', 'regionState', 'repeat', 'summary', 'objectives', 'rewards'],
+    properties: {
+      id: id('qst_wk_'), title: { type: 'string', minLength: 1 },
+      day: { type: 'string', enum: ['Solenday', 'Maelsday', 'Thorsday', 'Sylvasday', 'Kaelsday', 'Morrowsday', 'Vexday', 'Any', 'Week'] },
+      slot: { type: 'string', enum: ['special', 'daily', 'weekly'] },
+      type: { type: 'string', enum: ['Subjugation', 'Gathering', 'Escort', 'Delivery', 'Investigation', 'Exploration', 'Defense', 'Capture', 'Bounty', 'OddJob', 'Faction', 'Companion', 'Class', 'Hidden', 'Divine'] },
+      trope: { type: 'string', minLength: 1 }, giver: id('npc_'), region: id('reg_'), rankMin: RL, rankMax: RL,
+      timeOfDay: { type: 'string', enum: ['morning', 'day', 'dusk', 'night', 'any'] },
+      regionState: { type: 'string', enum: ['any', 'besieged', 'liberated'] },
+      repeat: { type: 'string', enum: ['weekly'] }, summary: { type: 'string', minLength: 1 },
+      objectives: { type: 'array', minItems: 1, items: { type: 'object', required: ['kind'], properties: { kind: { type: 'string', enum: ['kill', 'collect', 'talk', 'escort', 'reach', 'defend', 'tame', 'choice'] }, target: { type: 'string' }, count: { type: 'integer', minimum: 1 } } } },
+      rewards: { type: 'object', properties: { gold: { type: 'integer', minimum: 0 }, gp: { type: 'integer', minimum: 0 }, xp: { type: 'integer', minimum: 0 }, items: { type: 'array', items: id('itm_') } } },
+      twists: { type: 'array', items: { type: 'string' } }
+    }
   }
 };
 for (const [name, s] of Object.entries(SCHEMAS)) {

@@ -2,6 +2,12 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.1 — The Weekly Board (2026-10-22)
+- **7-day week** added to the calendar and Canon: Solenday, Maelsday, Thorsday, Sylvasday, Kaelsday, Morrowsday, Vexday (one per god; Ilvaris has none).
+- New `11_Quests_Encounters/weekly_board.md` + `Data/Quests/weekly_board.json`: 35 repeatable anime-style quests (7 day specials, 22 dailies, 5 any-day fillers, 1 weekly commission) for Brindlewick, with rolled twists and Besieged/Liberated filtering.
+- New `weekly_quest` schema; the validator checks references and that every weekday has a special and at least 3 dailies.
+- Siege prompt (`13_Production/prompts/session_prompt_v0.11.md`): attacks 1–2 times per 7-day week.
+
 ## v0.10 — Brindlewick (2026-10-22)
 - New `10_World/brindlewick.md`: the Ring 1 hub town (history, districts map, daily rhythm, people, Ring 1 quest map, secrets).
 - Data: +29 Brindlewick-area NPCs (39 total) with backstories, secrets and relationships; +11 Ring 1 quests (15 total); +6 items.
