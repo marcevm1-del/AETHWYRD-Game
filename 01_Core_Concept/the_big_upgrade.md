@@ -204,6 +204,69 @@ The guild hall (you can't own a guild) improves as **town Prosperity** rises:
 - **Bulletin wall:** rumors.
 - **Trophy shelf:** displays the town's Tyrant kill.
 
+## 37. Union Skill Choreography
+Every companion pair has its **own named Union Skill**, choreographed like an anime finisher (*Lyra + you: "Twin Petal Requiem"*). Bonds unlock stronger versions. At max bond with two companions, a **Triple Union** is possible. Unions with Named-monster companions mix in monster moves (ride the charge, throw a slime).
+
+## 38. Interrupt the Monologue
+Villains love monologues (Canon). Now you can **interrupt them**:
+- Some are furious and skip straight to phase 2.
+- Some gain a free buff ("You dare?").
+- Some laugh it off and respect you more.
+- Companions comment either way.
+Listening to the full speech sometimes reveals a weakness or a secret.
+
+## 39. The Power of Friendship
+Once per boss fight, if you fall while companions are standing (or everyone falls together), a **Last Stand** can trigger: a short scene of your bonds (voices, memories), then you stand back up with an aura. How strong it is depends on your total bond level. The fight's music changes to the vocal version.
+
+## 40. Sealed Power Segments
+Some story zones **seal your level**: the Academy's mana dampeners, a god's prison, a cursed island, a flashback as one of the previous Heroes. You're weak again and have to win with skill, tricks and allies. It keeps late-game story moments tense, a classic arc.
+
+## 41. Monster Languages
+Learn monster tongues (Goblin, Slimespeak, Draconic, Fey Chatter) from books, tutors and Named-monster companions. Each one unlocks dialogue options with intelligent monsters and lets you understand their battle cries ("flank left!"), which works as a combat hint. A monster that hears its own language may stop and talk instead of fighting.
+
+## 42. Eavesdropping
+Sit at a tavern table, lean on a market stall or hide behind a hedge to **overhear conversations**. Gossip feeds the Rumor page (HUD §21), and some talk is about you. A high Rogue skill or Mochi hiding in a pot gets you more.
+
+## 43. The Natural History Museum
+The capital's museum takes **donations** across 6 halls:
+- **Fish** (120)
+- **Insects** (100)
+- **Minerals and star iron**
+- **Fossils and Titan bones**
+- **Earth Relics** (§44)
+- **Monster specimens** (taxidermy from your hunts)
+Each completed hall changes the museum building, unlocks a guided tour by the curator, and rewards a title and a relic.
+
+## 44. Earth Relics
+Things from Earth sometimes fall through with the summoned: a phone at 3% battery, a school bag, a manga volume, a bicycle bell, a lunchbox with a note in it. **Each has a story** about who brought it. Reading the phone's photos is one of the quiet tearjerkers. They can go in your Trophy Hall or the museum, or back to a Veilborn NPC they belonged to.
+
+## 45. Archaeology & Murals
+Dig sites in Titan and Valdrisia ruins:
+- Brush, map and lift finds in a short minigame. Restoring **temple murals** piece by piece slowly reveals history, including the scratched-out ninth throne.
+- Finds go to the museum or Eolande's library.
+- A complete mural set points to hidden dungeons.
+
+## 46. Companion Expeditions
+Send companions you're not traveling with on **expeditions** (gathering, scouting, merchant escort, monster surveys) for a few in-game days. They come back with loot and a short **story of what happened** (and sometimes an injury, a new title or a souvenir for you). Results depend on their skills, gear and who they went with.
+
+## 47. Mount Personalities & Racing
+Ground mounts (Canon: no flying) each have a personality (lazy, vain, fearless, greedy), a bond level and **tricks** (jump hedges, kick bandits, find truffles). There's a **racing circuit** across regions with obstacle courses, rival jockeys and festival races.
+
+## 48. Climate & Comfort
+Frostveil cold, Sunscar heat, swamp damp: a light **comfort** system. Wear the right clothes or eat warm/cool food, or slowly lose stamina regeneration. It's never deadly, just a reason to dress for the place. Outfits keep their look, with comfort enchantments added on top.
+
+## 49. Aetheria's Grand Cooking Contest
+A yearly **cooking contest** arc with rival chefs, monster-ingredient rounds, judges who cry when the food is good (the anime reaction), and a final round against a legendary chef. It uses the cooking minigame and monster cuisine (§9).
+
+## 50. Concerts & the Bard Stage
+Bards (and anyone brave) can book **concerts** in towns: a rhythm game whose songs come from the game's own soundtrack. Good shows raise Prosperity and Bonds and can make you famous. Companions join as backup, which may surprise you. A festival stage final takes place at Lantern Night.
+
+## 51. Photo Requests
+NPCs ask for **photos**: a scholar wants the White Stag, a homesick soldier wants his village at sunset, a kid wants "the biggest monster you can find." Take them in photo mode and deliver the print. They hang in those NPCs' homes afterwards.
+
+## 52. The Dispatch & Courier Network
+Write and send **letters** to companions, rivals, mentees and NPCs in other regions. They reply with news, gifts and sometimes requests that become quests. You can also **send parcels**: cooking for a sick friend, a weapon for a mentee.
+
 ## The First 15 Minutes (the Next Fest demo hook)
 1. **Black screen:** a heartbeat stops. The System Voice: *"Status… gr-granted."* The first glitch.
 2. **Wake in Whisperwood.** Two moons. Mochi stares at you.

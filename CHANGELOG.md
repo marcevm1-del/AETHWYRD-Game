@@ -2,6 +2,10 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.5 — Even more features & UI (2026-10-22)
+- `the_big_upgrade.md`: features 37–52 (pair & triple Union Skills, interrupting villain monologues, Last Stand friendship revival, sealed-power segments, monster languages, eavesdropping, the Natural History Museum, Earth Relics, archaeology & murals, companion expeditions, mount personalities & racing, climate comfort, the Grand Cooking Contest, concerts, photo requests, letters & parcels).
+- `hud_and_ui.md` §25–31: party formation, bond screen, shops & haggling, waystones & fast travel, collections book, combat log & training readout, expedition board.
+
 ## v0.10.4 — More features & UI (2026-10-22)
 - `the_big_upgrade.md`: features 21–36 (measurement moments, party names & banners, Kaede's Cards card game, spellcrafting, growth weapons, Mochi eats things, ranch breeding & markings, Rift Runs, guild written exam, a bounty on you, street duels, elemental world interaction, silly anime curses, the Vexday time loop, hired party members, guild hall facilities).
 - `hud_and_ui.md` §16–24: HUD pieces unlocked through the world, living title screen, loading screens, death screen, journal-style saves, Rumor → Lead → Quest log, world markers & loot beams, replayable Guide tutorials, UI sound & motion.

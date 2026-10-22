@@ -9,7 +9,7 @@
 | # | File | Contents |
 |---|---|---|
 | 01 | [vision.md](01_Core_Concept/vision.md) | Pillars, fantasy-feel rules, loops, acts, product facts |
-| 01 | [the_big_upgrade.md](01_Core_Concept/the_big_upgrade.md) | **36 signature features**: Lying Interface, Appraisal, Thread, Otherworld Knowledge, Next Summoning NG+, chant mastery, monster cuisine, Adventurer Times, mentoring newcomers… |
+| 01 | [the_big_upgrade.md](01_Core_Concept/the_big_upgrade.md) | **52 signature features**: Lying Interface, Appraisal, Thread, Otherworld Knowledge, Next Summoning NG+, chant mastery, monster cuisine, Adventurer Times, mentoring newcomers… |
 | 02 | [cosmology.md](02_Lore/cosmology.md) | Creation, the Eight (+ the Forgotten Ninth), the System and its 8 personalities, talking to gods, moons, calendar, languages, the Wyrmconclave |
 | 02 | [history.md](02_Lore/history.md) | 50,000 years of history, the Demon Lords, the 5 Heroes and Veilborn legends |
 | 02 | [story.md](02_Lore/story.md) | Prologues, Acts I–VI, story flags, the Overlord and 5 Generals, villains, the Red Prophet, Nocturne, endings, tearjerkers |

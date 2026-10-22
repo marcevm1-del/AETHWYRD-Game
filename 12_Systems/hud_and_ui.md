@@ -243,3 +243,36 @@ Players can turn on "Everything unlocked" in options.
 - **Corruption stages add sound too:** a crackle in stage 2, a faint choir under gold text in stage 3.
 - **World UI sounds physical:** paper rustles, quills scratch, wax seals crack, coins clink.
 - **Motion:** panels slide in from the angled corners in 120–180 ms; nothing bounces except Mochi notifications.
+
+## 25. Party Formation Screen
+- Drag companions into **3 party slots** plus **3 active tamed monsters** (Canon). Lines between portraits show **Union Skills available** and **synergy bonuses** (e.g. tank + healer).
+- Hover a pairing to preview its Union Skill animation. Banter tags show who likes or argues with whom.
+- Saved formations for bossing, exploring and sieges.
+
+## 26. Companion Bond Screen
+- **Bond level** is shown as a woven bracelet that gains beads.
+- **Talk topics:** each companion has topics that unlock over time; asking at the right moment matters.
+- **Gift list** with known likes and dislikes (discovered by trying). **Their personal request** and their mood today.
+- **Memory Reel moments** with that companion, the Union Skills you've learned together, and the romance path (if any) as a separate pressed-flower page.
+
+## 27. Shops & Haggling
+- **Shopkeeper portrait with mood** and a buy/sell/buyback tab. Items show **how many you own** and whether they're better than your gear.
+- **Haggling:** a short back-and-forth with CHA and reputation. Push too hard and the shopkeeper's mood drops. Liberated towns and high Prosperity mean better stock.
+- **Special orders:** ask for items not in stock; they arrive in a few in-game days (a letter tells you).
+
+## 28. Waystones & Fast Travel
+- Waystones on the map glow in **the region's siege color** (red or green).
+- Travel shows a short **painted transition** (not just a loading bar), and the time of day advances based on distance.
+- Option: **"Travel the long way"** for a road event roll (merchants, ambushes, rumors, a lost child).
+
+## 29. Collections Book
+One book for everything collectible: Bestiary, Museum halls, Earth Relics, Kaede's Cards, recipes, fish, insects, murals, titles, achievements, Memory Reel. Each page shows percentage complete and **the next reward**. Missing entries show hints ("found near water on Full Lumen").
+
+## 30. Combat Log & Training Readout
+- **Optional combat log** (Full Data preset): every hit, its weight, element, reaction, crit and damage, and Style points gained.
+- **On the guild training dummy:** a live readout of DPS, parry and perfect-dodge success rate, combo length and Style Rank reached. You can record a **replay** of your best combo.
+
+## 31. Expedition & Dispatch Board
+- A cork board at your home: companions **pinned to expeditions** with a string to a map location and a countdown in days.
+- When they return, a **letter-style report** with sketches and loot.
+- The courier tab shows letters in transit and their replies.
