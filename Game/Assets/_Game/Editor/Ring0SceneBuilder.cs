@@ -20,6 +20,7 @@ namespace Ascend.EditorTools
         const string ScenePath = Root + "/Scenes/Ring0_Graybox.unity";
         const string SettingsDir = Root + "/Settings";
         const string MatDir = Root + "/Art/Graybox";
+        const string ModelDir = Root + "/Art/Models/Monsters";
         static string ScreenshotPath => Path.GetFullPath(Path.Combine(Application.dataPath, "..", "..", "13_Production", "screenshots", "ring0_graybox.png"));
 
         [MenuItem("Ascend/Ring 0/Build Graybox Scene")]
@@ -161,12 +162,17 @@ namespace Ascend.EditorTools
             so.FindProperty("cameraTransform").objectReferenceValue = cam.transform;
             so.ApplyModifiedPropertiesWithoutUndo();
 
-            // Ring 0 monsters as labelled stand-ins (data-driven labels).
+            // Ring 0 monsters: Blender models (Tools/blender/ring0_monsters.py) when present, else labelled primitives.
             var monsters = new GameObject("Ring0_Monsters").transform;
-            Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, new Vector3(2.2f, 0.25f, 5), new Vector3(0.55f, 0.45f, 0.55f), slime);
-            Dummy(monsters, "mon_goblin", PrimitiveType.Capsule, new Vector3(-2.2f, 0.5f, 5.5f), new Vector3(0.45f, 0.5f, 0.45f), goblin);
-            var rab = Dummy(monsters, "mon_horned_rabbit", PrimitiveType.Cube, new Vector3(0f, 0.2f, 7.5f), new Vector3(0.3f, 0.3f, 0.45f), rabbit);
-            Prim(PrimitiveType.Cylinder, "Horn", new Vector3(0, 0.75f, 0.45f), new Vector3(0.15f, 0.5f, 0.15f), accent, rab.transform, Quaternion.Euler(40, 0, 0), keepCollider: false);
+            if (!Model(monsters, "mon_blue_slime", "Blue_Slime", new Vector3(2.2f, 0, 5)))
+                Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, new Vector3(2.2f, 0.25f, 5), new Vector3(0.55f, 0.45f, 0.55f), slime);
+            if (!Model(monsters, "mon_goblin", "Goblin", new Vector3(-2.2f, 0, 5.5f)))
+                Dummy(monsters, "mon_goblin", PrimitiveType.Capsule, new Vector3(-2.2f, 0.5f, 5.5f), new Vector3(0.45f, 0.5f, 0.45f), goblin);
+            if (!Model(monsters, "mon_horned_rabbit", "Horned_Rabbit", new Vector3(0f, 0, 7.5f)))
+            {
+                var rab = Dummy(monsters, "mon_horned_rabbit", PrimitiveType.Cube, new Vector3(0f, 0.2f, 7.5f), new Vector3(0.3f, 0.3f, 0.45f), rabbit);
+                Prim(PrimitiveType.Cylinder, "Horn", new Vector3(0, 0.75f, 0.45f), new Vector3(0.15f, 0.5f, 0.15f), accent, rab.transform, Quaternion.Euler(40, 0, 0), keepCollider: false);
+            }
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             var scenes = EditorBuildSettings.scenes.Where(s => s.path != ScenePath).ToList();
@@ -174,12 +180,36 @@ namespace Ascend.EditorTools
             EditorBuildSettings.scenes = scenes.ToArray();
         }
 
+        /// <summary>Places a monster model (feet at <paramref name="pos"/>, facing the player start) with a fitted capsule. False if the FBX is missing.</summary>
+        static bool Model(Transform parent, string speciesId, string modelName, Vector3 pos)
+        {
+            var asset = AssetDatabase.LoadAssetAtPath<GameObject>($"{ModelDir}/{modelName}.fbx");
+            if (asset == null) return false;
+            var go = (GameObject)PrefabUtility.InstantiatePrefab(asset, parent);
+            go.name = speciesId;
+            go.transform.SetPositionAndRotation(pos, Quaternion.LookRotation(new Vector3(-pos.x, 0, -pos.z)));
+            var bounds = new Bounds(go.transform.position, Vector3.zero);
+            foreach (var r in go.GetComponentsInChildren<Renderer>()) bounds.Encapsulate(r.bounds);
+            var col = go.AddComponent<CapsuleCollider>();
+            col.height = bounds.size.y;
+            col.radius = Mathf.Min(bounds.extents.x, bounds.extents.z);
+            col.center = go.transform.InverseTransformPoint(bounds.center);
+            AddLabel(go, speciesId, bounds.max.y);
+            return true;
+        }
+
         static GameObject Dummy(Transform parent, string speciesId, PrimitiveType shape, Vector3 pos, Vector3 scale, Material mat)
         {
             var go = Prim(shape, speciesId, pos, scale, mat, parent);
+            AddLabel(go, speciesId, pos.y + scale.y);
+            return go;
+        }
+
+        static void AddLabel(GameObject go, string speciesId, float topY)
+        {
             var label = new GameObject("Label");
             label.transform.SetParent(go.transform.parent, false);
-            label.transform.position = pos + Vector3.up * (scale.y + 0.45f);
+            label.transform.position = new Vector3(go.transform.position.x, topY + 0.35f, go.transform.position.z);
             var tm = label.AddComponent<TextMesh>();
             tm.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             label.GetComponent<MeshRenderer>().sharedMaterial = tm.font.material;
@@ -189,7 +219,6 @@ namespace Ascend.EditorTools
             dummy.SpeciesId = speciesId;
             dummy.SetLabel(tm);
             dummy.Refresh();
-            return go;
         }
 
         // ---------- Preview ----------
@@ -197,7 +226,7 @@ namespace Ascend.EditorTools
         {
             var cam = Camera.main;
             var tpc = cam.GetComponent<ThirdPersonCamera>();
-            tpc.SetAngles(20f, 18f, 7f);
+            tpc.SetAngles(-14f, 14f, 6f);
             tpc.Place();
             foreach (var label in Object.FindObjectsByType<TextMesh>(FindObjectsSortMode.None))
                 label.transform.rotation = Quaternion.LookRotation(label.transform.position - cam.transform.position);

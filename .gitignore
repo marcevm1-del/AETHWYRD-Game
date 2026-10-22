@@ -28,3 +28,6 @@ Game/*.sln
 Game/*.slnx
 Game/.vs/
 Game/.idea/
+
+# Blender auto-backups
+*.blend1
