@@ -1,0 +1,7 @@
+{
+  "name": "com.projectascend.core",
+  "version": "0.11.0",
+  "displayName": "Ascend Core (game rules)",
+  "description": "Engine-agnostic game rules for Project Ascend: ranks, combat math, sieges, calendar, weekly board, inns, data models. Tested with dotnet (Code/Ascend.Core.Tests).",
+  "unity": "6000.0"
+}

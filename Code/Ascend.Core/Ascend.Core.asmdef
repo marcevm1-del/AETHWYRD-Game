@@ -1,0 +1,9 @@
+{
+  "name": "Ascend.Core",
+  "rootNamespace": "Ascend.Core",
+  "noEngineReferences": true,
+  "autoReferenced": true,
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": []
+}
