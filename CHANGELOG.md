@@ -2,6 +2,10 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.3 — Features & HUD/UI (2026-10-22)
+- `the_big_upgrade.md` grows to **20 signature features** (+ chant mastery, monster cuisine, Adventurer Times & Rankings, camp night watch, transformation scenes, mentoring newcomers, Trophy Hall, isekai trope feats, festival event weeks, talking dungeons, monster-town boards, sky events, rival party arcs). Scope-cut suggestions removed.
+- New `12_Systems/hud_and_ui.md`: full HUD and UI spec.
+
 ## v0.10.2 — The Big Upgrade (proposal, 2026-10-22)
 - New `01_Core_Concept/the_big_upgrade.md`: a sharper pitch, 7 signature features built on existing lore, recommended scope cuts and a first-15-minutes demo hook. Listed in Canon §6 for approval.
 

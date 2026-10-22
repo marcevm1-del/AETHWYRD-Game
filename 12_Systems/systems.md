@@ -199,6 +199,8 @@ Higher stages unlock better shops, quests, residents and trainers. Neglected tow
 **Expansions:** backpacks (Satchel → Explorer's Pack → Bag of Holding) · **Item Box** (skill, Unique Skill or relic: weightless storage) · **pack animals** (mule, carry-lizard, giant tortoise, Fluffcap ram) that carry a lot but **can be attacked and killed**, dropping their cargo as a lootable pile monsters may steal · a hireable **Porter NPC** (who can also die).
 
 ## UI Style Guide
+> Full HUD and UI spec (layouts, notifications, Status Window tabs, appraisal tiers, dialogue, accessibility, controller layout, the Lying Interface stages): **`12_Systems/hud_and_ui.md`**.
+
 - The classic anime **System window**: translucent blue-glass panels, thin glowing borders, angled corners, small ornate filigree at the corners, crisp sans-serif text with a fantasy display font for headers.
 - Pop-ups appear in a burst of runes, with soft chimes (*"Skill acquired!"*).
 - Rank colors are consistent everywhere (F grey → SSS gold).

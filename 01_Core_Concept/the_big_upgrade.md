@@ -1,6 +1,6 @@
-# 01b — The Big Upgrade (proposal, awaiting the creative director's OK)
+# 01b — The Big Upgrade: Signature Features
 
-**Problem:** Ascend already has every isekai trope. Hundreds of games do too. More content won't make it better; a **sharper identity** will. Each upgrade below takes something the bible already has and makes it the game's signature. Most are **systems and data, not new art**, so they fit a two-person team.
+Signature features that make Ascend stand out from every other isekai game. Each one builds on lore and systems the bible already has. HUD and UI details for all of them are in `12_Systems/hud_and_ui.md`.
 
 **The one-line pitch (before → after)**
 - Before: *"Every isekai fantasy, playable in one open world."*
@@ -57,14 +57,68 @@ Merge the **Siege** and **Nemesis** systems. A region's Tyrant studies how you d
 
 ---
 
-## Better by Cutting
-A 1,000% better game is also a **finishable** one. Recommended (needs your OK):
-| Now | Proposed | Why |
-|---|---|---|
-| ~2,500 handwritten NPCs | **~600 handwritten + generated townsfolk** (name, job, one line, schedule) | 2,500 backstories is a novel series; players remember the 50 that matter |
-| 40 surface regions at 1.0 | **12–15 deep regions at 1.0**, the rest as post-launch updates | Depth beats count; every region gets its Tyrant, town and secrets |
-| ~100 ending variations | **12 endings + epilogue slides per faction/companion** | Same feeling, a fraction of the writing |
-| 6,714 monster variants | Keep as data, **build art for ~150** | Recolors and markings stretch the rest |
+## 8. Chant Mastery (anime spellcasting)
+Spells start with a **full chant** (a long cast, words appear on screen and your character speaks them). With mastery they shorten: **Full chant → Short chant → Skill name only → Chantless.**
+- Chantless casting surprises NPCs (*"Chantless?! At F rank?!"*), a classic anime moment.
+- **Overchant:** deliberately chant the full version of a mastered spell for +50% power and a cinematic cast.
+- Option: your character **shouts skill names** (voice toggle).
+
+## 9. Monster Cuisine
+Cook what you hunt (*Delicious in Dungeon* style). Monster parts become dishes with small stat boosts (Canon) and **odd side effects** (Slime Jelly pudding: +poise, but you bounce when you land).
+- Recipes are **discovered by experimenting**, logged in a Cookbook with your character's sketches, and companions have favorite and hated dishes.
+- Party Stew Night (weekly board) uses these recipes.
+
+## 10. The Adventurer Times + Adventurer Rankings
+- **A weekly broadsheet every Solenday:** world news, siege reports, rival party progress, rumors, ads, a joke column, and **your deeds** (from the Legend log), often wrong.
+- **The Adventurer Rankings:** a living leaderboard of ~100 NPC adventurers per region who rank up in parallel with you. Overtake rivals, get challenged by the ones you pass, and watch your classmates (Kaito!) climb.
+
+## 11. Camp & Night Watch
+At camp, choose who takes **night watch** with you: a quiet two-person scene (bond, secrets, stargazing, the moons). Sometimes the watch is attacked. Sleeping brings **dreams**: Maelis's prophecies, Earth memories, the previous Heroes' memories.
+
+## 12. Transformation & Awakening Scenes
+Every class line gets an **anime transformation** for Awakening mode: a short skippable sequence with its own music sting, outfit and aura change (Swordsman: petals and a white coat; Occultist: shadow wings; Bard: stage lights). Companions have their own, and the first one is a story moment.
+
+## 13. Mentor the Newcomers
+At **B rank and above**, newly summoned Veilborn arrive at the guild **at F rank**, scared, just like you were. Mentor them: train, give advice and gear, and take them on their first slime hunt.
+- They grow on their own and appear in the Adventurer Rankings. Some become friends, rivals, or the next Hero.
+- Your advice shapes them. One you treat badly can end up working for the Red Prophet.
+- **Why:** it closes the loop of "from nobody to legend". You become the mentor you once had.
+
+## 14. Trophy Hall & Memory Wall
+Your home gets a **Trophy Hall**: mounted trophies from Named monsters and bosses, guild cards of every rank you've held, gifts from companions, and framed Memory Reel photos you choose. Visitors comment on them.
+
+## 15. Isekai Trope Feats (achievements with a wink)
+200+ achievements that celebrate the genre, each with a small title:
+- *"Didn't I Say I Wanted an Average Life?"* (get an S-rank Unique Skill)
+- *"The Useless Skill Was Actually OP"* (beat a boss with a starter skill)
+- *"Mayonnaise Mogul"* (bring mayonnaise to 5 towns)
+- *"Refuse the Hero's Party"*
+- *"Befriend the Slime"*
+- *"Rank Reveal"* (show a high-rank card to someone who mocked you)
+
+## 16. Seasonal Festivals as Event Hubs
+The four seasonal festivals become **week-long events** with their own board quests, stalls and minigames:
+- **Festival of Blossoms:** flower-crown making, a romance confession scene, a petal-catching contest.
+- **Grand Tournament:** brackets for every rank and prize money (the tournament circuit already exists).
+- **Lantern Night:** ghost stories, spirits of the dead visiting, memorial scenes for fallen companions.
+- **Starfire Eve:** gift-giving with the whole cast, a snow fight, the Twin Eclipse.
+
+## 17. Living Dungeon Conversations
+Dungeons with personalities (already designed) **talk through the UI**: a dungeon's voice hijacks the System window with its own color and font (*an obnoxious dungeon uses CAPS and too many exclamation marks*). Negotiate floors, insult it into spawning harder rooms, or compliment it for better loot.
+
+## 18. Monster Town Diplomacy
+Monster towns (Tensura-style) get their own **guild board**, with monster-to-adventurer contracts: protect a goblin village from human bandits, deliver letters across a human town without being seen, judge a slime beauty contest. Prosperity works for them too.
+
+## 19. Weather & Sky Events
+- Meteor showers drop **star iron**.
+- Storm nights make lightning reactions stronger.
+- Fog brings Dread/Horror-Menace spawns.
+- Auroras along the Shattered Sky reveal hidden paths.
+- Blood Vesper turns the HUD red and every monster gains a sub-rank (Canon).
+All are announced in the moon & day dial and the Adventurer Times.
+
+## 20. Rival Party Arcs
+The Crimson Wolves and other rival parties have **full arcs that run alongside yours**: they rank up, lose members, get stuck in dungeons you rescue them from (or don't), and can become allies in the final battle. Each rival party has a Kaede-style journal to find.
 
 ## The First 15 Minutes (the Next Fest demo hook)
 1. **Black screen:** a heartbeat stops. The System Voice: *"Status… gr-granted."* The first glitch.

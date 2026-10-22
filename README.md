@@ -9,7 +9,7 @@
 | # | File | Contents |
 |---|---|---|
 | 01 | [vision.md](01_Core_Concept/vision.md) | Pillars, fantasy-feel rules, loops, acts, product facts |
-| 01 | [the_big_upgrade.md](01_Core_Concept/the_big_upgrade.md) | **Proposal:** signature features (Lying Interface, Appraisal, Thread, Otherworld Knowledge, Next Summoning NG+) and scope cuts |
+| 01 | [the_big_upgrade.md](01_Core_Concept/the_big_upgrade.md) | **20 signature features**: Lying Interface, Appraisal, Thread, Otherworld Knowledge, Next Summoning NG+, chant mastery, monster cuisine, Adventurer Times, mentoring newcomers… |
 | 02 | [cosmology.md](02_Lore/cosmology.md) | Creation, the Eight (+ the Forgotten Ninth), the System and its 8 personalities, talking to gods, moons, calendar, languages, the Wyrmconclave |
 | 02 | [history.md](02_Lore/history.md) | 50,000 years of history, the Demon Lords, the 5 Heroes and Veilborn legends |
 | 02 | [story.md](02_Lore/story.md) | Prologues, Acts I–VI, story flags, the Overlord and 5 Generals, villains, the Red Prophet, Nocturne, endings, tearjerkers |
@@ -31,6 +31,7 @@
 | 10 | [world.md](10_World/world.md) | All 40 regions with inspirations, Underworld, Deepgates, deep dives, traversal, living dungeons |
 | 11 | [quests_and_encounters.md](11_Quests_Encounters/quests_and_encounters.md) | Quest framework, encounters, world events, tournaments, the Academy |
 | 11 | [weekly_board.md](11_Quests_Encounters/weekly_board.md) | The 7-day week and its anime daily quests: day specials, dailies, weekly commission |
+| 12 | [hud_and_ui.md](12_Systems/hud_and_ui.md) | HUD & UI: rank colors, HUD presets, exploration/combat/boss HUDs, notifications, Status Window, world UI, dialogue, appraisal tiers, accessibility, controls |
 | 12 | [combat.md](12_Systems/combat.md) | **Combat spec**: camera, movement, combos, hit-stop, parry, reactions, Style Rank, damage, Ring 0 fun test |
 | 12 | [systems.md](12_Systems/systems.md) | Status Window, combat, economy, crafting, housing, difficulty, taming, prosperity, inventory, UI, loss safety |
 | 13 | [production.md](13_Production/production.md) | Engine, pipeline, build rings, release (deferred) |
