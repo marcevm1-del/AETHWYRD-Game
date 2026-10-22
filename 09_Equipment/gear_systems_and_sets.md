@@ -10,7 +10,7 @@ Head · Chest · Hands · Legs · Feet · Cloak/Back · Main Hand · Off Hand ·
 | Belt | **2 quick-item slots at F, +1 at D, C, A and S** (up to 6). Holds potions, bombs and food |
 | Cloak/Back | Cosmetic-heavy; some cloaks give climate comfort (Big Upgrade §48) |
 | Rings ×2 | Rings of the same set don't stack; rare rings come from Tyrants |
-| Relic | A **separate slot** that opens with your first Relic (see Relics & Chase Items) |
+| Relic | A **separate slot** that opens with your first Relic, for non-weapon relics (crowns, masks, orbs). Weapon and armor relics (e.g. *Fang of the First Wolf*) use their normal slots (see Relics & Chase Items) |
 - **Durability:** gear wears down, never breaks completely (it drops to 50% stats at 0). Repairs at smiths or with a field repair kit.
 - **Growth weapons** (Big Upgrade §25) can sit in any weapon slot and keep their history when reforged.
 
