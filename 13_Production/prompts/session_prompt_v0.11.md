@@ -8,20 +8,22 @@ Do the work in this order. Commit after each part.
 
 ## Part A — New feature: Regional Siege → Liberation
 
-**The rule:** every region has a **Tyrant**, its "big bad". Until the Tyrant is slain, the region is **Besieged**: its settlements (cities, towns, villages) face **daily defence events**. Once the Tyrant dies, the region becomes **Liberated**: daily defences stop, and the region's quest board switches to normal **monster-hunting contracts**.
+**The rule:** every region has a **Tyrant**, its "big bad". Until the Tyrant is slain, the region is **Besieged**: its settlements (cities, towns, villages) face **defence events 1–2 times per in-game week**. Once the Tyrant dies, the region becomes **Liberated**: the attacks stop, and the region's quest board switches to normal **monster-hunting contracts**.
 
 ### Design (write it into `12_Systems/systems.md` as a new section "Regional Siege & Liberation", and link it from `11_Quests_Encounters/quests_and_encounters.md`)
 1. **Region states:** `Besieged` → `Liberated` (permanent). Optional middle state `Weakened` once the Tyrant's lieutenants/dens are cleared (defences get easier).
-2. **Daily defence:** once per in-game day (90 real minutes, Canon), one settlement in a Besieged region is attacked, usually at dusk. It's posted on the guild board and the rumor board, with a warning a few in-game hours ahead.
+2. **Weekly defence:** a Besieged region attacks one of its settlements **1–2 times per in-game week**, at random, usually at dusk, never two days in a row. At 90 real minutes per day, that's roughly one attack every 4.5–9 hours of play.
+   - The calendar has no week yet (Canon: 12 months × 30 days). Use a **6-day week** (5 weeks a month) and add it to Canon §6 as a proposed lock.
+   - Each attack is posted on the guild board and the rumor board **one in-game day ahead**, so the player can travel there and prepare.
    - Waves are themed to the Tyrant's faction (e.g. goblin warbands for a goblin Tyrant). They scale to the region's rank band, and the last wave has a lieutenant.
    - Target length: 5–8 minutes. Rewards: gold, GP, XP, Prosperity Safety, and settlement reputation.
-   - **Escalation:** each day the Tyrant lives, its faction's strength rises a step, up to a cap. That pushes the player to go hunt the Tyrant, never to grind defences.
+   - **Escalation:** each in-game week the Tyrant lives, its faction's strength rises a step, up to a cap. That pushes the player to go hunt the Tyrant, never to grind defences.
 3. **Not there? No disaster.** If the player skips a defence, it **auto-resolves** off-screen using the settlement's Safety, guards and any NPC adventurers there. Losses cost Prosperity (Wealth/Safety) and can damage buildings, but **a settlement is never destroyed and nothing is permanently lost** (Canon §5 Loss Rules). Damage is repairable. This must never feel like a chore in a 1,000-hour game.
 4. **Defence is fun content, not filler:** build-up time to set traps, barricades, ballistae and hire guards (feeds Settlement Prosperity). Companions banter. NPC adventurers you've met fight beside you. Use the existing *Defense* quest type (waves · sabotage from inside · boss wave).
 5. **The Tyrant:** a named boss with a lair, a Boss Suitability rating, and lieutenants or dens you can clear first. You can challenge it at any time (Canon: bosses are optional and rank-based).
 6. **Liberation:** killing the Tyrant triggers a liberation scene and festival in the region's main settlement, a Prosperity jump, and a music change.
    - From then on the board offers hunting contracts: Subjugation, bounties, Named-monster hunts, escort and gathering.
-   - Normal world events still happen (Stampedes, Calamities). Rare **remnant raids** can come back as story beats (e.g. Grukk the Younger's revenge), never as a daily cycle again.
+   - Normal world events still happen (Stampedes, Calamities). Rare **remnant raids** can come back as story beats (e.g. Grukk the Younger's revenge), never as a recurring cycle again.
 7. **Ring 1 / Brindlewick:** use the **Goblin Chief of Hollowpine** as the Tyrant of the Brindlewick area (it fits "goblin raids grow organized"). Check this against its role as the F→E rank trial in `02_Lore/story.md`. If it clashes, propose an alternative in Canon §6. Propose Tyrants for every other region too, from existing bosses in `08_Bestiary/bosses_and_calamities.md` where possible.
 
 ### Data
@@ -32,9 +34,9 @@ Do the work in this order. Commit after each part.
 
 ### C# (`Code/Ascend.Core`, engine-agnostic, time passed in, deterministic)
 - `RegionThreat`: state machine (Besieged/Weakened/Liberated) plus escalation level.
-- `SiegeScheduler`: given the day number, region and seed → which settlement is attacked, when, and with which wave set.
+- `SiegeScheduler`: given the day number, region and seed → whether an attack happens this week (1–2 per week, never on consecutive days), which settlement, which day and time, and with which wave set.
 - `SiegeAutoResolve`: outcome and Prosperity/building damage from Safety + guards + escalation. It never destroys a settlement.
-- Tests for all three.
+- Tests for all three, including that every 6-day week has 1 or 2 attacks and none on consecutive days.
 
 ---
 
