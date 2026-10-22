@@ -2,6 +2,9 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.9 — Borrowed features (2026-10-22)
+- New `01_Core_Concept/borrowed_features.md`: 23 mechanics adapted from similar games, each mapped onto existing Ascend systems (companions, combat, exploration, settlements, presentation), with sources. Listed in Canon §6 for approval.
+
 ## v0.10.8 — Inns (2026-10-22)
 - New `12_Systems/inns.md`: inn services, room tiers and rest bonuses, regular status (Stranger → Family), Marta's tab, nightly inn events (incl. siege refuge and liberation party), inns tied into Prosperity, housing, the weekly board, bounties, monster towns, the Labyrinth and your own teahouse, plus inn UI.
 - New `Data/World/inns.json` + `inn` schema: 20 signature inns across the regions, each with a keeper, house dish and drink, a signature room, a quirk, nightly events and a secret.
