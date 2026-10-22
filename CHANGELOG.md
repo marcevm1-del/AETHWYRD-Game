@@ -2,6 +2,10 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.4 — More features & UI (2026-10-22)
+- `the_big_upgrade.md`: features 21–36 (measurement moments, party names & banners, Kaede's Cards card game, spellcrafting, growth weapons, Mochi eats things, ranch breeding & markings, Rift Runs, guild written exam, a bounty on you, street duels, elemental world interaction, silly anime curses, the Vexday time loop, hired party members, guild hall facilities).
+- `hud_and_ui.md` §16–24: HUD pieces unlocked through the world, living title screen, loading screens, death screen, journal-style saves, Rumor → Lead → Quest log, world markers & loot beams, replayable Guide tutorials, UI sound & motion.
+
 ## v0.10.3 — Features & HUD/UI (2026-10-22)
 - `the_big_upgrade.md` grows to **20 signature features** (+ chant mastery, monster cuisine, Adventurer Times & Rankings, camp night watch, transformation scenes, mentoring newcomers, Trophy Hall, isekai trope feats, festival event weeks, talking dungeons, monster-town boards, sky events, rival party arcs). Scope-cut suggestions removed.
 - New `12_Systems/hud_and_ui.md`: full HUD and UI spec.

@@ -188,3 +188,58 @@ The Bestiary fills in the same tiers: silhouette → sketch → full entry with 
 | D-pad | Quick items, whistle mount | Quick items |
 | Select / Tab | Map | — |
 | Start / Esc | Status Window | Pause |
+
+## 16. The HUD Grows With You (diegetic unlocks)
+You start with almost nothing. HUD pieces arrive **through the world**:
+| HUD piece | Unlocked by |
+|---|---|
+| Compass bar | Buying the Copper Compass (`itm_copper_compass`) at Gilda's |
+| Map System overlay | Rank E (guild map seal) |
+| Enemy HP bars | Appraisal 2 |
+| Minimap (optional) | Ranger training or a *Cartographer's Monocle* |
+| Quest tracker beyond 1 quest | Rookie's Pouch with a journal |
+| Danger icons on compass | Wren's Whisperwood hunting lesson |
+| Secret "?" shimmer | Archivist personality or a Treasure Hunter title |
+Players can turn on "Everything unlocked" in options.
+
+## 17. Title Screen & Main Menu
+- **The title screen is your life.** It shows the current season and weather in Brindlewick (or your home). Companions you've recruited sit around the campfire, your Trophy Hall shows behind them, and your guild card lies on the table at your current rank.
+- **After an ending,** the title screen changes for good to match it.
+- **A new save** shows a dark screen and a heartbeat, then *"Status… granted."*
+
+## 18. Loading Screens
+- **Painted vista cards** of places you've visited (or a silhouette for places you haven't).
+- **Tips spoken by the System** in its current personality, **bestiary trivia**, **rumors** that turn into real leads, and **Adventurer Times headlines**.
+- Hidden: rarely, a loading screen shows a **message from Ezrath** in gold that isn't a tip.
+
+## 19. Death & Defeat Screen
+- The screen fades to **Morrowyn's blue lantern**. A short line from the lantern spirit, then *"Your story isn't over."*
+- Options: retry the encounter · return to the last waystone · change gear first. The screen shows what killed you, its rank, and **one tip** (its weakness, if you've appraised it).
+- Dying to a Named monster shows its **new scar or title** (Nemesis), so you know it remembers.
+
+## 20. Save & Load
+- **Saves are journal entries:** a screenshot, the in-game date and weekday, the moon phase, your rank and location, and **a line your character wrote** about the day (generated from the Legend log).
+- Autosave at waystones, before bosses and at dawn. Several manual slots; Steam Cloud later.
+
+## 21. Quest Log: Rumor → Lead → Quest
+- **Rumors** (overheard, the Adventurer Times, loading screens) go in a *Rumors* page in your journal, written vaguely.
+- Follow them up and they become **Leads** (a place or person). A lead becomes a **Quest** with objectives.
+- Tabs: Main · Guild Board · Weekly · Companions · Siege · Hidden · Rumors. Quests show the rank color, Boss Suitability, time of day and weekday.
+
+## 22. World Markers & Nameplates
+- **No floating "!" over heads.** Quest givers hold **letters, wave, or have an emote bubble** (Standard preset adds a small seal icon).
+- **Nameplates (toggle):** name, job and, after appraisal, rank letter and title. Rivals get a small crossed-swords mark; mentees a sprout icon.
+- **Loot beams by rank color** (F loot has no beam; S+ has a pillar of light and a chime). An **item pickup feed** sits on the left and stacks duplicates.
+- **Interaction prompts** are small rune circles that fill on hold.
+
+## 23. Tutorials & Help
+- The System teaches through **Guide windows**. Each one can be replayed from the *System → Guides* tab and has a short practice drill (e.g. parry timing on the training dummy).
+- Tutorials use the System's personality, so a Duelist System taunts you through the parry lesson.
+- **An encyclopedia** of terms (ranks, reactions, gods, regions), with spoiler-safe entries that unlock as you learn.
+
+## 24. UI Sound & Feel
+- **Every System window has a sound family:** a glassy chime for opening, a soft rune hum on hover, a crisp click to confirm, a low tone to cancel.
+- **Rank-up stamps** have a heavy, satisfying thunk.
+- **Corruption stages add sound too:** a crackle in stage 2, a faint choir under gold text in stage 3.
+- **World UI sounds physical:** paper rustles, quills scratch, wax seals crack, coins clink.
+- **Motion:** panels slide in from the angled corners in 120–180 ms; nothing bounces except Mochi notifications.

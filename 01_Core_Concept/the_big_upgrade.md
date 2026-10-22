@@ -120,6 +120,90 @@ All are announced in the moon & day dial and the Adventurer Times.
 ## 20. Rival Party Arcs
 The Crimson Wolves and other rival parties have **full arcs that run alongside yours**: they rank up, lose members, get stuck in dungeons you rescue them from (or don't), and can become allies in the final battle. Each rival party has a Kaede-style journal to find.
 
+## 21. Measurement Moments ("Th-this reading is impossible!")
+The classic scene: the mana crystal cracks, the receptionist faints. Every **measuring object** (guild mana orbs, the Academy's affinity crystal, a dwarven strength bell, a church blessing font) **reacts to your real stats**, not your card. Test at the guild again after each rank-up for a new reaction. Under the Lying Interface, the orb sometimes shows a number your Status doesn't.
+
+## 22. Your Party Has a Name
+Name your party and design its **banner** (shape, colors, emblem pieces). The name appears in the Adventurer Times, on rival taunts and on festival bracket boards, and NPC kids paint it on wooden swords. **Party Rank** is tracked separately from your own (*"Party Rank C: Moonlit Stew"*).
+
+## 23. Kaede's Cards (in-world card game)
+Hero #1 Kaede invented playing cards (lore). Now she also invented **Arcana Duel**, a collectible card game played in every tavern:
+- Every bestiary entry you complete gives you its **monster card**, with a rank, element and ability.
+- Play NPCs, rivals, companions and gods in disguise (Vex cheats). Hold regional tournaments.
+- Rare cards come from Named monsters and Tyrants. Kaede's own deck is a legendary hidden quest.
+
+## 24. Spellcrafting
+From C rank (Mage line, Spellweaver especially) you can **design your own spells**:
+- Choose a **shape** (bolt, wave, ring, rain, orbit, trap), an **element**, and **modifiers** (pierce, chain, delayed, homing, split). MP cost and chant length are calculated live.
+- Name the spell; the System registers it. Some combinations are **forbidden**, and the Church notices.
+- Spells you design can show up in the Adventurer Times or be taught to your mentees.
+
+## 25. Growth Weapons
+Your starter weapon (or any weapon you name) **grows with you**: kill counts, a bond level, and evolutions at rank-ups (*the Guild-Issue Sword → Rookie's Promise → Oathbound Edge…*). It keeps your name engraved and remembers your best fights in its flavor text. It can be reforged into Legendary gear later without losing its history.
+
+## 26. Mochi Eats Things
+Mochi (and other slime familiars) can **absorb items and monster cores** to gain small skills and visual changes (*ate a fire core: now warm and glowing; ate a book: now talks slightly better, still badly*). A Tensura nod, and a reason to keep odd loot.
+
+## 27. Ranch Breeding & Markings
+Tamed monsters on your ranch can **breed**, passing on the population-variant traits already in the data (age tiers, markings, albino, alpha). Rare cross-element hatchlings and a **marking collection** give collectors something to chase for hundreds of hours.
+
+## 28. Rift Runs (repeatable roguelite dungeons)
+Unstable **Rifts** open after Stampedes and on Blood Vesper:
+- Floors are randomized.
+- Before each floor you pick 1 of 3 **Rift Cards**, a curse with a matching reward (*enemies +1 sub-rank / +50% drops*).
+- Score is ranked C → SSS like the Style meter.
+- Weekly **Rift of the Week** seeds appear in the Adventurer Times.
+
+## 29. The Guild Written Exam
+Rank-ups from D need a short **written exam** at the guild, alongside the trial: questions on monster weaknesses, guild law, first aid and map reading, drawn from your bestiary and journal. Study in the library or bluff with CHA. Comedic exam scenes with classmates. You can retake it, and a perfect score earns a title.
+
+## 30. A Bounty on You
+Dark Karma, crimes or humiliating powerful nobles put **a bounty on your head**:
+- NPC bounty-hunter parties track you across regions, with names, ranks and grudges.
+- Pay it off, clear your name through a quest, or become so infamous that the Adventurer Times gives you a nickname.
+- On the Crimson Throne path, it becomes a badge of honor.
+
+## 31. Street Duels & Honor Challenges
+Rivals, drunk adventurers and proud knights challenge you in the street.
+- **Duel rules** are set before you start: first blood, yield, ring-out, or no skills.
+- Crowds gather, and townsfolk bet on the result.
+- Winning or losing changes your reputation and can start rival arcs.
+
+## 32. The Elemental World
+Elements change the world outside combat:
+- **Ice:** freeze rivers to walk across.
+- **Fire:** burn bramble walls (careful: Wildfire spreads through grass).
+- **Earth:** raise steps and bridges.
+- **Wind:** push gliders and windmills, scatter fog.
+- **Water:** grow plants, put out fires.
+- **Lightning:** power dwarven machines.
+- **Light:** reveals ghost paths.
+- **Dark:** hides you from patrols.
+Secrets and shortcuts are built around this, so every element is useful for exploring.
+
+## 33. Silly Anime Curses
+Rare, harmless, timed status effects from tricksters, fairies and cursed items:
+- **Chibi** (you shrink, your voice goes squeaky, damage is unchanged).
+- **Frog Prince/Princess** (can't talk, only croak in dialogue).
+- **Honesty** (all your dialogue choices become blunt).
+- **Mochi Swap** (you see from Mochi's eyes).
+Each has its own cure quest.
+
+## 34. The Vexday That Never Ends (time-loop side arc)
+A hidden E–D rank arc: Vex traps Brindlewick in a **time loop on Vexday**. Every loop, the town is the same except for what **you** learn. Solve the cause through NPC schedules, Appraisal and the weekly board quests you already know. Whiskers is suspiciously helpful. The reward is a Vex blessing and a title.
+
+## 35. Hire Party Members
+A **mercenary and porter board** at the guild: hire NPC adventurers for a few in-game days (paid daily). They have their own small personalities, combat AI and loyalty. Some are rivals' ex-members with gossip. A good hire can become a mentee (§13) or a minor recurring character.
+
+## 36. Guild Hall Facilities
+The guild hall (you can't own a guild) improves as **town Prosperity** rises:
+- **Training yard:** dummies with damage readouts and timing practice.
+- **Library:** lore, exam study, spell research.
+- **Cafeteria:** daily meal buffs.
+- **Appraisal desk:** identify items.
+- **Bulletin wall:** rumors.
+- **Trophy shelf:** displays the town's Tyrant kill.
+
 ## The First 15 Minutes (the Next Fest demo hook)
 1. **Black screen:** a heartbeat stops. The System Voice: *"Status… gr-granted."* The first glitch.
 2. **Wake in Whisperwood.** Two moons. Mochi stares at you.
