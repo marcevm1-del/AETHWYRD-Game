@@ -2,6 +2,11 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.8 — Inns (2026-10-22)
+- New `12_Systems/inns.md`: inn services, room tiers and rest bonuses, regular status (Stranger → Family), Marta's tab, nightly inn events (incl. siege refuge and liberation party), inns tied into Prosperity, housing, the weekly board, bounties, monster towns, the Labyrinth and your own teahouse, plus inn UI.
+- New `Data/World/inns.json` + `inn` schema: 20 signature inns across the regions, each with a keeper, house dish and drink, a signature room, a quirk, nightly events and a secret.
+- Weekly board: + *Rush Hour at the Griffon* (inn part-time job; can pay off your tab).
+
 ## v0.10.7 — Deepening existing systems, part 2 (2026-10-22)
 - **Crafting:** how a craft works (material rank caps, stations, Crafter's Mark, naming masterworks, insight on failure), a minigame for every discipline, life ranks judged by master NPCs, commissions and your shop.
 - **Housing:** rooms and features by stage, Comfort and style sets, visitors and home events, territory residents and buildings (territories can be besieged), Lord Protector city policies.

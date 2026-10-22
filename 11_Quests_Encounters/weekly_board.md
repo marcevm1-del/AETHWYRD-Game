@@ -97,6 +97,7 @@ Every quest is a template: the **trope**, structure and twists stay; the giver, 
 | daily | **Sewer Duty** | The sewer job nobody wants | guild_clerk_wendel | any | 40g · 110 XP · 3 GP |
 | daily | **Wolves on the Road** | Pack hunt on the trade road | wren_ashbourne | dusk | 55g · 150 XP · 4 GP |
 | daily (liberated) | **Open Hunting Contract** | Normal monster hunting after liberation | mina_feathersby | any | 60g · 150 XP · 4 GP |
+| daily | **Rush Hour at the Griffon** | Part-time job at the inn | marta_gruel | dusk | 45g · 80 XP · 1 GP |
 
 ### Weekly
 | Slot | Quest | Trope | Giver | When | Reward |

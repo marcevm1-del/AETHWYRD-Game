@@ -136,7 +136,7 @@ Each life skill has its own **F → SSS life rank**, using the parallel tracks i
 ## 6. Housing → Territory (Slow-Life Pillar)
 | Stage | Rank | Features |
 |---|---|---|
-| Inn room | F | Storage, bed (rest bonus) |
+| Inn room | F | Storage, bed (rest bonus). A room at the Sleeping Griffon (see `12_Systems/inns.md`) |
 | Rented room in the guild house | C | Party base, crafting stations |
 | **Home + land** (Brindlewick plot) | B | Farm, barn, garden, decorate, pets roam, companions live there |
 | Manor / Shop | A | Hire NPC staff; your shop sells crafts while you adventure |

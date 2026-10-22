@@ -68,6 +68,10 @@
 - Missed defences auto-resolve; settlements are never destroyed (§5).
 - Full rules: `12_Systems/systems.md` → Regional Siege & Liberation.
 
+## 4c. Inns
+- Every settlement has an inn: rooms and rest bonuses, meals, the rumor board, tavern stage, tables, stables, mail. Regular status (Stranger → Guest → Regular → Family) per inn. Marta's tab at the Sleeping Griffon never blocks the player.
+- 20 signature inns in `Data/World/inns.json`; rules in `12_Systems/inns.md`.
+
 ## 5. Loss Rules (protecting a 1,000-hour game)
 - **Companion combat death is opt-in** (*Mortal Bonds* option; Hardcore turns it on). Otherwise downed companions are only "gravely wounded."
 - **Story deaths** happen only through clearly signposted choices.

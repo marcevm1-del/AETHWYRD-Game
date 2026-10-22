@@ -32,6 +32,7 @@
 | 11 | [quests_and_encounters.md](11_Quests_Encounters/quests_and_encounters.md) | Quest framework, encounters, world events, tournaments, the Academy |
 | 11 | [weekly_board.md](11_Quests_Encounters/weekly_board.md) | The 7-day week and its anime daily quests: day specials, dailies, weekly commission |
 | 12 | [hud_and_ui.md](12_Systems/hud_and_ui.md) | HUD & UI: rank colors, HUD presets, exploration/combat/boss HUDs, notifications, Status Window, world UI, dialogue, appraisal tiers, accessibility, controls |
+| 12 | [inns.md](12_Systems/inns.md) | Inns & taverns: rooms and rest, regulars, Marta's tab, nightly events, 20 signature inns, ties to other systems |
 | 12 | [combat.md](12_Systems/combat.md) | **Combat spec**: camera, movement, combos, hit-stop, parry, reactions, Style Rank, damage, Ring 0 fun test |
 | 12 | [systems.md](12_Systems/systems.md) | Status Window, combat, economy, crafting, housing, difficulty, taming, prosperity, inventory, UI, loss safety |
 | 13 | [production.md](13_Production/production.md) | Engine, pipeline, build rings, release (deferred) |
@@ -55,8 +56,9 @@ All game content lives in `Data/` as JSON, checked against `Data/Schemas/`.
 | Regions (rank bands, rings) | `Data/World/regions.json` |
 | Monsters | `Data/Monsters/` (species, population, attacks, loot tables) |
 | Items | `Data/Items/` (materials generated, items hand-written) |
+| Inns | `Data/World/inns.json` |
 | NPCs / Quests | `Data/NPCs/npcs.json`, `Data/Quests/quests.json` |
 | Combat tuning | `Data/Combat/combat_tuning.json` |
 | Game rules (C#) | `Code/Ascend.Core`: engine-agnostic rules (ranks, levels, elements and reactions, damage, Style Rank, loot, poise, aggro). Drops into Unity as-is |
 
-**ID rules:** `reg_`, `mon_`, `pop_00000`, `atk_`, `loot_`, `itm_`, `npc_`, `qst_` + lowercase snake_case. IDs are unique across all data.
+**ID rules:** `reg_`, `mon_`, `pop_00000`, `atk_`, `loot_`, `itm_`, `npc_`, `qst_`, `inn_` + lowercase snake_case. IDs are unique across all data.
