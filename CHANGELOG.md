@@ -2,6 +2,9 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.10 — Echoes of Aincrad (2026-10-22)
+- `borrowed_features.md` #24–30 from *Echoes of Aincrad* (SAO, July 2026): Switch hand-offs, Command vs Free Rein with fatigue, Death Game presentation for Hardcore (never paywalled), waystone respawn rule, Labyrinth floor-boss raid councils and the Frontline, a playable "Day the Windows Glitched" town event, the Veilborn Circle; plus lessons from its reviews (dungeon variety rule).
+
 ## v0.10.9 — Borrowed features (2026-10-22)
 - New `01_Core_Concept/borrowed_features.md`: 23 mechanics adapted from similar games, each mapped onto existing Ascend systems (companions, combat, exploration, settlements, presentation), with sources. Listed in Canon §6 for approval.
 

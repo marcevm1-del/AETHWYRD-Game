@@ -291,6 +291,8 @@ Gods react differently: **Solenne** punishes lies, **Sylvara** punishes cruelty 
 Under any preset, sliders for: enemy damage, enemy HP, parry/dodge windows, aggro-token count (how many attack at once), loot amount, death penalty, and inventory weight. **The S-rank floor still applies**: S+ content ignores the easy settings (below). Changing difficulty is free at any time, except Hardcore, which is locked at creation.
 
 ### 10.3 Hardcore Legacy
+> Hardcore uses the **Death Game** presentation (`01_Core_Concept/borrowed_features.md` #26): the System announces that respawn is disabled. Free for everyone from the start.
+
 A Hardcore character who dies becomes **part of history** for your next characters: a grave in the world with their gear, a journal, and a mention in the history books. This uses the same system as **the Next Summoning** (Big Upgrade §5).
 
 ## 11. Quality-of-Life

@@ -1,4 +1,4 @@
-# 01c — Borrowed & Adapted: Best Mechanics from Similar Games
+# 01c — Borrowed & Adapted: Best Mechanics from Similar Games (30)
 
 Proven mechanics from games in our genre, **rebuilt on Ascend's existing systems** (no copied names, art or text: only the design ideas, which is how every studio learns). Each entry says what the original does, then the Ascend version and where it plugs in.
 
@@ -155,7 +155,64 @@ Sub-class gives you a second action. Many quests have **multiple solutions** bas
 
 ---
 
+---
+
+## From *Echoes of Aincrad* (Sword Art Online, July 2026)
+An action RPG where you play a custom avatar trapped in a deadly VR game, fighting real-time (dodge, parry, timed attacks) beside an anime partner. It's the closest recent game to Ascend's "trapped in a game-like world" theme.
+
+### 24. "Switch!" — partner hand-off
+**Original:** the Switch system lets you swap roles with your partner mid-fight and chain attacks; you can also hold back and split damage.
+**Ascend:** a **Switch** call (tap the companion button during a combo):
+- Your companion **steps in front of you** to take the enemy's next attack, and you leap back with a short stamina refill. Their next hit continues your combo count and **Style Rank**.
+- **Perfect Switch:** call it right as an enemy telegraph flashes and the companion parries it, opening a stagger window.
+- Each companion has their own Switch animation and line ("Switch! I've got it!"). Plugs into the command wheel, Union Skills and the Style meter.
+
+### 25. Command vs Free Rein (with fatigue)
+**Original:** a commanded mode where the partner follows your orders, or a free mode where they act independently, which is more effective but tires them faster.
+**Ascend:** a toggle for each companion:
+- **Command:** they follow the command wheel exactly.
+- **Free Rein:** they fight on their own Inclination (borrowed #1) and deal more damage, but build **Fatigue**. High Fatigue slows them and blocks Union Skills until they rest (a camp, an inn, a feast).
+- It makes resting at inns and camp matter in long dungeons.
+
+### 26. Death Game Mode (free, never paywalled)
+**Original:** one save file, no respawns, and the save is deleted if you die. It unlocks after finishing the game, or early in the paid Deluxe and Ultimate editions.
+**Ascend:** our **Hardcore** mode gains a **"Death Game" presentation**: at creation, the System Voice announces, *"Respawn function: disabled. Do you understand?"* The Status Window shows a permanent skull mark, and NPCs who learn your rank treat you as someone who can truly die.
+- **Never sold:** Canon says premium only with no paid extras, so it's available from the start for everyone (with a warning).
+- On death, your character becomes a grave and journal for future runs (Systems §10.3, the Next Summoning).
+
+### 27. Safe Areas reset the field
+**Original:** exploring opens Safe Areas, and resting at one resets the enemies in that zone.
+**Ascend:** a clear rule for **waystones and camps**: resting there **respawns nearby common monsters** (not Named monsters, Tyrants, bosses or cleared dens). Discovering a waystone also reveals the region's map around it. It gives farming routes a rhythm without making cleared areas feel pointless.
+
+### 28. Floor-Boss Raid Councils
+**Original:** set on a floating castle of deadly floors, retelling the series' first arc, where players band together against floor bosses.
+**Ascend:** in the **Great Labyrinth**, every 10th floor's boss needs a **raid**:
+- A **raid council** meets at the safe-floor inn (The Deep Pint on floor 30): NPC parties from the **Adventurer Rankings** argue strategy, rivals clash, and you can propose the plan. It's the classic anime strategy-meeting scene.
+- In the fight, those NPC parties fight beside you with their own roles. Some can die if the plan is bad (only parties, never your companions unless Mortal Bonds is on).
+- **The Frontline:** the guild tracks the deepest floor anyone has cleared. Clear a new floor first and it makes the Adventurer Times.
+
+### 29. The Day the Windows Glitched
+**Original:** the game recreates the shocking announcement and the panic in the trapped community.
+**Ascend:** the existing Act II moment, when the **Lantern Seal cracks and every Status window glitches for one second**, becomes a **playable town event** in Brindlewick:
+- People panic in the streets, adventurers argue at the guild, Brother Caspian calms the orphans, and Mina (still the real Mina at this point) organizes everyone.
+- You choose how to help, and it shapes Brindlewick's Morale and how the town sees you for the rest of Act II.
+
+### 30. The Veilborn Circle
+**Original:** thousands of trapped players form communities, with the series' characters as part of them.
+**Ascend:** every **Morrowsday evening**, Veilborn living in a town meet at the inn's back room to share Earth stories, food they miss, and news of the newly summoned. It's a hub for **Earth Relics** (Big Upgrade §44), mentoring newcomers (§13), the classmates from your old school (Canon), and quiet homesick moments. Some members are secretly planning something.
+
+### Lessons From Its Reviews
+Critics praised its faithful anime presentation (even the inventory screen looks like the show's) and its partner combat, but called its **dungeons monotonous**, its **combat too easy**, and the game **a standard RPG beyond the franchise touches**. Ascend already plans around all three:
+- **Dungeons:** living dungeons with personalities, Rift Runs and wounds & part breaks keep them varied.
+- **Combat:** the S-rank difficulty floor keeps late fights hard on every setting.
+- **Identity:** the Lying Interface and Thread give Ascend its own hook beyond the tropes.
+- **Rule:** no dungeon may reuse the same room template more than twice in a row, and every dungeon needs one unique set piece.
+
 ## Sources
+- [Stars and Stripes — Echoes of Aincrad preview](https://www.stripes.com/living/entertainment/video_games/2026-07-03/preview:-with-echoes-of-aincrad,-sword-art-online-comes-to-life-as-a-video-game-22065299.html)
+- [Bandai Namco — Echoes of Aincrad launch page](https://en.bandainamcoent.eu/sword-art-online/news/face-the-challenges-of-the-floating-castle-echoes-of-aincrad-launching-july)
+- [RPGamer — Death Game Mode trailer](https://rpgamer.com/2026/07/echoes-of-aincrad-trailer-highlights-death-game-mode/)
+- [RPG Site — Echoes of Aincrad gameplay trailer](https://www.rpgsite.net/news/20140-echoes-of-aincrad-new-gameplay-trailer-galaxies-spring-showcase)
 - [GamingTrend — Rune Factory: Guardians of Azuma review](https://gamingtrend.com/reviews/rune-factory-guardians-of-azuma-review-a-fresh-breeze-from-the-east/) (villager traits, selective hangouts, criticisms)
 - [PC Gamer — Dragon's Dogma 2 pawns](https://pcgamer.com/games/rpg/dragons-dogma-2-pawns) (inclinations, guiding, farewell gifts)
 - [Game'n'Guide — Best anime games of 2026](https://www.gamenguide.com/articles/108781/20260812/best-games-based-anime-2026-action-rpgs-jrpgs-fighting-more.htm) (current genre landscape: Genshin, Zenless Zone Zero, Seven Deadly Sins: Origin, Persona 5 Royal, Monster Hunter Stories 3)
