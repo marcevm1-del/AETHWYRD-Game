@@ -63,6 +63,11 @@
 | Narrator | None. Only the System Voice (player picks male or female; 8 evolving personalities) |
 | Fourth wall | Gods and the System speak to the **character**; only *The Unwoven Sky* and *The Thirteenth Star* address the **player** |
 
+## 4b. Regions: Siege & Liberation
+- Every region has a **Tyrant**. Until it's slain the region is **Besieged**: settlements are attacked **1–2 times per 7-day week** (never two days in a row). Killing the Tyrant **Liberates** the region permanently; its board switches to hunting contracts.
+- Missed defences auto-resolve; settlements are never destroyed (§5).
+- Full rules: `12_Systems/systems.md` → Regional Siege & Liberation.
+
 ## 5. Loss Rules (protecting a 1,000-hour game)
 - **Companion combat death is opt-in** (*Mortal Bonds* option; Hardcore turns it on). Otherwise downed companions are only "gravely wounded."
 - **Story deaths** happen only through clearly signposted choices.
@@ -76,4 +81,5 @@
 | Companion roster | **12 companions + 2 childhood friends**, no more human-cast companions added after this | Romance + permadeath + mutual exclusivity + 12 endings multiply writing; capping the cast caps that |
 | Named-monster companions | A **lighter dialogue tier**: personality, banter, bond levels, no romance or full personal arc | Lets the nemesis-to-companion system scale |
 | **Big Upgrade** | Adopt the 52 signature features in `01_Core_Concept/the_big_upgrade.md` (Lying Interface, Appraisal detective work, hidden Thread growth, Otherworld Knowledge economy, the Next Summoning NG+, Legend system, learning Tyrants, chant mastery, monster cuisine, Adventurer Times & Rankings, mentoring newcomers, and more) and the HUD/UI spec in `12_Systems/hud_and_ui.md` | Gives Ascend its own identity on top of the full trope set |
+| Ring 1 Tyrant | **Goblin Chief of Hollowpine** is the Tyrant of the Brindlewick area (also the F→E rank trial) | Goblin raids are already its story |
 | Ring 2 roster | Trim ~145 tagged species to ~60 cores during Ring 2 planning | Art budget for two people |

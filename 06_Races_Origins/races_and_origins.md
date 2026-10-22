@@ -73,3 +73,31 @@
 - Anime-styled 3D creator: face presets + sliders, hair (60+ styles, physics), eyes (heterochromia, glowing), marks/tattoos, horns/ears/tails by race, height/body sliders, 20 voice sets (VA lines), personality tone for chosen dialogue (*Polite / Cocky / Cold / Cheerful*).
 - **Aura color** (how your skills glow).
 - **Old-world memory** (pick 3: student, cook, gamer, nurse, engineer, athlete, otaku, office worker…). This gives small perks and unique dialogue: an engineer learns Otherworld Knowledge faster, a cook gets a cooking bonus, a gamer can "read" the System better.
+
+### 3.1 Creator Flow
+1. **Your old life:** name, the country you came from (Canon: anywhere on Earth), your old-world jobs (the 3 memories above), and **one thing you regret**. The regret comes back in dreams and in your Earth-memory side story.
+2. **How you look:** body, face, hair, eyes, marks, then race features. A **"Before"** preview shows how you looked on Earth (used in flashbacks and the anime opening).
+3. **Race & Origin:** with a short preview of that Origin's prologue scene.
+4. **Your Status:** roll the 3 Unique Skill options (Chosen vs Fated rules), pick your aura color and see your first Status Window, with its one `[REDACTED]` line (Big Upgrade §1).
+5. **System Voice:** male or female (Canon), with a sample line.
+6. **Final pose:** pick an opening pose and expression for your **anime opening** (production doc).
+
+### 3.2 The Old-World Jobs
+| Job | Perk | Otherworld Knowledge ideas | Unique dialogue |
+|---|---|---|---|
+| Student | +XP from books and the Academy | Basic math, the scientific method | Bonds faster with Academy classmates |
+| Cook | Cooking quality +1 tier | Mayonnaise, preservation, menus | Judges the Grand Cooking Contest |
+| Gamer | Sees some hidden System values | Ranked ladders, guides | Recognizes Kaede's game terms |
+| Nurse / medic | Healing items +20% | Germ theory, sanitation, triage | Calms the wounded, argues with the Church |
+| Engineer | Crafting precision +1 | Pulleys, printing press, plumbing | Talks shop with dwarves |
+| Athlete | +stamina, climbing speed | Training regimens, sports days | Wins festival contests |
+| Otaku | Recognizes isekai tropes (dialogue jokes, trope feats ×1.5) | Manga-style printing, card games | Breaks the tension at the worst moments |
+| Office worker | Better trade and haggling | Bookkeeping, insurance, schedules | Reorganizes the guild's paperwork (Wendel cries with joy) |
+| Farmer | Crops grow faster | Crop rotation, irrigation | Farmers trust you instantly |
+| Musician | Bard skills +1 | Notation, instruments | Concert duets with Rosie |
+| Soldier / police | Guard and militia bonuses | Drills, signal systems | Captain Holt respects you |
+| Teacher | Mentees grow faster (Big Upgrade §13) | Literacy, schools | Orphans love you |
+
+### 3.3 Change It Later
+A **Mirror of Vanity** at your home lets you change appearance (not race) any time for free. Race changes come only from story events (monster evolution, Transcendence).
+

@@ -54,6 +54,22 @@ Monsters and quests also use sub-grades **−/normal/+** (e.g. *C+ Named Ogre*).
 4. Rank Gift chest + new title.
 5. At **S and up**, the promotion is announced kingdom-wide, and bards write songs about you (a real in-game song list that grows).
 
+### The Nine Ceremonies
+| Rank | Where | The moment | Gift |
+|---|---|---|---|
+| **F** (registration) | Brindlewick guild counter | Mina burns your name into an oak card with a hot stamp. Someone in the hall laughs at your Status | Rookie's Pouch |
+| **E** | Brindlewick guild hall | The oak card **burns away into copper**. Lyra and the regulars cheer; Brutus grudgingly claps | Copper Compass upgrade, title *Novice* |
+| **D** | Regional guild branch | Your first ceremony in front of strangers. The examiner reads your exam score aloud (Big Upgrade §29) | Iron-bound journal, map seal |
+| **C** | The capital's Grand Guild | An audience of adventurers; the rival party you've been racing is there too | Silver card chain, a trade license |
+| **B** | Grand Guild + town square | The Adventurer Times prints your portrait; townsfolk you've helped attend | First Relic hint, mentee unlock (Big Upgrade §13) |
+| **A** | Royal court (Aldmere) | Knighted-style ceremony (no crown, Canon); nobles start courting your favor | Platinum crest, kingdom-wide waystone pass |
+| **S** | Cathedral of Ilvaris | Kingdom-wide announcement, the **System Voice speaks to the whole crowd**. The first time the System glitches in public | Mithril card, your first bard song |
+| **SS** | Before the 7 living SS-ranks | One of the seven challenges you to a duel right there | Adamantite card, a seat at the Calamity Council |
+| **SSS** | The ley-fountain beneath the Grand Guild, alone | The fountain doesn't re-forge your card. **The sky does.** Constellations draw themselves onto it. The harvest begins to notice you | Starcard, Transcendence T1 |
+- Every ceremony is affected by **Renown and Karma**: who attends, who boos, which companions stand beside you, and what the System says.
+- **Exceptional Promotion** (skipping a rank) uses a shortened ceremony and then the Guild Master's trial.
+- Each ceremony is saved to the **Memory Reel** automatically, and a photo of the new card goes to the Trophy Hall.
+
 ## 4. Rank Perks & Unlocks
 | Rank | Gameplay unlocks | World/NPC changes | Rank Gift |
 |---|---|---|---|

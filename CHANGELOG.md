@@ -2,6 +2,15 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.6 — Deepening existing systems (2026-10-22)
+- **Economy:** prices by rank, what moves prices (Prosperity, sieges, reputation, haggling, seasons, Otherworld Knowledge, Blood Vesper), trade routes, long-game gold balance, banking.
+- **Taming:** the full taming encounter (calm vs fear), partner roles, growth, and how taming ties into Nemesis, sieges, Karma/Thread, monster towns and the bestiary. Fixed the old "1 → 2 → 3 familiar slots" line to match the Canon 3-active roster.
+- **Bonds & Romance:** bond levels 1–10 with unlocks, companion core values, bond floors (5 and 8), the romance path from spark to marriage and adoption.
+- **Karma:** three hidden meters (Karma, Renown, Thread), gray-choice examples, god reactions, Karma bands and their world effects, crimes vs Karma, redemption.
+- **Regional Siege & Liberation** now lives in `systems.md` (and Canon §4b), not only in the session prompt.
+- **Rank-Up Ceremony:** all nine ceremonies, each with its own place, moment and gift.
+- **Character Creator:** full creator flow, 12 old-world jobs with perks, Otherworld Knowledge ideas and dialogue, and the Mirror of Vanity.
+
 ## v0.10.5 — Even more features & UI (2026-10-22)
 - `the_big_upgrade.md`: features 37–52 (pair & triple Union Skills, interrupting villain monologues, Last Stand friendship revival, sealed-power segments, monster languages, eavesdropping, the Natural History Museum, Earth Relics, archaeology & murals, companion expeditions, mount personalities & racing, climate comfort, the Grand Cooking Contest, concerts, photo requests, letters & parcels).
 - `hud_and_ui.md` §25–31: party formation, bond screen, shops & haggling, waystones & fast travel, collections book, combat log & training readout, expedition board.
