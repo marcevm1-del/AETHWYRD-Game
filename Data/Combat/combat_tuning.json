@@ -65,6 +65,10 @@
   "golem": 200,
   "dragon": 400
  },
+ "poiseRegen": {
+  "delaySec": 2.5,
+  "fractionPerSec": 0.25
+ },
  "bossBreakKnockdownSec": 4,
  "ai": {
   "maxSimultaneousAttackers": 2
@@ -97,7 +101,8 @@
   "decayPerSec": 20,
   "decayDelaySec": 2,
   "repeatPenaltyAfter": 4,
-  "dropRanksOnHit": 1
+  "dropRanksOnHit": 1,
+  "pointsCap": 1200
  },
  "damage": {
   "defenseConstant": 100,

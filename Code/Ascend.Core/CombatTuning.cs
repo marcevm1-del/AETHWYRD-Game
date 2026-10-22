@@ -17,6 +17,7 @@ namespace Ascend.Core
         public HitstopTuning Hitstop { get; set; } = new HitstopTuning();
         public ReactionTuning Reactions { get; set; } = new ReactionTuning();
         public Dictionary<string, int> Poise { get; set; } = new Dictionary<string, int>();
+        public PoiseRegenTuning PoiseRegen { get; set; } = new PoiseRegenTuning();
         public double BossBreakKnockdownSec { get; set; }
         public AiTuning Ai { get; set; } = new AiTuning();
         public StyleTuning Style { get; set; } = new StyleTuning();
@@ -31,6 +32,7 @@ namespace Ascend.Core
     public sealed class ComboTuning { public int BudgetPerString { get; set; } public double BudgetRefillSec { get; set; } public List<double> ChargeLevels { get; set; } = new List<double>(); }
     public sealed class HitstopTuning { public double Light { get; set; } public double Medium { get; set; } public double Heavy { get; set; } public double Launch { get; set; } public double Ultimate { get; set; } }
     public sealed class ReactionTuning { public double AuraDurationSec { get; set; } public double FreezeDurationSec { get; set; } public double ShatterBonus { get; set; } public double StormPrisonStunSec { get; set; } }
+    public sealed class PoiseRegenTuning { public double DelaySec { get; set; } = 2.5; public double FractionPerSec { get; set; } = 0.25; }
     public sealed class AiTuning { public int MaxSimultaneousAttackers { get; set; } }
 
     public sealed class StyleTuning
@@ -44,6 +46,8 @@ namespace Ascend.Core
         public double DecayDelaySec { get; set; }
         public int RepeatPenaltyAfter { get; set; }
         public int DropRanksOnHit { get; set; }
+        /// <summary>Points can't exceed this (a little above the SSS threshold), so decay still bites after long combos.</summary>
+        public double PointsCap { get; set; }
     }
 
     public sealed class DamageTuning

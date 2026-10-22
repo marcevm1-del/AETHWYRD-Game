@@ -364,11 +364,11 @@
     "wave": 1,
     "units": [
      {
-      "speciesId": "mon_radiant_wolf",
+      "speciesId": "mon_ancient_horned_rabbit",
       "count": 4
      },
      {
-      "speciesId": "mon_ancient_horned_rabbit",
+      "speciesId": "mon_elder_horned_rabbit",
       "count": 2
      }
     ]

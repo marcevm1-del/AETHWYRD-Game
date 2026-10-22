@@ -70,8 +70,42 @@
   },
   "requirements": {
    "type": "object",
+   "additionalProperties": false,
    "properties": {
-    "minRank": {
+    "minLevel": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 300
+    },
+    "partySize": {
+     "type": "string"
+    }
+   }
+  },
+  "prerequisites": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "quests": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "pattern": "^qst_[a-z0-9_]+$"
+     }
+    },
+    "flags": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     }
+    },
+    "act": {
+     "type": "integer",
+     "minimum": 0,
+     "maximum": 6
+    },
+    "rank": {
      "type": "string",
      "enum": [
       "F",
@@ -85,22 +119,14 @@
       "SSS",
       "EX"
      ]
-    },
-    "minLevel": {
-     "type": "integer",
-     "minimum": 1,
-     "maximum": 300
-    },
-    "prerequisites": {
-     "type": "array",
-     "items": {
-      "type": "string",
-      "pattern": "^qst_[a-z0-9_]+$"
-     }
-    },
-    "partySize": {
-     "type": "string"
     }
+   }
+  },
+  "setsFlags": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
    }
   },
   "objectives": {

@@ -86,10 +86,13 @@ I (Claude) can script steps 1–5 in Blender through the Blender connection once
 | `Data/Monsters/species.json` / `.csv` | 640 | Species: level, stats, attacks, AI pattern, rig/anim IDs, loot table, ring, 2–5 habitats, look, design recipe |
 | `Data/Monsters/population.json` / `.csv` | 6,714 | Population variants: region, tier, rank, level, size, ring, look delta, spawn time |
 | `Data/Monsters/attacks.json` | 84 | Shared attack library referenced by species |
-| `Data/Monsters/loot_tables.json` | 220 | Loot tables (family × rank) → `Data/Items/materials.json` |
+| `Data/Monsters/loot_tables.json` | 221 | Loot tables (family × rank) with decimal `chance` (0.001 = chase drop) → `Data/Items/materials.json` |
 | `08_Bestiary/bestiary_viewer.html` | — | **Filterable viewer** (search, family, rank, menace, element, ring, region). Run `npm run viewer`, open http://localhost:8137 |
 | `Tools/monster_gen/families.js` | 287 cores | **Edit here**, then `npm run build` (regenerates + validates) |
 | `08_Bestiary/bestiary_lore.md` | — | Hand-written flavor text per family |
+
+## Attack Variety (v0.11)
+Rig attack sets are shared: **132 species use the medium-biped trio Slash / Heavy Swing / Guard Counter.** To keep families distinct, every family now adds one **signature attack** (`FAMILY_SIGNATURE` in `Tools/monster_gen/generate.js`): goblins *Sand Toss*, kobolds *Trip-Wire Trap*, beasts *Rending Bite*, undead *Grave Grasp*, slimes *Acid Splash*, and so on for all 31 families. A test checks that every family on a shared rig has at least one attack no other family on that rig has. Next step (per species, later rings): unique boss and Tyrant movesets.
 
 ---
 # Part 2 — Rank, Menace & Bosses

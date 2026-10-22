@@ -8,7 +8,7 @@ module.exports = {
     behaviors: ['Passive', 'Territorial', 'Swarm'],
     trope: 'The cute first enemy (Dragon Quest) and the evolving hero (Tensura)',
     cores: [
-      'Blue Slime|F|1|Water|0.4|a teardrop body with a glossy highlight and two dot eyes',
+      'Blue Slime|F-|1|Water|0.4|a teardrop body with a glossy highlight and two dot eyes',
       'Green Slime|F|1|Nature|0.4|fallen leaves suspended inside its jelly',
       'Red Slime|E|2|Fire|0.5|a faint ember core pulsing like a heartbeat',
       'Poison Slime|E|3|Poison|0.6|purple bubbles that hiss when they pop',
@@ -32,7 +32,7 @@ module.exports = {
     behaviors: ['Pack', 'Ambush', 'Aggressive'],
     trope: 'Goblins as horror in numbers (Goblin Slayer); hobgoblin → champion → king evolution',
     cores: [
-      'Goblin|F|3|None|1.0|a grin of needle teeth under a stolen tin helmet',
+      'Goblin|F-|3|None|1.0|a grin of needle teeth under a stolen tin helmet',
       'Goblin Archer|F+|3|None|1.0|a crooked bow strung with gut and a quiver of bone-tipped arrows',
       'Goblin Trapper|E|3|None|1.0|snares and rusted bells hanging from its belt',
       'Goblin Shaman|E|3|Fire|1.0|a skull headdress and a staff hung with smoking charms',
@@ -70,7 +70,7 @@ module.exports = {
     behaviors: ['Pack', 'Territorial', 'Skittish'],
     trope: 'The horned rabbit "rookie killer" and wolf packs of every isekai starter forest',
     cores: [
-      'Horned Rabbit|F|2|None|0.4|a single spiral horn and oversized hind feet|quad_small',
+      'Horned Rabbit|F-|2|None|0.4|a single spiral horn and oversized hind feet|quad_small',
       'Forest Wolf|F+|2|None|1.2|a grey-green coat that blends with ferns',
       'Wild Boar|E|2|Earth|1.4|curved tusks and a ridge of bristles like iron wire',
       'Bandit Bear|E+|2|None|2.2|a dark mask-like band across its eyes',

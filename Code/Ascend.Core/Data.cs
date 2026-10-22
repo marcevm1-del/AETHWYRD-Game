@@ -73,6 +73,10 @@ namespace Ascend.Core
         public string BaseSpeciesId { get; set; }
         public string Rank { get; set; }
         public int Level { get; set; }
+        /// <summary>Spawn level spread [min, max].</summary>
+        public List<int> LevelRange { get; set; } = new List<int>();
+        /// <summary>Boss HP multiplier (1 for normal monsters; Tyrants 5, unique beings 6, EX 15).</summary>
+        public double BossHpMult { get; set; } = 1;
         public int Menace { get; set; }
         public string Element { get; set; }
         public string Weakness { get; set; }
@@ -93,6 +97,7 @@ namespace Ascend.Core
         public string Look { get; set; }
 
         public Rank ParsedRank => Ascend.Core.Rank.Parse(Rank);
+        public long EffectiveMaxHp => (long)Math.Round(Stats.Hp * Math.Max(1, BossHpMult));
         public Element ParsedElement => ParseElement(Element);
         public Element ParsedWeakness => ParseElement(Weakness);
 
@@ -114,7 +119,8 @@ namespace Ascend.Core
     public sealed class LootEntry
     {
         public string ItemId { get; set; }
-        public int Weight { get; set; }
+        /// <summary>Drop chance 0..1 (0.001 = a 0.1% chase drop).</summary>
+        public double Chance { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
     }
@@ -148,11 +154,23 @@ namespace Ascend.Core
         public CombatTuning Tuning { get; }
         public IReadOnlyDictionary<string, SiegeWaveData> SiegeWaves { get; }
         public WorldTuning World { get; }
+        public IReadOnlyDictionary<string, QuestData> Quests { get; }
+        public IReadOnlyDictionary<string, NpcData> Npcs { get; }
+        public IReadOnlyDictionary<string, ClassData> Classes { get; }
+        public IReadOnlyDictionary<string, StoryFlagData> StoryFlags { get; }
+        public ProgressionRules Progression { get; }
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
             IEnumerable<LootTableData> loot, IEnumerable<ItemData> items, CombatTuning tuning,
-            IEnumerable<SiegeWaveData> siegeWaves = null, WorldTuning world = null)
+            IEnumerable<SiegeWaveData> siegeWaves = null, WorldTuning world = null,
+            IEnumerable<QuestData> quests = null, IEnumerable<NpcData> npcs = null, IEnumerable<ClassData> classes = null,
+            IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null)
         {
+            Quests = Index(quests, q => q.Id, "quest");
+            Npcs = Index(npcs, n => n.Id, "npc");
+            Classes = Index(classes, c => c.Id, "class");
+            StoryFlags = Index(flags, x => x.Id, "story flag");
+            Progression = progression ?? new ProgressionRules();
             SiegeWaves = Index(siegeWaves, w => w.RegionId, "siege wave set");
             World = world ?? new WorldTuning();
             Regions = Index(regions, r => r.Id, "region");

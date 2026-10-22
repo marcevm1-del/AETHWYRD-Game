@@ -8,7 +8,6 @@
   "region": "reg_aldmere",
   "summary": "Horned rabbits ate a farmer's carrots. One of them is enormous.",
   "requirements": {
-   "minRank": "F",
    "minLevel": 1,
    "partySize": "1-2"
   },
@@ -26,6 +25,9 @@
    "items": [
     "itm_minor_hp_potion"
    ]
+  },
+  "prerequisites": {
+   "rank": "F"
   }
  },
  {
@@ -37,7 +39,6 @@
   "region": "reg_aldmere",
   "summary": "Blue slimes have moved into Millbrook's well. Gently remove them, or don't be gentle.",
   "requirements": {
-   "minRank": "F",
    "minLevel": 1
   },
   "objectives": [
@@ -55,6 +56,9 @@
    "gold": 40,
    "gp": 6,
    "xp": 90
+  },
+  "prerequisites": {
+   "rank": "F"
   }
  },
  {
@@ -66,11 +70,7 @@
   "region": "reg_whisperwood",
   "summary": "The F→E promotion trial: defeat the goblin chief leading organized raids from Hollowpine.",
   "requirements": {
-   "minRank": "F",
-   "minLevel": 12,
-   "prerequisites": [
-    "qst_gld_f_rabbit_season"
-   ]
+   "minLevel": 12
   },
   "objectives": [
    {
@@ -91,7 +91,18 @@
    "items": [
     "itm_grukk_cleaver"
    ]
-  }
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gld_f_rabbit_season"
+   ],
+   "rank": "F",
+   "act": 1
+  },
+  "setsFlags": [
+   "rank_e_reached",
+   "tyrant_slain_reg_whisperwood"
+  ]
  },
  {
   "id": "qst_gld_c_silver_wolf",
@@ -102,7 +113,6 @@
   "region": "reg_aldmere",
   "summary": "Livestock vanish under the full moon. Witnesses describe a wolf of silver light.",
   "requirements": {
-   "minRank": "D",
    "minLevel": 61,
    "partySize": "1-4"
   },
@@ -125,6 +135,9 @@
     "itm_silver_wolf_pelt",
     "itm_moonfang_dagger"
    ]
+  },
+  "prerequisites": {
+   "rank": "D"
   }
  },
  {
@@ -154,7 +167,13 @@
    "items": [
     "itm_minor_hp_potion"
    ]
-  }
+  },
+  "prerequisites": {
+   "act": 0
+  },
+  "setsFlags": [
+   "arrived_in_aetheria"
+  ]
  },
  {
   "id": "qst_main_wooden_card",
@@ -165,10 +184,7 @@
   "region": "reg_aldmere",
   "summary": "Register at the Guild. The appraisal crystal flickers strangely, and Mina covers for it.",
   "requirements": {
-   "minLevel": 1,
-   "prerequisites": [
-    "qst_main_status_granted"
-   ]
+   "minLevel": 1
   },
   "objectives": [
    {
@@ -186,7 +202,16 @@
     "itm_guild_card_f",
     "itm_rookie_pouch"
    ]
-  }
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_status_granted"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "guild_registered"
+  ]
  },
  {
   "id": "qst_main_bowl_of_stew",
@@ -196,11 +221,6 @@
   "giver": "npc_marta_gruel",
   "region": "reg_aldmere",
   "summary": "Marta feeds you on credit. Brother Caspian arrives with the orphans and offers you a blanket and a place to sleep.",
-  "requirements": {
-   "prerequisites": [
-    "qst_main_wooden_card"
-   ]
-  },
   "objectives": [
    {
     "kind": "talk",
@@ -213,7 +233,19 @@
   ],
   "rewards": {
    "xp": 40
-  }
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "met_brother_caspian"
+  ]
  },
  {
   "id": "qst_odd_minas_earring",
@@ -302,7 +334,10 @@
    "items": [
     "itm_hollis_practice_blade"
    ]
-  }
+  },
+  "setsFlags": [
+   "swordsman_class_trained"
+  ]
  },
  {
   "id": "qst_hidden_tavern_brawl",
@@ -415,7 +450,10 @@
   "rewards": {
    "xp": 500,
    "gp": 12
-  }
+  },
+  "setsFlags": [
+   "saw_nine_thrones_mural"
+  ]
  },
  {
   "id": "qst_rival_crimson_wolves",

@@ -6,19 +6,19 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -31,19 +31,19 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -56,19 +56,19 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -81,19 +81,19 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -106,19 +106,25 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -131,19 +137,25 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -156,19 +168,25 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -181,19 +199,25 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -206,25 +230,25 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -237,25 +261,25 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -268,25 +292,25 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -299,25 +323,25 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -330,25 +354,31 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -361,25 +391,31 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -392,25 +428,31 @@
   "entries": [
    {
     "itemId": "itm_mat_goblin_ear",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_crude_blade",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_stolen_trinket",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -423,25 +465,25 @@
   "entries": [
    {
     "itemId": "itm_mat_kobold_fang",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_scrap_metal",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_candle_stub",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -454,25 +496,25 @@
   "entries": [
    {
     "itemId": "itm_mat_kobold_fang",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_scrap_metal",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_candle_stub",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -485,25 +527,25 @@
   "entries": [
    {
     "itemId": "itm_mat_kobold_fang",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_scrap_metal",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_candle_stub",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -516,25 +558,25 @@
   "entries": [
    {
     "itemId": "itm_mat_kobold_fang",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_scrap_metal",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_candle_stub",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -547,25 +589,31 @@
   "entries": [
    {
     "itemId": "itm_mat_kobold_fang",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_scrap_metal",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_candle_stub",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -578,25 +626,25 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -609,25 +657,25 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -640,25 +688,25 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -671,25 +719,25 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -702,25 +750,31 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -733,25 +787,31 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -764,25 +824,31 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -795,25 +861,31 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -826,25 +898,31 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -857,19 +935,19 @@
   "entries": [
    {
     "itemId": "itm_mat_cursed_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silver_bane_claw",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -882,19 +960,19 @@
   "entries": [
    {
     "itemId": "itm_mat_cursed_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silver_bane_claw",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -907,19 +985,25 @@
   "entries": [
    {
     "itemId": "itm_mat_cursed_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silver_bane_claw",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -932,19 +1016,25 @@
   "entries": [
    {
     "itemId": "itm_mat_cursed_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silver_bane_claw",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -957,25 +1047,25 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -988,25 +1078,25 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1019,25 +1109,25 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1050,25 +1140,25 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1081,25 +1171,31 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1112,25 +1208,31 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1143,25 +1245,31 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1174,25 +1282,31 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1205,19 +1319,19 @@
   "entries": [
    {
     "itemId": "itm_mat_killer_mandible",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_stinger",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1230,19 +1344,19 @@
   "entries": [
    {
     "itemId": "itm_mat_killer_mandible",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_stinger",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1255,19 +1369,19 @@
   "entries": [
    {
     "itemId": "itm_mat_killer_mandible",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_stinger",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1280,19 +1394,25 @@
   "entries": [
    {
     "itemId": "itm_mat_killer_mandible",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_stinger",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1305,25 +1425,25 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1336,25 +1456,25 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1367,25 +1487,25 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1398,25 +1518,25 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1429,25 +1549,31 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1460,25 +1586,31 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1491,25 +1623,31 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1522,25 +1660,31 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1553,25 +1697,31 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1584,19 +1734,19 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1609,19 +1759,19 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1634,19 +1784,19 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1659,19 +1809,25 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1684,19 +1840,25 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1709,19 +1871,25 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1734,25 +1902,25 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1765,25 +1933,25 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1796,25 +1964,25 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -1827,25 +1995,31 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1858,25 +2032,31 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1889,25 +2069,31 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1920,25 +2106,31 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1951,25 +2143,31 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -1982,19 +2180,19 @@
   "entries": [
    {
     "itemId": "itm_mat_horn",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_labyrinth_bronze",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2007,19 +2205,19 @@
   "entries": [
    {
     "itemId": "itm_mat_horn",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_labyrinth_bronze",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2032,19 +2230,25 @@
   "entries": [
    {
     "itemId": "itm_mat_horn",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_labyrinth_bronze",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2057,19 +2261,25 @@
   "entries": [
    {
     "itemId": "itm_mat_horn",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_labyrinth_bronze",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2082,25 +2292,25 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2113,25 +2323,25 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2144,25 +2354,25 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2175,25 +2385,25 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2206,25 +2416,31 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2237,25 +2453,31 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2268,25 +2490,25 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2299,25 +2521,25 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2330,25 +2552,25 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2361,25 +2583,31 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2392,25 +2620,31 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2423,25 +2657,31 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2454,25 +2694,31 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2485,25 +2731,31 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2516,25 +2768,25 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2547,25 +2799,25 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2578,25 +2830,25 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2609,25 +2861,25 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2640,25 +2892,31 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2671,25 +2929,31 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2702,25 +2966,31 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2733,25 +3003,31 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2764,25 +3040,31 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2795,19 +3077,19 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2820,19 +3102,19 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2845,19 +3127,19 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -2870,19 +3152,25 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2895,19 +3183,25 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2920,19 +3214,25 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2945,19 +3245,25 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -2970,25 +3276,25 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3001,25 +3307,25 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3032,25 +3338,25 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3063,25 +3369,25 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3094,25 +3400,31 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3125,25 +3437,31 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3156,25 +3474,31 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3187,25 +3511,31 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3218,25 +3548,31 @@
   "entries": [
    {
     "itemId": "itm_mat_sap",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_seed",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_spore_cap",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3249,25 +3585,25 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3280,25 +3616,25 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3311,25 +3647,25 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3342,25 +3678,31 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3373,25 +3715,31 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3404,25 +3752,31 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3435,25 +3789,31 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3466,25 +3826,31 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3497,25 +3863,25 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3528,25 +3894,25 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3559,25 +3925,25 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3590,25 +3956,25 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3621,25 +3987,31 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3652,25 +4024,31 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3683,25 +4061,31 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3714,25 +4098,31 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3745,25 +4135,31 @@
   "entries": [
    {
     "itemId": "itm_mat_fish_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_ink_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3776,25 +4172,25 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3807,25 +4203,25 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3838,25 +4234,25 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3869,25 +4265,25 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -3900,25 +4296,31 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3931,25 +4333,31 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3962,25 +4370,31 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -3993,25 +4407,31 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4024,25 +4444,31 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4055,19 +4481,25 @@
   "entries": [
    {
     "itemId": "itm_mat_chimera_heart",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_mythic_horn",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4080,19 +4512,25 @@
   "entries": [
    {
     "itemId": "itm_mat_chimera_heart",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_mythic_horn",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4105,19 +4543,25 @@
   "entries": [
    {
     "itemId": "itm_mat_chimera_heart",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_mythic_horn",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4130,19 +4574,25 @@
   "entries": [
    {
     "itemId": "itm_mat_chimera_heart",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_mythic_horn",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4155,19 +4605,19 @@
   "entries": [
    {
     "itemId": "itm_mat_serpent_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_temple_gold",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4180,19 +4630,25 @@
   "entries": [
    {
     "itemId": "itm_mat_serpent_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_temple_gold",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4205,19 +4661,25 @@
   "entries": [
    {
     "itemId": "itm_mat_serpent_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_temple_gold",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4230,19 +4692,19 @@
   "entries": [
    {
     "itemId": "itm_mat_horsehair",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_painted_barding",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4255,19 +4717,25 @@
   "entries": [
    {
     "itemId": "itm_mat_horsehair",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_painted_barding",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4280,19 +4748,25 @@
   "entries": [
    {
     "itemId": "itm_mat_horsehair",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_painted_barding",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4305,19 +4779,19 @@
   "entries": [
    {
     "itemId": "itm_mat_rider_s_lantern",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_cursed_iron",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4330,19 +4804,25 @@
   "entries": [
    {
     "itemId": "itm_mat_rider_s_lantern",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_cursed_iron",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4355,19 +4835,25 @@
   "entries": [
    {
     "itemId": "itm_mat_rider_s_lantern",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_cursed_iron",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4380,19 +4866,19 @@
   "entries": [
    {
     "itemId": "itm_mat_stolen_bolt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gremlin_ear",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4405,19 +4891,19 @@
   "entries": [
    {
     "itemId": "itm_mat_stolen_bolt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gremlin_ear",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4430,19 +4916,19 @@
   "entries": [
    {
     "itemId": "itm_mat_stolen_bolt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gremlin_ear",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4455,19 +4941,19 @@
   "entries": [
    {
     "itemId": "itm_mat_unreal_fragment",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_eye_of_nothing",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4480,19 +4966,19 @@
   "entries": [
    {
     "itemId": "itm_mat_unreal_fragment",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_eye_of_nothing",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4505,19 +4991,19 @@
   "entries": [
    {
     "itemId": "itm_mat_unreal_fragment",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_eye_of_nothing",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4530,19 +5016,25 @@
   "entries": [
    {
     "itemId": "itm_mat_unreal_fragment",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_eye_of_nothing",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4555,19 +5047,25 @@
   "entries": [
    {
     "itemId": "itm_mat_unreal_fragment",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_eye_of_nothing",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4580,19 +5078,19 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4605,19 +5103,19 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4630,19 +5128,19 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4655,19 +5153,19 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4680,19 +5178,25 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4705,19 +5209,25 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4730,19 +5240,25 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_sss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4755,19 +5271,25 @@
   "entries": [
    {
     "itemId": "itm_mat_spirit_paper",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fox_fire",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4780,13 +5302,13 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4799,13 +5321,13 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4818,13 +5340,13 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4837,13 +5359,13 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4856,13 +5378,19 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4875,13 +5403,19 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4894,19 +5428,19 @@
   "entries": [
    {
     "itemId": "itm_mat_vesper_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_captured_soul_light",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -4919,19 +5453,25 @@
   "entries": [
    {
     "itemId": "itm_mat_vesper_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_captured_soul_light",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4944,19 +5484,25 @@
   "entries": [
    {
     "itemId": "itm_mat_vesper_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_captured_soul_light",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4969,19 +5515,25 @@
   "entries": [
    {
     "itemId": "itm_mat_vesper_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_captured_soul_light",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -4994,19 +5546,19 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5019,19 +5571,19 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5044,19 +5596,19 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5069,19 +5621,25 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5094,19 +5652,25 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5119,25 +5683,25 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5150,25 +5714,25 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5181,25 +5745,25 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5212,25 +5776,31 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5243,25 +5813,31 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5274,25 +5850,31 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5305,25 +5887,31 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5336,19 +5924,19 @@
   "entries": [
    {
     "itemId": "itm_mat_soft_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_shed_scale",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_f",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5361,19 +5949,19 @@
   "entries": [
    {
     "itemId": "itm_mat_soft_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_shed_scale",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5386,19 +5974,25 @@
   "entries": [
    {
     "itemId": "itm_mat_soft_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_shed_scale",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5411,25 +6005,31 @@
   "entries": [
    {
     "itemId": "itm_mat_kobold_fang",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_scrap_metal",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_candle_stub",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5442,25 +6042,31 @@
   "entries": [
    {
     "itemId": "itm_mat_pelt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_fang",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_prime_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5473,25 +6079,31 @@
   "entries": [
    {
     "itemId": "itm_mat_carapace_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_silk",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_venom_sac",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5504,19 +6116,25 @@
   "entries": [
    {
     "itemId": "itm_mat_killer_mandible",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_stinger",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_b",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5529,19 +6147,25 @@
   "entries": [
    {
     "itemId": "itm_mat_shade_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_night_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5554,25 +6178,31 @@
   "entries": [
    {
     "itemId": "itm_mat_tusk",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_giant_s_hide",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_crude_iron",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5585,19 +6215,25 @@
   "entries": [
    {
     "itemId": "itm_mat_horn",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_labyrinth_bronze",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5610,25 +6246,31 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5641,25 +6283,31 @@
   "entries": [
    {
     "itemId": "itm_mat_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_reptile_eye",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_tail_meat",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5672,25 +6320,25 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5703,25 +6351,31 @@
   "entries": [
    {
     "itemId": "itm_mat_dragon_scale",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_dragon_blood",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_dragon_heart",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5734,25 +6388,31 @@
   "entries": [
    {
     "itemId": "itm_mat_golem_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_rune_plate",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_gear",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5765,19 +6425,19 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_c",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5790,19 +6450,25 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5815,19 +6481,25 @@
   "entries": [
    {
     "itemId": "itm_mat_elemental_essence",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_spirit_mote",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5840,25 +6512,31 @@
   "entries": [
    {
     "itemId": "itm_mat_demon_core",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_horn_shard",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_brimstone",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ex",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5871,25 +6549,31 @@
   "entries": [
    {
     "itemId": "itm_mat_feather",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_talon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_egg",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5902,19 +6586,25 @@
   "entries": [
    {
     "itemId": "itm_mat_chimera_heart",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_mythic_horn",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5927,19 +6617,25 @@
   "entries": [
    {
     "itemId": "itm_mat_rider_s_lantern",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_cursed_iron",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5952,19 +6648,19 @@
   "entries": [
    {
     "itemId": "itm_mat_stolen_bolt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gremlin_ear",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_d",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -5977,13 +6673,19 @@
   "entries": [
    {
     "itemId": "itm_mat_dungeon_core_shard",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -5996,19 +6698,25 @@
   "entries": [
    {
     "itemId": "itm_mat_vesper_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_captured_soul_light",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6021,19 +6729,19 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_e",
-    "weight": 100,
+    "chance": 1,
     "min": 1,
     "max": 1
    }
@@ -6046,19 +6754,25 @@
   "entries": [
    {
     "itemId": "itm_mat_desert_glass",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_sand_pearl",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6071,25 +6785,31 @@
   "entries": [
    {
     "itemId": "itm_mat_coin_purse",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_weapon",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_bounty_proof",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6102,19 +6822,25 @@
   "entries": [
    {
     "itemId": "itm_mat_soft_fur",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_shed_scale",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6127,19 +6853,25 @@
   "entries": [
    {
     "itemId": "itm_mat_slime_jelly",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gel_core",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6152,19 +6884,25 @@
   "entries": [
    {
     "itemId": "itm_mat_killer_mandible",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_stinger",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_s",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6177,25 +6915,31 @@
   "entries": [
    {
     "itemId": "itm_mat_bone_dust",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_grave_cloth",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_mat_soul_ember",
-    "weight": 15,
+    "chance": 0.15,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_ss",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }
@@ -6208,19 +6952,25 @@
   "entries": [
    {
     "itemId": "itm_mat_stolen_bolt",
-    "weight": 60,
+    "chance": 0.6,
     "min": 1,
     "max": 3
    },
    {
     "itemId": "itm_mat_gremlin_ear",
-    "weight": 30,
+    "chance": 0.3,
     "min": 1,
     "max": 1
    },
    {
     "itemId": "itm_core_a",
-    "weight": 100,
+    "chance": 1,
+    "min": 1,
+    "max": 1
+   },
+   {
+    "itemId": "itm_mat_relic_shard",
+    "chance": 0.001,
     "min": 1,
     "max": 1
    }

@@ -27,6 +27,15 @@
   "element": "None"
  },
  {
+  "id": "atk_acid_splash",
+  "name": "Acid Splash",
+  "kind": "ranged",
+  "power": 1.1,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
   "id": "atk_tide_lash",
   "name": "Tide Lash",
   "kind": "magic",
@@ -135,6 +144,15 @@
   "element": "None"
  },
  {
+  "id": "atk_sand_toss",
+  "name": "Sand Toss",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 12,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
   "id": "atk_slash",
   "name": "Slash",
   "kind": "melee",
@@ -189,6 +207,15 @@
   "element": "None"
  },
  {
+  "id": "atk_trip_wire_trap",
+  "name": "Trip-Wire Trap",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 14,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
   "id": "atk_shadow_grasp",
   "name": "Shadow Grasp",
   "kind": "magic",
@@ -225,6 +252,15 @@
   "element": "None"
  },
  {
+  "id": "atk_rending_bite",
+  "name": "Rending Bite",
+  "kind": "melee",
+  "power": 1.3,
+  "cooldownSec": 5,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
   "id": "atk_maul",
   "name": "Maul",
   "kind": "melee",
@@ -248,6 +284,15 @@
   "kind": "buff",
   "power": 0,
   "cooldownSec": 18,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_moon_frenzy",
+  "name": "Moon Frenzy",
+  "kind": "buff",
+  "power": 0,
+  "cooldownSec": 20,
   "telegraph": "none",
   "element": "None"
  },
@@ -284,6 +329,15 @@
   "kind": "ranged",
   "power": 1,
   "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_silk_snare",
+  "name": "Silk Snare",
+  "kind": "ranged",
+  "power": 0.4,
+  "cooldownSec": 10,
   "telegraph": "blue",
   "element": "None"
  },
@@ -369,6 +423,15 @@
   "element": "None"
  },
  {
+  "id": "atk_swarm_bite",
+  "name": "Swarm Bite",
+  "kind": "aoe",
+  "power": 0.9,
+  "cooldownSec": 6,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
   "id": "atk_nip",
   "name": "Nip",
   "kind": "melee",
@@ -450,6 +513,15 @@
   "element": "None"
  },
  {
+  "id": "atk_grave_grasp",
+  "name": "Grave Grasp",
+  "kind": "grab",
+  "power": 1.2,
+  "cooldownSec": 10,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
   "id": "atk_chill_touch",
   "name": "Chill Touch",
   "kind": "melee",
@@ -513,6 +585,15 @@
   "element": "None"
  },
  {
+  "id": "atk_shade_step_strike",
+  "name": "Shade Step Strike",
+  "kind": "dash",
+  "power": 1.4,
+  "cooldownSec": 7,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
   "id": "atk_breach_lunge",
   "name": "Breach Lunge",
   "kind": "dash",
@@ -527,6 +608,51 @@
   "kind": "aoe",
   "power": 1.3,
   "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_war_cry",
+  "name": "War Cry",
+  "kind": "buff",
+  "power": 0,
+  "cooldownSec": 18,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_horn_charge",
+  "name": "Horn Charge",
+  "kind": "dash",
+  "power": 1.8,
+  "cooldownSec": 9,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_tail_lash",
+  "name": "Tail Lash",
+  "kind": "aoe",
+  "power": 1.2,
+  "cooldownSec": 7,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_wing_buffet",
+  "name": "Wing Buffet",
+  "kind": "aoe",
+  "power": 1.1,
+  "cooldownSec": 9,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_rune_pulse",
+  "name": "Rune Pulse",
+  "kind": "magic",
+  "power": 1.3,
+  "cooldownSec": 10,
   "telegraph": "red",
   "element": "None"
  },
@@ -585,6 +711,15 @@
   "element": "None"
  },
  {
+  "id": "atk_elemental_burst",
+  "name": "Elemental Burst",
+  "kind": "magic",
+  "power": 1.4,
+  "cooldownSec": 9,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
   "id": "atk_branch_sweep",
   "name": "Branch Sweep",
   "kind": "melee",
@@ -612,6 +747,15 @@
   "element": "None"
  },
  {
+  "id": "atk_root_bind",
+  "name": "Root Bind",
+  "kind": "grab",
+  "power": 1,
+  "cooldownSec": 11,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
   "id": "atk_vine_lash",
   "name": "Vine Lash",
   "kind": "melee",
@@ -636,6 +780,24 @@
   "power": 1,
   "cooldownSec": 10,
   "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_hellfire_brand",
+  "name": "Hellfire Brand",
+  "kind": "magic",
+  "power": 1.4,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_tidal_drag",
+  "name": "Tidal Drag",
+  "kind": "grab",
+  "power": 1.3,
+  "cooldownSec": 11,
+  "telegraph": "gold",
   "element": "None"
  },
  {
@@ -711,6 +873,33 @@
   "element": "None"
  },
  {
+  "id": "atk_feather_volley",
+  "name": "Feather Volley",
+  "kind": "ranged",
+  "power": 1,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_many_headed_bite",
+  "name": "Many-Headed Bite",
+  "kind": "melee",
+  "power": 1.5,
+  "cooldownSec": 7,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_venom_coil",
+  "name": "Venom Coil",
+  "kind": "grab",
+  "power": 1.3,
+  "cooldownSec": 11,
+  "telegraph": "gold",
+  "element": "None"
+ },
+ {
   "id": "atk_spear_thrust",
   "name": "Spear Thrust",
   "kind": "melee",
@@ -738,6 +927,15 @@
   "element": "None"
  },
  {
+  "id": "atk_lance_charge",
+  "name": "Lance Charge",
+  "kind": "dash",
+  "power": 1.7,
+  "cooldownSec": 8,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
   "id": "atk_sweep",
   "name": "Sweep",
   "kind": "melee",
@@ -753,6 +951,87 @@
   "power": 1.4,
   "cooldownSec": 10,
   "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_lantern_hurl",
+  "name": "Lantern Hurl",
+  "kind": "ranged",
+  "power": 1.3,
+  "cooldownSec": 8,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_wrench_sabotage",
+  "name": "Wrench Sabotage",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 14,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_mimic_lure",
+  "name": "Mimic Lure",
+  "kind": "debuff",
+  "power": 0,
+  "cooldownSec": 16,
+  "telegraph": "none",
+  "element": "None"
+ },
+ {
+  "id": "atk_spirit_flame",
+  "name": "Spirit Flame",
+  "kind": "magic",
+  "power": 1.2,
+  "cooldownSec": 8,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_wall_ambush",
+  "name": "Wall Ambush",
+  "kind": "dash",
+  "power": 1.4,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_moonglass_shard",
+  "name": "Moonglass Shard",
+  "kind": "ranged",
+  "power": 1.3,
+  "cooldownSec": 6,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_sand_burrow",
+  "name": "Sand Burrow",
+  "kind": "dash",
+  "power": 1.5,
+  "cooldownSec": 10,
+  "telegraph": "red",
+  "element": "None"
+ },
+ {
+  "id": "atk_feint_strike",
+  "name": "Feint Strike",
+  "kind": "counter",
+  "power": 1.2,
+  "cooldownSec": 8,
+  "telegraph": "blue",
+  "element": "None"
+ },
+ {
+  "id": "atk_playful_nudge",
+  "name": "Playful Nudge",
+  "kind": "melee",
+  "power": 0.5,
+  "cooldownSec": 6,
+  "telegraph": "none",
   "element": "None"
  }
 ]

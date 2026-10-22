@@ -11,19 +11,20 @@ namespace Ascend.Core
     }
 
     /// <summary>
-    /// Rolls a loot table. Each entry is rolled independently with chance = weight / 100 (capped at 1),
-    /// so a weight-100 entry (monster cores) always drops. Luck adds a flat bonus to each chance.
+    /// Rolls a loot table. Each entry is rolled independently with its decimal chance (0.001 = 0.1% chase drop).
+    /// Luck is a multiplier on every chance (1 = normal, 1.5 = +50%), capped at 100%.
     /// </summary>
     public static class LootRoller
     {
-        public static List<LootDrop> Roll(LootTableData table, IRandom rng, double luckBonus = 0)
+        public static List<LootDrop> Roll(LootTableData table, IRandom rng, double luckMultiplier = 1.0)
         {
             if (table == null) throw new ArgumentNullException(nameof(table));
             if (rng == null) throw new ArgumentNullException(nameof(rng));
+            double luck = Math.Max(0, luckMultiplier);
             var drops = new List<LootDrop>();
             foreach (var e in table.Entries)
             {
-                double chance = Math.Min(1.0, e.Weight / 100.0 + luckBonus);
+                double chance = Math.Min(1.0, e.Chance * luck);
                 if (rng.NextDouble() >= chance) continue;
                 int min = Math.Max(0, e.Min), max = Math.Max(min, e.Max);
                 int count = min + (int)Math.Floor(rng.NextDouble() * (max - min + 1));
@@ -33,20 +34,43 @@ namespace Ascend.Core
         }
     }
 
-    /// <summary>Poise / stagger meter for one enemy (combat.md §4.3).</summary>
+    /// <summary>Poise / stagger meter for one enemy (combat.md §4.3). Regenerates after a delay without hits.</summary>
     public sealed class PoiseMeter
     {
+        readonly double _regenDelay, _regenFractionPerSec;
+        double _sinceHit;
         public int Max { get; }
         public double Current { get; private set; }
-        public PoiseMeter(int max) { if (max <= 0) throw new ArgumentOutOfRangeException(nameof(max)); Max = max; Current = max; }
+
+        public PoiseMeter(int max, double regenDelaySec = 0, double regenFractionPerSec = 0)
+        {
+            if (max <= 0) throw new ArgumentOutOfRangeException(nameof(max));
+            Max = max; Current = max;
+            _regenDelay = Math.Max(0, regenDelaySec);
+            _regenFractionPerSec = Math.Max(0, regenFractionPerSec);
+        }
+
+        public static PoiseMeter For(string rig, CombatTuning t) =>
+            new PoiseMeter(t.Poise.TryGetValue(rig.Replace("rig_", ""), out var p) ? p : 50, t.PoiseRegen.DelaySec, t.PoiseRegen.FractionPerSec);
 
         /// <summary>Applies poise damage; returns true if this hit caused a stagger (poise then refills).</summary>
         public bool Hit(double poiseDamage)
         {
+            _sinceHit = 0;
             Current -= Math.Max(0, poiseDamage);
             if (Current > 0) return false;
             Current = Max;
             return true;
+        }
+
+        /// <summary>Regenerates poise once no hit has landed for the regen delay.</summary>
+        public void Tick(double dt)
+        {
+            if (dt <= 0) return;
+            _sinceHit += dt;
+            if (_sinceHit <= _regenDelay || _regenFractionPerSec <= 0) return;
+            double regenTime = Math.Min(dt, _sinceHit - _regenDelay);
+            Current = Math.Min(Max, Current + Max * _regenFractionPerSec * regenTime);
         }
     }
 

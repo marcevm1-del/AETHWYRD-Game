@@ -102,4 +102,49 @@ namespace Ascend.Core
             return reaction;
         }
     }
+
+    /// <summary>
+    /// A target's elemental state including reaction side effects (combat.md §7):
+    /// Freeze holds the target for freezeDurationSec and the next heavy hit Shatters it for shatterBonus;
+    /// Storm Prison stuns for stormPrisonStunSec.
+    /// </summary>
+    public sealed class ReactionState
+    {
+        readonly ReactionTuning _t;
+        public AuraState Aura { get; }
+        public double FrozenUntil { get; private set; } = double.NegativeInfinity;
+        public double StunnedUntil { get; private set; } = double.NegativeInfinity;
+
+        public ReactionState(ReactionTuning tuning)
+        {
+            _t = tuning ?? throw new ArgumentNullException(nameof(tuning));
+            Aura = new AuraState(_t.AuraDurationSec);
+        }
+
+        public bool IsFrozen(double now) => now < FrozenUntil;
+        public bool IsStunned(double now) => now < StunnedUntil;
+        /// <summary>Frozen and stunned targets can't act.</summary>
+        public bool CanAct(double now) => !IsFrozen(now) && !IsStunned(now);
+
+        public Reaction ApplyElement(Element element, double now)
+        {
+            var r = Aura.Apply(element, now);
+            if (r == Reaction.Freeze) FrozenUntil = now + _t.FreezeDurationSec;
+            else if (r == Reaction.StormPrison) StunnedUntil = Math.Max(StunnedUntil, now + _t.StormPrisonStunSec);
+            return r;
+        }
+
+        /// <summary>
+        /// Damage multiplier for a hit landing now. A heavy (or stronger) hit on a frozen target shatters it:
+        /// bonus damage, and the freeze ends.
+        /// </summary>
+        public double HitMultiplier(HitWeight weight, double now)
+        {
+            if (!IsFrozen(now)) return 1.0;
+            bool heavy = weight == HitWeight.Heavy || weight == HitWeight.Ultimate || weight == HitWeight.Launch;
+            if (!heavy) return 1.0;
+            FrozenUntil = now; // shattered
+            return _t.ShatterBonus;
+        }
+    }
 }

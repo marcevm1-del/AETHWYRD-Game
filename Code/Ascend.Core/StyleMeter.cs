@@ -58,7 +58,7 @@ namespace Ascend.Core
             _recentMoves.Enqueue(moveId);
             while (_recentMoves.Count > Math.Max(1, _t.VarietyWindowHits)) _recentMoves.Dequeue();
 
-            Points += pts;
+            Add(pts);
             return pts;
         }
 
@@ -66,7 +66,7 @@ namespace Ascend.Core
         {
             _idle = 0;
             double pts = _t.Bonus.TryGetValue(Key(e), out var p) ? p : 0;
-            Points += pts;
+            Add(pts);
             return pts;
         }
 
@@ -89,6 +89,8 @@ namespace Ascend.Core
                 Points = Math.Max(0, Points - _t.DecayPerSec * decayTime);
             }
         }
+
+        void Add(double pts) => Points = _t.PointsCap > 0 ? Math.Min(_t.PointsCap, Points + pts) : Points + pts;
 
         public void Reset()
         {

@@ -38,7 +38,7 @@
     "additionalProperties": false,
     "required": [
      "itemId",
-     "weight",
+     "chance",
      "min",
      "max"
     ],
@@ -47,9 +47,10 @@
       "type": "string",
       "pattern": "^itm_[a-z0-9_]+$"
      },
-     "weight": {
-      "type": "integer",
-      "minimum": 1
+     "chance": {
+      "type": "number",
+      "minimum": 0.000001,
+      "maximum": 1
      },
      "min": {
       "type": "integer",

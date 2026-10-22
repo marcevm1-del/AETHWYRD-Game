@@ -1,0 +1,25 @@
+{
+ "version": 1,
+ "notes": "Player progression rules. Shared by Code/Ascend.Core (PlayerStats, XpCurve) and the monster generator (monster XP), so both sides always agree.",
+ "baseStat": 10,
+ "freePointsPerLevel": 5,
+ "derived": {
+  "atk":  { "flat": 10, "str": 2.0, "dex": 0.5 },
+  "matk": { "flat": 10, "int": 2.0, "wis": 0.5 },
+  "def":  { "flat": 5,  "vit": 1.2 },
+  "mdef": { "flat": 5,  "wis": 1.2, "int": 0.3 },
+  "hp":   { "flat": 60, "vit": 8.0, "perLevel": 6 },
+  "mp":   { "flat": 30, "int": 4.0, "wis": 2.0 },
+  "sp":   { "flat": 80, "agi": 1.0, "vit": 0.5 },
+  "spd":  { "flat": 100, "agi": 0.1, "max": 200 },
+  "critChance": { "flat": 0.05, "dex": 0.001, "max": 0.6 }
+ },
+ "xp": {
+  "monsterBase": 8,
+  "monsterExponent": 1.6,
+  "monsterScale": 3,
+  "uniqueMultiplier": 20,
+  "killsPerLevelBase": 10,
+  "killsPerLevelGrowth": 0.25
+ }
+}

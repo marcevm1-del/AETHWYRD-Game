@@ -17,6 +17,38 @@
     "npcId": "npc_nobody",
     "kind": "sister"
    }
+  ],
+  "states": [
+   {
+    "flag": "act3_nocturne_replaces_mina",
+    "name": "Mina Feathersby",
+    "role": "Guild receptionist (Lady Nocturne in disguise)",
+    "note": "Left-handed, forgets inside jokes, too composed; Whiskers hisses at her. Alternate rank-up lines."
+   },
+   {
+    "flag": "nocturne_unmasked",
+    "name": "Mina Feathersby",
+    "role": "Guild receptionist",
+    "note": "The real Mina, back at the counter; reunion scene plays once."
+   }
+  ],
+  "schedule": [
+   {
+    "part": "morning",
+    "place": "Guild Square: The Oaken Card counter"
+   },
+   {
+    "part": "day",
+    "place": "Guild Square: The Oaken Card counter"
+   },
+   {
+    "part": "dusk",
+    "place": "The Sleeping Griffon"
+   },
+   {
+    "part": "night",
+    "place": "Home above the guild hall"
+   }
   ]
  },
  {
@@ -63,7 +95,25 @@
   "backstory": "A one-armed former B-Rank who teaches swordsmanship with a broomstick and once trained a Blade Master.",
   "faction": "Adventurers' Guild",
   "romanceable": false,
-  "canDie": true
+  "canDie": true,
+  "schedule": [
+   {
+    "part": "morning",
+    "place": "Hollis's Yard"
+   },
+   {
+    "part": "day",
+    "place": "Hollis's Yard"
+   },
+   {
+    "part": "dusk",
+    "place": "The Sleeping Griffon"
+   },
+   {
+    "part": "night",
+    "place": "Hollis's shack"
+   }
+  ]
  },
  {
   "id": "npc_brother_caspian",
@@ -77,7 +127,42 @@
   "secret": "Host body of Malgareth Vey, the Red Prophet.",
   "faction": "Red Moon Cult",
   "romanceable": false,
-  "canDie": true
+  "canDie": true,
+  "states": [
+   {
+    "flag": "caspian_unmasked",
+    "name": "Malgareth Vey (in Caspian's body)",
+    "role": "The Red Prophet",
+    "settlement": "Vesper",
+    "note": "Removes the blindfold on Lantern Night; flees into Vesper after his defeat."
+   }
+  ],
+  "schedule": [
+   {
+    "part": "morning",
+    "place": "Temple Hill: Orphanage of the Small Lantern"
+   },
+   {
+    "part": "day",
+    "place": "Market Row (with the orphans)",
+    "days": [
+     "Solenday",
+     "Maelsday",
+     "Thorsday",
+     "Sylvasday",
+     "Kaelsday",
+     "Vexday"
+    ]
+   },
+   {
+    "part": "dusk",
+    "place": "Temple Hill: Morrowyn's shrine"
+   },
+   {
+    "part": "night",
+    "place": "Temple Hill: Orphanage of the Small Lantern"
+   }
+  ]
  },
  {
   "id": "npc_lyra_brightwood",
@@ -159,6 +244,24 @@
    {
     "npcId": "npc_teo_gruel",
     "kind": "son"
+   }
+  ],
+  "schedule": [
+   {
+    "part": "morning",
+    "place": "The Sleeping Griffon kitchen"
+   },
+   {
+    "part": "day",
+    "place": "Market Row"
+   },
+   {
+    "part": "dusk",
+    "place": "The Sleeping Griffon bar"
+   },
+   {
+    "part": "night",
+    "place": "The Sleeping Griffon bar"
    }
   ]
  },
@@ -305,6 +408,24 @@
     "npcId": "npc_bertrand_pike",
     "kind": "reports to"
    }
+  ],
+  "schedule": [
+   {
+    "part": "morning",
+    "place": "North Gate"
+   },
+   {
+    "part": "day",
+    "place": "Guard barracks"
+   },
+   {
+    "part": "dusk",
+    "place": "North Gate"
+   },
+   {
+    "part": "night",
+    "place": "Town walls"
+   }
   ]
  },
  {
@@ -347,6 +468,24 @@
    {
     "npcId": "npc_brother_caspian",
     "kind": "friend"
+   }
+  ],
+  "schedule": [
+   {
+    "part": "morning",
+    "place": "Hugo's Bakery"
+   },
+   {
+    "part": "day",
+    "place": "Temple Hill: Orphanage (bread delivery)"
+   },
+   {
+    "part": "dusk",
+    "place": "Hugo's Bakery"
+   },
+   {
+    "part": "night",
+    "place": "Hugo's Bakery (asleep by 9)"
    }
   ]
  },

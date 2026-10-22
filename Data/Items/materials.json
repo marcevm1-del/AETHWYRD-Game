@@ -49,6 +49,13 @@
   "value": 105
  },
  {
+  "id": "itm_mat_relic_shard",
+  "name": "Relic Shard",
+  "category": "material",
+  "rank": "B",
+  "value": 18
+ },
+ {
   "id": "itm_core_s",
   "name": "S-Rank Monster Core",
   "category": "core",

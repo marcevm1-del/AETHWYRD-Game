@@ -2,6 +2,8 @@ using System.Reflection;
 using System.Text.Json;
 using Ascend.Core;
 
+BalanceReport.PrintIfAsked();
+
 // Minimal test harness: every public static void method in a class marked [Tests] is a test.
 var failures = new List<string>();
 int passed = 0;
@@ -58,7 +60,12 @@ static class Repo
         Load<List<ItemData>>("Data/Items/materials.json").Concat(Load<List<ItemData>>("Data/Items/items.json")),
         Load<CombatTuning>("Data/Combat/combat_tuning.json"),
         Load<List<SiegeWaveData>>("Data/World/siege_waves.json"),
-        Load<WorldTuning>("Data/World/world_tuning.json"));
+        Load<WorldTuning>("Data/World/world_tuning.json"),
+        Load<List<QuestData>>("Data/Quests/quests.json"),
+        Load<List<NpcData>>("Data/NPCs/npcs.json"),
+        Load<List<ClassData>>("Data/Classes/classes.json"),
+        Load<List<StoryFlagData>>("Data/Quests/story_flags.json"),
+        Load<ProgressionRules>("Data/Classes/progression.json"));
 }
 
 [Tests]
@@ -187,16 +194,16 @@ static class LootAndCombatTests
 {
     public static void LootWeights()
     {
-        var t = new LootTableData { Id = "loot_t", Entries = { new LootEntry { ItemId = "itm_a", Weight = 100, Min = 1, Max = 1 }, new LootEntry { ItemId = "itm_b", Weight = 1, Min = 1, Max = 3 } } };
+        var t = new LootTableData { Id = "loot_t", Entries = { new LootEntry { ItemId = "itm_a", Chance = 1.0, Min = 1, Max = 1 }, new LootEntry { ItemId = "itm_b", Chance = 0.01, Min = 1, Max = 3 } } };
         var rng = new SystemRandom(7);
         int b = 0;
         for (int i = 0; i < 2000; i++)
         {
             var d = LootRoller.Roll(t, rng);
-            Assert.True(d.Any(x => x.ItemId == "itm_a"), "weight 100 always drops");
+            Assert.True(d.Any(x => x.ItemId == "itm_a"), "chance 1.0 always drops");
             foreach (var x in d.Where(x => x.ItemId == "itm_b")) { b++; Assert.True(x.Count is >= 1 and <= 3, "count range"); }
         }
-        Assert.True(b is > 5 and < 60, $"weight 1 drops ~1% (got {b}/2000)");
+        Assert.True(b is > 5 and < 60, $"chance 0.01 drops ~1% (got {b}/2000)");
     }
     public static void PoiseStaggers()
     {

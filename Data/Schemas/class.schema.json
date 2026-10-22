@@ -1,0 +1,262 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Player class",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "tier",
+  "growth",
+  "recommendedAllocation",
+  "weapons",
+  "armor",
+  "mechanic",
+  "kit"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^cls_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string"
+  },
+  "tier": {
+   "type": "string",
+   "enum": [
+    "base",
+    "advanced",
+    "expert",
+    "master",
+    "legendary",
+    "hidden",
+    "monster"
+   ]
+  },
+  "role": {
+   "type": "string"
+  },
+  "growth": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "str": {
+     "type": "number",
+     "minimum": 0
+    },
+    "vit": {
+     "type": "number",
+     "minimum": 0
+    },
+    "agi": {
+     "type": "number",
+     "minimum": 0
+    },
+    "dex": {
+     "type": "number",
+     "minimum": 0
+    },
+    "int": {
+     "type": "number",
+     "minimum": 0
+    },
+    "wis": {
+     "type": "number",
+     "minimum": 0
+    },
+    "luk": {
+     "type": "number",
+     "minimum": 0
+    },
+    "cha": {
+     "type": "number",
+     "minimum": 0
+    }
+   }
+  },
+  "recommendedAllocation": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "str": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "vit": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "agi": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "dex": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "int": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "wis": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "luk": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "cha": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "weapons": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "armor": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "mechanic": {
+   "type": "string"
+  },
+  "starterWeaponId": {
+   "type": "string",
+   "pattern": "^itm_[a-z0-9_]+$"
+  },
+  "kit": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "unlockLevel",
+     "kind",
+     "slot",
+     "hits",
+     "cooldownSec",
+     "element"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^skl_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string"
+     },
+     "unlockLevel": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 300
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "chain",
+       "launcher",
+       "dash",
+       "ranged",
+       "aoe",
+       "buff",
+       "ultimate"
+      ]
+     },
+     "slot": {
+      "type": "string",
+      "enum": [
+       "basic",
+       "skill",
+       "ultimate"
+      ]
+     },
+     "hits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "power",
+        "weight"
+       ],
+       "properties": {
+        "power": {
+         "type": "number",
+         "minimum": 0
+        },
+        "weight": {
+         "type": "string",
+         "enum": [
+          "light",
+          "medium",
+          "heavy",
+          "launch",
+          "ultimate",
+          "skill"
+         ]
+        }
+       }
+      }
+     },
+     "costSp": {
+      "type": "number",
+      "minimum": 0
+     },
+     "costMp": {
+      "type": "number",
+      "minimum": 0
+     },
+     "costAwakening": {
+      "type": "number",
+      "minimum": 0
+     },
+     "cooldownSec": {
+      "type": "number",
+      "minimum": 0
+     },
+     "element": {
+      "type": "string",
+      "enum": [
+       "None",
+       "Fire",
+       "Water",
+       "Ice",
+       "Lightning",
+       "Earth",
+       "Wind",
+       "Nature",
+       "Poison",
+       "Light",
+       "Dark",
+       "Blood",
+       "Void"
+      ]
+     },
+     "appliesElement": {
+      "type": "boolean"
+     }
+    }
+   }
+  }
+ }
+}

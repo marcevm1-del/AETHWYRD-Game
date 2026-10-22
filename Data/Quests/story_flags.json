@@ -1,0 +1,52 @@
+[
+ {
+  "id": "arrived_in_aetheria",
+  "description": "The player has woken in Aetheria (end of the prologue)",
+  "setBy": "quest"
+ },
+ {
+  "id": "guild_registered",
+  "description": "The player holds an Adventurers' Guild card",
+  "setBy": "quest"
+ },
+ {
+  "id": "met_brother_caspian",
+  "description": "The player has met Brother Caspian and the orphans",
+  "setBy": "quest"
+ },
+ {
+  "id": "rank_e_reached",
+  "description": "The player passed the F→E trial",
+  "setBy": "quest"
+ },
+ {
+  "id": "tyrant_slain_reg_whisperwood",
+  "description": "Grukk, Goblin Chief of Hollowpine, is dead; Whisperwood is Liberated",
+  "setBy": "quest"
+ },
+ {
+  "id": "swordsman_class_trained",
+  "description": "Old Hollis has trained the player as a Swordsman",
+  "setBy": "quest"
+ },
+ {
+  "id": "saw_nine_thrones_mural",
+  "description": "The player has seen the mural of nine thrones (Mystery #1)",
+  "setBy": "quest"
+ },
+ {
+  "id": "act3_nocturne_replaces_mina",
+  "description": "Early Act III: Lady Nocturne has replaced Mina at the guild counter",
+  "setBy": "story"
+ },
+ {
+  "id": "nocturne_unmasked",
+  "description": "Lady Nocturne has been exposed; the real Mina is free",
+  "setBy": "story"
+ },
+ {
+  "id": "caspian_unmasked",
+  "description": "Lantern Night, Act V: Brother Caspian is revealed as the Red Prophet",
+  "setBy": "story"
+ }
+]

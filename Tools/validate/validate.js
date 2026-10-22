@@ -22,7 +22,9 @@ const COLLECTIONS = {
   quests: { files: ['Quests/quests.json'], schema: 'quest' },
   weekly: { files: ['Quests/weekly_board.json'], schema: 'weekly_quest' },
   inns: { files: ['World/inns.json'], schema: 'inn' },
-  siege: { files: ['World/siege_waves.json'], schema: 'siege_wave' }
+  siege: { files: ['World/siege_waves.json'], schema: 'siege_wave' },
+  classes: { files: ['Classes/classes.json'], schema: 'class' },
+  flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' }
 };
 
 const errors = [];
@@ -108,7 +110,9 @@ for (const l of rows.loot) (l.entries || []).forEach((e, i) => ref(`${l.id}.entr
 for (const n of rows.npcs) { ref(`${n.id}.homeRegion`, n.homeRegion, 'regions'); (n.relationships || []).forEach(r => ref(`${n.id}.relationships`, r.npcId, 'npcs')); }
 for (const q of [...rows.quests, ...rows.weekly]) {
   ref(`${q.id}.giver`, q.giver, 'npcs'); ref(`${q.id}.region`, q.region, 'regions');
-  ((q.requirements || {}).prerequisites || []).forEach(p => ref(`${q.id}.prerequisites`, p, 'quests'));
+  ((q.prerequisites || {}).quests || []).forEach(p => ref(`${q.id}.prerequisites.quests`, p, 'quests'));
+  ((q.prerequisites || {}).flags || []).forEach(fl => ref(`${q.id}.prerequisites.flags`, fl, 'flags'));
+  (q.setsFlags || []).forEach(fl => ref(`${q.id}.setsFlags`, fl, 'flags'));
   ((q.rewards || {}).items || []).forEach(i => ref(`${q.id}.rewards.items`, i, 'items'));
   (q.objectives || []).forEach((o, i) => {
     const where = `${q.id}.objectives[${i}]`;
@@ -121,6 +125,20 @@ for (const q of [...rows.quests, ...rows.weekly]) {
 for (const i of rows.inns) {
   ref(`${i.id}.regionId`, i.regionId, 'regions'); ref(`${i.id}.keeperNpcId`, i.keeperNpcId, 'npcs', true);
   if (i.rooms.filter(r => r.tier === 'signature').length > 1) err(i.id, 'at most one signature room');
+}
+
+// Story flags: quest-set flags must actually be set by some quest
+const setByQuests = new Set(rows.quests.flatMap(q => q.setsFlags || []));
+for (const fl of rows.flags) if (fl.setBy === 'quest' && !setByQuests.has(fl.id)) err(fl.id, 'flag marked setBy "quest" but no quest sets it');
+for (const n of rows.npcs) (n.states || []).forEach(st => ref(`${n.id}.states`, st.flag, 'flags'));
+// Classes: starter weapon exists, skill IDs unique across classes, exactly one ultimate
+const skillIds = new Set();
+for (const c of rows.classes) {
+  ref(`${c.id}.starterWeaponId`, c.starterWeaponId, 'items', true);
+  for (const k of c.kit) { if (skillIds.has(k.id)) err(c.id, `duplicate skill id ${k.id}`); skillIds.add(k.id); }
+  if (c.kit.filter(k => k.slot === 'ultimate').length !== 1) err(c.id, 'needs exactly one ultimate');
+  const alloc = Object.values(c.recommendedAllocation).reduce((a, b) => a + b, 0);
+  if (Math.abs(alloc - 1) > 0.001) err(c.id, `recommendedAllocation sums to ${alloc}, not 1`);
 }
 
 // Regional Siege & Liberation: every region has a unique Tyrant living there, or is marked noSiege.

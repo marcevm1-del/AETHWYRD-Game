@@ -8,6 +8,8 @@ fs.mkdirSync(OUT, { recursive: true });
 const RANK = { type: 'string', pattern: '^(F|E|D|C|B|A|S|SS|SSS|EX)[+-]?$' };
 const RL = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'] };
 const EL = { type: 'string', enum: ['None', 'Fire', 'Water', 'Ice', 'Lightning', 'Earth', 'Wind', 'Nature', 'Poison', 'Light', 'Dark', 'Blood', 'Void'] };
+const FLAG = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
+const WEEKDAYS = ['Solenday', 'Maelsday', 'Thorsday', 'Sylvasday', 'Kaelsday', 'Morrowsday', 'Vexday'];
 const id = prefix => ({ type: 'string', pattern: `^${prefix}[a-z0-9_]+$` });
 
 const SCHEMAS = {
@@ -34,7 +36,9 @@ const SCHEMAS = {
       tier: { type: 'string', enum: ['core', 'variant'] },
       variantKind: { type: 'string', enum: ['', 'elemental', 'elder', 'corrupted', 'ancient', 'spirit', 'regional'] },
       baseSpeciesId: { type: 'string' },
-      rank: RANK, level: { type: 'integer', minimum: 1, maximum: 300 }, menace: { type: 'integer', minimum: 1, maximum: 5 }, menaceLabel: { type: 'string' },
+      rank: RANK, level: { type: 'integer', minimum: 1, maximum: 300 },
+      levelRange: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'integer', minimum: 1, maximum: 300 } },
+      bossHpMult: { type: 'number', minimum: 1 }, menace: { type: 'integer', minimum: 1, maximum: 5 }, menaceLabel: { type: 'string' },
       element: EL, weakness: EL, sizeMeters: { type: 'number', minimum: 0 },
       rigId: id('rig_'), animSetId: id('anim_'),
       behavior: { type: 'string', enum: ['Passive', 'Territorial', 'Swarm', 'Pack', 'Ambush', 'Aggressive', 'Skittish', 'Guardian'] },
@@ -79,7 +83,7 @@ const SCHEMAS = {
       id: id('loot_'), family: { type: 'string' }, rank: RL,
       entries: {
         type: 'array', minItems: 1,
-        items: { type: 'object', additionalProperties: false, required: ['itemId', 'weight', 'min', 'max'], properties: { itemId: id('itm_'), weight: { type: 'integer', minimum: 1 }, min: { type: 'integer', minimum: 0 }, max: { type: 'integer', minimum: 1 } } }
+        items: { type: 'object', additionalProperties: false, required: ['itemId', 'chance', 'min', 'max'], properties: { itemId: id('itm_'), chance: { type: 'number', minimum: 0.000001, maximum: 1 }, min: { type: 'integer', minimum: 0 }, max: { type: 'integer', minimum: 1 } } }
       }
     }
   },
@@ -98,7 +102,9 @@ const SCHEMAS = {
       id: id('npc_'), name: { type: 'string' }, tier: { type: 'string', enum: ['core', 'major', 'townsfolk'] }, race: { type: 'string' },
       homeRegion: id('reg_'), settlement: { type: 'string' }, role: { type: 'string' }, backstory: { type: 'string', minLength: 20 },
       secret: { type: 'string' }, faction: { type: 'string' }, romanceable: { type: 'boolean' }, canDie: { type: 'boolean' },
-      relationships: { type: 'array', items: { type: 'object', required: ['npcId', 'kind'], properties: { npcId: id('npc_'), kind: { type: 'string' } } } }
+      relationships: { type: 'array', items: { type: 'object', required: ['npcId', 'kind'], properties: { npcId: id('npc_'), kind: { type: 'string' } } } },
+      states: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['flag', 'note'], properties: { flag: FLAG, name: { type: 'string' }, role: { type: 'string' }, settlement: { type: 'string' }, note: { type: 'string', minLength: 5 } } } },
+      schedule: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['part', 'place'], properties: { part: { type: 'string', enum: ['morning', 'day', 'dusk', 'night'] }, place: { type: 'string', minLength: 1 }, days: { type: 'array', items: { type: 'string', enum: WEEKDAYS } } } } }
     }
   },
   quest: {
@@ -108,7 +114,9 @@ const SCHEMAS = {
       type: { type: 'string', enum: ['Main', 'Subjugation', 'Gathering', 'Escort', 'Delivery', 'Investigation', 'Exploration', 'Defense', 'SiegeDefence', 'Capture', 'Bounty', 'Dungeon', 'OddJob', 'Trial', 'Faction', 'Companion', 'Class', 'Hidden', 'Divine'] },
       giver: id('npc_'), region: id('reg_'), summary: { type: 'string' },
       regionState: { type: 'string', enum: ['any', 'besieged', 'liberated'] },
-      requirements: { type: 'object', properties: { minRank: RL, minLevel: { type: 'integer', minimum: 1, maximum: 300 }, prerequisites: { type: 'array', items: id('qst_') }, partySize: { type: 'string' } } },
+      requirements: { type: 'object', additionalProperties: false, properties: { minLevel: { type: 'integer', minimum: 1, maximum: 300 }, partySize: { type: 'string' } } },
+      prerequisites: { type: 'object', additionalProperties: false, properties: { quests: { type: 'array', items: id('qst_') }, flags: { type: 'array', items: FLAG }, act: { type: 'integer', minimum: 0, maximum: 6 }, rank: RL } },
+      setsFlags: { type: 'array', items: FLAG },
       objectives: { type: 'array', minItems: 1, items: { type: 'object', required: ['kind'], properties: { kind: { type: 'string', enum: ['kill', 'collect', 'talk', 'escort', 'reach', 'defend', 'tame', 'choice'] }, target: { type: 'string' }, count: { type: 'integer', minimum: 1 } } } },
       rewards: { type: 'object', properties: { gold: { type: 'integer', minimum: 0 }, gp: { type: 'integer', minimum: 0 }, xp: { type: 'integer', minimum: 0 }, items: { type: 'array', items: id('itm_') } } }
     }
@@ -132,6 +140,35 @@ const SCHEMAS = {
       escalation: { type: 'object', additionalProperties: false, required: ['maxStep', 'countGrowthPerStep', 'eliteChancePerStep'], properties: { maxStep: { type: 'integer', minimum: 0 }, countGrowthPerStep: { type: 'number', minimum: 0 }, eliteChancePerStep: { type: 'number', minimum: 0, maximum: 1 } } },
       targetMinutes: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', minimum: 1 } }
     }
+  },
+  class: {
+    title: 'Player class', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'tier', 'growth', 'recommendedAllocation', 'weapons', 'armor', 'mechanic', 'kit'],
+    properties: {
+      id: id('cls_'), name: { type: 'string' }, tier: { type: 'string', enum: ['base', 'advanced', 'expert', 'master', 'legendary', 'hidden', 'monster'] }, role: { type: 'string' },
+      growth: { type: 'object', additionalProperties: false, properties: Object.fromEntries(["str","vit","agi","dex","int","wis","luk","cha"].map(k => [k, { type: 'number', minimum: 0 }])) },
+      recommendedAllocation: { type: 'object', additionalProperties: false, properties: Object.fromEntries(["str","vit","agi","dex","int","wis","luk","cha"].map(k => [k, { type: 'number', minimum: 0, maximum: 1 }])) },
+      weapons: { type: 'array', items: { type: 'string' } }, armor: { type: 'array', items: { type: 'string' } }, mechanic: { type: 'string' },
+      starterWeaponId: id('itm_'),
+      kit: {
+        type: 'array', minItems: 1,
+        items: {
+          type: 'object', additionalProperties: false, required: ['id', 'name', 'unlockLevel', 'kind', 'slot', 'hits', 'cooldownSec', 'element'],
+          properties: {
+            id: id('skl_'), name: { type: 'string' }, unlockLevel: { type: 'integer', minimum: 1, maximum: 300 },
+            kind: { type: 'string', enum: ['chain', 'launcher', 'dash', 'ranged', 'aoe', 'buff', 'ultimate'] },
+            slot: { type: 'string', enum: ['basic', 'skill', 'ultimate'] },
+            hits: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['power', 'weight'], properties: { power: { type: 'number', minimum: 0 }, weight: { type: 'string', enum: ['light', 'medium', 'heavy', 'launch', 'ultimate', 'skill'] } } } },
+            costSp: { type: 'number', minimum: 0 }, costMp: { type: 'number', minimum: 0 }, costAwakening: { type: 'number', minimum: 0 },
+            cooldownSec: { type: 'number', minimum: 0 }, element: EL, appliesElement: { type: 'boolean' }
+          }
+        }
+      }
+    }
+  },
+  story_flag: {
+    title: 'Story flag', type: 'object', additionalProperties: false, required: ['id', 'description', 'setBy'],
+    properties: { id: FLAG, description: { type: 'string', minLength: 5 }, setBy: { type: 'string', enum: ['quest', 'story', 'system'] } }
   },
   weekly_quest: {
     title: 'Weekly board quest (repeatable, tied to a weekday)', type: 'object', additionalProperties: false,

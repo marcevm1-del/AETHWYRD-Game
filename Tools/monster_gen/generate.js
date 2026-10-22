@@ -11,6 +11,7 @@ const TYRANTS = require('./tyrants');
 
 const ROOT = path.join(__dirname, '..', '..');
 const DATA = path.join(ROOT, 'Data');
+const PROG = JSON.parse(fs.readFileSync(path.join(DATA, 'Classes', 'progression.json'), 'utf8'));
 const REGIONS = JSON.parse(fs.readFileSync(path.join(DATA, 'World', 'regions.json'), 'utf8'));
 const REGION_BY_NAME = Object.fromEntries(REGIONS.map(r => [r.name, r]));
 const REGION_BY_ID = Object.fromEntries(REGIONS.map(r => [r.id, r]));
@@ -204,17 +205,31 @@ function chooseHabitats(sp, fam) {
 }
 
 // ---------- stats ----------
+// Per-species stat profiles on top of the rig archetype (multipliers).
+const STAT_PROFILES = {
+  'Horned Rabbit': { hp: 0.6, def: 0.7, atk: 1.15, spd: 1.3 }   // the rookie killer: fast, fragile, hits hard
+};
+// Explicit spawn level ranges where the rank band is too wide (Ring 0 fun test: dangerous at Lv 1, trivial at Lv 10).
+const LEVEL_RANGES = { 'Blue Slime': [1, 4], 'Horned Rabbit': [1, 5], 'Goblin': [2, 6] };
+// Boss HP is a separate multiplier (stats stay comparable across species).
+function bossHpMultFor(sp) { return sp.isTyrant ? 5 : rankLetter(sp.rank) === 'EX' ? 15 : sp.isUnique ? 6 : 1; }
+function levelRangeFor(sp) {
+  if (LEVEL_RANGES[sp.name]) return LEVEL_RANGES[sp.name];
+  const v = rankVal(sp.rank);
+  return [levelFor(rankStr(v - 1)), levelFor(rankStr(v + 1))];
+}
 function statsFor(sp) {
   const L = sp.level;
   const a = ARCH[RIGS[sp.rig].arch];
   const sizeF = Math.min(3.5, Math.max(0.6, 0.55 + Math.log2(sp.size + 1) * 0.45));
-  const boss = sp.isUnique ? 12 : 1;
   const base = 10 + L * 4;
+  const m = STAT_PROFILES[sp.name] || {};
+  const k = key => m[key] || 1;
   return {
-    hp: Math.round((60 + Math.pow(L, 1.5) * 9) * a.hp * sizeF * boss),
-    atk: Math.round(base * a.atk), def: Math.round(base * a.def),
-    matk: Math.round(base * a.matk * (sp.element === 'None' ? 0.7 : 1)), mdef: Math.round(base * a.mdef),
-    spd: Math.round(100 * a.spd)
+    hp: Math.round((60 + Math.pow(L, 1.5) * 9) * a.hp * sizeF * k('hp')),
+    atk: Math.round(base * a.atk * k('atk')), def: Math.round(base * a.def * k('def')),
+    matk: Math.round(base * a.matk * (sp.element === 'None' ? 0.7 : 1) * k('matk')), mdef: Math.round(base * a.mdef * k('mdef')),
+    spd: Math.round(100 * a.spd * k('spd'))
   };
 }
 
@@ -225,8 +240,24 @@ function attackId(name, kind, power, cd, tele, element) {
   if (!ATTACKS.has(id)) ATTACKS.set(id, { id, name, kind, power, cooldownSec: cd, telegraph: tele, element: element || 'None' });
   return id;
 }
+// One signature attack per family, so species sharing a rig still fight differently.
+const FAMILY_SIGNATURE = {
+  slime: ['Acid Splash', 'ranged', 1.1, 6, 'blue'], goblinoid: ['Sand Toss', 'debuff', 0, 12, 'none'], kobold: ['Trip-Wire Trap', 'debuff', 0, 14, 'none'],
+  beast: ['Rending Bite', 'melee', 1.3, 5, 'blue'], lycan: ['Moon Frenzy', 'buff', 0, 20, 'none'], insect: ['Silk Snare', 'ranged', 0.4, 10, 'blue'],
+  killer_insect: ['Swarm Bite', 'aoe', 0.9, 6, 'red'], undead: ['Grave Grasp', 'grab', 1.2, 10, 'gold'], shadow: ['Shade Step Strike', 'dash', 1.4, 7, 'red'],
+  orc_giant: ['War Cry', 'buff', 0, 18, 'none'], minotaur: ['Horn Charge', 'dash', 1.8, 9, 'red'], reptile: ['Tail Lash', 'aoe', 1.2, 7, 'blue'],
+  draconic: ['Wing Buffet', 'aoe', 1.1, 9, 'blue'], construct: ['Rune Pulse', 'magic', 1.3, 10, 'red'], elemental: ['Elemental Burst', 'magic', 1.4, 9, 'red'],
+  plant: ['Root Bind', 'grab', 1.0, 11, 'gold'], demon: ['Hellfire Brand', 'magic', 1.4, 10, 'red'], aquatic: ['Tidal Drag', 'grab', 1.3, 11, 'gold'],
+  avian: ['Feather Volley', 'ranged', 1.0, 6, 'blue'], chimera: ['Many-Headed Bite', 'melee', 1.5, 7, 'red'], serpentfolk: ['Venom Coil', 'grab', 1.3, 11, 'gold'],
+  centaur: ['Lance Charge', 'dash', 1.7, 8, 'red'], headless: ['Lantern Hurl', 'ranged', 1.3, 8, 'blue'], gremlin: ['Wrench Sabotage', 'debuff', 0, 14, 'none'],
+  aberration: ['Mimic Lure', 'debuff', 0, 16, 'none'], yokai: ['Spirit Flame', 'magic', 1.2, 8, 'blue'], floorborn: ['Wall Ambush', 'dash', 1.4, 10, 'red'],
+  vesperite: ['Moonglass Shard', 'ranged', 1.3, 6, 'blue'], sandborne: ['Sand Burrow', 'dash', 1.5, 10, 'red'], humanoid_enemy: ['Feint Strike', 'counter', 1.2, 8, 'blue'],
+  familiar: ['Playful Nudge', 'melee', 0.5, 6, 'none']
+};
 function attacksFor(sp) {
   const ids = RIGS[sp.rig].atk.map(([n, k, p, cd, t]) => attackId(n, k, p, cd, t, 'None'));
+  const sig = FAMILY_SIGNATURE[sp.familyKey];
+  if (sig) ids.push(attackId(...sig, 'None'));
   const el = EL[sp.element] || EL.None;
   if (el.skill) ids.push(attackId(el.skill, 'magic', 1.5, 10, 'red', sp.element));
   return ids;
@@ -250,8 +281,9 @@ function lootTableFor(famKey, fam, rank) {
   const L = rankLetter(rank);
   const id = `loot_${famKey}_${L.toLowerCase()}`;
   if (!LOOT.has(id)) {
-    const entries = fam.drops.map((d, i) => ({ itemId: materialId(d, L), weight: [60, 30, 15][i] || 10, min: 1, max: i === 0 ? 3 : 1 }));
-    entries.push({ itemId: coreId(L), weight: 100, min: 1, max: 1 });
+    const entries = fam.drops.map((d, i) => ({ itemId: materialId(d, L), chance: [0.6, 0.3, 0.15][i] || 0.1, min: 1, max: i === 0 ? 3 : 1 }));
+    entries.push({ itemId: coreId(L), chance: 1, min: 1, max: 1 });
+    if (rankIdx(L) >= RANKS.indexOf('B')) entries.push({ itemId: materialId('Relic Shard', 'B'), chance: 0.001, min: 1, max: 1 }); // chase drop
     LOOT.set(id, { id, family: fam.name, rank: L, entries });
   }
   return id;
@@ -288,7 +320,9 @@ function finalize(sp, fam, famKey) {
   sp.aiPattern = AI[sp.behavior] + (sp.menace >= 4 ? '+stalker' : '');
   sp.level = levelFor(sp.rank);
   sp.stats = statsFor(sp);
-  sp.xp = Math.round((8 + Math.pow(sp.level, 1.6) * 3) * (sp.isUnique ? 20 : 1));
+  sp.levelRange = levelRangeFor(sp);
+  sp.bossHpMult = bossHpMultFor(sp);
+  sp.xp = Math.round((PROG.xp.monsterBase + Math.pow(sp.level, PROG.xp.monsterExponent) * PROG.xp.monsterScale) * (sp.isUnique ? PROG.xp.uniqueMultiplier : 1));
   sp.gold = Math.round(3 + Math.pow(sp.level, 1.4) * 1.5);
   sp.attackIds = attacksFor(sp);
   sp.rigId = `rig_${sp.rig}`; sp.animSetId = `anim_${sp.rig}`;
@@ -470,7 +504,7 @@ const csvEsc = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
 function writeCsv(file, rows, cols) {
   fs.writeFileSync(file, [cols.join(',')].concat(rows.map(r => cols.map(c => csvEsc(typeof r[c] === 'object' ? JSON.stringify(r[c]) : r[c])).join(','))).join('\n'), 'utf8');
 }
-const SPECIES_FIELDS = ['id', 'name', 'familyKey', 'family', 'type', 'genre', 'tier', 'variantKind', 'baseSpeciesId', 'rank', 'level', 'menace', 'menaceLabel', 'element', 'weakness', 'sizeMeters', 'rigId', 'animSetId', 'behavior', 'aiPattern', 'stats', 'xp', 'gold', 'attackIds', 'isUnique', 'isTyrant', 'ring', 'habitats', 'lootTableId', 'signature', 'look', 'fieldNote', 'trope', 'designRecipe'];
+const SPECIES_FIELDS = ['id', 'name', 'familyKey', 'family', 'type', 'genre', 'tier', 'variantKind', 'baseSpeciesId', 'rank', 'level', 'levelRange', 'menace', 'menaceLabel', 'element', 'weakness', 'sizeMeters', 'rigId', 'animSetId', 'behavior', 'aiPattern', 'stats', 'bossHpMult', 'xp', 'gold', 'attackIds', 'isUnique', 'isTyrant', 'ring', 'habitats', 'lootTableId', 'signature', 'look', 'fieldNote', 'trope', 'designRecipe'];
 const spOut = species.map(s => { const o = {}; for (const f of SPECIES_FIELDS) o[f] = f === 'sizeMeters' ? s.size : f === 'isTyrant' ? !!s.isTyrant : s[f]; return o; });
 fs.writeFileSync(path.join(MON, 'species.json'), JSON.stringify(spOut, null, 1), 'utf8');
 writeCsv(path.join(MON, 'species.csv'), spOut, SPECIES_FIELDS);

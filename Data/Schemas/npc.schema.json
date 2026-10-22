@@ -74,6 +74,77 @@
      }
     }
    }
+  },
+  "states": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "flag",
+     "note"
+    ],
+    "properties": {
+     "flag": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string"
+     },
+     "role": {
+      "type": "string"
+     },
+     "settlement": {
+      "type": "string"
+     },
+     "note": {
+      "type": "string",
+      "minLength": 5
+     }
+    }
+   }
+  },
+  "schedule": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "part",
+     "place"
+    ],
+    "properties": {
+     "part": {
+      "type": "string",
+      "enum": [
+       "morning",
+       "day",
+       "dusk",
+       "night"
+      ]
+     },
+     "place": {
+      "type": "string",
+      "minLength": 1
+     },
+     "days": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "Solenday",
+        "Maelsday",
+        "Thorsday",
+        "Sylvasday",
+        "Kaelsday",
+        "Morrowsday",
+        "Vexday"
+       ]
+      }
+     }
+    }
+   }
   }
  }
 }
