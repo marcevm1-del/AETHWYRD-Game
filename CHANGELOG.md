@@ -2,6 +2,15 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.7 — Deepening existing systems, part 2 (2026-10-22)
+- **Crafting:** how a craft works (material rank caps, stations, Crafter's Mark, naming masterworks, insight on failure), a minigame for every discipline, life ranks judged by master NPCs, commissions and your shop.
+- **Housing:** rooms and features by stage, Comfort and style sets, visitors and home events, territory residents and buildings (territories can be besieged), Lord Protector city policies.
+- **Death & Difficulty:** fixed the companion-death line to match Mortal Bonds; added the after-death flow (goblins steal your dropped gold), custom difficulty sliders, Hardcore legacy graves.
+- **Quality-of-Life:** convenience features and a "the clock only runs while you play" rule.
+- **Respec:** free token per class tier, partial respec, preview on the dummy, loadouts.
+- **Gear slots:** per-slot rules, belt slots that grow with rank, a separate Relic slot, durability that never fully breaks.
+- **Guild Master succession:** if Rodrick dies after Act III, Nocturne (as "Mina") takes the guild unless exposed; guild elections.
+
 ## v0.10.6 — Deepening existing systems (2026-10-22)
 - **Economy:** prices by rank, what moves prices (Prosperity, sieges, reputation, haggling, seasons, Otherworld Knowledge, Blood Vesper), trade routes, long-game gold balance, banking.
 - **Taming:** the full taming encounter (calm vs fear), partner roles, growth, and how taming ties into Nemesis, sieges, Karma/Thread, monster towns and the bestiary. Fixed the old "1 → 2 → 3 familiar slots" line to match the Canon 3-active roster.

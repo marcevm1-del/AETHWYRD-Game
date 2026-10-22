@@ -172,6 +172,11 @@ Some companions are **mutually exclusive** (recruiting one closes another's path
 ## Guild Master Succession
 - **Rodrick "Old Bear" Hale** can die (Siege of Marrowgate, a Cult assassination, or a sacrifice in Act IV).
 - **Succession:** Mina Feathersby (ex-A-Rank) → Captain Bryndis Oakshield → a guild election among the NPCs you've helped. There is always a Guild Master. The player is **never** the Guild Master (Q59).
+- **The Mina problem:** from early Act III, "Mina" is Lady Nocturne (Canon). If Rodrick dies **after** that point, **Nocturne becomes Guild Master**:
+  - The guild's contracts slowly start serving the Demon army (more dangerous postings, adventurers going missing).
+  - A player with high Appraisal, or one who has spoken to Mina's sister, can **expose her early**. Bryndis then takes the seat.
+  - If no one exposes her, the reveal happens at the normal story point and the guild is shaken. The next Guild Master is chosen by **election**.
+- **Elections:** candidates are NPC adventurers and officers you know. Your Renown, past help and the Adventurer Times all sway votes. Each winner changes the guild's style: Bryndis is strict, a merchant-born master is profit-minded, a former mentee of yours is idealistic.
 
 ## NPCs: ~2,500 Named, Each with a Backstory
 | Tier | Count | Content |

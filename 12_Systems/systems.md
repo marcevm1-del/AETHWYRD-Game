@@ -101,6 +101,38 @@ Buy a **trade license** (rank D+) and register a route between two towns. Run it
 - **Crafting minigames** (optional, skippable): forging rhythm, alchemy mixing, cooking timing. Better play gives better quality.
 - **Recipe discovery:** experiment, buy, loot, learn from NPCs, or **recall from your old world**.
 
+### 5.1 How a Craft Works
+1. **Recipe** (known or experimental) + **materials**. Materials have a **rank** and a **quality**, and the result can't be higher than the best material's rank.
+2. **Station**: home, town or a portable camp kit (Poor/Normal quality only). Better stations (upgraded with Prosperity or at home) add +1 quality chance.
+3. **Minigame** (skippable after mastery): your score decides the quality tier. A **perfect** run has a small chance of a bonus trait.
+4. **Crafter's Mark:** everything you make Fine or above carries **your name**. NPCs who buy or receive it mention it, and Masterwork+ items can be **named by you**.
+- **Failure** never destroys rare materials. It gives Poor quality plus **insight**, a progress bar toward the next recipe discovery.
+
+### 5.2 The Minigames
+| Discipline | Minigame |
+|---|---|
+| Blacksmithing | Rhythm hammering + quench timing |
+| Leatherworking | Cut along a pattern with even pressure |
+| Tailoring | Line-tracing stitches; dye mixing |
+| Alchemy | Color-mix wheel + heat control |
+| Enchanting | Trace a glowing rune before it fades |
+| Runecraft | Rune-word puzzle (combine runes in the right order) |
+| Jewelcrafting | Rotate a gem to find its facets |
+| Cooking | Timing ring + seasoning balance |
+| Brewing | Fermentation over days (check back, adjust) |
+| Farming | Soil, water and season planning (not timed) |
+| Fishing | Tension reel |
+| Engineering | Connect parts on a schematic grid |
+| Painting / Music | Free painting with stamps / a rhythm game |
+
+### 5.3 Life Ranks
+Each life skill has its own **F → SSS life rank**, using the parallel tracks in `03_Rank_System/ranks.md`. Ranks come from a **masterwork commission** judged by a master NPC (Brannoc for Blacksmithing in Brindlewick, Torvald later, the dwarven Forge Council at S). A higher life rank unlocks recipes, stations and titles (*Masterwork Smith of Iron Hold*).
+
+### 5.4 Commissions & Your Shop
+- NPCs and companions **commission** items: a guard wants a better spear, a bride wants a ring. They pay well and remember who made it.
+- From A rank, your **home shop** (Housing) sells what you craft while you adventure. Your reputation as a crafter sets prices.
+- Some Legendary recipes need **ingredients from Tyrants, Named monsters and Elder Dragons**, so crafting rewards the whole game.
+
 ## 6. Housing → Territory (Slow-Life Pillar)
 | Stage | Rank | Features |
 |---|---|---|
@@ -113,6 +145,40 @@ Buy a **trade license** (rank D+) and register a route between two towns. Run it
 
 - **Decorating:** free-placement furniture, trophies from bosses (mounted heads, displayed legendary weapons), paintings you made.
 - **Residents** come from quests: refugees you saved, a goblin child, a retired knight, a fairy family.
+
+### 6.1 Rooms & Features
+| Feature | Unlock | Does |
+|---|---|---|
+| Bed | Inn room | Sleep (skip time), rest bonus, dreams |
+| Storage chest | Inn room | Shared with every crafting station (crafting pulls from it) |
+| Mailbox | Rented room | Letters, parcels, commissions |
+| Kitchen | Rented room | Cooking, Party Stew Night at home |
+| Workshop | Rented room | Crafting stations (upgrade one at a time) |
+| Mirror of Vanity | Rented room | Change appearance (Character Creator §3.3) |
+| Expedition board | Home + land | Send companions out |
+| Guest rooms | Home + land | Companions live with you; each decorates their own room |
+| Garden & fields | Home + land | Farming |
+| Barn & ranch | Home + land | Animals and stored tamed monsters |
+| **Trophy Hall** | Home + land | Trophies, old guild cards, Memory Reel photos |
+| Shop front | Manor | Sells your crafts while you adventure |
+| Watchtower & walls | Village | Defends your territory in sieges |
+
+### 6.2 Comfort & Decorating
+- Furniture has a **Comfort** value and a **style tag** (rustic, elven, dwarven, Isles, Earth-nostalgic…). A higher Comfort gives a longer rest bonus.
+- A matching style set gives a small bonus (e.g. a full Isles tea room: +Spirit regen after resting).
+- Companions **comment on your decorating** and have favorite styles. They'll sometimes move things around.
+
+### 6.3 Visitors & Home Events
+NPCs visit when bond and reputation are high: Brother Caspian brings bread (and looks a little too long at your Trophy Hall), mentees ask for advice, rivals show up to brag, and children play in the garden if you've adopted. Seasonal events happen at home too: a snowball fight at Starfire Eve, lanterns at Lantern Night.
+
+### 6.4 Village / Territory (S rank)
+- **Residents** come from quests (refugees, the goblin child, a retired knight, a fairy family). Each has a **job**: farmer, smith, guard, teacher, merchant, healer.
+- **Buildings** need resources and residents with the right job. They raise your territory's Prosperity using the same stats as towns (Wealth, Safety, Faith/Morale, Population).
+- **Your territory can be besieged** if its region has a living Tyrant. Defences use the same siege rules, and your residents fight beside you.
+- **Festivals** at your village use your own decorations and residents.
+
+### 6.5 Free City Patronage (SS+)
+As **Lord Protector** (no crown, Canon), you set one **city policy** per season (trade fair, open gates to refugees, monster-town alliance, Academy funding). Each policy shifts that city's Prosperity and faction reputations. Your statue appears at Renowned stage.
 
 ## 7. Taming & Familiars
 - **Tame:** weaken → offer the right food or item → CHA + skill check. Some need special quests.
@@ -214,15 +280,39 @@ Gods react differently: **Solenne** punishes lies, **Sylvara** punishes cruelty 
 | Veteran | Lose 5% XP toward next level + item durability |
 | Hardcore | Permadeath; your grave appears in the world for new characters to find |
 - *Second Dawn* (Unique Skill) replaces death with a time rewind.
-- Companions can be "downed" and revived; permanent companion death only in story moments.
+- **Companions** can be downed and revived. Permanent companion death happens through clearly signposted story choices, or in combat only with **Mortal Bonds** on (Canon §5).
+
+### 10.1 After You Fall
+- **The death screen** (HUD §19) shows what killed you, its rank and one tip, then lets you retry the encounter, return to a waystone, or change gear first.
+- **Your dropped gold** waits at a glowing blue lantern where you fell. Die again before collecting it and only the newest pile stays. Monsters never pick it up, except **goblins**, who steal it and run to their camp (a mini-chase).
+- **Named monsters remember** killing you (Nemesis): a scar, a title, sometimes a sub-rank up.
+
+### 10.2 Custom Difficulty
+Under any preset, sliders for: enemy damage, enemy HP, parry/dodge windows, aggro-token count (how many attack at once), loot amount, death penalty, and inventory weight. **The S-rank floor still applies**: S+ content ignores the easy settings (below). Changing difficulty is free at any time, except Hardcore, which is locked at creation.
+
+### 10.3 Hardcore Legacy
+A Hardcore character who dies becomes **part of history** for your next characters: a grave in the world with their gear, a journal, and a mention in the history books. This uses the same system as **the Next Summoning** (Big Upgrade §5).
 
 ## 11. Quality-of-Life
 - **Journal:** quests, rumors, lore, bestiary, recipes, people met.
 - **Rumor board:** in every tavern; hints toward secrets and Named monsters.
 - **Map:** hand-drawn style; fills in as you explore; custom pins.
 - **Photo mode:** with poses, filters, companions.
-- **Accessibility:** subtitles, colorblind palettes, combat assist, remappable controls, difficulty sliders.
+- **Accessibility:** subtitles, colorblind palettes, combat assist, remappable controls, difficulty sliders (full list: `hud_and_ui.md` §14).
 - **Steam:** achievements (150+), cloud saves, Steam Deck controls, rich presence ("Exploring Whisperwood · Rank D").
+
+### 11.1 Convenience
+- **Crafting pulls from home storage** wherever you craft at home; **quick-stack** materials to storage from any waystone (after rank D).
+- **Auto-loot** options: everything, materials only, or off. **Junk auto-sell** at any merchant with one button.
+- **Wait / sleep** anywhere safe (camp, inn, home) to skip to dawn, dusk or a chosen hour.
+- **Build loadouts** (gear + skills + partners), from rank C.
+- **Track up to 3 quests**, and set a **custom waypoint** from the map that shows on the compass.
+- **Bestiary on the go:** check a monster's known weakness from the pause menu mid-fight.
+- **Return summary:** loading a save after a long break opens its journal entry (HUD §20) so you remember where you were.
+
+### 11.2 Respecting Time
+- Every timed or repeatable system (weekly board, sieges, expeditions, brewing) **waits for you**: nothing expires while the game is off, and the clock only runs while you play.
+- Missed Day Specials come back next week; missed siege defences auto-resolve (never destroying anything).
 
 ## Combat Pillars
 > Summary of the pillars detailed in `12_Systems/combat.md`.
@@ -252,6 +342,11 @@ Gods react differently: **Solenne** punishes lies, **Sylvara** punishes cruelty 
 | 1–10 | **Free**, unlimited (learning phase) |
 | 11+ | **Tome of Forgetting** (rare drop or craft) + gold scaling with level + a 1-day cooldown |
 | 100+ | Also requires a **Shrine of Ilvaris trial** |
+- **One free respec token** at every class-tier change (Canon §5).
+- **Partial respec:** reset only stats or only skills, for half the cost.
+- **Preview first:** respec at a shrine shows your new build's numbers on the training dummy before you confirm.
+- **Loadouts** (from rank C) store gear and skill bars, not stat points, so switching loadouts never needs a respec.
+- Lore: the **Tome of Forgetting** is one of Ilvaris's tools. After Act V, using it shows a gold line from Ezrath: *"What she makes you forget, she keeps."*
 
 ## Taming Roster
 - **3 active monsters max** (always), plus a **Ranch** for stored monsters (capacity grows with home upgrades).
