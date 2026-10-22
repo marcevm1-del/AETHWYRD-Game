@@ -17,6 +17,39 @@ namespace Ascend.Core
         public int Ring { get; set; }
         public string Layer { get; set; }
         public List<string> AllowedFamilies { get; set; }
+        // Regional Siege & Liberation
+        public string TyrantSpeciesId { get; set; }
+        public string SiegeFaction { get; set; }
+        public List<string> DefenceSettlements { get; set; } = new List<string>();
+        public string InitialState { get; set; }
+        public bool NoSiege { get; set; }
+        public string NoSiegeReason { get; set; }
+    }
+
+    public sealed class SiegeUnit { public string SpeciesId { get; set; } public int Count { get; set; } }
+    public sealed class SiegeWave { public int Wave { get; set; } public List<SiegeUnit> Units { get; set; } = new List<SiegeUnit>(); public string LieutenantSpeciesId { get; set; } }
+    public sealed class SiegeEscalation { public int MaxStep { get; set; } public double CountGrowthPerStep { get; set; } public double EliteChancePerStep { get; set; } }
+
+    /// <summary>Mirror of one entry in Data/World/siege_waves.json.</summary>
+    public sealed class SiegeWaveData
+    {
+        public string Id { get; set; }
+        public string RegionId { get; set; }
+        public string Faction { get; set; }
+        public bool FactionMixed { get; set; }
+        public string RankMin { get; set; }
+        public string RankMax { get; set; }
+        public string TyrantSpeciesId { get; set; }
+        public List<SiegeWave> Waves { get; set; } = new List<SiegeWave>();
+        public SiegeEscalation Escalation { get; set; } = new SiegeEscalation();
+        public List<double> TargetMinutes { get; set; } = new List<double>();
+
+        /// <summary>Unit count for a wave unit at an escalation step (capped at MaxStep).</summary>
+        public int ScaledCount(SiegeUnit unit, int escalation)
+        {
+            int step = Math.Max(0, Math.Min(Escalation.MaxStep, escalation));
+            return (int)Math.Round(unit.Count * (1 + Escalation.CountGrowthPerStep * step), MidpointRounding.AwayFromZero);
+        }
     }
 
     public sealed class StatBlock
@@ -53,6 +86,7 @@ namespace Ascend.Core
         public int Gold { get; set; }
         public List<string> AttackIds { get; set; } = new List<string>();
         public bool IsUnique { get; set; }
+        public bool IsTyrant { get; set; }
         public int Ring { get; set; }
         public List<string> Habitats { get; set; } = new List<string>();
         public string LootTableId { get; set; }
@@ -112,10 +146,15 @@ namespace Ascend.Core
         public IReadOnlyDictionary<string, LootTableData> LootTables { get; }
         public IReadOnlyDictionary<string, ItemData> Items { get; }
         public CombatTuning Tuning { get; }
+        public IReadOnlyDictionary<string, SiegeWaveData> SiegeWaves { get; }
+        public WorldTuning World { get; }
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
-            IEnumerable<LootTableData> loot, IEnumerable<ItemData> items, CombatTuning tuning)
+            IEnumerable<LootTableData> loot, IEnumerable<ItemData> items, CombatTuning tuning,
+            IEnumerable<SiegeWaveData> siegeWaves = null, WorldTuning world = null)
         {
+            SiegeWaves = Index(siegeWaves, w => w.RegionId, "siege wave set");
+            World = world ?? new WorldTuning();
             Regions = Index(regions, r => r.Id, "region");
             Species = Index(species, s => s.Id, "species");
             Attacks = Index(attacks, a => a.Id, "attack");
@@ -126,6 +165,8 @@ namespace Ascend.Core
 
         public IEnumerable<SpeciesData> SpeciesInRing(int ring) => Species.Values.Where(s => s.Ring == ring);
         public IEnumerable<SpeciesData> SpeciesInRegion(string regionId) => Species.Values.Where(s => s.Habitats.Contains(regionId));
+        public SpeciesData TyrantOf(string regionId) =>
+            Regions.TryGetValue(regionId, out var r) && r.TyrantSpeciesId != null && Species.TryGetValue(r.TyrantSpeciesId, out var t) ? t : null;
 
         static Dictionary<string, T> Index<T>(IEnumerable<T> rows, Func<T, string> id, string what)
         {

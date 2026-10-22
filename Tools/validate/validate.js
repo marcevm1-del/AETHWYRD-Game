@@ -21,7 +21,8 @@ const COLLECTIONS = {
   npcs: { files: ['NPCs/npcs.json'], schema: 'npc' },
   quests: { files: ['Quests/quests.json'], schema: 'quest' },
   weekly: { files: ['Quests/weekly_board.json'], schema: 'weekly_quest' },
-  inns: { files: ['World/inns.json'], schema: 'inn' }
+  inns: { files: ['World/inns.json'], schema: 'inn' },
+  siege: { files: ['World/siege_waves.json'], schema: 'siege_wave' }
 };
 
 const errors = [];
@@ -120,6 +121,35 @@ for (const q of [...rows.quests, ...rows.weekly]) {
 for (const i of rows.inns) {
   ref(`${i.id}.regionId`, i.regionId, 'regions'); ref(`${i.id}.keeperNpcId`, i.keeperNpcId, 'npcs', true);
   if (i.rooms.filter(r => r.tier === 'signature').length > 1) err(i.id, 'at most one signature room');
+}
+
+// Regional Siege & Liberation: every region has a unique Tyrant living there, or is marked noSiege.
+const speciesById = Object.fromEntries(rows.species.map(s => [s.id, s]));
+const famKeys = new Set(rows.species.map(s => s.familyKey));
+for (const r of rows.regions) {
+  if (r.noSiege) { if (r.tyrantSpeciesId) err(r.id, 'noSiege region must not have a Tyrant'); continue; }
+  if (!r.tyrantSpeciesId) { err(r.id, 'needs a tyrantSpeciesId or noSiege: true'); continue; }
+  const t = speciesById[r.tyrantSpeciesId];
+  if (!t) { err(r.id, `Tyrant "${r.tyrantSpeciesId}" does not exist`); continue; }
+  if (!t.isUnique) err(r.id, `Tyrant ${t.id} must be a unique species`);
+  if (!t.habitats.includes(r.id)) err(r.id, `Tyrant ${t.id} must live in the region`);
+  if (!famKeys.has(r.siegeFaction)) err(r.id, `unknown siegeFaction "${r.siegeFaction}"`);
+  if (!(r.defenceSettlements || []).length) err(r.id, 'needs defenceSettlements');
+  if (!rows.siege.some(w => w.regionId === r.id)) err(r.id, 'besieged region has no siege wave set');
+}
+for (const w of rows.siege) {
+  const reg = rows.regions.find(r => r.id === w.regionId);
+  if (!reg) { err(w.id, `unknown region ${w.regionId}`); continue; }
+  if (reg.noSiege) err(w.id, 'wave set for a noSiege region');
+  if (w.tyrantSpeciesId !== reg.tyrantSpeciesId) err(w.id, 'tyrant does not match the region');
+  for (const wave of w.waves) for (const id of [...wave.units.map(u => u.speciesId), wave.lieutenantSpeciesId].filter(Boolean)) {
+    const sp = speciesById[id];
+    if (!sp) err(w.id, `unknown species ${id}`);
+    else if (!sp.habitats.includes(w.regionId)) err(w.id, `${id} does not live in ${w.regionId}`);
+  }
+}
+for (const q of rows.quests) {
+  if (q.type === 'SiegeDefence' && q.regionState !== 'besieged') err(q.id, 'SiegeDefence quests must have regionState "besieged"');
 }
 
 // Weekly board: every weekday needs a special and at least 3 dailies (board shows 3 per day)

@@ -37,6 +37,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 0,
   "habitats": [
    "reg_aldmere",
@@ -105,6 +106,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -173,6 +175,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -243,6 +246,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -314,6 +318,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -383,6 +388,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_moraveil",
@@ -452,6 +458,7 @@
    "atk_split"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -523,6 +530,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -592,6 +600,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -662,6 +671,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -732,6 +742,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -804,6 +815,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -875,6 +887,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -943,6 +956,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -1012,6 +1026,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_labyrinth_abyss"
@@ -1080,6 +1095,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 0,
   "habitats": [
    "reg_aldmere",
@@ -1147,6 +1163,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -1214,6 +1231,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -1282,6 +1300,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -1351,6 +1370,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -1419,6 +1439,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_iron_hold",
@@ -1488,6 +1509,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_strife_marches",
@@ -1559,6 +1581,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -1627,6 +1650,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_moraveil",
@@ -1696,6 +1720,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -1767,6 +1792,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -1840,6 +1866,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -1908,6 +1935,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -1978,6 +2006,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -2048,6 +2077,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -2119,6 +2149,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_iron_hold",
@@ -2190,6 +2221,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -2261,6 +2293,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -2331,6 +2364,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -2404,6 +2438,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -2476,6 +2511,7 @@
    "atk_leap"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 0,
   "habitats": [
    "reg_aldmere",
@@ -2545,6 +2581,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -2613,6 +2650,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -2681,6 +2719,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -2751,6 +2790,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_hoshizora",
@@ -2822,6 +2862,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_fanghold",
@@ -2893,6 +2934,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_fanghold",
@@ -2962,6 +3004,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -3033,6 +3076,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_vharlen",
@@ -3103,6 +3147,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -3174,6 +3219,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -3243,6 +3289,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -3312,6 +3359,7 @@
    "atk_leap"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -3385,6 +3433,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -3456,6 +3505,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_frostveil"
@@ -3524,6 +3574,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -3595,6 +3646,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -3666,6 +3718,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -3735,6 +3788,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -3807,6 +3861,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -3877,6 +3932,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -3949,6 +4005,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -4022,6 +4079,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -4090,6 +4148,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -4160,6 +4219,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -4232,6 +4292,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -4302,6 +4363,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_moraveil",
@@ -4371,6 +4433,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_moraveil",
@@ -4443,6 +4506,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -4512,6 +4576,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -4583,6 +4648,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -4653,6 +4719,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -4725,6 +4792,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -4795,6 +4863,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_the_maw"
@@ -4863,6 +4932,7 @@
    "atk_acid_spray"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -4933,6 +5003,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -5003,6 +5074,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -5075,6 +5147,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -5145,6 +5218,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -5215,6 +5289,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -5286,6 +5361,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -5359,6 +5435,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -5427,6 +5504,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -5497,6 +5575,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5566,6 +5645,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5635,6 +5715,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5704,6 +5785,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5775,6 +5857,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5846,6 +5929,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5916,6 +6000,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -5988,6 +6073,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -6059,6 +6145,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -6129,6 +6216,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_sunscar",
@@ -6202,6 +6290,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_zarvan",
@@ -6275,6 +6364,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_vesper",
@@ -6344,6 +6434,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_vesper",
@@ -6414,6 +6505,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion",
@@ -6482,6 +6574,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar"
@@ -6549,6 +6642,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -6620,6 +6714,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -6692,6 +6787,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -6763,6 +6859,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_deep",
@@ -6835,6 +6932,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -6905,6 +7003,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -6974,6 +7073,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -7041,6 +7141,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -7110,6 +7211,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -7183,6 +7285,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_iron_hold",
@@ -7252,6 +7355,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_vharlen",
@@ -7321,6 +7425,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -7390,6 +7495,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_fanghold",
@@ -7460,6 +7566,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -7532,6 +7639,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_dragon_spine",
@@ -7602,6 +7710,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -7673,6 +7782,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_dragon_spine",
@@ -7746,6 +7856,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -7816,6 +7927,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion"
@@ -7883,6 +7995,7 @@
    "atk_stone_spike"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_calamity_steppe"
@@ -7950,6 +8063,7 @@
    "atk_grab_and_throw"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -8021,6 +8135,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -8091,6 +8206,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -8163,6 +8279,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_deep",
@@ -8235,6 +8352,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -8306,6 +8424,7 @@
    "atk_stone_spike"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep"
@@ -8375,6 +8494,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere"
@@ -8444,6 +8564,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_greymoor",
@@ -8515,6 +8636,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_xochitl_mire",
@@ -8587,6 +8709,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_xochitl_mire",
@@ -8656,6 +8779,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_zaruma",
@@ -8727,6 +8851,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_xochitl_mire",
@@ -8799,6 +8924,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_xochitl_mire",
@@ -8871,6 +8997,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_stormreach",
@@ -8942,6 +9069,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -9012,6 +9140,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_lirian"
@@ -9081,6 +9210,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -9150,6 +9280,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -9222,6 +9353,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_hoshizora",
@@ -9292,6 +9424,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_dragon_spine",
@@ -9366,6 +9499,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -9436,6 +9570,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_dragon_spine",
@@ -9507,6 +9642,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_whitewater_reach",
@@ -9578,6 +9714,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion"
@@ -9647,6 +9784,7 @@
    "atk_ember_burst"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold"
@@ -9717,6 +9855,7 @@
    "atk_frost_breath"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_frostveil"
@@ -9785,6 +9924,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_stormreach"
@@ -9855,6 +9995,7 @@
    "atk_stone_spike"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_dragon_spine"
@@ -9925,6 +10066,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -9994,6 +10136,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -10062,6 +10205,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -10131,6 +10275,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -10200,6 +10345,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -10269,6 +10415,7 @@
    "atk_disguise"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -10337,6 +10484,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -10405,6 +10553,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -10476,6 +10625,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -10546,6 +10696,7 @@
    "atk_disguise"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -10619,6 +10770,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_zarvan",
@@ -10690,6 +10842,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -10759,6 +10912,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_heavenreach",
@@ -10829,6 +10983,7 @@
    "atk_disguise"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_aurumdeep",
@@ -10900,6 +11055,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -10970,6 +11126,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_vesper",
@@ -11038,6 +11195,7 @@
    "atk_stone_spike"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -11105,6 +11263,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -11174,6 +11333,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_whisperwood",
@@ -11246,6 +11406,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -11316,6 +11477,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -11387,6 +11549,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_hoshizora",
@@ -11457,6 +11620,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_hoshizora",
@@ -11527,6 +11691,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -11599,6 +11764,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_dragon_spine",
@@ -11671,6 +11837,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -11741,6 +11908,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -11809,6 +11977,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion"
@@ -11878,6 +12047,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_root_of_the_world"
@@ -11947,6 +12117,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -12015,6 +12186,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -12085,6 +12257,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -12154,6 +12327,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -12225,6 +12399,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -12296,6 +12471,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -12367,6 +12543,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -12437,6 +12614,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -12507,6 +12685,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_lumbaya",
@@ -12580,6 +12759,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_shen_lu",
@@ -12650,6 +12830,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion",
@@ -12718,6 +12899,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_sylvaran"
@@ -12785,6 +12967,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -12854,6 +13037,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_iron_hold",
@@ -12924,6 +13108,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -12993,6 +13178,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -13064,6 +13250,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -13135,6 +13322,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_lumbaya",
@@ -13207,6 +13395,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -13280,6 +13469,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_nox_dominion",
@@ -13351,6 +13541,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion",
@@ -13421,6 +13612,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion",
@@ -13489,6 +13681,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion",
@@ -13558,6 +13751,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere"
@@ -13625,6 +13819,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -13695,6 +13890,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_greymoor",
@@ -13765,6 +13961,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_lumbaya",
@@ -13836,6 +14033,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_goldmere_coast",
@@ -13909,6 +14107,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_true_name_isles",
@@ -13980,6 +14179,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_whitewater_reach",
@@ -14049,6 +14249,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_goldmere_coast",
@@ -14119,6 +14320,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_true_name_isles",
@@ -14192,6 +14394,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_goldmere_coast",
@@ -14260,6 +14463,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_goldmere_coast",
@@ -14330,6 +14534,7 @@
    "atk_tide_lash"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_goldmere_coast"
@@ -14397,6 +14602,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 1,
   "habitats": [
    "reg_aldmere",
@@ -14466,6 +14672,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_lirian",
@@ -14535,6 +14742,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -14605,6 +14813,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -14674,6 +14883,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_hoshizora",
@@ -14745,6 +14955,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -14816,6 +15027,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_heavenreach",
@@ -14886,6 +15098,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_quaking_lands",
@@ -14954,6 +15167,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_heavenreach",
@@ -15022,6 +15236,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -15092,6 +15307,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -15159,6 +15375,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_lumbaya",
@@ -15228,6 +15445,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -15301,6 +15519,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -15370,6 +15589,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_sky_archipelago",
@@ -15443,6 +15663,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_zarvan",
@@ -15516,6 +15737,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -15584,6 +15806,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_heavenreach",
@@ -15653,6 +15876,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_labyrinth_abyss"
@@ -15720,6 +15944,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -15790,6 +16015,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -15860,6 +16086,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_sunscar",
@@ -15933,6 +16160,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -16002,6 +16230,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -16071,6 +16300,7 @@
    "atk_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_strife_marches",
@@ -16143,6 +16373,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -16215,6 +16446,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_quaking_lands",
@@ -16285,6 +16517,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -16355,6 +16588,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -16427,6 +16661,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sky_archipelago",
@@ -16497,6 +16732,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -16568,6 +16804,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_lirian",
@@ -16637,6 +16874,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_haneul",
@@ -16708,6 +16946,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -16777,6 +17016,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -16849,6 +17089,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_deep",
@@ -16920,6 +17161,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -16991,6 +17233,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_aurumdeep",
@@ -17061,6 +17304,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_kitsune_isles",
@@ -17132,6 +17376,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_kitsune_isles",
@@ -17202,6 +17447,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_kitsune_isles",
@@ -17274,6 +17520,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -17343,6 +17590,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -17412,6 +17660,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -17483,6 +17732,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_haneul",
@@ -17554,6 +17804,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_everdusk",
@@ -17625,6 +17876,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -17697,6 +17949,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -17766,6 +18019,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_everdusk",
@@ -17835,6 +18089,7 @@
    "atk_leap"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper"
@@ -17902,6 +18157,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper"
@@ -17970,6 +18226,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -18038,6 +18295,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_umbravel",
@@ -18108,6 +18366,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_labyrinth_deep",
@@ -18178,6 +18437,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_the_maw",
@@ -18247,6 +18507,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -18318,6 +18579,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_sunscar",
@@ -18389,6 +18651,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -18459,6 +18722,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_vesper",
@@ -18529,6 +18793,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zaruma",
@@ -18599,6 +18864,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_dunewhale_drift",
@@ -18671,6 +18937,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -18740,6 +19007,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -18811,6 +19079,7 @@
    "atk_stone_spike"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_dunewhale_drift"
@@ -18878,6 +19147,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -18946,6 +19216,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19016,6 +19287,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19089,6 +19361,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19159,6 +19432,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_zarvan",
@@ -19230,6 +19504,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -19299,6 +19574,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -19368,6 +19644,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_vharlen",
@@ -19438,6 +19715,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -19506,6 +19784,7 @@
    "atk_blood_lance"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion"
@@ -19574,6 +19853,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19642,6 +19922,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19712,6 +19993,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19782,6 +20064,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19851,6 +20134,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19924,6 +20208,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -19996,6 +20281,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -20065,6 +20351,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -20135,6 +20422,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -20205,6 +20493,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -20275,6 +20564,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20345,6 +20635,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20413,6 +20704,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20483,6 +20775,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20552,6 +20845,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20623,6 +20917,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20691,6 +20986,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20762,6 +21058,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -20832,6 +21129,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -20902,6 +21200,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_labyrinth_deep",
@@ -20971,6 +21270,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_labyrinth_deep",
@@ -21039,6 +21339,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -21108,6 +21409,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -21176,6 +21478,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -21246,6 +21549,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -21315,6 +21619,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -21383,6 +21688,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -21453,6 +21759,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -21522,6 +21829,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_moraveil",
@@ -21591,6 +21899,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -21661,6 +21970,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -21731,6 +22041,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -21802,6 +22113,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -21871,6 +22183,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -21940,6 +22253,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -22010,6 +22324,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -22078,6 +22393,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -22147,6 +22463,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -22216,6 +22533,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -22286,6 +22604,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -22355,6 +22674,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -22424,6 +22744,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -22492,6 +22813,7 @@
    "atk_leap"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -22562,6 +22884,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -22631,6 +22954,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -22698,6 +23022,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -22768,6 +23093,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -22837,6 +23163,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -22906,6 +23233,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -22975,6 +23303,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_strife_marches",
@@ -23045,6 +23374,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_frostveil",
@@ -23113,6 +23443,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_quaking_lands",
@@ -23182,6 +23513,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_calamity_steppe"
@@ -23250,6 +23582,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -23320,6 +23653,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -23389,6 +23723,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -23460,6 +23795,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -23531,6 +23867,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -23602,6 +23939,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -23672,6 +24010,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -23742,6 +24081,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_xochitl_mire",
@@ -23812,6 +24152,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -23883,6 +24224,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -23953,6 +24295,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -24024,6 +24367,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -24092,6 +24436,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -24161,6 +24506,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_moraveil",
@@ -24230,6 +24576,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -24298,6 +24645,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -24367,6 +24715,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zaruma",
@@ -24436,6 +24785,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -24506,6 +24856,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -24576,6 +24927,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -24644,6 +24996,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -24712,6 +25065,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -24781,6 +25135,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -24850,6 +25205,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -24920,6 +25276,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -24990,6 +25347,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_labyrinth_deep",
@@ -25059,6 +25417,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -25129,6 +25488,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_lumbaya",
@@ -25198,6 +25558,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -25269,6 +25630,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -25338,6 +25700,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25408,6 +25771,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25479,6 +25843,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25548,6 +25913,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25619,6 +25985,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25687,6 +26054,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25755,6 +26123,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25824,6 +26193,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -25894,6 +26264,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_labyrinth_deep",
@@ -25965,6 +26336,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -26034,6 +26406,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_lumbaya",
@@ -26104,6 +26477,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_vesper",
@@ -26175,6 +26549,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_vesper",
@@ -26245,6 +26620,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -26313,6 +26689,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -26383,6 +26760,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -26453,6 +26831,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -26524,6 +26903,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_labyrinth_deep",
@@ -26592,6 +26972,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -26661,6 +27042,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -26729,6 +27111,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -26798,6 +27181,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_fanghold",
@@ -26867,6 +27251,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_strife_marches",
@@ -26937,6 +27322,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_vharlen",
@@ -27008,6 +27394,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_iron_hold",
@@ -27077,6 +27464,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -27147,6 +27535,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_vharlen",
@@ -27216,6 +27605,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_frostveil",
@@ -27286,6 +27676,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_vharlen",
@@ -27355,6 +27746,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_quaking_lands",
@@ -27424,6 +27816,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_dragon_spine",
@@ -27493,6 +27886,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_nox_dominion",
@@ -27561,6 +27955,7 @@
    "atk_stone_spike"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_nox_dominion"
@@ -27629,6 +28024,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -27699,6 +28095,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -27770,6 +28167,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -27839,6 +28237,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -27909,6 +28308,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_labyrinth_deep",
@@ -27980,6 +28380,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere"
@@ -28049,6 +28450,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -28118,6 +28520,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_lumbaya",
@@ -28187,6 +28590,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_kitsune_isles",
@@ -28258,6 +28662,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_dunewhale_drift",
@@ -28329,6 +28734,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_hoshizora",
@@ -28399,6 +28805,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_zarvan",
@@ -28470,6 +28877,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_goldmere_coast",
@@ -28540,6 +28948,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -28609,6 +29018,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -28679,6 +29089,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -28748,6 +29159,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -28817,6 +29229,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_stormreach",
@@ -28886,6 +29299,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_whitewater_reach",
@@ -28957,6 +29371,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_dragon_spine",
@@ -29025,6 +29440,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_dragon_spine",
@@ -29096,6 +29512,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -29167,6 +29584,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_nox_dominion"
@@ -29235,6 +29653,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -29306,6 +29725,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -29375,6 +29795,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -29443,6 +29864,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -29513,6 +29935,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_sunscar",
@@ -29581,6 +30004,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -29650,6 +30074,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_sunscar",
@@ -29719,6 +30144,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_zarvan",
@@ -29790,6 +30216,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -29858,6 +30285,7 @@
    "atk_disguise"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_vesper",
@@ -29927,6 +30355,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_sky_archipelago",
@@ -29996,6 +30425,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_vesper",
@@ -30065,6 +30495,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_whisperwood",
@@ -30133,6 +30564,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -30203,6 +30635,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -30273,6 +30706,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -30342,6 +30776,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -30410,6 +30845,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -30480,6 +30916,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -30551,6 +30988,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -30620,6 +31058,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -30689,6 +31128,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -30759,6 +31199,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_nox_dominion"
@@ -30826,6 +31267,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -30895,6 +31337,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -30965,6 +31408,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -31035,6 +31479,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -31104,6 +31549,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -31173,6 +31619,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -31243,6 +31690,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -31311,6 +31759,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -31380,6 +31829,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_lumbaya",
@@ -31449,6 +31899,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -31517,6 +31968,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_nox_dominion",
@@ -31585,6 +32037,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -31653,6 +32106,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -31723,6 +32177,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -31794,6 +32249,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -31864,6 +32320,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -31933,6 +32390,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_nox_dominion",
@@ -32003,6 +32461,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_nox_dominion",
@@ -32071,6 +32530,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_nox_dominion",
@@ -32141,6 +32601,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_nox_dominion",
@@ -32211,6 +32672,7 @@
    "atk_null_rift"
   ],
   "isUnique": true,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_vesper"
@@ -32279,6 +32741,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_nox_dominion",
@@ -32348,6 +32811,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere"
@@ -32415,6 +32879,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -32484,6 +32949,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_true_name_isles",
@@ -32554,6 +33020,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -32624,6 +33091,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_true_name_isles",
@@ -32694,6 +33162,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_true_name_isles",
@@ -32765,6 +33234,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_true_name_isles",
@@ -32834,6 +33304,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_goldmere_coast",
@@ -32902,6 +33373,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_goldmere_coast",
@@ -32971,6 +33443,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_goldmere_coast",
@@ -33040,6 +33513,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_goldmere_coast",
@@ -33109,6 +33583,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere"
@@ -33177,6 +33652,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -33246,6 +33722,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -33316,6 +33793,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_vharlen",
@@ -33386,6 +33864,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_stormreach",
@@ -33456,6 +33935,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_stormreach",
@@ -33526,6 +34006,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_heavenreach",
@@ -33595,6 +34076,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_sky_archipelago"
@@ -33664,6 +34146,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago"
@@ -33733,6 +34216,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_sky_archipelago",
@@ -33801,6 +34285,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_lumbaya",
@@ -33870,6 +34355,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_nox_dominion",
@@ -33940,6 +34426,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_hoshizora",
@@ -34011,6 +34498,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -34081,6 +34569,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_nox_dominion",
@@ -34151,6 +34640,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_sky_archipelago",
@@ -34221,6 +34711,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_sky_archipelago",
@@ -34290,6 +34781,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_xochitl_mire",
@@ -34359,6 +34851,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -34428,6 +34921,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -34498,6 +34992,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_nox_dominion",
@@ -34566,6 +35061,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -34635,6 +35131,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_zaruma",
@@ -34705,6 +35202,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -34774,6 +35272,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zaruma",
@@ -34844,6 +35343,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -34912,6 +35412,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -34980,6 +35481,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sky_archipelago",
@@ -35050,6 +35552,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_lirian",
@@ -35120,6 +35623,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_lirian",
@@ -35189,6 +35693,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_aldmere",
@@ -35259,6 +35764,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -35329,6 +35835,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -35400,6 +35907,7 @@
    "atk_null_rift"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_aurumdeep",
@@ -35470,6 +35978,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_kitsune_isles",
@@ -35539,6 +36048,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_labyrinth_deep",
@@ -35608,6 +36118,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_kitsune_isles",
@@ -35677,6 +36188,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_hoshizora",
@@ -35747,6 +36259,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_kitsune_isles",
@@ -35816,6 +36329,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_haneul",
@@ -35884,6 +36398,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -35953,6 +36468,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_haneul",
@@ -36023,6 +36539,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_haneul",
@@ -36091,6 +36608,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_haneul",
@@ -36161,6 +36679,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_kitsune_isles",
@@ -36230,6 +36749,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -36300,6 +36820,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -36368,6 +36889,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper"
@@ -36437,6 +36959,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper"
@@ -36506,6 +37029,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper"
@@ -36575,6 +37099,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_aurumdeep",
@@ -36644,6 +37169,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_aurumdeep",
@@ -36713,6 +37239,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_labyrinth_deep",
@@ -36782,6 +37309,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_strife_marches",
@@ -36851,6 +37379,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_sunscar",
@@ -36921,6 +37450,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sunscar",
@@ -36991,6 +37521,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_vesper"
@@ -37059,6 +37590,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_zarvan",
@@ -37129,6 +37661,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_zaruma",
@@ -37199,6 +37732,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_zarvan",
@@ -37268,6 +37802,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_zaruma",
@@ -37336,6 +37871,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -37406,6 +37942,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -37473,6 +38010,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -37541,6 +38079,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -37609,6 +38148,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_zarvan",
@@ -37678,6 +38218,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -37747,6 +38288,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -37818,6 +38360,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_vharlen",
@@ -37889,6 +38432,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -37959,6 +38503,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38028,6 +38573,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38097,6 +38643,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38165,6 +38712,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38233,6 +38781,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38303,6 +38852,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38372,6 +38922,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38441,6 +38992,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_heavenreach",
@@ -38511,6 +39063,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -38580,6 +39133,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -38649,6 +39203,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38720,6 +39275,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38791,6 +39347,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38860,6 +39417,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -38930,6 +39488,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -38999,6 +39558,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -39068,6 +39628,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -39139,6 +39700,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -39207,6 +39769,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_labyrinth_deep",
@@ -39277,6 +39840,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -39347,6 +39911,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_labyrinth_deep",
@@ -39417,6 +39982,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -39487,6 +40053,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -39556,6 +40123,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -39625,6 +40193,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_strife_marches",
@@ -39695,6 +40264,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -39764,6 +40334,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -39834,6 +40405,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_strife_marches",
@@ -39903,6 +40475,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_hoshizora",
@@ -39970,6 +40543,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_strife_marches",
@@ -40038,6 +40612,7 @@
    "atk_guard_counter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -40108,6 +40683,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -40176,6 +40752,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -40246,6 +40823,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -40316,6 +40894,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -40384,6 +40963,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -40452,6 +41032,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -40520,6 +41101,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_iron_hold",
@@ -40591,6 +41173,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_iron_hold",
@@ -40660,6 +41243,7 @@
    "atk_frenzied_lunge"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -40729,6 +41313,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -40799,6 +41384,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -40868,6 +41454,7 @@
    "atk_leap"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -40937,6 +41524,7 @@
    "atk_howl"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -41007,6 +41595,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_fanghold",
@@ -41078,6 +41667,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -41148,6 +41738,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -41216,6 +41807,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_strife_marches",
@@ -41285,6 +41877,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -41353,6 +41946,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_fanghold",
@@ -41423,6 +42017,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_bastion",
@@ -41491,6 +42086,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_moraveil",
@@ -41561,6 +42157,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_moraveil",
@@ -41629,6 +42226,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -41697,6 +42295,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_fanghold",
@@ -41767,6 +42366,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -41838,6 +42438,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_hoshizora",
@@ -41907,6 +42508,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -41975,6 +42577,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -42045,6 +42648,7 @@
    "atk_thorn_volley"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_shen_lu",
@@ -42113,6 +42717,7 @@
    "atk_blood_lance"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_hoshizora",
@@ -42183,6 +42788,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_iron_hold",
@@ -42253,6 +42859,7 @@
    "atk_static_arc"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_shen_lu",
@@ -42323,6 +42930,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_labyrinth_upper",
@@ -42393,6 +43001,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -42462,6 +43071,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -42532,6 +43142,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_moraveil",
@@ -42601,6 +43212,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -42670,6 +43282,7 @@
    "atk_ember_burst"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_zaruma",
@@ -42739,6 +43352,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -42808,6 +43422,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -42878,6 +43493,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -42946,6 +43562,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -43015,6 +43632,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 5,
   "habitats": [
    "reg_moraveil",
@@ -43084,6 +43702,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -43155,6 +43774,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -43224,6 +43844,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 4,
   "habitats": [
    "reg_moraveil",
@@ -43292,6 +43913,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_deep",
@@ -43361,6 +43983,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -43431,6 +44054,7 @@
    "atk_gale_cutter"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_labyrinth_upper",
@@ -43501,6 +44125,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_labyrinth_deep",
@@ -43571,6 +44196,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -43642,6 +44268,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 2,
   "habitats": [
    "reg_aldmere",
@@ -43713,6 +44340,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -43782,6 +44410,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -43852,6 +44481,7 @@
    "atk_tide_lash"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -43923,6 +44553,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -43992,6 +44623,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -44063,6 +44695,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -44133,6 +44766,7 @@
    "atk_stone_spike"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_zarvan",
@@ -44202,6 +44836,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 3,
   "habitats": [
    "reg_aldmere",
@@ -44270,6 +44905,7 @@
    "atk_radiant_pulse"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 7,
   "habitats": [
    "reg_sunscar",
@@ -44341,6 +44977,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 6,
   "habitats": [
    "reg_cinderhole",
@@ -44410,6 +45047,7 @@
    "atk_frost_breath"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 8,
   "habitats": [
    "reg_vesper",
@@ -44479,6 +45117,7 @@
    "atk_venom_spit"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_labyrinth_abyss",
@@ -44548,6 +45187,7 @@
    "atk_shadow_grasp"
   ],
   "isUnique": false,
+  "isTyrant": false,
   "ring": 9,
   "habitats": [
    "reg_vesper",
@@ -44576,6 +45216,2768 @@
    "vfx": "shadow_wisps",
    "animSetId": "anim_dragon",
    "scale": 32
+  }
+ },
+ {
+  "id": "mon_grukk_goblin_chief_of_hollowpine",
+  "name": "Grukk, Goblin Chief of Hollowpine",
+  "familyKey": "goblinoid",
+  "family": "Goblinoids",
+  "type": "Humanoid",
+  "genre": "Dark Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "E+",
+  "level": 32,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Fire",
+  "weakness": "Water",
+  "sizeMeters": 2.4,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Aggressive",
+  "aiPattern": "aggressive_chase",
+  "stats": {
+   "hp": 29978,
+   "atk": 166,
+   "def": 138,
+   "matk": 110,
+   "mdef": 124,
+   "spd": 100
+  },
+  "xp": 15520,
+  "gold": 195,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter",
+   "atk_ember_burst"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 1,
+  "habitats": [
+   "reg_whisperwood"
+  ],
+  "lootTableId": "loot_goblinoid_e",
+  "signature": "cult runes carved into its red-eyed hide and a cleaver named Hungry",
+  "look": "The Grukk, Goblin Chief of Hollowpine is a person-sized creature with a lean humanoid frame, about 2.4 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is cult runes carved into its red-eyed hide and a cleaver named Hungry. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.",
+  "fieldNote": "Weak to Water. Attacks on sight. Expect a fight.",
+  "trope": "Goblins as horror in numbers (Goblin Slayer); hobgoblin → champion → king evolution",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "mask",
+    "armor_plates",
+    "cloak",
+    "horns"
+   ],
+   "material": "rough_skin_leather",
+   "palette": [
+    "#e2502b",
+    "#ffb347",
+    "#3a1a12"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "E",
+   "vfx": "embers_heat_haze",
+   "animSetId": "anim_medium_biped",
+   "scale": 2.4
+  }
+ },
+ {
+  "id": "mon_ashgrave_the_oathless_baron",
+  "name": "Ashgrave, the Oathless Baron",
+  "familyKey": "undead",
+  "family": "Undead",
+  "type": "Undead",
+  "genre": "Gothic Horror",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "C+",
+  "level": 86,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 2.4,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike",
+  "stats": {
+   "hp": 128451,
+   "atk": 425,
+   "def": 354,
+   "matk": 283,
+   "mdef": 319,
+   "spd": 100
+  },
+  "xp": 74865,
+  "gold": 769,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 2,
+  "habitats": [
+   "reg_aldmere"
+  ],
+  "lootTableId": "loot_undead_c",
+  "signature": "a Death Knight in rusted baronial plate, still issuing orders to a dead garrison",
+  "look": "The Ashgrave, the Oathless Baron is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is a Death Knight in rusted baronial plate, still issuing orders to a dead garrison. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Graveyard night threats; the lich and its phylactery; the vampire noble",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "tail",
+    "horns",
+    "weapon_socket"
+   ],
+   "material": "rot_bone",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "C",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_medium_biped",
+   "scale": 2.4
+  }
+ },
+ {
+  "id": "mon_the_hollow_abbot_choir_of_silence",
+  "name": "The Hollow Abbot, Choir of Silence",
+  "familyKey": "undead",
+  "family": "Undead",
+  "type": "Undead",
+  "genre": "Gothic Horror",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "C+",
+  "level": 86,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 2.2,
+  "rigId": "rig_floating",
+  "animSetId": "anim_floating",
+  "behavior": "Guardian",
+  "aiPattern": "guardian_hold+stalker",
+  "stats": {
+   "hp": 90684,
+   "atk": 212,
+   "def": 248,
+   "matk": 496,
+   "mdef": 460,
+   "spd": 90
+  },
+  "xp": 74865,
+  "gold": 769,
+  "attackIds": [
+   "atk_chill_touch",
+   "atk_phase_lunge",
+   "atk_wail",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 2,
+  "habitats": [
+   "reg_greymoor"
+  ],
+  "lootTableId": "loot_undead_c",
+  "signature": "a monk with no face beneath his cowl who erases the names of the dead",
+  "look": "The The Hollow Abbot, Choir of Silence is a person-sized creature with a bodiless, glowing form, about 2.2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a monk with no face beneath his cowl who erases the names of the dead. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Protects something nearby: a nest, a treasure, or a place.",
+  "trope": "Graveyard night threats; the lich and its phylactery; the vampire noble",
+  "designRecipe": {
+   "rigId": "rig_floating",
+   "baseMesh": "floating_base",
+   "parts": [
+    "lantern_core",
+    "trailing_wisps",
+    "tattered_shroud",
+    "chains"
+   ],
+   "material": "rot_bone",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "C",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_floating",
+   "scale": 2.2
+  }
+ },
+ {
+  "id": "mon_mycelia_the_spore_lord",
+  "name": "Mycelia, the Spore Lord",
+  "familyKey": "plant",
+  "family": "Plants & Fungi",
+  "type": "Plant",
+  "genre": "Fairy-tale Forest",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Poison",
+  "weakness": "Light",
+  "sizeMeters": 5,
+  "rigId": "rig_plant_walker",
+  "animSetId": "anim_plant_walker",
+  "behavior": "Passive",
+  "aiPattern": "passive_wander+stalker",
+  "stats": {
+   "hp": 244461,
+   "atk": 613,
+   "def": 441,
+   "matk": 441,
+   "mdef": 441,
+   "spd": 100
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_branch_sweep",
+   "atk_root_slam",
+   "atk_regrow",
+   "atk_venom_spit"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 3,
+  "habitats": [
+   "reg_sylvaran"
+  ],
+  "lootTableId": "loot_plant_b",
+  "signature": "a crown of glowing fungus fed by the World Tree's Blight",
+  "look": "The Mycelia, the Spore Lord is a huge creature with a tall, tree-like walking frame, about 5 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a crown of glowing fungus fed by the World Tree's Blight. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.",
+  "fieldNote": "Weak to Light. Leaves you alone unless attacked.",
+  "trope": "Screaming mandrakes, walking mushrooms and ancient treants",
+  "designRecipe": {
+   "rigId": "rig_plant_walker",
+   "baseMesh": "plant_walker_base",
+   "parts": [
+    "moss_cover",
+    "branch_arms",
+    "bark_plates",
+    "glowing_knots"
+   ],
+   "material": "bark_leaf",
+   "palette": [
+    "#8e44ad",
+    "#b8e986",
+    "#2d1b3d"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "B",
+   "vfx": "toxic_fog",
+   "animSetId": "anim_plant_walker",
+   "scale": 5
+  }
+ },
+ {
+  "id": "mon_mother_webcrawler_terror_of_the_small",
+  "name": "Mother Webcrawler, Terror of the Small",
+  "familyKey": "insect",
+  "family": "Insects & Arachnids",
+  "type": "Insectoid",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "C+",
+  "level": 86,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Poison",
+  "weakness": "Light",
+  "sizeMeters": 1.2,
+  "rigId": "rig_octopod",
+  "animSetId": "anim_octopod",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard+stalker",
+  "stats": {
+   "hp": 78393,
+   "atk": 354,
+   "def": 283,
+   "matk": 248,
+   "mdef": 283,
+   "spd": 135
+  },
+  "xp": 74865,
+  "gold": 769,
+  "attackIds": [
+   "atk_fang_bite",
+   "atk_web_shot",
+   "atk_ceiling_drop",
+   "atk_venom_spit"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 3,
+  "habitats": [
+   "reg_mossdeep"
+  ],
+  "lootTableId": "loot_insect_c",
+  "signature": "a spider no bigger than a cat, which to the Thimblefolk is a mountain",
+  "look": "The Mother Webcrawler, Terror of the Small is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.2 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a spider no bigger than a cat, which to the Thimblefolk is a mountain. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.",
+  "fieldNote": "Weak to Light. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Giant insects as low-floor threats; the arachne as an intelligent monster race",
+  "designRecipe": {
+   "rigId": "rig_octopod",
+   "baseMesh": "octopod_base",
+   "parts": [
+    "eye_cluster",
+    "leg_spikes",
+    "humanoid_torso"
+   ],
+   "material": "chitin_gloss",
+   "palette": [
+    "#8e44ad",
+    "#b8e986",
+    "#2d1b3d"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "C",
+   "vfx": "toxic_fog",
+   "animSetId": "anim_octopod",
+   "scale": 1.2
+  }
+ },
+ {
+  "id": "mon_the_drowned_choir_sirens_of_the_canals",
+  "name": "The Drowned Choir, Sirens of the Canals",
+  "familyKey": "aquatic",
+  "family": "Aquatic",
+  "type": "Aquatic",
+  "genre": "Seafaring",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B",
+  "level": 108,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Water",
+  "weakness": "Lightning",
+  "sizeMeters": 2,
+  "rigId": "rig_naga",
+  "animSetId": "anim_naga",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike+stalker",
+  "stats": {
+   "hp": 169437,
+   "atk": 530,
+   "def": 442,
+   "matk": 354,
+   "mdef": 398,
+   "spd": 100
+  },
+  "xp": 107715,
+  "gold": 1057,
+  "attackIds": [
+   "atk_coil_strike",
+   "atk_constrict",
+   "atk_hypnotic_gaze",
+   "atk_tide_lash"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 3,
+  "habitats": [
+   "reg_lirian"
+  ],
+  "lootTableId": "loot_aquatic_b",
+  "signature": "three sirens who sing in harmony; silence one and the song breaks",
+  "look": "The The Drowned Choir, Sirens of the Canals is a person-sized creature with an elegant serpentfolk build, about 2 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Survivors describe three sirens who sing in harmony; silence one and the song breaks. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.",
+  "fieldNote": "Weak to Lightning. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Sea kings and krakens (One Piece), sirens and merfolk",
+  "designRecipe": {
+   "rigId": "rig_naga",
+   "baseMesh": "naga_base",
+   "parts": [
+    "hood",
+    "multiple_arms",
+    "crown",
+    "jewelry"
+   ],
+   "material": "wet_scale",
+   "palette": [
+    "#2f7fd1",
+    "#9ad7ff",
+    "#123a5c"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "B",
+   "vfx": "mist_droplets",
+   "animSetId": "anim_naga",
+   "scale": 2
+  }
+ },
+ {
+  "id": "mon_varrick_kade_the_slaver_lord",
+  "name": "Varrick Kade, the Slaver Lord",
+  "familyKey": "humanoid_enemy",
+  "family": "Humanoid Enemies",
+  "type": "Humanoid",
+  "genre": "Low Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "None",
+  "weakness": "Fire",
+  "sizeMeters": 1.9,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Pack",
+  "aiPattern": "pack_flank",
+  "stats": {
+   "hp": 194821,
+   "atk": 588,
+   "def": 490,
+   "matk": 274,
+   "mdef": 441,
+   "spd": 100
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 4,
+  "habitats": [
+   "reg_fanghold"
+  ],
+  "lootTableId": "loot_humanoid_enemy_b",
+  "signature": "a whip of braided chains and a ledger of every beastkin he has sold",
+  "look": "The Varrick Kade, the Slaver Lord is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Look for a whip of braided chains and a ledger of every beastkin he has sold. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.",
+  "fieldNote": "Weak to Fire. Never alone. Kill the leader first and the rest may scatter.",
+  "trope": "Bandits, cultists and fallen heroes",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "cloak",
+    "weapon_socket",
+    "horns"
+   ],
+   "material": "cloth_leather_metal",
+   "palette": [
+    "#8a8f98",
+    "#5b5f66",
+    "#c9c2b5"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "B",
+   "vfx": "dust_puffs",
+   "animSetId": "anim_medium_biped",
+   "scale": 1.9
+  }
+ },
+ {
+  "id": "mon_skarn_the_fire_giant_warlord",
+  "name": "Skarn, the Fire Giant Warlord",
+  "familyKey": "orc_giant",
+  "family": "Orcs, Ogres & Giants",
+  "type": "Giant",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Fire",
+  "weakness": "Water",
+  "sizeMeters": 9.5,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Aggressive",
+  "aiPattern": "aggressive_chase",
+  "stats": {
+   "hp": 631582,
+   "atk": 646,
+   "def": 969,
+   "matk": 388,
+   "mdef": 646,
+   "spd": 70
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_ember_burst"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 4,
+  "habitats": [
+   "reg_iron_hold"
+  ],
+  "lootTableId": "loot_orc_giant_a",
+  "signature": "a forge-hammer the size of a house and a beard of living flame",
+  "look": "The Skarn, the Fire Giant Warlord is a huge creature with a towering, heavy-limbed body, about 9.5 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe a forge-hammer the size of a house and a beard of living flame. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.",
+  "fieldNote": "Weak to Water. Attacks on sight. Expect a fight.",
+  "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "scar_decals",
+    "chain_belt"
+   ],
+   "material": "thick_skin",
+   "palette": [
+    "#e2502b",
+    "#ffb347",
+    "#3a1a12"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "embers_heat_haze",
+   "animSetId": "anim_large_biped",
+   "scale": 9.5
+  }
+ },
+ {
+  "id": "mon_grakkus_the_orc_disaster",
+  "name": "Grakkus, the Orc Disaster",
+  "familyKey": "orc_giant",
+  "family": "Orcs, Ogres & Giants",
+  "type": "Giant",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S-",
+  "level": 173,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 4.5,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Pack",
+  "aiPattern": "pack_flank",
+  "stats": {
+   "hp": 571672,
+   "atk": 702,
+   "def": 1053,
+   "matk": 421,
+   "mdef": 702,
+   "spd": 70
+  },
+  "xp": 228733,
+  "gold": 2042,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 4,
+  "habitats": [
+   "reg_moraveil"
+  ],
+  "lootTableId": "loot_orc_giant_s",
+  "signature": "a body swollen with devoured power and a crown of goblin bones",
+  "look": "The Grakkus, the Orc Disaster is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a body swollen with devoured power and a crown of goblin bones. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Never alone. Kill the leader first and the rest may scatter.",
+  "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "hair_mane",
+    "club_socket"
+   ],
+   "material": "thick_skin",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_large_biped",
+   "scale": 4.5
+  }
+ },
+ {
+  "id": "mon_diego_alvarez_voice_of_the_choir_of_chains",
+  "name": "Diego Alvarez, Voice of the Choir of Chains",
+  "familyKey": "humanoid_enemy",
+  "family": "Humanoid Enemies",
+  "type": "Humanoid",
+  "genre": "Low Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Blood",
+  "weakness": "Light",
+  "sizeMeters": 1.8,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Aggressive",
+  "aiPattern": "aggressive_chase+stalker",
+  "stats": {
+   "hp": 191245,
+   "atk": 588,
+   "def": 490,
+   "matk": 392,
+   "mdef": 441,
+   "spd": 100
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter",
+   "atk_blood_lance"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 4,
+  "habitats": [
+   "reg_strife_marches"
+  ],
+  "lootTableId": "loot_humanoid_enemy_b",
+  "signature": "a Veilborn con man in a red silk coat, smiling like a salesman",
+  "look": "The Diego Alvarez, Voice of the Choir of Chains is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for a Veilborn con man in a red silk coat, smiling like a salesman. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.",
+  "fieldNote": "Weak to Light. Attacks on sight. Expect a fight.",
+  "trope": "Bandits, cultists and fallen heroes",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "weapon_socket",
+    "armor_plates",
+    "cloak",
+    "horns"
+   ],
+   "material": "cloth_leather_metal",
+   "palette": [
+    "#8b0000",
+    "#d7263d",
+    "#1a0505"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "B",
+   "vfx": "blood_mist",
+   "animSetId": "anim_medium_biped",
+   "scale": 1.8
+  }
+ },
+ {
+  "id": "mon_the_tithe_colossus_hunger_of_the_foundation_stones",
+  "name": "The Tithe Colossus, Hunger of the Foundation Stones",
+  "familyKey": "construct",
+  "family": "Constructs & Mimics",
+  "type": "Construct",
+  "genre": "Ancient Ruins",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Light",
+  "weakness": "Dark",
+  "sizeMeters": 7,
+  "rigId": "rig_golem",
+  "animSetId": "anim_golem",
+  "behavior": "Guardian",
+  "aiPattern": "guardian_hold",
+  "stats": {
+   "hp": 379555,
+   "atk": 490,
+   "def": 735,
+   "matk": 294,
+   "mdef": 490,
+   "spd": 70
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_slam",
+   "atk_ground_pound",
+   "atk_guard_stance",
+   "atk_radiant_pulse"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 4,
+  "habitats": [
+   "reg_velmark"
+  ],
+  "lootTableId": "loot_construct_b",
+  "signature": "a Foundation Stone that woke up hungry for the nobles' mana",
+  "look": "The The Tithe Colossus, Hunger of the Foundation Stones is a huge creature with a heavy, hand-built humanoid shell, about 7 m tall. Its surface is rough, scarred and spiked, colored in warm gold and pearl white. Look for a Foundation Stone that woke up hungry for the nobles' mana. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by soft radiance and floating motes of light.",
+  "fieldNote": "Weak to Dark. Protects something nearby: a nest, a treasure, or a place.",
+  "trope": "Treasure-chest mimics and ancient guardian golems",
+  "designRecipe": {
+   "rigId": "rig_golem",
+   "baseMesh": "golem_base",
+   "parts": [
+    "crystal_growths",
+    "rune_core"
+   ],
+   "material": "stone_metal_runes",
+   "palette": [
+    "#fff3b0",
+    "#ffd166",
+    "#ffffff"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "B",
+   "vfx": "holy_motes",
+   "animSetId": "anim_golem",
+   "scale": 7
+  }
+ },
+ {
+  "id": "mon_kurogane_the_oni_warlord",
+  "name": "Kurogane, the Oni Warlord",
+  "familyKey": "yokai",
+  "family": "Yokai-Inspired Spirits",
+  "type": "Spirit",
+  "genre": "Japanese Folklore",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Fire",
+  "weakness": "Water",
+  "sizeMeters": 4.5,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Passive",
+  "aiPattern": "passive_wander",
+  "stats": {
+   "hp": 503900,
+   "atk": 646,
+   "def": 969,
+   "matk": 388,
+   "mdef": 646,
+   "spd": 70
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_ember_burst"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_hoshizora"
+  ],
+  "lootTableId": "loot_yokai_a",
+  "signature": "an iron club wrapped in torn prayer chains and a mask of red lacquer",
+  "look": "The Kurogane, the Oni Warlord is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its form is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show an iron club wrapped in torn prayer chains and a mask of red lacquer. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.",
+  "fieldNote": "Weak to Water. Leaves you alone unless attacked.",
+  "trope": "Gentle and terrifying spirits (Natsume's Book of Friends, Mushishi, Inuyasha)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "chain_belt",
+    "scar_decals"
+   ],
+   "material": "paper_ink_spirit",
+   "palette": [
+    "#e2502b",
+    "#ffb347",
+    "#3a1a12"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "embers_heat_haze",
+   "animSetId": "anim_large_biped",
+   "scale": 4.5
+  }
+ },
+ {
+  "id": "mon_the_hollow_bride_matriarch_of_the_long_necks",
+  "name": "The Hollow Bride, Matriarch of the Long Necks",
+  "familyKey": "yokai",
+  "family": "Yokai-Inspired Spirits",
+  "type": "Spirit",
+  "genre": "Japanese Folklore",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A",
+  "level": 146,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 2,
+  "rigId": "rig_aberrant",
+  "animSetId": "anim_aberrant",
+  "behavior": "Passive",
+  "aiPattern": "passive_wander+stalker",
+  "stats": {
+   "hp": 241588,
+   "atk": 743,
+   "def": 535,
+   "matk": 535,
+   "mdef": 535,
+   "spd": 100
+  },
+  "xp": 174387,
+  "gold": 1611,
+  "attackIds": [
+   "atk_grasp",
+   "atk_unfold",
+   "atk_mimic_voice",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_kitsune_isles"
+  ],
+  "lootTableId": "loot_yokai_a",
+  "signature": "a wedding veil over a neck that stretches across rooftops",
+  "look": "The The Hollow Bride, Matriarch of the Long Necks is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a wedding veil over a neck that stretches across rooftops. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Leaves you alone unless attacked.",
+  "trope": "Gentle and terrifying spirits (Natsume's Book of Friends, Mushishi, Inuyasha)",
+  "designRecipe": {
+   "rigId": "rig_aberrant",
+   "baseMesh": "aberrant_base",
+   "parts": [
+    "joint_spikes",
+    "eye_clusters",
+    "human_mask",
+    "extra_arms"
+   ],
+   "material": "paper_ink_spirit",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "A",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_aberrant",
+   "scale": 2
+  }
+ },
+ {
+  "id": "mon_ymgrir_the_frost_sovereign",
+  "name": "Ymgrir, the Frost Sovereign",
+  "familyKey": "orc_giant",
+  "family": "Orcs, Ogres & Giants",
+  "type": "Giant",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S-",
+  "level": 173,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Ice",
+  "weakness": "Fire",
+  "sizeMeters": 11,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 746440,
+   "atk": 702,
+   "def": 1053,
+   "matk": 421,
+   "mdef": 702,
+   "spd": 70
+  },
+  "xp": 228733,
+  "gold": 2042,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_frost_breath"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_frostveil"
+  ],
+  "lootTableId": "loot_orc_giant_s",
+  "signature": "a crown of glacier ice and a voice that starts avalanches",
+  "look": "The Ymgrir, the Frost Sovereign is a huge creature with a massive hunched brute frame, about 11 m tall. Its hide is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe a crown of glacier ice and a voice that starts avalanches. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.",
+  "fieldNote": "Weak to Fire. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "scar_decals",
+    "stone_growths",
+    "tusks"
+   ],
+   "material": "thick_skin",
+   "palette": [
+    "#bfe9ff",
+    "#5fa8d3",
+    "#f4fbff"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "frost_trail_snow",
+   "animSetId": "anim_large_biped",
+   "scale": 11
+  }
+ },
+ {
+  "id": "mon_wuxiang_the_hunger_colossus",
+  "name": "Wuxiang, the Hunger Colossus",
+  "familyKey": "yokai",
+  "family": "Yokai-Inspired Spirits",
+  "type": "Spirit",
+  "genre": "Japanese Folklore",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 30,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike+stalker",
+  "stats": {
+   "hp": 1086074,
+   "atk": 762,
+   "def": 1143,
+   "matk": 457,
+   "mdef": 762,
+   "spd": 70
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_shen_lu"
+  ],
+  "lootTableId": "loot_yokai_s",
+  "signature": "a skeleton giant built from the bones of the starved",
+  "look": "The Wuxiang, the Hunger Colossus is a colossal creature with a massive hunched brute frame, about 30 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a skeleton giant built from the bones of the starved. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Gentle and terrifying spirits (Natsume's Book of Friends, Mushishi, Inuyasha)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "chain_belt",
+    "stone_growths",
+    "club_socket"
+   ],
+   "material": "paper_ink_spirit",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "S",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_large_biped",
+   "scale": 30
+  }
+ },
+ {
+  "id": "mon_varos_herald_of_the_red_gate",
+  "name": "Varos, Herald of the Red Gate",
+  "familyKey": "demon",
+  "family": "Demons",
+  "type": "Demon",
+  "genre": "Abyssal",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Void",
+  "weakness": "Light",
+  "sizeMeters": 3,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Guardian",
+  "aiPattern": "guardian_hold+stalker",
+  "stats": {
+   "hp": 346515,
+   "atk": 775,
+   "def": 646,
+   "matk": 517,
+   "mdef": 581,
+   "spd": 100
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter",
+   "atk_null_rift"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_haneul"
+  ],
+  "lootTableId": "loot_demon_a",
+  "signature": "a demon who steps out of every Gate that opens in Haneul's towns",
+  "look": "The Varos, Herald of the Red Gate is a large creature with a lean humanoid frame, about 3 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show a demon who steps out of every Gate that opens in Haneul's towns. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.",
+  "fieldNote": "Weak to Light. Protects something nearby: a nest, a treasure, or a place.",
+  "trope": "Demons as a people of the Abyss, not just evil (Frieren, Maoyuu)",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "horns",
+    "weapon_socket",
+    "cloak"
+   ],
+   "material": "demon_hide_emissive",
+   "palette": [
+    "#0b0b1a",
+    "#3d2c8d",
+    "#c9c9ff"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "A",
+   "vfx": "void_distortion",
+   "animSetId": "anim_medium_biped",
+   "scale": 3
+  }
+ },
+ {
+  "id": "mon_ysgrath_the_ice_jaw_leviathan",
+  "name": "Ysgrath, the Ice-Jaw Leviathan",
+  "familyKey": "aquatic",
+  "family": "Aquatic",
+  "type": "Aquatic",
+  "genre": "Seafaring",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Ice",
+  "weakness": "Fire",
+  "sizeMeters": 45,
+  "rigId": "rig_fish",
+  "animSetId": "anim_fish",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike",
+  "stats": {
+   "hp": 847281,
+   "atk": 953,
+   "def": 686,
+   "matk": 686,
+   "mdef": 686,
+   "spd": 100
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_bite",
+   "atk_breach_lunge",
+   "atk_thrash",
+   "atk_frost_breath"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_whitewater_reach"
+  ],
+  "lootTableId": "loot_aquatic_s",
+  "signature": "jaws of blue ice that break the frozen sea from below",
+  "look": "The Ysgrath, the Ice-Jaw Leviathan is a colossal creature with a streamlined aquatic body, about 45 m long. Its scales and skin are rough, scarred and spiked, colored in pale blues and frost-white. Look for jaws of blue ice that break the frozen sea from below. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.",
+  "fieldNote": "Weak to Fire. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Sea kings and krakens (One Piece), sirens and merfolk",
+  "designRecipe": {
+   "rigId": "rig_fish",
+   "baseMesh": "fish_base",
+   "parts": [
+    "gills",
+    "lure",
+    "scales_armored"
+   ],
+   "material": "wet_scale",
+   "palette": [
+    "#bfe9ff",
+    "#5fa8d3",
+    "#f4fbff"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "frost_trail_snow",
+   "animSetId": "anim_fish",
+   "scale": 45
+  }
+ },
+ {
+  "id": "mon_vel_thara_the_web_queen",
+  "name": "Vel'thara, the Web Queen",
+  "familyKey": "insect",
+  "family": "Insects & Arachnids",
+  "type": "Insectoid",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 4,
+  "rigId": "rig_octopod",
+  "animSetId": "anim_octopod",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard+stalker",
+  "stats": {
+   "hp": 193435,
+   "atk": 490,
+   "def": 392,
+   "matk": 343,
+   "mdef": 392,
+   "spd": 135
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_fang_bite",
+   "atk_web_shot",
+   "atk_ceiling_drop",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 5,
+  "habitats": [
+   "reg_umbravel"
+  ],
+  "lootTableId": "loot_insect_b",
+  "signature": "a crown of spider-silk and eight jeweled eyes above Umbravel's markets",
+  "look": "The Vel'thara, the Web Queen is a large creature with an eight-legged arachnid body, about 4 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a crown of spider-silk and eight jeweled eyes above Umbravel's markets. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Giant insects as low-floor threats; the arachne as an intelligent monster race",
+  "designRecipe": {
+   "rigId": "rig_octopod",
+   "baseMesh": "octopod_base",
+   "parts": [
+    "humanoid_torso",
+    "hair_bristles"
+   ],
+   "material": "chitin_gloss",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "B",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_octopod",
+   "scale": 4
+  }
+ },
+ {
+  "id": "mon_the_colossus_of_sunscar_walker_of_the_dunes",
+  "name": "The Colossus of Sunscar, Walker of the Dunes",
+  "familyKey": "construct",
+  "family": "Constructs & Mimics",
+  "type": "Construct",
+  "genre": "Ancient Ruins",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 2,
+  "menaceLabel": "Wild",
+  "element": "Earth",
+  "weakness": "Wind",
+  "sizeMeters": 60,
+  "rigId": "rig_golem",
+  "animSetId": "anim_golem",
+  "behavior": "Guardian",
+  "aiPattern": "guardian_hold",
+  "stats": {
+   "hp": 979011,
+   "atk": 646,
+   "def": 969,
+   "matk": 388,
+   "mdef": 646,
+   "spd": 70
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_slam",
+   "atk_ground_pound",
+   "atk_guard_stance",
+   "atk_stone_spike"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_sunscar"
+  ],
+  "lootTableId": "loot_construct_a",
+  "signature": "a walking ruin you can climb, with a Valdrisian heart-core",
+  "look": "The The Colossus of Sunscar, Walker of the Dunes is a colossal creature with a towering machine-like frame, about 60 m tall. Its surface is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a walking ruin you can climb, with a Valdrisian heart-core. It has alert animal eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It prowls, surrounded by pebbles that tremble and float near it.",
+  "fieldNote": "Weak to Wind. Protects something nearby: a nest, a treasure, or a place.",
+  "trope": "Treasure-chest mimics and ancient guardian golems",
+  "designRecipe": {
+   "rigId": "rig_golem",
+   "baseMesh": "golem_base",
+   "parts": [
+    "empty_visor",
+    "crystal_growths"
+   ],
+   "material": "stone_metal_runes",
+   "palette": [
+    "#8b5a2b",
+    "#c2a878",
+    "#4a4a3a"
+   ],
+   "menaceStyle": "real-animal silhouette with one fantasy exaggeration",
+   "rankOrnament": "A",
+   "vfx": "rock_debris",
+   "animSetId": "anim_golem",
+   "scale": 60
+  }
+ },
+ {
+  "id": "mon_krakenmother_ys_queen_of_the_wreck_tide",
+  "name": "Krakenmother Ys, Queen of the Wreck Tide",
+  "familyKey": "aquatic",
+  "family": "Aquatic",
+  "type": "Aquatic",
+  "genre": "Seafaring",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Water",
+  "weakness": "Lightning",
+  "sizeMeters": 40,
+  "rigId": "rig_cephalopod",
+  "animSetId": "anim_cephalopod",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard+stalker",
+  "stats": {
+   "hp": 826429,
+   "atk": 953,
+   "def": 686,
+   "matk": 686,
+   "mdef": 686,
+   "spd": 100
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_tentacle_slap",
+   "atk_drag_under",
+   "atk_ink_cloud",
+   "atk_tide_lash"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_goldmere_coast"
+  ],
+  "lootTableId": "loot_aquatic_s",
+  "signature": "a mother kraken wearing sunken ships like jewelry",
+  "look": "The Krakenmother Ys, Queen of the Wreck Tide is a colossal creature with a tentacled, soft-bodied form, about 40 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a mother kraken wearing sunken ships like jewelry. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.",
+  "fieldNote": "Weak to Lightning. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Sea kings and krakens (One Piece), sirens and merfolk",
+  "designRecipe": {
+   "rigId": "rig_cephalopod",
+   "baseMesh": "cephalopod_base",
+   "parts": [
+    "tentacles",
+    "beak",
+    "glowing_spots"
+   ],
+   "material": "wet_scale",
+   "palette": [
+    "#2f7fd1",
+    "#9ad7ff",
+    "#123a5c"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "S",
+   "vfx": "mist_droplets",
+   "animSetId": "anim_cephalopod",
+   "scale": 40
+  }
+ },
+ {
+  "id": "mon_zahhar_king_of_the_divs",
+  "name": "Zahhar, King of the Divs",
+  "familyKey": "orc_giant",
+  "family": "Orcs, Ogres & Giants",
+  "type": "Giant",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 8,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Aggressive",
+  "aiPattern": "aggressive_chase",
+  "stats": {
+   "hp": 601144,
+   "atk": 646,
+   "def": 969,
+   "matk": 388,
+   "mdef": 646,
+   "spd": 70
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_zarvan"
+  ],
+  "lootTableId": "loot_orc_giant_a",
+  "signature": "horns of black iron and a throne carried by lesser divs",
+  "look": "The Zahhar, King of the Divs is a huge creature with a towering, heavy-limbed body, about 8 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe horns of black iron and a throne carried by lesser divs. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Attacks on sight. Expect a fight.",
+  "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "stone_growths",
+    "club_socket",
+    "tusks",
+    "scar_decals"
+   ],
+   "material": "thick_skin",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_large_biped",
+   "scale": 8
+  }
+ },
+ {
+  "id": "mon_mansacor_the_gold_eating_manticore",
+  "name": "Mansacor, the Gold-Eating Manticore",
+  "familyKey": "chimera",
+  "family": "Chimeras & Mythic Beasts",
+  "type": "Mythic Beast",
+  "genre": "World Myth",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Earth",
+  "weakness": "Wind",
+  "sizeMeters": 5,
+  "rigId": "rig_quad_large",
+  "animSetId": "anim_quad_large",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 409421,
+   "atk": 775,
+   "def": 646,
+   "matk": 517,
+   "mdef": 581,
+   "spd": 100
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_maul",
+   "atk_pounce",
+   "atk_howl",
+   "atk_stone_spike"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_zaruma"
+  ],
+  "lootTableId": "loot_chimera_a",
+  "signature": "a hide studded with swallowed gold coins that ring when it moves",
+  "look": "The Mansacor, the Gold-Eating Manticore is a huge creature with a powerful four-legged hunter's body, about 5 m long. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a hide studded with swallowed gold coins that ring when it moves. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.",
+  "fieldNote": "Weak to Wind. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Greek, Persian and East Asian mythic beasts",
+  "designRecipe": {
+   "rigId": "rig_quad_large",
+   "baseMesh": "quad_large_base",
+   "parts": [
+    "mane",
+    "tail_club",
+    "fangs_long"
+   ],
+   "material": "mixed_hide",
+   "palette": [
+    "#8b5a2b",
+    "#c2a878",
+    "#4a4a3a"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "rock_debris",
+   "animSetId": "anim_quad_large",
+   "scale": 5
+  }
+ },
+ {
+  "id": "mon_glassmaw_worm_of_the_endless_dune",
+  "name": "Glassmaw, Worm of the Endless Dune",
+  "familyKey": "sandborne",
+  "family": "Sandborne",
+  "type": "Desert Beast",
+  "genre": "Desert Epic",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Earth",
+  "weakness": "Wind",
+  "sizeMeters": 70,
+  "rigId": "rig_serpent",
+  "animSetId": "anim_serpent",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 612599,
+   "atk": 646,
+   "def": 517,
+   "matk": 452,
+   "mdef": 517,
+   "spd": 135
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_strike",
+   "atk_constrict",
+   "atk_tail_sweep",
+   "atk_stone_spike"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_dunewhale_drift"
+  ],
+  "lootTableId": "loot_sandborne_a",
+  "signature": "a round mouth ringed with teeth of desert glass",
+  "look": "The Glassmaw, Worm of the Endless Dune is a colossal creature with a massive snake-like frame, about 70 m long. Its sand-scoured hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a round mouth ringed with teeth of desert glass. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.",
+  "fieldNote": "Weak to Wind. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Desert giants and sandworms (Dune, Children of the Whales)",
+  "designRecipe": {
+   "rigId": "rig_serpent",
+   "baseMesh": "serpent_base",
+   "parts": [
+    "scale_ridges",
+    "fins"
+   ],
+   "material": "sand_hide",
+   "palette": [
+    "#8b5a2b",
+    "#c2a878",
+    "#4a4a3a"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "rock_debris",
+   "animSetId": "anim_serpent",
+   "scale": 70
+  }
+ },
+ {
+  "id": "mon_xibalbar_the_hydra_of_the_mire",
+  "name": "Xibalbar, the Hydra of the Mire",
+  "familyKey": "reptile",
+  "family": "Reptiles",
+  "type": "Reptile",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Poison",
+  "weakness": "Light",
+  "sizeMeters": 10,
+  "rigId": "rig_serpent",
+  "animSetId": "anim_serpent",
+  "behavior": "Passive",
+  "aiPattern": "passive_wander+stalker",
+  "stats": {
+   "hp": 255519,
+   "atk": 490,
+   "def": 392,
+   "matk": 343,
+   "mdef": 392,
+   "spd": 135
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_strike",
+   "atk_constrict",
+   "atk_tail_sweep",
+   "atk_venom_spit"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_xochitl_mire"
+  ],
+  "lootTableId": "loot_reptile_b",
+  "signature": "seven heads, each wearing a feathered mask stolen from a temple",
+  "look": "The Xibalbar, the Hydra of the Mire is a huge creature with a coiling, legless body, about 10 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Its most striking feature is seven heads, each wearing a feathered mask stolen from a temple. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.",
+  "fieldNote": "Weak to Light. Leaves you alone unless attacked.",
+  "trope": "Lizardmen as a proud people; the petrifying basilisk",
+  "designRecipe": {
+   "rigId": "rig_serpent",
+   "baseMesh": "serpent_base",
+   "parts": [
+    "rattle_tail",
+    "scale_ridges"
+   ],
+   "material": "scale_matte",
+   "palette": [
+    "#8e44ad",
+    "#b8e986",
+    "#2d1b3d"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "B",
+   "vfx": "toxic_fog",
+   "animSetId": "anim_serpent",
+   "scale": 10
+  }
+ },
+ {
+  "id": "mon_the_nightmother_queen_of_the_nightshifters",
+  "name": "The Nightmother, Queen of the Nightshifters",
+  "familyKey": "aberration",
+  "family": "Aberrations",
+  "type": "Aberration",
+  "genre": "Cosmic Horror",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 5,
+  "menaceLabel": "Horror",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 2.2,
+  "rigId": "rig_aberrant",
+  "animSetId": "anim_aberrant",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike+stalker",
+  "stats": {
+   "hp": 283541,
+   "atk": 808,
+   "def": 581,
+   "matk": 581,
+   "mdef": 581,
+   "spd": 100
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_grasp",
+   "atk_unfold",
+   "atk_mimic_voice",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_lumbaya"
+  ],
+  "lootTableId": "loot_aberration_a",
+  "signature": "a kindly village grandmother whose shadow has wings",
+  "look": "The The Nightmother, Queen of the Nightshifters is a person-sized creature with a tall, impossibly thin frame, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe a kindly village grandmother whose shadow has wings. It has a human-like face in the wrong place. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Mimicking things in the dark",
+  "designRecipe": {
+   "rigId": "rig_aberrant",
+   "baseMesh": "aberrant_base",
+   "parts": [
+    "mouth_clusters",
+    "eye_clusters",
+    "human_mask"
+   ],
+   "material": "wet_flesh_unsettling",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "broken symmetry, mimicry, audio-first reveal",
+   "rankOrnament": "A",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_aberrant",
+   "scale": 2.2
+  }
+ },
+ {
+  "id": "mon_raikaru_the_storm_roc",
+  "name": "Raikaru, the Storm Roc",
+  "familyKey": "avian",
+  "family": "Avians",
+  "type": "Avian",
+  "genre": "High Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Lightning",
+  "weakness": "Earth",
+  "sizeMeters": 35,
+  "rigId": "rig_avian",
+  "animSetId": "anim_avian",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 682434,
+   "atk": 762,
+   "def": 610,
+   "matk": 533,
+   "mdef": 610,
+   "spd": 135
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_peck",
+   "atk_swoop",
+   "atk_screech",
+   "atk_static_arc"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_stormreach"
+  ],
+  "lootTableId": "loot_avian_s",
+  "signature": "wings that carry the weekly world-storm on their back",
+  "look": "The Raikaru, the Storm Roc is a colossal creature with a tall, long-legged bird build, about 35 m tall. Its plumage is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe wings that carry the weekly world-storm on their back. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.",
+  "fieldNote": "Weak to Earth. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Griffons, harpies and phoenixes of classic fantasy",
+  "designRecipe": {
+   "rigId": "rig_avian",
+   "baseMesh": "avian_base",
+   "parts": [
+    "beak_hooked",
+    "crest",
+    "talons",
+    "wing_feathers"
+   ],
+   "material": "feather_groom",
+   "palette": [
+    "#ffe14d",
+    "#6c5ce7",
+    "#1b1b3a"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "arc_sparks",
+   "animSetId": "anim_avian",
+   "scale": 35
+  }
+ },
+ {
+  "id": "mon_the_nameless_tide_a_serpent_without_a_name",
+  "name": "The Nameless Tide, a Serpent Without a Name",
+  "familyKey": "aquatic",
+  "family": "Aquatic",
+  "type": "Aquatic",
+  "genre": "Seafaring",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Water",
+  "weakness": "Lightning",
+  "sizeMeters": 30,
+  "rigId": "rig_serpent",
+  "animSetId": "anim_serpent",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike+stalker",
+  "stats": {
+   "hp": 513250,
+   "atk": 646,
+   "def": 517,
+   "matk": 452,
+   "mdef": 517,
+   "spd": 135
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_strike",
+   "atk_constrict",
+   "atk_tail_sweep",
+   "atk_tide_lash"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_true_name_isles"
+  ],
+  "lootTableId": "loot_aquatic_a",
+  "signature": "a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs",
+  "look": "The The Nameless Tide, a Serpent Without a Name is a colossal creature with a long, sinuous serpentine body, about 30 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.",
+  "fieldNote": "Weak to Lightning. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Sea kings and krakens (One Piece), sirens and merfolk",
+  "designRecipe": {
+   "rigId": "rig_serpent",
+   "baseMesh": "serpent_base",
+   "parts": [
+    "scale_ridges",
+    "horns_swept"
+   ],
+   "material": "wet_scale",
+   "palette": [
+    "#2f7fd1",
+    "#9ad7ff",
+    "#123a5c"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "A",
+   "vfx": "mist_droplets",
+   "animSetId": "anim_serpent",
+   "scale": 30
+  }
+ },
+ {
+  "id": "mon_lumen_eater_the_abyss_angler",
+  "name": "Lumen-Eater, the Abyss Angler",
+  "familyKey": "aquatic",
+  "family": "Aquatic",
+  "type": "Aquatic",
+  "genre": "Seafaring",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 12,
+  "rigId": "rig_fish",
+  "animSetId": "anim_fish",
+  "behavior": "Swarm",
+  "aiPattern": "swarm_surround+stalker",
+  "stats": {
+   "hp": 481253,
+   "atk": 808,
+   "def": 581,
+   "matk": 581,
+   "mdef": 581,
+   "spd": 100
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_bite",
+   "atk_breach_lunge",
+   "atk_thrash",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_hollow_sea"
+  ],
+  "lootTableId": "loot_aquatic_a",
+  "signature": "a lure of stolen moonlight dangling over a mouth of glass teeth",
+  "look": "The Lumen-Eater, the Abyss Angler is a huge creature with a heavy-jawed fish frame, about 12 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a lure of stolen moonlight dangling over a mouth of glass teeth. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Dangerous in numbers. Area attacks and chokepoints help.",
+  "trope": "Sea kings and krakens (One Piece), sirens and merfolk",
+  "designRecipe": {
+   "rigId": "rig_fish",
+   "baseMesh": "fish_base",
+   "parts": [
+    "fins_sail",
+    "scales_armored",
+    "teeth_rows",
+    "lure"
+   ],
+   "material": "wet_scale",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "A",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_fish",
+   "scale": 12
+  }
+ },
+ {
+  "id": "mon_the_gentle_warden_keeper_of_ashira",
+  "name": "The Gentle Warden, Keeper of Ashira",
+  "familyKey": "aberration",
+  "family": "Aberrations",
+  "type": "Aberration",
+  "genre": "Cosmic Horror",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "B+",
+  "level": 120,
+  "menace": 5,
+  "menaceLabel": "Horror",
+  "element": "Void",
+  "weakness": "Light",
+  "sizeMeters": 2.1,
+  "rigId": "rig_aberrant",
+  "animSetId": "anim_aberrant",
+  "behavior": "Aggressive",
+  "aiPattern": "aggressive_chase+stalker",
+  "stats": {
+   "hp": 183288,
+   "atk": 613,
+   "def": 441,
+   "matk": 441,
+   "mdef": 441,
+   "spd": 100
+  },
+  "xp": 127464,
+  "gold": 1225,
+  "attackIds": [
+   "atk_grasp",
+   "atk_unfold",
+   "atk_mimic_voice",
+   "atk_null_rift"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 6,
+  "habitats": [
+   "reg_ashira_vale"
+  ],
+  "lootTableId": "loot_aberration_b",
+  "signature": "a smiling elder with a face too smooth, who tests the village children",
+  "look": "The The Gentle Warden, Keeper of Ashira is a person-sized creature with a shape that keeps rearranging itself, about 2.1 m tall. Its skin is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Survivors describe a smiling elder with a face too smooth, who tests the village children. It has too many eyes, opening one after another. Faint runes glow along its body when it fights. It copies the walk of whatever it hunts, surrounded by warped air, as if space bends around it.",
+  "fieldNote": "Weak to Light. Attacks on sight. Expect a fight.",
+  "trope": "Mimicking things in the dark",
+  "designRecipe": {
+   "rigId": "rig_aberrant",
+   "baseMesh": "aberrant_base",
+   "parts": [
+    "joint_spikes",
+    "human_mask",
+    "extra_arms",
+    "eye_clusters"
+   ],
+   "material": "wet_flesh_unsettling",
+   "palette": [
+    "#0b0b1a",
+    "#3d2c8d",
+    "#c9c9ff"
+   ],
+   "menaceStyle": "broken symmetry, mimicry, audio-first reveal",
+   "rankOrnament": "B",
+   "vfx": "void_distortion",
+   "animSetId": "anim_aberrant",
+   "scale": 2.1
+  }
+ },
+ {
+  "id": "mon_vyrmax_the_drake_lord",
+  "name": "Vyrmax, the Drake Lord",
+  "familyKey": "draconic",
+  "family": "Dragons",
+  "type": "Dragon",
+  "genre": "High Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Fire",
+  "weakness": "Water",
+  "sizeMeters": 14,
+  "rigId": "rig_wyvern",
+  "animSetId": "anim_wyvern",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 708647,
+   "atk": 914,
+   "def": 762,
+   "matk": 610,
+   "mdef": 686,
+   "spd": 100
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_talon_rake",
+   "atk_dive_bomb",
+   "atk_tail_whip",
+   "atk_ember_burst"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_dragon_spine"
+  ],
+  "lootTableId": "loot_draconic_s",
+  "signature": "a crown of broken horns from every rival drake it killed",
+  "look": "The Vyrmax, the Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 14 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Look for a crown of broken horns from every rival drake it killed. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.",
+  "fieldNote": "Weak to Water. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Dragons as proud, intelligent apex beings; wyverns as their lesser kin",
+  "designRecipe": {
+   "rigId": "rig_wyvern",
+   "baseMesh": "wyvern_base",
+   "parts": [
+    "horn_crown",
+    "talons",
+    "tail_spike",
+    "neck_frill"
+   ],
+   "material": "dragon_scale",
+   "palette": [
+    "#e2502b",
+    "#ffb347",
+    "#3a1a12"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "embers_heat_haze",
+   "animSetId": "anim_wyvern",
+   "scale": 14
+  }
+ },
+ {
+  "id": "mon_aquilon_the_roc_sovereign",
+  "name": "Aquilon, the Roc Sovereign",
+  "familyKey": "avian",
+  "family": "Avians",
+  "type": "Avian",
+  "genre": "High Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Wind",
+  "weakness": "Fire",
+  "sizeMeters": 40,
+  "rigId": "rig_avian",
+  "animSetId": "anim_avian",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 702465,
+   "atk": 762,
+   "def": 610,
+   "matk": 533,
+   "mdef": 610,
+   "spd": 135
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_peck",
+   "atk_swoop",
+   "atk_screech",
+   "atk_gale_cutter"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_heavenreach"
+  ],
+  "lootTableId": "loot_avian_s",
+  "signature": "a shadow as big as a cloud over the plateau",
+  "look": "The Aquilon, the Roc Sovereign is a colossal creature with a feathered avian body, about 40 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Look for a shadow as big as a cloud over the plateau. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by swirling leaves and a constant breeze.",
+  "fieldNote": "Weak to Fire. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Griffons, harpies and phoenixes of classic fantasy",
+  "designRecipe": {
+   "rigId": "rig_avian",
+   "baseMesh": "avian_base",
+   "parts": [
+    "talons",
+    "beak_hooked",
+    "tail_plumes"
+   ],
+   "material": "feather_groom",
+   "palette": [
+    "#a8e6cf",
+    "#dcedc1",
+    "#5b8c85"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "wind_ribbons",
+   "animSetId": "anim_avian",
+   "scale": 40
+  }
+ },
+ {
+  "id": "mon_morvane_vanguard_of_the_overlord",
+  "name": "Morvane, Vanguard of the Overlord",
+  "familyKey": "demon",
+  "family": "Demons",
+  "type": "Demon",
+  "genre": "Abyssal",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 2.6,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Aggressive",
+  "aiPattern": "aggressive_chase",
+  "stats": {
+   "hp": 330169,
+   "atk": 775,
+   "def": 646,
+   "matk": 517,
+   "mdef": 581,
+   "spd": 100
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_vharlen"
+  ],
+  "lootTableId": "loot_demon_a",
+  "signature": "black-steel armor engraved with the Overlord's sigil and a banner of the Red Gate",
+  "look": "The Morvane, Vanguard of the Overlord is a large creature with a broad-shouldered humanoid build, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is black-steel armor engraved with the Overlord's sigil and a banner of the Red Gate. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Attacks on sight. Expect a fight.",
+  "trope": "Demons as a people of the Abyss, not just evil (Frieren, Maoyuu)",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "armor_plates",
+    "tail",
+    "mask"
+   ],
+   "material": "demon_hide_emissive",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_medium_biped",
+   "scale": 2.6
+  }
+ },
+ {
+  "id": "mon_cogmaw_the_gremlin_engine_king",
+  "name": "Cogmaw, the Gremlin Engine-King",
+  "familyKey": "gremlin",
+  "family": "Gremlins",
+  "type": "Fey Pest",
+  "genre": "Steampunk Mischief",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A",
+  "level": 146,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Lightning",
+  "weakness": "Earth",
+  "sizeMeters": 3,
+  "rigId": "rig_small_biped",
+  "animSetId": "anim_small_biped",
+  "behavior": "Skittish",
+  "aiPattern": "skittish_flee",
+  "stats": {
+   "hp": 235710,
+   "atk": 594,
+   "def": 475,
+   "matk": 416,
+   "mdef": 475,
+   "spd": 135
+  },
+  "xp": 174387,
+  "gold": 1611,
+  "attackIds": [
+   "atk_stab",
+   "atk_thrown_junk",
+   "atk_frenzied_lunge",
+   "atk_static_arc"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_gearholm"
+  ],
+  "lootTableId": "loot_gremlin_a",
+  "signature": "a throne bolted onto a walking furnace that eats machines",
+  "look": "The Cogmaw, the Gremlin Engine-King is a large creature with a small, compact humanoid body, about 3 m tall. Its skin is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Look for a throne bolted onto a walking furnace that eats machines. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body.",
+  "fieldNote": "Weak to Earth. Flees when hurt. Snares or ranged attacks work best.",
+  "trope": "Machine-breaking pests",
+  "designRecipe": {
+   "rigId": "rig_small_biped",
+   "baseMesh": "small_biped_base",
+   "parts": [
+    "bone_trinkets",
+    "weapon_socket"
+   ],
+   "material": "rubbery_skin",
+   "palette": [
+    "#ffe14d",
+    "#6c5ce7",
+    "#1b1b3a"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "A",
+   "vfx": "arc_sparks",
+   "animSetId": "anim_small_biped",
+   "scale": 3
+  }
+ },
+ {
+  "id": "mon_cinderlord_vasque_the_smoke_mage",
+  "name": "Cinderlord Vasque, the Smoke Mage",
+  "familyKey": "humanoid_enemy",
+  "family": "Humanoid Enemies",
+  "type": "Humanoid",
+  "genre": "Low Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Fire",
+  "weakness": "Water",
+  "sizeMeters": 1.9,
+  "rigId": "rig_medium_biped",
+  "animSetId": "anim_medium_biped",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike+stalker",
+  "stats": {
+   "hp": 296622,
+   "atk": 775,
+   "def": 646,
+   "matk": 517,
+   "mdef": 581,
+   "spd": 100
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_slash",
+   "atk_heavy_swing",
+   "atk_guard_counter",
+   "atk_ember_burst"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_cinderhole"
+  ],
+  "lootTableId": "loot_humanoid_enemy_a",
+  "signature": "a gas mask of brass and lungs full of living smoke",
+  "look": "The Cinderlord Vasque, the Smoke Mage is a person-sized creature with a broad-shouldered humanoid build, about 1.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Its most striking feature is a gas mask of brass and lungs full of living smoke. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks.",
+  "fieldNote": "Weak to Water. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Bandits, cultists and fallen heroes",
+  "designRecipe": {
+   "rigId": "rig_medium_biped",
+   "baseMesh": "medium_biped_base",
+   "parts": [
+    "weapon_socket",
+    "cloak",
+    "tail"
+   ],
+   "material": "cloth_leather_metal",
+   "palette": [
+    "#e2502b",
+    "#ffb347",
+    "#3a1a12"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "A",
+   "vfx": "embers_heat_haze",
+   "animSetId": "anim_medium_biped",
+   "scale": 1.9
+  }
+ },
+ {
+  "id": "mon_thrakka_sabretooth_khan_of_the_steppe_horde",
+  "name": "Thrakka, Sabretooth Khan of the Steppe Horde",
+  "familyKey": "beast",
+  "family": "Beasts",
+  "type": "Beast",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Ice",
+  "weakness": "Fire",
+  "sizeMeters": 4,
+  "rigId": "rig_quad_large",
+  "animSetId": "anim_quad_large",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 489666,
+   "atk": 914,
+   "def": 762,
+   "matk": 610,
+   "mdef": 686,
+   "spd": 100
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_maul",
+   "atk_pounce",
+   "atk_howl",
+   "atk_frost_breath"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_bastion"
+  ],
+  "lootTableId": "loot_beast_s",
+  "signature": "two sabre fangs as long as spears and a horde that follows its howl",
+  "look": "The Thrakka, Sabretooth Khan of the Steppe Horde is a large creature with a long-legged predatory quadruped build, about 4 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Guild sketches always show two sabre fangs as long as spears and a horde that follows its howl. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.",
+  "fieldNote": "Weak to Fire. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "The horned rabbit \"rookie killer\" and wolf packs of every isekai starter forest",
+  "designRecipe": {
+   "rigId": "rig_quad_large",
+   "baseMesh": "quad_large_base",
+   "parts": [
+    "claws",
+    "fangs_long",
+    "armored_back"
+   ],
+   "material": "fur_groom",
+   "palette": [
+    "#bfe9ff",
+    "#5fa8d3",
+    "#f4fbff"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "frost_trail_snow",
+   "animSetId": "anim_quad_large",
+   "scale": 4
+  }
+ },
+ {
+  "id": "mon_the_briar_king_lord_of_the_winter_court",
+  "name": "The Briar King, Lord of the Winter Court",
+  "familyKey": "plant",
+  "family": "Plants & Fungi",
+  "type": "Plant",
+  "genre": "Fairy-tale Forest",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Ice",
+  "weakness": "Fire",
+  "sizeMeters": 4,
+  "rigId": "rig_plant_walker",
+  "animSetId": "anim_plant_walker",
+  "behavior": "Passive",
+  "aiPattern": "passive_wander",
+  "stats": {
+   "hp": 445151,
+   "atk": 953,
+   "def": 686,
+   "matk": 686,
+   "mdef": 686,
+   "spd": 100
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_branch_sweep",
+   "atk_root_slam",
+   "atk_regrow",
+   "atk_frost_breath"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_everdusk"
+  ],
+  "lootTableId": "loot_plant_s",
+  "signature": "a crown of frozen thorns and a cloak of dead roses",
+  "look": "The The Briar King, Lord of the Winter Court is a large creature with a walking body of bark and root, about 4 m tall. Its bark and leaves are rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe a crown of frozen thorns and a cloak of dead roses. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.",
+  "fieldNote": "Weak to Fire. Leaves you alone unless attacked.",
+  "trope": "Screaming mandrakes, walking mushrooms and ancient treants",
+  "designRecipe": {
+   "rigId": "rig_plant_walker",
+   "baseMesh": "plant_walker_base",
+   "parts": [
+    "branch_arms",
+    "bark_plates",
+    "moss_cover",
+    "glowing_knots"
+   ],
+   "material": "bark_leaf",
+   "palette": [
+    "#bfe9ff",
+    "#5fa8d3",
+    "#f4fbff"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "frost_trail_snow",
+   "animSetId": "anim_plant_walker",
+   "scale": 4
+  }
+ },
+ {
+  "id": "mon_ukhu_tal_stone_giant_of_the_first_making",
+  "name": "Ukhu-Tal, Stone Giant of the First Making",
+  "familyKey": "orc_giant",
+  "family": "Orcs, Ogres & Giants",
+  "type": "Giant",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 2,
+  "menaceLabel": "Wild",
+  "element": "Earth",
+  "weakness": "Wind",
+  "sizeMeters": 25,
+  "rigId": "rig_large_biped",
+  "animSetId": "anim_large_biped",
+  "behavior": "Territorial",
+  "aiPattern": "territorial_guard",
+  "stats": {
+   "hp": 1041453,
+   "atk": 762,
+   "def": 1143,
+   "matk": 457,
+   "mdef": 762,
+   "spd": 70
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_stomp",
+   "atk_club_slam",
+   "atk_grab_and_throw",
+   "atk_stone_spike"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_apu_highlands"
+  ],
+  "lootTableId": "loot_orc_giant_s",
+  "signature": "a body of terraced stone older than the Titans' war",
+  "look": "The Ukhu-Tal, Stone Giant of the First Making is a colossal creature with a massive hunched brute frame, about 25 m tall. Its hide is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a body of terraced stone older than the Titans' war. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by pebbles that tremble and float near it.",
+  "fieldNote": "Weak to Wind. Attacks only if you come close to its home; back away to avoid a fight.",
+  "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
+  "designRecipe": {
+   "rigId": "rig_large_biped",
+   "baseMesh": "large_biped_base",
+   "parts": [
+    "tusks",
+    "scar_decals",
+    "hair_mane"
+   ],
+   "material": "thick_skin",
+   "palette": [
+    "#8b5a2b",
+    "#c2a878",
+    "#4a4a3a"
+   ],
+   "menaceStyle": "real-animal silhouette with one fantasy exaggeration",
+   "rankOrnament": "S",
+   "vfx": "rock_debris",
+   "animSetId": "anim_large_biped",
+   "scale": 25
+  }
+ },
+ {
+  "id": "mon_ilyanthe_the_moon_harvester",
+  "name": "Ilyanthe, the Moon Harvester",
+  "familyKey": "vesperite",
+  "family": "Vesperites (Moon Raiders)",
+  "type": "Lunar Raider",
+  "genre": "Cosmic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S",
+  "level": 188,
+  "menace": 5,
+  "menaceLabel": "Horror",
+  "element": "Blood",
+  "weakness": "Light",
+  "sizeMeters": 6,
+  "rigId": "rig_floating",
+  "animSetId": "anim_floating",
+  "behavior": "Ambush",
+  "aiPattern": "ambush_strike+stalker",
+  "stats": {
+   "hp": 404897,
+   "atk": 457,
+   "def": 533,
+   "matk": 1067,
+   "mdef": 991,
+   "spd": 90
+  },
+  "xp": 261258,
+  "gold": 2293,
+  "attackIds": [
+   "atk_chill_touch",
+   "atk_phase_lunge",
+   "atk_wail",
+   "atk_blood_lance"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_lustrine_shores"
+  ],
+  "lootTableId": "loot_vesperite_s",
+  "signature": "a lantern cage of red glass holding the stolen souls of the gem-folk",
+  "look": "The Ilyanthe, the Moon Harvester is a huge creature with a bodiless, glowing form, about 6 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in arterial crimson and dried-blood brown. Its most striking feature is a lantern cage of red glass holding the stolen souls of the gem-folk. It has too many eyes, opening one after another. Its regal silhouette is crowned by a halo-like ring of aura. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron.",
+  "fieldNote": "Weak to Light. Waits in hiding. Perception skills and light sources reveal it.",
+  "trope": "Serene moon-raiders harvesting gem people (Land of the Lustrous)",
+  "designRecipe": {
+   "rigId": "rig_floating",
+   "baseMesh": "floating_base",
+   "parts": [
+    "tattered_shroud",
+    "lantern_core",
+    "chains",
+    "trailing_wisps"
+   ],
+   "material": "porcelain_red_glow",
+   "palette": [
+    "#8b0000",
+    "#d7263d",
+    "#1a0505"
+   ],
+   "menaceStyle": "broken symmetry, mimicry, audio-first reveal",
+   "rankOrnament": "S",
+   "vfx": "blood_mist",
+   "animSetId": "anim_floating",
+   "scale": 6
+  }
+ },
+ {
+  "id": "mon_quakeback_the_earthshaker_behemoth",
+  "name": "Quakeback, the Earthshaker Behemoth",
+  "familyKey": "beast",
+  "family": "Beasts",
+  "type": "Beast",
+  "genre": "Classic Fantasy",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "S+",
+  "level": 203,
+  "menace": 3,
+  "menaceLabel": "Menacing",
+  "element": "Earth",
+  "weakness": "Wind",
+  "sizeMeters": 20,
+  "rigId": "rig_quad_large",
+  "animSetId": "anim_quad_large",
+  "behavior": "Pack",
+  "aiPattern": "pack_flank",
+  "stats": {
+   "hp": 870136,
+   "atk": 986,
+   "def": 822,
+   "matk": 658,
+   "mdef": 740,
+   "spd": 100
+  },
+  "xp": 295379,
+  "gold": 2553,
+  "attackIds": [
+   "atk_maul",
+   "atk_pounce",
+   "atk_howl",
+   "atk_stone_spike"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_quaking_lands"
+  ],
+  "lootTableId": "loot_beast_s",
+  "signature": "a back of shifting tectonic plates that sets off the hourly quakes",
+  "look": "The Quakeback, the Earthshaker Behemoth is a colossal creature with a long-legged predatory quadruped build, about 20 m long. Its coat is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a back of shifting tectonic plates that sets off the hourly quakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it.",
+  "fieldNote": "Weak to Wind. Never alone. Kill the leader first and the rest may scatter.",
+  "trope": "The horned rabbit \"rookie killer\" and wolf packs of every isekai starter forest",
+  "designRecipe": {
+   "rigId": "rig_quad_large",
+   "baseMesh": "quad_large_base",
+   "parts": [
+    "fangs_long",
+    "tail_club",
+    "antlers"
+   ],
+   "material": "fur_groom",
+   "palette": [
+    "#8b5a2b",
+    "#c2a878",
+    "#4a4a3a"
+   ],
+   "menaceStyle": "triangle-based silhouette, sharp asymmetric spikes",
+   "rankOrnament": "S",
+   "vfx": "rock_debris",
+   "animSetId": "anim_quad_large",
+   "scale": 20
+  }
+ },
+ {
+  "id": "mon_the_mad_magician_of_aurumdeep_sinker_of_kingdoms",
+  "name": "The Mad Magician of Aurumdeep, Sinker of Kingdoms",
+  "familyKey": "undead",
+  "family": "Undead",
+  "type": "Undead",
+  "genre": "Gothic Horror",
+  "tier": "core",
+  "variantKind": "",
+  "baseSpeciesId": "",
+  "rank": "A+",
+  "level": 159,
+  "menace": 4,
+  "menaceLabel": "Dread",
+  "element": "Dark",
+  "weakness": "Light",
+  "sizeMeters": 2,
+  "rigId": "rig_floating",
+  "animSetId": "anim_floating",
+  "behavior": "Guardian",
+  "aiPattern": "guardian_hold+stalker",
+  "stats": {
+   "hp": 219551,
+   "atk": 388,
+   "def": 452,
+   "matk": 904,
+   "mdef": 840,
+   "spd": 90
+  },
+  "xp": 199864,
+  "gold": 1815,
+  "attackIds": [
+   "atk_chill_touch",
+   "atk_phase_lunge",
+   "atk_wail",
+   "atk_shadow_grasp"
+  ],
+  "isUnique": true,
+  "isTyrant": true,
+  "ring": 7,
+  "habitats": [
+   "reg_aurumdeep"
+  ],
+  "lootTableId": "loot_undead_a",
+  "signature": "a gold-crowned lich who sank a kingdom and still waits for applause",
+  "look": "The The Mad Magician of Aurumdeep, Sinker of Kingdoms is a person-sized creature with a drifting, half-formed body, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a gold-crowned lich who sank a kingdom and still waits for applause. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.",
+  "fieldNote": "Weak to Light. Protects something nearby: a nest, a treasure, or a place.",
+  "trope": "Graveyard night threats; the lich and its phylactery; the vampire noble",
+  "designRecipe": {
+   "rigId": "rig_floating",
+   "baseMesh": "floating_base",
+   "parts": [
+    "tattered_shroud",
+    "lantern_core",
+    "chains"
+   ],
+   "material": "rot_bone",
+   "palette": [
+    "#2d2a4a",
+    "#6b5b95",
+    "#0d0d14"
+   ],
+   "menaceStyle": "elongated, irregular silhouette; still-then-sudden timing",
+   "rankOrnament": "A",
+   "vfx": "shadow_wisps",
+   "animSetId": "anim_floating",
+   "scale": 2
   }
  }
 ]

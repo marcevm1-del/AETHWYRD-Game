@@ -12,7 +12,15 @@
   "rankMin": "F",
   "rankMax": "C",
   "ring": 2,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_ashgrave_the_oathless_baron",
+  "siegeFaction": "undead",
+  "defenceSettlements": [
+   "Ashby",
+   "Greyhollow Village",
+   "Royal Valley farms"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_whisperwood",
@@ -24,7 +32,14 @@
   "rankMin": "F",
   "rankMax": "E",
   "ring": 1,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_grukk_goblin_chief_of_hollowpine",
+  "siegeFaction": "goblinoid",
+  "defenceSettlements": [
+   "Brindlewick",
+   "Millbrook"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_greymoor",
@@ -35,7 +50,14 @@
   "rankMin": "D",
   "rankMax": "C",
   "ring": 2,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_hollow_abbot_choir_of_silence",
+  "siegeFaction": "undead",
+  "defenceSettlements": [
+   "Greymoor stilt-village",
+   "the Walking Hut market"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_labyrinth_upper",
@@ -48,7 +70,10 @@
   "rankMin": "F",
   "rankMax": "C",
   "ring": 2,
-  "layer": "underworld"
+  "layer": "underworld",
+  "noSiege": true,
+  "noSiegeReason": "Dungeon band, not a region with settlements",
+  "initialState": "liberated"
  },
  {
   "id": "reg_labyrinth_deep",
@@ -61,7 +86,10 @@
   "rankMin": "B",
   "rankMax": "S",
   "ring": 6,
-  "layer": "underworld"
+  "layer": "underworld",
+  "noSiege": true,
+  "noSiegeReason": "Dungeon band, not a region with settlements",
+  "initialState": "liberated"
  },
  {
   "id": "reg_labyrinth_abyss",
@@ -74,7 +102,10 @@
   "rankMin": "SS",
   "rankMax": "EX",
   "ring": 8,
-  "layer": "underworld"
+  "layer": "underworld",
+  "noSiege": true,
+  "noSiegeReason": "Dungeon band, not a region with settlements",
+  "initialState": "liberated"
  },
  {
   "id": "reg_sylvaran",
@@ -85,7 +116,14 @@
   "rankMin": "D",
   "rankMax": "B",
   "ring": 3,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_mycelia_the_spore_lord",
+  "siegeFaction": "plant",
+  "defenceSettlements": [
+   "Canopy City Lothaniel",
+   "Moonwell hamlets"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_mossdeep",
@@ -96,7 +134,13 @@
   "rankMin": "D",
   "rankMax": "C",
   "ring": 3,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_mother_webcrawler_terror_of_the_small",
+  "siegeFaction": "insect",
+  "defenceSettlements": [
+   "Thimblefolk Mushroom Town"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_lirian",
@@ -108,7 +152,13 @@
   "rankMin": "D",
   "rankMax": "B",
   "ring": 3,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_drowned_choir_sirens_of_the_canals",
+  "siegeFaction": "aquatic",
+  "defenceSettlements": [
+   "Lirian canal cities"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_fanghold",
@@ -120,7 +170,14 @@
   "rankMin": "D",
   "rankMax": "B",
   "ring": 4,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_varrick_kade_the_slaver_lord",
+  "siegeFaction": "humanoid_enemy",
+  "defenceSettlements": [
+   "Fanghold",
+   "nomad yurt camps"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_iron_hold",
@@ -133,7 +190,14 @@
   "rankMin": "C",
   "rankMax": "A",
   "ring": 4,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_skarn_the_fire_giant_warlord",
+  "siegeFaction": "orc_giant",
+  "defenceSettlements": [
+   "Karak Dûn",
+   "Ashen Mines camps"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_moraveil",
@@ -146,7 +210,14 @@
   "rankMin": "C",
   "rankMax": "S",
   "ring": 4,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_grakkus_the_orc_disaster",
+  "siegeFaction": "orc_giant",
+  "defenceSettlements": [
+   "Moraveil goblin village",
+   "Moraveil market town"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_strife_marches",
@@ -159,7 +230,14 @@
   "rankMin": "C",
   "rankMax": "B",
   "ring": 4,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_diego_alvarez_voice_of_the_choir_of_chains",
+  "siegeFaction": "humanoid_enemy",
+  "defenceSettlements": [
+   "border baronies",
+   "mercenary forts"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_velmark",
@@ -171,7 +249,13 @@
   "rankMin": "C",
   "rankMax": "B",
   "ring": 4,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_tithe_colossus_hunger_of_the_foundation_stones",
+  "siegeFaction": "construct",
+  "defenceSettlements": [
+   "Velmark ducal towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_hoshizora",
@@ -185,7 +269,14 @@
   "rankMin": "C",
   "rankMax": "A",
   "ring": 5,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_kurogane_the_oni_warlord",
+  "siegeFaction": "yokai",
+  "defenceSettlements": [
+   "Hoshizora City",
+   "Bamboo Sea villages"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_kitsune_isles",
@@ -198,7 +289,14 @@
   "rankMin": "C",
   "rankMax": "A",
   "ring": 5,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_hollow_bride_matriarch_of_the_long_necks",
+  "siegeFaction": "yokai",
+  "defenceSettlements": [
+   "Fox Shrine Isle",
+   "spirit inns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_frostveil",
@@ -210,7 +308,14 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 5,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_ymgrir_the_frost_sovereign",
+  "siegeFaction": "orc_giant",
+  "defenceSettlements": [
+   "Skjaldheim",
+   "longhouse steads"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_shen_lu",
@@ -223,7 +328,13 @@
   "rankMin": "B",
   "rankMax": "S",
   "ring": 5,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_wuxiang_the_hunger_colossus",
+  "siegeFaction": "yokai",
+  "defenceSettlements": [
+   "sect foothill towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_haneul",
@@ -235,7 +346,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 5,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_varos_herald_of_the_red_gate",
+  "siegeFaction": "demon",
+  "defenceSettlements": [
+   "Haneul gate-towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_whitewater_reach",
@@ -248,7 +365,13 @@
   "rankMin": "A",
   "rankMax": "S",
   "ring": 5,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_ysgrath_the_ice_jaw_leviathan",
+  "siegeFaction": "aquatic",
+  "defenceSettlements": [
+   "ice-fishing villages"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_umbravel",
@@ -260,7 +383,13 @@
   "rankMin": "C",
   "rankMax": "B",
   "ring": 5,
-  "layer": "underworld"
+  "layer": "underworld",
+  "tyrantSpeciesId": "mon_vel_thara_the_web_queen",
+  "siegeFaction": "insect",
+  "defenceSettlements": [
+   "Umbravel"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_sunscar",
@@ -272,7 +401,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_colossus_of_sunscar_walker_of_the_dunes",
+  "siegeFaction": "construct",
+  "defenceSettlements": [
+   "Oasis of Qadira"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_goldmere_coast",
@@ -284,7 +419,14 @@
   "rankMin": "B",
   "rankMax": "S",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_krakenmother_ys_queen_of_the_wreck_tide",
+  "siegeFaction": "aquatic",
+  "defenceSettlements": [
+   "Port Goldmere",
+   "pirate stilt-towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_zarvan",
@@ -297,7 +439,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_zahhar_king_of_the_divs",
+  "siegeFaction": "orc_giant",
+  "defenceSettlements": [
+   "Zarvan garden cities"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_zaruma",
@@ -309,7 +457,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_mansacor_the_gold_eating_manticore",
+  "siegeFaction": "chimera",
+  "defenceSettlements": [
+   "Zaruma gold-road towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_dunewhale_drift",
@@ -320,7 +474,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_glassmaw_worm_of_the_endless_dune",
+  "siegeFaction": "sandborne",
+  "defenceSettlements": [
+   "the town on Thalassa's back"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_xochitl_mire",
@@ -332,7 +492,13 @@
   "rankMin": "C",
   "rankMax": "B",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_xibalbar_the_hydra_of_the_mire",
+  "siegeFaction": "reptile",
+  "defenceSettlements": [
+   "Xochitl river-cities"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_lumbaya",
@@ -345,7 +511,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_nightmother_queen_of_the_nightshifters",
+  "siegeFaction": "aberration",
+  "defenceSettlements": [
+   "Lumbaya temple villages"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_stormreach",
@@ -357,7 +529,13 @@
   "rankMin": "B",
   "rankMax": "S",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_raikaru_the_storm_roc",
+  "siegeFaction": "avian",
+  "defenceSettlements": [
+   "Stormreach cliff-towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_true_name_isles",
@@ -369,7 +547,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_nameless_tide_a_serpent_without_a_name",
+  "siegeFaction": "aquatic",
+  "defenceSettlements": [
+   "Naming Voyage harbor"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_hollow_sea",
@@ -381,7 +565,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 6,
-  "layer": "underworld"
+  "layer": "underworld",
+  "tyrantSpeciesId": "mon_lumen_eater_the_abyss_angler",
+  "siegeFaction": "aquatic",
+  "defenceSettlements": [
+   "Hollow Sea boat-towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_ashira_vale",
@@ -393,7 +583,13 @@
   "rankMin": "B",
   "rankMax": "B",
   "ring": 6,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_gentle_warden_keeper_of_ashira",
+  "siegeFaction": "aberration",
+  "defenceSettlements": [
+   "Ashira"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_dragon_spine",
@@ -405,7 +601,13 @@
   "rankMin": "A",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_vyrmax_the_drake_lord",
+  "siegeFaction": "draconic",
+  "defenceSettlements": [
+   "dragon-bone monasteries"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_sky_archipelago",
@@ -417,7 +619,10 @@
   "rankMin": "S",
   "rankMax": "SS",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "noSiege": true,
+  "noSiegeReason": "Abandoned Titan cities; Zephiel is the Act IV story boss",
+  "initialState": "liberated"
  },
  {
   "id": "reg_heavenreach",
@@ -429,7 +634,13 @@
   "rankMin": "A",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_aquilon_the_roc_sovereign",
+  "siegeFaction": "avian",
+  "defenceSettlements": [
+   "Heavenfolk eyries"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_vharlen",
@@ -442,7 +653,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_morvane_vanguard_of_the_overlord",
+  "siegeFaction": "demon",
+  "defenceSettlements": [
+   "Vharlen frontier legions"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_gearholm",
@@ -454,7 +671,13 @@
   "rankMin": "B",
   "rankMax": "A",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_cogmaw_the_gremlin_engine_king",
+  "siegeFaction": "gremlin",
+  "defenceSettlements": [
+   "Gearholm Undercity"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_cinderhole",
@@ -466,7 +689,13 @@
   "rankMin": "A",
   "rankMax": "A",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_cinderlord_vasque_the_smoke_mage",
+  "siegeFaction": "humanoid_enemy",
+  "defenceSettlements": [
+   "Cinderhole"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_bastion",
@@ -478,7 +707,13 @@
   "rankMin": "B",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_thrakka_sabretooth_khan_of_the_steppe_horde",
+  "siegeFaction": "beast",
+  "defenceSettlements": [
+   "Bastion outer ring"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_everdusk",
@@ -490,7 +725,13 @@
   "rankMin": "A",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_the_briar_king_lord_of_the_winter_court",
+  "siegeFaction": "plant",
+  "defenceSettlements": [
+   "Summer Court glades"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_apu_highlands",
@@ -501,7 +742,13 @@
   "rankMin": "A",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_ukhu_tal_stone_giant_of_the_first_making",
+  "siegeFaction": "orc_giant",
+  "defenceSettlements": [
+   "terrace cities"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_lustrine_shores",
@@ -512,7 +759,13 @@
   "rankMin": "A",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_ilyanthe_the_moon_harvester",
+  "siegeFaction": "vesperite",
+  "defenceSettlements": [
+   "Lustrine glass beaches"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_quaking_lands",
@@ -524,7 +777,13 @@
   "rankMin": "S",
   "rankMax": "S",
   "ring": 7,
-  "layer": "surface"
+  "layer": "surface",
+  "tyrantSpeciesId": "mon_quakeback_the_earthshaker_behemoth",
+  "siegeFaction": "beast",
+  "defenceSettlements": [
+   "Stiller spring-towns"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_aurumdeep",
@@ -536,7 +795,13 @@
   "rankMin": "A",
   "rankMax": "A",
   "ring": 7,
-  "layer": "underworld"
+  "layer": "underworld",
+  "tyrantSpeciesId": "mon_the_mad_magician_of_aurumdeep_sinker_of_kingdoms",
+  "siegeFaction": "undead",
+  "defenceSettlements": [
+   "Aurumdeep explorers' camp"
+  ],
+  "initialState": "besieged"
  },
  {
   "id": "reg_nox_dominion",
@@ -549,7 +814,10 @@
   "rankMin": "S",
   "rankMax": "SSS",
   "ring": 8,
-  "layer": "surface"
+  "layer": "surface",
+  "noSiege": true,
+  "noSiegeReason": "Story region (Acts V–VI)",
+  "initialState": "liberated"
  },
  {
   "id": "reg_calamity_steppe",
@@ -560,7 +828,10 @@
   "rankMin": "S",
   "rankMax": "SS",
   "ring": 8,
-  "layer": "surface"
+  "layer": "surface",
+  "noSiege": true,
+  "noSiegeReason": "No settlements",
+  "initialState": "liberated"
  },
  {
   "id": "reg_the_maw",
@@ -572,7 +843,10 @@
   "rankMin": "S",
   "rankMax": "SS",
   "ring": 8,
-  "layer": "underworld"
+  "layer": "underworld",
+  "noSiege": true,
+  "noSiegeReason": "Its Calamity (the Hive Mother) is a world event, not a siege",
+  "initialState": "liberated"
  },
  {
   "id": "reg_root_of_the_world",
@@ -591,7 +865,10 @@
    "construct",
    "draconic",
    "slime"
-  ]
+  ],
+  "noSiege": true,
+  "noSiegeReason": "Underworld depths; no settlements",
+  "initialState": "liberated"
  },
  {
   "id": "reg_vesper",
@@ -612,6 +889,9 @@
    "aberration",
    "construct",
    "demon"
-  ]
+  ],
+  "noSiege": true,
+  "noSiegeReason": "Post-game region",
+  "initialState": "liberated"
  }
 ]

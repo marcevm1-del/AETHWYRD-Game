@@ -36,6 +36,7 @@
     "Investigation",
     "Exploration",
     "Defense",
+    "SiegeDefence",
     "Capture",
     "Bounty",
     "Dungeon",
@@ -58,6 +59,14 @@
   },
   "summary": {
    "type": "string"
+  },
+  "regionState": {
+   "type": "string",
+   "enum": [
+    "any",
+    "besieged",
+    "liberated"
+   ]
   },
   "requirements": {
    "type": "object",

@@ -1,0 +1,144 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Siege wave set for one besieged region",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "regionId",
+  "faction",
+  "rankMin",
+  "rankMax",
+  "tyrantSpeciesId",
+  "waves",
+  "escalation",
+  "targetMinutes"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^siege_[a-z0-9_]+$"
+  },
+  "regionId": {
+   "type": "string",
+   "pattern": "^reg_[a-z0-9_]+$"
+  },
+  "faction": {
+   "type": "string"
+  },
+  "factionMixed": {
+   "type": "boolean"
+  },
+  "rankMin": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "rankMax": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "tyrantSpeciesId": {
+   "type": "string",
+   "pattern": "^mon_[a-z0-9_]+$"
+  },
+  "waves": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "wave",
+     "units"
+    ],
+    "properties": {
+     "wave": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "lieutenantSpeciesId": {
+      "type": "string",
+      "pattern": "^mon_[a-z0-9_]+$"
+     },
+     "units": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "speciesId",
+        "count"
+       ],
+       "properties": {
+        "speciesId": {
+         "type": "string",
+         "pattern": "^mon_[a-z0-9_]+$"
+        },
+        "count": {
+         "type": "integer",
+         "minimum": 1
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "escalation": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "maxStep",
+    "countGrowthPerStep",
+    "eliteChancePerStep"
+   ],
+   "properties": {
+    "maxStep": {
+     "type": "integer",
+     "minimum": 0
+    },
+    "countGrowthPerStep": {
+     "type": "number",
+     "minimum": 0
+    },
+    "eliteChancePerStep": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "targetMinutes": {
+   "type": "array",
+   "minItems": 2,
+   "maxItems": 2,
+   "items": {
+    "type": "number",
+    "minimum": 1
+   }
+  }
+ }
+}

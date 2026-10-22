@@ -7,11 +7,13 @@
 const fs = require('fs');
 const path = require('path');
 const FAMILIES = require('./families');
+const TYRANTS = require('./tyrants');
 
 const ROOT = path.join(__dirname, '..', '..');
 const DATA = path.join(ROOT, 'Data');
 const REGIONS = JSON.parse(fs.readFileSync(path.join(DATA, 'World', 'regions.json'), 'utf8'));
 const REGION_BY_NAME = Object.fromEntries(REGIONS.map(r => [r.name, r]));
+const REGION_BY_ID = Object.fromEntries(REGIONS.map(r => [r.id, r]));
 const MIN_SPECIES = 640;
 const POP_PER_SPECIES = 11;
 
@@ -178,6 +180,7 @@ function bandDistance(r, rank) {
 }
 function chooseHabitats(sp, fam) {
   CURRENT_FAMILY_KEY = sp.familyKey;
+  if (sp.lairRegionId) return [REGION_BY_ID[sp.lairRegionId]];
   if (LAIRS[sp.name]) return [REGION_BY_NAME[LAIRS[sp.name]]];
   const unique = sp.isUnique;
   const n = unique ? 1 : rankIdx(sp.rank) >= 6 ? 2 : sp.tier === 'core' ? 3 + Math.floor(rnd() * 3) : 2 + Math.floor(rnd() * 2);
@@ -302,6 +305,7 @@ function finalize(sp, fam, famKey) {
   } else {
     sp.habitatRegions = chooseHabitats(sp, fam);
     sp.ring = Math.max(2, Math.min(...sp.habitatRegions.map(r => r.ring)));
+    if (sp.isTyrant) sp.ring = Math.max(1, sp.habitatRegions[0].ring); // a Tyrant ships with its region
     // Variants ship at least one ring after their base species, so early rings carry core designs only.
     if (sp.tier === 'variant') {
       const base = species.find(x => x.id === sp.baseSpeciesId);
@@ -323,6 +327,17 @@ for (const [famKey, fam] of Object.entries(FAMILIES)) {
     const [name, rank, menace, element, size, signature, rigOverride] = line.split('|');
     const sp = finalize({ name, rank, menace: +menace, element, size: +size, signature, rig: rigOverride || fam.rig, tier: 'core', variantKind: '', baseSpeciesId: '' }, fam, famKey);
     if (sp) cores.push(sp);
+  }
+}
+
+// Regional Tyrants are added last so the seeded sequence for every other species stays stable.
+function addTyrants() {
+  for (const [famKey, line, regionId] of TYRANTS) {
+    if (!REGION_BY_ID[regionId]) throw new Error('Tyrant region not found: ' + regionId);
+    const [name, rank, menace, element, size, signature, rigOverride] = line.split('|');
+    const fam = FAMILIES[famKey];
+    const sp = finalize({ name, rank, menace: +menace, element, size: +size, signature, rig: rigOverride || fam.rig, tier: 'core', variantKind: '', baseSpeciesId: '', isTyrant: true, lairRegionId: regionId }, fam, famKey);
+    if (!sp) throw new Error('Duplicate Tyrant name: ' + name);
   }
 }
 
@@ -369,6 +384,7 @@ for (let round = 0; species.length < MIN_SPECIES && round < 6; round++) {
     for (let t = 0; t < 4; t++) if (makeVariant(c, pick(VARIANT_TYPES))) break;
   }
 }
+addTyrants();
 
 // ---------- population ----------
 const TIERS = [
@@ -414,6 +430,39 @@ for (const sp of species) {
   }
 }
 
+// ---------- siege waves (Systems → Regional Siege & Liberation) ----------
+// One wave template per besieged region: three waves from the Tyrant's faction living in that region,
+// the last with a lieutenant. Escalation (each week the Tyrant lives) scales counts, capped.
+const SIEGE = { maxEscalation: 5, countGrowthPerStep: 0.2, eliteChancePerStep: 0.08, baseCounts: [6, 8, 10], targetMinutes: [5, 8] };
+const siegeWaves = [];
+for (const r of REGIONS.filter(x => !x.noSiege)) {
+  // Prefer species that already ship by this region's ring; fall back to all residents if too few.
+  const residents = species.filter(s => !s.isUnique && s.habitats.includes(r.id));
+  const shipped = residents.filter(s => s.ring <= r.ring);
+  const inRegion = (shipped.length >= 3 ? shipped : residents).sort((a, b) => rankVal(a.rank) - rankVal(b.rank) || a.id.localeCompare(b.id));
+  const factionPool = inRegion.filter(s => s.familyKey === r.siegeFaction);
+  const mixed = factionPool.length < 3;
+  const pool = mixed ? factionPool.concat(inRegion.filter(s => s.familyKey !== r.siegeFaction)) : factionPool;
+  if (pool.length === 0) throw new Error('No siege species live in ' + r.id);
+  const third = Math.max(1, Math.ceil(pool.length / 3));
+  const tiers = [pool.slice(0, third), pool.slice(third, 2 * third), pool.slice(2 * third)].map((t, i, all) => t.length ? t : (all[i - 1] && all[i - 1].length ? all[i - 1] : pool));
+  const lieutenant = [...pool].reverse().find(s => s.variantKind === 'elder' || s.variantKind === 'ancient') || pool[pool.length - 1];
+  const waves = tiers.map((tier, i) => {
+    // Strongest kind last; a lone elite kind is padded with fodder so elites stay the minority.
+    let kinds = tier.slice(0, 2);
+    if (kinds.length === 1 && pool[0].id !== kinds[0].id) kinds = [pool[0], kinds[0]];
+    const total = SIEGE.baseCounts[i];
+    const units = kinds.map((s, k) => ({ speciesId: s.id, count: kinds.length === 1 ? total : k === 0 ? Math.ceil(total * 0.6) : Math.floor(total * 0.4) }));
+    return { wave: i + 1, units, ...(i === 2 ? { lieutenantSpeciesId: lieutenant.id } : {}) };
+  });
+  siegeWaves.push({
+    id: 'siege_' + r.id.replace(/^reg_/, ''), regionId: r.id, faction: r.siegeFaction, factionMixed: mixed,
+    rankMin: r.rankMin, rankMax: r.rankMax, tyrantSpeciesId: r.tyrantSpeciesId, waves,
+    escalation: { maxStep: SIEGE.maxEscalation, countGrowthPerStep: SIEGE.countGrowthPerStep, eliteChancePerStep: SIEGE.eliteChancePerStep },
+    targetMinutes: SIEGE.targetMinutes
+  });
+}
+
 // ---------- write ----------
 const MON = path.join(DATA, 'Monsters'), ITM = path.join(DATA, 'Items');
 fs.mkdirSync(MON, { recursive: true }); fs.mkdirSync(ITM, { recursive: true });
@@ -421,8 +470,8 @@ const csvEsc = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
 function writeCsv(file, rows, cols) {
   fs.writeFileSync(file, [cols.join(',')].concat(rows.map(r => cols.map(c => csvEsc(typeof r[c] === 'object' ? JSON.stringify(r[c]) : r[c])).join(','))).join('\n'), 'utf8');
 }
-const SPECIES_FIELDS = ['id', 'name', 'familyKey', 'family', 'type', 'genre', 'tier', 'variantKind', 'baseSpeciesId', 'rank', 'level', 'menace', 'menaceLabel', 'element', 'weakness', 'sizeMeters', 'rigId', 'animSetId', 'behavior', 'aiPattern', 'stats', 'xp', 'gold', 'attackIds', 'isUnique', 'ring', 'habitats', 'lootTableId', 'signature', 'look', 'fieldNote', 'trope', 'designRecipe'];
-const spOut = species.map(s => { const o = {}; for (const f of SPECIES_FIELDS) o[f] = f === 'sizeMeters' ? s.size : s[f]; return o; });
+const SPECIES_FIELDS = ['id', 'name', 'familyKey', 'family', 'type', 'genre', 'tier', 'variantKind', 'baseSpeciesId', 'rank', 'level', 'menace', 'menaceLabel', 'element', 'weakness', 'sizeMeters', 'rigId', 'animSetId', 'behavior', 'aiPattern', 'stats', 'xp', 'gold', 'attackIds', 'isUnique', 'isTyrant', 'ring', 'habitats', 'lootTableId', 'signature', 'look', 'fieldNote', 'trope', 'designRecipe'];
+const spOut = species.map(s => { const o = {}; for (const f of SPECIES_FIELDS) o[f] = f === 'sizeMeters' ? s.size : f === 'isTyrant' ? !!s.isTyrant : s[f]; return o; });
 fs.writeFileSync(path.join(MON, 'species.json'), JSON.stringify(spOut, null, 1), 'utf8');
 writeCsv(path.join(MON, 'species.csv'), spOut, SPECIES_FIELDS);
 fs.writeFileSync(path.join(MON, 'population.json'), JSON.stringify(population, null, 1), 'utf8');
@@ -430,6 +479,7 @@ writeCsv(path.join(MON, 'population.csv'), population, ['id', 'name', 'speciesId
 fs.writeFileSync(path.join(MON, 'attacks.json'), JSON.stringify([...ATTACKS.values()], null, 1), 'utf8');
 fs.writeFileSync(path.join(MON, 'loot_tables.json'), JSON.stringify([...LOOT.values()], null, 1), 'utf8');
 fs.writeFileSync(path.join(ITM, 'materials.json'), JSON.stringify([...ITEMS.values()], null, 1), 'utf8');
+fs.writeFileSync(path.join(DATA, 'World', 'siege_waves.json'), JSON.stringify(siegeWaves, null, 1), 'utf8');
 
 // Viewer (filterable HTML with embedded data)
 const viewerData = {
@@ -443,6 +493,8 @@ fs.writeFileSync(path.join(ROOT, '08_Bestiary', 'bestiary_viewer.html'), tpl.rep
 
 const ringCount = {}; for (const s of species) ringCount[s.ring] = (ringCount[s.ring] || 0) + 1;
 const habAvg = (species.reduce((a, s) => a + s.habitats.length, 0) / species.length).toFixed(2);
-console.log(`Species: ${species.length} (core ${cores.length}, variants ${species.length - cores.length}) · avg habitats ${habAvg}`);
+const tyrantCount = species.filter(s => s.isTyrant).length;
+console.log(`Species: ${species.length} (core ${cores.length}, variants ${species.length - cores.length - tyrantCount}, Tyrants ${tyrantCount}) · avg habitats ${habAvg}`);
 console.log(`Population: ${population.length} · Attacks: ${ATTACKS.size} · Loot tables: ${LOOT.size} · Materials: ${ITEMS.size}`);
 console.log('Species per ring:', ringCount);
+console.log(`Siege wave sets: ${siegeWaves.length} (${siegeWaves.filter(w => w.factionMixed).length} with mixed factions)`);

@@ -76,6 +76,35 @@
    "items": {
     "type": "string"
    }
+  },
+  "tyrantSpeciesId": {
+   "type": "string",
+   "pattern": "^mon_[a-z0-9_]+$"
+  },
+  "siegeFaction": {
+   "type": "string"
+  },
+  "defenceSettlements": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "minLength": 1
+   }
+  },
+  "initialState": {
+   "type": "string",
+   "enum": [
+    "besieged",
+    "weakened",
+    "liberated"
+   ]
+  },
+  "noSiege": {
+   "type": "boolean"
+  },
+  "noSiegeReason": {
+   "type": "string"
   }
  }
 }

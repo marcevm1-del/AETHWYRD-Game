@@ -212,6 +212,9 @@
   "isUnique": {
    "type": "boolean"
   },
+  "isTyrant": {
+   "type": "boolean"
+  },
   "ring": {
    "type": "integer",
    "minimum": 0,

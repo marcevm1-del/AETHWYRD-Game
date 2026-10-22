@@ -1,0 +1,46 @@
+{
+ "version": 1,
+ "notes": "World-rule tuning: calendar, regional sieges, inns. Read by Code/Ascend.Core (WorldTuning).",
+ "calendar": {
+  "dayLengthRealMinutes": 90,
+  "hoursPerDay": 24,
+  "weekdays": ["Solenday", "Maelsday", "Thorsday", "Sylvasday", "Kaelsday", "Morrowsday", "Vexday"],
+  "dawnHour": 6,
+  "dayParts": { "morning": [6, 10], "day": [10, 17], "dusk": [17, 20], "night": [20, 6] }
+ },
+ "siege": {
+  "minAttacksPerWeek": 1,
+  "maxAttacksPerWeek": 2,
+  "secondAttackChance": 0.5,
+  "duskChance": 0.8,
+  "duskHour": 18,
+  "nightHour": 21,
+  "announceDaysAhead": 1,
+  "escalationPerWeek": 1,
+  "maxEscalation": 5,
+  "weakenedEscalationReduction": 2,
+  "autoResolve": {
+   "baseThreat": 40,
+   "escalationThreat": 8,
+   "safetyWeight": 0.5,
+   "guardWeight": 3,
+   "adventurerWeight": 6,
+   "barricadeWeight": 2,
+   "variance": 20,
+   "repelMargin": 10,
+   "costlyMargin": -10,
+   "maxWealthLoss": 15,
+   "maxSafetyLoss": 20,
+   "maxBuildingsDamaged": 3,
+   "prosperityFloor": 10
+  }
+ },
+ "inns": {
+  "restedXpBonus": 0.05,
+  "wellRestedXpBonus": 0.10,
+  "mealBonusHours": 1,
+  "bathBonusHours": 1,
+  "regular": { "guestNights": 3, "regularNights": 10, "familyNights": 30 },
+  "tab": { "creditLimitCopper": 600, "ranks": ["F", "E"] }
+ }
+}

@@ -379,7 +379,7 @@ Every town/village has persistent stats:
 Higher stages unlock better shops, quests, residents and trainers. Neglected towns can fall back.
 
 ## Regional Siege & Liberation
-Every region has a **Tyrant**, its big bad (a named boss with a lair, lieutenants and dens). Until the Tyrant is slain, the region is **Besieged**. After that it's **Liberated** for good, and its quest board switches to normal monster-hunting contracts. The full build spec is in `13_Production/prompts/session_prompt_v0.11.md`.
+Every region has a **Tyrant**, its big bad (a named boss with a lair, lieutenants and dens). Until the Tyrant is slain, the region is **Besieged**. After that it's **Liberated** for good, and its quest board switches to normal monster-hunting contracts. **Built (v0.11):** data in `Data/World/regions.json` (Tyrant, faction, settlements, state) and `Data/World/siege_waves.json` (generated waves per region); rules in `Code/Ascend.Core/Siege.cs` (`RegionThreat`, `SiegeScheduler`, `SiegeAutoResolve`); tuning in `Data/World/world_tuning.json` → `siege`.
 
 | State | Settlements | Quest board | Music & look |
 |---|---|---|---|
@@ -391,7 +391,54 @@ Every region has a **Tyrant**, its big bad (a named boss with a lair, lieutenant
 - **Missed defences auto-resolve** using the town's Safety, guards and NPC adventurers. Losses cost Prosperity and can damage buildings, but **a settlement is never destroyed** (Loss Safety).
 - **Prepare:** set traps, barricades and ballistae, hire guards, drill the militia (weekly board *Drill the Militia*), bring tamed partners and companions. Haulers carry materials.
 - **Liberation:** a festival in the main settlement, +1 Prosperity stage, a one-week Liberation Market (§4.2), a Trophy Hall piece, an Adventurer Times headline, and the region's waystones turn green.
-- **Ring 1:** the Brindlewick area's Tyrant is proposed to be the **Goblin Chief of Hollowpine** (Canon §6).
+- **Ring 1:** the **Goblin Chief of Hollowpine** is the Tyrant of **Whisperwood**; his raids hit Brindlewick and Millbrook. Killing him is also the F→E trial, so the first siege teaches the whole loop and ends with Act I. Aldmere itself has a higher-rank Tyrant (Ashgrave). Proposed in Canon §6.
+- **Unit pools:** waves use the Tyrant's family living in the region and already shipped by its ring; where fewer than 3 such species exist, waves mix in other local species (`factionMixed`).
+
+### Tyrant Roster (proposed, Canon §6)
+| Region | Tyrant | Rank | Faction | Settlements attacked |
+|---|---|---|---|---|
+| Whisperwood (F–E, ring 1) | **Grukk, Goblin Chief of Hollowpine** | E+ | goblinoid | Brindlewick, Millbrook |
+| Aldmere (F–C, ring 2) | **Ashgrave, the Oathless Baron** | C+ | undead | Ashby, Greyhollow Village, Royal Valley farms |
+| Greymoor (D–C, ring 2) | **The Hollow Abbot, Choir of Silence** | C+ | undead | Greymoor stilt-village, the Walking Hut market |
+| Lirian (D–B, ring 3) | **The Drowned Choir, Sirens of the Canals** | B | aquatic | Lirian canal cities |
+| Mossdeep (D–C, ring 3) | **Mother Webcrawler, Terror of the Small** | C+ | insect (mixed) | Thimblefolk Mushroom Town |
+| Sylvaran (D–B, ring 3) | **Mycelia, the Spore Lord** | B+ | plant (mixed) | Canopy City Lothaniel, Moonwell hamlets |
+| Fanghold (D–B, ring 4) | **Varrick Kade, the Slaver Lord** | B+ | humanoid_enemy (mixed) | Fanghold, nomad yurt camps |
+| Iron Hold (C–A, ring 4) | **Skarn, the Fire Giant Warlord** | A+ | orc_giant | Karak Dûn, Ashen Mines camps |
+| Moraveil (C–S, ring 4) | **Grakkus, the Orc Disaster** | S- | orc_giant (mixed) | Moraveil goblin village, Moraveil market town |
+| Strife Marches (C–B, ring 4) | **Diego Alvarez, Voice of the Choir of Chains** | B+ | humanoid_enemy | border baronies, mercenary forts |
+| Velmark (C–B, ring 4) | **The Tithe Colossus, Hunger of the Foundation Stones** | B+ | construct | Velmark ducal towns |
+| Frostveil (B–A, ring 5) | **Ymgrir, the Frost Sovereign** | S- | orc_giant | Skjaldheim, longhouse steads |
+| Haneul (B–A, ring 5) | **Varos, Herald of the Red Gate** | A+ | demon (mixed) | Haneul gate-towns |
+| Hoshizora (C–A, ring 5) | **Kurogane, the Oni Warlord** | A+ | yokai | Hoshizora City, Bamboo Sea villages |
+| Kitsune Isles (C–A, ring 5) | **The Hollow Bride, Matriarch of the Long Necks** | A | yokai | Fox Shrine Isle, spirit inns |
+| Shen-Lu (B–S, ring 5) | **Wuxiang, the Hunger Colossus** | S | yokai | sect foothill towns |
+| Umbravel (C–B, ring 5) | **Vel'thara, the Web Queen** | B+ | insect | Umbravel |
+| Whitewater Reach (A–S, ring 5) | **Ysgrath, the Ice-Jaw Leviathan** | S | aquatic | ice-fishing villages |
+| Ashira Vale (B–B, ring 6) | **The Gentle Warden, Keeper of Ashira** | B+ | aberration (mixed) | Ashira |
+| Dunewhale Drift (B–A, ring 6) | **Glassmaw, Worm of the Endless Dune** | A+ | sandborne | the town on Thalassa's back |
+| Goldmere Coast (B–S, ring 6) | **Krakenmother Ys, Queen of the Wreck Tide** | S | aquatic | Port Goldmere, pirate stilt-towns |
+| Hollow Sea (B–A, ring 6) | **Lumen-Eater, the Abyss Angler** | A+ | aquatic (mixed) | Hollow Sea boat-towns |
+| Lumbaya (B–A, ring 6) | **The Nightmother, Queen of the Nightshifters** | A+ | aberration (mixed) | Lumbaya temple villages |
+| Stormreach (B–S, ring 6) | **Raikaru, the Storm Roc** | S | avian | Stormreach cliff-towns |
+| Sunscar (B–A, ring 6) | **The Colossus of Sunscar, Walker of the Dunes** | A+ | construct | Oasis of Qadira |
+| True-Name Isles (B–A, ring 6) | **The Nameless Tide, a Serpent Without a Name** | A+ | aquatic | Naming Voyage harbor |
+| Xochitl Mire (C–B, ring 6) | **Xibalbar, the Hydra of the Mire** | B+ | reptile | Xochitl river-cities |
+| Zaruma (B–A, ring 6) | **Mansacor, the Gold-Eating Manticore** | A+ | chimera (mixed) | Zaruma gold-road towns |
+| Zarvan (B–A, ring 6) | **Zahhar, King of the Divs** | A+ | orc_giant (mixed) | Zarvan garden cities |
+| Apu Highlands (A–S, ring 7) | **Ukhu-Tal, Stone Giant of the First Making** | S | orc_giant (mixed) | terrace cities |
+| Aurumdeep (A–A, ring 7) | **The Mad Magician of Aurumdeep, Sinker of Kingdoms** | A+ | undead (mixed) | Aurumdeep explorers' camp |
+| Bastion (B–S, ring 7) | **Thrakka, Sabretooth Khan of the Steppe Horde** | S | beast (mixed) | Bastion outer ring |
+| Cinderhole (A–A, ring 7) | **Cinderlord Vasque, the Smoke Mage** | A+ | humanoid_enemy (mixed) | Cinderhole |
+| Dragon Spine (A–S, ring 7) | **Vyrmax, the Drake Lord** | S | draconic | dragon-bone monasteries |
+| Everdusk (A–S, ring 7) | **The Briar King, Lord of the Winter Court** | S | plant (mixed) | Summer Court glades |
+| Gearholm (B–A, ring 7) | **Cogmaw, the Gremlin Engine-King** | A | gremlin (mixed) | Gearholm Undercity |
+| Heavenreach (A–S, ring 7) | **Aquilon, the Roc Sovereign** | S | avian | Heavenfolk eyries |
+| Lustrine Shores (A–S, ring 7) | **Ilyanthe, the Moon Harvester** | S | vesperite | Lustrine glass beaches |
+| Quaking Lands (S–S, ring 7) | **Quakeback, the Earthshaker Behemoth** | S+ | beast (mixed) | Stiller spring-towns |
+| Vharlen (B–A, ring 7) | **Morvane, Vanguard of the Overlord** | A+ | demon (mixed) | Vharlen frontier legions |
+
+**No siege:** Great Labyrinth (Floors 1-40) (dungeon band, not a region with settlements); Great Labyrinth (Floors 41-90) (dungeon band, not a region with settlements); Great Labyrinth (Floors 91-120) (dungeon band, not a region with settlements); Sky Archipelago (abandoned titan cities; zephiel is the act iv story boss); Nox Dominion (story region (acts v–vi)); Calamity Steppe (no settlements); The Maw (its calamity (the hive mother) is a world event, not a siege); Root of the World (underworld depths; no settlements); Vesper (post-game region).
 
 ## Named Nemesis System
 - A Named monster that **defeats you, or escapes you**, levels up, gains a scar/title, learns a counter to your favorite skill, and may **evolve** a rank.

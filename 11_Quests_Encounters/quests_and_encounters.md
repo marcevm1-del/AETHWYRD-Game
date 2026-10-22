@@ -127,6 +127,8 @@ Zone: Whisperwood (E)
 
 **Scaling:** zones are **fixed-rank** (rank means something). Rift dungeons, world events, and post-game content scale.
 
+> **Sieges:** besieged regions post `SiegeDefence` contracts and Liberated regions post hunting contracts; quests carry a `regionState` condition. Rules: `12_Systems/systems.md` → Regional Siege & Liberation.
+
 ## 7. World Events
 | Event | Trigger | Description |
 |---|---|---|

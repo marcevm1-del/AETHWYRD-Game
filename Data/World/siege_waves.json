@@ -1,0 +1,2374 @@
+[
+ {
+  "id": "siege_aldmere",
+  "regionId": "reg_aldmere",
+  "faction": "undead",
+  "factionMixed": false,
+  "rankMin": "F",
+  "rankMax": "C",
+  "tyrantSpeciesId": "mon_ashgrave_the_oathless_baron",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_bone_crawler",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_hollow_mourner",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_skeleton",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_vesper_touched_zombie",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_greater_skeleton",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_wraith",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_greater_skeleton"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_whisperwood",
+  "regionId": "reg_whisperwood",
+  "faction": "goblinoid",
+  "factionMixed": false,
+  "rankMin": "F",
+  "rankMax": "E",
+  "tyrantSpeciesId": "mon_grukk_goblin_chief_of_hollowpine",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_goblin",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_goblin_archer",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_goblin_shaman",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_goblin_trapper",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_goblin",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_hobgoblin",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_hobgoblin"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_greymoor",
+  "regionId": "reg_greymoor",
+  "faction": "undead",
+  "factionMixed": false,
+  "rankMin": "D",
+  "rankMax": "C",
+  "tyrantSpeciesId": "mon_the_hollow_abbot_choir_of_silence",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_ghost",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_ghost",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_ghoul",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_ghost",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_skeleton_knight",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_skeleton_knight"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_sylvaran",
+  "regionId": "reg_sylvaran",
+  "faction": "plant",
+  "factionMixed": true,
+  "rankMin": "D",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_mycelia_the_spore_lord",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_thornvine",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_ember_kitten",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_pixie",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_red_slime",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_moss_kitten",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_phantom_firefly_swarm",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_phantom_wild_boar"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_mossdeep",
+  "regionId": "reg_mossdeep",
+  "faction": "insect",
+  "factionMixed": true,
+  "rankMin": "D",
+  "rankMax": "C",
+  "tyrantSpeciesId": "mon_mother_webcrawler_terror_of_the_small",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_firefly_swarm",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_ancient_horned_rabbit",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_thornvine",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_will_o_wisp",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_moss_kitten",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_treant_sapling",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ancient_horned_rabbit"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_lirian",
+  "regionId": "reg_lirian",
+  "faction": "aquatic",
+  "factionMixed": false,
+  "rankMin": "D",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_the_drowned_choir_sirens_of_the_canals",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_piranha_swarm",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_piranha_swarm",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_sea_serpent",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_piranha_swarm",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_kraken_spawn",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_kraken_spawn"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_fanghold",
+  "regionId": "reg_fanghold",
+  "faction": "humanoid_enemy",
+  "factionMixed": true,
+  "rankMin": "D",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_varrick_kade_the_slaver_lord",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_radiant_wolf",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_ancient_horned_rabbit",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_bandit_bear",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_crag_boar",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_orc_warrior",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_orc_berserker",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ancient_forest_wolf"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_iron_hold",
+  "regionId": "reg_iron_hold",
+  "faction": "orc_giant",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_skarn_the_fire_giant_warlord",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_orc_warrior",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_orc_berserker",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_cinder_troll",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_orc_lord",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_hill_giant",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_frost_giant",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_fire_giant"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_moraveil",
+  "regionId": "reg_moraveil",
+  "faction": "orc_giant",
+  "factionMixed": true,
+  "rankMin": "C",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_grakkus_the_orc_disaster",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_troll",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_orc_disaster",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_armor_beetle",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_werewolf",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_queen_ant",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_centaur_lancer",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_goblin_general_veteran"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_strife_marches",
+  "regionId": "reg_strife_marches",
+  "faction": "humanoid_enemy",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_diego_alvarez_voice_of_the_choir_of_chains",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_highwayman_captain",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_slaver",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_dark_cultist",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_dark_cultist_veteran",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_highwayman_captain",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_syndicate_blade",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_dark_cultist_veteran"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_velmark",
+  "regionId": "reg_velmark",
+  "faction": "construct",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_the_tithe_colossus_hunger_of_the_foundation_stones",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_mimic",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_mimic",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_stone_golem",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_mimic",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_cloud_mimic",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_cloud_mimic"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_hoshizora",
+  "regionId": "reg_hoshizora",
+  "faction": "yokai",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_kurogane_the_oni_warlord",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_umbrella_spirit",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_lantern_ghost",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_fox_spirit",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_long_neck_lady",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_earth_weaver",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_oni",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_hunger_colossus"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_kitsune_isles",
+  "regionId": "reg_kitsune_isles",
+  "faction": "yokai",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_the_hollow_bride_matriarch_of_the_long_necks",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_umbrella_spirit",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_lantern_ghost",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_fox_spirit",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_long_neck_lady",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_oni",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_hunger_colossus",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_hunger_colossus"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_frostveil",
+  "regionId": "reg_frostveil",
+  "faction": "orc_giant",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_ymgrir_the_frost_sovereign",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_ogre",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_rime_ogre",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_cyclops",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_hill_giant",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_frost_giant",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_vesper_touched_hill_giant",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_vesper_touched_hill_giant"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_shen_lu",
+  "regionId": "reg_shen_lu",
+  "faction": "yokai",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_wuxiang_the_hunger_colossus",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_umbrella_spirit",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_lantern_ghost",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_tengu",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_earth_weaver",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_hunger_colossus",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_nine_tailed_vixen_queen",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_great_tengu_king"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_haneul",
+  "regionId": "reg_haneul",
+  "faction": "demon",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_varos_herald_of_the_red_gate",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_river_imp",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_clockwork_sentinel",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_tengu",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_earth_weaver",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_hunger_colossus",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_lich",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_lich"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_whitewater_reach",
+  "regionId": "reg_whitewater_reach",
+  "faction": "aquatic",
+  "factionMixed": false,
+  "rankMin": "A",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_ysgrath_the_ice_jaw_leviathan",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_giant_octopus",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_kraken_spawn",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_merfolk_warden",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_leviathan_young",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_giant_octopus",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_abyssal_kraken_queen",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_abyssal_kraken_queen"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_umbravel",
+  "regionId": "reg_umbravel",
+  "faction": "insect",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_vel_thara_the_web_queen",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_armor_beetle",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_armor_beetle",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_cavern_blade_mantis",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_armor_beetle",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_arachne",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_arachne"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_sunscar",
+  "regionId": "reg_sunscar",
+  "faction": "construct",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_the_colossus_of_sunscar_walker_of_the_dunes",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_greater_stone_golem",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_dusk_clockwork_sentinel",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_iron_golem",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_crystal_golem",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_greater_stone_golem",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_mimic_king",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_greater_stone_golem"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_goldmere_coast",
+  "regionId": "reg_goldmere_coast",
+  "faction": "aquatic",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_krakenmother_ys_queen_of_the_wreck_tide",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_sahuagin",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_sea_serpent",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_giant_octopus",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_kraken_spawn",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_bog_merfolk_warden",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_leviathan_young",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_phantom_abyssal_kraken_queen"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_zarvan",
+  "regionId": "reg_zarvan",
+  "faction": "orc_giant",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_zahhar_king_of_the_divs",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_fire_giant",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_sand_skink",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_gale_crocodile_wyrm",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_vesper_touched_werebear",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_dune_naga_priestess",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_nightmare_steed",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_greater_basilisk"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_zaruma",
+  "regionId": "reg_zaruma",
+  "faction": "chimera",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_mansacor_the_gold_eating_manticore",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_chimera",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_cerberus",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_queen_ant",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_centaur_lancer",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_scorpion_rider",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_dune_naga_priestess",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ancient_scorpion_rider"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_dunewhale_drift",
+  "regionId": "reg_dunewhale_drift",
+  "faction": "sandborne",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_glassmaw_worm_of_the_endless_dune",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_sand_skink",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_dune_scorpion",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_glass_wraith",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_sandworm",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_glass_wraith",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_sandworm",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_sandworm"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_xochitl_mire",
+  "regionId": "reg_xochitl_mire",
+  "faction": "reptile",
+  "factionMixed": false,
+  "rankMin": "C",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_xibalbar_the_hydra_of_the_mire",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_ancient_giant_lizard",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_lizardman",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_salamander",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_ancient_lizardman",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_crocodile_wyrm",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_hydra",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ancient_lizardman"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_lumbaya",
+  "regionId": "reg_lumbaya",
+  "faction": "aberration",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_the_nightmother_queen_of_the_nightshifters",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_phantom_salamander",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_ancient_lizardman",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_blaze_naga_warrior",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_corpse_flower",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_manticore",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_elder_treant",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_elder_vampire"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_stormreach",
+  "regionId": "reg_stormreach",
+  "faction": "avian",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_raikaru_the_storm_roc",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_griffon",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_hippogriff",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_ancient_hippogriff",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_thunderbird",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_tide_thunderbird",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_roc",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ancient_hippogriff"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_true_name_isles",
+  "regionId": "reg_true_name_isles",
+  "faction": "aquatic",
+  "factionMixed": false,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_the_nameless_tide_a_serpent_without_a_name",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_sahuagin",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_glowfin_angler",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_siren",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_giant_octopus",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_merfolk_warden",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_vesper_touched_kraken_spawn",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_bog_merfolk_warden"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_hollow_sea",
+  "regionId": "reg_hollow_sea",
+  "faction": "aquatic",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_lumen_eater_the_abyss_angler",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_glowfin_angler",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_siren",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_faceless_one",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_the_many_mouthed",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_faceless_one",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_the_many_mouthed",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_the_many_mouthed"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_ashira_vale",
+  "regionId": "reg_ashira_vale",
+  "faction": "aberration",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "B",
+  "tyrantSpeciesId": "mon_the_gentle_warden_keeper_of_ashira",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_centaur_scout",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_centaur_scout",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_scorpion_rider",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_centaur_scout",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_thorn_fenrir_pup",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_thorn_fenrir_pup"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_dragon_spine",
+  "regionId": "reg_dragon_spine",
+  "faction": "draconic",
+  "factionMixed": false,
+  "rankMin": "A",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_vyrmax_the_drake_lord",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_wyvern",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_young_dragon",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_drake_lord",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_vesper_touched_young_dragon",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_wyvern",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_vesper_touched_drake_lord",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_vesper_touched_drake_lord"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_heavenreach",
+  "regionId": "reg_heavenreach",
+  "faction": "avian",
+  "factionMixed": false,
+  "rankMin": "A",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_aquilon_the_roc_sovereign",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_griffon",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_thunderbird",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_roc",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_cloud_roc",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_griffon",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_simurrah",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_simurrah"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_vharlen",
+  "regionId": "reg_vharlen",
+  "faction": "demon",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_morvane_vanguard_of_the_overlord",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_gargoyle",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_meadow_orc_berserker",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_griffon",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_ancient_rogue_mage",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_hill_giant",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_meadow_orc_lord",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_syndicate_blade_veteran"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_gearholm",
+  "regionId": "reg_gearholm",
+  "faction": "gremlin",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_cogmaw_the_gremlin_engine_king",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_clockwork_sentinel",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_lich",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_rogue_knight",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_zephyr_rogue_knight",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_rogue_knight",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_zephyr_rogue_knight",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_zephyr_rogue_knight"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_cinderhole",
+  "regionId": "reg_cinderhole",
+  "faction": "humanoid_enemy",
+  "factionMixed": true,
+  "rankMin": "A",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_cinderlord_vasque_the_smoke_mage",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_syndicate_blade_veteran",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_death_knight",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_greater_demon",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_bog_death_knight",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_hive_tyrant",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_rot_demon_knight",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_elder_lesser_demon"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_bastion",
+  "regionId": "reg_bastion",
+  "faction": "beast",
+  "factionMixed": true,
+  "rankMin": "B",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_thrakka_sabretooth_khan_of_the_steppe_horde",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_steppe_fenrir_pup",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_steppe_fenrir_pup",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_steppe_behemoth_calf",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_steppe_fenrir_pup",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_gremlin_king",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_gremlin_king"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_everdusk",
+  "regionId": "reg_everdusk",
+  "faction": "plant",
+  "factionMixed": true,
+  "rankMin": "A",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_the_briar_king_lord_of_the_winter_court",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_elder_treant",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_river_imp",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_phantom_the_many_mouthed",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_hunger_colossus",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_phantom_nine_tailed_vixen_queen",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_great_tengu_king",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ruin_great_tengu_king"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_apu_highlands",
+  "regionId": "reg_apu_highlands",
+  "faction": "orc_giant",
+  "factionMixed": true,
+  "rankMin": "A",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_ukhu_tal_stone_giant_of_the_first_making",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_blood_vesper_alpha",
+      "count": 6
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_blood_vesper_alpha",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_kobold_tunnel_queen",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_blood_vesper_alpha",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_fenrir_blooded_lord",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_fenrir_blooded_lord"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_lustrine_shores",
+  "regionId": "reg_lustrine_shores",
+  "faction": "vesperite",
+  "factionMixed": false,
+  "rankMin": "A",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_ilyanthe_the_moon_harvester",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_moon_archer",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_vesper_touched_moon_archer",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_crimson_choir_seraph",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_phantom_crimson_choir_seraph",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_moon_archer",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_vesper_harvester",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_vesper_harvester"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_quaking_lands",
+  "regionId": "reg_quaking_lands",
+  "faction": "beast",
+  "factionMixed": true,
+  "rankMin": "S",
+  "rankMax": "S",
+  "tyrantSpeciesId": "mon_quakeback_the_earthshaker_behemoth",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_ancient_sabretooth_king",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_night_silver_fenrir",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_frost_giant",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_roc",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_vesper_touched_cyclops",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_vesper_touched_frost_giant",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_ancient_goblin_king"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ },
+ {
+  "id": "siege_aurumdeep",
+  "regionId": "reg_aurumdeep",
+  "faction": "undead",
+  "factionMixed": true,
+  "rankMin": "A",
+  "rankMax": "A",
+  "tyrantSpeciesId": "mon_the_mad_magician_of_aurumdeep_sinker_of_kingdoms",
+  "waves": [
+   {
+    "wave": 1,
+    "units": [
+     {
+      "speciesId": "mon_vampire",
+      "count": 4
+     },
+     {
+      "speciesId": "mon_vesper_touched_faceless_one",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "wave": 2,
+    "units": [
+     {
+      "speciesId": "mon_naga_priestess",
+      "count": 5
+     },
+     {
+      "speciesId": "mon_the_many_mouthed",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "wave": 3,
+    "units": [
+     {
+      "speciesId": "mon_floor_tyrant",
+      "count": 6
+     },
+     {
+      "speciesId": "mon_mimic_king",
+      "count": 4
+     }
+    ],
+    "lieutenantSpeciesId": "mon_elder_maze_weaver"
+   }
+  ],
+  "escalation": {
+   "maxStep": 5,
+   "countGrowthPerStep": 0.2,
+   "eliteChancePerStep": 0.08
+  },
+  "targetMinutes": [
+   5,
+   8
+  ]
+ }
+]

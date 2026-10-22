@@ -448,5 +448,54 @@
     "itm_copper_compass"
    ]
   }
+ },
+ {
+  "id": "qst_siege_whisperwood_defence",
+  "title": "Hold the Line: {settlement}",
+  "rank": "E",
+  "type": "SiegeDefence",
+  "giver": "npc_captain_holt",
+  "region": "reg_whisperwood",
+  "regionState": "besieged",
+  "summary": "Template for Whisperwood siege attacks. Grukk's warband will hit {settlement} at dusk tomorrow. Set barricades and traps, then hold for three waves (Data/World/siege_waves.json).",
+  "objectives": [
+   {
+    "kind": "defend",
+    "target": "{settlement}",
+    "count": 3
+   },
+   {
+    "kind": "kill",
+    "target": "mon_hobgoblin",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 180,
+   "gp": 16,
+   "xp": 650
+  }
+ },
+ {
+  "id": "qst_hunt_whisperwood_contract",
+  "title": "Whisperwood Hunting Contract",
+  "rank": "E",
+  "type": "Subjugation",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "regionState": "liberated",
+  "summary": "Template for post-liberation hunting work: the guild posts culls for whatever is breeding near the roads now that the goblin raids have stopped.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 6
+   }
+  ],
+  "rewards": {
+   "gold": 90,
+   "gp": 8,
+   "xp": 260
+  }
  }
 ]

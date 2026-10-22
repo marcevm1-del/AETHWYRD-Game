@@ -56,7 +56,9 @@ static class Repo
         Load<List<AttackData>>("Data/Monsters/attacks.json"),
         Load<List<LootTableData>>("Data/Monsters/loot_tables.json"),
         Load<List<ItemData>>("Data/Items/materials.json").Concat(Load<List<ItemData>>("Data/Items/items.json")),
-        Load<CombatTuning>("Data/Combat/combat_tuning.json"));
+        Load<CombatTuning>("Data/Combat/combat_tuning.json"),
+        Load<List<SiegeWaveData>>("Data/World/siege_waves.json"),
+        Load<WorldTuning>("Data/World/world_tuning.json"));
 }
 
 [Tests]

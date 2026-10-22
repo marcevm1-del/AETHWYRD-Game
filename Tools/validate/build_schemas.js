@@ -18,7 +18,12 @@ const SCHEMAS = {
       id: id('reg_'), name: { type: 'string', minLength: 1 }, biomes: { type: 'array', minItems: 1, items: { type: 'string' } },
       rankMin: RL, rankMax: RL, ring: { type: 'integer', minimum: 0, maximum: 9 },
       layer: { type: 'string', enum: ['surface', 'underworld', 'post-game'] },
-      allowedFamilies: { type: 'array', items: { type: 'string' } }
+      allowedFamilies: { type: 'array', items: { type: 'string' } },
+      // Regional Siege & Liberation (Systems; Canon §4b)
+      tyrantSpeciesId: id('mon_'), siegeFaction: { type: 'string' },
+      defenceSettlements: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } },
+      initialState: { type: 'string', enum: ['besieged', 'weakened', 'liberated'] },
+      noSiege: { type: 'boolean' }, noSiegeReason: { type: 'string' }
     }
   },
   species: {
@@ -39,7 +44,7 @@ const SCHEMAS = {
         properties: { hp: { type: 'integer', minimum: 1 }, atk: { type: 'integer', minimum: 0 }, def: { type: 'integer', minimum: 0 }, matk: { type: 'integer', minimum: 0 }, mdef: { type: 'integer', minimum: 0 }, spd: { type: 'integer', minimum: 1 } }
       },
       xp: { type: 'integer', minimum: 0 }, gold: { type: 'integer', minimum: 0 },
-      attackIds: { type: 'array', minItems: 1, items: id('atk_') }, isUnique: { type: 'boolean' }, ring: { type: 'integer', minimum: 0, maximum: 9 },
+      attackIds: { type: 'array', minItems: 1, items: id('atk_') }, isUnique: { type: 'boolean' }, isTyrant: { type: 'boolean' }, ring: { type: 'integer', minimum: 0, maximum: 9 },
       habitats: { type: 'array', minItems: 1, maxItems: 5, items: id('reg_') }, lootTableId: id('loot_'),
       signature: { type: 'string' }, look: { type: 'string', minLength: 40 }, fieldNote: { type: 'string' }, trope: { type: 'string' },
       designRecipe: {
@@ -100,11 +105,32 @@ const SCHEMAS = {
     title: 'Quest', type: 'object', additionalProperties: false, required: ['id', 'title', 'rank', 'type', 'giver', 'region', 'objectives', 'rewards'],
     properties: {
       id: id('qst_'), title: { type: 'string' }, rank: RANK,
-      type: { type: 'string', enum: ['Main', 'Subjugation', 'Gathering', 'Escort', 'Delivery', 'Investigation', 'Exploration', 'Defense', 'Capture', 'Bounty', 'Dungeon', 'OddJob', 'Trial', 'Faction', 'Companion', 'Class', 'Hidden', 'Divine'] },
+      type: { type: 'string', enum: ['Main', 'Subjugation', 'Gathering', 'Escort', 'Delivery', 'Investigation', 'Exploration', 'Defense', 'SiegeDefence', 'Capture', 'Bounty', 'Dungeon', 'OddJob', 'Trial', 'Faction', 'Companion', 'Class', 'Hidden', 'Divine'] },
       giver: id('npc_'), region: id('reg_'), summary: { type: 'string' },
+      regionState: { type: 'string', enum: ['any', 'besieged', 'liberated'] },
       requirements: { type: 'object', properties: { minRank: RL, minLevel: { type: 'integer', minimum: 1, maximum: 300 }, prerequisites: { type: 'array', items: id('qst_') }, partySize: { type: 'string' } } },
       objectives: { type: 'array', minItems: 1, items: { type: 'object', required: ['kind'], properties: { kind: { type: 'string', enum: ['kill', 'collect', 'talk', 'escort', 'reach', 'defend', 'tame', 'choice'] }, target: { type: 'string' }, count: { type: 'integer', minimum: 1 } } } },
       rewards: { type: 'object', properties: { gold: { type: 'integer', minimum: 0 }, gp: { type: 'integer', minimum: 0 }, xp: { type: 'integer', minimum: 0 }, items: { type: 'array', items: id('itm_') } } }
+    }
+  },
+  siege_wave: {
+    title: 'Siege wave set for one besieged region', type: 'object', additionalProperties: false,
+    required: ['id', 'regionId', 'faction', 'rankMin', 'rankMax', 'tyrantSpeciesId', 'waves', 'escalation', 'targetMinutes'],
+    properties: {
+      id: id('siege_'), regionId: id('reg_'), faction: { type: 'string' }, factionMixed: { type: 'boolean' },
+      rankMin: RL, rankMax: RL, tyrantSpeciesId: id('mon_'),
+      waves: {
+        type: 'array', minItems: 1,
+        items: {
+          type: 'object', additionalProperties: false, required: ['wave', 'units'],
+          properties: {
+            wave: { type: 'integer', minimum: 1 }, lieutenantSpeciesId: id('mon_'),
+            units: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['speciesId', 'count'], properties: { speciesId: id('mon_'), count: { type: 'integer', minimum: 1 } } } }
+          }
+        }
+      },
+      escalation: { type: 'object', additionalProperties: false, required: ['maxStep', 'countGrowthPerStep', 'eliteChancePerStep'], properties: { maxStep: { type: 'integer', minimum: 0 }, countGrowthPerStep: { type: 'number', minimum: 0 }, eliteChancePerStep: { type: 'number', minimum: 0, maximum: 1 } } },
+      targetMinutes: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', minimum: 1 } }
     }
   },
   weekly_quest: {
