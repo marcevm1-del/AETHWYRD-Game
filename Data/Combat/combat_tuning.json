@@ -49,6 +49,33 @@
   "launch": 0.08,
   "ultimate": 0.18
  },
+ "attackTiming": {
+  "notes": "Seconds per chain hit: startup -> active (hit lands on the first active frame) -> recovery. A buffered press starts the next hit when recovery begins. Dodge-cancel from active frame 1 (combat.md 4.1).",
+  "light": {
+   "startupSec": 0.1,
+   "activeSec": 0.08,
+   "recoverySec": 0.24
+  },
+  "medium": {
+   "startupSec": 0.16,
+   "activeSec": 0.1,
+   "recoverySec": 0.36
+  },
+  "heavy": {
+   "startupSec": 0.26,
+   "activeSec": 0.12,
+   "recoverySec": 0.46
+  },
+  "launch": {
+   "startupSec": 0.14,
+   "activeSec": 0.1,
+   "recoverySec": 0.32
+  },
+  "chainResetSec": 0.6,
+  "reachM": 2.2,
+  "arcDeg": 120,
+  "lungeM": 0.35
+ },
  "reactions": {
   "auraDurationSec": 6,
   "freezeDurationSec": 2.5,

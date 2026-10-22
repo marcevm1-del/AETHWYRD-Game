@@ -151,6 +151,7 @@ namespace Ascend.EditorTools
             Prim(PrimitiveType.Capsule, "Body", new Vector3(0, 0.9f, 0), new Vector3(0.7f, 0.9f, 0.7f), player, p.transform, keepCollider: false);
             Prim(PrimitiveType.Cube, "Facing", new Vector3(0, 1.45f, 0.33f), new Vector3(0.18f, 0.12f, 0.2f), accent, p.transform, keepCollider: false);
             p.AddComponent<PlayerMotor>();
+            p.AddComponent<PlayerCombat>();
             var driver = p.AddComponent<PlayerInputDriver>();
 
             // Camera.

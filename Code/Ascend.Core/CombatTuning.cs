@@ -15,6 +15,7 @@ namespace Ascend.Core
         public ParryTuning Parry { get; set; } = new ParryTuning();
         public ComboTuning Combo { get; set; } = new ComboTuning();
         public HitstopTuning Hitstop { get; set; } = new HitstopTuning();
+        public AttackTimingTuning AttackTiming { get; set; } = new AttackTimingTuning();
         public ReactionTuning Reactions { get; set; } = new ReactionTuning();
         public Dictionary<string, int> Poise { get; set; } = new Dictionary<string, int>();
         public PoiseRegenTuning PoiseRegen { get; set; } = new PoiseRegenTuning();
@@ -31,6 +32,18 @@ namespace Ascend.Core
     public sealed class ParryTuning { public double ParryWindowSec { get; set; } public double BlockDamageReduction { get; set; } public double RiposteHitstopSec { get; set; } }
     public sealed class ComboTuning { public int BudgetPerString { get; set; } public double BudgetRefillSec { get; set; } public List<double> ChargeLevels { get; set; } = new List<double>(); }
     public sealed class HitstopTuning { public double Light { get; set; } public double Medium { get; set; } public double Heavy { get; set; } public double Launch { get; set; } public double Ultimate { get; set; } }
+    public sealed class PhaseTiming { public double StartupSec { get; set; } public double ActiveSec { get; set; } public double RecoverySec { get; set; } }
+    public sealed class AttackTimingTuning
+    {
+        public PhaseTiming Light { get; set; } = new PhaseTiming();
+        public PhaseTiming Medium { get; set; } = new PhaseTiming();
+        public PhaseTiming Heavy { get; set; } = new PhaseTiming();
+        public PhaseTiming Launch { get; set; } = new PhaseTiming();
+        public double ChainResetSec { get; set; }
+        public double ReachM { get; set; }
+        public double ArcDeg { get; set; }
+        public double LungeM { get; set; }
+    }
     public sealed class ReactionTuning { public double AuraDurationSec { get; set; } public double FreezeDurationSec { get; set; } public double ShatterBonus { get; set; } public double StormPrisonStunSec { get; set; } }
     public sealed class PoiseRegenTuning { public double DelaySec { get; set; } = 2.5; public double FractionPerSec { get; set; } = 0.25; }
     public sealed class AiTuning { public int MaxSimultaneousAttackers { get; set; } }

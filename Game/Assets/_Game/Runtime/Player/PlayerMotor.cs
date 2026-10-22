@@ -81,7 +81,7 @@ namespace Ascend.Game
 
         public bool Jump()
         {
-            if (!IsGrounded || IsDodging) return false;
+            if (!IsGrounded || IsDodging || _velocity.y > 0f) return false; // grounded flag lags until the next Move
             _velocity.y = Mathf.Sqrt((float)_move.JumpHeight * -2f * gravity);
             return true;
         }
@@ -96,6 +96,13 @@ namespace Ascend.Game
             _dodgeChain++;
             UseStamina((float)_dodge.StaminaCost);
             return true;
+        }
+
+        /// <summary>Moves the character by a world offset this frame (attack lunges, knockback), respecting collisions.</summary>
+        public void Nudge(Vector3 worldOffset)
+        {
+            worldOffset.y = 0;
+            if (worldOffset.sqrMagnitude > 0f) _cc.Move(worldOffset);
         }
 
         void UseStamina(float amount)

@@ -1,0 +1,11 @@
+{
+  "name": "Ascend.Game",
+  "rootNamespace": "Ascend.Game",
+  "references": ["Ascend.Core", "Unity.InputSystem"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "noEngineReferences": false
+}
