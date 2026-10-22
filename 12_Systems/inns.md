@@ -2,6 +2,8 @@
 
 Every settlement has an inn, and every inn is a **social hub**: rest, food, rumors, music, cards, brawls, companions' late-night talks. Inns are where the cozy half of the game lives between adventures. Data: `Data/World/inns.json` (schema `inn`, checked by `npm run validate`).
 
+> **Built (v0.11):** `Code/Ascend.Core/Inns.cs`: rest buffs per room (meal and bath add Well Rested; nights stack), regular status thresholds, and Marta's tab (never blocks). Numbers in `Data/World/world_tuning.json` → `inns`.
+
 ## 1. What Every Inn Offers
 | Service | What it does |
 |---|---|

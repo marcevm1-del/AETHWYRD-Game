@@ -125,6 +125,7 @@ for (const q of [...rows.quests, ...rows.weekly]) {
 for (const i of rows.inns) {
   ref(`${i.id}.regionId`, i.regionId, 'regions'); ref(`${i.id}.keeperNpcId`, i.keeperNpcId, 'npcs', true);
   if (i.rooms.filter(r => r.tier === 'signature').length > 1) err(i.id, 'at most one signature room');
+  for (const r of i.rooms) if (!/^(Well Rested|Rested)\s*\(\d+(\.\d+)?h\)/.test(r.rest)) err(i.id, `room rest "${r.rest}" must look like "Rested (2h)" or "Well Rested (4h) + meal" (read by Ascend.Core InnStay)`);
 }
 
 // Story flags: quest-set flags must actually be set by some quest

@@ -15,6 +15,8 @@ Repeatable, slice-of-life adventurer work that gives every in-game day its own f
 | 6 | **Morrowsday** | Morrowyn | Day of the Lantern | Remembrance, rest, cozy party nights |
 | 7 | **Vexday** | Vex | Day of the Coin | Market day, odd jobs, games of chance |
 
+> **Built (v0.11):** `Code/Ascend.Core/WeeklyBoard.cs` builds each dawn's board (Day Special once per week, 3 seeded dailies from the day + Any pools, the weekly commission, the siege defence on top on attack days, `regionState` filtering, time-of-day windows). Calendar: `GameCalendar` with `Data/World/world_tuning.json`.
+
 ## 2. Board Rules
 - **Dawn reset:** each morning the guild board shows that day's **Day Special** plus **3 dailies** drawn from that day's pool and the Any-day pool.
 - **Day Special:** once per week, a bigger quest with a minigame or a story twist. Missing one is fine; it returns next week.

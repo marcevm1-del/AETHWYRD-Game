@@ -19,6 +19,8 @@
 ## Already done (while Unity is blocked)
 - **`Code/Ascend.Core`**: the combat rules as plain C# (no Unity dependency): ranks and levels, element auras and reactions, damage formula, Style Rank meter, loot rolls, poise, aggro tokens, and data models for every JSON file. **22 tests pass** (`npm test`), including a cross-check that every monster's level matches the rank rules. Unity will use this code directly.
 
+- **v0.11:** player stats and XP curve (`Data/Classes/progression.json`), the Swordsman's Ring 0 kit (`Data/Classes/classes.json`), Ring 0 monsters at F- with level spreads, real Freeze/Storm Prison, poise regen. Balance check: a Lv 1 Swordsman kills a goblin in 3 light hits and survives 9 goblin hits; at Lv 10 everything dies in one hit (`ASCEND_REPORT=1 npm test`).
+
 ## Milestones
 | Week | Milestone | You | Claude |
 |---|---|---|---|

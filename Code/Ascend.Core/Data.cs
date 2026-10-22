@@ -159,13 +159,18 @@ namespace Ascend.Core
         public IReadOnlyDictionary<string, ClassData> Classes { get; }
         public IReadOnlyDictionary<string, StoryFlagData> StoryFlags { get; }
         public ProgressionRules Progression { get; }
+        public IReadOnlyDictionary<string, WeeklyQuestData> WeeklyQuests { get; }
+        public IReadOnlyDictionary<string, InnData> Inns { get; }
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
             IEnumerable<LootTableData> loot, IEnumerable<ItemData> items, CombatTuning tuning,
             IEnumerable<SiegeWaveData> siegeWaves = null, WorldTuning world = null,
             IEnumerable<QuestData> quests = null, IEnumerable<NpcData> npcs = null, IEnumerable<ClassData> classes = null,
-            IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null)
+            IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null,
+            IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null)
         {
+            WeeklyQuests = Index(weeklyBoard, q => q.Id, "weekly quest");
+            Inns = Index(inns, i => i.Id, "inn");
             Quests = Index(quests, q => q.Id, "quest");
             Npcs = Index(npcs, n => n.Id, "npc");
             Classes = Index(classes, c => c.Id, "class");

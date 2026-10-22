@@ -2,6 +2,23 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.11 — Sieges, review fixes, weekly board & inns in code (2026-10-22)
+**Part A: Regional Siege & Liberation, built**
+- 40 regional **Tyrants** as unique species in their regions (`Tools/monster_gen/tyrants.js`), mostly bosses already in the bestiary; 9 regions marked `noSiege`. Goblin Chief Grukk is Whisperwood's Tyrant (raids Brindlewick and Millbrook) and still the F→E trial.
+- `regions.json`: `tyrantSpeciesId`, `siegeFaction`, `defenceSettlements`, `initialState`. Generated `siege_waves.json` (3 waves per region from the Tyrant's faction living there, lieutenant, escalation) + schema.
+- Quests: `SiegeDefence` type and a `regionState` condition; Whisperwood defence and post-liberation hunting templates.
+- C#: `RegionThreat`, `SiegeScheduler` (1–2 attacks per 7-day week, never on consecutive days, announced a day ahead, deterministic), `SiegeAutoResolve` + `SettlementProsperity` (never destroys, damage repairable), `DeterministicRandom`. New `world_tuning.json`.
+**Part B: review fixes**
+- Style points cap; real Freeze (shatter) and Storm Prison stun; poise regeneration; loot as decimal `chance` with a 0.1% Relic Shard chase drop and luck as a multiplier.
+- Player side: `progression.json` (stat formulas, XP curve shared with the monster generator), `classes.json` (Swordsman + Ring 0 kit), `PlayerStats`, `XpCurve`.
+- Ring 0 monsters at F- with level spreads; the Horned Rabbit has its own stat profile.
+- Quests: `prerequisites` {quests, flags, act, rank} and `setsFlags`; `story_flags.json`; NPC `states` by story flag (Mina → Nocturne) and `schedule`; `QuestGate`.
+- Explicit `bossHpMult` (Tyrants 5, unique beings 6, EX 15) instead of baked-in boss HP; one signature attack per monster family.
+- Generated `bestiary_viewer.html` and CSVs are no longer committed.
+**Part C: weekly board & inns in code**
+- C# models for `weekly_board.json` and `inns.json`, loaded in `GameDatabase`. `GameCalendar`, `WeeklyBoard`, `InnStay` (rest buffs, regular status), `InnTab`.
+- Tests: 22 → **54**.
+
 ## v0.10.10 — Echoes of Aincrad (2026-10-22)
 - `borrowed_features.md` #24–30 from *Echoes of Aincrad* (SAO, July 2026): Switch hand-offs, Command vs Free Rein with fatigue, Death Game presentation for Hardcore (never paywalled), waystone respawn rule, Labyrinth floor-boss raid councils and the Frontline, a playable "Day the Windows Glitched" town event, the Veilborn Circle; plus lessons from its reviews (dungeon variety rule).
 

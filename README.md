@@ -25,7 +25,7 @@
 | 08 | [monster_design_kit.md](08_Bestiary/monster_design_kit.md) | Research, 25 rigs, design recipe, Menace axis, Boss Suitability, data files |
 | 08 | [bosses_and_calamities.md](08_Bestiary/bosses_and_calamities.md) | Bosses, Generals, Elder Dragons, Calamities |
 | 08 | [bestiary_lore.md](08_Bestiary/bestiary_lore.md) | Flavor text per monster family |
-| 08 | [bestiary_viewer.html](08_Bestiary/bestiary_viewer.html) | Filterable view of all monster data (`npm run viewer`) |
+| 08 | bestiary_viewer.html | Filterable view of all monster data; **generated** by `npm run gen` (not committed), served by `npm run viewer` |
 | 09 | [gear_systems_and_sets.md](09_Equipment/gear_systems_and_sets.md) | Slots, rarity, materials, sets, upgrades, Relics |
 | 09 | [legendary_artifacts.md](09_Equipment/legendary_artifacts.md) | Divine artifacts, sentient weapons, legendaries |
 | 10 | [brindlewick.md](10_World/brindlewick.md) | Ring 1 hub town: history, districts, daily rhythm, people, quests, secrets |
@@ -54,12 +54,16 @@ All game content lives in `Data/` as JSON, checked against `Data/Schemas/`.
 
 | Data | Path |
 |---|---|
-| Regions (rank bands, rings) | `Data/World/regions.json` |
-| Monsters | `Data/Monsters/` (species, population, attacks, loot tables) |
+| Regions (rank bands, rings, Tyrants, siege state) | `Data/World/regions.json` |
+| Siege waves (generated) | `Data/World/siege_waves.json` |
+| World tuning (calendar, sieges, inns) | `Data/World/world_tuning.json` |
+| Player classes & progression | `Data/Classes/classes.json`, `Data/Classes/progression.json` |
+| Story flags | `Data/Quests/story_flags.json` |
+| Monsters | `Data/Monsters/` (species, population, attacks, loot tables; Tyrants in `Tools/monster_gen/tyrants.js`). CSVs are generated, not committed |
 | Items | `Data/Items/` (materials generated, items hand-written) |
 | Inns | `Data/World/inns.json` |
-| NPCs / Quests | `Data/NPCs/npcs.json`, `Data/Quests/quests.json` |
+| NPCs / Quests | `Data/NPCs/npcs.json` (with story states and schedules), `Data/Quests/quests.json`, `Data/Quests/weekly_board.json` |
 | Combat tuning | `Data/Combat/combat_tuning.json` |
-| Game rules (C#) | `Code/Ascend.Core`: engine-agnostic rules (ranks, levels, elements and reactions, damage, Style Rank, loot, poise, aggro). Drops into Unity as-is |
+| Game rules (C#) | `Code/Ascend.Core`: engine-agnostic rules: ranks and levels, elements and reactions (Freeze, Storm Prison), damage, Style Rank, loot, poise, aggro, player stats and XP, quest gating, NPC states, **sieges** (`RegionThreat`, `SiegeScheduler`, `SiegeAutoResolve`), **calendar**, **weekly board**, **inns**. Drops into Unity as-is. 54 tests (`npm test`) |
 
 **ID rules:** `reg_`, `mon_`, `pop_00000`, `atk_`, `loot_`, `itm_`, `npc_`, `qst_`, `inn_` + lowercase snake_case. IDs are unique across all data.

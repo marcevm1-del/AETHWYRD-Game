@@ -31,7 +31,7 @@
 | Endings | **11 main + 1 secret** (*The Thirteenth Star*, ~1,000 hrs); ~100 epilogue variations |
 | Villain structure | **Demon Overlord Azrael** + **5 Generals**: Ignarok, Morthis, Zephiel, Rhaka, Lady Nocturne |
 | World | **40 surface regions + 5 Underworld layers + Great Labyrinth (120 floors, 3 depth bands) + Vesper (post-game)**. Canonical list: `Data/World/regions.json` |
-| Monsters | 287 core species → 640 species → 6,714 population variants (`Data/Monsters/`) |
+| Monsters | 287 core species → 640 species + 40 regional Tyrants = 680 → 6,754 population variants (`Data/Monsters/`) |
 | NPCs | ~2,500 named NPCs, each with a backstory (150 core · 600 major · 1,750 townsfolk) |
 
 ## 3. The Big Secrets
