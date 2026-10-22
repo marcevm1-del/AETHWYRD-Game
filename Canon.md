@@ -75,4 +75,5 @@
 |---|---|---|
 | Companion roster | **12 companions + 2 childhood friends**, no more human-cast companions added after this | Romance + permadeath + mutual exclusivity + 12 endings multiply writing; capping the cast caps that |
 | Named-monster companions | A **lighter dialogue tier**: personality, banter, bond levels, no romance or full personal arc | Lets the nemesis-to-companion system scale |
+| **Big Upgrade** | Adopt the signature features in `01_Core_Concept/the_big_upgrade.md`: Lying Interface, Appraisal as detective work, hidden Thread growth, Otherworld Knowledge economy, the Next Summoning (NG+), Legend system, learning Tyrants, plus the scope cuts there | Sharper identity instead of more content |
 | Ring 2 roster | Trim ~145 tagged species to ~60 cores during Ring 2 planning | Art budget for two people |

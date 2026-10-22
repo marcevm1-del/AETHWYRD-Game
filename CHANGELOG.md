@@ -2,6 +2,9 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.10.2 — The Big Upgrade (proposal, 2026-10-22)
+- New `01_Core_Concept/the_big_upgrade.md`: a sharper pitch, 7 signature features built on existing lore, recommended scope cuts and a first-15-minutes demo hook. Listed in Canon §6 for approval.
+
 ## v0.10.1 — The Weekly Board (2026-10-22)
 - **7-day week** added to the calendar and Canon: Solenday, Maelsday, Thorsday, Sylvasday, Kaelsday, Morrowsday, Vexday (one per god; Ilvaris has none).
 - New `11_Quests_Encounters/weekly_board.md` + `Data/Quests/weekly_board.json`: 35 repeatable anime-style quests (7 day specials, 22 dailies, 5 any-day fillers, 1 weekly commission) for Brindlewick, with rolled twists and Besieged/Liberated filtering.
