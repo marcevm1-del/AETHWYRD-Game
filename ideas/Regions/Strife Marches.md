@@ -16,6 +16,72 @@ tags: [region, surface]
 | Siege faction · state | humanoid_enemy · besieged |
 | Settlements | border baronies, mercenary forts |
 
+> **The Contested Borderlands.** Border baronies and mercenary forts trade the same fields back and forth every season, and the old ruins have changed flags more often than anyone can count. Lately a preacher called Diego Alvarez has gathered the Choir of Chains to sing over them.
+>
+> *Every baron here can point to the treaty that makes him the rightful one. None of the treaties agree.*
+
+## Overview
+
+The Strife Marches are the borderlands between Aldmere and its eastern neighbours, a region of fields, forests and ruined castles that has changed hands more often than anyone can count. Every baron can produce a treaty proving he is the rightful lord, and every treaty contradicts the others. The people have learned to plant quickly and harvest early. Lately a new kind of trouble has come: a preacher who sings over the battlefields and makes the fighting worse.
+
+## Geography
+
+The marches are open plains broken by forests and low ridges, ideal country for cavalry and terrible country for anyone trying to defend a village. Ruined castles stand on every hill, and the fields are full of old earthworks. A road runs east-west through the middle, and every army in history has used it.
+
+## Ecology
+
+War has shaped the land: forests have regrown over old battlefields, crows and wolves have grown fat, and the ground is full of iron. Wild animals have learned to avoid soldiers. The dead of many wars do not always stay buried, and the Choir of Chains has learned how to wake them.
+
+## Peoples
+
+Marchers are farmers, mercenaries and smugglers, tough and cynical, loyal to their families and their neighbours rather than any lord. They speak a mix of languages and switch flags without a second thought. The mercenary forts are full of sellswords from every corner of the world, some of whom have married into the local families.
+
+## Power & trade
+
+The border baronies are ruled by minor nobles who claim allegiance to whichever kingdom pays them best. Mercenary companies are the real power, and they are hired by whoever has money this season. Trade in food, iron and soldiers keeps the region alive, and smuggling keeps it prosperous.
+
+## Faith & customs
+
+Marchers keep the day-gods, but they keep them quietly, because chapels are the first buildings armies burn. They bury their dead with a coin from each kingdom, so that whichever side wins, the dead can pay their way.
+
+## The Tyrant
+
+Diego Alvarez, Voice of the Choir of Chains, is a preacher who arrived in the marches a few years ago with a beautiful voice and a terrible message: that suffering is holy, and that chains are a gift. His followers chant over the battlefields, and their song binds the living to old hatreds and the dead to new wars. He is charming, cruel and absolutely sure he is right. He cannot be reasoned with or redeemed.
+
+## Senses
+
+Trampled wheat and old smoke; crows; marching songs in three languages; chanting carried on the wind.
+
+## History
+
+- **Now:** Diego Alvarez, the Voice of the Choir of Chains, has gathered followers who chant over the battlefields. Wherever they sing, the fighting turns savage, the dead rise and old feuds reopen.
+- **Parents:** Within living memory a great peace was signed at Castle Varn, and it lasted eleven years before a baron's son broke it over a horse.
+- **Grandparents:** In their grandparents' time the marches were a kingdom of their own, briefly, until both neighbours invaded at once.
+- **Ancient:** Every baron here can point to the treaty that makes him the rightful one. None of the treaties agree.
+
+## Settlements
+
+- **Border baronies:** Small fortified towns and manors ruled by quarrelling barons.
+- **Mercenary forts:** Timber and stone forts where the sellsword companies wait for their next contract.
+
+## Landmarks
+
+- **Castle Varn:** A ruined castle where the great peace was signed, and broken.
+- **The Field of Coins:** A battlefield where the dead were buried with coins from every kingdom.
+- **The East Road:** The road every army has used.
+
+## Story hooks
+
+- A mercenary captain wants out of her contract before the Choir reaches her fort.
+- Two barons claim the same village, and the villagers want someone to decide.
+- A man swears his dead father has started singing in his sleep.
+
+## Clans
+
+- **The Tusk Companies** (Boar Clan, led by Captain Hilde Gorebristle): Sellsword companies who have fought for every baron in the Marches and own a few castles themselves. Contracts are sacred; sides are not.
+- **The Plague-Beaks** (Raven/Crow Clan, led by Doctor Corvin Ashbeak): Battlefield healers and grave-keepers who follow every army.
+- **The Red Barons** (Vampire Clan, led by Baron Valcourt Sanguine): Old blood-lords of the ruined castles who profit from every war.
+
 ## Monsters (84)
 
 | Monster | Family | Rank | Level |

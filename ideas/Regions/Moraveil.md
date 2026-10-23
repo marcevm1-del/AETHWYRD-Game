@@ -16,6 +16,71 @@ tags: [region, surface]
 | Siege faction · state | orc_giant · besieged |
 | Settlements | Moraveil goblin village, Moraveil market town |
 
+> **The Truce Country.** Rolling farmland, deep caves and something rare: a goblin village and a human market town that trade in peace. Grakkus the Orc Disaster means to end that, and he is called a disaster for good reason.
+>
+> *Moraveil's truce began when a goblin child pulled a farmer's daughter out of a flooded cave. Both of them are still alive.*
+
+## Overview
+
+Moraveil is a gentle country of farmland, woods and caves where something unusual has happened: a goblin village and a human market town have learned to trade in peace. Goblins sell mushrooms and cave-fish at the human market, humans sell bread and iron at the goblin one, and the truce has held for a generation. It is a fragile, hopeful, stubbornly ordinary place. An orc warlord the size of a house has decided to end it.
+
+## Geography
+
+Rolling green hills dotted with farms and copses, over limestone riddled with caves. A river runs through the middle, and the human town is built on one bank and the goblin village in the cliffs of the other. A stone bridge joins them, and it is the most important building in Moraveil.
+
+## Ecology
+
+The farmland is rich, the woods are full of game and the caves are full of mushrooms, cave-fish and bats. The goblins farm the caves; the humans farm the fields. Wild orcs, trolls and dire wolves come down from the northern hills in hard winters, and the truce began partly because both peoples needed each other to fight them.
+
+## Peoples
+
+Moraveil's humans are farmers and merchants, and its goblins are cave-farmers, fishers and craftspeople. Both peoples have their bigots and their friends. A new generation has grown up speaking both languages and finds the old prejudices tiresome. The goblin village runs an inn that welcomes humans who are polite and keep their weapons at the door.
+
+## Power & trade
+
+Each side governs itself, and a joint council meets on the bridge once a month to settle disputes. The council has no army and no money, only the trust of both peoples. Trade between the two sides is the economy, and it has made both richer than either was alone. Neighbouring human lords see the truce as dangerous; some goblin tribes see it as a betrayal.
+
+## Faith & customs
+
+Humans keep the day-gods; goblins keep their own spirits of cave and fungus. Both sides celebrate Truce Day, the anniversary of the rescue that started it all, with a shared feast on the bridge.
+
+## The Tyrant
+
+Grakkus, the Orc Disaster, is an orc warlord of enormous size and strength who has never lost a fight. He hates the truce because it proves that monsters and humans can live together, and he believes that idea will destroy his people. He fights at a level far beyond most adventurers who reach Moraveil, and he is called a disaster for good reason: wherever he goes, nothing is left standing.
+
+## Senses
+
+Bread and mushroom stew; two languages shouting over the market; river water on stone; drums from the northern hills.
+
+## History
+
+- **Now:** Grakkus the Orc Disaster has smashed two goblin villages in the hills and is marching on Moraveil. Some humans are blaming the goblins for drawing him, and some goblins are blaming the humans for making them soft.
+- **Parents:** Within living memory the truce began when a goblin child pulled a farmer's daughter out of a flooded cave. Both of them are still alive and sit on the council.
+- **Grandparents:** In their grandparents' time the humans and goblins of Moraveil fought a long, ugly war over the caves.
+- **Ancient:** The goblins say the caves were dug by a great worm that taught them to farm mushrooms.
+
+## Settlements
+
+- **Moraveil goblin village:** A cliff village of caves and ladders, home of the Friendly Goblin inn.
+- **Moraveil market town:** A busy human market town on the river, joined to the goblin village by the Truce Bridge.
+
+## Landmarks
+
+- **The Truce Bridge:** A stone bridge over the river, where the joint council meets and the Truce Day feast is held.
+- **The Flooded Cave:** Where the truce began; the goblins keep it as a shrine.
+- **The Northern Hills:** Rough country where the wild orcs and trolls live.
+
+## Story hooks
+
+- A human merchant has been accused of poisoning goblin mushrooms, and someone wants the truce to fail.
+- The goblin and human council members who started the truce want help preparing both peoples for Grakkus.
+- A goblin warband from the hills has come to Moraveil to join Grakkus, and they need persuading.
+
+## Clans
+
+- **The Longears** (Hare Clan, led by Scout-Captain Tansy Quickfoot): Moraveil's fastest messengers and most stubborn farmers, who sit on the joint council beside humans and goblins.
+- **The Hill-Orcs** (Orc Clan, led by Shaman Urzha Redbeard): Wild orc clans of Moraveil's northern hills; some follow Grakkus, some fear him.
+
 ## Inns
 
 - [[Inns/The Friendly Goblin|The Friendly Goblin]] (Moraveil market town)

@@ -14,6 +14,61 @@ tags: [region, underworld]
 | Biomes | cave, ruins, underworld |
 | Siege faction · state | — · liberated |
 
+> **The Proving Halls.** The first forty floors of the Great Labyrinth are the guild's proving ground. The halls reset, the loot returns, and the stairs never seem to end where the map says they should.
+>
+> *Nobody built the Labyrinth that anyone can name. The earliest guild ledgers already call it old.*
+
+## Overview
+
+The Great Labyrinth is a dungeon of a hundred and twenty floors beneath the heart of the continent, and its first forty floors are where every serious adventurer earns their rank. The guild regulates the entrance, sells the maps and runs the rescue teams. The halls reset after they are cleared, so the loot returns and the monsters return with it. It is the most profitable hole in the world and the most crowded, and the guild says it is safe in the way a forge is safe.
+
+## Geography
+
+The upper floors are built of the same grey stone as Whisperwood's waystations: corridors, vaults, flooded galleries and stairways that do not always connect to the floors the maps say they do. Every tenth floor is a guardian floor with a single great chamber. Safe towns have grown up on floor thirty, where a natural cavern holds clean water, and on floor forty, where something stranger keeps the monsters away. The Labyrinth's layout shifts slightly after each reset, enough to keep mapmakers in business.
+
+## Ecology
+
+The Labyrinth breeds its own monsters from dungeon cores, and they are not animals in any ordinary sense: they do not eat, breed or age, and they respawn where they fall. Real creatures have moved in anyway. Rats, cave bats, slimes and fungus have colonised the upper floors, feeding on the waste of thousands of adventurers, and a few families of dungeon-born kobolds run a thriving salvage trade in lost gear.
+
+## Peoples
+
+The Labyrinth's people are adventurers, porters, map-sellers, healers, cooks and the dwarven brewers of floor thirty. Parties form and break at the guild board in the entrance hall, and the culture is part sport, part trade and part religion. Rookies are hazed, veterans are worshipped and anyone who comes back from floor forty with a full party is bought drinks for a week.
+
+## Power & trade
+
+The guild controls the entrance and licenses every party by rank. The safe towns are run by whoever runs their taverns, and the dwarf who keeps the bar on floor thirty has more authority than most barons. The economy is loot, mana crystals, monster parts and the services sold to the people who collect them. Prices triple every ten floors down, and nobody complains, because the alternative is going back up.
+
+## Faith & customs
+
+Adventurers pray to Vex before every descent, and the luckiest coin in a party's purse is never spent. A chalk mark at a stairway means someone made it down safely; a crossed mark means they did not. On floor forty the ghost market holds a wake every night for the people who died below it, and newcomers are expected to attend one before they go deeper.
+
+## The Tyrant
+
+The upper Labyrinth has no Tyrant and no siege; it is a dungeon band, not a region with settlements. Its guardians are the floor bosses that stand on every tenth floor, and they come back after every reset. Rumour in the safe towns speaks of a Maze King who moves the walls, but the guild does not post bounties on rumours.
+
+## Senses
+
+Lamp oil and old stone; the echo of distant fights; dwarf ale on floor thirty; the hush of the ghost market.
+
+## History
+
+- **Now:** The guild has posted record numbers of rookies to the upper floors this year, and the rescue teams are stretched thin. Something has been killing parties on floor thirty-nine that does not appear on any bestiary.
+- **Parents:** Within living memory the guild built the entrance hall and closed the old side-doors. Some of those doors still open from below.
+- **Grandparents:** In their grandparents' time the Labyrinth reset only once a year, and there was a festival when it did. Now it resets every week.
+- **Ancient:** The earliest guild ledgers already call the Labyrinth old. No one knows who built it, and those who say they know tend to be selling something.
+
+## Landmarks
+
+- **The Entrance Hall:** The guild's great hall over the first stair, with the rank board and the rescue bell.
+- **Floor 30 safe town:** A cavern town of tents and taverns around a clean spring, home of the Deep Pint.
+- **Floor 40 ghost market:** A night market run by the dead, where prices are paid in stories and the only living guest is you.
+
+## Story hooks
+
+- A rescue team went down for a party on floor thirty-nine and did not come back up.
+- A kobold salvager is selling a map of a floor that does not exist.
+- The ghost hostess on floor forty wants someone to deliver a letter to the surface.
+
 ## Inns
 
 - [[Inns/The Deep Pint|The Deep Pint]] (Labyrinth Floor 30 safe town)

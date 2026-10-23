@@ -16,6 +16,71 @@ tags: [region, surface]
 | Siege faction · state | orc_giant · besieged |
 | Settlements | Karak Dûn, Ashen Mines camps |
 
+> **The Forge Under the Mountains.** Mountains with fire for veins. The dwarven hold of Karak Dûn mines the Ashen seams beneath them, and Skarn the Fire Giant Warlord wants the forges and the furnace-heart that feeds them.
+>
+> *The dwarves sealed the deepest shaft after something answered their hammers from below. The seal is warm to the touch.*
+
+## Overview
+
+Iron Hold is the mountain realm of the dwarves, a range of black peaks with fire in their veins. Its great hold, Karak Dûn, is a city carved into the mountain's heart, lit by forges that have not gone cold in a thousand years. The dwarves mine the Ashen seams below for iron, mithril and fire-crystal, and they forge the finest steel in the world. A fire giant has come for the forges, and he has brought an army.
+
+## Geography
+
+The range is volcanic: black basalt peaks, steaming vents, lava tubes and hot springs. The dwarves have tunnelled through all of it, and the mountains are honeycombed with halls, shafts and roads. The Ashen Mines lie to the east, where the rock is richest and the heat is worst. The deepest shaft was sealed long ago, and its seal is warm to the touch.
+
+## Ecology
+
+Little grows on the mountains except lichen, thornbush and hardy goats. Beneath them, cave fish, blind beetles and mushrooms feed on the warmth. Fire salamanders, magma slimes and rock wyrms live in the lava tubes, and the dwarves hunt them for their hides and hearts. Fire giants and their orc servants have come down from the volcanic north, drawn by the forges' heat.
+
+## Peoples
+
+The dwarves of Iron Hold are miners, smiths, engineers and brewers, organised into clans by craft. They are proud, stubborn, loyal and funny in a dry way that outsiders often miss. Human, gnome and orc labourers work the outer mines for wages, and some have lived there for generations. A small, quarrelsome community of rune-smiths keeps the old secrets of enchanted steel.
+
+## Power & trade
+
+Karak Dûn is ruled by a High Thane elected from the clan heads, and the clans govern their own halls. Laws are carved in stone and changed only with great difficulty. The economy is iron, steel, weapons, armour and fire-crystal, sold to every kingdom in the world. Iron Hold's steel has armed both sides of most of the world's wars.
+
+## Faith & customs
+
+Dwarves honour Thor above the other day-gods, and Thorsday is the day of the great forging. Every smith keeps a hearth-stone from their first forge, and losing it is a terrible omen. Drinking contests are a sacred tradition, and the record holder is three hundred years old.
+
+## The Tyrant
+
+Skarn, the Fire Giant Warlord, leads an army of fire giants, orcs and salamanders from the volcanic north. He wants the forges of Karak Dûn and the furnace-heart that feeds them, a living fire that the dwarves have kept burning for a thousand years. With it he believes he can forge weapons that will let his people conquer the cold lands of the world. He is huge, clever and patient, and he respects the dwarves enough to want them as slaves rather than corpses.
+
+## Senses
+
+Hot iron and coal smoke; hammer-song echoing through stone; dark ale; the tremor of the mountain breathing.
+
+## History
+
+- **Now:** Skarn's army has taken the Ashen Mines and is besieging the outer gates. The dwarves are holding, but their forges are short of fuel.
+- **Parents:** Within living memory the dwarves fought the elves of Sylvaran over a river of timber, and the peace treaty is still read aloud each year.
+- **Grandparents:** In their grandparents' time the deepest shaft was sealed after something answered the hammers from below.
+- **Ancient:** The dwarves say Thor struck the first anvil in these mountains, and the sparks became the first dwarves.
+
+## Settlements
+
+- **Karak Dûn:** The great dwarven hold carved into the mountain's heart, entered through the Khazdûr Gate and home of the Anvil's Rest inn.
+- **Ashen Mines camps:** Mining camps of dwarves and hired labourers in the eastern seams, now held by Skarn's army.
+
+## Landmarks
+
+- **The Furnace-Heart:** A living fire at the heart of Karak Dûn that has never gone out.
+- **The Sealed Shaft:** The deepest mine shaft, sealed with runes and warm to the touch.
+- **The Hall of Thanes:** A great hall where the carved faces of every High Thane watch the living.
+
+## Story hooks
+
+- A rune-smith needs fire-crystal from the occupied mines to finish a weapon that could stop Skarn.
+- A young orc labourer wants to warn the dwarves about a plan inside Skarn's camp.
+- The Sealed Shaft has started knocking back.
+
+## Clans
+
+- **The One-Eyed Smiths** (Cyclops clan, led by Master Smith Oculra): Ancient allies of the dwarves who see the flaws in metal and the cracks in futures. Skarn wants them as his armourers.
+- **The Hold-clans** (Dwarf Clan, led by Matriarch Hulda Ironbraid): The great clans of Karak Dûn, each with its craft, colours and grudges: smith-clans led by matriarchs, merchant clans who never leave the trade halls, engineer clans with pistols and goggles, and the old warrior clans who guard the gates.
+
 ## Inns
 
 - [[Inns/The Anvil's Rest|The Anvil's Rest]] (Khazdûr Gate)

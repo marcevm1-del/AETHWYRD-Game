@@ -14,6 +14,61 @@ tags: [region, underworld]
 | Biomes | underworld, cave |
 | Siege faction · state | — · liberated |
 
+> **The Breathing Pit.** A pit that breathes. The Hive Mother's world event begins here, and so does the swarm.
+>
+> *The Maw opened after the Sundering, and the land around it has been sinking ever since.*
+
+## Overview
+
+The Maw is a pit in the western lands that breathes. Air rushes in for an hour and out for an hour, as regular as a sleeper's breath, and the sound can be heard for miles. It descends into the Underworld deeper than anyone has measured, and the land around it has been sinking ever since it opened. It is home to the Hive Mother, and when she stirs the swarm pours out and becomes a world event that no single region can face alone.
+
+## Geography
+
+The Maw is a vast, round shaft hundreds of yards across, its walls ribbed like a throat and slick with a resinous coating. Tunnels branch off it at every depth, leading into a honeycomb of chambers that fills the rock for miles around. The land around the rim slopes inward and cracks as it sinks. At the bottom, far below where any lantern reaches, lies the Hive Mother's chamber.
+
+## Ecology
+
+The Maw is a single, enormous hive. Its insectoid creatures, the swarm, are all the Hive Mother's children: workers, soldiers, flyers and stranger castes that seem to be made for specific tasks. They harvest the surrounding land, carrying everything down into the pit. Nothing else lives near the Maw for long.
+
+## Peoples
+
+No one lives at the Maw. The guild maintains a fortified watch camp on a ridge some miles away, and S-rank parties occasionally descend to cull the swarm or study it.
+
+## Power & trade
+
+No power holds the Maw. The guild coordinates the response when the swarm rises, and the kingdoms of the world are bound by treaty to send help.
+
+## Faith & customs
+
+Some say the Maw is a mouth of the world itself, breathing in the sins of the surface. The guild's watchers simply count the breaths and grow nervous when the rhythm changes.
+
+## The Tyrant
+
+The Maw has no Tyrant and no siege. Its Calamity, the Hive Mother, is a world event, not a regional siege, and when she rises the whole world must answer.
+
+## Senses
+
+A wind that pulls and pushes; the hum of a million wings; resin and dust; the deep, slow breathing of something huge.
+
+## History
+
+- **Now:** The Maw's breathing has quickened, and the guild watchers believe the Hive Mother is waking.
+- **Parents:** Within living memory the swarm rose and stripped three provinces before the combined armies drove it back down.
+- **Grandparents:** In their grandparents' time the Maw was smaller, and its breath could barely be heard.
+- **Ancient:** The Maw opened after the Sundering, and the land around it has been sinking ever since.
+
+## Landmarks
+
+- **The Rim:** The cracked, sinking edge of the pit, where the breath can knock a person over.
+- **The Watch Camp:** The guild's fortified camp on a ridge, counting the breaths.
+- **The Throat:** The upper shaft, ribbed and slick, where the swarm's tunnels begin.
+
+## Story hooks
+
+- The watch camp's breath-counter has noticed a second rhythm under the first.
+- An S-rank party went down to cull the swarm and has sent back only a single word.
+- A farmer near the Maw says his field sank a foot overnight, and something under it is singing.
+
 ## Monsters (14)
 
 | Monster | Family | Rank | Level |

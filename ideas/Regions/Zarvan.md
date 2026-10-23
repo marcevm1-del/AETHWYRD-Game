@@ -16,6 +16,71 @@ tags: [region, surface]
 | Siege faction · state | orc_giant · besieged |
 | Settlements | Zarvan garden cities |
 
+> **The Garden Cities.** Garden cities bloom on terraces cut into desert mountains, fed by aqueducts older than the kingdom. Zahhar, King of the Divs claims the water and every rose it grows.
+>
+> *The div-kings ruled Zarvan before people did. They signed the garden treaties in water, and water forgets.*
+
+## Overview
+
+Zarvan is a land of garden cities blooming on terraces cut into bare desert mountains, kept green by aqueducts older than the kingdom itself. Its people are poets, gardeners, engineers and scholars, and they measure a city's greatness by its roses. It is one of the most beautiful places in the world and one of the most fragile, because everything depends on the water. Zahhar, King of the Divs, has come down from the mountains to claim it.
+
+## Geography
+
+The mountains of Zarvan are high, dry and bare, but snow on their peaks feeds springs deep inside them. The first people of Zarvan cut channels into the mountainsides to carry that water down, and their descendants built the great aqueducts, tunnels and cisterns that feed the cities today. The valleys are terraced from top to bottom, and each terrace holds a garden, orchard or field. The cities are walled gardens of their own, full of fountains, pools and shaded courtyards.
+
+## Ecology
+
+In the gardens live songbirds, peacocks, bees, butterflies and the famous Zarvan nightingales. In the wild mountains above them live ibex, snow leopards, vultures and scorpions. The divs, giant spirits of the mountains, live in the high caves and the hidden springs. The gardens depend on bees and the bees depend on the gardens, and the water feeds both.
+
+## Peoples
+
+The people of Zarvan are refined, hospitable and proud. Poets are honoured above generals, and a well-made verse can win a lawsuit. Gardeners are a respected guild, and engineers who maintain the aqueducts are almost priests. The cities are cosmopolitan, full of traders and scholars from everywhere, but the mountain villages are traditional and suspicious of outsiders.
+
+## Power & trade
+
+Zarvan is ruled by a shah who governs with a council of water-masters. The water-masters decide how the water is divided, which means they decide which cities flourish and which wither. The economy rests on roses, rosewater, carpets, fruit, silk and scholarship, and Zarvan's universities are among the oldest in the world.
+
+## Faith & customs
+
+The people honour the day-gods and the water, and every garden has a small shrine at its spring. Poetry is a form of prayer, and the great poets are buried in gardens that become places of pilgrimage. Wasting water is a sin and a crime.
+
+## The Tyrant
+
+Zahhar, King of the Divs, is a giant div with skin like polished stone and eyes like coals. He signed the garden treaties with the first shah, agreeing to share the mountain water in return for honour and offerings. The offerings stopped generations ago, his caves were plundered and his people were hunted. He believes the treaties are broken and the water is his again, and he is not entirely wrong.
+
+## Senses
+
+Roses and running water; poetry recited in fountain courts; pomegranates and saffron; dry mountain wind.
+
+## History
+
+- **Now:** Zahhar has seized the springs above three cities and demands tribute in roses, rosewater and poets. The shah is negotiating, and the water-masters are rationing.
+- **Parents:** Within living memory a great earthquake broke the main aqueduct, and the cities survived only because the engineers worked for forty days without rest.
+- **Grandparents:** In their grandparents' time the div-kings were thought to have died out, and their caves were plundered for treasure.
+- **Ancient:** The div-kings ruled Zarvan before people did. They signed the garden treaties in water, and water forgets.
+
+## Settlements
+
+- **Zarvan garden cities:** Terraced cities of gardens, fountains and universities, fed by the great aqueducts.
+
+## Landmarks
+
+- **The Great Aqueduct:** An aqueduct older than the kingdom, carrying water down from the mountain springs.
+- **The Rose Palace:** The shah's palace, famous for its hundred gardens.
+- **The Div Springs:** The hidden mountain springs, now held by Zahhar.
+
+## Story hooks
+
+- A famous poet has been taken as tribute, and her students want her back before she writes a poem in Zahhar's honour.
+- A water-master believes the original garden treaty is carved in the Div Springs and could end the war.
+- A garden in the capital has started blooming roses that bleed when cut.
+
+## Clans
+
+- **The Sun-Hawks** (Falcon/ Hawk Clan, led by Watch-Mother Horeshet): Sky-watchers of the garden cities who guard the aqueducts from the air and were once the div-kings' allies.
+- **The Coilborn** (Snake Clan, led by Warden Nagasha of the Springs): Guardians of the garden springs, old allies of the divs.
+- **The Ibis Scribes** (Stork/ibis Clan, led by Scribe Tahut Reedpen): Zarvan's poets and archivists, keepers of the universities.
+
 ## Monsters (45)
 
 | Monster | Family | Rank | Level |

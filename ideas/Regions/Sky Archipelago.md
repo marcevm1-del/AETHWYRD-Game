@@ -14,6 +14,61 @@ tags: [region, surface]
 | Biomes | sky, ruins |
 | Siege faction · state | — · liberated |
 
+> **The Abandoned Heights.** The Titans' cities float in the clouds, abandoned and silent, linked by bridges that end in open air. No Tyrant holds them, but the winds are not empty.
+>
+> *The Titans left their tables set, as if they meant to come back.*
+
+## Overview
+
+The Sky Archipelago is a chain of floating islands high above the north-east, where the Titans once built cities of white stone among the clouds. The Titans are gone, and their cities stand empty, their tables still set and their doors still open, as if they meant to come back. No Tyrant holds the archipelago and no one lives there to be besieged. Only the strongest adventurers reach it, and they report that the winds are not empty.
+
+## Geography
+
+The islands float at different heights, from just above the clouds to so high that the air is thin and cold. Each carries a piece of a Titan city: palaces, towers, amphitheatres and gardens gone wild. Bridges of white stone once linked them, and many now end in open air. The islands drift slowly on the wind, and their positions change over the years, so maps of the archipelago are always out of date.
+
+## Ecology
+
+Cloud birds, sky whales, wind serpents and air elementals live among the islands. The Titans' gardens have run wild into forests of strange trees whose roots hang down beneath the islands. Sky pirates and scavengers who reach the islands by magic or airship hunt for Titan relics.
+
+## Peoples
+
+No one lives in the archipelago permanently. Scholars, scavengers and the occasional hermit camp in the ruins for a season. The Heavenfolk of nearby Heavenreach claim the islands as sacred and dislike visitors.
+
+## Power & trade
+
+No power holds the archipelago. The guild issues expedition licences, and the Heavenfolk occasionally drive expeditions away.
+
+## Faith & customs
+
+Scholars argue about whether the Titans were gods, giants or something else. The Heavenfolk say the Titans were their ancestors' teachers.
+
+## The Tyrant
+
+The Sky Archipelago has no Tyrant and no siege. The cities are abandoned, and the greatest danger that waits there is part of a larger story.
+
+## Senses
+
+Thin cold air; wind through empty halls; the crunch of white stone; the sound of distant thunder from the highest island.
+
+## History
+
+- **Now:** Expeditions have reported Titan machines moving on the higher islands, and a storm of unusual violence circles the highest island of all.
+- **Parents:** Within living memory an expedition reached the highest island and brought back a Titan's table knife the size of a man.
+- **Grandparents:** In their grandparents' time the islands were thought to be a myth.
+- **Ancient:** The Titans left their tables set, as if they meant to come back.
+
+## Landmarks
+
+- **The Set Tables:** A Titan banquet hall where the tables are still laid for a feast.
+- **The Broken Bridges:** White stone bridges that end in open air.
+- **The Highest Island:** An island wrapped in a permanent storm, which no expedition has reached in years.
+
+## Story hooks
+
+- A scholar wants to know what the Titans were going to eat at the set tables.
+- A sky whale has become trapped in the ruins of a tower.
+- A Titan machine has started rebuilding a bridge.
+
 ## Monsters (30)
 
 | Monster | Family | Rank | Level |

@@ -16,6 +16,71 @@ tags: [region, surface]
 | Siege faction · state | yokai · besieged |
 | Settlements | Hoshizora City, Bamboo Sea villages |
 
+> **The Land Under the Star-Sky.** Cedar mountains, a sea of bamboo and a city of red bridges where spirits are given seats at festivals. Kurogane the Oni Warlord came down from the peaks with a mask for every village he means to rule.
+>
+> *Hoshizora's shrines are rebuilt every twenty years so that the gods stay curious. The last rebuilding was left unfinished.*
+
+## Overview
+
+Hoshizora is a land of cedar mountains, bamboo seas and red-bridged cities on the north-eastern coast, where spirits are given seats at festivals and the boundary between worlds is thin. Its people live gracefully alongside things most lands fear, and they have rules for every kind of guest. Those rules have broken down. An oni warlord has come down from the volcano with a mask for every village he means to rule.
+
+## Geography
+
+The land climbs from a rocky, pine-covered coast through terraced rice valleys and bamboo forests to steep cedar mountains capped by the Oni Volcano. Rivers rush down in waterfalls, and hot springs bubble up everywhere. Hoshizora City stands at the mouth of the largest river, its castle on a hill and its temples on every slope.
+
+## Ecology
+
+Deer, monkeys, cranes and tanuki live in the forests, and the spirit world spills over into the natural one: kodama in the old trees, kappa in the rivers and fox-spirits at the crossroads. Most spirits are harmless if treated with respect. Oni live in the volcano's shadow and come down only when the shrines are neglected.
+
+## Peoples
+
+The people of Hoshizora are farmers, fishers, craftspeople, monks, samurai and merchants, bound by courtesy and a strong sense of duty. They are reserved with strangers and warm with friends. Shrine-keepers and onmyoji, spirit-speakers, hold great respect. A growing number of young people have left for the cities of the south, and the old villages are emptying.
+
+## Power & trade
+
+Hoshizora is ruled by a shogun in Hoshizora City and lords who hold the valleys in his name. The shrines have their own authority over the spirits and the boundary. Rice, silk, lacquer, steel and spirit-charms are traded abroad, and the city's swordsmiths are second only to the dwarves.
+
+## Faith & customs
+
+The day-gods are honoured alongside countless local spirits, and every village has a shrine. Shrines are rebuilt every twenty years to keep the gods curious. Festivals invite the spirits to join the living for a night of food and dancing, and the spirits must be sent home at dawn.
+
+## The Tyrant
+
+Kurogane, the Oni Warlord, is a great red-skinned oni with an iron club and a face like a temple guardian. He came down from the volcano when the shrine above it was left unfinished, because the unfinished shrine broke an old bargain between the oni and the people. He believes the people have forfeited their protection and that the oni are owed rule over the valleys. His masks bind those who wear them to obey him.
+
+## Senses
+
+Cedar incense and hot springs; temple bells; the rustle of bamboo; drums from the volcano.
+
+## History
+
+- **Now:** Kurogane has come down from the Oni Volcano and taken three valleys. He gives each village a mask and says that whoever wears it will be spared.
+- **Parents:** Within living memory the shogun's father closed the coast to foreign ships, and the opening of the ports is still a sore subject.
+- **Grandparents:** In their grandparents' time the great rebuilding of the volcano shrine was left unfinished when the money ran out.
+- **Ancient:** Hoshizora's shrines are rebuilt every twenty years so that the gods stay curious. The last rebuilding was left unfinished.
+
+## Settlements
+
+- **Hoshizora City:** The capital at the river mouth, with its castle, temples and the Ryokan Moon-on-Water.
+- **Bamboo Sea villages:** Villages in the bamboo forests, the first to fall under Kurogane's masks.
+
+## Landmarks
+
+- **The Oni Volcano:** The smoking peak above the land, with its unfinished shrine.
+- **The Thousand Gates:** A mountain path lined with red torii gates, where spirits walk at night.
+- **The Moon Pond:** A pond where the moon's reflection is said to be a doorway.
+
+## Story hooks
+
+- A village headman has worn Kurogane's mask, and his daughter wants it taken off without killing him.
+- The shrine carpenters need guards to finish the volcano shrine.
+- A kappa is demanding the return of a cucumber debt from three generations ago.
+
+## Clans
+
+- **The Shogun's Houses** (Emperor Clan, led by Lord Takeda Ryunosuke of the Crimson House): The great houses that serve the shogun, each with its own armour colour and crest. Some have quietly accepted Kurogane's masks.
+- **The Ember-tails** (Red Panda Clan, led by Kip Embertail, Street-Captain): Cheerful wanderers of the bamboo villages.
+
 ## Inns
 
 - [[Inns/Ryokan Moon-on-Water|Ryokan Moon-on-Water]] (Hoshizora City)

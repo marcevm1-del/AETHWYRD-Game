@@ -16,6 +16,73 @@ tags: [region, surface]
 | Siege faction · state | construct · besieged |
 | Settlements | Oasis of Qadira |
 
+> **The Glass Desert.** Glass-streaked dunes surround the green Oasis of Qadira. The Colossus of Sunscar walks the horizon, and the oasis shrinks after every pass.
+>
+> *Qadira's water-keepers can recite the oasis's shoreline for every year back to the first well.*
+
+## Overview
+
+Sunscar is a desert of red dunes streaked with lines of glass, where a great empire once stood and vanished in a single day. Its towers still stick out of the sand like the masts of sunken ships. The Oasis of Qadira, with its seven wells, is the only green place for weeks in any direction, and every caravan in the desert passes through it. A colossus walks the horizon, and the oasis shrinks after every pass.
+
+## Geography
+
+The dunes of Sunscar are tall, red and restless, driven by winds that change with the seasons. Long streaks of glass run across them, some miles long, where something once burned the sand to crystal. The ruins of the vanished empire lie half-buried: towers, aqueducts, roads and great statues with their faces worn away. The oasis lies in a hollow where seven wells draw water from an aquifer deep below the sand, and palm groves and gardens surround it.
+
+## Ecology
+
+Camels, sand foxes, desert hares, scorpions, vultures and sandworms live in the desert. Glass-backed lizards bask on the streaks and absorb heat through their crystal scales. Around the oasis live date palms, songbirds, fish in the pools and the gardens that feed its people. The Colossus draws water from the deep aquifer as it walks, and the oasis's wells are drying.
+
+## Peoples
+
+The people of Sunscar are nomads, caravaneers, water-keepers, merchants and treasure-hunters. The nomad tribes know every well and every dune, and they guide the caravans for a price. The water-keepers of Qadira are a hereditary order who manage the wells and keep the oasis's records. The treasure-hunters are mostly outsiders, drawn by stories of the vanished empire's wealth, and the water-keepers dislike them.
+
+## Power & trade
+
+The oasis is governed by the water-keepers, and every caravan pays a water-tithe. The nomad tribes are independent and keep their own laws. Trade in salt, spice, incense, glass and relics of the vanished empire flows through the oasis, and the caravanserai is the busiest market in the desert.
+
+## Faith & customs
+
+The people honour the day-gods and the water, which they consider sacred. Wasting water is the worst of crimes. The vanished empire is remembered as a warning against pride: the stories say it tried to make itself into a god and was burned for it.
+
+## The Tyrant
+
+The Colossus of Sunscar, Walker of the Dunes, is a giant construct of the vanished empire, built to carry water from the deep aquifer to its cities. The cities are gone, but the Colossus still walks its route, drawing water and carrying it to places that no longer exist, then spilling it on the sand. It does not know the empire is gone, and it does not know it is killing the oasis. It defends itself from anything that tries to stop it.
+
+## Senses
+
+Hot sand and date palms; the clink of glass underfoot; the call to the wells at dawn; a distant, rhythmic thud.
+
+## History
+
+- **Now:** The Colossus of Sunscar walks the horizon, and two of the seven wells have run dry. The water-keepers have begun rationing, and the nomads are arguing about whether to abandon the oasis.
+- **Parents:** Within living memory a treasure-hunter found a working machine in the ruins, and the water-keepers buried it again before anyone could learn what it did.
+- **Grandparents:** In their grandparents' time the oasis was twice its size, and the Colossus walked much further away.
+- **Ancient:** Qadira's water-keepers can recite the oasis's shoreline for every year back to the first well.
+
+## Settlements
+
+- **Oasis of Qadira:** The green oasis around seven wells, with palm groves, gardens and the Oasis Caravanserai.
+
+## Landmarks
+
+- **The Glass Streaks:** Long lines of melted sand where something burned the desert to crystal.
+- **The Sunken Towers:** Towers of the vanished empire rising from the dunes.
+- **The Seven Wells:** The wells of Qadira, two now dry.
+
+## Story hooks
+
+- A water-keeper believes the Colossus could be redirected, if someone could reach the control chamber in its chest.
+- A treasure-hunter wants to dig up the machine the water-keepers buried, and she claims it could save the oasis.
+- A caravan has been lost in a sandstorm, and its water-tithe was never paid.
+
+## Clans
+
+- **The Glasskin** (Crystalian / diamond clan, led by Elder Shirah of the Seventh Streak): Born where the glass streaks cross; the nomads say they are what is left of people the burning turned to glass. They remember the vanished empire's last day in fragments.
+- **The Well-Keepers** (Egyptian Clan, led by High Keeper Nefrimah): The hereditary water-keepers of Qadira, inheritors of the vanished empire's rites. They write everything down and forgive nothing.
+- **The Sable Guides** (Jackal Clan, led by Guide-Master Inpu Nightpath): Guides of the dead and of caravans, who know every safe path through the dunes.
+- **The Sand-Stingers** (Scorpiones Clan, led by Matriarch Qarra Duneclaw): Nomads of the deep desert who guard the Colossus's path.
+- **The Unburied Court** (Undead Egyptian Clan, led by Pharaoh-in-Waiting Sekhemrah): The vanished empire's dead, waiting in the Sunken Towers.
+
 ## Inns
 
 - [[Inns/The Oasis Caravanserai|The Oasis Caravanserai]] (Oasis of Seven Wells)

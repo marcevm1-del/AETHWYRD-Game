@@ -16,6 +16,72 @@ tags: [region, surface]
 | Siege faction · state | undead · besieged |
 | Settlements | Ashby, Greyhollow Village, Royal Valley farms |
 
+> **The Crown Valley.** The heartland: wheat plains, wet woods and a crown city whose walls still stand. At night the dead march out of the Greyhollow barrows under Ashgrave, the Oathless Baron, a knight who broke his oath and lost the rest of himself.
+>
+> *Aldmere's royal valley fed three wars. Every farm along it has a sword buried under its doorstep, and every family has its own story about why.*
+
+## Overview
+
+Aldmere is the kingdom at the centre of every map of Aetheria and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.
+
+## Geography
+
+The valley is wide, fertile and crossed by slow rivers that flood each spring and leave rich silt behind. To the west the farmland breaks into wet woods and fens that run toward Greymoor; to the east it rises into the gentle hills where the old barrows stand. The capital sits on a granite hill that the river curves around on three sides, and its walls have never been breached. Ruins of older Aldmeres lie under the fields, and ploughs turn up coins, armour and bones every year.
+
+## Ecology
+
+Aldmere's wilds are tame by the standards of the world, which is why the kingdom grew rich. Deer, boar and flocks of fat pheasant fill the woods; wolves are rare and goblins rarer. The danger is old death: barrow-wights, skeletal soldiers and restless knights rise where the valley's many battles were fought. The fens to the west breed giant frogs and will-o-wisps, and farmers use smoke and salt lines to keep both out of the fields.
+
+## Peoples
+
+Aldmerians are farmers, artisans, clerks and soldiers, proud of their crown and grumbling about its taxes. The capital is a crowded mix of every people on the continent: dwarven smiths, elven envoys, beastfolk caravaneers and Veilborn adventurers who were summoned here and never left. In the countryside families measure their worth in generations on the same land, and they are polite to strangers but slow to trust them.
+
+## Power & trade
+
+The crown rules through a council of noble houses, the Church and the guild, and the three rarely agree. Succession passes to the eldest child of the reigning monarch, confirmed by the Church. The great houses quarrel over the river tolls, the Church over the summoning of heroes, and the guild over who pays for the roads. Wheat, wool, river trade and the business of adventuring keep Aldmere rich, and the capital's banks lend to half the kingdoms of the world.
+
+## Faith & customs
+
+The Church is strongest here. Its great cathedral holds statues of the past Heroes, and the people are taught to honour all seven day-gods with Solenday as the holy day of rest. One plinth in the Hall of Heroes stands empty, with only a pair of stone boots left on it; the guides do not like questions about it. Harvest-end is the year's great festival, when every village burns a straw knight to keep the dead in their barrows.
+
+## The Tyrant
+
+Ashgrave, the Oathless Baron, was once a knight of Aldmere who swore to hold Greyhollow to the last man, then fled when the last man was all that was left. The Church struck his name from the rolls, and the barrows took him in. Now he leads the dead who kept the oath he broke, and he wants the one thing they cannot give him: to be remembered as faithful. He fights at C+ rank and is far above what a new adventurer can face; the kingdom hopes someone will be ready before the barrows empty.
+
+## Senses
+
+Bells at dawn; fresh bread and wet stone; banners snapping on the walls; silence over the barrow-hills at dusk.
+
+## History
+
+- **Now:** The dead of Greyhollow march every week. Ashgrave's host has not yet reached the capital's walls, but the outer farms of the Royal Valley are emptying, and Ashby keeps its gates shut by day.
+- **Parents:** Within living memory the kingdom fought a war on its eastern border and won it at a terrible price. The veterans are old men now, and many of the dead in the barrows wear the same colours they did.
+- **Grandparents:** In their grandparents' time a Hero sealed the Demon Overlord with a lantern of his own soul, and Aldmere's bells rang for a week. The lantern-lighting festival is still held every year on that date.
+- **Ancient:** The capital is the fourth city built on its hill. The first was older than the Church, and its foundations run into tunnels no one has fully mapped.
+
+## Settlements
+
+- **Ashby:** A walled market town at the edge of the barrow-hills, first to see the dead each week.
+- **Greyhollow Village:** A farming village built among the barrows, half abandoned and half too stubborn to leave.
+- **Royal Valley farms:** The crown's richest farmland, a scattered patchwork of manors, mills and orchards along the river.
+
+## Landmarks
+
+- **The Hall of Heroes:** The cathedral nave where the statues of past Heroes stand, and one does not.
+- **Greyhollow Barrows:** Grassy mounds on the eastern hills; the doors that were sealed with silver are open now.
+- **The King's Ford:** Where the river is shallow enough to cross on foot, and where every war with Aldmere has been decided.
+
+## Story hooks
+
+- A farmer has ploughed up a seal that matches the one on Ashgrave's barrow, and the dead have started coming to his farm specifically.
+- The capital's banks want a courier to carry gold to Ashby through the night.
+- An old veteran insists that one of the dead soldiers is his brother, and wants him brought home.
+
+## Clans
+
+- **The Hearthbound** (Human clan, led by Reeve Maud Ashby): The baseline people of the heartland, varied and stubborn, alongside the Veilborn who were summoned among them.
+- **The Barrow-Host** (Undead Skeleton Clan, led by Ashgrave, the Oathless Baron): Ashgrave's host from the Greyhollow barrows.
+
 ## People
 
 - [[NPCs/Mina Feathersby|Mina Feathersby]]: Guild receptionist

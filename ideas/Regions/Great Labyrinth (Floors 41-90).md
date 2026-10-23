@@ -14,6 +14,61 @@ tags: [region, underworld]
 | Biomes | cave, ruins, underworld |
 | Siege faction · state | — · liberated |
 
+> **The Drowned Floors.** Below floor forty the halls widen into drowned cities and inverted forests. Raid councils draw lots for who goes first.
+>
+> *Parties that never came back left chalk marks behind them. Some of the marks point to rooms that no longer exist.*
+
+## Overview
+
+Below floor forty the Great Labyrinth stops pretending to be a building. Floors forty-one to ninety are entire landscapes underground: drowned cities, forests that grow downward, deserts lit by false suns and libraries that go on for days. Only B-rank adventurers and above are licensed to enter, and the guild keeps a separate board for them. The loot is the best in the world. So are the deaths.
+
+## Geography
+
+Each floor in the deep band is a biome of its own, connected by stairs, shafts, waterfalls or doors that appear only at certain hours. The ceilings rise out of sight, and some floors have weather. A sunken city fills floors fifty-five to fifty-eight, its streets flooded to the second storey. An inverted forest hangs from the ceiling of floor sixty-six, its roots in stone and its canopy in open air.
+
+## Ecology
+
+The deep floors are where the Labyrinth's cores are strongest, and the monsters they produce are elaborate: golems, chimeras, elementals and things that resemble animals from no surface land. Real life is rarer but stranger. Blind fish swim the drowned streets, and the inverted forest has its own birds that fly upside down. Parties trade with a reclusive people of deep gnomes who live in the walls and will not say how they got there.
+
+## Peoples
+
+There are no towns here, only camps. Raid councils of several parties form to tackle the deeper floors together, and they keep their own laws about loot, rescue and debt. The deep gnomes are wary but honest traders. A small community of adventurers who have stayed too long below lives in the sunken city and refuses to go back to the surface.
+
+## Power & trade
+
+The raid councils are the only government, and their agreements are recorded at the guild and enforced by reputation. Breaking a council oath is the fastest way to lose your licence. The deep gnomes trade mana crystals and maps for surface food and news, and they never haggle.
+
+## Faith & customs
+
+Deep adventurers stop praying to Vex below floor sixty and start praying to whoever is listening. Every raid council carries a lantern, and if the lantern goes out the raid turns back, whatever the loot. It is a superstition that has saved more lives than any spell.
+
+## The Tyrant
+
+The deep band has no Tyrant and no siege; it is a dungeon band. Its floor guardians on every tenth floor are among the strongest monsters a B- to S-rank party can face, and several are unique.
+
+## Senses
+
+Cold damp air; the drip of the sunken city; the smell of mana like struck flint; lantern light swinging on wet stone.
+
+## History
+
+- **Now:** A raid council reached floor ninety this season for the first time in eleven years. Only half of it came back, and they will not talk about what they found at the stair.
+- **Parents:** Within living memory a party mapped the sunken city fully, and the city changed its streets the next week.
+- **Grandparents:** In their grandparents' time no one went below floor sixty and returned. The first who did came back older than they should have been.
+- **Ancient:** The deep gnomes say the floors were once a single world, folded up and stored here for safekeeping.
+
+## Landmarks
+
+- **The Sunken City:** Four floors of flooded streets and towers, lit by phosphorescent algae.
+- **The Inverted Forest:** Floor sixty-six, where the trees grow downward and the sky is underfoot.
+- **The Gnome Walls:** Hidden doors on several floors that lead into the deep gnomes' tunnels, if they let you in.
+
+## Story hooks
+
+- A deep gnome asks for help finding a door that has disappeared from its own wall.
+- The survivors of the floor-ninety raid want someone to go back for the lantern they left behind.
+- A scholar wants a book from the upside-down library on floor seventy-two, read in the right direction.
+
 ## Monsters (86)
 
 | Monster | Family | Rank | Level |

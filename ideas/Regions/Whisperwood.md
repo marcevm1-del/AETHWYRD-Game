@@ -16,6 +16,71 @@ tags: [region, surface]
 | Siege faction · state | goblinoid · besieged |
 | Settlements | Brindlewick, Millbrook |
 
+> **The Wood Where Every Map Begins.** Old oaks close over the cart-roads between Brindlewick and Millbrook, and every new adventurer's first map is a map of this wood. The Hollowpine goblins raid from a camp among the ruins, and Grukk leads them with more cunning than anyone expects of a goblin chief.
+>
+> *The ruins were waystations of the old kingdom. Grandmothers still leave bread on their steps for travellers who never came home.*
+
+## Overview
+
+Whisperwood is the first wild place most newcomers to Aetheria ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.
+
+## Geography
+
+The forest sits in a shallow bowl of land drained by dozens of brooks that feed the Millbrook stream. The ground is soft loam over limestone, which makes for sinkholes, little caves and springs that appear after rain and vanish by the next week. Toward the centre the canopy closes completely and the light turns green; the locals call this the Hush, because birdsong stops there. Moss-covered ruins of old waystations dot the old roads, built in a grey stone that does not occur anywhere in the wood.
+
+## Ecology
+
+Whisperwood is a nursery ecosystem. Slimes graze the fallen leaves and are eaten by horned rabbits, which are eaten by forest wolves, which avoid the goblins, who eat everything. Mana Motes drift thickly in the Hush and feed the glowcaps that light the forest floor at night. The goblins of Hollowpine farm mushrooms in the sinkhole caves and trap wolves for their pelts; when the wolves grow scarce, they come for the villages' sheep instead, and then for the villages.
+
+## Peoples
+
+Brindlewick folk are woodcutters, charcoal burners, beekeepers and innkeepers; they are practical, nosy and generous, and they have grown used to strangers who arrive confused and in odd clothes. Millbrook is a mill town of millers, weavers and a handful of retired adventurers who chose a quiet stream to grow old beside. The Hollowpine goblins are not one people but six clans with their own marks, feuds and recipes; most of them want full bellies and dry caves, and only some of them want war.
+
+## Power & trade
+
+No lord sits in Whisperwood. The villages answer nominally to the crown of Aldmere but are run by a reeve in Brindlewick and the miller's council in Millbrook. The guild's branch office in Brindlewick holds more practical power than either, because it posts the bounties that keep the roads open. The economy is timber, honey, flour and, increasingly, rookies: the inns, smiths and outfitters of Brindlewick live off the steady stream of new adventurers.
+
+## Faith & customs
+
+Wayside shrines to the seven day-gods stand at the forest's edges, and Sylvasday is a half-holiday when no one cuts green wood. Villagers leave bread on the steps of the old waystations for travellers who never came home, a custom older than anyone can explain. Rookies are expected to carve their names somewhere in Brindlewick before they leave; most carve them into the beams of the Sleeping Griffon's loft.
+
+## The Tyrant
+
+Grukk, Goblin Chief of Hollowpine, is not the biggest goblin in the wood, but he is the first in a long time who can count. He has united the six clans by sharing food fairly and punishing theft, and he raids the villages because their granaries could feed his people through winter. His camp lies among the deepest ruins in the Hush. Killing him lifts the siege on Brindlewick and Millbrook and is the trial that turns an F-rank adventurer into an E-rank one. Not every goblin in the wood will forgive whoever does it.
+
+## Senses
+
+Woodsmoke and wet leaves; the creak of the mill; honey on black bread; goblin drums, very far away.
+
+## History
+
+- **Now:** The Hollowpine clans have stopped raiding as rabble. Under Grukk they strike in coordinated waves one or two days a week, never two days running, and they retreat before the guild can respond.
+- **Parents:** A generation ago the wood was cleared of a goblin warband by a party of four rookies who later became famous. The villages built them a monument, and Grukk's father died in that clearing.
+- **Grandparents:** In their grandparents' time the waystations still had keepers, and the south road was the main road to the coast. A plague year emptied them, and the road shifted east and never came back.
+- **Ancient:** The grey stone of the waystations matches the stone of the Great Labyrinth. Some scholars think the old roads once ran to its gates; most scholars think that is a story told to rookies.
+
+## Settlements
+
+- **Brindlewick:** A timber village where most adventurers wake up for the first time in Aetheria, home of the guild branch and the Sleeping Griffon inn.
+- **Millbrook:** A mill town on the Millbrook stream with a working waterwheel, a cheese cellar and a stubborn council of millers.
+
+## Landmarks
+
+- **The Hush:** The silent green heart of the forest, where the canopy closes and the Mana Motes drift like snow.
+- **The Rookie Stones:** A ring of standing stones where the guild holds its first field tests; every stone is scratched with tally marks.
+- **Hollowpine Camp:** The goblin stronghold, built into a ruined waystation with a cave behind it that is deeper than it should be.
+
+## Story hooks
+
+- A Millbrook miller swears the waterwheel turns backwards on nights when the goblins raid.
+- The guild wants a map of the sinkhole caves before the next spring rains open new ones.
+- A goblin child keeps leaving carved wooden wolves on the Sleeping Griffon's doorstep.
+
+## Clans
+
+- **The Sett-folk** (Badger Clan, led by Old Barnaby Brockwhistle, Solicitor): Whisperwood's oldest residents, living in great burrow-halls under the hornbeams. They are the region's librarians, solicitors and grumpy grandparents, and they have watched every rookie come and go.
+- **The Six Clans of Hollowpine** (Goblin Clan, led by Grukk, Goblin Chief of Hollowpine): Grukk's people are not all raiders. Hollowpine is a tinkering culture of scrap engines, fire-pots and cockerel cavalry, and its best inventors would rather build than burn.
+
 ## People
 
 - [[NPCs/Wren Ashbourne|Wren Ashbourne]]: Ranger trainer, Whisperwood hunter

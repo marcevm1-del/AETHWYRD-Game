@@ -16,6 +16,74 @@ tags: [region, surface]
 | Siege faction · state | yokai · besieged |
 | Settlements | Fox Shrine Isle, spirit inns |
 
+> **The Isles of Fox and Promise.** Fox shrines and spirit inns where the hosts' ears don't always match their faces. The Hollow Bride walks the cliff paths with a neck that stretches as long as her grief.
+>
+> *Each island was once a promise between a fox and a fisherman. One of those promises was broken.*
+
+## Overview
+
+The Kitsune Isles are a chain of green islands off the eastern coast, home to fox shrines, spirit inns and people whose ears do not always match their faces. Spirits run the inns here, and humans are their guests; breaking a house rule means breaking a contract. The isles are beautiful, eerie and courteous. A grieving spirit walks the cliff paths, and her neck stretches as long as her grief.
+
+## Geography
+
+The isles are steep volcanic islands covered in forest, with sheltered coves, sea caves and a ring of reefs. Each island has a single shrine on its peak, reached by a long stair. Mist rolls in from the sea most mornings and burns off by noon.
+
+## Ecology
+
+Foxes are everywhere, and some of them are not foxes. Sea birds nest on the cliffs, and the reefs teem with fish. Yokai of every kind live here openly: rokurokubi, tanuki, tsukumogami and kitsune of one to nine tails. The spirits live off offerings, contracts and the strong feelings of humans.
+
+## Peoples
+
+The islanders are fishers, shrine-keepers, innkeepers and contract-makers, mixed families of humans and kitsune who have intermarried for centuries. They are polite, precise and very careful with promises. Some families have served the same fox shrine for generations, and their children are born with fox-ears.
+
+## Power & trade
+
+Each island is governed by its shrine and the family that serves it. The spirits' contracts are law, and humans who break them suffer. Fish, pearls, spirit-silk and contracts are the islands' trade, and the spirit inns draw visitors from all over the world.
+
+## Faith & customs
+
+The islanders honour the day-gods and the fox spirits, especially the Ninefold, a nine-tailed fox who founded the isles. Every promise is witnessed by a fox, and every contract is sealed with a drop of blood and a grain of rice.
+
+## The Tyrant
+
+The Hollow Bride, Matriarch of the Long Necks, is a rokurokubi spirit who was promised a wedding that never came. Her neck stretches through the night in search of her betrothed, and she takes the love of anyone she finds, leaving them hollow. She leads a family of long-necked spirits who feed on broken promises, and the isles are full of them.
+
+## Senses
+
+Mist and pine; fox calls at night; incense and salt; paper lanterns swaying in the sea wind.
+
+## History
+
+- **Now:** The Hollow Bride walks the cliffs, and the spirit inns have closed their doors at dusk. Travellers who answer her call are found in the morning, alive, but unable to remember anyone they love.
+- **Parents:** Within living memory a great kitsune family fell from favour, and its daughter left the isles. The family's shrine has been tended by strangers ever since.
+- **Grandparents:** In their grandparents' time a fisherman broke a promise to a fox-wife, and the island he lived on sank.
+- **Ancient:** Each island was once a promise between a fox and a fisherman. One of those promises was broken.
+
+## Settlements
+
+- **Fox Shrine Isle:** The main island, with the great fox shrine and the Ninth Tail Teahouse.
+- **Spirit inns:** Inns run by spirits across the isles, where humans are guests and contracts are law.
+
+## Landmarks
+
+- **The Ninefold Shrine:** The great shrine on Fox Shrine Isle, with nine gates and nine stairs.
+- **The Sunken Isle:** An island that sank beneath the sea, its shrine still visible at low tide.
+- **The Cliff of Promises:** A cliff where lovers make vows, and where the Hollow Bride walks.
+
+## Story hooks
+
+- A young woman with fox-ears has come home to the isles to reclaim her family's shrine.
+- A spirit inn's contract has been broken by a careless guest, and the inn has begun to eat him.
+- The Hollow Bride's betrothed may still be alive, and someone wants to find him.
+
+## Clans
+
+- **The Shell-Sages** (Turtle Clan, led by Elder Kamejiro of the First Promise): Keepers of the islands' oldest contracts.
+
+## Fauna
+
+- **Ghost Fox** (Predator): A pale, flame-tailed fox, maybe a spirit, maybe an animal.
+
 ## Inns
 
 - [[Inns/The Ninth Tail Teahouse|The Ninth Tail Teahouse]] (Fox Shrine Isle)

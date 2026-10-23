@@ -14,6 +14,61 @@ tags: [region, underworld]
 | Biomes | cave, ruins, underworld |
 | Siege faction · state | — · liberated |
 
+> **The Last Thirty Floors.** The last thirty floors bend light and memory. Monsters this deep wear ranks that no adventurer's card can show.
+>
+> *Legend says the hundred-and-twentieth floor is where the world was sewn together, and where one knot was never tied.*
+
+## Overview
+
+Floors ninety-one to one hundred and twenty are the Abyss of the Great Labyrinth, a place few adventurers have reached and fewer have described. Monsters here carry ranks beyond what a guild card can display. Light bends, memory slips and distances lie. The guild does not sell maps of the Abyss; it sells condolences.
+
+## Geography
+
+The Abyss floors are less built than imagined. Some are vast dark plains with a single stair in the distance; some are rooms that contain other rooms; some are memories of places on the surface, wrong in small ways. The lowest floors grow steadily quieter, and the walls seem threaded with faint lines of light, like the warp of a loom.
+
+## Ecology
+
+Nothing living is native to the Abyss. Its monsters are the purest expression of the Labyrinth's cores, and they behave more like weather than animals. Adventurers report that the threads in the walls pulse when monsters respawn, as if the floors were stitching them.
+
+## Peoples
+
+No one lives here. A few SS- and SSS-rank adventurers have made camps on the guardian floors, and they speak about the deep floors in a quiet, careful way, like sailors talking about the open sea.
+
+## Power & trade
+
+There is no authority below floor ninety except the strength to come back.
+
+## Faith & customs
+
+Those who return from the Abyss often take up odd devotions: lighting a candle every evening, refusing to sleep without a thread tied around one wrist, or speaking of the Weave as if it were a living thing.
+
+## The Tyrant
+
+The Abyss has no Tyrant and no siege; it is a dungeon band. Its guardians are among the greatest monsters in the world, and the guild has stopped naming them, because names do not seem to stay attached.
+
+## Senses
+
+Absolute quiet; a faint hum like a spinning wheel; light that arrives late; the taste of copper in the air.
+
+## History
+
+- **Now:** No party has cleared floor one hundred and twenty in recorded history. Several have reached its door.
+- **Parents:** Within living memory a famous adventurer reached floor one hundred and ten and came back unable to remember her own name.
+- **Grandparents:** In their grandparents' time the Abyss was a story, not a place on the guild's charts.
+- **Ancient:** Legend says the hundred-and-twentieth floor is where the world was sewn together, and where one knot was never tied.
+
+## Landmarks
+
+- **The Threaded Walls:** Floors where faint lines of light run through the stone like warp threads.
+- **The Door at One-Twenty:** A door no one has opened, at the bottom of the last stair.
+- **The Rememberer's Camp:** A camp on floor one hundred where the strongest adventurers rest and compare what they have forgotten.
+
+## Story hooks
+
+- An adventurer who came back from floor one hundred and ten is looking for anyone who knew her before.
+- The threads in the walls have started pulsing in a pattern, and a scholar thinks it is a message.
+- Someone has carved a name beside the Door at One-Twenty, and it was not there last season.
+
 ## Monsters (23)
 
 | Monster | Family | Rank | Level |

@@ -16,6 +16,70 @@ tags: [region, underworld]
 | Siege faction · state | insect · besieged |
 | Settlements | Umbravel |
 
+> **The Silk City Below.** A city of hanging lanterns spun in silk, deep beneath the surface. The webs hold the city up, and Vel'thara the Web Queen wants to collect the rent.
+>
+> *Umbravel's founders fled the surface during the Sundering and chose the dark over the sky.*
+
+## Overview
+
+Umbravel is a city beneath the surface, hanging in a vast cavern from webs of silk spun over generations. Its streets are bridges, its houses are cocoons and its lanterns glow in the dark like stars. Its people chose the dark long ago and have made it beautiful. The webs hold the city up, and the Web Queen wants to collect the rent.
+
+## Geography
+
+The cavern is miles across and so deep that its floor has never been reached. The city hangs from its ceiling and walls on silk cables thick as tree trunks. Lantern-lit bridges connect the districts, and lifts of woven silk carry people up and down. Waterfalls fall from the ceiling into the darkness below.
+
+## Ecology
+
+Giant spiders spin the city's silk, and the people tend them like livestock. Glowing fungi, cave fish, blind bats and luminous moths live in the cavern. The Web Queen's brood lives in the deeper webs below the city, and they have begun climbing up.
+
+## Peoples
+
+The people of Umbravel are humans, dark elves and gnomes descended from refugees who fled the surface. They are pale, sharp-eyed and quiet, skilled weavers and engineers. They distrust surface-folk but welcome traders.
+
+## Power & trade
+
+Umbravel is ruled by a council of weaver-guilds, and the guild that controls the oldest webs has the most power. The city trades silk, mushrooms and mana crystals with the surface and the Underworld. The silk contract with the spiders is the city's founding law.
+
+## Faith & customs
+
+The people honour the day-gods in the dark, with lanterns in place of the sun. They believe the first spider wove the city as a gift, and they leave silk offerings in the deep webs.
+
+## The Tyrant
+
+Vel'thara, the Web Queen, is the mother of the spiders that spin Umbravel's silk. When the guilds broke the silk contract, she rose from the depths to take back what was hers. She wants the city's silk, its people and its lanterns, and she considers the whole city a web she has merely lent.
+
+## Senses
+
+Cool still air; the hum of silk under tension; mushroom bread; lanterns glowing like a second sky.
+
+## History
+
+- **Now:** Vel'thara the Web Queen has risen from the deep webs and claims the city's silk as hers. Bridges have been cut, and whole districts are cocooned.
+- **Parents:** Within living memory the weaver-guilds broke the silk contract to sell more silk to the surface.
+- **Grandparents:** In their grandparents' time the first lifts were built, opening the city to trade with the Underworld.
+- **Ancient:** Umbravel's founders fled the surface during the Sundering and chose the dark over the sky.
+
+## Settlements
+
+- **Umbravel:** The silk city hanging in the cavern.
+
+## Landmarks
+
+- **The Lantern Bridges:** Bridges of silk and lantern-light connecting the city's districts.
+- **The Deep Webs:** The webs below the city, where the Web Queen nests.
+- **The Silk Contract Hall:** Where the original contract with the spiders is kept.
+
+## Story hooks
+
+- A weaver-guild wants the silk contract restored, quietly.
+- A district has been cocooned, and a family is still alive inside.
+- A surface trader is stuck in the city with a cargo the Web Queen wants.
+
+## Clans
+
+- **The Nightwings** (Chiroptera Clan, led by Courier-Lord Vesk Duskmantle): Umbravel's bat-kin, who carry messages between the silk districts and scout the deep webs. They are gentle with the city and merciless with intruders.
+- **The Hollow Ones** (Shade Clan, led by The Unshadowed): Shadow-folk of the deepest webs, who never come into the light.
+
 ## Monsters (47)
 
 | Monster | Family | Rank | Level |
