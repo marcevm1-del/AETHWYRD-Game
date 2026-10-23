@@ -76,6 +76,15 @@ namespace Ascend.Game
             Refresh();
         }
 
+        /// <summary>A forced stagger (the player parried this monster): heavy knockback, poise refilled.</summary>
+        public void Stagger(Vector3 fromPosition)
+        {
+            if (IsDead) return;
+            Staggers++;
+            Vector3 away = transform.position - fromPosition; away.y = 0;
+            _knockVelocity = (away.sqrMagnitude > 1e-4f ? away.normalized : -transform.forward) * 4f;
+        }
+
         void Defeat()
         {
             _respawnLeft = respawnSec;

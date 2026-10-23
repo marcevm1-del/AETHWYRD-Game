@@ -58,7 +58,7 @@ namespace Ascend.Game
             if (Physics.SphereCast(pivot, collisionRadius, rot * Vector3.back, out var hit, dist, collisionMask, QueryTriggerInteraction.Ignore)
                 && hit.transform != target && !hit.transform.IsChildOf(target))
                 dist = Mathf.Max(0.5f, hit.distance);
-            transform.SetPositionAndRotation(pivot + rot * Vector3.back * dist, rot);
+            transform.SetPositionAndRotation(pivot + rot * Vector3.back * dist + rot * CameraShake.Offset, rot);
         }
 
         public void SetAngles(float yaw, float pitch, float distance) { _yaw = yaw; _pitch = pitch; _distance = distance; }

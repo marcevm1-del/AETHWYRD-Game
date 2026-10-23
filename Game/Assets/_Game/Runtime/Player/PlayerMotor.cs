@@ -32,6 +32,9 @@ namespace Ascend.Game
         /// <summary>True during the dodge's i-frames: hits should be ignored.</summary>
         public bool IsInvulnerable => IsDodging && _dodgeTime < _dodge.IframeSec;
         public Vector3 HorizontalVelocity => new Vector3(_velocity.x, 0, _velocity.z);
+        /// <summary>Real time (unscaled) when the current dodge began, or null when not dodging (for perfect-dodge judging).</summary>
+        public double? DodgeStartedAt => IsDodging ? _dodgeStartedAt : (double?)null;
+        double _dodgeStartedAt;
 
         void Awake()
         {
@@ -93,6 +96,7 @@ namespace Ascend.Game
             dirWorld.y = 0;
             _dodgeDir = dirWorld.sqrMagnitude > 0.01f ? dirWorld.normalized : -transform.forward;
             _dodgeTime = 0f;
+            _dodgeStartedAt = Time.unscaledTimeAsDouble;
             _dodgeChain++;
             UseStamina((float)_dodge.StaminaCost);
             return true;
@@ -104,6 +108,9 @@ namespace Ascend.Game
             worldOffset.y = 0;
             if (worldOffset.sqrMagnitude > 0f) _cc.Move(worldOffset);
         }
+
+        /// <summary>Gives stamina back (a perfect dodge refunds its cost: free defense).</summary>
+        public void RefundStamina(float amount) => Stamina = Mathf.Min(maxStamina, Stamina + Mathf.Max(0f, amount));
 
         void UseStamina(float amount)
         {

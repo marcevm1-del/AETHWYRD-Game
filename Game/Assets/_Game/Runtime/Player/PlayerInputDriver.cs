@@ -4,10 +4,12 @@ using UnityEngine.InputSystem;
 namespace Ascend.Game
 {
     /// <summary>
-    /// Reads keyboard/mouse and gamepad and drives the PlayerMotor relative to the camera.
-    /// Bindings are defined in code for Ring 0; a rebindable .inputactions asset replaces this in Ring 1.
-    ///   Move: WASD / left stick · Sprint: Left Shift / left-stick press · Walk: Left Alt
-    ///   Jump: Space / South (A) · Dodge: Left Ctrl or right mouse / East (B) · Attack: left mouse / West (X)
+    /// Reads keyboard/mouse and gamepad and drives the player relative to the camera, following the default layout
+    /// in 12_Systems/hud_and_ui.md §15. Bindings are defined in code for Ring 0; a rebindable .inputactions asset
+    /// replaces this in Ring 1.
+    ///   Move: WASD / left stick · Jump: Space / A · Dodge: Shift / B (hold to sprint) · Walk: Left Alt
+    ///   Light: LMB / X · Heavy: RMB / Y (hold to charge) · Block / parry: Q / RT
+    /// During Flash Time the world slows but the player keeps real-time speed; hit-stop freezes everyone.
     /// </summary>
     [RequireComponent(typeof(PlayerMotor))]
     public sealed class PlayerInputDriver : MonoBehaviour
@@ -16,29 +18,35 @@ namespace Ascend.Game
 
         PlayerMotor _motor;
         PlayerCombat _combat;
-        InputAction _move, _sprint, _walk, _jump, _dodge, _attack;
+        PlayerDefense _defense;
+        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block;
 
         void Awake()
         {
             _motor = GetComponent<PlayerMotor>();
             _combat = GetComponent<PlayerCombat>();
+            _defense = GetComponent<PlayerDefense>();
             if (cameraTransform == null && Camera.main != null) cameraTransform = Camera.main.transform;
 
             _move = new InputAction("Move", InputActionType.Value);
             _move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/w").With("Down", "<Keyboard>/s").With("Left", "<Keyboard>/a").With("Right", "<Keyboard>/d");
             _move.AddBinding("<Gamepad>/leftStick");
-            _sprint = new InputAction("Sprint", InputActionType.Button);
-            _sprint.AddBinding("<Keyboard>/leftShift"); _sprint.AddBinding("<Gamepad>/leftStickPress");
-            _walk = new InputAction("Walk", InputActionType.Button, "<Keyboard>/leftAlt");
-            _jump = new InputAction("Jump", InputActionType.Button);
-            _jump.AddBinding("<Keyboard>/space"); _jump.AddBinding("<Gamepad>/buttonSouth");
-            _dodge = new InputAction("Dodge", InputActionType.Button);
-            _dodge.AddBinding("<Keyboard>/leftCtrl"); _dodge.AddBinding("<Mouse>/rightButton"); _dodge.AddBinding("<Gamepad>/buttonEast");
-            _attack = new InputAction("Attack", InputActionType.Button);
-            _attack.AddBinding("<Mouse>/leftButton"); _attack.AddBinding("<Gamepad>/buttonWest");
+            _dodge = Button("Dodge", "<Keyboard>/leftShift", "<Gamepad>/buttonEast");
+            _walk = Button("Walk", "<Keyboard>/leftAlt");
+            _jump = Button("Jump", "<Keyboard>/space", "<Gamepad>/buttonSouth");
+            _light = Button("Light", "<Mouse>/leftButton", "<Gamepad>/buttonWest");
+            _heavy = Button("Heavy", "<Mouse>/rightButton", "<Gamepad>/buttonNorth");
+            _block = Button("Block", "<Keyboard>/q", "<Gamepad>/rightTrigger");
         }
 
-        InputAction[] Actions => new[] { _move, _sprint, _walk, _jump, _dodge, _attack };
+        static InputAction Button(string name, params string[] bindings)
+        {
+            var a = new InputAction(name, InputActionType.Button);
+            foreach (var b in bindings) a.AddBinding(b);
+            return a;
+        }
+
+        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _block };
 
         void OnEnable() { foreach (var a in Actions) a.Enable(); }
         void OnDisable() { foreach (var a in Actions) a.Disable(); }
@@ -46,16 +54,28 @@ namespace Ascend.Game
 
         void Update()
         {
-            Vector2 input = _move.ReadValue<Vector2>();
-            Vector3 world = CameraRelative(input);
+            float dt = PlayerDelta;
+            Vector3 world = CameraRelative(_move.ReadValue<Vector2>());
             bool attacking = _combat != null && _combat.IsAttacking;
+
             if (_jump.WasPressedThisFrame() && !attacking) _motor.Jump();
             if (_dodge.WasPressedThisFrame() && (_combat == null || _combat.TryCancelForDodge())) _motor.Dodge(world);
-            if (_attack.WasPressedThisFrame() && _combat != null) _combat.Attack();
-            if (_combat != null) _combat.Tick(Time.deltaTime);
-            // Attacks root the player (the lunge moves them); gravity and dodges still run through the motor.
-            _motor.Tick(_combat != null && _combat.IsAttacking ? Vector3.zero : world, _walk.IsPressed(), _sprint.IsPressed(), Time.deltaTime);
+            if (_defense != null) _defense.SetBlock(_block.IsPressed() && !attacking);
+            if (_combat != null)
+            {
+                if (_light.WasPressedThisFrame()) _combat.Attack();
+                if (_heavy.WasPressedThisFrame()) _combat.BeginHeavy();
+                if (_heavy.WasReleasedThisFrame()) _combat.ReleaseHeavy();
+                _combat.Tick(dt);
+            }
+            // Attacks and blocking root the player (the lunge moves them); gravity and dodges still run through the motor.
+            bool rooted = (_combat != null && _combat.IsAttacking) || (_defense != null && _defense.IsBlocking);
+            bool sprint = _dodge.IsPressed() && !_motor.IsDodging;
+            _motor.Tick(rooted ? Vector3.zero : world, _walk.IsPressed(), sprint, dt);
         }
+
+        /// <summary>The player's time step: 0 in hit-stop, real time during Flash Time, otherwise game time.</summary>
+        public static float PlayerDelta => GameTime.HitStopActive ? 0f : GameTime.FlashTimeActive ? Time.unscaledDeltaTime : Time.deltaTime;
 
         Vector3 CameraRelative(Vector2 input)
         {

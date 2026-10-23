@@ -40,7 +40,15 @@
    0.4,
    0.9,
    1.5
-  ]
+  ],
+  "chargePowerMult": [
+   1,
+   1.3,
+   1.7,
+   2.2
+  ],
+  "guardBreakLevel": 2,
+  "riposteWindowSec": 1
  },
  "hitstop": {
   "light": 0.04,
@@ -141,5 +149,19 @@
    1.05
   ],
   "stealthMult": 2
+ },
+ "feedback": {
+  "notes": "Hit feedback (combat.md §7). Shake amplitude in metres before the accessibility scale; capped by camera.shakeMax.",
+  "shake": {
+   "light": 0,
+   "medium": 0.08,
+   "heavy": 0.18,
+   "launch": 0.08,
+   "ultimate": 0.4
+  },
+  "shakeDecaySec": 0.25,
+  "damageNumbers": true,
+  "damageNumberRiseM": 0.8,
+  "damageNumberSec": 0.7
  }
 }

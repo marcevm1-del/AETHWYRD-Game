@@ -16,6 +16,7 @@ namespace Ascend.Core
         public ComboTuning Combo { get; set; } = new ComboTuning();
         public HitstopTuning Hitstop { get; set; } = new HitstopTuning();
         public AttackTimingTuning AttackTiming { get; set; } = new AttackTimingTuning();
+        public FeedbackTuning Feedback { get; set; } = new FeedbackTuning();
         public ReactionTuning Reactions { get; set; } = new ReactionTuning();
         public Dictionary<string, int> Poise { get; set; } = new Dictionary<string, int>();
         public PoiseRegenTuning PoiseRegen { get; set; } = new PoiseRegenTuning();
@@ -30,8 +31,28 @@ namespace Ascend.Core
     public sealed class DodgeTuning { public double DurationSec { get; set; } public double IframeSec { get; set; } public double Distance { get; set; } public double StaminaCost { get; set; } public int MaxChain { get; set; } public double PerfectDodgeWindowSec { get; set; } }
     public sealed class FlashTimeTuning { public double TimeScale { get; set; } public double DurationSec { get; set; } }
     public sealed class ParryTuning { public double ParryWindowSec { get; set; } public double BlockDamageReduction { get; set; } public double RiposteHitstopSec { get; set; } }
-    public sealed class ComboTuning { public int BudgetPerString { get; set; } public double BudgetRefillSec { get; set; } public List<double> ChargeLevels { get; set; } = new List<double>(); }
+    public sealed class ComboTuning
+    {
+        public int BudgetPerString { get; set; }
+        public double BudgetRefillSec { get; set; }
+        public List<double> ChargeLevels { get; set; } = new List<double>();
+        public List<double> ChargePowerMult { get; set; } = new List<double>();
+        public int GuardBreakLevel { get; set; } = 2;
+        /// <summary>After a parry, an attack pressed within this many seconds becomes a riposte.</summary>
+        public double RiposteWindowSec { get; set; } = 1.0;
+    }
     public sealed class HitstopTuning { public double Light { get; set; } public double Medium { get; set; } public double Heavy { get; set; } public double Launch { get; set; } public double Ultimate { get; set; } }
+    /// <summary>Hit feedback: camera shake by hit weight (metres, capped by camera.shakeMax) and damage numbers.</summary>
+    public sealed class FeedbackTuning
+    {
+        public Dictionary<string, double> Shake { get; set; } = new Dictionary<string, double>();
+        public double ShakeDecaySec { get; set; } = 0.25;
+        public bool DamageNumbers { get; set; } = true;
+        public double DamageNumberRiseM { get; set; } = 0.8;
+        public double DamageNumberSec { get; set; } = 0.7;
+
+        public double ShakeFor(HitWeight w) => Shake.TryGetValue(char.ToLowerInvariant(w.ToString()[0]) + w.ToString().Substring(1), out var v) ? v : 0;
+    }
     public sealed class PhaseTiming { public double StartupSec { get; set; } public double ActiveSec { get; set; } public double RecoverySec { get; set; } }
     public sealed class AttackTimingTuning
     {

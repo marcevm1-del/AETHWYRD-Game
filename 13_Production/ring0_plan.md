@@ -51,3 +51,16 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 2. Open it with **6000.6.7f1**. The first open downloads packages (needs internet, a few minutes).
 3. Tell me if anything shows a red error in the Console.
 4. Install **VRoid Studio** (free, Steam or vroid.com) whenever you're ready for Week 2–3.
+
+## Progress (2026-10-23)
+| Week | State |
+|---|---|
+| 1 Project boots | ✅ Done |
+| 2 Run around | ✅ Done (capsule stand-in until your VRoid character) |
+| 3 Your face in the game | ⏳ Waiting on your VRM export |
+| 4 Swing a sword | ✅ Done: light string, tap/charged heavy (3 levels, guard break at 2+), hit-stop, camera shake (capped, accessibility scale), damage numbers (toggleable) |
+| 5 Dodge & parry | ✅ Logic done: perfect dodge → Flash Time + stamina refund, parry → stagger + riposte, block (red ignores it, gold grabs). Telegraph colours on monsters arrive with week 6 AI |
+| 6 First monsters | 🔶 Models, HP, poise, stagger done; AI next |
+| 7–10 | Ready |
+
+Controls now follow `12_Systems/hud_and_ui.md` §15: Shift/B dodge (hold to sprint), LMB/X light, RMB/Y heavy (hold to charge), Q/RT block/parry. Tests: 72 rules + 20 Unity PlayMode.
