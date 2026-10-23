@@ -7,7 +7,7 @@
 ## 0. ⚠️ Legal risk first: the Nemesis patent
 Warner Bros.' patent on *"Nemesis characters, nemesis forts, social vendettas and followers in computer games"* (Shadow of Mordor) took effect in **February 2021** and is reported to run until **August 2036**, past any Ascend release. Monolith closed in 2025, but the patent stays with Warner Bros.
 
-Our **Named Nemesis System** (`12_Systems/systems.md`) has the features most associated with it: a Named monster that defeats or escapes you levels up, gains a scar or title, learns counters and hunts you across regions, and the Tyrants learn too (Big Upgrade §7).
+Our former **Named Nemesis System** (`12_Systems/systems.md`) had the features most associated with it: a Named monster that defeats or escapes you levels up, gains a scar or title, learns counters and hunts you across regions, and the Tyrants learn too (Big Upgrade §7).
 
 **Recommended design-around** (not legal advice; have an IP lawyer review before release):
 1. **The Named roster is hand-authored** (the named monsters in `bestiary_lore.md`, each written by us), never procedurally generated.
@@ -15,7 +15,7 @@ Our **Named Nemesis System** (`12_Systems/systems.md`) has the features most ass
 3. **Growth runs on world state, not on killing you:** named monsters grow with ecology cycles, siege escalation and story flags. Dying to one gives no personal scar or taunt; instead the **rumor board** reports what it has been doing.
 4. **Tyrants adapt to tactics as a region-level siege rule** (shield bearers after fire defences). This is AI tuning, not a remembered personal vendetta.
 5. **Name-Giving stays:** befriending and naming a monster is taming, which Ascend has plenty of other precedent for.
-→ Needs your OK, then an edit to `systems.md` §Named Nemesis and Big Upgrade §7.
+→ **Approved 2026-10-23** and applied: Canon §4d, `systems.md` → Named Monsters, Big Upgrade §7 (Tyrants Adapt), `hud_and_ui.md`.
 
 ---
 

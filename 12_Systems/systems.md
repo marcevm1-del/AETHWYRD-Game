@@ -203,7 +203,7 @@ Each partner has one **role** from its species and behavior: **Vanguard** (draws
 ### 7.4 Taming Interacts With…
 | System | How |
 |---|---|
-| **Nemesis** | A Named monster that respects you can be named instead of killed. It becomes a full companion |
+| **Named monsters** | A Named monster that respects you can be named instead of killed. It becomes a companion (lighter tier) |
 | **Sieges** | Tamed partners defend towns; Haulers carry barricade materials |
 | **Karma / Thread** | Releasing partners back to the wild with care raises Thread; abandoning them lowers Karma |
 | **Monster towns** | Tribes treat you better if your partners are happy (and worse if they're battle-scarred) |
@@ -285,7 +285,7 @@ Gods react differently: **Solenne** punishes lies, **Sylvara** punishes cruelty 
 ### 10.1 After You Fall
 - **The death screen** (HUD §19) shows what killed you, its rank and one tip, then lets you retry the encounter, return to a waystone, or change gear first.
 - **Your dropped gold** waits at a glowing blue lantern where you fell. Die again before collecting it and only the newest pile stays. Monsters never pick it up, except **goblins**, who steal it and run to their camp (a mini-chase).
-- **Named monsters remember** killing you (Nemesis): a scar, a title, sometimes a sub-rank up.
+- **Named monsters do not grow from your deaths** (Canon §4d). What they get up to reaches you through the rumor board instead.
 
 ### 10.2 Custom Difficulty
 Under any preset, sliders for: enemy damage, enemy HP, parry/dodge windows, aggro-token count (how many attack at once), loot amount, death penalty, and inventory weight. **The S-rank floor still applies**: S+ content ignores the easy settings (below). Changing difficulty is free at any time, except Hardcore, which is locked at creation.
@@ -440,10 +440,13 @@ Every region has a **Tyrant**, its big bad (a named boss with a lair, lieutenant
 
 **No siege:** Great Labyrinth (Floors 1-40) (dungeon band, not a region with settlements); Great Labyrinth (Floors 41-90) (dungeon band, not a region with settlements); Great Labyrinth (Floors 91-120) (dungeon band, not a region with settlements); Sky Archipelago (abandoned titan cities; zephiel is the act iv story boss); Nox Dominion (story region (acts v–vi)); Calamity Steppe (no settlements); The Maw (its calamity (the hive mother) is a world event, not a siege); Root of the World (underworld depths; no settlements); Vesper (post-game region).
 
-## Named Nemesis System
-- A Named monster that **defeats you, or escapes you**, levels up, gains a scar/title, learns a counter to your favorite skill, and may **evolve** a rank.
-- It **hunts you**: it shows up on the rumor board, ambushes you in its region, and sometimes follows you to other regions.
-- **Resolve it any way:** kill it (relic-grade drop), tame it, or **name it** (Name-Giving Ribbon after earning its respect: win while sparing it, feed it, or save it from a bigger threat) → it becomes a **full companion** with its own voice, personality, arc and evolution.
+## Named Monsters (revised 2026-10-23: patent design-around, Canon §4d)
+> Replaces the old *Named Nemesis System*. Warner Bros.' Nemesis patent (reported to run to 2036) covers enemies that remember defeating the player, rise in rank and pursue personal vendettas. Ascend's named monsters are built to avoid that pattern. **Have an IP lawyer review before release.**
+- **A hand-written roster.** Every Named monster is authored by us (`08_Bestiary/bestiary_lore.md`): name, look, temperament, haunts, story. None are generated, promoted or replaced procedurally.
+- **No enemy hierarchy.** No captains, warchiefs, promotions, power struggles or forts changing hands between named enemies.
+- **They grow with the world, not with your deaths.** A Named monster's level, evolution and habits change with **region state**: ecology cycles, siege escalation, liberation and story flags. Dying to one gives it nothing personal: no scar, no title, no taunt.
+- **You hear about them.** The **rumor board** and the Adventurer Times report what a Named monster has been doing ("Old Ironhide trampled the Hensley turnips again"), so the world feels alive without the monster remembering you.
+- **Resolve it any way:** kill it (relic-grade drop), tame it, or **name it** (Name-Giving Ribbon after earning its respect: win while sparing it, feed it, or save it from a bigger threat). A named monster becomes a companion on the lighter companion tier (Canon §6).
 - Named monster companions count toward the companion roster.
 
 ## Inventory Model

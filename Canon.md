@@ -72,6 +72,12 @@
 - Every settlement has an inn: rooms and rest bonuses, meals, the rumor board, tavern stage, tables, stables, mail. Regular status (Stranger → Guest → Regular → Family) per inn. Marta's tab at the Sleeping Griffon never blocks the player.
 - 20 signature inns in `Data/World/inns.json`; rules in `12_Systems/inns.md`.
 
+## 4d. Named Monsters (locked 2026-10-23)
+- Named monsters are a **hand-written roster**; none are procedurally generated or promoted. **No enemy hierarchy** (no captains, warchiefs or power struggles).
+- They grow with **region state** (ecology, sieges, liberation, story flags), **never from defeating the player**: no personal scars, titles or taunts. The rumor board reports their deeds.
+- Sieges **adapt to the defences used** as a region-level wave rule (Big Upgrade §7), not as a personal memory.
+- Taming and Name-Giving stay. Rules: `12_Systems/systems.md` → Named Monsters. Reason: Warner Bros.' Nemesis patent (to ~2036); **IP lawyer review before release.**
+
 ## 5. Loss Rules (protecting a 1,000-hour game)
 - **Companion combat death is opt-in** (*Mortal Bonds* option; Hardcore turns it on). Otherwise downed companions are only "gravely wounded."
 - **Story deaths** happen only through clearly signposted choices.
@@ -83,7 +89,7 @@
 | Item | Proposal | Why |
 |---|---|---|
 | Companion roster | **12 companions + 2 childhood friends**, no more human-cast companions added after this | Romance + permadeath + mutual exclusivity + 12 endings multiply writing; capping the cast caps that |
-| Named-monster companions | A **lighter dialogue tier**: personality, banter, bond levels, no romance or full personal arc | Lets the nemesis-to-companion system scale |
+| Named-monster companions | A **lighter dialogue tier**: personality, banter, bond levels, no romance or full personal arc | Lets the named-monster-to-companion path scale (Canon §4d) |
 | **Big Upgrade** | Adopt the 52 signature features in `01_Core_Concept/the_big_upgrade.md` (Lying Interface, Appraisal detective work, hidden Thread growth, Otherworld Knowledge economy, the Next Summoning NG+, Legend system, learning Tyrants, chant mastery, monster cuisine, Adventurer Times & Rankings, mentoring newcomers, and more) and the HUD/UI spec in `12_Systems/hud_and_ui.md` | Gives Ascend its own identity on top of the full trope set |
 | Ring 1 Tyrant | **Goblin Chief of Hollowpine** is the Tyrant of **Whisperwood** (his camp's region); his raids hit Brindlewick and Millbrook. His death is also the F→E trial, so Brindlewick's first siege ends with Act I. Aldmere's own Tyrant is **Ashgrave, the Oathless Baron** (C+) | No clash with the story: the trial *is* the Tyrant fight, and Grukk the Younger's revenge returns later as a remnant raid |
 | Tyrant roster | 40 regional Tyrants (table in `12_Systems/systems.md`), mostly bosses already in the bestiary; 9 regions exempt (`noSiege`). Generals stay Act IV story bosses, not Tyrants | Every region needs one; band-appropriate Tyrants keep sieges beatable when the region is reached |

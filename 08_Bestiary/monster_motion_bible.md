@@ -11,7 +11,7 @@ How every monster in Ascend is **built, rigged, moved and simulated**, written s
 | `Data/Monsters/motion.json` | **Generated** per-species motion & physics profile for all species (`npm run motion`) |
 | `Tools/blender/build_rig.py` | Builds any rig in Blender (with graybox proxies) and exports a Unity-ready FBX |
 | `Code/Unity/` | Unity runtime components + the **Ascend → Build Monster Prefabs From Rig** editor tool |
-| `Code/Ascend.Core/MonsterMotionLaws.cs` | The same scaling laws in plain C# for runtime (Nemesis growth, evolutions) |
+| `Code/Ascend.Core/MonsterMotionLaws.cs` | The same scaling laws in plain C# for runtime (Named-monster growth, evolutions) |
 
 ---
 
