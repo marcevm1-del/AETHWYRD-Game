@@ -8,7 +8,7 @@ const ROOT = path.join(__dirname, '..', '..');
 const VAULT = path.join(ROOT, 'ideas');
 const load = p => JSON.parse(fs.readFileSync(path.join(ROOT, 'Data', p), 'utf8'));
 
-const GENERATED = ['Monsters', 'Families', 'Regions', 'NPCs', 'Quests', 'Inns', 'Items', 'Design Bible', 'Assets'];
+const GENERATED = ['Monsters', 'Families', 'Regions', 'NPCs', 'Quests', 'Inns', 'Items', 'Classes', 'Design Bible', 'Assets'];
 const BIBLE_DIRS = ['00_Questions', '01_Core_Concept', '02_Lore', '03_Rank_System', '04_Classes', '05_Skills_Magic',
   '06_Races_Origins', '07_Characters', '08_Bestiary', '09_Equipment', '10_World', '11_Quests_Encounters',
   '12_Systems', '13_Production'];
@@ -19,6 +19,7 @@ const npcs = load('NPCs/npcs.json');
 const quests = load('Quests/quests.json');
 const inns = load('World/inns.json');
 const items = [...load('Items/items.json'), ...load('Items/materials.json')];
+const classes = load('Classes/classes.json');
 // Optional world-building data (gazetteer, clans and fauna); region notes skip it when absent.
 const loadOpt = p => fs.existsSync(path.join(ROOT, 'Data', p)) ? load(p) : null;
 const gazetteer = (loadOpt('World/gazetteer.json') || {}).regions || {};
@@ -42,10 +43,11 @@ for (const n of npcs) claim(n.id, 'NPCs', n.name);
 for (const q of quests) claim(q.id, 'Quests', q.title);
 for (const i of inns) claim(i.id, 'Inns', i.name);
 for (const i of items) claim(i.id, 'Items', i.name);
+for (const c of classes) claim(c.id, 'Classes', c.name);
 const families = [...new Set(species.map(s => s.family))].sort();
 for (const f of families) notePath[`fam:${f}`] = `Families/${safe(f)}`;
 
-const byId = Object.fromEntries([...species, ...regions, ...npcs, ...quests, ...inns, ...items].map(x => [x.id, x]));
+const byId = Object.fromEntries([...species, ...regions, ...npcs, ...quests, ...inns, ...items, ...classes].map(x => [x.id, x]));
 const label = id => (byId[id] && (byId[id].name || byId[id].title)) || id;
 // inTable: escape the alias pipe so the link survives inside a Markdown table cell
 const link = (id, inTable = false, text) => notePath[id]
@@ -226,6 +228,33 @@ for (const i of items) {
   put(i.id, t);
 }
 
+const trainerNpc = name => npcs.find(n => n.name === name || n.name.includes(`"${name}"`) || n.name.endsWith(` ${name}`));
+const costOf = k => [k.costSp && `${k.costSp} SP`, k.costMp && `${k.costMp} MP`, k.costAwakening && `${k.costAwakening} Awakening`].filter(Boolean).join(', ') || '—';
+const hitsOf = k => {
+  if (!k.hits.length) return '—';
+  const total = k.hits.reduce((a, h) => a + h.power, 0);
+  return `${k.hits.length} × (${[...new Set(k.hits.map(h => h.weight))].join('/')}) · ${Math.round(total * 100) / 100} total`;
+};
+for (const c of classes) {
+  let t = front({ type: 'class', id: c.id, tier: c.tier, tags: ['class', c.tier] }) + `# ${c.name}\n\n`;
+  t += '| Field | Value |\n|---|---|\n';
+  t += row('Role', c.role);
+  t += row('Growth (STR/VIT/AGI/DEX/INT/WIS/LUK/CHA)', ['str', 'vit', 'agi', 'dex', 'int', 'wis', 'luk', 'cha'].map(k => c.growth[k] || 0).join('/'));
+  t += row('Weapons', c.weapons.join(', '));
+  t += row('Armour', c.armor.join(', '));
+  t += row('Mechanic', c.mechanic);
+  const tr = trainerNpc(c.trainer || '');
+  t += row('Trainer', tr ? link(tr.id, true) : c.trainer);
+  t += row('Class quest', c.classQuest ? `*${c.classQuest}*` : '');
+  if (c.starterWeaponId) t += row('Starter weapon', link(c.starterWeaponId, true));
+  t += `\n## Kit\n\n| Lv | Skill | Kind | Hits | Cost | Cooldown | Element | Effect |\n|---|---|---|---|---|---|---|---|\n`;
+  for (const k of [...c.kit].sort((a, b) => a.unlockLevel - b.unlockLevel))
+    t += `| ${k.unlockLevel} | **${k.name}**${k.slot === 'basic' ? ' (basic)' : ''} | ${k.kind} | ${hitsOf(k)} | ${costOf(k)} | ${k.cooldownSec ? `${k.cooldownSec} s` : '—'} | ${k.element} | ${k.effect || ''} |\n`;
+  if ((c.passives || []).length)
+    t += `\n## Passives\n\n${c.passives.map(p => `- **${p.name}** (Lv ${p.unlockLevel}): ${p.effect}`).join('\n')}\n`;
+  put(c.id, t);
+}
+
 // ---------------------------------------------------------------- design bible mirror
 const bible = [];
 const mdLink = /\[([^\]]+)\]\((?!https?:)([^)#]+?\.md)(#[^)]*)?\)/g;
@@ -262,6 +291,9 @@ The Project Ascend idea vault. Open this \`ideas/\` folder in Obsidian (*Open fo
 
 ## Design bible
 ${bible.map(p => `- [[${p}|${p.replace('Design Bible/', '')}]]`).join('\n')}
+
+## Classes (${classes.length})
+${classes.map(c => `- ${link(c.id)}: ${c.role}`).join('\n')}
 
 ## Regions (${regions.length})
 ${groupList(regions.map(r => r.id), r => `${r.layer[0].toUpperCase()}${r.layer.slice(1)}`)}
