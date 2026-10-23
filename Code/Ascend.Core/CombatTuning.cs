@@ -17,6 +17,8 @@ namespace Ascend.Core
         public HitstopTuning Hitstop { get; set; } = new HitstopTuning();
         public AttackTimingTuning AttackTiming { get; set; } = new AttackTimingTuning();
         public FeedbackTuning Feedback { get; set; } = new FeedbackTuning();
+        public ResourceTuning Resources { get; set; } = new ResourceTuning();
+        public FirestormTuning Firestorm { get; set; } = new FirestormTuning();
         public ReactionTuning Reactions { get; set; } = new ReactionTuning();
         public Dictionary<string, int> Poise { get; set; } = new Dictionary<string, int>();
         public PoiseRegenTuning PoiseRegen { get; set; } = new PoiseRegenTuning();

@@ -163,5 +163,22 @@
   "damageNumbers": true,
   "damageNumberRiseM": 0.8,
   "damageNumberSec": 0.7
+ },
+ "resources": {
+  "notes": "combat.md §6: SP/MP regeneration per second, Awakening from Style points and HP lost, skill slots.",
+  "spRegenPerSec": 8,
+  "mpRegenPerSec": 4,
+  "awakeningMax": 100,
+  "awakeningPerStylePoint": 0.12,
+  "awakeningPerHpPercentLost": 0.5,
+  "skillSlots": 4
+ },
+ "firestorm": {
+  "notes": "Fire + Wind reaction (combat.md §7): burst on the triggering hit, then a burning zone that damages every tick.",
+  "burstMult": 1.5,
+  "radiusM": 4,
+  "durationSec": 4,
+  "tickSec": 0.5,
+  "tickPower": 0.35
  }
 }

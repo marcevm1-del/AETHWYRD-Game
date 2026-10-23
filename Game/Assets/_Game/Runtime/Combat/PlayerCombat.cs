@@ -12,7 +12,7 @@ namespace Ascend.Game
     /// hit-stop, camera shake and damage numbers by weight. Input-agnostic like PlayerMotor.
     /// </summary>
     [RequireComponent(typeof(PlayerMotor))]
-    public sealed class PlayerCombat : MonoBehaviour
+    public sealed partial class PlayerCombat : MonoBehaviour
     {
         /// <summary>Poise damage per point of hit power (placeholder until weapons carry their own value).</summary>
         const double PoisePerPower = 10;
@@ -43,7 +43,7 @@ namespace Ascend.Game
         ComboBudget _budget;
 
         /// <summary>What the current one-hit special is (combat.md §4.1 grammar).</summary>
-        public enum Special { None, Heavy, Riposte, Launcher, Slam }
+        public enum Special { None, Heavy, Riposte, Launcher, Slam, Skill }
 
         /// <summary>Launch speed (m/s up) for a launcher, juggle pop for air hits, slam speed down.</summary>
         public const float LaunchSpeed = 11f, PopSpeed = 4.5f, SlamSpeed = 16f, JumpCancelHeight = 2.0f;
@@ -163,12 +163,15 @@ namespace Ascend.Game
         {
             _charge.Tick(dt);
             _budget.Tick(dt, IsAttacking, !_motor.IsGrounded);
+            Caster.Tick(dt);
             _motor.Hang = IsAttacking && !_motor.IsGrounded && CurrentSpecial != Special.Slam;
             if (_motor.IsGrounded) _airString = false;
             if (_special != null && _special.IsBusy)
             {
                 if (_specialKind != Special.Slam) Lunge(_special, dt);
                 var hit = _special.Tick(dt);
+                // Multi-hit skills play through on their own (press the next hit while one is running).
+                if (_specialKind == Special.Skill && _special.IsBusy && _special.HitIndex < _special.Length - 1) _special.Press();
                 if (hit != null) Strike(hit, _specialHitstop, _specialPoiseMult, _specialKind);
                 return;
             }
@@ -199,7 +202,8 @@ namespace Ascend.Game
             _chain.Cancel();
             _charge.Cancel();
             string id = kind.ToString().ToLowerInvariant();
-            _special = new AttackChain(new SkillData { Id = id, Name = id, Slot = "special", Hits = { new SkillHit { Power = power, Weight = weight } } }, _tuning);
+            _special = new AttackChain(_pendingSkill ?? new SkillData { Id = id, Name = id, Slot = "special", Hits = { new SkillHit { Power = power, Weight = weight } } }, _tuning);
+            _pendingSkill = null;
             _specialKind = kind;
             _specialHitstop = hitstop;
             if (kind == Special.Slam) _motor.Plunge(14f);
@@ -212,7 +216,8 @@ namespace Ascend.Game
         {
             if (chain.Phase != AttackPhase.Startup) return;
             var t = chain.TimingOf(chain.Current);
-            if (t.StartupSec > 0) _motor.Nudge(transform.forward * (float)(_tuning.AttackTiming.LungeM * dt / t.StartupSec));
+            double lunge = chain == _special && _specialKind == Special.Skill && _skillDashM > 0 ? _skillDashM : _tuning.AttackTiming.LungeM;
+            if (t.StartupSec > 0) _motor.Nudge(transform.forward * (float)(lunge * dt / t.StartupSec));
         }
 
         /// <summary>Soft lock: turn toward the nearest live monster within reach × 2 and the soft-lock cone.</summary>
@@ -243,7 +248,9 @@ namespace Ascend.Game
         void Strike(SkillHit hit, float hitstopOverride, double poiseMult, Special kind)
         {
             var weight = AttackChain.WeightOf(hit);
-            float reach = (float)_tuning.AttackTiming.ReachM, halfArc = (float)_tuning.AttackTiming.ArcDeg * 0.5f;
+            bool skill = kind == Special.Skill;
+            bool wide = skill && _skillShape == SkillShape.Circle;
+            float reach = (float)_tuning.AttackTiming.ReachM * (wide ? _skillReachMult : 1f), halfArc = wide ? 180f : (float)_tuning.AttackTiming.ArcDeg * 0.5f;
             Vector3 origin = transform.position + Vector3.up * 0.8f;
             int n = Physics.OverlapSphereNonAlloc(origin, reach, _overlap, ~0, QueryTriggerInteraction.Ignore);
             _struck.Clear();
@@ -254,21 +261,14 @@ namespace Ascend.Game
                 Vector3 contact = _overlap[i].ClosestPoint(origin);
                 Vector3 to = contact - transform.position; to.y = 0;
                 if (to.sqrMagnitude > 0.01f && Vector3.Angle(transform.forward, to) > halfArc) { _struck.Remove(m); continue; }
-                var result = _calc.Compute(new DamageInput
-                {
-                    Kind = DamageKind.Physical, Attack = Stats.Atk, Defense = m.Defense, Power = hit.Power,
-                    DefenderWeakness = m.Weakness, CritChance = Stats.CritChance,
-                }, _rng);
                 bool wasLaunched = m.LaunchedSinceLanding && m.IsAirborne;
-                m.TakeHit(result.Amount, weight, transform.position, hit.Power * PoisePerPower * poiseMult);
+                ApplyHit(m, contact, hit.Power, weight, skill ? _skillElement : Element.None, skill && _skillAppliesElement, poiseMult);
                 if (!m.IsDead)
                 {
                     if (kind == Special.Launcher) m.Launch(LaunchSpeed);
                     else if (kind == Special.Slam) { m.Slam(SlamSpeed); if (wasLaunched) LaunchToSlam?.Invoke(m); }
-                    else if (kind == Special.None && !_motor.IsGrounded) m.Pop(PopSpeed);
+                    else if ((kind == Special.None || kind == Special.Skill) && !_motor.IsGrounded) m.Pop(PopSpeed);
                 }
-                DamageNumber.Spawn(contact + Vector3.up * 0.3f, result.Amount, result.Crit);
-                HitLanded?.Invoke(m, result);
             }
             if (_struck.Count == 0) return;
             HitStop.Trigger(hitstopOverride > 0f ? hitstopOverride : HitstopFor(weight));

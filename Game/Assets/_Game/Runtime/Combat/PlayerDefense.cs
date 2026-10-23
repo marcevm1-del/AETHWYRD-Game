@@ -51,6 +51,7 @@ namespace Ascend.Game
                 _blockPressedAt, IsBlocking, _t.Dodge, _t.Parry);
             int taken = DefenseJudge.DamageTaken(r, rawDamage, _t.Parry);
             Hp = Mathf.Max(0, Hp - taken);
+            if (taken > 0 && _combat != null) _combat.Caster.GainAwakeningFromDamage(taken, MaxHp);
             switch (r)
             {
                 case DefenseResult.PerfectDodge:

@@ -16,6 +16,7 @@ namespace Ascend.Game
 
         SpeciesData _species;
         PoiseMeter _poise;
+        ReactionState _reactions;
         Renderer[] _renderers;
         Collider[] _colliders;
         MaterialPropertyBlock _flashBlock;
@@ -49,6 +50,7 @@ namespace Ascend.Game
             if (!AscendData.Db.Species.TryGetValue(speciesId, out _species)) _species = null;
             MaxHp = Hp = _species != null ? (int)_species.EffectiveMaxHp : 1;
             _poise = PoiseMeter.For(_species?.RigId ?? "medium_biped", AscendData.Db.Tuning);
+            _reactions = new ReactionState(AscendData.Db.Tuning.Reactions);
             Refresh();
         }
 
@@ -58,10 +60,26 @@ namespace Ascend.Game
             if (_species == null && !AscendData.Db.Species.TryGetValue(speciesId, out _species)) { label.text = $"? {speciesId}"; return; }
             var s = _species;
             string hp = Application.isPlaying ? (IsDead ? "Defeated" : $"HP {Hp}/{MaxHp}") : $"HP {s.Stats.Hp}";
-            label.text = $"{s.Name}\nRank {s.Rank} · Lv {s.LevelRange[0]}-{s.LevelRange[1]} · {hp}";
+            var aura = Application.isPlaying ? Aura : Element.None;
+            label.text = $"{s.Name}\nRank {s.Rank} · Lv {s.LevelRange[0]}-{s.LevelRange[1]} · {hp}" + (aura != Element.None ? $"\n[{aura}]" : "");
         }
 
         public void SetLabel(TextMesh tm) => label = tm;
+
+        /// <summary>The element aura on this monster now (combat.md §7), or None.</summary>
+        public Element Aura => _reactions?.Aura.Current(Time.timeAsDouble) ?? Element.None;
+
+        /// <summary>Applies an element; returns the reaction it triggers against the current aura.</summary>
+        public Reaction ApplyElement(Element e)
+        {
+            if (_reactions == null || IsDead) return Reaction.None;
+            var r = _reactions.ApplyElement(e, Time.timeAsDouble);
+            Refresh();
+            return r;
+        }
+
+        /// <summary>Freeze-shatter bonus and similar, for a hit of this weight landing now.</summary>
+        public double ReactionHitMultiplier(HitWeight w) => _reactions?.HitMultiplier(w, Time.timeAsDouble) ?? 1.0;
 
         /// <summary>Applies a landed hit. Medium+ hits and poise breaks knock the monster back further.</summary>
         public void TakeHit(int amount, HitWeight weight, Vector3 fromPosition, double poiseDamage)
