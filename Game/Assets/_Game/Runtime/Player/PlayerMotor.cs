@@ -31,6 +31,12 @@ namespace Ascend.Game
         public bool IsDodging => _dodgeTime >= 0f;
         /// <summary>True during the dodge's i-frames: hits should be ignored.</summary>
         public bool IsInvulnerable => IsDodging && _dodgeTime < _dodge.IframeSec;
+        /// <summary>Air-attack hang time: while true and airborne, gravity is cut and the fall is capped (anime juggles).</summary>
+        public bool Hang { get; set; }
+        /// <summary>Lock-on: face this world direction instead of the movement direction (null = face movement).</summary>
+        public Vector3? FaceDirection { get; set; }
+        public float VerticalVelocity => _velocity.y;
+
         public Vector3 HorizontalVelocity => new Vector3(_velocity.x, 0, _velocity.z);
         /// <summary>Real time (unscaled) when the current dodge began, or null when not dodging (for perfect-dodge judging).</summary>
         public double? DodgeStartedAt => IsDodging ? _dodgeStartedAt : (double?)null;
@@ -67,9 +73,10 @@ namespace Ascend.Game
                 if (canSprint) UseStamina((float)_move.SprintStaminaPerSec * dt);
                 _velocity.x = moveWorld.x * speed;
                 _velocity.z = moveWorld.z * speed;
-                if (moveWorld.sqrMagnitude > 0.0001f)
+                Vector3 face = FaceDirection ?? moveWorld; face.y = 0;
+                if (face.sqrMagnitude > 0.0001f && (FaceDirection.HasValue || moveWorld.sqrMagnitude > 0.0001f))
                 {
-                    var look = Quaternion.LookRotation(moveWorld, Vector3.up);
+                    var look = Quaternion.LookRotation(face, Vector3.up);
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, look, turnSpeedDeg * dt);
                 }
                 if (IsGrounded) _dodgeChain = 0;
@@ -78,9 +85,17 @@ namespace Ascend.Game
             if (_sinceStaminaUse > staminaRegenDelay) Stamina = Mathf.Min(maxStamina, Stamina + staminaRegenPerSec * dt);
 
             if (IsGrounded && _velocity.y < 0) _velocity.y = -2f; // stick to the ground
-            _velocity.y += gravity * dt;
+            bool hanging = Hang && !IsGrounded;
+            _velocity.y += gravity * (hanging ? 0.12f : 1f) * dt;
+            if (hanging && _velocity.y < -1f) _velocity.y = -1f;
             _cc.Move(_velocity * dt);
         }
+
+        /// <summary>Kicks the character upward (a jump-cancel after a launcher), even if a jump just began.</summary>
+        public void Rise(float height) => _velocity.y = Mathf.Max(_velocity.y, Mathf.Sqrt(height * -2f * gravity));
+
+        /// <summary>Drives the character straight down (an air slam).</summary>
+        public void Plunge(float speed) => _velocity.y = -Mathf.Abs(speed);
 
         public bool Jump()
         {
@@ -106,7 +121,9 @@ namespace Ascend.Game
         public void Nudge(Vector3 worldOffset)
         {
             worldOffset.y = 0;
-            if (worldOffset.sqrMagnitude > 0f) _cc.Move(worldOffset);
+            if (worldOffset.sqrMagnitude <= 0f) return;
+            // A purely sideways Move makes CharacterController report "not grounded"; keep contact while grounded.
+            _cc.Move(worldOffset + (_cc.isGrounded ? Vector3.down * 0.05f : Vector3.zero));
         }
 
         /// <summary>Gives stamina back (a perfect dodge refunds its cost: free defense).</summary>

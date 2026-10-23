@@ -35,8 +35,19 @@ namespace Ascend.Game
         CombatTuning _tuning;
         int _startedIndex = -1;
         AttackPhase _lastPhase;
-        float _specialHitstop = -1f, _riposteUntil = -1f;
+        float _specialHitstop = -1f, _riposteUntil = -1f, _stringIdle;
         double _specialPoiseMult = 1;
+        Special _specialKind;
+        int _stringHits;
+        bool _airString;
+        ComboBudget _budget;
+
+        /// <summary>What the current one-hit special is (combat.md §4.1 grammar).</summary>
+        public enum Special { None, Heavy, Riposte, Launcher, Slam }
+
+        /// <summary>Launch speed (m/s up) for a launcher, juggle pop for air hits, slam speed down.</summary>
+        public const float LaunchSpeed = 11f, PopSpeed = 4.5f, SlamSpeed = 16f, JumpCancelHeight = 2.0f;
+        const double DefaultLaunchPower = 1.2, DefaultSlamPower = 1.6;
         readonly Collider[] _overlap = new Collider[32];
         readonly HashSet<MonsterDummy> _struck = new HashSet<MonsterDummy>();
 
@@ -47,9 +58,15 @@ namespace Ascend.Game
         public bool IsAttacking => (_chain != null && _chain.IsBusy) || (_special != null && _special.IsBusy) || IsCharging;
         public bool RiposteReady => Time.unscaledTime < _riposteUntil;
         public int LastChargeLevel { get; private set; }
+        public Special CurrentSpecial => _special != null && _special.IsBusy ? _specialKind : Special.None;
+        public ComboBudget Budget => _budget;
+        /// <summary>The lock-on target, if any (set by LockOn); preferred by the soft-lock.</summary>
+        public MonsterDummy LockTarget { get; set; }
 
         /// <summary>Raised for every monster a hit lands on.</summary>
         public event Action<MonsterDummy, DamageResult> HitLanded;
+        /// <summary>Raised when a slam lands on a monster that was launched (Style: launch-to-slam).</summary>
+        public event Action<MonsterDummy> LaunchToSlam;
 
         void Awake()
         {
@@ -60,6 +77,7 @@ namespace Ascend.Game
             Stats = PlayerStats.Derive(PlayerStats.Primary(_class, level, db.Progression), level, db.Progression, new GearBonus { Atk = gearAtk, Def = gearDef });
             _chain = new AttackChain(_class.Basic ?? throw new InvalidOperationException($"{classId} has no basic chain"), _tuning);
             _charge = new ChargeMeter(_tuning.Combo);
+            _budget = new ComboBudget(_tuning.Combo);
             _calc = new DamageCalculator(_tuning.Damage);
             _rng = new DeterministicRandom(rngSeed);
         }
@@ -73,19 +91,52 @@ namespace Ascend.Game
                 _riposteUntil = -1f;
                 var skill = _class.Skill("skl_parry_riposte");
                 double power = skill != null && skill.UnlockLevel <= level && skill.Hits.Count > 0 ? skill.Hits[0].Power : DefaultRipostePower;
-                StartSpecial("riposte", power, (float)_tuning.Parry.RiposteHitstopSec, 2.0);
+                StartSpecial(Special.Riposte, power, "heavy", (float)_tuning.Parry.RiposteHitstopSec, 2.0);
                 return;
             }
             if (_special != null && _special.IsBusy) return;
+            if (!_chain.IsBusy) _airString = !_motor.IsGrounded;
             _chain.Press();
         }
 
-        /// <summary>Heavy button pressed: start charging (cancels a chain in recovery).</summary>
+        /// <summary>
+        /// Heavy button pressed. In the air: slam. After two or more light hits: launcher (L L H).
+        /// Otherwise start charging a heavy (cancels a chain in recovery).
+        /// </summary>
         public void BeginHeavy()
         {
             if (_motor.IsDodging || (_special != null && _special.IsBusy)) return;
+            if (!_motor.IsGrounded)
+            {
+                StartSpecial(Special.Slam, KitPower("skl_comet_dive", DefaultSlamPower), "heavy", -1f, 1.5);
+                return;
+            }
+            if (_stringHits >= 2 && (!_chain.IsBusy || _chain.CanDodgeCancel))
+            {
+                _stringHits = 0;
+                StartSpecial(Special.Launcher, KitPower("skl_rising_cut", DefaultLaunchPower), "launch", -1f, 1.0);
+                return;
+            }
             if (_chain.IsBusy && !_chain.Cancel()) return;
             _charge.Begin();
+        }
+
+        /// <summary>
+        /// Jump during a launcher (or right after one) cancels into a rising jump that follows the target up.
+        /// True if the jump was taken here; otherwise the caller may do a normal jump when not attacking.
+        /// </summary>
+        public bool TryJumpCancel()
+        {
+            if (CurrentSpecial != Special.Launcher || _special.Phase == AttackPhase.Startup) return false;
+            _special.Cancel();
+            _motor.Rise(JumpCancelHeight);
+            return true;
+        }
+
+        double KitPower(string skillId, double fallback)
+        {
+            var s = _class.Skill(skillId);
+            return s != null && s.UnlockLevel <= level && s.Hits.Count > 0 ? s.Hits[s.Hits.Count - 1].Power : fallback;
         }
 
         /// <summary>Heavy button released: strike at the charge level reached (0 = tap heavy).</summary>
@@ -94,7 +145,7 @@ namespace Ascend.Game
             if (!IsCharging) return;
             LastChargeLevel = _charge.Release();
             double power = HeavyBasePower() * _charge.PowerMult(LastChargeLevel);
-            StartSpecial("heavy", power, -1f, _charge.BreaksGuard(LastChargeLevel) ? 1.5 : 1.0);
+            StartSpecial(Special.Heavy, power, "heavy", -1f, _charge.BreaksGuard(LastChargeLevel) ? 1.5 : 1.0);
         }
 
         /// <summary>Opened by PlayerDefense after a successful parry.</summary>
@@ -111,19 +162,27 @@ namespace Ascend.Game
         public void Tick(float dt)
         {
             _charge.Tick(dt);
+            _budget.Tick(dt, IsAttacking, !_motor.IsGrounded);
+            _motor.Hang = IsAttacking && !_motor.IsGrounded && CurrentSpecial != Special.Slam;
+            if (_motor.IsGrounded) _airString = false;
             if (_special != null && _special.IsBusy)
             {
-                Lunge(_special, dt);
+                if (_specialKind != Special.Slam) Lunge(_special, dt);
                 var hit = _special.Tick(dt);
-                if (hit != null) Strike(hit, _specialHitstop, _specialPoiseMult);
+                if (hit != null) Strike(hit, _specialHitstop, _specialPoiseMult, _specialKind);
                 return;
             }
             var landed = _chain.Tick(dt);
             bool newHit = _chain.Phase == AttackPhase.Startup && (_chain.HitIndex != _startedIndex || _lastPhase != AttackPhase.Startup);
-            if (newHit) { _startedIndex = _chain.HitIndex; FaceTarget(); }
-            Lunge(_chain, dt);
-            if (landed != null) Strike(landed, -1f, 1.0);
-            if (_chain.Phase == AttackPhase.Idle) _startedIndex = -1;
+            if (newHit) { _startedIndex = _chain.HitIndex; _stringHits++; FaceTarget(); }
+            if (!_airString) Lunge(_chain, dt);
+            if (landed != null) Strike(landed, -1f, 1.0, Special.None);
+            if (_chain.Phase == AttackPhase.Idle)
+            {
+                _startedIndex = -1;
+                if ((_stringIdle += dt) >= _tuning.AttackTiming.ChainResetSec) _stringHits = 0;
+            }
+            else _stringIdle = 0;
             _lastPhase = _chain.Phase;
         }
 
@@ -135,11 +194,15 @@ namespace Ascend.Game
             return heavy != null ? heavy.Hits[0].Power : DefaultHeavyPower;
         }
 
-        void StartSpecial(string id, double power, float hitstop, double poiseMult)
+        void StartSpecial(Special kind, double power, string weight, float hitstop, double poiseMult)
         {
             _chain.Cancel();
-            _special = new AttackChain(new SkillData { Id = id, Name = id, Slot = "special", Hits = { new SkillHit { Power = power, Weight = "heavy" } } }, _tuning);
+            _charge.Cancel();
+            string id = kind.ToString().ToLowerInvariant();
+            _special = new AttackChain(new SkillData { Id = id, Name = id, Slot = "special", Hits = { new SkillHit { Power = power, Weight = weight } } }, _tuning);
+            _specialKind = kind;
             _specialHitstop = hitstop;
+            if (kind == Special.Slam) _motor.Plunge(14f);
             _specialPoiseMult = poiseMult;
             _special.Press();
             FaceTarget();
@@ -155,6 +218,12 @@ namespace Ascend.Game
         /// <summary>Soft lock: turn toward the nearest live monster within reach × 2 and the soft-lock cone.</summary>
         void FaceTarget()
         {
+            if (LockTarget != null && !LockTarget.IsDead)
+            {
+                Vector3 l = LockTarget.transform.position - transform.position; l.y = 0;
+                if (l.sqrMagnitude > 1e-4f) transform.rotation = Quaternion.LookRotation(l);
+                return;
+            }
             MonsterDummy best = null;
             float bestDist = float.MaxValue, reach = (float)_tuning.AttackTiming.ReachM * 2f;
             int n = Physics.OverlapSphereNonAlloc(transform.position, reach, _overlap, ~0, QueryTriggerInteraction.Ignore);
@@ -171,7 +240,7 @@ namespace Ascend.Game
             if (dir.sqrMagnitude > 1e-4f) transform.rotation = Quaternion.LookRotation(dir);
         }
 
-        void Strike(SkillHit hit, float hitstopOverride, double poiseMult)
+        void Strike(SkillHit hit, float hitstopOverride, double poiseMult, Special kind)
         {
             var weight = AttackChain.WeightOf(hit);
             float reach = (float)_tuning.AttackTiming.ReachM, halfArc = (float)_tuning.AttackTiming.ArcDeg * 0.5f;
@@ -190,7 +259,14 @@ namespace Ascend.Game
                     Kind = DamageKind.Physical, Attack = Stats.Atk, Defense = m.Defense, Power = hit.Power,
                     DefenderWeakness = m.Weakness, CritChance = Stats.CritChance,
                 }, _rng);
+                bool wasLaunched = m.LaunchedSinceLanding && m.IsAirborne;
                 m.TakeHit(result.Amount, weight, transform.position, hit.Power * PoisePerPower * poiseMult);
+                if (!m.IsDead)
+                {
+                    if (kind == Special.Launcher) m.Launch(LaunchSpeed);
+                    else if (kind == Special.Slam) { m.Slam(SlamSpeed); if (wasLaunched) LaunchToSlam?.Invoke(m); }
+                    else if (kind == Special.None && !_motor.IsGrounded) m.Pop(PopSpeed);
+                }
                 DamageNumber.Spawn(contact + Vector3.up * 0.3f, result.Amount, result.Crit);
                 HitLanded?.Invoke(m, result);
             }

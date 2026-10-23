@@ -57,12 +57,13 @@ namespace Ascend.Game
             _turnSpeed = Mathf.Max(90f, (float)motion.NavAgent.AngularSpeed);
             _tokenId = $"{_body.SpeciesId}#{_id}";
             _body.Staggered += OnStaggered;
+            _body.Landed += OnStaggered; // landing after a launch is a knockdown
             BuildTelegraph();
         }
 
         void OnDestroy()
         {
-            if (_body != null) _body.Staggered -= OnStaggered;
+            if (_body != null) { _body.Staggered -= OnStaggered; _body.Landed -= OnStaggered; }
             ReleaseToken();
         }
 
@@ -80,6 +81,7 @@ namespace Ascend.Game
             }
             float dt = Time.deltaTime;
             if (dt <= 0f) return; // hit-stop
+            if (_body.IsAirborne) { ReleaseToken(); ShowTelegraph(false); return; } // juggled: no thinking in the air
 
             Vector3 toPlayer = _player.transform.position - transform.position; toPlayer.y = 0;
             Vector3 toHome = _home - transform.position; toHome.y = 0;

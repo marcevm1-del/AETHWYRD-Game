@@ -153,6 +153,7 @@ namespace Ascend.EditorTools
             p.AddComponent<PlayerMotor>();
             p.AddComponent<PlayerCombat>();
             p.AddComponent<PlayerDefense>();
+            p.AddComponent<LockOn>();
             var driver = p.AddComponent<PlayerInputDriver>();
 
             // Camera.

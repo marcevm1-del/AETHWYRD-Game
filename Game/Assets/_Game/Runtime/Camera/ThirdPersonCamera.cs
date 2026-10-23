@@ -20,6 +20,7 @@ namespace Ascend.Game
 
         float _yaw, _pitch = 15f, _distance;
         InputAction _look;
+        LockOn _lock;
 
         public Transform Target { get => target; set => target = value; }
 
@@ -31,7 +32,7 @@ namespace Ascend.Game
             _look = new InputAction("Look", InputActionType.Value);
             _look.AddBinding("<Mouse>/delta").WithProcessor($"scaleVector2(x={mouseSensitivity},y={mouseSensitivity})");
             _look.AddBinding("<Gamepad>/rightStick").WithProcessor($"scaleVector2(x={stickSensitivity},y={stickSensitivity})");
-            if (target != null) _yaw = target.eulerAngles.y;
+            if (target != null) { _yaw = target.eulerAngles.y; _lock = target.GetComponent<LockOn>(); }
         }
 
         void OnEnable() { _look.Enable(); if (Application.isPlaying) Cursor.lockState = CursorLockMode.Locked; }
@@ -44,8 +45,20 @@ namespace Ascend.Game
             Vector2 d = _look.ReadValue<Vector2>();
             bool stick = Gamepad.current != null && Gamepad.current.rightStick.ReadValue().sqrMagnitude > 0.01f;
             if (stick) d *= Time.deltaTime; // stick is a rate, mouse is a delta
-            _yaw += d.x;
-            _pitch = Mathf.Clamp(_pitch - d.y, minPitch, maxPitch);
+            if (_lock == null) _lock = target.GetComponent<LockOn>();
+            if (_lock != null && _lock.IsLocked)
+            {
+                // Keep the target framed: swing behind the player toward it (mouse flicks switch targets instead).
+                Vector3 to = _lock.Target.transform.position - target.position; to.y = 0;
+                if (to.sqrMagnitude > 0.01f)
+                    _yaw = Mathf.MoveTowardsAngle(_yaw, Quaternion.LookRotation(to).eulerAngles.y, 300f * Time.unscaledDeltaTime);
+                _pitch = Mathf.MoveTowards(_pitch, 18f, 60f * Time.unscaledDeltaTime);
+            }
+            else
+            {
+                _yaw += d.x;
+                _pitch = Mathf.Clamp(_pitch - d.y, minPitch, maxPitch);
+            }
             Place();
         }
 

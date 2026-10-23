@@ -73,6 +73,7 @@ namespace Ascend.Game
             Vector3 away = transform.position - fromPosition; away.y = 0;
             away = away.sqrMagnitude > 1e-4f ? away.normalized : -transform.forward;
             _knockVelocity = away * (stagger ? 4f : weight >= HitWeight.Medium ? 2.5f : 1f);
+            if (IsAirborne) _knockVelocity *= 0.15f; // juggled targets stay in reach
             _flashLeft = 0.08f;
             foreach (var r in _renderers) r.SetPropertyBlock(_flashBlock);
             if (IsDead) Defeat();
@@ -87,6 +88,49 @@ namespace Ascend.Game
             Staggered?.Invoke();
             Vector3 away = transform.position - fromPosition; away.y = 0;
             _knockVelocity = (away.sqrMagnitude > 1e-4f ? away.normalized : -transform.forward) * 4f;
+        }
+
+        // ---------------------------------------------------------------- airborne (launch, juggle, slam)
+        const float Gravity = -25f;
+        float _groundY = float.NaN, _vy;
+        bool _slammed;
+
+        public bool IsAirborne => !float.IsNaN(_groundY) && (transform.position.y > _groundY + 0.02f || _vy > 0f);
+        public float HeightAboveGround => float.IsNaN(_groundY) ? 0f : transform.position.y - _groundY;
+        /// <summary>True once after a slam lands (for the launch-to-slam Style bonus).</summary>
+        public bool LaunchedSinceLanding { get; private set; }
+        /// <summary>Raised when an airborne monster lands (its AI treats it as a knockdown).</summary>
+        public event Action Landed;
+
+        /// <summary>Launcher: throw the monster straight up (it is then juggleable).</summary>
+        public void Launch(float upSpeed)
+        {
+            if (IsDead) return;
+            if (float.IsNaN(_groundY)) _groundY = transform.position.y;
+            _vy = Mathf.Max(_vy, upSpeed);
+            LaunchedSinceLanding = true;
+            _knockVelocity = Vector3.zero;
+        }
+
+        /// <summary>An air hit keeps it up a little longer.</summary>
+        public void Pop(float upSpeed) { if (IsAirborne) _vy = Mathf.Max(_vy, upSpeed); }
+
+        /// <summary>Slam: drive an airborne monster into the ground.</summary>
+        public void Slam(float downSpeed) { if (IsAirborne) { _vy = -Mathf.Abs(downSpeed); _slammed = true; } }
+
+        void AirStep(float dt)
+        {
+            if (dt <= 0f || float.IsNaN(_groundY) || (!IsAirborne && _vy == 0f)) return; // frozen in hit-stop, or grounded
+            _vy += Gravity * dt;
+            var p = transform.position; p.y += _vy * dt;
+            if (p.y <= _groundY && _vy <= 0f) // land only while falling (a launch starts at ground height)
+            {
+                p.y = _groundY; _vy = _slammed ? 3f : 0f; _slammed = false;
+                transform.position = p;
+                if (_vy == 0f) { LaunchedSinceLanding = false; Landed?.Invoke(); }
+                return;
+            }
+            transform.position = p;
         }
 
         void Defeat()
@@ -116,6 +160,7 @@ namespace Ascend.Game
                 transform.position += _knockVelocity * dt;
                 _knockVelocity = Vector3.MoveTowards(_knockVelocity, Vector3.zero, 14f * dt);
             }
+            AirStep(dt);
             if (IsDead && _respawnLeft > 0f && (_respawnLeft -= dt) <= 0f) Respawn();
         }
 

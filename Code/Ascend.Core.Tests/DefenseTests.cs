@@ -51,3 +51,32 @@ static class DefenseTests
         Assert.Equal(0, new ChargeMeter(C.Combo).Release(), "releasing without charging is a tap");
     }
 }
+
+// Combo Budget (combat.md §4.1).
+[Tests]
+static class ComboBudgetTests
+{
+    static ComboTuning C => Repo.Db.Tuning.Combo;
+
+    public static void SpendsDownToZeroThenRefusesUntilRefilled()
+    {
+        var b = new ComboBudget(C);
+        for (int i = 0; i < C.BudgetPerString; i++) Assert.True(b.TrySpend(), $"cancel {i + 1} allowed");
+        Assert.True(!b.TrySpend(), "the budget runs out");
+        b.Tick(C.BudgetRefillSec - 0.1, attacking: false, airborne: false);
+        Assert.Equal(0, b.Left, "not refilled before the idle time");
+        b.Tick(0.2, attacking: false, airborne: false);
+        Assert.Equal(C.BudgetPerString, b.Left, "refilled after idling");
+    }
+
+    public static void AttackingKeepsItSpentAndLandingRefills()
+    {
+        var b = new ComboBudget(C);
+        b.TrySpend(); b.TrySpend();
+        b.Tick(0.1, attacking: true, airborne: true);
+        b.Tick(C.BudgetRefillSec + 1, attacking: true, airborne: true);
+        Assert.Equal(C.BudgetPerString - 2, b.Left, "still spent while attacking in the air");
+        b.Tick(0.01, attacking: true, airborne: false);
+        Assert.Equal(C.BudgetPerString, b.Left, "landing refills");
+    }
+}

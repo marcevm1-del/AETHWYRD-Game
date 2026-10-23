@@ -8,7 +8,8 @@ namespace Ascend.Game
     /// in 12_Systems/hud_and_ui.md §15. Bindings are defined in code for Ring 0; a rebindable .inputactions asset
     /// replaces this in Ring 1.
     ///   Move: WASD / left stick · Jump: Space / A · Dodge: Shift / B (hold to sprint) · Walk: Left Alt
-    ///   Light: LMB / X · Heavy: RMB / Y (hold to charge) · Block / parry: Q / RT
+    ///   Light: LMB / X · Heavy: RMB / Y (hold to charge; after two lights = launcher; in the air = slam)
+    ///   Block / parry: Q / RT · Lock-on: MMB / R3 (flick to switch) · Jump during a launcher follows the target up
     /// During Flash Time the world slows but the player keeps real-time speed; hit-stop freezes everyone.
     /// </summary>
     [RequireComponent(typeof(PlayerMotor))]
@@ -19,13 +20,15 @@ namespace Ascend.Game
         PlayerMotor _motor;
         PlayerCombat _combat;
         PlayerDefense _defense;
-        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block;
+        LockOn _lockOn;
+        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock;
 
         void Awake()
         {
             _motor = GetComponent<PlayerMotor>();
             _combat = GetComponent<PlayerCombat>();
             _defense = GetComponent<PlayerDefense>();
+            _lockOn = GetComponent<LockOn>();
             if (cameraTransform == null && Camera.main != null) cameraTransform = Camera.main.transform;
 
             _move = new InputAction("Move", InputActionType.Value);
@@ -37,6 +40,7 @@ namespace Ascend.Game
             _light = Button("Light", "<Mouse>/leftButton", "<Gamepad>/buttonWest");
             _heavy = Button("Heavy", "<Mouse>/rightButton", "<Gamepad>/buttonNorth");
             _block = Button("Block", "<Keyboard>/q", "<Gamepad>/rightTrigger");
+            _lock = Button("LockOn", "<Mouse>/middleButton", "<Gamepad>/rightStickPress");
         }
 
         static InputAction Button(string name, params string[] bindings)
@@ -46,7 +50,7 @@ namespace Ascend.Game
             return a;
         }
 
-        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _block };
+        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock };
 
         void OnEnable() { foreach (var a in Actions) a.Enable(); }
         void OnDisable() { foreach (var a in Actions) a.Disable(); }
@@ -58,7 +62,8 @@ namespace Ascend.Game
             Vector3 world = CameraRelative(_move.ReadValue<Vector2>());
             bool attacking = _combat != null && _combat.IsAttacking;
 
-            if (_jump.WasPressedThisFrame() && !attacking) _motor.Jump();
+            if (_jump.WasPressedThisFrame() && !(_combat != null && _combat.TryJumpCancel()) && !attacking) _motor.Jump();
+            if (_lock.WasPressedThisFrame() && _lockOn != null) _lockOn.Toggle();
             if (_dodge.WasPressedThisFrame() && (_combat == null || _combat.TryCancelForDodge())) _motor.Dodge(world);
             if (_defense != null) _defense.SetBlock(_block.IsPressed() && !attacking);
             if (_combat != null)
