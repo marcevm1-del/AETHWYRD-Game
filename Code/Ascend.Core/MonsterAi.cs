@@ -11,6 +11,9 @@ namespace Ascend.Core
     {
         public string SpeciesId { get; set; }
         public double SizeMeters { get; set; }
+        public string RigKey { get; set; }
+        public LocomotionData Locomotion { get; set; } = new LocomotionData();
+        public MenaceData Menace { get; set; } = new MenaceData();
         public MotionBehavior Behavior { get; set; } = new MotionBehavior();
         public NavAgentData NavAgent { get; set; } = new NavAgentData();
         public List<AttackTimingData> Attacks { get; set; } = new List<AttackTimingData>();
@@ -27,6 +30,10 @@ namespace Ascend.Core
         public double CircleRadius { get; set; }
         public double RetreatHpPct { get; set; }
     }
+
+    public sealed class LocomotionData { public double PlayRate { get; set; } = 1; public double TurnDegPerSec { get; set; } }
+
+    public sealed class MenaceData { public string Label { get; set; } public string Posture { get; set; } public double SquashStretch { get; set; } = 1; }
 
     public sealed class NavAgentData
     {

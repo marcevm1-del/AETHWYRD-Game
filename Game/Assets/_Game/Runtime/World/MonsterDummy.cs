@@ -36,10 +36,15 @@ namespace Ascend.Game
         public bool IsUnique => _species != null && (_species.IsUnique || _species.IsTyrant);
         /// <summary>Raised when poise breaks or a parry staggers this monster (its AI cancels the attack).</summary>
         public event Action Staggered;
+        /// <summary>Raised on every landed hit (animation recoil).</summary>
+        public event Action Damaged;
+        /// <summary>Seconds the body stays visible after death (a death animation plays meanwhile).</summary>
+        public float HideDelay { get; set; }
+        float _hideLeft = -1f;
 
         void Awake()
         {
-            _renderers = GetComponentsInChildren<Renderer>();
+            RefreshRenderers();
             _colliders = GetComponentsInChildren<Collider>();
             _flashBlock = new MaterialPropertyBlock();
             _flashBlock.SetColor("_BaseColor", Color.white);
@@ -90,6 +95,7 @@ namespace Ascend.Game
             if (IsDead) return;
             Hp = Mathf.Max(0, Hp - Mathf.Max(0, amount));
             bool stagger = _poise.Hit(poiseDamage);
+            Damaged?.Invoke();
             if (stagger) { Staggers++; Staggered?.Invoke(); }
             Vector3 away = transform.position - fromPosition; away.y = 0;
             away = away.sqrMagnitude > 1e-4f ? away.normalized : -transform.forward;
@@ -154,15 +160,20 @@ namespace Ascend.Game
             transform.position = p;
         }
 
+        /// <summary>Re-reads the renderers (after MonsterAnimator moves them under its visual pivot).</summary>
+        public void RefreshRenderers() => _renderers = GetComponentsInChildren<Renderer>();
+
         void Defeat()
         {
             _respawnLeft = respawnSec;
-            foreach (var r in _renderers) r.enabled = false;
             foreach (var c in _colliders) c.enabled = false;
+            if (HideDelay > 0f) _hideLeft = HideDelay;
+            else foreach (var r in _renderers) r.enabled = false;
         }
 
         void Respawn()
         {
+            _hideLeft = -1f;
             foreach (var r in _renderers) { r.enabled = true; r.SetPropertyBlock(null); }
             foreach (var c in _colliders) c.enabled = true;
             Init();
@@ -181,6 +192,7 @@ namespace Ascend.Game
                 transform.position += _knockVelocity * dt;
                 _knockVelocity = Vector3.MoveTowards(_knockVelocity, Vector3.zero, 14f * dt);
             }
+            if (_hideLeft > 0f && (_hideLeft -= dt) <= 0f) foreach (var r in _renderers) r.enabled = false;
             AirStep(dt);
             if (IsDead && _respawnLeft > 0f && (_respawnLeft -= dt) <= 0f) Respawn();
         }

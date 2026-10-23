@@ -208,6 +208,7 @@ namespace Ascend.EditorTools
             col.center = go.transform.InverseTransformPoint(bounds.center);
             AddLabel(go, speciesId, bounds.max.y);
             go.AddComponent<MonsterController>();
+            go.AddComponent<MonsterAnimator>();
             return true;
         }
 
@@ -216,6 +217,7 @@ namespace Ascend.EditorTools
             var go = Prim(shape, speciesId, pos, scale, mat, parent);
             AddLabel(go, speciesId, pos.y + scale.y);
             go.AddComponent<MonsterController>();
+            go.AddComponent<MonsterAnimator>();
             return go;
         }
 
