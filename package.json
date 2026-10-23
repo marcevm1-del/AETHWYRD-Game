@@ -8,6 +8,7 @@
     "validate": "node Tools/validate/validate.js",
     "build": "node Tools/validate/build_schemas.js && node Tools/monster_gen/generate.js && node Tools/validate/validate.js && node Tools/run_tests.js",
     "viewer": "node Tools/serve.js",
+    "vault": "node Tools/vault/build_vault.js",
     "test": "node Tools/run_tests.js"
   }
 }

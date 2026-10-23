@@ -1,0 +1,24 @@
+---
+type: inn
+id: inn_deep_pint
+tags: [inn]
+---
+# The Deep Pint
+
+| Field | Value |
+|---|---|
+| Where | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] · Labyrinth Floor 30 safe town |
+| Keeper | Dorgrim Underbrow (dwarf) |
+| Tier · ring | special · 4 |
+| Dish | Cave-mushroom Hash: +dark vision |
+| Drink | Glowmoss Ale: +trap detection |
+| Quirk | The only bar 30 floors down; prices are 3× and nobody complains |
+
+## Rooms
+
+| Room | Price (copper) | Rest | Perk |
+|---|---|---|---|
+| common | 50 | Rested (2h) |  |
+| private | 250 | Well Rested (4h) |  |
+| suite | 3000 | Well Rested (8h) + meal |  |
+| Bunk 30 | 300 | Well Rested (4h) | Save point and Labyrinth checkpoint; restocks your belt |
