@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,9 @@ namespace Ascend.Game
 
         float _yaw, _pitch = 15f, _distance;
         InputAction _look;
+
+        /// <summary>The look bindings' processor strings (tests check they are culture-proof).</summary>
+        public string LookProcessors => _look == null ? "" : string.Join("|", System.Linq.Enumerable.Select(_look.bindings, b => b.processors));
         LockOn _lock;
 
         public Transform Target { get => target; set => target = value; }
@@ -30,8 +34,9 @@ namespace Ascend.Game
             _distance = (float)t.Distance;
             GetComponent<Camera>().fieldOfView = (float)t.Fov;
             _look = new InputAction("Look", InputActionType.Value);
-            _look.AddBinding("<Mouse>/delta").WithProcessor($"scaleVector2(x={mouseSensitivity},y={mouseSensitivity})");
-            _look.AddBinding("<Gamepad>/rightStick").WithProcessor($"scaleVector2(x={stickSensitivity},y={stickSensitivity})");
+            // Invariant culture: on comma-decimal systems "0,12" would break the processor string (and mouse look).
+            _look.AddBinding("<Mouse>/delta").WithProcessor(FormattableString.Invariant($"scaleVector2(x={mouseSensitivity},y={mouseSensitivity})"));
+            _look.AddBinding("<Gamepad>/rightStick").WithProcessor(FormattableString.Invariant($"scaleVector2(x={stickSensitivity},y={stickSensitivity})"));
             if (target != null) { _yaw = target.eulerAngles.y; _lock = target.GetComponent<LockOn>(); }
         }
 

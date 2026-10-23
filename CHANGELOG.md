@@ -2,6 +2,17 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.14 — Ring 0 core gameplay, weeks 4–10 (2026-10-23)
+- **Decisions D1–D3 applied** (v0.13 items): named-monster rework (Canon §4d), v0.12 committed, all-rights-reserved licence; GitHub Actions CI.
+- **Combat:** charged heavy (Core ChargeMeter), perfect dodge → Flash Time and parry → riposte (Core DefenseJudge), one time-scale owner (GameTime), camera shake and damage numbers with accessibility settings; controls follow hud_and_ui.md §15.
+- **Monster AI** (Core MonsterBrain on motion.json): telegraphs with a shrinking speed-cue ring, aggro tokens, leash, stagger, skittish and retreat patterns.
+- **Air combat:** launcher, jump-cancel, juggle with hang time, slam; lock-on; Core ComboBudget.
+- **Skills:** Core SkillCaster (SP/MP/Awakening, cooldowns, unlocks, skill-cancels), skills by data kind, the Ultimate, Fire Bomb, element auras and Firestorm.
+- **Progress:** Core PlayerProgress and Style rewards; kills give XP, level-ups recompute stats; Style meter; HUD and Status Window.
+- **Build:** standalone Windows player (`Game/Builds/Ring0/`), data copied to StreamingAssets only during the build.
+- Bugs found by the tests and fixed: launches cancelled by hit-stop, sideways lunges un-grounding the player, a double jump, defence set-up a frame late, an Ultimate refilling itself.
+- Tests: 68 → **91** rules, 12 → **39** PlayMode.
+
 ## v0.13 — Ring 0 combat, world building, classes, research (2026-10-23)
 **Game (Unity)**
 - Blender models for the Ring 0 monsters (`Tools/blender/ring0_monsters.py`, FBX in `Game/Assets/_Game/Art/Models/Monsters`), placed by the scene builder with fitted colliders and data labels.

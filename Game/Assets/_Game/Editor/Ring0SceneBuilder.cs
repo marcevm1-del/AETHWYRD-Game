@@ -167,16 +167,24 @@ namespace Ascend.EditorTools
             so.ApplyModifiedPropertiesWithoutUndo();
 
             // Ring 0 monsters: Blender models (Tools/blender/ring0_monsters.py) when present, else labelled primitives.
+            // The fun-test field (combat.md §12): a slime patch close by, a goblin pack of 5 deeper in, rabbits on the far side.
             var monsters = new GameObject("Ring0_Monsters").transform;
-            if (!Model(monsters, "mon_blue_slime", "Blue_Slime", new Vector3(2.2f, 0, 5)))
-                Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, new Vector3(2.2f, 0.25f, 5), new Vector3(0.55f, 0.45f, 0.55f), slime);
-            if (!Model(monsters, "mon_goblin", "Goblin", new Vector3(-2.2f, 0, 5.5f)))
-                Dummy(monsters, "mon_goblin", PrimitiveType.Capsule, new Vector3(-2.2f, 0.5f, 5.5f), new Vector3(0.45f, 0.5f, 0.45f), goblin);
-            if (!Model(monsters, "mon_horned_rabbit", "Horned_Rabbit", new Vector3(0f, 0, 7.5f)))
+            foreach (var at in new[] { new Vector3(2.2f, 0, 5), new Vector3(4.5f, 0, 6.5f), new Vector3(3.2f, 0, 8.5f) })
+                if (!Model(monsters, "mon_blue_slime", "Blue_Slime", at))
+                    Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, at + Vector3.up * 0.25f, new Vector3(0.55f, 0.45f, 0.55f), slime);
+            for (int i = 0; i < 5; i++)
             {
-                var rab = Dummy(monsters, "mon_horned_rabbit", PrimitiveType.Cube, new Vector3(0f, 0.2f, 7.5f), new Vector3(0.3f, 0.3f, 0.45f), rabbit);
-                Prim(PrimitiveType.Cylinder, "Horn", new Vector3(0, 0.75f, 0.45f), new Vector3(0.15f, 0.5f, 0.15f), accent, rab.transform, Quaternion.Euler(40, 0, 0), keepCollider: false);
+                float a = i / 5f * Mathf.PI * 2f;
+                var at = new Vector3(-8f + Mathf.Cos(a) * 1.8f, 0, 12f + Mathf.Sin(a) * 1.8f);
+                if (!Model(monsters, "mon_goblin", "Goblin", at))
+                    Dummy(monsters, "mon_goblin", PrimitiveType.Capsule, at + Vector3.up * 0.5f, new Vector3(0.45f, 0.5f, 0.45f), goblin);
             }
+            foreach (var at in new[] { new Vector3(0f, 0, 9f), new Vector3(9f, 0, 15f) })
+                if (!Model(monsters, "mon_horned_rabbit", "Horned_Rabbit", at))
+                {
+                    var rab = Dummy(monsters, "mon_horned_rabbit", PrimitiveType.Cube, at + Vector3.up * 0.2f, new Vector3(0.3f, 0.3f, 0.45f), rabbit);
+                    Prim(PrimitiveType.Cylinder, "Horn", new Vector3(0, 0.75f, 0.45f), new Vector3(0.15f, 0.5f, 0.15f), accent, rab.transform, Quaternion.Euler(40, 0, 0), keepCollider: false);
+                }
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             var scenes = EditorBuildSettings.scenes.Where(s => s.path != ScenePath).ToList();
