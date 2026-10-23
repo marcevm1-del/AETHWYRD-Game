@@ -141,6 +141,16 @@ namespace Ascend.Core
         public string Rank { get; set; }
         public string Rarity { get; set; }
         public int Value { get; set; }
+        /// <summary>Raw item stats (atk, matk, def, crit, spd, applyElement…); values may be numbers or text.</summary>
+        public Dictionary<string, object> Stats { get; set; } = new Dictionary<string, object>();
+
+        /// <summary>A numeric stat, or 0 when absent or not a number (works with any JSON library's value type).</summary>
+        public double Stat(string key)
+        {
+            if (Stats == null || !Stats.TryGetValue(key, out var v) || v == null) return 0;
+            if (v is IConvertible c && !(v is string)) return c.ToDouble(System.Globalization.CultureInfo.InvariantCulture);
+            return double.TryParse(v.ToString(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var d) ? d : 0;
+        }
     }
 
     /// <summary>All loaded game data, indexed by ID. Loading (file IO + JSON) happens in the host (Unity or tests).</summary>

@@ -136,8 +136,13 @@ for (const n of rows.npcs) (n.states || []).forEach(st => ref(`${n.id}.states`, 
 const skillIds = new Set();
 for (const c of rows.classes) {
   ref(`${c.id}.starterWeaponId`, c.starterWeaponId, 'items', true);
-  for (const k of c.kit) { if (skillIds.has(k.id)) err(c.id, `duplicate skill id ${k.id}`); skillIds.add(k.id); }
+  for (const k of c.kit) {
+    if (skillIds.has(k.id)) err(c.id, `duplicate skill id ${k.id}`); skillIds.add(k.id);
+    if (!k.hits.length && !['buff', 'utility', 'ultimate'].includes(k.kind)) err(k.id, `kind "${k.kind}" needs at least one hit`);
+  }
+  for (const p of c.passives || []) { if (skillIds.has(p.id)) err(c.id, `duplicate passive id ${p.id}`); skillIds.add(p.id); }
   if (c.kit.filter(k => k.slot === 'ultimate').length !== 1) err(c.id, 'needs exactly one ultimate');
+  if (c.kit.filter(k => k.slot === 'basic').length !== 1) err(c.id, 'needs exactly one basic attack string');
   const alloc = Object.values(c.recommendedAllocation).reduce((a, b) => a + b, 0);
   if (Math.abs(alloc - 1) > 0.001) err(c.id, `recommendedAllocation sums to ${alloc}, not 1`);
 }

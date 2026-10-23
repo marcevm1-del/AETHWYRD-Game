@@ -156,14 +156,24 @@ const SCHEMAS = {
           type: 'object', additionalProperties: false, required: ['id', 'name', 'unlockLevel', 'kind', 'slot', 'hits', 'cooldownSec', 'element'],
           properties: {
             id: id('skl_'), name: { type: 'string' }, unlockLevel: { type: 'integer', minimum: 1, maximum: 300 },
-            kind: { type: 'string', enum: ['chain', 'launcher', 'dash', 'ranged', 'aoe', 'buff', 'ultimate'] },
+            kind: { type: 'string', enum: ['chain', 'launcher', 'dash', 'ranged', 'aoe', 'buff', 'utility', 'ultimate'] },
             slot: { type: 'string', enum: ['basic', 'skill', 'ultimate'] },
-            hits: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['power', 'weight'], properties: { power: { type: 'number', minimum: 0 }, weight: { type: 'string', enum: ['light', 'medium', 'heavy', 'launch', 'ultimate', 'skill'] } } } },
+            effect: { type: 'string' },
+            // Buffs, heals, utilities and support ultimates may have no hits; other kinds need at least one (validate.js).
+            hits: { type: 'array', minItems: 0, items: { type: 'object', additionalProperties: false, required: ['power', 'weight'], properties: { power: { type: 'number', minimum: 0 }, weight: { type: 'string', enum: ['light', 'medium', 'heavy', 'launch', 'ultimate', 'skill'] } } } },
             costSp: { type: 'number', minimum: 0 }, costMp: { type: 'number', minimum: 0 }, costAwakening: { type: 'number', minimum: 0 },
             cooldownSec: { type: 'number', minimum: 0 }, element: EL, appliesElement: { type: 'boolean' }
           }
         }
-      }
+      },
+      passives: {
+        type: 'array',
+        items: {
+          type: 'object', additionalProperties: false, required: ['id', 'name', 'unlockLevel', 'effect'],
+          properties: { id: id('psv_'), name: { type: 'string' }, unlockLevel: { type: 'integer', minimum: 1, maximum: 300 }, effect: { type: 'string', minLength: 3 } }
+        }
+      },
+      trainer: { type: 'string' }, classQuest: { type: 'string' }
     }
   },
   story_flag: {

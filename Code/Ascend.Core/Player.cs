@@ -100,6 +100,18 @@ namespace Ascend.Core
         public double CooldownSec { get; set; }
         public string Element { get; set; }
         public bool AppliesElement { get; set; }
+        /// <summary>Design text from 04_Classes (what the skill does beyond its hits).</summary>
+        public string Effect { get; set; }
+        public bool IsBasic => Slot == "basic";
+    }
+
+    /// <summary>A class passive (always on once unlocked).</summary>
+    public sealed class PassiveData
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public int UnlockLevel { get; set; }
+        public string Effect { get; set; }
     }
 
     /// <summary>Mirror of one entry in Data/Classes/classes.json.</summary>
@@ -116,8 +128,16 @@ namespace Ascend.Core
         public string Mechanic { get; set; }
         public string StarterWeaponId { get; set; }
         public List<SkillData> Kit { get; set; } = new List<SkillData>();
+        public List<PassiveData> Passives { get; set; } = new List<PassiveData>();
+        public string Trainer { get; set; }
+        public string ClassQuest { get; set; }
 
         public SkillData Skill(string id) => Kit.FirstOrDefault(k => k.Id == id);
+        /// <summary>The class's basic attack string (exactly one per class; validated).</summary>
+        public SkillData Basic => Kit.FirstOrDefault(k => k.IsBasic);
+        /// <summary>Kit skills and passives unlocked at <paramref name="level"/>.</summary>
+        public IEnumerable<SkillData> SkillsAt(int level) => Kit.Where(k => k.UnlockLevel <= level);
+        public IEnumerable<PassiveData> PassivesAt(int level) => Passives.Where(p => p.UnlockLevel <= level);
     }
 
     /// <summary>Equipment bonuses that feed derived stats (from item "stats").</summary>

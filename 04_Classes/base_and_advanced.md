@@ -1,5 +1,7 @@
 # 04a — Base & Advanced Classes (v0.2)
 
+> **Data:** all 12 base classes are in `Data/Classes/classes.json`, built from this doc by `node Tools/classes/build_classes.js`: kits with hit data, costs and cooldowns (first-pass tuning), passives, trainers, class quests and an F-rank starter weapon each. Classes whose kit had no combo string got a weapon basic string, marked "(added: basic string)". Classes listed without levels use the 1,1,1,4,7,10,14,18,22 → 30 cadence. Edit this doc and the generator together.
+
 ## 0. Class Rules
 - **Tiers:** Base (F–E) → Advanced (D–C) → Expert (B–A) → Master (S–SS) → Legendary (SSS). Hidden and Monster classes sit outside the ladder.
 - **Main Class + Sub-Class** (Sub unlocks at C). The Sub-Class gives 50% passives, 2 active skill slots, and no Ultimate.

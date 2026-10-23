@@ -4,46 +4,2862 @@
   "name": "Swordsman",
   "tier": "base",
   "role": "Balanced melee DPS",
-  "growth": { "str": 3, "vit": 2, "agi": 3, "dex": 2, "int": 0, "wis": 0, "luk": 1, "cha": 1 },
-  "recommendedAllocation": { "str": 0.4, "vit": 0.2, "agi": 0.2, "dex": 0.15, "luk": 0.05 },
-  "weapons": ["sword", "greatsword", "dual_swords", "katana"],
-  "armor": ["light", "medium"],
+  "growth": {
+   "str": 3,
+   "vit": 2,
+   "agi": 3,
+   "dex": 2,
+   "int": 0,
+   "wis": 0,
+   "luk": 1,
+   "cha": 1
+  },
+  "recommendedAllocation": {
+   "str": 0.4,
+   "vit": 0.2,
+   "agi": 0.2,
+   "dex": 0.15,
+   "luk": 0.05
+  },
+  "weapons": [
+   "sword",
+   "greatsword",
+   "dual_swords",
+   "katana"
+  ],
+  "armor": [
+   "light",
+   "medium"
+  ],
   "mechanic": "Edge Flow: consecutive hits without being struck build Flow (0-5), each stack +6% attack speed; getting hit drops 2 stacks",
   "starterWeaponId": "itm_guild_issue_sword",
+  "trainer": "Old Hollis",
+  "classQuest": "A Thousand Swings",
   "kit": [
    {
-    "id": "skl_slash_chain", "name": "Slash Chain", "unlockLevel": 1, "kind": "chain", "slot": "basic",
+    "id": "skl_slash_chain",
+    "name": "Slash Chain",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
     "hits": [
-     { "power": 0.8, "weight": "light" },
-     { "power": 0.8, "weight": "light" },
-     { "power": 1.0, "weight": "light" },
-     { "power": 1.4, "weight": "medium" }
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "light"
+     },
+     {
+      "power": 1.4,
+      "weight": "medium"
+     }
     ],
-    "costSp": 0, "cooldownSec": 0, "element": "None"
+    "costSp": 0,
+    "cooldownSec": 0,
+    "element": "None"
    },
    {
-    "id": "skl_rising_cut", "name": "Rising Cut", "unlockLevel": 4, "kind": "launcher", "slot": "skill",
-    "hits": [{ "power": 1.2, "weight": "launch" }],
-    "costSp": 10, "cooldownSec": 4, "element": "None"
-   },
-   {
-    "id": "skl_flash_step", "name": "Flash Step", "unlockLevel": 1, "kind": "dash", "slot": "skill",
-    "hits": [{ "power": 1.3, "weight": "medium" }],
-    "costSp": 15, "cooldownSec": 6, "element": "None"
-   },
-   {
-    "id": "skl_air_slash", "name": "Air Slash", "unlockLevel": 1, "kind": "ranged", "slot": "skill",
-    "hits": [{ "power": 1.0, "weight": "medium" }],
-    "costSp": 0, "costMp": 8, "cooldownSec": 5, "element": "Wind", "appliesElement": true
-   },
-   {
-    "id": "skl_thousand_petal_blade", "name": "Thousand Petal Blade", "unlockLevel": 1, "kind": "ultimate", "slot": "ultimate",
+    "id": "skl_rising_cut",
+    "name": "Rising Cut",
+    "unlockLevel": 4,
+    "kind": "launcher",
+    "slot": "skill",
     "hits": [
-     { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" },
-     { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" },
-     { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" }, { "power": 0.6, "weight": "light" }, { "power": 3.0, "weight": "ultimate" }
+     {
+      "power": 1.2,
+      "weight": "launch"
+     }
     ],
-    "costAwakening": 100, "cooldownSec": 0, "element": "None"
+    "costSp": 10,
+    "cooldownSec": 4,
+    "element": "None"
+   },
+   {
+    "id": "skl_flash_step",
+    "name": "Flash Step",
+    "unlockLevel": 1,
+    "kind": "dash",
+    "slot": "skill",
+    "hits": [
+     {
+      "power": 1.3,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 15,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_air_slash",
+    "name": "Air Slash",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 0,
+    "costMp": 8,
+    "cooldownSec": 5,
+    "element": "Wind",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_thousand_petal_blade",
+    "name": "Thousand Petal Blade",
+    "unlockLevel": 1,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 3,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_guard_break",
+    "name": "Guard Break",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Heavy overhead; breaks blocks",
+    "hits": [
+     {
+      "power": 2,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 5,
+    "element": "None"
+   },
+   {
+    "id": "skl_whirlwind",
+    "name": "Whirlwind",
+    "unlockLevel": 9,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Spinning AoE",
+    "hits": [
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 7,
+    "element": "None"
+   },
+   {
+    "id": "skl_parry_riposte",
+    "name": "Parry Riposte",
+    "unlockLevel": 22,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Parry window into a heavy counter",
+    "hits": [
+     {
+      "power": 2.4,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 8,
+    "element": "None"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_sword_mastery",
+    "name": "Sword Mastery",
+    "unlockLevel": 1,
+    "effect": "+damage and attack speed per mastery level"
+   },
+   {
+    "id": "psv_sidestep",
+    "name": "Sidestep",
+    "unlockLevel": 6,
+    "effect": "A perfect dodge grants a free counter-slash"
+   },
+   {
+    "id": "psv_fighting_spirit",
+    "name": "Fighting Spirit",
+    "unlockLevel": 15,
+    "effect": "Low HP grants +crit chance"
+   }
+  ]
+ },
+ {
+  "id": "cls_guardian",
+  "name": "Guardian",
+  "tier": "base",
+  "role": "Tank / protector",
+  "growth": {
+   "str": 3,
+   "vit": 4,
+   "agi": 1,
+   "dex": 1,
+   "int": 0,
+   "wis": 1,
+   "luk": 0,
+   "cha": 0
+  },
+  "recommendedAllocation": {
+   "str": 0.3,
+   "vit": 0.4,
+   "agi": 0.1,
+   "dex": 0.1,
+   "wis": 0.1
+  },
+  "weapons": [
+   "1h_sword",
+   "mace",
+   "shield",
+   "tower_shield",
+   "lance"
+  ],
+  "armor": [
+   "medium",
+   "heavy"
+  ],
+  "mechanic": "Bulwark: blocking fills Bulwark; spend it on counters or a team shield",
+  "starterWeaponId": "itm_guild_issue_mace",
+  "trainer": "Captain Bryndis Oakshield",
+  "classQuest": "The Bridge at Millbrook",
+  "kit": [
+   {
+    "id": "skl_shield_combo",
+    "name": "Shield Combo",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Mace-and-shield string (added: basic string)",
+    "hits": [
+     {
+      "power": 0.7,
+      "weight": "light"
+     },
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 1.3,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_shield_bash",
+    "name": "Shield Bash",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Stun",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 5,
+    "element": "None"
+   },
+   {
+    "id": "skl_provoke",
+    "name": "Provoke",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Taunt nearby enemies",
+    "hits": [],
+    "costSp": 6,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_shield_wall",
+    "name": "Shield Wall",
+    "unlockLevel": 4,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Frontal invulnerable block (drains stamina)",
+    "hits": [],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_guardian_s_oath",
+    "name": "Guardian's Oath",
+    "unlockLevel": 10,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Link to an ally; take 30% of their damage",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 20,
+    "element": "None"
+   },
+   {
+    "id": "skl_earth_stomp",
+    "name": "Earth Stomp",
+    "unlockLevel": 14,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "AoE stagger",
+    "hits": [
+     {
+      "power": 1.1,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 9,
+    "element": "Earth"
+   },
+   {
+    "id": "skl_charge",
+    "name": "Charge",
+    "unlockLevel": 22,
+    "kind": "dash",
+    "slot": "skill",
+    "effect": "Shield charge through a line",
+    "hits": [
+     {
+      "power": 1.5,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 8,
+    "element": "None"
+   },
+   {
+    "id": "skl_aegis_of_the_unbroken",
+    "name": "Aegis of the Unbroken",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "Giant mana shield dome for the party, 8 s",
+    "hits": [],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "Light"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_iron_skin",
+    "name": "Iron Skin",
+    "unlockLevel": 1,
+    "effect": "Passive defense"
+   },
+   {
+    "id": "psv_retaliate",
+    "name": "Retaliate",
+    "unlockLevel": 7,
+    "effect": "A perfect block reflects damage"
+   },
+   {
+    "id": "psv_last_stand",
+    "name": "Last Stand",
+    "unlockLevel": 18,
+    "effect": "Below 20% HP, damage reduction ×2"
+   }
+  ]
+ },
+ {
+  "id": "cls_mage",
+  "name": "Mage",
+  "tier": "base",
+  "role": "Ranged elemental DPS / control",
+  "growth": {
+   "str": 0,
+   "vit": 1,
+   "agi": 1,
+   "dex": 1,
+   "int": 4,
+   "wis": 3,
+   "luk": 0,
+   "cha": 0
+  },
+  "recommendedAllocation": {
+   "vit": 0.1,
+   "agi": 0.1,
+   "dex": 0.1,
+   "int": 0.4,
+   "wis": 0.3
+  },
+  "weapons": [
+   "staff",
+   "wand",
+   "grimoire",
+   "orb"
+  ],
+  "armor": [
+   "cloth"
+  ],
+  "mechanic": "Chant: hold to chant longer for stronger tiers of the same spell (Basic, Intermediate, Advanced); being interrupted causes backlash",
+  "starterWeaponId": "itm_guild_issue_staff",
+  "trainer": "Magistra Eolande Fairweather",
+  "classQuest": "Words of Weave",
+  "kit": [
+   {
+    "id": "skl_arcane_bolts",
+    "name": "Arcane Bolts",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Three quick mana bolts (added: basic string)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_fire_bolt",
+    "name": "Fire Bolt",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Element starter (choose one affinity)",
+    "hits": [
+     {
+      "power": 1.2,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 6,
+    "cooldownSec": 2,
+    "element": "Fire",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_water_lance",
+    "name": "Water Lance",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Element starter (choose one affinity)",
+    "hits": [
+     {
+      "power": 1.1,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 6,
+    "cooldownSec": 2,
+    "element": "Water",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_wind_cutter",
+    "name": "Wind Cutter",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Element starter (choose one affinity)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     }
+    ],
+    "costMp": 6,
+    "cooldownSec": 2,
+    "element": "Wind",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_stone_bullet",
+    "name": "Stone Bullet",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Element starter (choose one affinity)",
+    "hits": [
+     {
+      "power": 1.3,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 6,
+    "cooldownSec": 2.5,
+    "element": "Earth",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_mana_shield",
+    "name": "Mana Shield",
+    "unlockLevel": 1,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "MP absorbs damage",
+    "hits": [],
+    "costMp": 10,
+    "cooldownSec": 12,
+    "element": "None"
+   },
+   {
+    "id": "skl_frost_nova",
+    "name": "Frost Nova",
+    "unlockLevel": 8,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Freeze nearby enemies",
+    "hits": [
+     {
+      "power": 0.9,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 14,
+    "cooldownSec": 10,
+    "element": "Ice",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_chain_lightning",
+    "name": "Chain Lightning",
+    "unlockLevel": 11,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Bounces between enemies",
+    "hits": [
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 0.8,
+      "weight": "light"
+     }
+    ],
+    "costMp": 16,
+    "cooldownSec": 7,
+    "element": "Lightning",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_blink",
+    "name": "Blink",
+    "unlockLevel": 14,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Short teleport",
+    "hits": [],
+    "costMp": 8,
+    "cooldownSec": 5,
+    "element": "None"
+   },
+   {
+    "id": "skl_fireball",
+    "name": "Fireball",
+    "unlockLevel": 17,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Big AoE explosion (the true Fireball)",
+    "hits": [
+     {
+      "power": 2,
+      "weight": "heavy"
+     }
+    ],
+    "costMp": 24,
+    "cooldownSec": 9,
+    "element": "Fire",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_elemental_cataclysm",
+    "name": "Elemental Cataclysm",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "Massive tier-3 spell of your main element",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 3.5,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "None"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_arcane_insight",
+    "name": "Arcane Insight",
+    "unlockLevel": 1,
+    "effect": "See enemy elements"
+   },
+   {
+    "id": "psv_second_element",
+    "name": "Second Element",
+    "unlockLevel": 5,
+    "effect": "Learn a second element's starter"
+   },
+   {
+    "id": "psv_mana_surge",
+    "name": "Mana Surge",
+    "unlockLevel": 21,
+    "effect": "MP regeneration boost"
+   }
+  ]
+ },
+ {
+  "id": "cls_cleric",
+  "name": "Cleric",
+  "tier": "base",
+  "role": "Healer / support",
+  "growth": {
+   "str": 0,
+   "vit": 2,
+   "agi": 0,
+   "dex": 1,
+   "int": 1,
+   "wis": 4,
+   "luk": 1,
+   "cha": 1
+  },
+  "recommendedAllocation": {
+   "vit": 0.2,
+   "dex": 0.1,
+   "int": 0.1,
+   "wis": 0.4,
+   "luk": 0.1,
+   "cha": 0.1
+  },
+  "weapons": [
+   "mace",
+   "holy_tome",
+   "censer",
+   "staff"
+  ],
+  "armor": [
+   "cloth",
+   "light",
+   "medium"
+  ],
+  "mechanic": "Devotion: choose a patron god at class start; spells change flavour (Solenne holy fire, Sylvara vines and regen, Morrowyn spirit lanterns)",
+  "starterWeaponId": "itm_guild_issue_censer",
+  "trainer": "Sister Pell",
+  "classQuest": "The Fevered Village",
+  "kit": [
+   {
+    "id": "skl_censer_swings",
+    "name": "Censer Swings",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Censer string (added: basic string)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.7,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "Light"
+   },
+   {
+    "id": "skl_heal",
+    "name": "Heal",
+    "unlockLevel": 1,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Restore an ally’s HP",
+    "hits": [],
+    "costMp": 8,
+    "cooldownSec": 2,
+    "element": "Light"
+   },
+   {
+    "id": "skl_blessing",
+    "name": "Blessing",
+    "unlockLevel": 1,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Party buff from your patron god",
+    "hits": [],
+    "costMp": 10,
+    "cooldownSec": 15,
+    "element": "Light"
+   },
+   {
+    "id": "skl_purify",
+    "name": "Purify",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Remove a status effect",
+    "hits": [],
+    "costMp": 6,
+    "cooldownSec": 6,
+    "element": "Light"
+   },
+   {
+    "id": "skl_holy_light",
+    "name": "Holy Light",
+    "unlockLevel": 4,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Beam of holy light",
+    "hits": [
+     {
+      "power": 1.2,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 8,
+    "cooldownSec": 3,
+    "element": "Light",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_sanctuary",
+    "name": "Sanctuary",
+    "unlockLevel": 7,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Healing zone",
+    "hits": [],
+    "costMp": 18,
+    "cooldownSec": 20,
+    "element": "Light"
+   },
+   {
+    "id": "skl_group_heal",
+    "name": "Group Heal",
+    "unlockLevel": 10,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Heal the whole party",
+    "hits": [],
+    "costMp": 20,
+    "cooldownSec": 10,
+    "element": "Light"
+   },
+   {
+    "id": "skl_revive",
+    "name": "Revive",
+    "unlockLevel": 14,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Revive a fallen ally (out of combat)",
+    "hits": [],
+    "costMp": 30,
+    "cooldownSec": 0,
+    "element": "Light"
+   },
+   {
+    "id": "skl_smite_undead",
+    "name": "Smite Undead",
+    "unlockLevel": 18,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Heavy holy damage, ×2 to undead",
+    "hits": [
+     {
+      "power": 2.2,
+      "weight": "heavy"
+     }
+    ],
+    "costMp": 16,
+    "cooldownSec": 8,
+    "element": "Light",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_divine_ward",
+    "name": "Divine Ward",
+    "unlockLevel": 22,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Shield the party from the next hit",
+    "hits": [],
+    "costMp": 20,
+    "cooldownSec": 25,
+    "element": "Light"
+   },
+   {
+    "id": "skl_miracle",
+    "name": "Miracle",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "Full party heal and revive",
+    "hits": [],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "Light"
+   }
+  ],
+  "passives": []
+ },
+ {
+  "id": "cls_rogue",
+  "name": "Rogue",
+  "tier": "base",
+  "role": "Stealth, burst crits, utility",
+  "growth": {
+   "str": 1,
+   "vit": 1,
+   "agi": 4,
+   "dex": 3,
+   "int": 0,
+   "wis": 0,
+   "luk": 2,
+   "cha": 0
+  },
+  "recommendedAllocation": {
+   "str": 0.09,
+   "vit": 0.09,
+   "agi": 0.37,
+   "dex": 0.27,
+   "luk": 0.18
+  },
+  "weapons": [
+   "daggers",
+   "short_sword",
+   "throwing_knives"
+  ],
+  "armor": [
+   "light"
+  ],
+  "mechanic": "Shadow: in stealth, the first strike is a guaranteed crit for ×2 damage; kills from stealth refund some stealth",
+  "starterWeaponId": "itm_guild_issue_daggers",
+  "trainer": "Nobody",
+  "classQuest": "The Mayor's Ledger",
+  "kit": [
+   {
+    "id": "skl_dagger_flurry",
+    "name": "Dagger Flurry",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Four quick stabs (added: basic string)",
+    "hits": [
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1.2,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_backstab",
+    "name": "Backstab",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Massive damage from behind",
+    "hits": [
+     {
+      "power": 2.2,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_stealth",
+    "name": "Stealth",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Vanish from sight",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 8,
+    "element": "None"
+   },
+   {
+    "id": "skl_steal",
+    "name": "Steal",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Pick an enemy’s pocket",
+    "hits": [],
+    "costSp": 4,
+    "cooldownSec": 4,
+    "element": "None"
+   },
+   {
+    "id": "skl_smoke_bomb",
+    "name": "Smoke Bomb",
+    "unlockLevel": 7,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Blind the area and slip away",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 14,
+    "element": "None"
+   },
+   {
+    "id": "skl_poison_blade",
+    "name": "Poison Blade",
+    "unlockLevel": 10,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Coat blades in poison",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 18,
+    "element": "Poison",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_shadow_step",
+    "name": "Shadow Step",
+    "unlockLevel": 14,
+    "kind": "dash",
+    "slot": "skill",
+    "effect": "Teleport behind a target and strike",
+    "hits": [
+     {
+      "power": 1.4,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 7,
+    "element": "Dark"
+   },
+   {
+    "id": "skl_fan_of_knives",
+    "name": "Fan of Knives",
+    "unlockLevel": 22,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Knives in every direction",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 8,
+    "element": "None"
+   },
+   {
+    "id": "skl_death_lotus",
+    "name": "Death Lotus",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "Teleport between 8 enemies",
+    "hits": [
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 0.7,
+      "weight": "medium"
+     },
+     {
+      "power": 2.5,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "Dark"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_lockpick",
+    "name": "Lockpick",
+    "unlockLevel": 4,
+    "effect": "Open locked chests and doors"
+   },
+   {
+    "id": "psv_disarm_trap",
+    "name": "Disarm Trap",
+    "unlockLevel": 18,
+    "effect": "Disarm and reuse traps"
+   }
+  ]
+ },
+ {
+  "id": "cls_ranger",
+  "name": "Ranger",
+  "tier": "base",
+  "role": "Ranged physical, tracking, traps",
+  "growth": {
+   "str": 1,
+   "vit": 1,
+   "agi": 3,
+   "dex": 4,
+   "int": 0,
+   "wis": 1,
+   "luk": 1,
+   "cha": 0
+  },
+  "recommendedAllocation": {
+   "str": 0.09,
+   "vit": 0.09,
+   "agi": 0.27,
+   "dex": 0.37,
+   "wis": 0.09,
+   "luk": 0.09
+  },
+  "weapons": [
+   "shortbow",
+   "longbow",
+   "crossbow"
+  ],
+  "armor": [
+   "light",
+   "medium"
+  ],
+  "mechanic": "Focus: aim down sights to build Focus; release at max for Pierce shots that ignore armour",
+  "starterWeaponId": "itm_guild_issue_bow",
+  "trainer": "Wren Ashbourne",
+  "classQuest": "The White Stag",
+  "kit": [
+   {
+    "id": "skl_quick_shots",
+    "name": "Quick Shots",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Three rapid arrows (added: basic string)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1.1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_power_shot",
+    "name": "Power Shot",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "A drawn, heavy arrow",
+    "hits": [
+     {
+      "power": 1.8,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 5,
+    "element": "None"
+   },
+   {
+    "id": "skl_multishot",
+    "name": "Multishot",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Three arrows in a fan",
+    "hits": [
+     {
+      "power": 0.7,
+      "weight": "light"
+     },
+     {
+      "power": 0.7,
+      "weight": "light"
+     },
+     {
+      "power": 0.7,
+      "weight": "light"
+     }
+    ],
+    "costSp": 10,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_snare_trap",
+    "name": "Snare Trap",
+    "unlockLevel": 4,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Root the first enemy that steps in",
+    "hits": [],
+    "costSp": 8,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_rain_of_arrows",
+    "name": "Rain of Arrows",
+    "unlockLevel": 7,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Arrows fall over an area",
+    "hits": [
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     }
+    ],
+    "costSp": 16,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_explosive_arrow",
+    "name": "Explosive Arrow",
+    "unlockLevel": 10,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Arrow that bursts on impact",
+    "hits": [
+     {
+      "power": 1.6,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 8,
+    "element": "Fire",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_camouflage",
+    "name": "Camouflage",
+    "unlockLevel": 14,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Blend in while still",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 15,
+    "element": "None"
+   },
+   {
+    "id": "skl_backflip_shot",
+    "name": "Backflip Shot",
+    "unlockLevel": 22,
+    "kind": "dash",
+    "slot": "skill",
+    "effect": "Leap back and fire",
+    "hits": [
+     {
+      "power": 1.4,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 10,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_starfall_volley",
+    "name": "Starfall Volley",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "A volley of star-arrows",
+    "hits": [
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 2.5,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "Light"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_tracking",
+    "name": "Tracking",
+    "unlockLevel": 1,
+    "effect": "See footprints and trails"
+   },
+   {
+    "id": "psv_eagle_eye",
+    "name": "Eagle Eye",
+    "unlockLevel": 18,
+    "effect": "Longer range and weak-point highlights"
+   }
+  ]
+ },
+ {
+  "id": "cls_tamer",
+  "name": "Tamer",
+  "tier": "base",
+  "role": "Pet/summon control",
+  "growth": {
+   "str": 0,
+   "vit": 1,
+   "agi": 1,
+   "dex": 1,
+   "int": 1,
+   "wis": 2,
+   "luk": 1,
+   "cha": 4
+  },
+  "recommendedAllocation": {
+   "vit": 0.09,
+   "agi": 0.09,
+   "dex": 0.09,
+   "int": 0.09,
+   "wis": 0.18,
+   "luk": 0.09,
+   "cha": 0.37
+  },
+  "weapons": [
+   "whip",
+   "rod",
+   "flute",
+   "bell"
+  ],
+  "armor": [
+   "cloth",
+   "light"
+  ],
+  "mechanic": "Bond Slots: 1 active pet at F, 2 at D, 3 at B; pets share your XP and evolve",
+  "starterWeaponId": "itm_guild_issue_whip",
+  "trainer": "Granny Mabel",
+  "classQuest": "Mochi's Friends",
+  "kit": [
+   {
+    "id": "skl_whip_lashes",
+    "name": "Whip Lashes",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Whip string; pets follow up (added: basic string)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_tame",
+    "name": "Tame",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Begin a taming encounter",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 3,
+    "element": "None"
+   },
+   {
+    "id": "skl_command",
+    "name": "Command",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Order your pet to attack, guard or fetch",
+    "hits": [],
+    "cooldownSec": 1,
+    "element": "None"
+   },
+   {
+    "id": "skl_pet_heal",
+    "name": "Pet Heal",
+    "unlockLevel": 1,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Heal your pet",
+    "hits": [],
+    "costMp": 8,
+    "cooldownSec": 6,
+    "element": "Nature"
+   },
+   {
+    "id": "skl_swap",
+    "name": "Swap",
+    "unlockLevel": 4,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Swap the active pet",
+    "hits": [],
+    "cooldownSec": 3,
+    "element": "None"
+   },
+   {
+    "id": "skl_feral_link",
+    "name": "Feral Link",
+    "unlockLevel": 7,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Share senses with your pet",
+    "hits": [],
+    "costMp": 6,
+    "cooldownSec": 20,
+    "element": "None"
+   },
+   {
+    "id": "skl_rally",
+    "name": "Rally",
+    "unlockLevel": 10,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Pets gain attack and speed",
+    "hits": [],
+    "costSp": 12,
+    "cooldownSec": 20,
+    "element": "None"
+   },
+   {
+    "id": "skl_unison_attack",
+    "name": "Unison Attack",
+    "unlockLevel": 18,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "You and your pet strike together",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1.6,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 16,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_grand_menagerie",
+    "name": "Grand Menagerie",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "All stored pets attack at once",
+    "hits": [
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 2.5,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "None"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_evolution_catalyst",
+    "name": "Evolution Catalyst",
+    "unlockLevel": 14,
+    "effect": "Pets evolve sooner"
+   }
+  ]
+ },
+ {
+  "id": "cls_artisan",
+  "name": "Artisan",
+  "tier": "base",
+  "role": "Crafter / gadgeteer / utility",
+  "growth": {
+   "str": 1,
+   "vit": 1,
+   "agi": 1,
+   "dex": 4,
+   "int": 2,
+   "wis": 1,
+   "luk": 1,
+   "cha": 0
+  },
+  "recommendedAllocation": {
+   "str": 0.09,
+   "vit": 0.09,
+   "agi": 0.09,
+   "dex": 0.37,
+   "int": 0.18,
+   "wis": 0.09,
+   "luk": 0.09
+  },
+  "weapons": [
+   "hammer",
+   "wrench",
+   "tool_staff",
+   "throwables"
+  ],
+  "armor": [
+   "light",
+   "medium"
+  ],
+  "mechanic": "Gadgets: deploy crafted turrets, traps and bombs; crafting quality boosts them",
+  "starterWeaponId": "itm_guild_issue_hammer",
+  "trainer": "Brannoc Emberfist",
+  "classQuest": "The Perfect Nail",
+  "kit": [
+   {
+    "id": "skl_hammer_strikes",
+    "name": "Hammer Strikes",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Hammer string (added: basic string)",
+    "hits": [
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 0.8,
+      "weight": "light"
+     },
+     {
+      "power": 1.5,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_appraise",
+    "name": "Appraise",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Read an item’s quality and traits",
+    "hits": [],
+    "cooldownSec": 1,
+    "element": "None"
+   },
+   {
+    "id": "skl_field_repair",
+    "name": "Field Repair",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Restore gear durability",
+    "hits": [],
+    "costSp": 6,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_bomb_toss",
+    "name": "Bomb Toss",
+    "unlockLevel": 1,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Thrown bomb",
+    "hits": [
+     {
+      "power": 1.2,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 5,
+    "element": "Fire"
+   },
+   {
+    "id": "skl_deploy_turret",
+    "name": "Deploy Turret",
+    "unlockLevel": 4,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "A turret that fires on its own",
+    "hits": [
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 18,
+    "element": "None"
+   },
+   {
+    "id": "skl_reinforce_armor",
+    "name": "Reinforce Armor",
+    "unlockLevel": 7,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Raise an ally’s defense",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 20,
+    "element": "None"
+   },
+   {
+    "id": "skl_overclock",
+    "name": "Overclock",
+    "unlockLevel": 10,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Gadgets fire faster",
+    "hits": [],
+    "costSp": 12,
+    "cooldownSec": 25,
+    "element": "Lightning"
+   },
+   {
+    "id": "skl_masterwork_strike",
+    "name": "Masterwork Strike",
+    "unlockLevel": 18,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "A perfectly placed blow",
+    "hits": [
+     {
+      "power": 2.3,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 9,
+    "element": "None"
+   },
+   {
+    "id": "skl_grand_invention",
+    "name": "Grand Invention",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "A giant temporary golem",
+    "hits": [
+     {
+      "power": 1.2,
+      "weight": "medium"
+     },
+     {
+      "power": 1.2,
+      "weight": "medium"
+     },
+     {
+      "power": 1.2,
+      "weight": "medium"
+     },
+     {
+      "power": 1.2,
+      "weight": "medium"
+     },
+     {
+      "power": 3,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "None"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_salvage",
+    "name": "Salvage",
+    "unlockLevel": 14,
+    "effect": "Extra materials from defeated constructs and wrecks"
+   }
+  ]
+ },
+ {
+  "id": "cls_lancer",
+  "name": "Lancer",
+  "tier": "base",
+  "role": "Mid-range melee, aerial, mobility",
+  "growth": {
+   "str": 3,
+   "vit": 2,
+   "agi": 3,
+   "dex": 2,
+   "int": 0,
+   "wis": 0,
+   "luk": 1,
+   "cha": 1
+  },
+  "recommendedAllocation": {
+   "str": 0.25,
+   "vit": 0.17,
+   "agi": 0.25,
+   "dex": 0.17,
+   "luk": 0.08,
+   "cha": 0.08
+  },
+  "weapons": [
+   "spear",
+   "lance",
+   "halberd",
+   "glaive",
+   "naginata",
+   "trident"
+  ],
+  "armor": [
+   "medium",
+   "heavy"
+  ],
+  "mechanic": "Momentum: moving builds Momentum; charge thrusts and leaps spend it; max Momentum unlocks a cinematic piercing dash",
+  "starterWeaponId": "itm_guild_issue_spear",
+  "trainer": "Sergeant Odessa Vale",
+  "classQuest": "The Bridge of Spears",
+  "kit": [
+   {
+    "id": "skl_spear_thrusts",
+    "name": "Spear Thrusts",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Reaching thrust string (added: basic string)",
+    "hits": [
+     {
+      "power": 0.7,
+      "weight": "light"
+     },
+     {
+      "power": 0.7,
+      "weight": "light"
+     },
+     {
+      "power": 0.9,
+      "weight": "light"
+     },
+     {
+      "power": 1.4,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_piercing_thrust",
+    "name": "Piercing Thrust",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Long-reach poke, armour-piercing",
+    "hits": [
+     {
+      "power": 1.5,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 4,
+    "element": "None"
+   },
+   {
+    "id": "skl_sweep",
+    "name": "Sweep",
+    "unlockLevel": 1,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "180° knockdown",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_vault",
+    "name": "Vault",
+    "unlockLevel": 5,
+    "kind": "launcher",
+    "slot": "skill",
+    "effect": "Pole-vault into the air for aerial combos",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "launch"
+     }
+    ],
+    "costSp": 10,
+    "cooldownSec": 5,
+    "element": "None"
+   },
+   {
+    "id": "skl_impale",
+    "name": "Impale",
+    "unlockLevel": 9,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Pin an enemy to the ground",
+    "hits": [
+     {
+      "power": 1.8,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 8,
+    "element": "None"
+   },
+   {
+    "id": "skl_whirling_guard",
+    "name": "Whirling Guard",
+    "unlockLevel": 13,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Spin to deflect projectiles",
+    "hits": [],
+    "costSp": 10,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_dragon_ascent",
+    "name": "Dragon Ascent",
+    "unlockLevel": 17,
+    "kind": "launcher",
+    "slot": "skill",
+    "effect": "Rising spiral launcher",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1.2,
+      "weight": "launch"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 8,
+    "element": "Wind"
+   },
+   {
+    "id": "skl_comet_dive",
+    "name": "Comet Dive",
+    "unlockLevel": 21,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Plunging attack from the air",
+    "hits": [
+     {
+      "power": 2.2,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 16,
+    "cooldownSec": 9,
+    "element": "None"
+   },
+   {
+    "id": "skl_heaven_piercing_spear",
+    "name": "Heaven-Piercing Spear",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "A spear of light that pierces the whole screen",
+    "hits": [
+     {
+      "power": 4,
+      "weight": "ultimate"
+     },
+     {
+      "power": 3,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "Light"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_polearm_mastery",
+    "name": "Polearm Mastery",
+    "unlockLevel": 1,
+    "effect": "+damage and reach per mastery level"
+   }
+  ]
+ },
+ {
+  "id": "cls_martial_artist",
+  "name": "Martial Artist",
+  "tier": "base",
+  "role": "Ultra-fast melee combos, juggles",
+  "growth": {
+   "str": 3,
+   "vit": 2,
+   "agi": 4,
+   "dex": 2,
+   "int": 0,
+   "wis": 1,
+   "luk": 0,
+   "cha": 0
+  },
+  "recommendedAllocation": {
+   "str": 0.25,
+   "vit": 0.17,
+   "agi": 0.33,
+   "dex": 0.17,
+   "wis": 0.08
+  },
+  "weapons": [
+   "fists",
+   "knuckles",
+   "gauntlets",
+   "greaves",
+   "bo_staff"
+  ],
+  "armor": [
+   "light",
+   "cloth"
+  ],
+  "mechanic": "Combo Chain: every consecutive hit raises the chain; at 30/60/100 hits you unlock finisher tiers",
+  "starterWeaponId": "itm_guild_issue_wraps",
+  "trainer": "Master Lio Shan",
+  "classQuest": "Carry the Water",
+  "kit": [
+   {
+    "id": "skl_jab_flurry",
+    "name": "Jab Flurry",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Rapid strikes",
+    "hits": [
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_rising_uppercut",
+    "name": "Rising Uppercut",
+    "unlockLevel": 1,
+    "kind": "launcher",
+    "slot": "skill",
+    "effect": "Launcher",
+    "hits": [
+     {
+      "power": 1.2,
+      "weight": "launch"
+     }
+    ],
+    "costSp": 8,
+    "cooldownSec": 4,
+    "element": "None"
+   },
+   {
+    "id": "skl_air_combo",
+    "name": "Air Combo",
+    "unlockLevel": 5,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Juggle in the air",
+    "hits": [
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 0.5,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_palm_blast",
+    "name": "Palm Blast",
+    "unlockLevel": 9,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Ki shockwave",
+    "hits": [
+     {
+      "power": 1.6,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 6,
+    "element": "None"
+   },
+   {
+    "id": "skl_flash_kick",
+    "name": "Flash Kick",
+    "unlockLevel": 13,
+    "kind": "dash",
+    "slot": "skill",
+    "effect": "Teleport kick",
+    "hits": [
+     {
+      "power": 1.5,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 12,
+    "cooldownSec": 6,
+    "element": "Wind"
+   },
+   {
+    "id": "skl_counter_stance",
+    "name": "Counter Stance",
+    "unlockLevel": 17,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Parry into an automatic combo",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1.6,
+      "weight": "heavy"
+     }
+    ],
+    "costSp": 14,
+    "cooldownSec": 9,
+    "element": "None"
+   },
+   {
+    "id": "skl_hundred_fists",
+    "name": "Hundred Fists",
+    "unlockLevel": 21,
+    "kind": "chain",
+    "slot": "skill",
+    "effect": "Barrage",
+    "hits": [
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 0.25,
+      "weight": "light"
+     },
+     {
+      "power": 1.4,
+      "weight": "medium"
+     }
+    ],
+    "costSp": 18,
+    "cooldownSec": 10,
+    "element": "None"
+   },
+   {
+    "id": "skl_heavenfall_fist",
+    "name": "Heavenfall Fist",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "A giant ki fist from the sky",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     },
+     {
+      "power": 4.5,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "None"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_iron_body",
+    "name": "Iron Body",
+    "unlockLevel": 1,
+    "effect": "Passive defense"
+   }
+  ]
+ },
+ {
+  "id": "cls_bard",
+  "name": "Bard",
+  "tier": "base",
+  "role": "Support / buffer / crowd control / charm",
+  "growth": {
+   "str": 0,
+   "vit": 1,
+   "agi": 2,
+   "dex": 2,
+   "int": 2,
+   "wis": 1,
+   "luk": 1,
+   "cha": 4
+  },
+  "recommendedAllocation": {
+   "vit": 0.08,
+   "agi": 0.15,
+   "dex": 0.15,
+   "int": 0.15,
+   "wis": 0.08,
+   "luk": 0.08,
+   "cha": 0.31
+  },
+  "weapons": [
+   "lute",
+   "flute",
+   "harp",
+   "war_drum",
+   "violin_blade"
+  ],
+  "armor": [
+   "light",
+   "cloth"
+  ],
+  "mechanic": "Rhythm: songs are played as rhythm inputs synced to the music; on-beat attacks deal bonus damage and songs stack party buffs",
+  "starterWeaponId": "itm_guild_issue_lute",
+  "trainer": "Rosalind \"Rosie\" Quill",
+  "classQuest": "Encore at the Sleeping Griffon",
+  "kit": [
+   {
+    "id": "skl_chord_strikes",
+    "name": "Chord Strikes",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "On-beat strikes with the instrument (added: basic string)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "None"
+   },
+   {
+    "id": "skl_ballad_of_courage",
+    "name": "Ballad of Courage",
+    "unlockLevel": 1,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Party ATK buff",
+    "hits": [],
+    "costMp": 10,
+    "cooldownSec": 15,
+    "element": "None"
+   },
+   {
+    "id": "skl_sour_note",
+    "name": "Sour Note",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Sound projectile",
+    "hits": [
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 4,
+    "cooldownSec": 2,
+    "element": "None"
+   },
+   {
+    "id": "skl_soothing_melody",
+    "name": "Soothing Melody",
+    "unlockLevel": 1,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Small party regeneration",
+    "hits": [],
+    "costMp": 10,
+    "cooldownSec": 12,
+    "element": "None"
+   },
+   {
+    "id": "skl_lullaby",
+    "name": "Lullaby",
+    "unlockLevel": 5,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Put enemies to sleep",
+    "hits": [],
+    "costMp": 12,
+    "cooldownSec": 15,
+    "element": "None"
+   },
+   {
+    "id": "skl_song_of_swiftness",
+    "name": "Song of Swiftness",
+    "unlockLevel": 9,
+    "kind": "buff",
+    "slot": "skill",
+    "effect": "Party haste",
+    "hits": [],
+    "costMp": 12,
+    "cooldownSec": 18,
+    "element": "Wind"
+   },
+   {
+    "id": "skl_dissonance",
+    "name": "Dissonance",
+    "unlockLevel": 13,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Confuse enemies",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     }
+    ],
+    "costMp": 14,
+    "cooldownSec": 12,
+    "element": "None"
+   },
+   {
+    "id": "skl_charm_serenade",
+    "name": "Charm Serenade",
+    "unlockLevel": 17,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Turn a monster temporarily friendly",
+    "hits": [],
+    "costMp": 18,
+    "cooldownSec": 25,
+    "element": "None"
+   },
+   {
+    "id": "skl_requiem",
+    "name": "Requiem",
+    "unlockLevel": 21,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Heavy damage to undead",
+    "hits": [
+     {
+      "power": 2,
+      "weight": "heavy"
+     }
+    ],
+    "costMp": 20,
+    "cooldownSec": 12,
+    "element": "Light",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_grand_finale",
+    "name": "Grand Finale",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "A concert-stage domain; the battle music becomes your song; massive party buffs",
+    "hits": [
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 0.8,
+      "weight": "medium"
+     },
+     {
+      "power": 2,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "None"
+   }
+  ],
+  "passives": []
+ },
+ {
+  "id": "cls_occultist",
+  "name": "Occultist",
+  "tier": "base",
+  "role": "Dark caster: curses, summons, life drain",
+  "growth": {
+   "str": 0,
+   "vit": 1,
+   "agi": 1,
+   "dex": 1,
+   "int": 4,
+   "wis": 2,
+   "luk": 0,
+   "cha": 1
+  },
+  "recommendedAllocation": {
+   "vit": 0.1,
+   "agi": 0.1,
+   "dex": 0.1,
+   "int": 0.4,
+   "wis": 0.2,
+   "cha": 0.1
+  },
+  "weapons": [
+   "grimoire",
+   "ritual_dagger",
+   "bone_staff",
+   "censer"
+  ],
+  "armor": [
+   "cloth"
+  ],
+  "mechanic": "Corruption Pool: dark spells fill your corruption meter; high corruption makes spells stronger but drains HP; purge it with a burst spell",
+  "starterWeaponId": "itm_guild_issue_grimoire",
+  "trainer": "Madame Esmerelda Grey",
+  "classQuest": "The Seventh Candle",
+  "kit": [
+   {
+    "id": "skl_hex_bolts",
+    "name": "Hex Bolts",
+    "unlockLevel": 1,
+    "kind": "chain",
+    "slot": "basic",
+    "effect": "Three dark bolts (added: basic string)",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 1,
+      "weight": "medium"
+     }
+    ],
+    "cooldownSec": 0,
+    "element": "Dark"
+   },
+   {
+    "id": "skl_shadow_bolt",
+    "name": "Shadow Bolt",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Dark projectile",
+    "hits": [
+     {
+      "power": 1.3,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 6,
+    "cooldownSec": 2,
+    "element": "Dark",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_hex",
+    "name": "Hex",
+    "unlockLevel": 1,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Damage-over-time curse",
+    "hits": [
+     {
+      "power": 0.3,
+      "weight": "light"
+     },
+     {
+      "power": 0.3,
+      "weight": "light"
+     },
+     {
+      "power": 0.3,
+      "weight": "light"
+     },
+     {
+      "power": 0.3,
+      "weight": "light"
+     },
+     {
+      "power": 0.3,
+      "weight": "light"
+     },
+     {
+      "power": 0.3,
+      "weight": "light"
+     }
+    ],
+    "costMp": 8,
+    "cooldownSec": 6,
+    "element": "Dark",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_dark_pact",
+    "name": "Dark Pact",
+    "unlockLevel": 1,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Trade HP for MP",
+    "hits": [],
+    "cooldownSec": 10,
+    "element": "Dark"
+   },
+   {
+    "id": "skl_summon_shade",
+    "name": "Summon Shade",
+    "unlockLevel": 5,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "A shadow minion fights for you",
+    "hits": [],
+    "costMp": 16,
+    "cooldownSec": 20,
+    "element": "Dark"
+   },
+   {
+    "id": "skl_life_drain",
+    "name": "Life Drain",
+    "unlockLevel": 9,
+    "kind": "ranged",
+    "slot": "skill",
+    "effect": "Channelled heal-steal",
+    "hits": [
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     },
+     {
+      "power": 0.4,
+      "weight": "light"
+     }
+    ],
+    "costMp": 14,
+    "cooldownSec": 8,
+    "element": "Dark",
+    "appliesElement": true
+   },
+   {
+    "id": "skl_curse_of_frailty",
+    "name": "Curse of Frailty",
+    "unlockLevel": 13,
+    "kind": "utility",
+    "slot": "skill",
+    "effect": "Lower an enemy’s defense",
+    "hits": [],
+    "costMp": 12,
+    "cooldownSec": 15,
+    "element": "Dark"
+   },
+   {
+    "id": "skl_bone_prison",
+    "name": "Bone Prison",
+    "unlockLevel": 17,
+    "kind": "aoe",
+    "slot": "skill",
+    "effect": "Root enemies in bone",
+    "hits": [
+     {
+      "power": 0.8,
+      "weight": "medium"
+     }
+    ],
+    "costMp": 18,
+    "cooldownSec": 14,
+    "element": "Dark"
+   },
+   {
+    "id": "skl_night_without_dawn",
+    "name": "Night Without Dawn",
+    "unlockLevel": 30,
+    "kind": "ultimate",
+    "slot": "ultimate",
+    "effect": "A field of darkness; all curses detonate",
+    "hits": [
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 0.6,
+      "weight": "light"
+     },
+     {
+      "power": 4,
+      "weight": "ultimate"
+     }
+    ],
+    "costAwakening": 100,
+    "cooldownSec": 0,
+    "element": "Dark"
+   }
+  ],
+  "passives": [
+   {
+    "id": "psv_soul_harvest",
+    "name": "Soul Harvest",
+    "unlockLevel": 21,
+    "effect": "Kills restore MP"
    }
   ]
  }

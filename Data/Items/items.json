@@ -157,5 +157,154 @@
   "rarity": "Uncommon",
   "value": 30,
   "flavor": "Still screaming, very quietly."
+ },
+ {
+  "id": "itm_guild_issue_mace",
+  "name": "Guild Issue Mace & Buckler",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 6,
+   "def": 4
+  },
+  "flavor": "Heavy enough to matter, light enough to lift all day."
+ },
+ {
+  "id": "itm_guild_issue_staff",
+  "name": "Guild Issue Staff",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "matk": 8
+  },
+  "flavor": "The crystal is glass. The intent is real."
+ },
+ {
+  "id": "itm_guild_issue_censer",
+  "name": "Guild Issue Censer",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "matk": 5,
+   "mdef": 3
+  },
+  "flavor": "Smells of cheap incense and good intentions."
+ },
+ {
+  "id": "itm_guild_issue_daggers",
+  "name": "Guild Issue Daggers",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 6,
+   "crit": 0.03
+  },
+  "flavor": "A matched pair. Mostly matched."
+ },
+ {
+  "id": "itm_guild_issue_bow",
+  "name": "Guild Issue Shortbow",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 7
+  },
+  "flavor": "The string is new. The bow remembers other hands."
+ },
+ {
+  "id": "itm_guild_issue_whip",
+  "name": "Guild Issue Whip",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 5,
+   "cha": 1
+  },
+  "flavor": "Mostly for making a noise. Monsters respect a good noise."
+ },
+ {
+  "id": "itm_guild_issue_hammer",
+  "name": "Guild Issue Smithing Hammer",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 7
+  },
+  "flavor": "Drives nails. Also goblins."
+ },
+ {
+  "id": "itm_guild_issue_spear",
+  "name": "Guild Issue Spear",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 8
+  },
+  "flavor": "Long enough to keep a goblin honest."
+ },
+ {
+  "id": "itm_guild_issue_wraps",
+  "name": "Guild Issue Hand Wraps",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "atk": 5,
+   "spd": 4
+  },
+  "flavor": "Cloth, tape and a strong suggestion."
+ },
+ {
+  "id": "itm_guild_issue_lute",
+  "name": "Guild Issue Lute",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "matk": 5,
+   "cha": 2
+  },
+  "flavor": "Three strings in tune. The fourth has opinions."
+ },
+ {
+  "id": "itm_guild_issue_grimoire",
+  "name": "Unmarked Grimoire",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "main_hand",
+  "value": 20,
+  "stats": {
+   "matk": 8
+  },
+  "flavor": "The guild sells it without asking what you will write in it."
  }
 ]
