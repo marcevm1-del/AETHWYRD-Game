@@ -10,6 +10,9 @@ namespace Ascend.Game
         public static float ShakeScale = 1f;
         public static bool? DamageNumbersOverride;
         public static bool DamageNumbers => DamageNumbersOverride ?? AscendData.Db.Tuning.Feedback.DamageNumbers;
+        /// <summary>Sound effects, impact particles and controller rumble (each can be turned off).</summary>
+        public static bool Sfx = true, Vfx = true, Rumble = true;
+        public static float SfxVolume = 0.8f;
     }
 
     /// <summary>Camera shake by hit weight. Real-time decay, so it reads during hit-stop. ThirdPersonCamera adds Offset.</summary>

@@ -56,21 +56,29 @@ namespace Ascend.Game
                     GameTime.FlashTime((float)_t.FlashTime.TimeScale, (float)_t.FlashTime.DurationSec);
                     _motor.RefundStamina((float)_t.Dodge.StaminaCost);
                     _combat?.Style.RegisterEvent(StyleEvent.PerfectDodge);
+                    CombatFx.Play(CombatFx.Sfx.PerfectDodge, transform.position);
                     break;
                 case DefenseResult.Parried:
                     _blockPressedAt = null; // one parry per press
                     if (attacker != null) attacker.Stagger(transform.position);
                     if (_combat != null) { _combat.OpenRiposte(); _combat.Style.RegisterEvent(StyleEvent.Parry); }
                     HitStop.Trigger((float)_t.Hitstop.Medium);
+                    CombatFx.Play(CombatFx.Sfx.Parry, transform.position + Vector3.up);
+                    CombatFx.Burst(transform.position + Vector3.up * 1.2f + transform.forward * 0.5f, 24, new Color(0.5f, 0.8f, 1f), 5f);
+                    CombatFx.Rumble(HitWeight.Heavy);
                     CameraShake.Kick(HitWeight.Medium);
                     break;
                 case DefenseResult.Blocked:
                     CameraShake.Kick(HitWeight.Light);
+                    CombatFx.Play(CombatFx.Sfx.Block, transform.position);
+                    CombatFx.Rumble(HitWeight.Light);
                     break;
                 case DefenseResult.Hit:
                 case DefenseResult.Grabbed:
                     CameraShake.Kick(HitWeight.Medium);
                     if (taken > 0) _combat?.Style.RegisterPlayerHit();
+                    CombatFx.Play(CombatFx.Sfx.PlayerHurt, transform.position);
+                    CombatFx.Rumble(HitWeight.Medium);
                     break;
             }
             LastResult = r;

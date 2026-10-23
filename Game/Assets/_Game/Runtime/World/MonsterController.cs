@@ -38,6 +38,7 @@ namespace Ascend.Game
         LineRenderer _ring;
         TextMesh _alert;
         string _tokenId;
+        AiState _lastState;
 
         public MonsterBrain Brain => _brain;
         public bool HoldsToken => _holdsToken;
@@ -92,6 +93,8 @@ namespace Ascend.Game
                 HpFraction = _body.MaxHp > 0 ? _body.Hp / (double)_body.MaxHp : 1, HasToken = hasToken,
             });
             if (_brain.State == AiState.Windup && !_holdsToken) _holdsToken = AggroDirector.Tokens.TryTake(_tokenId);
+            if (_brain.State == AiState.Windup && _lastState != AiState.Windup) CombatFx.Play(CombatFx.Sfx.Telegraph, transform.position, 0.6f);
+            _lastState = _brain.State;
             if (cmd.ReleaseToken) ReleaseToken();
 
             Move(cmd, toPlayer, toHome, dt);

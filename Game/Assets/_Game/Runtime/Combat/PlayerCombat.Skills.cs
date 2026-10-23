@@ -132,12 +132,14 @@ namespace Ascend.Game
             bool wasAlive = !m.IsDead;
             m.TakeHit(result.Amount, weight, transform.position, power * PoisePerPower * poiseMult);
             DamageNumber.Spawn(contact + Vector3.up * 0.3f, result.Amount, result.Crit);
+            if (!fromZone) CombatFx.Hit(contact, weight);
             ScoreHit(m, weight, reaction, wasAlive && m.IsDead, fromZone);
             HitLanded?.Invoke(m, result);
             if (reaction != Reaction.None)
             {
                 ReactionTriggered?.Invoke(m, reaction);
                 ReactionPopup.Spawn(m.transform.position + Vector3.up * 2.2f, reaction);
+                if (reaction == Reaction.Firestorm) CombatFx.Play(CombatFx.Sfx.Firestorm, m.transform.position);
             }
             return result;
         }
