@@ -19,6 +19,12 @@ const npcs = load('NPCs/npcs.json');
 const quests = load('Quests/quests.json');
 const inns = load('World/inns.json');
 const items = [...load('Items/items.json'), ...load('Items/materials.json')];
+// Optional world-building data (gazetteer, clans and fauna); region notes skip it when absent.
+const loadOpt = p => fs.existsSync(path.join(ROOT, 'Data', p)) ? load(p) : null;
+const gazetteer = (loadOpt('World/gazetteer.json') || {}).regions || {};
+const clanData = loadOpt('World/clans.json') || {};
+const byRegion = arr => (arr || []).reduce((m, x) => ((m[x.regionId] = m[x.regionId] || []).push(x), m), {});
+const clansIn = byRegion(clanData.clans), faunaIn = byRegion(clanData.fauna);
 const attacks = Object.fromEntries(load('Monsters/attacks.json').map(a => [a.id, a]));
 const loot = Object.fromEntries(load('Monsters/loot_tables.json').map(l => [l.id, l]));
 
@@ -128,6 +134,20 @@ for (const r of regions) {
   if (r.tyrantSpeciesId) t += row('Tyrant', link(r.tyrantSpeciesId, true));
   t += row('Siege faction · state', `${r.siegeFaction || '—'} · ${r.initialState || '—'}`);
   t += row('Settlements', (r.defenceSettlements || []).join(', '));
+  const gz = gazetteer[r.id];
+  if (gz) {
+    t += `\n> **${gz.epithet}.** ${gz.summary}\n>\n> *${gz.echo}*\n`;
+    for (const [k, h] of [['overview', 'Overview'], ['geography', 'Geography'], ['ecology', 'Ecology'], ['peoples', 'Peoples'],
+      ['powerAndTrade', 'Power & trade'], ['faithAndCustoms', 'Faith & customs'], ['tyrant', 'The Tyrant'], ['senses', 'Senses']])
+      if (gz[k]) t += `\n## ${h}\n\n${gz[k]}\n`;
+    const hist = Object.entries(gz.history || {});
+    if (hist.length) t += `\n## History\n\n${hist.map(([k, v]) => `- **${k[0].toUpperCase() + k.slice(1)}:** ${v}`).join('\n')}\n`;
+    for (const [k, h] of [['settlements', 'Settlements'], ['landmarks', 'Landmarks']])
+      if ((gz[k] || []).length) t += `\n## ${h}\n\n${gz[k].map(x => `- **${x.name}:** ${x.text}`).join('\n')}\n`;
+    if ((gz.hooks || []).length) t += `\n## Story hooks\n\n${gz.hooks.map(x => `- ${x}`).join('\n')}\n`;
+  }
+  if (clansIn[r.id]) t += `\n## Clans\n\n${clansIn[r.id].map(c => `- **${c.name}** (${c.board}${c.leader ? `, led by ${c.leader}` : ''}): ${c.culture || c.look || ''}`).join('\n')}\n`;
+  if (faunaIn[r.id]) t += `\n## Fauna\n\n${faunaIn[r.id].map(f => `- **${f.name}** (${f.group}): ${f.text}`).join('\n')}\n`;
   if (npcsIn[r.id]) t += `\n## People\n\n${npcsIn[r.id].map(id => `- ${link(id)}: ${byId[id].role}`).join('\n')}\n`;
   if (innsIn[r.id]) t += `\n## Inns\n\n${innsIn[r.id].map(id => `- ${link(id)} (${byId[id].settlement})`).join('\n')}\n`;
   if (questsIn[r.id]) t += `\n## Quests\n\n${questsIn[r.id].map(id => `- ${link(id)} (${byId[id].rank})`).join('\n')}\n`;
