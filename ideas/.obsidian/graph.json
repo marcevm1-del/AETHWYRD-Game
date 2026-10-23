@@ -1,0 +1,48 @@
+{
+  "colorGroups": [
+    {
+      "query": "path:\"Monsters\"",
+      "color": {
+        "a": 1,
+        "rgb": 9744236
+      }
+    },
+    {
+      "query": "path:\"Regions\"",
+      "color": {
+        "a": 1,
+        "rgb": 15253626
+      }
+    },
+    {
+      "query": "path:\"NPCs\"",
+      "color": {
+        "a": 1,
+        "rgb": 7330000
+      }
+    },
+    {
+      "query": "path:\"Quests\"",
+      "color": {
+        "a": 1,
+        "rgb": 6935520
+      }
+    },
+    {
+      "query": "path:\"Design Bible\"",
+      "color": {
+        "a": 1,
+        "rgb": 11184810
+      }
+    },
+    {
+      "query": "path:\"Ideas\"",
+      "color": {
+        "a": 1,
+        "rgb": 16766720
+      }
+    }
+  ],
+  "showAttachments": false,
+  "hideUnresolved": true
+}

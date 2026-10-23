@@ -1,0 +1,51 @@
+---
+type: monster
+id: mon_crag_moss_tortoise
+family: "Familiars & Gentle Creatures"
+rank: "F+"
+tier: variant
+tags: [monster, familiars-gentle-creatures]
+---
+# Crag Moss Tortoise
+
+> The Crag Moss Tortoise is a small creature with a low, springy quadruped build, about 0.8 m long. Its coat is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe herbs and flowers growing on its shell. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
+
+| Field | Value |
+|---|---|
+| Family · type | [[Families/Familiars & Gentle Creatures|Familiars & Gentle Creatures]] · Familiar |
+| Variant of | [[Monsters/Familiars & Gentle Creatures/Moss Tortoise\|Moss Tortoise]] (regional) |
+| Rank · level | F+ · 13 (8–19) |
+| Menace | 1 · Charming |
+| Element · weakness | Earth · Wind |
+| Size | 0.8 m |
+| Behaviour | Passive (passive_wander) |
+| HP · ATK · DEF · MATK · MDEF · SPD | 382 · 62 · 50 · 43 · 50 · 135 |
+| XP · gold | 190 · 57 |
+| Ring | 3 |
+| Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Whisperwood\|Whisperwood]] |
+| Genre | Cozy Fantasy |
+| Trope | Cozy companion creatures |
+
+**Field note:** Weak to Wind. Leaves you alone unless attacked.
+
+## Attacks
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph |
+|---|---|---|---|---|---|
+| Bite | melee | 1 | 0 s | None | blue |
+| Charge | dash | 1.3 | 5 s | None | blue |
+| Leap | dash | 1.2 | 6 s | None | blue |
+| Playful Nudge | melee | 0.5 | 6 s | None | none |
+| Stone Spike | magic | 1.5 | 10 s | Earth | red |
+
+## Loot (`loot_familiar_f`)
+
+| Item | Chance | Amount |
+|---|---|---|
+| [[Items/Soft Fur\|Soft Fur]] | 60% | 1–3 |
+| [[Items/Shed Scale\|Shed Scale]] | 30% | 1–1 |
+| [[Items/F-Rank Monster Core\|F-Rank Monster Core]] | 100% | 1–1 |
+
+## Design recipe
+
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
