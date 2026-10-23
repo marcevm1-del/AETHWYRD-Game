@@ -19,6 +19,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/00_Questions/questionnaire_01|00_Questions/questionnaire_01]]
 - [[Design Bible/00_Questions/questionnaire_02_story|00_Questions/questionnaire_02_story]]
 - [[Design Bible/01_Core_Concept/borrowed_features|01_Core_Concept/borrowed_features]]
+- [[Design Bible/01_Core_Concept/market_research_2026|01_Core_Concept/market_research_2026]]
 - [[Design Bible/01_Core_Concept/the_big_upgrade|01_Core_Concept/the_big_upgrade]]
 - [[Design Bible/01_Core_Concept/vision|01_Core_Concept/vision]]
 - [[Design Bible/02_Lore/cosmology|02_Lore/cosmology]]
@@ -51,6 +52,20 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
 - [[Design Bible/13_Production/production|13_Production/production]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
+
+## Classes (12)
+- [[Classes/Swordsman|Swordsman]]: Balanced melee DPS
+- [[Classes/Guardian|Guardian]]: Tank / protector
+- [[Classes/Mage|Mage]]: Ranged elemental DPS / control
+- [[Classes/Cleric|Cleric]]: Healer / support
+- [[Classes/Rogue|Rogue]]: Stealth, burst crits, utility
+- [[Classes/Ranger|Ranger]]: Ranged physical, tracking, traps
+- [[Classes/Tamer|Tamer]]: Pet/summon control
+- [[Classes/Artisan|Artisan]]: Crafter / gadgeteer / utility
+- [[Classes/Lancer|Lancer]]: Mid-range melee, aerial, mobility
+- [[Classes/Martial Artist|Martial Artist]]: Ultra-fast melee combos, juggles
+- [[Classes/Bard|Bard]]: Support / buffer / crowd control / charm
+- [[Classes/Occultist|Occultist]]: Dark caster: curses, summons, life drain
 
 ## Regions (49)
 ### Post-game
@@ -278,7 +293,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (100)
+## Items (111)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
@@ -392,3 +407,14 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Items/Hollis's Practice Blade|Hollis's Practice Blade]]
 - [[Items/Grukk's Cleaver|Grukk's Cleaver]]
 - [[Items/Moonfang Dagger|Moonfang Dagger]]
+- [[Items/Guild Issue Mace & Buckler|Guild Issue Mace & Buckler]]
+- [[Items/Guild Issue Staff|Guild Issue Staff]]
+- [[Items/Guild Issue Censer|Guild Issue Censer]]
+- [[Items/Guild Issue Daggers|Guild Issue Daggers]]
+- [[Items/Guild Issue Shortbow|Guild Issue Shortbow]]
+- [[Items/Guild Issue Whip|Guild Issue Whip]]
+- [[Items/Guild Issue Smithing Hammer|Guild Issue Smithing Hammer]]
+- [[Items/Guild Issue Spear|Guild Issue Spear]]
+- [[Items/Guild Issue Hand Wraps|Guild Issue Hand Wraps]]
+- [[Items/Guild Issue Lute|Guild Issue Lute]]
+- [[Items/Unmarked Grimoire|Unmarked Grimoire]]
