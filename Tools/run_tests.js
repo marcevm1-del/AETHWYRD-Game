@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const candidates = ['dotnet', 'E:/6000.6.7f1/Editor/Data/DotNetSdk/dotnet.exe', process.env.ASCEND_DOTNET].filter(Boolean);
+const candidates = ['dotnet', 'E:/Unity/Editors/6000.6.7f1/Editor/Data/DotNetSdk/dotnet.exe', 'E:/6000.6.7f1/Editor/Data/DotNetSdk/dotnet.exe', process.env.ASCEND_DOTNET].filter(Boolean);
 
 function hasSdk(exe) {
   try { return execFileSync(exe, ['--list-sdks'], { encoding: 'utf8' }).trim().length > 0; } catch { return false; }

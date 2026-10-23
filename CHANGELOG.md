@@ -2,6 +2,27 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.13 — Ring 0 combat, world building, classes, research (2026-10-23)
+**Game (Unity)**
+- Blender models for the Ring 0 monsters (`Tools/blender/ring0_monsters.py`, FBX in `Game/Assets/_Game/Art/Models/Monsters`), placed by the scene builder with fitted colliders and data labels.
+- Basic attack string (`Ascend.Core.AttackChain`: startup/active/recovery by weight, input buffer, chain reset, dodge-cancel from active frame 1; timings in `combat_tuning.json` → `attackTiming`), `PlayerCombat` (soft-lock, lunge, arc hit check, shared damage rules), `HitStop`, monster HP/poise/flash/knockback/respawn, attack input.
+- 12 PlayMode tests (movement speeds, stamina, jump height, dodge distance and i-frames, the string defeats a Lv 1 goblin, soft-lock, hit-stop, dodge-cancel). Fixed a double jump before the grounded flag updated.
+
+**Data**
+- All **12 base classes** (`Tools/classes/build_classes.js`, now part of `npm run build`; `npm run classes`): 110 kit skills with first-pass hit data, costs and cooldowns, 18 passives, trainers, class quests, 11 F-rank starter weapons. Schema: skill `effect`, `utility` kind, hitless buffs/support ultimates, class `passives`.
+- World gazetteer (all 49 regions), clans/guardians/fauna (87 clans) and the interactive atlas; "Ukhu Tal" → "Ukhu-Tal" to match the species data.
+
+**Design**
+- `02_Lore/world_systems.md` (draft): laws of magic, the trade web, 940–1024 SC history, the powers, class mobility.
+- `01_Core_Concept/market_research_2026.md` (draft): 12 games and sources, 16 proposals.
+- **Named monsters reworked** (decision D1): hand-written roster, no enemy hierarchy, growth from region state not from defeating the player; Canon §4d, `systems.md` → Named Monsters, Big Upgrade §7 → *Tyrants Adapt*. Reason: Warner Bros.' Nemesis patent (to ~2036); IP lawyer review before release.
+- `13_Production/Project_Ascend_Next_Steps.pdf`: the plan through Ring 0 (January 2027).
+
+**Repo**
+- Private GitHub repo `marcevm1-del/Aetheria-Game`; LICENSE is now *All rights reserved*.
+- Obsidian idea vault (`ideas/`, `npm run vault`): region notes include gazetteer, clans and fauna; 12 class notes.
+- Tests: 57 → **68** rules tests (attack chain, class kits) + 12 Unity PlayMode tests.
+
 ## v0.12 — Monster motion & rig validation (2026-10-22)
 **Part A: Monster Motion**
 - New `08_Bestiary/monster_motion_bible.md` (+ `rig_sheet.png`): Blender ↔ Unity conventions, the scaling laws (mass, Froude gait speeds, play rate, turn rate, attack windups with a fairness floor), the 25 shared rigs, the universal animation set and attack choreography, Menace / element / behavior motion languages, procedural layers, physics & death styles, art budgets, Ring 0–1 motion sheets, step-by-step workflows.
@@ -10,7 +31,7 @@ Version history of the design bible and data. Git history has the exact diffs.
 - New `Code/Unity` (local package `com.projectascend.monsters`, not yet added to `Game/`): `MonsterMotion`, `SpringChain`, `SquashStretch`, `SteppedAnimator`, `FreezeWhenObserved`, `Hurtbox`/`BreakablePart`, and *Assets ▸ Ascend ▸ Build Monster Prefabs From Rig*. Compiles against Unity 6000.6.7f1's assemblies without warnings; not yet imported or run in Unity.
 - `Code/Ascend.Core/MonsterMotionLaws.cs` with tests that it gives the same numbers as `motion.json` for every species. Tests: 54 → **57**.
 **Part B: rig & hitbox validation skill**
-- New `.claude/skills/unity-3d-rigging-hitboxes/` (Claude Code skill "RigKit"): Blender scripts that inspect rigs and skin weights, infer a skeleton for unrigged meshes, sweep joint ranges, test walk cycles (foot sliding, floating, knee pops), fit hurtboxes and ragdoll colliders and export to Unity; a Unity package with a read-only validator, clip sampler, collider importer, batch/CI runner and a hit/hurtbox runtime. Own test suite and report in its `tests/` folder.
+- New Claude Code skill "RigKit" (`unity-3d-rigging-hitboxes`, installed as a Claude skill, not stored in this repo): Blender scripts that inspect rigs and skin weights, infer a skeleton for unrigged meshes, sweep joint ranges, test walk cycles (foot sliding, floating, knee pops), fit hurtboxes and ragdoll colliders and export to Unity; a Unity package with a read-only validator, clip sampler, collider importer, batch/CI runner and a hit/hurtbox runtime. Own test suite and report in its `tests/` folder.
 
 ## v0.11 — Sieges, review fixes, weekly board & inns in code (2026-10-22)
 **Part A: Regional Siege & Liberation, built**

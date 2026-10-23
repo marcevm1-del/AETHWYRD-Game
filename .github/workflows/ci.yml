@@ -1,0 +1,21 @@
+# Validates the data and runs the C# rules tests on every push and pull request.
+# Unity PlayMode tests stay local (they need a Unity licence): see 13_Production/Project_Ascend_Next_Steps.pdf §10.
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  data-and-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build and validate data, run rules tests
+        run: npm run build
+      - name: Generated data must be committed
+        run: git diff --exit-code -- Data
