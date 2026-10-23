@@ -67,7 +67,8 @@ static class Repo
         Load<List<StoryFlagData>>("Data/Quests/story_flags.json"),
         Load<ProgressionRules>("Data/Classes/progression.json"),
         Load<List<WeeklyQuestData>>("Data/Quests/weekly_board.json"),
-        Load<List<InnData>>("Data/World/inns.json"));
+        Load<List<InnData>>("Data/World/inns.json"),
+        Load<MotionFile>("Data/Monsters/motion.json"));
 }
 
 [Tests]

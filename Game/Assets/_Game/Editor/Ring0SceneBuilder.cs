@@ -197,6 +197,7 @@ namespace Ascend.EditorTools
             col.radius = Mathf.Min(bounds.extents.x, bounds.extents.z);
             col.center = go.transform.InverseTransformPoint(bounds.center);
             AddLabel(go, speciesId, bounds.max.y);
+            go.AddComponent<MonsterController>();
             return true;
         }
 
@@ -204,6 +205,7 @@ namespace Ascend.EditorTools
         {
             var go = Prim(shape, speciesId, pos, scale, mat, parent);
             AddLabel(go, speciesId, pos.y + scale.y);
+            go.AddComponent<MonsterController>();
             return go;
         }
 

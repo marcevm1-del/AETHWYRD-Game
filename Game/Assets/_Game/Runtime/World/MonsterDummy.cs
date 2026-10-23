@@ -1,3 +1,4 @@
+using System;
 using Ascend.Core;
 using UnityEngine;
 
@@ -29,6 +30,8 @@ namespace Ascend.Game
         public int Defense => _species?.Stats.Def ?? 0;
         public Element Weakness => _species?.ParsedWeakness ?? Element.None;
         public int Staggers { get; private set; }
+        /// <summary>Raised when poise breaks or a parry staggers this monster (its AI cancels the attack).</summary>
+        public event Action Staggered;
 
         void Awake()
         {
@@ -66,7 +69,7 @@ namespace Ascend.Game
             if (IsDead) return;
             Hp = Mathf.Max(0, Hp - Mathf.Max(0, amount));
             bool stagger = _poise.Hit(poiseDamage);
-            if (stagger) Staggers++;
+            if (stagger) { Staggers++; Staggered?.Invoke(); }
             Vector3 away = transform.position - fromPosition; away.y = 0;
             away = away.sqrMagnitude > 1e-4f ? away.normalized : -transform.forward;
             _knockVelocity = away * (stagger ? 4f : weight >= HitWeight.Medium ? 2.5f : 1f);
@@ -81,6 +84,7 @@ namespace Ascend.Game
         {
             if (IsDead) return;
             Staggers++;
+            Staggered?.Invoke();
             Vector3 away = transform.position - fromPosition; away.y = 0;
             _knockVelocity = (away.sqrMagnitude > 1e-4f ? away.normalized : -transform.forward) * 4f;
         }
