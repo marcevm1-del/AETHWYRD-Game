@@ -110,7 +110,7 @@ namespace Ascend.Game
 
         // ---------------------------------------------------------------- one hit on one monster
         /// <summary>Element aura → reaction → damage → feedback, for strikes, waves, bombs and zones alike.</summary>
-        public DamageResult ApplyHit(MonsterDummy m, Vector3 contact, double power, HitWeight weight, Element element, bool applyElement, double poiseMult)
+        public DamageResult ApplyHit(MonsterDummy m, Vector3 contact, double power, HitWeight weight, Element element, bool applyElement, double poiseMult, bool fromZone = false)
         {
             Reaction reaction = Reaction.None;
             double reactionMult = 1.0;
@@ -129,10 +129,10 @@ namespace Ascend.Game
                 Kind = DamageKind.Physical, Attack = Stats.Atk, Defense = m.Defense, Power = power,
                 AttackElement = element, DefenderWeakness = m.Weakness, CritChance = Stats.CritChance, ReactionMult = reactionMult,
             }, _rng);
+            bool wasAlive = !m.IsDead;
             m.TakeHit(result.Amount, weight, transform.position, power * PoisePerPower * poiseMult);
             DamageNumber.Spawn(contact + Vector3.up * 0.3f, result.Amount, result.Crit);
-            bool ultimateHit = CurrentSpecial == Special.Skill && LastCast != null && LastCast.Slot == "ultimate";
-            if (!ultimateHit) Caster.GainAwakeningFromStyle(StylePointsFor(weight) + (reaction != Reaction.None ? ReactionStyleBonus() : 0)); // an Ultimate never refills itself
+            ScoreHit(m, weight, reaction, wasAlive && m.IsDead, fromZone);
             HitLanded?.Invoke(m, result);
             if (reaction != Reaction.None)
             {
@@ -140,14 +140,6 @@ namespace Ascend.Game
                 ReactionPopup.Spawn(m.transform.position + Vector3.up * 2.2f, reaction);
             }
             return result;
-        }
-
-        double ReactionStyleBonus() => _tuning.Style.Bonus.TryGetValue("reaction", out var b) ? b : 40;
-
-        double StylePointsFor(HitWeight w)
-        {
-            string key = char.ToLowerInvariant(w.ToString()[0]) + w.ToString().Substring(1);
-            return _tuning.Style.HitPoints.TryGetValue(key, out var p) ? p : 10;
         }
     }
 }

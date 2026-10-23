@@ -97,3 +97,41 @@ static class SkillTests
         Assert.True(C.Firestorm.BurstMult > 1 && C.Firestorm.DurationSec > 0 && C.Firestorm.TickSec > 0, "Firestorm is tuned");
     }
 }
+
+// Level-ups and Style Rank rewards (combat.md §8, progression.json).
+[Tests]
+static class ProgressTests
+{
+    public static void XpLevelsUpAndCarriesOver()
+    {
+        var p = new PlayerProgress(Repo.Db.Progression);
+        long need = p.ToNext;
+        Assert.Equal(0, p.AddXp(need - 1), "one short: no level");
+        Assert.Equal(1, p.AddXp(1 + 10), "level 2");
+        Assert.Equal(2, p.Level, "now Lv 2");
+        Assert.Equal(10, (int)p.XpIntoLevel, "the extra XP carries over");
+        Assert.True(p.AddXp(1_000_000) > 1, "a big XP grant gives several levels");
+        Assert.Equal(RankLetter.F, new PlayerProgress(Repo.Db.Progression, 15).RankBand, "Lv 15 is still F");
+        Assert.Equal(RankLetter.E, new PlayerProgress(Repo.Db.Progression, 16).RankBand, "Lv 16 is E");
+    }
+
+    public static void StyleRankRaisesKillXp()
+    {
+        var p = new PlayerProgress(Repo.Db.Progression);
+        var s = Repo.Db.Tuning.Style;
+        long c = p.KillXp(3, false, StyleRank.C, s), sss = p.KillXp(3, false, StyleRank.SSS, s);
+        Assert.True(c > 0, "kills give XP");
+        Assert.True(sss > c, "SSS gives more XP than C");
+        Assert.Near(0.30, StyleRewards.XpBonus(StyleRank.SSS, s), 1e-9, "SSS bonus from the spec");
+        Assert.True(p.KillXp(3, true, StyleRank.C, s) > c, "unique monsters give more XP");
+    }
+
+    public static void TenGoblinsOrSoForLevelTwo()
+    {
+        var p = new PlayerProgress(Repo.Db.Progression);
+        var goblin = Repo.Db.Species["mon_goblin"];
+        long per = p.KillXp(goblin.LevelRange[0], false, StyleRank.C, Repo.Db.Tuning.Style);
+        int kills = (int)System.Math.Ceiling(p.ToNext / (double)per);
+        Assert.True(kills >= 3 && kills <= 15, $"Lv 1 → 2 takes {kills} goblin kills (want 3-15)");
+    }
+}

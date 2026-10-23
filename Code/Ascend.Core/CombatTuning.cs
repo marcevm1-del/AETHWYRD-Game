@@ -78,6 +78,10 @@ namespace Ascend.Core
         public double VarietyMultiplier { get; set; }
         public int VarietyWindowHits { get; set; }
         public Dictionary<string, int> Bonus { get; set; } = new Dictionary<string, int>();
+        /// <summary>Extra XP by Style Rank (combat.md §8), e.g. "S": 0.15.</summary>
+        public Dictionary<string, double> XpBonus { get; set; } = new Dictionary<string, double>();
+        /// <summary>Extra drop rate by Style Rank.</summary>
+        public Dictionary<string, double> DropBonus { get; set; } = new Dictionary<string, double>();
         public double DecayPerSec { get; set; }
         public double DecayDelaySec { get; set; }
         public int RepeatPenaltyAfter { get; set; }

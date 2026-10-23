@@ -31,11 +31,9 @@ namespace Ascend.Game
             _motor = GetComponent<PlayerMotor>();
             _combat = GetComponent<PlayerCombat>();
             _t = AscendData.Db.Tuning;
-        }
-
-        void Start()
-        {
-            if (_combat != null) MaxHp = Hp = Mathf.Max(1, _combat.Stats.Hp);
+            if (_combat == null) return; // PlayerCombat is added first, so its stats exist by now
+            MaxHp = Hp = Mathf.Max(1, _combat.Stats.Hp);
+            _combat.LeveledUp += (_, __) => { MaxHp = Mathf.Max(1, _combat.Stats.Hp); Hp = MaxHp; }; // a level-up heals fully
         }
 
         /// <summary>Block button state; a fresh press starts the parry window.</summary>
@@ -57,11 +55,12 @@ namespace Ascend.Game
                 case DefenseResult.PerfectDodge:
                     GameTime.FlashTime((float)_t.FlashTime.TimeScale, (float)_t.FlashTime.DurationSec);
                     _motor.RefundStamina((float)_t.Dodge.StaminaCost);
+                    _combat?.Style.RegisterEvent(StyleEvent.PerfectDodge);
                     break;
                 case DefenseResult.Parried:
                     _blockPressedAt = null; // one parry per press
                     if (attacker != null) attacker.Stagger(transform.position);
-                    if (_combat != null) _combat.OpenRiposte();
+                    if (_combat != null) { _combat.OpenRiposte(); _combat.Style.RegisterEvent(StyleEvent.Parry); }
                     HitStop.Trigger((float)_t.Hitstop.Medium);
                     CameraShake.Kick(HitWeight.Medium);
                     break;
@@ -71,6 +70,7 @@ namespace Ascend.Game
                 case DefenseResult.Hit:
                 case DefenseResult.Grabbed:
                     CameraShake.Kick(HitWeight.Medium);
+                    if (taken > 0) _combat?.Style.RegisterPlayerHit();
                     break;
             }
             LastResult = r;

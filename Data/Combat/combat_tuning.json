@@ -137,7 +137,23 @@
   "decayDelaySec": 2,
   "repeatPenaltyAfter": 4,
   "dropRanksOnHit": 1,
-  "pointsCap": 1200
+  "pointsCap": 1200,
+  "xpBonus": {
+   "C": 0,
+   "B": 0.05,
+   "A": 0.1,
+   "S": 0.15,
+   "SS": 0.2,
+   "SSS": 0.3
+  },
+  "dropBonus": {
+   "C": 0,
+   "B": 0,
+   "A": 0.05,
+   "S": 0.05,
+   "SS": 0.1,
+   "SSS": 0.1
+  }
  },
  "damage": {
   "defenseConstant": 100,

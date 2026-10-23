@@ -31,6 +31,9 @@ namespace Ascend.Game
         public int Defense => _species?.Stats.Def ?? 0;
         public Element Weakness => _species?.ParsedWeakness ?? Element.None;
         public int Staggers { get; private set; }
+        /// <summary>Monster level for XP (the low end of its species level range).</summary>
+        public int Level => _species != null && _species.LevelRange.Count > 0 ? _species.LevelRange[0] : Math.Max(1, _species?.Level ?? 1);
+        public bool IsUnique => _species != null && (_species.IsUnique || _species.IsTyrant);
         /// <summary>Raised when poise breaks or a parry staggers this monster (its AI cancels the attack).</summary>
         public event Action Staggered;
 

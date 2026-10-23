@@ -134,7 +134,7 @@ namespace Ascend.Game
                 {
                     var m = Overlap[i].GetComponentInParent<MonsterDummy>();
                     if (m == null || m.IsDead || !seen.Add(m) || _owner == null) continue;
-                    _owner.ApplyHit(m, m.transform.position, _t.TickPower, HitWeight.Light, Element.Fire, false, 0.2);
+                    _owner.ApplyHit(m, m.transform.position, _t.TickPower, HitWeight.Light, Element.Fire, false, 0.2, fromZone: true);
                 }
             }
             if (_age >= _t.DurationSec) Destroy(gameObject);

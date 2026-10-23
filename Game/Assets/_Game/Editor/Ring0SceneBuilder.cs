@@ -160,6 +160,7 @@ namespace Ascend.EditorTools
             var cam = Camera.main;
             cam.name = "Main Camera";
             var tpc = cam.gameObject.AddComponent<ThirdPersonCamera>();
+            cam.gameObject.AddComponent<RingZeroHud>();
             tpc.Target = p.transform;
             var so = new SerializedObject(driver);
             so.FindProperty("cameraTransform").objectReferenceValue = cam.transform;

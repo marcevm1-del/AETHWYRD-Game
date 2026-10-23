@@ -163,6 +163,7 @@ namespace Ascend.Game
         {
             _charge.Tick(dt);
             _budget.Tick(dt, IsAttacking, !_motor.IsGrounded);
+            Style.Tick(dt);
             Caster.Tick(dt);
             _motor.Hang = IsAttacking && !_motor.IsGrounded && CurrentSpecial != Special.Slam;
             if (_motor.IsGrounded) _airString = false;
@@ -266,7 +267,7 @@ namespace Ascend.Game
                 if (!m.IsDead)
                 {
                     if (kind == Special.Launcher) m.Launch(LaunchSpeed);
-                    else if (kind == Special.Slam) { m.Slam(SlamSpeed); if (wasLaunched) LaunchToSlam?.Invoke(m); }
+                    else if (kind == Special.Slam) { m.Slam(SlamSpeed); if (wasLaunched) { LaunchToSlam?.Invoke(m); Style.RegisterEvent(StyleEvent.LaunchToSlam); } }
                     else if ((kind == Special.None || kind == Special.Skill) && !_motor.IsGrounded) m.Pop(PopSpeed);
                 }
             }
