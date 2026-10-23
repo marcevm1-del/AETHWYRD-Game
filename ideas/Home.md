@@ -25,6 +25,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/02_Lore/history|02_Lore/history]]
 - [[Design Bible/02_Lore/life_in_aetheria|02_Lore/life_in_aetheria]]
 - [[Design Bible/02_Lore/story|02_Lore/story]]
+- [[Design Bible/02_Lore/world_systems|02_Lore/world_systems]]
 - [[Design Bible/03_Rank_System/ranks|03_Rank_System/ranks]]
 - [[Design Bible/04_Classes/base_and_advanced|04_Classes/base_and_advanced]]
 - [[Design Bible/04_Classes/expert_master_legendary_hidden|04_Classes/expert_master_legendary_hidden]]
