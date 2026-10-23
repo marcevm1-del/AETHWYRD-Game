@@ -2,6 +2,16 @@
 
 Version history of the design bible and data. Git history has the exact diffs.
 
+## v0.12 — Monster motion & rig validation (2026-10-22)
+**Part A: Monster Motion**
+- New `08_Bestiary/monster_motion_bible.md` (+ `rig_sheet.png`): Blender ↔ Unity conventions, the scaling laws (mass, Froude gait speeds, play rate, turn rate, attack windups with a fairness floor), the 25 shared rigs, the universal animation set and attack choreography, Menace / element / behavior motion languages, procedural layers, physics & death styles, art budgets, Ring 0–1 motion sheets, step-by-step workflows.
+- New data: `Data/Monsters/rigs.json` (25 rigs, `npm run rigs`), `motion_overrides.json` (hand-authored motion for 20 Ring 0–1 monsters; hand-picked rigs for imps and lantern moths), generated `motion.json` for all 680 species (`npm run motion`, part of `npm run build`). Every species gets a rig by its rigId, an override or a keyword; none falls back to the human rig any more. Variants use their base species' hand-picked rig. The 20 species matched by keyword are listed by `npm run motion -- --report` for review.
+- New `Tools/blender/build_rig.py`: builds any rig with IK controls and graybox proxies and exports a Unity FBX with the axis fix of the *Blender To Unity FBX Exporter* (no "Apply Transform", which Blender's exporter calls broken with armatures). All 25 rigs exported with Blender 5.0.1 and read back: every bone present, `root` at the origin, rotation 0 and scale 1 on the root objects, facing +Z.
+- New `Code/Unity` (local package `com.projectascend.monsters`, not yet added to `Game/`): `MonsterMotion`, `SpringChain`, `SquashStretch`, `SteppedAnimator`, `FreezeWhenObserved`, `Hurtbox`/`BreakablePart`, and *Assets ▸ Ascend ▸ Build Monster Prefabs From Rig*. Compiles against Unity 6000.6.7f1's assemblies without warnings; not yet imported or run in Unity.
+- `Code/Ascend.Core/MonsterMotionLaws.cs` with tests that it gives the same numbers as `motion.json` for every species. Tests: 54 → **57**.
+**Part B: rig & hitbox validation skill**
+- New `.claude/skills/unity-3d-rigging-hitboxes/` (Claude Code skill "RigKit"): Blender scripts that inspect rigs and skin weights, infer a skeleton for unrigged meshes, sweep joint ranges, test walk cycles (foot sliding, floating, knee pops), fit hurtboxes and ragdoll colliders and export to Unity; a Unity package with a read-only validator, clip sampler, collider importer, batch/CI runner and a hit/hurtbox runtime. Own test suite and report in its `tests/` folder.
+
 ## v0.11 — Sieges, review fixes, weekly board & inns in code (2026-10-22)
 **Part A: Regional Siege & Liberation, built**
 - 40 regional **Tyrants** as unique species in their regions (`Tools/monster_gen/tyrants.js`), mostly bosses already in the bestiary; 9 regions marked `noSiege`. Goblin Chief Grukk is Whisperwood's Tyrant (raids Brindlewick and Millbrook) and still the F→E trial.

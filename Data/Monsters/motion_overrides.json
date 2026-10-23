@@ -1,0 +1,250 @@
+{
+ "version": 1,
+ "notes": "Hand-authored motion design for Ring 0–1 monsters. Merged on top of the generated profile by Tools/monster_gen/motion.js. Frame numbers are at 30 fps for the rig's reference size. attacks{} keys must be attack IDs the species has.",
+ "species": {
+  "mon_blue_slime": {
+   "rigKey": "blob", "expectedSize": 0.4, "footstep": "squelch",
+   "summary": "A teardrop of glossy blue gel that bounces everywhere it goes. The first monster most players fight: cute, readable, and slightly sneaky (Engulf).",
+   "idle": ["Breathing wobble: core scales 1.00→1.04→1.00 over 90 f (blend shape 'puff' 0→0.15).", "Every 4–7 s a 'look around' hop in place: 0.15 m high, lands with squash 0.35 for 4 f then overshoots to stretch 0.1.", "Eyes blink 18×/min (Charming); highlight on the crown rotates slowly toward the sun."],
+   "movement": ["Hop gait: anticipation squash 0.4 (6 f) → launch stretch 0.5 (2 f) → airborne roundness (8 f) → land squash 0.5 (4 f) → settle wobble via lobe springs (8 f). One hop covers 0.6 m at refSize.", "Turns happen mid-air only (no ground pivot), so it 'faces' you between hops.", "On slopes it slides 0.2 m after landing (gel friction 0.3)."],
+   "combat": ["Body Slam (blue): squash low 10 f (telegraph flash on frame 4) → leaps on a 1 m arc → lands on target with a splash ring. Hitbox = core sphere during the last 4 f of the arc and the landing frame.", "Engulf (gold grab): only if the player stands still within 1.2 m for 1.5 s. The slime spreads into a puddle (blend 'squash' 1.0 + scale XY 1.6) for 18 f, then rises around the player. Mash/dodge escapes; damage over time inside.", "Split (higher tiers only): on death above E rank it pinches in two (blend 'split_pinch'), spawning two mini slimes at 0.5× size with 20% HP.", "Tide Lash: a lobe stretches into a 1.2 m whip (lobe_front spring stiffness drops to 0.05 for the swing) and snaps back."],
+   "hitReact": ["Light hit: squash toward the hit direction 0.3 + jiggle impulse on all lobes; slides back 0.3 m.", "Heavy hit: flattens like a pancake for 6 f, then pops back with a 'boing' (stretch 0.4 overshoot).", "Launched: becomes a perfect sphere, spins slowly; on landing it bounces once (restitution 0.4)."],
+   "death": "Pops: squash 1.0 for 3 f, then the mesh is replaced by a splash VFX + gel puddle decal that evaporates in 4 s. The Gel Core drops from the inner_item bone position.",
+   "blender": ["Model one smooth dome (≈1,200 tris) with the inner Gel Core as a separate object parented to inner_item.", "Shape keys: squash (Z ×0.5, XY ×1.35, keep volume), stretch (Z ×1.5, XY ×0.82), puff, blink_L/R, smile, frown, split_pinch.", "Weight lobes with soft falloff (radius 0.35) so the springs read as jelly, not bones."],
+   "unity": ["Material: toon shader with refraction fake (matcap) + rim light; inner item visible through 30% transparency.", "Add SquashStretch (velocity → squash/stretch blend shapes) and SpringChain on the four lobes + crown.", "Collider: sphere; Rigidbody optional (NavMeshAgent drives it, hops are root motion)."],
+   "attacks": {
+    "atk_body_slam": { "hitboxBone": "core", "notes": "Leap arc 1 m; hitbox active on the descent only" },
+    "atk_engulf": { "hitboxBone": "core", "windupSec": 0.6, "notes": "Only after the player is still for 1.5 s; gold telegraph is the puddle spreading" },
+    "atk_split": { "hitboxBone": "core", "notes": "Death/low-HP behaviour, not a normal attack" },
+    "atk_tide_lash": { "hitboxBone": "lobe_front", "notes": "Lobe whip, 1.2 m reach" }
+   }
+  },
+  "mon_green_slime": {
+   "rigKey": "blob", "expectedSize": 0.5, "footstep": "squelch",
+   "summary": "A heavier, cloudier slime with leaves and twigs caught inside. Slower than the Blue Slime, sticks to surfaces.",
+   "idle": ["Slower breathing (120 f). Debris inside drifts with the inner_item wobble.", "Occasionally 'tastes' the ground: flattens 0.2 and leaves a sticky decal."],
+   "movement": ["Crawls more than it hops (ooze_crawl 70% / hop 30%). Crawl: a wave runs front→back through the lobes (phase 0.25 each).", "Can climb walls slowly (canClimb walls_slow): aligns its base to the surface normal."],
+   "combat": ["Sticky spit: a glob arcs 4 m and leaves a slowing puddle for 5 s.", "Body slam like the Blue Slime but 20% slower windup and larger splash."],
+   "hitReact": ["Hits leave a dent that fills back over 20 f (blend 'squash' localized via a dent shape key)."],
+   "death": "Melts into a green puddle that stays sticky for 3 s (slows the player).",
+   "blender": ["Same dome as the Blue Slime, 10% wider at the base; debris as 3 small separate meshes parented to inner_item."],
+   "unity": ["Opacity 70%; debris uses its own wobble spring (stiffness 0.2)."]
+  },
+  "mon_goblin": {
+   "rigKey": "small_biped", "expectedSize": 1.0, "footstep": "soft_pad",
+   "summary": "Hunched, wiry, all elbows and grin. Fights in packs of 3–5: one attacks while the others feint, circle and throw junk. Cowardly alone, brave in groups.",
+   "idle": ["Shifts weight foot to foot every 2–3 s; scratches ear (ear springs flick).", "Looks at nearby goblins before acting (head look-at swaps between packmates and the player).", "Spins its crude blade in the hand (weapon bone rotates 360° over 20 f) as a fidget."],
+   "movement": ["Walk: knees bent 25°, spine hunched 20° forward, arms swing wide and low.", "Run: leans 35° forward; above 70% of run speed it drops to all fours (sprint_all_fours) for a burst.", "Circling: strafes at the pack's preferred range (≈3.5 m) with a bouncy side-step, blade pointed at you.", "Retreat: backpedals with tiny quick steps, then turns and runs when HP < 25% to call others (vocal 'call')."],
+   "combat": ["Stab (blue, parryable): 12 f windup with the blade pulled back to the hip (telegraph frame 4), 4 f thrust with a 0.8 m lunge, 15 f recovery stumble (the punish window).", "Thrown Junk (projectile): rummages in its pouch 15 f, throws an arc (rock, bottle, bone) 6–10 m; random prop each time.", "Frenzied Lunge (red, unblockable, low HP only): screeches, then 3 wild slashes over 30 f while hopping forward 2.5 m. Dodge only.", "Pack rule: only 2 goblins hold aggro tokens; the rest feint (half-lunge, cancel at frame 8) and taunt (taunt clip) to keep pressure readable."],
+   "hitReact": ["Light hit: head snaps back, ears flop (spring impulse), says 'ack!'.", "Heavy hit: spins 180° and lands on its backside, then scrambles up (getup 36 f).", "Launched: flails all four limbs (additive flail layer) — very funny, very readable.", "Disarmed (weapon part broken): fights with claws and bites (swap to claw moveset)."],
+   "death": "Full ragdoll with a 'last gasp' pose for 6 f before ragdoll; the blade drops separately as a physics prop.",
+   "blender": ["Proportions: head 30% of height, hands 1.4× human scale, feet long and flat. Ears are 2-bone spring chains.", "Separate meshes for blade, pouch and loincloth (cloth: 1 spring chain or Unity cloth).", "Humanoid naming so Mixamo clips retarget; author unique attacks by hand."],
+   "unity": ["Humanoid avatar; use Mixamo 'crouched walk' as a base then layer the hunch with an Avatar Mask (spine + head).", "Aggro tokens: see AggroTokens in Ascend.Core (max 2 attackers)."],
+   "attacks": {
+    "atk_stab": { "hitboxBone": "weapon_R", "lungeDistance": 0.8, "notes": "Classic punishable poke; recovery stumble is the punish window" },
+    "atk_thrown_junk": { "hitboxBone": "hand_R", "notes": "Projectile spawned from hand_R; random prop" },
+    "atk_frenzied_lunge": { "hitboxBone": "weapon_R", "lungeDistance": 2.5, "notes": "Low-HP only, red telegraph, three slashes" }
+   }
+  },
+  "mon_goblin_archer": {
+   "rigKey": "small_biped", "expectedSize": 1.0,
+   "summary": "Stays at the back of the pack on high ground; shoots, then repositions. Flees from melee.",
+   "idle": ["Tests the bowstring (small twang) and squints down range."],
+   "movement": ["Prefers range 10–14 m; after every 2 shots it relocates to a new spot (cover or high ground).", "If the player closes to 3 m it hops back twice (dodge_back) and draws a knife."],
+   "combat": ["Aimed shot (blue): 24 f draw with a visible arrow glint (telegraph), releases on frame 24; leads the target by 0.3 s of the player's velocity.", "Volley (red, rare): 3 arrows in a fan after a 36 f draw."],
+   "hitReact": ["Drops the bow on a heavy hit 30% of the time (must pick it up: 40 f)."],
+   "death": "Ragdoll; the bow breaks into 2 pieces on impact.",
+   "blender": ["Bow is a separate prop on weapon_L with its own 2-bone string (or a shape key for draw)."],
+   "unity": ["Upper-body aim offset layer (aim_offset_upper_body) so it can shoot while strafing."]
+  },
+  "mon_goblin_trapper": {
+   "rigKey": "small_biped", "expectedSize": 0.95,
+   "summary": "Sneaky goblin that lays snares and caltrops, then lures you into them.",
+   "idle": ["Fiddles with a bear trap; low crouch."],
+   "movement": ["Moves crouched along walls; places a trap (20 f kneel) when you lose sight of it.", "Backs away toward its traps when fighting."],
+   "combat": ["Snare toss (gold): throws a weighted net; caught players must mash free.", "Caltrop scatter: a quick throw that covers a 3 m cone with slowing spikes."],
+   "hitReact": ["Panics if hit while placing a trap and may trigger its own trap (10% chance, comedic)."],
+   "death": "Ragdoll; drops unused traps that the player can pick up.",
+   "blender": ["Extra pouches and a rolled net prop on the back (spring chain for the net)."],
+   "unity": ["Traps are separate prefabs with trigger colliders."]
+  },
+  "mon_goblin_shaman": {
+   "rigKey": "small_biped", "expectedSize": 0.95,
+   "summary": "Bone-masked goblin with a staff of feathers. Buffs the pack and throws curse orbs. The cult runes appear on it first.",
+   "idle": ["Shakes the staff rhythmically; feathers on the staff are spring chains."],
+   "movement": ["Stays 6–8 m behind the pack; hops backward when approached."],
+   "combat": ["Curse orb (blue, magic): 30 f chant with rising rune circle, orb travels 8 m/s.", "Frenzy dance (buff, interruptable): 45 f dance that gives nearby goblins +20% speed. Hitting it during the dance cancels it (stagger)."],
+   "hitReact": ["Mask slips on a heavy hit, revealing a scared face (blend shape 'fear')."],
+   "death": "Ragdoll; the staff stands upright in the ground for 3 s, glowing, then falls.",
+   "blender": ["Bone mask as a separate rigid mesh on the head bone; staff with 3 feather spring chains."],
+   "unity": ["Rune circle VFX attached to the root during chants."]
+  },
+  "mon_hobgoblin": {
+   "rigKey": "medium_biped", "expectedSize": 1.7,
+   "summary": "A goblin that grew into a soldier: upright, armored, disciplined. Leads packs and fights with shield and club.",
+   "idle": ["Stands straight (unlike goblins); taps its club on the shield; barks orders (vocal) to nearby goblins."],
+   "movement": ["Walks with a measured, heavy step; shield always toward the player.", "Signals the pack: points with the club, and goblins move to flank (sets the pack's flank angle)."],
+   "combat": ["Shield bash (blue): 14 f lean-in, 0.8 m shove, staggers the player on hit.", "Overhead club (red if charged): 20 f raise, 6 f smash, ground crack decal.", "Guard: blocks frontal light hits (block_loop) until its shield breaks."],
+   "hitReact": ["Frontal light hits are blocked (spark VFX) unless the shield part is broken."],
+   "death": "Kneels first (16 f), then ragdoll forward onto the shield.",
+   "blender": ["Armor plates as rigid pieces parented to chest/upperarm bones (no skin deformation on metal)."],
+   "unity": ["Shield is a breakable part (partId 'shield', bone weapon_L)."]
+  },
+  "mon_horned_rabbit": {
+   "rigKey": "quad_small", "expectedSize": 0.5, "footstep": "soft_pad",
+   "summary": "The classic rookie killer: a fluffy rabbit with a spiral horn that charges in a straight line when cornered. Cute until it isn't.",
+   "idle": ["Nose twitch loop (blend 'nose_twitch', 8 Hz in bursts of 1 s).", "Sits up to listen every 5–8 s (sit_up_listen); ears rotate toward the loudest sound (ear springs + look-at).", "Grooms a paw (eat_loop variant)."],
+   "movement": ["Hops in bursts of 2–4, then freezes for 0.5–1.5 s (prey behaviour).", "Bound gait when fleeing: very fast, zig-zags every 0.6 s (±35°).", "Thump warning: stamps a hind foot (thump_warning) before a charge; the sound is the real telegraph."],
+   "combat": ["Charge (red, unblockable): thump → 18 f crouch with horn lowered (red flash) → straight-line dash 6 m at bound speed, cannot turn after frame 4 of the dash. Hits stagger the player. If it misses and hits a wall or tree, it gets stuck for 1.5 s (horn in the wood) — the big punish moment.", "Bite (blue): quick 8 f nip when you're right next to it.", "Leap (blue): hops 2 m at your head; weak but knocks you back."],
+   "hitReact": ["Squeals; flips onto its back on a heavy hit and wiggles back up (very readable).", "Launched: spins with ears trailing (ear springs, gravity 0.4)."],
+   "death": "Ragdoll tumble; ears fall last. The horn can drop intact (Horn Shard) unless it was broken.",
+   "blender": ["Big hind feet (hind_foot 1.5× front), round body, ears 40% of body length. Horn is a separate mesh on the head bone (breakable part 'head').", "Fluff: shell-texture fur or alpha cards; keep under 2,500 tris."],
+   "unity": ["Charge uses root motion with tracking 0 after the dash starts.", "Stuck-in-tree state: a trigger on the horn tip detects walls/trees."],
+   "attacks": {
+    "atk_charge": { "hitboxBone": "head", "windupSec": 0.6, "lungeDistance": 6, "notes": "Red, straight line, gets stuck on a miss into a wall" },
+    "atk_bite": { "hitboxBone": "jaw", "notes": "Close-range nip" },
+    "atk_leap": { "hitboxBone": "spine_02", "lungeDistance": 2, "notes": "Knockback only" }
+   }
+  },
+  "mon_forest_wolf": {
+   "rigKey": "quad_medium", "expectedSize": 1.3,
+   "summary": "Grey wolves in packs of 3–4. They circle, test you with feints, and strike from behind.",
+   "idle": ["Sniffs the ground, ears forward; the pack leader stands taller (posture +5°)."],
+   "movement": ["Trot circles at 4 m around the player; each wolf picks a different angle (120° apart).", "Gallop to close distance, then slows to a stalk (head low, Menace 3 posture) for the last 3 m."],
+   "combat": ["Pounce (blue): 10 f crouch, leap 3 m, bite on landing.", "Hamstring bite (blue): darts in from the side, bites, retreats in one motion.", "Howl (buff): calls the pack; nearby wolves gain speed for 10 s."],
+   "hitReact": ["Yelps and skids sideways; tail tucks (tail spring gravity up briefly)."],
+   "death": "Ragdoll slide along the ground; the pack hesitates for 2 s (morale).",
+   "blender": ["Mane as a 2-bone spring chain; tail 4 bones."],
+   "unity": ["Spine bend on turns (procedural) for tight circling."]
+  },
+  "mon_wild_boar": {
+   "rigKey": "quad_medium", "expectedSize": 1.4, "massMult": 1.6,
+   "summary": "A stubborn tusked boar. Scrapes the ground, then charges; turns slowly, so sidestep and hit its flank.",
+   "idle": ["Roots in the dirt with its snout (eat_loop) and snorts."],
+   "movement": ["Trots heavily; turns slowly (turn rate ×0.6 via a heavy feel).", "Before a charge it scrapes a front hoof twice (paw_scrape_charge_windup) — the telegraph."],
+   "combat": ["Tusk charge (red): 30 f scrape → 8 m charge; can't turn after the first 0.3 s; skids for 1 s after a miss.", "Tusk toss (blue): close range upward gore that launches the player."],
+   "hitReact": ["Barely flinches from light hits (knockback resist); heavy hits make it stumble sideways."],
+   "death": "Falls onto its side and kicks once.",
+   "blender": ["Tusks are separate meshes (breakable 'head' → Tusk). Bristles along the spine as a spring chain (mane bones)."],
+   "unity": ["Footstep camera shake small; dust puffs on the charge."]
+  },
+  "mon_giant_ant": {
+   "rigKey": "hexapod", "expectedSize": 0.6,
+   "summary": "Dog-sized worker ants in the old drains and fields. They swarm, carry things, and spray acid when threatened.",
+   "idle": ["Antennae sweep in figure-eights; touches antennae with nearby ants (look-at pairs)."],
+   "movement": ["Tripod gait (legs 1L,2R,3L then 1R,2L,3R) with procedural IK; walks on walls and ceilings.", "Moves in lines (follow-the-leader), breaking formation when they see you."],
+   "combat": ["Mandible snap (blue): rears up 8 f, snaps.", "Acid spray (blue): curls the abdomen forward (12 f), sprays a 3 m cone."],
+   "hitReact": ["Legs splay and it slides; on heavy hits it flips onto its back for 1.5 s (big punish)."],
+   "death": "Flips over, legs curl in over 20 f.",
+   "blender": ["Rigid chitin pieces per segment (no skin deformation); legs are rigid segments too."],
+   "unity": ["Wall walking: align the root to the surface normal; gravity follows the surface."]
+  },
+  "mon_cave_spider": {
+   "rigKey": "arachnid", "expectedSize": 0.8,
+   "summary": "Pale cave spiders that wait on ceilings. Long still pauses, then sudden darts: the first taste of Dread movement.",
+   "idle": ["Completely still for 2–6 s, then a single leg taps (leg_tap_idle).", "Abdomen pulses slowly (breathing)."],
+   "movement": ["Creep slowly, then dart (8× faster) for 1–2 m, then freeze again (still_then_dart).", "Drops from the ceiling on a silk line (ceiling_drop) when you pass underneath; the sound of the line comes first."],
+   "combat": ["Web shot (blue): rears up 10 f, shoots a web that slows.", "Leap strike (blue): 6 f crouch, leaps 3 m, bite on landing."],
+   "hitReact": ["Legs fold in for a moment, then it skitters back."],
+   "death": "Flips, legs curl.",
+   "blender": ["8 legs as rigid segments; abdomen weighted softly for the pulse spring."],
+   "unity": ["Optional stepped animation at 15 fps during darts for a twitchy feel even at Menace 3."]
+  },
+  "mon_zombie": {
+   "rigKey": "medium_biped", "expectedSize": 1.7,
+   "summary": "Slow, relentless, wrong. Shambles on the north road at night. Grabs if you let it get close.",
+   "idle": ["Sways in place, head lolling (spring on the neck via an additive layer); sometimes twitches."],
+   "movement": ["Shamble: one leg drags (left foot IK lags 0.2 s), speed 0.8 m/s; lurches 2 m suddenly when the player is within 4 m.", "Turns its head before its body (Dread-like) even at Menace 3."],
+   "combat": ["Grab (gold): arms raise for 18 f, lunges 1 m; caught players take bite damage until they break free.", "Swipe (blue): slow wide arm swing."],
+   "hitReact": ["Barely reacts to light hits (only the hit part jerks — additive per-bone reactions); heavy hits knock it down, and it gets up in an unnatural way (getup played at 0.7× with joints bending backward)."],
+   "death": "Collapses like strings were cut (instant ragdoll, no death pose).",
+   "blender": ["Torn clothing as spring/cloth; one arm slightly longer (asymmetry).", "Rot: vertex color mask for a 'decay' shader."],
+   "unity": ["Per-bone additive hit reactions (procedural) instead of full-body flinches."]
+  },
+  "mon_skeleton": {
+   "rigKey": "medium_biped", "expectedSize": 1.75, "massMult": 0.55, "footstep": "bone_clack",
+   "summary": "Clattering skeleton soldiers. Light, fast, fall apart when hit hard — and put themselves back together.",
+   "idle": ["Jaw clacks; skull tilts at you curiously."],
+   "movement": ["Brisk march with a clattering rhythm; bones rattle (tiny procedural jitter on limbs)."],
+   "combat": ["Sword slash (blue), shield block, and a desperate bone throw (it throws its own arm)."],
+   "hitReact": ["Heavy hits make it collapse into a pile of bones (physics) for 3 s, then reassemble (reassemble clip, bones fly back). Light/holy damage during the pile destroys it for good."],
+   "death": "Bones scatter as physics pieces; the skull rolls.",
+   "blender": ["Each bone mesh rigidly parented to its bone (no skinning) so it can come apart as separate rigidbodies."],
+   "unity": ["Death and collapse: unparent the bone meshes into Rigidbodies; reassemble by lerping them back over 1 s."]
+  },
+  "mon_smiling_scarecrow": {
+   "rigKey": "medium_biped", "expectedSize": 1.9, "massMult": 0.35, "footstep": "wood_knock",
+   "summary": "Millbrook's first horror. It's in a different field every night. It never moves while you watch it.",
+   "idle": ["Hangs on its post, arms out, head tilted. Burlap face with a stitched smile."],
+   "movement": ["Freeze when observed: if it's in the camera view and not occluded, it doesn't move at all.", "When unobserved it moves in jerky 8 fps steps (stop-motion), always ending in a 'hanging' pose.", "Each time you look away and back, it's closer; its head angle has changed."],
+   "combat": ["Sickle swipe (red): only from behind or when you turn your back — a long 24 f windup with a loud straw rustle (audio telegraph).", "Crow call: crows (mon_giant_crow) burst out of its coat."],
+   "hitReact": ["Straw bursts from hits; it doesn't flinch at all (no hit reactions), which is the scary part."],
+   "death": "Collapses into an empty coat and straw; the smiling sack-face stays upright on the ground facing you.",
+   "blender": ["Limp, puppet-like rig: same medium_biped skeleton, but the pose library is 'hung on a post'. Straw tufts as spring chains."],
+   "unity": ["FreezeWhenObserved component (camera frustum + occlusion raycast).", "SteppedAnimator at 8 fps when moving."]
+  },
+  "mon_wisp": {
+   "rigKey": "spirit_float", "expectedSize": 0.4, "footstep": "none",
+   "summary": "Little floating lights that love Moonbloom. Curious, harmless-looking, and they fly into you when cornered.",
+   "idle": ["Bob on a Perlin noise curve (amplitude 0.08 m, 0.3 Hz); light flickers with it.", "Circles flowers and players at 1.5 m."],
+   "movement": ["Drifts; darts 3 m in 0.2 s when startled; leaves a light trail (trail spring chain + VFX)."],
+   "combat": ["Spark dash (blue): brightens for 12 f (telegraph), dashes through you.", "Light orb: rare, at night only."],
+   "hitReact": ["Flickers and splits into 2 faint after-images that rejoin (phase_flicker_when_hit)."],
+   "death": "Bursts into motes that drift upward and fade.",
+   "blender": ["No mesh body: a small core sphere + VFX. Bones only for the trail and 'arms' that are particle emitters."],
+   "unity": ["Gravity 0, NavMesh 'Fly' area or a simple steering script; baseOffset = hover height."]
+  },
+  "mon_mandrake": {
+   "rigKey": "stub_biped", "expectedSize": 0.35, "footstep": "wood_knock",
+   "summary": "A screaming root with a leafy head. Mostly buried; pulls itself out to run away or scream.",
+   "idle": ["Only the leaves show above the soil; they rustle when you approach (proximity 3 m)."],
+   "movement": ["Emerges (emerge clip, 30 f) and waddles fast on two root legs; dives back into soft soil (burrow, 40 f)."],
+   "combat": ["Scream (blue, aoe): inhales 18 f (body puffs), screams for 1.5 s; stuns players without earmuffs. The telegraph is the inhale."],
+   "hitReact": ["Squeaks; leaves droop."],
+   "death": "Goes stiff and falls over like a carrot.",
+   "blender": ["Root body with 2 leg roots and tiny arm roots; leaves as spring chains on the cap bones."],
+   "unity": ["Earmuff check on the player for the scream stun."]
+  },
+  "mon_puffcap_mushroom": {
+   "rigKey": "stub_biped", "expectedSize": 0.4,
+   "summary": "A round mushroom that puffs sleeping spores when startled.",
+   "idle": ["Cap breathes slowly (blend 'cap_puff')."],
+   "movement": ["Hops slowly; prefers to stay in mushroom rings."],
+   "combat": ["Spore puff (blue, aoe): cap swells 20 f, releases a 2.5 m sleep cloud."],
+   "hitReact": ["Each hit releases a small spore puff (VFX only, no effect)."],
+   "death": "Deflates like a balloon.",
+   "blender": ["Big cap shape key 'cap_puff' (scale 1.3)."],
+   "unity": ["Cap is a breakable part: breaking it stops spore attacks."]
+  },
+  "mon_walking_mushroom": {
+   "rigKey": "stub_biped", "expectedSize": 0.6,
+   "summary": "Knee-high mushrooms that waddle in little groups and headbutt with their caps.",
+   "idle": ["Sways side to side; caps bob out of sync (spring rim)."],
+   "movement": ["Waddle gait with exaggerated side sway; groups walk in a line."],
+   "combat": ["Cap headbutt (blue): leans back 12 f, lunges 1 m."],
+   "hitReact": ["Cap rim wobbles; falls over and rolls back up on heavy hits."],
+   "death": "Topples and releases a spore puff.",
+   "blender": ["Cap rim bones for wobble; tiny feet."],
+   "unity": ["Group spawn of 3–5 with offset idle timing."]
+  },
+  "mon_giant_crow": {
+   "rigKey": "avian", "expectedSize": 0.7,
+   "summary": "Oversized crows that steal shiny things. Smart, noisy, and they mob you.",
+   "idle": ["Head tilts in quick snaps (head_stabilize + look-at with 4 f snaps), hops along fences."],
+   "movement": ["Hops on the ground; takes off with 2 strong flaps; glides in circles overhead."],
+   "combat": ["Dive strike (blue): circles, then folds wings and dives (24 f) with a caw as the telegraph.", "Steal (gold grab): grabs a random small item and flies to its nest; follow it to get it back."],
+   "hitReact": ["Feathers burst; tumbles in the air and recovers with flaps."],
+   "death": "Tumbles out of the air in a burst of feathers.",
+   "blender": ["Primaries and secondaries as spring chains; wing fold pose as the rest pose."],
+   "unity": ["Flight uses a simple steering controller above the NavMesh, landing on 'perch' points."]
+  },
+  "mon_imp": {
+   "rigKey": "membrane_flyer",
+   "summary": "Rig chosen by hand: rigId rig_flyer_small has no rig of its own, and this small flyer has membrane wings."
+  },
+  "mon_lantern_moth": {
+   "rigKey": "membrane_flyer",
+   "summary": "Rig chosen by hand: rigId rig_flyer_small has no rig of its own, and this small flyer has membrane wings."
+  }
+ }
+}

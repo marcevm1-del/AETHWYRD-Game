@@ -1,0 +1,10 @@
+{
+    "name": "Ascend.Monsters.Editor",
+    "rootNamespace": "Ascend.Monsters.Editor",
+    "references": ["Ascend.Monsters"],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "com.projectascend.monsters",
+  "version": "0.1.0",
+  "displayName": "Ascend Monsters (motion & prefab builder)",
+  "description": "Monster motion components (MonsterMotion, SpringChain, SquashStretch, SteppedAnimator, FreezeWhenObserved, Hurtbox/BreakablePart) and the Build Monster Prefabs From Rig editor tool. Data: Data/Monsters/motion.json. Rules: 08_Bestiary/monster_motion_bible.md.",
+  "unity": "6000.0"
+}

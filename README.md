@@ -25,6 +25,7 @@
 | 08 | [monster_design_kit.md](08_Bestiary/monster_design_kit.md) | Research, 25 rigs, design recipe, Menace axis, Boss Suitability, data files |
 | 08 | [bosses_and_calamities.md](08_Bestiary/bosses_and_calamities.md) | Bosses, Generals, Elder Dragons, Calamities |
 | 08 | [bestiary_lore.md](08_Bestiary/bestiary_lore.md) | Flavor text per monster family |
+| 08 | [monster_motion_bible.md](08_Bestiary/monster_motion_bible.md) | **Monster rigs, physics & movement**: the 25 shared rigs, scaling laws, Menace/element/behavior motion, Ring 0–1 motion sheets, Blender → Unity workflow |
 | 08 | bestiary_viewer.html | Filterable view of all monster data; **generated** by `npm run gen` (not committed), served by `npm run viewer` |
 | 09 | [gear_systems_and_sets.md](09_Equipment/gear_systems_and_sets.md) | Slots, rarity, materials, sets, upgrades, Relics |
 | 09 | [legendary_artifacts.md](09_Equipment/legendary_artifacts.md) | Divine artifacts, sentient weapons, legendaries |
@@ -51,10 +52,12 @@ All game content lives in `Data/` as JSON, checked against `Data/Schemas/`.
 
 | Command | What it does |
 |---|---|
-| `npm run build` | Rebuild schemas, regenerate monsters, validate data, run the C# rules tests |
+| `npm run build` | Rebuild schemas, regenerate monsters, rigs and motion, validate data, run the C# rules tests |
 | `npm test` | Run the C# rules tests (`Code/Ascend.Core.Tests`) |
 | `npm run validate` | Validate all data (schema + unique IDs + cross-references) |
 | `npm run gen` | Regenerate monsters from `Tools/monster_gen/families.js` |
+| `npm run rigs` | Rebuild the 25 monster rigs (`Data/Monsters/rigs.json`) from `Tools/monster_gen/build_rigs.js` |
+| `npm run motion` | Generate motion & physics for every species (`Data/Monsters/motion.json`); `npm run motion -- --report` prints the rig chosen for each rigId |
 | `npm run viewer` | Serve the bestiary viewer at http://localhost:8137 |
 | `npm run vault` | Rebuild the Obsidian idea vault in `ideas/` from `Data/` and the design bible |
 
@@ -66,10 +69,12 @@ All game content lives in `Data/` as JSON, checked against `Data/Schemas/`.
 | Player classes & progression | `Data/Classes/classes.json`, `Data/Classes/progression.json` |
 | Story flags | `Data/Quests/story_flags.json` |
 | Monsters | `Data/Monsters/` (species, population, attacks, loot tables; Tyrants in `Tools/monster_gen/tyrants.js`). CSVs are generated, not committed |
+| Monster rigs & motion | `Data/Monsters/rigs.json` (generated), `motion.json` (generated), `motion_overrides.json` (hand-authored); Blender rig builder `Tools/blender/build_rig.py`; Unity components and the prefab builder in `Code/Unity` |
+| Rig, animation & hitbox checks | `.claude/skills/unity-3d-rigging-hitboxes/` (Claude Code skill: Blender inspection, joint-range and walk-cycle tests, collider fitting, FBX export; Unity validator package). Start with its `SKILL.md` |
 | Items | `Data/Items/` (materials generated, items hand-written) |
 | Inns | `Data/World/inns.json` |
 | NPCs / Quests | `Data/NPCs/npcs.json` (with story states and schedules), `Data/Quests/quests.json`, `Data/Quests/weekly_board.json` |
 | Combat tuning | `Data/Combat/combat_tuning.json` |
-| Game rules (C#) | `Code/Ascend.Core`: engine-agnostic rules: ranks and levels, elements and reactions (Freeze, Storm Prison), damage, Style Rank, loot, poise, aggro, player stats and XP, quest gating, NPC states, **sieges** (`RegionThreat`, `SiegeScheduler`, `SiegeAutoResolve`), **calendar**, **weekly board**, **inns**. Drops into Unity as-is. 54 tests (`npm test`) |
+| Game rules (C#) | `Code/Ascend.Core`: engine-agnostic rules: ranks and levels, elements and reactions (Freeze, Storm Prison), damage, Style Rank, loot, poise, aggro, player stats and XP, quest gating, NPC states, **sieges** (`RegionThreat`, `SiegeScheduler`, `SiegeAutoResolve`), **calendar**, **weekly board**, **inns**, **monster motion laws**. Drops into Unity as-is. 57 tests (`npm test`) |
 
 **ID rules:** `reg_`, `mon_`, `pop_00000`, `atk_`, `loot_`, `itm_`, `npc_`, `qst_`, `inn_` + lowercase snake_case. IDs are unique across all data.
