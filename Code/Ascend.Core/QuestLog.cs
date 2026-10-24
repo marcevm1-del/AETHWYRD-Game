@@ -82,7 +82,9 @@ namespace Ascend.Core
         public void OnKill(string speciesId) => Advance("kill", speciesId, 1);
         public void OnReach(string placeId) => Advance("reach", placeId, 1);
         public void OnTalk(string npcId) => Advance("talk", npcId, 1);
-        public void OnDefend(string placeId) => Advance("defend", placeId, 1);
+        /// <param name="settlement">True when the place is a whole settlement (a raid repelled there), which also counts for
+        /// "{settlement}" siege contracts; false for a spot like a gate or a granary.</param>
+        public void OnDefend(string placeId, bool settlement = true) => Advance("defend", placeId, 1, settlement);
 
         /// <summary>Collect objectives track what you hold, so selling or using the item lowers the count again.</summary>
         public void OnInventoryChanged(Inventory inv)
@@ -124,7 +126,7 @@ namespace Ascend.Core
             return true;
         }
 
-        void Advance(string kind, string target, int amount)
+        void Advance(string kind, string target, int amount, bool settlement = false)
         {
             if (string.IsNullOrEmpty(target)) return;
             foreach (var p in _active.Values.ToList())
@@ -135,7 +137,7 @@ namespace Ascend.Core
                 {
                     var o = q.Objectives[i];
                     // "{settlement}" (siege defences): any settlement of the quest's region counts.
-                    bool matches = o.Target == target || (kind == "defend" && o.Target == "{settlement}");
+                    bool matches = o.Target == target || (kind == "defend" && settlement && o.Target == "{settlement}");
                     if (o.Kind != kind || !matches || p.Counts[i] >= Need(o)) continue;
                     // Objectives run in order for talk/reach chains only when an earlier talk is unmet (go see A, then B).
                     if (kind == "talk" && EarlierTalkPending(q, p, i)) continue;

@@ -215,7 +215,11 @@ namespace Ascend.Game
             var p = ProsperityOf(_current.Settlement);
             p?.Raise(2, 5);
             var quests = FindFirstObjectByType<PlayerQuests>();
-            if (quests != null) quests.Log.OnDefend(_current.Settlement.ToLowerInvariant());
+            if (quests != null)
+            {
+                quests.Log.OnDefend(_current.Settlement.ToLowerInvariant());
+                if (_current.Settlement == liveSettlement) quests.Log.OnDefend("North Gate", settlement: false); // the live raid is fought at Brindlewick's north gate
+            }
             EndBattle();
         }
 

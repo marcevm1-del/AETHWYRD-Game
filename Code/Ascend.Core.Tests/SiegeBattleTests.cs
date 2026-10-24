@@ -60,5 +60,7 @@ static class SiegeBattleTests
         Assert.True(log.Accept("qst_siege_whisperwood_defence", new QuestContext()), "Captain Holt's contract");
         log.OnDefend("brindlewick");
         Assert.Equal(1, log.Get("qst_siege_whisperwood_defence").Counts[0], "a defended raid counts");
+        log.OnDefend("North Gate", settlement: false);
+        Assert.Equal(1, log.Get("qst_siege_whisperwood_defence").Counts[0], "a gate isn't a settlement: no double count");
     }
 }

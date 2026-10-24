@@ -35,6 +35,16 @@ namespace Ascend.EditorTools
             Label(root, new Vector3(6f, 2.1f, -3.5f), "Guild Board", new Color(1f, 0.9f, 0.6f), 0.035f);
 
             Place(root, "brindlewick_north_gate", new Vector3(0, 0, 20f), 3.5f);
+            // Stand-ins for the other places quests and board jobs send you (reach objectives in quests.json and weekly_board.json).
+            Landmark(root, "Old Watchtower", "Old Watchtower", new Vector3(-25f, 0, 40f));
+            Landmark(root, "Boar den, Whisperwood", "Boar den", new Vector3(-20f, 0, 62f));
+            Landmark(root, "Rooftops of Brindlewick", "Rooftops of Brindlewick", new Vector3(-12f, 0, -12f));
+            Landmark(root, "Orphanage of the Small Lantern", "Orphanage of the Small Lantern", new Vector3(12f, 0, -10f));
+            Landmark(root, "Temple Hill graveyard", "Temple Hill graveyard", new Vector3(-18f, 0, -8f));
+            Landmark(root, "hollis_yard_dawn", "Old Hollis's yard", new Vector3(-8f, 0, -11f));
+            Landmark(root, "Millbrook turnip field", "Millbrook turnip field", new Vector3(18f, 0, 6f));
+            Landmark(root, "millbrook_fields_night", "Millbrook fields", new Vector3(21f, 0, 12f));
+            Landmark(root, "mistvale_farms", "Mistvale farms", new Vector3(23f, 0, -14f));
             BuildSiege();
             Place(root, "whisperwood_ruins_mural", new Vector3(0, 0, 88f), 10f);
         }
@@ -102,6 +112,15 @@ namespace Ascend.EditorTools
             go.transform.position = at;
             var p = go.AddComponent<QuestPlace>();
             p.PlaceId = placeId; p.Radius = radius;
+        }
+
+        /// <summary>A stand-in for a named place a quest sends you to: a lantern post with its name, until the real spot is built.</summary>
+        static void Landmark(Transform parent, string placeId, string shownAs, Vector3 at)
+        {
+            Place(parent, placeId, at, 4f);
+            Prim(PrimitiveType.Cylinder, "Landmark_" + placeId, at + Vector3.up * 1.2f, new Vector3(0.15f, 1.2f, 0.15f), Mat("Wood", new Color(0.55f, 0.38f, 0.24f)), parent);
+            Prim(PrimitiveType.Sphere, "Lamp_" + placeId, at + Vector3.up * 2.5f, Vector3.one * 0.35f, Mat("Lamp", new Color(1f, 0.85f, 0.45f), 0.8f), parent, keepCollider: false);
+            Label(parent, at + Vector3.up * 2.9f, shownAs, new Color(1f, 0.92f, 0.7f), 0.03f);
         }
     }
 }
