@@ -195,7 +195,11 @@ namespace Ascend.EditorTools
         /// <summary>Places a monster model (feet at <paramref name="pos"/>, facing the player start) with a fitted capsule. False if the FBX is missing.</summary>
         static bool Model(Transform parent, string speciesId, string modelName, Vector3 pos)
         {
-            var asset = AssetDatabase.LoadAssetAtPath<GameObject>($"{ModelDir}/{modelName}.fbx");
+            // Generated per-species models (Models/Monsters/<Family>/<species_id>.fbx) win over the Ring 0 blockouts.
+            GameObject asset = null;
+            if (AscendData.Db.Species.TryGetValue(speciesId, out var sp))
+                asset = AssetDatabase.LoadAssetAtPath<GameObject>($"{ModelDir}/{sp.Family.Replace('/', '-')}/{speciesId}.fbx");
+            if (asset == null) asset = AssetDatabase.LoadAssetAtPath<GameObject>($"{ModelDir}/{modelName}.fbx");
             if (asset == null) return false;
             var go = (GameObject)PrefabUtility.InstantiatePrefab(asset, parent);
             go.name = speciesId;

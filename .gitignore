@@ -34,3 +34,9 @@ Game/.idea/
 
 # Local vault backups (not part of the generated vault)
 ideas/_ascend_ideas_preserve_*/
+
+# AI-generated monster models stay on this PC (too large for GitHub's free LFS); their info is in
+# Art/Generation/monster_models.json. The Ring 0 models in the Monsters folder root stay tracked.
+Game/Assets/_Game/Art/Models/Monsters/*/
+Game/Assets/_Game/Art/Models/Monsters/*.meta
+!Game/Assets/_Game/Art/Models/Monsters/*.fbx.meta

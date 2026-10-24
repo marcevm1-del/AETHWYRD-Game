@@ -39,6 +39,8 @@ const byRegion = arr => (arr || []).reduce((m, x) => ((m[x.regionId] = m[x.regio
 const clansIn = byRegion(clanData.clans), faunaIn = byRegion(clanData.fauna);
 const attacks = Object.fromEntries(load('Monsters/attacks.json').map(a => [a.id, a]));
 const loot = Object.fromEntries(load('Monsters/loot_tables.json').map(l => [l.id, l]));
+const registryFile = path.join(ROOT, 'Art', 'Generation', 'monster_models.json');
+const modelRegistry = fs.existsSync(registryFile) ? JSON.parse(fs.readFileSync(registryFile, 'utf8')).models || {} : {};
 const lootTables = Object.values(loot);
 
 // ---------------------------------------------------------------- note paths and links
@@ -117,6 +119,14 @@ for (const s of species) {
   let t = front({ type: 'monster', id: s.id, family: `"${s.family}"`, rank: `"${s.rank}"`, tier: s.tier,
     tags: ['monster', tag(s.family), ...(s.isTyrant ? ['tyrant'] : []), ...(s.isUnique ? ['unique'] : [])] });
   t += `# ${s.name}\n\n`;
+  // Turnaround sheet (front / side / back) rendered by Tools/blender/bestiary_models.py; embedded by file name.
+  const sheet = path.join(ROOT, '08_Bestiary', 'turnarounds', s.family.replace(/\//g, '-'), `${s.id}_sheet.jpg`);
+  if (fs.existsSync(sheet)) t += `![[${s.id}_sheet.jpg]]\n*Blockout turnaround: front, side, back (views: \`${s.id}_front/side/back.jpg\`).*\n\n`;
+  // 3D model status from the registry (generated FBX files are kept on the creator's PC, not in git).
+  const gm = modelRegistry[s.id];
+  t += gm
+    ? `> [!success] 3D model: generated ${gm.date}${gm.provider ? ` with ${gm.provider}` : ''} · ${gm.tris.toLocaleString('en-US')} tris · ${gm.sizeM.join(' × ')} m · local file \`${gm.fbx}\`\n\n`
+    : `> [!note] 3D model: not generated yet (blockout only). Prompt in \`Art/Generation/monster_model_prompts.json\`.\n\n`;
   if (s.look) t += `> ${s.look}\n\n`;
   t += '| Field | Value |\n|---|---|\n';
   t += row('Family · type', `${fam(s.family)} · ${s.type}`);
