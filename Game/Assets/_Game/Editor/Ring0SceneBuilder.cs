@@ -14,7 +14,7 @@ namespace Ascend.EditorTools
     ///   Unity.exe -batchmode -projectPath Game -executeMethod Ascend.EditorTools.Ring0SceneBuilder.BuildBatch
     /// Regenerating is safe: it overwrites the scene and the graybox assets it owns.
     /// </summary>
-    public static class Ring0SceneBuilder
+    public static partial class Ring0SceneBuilder
     {
         const string Root = "Assets/_Game";
         const string ScenePath = Root + "/Scenes/Ring0_Graybox.unity";
@@ -35,6 +35,7 @@ namespace Ascend.EditorTools
                 EnsureUrp();
                 BuildScene();
                 RenderPreview();
+                RenderWhisperwoodPreview();
                 Debug.Log("[Ascend] Ring 0 graybox built: " + ScenePath);
                 if (batch) EditorApplication.Exit(0);
             }
@@ -192,6 +193,9 @@ namespace Ascend.EditorTools
                     var rab = Dummy(monsters, "mon_horned_rabbit", PrimitiveType.Cube, at + Vector3.up * 0.2f, new Vector3(0.3f, 0.3f, 0.45f), rabbit);
                     Prim(PrimitiveType.Cylinder, "Horn", new Vector3(0, 0.75f, 0.45f), new Vector3(0.15f, 0.5f, 0.15f), accent, rab.transform, Quaternion.Euler(40, 0, 0), keepCollider: false);
                 }
+
+            // Past the Brindlewick gate: the edge of Whisperwood (Ring 1), its own waystone and field.
+            BuildWhisperwood(world, ground, wood, accent);
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             var scenes = EditorBuildSettings.scenes.Where(s => s.path != ScenePath).ToList();
