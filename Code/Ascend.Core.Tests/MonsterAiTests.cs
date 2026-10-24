@@ -107,3 +107,18 @@ static class MonsterAiTests
             Assert.True(b.MinRangeOf(a.timing) > 0 && b.ReachOf(a.timing) > b.MinRangeOf(a.timing), $"{a.data.Id} has a real range band");
     }
 }
+
+[Tests]
+static class MonsterStunTests
+{
+    public static void StunHoldsForItsOwnDuration()
+    {
+        var b = new MonsterBrain(Repo.Db.Species["mon_horned_rabbit"], Repo.Db.Motion["mon_horned_rabbit"], Repo.Db.Attacks, new DeterministicRandom(3));
+        var s = new AiSense { DistanceToPlayer = 3, HpFraction = 1, HasToken = true };
+        b.Tick(1.0 / 60, s);
+        b.Stun(1.5);
+        for (double t = 0; t < 1.45; t += 1.0 / 60) { b.Tick(1.0 / 60, s); Assert.Equal(AiState.Staggered, b.State, "stuck for the whole 1.5 s"); }
+        for (int i = 0; i < 10; i++) b.Tick(1.0 / 60, s);
+        Assert.True(b.State != AiState.Staggered, "free again afterwards");
+    }
+}

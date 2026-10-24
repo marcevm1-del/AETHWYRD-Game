@@ -56,6 +56,7 @@ namespace Ascend.Game
             _calc = new DamageCalculator(db.Tuning.Damage);
             _home = transform.position;
             _turnSpeed = Mathf.Max(90f, (float)motion.NavAgent.AngularSpeed);
+            _dashSpeed = (float)System.Math.Max(motion.NavAgent.Speed * 1.3, 6.0); // charges run faster than the chase gait
             _tokenId = $"{_body.SpeciesId}#{_id}";
             _body.Staggered += OnStaggered;
             _body.Landed += OnStaggered; // landing after a launch is a knockdown
@@ -96,7 +97,10 @@ namespace Ascend.Game
             if (_brain.State == AiState.Windup && _lastState != AiState.Windup) CombatFx.Play(CombatFx.Sfx.Telegraph, transform.position, 0.6f);
             _lastState = _brain.State;
             if (cmd.ReleaseToken) ReleaseToken();
+            if (_brain.State != AiState.Staggered) IsStuck = false;
 
+            if (IsDashing) { DashStep(dt); UpdateTelegraph(); return; }
+            if (IsStuck) { UpdateTelegraph(); return; }
             Move(cmd, toPlayer, toHome, dt);
             if (cmd.Face && toPlayer.sqrMagnitude > 1e-4f)
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(toPlayer), _turnSpeed * dt);
@@ -115,30 +119,114 @@ namespace Ascend.Game
                 case AiMove.Circle: dir = Vector3.Cross(Vector3.up, toPlayer).normalized; break;
             }
             if (dir.sqrMagnitude < 1e-4f) return;
-            transform.position += dir * (float)cmd.Speed * dt;
+            transform.position += Blocked(dir, (float)cmd.Speed * dt);
             if (cmd.Move != AiMove.Circle && !cmd.Face) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(dir), _turnSpeed * dt);
         }
 
+        /// <summary>
+        /// The strike, by attack kind (motion bible / species signatures):
+        ///   ranged / magic → a projectile that travels (dodge or parry it as it arrives)
+        ///   charge / leap  → a straight-line dash that can't turn; a miss into an obstacle leaves it stuck (punish window)
+        ///   melee / heavy / grab / aoe → an immediate hit check in front (aoe all around)
+        /// </summary>
         void Strike(Vector3 toPlayer)
         {
             var atk = _brain.CurrentAttack; var t = _brain.CurrentTiming;
             if (atk == null || t == null) return;
             Strikes++;
-            // Gap-closers lunge their reach toward the player before the hit check.
-            if (MonsterBrain.IsGapCloser(t.Kind) && toPlayer.magnitude > 1.2f)
+            int damage = RollDamage(atk.Power);
+            var telegraph = _brain.CurrentTelegraph;
+            if (MonsterBrain.IsRanged(t.Kind))
             {
-                transform.position += toPlayer.normalized * Mathf.Max(0f, toPlayer.magnitude - 1.0f);
-                toPlayer = _player.transform.position - transform.position; toPlayer.y = 0;
+                MonsterProjectile.Launch(transform.position + Vector3.up * 0.8f + transform.forward * 0.5f, _player, damage, telegraph, _body,
+                    t.Kind == "magic" ? MagicSpeed : ThrowSpeed);
+                return;
             }
-            bool ranged = MonsterBrain.IsRanged(t.Kind);
-            float reach = ranged ? (float)MonsterBrain.RangedMax : (float)(_brain.ReachOf(t) + 0.35);
-            float arc = t.Kind == "aoe" ? 360f : ranged ? 30f : 100f;
+            if (MonsterBrain.IsGapCloser(t.Kind))
+            {
+                BeginDash(toPlayer.sqrMagnitude > 1e-4f ? toPlayer.normalized : transform.forward, Mathf.Min(DashMaxM, toPlayer.magnitude + 2f), damage, telegraph);
+                return;
+            }
+            float reach = (float)(_brain.ReachOf(t) + 0.35);
+            float arc = t.Kind == "aoe" ? 360f : 100f;
             if (toPlayer.magnitude > reach || Vector3.Angle(transform.forward, toPlayer) > arc * 0.5f) return;
+            _player.ReceiveAttack(damage, telegraph, _body);
+        }
+
+        public const float ThrowSpeed = 13f, MagicSpeed = 10f, DashMaxM = 6f, StuckSec = 1.5f, DashContactM = 0.9f;
+        Vector3 _dashDir;
+        float _dashLeft;
+        int _dashDamage;
+        Telegraph _dashTelegraph;
+        bool _dashHit;
+
+        public bool IsDashing => _dashLeft > 0f;
+        public bool IsStuck { get; private set; }
+
+        /// <summary>Starts a straight-line charge: it can't turn, hits the player once on contact, and sticks in obstacles.</summary>
+        public void BeginDash(Vector3 direction, float distance, int damage, Telegraph telegraph)
+        {
+            direction.y = 0f;
+            _dashDir = direction.sqrMagnitude > 1e-4f ? direction.normalized : transform.forward;
+            _dashLeft = Mathf.Max(0f, distance);
+            _dashDamage = damage; _dashTelegraph = telegraph; _dashHit = false;
+            transform.rotation = Quaternion.LookRotation(_dashDir);
+        }
+
+        /// <summary>The walkable part of a step: slides along walls, stops if fully blocked (monsters no longer pass through scenery).</summary>
+        Vector3 Blocked(Vector3 dir, float distance)
+        {
+            var col = GetComponent<Collider>();
+            Vector3 from = col != null ? col.bounds.center : transform.position + Vector3.up * 0.4f;
+            float radius = col != null ? Mathf.Min(col.bounds.extents.x, col.bounds.extents.z) * 0.8f : 0.3f;
+            Vector3 step = dir * distance;
+            for (int i = 0; i < 2; i++)
+            {
+                if (!Physics.SphereCast(from, radius, step.normalized, out var hit, step.magnitude + 0.05f, ~0, QueryTriggerInteraction.Ignore)
+                    || hit.collider.GetComponentInParent<MonsterDummy>() != null || hit.collider.GetComponentInParent<PlayerDefense>() != null
+                    || hit.normal.y > 0.6f) // walkable ground, not a wall
+                    return step;
+                step = Vector3.ProjectOnPlane(step, new Vector3(hit.normal.x, 0f, hit.normal.z).normalized); // slide along it
+                if (step.sqrMagnitude < 1e-6f) return Vector3.zero;
+            }
+            return Vector3.zero;
+        }
+
+        int RollDamage(double power)
+        {
             int def = _playerCombat != null ? _playerCombat.Stats.Def : 10;
             var species = AscendData.Db.Species[_body.SpeciesId];
-            var dmg = _calc.Compute(new DamageInput { Kind = DamageKind.Physical, Attack = species.Stats.Atk, Defense = def, Power = atk.Power }, _rng);
-            _player.ReceiveAttack(dmg.Amount, _brain.CurrentTelegraph, _body);
+            return _calc.Compute(new DamageInput { Kind = DamageKind.Physical, Attack = species.Stats.Atk, Defense = def, Power = power }, _rng).Amount;
         }
+
+        /// <summary>Moves a dash one step: straight on, hits the player once on contact, sticks in obstacles.</summary>
+        void DashStep(float dt)
+        {
+            float speed = Mathf.Max(6f, _dashSpeed);
+            float step = Mathf.Min(_dashLeft, speed * dt);
+            var col = GetComponent<Collider>();
+            Vector3 chest = col != null ? col.bounds.center : transform.position + Vector3.up * 0.4f; // works for feet- and centre-pivoted bodies
+            if (Physics.Raycast(chest, _dashDir, out var hit, step + 0.4f, ~0, QueryTriggerInteraction.Ignore)
+                && hit.collider.GetComponentInParent<MonsterDummy>() == null && hit.collider.GetComponentInParent<PlayerDefense>() == null)
+            {
+                // Missed and ran into something solid: horn stuck in the wood (the rookie's punish window).
+                _dashLeft = 0f;
+                IsStuck = true;
+                _brain.Stun(StuckSec);
+                CombatFx.Play(CombatFx.Sfx.Block, transform.position);
+                return;
+            }
+            transform.position += _dashDir * step;
+            _dashLeft -= step;
+            Vector3 toPlayer = _player.transform.position - transform.position; toPlayer.y = 0;
+            if (!_dashHit && toPlayer.magnitude <= DashContactM)
+            {
+                _dashHit = true;
+                _player.ReceiveAttack(_dashDamage, _dashTelegraph, _body);
+            }
+        }
+
+        float _dashSpeed;
 
         void ReleaseToken()
         {

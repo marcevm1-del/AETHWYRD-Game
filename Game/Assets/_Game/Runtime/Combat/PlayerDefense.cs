@@ -22,6 +22,10 @@ namespace Ascend.Game
         public int Hp { get; private set; } = 100;
         public bool IsBlocking { get; private set; }
         public DefenseResult LastResult { get; private set; } = DefenseResult.Hit;
+        /// <summary>Held by a grab (gold telegraph): no moving, attacking or dodging until it lets go.</summary>
+        public bool IsHeld => Time.time < _heldUntil;
+        public const float GrabHoldSec = 1.0f;
+        float _heldUntil = -1f;
 
         /// <summary>Raised after every incoming attack with the result and the damage taken.</summary>
         public event Action<DefenseResult, int> Defended;
@@ -73,8 +77,10 @@ namespace Ascend.Game
                     CombatFx.Play(CombatFx.Sfx.Block, transform.position);
                     CombatFx.Rumble(HitWeight.Light);
                     break;
-                case DefenseResult.Hit:
                 case DefenseResult.Grabbed:
+                    _heldUntil = Time.time + GrabHoldSec;
+                    goto case DefenseResult.Hit;
+                case DefenseResult.Hit:
                     CameraShake.Kick(HitWeight.Medium);
                     if (taken > 0) _combat?.Style.RegisterPlayerHit();
                     CombatFx.Play(CombatFx.Sfx.PlayerHurt, transform.position);

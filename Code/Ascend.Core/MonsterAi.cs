@@ -103,7 +103,7 @@ namespace Ascend.Core
         readonly List<(AttackData data, AttackTimingData timing)> _attacks;
         readonly Dictionary<string, double> _cooldownLeft = new Dictionary<string, double>();
         readonly IRandom _rng;
-        double _stateTime, _windup;
+        double _stateTime, _windup, _staggerFor = StaggerSec;
 
         public AiState State { get; private set; } = AiState.Idle;
         public AttackData CurrentAttack { get; private set; }
@@ -144,8 +144,12 @@ namespace Ascend.Core
         public double MinRangeOf(AttackTimingData t) => IsRanged(t.Kind) ? RangedMin : IsGapCloser(t.Kind) ? DashMin : 0;
 
         /// <summary>A forced interrupt (poise break or a parry): cancels any windup or strike.</summary>
-        public void Stagger()
+        public void Stagger() => Stun(StaggerSec);
+
+        /// <summary>Stagger for a custom time (e.g. a charging rabbit stuck in a tree: the big punish window).</summary>
+        public void Stun(double seconds)
         {
+            _staggerFor = Math.Max(0.05, seconds);
             Enter(AiState.Staggered);
             CurrentAttack = null; CurrentTiming = null;
         }
@@ -220,7 +224,7 @@ namespace Ascend.Core
 
                 case AiState.Staggered:
                     cmd.ReleaseToken = true;
-                    if (_stateTime >= StaggerSec) Enter(AiState.Chase);
+                    if (_stateTime >= _staggerFor) Enter(AiState.Chase);
                     break;
             }
             return cmd;

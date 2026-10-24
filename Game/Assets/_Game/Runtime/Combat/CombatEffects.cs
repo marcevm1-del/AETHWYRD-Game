@@ -170,3 +170,66 @@ namespace Ascend.Game
         }
     }
 }
+
+namespace Ascend.Game
+{
+    /// <summary>
+    /// A monster's thrown or cast attack (goblin junk, slime acid, water magic): flies at the player's chest from where
+    /// they were at the strike, keeps its telegraph colour, and is resolved through PlayerDefense on contact, so it
+    /// can be dodged (sidestep, or i-frames as it arrives), parried if blue, or blocked. Solid obstacles stop it.
+    /// </summary>
+    public sealed class MonsterProjectile : UnityEngine.MonoBehaviour
+    {
+        public const float ContactRadius = 0.6f, MaxRange = 16f;
+
+        PlayerDefense _target;
+        MonsterDummy _owner;
+        UnityEngine.Vector3 _velocity;
+        float _travelled;
+        int _damage;
+        Ascend.Core.Telegraph _telegraph;
+
+        public static int Live { get; private set; }
+        public Ascend.Core.DefenseResult? Result { get; private set; }
+
+        public static MonsterProjectile Launch(UnityEngine.Vector3 from, PlayerDefense target, int damage, Ascend.Core.Telegraph telegraph, MonsterDummy owner, float speed)
+        {
+            var go = UnityEngine.GameObject.CreatePrimitive(UnityEngine.PrimitiveType.Sphere);
+            go.name = "MonsterProjectile";
+            UnityEngine.Object.Destroy(go.GetComponent<UnityEngine.Collider>());
+            go.transform.position = from;
+            go.transform.localScale = UnityEngine.Vector3.one * 0.22f;
+            var r = go.GetComponent<UnityEngine.Renderer>();
+            r.material = new UnityEngine.Material(UnityEngine.Shader.Find("Universal Render Pipeline/Unlit") ?? UnityEngine.Shader.Find("Sprites/Default"));
+            r.material.color = MonsterController.ColorOf(telegraph);
+            var p = go.AddComponent<MonsterProjectile>();
+            var aim = target.transform.position + UnityEngine.Vector3.up * 1.0f;
+            p._velocity = (aim - from).normalized * speed;
+            p._target = target; p._owner = owner; p._damage = damage; p._telegraph = telegraph;
+            return p;
+        }
+
+        void OnEnable() => Live++;
+        void OnDisable() => Live--;
+
+        void Update()
+        {
+            float dt = UnityEngine.Time.deltaTime;
+            if (dt <= 0f || _target == null) return;
+            var step = _velocity * dt;
+            if (UnityEngine.Physics.Raycast(transform.position, _velocity.normalized, out var hit, step.magnitude, ~0, UnityEngine.QueryTriggerInteraction.Ignore)
+                && hit.collider.GetComponentInParent<MonsterDummy>() == null && hit.collider.GetComponentInParent<PlayerDefense>() == null)
+            { Destroy(gameObject); return; } // hit a wall or the ground
+            transform.position += step;
+            _travelled += step.magnitude;
+            var chest = _target.transform.position + UnityEngine.Vector3.up * 1.0f;
+            if ((chest - transform.position).magnitude <= ContactRadius)
+            {
+                Result = _target.ReceiveAttack(_damage, _telegraph, _owner);
+                Destroy(gameObject);
+                return;
+            }
+            if (_travelled >= MaxRange) Destroy(gameObject);
+        }
+    }
+}
