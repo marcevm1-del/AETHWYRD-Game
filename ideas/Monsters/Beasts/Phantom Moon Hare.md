@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_phantom_moon_hare_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_moon_hare_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,330 tris · 0.193 × 0.5 × 0.366 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Moon Hare is a small creature with a compact quadruped frame, about 0.5 m long. Its coat is weathered and natural, colored in warm gold and pearl white. Its most striking feature is white fur that glows under the full moon. It has dark, wary eyes. A distinctive marking runs along its back. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

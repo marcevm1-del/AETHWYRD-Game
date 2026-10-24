@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_floor_tyrant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_floor_tyrant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,134 tris · 6.871 × 3.95 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Floor Tyrant is a huge creature with a giant, barrel-chested humanoid body, about 8 m tall. Its stone-like hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a crown of stalactites. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by pebbles that tremble and float near it.
 

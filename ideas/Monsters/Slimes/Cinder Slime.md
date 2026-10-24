@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_cinder_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cinder_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,472 tris · 1.352 × 1.352 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Cinder Slime is a person-sized creature with a dome-shaped gelatinous body, about 1.2 m tall. Its gel is weathered and natural, colored in ember reds fading to soot black. Guild sketches always show a storm-cloud interior that flashes with tiny lightning. It has amber predator eyes. Faint runes glow along its body when it fights. It lopes in long strides, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

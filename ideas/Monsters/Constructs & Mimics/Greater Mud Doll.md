@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_greater_mud_doll_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_mud_doll_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,104 tris · 0.732 × 0.835 × 1.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Mud Doll is a person-sized creature with a small, compact humanoid body, about 1.3 m tall. Its surface is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe a child's clay figure with thumbprint eyes. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

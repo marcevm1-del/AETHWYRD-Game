@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_man_eater_plant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_man_eater_plant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,762 tris · 2.606 × 1.961 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Man-Eater Plant is a large creature with a rooted plant body, about 2.5 m tall. Its bark and leaves are rough, scarred and spiked, colored in leaf greens over bark brown. Guild sketches always show a flower with jaws made of petals. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by drifting pollen and tiny blossoms.
 

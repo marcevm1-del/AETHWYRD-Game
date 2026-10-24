@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 ![[mon_skarn_the_fire_giant_warlord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_skarn_the_fire_giant_warlord_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,498 tris · 8.159 × 4.691 × 9.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Skarn, the Fire Giant Warlord is a huge creature with a towering, heavy-limbed body, about 9.5 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe a forge-hammer the size of a house and a beard of living flame. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 

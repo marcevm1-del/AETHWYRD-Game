@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_tide_bandit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_tide_bandit_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,108 tris · 1.061 × 1.14 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Tide Bandit is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a patched cloak and a mismatched sword. It has burning slit pupils. It has no ornament at all: simple, readable shapes. It strides with heavy steps, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

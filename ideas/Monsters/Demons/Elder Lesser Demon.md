@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_elder_lesser_demon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_lesser_demon_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,120 tris · 1.897 × 1.315 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Lesser Demon is a large creature with a lean humanoid frame, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Look for curled horns and a leathery hide. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

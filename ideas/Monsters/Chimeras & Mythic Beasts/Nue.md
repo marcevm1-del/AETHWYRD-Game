@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_nue_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_nue_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,088 tris · 0.608 × 3 × 1.701 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Nue is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in storm violet shot through with electric yellow. Its most striking feature is a monkey's face, a tiger's body and a snake for a tail. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by crackling arcs that jump across its body.
 

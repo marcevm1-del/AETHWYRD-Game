@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_tide_starmetal_colossus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_tide_starmetal_colossus_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,936 tris · 112.866 × 38.332 × 120 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Tide Starmetal Colossus is a colossal creature with a towering machine-like frame, about 120 m tall. Its surface is weathered and natural, colored in deep blues with a glassy shine. Its most striking feature is a starmetal body that hums with Titan songs. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It lopes in long strides, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

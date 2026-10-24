@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_giant_ant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_giant_ant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,168 tris · 0.546 × 0.6 × 0.279 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Giant Ant is a small creature with a low, wide insectoid build, about 0.6 m long. Its chitin is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is red-brown chitin and mandibles like pliers. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
 

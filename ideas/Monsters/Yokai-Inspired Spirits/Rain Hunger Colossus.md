@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_rain_hunger_colossus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rain_hunger_colossus_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,184 tris · 18.251 × 12.93 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Rain Hunger Colossus is a colossal creature with a massive hunched brute frame, about 30 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Survivors describe a skeleton giant built from the bones of the starved. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

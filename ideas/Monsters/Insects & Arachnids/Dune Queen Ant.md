@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_dune_queen_ant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dune_queen_ant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,398 tris · 3.676 × 3.5 × 3.215 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Dune Queen Ant is a large creature with a six-legged armored body, about 3.5 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a swollen abdomen pulsing with eggs. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 

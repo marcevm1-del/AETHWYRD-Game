@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_dusk_clockwork_sentinel_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dusk_clockwork_sentinel_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,374 tris · 2.377 × 1.469 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Dusk Clockwork Sentinel is a large creature with a heavy, hand-built humanoid shell, about 2.5 m tall. Its surface is rough, scarred and spiked, colored in ink black with bruised violet. Look for brass gears visible through its ribs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_skeleton_knight_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_skeleton_knight_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,752 tris · 1.178 × 1.266 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Skeleton Knight is a person-sized creature with a lean humanoid frame, about 2 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Look for rusted plate armor and a shield it still keeps polished. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by shadows that lean toward it.
 

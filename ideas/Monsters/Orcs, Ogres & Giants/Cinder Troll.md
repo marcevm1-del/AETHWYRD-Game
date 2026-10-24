@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_cinder_troll_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cinder_troll_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,606 tris · 2.748 × 1.688 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Cinder Troll is a large creature with a towering, heavy-limbed body, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Look for moss-covered skin that knits itself back together. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by heat-shimmer and drifting sparks. Adapted to volcanic lands, it has ash-dark coloring with glowing cracks.
 

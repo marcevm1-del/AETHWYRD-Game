@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_vesper_touched_cave_spider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_cave_spider_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (4,152 tris · 0.617 × 0.7 × 0.943 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Cave Spider is a small creature with a squat, many-legged arachnid build, about 0.7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a pale body that glows faintly in the dark. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

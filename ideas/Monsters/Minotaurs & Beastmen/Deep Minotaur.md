@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_deep_minotaur_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_deep_minotaur_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,238 tris · 2.748 × 1.662 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Deep Minotaur is a large creature with a giant, barrel-chested humanoid body, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a bull's head, a massive labrys axe and snorting breath. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 

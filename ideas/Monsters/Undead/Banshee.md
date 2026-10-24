@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_banshee_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_banshee_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,776 tris · 1.308 × 1.222 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Banshee is a person-sized creature with a bodiless, glowing form, about 1.8 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in pale jade and cloud white. Look for long white hair and a mouth that opens far too wide. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by swirling leaves and a constant breeze.
 

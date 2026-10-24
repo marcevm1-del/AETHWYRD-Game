@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_bone_weevil_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bone_weevil_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,862 tris · 0.519 × 1 × 0.39 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Bone Weevil is a small creature with a low, wide insectoid build, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a shell made from the bones it eats. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it.
 

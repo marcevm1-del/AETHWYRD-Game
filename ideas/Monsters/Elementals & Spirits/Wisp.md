@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_wisp_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_wisp_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,392 tris · 0.35 × 0.262 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Wisp is a tiny creature with a floating, cloth-like shape, about 0.3 m tall. Its body is smooth and clean, colored in warm gold and pearl white. Its most striking feature is a floating ball of soft light. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by soft radiance and floating motes of light.
 

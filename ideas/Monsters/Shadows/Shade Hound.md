@@ -11,7 +11,7 @@ tags: [monster, shadows]
 ![[mon_shade_hound_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_shade_hound_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,180 tris · 0.431 × 1.4 × 1.188 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Shade Hound is a person-sized creature with a powerful four-legged hunter's body, about 1.4 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a dog made of smoke with ember eyes. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 

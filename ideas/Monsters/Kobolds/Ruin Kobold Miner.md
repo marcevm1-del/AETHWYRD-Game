@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_ruin_kobold_miner_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_kobold_miner_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,632 tris · 0.452 × 0.382 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ruin Kobold Miner is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is weathered and natural, colored in ink black with bruised violet. Survivors describe a candle-helmet and a pick worn smooth from use. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

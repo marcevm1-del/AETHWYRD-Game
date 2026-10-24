@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_iron_prismatic_slime_sovereign_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_iron_prismatic_slime_sovereign_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,096 tris · 8.505 × 8.505 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Iron Prismatic Slime Sovereign is a huge creature with a dome-shaped gelatinous body, about 8 m tall. Its gel is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a crown of rainbow light refracted through its whole body. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It prowls, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

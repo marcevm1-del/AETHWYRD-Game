@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_rot_vampire_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rot_vampire_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,164 tris · 1.192 × 0.811 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Rot Vampire Lord is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its flesh and bone are rough, scarred and spiked, colored in bruise purple with sickly green. Look for a cape that dissolves into bats. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

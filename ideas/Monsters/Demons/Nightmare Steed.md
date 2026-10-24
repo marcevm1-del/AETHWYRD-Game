@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_nightmare_steed_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_nightmare_steed_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,942 tris · 0.964 × 2.5 × 2.175 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Nightmare Steed is a large creature with a powerful four-legged hunter's body, about 2.5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Look for flame hooves and a mane of smoke. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 

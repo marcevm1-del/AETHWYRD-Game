@@ -69,7 +69,7 @@ namespace Ascend.Game
             float dt = PlayerDelta;
             Vector3 world = CameraRelative(_move.ReadValue<Vector2>());
             bool attacking = _combat != null && _combat.IsAttacking;
-            if (_defense != null && _defense.IsHeld)
+            if (_defense != null && (_defense.IsHeld || _defense.IsDead))
             {
                 // Grabbed: only gravity runs until the monster lets go.
                 if (_combat != null) _combat.Tick(dt);

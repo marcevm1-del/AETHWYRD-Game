@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_venom_elemental_sovereign_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_venom_elemental_sovereign_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,074 tris · 18.488 × 14.037 × 20 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Venom Elemental Sovereign is a colossal creature with a floating, cloth-like shape, about 20 m tall. Its body is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show four orbiting crowns of fire, ice, storm and stone. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_kobold_tunnel_queen_veteran_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_kobold_tunnel_queen_veteran_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,150 tris · 1.288 × 1.515 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Kobold Tunnel-Queen Veteran is a large creature with a small, compact humanoid body, about 2.6 m tall. Its mangy fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a bloated, jewel-encrusted body carried on a litter. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

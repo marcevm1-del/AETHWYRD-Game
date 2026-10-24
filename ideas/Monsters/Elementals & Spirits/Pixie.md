@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_pixie_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_pixie_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,364 tris · 0.351 × 0.134 × 0.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Pixie is a tiny creature with a small winged body, about 0.2 m tall. Its body is smooth and clean, colored in pale jade and cloud white. Its most striking feature is dragonfly wings and a mischievous grin. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It waddles, surrounded by swirling leaves and a constant breeze.
 

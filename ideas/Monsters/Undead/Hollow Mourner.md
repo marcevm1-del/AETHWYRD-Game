@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_hollow_mourner_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hollow_mourner_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,180 tris · 0.653 × 0.913 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Hollow Mourner is a person-sized creature with a lean humanoid frame, about 1.7 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a weeping figure that moves only when you look away. It has pale, pupil-less eyes. It has no ornament at all: simple, readable shapes. It glides without moving its legs, surrounded by shadows that lean toward it.
 

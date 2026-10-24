@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_venom_spider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_venom_spider_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,416 tris · 1.26 × 1.4 × 0.782 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Venom Spider is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is green-striped legs and dripping fangs. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 

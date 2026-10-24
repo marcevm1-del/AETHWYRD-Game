@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_vesper_touched_kraken_spawn_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_kraken_spawn_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,732 tris · 23.934 × 25 × 23.667 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Kraken Spawn is a colossal creature with a huge many-armed sea body, about 25 m long. Its scales and skin are stretched, stitched and constantly shifting, colored in deep blues with a glassy shine. Its most striking feature is a galleon-sized body with hooked tentacles. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It copies the walk of whatever it hunts, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

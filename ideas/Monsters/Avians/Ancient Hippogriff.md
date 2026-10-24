@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_ancient_hippogriff_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_hippogriff_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,932 tris · 1.083 × 4.2 × 2.443 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Hippogriff is a large creature with a heavy, muscular quadruped frame, about 4.2 m long. Its plumage is weathered and natural, colored in pale jade and cloud white. Guild sketches always show an eagle's head on a horse's body. It has dark, wary eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by swirling leaves and a constant breeze. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

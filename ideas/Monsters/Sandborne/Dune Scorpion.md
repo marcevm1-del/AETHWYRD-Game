@@ -11,7 +11,7 @@ tags: [monster, sandborne]
 ![[mon_dune_scorpion_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dune_scorpion_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,918 tris · 2.067 × 2 × 1.808 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Dune Scorpion is a person-sized creature with a low, wide insectoid build, about 2 m long. Its sand-scoured hide is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is a glass-like tail stinger. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 

@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies, unique]
 ![[mon_corrupted_summoned_hero_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_corrupted_summoned_hero_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,036 tris · 0.793 × 0.879 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Corrupted Summoned Hero is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Guild sketches always show a Veilborn swallowed by the red moon. It has eyes set slightly too far apart. Its presence is world-scale; the sky changes color when it appears. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 

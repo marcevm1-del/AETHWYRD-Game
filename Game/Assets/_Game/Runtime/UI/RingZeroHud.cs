@@ -19,6 +19,8 @@ namespace Ascend.Game
 
         PlayerDefense _defense;
         LockOn _lock;
+        PlayerInventory _inv;
+        PlayerRespawn _respawn;
         InputAction _status;
         string _banner;
         float _bannerUntil, _toastUntil;
@@ -51,6 +53,8 @@ namespace Ascend.Game
             if (player == null) return;
             _defense = player.GetComponent<PlayerDefense>();
             _lock = player.GetComponent<LockOn>();
+            _inv = player.GetComponent<PlayerInventory>();
+            _respawn = player.GetComponent<PlayerRespawn>();
             player.LeveledUp -= OnLevelUp; player.LeveledUp += OnLevelUp;
             player.XpGained -= OnXp; player.XpGained += OnXp;
         }
@@ -128,6 +132,7 @@ namespace Ascend.Game
             Bar(x, ref y, "MP", (float)c.Mp, (float)c.MaxMp, new Color(0.3f, 0.55f, 1f));
             Bar(x, ref y, "AWK", (float)c.Awakening, (float)c.MaxAwakening, new Color(0.85f, 0.4f, 1f));
             Bar(x, ref y, "XP", player.Progress.XpIntoLevel, Mathf.Max(1, player.Progress.ToNext), new Color(0.5f, 0.9f, 0.5f));
+            if (_inv != null) { GUI.Label(new Rect(x, y, 320, 20), $"Purse: {_inv.MoneyText}", _small); y += 22; }
 
             // Style Rank (top-right)
             float sw = Screen.width;
@@ -153,6 +158,23 @@ namespace Ascend.Game
             // Banners and toasts (centre)
             if (Banner != null) GUI.Label(new Rect(0, Screen.height * 0.3f, sw, 60), Banner, _big);
             if (Time.unscaledTime < _toastUntil) GUI.Label(new Rect(sw / 2 - 80, Screen.height * 0.3f + 60, 160, 24), $"+{_toastXp} XP", _small);
+
+            // Pickups (right, under the Style Rank)
+            if (_inv != null) { float ty = 100; foreach (var t in _inv.Toasts) { GUI.Label(new Rect(sw - 260, ty, 240, 20), t, _small); ty += 20; } }
+
+            // Death screen
+            if (_respawn != null && _respawn.IsDead)
+            {
+                float sh = Screen.height;
+                GUI.Box(new Rect(0, 0, sw, sh), "");
+                GUI.Label(new Rect(0, sh * 0.32f, sw, 60), "YOU FELL", _big);
+                GUI.Label(new Rect(sw / 2 - 300, sh * 0.32f + 70, 600, 24), $"Defeated by {_respawn.KilledBy} (Rank {_respawn.KillerRank})", _small);
+                GUI.Label(new Rect(sw / 2 - 300, sh * 0.32f + 96, 600, 24), $"Tip: {_respawn.Tip}", _small);
+                var pen = _respawn.LastPenalty;
+                string lost = pen.DroppedCopper > 0 ? $"Dropped {Money.Format(pen.DroppedCopper, AscendData.Db.World.Currency)} — recover it from the blue lantern." : "Nothing was lost.";
+                if (pen.XpLost > 0) lost += $"  Lost {pen.XpLost} XP.";
+                GUI.Label(new Rect(sw / 2 - 300, sh * 0.32f + 122, 600, 24), lost, _small);
+            }
 
             // Status Window
             if (StatusOpen)

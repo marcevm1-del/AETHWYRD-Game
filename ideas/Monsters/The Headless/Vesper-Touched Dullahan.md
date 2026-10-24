@@ -11,7 +11,7 @@ tags: [monster, the-headless]
 ![[mon_vesper_touched_dullahan_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_dullahan_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,746 tris · 2.188 × 3.611 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Dullahan is a large creature with an armored humanoid body without a head, about 2.8 m tall. Its armor is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its own laughing head carried under one arm. It has too many eyes, opening one after another. An elegant crest and glowing veins of mana mark it as a champion of its kind. It unfolds into something larger, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

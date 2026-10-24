@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_skinchanger_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_skinchanger_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,806 tris · 1.318 × 1.619 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Skinchanger is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its fur is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its most striking feature is half its body stuck mid-transformation, forever. It has too many eyes, opening one after another. Faint runes glow along its body when it fights. It unfolds into something larger, surrounded by shadows that lean toward it.
 

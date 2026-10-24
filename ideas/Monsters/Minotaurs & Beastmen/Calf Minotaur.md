@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_calf_minotaur_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_calf_minotaur_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,610 tris · 1.718 × 1.024 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Calf Minotaur is a person-sized creature with a towering, heavy-limbed body, about 2 m tall. Its hide is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show stubby horns and a bronze nose ring. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 

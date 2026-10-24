@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_bomber_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_bomber_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,678 tris · 0.502 × 0.442 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Goblin Bomber is a small creature with a hunched, wiry humanoid frame, about 1 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is a barrel of black powder strapped to its back and a lit fuse in its teeth. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 

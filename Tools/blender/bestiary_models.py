@@ -1034,13 +1034,51 @@ def render_species(s):
     render(os.path.join(folder, f"{s['id']}_sheet.jpg"))
 
 
+MODELS = os.path.join(ROOT, "Game", "Assets", "_Game", "Art", "Models", "Monsters")
+REGISTRY = os.path.join(ROOT, "Art", "Generation", "monster_models.json")
+HAND_BUILT = {"mon_blue_slime", "mon_goblin", "mon_horned_rabbit"}  # Ring 0 models from ring0_monsters.py win
+
+
+def export_species(s, registry):
+    """Exports the blockout as a Unity FBX at real size (local-only, like generated models) unless a better model exists."""
+    if s["id"] in HAND_BUILT or registry.get(s["id"], {}).get("status") == "generated":
+        return None
+    reset()
+    model = build_species(s)
+    lo, hi = bbox(model)
+    long_ = " m long" in s.get("look", "")
+    measured = (hi.y - lo.y) if long_ else (hi.z - lo.z)
+    k = float(s.get("sizeMeters") or 1.0) / max(1e-4, measured)
+    model.scale = (k, k, k)
+    bpy.ops.object.transform_apply(scale=True)
+    lo, hi = bbox(model)
+    model.location -= Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, lo.z))
+    bpy.ops.object.transform_apply(location=True)
+    bpy.context.scene.cursor.location = (0, 0, 0)
+    bpy.ops.object.origin_set(type="ORIGIN_CURSOR")
+    folder = os.path.join(MODELS, s.get("family", "Other").replace("/", "-"))
+    os.makedirs(folder, exist_ok=True)
+    fbx = os.path.join(folder, f"{s['id']}.fbx")
+    bpy.ops.object.select_all(action="DESELECT")
+    model.select_set(True)
+    bpy.context.view_layer.objects.active = model
+    bpy.ops.export_scene.fbx(filepath=fbx, use_selection=True, object_types={"MESH"}, axis_forward="-Z", axis_up="Y",
+                             apply_scale_options="FBX_SCALE_UNITS", bake_space_transform=True, mesh_smooth_type="FACE")
+    lo, hi = bbox(model)
+    return {"status": "blockout", "provider": "procedural (bestiary_models.py)",
+            "tris": sum(len(p.vertices) - 2 for p in model.data.polygons),
+            "sizeM": [round(hi.x - lo.x, 3), round(hi.y - lo.y, 3), round(hi.z - lo.z, 3)],
+            "fbx": os.path.relpath(fbx, ROOT).replace("\\", "/"), "fbxBytes": os.path.getsize(fbx)}
+
+
 def args():
     a = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
-    opts = {"start": 0, "count": None, "ids": None}
+    opts = {"start": 0, "count": None, "ids": None, "export": False}
     for i, k in enumerate(a):
         if k == "--start": opts["start"] = int(a[i + 1])
         if k == "--count": opts["count"] = int(a[i + 1])
         if k == "--ids": opts["ids"] = set(a[i + 1].split(","))
+        if k == "--export": opts["export"] = True  # write Unity FBX blockouts instead of rendering images
     return opts
 
 
@@ -1053,6 +1091,27 @@ def main():
     else:
         species = species[o["start"]: o["start"] + o["count"] if o["count"] else None]
     ok = fail = 0
+    if o["export"]:
+        reg = {"version": 1, "note": "Monster models. FBX files are local-only (gitignored); this file is the record.", "models": {}}
+        if os.path.exists(REGISTRY):
+            with open(REGISTRY, encoding="utf-8") as f:
+                reg = json.load(f)
+        for s in species:
+            try:
+                entry = export_species(s, reg["models"])
+                if entry:
+                    reg["models"][s["id"]] = entry
+                ok += 1
+            except Exception as e:
+                fail += 1
+                print(f"[Ascend] FAILED {s['id']}: {e!r}", flush=True)
+        reg["count"] = len(reg["models"])
+        os.makedirs(os.path.dirname(REGISTRY), exist_ok=True)
+        with open(REGISTRY, "w", encoding="utf-8") as f:
+            json.dump(reg, f, indent=1, sort_keys=True)
+            f.write("\n")
+        print(f"[Ascend] export done: {ok} ok, {fail} failed, registry {reg['count']} models", flush=True)
+        return
     for s in species:
         try:
             render_species(s)

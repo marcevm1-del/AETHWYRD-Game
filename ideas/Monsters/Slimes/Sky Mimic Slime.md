@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_sky_mimic_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sky_mimic_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,304 tris · 0.798 × 0.892 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Sky Mimic Slime is a small creature with a dome-shaped gelatinous body, about 1 m tall. Its gel is patchy and subtly wrong, as if assembled from memory, colored in pale jade and cloud white. Guild sketches always show a surface that ripples into the shape of whatever it last ate. It has pale, pupil-less eyes. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

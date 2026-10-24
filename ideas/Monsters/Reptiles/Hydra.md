@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_hydra_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hydra_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,976 tris · 2.047 × 9 × 3.783 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Hydra is a huge creature with a coiling, legless body, about 9 m long. Its scales are rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show five heads on long necks, each with its own temper. It has narrow glowing eyes. Faint runes glow along its body when it fights. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 

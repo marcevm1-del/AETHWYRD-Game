@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_kobold_scavenger_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_kobold_scavenger_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,122 tris · 0.453 × 0.533 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Kobold Scavenger is a small creature with a hunched, wiry humanoid frame, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show a dog-like head with a chipped snout and a sack of stolen tools. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 

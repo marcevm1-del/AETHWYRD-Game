@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_wyvern_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_wyvern_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,270 tris · 12.522 × 8 × 8.889 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Wyvern is a huge creature with a sleek flying build, about 8 m long. Its scales are rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe tattered wings and a venom-tipped tail. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by swirling leaves and a constant breeze.
 

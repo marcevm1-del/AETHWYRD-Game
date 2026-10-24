@@ -11,7 +11,7 @@ tags: [monster, aberrations]
 ![[mon_phantom_skinwalker_mimic_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_skinwalker_mimic_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,676 tris · 1.836 × 1.726 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Skinwalker Mimic is a person-sized creature with a tall, impossibly thin frame, about 1.8 m tall. Its skin is stretched, stitched and constantly shifting, colored in warm gold and pearl white. It calls you in your companion's voice. It has a human-like face in the wrong place. It has no ornament at all: simple, readable shapes. It copies the walk of whatever it hunts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

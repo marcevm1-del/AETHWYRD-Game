@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_fallen_hero_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_fallen_hero_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,214 tris · 1.119 × 1.842 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Fallen Hero is a person-sized creature with a broad-shouldered humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in warm gold and pearl white. Its most striking feature is tarnished hero armor and eyes that have seen the truth of the System. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by soft radiance and floating motes of light.
 

@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_greater_gnome_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_gnome_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,094 tris · 0.543 × 0.532 × 1.1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Gnome is a small creature with a small, compact humanoid body, about 1.1 m tall. Its body is weathered and natural, colored in ochre, clay and mossy stone. Look for a stone-bearded little figure with gem eyes. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

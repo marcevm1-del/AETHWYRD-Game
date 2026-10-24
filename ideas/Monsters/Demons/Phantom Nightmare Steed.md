@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_phantom_nightmare_steed_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_nightmare_steed_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,256 tris · 0.77 × 2.5 × 2.121 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Nightmare Steed is a large creature with a long-legged predatory quadruped build, about 2.5 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show flame hooves and a mane of smoke. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_behemoth_ascendant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_behemoth_ascendant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,374 tris · 10.311 × 40 × 23.263 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Behemoth Ascendant is a colossal creature with a heavy, muscular quadruped frame, about 40 m long. Its coat is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a back that carries the ruins of a fortress it once trampled. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 

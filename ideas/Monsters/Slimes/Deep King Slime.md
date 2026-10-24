@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_deep_king_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_deep_king_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,712 tris · 3.358 × 3.358 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Deep King Slime is a large creature with a dome-shaped gelatinous body, about 3 m tall. Its gel is weathered and natural, colored in ink black with bruised violet. Its most striking feature is a crown made of smaller slimes fused together. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 

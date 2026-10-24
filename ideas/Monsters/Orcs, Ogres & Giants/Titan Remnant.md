@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants, unique]
 ![[mon_titan_remnant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_titan_remnant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,544 tris · 257.665 × 155.324 × 300 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Titan Remnant is a colossal creature with a giant, barrel-chested humanoid body, about 300 m tall. Its hide is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a mountain with a slow heartbeat. It has amber predator eyes. Its presence is world-scale; the sky changes color when it appears. It prowls, surrounded by pebbles that tremble and float near it.
 

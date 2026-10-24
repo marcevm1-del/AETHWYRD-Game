@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_wild_boar_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_wild_boar_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,756 tris · 0.361 × 1.4 × 0.814 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Wild Boar is a person-sized creature with a heavy, muscular quadruped frame, about 1.4 m long. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Look for curved tusks and a ridge of bristles like iron wire. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 

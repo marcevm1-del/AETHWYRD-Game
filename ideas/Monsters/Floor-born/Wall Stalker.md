@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_wall_stalker_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_wall_stalker_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,820 tris · 1.32 × 1.501 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Wall Stalker is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. It peels itself out of the wall. It has eyes set slightly too far apart. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by pebbles that tremble and float near it.
 

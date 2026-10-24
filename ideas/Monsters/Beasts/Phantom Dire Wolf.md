@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_phantom_dire_wolf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_dire_wolf_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,608 tris · 0.406 × 2 × 1.134 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Dire Wolf is a person-sized creature with a long-legged predatory quadruped build, about 2 m long. Its coat is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Look for a horse-sized frame and a jaw full of jagged fangs. It has pale, pupil-less eyes. A distinctive marking runs along its back. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

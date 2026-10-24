@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_briar_kijin_warrior_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_briar_kijin_warrior_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,252 tris · 1.301 × 1.628 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Briar Kijin Warrior is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its skin is rough, scarred and spiked, colored in leaf greens over bark brown. Survivors describe twin horns, a disciplined stance and a lacquered blade. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

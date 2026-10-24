@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_alley_slaver_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_alley_slaver_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,164 tris · 1.03 × 0.7 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Alley Slaver is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show chains on its belt and a cruel smile. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
 

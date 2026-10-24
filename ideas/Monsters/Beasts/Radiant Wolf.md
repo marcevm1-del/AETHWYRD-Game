@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_radiant_wolf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_radiant_wolf_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,184 tris · 0.272 × 1.2 × 0.539 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Radiant Wolf is a person-sized creature with a heavy, muscular quadruped frame, about 1.2 m long. Its coat is weathered and natural, colored in warm gold and pearl white. Its most striking feature is a grey-green coat that blends with ferns. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

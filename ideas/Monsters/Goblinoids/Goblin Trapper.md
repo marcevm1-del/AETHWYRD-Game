@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_trapper_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_trapper_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,310 tris · 0.494 × 0.398 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Goblin Trapper is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show snares and rusted bells hanging from its belt. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

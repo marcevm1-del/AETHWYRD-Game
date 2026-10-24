@@ -83,6 +83,7 @@ namespace Ascend.Game
             }
             float dt = Time.deltaTime;
             if (dt <= 0f) return; // hit-stop
+            if (_player.IsDead) { ReleaseToken(); ShowTelegraph(false); return; } // the player has fallen: stand down
             if (_body.IsAirborne) { ReleaseToken(); ShowTelegraph(false); return; } // juggled: no thinking in the air
 
             Vector3 toPlayer = _player.transform.position - transform.position; toPlayer.y = 0;

@@ -38,6 +38,21 @@ namespace Ascend.Core
             return gained;
         }
 
+        /// <summary>Loses XP inside the current level only (never a level-down); returns the amount lost.</summary>
+        public long LoseXp(long xp)
+        {
+            long lost = Math.Max(0, Math.Min(XpIntoLevel, xp));
+            XpIntoLevel -= lost;
+            return lost;
+        }
+
+        /// <summary>Restores level and XP from a save.</summary>
+        public void Load(int level, long xpIntoLevel)
+        {
+            Level = Math.Max(1, Math.Min(Levels.Cap, level));
+            XpIntoLevel = Math.Max(0, xpIntoLevel);
+        }
+
         /// <summary>XP for defeating a monster of <paramref name="monsterLevel"/> at the given Style Rank.</summary>
         public long KillXp(int monsterLevel, bool unique, StyleRank style, StyleTuning styleTuning) =>
             (long)Math.Round(_curve.MonsterXp(Math.Max(1, monsterLevel), unique) * (1 + StyleRewards.XpBonus(style, styleTuning)));

@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_tunnel_centipede_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_tunnel_centipede_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (4,020 tris · 1.221 × 6 × 3.186 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Tunnel Centipede is a huge creature with a coiling, legless body, about 6 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a hundred legs and a head like a split mask. It has eyes that never blink. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 

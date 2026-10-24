@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_syndicate_blade_veteran_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_syndicate_blade_veteran_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,544 tris · 1.572 × 1.689 × 2.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Syndicate Blade Veteran is a large creature with an upright humanoid build, about 2.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is no face, no name, two knives. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

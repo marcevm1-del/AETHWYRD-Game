@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_leviathan_young_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_leviathan_young_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,032 tris · 28.283 × 60 × 34.492 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Leviathan Young is a colossal creature with a streamlined aquatic body, about 60 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Its most striking feature is fins like the sails of a warship. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by fine mist and droplets that orbit it.
 

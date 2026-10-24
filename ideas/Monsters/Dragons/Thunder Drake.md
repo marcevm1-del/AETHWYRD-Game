@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_thunder_drake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_thunder_drake_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,794 tris · 1.032 × 3 × 2.015 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Thunder Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in storm violet shot through with electric yellow. Its most striking feature is horns that work like lightning rods. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 

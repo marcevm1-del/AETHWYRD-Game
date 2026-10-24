@@ -52,7 +52,7 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 3. Tell me if anything shows a red error in the Console.
 4. Install **VRoid Studio** (free, Steam or vroid.com) whenever you're ready for Week 2–3.
 
-## Progress (2026-10-23, end of day)
+## Progress (2026-10-24)
 | Week | State |
 |---|---|
 | 1 Project boots | ✅ Done |
@@ -65,7 +65,8 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 | 8 Skills & Firestorm | ✅ Swordsman skills by data kind, Ultimate (Thousand Petal Blade), Fire Bomb, Wind + Fire = Firestorm (burst + burning zone), Combo Budget |
 | 9 Status & Style | ✅ XP and level-ups, Style Rank C → SSS (XP bonus), Awakening, HUD and Status Window (IMGUI placeholder until the styled HUD) |
 | 10 Polish & the fun test | 🔶 Standalone Windows build (*Assets ▸ Ascend ▸ Build Ring 0 Player*, output in `Game/Builds/Ring0/`); the fun-test field has 3 slimes, a goblin pack of 5 and 2 rabbits. Your playtest notes next |
+| Beyond the plan | ✅ Monster projectiles, straight charges that stick in walls, grabs; wall sliding. Coins and loot on kill (Style Rank luck), purse and pickup toasts. Death screen (killer, rank, its field-note tip), difficulty penalty (Adventurer drops 10% in a blue coin lantern, newest only), waystone respawns. Save/load (JSON slot, autosave at waystones and on respawn; bad saves kept as .bad, never loaded). 677 procedural blockout models in Unity (local) |
 
 **Controls** (`12_Systems/hud_and_ui.md` §15): WASD/left stick move · Shift/B dodge (hold to sprint) · Space/A jump · LMB/X light · RMB/Y heavy (hold to charge; after two lights = launcher; in the air = slam) · Q/RT block/parry · MMB/R3 lock-on · 1–4 or RB + face skills · R or L3+R3 Ultimate · G or D-pad up Fire Bomb · Tab/Esc/Start Status Window.
 
-**Tests:** 91 rules + 39 Unity PlayMode.
+**Tests:** 100 rules + 64 Unity PlayMode.

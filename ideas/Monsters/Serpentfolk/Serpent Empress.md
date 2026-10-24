@@ -11,7 +11,7 @@ tags: [monster, serpentfolk]
 ![[mon_serpent_empress_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_serpent_empress_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (5,882 tris · 6.07 × 12 × 7.661 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Serpent Empress is a huge creature with a humanoid upper body on a long serpent tail, about 12 m long. Its scales are rough, scarred and spiked, colored in bruise purple with sickly green. Look for a crown of living snakes. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground.
 

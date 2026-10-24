@@ -29,6 +29,9 @@ namespace Ascend.Game
 
         /// <summary>Raised after every incoming attack with the result and the damage taken.</summary>
         public event Action<DefenseResult, int> Defended;
+        /// <summary>Raised once when HP reaches 0 (with the monster that landed the blow, if any).</summary>
+        public event Action<MonsterDummy> Died;
+        public bool IsDead => Hp <= 0;
 
         void Awake()
         {
@@ -49,6 +52,7 @@ namespace Ascend.Game
 
         public DefenseResult ReceiveAttack(int rawDamage, Telegraph telegraph, MonsterDummy attacker = null)
         {
+            if (IsDead) return DefenseResult.Dodged; // nothing more can happen to a fallen player
             var r = DefenseJudge.Resolve(telegraph, Time.unscaledTimeAsDouble, _motor.DodgeStartedAt, _motor.IsInvulnerable,
                 _blockPressedAt, IsBlocking, _t.Dodge, _t.Parry);
             int taken = DefenseJudge.DamageTaken(r, rawDamage, _t.Parry);
@@ -89,8 +93,12 @@ namespace Ascend.Game
             }
             LastResult = r;
             Defended?.Invoke(r, taken);
+            if (IsDead && taken > 0) Died?.Invoke(attacker);
             return r;
         }
+
+        /// <summary>Back to full health (respawn).</summary>
+        public void Revive() { Hp = MaxHp; _heldUntil = -1f; IsBlocking = false; }
 
         public void Heal(int amount) => Hp = Mathf.Min(MaxHp, Hp + Mathf.Max(0, amount));
     }

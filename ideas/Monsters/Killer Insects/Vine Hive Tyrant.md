@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_vine_hive_tyrant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vine_hive_tyrant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,174 tris · 9.804 × 7 × 9.825 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vine Hive Tyrant is a huge creature with a sleek flying build, about 7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in leaf greens over bark brown. Its most striking feature is a winged queen-killer with a crown of stingers. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
 

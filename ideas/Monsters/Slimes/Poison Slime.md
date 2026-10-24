@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_poison_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_poison_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,726 tris · 0.612 × 0.612 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Poison Slime is a small creature with a wobbling mound of translucent gel, about 0.6 m tall. Its gel is rough, scarred and spiked, colored in bruise purple with sickly green. Survivors describe purple bubbles that hiss when they pop. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 

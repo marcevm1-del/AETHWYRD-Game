@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_living_armor_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_living_armor_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,250 tris · 1.03 × 1.695 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Living Armor is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its surface is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe an empty suit of plate that walks. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 

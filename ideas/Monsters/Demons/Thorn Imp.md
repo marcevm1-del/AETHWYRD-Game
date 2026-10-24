@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_thorn_imp_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_thorn_imp_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,828 tris · 1.25 × 1.019 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Thorn Imp is a small creature with a bat-like flying frame, about 0.6 m tall. Its hide is weathered and natural, colored in leaf greens over bark brown. Guild sketches always show bat wings, a pointed tail and a cheeky grin. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

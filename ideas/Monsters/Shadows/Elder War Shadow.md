@@ -11,7 +11,7 @@ tags: [monster, shadows]
 ![[mon_elder_war_shadow_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_war_shadow_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,474 tris · 1.228 × 0.785 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder War Shadow is a large creature with a broad-shouldered humanoid build, about 3.2 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a humanoid silhouette with blades for hands. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

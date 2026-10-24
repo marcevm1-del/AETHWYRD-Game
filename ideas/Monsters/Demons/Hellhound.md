@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_hellhound_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hellhound_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,346 tris · 0.578 × 1.5 × 1.305 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Hellhound is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show a dog with a furnace glow inside its ribs. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 

@@ -11,7 +11,7 @@ tags: [monster, undead, tyrant, unique]
 ![[mon_the_mad_magician_of_aurumdeep_sinker_of_kingdoms_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_mad_magician_of_aurumdeep_sinker_of_kingdoms_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,420 tris · 1.453 × 1.358 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The The Mad Magician of Aurumdeep, Sinker of Kingdoms is a person-sized creature with a drifting, half-formed body, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a gold-crowned lich who sank a kingdom and still waits for applause. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 

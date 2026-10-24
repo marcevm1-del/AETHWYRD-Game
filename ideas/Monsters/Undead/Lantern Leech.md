@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_lantern_leech_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_lantern_leech_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,414 tris · 0.143 × 0.6 × 0.322 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Lantern Leech is a small creature with a massive snake-like frame, about 0.6 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Survivors describe a glow on its back like a lost traveler's lantern. It has eyes that never blink. It has no ornament at all: simple, readable shapes. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.
 

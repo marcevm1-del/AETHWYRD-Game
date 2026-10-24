@@ -11,7 +11,7 @@ tags: [monster, reptiles, tyrant, unique]
 ![[mon_xibalbar_the_hydra_of_the_mire_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_xibalbar_the_hydra_of_the_mire_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,706 tris · 2.035 × 10 × 4.722 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Xibalbar, the Hydra of the Mire is a huge creature with a coiling, legless body, about 10 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Its most striking feature is seven heads, each wearing a feathered mask stolen from a temple. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 

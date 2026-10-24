@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_phantom_sylph_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_sylph_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,768 tris · 0.884 × 1.454 × 1.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Sylph is a person-sized creature with a lean humanoid frame, about 1.5 m tall. Its body is weathered and natural, colored in warm gold and pearl white. Look for a translucent dancer of wind and leaves. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

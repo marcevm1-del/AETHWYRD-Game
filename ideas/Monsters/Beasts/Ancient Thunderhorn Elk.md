@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_ancient_thunderhorn_elk_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_thunderhorn_elk_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,708 tris · 1.619 × 4.2 × 3.654 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Thunderhorn Elk is a large creature with a heavy, muscular quadruped frame, about 4.2 m long. Its coat is weathered and natural, colored in storm violet shot through with electric yellow. Look for branching antlers that crackle in storms. It has alert animal eyes. Faint runes glow along its body when it fights. It prowls, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

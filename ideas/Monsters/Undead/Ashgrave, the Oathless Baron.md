@@ -11,7 +11,7 @@ tags: [monster, undead, tyrant, unique]
 ![[mon_ashgrave_the_oathless_baron_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ashgrave_the_oathless_baron_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,250 tris · 1.301 × 2.141 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ashgrave, the Oathless Baron is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is a Death Knight in rusted baronial plate, still issuing orders to a dead garrison. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it.
 

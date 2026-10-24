@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_sea_serpent_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sea_serpent_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,816 tris · 5.324 × 20 × 8.698 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Sea Serpent is a colossal creature with a long, sinuous serpentine body, about 20 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a long fin running down its spine. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by fine mist and droplets that orbit it.
 

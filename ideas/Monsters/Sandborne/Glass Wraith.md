@@ -11,7 +11,7 @@ tags: [monster, sandborne]
 ![[mon_glass_wraith_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_glass_wraith_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,108 tris · 1.453 × 1.371 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Glass Wraith is a person-sized creature with a bodiless, glowing form, about 2 m tall. Its sand-scoured hide is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show a figure of fused desert glass, humming with old magic. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light.
 

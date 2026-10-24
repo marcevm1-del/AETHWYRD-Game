@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_sahuagin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sahuagin_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,572 tris · 1.119 × 1.416 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Sahuagin is a person-sized creature with a lean humanoid frame, about 1.9 m tall. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Guild sketches always show a shark-like head and webbed hands. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
 

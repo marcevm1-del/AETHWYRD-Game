@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_iron_golem_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_iron_golem_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,268 tris · 3.803 × 2.35 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Iron Golem is a large creature with a towering machine-like frame, about 4 m tall. Its surface is weathered and natural, colored in ochre, clay and mossy stone. Look for riveted iron and a furnace heart. It has amber predator eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
 

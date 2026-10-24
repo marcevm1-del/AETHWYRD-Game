@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_ruin_wall_stalker_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_wall_stalker_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,632 tris · 1.402 × 1.501 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ruin Wall Stalker is a person-sized creature with an asymmetric body with too many limbs, about 2 m tall. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. It peels itself out of the wall. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_green_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_green_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,220 tris · 0.541 × 0.541 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Green Slime is a tiny creature with a wobbling mound of translucent gel, about 0.4 m tall. Its gel is smooth and clean, colored in leaf greens over bark brown. Its most striking feature is fallen leaves suspended inside its jelly. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
 

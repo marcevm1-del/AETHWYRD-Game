@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_labyrinth_hound_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_labyrinth_hound_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,294 tris · 0.482 × 1.4 × 0.94 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Labyrinth Hound is a person-sized creature with a heavy, muscular quadruped frame, about 1.4 m long. Its stone-like hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a brick-patterned hide. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it.
 

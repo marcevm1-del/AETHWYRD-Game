@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_greater_core_sentinel_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_core_sentinel_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (946 tris · 3.963 × 2.71 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Core Sentinel is a large creature with a blocky construct body, about 4 m tall. Its stone-like hide is rough, scarred and spiked, colored in warm gold and pearl white. Look for a dungeon-core crystal for a heart. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

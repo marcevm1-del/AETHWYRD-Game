@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_ash_wraith_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ash_wraith_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,366 tris · 0.932 × 1.145 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ash Wraith is a person-sized creature with a drifting, half-formed body, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Survivors describe a hooded shape of smoke with cold blue eyes. It has pale, pupil-less eyes. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

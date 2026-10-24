@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_ash_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ash_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,544 tris · 0.389 × 0.389 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ash Slime is a tiny creature with a wobbling mound of translucent gel, about 0.3 m tall. Its gel is smooth and clean, colored in ember reds fading to soot black. Its most striking feature is a cluster of soap-bright spheres that split apart when hit. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

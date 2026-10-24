@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_greater_hollow_mourner_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_hollow_mourner_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,706 tris · 1.127 × 1.25 × 2.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Hollow Mourner is a large creature with an upright humanoid build, about 2.7 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a weeping figure that moves only when you look away. It has eyes set slightly too far apart. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

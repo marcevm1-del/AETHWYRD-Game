@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_ancient_mandrake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_mandrake_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,300 tris · 0.286 × 0.198 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Mandrake is a tiny creature with a walking body of bark and root, about 0.4 m tall. Its bark and leaves are weathered and natural, colored in leaf greens over bark brown. Look for a screaming root with a leafy tuft. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by drifting pollen and tiny blossoms. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

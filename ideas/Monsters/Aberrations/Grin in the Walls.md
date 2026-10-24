@@ -11,7 +11,7 @@ tags: [monster, aberrations]
 ![[mon_grin_in_the_walls_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_grin_in_the_walls_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (858 tris · 0.984 × 1.06 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Grin in the Walls is a small creature with a hollow shell posing as an everyday object, about 1 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Only its smile is ever visible. It has too many eyes, opening one after another. A distinctive marking runs along its back. It unfolds into something larger, surrounded by shadows that lean toward it.
 

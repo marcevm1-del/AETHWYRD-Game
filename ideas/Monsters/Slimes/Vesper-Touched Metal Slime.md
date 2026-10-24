@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_vesper_touched_metal_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_metal_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,940 tris · 0.319 × 0.319 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Metal Slime is a tiny creature with a wobbling mound of translucent gel, about 0.3 m tall. Its gel is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe mirror-chrome skin that reflects the world around it. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

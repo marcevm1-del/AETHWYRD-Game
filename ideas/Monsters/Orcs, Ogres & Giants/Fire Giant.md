@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_fire_giant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_fire_giant_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,238 tris · 7.73 × 4.544 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Fire Giant is a huge creature with a giant, barrel-chested humanoid body, about 9 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Look for skin like cooling lava and a forge-hammer. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 

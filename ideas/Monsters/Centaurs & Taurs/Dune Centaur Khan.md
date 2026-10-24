@@ -11,7 +11,7 @@ tags: [monster, centaurs-taurs]
 ![[mon_dune_centaur_khan_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dune_centaur_khan_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,004 tris · 1.432 × 2.329 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Dune Centaur Khan is a large creature with a powerful taur build, about 3 m tall. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a lightning-bolt war standard. It has alert animal eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It lopes in long strides, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 

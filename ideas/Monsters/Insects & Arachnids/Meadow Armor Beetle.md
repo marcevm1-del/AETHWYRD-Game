@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_meadow_armor_beetle_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_meadow_armor_beetle_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,292 tris · 1.24 × 1.2 × 1.085 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Meadow Armor Beetle is a person-sized creature with a six-legged armored body, about 1.2 m long. Its chitin is weathered and natural, colored in pale jade and cloud white. Its most striking feature is a shell like polished bronze. It has amber predator eyes. A distinctive marking runs along its back. It prowls, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 

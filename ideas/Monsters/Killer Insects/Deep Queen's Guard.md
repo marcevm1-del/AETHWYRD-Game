@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_deep_queen_s_guard_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_deep_queen_s_guard_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,918 tris · 2.067 × 2 × 1.808 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Deep Queen's Guard is a person-sized creature with a six-legged armored body, about 2 m long. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Look for a shield-shaped head plate. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 

@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_elder_drake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_drake_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,328 tris · 1.234 × 3.2 × 2.784 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Drake is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its scales are weathered and natural, colored in ember reds fading to soot black. Survivors describe stubby wings and a smoking snout. It has dark, wary eyes. A distinctive marking runs along its back. It prowls, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits, tyrant, unique]
 ![[mon_kurogane_the_oni_warlord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_kurogane_the_oni_warlord_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,498 tris · 3.865 × 2.222 × 4.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Kurogane, the Oni Warlord is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its form is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show an iron club wrapped in torn prayer chains and a mask of red lacquer. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 

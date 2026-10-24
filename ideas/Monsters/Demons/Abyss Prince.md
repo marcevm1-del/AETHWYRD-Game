@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_abyss_prince_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_abyss_prince_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,790 tris · 2.357 × 2.949 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Abyss Prince is a large creature with an upright humanoid build, about 4 m tall. Its hide is rough, scarred and spiked, colored in starless black with faint violet edges. Survivors describe a crown of black flame and wings of torn night. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by warped air, as if space bends around it.
 

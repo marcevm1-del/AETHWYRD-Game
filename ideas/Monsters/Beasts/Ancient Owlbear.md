@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_ancient_owlbear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_owlbear_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,646 tris · 0.884 × 3.9 × 1.751 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Owlbear is a large creature with a long-legged predatory quadruped build, about 3.9 m long. Its coat is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is an owl's feathered face on a bear's muscled body. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

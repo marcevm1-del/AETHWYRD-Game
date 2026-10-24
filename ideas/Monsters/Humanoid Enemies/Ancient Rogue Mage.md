@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_ancient_rogue_mage_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_rogue_mage_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,726 tris · 1.591 × 1.709 × 2.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Rogue Mage is a large creature with a broad-shouldered humanoid build, about 2.7 m tall. Its clothing and gear are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is burnt academy robes and ink-stained fingers. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

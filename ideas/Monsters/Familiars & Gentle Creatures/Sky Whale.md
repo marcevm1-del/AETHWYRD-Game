@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_sky_whale_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sky_whale_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,494 tris · 37.71 × 80 × 40.454 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Sky Whale is a colossal creature with a heavy-jawed fish frame, about 80 m long. Its coat is smooth and clean, colored in pale jade and cloud white. Its most striking feature is a gentle giant drifting between floating islands. It has big round glossy eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It waddles, surrounded by swirling leaves and a constant breeze.
 

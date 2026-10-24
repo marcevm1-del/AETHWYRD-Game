@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_manticore_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_manticore_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,266 tris · 1.157 × 3 × 2.61 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Manticore is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a lion's body, a scorpion tail and a too-human smile. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 

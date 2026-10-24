@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_meadow_orc_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_meadow_orc_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,482 tris · 1.532 × 1.646 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Meadow Orc Lord is a large creature with an upright humanoid build, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in pale jade and cloud white. Look for a horned helm and a cloak of wolf pelts. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 

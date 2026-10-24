@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_rogue_knight_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rogue_knight_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,494 tris · 1.084 × 0.752 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Rogue Knight is a person-sized creature with a lean humanoid frame, about 2 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Look for a broken oath engraved on its blade. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

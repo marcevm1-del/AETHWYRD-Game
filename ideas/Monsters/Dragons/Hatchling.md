@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_hatchling_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hatchling_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,650 tris · 0.487 × 0.5 × 0.269 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Hatchling is a small creature with an ancient, serpentine dragon body, about 0.5 m long. Its scales are smooth and clean, colored in ember reds fading to soot black. Look for a too-big head and wings it can't use yet. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by heat-shimmer and drifting sparks.
 

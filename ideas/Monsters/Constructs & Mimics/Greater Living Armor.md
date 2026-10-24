@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_greater_living_armor_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_living_armor_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,852 tris · 1.626 × 2.035 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Living Armor is a large creature with an upright humanoid build, about 3 m tall. Its surface is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe an empty suit of plate that walks. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_tengu_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_tengu_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,770 tris · 1.889 × 1.487 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Tengu is a person-sized creature with a broad-winged bird frame, about 2 m tall. Its form is weathered and natural, colored in pale jade and cloud white. Look for crow wings, a long red mask and a feather fan. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by swirling leaves and a constant breeze.
 

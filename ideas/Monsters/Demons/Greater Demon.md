@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_greater_demon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_demon_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,508 tris · 2.062 × 2.216 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Demon is a large creature with a lean humanoid frame, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is a noble's coat and a crown of horns. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by shadows that lean toward it.
 

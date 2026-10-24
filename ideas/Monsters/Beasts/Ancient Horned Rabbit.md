@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_ancient_horned_rabbit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_horned_rabbit_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,312 tris · 0.232 × 0.6 × 0.439 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Horned Rabbit is a small creature with a small, quick four-legged body, about 0.6 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Guild sketches always show a single spiral horn and oversized hind feet. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

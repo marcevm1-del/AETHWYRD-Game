@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_elder_moon_hare_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_moon_hare_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,330 tris · 0.309 × 0.8 × 0.515 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Moon Hare is a small creature with a small, quick four-legged body, about 0.8 m long. Its coat is smooth and clean, colored in warm gold and pearl white. Guild sketches always show white fur that glows under the full moon. It has wide curious eyes with star-shaped highlights. Battle-worn plates and trophies hang from its body. It waddles, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

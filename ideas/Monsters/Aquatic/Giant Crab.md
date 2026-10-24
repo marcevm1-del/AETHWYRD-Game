@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_giant_crab_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_giant_crab_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,236 tris · 0.924 × 1 × 0.491 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Giant Crab is a small creature with a low, wide insectoid build, about 1 m long. Its scales and skin are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show one claw much bigger than the other. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by fine mist and droplets that orbit it.
 

@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_syndicate_blade_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_syndicate_blade_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,084 tris · 1.061 × 0.735 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Syndicate Blade is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is no face, no name, two knives. It has narrow glowing eyes. Faint runes glow along its body when it fights. It circles its prey, surrounded by shadows that lean toward it.
 

@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_elder_greater_demon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_greater_demon_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,570 tris · 3.299 × 5.43 × 5.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Greater Demon is a huge creature with an upright humanoid build, about 5.6 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe a noble's coat and a crown of horns. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_ancient_adult_dragon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_adult_dragon_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,794 tris · 36.552 × 37.5 × 22.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Adult Dragon is a colossal creature with an ancient, serpentine dragon body, about 37.5 m long. Its scales are rough, scarred and spiked, colored in storm violet shot through with electric yellow. Look for cathedral wings and a voice that shakes stone. It has narrow glowing eyes. The air distorts slightly around its outline. It charges without hesitation, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

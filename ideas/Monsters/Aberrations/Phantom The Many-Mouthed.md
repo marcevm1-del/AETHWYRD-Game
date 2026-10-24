@@ -11,7 +11,7 @@ tags: [monster, aberrations]
 ![[mon_phantom_the_many_mouthed_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_the_many_mouthed_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,388 tris · 4.291 × 3.836 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom The Many-Mouthed is a large creature with a shape that keeps rearranging itself, about 4 m tall. Its skin is stretched, stitched and constantly shifting, colored in warm gold and pearl white. Look for mouths opening along its arms, all whispering. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It copies the walk of whatever it hunts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

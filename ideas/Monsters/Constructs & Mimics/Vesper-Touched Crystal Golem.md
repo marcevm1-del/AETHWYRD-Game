@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_vesper_touched_crystal_golem_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_crystal_golem_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,006 tris · 3.467 × 2.371 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Crystal Golem is a large creature with a towering machine-like frame, about 3.5 m tall. Its surface is rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show a body of prisms that splits light into rainbows. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

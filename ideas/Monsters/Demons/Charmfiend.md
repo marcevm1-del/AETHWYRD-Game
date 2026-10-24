@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_charmfiend_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_charmfiend_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,498 tris · 0.691 × 0.736 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Charmfiend is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a beautiful porcelain mask hiding a hollow face. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

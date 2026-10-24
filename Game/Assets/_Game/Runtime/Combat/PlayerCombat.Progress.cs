@@ -20,6 +20,8 @@ namespace Ascend.Game
 
         /// <summary>Raised on every level gained: (old level, new level).</summary>
         public event Action<int, int> LeveledUp;
+        /// <summary>Raised when a hit from the player defeats a monster.</summary>
+        public event Action<MonsterDummy> Killed;
         /// <summary>Raised when XP is awarded (amount).</summary>
         public event Action<long> XpGained;
 
@@ -59,7 +61,7 @@ namespace Ascend.Game
             if (reaction != Reaction.None) pts += Style.RegisterEvent(StyleEvent.Reaction);
             bool ultimateHit = CurrentSpecial == Special.Skill && LastCast != null && LastCast.Slot == "ultimate";
             if (!ultimateHit) Caster.GainAwakeningFromStyle(pts); // an Ultimate never refills itself
-            if (killed) GrantXp(Progress.KillXp(m.Level, m.IsUnique, Style.Rank, _tuning.Style));
+            if (killed) { GrantXp(Progress.KillXp(m.Level, m.IsUnique, Style.Rank, _tuning.Style)); Killed?.Invoke(m); }
         }
     }
 }

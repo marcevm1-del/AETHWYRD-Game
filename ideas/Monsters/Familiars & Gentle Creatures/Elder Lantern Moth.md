@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_elder_lantern_moth_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_lantern_moth_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,456 tris · 0.851 × 0.695 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Lantern Moth is a small creature with a bat-like flying frame, about 0.5 m tall. Its coat is smooth and clean, colored in warm gold and pearl white. Survivors describe wings that glow like paper lanterns. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

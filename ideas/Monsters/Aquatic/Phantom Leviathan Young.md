@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_phantom_leviathan_young_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_leviathan_young_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,494 tris · 25.306 × 60 × 43.569 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Leviathan Young is a colossal creature with a heavy-jawed fish frame, about 60 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show fins like the sails of a warship. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

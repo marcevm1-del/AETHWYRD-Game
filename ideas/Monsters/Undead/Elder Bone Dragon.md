@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_elder_bone_dragon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_bone_dragon_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,034 tris · 27.908 × 32 × 24.684 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Bone Dragon is a colossal creature with a four-legged, two-winged dragon body, about 32 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a dragon skeleton held together by green fire. It has eyes that never blink. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_bubble_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bubble_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,544 tris · 0.383 × 0.383 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Bubble Slime is a tiny creature with a teardrop-shaped jelly body, about 0.3 m tall. Its gel is smooth and clean, colored in deep blues with a glassy shine. Its most striking feature is a cluster of soap-bright spheres that split apart when hit. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by fine mist and droplets that orbit it.
 

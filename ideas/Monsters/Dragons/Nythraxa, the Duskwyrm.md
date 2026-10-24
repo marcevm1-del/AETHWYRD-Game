@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_nythraxa_the_duskwyrm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_nythraxa_the_duskwyrm_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,706 tris · 146.209 × 150 × 91.601 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Nythraxa, the Duskwyrm is a colossal creature with an ancient, serpentine dragon body, about 150 m long. Its scales are weathered and natural, colored in ink black with bruised violet. Survivors describe a body of dusk-colored mist and silver eyes. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It prowls, surrounded by shadows that lean toward it.
 

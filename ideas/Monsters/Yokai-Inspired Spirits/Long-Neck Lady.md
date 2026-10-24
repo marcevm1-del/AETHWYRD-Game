@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_long_neck_lady_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_long_neck_lady_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,276 tris · 1.236 × 1.29 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Long-Neck Lady is a person-sized creature with a tall, impossibly thin frame, about 1.7 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a neck that stretches across rooftops. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 

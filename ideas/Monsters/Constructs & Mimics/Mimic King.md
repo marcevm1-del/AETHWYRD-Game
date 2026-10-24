@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_mimic_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mimic_king_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (758 tris · 5.906 × 6.36 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Mimic King is a huge creature with a disguised body pretending to be furniture, about 6 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Its most striking feature is a treasure vault that walks on a hundred stolen legs. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
 

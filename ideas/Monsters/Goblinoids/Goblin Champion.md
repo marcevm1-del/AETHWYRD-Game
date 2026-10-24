@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_champion_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_champion_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,214 tris · 1.178 × 1.939 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Goblin Champion is a person-sized creature with an upright humanoid build, about 2 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a trophy cloak stitched from adventurers' capes. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

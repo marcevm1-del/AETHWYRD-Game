@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_bog_lich_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bog_lich_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,632 tris · 1.598 × 1.594 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Bog Lich is a person-sized creature with a floating, cloth-like shape, about 2.2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Its most striking feature is a crowned skull with a phylactery chained to its chest. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 

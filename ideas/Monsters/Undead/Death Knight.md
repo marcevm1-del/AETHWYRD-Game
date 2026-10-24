@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_death_knight_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_death_knight_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,058 tris · 1.414 × 0.98 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Death Knight is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show black plate, a cloak of ash and a sword of cold fire. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it.
 

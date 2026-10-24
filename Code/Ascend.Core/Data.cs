@@ -95,6 +95,8 @@ namespace Ascend.Core
         public List<string> Habitats { get; set; } = new List<string>();
         public string LootTableId { get; set; }
         public string Look { get; set; }
+        /// <summary>One practical tip ("Weak to Fire. Flees when hurt.") — shown on the death screen.</summary>
+        public string FieldNote { get; set; }
 
         public Rank ParsedRank => Ascend.Core.Rank.Parse(Rank);
         public long EffectiveMaxHp => (long)Math.Round(Stats.Hp * Math.Max(1, BossHpMult));

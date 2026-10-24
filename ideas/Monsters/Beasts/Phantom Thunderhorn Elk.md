@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_phantom_thunderhorn_elk_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_thunderhorn_elk_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,314 tris · 0.963 × 2.8 × 1.881 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Thunderhorn Elk is a large creature with a long-legged predatory quadruped build, about 2.8 m long. Its coat is rough, scarred and spiked, colored in warm gold and pearl white. Look for branching antlers that crackle in storms. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

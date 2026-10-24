@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_fox_spirit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_fox_spirit_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,302 tris · 0.386 × 1 × 0.732 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Fox Spirit is a small creature with a low, springy quadruped build, about 1 m long. Its form is weathered and natural, colored in ember reds fading to soot black. Look for three tails tipped with blue flame. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 

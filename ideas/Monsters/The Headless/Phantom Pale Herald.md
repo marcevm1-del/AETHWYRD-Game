@@ -11,7 +11,7 @@ tags: [monster, the-headless]
 ![[mon_phantom_pale_herald_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_pale_herald_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,718 tris · 2.209 × 4.018 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Pale Herald is a large creature with an armored humanoid body without a head, about 3.5 m tall. Its armor is stretched, stitched and constantly shifting, colored in warm gold and pearl white. Guild sketches always show a cape of fog trailing behind a headless knight. It has no eyes at all, only a wide and patient mouth. Its regal silhouette is crowned by a halo-like ring of aura. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

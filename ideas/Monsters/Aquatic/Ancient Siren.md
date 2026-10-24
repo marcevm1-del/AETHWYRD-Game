@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_ancient_siren_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_siren_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (6,104 tris · 1.37 × 3 × 2.509 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Siren is a large creature with an elegant serpentfolk build, about 3 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a fish tail and a voice that sounds like home. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

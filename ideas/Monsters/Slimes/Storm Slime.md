@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_storm_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_storm_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,604 tris · 1.276 × 1.276 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Storm Slime is a person-sized creature with a wobbling mound of translucent gel, about 1.2 m tall. Its gel is weathered and natural, colored in storm violet shot through with electric yellow. Guild sketches always show a storm-cloud interior that flashes with tiny lightning. It has amber predator eyes. Faint runes glow along its body when it fights. It prowls, surrounded by crackling arcs that jump across its body.
 

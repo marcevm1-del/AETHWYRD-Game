@@ -124,9 +124,12 @@ for (const s of species) {
   if (fs.existsSync(sheet)) t += `![[${s.id}_sheet.jpg]]\n*Blockout turnaround: front, side, back (views: \`${s.id}_front/side/back.jpg\`).*\n\n`;
   // 3D model status from the registry (generated FBX files are kept on the creator's PC, not in git).
   const gm = modelRegistry[s.id];
-  t += gm
-    ? `> [!success] 3D model: generated ${gm.date}${gm.provider ? ` with ${gm.provider}` : ''} · ${gm.tris.toLocaleString('en-US')} tris · ${gm.sizeM.join(' × ')} m · local file \`${gm.fbx}\`\n\n`
-    : `> [!note] 3D model: not generated yet (blockout only). Prompt in \`Art/Generation/monster_model_prompts.json\`.\n\n`;
+  if (gm && gm.status === 'generated')
+    t += `> [!success] 3D model: generated ${gm.date}${gm.provider ? ` with ${gm.provider}` : ''} · ${gm.tris.toLocaleString('en-US')} tris · ${gm.sizeM.join(' × ')} m · local file \`${gm.fbx}\`\n\n`;
+  else if (gm)
+    t += `> [!note] 3D model: procedural blockout in Unity (${gm.tris.toLocaleString('en-US')} tris · ${gm.sizeM.join(' × ')} m) until the AI model is generated. Prompt in \`Art/Generation/monster_model_prompts.json\`.\n\n`;
+  else
+    t += `> [!note] 3D model: hand-built Ring 0 model, or not exported yet.\n\n`;
   if (s.look) t += `> ${s.look}\n\n`;
   t += '| Field | Value |\n|---|---|\n';
   t += row('Family · type', `${fam(s.family)} · ${s.type}`);

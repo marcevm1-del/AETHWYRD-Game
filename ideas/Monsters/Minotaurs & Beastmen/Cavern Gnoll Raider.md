@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_cavern_gnoll_raider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cavern_gnoll_raider_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,482 tris · 1.178 × 1.266 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Cavern Gnoll Raider is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a hyena head and a laugh that carries for miles. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 

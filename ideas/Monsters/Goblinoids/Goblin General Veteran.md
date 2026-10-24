@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_general_veteran_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_general_veteran_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,172 tris · 2.062 × 2.608 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Goblin General Veteran is a large creature with a lean humanoid frame, about 3.5 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a war banner and a horn carved from an ogre's tusk. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

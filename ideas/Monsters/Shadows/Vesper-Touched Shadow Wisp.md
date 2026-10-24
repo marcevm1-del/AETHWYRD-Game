@@ -11,7 +11,7 @@ tags: [monster, shadows]
 ![[mon_vesper_touched_shadow_wisp_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_shadow_wisp_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,660 tris · 0.291 × 0.301 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Shadow Wisp is a tiny creature with a floating, cloth-like shape, about 0.4 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a flickering smudge of darkness. It has eyes that never blink. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_elder_vampire_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_vampire_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,484 tris · 1.709 × 1.185 × 2.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Vampire is a large creature with an upright humanoid build, about 2.9 m tall. Its flesh and bone are rough, scarred and spiked, colored in arterial crimson and dried-blood brown. Look for aristocratic clothes and eyes like garnets. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by a faint red mist that smells of iron. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

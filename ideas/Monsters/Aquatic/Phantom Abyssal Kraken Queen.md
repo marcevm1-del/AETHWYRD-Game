@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_phantom_abyssal_kraken_queen_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_abyssal_kraken_queen_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,710 tris · 191.469 × 200 × 190.895 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Abyssal Kraken Queen is a colossal creature with a bulbous body with writhing arms, about 200 m long. Its scales and skin are stretched, stitched and constantly shifting, colored in warm gold and pearl white. Its most striking feature is tentacles that can wrap around whole islands. It has too many eyes, opening one after another. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

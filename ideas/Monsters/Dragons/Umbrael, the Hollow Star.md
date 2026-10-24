@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_umbrael_the_hollow_star_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_umbrael_the_hollow_star_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,202 tris · 87.212 × 100 × 77.138 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Umbrael, the Hollow Star is a colossal creature with a four-legged, two-winged dragon body, about 100 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Its most striking feature is scales like a night sky full of dying stars. It has eyes set slightly too far apart. Its presence is world-scale; the sky changes color when it appears. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
 

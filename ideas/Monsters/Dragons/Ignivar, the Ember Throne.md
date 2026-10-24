@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_ignivar_the_ember_throne_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ignivar_the_ember_throne_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,290 tris · 77.978 × 80 × 48.854 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ignivar, the Ember Throne is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 80 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is a hoard of molten gold fused into its scales. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 

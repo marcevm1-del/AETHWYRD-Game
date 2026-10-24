@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_ogre_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ogre_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,498 tris · 3.006 × 1.728 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ogre is a large creature with a towering, heavy-limbed body, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a sagging belly, a tree-trunk club and a toll sack. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 

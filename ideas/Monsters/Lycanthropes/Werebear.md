@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_werebear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_werebear_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,162 tris · 1.626 × 1.747 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe tribal tattoos showing through thick bear fur. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 

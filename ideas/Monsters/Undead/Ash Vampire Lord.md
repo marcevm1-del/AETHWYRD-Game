@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_ash_vampire_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ash_vampire_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,596 tris · 1.296 × 2.133 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ash Vampire Lord is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its flesh and bone are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is a cape that dissolves into bats. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

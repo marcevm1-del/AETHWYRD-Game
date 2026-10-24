@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_giant_lizard_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_giant_lizard_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,852 tris · 0.516 × 2 × 1.163 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Giant Lizard is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its scales are weathered and natural, colored in ochre, clay and mossy stone. Survivors describe sun-baked scales and a frilled neck. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 

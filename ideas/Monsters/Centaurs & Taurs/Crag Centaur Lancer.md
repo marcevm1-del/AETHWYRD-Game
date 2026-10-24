@@ -11,7 +11,7 @@ tags: [monster, centaurs-taurs]
 ![[mon_crag_centaur_lancer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_crag_centaur_lancer_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,004 tris · 1.241 × 2.018 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Crag Centaur Lancer is a large creature with a powerful taur build, about 2.6 m tall. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Look for a long lance and painted barding. It has dark, wary eyes. Faint runes glow along its body when it fights. It prowls, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

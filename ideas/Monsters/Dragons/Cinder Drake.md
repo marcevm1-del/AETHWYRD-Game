@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_cinder_drake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cinder_drake_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,146 tris · 0.68 × 3 × 1.347 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Cinder Drake is a large creature with a powerful four-legged hunter's body, about 3 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe blue-white scales with frost on every edge. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. Adapted to volcanic lands, it has ash-dark coloring with glowing cracks.
 

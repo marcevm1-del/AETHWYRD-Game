@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_ancient_cave_spider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_cave_spider_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (4,152 tris · 0.911 × 1 × 0.987 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Cave Spider is a small creature with an eight-legged arachnid body, about 1 m long. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a pale body that glows faintly in the dark. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by a low toxic haze that clings to the ground. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

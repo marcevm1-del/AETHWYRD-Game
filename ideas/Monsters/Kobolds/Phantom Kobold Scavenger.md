@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_phantom_kobold_scavenger_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_kobold_scavenger_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,632 tris · 0.32 × 0.303 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Phantom Kobold Scavenger is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show a dog-like head with a chipped snout and a sack of stolen tools. It has eyes set slightly too far apart. It has no ornament at all: simple, readable shapes. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

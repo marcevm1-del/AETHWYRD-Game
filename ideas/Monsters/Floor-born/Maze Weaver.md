@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_maze_weaver_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_maze_weaver_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,418 tris · 2.417 × 3 × 1.634 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Maze Weaver is a large creature with a squat, many-legged arachnid build, about 3 m long. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. It rebuilds corridors behind you. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 

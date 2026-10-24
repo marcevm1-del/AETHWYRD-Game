@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_spirit_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_spirit_king_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,012 tris · 3.535 × 2.161 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Spirit King is a huge creature with a lean humanoid frame, about 6 m tall. Its body is weathered and natural, colored in warm gold and pearl white. Guild sketches always show a crowned elemental giant of pure mana. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by soft radiance and floating motes of light.
 

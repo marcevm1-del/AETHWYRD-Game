@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_ancient_qilin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_qilin_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,236 tris · 1.16 × 4.5 × 2.302 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ancient Qilin is a large creature with a long-legged predatory quadruped build, about 4.5 m long. Its hide is smooth and clean, colored in warm gold and pearl white. Look for scales, antlers and hooves that never bend the grass. It has wide curious eyes with star-shaped highlights. The air distorts slightly around its outline. It waddles, surrounded by soft radiance and floating motes of light. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

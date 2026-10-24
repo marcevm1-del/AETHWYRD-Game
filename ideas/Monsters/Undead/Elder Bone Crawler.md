@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_elder_bone_crawler_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_bone_crawler_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,464 tris · 1.532 × 1.644 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Elder Bone Crawler is a person-sized creature with a shape that keeps rearranging itself, about 2.2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a skeleton reassembled wrong, crawling on its hands. It has eyes set slightly too far apart. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

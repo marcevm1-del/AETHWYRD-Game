@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_dire_wolf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dire_wolf_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,370 tris · 0.516 × 2 × 1.163 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Dire Wolf is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its coat is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a horse-sized frame and a jaw full of jagged fangs. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

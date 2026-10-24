@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_glacirra_the_white_silence_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_glacirra_the_white_silence_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,538 tris · 77.978 × 80 × 48.854 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Glacirra, the White Silence is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 80 m long. Its scales are weathered and natural, colored in pale blues and frost-white. Survivors describe wings like frozen waterfalls. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It stalks low to the ground, surrounded by falling snow motes and frosted ground where it steps.
 

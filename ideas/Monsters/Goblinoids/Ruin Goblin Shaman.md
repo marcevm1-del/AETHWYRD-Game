@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_ruin_goblin_shaman_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_goblin_shaman_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,098 tris · 0.502 × 0.442 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Ruin Goblin Shaman is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a skull headdress and a staff hung with smoking charms. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

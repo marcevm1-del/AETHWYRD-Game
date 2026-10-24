@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders]
 ![[mon_crimson_choir_seraph_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_crimson_choir_seraph_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (1,848 tris · 2.543 × 2.63 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Crimson Choir Seraph is a large creature with a floating, cloth-like shape, about 3.5 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for six wings of red glass and a singing mask. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 

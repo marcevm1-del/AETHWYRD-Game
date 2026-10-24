@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_vesper_touched_labyrinth_minotaur_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_labyrinth_minotaur_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,568 tris · 2.434 × 1.676 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Labyrinth Minotaur is a large creature with a towering, heavy-limbed body, about 4 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Survivors describe horns carved with maze runes. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

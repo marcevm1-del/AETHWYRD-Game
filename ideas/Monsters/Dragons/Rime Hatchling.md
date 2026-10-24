@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_rime_hatchling_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rime_hatchling_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (3,034 tris · 0.487 × 0.5 × 0.269 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Rime Hatchling is a small creature with an ancient, serpentine dragon body, about 0.5 m long. Its scales are smooth and clean, colored in pale blues and frost-white. Look for a too-big head and wings it can't use yet. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
 

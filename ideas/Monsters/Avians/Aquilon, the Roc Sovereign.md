@@ -11,7 +11,7 @@ tags: [monster, avians, tyrant, unique]
 ![[mon_aquilon_the_roc_sovereign_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_aquilon_the_roc_sovereign_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,172 tris · 18.824 × 62.356 × 40 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Aquilon, the Roc Sovereign is a colossal creature with a feathered avian body, about 40 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Look for a shadow as big as a cloud over the plateau. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by swirling leaves and a constant breeze.
 

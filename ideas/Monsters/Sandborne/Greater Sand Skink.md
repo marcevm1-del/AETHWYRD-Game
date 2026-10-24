@@ -11,7 +11,7 @@ tags: [monster, sandborne]
 ![[mon_greater_sand_skink_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_sand_skink_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,812 tris · 0.193 × 0.8 × 0.297 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Greater Sand Skink is a small creature with a compact quadruped frame, about 0.8 m long. Its sand-scoured hide is weathered and natural, colored in ochre, clay and mossy stone. Look for sand-colored scales and a tongue that tastes for water. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

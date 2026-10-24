@@ -144,6 +144,10 @@ namespace Ascend.EditorTools
             for (int i = 0; i < 8; i++) // pillars for camera-collision checks
                 Prim(PrimitiveType.Cylinder, $"Pillar_{i}", new Vector3(Mathf.Cos(i * 0.785f) * 18, 2, Mathf.Sin(i * 0.785f) * 18), new Vector3(1, 2, 1), accent, world);
 
+            // Waystone beside the start: walking up to it attunes it as the respawn point.
+            var ws = Prim(PrimitiveType.Cylinder, "Waystone", new Vector3(-3, 1.1f, -3), new Vector3(0.8f, 1.1f, 0.8f), Mat("Waystone", new Color(0.45f, 0.7f, 0.95f), 0.6f), world);
+            ws.AddComponent<Waystone>();
+
             // Player: CharacterController root with a capsule body and a "nose" to show facing.
             var p = new GameObject("Player");
             var cc = p.AddComponent<CharacterController>();
@@ -154,6 +158,9 @@ namespace Ascend.EditorTools
             p.AddComponent<PlayerCombat>();
             p.AddComponent<PlayerDefense>();
             p.AddComponent<LockOn>();
+            p.AddComponent<PlayerInventory>();
+            p.AddComponent<PlayerRespawn>();
+            p.AddComponent<PlayerSave>();
             var driver = p.AddComponent<PlayerInputDriver>();
 
             // Camera.

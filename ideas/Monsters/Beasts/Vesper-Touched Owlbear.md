@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_vesper_touched_owlbear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_owlbear_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,228 tris · 0.897 × 2.6 × 2.857 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Vesper-Touched Owlbear is a large creature with a long-legged predatory quadruped build, about 2.6 m long. Its coat is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Guild sketches always show an owl's feathered face on a bear's muscled body. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_frost_toad_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_frost_toad_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,682 tris · 0.12 × 0.5 × 0.201 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Frost Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in pale blues and frost-white. Look for a wide smile and bulging golden eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

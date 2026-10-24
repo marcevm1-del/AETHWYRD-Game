@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_frost_fenrir_pup_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_frost_fenrir_pup_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,424 tris · 0.578 × 1.5 × 1.305 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Frost Fenrir Pup is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its coat is weathered and natural, colored in pale blues and frost-white. Look for frosted fur and breath that freezes the air. It has dark, wary eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by falling snow motes and frosted ground where it steps.
 

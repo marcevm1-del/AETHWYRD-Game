@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_thunder_floor_crawler_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_thunder_floor_crawler_front/side/back.jpg`).*
 
-> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!note] 3D model: procedural blockout in Unity (2,368 tris · 0.309 × 0.8 × 0.585 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
 > The Thunder Floor Crawler is a small creature with a low, springy quadruped build, about 0.8 m long. Its stone-like hide is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe stone-colored skin that matches the walls it was born from. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
