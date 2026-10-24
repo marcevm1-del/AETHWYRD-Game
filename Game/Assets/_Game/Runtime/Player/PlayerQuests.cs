@@ -43,7 +43,8 @@ namespace Ascend.Game
         public QuestContext Context(string regionId = null)
         {
             var state = RegionState.Besieged;
-            if (regionId != null && AscendData.Db.Regions.TryGetValue(regionId, out var r) && r.InitialState == "liberated") state = RegionState.Liberated;
+            if (regionId != null && SiegeDirector.Instance != null && SiegeDirector.Instance.Governs(regionId)) state = SiegeDirector.Instance.Threat.State;
+            else if (regionId != null && AscendData.Db.Regions.TryGetValue(regionId, out var r) && r.InitialState == "liberated") state = RegionState.Liberated;
             return new QuestContext
             {
                 CompletedQuests = new HashSet<string>(Log.Completed),

@@ -56,7 +56,33 @@ namespace Ascend.Game
                 _prosperity[s] = new SettlementProsperity(s, 60, 60, AscendData.Db.World.Siege.AutoResolve.ProsperityFloor);
         }
 
-        void OnDestroy() { if (Instance == this) Instance = null; }
+        PlayerCombat _player;
+
+        void Start()
+        {
+            _player = FindFirstObjectByType<PlayerCombat>();
+            if (_player != null) _player.Killed += OnKilled;
+        }
+
+        void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+            if (_player != null) _player.Killed -= OnKilled;
+        }
+
+        /// <summary>The Tyrant falls: the region is Liberated for good — no more raids, hunting contracts open up.</summary>
+        void OnKilled(MonsterDummy m)
+        {
+            if (m.SpeciesId != Region.TyrantSpeciesId || !_threat.UnderSiege) return;
+            m.Respawns = false;
+            _threat.TyrantSlain();
+            if (Battle != null) { Toast("The raiders scatter!", 4f); EndBattle(); }
+            Toast($"{Region.Name} is liberated! The raids are over.", 8f);
+            foreach (var s in _prosperity.Values) s.Raise(5, 15);
+        }
+
+        /// <summary>Whether this director governs the region (quests ask it for the live siege state).</summary>
+        public bool Governs(string region) => region == regionId;
 
         public SettlementProsperity ProsperityOf(string settlement) => _prosperity.TryGetValue(settlement, out var p) ? p : null;
 
@@ -241,6 +267,7 @@ namespace Ascend.Game
         public void Load(RegionState state, int escalation, IEnumerable<int> doneDays, int lastWeek)
         {
             _threat.Restore(state, escalation);
+            if (state == RegionState.Liberated) foreach (var m in FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None)) if (m.SpeciesId == Region.TyrantSpeciesId) m.gameObject.SetActive(false); // slain for good
             _done.Clear();
             foreach (var d in doneDays ?? Enumerable.Empty<int>()) _done.Add(d);
             _lastWeek = lastWeek;
