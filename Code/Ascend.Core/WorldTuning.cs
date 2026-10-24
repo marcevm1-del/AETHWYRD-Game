@@ -11,6 +11,7 @@ namespace Ascend.Core
         public SiegeTuning Siege { get; set; } = new SiegeTuning();
         public InnTuning Inns { get; set; } = new InnTuning();
         public TamingTuning Taming { get; set; } = new TamingTuning();
+        public BestiaryTuning Bestiary { get; set; } = new BestiaryTuning();
     }
 
     public sealed class CurrencyTuning

@@ -130,6 +130,7 @@ namespace Ascend.Game
         void AdoptIntoParty(MonsterDummy m)
         {
             var p = Roster.Add(m.SpeciesId, Name(m));
+            if (TryGetComponent<PlayerBestiary>(out var book)) book.Tamed(m.SpeciesId); // taming fills the entry to tier 3 (systems.md §7.4)
             var quests = GetComponent<PlayerQuests>();
             if (quests != null) quests.Log.OnTame(m.SpeciesId);
             if (p.Active) { MakePartner(m, p); Toast($"{p.Name} joins you!", 5f); }

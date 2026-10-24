@@ -62,6 +62,9 @@ namespace Ascend.Game
             Refresh();
         }
 
+        /// <summary>Bestiary tier per species for labels (hud_and_ui.md §9): 0 "???", 1 name and rank, 2+ HP too. Null shows everything.</summary>
+        public static System.Func<string, int> AppraisalTier { get; set; }
+
         public void Refresh()
         {
             if (label == null) return;
@@ -69,7 +72,11 @@ namespace Ascend.Game
             var s = _species;
             string hp = Application.isPlaying ? (IsDead ? "Defeated" : $"HP {Hp}/{MaxHp}") : $"HP {s.Stats.Hp}";
             var aura = Application.isPlaying ? Aura : Element.None;
-            label.text = $"{s.Name}\nRank {s.Rank} · Lv {s.LevelRange[0]}-{s.LevelRange[1]} · {hp}" + (aura != Element.None ? $"\n[{aura}]" : "");
+            int tier = Application.isPlaying && AppraisalTier != null && !IsPartner ? AppraisalTier(speciesId) : 3;
+            string auraText = aura != Element.None ? $"\n[{aura}]" : "";
+            if (tier <= 0) label.text = "???" + auraText;                                   // never seen
+            else if (tier == 1) label.text = $"{s.Name}\nRank {s.Rank}" + auraText;         // name and rank; HP bars come at appraisal 2
+            else label.text = $"{s.Name}\nRank {s.Rank} · Lv {s.LevelRange[0]}-{s.LevelRange[1]} · {hp}" + auraText;
         }
 
         public void SetLabel(TextMesh tm) => label = tm;

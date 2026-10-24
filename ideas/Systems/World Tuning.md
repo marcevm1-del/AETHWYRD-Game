@@ -56,6 +56,10 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `inns.regular.familyNights` | 30 |
 | `inns.tab.creditLimitCopper` | 600 |
 | `inns.tab.ranks` | F, E |
+| `bestiary.notes` | hud_and_ui.md §9 appraisal tiers for the Bestiary: 1 seen (name, rank, Menace), 2 HP, element and weakness, 3 attacks, drops and lore; the stamp needs tier 3 and every drop found. Taming fills an entry to tier 3 at once (systems.md §7.4). |
+| `bestiary.seenRadius` | 20 |
+| `bestiary.tier2Kills` | 3 |
+| `bestiary.tier3Kills` | 10 |
 | `taming.notes` | systems.md §7.1: weaken below the HP threshold without killing, raise calm and keep fear down, then offer (CHA + Tamer skill check, favourite food bonus). |
 | `taming.weakenHpFraction` | 0.3 |
 | `taming.nearMeters` | 4 |

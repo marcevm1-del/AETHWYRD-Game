@@ -65,6 +65,7 @@ namespace Ascend.Game
             foreach (var d in LootRoller.Roll(table, _rng, luck))
             {
                 Items.Add(d.ItemId, d.Count);
+                if (TryGetComponent<PlayerBestiary>(out var book)) book.Dropped(m.SpeciesId, d.ItemId);
                 string name = db.Items.TryGetValue(d.ItemId, out var it) ? it.Name : d.ItemId;
                 Toast($"+ {name}{(d.Count > 1 ? $" ×{d.Count}" : "")}");
             }

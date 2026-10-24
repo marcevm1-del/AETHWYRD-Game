@@ -43,6 +43,7 @@ namespace Ascend.Core
         public RankLetter GuildRank { get; set; } = RankLetter.F;
         public int RankGp { get; set; }
         public int QuestsAtRank { get; set; }
+        public List<BestiaryEntry> Bestiary { get; set; } = new List<BestiaryEntry>();
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
@@ -93,6 +94,7 @@ namespace Ascend.Core
             s.BoardDone ??= new Dictionary<string, int>();
             s.Partners ??= new List<PartnerData>();
             s.KnownRecipes ??= new List<string>();
+            s.Bestiary ??= new List<BestiaryEntry>();
             s.RestBuffs ??= new List<RestBuff>();
             s.InnNights ??= new Dictionary<string, int>();
             s.Version = SaveGame.CurrentVersion;

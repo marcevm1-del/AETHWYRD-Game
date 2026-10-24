@@ -82,6 +82,8 @@ namespace Ascend.Core
         public int Menace { get; set; }
         public string Element { get; set; }
         public string Weakness { get; set; }
+        /// <summary>"Cute", "Menacing"… (species.json menaceLabel).</summary>
+        public string MenaceLabel { get; set; }
         public double SizeMeters { get; set; }
         public string RigId { get; set; }
         public string AnimSetId { get; set; }
