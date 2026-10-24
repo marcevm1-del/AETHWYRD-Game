@@ -1,52 +1,49 @@
-# World Map Concept (proposal)
+# World Map Concept
 
-> **Status:** proposal — flagged in Canon §6 ("World map layout"). `Data/World/regions.json` stays authoritative for each region's ring, layer and settlements; this page only proposes **where** they sit.
-> **Visual:** the design canvas *Aetheria World Map Concept* (claude.ai/artifact/GFrTTqADaot19C1719p4sE) has three boards: the surface map, the Aldmere heartland inset and the Underworld cross-section.
+> **Source of truth for positions:** the atlas at `Tools/atlas/aetheria_atlas.html` (region anchors on a 150 × 100 grid, coastline seed 1207). `Data/World/regions.json` stays authoritative for each region's ring, ranks, Tyrant and settlements. This page reads the atlas as a map and checks the lore against it; it adds no new places.
+> **Visual:** the design canvas *Aetheria World Map Concept* (claude.ai/artifact/GFrTTqADaot19C1719p4sE): the surface rendered from the atlas's own terrain, a heartland inset and an Underworld cross-section.
 
-## 1. The big shape
+## 1. The big shape (as the atlas draws it)
 
-- **One central continent**, with Aldmere in its centre-west, and smaller lands around it across water.
-- **The Dragon Spine** is the continent's north–south mountain backbone, east of centre. It splits the "west" (familiar, early rings) from the "east" (Ring 5+ cultures across the spine).
-- **An Inner Sea** to the south separates the central continent from the **southern continent** (deserts, mires, jungles, highlands — Rings 6–7).
-- **Monster lands sit at the edges:** the Calamity Steppe in the far north-east (with the Maw in its titan scar), Moraveil in the south-east, and the **Nox Dominion** as a separate demon continent beyond the eastern sea.
-- **Rings radiate outward from Brindlewick**, so the map reads like the progression: the further you are from where you woke, the higher the ring. Rings are **story order, not exact distance** — Frostveil (R5) is closer in a straight line than Kitsune (R5), but both sit behind harder ground (ice, open sea).
-- **No flying mounts.** The Sky Archipelago floats above the strait north of the continent and is reached from Heavenreach, not by air travel.
+- **One continent** with a ragged coast; only the **Kitsune Isles** (north-east) and the **True-Name Isles** (east) lie offshore. The **Sky Archipelago** floats beyond the north-east coast and **Vesper** (R9) is the red moon.
+- **The heartland is in the middle:** Aldmere (R2) at the centre with the Labyrinth gate just north-west of its anchor, Whisperwood (R1) south-east of it holding **Brindlewick** and **Millbrook**, and Greymoor (R2) further south-east.
+- **Danger rises outward:** Ring 3 (Sylvaran, Mossdeep, Lirian) hugs the heartland; Ring 4 (Fanghold, Moraveil, Iron Hold, Velmark, Strife Marches) circles it; Rings 5–7 fill the coasts.
+- **North:** a snow belt (Frostveil, Whitewater Reach) with Cinderhole and the Dragon Spine's volcanic peaks below it; Shen-Lu and Haneul in the north-east mountains; Heavenreach at the north-east tip.
+- **East coast:** Hoshizora, Lirian's canal cities, Gearholm, the Strife Marches and the Goldmere Coast.
+- **South:** desert kingdoms (Sunscar, Zaruma, Zarvan, Dunewhale Drift) and the Lustrine Shores and Quaking Lands in the south-east.
+- **West:** the hostile side. Vharlen, Bastion and Stormreach face the **Calamity Steppe** (R8) and the **Nox Dominion** (R8) in the north-west corner; Everdusk, Ashira Vale, Xochitl Mire, Lumbaya and the Apu Highlands run down the south-west.
 
-## 2. Where each region sits
+## 2. Underworld gates (atlas anchors)
 
-| Area | Regions (ring) | Placement and reason |
+| Gate | Surface position | Reaches |
 |---|---|---|
-| Heartland | Whisperwood (1), Aldmere (2), Greymoor (2) | Brindlewick in the middle; Whisperwood just north; Greymoor south-west; Aldmere City south-east of Brindlewick, with the Labyrinth gate |
-| Inner west and coast | Sylvaran (3), Mossdeep (3), Lirian (3) | Sylvaran and its World Tree to the west (sanctuary road), Mossdeep below it, Lirian on the southern coast as the first port |
-| Ring 4 belt | Velmark, Fanghold, Iron Hold, Moraveil, Strife Marches | Velmark down the Aldwater river to the south-east; Fanghold east-centre; Iron Hold in the western foothills of the Spine; Moraveil south-east; the war-torn Strife Marches across the north |
-| The Spine and north-east | Dragon Spine (7), Gearholm (7), Heavenreach (7), Cinderhole (7), Ashira Vale (6), Stormreach (6), Vharlen (7), Bastion (7), Sky Archipelago (7) | Gearholm and Heavenreach on the northern Spine; Cinderhole on its western flank; Ashira Vale in an eastern valley; Stormreach where the Spine meets the southern sea; Vharlen and Bastion's walls in the north-east, facing the Steppe |
-| North | Frostveil (5), Whitewater Reach (5) | A cold northern land across a narrow strait |
-| West | Everdusk (7), True-Name Isles (6) | Out in the western ocean: an island of permanent dusk and an archipelago |
-| East | Haneul (5), Shen-Lu (5), Hoshizora (5), Kitsune Isles (5) | Across the Spine: Haneul highlands and Shen-Lu on an eastern landmass, then Hoshizora's islands and the Kitsune Isles out to sea |
-| South | Apu Highlands (7), Xochitl Mire (6), Zarvan (6), Sunscar (6), Dunewhale Drift (6), Zaruma (6), Goldmere Coast (6), Quaking Lands (7), Lumbaya (6), Lustrine Shores (7) | The southern continent, west to east: highlands, mire, desert kingdoms and the dune sea, the gold coast, the quaking lands, jungle and shores |
-| Monster lands | Calamity Steppe (8), Nox Dominion (8) | Far north-east and a separate eastern continent |
-| Off the map | Vesper (9) | The red moon (lost Valdrisia), post-game |
+| Great Labyrinth | just north-west of Aldmere's centre | floors 1–120 |
+| Umbravel | south of Mossdeep | layer 1 |
+| Hollow Sea | beside the Goldmere Coast | layer 2 |
+| Aurumdeep | under Zarvan | layer 3 |
+| The Maw | west coast, next to the Calamity Steppe | layer 4 |
+| Root of the World | in Whisperwood, beside Brindlewick | layer 5 |
 
-## 3. Routes
+The Root of the World's gate sitting in the starting forest is a strong story hook. The deepest place in the world is reachable from the first region, but only at the end.
 
-The five exchange corridors in `02_Lore/history.md` §XX.b, checked against this layout (`history.md` names six, but only five are written up):
+## 3. The five corridors checked against the atlas
 
-1. **River and grain** — down the Aldwater from Whisperwood, through Aldmere and Velmark, to the sea. Works.
-2. **Mountain craft and oath** — Aldmere → Hollowpine → Iron Hold → over a Spine pass to Gearholm. Works; the pass is a natural Ring 4→7 gate.
-3. **Sanctuary and memorial** — Aldmere → Sylvaran's World Tree. Works, and it is short, which suits an early pilgrimage.
-4. **Coastal weather and navigation** — Lirian → Stormreach → the Kitsune Isles by sea. Works, and it makes the sea the way east for players who don't cross the Spine.
-5. **Desert glass and caravan** — Lirian across the Inner Sea to Sunscar, then Zaruma. Works, but it needs a ferry or a sea quest — fine with no flying mounts.
+`02_Lore/history.md` §XX.b says there are six corridors but describes five. All five fit the atlas:
 
-## 4. The Underworld
+1. **River and grain:** Brindlewick → Aldmere → Velmark → the Lirian coast.
+2. **Mountain craft and oath:** Aldmere → Iron Hold → Cinderhole → the Dragon Spine.
+3. **Sanctuary and memorial:** Aldmere → Sylvaran → Ashira Vale (the Gentle Warden's vale).
+4. **Coastal weather and navigation:** Lirian → Goldmere Coast, then by sea to the True-Name Isles.
+5. **Desert glass and caravan:** Mossdeep → Sunscar, then Zaruma, Zarvan and the Dunewhale Drift.
 
-Five layers under the whole map — Umbravel (R5), Hollow Sea (R6), Aurumdeep (R7), the Maw (R8), Root of the World (R8) — reached through 60+ Deepgates (world.md). The Great Labyrinth is its own column under Aldmere City (floors 1–40 R2, 41–90 R6, 91–120 R8), with back-doors into the layers on floors 30, 60 and 90. The Maw is one vertical shaft from the Calamity Steppe's titan scar; Sylvaran's World Tree roots reach the Root of the World.
+## 4. Heartland inset
 
-## 5. Aldmere inset (Rings 0–2)
+Brindlewick (F, built) sits in western Whisperwood. Millbrook is east on the stream. Aldmere City and the Labyrinth gate are north-west, with Ashby, the Royal Valley farms and Greyhollow (village, Keep and barrows, where Ashgrave rides out) around it. The Hollowpine Highlands lie north-east toward Velmark and Iron Hold. Greymoor Marsh and its Walking Hut market are south-east.
 
-Brindlewick and its meadows (F, built) in the middle; roads north to the Whisperwood gate (F–E), east to Millbrook on the stream (E) and on to the Hollowpine Highlands (E–D), south-west to Greymoor Marsh (D, crypt Deepgate), and south-east to Aldmere City (D–C) and Greyhollow Keep (C).
+The in-game Ring 0 scene (Whisperwood field north of Brindlewick, North Gate) is a local close-up and doesn't contradict this. It is the patch of wood around the town.
 
-## 6. Open questions
+## 5. Open questions
 
-- Where the sixth corridor goes (history.md lists six but describes five).
-- Whether the Inner Sea crossing (corridor 5) is a ferry, a quest or both.
-- Scale: how many real-time minutes on foot from Brindlewick to Aldmere City, and the size of each Ring 1–3 zone in the engine.
+- Where the sixth corridor goes.
+- Hollowpine: world.md lists the Hollowpine Highlands as an Aldmere sub-zone, while the atlas makes Grukk the "goblin chief of Hollowpine" in Whisperwood. The inset puts the highlands on the Whisperwood–Aldmere border; please confirm.
+- Scale: how many minutes on foot from Brindlewick to Aldmere City.
