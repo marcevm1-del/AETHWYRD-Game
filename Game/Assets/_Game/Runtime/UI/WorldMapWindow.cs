@@ -36,8 +36,11 @@ namespace Ascend.Game
         Rect _mapRect;
         string _hover;
         readonly List<Rect> _placed = new List<Rect>();
-        GUIStyle _title, _tab, _tabOn, _label, _labelBold, _pencil, _small, _side, _hint, _marker;
+        GUIStyle _title, _tab, _tabOn, _label, _labelBold, _pencil, _small, _side, _hint, _marker, _sea;
         Texture2D _dark, _paperTex;
+
+        /// <summary>Review captures set this so stray keys and mouse moves can't pan the view mid-shot.</summary>
+        public static bool IgnoreInput;
 
         public Page Current { get; private set; } = Page.Area;
         /// <summary>The current page's zoom.</summary>
@@ -191,7 +194,7 @@ namespace Ascend.Game
                 try { AreaMapArt.Capture(_owner.Area); }
                 catch (System.Exception e) { Debug.LogWarning($"Area map capture failed: {e.Message}"); }
             }
-            if (Time.unscaledTime - _openedAt < 0.15f) return;
+            if (Time.unscaledTime - _openedAt < 0.15f || IgnoreInput) return;
             float dt = Time.unscaledDeltaTime;
             var kb = Keyboard.current; var pad = Gamepad.current; var mouse = Mouse.current;
             if (kb != null)
@@ -350,23 +353,17 @@ namespace Ascend.Game
                 GUI.color = old;
             }
 
-            // You are here (reserved first so names keep clear of it).
+            // You are here: the marker is reserved first; its label finds a free spot after the land names.
             var youAt = _owner.Area.ToWorldMap(_owner.transform.position);
             var you = S(youAt.x, youAt.y);
-            Rect? youLabel = null;
-            if (Inside(you))
-            {
-                Room(new Rect(you.x - 10, you.y - 10, 20, 20));
-                var ysz = _small.CalcSize(new GUIContent("You are here"));
-                var yr = new Rect(you.x + 14, you.y - 32, ysz.x, ysz.y);
-                if (Room(yr)) youLabel = yr;
-            }
+            if (Inside(you)) Room(new Rect(you.x - 10, you.y - 10, 20, 20));
 
             float fs = Mathf.Clamp(11f + _zoom * 2.2f, 12f, 24f);
             _label.fontSize = _labelBold.fontSize = _pencil.fontSize = Mathf.RoundToInt(fs);
             _small.fontSize = Mathf.RoundToInt(Mathf.Clamp(fs * .7f, 10f, 15f));
             var known = AscendData.Db.Regions.Values.Where(reg => reg.Map != null && k.StatusOf(reg.Id) != MapStatus.Unknown).ToList();
-            // Land names first (visited before heard), then towns and gates where they fit.
+            // Land names first (visited before heard), then you, then siege banners, towns and gates where they fit.
+            var banners = new List<(Vector2 at, float y, RegionState state)>();
             foreach (var reg in known.Where(x => x.Layer != "underworld").OrderByDescending(x => k.StatusOf(x.Id)))
             {
                 var at = S(reg.Map.X, reg.Map.Y);
@@ -386,19 +383,41 @@ namespace Ascend.Game
                     GUI.Label(chip, $"R{reg.Ring} · {reg.RankMin}–{reg.RankMax}", _marker);
                     ly += 17;
                 }
-                if (st == MapStatus.Visited && reg.TyrantSpeciesId != null)
+                if (st == MapStatus.Visited && reg.TyrantSpeciesId != null) banners.Add((at, ly, StateOf(reg)));
+            }
+            Rect? youLabel = null;
+            if (Inside(you))
+            {
+                var ysz = _small.CalcSize(new GUIContent("You are here"));
+                foreach (var off in new[] { new Vector2(14, -32), new Vector2(14, 12), new Vector2(-14 - ysz.x, -32), new Vector2(-14 - ysz.x, 12), new Vector2(16, -ysz.y / 2f) })
                 {
-                    var stt = StateOf(reg);
-                    string flag = stt.ToString();
-                    var old = _small.normal.textColor;
-                    _small.normal.textColor = stt == RegionState.Liberated ? new Color(.15f, .45f, .2f) : new Color(.6f, .12f, .1f);
-                    var fsz = _small.CalcSize(new GUIContent(flag));
-                    var fr = new Rect(at.x - fsz.x / 2f + 7f, ly, fsz.x, fsz.y);
-                    Room(new Rect(fr.x - 14f, fr.y, fr.width + 14f, fr.height));
+                    var yr = new Rect(you.x + off.x, you.y + off.y, ysz.x, ysz.y);
+                    if (Room(yr)) { youLabel = yr; break; }
+                }
+            }
+            foreach (var (at, ly, stt) in banners)
+            {
+                string flag = stt.ToString();
+                var old = _small.normal.textColor;
+                _small.normal.textColor = stt == RegionState.Liberated ? new Color(.15f, .45f, .2f) : new Color(.6f, .12f, .1f);
+                var fsz = _small.CalcSize(new GUIContent(flag));
+                var fr = new Rect(at.x - fsz.x / 2f + 7f, ly + 3f, fsz.x, fsz.y); // a small gap below the name
+                if (Room(new Rect(fr.x - 14f, fr.y, fr.width + 14f, fr.height)))
+                {
                     Banner(new Rect(fr.x - 13f, fr.y + 2f, 12f, fr.height - 4f), stt);
                     Haloed(fr, flag, _small);
-                    _small.normal.textColor = old;
                 }
+                _small.normal.textColor = old;
+            }
+            // Seas come after the lands (background features, low contrast) and only where they fit.
+            _sea.fontSize = Mathf.RoundToInt(fs * 1.1f);
+            foreach (var sea in k.KnownSeas())
+            {
+                var at = S(sea.At[0], sea.At[1]);
+                if (!Inside(at)) continue;
+                var size = _sea.CalcSize(new GUIContent(sea.Name));
+                var sr = new Rect(at.x - size.x / 2f, at.y - size.y / 2f, size.x, size.y);
+                if (Room(sr)) Haloed(sr, sea.Name, _sea);
             }
             foreach (var reg in known.Where(x => x.Layer != "underworld" && k.StatusOf(x.Id) == MapStatus.Visited && x.Map.Places != null))
                 if (_zoom >= 1.6f)
@@ -499,7 +518,7 @@ namespace Ascend.Game
                 if (!Seen(g.transform.position)) continue;
                 var at = L(g.transform.position);
                 Glyph(at, "●", new Color(.15f, .3f, .6f), 13);
-                if (g.HasMarker) Glyph(at + new Vector2(0, -13), "!", new Color(.85f, .55f, .05f), 18);
+                if (g.HasMarker && r.Contains(at + new Vector2(0, -20))) Glyph(at + new Vector2(0, -13), "!", new Color(.85f, .55f, .05f), 18);
                 if (g.HasMarker || _areaZoom >= 3f) Label(at, g.DisplayName, _small);
             }
             var resp = _owner.GetComponent<PlayerRespawn>();
@@ -544,7 +563,8 @@ namespace Ascend.Game
             _tabOn = new GUIStyle(_tab) { normal = { background = Solid(new Color(.8f, .62f, .3f)), textColor = new Color(.15f, .1f, .05f) } };
             _label = new GUIStyle(GUI.skin.label) { fontSize = 14, normal = { textColor = ink }, alignment = TextAnchor.MiddleLeft, wordWrap = false, clipping = TextClipping.Overflow };
             _labelBold = new GUIStyle(_label) { fontStyle = FontStyle.Bold, alignment = TextAnchor.MiddleCenter };
-            _pencil = new GUIStyle(_label) { fontStyle = FontStyle.Italic, normal = { textColor = new Color(.42f, .4f, .38f) }, alignment = TextAnchor.MiddleCenter };
+            _pencil = new GUIStyle(_label) { fontStyle = FontStyle.Italic, normal = { textColor = new Color(.32f, .3f, .28f) }, alignment = TextAnchor.MiddleCenter };
+            _sea = new GUIStyle(_label) { fontStyle = FontStyle.Italic, normal = { textColor = new Color(.2f, .3f, .4f) }, alignment = TextAnchor.MiddleCenter };
             _small = new GUIStyle(_label) { fontSize = 12 };
             _side = new GUIStyle(_label) { fontSize = 15, wordWrap = true, alignment = TextAnchor.UpperLeft };
             _hint = new GUIStyle(GUI.skin.label) { fontSize = 13, normal = { textColor = new Color(.85f, .78f, .62f) } };

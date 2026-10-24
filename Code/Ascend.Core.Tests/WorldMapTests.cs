@@ -111,6 +111,16 @@ static class WorldMapTests
         Assert.True(m.Hear("reg_sylvaran") && m.Visit("reg_sylvaran"), "heard, then walked there");
     }
 
+    public static void SeasAreNamedOnceACoastBesideThemIsOnTheMap()
+    {
+        var m = Fresh();
+        Assert.True(!m.KnownSeas().Any(), "no sea near Whisperwood is named at the start");
+        m.Hear("reg_kitsune_isles");
+        Assert.Equal("The Sundered Sea", m.KnownSeas().Single().Name, "hearing of the isles names the eastern sea");
+        foreach (var sea in Repo.Db.World.Map.Seas)
+            Assert.True(new WorldMapTerrain(Repo.Db.Regions.Values).RegionAt(sea.At[0], sea.At[1]) == null, $"{sea.Name} is written on water");
+    }
+
     public static void TheGuildMapNamesTheNextRingAtEachRank()
     {
         var m = Fresh();

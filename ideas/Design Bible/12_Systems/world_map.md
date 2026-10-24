@@ -44,7 +44,9 @@ Two looks come from the same geometry:
 | **Heard** | A grey pencil sketch with a faint italic name | Talk in Brindlewick (Aldmere, Greymoor, the Great Labyrinth); **accepting a quest** pencils in its region; **each guild rank's map seal** names the surface up to a ring (E→3, D→4, C→5, B→6, A→7) |
 | **Unknown** | Blank parchment | Everything else |
 
-Inked edges bleed raggedly into the paper, and the sea near known coasts is inked with them. Hearing never undoes a visit.
+Inked edges bleed raggedly into the paper, and the sea near known coasts is inked with them. Hearing never undoes a visit. The atlas's two **seas** (the Veiled Sea, west; the Sundered Sea, east; `world_tuning.json → map.seas`) get their names once a land within 30 units of the label is on your map.
+
+**Labels** follow common cartography rules (checked against Mapbox's cartography guidance): you and the tracked objective are placed first, then land names (visited before heard), then siege banners, seas, towns and gates only where they fit without overlapping. Town names appear from 2.4× zoom, gate names from 2×. Names carry a parchment halo, and pencilled names keep 4.5:1 contrast on the paper. Siege state is written out as well as coloured.
 
 **System overlay** (from Rank E, the guild map seal; hud_and_ui.md §16):
 - every known land is tinted with its ring colour;

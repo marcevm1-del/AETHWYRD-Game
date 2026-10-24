@@ -140,7 +140,7 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `taming.favouriteFood.Plants & Fungi` | itm_mat_sap |
 | `taming.favouriteFood.Elementals & Spirits` | itm_core_f |
 | `taming.favouriteFood.Familiars & Gentle Creatures` | itm_healing_herb |
-| `map.notes` | 12_Systems/world_map.md: the map starts blank and inks itself. Visited lands are inked, heard-of lands pencilled. The guild's map seal names the surface up to a ring at each guild rank; the System overlay (rank-coloured zones, grid) arrives at Rank E (hud_and_ui.md §16). The local map inks a grid of areaCellMetres cells within areaRevealMetres of you. |
+| `map.notes` | 12_Systems/world_map.md: the map starts blank and inks itself. Visited lands are inked, heard-of lands pencilled. The guild's map seal names the surface up to a ring at each guild rank; the System overlay (rank-coloured zones, grid) arrives at Rank E (hud_and_ui.md §16). The local map inks a grid of areaCellMetres cells within areaRevealMetres of you. Seas (named on the atlas) get their name on your map once a land within seaNameRange map units of the label is on it. |
 | `map.startVisited` | reg_whisperwood |
 | `map.startHeard` | reg_aldmere, reg_greymoor, reg_labyrinth_upper |
 | `map.guildMapRings.E` | 3 |
@@ -151,5 +151,7 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `map.systemOverlayRank` | E |
 | `map.areaCellMetres` | 4 |
 | `map.areaRevealMetres` | 14 |
+| `map.seaNameRange` | 30 |
+| `map.seas` | [object Object], [object Object] |
 
 Edit the source JSON, validate it, and rerun the relevant review before treating a tuned value as approved. This vault note is generated and will be overwritten on rebuild.

@@ -89,6 +89,7 @@ namespace Ascend.Game
                 if (!_mapOpened && map != null)
                 {
                     _mapOpened = true;
+                    WorldMapWindow.IgnoreInput = true;
                     WorldMapWindow.Instance.Open(map, _mapPage == "world" ? WorldMapWindow.Page.World : WorldMapWindow.Page.Area);
                     var zoom = Arg("-ascendShotZoom");
                     if (zoom != null) WorldMapWindow.Instance.SetZoom(float.Parse(zoom, System.Globalization.CultureInfo.InvariantCulture));

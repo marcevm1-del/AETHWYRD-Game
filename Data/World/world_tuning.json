@@ -123,12 +123,17 @@
   }
  },
  "map": {
-  "notes": "12_Systems/world_map.md: the map starts blank and inks itself. Visited lands are inked, heard-of lands pencilled. The guild's map seal names the surface up to a ring at each guild rank; the System overlay (rank-coloured zones, grid) arrives at Rank E (hud_and_ui.md §16). The local map inks a grid of areaCellMetres cells within areaRevealMetres of you.",
+  "notes": "12_Systems/world_map.md: the map starts blank and inks itself. Visited lands are inked, heard-of lands pencilled. The guild's map seal names the surface up to a ring at each guild rank; the System overlay (rank-coloured zones, grid) arrives at Rank E (hud_and_ui.md §16). The local map inks a grid of areaCellMetres cells within areaRevealMetres of you. Seas (named on the atlas) get their name on your map once a land within seaNameRange map units of the label is on it.",
   "startVisited": ["reg_whisperwood"],
   "startHeard": ["reg_aldmere", "reg_greymoor", "reg_labyrinth_upper"],
   "guildMapRings": { "E": 3, "D": 4, "C": 5, "B": 6, "A": 7 },
   "systemOverlayRank": "E",
   "areaCellMetres": 4,
-  "areaRevealMetres": 14
+  "areaRevealMetres": 14,
+  "seaNameRange": 30,
+  "seas": [
+   { "name": "The Veiled Sea", "at": [6.5, 62] },
+   { "name": "The Sundered Sea", "at": [141, 48] }
+  ]
  }
 }

@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Map labels and seas | Sea names from the atlas (named once a nearby coast is known), cartography pass on labels (priority order, no overlaps, halos, 4.5:1 pencil contrast), siege banner graphic, capture input lock; in-game shots on the design canvas | 176 + 133 |
 | World map in game | Core port of the atlas map (bit-exact, tested), new relief renderer (painted + parchment), map placement data in regions.json, MapKnowledge (inked/pencilled/blank, guild map seal, Rank E System overlay), Area + World map window (Tab/M), terrain minimap, map saves, atlas relief upgrade | 175 + 133 |
 | World map follows the atlas | Redrew the map concept on the repo atlas (Tools/atlas): terrain rendered from its own seed, labels at its anchors with Tyrants, heartland inset and Underworld gates re-oriented; doc and Canon §6 row rewritten | 164 + 127 |
 | World map concept | Surface layout for all 49 regions, Aldmere inset and Underworld cross-section (10_World/world_map_concept.md + design canvas); Canon §6 row added | 164 + 127 |

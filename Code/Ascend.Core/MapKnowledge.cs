@@ -24,6 +24,17 @@ namespace Ascend.Core
         public double AreaCellMetres { get; set; } = 4;
         /// <summary>How far around you the local map inks itself as you walk.</summary>
         public double AreaRevealMetres { get; set; } = 14;
+        /// <summary>Named seas (from the atlas), written in once a nearby land is on your map.</summary>
+        public List<MapLabel> Seas { get; set; } = new List<MapLabel>();
+        /// <summary>How close (map units) a known land's centre must be to a sea's label for the sea to be named.</summary>
+        public double SeaNameRange { get; set; } = 30;
+    }
+
+    /// <summary>A name written on the map at a point (map units).</summary>
+    public sealed class MapLabel
+    {
+        public string Name { get; set; }
+        public double[] At { get; set; }
     }
 
     /// <summary>What a save keeps of the map.</summary>
@@ -75,6 +86,19 @@ namespace Ascend.Core
             if (StatusOf(regionId) == MapStatus.Visited) return false;
             _regions[regionId] = MapStatus.Visited;
             return true;
+        }
+
+        /// <summary>The seas your map names: those with a heard-of or visited land near their label.</summary>
+        public IEnumerable<MapLabel> KnownSeas()
+        {
+            var known = _regions.Where(kv => kv.Value != MapStatus.Unknown).Select(kv => _byId[kv.Key])
+                .Where(r => r.Layer == "surface" && r.Map != null && r.Map.Radius > 0).ToList();
+            foreach (var sea in Tuning.Seas ?? new List<MapLabel>())
+            {
+                if (sea?.At == null || sea.At.Length < 2) continue;
+                if (known.Any(r => Math.Sqrt((r.Map.X - sea.At[0]) * (r.Map.X - sea.At[0]) + (r.Map.Y - sea.At[1]) * (r.Map.Y - sea.At[1])) <= Tuning.SeaNameRange))
+                    yield return sea;
+            }
         }
 
         /// <summary>The guild's map at a new rank names every surface land up to its ring; returns the newly heard ids.</summary>
