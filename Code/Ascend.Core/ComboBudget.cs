@@ -14,6 +14,8 @@ namespace Ascend.Core
 
         public int Capacity => Math.Max(0, _t.BudgetPerString);
         public int Left { get; private set; }
+        /// <summary>Share of the budget left (1 = full), for the HUD bar.</summary>
+        public float Fraction => Capacity > 0 ? (float)Left / Capacity : 1f;
 
         public ComboBudget(ComboTuning tuning)
         {

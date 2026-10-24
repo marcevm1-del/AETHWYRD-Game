@@ -235,9 +235,14 @@ namespace Ascend.Game
             if (IsDead && _respawnLeft > 0f && (_respawnLeft -= dt) <= 0f) Respawn();
         }
 
+        /// <summary>False while the HUD draws on-screen nameplates (the floating text labels hide).</summary>
+        public static bool WorldLabels { get; set; } = true;
+
         void LateUpdate()
         {
             if (label == null) return;
+            var lr = label.GetComponent<MeshRenderer>();
+            if (lr != null && lr.enabled != WorldLabels) lr.enabled = WorldLabels;
             label.transform.position = transform.position + _labelOffset;
             if (Camera.main != null)
                 label.transform.rotation = Quaternion.LookRotation(label.transform.position - Camera.main.transform.position);

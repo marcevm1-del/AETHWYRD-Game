@@ -165,6 +165,7 @@ namespace Ascend.Game.Tests
             try
             {
                 var save = _player.AddComponent<PlayerSave>();
+                while (_combat.Progress.Level < 3) _combat.GrantXp(_combat.Progress.ToNext - _combat.Progress.XpIntoLevel);
                 _combat.GrantXp(50);
                 _inv.Items.AddCopper(777); _inv.Items.Add("itm_core_f", 2);
                 _inv.Difficulty = Difficulty.Veteran;
@@ -175,12 +176,16 @@ namespace Ascend.Game.Tests
 
                 long xp = _combat.Progress.XpIntoLevel; int lvl = _combat.Progress.Level;
                 _inv.Items.Load(0, null); _inv.Difficulty = Difficulty.Story;
+                _combat.Progress.Load(1, 0); _combat.SetLevel(1);             // a fresh session starts at level 1…
+                _defense.ReceiveAttack(40, Telegraph.Red);                     // …and hurt
                 Assert.IsTrue(save.Load(), save.LastError);
                 Assert.AreEqual(777, _inv.Items.Copper);
                 Assert.AreEqual(2, _inv.Items.Count("itm_core_f"));
                 Assert.AreEqual(Difficulty.Veteran, _inv.Difficulty);
                 Assert.AreEqual(lvl, _combat.Progress.Level); Assert.AreEqual(xp, _combat.Progress.XpIntoLevel);
                 Assert.AreEqual("Waystone_Test", _respawn.WaystoneId);
+                Assert.AreEqual(lvl, _combat.Level, "the combat level (stats) follows the loaded level");
+                Assert.AreEqual(_defense.MaxHp, _defense.Hp, "a loaded game starts at full health");
                 Assert.Less(Vector3.Distance(_player.transform.position, new Vector3(4, 0, 5)), 0.01f, "you continue at the waystone");
             }
             finally { PlayerSave.Folder = null; if (System.IO.Directory.Exists(dir)) System.IO.Directory.Delete(dir, true); }

@@ -46,6 +46,10 @@ namespace Ascend.Game
 
         public CastResult CastUltimate() => Cast(Caster.Ultimate);
 
+        float _lastCastAt = -10f;
+        /// <summary>The skill just used, for the HUD (shown above the skill bar for 2 seconds).</summary>
+        public string CurrentSkillName => LastCast != null && Time.unscaledTime - _lastCastAt < 2f ? LastCast.Name : null;
+
         CastResult Cast(SkillData skill)
         {
             if (_motor.IsDodging) return LastCastResult = CastResult.Cooldown;
@@ -54,6 +58,7 @@ namespace Ascend.Game
             LastCastResult = r;
             if (r != CastResult.Ok) return r;
             LastCast = skill;
+            _lastCastAt = Time.unscaledTime;
             _charge.Cancel();
             _chain.Cancel();
             if (_special != null && _special.IsBusy) _special.Cancel();

@@ -1,0 +1,263 @@
+{
+  "main": {
+    "id": "33ecded1a9078426",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebab67c62d927608",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2e48d12c912bc3e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f83f9f14621fe2bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd478bc5975c6dc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f6a64b2f6b4a3ad8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "dfea2c66aa5f85f6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a853533ad46c86e8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "78ed40486ae1829f",
+    "type": "split",
+    "children": [
+      {
+        "id": "26e435a652ba67a2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "937a380778bd7229",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "3c6787d668dceacc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "4e34b3ef19add1cc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c929b8d21e908a4f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3c9bc998028ab4b6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "5891acb362340987",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {
+                "tabWorkspace": {
+                  "version": 1,
+                  "openTabs": [
+                    {
+                      "tabId": "tab-1792755489434-pvdzun6",
+                      "conversationId": null,
+                      "draftModel": "opus",
+                      "providerId": "claude"
+                    }
+                  ],
+                  "activeTabId": "tab-1792755489434-pvdzun6"
+                }
+              },
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian42-brat:BRAT": false,
+      "realclaudian:Open Claudian": false
+    }
+  },
+  "active": "b2e48d12c912bc3e",
+  "lastOpenFiles": [
+    "GitHub/Aetheria-Game/ideas/Home.md",
+    "Untitled 2.canvas",
+    "GitHub/Aetheria-Game/ideas/Inns/The Oasis Caravanserai.md",
+    "GitHub/Aetheria-Game/ideas/NPCs/Magistra Eolande Fairweather.md",
+    "GitHub/Aetheria-Game/ideas/Design Bible/02_Lore/history.md",
+    "GitHub/Aetheria-Game/ideas/Design Bible/12_Systems/systems.md",
+    "Untitled 1.canvas",
+    "GitHub/Aetheria-Game/ideas/Regions/Sunscar.md",
+    "GitHub/Aetheria-Game/ideas/Items/Goblin Ear.md",
+    "GitHub/Aetheria-Game/02_Lore/world_systems.md",
+    "GitHub/Aetheria-Game/ideas/Templates/Idea.md",
+    "GitHub/Project-Greyborn/docs/03-core-gameplay.md",
+    "GitHub/Aetheria-Game/08_Bestiary/rig_sheet.png",
+    "GitHub/Aetheria-Game/Tools/monster_gen/motion.js",
+    "GitHub/Aetheria-Game/Tools/monster_gen/build_rigs.js",
+    "GitHub/Aetheria-Game/Tools/blender/build_rig.py",
+    "GitHub/Aetheria-Game/Game/Assets/_Game/Tests/PlayMode/DefenseAndFeedbackPlayModeTests.cs.meta",
+    "GitHub/Aetheria-Game/Game/Assets/_Game/Tests/PlayMode/DefenseAndFeedbackPlayModeTests.cs",
+    "GitHub/Aetheria-Game/Game/Assets/_Game/Runtime/Combat/PlayerDefense.cs.meta",
+    "GitHub/Aetheria-Game/Game/Assets/_Game/Runtime/Combat/PlayerDefense.cs",
+    "GitHub/Aetheria-Game/Game/Assets/_Game/Runtime/Combat/HitFeedback.cs.meta",
+    "GitHub/Aetheria-Game/Game/Assets/_Game/Runtime/Combat/HitFeedback.cs",
+    "GitHub/Aetheria-Game/Data/Monsters/rigs.json",
+    "GitHub/Aetheria-Game/08_Bestiary/monster_motion_bible.md",
+    "GitHub/Project-Greyborn/design-bible/04-bestiary-legs-2-4.md",
+    "GitHub/Aetheria-Game/ideas/Families/Yokai-Inspired Spirits.md",
+    "GitHub/Aetheria-Game/ideas/Regions/Shen-Lu.md",
+    "GitHub/Aetheria-Game/00_Questions/questionnaire_02_story.md",
+    "GitHub/Aetheria-Game/00_Questions/questionnaire_01.md",
+    "GitHub/Aetheria-Game/00_Questions/answers_02_story.md",
+    "GitHub/Aetheria-Game/00_Questions/answers_01.md",
+    "2026-10-23.md",
+    "Untitled.canvas",
+    "Welcome.md",
+    "GitHub/GitHub Repos.md",
+    "GitHub/Teacher-OS/tutoring/tutoring-kit.md",
+    "GitHub/Teacher-OS/tutoring/exam-bootcamp.md",
+    "GitHub/Teacher-OS/tutoring/8-lesson-programme.md",
+    "GitHub/Teacher-OS/tpt/product-pipeline.md",
+    "GitHub/Teacher-OS/tpt/previews/teacher-briefing/TPT-preview-3.png",
+    "GitHub/Teacher-OS/tpt/previews/teacher-briefing/TPT-preview-2.png",
+    "GitHub/Teacher-OS/tpt/previews/teacher-briefing/TPT-preview-1.png",
+    "GitHub/Teacher-OS/tpt/previews/summary-workbook/TPT-preview-4.png",
+    "GitHub/Teacher-OS/tpt/previews/summary-workbook/TPT-preview-3.png",
+    "GitHub/Teacher-OS/tpt/previews/summary-workbook/TPT-preview-2.png",
+    "GitHub/Teacher-OS/tpt/previews/summary-workbook/TPT-preview-1.png",
+    "GitHub/Teacher-OS/tpt/previews/revision-cards/TPT-preview-2.png",
+    "GitHub/Teacher-OS/tpt/previews/revision-cards/TPT-preview-3.png"
+  ]
+}

@@ -127,6 +127,9 @@ namespace Ascend.Game
             if (errors.Count > 0) return Reject(string.Join("; ", errors));
 
             SaveRules.Apply(s, _combat.Progress, _inv.Items);
+            _combat.SetLevel(_combat.Progress.Level); // stats, skills and max HP follow the loaded level
+            var defense = GetComponent<PlayerDefense>();
+            if (defense != null) defense.Revive();     // a loaded game starts at full health
             _inv.Difficulty = s.Difficulty;
             if (s.Equipment != null) _combat.Equipment.Load(s.Equipment);
             if (s.ClockSeconds.HasValue && WorldClock.Instance != null) WorldClock.Instance.PlaySeconds = s.ClockSeconds.Value;

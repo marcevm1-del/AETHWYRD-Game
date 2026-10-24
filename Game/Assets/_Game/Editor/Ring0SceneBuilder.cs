@@ -184,7 +184,7 @@ namespace Ascend.EditorTools
             // Ring 0 monsters: Blender models (Tools/blender/ring0_monsters.py) when present, else labelled primitives.
             // The fun-test field (combat.md §12): a slime patch close by, a goblin pack of 5 deeper in, rabbits on the far side.
             var monsters = new GameObject("Ring0_Monsters").transform;
-            foreach (var at in new[] { new Vector3(2.2f, 0, 5), new Vector3(4.5f, 0, 6.5f), new Vector3(3.2f, 0, 8.5f) })
+            foreach (var at in new[] { new Vector3(10f, 0, 8f), new Vector3(12.5f, 0, 9.5f), new Vector3(11f, 0, 11.5f) }) // outside their 10.7 m alert radius from the start
                 if (!Model(monsters, "mon_blue_slime", "Blue_Slime", at))
                     Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, at + Vector3.up * 0.25f, new Vector3(0.55f, 0.45f, 0.55f), slime);
             for (int i = 0; i < 5; i++)
