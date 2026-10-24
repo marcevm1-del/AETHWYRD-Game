@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| World map in game | Core port of the atlas map (bit-exact, tested), new relief renderer (painted + parchment), map placement data in regions.json, MapKnowledge (inked/pencilled/blank, guild map seal, Rank E System overlay), Area + World map window (Tab/M), terrain minimap, map saves, atlas relief upgrade | 175 + 133 |
 | World map follows the atlas | Redrew the map concept on the repo atlas (Tools/atlas): terrain rendered from its own seed, labels at its anchors with Tyrants, heartland inset and Underworld gates re-oriented; doc and Canon §6 row rewritten | 164 + 127 |
 | World map concept | Surface layout for all 49 regions, Aldmere inset and Underworld cross-section (10_World/world_map_concept.md + design canvas); Canon §6 row added | 164 + 127 |
 | Companion: Lyra | companion_field_ai.md Ring 0 prototype: Lyra joins after Status Granted ('Travel together'), follows without crowding or body-blocking you, takes Z / LB orders (Follow, Hold, Focus → assist your last target), dodges wind-ups beside her, lands a Rising Slash on monsters you stagger, regroups instead of teleporting into fights, is only ever downed (back after 20 s), and shares her read on new monsters out of combat (quiet mode in her dialog). Decision order in Core CompanionBrain; monsters now fight back at any ally (IAlly) | 164 + 127 |

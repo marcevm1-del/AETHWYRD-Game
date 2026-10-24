@@ -1,6 +1,7 @@
 # World Map Concept
 
 > **Source of truth for positions:** the atlas at `Tools/atlas/aetheria_atlas.html` (region anchors on a 150 × 100 grid, coastline seed 1207). `Data/World/regions.json` stays authoritative for each region's ring, ranks, Tyrant and settlements. This page reads the atlas as a map and checks the lore against it; it adds no new places.
+> **In game:** `12_Systems/world_map.md` (the painted map, the inking parchment map and the local Area map).
 > **Visual:** the design canvas *Aetheria World Map Concept* (claude.ai/artifact/GFrTTqADaot19C1719p4sE): the surface rendered from the atlas's own terrain, a heartland inset and an Underworld cross-section.
 
 ## 1. The big shape (as the atlas draws it)

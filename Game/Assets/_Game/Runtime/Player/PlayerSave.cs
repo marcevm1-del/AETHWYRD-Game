@@ -76,6 +76,7 @@ namespace Ascend.Game
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
             if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
             if (TryGetComponent<PlayerBestiary>(out var book)) s.Bestiary = book.Book.Save();
+            if (TryGetComponent<PlayerMap>(out var map)) s.Map = map.Save();
             var withMe = FindObjectsByType<CompanionAI>(FindObjectsSortMode.None).FirstOrDefault(c => c.Joined);
             s.Companion = withMe != null ? withMe.GetComponent<QuestGiver>().NpcId : null;
             s.GatherNodes = GatherNode.All.Where(n => n != null && !n.Ready).ToDictionary(n => n.Key, n => n.ReadyAtHour);
@@ -136,6 +137,7 @@ namespace Ascend.Game
             if (s.Sieges != null && SiegeDirector.Instance != null && s.Sieges.TryGetValue(SiegeDirector.Instance.Threat.RegionId, out var sg))
                 SiegeDirector.Instance.Load(sg.State, sg.Escalation, sg.DoneDays, sg.LastWeek);
             if (TryGetComponent<PlayerBestiary>(out var book)) book.Load(s.Bestiary);
+            if (TryGetComponent<PlayerMap>(out var map)) map.Load(s.Map);
             foreach (var c in FindObjectsByType<CompanionAI>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             {
                 bool mine = s.Companion != null && c.GetComponent<QuestGiver>().NpcId == s.Companion;

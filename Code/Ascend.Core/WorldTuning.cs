@@ -13,6 +13,7 @@ namespace Ascend.Core
         public TamingTuning Taming { get; set; } = new TamingTuning();
         public BestiaryTuning Bestiary { get; set; } = new BestiaryTuning();
         public CompanionTuning Companions { get; set; } = new CompanionTuning();
+        public MapTuning Map { get; set; } = new MapTuning();
     }
 
     public sealed class CurrencyTuning

@@ -2759,30 +2759,49 @@ function render(){
     elev[k]=fbm(ux*.09+50,uy*.09+50,5);
     biomeAt[k]=land?BIOME_NAMES.indexOf(biomeAtU(LAND[best],ux,uy)):255;
   }
+  // Relief and soft colour, as the game paints it (Code/Ascend.Core/WorldMapPainter.cs): distance to the coast,
+  // a ridged height field where the land is rough, light from the north-west, terrains blended across their edges.
+  const s=W/150, N=W*H;
+  const toSea=chamfer(k=>regionAt[k]<0), toLand=chamfer(k=>regionAt[k]>=0);
+  const coast=new Float32Array(N);
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++){const k=y*W+x;let d=regionAt[k]>=0?toSea[k]:-toLand[k];
+    if(Math.abs(d)<3&&x>0&&y>0&&x<W-1&&y<H-1){const gx=(fieldAt[k+1]-fieldAt[k-1])*.5,gy=(fieldAt[k+W]-fieldAt[k-W])*.5,gl=Math.hypot(gx,gy);if(gl>1e-6)d=(fieldAt[k]-SEA_T)/gl}
+    coast[k]=d}
+  const rough=new Float32Array(N); for(let k=0;k<N;k++)rough[k]=biomeAt[k]===255?0:(ROUGH[BIOME_NAMES[biomeAt[k]]]||0);
+  boxBlur(rough,Math.max(1,Math.round(1.3*s)),2);
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++){const k=y*W+x;if(regionAt[k]<0){hgt[k]=0;continue}const ux=x*SX,uy=y*SY;
+    const ridge=1-Math.abs(2*fbm(ux*.16+3,uy*.16+5,5)-1);
+    hgt[k]=.28*smooth(0,6*s,coast[k])+.10*fbm(ux*.35+11,uy*.35+7,5)+rough[k]*(.12+.95*ridge*ridge)*smooth(0,2.5*s,coast[k])}
+  const cr=new Float32Array(N),cg=new Float32Array(N),cb=new Float32Array(N),cm=new Float32Array(N);
+  for(let k=0;k<N;k++)if(biomeAt[k]!==255){const c=BIOME[BIOME_NAMES[biomeAt[k]]];cr[k]=c[0];cg[k]=c[1];cb[k]=c[2];cm[k]=1}
+  const br=Math.max(1,Math.round(.45*s)); for(const a of [cr,cg,cb,cm])boxBlur(a,br,2);
+  const lz0=Math.hypot(-1,-1,1.4), lx=-1/lz0, ly=-1/lz0, lz=1.4/lz0, zs=s*6.5;
   for(let y=0;y<H;y++)for(let x=0;x<W;x++){
-    const k=y*W+x, ri=regionAt[k], o=k*4, ux=x*SX, uy=y*SY; let c;
-    const grain=(vnoise(x*.9,y*.9)-.5)*14;
+    const k=y*W+x, ri=regionAt[k], o=k*4, ux=x*SX, uy=y*SY, cd=coast[k]; let c;
+    const grain=(vnoise(x*.9,y*.9)-.5)*10;
     if(ri<0){
-      const f=Math.max(0,Math.min(1,fieldAt[k]/SEA_T)), shallow=Math.pow(f,6);
-      const wave=(fbm(ux*.5+3,uy*1.6,3)-.5)*14;
-      c=[10+shallow*60+wave*.6, 34+shallow*120+wave, 56+shallow*120+wave];
-      if(f>.97)c=[150,220,214];
+      const d=-cd, deep=Math.pow(smooth(0,8*s,d),.7), wave=(fbm(ux*.5+3,uy*1.6,3)-.5)*12;
+      c=mix([64,146,158],[12,38,64],deep).map(v=>v+wave);
+      for(const [e,a] of [[.55,.45],[1.25,.3],[2.2,.18]]){const q=Math.max(0,1-Math.abs(d-e*s)/(.06*s+.6));c=mix(c,[190,226,224],q*a)}
     } else {
       const r=LAND[ri], b=BIOME_NAMES[biomeAt[k]];
-      c=BIOME[b].slice();
-      const right=elev[Math.min(k+1,W*H-1)], down=elev[Math.min(k+W,W*H-1)];
-      const rough=(b==="mountain"||b==="volcanic"||b==="demon")?3:b==="tundra"?1.6:1;
-      const sh=((elev[k]-right)+(elev[k]-down))*130*rough, hi=(elev[k]-.5)*40*rough;
-      const tex=(fbm(ux*.6,uy*.6,3)-.5)*26;
-      c=c.map(v=>v+sh+hi+tex+grain);
+      c=cm[k]>1e-3?[cr[k]/cm[k],cg[k]/cm[k],cb[k]/cm[k]]:BIOME[b].slice();
+      c=c.map(v=>v*(1+(fbm(ux*.12+40,uy*.12+70,3)-.5)*.2));
+      const h=hgt[k];
+      c=mix(c,[150,142,132],smooth(.55,.9,h)*.7);
+      c=mix(c,[240,244,246],smooth(b==="tundra"?.62:1.3,1.5,h));
+      if(b!=="tundra"&&b!=="swamp")c=mix(c,[218,204,158],(1-smooth(.3*s,1.1*s,cd))*.6);
+      let sh=1;
+      if(x>0&&y>0&&x<W-1&&y<H-1){const dx=(hgt[k+1]-hgt[k-1])*.5*zs,dy=(hgt[k+W]-hgt[k-W])*.5*zs;sh=(-dx*lx-dy*ly+lz)/Math.sqrt(dx*dx+dy*dy+1)/lz}
+      sh=Math.max(0,Math.min(1.6,sh));
+      c=c.map(v=>v*(.5+.52*sh)+(fbm(ux*.6,uy*.6,3)-.5)*22+grain);
       if(view==="ring"){const rc=hex(RING_COL[r.ring]);c=c.map((v,j)=>v*.4+rc[j]*.6)}
       if(view==="siege"){const sc=r.state==="besieged"?[170,56,50]:[220,180,90];c=c.map((v,j)=>v*.5+sc[j]*.5)}
       const nb=[regionAt[k-1],regionAt[k+1],regionAt[k-W],regionAt[k+W]];
-      if(nb.some(v=>v===-1)) c=[36,40,34];
-      else if(nb.some(v=>v!==ri&&v!==undefined)) c=c.map(v=>v*.62);
-      // coastal light band
-      const fl=fieldAt[k]; if(fl<SEA_T+.035) c=c.map((v,j)=>v*.85+[230,220,170][j]*.15);
+      if(nb.some(v=>v!==ri&&v!==undefined&&v!==-1)&&((x+y)>>1)%3!==0) c=c.map(v=>v*.7); // dotted border
     }
+    const line=Math.max(0,Math.min(1,Math.max(.9,.09*s)+.5-Math.abs(cd)));
+    c=mix(c,[30,34,32],line*.9);
     px[o]=c[0];px[o+1]=c[1];px[o+2]=c[2];px[o+3]=255;
   }
   tctx.putImageData(img,0,0);
@@ -2791,6 +2810,21 @@ function render(){
   drawOverlay();
 }
 function hex(s){return [1,3,5].map(i=>parseInt(s.slice(i,i+2),16))}
+const ROUGH={plains:.06,forest:.16,swamp:0,steppe:.08,mountain:1,volcanic:.95,tundra:.5,desert:.12,jungle:.2,spirit:.3,demon:.75};
+const hgt=new Float32Array(W*H);
+function smooth(a,b,v){const x=Math.max(0,Math.min(1,(v-a)/(b-a)));return x*x*(3-2*x)}
+function mix(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t]}
+// Two-pass chamfer distance (pixels) to the nearest pixel where pred(k) holds.
+function chamfer(pred){const d=new Float32Array(W*H),big=1e6,dg=1.4142;for(let k=0;k<W*H;k++)d[k]=pred(k)?0:big;
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++){const k=y*W+x;let v=d[k];if(x>0)v=Math.min(v,d[k-1]+1);if(y>0){v=Math.min(v,d[k-W]+1);if(x>0)v=Math.min(v,d[k-W-1]+dg);if(x<W-1)v=Math.min(v,d[k-W+1]+dg)}d[k]=v}
+  for(let y=H-1;y>=0;y--)for(let x=W-1;x>=0;x--){const k=y*W+x;let v=d[k];if(x<W-1)v=Math.min(v,d[k+1]+1);if(y<H-1){v=Math.min(v,d[k+W]+1);if(x<W-1)v=Math.min(v,d[k+W+1]+dg);if(x>0)v=Math.min(v,d[k+W-1]+dg)}d[k]=v}
+  return d}
+// Separable box blur, repeated (two passes is a soft tent).
+function boxBlur(v,r,passes){const t=new Float32Array(v.length);for(let p=0;p<passes;p++){
+  for(let y=0;y<H;y++){let s=0,n=0;const row=y*W;for(let x=-r;x<=r;x++)if(x>=0&&x<W){s+=v[row+x];n++}
+    for(let x=0;x<W;x++){t[row+x]=s/n;const o=x-r,i=x+r+1;if(o>=0){s-=v[row+o];n--}if(i<W){s+=v[row+i];n++}}}
+  for(let x=0;x<W;x++){let s=0,n=0;for(let y=-r;y<=r;y++)if(y>=0&&y<H){s+=t[y*W+x];n++}
+    for(let y=0;y<H;y++){v[y*W+x]=s/n;const o=y-r,i=y+r+1;if(o>=0){s-=t[o*W+x];n--}if(i<H){s+=t[i*W+x];n++}}}}}
 const regAtU=(ux,uy)=>{const x=Math.round(ux/SX),y=Math.round(uy/SY);if(x<0||y<0||x>=W||y>=H)return -1;return regionAt[y*W+x]};
 const bioAtU=(ux,uy)=>{const x=Math.round(ux/SX),y=Math.round(uy/SY);if(x<0||y<0||x>=W||y>=H)return null;return BIOME_NAMES[biomeAt[y*W+x]]};
 const fieldAtU=(ux,uy)=>{const x=Math.max(0,Math.min(W-1,Math.round(ux/SX))),y=Math.max(0,Math.min(H-1,Math.round(uy/SY)));return fieldAt[y*W+x]};
@@ -2837,7 +2871,7 @@ function drawDeco(){
     if(Math.hypot(x-r.ax,y-r.ay)<3.2)continue; // keep labels clear
     if(fieldAtU(x,y)<SEA_T+.05)continue;
     const b=bioAtU(x,y), X=x*S, Y=y*S;
-    if(b==="mountain"||b==="volcanic"||(b==="tundra"&&u<.45)||(b==="demon"&&u<.6)){ if(u>.78&&b!=="demon")continue; peak(g,X,Y,S*(1+u*.9),b); }
+    if(b==="mountain"||b==="volcanic"||(b==="tundra"&&u<.45)||(b==="demon"&&u<.6)){ const hh=hgt[Math.min(H-1,Math.round(y/SY))*W+Math.min(W-1,Math.round(x/SX))]; if((u>.78||hh<.3)&&b!=="demon")continue; peak(g,X,Y,S*(.8+hh*1.1+u*.3),b); }
     else if(b==="forest"||b==="jungle"||b==="spirit"){ if(u>.85)continue; trees(g,X,Y,S,b,u); }
     else if(b==="desert"){ if(u>.5)continue; dune(g,X,Y,S); }
     else if(b==="swamp"){ if(u>.6)continue; reeds(g,X,Y,S); }

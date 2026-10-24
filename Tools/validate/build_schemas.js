@@ -10,6 +10,8 @@ const RL = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SS
 const EL = { type: 'string', enum: ['None', 'Fire', 'Water', 'Ice', 'Lightning', 'Earth', 'Wind', 'Nature', 'Poison', 'Light', 'Dark', 'Blood', 'Void'] };
 const FLAG = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
 const WEEKDAYS = ['Solenday', 'Maelsday', 'Thorsday', 'Sylvasday', 'Kaelsday', 'Morrowsday', 'Vexday'];
+const MAP_POINT = { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', minimum: 0, maximum: 150 } };
+const MAP_TERRAIN = ['plains', 'forest', 'swamp', 'steppe', 'mountain', 'volcanic', 'tundra', 'desert', 'jungle', 'spirit', 'demon'];
 const id = prefix => ({ type: 'string', pattern: `^${prefix}[a-z0-9_]+$` });
 
 const SCHEMAS = {
@@ -25,7 +27,19 @@ const SCHEMAS = {
       tyrantSpeciesId: id('mon_'), siegeFaction: { type: 'string' },
       defenceSettlements: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } },
       initialState: { type: 'string', enum: ['besieged', 'weakened', 'liberated'] },
-      noSiege: { type: 'boolean' }, noSiegeReason: { type: 'string' }
+      noSiege: { type: 'boolean' }, noSiegeReason: { type: 'string' },
+      // Placement on the world map (150 x 100 map units; 12_Systems/world_map.md). Surface lands have a radius and
+      // the terrain the map paints; underworld regions mark their gate; the Sky Archipelago floats.
+      map: {
+        type: 'object', additionalProperties: false, required: ['at'],
+        properties: {
+          at: MAP_POINT, radius: { type: 'number', minimum: 0, maximum: 20 }, isle: { type: 'boolean' }, floating: { type: 'boolean' },
+          gate: { type: 'boolean' }, depth: { type: 'integer', minimum: 1, maximum: 5 },
+          terrain: { type: 'array', minItems: 1, items: { type: 'string', enum: MAP_TERRAIN } },
+          features: { type: 'array', items: { type: 'string', enum: ['city', 'ruins', 'coast', 'cave'] } },
+          places: { type: 'object', additionalProperties: MAP_POINT }
+        }
+      }
     }
   },
   species: {

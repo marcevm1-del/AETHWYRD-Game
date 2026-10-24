@@ -114,7 +114,7 @@ Opens with a rune burst. Tabs: **Status · Skills · Class · Titles · Bonds ·
 
 ## 8. World UI
 - **Guild Card (physical item):** inspect it to turn it in 3D. It shows your rank stamp, your main title, the guild seal, scratches from fights and the card material. **Show it to NPCs** in dialogue to unlock rank-gated reactions.
-- **Map (parchment):** it starts blank. It inks itself as you explore, in your character's handwriting. Toggle the **System overlay** (blue grid, rank-colored zones, ley lines). Region borders show **siege status**: red smoke = Besieged, green banners = Liberated.
+- **Map (parchment)** — *built in Ring 0, see [world_map.md](world_map.md): Area and World pages, inked / pencilled / blank lands, the Rank E System overlay*: it starts blank. It inks itself as you explore, in your character's handwriting. Toggle the **System overlay** (blue grid, rank-colored zones, ley lines). Region borders show **siege status**: red smoke = Besieged, green banners = Liberated.
 - **Journal:** handwritten pages with sketches. Your character **auto-sketches** new monsters and vistas. Old Hero journals you find are added as their own books.
 - **Wanted posters and the guild board:** a pinned-paper board. Day Specials have a red wax seal, dailies are plain, and siege contracts are nailed with a dagger.
 - **Letters:** companions, rivals and NPCs send letters to your home mailbox (gratitude, gossip, invitations, rival challenges).

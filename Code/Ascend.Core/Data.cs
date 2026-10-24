@@ -24,6 +24,28 @@ namespace Ascend.Core
         public string InitialState { get; set; }
         public bool NoSiege { get; set; }
         public string NoSiegeReason { get; set; }
+        /// <summary>Where it sits on the world map (null for the post-game moon).</summary>
+        public RegionMapData Map { get; set; }
+    }
+
+    /// <summary>A region's place on the 150 x 100 world map (regions.json → map; 12_Systems/world_map.md).</summary>
+    public sealed class RegionMapData
+    {
+        /// <summary>Map units: x east, y south. A land's centre, an underworld region's surface gate.</summary>
+        public double[] At { get; set; }
+        /// <summary>How far the land reaches (0 = not a land of its own).</summary>
+        public double Radius { get; set; }
+        public bool Isle { get; set; }
+        public bool Floating { get; set; }
+        public bool Gate { get; set; }
+        public int Depth { get; set; }
+        /// <summary>What the map paints there: plains, forest, swamp, steppe, mountain, volcanic, tundra, desert, jungle, spirit, demon.</summary>
+        public List<string> Terrain { get; set; } = new List<string>();
+        public List<string> Features { get; set; } = new List<string>();
+        /// <summary>Settlements by name → map position.</summary>
+        public Dictionary<string, double[]> Places { get; set; } = new Dictionary<string, double[]>();
+        public double X => At != null && At.Length > 0 ? At[0] : 0;
+        public double Y => At != null && At.Length > 1 ? At[1] : 0;
     }
 
     public sealed class SiegeUnit { public string SpeciesId { get; set; } public int Count { get; set; } }

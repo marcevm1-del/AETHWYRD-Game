@@ -3,6 +3,7 @@ using System.Text.Json;
 using Ascend.Core;
 
 BalanceReport.PrintIfAsked();
+MapRender.RenderIfAsked();
 
 // Minimal test harness: every public static void method in a class marked [Tests] is a test.
 var failures = new List<string>();

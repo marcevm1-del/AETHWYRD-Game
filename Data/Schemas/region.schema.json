@@ -105,6 +105,89 @@
   },
   "noSiegeReason": {
    "type": "string"
+  },
+  "map": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "at"
+   ],
+   "properties": {
+    "at": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 150
+     }
+    },
+    "radius": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 20
+    },
+    "isle": {
+     "type": "boolean"
+    },
+    "floating": {
+     "type": "boolean"
+    },
+    "gate": {
+     "type": "boolean"
+    },
+    "depth": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "terrain": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "string",
+      "enum": [
+       "plains",
+       "forest",
+       "swamp",
+       "steppe",
+       "mountain",
+       "volcanic",
+       "tundra",
+       "desert",
+       "jungle",
+       "spirit",
+       "demon"
+      ]
+     }
+    },
+    "features": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "enum": [
+       "city",
+       "ruins",
+       "coast",
+       "cave"
+      ]
+     }
+    },
+    "places": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 150
+      }
+     }
+    }
+   }
   }
  }
 }

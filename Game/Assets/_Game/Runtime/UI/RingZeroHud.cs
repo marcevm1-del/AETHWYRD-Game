@@ -160,6 +160,12 @@ namespace Ascend.Game
             float mapSize = 150f;
             Radar(new Rect(sw - mapSize - 18, 80, mapSize, mapSize));
             float ry = 80 + mapSize + 8;
+            if (player.TryGetComponent<PlayerMap>(out var map) && map.Area != null)
+            {
+                // Where you are, under the minimap, and how to open the full map.
+                Shadowed(new Rect(sw - 330, ry, 312, 18), $"{PlayerMap.RegionName(map.Area.RegionId)} · Tab: map", _tiny, TextAnchor.MiddleRight);
+                ry += 20;
+            }
             if (_quests != null)
             {
                 var tracked = TrackedObjective();
@@ -251,6 +257,8 @@ namespace Ascend.Game
         // ---------------------------------------------------------------- styles and pieces
         GUIStyle _bold, _center, _tiny, _quest, _panel;
         static Texture2D _circle, _ring;
+        Texture2D _minimap;
+        float _minimapAt;
 
         void EnsureStyles()
         {
@@ -415,10 +423,21 @@ namespace Ascend.Game
         void Radar(Rect r)
         {
             var old = GUI.color;
-            GUI.color = new Color(0.12f, 0.2f, 0.12f, 0.8f); GUI.DrawTexture(r, _circle);
-            GUI.color = new Color(0.85f, 0.7f, 0.35f); GUI.DrawTexture(r, _ring);
             var cam = Camera.main;
             float yaw = cam != null ? cam.transform.eulerAngles.y : player.transform.eulerAngles.y;
+            // The ground around you from the area drawing (falls back to a plain disc until it exists).
+            bool drawn = false;
+            if (player.TryGetComponent<PlayerMap>(out var pm) && AreaMapArt.HasDrawing(pm.Area.AreaId))
+            {
+                if (Event.current.type == EventType.Repaint && (Time.unscaledTime >= _minimapAt || _minimap == null))
+                {
+                    _minimapAt = Time.unscaledTime + 1f / 15f;
+                    AreaMapArt.Minimap(pm.Area, pm.Fog, player.transform.position, yaw, RadarRange, ref _minimap);
+                }
+                if (_minimap != null) { GUI.color = Color.white; GUI.DrawTexture(r, _minimap); drawn = true; }
+            }
+            if (!drawn) { GUI.color = new Color(0.12f, 0.2f, 0.12f, 0.8f); GUI.DrawTexture(r, _circle); }
+            GUI.color = new Color(0.85f, 0.7f, 0.35f); GUI.DrawTexture(r, _ring);
             Vector2 centre = r.center;
             float radius = r.width / 2f - 8f;
             void Dot(Vector3 world, Color col, float size)
@@ -471,8 +490,8 @@ namespace Ascend.Game
             if (taming != null && taming.Roster.Ranch.Any()) Shadowed(new Rect(x, y, 210, 18), $"Ranch: {taming.Roster.Ranch.Count()}", _tiny);
         }
 
-        /// <summary>The first active quest's next objective and where it is (for the tracker and the radar).</summary>
-        (string title, string objective, float distance, Vector3? at) TrackedObjective()
+        /// <summary>The first active quest's next objective and where it is (the tracker, the radar and the map).</summary>
+        public (string title, string objective, float distance, Vector3? at) TrackedObjective()
         {
             if (_quests == null) return (null, null, -1, null);
             var p = _quests.Log.Active.FirstOrDefault();

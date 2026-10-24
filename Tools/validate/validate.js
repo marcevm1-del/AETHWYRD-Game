@@ -242,6 +242,22 @@ for (const r of rows.regions) {
   if (!(r.defenceSettlements || []).length) err(r.id, 'needs defenceSettlements');
   if (!rows.siege.some(w => w.regionId === r.id)) err(r.id, 'besieged region has no siege wave set');
 }
+// World map: every place outside the post-game has a map position; defended towns are on the map; surface lands
+// sit inside the 150 x 100 map and their anchor is not under another land's centre.
+for (const r of rows.regions) {
+  if (r.layer === 'post-game') { if (r.map) err(r.id, 'post-game regions are not on the world map'); continue; }
+  if (!r.map) { err(r.id, 'needs a map position'); continue; }
+  const [x, y] = r.map.at;
+  if (x > 150 || y > 100) err(r.id, `map.at ${x},${y} is outside the 150 x 100 map`);
+  if (r.layer === 'surface' && !r.map.floating) {
+    if (!(r.map.radius > 0)) err(r.id, 'a surface land needs map.radius');
+    if (!(r.map.terrain || []).length) err(r.id, 'a surface land needs map.terrain');
+    for (const s of r.defenceSettlements || []) if (!(r.map.places || {})[s]) err(r.id, `defended town "${s}" has no map.places position`);
+  }
+  if (r.layer === 'underworld' && !r.map.gate) err(r.id, 'underworld regions mark their surface gate (map.gate)');
+}
+const lands = rows.regions.filter(r => r.layer === 'surface' && r.map && r.map.radius > 0);
+for (const a of lands) for (const b of lands) if (a !== b && Math.hypot(a.map.at[0] - b.map.at[0], a.map.at[1] - b.map.at[1]) < 4) err(a.id, `map anchor too close to ${b.id}`);
 for (const w of rows.siege) {
   const reg = rows.regions.find(r => r.id === w.regionId);
   if (!reg) { err(w.id, `unknown region ${w.regionId}`); continue; }

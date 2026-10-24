@@ -194,19 +194,20 @@ namespace Ascend.EditorTools
             return go;
         }
 
-        static void Place(Transform parent, string placeId, Vector3 at, float radius)
+        static QuestPlace Place(Transform parent, string placeId, Vector3 at, float radius)
         {
             var go = new GameObject("Place_" + placeId);
             go.transform.SetParent(parent, false);
             go.transform.position = at;
             var p = go.AddComponent<QuestPlace>();
             p.PlaceId = placeId; p.Radius = radius;
+            return p;
         }
 
         /// <summary>A stand-in for a named place a quest sends you to: a lantern post with its name, until the real spot is built.</summary>
         static void Landmark(Transform parent, string placeId, string shownAs, Vector3 at)
         {
-            Place(parent, placeId, at, 4f);
+            Place(parent, placeId, at, 4f).ShownAs = shownAs;
             Prim(PrimitiveType.Cylinder, "Landmark_" + placeId, at + Vector3.up * 1.2f, new Vector3(0.15f, 1.2f, 0.15f), Mat("Wood", new Color(0.55f, 0.38f, 0.24f)), parent);
             Prim(PrimitiveType.Sphere, "Lamp_" + placeId, at + Vector3.up * 2.5f, Vector3.one * 0.35f, Mat("Lamp", new Color(1f, 0.85f, 0.45f), 0.8f), parent, keepCollider: false);
             Label(parent, at + Vector3.up * 2.9f, shownAs, new Color(1f, 0.92f, 0.7f), 0.03f);

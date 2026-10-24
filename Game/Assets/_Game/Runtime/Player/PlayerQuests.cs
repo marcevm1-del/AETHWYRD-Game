@@ -44,6 +44,11 @@ namespace Ascend.Game
         }
 
         public List<RankRequirement> RankRequirements() => Rank.Requirements(_combat.Progress.Level, SpecialMet, Log.Completed);
+        /// <summary>A quest was taken on (the map pencils in its region).</summary>
+        public event System.Action<QuestData> Accepted;
+        /// <summary>A guild promotion happened (the map seal names new lands).</summary>
+        public event System.Action<PromotionData> RankedUp;
+
         public bool CanRankUp => Rank.CanPromote(_combat.Progress.Level, SpecialMet, Log.Completed);
 
         /// <summary>The rank-up ceremony at the Guild: new rank, the Rank Gift.</summary>
@@ -54,6 +59,7 @@ namespace Ascend.Game
             if (!string.IsNullOrEmpty(p.Gift)) _inv.Items.Add(p.Gift);
             _inv.Toast($"RANK UP: {p.From} → {p.To} ({Rank.Title}). Your card is now {Rank.Card}.", 8f);
             if (!string.IsNullOrEmpty(p.Gift) && AscendData.Db.Items.TryGetValue(p.Gift, out var gift)) _inv.Toast($"Rank Gift: {gift.Name}", 6f);
+            RankedUp?.Invoke(p);
             return p;
         }
         public ICollection<string> Flags => _flags;
@@ -120,6 +126,7 @@ namespace Ascend.Game
             if (!Log.Accept(q.Id, Context(q.Region))) return false;
             Log.OnInventoryChanged(_inv.Items); // collect objectives count what you already hold
             _inv.Toast($"Quest accepted: {q.Title}", 4f);
+            Accepted?.Invoke(q);
             return true;
         }
 

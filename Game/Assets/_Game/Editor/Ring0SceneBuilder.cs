@@ -133,6 +133,9 @@ namespace Ascend.EditorTools
             // Ground & obstacles.
             var world = new GameObject("Graybox").transform;
             Prim(PrimitiveType.Plane, "Ground", Vector3.zero, new Vector3(20, 1, 20), ground, world);
+            // The map's local area: the 200 m field around Brindlewick, in Whisperwood (12_Systems/world_map.md).
+            var mapArea = new GameObject("LocalMapArea").AddComponent<LocalMapArea>();
+            mapArea.transform.SetParent(world, false);
             for (int i = 0; i < 4; i++) // ledges of rising height (climb / jump tests)
                 Prim(PrimitiveType.Cube, $"Ledge_{i + 1}m", new Vector3(-22 + i * 3.2f, (i + 1) * 0.5f, 14), new Vector3(3, i + 1, 3), stone, world);
             Prim(PrimitiveType.Cube, "Ramp", new Vector3(8, 1.1f, 4), new Vector3(4, 0.4f, 10), stone, world, Quaternion.Euler(-14, 0, 0));
@@ -167,6 +170,7 @@ namespace Ascend.EditorTools
             p.AddComponent<PlayerTaming>();
             p.AddComponent<PlayerCrafting>();
             p.AddComponent<PlayerBestiary>();
+            p.AddComponent<PlayerMap>();
             p.AddComponent<PlaytestShortcuts>();
             p.AddComponent<PlayerSave>();
             var driver = p.AddComponent<PlayerInputDriver>();

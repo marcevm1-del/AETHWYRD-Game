@@ -59,6 +59,8 @@ namespace Ascend.Core
         public Dictionary<string, int> InnNights { get; set; } = new Dictionary<string, int>();
         /// <summary>Region siege state by region id (null in older saves: data initial state).</summary>
         public Dictionary<string, SiegeSave> Sieges { get; set; }
+        /// <summary>The player's map: inked and pencilled regions, explored local cells (null in older saves: a fresh map).</summary>
+        public MapSave Map { get; set; }
     }
 
     public sealed class SiegeSave

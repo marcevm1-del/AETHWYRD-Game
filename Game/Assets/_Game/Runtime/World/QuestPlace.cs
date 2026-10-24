@@ -7,10 +7,13 @@ namespace Ascend.Game
     {
         [SerializeField] string placeId;
         [SerializeField] float radius = 4f;
+        [SerializeField] string shownAs;
         bool _inside;
 
         public string PlaceId { get => placeId; set => placeId = value; }
         public float Radius { get => radius; set => radius = value; }
+        /// <summary>The name the map shows (empty: not a named place).</summary>
+        public string ShownAs { get => shownAs; set => shownAs = value; }
 
         void Update()
         {

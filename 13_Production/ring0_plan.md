@@ -88,4 +88,4 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 
 **Controls** (`12_Systems/hud_and_ui.md` §15): WASD/left stick move · Shift/B dodge (hold to sprint) · Space/A jump · LMB/X light · RMB/Y heavy (hold to charge; after two lights = launcher; in the air = slam) · Q/RT block/parry · MMB/R3 lock-on · 1–4 or RB + face skills · R or L3+R3 Ultimate · G or D-pad up Fire Bomb · E or D-pad down talk · H or D-pad right healing potion · I or View bag · B bestiary · T or D-pad left tame · Z or LB partner order · Tab/Esc/Start Status Window. Playtest keys: **F8** +1 level (Shift+F8: +5), **F9** start a raid.
 
-**Tests:** 164 rules + 127 Unity PlayMode. Day-by-day: [[progress_log]].
+**Tests:** 175 rules + 133 Unity PlayMode. Day-by-day: [[progress_log]].

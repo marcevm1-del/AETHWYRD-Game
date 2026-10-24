@@ -20,7 +20,37 @@
    "Greyhollow Village",
    "Royal Valley farms"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    66,
+    50
+   ],
+   "radius": 8.5,
+   "terrain": [
+    "plains",
+    "forest",
+    "swamp"
+   ],
+   "features": [
+    "ruins",
+    "city"
+   ],
+   "places": {
+    "Ashby": [
+     67.6,
+     54.6
+    ],
+    "Greyhollow Village": [
+     62.2,
+     52.4
+    ],
+    "Royal Valley farms": [
+     70.3,
+     51.2
+    ]
+   }
+  }
  },
  {
   "id": "reg_whisperwood",
@@ -39,7 +69,30 @@
    "Brindlewick",
    "Millbrook"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    75,
+    58
+   ],
+   "radius": 7,
+   "terrain": [
+    "forest"
+   ],
+   "features": [
+    "ruins"
+   ],
+   "places": {
+    "Brindlewick": [
+     72.6,
+     60
+    ],
+    "Millbrook": [
+     76.1,
+     58.7
+    ]
+   }
+  }
  },
  {
   "id": "reg_greymoor",
@@ -57,7 +110,27 @@
    "Greymoor stilt-village",
    "the Walking Hut market"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    85,
+    64
+   ],
+   "radius": 7,
+   "terrain": [
+    "swamp"
+   ],
+   "places": {
+    "Greymoor stilt-village": [
+     87.6,
+     67.7
+    ],
+    "the Walking Hut market": [
+     81.4,
+     68
+    ]
+   }
+  }
  },
  {
   "id": "reg_labyrinth_upper",
@@ -73,7 +146,15 @@
   "layer": "underworld",
   "noSiege": true,
   "noSiegeReason": "Dungeon band, not a region with settlements",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    64,
+    46
+   ],
+   "gate": true,
+   "depth": 1
+  }
  },
  {
   "id": "reg_labyrinth_deep",
@@ -89,7 +170,15 @@
   "layer": "underworld",
   "noSiege": true,
   "noSiegeReason": "Dungeon band, not a region with settlements",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    64,
+    46
+   ],
+   "gate": true,
+   "depth": 2
+  }
  },
  {
   "id": "reg_labyrinth_abyss",
@@ -105,7 +194,15 @@
   "layer": "underworld",
   "noSiege": true,
   "noSiegeReason": "Dungeon band, not a region with settlements",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    64,
+    46
+   ],
+   "gate": true,
+   "depth": 3
+  }
  },
  {
   "id": "reg_sylvaran",
@@ -123,7 +220,27 @@
    "Canopy City Lothaniel",
    "Moonwell hamlets"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    60,
+    62
+   ],
+   "radius": 8,
+   "terrain": [
+    "forest"
+   ],
+   "places": {
+    "Canopy City Lothaniel": [
+     61.8,
+     63.5
+    ],
+    "Moonwell hamlets": [
+     60.1,
+     67.7
+    ]
+   }
+  }
  },
  {
   "id": "reg_mossdeep",
@@ -140,7 +257,23 @@
   "defenceSettlements": [
    "Thimblefolk Mushroom Town"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    72,
+    70
+   ],
+   "radius": 7,
+   "terrain": [
+    "forest"
+   ],
+   "places": {
+    "Thimblefolk Mushroom Town": [
+     70.8,
+     71.7
+    ]
+   }
+  }
  },
  {
   "id": "reg_lirian",
@@ -158,7 +291,27 @@
   "defenceSettlements": [
    "Lirian canal cities"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    91,
+    51
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "plains"
+   ],
+   "features": [
+    "coast",
+    "city"
+   ],
+   "places": {
+    "Lirian canal cities": [
+     89.4,
+     55.6
+    ]
+   }
+  }
  },
  {
   "id": "reg_fanghold",
@@ -177,7 +330,28 @@
    "Fanghold",
    "nomad yurt camps"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    53,
+    42
+   ],
+   "radius": 9,
+   "terrain": [
+    "plains",
+    "steppe"
+   ],
+   "places": {
+    "Fanghold": [
+     52.1,
+     42.9
+    ],
+    "nomad yurt camps": [
+     55,
+     43
+    ]
+   }
+  }
  },
  {
   "id": "reg_iron_hold",
@@ -197,7 +371,31 @@
    "Karak Dûn",
    "Ashen Mines camps"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    70,
+    36
+   ],
+   "radius": 8,
+   "terrain": [
+    "mountain",
+    "volcanic"
+   ],
+   "features": [
+    "cave"
+   ],
+   "places": {
+    "Karak Dûn": [
+     68.5,
+     40.6
+    ],
+    "Ashen Mines camps": [
+     69.4,
+     36.3
+    ]
+   }
+  }
  },
  {
   "id": "reg_moraveil",
@@ -217,7 +415,31 @@
    "Moraveil goblin village",
    "Moraveil market town"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    50,
+    55
+   ],
+   "radius": 8,
+   "terrain": [
+    "forest",
+    "plains"
+   ],
+   "features": [
+    "cave"
+   ],
+   "places": {
+    "Moraveil goblin village": [
+     47.9,
+     59.3
+    ],
+    "Moraveil market town": [
+     50.5,
+     55.3
+    ]
+   }
+  }
  },
  {
   "id": "reg_strife_marches",
@@ -237,7 +459,31 @@
    "border baronies",
    "mercenary forts"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    96,
+    62
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "plains",
+    "forest"
+   ],
+   "features": [
+    "ruins"
+   ],
+   "places": {
+    "border baronies": [
+     93.6,
+     64
+    ],
+    "mercenary forts": [
+     98.9,
+     63.8
+    ]
+   }
+  }
  },
  {
   "id": "reg_velmark",
@@ -255,7 +501,26 @@
   "defenceSettlements": [
    "Velmark ducal towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    83,
+    43
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "plains"
+   ],
+   "features": [
+    "city"
+   ],
+   "places": {
+    "Velmark ducal towns": [
+     85.7,
+     45.5
+    ]
+   }
+  }
  },
  {
   "id": "reg_hoshizora",
@@ -276,7 +541,32 @@
    "Hoshizora City",
    "Bamboo Sea villages"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    108,
+    40
+   ],
+   "radius": 9,
+   "terrain": [
+    "forest",
+    "mountain",
+    "spirit"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "Hoshizora City": [
+     109.6,
+     44.6
+    ],
+    "Bamboo Sea villages": [
+     104.2,
+     42.3
+    ]
+   }
+  }
  },
  {
   "id": "reg_kitsune_isles",
@@ -296,7 +586,32 @@
    "Fox Shrine Isle",
    "spirit inns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    130,
+    32
+   ],
+   "radius": 5,
+   "isle": true,
+   "terrain": [
+    "spirit",
+    "forest"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "Fox Shrine Isle": [
+     130.2,
+     35.2
+    ],
+    "spirit inns": [
+     126.7,
+     33.6
+    ]
+   }
+  }
  },
  {
   "id": "reg_frostveil",
@@ -315,7 +630,28 @@
    "Skjaldheim",
    "longhouse steads"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    58,
+    24
+   ],
+   "radius": 10,
+   "terrain": [
+    "tundra",
+    "mountain"
+   ],
+   "places": {
+    "Skjaldheim": [
+     58.3,
+     25.1
+    ],
+    "longhouse steads": [
+     60.3,
+     29.2
+    ]
+   }
+  }
  },
  {
   "id": "reg_shen_lu",
@@ -334,7 +670,25 @@
   "defenceSettlements": [
    "sect foothill towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    100,
+    28
+   ],
+   "radius": 8.5,
+   "terrain": [
+    "mountain",
+    "forest",
+    "spirit"
+   ],
+   "places": {
+    "sect foothill towns": [
+     100.4,
+     29.1
+    ]
+   }
+  }
  },
  {
   "id": "reg_haneul",
@@ -352,7 +706,26 @@
   "defenceSettlements": [
    "Haneul gate-towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    116,
+    22
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "mountain"
+   ],
+   "features": [
+    "city"
+   ],
+   "places": {
+    "Haneul gate-towns": [
+     113.3,
+     24.5
+    ]
+   }
+  }
  },
  {
   "id": "reg_whitewater_reach",
@@ -371,7 +744,26 @@
   "defenceSettlements": [
    "ice-fishing villages"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    80,
+    15
+   ],
+   "radius": 8,
+   "terrain": [
+    "tundra"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "ice-fishing villages": [
+     81.2,
+     16.2
+    ]
+   }
+  }
  },
  {
   "id": "reg_umbravel",
@@ -389,7 +781,15 @@
   "defenceSettlements": [
    "Umbravel"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    70,
+    73
+   ],
+   "gate": true,
+   "depth": 1
+  }
  },
  {
   "id": "reg_sunscar",
@@ -407,7 +807,26 @@
   "defenceSettlements": [
    "Oasis of Qadira"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    70,
+    82
+   ],
+   "radius": 9,
+   "terrain": [
+    "desert"
+   ],
+   "features": [
+    "ruins"
+   ],
+   "places": {
+    "Oasis of Qadira": [
+     68.5,
+     86.6
+    ]
+   }
+  }
  },
  {
   "id": "reg_goldmere_coast",
@@ -426,7 +845,30 @@
    "Port Goldmere",
    "pirate stilt-towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    104,
+    72
+   ],
+   "radius": 8,
+   "terrain": [
+    "plains"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "Port Goldmere": [
+     106.7,
+     74.6
+    ],
+    "pirate stilt-towns": [
+     101.8,
+     77.2
+    ]
+   }
+  }
  },
  {
   "id": "reg_zarvan",
@@ -445,7 +887,27 @@
   "defenceSettlements": [
    "Zarvan garden cities"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    88,
+    84
+   ],
+   "radius": 8,
+   "terrain": [
+    "desert",
+    "mountain"
+   ],
+   "features": [
+    "city"
+   ],
+   "places": {
+    "Zarvan garden cities": [
+     88.8,
+     88.9
+    ]
+   }
+  }
  },
  {
   "id": "reg_zaruma",
@@ -463,7 +925,24 @@
   "defenceSettlements": [
    "Zaruma gold-road towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    54,
+    78
+   ],
+   "radius": 8,
+   "terrain": [
+    "plains",
+    "desert"
+   ],
+   "places": {
+    "Zaruma gold-road towns": [
+     51.5,
+     80.1
+    ]
+   }
+  }
  },
  {
   "id": "reg_dunewhale_drift",
@@ -480,7 +959,23 @@
   "defenceSettlements": [
    "the town on Thalassa's back"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    74,
+    93
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "desert"
+   ],
+   "places": {
+    "the town on Thalassa's back": [
+     71.3,
+     95.6
+    ]
+   }
+  }
  },
  {
   "id": "reg_xochitl_mire",
@@ -498,7 +993,24 @@
   "defenceSettlements": [
    "Xochitl river-cities"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    38,
+    70
+   ],
+   "radius": 8,
+   "terrain": [
+    "swamp",
+    "jungle"
+   ],
+   "places": {
+    "Xochitl river-cities": [
+     39.1,
+     71.2
+    ]
+   }
+  }
  },
  {
   "id": "reg_lumbaya",
@@ -517,7 +1029,27 @@
   "defenceSettlements": [
    "Lumbaya temple villages"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    27,
+    82
+   ],
+   "radius": 8,
+   "terrain": [
+    "jungle"
+   ],
+   "features": [
+    "coast",
+    "ruins"
+   ],
+   "places": {
+    "Lumbaya temple villages": [
+     26.3,
+     86.9
+    ]
+   }
+  }
  },
  {
   "id": "reg_stormreach",
@@ -535,7 +1067,26 @@
   "defenceSettlements": [
    "Stormreach cliff-towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    30,
+    48
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "mountain"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "Stormreach cliff-towns": [
+     27.4,
+     51.8
+    ]
+   }
+  }
  },
  {
   "id": "reg_true_name_isles",
@@ -553,7 +1104,27 @@
   "defenceSettlements": [
    "Naming Voyage harbor"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    130,
+    64
+   ],
+   "radius": 5,
+   "isle": true,
+   "terrain": [
+    "forest"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "Naming Voyage harbor": [
+     130.2,
+     65.7
+    ]
+   }
+  }
  },
  {
   "id": "reg_hollow_sea",
@@ -571,7 +1142,15 @@
   "defenceSettlements": [
    "Hollow Sea boat-towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    104,
+    68
+   ],
+   "gate": true,
+   "depth": 2
+  }
  },
  {
   "id": "reg_ashira_vale",
@@ -589,7 +1168,24 @@
   "defenceSettlements": [
    "Ashira"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    42,
+    61
+   ],
+   "radius": 7,
+   "terrain": [
+    "plains",
+    "forest"
+   ],
+   "places": {
+    "Ashira": [
+     44.8,
+     64.1
+    ]
+   }
+  }
  },
  {
   "id": "reg_dragon_spine",
@@ -607,7 +1203,24 @@
   "defenceSettlements": [
    "dragon-bone monasteries"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    88,
+    26
+   ],
+   "radius": 8,
+   "terrain": [
+    "mountain",
+    "volcanic"
+   ],
+   "places": {
+    "dragon-bone monasteries": [
+     88.8,
+     30.9
+    ]
+   }
+  }
  },
  {
   "id": "reg_sky_archipelago",
@@ -622,7 +1235,15 @@
   "layer": "surface",
   "noSiege": true,
   "noSiegeReason": "Abandoned Titan cities; Zephiel is the Act IV story boss",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    138,
+    12
+   ],
+   "radius": 0,
+   "floating": true
+  }
  },
  {
   "id": "reg_heavenreach",
@@ -640,7 +1261,23 @@
   "defenceSettlements": [
    "Heavenfolk eyries"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    124,
+    12
+   ],
+   "radius": 7,
+   "terrain": [
+    "mountain"
+   ],
+   "places": {
+    "Heavenfolk eyries": [
+     126.5,
+     14.1
+    ]
+   }
+  }
  },
  {
   "id": "reg_vharlen",
@@ -659,7 +1296,27 @@
   "defenceSettlements": [
    "Vharlen frontier legions"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    40,
+    30
+   ],
+   "radius": 8,
+   "terrain": [
+    "plains",
+    "mountain"
+   ],
+   "features": [
+    "city"
+   ],
+   "places": {
+    "Vharlen frontier legions": [
+     42.4,
+     31.9
+    ]
+   }
+  }
  },
  {
   "id": "reg_gearholm",
@@ -677,7 +1334,26 @@
   "defenceSettlements": [
    "Gearholm Undercity"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    116,
+    54
+   ],
+   "radius": 7,
+   "terrain": [
+    "mountain"
+   ],
+   "features": [
+    "city"
+   ],
+   "places": {
+    "Gearholm Undercity": [
+     113.3,
+     56.5
+    ]
+   }
+  }
  },
  {
   "id": "reg_cinderhole",
@@ -695,7 +1371,27 @@
   "defenceSettlements": [
    "Cinderhole"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    72,
+    26
+   ],
+   "radius": 5.5,
+   "terrain": [
+    "volcanic"
+   ],
+   "features": [
+    "city",
+    "cave"
+   ],
+   "places": {
+    "Cinderhole": [
+     70.4,
+     28.2
+    ]
+   }
+  }
  },
  {
   "id": "reg_bastion",
@@ -713,7 +1409,26 @@
   "defenceSettlements": [
    "Bastion outer ring"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    30,
+    37
+   ],
+   "radius": 7,
+   "terrain": [
+    "steppe"
+   ],
+   "features": [
+    "city"
+   ],
+   "places": {
+    "Bastion outer ring": [
+     27.4,
+     40.8
+    ]
+   }
+  }
  },
  {
   "id": "reg_everdusk",
@@ -731,7 +1446,24 @@
   "defenceSettlements": [
    "Summer Court glades"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    22,
+    60
+   ],
+   "radius": 7.5,
+   "terrain": [
+    "forest",
+    "spirit"
+   ],
+   "places": {
+    "Summer Court glades": [
+     24.7,
+     63.6
+    ]
+   }
+  }
  },
  {
   "id": "reg_apu_highlands",
@@ -748,7 +1480,23 @@
   "defenceSettlements": [
    "terrace cities"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    18,
+    72
+   ],
+   "radius": 7,
+   "terrain": [
+    "mountain"
+   ],
+   "places": {
+    "terrace cities": [
+     19.8,
+     73.5
+    ]
+   }
+  }
  },
  {
   "id": "reg_lustrine_shores",
@@ -765,7 +1513,26 @@
   "defenceSettlements": [
    "Lustrine glass beaches"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    100,
+    88
+   ],
+   "radius": 7,
+   "terrain": [
+    "plains"
+   ],
+   "features": [
+    "coast"
+   ],
+   "places": {
+    "Lustrine glass beaches": [
+     100.4,
+     89.1
+    ]
+   }
+  }
  },
  {
   "id": "reg_quaking_lands",
@@ -783,7 +1550,24 @@
   "defenceSettlements": [
    "Stiller spring-towns"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    114,
+    80
+   ],
+   "radius": 7,
+   "terrain": [
+    "mountain",
+    "plains"
+   ],
+   "places": {
+    "Stiller spring-towns": [
+     111.4,
+     83.7
+    ]
+   }
+  }
  },
  {
   "id": "reg_aurumdeep",
@@ -801,7 +1585,15 @@
   "defenceSettlements": [
    "Aurumdeep explorers' camp"
   ],
-  "initialState": "besieged"
+  "initialState": "besieged",
+  "map": {
+   "at": [
+    88,
+    86
+   ],
+   "gate": true,
+   "depth": 2
+  }
  },
  {
   "id": "reg_nox_dominion",
@@ -817,7 +1609,21 @@
   "layer": "surface",
   "noSiege": true,
   "noSiegeReason": "Story region (Acts V–VI)",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    22,
+    18
+   ],
+   "radius": 10,
+   "terrain": [
+    "demon",
+    "volcanic"
+   ],
+   "features": [
+    "ruins"
+   ]
+  }
  },
  {
   "id": "reg_calamity_steppe",
@@ -831,7 +1637,17 @@
   "layer": "surface",
   "noSiege": true,
   "noSiegeReason": "No settlements",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    15,
+    38
+   ],
+   "radius": 8.5,
+   "terrain": [
+    "steppe"
+   ]
+  }
  },
  {
   "id": "reg_the_maw",
@@ -846,7 +1662,15 @@
   "layer": "underworld",
   "noSiege": true,
   "noSiegeReason": "Its Calamity (the Hive Mother) is a world event, not a siege",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    16,
+    40
+   ],
+   "gate": true,
+   "depth": 3
+  }
  },
  {
   "id": "reg_root_of_the_world",
@@ -868,7 +1692,15 @@
   ],
   "noSiege": true,
   "noSiegeReason": "Underworld depths; no settlements",
-  "initialState": "liberated"
+  "initialState": "liberated",
+  "map": {
+   "at": [
+    75,
+    60
+   ],
+   "gate": true,
+   "depth": 4
+  }
  },
  {
   "id": "reg_vesper",
