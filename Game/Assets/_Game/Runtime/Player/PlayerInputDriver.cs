@@ -106,6 +106,7 @@ namespace Ascend.Game
             bool ultimateChord = pad != null && pad.leftStickButton.isPressed && pad.rightStickButton.isPressed;
 
             if (!padFaceBusy && _jump.WasPressedThisFrame() && !(_combat != null && _combat.TryJumpCancel()) && !attacking) _motor.Jump();
+            if (_jump.WasReleasedThisFrame()) _motor.ReleaseJump();
             if (_lock.WasPressedThisFrame() && !ultimateChord && _lockOn != null) _lockOn.Toggle();
             if (!padFaceBusy && _dodge.WasPressedThisFrame() && (_combat == null || _combat.TryCancelForDodge())) _motor.Dodge(world);
             if (_defense != null) _defense.SetBlock(_block.IsPressed() && !attacking);

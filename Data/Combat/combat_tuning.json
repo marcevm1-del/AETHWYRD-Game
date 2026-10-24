@@ -14,7 +14,15 @@
   "runSpeed": 6.5,
   "sprintSpeed": 9.5,
   "sprintStaminaPerSec": 12,
-  "jumpHeight": 1.6
+  "jumpHeight": 1.6,
+  "accelSec": 0.1,
+  "decelSec": 0.06,
+  "airControl": 0.45,
+  "coyoteSec": 0.12,
+  "jumpBufferSec": 0.15,
+  "jumpCutMult": 0.5,
+  "fallGravityMult": 1.6,
+  "walkStickThreshold": 0.5
  },
  "dodge": {
   "durationSec": 0.42,

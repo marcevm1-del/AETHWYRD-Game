@@ -22,6 +22,14 @@ Central tuning values for movement, camera, defense, attacks, poise, reactions, 
 | `movement.sprintSpeed` | 9.5 |
 | `movement.sprintStaminaPerSec` | 12 |
 | `movement.jumpHeight` | 1.6 |
+| `movement.accelSec` | 0.1 |
+| `movement.decelSec` | 0.06 |
+| `movement.airControl` | 0.45 |
+| `movement.coyoteSec` | 0.12 |
+| `movement.jumpBufferSec` | 0.15 |
+| `movement.jumpCutMult` | 0.5 |
+| `movement.fallGravityMult` | 1.6 |
+| `movement.walkStickThreshold` | 0.5 |
 | `dodge.durationSec` | 0.42 |
 | `dodge.iframeSec` | 0.24 |
 | `dodge.distance` | 4.2 |

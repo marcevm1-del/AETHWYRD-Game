@@ -95,6 +95,91 @@ namespace Ascend.Game.Tests
             Assert.IsTrue(_motor.IsGrounded, "lands again");
         }
 
+        // ---------------- Feel (13_Production/movement_feel.md) ----------------
+        [Test]
+        public void AcceleratesQuicklyAndStopsFaster()
+        {
+            var m = T.Movement;
+            _motor.Tick(Vector3.forward, false, false, Dt);
+            Assert.Less(_motor.HorizontalVelocity.magnitude, m.RunSpeed * 0.5, "not instantly at full speed");
+            Travel(Vector3.forward, false, false, (float)m.AccelSec + 0.05f);
+            Assert.AreEqual(m.RunSpeed, _motor.HorizontalVelocity.magnitude, 0.05, "full run within the acceleration time");
+            float stopped = -1f;
+            for (float t = 0; t < 0.5f && stopped < 0f; t += Dt) { _motor.Tick(Vector3.zero, false, false, Dt); if (_motor.HorizontalVelocity.magnitude < 0.01f) stopped = t + Dt; }
+            Assert.Greater(stopped, 0f, "comes to a stop");
+            Assert.LessOrEqual(stopped, m.DecelSec + Dt * 1.5f, "stops within the deceleration time");
+        }
+
+        [Test]
+        public void ALightStickTiltWalks()
+        {
+            Travel(Vector3.forward * 0.3f, false, false, 0.5f);
+            Assert.AreEqual(T.Movement.WalkSpeed, _motor.HorizontalVelocity.magnitude, 0.05, "walk speed");
+        }
+
+        [Test]
+        public void CoyoteTimeAllowsAJumpJustAfterALedge()
+        {
+            var ledge = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            ledge.transform.position = new Vector3(0, 2f, 0); ledge.transform.localScale = new Vector3(2, 4, 2);
+            try
+            {
+                var cc = _player.GetComponent<CharacterController>();
+                cc.enabled = false; _player.transform.position = new Vector3(0, 4.05f, 0.6f); cc.enabled = true;
+                Physics.SyncTransforms();
+                for (int i = 0; i < 10; i++) _motor.Tick(Vector3.zero, false, false, Dt);
+                Assert.IsTrue(_motor.IsGrounded, "standing on the ledge");
+                int frames = 0;
+                while (_motor.IsGrounded && frames++ < 60) _motor.Tick(Vector3.forward, false, false, Dt);
+                Assert.IsFalse(_motor.IsGrounded, "walked off the edge");
+                _motor.Tick(Vector3.forward, false, false, Dt); _motor.Tick(Vector3.forward, false, false, Dt);
+                Assert.IsTrue(_motor.Jump(), "a jump two frames after leaving the ledge still works");
+                Assert.Greater(_motor.VerticalVelocity, 0f, "and goes up");
+            }
+            finally { Object.DestroyImmediate(ledge); }
+        }
+
+        [Test]
+        public void AJumpPressedJustBeforeLandingFiresOnLanding()
+        {
+            Assert.IsTrue(_motor.Jump());
+            float landingIn = 0f;
+            // Fall until just above the ground, then press jump again.
+            for (int i = 0; i < 180 && !(_motor.VerticalVelocity < 0f && _player.transform.position.y < 0.25f); i++) _motor.Tick(Vector3.zero, false, false, Dt);
+            Assert.IsFalse(_motor.Jump(), "still in the air: buffered, not a double jump");
+            bool rose = false;
+            for (int i = 0; i < 20 && !rose; i++) { _motor.Tick(Vector3.zero, false, false, Dt); landingIn += Dt; rose = _motor.VerticalVelocity > 1f; }
+            Assert.IsTrue(rose, "the buffered jump fired on landing");
+            Assert.LessOrEqual(landingIn, (float)T.Movement.JumpBufferSec + Dt, "within the buffer window");
+        }
+
+        [Test]
+        public void ReleasingJumpEarlyGivesAShortHop()
+        {
+            float y0 = _player.transform.position.y, peak = y0;
+            _motor.Jump();
+            for (int i = 0; i < 4; i++) _motor.Tick(Vector3.zero, false, false, Dt);
+            _motor.ReleaseJump();
+            for (int i = 0; i < 120; i++) { _motor.Tick(Vector3.zero, false, false, Dt); peak = Mathf.Max(peak, _player.transform.position.y); }
+            Assert.Less(peak - y0, T.Movement.JumpHeight * 0.6, "a hop, not the full jump");
+            Assert.Greater(peak - y0, 0.2, "but still a hop");
+        }
+
+        [Test]
+        public void FallsFasterThanItRises()
+        {
+            float y0 = _player.transform.position.y;
+            _motor.Jump();
+            int up = 0, down = 0;
+            for (int i = 0; i < 240; i++)
+            {
+                _motor.Tick(Vector3.zero, false, false, Dt);
+                if (_motor.IsGrounded && i > 3) break;
+                if (_motor.VerticalVelocity > 0f) up++; else down++;
+            }
+            Assert.Less(down, up, "the descent is quicker than the climb");
+        }
+
         [Test]
         public void DodgeCoversDistanceWithIframesAndCostsStamina()
         {

@@ -29,7 +29,30 @@ namespace Ascend.Core
     }
 
     public sealed class CameraTuning { public double Distance { get; set; } public double Fov { get; set; } public double GroupPullBackDistance { get; set; } public double ShakeMax { get; set; } }
-    public sealed class MovementTuning { public double WalkSpeed { get; set; } public double RunSpeed { get; set; } public double SprintSpeed { get; set; } public double SprintStaminaPerSec { get; set; } public double JumpHeight { get; set; } }
+    public sealed class MovementTuning
+    {
+        public double WalkSpeed { get; set; }
+        public double RunSpeed { get; set; }
+        public double SprintSpeed { get; set; }
+        public double SprintStaminaPerSec { get; set; }
+        public double JumpHeight { get; set; }
+        /// <summary>Seconds from standing to full run speed (0 = instant). Short: responsive, with a little weight.</summary>
+        public double AccelSec { get; set; } = 0.1;
+        /// <summary>Seconds from full run to a stop.</summary>
+        public double DecelSec { get; set; } = 0.06;
+        /// <summary>Steering in the air as a fraction of ground acceleration (momentum mostly carries).</summary>
+        public double AirControl { get; set; } = 0.45;
+        /// <summary>Grace after walking off a ledge in which a jump still works ("coyote time").</summary>
+        public double CoyoteSec { get; set; } = 0.12;
+        /// <summary>A jump pressed this long before landing fires on landing (input buffer).</summary>
+        public double JumpBufferSec { get; set; } = 0.15;
+        /// <summary>Releasing jump while rising multiplies the upward speed by this (short hop vs full jump).</summary>
+        public double JumpCutMult { get; set; } = 0.5;
+        /// <summary>Gravity multiplier while falling: a snappier arc that falls faster than it rises.</summary>
+        public double FallGravityMult { get; set; } = 1.6;
+        /// <summary>Stick tilt below this walks; at or above it runs (keyboard is always full tilt).</summary>
+        public double WalkStickThreshold { get; set; } = 0.5;
+    }
     public sealed class DodgeTuning { public double DurationSec { get; set; } public double IframeSec { get; set; } public double Distance { get; set; } public double StaminaCost { get; set; } public int MaxChain { get; set; } public double PerfectDodgeWindowSec { get; set; } }
     public sealed class FlashTimeTuning { public double TimeScale { get; set; } public double DurationSec { get; set; } }
     public sealed class ParryTuning { public double ParryWindowSec { get; set; } public double BlockDamageReduction { get; set; } public double RiposteHitstopSec { get; set; } }
