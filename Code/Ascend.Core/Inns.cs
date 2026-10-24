@@ -90,6 +90,22 @@ namespace Ascend.Core
                 .ToList();
         }
 
+        /// <summary>Plays down rest buffs by hours of play: the first (Well Rested) runs out before the next starts.</summary>
+        public static void Consume(List<RestBuff> buffs, double hours)
+        {
+            if (buffs == null) return;
+            while (hours > 0 && buffs.Count > 0)
+            {
+                double used = Math.Min(hours, buffs[0].Hours);
+                buffs[0].Hours -= used;
+                hours -= used;
+                if (buffs[0].Hours <= 1e-9) buffs.RemoveAt(0);
+            }
+        }
+
+        /// <summary>The XP bonus right now (the buff playing first).</summary>
+        public static double XpBonus(IReadOnlyList<RestBuff> buffs) => buffs != null && buffs.Count > 0 ? buffs[0].XpBonus : 0;
+
         /// <summary>Regular status at one inn (inns.md §3).</summary>
         public static RegularStatus Status(int nights, bool didFavor, bool keeperQuestDone, RegularTuning t)
         {
@@ -118,6 +134,9 @@ namespace Ascend.Core
 
         public bool AvailableAt(string innId, RankLetter rank, RegularStatus status) =>
             (innId == SleepingGriffon && _t.Ranks.Contains(rank.ToString())) || status >= RegularStatus.Regular;
+
+        /// <summary>Restores the tab from a save.</summary>
+        public void Load(int balanceCopper, bool paidOffOnce) { BalanceCopper = Math.Max(0, balanceCopper); PaidOffOnce = paidOffOnce; }
 
         /// <summary>Adds to the tab. Always succeeds: the tab never blocks anything.</summary>
         public bool Charge(int copper) { BalanceCopper += Math.Max(0, copper); return true; }

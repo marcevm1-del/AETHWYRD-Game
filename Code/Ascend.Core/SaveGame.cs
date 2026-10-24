@@ -37,6 +37,12 @@ namespace Ascend.Core
         public int GuildPoints { get; set; }
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
+        /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
+        public double? ClockSeconds { get; set; }
+        public List<RestBuff> RestBuffs { get; set; } = new List<RestBuff>();
+        public int TabCopper { get; set; }
+        public bool TabPaidOnce { get; set; }
+        public Dictionary<string, int> InnNights { get; set; } = new Dictionary<string, int>();
     }
 
     public static class SaveRules
@@ -49,7 +55,8 @@ namespace Ascend.Core
             if (s.Version < 1 || s.Version > SaveGame.CurrentVersion) errors.Add($"unknown save version {s.Version}");
             if (s.Level < 1 || s.Level > Levels.Cap) errors.Add($"level {s.Level} out of range");
             if (s.XpIntoLevel < 0) errors.Add("negative XP");
-            if (s.Copper < 0 || s.LanternCopper < 0) errors.Add("negative money");
+            if (s.Copper < 0 || s.LanternCopper < 0 || s.TabCopper < 0) errors.Add("negative money");
+            if (s.ClockSeconds.HasValue && (s.ClockSeconds < 0 || double.IsNaN(s.ClockSeconds.Value))) errors.Add("bad clock");
             if (s.Items != null && s.Items.Any(kv => string.IsNullOrEmpty(kv.Key) || kv.Value <= 0)) errors.Add("bad item stack");
             if (s.Respawn != null && s.Respawn.Length != 4) errors.Add("respawn needs x, y, z, yaw");
             if (s.Lantern != null && s.Lantern.Length != 3) errors.Add("lantern needs x, y, z");
@@ -65,6 +72,8 @@ namespace Ascend.Core
             s.Quests ??= new List<QuestProgress>();
             s.CompletedQuests ??= new List<string>();
             s.Flags ??= new List<string>();
+            s.RestBuffs ??= new List<RestBuff>();
+            s.InnNights ??= new Dictionary<string, int>();
             s.Version = SaveGame.CurrentVersion;
             return s;
         }

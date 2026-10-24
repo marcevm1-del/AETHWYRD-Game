@@ -74,6 +74,13 @@ namespace Ascend.Game
             }
             s.FireBombs = _combat.FireBombs;
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
+            if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
+            if (TryGetComponent<PlayerRest>(out var rest))
+            {
+                s.RestBuffs = rest.Buffs.Select(b => new RestBuff { Kind = b.Kind, Hours = b.Hours, XpBonus = b.XpBonus }).ToList();
+                s.TabCopper = rest.Tab.BalanceCopper; s.TabPaidOnce = rest.Tab.PaidOffOnce;
+                s.InnNights = rest.Nights.ToDictionary(kv => kv.Key, kv => kv.Value);
+            }
             if (TryGetComponent<PlayerQuests>(out var quests))
             {
                 s.Quests = quests.Log.SaveActive();
@@ -107,6 +114,8 @@ namespace Ascend.Game
             SaveRules.Apply(s, _combat.Progress, _inv.Items);
             _inv.Difficulty = s.Difficulty;
             if (s.Equipment != null) _combat.Equipment.Load(s.Equipment);
+            if (s.ClockSeconds.HasValue && WorldClock.Instance != null) WorldClock.Instance.PlaySeconds = s.ClockSeconds.Value;
+            if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);
             if (TryGetComponent<PlayerQuests>(out var quests)) quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags);
             _combat.GiveFireBombs(s.FireBombs - _combat.FireBombs);
             _respawn.Restore(s.Deaths, s.WaystoneId,

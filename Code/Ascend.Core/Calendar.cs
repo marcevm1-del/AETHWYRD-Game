@@ -37,6 +37,19 @@ namespace Ascend.Core
             return (day, (days - day) * _t.HoursPerDay);
         }
 
+        /// <summary>Play seconds that one in-game hour takes.</summary>
+        public double SecondsPerHour => _t.DayLengthRealMinutes * 60.0 / _t.HoursPerDay;
+        public int HoursPerDay => _t.HoursPerDay;
+        public double DawnHour => _t.DawnHour;
+
+        /// <summary>Hours from <paramref name="hour"/> to the next dawn (a night's sleep). Sleeping after midnight wakes at dawn the same day.</summary>
+        public double HoursUntilDawn(double hour)
+        {
+            double h = ((hour % _t.HoursPerDay) + _t.HoursPerDay) % _t.HoursPerDay;
+            double until = _t.DawnHour - h;
+            return until > 0 ? until : until + _t.HoursPerDay;
+        }
+
         public DayPart PartOf(double hour)
         {
             hour = ((hour % _t.HoursPerDay) + _t.HoursPerDay) % _t.HoursPerDay;

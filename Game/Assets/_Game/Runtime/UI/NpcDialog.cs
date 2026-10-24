@@ -57,7 +57,7 @@ namespace Ascend.Game
             return true;
         }
 
-        enum Page { Main, Buy, Sell, Buyback }
+        enum Page { Main, Buy, Sell, Buyback, Rooms }
         Page _page;
 
         void Rebuild()
@@ -66,6 +66,8 @@ namespace Ascend.Game
             var q = _quests;
             var inv = q.GetComponent<PlayerInventory>();
             var shop = inv != null ? inv.ShopFor(_giver.NpcId) : null;
+            var inn = AscendData.Db.Inns.Values.FirstOrDefault(i => i.KeeperNpcId == _giver.NpcId);
+            if (inn != null && _page == Page.Rooms) { RebuildRooms(inn, inv); return; }
             if (shop != null && _page != Page.Main) { RebuildTrade(shop, inv); return; }
             foreach (var p in _giver.AwaitingChoiceHere(q))
             {
@@ -89,7 +91,32 @@ namespace Ascend.Game
                 _options.Add(new Option { Text = $"Accept [{o.Rank}] {o.Title} — {o.Summary}", Act = () => { if (q.Accept(o)) _line = "Good luck out there."; } });
             }
             if (shop != null) _options.Add(new Option { Text = $"Trade — {shop.Data.Name}", Act = () => Go(Page.Buy, shop.Data.Note) });
+            if (inn != null) _options.Add(new Option { Text = $"Rooms — {inn.Name}", Act = () => Go(Page.Rooms, inn.Quirk) });
             _options.Add(new Option { Text = "Goodbye", Act = Close });
+            _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
+        }
+
+        void RebuildRooms(InnData inn, PlayerInventory inv)
+        {
+            var rest = _quests.GetComponent<PlayerRest>();
+            var cur = AscendData.Db.World.Currency;
+            if (rest == null) { _options.Add(new Option { Text = "Back", Act = () => Go(Page.Main, "") }); return; }
+            foreach (var room in inn.Rooms)
+            {
+                var r = room;
+                bool afford = inv.Items.Copper >= r.PriceCopper;
+                string how = afford ? "" : rest.CanTab(inn) ? " — on the tab" : " — can't afford";
+                string label = string.IsNullOrEmpty(r.Name) ? Capital(r.Tier) + " room" : r.Name;
+                _options.Add(new Option
+                {
+                    Text = $"Sleep: {label} — {Money.Format(r.PriceCopper, cur)} · {r.Rest}{how}",
+                    Act = () => { if (rest.Sleep(inn, r)) Close(); else _line = "Not tonight, love. Come back with coin."; },
+                });
+            }
+            if (rest.Tab.BalanceCopper > 0)
+                _options.Add(new Option { Text = $"Pay your tab ({Money.Format(rest.Tab.BalanceCopper, cur)} owed)", Act = () => rest.PayTab() });
+            _line = $"{inn.Name} · {rest.Status(inn, out _)}";
+            _options.Add(new Option { Text = "Back", Act = () => Go(Page.Main, "") });
             _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
         }
 

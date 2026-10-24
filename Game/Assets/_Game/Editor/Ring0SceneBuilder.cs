@@ -124,6 +124,7 @@ namespace Ascend.EditorTools
             sun.color = new Color(1f, 0.95f, 0.86f);
             sun.intensity = 1.6f;
             sun.shadows = LightShadows.Soft;
+            new GameObject("WorldClock").AddComponent<WorldClock>().Sun = sun; // day/night: moves this sun at runtime
             RenderSettings.ambientMode = AmbientMode.Trilight;
             RenderSettings.ambientSkyColor = new Color(0.62f, 0.74f, 0.95f);
             RenderSettings.ambientEquatorColor = new Color(0.62f, 0.66f, 0.62f);
@@ -162,6 +163,7 @@ namespace Ascend.EditorTools
             p.AddComponent<PlayerInventory>();
             p.AddComponent<PlayerRespawn>();
             p.AddComponent<PlayerQuests>();
+            p.AddComponent<PlayerRest>();
             p.AddComponent<PlayerSave>();
             var driver = p.AddComponent<PlayerInputDriver>();
 

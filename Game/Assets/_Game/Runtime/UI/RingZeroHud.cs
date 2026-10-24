@@ -22,6 +22,7 @@ namespace Ascend.Game
         PlayerInventory _inv;
         PlayerRespawn _respawn;
         PlayerQuests _quests;
+        PlayerRest _rest;
         InputAction _status;
         string _banner;
         float _bannerUntil, _toastUntil;
@@ -57,6 +58,7 @@ namespace Ascend.Game
             _inv = player.GetComponent<PlayerInventory>();
             _respawn = player.GetComponent<PlayerRespawn>();
             _quests = player.GetComponent<PlayerQuests>();
+            _rest = player.GetComponent<PlayerRest>();
             player.LeveledUp -= OnLevelUp; player.LeveledUp += OnLevelUp;
             player.XpGained -= OnXp; player.XpGained += OnXp;
         }
@@ -135,6 +137,9 @@ namespace Ascend.Game
             Bar(x, ref y, "AWK", (float)c.Awakening, (float)c.MaxAwakening, new Color(0.85f, 0.4f, 1f));
             Bar(x, ref y, "XP", player.Progress.XpIntoLevel, Mathf.Max(1, player.Progress.ToNext), new Color(0.5f, 0.9f, 0.5f));
             if (_inv != null) { GUI.Label(new Rect(x, y, 320, 20), $"Purse: {_inv.MoneyText}", _small); y += 22; }
+            var restText = _rest != null ? _rest.BuffText() : null;
+            if (restText != null) { GUI.Label(new Rect(x, y, 360, 20), restText, _small); y += 22; }
+            if (WorldClock.Instance != null) GUI.Label(new Rect(sw0 / 2 - 160, 44, 320, 20), WorldClock.Instance.Text, _small);
             if (_quests != null)
             {
                 y += 6;

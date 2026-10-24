@@ -26,6 +26,9 @@ namespace Ascend.Game
         public event Action<long> XpGained;
 
         /// <summary>Awards XP and applies any level-ups.</summary>
+        /// <summary>Kill-XP multiplier from outside combat (inn rest buffs); null = 1.</summary>
+        public Func<double> XpMultiplier { get; set; }
+
         public void GrantXp(long xp)
         {
             if (xp <= 0) return;
@@ -60,7 +63,12 @@ namespace Ascend.Game
             if (reaction != Reaction.None) pts += Style.RegisterEvent(StyleEvent.Reaction);
             bool ultimateHit = CurrentSpecial == Special.Skill && LastCast != null && LastCast.Slot == "ultimate";
             if (!ultimateHit) Caster.GainAwakeningFromStyle(pts); // an Ultimate never refills itself
-            if (killed) { GrantXp(Progress.KillXp(m.Level, m.IsUnique, Style.Rank, _tuning.Style)); Killed?.Invoke(m); }
+            if (killed)
+            {
+                double mult = XpMultiplier != null ? XpMultiplier() : 1.0; // inn rest (Rested / Well Rested)
+                GrantXp((long)System.Math.Round(Progress.KillXp(m.Level, m.IsUnique, Style.Rank, _tuning.Style) * mult));
+                Killed?.Invoke(m);
+            }
         }
     }
 }

@@ -70,7 +70,8 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 | Movement feel | ✅ Researched (13_Production/movement_feel.md): 0.1 s acceleration, faster stops, 45% air control, coyote time, jump buffer, short hop on early release, faster fall, light stick tilt walks |
 | Shops | ✅ Data/Items/shops.json (new schema): Guild core buyback at the posted price (Mina), Reed's Remedies (Fennick), Stonebeard Smithy (Torvald, in the field), Ottoline's Wagon (Whisperwood edge). Buy / sell / buy back in the talk window; quest items protected; validator and tests block buy-low-sell-high loops |
 | Equipment | ✅ Gear slots from items.json (main hand, head, belt, charm); a class wields only its weapon types and wears only its armour weights (new `weaponType` / `armorWeight` item fields, validated); gear feeds ATK/MATK/DEF/MDEF/HP/crit; new characters start with the class starter weapon and the rookie hood. Bag window (I / View): equip with ▲/▼ comparison, take off, drink potions. Saved |
+| Day clock & inn | ✅ World clock from world_tuning.json (a day per 90 min of play, weekdays) moves the sun: golden dawn and dusk, moonlit night; shown on the HUD. Marta (Sleeping Griffon) rents rooms from inns.json: sleep heals, wakes you at dawn, gives Rested / Well Rested kill-XP buffs for hours of play; F–E rookies can sleep on her tab and pay it off later. Clock, buffs, tab and nights are saved |
 
 **Controls** (`12_Systems/hud_and_ui.md` §15): WASD/left stick move · Shift/B dodge (hold to sprint) · Space/A jump · LMB/X light · RMB/Y heavy (hold to charge; after two lights = launcher; in the air = slam) · Q/RT block/parry · MMB/R3 lock-on · 1–4 or RB + face skills · R or L3+R3 Ultimate · G or D-pad up Fire Bomb · E or D-pad down talk · H or D-pad right healing potion · I or View bag · Tab/Esc/Start Status Window.
 
-**Tests:** 118 rules + 83 Unity PlayMode.
+**Tests:** 122 rules + 88 Unity PlayMode.
