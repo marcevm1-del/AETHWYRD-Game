@@ -14,7 +14,7 @@ tags: [item, weapon]
 | Category · rank | weapon · E |
 | Rarity · slot | Rare · main_hand |
 | Value | 180 |
-| Stats | atk 22, crit 3 |
+| Stats | atk 22, crit 0.03 |
 
 ## Use in the world
 

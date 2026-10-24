@@ -183,15 +183,28 @@ namespace Ascend.Game
             Vector3 step = dir * distance;
             for (int i = 0; i < 2; i++)
             {
-                if (!Physics.SphereCast(from, radius, step.normalized, out var hit, step.magnitude + 0.05f, ~0, QueryTriggerInteraction.Ignore)
-                    || hit.collider.GetComponentInParent<MonsterDummy>() != null || hit.collider.GetComponentInParent<PlayerDefense>() != null
-                    || hit.normal.y > 0.6f) // walkable ground, not a wall
-                    return step;
+                if (!Wall(from, radius, step, out var hit)) return step;
                 step = Vector3.ProjectOnPlane(step, new Vector3(hit.normal.x, 0f, hit.normal.z).normalized); // slide along it
                 if (step.sqrMagnitude < 1e-6f) return Vector3.zero;
             }
             return Vector3.zero;
         }
+
+        /// <summary>
+        /// A wall in the way of this step. The sphere cast catches walls at body width; a sphere cast ignores anything it
+        /// already overlaps, though, so a thin centre ray (reaching body-radius further) backs it up once a sliding body has
+        /// brushed a wall — otherwise it could walk straight through it.
+        /// </summary>
+        static bool Wall(Vector3 from, float radius, Vector3 step, out RaycastHit hit)
+        {
+            Vector3 dir = step.normalized;
+            if (Physics.SphereCast(from, radius, dir, out hit, step.magnitude + 0.05f, ~0, QueryTriggerInteraction.Ignore) && Solid(hit)) return true;
+            return Physics.Raycast(from, dir, out hit, step.magnitude + radius + 0.05f, ~0, QueryTriggerInteraction.Ignore) && Solid(hit);
+        }
+
+        static bool Solid(RaycastHit hit) =>
+            hit.collider.GetComponentInParent<MonsterDummy>() == null && hit.collider.GetComponentInParent<PlayerDefense>() == null
+            && hit.normal.y <= 0.6f; // walkable ground isn't a wall
 
         int RollDamage(double power)
         {

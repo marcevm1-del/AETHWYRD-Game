@@ -140,6 +140,12 @@ namespace Ascend.Core
         public string Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
+        /// <summary>Equipment slot (main_hand, head, belt, charm…); null for non-gear.</summary>
+        public string Slot { get; set; }
+        /// <summary>Weapons: the type a class must list to wield it (sword, mace, staff…).</summary>
+        public string WeaponType { get; set; }
+        /// <summary>Armour: cloth, light, medium or heavy.</summary>
+        public string ArmorWeight { get; set; }
         public string Rank { get; set; }
         public string Rarity { get; set; }
         public int Value { get; set; }

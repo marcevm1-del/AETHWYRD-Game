@@ -125,6 +125,13 @@ for (const q of [...rows.quests, ...rows.weekly]) {
 }
 
 const ITEMS_BY_ID = Object.fromEntries(rows.items.map(i => [i.id, i]));
+// Gear: weapons name a weapon type some class can wield; armour names its weight (equipment rules in Code/Ascend.Core/Equipment.cs).
+const CLASS_WEAPONS = new Set(rows.classes.flatMap(c => c.weapons || []));
+for (const it of rows.items) {
+  if (it.category === 'weapon' && !CLASS_WEAPONS.has(it.weaponType)) err(it.id, `weaponType "${it.weaponType}" isn't in any class's weapons`);
+  if (it.category === 'armor' && !it.armorWeight) err(it.id, 'armor needs an armorWeight');
+}
+for (const c of rows.classes) if (c.starterWeaponId) ref(c.id + '.starterWeaponId', c.starterWeaponId, 'items');
 for (const sh of rows.shops) {
   ref(sh.id, sh.npcId, 'npcs');
   for (const o of sh.stock || []) {

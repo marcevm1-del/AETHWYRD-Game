@@ -144,6 +144,8 @@ namespace Ascend.Core
     public struct GearBonus
     {
         public int Atk, Matk, Def, Mdef, Hp;
+        /// <summary>Added crit chance (fraction).</summary>
+        public double Crit;
     }
 
     public static class PlayerStats
@@ -182,7 +184,7 @@ namespace Ascend.Core
                 Def = R(f.Def.Eval(p, level)) + gear.Def,
                 Mdef = R(f.Mdef.Eval(p, level)) + gear.Mdef,
                 Spd = R(f.Spd.Eval(p, level)),
-                CritChance = f.CritChance.Eval(p, level)
+                CritChance = f.CritChance.Eval(p, level) + gear.Crit
             };
         }
     }

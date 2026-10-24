@@ -6,6 +6,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "sword",
   "value": 20,
   "stats": {
    "atk": 8
@@ -19,10 +20,11 @@
   "rank": "E",
   "rarity": "Rare",
   "slot": "main_hand",
+  "weaponType": "sword",
   "value": 180,
   "stats": {
    "atk": 22,
-   "crit": 3
+   "crit": 0.03
   },
   "flavor": "Bent from a thousand swings. Still true."
  },
@@ -33,6 +35,7 @@
   "rank": "E",
   "rarity": "Legendary",
   "slot": "main_hand",
+  "weaponType": "greatsword",
   "value": 650,
   "stats": {
    "atk": 30,
@@ -47,6 +50,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "head",
+  "armorWeight": "light",
   "value": 15,
   "stats": {
    "def": 3
@@ -82,6 +86,7 @@
   "rank": "C",
   "rarity": "Epic",
   "slot": "main_hand",
+  "weaponType": "daggers",
   "value": 2200,
   "stats": {
    "atk": 64,
@@ -165,6 +170,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "mace",
   "value": 20,
   "stats": {
    "atk": 6,
@@ -179,6 +185,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "staff",
   "value": 20,
   "stats": {
    "matk": 8
@@ -192,6 +199,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "censer",
   "value": 20,
   "stats": {
    "matk": 5,
@@ -206,6 +214,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "daggers",
   "value": 20,
   "stats": {
    "atk": 6,
@@ -220,6 +229,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "shortbow",
   "value": 20,
   "stats": {
    "atk": 7
@@ -233,6 +243,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "whip",
   "value": 20,
   "stats": {
    "atk": 5,
@@ -247,6 +258,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "hammer",
   "value": 20,
   "stats": {
    "atk": 7
@@ -260,6 +272,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "spear",
   "value": 20,
   "stats": {
    "atk": 8
@@ -273,6 +286,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "fists",
   "value": 20,
   "stats": {
    "atk": 5,
@@ -287,6 +301,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "lute",
   "value": 20,
   "stats": {
    "matk": 5,
@@ -301,6 +316,7 @@
   "rank": "F",
   "rarity": "Common",
   "slot": "main_hand",
+  "weaponType": "grimoire",
   "value": 20,
   "stats": {
    "matk": 8

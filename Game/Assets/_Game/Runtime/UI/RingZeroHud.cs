@@ -75,7 +75,7 @@ namespace Ascend.Game
 
         void Update()
         {
-            if (_status.WasPressedThisFrame() && !NpcDialog.IsOpen) StatusOpen = !StatusOpen;
+            if (_status.WasPressedThisFrame() && !UiModal.Any) StatusOpen = !StatusOpen;
         }
 
         // ---------------------------------------------------------------- content (testable without drawing)
@@ -139,7 +139,7 @@ namespace Ascend.Game
             {
                 y += 6;
                 foreach (var line in _quests.TrackerLines()) { GUI.Label(new Rect(x, y, 520, 20), line, _small); y += 20; }
-                var near = NpcDialog.IsOpen ? null : QuestGiver.Nearest(player.transform.position);
+                var near = UiModal.Any ? null : QuestGiver.Nearest(player.transform.position);
                 if (near != null) GUI.Label(new Rect(sw0 / 2 - 150, Screen.height * 0.62f, 300, 22), $"[E] Talk to {near.DisplayName}", _small);
             }
 

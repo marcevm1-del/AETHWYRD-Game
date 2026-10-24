@@ -292,7 +292,10 @@ const out = DEF.map(d => {
   }
   if (d.starter && !itemIds.has(d.starter[0])) {
     const [iid, iname, stats, flavor] = d.starter;
-    items.push({ id: iid, name: iname, category: 'weapon', rank: 'F', rarity: 'Common', slot: 'main_hand', value: 20, stats, flavor });
+    // Weapon type: the class weapon named in the item ("Guild Issue Censer" → censer), else the class's first weapon.
+    const kinds = listOf(d.weapons);
+    const weaponType = kinds.find(k => iname.toLowerCase().includes(k.replace(/_/g, ' '))) || kinds[0];
+    items.push({ id: iid, name: iname, category: 'weapon', rank: 'F', rarity: 'Common', slot: 'main_hand', weaponType, value: 20, stats, flavor });
     itemIds.add(iid);
   }
   return {

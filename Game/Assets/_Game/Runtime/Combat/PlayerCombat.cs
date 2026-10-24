@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Ascend.Core;
 using UnityEngine;
 
@@ -22,8 +23,8 @@ namespace Ascend.Game
 
         [SerializeField] string classId = "cls_swordsman";
         [SerializeField] int level = 1;
-        [SerializeField] int gearAtk = 8;   // Guild-issue sword until the item system is wired in
-        [SerializeField] int gearDef = 3;
+        /// <summary>A new character's kit: the class starter weapon (classes.json) plus these.</summary>
+        [SerializeField] string[] startingGear = { "itm_rookie_hood" };
         [SerializeField] ulong rngSeed = 1;
 
         PlayerMotor _motor;
@@ -54,6 +55,17 @@ namespace Ascend.Game
         public AttackChain Chain => _chain;
         public ChargeMeter Charge => _charge;
         public DerivedStats Stats { get; private set; }
+        public Equipment Equipment { get; private set; }
+        public ClassData Class => _class;
+        /// <summary>Raised when stats change (level-up or gear).</summary>
+        public event Action StatsChanged;
+
+        void RecomputeStats()
+        {
+            var db = AscendData.Db;
+            Stats = PlayerStats.Derive(PlayerStats.Primary(_class, level, db.Progression), level, db.Progression, Equipment.Bonus());
+            StatsChanged?.Invoke();
+        }
         public bool IsCharging => _charge != null && _charge.Charging;
         public bool IsAttacking => (_chain != null && _chain.IsBusy) || (_special != null && _special.IsBusy) || IsCharging;
         public bool RiposteReady => Time.unscaledTime < _riposteUntil;
@@ -74,7 +86,13 @@ namespace Ascend.Game
             var db = AscendData.Db;
             _tuning = db.Tuning;
             _class = db.Classes[classId];
-            Stats = PlayerStats.Derive(PlayerStats.Primary(_class, level, db.Progression), level, db.Progression, new GearBonus { Atk = gearAtk, Def = gearDef });
+            Equipment = new Equipment(db.Items);
+            var kit = new System.Collections.Generic.Dictionary<string, string>();
+            foreach (var id in new[] { _class.StarterWeaponId }.Concat(startingGear ?? new string[0]))
+                if (id != null && db.Items.TryGetValue(id, out var it) && Equipment.IsGear(it) && Equipment.CanEquip(id, _class) == EquipResult.Ok) kit[it.Slot] = id;
+            Equipment.Load(kit);
+            RecomputeStats();
+            Equipment.Changed += RecomputeStats;
             _chain = new AttackChain(_class.Basic ?? throw new InvalidOperationException($"{classId} has no basic chain"), _tuning);
             _charge = new ChargeMeter(_tuning.Combo);
             _budget = new ComboBudget(_tuning.Combo);

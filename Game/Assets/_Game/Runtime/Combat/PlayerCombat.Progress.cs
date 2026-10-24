@@ -40,8 +40,7 @@ namespace Ascend.Game
         {
             int old = level;
             level = Mathf.Clamp(newLevel, 1, Levels.Cap);
-            var db = AscendData.Db;
-            Stats = PlayerStats.Derive(PlayerStats.Primary(_class, level, db.Progression), level, db.Progression, new GearBonus { Atk = gearAtk, Def = gearDef });
+            RecomputeStats();
             Caster.SetLevel(level);
             if (level != old) { LeveledUp?.Invoke(old, level); CombatFx.Play(CombatFx.Sfx.LevelUp, transform.position); }
         }

@@ -60,6 +60,19 @@
   "slot": {
    "type": "string"
   },
+  "weaponType": {
+   "type": "string",
+   "description": "weapons: must appear in a class weapons list"
+  },
+  "armorWeight": {
+   "type": "string",
+   "enum": [
+    "cloth",
+    "light",
+    "medium",
+    "heavy"
+   ]
+  },
   "value": {
    "type": "integer",
    "minimum": 0

@@ -35,6 +35,8 @@ namespace Ascend.Core
         public List<string> CompletedQuests { get; set; } = new List<string>();
         public List<string> Flags { get; set; } = new List<string>();
         public int GuildPoints { get; set; }
+        /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
+        public Dictionary<string, string> Equipment { get; set; }
     }
 
     public static class SaveRules
