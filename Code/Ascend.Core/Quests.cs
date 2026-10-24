@@ -6,7 +6,14 @@ namespace Ascend.Core
 {
     // Quests and NPCs (Data/Quests/quests.json, Data/NPCs/npcs.json, Data/Quests/story_flags.json).
 
-    public sealed class QuestObjective { public string Kind { get; set; } public string Target { get; set; } public int Count { get; set; } = 1; }
+    public sealed class QuestObjective
+    {
+        public string Kind { get; set; }
+        public string Target { get; set; }
+        public int Count { get; set; } = 1;
+        /// <summary>collect: the species that drops the item while the quest is active.</summary>
+        public string From { get; set; }
+    }
     public sealed class QuestRewards { public int Gold { get; set; } public int Gp { get; set; } public int Xp { get; set; } public List<string> Items { get; set; } = new List<string>(); }
     public sealed class QuestRequirements { public int MinLevel { get; set; } public string PartySize { get; set; } }
 

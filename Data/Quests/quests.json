@@ -267,6 +267,7 @@
    {
     "kind": "collect",
     "target": "itm_minas_earring",
+    "from": "mon_giant_crow",
     "count": 1
    }
   ],
@@ -291,6 +292,7 @@
    {
     "kind": "collect",
     "target": "itm_mandrake_root",
+    "from": "mon_mandrake",
     "count": 3
    },
    {

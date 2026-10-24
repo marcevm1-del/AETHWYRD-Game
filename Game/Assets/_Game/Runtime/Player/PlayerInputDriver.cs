@@ -11,6 +11,7 @@ namespace Ascend.Game
     ///   Light: LMB / X · Heavy: RMB / Y (hold to charge; after two lights = launcher; in the air = slam)
     ///   Block / parry: Q / RT · Lock-on: MMB / R3 (flick to switch) · Jump during a launcher follows the target up
     ///   Skills: 1–4 / hold RB + X, Y, A, B · Ultimate: R / L3 + R3 · Fire Bomb (quick item): G / D-pad up
+    ///   Talk: E / D-pad down (opens the NPC dialog) · Healing potion: H / D-pad right
     /// During Flash Time the world slows but the player keeps real-time speed; hit-stop freezes everyone.
     /// </summary>
     [RequireComponent(typeof(PlayerMotor))]
@@ -22,7 +23,7 @@ namespace Ascend.Game
         PlayerCombat _combat;
         PlayerDefense _defense;
         LockOn _lockOn;
-        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb;
+        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion;
         readonly InputAction[] _skillKeys = new InputAction[4];
 
         void Awake()
@@ -47,6 +48,8 @@ namespace Ascend.Game
             _ultimate = Button("Ultimate", "<Keyboard>/r");
             _l3 = Button("L3", "<Gamepad>/leftStickPress");
             _bomb = Button("QuickItem", "<Keyboard>/g", "<Gamepad>/dpad/up");
+            _interact = Button("Interact", "<Keyboard>/e", "<Gamepad>/dpad/down");
+            _potion = Button("Potion", "<Keyboard>/h", "<Gamepad>/dpad/right");
             for (int i = 0; i < 4; i++) _skillKeys[i] = Button($"Skill{i + 1}", $"<Keyboard>/{i + 1}");
         }
 
@@ -57,7 +60,7 @@ namespace Ascend.Game
             return a;
         }
 
-        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb,
+        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion,
             _skillKeys[0], _skillKeys[1], _skillKeys[2], _skillKeys[3] };
 
         void OnEnable() { foreach (var a in Actions) a.Enable(); }
@@ -69,9 +72,9 @@ namespace Ascend.Game
             float dt = PlayerDelta;
             Vector3 world = CameraRelative(_move.ReadValue<Vector2>());
             bool attacking = _combat != null && _combat.IsAttacking;
-            if (_defense != null && (_defense.IsHeld || _defense.IsDead))
+            if (_defense != null && (_defense.IsHeld || _defense.IsDead) || NpcDialog.IsOpen)
             {
-                // Grabbed: only gravity runs until the monster lets go.
+                // Grabbed, fallen or talking: only gravity runs.
                 if (_combat != null) _combat.Tick(dt);
                 _motor.Tick(Vector3.zero, false, false, dt);
                 return;
@@ -91,6 +94,13 @@ namespace Ascend.Game
                                                    (pad.rightStickButton.isPressed && pad.leftStickButton.wasPressedThisFrame));
                 if (_ultimate.WasPressedThisFrame() || padUltimate) _combat.CastUltimate();
                 if (_bomb.WasPressedThisFrame()) _combat.ThrowFireBomb();
+            }
+            if (_potion.WasPressedThisFrame() && TryGetComponent<PlayerInventory>(out var inv)) inv.DrinkHealingPotion();
+            if (_interact.WasPressedThisFrame())
+            {
+                var quests = GetComponent<PlayerQuests>();
+                var giver = quests != null ? QuestGiver.Nearest(transform.position) : null;
+                if (giver != null) { NpcDialog.Instance.Open(giver, quests); return; }
             }
             bool padFaceBusy = skillMode && pad != null;
             bool ultimateChord = pad != null && pad.leftStickButton.isPressed && pad.rightStickButton.isPressed;

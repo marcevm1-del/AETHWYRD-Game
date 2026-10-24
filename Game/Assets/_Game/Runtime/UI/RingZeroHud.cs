@@ -21,6 +21,7 @@ namespace Ascend.Game
         LockOn _lock;
         PlayerInventory _inv;
         PlayerRespawn _respawn;
+        PlayerQuests _quests;
         InputAction _status;
         string _banner;
         float _bannerUntil, _toastUntil;
@@ -55,6 +56,7 @@ namespace Ascend.Game
             _lock = player.GetComponent<LockOn>();
             _inv = player.GetComponent<PlayerInventory>();
             _respawn = player.GetComponent<PlayerRespawn>();
+            _quests = player.GetComponent<PlayerQuests>();
             player.LeveledUp -= OnLevelUp; player.LeveledUp += OnLevelUp;
             player.XpGained -= OnXp; player.XpGained += OnXp;
         }
@@ -73,7 +75,7 @@ namespace Ascend.Game
 
         void Update()
         {
-            if (_status.WasPressedThisFrame()) StatusOpen = !StatusOpen;
+            if (_status.WasPressedThisFrame() && !NpcDialog.IsOpen) StatusOpen = !StatusOpen;
         }
 
         // ---------------------------------------------------------------- content (testable without drawing)
@@ -125,7 +127,7 @@ namespace Ascend.Game
             var c = player.Caster;
 
             // Vitals and level (top-left)
-            float x = 20, y = 20;
+            float x = 20, y = 20, sw0 = Screen.width;
             GUI.Label(new Rect(x, y, 300, 20), $"Lv {player.Level} · Rank {player.Progress.RankBand}", _small); y += 22;
             Bar(x, ref y, "HP", _defense != null ? _defense.Hp : player.Stats.Hp, _defense != null ? _defense.MaxHp : player.Stats.Hp, new Color(0.85f, 0.25f, 0.25f));
             Bar(x, ref y, "SP", (float)c.Sp, (float)c.MaxSp, new Color(0.95f, 0.75f, 0.2f));
@@ -133,6 +135,13 @@ namespace Ascend.Game
             Bar(x, ref y, "AWK", (float)c.Awakening, (float)c.MaxAwakening, new Color(0.85f, 0.4f, 1f));
             Bar(x, ref y, "XP", player.Progress.XpIntoLevel, Mathf.Max(1, player.Progress.ToNext), new Color(0.5f, 0.9f, 0.5f));
             if (_inv != null) { GUI.Label(new Rect(x, y, 320, 20), $"Purse: {_inv.MoneyText}", _small); y += 22; }
+            if (_quests != null)
+            {
+                y += 6;
+                foreach (var line in _quests.TrackerLines()) { GUI.Label(new Rect(x, y, 520, 20), line, _small); y += 20; }
+                var near = NpcDialog.IsOpen ? null : QuestGiver.Nearest(player.transform.position);
+                if (near != null) GUI.Label(new Rect(sw0 / 2 - 150, Screen.height * 0.62f, 300, 22), $"[E] Talk to {near.DisplayName}", _small);
+            }
 
             // Style Rank (top-right)
             float sw = Screen.width;

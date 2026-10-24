@@ -13,6 +13,8 @@ namespace Ascend.Core
         readonly Dictionary<string, int> _items = new Dictionary<string, int>();
 
         public long Copper { get; private set; }
+        /// <summary>Raised after any change to items or money (quest collect objectives, the HUD).</summary>
+        public event Action Changed;
         public IReadOnlyDictionary<string, int> Items => _items;
         public int Count(string itemId) => _items.TryGetValue(itemId, out var n) ? n : 0;
 
@@ -20,6 +22,7 @@ namespace Ascend.Core
         {
             if (string.IsNullOrEmpty(itemId) || count <= 0) return;
             _items[itemId] = Count(itemId) + count;
+            Changed?.Invoke();
         }
 
         public bool TryRemove(string itemId, int count = 1)
@@ -27,15 +30,17 @@ namespace Ascend.Core
             if (count <= 0 || Count(itemId) < count) return false;
             int left = Count(itemId) - count;
             if (left == 0) _items.Remove(itemId); else _items[itemId] = left;
+            Changed?.Invoke();
             return true;
         }
 
-        public void AddCopper(long amount) { if (amount > 0) Copper += amount; }
+        public void AddCopper(long amount) { if (amount > 0) { Copper += amount; Changed?.Invoke(); } }
 
         public bool TrySpend(long amount)
         {
             if (amount < 0 || amount > Copper) return false;
             Copper -= amount;
+            Changed?.Invoke();
             return true;
         }
 
@@ -44,6 +49,7 @@ namespace Ascend.Core
         {
             long t = Math.Max(0, Math.Min(Copper, amount));
             Copper -= t;
+            if (t > 0) Changed?.Invoke();
             return t;
         }
 
@@ -52,7 +58,8 @@ namespace Ascend.Core
         {
             Copper = Math.Max(0, copper);
             _items.Clear();
-            foreach (var kv in items ?? Enumerable.Empty<KeyValuePair<string, int>>()) Add(kv.Key, kv.Value);
+            foreach (var kv in items ?? Enumerable.Empty<KeyValuePair<string, int>>()) if (!string.IsNullOrEmpty(kv.Key) && kv.Value > 0) _items[kv.Key] = Count(kv.Key) + kv.Value;
+            Changed?.Invoke();
         }
     }
 

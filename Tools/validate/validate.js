@@ -119,6 +119,7 @@ for (const q of [...rows.quests, ...rows.weekly]) {
     if (o.kind === 'kill' || o.kind === 'tame') ref(where, o.target, 'species');
     else if (o.kind === 'talk') ref(where, o.target, 'npcs');
     else if (o.kind === 'collect' && String(o.target).startsWith('itm_')) ref(where, o.target, 'items');
+    if (o.from) ref(where + '.from', o.from, 'species');
   });
 }
 

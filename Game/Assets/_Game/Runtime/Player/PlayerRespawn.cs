@@ -165,7 +165,7 @@ namespace Ascend.Game
             Vector3 d = resp.transform.position - transform.position; d.y = 0;
             if (d.magnitude > AttuneRadius) return;
             foreach (var w in FindObjectsByType<Waystone>(FindObjectsSortMode.None)) w.Attuned = w == this;
-            resp.GetComponent<PlayerInventory>()?.Toast("Waystone attuned");
+            if (resp.TryGetComponent<PlayerInventory>(out var inv)) inv.Toast("Waystone attuned");
             resp.SetPoint(transform.position + transform.forward * 1.5f, transform.rotation, Id);
         }
     }

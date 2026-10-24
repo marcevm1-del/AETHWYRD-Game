@@ -157,6 +157,11 @@
      "count": {
       "type": "integer",
       "minimum": 1
+     },
+     "from": {
+      "type": "string",
+      "pattern": "^mon_[a-z0-9_]+$",
+      "description": "collect: the species that drops the item while the quest is active"
      }
     }
    }

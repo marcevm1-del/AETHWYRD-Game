@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using Ascend.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -72,6 +73,13 @@ namespace Ascend.Game
                 s.LanternCopper = _respawn.Lantern.Copper;
             }
             s.FireBombs = _combat.FireBombs;
+            if (TryGetComponent<PlayerQuests>(out var quests))
+            {
+                s.Quests = quests.Log.SaveActive();
+                s.CompletedQuests = quests.Log.Completed.ToList();
+                s.Flags = quests.Flags.ToList();
+                s.GuildPoints = quests.Log.GuildPoints;
+            }
             try
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(PathOnDisk));
@@ -97,6 +105,7 @@ namespace Ascend.Game
 
             SaveRules.Apply(s, _combat.Progress, _inv.Items);
             _inv.Difficulty = s.Difficulty;
+            if (TryGetComponent<PlayerQuests>(out var quests)) quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags);
             _combat.GiveFireBombs(s.FireBombs - _combat.FireBombs);
             _respawn.Restore(s.Deaths, s.WaystoneId,
                 s.Respawn != null ? new Vector3(s.Respawn[0], s.Respawn[1], s.Respawn[2]) : (Vector3?)null,

@@ -31,6 +31,10 @@ namespace Ascend.Core
         public int FireBombs { get; set; }
         /// <summary>Hardcore character that died: the slot can be viewed but not continued.</summary>
         public bool Fallen { get; set; }
+        public List<QuestProgress> Quests { get; set; } = new List<QuestProgress>();
+        public List<string> CompletedQuests { get; set; } = new List<string>();
+        public List<string> Flags { get; set; } = new List<string>();
+        public int GuildPoints { get; set; }
     }
 
     public static class SaveRules
@@ -56,6 +60,9 @@ namespace Ascend.Core
         {
             if (s == null) return null;
             s.Items ??= new Dictionary<string, int>();
+            s.Quests ??= new List<QuestProgress>();
+            s.CompletedQuests ??= new List<string>();
+            s.Flags ??= new List<string>();
             s.Version = SaveGame.CurrentVersion;
             return s;
         }

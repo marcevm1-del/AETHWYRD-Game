@@ -117,7 +117,7 @@ const SCHEMAS = {
       requirements: { type: 'object', additionalProperties: false, properties: { minLevel: { type: 'integer', minimum: 1, maximum: 300 }, partySize: { type: 'string' } } },
       prerequisites: { type: 'object', additionalProperties: false, properties: { quests: { type: 'array', items: id('qst_') }, flags: { type: 'array', items: FLAG }, act: { type: 'integer', minimum: 0, maximum: 6 }, rank: RL } },
       setsFlags: { type: 'array', items: FLAG },
-      objectives: { type: 'array', minItems: 1, items: { type: 'object', required: ['kind'], properties: { kind: { type: 'string', enum: ['kill', 'collect', 'talk', 'escort', 'reach', 'defend', 'tame', 'choice'] }, target: { type: 'string' }, count: { type: 'integer', minimum: 1 } } } },
+      objectives: { type: 'array', minItems: 1, items: { type: 'object', required: ['kind'], properties: { kind: { type: 'string', enum: ['kill', 'collect', 'talk', 'escort', 'reach', 'defend', 'tame', 'choice'] }, target: { type: 'string' }, count: { type: 'integer', minimum: 1 }, from: { ...id('mon_'), description: 'collect: the species that drops the item while the quest is active' } } } },
       rewards: { type: 'object', properties: { gold: { type: 'integer', minimum: 0 }, gp: { type: 'integer', minimum: 0 }, xp: { type: 'integer', minimum: 0 }, items: { type: 'array', items: id('itm_') } } }
     }
   },

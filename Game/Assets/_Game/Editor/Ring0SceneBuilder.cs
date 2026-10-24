@@ -161,6 +161,7 @@ namespace Ascend.EditorTools
             p.AddComponent<LockOn>();
             p.AddComponent<PlayerInventory>();
             p.AddComponent<PlayerRespawn>();
+            p.AddComponent<PlayerQuests>();
             p.AddComponent<PlayerSave>();
             var driver = p.AddComponent<PlayerInputDriver>();
 
@@ -196,6 +197,7 @@ namespace Ascend.EditorTools
 
             // Past the Brindlewick gate: the edge of Whisperwood (Ring 1), its own waystone and field.
             BuildWhisperwood(world, ground, wood, accent);
+            BuildQuestNpcs(world);
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             var scenes = EditorBuildSettings.scenes.Where(s => s.path != ScenePath).ToList();
