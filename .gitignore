@@ -40,3 +40,12 @@ ideas/_ascend_ideas_preserve_*/
 Game/Assets/_Game/Art/Models/Monsters/*/
 Game/Assets/_Game/Art/Models/Monsters/*.meta
 !Game/Assets/_Game/Art/Models/Monsters/*.fbx.meta
+
+# The repo folder is also the Obsidian vault (2026-10-24): keep personal vault config and the nested repo
+# clones out of the game repo. Notes, canvases and daily notes stay tracked.
+.obsidian/
+.claudian/
+GitHub/Aetheria-Game/
+GitHub/Project-Greyborn/
+GitHub/Project-lili/
+GitHub/Teacher-OS/
