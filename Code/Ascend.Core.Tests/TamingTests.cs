@@ -71,6 +71,13 @@ static class TamingTests
         Assert.True(r.SetActive(r.Ranch.First(), true), "swap in");
     }
 
+    public static void PartnersGrowWithYourLevel()
+    {
+        var rabbit = S("mon_horned_rabbit");
+        Assert.Equal(1.0, Partners.LevelFactor(rabbit, 1, T), "at its own level: as tamed");
+        Assert.True(System.Math.Abs(Partners.LevelFactor(rabbit, 11, T) - 1.6) < 1e-9, "ten levels above: +60%");
+    }
+
     public static void RolesComeFromBehaviour()
     {
         Assert.True(Partners.RoleOf(S("mon_horned_rabbit")) == PartnerRole.Scout, "skittish rabbit: scout");

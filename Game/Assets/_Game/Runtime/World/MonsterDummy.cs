@@ -89,6 +89,14 @@ namespace Ascend.Game
             if (IsPartner) foreach (var c in GetComponentsInChildren<Collider>()) c.isTrigger = true;
         }
 
+        /// <summary>A partner grows with you: max HP from the species' base times this factor (heals to full).</summary>
+        public void ScaleMaxHp(double factor)
+        {
+            if (_species == null) return;
+            MaxHp = Hp = Mathf.Max(1, (int)System.Math.Round(_species.EffectiveMaxHp * System.Math.Max(1, factor)));
+            Refresh();
+        }
+
         public void BecomePartner()
         {
             IsPartner = true;

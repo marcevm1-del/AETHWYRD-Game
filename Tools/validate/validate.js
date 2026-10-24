@@ -125,6 +125,29 @@ for (const q of [...rows.quests, ...rows.weekly]) {
 }
 
 const ITEMS_BY_ID = Object.fromEntries(rows.items.map(i => [i.id, i]));
+
+// Recipes (Items/recipes.json): known items and stations, and a result never ranked above its best material (systems.md §5.1).
+const RANK_ORDER = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
+const rankValue = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ? RANK_ORDER.indexOf(m[1]) * 3 + (m[2] === '+' ? 1 : m[2] === '-' ? -1 : 0) : -99; };
+let recipeCount = 0;
+if (fs.existsSync(path.join(DATA, 'Items/recipes.json'))) {
+  const rf = load('Items/recipes.json');
+  for (const [station, npc] of Object.entries(rf.stations || {})) if (npc) ref('recipes.stations.' + station, npc, 'npcs');
+  const seen = new Set();
+  for (const r of rf.recipes || []) {
+    recipeCount++;
+    if (!/^rcp_[a-z0-9_]+$/.test(r.id || '')) err(r.id, 'recipe id must look like rcp_*');
+    if (seen.has(r.id)) err(r.id, 'duplicate recipe id'); seen.add(r.id);
+    if (!(r.station in (rf.stations || {}))) err(r.id, `unknown station "${r.station}"`);
+    ref(r.id + '.output', r.output && r.output.itemId, 'items');
+    if (!r.inputs || r.inputs.length === 0) err(r.id, 'needs inputs');
+    for (const i of r.inputs || []) { ref(r.id + '.inputs', i.itemId, 'items'); if (!(i.count >= 1)) err(r.id, 'input count must be ≥ 1'); }
+    if (r.learnFrom) ref(r.id + '.learnFrom', r.learnFrom.npcId, 'npcs');
+    const out = ITEMS_BY_ID[r.output && r.output.itemId];
+    const best = Math.max(...(r.inputs || []).map(i => rankValue((ITEMS_BY_ID[i.itemId] || {}).rank)));
+    if (out && rankValue(out.rank) > best) err(r.id, `result rank ${out.rank} is above its best material`);
+  }
+}
 // Gear: weapons name a weapon type some class can wield; armour names its weight (equipment rules in Code/Ascend.Core/Equipment.cs).
 const CLASS_WEAPONS = new Set(rows.classes.flatMap(c => c.weapons || []));
 for (const it of rows.items) {
@@ -208,7 +231,7 @@ for (const d of WEEKDAYS) {
 }
 
 // 3) Report
-const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).join(' · ');
+const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
 if (errors.length) {
   console.error(`✗ ${errors.length} problem(s)\n` + errors.map(e => '  - ' + e).join('\n'));
   process.exit(1);

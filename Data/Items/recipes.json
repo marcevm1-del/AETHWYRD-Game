@@ -1,0 +1,154 @@
+{
+ "notes": "Ring 0 recipes (12_Systems/systems.md §5; 09_Equipment/item_and_economy_design.md §6). Stations: a crafter NPC's workbench, or a campfire you can use anywhere. learnFrom: the NPC who teaches it (price in copper); omit to know it from the start. Standard quality only until the optional mini-games.",
+ "stations": {
+  "forge": "npc_torvald_stonebeard",
+  "alembic": "npc_fennick_reed",
+  "campfire": null
+ },
+ "recipes": [
+  {
+   "id": "rcp_minor_hp_potion",
+   "name": "Minor Healing Potion",
+   "skill": "alchemy",
+   "station": "alembic",
+   "output": {
+    "itemId": "itm_minor_hp_potion",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_healing_herb",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_slime_jelly",
+     "count": 1
+    }
+   ],
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 20
+   }
+  },
+  {
+   "id": "rcp_fire_bomb",
+   "name": "Fire Bomb",
+   "skill": "alchemy",
+   "station": "alembic",
+   "output": {
+    "itemId": "itm_fire_bomb",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_sap",
+     "count": 2
+    },
+    {
+     "itemId": "itm_core_f",
+     "count": 1
+    }
+   ],
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 30
+   }
+  },
+  {
+   "id": "rcp_hunters_skewer",
+   "name": "Hunter's Skewer",
+   "skill": "cooking",
+   "station": "campfire",
+   "output": {
+    "itemId": "itm_hunters_skewer",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_prime_meat",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "rcp_fangblade",
+   "name": "Fangblade",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_fangblade",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_crude_blade",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_fang",
+     "count": 2
+    },
+    {
+     "itemId": "itm_core_f",
+     "count": 1
+    }
+   ],
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 40
+   }
+  },
+  {
+   "id": "rcp_carapace_cap",
+   "name": "Carapace Cap",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_carapace_cap",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_carapace_shard",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 1
+    }
+   ],
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 30
+   }
+  },
+  {
+   "id": "rcp_talon_charm",
+   "name": "Talon Charm",
+   "skill": "jewelcrafting",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_talon_charm",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_talon",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_feather",
+     "count": 2
+    },
+    {
+     "itemId": "itm_core_f",
+     "count": 1
+    }
+   ],
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 35
+   }
+  }
+ ]
+}

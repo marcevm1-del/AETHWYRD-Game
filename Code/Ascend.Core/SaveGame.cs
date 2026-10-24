@@ -39,6 +39,7 @@ namespace Ascend.Core
         public Dictionary<string, int> BoardDone { get; set; } = new Dictionary<string, int>();
         /// <summary>Tamed monsters (active and ranch).</summary>
         public List<PartnerData> Partners { get; set; } = new List<PartnerData>();
+        public List<string> KnownRecipes { get; set; } = new List<string>();
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
@@ -88,6 +89,7 @@ namespace Ascend.Core
             s.Flags ??= new List<string>();
             s.BoardDone ??= new Dictionary<string, int>();
             s.Partners ??= new List<PartnerData>();
+            s.KnownRecipes ??= new List<string>();
             s.RestBuffs ??= new List<RestBuff>();
             s.InnNights ??= new Dictionary<string, int>();
             s.Version = SaveGame.CurrentVersion;

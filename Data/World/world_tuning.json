@@ -77,6 +77,7 @@
   "retrySec": 60,
   "activePartners": 3,
   "bondPerAssists": 3,
+  "partnerGrowthPerLevel": 0.06,
   "maxBond": 10,
   "evolveBond": 5,
   "knockedOutSec": 20,

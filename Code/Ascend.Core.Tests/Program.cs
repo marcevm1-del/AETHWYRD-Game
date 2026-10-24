@@ -69,7 +69,8 @@ static class Repo
         Load<List<WeeklyQuestData>>("Data/Quests/weekly_board.json"),
         Load<List<InnData>>("Data/World/inns.json"),
         Load<MotionFile>("Data/Monsters/motion.json"),
-        Load<List<ShopData>>("Data/Items/shops.json"));
+        Load<List<ShopData>>("Data/Items/shops.json"),
+        Load<RecipeFile>("Data/Items/recipes.json"));
 }
 
 [Tests]

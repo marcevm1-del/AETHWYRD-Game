@@ -188,6 +188,25 @@ namespace Ascend.Game.Tests
             Assert.AreEqual("Bun", _taming.Following.Single().Data.Name, "still Bun");
         }
 
+        [UnityTest]
+        public IEnumerator PartnersGrowWithYouAndCanBeReleased()
+        {
+            var bun = Bring("mon_horned_rabbit", "Bun");
+            yield return null;
+            int hp = bun.Body.MaxHp;
+            for (int i = 0; i < 10; i++) { long need = _combat.Progress.ToNext - _combat.Progress.XpIntoLevel; _combat.GrantXp(need); }
+            Assert.Greater(bun.Body.MaxHp, hp, "it grows when you level up");
+            Assert.Greater(bun.LevelFactor, 1.0);
+            BagWindow.Instance.Open(_combat);
+            int release = BagWindow.Instance.OptionTexts.ToList().FindIndex(t => t.Contains("Release Bun"));
+            BagWindow.Instance.Choose(release);
+            Assert.AreEqual(1, _taming.Roster.All.Count, "one press only asks");
+            int confirm = BagWindow.Instance.OptionTexts.ToList().FindIndex(t => t.Contains("Confirm: release Bun"));
+            BagWindow.Instance.Choose(confirm);
+            Assert.AreEqual(0, _taming.Roster.All.Count, "released");
+            BagWindow.Instance.Close();
+        }
+
         [Test]
         public void PartnersAreSaved()
         {

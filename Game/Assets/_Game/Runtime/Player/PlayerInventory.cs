@@ -41,9 +41,19 @@ namespace Ascend.Game
             _combat = GetComponent<PlayerCombat>();
             _rng = new DeterministicRandom(lootSeed);
             _combat.Killed += OnKilled;
+            Items.Changed += StockQuickItems;
         }
 
-        void OnDestroy() { if (_combat != null) _combat.Killed -= OnKilled; }
+        void OnDestroy() { if (_combat != null) _combat.Killed -= OnKilled; Items.Changed -= StockQuickItems; }
+
+        /// <summary>Fire Bombs bought, crafted or looted go straight to the quick-item slot (G / D-pad up).</summary>
+        void StockQuickItems()
+        {
+            int bombs = Items.Count("itm_fire_bomb");
+            if (bombs <= 0 || _combat == null) return;
+            Items.TryRemove("itm_fire_bomb", bombs);
+            _combat.GiveFireBombs(bombs);
+        }
 
         void OnKilled(MonsterDummy m)
         {

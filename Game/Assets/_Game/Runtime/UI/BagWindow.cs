@@ -32,8 +32,11 @@ namespace Ascend.Game
 
         public void Toggle(PlayerCombat combat) { if (_open) Close(); else Open(combat); }
 
+        PartnerData _pendingRelease;
+
         public void Open(PlayerCombat combat)
         {
+            _pendingRelease = null;
             _combat = combat; _inv = combat.GetComponent<PlayerInventory>();
             _open = _inv != null; _cursor = 0; _line = ""; _openedAt = Time.unscaledTime;
             Rebuild();
@@ -81,6 +84,13 @@ namespace Ascend.Game
                 else if (it.Category == "consumable" && it.Stat("heal") > 0)
                     _options.Add(new Option { Text = $"Drink {it.Name} ×{kv.Value} (+{it.Stat("heal"):0} HP)", Act = () => _inv.DrinkHealingPotion() });
             }
+            var crafting = _combat.GetComponent<PlayerCrafting>();
+            if (crafting != null)
+                foreach (var r in crafting.Crafter.All.Where(r => crafting.Crafter.Knows(r.Id) && crafting.Crafter.StationAvailable(r.Station, null)))
+                {
+                    var recipe = r;
+                    _options.Add(new Option { Text = $"Campfire: cook {r.Name} — {crafting.InputsText(r)}", Act = () => crafting.Make(recipe, null) });
+                }
             var taming = _combat.GetComponent<PlayerTaming>();
             if (taming != null)
             {
@@ -95,6 +105,11 @@ namespace Ascend.Game
                     {
                         Text = $"Partner {p.Name} ({what}) · Bond {p.Bond}/{t.MaxBond} · {where} — {(p.Active ? "send to the ranch" : "bring along")}",
                         Act = () => _line = taming.SetActive(partner, !partner.Active) ? $"{partner.Name} is {(partner.Active ? "with you" : "off to the ranch")}." : $"Three partners travel with you at most.",
+                    });
+                    _options.Add(new Option
+                    {
+                        Text = _pendingRelease == p ? $"   Confirm: release {p.Name} to the wild (can't be undone)" : $"   Release {p.Name}…",
+                        Act = () => { if (_pendingRelease == partner) { taming.Release(partner); _pendingRelease = null; _line = $"{partner.Name} bounds off into the trees."; } else { _pendingRelease = partner; _line = "Choose it again to confirm."; } },
                     });
                     if (Partners.CanEvolve(p, db, t))
                         foreach (var b in Partners.Branches(p.SpeciesId, db))

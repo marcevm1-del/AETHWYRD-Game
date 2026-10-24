@@ -57,7 +57,7 @@ namespace Ascend.Game
             return true;
         }
 
-        enum Page { Main, Buy, Sell, Buyback, Rooms }
+        enum Page { Main, Buy, Sell, Buyback, Rooms, Workbench }
         Page _page;
 
         void Rebuild()
@@ -68,6 +68,9 @@ namespace Ascend.Game
             var shop = inv != null ? inv.ShopFor(_giver.NpcId) : null;
             var inn = AscendData.Db.Inns.Values.FirstOrDefault(i => i.KeeperNpcId == _giver.NpcId);
             if (inn != null && _page == Page.Rooms) { RebuildRooms(inn, inv); return; }
+            var crafting = q.GetComponent<PlayerCrafting>();
+            string station = crafting != null ? crafting.Crafter.StationOf(_giver.NpcId) : null;
+            if (station != null && _page == Page.Workbench) { RebuildWorkbench(crafting, station); return; }
             if (shop != null && _page != Page.Main) { RebuildTrade(shop, inv); return; }
             foreach (var p in _giver.AwaitingChoiceHere(q))
             {
@@ -112,8 +115,28 @@ namespace Ascend.Game
                 foreach (var w in board.Later(q))
                     _options.Add(new Option { Text = $"(opens at {w.TimeOfDay}) [{Capital(w.Slot)}] {w.Title}", Act = () => _line = $"That one's only taken at {w.TimeOfDay}." });
             }
+            if (station != null) _options.Add(new Option { Text = $"Workbench — the {station}", Act = () => Go(Page.Workbench, "Learn a recipe, or make something you know.") });
             if (inn != null) _options.Add(new Option { Text = $"Rooms — {inn.Name}", Act = () => Go(Page.Rooms, inn.Quirk) });
             _options.Add(new Option { Text = "Goodbye", Act = Close });
+            _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
+        }
+
+        void RebuildWorkbench(PlayerCrafting crafting, string station)
+        {
+            var c = crafting.Crafter;
+            var cur = AscendData.Db.World.Currency;
+            foreach (var r in c.All.Where(r => r.Station == station && c.Knows(r.Id)))
+            {
+                var recipe = r;
+                bool ready = c.CanCraft(r.Id, _quests.GetComponent<PlayerInventory>().Items, _giver.NpcId) == CraftResult.Ok;
+                _options.Add(new Option { Text = $"{(ready ? "Make" : "(missing)")} {r.Name} — {crafting.InputsText(r)}", Act = () => crafting.Make(recipe, _giver.NpcId) });
+            }
+            foreach (var r in c.TaughtBy(_giver.NpcId).Where(r => !c.Knows(r.Id)))
+            {
+                var recipe = r;
+                _options.Add(new Option { Text = $"Learn {r.Name} — {Money.Format(r.LearnFrom.Price, cur)} ({crafting.InputsText(r)})", Act = () => { if (crafting.Learn(recipe, _giver.NpcId)) _line = "There. Mind your fingers."; } });
+            }
+            _options.Add(new Option { Text = "Back", Act = () => Go(Page.Main, "") });
             _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
         }
 

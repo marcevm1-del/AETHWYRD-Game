@@ -31,6 +31,15 @@ namespace Ascend.Game
         readonly HashSet<MonsterDummy> _spotted = new HashSet<MonsterDummy>();
 
         public int Slot { get; set; }
+        /// <summary>Stat multiplier from your level (Core Partners.LevelFactor); set when it joins and on your level-ups.</summary>
+        public double LevelFactor { get; private set; } = 1;
+
+        public void SetLevel(int playerLevel)
+        {
+            AscendData.Db.Species.TryGetValue(_body.SpeciesId, out var s);
+            LevelFactor = Partners.LevelFactor(s, playerLevel, AscendData.Db.World.Taming);
+            if (!_body.IsDead) _body.ScaleMaxHp(LevelFactor);
+        }
         public PartnerData Data { get; set; }
         public PartnerRole Role { get; private set; }
         public MonsterDummy Body => _body;
@@ -78,7 +87,7 @@ namespace Ascend.Game
                 if (to.magnitude <= ReachM)
                 {
                     Face(to, dt);
-                    if (_cooldown <= 0f) { Hits++; Target.TakeHit(_atk, HitWeight.Light, transform.position, 2); _cooldown = AttackInterval; }
+                    if (_cooldown <= 0f) { Hits++; Target.TakeHit(Mathf.Max(1, Mathf.RoundToInt((float)(_atk * LevelFactor))), HitWeight.Light, transform.position, 2); _cooldown = AttackInterval; }
                     return;
                 }
                 goal = Target.transform.position;
@@ -109,6 +118,7 @@ namespace Ascend.Game
             {
                 _knockedOutUntil = -1f;
                 _body.Revive();
+                _body.ScaleMaxHp(LevelFactor);
                 Warp(_player.position - _player.forward * FollowDistance);
                 Toast($"{NameOf()} is back on its feet.");
             }

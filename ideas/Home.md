@@ -74,6 +74,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
 - [[Design Bible/13_Production/production|13_Production/production]]
+- [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
 
 ## Classes (12)
@@ -1180,17 +1181,20 @@ Every population record is included in the complete register on its species note
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (111)
+## Items (115)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
+- [[Items/Talon Charm|Talon Charm]]
 
 ### armor
 - [[Items/Guild Rookie Hood|Guild Rookie Hood]]
+- [[Items/Carapace Cap|Carapace Cap]]
 
 ### consumable
 - [[Items/Minor Healing Potion|Minor Healing Potion]]
 - [[Items/Fire Bomb|Fire Bomb]]
+- [[Items/Hunter's Skewer|Hunter's Skewer]]
 
 ### core
 - [[Items/F-Rank Monster Core|F-Rank Monster Core]]
@@ -1305,3 +1309,4 @@ Every population record is included in the complete register on its species note
 - [[Items/Guild Issue Hand Wraps|Guild Issue Hand Wraps]]
 - [[Items/Guild Issue Lute|Guild Issue Lute]]
 - [[Items/Unmarked Grimoire|Unmarked Grimoire]]
+- [[Items/Fangblade|Fangblade]]

@@ -43,6 +43,7 @@ namespace Ascend.Game
             _rng = new DeterministicRandom(seed);
             Roster = new PartnerRoster(T);
             _combat.HitLanded += OnHitLanded;
+            _combat.LeveledUp += (_, to) => { foreach (var f in _following) if (f != null) f.SetLevel(to); };
             _tame = new InputAction("Tame", InputActionType.Button);
             _tame.AddBinding("<Keyboard>/t"); _tame.AddBinding("<Gamepad>/dpad/left");
         }
@@ -146,6 +147,7 @@ namespace Ascend.Game
             f.Data = data;
             f.SharedVictory += OnSharedVictory;
             _following.Add(f);
+            f.SetLevel(_combat.Progress.Level);
         }
 
         void OnHitLanded(MonsterDummy m, DamageResult r) { if (Encounter != null) Encounter.Attacked(); }

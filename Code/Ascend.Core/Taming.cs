@@ -27,6 +27,8 @@ namespace Ascend.Core
         public double RetrySec { get; set; } = 60;
         public int ActivePartners { get; set; } = 3;
         public int BondPerAssists { get; set; } = 3;
+        /// <summary>Partners level with you: +this fraction of ATK and HP per level you are above the species' own level.</summary>
+        public double PartnerGrowthPerLevel { get; set; } = 0.06;
         public int MaxBond { get; set; } = 10;
         public int EvolveBond { get; set; } = 5;
         public double KnockedOutSec { get; set; } = 20;
@@ -180,6 +182,13 @@ namespace Ascend.Core
             p.SpeciesId = branchId;
             p.Evolved = true;
             return true;
+        }
+
+        /// <summary>A partner's level is yours (it grows with you, systems.md §7.3); stats scale from the species' own level.</summary>
+        public static double LevelFactor(SpeciesData s, int playerLevel, TamingTuning t)
+        {
+            int baseLevel = s?.LevelRange != null && s.LevelRange.Count > 0 ? s.LevelRange[0] : Math.Max(1, s?.Level ?? 1);
+            return 1 + Math.Max(0, playerLevel - baseLevel) * t.PartnerGrowthPerLevel;
         }
 
         /// <summary>Fighting together: every BondPerAssists shared victories raise Bond by one (to the cap). True when Bond rose.</summary>

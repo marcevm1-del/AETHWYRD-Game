@@ -43,6 +43,8 @@ namespace Ascend.Game.Tests
             Time.captureDeltaTime = 0f;
             GameTime.Clear();
             if (NpcDialog.IsOpen) NpcDialog.Instance.Close();
+            if (BagWindow.IsOpen) BagWindow.Instance.Close();
+            foreach (var b in Object.FindObjectsByType<BagWindow>(FindObjectsSortMode.None)) Object.DestroyImmediate(b.gameObject);
             foreach (var t in new System.Type[] { typeof(QuestGiver), typeof(QuestPlace), typeof(NpcDialog), typeof(MonsterDummy) })
                 foreach (var o in Object.FindObjectsByType(t, FindObjectsSortMode.None)) Object.DestroyImmediate(((Component)o).gameObject);
             Object.DestroyImmediate(_player);
@@ -174,6 +176,44 @@ namespace Ascend.Game.Tests
             Assert.IsFalse(_quests.Log.IsActive(q.Id), "handed in");
             Assert.IsTrue(_quests.BoardDoneOn(q.Id, 0), "done today");
             Assert.IsFalse(go.GetComponent<QuestBoard>().Takeable(_quests).Any(w => w.Id == q.Id), "not posted again today");
+        }
+
+        [Test]
+        public void LearningAndForgingAtTorvalds()
+        {
+            _player.AddComponent<PlayerCrafting>();
+            var torvald = Giver("npc_torvald_stonebeard", new Vector3(0, 0, 1.5f));
+            _inv.Items.AddCopper(50);
+            _inv.Items.Add("itm_mat_crude_blade", 2); _inv.Items.Add("itm_mat_fang", 2); _inv.Items.Add("itm_core_f", 1);
+            NpcDialog.Instance.Open(torvald, _quests);
+            NpcDialog.Instance.Choose(OptionIndex("Workbench"));
+            NpcDialog.Instance.Choose(OptionIndex("Learn Fangblade"));
+            Assert.AreEqual(10, _inv.Items.Copper, "40 copper to learn");
+            NpcDialog.Instance.Choose(OptionIndex("Make Fangblade"));
+            Assert.AreEqual(1, _inv.Items.Count("itm_fangblade"), "forged");
+            Assert.AreEqual(0, _inv.Items.Count("itm_mat_fang"), "fangs used");
+        }
+
+        [Test]
+        public void CookingAtACampfireFromTheBag()
+        {
+            _player.AddComponent<PlayerCrafting>();
+            _inv.Items.Add("itm_mat_prime_meat", 2);
+            BagWindow.Instance.Open(_combat);
+            int cook = BagWindow.Instance.OptionTexts.ToList().FindIndex(t => t.Contains("Campfire: cook Hunter's Skewer"));
+            Assert.GreaterOrEqual(cook, 0);
+            BagWindow.Instance.Choose(cook);
+            BagWindow.Instance.Close();
+            Assert.AreEqual(1, _inv.Items.Count("itm_hunters_skewer"));
+        }
+
+        [Test]
+        public void FireBombsGoToTheQuickSlot()
+        {
+            int before = _combat.FireBombs;
+            _inv.Items.Add("itm_fire_bomb", 2);
+            Assert.AreEqual(before + 2, _combat.FireBombs, "ready to throw (G)");
+            Assert.AreEqual(0, _inv.Items.Count("itm_fire_bomb"), "not left in the bag");
         }
 
         [Test]

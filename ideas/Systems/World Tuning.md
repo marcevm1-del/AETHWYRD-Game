@@ -76,6 +76,7 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `taming.retrySec` | 60 |
 | `taming.activePartners` | 3 |
 | `taming.bondPerAssists` | 3 |
+| `taming.partnerGrowthPerLevel` | 0.06 |
 | `taming.maxBond` | 10 |
 | `taming.evolveBond` | 5 |
 | `taming.knockedOutSec` | 20 |

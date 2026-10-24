@@ -322,5 +322,58 @@
    "matk": 8
   },
   "flavor": "The guild sells it without asking what you will write in it."
+ },
+ {
+  "id": "itm_fangblade",
+  "name": "Fangblade",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "main_hand",
+  "weaponType": "sword",
+  "value": 40,
+  "stats": {
+   "atk": 12
+  },
+  "flavor": "A goblin blade, re-edged with wolf fangs along the spine."
+ },
+ {
+  "id": "itm_carapace_cap",
+  "name": "Carapace Cap",
+  "category": "armor",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "head",
+  "armorWeight": "light",
+  "value": 30,
+  "stats": {
+   "def": 5
+  },
+  "flavor": "Beetle plates riveted to a fur lining. Smells like a forest floor."
+ },
+ {
+  "id": "itm_talon_charm",
+  "name": "Talon Charm",
+  "category": "accessory",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "charm",
+  "value": 35,
+  "stats": {
+   "crit": 0.02
+  },
+  "flavor": "Crow talons bound with feather and a sliver of core. Lucky, they say."
+ },
+ {
+  "id": "itm_hunters_skewer",
+  "name": "Hunter's Skewer",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 12,
+  "stats": {
+   "heal": 200
+  },
+  "flavor": "Prime meat, campfire-charred. The best meal in Whisperwood is the one you cooked yourself."
  }
 ]
