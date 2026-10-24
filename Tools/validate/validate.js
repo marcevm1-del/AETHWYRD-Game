@@ -126,6 +126,18 @@ for (const q of [...rows.quests, ...rows.weekly]) {
 
 const ITEMS_BY_ID = Object.fromEntries(rows.items.map(i => [i.id, i]));
 
+// Guild ranks (World/guild_ranks.json): trials are real quests, gifts real items, promotions a chain F → SSS.
+if (fs.existsSync(path.join(DATA, 'World/guild_ranks.json'))) {
+  const gr = load('World/guild_ranks.json');
+  (gr.promotions || []).forEach((p, i) => {
+    const where = `guild_ranks.promotions[${i}]`;
+    if (p.trialQuestId) ref(where + '.trialQuestId', p.trialQuestId, 'quests');
+    if (p.gift) ref(where + '.gift', p.gift, 'items');
+    if (i > 0 && gr.promotions[i - 1].to !== p.from) err(where, `chain broken: ${gr.promotions[i - 1].to} then ${p.from}`);
+    if (i > 0 && !(p.gp > gr.promotions[i - 1].gp && p.level > gr.promotions[i - 1].level)) err(where, 'GP and level should rise each rank');
+  });
+}
+
 // Recipes (Items/recipes.json): known items and stations, and a result never ranked above its best material (systems.md §5.1).
 const RANK_ORDER = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
 const rankValue = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ? RANK_ORDER.indexOf(m[1]) * 3 + (m[2] === '+' ? 1 : m[2] === '-' ? -1 : 0) : -99; };

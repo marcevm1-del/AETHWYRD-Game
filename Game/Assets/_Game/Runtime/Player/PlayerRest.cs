@@ -36,7 +36,7 @@ namespace Ascend.Game
         }
 
         /// <summary>Can this room be paid for, or put on the tab here?</summary>
-        public bool CanTab(InnData inn) => Tab.AvailableAt(inn.Id, _combat.Progress.RankBand, RegularStatus.Stranger);
+        public bool CanTab(InnData inn) => Tab.AvailableAt(inn.Id, PlayerQuests.RankOf(this), RegularStatus.Stranger);
 
         public string Status(InnData inn, out RegularStatus status)
         {

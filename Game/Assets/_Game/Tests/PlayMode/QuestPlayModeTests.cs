@@ -217,6 +217,42 @@ namespace Ascend.Game.Tests
         }
 
         [Test]
+        public void RankingUpFromFToEAtMinasDesk()
+        {
+            _player.AddComponent<PlayerCrafting>();
+            var mina = Giver("npc_mina_feathersby", new Vector3(0, 0, 1.5f));
+            NpcDialog.Instance.Open(mina, _quests);
+            int ask = OptionIndex("Ask about promotion to rank E");
+            Assert.GreaterOrEqual(ask, 0, "Mina explains what's left");
+            Assert.Less(OptionIndex("Rank-up ceremony"), 0, "no ceremony yet");
+            NpcDialog.Instance.Close();
+
+            // Meet every requirement: level 12, 100 GP, 10 F quests, a life skill, the Goblin Chief trial.
+            while (_combat.Progress.Level < 12) _combat.GrantXp(_combat.Progress.ToNext - _combat.Progress.XpIntoLevel);
+            _quests.Rank.Load(RankLetter.F, 100, 10);
+            _inv.Items.AddCopper(100);
+            _player.GetComponent<PlayerCrafting>().Crafter.Learn("rcp_fangblade", _inv.Items, "npc_torvald_stonebeard");
+            _quests.Log.Load(null, new[] { "qst_trial_f_goblin_chief" }, 0);
+            Assert.IsTrue(_quests.CanRankUp, string.Join(" ", _quests.RankRequirements().Select(r => r.Text + "=" + r.Met)));
+
+            NpcDialog.Instance.Open(mina, _quests);
+            NpcDialog.Instance.Choose(OptionIndex("Rank-up ceremony — become rank E"));
+            Assert.AreEqual(RankLetter.E, _quests.Rank.Rank, "rank E");
+            Assert.AreEqual(1, _inv.Items.Count("itm_copper_compass"), "the rank gift");
+            Assert.AreEqual(RankLetter.E, PlayerQuests.RankOf(_player.transform), "rank checks use the guild rank");
+        }
+
+        [Test]
+        public void QuestGpScalesWithRank()
+        {
+            _quests.Accept(AscendData.Db.Quests["qst_gld_f_rabbit_season"]);
+            for (int i = 0; i < 8; i++) _quests.Log.OnKill("mon_horned_rabbit");
+            _quests.TurnIn("qst_gld_f_rabbit_season");
+            Assert.AreEqual(8, _quests.Rank.Gp, "an F quest at rank F: full GP");
+            Assert.AreEqual(1, _quests.Rank.QuestsAtRank, "counts toward the at-rank quests");
+        }
+
+        [Test]
         public void TradingThroughTheDialog()
         {
             var reed = Giver("npc_fennick_reed", new Vector3(0, 0, 1.5f));

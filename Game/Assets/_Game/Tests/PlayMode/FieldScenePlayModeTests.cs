@@ -44,7 +44,7 @@ namespace Ascend.Game.Tests
             Assert.IsEmpty(undefended, "defend targets without a defence spot: " + string.Join(", ", undefended));
 
             var givers = Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Select(g => g.NpcId).ToHashSet();
-            foreach (var npc in new[] { "npc_mina_feathersby", "npc_farmer_odo", "npc_marta_gruel", "npc_captain_holt", "npc_lyra_brightwood", "npc_fennick_reed" })
+            foreach (var npc in new[] { "npc_mina_feathersby", "npc_rodrick_hale", "npc_farmer_odo", "npc_marta_gruel", "npc_captain_holt", "npc_lyra_brightwood", "npc_fennick_reed" })
                 Assert.IsTrue(givers.Contains(npc), npc + " is in the field");
             Assert.IsTrue(Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Where(g => g.GetComponent<QuestBoard>() == null).All(g => g.HasMarker), "every NPC keeps its !/? marker in the saved scene");
             Assert.IsNotNull(Object.FindFirstObjectByType<EscortNpc>(), "Ottoline's escort");

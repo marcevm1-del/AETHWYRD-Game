@@ -83,11 +83,11 @@ namespace Ascend.Game
         {
             if (!AscendData.Db.Species.TryGetValue(m.SpeciesId, out var s)) return false;
             if (_remembered.TryGetValue(m, out var until) && Time.time < until) { Toast($"The {s.Name} remembers you and won't come close."); return false; }
-            var block = TamingRules.CanAttempt(s, m.MaxHp > 0 ? m.Hp / (double)m.MaxHp : 0, _combat.Progress.RankBand, IsTamer, T);
+            var block = TamingRules.CanAttempt(s, m.MaxHp > 0 ? m.Hp / (double)m.MaxHp : 0, PlayerQuests.RankOf(this), IsTamer, T);
             switch (block)
             {
                 case TameBlock.Untameable: Toast($"A {s.Name} can't be tamed like this."); return false;
-                case TameBlock.AboveYourRank: Toast($"A rank {s.Rank} {s.Name} won't follow a rank {_combat.Progress.RankBand} adventurer."); return false;
+                case TameBlock.AboveYourRank: Toast($"A rank {s.Rank} {s.Name} won't follow a rank {PlayerQuests.RankOf(this)} adventurer."); return false;
                 case TameBlock.NotWeakened: Toast($"Weaken the {s.Name} first (below {T.WeakenHpFraction * 100:0}% HP)."); return false;
                 case TameBlock.Defeated: return false;
             }

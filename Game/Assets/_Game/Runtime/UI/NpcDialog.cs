@@ -57,6 +57,9 @@ namespace Ascend.Game
             return true;
         }
 
+        /// <summary>Promotions happen at the Guild desk (ranks.md §3).</summary>
+        public const string GuildReceptionist = "npc_mina_feathersby";
+
         enum Page { Main, Buy, Sell, Buyback, Rooms, Workbench }
         Page _page;
 
@@ -114,6 +117,14 @@ namespace Ascend.Game
                 }
                 foreach (var w in board.Later(q))
                     _options.Add(new Option { Text = $"(opens at {w.TimeOfDay}) [{Capital(w.Slot)}] {w.Title}", Act = () => _line = $"That one's only taken at {w.TimeOfDay}." });
+            }
+            if (_giver.NpcId == GuildReceptionist && q.Rank.Next != null)
+            {
+                var next = q.Rank.Next;
+                if (q.CanRankUp)
+                    _options.Add(new Option { Text = $"Rank-up ceremony — become rank {next.To}", Act = () => { var p = q.RankUp(); if (p != null) _line = $"By the Guild's seal: Adventurer, rank {p.To}. Your card, please — watch it change."; } });
+                else
+                    _options.Add(new Option { Text = $"Ask about promotion to rank {next.To}", Act = () => _line = string.Join("  ", q.RankRequirements().Select(r => (r.Met ? "✔ " : "✘ ") + r.Text)) });
             }
             if (station != null) _options.Add(new Option { Text = $"Workbench — the {station}", Act = () => Go(Page.Workbench, "Learn a recipe, or make something you know.") });
             if (inn != null) _options.Add(new Option { Text = $"Rooms — {inn.Name}", Act = () => Go(Page.Rooms, inn.Quirk) });

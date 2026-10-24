@@ -1,0 +1,115 @@
+{
+ "notes": "Adventurer rank promotions (03_Rank_System/ranks.md §2). GP from a quest scales with its rank versus yours (gpByRankDifference: quest rank minus your rank). special: a non-combat requirement the game checks by key.",
+ "titles": {
+  "F": "Rookie",
+  "E": "Novice",
+  "D": "Journeyman",
+  "C": "Veteran",
+  "B": "Elite",
+  "A": "Champion",
+  "S": "Hero",
+  "SS": "Calamity",
+  "SSS": "Transcendent"
+ },
+ "cards": {
+  "F": "oak wood",
+  "E": "copper",
+  "D": "iron",
+  "C": "silver",
+  "B": "gold",
+  "A": "platinum",
+  "S": "mithril",
+  "SS": "adamantite",
+  "SSS": "Starcard"
+ },
+ "gpByRankDifference": {
+  "0": 1,
+  "1": 1.5,
+  "-1": 0.5,
+  "-2": 0.1
+ },
+ "promotions": [
+  {
+   "from": "F",
+   "to": "E",
+   "level": 12,
+   "gp": 100,
+   "questsAtRank": 10,
+   "special": "life_skill",
+   "specialText": "Learn 1 Life Skill",
+   "trialQuestId": "qst_trial_f_goblin_chief",
+   "trialName": "The Goblin Chief of Hollowpine",
+   "gift": "itm_copper_compass"
+  },
+  {
+   "from": "E",
+   "to": "D",
+   "level": 32,
+   "gp": 400,
+   "questsAtRank": 15,
+   "special": "dungeon",
+   "specialText": "Clear 1 dungeon",
+   "trialName": "The Proving Cave"
+  },
+  {
+   "from": "D",
+   "to": "C",
+   "level": 56,
+   "gp": 1200,
+   "questsAtRank": 20,
+   "special": "advanced_class",
+   "specialText": "Advanced Class",
+   "trialName": "The Long Road"
+  },
+  {
+   "from": "C",
+   "to": "B",
+   "level": 86,
+   "gp": 3500,
+   "questsAtRank": 25,
+   "special": "named_monster",
+   "specialText": "Slay or recruit 1 Named Monster",
+   "trialName": "Leader's Burden"
+  },
+  {
+   "from": "B",
+   "to": "A",
+   "level": 120,
+   "gp": 9000,
+   "questsAtRank": 30,
+   "special": "honored_nation",
+   "specialText": "Honored with 1 nation",
+   "trialName": "The Siege of Marrowgate"
+  },
+  {
+   "from": "A",
+   "to": "S",
+   "level": 160,
+   "gp": 22000,
+   "questsAtRank": 35,
+   "special": "expert_legendary",
+   "specialText": "Expert Class + 1 Legendary",
+   "trialName": "Dragonbane"
+  },
+  {
+   "from": "S",
+   "to": "SS",
+   "level": 205,
+   "gp": 50000,
+   "questsAtRank": 40,
+   "special": "demon_general",
+   "specialText": "Defeat a Demon General",
+   "trialName": "Grandmaster's Gauntlet"
+  },
+  {
+   "from": "SS",
+   "to": "SSS",
+   "level": 260,
+   "gp": 120000,
+   "questsAtRank": 50,
+   "special": "master_floor90",
+   "specialText": "Master Class + Labyrinth floor 90",
+   "trialName": "Trial of Ascension"
+  }
+ ]
+}

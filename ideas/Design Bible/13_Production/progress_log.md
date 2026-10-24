@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Guild ranks | Adventurer rank from ranks.md §2 (Data/World/guild_ranks.json, validated): GP scales with quest rank vs yours (150% one above … 0% three below), quests at your rank, level, the special (F→E: learn a life skill from a teacher) and the trial; ask Mina about promotion for the checklist, rank-up ceremony at her desk with the Rank Gift; taming cap and Marta's tab use the guild rank; Rodrick Hale (F→E trial) added | 148 + 110 |
 | Crafting | `Data/Items/recipes.json` (6 Ring 0 recipes; validated: items, stations, a result never above its best material). Learn at the teacher's workbench (Torvald's forge: Fangblade, Carapace Cap, Talon Charm; Fennick's alembic: Minor Healing Potion, Fire Bomb), cook Hunter's Skewers at a campfire from the bag. Fire Bombs from shops, loot or crafting go to the quick slot. Partners level with you (+6% ATK/HP per level above the species'); release a partner from the bag with a confirm step | 145 + 108 |
 | Partners | Roles from behaviour (Vanguard / Support / Scout / Striker), monsters fight partners, knocked-out partners rest 20 s, Bond from shared wins, evolution at Bond 5 into a species variant (bag, with preview) | 140 + 104 |
 | Taming | Weaken < 30%, calm and fear meters, favourite food, CHA check; rank cap; 3 partners travel, the rest to the ranch; Canon §6 proposal | 137 + 100 |

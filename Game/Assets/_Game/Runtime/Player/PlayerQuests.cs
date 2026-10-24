@@ -20,6 +20,42 @@ namespace Ascend.Game
         readonly HashSet<string> _flags = new HashSet<string>();
 
         public QuestLog Log { get; private set; }
+        /// <summary>Your adventurer rank and the road to the next one (ranks.md §2).</summary>
+        public GuildRank Rank { get; private set; }
+
+        /// <summary>The adventurer rank that gates things (taming, the inn tab): the guild rank when there is one, else the level band.</summary>
+        public static RankLetter RankOf(Component player)
+        {
+            var q = player.GetComponent<PlayerQuests>();
+            if (q != null && q.Rank != null) return q.Rank.Rank;
+            var c = player.GetComponent<PlayerCombat>();
+            return c != null ? c.Progress.RankBand : RankLetter.F;
+        }
+
+        /// <summary>Promotion specials this build can check (ranks.md §2): "life_skill" = learned a recipe from a teacher.</summary>
+        public bool SpecialMet(string key)
+        {
+            if (key == "life_skill")
+            {
+                var crafting = GetComponent<PlayerCrafting>();
+                return crafting != null && crafting.Crafter.Known.Any(id => crafting.Crafter.Recipe(id)?.LearnFrom != null);
+            }
+            return false;
+        }
+
+        public List<RankRequirement> RankRequirements() => Rank.Requirements(_combat.Progress.Level, SpecialMet, Log.Completed);
+        public bool CanRankUp => Rank.CanPromote(_combat.Progress.Level, SpecialMet, Log.Completed);
+
+        /// <summary>The rank-up ceremony at the Guild: new rank, the Rank Gift.</summary>
+        public PromotionData RankUp()
+        {
+            var p = Rank.Promote(_combat.Progress.Level, SpecialMet, Log.Completed);
+            if (p == null) return null;
+            if (!string.IsNullOrEmpty(p.Gift)) _inv.Items.Add(p.Gift);
+            _inv.Toast($"RANK UP: {p.From} → {p.To} ({Rank.Title}). Your card is now {Rank.Card}.", 8f);
+            if (!string.IsNullOrEmpty(p.Gift) && AscendData.Db.Items.TryGetValue(p.Gift, out var gift)) _inv.Toast($"Rank Gift: {gift.Name}", 6f);
+            return p;
+        }
         public ICollection<string> Flags => _flags;
         public int Act => Log.Completed.Contains(PrologueQuest) ? 1 : 0;
 
@@ -27,6 +63,7 @@ namespace Ascend.Game
         {
             _combat = GetComponent<PlayerCombat>();
             _inv = GetComponent<PlayerInventory>();
+            Rank = new GuildRank(AscendData.Db.GuildRanks);
             Log = new QuestLog(AscendData.Db.Quests, AscendData.Db.WeeklyQuests.Values.Select(w => w.ToQuest()));
             _combat.Killed += OnKilled;
             _inv.Items.Changed += OnItemsChanged;
@@ -51,6 +88,7 @@ namespace Ascend.Game
                 Flags = new HashSet<string>(_flags),
                 Act = Act,
                 Level = _combat.Progress.Level,
+                Rank = Rank.Rank,
                 RegionState = state,
             };
         }
@@ -88,6 +126,8 @@ namespace Ascend.Game
         public bool TurnIn(string questId)
         {
             if (!Log.TryTurnIn(questId, _inv.Items, null, out var pay)) return false;
+            int gp = Rank.QuestCompleted(Log.Quest(questId)?.Rank, pay.GuildPoints);
+            if (gp > 0) _inv.Toast($"+{gp} GP");
             if (pay.Xp > 0) _combat.GrantXp(pay.Xp); // through the combat component so level-ups heal and show the banner
             var q = Log.Quest(questId);
             foreach (var f in q.SetsFlags ?? new List<string>()) _flags.Add(f);

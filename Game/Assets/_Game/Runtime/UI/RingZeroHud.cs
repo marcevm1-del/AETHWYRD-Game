@@ -90,7 +90,14 @@ namespace Ascend.Game
             var cls = db.Classes.Values.First(c => c.Basic != null && player.Chain != null && c.Basic.Id == player.Chain.SkillId);
             var p = PlayerStats.Primary(cls, player.Level, db.Progression);
             var d = player.Stats;
-            lines.Add($"{cls.Name} · Lv {player.Level} · Guild Rank {player.Progress.RankBand}");
+            var quests = player.GetComponent<PlayerQuests>();
+            if (quests != null)
+            {
+                lines.Add($"{cls.Name} · Lv {player.Level} · Rank {quests.Rank.Rank} ({quests.Rank.Title}, {quests.Rank.Card} card) · {quests.Rank.Gp} GP");
+                var next = quests.Rank.Next;
+                if (next != null) lines.Add($"To {next.To}: " + string.Join("  ", quests.RankRequirements().Select(r => (r.Met ? "✔ " : "✘ ") + r.Text)));
+            }
+            else lines.Add($"{cls.Name} · Lv {player.Level} · Guild Rank {player.Progress.RankBand}");
             lines.Add($"XP {player.Progress.XpIntoLevel} / {player.Progress.ToNext}");
             lines.Add($"STR {p.Str:0}  VIT {p.Vit:0}  AGI {p.Agi:0}  DEX {p.Dex:0}  INT {p.Int:0}  WIS {p.Wis:0}  LUK {p.Luk:0}  CHA {p.Cha:0}");
             lines.Add($"HP {d.Hp}  MP {d.Mp}  SP {d.Sp}  ATK {d.Atk}  MATK {d.Matk}  DEF {d.Def}  MDEF {d.Mdef}  SPD {d.Spd}  CRIT {d.CritChance:P0}");
@@ -130,7 +137,7 @@ namespace Ascend.Game
 
             // Vitals and level (top-left)
             float x = 20, y = 20, sw0 = Screen.width;
-            GUI.Label(new Rect(x, y, 300, 20), $"Lv {player.Level} · Rank {player.Progress.RankBand}", _small); y += 22;
+            GUI.Label(new Rect(x, y, 300, 20), $"Lv {player.Level} · Rank {PlayerQuests.RankOf(player)}", _small); y += 22;
             Bar(x, ref y, "HP", _defense != null ? _defense.Hp : player.Stats.Hp, _defense != null ? _defense.MaxHp : player.Stats.Hp, new Color(0.85f, 0.25f, 0.25f));
             Bar(x, ref y, "SP", (float)c.Sp, (float)c.MaxSp, new Color(0.95f, 0.75f, 0.2f));
             Bar(x, ref y, "MP", (float)c.Mp, (float)c.MaxMp, new Color(0.3f, 0.55f, 1f));

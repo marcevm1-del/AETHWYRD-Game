@@ -97,6 +97,7 @@ namespace Ascend.Game
                 s.Flags = quests.Flags.ToList();
                 s.GuildPoints = quests.Log.GuildPoints;
                 s.BoardDone = quests.BoardDone.ToDictionary(kv => kv.Key, kv => kv.Value);
+                s.GuildRank = quests.Rank.Rank; s.RankGp = quests.Rank.Gp; s.QuestsAtRank = quests.Rank.QuestsAtRank;
             }
             try
             {
@@ -130,7 +131,7 @@ namespace Ascend.Game
             if (TryGetComponent<PlayerCrafting>(out var crafting)) crafting.Load(s.KnownRecipes);
             if (TryGetComponent<PlayerTaming>(out var taming)) taming.Load(s.Partners);
             if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);
-            if (TryGetComponent<PlayerQuests>(out var quests)) { quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags); quests.LoadBoard(s.BoardDone); }
+            if (TryGetComponent<PlayerQuests>(out var quests)) { quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags); quests.LoadBoard(s.BoardDone); quests.Rank.Load(s.GuildRank, s.RankGp, s.QuestsAtRank); }
             _combat.GiveFireBombs(s.FireBombs - _combat.FireBombs);
             _respawn.Restore(s.Deaths, s.WaystoneId,
                 s.Respawn != null ? new Vector3(s.Respawn[0], s.Respawn[1], s.Respawn[2]) : (Vector3?)null,
