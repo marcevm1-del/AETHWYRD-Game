@@ -148,7 +148,7 @@ namespace Ascend.Game
                 if (m == null) { _raiders.Remove(m); continue; }
                 if (!m.IsDead) continue;
                 _raiders.Remove(m);
-                Destroy(RootOf(m), 2f);
+                Destroy(MonsterSpawner.RootOf(m), 2f);
                 if (Battle.UnitDefeated())
                 {
                     if (Battle.IsLastWave) { Finish(); return; }
@@ -173,41 +173,13 @@ namespace Ascend.Game
                     var at = muster + new Vector3(spread, 0, (i % 2) * 1.5f);
                     var m = Spawn(speciesId, at);
                     if (m == null) { Battle.UnitDefeated(); continue; }
-                    m.Respawns = false;
                     var ai = m.GetComponent<MonsterController>();
                     if (ai != null) ai.MarchTarget = gate + new Vector3(spread * 0.5f, 0, 1.5f);
                     _raiders.Add(m);
                 }
         }
 
-        MonsterDummy Spawn(string speciesId, Vector3 at)
-        {
-            var template = templates.FirstOrDefault(t => t != null && SpeciesOf(t) == speciesId);
-            GameObject go;
-            if (template != null)
-            {
-                go = Instantiate(template, at, Quaternion.LookRotation(Flat(gate - at)));
-                go.name = "Raider_" + speciesId;
-                go.SetActive(true);
-                return go.GetComponentInChildren<MonsterDummy>();
-            }
-            if (!AscendData.Db.Species.TryGetValue(speciesId, out var sp)) return null;
-            // No model template: a labelled capsule sized from the species data.
-            float size = sp.SizeMeters > 0 ? (float)sp.SizeMeters : 1f;
-            var wrapper = new GameObject("Raider_" + speciesId);
-            wrapper.transform.position = at;
-            go = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-            go.name = speciesId;
-            go.transform.SetParent(wrapper.transform, true);
-            go.transform.localScale = new Vector3(size * 0.45f, size * 0.5f, size * 0.45f);
-            go.transform.SetPositionAndRotation(at + Vector3.up * size * 0.5f, Quaternion.LookRotation(Flat(gate - at)));
-            go.SetActive(false);
-            var body = go.AddComponent<MonsterDummy>(); body.SpeciesId = speciesId;
-            go.AddComponent<MonsterController>();
-            go.AddComponent<MonsterAnimator>();
-            go.SetActive(true);
-            return body;
-        }
+        MonsterDummy Spawn(string speciesId, Vector3 at) => MonsterSpawner.Spawn(templates, speciesId, at, gate);
 
         void Finish()
         {
@@ -236,7 +208,7 @@ namespace Ascend.Game
 
         void EndBattle()
         {
-            foreach (var m in _raiders) if (m != null) Destroy(RootOf(m));
+            foreach (var m in _raiders) if (m != null) Destroy(MonsterSpawner.RootOf(m));
             _raiders.Clear();
             Battle = null; _current = null; _nextWaveAt = -1f;
         }
@@ -251,15 +223,6 @@ namespace Ascend.Game
         static string Name(string id) => AscendData.Db.Species.TryGetValue(id, out var s) ? s.Name + (s.Name.EndsWith("s") ? "" : "s") : id;
         static Vector3 Flat(Vector3 v) { v.y = 0; return v; }
 
-        /// <summary>Raiders live under a "Raider_<species>" object with their label.</summary>
-        static GameObject RootOf(MonsterDummy m) =>
-            m.transform.parent != null && m.transform.parent.name.StartsWith("Raider_") ? m.transform.parent.gameObject : m.gameObject;
-
-        static string SpeciesOf(GameObject template)
-        {
-            var body = template.GetComponentInChildren<MonsterDummy>(true);
-            return body != null ? body.SpeciesId : null;
-        }
 
         static void Toast(string text, float seconds)
         {

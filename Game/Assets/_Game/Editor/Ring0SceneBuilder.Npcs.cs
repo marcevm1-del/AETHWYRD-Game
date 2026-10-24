@@ -46,6 +46,11 @@ namespace Ascend.EditorTools
             Landmark(root, "millbrook_fields_night", "Millbrook fields", new Vector3(21f, 0, 12f));
             Landmark(root, "mistvale_farms", "Mistvale farms", new Vector3(23f, 0, -14f));
             BuildSiege();
+
+            // Defence events (defend objectives at a spot): Millbrook's granary (Hesk's quest) and the training-yard mock raid.
+            Npc(root, "npc_farmer_hesk", new Vector3(24f, 0, 1f), new Color(0.7f, 0.55f, 0.3f));
+            Defence(root, "millbrook_granary", "Millbrook granary", new Vector3(26f, 0, 4f), new[] { "mon_goblin:4", "mon_goblin:4" });
+            Defence(root, "Training yard mock raid", "Training yard", new Vector3(-9f, 0, 15f), new[] { "mon_blue_slime:3", "mon_horned_rabbit:2" });
             Place(root, "whisperwood_ruins_mural", new Vector3(0, 0, 88f), 10f);
         }
 
@@ -77,6 +82,24 @@ namespace Ascend.EditorTools
             }
             holder.SetActive(false);
             director.Templates = templates.ToArray();
+        }
+
+        /// <summary>A defend-objective spot: a fenced square with a sign, and the DefenceSpot that runs the attack.</summary>
+        static void Defence(Transform parent, string placeId, string shownAs, Vector3 at, string[] waves)
+        {
+            var go = new GameObject("Defence_" + placeId);
+            go.transform.SetParent(parent, false);
+            go.transform.position = at;
+            var spot = go.AddComponent<DefenceSpot>();
+            spot.PlaceId = placeId; spot.Waves = waves;
+            var wood = Mat("Wood", new Color(0.55f, 0.38f, 0.24f));
+            for (int i = 0; i < 4; i++) // a low fence around the spot
+            {
+                float a = i * Mathf.PI / 2f;
+                var c = at + new Vector3(Mathf.Cos(a), 0, Mathf.Sin(a)) * 3f + Vector3.up * 0.4f;
+                Prim(PrimitiveType.Cube, $"Fence_{placeId}_{i}", c, new Vector3(i % 2 == 0 ? 0.15f : 4f, 0.8f, i % 2 == 0 ? 4f : 0.15f), wood, parent);
+            }
+            Label(parent, at + Vector3.up * 2.2f, shownAs, new Color(1f, 0.92f, 0.7f), 0.03f);
         }
 
         static void Npc(Transform parent, string npcId, Vector3 feet, Color color)

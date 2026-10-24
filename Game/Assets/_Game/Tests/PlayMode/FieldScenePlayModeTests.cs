@@ -35,6 +35,14 @@ namespace Ascend.Game.Tests
             var missing = reach.Where(t => !places.Contains(t)).ToList();
             Assert.IsEmpty(missing, "reach targets without a place: " + string.Join(", ", missing));
 
+            // Defend targets: settlements and the north gate are covered by live raids; every other spot needs a DefenceSpot.
+            var spots = Object.FindObjectsByType<DefenceSpot>(FindObjectsSortMode.None).Select(d => d.PlaceId).ToHashSet();
+            var defend = db.Quests.Values.SelectMany(q => q.Objectives)
+                .Concat(db.WeeklyQuests.Values.Where(w => w.Playable).SelectMany(w => w.Objectives))
+                .Where(o => o.Kind == "defend" && o.Target != "{settlement}" && o.Target != "North Gate").Select(o => o.Target).Distinct().ToList();
+            var undefended = defend.Where(t => !spots.Contains(t)).ToList();
+            Assert.IsEmpty(undefended, "defend targets without a defence spot: " + string.Join(", ", undefended));
+
             var givers = Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Select(g => g.NpcId).ToHashSet();
             foreach (var npc in new[] { "npc_mina_feathersby", "npc_farmer_odo", "npc_marta_gruel", "npc_captain_holt", "npc_lyra_brightwood", "npc_fennick_reed" })
                 Assert.IsTrue(givers.Contains(npc), npc + " is in the field");

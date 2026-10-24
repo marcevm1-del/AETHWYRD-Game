@@ -111,6 +111,32 @@ namespace Ascend.Game.Tests
         }
 
         [UnityTest]
+        public IEnumerator DefendingTheGranaryCompletesHesksObjective()
+        {
+            _player.GetComponent<PlayerCombat>().GrantXp(5_000_000); // Hesk's job needs level 9
+            Assert.IsTrue(_quests.Accept(AscendData.Db.Quests["qst_def_goblins_granary"]), "Hesk's job");
+            var go = new GameObject("Granary");
+            go.transform.position = new Vector3(0, 0, 15);
+            go.SetActive(false);
+            var spot = go.AddComponent<DefenceSpot>();
+            spot.PlaceId = "millbrook_granary"; spot.Waves = new[] { "mon_goblin:2", "mon_goblin:2" }; spot.SpawnRadius = 8f;
+            go.SetActive(true);
+            yield return null;
+            Assert.IsNotNull(spot.Battle, "arriving with the job starts the attack");
+            Assert.AreEqual(2, spot.Attackers.Count, "first wave");
+            int frames = 0, killed = 0;
+            while (spot.Battle != null && frames++ < 1200)
+            {
+                foreach (var m in spot.Attackers.ToList()) if (m != null && !m.IsDead) { m.TakeHit(999999, HitWeight.Heavy, m.transform.position + Vector3.forward, 0); _quests.Log.OnKill(m.SpeciesId); killed++; }
+                yield return null;
+            }
+            Assert.IsNull(spot.Battle, "the attack ends");
+            Assert.AreEqual(4, killed, "both waves came");
+            Assert.AreEqual(1, _quests.Log.Get("qst_def_goblins_granary").Counts[0], "granary defended");
+            Object.Destroy(go);
+        }
+
+        [UnityTest]
         public IEnumerator ARaidYouMissAutoResolves()
         {
             var cc = _player.GetComponent<CharacterController>();
