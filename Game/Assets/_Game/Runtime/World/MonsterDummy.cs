@@ -76,6 +76,20 @@ namespace Ascend.Game
         /// <summary>False for raiders and other one-off monsters: once defeated they stay down.</summary>
         public bool Respawns { get; set; } = true;
 
+        /// <summary>A tamed partner: on your side. Its colliders become triggers, so attacks (which ignore triggers) pass through it.</summary>
+        public bool IsPartner { get; private set; }
+
+        /// <summary>Restores HP (partners rest to full).</summary>
+        public void Heal(int amount) { if (!IsDead) { Hp = Mathf.Min(MaxHp, Hp + Mathf.Max(0, amount)); Refresh(); } }
+
+        public void BecomePartner()
+        {
+            IsPartner = true;
+            Respawns = false;
+            foreach (var c in GetComponentsInChildren<Collider>()) c.isTrigger = true;
+            if (label != null) label.color = new Color(1f, 0.7f, 0.85f);
+        }
+
         /// <summary>The element aura on this monster now (combat.md §7), or None.</summary>
         public Element Aura => _reactions?.Aura.Current(Time.timeAsDouble) ?? Element.None;
 

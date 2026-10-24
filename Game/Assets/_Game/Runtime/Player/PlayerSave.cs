@@ -75,6 +75,8 @@ namespace Ascend.Game
             s.FireBombs = _combat.FireBombs;
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
             if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
+            if (TryGetComponent<PlayerTaming>(out var taming))
+                s.Partners = taming.Roster.All.Select(p => new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active, Bond = p.Bond }).ToList();
             var siege = SiegeDirector.Instance;
             if (siege != null)
                 s.Sieges = new System.Collections.Generic.Dictionary<string, SiegeSave>
@@ -124,6 +126,7 @@ namespace Ascend.Game
             if (s.ClockSeconds.HasValue && WorldClock.Instance != null) WorldClock.Instance.PlaySeconds = s.ClockSeconds.Value;
             if (s.Sieges != null && SiegeDirector.Instance != null && s.Sieges.TryGetValue(SiegeDirector.Instance.Threat.RegionId, out var sg))
                 SiegeDirector.Instance.Load(sg.State, sg.Escalation, sg.DoneDays, sg.LastWeek);
+            if (TryGetComponent<PlayerTaming>(out var taming)) taming.Load(s.Partners);
             if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);
             if (TryGetComponent<PlayerQuests>(out var quests)) { quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags); quests.LoadBoard(s.BoardDone); }
             _combat.GiveFireBombs(s.FireBombs - _combat.FireBombs);

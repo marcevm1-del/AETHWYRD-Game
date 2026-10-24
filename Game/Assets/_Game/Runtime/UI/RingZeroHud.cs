@@ -140,6 +140,14 @@ namespace Ascend.Game
             var restText = _rest != null ? _rest.BuffText() : null;
             if (restText != null) { GUI.Label(new Rect(x, y, 360, 20), restText, _small); y += 22; }
             if (WorldClock.Instance != null) GUI.Label(new Rect(sw0 / 2 - 160, 44, 320, 20), WorldClock.Instance.Text, _small);
+            var taming = player.GetComponent<PlayerTaming>();
+            var tameText = taming != null ? taming.StatusText() : null;
+            if (tameText != null) GUI.Label(new Rect(sw0 / 2 - 260, Screen.height * 0.68f, 520, 22), tameText, _small);
+            if (taming != null && taming.Roster.All.Count > 0)
+            {
+                GUI.Label(new Rect(x, y, 420, 20), "Partners: " + string.Join(", ", taming.Roster.Active.Select(p => p.Name)) + (taming.Roster.Ranch.Any() ? $" · ranch {taming.Roster.Ranch.Count()}" : ""), _small);
+                y += 22;
+            }
             var siege = SiegeDirector.Instance != null ? SiegeDirector.Instance.StatusText() : null;
             if (siege != null) GUI.Label(new Rect(sw0 / 2 - 220, 66, 440, 20), siege, _small);
             if (_quests != null)

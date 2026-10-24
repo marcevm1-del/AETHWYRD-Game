@@ -164,6 +164,7 @@ namespace Ascend.EditorTools
             p.AddComponent<PlayerRespawn>();
             p.AddComponent<PlayerQuests>();
             p.AddComponent<PlayerRest>();
+            p.AddComponent<PlayerTaming>();
             p.AddComponent<PlaytestShortcuts>();
             p.AddComponent<PlayerSave>();
             var driver = p.AddComponent<PlayerInputDriver>();

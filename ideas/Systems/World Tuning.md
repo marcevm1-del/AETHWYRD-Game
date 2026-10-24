@@ -56,5 +56,32 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `inns.regular.familyNights` | 30 |
 | `inns.tab.creditLimitCopper` | 600 |
 | `inns.tab.ranks` | F, E |
+| `taming.notes` | systems.md §7.1: weaken below the HP threshold without killing, raise calm and keep fear down, then offer (CHA + Tamer skill check, favourite food bonus). |
+| `taming.weakenHpFraction` | 0.3 |
+| `taming.nearMeters` | 4 |
+| `taming.calmPerSec` | 10 |
+| `taming.crouchCalmPerSec` | 8 |
+| `taming.fearPerAttack` | 30 |
+| `taming.fearPerDodge` | 15 |
+| `taming.fearDecayPerSec` | 4 |
+| `taming.likedFoodCalm` | 35 |
+| `taming.wrongFoodFear` | 10 |
+| `taming.baseChance` | 0.2 |
+| `taming.calmWeight` | 0.006 |
+| `taming.fearWeight` | 0.006 |
+| `taming.chaWeight` | 0.01 |
+| `taming.likedFoodBonus` | 0.15 |
+| `taming.tamerBonus` | 0.15 |
+| `taming.enrageChance` | 0.35 |
+| `taming.retrySec` | 60 |
+| `taming.activePartners` | 3 |
+| `taming.untameableFamilies` | Goblinoids, Humanoid Enemies, Undead, Constructs & Mimics, Demons |
+| `taming.favouriteFood.Slimes` | itm_healing_herb |
+| `taming.favouriteFood.Beasts` | itm_mat_prime_meat |
+| `taming.favouriteFood.Avians` | itm_mat_seed |
+| `taming.favouriteFood.Insects & Arachnids` | itm_mat_sap |
+| `taming.favouriteFood.Plants & Fungi` | itm_mat_sap |
+| `taming.favouriteFood.Elementals & Spirits` | itm_core_f |
+| `taming.favouriteFood.Familiars & Gentle Creatures` | itm_healing_herb |
 
 Edit the source JSON, validate it, and rerun the relevant review before treating a tuned value as approved. This vault note is generated and will be overwritten on rebuild.

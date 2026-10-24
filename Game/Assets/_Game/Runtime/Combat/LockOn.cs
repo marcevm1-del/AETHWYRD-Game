@@ -62,7 +62,7 @@ namespace Ascend.Game
             MonsterDummy best = null; float bestScore = float.MaxValue;
             foreach (var m in FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None))
             {
-                if (m == null || m.IsDead || m == from) continue;
+                if (m == null || m.IsDead || m == from || m.IsPartner) continue;
                 Vector3 to = m.transform.position - transform.position; to.y = 0;
                 float dist = to.magnitude;
                 if (dist > Range) continue;

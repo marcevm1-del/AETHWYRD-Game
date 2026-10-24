@@ -55,5 +55,36 @@
   "bathBonusHours": 1,
   "regular": { "guestNights": 3, "regularNights": 10, "familyNights": 30 },
   "tab": { "creditLimitCopper": 600, "ranks": ["F", "E"] }
+ },
+ "taming": {
+  "notes": "systems.md §7.1: weaken below the HP threshold without killing, raise calm and keep fear down, then offer (CHA + Tamer skill check, favourite food bonus).",
+  "weakenHpFraction": 0.3,
+  "nearMeters": 4,
+  "calmPerSec": 10,
+  "crouchCalmPerSec": 8,
+  "fearPerAttack": 30,
+  "fearPerDodge": 15,
+  "fearDecayPerSec": 4,
+  "likedFoodCalm": 35,
+  "wrongFoodFear": 10,
+  "baseChance": 0.2,
+  "calmWeight": 0.006,
+  "fearWeight": 0.006,
+  "chaWeight": 0.01,
+  "likedFoodBonus": 0.15,
+  "tamerBonus": 0.15,
+  "enrageChance": 0.35,
+  "retrySec": 60,
+  "activePartners": 3,
+  "untameableFamilies": ["Goblinoids", "Humanoid Enemies", "Undead", "Constructs & Mimics", "Demons"],
+  "favouriteFood": {
+   "Slimes": "itm_healing_herb",
+   "Beasts": "itm_mat_prime_meat",
+   "Avians": "itm_mat_seed",
+   "Insects & Arachnids": "itm_mat_sap",
+   "Plants & Fungi": "itm_mat_sap",
+   "Elementals & Spirits": "itm_core_f",
+   "Familiars & Gentle Creatures": "itm_healing_herb"
+  }
  }
 }

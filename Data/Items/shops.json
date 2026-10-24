@@ -15,7 +15,9 @@
   "buys": { "categories": ["material"], "rate": 0.5 },
   "stock": [
    { "itemId": "itm_minor_hp_potion", "price": 14 },
-   { "itemId": "itm_healing_herb", "price": 5 }
+   { "itemId": "itm_healing_herb", "price": 5 },
+   { "itemId": "itm_mat_seed", "price": 6 },
+   { "itemId": "itm_mat_sap", "price": 6 }
   ]
  },
  {
@@ -27,6 +29,7 @@
   "stock": [
    { "itemId": "itm_minor_hp_potion", "price": 16 },
    { "itemId": "itm_fire_bomb", "price": 22 },
+   { "itemId": "itm_mat_prime_meat", "price": 8 },
    { "itemId": "itm_rookie_hood", "price": 22 },
    { "itemId": "itm_guild_issue_spear", "price": 30 },
    { "itemId": "itm_copper_compass", "price": 170, "quantity": 1 }

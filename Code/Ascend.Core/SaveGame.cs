@@ -37,6 +37,8 @@ namespace Ascend.Core
         public int GuildPoints { get; set; }
         /// <summary>Guild board quests handed in, with the day (dailies repeat next day, specials and weeklies next week).</summary>
         public Dictionary<string, int> BoardDone { get; set; } = new Dictionary<string, int>();
+        /// <summary>Tamed monsters (active and ranch).</summary>
+        public List<PartnerData> Partners { get; set; } = new List<PartnerData>();
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
@@ -85,6 +87,7 @@ namespace Ascend.Core
             s.CompletedQuests ??= new List<string>();
             s.Flags ??= new List<string>();
             s.BoardDone ??= new Dictionary<string, int>();
+            s.Partners ??= new List<PartnerData>();
             s.RestBuffs ??= new List<RestBuff>();
             s.InnNights ??= new Dictionary<string, int>();
             s.Version = SaveGame.CurrentVersion;

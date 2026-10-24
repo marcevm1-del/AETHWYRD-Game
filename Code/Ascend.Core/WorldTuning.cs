@@ -10,6 +10,7 @@ namespace Ascend.Core
         public CalendarTuning Calendar { get; set; } = new CalendarTuning();
         public SiegeTuning Siege { get; set; } = new SiegeTuning();
         public InnTuning Inns { get; set; } = new InnTuning();
+        public TamingTuning Taming { get; set; } = new TamingTuning();
     }
 
     public sealed class CurrencyTuning

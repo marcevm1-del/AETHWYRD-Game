@@ -37,10 +37,10 @@ static class BoardQuestTests
         Assert.True(!log.OffersFrom("npc_marta_gruel", new QuestContext()).Any(q => q.Id.StartsWith("qst_wk_")), "only the board posts them");
     }
 
-    public static void EscortWorksTameWaits()
+    public static void EscortAndTameAreNowPosted()
     {
         Assert.True(Repo.Db.WeeklyQuests["qst_wk_sol_escort_cart"].Playable, "escort works now");
-        Assert.True(!Repo.Db.WeeklyQuests["qst_wk_syl_tame_practice"].Playable, "tame");
+        Assert.True(Repo.Db.WeeklyQuests["qst_wk_syl_tame_practice"].Playable, "tame works now");
         Assert.True(Repo.Db.WeeklyQuests["qst_wk_syl_slime_patrol"].Playable, "kill quests are fine");
     }
 }
