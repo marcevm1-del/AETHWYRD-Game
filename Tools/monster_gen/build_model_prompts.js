@@ -24,6 +24,15 @@ function traits(s) {
   return t;
 }
 
+/** What the creature is, without proper names: "Grukk, Goblin Chief of Hollowpine" → "Goblin Chief, a goblinoid monster". */
+function subject(s) {
+  let title = s.name.includes(',') ? s.name.split(',').slice(1).join(',').trim() : s.name;
+  title = title.replace(/^the\s+/i, '').replace(/\s+of\s+(the\s+)?[A-Z][\w'-]*(\s+[A-Z][\w'-]*)*$/, '').trim();
+  const kind = (s.familyKey || s.type || 'monster').replace(/_/g, ' ').toLowerCase();
+  const an = w => (/^[aeiou]/i.test(w) ? 'An' : 'A');
+  return `${an(title)} ${title}, ${an(kind).toLowerCase()} ${kind} monster:`;
+}
+
 const out = species
   .map(s => ({
     id: s.id,
@@ -35,7 +44,7 @@ const out = species
     baseMesh: (s.designRecipe || {}).baseMesh,
     palette: (s.designRecipe || {}).palette || [],
     isBoss: !!(s.isTyrant || s.isUnique),
-    prompt: `${traits(s)} ${STYLE}.`.replace(/\s{2,}/g, ' '), // colours are already in words in the look text
+    prompt: `${subject(s)} ${traits(s)} ${STYLE}.`.replace(/\s{2,}/g, ' '), // colours are already in words in the look text
   }))
   .sort((a, b) => a.ring - b.ring || Number(b.isBoss) - Number(a.isBoss) || a.id.localeCompare(b.id));
 
