@@ -22,6 +22,7 @@ const COLLECTIONS = {
   quests: { files: ['Quests/quests.json'], schema: 'quest' },
   weekly: { files: ['Quests/weekly_board.json'], schema: 'weekly_quest' },
   inns: { files: ['World/inns.json'], schema: 'inn' },
+  shops: { files: ['Items/shops.json'], schema: 'shop' },
   siege: { files: ['World/siege_waves.json'], schema: 'siege_wave' },
   classes: { files: ['Classes/classes.json'], schema: 'class' },
   flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' }
@@ -123,6 +124,20 @@ for (const q of [...rows.quests, ...rows.weekly]) {
   });
 }
 
+const ITEMS_BY_ID = Object.fromEntries(rows.items.map(i => [i.id, i]));
+for (const sh of rows.shops) {
+  ref(sh.id, sh.npcId, 'npcs');
+  for (const o of sh.stock || []) {
+    ref(sh.id + '.stock', o.itemId, 'items');
+    const it = ITEMS_BY_ID[o.itemId];
+    if (it && it.category === 'key') err(sh.id, `key item ${o.itemId} can't be sold`);
+    // Anti-arbitrage (monster_core_pricing.md §7): retail is never below what any shop pays for the same item.
+    for (const other of rows.shops) {
+      const pays = it && other.buys.categories.includes(it.category) ? Math.floor(it.value * other.buys.rate) : 0;
+      if (pays > o.price) err(sh.id, `${o.itemId} sells for ${o.price} but ${other.id} buys it for ${pays}`);
+    }
+  }
+}
 for (const i of rows.inns) {
   ref(`${i.id}.regionId`, i.regionId, 'regions'); ref(`${i.id}.keeperNpcId`, i.keeperNpcId, 'npcs', true);
   if (i.rooms.filter(r => r.tier === 'signature').length > 1) err(i.id, 'at most one signature room');

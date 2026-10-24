@@ -40,7 +40,7 @@ namespace Ascend.Game
 
         public void Open(QuestGiver giver, PlayerQuests quests)
         {
-            _giver = giver; _quests = quests; _cursor = 0; _openedAt = Time.unscaledTime;
+            _giver = giver; _quests = quests; _cursor = 0; _openedAt = Time.unscaledTime; _page = Page.Main;
             quests.Talk(giver.NpcId);
             _line = AscendData.Db.Npcs.TryGetValue(giver.NpcId, out var n) && !string.IsNullOrEmpty(n.Role) ? n.Role : "";
             Rebuild();
@@ -57,10 +57,16 @@ namespace Ascend.Game
             return true;
         }
 
+        enum Page { Main, Buy, Sell, Buyback }
+        Page _page;
+
         void Rebuild()
         {
             _options.Clear();
             var q = _quests;
+            var inv = q.GetComponent<PlayerInventory>();
+            var shop = inv != null ? inv.ShopFor(_giver.NpcId) : null;
+            if (shop != null && _page != Page.Main) { RebuildTrade(shop, inv); return; }
             foreach (var p in _giver.AwaitingChoiceHere(q))
             {
                 var data = AscendData.Db.Quests[p.QuestId];
@@ -82,7 +88,68 @@ namespace Ascend.Game
                 var o = offer;
                 _options.Add(new Option { Text = $"Accept [{o.Rank}] {o.Title} — {o.Summary}", Act = () => { if (q.Accept(o)) _line = "Good luck out there."; } });
             }
+            if (shop != null) _options.Add(new Option { Text = $"Trade — {shop.Data.Name}", Act = () => Go(Page.Buy, shop.Data.Note) });
             _options.Add(new Option { Text = "Goodbye", Act = Close });
+            _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
+        }
+
+        void Go(Page page, string line = null) { _page = page; _cursor = 0; if (line != null) _line = line; }
+
+        void RebuildTrade(Shop shop, PlayerInventory inv)
+        {
+            var db = AscendData.Db;
+            var cur = db.World.Currency;
+            string Name(string id) => db.Items.TryGetValue(id, out var it) ? it.Name : id;
+            string Say(TradeResult r) => r switch
+            {
+                TradeResult.Ok => null,
+                TradeResult.NotEnoughMoney => "You can't afford that.",
+                TradeResult.OutOfStock => "Sold out, I'm afraid.",
+                TradeResult.Protected => "You'll need that for a job you've taken.",
+                TradeResult.NotBought => "That's not something I buy.",
+                _ => "Hmm?",
+            };
+            void Did(TradeResult r, string ok) => _line = Say(r) ?? ok;
+            switch (_page)
+            {
+                case Page.Buy:
+                    foreach (var o in shop.Data.Stock)
+                    {
+                        var offer = o;
+                        int? left = shop.Left(o.ItemId);
+                        string stock = left.HasValue ? $", {left} left" : "";
+                        _options.Add(new Option
+                        {
+                            Text = $"Buy {Name(o.ItemId)} — {Money.Format(o.Price, cur)} (you have {inv.Items.Count(o.ItemId)}{stock})",
+                            Act = () => Did(shop.Buy(offer.ItemId, inv.Items), $"Bought {Name(offer.ItemId)}."),
+                        });
+                    }
+                    if (shop.Data.Buys.Categories.Count > 0) _options.Add(new Option { Text = "Sell…", Act = () => Go(Page.Sell) });
+                    if (shop.Buyback.Count > 0) _options.Add(new Option { Text = "Buy back…", Act = () => Go(Page.Buyback) });
+                    break;
+                case Page.Sell:
+                    var protectedItems = _quests.ProtectedItems();
+                    foreach (var (itemId, count, price) in shop.Sellable(inv.Items).Take(7))
+                    {
+                        string id = itemId;
+                        string guard = protectedItems.Contains(id) ? " [quest]" : "";
+                        _options.Add(new Option
+                        {
+                            Text = $"Sell {Name(id)} ×{count}{guard} — {Money.Format(price, cur)} each",
+                            Act = () => Did(shop.Sell(id, inv.Items, protectedItems), $"Sold {Name(id)}."),
+                        });
+                    }
+                    if (_options.Count == 0) _line = "You've nothing I'd buy.";
+                    break;
+                case Page.Buyback:
+                    for (int i = 0; i < shop.Buyback.Count && i < 7; i++)
+                    {
+                        int idx = i; var (id, price) = shop.Buyback[i];
+                        _options.Add(new Option { Text = $"Buy back {Name(id)} — {Money.Format(price, cur)}", Act = () => Did(shop.BuyBack(idx, inv.Items), $"Bought back {Name(id)}.") });
+                    }
+                    break;
+            }
+            _options.Add(new Option { Text = _page == Page.Buy ? "Back" : "Back to wares", Act = () => Go(_page == Page.Buy ? Page.Main : Page.Buy, "") });
             _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
         }
 
@@ -123,6 +190,8 @@ namespace Ascend.Game
             var r = new Rect((Screen.width - w) / 2f, Screen.height - h - 110f, w, h);
             GUI.Box(r, "", _box);
             GUI.Label(new Rect(r.x + 16, r.y + 10, w - 32, 26), _giver.DisplayName, _title);
+            if (_page != Page.Main && _quests != null && _quests.TryGetComponent<PlayerInventory>(out var inv))
+                GUI.Label(new Rect(r.x + w - 300, r.y + 14, 284, 22), $"Purse: {inv.MoneyText}", _item);
             GUI.Label(new Rect(r.x + 16, r.y + 38, w - 32, 22), _line, _item);
             for (int i = 0; i < _options.Count; i++)
             {

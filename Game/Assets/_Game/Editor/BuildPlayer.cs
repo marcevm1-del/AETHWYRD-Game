@@ -18,7 +18,7 @@ namespace Ascend.EditorTools
         {
             "World/regions.json", "World/world_tuning.json", "World/siege_waves.json", "World/inns.json",
             "Monsters/species.json", "Monsters/attacks.json", "Monsters/loot_tables.json", "Monsters/motion.json",
-            "Items/items.json", "Items/materials.json", "Combat/combat_tuning.json",
+            "Items/items.json", "Items/materials.json", "Items/shops.json", "Combat/combat_tuning.json",
             "Quests/quests.json", "Quests/story_flags.json", "Quests/weekly_board.json",
             "NPCs/npcs.json", "Classes/classes.json", "Classes/progression.json",
         };

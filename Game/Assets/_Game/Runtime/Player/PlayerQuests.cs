@@ -69,6 +69,10 @@ namespace Ascend.Game
 
         void OnReady(string questId) => _inv.Toast($"Quest ready: {Title(questId)} — return to {GiverName(questId)}", 5f);
 
+        /// <summary>Items an active quest still needs you to hand in (shops won't take them).</summary>
+        public HashSet<string> ProtectedItems() => new HashSet<string>(Log.Active.SelectMany(p =>
+            AscendData.Db.Quests[p.QuestId].Objectives.Where(o => o.Kind == "collect").Select(o => o.Target)));
+
         public void Reach(string placeId) => Log.OnReach(placeId);
         public void Talk(string npcId) => Log.OnTalk(npcId);
 

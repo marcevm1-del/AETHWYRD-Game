@@ -15,6 +15,8 @@ namespace Ascend.EditorTools
             // Brindlewick side of the field (Ring 0).
             Npc(root, "npc_mina_feathersby", new Vector3(3.5f, 0, -3f), new Color(0.85f, 0.55f, 0.75f));   // guild receptionist
             Npc(root, "npc_farmer_odo", new Vector3(6.5f, 0, 3.5f), new Color(0.75f, 0.6f, 0.35f));        // by the slime patch
+            Npc(root, "npc_torvald_stonebeard", new Vector3(-4f, 0, -5f), new Color(0.5f, 0.4f, 0.35f));   // smithy stall
+            Npc(root, "npc_traveling_merchant_pell", new Vector3(5f, 0, 25f), new Color(0.9f, 0.6f, 0.2f)); // wagon at the Whisperwood edge
             // Whisperwood side, by the treeline waystone and the ruins.
             Npc(root, "npc_lyra_brightwood", new Vector3(3f, 0, 27f), new Color(0.95f, 0.8f, 0.4f));
             Npc(root, "npc_fennick_reed", new Vector3(-7f, 0, 29f), new Color(0.45f, 0.75f, 0.45f));

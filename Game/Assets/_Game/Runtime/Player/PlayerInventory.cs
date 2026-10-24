@@ -25,6 +25,17 @@ namespace Ascend.Game
         public IEnumerable<string> Toasts { get { _toasts.RemoveAll(t => Time.unscaledTime > t.until); foreach (var t in _toasts) yield return t.text; } }
         public string MoneyText => Money.Format(Items.Copper, AscendData.Db.World.Currency);
 
+        readonly Dictionary<string, Shop> _shops = new Dictionary<string, Shop>();
+
+        /// <summary>The shop an NPC runs (null if none). Kept for the session so limited stock and buyback persist.</summary>
+        public Shop ShopFor(string npcId)
+        {
+            if (string.IsNullOrEmpty(npcId)) return null;
+            if (_shops.TryGetValue(npcId, out var s)) return s;
+            var data = AscendData.Db.ShopOf(npcId);
+            return _shops[npcId] = data != null ? new Shop(data, AscendData.Db.Items) : null;
+        }
+
         void Awake()
         {
             _combat = GetComponent<PlayerCombat>();

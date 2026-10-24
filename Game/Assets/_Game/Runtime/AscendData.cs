@@ -54,7 +54,8 @@ namespace Ascend.Game
                 Read<ProgressionRules>("Classes/progression.json"),
                 Read<List<WeeklyQuestData>>("Quests/weekly_board.json"),
                 Read<List<InnData>>("World/inns.json"),
-                Read<MotionFile>("Monsters/motion.json"));
+                Read<MotionFile>("Monsters/motion.json"),
+                Read<List<ShopData>>("Items/shops.json"));
         }
 
         public static void Reload() => _db = null;

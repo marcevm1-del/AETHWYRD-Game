@@ -139,6 +139,41 @@ namespace Ascend.Game.Tests
         }
 
         [Test]
+        public void TradingThroughTheDialog()
+        {
+            var reed = Giver("npc_fennick_reed", new Vector3(0, 0, 1.5f));
+            _inv.Items.AddCopper(20);
+            _inv.Items.Add("itm_mandrake_root", 1);
+            NpcDialog.Instance.Open(reed, _quests);
+            NpcDialog.Instance.Choose(OptionIndex("Trade"));
+            NpcDialog.Instance.Choose(OptionIndex("Buy Minor Healing Potion"));
+            Assert.AreEqual(1, _inv.Items.Count("itm_minor_hp_potion"), "bought a potion");
+            Assert.AreEqual(6, _inv.Items.Copper, "for 14 copper");
+            NpcDialog.Instance.Choose(OptionIndex("Sell…"));
+            NpcDialog.Instance.Choose(OptionIndex("Sell Mandrake Root"));
+            Assert.AreEqual(21, _inv.Items.Copper, "sold the root for 15");
+            NpcDialog.Instance.Choose(OptionIndex("Back to wares"));
+            NpcDialog.Instance.Choose(OptionIndex("Buy back"));
+            NpcDialog.Instance.Choose(OptionIndex("Buy back Mandrake Root"));
+            Assert.AreEqual(1, _inv.Items.Count("itm_mandrake_root"), "bought it back");
+            Assert.AreEqual(6, _inv.Items.Copper, "at the price paid");
+        }
+
+        [Test]
+        public void QuestItemsCantBeSold()
+        {
+            _combat.GrantXp(100000);
+            _quests.Accept(AscendData.Db.Quests["qst_gather_crying_mandrake"]);
+            _inv.Items.Add("itm_mandrake_root", 1);
+            var reed = Giver("npc_fennick_reed", new Vector3(0, 0, 1.5f));
+            NpcDialog.Instance.Open(reed, _quests);
+            NpcDialog.Instance.Choose(OptionIndex("Trade"));
+            NpcDialog.Instance.Choose(OptionIndex("Sell…"));
+            NpcDialog.Instance.Choose(OptionIndex("Sell Mandrake Root"));
+            Assert.AreEqual(1, _inv.Items.Count("itm_mandrake_root"), "kept for the quest");
+        }
+
+        [Test]
         public void PotionsHealAndAreUsedUp()
         {
             _inv.Items.Add("itm_minor_hp_potion", 2);

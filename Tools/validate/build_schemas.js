@@ -198,6 +198,18 @@ const SCHEMAS = {
     }
   }
 ,
+  shop: {
+    title: 'Shop (a merchant NPC: what they sell and what they buy)', type: 'object', additionalProperties: false, required: ['id', 'npcId', 'name', 'buys', 'stock'],
+    properties: {
+      id: id('shop_'), npcId: id('npc_'), name: { type: 'string', minLength: 1 }, note: { type: 'string' },
+      buys: { type: 'object', additionalProperties: false, required: ['categories', 'rate'], properties: {
+        categories: { type: 'array', items: { type: 'string', enum: ['weapon', 'armor', 'accessory', 'consumable', 'material', 'core', 'key'] } },
+        rate: { type: 'number', minimum: 0, maximum: 1, description: 'fraction of item value paid; the Guild core buyback is 1.0 (posted price)' } } },
+      stock: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['itemId', 'price'], properties: {
+        itemId: id('itm_'), price: { type: 'integer', minimum: 1, description: 'copper; authored retail price including the service premium' },
+        quantity: { type: 'integer', minimum: 1, description: 'limited stock; omit for unlimited' } } } }
+    }
+  },
   inn: {
     title: 'Inn', type: 'object', additionalProperties: false,
     required: ['id', 'name', 'regionId', 'settlement', 'tier', 'ring', 'keeperName', 'rooms', 'dish', 'drink', 'quirk', 'rumorTheme', 'events', 'secret'],

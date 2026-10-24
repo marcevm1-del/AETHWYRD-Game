@@ -1,0 +1,50 @@
+[
+ {
+  "id": "shop_guild_core_buyback",
+  "npcId": "npc_mina_feathersby",
+  "name": "Guild core buyback",
+  "note": "The posted, fixed Guild price for ordinary monster cores (09_Equipment/monster_core_pricing.md §4). Buys only.",
+  "buys": { "categories": ["core"], "rate": 1.0 },
+  "stock": []
+ },
+ {
+  "id": "shop_reed_remedies",
+  "npcId": "npc_fennick_reed",
+  "name": "Reed's Remedies",
+  "note": "Potions and herbs; buys plant and beast materials.",
+  "buys": { "categories": ["material"], "rate": 0.5 },
+  "stock": [
+   { "itemId": "itm_minor_hp_potion", "price": 14 },
+   { "itemId": "itm_healing_herb", "price": 5 }
+  ]
+ },
+ {
+  "id": "shop_ottoline_wagon",
+  "npcId": "npc_traveling_merchant_pell",
+  "name": "Ottoline's Wagon",
+  "note": "A bit of everything at a travelling premium; buys almost anything at a poor rate.",
+  "buys": { "categories": ["material", "consumable", "weapon", "armor", "accessory"], "rate": 0.4 },
+  "stock": [
+   { "itemId": "itm_minor_hp_potion", "price": 16 },
+   { "itemId": "itm_fire_bomb", "price": 22 },
+   { "itemId": "itm_rookie_hood", "price": 22 },
+   { "itemId": "itm_guild_issue_spear", "price": 30 },
+   { "itemId": "itm_copper_compass", "price": 170, "quantity": 1 }
+  ]
+ },
+ {
+  "id": "shop_stonebeard_smithy",
+  "npcId": "npc_torvald_stonebeard",
+  "name": "Stonebeard Smithy",
+  "note": "Guild-issue arms and the rookie hood; buys weapons and armour.",
+  "buys": { "categories": ["weapon", "armor"], "rate": 0.5 },
+  "stock": [
+   { "itemId": "itm_guild_issue_sword", "price": 28 },
+   { "itemId": "itm_guild_issue_mace", "price": 28 },
+   { "itemId": "itm_guild_issue_spear", "price": 28 },
+   { "itemId": "itm_guild_issue_daggers", "price": 28 },
+   { "itemId": "itm_guild_issue_hammer", "price": 28 },
+   { "itemId": "itm_rookie_hood", "price": 20 }
+  ]
+ }
+]

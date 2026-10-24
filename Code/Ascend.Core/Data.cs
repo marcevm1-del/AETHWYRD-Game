@@ -175,15 +175,19 @@ namespace Ascend.Core
         public IReadOnlyDictionary<string, InnData> Inns { get; }
         /// <summary>Per-species motion and behaviour from Data/Monsters/motion.json (empty if not loaded).</summary>
         public IReadOnlyDictionary<string, SpeciesMotion> Motion { get; }
+        public IReadOnlyDictionary<string, ShopData> Shops { get; }
+        public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
             IEnumerable<LootTableData> loot, IEnumerable<ItemData> items, CombatTuning tuning,
             IEnumerable<SiegeWaveData> siegeWaves = null, WorldTuning world = null,
             IEnumerable<QuestData> quests = null, IEnumerable<NpcData> npcs = null, IEnumerable<ClassData> classes = null,
             IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null,
-            IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null, MotionFile motion = null)
+            IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null, MotionFile motion = null,
+            IEnumerable<ShopData> shops = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
+            Shops = Index(shops, s => s.Id, "shop");
             WeeklyQuests = Index(weeklyBoard, q => q.Id, "weekly quest");
             Inns = Index(inns, i => i.Id, "inn");
             Quests = Index(quests, q => q.Id, "quest");
