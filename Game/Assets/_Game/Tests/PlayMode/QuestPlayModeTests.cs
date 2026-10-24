@@ -253,6 +253,25 @@ namespace Ascend.Game.Tests
         }
 
         [Test]
+        public void GatheringAHerbPatchThenItRegrows()
+        {
+            var go = new GameObject("Gather_test");
+            go.transform.position = new Vector3(0, 0, 1f);
+            var fresh = new GameObject("Fresh"); fresh.transform.SetParent(go.transform, false);
+            var node = go.AddComponent<GatherNode>();
+            node.NodeId = "node_herb_patch"; node.Fresh = fresh;
+            Assert.AreSame(node, GatherNode.Nearest(_player.transform.position), "in reach");
+            Assert.IsTrue(node.Ready);
+            var drops = node.Gather(_inv);
+            Assert.GreaterOrEqual(_inv.Items.Count("itm_healing_herb"), 1, "herbs picked");
+            Assert.IsFalse(node.Ready, "regrowing");
+            Assert.AreEqual(0, node.Gather(_inv).Count, "nothing until it regrows");
+            node.ReadyAtHour = GatherNode.Now - 1;
+            Assert.IsTrue(node.Ready, "back after its hours");
+            Object.DestroyImmediate(go);
+        }
+
+        [Test]
         public void TradingThroughTheDialog()
         {
             var reed = Giver("npc_fennick_reed", new Vector3(0, 0, 1.5f));

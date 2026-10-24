@@ -16,7 +16,7 @@ namespace Ascend.EditorTools
         const string ScenePath = "Assets/_Game/Scenes/Ring0_Graybox.unity";
         static readonly string[] DataFiles =
         {
-            "World/regions.json", "World/world_tuning.json", "World/siege_waves.json", "World/inns.json", "World/guild_ranks.json",
+            "World/regions.json", "World/world_tuning.json", "World/siege_waves.json", "World/inns.json", "World/guild_ranks.json", "World/gathering.json",
             "Monsters/species.json", "Monsters/attacks.json", "Monsters/loot_tables.json", "Monsters/motion.json",
             "Items/items.json", "Items/materials.json", "Items/shops.json", "Items/recipes.json", "Combat/combat_tuning.json",
             "Quests/quests.json", "Quests/story_flags.json", "Quests/weekly_board.json",

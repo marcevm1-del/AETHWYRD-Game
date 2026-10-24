@@ -76,6 +76,7 @@ namespace Ascend.Game
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
             if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
             if (TryGetComponent<PlayerBestiary>(out var book)) s.Bestiary = book.Book.Save();
+            s.GatherNodes = GatherNode.All.Where(n => n != null && !n.Ready).ToDictionary(n => n.Key, n => n.ReadyAtHour);
             if (TryGetComponent<PlayerCrafting>(out var crafting)) s.KnownRecipes = crafting.Crafter.Known.ToList();
             if (TryGetComponent<PlayerTaming>(out var taming))
                 s.Partners = taming.Roster.All.Select(p => new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active, Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved }).ToList();
@@ -130,6 +131,7 @@ namespace Ascend.Game
             if (s.Sieges != null && SiegeDirector.Instance != null && s.Sieges.TryGetValue(SiegeDirector.Instance.Threat.RegionId, out var sg))
                 SiegeDirector.Instance.Load(sg.State, sg.Escalation, sg.DoneDays, sg.LastWeek);
             if (TryGetComponent<PlayerBestiary>(out var book)) book.Load(s.Bestiary);
+            foreach (var n in GatherNode.All) if (n != null) n.ReadyAtHour = s.GatherNodes.TryGetValue(n.Key, out var h) ? h : double.MinValue;
             if (TryGetComponent<PlayerCrafting>(out var crafting)) crafting.Load(s.KnownRecipes);
             if (TryGetComponent<PlayerTaming>(out var taming)) taming.Load(s.Partners);
             if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);

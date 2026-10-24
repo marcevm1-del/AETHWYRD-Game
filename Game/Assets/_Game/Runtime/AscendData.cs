@@ -57,7 +57,8 @@ namespace Ascend.Game
                 Read<MotionFile>("Monsters/motion.json"),
                 Read<List<ShopData>>("Items/shops.json"),
                 Read<RecipeFile>("Items/recipes.json"),
-                Read<GuildRankData>("World/guild_ranks.json"));
+                Read<GuildRankData>("World/guild_ranks.json"),
+                Read<GatheringFile>("World/gathering.json"));
         }
 
         public static void Reload() => _db = null;

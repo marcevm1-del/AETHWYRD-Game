@@ -51,6 +51,7 @@ namespace Ascend.EditorTools
             Landmark(root, "millbrook_fields_night", "Millbrook fields", new Vector3(21f, 0, 12f));
             Landmark(root, "mistvale_farms", "Mistvale farms", new Vector3(23f, 0, -14f));
             BuildSiege();
+            BuildGathering(root);
 
             // Defence events (defend objectives at a spot): Millbrook's granary (Hesk's quest) and the training-yard mock raid.
             Npc(root, "npc_farmer_hesk", new Vector3(24f, 0, 1f), new Color(0.7f, 0.55f, 0.3f));
@@ -87,6 +88,60 @@ namespace Ascend.EditorTools
             }
             holder.SetActive(false);
             director.Templates = templates.ToArray();
+        }
+
+        /// <summary>Gathering nodes (gathering.json): herb patches, mushroom rings, weeping pines and scrap heaps.</summary>
+        static void BuildGathering(Transform parent)
+        {
+            var root = new GameObject("Gathering").transform;
+            root.SetParent(parent, false);
+            var leaf = Mat("Herb", new Color(0.35f, 0.75f, 0.35f));
+            var cap = Mat("Mushroom", new Color(0.85f, 0.3f, 0.25f));
+            var bark = Mat("Bark", new Color(0.36f, 0.26f, 0.18f));
+            var amber = Mat("Sap", new Color(0.95f, 0.65f, 0.15f), 0.8f);
+            var scrap = Mat("Scrap", new Color(0.5f, 0.5f, 0.52f), 0.5f);
+            int n = 0;
+            void Node(string id, Vector3 at)
+            {
+                var go = new GameObject($"Gather_{id.Substring(5)}_{++n}");
+                go.transform.SetParent(root, false);
+                go.transform.position = at;
+                var fresh = new GameObject("Fresh");
+                fresh.transform.SetParent(go.transform, false);
+                switch (id)
+                {
+                    case "node_herb_patch":
+                        for (int i = 0; i < 4; i++) Prim(PrimitiveType.Sphere, "Leaf", at + new Vector3((i % 2) * 0.4f - 0.2f, 0.15f, (i / 2) * 0.4f - 0.2f), new Vector3(0.45f, 0.3f, 0.45f), leaf, fresh.transform, keepCollider: false);
+                        break;
+                    case "node_mushroom_ring":
+                        for (int i = 0; i < 6; i++) { float a = i * Mathf.PI / 3f; Prim(PrimitiveType.Cylinder, "Cap", at + new Vector3(Mathf.Cos(a), 0.12f, Mathf.Sin(a)) * 0.7f, new Vector3(0.25f, 0.12f, 0.25f), cap, fresh.transform, keepCollider: false); }
+                        break;
+                    case "node_sap_tree":
+                        Prim(PrimitiveType.Cylinder, "Trunk", at + Vector3.up * 2f, new Vector3(0.6f, 2f, 0.6f), bark, go.transform);
+                        Prim(PrimitiveType.Sphere, "Sap", at + new Vector3(0, 1.2f, -0.32f), new Vector3(0.3f, 0.4f, 0.15f), amber, fresh.transform, keepCollider: false);
+                        break;
+                    default:
+                        for (int i = 0; i < 4; i++) Prim(PrimitiveType.Cube, "Scrap", at + new Vector3(i * 0.3f - 0.45f, 0.2f + (i % 2) * 0.2f, (i % 3) * 0.25f), new Vector3(0.5f, 0.3f, 0.4f), scrap, fresh.transform, Quaternion.Euler(0, i * 37f, i * 11f), keepCollider: false);
+                        break;
+                }
+                var node = go.AddComponent<GatherNode>();
+                node.NodeId = id; node.Fresh = fresh;
+            }
+            // Brindlewick field
+            Node("node_herb_patch", new Vector3(10f, 0, -8f));
+            Node("node_herb_patch", new Vector3(-10f, 0, 6f));
+            Node("node_herb_patch", new Vector3(14f, 0, 14f));
+            Node("node_scrap_heap", new Vector3(-11.5f, 0, 15.5f));
+            // Whisperwood
+            Node("node_herb_patch", new Vector3(6f, 0, 34f));
+            Node("node_herb_patch", new Vector3(-14f, 0, 40f));
+            Node("node_herb_patch", new Vector3(12f, 0, 58f));
+            Node("node_mushroom_ring", new Vector3(-6f, 0, 54f));
+            Node("node_mushroom_ring", new Vector3(8f, 0, 72f));
+            Node("node_sap_tree", new Vector3(-22f, 0, 36f));
+            Node("node_sap_tree", new Vector3(21f, 0, 46f));
+            Node("node_sap_tree", new Vector3(-7f, 0, 79f));
+            Node("node_scrap_heap", new Vector3(5f, 0, 63f));
         }
 
         /// <summary>A defend-objective spot: a fenced square with a sign, and the DefenceSpot that runs the attack.</summary>

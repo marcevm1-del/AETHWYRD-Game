@@ -49,6 +49,10 @@ namespace Ascend.Game.Tests
             Assert.IsTrue(Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Where(g => g.GetComponent<QuestBoard>() == null).All(g => g.HasMarker), "every NPC keeps its !/? marker in the saved scene");
             Assert.IsNotNull(Object.FindFirstObjectByType<EscortNpc>(), "Ottoline's escort");
             Assert.IsNotNull(Object.FindFirstObjectByType<QuestBoard>(), "the guild board");
+            var nodes = Object.FindObjectsByType<GatherNode>(FindObjectsSortMode.None);
+            Assert.GreaterOrEqual(nodes.Length, 10, "gathering nodes");
+            Assert.AreEqual(nodes.Length, nodes.Select(x => x.Key).Distinct().Count(), "each node has its own save key");
+            Assert.IsTrue(nodes.All(x => x.Data != null && x.Fresh != null), "every node is set up");
             Assert.IsNotNull(Object.FindFirstObjectByType<SiegeDirector>(), "the siege director");
             Assert.IsNotNull(Object.FindFirstObjectByType<WorldClock>(), "the clock");
             Assert.AreEqual(2, Object.FindObjectsByType<Waystone>(FindObjectsSortMode.None).Length, "both waystones (start and treeline) have their component");

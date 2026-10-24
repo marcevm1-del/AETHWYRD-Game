@@ -71,7 +71,8 @@ static class Repo
         Load<MotionFile>("Data/Monsters/motion.json"),
         Load<List<ShopData>>("Data/Items/shops.json"),
         Load<RecipeFile>("Data/Items/recipes.json"),
-        Load<GuildRankData>("Data/World/guild_ranks.json"));
+        Load<GuildRankData>("Data/World/guild_ranks.json"),
+        Load<GatheringFile>("Data/World/gathering.json"));
 }
 
 [Tests]

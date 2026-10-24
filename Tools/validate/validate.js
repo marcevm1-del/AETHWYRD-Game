@@ -138,6 +138,18 @@ if (fs.existsSync(path.join(DATA, 'World/guild_ranks.json'))) {
   });
 }
 
+// Gathering nodes (World/gathering.json): real items, sane chances and counts.
+if (fs.existsSync(path.join(DATA, 'World/gathering.json'))) {
+  for (const n of load('World/gathering.json').nodes || []) {
+    if (!/^node_[a-z0-9_]+$/.test(n.id || '')) err(n.id, 'node id must look like node_*');
+    if (!(n.respawnHours > 0)) err(n.id, 'respawnHours must be > 0');
+    for (const y of n.yields || []) {
+      ref(n.id + '.yields', y.itemId, 'items');
+      if (!(y.chance > 0 && y.chance <= 1) || !(y.min >= 1 && y.max >= y.min)) err(n.id, `bad yield for ${y.itemId}`);
+    }
+  }
+}
+
 // Recipes (Items/recipes.json): known items and stations, and a result never ranked above its best material (systems.md §5.1).
 const RANK_ORDER = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
 const rankValue = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ? RANK_ORDER.indexOf(m[1]) * 3 + (m[2] === '+' ? 1 : m[2] === '-' ? -1 : 0) : -99; };

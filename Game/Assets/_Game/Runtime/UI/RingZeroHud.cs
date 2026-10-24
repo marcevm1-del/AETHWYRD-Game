@@ -162,6 +162,9 @@ namespace Ascend.Game
                 y += 6;
                 foreach (var line in _quests.TrackerLines()) { GUI.Label(new Rect(x, y, 520, 20), line, _small); y += 20; }
                 var near = UiModal.Any ? null : QuestGiver.Nearest(player.transform.position);
+                var nodeNear = UiModal.Any ? null : GatherNode.Nearest(player.transform.position);
+                if (nodeNear != null && nodeNear.Data != null && (near == null || Vector3.Distance(nodeNear.transform.position, player.transform.position) < Vector3.Distance(near.transform.position, player.transform.position)))
+                { GUI.Label(new Rect(sw0 / 2 - 150, Screen.height * 0.62f, 300, 22), nodeNear.Ready ? $"[E] Gather: {nodeNear.Data.Name}" : $"{nodeNear.Data.Name} (regrowing)", _small); near = null; }
                 if (near != null) GUI.Label(new Rect(sw0 / 2 - 150, Screen.height * 0.62f, 300, 22), $"[E] Talk to {near.DisplayName}", _small);
             }
 

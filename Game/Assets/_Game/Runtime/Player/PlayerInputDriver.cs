@@ -11,7 +11,7 @@ namespace Ascend.Game
     ///   Light: LMB / X · Heavy: RMB / Y (hold to charge; after two lights = launcher; in the air = slam)
     ///   Block / parry: Q / RT · Lock-on: MMB / R3 (flick to switch) · Jump during a launcher follows the target up
     ///   Skills: 1–4 / hold RB + X, Y, A, B · Ultimate: R / L3 + R3 · Fire Bomb (quick item): G / D-pad up
-    ///   Talk: E / D-pad down (opens the NPC dialog) · Healing potion: H / D-pad right · Bag: I / View · Bestiary: B
+    ///   Talk / gather: E / D-pad down (opens the NPC dialog, or gathers a herb patch, pine or scrap heap) · Healing potion: H / D-pad right · Bag: I / View · Bestiary: B
     ///   Tame: T / D-pad left (PlayerTaming: begin near a weakened monster, press again to offer)
     /// During Flash Time the world slows but the player keeps real-time speed; hit-stop freezes everyone.
     /// </summary>
@@ -105,6 +105,10 @@ namespace Ascend.Game
             {
                 var quests = GetComponent<PlayerQuests>();
                 var giver = quests != null ? QuestGiver.Nearest(transform.position) : null;
+                var node = GatherNode.Nearest(transform.position);
+                // Whichever is closer: talk to the NPC or gather the node.
+                bool nodeFirst = node != null && (giver == null || Vector3.Distance(node.transform.position, transform.position) < Vector3.Distance(giver.transform.position, transform.position));
+                if (nodeFirst && TryGetComponent<PlayerInventory>(out var bag)) { node.Gather(bag); return; }
                 if (giver != null) { NpcDialog.Instance.Open(giver, quests); return; }
             }
             bool padFaceBusy = skillMode && pad != null;

@@ -44,6 +44,8 @@ namespace Ascend.Core
         public int RankGp { get; set; }
         public int QuestsAtRank { get; set; }
         public List<BestiaryEntry> Bestiary { get; set; } = new List<BestiaryEntry>();
+        /// <summary>Regrowing gathering nodes: node object name → absolute in-game hour it's ready.</summary>
+        public Dictionary<string, double> GatherNodes { get; set; } = new Dictionary<string, double>();
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
@@ -95,6 +97,7 @@ namespace Ascend.Core
             s.Partners ??= new List<PartnerData>();
             s.KnownRecipes ??= new List<string>();
             s.Bestiary ??= new List<BestiaryEntry>();
+            s.GatherNodes ??= new Dictionary<string, double>();
             s.RestBuffs ??= new List<RestBuff>();
             s.InnNights ??= new Dictionary<string, int>();
             s.Version = SaveGame.CurrentVersion;
