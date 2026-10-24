@@ -91,6 +91,26 @@ namespace Ascend.Game.Tests
         }
 
         [UnityTest]
+        public IEnumerator SlayingTheTyrantLiberatesTheRegion()
+        {
+            Assert.IsFalse(_quests.Log.CanAccept("qst_hunt_whisperwood_contract", _quests.Context("reg_whisperwood")), "hunting contracts wait for liberation");
+            _siege.StartRaidNow();
+            var go = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+            go.transform.position = new Vector3(0, 1, 40);
+            go.SetActive(false);
+            var grukk = go.AddComponent<MonsterDummy>();
+            grukk.SpeciesId = "mon_grukk_goblin_chief_of_hollowpine";
+            go.SetActive(true);
+            yield return null;
+            _siege.OnMonsterKilled(grukk);
+            Assert.AreEqual(RegionState.Liberated, _siege.Threat.State, "Whisperwood is liberated");
+            Assert.IsNull(_siege.Battle, "the raid in progress breaks up");
+            Assert.IsFalse(grukk.Respawns, "Grukk stays down");
+            Assert.IsNull(_siege.NextAttack(), "no more raids");
+            Assert.IsTrue(_quests.Log.CanAccept("qst_hunt_whisperwood_contract", _quests.Context("reg_whisperwood")), "hunting contracts open up");
+        }
+
+        [UnityTest]
         public IEnumerator ARaidYouMissAutoResolves()
         {
             var cc = _player.GetComponent<CharacterController>();

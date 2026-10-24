@@ -27,6 +27,13 @@ namespace Ascend.EditorTools
 
             Npc(root, "npc_captain_holt", new Vector3(-3f, 0, 18.5f), new Color(0.6f, 0.6f, 0.7f));        // the gate's watch captain (siege contracts)
 
+            // The guild board beside Mina: today's Day Special, dailies and the weekly commission.
+            var board = Prim(PrimitiveType.Cube, "GuildBoard", new Vector3(6f, 1.1f, -3.5f), new Vector3(1.8f, 1.4f, 0.15f), Mat("Wood", new Color(0.55f, 0.38f, 0.24f)), root);
+            board.transform.rotation = Quaternion.Euler(0, -30f, 0);
+            board.AddComponent<QuestGiver>().NpcId = "npc_guild_clerk_wendel";
+            board.AddComponent<QuestBoard>();
+            Label(root, new Vector3(6f, 2.1f, -3.5f), "Guild Board", new Color(1f, 0.9f, 0.6f), 0.035f);
+
             Place(root, "brindlewick_north_gate", new Vector3(0, 0, 20f), 3.5f);
             BuildSiege();
             Place(root, "whisperwood_ruins_mural", new Vector3(0, 0, 88f), 10f);

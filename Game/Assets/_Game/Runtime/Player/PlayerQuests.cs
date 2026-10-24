@@ -27,7 +27,7 @@ namespace Ascend.Game
         {
             _combat = GetComponent<PlayerCombat>();
             _inv = GetComponent<PlayerInventory>();
-            Log = new QuestLog(AscendData.Db.Quests);
+            Log = new QuestLog(AscendData.Db.Quests, AscendData.Db.WeeklyQuests.Values.Select(w => w.ToQuest()));
             _combat.Killed += OnKilled;
             _inv.Items.Changed += OnItemsChanged;
             Log.Ready += OnReady;
@@ -72,7 +72,7 @@ namespace Ascend.Game
 
         /// <summary>Items an active quest still needs you to hand in (shops won't take them).</summary>
         public HashSet<string> ProtectedItems() => new HashSet<string>(Log.Active.SelectMany(p =>
-            AscendData.Db.Quests[p.QuestId].Objectives.Where(o => o.Kind == "collect").Select(o => o.Target)));
+            Log.Quest(p.QuestId).Objectives.Where(o => o.Kind == "collect").Select(o => o.Target)));
 
         public void Reach(string placeId) => Log.OnReach(placeId);
         public void Talk(string npcId) => Log.OnTalk(npcId);
@@ -89,12 +89,37 @@ namespace Ascend.Game
         {
             if (!Log.TryTurnIn(questId, _inv.Items, null, out var pay)) return false;
             if (pay.Xp > 0) _combat.GrantXp(pay.Xp); // through the combat component so level-ups heal and show the banner
-            var q = AscendData.Db.Quests[questId];
+            var q = Log.Quest(questId);
             foreach (var f in q.SetsFlags ?? new List<string>()) _flags.Add(f);
             _inv.Toast($"Quest complete: {q.Title}", 5f);
             if (pay.Copper > 0) _inv.Toast($"+{Money.Format(pay.Copper, AscendData.Db.World.Currency)}");
             foreach (var item in pay.Items) _inv.Toast($"+ {(AscendData.Db.Items.TryGetValue(item, out var it) ? it.Name : item)}");
+            if (q.Id.StartsWith("qst_wk_"))
+            {
+                // Board quests repeat: remember the day it was done, and let the journal offer it again later.
+                Log.Forget(q.Id);
+                _boardDone[q.Id] = WorldClock.Instance != null ? WorldClock.Instance.Day : 0;
+            }
             return true;
+        }
+
+        // ---------------------------------------------------------------- the guild board
+        readonly Dictionary<string, int> _boardDone = new Dictionary<string, int>();
+        public IReadOnlyDictionary<string, int> BoardDone => _boardDone;
+
+        public bool BoardDoneOn(string questId, int day) => _boardDone.TryGetValue(questId, out var d) && d == day;
+
+        /// <summary>Board quests finished this in-game week (the special and the weekly don't come back until next week).</summary>
+        public HashSet<string> BoardDoneThisWeek(int day)
+        {
+            int week = day / SiegeScheduler.DaysPerWeek;
+            return new HashSet<string>(_boardDone.Where(kv => kv.Value / SiegeScheduler.DaysPerWeek == week).Select(kv => kv.Key));
+        }
+
+        public void LoadBoard(Dictionary<string, int> done)
+        {
+            _boardDone.Clear();
+            foreach (var kv in done ?? new Dictionary<string, int>()) _boardDone[kv.Key] = kv.Value;
         }
 
         /// <summary>One line per active quest for the HUD tracker.</summary>
@@ -102,7 +127,7 @@ namespace Ascend.Game
         {
             foreach (var p in Log.Active)
             {
-                var q = AscendData.Db.Quests[p.QuestId];
+                var q = Log.Quest(p.QuestId);
                 if (p.Status == QuestStatus.ReadyToTurnIn) { yield return $"◆ {q.Title} — return to {GiverName(q.Id)}"; continue; }
                 var parts = q.Objectives.Select((o, i) => Describe(o, p.Counts[i])).Where(s => s != null);
                 yield return $"◇ {q.Title}: {string.Join(" · ", parts)}";
@@ -123,9 +148,13 @@ namespace Ascend.Game
             }
         }
 
-        static string Title(string questId) => AscendData.Db.Quests.TryGetValue(questId, out var q) ? q.Title : questId;
-        static string GiverName(string questId) =>
-            AscendData.Db.Quests.TryGetValue(questId, out var q) && AscendData.Db.Npcs.TryGetValue(q.Giver, out var n) ? n.Name : "the giver";
+        string Title(string questId) => Log.Quest(questId)?.Title ?? questId;
+        string GiverName(string questId)
+        {
+            var q = Log.Quest(questId);
+            if (q != null && q.Id.StartsWith("qst_wk_")) return "the guild board";
+            return q != null && AscendData.Db.Npcs.TryGetValue(q.Giver, out var n) ? n.Name : "the giver";
+        }
 
         // ---------------------------------------------------------------- saves
         public void Load(List<QuestProgress> active, List<string> completed, int guildPoints, List<string> flags)

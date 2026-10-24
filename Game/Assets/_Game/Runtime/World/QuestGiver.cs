@@ -18,7 +18,8 @@ namespace Ascend.Game
         TextMesh _marker;
 
         public string NpcId { get => npcId; set => npcId = value; }
-        public string DisplayName => AscendData.Db.Npcs.TryGetValue(npcId ?? "", out var n) ? n.Name : name;
+        public string DisplayName => GetComponent<QuestBoard>() != null ? "Adventurers' Guild Board"
+            : AscendData.Db.Npcs.TryGetValue(npcId ?? "", out var n) ? n.Name : name;
         public string Role => AscendData.Db.Npcs.TryGetValue(npcId ?? "", out var n) ? n.Role : "";
 
         public static QuestGiver Nearest(Vector3 from, float radius = TalkRadius)
@@ -50,11 +51,20 @@ namespace Ascend.Game
         }
 
         public IEnumerable<QuestProgress> ReadyHere(PlayerQuests q) =>
-            q.Log.Active.Where(p => p.Status == QuestStatus.ReadyToTurnIn && AscendData.Db.Quests[p.QuestId].Giver == npcId).ToList();
+            q.Log.Active.Where(p => p.Status == QuestStatus.ReadyToTurnIn && Mine(q, p)).ToList();
+
+        /// <summary>This NPC's quest — or, for the guild board, any board quest (they're handed in at the board).</summary>
+        bool Mine(PlayerQuests q, QuestProgress p)
+        {
+            var data = q.Log.Quest(p.QuestId);
+            if (data == null) return false;
+            bool board = data.Id.StartsWith("qst_wk_");
+            return board ? GetComponent<QuestBoard>() != null : data.Giver == npcId;
+        }
 
         /// <summary>Active quests from this giver whose only missing objectives are decisions (made here).</summary>
         public IEnumerable<QuestProgress> AwaitingChoiceHere(PlayerQuests q) =>
-            q.Log.Active.Where(p => p.Status == QuestStatus.Active && AscendData.Db.Quests[p.QuestId].Giver == npcId && OnlyChoicesLeft(p)).ToList();
+            q.Log.Active.Where(p => p.Status == QuestStatus.Active && Mine(q, p) && OnlyChoicesLeft(q.Log.Quest(p.QuestId), p)).ToList();
 
         public IEnumerable<QuestData> OffersHere(PlayerQuests q)
         {
@@ -62,9 +72,8 @@ namespace Ascend.Game
             return q.Log.OffersFrom(npcId, ctx).Where(x => q.Log.CanAccept(x.Id, q.Context(x.Region))).ToList();
         }
 
-        static bool OnlyChoicesLeft(QuestProgress p)
+        static bool OnlyChoicesLeft(QuestData q, QuestProgress p)
         {
-            var q = AscendData.Db.Quests[p.QuestId];
             bool anyChoice = false;
             for (int i = 0; i < q.Objectives.Count; i++)
             {

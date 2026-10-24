@@ -71,7 +71,7 @@ namespace Ascend.Game
             if (shop != null && _page != Page.Main) { RebuildTrade(shop, inv); return; }
             foreach (var p in _giver.AwaitingChoiceHere(q))
             {
-                var data = AscendData.Db.Quests[p.QuestId];
+                var data = q.Log.Quest(p.QuestId);
                 int idx = data.Objectives.FindIndex(o => o.Kind == "choice" && p.Counts[data.Objectives.IndexOf(o)] < 1);
                 if (idx < 0) continue;
                 foreach (var opt in QuestChoices.Options(data.Objectives[idx].Target))
@@ -83,7 +83,7 @@ namespace Ascend.Game
             foreach (var p in _giver.ReadyHere(q))
             {
                 string id = p.QuestId;
-                _options.Add(new Option { Text = $"Hand in: {AscendData.Db.Quests[id].Title}", Act = () => { if (q.TurnIn(id)) _line = "Thank you. The guild pays its debts."; } });
+                _options.Add(new Option { Text = $"Hand in: {q.Log.Quest(id).Title}", Act = () => { if (q.TurnIn(id)) _line = "Thank you. The guild pays its debts."; } });
             }
             foreach (var offer in _giver.OffersHere(q))
             {
@@ -91,6 +91,24 @@ namespace Ascend.Game
                 _options.Add(new Option { Text = $"Accept [{o.Rank}] {o.Title} — {o.Summary}", Act = () => { if (q.Accept(o)) _line = "Good luck out there."; } });
             }
             if (shop != null) _options.Add(new Option { Text = $"Trade — {shop.Data.Name}", Act = () => Go(Page.Buy, shop.Data.Note) });
+            var board = _giver.GetComponent<QuestBoard>();
+            if (board != null)
+            {
+                var today = board.Today(q);
+                if (today.Attack != null)
+                {
+                    string warn = $"⚔ Raid warning: goblins expected at {today.Attack.Settlement} around {today.Attack.Hour:00}:00 today — see Captain Holt.";
+                    _options.Add(new Option { Text = warn, Act = () => _line = "Defend the gate and the Captain pays." });
+                }
+                foreach (var w in board.Takeable(q))
+                {
+                    var wq = w;
+                    string twist = today.Twists.TryGetValue(w.Id, out var t) ? $" (rumour: {t})" : "";
+                    _options.Add(new Option { Text = $"Take [{Capital(w.Slot)}] {w.Title} — {w.Summary}{twist}", Act = () => { if (q.Accept(q.Log.Quest(wq.Id))) _line = "Posted, signed, yours."; } });
+                }
+                foreach (var w in board.Later(q))
+                    _options.Add(new Option { Text = $"(opens at {w.TimeOfDay}) [{Capital(w.Slot)}] {w.Title}", Act = () => _line = $"That one's only taken at {w.TimeOfDay}." });
+            }
             if (inn != null) _options.Add(new Option { Text = $"Rooms — {inn.Name}", Act = () => Go(Page.Rooms, inn.Quirk) });
             _options.Add(new Option { Text = "Goodbye", Act = Close });
             _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);

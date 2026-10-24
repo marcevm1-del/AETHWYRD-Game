@@ -35,6 +35,8 @@ namespace Ascend.Core
         public List<string> CompletedQuests { get; set; } = new List<string>();
         public List<string> Flags { get; set; } = new List<string>();
         public int GuildPoints { get; set; }
+        /// <summary>Guild board quests handed in, with the day (dailies repeat next day, specials and weeklies next week).</summary>
+        public Dictionary<string, int> BoardDone { get; set; } = new Dictionary<string, int>();
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
@@ -82,6 +84,7 @@ namespace Ascend.Core
             s.Quests ??= new List<QuestProgress>();
             s.CompletedQuests ??= new List<string>();
             s.Flags ??= new List<string>();
+            s.BoardDone ??= new Dictionary<string, int>();
             s.RestBuffs ??= new List<RestBuff>();
             s.InnNights ??= new Dictionary<string, int>();
             s.Version = SaveGame.CurrentVersion;

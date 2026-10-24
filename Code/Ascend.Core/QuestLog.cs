@@ -37,9 +37,19 @@ namespace Ascend.Core
     {
         readonly Dictionary<string, QuestProgress> _active = new Dictionary<string, QuestProgress>();
         readonly HashSet<string> _completed = new HashSet<string>();
-        readonly IReadOnlyDictionary<string, QuestData> _quests;
+        readonly Dictionary<string, QuestData> _quests;
 
-        public QuestLog(IReadOnlyDictionary<string, QuestData> quests) { _quests = quests ?? throw new ArgumentNullException(nameof(quests)); }
+        /// <param name="extra">More quests to track besides quests.json (the weekly board's, as journal quests).</param>
+        public QuestLog(IReadOnlyDictionary<string, QuestData> quests, IEnumerable<QuestData> extra = null)
+        {
+            _quests = (quests ?? throw new ArgumentNullException(nameof(quests))).ToDictionary(kv => kv.Key, kv => kv.Value);
+            foreach (var q in extra ?? Enumerable.Empty<QuestData>()) _quests[q.Id] = q;
+        }
+
+        public QuestData Quest(string id) => _quests.TryGetValue(id ?? "", out var q) ? q : null;
+
+        /// <summary>Lets a repeatable (board) quest be taken again: forgets that it was completed.</summary>
+        public void Forget(string questId) => _completed.Remove(questId);
 
         public IEnumerable<QuestProgress> Active => _active.Values;
         public ICollection<string> Completed => _completed;
@@ -57,7 +67,7 @@ namespace Ascend.Core
 
         /// <summary>The quests a giver can offer right now.</summary>
         public IEnumerable<QuestData> OffersFrom(string npcId, QuestContext ctx) =>
-            _quests.Values.Where(q => q.Giver == npcId && CanAccept(q.Id, ctx)).OrderBy(q => q.Rank).ThenBy(q => q.Id);
+            _quests.Values.Where(q => q.Giver == npcId && !q.Id.StartsWith("qst_wk_") && CanAccept(q.Id, ctx)).OrderBy(q => q.Rank).ThenBy(q => q.Id);
 
         public bool Accept(string questId, QuestContext ctx)
         {

@@ -139,6 +139,44 @@ namespace Ascend.Game.Tests
         }
 
         [Test]
+        public void TheGuildBoardPostsTakesAndTakesBack()
+        {
+            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            go.transform.position = new Vector3(0, 1, 1.5f);
+            go.AddComponent<QuestGiver>().NpcId = "npc_guild_clerk_wendel";
+            go.AddComponent<QuestBoard>();
+            var giver = go.GetComponent<QuestGiver>();
+            Assert.AreEqual("Adventurers' Guild Board", giver.DisplayName);
+            NpcDialog.Instance.Open(giver, _quests);
+            int take = OptionIndex("Take [");
+            Assert.GreaterOrEqual(take, 0, "something is posted and open now");
+            NpcDialog.Instance.Choose(take);
+            var p = _quests.Log.Active.Single(x => x.QuestId.StartsWith("qst_wk_"));
+            var q = _quests.Log.Quest(p.QuestId);
+            for (int i = 0; i < q.Objectives.Count; i++)
+            {
+                var o = q.Objectives[i];
+                int n = System.Math.Max(1, o.Count);
+                switch (o.Kind)
+                {
+                    case "kill": for (int k = 0; k < n; k++) _quests.Log.OnKill(o.Target); break;
+                    case "collect": _inv.Items.Add(o.Target, n); break;
+                    case "talk": _quests.Log.OnTalk(o.Target); break;
+                    case "reach": for (int k = 0; k < n; k++) _quests.Log.OnReach(o.Target); break;
+                    case "defend": for (int k = 0; k < n; k++) _quests.Log.OnDefend(o.Target); break;
+                    case "choice": _quests.Log.Choose(q.Id, i, "yes"); break;
+                }
+            }
+            Assert.AreEqual(QuestStatus.ReadyToTurnIn, _quests.Log.Get(q.Id).Status, $"{q.Id} complete");
+            StringAssert.Contains("the guild board", _quests.TrackerLines().First(), "hand it in at the board");
+            NpcDialog.Instance.Open(giver, _quests);
+            NpcDialog.Instance.Choose(OptionIndex("Hand in"));
+            Assert.IsFalse(_quests.Log.IsActive(q.Id), "handed in");
+            Assert.IsTrue(_quests.BoardDoneOn(q.Id, 0), "done today");
+            Assert.IsFalse(go.GetComponent<QuestBoard>().Takeable(_quests).Any(w => w.Id == q.Id), "not posted again today");
+        }
+
+        [Test]
         public void TradingThroughTheDialog()
         {
             var reed = Giver("npc_fennick_reed", new Vector3(0, 0, 1.5f));

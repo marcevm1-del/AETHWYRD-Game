@@ -28,6 +28,16 @@ namespace Ascend.Core
         public List<QuestObjective> Objectives { get; set; } = new List<QuestObjective>();
         public QuestRewards Rewards { get; set; } = new QuestRewards();
         public List<string> Twists { get; set; } = new List<string>();
+
+        /// <summary>As a journal quest (the board posts it; the journal tracks it like any other).</summary>
+        public QuestData ToQuest() => new QuestData
+        {
+            Id = Id, Title = Title, Rank = RankMin, Type = Type, Giver = Giver, Region = Region, RegionState = RegionState,
+            Summary = Summary, Objectives = Objectives, Rewards = Rewards ?? new QuestRewards(),
+        };
+
+        /// <summary>Objective kinds the Ring 0 build can track; board quests needing others (escort, tame) aren't posted yet.</summary>
+        public bool Playable => Objectives.All(o => o.Kind != "escort" && o.Kind != "tame");
     }
 
     /// <summary>One dawn's guild board (weekly_board.md §2–3).</summary>

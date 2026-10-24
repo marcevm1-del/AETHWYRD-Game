@@ -61,17 +61,17 @@ namespace Ascend.Game
         void Start()
         {
             _player = FindFirstObjectByType<PlayerCombat>();
-            if (_player != null) _player.Killed += OnKilled;
+            if (_player != null) _player.Killed += OnMonsterKilled;
         }
 
         void OnDestroy()
         {
             if (Instance == this) Instance = null;
-            if (_player != null) _player.Killed -= OnKilled;
+            if (_player != null) _player.Killed -= OnMonsterKilled;
         }
 
         /// <summary>The Tyrant falls: the region is Liberated for good — no more raids, hunting contracts open up.</summary>
-        void OnKilled(MonsterDummy m)
+        public void OnMonsterKilled(MonsterDummy m)
         {
             if (m.SpeciesId != Region.TyrantSpeciesId || !_threat.UnderSiege) return;
             m.Respawns = false;
