@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Partner orders | Z / LB cycles Follow → Hold (guard a spot) → Focus (attack your lock-on target); each species learns orders by trainability per family (after RimWorld): beasts, birds and dragons all three, slimes and spirits Follow and Hold, plants only Follow | 158 + 120 |
 | Pack calls | From Greyborn's fight-or-flee odds: pack and swarm monsters cry out when hit and their own kind within 12 m join in; a pack hunter left alone and hurt falls back home | 157 + 118 |
 | Recipe ideas | From Grounded's analyzer / Subnautica's scanner, shaped by item_and_economy_design §6.2: handle every material of a recipe and you get an idea; experiment at the right station to make it and learn it free (the paid lesson stays as the other route) | 156 + 117 |
 | Reference: Greyborn | From your Project Greyborn bot AI (ported logic): monsters that hit a wall head-on sidestep and work their way round; skittish and ambushing monsters hop back when badly hurt. reference_games.md lists what else is worth taking (utility goals with hysteresis, path budget, pack odds) | 155 + 116 |

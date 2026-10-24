@@ -31,6 +31,20 @@ namespace Ascend.Game
         readonly HashSet<MonsterDummy> _spotted = new HashSet<MonsterDummy>();
 
         public int Slot { get; set; }
+        /// <summary>The current order (Follow / Hold / Focus), limited to what its species can learn.</summary>
+        public PartnerOrder Order { get; private set; } = PartnerOrder.Follow;
+        Vector3 _holdAt;
+        public const float GuardRadius = 5f;
+
+        /// <summary>Gives an order; returns the one it actually follows (Follow if it can't learn this one).</summary>
+        public PartnerOrder Command(PartnerOrder order)
+        {
+            AscendData.Db.Species.TryGetValue(_body.SpeciesId, out var s);
+            Order = Partners.OrdersFor(s, AscendData.Db.World.Taming).Contains(order) ? order : PartnerOrder.Follow;
+            if (Order == PartnerOrder.Hold) _holdAt = transform.position;
+            Target = null;
+            return Order;
+        }
         /// <summary>Stat multiplier from your level (Core Partners.LevelFactor); set when it joins and on your level-ups.</summary>
         public double LevelFactor { get; private set; } = 1;
 
@@ -88,7 +102,12 @@ namespace Ascend.Game
             CheckVictories();
             RoleStep();
 
-            if (Target == null || Target.IsDead || Target.IsPartner || Flat(Target.transform.position - _player.position).magnitude > EngageRange * 1.5f) Target = PickTarget();
+            if (Order == PartnerOrder.Focus)
+            {
+                var lockOn = _player.GetComponent<PlayerCombat>().LockTarget;
+                Target = lockOn != null && !lockOn.IsDead && !lockOn.IsPartner ? lockOn : null;
+            }
+            else if (Target == null || Target.IsDead || Target.IsPartner || Flat(Target.transform.position - Anchor).magnitude > Reach * 1.5f) Target = PickTarget();
             Vector3 goal;
             if (Target != null)
             {
@@ -101,6 +120,11 @@ namespace Ascend.Game
                     return;
                 }
                 goal = Target.transform.position;
+            }
+            else if (Order == PartnerOrder.Hold)
+            {
+                goal = _holdAt; // guard the spot
+                if (Flat(goal - transform.position).magnitude < 0.3f) return;
             }
             else
             {
@@ -179,8 +203,12 @@ namespace Ascend.Game
             }
         }
 
+        /// <summary>What it watches over: you, or the spot it holds.</summary>
+        Vector3 Anchor => Order == PartnerOrder.Hold ? _holdAt : _player.position;
+        float Reach => Order == PartnerOrder.Hold ? GuardRadius : EngageRange;
+
         MonsterDummy PickTarget() => FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None)
-            .Where(m => m != null && !m.IsDead && !m.IsPartner && Flat(m.transform.position - _player.position).magnitude <= EngageRange)
+            .Where(m => m != null && !m.IsDead && !m.IsPartner && Flat(m.transform.position - Anchor).magnitude <= Reach)
             .OrderBy(m => Flat(m.transform.position - transform.position).sqrMagnitude).FirstOrDefault();
 
         void Face(Vector3 dir, float dt)

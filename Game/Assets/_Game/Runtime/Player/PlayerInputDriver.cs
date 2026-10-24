@@ -12,6 +12,7 @@ namespace Ascend.Game
     ///   Block / parry: Q / RT · Lock-on: MMB / R3 (flick to switch) · Jump during a launcher follows the target up
     ///   Skills: 1–4 / hold RB + X, Y, A, B · Ultimate: R / L3 + R3 · Fire Bomb (quick item): G / D-pad up
     ///   Talk / gather: E / D-pad down (opens the NPC dialog, or gathers a herb patch, pine or scrap heap) · Healing potion: H / D-pad right · Bag: I / View · Bestiary: B
+    ///   Partner order (Follow / Hold / Focus): Z / LB
     ///   Tame: T / D-pad left (PlayerTaming: begin near a weakened monster, press again to offer)
     /// During Flash Time the world slows but the player keeps real-time speed; hit-stop freezes everyone.
     /// </summary>

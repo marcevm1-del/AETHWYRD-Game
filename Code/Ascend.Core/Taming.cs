@@ -32,6 +32,8 @@ namespace Ascend.Core
         public Dictionary<string, double> EnrageByBehavior { get; set; } = new Dictionary<string, double>();
         /// <summary>Real minutes between a partner coming over to nuzzle you, on average.</summary>
         public double NuzzleEveryMinutes { get; set; } = 8;
+        /// <summary>Family → none / intermediate / advanced (which orders it can learn).</summary>
+        public Dictionary<string, string> TrainabilityByFamily { get; set; } = new Dictionary<string, string>();
         public double RetrySec { get; set; } = 60;
         public int ActivePartners { get; set; } = 3;
         public int BondPerAssists { get; set; } = 3;
@@ -165,6 +167,9 @@ namespace Ascend.Core
         }
     }
 
+    /// <summary>Orders you can give partners: Follow (default), Hold (stay put and guard), Focus (attack your lock-on target).</summary>
+    public enum PartnerOrder { Follow, Hold, Focus }
+
     /// <summary>systems.md §7.2. Hauler and Mount come with cargo and riding.</summary>
     public enum PartnerRole { Striker, Vanguard, Support, Scout }
 
@@ -186,6 +191,24 @@ namespace Ascend.Core
         /// <summary>Evolution branches (systems.md §7.3): the species' variants (elemental, elder, ancient, regional…).</summary>
         public static List<SpeciesData> Branches(string speciesId, GameDatabase db) =>
             db.Species.Values.Where(x => x.BaseSpeciesId == speciesId).OrderBy(x => Rank.Parse(x.Rank).Value).ThenBy(x => x.Id).ToList();
+
+        /// <summary>The orders a species can learn (after RimWorld's trainability).</summary>
+        public static List<PartnerOrder> OrdersFor(SpeciesData s, TamingTuning t)
+        {
+            string level = s != null && t.TrainabilityByFamily.TryGetValue(s.Family ?? "", out var v) ? v : "intermediate";
+            var orders = new List<PartnerOrder> { PartnerOrder.Follow };
+            if (level == "intermediate" || level == "advanced") orders.Add(PartnerOrder.Hold);
+            if (level == "advanced") orders.Add(PartnerOrder.Focus);
+            return orders;
+        }
+
+        /// <summary>The next order in the cycle this species knows (wraps to Follow).</summary>
+        public static PartnerOrder NextOrder(PartnerOrder current, SpeciesData s, TamingTuning t)
+        {
+            var known = OrdersFor(s, t);
+            int i = known.IndexOf(current);
+            return known[(i + 1) % known.Count];
+        }
 
         public static bool CanEvolve(PartnerData p, GameDatabase db, TamingTuning t) =>
             p != null && !p.Evolved && p.Bond >= t.EvolveBond && Branches(p.SpeciesId, db).Count > 0;

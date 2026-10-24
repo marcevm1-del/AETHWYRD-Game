@@ -11,7 +11,9 @@ Ideas borrowed from games on the E: drive and from your own earlier projects. **
 - **Temper on a failed offer** — `enrageByBehavior` replaces the flat 35%: a moth never turns on you, a skittish boar bolts (5%), a pack hunter fights back 40%, an aggressive one 50%.
 - **Nuzzling** — partners come over to nuzzle you now and then (mean `nuzzleEveryMinutes` = 8 real minutes, exponential so it feels spontaneous); it counts toward Bond like a shared win.
 
-**To consider:** a per-species `trainability` that limits which partner orders a species can learn (Vanguard taunt, Scout call-outs) once partner commands exist; RimWorld's "bonded animal" grief when a partner is released could feed the Karma/Thread effect in systems.md §7.4.
+**Built since:** partner orders (Z / LB cycles Follow → Hold → Focus) limited by **trainability by family** (`taming.trainabilityByFamily`: beasts, birds and dragons learn all three; slimes, insects and spirits Follow and Hold; plants only Follow).
+
+**To consider:** RimWorld's "bonded animal" grief when a partner is released could feed the Karma/Thread effect in systems.md §7.4.
 
 ## Project Greyborn (yours) — `E:\project-greyborn\game\src\sim\botAI.ts`
 

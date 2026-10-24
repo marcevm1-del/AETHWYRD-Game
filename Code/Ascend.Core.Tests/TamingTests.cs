@@ -78,6 +78,14 @@ static class TamingTests
         Assert.True(System.Math.Abs(Partners.LevelFactor(rabbit, 11, T) - 1.6) < 1e-9, "ten levels above: +60%");
     }
 
+    public static void TrainabilityLimitsOrders()
+    {
+        Assert.Equal(3, Partners.OrdersFor(S("mon_horned_rabbit"), T).Count, "beasts learn follow, hold and focus");
+        Assert.Equal(2, Partners.OrdersFor(S("mon_blue_slime"), T).Count, "slimes: follow and hold");
+        Assert.Equal(1, Partners.OrdersFor(S("mon_mandrake"), T).Count, "a mandrake just follows");
+        Assert.True(Partners.NextOrder(PartnerOrder.Hold, S("mon_blue_slime"), T) == PartnerOrder.Follow, "the cycle wraps");
+    }
+
     public static void RolesComeFromBehaviour()
     {
         Assert.True(Partners.RoleOf(S("mon_horned_rabbit")) == PartnerRole.Scout, "skittish rabbit: scout");

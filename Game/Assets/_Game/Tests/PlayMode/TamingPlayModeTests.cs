@@ -218,6 +218,35 @@ namespace Ascend.Game.Tests
             Assert.AreEqual(1, bun.Data.Assists, "it counts toward bond");
         }
 
+        [UnityTest]
+        public IEnumerator PartnersHoldAndFocusOnOrder()
+        {
+            var bun = Bring("mon_horned_rabbit", "Bun");
+            yield return null;
+            _taming.CycleOrder();
+            Assert.AreEqual(PartnerOrder.Hold, bun.Order, "Z: hold here");
+            Vector3 held = bun.transform.position;
+            var cc = _player.GetComponent<CharacterController>();
+            cc.enabled = false; _player.transform.position = new Vector3(15, 0, 0); cc.enabled = true;
+            for (int i = 0; i < 120; i++) yield return null;
+            Assert.Less(Vector3.Distance(bun.transform.position, held), 1f, "it stays put while you walk off");
+
+            _taming.CycleOrder();
+            Assert.AreEqual(PartnerOrder.Focus, bun.Order, "Z again: focus my target");
+            var slime = Monster("mon_blue_slime", new Vector3(15, 0, 14)); // outside its usual 8 m engage range
+            _combat.LockTarget = slime;
+            for (int i = 0; i < 600 && bun.Hits == 0; i++) yield return null;
+            Assert.Greater(bun.Hits, 0, "it goes for the monster you've locked on to");
+        }
+
+        [Test]
+        public void ASlimeCantLearnFocus()
+        {
+            var wobble = Bring("mon_blue_slime", "Wobble");
+            Assert.AreEqual(PartnerOrder.Follow, wobble.Command(PartnerOrder.Focus), "slimes follow instead");
+            Assert.AreEqual(PartnerOrder.Hold, wobble.Command(PartnerOrder.Hold), "but can hold");
+        }
+
         [Test]
         public void PartnersAreSaved()
         {

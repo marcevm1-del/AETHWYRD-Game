@@ -94,6 +94,8 @@
   "wildnessWeight": 0.3,
   "enrageByBehavior": { "Passive": 0, "Skittish": 0.05, "Ambush": 0.25, "Territorial": 0.3, "Guardian": 0.3, "Swarm": 0.35, "Pack": 0.4, "Aggressive": 0.5 },
   "nuzzleEveryMinutes": 8,
+  "trainabilityNotes": "After RimWorld's trainability (none / intermediate / advanced): which partner orders a family can learn. none = Follow only; intermediate = Follow, Hold; advanced = Follow, Hold, Focus. Families not listed are intermediate.",
+  "trainabilityByFamily": { "Beasts": "advanced", "Avians": "advanced", "Lycanthropes": "advanced", "Reptiles": "advanced", "Familiars & Gentle Creatures": "advanced", "Chimeras & Mythic Beasts": "advanced", "Dragons": "advanced", "Slimes": "intermediate", "Insects & Arachnids": "intermediate", "Killer Insects": "intermediate", "Elementals & Spirits": "intermediate", "Aquatic": "intermediate", "Plants & Fungi": "none" },
   "untameableFamilies": ["Goblinoids", "Humanoid Enemies", "Undead", "Constructs & Mimics", "Demons"],
   "favouriteFood": {
    "Slimes": "itm_healing_herb",

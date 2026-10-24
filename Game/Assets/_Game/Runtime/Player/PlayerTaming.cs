@@ -22,7 +22,8 @@ namespace Ascend.Game
         PlayerInventory _inv;
         PlayerMotor _motor;
         IRandom _rng;
-        InputAction _tame;
+        InputAction _tame, _order;
+        public PartnerOrder Order { get; private set; } = PartnerOrder.Follow;
         bool _wasDodging;
         readonly Dictionary<MonsterDummy, float> _remembered = new Dictionary<MonsterDummy, float>();
         readonly List<PartnerFollower> _following = new List<PartnerFollower>();
@@ -46,15 +47,18 @@ namespace Ascend.Game
             _combat.LeveledUp += (_, to) => { foreach (var f in _following) if (f != null) f.SetLevel(to); };
             _tame = new InputAction("Tame", InputActionType.Button);
             _tame.AddBinding("<Keyboard>/t"); _tame.AddBinding("<Gamepad>/dpad/left");
+            _order = new InputAction("PartnerOrder", InputActionType.Button);
+            _order.AddBinding("<Keyboard>/z"); _order.AddBinding("<Gamepad>/leftShoulder");
         }
 
-        void OnEnable() => _tame.Enable();
-        void OnDisable() => _tame.Disable();
-        void OnDestroy() { _tame.Dispose(); if (_combat != null) _combat.HitLanded -= OnHitLanded; }
+        void OnEnable() { _tame.Enable(); _order.Enable(); }
+        void OnDisable() { _tame.Disable(); _order.Disable(); }
+        void OnDestroy() { _tame.Dispose(); _order.Dispose(); if (_combat != null) _combat.HitLanded -= OnHitLanded; }
 
         void Update()
         {
             if (_tame.WasPressedThisFrame() && !UiModal.Any) Press();
+            if (_order.WasPressedThisFrame() && !UiModal.Any) CycleOrder();
             if (Encounter == null) return;
             if (Target == null || Target.IsDead) { Toast("Too much — it's gone. Overkill ruins a tame."); End(); return; }
             Vector3 d = Target.transform.position - transform.position; d.y = 0;
@@ -150,6 +154,23 @@ namespace Ascend.Game
             f.Nuzzled += OnSharedVictory; // a quiet moment together counts like a shared win
             _following.Add(f);
             f.SetLevel(_combat.Progress.Level);
+            f.Command(Order);
+        }
+
+        /// <summary>Z / left shoulder: Follow → Hold → Focus. Each partner takes the order if its species can learn it.</summary>
+        public void CycleOrder()
+        {
+            if (_following.Count == 0) return;
+            Order = (PartnerOrder)(((int)Order + 1) % 3);
+            var parts = new List<string>();
+            foreach (var f in _following)
+            {
+                if (f == null) continue;
+                var took = f.Command(Order);
+                parts.Add(took == Order ? f.Data?.Name ?? "partner" : $"{f.Data?.Name} (can't learn it; follows)");
+            }
+            string what = Order == PartnerOrder.Follow ? "Follow me" : Order == PartnerOrder.Hold ? "Hold here" : "Focus my target";
+            Toast($"{what}: " + string.Join(", ", parts), 3f);
         }
 
         void OnHitLanded(MonsterDummy m, DamageResult r) { if (Encounter != null) Encounter.Attacked(); }

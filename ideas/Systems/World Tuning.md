@@ -105,6 +105,20 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `taming.enrageByBehavior.Pack` | 0.4 |
 | `taming.enrageByBehavior.Aggressive` | 0.5 |
 | `taming.nuzzleEveryMinutes` | 8 |
+| `taming.trainabilityNotes` | After RimWorld's trainability (none / intermediate / advanced): which partner orders a family can learn. none = Follow only; intermediate = Follow, Hold; advanced = Follow, Hold, Focus. Families not listed are intermediate. |
+| `taming.trainabilityByFamily.Beasts` | advanced |
+| `taming.trainabilityByFamily.Avians` | advanced |
+| `taming.trainabilityByFamily.Lycanthropes` | advanced |
+| `taming.trainabilityByFamily.Reptiles` | advanced |
+| `taming.trainabilityByFamily.Familiars & Gentle Creatures` | advanced |
+| `taming.trainabilityByFamily.Chimeras & Mythic Beasts` | advanced |
+| `taming.trainabilityByFamily.Dragons` | advanced |
+| `taming.trainabilityByFamily.Slimes` | intermediate |
+| `taming.trainabilityByFamily.Insects & Arachnids` | intermediate |
+| `taming.trainabilityByFamily.Killer Insects` | intermediate |
+| `taming.trainabilityByFamily.Elementals & Spirits` | intermediate |
+| `taming.trainabilityByFamily.Aquatic` | intermediate |
+| `taming.trainabilityByFamily.Plants & Fungi` | none |
 | `taming.untameableFamilies` | Goblinoids, Humanoid Enemies, Undead, Constructs & Mimics, Demons |
 | `taming.favouriteFood.Slimes` | itm_healing_herb |
 | `taming.favouriteFood.Beasts` | itm_mat_prime_meat |
