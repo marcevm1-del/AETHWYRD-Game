@@ -76,6 +76,8 @@ namespace Ascend.Game
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
             if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
             if (TryGetComponent<PlayerBestiary>(out var book)) s.Bestiary = book.Book.Save();
+            var withMe = FindObjectsByType<CompanionAI>(FindObjectsSortMode.None).FirstOrDefault(c => c.Joined);
+            s.Companion = withMe != null ? withMe.GetComponent<QuestGiver>().NpcId : null;
             s.GatherNodes = GatherNode.All.Where(n => n != null && !n.Ready).ToDictionary(n => n.Key, n => n.ReadyAtHour);
             if (TryGetComponent<PlayerCrafting>(out var crafting)) { s.KnownRecipes = crafting.Crafter.Known.ToList(); s.HandledItems = crafting.Crafter.SeenItems.ToList(); }
             if (TryGetComponent<PlayerTaming>(out var taming))
@@ -131,6 +133,12 @@ namespace Ascend.Game
             if (s.Sieges != null && SiegeDirector.Instance != null && s.Sieges.TryGetValue(SiegeDirector.Instance.Threat.RegionId, out var sg))
                 SiegeDirector.Instance.Load(sg.State, sg.Escalation, sg.DoneDays, sg.LastWeek);
             if (TryGetComponent<PlayerBestiary>(out var book)) book.Load(s.Bestiary);
+            foreach (var c in FindObjectsByType<CompanionAI>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            {
+                bool mine = s.Companion != null && c.GetComponent<QuestGiver>().NpcId == s.Companion;
+                if (mine && !c.Joined) c.Join(_combat);
+                else if (!mine && c.Joined) c.Leave();
+            }
             foreach (var n in GatherNode.All) if (n != null) n.ReadyAtHour = s.GatherNodes.TryGetValue(n.Key, out var h) ? h : double.MinValue;
             if (TryGetComponent<PlayerCrafting>(out var crafting)) crafting.Load(s.KnownRecipes, s.HandledItems);
             if (TryGetComponent<PlayerTaming>(out var taming)) taming.Load(s.Partners);

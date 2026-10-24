@@ -26,6 +26,10 @@ namespace Ascend.EditorTools
             cart.Route = new[] { new Vector3(5f, 0, 22.5f), new Vector3(0f, 0, 22.5f), new Vector3(0f, 0, 17f), new Vector3(14f, 0, 10f), new Vector3(22f, 0, 2f) };
             // Whisperwood side, by the treeline waystone and the ruins.
             Npc(root, "npc_lyra_brightwood", new Vector3(3f, 0, 27f), new Color(0.95f, 0.8f, 0.4f));
+            // Lyra can join you as a companion (companion_field_ai.md Ring 0 prototype); off until she does.
+            var lyra = root.Find("npc_lyra_brightwood").gameObject.AddComponent<CompanionAI>();
+            lyra.Followers = new[] { root.Find("Label_npc_lyra_brightwood"), root.Find("Marker_npc_lyra_brightwood") };
+            lyra.enabled = false;
             Npc(root, "npc_fennick_reed", new Vector3(-7f, 0, 29f), new Color(0.45f, 0.75f, 0.45f));
             Npc(root, "npc_eolande_fairweather", new Vector3(7f, 0, 30f), new Color(0.55f, 0.5f, 0.9f));
             Npc(root, "npc_dax_rowan", new Vector3(-12f, 0, 31f), new Color(0.8f, 0.25f, 0.25f));

@@ -59,6 +59,8 @@ namespace Ascend.Game
 
         /// <summary>Promotions happen at the Guild desk (ranks.md §3).</summary>
         public const string GuildReceptionist = "npc_mina_feathersby";
+        /// <summary>Lyra travels with you once her opening quest is done (ranks.md §4: one companion at rank F).</summary>
+        public const string CompanionGate = "qst_main_status_granted";
 
         enum Page { Main, Buy, Sell, Buyback, Rooms, Workbench }
         Page _page;
@@ -100,6 +102,20 @@ namespace Ascend.Game
             var escort = _giver.GetComponent<EscortNpc>();
             if (escort != null && !escort.Travelling && escort.JobWaiting(q))
                 _options.Add(new Option { Text = "Set off — escort them to Millbrook", Act = () => { escort.SetOff(); Close(); } });
+            var companion = _giver.GetComponent<CompanionAI>();
+            if (companion != null)
+            {
+                var me = q.GetComponent<PlayerCombat>();
+                if (companion.Joined)
+                {
+                    _options.Add(new Option { Text = CompanionAI.QuietBanter ? "Talk more on the road" : "Talk less on the road", Act = () => { CompanionAI.QuietBanter = !CompanionAI.QuietBanter; _line = CompanionAI.QuietBanter ? "Fine. Quiet it is." : "Ha — you'll regret that."; } });
+                    _options.Add(new Option { Text = "Part ways for now", Act = () => { companion.Leave(); Close(); } });
+                }
+                else if (q.Log.Completed.Contains(CompanionGate))
+                    _options.Add(new Option { Text = "Travel together", Act = () => { companion.Join(me); _line = "Lead on. I've got your back."; Close(); } });
+                else
+                    _options.Add(new Option { Text = "Travel together? (after Status Granted)", Act = () => _line = "Prove yourself out there first. Then we'll talk." });
+            }
             var board = _giver.GetComponent<QuestBoard>();
             if (board != null)
             {

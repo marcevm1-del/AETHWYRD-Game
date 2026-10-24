@@ -177,8 +177,8 @@ namespace Ascend.Game
             if (_body.IsAirborne) { ReleaseToken(); ShowTelegraph(false); return; } // juggled: no thinking in the air
 
             // Target: you, unless a partner draws it (a Vanguard close by, or a partner fighting it that's closer than you).
-            _partnerTarget = PickPartnerTarget();
-            Vector3 targetPos = _partnerTarget != null ? _partnerTarget.transform.position : _player.transform.position;
+            _allyTarget = PickAllyTarget();
+            Vector3 targetPos = _allyTarget != null ? _allyTarget.Transform.position : _player.transform.position;
             Vector3 toPlayer = targetPos - transform.position; toPlayer.y = 0;
             Vector3 toHome = _home - transform.position; toHome.y = 0;
             bool hasToken = _holdsToken || AggroDirector.Tokens.Holders.Count < AggroDirector.Tokens.Capacity;
@@ -262,19 +262,23 @@ namespace Ascend.Game
         ///   charge / leap  → a straight-line dash that can't turn; a miss into an obstacle leaves it stuck (punish window)
         ///   melee / heavy / grab / aoe → an immediate hit check in front (aoe all around)
         /// </summary>
-        MonsterDummy _partnerTarget;
-        public MonsterDummy PartnerTarget => _partnerTarget;
+        IAlly _allyTarget;
+        /// <summary>The partner or companion it's fighting instead of you (null: you).</summary>
+        public IAlly AllyTarget => _allyTarget;
+        /// <summary>The tamed partner it's fighting, if that's who (tests and HUD).</summary>
+        public MonsterDummy PartnerTarget => _allyTarget is PartnerFollower f ? f.Body : null;
 
-        MonsterDummy PickPartnerTarget()
+        /// <summary>Allies draw it when they taunt from close by (a Vanguard), or when they're fighting it and closer than you.</summary>
+        IAlly PickAllyTarget()
         {
-            MonsterDummy best = null; float bestD = float.MaxValue;
+            IAlly best = null; float bestD = float.MaxValue;
             float toPlayer = Vector3.Distance(Flat(_player.transform.position), Flat(transform.position));
-            foreach (var f in PartnerFollower.ActiveFollowers)
+            foreach (var a in Allies.All)
             {
-                if (f == null || f.Body == null || f.Body.IsDead) continue;
-                float d = Vector3.Distance(Flat(f.transform.position), Flat(transform.position));
-                bool draws = (f.Role == PartnerRole.Vanguard && d <= 6f) || (f.Target == _body && d < toPlayer);
-                if (draws && d < bestD) { best = f.Body; bestD = d; }
+                if (a == null || a.Transform == null || a.Down) continue;
+                float d = Vector3.Distance(Flat(a.Transform.position), Flat(transform.position));
+                bool draws = (a.Taunts && d <= 6f) || (a.Engaged == _body && d < toPlayer);
+                if (draws && d < bestD) { best = a; bestD = d; }
             }
             return best;
         }
@@ -286,11 +290,11 @@ namespace Ascend.Game
             Strikes++;
             int damage = RollDamage(atk.Power);
             var telegraph = _brain.CurrentTelegraph;
-            if (_partnerTarget != null)
+            if (_allyTarget != null)
             {
-                // Partners don't parry or dodge (yet): ranged attacks and charges simply land if it's in reach.
+                // Allies don't parry: ranged attacks and charges simply land if they're in reach (companions dodge wind-ups instead).
                 float partnerReach = MonsterBrain.IsRanged(t.Kind) ? 15f : MonsterBrain.IsGapCloser(t.Kind) ? DashMaxM : (float)(_brain.ReachOf(t) + 0.6);
-                if (toPlayer.magnitude <= partnerReach) _partnerTarget.TakeHit(damage, HitWeight.Medium, transform.position, 3);
+                if (toPlayer.magnitude <= partnerReach) _allyTarget.TakeAllyHit(damage, transform.position);
                 return;
             }
             if (MonsterBrain.IsRanged(t.Kind))

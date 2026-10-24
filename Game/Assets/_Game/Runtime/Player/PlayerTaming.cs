@@ -160,9 +160,15 @@ namespace Ascend.Game
         /// <summary>Z / left shoulder: Follow → Hold → Focus. Each partner takes the order if its species can learn it.</summary>
         public void CycleOrder()
         {
-            if (_following.Count == 0) return;
+            var companion = FindObjectsByType<CompanionAI>(FindObjectsSortMode.None).FirstOrDefault(c => c.Joined);
+            if (_following.Count == 0 && companion == null) return;
             Order = (PartnerOrder)(((int)Order + 1) % 3);
             var parts = new List<string>();
+            if (companion != null)
+            {
+                companion.Command(Order == PartnerOrder.Hold ? CompanionOrder.Hold : Order == PartnerOrder.Focus ? CompanionOrder.Focus : CompanionOrder.Follow);
+                parts.Add(companion.Name);
+            }
             foreach (var f in _following)
             {
                 if (f == null) continue;

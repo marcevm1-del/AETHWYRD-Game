@@ -56,6 +56,21 @@
   "regular": { "guestNights": 3, "regularNights": 10, "familyNights": 30 },
   "tab": { "creditLimitCopper": 600, "ranks": ["F", "E"] }
  },
+ "companions": {
+  "notes": "Companion field AI, Ring 0 prototype (12_Systems/companion_field_ai.md). Distances in metres, times in seconds; assistPower is a multiple of a normal hit.",
+  "followDistance": 2.5,
+  "personalSpace": 1.4,
+  "regroupDistance": 20,
+  "leash": 12,
+  "reachM": 1.8,
+  "attackIntervalSec": 1.1,
+  "attackPower": 1.0,
+  "assistPower": 2.5,
+  "dodgeCooldownSec": 2.0,
+  "dodgeDistance": 2.5,
+  "downedSec": 20,
+  "banterCooldownSec": 25
+ },
  "bestiary": {
   "notes": "hud_and_ui.md §9 appraisal tiers for the Bestiary: 1 seen (name, rank, Menace), 2 HP, element and weakness, 3 attacks, drops and lore; the stamp needs tier 3 and every drop found. Taming fills an entry to tier 3 at once (systems.md §7.4).",
   "seenRadius": 20,

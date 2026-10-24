@@ -12,6 +12,7 @@ namespace Ascend.Core
         public InnTuning Inns { get; set; } = new InnTuning();
         public TamingTuning Taming { get; set; } = new TamingTuning();
         public BestiaryTuning Bestiary { get; set; } = new BestiaryTuning();
+        public CompanionTuning Companions { get; set; } = new CompanionTuning();
     }
 
     public sealed class CurrencyTuning

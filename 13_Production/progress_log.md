@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Companion: Lyra | companion_field_ai.md Ring 0 prototype: Lyra joins after Status Granted ('Travel together'), follows without crowding or body-blocking you, takes Z / LB orders (Follow, Hold, Focus → assist your last target), dodges wind-ups beside her, lands a Rising Slash on monsters you stagger, regroups instead of teleporting into fights, is only ever downed (back after 20 s), and shares her read on new monsters out of combat (quiet mode in her dialog). Decision order in Core CompanionBrain; monsters now fight back at any ally (IAlly) | 164 + 127 |
 | Boss phases | Data/Monsters/boss_phases.json (validated): Grukk duels, calls three goblin archers at 66% HP and rages at 33% (faster, harder hitting), as bosses_and_calamities.md describes; a boss health bar with the phase shows on the HUD; Tyrants never respawn. Thresholds flagged in Canon §6 | 160 + 121 |
 | Partner orders | Z / LB cycles Follow → Hold (guard a spot) → Focus (attack your lock-on target); each species learns orders by trainability per family (after RimWorld): beasts, birds and dragons all three, slimes and spirits Follow and Hold, plants only Follow | 158 + 120 |
 | Pack calls | From Greyborn's fight-or-flee odds: pack and swarm monsters cry out when hit and their own kind within 12 m join in; a pack hunter left alone and hurt falls back home | 157 + 118 |

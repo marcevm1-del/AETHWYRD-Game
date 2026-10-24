@@ -56,6 +56,19 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `inns.regular.familyNights` | 30 |
 | `inns.tab.creditLimitCopper` | 600 |
 | `inns.tab.ranks` | F, E |
+| `companions.notes` | Companion field AI, Ring 0 prototype (12_Systems/companion_field_ai.md). Distances in metres, times in seconds; assistPower is a multiple of a normal hit. |
+| `companions.followDistance` | 2.5 |
+| `companions.personalSpace` | 1.4 |
+| `companions.regroupDistance` | 20 |
+| `companions.leash` | 12 |
+| `companions.reachM` | 1.8 |
+| `companions.attackIntervalSec` | 1.1 |
+| `companions.attackPower` | 1 |
+| `companions.assistPower` | 2.5 |
+| `companions.dodgeCooldownSec` | 2 |
+| `companions.dodgeDistance` | 2.5 |
+| `companions.downedSec` | 20 |
+| `companions.banterCooldownSec` | 25 |
 | `bestiary.notes` | hud_and_ui.md §9 appraisal tiers for the Bestiary: 1 seen (name, rank, Menace), 2 HP, element and weakness, 3 attacks, drops and lore; the stamp needs tier 3 and every drop found. Taming fills an entry to tier 3 at once (systems.md §7.4). |
 | `bestiary.seenRadius` | 20 |
 | `bestiary.tier2Kills` | 3 |

@@ -41,6 +41,8 @@ namespace Ascend.Core
         public List<PartnerData> Partners { get; set; } = new List<PartnerData>();
         public List<string> KnownRecipes { get; set; } = new List<string>();
         public List<string> HandledItems { get; set; } = new List<string>();
+        /// <summary>The companion travelling with you (NPC id), or null.</summary>
+        public string Companion { get; set; }
         public RankLetter GuildRank { get; set; } = RankLetter.F;
         public int RankGp { get; set; }
         public int QuestsAtRank { get; set; }

@@ -48,6 +48,7 @@ namespace Ascend.Game.Tests
                 Assert.IsTrue(givers.Contains(npc), npc + " is in the field");
             Assert.IsTrue(Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Where(g => g.GetComponent<QuestBoard>() == null).All(g => g.HasMarker), "every NPC keeps its !/? marker in the saved scene");
             Assert.IsNotNull(Object.FindFirstObjectByType<EscortNpc>(), "Ottoline's escort");
+            Assert.IsTrue(Object.FindObjectsByType<CompanionAI>(FindObjectsInactive.Include, FindObjectsSortMode.None).Any(c => c.GetComponent<QuestGiver>().NpcId == "npc_lyra_brightwood" && !c.enabled), "Lyra is ready to join (not yet travelling)");
             Assert.IsNotNull(Object.FindFirstObjectByType<QuestBoard>(), "the guild board");
             var nodes = Object.FindObjectsByType<GatherNode>(FindObjectsSortMode.None);
             Assert.GreaterOrEqual(nodes.Length, 10, "gathering nodes");

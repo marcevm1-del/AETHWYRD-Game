@@ -14,8 +14,14 @@ namespace Ascend.Game
     /// raise its Bond (Core Partners.Assist), which unlocks evolution at Bond 5.
     /// </summary>
     [RequireComponent(typeof(MonsterDummy))]
-    public sealed class PartnerFollower : MonoBehaviour
+    public sealed class PartnerFollower : MonoBehaviour, IAlly
     {
+        Transform IAlly.Transform => transform;
+        bool IAlly.Down => KnockedOut;
+        MonsterDummy IAlly.Engaged => Target;
+        bool IAlly.Taunts => Role == PartnerRole.Vanguard;
+        void IAlly.TakeAllyHit(int damage, Vector3 from) => _body.TakeHit(damage, HitWeight.Medium, from, 3);
+
         public const float FollowDistance = 2.5f, EngageRange = 8f, AttackInterval = 1.2f, ReachM = 1.4f, ScoutRange = 18f;
 
         static readonly List<PartnerFollower> _active = new List<PartnerFollower>();
@@ -83,8 +89,8 @@ namespace Ascend.Game
             Role = Partners.RoleOf(s);
         }
 
-        void OnEnable() { if (!_active.Contains(this)) _active.Add(this); }
-        void OnDisable() => _active.Remove(this);
+        void OnEnable() { if (!_active.Contains(this)) _active.Add(this); Allies.Add(this); }
+        void OnDisable() { _active.Remove(this); Allies.Remove(this); }
 
         static TamingTuning T => AscendData.Db.World.Taming;
 
