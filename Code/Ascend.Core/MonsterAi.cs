@@ -78,6 +78,8 @@ namespace Ascend.Core
         public double HpFraction;
         /// <summary>Whether this monster holds (or just got) an aggro token. Only token holders start attacks.</summary>
         public bool HasToken;
+        /// <summary>Living monsters of its own species nearby (pack odds, after Project Greyborn's bot AI).</summary>
+        public int PackmatesNear;
     }
 
     /// <summary>What the brain wants this tick.</summary>
@@ -123,6 +125,19 @@ namespace Ascend.Core
         public double WindupProgress => State == AiState.Windup && _windup > 0 ? Math.Min(1, _stateTime / _windup) : 0;
         public string Pattern => _motion.Behavior.AiPattern ?? "aggressive_chase";
         public bool IsSkittish => Pattern.StartsWith("skittish");
+        public bool IsPack => Pattern.StartsWith("pack") || Pattern.StartsWith("swarm");
+
+        /// <summary>Seconds left of a raised alarm (a packmate was attacked): it comes for you even from beyond its alert radius.</summary>
+        public double AlertedFor { get; private set; }
+        public const double AlarmSec = 6, LoneRetreatHp = 0.5;
+
+        /// <summary>A packmate cried out: idle monsters join the fight (skittish ones scatter).</summary>
+        public void Alert()
+        {
+            AlertedFor = AlarmSec;
+            if (State == AiState.Idle) Enter(IsSkittish ? AiState.Flee : AiState.Chase);
+        }
+
         public bool IsTerritorial => Pattern.StartsWith("territorial") || Pattern.StartsWith("guardian");
 
         public MonsterBrain(SpeciesData species, SpeciesMotion motion, IReadOnlyDictionary<string, AttackData> attacks, IRandom rng)
@@ -169,6 +184,7 @@ namespace Ascend.Core
             foreach (var k in _cooldownLeft.Keys.ToList()) _cooldownLeft[k] = Math.Max(0, _cooldownLeft[k] - dt);
             _stateTime += dt;
             var b = _motion.Behavior;
+            if (AlertedFor > 0) { AlertedFor = Math.Max(0, AlertedFor - dt); s.DistanceToPlayer = Math.Min(s.DistanceToPlayer, b.AlertRadius); }
             var nav = _motion.NavAgent;
             var cmd = new AiCommand { Move = AiMove.None, Speed = 0 };
 
@@ -176,6 +192,8 @@ namespace Ascend.Core
             double leash = IsTerritorial ? Math.Min(b.LeashRadius, b.AlertRadius * 1.5) : b.LeashRadius;
             bool busy = State == AiState.Windup || State == AiState.Active || State == AiState.Recovery || State == AiState.Staggered;
             if (!busy && State != AiState.Return && State != AiState.Idle && s.DistanceFromHome > leash) Enter(AiState.Return);
+            // A pack hunter left alone and hurt falls back home instead of fighting on (Greyborn's fight-or-flee odds).
+            if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < LoneRetreatHp && State == AiState.Chase) Enter(AiState.Return);
             if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= b.RetreatHpPct && State != AiState.Return)
                 Enter(AiState.Flee);
 

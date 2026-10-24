@@ -81,8 +81,32 @@ namespace Ascend.Game
         float _hopLeft;
         public int Hops { get; private set; }
 
+        public const float PackCallRadius = 12f, PackmateRadius = 10f;
+        static readonly System.Collections.Generic.List<MonsterController> _registry = new System.Collections.Generic.List<MonsterController>();
+        void OnEnable() { if (!_registry.Contains(this)) _registry.Add(this); }
+        void OnDisable() => _registry.Remove(this);
+
+        int PackmatesNear()
+        {
+            int n = 0;
+            foreach (var c in _registry)
+                if (c != this && c != null && c._body != null && !c._body.IsDead && c._body.SpeciesId == _body.SpeciesId
+                    && Flat(c.transform.position - transform.position).magnitude <= PackmateRadius) n++;
+            return n;
+        }
+
+        /// <summary>Pack and swarm monsters cry out when hit: their own kind nearby join the fight.</summary>
+        void CallThePack()
+        {
+            if (_brain == null || !_brain.IsPack) return;
+            foreach (var c in _registry)
+                if (c != this && c != null && c._brain != null && c._body != null && !c._body.IsDead && c._body.SpeciesId == _body.SpeciesId
+                    && Flat(c.transform.position - transform.position).magnitude <= PackCallRadius) c._brain.Alert();
+        }
+
         void OnDamaged()
         {
+            CallThePack();
             if (!_hopper || _body.IsDead || _player == null || _hopLeft > 0f || IsDashing) return;
             if (_body.Hp > _body.MaxHp * HopHpFraction || _rng.NextDouble() >= HopChance) return;
             Vector3 away = Flat(transform.position - _player.transform.position);
@@ -117,6 +141,7 @@ namespace Ascend.Game
             {
                 DistanceToPlayer = toPlayer.magnitude, DistanceFromHome = toHome.magnitude,
                 HpFraction = _body.MaxHp > 0 ? _body.Hp / (double)_body.MaxHp : 1, HasToken = hasToken,
+                PackmatesNear = _brain.IsPack ? PackmatesNear() : 0,
             });
             if (_brain.State == AiState.Windup && !_holdsToken) _holdsToken = AggroDirector.Tokens.TryTake(_tokenId);
             if (_brain.State == AiState.Windup && _lastState != AiState.Windup) CombatFx.Play(CombatFx.Sfx.Telegraph, transform.position, 0.6f);

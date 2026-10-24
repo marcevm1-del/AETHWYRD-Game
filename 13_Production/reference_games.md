@@ -24,7 +24,7 @@ Your 4v4 evolution PvP game (TypeScript, three.js). Being yours, its code can be
 **To consider:**
 - **Utility goals with hysteresis** (`think`): score every option, add a little noise and a bonus for the current goal so bots don't flip-flop. A good fit for partner AI once partners choose between fighting, fetching, scouting and following.
 - **A path budget** (`pathBudget`): at most a few A* searches per tick, so many monsters repathing at once can't cause a hitch — needed when Ring 1 gets a navmesh.
-- **Fight-or-flee odds** (`near.length` vs allies): a pack monster could check its packmates before committing, and fall back to them when alone.
+- ~~**Fight-or-flee odds**~~ — **built:** pack and swarm monsters (105 species by their aiPattern) cry out when hit, so their own kind within 12 m join in even from beyond their alert radius; a pack hunter left alone below half HP falls back home.
 - **Evolution stages by level** (`formForLevel`, `stageForLevel`): Greyborn's three stages over 20 levels map naturally onto the Reborn Monster origin in `04_Classes/monster_evolution.md`.
 
 ## Grounded (Obsidian) and Subnautica (Unknown Worlds) — mechanics from play, not files

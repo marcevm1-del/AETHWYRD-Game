@@ -175,6 +175,23 @@ namespace Ascend.Game.Tests
             Assert.AreEqual(0, goblin.Hops, "an aggressive goblin stands its ground");
         }
 
+        [UnityTest]
+        public IEnumerator HittingOneAntBringsTheSwarm()
+        {
+            var a = Spawn("mon_giant_ant", new Vector3(0, 0, 25f));
+            var b = Spawn("mon_giant_ant", new Vector3(3, 0, 27f));
+            var c = Spawn("mon_giant_ant", new Vector3(-3, 0, 27f));
+            for (int i = 0; i < 10; i++) yield return null;
+            Assert.AreEqual(AiState.Idle, b.Brain.State, "too far away to have noticed you");
+            a.GetComponent<MonsterDummy>().TakeHit(1, HitWeight.Light, _player.transform.position, 0);
+            yield return null;
+            Assert.AreNotEqual(AiState.Idle, b.Brain.State, "its swarm-mates answer the call");
+            Assert.AreNotEqual(AiState.Idle, c.Brain.State);
+            float zb = b.transform.position.z;
+            for (int i = 0; i < 60; i++) { _motor.Tick(Vector3.zero, false, false, Time.deltaTime); yield return null; }
+            Assert.Less(b.transform.position.z, zb - 1f, "and come for you");
+        }
+
         [Test]
         public void AGrabHoldsThePlayerForAMoment()
         {

@@ -130,4 +130,20 @@ static class MonsterStunTests
         Assert.True(!Repo.Db.Motion["mon_goblin"].Locomotion.Flies, "goblins walk");
         Assert.True(Repo.Db.Motion["mon_lantern_moth"].HeightM > 0, "heights are read");
     }
+
+    public static void APackCallBringsTheSwarmAndALoneHurtHunterFallsBack()
+    {
+        var ant = new MonsterBrain(Repo.Db.Species["mon_giant_ant"], Repo.Db.Motion["mon_giant_ant"], Repo.Db.Attacks, new DeterministicRandom(7));
+        Assert.True(ant.IsPack, "ants swarm");
+        double alert = Repo.Db.Motion["mon_giant_ant"].Behavior.AlertRadius;
+        ant.Tick(0.1, new AiSense { DistanceToPlayer = alert * 3, HpFraction = 1, PackmatesNear = 3 });
+        Assert.True(ant.State == AiState.Idle, "too far to notice");
+        ant.Alert();
+        Assert.True(ant.State == AiState.Chase, "a packmate's cry brings it");
+        ant.Tick(0.1, new AiSense { DistanceToPlayer = alert * 3, HpFraction = 1, PackmatesNear = 3 });
+        Assert.True(ant.State == AiState.Chase, "it keeps coming while the alarm lasts");
+        ant.Tick(0.1, new AiSense { DistanceToPlayer = 2, HpFraction = 0.3, PackmatesNear = 0, DistanceFromHome = 5 });
+        Assert.True(ant.State == AiState.Return, "alone and hurt: back to the nest");
+        Assert.True(!new MonsterBrain(Repo.Db.Species["mon_goblin"], Repo.Db.Motion["mon_goblin"], Repo.Db.Attacks, new DeterministicRandom(7)).IsPack, "goblins are aggressive chasers, not pack hunters");
+    }
 }
