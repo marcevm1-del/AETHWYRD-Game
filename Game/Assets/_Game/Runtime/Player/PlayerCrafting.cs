@@ -21,6 +21,25 @@ namespace Ascend.Game
         {
             _inv = GetComponent<PlayerInventory>();
             Crafter = new Crafter(AscendData.Db.Recipes);
+            _inv.Items.Changed += NoticeItems;
+        }
+
+        void OnDestroy() { if (_inv != null) _inv.Items.Changed -= NoticeItems; }
+
+        /// <summary>Handling a new material may give you an idea (Grounded's analyzer / Subnautica's scanner; design §6.2).</summary>
+        void NoticeItems()
+        {
+            foreach (var id in _inv.Items.Items.Keys.ToList())
+                foreach (var r in Crafter.Handle(id))
+                    _inv.Toast($"Idea: you could make a {r.Name} from these — try it at a {r.Station}.", 5f);
+        }
+
+        public bool Experiment(RecipeData r, string atNpcId)
+        {
+            var result = Crafter.Experiment(r.Id, _inv.Items, atNpcId);
+            if (result == CraftResult.Ok) _inv.Toast($"You worked it out: {r.Name}! Recipe learned.", 5f);
+            else if (result == CraftResult.MissingMaterials) _inv.Toast("To experiment you need every material: " + InputsText(r), 5f);
+            return result == CraftResult.Ok;
         }
 
         public bool Learn(RecipeData r, string atNpcId)
@@ -46,6 +65,6 @@ namespace Ascend.Game
 
         public static string Name(string itemId) => AscendData.Db.Items.TryGetValue(itemId, out var it) ? it.Name : itemId;
 
-        public void Load(IEnumerable<string> known) => Crafter.Load(known);
+        public void Load(IEnumerable<string> known, IEnumerable<string> seen = null) => Crafter.Load(known, seen);
     }
 }

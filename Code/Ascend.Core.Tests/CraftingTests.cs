@@ -48,4 +48,19 @@ static class CraftingTests
         c.Load(new[] { "rcp_fire_bomb", "rcp_gone_from_data" });
         Assert.True(c.Knows("rcp_fire_bomb") && !c.Knows("rcp_gone_from_data"), "unknown ids are dropped");
     }
+
+    public static void HandlingEveryMaterialGivesAnIdeaYouCanTestAtTheForge()
+    {
+        var c = New();
+        var r = c.Recipe("rcp_carapace_cap");
+        Assert.True(!c.IsHypothesis(r), "no idea yet");
+        Assert.Equal(0, c.Handle("itm_mat_carapace_shard").Count, "one material isn't enough");
+        var ideas = c.Handle("itm_mat_pelt");
+        Assert.True(ideas.Exists(x => x.Id == "rcp_carapace_cap"), "the second material sparks the idea");
+        var inv = new Inventory(); inv.Add("itm_mat_carapace_shard", 3); inv.Add("itm_mat_pelt", 1);
+        Assert.True(c.Experiment("rcp_carapace_cap", inv, null) == CraftResult.WrongStation, "needs the forge");
+        Assert.True(c.Experiment("rcp_carapace_cap", inv, "npc_torvald_stonebeard") == CraftResult.Ok, "worked it out at the forge");
+        Assert.True(c.Knows("rcp_carapace_cap") && inv.Count("itm_carapace_cap") == 1, "made one and learned it, no fee");
+        Assert.True(c.Experiment("rcp_fangblade", new Inventory(), "npc_torvald_stonebeard") == CraftResult.NoIdeaYet, "never handled its materials");
+    }
 }

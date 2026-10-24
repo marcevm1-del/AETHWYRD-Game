@@ -195,6 +195,22 @@ namespace Ascend.Game.Tests
         }
 
         [Test]
+        public void AnIdeaFromHandlingMaterialsThenExperimentingAtTheForge()
+        {
+            _player.AddComponent<PlayerCrafting>();
+            _inv.Items.Add("itm_mat_carapace_shard", 3);
+            _inv.Items.Add("itm_mat_pelt", 1);
+            Assert.IsTrue(_inv.Toasts.Any(t => t.Contains("Idea: you could make a Carapace Cap")), "the idea arrives");
+            var torvald = Giver("npc_torvald_stonebeard", new Vector3(0, 0, 1.5f));
+            NpcDialog.Instance.Open(torvald, _quests);
+            NpcDialog.Instance.Choose(OptionIndex("Workbench"));
+            NpcDialog.Instance.Choose(OptionIndex("Experiment: Carapace Cap"));
+            Assert.AreEqual(1, _inv.Items.Count("itm_carapace_cap"), "made");
+            Assert.AreEqual(0, _inv.Items.Copper, "no teacher's fee");
+            Assert.IsTrue(_player.GetComponent<PlayerCrafting>().Crafter.Knows("rcp_carapace_cap"), "and learned");
+        }
+
+        [Test]
         public void CookingAtACampfireFromTheBag()
         {
             _player.AddComponent<PlayerCrafting>();

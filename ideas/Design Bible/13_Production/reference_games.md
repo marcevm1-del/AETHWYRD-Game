@@ -26,3 +26,12 @@ Your 4v4 evolution PvP game (TypeScript, three.js). Being yours, its code can be
 - **A path budget** (`pathBudget`): at most a few A* searches per tick, so many monsters repathing at once can't cause a hitch — needed when Ring 1 gets a navmesh.
 - **Fight-or-flee odds** (`near.length` vs allies): a pack monster could check its packmates before committing, and fall back to them when alone.
 - **Evolution stages by level** (`formForLevel`, `stageForLevel`): Greyborn's three stages over 20 levels map naturally onto the Reborn Monster origin in `04_Classes/monster_evolution.md`.
+
+## Grounded (Obsidian) and Subnautica (Unknown Worlds) — mechanics from play, not files
+
+Both ship compiled, so these are the design patterns, from how the games play.
+
+**Taken (built 2026-10-24):**
+- **Discover recipes by handling materials** (Grounded's resource analyzer, Subnautica's scanner), shaped to our own rule in `09_Equipment/item_and_economy_design.md` §6.2 ("known / hypothesis / missing clue", "optional experimentation"): once you've held every material a recipe needs, you get an *idea* toast; at the right station you can **experiment** — the materials are used, you make the item and learn the recipe for free. The teacher's paid lesson stays as the other route (§6.1: at least two routes per step). Experimenting also counts as learning a life skill for the F→E promotion.
+
+**To consider:** Grounded's tiered tool unlocks (a better axe opens a harder node) for gathering; Subnautica's depth-gated materials as Whisperwood's deeper camps' unique drops; Grounded's base-defence raids already exist here as sieges.

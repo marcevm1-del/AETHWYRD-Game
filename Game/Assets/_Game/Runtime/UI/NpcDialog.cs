@@ -142,6 +142,11 @@ namespace Ascend.Game
                 bool ready = c.CanCraft(r.Id, _quests.GetComponent<PlayerInventory>().Items, _giver.NpcId) == CraftResult.Ok;
                 _options.Add(new Option { Text = $"{(ready ? "Make" : "(missing)")} {r.Name} — {crafting.InputsText(r)}", Act = () => crafting.Make(recipe, _giver.NpcId) });
             }
+            foreach (var r in c.All.Where(r => r.Station == station && c.IsHypothesis(r)))
+            {
+                var recipe = r;
+                _options.Add(new Option { Text = $"Experiment: {r.Name} — your idea; uses {crafting.InputsText(r)}", Act = () => crafting.Experiment(recipe, _giver.NpcId) });
+            }
             foreach (var r in c.TaughtBy(_giver.NpcId).Where(r => !c.Knows(r.Id)))
             {
                 var recipe = r;

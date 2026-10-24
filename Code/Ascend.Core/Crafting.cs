@@ -31,7 +31,7 @@ namespace Ascend.Core
         public List<RecipeData> Recipes { get; set; } = new List<RecipeData>();
     }
 
-    public enum CraftResult { Ok, Unknown, WrongStation, MissingMaterials, AlreadyKnown, NotEnoughMoney, NotTaughtHere }
+    public enum CraftResult { Ok, Unknown, WrongStation, MissingMaterials, AlreadyKnown, NotEnoughMoney, NotTaughtHere, NoIdeaYet }
 
     /// <summary>
     /// What the player knows and can make. Recipes are learned from their teacher (or known from the start); a craft
@@ -42,6 +42,38 @@ namespace Ascend.Core
     {
         readonly RecipeFile _file;
         readonly HashSet<string> _known = new HashSet<string>();
+        readonly HashSet<string> _seen = new HashSet<string>();
+
+        /// <summary>Materials you've handled (item_and_economy_design.md §6.2: hypotheses come from what you've held).</summary>
+        public ICollection<string> SeenItems => _seen;
+
+        /// <summary>Notes an item you've held; returns recipes that just became hypotheses (every input handled, not yet known).</summary>
+        public List<RecipeData> Handle(string itemId)
+        {
+            if (string.IsNullOrEmpty(itemId) || !_seen.Add(itemId)) return new List<RecipeData>();
+            return _file.Recipes.Where(r => IsHypothesis(r) && r.Inputs.Any(i => i.ItemId == itemId)).ToList();
+        }
+
+        /// <summary>Not known yet, but you've handled every material it needs: you could work it out by experimenting.</summary>
+        public bool IsHypothesis(RecipeData r) => r != null && !_known.Contains(r.Id) && r.Inputs.All(i => _seen.Contains(i.ItemId));
+
+        /// <summary>
+        /// Experimenting at the right station (§6.1 "each step offers at least two routes"): with a hypothesis and the
+        /// materials, you make the item and learn the recipe without a teacher. The materials are used either way.
+        /// </summary>
+        public CraftResult Experiment(string recipeId, Inventory inv, string atNpcId)
+        {
+            var r = Recipe(recipeId);
+            if (r == null) return CraftResult.Unknown;
+            if (_known.Contains(r.Id)) return CraftResult.AlreadyKnown;
+            if (!IsHypothesis(r)) return CraftResult.NoIdeaYet;
+            if (!StationAvailable(r.Station, atNpcId)) return CraftResult.WrongStation;
+            if (Missing(r, inv).Count > 0) return CraftResult.MissingMaterials;
+            foreach (var i in r.Inputs) inv.TryRemove(i.ItemId, i.Count);
+            inv.Add(r.Output.ItemId, Math.Max(1, r.Output.Count));
+            _known.Add(r.Id);
+            return CraftResult.Ok;
+        }
 
         public Crafter(RecipeFile file)
         {
@@ -96,9 +128,10 @@ namespace Ascend.Core
             return CraftResult.Ok;
         }
 
-        public void Load(IEnumerable<string> known)
+        public void Load(IEnumerable<string> known, IEnumerable<string> seen = null)
         {
             foreach (var id in known ?? Enumerable.Empty<string>()) if (Recipe(id) != null) _known.Add(id);
+            foreach (var id in seen ?? Enumerable.Empty<string>()) if (!string.IsNullOrEmpty(id)) _seen.Add(id);
         }
     }
 }

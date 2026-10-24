@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Recipe ideas | From Grounded's analyzer / Subnautica's scanner, shaped by item_and_economy_design §6.2: handle every material of a recipe and you get an idea; experiment at the right station to make it and learn it free (the paid lesson stays as the other route) | 156 + 117 |
 | Reference: Greyborn | From your Project Greyborn bot AI (ported logic): monsters that hit a wall head-on sidestep and work their way round; skittish and ambushing monsters hop back when badly hurt. reference_games.md lists what else is worth taking (utility goals with hysteresis, path budget, pack odds) | 155 + 116 |
 | Reference: RimWorld | 13_Production/reference_games.md started (ideas only from other studios' games). From RimWorld's animal data: taming wildness by behaviour (moths easy, wolves hard), failed offers turn on you by temper (0% Passive … 50% Aggressive), partners nuzzle you now and then (counts toward Bond) | 155 + 114 |
 | Gathering | Data/World/gathering.json (validated): herb patches, mushroom rings, weeping pines and goblin scrap heaps — 13 nodes across the field and Whisperwood. E gathers (whichever of NPC or node is closer), the node regrows over in-game hours and its regrowth is saved. A second source for healing herbs, sap, spore caps, scrap and crude iron | 154 + 113 |

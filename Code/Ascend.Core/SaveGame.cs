@@ -40,6 +40,7 @@ namespace Ascend.Core
         /// <summary>Tamed monsters (active and ranch).</summary>
         public List<PartnerData> Partners { get; set; } = new List<PartnerData>();
         public List<string> KnownRecipes { get; set; } = new List<string>();
+        public List<string> HandledItems { get; set; } = new List<string>();
         public RankLetter GuildRank { get; set; } = RankLetter.F;
         public int RankGp { get; set; }
         public int QuestsAtRank { get; set; }
@@ -96,6 +97,7 @@ namespace Ascend.Core
             s.BoardDone ??= new Dictionary<string, int>();
             s.Partners ??= new List<PartnerData>();
             s.KnownRecipes ??= new List<string>();
+            s.HandledItems ??= new List<string>();
             s.Bestiary ??= new List<BestiaryEntry>();
             s.GatherNodes ??= new Dictionary<string, double>();
             s.RestBuffs ??= new List<RestBuff>();
