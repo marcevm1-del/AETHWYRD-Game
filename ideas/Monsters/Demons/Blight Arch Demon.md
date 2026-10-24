@@ -22,23 +22,44 @@ tags: [monster, demons]
 | HP · ATK · DEF · MATK · MDEF · SPD | 56724 · 986 · 822 · 658 · 740 · 100 |
 | XP · gold | 14769 · 2553 |
 | Ring | 9 |
+| Rig · animation | [[Systems/Rigs/wyvern\|wyvern]] · `anim_wyvern` |
 | Habitats | [[Regions/Nox Dominion\|Nox Dominion]], [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] |
 | Genre | Abyssal |
 | Trope | Demons as a people of the Abyss, not just evil (Frieren, Maoyuu) |
 
 **Field note:** Weak to Light. Protects something nearby: a nest, a treasure, or a place.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Talon Rake | melee | 1.2 | 0 s | None | blue |
-| Dive Bomb | dash | 1.9 | 10 s | None | red |
-| Tail Whip | aoe | 1.3 | 6 s | None | red |
-| Hellfire Brand | magic | 1.4 | 10 s | None | red |
-| Venom Spit | magic | 1.5 | 10 s | Poison | red |
+- **Rig:** [[Systems/Rigs/wyvern|wyvern]] (rigId); animation set `anim_wyvern`.
+- **Dimensions:** 4 m high × 8 m long × 12.21 m wide; prefab scale 1.333.
+- **Physics:** 2355.2 kg, gravity ×1, poise 303, knockback resistance 0.98, death style `crash_slide`.
+- **Navigation:** speed 5.97 m/s, turn 212°/s, stopping distance 1.04 m.
+- **Attack count:** 5; **signature:** four wings and a voice like a choir.
 
-## Loot (`loot_demon_s`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Talon Rake\|Talon Rake]] | melee | 1.2 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Dive Bomb\|Dive Bomb]] | dash | 1.9 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Tail Whip\|Tail Whip]] | aoe | 1.3 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Hellfire Brand\|Hellfire Brand]] | magic | 1.4 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Venom Spit\|Venom Spit]] | magic | 1.5 | 10 s | Poison | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Blight Arch Demon is a **menacing demon** encountered at S+ rank, around level 203. Its documented behaviour is *Guardian* and its AI pattern is *guardian_hold*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** four wings and a voice like a choir. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Nox Dominion|Nox Dominion]], [[Regions/Great Labyrinth (Floors 41-90)|Great Labyrinth (Floors 41-90)]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_wyvern`, animation set `anim_wyvern`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Demons S|loot_demon_s]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,31 @@ tags: [monster, demons]
 | [[Items/Brimstone\|Brimstone]] | 15% | 1–1 |
 | [[Items/S-Rank Monster Core\|S-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | 6 | S+, S, SS+, SS, S-, SS- | 173–253 | Day & Night |
+| [[Regions/Nox Dominion\|Nox Dominion]] | 5 | SS+, S+, S, S-, SS- | 173–253 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04777` | Great Labyrinth (Floors 41-90) Blight Arch Demon | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Adult | S+ | 203 | 8 m | Day & Night | A typical adult Blight Arch Demon of this region, with dust-grey coloring and old rune scars. |
+| `pop_04778` | Great Labyrinth (Floors 41-90) Blight Arch Demon Juvenile | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Juvenile | S | 188 | 6.8 m | Day & Night | Like a typical Blight Arch Demon, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
+| `pop_04779` | Nox Dominion Blight Arch Demon Elderborn | [[Regions/Nox Dominion\|Nox Dominion]] | Elderborn | SS+ | 253 | 10.8 m | Day & Night | Like a typical Blight Arch Demon, but old and wise, with greying features and a cautious hunting style, with red-black coloring with faint ember veins. |
+| `pop_04780` | Nox Dominion Blight Arch Demon | [[Regions/Nox Dominion\|Nox Dominion]] | Adult | S+ | 203 | 8 m | Day & Night | A typical adult Blight Arch Demon of this region, with red-black coloring with faint ember veins. |
+| `pop_04781` | Great Labyrinth (Floors 41-90) Blight Arch Demon Elderborn | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Elderborn | SS+ | 253 | 10.8 m | Day & Night | Like a typical Blight Arch Demon, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
+| `pop_04782` | Great Labyrinth (Floors 41-90) Blight Arch Demon Alpha | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Alpha | SS | 236 | 10 m | Day & Night | Like a typical Blight Arch Demon, but larger and scarred, and others of its kind follow it, with dust-grey coloring and old rune scars. |
+| `pop_04783` | Nox Dominion Blight Arch Demon Juvenile | [[Regions/Nox Dominion\|Nox Dominion]] | Juvenile | S | 188 | 6.8 m | Day & Night | Like a typical Blight Arch Demon, but young, with brighter colors and unworn features, with red-black coloring with faint ember veins. |
+| `pop_04784` | Nox Dominion Blight Arch Demon Runt | [[Regions/Nox Dominion\|Nox Dominion]] | Runt | S- | 173 | 5.6 m | Day & Night | Like a typical Blight Arch Demon, but smaller and scrappier than usual, with red-black coloring with faint ember veins. |
+| `pop_04785` | Great Labyrinth (Floors 41-90) Blight Arch Demon Runt | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Runt | S- | 173 | 5.6 m | Day & Night | Like a typical Blight Arch Demon, but smaller and scrappier than usual, with dust-grey coloring and old rune scars. |
+| `pop_04786` | Great Labyrinth (Floors 41-90) Blight Arch Demon Albino | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Albino | SS- | 218 | 8 m | Day & Night | Like a typical Blight Arch Demon, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04787` | Nox Dominion Blight Arch Demon Albino | [[Regions/Nox Dominion\|Nox Dominion]] | Albino | SS- | 218 | 8 m | Day & Night | Like a typical Blight Arch Demon, but a rare pale form with white skin or fur and red eyes. |
 
 ## Design recipe
 

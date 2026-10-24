@@ -12,21 +12,27 @@ tags: [item, material]
 | Category · rank | material · B |
 | Value | 18 |
 
-## Dropped by (16)
+## Use in the world
 
-- [[Monsters/Chimeras & Mythic Beasts/Manticore|Manticore]]
-- [[Monsters/Chimeras & Mythic Beasts/Chimera|Chimera]]
-- [[Monsters/Chimeras & Mythic Beasts/Nue|Nue]]
-- [[Monsters/Chimeras & Mythic Beasts/Unicorn|Unicorn]]
-- [[Monsters/Chimeras & Mythic Beasts/Cerberus|Cerberus]]
-- [[Monsters/Chimeras & Mythic Beasts/Sphinx|Sphinx]]
-- [[Monsters/Chimeras & Mythic Beasts/Qilin|Qilin]]
-- [[Monsters/Chimeras & Mythic Beasts/Nameless Abomination|Nameless Abomination]]
-- [[Monsters/Chimeras & Mythic Beasts/Vesper-Touched Manticore|Vesper-Touched Manticore]]
-- [[Monsters/Chimeras & Mythic Beasts/Greater Chimera|Greater Chimera]]
-- [[Monsters/Chimeras & Mythic Beasts/Phantom Nue|Phantom Nue]]
-- [[Monsters/Chimeras & Mythic Beasts/Dune Unicorn|Dune Unicorn]]
-- [[Monsters/Chimeras & Mythic Beasts/Greater Cerberus|Greater Cerberus]]
-- [[Monsters/Chimeras & Mythic Beasts/Phantom Sphinx|Phantom Sphinx]]
-- [[Monsters/Chimeras & Mythic Beasts/Ancient Qilin|Ancient Qilin]]
-- [[Monsters/Chimeras & Mythic Beasts/Mansacor, the Gold-Eating Manticore|Mansacor, the Gold-Eating Manticore]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (16)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Chimeras & Mythic Beasts/Manticore\|Manticore]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Chimera\|Chimera]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Nue\|Nue]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Unicorn\|Unicorn]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Cerberus\|Cerberus]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Sphinx\|Sphinx]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Qilin\|Qilin]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Nameless Abomination\|Nameless Abomination]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Vesper-Touched Manticore\|Vesper-Touched Manticore]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Greater Chimera\|Greater Chimera]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Phantom Nue\|Phantom Nue]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Dune Unicorn\|Dune Unicorn]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Greater Cerberus\|Greater Cerberus]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Phantom Sphinx\|Phantom Sphinx]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Ancient Qilin\|Ancient Qilin]] | 30.0% | 1–1 |
+| [[Monsters/Chimeras & Mythic Beasts/Mansacor, the Gold-Eating Manticore\|Mansacor, the Gold-Eating Manticore]] | 30.0% | 1–1 |

@@ -19,3 +19,12 @@ Mina's overworked assistant, who files every report in triplicate and has a crus
 ## Relationships
 
 - colleague: [[NPCs/Mina Feathersby|Mina Feathersby]]
+
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Weekly Board/Fresh Posters|Fresh Posters]]
+- [[Quests/Weekly Board/Sewer Duty|Sewer Duty]]

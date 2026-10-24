@@ -21,23 +21,44 @@ tags: [monster, elementals-spirits]
 | HP · ATK · DEF · MATK · MDEF · SPD | 712 · 114 · 91 · 80 · 91 · 135 |
 | XP · gold | 559 · 147 |
 | Ring | 2 |
+| Rig · animation | [[Systems/Rigs/spirit_float\|spirit_float]] · `anim_flyer_small` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Whisperwood\|Whisperwood]], [[Regions/Mossdeep\|Mossdeep]], [[Regions/Sylvaran\|Sylvaran]] |
 | Genre | Spirit Realm |
 | Trope | Spirits you can contract with; elemental kings |
 
 **Field note:** Weak to Fire. Leaves you alone unless attacked.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Nip | melee | 0.9 | 0 s | None | blue |
-| Dart | dash | 1.1 | 4 s | None | blue |
-| Swarm Call | summon | 0 | 20 s | None | none |
-| Elemental Burst | magic | 1.4 | 9 s | None | red |
-| Gale Cutter | magic | 1.5 | 10 s | Wind | red |
+- **Rig:** [[Systems/Rigs/spirit_float|spirit_float]] (keyword); animation set `anim_flyer_small`.
+- **Dimensions:** 0.2 m high × 0.06 m long × 0.13 m wide; prefab scale 0.2.
+- **Physics:** 0.5 kg, gravity ×0, poise 4, knockback resistance 0.03, death style `dissolve_into_motes`.
+- **Navigation:** speed 2.24 m/s, turn 900°/s, stopping distance 0.5 m.
+- **Attack count:** 5; **signature:** dragonfly wings and a mischievous grin.
 
-## Loot (`loot_elemental_e`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Nip\|Nip]] | melee | 0.9 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Dart\|Dart]] | dash | 1.1 | 4 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Swarm Call\|Swarm Call]] | summon | 0 | 20 s | None | none | Interrupt or reposition; watch for added enemies. |
+| [[Attacks/Elemental Burst\|Elemental Burst]] | magic | 1.4 | 9 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Gale Cutter\|Gale Cutter]] | magic | 1.5 | 10 s | Wind | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Pixie is a **charming elemental** encountered at E rank, around level 26. Its documented behaviour is *Passive* and its AI pattern is *passive_wander*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Fire**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** dragonfly wings and a mischievous grin. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Aldmere|Aldmere]], [[Regions/Whisperwood|Whisperwood]], [[Regions/Mossdeep|Mossdeep]], [[Regions/Sylvaran|Sylvaran]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_flyer_small`, animation set `anim_flyer_small`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Elementals & Spirits E|loot_elemental_e]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -48,6 +69,33 @@ tags: [monster, elementals-spirits]
 ## Variants
 
 - [[Monsters/Elementals & Spirits/Elder Pixie|Elder Pixie]]
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Aldmere\|Aldmere]] | 3 | D-, E, F+ | 13–40 | Day |
+| [[Regions/Sylvaran\|Sylvaran]] | 2 | E+, E | 26–32 | Day |
+| [[Regions/Mossdeep\|Mossdeep]] | 4 | F+, E-, E+, E | 13–32 | Day |
+| [[Regions/Whisperwood\|Whisperwood]] | 2 | D, E | 26–48 | Day |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_01595` | Aldmere Pixie Alpha | [[Regions/Aldmere\|Aldmere]] | Alpha | D- | 40 | 0.25 m | Day | Like a typical Pixie, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_01596` | Sylvaran Pixie Scarred | [[Regions/Sylvaran\|Sylvaran]] | Scarred | E+ | 32 | 0.22 m | Day | Like a typical Pixie, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_01597` | Mossdeep Pixie Runt | [[Regions/Mossdeep\|Mossdeep]] | Runt | F+ | 13 | 0.14 m | Day | Like a typical Pixie, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_01598` | Mossdeep Pixie Juvenile | [[Regions/Mossdeep\|Mossdeep]] | Juvenile | E- | 19 | 0.17 m | Day | Like a typical Pixie, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_01599` | Mossdeep Pixie Scarred | [[Regions/Mossdeep\|Mossdeep]] | Scarred | E+ | 32 | 0.22 m | Day | Like a typical Pixie, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_01600` | Whisperwood Pixie Elderborn | [[Regions/Whisperwood\|Whisperwood]] | Elderborn | D | 48 | 0.27 m | Day | Like a typical Pixie, but old and wise, with greying features and a cautious hunting style, with moss-green coloring that blends with the undergrowth. |
+| `pop_01601` | Aldmere Pixie | [[Regions/Aldmere\|Aldmere]] | Adult | E | 26 | 0.2 m | Day | A typical adult Pixie of this region, with moss-green coloring that blends with the undergrowth. |
+| `pop_01602` | Sylvaran Pixie | [[Regions/Sylvaran\|Sylvaran]] | Adult | E | 26 | 0.2 m | Day | A typical adult Pixie of this region, with moss-green coloring that blends with the undergrowth. |
+| `pop_01603` | Whisperwood Pixie | [[Regions/Whisperwood\|Whisperwood]] | Adult | E | 26 | 0.2 m | Day | A typical adult Pixie of this region, with moss-green coloring that blends with the undergrowth. |
+| `pop_01604` | Aldmere Pixie Runt | [[Regions/Aldmere\|Aldmere]] | Runt | F+ | 13 | 0.14 m | Day | Like a typical Pixie, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_01605` | Mossdeep Pixie | [[Regions/Mossdeep\|Mossdeep]] | Adult | E | 26 | 0.2 m | Day | A typical adult Pixie of this region, with moss-green coloring that blends with the undergrowth. |
 
 ## Design recipe
 

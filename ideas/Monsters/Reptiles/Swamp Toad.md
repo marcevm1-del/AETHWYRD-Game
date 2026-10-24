@@ -21,23 +21,44 @@ tags: [monster, reptiles]
 | HP · ATK · DEF · MATK · MDEF · SPD | 182 · 42 · 34 · 29 · 34 · 135 |
 | XP · gold | 92 · 31 |
 | Ring | 2 |
+| Rig · animation | [[Systems/Rigs/quad_small\|quad_small]] · `anim_quad_small` |
 | Habitats | [[Regions/Aldmere\|Aldmere]] |
 | Genre | Classic Fantasy |
 | Trope | Lizardmen as a proud people; the petrifying basilisk |
 
 **Field note:** Weak to Lightning. Attacks only if you come close to its home; back away to avoid a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Bite | melee | 1 | 0 s | None | blue |
-| Charge | dash | 1.3 | 5 s | None | blue |
-| Leap | dash | 1.2 | 6 s | None | blue |
-| Tail Lash | aoe | 1.2 | 7 s | None | blue |
-| Tide Lash | magic | 1.5 | 10 s | Water | red |
+- **Rig:** [[Systems/Rigs/quad_small|quad_small]] (rigId); animation set `anim_quad_small`.
+- **Dimensions:** 0.34 m high × 0.5 m long × 0.07 m wide; prefab scale 1.
+- **Physics:** 3.9 kg, gravity ×1.6, poise 20, knockback resistance 0.05, death style `ragdoll_tumble`.
+- **Navigation:** speed 5.37 m/s, turn 764°/s, stopping distance 0.5 m.
+- **Attack count:** 5; **signature:** a wide smile and bulging golden eyes.
 
-## Loot (`loot_reptile_f`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Bite\|Bite]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Charge\|Charge]] | dash | 1.3 | 5 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Leap\|Leap]] | dash | 1.2 | 6 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Tail Lash\|Tail Lash]] | aoe | 1.2 | 7 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Tide Lash\|Tide Lash]] | magic | 1.5 | 10 s | Water | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Swamp Toad is a **charming reptile** encountered at F rank, around level 8. Its documented behaviour is *Territorial* and its AI pattern is *territorial_guard*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Lightning**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a wide smile and bulging golden eyes. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Aldmere|Aldmere]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_quad_small`, animation set `anim_quad_small`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Reptiles F|loot_reptile_f]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -49,6 +70,26 @@ tags: [monster, reptiles]
 ## Variants
 
 - [[Monsters/Reptiles/Frost Toad|Frost Toad]]
+
+## Regional populations (7)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Aldmere\|Aldmere]] | 7 | F-, F+, F, E, E- | 3–26 | Day |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_01246` | Aldmere Swamp Toad Juvenile | [[Regions/Aldmere\|Aldmere]] | Juvenile | F- | 3 | 0.42 m | Day | Like a typical Swamp Toad, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_01247` | Aldmere Swamp Toad Scarred | [[Regions/Aldmere\|Aldmere]] | Scarred | F+ | 13 | 0.55 m | Day | Like a typical Swamp Toad, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_01248` | Aldmere Swamp Toad Runt | [[Regions/Aldmere\|Aldmere]] | Runt | F- | 3 | 0.35 m | Day | Like a typical Swamp Toad, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_01249` | Aldmere Swamp Toad Albino | [[Regions/Aldmere\|Aldmere]] | Albino | F+ | 13 | 0.5 m | Day | Like a typical Swamp Toad, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01250` | Aldmere Swamp Toad | [[Regions/Aldmere\|Aldmere]] | Adult | F | 8 | 0.5 m | Day | A typical adult Swamp Toad of this region, with mud-slick, algae-streaked skin. |
+| `pop_01251` | Aldmere Swamp Toad Elderborn | [[Regions/Aldmere\|Aldmere]] | Elderborn | E | 26 | 0.68 m | Day | Like a typical Swamp Toad, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_01252` | Aldmere Swamp Toad Alpha | [[Regions/Aldmere\|Aldmere]] | Alpha | E- | 19 | 0.63 m | Day | Like a typical Swamp Toad, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
 
 ## Design recipe
 

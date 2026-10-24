@@ -22,23 +22,44 @@ tags: [monster, aquatic]
 | HP · ATK · DEF · MATK · MDEF · SPD | 675 · 62 · 93 · 37 · 62 · 70 |
 | XP · gold | 190 · 57 |
 | Ring | 3 |
+| Rig · animation | [[Systems/Rigs/hexapod\|hexapod]] · `anim_hexapod` |
 | Habitats | [[Regions/Aldmere\|Aldmere]] |
 | Genre | Seafaring |
 | Trope | Sea kings and krakens (One Piece), sirens and merfolk |
 
 **Field note:** Weak to Lightning. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Mandible Crush | melee | 1.1 | 0 s | None | blue |
-| Burrow Ambush | dash | 1.5 | 10 s | None | red |
-| Acid Spray | ranged | 1 | 6 s | None | blue |
-| Tidal Drag | grab | 1.3 | 11 s | None | gold |
-| Tide Lash | magic | 1.5 | 10 s | Water | red |
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (rigId); animation set `anim_hexapod`.
+- **Dimensions:** 0.33 m high × 1 m long × 0.51 m wide; prefab scale 1.25.
+- **Physics:** 46.2 kg, gravity ×1.4, poise 39, knockback resistance 0.25, death style `flip_legs_curl`.
+- **Navigation:** speed 3.77 m/s, turn 500°/s, stopping distance 0.54 m.
+- **Attack count:** 5; **signature:** one claw much bigger than the other.
 
-## Loot (`loot_aquatic_f`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Mandible Crush\|Mandible Crush]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Burrow Ambush\|Burrow Ambush]] | dash | 1.5 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Acid Spray\|Acid Spray]] | ranged | 1 | 6 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Tidal Drag\|Tidal Drag]] | grab | 1.3 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Tide Lash\|Tide Lash]] | magic | 1.5 | 10 s | Water | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Reef Crab is a **wild aquatic** encountered at F+ rank, around level 13. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Lightning**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** one claw much bigger than the other. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Aldmere|Aldmere]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_hexapod`, animation set `anim_hexapod`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Aquatic F|loot_aquatic_f]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,26 @@ tags: [monster, aquatic]
 | [[Items/Pearl\|Pearl]] | 30% | 1–1 |
 | [[Items/Ink Sac\|Ink Sac]] | 15% | 1–1 |
 | [[Items/F-Rank Monster Core\|F-Rank Monster Core]] | 100% | 1–1 |
+
+## Regional populations (7)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Aldmere\|Aldmere]] | 7 | E-, F+, E+, F-, F, E | 3–32 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04800` | Aldmere Reef Crab Scarred | [[Regions/Aldmere\|Aldmere]] | Scarred | E- | 19 | 1.1 m | Day & Night | Like a typical Reef Crab, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_04801` | Aldmere Reef Crab | [[Regions/Aldmere\|Aldmere]] | Adult | F+ | 13 | 1 m | Day & Night | A typical adult Reef Crab of this region, with mud-slick, algae-streaked skin. |
+| `pop_04802` | Aldmere Reef Crab Albino | [[Regions/Aldmere\|Aldmere]] | Albino | E- | 19 | 1 m | Day & Night | Like a typical Reef Crab, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04803` | Aldmere Reef Crab Elderborn | [[Regions/Aldmere\|Aldmere]] | Elderborn | E+ | 32 | 1.35 m | Day & Night | Like a typical Reef Crab, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_04804` | Aldmere Reef Crab Runt | [[Regions/Aldmere\|Aldmere]] | Runt | F- | 3 | 0.7 m | Day & Night | Like a typical Reef Crab, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_04805` | Aldmere Reef Crab Juvenile | [[Regions/Aldmere\|Aldmere]] | Juvenile | F | 8 | 0.85 m | Day & Night | Like a typical Reef Crab, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04806` | Aldmere Reef Crab Alpha | [[Regions/Aldmere\|Aldmere]] | Alpha | E | 26 | 1.25 m | Day & Night | Like a typical Reef Crab, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
 
 ## Design recipe
 

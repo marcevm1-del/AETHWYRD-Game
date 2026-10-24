@@ -15,3 +15,7 @@ tags: [item, weapon]
 | Rarity · slot | Epic · main_hand |
 | Value | 2200 |
 | Stats | atk 64, nightCritBonus 0.5 |
+
+## Use in the world
+
+Equipment changes the character’s combat profile. Compare its rank, slot and stat line with the current build before investing in an upgrade.

@@ -13,6 +13,7 @@ tags: [inn]
 | Dish | Seven-course Imperial Dinner: +CHA |
 | Drink | Vintage of the Empire: +CHA, nobles notice you |
 | Quirk | Luxurious, cold and full of spies |
+| Rumor theme | Imperial politics, the war, the real Mina's prison |
 
 ## Rooms
 
@@ -22,3 +23,15 @@ tags: [inn]
 | private | 500 | Well Rested (4h) |  |
 | suite | 8000 | Well Rested (8h) + meal |  |
 | The Ambassador Suite | 10000 | Well Rested (12h) | Status symbol: +Renown with Imperium nobles; every wall has ears |
+
+## Inn events
+
+- A spy plants a note in your coat
+- A ball you weren't invited to
+
+> [!warning]- Spoiler
+> The hotel basement connects to the prison where the real Mina is held.
+
+## Stay and departure
+
+Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

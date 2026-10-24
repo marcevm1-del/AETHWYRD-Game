@@ -11,7 +11,7 @@ Tone curve: **warm, funny and adventurous (Acts I–II) → political and tragic
 ## PROLOGUE — *Status Granted* (per Origin)
 | Origin | Opening scene | Key beat | Ends when |
 |---|---|---|---|
-| **Transported** (built first) | You wake in a Whisperwood clearing at twilight, still in old-world clothes. Two moons. A blue slime (Mochi) stares at you | The System Voice glitches on first contact: *"Status… gr-granted. Soul origin: [ERROR]. Growth ceiling: [NONE]."* | Lyra finds you fighting wolves and walks you to Brindlewick |
+| **Transported** (built first) | You wake in a Whisperwood clearing at twilight, still in old-world clothes. Two moons. A blue slime (Mochi) stares at you. Draft: a masked Hollowpine scout and you survive a monster attack by protecting each other | The System Voice glitches on first contact: *"Status… gr-granted. Soul origin: [ERROR]. Growth ceiling: [NONE]."* It translates urgent speech imperfectly | Lyra finds you after the fight and walks you to Brindlewick; the scout leaves a clan token |
 | Summoned Hero | Summoning Cathedral; three classmates beside you; Archbishop Crowe appraises you | You're labeled a "dud" (weak-looking skill); Kaito is crowned the favorite | You're quietly sent away to Brindlewick "to train" (really: discarded) |
 | Reincarnated | Born to a chosen family; childhood vignettes at ages 3, 7, 12 | Your parents notice you read Old Weave-tongue as a child | Age 15: you leave home to register at the Guild |
 | Reborn Monster | You hatch in the Hollow Nursery under Whisperwood | Survive, devour, evolve once; adventurers (Lyra's party!) almost kill you | You escape the dungeon, or are tamed by Granny Mabel |
@@ -21,6 +21,8 @@ Tone curve: **warm, funny and adventurous (Acts I–II) → political and tragic
 
 ## ACT I — *The Wooden Card* (Rank F → E · focused ~0–15 hrs · explorer ~10–30 hrs)
 **Theme:** belonging, a new home, first friends. **Region:** Brindlewick, Whisperwood, Millbrook.
+
+**Draft companion story:** the Whisperwood Kinship Arc follows the masked Wolfskin scout, the Hollowpine clans, a displaced monster migration and Azrael's agents manipulating an old border conflict. Full outline: [[Design Bible/02_Lore/whisperwood_kinship_arc|`whisperwood_kinship_arc.md`]]. This is a draft and does not replace the existing Goblin Chief rank trial.
 
 | # | Beat | Notes / choices |
 |---|---|---|
@@ -253,6 +255,11 @@ Players who solve it early (Mystery Board) can **save the orphans before the rev
 | ★ | **The Thirteenth Star** *(secret, ~1,000 hrs)* | SSS T10, all Dragons, the Conclave's blessing, all 5 Hero journals, the Unclosed Knot closed. You become a new god and fix the Weave without anyone being harvested |
 
 **Variations:** every ending has epilogue chapters for each companion (alive/dead/married/left), each region and town (prosperity), each redeemed villain, your Named monster companions, and your children. That's roughly **100 distinct ending combinations**.
+
+### Peaceful afterstory
+After an ending that leaves the world able to continue, the player can return to free-roam after the epilogue. The central crisis is resolved; the ongoing life is exploration, hunting, companions, crafting, farming, shopkeeping, festivals and regional recovery. Optional contracts and discoveries remain, and the player can revisit important people and places. New adventures can be added as optional story arcs, without making another world-ending threat mandatory.
+
+Endings that transform or end the playable world receive their authored epilogue state instead of an incompatible free-roam continuation. The afterstory does not add an ending or change the existing 11 + 1 ending count.
 
 ## Ten Tearjerkers
 1. **Hollis's Last Lesson:** the broom-swinging teacher fights one last time to buy you time.

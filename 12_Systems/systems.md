@@ -49,14 +49,14 @@ A translucent blue holographic panel with soft chimes; it opens in a burst of ru
 - **Difficulty modes:** Story / Adventurer / Veteran / Hardcore (permadeath).
 
 ## 4. Economy
-- **Coins:** Copper → Silver (100c) → Gold (100s) → Platinum (100g) → **Mithril Coin** (100p).
+- **Coins:** Copper → Silver (100c) → Gold (100s) → Platinum (100g) → **Mithril Coin** (100p). Each step is ×100; wallet and data store exact value in copper, while prices display the largest denominations plus change automatically. `Data/World/world_tuning.json` is the denomination source.
 - **Income:** quests, monster cores, loot, crafting, shops, trade routes, farm produce, arena bets, territory taxes.
 - **Sinks:** repairs, enhancement, housing, taxes, tuition, respec, airship fares, festival goods.
 - **Regional prices:** sell ice gems in the desert for profit, buy cheap spices in the Isles. A trade-route minigame.
 - **Supply/demand (light):** flooding a market lowers prices for a while.
 
 ### 4.1 Prices by Rank
-Every item has a rank, and its base price grows about **×4 per rank letter** (F 1× · E 4× · D 16× · C 64× · B 256× · A 1,024× · S 4,096×; SS/SSS are mostly unsellable relics). The −/+ sub-grades are ×0.7 / ×1.4. Monster cores are the economy's "ore": a guild buys every core at a fixed price for its rank, so there's always a floor income.
+The old ×4-per-rank-letter curve is an early draft, not a tuning rule. Guild rank controls access and trust; it does not exponentially inflate everyday prices. Prices use an authored copper reference value with bounded, visible local modifiers. Monster cores have a modest fixed Guild buyback price by rank, because ordinary monsters currently drop one reliably. See [[monster_core_pricing]] for the proposed copper table, specialist wanted notices, crafting role and anti-arbitrage rules; it remains a proposal until approved in `Canon.md` §6.
 
 ### 4.2 What Moves Prices
 | Factor | Effect |
@@ -68,6 +68,9 @@ Every item has a rank, and its base price grows about **×4 per rank letter** (F
 | **Season & festivals** | Seasonal goods appear; festival stalls sell exclusives |
 | **Otherworld Knowledge** | An introduced idea creates new goods (soap, printed books) and can collapse an old trade (scribes) |
 | **Blood Vesper** | Monster parts flood the market the next day, so prices drop |
+
+### 4.2a Monster Cores
+Monster cores are crafting materials with a sell value, not a universal currency. The Guild provides a reliable baseline buyer; recipes, research and awakening are their main long-term sinks. Trait-bearing cores are reserved for recipes that need them, rather than generated as sell-only variants. Full proposal and exact prices: [[monster_core_pricing]].
 
 ### 4.3 Trade Routes
 Buy a **trade license** (rank D+) and register a route between two towns. Run it yourself (cart, escort, road events) or **hire a caravan** (paid, runs on its own, can be raided). Routes raise both towns' Wealth. Bandits and Tyrant raids can cut a route until you clear it.

@@ -4,7 +4,14 @@ tags: [family, minotaurs-beastmen]
 ---
 # Minotaurs & Beastmen
 
-11 species. Sorted by level.
+11 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** D, D+, C-, C, C+, B, A-, S
+- **Element palette:** None, Nature, Fire, Earth, Blood, Dark
+- **Level span:** 48–188
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

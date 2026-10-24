@@ -4,7 +4,14 @@ tags: [family, plants-fungi]
 ---
 # Plants & Fungi
 
-25 species. Sorted by level.
+25 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** F, F+, E, D-, D, D+, C, C+, B, B+, A, A+, S, S+, SSS, SSS+, EX
+- **Element palette:** Nature, Ice, Light, Poison, Dark, Fire, Water, Lightning
+- **Level span:** 8–300
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

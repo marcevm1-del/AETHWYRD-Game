@@ -22,23 +22,44 @@ tags: [monster, dragons]
 | HP · ATK · DEF · MATK · MDEF · SPD | 53902 · 914 · 762 · 610 · 686 · 100 |
 | XP · gold | 13063 · 2293 |
 | Ring | 7 |
+| Rig · animation | [[Systems/Rigs/wyvern\|wyvern]] · `anim_wyvern` |
 | Habitats | [[Regions/Dragon Spine\|Dragon Spine]], [[Regions/Nox Dominion\|Nox Dominion]] |
 | Genre | High Fantasy |
 | Trope | Dragons as proud, intelligent apex beings; wyverns as their lesser kin |
 
 **Field note:** Weak to Water. Attacks on sight. Expect a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Talon Rake | melee | 1.2 | 0 s | None | blue |
-| Dive Bomb | dash | 1.9 | 10 s | None | red |
-| Tail Whip | aoe | 1.3 | 6 s | None | red |
-| Wing Buffet | aoe | 1.1 | 9 s | None | blue |
-| Ember Burst | magic | 1.5 | 10 s | Fire | red |
+- **Rig:** [[Systems/Rigs/wyvern|wyvern]] (rigId); animation set `anim_wyvern`.
+- **Dimensions:** 5 m high × 10 m long × 15.26 m wide; prefab scale 1.667.
+- **Physics:** 4600 kg, gravity ×1, poise 429, knockback resistance 0.98, death style `crash_slide`.
+- **Navigation:** speed 8.41 m/s, turn 190°/s, stopping distance 1.2 m.
+- **Attack count:** 5; **signature:** a crown of broken horns from rivals it killed.
 
-## Loot (`loot_draconic_s`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Talon Rake\|Talon Rake]] | melee | 1.2 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Dive Bomb\|Dive Bomb]] | dash | 1.9 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Tail Whip\|Tail Whip]] | aoe | 1.3 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Wing Buffet\|Wing Buffet]] | aoe | 1.1 | 9 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Ember Burst\|Ember Burst]] | magic | 1.5 | 10 s | Fire | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Vesper-Touched Drake Lord is a **dread dragon** encountered at S rank, around level 188. Its documented behaviour is *Aggressive* and its AI pattern is *aggressive_chase+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Water**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a crown of broken horns from rivals it killed. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Dragon Spine|Dragon Spine]], [[Regions/Nox Dominion|Nox Dominion]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_wyvern`, animation set `anim_wyvern`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Dragons S|loot_draconic_s]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,31 @@ tags: [monster, dragons]
 | [[Items/Dragon Heart\|Dragon Heart]] | 15% | 1–1 |
 | [[Items/S-Rank Monster Core\|S-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Nox Dominion\|Nox Dominion]] | 7 | A+, SS-, S+, S-, S, SS | 159–236 | Night |
+| [[Regions/Dragon Spine\|Dragon Spine]] | 4 | S-, SS-, S+ | 173–218 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04296` | Nox Dominion Vesper-Touched Drake Lord Runt | [[Regions/Nox Dominion\|Nox Dominion]] | Runt | A+ | 159 | 7 m | Night | Like a typical Vesper-Touched Drake Lord, but smaller and scrappier than usual, with ash-dark coloring with glowing cracks. |
+| `pop_04297` | Dragon Spine Vesper-Touched Drake Lord Juvenile | [[Regions/Dragon Spine\|Dragon Spine]] | Juvenile | S- | 173 | 8.5 m | Night | Like a typical Vesper-Touched Drake Lord, but young, with brighter colors and unworn features, with slate-grey coloring and hardened hide. |
+| `pop_04298` | Dragon Spine Vesper-Touched Drake Lord Alpha | [[Regions/Dragon Spine\|Dragon Spine]] | Alpha | SS- | 218 | 12.5 m | Night | Like a typical Vesper-Touched Drake Lord, but larger and scarred, and others of its kind follow it, with slate-grey coloring and hardened hide. |
+| `pop_04299` | Dragon Spine Vesper-Touched Drake Lord Albino | [[Regions/Dragon Spine\|Dragon Spine]] | Albino | S+ | 203 | 10 m | Night | Like a typical Vesper-Touched Drake Lord, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04300` | Nox Dominion Vesper-Touched Drake Lord Alpha | [[Regions/Nox Dominion\|Nox Dominion]] | Alpha | SS- | 218 | 12.5 m | Night | Like a typical Vesper-Touched Drake Lord, but larger and scarred, and others of its kind follow it, with ash-dark coloring with glowing cracks. |
+| `pop_04301` | Nox Dominion Vesper-Touched Drake Lord Scarred | [[Regions/Nox Dominion\|Nox Dominion]] | Scarred | S+ | 203 | 11 m | Night | Like a typical Vesper-Touched Drake Lord, but covered in old battle scars, with ash-dark coloring with glowing cracks. |
+| `pop_04302` | Nox Dominion Vesper-Touched Drake Lord Juvenile | [[Regions/Nox Dominion\|Nox Dominion]] | Juvenile | S- | 173 | 8.5 m | Night | Like a typical Vesper-Touched Drake Lord, but young, with brighter colors and unworn features, with ash-dark coloring with glowing cracks. |
+| `pop_04303` | Dragon Spine Vesper-Touched Drake Lord Scarred | [[Regions/Dragon Spine\|Dragon Spine]] | Scarred | S+ | 203 | 11 m | Night | Like a typical Vesper-Touched Drake Lord, but covered in old battle scars, with slate-grey coloring and hardened hide. |
+| `pop_04304` | Nox Dominion Vesper-Touched Drake Lord | [[Regions/Nox Dominion\|Nox Dominion]] | Adult | S | 188 | 10 m | Night | A typical adult Vesper-Touched Drake Lord of this region, with ash-dark coloring with glowing cracks. |
+| `pop_04305` | Nox Dominion Vesper-Touched Drake Lord Elderborn | [[Regions/Nox Dominion\|Nox Dominion]] | Elderborn | SS | 236 | 13.5 m | Night | Like a typical Vesper-Touched Drake Lord, but old and wise, with greying features and a cautious hunting style, with ash-dark coloring with glowing cracks. |
+| `pop_04306` | Nox Dominion Vesper-Touched Drake Lord Albino | [[Regions/Nox Dominion\|Nox Dominion]] | Albino | S+ | 203 | 10 m | Night | Like a typical Vesper-Touched Drake Lord, but a rare pale form with white skin or fur and red eyes. |
 
 ## Design recipe
 

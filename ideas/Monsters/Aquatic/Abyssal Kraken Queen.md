@@ -21,23 +21,44 @@ tags: [monster, aquatic]
 | HP · ATK · DEF · MATK · MDEF · SPD | 148588 · 1418 · 1021 · 1021 · 1021 · 100 |
 | XP · gold | 24842 · 4024 |
 | Ring | 5 |
+| Rig · animation | [[Systems/Rigs/tentacled\|tentacled]] · `anim_cephalopod` |
 | Habitats | [[Regions/Goldmere Coast\|Goldmere Coast]], [[Regions/Whitewater Reach\|Whitewater Reach]] |
 | Genre | Seafaring |
 | Trope | Sea kings and krakens (One Piece), sirens and merfolk |
 
 **Field note:** Weak to Light. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Tentacle Slap | melee | 1.1 | 0 s | None | blue |
-| Drag Under | grab | 1.8 | 12 s | None | gold |
-| Ink Cloud | debuff | 0 | 14 s | None | none |
-| Tidal Drag | grab | 1.3 | 11 s | None | gold |
-| Null Rift | magic | 1.5 | 10 s | Void | red |
+- **Rig:** [[Systems/Rigs/tentacled|tentacled]] (rigId); animation set `anim_cephalopod`.
+- **Dimensions:** 110 m high × 200 m long × 240 m wide; prefab scale 66.667.
+- **Physics:** 160000000 kg, gravity ×0.7, poise 121878, knockback resistance 0.94, death style `sink_limp`.
+- **Navigation:** speed 53.37 m/s, turn 60°/s, stopping distance 12.4 m.
+- **Attack count:** 5; **signature:** tentacles that can wrap around whole islands.
 
-## Loot (`loot_aquatic_sss`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Tentacle Slap\|Tentacle Slap]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Drag Under\|Drag Under]] | grab | 1.8 | 12 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Ink Cloud\|Ink Cloud]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Tidal Drag\|Tidal Drag]] | grab | 1.3 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Null Rift\|Null Rift]] | magic | 1.5 | 10 s | Void | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Abyssal Kraken Queen is a **dread aquatic** encountered at SSS rank, around level 281. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** tentacles that can wrap around whole islands. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Goldmere Coast|Goldmere Coast]], [[Regions/Whitewater Reach|Whitewater Reach]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_cephalopod`, animation set `anim_cephalopod`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Aquatic SSS|loot_aquatic_sss]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -50,6 +71,31 @@ tags: [monster, aquatic]
 ## Variants
 
 - [[Monsters/Aquatic/Phantom Abyssal Kraken Queen|Phantom Abyssal Kraken Queen]]
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Goldmere Coast\|Goldmere Coast]] | 6 | SSS+, EX-, SSS-, SS+, EX | 253–300 | Night |
+| [[Regions/Whitewater Reach\|Whitewater Reach]] | 5 | SSS, SSS+, EX-, EX | 281–300 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_02040` | Goldmere Coast Abyssal Kraken Queen Albino | [[Regions/Goldmere Coast\|Goldmere Coast]] | Albino | SSS+ | 294 | 200 m | Night | Like a typical Abyssal Kraken Queen, but a rare pale form with white skin or fur and red eyes. |
+| `pop_02041` | Goldmere Coast Abyssal Kraken Queen Alpha | [[Regions/Goldmere Coast\|Goldmere Coast]] | Alpha | EX- | 300 | 250 m | Night | Like a typical Abyssal Kraken Queen, but larger and scarred, and others of its kind follow it, with salt-crusted, barnacle-flecked hide. |
+| `pop_02042` | Goldmere Coast Abyssal Kraken Queen Juvenile | [[Regions/Goldmere Coast\|Goldmere Coast]] | Juvenile | SSS- | 267 | 170 m | Night | Like a typical Abyssal Kraken Queen, but young, with brighter colors and unworn features, with salt-crusted, barnacle-flecked hide. |
+| `pop_02043` | Goldmere Coast Abyssal Kraken Queen Runt | [[Regions/Goldmere Coast\|Goldmere Coast]] | Runt | SS+ | 253 | 140 m | Night | Like a typical Abyssal Kraken Queen, but smaller and scrappier than usual, with salt-crusted, barnacle-flecked hide. |
+| `pop_02044` | Goldmere Coast Abyssal Kraken Queen Elderborn | [[Regions/Goldmere Coast\|Goldmere Coast]] | Elderborn | EX | 300 | 270 m | Night | Like a typical Abyssal Kraken Queen, but old and wise, with greying features and a cautious hunting style, with salt-crusted, barnacle-flecked hide. |
+| `pop_02045` | Whitewater Reach Abyssal Kraken Queen | [[Regions/Whitewater Reach\|Whitewater Reach]] | Adult | SSS | 281 | 200 m | Night | A typical adult Abyssal Kraken Queen of this region, with salt-crusted, barnacle-flecked hide. |
+| `pop_02046` | Whitewater Reach Abyssal Kraken Queen Scarred | [[Regions/Whitewater Reach\|Whitewater Reach]] | Scarred | SSS+ | 294 | 220 m | Night | Like a typical Abyssal Kraken Queen, but covered in old battle scars, with salt-crusted, barnacle-flecked hide. |
+| `pop_02047` | Whitewater Reach Abyssal Kraken Queen Alpha | [[Regions/Whitewater Reach\|Whitewater Reach]] | Alpha | EX- | 300 | 250 m | Night | Like a typical Abyssal Kraken Queen, but larger and scarred, and others of its kind follow it, with salt-crusted, barnacle-flecked hide. |
+| `pop_02048` | Whitewater Reach Abyssal Kraken Queen Elderborn | [[Regions/Whitewater Reach\|Whitewater Reach]] | Elderborn | EX | 300 | 270 m | Night | Like a typical Abyssal Kraken Queen, but old and wise, with greying features and a cautious hunting style, with salt-crusted, barnacle-flecked hide. |
+| `pop_02049` | Whitewater Reach Abyssal Kraken Queen Albino | [[Regions/Whitewater Reach\|Whitewater Reach]] | Albino | SSS+ | 294 | 200 m | Night | Like a typical Abyssal Kraken Queen, but a rare pale form with white skin or fur and red eyes. |
+| `pop_02050` | Goldmere Coast Abyssal Kraken Queen Scarred | [[Regions/Goldmere Coast\|Goldmere Coast]] | Scarred | SSS+ | 294 | 220 m | Night | Like a typical Abyssal Kraken Queen, but covered in old battle scars, with salt-crusted, barnacle-flecked hide. |
 
 ## Design recipe
 

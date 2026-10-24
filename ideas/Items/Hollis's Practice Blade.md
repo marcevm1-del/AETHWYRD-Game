@@ -15,3 +15,7 @@ tags: [item, weapon]
 | Rarity · slot | Rare · main_hand |
 | Value | 180 |
 | Stats | atk 22, crit 3 |
+
+## Use in the world
+
+Equipment changes the character’s combat profile. Compare its rank, slot and stat line with the current build before investing in an upgrade.

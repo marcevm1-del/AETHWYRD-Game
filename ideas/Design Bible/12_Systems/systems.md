@@ -49,14 +49,14 @@ A translucent blue holographic panel with soft chimes; it opens in a burst of ru
 - **Difficulty modes:** Story / Adventurer / Veteran / Hardcore (permadeath).
 
 ## 4. Economy
-- **Coins:** Copper → Silver (100c) → Gold (100s) → Platinum (100g) → **Mithril Coin** (100p).
+- **Coins:** Copper → Silver (100c) → Gold (100s) → Platinum (100g) → **Mithril Coin** (100p). Each step is ×100; wallet and data store exact value in copper, while prices display the largest denominations plus change automatically. `Data/World/world_tuning.json` is the denomination source.
 - **Income:** quests, monster cores, loot, crafting, shops, trade routes, farm produce, arena bets, territory taxes.
 - **Sinks:** repairs, enhancement, housing, taxes, tuition, respec, airship fares, festival goods.
 - **Regional prices:** sell ice gems in the desert for profit, buy cheap spices in the Isles. A trade-route minigame.
 - **Supply/demand (light):** flooding a market lowers prices for a while.
 
 ### 4.1 Prices by Rank
-Every item has a rank, and its base price grows about **×4 per rank letter** (F 1× · E 4× · D 16× · C 64× · B 256× · A 1,024× · S 4,096×; SS/SSS are mostly unsellable relics). The −/+ sub-grades are ×0.7 / ×1.4. Monster cores are the economy's "ore": a guild buys every core at a fixed price for its rank, so there's always a floor income.
+The old ×4-per-rank-letter curve is an early draft, not a tuning rule. Guild rank controls access and trust; it does not exponentially inflate everyday prices. Prices use an authored copper reference value with bounded, visible local modifiers. Monster cores have a modest fixed Guild buyback price by rank, because ordinary monsters currently drop one reliably. See [[monster_core_pricing]] for the proposed copper table, specialist wanted notices, crafting role and anti-arbitrage rules; it remains a proposal until approved in `Canon.md` §6.
 
 ### 4.2 What Moves Prices
 | Factor | Effect |
@@ -68,6 +68,9 @@ Every item has a rank, and its base price grows about **×4 per rank letter** (F
 | **Season & festivals** | Seasonal goods appear; festival stalls sell exclusives |
 | **Otherworld Knowledge** | An introduced idea creates new goods (soap, printed books) and can collapse an old trade (scribes) |
 | **Blood Vesper** | Monster parts flood the market the next day, so prices drop |
+
+### 4.2a Monster Cores
+Monster cores are crafting materials with a sell value, not a universal currency. The Guild provides a reliable baseline buyer; recipes, research and awakening are their main long-term sinks. Trait-bearing cores are reserved for recipes that need them, rather than generated as sell-only variants. Full proposal and exact prices: [[monster_core_pricing]].
 
 ### 4.3 Trade Routes
 Buy a **trade license** (rank D+) and register a route between two towns. Run it yourself (cart, escort, road events) or **hire a caravan** (paid, runs on its own, can be raided). Routes raise both towns' Wealth. Bandits and Tyrant raids can cut a route until you clear it.
@@ -203,7 +206,7 @@ Each partner has one **role** from its species and behavior: **Vanguard** (draws
 ### 7.4 Taming Interacts With…
 | System | How |
 |---|---|
-| **Nemesis** | A Named monster that respects you can be named instead of killed. It becomes a full companion |
+| **Named monsters** | A Named monster that respects you can be named instead of killed. It becomes a companion (lighter tier) |
 | **Sieges** | Tamed partners defend towns; Haulers carry barricade materials |
 | **Karma / Thread** | Releasing partners back to the wild with care raises Thread; abandoning them lowers Karma |
 | **Monster towns** | Tribes treat you better if your partners are happy (and worse if they're battle-scarred) |
@@ -285,7 +288,7 @@ Gods react differently: **Solenne** punishes lies, **Sylvara** punishes cruelty 
 ### 10.1 After You Fall
 - **The death screen** (HUD §19) shows what killed you, its rank and one tip, then lets you retry the encounter, return to a waystone, or change gear first.
 - **Your dropped gold** waits at a glowing blue lantern where you fell. Die again before collecting it and only the newest pile stays. Monsters never pick it up, except **goblins**, who steal it and run to their camp (a mini-chase).
-- **Named monsters remember** killing you (Nemesis): a scar, a title, sometimes a sub-rank up.
+- **Named monsters do not grow from your deaths** (Canon §4d). What they get up to reaches you through the rumor board instead.
 
 ### 10.2 Custom Difficulty
 Under any preset, sliders for: enemy damage, enemy HP, parry/dodge windows, aggro-token count (how many attack at once), loot amount, death penalty, and inventory weight. **The S-rank floor still applies**: S+ content ignores the easy settings (below). Changing difficulty is free at any time, except Hardcore, which is locked at creation.
@@ -440,10 +443,13 @@ Every region has a **Tyrant**, its big bad (a named boss with a lair, lieutenant
 
 **No siege:** Great Labyrinth (Floors 1-40) (dungeon band, not a region with settlements); Great Labyrinth (Floors 41-90) (dungeon band, not a region with settlements); Great Labyrinth (Floors 91-120) (dungeon band, not a region with settlements); Sky Archipelago (abandoned titan cities; zephiel is the act iv story boss); Nox Dominion (story region (acts v–vi)); Calamity Steppe (no settlements); The Maw (its calamity (the hive mother) is a world event, not a siege); Root of the World (underworld depths; no settlements); Vesper (post-game region).
 
-## Named Nemesis System
-- A Named monster that **defeats you, or escapes you**, levels up, gains a scar/title, learns a counter to your favorite skill, and may **evolve** a rank.
-- It **hunts you**: it shows up on the rumor board, ambushes you in its region, and sometimes follows you to other regions.
-- **Resolve it any way:** kill it (relic-grade drop), tame it, or **name it** (Name-Giving Ribbon after earning its respect: win while sparing it, feed it, or save it from a bigger threat) → it becomes a **full companion** with its own voice, personality, arc and evolution.
+## Named Monsters (revised 2026-10-23: patent design-around, Canon §4d)
+> Replaces the old *Named Nemesis System*. Warner Bros.' Nemesis patent (reported to run to 2036) covers enemies that remember defeating the player, rise in rank and pursue personal vendettas. Ascend's named monsters are built to avoid that pattern. **Have an IP lawyer review before release.**
+- **A hand-written roster.** Every Named monster is authored by us (`08_Bestiary/bestiary_lore.md`): name, look, temperament, haunts, story. None are generated, promoted or replaced procedurally.
+- **No enemy hierarchy.** No captains, warchiefs, promotions, power struggles or forts changing hands between named enemies.
+- **They grow with the world, not with your deaths.** A Named monster's level, evolution and habits change with **region state**: ecology cycles, siege escalation, liberation and story flags. Dying to one gives it nothing personal: no scar, no title, no taunt.
+- **You hear about them.** The **rumor board** and the Adventurer Times report what a Named monster has been doing ("Old Ironhide trampled the Hensley turnips again"), so the world feels alive without the monster remembering you.
+- **Resolve it any way:** kill it (relic-grade drop), tame it, or **name it** (Name-Giving Ribbon after earning its respect: win while sparing it, feed it, or save it from a bigger threat). A named monster becomes a companion on the lighter companion tier (Canon §6).
 - Named monster companions count toward the companion roster.
 
 ## Inventory Model

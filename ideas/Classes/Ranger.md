@@ -13,6 +13,7 @@ tags: [class, base]
 | Weapons | shortbow, longbow, crossbow |
 | Armour | light, medium |
 | Mechanic | Focus: aim down sights to build Focus; release at max for Pierce shots that ignore armour |
+| Suggested stat allocation | STR 9%, VIT 9%, AGI 27%, DEX 37%, WIS 9%, LUK 9% |
 | Trainer | [[NPCs/Wren Ashbourne\|Wren Ashbourne]] |
 | Class quest | *The White Stag* |
 | Starter weapon | [[Items/Guild Issue Shortbow\|Guild Issue Shortbow]] |
@@ -31,7 +32,13 @@ tags: [class, base]
 | 22 | **Backflip Shot** | dash | 1 × (medium) · 1.4 total | 10 SP | 6 s | None | Leap back and fire |
 | 30 | **Starfall Volley** | ultimate | 13 × (light/ultimate) · 8.5 total | 100 Awakening | — | Light | A volley of star-arrows |
 
+**Combat rhythm:** basic chains build the class’s ordinary tempo; active skills should create clear commitment and payoff, while mobility or control skills let the player change spacing. Resource cost and cooldown are part of the decision, so avoid spending every skill on the first available target.
+
 ## Passives
 
 - **Tracking** (Lv 1): See footprints and trails
 - **Eagle Eye** (Lv 18): Longer range and weak-point highlights
+
+## How this class plays
+
+Build around the class’s stated mechanic and growth profile. Weapons and armour shape its rhythm; the kit creates decisions about approach, commitment, recovery and resource use. A class is a playstyle identity, not a requirement to parry perfectly: defensive options and readable recovery windows should keep the wider game accessible.

@@ -14,3 +14,7 @@ tags: [item, material]
 | Category · rank | material · C |
 | Rarity · slot | Rare |
 | Value | 400 |
+
+## Use in the world
+
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.

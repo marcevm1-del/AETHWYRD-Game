@@ -22,23 +22,44 @@ tags: [monster, humanoid-enemies]
 | HP · ATK · DEF · MATK · MDEF · SPD | 52140 · 1145 · 954 · 763 · 859 · 100 |
 | XP · gold | 18792 · 3152 |
 | Ring | 6 |
+| Rig · animation | [[Systems/Rigs/medium_biped\|medium_biped]] · `anim_medium_biped` |
 | Habitats | [[Regions/Shen-Lu\|Shen-Lu]], [[Regions/Moraveil\|Moraveil]] |
 | Genre | Low Fantasy |
 | Trope | Bandits, cultists and fallen heroes |
 
 **Field note:** Weak to Dark. Attacks on sight. Expect a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Slash | melee | 1 | 0 s | None | blue |
-| Heavy Swing | melee | 1.6 | 6 s | None | red |
-| Guard Counter | counter | 1.3 | 10 s | None | blue |
-| Feint Strike | counter | 1.2 | 8 s | None | blue |
-| Radiant Pulse | magic | 1.5 | 10 s | Light | red |
+- **Rig:** [[Systems/Rigs/medium_biped|medium_biped]] (rigId); animation set `anim_medium_biped`.
+- **Dimensions:** 3 m high × 0.9 m long × 0.96 m wide; prefab scale 1.667.
+- **Physics:** 333.5 kg, gravity ×1.35, poise 132, knockback resistance 0.51, death style `ragdoll`.
+- **Navigation:** speed 7.01 m/s, turn 231°/s, stopping distance 0.91 m.
+- **Attack count:** 5; **signature:** tarnished hero armor and eyes that have seen the truth of the System.
 
-## Loot (`loot_humanoid_enemy_ss`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Slash\|Slash]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Heavy Swing\|Heavy Swing]] | melee | 1.6 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Guard Counter\|Guard Counter]] | counter | 1.3 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Feint Strike\|Feint Strike]] | counter | 1.2 | 8 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Radiant Pulse\|Radiant Pulse]] | magic | 1.5 | 10 s | Light | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Elite Fallen Hero is a **menacing humanoid** encountered at SS rank, around level 236. Its documented behaviour is *Aggressive* and its AI pattern is *aggressive_chase*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Dark**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** tarnished hero armor and eyes that have seen the truth of the System. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Shen-Lu|Shen-Lu]], [[Regions/Moraveil|Moraveil]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_medium_biped`, animation set `anim_medium_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Humanoid Enemies SS|loot_humanoid_enemy_ss]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,31 @@ tags: [monster, humanoid-enemies]
 | [[Items/Bounty Proof\|Bounty Proof]] | 15% | 1–1 |
 | [[Items/SS-Rank Monster Core\|SS-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Moraveil\|Moraveil]] | 5 | SS-, SS+, S+, SSS-, SS | 203–267 | Day & Night |
+| [[Regions/Shen-Lu\|Shen-Lu]] | 6 | SS, SS+, SSS, S+, SSS- | 203–281 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_05648` | Moraveil Elite Fallen Hero Juvenile | [[Regions/Moraveil\|Moraveil]] | Juvenile | SS- | 218 | 2.55 m | Day & Night | Like a typical Elite Fallen Hero, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_05649` | Shen-Lu Elite Fallen Hero | [[Regions/Shen-Lu\|Shen-Lu]] | Adult | SS | 236 | 3 m | Day & Night | A typical adult Elite Fallen Hero of this region, with slate-grey coloring and hardened hide. |
+| `pop_05650` | Moraveil Elite Fallen Hero Scarred | [[Regions/Moraveil\|Moraveil]] | Scarred | SS+ | 253 | 3.3 m | Day & Night | Like a typical Elite Fallen Hero, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_05651` | Shen-Lu Elite Fallen Hero Albino | [[Regions/Shen-Lu\|Shen-Lu]] | Albino | SS+ | 253 | 3 m | Day & Night | Like a typical Elite Fallen Hero, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05652` | Shen-Lu Elite Fallen Hero Elderborn | [[Regions/Shen-Lu\|Shen-Lu]] | Elderborn | SSS | 281 | 4.05 m | Day & Night | Like a typical Elite Fallen Hero, but old and wise, with greying features and a cautious hunting style, with slate-grey coloring and hardened hide. |
+| `pop_05653` | Shen-Lu Elite Fallen Hero Scarred | [[Regions/Shen-Lu\|Shen-Lu]] | Scarred | SS+ | 253 | 3.3 m | Day & Night | Like a typical Elite Fallen Hero, but covered in old battle scars, with slate-grey coloring and hardened hide. |
+| `pop_05654` | Moraveil Elite Fallen Hero Runt | [[Regions/Moraveil\|Moraveil]] | Runt | S+ | 203 | 2.1 m | Day & Night | Like a typical Elite Fallen Hero, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_05655` | Moraveil Elite Fallen Hero Alpha | [[Regions/Moraveil\|Moraveil]] | Alpha | SSS- | 267 | 3.75 m | Day & Night | Like a typical Elite Fallen Hero, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_05656` | Moraveil Elite Fallen Hero | [[Regions/Moraveil\|Moraveil]] | Adult | SS | 236 | 3 m | Day & Night | A typical adult Elite Fallen Hero of this region, with moss-green coloring that blends with the undergrowth. |
+| `pop_05657` | Shen-Lu Elite Fallen Hero Runt | [[Regions/Shen-Lu\|Shen-Lu]] | Runt | S+ | 203 | 2.1 m | Day & Night | Like a typical Elite Fallen Hero, but smaller and scrappier than usual, with slate-grey coloring and hardened hide. |
+| `pop_05658` | Shen-Lu Elite Fallen Hero Alpha | [[Regions/Shen-Lu\|Shen-Lu]] | Alpha | SSS- | 267 | 3.75 m | Day & Night | Like a typical Elite Fallen Hero, but larger and scarred, and others of its kind follow it, with slate-grey coloring and hardened hide. |
 
 ## Design recipe
 

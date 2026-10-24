@@ -51,8 +51,8 @@ The world tells stories about **what you actually did**, pulled from a small eve
 - Your **Memory Reel** and anime opening (already designed) pull from the same log.
 - **Cost:** low–medium · **Ring:** 1 (tavern rumors), grows over time.
 
-## 7. Tyrants Learn
-Merge the **Siege** and **Nemesis** systems. A region's Tyrant studies how you defend: burn its goblins every week and it starts sending wet-cloaked shield bearers. Skip defences and it gets bolder. A Tyrant that escapes you becomes a Nemesis.
+## 7. Tyrants Adapt (revised 2026-10-23, Canon §4d)
+A region's siege **adapts to the defences used against it**, as a region-level rule on siege waves: burn its goblins every week and the next waves bring wet-cloaked shield bearers. Skip defences and the raids grow bolder. This is wave tuning driven by the region's siege record, not a monster remembering you personally; Tyrants never gain ranks, scars or titles from defeating you.
 - **Cost:** low (wave-tag counters) · **Ring:** 1.
 
 ---

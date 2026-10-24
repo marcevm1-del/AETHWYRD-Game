@@ -27,6 +27,9 @@
 **Devotion:** every region has shrines to 2–3 gods. Daily prayer builds Devotion with 1 patron + 1 minor god. It unlocks blessings, divine quests, a god-specific Legendary item, and an audience with the god's **Avatar** late in the game.
 
 ## 3. Ages of History (S.C. = Summoning Calendar)
+
+For the expanded chronology, lived experience, source conflicts and historical footprints, see [The Deep History of Aetheria](history.md). This is a short cosmological index, not a competing timeline. BSC dates are approximate; 0 SC marks the First Summoning, not creation. Canon.md controls the exact spoilers and settled facts.
+
 | Age | When | Events | What remains today |
 |---|---|---|---|
 | **Age of Dragons** | ~50,000 yrs ago | Elder Dragons rule; first mortal races are born | Dragon bone fields, the five lairs |
@@ -37,6 +40,8 @@
 | **The First Summoning** | Year 0 S.C. | Ilvaris teaches the Church the Summoning Rite; the first Hero wins | Summoning Cathedral, Aldmere City |
 | **The Cycle** | 0–1024 S.C. | A Demon Lord rises roughly every ~300 yrs; a Hero is summoned each time | Statues of 3 Heroes… one with its face smashed |
 | **Now** | **1024 S.C.** | Vesper, the red moon, waxes early. The Demon Overlord Azrael stirs | — |
+
+**Interpretation note:** the table above describes the broad mythic sequence. It does not imply that every culture agrees on what the dragons, Titans or gods were, or that recorded dates before 0 SC are equally precise. The history document separates common teaching, physical evidence and hidden truth.
 
 ## 4. The System (Status)
 - **Official truth:** Ilvaris created Status after the Sundering so that mortals could grow strong enough to face Calamities.

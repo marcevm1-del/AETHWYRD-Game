@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | insect · besieged |
 | Settlements | Thimblefolk Mushroom Town |
 
+## Siege encounter plan
+
+Faction **insect**, D–C band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 4 × [[Monsters/Insects & Arachnids/Firefly Swarm|Firefly Swarm]] (E), 2 × [[Monsters/Beasts/Ancient Horned Rabbit|Ancient Horned Rabbit]] (E-)
+
+- **Wave 2:** 5 × [[Monsters/Plants & Fungi/Thornvine|Thornvine]] (E), 3 × [[Monsters/Elementals & Spirits/Will-o'-Wisp|Will-o'-Wisp]] (E)
+
+- **Wave 3:** 6 × [[Monsters/Familiars & Gentle Creatures/Moss Kitten|Moss Kitten]] (E+), 4 × [[Monsters/Plants & Fungi/Treant Sapling|Treant Sapling]] (D); lieutenant: [[Monsters/Beasts/Ancient Horned Rabbit|Ancient Horned Rabbit]]
+
 > **The Land of Small Things.** Everything in Mossdeep is too big, except the people. The Thimblefolk live in a mushroom town knee-high to a traveller, and Mother Webcrawler hunts them from the ferns above.
 >
 > *Thimblefolk tell of a giant who once shared their bread and kept the spiders off. They still set out a thimble of milk for him.*
@@ -75,14 +85,18 @@ Warm wet moss; honey in the air; the drone of bees as loud as a mill; the rustle
 - The council wants a big-folk volunteer to carry a beehive to safety, very carefully.
 - A Thimblefolk inventor is building a war machine from a snail shell and needs parts.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Clans
 
-- **The Carapace** (Insecta Clan, led by Queen-Mantis Zirrikh): Insect-folk who live in Mossdeep's ferns and are uneasy allies of the Thimblefolk; Mother Webcrawler hunts them too.
-- **The Capfolk** (Mushroom clan, led by Old Puffball Morel): Mushroom-folk who live alongside the Thimblefolk and the beetles; Mycelia is their nightmare cousin.
+- [[Clans/The Carapace|The Carapace]] (Insecta Clan, led by Queen-Mantis Zirrikh): Insect-folk who live in Mossdeep's ferns and are uneasy allies of the Thimblefolk; Mother Webcrawler hunts them too.
+- [[Clans/The Capfolk|The Capfolk]] (Mushroom clan, led by Old Puffball Morel): Mushroom-folk who live alongside the Thimblefolk and the beetles; Mycelia is their nightmare cousin.
 
 ## Fauna
 
-- **Velvet Bee** (Insect): A sparrow-sized bee with a furry body, the source of Mossdeep honey.
+- [[Fauna/Velvet Bee|Velvet Bee]] (Insect): A sparrow-sized bee with a furry body, the source of Mossdeep honey.
 
 ## Inns
 
@@ -103,3 +117,48 @@ Warm wet moss; honey in the air; the drone of bees as loud as a mill; the rustle
 | [[Monsters/Familiars & Gentle Creatures/Moss Kitten\|Moss Kitten]] | [[Families/Familiars & Gentle Creatures\|Familiars & Gentle Creatures]] | E+ | 32 |
 | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | [[Families/Plants & Fungi\|Plants & Fungi]] | D | 48 |
 | [[Monsters/Insects & Arachnids/Mother Webcrawler, Terror of the Small\|Mother Webcrawler, Terror of the Small]] | [[Families/Insects & Arachnids\|Insects & Arachnids]] | C+ | 86 |
+
+## Population and spawn patterns
+
+The data records **30 named population forms** across **11 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Day & Night (13), Day (14), Night (2), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00410` | Mossdeep Bandit Bear Scarred | [[Monsters/Beasts/Bandit Bear\|Bandit Bear]] | Scarred | D- | 40 | 2.42 m | Day & Night | Like a typical Bandit Bear, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_00411` | Mossdeep Bandit Bear Runt | [[Monsters/Beasts/Bandit Bear\|Bandit Bear]] | Runt | E- | 19 | 1.54 m | Day & Night | Like a typical Bandit Bear, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_00417` | Mossdeep Bandit Bear Juvenile | [[Monsters/Beasts/Bandit Bear\|Bandit Bear]] | Juvenile | E | 26 | 1.87 m | Day & Night | Like a typical Bandit Bear, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_00418` | Mossdeep Bandit Bear | [[Monsters/Beasts/Bandit Bear\|Bandit Bear]] | Adult | E+ | 32 | 2.2 m | Day & Night | A typical adult Bandit Bear of this region, with moss-green coloring that blends with the undergrowth. |
+| `pop_00512` | Mossdeep Jackalope Alpha | [[Monsters/Beasts/Jackalope\|Jackalope]] | Alpha | D- | 40 | 0.5 m | Day | Like a typical Jackalope, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_00633` | Mossdeep Firefly Swarm Alpha | [[Monsters/Insects & Arachnids/Firefly Swarm\|Firefly Swarm]] | Alpha | D- | 40 | 0.06 m | Day | Like a typical Firefly Swarm, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_00635` | Mossdeep Firefly Swarm Runt | [[Monsters/Insects & Arachnids/Firefly Swarm\|Firefly Swarm]] | Runt | F+ | 13 | 0.03 m | Day | Like a typical Firefly Swarm, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_00636` | Mossdeep Firefly Swarm Scarred | [[Monsters/Insects & Arachnids/Firefly Swarm\|Firefly Swarm]] | Scarred | E+ | 32 | 0.06 m | Day | Like a typical Firefly Swarm, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_00637` | Mossdeep Firefly Swarm Juvenile | [[Monsters/Insects & Arachnids/Firefly Swarm\|Firefly Swarm]] | Juvenile | E- | 19 | 0.04 m | Day | Like a typical Firefly Swarm, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_00639` | Mossdeep Firefly Swarm Albino | [[Monsters/Insects & Arachnids/Firefly Swarm\|Firefly Swarm]] | Albino | E+ | 32 | 0.05 m | Day | Like a typical Firefly Swarm, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01592` | Mossdeep Will-o'-Wisp Alpha | [[Monsters/Elementals & Spirits/Will-o'-Wisp\|Will-o'-Wisp]] | Alpha | D- | 40 | 0.38 m | Night | Like a typical Will-o'-Wisp, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_01594` | Mossdeep Will-o'-Wisp Runt | [[Monsters/Elementals & Spirits/Will-o'-Wisp\|Will-o'-Wisp]] | Runt | F+ | 13 | 0.21 m | Night | Like a typical Will-o'-Wisp, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_01597` | Mossdeep Pixie Runt | [[Monsters/Elementals & Spirits/Pixie\|Pixie]] | Runt | F+ | 13 | 0.14 m | Day | Like a typical Pixie, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_01598` | Mossdeep Pixie Juvenile | [[Monsters/Elementals & Spirits/Pixie\|Pixie]] | Juvenile | E- | 19 | 0.17 m | Day | Like a typical Pixie, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_01599` | Mossdeep Pixie Scarred | [[Monsters/Elementals & Spirits/Pixie\|Pixie]] | Scarred | E+ | 32 | 0.22 m | Day | Like a typical Pixie, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_01605` | Mossdeep Pixie | [[Monsters/Elementals & Spirits/Pixie\|Pixie]] | Adult | E | 26 | 0.2 m | Day | A typical adult Pixie of this region, with moss-green coloring that blends with the undergrowth. |
+| `pop_01731` | Mossdeep Thornvine Runt | [[Monsters/Plants & Fungi/Thornvine\|Thornvine]] | Runt | F+ | 13 | 2.1 m | Day & Night | Like a typical Thornvine, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_01734` | Mossdeep Thornvine Elderborn | [[Monsters/Plants & Fungi/Thornvine\|Thornvine]] | Elderborn | D | 48 | 4.05 m | Day & Night | Like a typical Thornvine, but old and wise, with greying features and a cautious hunting style, with moss-green coloring that blends with the undergrowth. |
+| `pop_01747` | Mossdeep Treant Sapling Albino | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | Albino | D+ | 56 | 2 m | Day | Like a typical Treant Sapling, but a rare pale form with white skin or fur and red eyes. |
+| `pop_03082` | Mossdeep Grove Goblin Trapper Alpha | [[Monsters/Goblinoids/Grove Goblin Trapper\|Grove Goblin Trapper]] | Alpha | D | 48 | 1.25 m | Day & Night | Like a typical Grove Goblin Trapper, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_03083` | Mossdeep Grove Goblin Trapper Scarred | [[Monsters/Goblinoids/Grove Goblin Trapper\|Grove Goblin Trapper]] | Scarred | D- | 40 | 1.1 m | Day & Night | Like a typical Grove Goblin Trapper, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_03084` | Mossdeep Grove Goblin Trapper Runt | [[Monsters/Goblinoids/Grove Goblin Trapper\|Grove Goblin Trapper]] | Runt | E- | 19 | 0.7 m | Day & Night | Like a typical Grove Goblin Trapper, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_03092` | Mossdeep Grove Goblin Trapper Juvenile | [[Monsters/Goblinoids/Grove Goblin Trapper\|Grove Goblin Trapper]] | Juvenile | E | 26 | 0.85 m | Day & Night | Like a typical Grove Goblin Trapper, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_03287` | Mossdeep Ancient Horned Rabbit Albino | [[Monsters/Beasts/Ancient Horned Rabbit\|Ancient Horned Rabbit]] | Albino | E | 26 | 0.6 m | Day & Night | Like a typical Ancient Horned Rabbit, but a rare pale form with white skin or fur and red eyes. |
+| `pop_03288` | Mossdeep Ancient Horned Rabbit Alpha | [[Monsters/Beasts/Ancient Horned Rabbit\|Ancient Horned Rabbit]] | Alpha | E+ | 32 | 0.75 m | Day & Night | Like a typical Ancient Horned Rabbit, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_03290` | Mossdeep Ancient Horned Rabbit Juvenile | [[Monsters/Beasts/Ancient Horned Rabbit\|Ancient Horned Rabbit]] | Juvenile | F+ | 13 | 0.51 m | Day & Night | Like a typical Ancient Horned Rabbit, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_05714` | Mossdeep Moss Kitten Elderborn | [[Monsters/Familiars & Gentle Creatures/Moss Kitten\|Moss Kitten]] | Elderborn | D+ | 56 | 0.54 m | Day | Like a typical Moss Kitten, but old and wise, with greying features and a cautious hunting style, with moss-green coloring that blends with the undergrowth. |
+| `pop_05719` | Mossdeep Moss Kitten Juvenile | [[Monsters/Familiars & Gentle Creatures/Moss Kitten\|Moss Kitten]] | Juvenile | E | 26 | 0.34 m | Day | Like a typical Moss Kitten, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_05720` | Mossdeep Moss Kitten Albino | [[Monsters/Familiars & Gentle Creatures/Moss Kitten\|Moss Kitten]] | Albino | D- | 40 | 0.4 m | Day | Like a typical Moss Kitten, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06719` | Mother Webcrawler, Terror of the Small | [[Monsters/Insects & Arachnids/Mother Webcrawler, Terror of the Small\|Mother Webcrawler, Terror of the Small]] | Unique | C+ | 86 | 1.2 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Aldmere|Aldmere]], [[Regions/Whisperwood|Whisperwood]], [[Regions/Sylvaran|Sylvaran]], [[Regions/Moraveil|Moraveil]], [[Regions/Strife Marches|Strife Marches]], [[Regions/Hoshizora|Hoshizora]], [[Regions/Kitsune Isles|Kitsune Isles]], [[Regions/Shen-Lu|Shen-Lu]].

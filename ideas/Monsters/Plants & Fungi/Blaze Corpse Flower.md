@@ -22,23 +22,44 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 15171 · 294 · 343 · 686 · 637 · 90 |
 | XP · gold | 6373 · 1225 |
 | Ring | 6 |
+| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_rooted` |
 | Habitats | [[Regions/Sunscar\|Sunscar]], [[Regions/Xochitl Mire\|Xochitl Mire]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
 
 **Field note:** Weak to Water. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Vine Lash | melee | 1.1 | 0 s | None | blue |
-| Snap Jaw | grab | 1.7 | 9 s | None | gold |
-| Spore Burst | aoe | 1 | 10 s | None | blue |
-| Root Bind | grab | 1 | 11 s | None | gold |
-| Ember Burst | magic | 1.5 | 10 s | Fire | red |
+- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (rigId); animation set `anim_plant_rooted`.
+- **Dimensions:** 4 m high × 1.6 m long × 4.8 m wide; prefab scale 2.
+- **Physics:** 1344 kg, gravity ×1, poise 258, knockback resistance 1, death style `wilt_collapse`.
+- **Navigation:** speed 0.72 m/s, turn 90°/s, stopping distance 0.88 m.
+- **Attack count:** 5; **signature:** a rotting bloom the size of a cart.
 
-## Loot (`loot_plant_b`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Vine Lash\|Vine Lash]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Snap Jaw\|Snap Jaw]] | grab | 1.7 | 9 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Spore Burst\|Spore Burst]] | aoe | 1 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Root Bind\|Root Bind]] | grab | 1 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Ember Burst\|Ember Burst]] | magic | 1.5 | 10 s | Fire | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Blaze Corpse Flower is a **dread plant** encountered at B+ rank, around level 120. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Water**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a rotting bloom the size of a cart. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Sunscar|Sunscar]], [[Regions/Xochitl Mire|Xochitl Mire]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_plant_rooted`, animation set `anim_plant_rooted`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Plants & Fungi B|loot_plant_b]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,31 @@ tags: [monster, plants-fungi]
 | [[Items/Spore Cap\|Spore Cap]] | 15% | 1–1 |
 | [[Items/B-Rank Monster Core\|B-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Xochitl Mire\|Xochitl Mire]] | 5 | A+, A-, B, B- | 96–159 | Night |
+| [[Regions/Sunscar\|Sunscar]] | 6 | B-, A-, A, B, A+ | 96–159 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04645` | Xochitl Mire Blaze Corpse Flower Elderborn | [[Regions/Xochitl Mire\|Xochitl Mire]] | Elderborn | A+ | 159 | 5.4 m | Night | Like a typical Blaze Corpse Flower, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_04646` | Sunscar Blaze Corpse Flower Runt | [[Regions/Sunscar\|Sunscar]] | Runt | B- | 96 | 2.8 m | Night | Like a typical Blaze Corpse Flower, but smaller and scrappier than usual, with dust-grey coloring and old rune scars. |
+| `pop_04647` | Sunscar Blaze Corpse Flower Scarred | [[Regions/Sunscar\|Sunscar]] | Scarred | A- | 132 | 4.4 m | Night | Like a typical Blaze Corpse Flower, but covered in old battle scars, with dust-grey coloring and old rune scars. |
+| `pop_04648` | Sunscar Blaze Corpse Flower Alpha | [[Regions/Sunscar\|Sunscar]] | Alpha | A | 146 | 5 m | Night | Like a typical Blaze Corpse Flower, but larger and scarred, and others of its kind follow it, with dust-grey coloring and old rune scars. |
+| `pop_04649` | Xochitl Mire Blaze Corpse Flower Scarred | [[Regions/Xochitl Mire\|Xochitl Mire]] | Scarred | A- | 132 | 4.4 m | Night | Like a typical Blaze Corpse Flower, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_04650` | Xochitl Mire Blaze Corpse Flower Juvenile | [[Regions/Xochitl Mire\|Xochitl Mire]] | Juvenile | B | 108 | 3.4 m | Night | Like a typical Blaze Corpse Flower, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04651` | Xochitl Mire Blaze Corpse Flower Albino | [[Regions/Xochitl Mire\|Xochitl Mire]] | Albino | A- | 132 | 4 m | Night | Like a typical Blaze Corpse Flower, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04652` | Sunscar Blaze Corpse Flower Juvenile | [[Regions/Sunscar\|Sunscar]] | Juvenile | B | 108 | 3.4 m | Night | Like a typical Blaze Corpse Flower, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
+| `pop_04653` | Xochitl Mire Blaze Corpse Flower Runt | [[Regions/Xochitl Mire\|Xochitl Mire]] | Runt | B- | 96 | 2.8 m | Night | Like a typical Blaze Corpse Flower, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_04654` | Sunscar Blaze Corpse Flower Elderborn | [[Regions/Sunscar\|Sunscar]] | Elderborn | A+ | 159 | 5.4 m | Night | Like a typical Blaze Corpse Flower, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
+| `pop_04655` | Sunscar Blaze Corpse Flower Albino | [[Regions/Sunscar\|Sunscar]] | Albino | A- | 132 | 4 m | Night | Like a typical Blaze Corpse Flower, but a rare pale form with white skin or fur and red eyes. |
 
 ## Design recipe
 

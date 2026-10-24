@@ -16,6 +16,11 @@ tags: [npc, adventurers-guild]
 
 A loud, cheerful rookie swordswoman who registers at the Guild the same day you do, to pay off her village's debt.
 
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
 ## Quests given
 
 - [[Quests/Status Granted|Status Granted]]
+- [[Quests/Weekly Board/Party Stew Night|Party Stew Night]]

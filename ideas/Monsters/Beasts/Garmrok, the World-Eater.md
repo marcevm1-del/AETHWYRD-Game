@@ -21,23 +21,44 @@ tags: [monster, beasts, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 180278 · 1452 · 1210 · 968 · 1089 · 100 |
 | XP · gold | 551660 · 4409 |
 | Ring | 5 |
+| Rig · animation | [[Systems/Rigs/quad_large\|quad_large]] · `anim_quad_large` |
 | Habitats | [[Regions/Frostveil\|Frostveil]] |
 | Genre | Classic Fantasy |
 | Trope | The horned rabbit "rookie killer" and wolf packs of every isekai starter forest |
 
 **Field note:** Weak to Light. Attacks only if you come close to its home; back away to avoid a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Maul | melee | 1.2 | 0 s | None | blue |
-| Pounce | dash | 1.6 | 6 s | None | red |
-| Howl | buff | 0 | 18 s | None | none |
-| Rending Bite | melee | 1.3 | 5 s | None | blue |
-| Null Rift | magic | 1.5 | 10 s | Void | red |
+- **Rig:** [[Systems/Rigs/quad_large|quad_large]] (rigId); animation set `anim_quad_large`.
+- **Dimensions:** 78 m high × 120 m long × 19.2 m wide; prefab scale 30.
+- **Physics:** 34560000 kg, gravity ×0.84, poise 1036, knockback resistance 1, death style `heavy_fall_dust`.
+- **Navigation:** speed 40.28 m/s, turn 60°/s, stopping distance 12.4 m.
+- **Attack count:** 5; **signature:** a wolf so vast its broken chains drag across the sky.
 
-## Loot (`loot_beast_ex`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Maul\|Maul]] | melee | 1.2 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Pounce\|Pounce]] | dash | 1.6 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Howl\|Howl]] | buff | 0 | 18 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Rending Bite\|Rending Bite]] | melee | 1.3 | 5 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Null Rift\|Null Rift]] | magic | 1.5 | 10 s | Void | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Garmrok, the World-Eater is a **dread beast** encountered at EX rank, around level 300. Its documented behaviour is *Territorial* and its AI pattern is *territorial_guard+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a wolf so vast its broken chains drag across the sky. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Frostveil|Frostveil]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_quad_large`, animation set `anim_quad_large`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Beasts EX|loot_beast_ex]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,20 @@ tags: [monster, beasts, unique]
 | [[Items/Prime Meat\|Prime Meat]] | 15% | 1–1 |
 | [[Items/EX-Rank Monster Core\|EX-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Frostveil\|Frostveil]] | 1 | EX | 300–300 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00530` | Garmrok, the World-Eater | [[Regions/Frostveil\|Frostveil]] | Unique | EX | 300 | 120 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

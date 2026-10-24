@@ -12,13 +12,19 @@ tags: [item, material]
 | Category · rank | material · C |
 | Value | 12 |
 
-## Dropped by (8)
+## Use in the world
 
-- [[Monsters/Serpentfolk/Lamia|Lamia]]
-- [[Monsters/Serpentfolk/Naga Warrior|Naga Warrior]]
-- [[Monsters/Serpentfolk/Naga Priestess|Naga Priestess]]
-- [[Monsters/Serpentfolk/Serpent Empress|Serpent Empress]]
-- [[Monsters/Serpentfolk/Vine Lamia|Vine Lamia]]
-- [[Monsters/Serpentfolk/Blaze Naga Warrior|Blaze Naga Warrior]]
-- [[Monsters/Serpentfolk/Dune Naga Priestess|Dune Naga Priestess]]
-- [[Monsters/Serpentfolk/Night Serpent Empress|Night Serpent Empress]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (8)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Serpentfolk/Lamia\|Lamia]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Naga Warrior\|Naga Warrior]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Naga Priestess\|Naga Priestess]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Serpent Empress\|Serpent Empress]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Vine Lamia\|Vine Lamia]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Blaze Naga Warrior\|Blaze Naga Warrior]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Dune Naga Priestess\|Dune Naga Priestess]] | 60.0% | 1–3 |
+| [[Monsters/Serpentfolk/Night Serpent Empress\|Night Serpent Empress]] | 60.0% | 1–3 |

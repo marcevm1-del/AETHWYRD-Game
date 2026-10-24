@@ -13,6 +13,7 @@ tags: [inn]
 | Dish | Mystery Meat (it's fine): +random buff |
 | Drink | Mushroom Brew: Understand Goblin for an hour |
 | Quirk | Monster-run; humans welcome if they're polite. Weapons stay at the door |
+| Rumor theme | The Commonwealth, human bandits, tribes |
 
 ## Rooms
 
@@ -22,3 +23,15 @@ tags: [inn]
 | private | 50 | Well Rested (4h) |  |
 | suite | 600 | Well Rested (8h) + meal |  |
 | The Peace Room | 200 | Well Rested (4h) | Humans and monsters share a table: +monster-town reputation |
+
+## Inn events
+
+- A slime asks you to settle a dispute
+- An ogre poetry night
+
+> [!warning]- Spoiler
+> If you spared Grukk twice, he runs it, and he named it after his father.
+
+## Stay and departure
+
+Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

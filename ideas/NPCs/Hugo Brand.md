@@ -25,3 +25,11 @@ A huge, soft-spoken baker who starts work at four in the morning and gives yeste
 - **day:** Temple Hill: Orphanage (bread delivery)
 - **dusk:** Hugo's Bakery
 - **night:** Hugo's Bakery (asleep by 9)
+
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Weekly Board/Hot Bread Delivery|Hot Bread Delivery]]

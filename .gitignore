@@ -31,3 +31,6 @@ Game/.idea/
 
 # Blender auto-backups
 *.blend1
+
+# Local vault backups (not part of the generated vault)
+ideas/_ascend_ideas_preserve_*/

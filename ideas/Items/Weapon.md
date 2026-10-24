@@ -12,27 +12,33 @@ tags: [item, material]
 | Category · rank | material · F |
 | Value | 4 |
 
-## Dropped by (22)
+## Use in the world
 
-- [[Monsters/Humanoid Enemies/Bandit|Bandit]]
-- [[Monsters/Humanoid Enemies/Highwayman Captain|Highwayman Captain]]
-- [[Monsters/Humanoid Enemies/Slaver|Slaver]]
-- [[Monsters/Humanoid Enemies/Dark Cultist|Dark Cultist]]
-- [[Monsters/Humanoid Enemies/Rogue Mage|Rogue Mage]]
-- [[Monsters/Humanoid Enemies/Inquisitor|Inquisitor]]
-- [[Monsters/Humanoid Enemies/Syndicate Blade|Syndicate Blade]]
-- [[Monsters/Humanoid Enemies/Rogue Knight|Rogue Knight]]
-- [[Monsters/Humanoid Enemies/Fallen Hero|Fallen Hero]]
-- [[Monsters/Humanoid Enemies/Corrupted Summoned Hero|Corrupted Summoned Hero]]
-- [[Monsters/Humanoid Enemies/Tide Bandit|Tide Bandit]]
-- [[Monsters/Humanoid Enemies/Meadow Highwayman Captain|Meadow Highwayman Captain]]
-- [[Monsters/Humanoid Enemies/Alley Slaver|Alley Slaver]]
-- [[Monsters/Humanoid Enemies/Dark Cultist Veteran|Dark Cultist Veteran]]
-- [[Monsters/Humanoid Enemies/Ancient Rogue Mage|Ancient Rogue Mage]]
-- [[Monsters/Humanoid Enemies/Cinder Inquisitor|Cinder Inquisitor]]
-- [[Monsters/Humanoid Enemies/Syndicate Blade Veteran|Syndicate Blade Veteran]]
-- [[Monsters/Humanoid Enemies/Zephyr Rogue Knight|Zephyr Rogue Knight]]
-- [[Monsters/Humanoid Enemies/Elite Fallen Hero|Elite Fallen Hero]]
-- [[Monsters/Humanoid Enemies/Varrick Kade, the Slaver Lord|Varrick Kade, the Slaver Lord]]
-- [[Monsters/Humanoid Enemies/Diego Alvarez, Voice of the Choir of Chains|Diego Alvarez, Voice of the Choir of Chains]]
-- [[Monsters/Humanoid Enemies/Cinderlord Vasque, the Smoke Mage|Cinderlord Vasque, the Smoke Mage]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (22)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Humanoid Enemies/Bandit\|Bandit]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Highwayman Captain\|Highwayman Captain]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Slaver\|Slaver]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Dark Cultist\|Dark Cultist]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Rogue Mage\|Rogue Mage]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Inquisitor\|Inquisitor]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Syndicate Blade\|Syndicate Blade]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Rogue Knight\|Rogue Knight]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Fallen Hero\|Fallen Hero]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Corrupted Summoned Hero\|Corrupted Summoned Hero]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Tide Bandit\|Tide Bandit]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Dark Cultist Veteran\|Dark Cultist Veteran]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Ancient Rogue Mage\|Ancient Rogue Mage]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Cinder Inquisitor\|Cinder Inquisitor]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Syndicate Blade Veteran\|Syndicate Blade Veteran]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Zephyr Rogue Knight\|Zephyr Rogue Knight]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Elite Fallen Hero\|Elite Fallen Hero]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Varrick Kade, the Slaver Lord\|Varrick Kade, the Slaver Lord]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Diego Alvarez, Voice of the Choir of Chains\|Diego Alvarez, Voice of the Choir of Chains]] | 30.0% | 1–1 |
+| [[Monsters/Humanoid Enemies/Cinderlord Vasque, the Smoke Mage\|Cinderlord Vasque, the Smoke Mage]] | 30.0% | 1–1 |

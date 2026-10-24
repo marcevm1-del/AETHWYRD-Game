@@ -1,6 +1,19 @@
 {
  "version": 1,
  "notes": "World-rule tuning: calendar, regional sieges, inns. Read by Code/Ascend.Core (WorldTuning).",
+ "currency": {
+  "baseUnit": "copper",
+  "displayOrder": ["copper", "silver", "gold", "platinum", "mithril"],
+  "denominations": [
+   { "id": "copper", "name": "Copper", "valueCopper": 1 },
+   { "id": "silver", "name": "Silver", "valueCopper": 100 },
+   { "id": "gold", "name": "Gold", "valueCopper": 10000 },
+   { "id": "platinum", "name": "Platinum", "valueCopper": 1000000 },
+   { "id": "mithril", "name": "Mithril Coin", "valueCopper": 100000000 }
+  ],
+  "conversionRate": 100,
+  "autoMakeChange": true
+ },
  "calendar": {
   "dayLengthRealMinutes": 90,
   "hoursPerDay": 24,

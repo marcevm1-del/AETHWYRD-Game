@@ -10,30 +10,36 @@ tags: [item, core]
 | Field | Value |
 |---|---|
 | Category · rank | core · SSS |
-| Value | 1102 |
+| Value | 512 |
 
-## Dropped by (23)
+## Use in the world
 
-- [[Monsters/Slimes/Prismatic Slime Sovereign|Prismatic Slime Sovereign]]
-- [[Monsters/Beasts/Behemoth Ascendant|Behemoth Ascendant]]
-- [[Monsters/Undead/Lich Emperor|Lich Emperor]]
-- [[Monsters/Orcs, Ogres & Giants/Primeval Titan-Kin|Primeval Titan-Kin]]
-- [[Monsters/Dragons/Starfall Wyrm|Starfall Wyrm]]
-- [[Monsters/Constructs & Mimics/Starmetal Colossus|Starmetal Colossus]]
-- [[Monsters/Elementals & Spirits/Elemental Sovereign|Elemental Sovereign]]
-- [[Monsters/Plants & Fungi/Worldroot Behemoth|Worldroot Behemoth]]
-- [[Monsters/Demons/Abyss Prince|Abyss Prince]]
-- [[Monsters/Aquatic/Abyssal Kraken Queen|Abyssal Kraken Queen]]
-- [[Monsters/Avians/Eternal Phoenix|Eternal Phoenix]]
-- [[Monsters/Yokai-Inspired Spirits/Great Tengu King|Great Tengu King]]
-- [[Monsters/Slimes/Cavern Prismatic Slime Sovereign|Cavern Prismatic Slime Sovereign]]
-- [[Monsters/Beasts/Ember Behemoth Ascendant|Ember Behemoth Ascendant]]
-- [[Monsters/Undead/Bog Lich Emperor|Bog Lich Emperor]]
-- [[Monsters/Constructs & Mimics/Tide Starmetal Colossus|Tide Starmetal Colossus]]
-- [[Monsters/Elementals & Spirits/Venom Elemental Sovereign|Venom Elemental Sovereign]]
-- [[Monsters/Plants & Fungi/Thunder Worldroot Behemoth|Thunder Worldroot Behemoth]]
-- [[Monsters/Aquatic/Phantom Abyssal Kraken Queen|Phantom Abyssal Kraken Queen]]
-- [[Monsters/Avians/Brine Eternal Phoenix|Brine Eternal Phoenix]]
-- [[Monsters/Yokai-Inspired Spirits/Ruin Great Tengu King|Ruin Great Tengu King]]
-- [[Monsters/Slimes/Iron Prismatic Slime Sovereign|Iron Prismatic Slime Sovereign]]
-- [[Monsters/Beasts/Phantom Behemoth Ascendant|Phantom Behemoth Ascendant]]
+This item belongs to the world’s economy and progression loop. Its category, rank, value and recorded effects define its practical use.
+
+## Drop sources (23)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Slimes/Prismatic Slime Sovereign\|Prismatic Slime Sovereign]] | 100.0% | 1–1 |
+| [[Monsters/Beasts/Behemoth Ascendant\|Behemoth Ascendant]] | 100.0% | 1–1 |
+| [[Monsters/Undead/Lich Emperor\|Lich Emperor]] | 100.0% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Primeval Titan-Kin\|Primeval Titan-Kin]] | 100.0% | 1–1 |
+| [[Monsters/Dragons/Starfall Wyrm\|Starfall Wyrm]] | 100.0% | 1–1 |
+| [[Monsters/Constructs & Mimics/Starmetal Colossus\|Starmetal Colossus]] | 100.0% | 1–1 |
+| [[Monsters/Elementals & Spirits/Elemental Sovereign\|Elemental Sovereign]] | 100.0% | 1–1 |
+| [[Monsters/Plants & Fungi/Worldroot Behemoth\|Worldroot Behemoth]] | 100.0% | 1–1 |
+| [[Monsters/Demons/Abyss Prince\|Abyss Prince]] | 100.0% | 1–1 |
+| [[Monsters/Aquatic/Abyssal Kraken Queen\|Abyssal Kraken Queen]] | 100.0% | 1–1 |
+| [[Monsters/Avians/Eternal Phoenix\|Eternal Phoenix]] | 100.0% | 1–1 |
+| [[Monsters/Yokai-Inspired Spirits/Great Tengu King\|Great Tengu King]] | 100.0% | 1–1 |
+| [[Monsters/Slimes/Cavern Prismatic Slime Sovereign\|Cavern Prismatic Slime Sovereign]] | 100.0% | 1–1 |
+| [[Monsters/Beasts/Ember Behemoth Ascendant\|Ember Behemoth Ascendant]] | 100.0% | 1–1 |
+| [[Monsters/Undead/Bog Lich Emperor\|Bog Lich Emperor]] | 100.0% | 1–1 |
+| [[Monsters/Constructs & Mimics/Tide Starmetal Colossus\|Tide Starmetal Colossus]] | 100.0% | 1–1 |
+| [[Monsters/Elementals & Spirits/Venom Elemental Sovereign\|Venom Elemental Sovereign]] | 100.0% | 1–1 |
+| [[Monsters/Plants & Fungi/Thunder Worldroot Behemoth\|Thunder Worldroot Behemoth]] | 100.0% | 1–1 |
+| [[Monsters/Aquatic/Phantom Abyssal Kraken Queen\|Phantom Abyssal Kraken Queen]] | 100.0% | 1–1 |
+| [[Monsters/Avians/Brine Eternal Phoenix\|Brine Eternal Phoenix]] | 100.0% | 1–1 |
+| [[Monsters/Yokai-Inspired Spirits/Ruin Great Tengu King\|Ruin Great Tengu King]] | 100.0% | 1–1 |
+| [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | 100.0% | 1–1 |
+| [[Monsters/Beasts/Phantom Behemoth Ascendant\|Phantom Behemoth Ascendant]] | 100.0% | 1–1 |

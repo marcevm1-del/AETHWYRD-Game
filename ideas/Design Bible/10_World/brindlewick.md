@@ -89,3 +89,6 @@
 3. **Hollis's buried sword** under the third training post (after losing to his broom 10 times).
 4. **The orphanage songs** are in Old Weave-tongue; once you can read it, they're hymns to the red moon.
 5. **The first copper** you nailed to the guild wall is still there at the end of the game, with a note from Mina.
+
+## 7. Town-life expansion options
+The town's tavern and civic spaces should be expanded through scenes and state variants before adding new districts. See [[anime_town_places_and_taverns]] for a detailed tavern floor plan, a dawn-to-night event rhythm, liberation-state cues and optional proposals for a Hall of Cards memorial, market canopy, clinic corner, washhouse and guild route map. These additions remain proposals pending the Canon lock.

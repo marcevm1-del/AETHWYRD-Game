@@ -15,3 +15,7 @@ tags: [item, weapon]
 | Rarity · slot | Common · main_hand |
 | Value | 20 |
 | Stats | matk 8 |
+
+## Use in the world
+
+Equipment changes the character’s combat profile. Compare its rank, slot and stat line with the current build before investing in an upgrade.

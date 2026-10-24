@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | sandborne · besieged |
 | Settlements | the town on Thalassa's back |
 
+## Siege encounter plan
+
+Faction **sandborne**, B–A band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 4 × [[Monsters/Sandborne/Sand Skink|Sand Skink]] (F), 2 × [[Monsters/Sandborne/Dune Scorpion|Dune Scorpion]] (D)
+
+- **Wave 2:** 5 × [[Monsters/Sandborne/Glass Wraith|Glass Wraith]] (C), 3 × [[Monsters/Sandborne/Sandworm|Sandworm]] (B)
+
+- **Wave 3:** 6 × [[Monsters/Sandborne/Glass Wraith|Glass Wraith]] (C), 4 × [[Monsters/Sandborne/Sandworm|Sandworm]] (B); lieutenant: [[Monsters/Sandborne/Sandworm|Sandworm]]
+
 > **The Moving Town.** A town lives on the back of Thalassa, a sand-whale as big as a hill, and moves wherever she swims. Glassmaw, the worm of the endless dune, hunts them both.
 >
 > *Thalassa's riders keep a calendar of her songs. She has been singing less.*
@@ -75,14 +85,18 @@ The slow sway of the streets; whale-song through the floorboards; sand-spray on 
 - Sand pirates have been shadowing the town, waiting for Glassmaw to weaken it.
 - Glassmaw has been seen near the whale graveyard, and the whale-singers think it is waiting for Thalassa.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Clans
 
-- **The Plateback** (Pangolin Clan, led by Hide-Warden Pango Scalehold): Riders of Thalassa who patch her hide and polish her barnacles.
-- **The Whale-Singers** (Whale Clan, led by First Singer Oruna-of-the-Deep-Note): The singers who speak to Thalassa.
+- [[Clans/The Plateback|The Plateback]] (Pangolin Clan, led by Hide-Warden Pango Scalehold): Riders of Thalassa who patch her hide and polish her barnacles.
+- [[Clans/The Whale-Singers|The Whale-Singers]] (Whale Clan, led by First Singer Oruna-of-the-Deep-Note): The singers who speak to Thalassa.
 
 ## Fauna
 
-- **Plated Crawler** (Insect): An armoured centipede that burrows in Thalassa's hide.
+- [[Fauna/Plated Crawler|Plated Crawler]] (Insect): An armoured centipede that burrows in Thalassa's hide.
 
 ## Inns
 
@@ -102,3 +116,44 @@ The slow sway of the streets; whale-song through the floorboards; sand-spray on 
 | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | [[Families/Sandborne\|Sandborne]] | A | 146 |
 | [[Monsters/Sandborne/Glassmaw, Worm of the Endless Dune\|Glassmaw, Worm of the Endless Dune]] | [[Families/Sandborne\|Sandborne]] | A+ | 159 |
 | [[Monsters/Sandborne/Dunewhale Thalassa\|Dunewhale Thalassa]] | [[Families/Sandborne\|Sandborne]] | EX | 300 |
+
+## Population and spawn patterns
+
+The data records **26 named population forms** across **10 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Day & Night (18), Night (6), Story (2).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_02178` | Dunewhale Drift Chimera Juvenile | [[Monsters/Chimeras & Mythic Beasts/Chimera\|Chimera]] | Juvenile | B | 108 | 2.98 m | Day & Night | Like a typical Chimera, but young, with brighter colors and unworn features, with sun-bleached, sand-scoured coloring. |
+| `pop_02179` | Dunewhale Drift Chimera Elderborn | [[Monsters/Chimeras & Mythic Beasts/Chimera\|Chimera]] | Elderborn | A+ | 159 | 4.73 m | Day & Night | Like a typical Chimera, but old and wise, with greying features and a cautious hunting style, with sun-bleached, sand-scoured coloring. |
+| `pop_02184` | Dunewhale Drift Chimera Runt | [[Monsters/Chimeras & Mythic Beasts/Chimera\|Chimera]] | Runt | B- | 96 | 2.45 m | Day & Night | Like a typical Chimera, but smaller and scrappier than usual, with sun-bleached, sand-scoured coloring. |
+| `pop_02675` | Dunewhale Drift Sand Skink Scarred | [[Monsters/Sandborne/Sand Skink\|Sand Skink]] | Scarred | F+ | 13 | 0.55 m | Day & Night | Like a typical Sand Skink, but covered in old battle scars, with sun-bleached, sand-scoured coloring. |
+| `pop_02682` | Dunewhale Drift Sand Skink Juvenile | [[Monsters/Sandborne/Sand Skink\|Sand Skink]] | Juvenile | F- | 3 | 0.42 m | Day & Night | Like a typical Sand Skink, but young, with brighter colors and unworn features, with sun-bleached, sand-scoured coloring. |
+| `pop_02685` | Dunewhale Drift Dune Scorpion Alpha | [[Monsters/Sandborne/Dune Scorpion\|Dune Scorpion]] | Alpha | C- | 65 | 2.5 m | Day & Night | Like a typical Dune Scorpion, but larger and scarred, and others of its kind follow it, with sun-bleached, sand-scoured coloring. |
+| `pop_02686` | Dunewhale Drift Dune Scorpion | [[Monsters/Sandborne/Dune Scorpion\|Dune Scorpion]] | Adult | D | 48 | 2 m | Day & Night | A typical adult Dune Scorpion of this region, with sun-bleached, sand-scoured coloring. |
+| `pop_02687` | Dunewhale Drift Dune Scorpion Runt | [[Monsters/Sandborne/Dune Scorpion\|Dune Scorpion]] | Runt | E+ | 32 | 1.4 m | Day & Night | Like a typical Dune Scorpion, but smaller and scrappier than usual, with sun-bleached, sand-scoured coloring. |
+| `pop_02695` | Dunewhale Drift Glass Wraith Runt | [[Monsters/Sandborne/Glass Wraith\|Glass Wraith]] | Runt | D+ | 56 | 1.4 m | Night | Like a typical Glass Wraith, but smaller and scrappier than usual, with sun-bleached, sand-scoured coloring. |
+| `pop_02700` | Dunewhale Drift Glass Wraith Scarred | [[Monsters/Sandborne/Glass Wraith\|Glass Wraith]] | Scarred | C+ | 86 | 2.2 m | Night | Like a typical Glass Wraith, but covered in old battle scars, with sun-bleached, sand-scoured coloring. |
+| `pop_02705` | Dunewhale Drift Glass Wraith Albino | [[Monsters/Sandborne/Glass Wraith\|Glass Wraith]] | Albino | C+ | 86 | 2 m | Night | Like a typical Glass Wraith, but a rare pale form with white skin or fur and red eyes. |
+| `pop_02709` | Dunewhale Drift Sandworm Scarred | [[Monsters/Sandborne/Sandworm\|Sandworm]] | Scarred | B+ | 120 | 44 m | Day & Night | Like a typical Sandworm, but covered in old battle scars, with sun-bleached, sand-scoured coloring. |
+| `pop_02717` | Dunewhale Thalassa | [[Monsters/Sandborne/Dunewhale Thalassa\|Dunewhale Thalassa]] | Unique | EX | 300 | 900 m | Story | Unique being; see the species entry. |
+| `pop_03576` | Dunewhale Drift Dune Queen Ant Elderborn | [[Monsters/Insects & Arachnids/Dune Queen Ant\|Dune Queen Ant]] | Elderborn | B+ | 120 | 4.73 m | Day & Night | Like a typical Dune Queen Ant, but old and wise, with greying features and a cautious hunting style, with sun-bleached, sand-scoured coloring. |
+| `pop_03579` | Dunewhale Drift Dune Queen Ant Juvenile | [[Monsters/Insects & Arachnids/Dune Queen Ant\|Dune Queen Ant]] | Juvenile | C | 76 | 2.98 m | Day & Night | Like a typical Dune Queen Ant, but young, with brighter colors and unworn features, with sun-bleached, sand-scoured coloring. |
+| `pop_03583` | Dunewhale Drift Dune Queen Ant | [[Monsters/Insects & Arachnids/Dune Queen Ant\|Dune Queen Ant]] | Adult | C+ | 86 | 3.5 m | Day & Night | A typical adult Dune Queen Ant of this region, with sun-bleached, sand-scoured coloring. |
+| `pop_04180` | Dunewhale Drift Greater Basilisk | [[Monsters/Reptiles/Greater Basilisk\|Greater Basilisk]] | Adult | B | 108 | 6.4 m | Night | A typical adult Greater Basilisk of this region, with sun-bleached, sand-scoured coloring. |
+| `pop_04182` | Dunewhale Drift Greater Basilisk Elderborn | [[Monsters/Reptiles/Greater Basilisk\|Greater Basilisk]] | Elderborn | A | 146 | 8.64 m | Night | Like a typical Greater Basilisk, but old and wise, with greying features and a cautious hunting style, with sun-bleached, sand-scoured coloring. |
+| `pop_04183` | Dunewhale Drift Greater Basilisk Alpha | [[Monsters/Reptiles/Greater Basilisk\|Greater Basilisk]] | Alpha | A- | 132 | 8 m | Night | Like a typical Greater Basilisk, but larger and scarred, and others of its kind follow it, with sun-bleached, sand-scoured coloring. |
+| `pop_05549` | Dunewhale Drift Elder Sandworm Juvenile | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | Juvenile | A- | 132 | 54.4 m | Day & Night | Like a typical Elder Sandworm, but young, with brighter colors and unworn features, with sun-bleached, sand-scoured coloring. |
+| `pop_05550` | Dunewhale Drift Elder Sandworm Alpha | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | Alpha | S- | 173 | 80 m | Day & Night | Like a typical Elder Sandworm, but larger and scarred, and others of its kind follow it, with sun-bleached, sand-scoured coloring. |
+| `pop_05552` | Dunewhale Drift Elder Sandworm Scarred | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | Scarred | A+ | 159 | 70.4 m | Day & Night | Like a typical Elder Sandworm, but covered in old battle scars, with sun-bleached, sand-scoured coloring. |
+| `pop_05554` | Dunewhale Drift Elder Sandworm Albino | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | Albino | A+ | 159 | 64 m | Day & Night | Like a typical Elder Sandworm, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05558` | Dunewhale Drift Elder Sandworm Runt | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | Runt | B+ | 120 | 44.8 m | Day & Night | Like a typical Elder Sandworm, but smaller and scrappier than usual, with sun-bleached, sand-scoured coloring. |
+| `pop_05559` | Dunewhale Drift Elder Sandworm Elderborn | [[Monsters/Sandborne/Elder Sandworm\|Elder Sandworm]] | Elderborn | S | 188 | 86.4 m | Day & Night | Like a typical Elder Sandworm, but old and wise, with greying features and a cautious hunting style, with sun-bleached, sand-scoured coloring. |
+| `pop_06737` | Glassmaw, Worm of the Endless Dune | [[Monsters/Sandborne/Glassmaw, Worm of the Endless Dune\|Glassmaw, Worm of the Endless Dune]] | Unique | A+ | 159 | 70 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Sunscar|Sunscar]], [[Regions/Zarvan|Zarvan]], [[Regions/Zaruma|Zaruma]].

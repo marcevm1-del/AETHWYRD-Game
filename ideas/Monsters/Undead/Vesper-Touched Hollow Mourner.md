@@ -22,23 +22,44 @@ tags: [monster, undead]
 | HP · ATK · DEF · MATK · MDEF · SPD | 1059 · 103 · 86 · 69 · 77 · 100 |
 | XP · gold | 342 · 96 |
 | Ring | 3 |
+| Rig · animation | [[Systems/Rigs/medium_biped\|medium_biped]] · `anim_medium_biped` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Whisperwood\|Whisperwood]] |
 | Genre | Gothic Horror |
 | Trope | Graveyard night threats; the lich and its phylactery; the vampire noble |
 
 **Field note:** Weak to Light. Attacks on sight. Expect a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Slash | melee | 1 | 0 s | None | blue |
-| Heavy Swing | melee | 1.6 | 6 s | None | red |
-| Guard Counter | counter | 1.3 | 10 s | None | blue |
-| Grave Grasp | grab | 1.2 | 10 s | None | gold |
-| Shadow Grasp | magic | 1.5 | 10 s | Dark | red |
+- **Rig:** [[Systems/Rigs/medium_biped|medium_biped]] (rigId); animation set `anim_medium_biped`.
+- **Dimensions:** 1.7 m high × 0.51 m long × 0.54 m wide; prefab scale 0.944.
+- **Physics:** 63.9 kg, gravity ×1.5, poise 56, knockback resistance 0.33, death style `ragdoll`.
+- **Navigation:** speed 5.54 m/s, turn 307°/s, stopping distance 0.69 m.
+- **Attack count:** 5; **signature:** a weeping figure that moves only when you look away.
 
-## Loot (`loot_undead_e`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Slash\|Slash]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Heavy Swing\|Heavy Swing]] | melee | 1.6 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Guard Counter\|Guard Counter]] | counter | 1.3 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Grave Grasp\|Grave Grasp]] | grab | 1.2 | 10 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Shadow Grasp\|Shadow Grasp]] | magic | 1.5 | 10 s | Dark | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Vesper-Touched Hollow Mourner is a **horror undead** encountered at E- rank, around level 19. Its documented behaviour is *Aggressive* and its AI pattern is *aggressive_chase+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a weeping figure that moves only when you look away. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Aldmere|Aldmere]], [[Regions/Whisperwood|Whisperwood]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_medium_biped`, animation set `anim_medium_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Undead E|loot_undead_e]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,31 @@ tags: [monster, undead]
 | [[Items/Grave Cloth\|Grave Cloth]] | 30% | 1–1 |
 | [[Items/Soul Ember\|Soul Ember]] | 15% | 1–1 |
 | [[Items/E-Rank Monster Core\|E-Rank Monster Core]] | 100% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Aldmere\|Aldmere]] | 5 | F+, D-, E+, F, E | 8–40 | Night |
+| [[Regions/Whisperwood\|Whisperwood]] | 6 | E+, E, D-, F+, F | 8–40 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06572` | Aldmere Vesper-Touched Hollow Mourner Juvenile | [[Regions/Aldmere\|Aldmere]] | Juvenile | F+ | 13 | 1.44 m | Night | Like a typical Vesper-Touched Hollow Mourner, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_06573` | Whisperwood Vesper-Touched Hollow Mourner Alpha | [[Regions/Whisperwood\|Whisperwood]] | Alpha | E+ | 32 | 2.13 m | Night | Like a typical Vesper-Touched Hollow Mourner, but larger and scarred, and others of its kind follow it, with dust-grey coloring and old rune scars. |
+| `pop_06574` | Whisperwood Vesper-Touched Hollow Mourner Albino | [[Regions/Whisperwood\|Whisperwood]] | Albino | E | 26 | 1.7 m | Night | Like a typical Vesper-Touched Hollow Mourner, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06575` | Whisperwood Vesper-Touched Hollow Mourner Elderborn | [[Regions/Whisperwood\|Whisperwood]] | Elderborn | D- | 40 | 2.29 m | Night | Like a typical Vesper-Touched Hollow Mourner, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
+| `pop_06576` | Whisperwood Vesper-Touched Hollow Mourner Scarred | [[Regions/Whisperwood\|Whisperwood]] | Scarred | E | 26 | 1.87 m | Night | Like a typical Vesper-Touched Hollow Mourner, but covered in old battle scars, with dust-grey coloring and old rune scars. |
+| `pop_06577` | Whisperwood Vesper-Touched Hollow Mourner Juvenile | [[Regions/Whisperwood\|Whisperwood]] | Juvenile | F+ | 13 | 1.44 m | Night | Like a typical Vesper-Touched Hollow Mourner, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
+| `pop_06578` | Aldmere Vesper-Touched Hollow Mourner Elderborn | [[Regions/Aldmere\|Aldmere]] | Elderborn | D- | 40 | 2.29 m | Night | Like a typical Vesper-Touched Hollow Mourner, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_06579` | Aldmere Vesper-Touched Hollow Mourner Alpha | [[Regions/Aldmere\|Aldmere]] | Alpha | E+ | 32 | 2.13 m | Night | Like a typical Vesper-Touched Hollow Mourner, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_06580` | Whisperwood Vesper-Touched Hollow Mourner Runt | [[Regions/Whisperwood\|Whisperwood]] | Runt | F | 8 | 1.19 m | Night | Like a typical Vesper-Touched Hollow Mourner, but smaller and scrappier than usual, with dust-grey coloring and old rune scars. |
+| `pop_06581` | Aldmere Vesper-Touched Hollow Mourner Runt | [[Regions/Aldmere\|Aldmere]] | Runt | F | 8 | 1.19 m | Night | Like a typical Vesper-Touched Hollow Mourner, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_06582` | Aldmere Vesper-Touched Hollow Mourner Albino | [[Regions/Aldmere\|Aldmere]] | Albino | E | 26 | 1.7 m | Night | Like a typical Vesper-Touched Hollow Mourner, but a rare pale form with white skin or fur and red eyes. |
 
 ## Design recipe
 

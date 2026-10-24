@@ -273,7 +273,9 @@ function materialId(name, rank) {
 function coreId(rank) {
   const L = rankLetter(rank);
   const id = 'itm_core_' + L.toLowerCase();
-  if (!ITEMS.has(id)) ITEMS.set(id, { id, name: `${L}-Rank Monster Core`, category: 'core', rank: L, value: Math.round(10 * Math.pow(1.8, rankIdx(rank))) });
+    // Cores are guaranteed ordinary-monster drops, so keep their guild buyback
+    // modest and predictable. `value` is copper; each rank doubles the price.
+    if (!ITEMS.has(id)) ITEMS.set(id, { id, name: `${L}-Rank Monster Core`, category: 'core', rank: L, value: 2 * Math.pow(2, rankIdx(rank)) });
   return id;
 }
 const LOOT = new Map();

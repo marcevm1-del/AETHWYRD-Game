@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | construct · besieged |
 | Settlements | Velmark ducal towns |
 
+## Siege encounter plan
+
+Faction **construct**, C–B band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 6 × [[Monsters/Constructs & Mimics/Mimic|Mimic]] (D)
+
+- **Wave 2:** 5 × [[Monsters/Constructs & Mimics/Mimic|Mimic]] (D), 3 × [[Monsters/Constructs & Mimics/Stone Golem|Stone Golem]] (D)
+
+- **Wave 3:** 6 × [[Monsters/Constructs & Mimics/Mimic|Mimic]] (D), 4 × [[Monsters/Constructs & Mimics/Cloud Mimic|Cloud Mimic]] (D+); lieutenant: [[Monsters/Constructs & Mimics/Cloud Mimic|Cloud Mimic]]
+
 > **The White Duchies.** Prosperous ducal towns of white stone and paid tithes. Beneath the foundations, the Tithe Colossus has woken hungry for what the stones were promised.
 >
 > *The first duke paid the land a tithe for its stones. His heirs stopped paying.*
@@ -75,6 +85,10 @@ Dust of cut stone; ledger ink; church bells on the hour; the deep grinding of so
 - A quarry-worker's family has been taken into the earth, and the dukes say it is not their problem.
 - The grand duke wants the Colossus stopped quietly, without admitting that the duchies owe anything.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Monsters (10)
 
 | Monster | Family | Rank | Level |
@@ -89,3 +103,54 @@ Dust of cut stone; ledger ink; church bells on the hour; the deep grinding of so
 | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | [[Families/Humanoid Enemies\|Humanoid Enemies]] | D+ | 56 |
 | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | [[Families/Humanoid Enemies\|Humanoid Enemies]] | D+ | 56 |
 | [[Monsters/Constructs & Mimics/The Tithe Colossus, Hunger of the Foundation Stones\|The Tithe Colossus, Hunger of the Foundation Stones]] | [[Families/Constructs & Mimics\|Constructs & Mimics]] | B+ | 120 |
+
+## Population and spawn patterns
+
+The data records **36 named population forms** across **10 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Day & Night (29), Night (6), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00664` | Velmark Blade Mantis Runt | [[Monsters/Insects & Arachnids/Blade Mantis\|Blade Mantis]] | Runt | D- | 40 | 1.4 m | Day & Night | Like a typical Blade Mantis, but smaller and scrappier than usual, with golden, grass-toned coloring. |
+| `pop_00670` | Velmark Blade Mantis Albino | [[Monsters/Insects & Arachnids/Blade Mantis\|Blade Mantis]] | Albino | C- | 65 | 2 m | Day & Night | Like a typical Blade Mantis, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01485` | Velmark Stone Golem Runt | [[Monsters/Constructs & Mimics/Stone Golem\|Stone Golem]] | Runt | E+ | 32 | 2.1 m | Day & Night | Like a typical Stone Golem, but smaller and scrappier than usual, with soot-stained hide and scavenged scraps. |
+| `pop_01492` | Velmark Stone Golem Albino | [[Monsters/Constructs & Mimics/Stone Golem\|Stone Golem]] | Albino | D+ | 56 | 3 m | Day & Night | Like a typical Stone Golem, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01494` | Velmark Stone Golem Juvenile | [[Monsters/Constructs & Mimics/Stone Golem\|Stone Golem]] | Juvenile | D- | 40 | 2.55 m | Day & Night | Like a typical Stone Golem, but young, with brighter colors and unworn features, with soot-stained hide and scavenged scraps. |
+| `pop_01495` | Velmark Mimic Juvenile | [[Monsters/Constructs & Mimics/Mimic\|Mimic]] | Juvenile | D- | 40 | 0.85 m | Night | Like a typical Mimic, but young, with brighter colors and unworn features, with soot-stained hide and scavenged scraps. |
+| `pop_01496` | Velmark Mimic Albino | [[Monsters/Constructs & Mimics/Mimic\|Mimic]] | Albino | D+ | 56 | 1 m | Night | Like a typical Mimic, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01497` | Velmark Mimic | [[Monsters/Constructs & Mimics/Mimic\|Mimic]] | Adult | D | 48 | 1 m | Night | A typical adult Mimic of this region, with soot-stained hide and scavenged scraps. |
+| `pop_01825` | Velmark Hellhound Albino | [[Monsters/Demons/Hellhound\|Hellhound]] | Albino | D+ | 56 | 1.5 m | Day & Night | Like a typical Hellhound, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01826` | Velmark Hellhound | [[Monsters/Demons/Hellhound\|Hellhound]] | Adult | D | 48 | 1.5 m | Day & Night | A typical adult Hellhound of this region, with soot-stained hide and scavenged scraps. |
+| `pop_01827` | Velmark Hellhound Elderborn | [[Monsters/Demons/Hellhound\|Hellhound]] | Elderborn | C | 76 | 2.03 m | Day & Night | Like a typical Hellhound, but old and wise, with greying features and a cautious hunting style, with soot-stained hide and scavenged scraps. |
+| `pop_01828` | Velmark Hellhound Alpha | [[Monsters/Demons/Hellhound\|Hellhound]] | Alpha | C- | 65 | 1.88 m | Day & Night | Like a typical Hellhound, but larger and scarred, and others of its kind follow it, with soot-stained hide and scavenged scraps. |
+| `pop_01830` | Velmark Hellhound Scarred | [[Monsters/Demons/Hellhound\|Hellhound]] | Scarred | D+ | 56 | 1.65 m | Day & Night | Like a typical Hellhound, but covered in old battle scars, with soot-stained hide and scavenged scraps. |
+| `pop_01831` | Velmark Hellhound Juvenile | [[Monsters/Demons/Hellhound\|Hellhound]] | Juvenile | D- | 40 | 1.27 m | Day & Night | Like a typical Hellhound, but young, with brighter colors and unworn features, with soot-stained hide and scavenged scraps. |
+| `pop_02076` | Velmark Harpy Scarred | [[Monsters/Avians/Harpy\|Harpy]] | Scarred | D+ | 56 | 1.76 m | Day & Night | Like a typical Harpy, but covered in old battle scars, with golden, grass-toned coloring. |
+| `pop_02077` | Velmark Harpy Juvenile | [[Monsters/Avians/Harpy\|Harpy]] | Juvenile | D- | 40 | 1.36 m | Day & Night | Like a typical Harpy, but young, with brighter colors and unworn features, with golden, grass-toned coloring. |
+| `pop_02081` | Velmark Harpy Elderborn | [[Monsters/Avians/Harpy\|Harpy]] | Elderborn | C | 76 | 2.16 m | Day & Night | Like a typical Harpy, but old and wise, with greying features and a cautious hunting style, with golden, grass-toned coloring. |
+| `pop_02082` | Velmark Harpy Albino | [[Monsters/Avians/Harpy\|Harpy]] | Albino | D+ | 56 | 1.6 m | Day & Night | Like a typical Harpy, but a rare pale form with white skin or fur and red eyes. |
+| `pop_02746` | Velmark Slaver Alpha | [[Monsters/Humanoid Enemies/Slaver\|Slaver]] | Alpha | C- | 65 | 2.38 m | Day & Night | Like a typical Slaver, but larger and scarred, and others of its kind follow it, with golden, grass-toned coloring. |
+| `pop_04374` | Velmark Cloud Mimic Elderborn | [[Monsters/Constructs & Mimics/Cloud Mimic\|Cloud Mimic]] | Elderborn | C+ | 86 | 1.35 m | Night | Like a typical Cloud Mimic, but old and wise, with greying features and a cautious hunting style, with soot-stained hide and scavenged scraps. |
+| `pop_04380` | Velmark Cloud Mimic | [[Monsters/Constructs & Mimics/Cloud Mimic\|Cloud Mimic]] | Adult | D+ | 56 | 1 m | Night | A typical adult Cloud Mimic of this region, with soot-stained hide and scavenged scraps. |
+| `pop_04382` | Velmark Cloud Mimic Albino | [[Monsters/Constructs & Mimics/Cloud Mimic\|Cloud Mimic]] | Albino | C- | 65 | 1 m | Night | Like a typical Cloud Mimic, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05572` | Velmark Meadow Highwayman Captain Scarred | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | Scarred | C- | 65 | 1.98 m | Day & Night | Like a typical Meadow Highwayman Captain, but covered in old battle scars, with golden, grass-toned coloring. |
+| `pop_05576` | Velmark Meadow Highwayman Captain Albino | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | Albino | C- | 65 | 1.8 m | Day & Night | Like a typical Meadow Highwayman Captain, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05577` | Velmark Meadow Highwayman Captain Runt | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | Runt | D- | 40 | 1.26 m | Day & Night | Like a typical Meadow Highwayman Captain, but smaller and scrappier than usual, with golden, grass-toned coloring. |
+| `pop_05578` | Velmark Meadow Highwayman Captain Elderborn | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | Elderborn | C+ | 86 | 2.43 m | Day & Night | Like a typical Meadow Highwayman Captain, but old and wise, with greying features and a cautious hunting style, with golden, grass-toned coloring. |
+| `pop_05579` | Velmark Meadow Highwayman Captain Alpha | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | Alpha | C | 76 | 2.25 m | Day & Night | Like a typical Meadow Highwayman Captain, but larger and scarred, and others of its kind follow it, with golden, grass-toned coloring. |
+| `pop_05580` | Velmark Meadow Highwayman Captain Juvenile | [[Monsters/Humanoid Enemies/Meadow Highwayman Captain\|Meadow Highwayman Captain]] | Juvenile | D | 48 | 1.53 m | Day & Night | Like a typical Meadow Highwayman Captain, but young, with brighter colors and unworn features, with golden, grass-toned coloring. |
+| `pop_05582` | Velmark Alley Slaver Elderborn | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Elderborn | C+ | 86 | 2.56 m | Day & Night | Like a typical Alley Slaver, but old and wise, with greying features and a cautious hunting style, with golden, grass-toned coloring. |
+| `pop_05583` | Velmark Alley Slaver Runt | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Runt | D- | 40 | 1.33 m | Day & Night | Like a typical Alley Slaver, but smaller and scrappier than usual, with golden, grass-toned coloring. |
+| `pop_05585` | Velmark Alley Slaver Alpha | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Alpha | C | 76 | 2.38 m | Day & Night | Like a typical Alley Slaver, but larger and scarred, and others of its kind follow it, with golden, grass-toned coloring. |
+| `pop_05586` | Velmark Alley Slaver Juvenile | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Juvenile | D | 48 | 1.61 m | Day & Night | Like a typical Alley Slaver, but young, with brighter colors and unworn features, with golden, grass-toned coloring. |
+| `pop_05589` | Velmark Alley Slaver Scarred | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Scarred | C- | 65 | 2.09 m | Day & Night | Like a typical Alley Slaver, but covered in old battle scars, with golden, grass-toned coloring. |
+| `pop_05590` | Velmark Alley Slaver | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Adult | D+ | 56 | 1.9 m | Day & Night | A typical adult Alley Slaver of this region, with golden, grass-toned coloring. |
+| `pop_05591` | Velmark Alley Slaver Albino | [[Monsters/Humanoid Enemies/Alley Slaver\|Alley Slaver]] | Albino | C- | 65 | 1.9 m | Day & Night | Like a typical Alley Slaver, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06725` | The Tithe Colossus, Hunger of the Foundation Stones | [[Monsters/Constructs & Mimics/The Tithe Colossus, Hunger of the Foundation Stones\|The Tithe Colossus, Hunger of the Foundation Stones]] | Unique | B+ | 120 | 7 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Aldmere|Aldmere]], [[Regions/Lirian|Lirian]], [[Regions/Fanghold|Fanghold]], [[Regions/Moraveil|Moraveil]], [[Regions/Strife Marches|Strife Marches]], [[Regions/Haneul|Haneul]], [[Regions/Zarvan|Zarvan]], [[Regions/Zaruma|Zaruma]].

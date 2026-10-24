@@ -13,6 +13,7 @@ tags: [class, base]
 | Weapons | fists, knuckles, gauntlets, greaves, bo_staff |
 | Armour | light, cloth |
 | Mechanic | Combo Chain: every consecutive hit raises the chain; at 30/60/100 hits you unlock finisher tiers |
+| Suggested stat allocation | STR 25%, VIT 17%, AGI 33%, DEX 17%, WIS 8% |
 | Trainer | Master Lio Shan |
 | Class quest | *Carry the Water* |
 | Starter weapon | [[Items/Guild Issue Hand Wraps\|Guild Issue Hand Wraps]] |
@@ -30,6 +31,12 @@ tags: [class, base]
 | 21 | **Hundred Fists** | chain | 17 × (light/medium) · 5.4 total | 18 SP | 10 s | None | Barrage |
 | 30 | **Heavenfall Fist** | ultimate | 4 × (medium/ultimate) · 7.5 total | 100 Awakening | — | None | A giant ki fist from the sky |
 
+**Combat rhythm:** basic chains build the class’s ordinary tempo; active skills should create clear commitment and payoff, while mobility or control skills let the player change spacing. Resource cost and cooldown are part of the decision, so avoid spending every skill on the first available target.
+
 ## Passives
 
 - **Iron Body** (Lv 1): Passive defense
+
+## How this class plays
+
+Build around the class’s stated mechanic and growth profile. Weapons and armour shape its rhythm; the kit creates decisions about approach, commitment, recovery and resource use. A class is a playstyle identity, not a requirement to parry perfectly: defensive options and readable recovery windows should keep the wider game accessible.

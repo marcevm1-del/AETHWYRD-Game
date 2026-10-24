@@ -4,7 +4,14 @@ tags: [family, serpentfolk]
 ---
 # Serpentfolk
 
-8 species. Sorted by level.
+8 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** C, C+, B-, B, B+, S, S+
+- **Element palette:** Poison, Water, Nature, Fire, Dark, Earth
+- **Level span:** 76–203
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

@@ -4,7 +4,14 @@ tags: [family, yokai-inspired-spirits]
 ---
 # Yokai-Inspired Spirits
 
-25 species. Sorted by level.
+25 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** F, E-, E, E+, D-, D, C-, C, B-, B, B+, A, A+, S, S+, SSS, SSS+
+- **Element palette:** Water, Fire, Light, Dark, Wind, Earth
+- **Level span:** 8–294
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

@@ -424,7 +424,7 @@ Sub-zones: Port Goldmere (Consortium), Saltwater Grotto, Coral Kingdom of Ys, Sh
 
 ## Dynamic World
 - **Day/night**, **weather** (rain, storm, fog, snow, sandstorm, ash), **two moons** and **seasons** all change spawns, NPC schedules and quests.
-- **Settlement states:** thriving / threatened / under siege / ruined / rebuilt. Your actions change them.
+- **Settlement states:** thriving / strained / threatened / under siege / recovering / rebuilt. Damage is repairable; no siege or missed defense permanently destroys a settlement (Canon §5).
 - **Monster migrations** and ecosystems (see Bestiary).
 
 ## Living Dungeons: Personalities

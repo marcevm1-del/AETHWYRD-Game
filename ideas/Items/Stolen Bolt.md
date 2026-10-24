@@ -12,12 +12,18 @@ tags: [item, material]
 | Category · rank | material · F |
 | Value | 4 |
 
-## Dropped by (7)
+## Use in the world
 
-- [[Monsters/Gremlins/Gremlin|Gremlin]]
-- [[Monsters/Gremlins/Saboteur Gremlin|Saboteur Gremlin]]
-- [[Monsters/Gremlins/Gremlin King|Gremlin King]]
-- [[Monsters/Gremlins/Ancient Gremlin|Ancient Gremlin]]
-- [[Monsters/Gremlins/Vesper-Touched Saboteur Gremlin|Vesper-Touched Saboteur Gremlin]]
-- [[Monsters/Gremlins/Ruin Gremlin King|Ruin Gremlin King]]
-- [[Monsters/Gremlins/Cogmaw, the Gremlin Engine-King|Cogmaw, the Gremlin Engine-King]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (7)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Gremlins/Gremlin\|Gremlin]] | 60.0% | 1–3 |
+| [[Monsters/Gremlins/Saboteur Gremlin\|Saboteur Gremlin]] | 60.0% | 1–3 |
+| [[Monsters/Gremlins/Gremlin King\|Gremlin King]] | 60.0% | 1–3 |
+| [[Monsters/Gremlins/Ancient Gremlin\|Ancient Gremlin]] | 60.0% | 1–3 |
+| [[Monsters/Gremlins/Vesper-Touched Saboteur Gremlin\|Vesper-Touched Saboteur Gremlin]] | 60.0% | 1–3 |
+| [[Monsters/Gremlins/Ruin Gremlin King\|Ruin Gremlin King]] | 60.0% | 1–3 |
+| [[Monsters/Gremlins/Cogmaw, the Gremlin Engine-King\|Cogmaw, the Gremlin Engine-King]] | 60.0% | 1–3 |

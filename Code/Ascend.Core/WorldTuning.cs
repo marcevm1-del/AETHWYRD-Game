@@ -6,9 +6,26 @@ namespace Ascend.Core
     public sealed class WorldTuning
     {
         public int Version { get; set; }
+        public CurrencyTuning Currency { get; set; } = new CurrencyTuning();
         public CalendarTuning Calendar { get; set; } = new CalendarTuning();
         public SiegeTuning Siege { get; set; } = new SiegeTuning();
         public InnTuning Inns { get; set; } = new InnTuning();
+    }
+
+    public sealed class CurrencyTuning
+    {
+        public string BaseUnit { get; set; } = "copper";
+        public List<string> DisplayOrder { get; set; } = new List<string>();
+        public List<CurrencyDenomination> Denominations { get; set; } = new List<CurrencyDenomination>();
+        public int ConversionRate { get; set; } = 100;
+        public bool AutoMakeChange { get; set; } = true;
+    }
+
+    public sealed class CurrencyDenomination
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public long ValueCopper { get; set; }
     }
 
     public sealed class CalendarTuning

@@ -4,7 +4,14 @@ tags: [family, constructs-mimics]
 ---
 # Constructs & Mimics
 
-27 species. Sorted by level.
+27 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** F, F+, E-, E, E+, D, D+, C, C+, B, B+, A, A+, S, SS, SSS, SSS+, EX
+- **Element palette:** Earth, None, Lightning, Blood, Wind, Dark, Light, Water
+- **Level span:** 8–300
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

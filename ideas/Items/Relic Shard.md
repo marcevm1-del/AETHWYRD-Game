@@ -12,66 +12,73 @@ tags: [item, material]
 | Category · rank | material · B |
 | Value | 18 |
 
-## Dropped by (319)
+## Use in the world
 
-- [[Monsters/Slimes/Storm Slime|Storm Slime]]
-- [[Monsters/Slimes/Abyss Slime|Abyss Slime]]
-- [[Monsters/Slimes/Prismatic Slime Sovereign|Prismatic Slime Sovereign]]
-- [[Monsters/Slimes/Primordial Ooze|Primordial Ooze]]
-- [[Monsters/Goblinoids/Goblin King|Goblin King]]
-- [[Monsters/Goblinoids/Kijin Warrior|Kijin Warrior]]
-- [[Monsters/Goblinoids/Oni Warlord|Oni Warlord]]
-- [[Monsters/Kobolds/Kobold Tunnel-Queen|Kobold Tunnel-Queen]]
-- [[Monsters/Beasts/Frost Fenrir Pup|Frost Fenrir Pup]]
-- [[Monsters/Beasts/Behemoth Calf|Behemoth Calf]]
-- [[Monsters/Beasts/Sabretooth King|Sabretooth King]]
-- [[Monsters/Beasts/Silver Fenrir|Silver Fenrir]]
-- [[Monsters/Beasts/Behemoth Ascendant|Behemoth Ascendant]]
-- [[Monsters/Beasts/Garmrok, the World-Eater|Garmrok, the World-Eater]]
-- [[Monsters/Lycanthropes/Blood Vesper Alpha|Blood Vesper Alpha]]
-- [[Monsters/Lycanthropes/Skinchanger|Skinchanger]]
-- [[Monsters/Lycanthropes/Fenrir-Blooded Lord|Fenrir-Blooded Lord]]
-- [[Monsters/Insects & Arachnids/Death Mantis|Death Mantis]]
-- [[Monsters/Insects & Arachnids/Arachne|Arachne]]
-- [[Monsters/Insects & Arachnids/Scarab Swarm|Scarab Swarm]]
-- [[Monsters/Insects & Arachnids/Arachne Matriarch|Arachne Matriarch]]
-- [[Monsters/Insects & Arachnids/Hive Mother of the Abyss|Hive Mother of the Abyss]]
-- [[Monsters/Killer Insects/Hive Tyrant|Hive Tyrant]]
-- [[Monsters/Undead/Death Knight|Death Knight]]
-- [[Monsters/Undead/Vampire|Vampire]]
-- [[Monsters/Undead/Lich|Lich]]
-- [[Monsters/Undead/Vampire Lord|Vampire Lord]]
-- [[Monsters/Undead/Bone Dragon|Bone Dragon]]
-- [[Monsters/Undead/Lich Emperor|Lich Emperor]]
-- [[Monsters/Undead/No-Life King|No-Life King]]
-- [[Monsters/Shadows/Mirror Shade|Mirror Shade]]
-- [[Monsters/Shadows/Umbral Reaper|Umbral Reaper]]
-- [[Monsters/Shadows/Night Leviathan|Night Leviathan]]
-- [[Monsters/Orcs, Ogres & Giants/Orc Lord|Orc Lord]]
-- [[Monsters/Orcs, Ogres & Giants/Hill Giant|Hill Giant]]
-- [[Monsters/Orcs, Ogres & Giants/Cyclops|Cyclops]]
-- [[Monsters/Orcs, Ogres & Giants/Frost Giant|Frost Giant]]
-- [[Monsters/Orcs, Ogres & Giants/Fire Giant|Fire Giant]]
-- [[Monsters/Orcs, Ogres & Giants/Orc Disaster|Orc Disaster]]
-- [[Monsters/Orcs, Ogres & Giants/Primeval Titan-Kin|Primeval Titan-Kin]]
-- [[Monsters/Orcs, Ogres & Giants/Titan Remnant|Titan Remnant]]
-- [[Monsters/Minotaurs & Beastmen/Labyrinth Minotaur|Labyrinth Minotaur]]
-- [[Monsters/Minotaurs & Beastmen/Taurgrim, the Maze King|Taurgrim, the Maze King]]
-- [[Monsters/Reptiles/Hydra|Hydra]]
-- [[Monsters/Reptiles/Gorgon Wyrm|Gorgon Wyrm]]
-- [[Monsters/Dragons/Wyvern|Wyvern]]
-- [[Monsters/Dragons/Young Dragon|Young Dragon]]
-- [[Monsters/Dragons/Drake Lord|Drake Lord]]
-- [[Monsters/Dragons/Adult Dragon|Adult Dragon]]
-- [[Monsters/Dragons/Starfall Wyrm|Starfall Wyrm]]
-- [[Monsters/Dragons/Ignivar, the Ember Throne|Ignivar, the Ember Throne]]
-- [[Monsters/Dragons/Glacirra, the White Silence|Glacirra, the White Silence]]
-- [[Monsters/Dragons/Zephyros, the Endless Sky|Zephyros, the Endless Sky]]
-- [[Monsters/Dragons/Terragon, the Mountain That Breathes|Terragon, the Mountain That Breathes]]
-- [[Monsters/Dragons/Umbrael, the Hollow Star|Umbrael, the Hollow Star]]
-- [[Monsters/Dragons/Solvoryn, the Dawnwyrm|Solvoryn, the Dawnwyrm]]
-- [[Monsters/Dragons/Nythraxa, the Duskwyrm|Nythraxa, the Duskwyrm]]
-- [[Monsters/Dragons/Kaelumbra, the Twilight Arbiter|Kaelumbra, the Twilight Arbiter]]
-- [[Monsters/Constructs & Mimics/Iron Golem|Iron Golem]]
-- [[Monsters/Constructs & Mimics/Crystal Golem|Crystal Golem]]
-- …and 259 more
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (319)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Slimes/Storm Slime\|Storm Slime]] | 0.100% | 1–1 |
+| [[Monsters/Slimes/Abyss Slime\|Abyss Slime]] | 0.100% | 1–1 |
+| [[Monsters/Slimes/Prismatic Slime Sovereign\|Prismatic Slime Sovereign]] | 0.100% | 1–1 |
+| [[Monsters/Slimes/Primordial Ooze\|Primordial Ooze]] | 0.100% | 1–1 |
+| [[Monsters/Goblinoids/Goblin King\|Goblin King]] | 0.100% | 1–1 |
+| [[Monsters/Goblinoids/Kijin Warrior\|Kijin Warrior]] | 0.100% | 1–1 |
+| [[Monsters/Goblinoids/Oni Warlord\|Oni Warlord]] | 0.100% | 1–1 |
+| [[Monsters/Kobolds/Kobold Tunnel-Queen\|Kobold Tunnel-Queen]] | 0.100% | 1–1 |
+| [[Monsters/Beasts/Frost Fenrir Pup\|Frost Fenrir Pup]] | 0.100% | 1–1 |
+| [[Monsters/Beasts/Behemoth Calf\|Behemoth Calf]] | 0.100% | 1–1 |
+| [[Monsters/Beasts/Sabretooth King\|Sabretooth King]] | 0.100% | 1–1 |
+| [[Monsters/Beasts/Silver Fenrir\|Silver Fenrir]] | 0.100% | 1–1 |
+| [[Monsters/Beasts/Behemoth Ascendant\|Behemoth Ascendant]] | 0.100% | 1–1 |
+| [[Monsters/Beasts/Garmrok, the World-Eater\|Garmrok, the World-Eater]] | 0.100% | 1–1 |
+| [[Monsters/Lycanthropes/Blood Vesper Alpha\|Blood Vesper Alpha]] | 0.100% | 1–1 |
+| [[Monsters/Lycanthropes/Skinchanger\|Skinchanger]] | 0.100% | 1–1 |
+| [[Monsters/Lycanthropes/Fenrir-Blooded Lord\|Fenrir-Blooded Lord]] | 0.100% | 1–1 |
+| [[Monsters/Insects & Arachnids/Death Mantis\|Death Mantis]] | 0.100% | 1–1 |
+| [[Monsters/Insects & Arachnids/Arachne\|Arachne]] | 0.100% | 1–1 |
+| [[Monsters/Insects & Arachnids/Scarab Swarm\|Scarab Swarm]] | 0.100% | 1–1 |
+| [[Monsters/Insects & Arachnids/Arachne Matriarch\|Arachne Matriarch]] | 0.100% | 1–1 |
+| [[Monsters/Insects & Arachnids/Hive Mother of the Abyss\|Hive Mother of the Abyss]] | 0.100% | 1–1 |
+| [[Monsters/Killer Insects/Hive Tyrant\|Hive Tyrant]] | 0.100% | 1–1 |
+| [[Monsters/Undead/Death Knight\|Death Knight]] | 0.100% | 1–1 |
+| [[Monsters/Undead/Vampire\|Vampire]] | 0.100% | 1–1 |
+| [[Monsters/Undead/Lich\|Lich]] | 0.100% | 1–1 |
+| [[Monsters/Undead/Vampire Lord\|Vampire Lord]] | 0.100% | 1–1 |
+| [[Monsters/Undead/Bone Dragon\|Bone Dragon]] | 0.100% | 1–1 |
+| [[Monsters/Undead/Lich Emperor\|Lich Emperor]] | 0.100% | 1–1 |
+| [[Monsters/Undead/No-Life King\|No-Life King]] | 0.100% | 1–1 |
+| [[Monsters/Shadows/Mirror Shade\|Mirror Shade]] | 0.100% | 1–1 |
+| [[Monsters/Shadows/Umbral Reaper\|Umbral Reaper]] | 0.100% | 1–1 |
+| [[Monsters/Shadows/Night Leviathan\|Night Leviathan]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Orc Lord\|Orc Lord]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Hill Giant\|Hill Giant]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Cyclops\|Cyclops]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Frost Giant\|Frost Giant]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Fire Giant\|Fire Giant]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Orc Disaster\|Orc Disaster]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Primeval Titan-Kin\|Primeval Titan-Kin]] | 0.100% | 1–1 |
+| [[Monsters/Orcs, Ogres & Giants/Titan Remnant\|Titan Remnant]] | 0.100% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Labyrinth Minotaur\|Labyrinth Minotaur]] | 0.100% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Taurgrim, the Maze King\|Taurgrim, the Maze King]] | 0.100% | 1–1 |
+| [[Monsters/Reptiles/Hydra\|Hydra]] | 0.100% | 1–1 |
+| [[Monsters/Reptiles/Gorgon Wyrm\|Gorgon Wyrm]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Wyvern\|Wyvern]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Young Dragon\|Young Dragon]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Drake Lord\|Drake Lord]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Adult Dragon\|Adult Dragon]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Starfall Wyrm\|Starfall Wyrm]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Ignivar, the Ember Throne\|Ignivar, the Ember Throne]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Glacirra, the White Silence\|Glacirra, the White Silence]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Zephyros, the Endless Sky\|Zephyros, the Endless Sky]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Terragon, the Mountain That Breathes\|Terragon, the Mountain That Breathes]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Umbrael, the Hollow Star\|Umbrael, the Hollow Star]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Solvoryn, the Dawnwyrm\|Solvoryn, the Dawnwyrm]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Nythraxa, the Duskwyrm\|Nythraxa, the Duskwyrm]] | 0.100% | 1–1 |
+| [[Monsters/Dragons/Kaelumbra, the Twilight Arbiter\|Kaelumbra, the Twilight Arbiter]] | 0.100% | 1–1 |
+| [[Monsters/Constructs & Mimics/Iron Golem\|Iron Golem]] | 0.100% | 1–1 |
+| [[Monsters/Constructs & Mimics/Crystal Golem\|Crystal Golem]] | 0.100% | 1–1 |
+
+…and 259 additional sources.

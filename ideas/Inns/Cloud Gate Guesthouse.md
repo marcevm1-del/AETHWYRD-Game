@@ -13,6 +13,7 @@ tags: [inn]
 | Dish | Fermented-pot Stew: +HP and +cold resist |
 | Drink | Barley Tea: +stamina regen |
 | Quirk | Shoes off at the door; the keeper remembers every guest's favorite side dish |
+| Rumor theme | Mountain spirits, scholars' exams |
 
 ## Rooms
 
@@ -22,3 +23,14 @@ tags: [inn]
 | private | 150 | Well Rested (4h) |  |
 | suite | 2000 | Well Rested (8h) + meal |  |
 | The Warm Floor Room | 900 | Well Rested (8h) | Heated stone floors: full climate comfort and +stamina for the next day |
+
+## Inn events
+
+- A scholar studying for the exams asks you to quiz them
+
+> [!warning]- Spoiler
+> The guesthouse's jars hold a mountain spirit's tears.
+
+## Stay and departure
+
+Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

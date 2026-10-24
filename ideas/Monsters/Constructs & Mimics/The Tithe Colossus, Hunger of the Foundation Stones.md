@@ -21,6 +21,7 @@ tags: [monster, constructs-mimics, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 31630 · 490 · 735 · 294 · 490 · 70 |
 | XP · gold | 127464 · 1225 |
 | Ring | 4 |
+| Rig · animation | [[Systems/Rigs/golem\|golem]] · `anim_golem` |
 | Habitats | [[Regions/Velmark\|Velmark]] |
 | Tyrant | Yes |
 | Genre | Ancient Ruins |
@@ -28,17 +29,37 @@ tags: [monster, constructs-mimics, tyrant, unique]
 
 **Field note:** Weak to Dark. Protects something nearby: a nest, a treasure, or a place.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Slam | melee | 1.4 | 0 s | None | blue |
-| Ground Pound | aoe | 1.8 | 10 s | None | red |
-| Guard Stance | buff | 0 | 15 s | None | none |
-| Rune Pulse | magic | 1.3 | 10 s | None | red |
-| Radiant Pulse | magic | 1.5 | 10 s | Light | red |
+- **Rig:** [[Systems/Rigs/golem|golem]] (rigId); animation set `anim_golem`.
+- **Dimensions:** 7 m high × 2.1 m long × 2.94 m wide; prefab scale 2.333.
+- **Physics:** 15640.8 kg, gravity ×1.08, poise 562, knockback resistance 1, death style `crumble_into_rubble`.
+- **Navigation:** speed 4.54 m/s, turn 76°/s, stopping distance 1.94 m.
+- **Attack count:** 5; **signature:** a Foundation Stone that woke up hungry for the nobles' mana.
 
-## Loot (`loot_construct_b`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Slam\|Slam]] | melee | 1.4 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Ground Pound\|Ground Pound]] | aoe | 1.8 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Guard Stance\|Guard Stance]] | buff | 0 | 15 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Rune Pulse\|Rune Pulse]] | magic | 1.3 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Radiant Pulse\|Radiant Pulse]] | magic | 1.5 | 10 s | Light | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+The Tithe Colossus, Hunger of the Foundation Stones is a **menacing construct** encountered at B+ rank, around level 120. Its documented behaviour is *Guardian* and its AI pattern is *guardian_hold*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Dark**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a Foundation Stone that woke up hungry for the nobles' mana. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Velmark|Velmark]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_golem`, animation set `anim_golem`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Constructs & Mimics B|loot_construct_b]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,20 @@ tags: [monster, constructs-mimics, tyrant, unique]
 | [[Items/Gear\|Gear]] | 15% | 1–1 |
 | [[Items/B-Rank Monster Core\|B-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Velmark\|Velmark]] | 1 | B+ | 120–120 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06725` | The Tithe Colossus, Hunger of the Foundation Stones | [[Regions/Velmark\|Velmark]] | Unique | B+ | 120 | 7 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

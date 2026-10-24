@@ -19,3 +19,11 @@ A forge-dwarf who weeps openly at good steel and refuses to sell a blade to anyo
 ## Relationships
 
 - old friend: [[NPCs/Torvald Stonebeard|Torvald Stonebeard]]
+
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Weekly Board/Forge Rush|Forge Rush]]

@@ -215,7 +215,7 @@ Players can turn on "Everything unlocked" in options.
 ## 19. Death & Defeat Screen
 - The screen fades to **Morrowyn's blue lantern**. A short line from the lantern spirit, then *"Your story isn't over."*
 - Options: retry the encounter · return to the last waystone · change gear first. The screen shows what killed you, its rank, and **one tip** (its weakness, if you've appraised it).
-- Dying to a Named monster shows its **new scar or title** (Nemesis), so you know it remembers.
+- Dying to a Named monster shows its **name and a bestiary hint** (its habits and weak point), never a new scar or title (Canon §4d).
 
 ## 20. Save & Load
 - **Saves are journal entries:** a screenshot, the in-game date and weekday, the moon phase, your rank and location, and **a line your character wrote** about the day (generated from the Legend log).

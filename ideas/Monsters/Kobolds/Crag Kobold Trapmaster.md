@@ -22,23 +22,44 @@ tags: [monster, kobolds]
 | HP · ATK · DEF · MATK · MDEF · SPD | 3257 · 234 · 187 · 164 · 187 · 135 |
 | XP · gold | 1888 · 423 |
 | Ring | 4 |
+| Rig · animation | [[Systems/Rigs/small_biped\|small_biped]] · `anim_small_biped` |
 | Habitats | [[Regions/Iron Hold\|Iron Hold]], [[Regions/Hoshizora\|Hoshizora]] |
 | Genre | Dungeon Crawl |
 | Trope | Dog-headed first-floor monsters (DanMachi), trap-builders (classic tabletop) |
 
 **Field note:** Weak to Wind. Never alone. Kill the leader first and the rest may scatter.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Stab | melee | 1 | 0 s | None | blue |
-| Thrown Junk | ranged | 0.8 | 4 s | None | blue |
-| Frenzied Lunge | melee | 1.5 | 8 s | None | red |
-| Trip-Wire Trap | debuff | 0 | 14 s | None | none |
-| Stone Spike | magic | 1.5 | 10 s | Earth | red |
+- **Rig:** [[Systems/Rigs/small_biped|small_biped]] (rigId); animation set `anim_small_biped`.
+- **Dimensions:** 1 m high × 0.3 m long × 0.4 m wide; prefab scale 0.909.
+- **Physics:** 20.8 kg, gravity ×1.65, poise 37, knockback resistance 0.36, death style `ragdoll_crumple`.
+- **Navigation:** speed 4.67 m/s, turn 420°/s, stopping distance 0.6 m.
+- **Attack count:** 5; **signature:** a harness of gears, springs and tripwires.
 
-## Loot (`loot_kobold_d`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Stab\|Stab]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Thrown Junk\|Thrown Junk]] | ranged | 0.8 | 4 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Frenzied Lunge\|Frenzied Lunge]] | melee | 1.5 | 8 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Trip-Wire Trap\|Trip-Wire Trap]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Stone Spike\|Stone Spike]] | magic | 1.5 | 10 s | Earth | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Crag Kobold Trapmaster is a **menacing humanoid** encountered at D+ rank, around level 56. Its documented behaviour is *Pack* and its AI pattern is *pack_flank*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Wind**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a harness of gears, springs and tripwires. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Iron Hold|Iron Hold]], [[Regions/Hoshizora|Hoshizora]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_small_biped`, animation set `anim_small_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Kobolds D|loot_kobold_d]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,31 @@ tags: [monster, kobolds]
 | [[Items/Scrap Metal\|Scrap Metal]] | 30% | 1–1 |
 | [[Items/Candle Stub\|Candle Stub]] | 15% | 1–1 |
 | [[Items/D-Rank Monster Core\|D-Rank Monster Core]] | 100% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Hoshizora\|Hoshizora]] | 6 | C, C-, C+, D, D+, D- | 40–86 | Day & Night |
+| [[Regions/Iron Hold\|Iron Hold]] | 5 | C-, D-, C+, D | 40–86 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06077` | Hoshizora Crag Kobold Trapmaster Alpha | [[Regions/Hoshizora\|Hoshizora]] | Alpha | C | 76 | 1.25 m | Day & Night | Like a typical Crag Kobold Trapmaster, but larger and scarred, and others of its kind follow it, with slate-grey coloring and hardened hide. |
+| `pop_06078` | Iron Hold Crag Kobold Trapmaster Scarred | [[Regions/Iron Hold\|Iron Hold]] | Scarred | C- | 65 | 1.1 m | Day & Night | Like a typical Crag Kobold Trapmaster, but covered in old battle scars, with slate-grey coloring and hardened hide. |
+| `pop_06079` | Iron Hold Crag Kobold Trapmaster Runt | [[Regions/Iron Hold\|Iron Hold]] | Runt | D- | 40 | 0.7 m | Day & Night | Like a typical Crag Kobold Trapmaster, but smaller and scrappier than usual, with slate-grey coloring and hardened hide. |
+| `pop_06080` | Iron Hold Crag Kobold Trapmaster Elderborn | [[Regions/Iron Hold\|Iron Hold]] | Elderborn | C+ | 86 | 1.35 m | Day & Night | Like a typical Crag Kobold Trapmaster, but old and wise, with greying features and a cautious hunting style, with slate-grey coloring and hardened hide. |
+| `pop_06081` | Iron Hold Crag Kobold Trapmaster Albino | [[Regions/Iron Hold\|Iron Hold]] | Albino | C- | 65 | 1 m | Day & Night | Like a typical Crag Kobold Trapmaster, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06082` | Hoshizora Crag Kobold Trapmaster Scarred | [[Regions/Hoshizora\|Hoshizora]] | Scarred | C- | 65 | 1.1 m | Day & Night | Like a typical Crag Kobold Trapmaster, but covered in old battle scars, with slate-grey coloring and hardened hide. |
+| `pop_06083` | Hoshizora Crag Kobold Trapmaster Elderborn | [[Regions/Hoshizora\|Hoshizora]] | Elderborn | C+ | 86 | 1.35 m | Day & Night | Like a typical Crag Kobold Trapmaster, but old and wise, with greying features and a cautious hunting style, with slate-grey coloring and hardened hide. |
+| `pop_06084` | Hoshizora Crag Kobold Trapmaster Juvenile | [[Regions/Hoshizora\|Hoshizora]] | Juvenile | D | 48 | 0.85 m | Day & Night | Like a typical Crag Kobold Trapmaster, but young, with brighter colors and unworn features, with slate-grey coloring and hardened hide. |
+| `pop_06085` | Iron Hold Crag Kobold Trapmaster Juvenile | [[Regions/Iron Hold\|Iron Hold]] | Juvenile | D | 48 | 0.85 m | Day & Night | Like a typical Crag Kobold Trapmaster, but young, with brighter colors and unworn features, with slate-grey coloring and hardened hide. |
+| `pop_06086` | Hoshizora Crag Kobold Trapmaster | [[Regions/Hoshizora\|Hoshizora]] | Adult | D+ | 56 | 1 m | Day & Night | A typical adult Crag Kobold Trapmaster of this region, with slate-grey coloring and hardened hide. |
+| `pop_06087` | Hoshizora Crag Kobold Trapmaster Runt | [[Regions/Hoshizora\|Hoshizora]] | Runt | D- | 40 | 0.7 m | Day & Night | Like a typical Crag Kobold Trapmaster, but smaller and scrappier than usual, with slate-grey coloring and hardened hide. |
 
 ## Design recipe
 

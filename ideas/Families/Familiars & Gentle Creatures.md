@@ -4,7 +4,14 @@ tags: [family, familiars-gentle-creatures]
 ---
 # Familiars & Gentle Creatures
 
-16 species. Sorted by level.
+16 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** F, F+, E, E+, A, S
+- **Element palette:** Nature, Light, Wind, Water, Earth, Ice, Fire
+- **Level span:** 8–188
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

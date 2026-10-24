@@ -21,6 +21,7 @@ tags: [monster, aquatic, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 42771 · 646 · 517 · 452 · 517 · 135 |
 | XP · gold | 199864 · 1815 |
 | Ring | 6 |
+| Rig · animation | [[Systems/Rigs/serpent\|serpent]] · `anim_serpent` |
 | Habitats | [[Regions/True-Name Isles\|True-Name Isles]] |
 | Tyrant | Yes |
 | Genre | Seafaring |
@@ -28,17 +29,37 @@ tags: [monster, aquatic, tyrant, unique]
 
 **Field note:** Weak to Lightning. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Strike | melee | 1.2 | 0 s | None | blue |
-| Constrict | grab | 1.8 | 12 s | None | gold |
-| Tail Sweep | aoe | 1.2 | 7 s | None | red |
-| Tidal Drag | grab | 1.3 | 11 s | None | gold |
-| Tide Lash | magic | 1.5 | 10 s | Water | red |
+- **Rig:** [[Systems/Rigs/serpent|serpent]] (rigId); animation set `anim_serpent`.
+- **Dimensions:** 1.2 m high × 30 m long × 3 m wide; prefab scale 7.5.
+- **Physics:** 65205 kg, gravity ×1.2, poise 2436, knockback resistance 0.55, death style `limp_chain`.
+- **Navigation:** speed 16.01 m/s, turn 60°/s, stopping distance 1.45 m.
+- **Attack count:** 5; **signature:** a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs.
 
-## Loot (`loot_aquatic_a`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Strike\|Strike]] | melee | 1.2 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Constrict\|Constrict]] | grab | 1.8 | 12 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Tail Sweep\|Tail Sweep]] | aoe | 1.2 | 7 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Tidal Drag\|Tidal Drag]] | grab | 1.3 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Tide Lash\|Tide Lash]] | magic | 1.5 | 10 s | Water | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+The Nameless Tide, a Serpent Without a Name is a **dread aquatic** encountered at A+ rank, around level 159. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Lightning**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/True-Name Isles|True-Name Isles]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_serpent`, animation set `anim_serpent`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Aquatic A|loot_aquatic_a]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,20 @@ tags: [monster, aquatic, tyrant, unique]
 | [[Items/Ink Sac\|Ink Sac]] | 15% | 1–1 |
 | [[Items/A-Rank Monster Core\|A-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/True-Name Isles\|True-Name Isles]] | 1 | A+ | 159–159 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06741` | The Nameless Tide, a Serpent Without a Name | [[Regions/True-Name Isles\|True-Name Isles]] | Unique | A+ | 159 | 30 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

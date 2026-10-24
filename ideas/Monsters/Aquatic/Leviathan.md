@@ -21,23 +21,44 @@ tags: [monster, aquatic, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 163889 · 1513 · 1089 · 1089 · 1089 · 100 |
 | XP · gold | 551660 · 4409 |
 | Ring | 6 |
+| Rig · animation | [[Systems/Rigs/aquatic\|aquatic]] · `anim_fish` |
 | Habitats | [[Regions/Goldmere Coast\|Goldmere Coast]] |
 | Genre | Seafaring |
 | Trope | Sea kings and krakens (One Piece), sirens and merfolk |
 
 **Field note:** Weak to Lightning. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Bite | melee | 1 | 0 s | None | blue |
-| Breach Lunge | dash | 1.7 | 9 s | None | red |
-| Thrash | aoe | 1.3 | 8 s | None | red |
-| Tidal Drag | grab | 1.3 | 11 s | None | gold |
-| Tide Lash | magic | 1.5 | 10 s | Water | red |
+- **Rig:** [[Systems/Rigs/aquatic|aquatic]] (rigId); animation set `anim_fish`.
+- **Dimensions:** 240 m high × 600 m long × 216 m wide; prefab scale 400.
+- **Physics:** 5216400000 kg, gravity ×1, poise 1241691, knockback resistance 0.57, death style `float_belly_up`.
+- **Navigation:** speed 60 m/s, turn 60°/s, stopping distance 12.4 m.
+- **Attack count:** 5; **signature:** a body so vast it moves the horizon.
 
-## Loot (`loot_aquatic_ex`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Bite\|Bite]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Breach Lunge\|Breach Lunge]] | dash | 1.7 | 9 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Thrash\|Thrash]] | aoe | 1.3 | 8 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Tidal Drag\|Tidal Drag]] | grab | 1.3 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Tide Lash\|Tide Lash]] | magic | 1.5 | 10 s | Water | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Leviathan is a **menacing aquatic** encountered at EX rank, around level 300. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Lightning**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a body so vast it moves the horizon. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Goldmere Coast|Goldmere Coast]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_fish`, animation set `anim_fish`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Aquatic EX|loot_aquatic_ex]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,20 @@ tags: [monster, aquatic, unique]
 | [[Items/Ink Sac\|Ink Sac]] | 15% | 1–1 |
 | [[Items/EX-Rank Monster Core\|EX-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Goldmere Coast\|Goldmere Coast]] | 1 | EX | 300–300 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_02051` | Leviathan | [[Regions/Goldmere Coast\|Goldmere Coast]] | Unique | EX | 300 | 600 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

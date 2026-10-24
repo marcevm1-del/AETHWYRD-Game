@@ -19,3 +19,7 @@ A halfling scout who steals bounties out from under other parties and apologizes
 ## Relationships
 
 - party leader: [[NPCs/Dax Rowan|Dax Rowan]]
+
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.

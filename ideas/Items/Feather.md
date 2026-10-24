@@ -12,28 +12,34 @@ tags: [item, material]
 | Category · rank | material · F |
 | Value | 4 |
 
-## Dropped by (23)
+## Use in the world
 
-- [[Monsters/Avians/Giant Crow|Giant Crow]]
-- [[Monsters/Avians/Cockatrice|Cockatrice]]
-- [[Monsters/Avians/Harpy|Harpy]]
-- [[Monsters/Avians/Griffon|Griffon]]
-- [[Monsters/Avians/Hippogriff|Hippogriff]]
-- [[Monsters/Avians/Thunderbird|Thunderbird]]
-- [[Monsters/Avians/Roc|Roc]]
-- [[Monsters/Avians/Phoenix|Phoenix]]
-- [[Monsters/Avians/Simurrah|Simurrah]]
-- [[Monsters/Avians/Eternal Phoenix|Eternal Phoenix]]
-- [[Monsters/Avians/Aethernax, the Sky Devourer|Aethernax, the Sky Devourer]]
-- [[Monsters/Avians/Brine Crow|Brine Crow]]
-- [[Monsters/Avians/Vesper-Touched Cockatrice|Vesper-Touched Cockatrice]]
-- [[Monsters/Avians/Phantom Harpy|Phantom Harpy]]
-- [[Monsters/Avians/Vesper-Touched Griffon|Vesper-Touched Griffon]]
-- [[Monsters/Avians/Ancient Hippogriff|Ancient Hippogriff]]
-- [[Monsters/Avians/Tide Thunderbird|Tide Thunderbird]]
-- [[Monsters/Avians/Cloud Roc|Cloud Roc]]
-- [[Monsters/Avians/Vesper-Touched Phoenix|Vesper-Touched Phoenix]]
-- [[Monsters/Avians/Elder Simurrah|Elder Simurrah]]
-- [[Monsters/Avians/Brine Eternal Phoenix|Brine Eternal Phoenix]]
-- [[Monsters/Avians/Raikaru, the Storm Roc|Raikaru, the Storm Roc]]
-- [[Monsters/Avians/Aquilon, the Roc Sovereign|Aquilon, the Roc Sovereign]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (23)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Avians/Giant Crow\|Giant Crow]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Cockatrice\|Cockatrice]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Harpy\|Harpy]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Griffon\|Griffon]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Hippogriff\|Hippogriff]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Thunderbird\|Thunderbird]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Roc\|Roc]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Phoenix\|Phoenix]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Simurrah\|Simurrah]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Eternal Phoenix\|Eternal Phoenix]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Aethernax, the Sky Devourer\|Aethernax, the Sky Devourer]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Brine Crow\|Brine Crow]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Vesper-Touched Cockatrice\|Vesper-Touched Cockatrice]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Phantom Harpy\|Phantom Harpy]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Vesper-Touched Griffon\|Vesper-Touched Griffon]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Ancient Hippogriff\|Ancient Hippogriff]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Tide Thunderbird\|Tide Thunderbird]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Cloud Roc\|Cloud Roc]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Vesper-Touched Phoenix\|Vesper-Touched Phoenix]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Elder Simurrah\|Elder Simurrah]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Brine Eternal Phoenix\|Brine Eternal Phoenix]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Raikaru, the Storm Roc\|Raikaru, the Storm Roc]] | 60.0% | 1–3 |
+| [[Monsters/Avians/Aquilon, the Roc Sovereign\|Aquilon, the Roc Sovereign]] | 60.0% | 1–3 |

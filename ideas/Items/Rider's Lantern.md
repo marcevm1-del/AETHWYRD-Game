@@ -12,11 +12,17 @@ tags: [item, material]
 | Category · rank | material · C |
 | Value | 12 |
 
-## Dropped by (6)
+## Use in the world
 
-- [[Monsters/The Headless/Headless Rider|Headless Rider]]
-- [[Monsters/The Headless/Dullahan|Dullahan]]
-- [[Monsters/The Headless/Pale Herald|Pale Herald]]
-- [[Monsters/The Headless/Vesper-Touched Headless Rider|Vesper-Touched Headless Rider]]
-- [[Monsters/The Headless/Vesper-Touched Dullahan|Vesper-Touched Dullahan]]
-- [[Monsters/The Headless/Phantom Pale Herald|Phantom Pale Herald]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (6)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/The Headless/Headless Rider\|Headless Rider]] | 60.0% | 1–3 |
+| [[Monsters/The Headless/Dullahan\|Dullahan]] | 60.0% | 1–3 |
+| [[Monsters/The Headless/Pale Herald\|Pale Herald]] | 60.0% | 1–3 |
+| [[Monsters/The Headless/Vesper-Touched Headless Rider\|Vesper-Touched Headless Rider]] | 60.0% | 1–3 |
+| [[Monsters/The Headless/Vesper-Touched Dullahan\|Vesper-Touched Dullahan]] | 60.0% | 1–3 |
+| [[Monsters/The Headless/Phantom Pale Herald\|Phantom Pale Herald]] | 60.0% | 1–3 |

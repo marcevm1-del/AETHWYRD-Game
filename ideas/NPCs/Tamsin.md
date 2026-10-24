@@ -18,3 +18,7 @@ A sharp eight-year-old who runs the other orphans like a small general and wants
 ## Relationships
 
 - guardian: [[NPCs/Brother Caspian|Brother Caspian]]
+
+## Quests given
+
+- [[Quests/Weekly Board/Bad Dreams at the Orphanage|Bad Dreams at the Orphanage]]

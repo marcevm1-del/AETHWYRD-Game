@@ -22,23 +22,44 @@ tags: [monster, constructs-mimics]
 | HP · ATK · DEF · MATK · MDEF · SPD | 1017 · 108 · 77 · 77 · 77 · 100 |
 | XP · gold | 342 · 96 |
 | Ring | 3 |
+| Rig · animation | [[Systems/Rigs/amorphous\|amorphous]] · `anim_mimic` |
 | Habitats | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]], [[Regions/Aldmere\|Aldmere]], [[Regions/Whisperwood\|Whisperwood]] |
 | Genre | Ancient Ruins |
 | Trope | Treasure-chest mimics and ancient guardian golems |
 
 **Field note:** Weak to Light. Protects something nearby: a nest, a treasure, or a place.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Chomp | melee | 1.6 | 0 s | None | red |
-| Tongue Lash | grab | 1.4 | 6 s | None | gold |
-| Disguise | stealth | 0 | 20 s | None | none |
-| Rune Pulse | magic | 1.3 | 10 s | None | red |
-| Blood Lance | magic | 1.5 | 10 s | Blood | red |
+- **Rig:** [[Systems/Rigs/amorphous|amorphous]] (rigId); animation set `anim_mimic`.
+- **Dimensions:** 2 m high × 2.14 m long × 2.1 m wide; prefab scale 1.
+- **Physics:** 264 kg, gravity ×1.2, poise 74, knockback resistance 0.63, death style `collapse_and_melt`.
+- **Navigation:** speed 5.92 m/s, turn 354°/s, stopping distance 1 m.
+- **Attack count:** 5; **signature:** a dungeon door that breathes.
 
-## Loot (`loot_construct_e`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Chomp\|Chomp]] | melee | 1.6 | 0 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Tongue Lash\|Tongue Lash]] | grab | 1.4 | 6 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Disguise\|Disguise]] | stealth | 0 | 20 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Rune Pulse\|Rune Pulse]] | magic | 1.3 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Blood Lance\|Blood Lance]] | magic | 1.5 | 10 s | Blood | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Vesper-Touched Door Mimic is a **horror construct** encountered at E- rank, around level 19. Its documented behaviour is *Guardian* and its AI pattern is *guardian_hold+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a dungeon door that breathes. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]], [[Regions/Aldmere|Aldmere]], [[Regions/Whisperwood|Whisperwood]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_mimic`, animation set `anim_mimic`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Constructs & Mimics E|loot_construct_e]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,32 @@ tags: [monster, constructs-mimics]
 | [[Items/Rune Plate\|Rune Plate]] | 30% | 1–1 |
 | [[Items/Gear\|Gear]] | 15% | 1–1 |
 | [[Items/E-Rank Monster Core\|E-Rank Monster Core]] | 100% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Whisperwood\|Whisperwood]] | 3 | E, F, F+ | 8–26 | Night |
+| [[Regions/Aldmere\|Aldmere]] | 4 | E, D-, E+ | 26–40 | Night |
+| [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | 4 | F+, E, D-, E- | 13–40 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04330` | Whisperwood Vesper-Touched Door Mimic Scarred | [[Regions/Whisperwood\|Whisperwood]] | Scarred | E | 26 | 2.2 m | Night | Like a typical Vesper-Touched Door Mimic, but covered in old battle scars, with dust-grey coloring and old rune scars. |
+| `pop_04331` | Aldmere Vesper-Touched Door Mimic Albino | [[Regions/Aldmere\|Aldmere]] | Albino | E | 26 | 2 m | Night | Like a typical Vesper-Touched Door Mimic, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04332` | Great Labyrinth (Floors 1-40) Vesper-Touched Door Mimic Juvenile | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Juvenile | F+ | 13 | 1.7 m | Night | Like a typical Vesper-Touched Door Mimic, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
+| `pop_04333` | Great Labyrinth (Floors 1-40) Vesper-Touched Door Mimic Albino | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Albino | E | 26 | 2 m | Night | Like a typical Vesper-Touched Door Mimic, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04334` | Aldmere Vesper-Touched Door Mimic Elderborn | [[Regions/Aldmere\|Aldmere]] | Elderborn | D- | 40 | 2.7 m | Night | Like a typical Vesper-Touched Door Mimic, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
+| `pop_04335` | Great Labyrinth (Floors 1-40) Vesper-Touched Door Mimic Elderborn | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Elderborn | D- | 40 | 2.7 m | Night | Like a typical Vesper-Touched Door Mimic, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
+| `pop_04336` | Aldmere Vesper-Touched Door Mimic Alpha | [[Regions/Aldmere\|Aldmere]] | Alpha | E+ | 32 | 2.5 m | Night | Like a typical Vesper-Touched Door Mimic, but larger and scarred, and others of its kind follow it, with dust-grey coloring and old rune scars. |
+| `pop_04337` | Whisperwood Vesper-Touched Door Mimic Runt | [[Regions/Whisperwood\|Whisperwood]] | Runt | F | 8 | 1.4 m | Night | Like a typical Vesper-Touched Door Mimic, but smaller and scrappier than usual, with dust-grey coloring and old rune scars. |
+| `pop_04338` | Aldmere Vesper-Touched Door Mimic Scarred | [[Regions/Aldmere\|Aldmere]] | Scarred | E | 26 | 2.2 m | Night | Like a typical Vesper-Touched Door Mimic, but covered in old battle scars, with dust-grey coloring and old rune scars. |
+| `pop_04339` | Great Labyrinth (Floors 1-40) Vesper-Touched Door Mimic | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Adult | E- | 19 | 2 m | Night | A typical adult Vesper-Touched Door Mimic of this region, with dust-grey coloring and old rune scars. |
+| `pop_04340` | Whisperwood Vesper-Touched Door Mimic Juvenile | [[Regions/Whisperwood\|Whisperwood]] | Juvenile | F+ | 13 | 1.7 m | Night | Like a typical Vesper-Touched Door Mimic, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
 
 ## Design recipe
 

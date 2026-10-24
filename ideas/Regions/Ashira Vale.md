@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | aberration · besieged |
 | Settlements | Ashira |
 
+## Siege encounter plan
+
+Faction **aberration**, B–B band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 6 × [[Monsters/Centaurs & Taurs/Centaur Scout|Centaur Scout]] (C)
+
+- **Wave 2:** 5 × [[Monsters/Centaurs & Taurs/Centaur Scout|Centaur Scout]] (C), 3 × [[Monsters/Centaurs & Taurs/Scorpion Rider|Scorpion Rider]] (B)
+
+- **Wave 3:** 6 × [[Monsters/Centaurs & Taurs/Centaur Scout|Centaur Scout]] (C), 4 × [[Monsters/Beasts/Thorn Fenrir Pup|Thorn Fenrir Pup]] (B+); lieutenant: [[Monsters/Beasts/Thorn Fenrir Pup|Thorn Fenrir Pup]]
+
 > **The Kindest Valley.** The kindest valley in the world: soft fields, warm doors and a town that welcomes everyone. The Gentle Warden makes sure that no one who arrives ever wants to leave.
 >
 > *Ashira has no graveyard. No one remembers when anyone last asked why.*
@@ -75,6 +85,10 @@ Warm bread and honey; birdsong all day; laughter from every doorway; a sweetness
 - The baker, once a famous adventurer, has begun to dream of a battle she cannot remember, and she wants to know whether to let herself remember it.
 - A child in Ashira asks why there are no old people, and nobody can answer her.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Monsters (4)
 
 | Monster | Family | Rank | Level |
@@ -83,3 +97,27 @@ Warm bread and honey; birdsong all day; laughter from every doorway; a sweetness
 | [[Monsters/Centaurs & Taurs/Scorpion Rider\|Scorpion Rider]] | [[Families/Centaurs & Taurs\|Centaurs & Taurs]] | B | 108 |
 | [[Monsters/Beasts/Thorn Fenrir Pup\|Thorn Fenrir Pup]] | [[Families/Beasts\|Beasts]] | B+ | 120 |
 | [[Monsters/Aberrations/The Gentle Warden, Keeper of Ashira\|The Gentle Warden, Keeper of Ashira]] | [[Families/Aberrations\|Aberrations]] | B+ | 120 |
+
+## Population and spawn patterns
+
+The data records **9 named population forms** across **4 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Day & Night (8), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_02287` | Ashira Vale Centaur Scout | [[Monsters/Centaurs & Taurs/Centaur Scout\|Centaur Scout]] | Adult | C | 76 | 2.4 m | Day & Night | A typical adult Centaur Scout of this region, with golden, grass-toned coloring. |
+| `pop_02291` | Ashira Vale Centaur Scout Runt | [[Monsters/Centaurs & Taurs/Centaur Scout\|Centaur Scout]] | Runt | D+ | 56 | 1.68 m | Day & Night | Like a typical Centaur Scout, but smaller and scrappier than usual, with golden, grass-toned coloring. |
+| `pop_02293` | Ashira Vale Centaur Scout Alpha | [[Monsters/Centaurs & Taurs/Centaur Scout\|Centaur Scout]] | Alpha | B- | 96 | 3 m | Day & Night | Like a typical Centaur Scout, but larger and scarred, and others of its kind follow it, with golden, grass-toned coloring. |
+| `pop_02313` | Ashira Vale Scorpion Rider | [[Monsters/Centaurs & Taurs/Scorpion Rider\|Scorpion Rider]] | Adult | B | 108 | 3 m | Day & Night | A typical adult Scorpion Rider of this region, with golden, grass-toned coloring. |
+| `pop_03357` | Ashira Vale Thorn Fenrir Pup Juvenile | [[Monsters/Beasts/Thorn Fenrir Pup\|Thorn Fenrir Pup]] | Juvenile | B | 108 | 1.27 m | Day & Night | Like a typical Thorn Fenrir Pup, but young, with brighter colors and unworn features, with golden, grass-toned coloring. |
+| `pop_03358` | Ashira Vale Thorn Fenrir Pup Elderborn | [[Monsters/Beasts/Thorn Fenrir Pup\|Thorn Fenrir Pup]] | Elderborn | A+ | 159 | 2.03 m | Day & Night | Like a typical Thorn Fenrir Pup, but old and wise, with greying features and a cautious hunting style, with golden, grass-toned coloring. |
+| `pop_03362` | Ashira Vale Thorn Fenrir Pup Alpha | [[Monsters/Beasts/Thorn Fenrir Pup\|Thorn Fenrir Pup]] | Alpha | A | 146 | 1.88 m | Day & Night | Like a typical Thorn Fenrir Pup, but larger and scarred, and others of its kind follow it, with golden, grass-toned coloring. |
+| `pop_03364` | Ashira Vale Thorn Fenrir Pup Runt | [[Monsters/Beasts/Thorn Fenrir Pup\|Thorn Fenrir Pup]] | Runt | B- | 96 | 1.05 m | Day & Night | Like a typical Thorn Fenrir Pup, but smaller and scrappier than usual, with golden, grass-toned coloring. |
+| `pop_06743` | The Gentle Warden, Keeper of Ashira | [[Monsters/Aberrations/The Gentle Warden, Keeper of Ashira\|The Gentle Warden, Keeper of Ashira]] | Unique | B+ | 120 | 2.1 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Aldmere|Aldmere]], [[Regions/Whisperwood|Whisperwood]], [[Regions/Sylvaran|Sylvaran]], [[Regions/Mossdeep|Mossdeep]], [[Regions/Fanghold|Fanghold]], [[Regions/Moraveil|Moraveil]], [[Regions/Strife Marches|Strife Marches]], [[Regions/Velmark|Velmark]].

@@ -16,5 +16,14 @@ tags: [npc, holy-church-of-lumina]
 
 A cheerful nun from a fishing village who heals in the morning, teaches in the afternoon, and boxes in the barn behind the shrine on weekends.
 
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]]
+- [[Quests/Weekly Board/Tidy the Graves|Tidy the Graves]]
+
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** She was an Inquisitor once and left after refusing an order to burn a village.

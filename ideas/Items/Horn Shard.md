@@ -12,29 +12,35 @@ tags: [item, material]
 | Category · rank | material · E |
 | Value | 6 |
 
-## Dropped by (24)
+## Use in the world
 
-- [[Monsters/Demons/Imp|Imp]]
-- [[Monsters/Demons/Hellhound|Hellhound]]
-- [[Monsters/Demons/Lesser Demon|Lesser Demon]]
-- [[Monsters/Demons/Gargoyle|Gargoyle]]
-- [[Monsters/Demons/Charmfiend|Charmfiend]]
-- [[Monsters/Demons/Greater Demon|Greater Demon]]
-- [[Monsters/Demons/Nightmare Steed|Nightmare Steed]]
-- [[Monsters/Demons/Demon Knight|Demon Knight]]
-- [[Monsters/Demons/Arch Demon|Arch Demon]]
-- [[Monsters/Demons/Abyss Prince|Abyss Prince]]
-- [[Monsters/Demons/Abyss Herald|Abyss Herald]]
-- [[Monsters/Demons/Thorn Imp|Thorn Imp]]
-- [[Monsters/Demons/Mud Hellhound|Mud Hellhound]]
-- [[Monsters/Demons/Elder Lesser Demon|Elder Lesser Demon]]
-- [[Monsters/Demons/Briar Gargoyle|Briar Gargoyle]]
-- [[Monsters/Demons/Hellmarch Charmfiend|Hellmarch Charmfiend]]
-- [[Monsters/Demons/Elder Greater Demon|Elder Greater Demon]]
-- [[Monsters/Demons/Phantom Nightmare Steed|Phantom Nightmare Steed]]
-- [[Monsters/Demons/Rot Demon Knight|Rot Demon Knight]]
-- [[Monsters/Demons/Blight Arch Demon|Blight Arch Demon]]
-- [[Monsters/Demons/Ancient Abyss Prince|Ancient Abyss Prince]]
-- [[Monsters/Demons/Alley Abyss Herald|Alley Abyss Herald]]
-- [[Monsters/Demons/Varos, Herald of the Red Gate|Varos, Herald of the Red Gate]]
-- [[Monsters/Demons/Morvane, Vanguard of the Overlord|Morvane, Vanguard of the Overlord]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (24)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Demons/Imp\|Imp]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Hellhound\|Hellhound]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Lesser Demon\|Lesser Demon]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Gargoyle\|Gargoyle]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Charmfiend\|Charmfiend]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Greater Demon\|Greater Demon]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Nightmare Steed\|Nightmare Steed]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Demon Knight\|Demon Knight]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Arch Demon\|Arch Demon]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Abyss Prince\|Abyss Prince]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Abyss Herald\|Abyss Herald]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Thorn Imp\|Thorn Imp]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Mud Hellhound\|Mud Hellhound]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Elder Lesser Demon\|Elder Lesser Demon]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Briar Gargoyle\|Briar Gargoyle]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Hellmarch Charmfiend\|Hellmarch Charmfiend]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Elder Greater Demon\|Elder Greater Demon]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Phantom Nightmare Steed\|Phantom Nightmare Steed]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Rot Demon Knight\|Rot Demon Knight]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Blight Arch Demon\|Blight Arch Demon]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Ancient Abyss Prince\|Ancient Abyss Prince]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Alley Abyss Herald\|Alley Abyss Herald]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Varos, Herald of the Red Gate\|Varos, Herald of the Red Gate]] | 30.0% | 1–1 |
+| [[Monsters/Demons/Morvane, Vanguard of the Overlord\|Morvane, Vanguard of the Overlord]] | 30.0% | 1–1 |

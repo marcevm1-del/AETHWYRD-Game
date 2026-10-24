@@ -23,6 +23,11 @@ A one-armed former B-Rank who teaches swordsmanship with a broomstick and once t
 - **dusk:** The Sleeping Griffon
 - **night:** Hollis's shack
 
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
 ## Quests given
 
 - [[Quests/A Thousand Swings|A Thousand Swings]]
+- [[Quests/Weekly Board/Morning Sparring|Morning Sparring]]

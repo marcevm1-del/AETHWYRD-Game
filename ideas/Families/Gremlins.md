@@ -4,7 +4,14 @@ tags: [family, gremlins]
 ---
 # Gremlins
 
-7 species. Sorted by level.
+7 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** F, E, D-, C, C+, A
+- **Element palette:** Lightning, Dark
+- **Level span:** 8–146
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

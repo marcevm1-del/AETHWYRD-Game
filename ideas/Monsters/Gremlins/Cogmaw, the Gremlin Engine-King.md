@@ -21,6 +21,7 @@ tags: [monster, gremlins, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 19643 · 594 · 475 · 416 · 475 · 135 |
 | XP · gold | 174387 · 1611 |
 | Ring | 7 |
+| Rig · animation | [[Systems/Rigs/small_biped\|small_biped]] · `anim_small_biped` |
 | Habitats | [[Regions/Gearholm\|Gearholm]] |
 | Tyrant | Yes |
 | Genre | Steampunk Mischief |
@@ -28,17 +29,37 @@ tags: [monster, gremlins, tyrant, unique]
 
 **Field note:** Weak to Earth. Flees when hurt. Snares or ranged attacks work best.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Stab | melee | 1 | 0 s | None | blue |
-| Thrown Junk | ranged | 0.8 | 4 s | None | blue |
-| Frenzied Lunge | melee | 1.5 | 8 s | None | red |
-| Wrench Sabotage | debuff | 0 | 14 s | None | none |
-| Static Arc | magic | 1.5 | 10 s | Lightning | red |
+- **Rig:** [[Systems/Rigs/small_biped|small_biped]] (rigId); animation set `anim_small_biped`.
+- **Dimensions:** 3 m high × 0.9 m long × 1.2 m wide; prefab scale 2.727.
+- **Physics:** 432 kg, gravity ×1.5, poise 100, knockback resistance 0.3, death style `ragdoll_crumple`.
+- **Navigation:** speed 10.86 m/s, turn 242°/s, stopping distance 1 m.
+- **Attack count:** 5; **signature:** a throne bolted onto a walking furnace that eats machines.
 
-## Loot (`loot_gremlin_a`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Stab\|Stab]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Thrown Junk\|Thrown Junk]] | ranged | 0.8 | 4 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Frenzied Lunge\|Frenzied Lunge]] | melee | 1.5 | 8 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Wrench Sabotage\|Wrench Sabotage]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Static Arc\|Static Arc]] | magic | 1.5 | 10 s | Lightning | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Cogmaw, the Gremlin Engine-King is a **menacing fey pest** encountered at A rank, around level 146. Its documented behaviour is *Skittish* and its AI pattern is *skittish_flee*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Earth**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a throne bolted onto a walking furnace that eats machines. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Gearholm|Gearholm]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_small_biped`, animation set `anim_small_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Gremlins A|loot_gremlin_a]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,20 @@ tags: [monster, gremlins, tyrant, unique]
 | [[Items/Gremlin Ear\|Gremlin Ear]] | 30% | 1–1 |
 | [[Items/A-Rank Monster Core\|A-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Gearholm\|Gearholm]] | 1 | A | 146–146 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06747` | Cogmaw, the Gremlin Engine-King | [[Regions/Gearholm\|Gearholm]] | Unique | A | 146 | 3 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

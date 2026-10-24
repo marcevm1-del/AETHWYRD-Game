@@ -4,7 +4,14 @@ tags: [family, orcs-ogres-giants]
 ---
 # Orcs, Ogres & Giants
 
-30 species. Sorted by level.
+30 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** E, E+, D, D+, C-, C, C+, B-, B, B+, A, A+, S-, S, SS, SSS, EX
+- **Element palette:** None, Wind, Fire, Blood, Earth, Nature, Ice, Dark
+- **Level span:** 26–300
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

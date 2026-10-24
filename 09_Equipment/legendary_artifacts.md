@@ -66,3 +66,62 @@ Every item here has a **source**, a **lore line**, a **signature effect**, and m
 | Leviathan Fishing Rod | Catch Calamity-tier fish (yes) |
 | The Painter's Last Brush | Paintings become portals |
 | Vex's Loaded Dice | Gambler skills guaranteed max once/day |
+
+## 6. Artifact Design Rules (production proposal)
+
+Artifacts are the rare items players remember because they change the *shape* of a build or unlock a new way to interact with the world. They should not turn every ordinary item into junk, invalidate class identity or force the player to use a single best-in-slot setup.
+
+### Four jobs an artifact may do
+
+1. **Signature combat:** alter a rule the player already understands, such as converting a defensive success into a short counter window.
+2. **Build bridge:** connect two systems that are normally separate, such as a weapon property that rewards a companion role or a status reaction.
+3. **World permission:** reveal or enable a route, interaction or dialogue possibility, while keeping the relevant clue and choice understandable.
+4. **Character expression:** make a relationship, cultural tradition or personal history visible through a tool the player chooses to carry.
+
+An artifact should have one primary job and at most one secondary job. If it increases damage, grants mobility, solves a puzzle and provides a passive heal all at once, it is likely several items compressed together.
+
+### Power budget and counterplay
+
+- State its rank, intended level band, slot and source before the player commits to an upgrade path.
+- Compare it against a strong item of the same rank and role, not against a basic starter weapon.
+- Prefer conditional effects that create a decision over unconditional multipliers that dominate every build.
+- Make the condition readable in the HUD and in the world: the player can see when the effect is ready, active or unavailable.
+- Avoid effects that remove the need to learn a boss, erase a core weakness, grant unlimited flight, or trivialize a whole damage type.
+- Preserve viable alternatives for players who prefer another weapon, do not parry, or use a different companion party.
+
+### Acquisition should tell a story
+
+The acquisition is part of the reward. A divine artifact can belong to an authored story choice; a legendary can be earned through a hunt, craft chain, tournament, exploration route or companion arc. The item’s rumor should help the player understand the kind of journey it asks for, without giving away every surprise.
+
+Use a clear acquisition ladder:
+
+- **Heard:** a rumor names a place, former owner or condition.
+- **Investigated:** the player finds evidence that confirms, corrects or complicates the rumor.
+- **Earned:** the player makes the meaningful choice or completes the encounter.
+- **Understood:** the Journal explains the effect, cost and any ongoing bond or upgrade path.
+
+Do not make a required story artifact missable through a vague side interaction. If an artifact can be permanently missed, warn the player through the fiction and provide a clear journal record of the consequence.
+
+### Growth and long-term usefulness
+
+For an item intended to remain relevant, grow its identity rather than simply raising its numbers. A weapon can gain a new interaction, visual stage, crafted option or bond dialogue while retaining its recognizable silhouette. Upgrades should require materials the player can trace to known activities; rare materials can have an alternate source or a predictable long-term route so unlucky drops do not block a build.
+
+The player should be able to compare a proposed upgrade before spending unique resources. Store favorite items and builds, explain what is lost when swapping, and allow testing at a training area or safe encounter. Respec and equipment decisions must respect Canon §5’s protection against losing character levels or learned skills.
+
+### Sentient-item relationship budget
+
+Sentient weapons are characters in the equipment system. Each needs a distinct voice, a reason it speaks, a boundary it will not cross, a way to respond to the player and a finite set of bond milestones. Avoid requiring a full romance-scale arc for every artifact. Use a compact progression: first contact, recurring response, a meaningful test, a resolution, then a small set of contextual lines.
+
+If a weapon can refuse the player, make its boundary explicit before the refusal and provide a route to understand or address it. A bond should not quietly disappear because the player equipped a different weapon for one fight. Dialogue should be authored to avoid exposing Canon §3 secrets before their reveal.
+
+### Art, sound and animation readability
+
+- Preserve one strong silhouette that reads when the character is moving and at normal camera distance.
+- Give effects a distinct onset, sustained state and end so players can understand what the item did.
+- Avoid permanent bloom that masks enemy tells or UI text; rarity is not a reason to reduce contrast.
+- Use audio motifs sparingly. A sentient item’s sound should identify its presence without talking over combat warnings or companion dialogue.
+- Respect color accessibility: communicate an effect with shape, motion, icon and text as well as hue.
+
+### First playable artifact slice
+
+The first implementation only needs one authored weapon and one upgrade: a clear rumor, a short route, a readable encounter, a comparison screen, a visible effect and a return visit where an NPC recognizes the player’s choice. Test whether the item changes decisions and remains satisfying after several sessions. If it only increases a number, improve the effect or cut it.

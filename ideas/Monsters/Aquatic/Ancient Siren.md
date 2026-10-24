@@ -22,23 +22,44 @@ tags: [monster, aquatic]
 | HP · ATK · DEF · MATK · MDEF · SPD | 18966 · 588 · 490 · 392 · 441 · 100 |
 | XP · gold | 6373 · 1225 |
 | Ring | 7 |
+| Rig · animation | [[Systems/Rigs/naga\|naga]] · `anim_naga` |
 | Habitats | [[Regions/True-Name Isles\|True-Name Isles]], [[Regions/Whitewater Reach\|Whitewater Reach]], [[Regions/Goldmere Coast\|Goldmere Coast]] |
 | Genre | Seafaring |
 | Trope | Sea kings and krakens (One Piece), sirens and merfolk |
 
 **Field note:** Weak to Lightning. Dangerous in numbers. Area attacks and chokepoints help.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Coil Strike | melee | 1.1 | 0 s | None | blue |
-| Constrict | grab | 1.8 | 12 s | None | gold |
-| Hypnotic Gaze | debuff | 0 | 14 s | None | none |
-| Tidal Drag | grab | 1.3 | 11 s | None | gold |
-| Tide Lash | magic | 1.5 | 10 s | Water | red |
+- **Rig:** [[Systems/Rigs/naga|naga]] (rigId); animation set `anim_naga`.
+- **Dimensions:** 1.38 m high × 3 m long × 0.48 m wide; prefab scale 0.75.
+- **Physics:** 97.8 kg, gravity ×1.3, poise 62, knockback resistance 0.52, death style `limp_chain`.
+- **Navigation:** speed 3.43 m/s, turn 202°/s, stopping distance 0.55 m.
+- **Attack count:** 5; **signature:** a fish tail and a voice that sounds like home.
 
-## Loot (`loot_aquatic_b`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Coil Strike\|Coil Strike]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Constrict\|Constrict]] | grab | 1.8 | 12 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Hypnotic Gaze\|Hypnotic Gaze]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Tidal Drag\|Tidal Drag]] | grab | 1.3 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Tide Lash\|Tide Lash]] | magic | 1.5 | 10 s | Water | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Ancient Siren is a **dread aquatic** encountered at B+ rank, around level 120. Its documented behaviour is *Swarm* and its AI pattern is *swarm_surround+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Lightning**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a fish tail and a voice that sounds like home. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/True-Name Isles|True-Name Isles]], [[Regions/Whitewater Reach|Whitewater Reach]], [[Regions/Goldmere Coast|Goldmere Coast]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_naga`, animation set `anim_naga`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Aquatic B|loot_aquatic_b]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,32 @@ tags: [monster, aquatic]
 | [[Items/Ink Sac\|Ink Sac]] | 15% | 1–1 |
 | [[Items/B-Rank Monster Core\|B-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/True-Name Isles\|True-Name Isles]] | 4 | B, B+, A-, A+ | 108–159 | Night |
+| [[Regions/Whitewater Reach\|Whitewater Reach]] | 5 | B, B+, A, A-, A+ | 108–159 | Night |
+| [[Regions/Goldmere Coast\|Goldmere Coast]] | 2 | B+, A- | 120–132 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04851` | True-Name Isles Ancient Siren Juvenile | [[Regions/True-Name Isles\|True-Name Isles]] | Juvenile | B | 108 | 2.55 m | Night | Like a typical Ancient Siren, but young, with brighter colors and unworn features, with salt-crusted, barnacle-flecked hide. |
+| `pop_04852` | Whitewater Reach Ancient Siren Juvenile | [[Regions/Whitewater Reach\|Whitewater Reach]] | Juvenile | B | 108 | 2.55 m | Night | Like a typical Ancient Siren, but young, with brighter colors and unworn features, with salt-crusted, barnacle-flecked hide. |
+| `pop_04853` | True-Name Isles Ancient Siren | [[Regions/True-Name Isles\|True-Name Isles]] | Adult | B+ | 120 | 3 m | Night | A typical adult Ancient Siren of this region, with salt-crusted, barnacle-flecked hide. |
+| `pop_04854` | Goldmere Coast Ancient Siren | [[Regions/Goldmere Coast\|Goldmere Coast]] | Adult | B+ | 120 | 3 m | Night | A typical adult Ancient Siren of this region, with salt-crusted, barnacle-flecked hide. |
+| `pop_04855` | Whitewater Reach Ancient Siren | [[Regions/Whitewater Reach\|Whitewater Reach]] | Adult | B+ | 120 | 3 m | Night | A typical adult Ancient Siren of this region, with salt-crusted, barnacle-flecked hide. |
+| `pop_04856` | True-Name Isles Ancient Siren Albino | [[Regions/True-Name Isles\|True-Name Isles]] | Albino | A- | 132 | 3 m | Night | Like a typical Ancient Siren, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04857` | Whitewater Reach Ancient Siren Alpha | [[Regions/Whitewater Reach\|Whitewater Reach]] | Alpha | A | 146 | 3.75 m | Night | Like a typical Ancient Siren, but larger and scarred, and others of its kind follow it, with salt-crusted, barnacle-flecked hide. |
+| `pop_04858` | Goldmere Coast Ancient Siren Scarred | [[Regions/Goldmere Coast\|Goldmere Coast]] | Scarred | A- | 132 | 3.3 m | Night | Like a typical Ancient Siren, but covered in old battle scars, with salt-crusted, barnacle-flecked hide. |
+| `pop_04859` | True-Name Isles Ancient Siren Elderborn | [[Regions/True-Name Isles\|True-Name Isles]] | Elderborn | A+ | 159 | 4.05 m | Night | Like a typical Ancient Siren, but old and wise, with greying features and a cautious hunting style, with salt-crusted, barnacle-flecked hide. |
+| `pop_04860` | Whitewater Reach Ancient Siren Albino | [[Regions/Whitewater Reach\|Whitewater Reach]] | Albino | A- | 132 | 3 m | Night | Like a typical Ancient Siren, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04861` | Whitewater Reach Ancient Siren Elderborn | [[Regions/Whitewater Reach\|Whitewater Reach]] | Elderborn | A+ | 159 | 4.05 m | Night | Like a typical Ancient Siren, but old and wise, with greying features and a cautious hunting style, with salt-crusted, barnacle-flecked hide. |
 
 ## Design recipe
 

@@ -4,7 +4,14 @@ tags: [family, vesperites-moon-raiders]
 ---
 # Vesperites (Moon Raiders)
 
-9 species. Sorted by level.
+9 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** C, C+, B, A-, A, A+, S, SS
+- **Element palette:** Blood, Dark, Light
+- **Level span:** 76–236
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

@@ -13,6 +13,7 @@ tags: [class, base]
 | Weapons | sword, greatsword, dual_swords, katana |
 | Armour | light, medium |
 | Mechanic | Edge Flow: consecutive hits without being struck build Flow (0-5), each stack +6% attack speed; getting hit drops 2 stacks |
+| Suggested stat allocation | STR 40%, VIT 20%, AGI 20%, DEX 15%, LUK 5% |
 | Trainer | [[NPCs/Old Hollis\|Old Hollis]] |
 | Class quest | *A Thousand Swings* |
 | Starter weapon | [[Items/Guild Issue Sword\|Guild Issue Sword]] |
@@ -30,8 +31,14 @@ tags: [class, base]
 | 9 | **Whirlwind** | aoe | 3 × (medium) · 2.1 total | 14 SP | 7 s | None | Spinning AoE |
 | 22 | **Parry Riposte** | chain | 1 × (heavy) · 2.4 total | 12 SP | 8 s | None | Parry window into a heavy counter |
 
+**Combat rhythm:** basic chains build the class’s ordinary tempo; active skills should create clear commitment and payoff, while mobility or control skills let the player change spacing. Resource cost and cooldown are part of the decision, so avoid spending every skill on the first available target.
+
 ## Passives
 
 - **Sword Mastery** (Lv 1): +damage and attack speed per mastery level
 - **Sidestep** (Lv 6): A perfect dodge grants a free counter-slash
 - **Fighting Spirit** (Lv 15): Low HP grants +crit chance
+
+## How this class plays
+
+Build around the class’s stated mechanic and growth profile. Weapons and armour shape its rhythm; the kit creates decisions about approach, commitment, recovery and resource use. A class is a playstyle identity, not a requirement to parry perfectly: defensive options and readable recovery windows should keep the wider game accessible.

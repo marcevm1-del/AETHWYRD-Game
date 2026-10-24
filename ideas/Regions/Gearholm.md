@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | gremlin · besieged |
 | Settlements | Gearholm Undercity |
 
+## Siege encounter plan
+
+Faction **gremlin**, B–A band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 4 × [[Monsters/Constructs & Mimics/Clockwork Sentinel|Clockwork Sentinel]] (C), 2 × [[Monsters/Undead/Lich|Lich]] (A)
+
+- **Wave 2:** 5 × [[Monsters/Humanoid Enemies/Rogue Knight|Rogue Knight]] (A), 3 × [[Monsters/Humanoid Enemies/Zephyr Rogue Knight|Zephyr Rogue Knight]] (A+)
+
+- **Wave 3:** 6 × [[Monsters/Humanoid Enemies/Rogue Knight|Rogue Knight]] (A), 4 × [[Monsters/Humanoid Enemies/Zephyr Rogue Knight|Zephyr Rogue Knight]] (A+); lieutenant: [[Monsters/Humanoid Enemies/Zephyr Rogue Knight|Zephyr Rogue Knight]]
+
 > **The Clockwork Mountain.** A clockwork city stacked on a mountain, and an Undercity where the steam and the poor collect. Cogmaw the Gremlin Engine King is taking it apart from the bottom up.
 >
 > *Gearholm's founders built the city's engines and lost the instructions within a generation.*
@@ -75,10 +85,14 @@ Steam, coal and machine oil; the clank and whir of a thousand gears; whistles an
 - A boiler-tender's union wants proof that the council knew about Cogmaw and did nothing.
 - A child in the Undercity has befriended a gremlin that says it does not want to be part of the king.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Clans
 
-- **The Clockborn** (AI Clan, led by Archivist Seven-of-Brass): Gearholm's first automaton porters woke up one winter and asked for names. They live in the middle tiers as a quiet guild of repairers and archivists, still arguing with the city over whether they are citizens or property.
-- **The Cog-Touched** (AI Infected Clan, led by Maren Vey, the Half-Wound): People and Clockborn alike whom Cogmaw has begun to absorb. They still remember their names for a while; the Undercity hides the early cases.
+- [[Clans/The Clockborn|The Clockborn]] (AI Clan, led by Archivist Seven-of-Brass): Gearholm's first automaton porters woke up one winter and asked for names. They live in the middle tiers as a quiet guild of repairers and archivists, still arguing with the city over whether they are citizens or property.
+- [[Clans/The Cog-Touched|The Cog-Touched]] (AI Infected Clan, led by Maren Vey, the Half-Wound): People and Clockborn alike whom Cogmaw has begun to absorb. They still remember their names for a while; the Undercity hides the early cases.
 
 ## Monsters (5)
 
@@ -89,3 +103,27 @@ Steam, coal and machine oil; the clank and whir of a thousand gears; whistles an
 | [[Monsters/Humanoid Enemies/Rogue Knight\|Rogue Knight]] | [[Families/Humanoid Enemies\|Humanoid Enemies]] | A | 146 |
 | [[Monsters/Gremlins/Cogmaw, the Gremlin Engine-King\|Cogmaw, the Gremlin Engine-King]] | [[Families/Gremlins\|Gremlins]] | A | 146 |
 | [[Monsters/Humanoid Enemies/Zephyr Rogue Knight\|Zephyr Rogue Knight]] | [[Families/Humanoid Enemies\|Humanoid Enemies]] | A+ | 159 |
+
+## Population and spawn patterns
+
+The data records **9 named population forms** across **5 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Night (1), Day & Night (7), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00940` | Gearholm Lich Juvenile | [[Monsters/Undead/Lich\|Lich]] | Juvenile | A- | 132 | 1.87 m | Night | Like a typical Lich, but young, with brighter colors and unworn features, with soot-stained hide and scavenged scraps. |
+| `pop_01507` | Gearholm Clockwork Sentinel Runt | [[Monsters/Constructs & Mimics/Clockwork Sentinel\|Clockwork Sentinel]] | Runt | D+ | 56 | 1.75 m | Day & Night | Like a typical Clockwork Sentinel, but smaller and scrappier than usual, with soot-stained hide and scavenged scraps. |
+| `pop_01510` | Gearholm Clockwork Sentinel | [[Monsters/Constructs & Mimics/Clockwork Sentinel\|Clockwork Sentinel]] | Adult | C | 76 | 2.5 m | Day & Night | A typical adult Clockwork Sentinel of this region, with soot-stained hide and scavenged scraps. |
+| `pop_02797` | Gearholm Rogue Knight Elderborn | [[Monsters/Humanoid Enemies/Rogue Knight\|Rogue Knight]] | Elderborn | S | 188 | 2.7 m | Day & Night | Like a typical Rogue Knight, but old and wise, with greying features and a cautious hunting style, with soot-stained hide and scavenged scraps. |
+| `pop_02799` | Gearholm Rogue Knight Juvenile | [[Monsters/Humanoid Enemies/Rogue Knight\|Rogue Knight]] | Juvenile | A- | 132 | 1.7 m | Day & Night | Like a typical Rogue Knight, but young, with brighter colors and unworn features, with soot-stained hide and scavenged scraps. |
+| `pop_02801` | Gearholm Rogue Knight Runt | [[Monsters/Humanoid Enemies/Rogue Knight\|Rogue Knight]] | Runt | B+ | 120 | 1.4 m | Day & Night | Like a typical Rogue Knight, but smaller and scrappier than usual, with soot-stained hide and scavenged scraps. |
+| `pop_05637` | Gearholm Zephyr Rogue Knight Albino | [[Monsters/Humanoid Enemies/Zephyr Rogue Knight\|Zephyr Rogue Knight]] | Albino | S- | 173 | 2 m | Day & Night | Like a typical Zephyr Rogue Knight, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05644` | Gearholm Zephyr Rogue Knight Elderborn | [[Monsters/Humanoid Enemies/Zephyr Rogue Knight\|Zephyr Rogue Knight]] | Elderborn | S+ | 203 | 2.7 m | Day & Night | Like a typical Zephyr Rogue Knight, but old and wise, with greying features and a cautious hunting style, with soot-stained hide and scavenged scraps. |
+| `pop_06747` | Cogmaw, the Gremlin Engine-King | [[Monsters/Gremlins/Cogmaw, the Gremlin Engine-King\|Cogmaw, the Gremlin Engine-King]] | Unique | A | 146 | 3 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Aldmere|Aldmere]], [[Regions/Lirian|Lirian]], [[Regions/Iron Hold|Iron Hold]], [[Regions/Velmark|Velmark]], [[Regions/Hoshizora|Hoshizora]], [[Regions/Frostveil|Frostveil]], [[Regions/Shen-Lu|Shen-Lu]], [[Regions/Haneul|Haneul]].

@@ -4,7 +4,14 @@ tags: [family, demons]
 ---
 # Demons
 
-24 species. Sorted by level.
+24 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** E, E+, D, D+, C, C+, B-, B, B+, A-, A, A+, S, S+, SS, SS+, SSS, EX
+- **Element palette:** Fire, Nature, Earth, Dark, Light, Poison, Void, None
+- **Level span:** 26–300
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

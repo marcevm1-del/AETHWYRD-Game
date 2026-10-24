@@ -21,6 +21,7 @@ tags: [monster, insects-arachnids, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 16120 · 490 · 392 · 343 · 392 · 135 |
 | XP · gold | 127464 · 1225 |
 | Ring | 5 |
+| Rig · animation | [[Systems/Rigs/arachnid\|arachnid]] · `anim_octopod` |
 | Habitats | [[Regions/Umbravel\|Umbravel]] |
 | Tyrant | Yes |
 | Genre | Classic Fantasy |
@@ -28,17 +29,37 @@ tags: [monster, insects-arachnids, tyrant, unique]
 
 **Field note:** Weak to Light. Attacks only if you come close to its home; back away to avoid a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Fang Bite | melee | 1.1 | 0 s | None | blue |
-| Web Shot | ranged | 0.5 | 8 s | None | blue |
-| Ceiling Drop | dash | 1.7 | 12 s | None | red |
-| Silk Snare | ranged | 0.4 | 10 s | None | blue |
-| Shadow Grasp | magic | 1.5 | 10 s | Dark | red |
+- **Rig:** [[Systems/Rigs/arachnid|arachnid]] (rigId); animation set `anim_octopod`.
+- **Dimensions:** 1.12 m high × 4 m long × 2.74 m wide; prefab scale 4.
+- **Physics:** 2112 kg, gravity ×1.4, poise 489, knockback resistance 0.32, death style `flip_legs_curl`.
+- **Navigation:** speed 10.19 m/s, turn 300°/s, stopping distance 1.4 m.
+- **Attack count:** 5; **signature:** a crown of spider-silk and eight jeweled eyes above Umbravel's markets.
 
-## Loot (`loot_insect_b`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Fang Bite\|Fang Bite]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Web Shot\|Web Shot]] | ranged | 0.5 | 8 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Ceiling Drop\|Ceiling Drop]] | dash | 1.7 | 12 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Silk Snare\|Silk Snare]] | ranged | 0.4 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Shadow Grasp\|Shadow Grasp]] | magic | 1.5 | 10 s | Dark | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Vel'thara, the Web Queen is a **dread insectoid** encountered at B+ rank, around level 120. Its documented behaviour is *Territorial* and its AI pattern is *territorial_guard+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a crown of spider-silk and eight jeweled eyes above Umbravel's markets. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Umbravel|Umbravel]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_octopod`, animation set `anim_octopod`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Insects & Arachnids B|loot_insect_b]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,20 @@ tags: [monster, insects-arachnids, tyrant, unique]
 | [[Items/Venom Sac\|Venom Sac]] | 15% | 1–1 |
 | [[Items/B-Rank Monster Core\|B-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Umbravel\|Umbravel]] | 1 | B+ | 120–120 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06732` | Vel'thara, the Web Queen | [[Regions/Umbravel\|Umbravel]] | Unique | B+ | 120 | 4 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

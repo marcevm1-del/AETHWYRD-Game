@@ -20,35 +20,56 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/00_Questions/questionnaire_02_story|00_Questions/questionnaire_02_story]]
 - [[Design Bible/01_Core_Concept/borrowed_features|01_Core_Concept/borrowed_features]]
 - [[Design Bible/01_Core_Concept/market_research_2026|01_Core_Concept/market_research_2026]]
+- [[Design Bible/01_Core_Concept/open_world_rpg_research_2026|01_Core_Concept/open_world_rpg_research_2026]]
+- [[Design Bible/01_Core_Concept/research_expansion_2026-10-24|01_Core_Concept/research_expansion_2026-10-24]]
+- [[Design Bible/01_Core_Concept/signature_gameplay_loops|01_Core_Concept/signature_gameplay_loops]]
 - [[Design Bible/01_Core_Concept/the_big_upgrade|01_Core_Concept/the_big_upgrade]]
 - [[Design Bible/01_Core_Concept/vision|01_Core_Concept/vision]]
+- [[Design Bible/01_Core_Concept/world_response_and_information_flow|01_Core_Concept/world_response_and_information_flow]]
 - [[Design Bible/02_Lore/cosmology|02_Lore/cosmology]]
 - [[Design Bible/02_Lore/history|02_Lore/history]]
 - [[Design Bible/02_Lore/life_in_aetheria|02_Lore/life_in_aetheria]]
 - [[Design Bible/02_Lore/story|02_Lore/story]]
+- [[Design Bible/02_Lore/whisperwood_kinship_arc|02_Lore/whisperwood_kinship_arc]]
 - [[Design Bible/02_Lore/world_systems|02_Lore/world_systems]]
+- [[Design Bible/02_Lore/worldbuilding_research_2026-10-24|02_Lore/worldbuilding_research_2026-10-24]]
 - [[Design Bible/03_Rank_System/ranks|03_Rank_System/ranks]]
 - [[Design Bible/04_Classes/base_and_advanced|04_Classes/base_and_advanced]]
 - [[Design Bible/04_Classes/expert_master_legendary_hidden|04_Classes/expert_master_legendary_hidden]]
 - [[Design Bible/04_Classes/monster_evolution|04_Classes/monster_evolution]]
+- [[Design Bible/04_Classes/progression_experience|04_Classes/progression_experience]]
 - [[Design Bible/05_Skills_Magic/skills_and_magic|05_Skills_Magic/skills_and_magic]]
 - [[Design Bible/06_Races_Origins/clans_guardians_fauna|06_Races_Origins/clans_guardians_fauna]]
 - [[Design Bible/06_Races_Origins/races_and_origins|06_Races_Origins/races_and_origins]]
+- [[Design Bible/07_Characters/companion_relationship_pacing|07_Characters/companion_relationship_pacing]]
 - [[Design Bible/07_Characters/companions_and_npcs|07_Characters/companions_and_npcs]]
 - [[Design Bible/08_Bestiary/bestiary_lore|08_Bestiary/bestiary_lore]]
+- [[Design Bible/08_Bestiary/boss_encounter_storytelling|08_Bestiary/boss_encounter_storytelling]]
 - [[Design Bible/08_Bestiary/bosses_and_calamities|08_Bestiary/bosses_and_calamities]]
 - [[Design Bible/08_Bestiary/monster_design_kit|08_Bestiary/monster_design_kit]]
+- [[Design Bible/08_Bestiary/monster_motion_bible|08_Bestiary/monster_motion_bible]]
 - [[Design Bible/09_Equipment/gear_systems_and_sets|09_Equipment/gear_systems_and_sets]]
+- [[Design Bible/09_Equipment/item_and_economy_design|09_Equipment/item_and_economy_design]]
 - [[Design Bible/09_Equipment/legendary_artifacts|09_Equipment/legendary_artifacts]]
+- [[Design Bible/09_Equipment/monster_core_pricing|09_Equipment/monster_core_pricing]]
+- [[Design Bible/10_World/anime_town_places_and_taverns|10_World/anime_town_places_and_taverns]]
 - [[Design Bible/10_World/brindlewick|10_World/brindlewick]]
+- [[Design Bible/10_World/cultural_presence_and_named_population|10_World/cultural_presence_and_named_population]]
+- [[Design Bible/10_World/exploration_and_discovery|10_World/exploration_and_discovery]]
 - [[Design Bible/10_World/gazetteer|10_World/gazetteer]]
+- [[Design Bible/10_World/reactive_world_and_field_journal|10_World/reactive_world_and_field_journal]]
 - [[Design Bible/10_World/world|10_World/world]]
+- [[Design Bible/11_Quests_Encounters/guild_hall_talk_and_lexicon|11_Quests_Encounters/guild_hall_talk_and_lexicon]]
+- [[Design Bible/11_Quests_Encounters/quest_outcome_grammar|11_Quests_Encounters/quest_outcome_grammar]]
 - [[Design Bible/11_Quests_Encounters/quests_and_encounters|11_Quests_Encounters/quests_and_encounters]]
 - [[Design Bible/11_Quests_Encounters/weekly_board|11_Quests_Encounters/weekly_board]]
 - [[Design Bible/12_Systems/combat|12_Systems/combat]]
+- [[Design Bible/12_Systems/companion_field_ai|12_Systems/companion_field_ai]]
 - [[Design Bible/12_Systems/hud_and_ui|12_Systems/hud_and_ui]]
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
+- [[Design Bible/12_Systems/party_synergy|12_Systems/party_synergy]]
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]
+- [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
 - [[Design Bible/13_Production/production|13_Production/production]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
@@ -66,6 +87,18 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Classes/Martial Artist|Martial Artist]]: Ultra-fast melee combos, juggles
 - [[Classes/Bard|Bard]]: Support / buffer / crowd control / charm
 - [[Classes/Occultist|Occultist]]: Dark caster: curses, summons, life drain
+
+## Game systems and tuning
+- [[Classes/Progression|Player progression and derived stats]]
+- [[Systems/Combat Tuning|Combat tuning reference]]
+- [[Systems/World Tuning|World, siege and inn tuning]]
+- [[Systems/Weekly Board|Weekly board by weekday]]
+- [[Systems/Story Flags|Story flag index]]
+- [[Systems/Rig Catalog|Monster rig and animation catalog]]
+
+## Combat data libraries
+- [[Systems/Attack Library|115 attack notes]]
+- [[Systems/Loot Table Index|221 loot tables]]
 
 ## Regions (49)
 ### Post-game
@@ -155,6 +188,752 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Families/Undead|Undead]] (51)
 - [[Families/Vesperites (Moon Raiders)|Vesperites (Moon Raiders)]] (9)
 - [[Families/Yokai-Inspired Spirits|Yokai-Inspired Spirits]] (25)
+
+## Individual species by family
+### Aberrations
+- [[Monsters/Aberrations/Skinwalker Mimic|Skinwalker Mimic]]
+- [[Monsters/Aberrations/Grin in the Walls|Grin in the Walls]]
+- [[Monsters/Aberrations/Faceless One|Faceless One]]
+- [[Monsters/Aberrations/The Many-Mouthed|The Many-Mouthed]]
+- [[Monsters/Aberrations/Thousand-Eyed Watcher|Thousand-Eyed Watcher]]
+- [[Monsters/Aberrations/Phantom Skinwalker Mimic|Phantom Skinwalker Mimic]]
+- [[Monsters/Aberrations/Storm Grin in the Walls|Storm Grin in the Walls]]
+- [[Monsters/Aberrations/Vesper-Touched Faceless One|Vesper-Touched Faceless One]]
+- [[Monsters/Aberrations/Phantom The Many-Mouthed|Phantom The Many-Mouthed]]
+- [[Monsters/Aberrations/Deep Thousand-Eyed Watcher|Deep Thousand-Eyed Watcher]]
+- [[Monsters/Aberrations/The Nightmother, Queen of the Nightshifters|The Nightmother, Queen of the Nightshifters]]
+- [[Monsters/Aberrations/The Gentle Warden, Keeper of Ashira|The Gentle Warden, Keeper of Ashira]]
+
+### Aquatic
+- [[Monsters/Aquatic/Giant Crab|Giant Crab]]
+- [[Monsters/Aquatic/Piranha Swarm|Piranha Swarm]]
+- [[Monsters/Aquatic/Sahuagin|Sahuagin]]
+- [[Monsters/Aquatic/Glowfin Angler|Glowfin Angler]]
+- [[Monsters/Aquatic/Sea Serpent|Sea Serpent]]
+- [[Monsters/Aquatic/Siren|Siren]]
+- [[Monsters/Aquatic/Giant Octopus|Giant Octopus]]
+- [[Monsters/Aquatic/Kraken Spawn|Kraken Spawn]]
+- [[Monsters/Aquatic/Merfolk Warden|Merfolk Warden]]
+- [[Monsters/Aquatic/Leviathan Young|Leviathan Young]]
+- [[Monsters/Aquatic/Abyssal Kraken Queen|Abyssal Kraken Queen]]
+- [[Monsters/Aquatic/Leviathan|Leviathan]]
+- [[Monsters/Aquatic/Reef Crab|Reef Crab]]
+- [[Monsters/Aquatic/Bog Piranha Swarm|Bog Piranha Swarm]]
+- [[Monsters/Aquatic/Vesper-Touched Sahuagin|Vesper-Touched Sahuagin]]
+- [[Monsters/Aquatic/Phantom Glowfin Angler|Phantom Glowfin Angler]]
+- [[Monsters/Aquatic/Abyssal Sea Serpent|Abyssal Sea Serpent]]
+- [[Monsters/Aquatic/Ancient Siren|Ancient Siren]]
+- [[Monsters/Aquatic/Reef Octopus|Reef Octopus]]
+- [[Monsters/Aquatic/Vesper-Touched Kraken Spawn|Vesper-Touched Kraken Spawn]]
+- [[Monsters/Aquatic/Bog Merfolk Warden|Bog Merfolk Warden]]
+- [[Monsters/Aquatic/Phantom Leviathan Young|Phantom Leviathan Young]]
+- [[Monsters/Aquatic/Phantom Abyssal Kraken Queen|Phantom Abyssal Kraken Queen]]
+- [[Monsters/Aquatic/The Drowned Choir, Sirens of the Canals|The Drowned Choir, Sirens of the Canals]]
+- [[Monsters/Aquatic/Ysgrath, the Ice-Jaw Leviathan|Ysgrath, the Ice-Jaw Leviathan]]
+- [[Monsters/Aquatic/Krakenmother Ys, Queen of the Wreck Tide|Krakenmother Ys, Queen of the Wreck Tide]]
+- [[Monsters/Aquatic/The Nameless Tide, a Serpent Without a Name|The Nameless Tide, a Serpent Without a Name]]
+- [[Monsters/Aquatic/Lumen-Eater, the Abyss Angler|Lumen-Eater, the Abyss Angler]]
+
+### Avians
+- [[Monsters/Avians/Giant Crow|Giant Crow]]
+- [[Monsters/Avians/Cockatrice|Cockatrice]]
+- [[Monsters/Avians/Harpy|Harpy]]
+- [[Monsters/Avians/Griffon|Griffon]]
+- [[Monsters/Avians/Hippogriff|Hippogriff]]
+- [[Monsters/Avians/Thunderbird|Thunderbird]]
+- [[Monsters/Avians/Roc|Roc]]
+- [[Monsters/Avians/Phoenix|Phoenix]]
+- [[Monsters/Avians/Simurrah|Simurrah]]
+- [[Monsters/Avians/Eternal Phoenix|Eternal Phoenix]]
+- [[Monsters/Avians/Aethernax, the Sky Devourer|Aethernax, the Sky Devourer]]
+- [[Monsters/Avians/Brine Crow|Brine Crow]]
+- [[Monsters/Avians/Vesper-Touched Cockatrice|Vesper-Touched Cockatrice]]
+- [[Monsters/Avians/Phantom Harpy|Phantom Harpy]]
+- [[Monsters/Avians/Vesper-Touched Griffon|Vesper-Touched Griffon]]
+- [[Monsters/Avians/Ancient Hippogriff|Ancient Hippogriff]]
+- [[Monsters/Avians/Tide Thunderbird|Tide Thunderbird]]
+- [[Monsters/Avians/Cloud Roc|Cloud Roc]]
+- [[Monsters/Avians/Vesper-Touched Phoenix|Vesper-Touched Phoenix]]
+- [[Monsters/Avians/Elder Simurrah|Elder Simurrah]]
+- [[Monsters/Avians/Brine Eternal Phoenix|Brine Eternal Phoenix]]
+- [[Monsters/Avians/Raikaru, the Storm Roc|Raikaru, the Storm Roc]]
+- [[Monsters/Avians/Aquilon, the Roc Sovereign|Aquilon, the Roc Sovereign]]
+
+### Beasts
+- [[Monsters/Beasts/Horned Rabbit|Horned Rabbit]]
+- [[Monsters/Beasts/Forest Wolf|Forest Wolf]]
+- [[Monsters/Beasts/Wild Boar|Wild Boar]]
+- [[Monsters/Beasts/Bandit Bear|Bandit Bear]]
+- [[Monsters/Beasts/Dire Wolf|Dire Wolf]]
+- [[Monsters/Beasts/Owlbear|Owlbear]]
+- [[Monsters/Beasts/Thunderhorn Elk|Thunderhorn Elk]]
+- [[Monsters/Beasts/Frost Fenrir Pup|Frost Fenrir Pup]]
+- [[Monsters/Beasts/Behemoth Calf|Behemoth Calf]]
+- [[Monsters/Beasts/Sabretooth King|Sabretooth King]]
+- [[Monsters/Beasts/Silver Fenrir|Silver Fenrir]]
+- [[Monsters/Beasts/Behemoth Ascendant|Behemoth Ascendant]]
+- [[Monsters/Beasts/Jackalope|Jackalope]]
+- [[Monsters/Beasts/Moon Hare|Moon Hare]]
+- [[Monsters/Beasts/Garmrok, the World-Eater|Garmrok, the World-Eater]]
+- [[Monsters/Beasts/Ancient Horned Rabbit|Ancient Horned Rabbit]]
+- [[Monsters/Beasts/Radiant Wolf|Radiant Wolf]]
+- [[Monsters/Beasts/Crag Boar|Crag Boar]]
+- [[Monsters/Beasts/Elder Bandit Bear|Elder Bandit Bear]]
+- [[Monsters/Beasts/Meadow Dire Wolf|Meadow Dire Wolf]]
+- [[Monsters/Beasts/Ancient Owlbear|Ancient Owlbear]]
+- [[Monsters/Beasts/Phantom Thunderhorn Elk|Phantom Thunderhorn Elk]]
+- [[Monsters/Beasts/Thorn Fenrir Pup|Thorn Fenrir Pup]]
+- [[Monsters/Beasts/Elder Behemoth Calf|Elder Behemoth Calf]]
+- [[Monsters/Beasts/Ancient Sabretooth King|Ancient Sabretooth King]]
+- [[Monsters/Beasts/Ancient Silver Fenrir|Ancient Silver Fenrir]]
+- [[Monsters/Beasts/Ember Behemoth Ascendant|Ember Behemoth Ascendant]]
+- [[Monsters/Beasts/Crag Jackalope|Crag Jackalope]]
+- [[Monsters/Beasts/Phantom Moon Hare|Phantom Moon Hare]]
+- [[Monsters/Beasts/Elder Horned Rabbit|Elder Horned Rabbit]]
+- [[Monsters/Beasts/Ancient Forest Wolf|Ancient Forest Wolf]]
+- [[Monsters/Beasts/Phantom Wild Boar|Phantom Wild Boar]]
+- [[Monsters/Beasts/Phantom Bandit Bear|Phantom Bandit Bear]]
+- [[Monsters/Beasts/Phantom Dire Wolf|Phantom Dire Wolf]]
+- [[Monsters/Beasts/Vesper-Touched Owlbear|Vesper-Touched Owlbear]]
+- [[Monsters/Beasts/Ancient Thunderhorn Elk|Ancient Thunderhorn Elk]]
+- [[Monsters/Beasts/Steppe Fenrir Pup|Steppe Fenrir Pup]]
+- [[Monsters/Beasts/Steppe Behemoth Calf|Steppe Behemoth Calf]]
+- [[Monsters/Beasts/Night Sabretooth King|Night Sabretooth King]]
+- [[Monsters/Beasts/Night Silver Fenrir|Night Silver Fenrir]]
+- [[Monsters/Beasts/Phantom Behemoth Ascendant|Phantom Behemoth Ascendant]]
+- [[Monsters/Beasts/Phantom Jackalope|Phantom Jackalope]]
+- [[Monsters/Beasts/Elder Moon Hare|Elder Moon Hare]]
+- [[Monsters/Beasts/Thrakka, Sabretooth Khan of the Steppe Horde|Thrakka, Sabretooth Khan of the Steppe Horde]]
+- [[Monsters/Beasts/Quakeback, the Earthshaker Behemoth|Quakeback, the Earthshaker Behemoth]]
+
+### Centaurs & Taurs
+- [[Monsters/Centaurs & Taurs/Centaur Scout|Centaur Scout]]
+- [[Monsters/Centaurs & Taurs/Centaur Lancer|Centaur Lancer]]
+- [[Monsters/Centaurs & Taurs/Scorpion Rider|Scorpion Rider]]
+- [[Monsters/Centaurs & Taurs/Centaur Khan|Centaur Khan]]
+- [[Monsters/Centaurs & Taurs/Shade Centaur Scout|Shade Centaur Scout]]
+- [[Monsters/Centaurs & Taurs/Crag Centaur Lancer|Crag Centaur Lancer]]
+- [[Monsters/Centaurs & Taurs/Ancient Scorpion Rider|Ancient Scorpion Rider]]
+- [[Monsters/Centaurs & Taurs/Dune Centaur Khan|Dune Centaur Khan]]
+
+### Chimeras & Mythic Beasts
+- [[Monsters/Chimeras & Mythic Beasts/Manticore|Manticore]]
+- [[Monsters/Chimeras & Mythic Beasts/Chimera|Chimera]]
+- [[Monsters/Chimeras & Mythic Beasts/Nue|Nue]]
+- [[Monsters/Chimeras & Mythic Beasts/Unicorn|Unicorn]]
+- [[Monsters/Chimeras & Mythic Beasts/Cerberus|Cerberus]]
+- [[Monsters/Chimeras & Mythic Beasts/Sphinx|Sphinx]]
+- [[Monsters/Chimeras & Mythic Beasts/Qilin|Qilin]]
+- [[Monsters/Chimeras & Mythic Beasts/Nameless Abomination|Nameless Abomination]]
+- [[Monsters/Chimeras & Mythic Beasts/Vesper-Touched Manticore|Vesper-Touched Manticore]]
+- [[Monsters/Chimeras & Mythic Beasts/Greater Chimera|Greater Chimera]]
+- [[Monsters/Chimeras & Mythic Beasts/Phantom Nue|Phantom Nue]]
+- [[Monsters/Chimeras & Mythic Beasts/Dune Unicorn|Dune Unicorn]]
+- [[Monsters/Chimeras & Mythic Beasts/Greater Cerberus|Greater Cerberus]]
+- [[Monsters/Chimeras & Mythic Beasts/Phantom Sphinx|Phantom Sphinx]]
+- [[Monsters/Chimeras & Mythic Beasts/Ancient Qilin|Ancient Qilin]]
+- [[Monsters/Chimeras & Mythic Beasts/Mansacor, the Gold-Eating Manticore|Mansacor, the Gold-Eating Manticore]]
+
+### Constructs & Mimics
+- [[Monsters/Constructs & Mimics/Mud Doll|Mud Doll]]
+- [[Monsters/Constructs & Mimics/Door Mimic|Door Mimic]]
+- [[Monsters/Constructs & Mimics/Smiling Scarecrow|Smiling Scarecrow]]
+- [[Monsters/Constructs & Mimics/Living Armor|Living Armor]]
+- [[Monsters/Constructs & Mimics/Stone Golem|Stone Golem]]
+- [[Monsters/Constructs & Mimics/Mimic|Mimic]]
+- [[Monsters/Constructs & Mimics/Clockwork Sentinel|Clockwork Sentinel]]
+- [[Monsters/Constructs & Mimics/Iron Golem|Iron Golem]]
+- [[Monsters/Constructs & Mimics/Crystal Golem|Crystal Golem]]
+- [[Monsters/Constructs & Mimics/Mimic King|Mimic King]]
+- [[Monsters/Constructs & Mimics/Mithril Colossus|Mithril Colossus]]
+- [[Monsters/Constructs & Mimics/Starmetal Colossus|Starmetal Colossus]]
+- [[Monsters/Constructs & Mimics/Titan of the First Age|Titan of the First Age]]
+- [[Monsters/Constructs & Mimics/Greater Mud Doll|Greater Mud Doll]]
+- [[Monsters/Constructs & Mimics/Vesper-Touched Door Mimic|Vesper-Touched Door Mimic]]
+- [[Monsters/Constructs & Mimics/Volt Smiling Scarecrow|Volt Smiling Scarecrow]]
+- [[Monsters/Constructs & Mimics/Greater Living Armor|Greater Living Armor]]
+- [[Monsters/Constructs & Mimics/Greater Stone Golem|Greater Stone Golem]]
+- [[Monsters/Constructs & Mimics/Cloud Mimic|Cloud Mimic]]
+- [[Monsters/Constructs & Mimics/Dusk Clockwork Sentinel|Dusk Clockwork Sentinel]]
+- [[Monsters/Constructs & Mimics/Greater Iron Golem|Greater Iron Golem]]
+- [[Monsters/Constructs & Mimics/Vesper-Touched Crystal Golem|Vesper-Touched Crystal Golem]]
+- [[Monsters/Constructs & Mimics/Elder Mimic King|Elder Mimic King]]
+- [[Monsters/Constructs & Mimics/Ancient Mithril Colossus|Ancient Mithril Colossus]]
+- [[Monsters/Constructs & Mimics/Tide Starmetal Colossus|Tide Starmetal Colossus]]
+- [[Monsters/Constructs & Mimics/The Tithe Colossus, Hunger of the Foundation Stones|The Tithe Colossus, Hunger of the Foundation Stones]]
+- [[Monsters/Constructs & Mimics/The Colossus of Sunscar, Walker of the Dunes|The Colossus of Sunscar, Walker of the Dunes]]
+
+### Demons
+- [[Monsters/Demons/Imp|Imp]]
+- [[Monsters/Demons/Hellhound|Hellhound]]
+- [[Monsters/Demons/Lesser Demon|Lesser Demon]]
+- [[Monsters/Demons/Gargoyle|Gargoyle]]
+- [[Monsters/Demons/Charmfiend|Charmfiend]]
+- [[Monsters/Demons/Greater Demon|Greater Demon]]
+- [[Monsters/Demons/Nightmare Steed|Nightmare Steed]]
+- [[Monsters/Demons/Demon Knight|Demon Knight]]
+- [[Monsters/Demons/Arch Demon|Arch Demon]]
+- [[Monsters/Demons/Abyss Prince|Abyss Prince]]
+- [[Monsters/Demons/Abyss Herald|Abyss Herald]]
+- [[Monsters/Demons/Thorn Imp|Thorn Imp]]
+- [[Monsters/Demons/Mud Hellhound|Mud Hellhound]]
+- [[Monsters/Demons/Elder Lesser Demon|Elder Lesser Demon]]
+- [[Monsters/Demons/Briar Gargoyle|Briar Gargoyle]]
+- [[Monsters/Demons/Hellmarch Charmfiend|Hellmarch Charmfiend]]
+- [[Monsters/Demons/Elder Greater Demon|Elder Greater Demon]]
+- [[Monsters/Demons/Phantom Nightmare Steed|Phantom Nightmare Steed]]
+- [[Monsters/Demons/Rot Demon Knight|Rot Demon Knight]]
+- [[Monsters/Demons/Blight Arch Demon|Blight Arch Demon]]
+- [[Monsters/Demons/Ancient Abyss Prince|Ancient Abyss Prince]]
+- [[Monsters/Demons/Alley Abyss Herald|Alley Abyss Herald]]
+- [[Monsters/Demons/Varos, Herald of the Red Gate|Varos, Herald of the Red Gate]]
+- [[Monsters/Demons/Morvane, Vanguard of the Overlord|Morvane, Vanguard of the Overlord]]
+
+### Dragons
+- [[Monsters/Dragons/Hatchling|Hatchling]]
+- [[Monsters/Dragons/Drake|Drake]]
+- [[Monsters/Dragons/Fire Drake|Fire Drake]]
+- [[Monsters/Dragons/Frost Drake|Frost Drake]]
+- [[Monsters/Dragons/Thunder Drake|Thunder Drake]]
+- [[Monsters/Dragons/Wyvern|Wyvern]]
+- [[Monsters/Dragons/Young Dragon|Young Dragon]]
+- [[Monsters/Dragons/Drake Lord|Drake Lord]]
+- [[Monsters/Dragons/Adult Dragon|Adult Dragon]]
+- [[Monsters/Dragons/Starfall Wyrm|Starfall Wyrm]]
+- [[Monsters/Dragons/Ignivar, the Ember Throne|Ignivar, the Ember Throne]]
+- [[Monsters/Dragons/Glacirra, the White Silence|Glacirra, the White Silence]]
+- [[Monsters/Dragons/Zephyros, the Endless Sky|Zephyros, the Endless Sky]]
+- [[Monsters/Dragons/Terragon, the Mountain That Breathes|Terragon, the Mountain That Breathes]]
+- [[Monsters/Dragons/Umbrael, the Hollow Star|Umbrael, the Hollow Star]]
+- [[Monsters/Dragons/Solvoryn, the Dawnwyrm|Solvoryn, the Dawnwyrm]]
+- [[Monsters/Dragons/Nythraxa, the Duskwyrm|Nythraxa, the Duskwyrm]]
+- [[Monsters/Dragons/Kaelumbra, the Twilight Arbiter|Kaelumbra, the Twilight Arbiter]]
+- [[Monsters/Dragons/Rime Hatchling|Rime Hatchling]]
+- [[Monsters/Dragons/Elder Drake|Elder Drake]]
+- [[Monsters/Dragons/Greater Fire Drake|Greater Fire Drake]]
+- [[Monsters/Dragons/Cinder Drake|Cinder Drake]]
+- [[Monsters/Dragons/Ancient Thunder Drake|Ancient Thunder Drake]]
+- [[Monsters/Dragons/Rime Wyvern|Rime Wyvern]]
+- [[Monsters/Dragons/Vesper-Touched Young Dragon|Vesper-Touched Young Dragon]]
+- [[Monsters/Dragons/Vesper-Touched Drake Lord|Vesper-Touched Drake Lord]]
+- [[Monsters/Dragons/Ancient Adult Dragon|Ancient Adult Dragon]]
+- [[Monsters/Dragons/Greater Starfall Wyrm|Greater Starfall Wyrm]]
+- [[Monsters/Dragons/Vyrmax, the Drake Lord|Vyrmax, the Drake Lord]]
+
+### Elementals & Spirits
+- [[Monsters/Elementals & Spirits/Wisp|Wisp]]
+- [[Monsters/Elementals & Spirits/Will-o'-Wisp|Will-o'-Wisp]]
+- [[Monsters/Elementals & Spirits/Pixie|Pixie]]
+- [[Monsters/Elementals & Spirits/Salamander Spirit|Salamander Spirit]]
+- [[Monsters/Elementals & Spirits/Undine|Undine]]
+- [[Monsters/Elementals & Spirits/Sylph|Sylph]]
+- [[Monsters/Elementals & Spirits/Gnome|Gnome]]
+- [[Monsters/Elementals & Spirits/Ifrit|Ifrit]]
+- [[Monsters/Elementals & Spirits/Storm Djinn|Storm Djinn]]
+- [[Monsters/Elementals & Spirits/Spirit King|Spirit King]]
+- [[Monsters/Elementals & Spirits/Elemental Sovereign|Elemental Sovereign]]
+- [[Monsters/Elementals & Spirits/Elemental Primarch|Elemental Primarch]]
+- [[Monsters/Elementals & Spirits/Storm Wisp|Storm Wisp]]
+- [[Monsters/Elementals & Spirits/Vesper-Touched Will-o'-Wisp|Vesper-Touched Will-o'-Wisp]]
+- [[Monsters/Elementals & Spirits/Elder Pixie|Elder Pixie]]
+- [[Monsters/Elementals & Spirits/Crag Salamander Spirit|Crag Salamander Spirit]]
+- [[Monsters/Elementals & Spirits/Greater Undine|Greater Undine]]
+- [[Monsters/Elementals & Spirits/Phantom Sylph|Phantom Sylph]]
+- [[Monsters/Elementals & Spirits/Greater Gnome|Greater Gnome]]
+- [[Monsters/Elementals & Spirits/Phantom Ifrit|Phantom Ifrit]]
+- [[Monsters/Elementals & Spirits/Crag Djinn|Crag Djinn]]
+- [[Monsters/Elementals & Spirits/Vesper-Touched Spirit King|Vesper-Touched Spirit King]]
+- [[Monsters/Elementals & Spirits/Venom Elemental Sovereign|Venom Elemental Sovereign]]
+
+### Familiars & Gentle Creatures
+- [[Monsters/Familiars & Gentle Creatures/Moss Tortoise|Moss Tortoise]]
+- [[Monsters/Familiars & Gentle Creatures/Lantern Moth|Lantern Moth]]
+- [[Monsters/Familiars & Gentle Creatures/Fluffcap Sheep|Fluffcap Sheep]]
+- [[Monsters/Familiars & Gentle Creatures/Rainbow Koi|Rainbow Koi]]
+- [[Monsters/Familiars & Gentle Creatures/Mana Fox|Mana Fox]]
+- [[Monsters/Familiars & Gentle Creatures/Ember Kitten|Ember Kitten]]
+- [[Monsters/Familiars & Gentle Creatures/Snowmole|Snowmole]]
+- [[Monsters/Familiars & Gentle Creatures/Sky Whale|Sky Whale]]
+- [[Monsters/Familiars & Gentle Creatures/Crag Moss Tortoise|Crag Moss Tortoise]]
+- [[Monsters/Familiars & Gentle Creatures/Elder Lantern Moth|Elder Lantern Moth]]
+- [[Monsters/Familiars & Gentle Creatures/Rime Fluffcap Sheep|Rime Fluffcap Sheep]]
+- [[Monsters/Familiars & Gentle Creatures/Crag Koi|Crag Koi]]
+- [[Monsters/Familiars & Gentle Creatures/Ember Mana Fox|Ember Mana Fox]]
+- [[Monsters/Familiars & Gentle Creatures/Moss Kitten|Moss Kitten]]
+- [[Monsters/Familiars & Gentle Creatures/Sky Snowmole|Sky Snowmole]]
+- [[Monsters/Familiars & Gentle Creatures/Greater Sky Whale|Greater Sky Whale]]
+
+### Floor-born
+- [[Monsters/Floor-born/Floor Crawler|Floor Crawler]]
+- [[Monsters/Floor-born/Wall Stalker|Wall Stalker]]
+- [[Monsters/Floor-born/Labyrinth Hound|Labyrinth Hound]]
+- [[Monsters/Floor-born/Core Sentinel|Core Sentinel]]
+- [[Monsters/Floor-born/Maze Weaver|Maze Weaver]]
+- [[Monsters/Floor-born/Floor Tyrant|Floor Tyrant]]
+- [[Monsters/Floor-born/Thunder Floor Crawler|Thunder Floor Crawler]]
+- [[Monsters/Floor-born/Ruin Wall Stalker|Ruin Wall Stalker]]
+- [[Monsters/Floor-born/Ruin Hound|Ruin Hound]]
+- [[Monsters/Floor-born/Greater Core Sentinel|Greater Core Sentinel]]
+- [[Monsters/Floor-born/Elder Maze Weaver|Elder Maze Weaver]]
+- [[Monsters/Floor-born/Greater Floor Tyrant|Greater Floor Tyrant]]
+
+### Goblinoids
+- [[Monsters/Goblinoids/Goblin|Goblin]]
+- [[Monsters/Goblinoids/Goblin Archer|Goblin Archer]]
+- [[Monsters/Goblinoids/Goblin Trapper|Goblin Trapper]]
+- [[Monsters/Goblinoids/Goblin Shaman|Goblin Shaman]]
+- [[Monsters/Goblinoids/Hobgoblin|Hobgoblin]]
+- [[Monsters/Goblinoids/Goblin Bomber|Goblin Bomber]]
+- [[Monsters/Goblinoids/Goblin Wolf Rider|Goblin Wolf Rider]]
+- [[Monsters/Goblinoids/Goblin Champion|Goblin Champion]]
+- [[Monsters/Goblinoids/Goblin General|Goblin General]]
+- [[Monsters/Goblinoids/Goblin King|Goblin King]]
+- [[Monsters/Goblinoids/Kijin Warrior|Kijin Warrior]]
+- [[Monsters/Goblinoids/Oni Warlord|Oni Warlord]]
+- [[Monsters/Goblinoids/Grove Goblin|Grove Goblin]]
+- [[Monsters/Goblinoids/Phantom Goblin Archer|Phantom Goblin Archer]]
+- [[Monsters/Goblinoids/Grove Goblin Trapper|Grove Goblin Trapper]]
+- [[Monsters/Goblinoids/Dawn Goblin Shaman|Dawn Goblin Shaman]]
+- [[Monsters/Goblinoids/Moss Hobgoblin|Moss Hobgoblin]]
+- [[Monsters/Goblinoids/Vesper-Touched Goblin Bomber|Vesper-Touched Goblin Bomber]]
+- [[Monsters/Goblinoids/Ancient Goblin Wolf Rider|Ancient Goblin Wolf Rider]]
+- [[Monsters/Goblinoids/Vesper-Touched Goblin Champion|Vesper-Touched Goblin Champion]]
+- [[Monsters/Goblinoids/Vesper-Touched Goblin General|Vesper-Touched Goblin General]]
+- [[Monsters/Goblinoids/Zephyr Goblin King|Zephyr Goblin King]]
+- [[Monsters/Goblinoids/Elite Kijin Warrior|Elite Kijin Warrior]]
+- [[Monsters/Goblinoids/Radiant Oni Warlord|Radiant Oni Warlord]]
+- [[Monsters/Goblinoids/Meadow Goblin|Meadow Goblin]]
+- [[Monsters/Goblinoids/Ancient Goblin Archer|Ancient Goblin Archer]]
+- [[Monsters/Goblinoids/Elite Goblin Trapper|Elite Goblin Trapper]]
+- [[Monsters/Goblinoids/Ruin Goblin Shaman|Ruin Goblin Shaman]]
+- [[Monsters/Goblinoids/Vesper-Touched Hobgoblin|Vesper-Touched Hobgoblin]]
+- [[Monsters/Goblinoids/Ruin Goblin Bomber|Ruin Goblin Bomber]]
+- [[Monsters/Goblinoids/Phantom Goblin Wolf Rider|Phantom Goblin Wolf Rider]]
+- [[Monsters/Goblinoids/Goblin Champion Veteran|Goblin Champion Veteran]]
+- [[Monsters/Goblinoids/Goblin General Veteran|Goblin General Veteran]]
+- [[Monsters/Goblinoids/Ancient Goblin King|Ancient Goblin King]]
+- [[Monsters/Goblinoids/Briar Kijin Warrior|Briar Kijin Warrior]]
+- [[Monsters/Goblinoids/Blight Oni Warlord|Blight Oni Warlord]]
+- [[Monsters/Goblinoids/Grukk, Goblin Chief of Hollowpine|Grukk, Goblin Chief of Hollowpine]]
+
+### Gremlins
+- [[Monsters/Gremlins/Gremlin|Gremlin]]
+- [[Monsters/Gremlins/Saboteur Gremlin|Saboteur Gremlin]]
+- [[Monsters/Gremlins/Gremlin King|Gremlin King]]
+- [[Monsters/Gremlins/Ancient Gremlin|Ancient Gremlin]]
+- [[Monsters/Gremlins/Vesper-Touched Saboteur Gremlin|Vesper-Touched Saboteur Gremlin]]
+- [[Monsters/Gremlins/Ruin Gremlin King|Ruin Gremlin King]]
+- [[Monsters/Gremlins/Cogmaw, the Gremlin Engine-King|Cogmaw, the Gremlin Engine-King]]
+
+### Humanoid Enemies
+- [[Monsters/Humanoid Enemies/Bandit|Bandit]]
+- [[Monsters/Humanoid Enemies/Highwayman Captain|Highwayman Captain]]
+- [[Monsters/Humanoid Enemies/Slaver|Slaver]]
+- [[Monsters/Humanoid Enemies/Dark Cultist|Dark Cultist]]
+- [[Monsters/Humanoid Enemies/Rogue Mage|Rogue Mage]]
+- [[Monsters/Humanoid Enemies/Inquisitor|Inquisitor]]
+- [[Monsters/Humanoid Enemies/Syndicate Blade|Syndicate Blade]]
+- [[Monsters/Humanoid Enemies/Rogue Knight|Rogue Knight]]
+- [[Monsters/Humanoid Enemies/Fallen Hero|Fallen Hero]]
+- [[Monsters/Humanoid Enemies/Corrupted Summoned Hero|Corrupted Summoned Hero]]
+- [[Monsters/Humanoid Enemies/Tide Bandit|Tide Bandit]]
+- [[Monsters/Humanoid Enemies/Meadow Highwayman Captain|Meadow Highwayman Captain]]
+- [[Monsters/Humanoid Enemies/Alley Slaver|Alley Slaver]]
+- [[Monsters/Humanoid Enemies/Dark Cultist Veteran|Dark Cultist Veteran]]
+- [[Monsters/Humanoid Enemies/Ancient Rogue Mage|Ancient Rogue Mage]]
+- [[Monsters/Humanoid Enemies/Cinder Inquisitor|Cinder Inquisitor]]
+- [[Monsters/Humanoid Enemies/Syndicate Blade Veteran|Syndicate Blade Veteran]]
+- [[Monsters/Humanoid Enemies/Zephyr Rogue Knight|Zephyr Rogue Knight]]
+- [[Monsters/Humanoid Enemies/Elite Fallen Hero|Elite Fallen Hero]]
+- [[Monsters/Humanoid Enemies/Varrick Kade, the Slaver Lord|Varrick Kade, the Slaver Lord]]
+- [[Monsters/Humanoid Enemies/Diego Alvarez, Voice of the Choir of Chains|Diego Alvarez, Voice of the Choir of Chains]]
+- [[Monsters/Humanoid Enemies/Cinderlord Vasque, the Smoke Mage|Cinderlord Vasque, the Smoke Mage]]
+
+### Insects & Arachnids
+- [[Monsters/Insects & Arachnids/Giant Ant|Giant Ant]]
+- [[Monsters/Insects & Arachnids/Cave Spider|Cave Spider]]
+- [[Monsters/Insects & Arachnids/Firefly Swarm|Firefly Swarm]]
+- [[Monsters/Insects & Arachnids/Armor Beetle|Armor Beetle]]
+- [[Monsters/Insects & Arachnids/Venom Spider|Venom Spider]]
+- [[Monsters/Insects & Arachnids/Blade Mantis|Blade Mantis]]
+- [[Monsters/Insects & Arachnids/Queen Ant|Queen Ant]]
+- [[Monsters/Insects & Arachnids/Death Mantis|Death Mantis]]
+- [[Monsters/Insects & Arachnids/Arachne|Arachne]]
+- [[Monsters/Insects & Arachnids/Scarab Swarm|Scarab Swarm]]
+- [[Monsters/Insects & Arachnids/Arachne Matriarch|Arachne Matriarch]]
+- [[Monsters/Insects & Arachnids/Hive Mother of the Abyss|Hive Mother of the Abyss]]
+- [[Monsters/Insects & Arachnids/Ancient Giant Ant|Ancient Giant Ant]]
+- [[Monsters/Insects & Arachnids/Ancient Cave Spider|Ancient Cave Spider]]
+- [[Monsters/Insects & Arachnids/Phantom Firefly Swarm|Phantom Firefly Swarm]]
+- [[Monsters/Insects & Arachnids/Vesper-Touched Armor Beetle|Vesper-Touched Armor Beetle]]
+- [[Monsters/Insects & Arachnids/Gilded Spider|Gilded Spider]]
+- [[Monsters/Insects & Arachnids/Cavern Blade Mantis|Cavern Blade Mantis]]
+- [[Monsters/Insects & Arachnids/Dune Queen Ant|Dune Queen Ant]]
+- [[Monsters/Insects & Arachnids/Gale Death Mantis|Gale Death Mantis]]
+- [[Monsters/Insects & Arachnids/Tide Arachne|Tide Arachne]]
+- [[Monsters/Insects & Arachnids/Vesper-Touched Scarab Swarm|Vesper-Touched Scarab Swarm]]
+- [[Monsters/Insects & Arachnids/Greater Arachne Matriarch|Greater Arachne Matriarch]]
+- [[Monsters/Insects & Arachnids/Greater Giant Ant|Greater Giant Ant]]
+- [[Monsters/Insects & Arachnids/Vesper-Touched Cave Spider|Vesper-Touched Cave Spider]]
+- [[Monsters/Insects & Arachnids/Blight Firefly Swarm|Blight Firefly Swarm]]
+- [[Monsters/Insects & Arachnids/Meadow Armor Beetle|Meadow Armor Beetle]]
+- [[Monsters/Insects & Arachnids/Cavern Spider|Cavern Spider]]
+- [[Monsters/Insects & Arachnids/Ash Blade Mantis|Ash Blade Mantis]]
+- [[Monsters/Insects & Arachnids/Elder Queen Ant|Elder Queen Ant]]
+- [[Monsters/Insects & Arachnids/Ancient Death Mantis|Ancient Death Mantis]]
+- [[Monsters/Insects & Arachnids/Frost Arachne|Frost Arachne]]
+- [[Monsters/Insects & Arachnids/Elder Scarab Swarm|Elder Scarab Swarm]]
+- [[Monsters/Insects & Arachnids/Sky Arachne Matriarch|Sky Arachne Matriarch]]
+- [[Monsters/Insects & Arachnids/Mother Webcrawler, Terror of the Small|Mother Webcrawler, Terror of the Small]]
+- [[Monsters/Insects & Arachnids/Vel'thara, the Web Queen|Vel'thara, the Web Queen]]
+
+### Killer Insects
+- [[Monsters/Killer Insects/Killer Ant|Killer Ant]]
+- [[Monsters/Killer Insects/Needle Wasp|Needle Wasp]]
+- [[Monsters/Killer Insects/Hornet Lancer|Hornet Lancer]]
+- [[Monsters/Killer Insects/Tunnel Centipede|Tunnel Centipede]]
+- [[Monsters/Killer Insects/Queen's Guard|Queen's Guard]]
+- [[Monsters/Killer Insects/Bone Weevil|Bone Weevil]]
+- [[Monsters/Killer Insects/Hive Tyrant|Hive Tyrant]]
+- [[Monsters/Killer Insects/Thorn Killer Ant|Thorn Killer Ant]]
+- [[Monsters/Killer Insects/Cavern Needle Wasp|Cavern Needle Wasp]]
+- [[Monsters/Killer Insects/Greater Hornet Lancer|Greater Hornet Lancer]]
+- [[Monsters/Killer Insects/Iron Centipede|Iron Centipede]]
+- [[Monsters/Killer Insects/Ancient Queen's Guard|Ancient Queen's Guard]]
+- [[Monsters/Killer Insects/Venom Bone Weevil|Venom Bone Weevil]]
+- [[Monsters/Killer Insects/Vine Hive Tyrant|Vine Hive Tyrant]]
+- [[Monsters/Killer Insects/Radiant Killer Ant|Radiant Killer Ant]]
+- [[Monsters/Killer Insects/Greater Needle Wasp|Greater Needle Wasp]]
+- [[Monsters/Killer Insects/Zephyr Hornet Lancer|Zephyr Hornet Lancer]]
+- [[Monsters/Killer Insects/Radiant Centipede|Radiant Centipede]]
+- [[Monsters/Killer Insects/Deep Queen's Guard|Deep Queen's Guard]]
+- [[Monsters/Killer Insects/Gale Bone Weevil|Gale Bone Weevil]]
+- [[Monsters/Killer Insects/Greater Hive Tyrant|Greater Hive Tyrant]]
+
+### Kobolds
+- [[Monsters/Kobolds/Kobold Scavenger|Kobold Scavenger]]
+- [[Monsters/Kobolds/Kobold Miner|Kobold Miner]]
+- [[Monsters/Kobolds/Kobold Sneak|Kobold Sneak]]
+- [[Monsters/Kobolds/Kobold Shaman|Kobold Shaman]]
+- [[Monsters/Kobolds/Kobold Trapmaster|Kobold Trapmaster]]
+- [[Monsters/Kobolds/Kobold Packleader|Kobold Packleader]]
+- [[Monsters/Kobolds/Kobold Warlord|Kobold Warlord]]
+- [[Monsters/Kobolds/Kobold Tunnel-Queen|Kobold Tunnel-Queen]]
+- [[Monsters/Kobolds/Kobold Scavenger Veteran|Kobold Scavenger Veteran]]
+- [[Monsters/Kobolds/Ruin Kobold Miner|Ruin Kobold Miner]]
+- [[Monsters/Kobolds/Snow Kobold Sneak|Snow Kobold Sneak]]
+- [[Monsters/Kobolds/Cavern Kobold Shaman|Cavern Kobold Shaman]]
+- [[Monsters/Kobolds/Vesper-Touched Kobold Trapmaster|Vesper-Touched Kobold Trapmaster]]
+- [[Monsters/Kobolds/Vesper-Touched Kobold Packleader|Vesper-Touched Kobold Packleader]]
+- [[Monsters/Kobolds/Kobold Warlord Veteran|Kobold Warlord Veteran]]
+- [[Monsters/Kobolds/Vesper-Touched Kobold Tunnel-Queen|Vesper-Touched Kobold Tunnel-Queen]]
+- [[Monsters/Kobolds/Phantom Kobold Scavenger|Phantom Kobold Scavenger]]
+- [[Monsters/Kobolds/Elite Kobold Miner|Elite Kobold Miner]]
+- [[Monsters/Kobolds/Phantom Kobold Sneak|Phantom Kobold Sneak]]
+- [[Monsters/Kobolds/Frost Kobold Shaman|Frost Kobold Shaman]]
+- [[Monsters/Kobolds/Crag Kobold Trapmaster|Crag Kobold Trapmaster]]
+- [[Monsters/Kobolds/Ancient Kobold Packleader|Ancient Kobold Packleader]]
+- [[Monsters/Kobolds/Shade Kobold Warlord|Shade Kobold Warlord]]
+- [[Monsters/Kobolds/Kobold Tunnel-Queen Veteran|Kobold Tunnel-Queen Veteran]]
+
+### Lycanthropes
+- [[Monsters/Lycanthropes/Werewolf|Werewolf]]
+- [[Monsters/Lycanthropes/Wererat|Wererat]]
+- [[Monsters/Lycanthropes/Werebear|Werebear]]
+- [[Monsters/Lycanthropes/Moon Beast|Moon Beast]]
+- [[Monsters/Lycanthropes/Blood Vesper Alpha|Blood Vesper Alpha]]
+- [[Monsters/Lycanthropes/Skinchanger|Skinchanger]]
+- [[Monsters/Lycanthropes/Fenrir-Blooded Lord|Fenrir-Blooded Lord]]
+- [[Monsters/Lycanthropes/Bog Werewolf|Bog Werewolf]]
+- [[Monsters/Lycanthropes/Elder Wererat|Elder Wererat]]
+- [[Monsters/Lycanthropes/Vesper-Touched Werebear|Vesper-Touched Werebear]]
+- [[Monsters/Lycanthropes/Phantom Moon Beast|Phantom Moon Beast]]
+- [[Monsters/Lycanthropes/Venom Blood Vesper Alpha|Venom Blood Vesper Alpha]]
+- [[Monsters/Lycanthropes/Elder Skinchanger|Elder Skinchanger]]
+- [[Monsters/Lycanthropes/Phantom Fenrir-Blooded Lord|Phantom Fenrir-Blooded Lord]]
+- [[Monsters/Lycanthropes/Grove Werewolf|Grove Werewolf]]
+- [[Monsters/Lycanthropes/Greater Wererat|Greater Wererat]]
+- [[Monsters/Lycanthropes/Phantom Werebear|Phantom Werebear]]
+- [[Monsters/Lycanthropes/Bramble Beast|Bramble Beast]]
+- [[Monsters/Lycanthropes/Ancient Blood Vesper Alpha|Ancient Blood Vesper Alpha]]
+- [[Monsters/Lycanthropes/Blight Skinchanger|Blight Skinchanger]]
+- [[Monsters/Lycanthropes/Thunder Fenrir-Blooded Lord|Thunder Fenrir-Blooded Lord]]
+
+### Minotaurs & Beastmen
+- [[Monsters/Minotaurs & Beastmen/Calf Minotaur|Calf Minotaur]]
+- [[Monsters/Minotaurs & Beastmen/Satyr Reveler|Satyr Reveler]]
+- [[Monsters/Minotaurs & Beastmen/Gnoll Raider|Gnoll Raider]]
+- [[Monsters/Minotaurs & Beastmen/Minotaur|Minotaur]]
+- [[Monsters/Minotaurs & Beastmen/Labyrinth Minotaur|Labyrinth Minotaur]]
+- [[Monsters/Minotaurs & Beastmen/Taurgrim, the Maze King|Taurgrim, the Maze King]]
+- [[Monsters/Minotaurs & Beastmen/Vesper-Touched Calf Minotaur|Vesper-Touched Calf Minotaur]]
+- [[Monsters/Minotaurs & Beastmen/Ash Satyr Reveler|Ash Satyr Reveler]]
+- [[Monsters/Minotaurs & Beastmen/Cavern Gnoll Raider|Cavern Gnoll Raider]]
+- [[Monsters/Minotaurs & Beastmen/Deep Minotaur|Deep Minotaur]]
+- [[Monsters/Minotaurs & Beastmen/Vesper-Touched Labyrinth Minotaur|Vesper-Touched Labyrinth Minotaur]]
+
+### Orcs, Ogres & Giants
+- [[Monsters/Orcs, Ogres & Giants/Orc Grunt|Orc Grunt]]
+- [[Monsters/Orcs, Ogres & Giants/Orc Warrior|Orc Warrior]]
+- [[Monsters/Orcs, Ogres & Giants/Orc Berserker|Orc Berserker]]
+- [[Monsters/Orcs, Ogres & Giants/Ogre|Ogre]]
+- [[Monsters/Orcs, Ogres & Giants/Troll|Troll]]
+- [[Monsters/Orcs, Ogres & Giants/Orc Lord|Orc Lord]]
+- [[Monsters/Orcs, Ogres & Giants/Hill Giant|Hill Giant]]
+- [[Monsters/Orcs, Ogres & Giants/Cyclops|Cyclops]]
+- [[Monsters/Orcs, Ogres & Giants/Frost Giant|Frost Giant]]
+- [[Monsters/Orcs, Ogres & Giants/Fire Giant|Fire Giant]]
+- [[Monsters/Orcs, Ogres & Giants/Orc Disaster|Orc Disaster]]
+- [[Monsters/Orcs, Ogres & Giants/Primeval Titan-Kin|Primeval Titan-Kin]]
+- [[Monsters/Orcs, Ogres & Giants/Titan Remnant|Titan Remnant]]
+- [[Monsters/Orcs, Ogres & Giants/Meadow Orc Grunt|Meadow Orc Grunt]]
+- [[Monsters/Orcs, Ogres & Giants/Vesper-Touched Orc Warrior|Vesper-Touched Orc Warrior]]
+- [[Monsters/Orcs, Ogres & Giants/Meadow Orc Berserker|Meadow Orc Berserker]]
+- [[Monsters/Orcs, Ogres & Giants/Rime Ogre|Rime Ogre]]
+- [[Monsters/Orcs, Ogres & Giants/Cinder Troll|Cinder Troll]]
+- [[Monsters/Orcs, Ogres & Giants/Meadow Orc Lord|Meadow Orc Lord]]
+- [[Monsters/Orcs, Ogres & Giants/Vesper-Touched Hill Giant|Vesper-Touched Hill Giant]]
+- [[Monsters/Orcs, Ogres & Giants/Vesper-Touched Cyclops|Vesper-Touched Cyclops]]
+- [[Monsters/Orcs, Ogres & Giants/Vesper-Touched Frost Giant|Vesper-Touched Frost Giant]]
+- [[Monsters/Orcs, Ogres & Giants/Cinder Giant|Cinder Giant]]
+- [[Monsters/Orcs, Ogres & Giants/Elder Orc Disaster|Elder Orc Disaster]]
+- [[Monsters/Orcs, Ogres & Giants/Elder Primeval Titan-Kin|Elder Primeval Titan-Kin]]
+- [[Monsters/Orcs, Ogres & Giants/Skarn, the Fire Giant Warlord|Skarn, the Fire Giant Warlord]]
+- [[Monsters/Orcs, Ogres & Giants/Grakkus, the Orc Disaster|Grakkus, the Orc Disaster]]
+- [[Monsters/Orcs, Ogres & Giants/Ymgrir, the Frost Sovereign|Ymgrir, the Frost Sovereign]]
+- [[Monsters/Orcs, Ogres & Giants/Zahhar, King of the Divs|Zahhar, King of the Divs]]
+- [[Monsters/Orcs, Ogres & Giants/Ukhu-Tal, Stone Giant of the First Making|Ukhu-Tal, Stone Giant of the First Making]]
+
+### Plants & Fungi
+- [[Monsters/Plants & Fungi/Mandrake|Mandrake]]
+- [[Monsters/Plants & Fungi/Puffcap Mushroom|Puffcap Mushroom]]
+- [[Monsters/Plants & Fungi/Walking Mushroom|Walking Mushroom]]
+- [[Monsters/Plants & Fungi/Thornvine|Thornvine]]
+- [[Monsters/Plants & Fungi/Man-Eater Plant|Man-Eater Plant]]
+- [[Monsters/Plants & Fungi/Treant Sapling|Treant Sapling]]
+- [[Monsters/Plants & Fungi/Spore Lord|Spore Lord]]
+- [[Monsters/Plants & Fungi/Corpse Flower|Corpse Flower]]
+- [[Monsters/Plants & Fungi/Elder Treant|Elder Treant]]
+- [[Monsters/Plants & Fungi/Ancient Treant|Ancient Treant]]
+- [[Monsters/Plants & Fungi/Worldroot Behemoth|Worldroot Behemoth]]
+- [[Monsters/Plants & Fungi/Blighted World Root|Blighted World Root]]
+- [[Monsters/Plants & Fungi/Ancient Mandrake|Ancient Mandrake]]
+- [[Monsters/Plants & Fungi/Frost Puffcap Mushroom|Frost Puffcap Mushroom]]
+- [[Monsters/Plants & Fungi/Phantom Walking Mushroom|Phantom Walking Mushroom]]
+- [[Monsters/Plants & Fungi/Vesper-Touched Thornvine|Vesper-Touched Thornvine]]
+- [[Monsters/Plants & Fungi/Vine Man-Eater Plant|Vine Man-Eater Plant]]
+- [[Monsters/Plants & Fungi/Bog Treant Sapling|Bog Treant Sapling]]
+- [[Monsters/Plants & Fungi/Bog Spore Lord|Bog Spore Lord]]
+- [[Monsters/Plants & Fungi/Blaze Corpse Flower|Blaze Corpse Flower]]
+- [[Monsters/Plants & Fungi/Tide Elder Treant|Tide Elder Treant]]
+- [[Monsters/Plants & Fungi/Bog Ancient Treant|Bog Ancient Treant]]
+- [[Monsters/Plants & Fungi/Thunder Worldroot Behemoth|Thunder Worldroot Behemoth]]
+- [[Monsters/Plants & Fungi/Mycelia, the Spore Lord|Mycelia, the Spore Lord]]
+- [[Monsters/Plants & Fungi/The Briar King, Lord of the Winter Court|The Briar King, Lord of the Winter Court]]
+
+### Reptiles
+- [[Monsters/Reptiles/Swamp Toad|Swamp Toad]]
+- [[Monsters/Reptiles/Giant Lizard|Giant Lizard]]
+- [[Monsters/Reptiles/Lizardman|Lizardman]]
+- [[Monsters/Reptiles/Salamander|Salamander]]
+- [[Monsters/Reptiles/Basilisk|Basilisk]]
+- [[Monsters/Reptiles/Crocodile Wyrm|Crocodile Wyrm]]
+- [[Monsters/Reptiles/Hydra|Hydra]]
+- [[Monsters/Reptiles/Gorgon Wyrm|Gorgon Wyrm]]
+- [[Monsters/Reptiles/Frost Toad|Frost Toad]]
+- [[Monsters/Reptiles/Ancient Giant Lizard|Ancient Giant Lizard]]
+- [[Monsters/Reptiles/Ancient Lizardman|Ancient Lizardman]]
+- [[Monsters/Reptiles/Phantom Salamander|Phantom Salamander]]
+- [[Monsters/Reptiles/Greater Basilisk|Greater Basilisk]]
+- [[Monsters/Reptiles/Gale Crocodile Wyrm|Gale Crocodile Wyrm]]
+- [[Monsters/Reptiles/Frost Hydra|Frost Hydra]]
+- [[Monsters/Reptiles/Elder Gorgon Wyrm|Elder Gorgon Wyrm]]
+- [[Monsters/Reptiles/Xibalbar, the Hydra of the Mire|Xibalbar, the Hydra of the Mire]]
+
+### Sandborne
+- [[Monsters/Sandborne/Sand Skink|Sand Skink]]
+- [[Monsters/Sandborne/Dune Scorpion|Dune Scorpion]]
+- [[Monsters/Sandborne/Glass Wraith|Glass Wraith]]
+- [[Monsters/Sandborne/Sandworm|Sandworm]]
+- [[Monsters/Sandborne/Dunewhale Thalassa|Dunewhale Thalassa]]
+- [[Monsters/Sandborne/Greater Sand Skink|Greater Sand Skink]]
+- [[Monsters/Sandborne/Elder Dune Scorpion|Elder Dune Scorpion]]
+- [[Monsters/Sandborne/Elder Glass Wraith|Elder Glass Wraith]]
+- [[Monsters/Sandborne/Elder Sandworm|Elder Sandworm]]
+- [[Monsters/Sandborne/Glassmaw, Worm of the Endless Dune|Glassmaw, Worm of the Endless Dune]]
+
+### Serpentfolk
+- [[Monsters/Serpentfolk/Lamia|Lamia]]
+- [[Monsters/Serpentfolk/Naga Warrior|Naga Warrior]]
+- [[Monsters/Serpentfolk/Naga Priestess|Naga Priestess]]
+- [[Monsters/Serpentfolk/Serpent Empress|Serpent Empress]]
+- [[Monsters/Serpentfolk/Vine Lamia|Vine Lamia]]
+- [[Monsters/Serpentfolk/Blaze Naga Warrior|Blaze Naga Warrior]]
+- [[Monsters/Serpentfolk/Dune Naga Priestess|Dune Naga Priestess]]
+- [[Monsters/Serpentfolk/Night Serpent Empress|Night Serpent Empress]]
+
+### Shadows
+- [[Monsters/Shadows/Shadow Wisp|Shadow Wisp]]
+- [[Monsters/Shadows/War Shadow|War Shadow]]
+- [[Monsters/Shadows/Shade Hound|Shade Hound]]
+- [[Monsters/Shadows/Shade Knight|Shade Knight]]
+- [[Monsters/Shadows/Mirror Shade|Mirror Shade]]
+- [[Monsters/Shadows/Umbral Reaper|Umbral Reaper]]
+- [[Monsters/Shadows/Night Leviathan|Night Leviathan]]
+- [[Monsters/Shadows/Vesper-Touched Shadow Wisp|Vesper-Touched Shadow Wisp]]
+- [[Monsters/Shadows/Elder War Shadow|Elder War Shadow]]
+- [[Monsters/Shadows/Ancient Shade Hound|Ancient Shade Hound]]
+- [[Monsters/Shadows/Vesper-Touched Shade Knight|Vesper-Touched Shade Knight]]
+- [[Monsters/Shadows/Ancient Mirror Shade|Ancient Mirror Shade]]
+- [[Monsters/Shadows/Greater Umbral Reaper|Greater Umbral Reaper]]
+- [[Monsters/Shadows/Greater Night Leviathan|Greater Night Leviathan]]
+
+### Slimes
+- [[Monsters/Slimes/Blue Slime|Blue Slime]]
+- [[Monsters/Slimes/Green Slime|Green Slime]]
+- [[Monsters/Slimes/Red Slime|Red Slime]]
+- [[Monsters/Slimes/Poison Slime|Poison Slime]]
+- [[Monsters/Slimes/Bubble Slime|Bubble Slime]]
+- [[Monsters/Slimes/Metal Slime|Metal Slime]]
+- [[Monsters/Slimes/Mimic Slime|Mimic Slime]]
+- [[Monsters/Slimes/Frost Slime|Frost Slime]]
+- [[Monsters/Slimes/Cube Slime|Cube Slime]]
+- [[Monsters/Slimes/King Slime|King Slime]]
+- [[Monsters/Slimes/Ember Ooze|Ember Ooze]]
+- [[Monsters/Slimes/Storm Slime|Storm Slime]]
+- [[Monsters/Slimes/Abyss Slime|Abyss Slime]]
+- [[Monsters/Slimes/Prismatic Slime Sovereign|Prismatic Slime Sovereign]]
+- [[Monsters/Slimes/Primordial Ooze|Primordial Ooze]]
+- [[Monsters/Slimes/Meadow Slime|Meadow Slime]]
+- [[Monsters/Slimes/Vesper-Touched Green Slime|Vesper-Touched Green Slime]]
+- [[Monsters/Slimes/Moss Slime|Moss Slime]]
+- [[Monsters/Slimes/Vesper-Touched Poison Slime|Vesper-Touched Poison Slime]]
+- [[Monsters/Slimes/Greater Bubble Slime|Greater Bubble Slime]]
+- [[Monsters/Slimes/Gilded Slime|Gilded Slime]]
+- [[Monsters/Slimes/Bog Mimic Slime|Bog Mimic Slime]]
+- [[Monsters/Slimes/Elder Frost Slime|Elder Frost Slime]]
+- [[Monsters/Slimes/Phantom Cube Slime|Phantom Cube Slime]]
+- [[Monsters/Slimes/Deep King Slime|Deep King Slime]]
+- [[Monsters/Slimes/Ruin Ooze|Ruin Ooze]]
+- [[Monsters/Slimes/Cinder Slime|Cinder Slime]]
+- [[Monsters/Slimes/Ruin Abyss Slime|Ruin Abyss Slime]]
+- [[Monsters/Slimes/Cavern Prismatic Slime Sovereign|Cavern Prismatic Slime Sovereign]]
+- [[Monsters/Slimes/Night Slime|Night Slime]]
+- [[Monsters/Slimes/Gale Slime|Gale Slime]]
+- [[Monsters/Slimes/Vesper-Touched Red Slime|Vesper-Touched Red Slime]]
+- [[Monsters/Slimes/Greater Poison Slime|Greater Poison Slime]]
+- [[Monsters/Slimes/Ash Slime|Ash Slime]]
+- [[Monsters/Slimes/Vesper-Touched Metal Slime|Vesper-Touched Metal Slime]]
+- [[Monsters/Slimes/Sky Mimic Slime|Sky Mimic Slime]]
+- [[Monsters/Slimes/Vesper-Touched Frost Slime|Vesper-Touched Frost Slime]]
+- [[Monsters/Slimes/Glacier Cube Slime|Glacier Cube Slime]]
+- [[Monsters/Slimes/Blight King Slime|Blight King Slime]]
+- [[Monsters/Slimes/Ancient Ember Ooze|Ancient Ember Ooze]]
+- [[Monsters/Slimes/Elder Storm Slime|Elder Storm Slime]]
+- [[Monsters/Slimes/Phantom Abyss Slime|Phantom Abyss Slime]]
+- [[Monsters/Slimes/Iron Prismatic Slime Sovereign|Iron Prismatic Slime Sovereign]]
+
+### The Headless
+- [[Monsters/The Headless/Headless Rider|Headless Rider]]
+- [[Monsters/The Headless/Dullahan|Dullahan]]
+- [[Monsters/The Headless/Pale Herald|Pale Herald]]
+- [[Monsters/The Headless/Vesper-Touched Headless Rider|Vesper-Touched Headless Rider]]
+- [[Monsters/The Headless/Vesper-Touched Dullahan|Vesper-Touched Dullahan]]
+- [[Monsters/The Headless/Phantom Pale Herald|Phantom Pale Herald]]
+
+### Undead
+- [[Monsters/Undead/Zombie|Zombie]]
+- [[Monsters/Undead/Skeleton|Skeleton]]
+- [[Monsters/Undead/Hollow Mourner|Hollow Mourner]]
+- [[Monsters/Undead/Bone Crawler|Bone Crawler]]
+- [[Monsters/Undead/Lantern Leech|Lantern Leech]]
+- [[Monsters/Undead/Ghost|Ghost]]
+- [[Monsters/Undead/Ghoul|Ghoul]]
+- [[Monsters/Undead/Wraith|Wraith]]
+- [[Monsters/Undead/Skeleton Knight|Skeleton Knight]]
+- [[Monsters/Undead/Banshee|Banshee]]
+- [[Monsters/Undead/Death Knight|Death Knight]]
+- [[Monsters/Undead/Vampire|Vampire]]
+- [[Monsters/Undead/Lich|Lich]]
+- [[Monsters/Undead/Vampire Lord|Vampire Lord]]
+- [[Monsters/Undead/Bone Dragon|Bone Dragon]]
+- [[Monsters/Undead/Lich Emperor|Lich Emperor]]
+- [[Monsters/Undead/No-Life King|No-Life King]]
+- [[Monsters/Undead/Vesper-Touched Zombie|Vesper-Touched Zombie]]
+- [[Monsters/Undead/Greater Skeleton|Greater Skeleton]]
+- [[Monsters/Undead/Greater Hollow Mourner|Greater Hollow Mourner]]
+- [[Monsters/Undead/Vesper-Touched Bone Crawler|Vesper-Touched Bone Crawler]]
+- [[Monsters/Undead/Ancient Lantern Leech|Ancient Lantern Leech]]
+- [[Monsters/Undead/Vesper-Touched Ghost|Vesper-Touched Ghost]]
+- [[Monsters/Undead/Vesper-Touched Ghoul|Vesper-Touched Ghoul]]
+- [[Monsters/Undead/Ash Wraith|Ash Wraith]]
+- [[Monsters/Undead/Alley Skeleton Knight|Alley Skeleton Knight]]
+- [[Monsters/Undead/Tide Banshee|Tide Banshee]]
+- [[Monsters/Undead/Bog Death Knight|Bog Death Knight]]
+- [[Monsters/Undead/Elder Vampire|Elder Vampire]]
+- [[Monsters/Undead/Bog Lich|Bog Lich]]
+- [[Monsters/Undead/Ash Vampire Lord|Ash Vampire Lord]]
+- [[Monsters/Undead/Dawn Bone Dragon|Dawn Bone Dragon]]
+- [[Monsters/Undead/Bog Lich Emperor|Bog Lich Emperor]]
+- [[Monsters/Undead/Dawn Zombie|Dawn Zombie]]
+- [[Monsters/Undead/Elder Skeleton|Elder Skeleton]]
+- [[Monsters/Undead/Vesper-Touched Hollow Mourner|Vesper-Touched Hollow Mourner]]
+- [[Monsters/Undead/Elder Bone Crawler|Elder Bone Crawler]]
+- [[Monsters/Undead/Greater Lantern Leech|Greater Lantern Leech]]
+- [[Monsters/Undead/Blight Ghost|Blight Ghost]]
+- [[Monsters/Undead/Blight Ghoul|Blight Ghoul]]
+- [[Monsters/Undead/Vesper-Touched Wraith|Vesper-Touched Wraith]]
+- [[Monsters/Undead/Dune Skeleton Knight|Dune Skeleton Knight]]
+- [[Monsters/Undead/Gilded Banshee|Gilded Banshee]]
+- [[Monsters/Undead/Phantom Death Knight|Phantom Death Knight]]
+- [[Monsters/Undead/Rot Vampire|Rot Vampire]]
+- [[Monsters/Undead/Ancient Lich|Ancient Lich]]
+- [[Monsters/Undead/Rot Vampire Lord|Rot Vampire Lord]]
+- [[Monsters/Undead/Elder Bone Dragon|Elder Bone Dragon]]
+- [[Monsters/Undead/Ashgrave, the Oathless Baron|Ashgrave, the Oathless Baron]]
+- [[Monsters/Undead/The Hollow Abbot, Choir of Silence|The Hollow Abbot, Choir of Silence]]
+- [[Monsters/Undead/The Mad Magician of Aurumdeep, Sinker of Kingdoms|The Mad Magician of Aurumdeep, Sinker of Kingdoms]]
+
+### Vesperites (Moon Raiders)
+- [[Monsters/Vesperites (Moon Raiders)/Vesper Shard-Thrall|Vesper Shard-Thrall]]
+- [[Monsters/Vesperites (Moon Raiders)/Moon Archer|Moon Archer]]
+- [[Monsters/Vesperites (Moon Raiders)/Crimson Choir Seraph|Crimson Choir Seraph]]
+- [[Monsters/Vesperites (Moon Raiders)/Vesper Harvester|Vesper Harvester]]
+- [[Monsters/Vesperites (Moon Raiders)/Ruin Vesper Shard-Thrall|Ruin Vesper Shard-Thrall]]
+- [[Monsters/Vesperites (Moon Raiders)/Vesper-Touched Moon Archer|Vesper-Touched Moon Archer]]
+- [[Monsters/Vesperites (Moon Raiders)/Phantom Crimson Choir Seraph|Phantom Crimson Choir Seraph]]
+- [[Monsters/Vesperites (Moon Raiders)/Ancient Vesper Harvester|Ancient Vesper Harvester]]
+- [[Monsters/Vesperites (Moon Raiders)/Ilyanthe, the Moon Harvester|Ilyanthe, the Moon Harvester]]
+
+### Yokai-Inspired Spirits
+- [[Monsters/Yokai-Inspired Spirits/Umbrella Spirit|Umbrella Spirit]]
+- [[Monsters/Yokai-Inspired Spirits/Lantern Ghost|Lantern Ghost]]
+- [[Monsters/Yokai-Inspired Spirits/River Imp|River Imp]]
+- [[Monsters/Yokai-Inspired Spirits/Long-Neck Lady|Long-Neck Lady]]
+- [[Monsters/Yokai-Inspired Spirits/Fox Spirit|Fox Spirit]]
+- [[Monsters/Yokai-Inspired Spirits/Tengu|Tengu]]
+- [[Monsters/Yokai-Inspired Spirits/Earth Weaver|Earth Weaver]]
+- [[Monsters/Yokai-Inspired Spirits/Oni|Oni]]
+- [[Monsters/Yokai-Inspired Spirits/Hunger Colossus|Hunger Colossus]]
+- [[Monsters/Yokai-Inspired Spirits/Great Tengu King|Great Tengu King]]
+- [[Monsters/Yokai-Inspired Spirits/Nine-Tailed Vixen Queen|Nine-Tailed Vixen Queen]]
+- [[Monsters/Yokai-Inspired Spirits/Vesper-Touched Umbrella Spirit|Vesper-Touched Umbrella Spirit]]
+- [[Monsters/Yokai-Inspired Spirits/Phantom Lantern Ghost|Phantom Lantern Ghost]]
+- [[Monsters/Yokai-Inspired Spirits/Vesper-Touched River Imp|Vesper-Touched River Imp]]
+- [[Monsters/Yokai-Inspired Spirits/Vesper-Touched Long-Neck Lady|Vesper-Touched Long-Neck Lady]]
+- [[Monsters/Yokai-Inspired Spirits/Greater Fox Spirit|Greater Fox Spirit]]
+- [[Monsters/Yokai-Inspired Spirits/Vesper-Touched Tengu|Vesper-Touched Tengu]]
+- [[Monsters/Yokai-Inspired Spirits/Ancient Earth Weaver|Ancient Earth Weaver]]
+- [[Monsters/Yokai-Inspired Spirits/Vesper-Touched Oni|Vesper-Touched Oni]]
+- [[Monsters/Yokai-Inspired Spirits/Rain Hunger Colossus|Rain Hunger Colossus]]
+- [[Monsters/Yokai-Inspired Spirits/Ruin Great Tengu King|Ruin Great Tengu King]]
+- [[Monsters/Yokai-Inspired Spirits/Phantom Nine-Tailed Vixen Queen|Phantom Nine-Tailed Vixen Queen]]
+- [[Monsters/Yokai-Inspired Spirits/Kurogane, the Oni Warlord|Kurogane, the Oni Warlord]]
+- [[Monsters/Yokai-Inspired Spirits/The Hollow Bride, Matriarch of the Long Necks|The Hollow Bride, Matriarch of the Long Necks]]
+- [[Monsters/Yokai-Inspired Spirits/Wuxiang, the Hunger Colossus|Wuxiang, the Hunger Colossus]]
+
+## Population atlas (6754 named forms)
+Every population record is included in the complete register on its species note and its region note. Use Obsidian search for a population ID, local name, appearance, rank, level, size or spawn window; follow the linked species and region to see the broader ecology.
 
 ## Tyrants
 - [[Monsters/Goblinoids/Grukk, Goblin Chief of Hollowpine|Grukk, Goblin Chief of Hollowpine]] ([[Regions/Whisperwood|Whisperwood]])
@@ -251,6 +1030,112 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[NPCs/Corwin Fiddle|Corwin Fiddle]]
 - [[NPCs/Hesk Molloway|Hesk Molloway]]
 - [[NPCs/Wandering Merchant Ottoline|Wandering Merchant Ottoline]]
+
+## Clans and peoples (87)
+- [[Clans/The Clockborn|The Clockborn]] — AI Clan
+- [[Clans/The Cog-Touched|The Cog-Touched]] — AI Infected Clan
+- [[Clans/The Vanari|The Vanari]] — Ape Clan
+- [[Clans/The Heavenfolk|The Heavenfolk]] — Angel Clan
+- [[Clans/The Bogkin|The Bogkin]] — Amphibian Clan
+- [[Clans/The Sun-Feathered|The Sun-Feathered]] — Aztec Clan
+- [[Clans/The Sett-folk|The Sett-folk]] — Badger Clan
+- [[Clans/The Tusk Companies|The Tusk Companies]] — Boar Clan
+- [[Clans/The Hoofbound|The Hoofbound]] — Centaur Clan
+- [[Clans/The Nightwings|The Nightwings]] — Chiroptera Clan
+- [[Clans/The Mangrove Jaws|The Mangrove Jaws]] — Crocodile Clan
+- [[Clans/The Shellguard|The Shellguard]] — Crustacean Clan
+- [[Clans/The Glasskin|The Glasskin]] — Crystalian / diamond clan
+- [[Clans/The One-Eyed Smiths|The One-Eyed Smiths]] — Cyclops clan
+- [[Clans/The Ashborn|The Ashborn]] — Demon Clan
+- [[Clans/The Scaleborn|The Scaleborn]] — Dragonkin Clan
+- [[Clans/The Wyvern Oath|The Wyvern Oath]] — Dragon/wyvern Rider Clan
+- [[Clans/The Hold-clans|The Hold-clans]] — Dwarf Clan
+- [[Clans/The Thunder-Eyries|The Thunder-Eyries]] — Eagle clan
+- [[Clans/The Well-Keepers|The Well-Keepers]] — Egyptian Clan
+- [[Clans/The Tuskers|The Tuskers]] — Elephant Clan
+- [[Clans/The Antlered Court|The Antlered Court]] — Elk-kin/Antelopion Clan
+- [[Clans/The Leafsworn|The Leafsworn]] — Elven Clan
+- [[Clans/The Shogun's Houses|The Shogun's Houses]] — Emperor Clan
+- [[Clans/The Starbodied|The Starbodied]] — Ethereal clan
+- [[Clans/The Wingborn|The Wingborn]] — Fairy Clan
+- [[Clans/The Sun-Hawks|The Sun-Hawks]] — Falcon/ Hawk Clan
+- [[Clans/The Rootwalkers|The Rootwalkers]] — Forest Clan
+- [[Clans/The Longears|The Longears]] — Hare Clan
+- [[Clans/The Hill-Kings|The Hill-Kings]] — Giant Clan
+- [[Clans/The Six Clans of Hollowpine|The Six Clans of Hollowpine]] — Goblin Clan
+- [[Clans/The Gilded|The Gilded]] — Golden Clan
+- [[Clans/The Silverbacks|The Silverbacks]] — Gorilla Clan
+- [[Clans/The Shieldwall|The Shieldwall]] — Greecian Clan
+- [[Clans/The Ursa|The Ursa]] — Grizzly Bear Clan
+- [[Clans/The River-Lords|The River-Lords]] — Hippo Clan
+- [[Clans/The Hearthbound|The Hearthbound]] — Human clan
+- [[Clans/The Laughing Packs|The Laughing Packs]] — Hyena Clan
+- [[Clans/The Spore-Touched|The Spore-Touched]] — Infected Clan
+- [[Clans/The Carapace|The Carapace]] — Insecta Clan
+- [[Clans/The Sable Guides|The Sable Guides]] — Jackal Clan
+- [[Clans/The Jaguar Lodge|The Jaguar Lodge]] — Leopard/Cheetah Clan
+- [[Clans/The Pridelands|The Pridelands]] — Lion Clan
+- [[Clans/The Scaled Lodges|The Scaled Lodges]] — Lizard Clan
+- [[Clans/The Raywings|The Raywings]] — Manta clan
+- [[Clans/The Drifting|The Drifting]] — Medusae Clan
+- [[Clans/The Lagoon Folk|The Lagoon Folk]] — Merfolk Clan
+- [[Clans/The Lanternwings|The Lanternwings]] — Moth Clan
+- [[Clans/The Hundred-Stair Monks|The Hundred-Stair Monks]] — Monk Clan
+- [[Clans/The Undercity Whiskers|The Undercity Whiskers]] — Mouse/Rat Clan
+- [[Clans/The Capfolk|The Capfolk]] — Mushroom clan
+- [[Clans/The Inkwardens|The Inkwardens]] — Octopoda Clan
+- [[Clans/The Hill-Orcs|The Hill-Orcs]] — Orc Clan
+- [[Clans/The Orca Lords|The Orca Lords]] — Orcinus Clan
+- [[Clans/The Canal Otters|The Canal Otters]] — Otter Clan
+- [[Clans/The Stillhorns|The Stillhorns]] — Oxen Clan
+- [[Clans/The Scholar Owls|The Scholar Owls]] — Owl Clan
+- [[Clans/The Brew-Bears|The Brew-Bears]] — Panda Clan
+- [[Clans/The Plateback|The Plateback]] — Pangolin Clan
+- [[Clans/The Velvet Knives|The Velvet Knives]] — Panthar Clan
+- [[Clans/The Floe-Knights|The Floe-Knights]] — Penguin Clan
+- [[Clans/The Free Captains|The Free Captains]] — Pirate Clan
+- [[Clans/The Iceclaws|The Iceclaws]] — Polar Bear Clan
+- [[Clans/The Plague-Beaks|The Plague-Beaks]] — Raven/Crow Clan
+- [[Clans/The Ember-tails|The Ember-tails]] — Red Panda Clan
+- [[Clans/The Hornwall|The Hornwall]] — Rhino Clan
+- [[Clans/The Iron Legions|The Iron Legions]] — Romanian Clan
+- [[Clans/The Pipers|The Pipers]] — Satyr/Faun Clan
+- [[Clans/The Sand-Stingers|The Sand-Stingers]] — Scorpiones Clan
+- [[Clans/The Selkies|The Selkies]] — Seal CLAN
+- [[Clans/The Hollow Ones|The Hollow Ones]] — Shade Clan
+- [[Clans/The Reef-Sharks|The Reef-Sharks]] — Shark Clan
+- [[Clans/The Coilborn|The Coilborn]] — Snake Clan
+- [[Clans/The Shellmoot|The Shellmoot]] — Snail Clan
+- [[Clans/The Slow Sages|The Slow Sages]] — Sloth Clan
+- [[Clans/The Ibis Scribes|The Ibis Scribes]] — Stork/ibis Clan
+- [[Clans/The Tigerguard|The Tigerguard]] — Tiger Clan
+- [[Clans/The Moss-Trolls|The Moss-Trolls]] — Troll Clan
+- [[Clans/The Shell-Sages|The Shell-Sages]] — Turtle Clan
+- [[Clans/The Unburied Court|The Unburied Court]] — Undead Egyptian Clan
+- [[Clans/The Barrow-Host|The Barrow-Host]] — Undead Skeleton Clan
+- [[Clans/The Drowned Crews|The Drowned Crews]] — Undead skeleton pirate Clan
+- [[Clans/The Red Barons|The Red Barons]] — Vampire Clan
+- [[Clans/The Whale-Singers|The Whale-Singers]] — Whale Clan
+- [[Clans/The Greyhowl Clans|The Greyhowl Clans]] — Wolf Clan
+- [[Clans/The Snowmanes|The Snowmanes]] — Yeti Clan
+- [[Clans/The Warhorse Kin|The Warhorse Kin]] — Horse Clan
+
+## Local fauna (15)
+- [[Fauna/Wart Bird|Wart Bird]] — Flyers
+- [[Fauna/Lantern Moth-Hawk|Lantern Moth-Hawk]] — Flyers
+- [[Fauna/Feather Serpent|Feather Serpent]] — Flyers
+- [[Fauna/Moorwah|Moorwah]] — Herbivore
+- [[Fauna/Shulon|Shulon]] — Herbivore
+- [[Fauna/Stone-Horned Ox|Stone-Horned Ox]] — Herbivore
+- [[Fauna/Saurian Longneck|Saurian Longneck]] — Herbivore
+- [[Fauna/Velvet Bee|Velvet Bee]] — Insect
+- [[Fauna/Plated Crawler|Plated Crawler]] — Insect
+- [[Fauna/Thorro|Thorro]] — Predator
+- [[Fauna/Ghost Fox|Ghost Fox]] — Predator
+- [[Fauna/Tingra|Tingra]] — Predator
+- [[Fauna/Whale-Roach|Whale-Roach]] — Water Base
+- [[Fauna/Reef Dragon|Reef Dragon]] — Water Base
+- [[Fauna/Turtle Drake|Turtle Drake]] — Water Base
 
 ## Quests (17)
 - [[Quests/Rabbit Season|Rabbit Season]] (F, Subjugation)

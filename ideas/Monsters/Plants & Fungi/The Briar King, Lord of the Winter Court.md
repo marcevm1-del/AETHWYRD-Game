@@ -21,6 +21,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 37096 · 953 · 686 · 686 · 686 · 100 |
 | XP · gold | 261258 · 2293 |
 | Ring | 7 |
+| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
 | Habitats | [[Regions/Everdusk\|Everdusk]] |
 | Tyrant | Yes |
 | Genre | Fairy-tale Forest |
@@ -28,17 +29,37 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 **Field note:** Weak to Fire. Leaves you alone unless attacked.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Branch Sweep | melee | 1.1 | 0 s | None | blue |
-| Root Slam | aoe | 1.5 | 9 s | None | red |
-| Regrow | heal | 0 | 20 s | None | none |
-| Root Bind | grab | 1 | 11 s | None | gold |
-| Frost Breath | magic | 1.5 | 10 s | Ice | red |
+- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
+- **Dimensions:** 4 m high × 1.6 m long × 4.8 m wide; prefab scale 2.
+- **Physics:** 1478.4 kg, gravity ×1.05, poise 362, knockback resistance 1, death style `wilt_collapse`.
+- **Navigation:** speed 0.57 m/s, turn 90°/s, stopping distance 0.88 m.
+- **Attack count:** 5; **signature:** a crown of frozen thorns and a cloak of dead roses.
 
-## Loot (`loot_plant_s`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Branch Sweep\|Branch Sweep]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Root Slam\|Root Slam]] | aoe | 1.5 | 9 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Regrow\|Regrow]] | heal | 0 | 20 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Root Bind\|Root Bind]] | grab | 1 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Frost Breath\|Frost Breath]] | magic | 1.5 | 10 s | Ice | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+The Briar King, Lord of the Winter Court is a **menacing plant** encountered at S rank, around level 188. Its documented behaviour is *Passive* and its AI pattern is *passive_wander*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Fire**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a crown of frozen thorns and a cloak of dead roses. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Everdusk|Everdusk]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_plant_walker`, animation set `anim_plant_walker`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Plants & Fungi S|loot_plant_s]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,20 @@ tags: [monster, plants-fungi, tyrant, unique]
 | [[Items/Spore Cap\|Spore Cap]] | 15% | 1–1 |
 | [[Items/S-Rank Monster Core\|S-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Everdusk\|Everdusk]] | 1 | S | 188–188 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06750` | The Briar King, Lord of the Winter Court | [[Regions/Everdusk\|Everdusk]] | Unique | S | 188 | 4 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

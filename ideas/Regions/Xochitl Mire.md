@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | reptile · besieged |
 | Settlements | Xochitl river-cities |
 
+## Siege encounter plan
+
+Faction **reptile**, C–B band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 4 × [[Monsters/Reptiles/Ancient Giant Lizard|Ancient Giant Lizard]] (D), 2 × [[Monsters/Reptiles/Lizardman|Lizardman]] (D)
+
+- **Wave 2:** 5 × [[Monsters/Reptiles/Salamander|Salamander]] (D+), 3 × [[Monsters/Reptiles/Ancient Lizardman|Ancient Lizardman]] (C)
+
+- **Wave 3:** 6 × [[Monsters/Reptiles/Crocodile Wyrm|Crocodile Wyrm]] (C+), 4 × [[Monsters/Reptiles/Hydra|Hydra]] (B+); lieutenant: [[Monsters/Reptiles/Ancient Lizardman|Ancient Lizardman]]
+
 > **The Flower Rivers.** River-cities of reed and stone rise above a jungle swamp, linked by canoe-roads and flower markets. Xibalbar, the hydra of the mire, grows back every head it loses.
 >
 > *The old river-kings fed the swamp so that it would not feed on them. The tradition lapsed.*
@@ -75,15 +85,19 @@ Flowers floating on dark water; drums from the ball-courts; chocolate and chilli
 - A great ball-game between two cities is threatened by the hydra, and the players want an escort.
 - The astronomers have seen something in the stars that they say explains why Xibalbar woke.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Clans
 
-- **The Sun-Feathered** (Aztec Clan, led by Speaker Itzcali of the Eagle Lodge): The warrior orders of the river-cities: Jaguar, Eagle and Serpent lodges who play the great ball-games and guard the canoe-roads. Bravery is measured in captives taken alive, not kills.
-- **The Jaguar Lodge** (Leopard/Cheetah Clan, led by War-Captain Balam Nightclaw): The Jaguar lodge of the river-cities' warrior orders, night-hunters on the canoe-roads.
-- **The Scaled Lodges** (Lizard Clan, led by Trapper Ssekhet Greenhide): Jungle scouts and trappers who know the swamp's paths better than anyone.
+- [[Clans/The Sun-Feathered|The Sun-Feathered]] (Aztec Clan, led by Speaker Itzcali of the Eagle Lodge): The warrior orders of the river-cities: Jaguar, Eagle and Serpent lodges who play the great ball-games and guard the canoe-roads. Bravery is measured in captives taken alive, not kills.
+- [[Clans/The Jaguar Lodge|The Jaguar Lodge]] (Leopard/Cheetah Clan, led by War-Captain Balam Nightclaw): The Jaguar lodge of the river-cities' warrior orders, night-hunters on the canoe-roads.
+- [[Clans/The Scaled Lodges|The Scaled Lodges]] (Lizard Clan, led by Trapper Ssekhet Greenhide): Jungle scouts and trappers who know the swamp's paths better than anyone.
 
 ## Fauna
 
-- **Feather Serpent** (Flyers): A winged serpent of the river-cities, sacred to the Eagle lodge.
+- [[Fauna/Feather Serpent|Feather Serpent]] (Flyers): A winged serpent of the river-cities, sacred to the Eagle lodge.
 
 ## Monsters (26)
 
@@ -115,3 +129,106 @@ Flowers floating on dark water; drums from the ball-courts; chocolate and chilli
 | [[Monsters/Undead/Bog Death Knight\|Bog Death Knight]] | [[Families/Undead\|Undead]] | B+ | 120 |
 | [[Monsters/Plants & Fungi/Blaze Corpse Flower\|Blaze Corpse Flower]] | [[Families/Plants & Fungi\|Plants & Fungi]] | B+ | 120 |
 | [[Monsters/Reptiles/Xibalbar, the Hydra of the Mire\|Xibalbar, the Hydra of the Mire]] | [[Families/Reptiles\|Reptiles]] | B+ | 120 |
+
+## Population and spawn patterns
+
+The data records **88 named population forms** across **26 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Night (38), Day & Night (41), Day (8), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00543` | Xochitl Mire Wererat Runt | [[Monsters/Lycanthropes/Wererat\|Wererat]] | Runt | E | 26 | 1.05 m | Night | Like a typical Wererat, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_00552` | Xochitl Mire Wererat | [[Monsters/Lycanthropes/Wererat\|Wererat]] | Adult | D- | 40 | 1.5 m | Night | A typical adult Wererat of this region, with mud-slick, algae-streaked skin. |
+| `pop_00652` | Xochitl Mire Venom Spider Alpha | [[Monsters/Insects & Arachnids/Venom Spider\|Venom Spider]] | Alpha | C- | 65 | 1.75 m | Day & Night | Like a typical Venom Spider, but larger and scarred, and others of its kind follow it, with vivid tropical markings. |
+| `pop_00655` | Xochitl Mire Venom Spider Albino | [[Monsters/Insects & Arachnids/Venom Spider\|Venom Spider]] | Albino | D+ | 56 | 1.4 m | Day & Night | Like a typical Venom Spider, but a rare pale form with white skin or fur and red eyes. |
+| `pop_00656` | Xochitl Mire Venom Spider | [[Monsters/Insects & Arachnids/Venom Spider\|Venom Spider]] | Adult | D | 48 | 1.4 m | Day & Night | A typical adult Venom Spider of this region, with vivid tropical markings. |
+| `pop_00753` | Xochitl Mire Hornet Lancer Juvenile | [[Monsters/Killer Insects/Hornet Lancer\|Hornet Lancer]] | Juvenile | D- | 40 | 1.02 m | Day & Night | Like a typical Hornet Lancer, but young, with brighter colors and unworn features, with vivid tropical markings. |
+| `pop_00755` | Xochitl Mire Hornet Lancer Runt | [[Monsters/Killer Insects/Hornet Lancer\|Hornet Lancer]] | Runt | E+ | 32 | 0.84 m | Day & Night | Like a typical Hornet Lancer, but smaller and scrappier than usual, with vivid tropical markings. |
+| `pop_00759` | Xochitl Mire Hornet Lancer | [[Monsters/Killer Insects/Hornet Lancer\|Hornet Lancer]] | Adult | D | 48 | 1.2 m | Day & Night | A typical adult Hornet Lancer of this region, with vivid tropical markings. |
+| `pop_00761` | Xochitl Mire Hornet Lancer Alpha | [[Monsters/Killer Insects/Hornet Lancer\|Hornet Lancer]] | Alpha | C- | 65 | 1.5 m | Day & Night | Like a typical Hornet Lancer, but larger and scarred, and others of its kind follow it, with vivid tropical markings. |
+| `pop_00895` | Xochitl Mire Skeleton Knight Runt | [[Monsters/Undead/Skeleton Knight\|Skeleton Knight]] | Runt | D- | 40 | 1.4 m | Night | Like a typical Skeleton Knight, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_00897` | Xochitl Mire Skeleton Knight Juvenile | [[Monsters/Undead/Skeleton Knight\|Skeleton Knight]] | Juvenile | D | 48 | 1.7 m | Night | Like a typical Skeleton Knight, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_00899` | Xochitl Mire Skeleton Knight Albino | [[Monsters/Undead/Skeleton Knight\|Skeleton Knight]] | Albino | C- | 65 | 2 m | Night | Like a typical Skeleton Knight, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01267` | Xochitl Mire Lizardman Juvenile | [[Monsters/Reptiles/Lizardman\|Lizardman]] | Juvenile | D- | 40 | 1.7 m | Day & Night | Like a typical Lizardman, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_01272` | Xochitl Mire Lizardman | [[Monsters/Reptiles/Lizardman\|Lizardman]] | Adult | D | 48 | 2 m | Day & Night | A typical adult Lizardman of this region, with mud-slick, algae-streaked skin. |
+| `pop_01275` | Xochitl Mire Salamander Albino | [[Monsters/Reptiles/Salamander\|Salamander]] | Albino | C- | 65 | 1.6 m | Day & Night | Like a typical Salamander, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01277` | Xochitl Mire Salamander Juvenile | [[Monsters/Reptiles/Salamander\|Salamander]] | Juvenile | D | 48 | 1.36 m | Day & Night | Like a typical Salamander, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_01280` | Xochitl Mire Salamander Elderborn | [[Monsters/Reptiles/Salamander\|Salamander]] | Elderborn | C+ | 86 | 2.16 m | Day & Night | Like a typical Salamander, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_01285` | Xochitl Mire Salamander Runt | [[Monsters/Reptiles/Salamander\|Salamander]] | Runt | D- | 40 | 1.12 m | Day & Night | Like a typical Salamander, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_01297` | Xochitl Mire Crocodile Wyrm Alpha | [[Monsters/Reptiles/Crocodile Wyrm\|Crocodile Wyrm]] | Alpha | B | 108 | 8.75 m | Day & Night | Like a typical Crocodile Wyrm, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_01300` | Xochitl Mire Crocodile Wyrm | [[Monsters/Reptiles/Crocodile Wyrm\|Crocodile Wyrm]] | Adult | C+ | 86 | 7 m | Day & Night | A typical adult Crocodile Wyrm of this region, with mud-slick, algae-streaked skin. |
+| `pop_01307` | Xochitl Mire Crocodile Wyrm Albino | [[Monsters/Reptiles/Crocodile Wyrm\|Crocodile Wyrm]] | Albino | B- | 96 | 7 m | Day & Night | Like a typical Crocodile Wyrm, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01316` | Xochitl Mire Hydra Alpha | [[Monsters/Reptiles/Hydra\|Hydra]] | Alpha | A | 146 | 11.25 m | Day & Night | Like a typical Hydra, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_01738` | Xochitl Mire Man-Eater Plant Alpha | [[Monsters/Plants & Fungi/Man-Eater Plant\|Man-Eater Plant]] | Alpha | C- | 65 | 3.13 m | Day & Night | Like a typical Man-Eater Plant, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_01740` | Xochitl Mire Man-Eater Plant Elderborn | [[Monsters/Plants & Fungi/Man-Eater Plant\|Man-Eater Plant]] | Elderborn | C | 76 | 3.38 m | Day & Night | Like a typical Man-Eater Plant, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_01744` | Xochitl Mire Man-Eater Plant | [[Monsters/Plants & Fungi/Man-Eater Plant\|Man-Eater Plant]] | Adult | D | 48 | 2.5 m | Day & Night | A typical adult Man-Eater Plant of this region, with mud-slick, algae-streaked skin. |
+| `pop_01749` | Xochitl Mire Treant Sapling Alpha | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | Alpha | C- | 65 | 2.5 m | Day | Like a typical Treant Sapling, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_01751` | Xochitl Mire Treant Sapling Albino | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | Albino | D+ | 56 | 2 m | Day | Like a typical Treant Sapling, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01753` | Xochitl Mire Treant Sapling Scarred | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | Scarred | D+ | 56 | 2.2 m | Day | Like a typical Treant Sapling, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_01755` | Xochitl Mire Treant Sapling Elderborn | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | Elderborn | C | 76 | 2.7 m | Day | Like a typical Treant Sapling, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_01756` | Xochitl Mire Treant Sapling Juvenile | [[Monsters/Plants & Fungi/Treant Sapling\|Treant Sapling]] | Juvenile | D- | 40 | 1.7 m | Day | Like a typical Treant Sapling, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_01760` | Xochitl Mire Spore Lord Albino | [[Monsters/Plants & Fungi/Spore Lord\|Spore Lord]] | Albino | C+ | 86 | 3 m | Night | Like a typical Spore Lord, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01761` | Xochitl Mire Spore Lord Elderborn | [[Monsters/Plants & Fungi/Spore Lord\|Spore Lord]] | Elderborn | B | 108 | 4.05 m | Night | Like a typical Spore Lord, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_01763` | Xochitl Mire Spore Lord Scarred | [[Monsters/Plants & Fungi/Spore Lord\|Spore Lord]] | Scarred | C+ | 86 | 3.3 m | Night | Like a typical Spore Lord, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_01765` | Xochitl Mire Spore Lord Alpha | [[Monsters/Plants & Fungi/Spore Lord\|Spore Lord]] | Alpha | B- | 96 | 3.75 m | Night | Like a typical Spore Lord, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_02242` | Xochitl Mire Lamia Albino | [[Monsters/Serpentfolk/Lamia\|Lamia]] | Albino | C+ | 86 | 3.5 m | Day & Night | Like a typical Lamia, but a rare pale form with white skin or fur and red eyes. |
+| `pop_02247` | Xochitl Mire Lamia Elderborn | [[Monsters/Serpentfolk/Lamia\|Lamia]] | Elderborn | B | 108 | 4.73 m | Day & Night | Like a typical Lamia, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_02250` | Xochitl Mire Lamia | [[Monsters/Serpentfolk/Lamia\|Lamia]] | Adult | C | 76 | 3.5 m | Day & Night | A typical adult Lamia of this region, with mud-slick, algae-streaked skin. |
+| `pop_02252` | Xochitl Mire Naga Warrior Alpha | [[Monsters/Serpentfolk/Naga Warrior\|Naga Warrior]] | Alpha | B | 108 | 5 m | Day & Night | Like a typical Naga Warrior, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_02254` | Xochitl Mire Naga Warrior | [[Monsters/Serpentfolk/Naga Warrior\|Naga Warrior]] | Adult | C+ | 86 | 4 m | Day & Night | A typical adult Naga Warrior of this region, with mud-slick, algae-streaked skin. |
+| `pop_02257` | Xochitl Mire Naga Warrior Elderborn | [[Monsters/Serpentfolk/Naga Warrior\|Naga Warrior]] | Elderborn | B+ | 120 | 5.4 m | Day & Night | Like a typical Naga Warrior, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_02976` | Xochitl Mire Bog Mimic Slime Runt | [[Monsters/Slimes/Bog Mimic Slime\|Bog Mimic Slime]] | Runt | D- | 40 | 0.7 m | Night | Like a typical Bog Mimic Slime, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_02977` | Xochitl Mire Bog Mimic Slime Scarred | [[Monsters/Slimes/Bog Mimic Slime\|Bog Mimic Slime]] | Scarred | C- | 65 | 1.1 m | Night | Like a typical Bog Mimic Slime, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_02981` | Xochitl Mire Bog Mimic Slime Albino | [[Monsters/Slimes/Bog Mimic Slime\|Bog Mimic Slime]] | Albino | C- | 65 | 1 m | Night | Like a typical Bog Mimic Slime, but a rare pale form with white skin or fur and red eyes. |
+| `pop_02982` | Xochitl Mire Bog Mimic Slime Alpha | [[Monsters/Slimes/Bog Mimic Slime\|Bog Mimic Slime]] | Alpha | C | 76 | 1.25 m | Night | Like a typical Bog Mimic Slime, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_03433` | Xochitl Mire Bog Werewolf Albino | [[Monsters/Lycanthropes/Bog Werewolf\|Bog Werewolf]] | Albino | C- | 65 | 2.2 m | Night | Like a typical Bog Werewolf, but a rare pale form with white skin or fur and red eyes. |
+| `pop_03435` | Xochitl Mire Bog Werewolf Juvenile | [[Monsters/Lycanthropes/Bog Werewolf\|Bog Werewolf]] | Juvenile | D | 48 | 1.87 m | Night | Like a typical Bog Werewolf, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_03440` | Xochitl Mire Bog Werewolf Scarred | [[Monsters/Lycanthropes/Bog Werewolf\|Bog Werewolf]] | Scarred | C- | 65 | 2.42 m | Night | Like a typical Bog Werewolf, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_03476` | Xochitl Mire Venom Blood Vesper Alpha Alpha | [[Monsters/Lycanthropes/Venom Blood Vesper Alpha\|Venom Blood Vesper Alpha]] | Alpha | A | 146 | 4 m | Night | Like a typical Venom Blood Vesper Alpha, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_03479` | Xochitl Mire Venom Blood Vesper Alpha Elderborn | [[Monsters/Lycanthropes/Venom Blood Vesper Alpha\|Venom Blood Vesper Alpha]] | Elderborn | A+ | 159 | 4.32 m | Night | Like a typical Venom Blood Vesper Alpha, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_03481` | Xochitl Mire Venom Blood Vesper Alpha Albino | [[Monsters/Lycanthropes/Venom Blood Vesper Alpha\|Venom Blood Vesper Alpha]] | Albino | A- | 132 | 3.2 m | Night | Like a typical Venom Blood Vesper Alpha, but a rare pale form with white skin or fur and red eyes. |
+| `pop_03482` | Xochitl Mire Venom Blood Vesper Alpha | [[Monsters/Lycanthropes/Venom Blood Vesper Alpha\|Venom Blood Vesper Alpha]] | Adult | B+ | 120 | 3.2 m | Night | A typical adult Venom Blood Vesper Alpha of this region, with mud-slick, algae-streaked skin. |
+| `pop_03483` | Xochitl Mire Venom Blood Vesper Alpha Juvenile | [[Monsters/Lycanthropes/Venom Blood Vesper Alpha\|Venom Blood Vesper Alpha]] | Juvenile | B | 108 | 2.72 m | Night | Like a typical Venom Blood Vesper Alpha, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_03824` | Xochitl Mire Bog Death Knight Runt | [[Monsters/Undead/Bog Death Knight\|Bog Death Knight]] | Runt | B- | 96 | 1.68 m | Night | Like a typical Bog Death Knight, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_03825` | Xochitl Mire Bog Death Knight Juvenile | [[Monsters/Undead/Bog Death Knight\|Bog Death Knight]] | Juvenile | B | 108 | 2.04 m | Night | Like a typical Bog Death Knight, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04143` | Xochitl Mire Ancient Giant Lizard Juvenile | [[Monsters/Reptiles/Ancient Giant Lizard\|Ancient Giant Lizard]] | Juvenile | D- | 40 | 2.55 m | Day & Night | Like a typical Ancient Giant Lizard, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04145` | Xochitl Mire Ancient Giant Lizard Runt | [[Monsters/Reptiles/Ancient Giant Lizard\|Ancient Giant Lizard]] | Runt | E+ | 32 | 2.1 m | Day & Night | Like a typical Ancient Giant Lizard, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_04150` | Xochitl Mire Ancient Giant Lizard Scarred | [[Monsters/Reptiles/Ancient Giant Lizard\|Ancient Giant Lizard]] | Scarred | D+ | 56 | 3.3 m | Day & Night | Like a typical Ancient Giant Lizard, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_04151` | Xochitl Mire Ancient Giant Lizard | [[Monsters/Reptiles/Ancient Giant Lizard\|Ancient Giant Lizard]] | Adult | D | 48 | 3 m | Day & Night | A typical adult Ancient Giant Lizard of this region, with mud-slick, algae-streaked skin. |
+| `pop_04155` | Xochitl Mire Ancient Lizardman Juvenile | [[Monsters/Reptiles/Ancient Lizardman\|Ancient Lizardman]] | Juvenile | C- | 65 | 2.55 m | Day & Night | Like a typical Ancient Lizardman, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04156` | Xochitl Mire Ancient Lizardman | [[Monsters/Reptiles/Ancient Lizardman\|Ancient Lizardman]] | Adult | C | 76 | 3 m | Day & Night | A typical adult Ancient Lizardman of this region, with mud-slick, algae-streaked skin. |
+| `pop_04162` | Xochitl Mire Ancient Lizardman Alpha | [[Monsters/Reptiles/Ancient Lizardman\|Ancient Lizardman]] | Alpha | B- | 96 | 3.75 m | Day & Night | Like a typical Ancient Lizardman, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_04616` | Xochitl Mire Vine Man-Eater Plant Alpha | [[Monsters/Plants & Fungi/Vine Man-Eater Plant\|Vine Man-Eater Plant]] | Alpha | C | 76 | 3.13 m | Day & Night | Like a typical Vine Man-Eater Plant, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_04617` | Xochitl Mire Vine Man-Eater Plant | [[Monsters/Plants & Fungi/Vine Man-Eater Plant\|Vine Man-Eater Plant]] | Adult | D+ | 56 | 2.5 m | Day & Night | A typical adult Vine Man-Eater Plant of this region, with mud-slick, algae-streaked skin. |
+| `pop_04619` | Xochitl Mire Vine Man-Eater Plant Scarred | [[Monsters/Plants & Fungi/Vine Man-Eater Plant\|Vine Man-Eater Plant]] | Scarred | C- | 65 | 2.75 m | Day & Night | Like a typical Vine Man-Eater Plant, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_04623` | Xochitl Mire Bog Treant Sapling Albino | [[Monsters/Plants & Fungi/Bog Treant Sapling\|Bog Treant Sapling]] | Albino | C- | 65 | 2 m | Day | Like a typical Bog Treant Sapling, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04628` | Xochitl Mire Bog Treant Sapling Alpha | [[Monsters/Plants & Fungi/Bog Treant Sapling\|Bog Treant Sapling]] | Alpha | C | 76 | 2.5 m | Day | Like a typical Bog Treant Sapling, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_04631` | Xochitl Mire Bog Treant Sapling | [[Monsters/Plants & Fungi/Bog Treant Sapling\|Bog Treant Sapling]] | Adult | D+ | 56 | 2 m | Day | A typical adult Bog Treant Sapling of this region, with mud-slick, algae-streaked skin. |
+| `pop_04637` | Xochitl Mire Bog Spore Lord Scarred | [[Monsters/Plants & Fungi/Bog Spore Lord\|Bog Spore Lord]] | Scarred | B- | 96 | 3.3 m | Night | Like a typical Bog Spore Lord, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_04638` | Xochitl Mire Bog Spore Lord Albino | [[Monsters/Plants & Fungi/Bog Spore Lord\|Bog Spore Lord]] | Albino | B- | 96 | 3 m | Night | Like a typical Bog Spore Lord, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04639` | Xochitl Mire Bog Spore Lord | [[Monsters/Plants & Fungi/Bog Spore Lord\|Bog Spore Lord]] | Adult | C+ | 86 | 3 m | Night | A typical adult Bog Spore Lord of this region, with mud-slick, algae-streaked skin. |
+| `pop_04640` | Xochitl Mire Bog Spore Lord Elderborn | [[Monsters/Plants & Fungi/Bog Spore Lord\|Bog Spore Lord]] | Elderborn | B+ | 120 | 4.05 m | Night | Like a typical Bog Spore Lord, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_04643` | Xochitl Mire Bog Spore Lord Juvenile | [[Monsters/Plants & Fungi/Bog Spore Lord\|Bog Spore Lord]] | Juvenile | C | 76 | 2.55 m | Night | Like a typical Bog Spore Lord, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04644` | Xochitl Mire Bog Spore Lord Runt | [[Monsters/Plants & Fungi/Bog Spore Lord\|Bog Spore Lord]] | Runt | C- | 65 | 2.1 m | Night | Like a typical Bog Spore Lord, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_04645` | Xochitl Mire Blaze Corpse Flower Elderborn | [[Monsters/Plants & Fungi/Blaze Corpse Flower\|Blaze Corpse Flower]] | Elderborn | A+ | 159 | 5.4 m | Night | Like a typical Blaze Corpse Flower, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_04649` | Xochitl Mire Blaze Corpse Flower Scarred | [[Monsters/Plants & Fungi/Blaze Corpse Flower\|Blaze Corpse Flower]] | Scarred | A- | 132 | 4.4 m | Night | Like a typical Blaze Corpse Flower, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_04650` | Xochitl Mire Blaze Corpse Flower Juvenile | [[Monsters/Plants & Fungi/Blaze Corpse Flower\|Blaze Corpse Flower]] | Juvenile | B | 108 | 3.4 m | Night | Like a typical Blaze Corpse Flower, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_04651` | Xochitl Mire Blaze Corpse Flower Albino | [[Monsters/Plants & Fungi/Blaze Corpse Flower\|Blaze Corpse Flower]] | Albino | A- | 132 | 4 m | Night | Like a typical Blaze Corpse Flower, but a rare pale form with white skin or fur and red eyes. |
+| `pop_04653` | Xochitl Mire Blaze Corpse Flower Runt | [[Monsters/Plants & Fungi/Blaze Corpse Flower\|Blaze Corpse Flower]] | Runt | B- | 96 | 2.8 m | Night | Like a typical Blaze Corpse Flower, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_05093` | Xochitl Mire Vine Lamia | [[Monsters/Serpentfolk/Vine Lamia\|Vine Lamia]] | Adult | C+ | 86 | 3.5 m | Day & Night | A typical adult Vine Lamia of this region, with mud-slick, algae-streaked skin. |
+| `pop_05094` | Xochitl Mire Vine Lamia Juvenile | [[Monsters/Serpentfolk/Vine Lamia\|Vine Lamia]] | Juvenile | C | 76 | 2.98 m | Day & Night | Like a typical Vine Lamia, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
+| `pop_05095` | Xochitl Mire Vine Lamia Runt | [[Monsters/Serpentfolk/Vine Lamia\|Vine Lamia]] | Runt | C- | 65 | 2.45 m | Day & Night | Like a typical Vine Lamia, but smaller and scrappier than usual, with mud-slick, algae-streaked skin. |
+| `pop_05097` | Xochitl Mire Vine Lamia Albino | [[Monsters/Serpentfolk/Vine Lamia\|Vine Lamia]] | Albino | B- | 96 | 3.5 m | Day & Night | Like a typical Vine Lamia, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05101` | Xochitl Mire Vine Lamia Alpha | [[Monsters/Serpentfolk/Vine Lamia\|Vine Lamia]] | Alpha | B | 108 | 4.38 m | Day & Night | Like a typical Vine Lamia, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_06617` | Xochitl Mire Blight Ghoul Albino | [[Monsters/Undead/Blight Ghoul\|Blight Ghoul]] | Albino | D | 48 | 1.6 m | Night | Like a typical Blight Ghoul, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06620` | Xochitl Mire Blight Ghoul Elderborn | [[Monsters/Undead/Blight Ghoul\|Blight Ghoul]] | Elderborn | C- | 65 | 2.16 m | Night | Like a typical Blight Ghoul, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_06621` | Xochitl Mire Blight Ghoul Alpha | [[Monsters/Undead/Blight Ghoul\|Blight Ghoul]] | Alpha | D+ | 56 | 2 m | Night | Like a typical Blight Ghoul, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_06622` | Xochitl Mire Blight Ghoul | [[Monsters/Undead/Blight Ghoul\|Blight Ghoul]] | Adult | D- | 40 | 1.6 m | Night | A typical adult Blight Ghoul of this region, with mud-slick, algae-streaked skin. |
+| `pop_06738` | Xibalbar, the Hydra of the Mire | [[Monsters/Reptiles/Xibalbar, the Hydra of the Mire\|Xibalbar, the Hydra of the Mire]] | Unique | B+ | 120 | 10 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Aldmere|Aldmere]], [[Regions/Greymoor|Greymoor]], [[Regions/Lumbaya|Lumbaya]].

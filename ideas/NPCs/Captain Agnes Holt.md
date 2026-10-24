@@ -26,6 +26,11 @@ A grey-haired gate captain who has watched three generations of rookies walk out
 - **dusk:** North Gate
 - **night:** Town walls
 
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
 ## Quests given
 
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]]
+- [[Quests/Weekly Board/Drill the Militia|Drill the Militia]]

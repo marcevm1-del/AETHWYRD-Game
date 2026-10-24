@@ -1,5 +1,7 @@
 # 09a — Gear Systems, Weapons, Armor & Sets (v0.2)
 
+> **Current status:** this is an early catalog draft. For expanded economy, player-safety and production guidance, see [[item_and_economy_design]]. Its proposed rules require approval in `Canon.md` §6 before they replace conflicting details here.
+
 ## 1. Slots
 Head · Chest · Hands · Legs · Feet · Cloak/Back · Main Hand · Off Hand · Ring ×2 · Amulet · Charm · Belt (potion slots) · **Cosmetic layer for every visible slot** (transmog, dyes).
 

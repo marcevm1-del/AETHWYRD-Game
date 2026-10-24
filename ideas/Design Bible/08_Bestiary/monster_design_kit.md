@@ -181,3 +181,43 @@ Every boss and high-tier quest shows a rating based on your level, gear and part
 | **Deadly** | Very unlikely | Red |
 | **Hopeless** | Don't | Black with a skull, plus the "Oppressive Aura" effect |
 You can always attempt any boss. Winning above your rating counts toward **Exceptional Promotion**.
+
+## Behavior-first identity and readable tells (research expansion, proposal)
+
+Guerrilla's published *Horizon Forbidden West* design accounts describe beginning machine development with ecological role, interactive parts and attacks, then giving each machine behaviors that create tactical openings. The team also describes distinct audio cues for idle, alert and attack states, and personality gestures that tell the player what kind of creature they are facing. ([Machine design](https://blog.playstation.com/?p=356418); [combat cues](https://blog.playstation.com/2021/12/06/horizon-forbidden-west-outsmart-your-enemies/)) Capcom's *Monster Hunter Wilds* coverage likewise describes herd behaviors tuned to locale ecology and monsters changing as their environment changes. ([PlayStation Blog](https://blog.playstation.com/?p=393257))
+
+**Ascend inference:** a monster's identity should be legible through what it does before the player reads its name. Model each species through the sequence **ecological role → idle behavior → alert signal → signature threat → recovery/opening → aftermath**. This creates a recognizable hunt from a shared rig without requiring a wholly bespoke animation set for every species.
+
+### Compact species identity card
+
+For each shipped species, define:
+
+- **Ecological role:** grazer, scavenger, ambusher, territorial defender, pack caller, parasite, supernatural lure, intelligent raider or other useful role.
+- **Idle tell:** one behavior that reveals its purpose (feeding, guarding, grooming, marking territory, tending a nest, watching the road).
+- **Alert tell:** visible posture and one audio cue that works even when the player is looking elsewhere.
+- **Signature threat:** one attack or battlefield change unique to that species or family.
+- **Recovery window:** the recognizable state after the threat when a player can punish, reposition, rescue an ally or escape.
+- **Counter family:** multiple answers where possible: spacing, interrupt, element, terrain, stealth, guard, dodge or preparation.
+- **Ecology modifier:** one bounded change based on time, weather, population or region state.
+- **Aftermath clue:** track, residue, damaged object, sound, feeding trace or social consequence that can feed field research.
+
+### Tell language
+
+- Use silhouette and posture first; particles reinforce meaning but do not carry it alone.
+- Pair major attack classes with consistent timing sounds; reserve distinctive motifs for species signatures.
+- Use call-and-response for group behavior: a caller changes a pack's state, and the pack visibly answers.
+- A tell must expose enough anticipation for an attentive player, while difficulty can shorten the window or add feints.
+- Audio, shape, animation and optional text/icon cues should be redundant and independently adjustable.
+- Avoid mixing friendly companion effects with hostile telegraphs; use stable color/shape conventions.
+
+### Shared rig, individual character
+
+Use reusable animation sets as a base, then vary anticipation, travel, recovery, head/limb pose, sound, particles, hit response and one signature move. A slower goblin brute and a nimble goblin scout can share a rig while expressing different role logic; one can hold a lane and punish overcommitment while the other feints and calls help. Variants should be mechanically identifiable, not just reskinned HP tiers.
+
+### Scope bands
+
+- **Ring 0:** every core species has at least an idle tell, attack tell, one role and one counter; Blue Slime, Goblin and Horned Rabbit each get a distinct short encounter pattern.
+- **Ring 1:** each family has a role set and signature attack; add one ecology modifier to selected contracts, not every spawn.
+- **Later rings:** reserve bespoke phase changes, breakable components and multi-stage environmental interactions for elites, named monsters, Tyrants and bosses.
+
+This is a production recommendation, not a new numeric quota. The current data fields and attack catalog remain authoritative for implementation. Add animation or AI only after a playtest shows the shared behavior is unreadable or repetitive.

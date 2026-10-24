@@ -15,3 +15,11 @@ tags: [npc, iron-hold]
 | Romanceable · can die | Yes · Yes |
 
 A grumpy old dwarf smith who sings forge songs and keeps an unfinished blade wrapped in cloth.
+
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Weekly Board/Scrap Run|Scrap Run]]

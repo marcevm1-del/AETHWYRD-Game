@@ -69,9 +69,35 @@ A deep hum felt in the bones; the slow pulse of light; air like the inside of a 
 - A slime that has lived at the Root for an age has learned to speak, and it wants to tell someone what it saw.
 - An adventurer swears she heard someone weeping inside the Cracked Root.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Monsters (2)
 
 | Monster | Family | Rank | Level |
 |---|---|---|---|
 | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | [[Families/Slimes\|Slimes]] | SSS+ | 294 |
 | [[Monsters/Elementals & Spirits/Elemental Primarch\|Elemental Primarch]] | [[Families/Elementals & Spirits\|Elementals & Spirits]] | EX | 300 |
+
+## Population and spawn patterns
+
+The data records **7 named population forms** across **2 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Story (1), Day & Night (6).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_01690` | Elemental Primarch | [[Monsters/Elementals & Spirits/Elemental Primarch\|Elemental Primarch]] | Unique | EX | 300 | 40 m | Story | Unique being; see the species entry. |
+| `pop_05891` | Root of the World Iron Prismatic Slime Sovereign Alpha | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | Alpha | EX | 300 | 10 m | Day & Night | Like a typical Iron Prismatic Slime Sovereign, but larger and scarred, and others of its kind follow it, with bioluminescent spots along its body. |
+| `pop_05892` | Root of the World Iron Prismatic Slime Sovereign Albino | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | Albino | EX- | 300 | 8 m | Day & Night | Like a typical Iron Prismatic Slime Sovereign, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05894` | Root of the World Iron Prismatic Slime Sovereign Runt | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | Runt | SSS- | 267 | 5.6 m | Day & Night | Like a typical Iron Prismatic Slime Sovereign, but smaller and scrappier than usual, with bioluminescent spots along its body. |
+| `pop_05896` | Root of the World Iron Prismatic Slime Sovereign | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | Adult | SSS+ | 294 | 8 m | Day & Night | A typical adult Iron Prismatic Slime Sovereign of this region, with bioluminescent spots along its body. |
+| `pop_05898` | Root of the World Iron Prismatic Slime Sovereign Elderborn | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | Elderborn | EX+ | 300 | 10.8 m | Day & Night | Like a typical Iron Prismatic Slime Sovereign, but old and wise, with greying features and a cautious hunting style, with bioluminescent spots along its body. |
+| `pop_05899` | Root of the World Iron Prismatic Slime Sovereign Juvenile | [[Monsters/Slimes/Iron Prismatic Slime Sovereign\|Iron Prismatic Slime Sovereign]] | Juvenile | SSS | 281 | 6.8 m | Day & Night | Like a typical Iron Prismatic Slime Sovereign, but young, with brighter colors and unworn features, with bioluminescent spots along its body. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]], [[Regions/Great Labyrinth (Floors 41-90)|Great Labyrinth (Floors 41-90)]], [[Regions/Great Labyrinth (Floors 91-120)|Great Labyrinth (Floors 91-120)]], [[Regions/Umbravel|Umbravel]], [[Regions/Hollow Sea|Hollow Sea]], [[Regions/Aurumdeep|Aurumdeep]], [[Regions/The Maw|The Maw]].

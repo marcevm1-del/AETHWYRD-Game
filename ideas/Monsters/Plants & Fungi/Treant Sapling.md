@@ -21,23 +21,44 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 3857 · 253 · 182 · 182 · 182 · 100 |
 | XP · gold | 1477 · 342 |
 | Ring | 2 |
+| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Strife Marches\|Strife Marches]], [[Regions/Xochitl Mire\|Xochitl Mire]], [[Regions/Kitsune Isles\|Kitsune Isles]], [[Regions/Mossdeep\|Mossdeep]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
 
 **Field note:** Weak to Fire. Attacks only if you come close to its home; back away to avoid a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Branch Sweep | melee | 1.1 | 0 s | None | blue |
-| Root Slam | aoe | 1.5 | 9 s | None | red |
-| Regrow | heal | 0 | 20 s | None | none |
-| Root Bind | grab | 1 | 11 s | None | gold |
-| Thorn Volley | magic | 1.5 | 10 s | Nature | red |
+- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
+- **Dimensions:** 2 m high × 0.8 m long × 2.4 m wide; prefab scale 1.
+- **Physics:** 168 kg, gravity ×1, poise 72, knockback resistance 1, death style `wilt_collapse`.
+- **Navigation:** speed 0.4 m/s, turn 127°/s, stopping distance 0.64 m.
+- **Attack count:** 5; **signature:** a young tree with a sleepy face.
 
-## Loot (`loot_plant_d`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Branch Sweep\|Branch Sweep]] | melee | 1.1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Root Slam\|Root Slam]] | aoe | 1.5 | 9 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Regrow\|Regrow]] | heal | 0 | 20 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Root Bind\|Root Bind]] | grab | 1 | 11 s | None | gold | Grab cue; create distance or dodge before contact. |
+| [[Attacks/Thorn Volley\|Thorn Volley]] | magic | 1.5 | 10 s | Nature | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Treant Sapling is a **charming plant** encountered at D rank, around level 48. Its documented behaviour is *Territorial* and its AI pattern is *territorial_guard*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Fire**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a young tree with a sleepy face. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Aldmere|Aldmere]], [[Regions/Strife Marches|Strife Marches]], [[Regions/Xochitl Mire|Xochitl Mire]], [[Regions/Kitsune Isles|Kitsune Isles]], [[Regions/Mossdeep|Mossdeep]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_plant_walker`, animation set `anim_plant_walker`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Plants & Fungi D|loot_plant_d]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -49,6 +70,34 @@ tags: [monster, plants-fungi]
 ## Variants
 
 - [[Monsters/Plants & Fungi/Bog Treant Sapling|Bog Treant Sapling]]
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Kitsune Isles\|Kitsune Isles]] | 2 | D+ | 56–56 | Day |
+| [[Regions/Mossdeep\|Mossdeep]] | 1 | D+ | 56–56 | Day |
+| [[Regions/Xochitl Mire\|Xochitl Mire]] | 5 | C-, D+, C, D- | 40–76 | Day |
+| [[Regions/Aldmere\|Aldmere]] | 1 | D+ | 56–56 | Day |
+| [[Regions/Strife Marches\|Strife Marches]] | 2 | D-, E+ | 32–40 | Day |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_01746` | Kitsune Isles Treant Sapling Scarred | [[Regions/Kitsune Isles\|Kitsune Isles]] | Scarred | D+ | 56 | 2.2 m | Day | Like a typical Treant Sapling, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_01747` | Mossdeep Treant Sapling Albino | [[Regions/Mossdeep\|Mossdeep]] | Albino | D+ | 56 | 2 m | Day | Like a typical Treant Sapling, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01748` | Kitsune Isles Treant Sapling Albino | [[Regions/Kitsune Isles\|Kitsune Isles]] | Albino | D+ | 56 | 2 m | Day | Like a typical Treant Sapling, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01749` | Xochitl Mire Treant Sapling Alpha | [[Regions/Xochitl Mire\|Xochitl Mire]] | Alpha | C- | 65 | 2.5 m | Day | Like a typical Treant Sapling, but larger and scarred, and others of its kind follow it, with mud-slick, algae-streaked skin. |
+| `pop_01750` | Aldmere Treant Sapling Scarred | [[Regions/Aldmere\|Aldmere]] | Scarred | D+ | 56 | 2.2 m | Day | Like a typical Treant Sapling, but covered in old battle scars, with moss-green coloring that blends with the undergrowth. |
+| `pop_01751` | Xochitl Mire Treant Sapling Albino | [[Regions/Xochitl Mire\|Xochitl Mire]] | Albino | D+ | 56 | 2 m | Day | Like a typical Treant Sapling, but a rare pale form with white skin or fur and red eyes. |
+| `pop_01752` | Strife Marches Treant Sapling Juvenile | [[Regions/Strife Marches\|Strife Marches]] | Juvenile | D- | 40 | 1.7 m | Day | Like a typical Treant Sapling, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
+| `pop_01753` | Xochitl Mire Treant Sapling Scarred | [[Regions/Xochitl Mire\|Xochitl Mire]] | Scarred | D+ | 56 | 2.2 m | Day | Like a typical Treant Sapling, but covered in old battle scars, with mud-slick, algae-streaked skin. |
+| `pop_01754` | Strife Marches Treant Sapling Runt | [[Regions/Strife Marches\|Strife Marches]] | Runt | E+ | 32 | 1.4 m | Day | Like a typical Treant Sapling, but smaller and scrappier than usual, with dust-grey coloring and old rune scars. |
+| `pop_01755` | Xochitl Mire Treant Sapling Elderborn | [[Regions/Xochitl Mire\|Xochitl Mire]] | Elderborn | C | 76 | 2.7 m | Day | Like a typical Treant Sapling, but old and wise, with greying features and a cautious hunting style, with mud-slick, algae-streaked skin. |
+| `pop_01756` | Xochitl Mire Treant Sapling Juvenile | [[Regions/Xochitl Mire\|Xochitl Mire]] | Juvenile | D- | 40 | 1.7 m | Day | Like a typical Treant Sapling, but young, with brighter colors and unworn features, with mud-slick, algae-streaked skin. |
 
 ## Design recipe
 

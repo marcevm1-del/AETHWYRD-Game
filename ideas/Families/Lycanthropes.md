@@ -4,7 +4,14 @@ tags: [family, lycanthropes]
 ---
 # Lycanthropes
 
-21 species. Sorted by level.
+21 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** D-, D, D+, C-, C, C+, B-, B, B+, A-, A, A+
+- **Element palette:** Poison, Dark, Nature, Earth, Light, Blood, Ice, Lightning
+- **Level span:** 40–159
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

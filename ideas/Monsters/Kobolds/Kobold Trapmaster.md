@@ -21,22 +21,43 @@ tags: [monster, kobolds]
 | HP · ATK · DEF · MATK · MDEF · SPD | 2595 · 202 · 162 · 99 · 162 · 135 |
 | XP · gold | 1477 · 342 |
 | Ring | 2 |
+| Rig · animation | [[Systems/Rigs/small_biped\|small_biped]] · `anim_small_biped` |
 | Habitats | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]], [[Regions/Umbravel\|Umbravel]], [[Regions/Iron Hold\|Iron Hold]], [[Regions/Moraveil\|Moraveil]] |
 | Genre | Dungeon Crawl |
 | Trope | Dog-headed first-floor monsters (DanMachi), trap-builders (classic tabletop) |
 
 **Field note:** Weak to Fire. Flees when hurt. Snares or ranged attacks work best.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Stab | melee | 1 | 0 s | None | blue |
-| Thrown Junk | ranged | 0.8 | 4 s | None | blue |
-| Frenzied Lunge | melee | 1.5 | 8 s | None | red |
-| Trip-Wire Trap | debuff | 0 | 14 s | None | none |
+- **Rig:** [[Systems/Rigs/small_biped|small_biped]] (rigId); animation set `anim_small_biped`.
+- **Dimensions:** 1 m high × 0.3 m long × 0.4 m wide; prefab scale 0.909.
+- **Physics:** 16 kg, gravity ×1.5, poise 37, knockback resistance 0.21, death style `ragdoll_crumple`.
+- **Navigation:** speed 5.8 m/s, turn 420°/s, stopping distance 0.6 m.
+- **Attack count:** 4; **signature:** a harness of gears, springs and tripwires.
 
-## Loot (`loot_kobold_d`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Stab\|Stab]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Thrown Junk\|Thrown Junk]] | ranged | 0.8 | 4 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Frenzied Lunge\|Frenzied Lunge]] | melee | 1.5 | 8 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Trip-Wire Trap\|Trip-Wire Trap]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+
+## Field guide
+
+Kobold Trapmaster is a **menacing humanoid** encountered at D rank, around level 48. Its documented behaviour is *Skittish* and its AI pattern is *skittish_flee*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Fire**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a harness of gears, springs and tripwires. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]], [[Regions/Umbravel|Umbravel]], [[Regions/Iron Hold|Iron Hold]], [[Regions/Moraveil|Moraveil]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_small_biped`, animation set `anim_small_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Kobolds D|loot_kobold_d]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -49,6 +70,33 @@ tags: [monster, kobolds]
 
 - [[Monsters/Kobolds/Vesper-Touched Kobold Trapmaster|Vesper-Touched Kobold Trapmaster]]
 - [[Monsters/Kobolds/Crag Kobold Trapmaster|Crag Kobold Trapmaster]]
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Umbravel\|Umbravel]] | 1 | D- | 40–40 | Day & Night |
+| [[Regions/Iron Hold\|Iron Hold]] | 3 | E+, D, C- | 32–65 | Day & Night |
+| [[Regions/Moraveil\|Moraveil]] | 3 | D+, D | 48–56 | Day & Night |
+| [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | 4 | D+, C, D, D- | 40–76 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00332` | Umbravel Kobold Trapmaster Juvenile | [[Regions/Umbravel\|Umbravel]] | Juvenile | D- | 40 | 0.85 m | Day & Night | Like a typical Kobold Trapmaster, but young, with brighter colors and unworn features, with bioluminescent spots along its body. |
+| `pop_00333` | Iron Hold Kobold Trapmaster Runt | [[Regions/Iron Hold\|Iron Hold]] | Runt | E+ | 32 | 0.7 m | Day & Night | Like a typical Kobold Trapmaster, but smaller and scrappier than usual, with slate-grey coloring and hardened hide. |
+| `pop_00334` | Iron Hold Kobold Trapmaster | [[Regions/Iron Hold\|Iron Hold]] | Adult | D | 48 | 1 m | Day & Night | A typical adult Kobold Trapmaster of this region, with slate-grey coloring and hardened hide. |
+| `pop_00335` | Moraveil Kobold Trapmaster Albino | [[Regions/Moraveil\|Moraveil]] | Albino | D+ | 56 | 1 m | Day & Night | Like a typical Kobold Trapmaster, but a rare pale form with white skin or fur and red eyes. |
+| `pop_00336` | Iron Hold Kobold Trapmaster Alpha | [[Regions/Iron Hold\|Iron Hold]] | Alpha | C- | 65 | 1.25 m | Day & Night | Like a typical Kobold Trapmaster, but larger and scarred, and others of its kind follow it, with slate-grey coloring and hardened hide. |
+| `pop_00337` | Great Labyrinth (Floors 1-40) Kobold Trapmaster Albino | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Albino | D+ | 56 | 1 m | Day & Night | Like a typical Kobold Trapmaster, but a rare pale form with white skin or fur and red eyes. |
+| `pop_00338` | Great Labyrinth (Floors 1-40) Kobold Trapmaster Elderborn | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Elderborn | C | 76 | 1.35 m | Day & Night | Like a typical Kobold Trapmaster, but old and wise, with greying features and a cautious hunting style, with pale, light-starved coloring and oversized eyes. |
+| `pop_00339` | Moraveil Kobold Trapmaster | [[Regions/Moraveil\|Moraveil]] | Adult | D | 48 | 1 m | Day & Night | A typical adult Kobold Trapmaster of this region, with pale, light-starved coloring and oversized eyes. |
+| `pop_00340` | Great Labyrinth (Floors 1-40) Kobold Trapmaster | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Adult | D | 48 | 1 m | Day & Night | A typical adult Kobold Trapmaster of this region, with pale, light-starved coloring and oversized eyes. |
+| `pop_00341` | Moraveil Kobold Trapmaster Scarred | [[Regions/Moraveil\|Moraveil]] | Scarred | D+ | 56 | 1.1 m | Day & Night | Like a typical Kobold Trapmaster, but covered in old battle scars, with pale, light-starved coloring and oversized eyes. |
+| `pop_00342` | Great Labyrinth (Floors 1-40) Kobold Trapmaster Juvenile | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Juvenile | D- | 40 | 0.85 m | Day & Night | Like a typical Kobold Trapmaster, but young, with brighter colors and unworn features, with pale, light-starved coloring and oversized eyes. |
 
 ## Design recipe
 

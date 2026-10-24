@@ -13,6 +13,7 @@ tags: [class, base]
 | Weapons | whip, rod, flute, bell |
 | Armour | cloth, light |
 | Mechanic | Bond Slots: 1 active pet at F, 2 at D, 3 at B; pets share your XP and evolve |
+| Suggested stat allocation | VIT 9%, AGI 9%, DEX 9%, INT 9%, WIS 18%, LUK 9%, CHA 37% |
 | Trainer | [[NPCs/Granny Mabel\|Granny Mabel]] |
 | Class quest | *Mochi's Friends* |
 | Starter weapon | [[Items/Guild Issue Whip\|Guild Issue Whip]] |
@@ -31,6 +32,12 @@ tags: [class, base]
 | 18 | **Unison Attack** | chain | 3 × (medium/heavy) · 3.6 total | 16 SP | 10 s | None | You and your pet strike together |
 | 30 | **Grand Menagerie** | ultimate | 7 × (medium/ultimate) · 7.3 total | 100 Awakening | — | None | All stored pets attack at once |
 
+**Combat rhythm:** basic chains build the class’s ordinary tempo; active skills should create clear commitment and payoff, while mobility or control skills let the player change spacing. Resource cost and cooldown are part of the decision, so avoid spending every skill on the first available target.
+
 ## Passives
 
 - **Evolution Catalyst** (Lv 14): Pets evolve sooner
+
+## How this class plays
+
+Build around the class’s stated mechanic and growth profile. Weapons and armour shape its rhythm; the kit creates decisions about approach, commitment, recovery and resource use. A class is a playstyle identity, not a requirement to parry perfectly: defensive options and readable recovery windows should keep the wider game accessible.

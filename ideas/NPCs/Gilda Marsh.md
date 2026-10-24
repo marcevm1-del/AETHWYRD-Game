@@ -14,3 +14,11 @@ tags: [npc, none]
 | Romanceable · can die | No · Yes |
 
 A halfling shopkeeper with an abacus she claims was a gift from a Veilborn hero; she haggles for fun and loses on purpose to children.
+
+## Continuity note
+
+This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Weekly Board/Market Day Mayhem|Market Day Mayhem]]

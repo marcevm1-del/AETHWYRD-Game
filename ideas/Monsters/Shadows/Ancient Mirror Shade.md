@@ -22,23 +22,44 @@ tags: [monster, shadows]
 | HP · ATK · DEF · MATK · MDEF · SPD | 24532 · 713 · 594 · 475 · 535 · 100 |
 | XP · gold | 8719 · 1611 |
 | Ring | 6 |
+| Rig · animation | [[Systems/Rigs/medium_biped\|medium_biped]] · `anim_medium_biped` |
 | Habitats | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]], [[Regions/Aurumdeep\|Aurumdeep]], [[Regions/The Maw\|The Maw]] |
 | Genre | Dungeon Crawl |
 | Trope | Dungeon-born shadow warriors (DanMachi War Shadows) |
 
 **Field note:** Weak to Light. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Slash | melee | 1 | 0 s | None | blue |
-| Heavy Swing | melee | 1.6 | 6 s | None | red |
-| Guard Counter | counter | 1.3 | 10 s | None | blue |
-| Shade Step Strike | dash | 1.4 | 7 s | None | red |
-| Shadow Grasp | magic | 1.5 | 10 s | Dark | red |
+- **Rig:** [[Systems/Rigs/medium_biped|medium_biped]] (rigId); animation set `anim_medium_biped`.
+- **Dimensions:** 2.7 m high × 0.81 m long × 0.86 m wide; prefab scale 1.5.
+- **Physics:** 255.9 kg, gravity ×1.5, poise 107, knockback resistance 0.45, death style `ragdoll`.
+- **Navigation:** speed 6.98 m/s, turn 243°/s, stopping distance 0.86 m.
+- **Attack count:** 5; **signature:** your own silhouette, a heartbeat behind you.
 
-## Loot (`loot_shadow_a`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Slash\|Slash]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Heavy Swing\|Heavy Swing]] | melee | 1.6 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Guard Counter\|Guard Counter]] | counter | 1.3 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Shade Step Strike\|Shade Step Strike]] | dash | 1.4 | 7 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Shadow Grasp\|Shadow Grasp]] | magic | 1.5 | 10 s | Dark | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Ancient Mirror Shade is a **horror spirit** encountered at A rank, around level 146. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** your own silhouette, a heartbeat behind you. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Great Labyrinth (Floors 41-90)|Great Labyrinth (Floors 41-90)]], [[Regions/Aurumdeep|Aurumdeep]], [[Regions/The Maw|The Maw]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_medium_biped`, animation set `anim_medium_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Shadows A|loot_shadow_a]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,32 @@ tags: [monster, shadows]
 | [[Items/Night Shard\|Night Shard]] | 30% | 1–1 |
 | [[Items/A-Rank Monster Core\|A-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Aurumdeep\|Aurumdeep]] | 4 | S, A-, A, B+ | 120–188 | Night |
+| [[Regions/The Maw\|The Maw]] | 5 | A+, A-, B+, S- | 120–173 | Night |
+| [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | 2 | A+, S- | 159–173 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_03925` | Aurumdeep Ancient Mirror Shade Elderborn | [[Regions/Aurumdeep\|Aurumdeep]] | Elderborn | S | 188 | 3.65 m | Night | Like a typical Ancient Mirror Shade, but old and wise, with greying features and a cautious hunting style, with bioluminescent spots along its body. |
+| `pop_03926` | The Maw Ancient Mirror Shade Scarred | [[Regions/The Maw\|The Maw]] | Scarred | A+ | 159 | 2.97 m | Night | Like a typical Ancient Mirror Shade, but covered in old battle scars, with bioluminescent spots along its body. |
+| `pop_03927` | Aurumdeep Ancient Mirror Shade Juvenile | [[Regions/Aurumdeep\|Aurumdeep]] | Juvenile | A- | 132 | 2.29 m | Night | Like a typical Ancient Mirror Shade, but young, with brighter colors and unworn features, with bioluminescent spots along its body. |
+| `pop_03928` | Aurumdeep Ancient Mirror Shade | [[Regions/Aurumdeep\|Aurumdeep]] | Adult | A | 146 | 2.7 m | Night | A typical adult Ancient Mirror Shade of this region, with bioluminescent spots along its body. |
+| `pop_03929` | Great Labyrinth (Floors 41-90) Ancient Mirror Shade Albino | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Albino | A+ | 159 | 2.7 m | Night | Like a typical Ancient Mirror Shade, but a rare pale form with white skin or fur and red eyes. |
+| `pop_03930` | The Maw Ancient Mirror Shade Juvenile | [[Regions/The Maw\|The Maw]] | Juvenile | A- | 132 | 2.29 m | Night | Like a typical Ancient Mirror Shade, but young, with brighter colors and unworn features, with bioluminescent spots along its body. |
+| `pop_03931` | Aurumdeep Ancient Mirror Shade Runt | [[Regions/Aurumdeep\|Aurumdeep]] | Runt | B+ | 120 | 1.89 m | Night | Like a typical Ancient Mirror Shade, but smaller and scrappier than usual, with bioluminescent spots along its body. |
+| `pop_03932` | The Maw Ancient Mirror Shade Albino | [[Regions/The Maw\|The Maw]] | Albino | A+ | 159 | 2.7 m | Night | Like a typical Ancient Mirror Shade, but a rare pale form with white skin or fur and red eyes. |
+| `pop_03933` | The Maw Ancient Mirror Shade Runt | [[Regions/The Maw\|The Maw]] | Runt | B+ | 120 | 1.89 m | Night | Like a typical Ancient Mirror Shade, but smaller and scrappier than usual, with bioluminescent spots along its body. |
+| `pop_03934` | Great Labyrinth (Floors 41-90) Ancient Mirror Shade Alpha | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Alpha | S- | 173 | 3.38 m | Night | Like a typical Ancient Mirror Shade, but larger and scarred, and others of its kind follow it, with pale, light-starved coloring and oversized eyes. |
+| `pop_03935` | The Maw Ancient Mirror Shade Alpha | [[Regions/The Maw\|The Maw]] | Alpha | S- | 173 | 3.38 m | Night | Like a typical Ancient Mirror Shade, but larger and scarred, and others of its kind follow it, with bioluminescent spots along its body. |
 
 ## Design recipe
 

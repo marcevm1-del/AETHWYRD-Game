@@ -12,16 +12,22 @@ tags: [item, material]
 | Category · rank | material · D |
 | Value | 8 |
 
-## Dropped by (11)
+## Use in the world
 
-- [[Monsters/Minotaurs & Beastmen/Calf Minotaur|Calf Minotaur]]
-- [[Monsters/Minotaurs & Beastmen/Satyr Reveler|Satyr Reveler]]
-- [[Monsters/Minotaurs & Beastmen/Gnoll Raider|Gnoll Raider]]
-- [[Monsters/Minotaurs & Beastmen/Minotaur|Minotaur]]
-- [[Monsters/Minotaurs & Beastmen/Labyrinth Minotaur|Labyrinth Minotaur]]
-- [[Monsters/Minotaurs & Beastmen/Taurgrim, the Maze King|Taurgrim, the Maze King]]
-- [[Monsters/Minotaurs & Beastmen/Vesper-Touched Calf Minotaur|Vesper-Touched Calf Minotaur]]
-- [[Monsters/Minotaurs & Beastmen/Ash Satyr Reveler|Ash Satyr Reveler]]
-- [[Monsters/Minotaurs & Beastmen/Cavern Gnoll Raider|Cavern Gnoll Raider]]
-- [[Monsters/Minotaurs & Beastmen/Deep Minotaur|Deep Minotaur]]
-- [[Monsters/Minotaurs & Beastmen/Vesper-Touched Labyrinth Minotaur|Vesper-Touched Labyrinth Minotaur]]
+Materials connect field activity to crafting and trade. Their source and value help players decide whether to sell, keep or gather more.
+
+## Drop sources (11)
+
+| Monster | Chance | Quantity |
+|---|---:|---:|
+| [[Monsters/Minotaurs & Beastmen/Calf Minotaur\|Calf Minotaur]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Satyr Reveler\|Satyr Reveler]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Gnoll Raider\|Gnoll Raider]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Minotaur\|Minotaur]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Labyrinth Minotaur\|Labyrinth Minotaur]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Taurgrim, the Maze King\|Taurgrim, the Maze King]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Vesper-Touched Calf Minotaur\|Vesper-Touched Calf Minotaur]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Ash Satyr Reveler\|Ash Satyr Reveler]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Cavern Gnoll Raider\|Cavern Gnoll Raider]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Deep Minotaur\|Deep Minotaur]] | 30.0% | 1–1 |
+| [[Monsters/Minotaurs & Beastmen/Vesper-Touched Labyrinth Minotaur\|Vesper-Touched Labyrinth Minotaur]] | 30.0% | 1–1 |

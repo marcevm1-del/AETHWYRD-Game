@@ -15,3 +15,7 @@ tags: [item, armor]
 | Rarity · slot | Common · head |
 | Value | 15 |
 | Stats | def 3 |
+
+## Use in the world
+
+Equipment changes the character’s combat profile. Compare its rank, slot and stat line with the current build before investing in an upgrade.

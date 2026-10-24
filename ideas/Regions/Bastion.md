@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | beast · besieged |
 | Settlements | Bastion outer ring |
 
+## Siege encounter plan
+
+Faction **beast**, B–S band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 6 × [[Monsters/Beasts/Steppe Fenrir Pup|Steppe Fenrir Pup]] (B+)
+
+- **Wave 2:** 5 × [[Monsters/Beasts/Steppe Fenrir Pup|Steppe Fenrir Pup]] (B+), 3 × [[Monsters/Beasts/Steppe Behemoth Calf|Steppe Behemoth Calf]] (A-)
+
+- **Wave 3:** 6 × [[Monsters/Beasts/Steppe Fenrir Pup|Steppe Fenrir Pup]] (B+), 4 × [[Monsters/Gremlins/Gremlin King|Gremlin King]] (C); lieutenant: [[Monsters/Gremlins/Gremlin King|Gremlin King]]
+
 > **The City of Rings.** Ring upon ring of walls on an open steppe, the last stop before the horde lands. Thrakka, Sabretooth Khan rides against the outer ring.
 >
 > *Bastion builds a new ring every time the horde breaks the outermost one. There are many rings.*
@@ -75,10 +85,14 @@ Stone dust and woodsmoke; the ring of masons' hammers; war drums on the steppe; 
 - A mason has found a flaw in the new ring's foundations, and someone put it there.
 - A horde rider has deserted and wants to tell the Warden something.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Clans
 
-- **The Shieldwall** (Greecian Clan, led by Polemarch Kassandros Brightshield): Bastion's phalanx, drilled to hold a line of shields against cavalry. Every ring's captain comes from their ranks.
-- **The Hornwall** (Rhino Clan, led by Master Mason Rhinald Stonebrow): Bastion's master masons, who build the new rings.
+- [[Clans/The Shieldwall|The Shieldwall]] (Greecian Clan, led by Polemarch Kassandros Brightshield): Bastion's phalanx, drilled to hold a line of shields against cavalry. Every ring's captain comes from their ranks.
+- [[Clans/The Hornwall|The Hornwall]] (Rhino Clan, led by Master Mason Rhinald Stonebrow): Bastion's master masons, who build the new rings.
 
 ## Monsters (4)
 
@@ -88,3 +102,33 @@ Stone dust and woodsmoke; the ring of masons' hammers; war drums on the steppe; 
 | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | [[Families/Beasts\|Beasts]] | B+ | 120 |
 | [[Monsters/Beasts/Steppe Behemoth Calf\|Steppe Behemoth Calf]] | [[Families/Beasts\|Beasts]] | A- | 132 |
 | [[Monsters/Beasts/Thrakka, Sabretooth Khan of the Steppe Horde\|Thrakka, Sabretooth Khan of the Steppe Horde]] | [[Families/Beasts\|Beasts]] | S | 188 |
+
+## Population and spawn patterns
+
+The data records **15 named population forms** across **4 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Day & Night (14), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_02385` | Bastion Gremlin King Juvenile | [[Monsters/Gremlins/Gremlin King\|Gremlin King]] | Juvenile | C- | 65 | 1.02 m | Day & Night | Like a typical Gremlin King, but young, with brighter colors and unworn features, with soot-stained hide and scavenged scraps. |
+| `pop_02386` | Bastion Gremlin King Alpha | [[Monsters/Gremlins/Gremlin King\|Gremlin King]] | Alpha | B- | 96 | 1.5 m | Day & Night | Like a typical Gremlin King, but larger and scarred, and others of its kind follow it, with soot-stained hide and scavenged scraps. |
+| `pop_02391` | Bastion Gremlin King Scarred | [[Monsters/Gremlins/Gremlin King\|Gremlin King]] | Scarred | C+ | 86 | 1.32 m | Day & Night | Like a typical Gremlin King, but covered in old battle scars, with soot-stained hide and scavenged scraps. |
+| `pop_06199` | Bastion Steppe Fenrir Pup Runt | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | Runt | B- | 96 | 1.05 m | Day & Night | Like a typical Steppe Fenrir Pup, but smaller and scrappier than usual, with wind-burnt coloring and a lean frame. |
+| `pop_06202` | Bastion Steppe Fenrir Pup Juvenile | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | Juvenile | B | 108 | 1.27 m | Day & Night | Like a typical Steppe Fenrir Pup, but young, with brighter colors and unworn features, with wind-burnt coloring and a lean frame. |
+| `pop_06203` | Bastion Steppe Fenrir Pup | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | Adult | B+ | 120 | 1.5 m | Day & Night | A typical adult Steppe Fenrir Pup of this region, with wind-burnt coloring and a lean frame. |
+| `pop_06204` | Bastion Steppe Fenrir Pup Alpha | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | Alpha | A | 146 | 1.88 m | Day & Night | Like a typical Steppe Fenrir Pup, but larger and scarred, and others of its kind follow it, with wind-burnt coloring and a lean frame. |
+| `pop_06205` | Bastion Steppe Fenrir Pup Elderborn | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | Elderborn | A+ | 159 | 2.03 m | Day & Night | Like a typical Steppe Fenrir Pup, but old and wise, with greying features and a cautious hunting style, with wind-burnt coloring and a lean frame. |
+| `pop_06206` | Bastion Steppe Fenrir Pup Albino | [[Monsters/Beasts/Steppe Fenrir Pup\|Steppe Fenrir Pup]] | Albino | A- | 132 | 1.5 m | Day & Night | Like a typical Steppe Fenrir Pup, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06209` | Bastion Steppe Behemoth Calf Scarred | [[Monsters/Beasts/Steppe Behemoth Calf\|Steppe Behemoth Calf]] | Scarred | A | 146 | 4.4 m | Day & Night | Like a typical Steppe Behemoth Calf, but covered in old battle scars, with wind-burnt coloring and a lean frame. |
+| `pop_06213` | Bastion Steppe Behemoth Calf Juvenile | [[Monsters/Beasts/Steppe Behemoth Calf\|Steppe Behemoth Calf]] | Juvenile | B+ | 120 | 3.4 m | Day & Night | Like a typical Steppe Behemoth Calf, but young, with brighter colors and unworn features, with wind-burnt coloring and a lean frame. |
+| `pop_06216` | Bastion Steppe Behemoth Calf Elderborn | [[Monsters/Beasts/Steppe Behemoth Calf\|Steppe Behemoth Calf]] | Elderborn | S- | 173 | 5.4 m | Day & Night | Like a typical Steppe Behemoth Calf, but old and wise, with greying features and a cautious hunting style, with wind-burnt coloring and a lean frame. |
+| `pop_06217` | Bastion Steppe Behemoth Calf Runt | [[Monsters/Beasts/Steppe Behemoth Calf\|Steppe Behemoth Calf]] | Runt | B | 108 | 2.8 m | Day & Night | Like a typical Steppe Behemoth Calf, but smaller and scrappier than usual, with wind-burnt coloring and a lean frame. |
+| `pop_06219` | Bastion Steppe Behemoth Calf | [[Monsters/Beasts/Steppe Behemoth Calf\|Steppe Behemoth Calf]] | Adult | A- | 132 | 4 m | Day & Night | A typical adult Steppe Behemoth Calf of this region, with wind-burnt coloring and a lean frame. |
+| `pop_06749` | Thrakka, Sabretooth Khan of the Steppe Horde | [[Monsters/Beasts/Thrakka, Sabretooth Khan of the Steppe Horde\|Thrakka, Sabretooth Khan of the Steppe Horde]] | Unique | S | 188 | 4 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Aldmere|Aldmere]], [[Regions/Lirian|Lirian]], [[Regions/Fanghold|Fanghold]], [[Regions/Velmark|Velmark]], [[Regions/Haneul|Haneul]], [[Regions/Zarvan|Zarvan]], [[Regions/Vharlen|Vharlen]], [[Regions/Gearholm|Gearholm]].

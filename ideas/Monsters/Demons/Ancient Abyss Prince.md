@@ -22,23 +22,44 @@ tags: [monster, demons, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 93400 · 1452 · 1210 · 968 · 1089 · 100 |
 | XP · gold | 551660 · 4409 |
 | Ring | 9 |
+| Rig · animation | [[Systems/Rigs/medium_biped\|medium_biped]] · `anim_medium_biped` |
 | Habitats | [[Regions/Vesper\|Vesper]] |
 | Genre | Abyssal |
 | Trope | Demons as a people of the Abyss, not just evil (Frieren, Maoyuu) |
 
 **Field note:** Weak to Light. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Slash | melee | 1 | 0 s | None | blue |
-| Heavy Swing | melee | 1.6 | 6 s | None | red |
-| Guard Counter | counter | 1.3 | 10 s | None | blue |
-| Hellfire Brand | magic | 1.4 | 10 s | None | red |
-| Null Rift | magic | 1.5 | 10 s | Void | red |
+- **Rig:** [[Systems/Rigs/medium_biped|medium_biped]] (rigId); animation set `anim_medium_biped`.
+- **Dimensions:** 6 m high × 1.8 m long × 1.92 m wide; prefab scale 3.333.
+- **Physics:** 2808 kg, gravity ×1.05, poise 247, knockback resistance 0.57, death style `ragdoll`.
+- **Navigation:** speed 9.91 m/s, turn 163°/s, stopping distance 1.42 m.
+- **Attack count:** 5; **signature:** a crown of black flame and wings of torn night.
 
-## Loot (`loot_demon_ex`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Slash\|Slash]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Heavy Swing\|Heavy Swing]] | melee | 1.6 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Guard Counter\|Guard Counter]] | counter | 1.3 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Hellfire Brand\|Hellfire Brand]] | magic | 1.4 | 10 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Null Rift\|Null Rift]] | magic | 1.5 | 10 s | Void | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Ancient Abyss Prince is a **menacing demon** encountered at EX rank, around level 300. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a crown of black flame and wings of torn night. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Vesper|Vesper]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_medium_biped`, animation set `anim_medium_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Demons EX|loot_demon_ex]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,20 @@ tags: [monster, demons, unique]
 | [[Items/Brimstone\|Brimstone]] | 15% | 1–1 |
 | [[Items/EX-Rank Monster Core\|EX-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Vesper\|Vesper]] | 1 | EX | 300–300 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_04788` | Ancient Abyss Prince | [[Regions/Vesper\|Vesper]] | Unique | EX | 300 | 6 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

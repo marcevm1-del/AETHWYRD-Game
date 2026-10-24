@@ -18,35 +18,35 @@
   "name": "F-Rank Monster Core",
   "category": "core",
   "rank": "F",
-  "value": 10
+  "value": 2
  },
  {
   "id": "itm_core_e",
   "name": "E-Rank Monster Core",
   "category": "core",
   "rank": "E",
-  "value": 18
+  "value": 4
  },
  {
   "id": "itm_core_d",
   "name": "D-Rank Monster Core",
   "category": "core",
   "rank": "D",
-  "value": 32
+  "value": 8
  },
  {
   "id": "itm_core_c",
   "name": "C-Rank Monster Core",
   "category": "core",
   "rank": "C",
-  "value": 58
+  "value": 16
  },
  {
   "id": "itm_core_b",
   "name": "B-Rank Monster Core",
   "category": "core",
   "rank": "B",
-  "value": 105
+  "value": 32
  },
  {
   "id": "itm_mat_relic_shard",
@@ -60,21 +60,21 @@
   "name": "S-Rank Monster Core",
   "category": "core",
   "rank": "S",
-  "value": 340
+  "value": 128
  },
  {
   "id": "itm_core_sss",
   "name": "SSS-Rank Monster Core",
   "category": "core",
   "rank": "SSS",
-  "value": 1102
+  "value": 512
  },
  {
   "id": "itm_core_ex",
   "name": "EX-Rank Monster Core",
   "category": "core",
   "rank": "EX",
-  "value": 1984
+  "value": 1024
  },
  {
   "id": "itm_mat_goblin_ear",
@@ -102,7 +102,7 @@
   "name": "A-Rank Monster Core",
   "category": "core",
   "rank": "A",
-  "value": 189
+  "value": 64
  },
  {
   "id": "itm_mat_kobold_fang",
@@ -389,7 +389,7 @@
   "name": "SS-Rank Monster Core",
   "category": "core",
   "rank": "SS",
-  "value": 612
+  "value": 256
  },
  {
   "id": "itm_mat_fish_scale",

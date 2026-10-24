@@ -22,23 +22,44 @@ tags: [monster, kobolds]
 | HP · ATK · DEF · MATK · MDEF · SPD | 6880 · 354 · 283 · 248 · 283 · 135 |
 | XP · gold | 3743 · 769 |
 | Ring | 3 |
+| Rig · animation | [[Systems/Rigs/small_biped\|small_biped]] · `anim_small_biped` |
 | Habitats | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]], [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]], [[Regions/Iron Hold\|Iron Hold]] |
 | Genre | Dungeon Crawl |
 | Trope | Dog-headed first-floor monsters (DanMachi), trap-builders (classic tabletop) |
 
 **Field note:** Weak to Light. Never alone. Kill the leader first and the rest may scatter.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Stab | melee | 1 | 0 s | None | blue |
-| Thrown Junk | ranged | 0.8 | 4 s | None | blue |
-| Frenzied Lunge | melee | 1.5 | 8 s | None | red |
-| Trip-Wire Trap | debuff | 0 | 14 s | None | none |
-| Shadow Grasp | magic | 1.5 | 10 s | Dark | red |
+- **Rig:** [[Systems/Rigs/small_biped|small_biped]] (rigId); animation set `anim_small_biped`.
+- **Dimensions:** 1.4 m high × 0.42 m long × 0.56 m wide; prefab scale 1.273.
+- **Physics:** 43.9 kg, gravity ×1.5, poise 49, knockback resistance 0.24, death style `ragdoll_crumple`.
+- **Navigation:** speed 6.31 m/s, turn 355°/s, stopping distance 0.68 m.
+- **Attack count:** 5; **signature:** scavenged knight armor hammered to fit.
 
-## Loot (`loot_kobold_c`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Stab\|Stab]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Thrown Junk\|Thrown Junk]] | ranged | 0.8 | 4 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Frenzied Lunge\|Frenzied Lunge]] | melee | 1.5 | 8 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Trip-Wire Trap\|Trip-Wire Trap]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Shadow Grasp\|Shadow Grasp]] | magic | 1.5 | 10 s | Dark | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Shade Kobold Warlord is a **menacing humanoid** encountered at C+ rank, around level 86. Its documented behaviour is *Pack* and its AI pattern is *pack_flank*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** scavenged knight armor hammered to fit. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]], [[Regions/Great Labyrinth (Floors 41-90)|Great Labyrinth (Floors 41-90)]], [[Regions/Iron Hold|Iron Hold]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_small_biped`, animation set `anim_small_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Kobolds C|loot_kobold_c]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,32 @@ tags: [monster, kobolds]
 | [[Items/Scrap Metal\|Scrap Metal]] | 30% | 1–1 |
 | [[Items/Candle Stub\|Candle Stub]] | 15% | 1–1 |
 | [[Items/C-Rank Monster Core\|C-Rank Monster Core]] | 100% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Iron Hold\|Iron Hold]] | 3 | B-, C, B | 76–108 | Day & Night |
+| [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | 5 | C+, B+, B-, B, C- | 65–120 | Day & Night |
+| [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | 3 | B-, C+, C- | 65–96 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06099` | Iron Hold Shade Kobold Warlord Scarred | [[Regions/Iron Hold\|Iron Hold]] | Scarred | B- | 96 | 1.54 m | Day & Night | Like a typical Shade Kobold Warlord, but covered in old battle scars, with slate-grey coloring and hardened hide. |
+| `pop_06100` | Great Labyrinth (Floors 41-90) Shade Kobold Warlord | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Adult | C+ | 86 | 1.4 m | Day & Night | A typical adult Shade Kobold Warlord of this region, with pale, light-starved coloring and oversized eyes. |
+| `pop_06101` | Great Labyrinth (Floors 41-90) Shade Kobold Warlord Elderborn | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Elderborn | B+ | 120 | 1.89 m | Day & Night | Like a typical Shade Kobold Warlord, but old and wise, with greying features and a cautious hunting style, with pale, light-starved coloring and oversized eyes. |
+| `pop_06102` | Iron Hold Shade Kobold Warlord Juvenile | [[Regions/Iron Hold\|Iron Hold]] | Juvenile | C | 76 | 1.19 m | Day & Night | Like a typical Shade Kobold Warlord, but young, with brighter colors and unworn features, with slate-grey coloring and hardened hide. |
+| `pop_06103` | Great Labyrinth (Floors 41-90) Shade Kobold Warlord Scarred | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Scarred | B- | 96 | 1.54 m | Day & Night | Like a typical Shade Kobold Warlord, but covered in old battle scars, with pale, light-starved coloring and oversized eyes. |
+| `pop_06104` | Great Labyrinth (Floors 41-90) Shade Kobold Warlord Alpha | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Alpha | B | 108 | 1.75 m | Day & Night | Like a typical Shade Kobold Warlord, but larger and scarred, and others of its kind follow it, with pale, light-starved coloring and oversized eyes. |
+| `pop_06105` | Iron Hold Shade Kobold Warlord Alpha | [[Regions/Iron Hold\|Iron Hold]] | Alpha | B | 108 | 1.75 m | Day & Night | Like a typical Shade Kobold Warlord, but larger and scarred, and others of its kind follow it, with slate-grey coloring and hardened hide. |
+| `pop_06106` | Great Labyrinth (Floors 1-40) Shade Kobold Warlord Albino | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Albino | B- | 96 | 1.4 m | Day & Night | Like a typical Shade Kobold Warlord, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06107` | Great Labyrinth (Floors 1-40) Shade Kobold Warlord | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Adult | C+ | 86 | 1.4 m | Day & Night | A typical adult Shade Kobold Warlord of this region, with pale, light-starved coloring and oversized eyes. |
+| `pop_06108` | Great Labyrinth (Floors 41-90) Shade Kobold Warlord Runt | [[Regions/Great Labyrinth (Floors 41-90)\|Great Labyrinth (Floors 41-90)]] | Runt | C- | 65 | 0.98 m | Day & Night | Like a typical Shade Kobold Warlord, but smaller and scrappier than usual, with pale, light-starved coloring and oversized eyes. |
+| `pop_06109` | Great Labyrinth (Floors 1-40) Shade Kobold Warlord Runt | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Runt | C- | 65 | 0.98 m | Day & Night | Like a typical Shade Kobold Warlord, but smaller and scrappier than usual, with pale, light-starved coloring and oversized eyes. |
 
 ## Design recipe
 

@@ -27,6 +27,10 @@ A cheerful receptionist who comments on every rank-up and faints at absurd feats
 - **dusk:** The Sleeping Griffon
 - **night:** Home above the guild hall
 
+## Story-state map
+
+This character can change with story flags. Use the state list to keep dialogue, appearance, availability and quest access consistent. The details remain collapsed below because they contain spoilers.
+
 ## Quests given
 
 - [[Quests/Rabbit Season|Rabbit Season]]
@@ -34,8 +38,11 @@ A cheerful receptionist who comments on every rank-up and faints at absurd feats
 - [[Quests/The Wooden Card|The Wooden Card]]
 - [[Quests/Mina's Lost Earring|Mina's Lost Earring]]
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]]
+- [[Quests/Weekly Board/Goblin Cull|Goblin Cull]]
+- [[Quests/Weekly Board/Herb Run|Herb Run]]
+- [[Quests/Weekly Board/Open Hunting Contract|Open Hunting Contract]]
 
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** From early Act III she is replaced by Lady Nocturne; the real Mina is imprisoned beneath Vharlen.
-> **After `act3_nocturne_replaces_mina`:** Guild receptionist (Lady Nocturne in disguise). Left-handed, forgets inside jokes, too composed; Whiskers hisses at her. Alternate rank-up lines.
-> **After `nocturne_unmasked`:** Guild receptionist. The real Mina, back at the counter; reunion scene plays once.
+> **After [[Systems/Flags/act3_nocturne_replaces_mina|act3_nocturne_replaces_mina]]:** Guild receptionist (Lady Nocturne in disguise). Left-handed, forgets inside jokes, too composed; Whiskers hisses at her. Alternate rank-up lines.
+> **After [[Systems/Flags/nocturne_unmasked|nocturne_unmasked]]:** Guild receptionist. The real Mina, back at the counter; reunion scene plays once.

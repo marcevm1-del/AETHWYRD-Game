@@ -142,3 +142,109 @@ Ring 0 passes when, in a 10-minute session against slimes, goblins and rabbits:
 - [ ] Firestorm makes people say "whoa."
 - [ ] Reaching S Style Rank feels earned and fun.
 - [ ] Nothing feels floaty: every hit has weight.
+
+## 13. Combat Readability and Player Choice
+
+The action should feel expressive without requiring the player to decode a wall of effects. Every dangerous action needs a readable **source → tell → active moment → recovery**. The tell may use color, silhouette, sound and movement together; color alone is never enough. Camera shake, impact flashes and effects must leave the enemy and player visible during the decision window.
+
+### The response ladder
+
+Give each attack a sensible set of answers, ordered from broadest to most demanding:
+
+1. **Leave the danger area:** move out of range or out of the marked zone.
+2. **Dodge:** use invulnerability and direction to avoid a committed strike.
+3. **Guard:** absorb a supported attack at a stamina cost.
+4. **Parry:** use timing for a higher-reward stagger or riposte.
+5. **Interrupt:** use a heavy, skill or companion action when the attack permits it.
+6. **Prevent:** use knowledge, terrain, element, stealth or preparation to stop the setup.
+
+Not every attack supports every answer. The enemy must signal the correct subset. No mandatory story boss should require the top timing tier; advanced play can improve speed, safety or style, but ordinary play has a valid route through readable movement and defense.
+
+### Targeting and camera responsibilities
+
+Lock-on answers “which enemy am I committing to?” Free aim answers “where exactly do I want this effect to land?” Soft targeting should reduce accidental misses without taking control away from the player. The current mode must be obvious in the reticle and camera response.
+
+When multiple enemies occupy the screen, maintain a clear visual hierarchy: the active target, the nearest imminent threat and the player’s current recovery state. Offscreen threats need a restrained direction cue and a sound source; do not solve them with constant camera snaps. Large enemy attacks should not be hidden by the boss’s own body or by the player’s effects.
+
+### Weapon identity as rhythm
+
+Weapons differ through the complete rhythm, not a damage multiplier alone:
+
+- **Reach:** how soon the player can connect and where the safe spacing sits.
+- **Commitment:** how long an attack occupies the player and how much recovery it carries.
+- **Control:** whether it interrupts, launches, pushes, pulls, binds or breaks guard.
+- **Mobility:** whether an attack advances, retreats, turns or holds ground.
+- **Air behavior:** how it launches, juggles or returns the player to the ground.
+- **Defense interaction:** whether it blocks, parries, deflects, dodges or protects allies.
+- **Resource rhythm:** whether it rewards steady combos, charged commitment, spell windows or precise counters.
+
+For each weapon family, author one simple opener, one reliable punish, one mobility or spacing option, one crowd-control option and one high-commitment payoff. A player should be able to identify a weapon’s rhythm after a short training-room trial before spending rare upgrade materials.
+
+### A mastery ladder, not a parry gate
+
+- **Entry:** ordinary chain, dodge and heal; the player can defeat common threats.
+- **Learning:** recognize one telegraph and punish one recovery.
+- **Fluency:** combine dodge, guard, spacing and skill use with weapon identity.
+- **Expression:** vary strings, use reactions, air routes, companion arts and environment.
+- **Mastery:** optimize boss openings, style score and risk without making lower tiers invalid.
+
+This ladder defines what combat should teach, not a mandatory tutorial sequence. Players can learn through a training yard, journal clips, companion remarks or a low-stakes encounter. Turn off tutorial reminders after a skill is demonstrated.
+
+## 14. Encounter Grammar
+
+Common fights should be short enough to preserve exploration flow, while elites and bosses earn longer attention through new decisions. Length is a tuning outcome, not a hard promise for every enemy. Scale pressure through **behavioral combinations**, not only larger health bars.
+
+### Common encounter
+
+One enemy or a small group demonstrates a readable behavior. The player can finish quickly with basic attacks, but can also practice a counter. Avoid stacking multiple unblockable attacks or status effects before the player has seen their tells.
+
+### Pack encounter
+
+Members have simple roles—flanker, ranged pest, defender or caller—so the player can choose a priority. Aggro tokens limit simultaneous high-pressure attacks. When a creature retreats to call help, give the player a visible chance to stop it or choose not to pursue.
+
+### Elite encounter
+
+An elite changes one expected rule: a familiar attack has a delayed follow-up, a creature guards a weak side, or weather changes its movement. Introduce the change with evidence or a distinctive tell. Keep at least one familiar opening so the player can apply existing knowledge.
+
+### Boss encounter
+
+A boss is a conversation through action: it presents a pattern, the player tests a hypothesis, then the fight confirms or corrects it. Prepare with a distinct silhouette, phase language, attack families, recovery windows, arena affordances and a clear defeat state. Phases should add or combine verbs, not merely increase speed and damage.
+
+Before an optional boss, display rank suitability and the known warning signs. Do not forbid an early challenge; communicate that it may be punishing and preserve a retreat path when fiction permits. A boss’s health, damage, poise and status resistance are tuned separately so one number does not make the encounter feel unfair.
+
+## 15. Reactions and Environmental Payoff
+
+Elemental reactions should reward setup and recognition. The UI records which element is present and what trigger caused the reaction; the visual effect communicates area and duration; audio marks activation without masking enemy telegraphs.
+
+Environmental reactions need clear boundaries. Fire can spread through authored dry grass, not every green surface. Water can conduct lightning only in readable volumes. Ice can create a temporary hazard or frozen target, but should not trap the player in an unavoidable loop. Use a small number of predictable material classes before expanding interactions across all regions.
+
+When a reaction causes a status, show the remaining time or condition and the valid counter. Freeze lasts for its configured duration and a heavy strike shatters it for the configured bonus; Storm Prison uses its configured brief stun. Bosses can resist or shorten a status, but communicate that resistance through a visible effect and data field rather than silently ignoring the player’s setup.
+
+## 16. Companion Actions and Party Fairness
+
+Companions are AI-controlled allies. The player can issue brief tactical intent—focus, hold, defend, use a skill or regroup—without switching to their character. The command wheel pauses or slows combat only if the selected mode says so, and every command has a clear acknowledgment.
+
+Companions contribute by filling a role, creating an opening, defending the player, applying a reaction or responding to a known enemy behavior. They must not make ordinary enemies impossible to read through overlapping effects. If a companion’s action interrupts a boss, the boss’s state and the reward window are visible to both player and party.
+
+Party investment should never be a hidden difficulty tax. Companions can provide advantages, but the player’s own defense, healing, recovery and damage must remain viable. Canon §5 governs mortality; ordinary combat failure does not permanently kill a companion unless the player deliberately enables the opt-in rule.
+
+## 17. Fight Review and Tuning
+
+For each test fight, record:
+
+- time from first threat cue to first player decision;
+- attacks seen, recognized and successfully answered;
+- hits taken by source and whether the tell was visible;
+- player movement, camera mode and target-switch errors;
+- combo variety and whether the weapon’s identity appeared;
+- companion actions and whether they helped or obscured;
+- recovery time after a mistake and the player’s understanding of why it happened;
+- whether the fight felt exciting, fair, repetitive, noisy or exhausting.
+
+Do not optimize for raw damage-per-second alone. A fast kill can still feel empty; a difficult fight can still feel fair. If players take damage without knowing why, improve signaling before reducing enemy damage. If they understand the fight but cannot recover from a single mistake, add a recovery window, clearer healing opportunity or tuning option.
+
+### Playtest matrix
+
+Test each early encounter with at least these approaches: dodge-focused, guard-focused, parry-focused, ranged/free-aim, low-APM/accessibility assists, and an under-level or under-equipped challenge. The target is not identical speed; it is that each reasonable approach has an intelligible success path and the encounter expresses its intended fantasy.
+
+Record settings alongside results. Difficulty, timing assists, camera shake, damage numbers and tutorial prompts change the experience; comparisons without those details are not useful.

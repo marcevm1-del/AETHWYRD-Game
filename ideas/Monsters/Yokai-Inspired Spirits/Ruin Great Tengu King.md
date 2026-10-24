@@ -22,23 +22,44 @@ tags: [monster, yokai-inspired-spirits]
 | HP · ATK · DEF · MATK · MDEF · SPD | 70021 · 1186 · 949 · 830 · 949 · 135 |
 | XP · gold | 26706 · 4286 |
 | Ring | 6 |
+| Rig · animation | [[Systems/Rigs/avian\|avian]] · `anim_avian` |
 | Habitats | [[Regions/Shen-Lu\|Shen-Lu]], [[Regions/Everdusk\|Everdusk]] |
 | Genre | Japanese Folklore |
 | Trope | Gentle and terrifying spirits (Natsume's Book of Friends, Mushishi, Inuyasha) |
 
 **Field note:** Weak to Light. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Peck | melee | 1 | 0 s | None | blue |
-| Swoop | dash | 1.4 | 6 s | None | blue |
-| Screech | debuff | 0 | 14 s | None | none |
-| Spirit Flame | magic | 1.2 | 8 s | None | blue |
-| Shadow Grasp | magic | 1.5 | 10 s | Dark | red |
+- **Rig:** [[Systems/Rigs/avian|avian]] (rigId); animation set `anim_avian`.
+- **Dimensions:** 2.76 m high × 6 m long × 10.32 m wide; prefab scale 10.
+- **Physics:** 3024 kg, gravity ×1, poise 1051, knockback resistance 0.29, death style `tumble_feathers_burst`.
+- **Navigation:** speed 7.67 m/s, turn 245°/s, stopping distance 1.6 m.
+- **Attack count:** 5; **signature:** a mask of red lacquer and a fan that summons typhoons.
 
-## Loot (`loot_yokai_sss`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Peck\|Peck]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Swoop\|Swoop]] | dash | 1.4 | 6 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Screech\|Screech]] | debuff | 0 | 14 s | None | none | Keep moving and read the animation; do not assume a safe block. |
+| [[Attacks/Spirit Flame\|Spirit Flame]] | magic | 1.2 | 8 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Shadow Grasp\|Shadow Grasp]] | magic | 1.5 | 10 s | Dark | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Ruin Great Tengu King is a **wild spirit** encountered at SSS+ rank, around level 294. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Light**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a mask of red lacquer and a fan that summons typhoons. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Shen-Lu|Shen-Lu]], [[Regions/Everdusk|Everdusk]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_avian`, animation set `anim_avian`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Yokai-Inspired Spirits SSS|loot_yokai_sss]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,31 @@ tags: [monster, yokai-inspired-spirits]
 | [[Items/Fox Fire\|Fox Fire]] | 30% | 1–1 |
 | [[Items/SSS-Rank Monster Core\|SSS-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Shen-Lu\|Shen-Lu]] | 6 | EX+, EX, SSS-, EX-, SSS+ | 267–300 | Day & Night |
+| [[Regions/Everdusk\|Everdusk]] | 5 | SSS-, EX-, SSS, EX, EX+ | 267–300 | Day & Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_05400` | Shen-Lu Ruin Great Tengu King Elderborn | [[Regions/Shen-Lu\|Shen-Lu]] | Elderborn | EX+ | 300 | 8.1 m | Day & Night | Like a typical Ruin Great Tengu King, but old and wise, with greying features and a cautious hunting style, with slate-grey coloring and hardened hide. |
+| `pop_05401` | Shen-Lu Ruin Great Tengu King Alpha | [[Regions/Shen-Lu\|Shen-Lu]] | Alpha | EX | 300 | 7.5 m | Day & Night | Like a typical Ruin Great Tengu King, but larger and scarred, and others of its kind follow it, with slate-grey coloring and hardened hide. |
+| `pop_05402` | Shen-Lu Ruin Great Tengu King Runt | [[Regions/Shen-Lu\|Shen-Lu]] | Runt | SSS- | 267 | 4.2 m | Day & Night | Like a typical Ruin Great Tengu King, but smaller and scrappier than usual, with slate-grey coloring and hardened hide. |
+| `pop_05403` | Shen-Lu Ruin Great Tengu King Scarred | [[Regions/Shen-Lu\|Shen-Lu]] | Scarred | EX- | 300 | 6.6 m | Day & Night | Like a typical Ruin Great Tengu King, but covered in old battle scars, with slate-grey coloring and hardened hide. |
+| `pop_05404` | Everdusk Ruin Great Tengu King Runt | [[Regions/Everdusk\|Everdusk]] | Runt | SSS- | 267 | 4.2 m | Day & Night | Like a typical Ruin Great Tengu King, but smaller and scrappier than usual, with moss-green coloring that blends with the undergrowth. |
+| `pop_05405` | Everdusk Ruin Great Tengu King Albino | [[Regions/Everdusk\|Everdusk]] | Albino | EX- | 300 | 6 m | Day & Night | Like a typical Ruin Great Tengu King, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05406` | Shen-Lu Ruin Great Tengu King | [[Regions/Shen-Lu\|Shen-Lu]] | Adult | SSS+ | 294 | 6 m | Day & Night | A typical adult Ruin Great Tengu King of this region, with slate-grey coloring and hardened hide. |
+| `pop_05407` | Everdusk Ruin Great Tengu King Juvenile | [[Regions/Everdusk\|Everdusk]] | Juvenile | SSS | 281 | 5.1 m | Day & Night | Like a typical Ruin Great Tengu King, but young, with brighter colors and unworn features, with moss-green coloring that blends with the undergrowth. |
+| `pop_05408` | Everdusk Ruin Great Tengu King Alpha | [[Regions/Everdusk\|Everdusk]] | Alpha | EX | 300 | 7.5 m | Day & Night | Like a typical Ruin Great Tengu King, but larger and scarred, and others of its kind follow it, with moss-green coloring that blends with the undergrowth. |
+| `pop_05409` | Shen-Lu Ruin Great Tengu King Albino | [[Regions/Shen-Lu\|Shen-Lu]] | Albino | EX- | 300 | 6 m | Day & Night | Like a typical Ruin Great Tengu King, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05410` | Everdusk Ruin Great Tengu King Elderborn | [[Regions/Everdusk\|Everdusk]] | Elderborn | EX+ | 300 | 8.1 m | Day & Night | Like a typical Ruin Great Tengu King, but old and wise, with greying features and a cautious hunting style, with moss-green coloring that blends with the undergrowth. |
 
 ## Design recipe
 

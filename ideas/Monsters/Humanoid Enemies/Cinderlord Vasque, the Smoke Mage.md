@@ -21,6 +21,7 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 24719 · 775 · 646 · 517 · 581 · 100 |
 | XP · gold | 199864 · 1815 |
 | Ring | 7 |
+| Rig · animation | [[Systems/Rigs/medium_biped\|medium_biped]] · `anim_medium_biped` |
 | Habitats | [[Regions/Cinderhole\|Cinderhole]] |
 | Tyrant | Yes |
 | Genre | Low Fantasy |
@@ -28,17 +29,37 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 
 **Field note:** Weak to Water. Waits in hiding. Perception skills and light sources reveal it.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Slash | melee | 1 | 0 s | None | blue |
-| Heavy Swing | melee | 1.6 | 6 s | None | red |
-| Guard Counter | counter | 1.3 | 10 s | None | blue |
-| Feint Strike | counter | 1.2 | 8 s | None | blue |
-| Ember Burst | magic | 1.5 | 10 s | Fire | red |
+- **Rig:** [[Systems/Rigs/medium_biped|medium_biped]] (rigId); animation set `anim_medium_biped`.
+- **Dimensions:** 1.9 m high × 0.57 m long × 0.61 m wide; prefab scale 1.056.
+- **Physics:** 89.2 kg, gravity ×1.5, poise 103, knockback resistance 0.45, death style `ragdoll`.
+- **Navigation:** speed 5.58 m/s, turn 290°/s, stopping distance 0.72 m.
+- **Attack count:** 5; **signature:** a gas mask of brass and lungs full of living smoke.
 
-## Loot (`loot_humanoid_enemy_a`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Slash\|Slash]] | melee | 1 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Heavy Swing\|Heavy Swing]] | melee | 1.6 | 6 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Guard Counter\|Guard Counter]] | counter | 1.3 | 10 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Feint Strike\|Feint Strike]] | counter | 1.2 | 8 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Ember Burst\|Ember Burst]] | magic | 1.5 | 10 s | Fire | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Cinderlord Vasque, the Smoke Mage is a **dread humanoid** encountered at A+ rank, around level 159. Its documented behaviour is *Ambush* and its AI pattern is *ambush_strike+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Water**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** a gas mask of brass and lungs full of living smoke. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Cinderhole|Cinderhole]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_medium_biped`, animation set `anim_medium_biped`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Humanoid Enemies A|loot_humanoid_enemy_a]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -47,6 +68,20 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 | [[Items/Bounty Proof\|Bounty Proof]] | 15% | 1–1 |
 | [[Items/A-Rank Monster Core\|A-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (1)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Cinderhole\|Cinderhole]] | 1 | A+ | 159–159 | Story |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_06748` | Cinderlord Vasque, the Smoke Mage | [[Regions/Cinderhole\|Cinderhole]] | Unique | A+ | 159 | 1.9 m | Story | Unique being; see the species entry. |
 
 ## Design recipe
 

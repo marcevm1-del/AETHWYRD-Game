@@ -4,7 +4,14 @@ tags: [family, goblinoids]
 ---
 # Goblinoids
 
-37 species. Sorted by level.
+37 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** F-, F, F+, E-, E, E+, D-, D, D+, C-, C, C+, B-, B, B+, A, A+, S, S+
+- **Element palette:** None, Nature, Wind, Light, Fire, Dark, Blood, Earth, Poison
+- **Level span:** 3–203
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

@@ -4,7 +4,14 @@ tags: [family, chimeras-mythic-beasts]
 ---
 # Chimeras & Mythic Beasts
 
-16 species. Sorted by level.
+16 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** B, B+, A-, A, A+, S, S+, SS, EX
+- **Element palette:** Poison, Lightning, Fire, Light, Earth, Void
+- **Level span:** 108–300
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|

@@ -22,23 +22,44 @@ tags: [monster, vesperites-moon-raiders]
 | HP · ATK · DEF · MATK · MDEF · SPD | 22108 · 388 · 452 · 904 · 840 · 90 |
 | XP · gold | 9993 · 1815 |
 | Ring | 7 |
+| Rig · animation | [[Systems/Rigs/spirit_float\|spirit_float]] · `anim_floating` |
 | Habitats | [[Regions/Sunscar\|Sunscar]], [[Regions/Lustrine Shores\|Lustrine Shores]] |
 | Genre | Cosmic Fantasy |
 | Trope | Serene moon-raiders harvesting gem people (Land of the Lustrous) |
 
 **Field note:** Weak to Dark. Attacks on sight. Expect a fight.
 
-## Attacks
+## Motion implementation
 
-| Attack | Kind | Power | Cooldown | Element | Telegraph |
-|---|---|---|---|---|---|
-| Chill Touch | melee | 0.9 | 0 s | None | blue |
-| Phase Lunge | dash | 1.3 | 7 s | None | red |
-| Wail | aoe | 1.2 | 12 s | None | red |
-| Moonglass Shard | ranged | 1.3 | 6 s | None | blue |
-| Radiant Pulse | magic | 1.5 | 10 s | Light | red |
+- **Rig:** [[Systems/Rigs/spirit_float|spirit_float]] (rigId); animation set `anim_floating`.
+- **Dimensions:** 3.5 m high × 1.05 m long × 2.24 m wide; prefab scale 3.5.
+- **Physics:** 4.1 kg, gravity ×0, poise 49, knockback resistance 0.15, death style `dissolve_into_motes`.
+- **Navigation:** speed 11.72 m/s, turn 385°/s, stopping distance 1.27 m.
+- **Attack count:** 5; **signature:** six wings of red glass and a singing mask.
 
-## Loot (`loot_vesperite_a`)
+## Attacks and responses
+
+| Attack | Kind | Power | Cooldown | Element | Telegraph | Player read |
+|---|---|---|---|---|---|---|
+| [[Attacks/Chill Touch\|Chill Touch]] | melee | 0.9 | 0 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Phase Lunge\|Phase Lunge]] | dash | 1.3 | 7 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Wail\|Wail]] | aoe | 1.2 | 12 s | None | red | Treat as unblockable; dodge clear of the line or area. |
+| [[Attacks/Moonglass Shard\|Moonglass Shard]] | ranged | 1.3 | 6 s | None | blue | Readable standard attack; guard, dodge or use a practiced parry. |
+| [[Attacks/Radiant Pulse\|Radiant Pulse]] | magic | 1.5 | 10 s | Light | red | Treat as unblockable; dodge clear of the line or area. |
+
+## Field guide
+
+Phantom Crimson Choir Seraph is a **horror lunar raider** encountered at A+ rank, around level 159. Its documented behaviour is *Aggressive* and its AI pattern is *aggressive_chase+stalker*. Treat these as combat promises: observe its opening, learn the tell, then punish the recovery instead of trading blindly.
+
+**Hunt preparation:** the recorded weakness is **Dark**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
+
+**Signature read:** six wings of red glass and a singing mask. Watch for its tell and leave a response window before committing to a long combo.
+
+**Where it fits:** recorded in [[Regions/Sunscar|Sunscar]], [[Regions/Lustrine Shores|Lustrine Shores]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
+
+**Production note:** rig `rig_floating`, animation set `anim_floating`; keep silhouette, movement and signature attack legible at gameplay camera distance.
+
+## Loot ([[Loot Tables/Vesperites (Moon Raiders) A|loot_vesperite_a]])
 
 | Item | Chance | Amount |
 |---|---|---|
@@ -46,6 +67,31 @@ tags: [monster, vesperites-moon-raiders]
 | [[Items/Captured Soul-Light\|Captured Soul-Light]] | 30% | 1–1 |
 | [[Items/A-Rank Monster Core\|A-Rank Monster Core]] | 100% | 1–1 |
 | [[Items/Relic Shard\|Relic Shard]] | 0% | 1–1 |
+
+## Regional populations (11)
+
+These are presentation and spawn variants of this species, not separate core combat kits. Region and spawn timing carry the variation; keep the base family’s combat identity intact unless a data-backed modifier says otherwise.
+
+| Region | Forms | Rank span | Level span | Spawn windows |
+|---|---:|---|---|---|
+| [[Regions/Lustrine Shores\|Lustrine Shores]] | 5 | S+, A+, A, S, S- | 146–203 | Night |
+| [[Regions/Sunscar\|Sunscar]] | 6 | S-, A-, S, A+, S+ | 132–203 | Night |
+
+### Complete population register
+
+| ID | Named form | Region | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_05498` | Lustrine Shores Phantom Crimson Choir Seraph Elderborn | [[Regions/Lustrine Shores\|Lustrine Shores]] | Elderborn | S+ | 203 | 4.73 m | Night | Like a typical Phantom Crimson Choir Seraph, but old and wise, with greying features and a cautious hunting style, with salt-crusted, barnacle-flecked hide. |
+| `pop_05499` | Sunscar Phantom Crimson Choir Seraph Albino | [[Regions/Sunscar\|Sunscar]] | Albino | S- | 173 | 3.5 m | Night | Like a typical Phantom Crimson Choir Seraph, but a rare pale form with white skin or fur and red eyes. |
+| `pop_05500` | Lustrine Shores Phantom Crimson Choir Seraph | [[Regions/Lustrine Shores\|Lustrine Shores]] | Adult | A+ | 159 | 3.5 m | Night | A typical adult Phantom Crimson Choir Seraph of this region, with salt-crusted, barnacle-flecked hide. |
+| `pop_05501` | Sunscar Phantom Crimson Choir Seraph Runt | [[Regions/Sunscar\|Sunscar]] | Runt | A- | 132 | 2.45 m | Night | Like a typical Phantom Crimson Choir Seraph, but smaller and scrappier than usual, with sun-bleached, sand-scoured coloring. |
+| `pop_05502` | Sunscar Phantom Crimson Choir Seraph Alpha | [[Regions/Sunscar\|Sunscar]] | Alpha | S | 188 | 4.38 m | Night | Like a typical Phantom Crimson Choir Seraph, but larger and scarred, and others of its kind follow it, with sun-bleached, sand-scoured coloring. |
+| `pop_05503` | Lustrine Shores Phantom Crimson Choir Seraph Juvenile | [[Regions/Lustrine Shores\|Lustrine Shores]] | Juvenile | A | 146 | 2.98 m | Night | Like a typical Phantom Crimson Choir Seraph, but young, with brighter colors and unworn features, with salt-crusted, barnacle-flecked hide. |
+| `pop_05504` | Sunscar Phantom Crimson Choir Seraph Scarred | [[Regions/Sunscar\|Sunscar]] | Scarred | S- | 173 | 3.85 m | Night | Like a typical Phantom Crimson Choir Seraph, but covered in old battle scars, with sun-bleached, sand-scoured coloring. |
+| `pop_05505` | Sunscar Phantom Crimson Choir Seraph | [[Regions/Sunscar\|Sunscar]] | Adult | A+ | 159 | 3.5 m | Night | A typical adult Phantom Crimson Choir Seraph of this region, with sun-bleached, sand-scoured coloring. |
+| `pop_05506` | Sunscar Phantom Crimson Choir Seraph Elderborn | [[Regions/Sunscar\|Sunscar]] | Elderborn | S+ | 203 | 4.73 m | Night | Like a typical Phantom Crimson Choir Seraph, but old and wise, with greying features and a cautious hunting style, with sun-bleached, sand-scoured coloring. |
+| `pop_05507` | Lustrine Shores Phantom Crimson Choir Seraph Alpha | [[Regions/Lustrine Shores\|Lustrine Shores]] | Alpha | S | 188 | 4.38 m | Night | Like a typical Phantom Crimson Choir Seraph, but larger and scarred, and others of its kind follow it, with salt-crusted, barnacle-flecked hide. |
+| `pop_05508` | Lustrine Shores Phantom Crimson Choir Seraph Albino | [[Regions/Lustrine Shores\|Lustrine Shores]] | Albino | S- | 173 | 3.5 m | Night | Like a typical Phantom Crimson Choir Seraph, but a rare pale form with white skin or fur and red eyes. |
 
 ## Design recipe
 

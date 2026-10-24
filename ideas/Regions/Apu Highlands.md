@@ -16,6 +16,16 @@ tags: [region, surface]
 | Siege faction · state | orc_giant · besieged |
 | Settlements | terrace cities |
 
+## Siege encounter plan
+
+Faction **orc_giant**, A–S band. The templates below are the planned defense sequence; settlements remain safe from permanent destruction under Canon §5.
+
+- **Wave 1:** 6 × [[Monsters/Lycanthropes/Blood Vesper Alpha|Blood Vesper Alpha]] (B)
+
+- **Wave 2:** 5 × [[Monsters/Lycanthropes/Blood Vesper Alpha|Blood Vesper Alpha]] (B), 3 × [[Monsters/Kobolds/Kobold Tunnel-Queen|Kobold Tunnel-Queen]] (B)
+
+- **Wave 3:** 6 × [[Monsters/Lycanthropes/Blood Vesper Alpha|Blood Vesper Alpha]] (B), 4 × [[Monsters/Lycanthropes/Fenrir-Blooded Lord|Fenrir-Blooded Lord]] (A); lieutenant: [[Monsters/Lycanthropes/Fenrir-Blooded Lord|Fenrir-Blooded Lord]]
+
 > **The Carved Mountains.** Terrace cities climb mountains that were carved by hand, though no one knows whose. Ukhu-Tal, the first stone giant ever made, has woken to see what was done with them.
 >
 > *Highland families keep knotted cords recording every terrace. The oldest cords record a giant's name.*
@@ -75,9 +85,13 @@ Thin cold air and woodsmoke; llama bells on the stone roads; maize beer and roas
 - Ukhu-Tal has spoken to a child herding llamas, and she is the only person he will talk to.
 - A terrace wall has collapsed onto a village, and a family is trapped under the stones.
 
+## How to read this region
+
+Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
+
 ## Fauna
 
-- **Shulon** (Herbivore): A long-necked, llama-like climber used on the terrace roads; a ground mount.
+- [[Fauna/Shulon|Shulon]] (Herbivore): A long-necked, llama-like climber used on the terrace roads; a ground mount.
 
 ## Monsters (4)
 
@@ -87,3 +101,25 @@ Thin cold air and woodsmoke; llama bells on the stone roads; maize beer and roas
 | [[Monsters/Lycanthropes/Blood Vesper Alpha\|Blood Vesper Alpha]] | [[Families/Lycanthropes\|Lycanthropes]] | B | 108 |
 | [[Monsters/Lycanthropes/Fenrir-Blooded Lord\|Fenrir-Blooded Lord]] | [[Families/Lycanthropes\|Lycanthropes]] | A | 146 |
 | [[Monsters/Orcs, Ogres & Giants/Ukhu-Tal, Stone Giant of the First Making\|Ukhu-Tal, Stone Giant of the First Making]] | [[Families/Orcs, Ogres & Giants\|Orcs, Ogres & Giants]] | S | 188 |
+
+## Population and spawn patterns
+
+The data records **7 named population forms** across **4 species** here. These variants describe age, condition, size, appearance or timing; use them to make repeat visits feel alive while keeping regional identity legible. Recorded spawn windows: Day & Night (3), Night (3), Story (1).
+
+### Complete local population register
+
+| ID | Named form | Species | Tier | Rank | Level | Size | Spawn | Appearance / field distinction |
+|---|---|---|---|---|---:|---:|---|---|
+| `pop_00373` | Apu Highlands Kobold Tunnel-Queen Juvenile | [[Monsters/Kobolds/Kobold Tunnel-Queen\|Kobold Tunnel-Queen]] | Juvenile | B- | 96 | 1.36 m | Day & Night | Like a typical Kobold Tunnel-Queen, but young, with brighter colors and unworn features, with slate-grey coloring and hardened hide. |
+| `pop_00575` | Apu Highlands Blood Vesper Alpha Juvenile | [[Monsters/Lycanthropes/Blood Vesper Alpha\|Blood Vesper Alpha]] | Juvenile | B- | 96 | 2.72 m | Night | Like a typical Blood Vesper Alpha, but young, with brighter colors and unworn features, with slate-grey coloring and hardened hide. |
+| `pop_00580` | Apu Highlands Blood Vesper Alpha | [[Monsters/Lycanthropes/Blood Vesper Alpha\|Blood Vesper Alpha]] | Adult | B | 108 | 3.2 m | Night | A typical adult Blood Vesper Alpha of this region, with slate-grey coloring and hardened hide. |
+| `pop_00585` | Apu Highlands Blood Vesper Alpha Elderborn | [[Monsters/Lycanthropes/Blood Vesper Alpha\|Blood Vesper Alpha]] | Elderborn | A | 146 | 4.32 m | Night | Like a typical Blood Vesper Alpha, but old and wise, with greying features and a cautious hunting style, with slate-grey coloring and hardened hide. |
+| `pop_00597` | Apu Highlands Fenrir-Blooded Lord Runt | [[Monsters/Lycanthropes/Fenrir-Blooded Lord\|Fenrir-Blooded Lord]] | Runt | B+ | 120 | 2.52 m | Day & Night | Like a typical Fenrir-Blooded Lord, but smaller and scrappier than usual, with slate-grey coloring and hardened hide. |
+| `pop_00604` | Apu Highlands Fenrir-Blooded Lord Albino | [[Monsters/Lycanthropes/Fenrir-Blooded Lord\|Fenrir-Blooded Lord]] | Albino | A+ | 159 | 3.6 m | Day & Night | Like a typical Fenrir-Blooded Lord, but a rare pale form with white skin or fur and red eyes. |
+| `pop_06751` | Ukhu-Tal, Stone Giant of the First Making | [[Monsters/Orcs, Ogres & Giants/Ukhu-Tal, Stone Giant of the First Making\|Ukhu-Tal, Stone Giant of the First Making]] | Unique | S | 188 | 25 m | Story | Unique being; see the species entry. |
+
+**Ecology rule:** population variety should signal a cause—season, time, food, migration, siege pressure or local adaptation. Do not use sheer count as a substitute for meaningful regional identity.
+
+## Ecological neighbours
+
+Shared biomes suggest plausible migration and trade routes, not identical default spawns: [[Regions/Iron Hold|Iron Hold]], [[Regions/Hoshizora|Hoshizora]], [[Regions/Frostveil|Frostveil]], [[Regions/Shen-Lu|Shen-Lu]], [[Regions/Haneul|Haneul]], [[Regions/Zarvan|Zarvan]], [[Regions/Stormreach|Stormreach]], [[Regions/Dragon Spine|Dragon Spine]].

@@ -4,7 +4,14 @@ tags: [family, the-headless]
 ---
 # The Headless
 
-6 species. Sorted by level.
+6 species in this family, sorted by level. Use this page to compare silhouette, threat, elemental identity and encounter role before opening an individual field guide.
+
+## Family profile
+
+- **Rank span:** C, B-, B, A-, S, S+
+- **Element palette:** Dark, Void, Light
+- **Level span:** 76–203
+- **Design test:** every variant should preserve a recognizable family silhouette while changing at least one gameplay read (reach, speed, area control, durability or attack cadence). Avoid reskin-only variants with identical combat tells.
 
 | Monster | Rank | Level | Element | Menace |
 |---|---|---|---|---|
