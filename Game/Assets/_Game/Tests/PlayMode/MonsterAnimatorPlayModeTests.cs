@@ -85,6 +85,21 @@ namespace Ascend.Game.Tests
         }
 
         [UnityTest]
+        public IEnumerator FlyersHoverAndSpiritsFloatLow()
+        {
+            var moth = Spawn("mon_lantern_moth", new Vector3(-2, 0, 6), false);
+            var wisp = Spawn("mon_wisp", new Vector3(2, 0, 6), false);
+            var dragonless = Spawn("mon_goblin", new Vector3(0, 0, 8), false);
+            for (int i = 0; i < 30; i++) yield return null;
+            Assert.AreEqual(MonsterAnimator.Style.Flyer, moth.Kind);
+            Assert.AreEqual(MonsterAnimator.Style.Flyer, wisp.Kind);
+            Assert.AreEqual(MonsterAnimator.Style.Biped, dragonless.Kind, "walkers stay on the ground");
+            Assert.Greater(moth.PoseOffset.y, 0.45f, "the moth hovers at about sword height");
+            Assert.Less(wisp.PoseOffset.y, moth.PoseOffset.y, "spirits drift lower");
+            Assert.Greater(wisp.PoseOffset.y, 0.1f, "but still off the ground");
+        }
+
+        [UnityTest]
         public IEnumerator SlimeBreathesAndHopsWhenMoving()
         {
             var a = Spawn("mon_blue_slime", new Vector3(0, 0, 6), false);

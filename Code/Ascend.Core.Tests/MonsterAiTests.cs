@@ -121,4 +121,13 @@ static class MonsterStunTests
         for (int i = 0; i < 10; i++) b.Tick(1.0 / 60, s);
         Assert.True(b.State != AiState.Staggered, "free again afterwards");
     }
+
+    public static void FlyersAreReadFromMotionData()
+    {
+        Assert.True(Repo.Db.Motion["mon_lantern_moth"].Locomotion.Flies, "moths fly");
+        Assert.True(Repo.Db.Motion["mon_giant_crow"].Locomotion.Flies, "crows fly");
+        Assert.True(Repo.Db.Motion["mon_ghost"].Locomotion.Flies, "ghosts float");
+        Assert.True(!Repo.Db.Motion["mon_goblin"].Locomotion.Flies, "goblins walk");
+        Assert.True(Repo.Db.Motion["mon_lantern_moth"].HeightM > 0, "heights are read");
+    }
 }

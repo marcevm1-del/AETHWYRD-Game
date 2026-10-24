@@ -69,4 +69,4 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 
 **Controls** (`12_Systems/hud_and_ui.md` §15): WASD/left stick move · Shift/B dodge (hold to sprint) · Space/A jump · LMB/X light · RMB/Y heavy (hold to charge; after two lights = launcher; in the air = slam) · Q/RT block/parry · MMB/R3 lock-on · 1–4 or RB + face skills · R or L3+R3 Ultimate · G or D-pad up Fire Bomb · Tab/Esc/Start Status Window.
 
-**Tests:** 100 rules + 64 Unity PlayMode.
+**Tests:** 101 rules + 65 Unity PlayMode.

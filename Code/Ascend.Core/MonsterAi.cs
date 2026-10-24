@@ -11,6 +11,7 @@ namespace Ascend.Core
     {
         public string SpeciesId { get; set; }
         public double SizeMeters { get; set; }
+        public double HeightM { get; set; }
         public string RigKey { get; set; }
         public LocomotionData Locomotion { get; set; } = new LocomotionData();
         public MenaceData Menace { get; set; } = new MenaceData();
@@ -31,7 +32,16 @@ namespace Ascend.Core
         public double RetreatHpPct { get; set; }
     }
 
-    public sealed class LocomotionData { public double PlayRate { get; set; } = 1; public double TurnDegPerSec { get; set; } }
+    public sealed class LocomotionData
+    {
+        public double PlayRate { get; set; } = 1;
+        public double TurnDegPerSec { get; set; }
+        /// <summary>"true", "false" or "some_variants" (motion.json).</summary>
+        public string CanFly { get; set; }
+        /// <summary>"true", "false" or "brief" (perches between flights).</summary>
+        public string Hovers { get; set; }
+        public bool Flies => CanFly == "true";
+    }
 
     public sealed class MenaceData { public string Label { get; set; } public string Posture { get; set; } public double SquashStretch { get; set; } = 1; }
 

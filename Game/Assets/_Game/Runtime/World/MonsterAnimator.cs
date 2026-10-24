@@ -10,13 +10,15 @@ namespace Ascend.Game
     ///   blob   — breathing wobble, squash → stretch → arc → land-squash hops, squash low to wind up, stretch to strike
     ///   biped  — hunched posture, walk bob and sway, lean with speed, pull back to wind up, lunge to strike
     ///   quad   — hops in bursts, sits up to listen when idle, crouches horn-down to wind up, stretches into a dash
+    ///   flyer  — hovers and bobs (spirits float low), pitches forward and banks when moving, rises to wind up, dives to
+    ///            strike, flutters down on death (wyverns and dragons land to fight, so they keep their ground style)
     /// Every style: recoil on hits, a wobble while staggered, a tumble in the air, and a death collapse before vanishing.
     /// Uses game time, so hit-stop freezes the pose and Flash Time slows it.
     /// </summary>
     [RequireComponent(typeof(MonsterDummy))]
     public sealed class MonsterAnimator : MonoBehaviour
     {
-        public enum Style { Blob, Biped, Quad }
+        public enum Style { Blob, Biped, Quad, Flyer }
 
         public const float DeathSec = 0.6f;
 
@@ -25,7 +27,7 @@ namespace Ascend.Game
         Transform _visual;
         Vector3 _lastPos;
         float _speed, _phase, _t, _hitT = -1f, _deathT = -1f, _idleEvent, _playRate = 1f, _postureDeg;
-        float _squashAmount = 1f;
+        float _squashAmount = 1f, _hover, _lastYaw;
 
         public Style Kind { get; private set; } = Style.Biped;
         public Transform Visual => _visual;
@@ -46,12 +48,17 @@ namespace Ascend.Game
         void Start()
         {
             _lastPos = transform.position;
+            _lastYaw = transform.eulerAngles.y;
             if (AscendData.Db.Motion.TryGetValue(_body.SpeciesId, out var m))
             {
                 string rig = m.RigKey ?? "";
-                Kind = rig.Contains("blob") || rig.Contains("amorphous") ? Style.Blob
+                bool flyer = m.Locomotion != null && m.Locomotion.Flies && !rig.Contains("dragon") && !rig.Contains("wyvern");
+                Kind = flyer ? Style.Flyer
+                     : rig.Contains("blob") || rig.Contains("amorphous") ? Style.Blob
                      : rig.StartsWith("quad") || rig.Contains("hexapod") || rig.Contains("arachnid") ? Style.Quad
                      : Style.Biped;
+                // Spirits drift just off the ground; winged things hover at about sword height.
+                if (Kind == Style.Flyer) _hover = rig.Contains("spirit") ? 0.25f : Mathf.Clamp(1.6f - (float)m.HeightM, 0.6f, 1.3f);
                 _playRate = (float)(m.Locomotion?.PlayRate > 0 ? m.Locomotion.PlayRate : 1.0);
                 _squashAmount = (float)(m.Menace?.SquashStretch > 0 ? m.Menace.SquashStretch : 1.0);
                 string posture = m.Menace?.Posture ?? "";
@@ -108,6 +115,9 @@ namespace Ascend.Game
             Vector3 d = transform.position - _lastPos; d.y = 0f;
             _speed = Mathf.Lerp(_speed, d.magnitude / dt, 1f - Mathf.Exp(-12f * dt));
             _lastPos = transform.position;
+            float yaw = transform.eulerAngles.y;
+            float turn = Mathf.DeltaAngle(_lastYaw, yaw) / dt;
+            _lastYaw = yaw;
 
             Vector3 pos = Vector3.zero, scale = Vector3.one;
             Vector3 euler = new Vector3(_postureDeg, 0f, 0f);
@@ -149,6 +159,11 @@ namespace Ascend.Game
                 scale += new Vector3(0.12f, -0.15f, 0.12f) * k * _squashAmount;
                 if (_hitT > 0.6f) _hitT = -1f;
             }
+            if (Kind == Style.Flyer && !_body.IsDead)
+            {
+                pos.y += _hover + 0.08f * Mathf.Sin(_t * Mathf.PI * 2f / 1.2f); // hover and bob
+                euler.z -= Mathf.Clamp(turn * 0.08f, -35f, 35f);              // bank into turns
+            }
             Apply(pos, scale, euler);
         }
 
@@ -170,6 +185,9 @@ namespace Ascend.Game
                     break;
                 case Style.Biped:
                     euler.z = 3f * Mathf.Sin(_t * Mathf.PI * 2f / 2.5f); // weight shift foot to foot
+                    break;
+                case Style.Flyer:
+                    euler.z = 6f * Mathf.Sin(_t * Mathf.PI * 2f / 0.9f); // drift side to side
                     break;
                 case Style.Quad:
                     _idleEvent -= adt;
@@ -202,6 +220,9 @@ namespace Ascend.Game
                     euler.x += Mathf.Lerp(0f, 35f - _postureDeg, Mathf.Clamp01(_speed / 5f)); // lean with speed
                     break;
                 }
+                case Style.Flyer:
+                    euler.x += Mathf.Lerp(0f, 25f, Mathf.Clamp01(_speed / 4f)); // pitch into the flight
+                    break;
                 case Style.Quad:
                 {
                     _phase = (_phase + _speed * adt / 0.9f) % 1f; // one bound per 0.9 m
@@ -221,6 +242,7 @@ namespace Ascend.Game
                 case Style.Blob: scale = new Vector3(1f + 0.25f * e * _squashAmount, 1f - 0.4f * e * _squashAmount, 1f + 0.25f * e * _squashAmount); break;
                 case Style.Biped: euler.x -= 25f * e; pos.z = -0.12f * e; euler.y = -15f * e; break; // pull the blade back
                 case Style.Quad: scale = new Vector3(1f, 1f - 0.2f * e, 1f + 0.05f * e); euler.x += 12f * e; break; // crouch, horn down
+                case Style.Flyer: pos.y = 0.4f * e; euler.x -= 30f * e; pos.z = -0.2f * e; break; // rise and rear back
             }
             pos.x = 0.015f * Mathf.Sin(_t * 70f) * e; // a tremble that grows to the strike
         }
@@ -232,6 +254,7 @@ namespace Ascend.Game
                 case Style.Blob: scale = new Vector3(0.8f, 1.1f, 1.45f); pos.z = 0.25f; break;
                 case Style.Biped: euler.x += 30f; pos.z = 0.3f; euler.y = 20f; break;
                 case Style.Quad: scale = new Vector3(0.9f, 0.9f, 1.35f); euler.x += 15f; pos.z = 0.3f; break;
+                case Style.Flyer: pos.y = -_hover * 0.6f; euler.x += 40f; pos.z = 0.4f; break; // dive at the target
             }
         }
 
@@ -240,6 +263,7 @@ namespace Ascend.Game
             switch (Kind)
             {
                 case Style.Blob: scale = new Vector3(1f + 0.6f * p, Mathf.Lerp(1f, 0.08f, p), 1f + 0.6f * p); break; // splats
+                case Style.Flyer: pos.y = _hover * (1f - p * p); euler.z = 200f * p; break;                        // flutters down
                 default: euler.z = 90f * (p * p); pos.y = -0.1f * p; break;                                         // topples
             }
         }
