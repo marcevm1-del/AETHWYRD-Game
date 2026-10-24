@@ -131,11 +131,11 @@ namespace Ascend.Game
             var p = Roster.Add(m.SpeciesId, Name(m));
             var quests = GetComponent<PlayerQuests>();
             if (quests != null) quests.Log.OnTame(m.SpeciesId);
-            if (p.Active) { MakePartner(m); Toast($"{p.Name} joins you!", 5f); }
+            if (p.Active) { MakePartner(m, p); Toast($"{p.Name} joins you!", 5f); }
             else { Destroy(MonsterSpawner.RootOf(m)); Toast($"{p.Name} is tamed and heads to your ranch (three travel with you).", 5f); }
         }
 
-        void MakePartner(MonsterDummy m)
+        void MakePartner(MonsterDummy m, PartnerData data)
         {
             var ai = m.GetComponent<MonsterController>();
             if (ai != null) { ai.enabled = false; Destroy(ai); } // off now; the component goes at the end of the frame
@@ -143,10 +143,65 @@ namespace Ascend.Game
             m.Heal(m.MaxHp);
             var f = m.gameObject.AddComponent<PartnerFollower>();
             f.Slot = _following.Count;
+            f.Data = data;
+            f.SharedVictory += OnSharedVictory;
             _following.Add(f);
         }
 
         void OnHitLanded(MonsterDummy m, DamageResult r) { if (Encounter != null) Encounter.Attacked(); }
+
+        void OnSharedVictory(PartnerFollower f)
+        {
+            if (f.Data == null || !Partners.Assist(f.Data, T)) return;
+            Toast($"{f.Data.Name}'s bond grows: {f.Data.Bond}/{T.MaxBond}" + (Partners.CanEvolve(f.Data, AscendData.Db, T) ? " — it's ready to evolve (bag, I)" : ""), 5f);
+        }
+
+        // ---------------------------------------------------------------- the partner list (bag window)
+        public bool SetActive(PartnerData p, bool active)
+        {
+            if (!Roster.SetActive(p, active)) return false;
+            if (active) SpawnPartner(p);
+            else { var f = _following.FirstOrDefault(x => x != null && x.Data == p); if (f != null) Despawn(f); }
+            Reslot();
+            return true;
+        }
+
+        public void Release(PartnerData p)
+        {
+            var f = _following.FirstOrDefault(x => x != null && x.Data == p);
+            if (f != null) Despawn(f);
+            Roster.Release(p);
+            Reslot();
+            Toast($"{p.Name} returns to the wild.");
+        }
+
+        /// <summary>Evolves a partner into one of its variants (Bond 5); an active one changes in front of you.</summary>
+        public bool Evolve(PartnerData p, string branchId)
+        {
+            if (!Partners.Evolve(p, branchId, AscendData.Db, T)) return false;
+            var f = _following.FirstOrDefault(x => x != null && x.Data == p);
+            if (f != null) { var at = f.transform.position; Despawn(f); SpawnPartner(p, at); Reslot(); }
+            string to = AscendData.Db.Species[branchId].Name;
+            Toast($"{p.Name} evolved into a {to}!", 6f);
+            return true;
+        }
+
+        void SpawnPartner(PartnerData p, Vector3? at = null)
+        {
+            var pos = at ?? transform.position - transform.forward * 2.5f;
+            var m = MonsterSpawner.Spawn(MonsterSpawner.SceneTemplates, p.SpeciesId, pos, transform.position);
+            if (m != null) MakePartner(m, p);
+        }
+
+        void Despawn(PartnerFollower f)
+        {
+            _following.Remove(f);
+            f.SharedVictory -= OnSharedVictory;
+            f.enabled = false;
+            Destroy(MonsterSpawner.RootOf(f.Body));
+        }
+
+        void Reslot() { for (int i = 0; i < _following.Count; i++) if (_following[i] != null) _following[i].Slot = i; }
 
         void Release(bool remember)
         {
@@ -184,16 +239,11 @@ namespace Ascend.Game
         /// <summary>Restores the roster and brings the active partners back into the world beside you.</summary>
         public void Load(IEnumerable<PartnerData> partners)
         {
-            foreach (var f in _following) if (f != null) Destroy(MonsterSpawner.RootOf(f.GetComponent<MonsterDummy>()));
+            foreach (var f in _following.ToList()) if (f != null) Despawn(f);
             _following.Clear();
             Roster.Load(partners);
             int i = 0;
-            foreach (var p in Roster.Active)
-            {
-                var at = transform.position - transform.forward * 2.5f + transform.right * (i++ - 1) * 1.2f;
-                var m = MonsterSpawner.Spawn(MonsterSpawner.SceneTemplates, p.SpeciesId, at, transform.position);
-                if (m != null) MakePartner(m);
-            }
+            foreach (var p in Roster.Active) SpawnPartner(p, transform.position - transform.forward * 2.5f + transform.right * (i++ - 1) * 1.2f);
         }
     }
 }

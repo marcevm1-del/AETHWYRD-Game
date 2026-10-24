@@ -86,7 +86,10 @@ namespace Ascend.Game
             if (_player.IsDead) { ReleaseToken(); ShowTelegraph(false); return; } // the player has fallen: stand down
             if (_body.IsAirborne) { ReleaseToken(); ShowTelegraph(false); return; } // juggled: no thinking in the air
 
-            Vector3 toPlayer = _player.transform.position - transform.position; toPlayer.y = 0;
+            // Target: you, unless a partner draws it (a Vanguard close by, or a partner fighting it that's closer than you).
+            _partnerTarget = PickPartnerTarget();
+            Vector3 targetPos = _partnerTarget != null ? _partnerTarget.transform.position : _player.transform.position;
+            Vector3 toPlayer = targetPos - transform.position; toPlayer.y = 0;
             Vector3 toHome = _home - transform.position; toHome.y = 0;
             bool hasToken = _holdsToken || AggroDirector.Tokens.Holders.Count < AggroDirector.Tokens.Capacity;
             var cmd = _brain.Tick(dt, new AiSense
@@ -140,6 +143,23 @@ namespace Ascend.Game
         ///   charge / leap  → a straight-line dash that can't turn; a miss into an obstacle leaves it stuck (punish window)
         ///   melee / heavy / grab / aoe → an immediate hit check in front (aoe all around)
         /// </summary>
+        MonsterDummy _partnerTarget;
+        public MonsterDummy PartnerTarget => _partnerTarget;
+
+        MonsterDummy PickPartnerTarget()
+        {
+            MonsterDummy best = null; float bestD = float.MaxValue;
+            float toPlayer = Vector3.Distance(Flat(_player.transform.position), Flat(transform.position));
+            foreach (var f in PartnerFollower.ActiveFollowers)
+            {
+                if (f == null || f.Body == null || f.Body.IsDead) continue;
+                float d = Vector3.Distance(Flat(f.transform.position), Flat(transform.position));
+                bool draws = (f.Role == PartnerRole.Vanguard && d <= 6f) || (f.Target == _body && d < toPlayer);
+                if (draws && d < bestD) { best = f.Body; bestD = d; }
+            }
+            return best;
+        }
+
         void Strike(Vector3 toPlayer)
         {
             var atk = _brain.CurrentAttack; var t = _brain.CurrentTiming;
@@ -147,6 +167,13 @@ namespace Ascend.Game
             Strikes++;
             int damage = RollDamage(atk.Power);
             var telegraph = _brain.CurrentTelegraph;
+            if (_partnerTarget != null)
+            {
+                // Partners don't parry or dodge (yet): ranged attacks and charges simply land if it's in reach.
+                float partnerReach = MonsterBrain.IsRanged(t.Kind) ? 15f : MonsterBrain.IsGapCloser(t.Kind) ? DashMaxM : (float)(_brain.ReachOf(t) + 0.6);
+                if (toPlayer.magnitude <= partnerReach) _partnerTarget.TakeHit(damage, HitWeight.Medium, transform.position, 3);
+                return;
+            }
             if (MonsterBrain.IsRanged(t.Kind))
             {
                 MonsterProjectile.Launch(transform.position + Vector3.up * 0.8f + transform.forward * 0.5f, _player, damage, telegraph, _body,

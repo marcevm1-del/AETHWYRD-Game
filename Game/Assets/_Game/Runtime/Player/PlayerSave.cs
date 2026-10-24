@@ -76,7 +76,7 @@ namespace Ascend.Game
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
             if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
             if (TryGetComponent<PlayerTaming>(out var taming))
-                s.Partners = taming.Roster.All.Select(p => new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active, Bond = p.Bond }).ToList();
+                s.Partners = taming.Roster.All.Select(p => new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active, Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved }).ToList();
             var siege = SiegeDirector.Instance;
             if (siege != null)
                 s.Sieges = new System.Collections.Generic.Dictionary<string, SiegeSave>

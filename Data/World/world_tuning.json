@@ -76,6 +76,12 @@
   "enrageChance": 0.35,
   "retrySec": 60,
   "activePartners": 3,
+  "bondPerAssists": 3,
+  "maxBond": 10,
+  "evolveBond": 5,
+  "knockedOutSec": 20,
+  "supportHealFraction": 0.03,
+  "supportHealEverySec": 6,
   "untameableFamilies": ["Goblinoids", "Humanoid Enemies", "Undead", "Constructs & Mimics", "Demons"],
   "favouriteFood": {
    "Slimes": "itm_healing_herb",

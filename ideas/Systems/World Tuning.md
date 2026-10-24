@@ -75,6 +75,12 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `taming.enrageChance` | 0.35 |
 | `taming.retrySec` | 60 |
 | `taming.activePartners` | 3 |
+| `taming.bondPerAssists` | 3 |
+| `taming.maxBond` | 10 |
+| `taming.evolveBond` | 5 |
+| `taming.knockedOutSec` | 20 |
+| `taming.supportHealFraction` | 0.03 |
+| `taming.supportHealEverySec` | 6 |
 | `taming.untameableFamilies` | Goblinoids, Humanoid Enemies, Undead, Constructs & Mimics, Demons |
 | `taming.favouriteFood.Slimes` | itm_healing_herb |
 | `taming.favouriteFood.Beasts` | itm_mat_prime_meat |

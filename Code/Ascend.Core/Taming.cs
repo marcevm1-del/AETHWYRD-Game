@@ -26,6 +26,12 @@ namespace Ascend.Core
         public double EnrageChance { get; set; } = 0.35;
         public double RetrySec { get; set; } = 60;
         public int ActivePartners { get; set; } = 3;
+        public int BondPerAssists { get; set; } = 3;
+        public int MaxBond { get; set; } = 10;
+        public int EvolveBond { get; set; } = 5;
+        public double KnockedOutSec { get; set; } = 20;
+        public double SupportHealFraction { get; set; } = 0.03;
+        public double SupportHealEverySec { get; set; } = 6;
         public List<string> UntameableFamilies { get; set; } = new List<string>();
         public Dictionary<string, string> FavouriteFood { get; set; } = new Dictionary<string, string>();
     }
@@ -138,7 +144,53 @@ namespace Ascend.Core
         {
             _all.Clear();
             foreach (var p in partners ?? Enumerable.Empty<PartnerData>())
-                _all.Add(new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners, Bond = p.Bond });
+                _all.Add(new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners, Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved });
+        }
+    }
+
+    /// <summary>systems.md §7.2. Hauler and Mount come with cargo and riding.</summary>
+    public enum PartnerRole { Striker, Vanguard, Support, Scout }
+
+    public static class Partners
+    {
+        /// <summary>The role a species takes, from its behaviour: guardians and territorial monsters hold the line, gentle ones
+        /// support, skittish and ambushing ones scout, the rest strike.</summary>
+        public static PartnerRole RoleOf(SpeciesData s)
+        {
+            switch (s?.Behavior)
+            {
+                case "Guardian": case "Territorial": return PartnerRole.Vanguard;
+                case "Passive": return PartnerRole.Support;
+                case "Skittish": case "Ambush": return PartnerRole.Scout;
+                default: return PartnerRole.Striker;
+            }
+        }
+
+        /// <summary>Evolution branches (systems.md §7.3): the species' variants (elemental, elder, ancient, regional…).</summary>
+        public static List<SpeciesData> Branches(string speciesId, GameDatabase db) =>
+            db.Species.Values.Where(x => x.BaseSpeciesId == speciesId).OrderBy(x => Rank.Parse(x.Rank).Value).ThenBy(x => x.Id).ToList();
+
+        public static bool CanEvolve(PartnerData p, GameDatabase db, TamingTuning t) =>
+            p != null && !p.Evolved && p.Bond >= t.EvolveBond && Branches(p.SpeciesId, db).Count > 0;
+
+        /// <summary>Evolves into the chosen branch (must be one of its variants). Keeps the name and bond.</summary>
+        public static bool Evolve(PartnerData p, string branchId, GameDatabase db, TamingTuning t)
+        {
+            if (!CanEvolve(p, db, t) || !Branches(p.SpeciesId, db).Any(b => b.Id == branchId)) return false;
+            p.SpeciesId = branchId;
+            p.Evolved = true;
+            return true;
+        }
+
+        /// <summary>Fighting together: every BondPerAssists shared victories raise Bond by one (to the cap). True when Bond rose.</summary>
+        public static bool Assist(PartnerData p, TamingTuning t)
+        {
+            if (p == null || p.Bond >= t.MaxBond) return false;
+            p.Assists++;
+            if (p.Assists < t.BondPerAssists) return false;
+            p.Assists = 0;
+            p.Bond++;
+            return true;
         }
     }
 
@@ -149,5 +201,8 @@ namespace Ascend.Core
         public bool Active { get; set; }
         /// <summary>0–10 (systems.md §7.3; grows later).</summary>
         public int Bond { get; set; }
+        /// <summary>Shared victories toward the next Bond point.</summary>
+        public int Assists { get; set; }
+        public bool Evolved { get; set; }
     }
 }

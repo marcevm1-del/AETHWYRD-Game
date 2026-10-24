@@ -70,4 +70,35 @@ static class TamingTests
         r.SetActive(r.Active.First(), false);
         Assert.True(r.SetActive(r.Ranch.First(), true), "swap in");
     }
+
+    public static void RolesComeFromBehaviour()
+    {
+        Assert.True(Partners.RoleOf(S("mon_horned_rabbit")) == PartnerRole.Scout, "skittish rabbit: scout");
+        Assert.True(Partners.RoleOf(S("mon_blue_slime")) == PartnerRole.Vanguard, "territorial slime: vanguard");
+        Assert.True(Partners.RoleOf(S("mon_lantern_moth")) == PartnerRole.Support, "passive moth: support");
+        Assert.True(Partners.RoleOf(S("mon_giant_ant")) == PartnerRole.Striker, "swarming ant: striker");
+    }
+
+    public static void BondGrowsWithSharedFights()
+    {
+        var p = new PartnerData { SpeciesId = "mon_horned_rabbit" };
+        Assert.True(!Partners.Assist(p, T) && !Partners.Assist(p, T), "not yet");
+        Assert.True(Partners.Assist(p, T), "third win: bond up");
+        Assert.Equal(1, p.Bond, "bond 1");
+        p.Bond = T.MaxBond;
+        Assert.True(!Partners.Assist(p, T), "capped");
+    }
+
+    public static void EvolutionAtBondFiveIntoAVariant()
+    {
+        var p = new PartnerData { SpeciesId = "mon_horned_rabbit", Bond = 4 };
+        var branches = Partners.Branches("mon_horned_rabbit", Repo.Db).Select(b => b.Id).ToList();
+        Assert.True(branches.Contains("mon_ancient_horned_rabbit") && branches.Contains("mon_elder_horned_rabbit"), "two branches");
+        Assert.True(!Partners.CanEvolve(p, Repo.Db, T), "bond 4: not yet");
+        p.Bond = 5;
+        Assert.True(!Partners.Evolve(p, "mon_wild_boar", Repo.Db, T), "only into its own variants");
+        Assert.True(Partners.Evolve(p, "mon_elder_horned_rabbit", Repo.Db, T), "evolved");
+        Assert.Equal("mon_elder_horned_rabbit", p.SpeciesId, "now an elder");
+        Assert.True(!Partners.CanEvolve(p, Repo.Db, T), "once");
+    }
 }

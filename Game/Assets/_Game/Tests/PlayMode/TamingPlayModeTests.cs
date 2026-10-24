@@ -42,6 +42,8 @@ namespace Ascend.Game.Tests
         {
             Time.captureDeltaTime = 0f;
             GameTime.Clear();
+            if (BagWindow.IsOpen) BagWindow.Instance.Close();
+            foreach (var b in Object.FindObjectsByType<BagWindow>(FindObjectsSortMode.None)) Object.DestroyImmediate(b.gameObject);
             CameraShake.Reset();
             foreach (var t in new System.Type[] { typeof(MonsterDummy), typeof(DamageNumber) })
                 foreach (var o in Object.FindObjectsByType(t, FindObjectsSortMode.None)) if (o != null) Object.DestroyImmediate(((Component)o).gameObject);
@@ -116,6 +118,74 @@ namespace Ascend.Game.Tests
             var boar = Monster("mon_wild_boar", new Vector3(2, 0, 2f));
             Weaken(boar);
             Assert.IsFalse(_taming.Begin(boar), "an E-rank boar won't follow an F rookie");
+        }
+
+        PartnerFollower Bring(string species, string name, int bond = 0)
+        {
+            _taming.Load(new[] { new PartnerData { SpeciesId = species, Name = name, Active = true, Bond = bond } });
+            return _taming.Following.Single();
+        }
+
+        [UnityTest]
+        public IEnumerator AVanguardDrawsMonstersAndCanBeKnockedOut()
+        {
+            var slime = Bring("mon_blue_slime", "Wobble");
+            Assert.AreEqual(PartnerRole.Vanguard, slime.Role);
+            yield return null;
+            var goblin = Monster("mon_goblin", slime.transform.position + new Vector3(3f, 0, 0));
+            for (int i = 0; i < 30; i++) yield return null;
+            Assert.AreSame(slime.Body, goblin.GetComponent<MonsterController>().PartnerTarget, "the goblin turns on the Vanguard");
+            slime.Body.TakeHit(999999, HitWeight.Heavy, goblin.transform.position, 0);
+            yield return null;
+            Assert.IsTrue(slime.KnockedOut, "knocked out");
+            Object.DestroyImmediate(MonsterSpawner.RootOf(goblin));
+            for (int i = 0; i < (int)(AscendData.Db.World.Taming.KnockedOutSec * 60) + 10; i++) yield return null;
+            Assert.IsFalse(slime.KnockedOut, "back after its rest");
+            Assert.AreEqual(slime.Body.MaxHp, slime.Body.Hp, "at full health");
+        }
+
+        [UnityTest]
+        public IEnumerator ASupportPartnerHealsYou()
+        {
+            var moth = Bring("mon_lantern_moth", "Glim");
+            Assert.AreEqual(PartnerRole.Support, moth.Role);
+            var def = _player.GetComponent<PlayerDefense>();
+            def.ReceiveAttack(def.MaxHp / 2, Telegraph.Red);
+            int hurt = def.Hp;
+            for (int i = 0; i < 30; i++) yield return null;
+            Assert.Greater(def.Hp, hurt, "it soothes you");
+        }
+
+        [UnityTest]
+        public IEnumerator SharedVictoriesBuildBond()
+        {
+            var ant = Bring("mon_giant_ant", "Pip");
+            yield return null;
+            for (int k = 0; k < AscendData.Db.World.Taming.BondPerAssists; k++)
+            {
+                var slime = Monster("mon_blue_slime", _player.transform.position + new Vector3(2f, 0, 1f));
+                for (int i = 0; i < 400 && ant.Target != slime; i++) yield return null;
+                slime.TakeHit(999999, HitWeight.Heavy, _player.transform.position, 0);
+                yield return null; yield return null;
+                Object.DestroyImmediate(MonsterSpawner.RootOf(slime));
+            }
+            Assert.AreEqual(1, ant.Data.Bond, "three wins together: bond 1");
+        }
+
+        [UnityTest]
+        public IEnumerator EvolvingFromTheBag()
+        {
+            Bring("mon_horned_rabbit", "Bun", bond: 5);
+            yield return null;
+            BagWindow.Instance.Open(_combat);
+            int evolve = BagWindow.Instance.OptionTexts.ToList().FindIndex(t => t.Contains("Evolve Bun → Elder Horned Rabbit"));
+            Assert.GreaterOrEqual(evolve, 0, "the elder branch is offered with a preview");
+            BagWindow.Instance.Choose(evolve);
+            BagWindow.Instance.Close();
+            yield return null;
+            Assert.AreEqual("mon_elder_horned_rabbit", _taming.Roster.Active.Single().SpeciesId);
+            Assert.AreEqual("mon_elder_horned_rabbit", _taming.Following.Single().Body.SpeciesId, "the partner in the world changed too");
+            Assert.AreEqual("Bun", _taming.Following.Single().Data.Name, "still Bun");
         }
 
         [Test]

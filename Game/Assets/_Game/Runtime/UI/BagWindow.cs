@@ -81,6 +81,33 @@ namespace Ascend.Game
                 else if (it.Category == "consumable" && it.Stat("heal") > 0)
                     _options.Add(new Option { Text = $"Drink {it.Name} ×{kv.Value} (+{it.Stat("heal"):0} HP)", Act = () => _inv.DrinkHealingPotion() });
             }
+            var taming = _combat.GetComponent<PlayerTaming>();
+            if (taming != null)
+            {
+                var t = db.World.Taming;
+                foreach (var p in taming.Roster.All.ToList())
+                {
+                    var partner = p;
+                    var sp = db.Species.TryGetValue(p.SpeciesId, out var s) ? s : null;
+                    string what = sp != null ? $"{sp.Name}, {Partners.RoleOf(sp)}" : p.SpeciesId;
+                    string where = p.Active ? "with you" : "at the ranch";
+                    _options.Add(new Option
+                    {
+                        Text = $"Partner {p.Name} ({what}) · Bond {p.Bond}/{t.MaxBond} · {where} — {(p.Active ? "send to the ranch" : "bring along")}",
+                        Act = () => _line = taming.SetActive(partner, !partner.Active) ? $"{partner.Name} is {(partner.Active ? "with you" : "off to the ranch")}." : $"Three partners travel with you at most.",
+                    });
+                    if (Partners.CanEvolve(p, db, t))
+                        foreach (var b in Partners.Branches(p.SpeciesId, db))
+                        {
+                            var branch = b;
+                            _options.Add(new Option
+                            {
+                                Text = $"   Evolve {p.Name} → {b.Name} (rank {b.Rank}, {b.VariantKind}, {Partners.RoleOf(b)}, ATK {b.Stats.Atk} HP {b.Stats.Hp}) — final",
+                                Act = () => { if (taming.Evolve(partner, branch.Id)) _line = $"{partner.Name} is now a {branch.Name}."; },
+                            });
+                        }
+                }
+            }
             _options.Add(new Option { Text = "Close", Act = Close });
             _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
         }

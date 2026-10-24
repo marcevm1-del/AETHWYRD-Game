@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Ascend.Core;
 using UnityEngine;
@@ -5,48 +6,79 @@ using UnityEngine;
 namespace Ascend.Game
 {
     /// <summary>
-    /// A tamed partner in the field (systems.md §7.2, Striker role for Ring 0): it trails you in formation and joins in
-    /// on monsters near you, hitting with its species' ATK every attack interval. Enemies don't target partners yet,
-    /// and partners don't die; they rest at full health between fights.
+    /// A tamed partner in the field (systems.md §7.2). It trails you in formation and joins in on monsters near you,
+    /// hitting with its species' ATK. Its role, from its behaviour, adds one thing:
+    ///   Striker  — just fights        Vanguard — monsters close to it turn on it instead of you
+    ///   Support  — heals you a little while you're hurt        Scout — calls out monsters ahead before they find you
+    /// Monsters can knock a partner out; it recovers after a short rest (partners never die). Victories you share
+    /// raise its Bond (Core Partners.Assist), which unlocks evolution at Bond 5.
     /// </summary>
     [RequireComponent(typeof(MonsterDummy))]
     public sealed class PartnerFollower : MonoBehaviour
     {
-        public const float FollowDistance = 2.5f, EngageRange = 8f, AttackInterval = 1.2f, ReachM = 1.4f;
+        public const float FollowDistance = 2.5f, EngageRange = 8f, AttackInterval = 1.2f, ReachM = 1.4f, ScoutRange = 18f;
+
+        static readonly List<PartnerFollower> _active = new List<PartnerFollower>();
+        /// <summary>Partners in the world (monster AI checks these for Vanguards and attackers).</summary>
+        public static IReadOnlyList<PartnerFollower> ActiveFollowers => _active;
 
         MonsterDummy _body;
         Transform _player;
-        float _speed, _cooldown;
+        PlayerDefense _defense;
+        float _speed, _cooldown, _knockedOutUntil = -1f, _nextHeal, _nextScout;
         int _atk;
+        readonly HashSet<MonsterDummy> _foughtWith = new HashSet<MonsterDummy>();
+        readonly HashSet<MonsterDummy> _spotted = new HashSet<MonsterDummy>();
 
         public int Slot { get; set; }
+        public PartnerData Data { get; set; }
+        public PartnerRole Role { get; private set; }
+        public MonsterDummy Body => _body;
         public MonsterDummy Target { get; private set; }
         public int Hits { get; private set; }
+        public bool KnockedOut => _body != null && _body.IsDead;
+        /// <summary>Raised when a fight it shared ends in a win (the taming component turns these into Bond).</summary>
+        public event System.Action<PartnerFollower> SharedVictory;
 
         void Awake()
         {
             _body = GetComponent<MonsterDummy>();
             var db = AscendData.Db;
             _speed = db.Motion.TryGetValue(_body.SpeciesId, out var m) ? Mathf.Max(3f, (float)m.NavAgent.Speed) : 4f;
-            _atk = db.Species.TryGetValue(_body.SpeciesId, out var s) ? Mathf.Max(1, s.Stats.Atk) : 5;
+            db.Species.TryGetValue(_body.SpeciesId, out var s);
+            _atk = s != null ? Mathf.Max(1, s.Stats.Atk) : 5;
+            Role = Partners.RoleOf(s);
         }
+
+        void OnEnable() { if (!_active.Contains(this)) _active.Add(this); }
+        void OnDisable() => _active.Remove(this);
+
+        static TamingTuning T => AscendData.Db.World.Taming;
 
         void Update()
         {
             float dt = Time.deltaTime;
             if (dt <= 0f) return;
-            if (_player == null) { var p = FindFirstObjectByType<PlayerCombat>(); if (p == null) return; _player = p.transform; }
+            if (_player == null)
+            {
+                var p = FindFirstObjectByType<PlayerCombat>(); if (p == null) return;
+                _player = p.transform; _defense = p.GetComponent<PlayerDefense>();
+            }
+            if (KnockedOut) { KnockedOutStep(); return; }
             _cooldown -= dt;
+            CheckVictories();
+            RoleStep();
 
-            if (Target == null || Target.IsDead || Flat(Target.transform.position - _player.position).magnitude > EngageRange * 1.5f) Target = PickTarget();
+            if (Target == null || Target.IsDead || Target.IsPartner || Flat(Target.transform.position - _player.position).magnitude > EngageRange * 1.5f) Target = PickTarget();
             Vector3 goal;
             if (Target != null)
             {
+                _foughtWith.Add(Target);
                 Vector3 to = Flat(Target.transform.position - transform.position);
                 if (to.magnitude <= ReachM)
                 {
                     Face(to, dt);
-                    if (_cooldown <= 0f) { Strike(); _cooldown = AttackInterval; }
+                    if (_cooldown <= 0f) { Hits++; Target.TakeHit(_atk, HitWeight.Light, transform.position, 2); _cooldown = AttackInterval; }
                     return;
                 }
                 goal = Target.transform.position;
@@ -65,15 +97,63 @@ namespace Ascend.Game
             Face(dir, dt);
         }
 
+        void KnockedOutStep()
+        {
+            if (_knockedOutUntil < 0f)
+            {
+                _knockedOutUntil = Time.time + (float)T.KnockedOutSec;
+                Toast($"{NameOf()} is knocked out! It'll be back after a rest.");
+                Target = null;
+            }
+            else if (Time.time >= _knockedOutUntil)
+            {
+                _knockedOutUntil = -1f;
+                _body.Revive();
+                Warp(_player.position - _player.forward * FollowDistance);
+                Toast($"{NameOf()} is back on its feet.");
+            }
+        }
+
+        /// <summary>A monster it fought fell: a shared victory.</summary>
+        void CheckVictories()
+        {
+            foreach (var m in _foughtWith.ToList())
+            {
+                if (m == null) { _foughtWith.Remove(m); continue; }
+                if (!m.IsDead) continue;
+                _foughtWith.Remove(m);
+                SharedVictory?.Invoke(this);
+            }
+        }
+
+        void RoleStep()
+        {
+            if (Role == PartnerRole.Support && _defense != null && !_defense.IsDead && Time.time >= _nextHeal && _defense.Hp < _defense.MaxHp * 0.7f)
+            {
+                _nextHeal = Time.time + (float)T.SupportHealEverySec;
+                int amount = Mathf.Max(1, Mathf.RoundToInt(_defense.MaxHp * (float)T.SupportHealFraction));
+                _defense.Heal(amount);
+                Toast($"{NameOf()} soothes you: +{amount} HP", 2f);
+            }
+            if (Role == PartnerRole.Scout && Time.time >= _nextScout)
+            {
+                _nextScout = Time.time + 1f;
+                foreach (var m in FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None))
+                {
+                    if (m == null || m.IsDead || m.IsPartner || _spotted.Contains(m)) continue;
+                    float d = Flat(m.transform.position - _player.position).magnitude;
+                    if (d > ScoutRange || d < EngageRange) continue;
+                    _spotted.Add(m);
+                    string what = AscendData.Db.Species.TryGetValue(m.SpeciesId, out var s) ? s.Name : m.SpeciesId;
+                    Toast($"{NameOf()} spots a {what} ahead ({d:0} m).", 3f);
+                    break; // one call-out a second
+                }
+            }
+        }
+
         MonsterDummy PickTarget() => FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None)
             .Where(m => m != null && !m.IsDead && !m.IsPartner && Flat(m.transform.position - _player.position).magnitude <= EngageRange)
             .OrderBy(m => Flat(m.transform.position - transform.position).sqrMagnitude).FirstOrDefault();
-
-        void Strike()
-        {
-            Hits++;
-            Target.TakeHit(_atk, HitWeight.Light, transform.position, 2);
-        }
 
         void Face(Vector3 dir, float dt)
         {
@@ -82,6 +162,14 @@ namespace Ascend.Game
 
         public void Warp(Vector3 at) => transform.position = new Vector3(at.x, transform.position.y, at.z);
 
+        string NameOf() => Data != null && !string.IsNullOrEmpty(Data.Name) ? Data.Name : (AscendData.Db.Species.TryGetValue(_body.SpeciesId, out var s) ? s.Name : "Your partner");
+
         static Vector3 Flat(Vector3 v) { v.y = 0; return v; }
+
+        static void Toast(string text, float seconds = 4f)
+        {
+            var inv = FindFirstObjectByType<PlayerInventory>();
+            if (inv != null) inv.Toast(text, seconds);
+        }
     }
 }

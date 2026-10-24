@@ -71,6 +71,8 @@ namespace Ascend.Core
         public string Type { get; set; }
         public string Tier { get; set; }
         public string BaseSpeciesId { get; set; }
+        /// <summary>regional, elemental, elder, ancient, corrupted, spirit (null for a base species).</summary>
+        public string VariantKind { get; set; }
         public string Rank { get; set; }
         public int Level { get; set; }
         /// <summary>Spawn level spread [min, max].</summary>

@@ -82,6 +82,13 @@ namespace Ascend.Game
         /// <summary>Restores HP (partners rest to full).</summary>
         public void Heal(int amount) { if (!IsDead) { Hp = Mathf.Min(MaxHp, Hp + Mathf.Max(0, amount)); Refresh(); } }
 
+        /// <summary>Back on its feet at full health (a knocked-out partner after its rest).</summary>
+        public void Revive()
+        {
+            Respawn();
+            if (IsPartner) foreach (var c in GetComponentsInChildren<Collider>()) c.isTrigger = true;
+        }
+
         public void BecomePartner()
         {
             IsPartner = true;
