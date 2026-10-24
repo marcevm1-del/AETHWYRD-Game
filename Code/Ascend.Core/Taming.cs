@@ -23,7 +23,15 @@ namespace Ascend.Core
         public double ChaWeight { get; set; } = 0.01;
         public double LikedFoodBonus { get; set; } = 0.15;
         public double TamerBonus { get; set; } = 0.15;
+        /// <summary>Fallback for behaviours missing from EnrageByBehavior.</summary>
         public double EnrageChance { get; set; } = 0.35;
+        /// <summary>0..1 by behaviour: how hard it is to win over (after RimWorld's wildness).</summary>
+        public Dictionary<string, double> WildnessByBehavior { get; set; } = new Dictionary<string, double>();
+        public double WildnessWeight { get; set; } = 0.3;
+        /// <summary>Chance a failed offer makes it turn on you, by behaviour (the rest of the time it flees).</summary>
+        public Dictionary<string, double> EnrageByBehavior { get; set; } = new Dictionary<string, double>();
+        /// <summary>Real minutes between a partner coming over to nuzzle you, on average.</summary>
+        public double NuzzleEveryMinutes { get; set; } = 8;
         public double RetrySec { get; set; } = 60;
         public int ActivePartners { get; set; } = 3;
         public int BondPerAssists { get; set; } = 3;
@@ -54,6 +62,12 @@ namespace Ascend.Core
             if (hpFraction > t.WeakenHpFraction) return TameBlock.NotWeakened;
             return TameBlock.None;
         }
+
+        public static double Wildness(SpeciesData s, TamingTuning t) =>
+            s != null && t.WildnessByBehavior.TryGetValue(s.Behavior ?? "", out var w) ? w : 0.5;
+
+        public static double EnrageChance(SpeciesData s, TamingTuning t) =>
+            s != null && t.EnrageByBehavior.TryGetValue(s.Behavior ?? "", out var e) ? e : t.EnrageChance;
 
         public static string FavouriteFood(SpeciesData s, TamingTuning t) =>
             s != null && t.FavouriteFood.TryGetValue(s.Family ?? "", out var id) ? id : null;
@@ -99,13 +113,14 @@ namespace Ascend.Core
 
         public double Chance(double cha, bool likedFoodOffered, bool isTamer) =>
             Math.Max(0.02, Math.Min(0.95, _t.BaseChance + Calm * _t.CalmWeight - Fear * _t.FearWeight + cha * _t.ChaWeight
+                                          - TamingRules.Wildness(Species, _t) * _t.WildnessWeight
                                           + (likedFoodOffered ? _t.LikedFoodBonus : 0) + (isTamer ? _t.TamerBonus : 0)));
 
         public TameResult Offer(double cha, bool likedFoodOffered, bool isTamer, IRandom rng)
         {
             if (rng == null) throw new ArgumentNullException(nameof(rng));
             if (rng.NextDouble() < Chance(cha, likedFoodOffered, isTamer)) return TameResult.Tamed;
-            return rng.NextDouble() < _t.EnrageChance ? TameResult.Enraged : TameResult.Fled;
+            return rng.NextDouble() < TamingRules.EnrageChance(Species, _t) ? TameResult.Enraged : TameResult.Fled;
         }
 
         static double Clamp(double v) => Math.Max(0, Math.Min(100, v));

@@ -108,4 +108,15 @@ static class TamingTests
         Assert.Equal("mon_elder_horned_rabbit", p.SpeciesId, "now an elder");
         Assert.True(!Partners.CanEvolve(p, Repo.Db, T), "once");
     }
+
+    public static void WildnessAndTemperVaryByBehaviour()
+    {
+        var moth = new TameEncounter(S("mon_lantern_moth"), T);
+        var wolf = new TameEncounter(S("mon_forest_wolf"), T);
+        var goblinLike = S("mon_giant_ant");
+        moth.Tick(5, true, true); wolf.Tick(5, true, true);
+        Assert.True(moth.Chance(10, false, false) > wolf.Chance(10, false, false), "a gentle moth is easier than a skittish wolf");
+        Assert.Equal(0.0, TamingRules.EnrageChance(S("mon_lantern_moth"), T), "a moth never turns on you");
+        Assert.True(TamingRules.EnrageChance(S("mon_wild_boar"), T) < TamingRules.EnrageChance(goblinLike, T), "a skittish boar bolts; a swarming ant bites back");
+    }
 }

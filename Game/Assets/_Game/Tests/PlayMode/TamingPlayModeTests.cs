@@ -207,6 +207,17 @@ namespace Ascend.Game.Tests
             BagWindow.Instance.Close();
         }
 
+        [UnityTest]
+        public IEnumerator PartnersNuzzleYouNowAndThen()
+        {
+            var bun = Bring("mon_horned_rabbit", "Bun");
+            yield return null;
+            bun.NuzzleSoon();
+            for (int i = 0; i < 30 && bun.Nuzzles == 0; i++) yield return null;
+            Assert.AreEqual(1, bun.Nuzzles, "a nuzzle");
+            Assert.AreEqual(1, bun.Data.Assists, "it counts toward bond");
+        }
+
         [Test]
         public void PartnersAreSaved()
         {

@@ -89,6 +89,11 @@
   "knockedOutSec": 20,
   "supportHealFraction": 0.03,
   "supportHealEverySec": 6,
+  "wildnessNotes": "After RimWorld's per-animal wildness and manhunter-on-tame-fail chance (design reference, 13_Production/reference_games.md): how hard a species is to win over, and how likely a failed offer makes it turn on you, by behaviour.",
+  "wildnessByBehavior": { "Passive": 0.2, "Territorial": 0.5, "Swarm": 0.55, "Guardian": 0.6, "Ambush": 0.65, "Pack": 0.7, "Skittish": 0.75, "Aggressive": 0.85 },
+  "wildnessWeight": 0.3,
+  "enrageByBehavior": { "Passive": 0, "Skittish": 0.05, "Ambush": 0.25, "Territorial": 0.3, "Guardian": 0.3, "Swarm": 0.35, "Pack": 0.4, "Aggressive": 0.5 },
+  "nuzzleEveryMinutes": 8,
   "untameableFamilies": ["Goblinoids", "Humanoid Enemies", "Undead", "Constructs & Mimics", "Demons"],
   "favouriteFood": {
    "Slimes": "itm_healing_herb",

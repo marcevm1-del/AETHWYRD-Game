@@ -86,6 +86,25 @@ Shared calendar, siege, prosperity and inn tuning used by the engine-agnostic ga
 | `taming.knockedOutSec` | 20 |
 | `taming.supportHealFraction` | 0.03 |
 | `taming.supportHealEverySec` | 6 |
+| `taming.wildnessNotes` | After RimWorld's per-animal wildness and manhunter-on-tame-fail chance (design reference, 13_Production/reference_games.md): how hard a species is to win over, and how likely a failed offer makes it turn on you, by behaviour. |
+| `taming.wildnessByBehavior.Passive` | 0.2 |
+| `taming.wildnessByBehavior.Territorial` | 0.5 |
+| `taming.wildnessByBehavior.Swarm` | 0.55 |
+| `taming.wildnessByBehavior.Guardian` | 0.6 |
+| `taming.wildnessByBehavior.Ambush` | 0.65 |
+| `taming.wildnessByBehavior.Pack` | 0.7 |
+| `taming.wildnessByBehavior.Skittish` | 0.75 |
+| `taming.wildnessByBehavior.Aggressive` | 0.85 |
+| `taming.wildnessWeight` | 0.3 |
+| `taming.enrageByBehavior.Passive` | 0 |
+| `taming.enrageByBehavior.Skittish` | 0.05 |
+| `taming.enrageByBehavior.Ambush` | 0.25 |
+| `taming.enrageByBehavior.Territorial` | 0.3 |
+| `taming.enrageByBehavior.Guardian` | 0.3 |
+| `taming.enrageByBehavior.Swarm` | 0.35 |
+| `taming.enrageByBehavior.Pack` | 0.4 |
+| `taming.enrageByBehavior.Aggressive` | 0.5 |
+| `taming.nuzzleEveryMinutes` | 8 |
 | `taming.untameableFamilies` | Goblinoids, Humanoid Enemies, Undead, Constructs & Mimics, Demons |
 | `taming.favouriteFood.Slimes` | itm_healing_herb |
 | `taming.favouriteFood.Beasts` | itm_mat_prime_meat |

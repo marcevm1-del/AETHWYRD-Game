@@ -48,6 +48,16 @@ namespace Ascend.Game
         public bool KnockedOut => _body != null && _body.IsDead;
         /// <summary>Raised when a fight it shared ends in a win (the taming component turns these into Bond).</summary>
         public event System.Action<PartnerFollower> SharedVictory;
+        /// <summary>Now and then, when nothing's going on, it comes over to nuzzle you (after RimWorld's pets). A shared moment.</summary>
+        public event System.Action<PartnerFollower> Nuzzled;
+        float _nextNuzzle = -1f;
+        public int Nuzzles { get; private set; }
+
+        /// <summary>Picks the next nuzzle time: exponential around the tuning's mean (so it feels spontaneous).</summary>
+        void ScheduleNuzzle() => _nextNuzzle = Time.time + Mathf.Max(30f, -Mathf.Log(Mathf.Max(0.001f, Random.value)) * (float)T.NuzzleEveryMinutes * 60f);
+
+        /// <summary>For tests and playtests: nuzzle on the next quiet frame.</summary>
+        public void NuzzleSoon() => _nextNuzzle = 0f;
 
         void Awake()
         {
@@ -94,6 +104,14 @@ namespace Ascend.Game
             }
             else
             {
+                if (_nextNuzzle < 0f) ScheduleNuzzle();
+                if (Time.time >= _nextNuzzle && Flat(_player.position - transform.position).magnitude < 6f)
+                {
+                    Nuzzles++;
+                    ScheduleNuzzle();
+                    Toast($"{NameOf()} nuzzles you.", 3f);
+                    Nuzzled?.Invoke(this);
+                }
                 // Formation behind you: slot 0 behind-left, 1 behind-right, 2 straight behind.
                 Vector3 back = -_player.forward, side = _player.right * (Slot == 0 ? -1.2f : Slot == 1 ? 1.2f : 0f);
                 goal = _player.position + back * FollowDistance + side;

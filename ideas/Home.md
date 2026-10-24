@@ -75,6 +75,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
 - [[Design Bible/13_Production/production|13_Production/production]]
 - [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
+- [[Design Bible/13_Production/reference_games|13_Production/reference_games]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
 
 ## Classes (12)

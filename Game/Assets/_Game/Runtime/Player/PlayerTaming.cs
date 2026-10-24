@@ -147,6 +147,7 @@ namespace Ascend.Game
             f.Slot = _following.Count;
             f.Data = data;
             f.SharedVictory += OnSharedVictory;
+            f.Nuzzled += OnSharedVictory; // a quiet moment together counts like a shared win
             _following.Add(f);
             f.SetLevel(_combat.Progress.Level);
         }
@@ -200,6 +201,7 @@ namespace Ascend.Game
         {
             _following.Remove(f);
             f.SharedVictory -= OnSharedVictory;
+            f.Nuzzled -= OnSharedVictory;
             f.enabled = false;
             Destroy(MonsterSpawner.RootOf(f.Body));
         }
