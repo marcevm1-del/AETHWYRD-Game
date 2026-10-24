@@ -133,6 +133,48 @@ namespace Ascend.Game.Tests
             Assert.Greater(goblin.transform.position.z, 3f, "the goblin chasing the player is held back by the wall");
         }
 
+        [UnityTest]
+        public IEnumerator AMonsterBlockedHeadOnWorksItsWayRound()
+        {
+            // A short wall dead centre between the goblin and you: sliding alone leaves it pressed against the middle.
+            _wall = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            _wall.transform.position = new Vector3(0, 1.25f, 3f);
+            _wall.transform.localScale = new Vector3(3f, 2.5f, 0.3f);
+            var goblin = Spawn("mon_goblin", new Vector3(0, 0, 5.5f));
+            bool sidestepped = false;
+            float minZ = float.MaxValue;
+            for (int i = 0; i < 600; i++)
+            {
+                sidestepped |= goblin.Sidestepping;
+                minZ = Mathf.Min(minZ, goblin.transform.position.z);
+                _motor.Tick(Vector3.zero, false, false, Time.deltaTime);
+                yield return null;
+            }
+            Assert.IsTrue(sidestepped, "it noticed it was stuck and stepped aside");
+            Assert.Less(minZ, 2.8f, "and got round to your side of the wall");
+        }
+
+        [UnityTest]
+        public IEnumerator AHurtSkittishMonsterSometimesHopsBack()
+        {
+            var rabbit = Spawn("mon_horned_rabbit", new Vector3(0, 0, 2.5f));
+            var body = rabbit.GetComponent<MonsterDummy>();
+            yield return null;
+            body.TakeHit(body.MaxHp * 2 / 3, HitWeight.Light, _player.transform.position, 0);
+            for (int i = 0; i < 40 && rabbit.Hops == 0 && !body.IsDead; i++)
+            {
+                body.TakeHit(0, HitWeight.Light, _player.transform.position, 0); // a glancing blow: hurt-reflex without killing it
+                for (int f = 0; f < 20; f++) yield return null;
+            }
+            Assert.Greater(rabbit.Hops, 0, "a badly hurt rabbit leaps back now and then");
+            var goblin = Spawn("mon_goblin", new Vector3(3, 0, 3f));
+            var gb = goblin.GetComponent<MonsterDummy>();
+            yield return null;
+            gb.TakeHit(gb.MaxHp * 2 / 3, HitWeight.Light, _player.transform.position, 0);
+            for (int i = 0; i < 20; i++) gb.TakeHit(1, HitWeight.Light, _player.transform.position, 0);
+            Assert.AreEqual(0, goblin.Hops, "an aggressive goblin stands its ground");
+        }
+
         [Test]
         public void AGrabHoldsThePlayerForAMoment()
         {

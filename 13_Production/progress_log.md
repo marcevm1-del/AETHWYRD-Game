@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Reference: Greyborn | From your Project Greyborn bot AI (ported logic): monsters that hit a wall head-on sidestep and work their way round; skittish and ambushing monsters hop back when badly hurt. reference_games.md lists what else is worth taking (utility goals with hysteresis, path budget, pack odds) | 155 + 116 |
 | Reference: RimWorld | 13_Production/reference_games.md started (ideas only from other studios' games). From RimWorld's animal data: taming wildness by behaviour (moths easy, wolves hard), failed offers turn on you by temper (0% Passive … 50% Aggressive), partners nuzzle you now and then (counts toward Bond) | 155 + 114 |
 | Gathering | Data/World/gathering.json (validated): herb patches, mushroom rings, weeping pines and goblin scrap heaps — 13 nodes across the field and Whisperwood. E gathers (whichever of NPC or node is closer), the node regrows over in-game hours and its regrowth is saved. A second source for healing herbs, sap, spore caps, scrap and crude iron | 154 + 113 |
 | Bestiary | Appraisal tiers from hud_and_ui.md §9: monsters within 20 m are recorded, 3 kills reveal HP/element/weakness, 10 kills or taming the full entry (drops, look, field note); finding every drop stamps it 100%. Monster labels follow what you know (??? → name and rank → HP). B opens the Bestiary with Ring 0–1 completion. Thresholds in world_tuning.json → bestiary | 152 + 112 |

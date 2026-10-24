@@ -60,16 +60,37 @@ namespace Ascend.Game
             _tokenId = $"{_body.SpeciesId}#{_id}";
             _body.Staggered += OnStaggered;
             _body.Landed += OnStaggered; // landing after a launch is a knockdown
+            _body.Damaged += OnDamaged;
+            _hopper = species.Behavior == "Skittish" || species.Behavior == "Ambush";
             BuildTelegraph();
         }
 
         void OnDestroy()
         {
-            if (_body != null) { _body.Staggered -= OnStaggered; _body.Landed -= OnStaggered; }
+            if (_body != null) { _body.Staggered -= OnStaggered; _body.Landed -= OnStaggered; _body.Damaged -= OnDamaged; }
             ReleaseToken();
         }
 
         void OnStaggered() { _brain?.Stagger(); ReleaseToken(); }
+
+        // Reflex hop (after Project Greyborn's combatReflexes): skittish and ambushing monsters, badly hurt and just hit,
+        // sometimes leap back out of reach.
+        public const float HopChance = 0.25f, HopHpFraction = 0.4f, HopDistance = 2.5f, HopSec = 0.25f;
+        bool _hopper;
+        Vector3 _hopVelocity;
+        float _hopLeft;
+        public int Hops { get; private set; }
+
+        void OnDamaged()
+        {
+            if (!_hopper || _body.IsDead || _player == null || _hopLeft > 0f || IsDashing) return;
+            if (_body.Hp > _body.MaxHp * HopHpFraction || _rng.NextDouble() >= HopChance) return;
+            Vector3 away = Flat(transform.position - _player.transform.position);
+            if (away.sqrMagnitude < 1e-4f) away = -transform.forward;
+            _hopVelocity = away.normalized * (HopDistance / HopSec);
+            _hopLeft = HopSec;
+            Hops++;
+        }
 
         void Update()
         {
@@ -103,6 +124,7 @@ namespace Ascend.Game
             if (cmd.ReleaseToken) ReleaseToken();
             if (_brain.State != AiState.Staggered) IsStuck = false;
 
+            if (_hopLeft > 0f) { _hopLeft -= dt; transform.position += Blocked(_hopVelocity.normalized, _hopVelocity.magnitude * dt); UpdateTelegraph(); return; }
             if (IsDashing) { DashStep(dt); UpdateTelegraph(); return; }
             if (IsStuck) { UpdateTelegraph(); return; }
             if (MarchTarget.HasValue && (_brain.State == AiState.Idle || _brain.State == AiState.Return) && !Arrived)
@@ -133,8 +155,35 @@ namespace Ascend.Game
                 case AiMove.Circle: dir = Vector3.Cross(Vector3.up, toPlayer).normalized; break;
             }
             if (dir.sqrMagnitude < 1e-4f) return;
+            dir = Unstick(dir, dt);
             transform.position += Blocked(dir, (float)cmd.Speed * dt);
             if (cmd.Move != AiMove.Circle && !cmd.Face) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(dir), _turnSpeed * dt);
+        }
+
+        // Unsticking (ported from Project Greyborn's bot AI, game/src/sim/botAI.ts goTo): a monster that wants to move
+        // but has barely moved for StuckAfterSec walks sideways for a moment, which takes it round a wall it hit head-on.
+        public const float StuckAfterSec = 1.5f, SidestepSec = 1.2f;
+        Vector3 _unstickFrom;
+        float _stuckFor, _sidestepLeft;
+        int _sidestepSign = 1;
+        public bool Sidestepping => _sidestepLeft > 0f;
+
+        Vector3 Unstick(Vector3 dir, float dt)
+        {
+            if (_sidestepLeft > 0f)
+            {
+                _sidestepLeft -= dt;
+                return Vector3.Cross(Vector3.up, dir).normalized * _sidestepSign;
+            }
+            if (Flat(transform.position - _unstickFrom).magnitude < 0.05f) _stuckFor += dt;
+            else { _stuckFor = 0f; _unstickFrom = transform.position; }
+            if (_stuckFor >= StuckAfterSec)
+            {
+                _stuckFor = 0f;
+                _sidestepLeft = SidestepSec;
+                _sidestepSign = -_sidestepSign; // alternate sides, so a second try goes the other way
+            }
+            return dir;
         }
 
         /// <summary>

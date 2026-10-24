@@ -12,3 +12,17 @@ Ideas borrowed from games on the E: drive and from your own earlier projects. **
 - **Nuzzling** — partners come over to nuzzle you now and then (mean `nuzzleEveryMinutes` = 8 real minutes, exponential so it feels spontaneous); it counts toward Bond like a shared win.
 
 **To consider:** a per-species `trainability` that limits which partner orders a species can learn (Vanguard taunt, Scout call-outs) once partner commands exist; RimWorld's "bonded animal" grief when a partner is released could feed the Karma/Thread effect in systems.md §7.4.
+
+## Project Greyborn (yours) — `E:\project-greyborn\game\src\sim\botAI.ts`
+
+Your 4v4 evolution PvP game (TypeScript, three.js). Being yours, its code can be ported, not just its ideas.
+
+**Taken (built 2026-10-24):**
+- **Unsticking** (`goTo`): a bot that's barely moved for a couple of seconds sidesteps perpendicular to its path. Ported to `MonsterController.Unstick`: after 1.5 s stuck, a monster walks sideways for 1.2 s, alternating sides — a goblin that hits a short wall head-on now works its way round instead of standing pressed against it.
+- **Reflex hop** (`combatReflexes`): a badly hurt bot that was just hit sometimes evades. Ported as a hop back for skittish and ambushing monsters below 40% HP (25% per hit); aggressive ones stand their ground.
+
+**To consider:**
+- **Utility goals with hysteresis** (`think`): score every option, add a little noise and a bonus for the current goal so bots don't flip-flop. A good fit for partner AI once partners choose between fighting, fetching, scouting and following.
+- **A path budget** (`pathBudget`): at most a few A* searches per tick, so many monsters repathing at once can't cause a hitch — needed when Ring 1 gets a navmesh.
+- **Fight-or-flee odds** (`near.length` vs allies): a pack monster could check its packmates before committing, and fall back to them when alone.
+- **Evolution stages by level** (`formForLevel`, `stageForLevel`): Greyborn's three stages over 20 levels map naturally onto the Reborn Monster origin in `04_Classes/monster_evolution.md`.
