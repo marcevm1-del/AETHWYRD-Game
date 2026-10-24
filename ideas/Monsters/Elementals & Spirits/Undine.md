@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Undine
 
+![[mon_undine_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_undine_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Undine is a person-sized creature with an upright humanoid build, about 1.6 m tall. Its body is smooth and clean, colored in deep blues with a glassy shine. Guild sketches always show a woman-shaped figure of flowing water. It has big round glossy eyes. A distinctive marking runs along its back. It bounces happily, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Skeleton
 
+![[mon_skeleton_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_skeleton_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Skeleton is a person-sized creature with a lean humanoid frame, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Look for yellowed bones held together by blue grave-light. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |

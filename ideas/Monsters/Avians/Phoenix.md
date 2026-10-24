@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Phoenix
 
+![[mon_phoenix_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phoenix_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phoenix is a huge creature with a broad-winged bird frame, about 6 m tall. Its plumage is smooth and clean, colored in ember reds fading to soot black. Look for feathers of living flame that fall as embers. It has wide curious eyes with star-shaped highlights. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

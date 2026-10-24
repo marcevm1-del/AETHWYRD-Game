@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Cavern Needle Wasp
 
+![[mon_cavern_needle_wasp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cavern_needle_wasp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cavern Needle Wasp is a tiny creature with a small winged body, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a stinger as long as its body. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Firefly Swarm
 
+![[mon_firefly_swarm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_firefly_swarm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Firefly Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is smooth and clean, colored in warm gold and pearl white. Guild sketches always show hundreds of soft lantern lights moving together. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

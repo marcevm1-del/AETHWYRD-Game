@@ -8,6 +8,11 @@ tags: [monster, dragons, unique]
 ---
 # Kaelumbra, the Twilight Arbiter
 
+![[mon_kaelumbra_the_twilight_arbiter_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_kaelumbra_the_twilight_arbiter_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Kaelumbra, the Twilight Arbiter is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 150 m long. Its scales are weathered and natural, colored in starless black with faint violet edges. Look for a body split down the middle, half dawn-gold and half dusk-violet. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

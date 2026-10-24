@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Killer Ant
 
+![[mon_killer_ant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_killer_ant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Killer Ant is a small creature with a segmented six-limbed frame, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in muted greys and dusty browns. Its most striking feature is a pale soldier ant with a jaw that never stops working. It has pale, pupil-less eyes. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

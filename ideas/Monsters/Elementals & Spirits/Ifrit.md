@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Ifrit
 
+![[mon_ifrit_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ifrit_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ifrit is a huge creature with a drifting, half-formed body, about 5 m tall. Its body is rough, scarred and spiked, colored in ember reds fading to soot black. Look for a torso of fire rising from a smoking lamp. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

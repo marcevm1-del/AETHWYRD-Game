@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Alley Skeleton Knight
 
+![[mon_alley_skeleton_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_alley_skeleton_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Alley Skeleton Knight is a person-sized creature with an upright humanoid build, about 2 m tall. Its flesh and bone are rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is rusted plate armor and a shield it still keeps polished. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Vesper-Touched Griffon
 
+![[mon_vesper_touched_griffon_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_griffon_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Griffon is a large creature with a powerful four-legged hunter's body, about 3 m long. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe an eagle's front and a lion's back. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by swirling leaves and a constant breeze. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

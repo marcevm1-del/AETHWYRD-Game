@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Moon Hare
 
+![[mon_moon_hare_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_moon_hare_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Moon Hare is a small creature with a low, springy quadruped build, about 0.5 m long. Its coat is smooth and clean, colored in warm gold and pearl white. Survivors describe white fur that glows under the full moon. It has two bright dot eyes. A distinctive marking runs along its back. It bounces happily, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

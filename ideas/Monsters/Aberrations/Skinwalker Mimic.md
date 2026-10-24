@@ -8,6 +8,11 @@ tags: [monster, aberrations]
 ---
 # Skinwalker Mimic
 
+![[mon_skinwalker_mimic_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_skinwalker_mimic_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Skinwalker Mimic is a person-sized creature with an asymmetric body with too many limbs, about 1.8 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. It calls you in your companion's voice. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It crawls across ceilings, surrounded by shadows that lean toward it.
 
 | Field | Value |

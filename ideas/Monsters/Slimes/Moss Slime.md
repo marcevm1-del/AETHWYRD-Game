@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Moss Slime
 
+![[mon_moss_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_moss_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Moss Slime is a small creature with a dome-shaped gelatinous body, about 0.5 m tall. Its gel is weathered and natural, colored in leaf greens over bark brown. Survivors describe a faint ember core pulsing like a heartbeat. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

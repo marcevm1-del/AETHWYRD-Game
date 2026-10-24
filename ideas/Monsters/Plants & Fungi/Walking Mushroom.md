@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Walking Mushroom
 
+![[mon_walking_mushroom_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_walking_mushroom_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are smooth and clean, colored in leaf greens over bark brown. Look for a waddling cap on stubby legs. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |

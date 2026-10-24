@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Phantom Glowfin Angler
 
+![[mon_phantom_glowfin_angler_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_glowfin_angler_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Glowfin Angler is a large creature with a heavy-jawed fish frame, about 3 m long. Its scales and skin are stretched, stitched and constantly shifting, colored in warm gold and pearl white. Survivors describe a lure of light dangling over a mouth of glass teeth. It has too many eyes, opening one after another. Battle-worn plates and trophies hang from its body. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

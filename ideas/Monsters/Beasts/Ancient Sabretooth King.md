@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Ancient Sabretooth King
 
+![[mon_ancient_sabretooth_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_sabretooth_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Sabretooth King is a large creature with a long-legged predatory quadruped build, about 4.8 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe two sabre fangs as long as swords. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

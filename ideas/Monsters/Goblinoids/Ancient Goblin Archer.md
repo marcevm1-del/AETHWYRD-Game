@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Ancient Goblin Archer
 
+![[mon_ancient_goblin_archer_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_goblin_archer_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Goblin Archer is a person-sized creature with a small, compact humanoid body, about 1.5 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show a crooked bow strung with gut and a quiver of bone-tipped arrows. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Harpy
 
+![[mon_harpy_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_harpy_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Harpy is a person-sized creature with a broad-winged bird frame, about 1.6 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Its most striking feature is a bird body with a shrieking human-like face. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

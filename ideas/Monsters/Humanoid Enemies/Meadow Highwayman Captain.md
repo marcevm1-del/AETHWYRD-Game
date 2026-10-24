@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Meadow Highwayman Captain
 
+![[mon_meadow_highwayman_captain_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_meadow_highwayman_captain_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Meadow Highwayman Captain is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in pale jade and cloud white. Guild sketches always show a feathered hat and two pistols of Veilborn design. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |

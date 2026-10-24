@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Kijin Warrior
 
+![[mon_kijin_warrior_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_kijin_warrior_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Kijin Warrior is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe twin horns, a disciplined stance and a lacquered blade. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

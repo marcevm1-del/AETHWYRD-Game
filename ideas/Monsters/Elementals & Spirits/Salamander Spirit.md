@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Salamander Spirit
 
+![[mon_salamander_spirit_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_salamander_spirit_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Salamander Spirit is a small creature with a long, sinuous serpentine body, about 1 m long. Its body is weathered and natural, colored in ember reds fading to soot black. Its most striking feature is a lizard of living flame. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

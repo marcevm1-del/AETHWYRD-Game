@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Vesper-Touched Long-Neck Lady
 
+![[mon_vesper_touched_long_neck_lady_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_long_neck_lady_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Long-Neck Lady is a person-sized creature with a tall, impossibly thin frame, about 1.7 m tall. Its form is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Guild sketches always show a neck that stretches across rooftops. It has a human-like face in the wrong place. Battle-worn plates and trophies hang from its body. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Thunderbird
 
+![[mon_thunderbird_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thunderbird_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thunderbird is a huge creature with a feathered avian body, about 8 m tall. Its plumage is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe wings that drum thunder. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |

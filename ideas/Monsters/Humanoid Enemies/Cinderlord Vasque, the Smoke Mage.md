@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 ---
 # Cinderlord Vasque, the Smoke Mage
 
+![[mon_cinderlord_vasque_the_smoke_mage_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cinderlord_vasque_the_smoke_mage_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cinderlord Vasque, the Smoke Mage is a person-sized creature with a broad-shouldered humanoid build, about 1.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Its most striking feature is a gas mask of brass and lungs full of living smoke. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

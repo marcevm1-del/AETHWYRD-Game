@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Hobgoblin
 
+![[mon_hobgoblin_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_hobgoblin_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Hobgoblin is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Look for a broad scarred chest and a helmet two sizes too small. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

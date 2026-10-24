@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Greater Fox Spirit
 
+![[mon_greater_fox_spirit_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_greater_fox_spirit_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Greater Fox Spirit is a person-sized creature with a compact quadruped frame, about 1.6 m long. Its form is weathered and natural, colored in ember reds fading to soot black. Look for three tails tipped with blue flame. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Elder Orc Disaster
 
+![[mon_elder_orc_disaster_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elder_orc_disaster_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elder Orc Disaster is a huge creature with a massive hunched brute frame, about 6.4 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. The air distorts slightly around its outline. It charges without hesitation, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

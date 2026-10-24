@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Vesper-Touched Frost Giant
 
+![[mon_vesper_touched_frost_giant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_frost_giant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Frost Giant is a huge creature with a massive hunched brute frame, about 9 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in pale blues and frost-white. Look for a beard of icicles and armor of glacier ice. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by falling snow motes and frosted ground where it steps. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

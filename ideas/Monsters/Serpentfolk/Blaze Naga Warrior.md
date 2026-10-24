@@ -8,6 +8,11 @@ tags: [monster, serpentfolk]
 ---
 # Blaze Naga Warrior
 
+![[mon_blaze_naga_warrior_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blaze_naga_warrior_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blaze Naga Warrior is a large creature with a humanoid upper body on a long serpent tail, about 4 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Look for four arms holding four blades. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

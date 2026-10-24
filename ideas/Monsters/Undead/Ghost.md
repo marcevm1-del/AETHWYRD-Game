@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Ghost
 
+![[mon_ghost_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ghost_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ghost is a person-sized creature with a bodiless, glowing form, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Look for a translucent figure frozen in its last moment. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |

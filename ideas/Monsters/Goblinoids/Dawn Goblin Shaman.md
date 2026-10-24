@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Dawn Goblin Shaman
 
+![[mon_dawn_goblin_shaman_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_dawn_goblin_shaman_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Dawn Goblin Shaman is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show a skull headdress and a staff hung with smoking charms. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

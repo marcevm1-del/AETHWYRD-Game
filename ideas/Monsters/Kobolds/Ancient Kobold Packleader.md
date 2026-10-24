@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Ancient Kobold Packleader
 
+![[mon_ancient_kobold_packleader_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_kobold_packleader_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Kobold Packleader is a person-sized creature with a hunched, wiry humanoid frame, about 1.8 m tall. Its mangy fur is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe a collar of teeth from rival packs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

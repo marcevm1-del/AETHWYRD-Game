@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Bog Mimic Slime
 
+![[mon_bog_mimic_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_mimic_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Mimic Slime is a small creature with a dome-shaped gelatinous body, about 1 m tall. Its gel is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a surface that ripples into the shape of whatever it last ate. It has eyes that never blink. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

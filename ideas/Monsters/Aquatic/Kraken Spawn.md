@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Kraken Spawn
 
+![[mon_kraken_spawn_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_kraken_spawn_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Kraken Spawn is a colossal creature with a huge many-armed sea body, about 25 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a galleon-sized body with hooked tentacles. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

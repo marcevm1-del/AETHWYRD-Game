@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Vine Man-Eater Plant
 
+![[mon_vine_man_eater_plant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vine_man_eater_plant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vine Man-Eater Plant is a large creature with a huge bulbous flower on a thick stalk, about 2.5 m tall. Its bark and leaves are rough, scarred and spiked, colored in leaf greens over bark brown. Guild sketches always show a flower with jaws made of petals. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
 
 | Field | Value |

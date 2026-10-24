@@ -8,6 +8,11 @@ tags: [monster, chimeras-mythic-beasts]
 ---
 # Chimera
 
+![[mon_chimera_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_chimera_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Chimera is a large creature with a heavy, muscular quadruped frame, about 3.5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Look for lion, goat and serpent heads on one body. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

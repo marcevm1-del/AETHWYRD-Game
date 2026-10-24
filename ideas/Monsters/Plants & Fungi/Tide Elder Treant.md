@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Tide Elder Treant
 
+![[mon_tide_elder_treant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_tide_elder_treant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Tide Elder Treant is a huge creature with a mushroom-capped walking body, about 12 m tall. Its bark and leaves are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show a moss beard and owls living in its branches. It has dark, wary eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It lopes in long strides, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

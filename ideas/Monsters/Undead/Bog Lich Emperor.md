@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Bog Lich Emperor
 
+![[mon_bog_lich_emperor_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_lich_emperor_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Lich Emperor is a large creature with a drifting, half-formed body, about 3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Its most striking feature is a crown of frozen souls and a phylactery the size of a castle tower. It has pale, pupil-less eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Vesper-Touched Goblin Bomber
 
+![[mon_vesper_touched_goblin_bomber_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_goblin_bomber_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Goblin Bomber is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Its most striking feature is a barrel of black powder strapped to its back and a lit fuse in its teeth. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

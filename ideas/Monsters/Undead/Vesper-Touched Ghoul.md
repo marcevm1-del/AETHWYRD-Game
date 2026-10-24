@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Vesper-Touched Ghoul
 
+![[mon_vesper_touched_ghoul_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_ghoul_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Ghoul is a person-sized creature with an upright humanoid build, about 1.6 m tall. Its flesh and bone are stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its most striking feature is grey, hairless skin and long black nails. It has a human-like face in the wrong place. A distinctive marking runs along its back. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Greater Needle Wasp
 
+![[mon_greater_needle_wasp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_greater_needle_wasp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Greater Needle Wasp is a small creature with a small winged body, about 0.5 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a stinger as long as its body. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

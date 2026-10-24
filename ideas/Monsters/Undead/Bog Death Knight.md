@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Bog Death Knight
 
+![[mon_bog_death_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_death_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Death Knight is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its flesh and bone are rough, scarred and spiked, colored in bruise purple with sickly green. Look for black plate, a cloak of ash and a sword of cold fire. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

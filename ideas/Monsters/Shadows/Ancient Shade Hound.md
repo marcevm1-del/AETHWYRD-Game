@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Ancient Shade Hound
 
+![[mon_ancient_shade_hound_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_shade_hound_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Shade Hound is a person-sized creature with a long-legged predatory quadruped build, about 2.1 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a dog made of smoke with ember eyes. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

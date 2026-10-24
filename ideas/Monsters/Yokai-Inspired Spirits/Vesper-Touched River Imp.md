@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Vesper-Touched River Imp
 
+![[mon_vesper_touched_river_imp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_river_imp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a dish-like hollow on its head full of water. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

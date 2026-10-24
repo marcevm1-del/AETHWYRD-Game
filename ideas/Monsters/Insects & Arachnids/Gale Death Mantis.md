@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Gale Death Mantis
 
+![[mon_gale_death_mantis_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_gale_death_mantis_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Gale Death Mantis is a large creature with a six-legged armored body, about 3 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in pale jade and cloud white. Survivors describe black chitin and a skull-like head. It has eyes that never blink. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |

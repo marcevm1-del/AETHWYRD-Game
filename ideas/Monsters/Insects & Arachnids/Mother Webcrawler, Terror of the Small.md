@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids, tyrant, unique]
 ---
 # Mother Webcrawler, Terror of the Small
 
+![[mon_mother_webcrawler_terror_of_the_small_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mother_webcrawler_terror_of_the_small_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mother Webcrawler, Terror of the Small is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.2 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a spider no bigger than a cat, which to the Thimblefolk is a mountain. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Phantom Abyss Slime
 
+![[mon_phantom_abyss_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_abyss_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Abyss Slime is a large creature with a wobbling mound of translucent gel, about 4 m tall. Its gel is stretched, stitched and constantly shifting, colored in warm gold and pearl white. Guild sketches always show starless black jelly that swallows all light. It has a human-like face in the wrong place. Its regal silhouette is crowned by a halo-like ring of aura. It copies the walk of whatever it hunts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

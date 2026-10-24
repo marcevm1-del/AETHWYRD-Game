@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Ruin Goblin Bomber
 
+![[mon_ruin_goblin_bomber_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ruin_goblin_bomber_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ruin Goblin Bomber is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in ink black with bruised violet. Look for a barrel of black powder strapped to its back and a lit fuse in its teeth. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 
 | Field | Value |

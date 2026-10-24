@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Greater Umbral Reaper
 
+![[mon_greater_umbral_reaper_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_greater_umbral_reaper_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Greater Umbral Reaper is a large creature with a drifting, half-formed body, about 4.8 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a scythe of night and a hood with no face. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Griffon
 
+![[mon_griffon_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_griffon_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Griffon is a large creature with a long-legged predatory quadruped build, about 3 m long. Its plumage is weathered and natural, colored in pale jade and cloud white. Its most striking feature is an eagle's front and a lion's back. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

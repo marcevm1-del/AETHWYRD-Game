@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Steppe Behemoth Calf
 
+![[mon_steppe_behemoth_calf_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_steppe_behemoth_calf_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Steppe Behemoth Calf is a large creature with a heavy, muscular quadruped frame, about 4 m long. Its coat is weathered and natural, colored in pale jade and cloud white. Guild sketches always show a stone-plated back and stump-like legs. It has alert animal eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by swirling leaves and a constant breeze. Adapted to steppe lands, it has wind-burnt coloring and a lean frame.
 
 | Field | Value |

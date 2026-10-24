@@ -8,6 +8,11 @@ tags: [monster, minotaurs-beastmen]
 ---
 # Minotaur
 
+![[mon_minotaur_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_minotaur_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Minotaur is a large creature with a towering, heavy-limbed body, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a bull's head, a massive labrys axe and snorting breath. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

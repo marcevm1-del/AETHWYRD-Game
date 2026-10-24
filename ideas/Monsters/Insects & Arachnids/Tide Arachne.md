@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Tide Arachne
 
+![[mon_tide_arachne_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_tide_arachne_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Tide Arachne is a large creature with a squat, many-legged arachnid build, about 3 m long. Its chitin is rough, scarred and spiked, colored in deep blues with a glassy shine. Its most striking feature is a woman's upper body rising from a spider's. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |

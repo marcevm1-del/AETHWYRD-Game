@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Radiant Centipede
 
+![[mon_radiant_centipede_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_radiant_centipede_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Radiant Centipede is a huge creature with a long, sinuous serpentine body, about 6 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show a hundred legs and a head like a split mask. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |

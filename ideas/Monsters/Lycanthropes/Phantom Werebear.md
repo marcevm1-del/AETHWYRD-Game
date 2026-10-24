@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Phantom Werebear
 
+![[mon_phantom_werebear_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_werebear_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Look for tribal tattoos showing through thick bear fur. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

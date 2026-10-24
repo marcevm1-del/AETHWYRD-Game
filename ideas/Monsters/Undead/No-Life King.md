@@ -8,6 +8,11 @@ tags: [monster, undead, unique]
 ---
 # No-Life King
 
+![[mon_no_life_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_no_life_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The No-Life King is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a king of bone on a throne of a thousand skulls. It has eyes that never blink. Its presence is world-scale; the sky changes color when it appears. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

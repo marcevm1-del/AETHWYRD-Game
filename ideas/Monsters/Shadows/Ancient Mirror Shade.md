@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Ancient Mirror Shade
 
+![[mon_ancient_mirror_shade_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_mirror_shade_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Mirror Shade is a large creature with a broad-shouldered humanoid build, about 2.7 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Look for your own silhouette, a heartbeat behind you. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

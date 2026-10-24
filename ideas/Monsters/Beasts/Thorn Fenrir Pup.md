@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Thorn Fenrir Pup
 
+![[mon_thorn_fenrir_pup_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thorn_fenrir_pup_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thorn Fenrir Pup is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its coat is weathered and natural, colored in leaf greens over bark brown. Look for frosted fur and breath that freezes the air. It has amber predator eyes. Faint runes glow along its body when it fights. It prowls, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

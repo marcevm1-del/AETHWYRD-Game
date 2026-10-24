@@ -8,6 +8,11 @@ tags: [monster, sandborne, unique]
 ---
 # Dunewhale Thalassa
 
+![[mon_dunewhale_thalassa_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_dunewhale_thalassa_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Dunewhale Thalassa is a colossal creature with a long, finned body, about 900 m long. Its sand-scoured hide is smooth and clean, colored in ochre, clay and mossy stone. Look for a whale of stone and sand carrying a town on its back. It has wide curious eyes with star-shaped highlights. Its presence is world-scale; the sky changes color when it appears. It hops in little bursts, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

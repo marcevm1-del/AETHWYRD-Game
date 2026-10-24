@@ -8,6 +8,11 @@ tags: [monster, avians, unique]
 ---
 # Aethernax, the Sky Devourer
 
+![[mon_aethernax_the_sky_devourer_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_aethernax_the_sky_devourer_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Aethernax, the Sky Devourer is a colossal creature with a tall, long-legged bird build, about 400 m tall. Its plumage is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Survivors describe wings that leave holes in the sky. It has pale, pupil-less eyes. Its presence is world-scale; the sky changes color when it appears. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

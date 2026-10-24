@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Crag Jackalope
 
+![[mon_crag_jackalope_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_crag_jackalope_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Crag Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe tiny antlers on a fluffy rabbit. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 
 | Field | Value |

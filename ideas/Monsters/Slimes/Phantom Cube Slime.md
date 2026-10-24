@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Phantom Cube Slime
 
+![[mon_phantom_cube_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_cube_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Cube Slime is a small creature with a teardrop-shaped jelly body, about 0.8 m tall. Its gel is rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show a perfectly cubic body with swallowed debris visible inside. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

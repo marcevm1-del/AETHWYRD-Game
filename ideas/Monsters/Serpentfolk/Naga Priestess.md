@@ -8,6 +8,11 @@ tags: [monster, serpentfolk]
 ---
 # Naga Priestess
 
+![[mon_naga_priestess_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_naga_priestess_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Naga Priestess is a large creature with a coiling half-serpent frame, about 4 m long. Its scales are rough, scarred and spiked, colored in ink black with bruised violet. Look for a hood of jeweled scales and temple tattoos. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it.
 
 | Field | Value |

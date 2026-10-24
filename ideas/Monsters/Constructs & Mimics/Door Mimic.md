@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics]
 ---
 # Door Mimic
 
+![[mon_door_mimic_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_door_mimic_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Door Mimic is a person-sized creature with a disguised body pretending to be furniture, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Guild sketches always show a dungeon door that breathes. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It unfolds into something larger. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

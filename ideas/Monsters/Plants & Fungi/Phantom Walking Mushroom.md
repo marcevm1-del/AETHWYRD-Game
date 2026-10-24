@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Phantom Walking Mushroom
 
+![[mon_phantom_walking_mushroom_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_walking_mushroom_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are weathered and natural, colored in warm gold and pearl white. Guild sketches always show a waddling cap on stubby legs. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Corpse Flower
 
+![[mon_corpse_flower_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_corpse_flower_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Corpse Flower is a large creature with a rooted plant body, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a rotting bloom the size of a cart. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 
 | Field | Value |

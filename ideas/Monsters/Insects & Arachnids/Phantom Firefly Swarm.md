@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Phantom Firefly Swarm
 
+![[mon_phantom_firefly_swarm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_firefly_swarm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Firefly Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is weathered and natural, colored in warm gold and pearl white. Look for hundreds of soft lantern lights moving together. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Inquisitor
 
+![[mon_inquisitor_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_inquisitor_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Inquisitor is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show silver anti-magic chains and a sun-shaped mask. It has burning slit pupils. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Ancient Ember Ooze
 
+![[mon_ancient_ember_ooze_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_ember_ooze_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Ember Ooze is a person-sized creature with a dome-shaped gelatinous body, about 2.3 m tall. Its gel is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is molten trails that harden into glass behind it. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

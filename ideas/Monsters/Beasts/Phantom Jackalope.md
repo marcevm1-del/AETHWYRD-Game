@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Phantom Jackalope
 
+![[mon_phantom_jackalope_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_jackalope_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in warm gold and pearl white. Guild sketches always show tiny antlers on a fluffy rabbit. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

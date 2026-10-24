@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics, tyrant, unique]
 ---
 # The Tithe Colossus, Hunger of the Foundation Stones
 
+![[mon_the_tithe_colossus_hunger_of_the_foundation_stones_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_the_tithe_colossus_hunger_of_the_foundation_stones_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The The Tithe Colossus, Hunger of the Foundation Stones is a huge creature with a heavy, hand-built humanoid shell, about 7 m tall. Its surface is rough, scarred and spiked, colored in warm gold and pearl white. Look for a Foundation Stone that woke up hungry for the nobles' mana. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

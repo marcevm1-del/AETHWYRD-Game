@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Venom Blood Vesper Alpha
 
+![[mon_venom_blood_vesper_alpha_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_venom_blood_vesper_alpha_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Venom Blood Vesper Alpha is a large creature with a broad-shouldered humanoid build, about 3.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for red-veined fur that only appears under the red moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

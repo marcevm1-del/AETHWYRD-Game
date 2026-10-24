@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Meadow Orc Grunt
 
+![[mon_meadow_orc_grunt_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_meadow_orc_grunt_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Meadow Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe tusks, war paint and a dented iron axe. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |

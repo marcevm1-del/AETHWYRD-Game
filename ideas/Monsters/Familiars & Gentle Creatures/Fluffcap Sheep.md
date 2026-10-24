@@ -8,6 +8,11 @@ tags: [monster, familiars-gentle-creatures]
 ---
 # Fluffcap Sheep
 
+![[mon_fluffcap_sheep_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_fluffcap_sheep_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Fluffcap Sheep is a small creature with a small, quick four-legged body, about 1 m long. Its coat is smooth and clean, colored in pale jade and cloud white. Its most striking feature is wool so light it floats. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

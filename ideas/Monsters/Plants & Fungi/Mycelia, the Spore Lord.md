@@ -8,6 +8,11 @@ tags: [monster, plants-fungi, tyrant, unique]
 ---
 # Mycelia, the Spore Lord
 
+![[mon_mycelia_the_spore_lord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mycelia_the_spore_lord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mycelia, the Spore Lord is a huge creature with a tall, tree-like walking frame, about 5 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a crown of glowing fungus fed by the World Tree's Blight. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

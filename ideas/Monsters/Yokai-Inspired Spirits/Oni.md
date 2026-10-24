@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Oni
 
+![[mon_oni_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_oni_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Oni is a large creature with a giant, barrel-chested humanoid body, about 3.5 m tall. Its form is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe horns, a tiger-skin wrap and an iron club. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

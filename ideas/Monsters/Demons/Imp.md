@@ -8,6 +8,11 @@ tags: [monster, demons]
 ---
 # Imp
 
+![[mon_imp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_imp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Imp is a small creature with a tiny, darting winged build, about 0.6 m tall. Its hide is weathered and natural, colored in ember reds fading to soot black. Guild sketches always show bat wings, a pointed tail and a cheeky grin. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

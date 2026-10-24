@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Horned Rabbit
 
+![[mon_horned_rabbit_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_horned_rabbit_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Horned Rabbit is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Survivors describe a single spiral horn and oversized hind feet. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

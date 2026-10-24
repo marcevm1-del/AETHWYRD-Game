@@ -8,6 +8,11 @@ tags: [monster, the-headless]
 ---
 # Vesper-Touched Headless Rider
 
+![[mon_vesper_touched_headless_rider_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_headless_rider_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Headless Rider is a large creature with a tall, headless knightly build, about 2.6 m tall. Its armor is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe a lantern burning where its head should be. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

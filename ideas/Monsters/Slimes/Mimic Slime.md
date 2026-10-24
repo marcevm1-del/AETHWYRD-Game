@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Mimic Slime
 
+![[mon_mimic_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mimic_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mimic Slime is a small creature with a wobbling mound of translucent gel, about 1 m tall. Its gel is patchy and subtly wrong, as if assembled from memory, colored in muted greys and dusty browns. Survivors describe a surface that ripples into the shape of whatever it last ate. It has eyes that never blink. A distinctive marking runs along its back. It glides without moving its legs. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

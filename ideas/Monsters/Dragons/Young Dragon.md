@@ -8,6 +8,11 @@ tags: [monster, dragons]
 ---
 # Young Dragon
 
+![[mon_young_dragon_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_young_dragon_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Young Dragon is a huge creature with a four-legged, two-winged dragon body, about 12 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe a proud crest and scales that shine like new coins. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Thunderhorn Elk
 
+![[mon_thunderhorn_elk_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thunderhorn_elk_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thunderhorn Elk is a large creature with a long-legged predatory quadruped build, about 2.8 m long. Its coat is weathered and natural, colored in storm violet shot through with electric yellow. Guild sketches always show branching antlers that crackle in storms. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |

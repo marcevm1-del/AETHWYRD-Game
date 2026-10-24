@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # King Slime
 
+![[mon_king_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_king_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The King Slime is a large creature with a wobbling mound of translucent gel, about 3 m tall. Its gel is weathered and natural, colored in deep blues with a glassy shine. Survivors describe a crown made of smaller slimes fused together. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

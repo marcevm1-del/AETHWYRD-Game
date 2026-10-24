@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Kobold Tunnel-Queen
 
+![[mon_kobold_tunnel_queen_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_kobold_tunnel_queen_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Kobold Tunnel-Queen is a person-sized creature with a small, compact humanoid body, about 1.6 m tall. Its mangy fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a bloated, jewel-encrusted body carried on a litter. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

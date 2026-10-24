@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Frost Slime
 
+![[mon_frost_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_frost_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Frost Slime is a small creature with a wobbling mound of translucent gel, about 0.5 m tall. Its gel is weathered and natural, colored in pale blues and frost-white. Guild sketches always show frost crystals growing from its crown. It has alert animal eyes. A distinctive marking runs along its back. It prowls, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |

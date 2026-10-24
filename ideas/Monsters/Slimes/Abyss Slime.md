@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Abyss Slime
 
+![[mon_abyss_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_abyss_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Abyss Slime is a large creature with a teardrop-shaped jelly body, about 4 m tall. Its gel is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Look for starless black jelly that swallows all light. It has no eyes at all, only a wide and patient mouth. Its regal silhouette is crowned by a halo-like ring of aura. It crawls across ceilings, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

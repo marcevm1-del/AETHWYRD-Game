@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Blight Skinchanger
 
+![[mon_blight_skinchanger_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blight_skinchanger_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blight Skinchanger is a person-sized creature with an upright humanoid build, about 2.4 m tall. Its fur is stretched, stitched and constantly shifting, colored in bruise purple with sickly green. Look for half its body stuck mid-transformation, forever. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

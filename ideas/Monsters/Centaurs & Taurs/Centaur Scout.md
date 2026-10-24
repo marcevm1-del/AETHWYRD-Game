@@ -8,6 +8,11 @@ tags: [monster, centaurs-taurs]
 ---
 # Centaur Scout
 
+![[mon_centaur_scout_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_centaur_scout_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Centaur Scout is a person-sized creature with a powerful taur build, about 2.4 m tall. Its coat is weathered and natural, colored in pale jade and cloud white. Guild sketches always show a horsebow and a braided mane. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, gremlins, tyrant, unique]
 ---
 # Cogmaw, the Gremlin Engine-King
 
+![[mon_cogmaw_the_gremlin_engine_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cogmaw_the_gremlin_engine_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cogmaw, the Gremlin Engine-King is a large creature with a small, compact humanoid body, about 3 m tall. Its skin is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Look for a throne bolted onto a walking furnace that eats machines. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |

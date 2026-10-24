@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Ancient Forest Wolf
 
+![[mon_ancient_forest_wolf_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_forest_wolf_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Forest Wolf is a person-sized creature with a powerful four-legged hunter's body, about 1.8 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Its most striking feature is a grey-green coat that blends with ferns. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

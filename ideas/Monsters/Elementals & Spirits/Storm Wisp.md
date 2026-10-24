@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Storm Wisp
 
+![[mon_storm_wisp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_storm_wisp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Storm Wisp is a tiny creature with a floating, cloth-like shape, about 0.3 m tall. Its body is smooth and clean, colored in storm violet shot through with electric yellow. Survivors describe a floating ball of soft light. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |

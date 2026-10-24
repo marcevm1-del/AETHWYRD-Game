@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Ghoul
 
+![[mon_ghoul_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ghoul_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ghoul is a person-sized creature with a lean humanoid frame, about 1.6 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is grey, hairless skin and long black nails. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

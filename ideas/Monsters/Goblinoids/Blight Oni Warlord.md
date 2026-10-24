@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Blight Oni Warlord
 
+![[mon_blight_oni_warlord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blight_oni_warlord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blight Oni Warlord is a large creature with a massive hunched brute frame, about 4.5 m tall. Its skin is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is a towering horned silhouette carrying an iron club wrapped in prayer chains. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

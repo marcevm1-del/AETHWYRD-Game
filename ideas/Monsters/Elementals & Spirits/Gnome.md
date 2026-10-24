@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Gnome
 
+![[mon_gnome_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_gnome_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Gnome is a small creature with a small, compact humanoid body, about 0.7 m tall. Its body is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is a stone-bearded little figure with gem eyes. It has amber predator eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Frost Puffcap Mushroom
 
+![[mon_frost_puffcap_mushroom_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_frost_puffcap_mushroom_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Frost Puffcap Mushroom is a small creature with a mushroom-capped walking body, about 0.5 m tall. Its bark and leaves are smooth and clean, colored in pale blues and frost-white. Its most striking feature is a spotted cap that sneezes giggle-spores. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |

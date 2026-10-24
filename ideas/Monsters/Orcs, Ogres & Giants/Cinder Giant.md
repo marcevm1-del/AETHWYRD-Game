@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Cinder Giant
 
+![[mon_cinder_giant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cinder_giant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cinder Giant is a huge creature with a giant, barrel-chested humanoid body, about 9 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show skin like cooling lava and a forge-hammer. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by heat-shimmer and drifting sparks. Adapted to volcanic lands, it has ash-dark coloring with glowing cracks.
 
 | Field | Value |

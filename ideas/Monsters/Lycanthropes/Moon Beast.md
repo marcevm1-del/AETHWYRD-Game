@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Moon Beast
 
+![[mon_moon_beast_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_moon_beast_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Moon Beast is a large creature with a lean humanoid frame, about 2.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is fur that ripples like oil under moonlight. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

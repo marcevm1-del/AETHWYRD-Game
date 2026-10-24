@@ -8,6 +8,11 @@ tags: [monster, demons]
 ---
 # Alley Abyss Herald
 
+![[mon_alley_abyss_herald_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_alley_abyss_herald_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Alley Abyss Herald is a huge creature with a lean humanoid frame, about 10 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in muted greys and dusty browns. Guild sketches always show a tall figure with a void where its face should be. It has eyes that never blink. The air distorts slightly around its outline. It glides without moving its legs. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Cockatrice
 
+![[mon_cockatrice_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cockatrice_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cockatrice is a small creature with a tall, long-legged bird build, about 0.8 m tall. Its plumage is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a rooster's head and a lizard's tail. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

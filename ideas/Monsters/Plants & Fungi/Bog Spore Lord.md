@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Bog Spore Lord
 
+![[mon_bog_spore_lord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_spore_lord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Spore Lord is a large creature with a tall, tree-like walking frame, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a mushroom crown and a cloak of mycelium. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

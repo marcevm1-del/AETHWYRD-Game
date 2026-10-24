@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Zephyr Rogue Knight
 
+![[mon_zephyr_rogue_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_zephyr_rogue_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Zephyr Rogue Knight is a person-sized creature with a lean humanoid frame, about 2 m tall. Its clothing and gear are rough, scarred and spiked, colored in pale jade and cloud white. Its most striking feature is a broken oath engraved on its blade. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

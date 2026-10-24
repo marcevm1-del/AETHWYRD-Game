@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Crocodile Wyrm
 
+![[mon_crocodile_wyrm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_crocodile_wyrm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Crocodile Wyrm is a huge creature with a long, sinuous serpentine body, about 7 m long. Its scales are rough, scarred and spiked, colored in deep blues with a glassy shine. Survivors describe a back of armored ridges like a sunken log. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

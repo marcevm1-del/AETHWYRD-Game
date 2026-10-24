@@ -8,6 +8,11 @@ tags: [monster, chimeras-mythic-beasts]
 ---
 # Phantom Nue
 
+![[mon_phantom_nue_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_nue_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Nue is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is stretched, stitched and constantly shifting, colored in warm gold and pearl white. Look for a monkey's face, a tiger's body and a snake for a tail. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

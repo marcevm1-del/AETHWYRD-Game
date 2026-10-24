@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Ancient Goblin King
 
+![[mon_ancient_goblin_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_goblin_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Goblin King is a large creature with a giant, barrel-chested humanoid body, about 4.2 m tall. Its skin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe throne-backed armor and a crown of hammered coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Sabretooth King
 
+![[mon_sabretooth_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_sabretooth_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Sabretooth King is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Look for two sabre fangs as long as swords. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics]
 ---
 # Ancient Mithril Colossus
 
+![[mon_ancient_mithril_colossus_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_mithril_colossus_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Mithril Colossus is a colossal creature with a blocky construct body, about 75 m tall. Its surface is weathered and natural, colored in warm gold and pearl white. Look for silver plating and a face like a temple mask. It has alert animal eyes. The air distorts slightly around its outline. It lopes in long strides, surrounded by soft radiance and floating motes of light. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

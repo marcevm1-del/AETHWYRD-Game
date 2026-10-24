@@ -8,6 +8,11 @@ tags: [monster, the-headless]
 ---
 # Dullahan
 
+![[mon_dullahan_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_dullahan_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Dullahan is a large creature with a tall, headless knightly build, about 2.8 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its own laughing head carried under one arm. It has eyes that never blink. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

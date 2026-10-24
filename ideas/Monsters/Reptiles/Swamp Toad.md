@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Swamp Toad
 
+![[mon_swamp_toad_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_swamp_toad_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Swamp Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in deep blues with a glassy shine. Survivors describe a wide smile and bulging golden eyes. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

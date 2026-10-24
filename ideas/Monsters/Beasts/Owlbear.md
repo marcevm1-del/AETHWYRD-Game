@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Owlbear
 
+![[mon_owlbear_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_owlbear_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Owlbear is a large creature with a long-legged predatory quadruped build, about 2.6 m long. Its coat is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe an owl's feathered face on a bear's muscled body. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

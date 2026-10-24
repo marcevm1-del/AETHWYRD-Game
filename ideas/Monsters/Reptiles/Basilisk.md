@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Basilisk
 
+![[mon_basilisk_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_basilisk_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Basilisk is a large creature with a powerful four-legged hunter's body, about 4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Its most striking feature is a crown of horns and eyes that petrify. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

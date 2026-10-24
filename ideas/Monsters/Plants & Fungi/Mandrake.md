@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Mandrake
 
+![[mon_mandrake_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mandrake_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mandrake is a tiny creature with a tall, tree-like walking frame, about 0.3 m tall. Its bark and leaves are weathered and natural, colored in leaf greens over bark brown. Its most striking feature is a screaming root with a leafy tuft. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |

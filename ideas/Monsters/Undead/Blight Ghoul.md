@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Blight Ghoul
 
+![[mon_blight_ghoul_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blight_ghoul_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blight Ghoul is a person-sized creature with a lean humanoid frame, about 1.6 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for grey, hairless skin and long black nails. It has eyes that never blink. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

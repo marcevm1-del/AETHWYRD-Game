@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Elder Bandit Bear
 
+![[mon_elder_bandit_bear_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elder_bandit_bear_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elder Bandit Bear is a large creature with a heavy, muscular quadruped frame, about 3.5 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Guild sketches always show a dark mask-like band across its eyes. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

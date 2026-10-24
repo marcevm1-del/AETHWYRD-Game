@@ -150,7 +150,7 @@ Record how often players repeat an activity only for XP, when they lose sight of
 
 ## Related files
 
-- [[progression]]
+- `Data/Classes/progression.json` (stat and XP rules)
 - [[signature_gameplay_loops]]
 - [[combat]]
 - [[weekly_board]]

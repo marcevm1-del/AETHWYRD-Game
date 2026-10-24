@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Elite Fallen Hero
 
+![[mon_elite_fallen_hero_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elite_fallen_hero_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elite Fallen Hero is a large creature with a lean humanoid frame, about 3 m tall. Its clothing and gear are rough, scarred and spiked, colored in warm gold and pearl white. Look for tarnished hero armor and eyes that have seen the truth of the System. It has narrow glowing eyes. The air distorts slightly around its outline. It circles its prey, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

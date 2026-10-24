@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Goblin Shaman
 
+![[mon_goblin_shaman_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_goblin_shaman_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Goblin Shaman is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe a skull headdress and a staff hung with smoking charms. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

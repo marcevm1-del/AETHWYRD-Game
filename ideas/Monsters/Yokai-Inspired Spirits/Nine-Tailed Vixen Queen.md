@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Nine-Tailed Vixen Queen
 
+![[mon_nine_tailed_vixen_queen_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_nine_tailed_vixen_queen_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Nine-Tailed Vixen Queen is a huge creature with a powerful four-legged hunter's body, about 8 m long. Its form is weathered and natural, colored in ember reds fading to soot black. Guild sketches always show nine tails that each hold a different spell. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

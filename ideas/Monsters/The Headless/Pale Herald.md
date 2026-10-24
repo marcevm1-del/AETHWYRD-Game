@@ -8,6 +8,11 @@ tags: [monster, the-headless]
 ---
 # Pale Herald
 
+![[mon_pale_herald_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_pale_herald_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Pale Herald is a large creature with a tall, headless knightly build, about 3.5 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show a cape of fog trailing behind a headless knight. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

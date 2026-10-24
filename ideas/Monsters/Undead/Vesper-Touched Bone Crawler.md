@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Vesper-Touched Bone Crawler
 
+![[mon_vesper_touched_bone_crawler_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_bone_crawler_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Bone Crawler is a person-sized creature with an asymmetric body with too many limbs, about 1.4 m tall. Its flesh and bone are stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe a skeleton reassembled wrong, crawling on its hands. It has no eyes at all, only a wide and patient mouth. Small scars and rough edges mark it as a survivor. It unfolds into something larger, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

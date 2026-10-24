@@ -8,6 +8,11 @@ tags: [monster, dragons, unique]
 ---
 # Terragon, the Mountain That Breathes
 
+![[mon_terragon_the_mountain_that_breathes_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_terragon_the_mountain_that_breathes_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Terragon, the Mountain That Breathes is a colossal creature with an ancient, serpentine dragon body, about 2000 m long. Its scales are weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is forests growing along its back. It has alert animal eyes. Its presence is world-scale; the sky changes color when it appears. It prowls, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

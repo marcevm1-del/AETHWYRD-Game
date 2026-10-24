@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Greater Lantern Leech
 
+![[mon_greater_lantern_leech_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_greater_lantern_leech_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Greater Lantern Leech is a small creature with a massive snake-like frame, about 1 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a glow on its back like a lost traveler's lantern. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by fine mist and droplets that orbit it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

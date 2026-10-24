@@ -8,6 +8,11 @@ tags: [monster, aquatic, unique]
 ---
 # Leviathan
 
+![[mon_leviathan_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_leviathan_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Leviathan is a colossal creature with a heavy-jawed fish frame, about 600 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a body so vast it moves the horizon. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

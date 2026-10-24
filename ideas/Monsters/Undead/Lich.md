@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Lich
 
+![[mon_lich_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_lich_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Lich is a person-sized creature with a bodiless, glowing form, about 2.2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in pale blues and frost-white. Look for a crowned skull with a phylactery chained to its chest. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |

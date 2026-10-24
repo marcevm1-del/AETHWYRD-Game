@@ -8,6 +8,11 @@ tags: [monster, minotaurs-beastmen]
 ---
 # Gnoll Raider
 
+![[mon_gnoll_raider_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_gnoll_raider_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Gnoll Raider is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its hide is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show a hyena head and a laugh that carries for miles. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

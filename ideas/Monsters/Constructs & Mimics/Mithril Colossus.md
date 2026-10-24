@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics]
 ---
 # Mithril Colossus
 
+![[mon_mithril_colossus_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mithril_colossus_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mithril Colossus is a colossal creature with a heavy, hand-built humanoid shell, about 50 m tall. Its surface is weathered and natural, colored in warm gold and pearl white. Survivors describe silver plating and a face like a temple mask. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

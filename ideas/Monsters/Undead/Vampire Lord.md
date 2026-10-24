@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Vampire Lord
 
+![[mon_vampire_lord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vampire_lord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vampire Lord is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its flesh and bone are rough, scarred and spiked, colored in arterial crimson and dried-blood brown. Look for a cape that dissolves into bats. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |

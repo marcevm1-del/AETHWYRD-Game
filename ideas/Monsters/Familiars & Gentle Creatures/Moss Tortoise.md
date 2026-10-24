@@ -8,6 +8,11 @@ tags: [monster, familiars-gentle-creatures]
 ---
 # Moss Tortoise
 
+![[mon_moss_tortoise_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_moss_tortoise_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Moss Tortoise is a small creature with a compact quadruped frame, about 0.8 m long. Its coat is smooth and clean, colored in leaf greens over bark brown. Its most striking feature is herbs and flowers growing on its shell. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |

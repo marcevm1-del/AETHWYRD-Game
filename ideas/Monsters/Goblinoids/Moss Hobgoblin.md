@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Moss Hobgoblin
 
+![[mon_moss_hobgoblin_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_moss_hobgoblin_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Moss Hobgoblin is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its skin is rough, scarred and spiked, colored in leaf greens over bark brown. Survivors describe a broad scarred chest and a helmet two sizes too small. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

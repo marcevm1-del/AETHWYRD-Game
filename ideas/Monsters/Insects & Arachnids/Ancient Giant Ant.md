@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Ancient Giant Ant
 
+![[mon_ancient_giant_ant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_giant_ant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Giant Ant is a small creature with a six-legged armored body, about 0.9 m long. Its chitin is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show red-brown chitin and mandibles like pliers. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

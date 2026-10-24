@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Vesper-Touched Hollow Mourner
 
+![[mon_vesper_touched_hollow_mourner_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_hollow_mourner_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Hollow Mourner is a person-sized creature with an upright humanoid build, about 1.7 m tall. Its flesh and bone are stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its most striking feature is a weeping figure that moves only when you look away. It has no eyes at all, only a wide and patient mouth. Small scars and rough edges mark it as a survivor. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

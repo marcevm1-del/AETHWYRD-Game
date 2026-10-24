@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Vesper-Touched Goblin Champion
 
+![[mon_vesper_touched_goblin_champion_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_goblin_champion_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Goblin Champion is a person-sized creature with a lean humanoid frame, about 2 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for a trophy cloak stitched from adventurers' capes. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Metal Slime
 
+![[mon_metal_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_metal_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Metal Slime is a tiny creature with a dome-shaped gelatinous body, about 0.3 m tall. Its gel is smooth and clean, colored in ochre, clay and mossy stone. Look for mirror-chrome skin that reflects the world around it. It has big round glossy eyes. A distinctive marking runs along its back. It hops in little bursts, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

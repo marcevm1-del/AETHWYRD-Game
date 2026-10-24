@@ -8,6 +8,11 @@ tags: [monster, aberrations, tyrant, unique]
 ---
 # The Gentle Warden, Keeper of Ashira
 
+![[mon_the_gentle_warden_keeper_of_ashira_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_the_gentle_warden_keeper_of_ashira_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The The Gentle Warden, Keeper of Ashira is a person-sized creature with a shape that keeps rearranging itself, about 2.1 m tall. Its skin is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Survivors describe a smiling elder with a face too smooth, who tests the village children. It has too many eyes, opening one after another. Faint runes glow along its body when it fights. It copies the walk of whatever it hunts, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Vesper-Touched Sahuagin
 
+![[mon_vesper_touched_sahuagin_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_sahuagin_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Sahuagin is a person-sized creature with a lean humanoid frame, about 1.9 m tall. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Survivors describe a shark-like head and webbed hands. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

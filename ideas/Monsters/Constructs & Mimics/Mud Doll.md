@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics]
 ---
 # Mud Doll
 
+![[mon_mud_doll_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mud_doll_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mud Doll is a small creature with a scrawny biped with long arms and bowed legs, about 0.8 m tall. Its surface is smooth and clean, colored in ochre, clay and mossy stone. Look for a child's clay figure with thumbprint eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

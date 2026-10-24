@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Bog Treant Sapling
 
+![[mon_bog_treant_sapling_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_treant_sapling_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Treant Sapling is a person-sized creature with a walking body of bark and root, about 2 m tall. Its bark and leaves are smooth and clean, colored in bruise purple with sickly green. Guild sketches always show a young tree with a sleepy face. It has wide curious eyes with star-shaped highlights. A distinctive marking runs along its back. It hops in little bursts, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

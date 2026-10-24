@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Thunder Fenrir-Blooded Lord
 
+![[mon_thunder_fenrir_blooded_lord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thunder_fenrir_blooded_lord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thunder Fenrir-Blooded Lord is a large creature with an upright humanoid build, about 3.6 m tall. Its fur is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Its most striking feature is a crown of frost spikes growing from its mane. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

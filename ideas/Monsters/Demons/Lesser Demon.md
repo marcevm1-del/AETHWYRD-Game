@@ -8,6 +8,11 @@ tags: [monster, demons]
 ---
 # Lesser Demon
 
+![[mon_lesser_demon_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_lesser_demon_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Lesser Demon is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe curled horns and a leathery hide. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |

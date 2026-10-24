@@ -8,6 +8,11 @@ tags: [monster, floor-born]
 ---
 # Core Sentinel
 
+![[mon_core_sentinel_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_core_sentinel_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Core Sentinel is a large creature with a blocky construct body, about 2.5 m tall. Its stone-like hide is rough, scarred and spiked, colored in warm gold and pearl white. Survivors describe a dungeon-core crystal for a heart. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

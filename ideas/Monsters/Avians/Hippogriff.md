@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Hippogriff
 
+![[mon_hippogriff_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_hippogriff_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Hippogriff is a large creature with a powerful four-legged hunter's body, about 2.8 m long. Its plumage is weathered and natural, colored in pale jade and cloud white. Survivors describe an eagle's head on a horse's body. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Goblin King
 
+![[mon_goblin_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_goblin_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Goblin King is a large creature with a massive hunched brute frame, about 2.8 m tall. Its skin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for throne-backed armor and a crown of hammered coins. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

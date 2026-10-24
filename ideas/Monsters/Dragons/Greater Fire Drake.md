@@ -8,6 +8,11 @@ tags: [monster, dragons]
 ---
 # Greater Fire Drake
 
+![[mon_greater_fire_drake_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_greater_fire_drake_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Greater Fire Drake is a large creature with a long-legged predatory quadruped build, about 4.8 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is ember scales and a magma-glowing belly. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Simurrah
 
+![[mon_simurrah_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_simurrah_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Simurrah is a colossal creature with a feathered avian body, about 20 m tall. Its plumage is smooth and clean, colored in warm gold and pearl white. Its most striking feature is a healing bird with peacock-eyed plumage. It has two bright dot eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

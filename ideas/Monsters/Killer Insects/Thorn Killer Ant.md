@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Thorn Killer Ant
 
+![[mon_thorn_killer_ant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thorn_killer_ant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thorn Killer Ant is a small creature with a six-legged armored body, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in leaf greens over bark brown. Survivors describe a pale soldier ant with a jaw that never stops working. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Lizardman
 
+![[mon_lizardman_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_lizardman_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Lizardman is a person-sized creature with a lean humanoid frame, about 2 m tall. Its scales are weathered and natural, colored in deep blues with a glassy shine. Survivors describe a proud crest and a coral-tipped spear. It has dark, wary eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

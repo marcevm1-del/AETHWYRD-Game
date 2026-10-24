@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Rogue Mage
 
+![[mon_rogue_mage_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_rogue_mage_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Rogue Mage is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show burnt academy robes and ink-stained fingers. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

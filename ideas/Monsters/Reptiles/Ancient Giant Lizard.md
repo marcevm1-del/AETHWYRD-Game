@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Ancient Giant Lizard
 
+![[mon_ancient_giant_lizard_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_giant_lizard_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Giant Lizard is a large creature with a powerful four-legged hunter's body, about 3 m long. Its scales are weathered and natural, colored in ochre, clay and mossy stone. Look for sun-baked scales and a frilled neck. It has dark, wary eyes. A distinctive marking runs along its back. It prowls, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

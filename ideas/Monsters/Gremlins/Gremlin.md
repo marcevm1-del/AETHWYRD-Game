@@ -8,6 +8,11 @@ tags: [monster, gremlins]
 ---
 # Gremlin
 
+![[mon_gremlin_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_gremlin_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Gremlin is a small creature with a scrawny biped with long arms and bowed legs, about 0.6 m tall. Its skin is weathered and natural, colored in storm violet shot through with electric yellow. Its most striking feature is bat ears, a wrench and a laugh like a squeaky hinge. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |

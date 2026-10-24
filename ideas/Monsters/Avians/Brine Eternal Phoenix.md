@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Brine Eternal Phoenix
 
+![[mon_brine_eternal_phoenix_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_brine_eternal_phoenix_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Brine Eternal Phoenix is a colossal creature with a broad-winged bird frame, about 30 m tall. Its plumage is smooth and clean, colored in deep blues with a glassy shine. Survivors describe a sun-bright body that rises again from its own ash. It has wide curious eyes with star-shaped highlights. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It hops in little bursts, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

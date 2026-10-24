@@ -8,6 +8,11 @@ tags: [monster, beasts, tyrant, unique]
 ---
 # Thrakka, Sabretooth Khan of the Steppe Horde
 
+![[mon_thrakka_sabretooth_khan_of_the_steppe_horde_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thrakka_sabretooth_khan_of_the_steppe_horde_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thrakka, Sabretooth Khan of the Steppe Horde is a large creature with a long-legged predatory quadruped build, about 4 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Guild sketches always show two sabre fangs as long as spears and a horde that follows its howl. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |

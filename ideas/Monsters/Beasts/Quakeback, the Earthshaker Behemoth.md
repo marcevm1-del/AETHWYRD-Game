@@ -8,6 +8,11 @@ tags: [monster, beasts, tyrant, unique]
 ---
 # Quakeback, the Earthshaker Behemoth
 
+![[mon_quakeback_the_earthshaker_behemoth_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_quakeback_the_earthshaker_behemoth_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Quakeback, the Earthshaker Behemoth is a colossal creature with a long-legged predatory quadruped build, about 20 m long. Its coat is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a back of shifting tectonic plates that sets off the hourly quakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

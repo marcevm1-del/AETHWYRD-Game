@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Arachne Matriarch
 
+![[mon_arachne_matriarch_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_arachne_matriarch_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Arachne Matriarch is a huge creature with a squat, many-legged arachnid build, about 8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a crown of silk and eight eyes like jewels. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Gale Crocodile Wyrm
 
+![[mon_gale_crocodile_wyrm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_gale_crocodile_wyrm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Gale Crocodile Wyrm is a huge creature with a massive snake-like frame, about 7 m long. Its scales are rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe a back of armored ridges like a sunken log. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |

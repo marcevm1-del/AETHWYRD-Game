@@ -8,6 +8,11 @@ tags: [monster, aquatic, tyrant, unique]
 ---
 # The Nameless Tide, a Serpent Without a Name
 
+![[mon_the_nameless_tide_a_serpent_without_a_name_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_the_nameless_tide_a_serpent_without_a_name_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The The Nameless Tide, a Serpent Without a Name is a colossal creature with a long, sinuous serpentine body, about 30 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

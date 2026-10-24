@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Reef Octopus
 
+![[mon_reef_octopus_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_reef_octopus_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Reef Octopus is a huge creature with a bulbous body with writhing arms, about 10 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Guild sketches always show skin that changes color to match the rocks. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by fine mist and droplets that orbit it. Adapted to coast lands, it has salt-crusted, barnacle-flecked hide.
 
 | Field | Value |

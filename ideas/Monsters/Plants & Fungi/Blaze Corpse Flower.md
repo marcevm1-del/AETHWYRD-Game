@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Blaze Corpse Flower
 
+![[mon_blaze_corpse_flower_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blaze_corpse_flower_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blaze Corpse Flower is a large creature with a huge bulbous flower on a thick stalk, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Survivors describe a rotting bloom the size of a cart. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |

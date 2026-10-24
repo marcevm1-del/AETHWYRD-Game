@@ -8,6 +8,11 @@ tags: [monster, familiars-gentle-creatures]
 ---
 # Rime Fluffcap Sheep
 
+![[mon_rime_fluffcap_sheep_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_rime_fluffcap_sheep_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Rime Fluffcap Sheep is a small creature with a low, springy quadruped build, about 1 m long. Its coat is smooth and clean, colored in pale blues and frost-white. Survivors describe wool so light it floats. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
 
 | Field | Value |

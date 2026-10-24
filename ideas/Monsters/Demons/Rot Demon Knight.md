@@ -8,6 +8,11 @@ tags: [monster, demons]
 ---
 # Rot Demon Knight
 
+![[mon_rot_demon_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_rot_demon_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Rot Demon Knight is a large creature with an upright humanoid build, about 2.5 m tall. Its hide is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show black-steel armor engraved with the Overlord's sigil. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |

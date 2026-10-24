@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Elder Scarab Swarm
 
+![[mon_elder_scarab_swarm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elder_scarab_swarm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elder Scarab Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.1 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is golden beetles that flow like spilled coins. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

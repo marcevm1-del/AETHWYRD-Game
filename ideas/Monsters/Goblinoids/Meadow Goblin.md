@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Meadow Goblin
 
+![[mon_meadow_goblin_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_meadow_goblin_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Meadow Goblin is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in pale jade and cloud white. Guild sketches always show a grin of needle teeth under a stolen tin helmet. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |

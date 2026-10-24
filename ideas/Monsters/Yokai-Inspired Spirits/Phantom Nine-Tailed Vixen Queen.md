@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Phantom Nine-Tailed Vixen Queen
 
+![[mon_phantom_nine_tailed_vixen_queen_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_nine_tailed_vixen_queen_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Nine-Tailed Vixen Queen is a huge creature with a powerful four-legged hunter's body, about 8 m long. Its form is rough, scarred and spiked, colored in warm gold and pearl white. Survivors describe nine tails that each hold a different spell. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

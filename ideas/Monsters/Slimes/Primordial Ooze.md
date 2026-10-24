@@ -8,6 +8,11 @@ tags: [monster, slimes, unique]
 ---
 # Primordial Ooze
 
+![[mon_primordial_ooze_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_primordial_ooze_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Primordial Ooze is a colossal creature with a dome-shaped gelatinous body, about 40 m tall. Its gel is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Its most striking feature is an ocean-sized mass that shows the faces of everything it has eaten. It has no eyes at all, only a wide and patient mouth. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

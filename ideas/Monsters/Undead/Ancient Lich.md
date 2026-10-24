@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Ancient Lich
 
+![[mon_ancient_lich_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_lich_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Lich is a large creature with a drifting, half-formed body, about 3.3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in pale blues and frost-white. Look for a crowned skull with a phylactery chained to its chest. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by falling snow motes and frosted ground where it steps. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

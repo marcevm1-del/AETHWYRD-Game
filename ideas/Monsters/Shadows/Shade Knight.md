@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Shade Knight
 
+![[mon_shade_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_shade_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Shade Knight is a person-sized creature with an upright humanoid build, about 2.3 m tall. Its smoke-like body is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show armor with nothing but darkness inside. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Greater Skeleton
 
+![[mon_greater_skeleton_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_greater_skeleton_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Greater Skeleton is a large creature with an upright humanoid build, about 2.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe yellowed bones held together by blue grave-light. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

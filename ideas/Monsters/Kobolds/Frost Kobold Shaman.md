@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Frost Kobold Shaman
 
+![[mon_frost_kobold_shaman_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_frost_kobold_shaman_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Frost Kobold Shaman is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in pale blues and frost-white. Look for tin-can wind chimes and singed whiskers. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |

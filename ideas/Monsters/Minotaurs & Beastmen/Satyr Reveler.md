@@ -8,6 +8,11 @@ tags: [monster, minotaurs-beastmen]
 ---
 # Satyr Reveler
 
+![[mon_satyr_reveler_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_satyr_reveler_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Satyr Reveler is a person-sized creature with a broad-shouldered humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in leaf greens over bark brown. Look for goat legs and a panpipe that makes you dance. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |

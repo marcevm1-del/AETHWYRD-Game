@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Will-o'-Wisp
 
+![[mon_will_o_wisp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_will_o_wisp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Will-o'-Wisp is a tiny creature with a drifting, half-formed body, about 0.3 m tall. Its body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a pale flame that leads travelers into bogs. It has pale, pupil-less eyes. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

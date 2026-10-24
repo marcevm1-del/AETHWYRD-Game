@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Elder Skinchanger
 
+![[mon_elder_skinchanger_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elder_skinchanger_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elder Skinchanger is a large creature with a broad-shouldered humanoid build, about 3.8 m tall. Its fur is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Guild sketches always show half its body stuck mid-transformation, forever. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It unfolds into something larger, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

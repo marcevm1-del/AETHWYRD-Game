@@ -8,6 +8,11 @@ tags: [monster, aberrations, tyrant, unique]
 ---
 # The Nightmother, Queen of the Nightshifters
 
+![[mon_the_nightmother_queen_of_the_nightshifters_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_the_nightmother_queen_of_the_nightshifters_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The The Nightmother, Queen of the Nightshifters is a person-sized creature with a tall, impossibly thin frame, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe a kindly village grandmother whose shadow has wings. It has a human-like face in the wrong place. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it.
 
 | Field | Value |

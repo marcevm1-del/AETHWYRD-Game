@@ -8,6 +8,11 @@ tags: [monster, serpentfolk]
 ---
 # Lamia
 
+![[mon_lamia_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_lamia_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Lamia is a large creature with an elegant serpentfolk build, about 3.5 m long. Its scales are rough, scarred and spiked, colored in bruise purple with sickly green. Survivors describe a coiling tail and hypnotic golden eyes. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

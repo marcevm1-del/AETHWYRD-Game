@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Kobold Warlord Veteran
 
+![[mon_kobold_warlord_veteran_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_kobold_warlord_veteran_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Kobold Warlord Veteran is a person-sized creature with a small, compact humanoid body, about 2.2 m tall. Its mangy fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is scavenged knight armor hammered to fit. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

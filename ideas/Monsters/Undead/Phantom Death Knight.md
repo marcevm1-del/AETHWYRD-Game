@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Phantom Death Knight
 
+![[mon_phantom_death_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_death_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Death Knight is a person-sized creature with an upright humanoid build, about 2.4 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Its most striking feature is black plate, a cloak of ash and a sword of cold fire. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

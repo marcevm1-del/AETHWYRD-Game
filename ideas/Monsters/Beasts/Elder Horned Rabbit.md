@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Elder Horned Rabbit
 
+![[mon_elder_horned_rabbit_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elder_horned_rabbit_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elder Horned Rabbit is a small creature with a compact quadruped frame, about 0.6 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Its most striking feature is a single spiral horn and oversized hind feet. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

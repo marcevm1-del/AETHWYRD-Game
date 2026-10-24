@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Gilded Spider
 
+![[mon_gilded_spider_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_gilded_spider_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Gilded Spider is a person-sized creature with a squat, many-legged arachnid build, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in warm gold and pearl white. Look for green-striped legs and dripping fangs. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

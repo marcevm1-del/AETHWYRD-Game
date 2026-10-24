@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Werewolf
 
+![[mon_werewolf_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_werewolf_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Werewolf is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

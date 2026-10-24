@@ -8,6 +8,11 @@ tags: [monster, familiars-gentle-creatures]
 ---
 # Moss Kitten
 
+![[mon_moss_kitten_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_moss_kitten_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Moss Kitten is a tiny creature with a compact quadruped frame, about 0.4 m long. Its coat is smooth and clean, colored in leaf greens over bark brown. Look for fur that flickers like candle flame. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |

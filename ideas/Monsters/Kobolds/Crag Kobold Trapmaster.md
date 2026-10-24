@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Crag Kobold Trapmaster
 
+![[mon_crag_kobold_trapmaster_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_crag_kobold_trapmaster_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Crag Kobold Trapmaster is a small creature with a small, compact humanoid body, about 1 m tall. Its mangy fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a harness of gears, springs and tripwires. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 
 | Field | Value |

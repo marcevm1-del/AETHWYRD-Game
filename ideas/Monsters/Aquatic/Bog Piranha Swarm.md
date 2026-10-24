@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Bog Piranha Swarm
 
+![[mon_bog_piranha_swarm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_piranha_swarm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Piranha Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.2 m long, but the swarm covers several meters. Its scales and skin are rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show silver flashes and red teeth. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

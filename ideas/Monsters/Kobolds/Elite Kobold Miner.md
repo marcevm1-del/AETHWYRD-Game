@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Elite Kobold Miner
 
+![[mon_elite_kobold_miner_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elite_kobold_miner_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elite Kobold Miner is a person-sized creature with a small, compact humanoid body, about 1.4 m tall. Its mangy fur is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is a candle-helmet and a pick worn smooth from use. It has alert animal eyes. A distinctive marking runs along its back. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

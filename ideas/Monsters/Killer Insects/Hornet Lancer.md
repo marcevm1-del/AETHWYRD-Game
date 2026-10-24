@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Hornet Lancer
 
+![[mon_hornet_lancer_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_hornet_lancer_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Hornet Lancer is a person-sized creature with a bat-like flying frame, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is a lance-like stinger and humming armored wings. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

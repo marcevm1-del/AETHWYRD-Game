@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Phantom Salamander
 
+![[mon_phantom_salamander_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_salamander_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Salamander is a person-sized creature with a powerful four-legged hunter's body, about 1.6 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show a tail that burns like a torch. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

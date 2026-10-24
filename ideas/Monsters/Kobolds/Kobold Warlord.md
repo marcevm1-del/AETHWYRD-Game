@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Kobold Warlord
 
+![[mon_kobold_warlord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_kobold_warlord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Kobold Warlord is a person-sized creature with a small, compact humanoid body, about 1.4 m tall. Its mangy fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is scavenged knight armor hammered to fit. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

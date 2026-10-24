@@ -8,6 +8,11 @@ tags: [monster, aberrations]
 ---
 # Thousand-Eyed Watcher
 
+![[mon_thousand_eyed_watcher_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_thousand_eyed_watcher_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Thousand-Eyed Watcher is a huge creature with a bodiless, glowing form, about 6 m tall. Its skin is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Its most striking feature is a cloud of eyes that blink in sequence. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

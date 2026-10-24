@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Blue Slime
 
+![[mon_blue_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blue_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blue Slime is a tiny creature with a dome-shaped gelatinous body, about 0.4 m tall. Its gel is smooth and clean, colored in deep blues with a glassy shine. Survivors describe a teardrop body with a glossy highlight and two dot eyes. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

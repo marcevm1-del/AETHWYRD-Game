@@ -8,6 +8,11 @@ tags: [monster, centaurs-taurs]
 ---
 # Centaur Lancer
 
+![[mon_centaur_lancer_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_centaur_lancer_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Centaur Lancer is a large creature with a powerful taur build, about 2.6 m tall. Its coat is weathered and natural, colored in muted greys and dusty browns. Survivors describe a long lance and painted barding. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

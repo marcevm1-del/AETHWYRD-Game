@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Meadow Orc Berserker
 
+![[mon_meadow_orc_berserker_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_meadow_orc_berserker_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Meadow Orc Berserker is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in pale jade and cloud white. Guild sketches always show blood-red war paint and broken chains on its wrists. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |

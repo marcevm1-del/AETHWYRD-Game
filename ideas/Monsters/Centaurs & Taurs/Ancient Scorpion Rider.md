@@ -8,6 +8,11 @@ tags: [monster, centaurs-taurs]
 ---
 # Ancient Scorpion Rider
 
+![[mon_ancient_scorpion_rider_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_scorpion_rider_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Scorpion Rider is a large creature with a centauroid body with a humanoid torso on a four-legged base, about 4.5 m tall. Its coat is rough, scarred and spiked, colored in bruise purple with sickly green. Survivors describe a humanoid torso on a giant scorpion body. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

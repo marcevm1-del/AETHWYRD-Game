@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 ---
 # Zahhar, King of the Divs
 
+![[mon_zahhar_king_of_the_divs_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_zahhar_king_of_the_divs_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Zahhar, King of the Divs is a huge creature with a towering, heavy-limbed body, about 8 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe horns of black iron and a throne carried by lesser divs. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |

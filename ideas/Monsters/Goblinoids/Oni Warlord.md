@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Oni Warlord
 
+![[mon_oni_warlord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_oni_warlord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Oni Warlord is a large creature with a giant, barrel-chested humanoid body, about 4.5 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Look for a towering horned silhouette carrying an iron club wrapped in prayer chains. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

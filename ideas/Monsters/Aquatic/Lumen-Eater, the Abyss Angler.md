@@ -8,6 +8,11 @@ tags: [monster, aquatic, tyrant, unique]
 ---
 # Lumen-Eater, the Abyss Angler
 
+![[mon_lumen_eater_the_abyss_angler_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_lumen_eater_the_abyss_angler_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Lumen-Eater, the Abyss Angler is a huge creature with a heavy-jawed fish frame, about 12 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a lure of stolen moonlight dangling over a mouth of glass teeth. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

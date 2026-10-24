@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Mirror Shade
 
+![[mon_mirror_shade_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_mirror_shade_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Mirror Shade is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Guild sketches always show your own silhouette, a heartbeat behind you. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by shadows that lean toward it.
 
 | Field | Value |

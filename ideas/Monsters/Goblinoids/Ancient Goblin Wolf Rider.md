@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Ancient Goblin Wolf Rider
 
+![[mon_ancient_goblin_wolf_rider_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_goblin_wolf_rider_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Goblin Wolf Rider is a person-sized creature with a scrawny biped with long arms and bowed legs, about 1.5 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a bone saddle on a snarling war-wolf mount. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Elder Behemoth Calf
 
+![[mon_elder_behemoth_calf_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_elder_behemoth_calf_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Elder Behemoth Calf is a huge creature with a powerful four-legged hunter's body, about 6.4 m long. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is a stone-plated back and stump-like legs. It has dark, wary eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

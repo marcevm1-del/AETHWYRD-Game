@@ -8,6 +8,11 @@ tags: [monster, killer-insects]
 ---
 # Hive Tyrant
 
+![[mon_hive_tyrant_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_hive_tyrant_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Hive Tyrant is a huge creature with a bipedal winged body with wing-arms, about 7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a winged queen-killer with a crown of stingers. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

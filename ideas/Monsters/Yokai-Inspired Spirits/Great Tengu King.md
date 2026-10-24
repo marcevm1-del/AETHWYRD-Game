@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # Great Tengu King
 
+![[mon_great_tengu_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_great_tengu_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Great Tengu King is a huge creature with a tall, long-legged bird build, about 6 m tall. Its form is weathered and natural, colored in pale jade and cloud white. Its most striking feature is a mask of red lacquer and a fan that summons typhoons. It has alert animal eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

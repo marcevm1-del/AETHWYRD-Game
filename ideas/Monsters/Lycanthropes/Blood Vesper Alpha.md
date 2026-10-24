@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Blood Vesper Alpha
 
+![[mon_blood_vesper_alpha_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_blood_vesper_alpha_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Blood Vesper Alpha is a large creature with an upright humanoid build, about 3.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Survivors describe red-veined fur that only appears under the red moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |

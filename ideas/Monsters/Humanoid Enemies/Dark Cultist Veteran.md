@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Dark Cultist Veteran
 
+![[mon_dark_cultist_veteran_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_dark_cultist_veteran_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Dark Cultist Veteran is a large creature with a broad-shouldered humanoid build, about 2.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Its most striking feature is red robes and a mask shaped like a crescent moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |

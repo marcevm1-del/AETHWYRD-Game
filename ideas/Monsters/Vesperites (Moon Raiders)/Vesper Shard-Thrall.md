@@ -8,6 +8,11 @@ tags: [monster, vesperites-moon-raiders]
 ---
 # Vesper Shard-Thrall
 
+![[mon_vesper_shard_thrall_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_shard_thrall_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper Shard-Thrall is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Guild sketches always show porcelain skin cracked with red light. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |

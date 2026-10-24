@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Cyclops
 
+![[mon_cyclops_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cyclops_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cyclops is a huge creature with a giant, barrel-chested humanoid body, about 6 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a single huge eye and a hammer made from a millstone. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Lich Emperor
 
+![[mon_lich_emperor_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_lich_emperor_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Lich Emperor is a large creature with a bodiless, glowing form, about 3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in pale blues and frost-white. Survivors describe a crown of frozen souls and a phylactery the size of a castle tower. It has eyes set slightly too far apart. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It freezes whenever it is looked at, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |

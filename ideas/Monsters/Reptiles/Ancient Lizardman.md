@@ -8,6 +8,11 @@ tags: [monster, reptiles]
 ---
 # Ancient Lizardman
 
+![[mon_ancient_lizardman_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ancient_lizardman_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ancient Lizardman is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its scales are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show a proud crest and a coral-tipped spear. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |

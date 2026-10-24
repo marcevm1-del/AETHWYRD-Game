@@ -8,6 +8,11 @@ tags: [monster, dragons]
 ---
 # Drake
 
+![[mon_drake_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_drake_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Drake is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its scales are weathered and natural, colored in ember reds fading to soot black. Survivors describe stubby wings and a smoking snout. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |

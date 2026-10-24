@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Bog Merfolk Warden
 
+![[mon_bog_merfolk_warden_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bog_merfolk_warden_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bog Merfolk Warden is a person-sized creature with an elegant serpentfolk build, about 2.2 m long. Its scales and skin are weathered and natural, colored in bruise purple with sickly green. Survivors describe coral armor and a trident. It has alert animal eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |

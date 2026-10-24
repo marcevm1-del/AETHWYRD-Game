@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics, tyrant, unique]
 ---
 # The Colossus of Sunscar, Walker of the Dunes
 
+![[mon_the_colossus_of_sunscar_walker_of_the_dunes_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_the_colossus_of_sunscar_walker_of_the_dunes_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The The Colossus of Sunscar, Walker of the Dunes is a colossal creature with a towering machine-like frame, about 60 m tall. Its surface is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a walking ruin you can climb, with a Valdrisian heart-core. It has alert animal eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It prowls, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

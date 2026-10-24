@@ -8,6 +8,11 @@ tags: [monster, chimeras-mythic-beasts]
 ---
 # Dune Unicorn
 
+![[mon_dune_unicorn_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_dune_unicorn_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Dune Unicorn is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its hide is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe a spiral horn of pearl. It has two bright dot eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 
 | Field | Value |

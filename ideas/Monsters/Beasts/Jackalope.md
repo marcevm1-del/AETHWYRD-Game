@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Jackalope
 
+![[mon_jackalope_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_jackalope_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is smooth and clean, colored in muted greys and dusty browns. Look for tiny antlers on a fluffy rabbit. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It bounces happily. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

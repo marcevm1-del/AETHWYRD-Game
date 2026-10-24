@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Rime Ogre
 
+![[mon_rime_ogre_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_rime_ogre_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Rime Ogre is a large creature with a giant, barrel-chested humanoid body, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe a sagging belly, a tree-trunk club and a toll sack. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
 
 | Field | Value |

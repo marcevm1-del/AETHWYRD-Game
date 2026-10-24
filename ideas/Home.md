@@ -70,6 +70,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/12_Systems/party_synergy|12_Systems/party_synergy]]
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
+- [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
 - [[Design Bible/13_Production/production|13_Production/production]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]

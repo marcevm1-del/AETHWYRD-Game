@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics]
 ---
 # Smiling Scarecrow
 
+![[mon_smiling_scarecrow_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_smiling_scarecrow_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Smiling Scarecrow is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Look for a stitched sack face with a painted smile that is never in the same field twice. It has a human-like face in the wrong place. It has no ornament at all: simple, readable shapes. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

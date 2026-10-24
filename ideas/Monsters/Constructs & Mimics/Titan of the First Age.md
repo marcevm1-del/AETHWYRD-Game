@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics, unique]
 ---
 # Titan of the First Age
 
+![[mon_titan_of_the_first_age_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_titan_of_the_first_age_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Titan of the First Age is a colossal creature with a blocky construct body, about 500 m tall. Its surface is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a walking continent of machinery and stone. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

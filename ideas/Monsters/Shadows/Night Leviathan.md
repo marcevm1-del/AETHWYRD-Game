@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Night Leviathan
 
+![[mon_night_leviathan_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_night_leviathan_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Night Leviathan is a colossal creature with a heavy-jawed fish frame, about 30 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show a shadow whale that swims through walls. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

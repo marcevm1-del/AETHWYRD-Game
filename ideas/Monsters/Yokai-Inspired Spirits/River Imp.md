@@ -8,6 +8,11 @@ tags: [monster, yokai-inspired-spirits]
 ---
 # River Imp
 
+![[mon_river_imp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_river_imp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is weathered and natural, colored in deep blues with a glassy shine. Look for a dish-like hollow on its head full of water. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

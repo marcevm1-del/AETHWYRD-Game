@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Highwayman Captain
 
+![[mon_highwayman_captain_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_highwayman_captain_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Highwayman Captain is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a feathered hat and two pistols of Veilborn design. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

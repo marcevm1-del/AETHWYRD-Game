@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Cinder Inquisitor
 
+![[mon_cinder_inquisitor_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cinder_inquisitor_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cinder Inquisitor is a person-sized creature with a lean humanoid frame, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe silver anti-magic chains and a sun-shaped mask. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

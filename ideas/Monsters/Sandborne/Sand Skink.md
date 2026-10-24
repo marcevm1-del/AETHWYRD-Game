@@ -8,6 +8,11 @@ tags: [monster, sandborne]
 ---
 # Sand Skink
 
+![[mon_sand_skink_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_sand_skink_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Sand Skink is a small creature with a small, quick four-legged body, about 0.5 m long. Its sand-scoured hide is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is sand-colored scales and a tongue that tastes for water. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

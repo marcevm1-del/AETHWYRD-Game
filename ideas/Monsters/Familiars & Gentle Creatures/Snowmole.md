@@ -8,6 +8,11 @@ tags: [monster, familiars-gentle-creatures]
 ---
 # Snowmole
 
+![[mon_snowmole_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_snowmole_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Snowmole is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pale blues and frost-white. Survivors describe a white nose and shovel-like paws. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Cave Spider
 
+![[mon_cave_spider_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cave_spider_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cave Spider is a small creature with an eight-legged arachnid body, about 0.7 m long. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Look for a pale body that glows faintly in the dark. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Vesper-Touched Armor Beetle
 
+![[mon_vesper_touched_armor_beetle_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_armor_beetle_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Armor Beetle is a person-sized creature with a segmented six-limbed frame, about 1.2 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a shell like polished bronze. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

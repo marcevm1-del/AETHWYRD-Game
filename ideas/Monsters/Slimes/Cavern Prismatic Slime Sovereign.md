@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Cavern Prismatic Slime Sovereign
 
+![[mon_cavern_prismatic_slime_sovereign_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cavern_prismatic_slime_sovereign_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cavern Prismatic Slime Sovereign is a huge creature with a teardrop-shaped jelly body, about 8 m tall. Its gel is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a crown of rainbow light refracted through its whole body. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It lopes in long strides, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 
 | Field | Value |

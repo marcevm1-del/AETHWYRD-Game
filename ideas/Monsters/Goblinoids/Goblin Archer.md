@@ -8,6 +8,11 @@ tags: [monster, goblinoids]
 ---
 # Goblin Archer
 
+![[mon_goblin_archer_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_goblin_archer_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Goblin Archer is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe a crooked bow strung with gut and a quiver of bone-tipped arrows. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

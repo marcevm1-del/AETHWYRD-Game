@@ -8,6 +8,11 @@ tags: [monster, plants-fungi]
 ---
 # Treant Sapling
 
+![[mon_treant_sapling_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_treant_sapling_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Treant Sapling is a person-sized creature with a mushroom-capped walking body, about 2 m tall. Its bark and leaves are smooth and clean, colored in leaf greens over bark brown. Its most striking feature is a young tree with a sleepy face. It has two bright dot eyes. A distinctive marking runs along its back. It hops in little bursts, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |

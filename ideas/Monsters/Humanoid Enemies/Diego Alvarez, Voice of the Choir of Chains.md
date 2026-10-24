@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 ---
 # Diego Alvarez, Voice of the Choir of Chains
 
+![[mon_diego_alvarez_voice_of_the_choir_of_chains_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_diego_alvarez_voice_of_the_choir_of_chains_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Diego Alvarez, Voice of the Choir of Chains is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for a Veilborn con man in a red silk coat, smiling like a salesman. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |

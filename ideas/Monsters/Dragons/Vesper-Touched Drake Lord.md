@@ -8,6 +8,11 @@ tags: [monster, dragons]
 ---
 # Vesper-Touched Drake Lord
 
+![[mon_vesper_touched_drake_lord_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_drake_lord_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 10 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Look for a crown of broken horns from rivals it killed. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It moves in jerky stop-motion bursts, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

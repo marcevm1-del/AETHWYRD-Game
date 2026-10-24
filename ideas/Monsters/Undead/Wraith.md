@@ -8,6 +8,11 @@ tags: [monster, undead]
 ---
 # Wraith
 
+![[mon_wraith_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_wraith_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Wraith is a person-sized creature with a bodiless, glowing form, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a hooded shape of smoke with cold blue eyes. It has eyes that never blink. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |

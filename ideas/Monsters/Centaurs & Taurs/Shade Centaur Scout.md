@@ -8,6 +8,11 @@ tags: [monster, centaurs-taurs]
 ---
 # Shade Centaur Scout
 
+![[mon_shade_centaur_scout_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_shade_centaur_scout_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Shade Centaur Scout is a person-sized creature with a centauroid body with a humanoid torso on a four-legged base, about 2.4 m tall. Its coat is weathered and natural, colored in ink black with bruised violet. Look for a horsebow and a braided mane. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |

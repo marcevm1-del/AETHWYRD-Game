@@ -8,6 +8,11 @@ tags: [monster, familiars-gentle-creatures]
 ---
 # Ember Mana Fox
 
+![[mon_ember_mana_fox_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_ember_mana_fox_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Ember Mana Fox is a small creature with a compact quadruped frame, about 0.6 m long. Its coat is smooth and clean, colored in ember reds fading to soot black. Its most striking feature is ears that twitch toward magic. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, humanoid-enemies]
 ---
 # Bandit
 
+![[mon_bandit_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_bandit_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Bandit is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a patched cloak and a mismatched sword. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |

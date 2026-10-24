@@ -8,6 +8,11 @@ tags: [monster, orcs-ogres-giants]
 ---
 # Troll
 
+![[mon_troll_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_troll_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Troll is a large creature with a massive hunched brute frame, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in leaf greens over bark brown. Guild sketches always show moss-covered skin that knits itself back together. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |

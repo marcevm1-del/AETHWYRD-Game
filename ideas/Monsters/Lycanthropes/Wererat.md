@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Wererat
 
+![[mon_wererat_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_wererat_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Wererat is a person-sized creature with an upright humanoid build, about 1.5 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a hunched rodent body with human hands. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |

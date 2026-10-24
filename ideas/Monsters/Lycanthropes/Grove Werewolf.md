@@ -8,6 +8,11 @@ tags: [monster, lycanthropes]
 ---
 # Grove Werewolf
 
+![[mon_grove_werewolf_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_grove_werewolf_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Grove Werewolf is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in leaf greens over bark brown. Guild sketches always show a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by drifting pollen and tiny blossoms. Adapted to forest lands, it has moss-green coloring that blends with the undergrowth.
 
 | Field | Value |

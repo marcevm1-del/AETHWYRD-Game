@@ -8,6 +8,11 @@ tags: [monster, kobolds]
 ---
 # Phantom Kobold Sneak
 
+![[mon_phantom_kobold_sneak_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_kobold_sneak_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Kobold Sneak is a small creature with a scrawny biped with long arms and bowed legs, about 0.8 m tall. Its mangy fur is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Its most striking feature is soot-blackened fur for hiding in tunnels. It has pale, pupil-less eyes. Small scars and rough edges mark it as a survivor. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

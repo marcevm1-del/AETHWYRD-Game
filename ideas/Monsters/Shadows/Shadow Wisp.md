@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Shadow Wisp
 
+![[mon_shadow_wisp_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_shadow_wisp_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Shadow Wisp is a tiny creature with a floating, cloth-like shape, about 0.4 m tall. Its smoke-like body is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe a flickering smudge of darkness. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |

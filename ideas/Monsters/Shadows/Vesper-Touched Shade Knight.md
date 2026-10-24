@@ -8,6 +8,11 @@ tags: [monster, shadows]
 ---
 # Vesper-Touched Shade Knight
 
+![[mon_vesper_touched_shade_knight_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_shade_knight_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Shade Knight is a person-sized creature with an upright humanoid build, about 2.3 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is armor with nothing but darkness inside. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

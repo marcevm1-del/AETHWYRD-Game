@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Phantom Wild Boar
 
+![[mon_phantom_wild_boar_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_phantom_wild_boar_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Phantom Wild Boar is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its coat is rough, scarred and spiked, colored in warm gold and pearl white. Look for curved tusks and a ridge of bristles like iron wire. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, dragons, unique]
 ---
 # Solvoryn, the Dawnwyrm
 
+![[mon_solvoryn_the_dawnwyrm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_solvoryn_the_dawnwyrm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Solvoryn, the Dawnwyrm is a colossal creature with a four-legged, two-winged dragon body, about 150 m long. Its scales are weathered and natural, colored in warm gold and pearl white. Survivors describe feathered wings of golden light. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |

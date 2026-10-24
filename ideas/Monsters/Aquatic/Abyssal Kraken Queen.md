@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Abyssal Kraken Queen
 
+![[mon_abyssal_kraken_queen_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_abyssal_kraken_queen_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Abyssal Kraken Queen is a colossal creature with a tentacled, soft-bodied form, about 200 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show tentacles that can wrap around whole islands. It has pale, pupil-less eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It glides without moving its legs, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

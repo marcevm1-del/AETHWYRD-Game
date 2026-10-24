@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Armor Beetle
 
+![[mon_armor_beetle_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_armor_beetle_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Armor Beetle is a person-sized creature with a six-legged armored body, about 1.2 m long. Its chitin is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a shell like polished bronze. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |

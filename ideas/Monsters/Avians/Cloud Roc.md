@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Cloud Roc
 
+![[mon_cloud_roc_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cloud_roc_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cloud Roc is a colossal creature with a feathered avian body, about 30 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Look for a shadow as big as a cloud. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to sky lands, it has cloud-pale coloring and lighter bones.
 
 | Field | Value |

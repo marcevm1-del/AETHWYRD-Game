@@ -8,6 +8,11 @@ tags: [monster, aquatic]
 ---
 # Giant Octopus
 
+![[mon_giant_octopus_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_giant_octopus_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Giant Octopus is a huge creature with a huge many-armed sea body, about 10 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for skin that changes color to match the rocks. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |

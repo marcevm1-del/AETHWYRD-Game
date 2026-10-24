@@ -8,6 +8,11 @@ tags: [monster, chimeras-mythic-beasts, unique]
 ---
 # Nameless Abomination
 
+![[mon_nameless_abomination_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_nameless_abomination_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Nameless Abomination is a colossal creature with a tall, impossibly thin frame, about 50 m tall. Its hide is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Guild sketches always show a blank page given teeth. It has too many eyes, opening one after another. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by warped air, as if space bends around it.
 
 | Field | Value |

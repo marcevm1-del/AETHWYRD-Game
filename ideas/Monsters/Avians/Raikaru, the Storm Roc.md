@@ -8,6 +8,11 @@ tags: [monster, avians, tyrant, unique]
 ---
 # Raikaru, the Storm Roc
 
+![[mon_raikaru_the_storm_roc_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_raikaru_the_storm_roc_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Raikaru, the Storm Roc is a colossal creature with a tall, long-legged bird build, about 35 m tall. Its plumage is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe wings that carry the weekly world-storm on their back. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |

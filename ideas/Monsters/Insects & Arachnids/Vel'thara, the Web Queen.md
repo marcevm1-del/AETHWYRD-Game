@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids, tyrant, unique]
 ---
 # Vel'thara, the Web Queen
 
+![[mon_vel_thara_the_web_queen_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vel_thara_the_web_queen_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vel'thara, the Web Queen is a large creature with an eight-legged arachnid body, about 4 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a crown of spider-silk and eight jeweled eyes above Umbravel's markets. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 
 | Field | Value |

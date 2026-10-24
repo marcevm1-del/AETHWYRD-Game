@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Sylph
 
+![[mon_sylph_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_sylph_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Sylph is a person-sized creature with a lean humanoid frame, about 1.5 m tall. Its body is smooth and clean, colored in pale jade and cloud white. Survivors describe a translucent dancer of wind and leaves. It has big round glossy eyes. A distinctive marking runs along its back. It hops in little bursts, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

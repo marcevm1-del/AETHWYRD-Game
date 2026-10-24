@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Cavern Blade Mantis
 
+![[mon_cavern_blade_mantis_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cavern_blade_mantis_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cavern Blade Mantis is a person-sized creature with a segmented six-limbed frame, about 2 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show forearms shaped like curved scythes. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 
 | Field | Value |

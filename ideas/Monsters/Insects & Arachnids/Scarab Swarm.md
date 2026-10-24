@@ -8,6 +8,11 @@ tags: [monster, insects-arachnids]
 ---
 # Scarab Swarm
 
+![[mon_scarab_swarm_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_scarab_swarm_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Scarab Swarm is a tiny creature with a swarm of many small bodies moving as one, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Look for golden beetles that flow like spilled coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |

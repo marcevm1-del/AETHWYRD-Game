@@ -8,6 +8,11 @@ tags: [monster, beasts]
 ---
 # Night Sabretooth King
 
+![[mon_night_sabretooth_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_night_sabretooth_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Night Sabretooth King is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its coat is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is two sabre fangs as long as swords. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |

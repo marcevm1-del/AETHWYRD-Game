@@ -8,6 +8,11 @@ tags: [monster, constructs-mimics]
 ---
 # Vesper-Touched Door Mimic
 
+![[mon_vesper_touched_door_mimic_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_door_mimic_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Door Mimic is a person-sized creature with a disguised body pretending to be furniture, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in arterial crimson and dried-blood brown. Guild sketches always show a dungeon door that breathes. It has no eyes at all, only a wide and patient mouth. Small scars and rough edges mark it as a survivor. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

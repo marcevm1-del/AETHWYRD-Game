@@ -8,6 +8,11 @@ tags: [monster, elementals-spirits]
 ---
 # Vesper-Touched Spirit King
 
+![[mon_vesper_touched_spirit_king_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_vesper_touched_spirit_king_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Vesper-Touched Spirit King is a huge creature with a broad-shouldered humanoid build, about 6 m tall. Its body is rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show a crowned elemental giant of pure mana. It has narrow glowing eyes. The air distorts slightly around its outline. It circles its prey, surrounded by soft radiance and floating motes of light. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |

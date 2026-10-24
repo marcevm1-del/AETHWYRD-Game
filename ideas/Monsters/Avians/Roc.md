@@ -8,6 +8,11 @@ tags: [monster, avians]
 ---
 # Roc
 
+![[mon_roc_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_roc_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Roc is a colossal creature with a tall, long-legged bird build, about 30 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe a shadow as big as a cloud. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |

@@ -8,6 +8,11 @@ tags: [monster, slimes]
 ---
 # Cube Slime
 
+![[mon_cube_slime_sheet.jpg]]
+*Blockout turnaround: front, side, back (views: `mon_cube_slime_front/side/back.jpg`).*
+
+> [!note] 3D model: not generated yet (blockout only). Prompt in `Art/Generation/monster_model_prompts.json`.
+
 > The Cube Slime is a small creature with a wobbling mound of translucent gel, about 0.8 m tall. Its gel is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a perfectly cubic body with swallowed debris visible inside. It has amber predator eyes. A distinctive marking runs along its back. It prowls, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
