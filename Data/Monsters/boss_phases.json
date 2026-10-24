@@ -1,0 +1,33 @@
+{
+ "notes": "Boss phases (08_Bestiary/bosses_and_calamities.md §1: 2-4 phases, telegraphed). A phase starts when HP falls to atHpFraction or below: it can summon adds around the boss and change its tempo (attack and move speed) and damage. HP thresholds are proposals until the user tunes them.",
+ "bosses": [
+  {
+   "speciesId": "mon_grukk_goblin_chief_of_hollowpine",
+   "phases": [
+    {
+     "name": "Duel",
+     "atHpFraction": 1,
+     "banner": "Grukk, Goblin Chief of Hollowpine"
+    },
+    {
+     "name": "Archers",
+     "atHpFraction": 0.66,
+     "banner": "Grukk roars for his archers!",
+     "summon": [
+      {
+       "speciesId": "mon_goblin_archer",
+       "count": 3
+      }
+     ]
+    },
+    {
+     "name": "Rage",
+     "atHpFraction": 0.33,
+     "banner": "Grukk flies into a rage!",
+     "tempo": 1.4,
+     "damageMult": 1.3
+    }
+   ]
+  }
+ ]
+}

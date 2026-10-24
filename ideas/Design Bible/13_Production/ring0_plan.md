@@ -83,7 +83,8 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 | Guild ranks | ✅ ranks.md §2 promotions (guild_ranks.json): GP scaled by quest rank, quests at your rank, level, special, trial; ask Mina about promotion, ceremony at her desk with the Rank Gift; Status Window shows the checklist. Rodrick Hale gives the F→E trial. Later trials aren't built yet |
 | Bestiary | ✅ hud_and_ui.md §9 tiers: seen within 20 m → name and rank; 3 kills → HP, element, weakness; 10 kills or tamed → drops and lore; every drop found → 100% stamp. Monster labels show only what you know (??? before you've seen one). B opens the book (Ring 0–1 completion). Saved |
 | Gathering | ✅ 13 nodes (gathering.json): herb patches, mushroom rings, weeping pines, scrap heaps; E to gather, regrow over in-game hours, saved |
+| Boss phases | ✅ boss_phases.json: Grukk — Duel, Archers at 66% (3 goblin archers), Rage at 33% (×1.4 tempo, ×1.3 damage); HUD boss bar with phase; Tyrants never respawn. Thresholds are proposals (Canon §6) |
 
 **Controls** (`12_Systems/hud_and_ui.md` §15): WASD/left stick move · Shift/B dodge (hold to sprint) · Space/A jump · LMB/X light · RMB/Y heavy (hold to charge; after two lights = launcher; in the air = slam) · Q/RT block/parry · MMB/R3 lock-on · 1–4 or RB + face skills · R or L3+R3 Ultimate · G or D-pad up Fire Bomb · E or D-pad down talk · H or D-pad right healing potion · I or View bag · B bestiary · T or D-pad left tame · Z or LB partner order · Tab/Esc/Start Status Window. Playtest keys: **F8** +1 level (Shift+F8: +5), **F9** start a raid.
 
-**Tests:** 158 rules + 120 Unity PlayMode. Day-by-day: [[progress_log]].
+**Tests:** 160 rules + 121 Unity PlayMode. Day-by-day: [[progress_log]].

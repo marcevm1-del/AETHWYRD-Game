@@ -150,6 +150,17 @@ if (fs.existsSync(path.join(DATA, 'World/gathering.json'))) {
   }
 }
 
+// Boss phases (Monsters/boss_phases.json): real species, thresholds descending from 1.0, real summons.
+if (fs.existsSync(path.join(DATA, 'Monsters/boss_phases.json'))) {
+  for (const b of load('Monsters/boss_phases.json').bosses || []) {
+    ref('boss_phases', b.speciesId, 'species');
+    const at = (b.phases || []).map(p => p.atHpFraction);
+    if (at[0] !== 1) err(b.speciesId, 'the first phase starts at atHpFraction 1.0');
+    if (at.some((v, i) => i > 0 && !(v < at[i - 1] && v > 0))) err(b.speciesId, 'phase thresholds must fall from 1.0 toward 0');
+    for (const p of b.phases || []) for (const s of p.summon || []) ref(b.speciesId + '.summon', s.speciesId, 'species');
+  }
+}
+
 // Recipes (Items/recipes.json): known items and stations, and a result never ranked above its best material (systems.md §5.1).
 const RANK_ORDER = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
 const rankValue = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ? RANK_ORDER.indexOf(m[1]) * 3 + (m[2] === '+' ? 1 : m[2] === '-' ? -1 : 0) : -99; };

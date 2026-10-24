@@ -189,6 +189,7 @@ namespace Ascend.Core
         public RecipeFile Recipes { get; }
         public GuildRankData GuildRanks { get; }
         public IReadOnlyDictionary<string, GatherNodeData> GatherNodes { get; }
+        public IReadOnlyDictionary<string, BossData> Bosses { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -197,13 +198,14 @@ namespace Ascend.Core
             IEnumerable<QuestData> quests = null, IEnumerable<NpcData> npcs = null, IEnumerable<ClassData> classes = null,
             IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null,
             IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null, MotionFile motion = null,
-            IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null)
+            IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null, BossFile bosses = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
             Recipes = recipes ?? new RecipeFile();
             GuildRanks = guildRanks ?? new GuildRankData();
             GatherNodes = Index(gathering?.Nodes, n => n.Id, "gather node");
+            Bosses = Index(bosses?.Bosses, b => b.SpeciesId, "boss");
             Index(Recipes.Recipes, r => r.Id, "recipe");
             WeeklyQuests = Index(weeklyBoard, q => q.Id, "weekly quest");
             Inns = Index(inns, i => i.Id, "inn");

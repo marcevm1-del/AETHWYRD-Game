@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using Ascend.Core;
 using NUnit.Framework;
 using UnityEngine;
@@ -190,6 +191,26 @@ namespace Ascend.Game.Tests
             float zb = b.transform.position.z;
             for (int i = 0; i < 60; i++) { _motor.Tick(Vector3.zero, false, false, Time.deltaTime); yield return null; }
             Assert.Less(b.transform.position.z, zb - 1f, "and come for you");
+        }
+
+        [UnityTest]
+        public IEnumerator GrukkCallsArchersThenRages()
+        {
+            var grukk = Spawn("mon_grukk_goblin_chief_of_hollowpine", new Vector3(0, 0, 6f));
+            var body = grukk.GetComponent<MonsterDummy>();
+            yield return null;
+            Assert.IsNotNull(grukk.Boss, "a boss");
+            Assert.IsFalse(body.Respawns, "a Tyrant doesn't come back");
+            for (int i = 0; i < 30; i++) yield return null;
+            Assert.AreSame(grukk, MonsterController.ActiveBoss, "engaged: the HUD shows his bar");
+            body.TakeHit(body.MaxHp / 2, HitWeight.Light, _player.transform.position, 0);
+            Assert.AreEqual("Archers", grukk.Boss.Current.Name, "phase 2");
+            Assert.AreEqual(3, grukk.Summoned.Count, "three archers");
+            Assert.IsTrue(grukk.Summoned.All(m => m.SpeciesId == "mon_goblin_archer" && !m.Respawns));
+            body.TakeHit(body.MaxHp / 4, HitWeight.Light, _player.transform.position, 0);
+            Assert.AreEqual("Rage", grukk.Boss.Current.Name, "phase 3");
+            Assert.Greater(grukk.Boss.Tempo, 1.0, "faster");
+            foreach (var m in grukk.Summoned) if (m != null) Object.DestroyImmediate(MonsterSpawner.RootOf(m));
         }
 
         [Test]

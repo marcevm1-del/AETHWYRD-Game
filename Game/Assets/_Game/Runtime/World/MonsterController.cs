@@ -62,6 +62,7 @@ namespace Ascend.Game
             _body.Landed += OnStaggered; // landing after a launch is a knockdown
             _body.Damaged += OnDamaged;
             _hopper = species.Behavior == "Skittish" || species.Behavior == "Ambush";
+            if (db.Bosses.TryGetValue(_body.SpeciesId, out var boss)) { Boss = new BossFight(boss); _body.Respawns = false; }
             BuildTelegraph();
         }
 
@@ -104,8 +105,52 @@ namespace Ascend.Game
                     && Flat(c.transform.position - transform.position).magnitude <= PackCallRadius) c._brain.Alert();
         }
 
+        // ---------------------------------------------------------------- bosses (boss_phases.json)
+        /// <summary>Phase tracker when this species is a boss (null otherwise).</summary>
+        public BossFight Boss { get; private set; }
+        public System.Collections.Generic.List<MonsterDummy> Summoned { get; } = new System.Collections.Generic.List<MonsterDummy>();
+
+        /// <summary>The boss you're fighting, for the HUD bar: alive, engaged, and within 30 m of you.</summary>
+        public static MonsterController ActiveBoss
+        {
+            get
+            {
+                var p = FindFirstObjectByType<PlayerDefense>();
+                if (p == null) return null;
+                foreach (var c in _registry)
+                    if (c != null && c.Boss != null && c._body != null && !c._body.IsDead && c._brain != null
+                        && c._brain.State != AiState.Idle && Flat(c.transform.position - p.transform.position).magnitude <= 30f) return c;
+                return null;
+            }
+        }
+
+        /// <summary>Starts any phase its HP has reached: banner, a roar, and its summons (alerted, so they come at once).</summary>
+        void BossPhases()
+        {
+            if (Boss == null || _body.IsDead) return;
+            foreach (var phase in Boss.Update(_body.MaxHp > 0 ? _body.Hp / (double)_body.MaxHp : 0))
+            {
+                var inv = FindFirstObjectByType<PlayerInventory>();
+                if (inv != null && !string.IsNullOrEmpty(phase.Banner)) inv.Toast(phase.Banner, 5f);
+                CombatFx.Play(CombatFx.Sfx.LevelUp, transform.position, 0.8f);
+                int i = 0;
+                foreach (var add in phase.Summon ?? new System.Collections.Generic.List<BossSummon>())
+                    for (int k = 0; k < add.Count; k++, i++)
+                    {
+                        float a = i * 2.1f;
+                        var at = transform.position + new Vector3(Mathf.Cos(a), 0, Mathf.Sin(a)) * 5f; at.y = 0;
+                        var m = MonsterSpawner.Spawn(MonsterSpawner.SceneTemplates, add.SpeciesId, at, _player != null ? _player.transform.position : transform.position);
+                        if (m == null) continue;
+                        Summoned.Add(m);
+                        var ai = m.GetComponent<MonsterController>();
+                        if (ai != null && ai._brain != null) ai._brain.Alert();
+                    }
+            }
+        }
+
         void OnDamaged()
         {
+            BossPhases();
             CallThePack();
             if (!_hopper || _body.IsDead || _player == null || _hopLeft > 0f || IsDashing) return;
             if (_body.Hp > _body.MaxHp * HopHpFraction || _rng.NextDouble() >= HopChance) return;
@@ -126,7 +171,7 @@ namespace Ascend.Game
                 _playerCombat = _player != null ? _player.GetComponent<PlayerCombat>() : null;
                 if (_player == null) return;
             }
-            float dt = Time.deltaTime;
+            float dt = Time.deltaTime * (Boss != null ? (float)Boss.Tempo : 1f); // a raging boss runs its routine faster
             if (dt <= 0f) return; // hit-stop
             if (_player.IsDead) { ReleaseToken(); ShowTelegraph(false); return; } // the player has fallen: stand down
             if (_body.IsAirborne) { ReleaseToken(); ShowTelegraph(false); return; } // juggled: no thinking in the air
@@ -326,7 +371,8 @@ namespace Ascend.Game
         {
             int def = _playerCombat != null ? _playerCombat.Stats.Def : 10;
             var species = AscendData.Db.Species[_body.SpeciesId];
-            return _calc.Compute(new DamageInput { Kind = DamageKind.Physical, Attack = species.Stats.Atk, Defense = def, Power = power }, _rng).Amount;
+            int amount = _calc.Compute(new DamageInput { Kind = DamageKind.Physical, Attack = species.Stats.Atk, Defense = def, Power = power }, _rng).Amount;
+            return Boss != null ? Mathf.RoundToInt(amount * (float)Boss.DamageMult) : amount;
         }
 
         /// <summary>Moves a dash one step: straight on, hits the player once on contact, sticks in obstacles.</summary>

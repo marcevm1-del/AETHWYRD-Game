@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Boss phases | Data/Monsters/boss_phases.json (validated): Grukk duels, calls three goblin archers at 66% HP and rages at 33% (faster, harder hitting), as bosses_and_calamities.md describes; a boss health bar with the phase shows on the HUD; Tyrants never respawn. Thresholds flagged in Canon §6 | 160 + 121 |
 | Partner orders | Z / LB cycles Follow → Hold (guard a spot) → Focus (attack your lock-on target); each species learns orders by trainability per family (after RimWorld): beasts, birds and dragons all three, slimes and spirits Follow and Hold, plants only Follow | 158 + 120 |
 | Pack calls | From Greyborn's fight-or-flee odds: pack and swarm monsters cry out when hit and their own kind within 12 m join in; a pack hunter left alone and hurt falls back home | 157 + 118 |
 | Recipe ideas | From Grounded's analyzer / Subnautica's scanner, shaped by item_and_economy_design §6.2: handle every material of a recipe and you get an idea; experiment at the right station to make it and learn it free (the paid lesson stays as the other route) | 156 + 117 |

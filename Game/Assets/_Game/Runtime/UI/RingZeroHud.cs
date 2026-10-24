@@ -155,6 +155,14 @@ namespace Ascend.Game
                 GUI.Label(new Rect(x, y, 520, 20), "Partners: " + string.Join(", ", taming.Following.Where(f => f != null && f.Data != null).Select(f => $"{f.Data.Name} ({f.Role}, bond {f.Data.Bond}, {f.Order}{(f.KnockedOut ? ", resting" : "")})")) + (taming.Roster.Ranch.Any() ? $" · ranch {taming.Roster.Ranch.Count()}" : ""), _small);
                 y += 22;
             }
+            var boss = MonsterController.ActiveBoss;
+            if (boss != null)
+            {
+                var body = boss.GetComponent<MonsterDummy>();
+                string bossName = AscendData.Db.Species.TryGetValue(body.SpeciesId, out var bs) ? bs.Name : body.SpeciesId;
+                GUI.Label(new Rect(sw0 / 2 - 260, 88, 520, 20), $"{bossName} — {boss.Boss.Current.Name} (phase {boss.Boss.PhaseIndex + 1}/{boss.Boss.PhaseCount})", _small);
+                Fill(new Rect(sw0 / 2 - 260, 110, 520, 10), body.MaxHp > 0 ? body.Hp / (float)body.MaxHp : 0f, new Color(0.85f, 0.2f, 0.2f));
+            }
             var siege = SiegeDirector.Instance != null ? SiegeDirector.Instance.StatusText() : null;
             if (siege != null) GUI.Label(new Rect(sw0 / 2 - 220, 66, 440, 20), siege, _small);
             if (_quests != null)
