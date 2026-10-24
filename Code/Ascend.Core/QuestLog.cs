@@ -124,7 +124,9 @@ namespace Ascend.Core
                 for (int i = 0; i < q.Objectives.Count; i++)
                 {
                     var o = q.Objectives[i];
-                    if (o.Kind != kind || o.Target != target || p.Counts[i] >= Need(o)) continue;
+                    // "{settlement}" (siege defences): any settlement of the quest's region counts.
+                    bool matches = o.Target == target || (kind == "defend" && o.Target == "{settlement}");
+                    if (o.Kind != kind || !matches || p.Counts[i] >= Need(o)) continue;
                     // Objectives run in order for talk/reach chains only when an earlier talk is unmet (go see A, then B).
                     if (kind == "talk" && EarlierTalkPending(q, p, i)) continue;
                     p.Counts[i] = Math.Min(Need(o), p.Counts[i] + amount);

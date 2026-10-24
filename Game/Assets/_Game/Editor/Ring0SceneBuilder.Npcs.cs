@@ -1,3 +1,4 @@
+using System.Linq;
 using Ascend.Game;
 using UnityEngine;
 
@@ -24,8 +25,41 @@ namespace Ascend.EditorTools
             Npc(root, "npc_eolande_fairweather", new Vector3(7f, 0, 30f), new Color(0.55f, 0.5f, 0.9f));
             Npc(root, "npc_dax_rowan", new Vector3(-12f, 0, 31f), new Color(0.8f, 0.25f, 0.25f));
 
+            Npc(root, "npc_captain_holt", new Vector3(-3f, 0, 18.5f), new Color(0.6f, 0.6f, 0.7f));        // the gate's watch captain (siege contracts)
+
             Place(root, "brindlewick_north_gate", new Vector3(0, 0, 20f), 3.5f);
+            BuildSiege();
             Place(root, "whisperwood_ruins_mural", new Vector3(0, 0, 88f), 10f);
+        }
+
+        /// <summary>
+        /// Whisperwood's raids on the Brindlewick gate: a SiegeDirector plus one inactive template per raider species
+        /// (its blockout model when exported, else a labelled capsule), cloned at runtime for each wave.
+        /// </summary>
+        static void BuildSiege()
+        {
+            var director = new GameObject("SiegeDirector").AddComponent<SiegeDirector>();
+            director.Gate = new Vector3(0, 0, 21.5f);
+            director.Muster = new Vector3(0, 0, 50f);
+            var holder = new GameObject("SiegeTemplates");
+            var waves = AscendData.Db.SiegeWaves["reg_whisperwood"];
+            var templates = new System.Collections.Generic.List<GameObject>();
+            var standIn = Mat("MonsterStandIn", new Color(0.8f, 0.45f, 0.55f));
+            foreach (var id in waves.Waves.SelectMany(w => w.Units).Select(u => u.SpeciesId).Distinct())
+            {
+                var wrapper = new GameObject("Raider_" + id);
+                wrapper.transform.SetParent(holder.transform, false);
+                var at = new Vector3(0, 0, 0.01f); // faces -z (toward the gate) when cloned with the march rotation
+                if (!Model(wrapper.transform, id, id, at))
+                {
+                    float size = AscendData.Db.Species.TryGetValue(id, out var sp) && sp.SizeMeters > 0 ? (float)sp.SizeMeters : 1f;
+                    var s = new Vector3(size * 0.45f, size * 0.5f, size * 0.45f);
+                    Dummy(wrapper.transform, id, PrimitiveType.Capsule, at + Vector3.up * s.y, s, standIn);
+                }
+                templates.Add(wrapper);
+            }
+            holder.SetActive(false);
+            director.Templates = templates.ToArray();
         }
 
         static void Npc(Transform parent, string npcId, Vector3 feet, Color color)

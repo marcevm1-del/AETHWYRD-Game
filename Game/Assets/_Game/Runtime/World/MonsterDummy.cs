@@ -73,6 +73,8 @@ namespace Ascend.Game
         }
 
         public void SetLabel(TextMesh tm) => label = tm;
+        /// <summary>False for raiders and other one-off monsters: once defeated they stay down.</summary>
+        public bool Respawns { get; set; } = true;
 
         /// <summary>The element aura on this monster now (combat.md §7), or None.</summary>
         public Element Aura => _reactions?.Aura.Current(Time.timeAsDouble) ?? Element.None;
@@ -165,7 +167,7 @@ namespace Ascend.Game
 
         void Defeat()
         {
-            _respawnLeft = respawnSec;
+            _respawnLeft = Respawns ? respawnSec : -1f;
             foreach (var c in _colliders) c.enabled = false;
             if (HideDelay > 0f) _hideLeft = HideDelay;
             else foreach (var r in _renderers) r.enabled = false;

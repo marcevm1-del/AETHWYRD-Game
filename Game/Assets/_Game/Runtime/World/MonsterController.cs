@@ -102,6 +102,16 @@ namespace Ascend.Game
 
             if (IsDashing) { DashStep(dt); UpdateTelegraph(); return; }
             if (IsStuck) { UpdateTelegraph(); return; }
+            if (MarchTarget.HasValue && (_brain.State == AiState.Idle || _brain.State == AiState.Return) && !Arrived)
+            {
+                Vector3 to = Flat(MarchTarget.Value - transform.position);
+                float speed = Mathf.Max(1.5f, (float)AscendData.Db.Motion[_body.SpeciesId].NavAgent.WalkSpeed);
+                transform.position += Blocked(to.normalized, speed * dt);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(to), _turnSpeed * dt);
+                _home = transform.position; // the leash travels with the march
+                UpdateTelegraph();
+                return;
+            }
             Move(cmd, toPlayer, toHome, dt);
             if (cmd.Face && toPlayer.sqrMagnitude > 1e-4f)
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(toPlayer), _turnSpeed * dt);
@@ -163,6 +173,11 @@ namespace Ascend.Game
 
         public bool IsDashing => _dashLeft > 0f;
         public bool IsStuck { get; private set; }
+
+        /// <summary>Raiders march here when nothing has their attention, carrying their home (leash centre) with them.</summary>
+        public Vector3? MarchTarget { get; set; }
+        public bool Arrived => MarchTarget.HasValue && Flat(MarchTarget.Value - transform.position).magnitude < 2f;
+        static Vector3 Flat(Vector3 v) { v.y = 0; return v; }
 
         /// <summary>Starts a straight-line charge: it can't turn, hits the player once on contact, and sticks in obstacles.</summary>
         public void BeginDash(Vector3 direction, float distance, int damage, Telegraph telegraph)

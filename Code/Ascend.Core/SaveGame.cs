@@ -43,6 +43,16 @@ namespace Ascend.Core
         public int TabCopper { get; set; }
         public bool TabPaidOnce { get; set; }
         public Dictionary<string, int> InnNights { get; set; } = new Dictionary<string, int>();
+        /// <summary>Region siege state by region id (null in older saves: data initial state).</summary>
+        public Dictionary<string, SiegeSave> Sieges { get; set; }
+    }
+
+    public sealed class SiegeSave
+    {
+        public RegionState State { get; set; }
+        public int Escalation { get; set; }
+        public List<int> DoneDays { get; set; } = new List<int>();
+        public int LastWeek { get; set; } = -1;
     }
 
     public static class SaveRules

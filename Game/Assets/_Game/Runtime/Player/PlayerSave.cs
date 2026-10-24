@@ -75,6 +75,12 @@ namespace Ascend.Game
             s.FireBombs = _combat.FireBombs;
             s.Equipment = _combat.Equipment.Slots.ToDictionary(kv => kv.Key, kv => kv.Value);
             if (WorldClock.Instance != null) s.ClockSeconds = WorldClock.Instance.PlaySeconds;
+            var siege = SiegeDirector.Instance;
+            if (siege != null)
+                s.Sieges = new System.Collections.Generic.Dictionary<string, SiegeSave>
+                {
+                    [siege.Threat.RegionId] = new SiegeSave { State = siege.Threat.State, Escalation = siege.Threat.Escalation, DoneDays = siege.DoneDays.ToList(), LastWeek = siege.LastWeek },
+                };
             if (TryGetComponent<PlayerRest>(out var rest))
             {
                 s.RestBuffs = rest.Buffs.Select(b => new RestBuff { Kind = b.Kind, Hours = b.Hours, XpBonus = b.XpBonus }).ToList();
@@ -115,6 +121,8 @@ namespace Ascend.Game
             _inv.Difficulty = s.Difficulty;
             if (s.Equipment != null) _combat.Equipment.Load(s.Equipment);
             if (s.ClockSeconds.HasValue && WorldClock.Instance != null) WorldClock.Instance.PlaySeconds = s.ClockSeconds.Value;
+            if (s.Sieges != null && SiegeDirector.Instance != null && s.Sieges.TryGetValue(SiegeDirector.Instance.Threat.RegionId, out var sg))
+                SiegeDirector.Instance.Load(sg.State, sg.Escalation, sg.DoneDays, sg.LastWeek);
             if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);
             if (TryGetComponent<PlayerQuests>(out var quests)) quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags);
             _combat.GiveFireBombs(s.FireBombs - _combat.FireBombs);

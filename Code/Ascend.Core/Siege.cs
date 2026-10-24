@@ -43,6 +43,9 @@ namespace Ascend.Core
         /// <summary>The Tyrant's lieutenants/dens are cleared: attacks get easier.</summary>
         public void LieutenantsCleared() { if (State == RegionState.Besieged) State = RegionState.Weakened; }
 
+        /// <summary>Restores state and escalation from a save.</summary>
+        public void Restore(RegionState state, int escalation) { State = state; Escalation = Math.Max(0, Math.Min(_t.MaxEscalation, escalation)); }
+
         /// <summary>The Tyrant is slain: the region is Liberated for good.</summary>
         public void TyrantSlain() { State = RegionState.Liberated; Escalation = 0; }
     }
@@ -222,5 +225,83 @@ namespace Ascend.Core
         public void Raise(int wealth, int safety) { Wealth = Clamp(Wealth + wealth); Safety = Clamp(Safety + safety); }
 
         int Clamp(int v) => Math.Max(_floor, Math.Min(100, v));
+    }
+}
+
+namespace Ascend.Core
+{
+    public enum BattleState { Waiting, Running, Repelled, TimedOut }
+
+    /// <summary>
+    /// A raid the player is present for (systems.md Regional Siege): the region's waves arrive one after another, each
+    /// scaled by escalation; clear them all to repel the raid. A raid has a time limit (the slower end of the data's
+    /// targetMinutes); if it runs out, the remaining fight auto-resolves with credit for what you cleared, and nothing is
+    /// ever destroyed.
+    /// </summary>
+    public sealed class SiegeBattle
+    {
+        readonly SiegeWaveData _data;
+        readonly int _escalation;
+        int _alive;
+
+        public SiegeBattle(SiegeWaveData data, int escalation)
+        {
+            _data = data ?? throw new ArgumentNullException(nameof(data));
+            _escalation = Math.Max(0, escalation);
+            TimeLimitSec = (data.TargetMinutes != null && data.TargetMinutes.Count > 0 ? data.TargetMinutes.Max() : 8) * 60;
+        }
+
+        public BattleState State { get; private set; } = BattleState.Waiting;
+        public int WaveIndex { get; private set; } = -1;
+        public int WaveCount => _data.Waves.Count;
+        public int Alive => _alive;
+        public int Defeated { get; private set; }
+        public int Total { get; private set; }
+        public double Elapsed { get; private set; }
+        public double TimeLimitSec { get; }
+        /// <summary>Fraction of all units fought off so far (0..1).</summary>
+        public double Progress => Total > 0 ? (double)Defeated / Total : 0;
+
+        /// <summary>Total units across every wave at this escalation (known up front for the progress bar).</summary>
+        public int PlannedUnits => _data.Waves.Sum(w => w.Units.Sum(u => _data.ScaledCount(u, _escalation)));
+
+        /// <summary>Starts the next wave and returns its units (species, count). Empty when every wave is done.</summary>
+        public List<(string speciesId, int count)> NextWave()
+        {
+            if (State == BattleState.Repelled || State == BattleState.TimedOut) return new List<(string, int)>();
+            if (State == BattleState.Waiting) { State = BattleState.Running; Total = PlannedUnits; }
+            WaveIndex++;
+            if (WaveIndex >= _data.Waves.Count) { State = BattleState.Repelled; return new List<(string, int)>(); }
+            var units = _data.Waves[WaveIndex].Units.Select(u => (u.SpeciesId, _data.ScaledCount(u, _escalation))).Where(x => x.Item2 > 0).ToList();
+            _alive = units.Sum(u => u.Item2);
+            return units;
+        }
+
+        /// <summary>A raider fell. Returns true when that cleared the current wave.</summary>
+        public bool UnitDefeated()
+        {
+            if (State != BattleState.Running || _alive <= 0) return false;
+            _alive--; Defeated++;
+            return _alive == 0;
+        }
+
+        public bool IsLastWave => WaveIndex >= _data.Waves.Count - 1;
+
+        public void Tick(double seconds)
+        {
+            if (State != BattleState.Running) return;
+            Elapsed += Math.Max(0, seconds);
+            if (Elapsed >= TimeLimitSec) State = BattleState.TimedOut;
+        }
+
+        /// <summary>
+        /// The outcome when time ran out (or the player left): the settlement's own defence plus the player's share,
+        /// counted as NPC adventurers in proportion to what they fought off.
+        /// </summary>
+        public SiegeResult ResolveRemainder(SettlementDefence d, AutoResolveTuning t, IRandom rng)
+        {
+            d.NpcAdventurers += (int)Math.Round(Progress * 6);
+            return SiegeAutoResolve.Resolve(d, _escalation, t, rng);
+        }
     }
 }

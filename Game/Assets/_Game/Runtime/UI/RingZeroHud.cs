@@ -140,6 +140,8 @@ namespace Ascend.Game
             var restText = _rest != null ? _rest.BuffText() : null;
             if (restText != null) { GUI.Label(new Rect(x, y, 360, 20), restText, _small); y += 22; }
             if (WorldClock.Instance != null) GUI.Label(new Rect(sw0 / 2 - 160, 44, 320, 20), WorldClock.Instance.Text, _small);
+            var siege = SiegeDirector.Instance != null ? SiegeDirector.Instance.StatusText() : null;
+            if (siege != null) GUI.Label(new Rect(sw0 / 2 - 220, 66, 440, 20), siege, _small);
             if (_quests != null)
             {
                 y += 6;
