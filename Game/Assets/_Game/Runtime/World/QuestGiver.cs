@@ -15,7 +15,7 @@ namespace Ascend.Game
         public const float TalkRadius = 2.6f;
 
         [SerializeField] string npcId;
-        TextMesh _marker;
+        [SerializeField] TextMesh _marker; // set by the scene builder; must be serialized or the saved scene loses it
 
         public string NpcId { get => npcId; set => npcId = value; }
         public string DisplayName => GetComponent<QuestBoard>() != null ? "Adventurers' Guild Board"
@@ -34,6 +34,7 @@ namespace Ascend.Game
         }
 
         public void SetMarker(TextMesh marker) => _marker = marker;
+        public bool HasMarker => _marker != null;
 
         void Update()
         {

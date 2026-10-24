@@ -46,6 +46,8 @@ namespace Ascend.Game.Tests
             var givers = Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Select(g => g.NpcId).ToHashSet();
             foreach (var npc in new[] { "npc_mina_feathersby", "npc_farmer_odo", "npc_marta_gruel", "npc_captain_holt", "npc_lyra_brightwood", "npc_fennick_reed" })
                 Assert.IsTrue(givers.Contains(npc), npc + " is in the field");
+            Assert.IsTrue(Object.FindObjectsByType<QuestGiver>(FindObjectsSortMode.None).Where(g => g.GetComponent<QuestBoard>() == null).All(g => g.HasMarker), "every NPC keeps its !/? marker in the saved scene");
+            Assert.IsNotNull(Object.FindFirstObjectByType<EscortNpc>(), "Ottoline's escort");
             Assert.IsNotNull(Object.FindFirstObjectByType<QuestBoard>(), "the guild board");
             Assert.IsNotNull(Object.FindFirstObjectByType<SiegeDirector>(), "the siege director");
             Assert.IsNotNull(Object.FindFirstObjectByType<WorldClock>(), "the clock");

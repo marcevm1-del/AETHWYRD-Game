@@ -36,8 +36,8 @@ namespace Ascend.Core
             Summary = Summary, Objectives = Objectives, Rewards = Rewards ?? new QuestRewards(),
         };
 
-        /// <summary>Objective kinds the Ring 0 build can track; board quests needing others (escort, tame) aren't posted yet.</summary>
-        public bool Playable => Objectives.All(o => o.Kind != "escort" && o.Kind != "tame");
+        /// <summary>Objective kinds the Ring 0 build can track; board quests needing others (tame) aren't posted yet.</summary>
+        public bool Playable => Objectives.All(o => o.Kind != "tame");
     }
 
     /// <summary>One dawn's guild board (weekly_board.md §2–3).</summary>

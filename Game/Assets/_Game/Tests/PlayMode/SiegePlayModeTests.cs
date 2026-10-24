@@ -137,6 +137,35 @@ namespace Ascend.Game.Tests
         }
 
         [UnityTest]
+        public IEnumerator EscortingOttolinesCartThroughAnAmbush()
+        {
+            Assert.IsTrue(_quests.Accept(_quests.Log.Quest("qst_wk_sol_escort_cart")), "the board's escort job");
+            var go = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+            go.transform.position = new Vector3(0, 0.9f, 16);
+            go.SetActive(false);
+            go.AddComponent<QuestGiver>().NpcId = "npc_traveling_merchant_pell";
+            var cart = go.AddComponent<EscortNpc>();
+            cart.Route = new[] { new Vector3(0, 0, 10), new Vector3(6, 0, 10) };
+            cart.Ambushes = new[] { "0.3|mon_goblin:2" };
+            go.SetActive(true);
+            Assert.IsTrue(cart.JobWaiting(_quests), "the job is waiting on her");
+            cart.SetOff();
+            int frames = 0, ambushed = 0;
+            while (cart.Travelling && frames++ < 1500)
+            {
+                // The player walks alongside; ambushers are dealt with as they appear.
+                var cc = _player.GetComponent<CharacterController>();
+                cc.enabled = false; _player.transform.position = go.transform.position + Vector3.back * 2f; cc.enabled = true;
+                foreach (var m in cart.Ambushers.ToList()) if (m != null && !m.IsDead) { ambushed++; m.TakeHit(999999, HitWeight.Heavy, m.transform.position + Vector3.forward, 0); }
+                yield return null;
+            }
+            Assert.IsFalse(cart.Travelling, "she arrived");
+            Assert.AreEqual(2, ambushed, "after an ambush");
+            Assert.AreEqual(1, _quests.Log.Get("qst_wk_sol_escort_cart").Counts[0], "escort objective done");
+            Object.Destroy(go);
+        }
+
+        [UnityTest]
         public IEnumerator ARaidYouMissAutoResolves()
         {
             var cc = _player.GetComponent<CharacterController>();

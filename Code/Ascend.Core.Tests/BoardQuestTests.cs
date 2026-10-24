@@ -21,15 +21,25 @@ static class BoardQuestTests
         Assert.True(log.CanAccept("qst_wk_syl_slime_patrol", new QuestContext()), "posted again another day");
     }
 
+    public static void EscortCountsWhenTheNpcArrives()
+    {
+        var log = NewLog();
+        log.Accept("qst_wk_sol_escort_cart", new QuestContext());
+        log.OnEscort("npc_marta_gruel");
+        Assert.Equal(0, log.Get("qst_wk_sol_escort_cart").Counts[0], "the wrong NPC doesn't count");
+        log.OnEscort("npc_traveling_merchant_pell");
+        Assert.Equal(1, log.Get("qst_wk_sol_escort_cart").Counts[0], "Ottoline arrived");
+    }
+
     public static void BoardQuestsArentOfferedByTheirGiversDirectly()
     {
         var log = NewLog();
         Assert.True(!log.OffersFrom("npc_marta_gruel", new QuestContext()).Any(q => q.Id.StartsWith("qst_wk_")), "only the board posts them");
     }
 
-    public static void EscortAndTameQuestsWaitForThoseSystems()
+    public static void EscortWorksTameWaits()
     {
-        Assert.True(!Repo.Db.WeeklyQuests["qst_wk_sol_escort_cart"].Playable, "escort");
+        Assert.True(Repo.Db.WeeklyQuests["qst_wk_sol_escort_cart"].Playable, "escort works now");
         Assert.True(!Repo.Db.WeeklyQuests["qst_wk_syl_tame_practice"].Playable, "tame");
         Assert.True(Repo.Db.WeeklyQuests["qst_wk_syl_slime_patrol"].Playable, "kill quests are fine");
     }

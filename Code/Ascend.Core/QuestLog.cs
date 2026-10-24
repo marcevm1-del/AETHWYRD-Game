@@ -82,6 +82,8 @@ namespace Ascend.Core
         public void OnKill(string speciesId) => Advance("kill", speciesId, 1);
         public void OnReach(string placeId) => Advance("reach", placeId, 1);
         public void OnTalk(string npcId) => Advance("talk", npcId, 1);
+        /// <summary>An escorted NPC reached their destination safely.</summary>
+        public void OnEscort(string npcId) => Advance("escort", npcId, 1);
         /// <param name="settlement">True when the place is a whole settlement (a raid repelled there), which also counts for
         /// "{settlement}" siege contracts; false for a spot like a gate or a granary.</param>
         public void OnDefend(string placeId, bool settlement = true) => Advance("defend", placeId, 1, settlement);

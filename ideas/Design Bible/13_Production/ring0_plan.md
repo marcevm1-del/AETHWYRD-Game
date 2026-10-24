@@ -76,7 +76,8 @@ A test project creation failed: `E:\6000.6.7f1\Editor\Data\Resources\PackageMana
 | Guild board | ✅ Beside Mina: each dawn the Core WeeklyBoard posts the weekday's Day Special, three dailies and the weekly commission (weekly_board.json), with a rumour twist and a raid warning on siege days. Quests open at their time of day, track in the journal and are handed in at the board; dailies return the next day, specials and the weekly next week. Escort and tame jobs wait for those systems |
 | Quest places | ✅ Lantern-post stand-ins for every place quests and board jobs send you (Old Watchtower, Boar den, Temple Hill graveyard, Millbrook fields…); a repelled raid also counts for North Gate jobs. A scene test checks every reach target and key NPC exists |
 | Defence spots | ✅ Defend objectives at a spot run a small attack when you arrive with the quest: Millbrook granary (Farmer Hesk, two goblin waves) and the training-yard mock raid; waves come in from the edge, clear them to complete it, retry if time runs out |
+| Escort | ✅ Ottoline's cart job from the board: talk to her to set off; she walks from her wagon out of the gate to Millbrook, waits if you fall behind or an ambush is up, and gets ambushed by goblins on the way |
 
 **Controls** (`12_Systems/hud_and_ui.md` §15): WASD/left stick move · Shift/B dodge (hold to sprint) · Space/A jump · LMB/X light · RMB/Y heavy (hold to charge; after two lights = launcher; in the air = slam) · Q/RT block/parry · MMB/R3 lock-on · 1–4 or RB + face skills · R or L3+R3 Ultimate · G or D-pad up Fire Bomb · E or D-pad down talk · H or D-pad right healing potion · I or View bag · Tab/Esc/Start Status Window. Playtest keys: **F8** +1 level (Shift+F8: +5), **F9** start a raid.
 
-**Tests:** 130 rules + 95 Unity PlayMode.
+**Tests:** 131 rules + 96 Unity PlayMode.

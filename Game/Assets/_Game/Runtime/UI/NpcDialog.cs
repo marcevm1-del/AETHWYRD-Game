@@ -91,6 +91,9 @@ namespace Ascend.Game
                 _options.Add(new Option { Text = $"Accept [{o.Rank}] {o.Title} — {o.Summary}", Act = () => { if (q.Accept(o)) _line = "Good luck out there."; } });
             }
             if (shop != null) _options.Add(new Option { Text = $"Trade — {shop.Data.Name}", Act = () => Go(Page.Buy, shop.Data.Note) });
+            var escort = _giver.GetComponent<EscortNpc>();
+            if (escort != null && !escort.Travelling && escort.JobWaiting(q))
+                _options.Add(new Option { Text = "Set off — escort them to Millbrook", Act = () => { escort.SetOff(); Close(); } });
             var board = _giver.GetComponent<QuestBoard>();
             if (board != null)
             {
