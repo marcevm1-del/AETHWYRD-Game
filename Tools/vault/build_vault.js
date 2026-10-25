@@ -626,7 +626,7 @@ for (const d of GENERATED) fs.rmSync(path.join(VAULT, d), { recursive: true, for
 for (const [p, text] of Object.entries(notes)) write(`${p}.md`, text);
 const shots = path.join(ROOT, '13_Production', 'screenshots');
 fs.mkdirSync(path.join(VAULT, 'Assets'), { recursive: true });
-for (const f of fs.readdirSync(shots)) fs.copyFileSync(path.join(shots, f), path.join(VAULT, 'Assets', f));
+fs.cpSync(shots, path.join(VAULT, 'Assets'), { recursive: true });  // includes buildings/ and cc0/ sheets
 
 // ---------------------------------------------------------------- hand-written areas (only if missing)
 const ensure = (rel, text) => { if (!fs.existsSync(path.join(VAULT, rel))) write(rel, text); };
