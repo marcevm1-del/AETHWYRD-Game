@@ -16,6 +16,7 @@ namespace Ascend.EditorTools
     {
         // The town ward over Brindlewick, Millbrook's fields and the treeline camp (x -38..38, z -60..33).
         static readonly Vector2 WardCentre = new Vector2(0f, -13.5f), WardSize = new Vector2(76f, 93f);
+        static readonly Vector3 WatchtowerAt = new Vector3(-29.5f, 0f, 42.5f);
 
         // (species, count, centre x, centre z, spread). Every camp sits outside the town ward and is spaced so their
         // alert circles don't chain: Ring 0's level-3 camps just past the treeline (the well, the goblin pack) and in the
@@ -69,8 +70,11 @@ namespace Ascend.EditorTools
             Prim(PrimitiveType.Cube, "ForestFloor", new Vector3(0, 0.01f, 60), new Vector3(70, 0.02f, 70), floor, root, keepCollider: false);
 
             // Treeline waystone: attune it and you respawn here instead of at the start.
-            var ws = Prim(PrimitiveType.Cylinder, "Waystone_Whisperwood", new Vector3(-3, 1.1f, 27), new Vector3(0.8f, 1.1f, 0.8f), Mat("Waystone", new Color(0.45f, 0.7f, 0.95f), 0.6f), root);
+            var ws = Building(root, "waystone", new Vector3(-3, 0, 27), 0f, "Waystone_Whisperwood")
+                ?? Prim(PrimitiveType.Cylinder, "Waystone_Whisperwood", new Vector3(-3, 1.1f, 27), new Vector3(0.8f, 1.1f, 0.8f), Mat("Waystone", new Color(0.45f, 0.7f, 0.95f), 0.6f), root);
             ws.AddComponent<Ascend.Game.Waystone>();
+            // The Old Watchtower ruin, behind its landmark post (the goblin pack camps in its shadow).
+            Building(root, "watchtower_ruin", WatchtowerAt, 210f, "Old_Watchtower");
 
             // Trees: seeded so the layout is the same every build; kept clear of the path, the camps and the clearing.
             var rng = new System.Random(1);
@@ -80,6 +84,8 @@ namespace Ascend.EditorTools
                 var at = new Vector3((float)(rng.NextDouble() * 66 - 33), 0, (float)(rng.NextDouble() * 66 + 27));
                 if (Mathf.Abs(at.x) < 2.5f) continue; // the path north
                 if (new Vector2(at.x, at.z - 88f).magnitude < 11f) continue; // Grukk's clearing
+                if (new Vector2(at.x - WatchtowerAt.x, at.z - WatchtowerAt.z).magnitude < 6.5f) continue; // the watchtower ruin
+                if (at.z < 37f && Mathf.Abs(at.x) < 17f) continue; // the treeline camp's clearing
                 bool nearCamp = false;
                 foreach (var c in WhisperwoodCamps.Concat(FieldCamps)) if (new Vector2(at.x - c.x, at.z - c.z).magnitude < c.spread + 2.5f) { nearCamp = true; break; }
                 if (nearCamp) continue;
@@ -89,12 +95,23 @@ namespace Ascend.EditorTools
                 Prim(PrimitiveType.Sphere, $"Crown_{placed}", at + Vector3.up * (h + crown * 0.3f), Vector3.one * crown, leaves, root, keepCollider: false);
                 placed++;
             }
-            // Ruins in the clearing (Whisperwood is forest and ruins).
-            for (int i = 0; i < 6; i++)
+            // Ruins in the clearing (Whisperwood is forest and ruins) and Grukk's camp among them.
+            var ruins = new (string id, Vector3 at, float yaw)[]
             {
-                float a = i / 6f * Mathf.PI * 2f;
-                Prim(PrimitiveType.Cube, $"Ruin_{i}", new Vector3(Mathf.Cos(a) * 9f, 1.2f, 88f + Mathf.Sin(a) * 9f), new Vector3(1.2f, 2.4f - (i % 3) * 0.6f, 1.2f), Mat("Stone", new Color(0.68f, 0.68f, 0.72f)), root);
-            }
+                ("ruin_arch", new Vector3(0f, 0, 97.5f), 0f), ("ruin_mural_wall", new Vector3(-7f, 0, 94.5f), 30f),
+                ("ruin_column_whole", new Vector3(9f, 0, 88f), 0f), ("ruin_column", new Vector3(-9f, 0, 88f), 120f),
+                ("ruin_column", new Vector3(6.4f, 0, 81.6f), 40f), ("ruin_column_whole", new Vector3(-6.4f, 0, 81.6f), 0f),
+                ("goblin_hut", new Vector3(8.5f, 0, 95f), 220f), ("goblin_hut", new Vector3(12.5f, 0, 86f), 270f),
+                ("goblin_totem", new Vector3(3f, 0, 82f), 180f),
+            };
+            int ruinModels = 0;
+            foreach (var r in ruins) if (Building(root, r.id, r.at, r.yaw) != null) ruinModels++;
+            if (ruinModels == 0)
+                for (int i = 0; i < 6; i++)
+                {
+                    float a = i / 6f * Mathf.PI * 2f;
+                    Prim(PrimitiveType.Cube, $"Ruin_{i}", new Vector3(Mathf.Cos(a) * 9f, 1.2f, 88f + Mathf.Sin(a) * 9f), new Vector3(1.2f, 2.4f - (i % 3) * 0.6f, 1.2f), Mat("Stone", new Color(0.68f, 0.68f, 0.72f)), root);
+                }
 
             var monsters = new GameObject("Whisperwood_Monsters").transform;
             int models = 0;

@@ -140,17 +140,16 @@ namespace Ascend.EditorTools
                 Prim(PrimitiveType.Cube, $"Ledge_{i + 1}m", new Vector3(-22 + i * 3.2f, (i + 1) * 0.5f, 14), new Vector3(3, i + 1, 3), stone, world);
             Prim(PrimitiveType.Cube, "Ramp", new Vector3(8, 1.1f, 4), new Vector3(4, 0.4f, 10), stone, world, Quaternion.Euler(-14, 0, 0));
             Prim(PrimitiveType.Cube, "Platform", new Vector3(8, 2.2f, 11), new Vector3(6, 0.4f, 6), stone, world);
-            // "Brindlewick gate" arch: scale reference for buildings.
-            Prim(PrimitiveType.Cube, "Gate_PillarL", new Vector3(-2.5f, 2.5f, 20), new Vector3(1, 5, 1), wood, world);
-            Prim(PrimitiveType.Cube, "Gate_PillarR", new Vector3(2.5f, 2.5f, 20), new Vector3(1, 5, 1), wood, world);
-            Prim(PrimitiveType.Cube, "Gate_Beam", new Vector3(0, 5.3f, 20), new Vector3(7, 0.6f, 1), wood, world);
+            // Brindlewick's buildings, gatehouse and palisade (Ring0SceneBuilder.Town.cs).
+            BuildTown(world);
             for (int i = 0; i < 6; i++) // stair steps
                 Prim(PrimitiveType.Cube, $"Step_{i}", new Vector3(-14, 0.15f + i * 0.3f, -4 + i * 0.6f), new Vector3(3, 0.3f + i * 0.6f, 0.6f), stone, world);
-            for (int i = 0; i < 8; i++) // pillars for camera-collision checks
-                Prim(PrimitiveType.Cylinder, $"Pillar_{i}", new Vector3(Mathf.Cos(i * 0.785f) * 18, 2, Mathf.Sin(i * 0.785f) * 18), new Vector3(1, 2, 1), accent, world);
+            for (int i = 0; i < 8; i++) // pillars for camera-collision checks (not in the gateway or the guild hall)
+                if (i != 2 && i != 6) Prim(PrimitiveType.Cylinder, $"Pillar_{i}", new Vector3(Mathf.Cos(i * 0.785f) * 18, 2, Mathf.Sin(i * 0.785f) * 18), new Vector3(1, 2, 1), accent, world);
 
             // Waystone beside the start: walking up to it attunes it as the respawn point.
-            var ws = Prim(PrimitiveType.Cylinder, "Waystone", new Vector3(-3, 1.1f, -3), new Vector3(0.8f, 1.1f, 0.8f), Mat("Waystone", new Color(0.45f, 0.7f, 0.95f), 0.6f), world);
+            var ws = Building(world, "waystone", new Vector3(-3, 0, -3), 0f, "Waystone")
+                ?? Prim(PrimitiveType.Cylinder, "Waystone", new Vector3(-3, 1.1f, -3), new Vector3(0.8f, 1.1f, 0.8f), Mat("Waystone", new Color(0.45f, 0.7f, 0.95f), 0.6f), world);
             ws.AddComponent<Waystone>();
 
             // Player: CharacterController root with a capsule body and a "nose" to show facing.
@@ -197,8 +196,9 @@ namespace Ascend.EditorTools
             // treeline, the goblin pack of 5 deeper in on the west side, rabbits in the east meadow beyond the trees.
             var monsters = new GameObject("Ring0_Monsters").transform;
             var well = FieldCamps[0];
-            Prim(PrimitiveType.Cylinder, "Millbrook_Old_Well", new Vector3(well.x, 0.45f, well.z), new Vector3(1.6f, 0.45f, 1.6f), Mat("Stone", new Color(0.62f, 0.62f, 0.66f)), world);
-            Label(world, new Vector3(well.x, 1.6f, well.z), "Millbrook's old well", new Color(1f, 0.92f, 0.7f), 0.03f);
+            if (Building(world, "well", new Vector3(well.x, 0, well.z), 30f, "Millbrook_Old_Well") == null)
+                Prim(PrimitiveType.Cylinder, "Millbrook_Old_Well", new Vector3(well.x, 0.45f, well.z), new Vector3(1.6f, 0.45f, 1.6f), Mat("Stone", new Color(0.62f, 0.62f, 0.66f)), world);
+            Label(world, new Vector3(well.x, 3.6f, well.z), "Millbrook's old well", new Color(1f, 0.92f, 0.7f), 0.03f);
             foreach (var at in CampSpots(FieldCamps[0]))
                 if (!Model(monsters, "mon_blue_slime", "Blue_Slime", at))
                     Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, at + Vector3.up * 0.25f, new Vector3(0.55f, 0.45f, 0.55f), slime);

@@ -7,7 +7,7 @@ namespace Ascend.Game
     /// <summary>
     /// Review captures for the built player: run with <c>-ascendShot &lt;file.png&gt;</c> and it takes a quest, stands you
     /// in view of the Ring 0 field's monsters, waits for the HUD to settle, saves a screenshot and quits. Does nothing
-    /// in normal play. Optional <c>-ascendShotAt x,z</c> moves you somewhere else first. <c>-ascendShotMap area|world</c>
+    /// in normal play. Optional <c>-ascendShotAt x,z</c> moves you somewhere else first, <c>-ascendShotYaw degrees</c> turns you. <c>-ascendShotMap area|world</c>
     /// opens the map on that page instead (with <c>-ascendShotZoom z</c>, <c>-ascendShotRank E</c> to stand at a guild rank
     /// and get its map seal, and <c>-ascendShotWalk</c> to ink a stroll around the village first).
     /// </summary>
@@ -56,8 +56,12 @@ namespace Ascend.Game
                 }
                 var cc = player.GetComponent<CharacterController>();
                 if (cc != null) cc.enabled = false;
-                player.transform.SetPositionAndRotation(to, Quaternion.LookRotation(Vector3.forward));
+                var yawArg = Arg("-ascendShotYaw");
+                float yaw = yawArg != null ? float.Parse(yawArg, System.Globalization.CultureInfo.InvariantCulture) : 0f;
+                player.transform.SetPositionAndRotation(to, Quaternion.Euler(0f, yaw, 0f));
+                var follow = FindFirstObjectByType<ThirdPersonCamera>();
                 if (cc != null) cc.enabled = true;
+                if (follow != null) follow.SnapBehind();
             }
             _at = Time.realtimeSinceStartup + 3f;
             _mapPage = Arg("-ascendShotMap");

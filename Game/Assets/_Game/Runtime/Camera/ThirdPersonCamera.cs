@@ -28,6 +28,9 @@ namespace Ascend.Game
 
         public Transform Target { get => target; set => target = value; }
 
+        /// <summary>Swings the camera straight behind the target (respawns, review shots).</summary>
+        public void SnapBehind() { if (target != null) { _yaw = target.eulerAngles.y; Place(); } }
+
         void Awake()
         {
             var t = AscendData.Db.Tuning.Camera;
