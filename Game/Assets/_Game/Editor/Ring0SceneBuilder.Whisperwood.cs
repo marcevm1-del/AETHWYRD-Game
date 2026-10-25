@@ -14,8 +14,9 @@ namespace Ascend.EditorTools
     /// </summary>
     public static partial class Ring0SceneBuilder
     {
-        // The town ward over Brindlewick, Millbrook's fields and the treeline camp (x -38..38, z -60..33).
-        static readonly Vector2 WardCentre = new Vector2(0f, -13.5f), WardSize = new Vector2(76f, 93f);
+        // The town ward over Brindlewick, Millbrook's fields, the treeline camp, the southern quarter and the farmstead
+        // (x -75..75, z -98..33); every monster camp lies north of it.
+        static readonly Vector2 WardCentre = new Vector2(0f, -32.5f), WardSize = new Vector2(150f, 131f);
         static readonly Vector3 WatchtowerAt = new Vector3(-29.5f, 0f, 42.5f);
 
         // (species, count, centre x, centre z, spread). Every camp sits outside the town ward and is spaced so their
