@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const FAMILIES = require('./families');
 const TYRANTS = require('./tyrants');
+const { chooseParts } = require('./part_rules');
 
 const ROOT = path.join(__dirname, '..', '..');
 const DATA = path.join(ROOT, 'Data');
@@ -329,9 +330,11 @@ function finalize(sp, fam, famKey) {
   sp.attackIds = attacksFor(sp);
   sp.rigId = `rig_${sp.rig}`; sp.animSetId = `anim_${sp.rig}`;
   const rig = RIGS[sp.rig];
-  const pool = [...rig.parts], parts = [];
-  const nParts = Math.min(pool.length, 2 + Math.floor(rnd() * 3));
-  while (parts.length < nParts) parts.push(pool.splice(Math.floor(rnd() * pool.length), 1)[0]);
+  // Parts follow the species' name, signature and body plan (part_rules.js), not a random draw from the rig.
+  // The old draw is still consumed (1 + nParts calls) so the seeded stream, and so every other field, stays stable.
+  const nParts = Math.min(rig.parts.length, 2 + Math.floor(rnd() * 3));
+  for (let i = 0; i < nParts; i++) rnd();
+  const parts = chooseParts({ id: sp.id, name: sp.name, coreName: sp.coreName || sp.name, signature: sp.signature, familyKey: famKey, type: fam.type, rig: sp.rig, rigPool: rig.parts, count: nParts });
   const el = EL[sp.element] || EL.None;
   sp.weakness = el.weak;
   // Ring 0/1 species are pinned to the starter regions.
@@ -382,7 +385,7 @@ const VARIANT_TYPES = ['elemental', 'elemental', 'elemental', 'elder', 'elder', 
 const stripElementWord = n => { const w = n.split(' '); return w.length > 1 && ELEMENT_WORDS.has(w[0]) ? w.slice(1).join(' ') : n; };
 function makeVariant(core, kind) {
   const fam = FAMILIES[core.familyKey];
-  const v = { name: core.name, rank: core.rank, menace: core.menace, element: core.element, size: core.size, signature: core.signature, rig: core.rig, tier: 'variant', variantKind: kind, baseSpeciesId: core.id };
+  const v = { name: core.name, rank: core.rank, menace: core.menace, element: core.element, size: core.size, signature: core.signature, rig: core.rig, tier: 'variant', variantKind: kind, baseSpeciesId: core.id, coreName: core.name };
   const rv = rankVal(core.rank);
   if (kind === 'elemental') {
     v.element = pick(SHIFT_ELEMENTS.filter(e => e !== core.element));

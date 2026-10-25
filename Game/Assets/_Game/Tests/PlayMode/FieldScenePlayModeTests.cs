@@ -10,6 +10,17 @@ namespace Ascend.Game.Tests
     /// <summary>The built Ring 0 / Whisperwood scene has what the quest data needs (places, givers, the board, the siege).</summary>
     public sealed class FieldScenePlayModeTests
     {
+        string _saveFolder;
+
+        [SetUp]
+        public void SandboxTheSave()
+        {
+            // The field's PlayerSave loads on Start: point it at an empty folder so the player's real slot is never read or written.
+            _saveFolder = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "ascend_qa_field_" + System.Guid.NewGuid().ToString("N"));
+            System.IO.Directory.CreateDirectory(_saveFolder);
+            PlayerSave.Folder = _saveFolder;
+        }
+
         [UnityTearDown]
         public IEnumerator UnloadTheField()
         {
@@ -20,6 +31,8 @@ namespace Ascend.Game.Tests
             if (field.isLoaded) yield return SceneManager.UnloadSceneAsync(field);
             GameTime.Clear();
             AggroDirector.Reset();
+            PlayerSave.Folder = null;
+            try { System.IO.Directory.Delete(_saveFolder, true); } catch (System.Exception) { }
         }
 
         [UnityTest]

@@ -58,8 +58,7 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "drip_trail",
-    "crown_slot"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -134,7 +133,7 @@
    "baseMesh": "blob_base",
    "parts": [
     "inner_core",
-    "face_decal"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -210,8 +209,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "crown_slot"
+    "inner_core",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -287,9 +286,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "crown_slot",
-    "surface_bubbles"
+    "surface_bubbles",
+    "drip_trail",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -365,7 +364,7 @@
    "baseMesh": "blob_base",
    "parts": [
     "surface_bubbles",
-    "drip_trail"
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -441,8 +440,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "drip_trail",
-    "crown_slot"
+    "surface_bubbles",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -516,10 +515,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "crown_slot",
-    "drip_trail",
-    "inner_core"
+    "surface_bubbles",
+    "inner_core",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -594,8 +592,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "surface_bubbles"
+    "crystal_growths",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -671,7 +669,7 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "drip_trail",
+    "inner_core",
     "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
@@ -748,8 +746,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "drip_trail",
-    "face_decal"
+    "crown_slot",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -827,8 +825,8 @@
    "baseMesh": "blob_base",
    "parts": [
     "drip_trail",
-    "crown_slot",
-    "surface_bubbles"
+    "surface_bubbles",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -904,9 +902,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "crown_slot",
-    "face_decal",
-    "inner_core"
+    "inner_core",
+    "drip_trail",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -980,8 +978,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "crown_slot",
-    "drip_trail"
+    "inner_core",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -1055,9 +1053,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "surface_bubbles",
+    "crown_slot",
     "inner_core",
-    "crown_slot"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -1130,10 +1128,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "drip_trail",
     "surface_bubbles",
-    "crown_slot"
+    "drip_trail",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -1206,8 +1203,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "crude_armor"
+    "crude_armor",
+    "loincloth"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1280,8 +1277,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
-    "bone_trinkets"
+    "weapon_socket",
+    "crude_armor"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1354,8 +1351,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
-    "ears_long"
+    "loincloth",
+    "nose_hooked"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1429,10 +1426,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
+    "weapon_socket",
     "bone_trinkets",
     "nose_hooked",
-    "loincloth",
-    "ears_long"
+    "crude_armor"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1505,8 +1502,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "horns"
+    "armor_plates",
+    "scar_decals"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1582,8 +1579,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "bone_trinkets"
+    "ears_long",
+    "nose_hooked"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1659,9 +1656,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
-    "weapon_socket",
-    "bone_trinkets"
+    "mount",
+    "nose_hooked",
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1735,8 +1732,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "tail"
+    "cloak",
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1810,8 +1807,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "weapon_socket"
+    "weapon_socket",
+    "scar_decals"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1888,8 +1885,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "tusks"
+    "crown",
+    "armor_plates",
+    "weapon_socket"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -1966,10 +1964,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask",
     "horns",
-    "tail"
+    "weapon_socket",
+    "armor_plates",
+    "scar_decals"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -2043,9 +2041,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
-    "stone_growths",
-    "tusks"
+    "horns",
+    "club_socket",
+    "chain_belt"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -2119,9 +2117,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "crude_armor",
-    "loincloth"
+    "bone_trinkets",
+    "ears_long",
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -2196,9 +2194,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
-    "ears_long",
-    "loincloth"
+    "crude_armor",
+    "bone_trinkets",
+    "ears_long"
    ],
    "material": "fur_short",
    "palette": [
@@ -2273,10 +2271,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
+    "bone_trinkets",
     "ears_long",
-    "loincloth",
-    "bone_trinkets"
+    "crude_armor",
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -2353,9 +2351,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "crude_armor",
-    "weapon_socket",
-    "bone_trinkets"
+    "whiskers",
+    "bone_trinkets",
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -2430,10 +2428,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "bone_trinkets",
-    "ears_long",
-    "loincloth"
+    "gear_joints",
+    "crude_armor",
+    "tail_thin",
+    "bone_trinkets"
    ],
    "material": "fur_short",
    "palette": [
@@ -2508,8 +2506,8 @@
    "baseMesh": "small_biped_base",
    "parts": [
     "bone_trinkets",
-    "crude_armor",
-    "ears_long"
+    "loincloth",
+    "crude_armor"
    ],
    "material": "fur_short",
    "palette": [
@@ -2586,10 +2584,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
+    "crude_armor",
     "weapon_socket",
-    "bone_trinkets",
-    "ears_long",
-    "nose_hooked"
+    "tail_thin",
+    "loincloth"
    ],
    "material": "fur_short",
    "palette": [
@@ -2666,10 +2664,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
+    "jewelry",
+    "crude_armor",
     "ears_long",
-    "loincloth",
-    "weapon_socket",
-    "crude_armor"
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -2742,10 +2740,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
+    "horn_single",
     "whiskers",
     "fur_tufts",
-    "tail_bushy",
-    "horn_single"
+    "ears_tall"
    ],
    "material": "fur_groom",
    "palette": [
@@ -2818,8 +2816,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "antlers"
+    "claws",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -2893,9 +2891,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "antlers",
-    "tail_club"
+    "tusks",
+    "mane",
+    "tail_thin"
    ],
    "material": "fur_groom",
    "palette": [
@@ -2969,10 +2967,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
+    "scar_decals",
     "fangs_long",
-    "tail_club",
-    "mane",
-    "armored_back"
+    "claws",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3047,10 +3045,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "antlers",
-    "claws",
-    "tail_club"
+    "fangs_long",
+    "mane",
+    "tail_bushy",
+    "scar_decals"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3124,10 +3122,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "armored_back",
+    "beak_hooked",
+    "scar_decals",
     "claws",
-    "fangs_long"
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3202,8 +3200,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "antlers"
+    "antlers",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3279,8 +3277,8 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "mane",
-    "antlers",
-    "claws",
+    "fur_tufts",
+    "tail_bushy",
     "fangs_long"
    ],
    "material": "fur_groom",
@@ -3358,7 +3356,7 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "armored_back",
-    "fangs_long"
+    "tail_club"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3433,10 +3431,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
+    "fangs_long",
+    "tail_thin",
     "claws",
-    "antlers",
-    "mane"
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3510,9 +3508,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "antlers",
-    "fangs_long"
+    "mane",
+    "scar_decals",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3586,8 +3584,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "mane",
+    "stone_growths",
+    "tusks",
     "armored_back",
     "tail_club"
    ],
@@ -3665,10 +3663,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
+    "antlers",
     "tail_bushy",
-    "ears_tall",
-    "fur_tufts",
-    "horn_single"
+    "whiskers",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3743,10 +3741,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "horn_single",
+    "fur_tufts",
+    "tail_bushy",
     "ears_tall",
-    "whiskers",
-    "fur_tufts"
+    "whiskers"
    ],
    "material": "fur_groom",
    "palette": [
@@ -3819,8 +3817,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "antlers",
+    "chains",
+    "claws",
     "fangs_long"
    ],
    "material": "fur_groom",
@@ -3897,9 +3895,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "weapon_socket",
-    "armor_plates"
+    "loincloth",
+    "ears_tall",
+    "fangs_long"
    ],
    "material": "fur_rough",
    "palette": [
@@ -3976,8 +3974,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "weapon_socket"
+    "claws",
+    "whiskers"
    ],
    "material": "fur_rough",
    "palette": [
@@ -4052,8 +4050,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "horns"
+    "scar_decals",
+    "fangs"
    ],
    "material": "fur_rough",
    "palette": [
@@ -4129,10 +4127,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask",
-    "horns",
-    "tail"
+    "fur_tufts",
+    "claws",
+    "fangs_long",
+    "ears_tall"
    ],
    "material": "fur_rough",
    "palette": [
@@ -4208,8 +4206,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "weapon_socket"
+    "fangs_long",
+    "ears_tall"
    ],
    "material": "fur_rough",
    "palette": [
@@ -4285,10 +4283,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "horns",
-    "tail",
-    "cloak"
+    "fangs_long",
+    "claws",
+    "mane",
+    "ears_tall"
    ],
    "material": "fur_rough",
    "palette": [
@@ -4365,10 +4363,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates",
-    "cloak",
-    "tail"
+    "horn_crown",
+    "crystal_growths",
+    "mane",
+    "scar_decals"
    ],
    "material": "fur_rough",
    "palette": [
@@ -4443,7 +4441,7 @@
    "baseMesh": "hexapod_base",
    "parts": [
     "mandibles",
-    "carapace_ridges"
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -4517,9 +4515,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
-    "leg_spikes",
+    "fangs",
     "hair_bristles",
+    "leg_spikes",
     "eye_cluster"
    ],
    "material": "chitin_gloss",
@@ -4597,9 +4595,9 @@
    "rigId": "rig_swarm",
    "baseMesh": "swarm_base",
    "parts": [
+    "formation_shapes",
     "individual_unit",
-    "swarm_core",
-    "formation_shapes"
+    "swarm_core"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -4674,9 +4672,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "wing_cases",
-    "antennae",
-    "carapace_ridges"
+    "carapace_ridges",
+    "mandibles",
+    "antennae"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -4751,8 +4749,8 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
-    "eye_cluster"
+    "fangs",
+    "hair_bristles"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -4829,9 +4827,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "mandibles",
+    "claws",
     "wing_cases",
-    "carapace_ridges"
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -4982,10 +4980,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "mandibles",
-    "carapace_ridges",
-    "stinger",
-    "wing_cases"
+    "leg_spikes",
+    "claws",
+    "wing_cases",
+    "antennae"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -5060,8 +5058,8 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "fangs",
-    "eye_cluster",
+    "humanoid_torso",
+    "web_spinneret",
     "hair_bristles"
    ],
    "material": "chitin_gloss",
@@ -5139,9 +5137,9 @@
    "rigId": "rig_swarm",
    "baseMesh": "swarm_base",
    "parts": [
-    "individual_unit",
+    "swarm_core",
     "formation_shapes",
-    "swarm_core"
+    "individual_unit"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -5215,10 +5213,10 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
-    "leg_spikes",
-    "humanoid_torso",
-    "fangs"
+    "crown",
+    "jewelry",
+    "eye_cluster",
+    "web_spinneret"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -5291,10 +5289,10 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "human_mask",
-    "eye_clusters",
+    "extra_arms",
+    "joint_spikes",
     "mouth_clusters",
-    "extra_arms"
+    "eye_clusters"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -5368,8 +5366,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
+    "mandibles",
     "antennae",
-    "stinger",
     "carapace_ridges"
    ],
    "material": "chitin_matte",
@@ -5445,9 +5443,9 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "tail_thin",
+    "stinger",
     "membrane_wings",
-    "fangs"
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -5525,8 +5523,8 @@
    "baseMesh": "flyer_small_base",
    "parts": [
     "membrane_wings",
-    "tail_thin",
-    "horns_small"
+    "stinger",
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -5601,9 +5599,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "rattle_tail",
-    "fins",
-    "hood"
+    "mandibles",
+    "carapace_ridges",
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -5678,9 +5676,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "antennae",
-    "stinger",
-    "wing_cases"
+    "carapace_ridges",
+    "mandibles",
+    "leg_spikes"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -5756,9 +5754,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "stinger",
-    "mandibles",
-    "antennae"
+    "carapace_ridges",
+    "antennae",
+    "mandibles"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -5837,8 +5835,8 @@
    "parts": [
     "horn_crown",
     "wing_membrane",
-    "tail_spike",
-    "talons"
+    "carapace_ridges",
+    "stinger"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -5913,7 +5911,7 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "cloak",
-    "horns"
+    "scar_decals"
    ],
    "material": "rot_bone",
    "palette": [
@@ -5987,10 +5985,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "horns",
-    "tail",
-    "weapon_socket"
+    "bone_trinkets",
+    "crude_armor",
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6065,8 +6062,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "horns"
+    "tattered_cape",
+    "claws"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6141,8 +6138,8 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "joint_spikes",
-    "eye_clusters"
+    "extra_arms",
+    "mouth_clusters"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6217,8 +6214,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "scale_ridges"
+    "lantern_core",
+    "drip_trail"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6295,8 +6292,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
-    "lantern_core"
+    "tattered_shroud",
+    "chains"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6373,8 +6370,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "horns"
+    "claws",
+    "scar_decals"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6449,9 +6446,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
-    "trailing_wisps",
-    "lantern_core"
+    "tattered_shroud",
+    "chains",
+    "trailing_wisps"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6528,9 +6525,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
+    "armor_plates",
     "weapon_socket",
-    "armor_plates"
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6605,8 +6602,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "lantern_core",
-    "mask_face",
+    "hair_mane",
+    "trailing_wisps",
     "chains",
     "tattered_shroud"
    ],
@@ -6684,8 +6681,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "cloak",
     "armor_plates",
-    "mask"
+    "weapon_socket"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6762,10 +6760,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "tail",
     "cloak",
-    "armor_plates"
+    "fangs",
+    "tattered_cape",
+    "jewelry"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6842,10 +6840,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "trailing_wisps",
+    "crown",
     "chains",
-    "mask_face",
-    "tattered_shroud"
+    "lantern_core",
+    "trailing_wisps"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6919,8 +6917,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "mask"
+    "tattered_cape",
+    "fangs"
    ],
    "material": "rot_bone",
    "palette": [
@@ -6995,10 +6993,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
+    "wing_membrane",
     "spine_plates",
-    "whiskers_long",
-    "horn_crown",
-    "tail_blade"
+    "tail_blade",
+    "horn_crown"
    ],
    "material": "rot_bone",
    "palette": [
@@ -7072,8 +7070,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "lantern_core",
-    "trailing_wisps"
+    "crown",
+    "lantern_core"
    ],
    "material": "rot_bone",
    "palette": [
@@ -7146,8 +7144,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "armor_plates"
+    "cloak",
+    "scar_decals"
    ],
    "material": "rot_bone",
    "palette": [
@@ -7222,10 +7220,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
+    "lantern_core",
     "trailing_wisps",
-    "tattered_shroud",
-    "chains",
-    "lantern_core"
+    "glowing_spots"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7301,10 +7298,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "horns",
-    "tail",
-    "mask"
+    "weapon_socket",
+    "joint_spikes",
+    "trailing_wisps",
+    "empty_visor"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7381,8 +7378,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "fangs_long"
+    "trailing_wisps",
+    "tail_bushy"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7459,9 +7456,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "mask",
-    "armor_plates"
+    "armor_plates",
+    "empty_visor",
+    "cloak"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7537,8 +7534,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "cloak"
+    "trailing_wisps",
+    "joint_spikes"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7613,8 +7610,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "lantern_core",
-    "chains"
+    "tattered_shroud",
+    "weapon_socket"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7689,7 +7686,7 @@
    "baseMesh": "fish_base",
    "parts": [
     "fins_sail",
-    "lure"
+    "glowing_spots"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -7762,10 +7759,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "tusks",
     "weapon_socket",
-    "tail",
-    "cloak",
-    "mask"
+    "chain_belt",
+    "crude_armor"
    ],
    "material": "thick_skin",
    "palette": [
@@ -7841,10 +7838,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "tail",
-    "horns",
-    "armor_plates"
+    "tusks",
+    "cloak",
+    "chain_belt",
+    "scar_decals"
    ],
    "material": "thick_skin",
    "palette": [
@@ -7919,8 +7916,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "mask"
+    "tusks",
+    "chain_belt"
    ],
    "material": "thick_skin",
    "palette": [
@@ -7995,8 +7992,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
-    "chain_belt"
+    "tusks",
+    "club_socket"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8071,9 +8068,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
-    "hair_mane",
-    "stone_growths"
+    "moss_cover",
+    "tusks",
+    "scar_decals"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8147,9 +8144,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask",
-    "cloak"
+    "horns",
+    "tusks",
+    "cloak",
+    "armor_plates"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8226,8 +8224,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
+    "chain_belt",
     "hair_mane",
-    "scar_decals",
     "stone_growths"
    ],
    "material": "thick_skin",
@@ -8305,7 +8303,7 @@
    "baseMesh": "large_biped_base",
    "parts": [
     "club_socket",
-    "tusks"
+    "hair_mane"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8383,7 +8381,7 @@
    "baseMesh": "large_biped_base",
    "parts": [
     "hair_mane",
-    "chain_belt"
+    "armor_plates"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8461,9 +8459,9 @@
    "baseMesh": "large_biped_base",
    "parts": [
     "club_socket",
-    "scar_decals",
-    "tusks",
-    "stone_growths"
+    "hair_mane",
+    "stone_growths",
+    "scar_decals"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8537,10 +8535,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "club_socket",
-    "chain_belt",
+    "crown",
     "tusks",
-    "stone_growths"
+    "crude_armor",
+    "chain_belt"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8613,8 +8611,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "scar_decals"
+    "armor_plates",
+    "stone_growths"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8687,9 +8685,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "club_socket",
-    "chain_belt",
-    "stone_growths"
+    "stone_growths",
+    "moss_cover"
    ],
    "material": "thick_skin",
    "palette": [
@@ -8763,10 +8760,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "tusks",
-    "stone_growths",
-    "chain_belt",
-    "club_socket"
+    "horns",
+    "jewelry",
+    "hair_mane",
+    "armor_plates"
    ],
    "material": "short_hide",
    "palette": [
@@ -8842,9 +8839,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "cloak",
-    "weapon_socket"
+    "horns_small",
+    "fur_tufts",
+    "tail"
    ],
    "material": "short_hide",
    "palette": [
@@ -8919,10 +8916,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "crude_armor",
+    "tail",
     "weapon_socket",
-    "armor_plates",
-    "horns",
-    "cloak"
+    "fangs"
    ],
    "material": "short_hide",
    "palette": [
@@ -8998,10 +8995,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "club_socket",
-    "hair_mane",
-    "stone_growths",
-    "tusks"
+    "horns",
+    "weapon_socket",
+    "armor_plates",
+    "scar_decals"
    ],
    "material": "short_hide",
    "palette": [
@@ -9078,8 +9075,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "club_socket",
-    "scar_decals"
+    "horns",
+    "rune_core"
    ],
    "material": "short_hide",
    "palette": [
@@ -9152,10 +9149,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "chain_belt",
-    "stone_growths",
-    "scar_decals",
-    "club_socket"
+    "crown",
+    "horns",
+    "weapon_socket",
+    "scar_decals"
    ],
    "material": "short_hide",
    "palette": [
@@ -9228,10 +9225,7 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "tail_bushy",
-    "ears_tall",
-    "whiskers",
-    "fur_tufts"
+    "tongue"
    ],
    "material": "scale_matte",
    "palette": [
@@ -9306,10 +9300,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "tail_club",
-    "fangs_long",
-    "antlers"
+    "neck_frill",
+    "scale_ridges",
+    "spine_plates",
+    "claws"
    ],
    "material": "scale_matte",
    "palette": [
@@ -9385,10 +9379,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
     "weapon_socket",
-    "mask",
-    "tail"
+    "crest",
+    "tail",
+    "scale_ridges"
    ],
    "material": "scale_matte",
    "palette": [
@@ -9463,8 +9457,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "mane"
+    "tail_thin",
+    "claws"
    ],
    "material": "scale_matte",
    "palette": [
@@ -9540,9 +9534,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "armored_back",
-    "mane"
+    "horns",
+    "spine_plates",
+    "glowing_throat"
    ],
    "material": "scale_matte",
    "palette": [
@@ -9619,9 +9613,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "rattle_tail",
-    "hood",
-    "fins"
+    "armored_back",
+    "scale_ridges",
+    "teeth_rows"
    ],
    "material": "scale_matte",
    "palette": [
@@ -9698,8 +9692,8 @@
    "baseMesh": "serpent_base",
    "parts": [
     "scale_ridges",
-    "horns_swept",
-    "rattle_tail",
+    "neck_frill",
+    "fangs",
     "hood"
    ],
    "material": "scale_matte",
@@ -9774,9 +9768,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "rattle_tail",
-    "fins",
-    "horns_swept",
+    "stone_growths",
+    "scale_ridges",
+    "fangs",
     "hood"
    ],
    "material": "scale_matte",
@@ -9854,8 +9848,8 @@
    "baseMesh": "dragon_base",
    "parts": [
     "wing_membrane",
-    "glowing_throat",
-    "horn_crown"
+    "horn_crown",
+    "tail_blade"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -9928,10 +9922,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "claws",
-    "armored_back",
-    "fangs_long"
+    "wing_membrane",
+    "scale_ridges",
+    "glowing_throat",
+    "claws"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10006,8 +10000,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "fangs_long"
+    "neck_frill",
+    "scale_ridges"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10083,10 +10077,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "armored_back",
-    "antlers",
-    "claws"
+    "scale_ridges",
+    "neck_frill",
+    "claws",
+    "glowing_throat"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10161,9 +10155,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "mane",
-    "claws"
+    "horns",
+    "scale_ridges",
+    "neck_frill"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10240,9 +10234,9 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
-    "neck_frill",
-    "talons",
+    "wing_membrane",
     "tail_spike",
+    "talons",
     "horn_crown"
    ],
    "material": "dragon_scale",
@@ -10320,8 +10314,8 @@
    "baseMesh": "dragon_base",
    "parts": [
     "horn_crown",
-    "whiskers_long",
-    "glowing_throat"
+    "wing_membrane",
+    "tail_blade"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10397,8 +10391,8 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
-    "wing_membrane",
-    "neck_frill"
+    "horn_crown",
+    "wing_membrane"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10473,10 +10467,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "tail_blade",
-    "horn_crown",
-    "glowing_throat",
-    "whiskers_long"
+    "wing_membrane",
+    "spine_plates",
+    "whiskers_long",
+    "horn_crown"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10550,9 +10544,9 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "whiskers_long",
-    "tail_blade",
-    "horn_crown"
+    "wing_membrane",
+    "spine_plates",
+    "whiskers_long"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10626,10 +10620,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
+    "wing_membrane",
     "horn_crown",
     "whiskers_long",
-    "spine_plates",
-    "glowing_throat"
+    "tail_blade"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10703,8 +10697,8 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "tail_blade",
-    "wing_membrane"
+    "wing_membrane",
+    "whiskers_long"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10778,10 +10772,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "horn_crown",
-    "spine_plates",
+    "trailing_wisps",
     "wing_membrane",
-    "whiskers_long"
+    "glowing_throat",
+    "horn_crown"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10855,10 +10849,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "glowing_throat",
+    "moss_cover",
     "wing_membrane",
-    "spine_plates",
-    "tail_blade"
+    "horn_crown",
+    "whiskers_long"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -10932,9 +10926,9 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "glowing_throat",
-    "whiskers_long",
-    "horn_crown"
+    "wing_membrane",
+    "spine_plates",
+    "glowing_throat"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -11008,8 +11002,8 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "horn_crown",
-    "glowing_throat"
+    "wing_feathers",
+    "wing_membrane"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -11083,9 +11077,9 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "glowing_throat",
-    "tail_blade",
-    "wing_membrane"
+    "wing_membrane",
+    "horn_crown",
+    "whiskers_long"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -11159,10 +11153,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "tail_blade",
-    "horn_crown",
-    "spine_plates",
-    "wing_membrane"
+    "wing_membrane",
+    "glowing_throat",
+    "whiskers_long",
+    "tail_blade"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -11237,9 +11231,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
-    "nose_hooked",
-    "loincloth"
+    "face_decal",
+    "moss_cover",
+    "scar_decals"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11313,8 +11307,8 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "teeth_ring",
-    "tongue"
+    "fake_surface",
+    "hinge_jaw"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11388,8 +11382,8 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "mask",
-    "weapon_socket",
-    "horns"
+    "cloak",
+    "loincloth"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11464,9 +11458,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "horns",
-    "tail"
+    "armor_plates",
+    "empty_visor",
+    "tattered_cape"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11543,8 +11537,8 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "plate_armor",
-    "empty_visor"
+    "rune_core",
+    "crystal_growths"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11620,9 +11614,9 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "hidden_legs",
-    "fake_surface",
     "teeth_ring",
+    "tongue",
+    "fake_surface",
     "hinge_jaw"
    ],
    "material": "stone_metal_runes",
@@ -11700,8 +11694,8 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "crystal_growths",
-    "plate_armor"
+    "gear_joints",
+    "rune_core"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11776,7 +11770,7 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "gear_joints",
+    "rune_core",
     "plate_armor"
    ],
    "material": "stone_metal_runes",
@@ -11853,9 +11847,9 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "plate_armor",
     "crystal_growths",
-    "rune_core"
+    "empty_visor",
+    "stone_growths"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -11931,8 +11925,8 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "teeth_ring",
-    "hidden_legs"
+    "hidden_legs",
+    "fake_surface"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -12006,10 +12000,10 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "gear_joints",
-    "rune_core",
+    "empty_visor",
     "plate_armor",
-    "empty_visor"
+    "rune_core",
+    "gear_joints"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -12084,7 +12078,7 @@
    "baseMesh": "golem_base",
    "parts": [
     "gear_joints",
-    "plate_armor"
+    "empty_visor"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -12158,7 +12152,7 @@
    "baseMesh": "golem_base",
    "parts": [
     "plate_armor",
-    "gear_joints"
+    "empty_visor"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -12232,9 +12226,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
+    "glowing_spots",
     "lantern_core",
-    "tattered_shroud"
+    "trailing_wisps"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12310,8 +12304,7 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
-    "tattered_shroud",
+    "glowing_spots",
     "lantern_core",
     "trailing_wisps"
    ],
@@ -12390,7 +12383,7 @@
    "baseMesh": "flyer_small_base",
    "parts": [
     "membrane_wings",
-    "horns_small"
+    "trailing_wisps"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12465,10 +12458,10 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "hood",
-    "fins",
+    "claws",
     "scale_ridges",
-    "horns_swept"
+    "trailing_wisps",
+    "flame_neck"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12544,8 +12537,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "tail"
+    "hair_mane",
+    "glowing_spots"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12620,9 +12613,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "mask",
-    "tail"
+    "glowing_spots",
+    "trailing_wisps",
+    "hair_mane"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12698,10 +12691,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
-    "loincloth",
-    "crude_armor",
-    "weapon_socket"
+    "hair_mane",
+    "crystal_growths",
+    "stone_growths",
+    "nose_hooked"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12777,10 +12770,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
+    "lantern_core",
+    "glowing_spots",
     "trailing_wisps",
-    "tattered_shroud",
-    "lantern_core"
+    "rune_core"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -12856,7 +12849,7 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
+    "glowing_spots",
     "trailing_wisps"
    ],
    "material": "elemental_emissive",
@@ -12931,8 +12924,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "armor_plates"
+    "crown",
+    "cloak"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -13005,10 +12998,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
-    "trailing_wisps",
-    "tattered_shroud",
-    "mask_face"
+    "crown",
+    "lantern_core",
+    "rune_core",
+    "trailing_wisps"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -13081,10 +13074,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
-    "tattered_shroud",
+    "rune_core",
+    "lantern_core",
     "trailing_wisps",
-    "mask_face"
+    "glowing_spots"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -13158,8 +13151,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
-    "moss_cover"
+    "root_tendrils",
+    "face_decal"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13235,7 +13228,7 @@
    "parts": [
     "cap",
     "glowing_knots",
-    "bark_plates",
+    "spore_pods",
     "moss_cover"
    ],
    "material": "bark_leaf",
@@ -13310,9 +13303,9 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "glowing_knots",
-    "moss_cover",
-    "cap"
+    "cap",
+    "spore_pods",
+    "moss_cover"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13389,8 +13382,8 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
-    "petal_jaws",
-    "root_tendrils"
+    "thorns",
+    "vine_whips"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13467,8 +13460,8 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
-    "spore_pods",
-    "vine_whips"
+    "petal_jaws",
+    "root_tendrils"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13545,8 +13538,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
-    "cap"
+    "face_decal",
+    "branch_arms"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13621,9 +13614,9 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "bark_plates",
-    "glowing_knots",
-    "moss_cover"
+    "cap",
+    "moss_cover",
+    "tattered_shroud"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13698,9 +13691,9 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
+    "petal_jaws",
     "thorns",
-    "spore_pods",
-    "root_tendrils"
+    "spore_pods"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13777,10 +13770,10 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
+    "hair_mane",
     "moss_cover",
     "branch_arms",
-    "cap",
-    "glowing_knots"
+    "bark_plates"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13854,10 +13847,10 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "glowing_knots",
-    "branch_arms",
     "moss_cover",
-    "bark_plates"
+    "bark_plates",
+    "branch_arms",
+    "glowing_knots"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -13931,8 +13924,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "cap",
-    "moss_cover"
+    "glowing_knots",
+    "bark_plates"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -14005,8 +13998,8 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
-    "thorns",
-    "spore_pods"
+    "root_tendrils",
+    "thorns"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -14081,8 +14074,8 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "horns_small",
-    "fangs"
+    "membrane_wings",
+    "tail_thin"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14158,8 +14151,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "mane"
+    "scar_decals",
+    "fur_tufts"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14234,8 +14227,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "mask"
+    "horns",
+    "cloak"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14310,9 +14303,9 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
+    "stone_growths",
     "wing_membrane",
-    "neck_frill",
-    "horn_crown",
+    "tail_spike",
     "talons"
    ],
    "material": "demon_hide_emissive",
@@ -14388,10 +14381,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
     "mask",
     "horns",
-    "cloak"
+    "cloak",
+    "tail"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14468,9 +14461,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
+    "horns",
     "cloak",
-    "mask"
+    "tail"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14547,10 +14540,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
     "mane",
-    "claws",
-    "antlers"
+    "trailing_wisps",
+    "fur_tufts",
+    "tail_bushy"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14626,9 +14619,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "horns",
-    "armor_plates"
+    "armor_plates",
+    "tattered_cape",
+    "weapon_socket"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14702,10 +14695,10 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
+    "wing_membrane",
     "neck_frill",
     "tail_spike",
-    "talons",
-    "horn_crown"
+    "talons"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14779,8 +14772,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "armor_plates"
+    "crown",
+    "wing_membrane"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14855,8 +14848,8 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "tail",
-    "cloak",
-    "mask"
+    "horns",
+    "cloak"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -14929,7 +14922,7 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "carapace_ridges",
+    "claws",
     "antennae"
    ],
    "material": "wet_scale",
@@ -15006,8 +14999,8 @@
    "baseMesh": "swarm_base",
    "parts": [
     "formation_shapes",
-    "individual_unit",
-    "swarm_core"
+    "swarm_core",
+    "individual_unit"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15082,9 +15075,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "cloak",
-    "tail"
+    "gills",
+    "teeth_rows",
+    "scale_ridges"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15161,7 +15154,7 @@
    "baseMesh": "fish_base",
    "parts": [
     "teeth_rows",
-    "fins_sail",
+    "lure",
     "scales_armored"
    ],
    "material": "wet_scale",
@@ -15239,10 +15232,10 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "scale_ridges",
     "fins",
-    "hood"
+    "teeth_rows",
+    "scale_ridges",
+    "neck_frill"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15318,9 +15311,9 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "scale_patterns",
-    "multiple_arms",
-    "crown"
+    "fins",
+    "hair_mane",
+    "scale_patterns"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15395,8 +15388,8 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
-    "beak",
-    "glowing_spots"
+    "tentacles",
+    "beak"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15472,8 +15465,8 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
-    "ink_sac",
-    "glowing_spots"
+    "tentacles",
+    "ink_sac"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15550,10 +15543,10 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "hood",
-    "multiple_arms",
-    "scale_patterns",
-    "jewelry"
+    "armor_plates",
+    "weapon_socket",
+    "fins",
+    "hair_mane"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15628,7 +15621,7 @@
    "baseMesh": "fish_base",
    "parts": [
     "fins_sail",
-    "gills"
+    "scales_armored"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15702,10 +15695,10 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
-    "beak",
     "tentacles",
-    "glowing_spots",
-    "ink_sac"
+    "beak",
+    "suckers",
+    "glowing_spots"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15779,7 +15772,7 @@
    "baseMesh": "fish_base",
    "parts": [
     "scales_armored",
-    "gills"
+    "fins_sail"
    ],
    "material": "wet_scale",
    "palette": [
@@ -15853,9 +15846,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "crest",
+    "beak_hooked",
     "wing_feathers",
-    "talons"
+    "tail_plumes"
    ],
    "material": "feather_groom",
    "palette": [
@@ -15930,8 +15923,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "talons",
-    "tail_plumes"
+    "tail_thin",
+    "crest",
+    "wing_feathers"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16007,8 +16001,8 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "tail_plumes",
-    "crest"
+    "wing_feathers",
+    "hair_mane"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16083,8 +16077,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "fangs_long"
+    "beak_hooked",
+    "wing_feathers"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16161,8 +16155,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "antlers"
+    "beak_hooked",
+    "wing_feathers"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16239,8 +16233,8 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "crest",
-    "beak_hooked"
+    "wing_feathers",
+    "crest"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16316,8 +16310,8 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "tail_plumes",
-    "wing_feathers"
+    "wing_feathers",
+    "tail_plumes"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16391,8 +16385,8 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "tail_plumes",
-    "crest"
+    "wing_feathers",
+    "talons"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16466,7 +16460,7 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "beak_hooked",
+    "wing_feathers",
     "talons"
    ],
    "material": "feather_groom",
@@ -16542,8 +16536,8 @@
    "baseMesh": "avian_base",
    "parts": [
     "wing_feathers",
-    "crest",
     "talons",
+    "beak_hooked",
     "tail_plumes"
    ],
    "material": "feather_groom",
@@ -16617,8 +16611,8 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "crest",
-    "talons"
+    "wing_feathers",
+    "tail_plumes"
    ],
    "material": "feather_groom",
    "palette": [
@@ -16693,8 +16687,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "fangs_long"
+    "stinger",
+    "claws"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -16772,8 +16766,8 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "fangs_long",
-    "tail_club",
-    "armored_back",
+    "wing_membrane",
+    "claws",
     "mane"
    ],
    "material": "mixed_hide",
@@ -16849,8 +16843,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "armored_back"
+    "tail_thin",
+    "fur_tufts"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -16927,10 +16921,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "armored_back",
-    "fangs_long",
-    "tail_club"
+    "horn_single",
+    "fur_tufts",
+    "tail_bushy",
+    "mane"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -17007,10 +17001,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "tail_club",
-    "armored_back",
-    "antlers"
+    "scar_decals",
+    "mane",
+    "fangs_long",
+    "fur_tufts"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -17084,8 +17078,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "armored_back"
+    "claws",
+    "mane"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -17159,9 +17153,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "fangs_long",
-    "antlers"
+    "antlers",
+    "mane",
+    "fur_tufts"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -17234,7 +17228,7 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "mouth_clusters",
+    "joint_spikes",
     "extra_arms"
    ],
    "material": "mixed_hide",
@@ -17310,8 +17304,8 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "scale_patterns",
     "jewelry",
+    "scale_patterns",
     "hood"
    ],
    "material": "scale_gloss",
@@ -17388,8 +17382,8 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "multiple_arms",
-    "scale_patterns"
+    "weapon_socket",
+    "multiple_arms"
    ],
    "material": "scale_gloss",
    "palette": [
@@ -17466,10 +17460,9 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
+    "hood",
     "jewelry",
-    "scale_patterns",
-    "multiple_arms",
-    "crown"
+    "scale_patterns"
    ],
    "material": "scale_gloss",
    "palette": [
@@ -17544,8 +17537,8 @@
    "baseMesh": "naga_base",
    "parts": [
     "crown",
-    "jewelry",
-    "multiple_arms"
+    "scale_patterns",
+    "hood"
    ],
    "material": "scale_gloss",
    "palette": [
@@ -17620,9 +17613,9 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
-    "humanoid_torso",
+    "mane",
     "weapon_socket",
-    "barding"
+    "humanoid_torso"
    ],
    "material": "horse_coat",
    "palette": [
@@ -17698,9 +17691,9 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
-    "humanoid_torso",
-    "mane",
-    "weapon_socket"
+    "barding",
+    "weapon_socket",
+    "humanoid_torso"
    ],
    "material": "horse_coat",
    "palette": [
@@ -17777,9 +17770,9 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
-    "horns",
-    "weapon_socket",
-    "barding"
+    "humanoid_torso",
+    "stinger",
+    "claws"
    ],
    "material": "horse_coat",
    "palette": [
@@ -17854,8 +17847,8 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
+    "weapon_socket",
     "humanoid_torso",
-    "barding",
     "mane"
    ],
    "material": "horse_coat",
@@ -17931,9 +17924,9 @@
    "rigId": "rig_headless",
    "baseMesh": "headless_base",
    "parts": [
+    "lantern_core",
     "flame_neck",
-    "mount",
-    "lance"
+    "head_carried"
    ],
    "material": "old_iron",
    "palette": [
@@ -18010,9 +18003,9 @@
    "rigId": "rig_headless",
    "baseMesh": "headless_base",
    "parts": [
-    "mount",
+    "head_carried",
     "flame_neck",
-    "head_carried"
+    "tattered_cape"
    ],
    "material": "old_iron",
    "palette": [
@@ -18086,10 +18079,10 @@
    "rigId": "rig_headless",
    "baseMesh": "headless_base",
    "parts": [
-    "head_carried",
-    "mount",
     "tattered_cape",
-    "lance"
+    "head_carried",
+    "flame_neck",
+    "mount"
    ],
    "material": "old_iron",
    "palette": [
@@ -18164,10 +18157,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
     "weapon_socket",
+    "bone_trinkets",
     "ears_long",
-    "loincloth"
+    "nose_hooked"
    ],
    "material": "rubbery_skin",
    "palette": [
@@ -18242,8 +18235,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "bone_trinkets"
+    "bone_trinkets",
+    "tail_thin"
    ],
    "material": "rubbery_skin",
    "palette": [
@@ -18319,9 +18312,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
     "ears_long",
-    "bone_trinkets"
+    "bone_trinkets",
+    "gear_joints"
    ],
    "material": "rubbery_skin",
    "palette": [
@@ -18396,7 +18389,7 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "extra_arms",
+    "mouth_clusters",
     "eye_clusters"
    ],
    "material": "wet_flesh_unsettling",
@@ -18473,10 +18466,10 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "fake_surface",
     "tongue",
+    "teeth_ring",
     "hidden_legs",
-    "hinge_jaw"
+    "fake_surface"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -18553,8 +18546,8 @@
    "baseMesh": "aberrant_base",
    "parts": [
     "eye_clusters",
-    "human_mask",
-    "joint_spikes"
+    "mouth_clusters",
+    "human_mask"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -18631,8 +18624,8 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "joint_spikes",
-    "human_mask"
+    "mouth_clusters",
+    "extra_arms"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -18708,8 +18701,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
-    "tattered_shroud"
+    "eye_clusters",
+    "trailing_wisps"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -18784,10 +18777,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "bone_trinkets",
-    "crude_armor",
-    "weapon_socket"
+    "tongue",
+    "face_decal",
+    "tattered_shroud"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -18862,9 +18854,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
+    "lantern_core",
     "chains",
-    "tattered_shroud",
-    "mask_face"
+    "trailing_wisps"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -18941,9 +18933,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "weapon_socket",
-    "nose_hooked"
+    "scales_armored",
+    "beak_hooked",
+    "fins"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19017,9 +19009,9 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "mouth_clusters",
     "eye_clusters",
-    "joint_spikes"
+    "extra_arms",
+    "human_mask"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19093,9 +19085,9 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "whiskers",
-    "horn_single",
-    "fur_tufts"
+    "tail_bushy",
+    "fur_tufts",
+    "ears_tall"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19171,9 +19163,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "crest",
-    "talons",
-    "wing_feathers"
+    "wing_feathers",
+    "mask",
+    "weapon_socket"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19249,9 +19241,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "leg_spikes",
     "web_spinneret",
-    "humanoid_torso"
+    "hair_bristles",
+    "eye_cluster"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19328,8 +19320,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "club_socket",
-    "chain_belt"
+    "horns",
+    "loincloth",
+    "club_socket"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19406,9 +19399,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "scar_decals",
-    "tusks"
+    "chain_belt",
+    "tattered_cape",
+    "scar_decals"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19482,9 +19475,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "beak_hooked",
-    "crest",
-    "talons"
+    "mask",
+    "weapon_socket",
+    "wing_feathers"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19558,10 +19551,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "claws",
-    "armored_back",
-    "fangs_long"
+    "tail_bushy",
+    "whiskers",
+    "fur_tufts",
+    "ears_tall"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -19633,8 +19626,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "fur_tufts",
-    "horn_single"
+    "scale_ridges",
+    "scar_decals"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -19707,9 +19700,9 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
+    "joint_spikes",
     "eye_clusters",
-    "extra_arms",
-    "human_mask"
+    "mouth_clusters"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -19783,8 +19776,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "mane"
+    "scale_ridges",
+    "scar_decals"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -19859,9 +19852,9 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "crystal_growths",
-    "empty_visor",
-    "plate_armor"
+    "rune_core",
+    "stone_growths",
+    "crystal_growths"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -19936,9 +19929,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "eye_cluster",
-    "fangs",
-    "web_spinneret"
+    "leg_spikes",
+    "hair_bristles",
+    "eye_cluster"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -20013,8 +20006,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
-    "tusks"
+    "stone_growths",
+    "crown"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -20089,10 +20082,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "weapon_socket",
+    "crystal_growths",
     "cloak",
-    "horns"
+    "glowing_spots",
+    "mask"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -20167,10 +20160,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "horns",
-    "tail",
-    "cloak"
+    "cloak",
+    "weapon_socket",
+    "crystal_growths",
+    "armor_plates"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -20244,10 +20237,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "trailing_wisps",
-    "chains",
-    "tattered_shroud",
-    "mask_face"
+    "wing_feathers",
+    "mask_face",
+    "glowing_spots",
+    "trailing_wisps"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -20322,9 +20315,9 @@
    "baseMesh": "floating_base",
    "parts": [
     "lantern_core",
-    "mask_face",
-    "chains",
-    "tattered_shroud"
+    "tattered_shroud",
+    "trailing_wisps",
+    "mask_face"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -20400,8 +20393,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "fur_tufts",
-    "whiskers"
+    "tongue",
+    "claws"
    ],
    "material": "sand_hide",
    "palette": [
@@ -20477,10 +20470,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
+    "stinger",
     "carapace_ridges",
-    "wing_cases",
-    "mandibles",
-    "antennae"
+    "leg_spikes",
+    "claws"
    ],
    "material": "sand_hide",
    "palette": [
@@ -20555,8 +20548,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "trailing_wisps",
-    "tattered_shroud"
+    "crystal_growths",
+    "trailing_wisps"
    ],
    "material": "sand_hide",
    "palette": [
@@ -20632,9 +20625,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "hood",
+    "teeth_ring",
     "scale_ridges",
-    "rattle_tail"
+    "crystal_growths"
    ],
    "material": "sand_hide",
    "palette": [
@@ -20707,9 +20700,9 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "gills",
-    "teeth_rows",
-    "scales_armored"
+    "fins_sail",
+    "scales_armored",
+    "glowing_spots"
    ],
    "material": "sand_hide",
    "palette": [
@@ -20782,9 +20775,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "armor_plates",
-    "cloak"
+    "cloak",
+    "weapon_socket",
+    "armor_plates"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -20858,10 +20851,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "weapon_socket",
     "armor_plates",
-    "cloak",
-    "mask",
-    "horns"
+    "crude_armor",
+    "cloak"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -20937,10 +20930,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "horns",
+    "chains",
     "weapon_socket",
-    "tail"
+    "mask",
+    "armor_plates"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21015,9 +21008,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates",
-    "tail"
+    "mask",
+    "cloak",
+    "armor_plates"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21092,10 +21085,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "cloak",
     "mask",
-    "horns",
-    "tail",
-    "weapon_socket"
+    "chains",
+    "armor_plates"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21171,7 +21164,7 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "mask",
-    "armor_plates"
+    "chains"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21246,8 +21239,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "weapon_socket",
     "armor_plates",
-    "mask",
     "cloak"
    ],
    "material": "cloth_leather_metal",
@@ -21323,8 +21316,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "mask"
+    "weapon_socket",
+    "chains"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21398,8 +21391,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "tail"
+    "armor_plates",
+    "crude_armor"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21472,9 +21465,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates",
-    "mask"
+    "crude_armor",
+    "chains",
+    "weapon_socket"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -21548,8 +21541,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "horn_single",
-    "whiskers"
+    "scales_armored",
+    "moss_cover"
    ],
    "material": "fur_soft",
    "palette": [
@@ -21623,10 +21616,10 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "tail_thin",
-    "fangs",
     "membrane_wings",
-    "horns_small"
+    "lantern_core",
+    "fur_tufts",
+    "antennae"
    ],
    "material": "fur_soft",
    "palette": [
@@ -21700,10 +21693,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "tail_bushy",
-    "ears_tall",
     "fur_tufts",
-    "whiskers"
+    "tail_bushy"
    ],
    "material": "fur_soft",
    "palette": [
@@ -21777,9 +21768,9 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "gills",
-    "teeth_rows",
-    "scales_armored"
+    "fins",
+    "whiskers",
+    "fins_sail"
    ],
    "material": "fur_soft",
    "palette": [
@@ -21856,10 +21847,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "tail_bushy",
-    "whiskers",
     "ears_tall",
-    "horn_single"
+    "whiskers",
+    "fur_tufts",
+    "tail_bushy"
    ],
    "material": "fur_soft",
    "palette": [
@@ -21936,7 +21927,7 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "horn_single",
+    "tail_thin",
     "fur_tufts",
     "ears_tall"
    ],
@@ -22013,7 +22004,7 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "tail_bushy",
+    "claws",
     "fur_tufts"
    ],
    "material": "fur_soft",
@@ -22089,9 +22080,9 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "scales_armored",
-    "gills",
-    "fins_sail"
+    "fins_sail",
+    "glowing_spots",
+    "scales_armored"
    ],
    "material": "fur_soft",
    "palette": [
@@ -22166,9 +22157,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "surface_bubbles",
-    "crown_slot",
-    "drip_trail"
+    "inner_core",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22245,7 +22235,7 @@
    "parts": [
     "inner_core",
     "drip_trail",
-    "crown_slot"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22319,10 +22309,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "crown_slot",
+    "inner_core",
     "surface_bubbles",
-    "drip_trail",
-    "inner_core"
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22396,8 +22385,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "drip_trail",
-    "face_decal"
+    "surface_bubbles",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22471,10 +22460,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
+    "surface_bubbles",
     "inner_core",
-    "face_decal",
-    "drip_trail",
-    "crown_slot"
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22549,7 +22537,7 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "surface_bubbles",
+    "drip_trail",
     "inner_core"
    ],
    "material": "translucent_gel_sss",
@@ -22626,9 +22614,8 @@
    "baseMesh": "blob_base",
    "parts": [
     "inner_core",
-    "drip_trail",
-    "face_decal",
-    "surface_bubbles"
+    "surface_bubbles",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22702,8 +22689,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "inner_core",
-    "crown_slot"
+    "crystal_growths",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22778,10 +22765,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "crown_slot",
-    "drip_trail",
-    "surface_bubbles"
+    "inner_core",
+    "surface_bubbles",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22856,9 +22842,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
+    "crown_slot",
     "drip_trail",
-    "surface_bubbles",
-    "inner_core"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -22932,10 +22918,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "inner_core",
-    "crown_slot",
     "drip_trail",
-    "face_decal"
+    "inner_core",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -23009,9 +22994,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
+    "inner_core",
     "drip_trail",
-    "inner_core"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -23085,8 +23070,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "inner_core"
+    "surface_bubbles",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -23160,9 +23145,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "drip_trail",
-    "inner_core",
-    "surface_bubbles"
+    "crown_slot",
+    "surface_bubbles",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -23236,8 +23221,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "ears_long"
+    "crude_armor",
+    "nose_hooked"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23311,10 +23296,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
     "weapon_socket",
+    "ears_long",
     "crude_armor",
-    "ears_long"
+    "loincloth"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23389,8 +23374,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
-    "crude_armor"
+    "loincloth",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23464,7 +23449,7 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
+    "weapon_socket",
     "bone_trinkets"
    ],
    "material": "rough_skin_leather",
@@ -23539,10 +23524,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
     "armor_plates",
-    "cloak",
-    "weapon_socket"
+    "scar_decals",
+    "bone_trinkets",
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23616,10 +23601,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
+    "loincloth",
     "nose_hooked",
     "bone_trinkets",
-    "loincloth",
-    "weapon_socket"
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23693,8 +23678,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
-    "ears_long"
+    "mount",
+    "nose_hooked"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23769,9 +23754,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "mask",
-    "armor_plates"
+    "cloak",
+    "bone_trinkets",
+    "scar_decals"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23846,9 +23831,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "mask",
-    "weapon_socket"
+    "weapon_socket",
+    "bone_trinkets",
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -23923,9 +23908,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "tusks",
-    "scar_decals",
-    "club_socket",
+    "crown",
+    "armor_plates",
+    "weapon_socket",
     "chain_belt"
    ],
    "material": "rough_skin_leather",
@@ -24000,9 +23985,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
     "horns",
-    "mask"
+    "weapon_socket",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -24076,10 +24061,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
+    "horns",
     "club_socket",
     "chain_belt",
-    "hair_mane",
-    "stone_growths"
+    "loincloth"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -24152,10 +24137,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "ears_long",
     "crude_armor",
-    "weapon_socket"
+    "loincloth",
+    "bone_trinkets",
+    "ears_long"
    ],
    "material": "fur_short",
    "palette": [
@@ -24229,8 +24214,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
-    "loincloth"
+    "crude_armor",
+    "bone_trinkets"
    ],
    "material": "fur_short",
    "palette": [
@@ -24304,9 +24289,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
-    "weapon_socket",
-    "loincloth"
+    "ears_long",
+    "crude_armor",
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -24381,8 +24366,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "weapon_socket"
+    "whiskers",
+    "ears_long"
    ],
    "material": "fur_short",
    "palette": [
@@ -24457,9 +24442,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "nose_hooked",
-    "weapon_socket"
+    "gear_joints",
+    "bone_trinkets",
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -24533,9 +24518,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
+    "bone_trinkets",
     "crude_armor",
-    "bone_trinkets"
+    "ears_long"
    ],
    "material": "fur_short",
    "palette": [
@@ -24610,7 +24595,7 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
+    "crude_armor",
     "weapon_socket"
    ],
    "material": "fur_short",
@@ -24685,9 +24670,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
-    "ears_long",
-    "weapon_socket"
+    "jewelry",
+    "bone_trinkets",
+    "crude_armor"
    ],
    "material": "fur_short",
    "palette": [
@@ -24761,9 +24746,9 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "fur_tufts",
-    "whiskers",
-    "ears_tall"
+    "horn_single",
+    "ears_tall",
+    "tail_bushy"
    ],
    "material": "fur_groom",
    "palette": [
@@ -24837,9 +24822,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "armored_back",
-    "claws"
+    "fur_tufts",
+    "mane",
+    "tail_bushy"
    ],
    "material": "fur_groom",
    "palette": [
@@ -24913,8 +24898,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "claws"
+    "tusks",
+    "tail_thin"
    ],
    "material": "fur_groom",
    "palette": [
@@ -24987,10 +24972,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "antlers",
-    "mane",
-    "armored_back"
+    "scar_decals",
+    "fur_tufts",
+    "fangs_long",
+    "claws"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25066,8 +25051,8 @@
    "parts": [
     "fangs_long",
     "claws",
-    "antlers",
-    "tail_club"
+    "tail_bushy",
+    "scar_decals"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25141,8 +25126,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "fangs_long"
+    "beak_hooked",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25216,9 +25201,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
+    "antlers",
     "mane",
-    "claws"
+    "scar_decals"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25293,9 +25278,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "claws",
-    "tail_club"
+    "thorns",
+    "fangs_long",
+    "tail_bushy"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25370,7 +25355,7 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "armored_back",
-    "claws"
+    "tail_club"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25444,9 +25429,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
     "fangs_long",
-    "mane"
+    "tail_thin",
+    "claws"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25519,9 +25504,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
+    "fur_tufts",
     "claws",
-    "mane"
+    "scar_decals"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25595,10 +25580,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "tail_club",
-    "mane",
-    "antlers"
+    "horns",
+    "stone_growths",
+    "tusks",
+    "armored_back"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25672,9 +25657,9 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "horn_single",
-    "tail_bushy",
-    "fur_tufts"
+    "antlers",
+    "whiskers",
+    "ears_tall"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25749,10 +25734,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "ears_tall",
-    "horn_single",
     "whiskers",
-    "fur_tufts"
+    "fur_tufts",
+    "ears_tall",
+    "tail_bushy"
    ],
    "material": "fur_groom",
    "palette": [
@@ -25827,10 +25812,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "weapon_socket",
-    "cloak",
-    "armor_plates"
+    "loincloth",
+    "ears_tall",
+    "fur_tufts",
+    "fangs_long"
    ],
    "material": "fur_rough",
    "palette": [
@@ -25905,10 +25890,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates",
-    "horns",
-    "tail"
+    "whiskers",
+    "fangs",
+    "fur_tufts",
+    "tail_thin"
    ],
    "material": "fur_rough",
    "palette": [
@@ -25983,9 +25968,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "horns",
-    "weapon_socket"
+    "scar_decals",
+    "fur_tufts",
+    "fangs"
    ],
    "material": "fur_rough",
    "palette": [
@@ -26059,10 +26044,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "tail",
-    "armor_plates",
-    "horns"
+    "fangs_long",
+    "tail_bushy",
+    "mane",
+    "fur_tufts"
    ],
    "material": "fur_rough",
    "palette": [
@@ -26137,9 +26122,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "armor_plates",
-    "weapon_socket"
+    "claws",
+    "ears_tall",
+    "fangs_long"
    ],
    "material": "fur_rough",
    "palette": [
@@ -26214,10 +26199,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask",
-    "horns",
-    "armor_plates"
+    "tail_bushy",
+    "scar_decals",
+    "fur_tufts",
+    "ears_tall"
    ],
    "material": "fur_rough",
    "palette": [
@@ -26291,10 +26276,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "horns",
-    "cloak",
-    "armor_plates"
+    "horn_crown",
+    "crystal_growths",
+    "mane",
+    "ears_tall"
    ],
    "material": "fur_rough",
    "palette": [
@@ -26369,10 +26354,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "antennae",
-    "wing_cases",
-    "stinger",
-    "carapace_ridges"
+    "mandibles",
+    "carapace_ridges",
+    "leg_spikes",
+    "antennae"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26446,8 +26431,8 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "humanoid_torso",
-    "web_spinneret"
+    "eye_cluster",
+    "fangs"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26598,8 +26583,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "stinger",
-    "antennae"
+    "carapace_ridges",
+    "mandibles"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26673,8 +26658,8 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "hair_bristles",
-    "web_spinneret"
+    "fangs",
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26749,8 +26734,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "antennae",
-    "wing_cases"
+    "claws",
+    "mandibles"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26825,8 +26810,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "wing_cases",
-    "antennae"
+    "carapace_ridges",
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26901,9 +26886,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "carapace_ridges",
+    "mandibles",
     "antennae",
-    "stinger"
+    "claws"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -26978,9 +26963,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
-    "fangs",
-    "leg_spikes"
+    "humanoid_torso",
+    "leg_spikes",
+    "eye_cluster"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -27054,8 +27039,8 @@
    "rigId": "rig_swarm",
    "baseMesh": "swarm_base",
    "parts": [
-    "formation_shapes",
-    "individual_unit"
+    "swarm_core",
+    "formation_shapes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -27129,8 +27114,10 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
-    "fangs"
+    "crown",
+    "jewelry",
+    "eye_cluster",
+    "web_spinneret"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -27204,9 +27191,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "antennae",
-    "carapace_ridges",
-    "wing_cases"
+    "mandibles",
+    "thorns",
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27281,8 +27268,8 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "membrane_wings",
-    "horns_small"
+    "stinger",
+    "membrane_wings"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27357,9 +27344,9 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "horns_small",
-    "tail_thin",
-    "fangs"
+    "membrane_wings",
+    "stinger",
+    "mandibles"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27434,9 +27421,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "scale_ridges",
-    "rattle_tail"
+    "carapace_ridges",
+    "leg_spikes",
+    "mandibles"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27510,9 +27497,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
+    "carapace_ridges",
     "mandibles",
-    "antennae",
-    "wing_cases"
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27587,9 +27574,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "antennae",
-    "mandibles",
-    "wing_cases"
+    "carapace_ridges",
+    "wing_cases",
+    "mandibles"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27663,9 +27650,9 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
-    "neck_frill",
-    "tail_spike",
-    "talons"
+    "horn_crown",
+    "wing_membrane",
+    "carapace_ridges"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -27740,10 +27727,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "weapon_socket",
-    "horns",
-    "cloak"
+    "cloak",
+    "loincloth",
+    "scar_decals",
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -27818,8 +27805,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "cloak"
+    "tattered_cape",
+    "bone_trinkets"
    ],
    "material": "rot_bone",
    "palette": [
@@ -27894,9 +27881,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "cloak",
-    "weapon_socket"
+    "tattered_cape",
+    "loincloth",
+    "claws"
    ],
    "material": "rot_bone",
    "palette": [
@@ -27971,10 +27958,10 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "eye_clusters",
     "mouth_clusters",
-    "extra_arms",
-    "joint_spikes"
+    "human_mask",
+    "joint_spikes",
+    "eye_clusters"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28049,8 +28036,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "hood"
+    "lantern_core",
+    "drip_trail"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28126,9 +28113,8 @@
    "baseMesh": "floating_base",
    "parts": [
     "trailing_wisps",
-    "mask_face",
     "chains",
-    "lantern_core"
+    "tattered_shroud"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28202,8 +28188,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "armor_plates"
+    "claws",
+    "scar_decals"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28278,8 +28264,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "lantern_core",
-    "mask_face"
+    "tattered_shroud",
+    "chains"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28352,9 +28338,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "armor_plates",
     "weapon_socket",
-    "tail",
-    "horns"
+    "cloak"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28428,10 +28414,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
-    "lantern_core",
+    "hair_mane",
+    "tattered_shroud",
     "trailing_wisps",
-    "tattered_shroud"
+    "chains"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28506,10 +28492,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
     "cloak",
-    "horns",
-    "mask"
+    "armor_plates",
+    "weapon_socket",
+    "empty_visor"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28585,7 +28571,7 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "cloak",
-    "mask"
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28659,10 +28645,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "trailing_wisps",
-    "tattered_shroud",
+    "crown",
+    "chains",
     "lantern_core",
-    "mask_face"
+    "trailing_wisps"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28736,10 +28722,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "weapon_socket",
-    "tail",
-    "cloak"
+    "tattered_cape",
+    "fangs",
+    "cloak",
+    "jewelry"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28814,10 +28800,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
+    "wing_membrane",
     "spine_plates",
     "tail_blade",
-    "glowing_throat",
-    "whiskers_long"
+    "horn_crown"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28891,8 +28877,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
-    "trailing_wisps"
+    "crown",
+    "lantern_core"
    ],
    "material": "rot_bone",
    "palette": [
@@ -28968,8 +28954,7 @@
    "parts": [
     "trailing_wisps",
     "lantern_core",
-    "tattered_shroud",
-    "chains"
+    "glowing_spots"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29044,9 +29029,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "weapon_socket",
     "cloak",
-    "horns",
-    "mask"
+    "trailing_wisps"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29121,10 +29106,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "mane",
+    "trailing_wisps",
+    "fur_tufts",
     "fangs_long",
-    "tail_club"
+    "scar_decals"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29198,8 +29183,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "weapon_socket"
+    "armor_plates",
+    "empty_visor"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29274,8 +29259,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "mask"
+    "cloak",
+    "empty_visor"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29349,8 +29334,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
-    "lantern_core"
+    "tattered_shroud",
+    "weapon_socket"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29424,9 +29409,9 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "teeth_rows",
+    "glowing_spots",
     "scales_armored",
-    "lure"
+    "fins_sail"
    ],
    "material": "shadow_smoke",
    "palette": [
@@ -29500,9 +29485,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "tusks",
     "weapon_socket",
-    "cloak",
-    "mask"
+    "crude_armor"
    ],
    "material": "thick_skin",
    "palette": [
@@ -29576,10 +29561,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "tusks",
     "cloak",
-    "tail",
-    "mask",
-    "weapon_socket"
+    "chain_belt",
+    "crude_armor"
    ],
    "material": "thick_skin",
    "palette": [
@@ -29654,10 +29639,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "tail",
-    "cloak",
-    "mask"
+    "tusks",
+    "chain_belt",
+    "crude_armor",
+    "weapon_socket"
    ],
    "material": "thick_skin",
    "palette": [
@@ -29733,7 +29718,7 @@
    "baseMesh": "large_biped_base",
    "parts": [
     "tusks",
-    "chain_belt"
+    "club_socket"
    ],
    "material": "thick_skin",
    "palette": [
@@ -29807,10 +29792,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
+    "moss_cover",
+    "tusks",
     "scar_decals",
-    "stone_growths",
-    "hair_mane",
-    "chain_belt"
+    "hair_mane"
    ],
    "material": "thick_skin",
    "palette": [
@@ -29885,8 +29870,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask"
+    "horns",
+    "tusks",
+    "cloak",
+    "armor_plates"
    ],
    "material": "thick_skin",
    "palette": [
@@ -29960,10 +29947,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
+    "armor_plates",
+    "chain_belt",
     "stone_growths",
-    "tusks",
-    "chain_belt"
+    "hair_mane"
    ],
    "material": "thick_skin",
    "palette": [
@@ -30038,8 +30025,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "tusks"
+    "club_socket",
+    "stone_growths"
    ],
    "material": "thick_skin",
    "palette": [
@@ -30113,9 +30100,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
     "hair_mane",
-    "tusks"
+    "armor_plates",
+    "stone_growths"
    ],
    "material": "thick_skin",
    "palette": [
@@ -30189,9 +30176,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
+    "club_socket",
     "hair_mane",
-    "club_socket"
+    "scar_decals"
    ],
    "material": "thick_skin",
    "palette": [
@@ -30265,8 +30252,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "tusks",
-    "stone_growths"
+    "crown",
+    "tusks"
    ],
    "material": "thick_skin",
    "palette": [
@@ -30339,9 +30326,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "chain_belt",
-    "tusks",
-    "scar_decals"
+    "armor_plates",
+    "stone_growths",
+    "crystal_growths"
    ],
    "material": "thick_skin",
    "palette": [
@@ -30415,10 +30402,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "tusks",
-    "hair_mane",
-    "scar_decals"
+    "horns",
+    "jewelry",
+    "chain_belt",
+    "armor_plates"
    ],
    "material": "short_hide",
    "palette": [
@@ -30493,10 +30480,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "armor_plates",
-    "weapon_socket",
-    "horns"
+    "fur_tufts",
+    "horns_small",
+    "loincloth",
+    "tail"
    ],
    "material": "short_hide",
    "palette": [
@@ -30571,8 +30558,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "weapon_socket"
+    "ears_tall",
+    "tail"
    ],
    "material": "short_hide",
    "palette": [
@@ -30646,10 +30633,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
+    "horns",
+    "weapon_socket",
     "scar_decals",
-    "club_socket",
-    "tusks",
-    "stone_growths"
+    "chain_belt"
    ],
    "material": "short_hide",
    "palette": [
@@ -30724,10 +30711,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
+    "horns",
+    "rune_core",
     "chain_belt",
-    "stone_growths",
-    "hair_mane",
-    "tusks"
+    "scar_decals"
    ],
    "material": "short_hide",
    "palette": [
@@ -30800,10 +30787,7 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "fur_tufts",
-    "ears_tall",
-    "tail_bushy",
-    "horn_single"
+    "tongue"
    ],
    "material": "scale_matte",
    "palette": [
@@ -30877,9 +30861,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "mane",
-    "armored_back"
+    "neck_frill",
+    "spine_plates",
+    "tail_thin"
    ],
    "material": "scale_matte",
    "palette": [
@@ -30955,7 +30939,7 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "weapon_socket",
-    "cloak"
+    "crest"
    ],
    "material": "scale_matte",
    "palette": [
@@ -31030,10 +31014,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "antlers",
-    "claws",
-    "armored_back"
+    "tail_thin",
+    "scale_ridges",
+    "neck_frill",
+    "claws"
    ],
    "material": "scale_matte",
    "palette": [
@@ -31108,10 +31092,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
+    "horns",
+    "spine_plates",
     "claws",
-    "antlers",
-    "armored_back",
-    "fangs_long"
+    "glowing_throat"
    ],
    "material": "scale_matte",
    "palette": [
@@ -31186,9 +31170,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "scale_ridges",
-    "rattle_tail"
+    "armored_back",
+    "claws",
+    "scale_ridges"
    ],
    "material": "scale_matte",
    "palette": [
@@ -31263,10 +31247,10 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "fins",
-    "horns_swept",
     "scale_ridges",
-    "rattle_tail"
+    "fangs",
+    "neck_frill",
+    "hood"
    ],
    "material": "scale_matte",
    "palette": [
@@ -31340,9 +31324,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "scale_ridges",
-    "horns_swept",
-    "rattle_tail"
+    "stone_growths",
+    "fangs",
+    "hood"
    ],
    "material": "scale_matte",
    "palette": [
@@ -31418,8 +31402,8 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "whiskers_long",
-    "horn_crown"
+    "wing_membrane",
+    "tail_blade"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -31494,9 +31478,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "antlers",
-    "fangs_long"
+    "wing_membrane",
+    "claws",
+    "scale_ridges"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -31570,9 +31554,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "tail_club",
-    "armored_back"
+    "spine_plates",
+    "scale_ridges",
+    "claws"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -31646,9 +31630,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "tail_club",
-    "armored_back"
+    "spine_plates",
+    "scale_ridges",
+    "claws"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -31723,8 +31707,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "mane"
+    "horns",
+    "spine_plates"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -31798,10 +31782,10 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
-    "neck_frill",
-    "horn_crown",
+    "wing_membrane",
+    "tail_spike",
     "talons",
-    "wing_membrane"
+    "horn_crown"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -31954,7 +31938,7 @@
     "horn_crown",
     "wing_membrane",
     "tail_spike",
-    "neck_frill"
+    "talons"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -32029,10 +32013,10 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
+    "wing_membrane",
     "tail_blade",
     "horn_crown",
-    "glowing_throat",
-    "wing_membrane"
+    "whiskers_long"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -32106,9 +32090,9 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
+    "wing_membrane",
     "glowing_throat",
-    "whiskers_long",
-    "horn_crown"
+    "tail_blade"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -32183,10 +32167,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "crude_armor",
-    "loincloth",
-    "ears_long",
-    "weapon_socket"
+    "face_decal",
+    "scar_decals",
+    "moss_cover"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32261,7 +32244,7 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "hidden_legs",
+    "hinge_jaw",
     "tongue"
    ],
    "material": "stone_metal_runes",
@@ -32336,9 +32319,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "mask",
     "cloak",
-    "tail",
-    "armor_plates"
+    "loincloth"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32412,9 +32395,9 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "armor_plates",
-    "cloak",
-    "horns",
-    "tail"
+    "tattered_cape",
+    "empty_visor",
+    "cloak"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32564,8 +32547,8 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "tongue",
-    "teeth_ring"
+    "teeth_ring",
+    "tongue"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32639,9 +32622,9 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "plate_armor",
     "gear_joints",
-    "crystal_growths"
+    "empty_visor",
+    "plate_armor"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32716,10 +32699,10 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "plate_armor",
-    "gear_joints",
     "rune_core",
-    "crystal_growths"
+    "gear_joints",
+    "empty_visor",
+    "plate_armor"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32793,9 +32776,9 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "plate_armor",
+    "crystal_growths",
     "rune_core",
-    "crystal_growths"
+    "stone_growths"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32868,9 +32851,9 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "teeth_ring",
     "hidden_legs",
-    "tongue"
+    "tongue",
+    "hinge_jaw"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -32944,9 +32927,9 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "rune_core",
     "empty_visor",
-    "plate_armor"
+    "plate_armor",
+    "rune_core"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -33020,9 +33003,9 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "empty_visor",
-    "crystal_growths",
-    "gear_joints"
+    "gear_joints",
+    "plate_armor",
+    "empty_visor"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -33097,7 +33080,7 @@
    "baseMesh": "floating_base",
    "parts": [
     "trailing_wisps",
-    "mask_face"
+    "lantern_core"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33172,9 +33155,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "chains",
     "trailing_wisps",
-    "mask_face"
+    "glowing_spots",
+    "lantern_core"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33248,10 +33231,9 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "fangs",
-    "horns_small",
     "membrane_wings",
-    "tail_thin"
+    "glowing_spots",
+    "trailing_wisps"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33325,8 +33307,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "fins",
+    "claws",
+    "flame_neck",
     "scale_ridges"
    ],
    "material": "elemental_emissive",
@@ -33401,8 +33383,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "armor_plates"
+    "hair_mane",
+    "glowing_spots"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33477,9 +33459,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "armor_plates",
-    "tail",
-    "weapon_socket"
+    "hair_mane",
+    "trailing_wisps",
+    "glowing_spots"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33554,10 +33536,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "crude_armor",
-    "ears_long",
+    "hair_mane",
+    "stone_growths",
     "nose_hooked",
-    "loincloth"
+    "crystal_growths"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33631,9 +33613,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "tattered_shroud",
+    "lantern_core",
     "trailing_wisps",
-    "mask_face"
+    "rune_core"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33707,9 +33689,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
-    "lantern_core",
-    "tattered_shroud"
+    "glowing_spots",
+    "trailing_wisps",
+    "lantern_core"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33783,10 +33765,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "weapon_socket",
-    "mask",
-    "tail"
+    "crown",
+    "rune_core",
+    "trailing_wisps",
+    "cloak"
    ],
    "material": "elemental_emissive",
    "palette": [
@@ -33859,7 +33841,7 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "tattered_shroud",
+    "crown",
     "lantern_core"
    ],
    "material": "elemental_emissive",
@@ -33935,8 +33917,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "cap",
-    "bark_plates"
+    "root_tendrils",
+    "moss_cover"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34012,8 +33994,8 @@
    "baseMesh": "plant_walker_base",
    "parts": [
     "cap",
-    "glowing_knots",
-    "bark_plates"
+    "spore_pods",
+    "moss_cover"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34088,9 +34070,9 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
     "cap",
-    "moss_cover"
+    "spore_pods",
+    "glowing_knots"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34164,9 +34146,9 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
-    "spore_pods",
+    "thorns",
     "vine_whips",
-    "petal_jaws"
+    "root_tendrils"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34241,8 +34223,8 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
-    "spore_pods",
-    "vine_whips"
+    "petal_jaws",
+    "root_tendrils"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34317,9 +34299,9 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
-    "cap",
-    "moss_cover"
+    "face_decal",
+    "moss_cover",
+    "bark_plates"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34393,8 +34375,9 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
-    "cap"
+    "cap",
+    "moss_cover",
+    "tattered_shroud"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34468,8 +34451,8 @@
    "rigId": "rig_plant_rooted",
    "baseMesh": "plant_rooted_base",
    "parts": [
+    "petal_jaws",
     "vine_whips",
-    "thorns",
     "root_tendrils"
    ],
    "material": "bark_leaf",
@@ -34544,8 +34527,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
+    "hair_mane",
     "moss_cover",
-    "bark_plates",
     "branch_arms"
    ],
    "material": "bark_leaf",
@@ -34620,8 +34603,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "cap",
-    "glowing_knots"
+    "moss_cover",
+    "branch_arms"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34695,8 +34678,8 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
-    "bark_plates"
+    "glowing_knots",
+    "branch_arms"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -34770,8 +34753,9 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
+    "membrane_wings",
     "tail_thin",
-    "horns_small"
+    "thorns"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -34846,9 +34830,9 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "claws",
-    "antlers",
-    "tail_club",
-    "armored_back"
+    "fur_tufts",
+    "scar_decals",
+    "fangs_long"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -34923,10 +34907,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "horns",
     "cloak",
-    "mask",
-    "armor_plates",
-    "horns"
+    "tail",
+    "armor_plates"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35001,9 +34985,9 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
+    "stone_growths",
     "wing_membrane",
-    "neck_frill",
-    "talons"
+    "thorns"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35077,7 +35061,7 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
+    "mask",
     "armor_plates",
     "tail"
    ],
@@ -35154,9 +35138,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "tail",
-    "mask"
+    "horns",
+    "cloak",
+    "armor_plates"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35231,7 +35215,7 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "mane",
-    "claws"
+    "trailing_wisps"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35306,9 +35290,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
+    "armor_plates",
     "cloak",
-    "weapon_socket",
-    "armor_plates"
+    "tattered_cape"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35382,10 +35366,10 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
-    "horn_crown",
-    "tail_spike",
+    "wing_membrane",
     "neck_frill",
-    "talons"
+    "horn_crown",
+    "tail_spike"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35458,10 +35442,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "horns",
-    "armor_plates",
-    "cloak"
+    "crown",
+    "wing_membrane",
+    "tail",
+    "armor_plates"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35534,9 +35518,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "cloak",
-    "tail"
+    "horns",
+    "tail",
+    "cloak"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -35609,8 +35593,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "antennae",
-    "wing_cases"
+    "claws",
+    "antennae"
    ],
    "material": "wet_scale",
    "palette": [
@@ -35684,8 +35668,8 @@
    "rigId": "rig_swarm",
    "baseMesh": "swarm_base",
    "parts": [
-    "formation_shapes",
     "individual_unit",
+    "formation_shapes",
     "swarm_core"
    ],
    "material": "wet_scale",
@@ -35760,10 +35744,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "tail",
-    "cloak",
-    "weapon_socket"
+    "scale_ridges",
+    "gills",
+    "teeth_rows",
+    "fins"
    ],
    "material": "wet_scale",
    "palette": [
@@ -35838,9 +35822,9 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "scales_armored",
+    "teeth_rows",
     "lure",
-    "gills"
+    "fins_sail"
    ],
    "material": "wet_scale",
    "palette": [
@@ -35914,10 +35898,10 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
+    "fins",
     "scale_ridges",
-    "horns_swept",
-    "hood",
-    "rattle_tail"
+    "neck_frill",
+    "teeth_rows"
    ],
    "material": "wet_scale",
    "palette": [
@@ -35993,9 +35977,8 @@
    "baseMesh": "naga_base",
    "parts": [
     "scale_patterns",
-    "crown",
-    "multiple_arms",
-    "hood"
+    "hair_mane",
+    "fins"
    ],
    "material": "wet_scale",
    "palette": [
@@ -36070,7 +36053,7 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
-    "ink_sac",
+    "tentacles",
     "beak"
    ],
    "material": "wet_scale",
@@ -36145,8 +36128,8 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
-    "ink_sac",
-    "tentacles"
+    "tentacles",
+    "suckers"
    ],
    "material": "wet_scale",
    "palette": [
@@ -36221,8 +36204,8 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "hood",
-    "multiple_arms"
+    "armor_plates",
+    "weapon_socket"
    ],
    "material": "wet_scale",
    "palette": [
@@ -36296,8 +36279,8 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "gills",
     "fins_sail",
+    "glowing_spots",
     "scales_armored"
    ],
    "material": "wet_scale",
@@ -36372,9 +36355,9 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
-    "suckers",
+    "tentacles",
     "beak",
-    "ink_sac"
+    "suckers"
    ],
    "material": "wet_scale",
    "palette": [
@@ -36449,7 +36432,7 @@
    "parts": [
     "beak_hooked",
     "wing_feathers",
-    "crest"
+    "talons"
    ],
    "material": "feather_groom",
    "palette": [
@@ -36523,9 +36506,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "wing_feathers",
-    "talons",
-    "tail_plumes"
+    "tail_thin",
+    "crest",
+    "wing_feathers"
    ],
    "material": "feather_groom",
    "palette": [
@@ -36599,10 +36582,10 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "beak_hooked",
+    "wing_feathers",
+    "talons",
     "tail_plumes",
-    "crest",
-    "wing_feathers"
+    "hair_mane"
    ],
    "material": "feather_groom",
    "palette": [
@@ -36676,10 +36659,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "tail_club",
-    "mane",
-    "antlers"
+    "beak_hooked",
+    "wing_feathers",
+    "talons",
+    "tail_thin"
    ],
    "material": "feather_groom",
    "palette": [
@@ -36753,9 +36736,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "antlers",
-    "tail_club",
+    "beak_hooked",
+    "wing_feathers",
+    "talons",
     "mane"
    ],
    "material": "feather_groom",
@@ -36831,8 +36814,8 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "talons",
     "wing_feathers",
+    "tail_plumes",
     "beak_hooked"
    ],
    "material": "feather_groom",
@@ -36907,9 +36890,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "crest",
+    "wing_feathers",
     "tail_plumes",
-    "wing_feathers"
+    "beak_hooked"
    ],
    "material": "feather_groom",
    "palette": [
@@ -36982,10 +36965,10 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "tail_plumes",
-    "beak_hooked",
+    "wing_feathers",
     "talons",
-    "crest"
+    "crest",
+    "beak_hooked"
    ],
    "material": "feather_groom",
    "palette": [
@@ -37058,10 +37041,10 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "talons",
-    "crest",
+    "wing_feathers",
     "beak_hooked",
-    "tail_plumes"
+    "tail_plumes",
+    "talons"
    ],
    "material": "feather_groom",
    "palette": [
@@ -37136,7 +37119,7 @@
    "baseMesh": "avian_base",
    "parts": [
     "wing_feathers",
-    "crest"
+    "talons"
    ],
    "material": "feather_groom",
    "palette": [
@@ -37210,9 +37193,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
+    "stinger",
     "mane",
-    "fangs_long"
+    "wing_membrane"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -37287,9 +37270,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "tail_club",
-    "mane"
+    "mane",
+    "tail_thin",
+    "wing_membrane"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -37364,10 +37347,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "armored_back",
-    "tail_club",
-    "mane"
+    "tail_thin",
+    "fur_tufts",
+    "claws",
+    "fangs_long"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -37441,10 +37424,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "antlers",
-    "tail_club",
-    "armored_back"
+    "horn_single",
+    "mane",
+    "tail_bushy",
+    "fur_tufts"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -37518,10 +37501,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
     "fangs_long",
     "claws",
-    "antlers"
+    "scar_decals",
+    "tail_bushy"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -37595,9 +37578,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
     "claws",
-    "fangs_long",
+    "wing_feathers",
     "mane"
    ],
    "material": "mixed_hide",
@@ -37672,9 +37654,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "tail_club",
-    "antlers"
+    "antlers",
+    "tail_bushy",
+    "mane"
    ],
    "material": "mixed_hide",
    "palette": [
@@ -37748,8 +37730,8 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
+    "hood",
     "scale_patterns",
-    "crown",
     "jewelry"
    ],
    "material": "scale_gloss",
@@ -37825,8 +37807,8 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "multiple_arms",
-    "hood"
+    "weapon_socket",
+    "multiple_arms"
    ],
    "material": "scale_gloss",
    "palette": [
@@ -37901,9 +37883,9 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
+    "hood",
     "jewelry",
-    "scale_patterns",
-    "crown"
+    "scale_patterns"
    ],
    "material": "scale_gloss",
    "palette": [
@@ -37977,8 +37959,8 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "hood",
-    "multiple_arms"
+    "crown",
+    "jewelry"
    ],
    "material": "scale_gloss",
    "palette": [
@@ -38052,8 +38034,8 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
+    "mane",
     "weapon_socket",
-    "horns",
     "humanoid_torso"
    ],
    "material": "horse_coat",
@@ -38129,8 +38111,8 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
-    "mane",
     "barding",
+    "weapon_socket",
     "humanoid_torso"
    ],
    "material": "horse_coat",
@@ -38205,8 +38187,8 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
-    "horns",
-    "mane",
+    "humanoid_torso",
+    "stinger",
     "weapon_socket"
    ],
    "material": "horse_coat",
@@ -38282,7 +38264,7 @@
    "rigId": "rig_taur",
    "baseMesh": "taur_base",
    "parts": [
-    "mane",
+    "weapon_socket",
     "humanoid_torso",
     "barding"
    ],
@@ -38358,8 +38340,8 @@
    "rigId": "rig_headless",
    "baseMesh": "headless_base",
    "parts": [
-    "mount",
-    "flame_neck"
+    "lantern_core",
+    "tattered_cape"
    ],
    "material": "old_iron",
    "palette": [
@@ -38433,8 +38415,8 @@
    "rigId": "rig_headless",
    "baseMesh": "headless_base",
    "parts": [
-    "lance",
-    "head_carried"
+    "head_carried",
+    "flame_neck"
    ],
    "material": "old_iron",
    "palette": [
@@ -38509,9 +38491,9 @@
    "baseMesh": "headless_base",
    "parts": [
     "tattered_cape",
+    "head_carried",
     "mount",
-    "lance",
-    "flame_neck"
+    "lance"
    ],
    "material": "old_iron",
    "palette": [
@@ -38585,10 +38567,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "crude_armor",
+    "weapon_socket",
     "ears_long",
     "nose_hooked",
-    "weapon_socket"
+    "bone_trinkets"
    ],
    "material": "rubbery_skin",
    "palette": [
@@ -38662,8 +38644,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "weapon_socket",
+    "ears_long",
+    "gear_joints",
     "bone_trinkets"
    ],
    "material": "rubbery_skin",
@@ -38738,10 +38720,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "crude_armor",
-    "loincloth",
-    "bone_trinkets",
-    "ears_long"
+    "gear_joints",
+    "ears_long",
+    "nose_hooked",
+    "bone_trinkets"
    ],
    "material": "rubbery_skin",
    "palette": [
@@ -38816,9 +38798,9 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "joint_spikes",
     "extra_arms",
-    "human_mask"
+    "mouth_clusters",
+    "eye_clusters"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -38893,9 +38875,9 @@
    "rigId": "rig_mimic",
    "baseMesh": "mimic_base",
    "parts": [
-    "hinge_jaw",
     "teeth_ring",
-    "tongue",
+    "fake_surface",
+    "hinge_jaw",
     "hidden_legs"
    ],
    "material": "wet_flesh_unsettling",
@@ -38970,9 +38952,9 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "joint_spikes",
-    "eye_clusters",
     "human_mask",
+    "joint_spikes",
+    "mouth_clusters",
     "extra_arms"
    ],
    "material": "wet_flesh_unsettling",
@@ -39048,8 +39030,8 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "human_mask",
-    "joint_spikes"
+    "mouth_clusters",
+    "eye_clusters"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -39123,9 +39105,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "tattered_shroud",
-    "lantern_core",
-    "chains"
+    "eye_clusters",
+    "trailing_wisps"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -39199,9 +39180,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
-    "ears_long",
-    "weapon_socket"
+    "face_decal",
+    "tattered_shroud",
+    "tongue"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39275,10 +39256,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
+    "lantern_core",
+    "tattered_shroud",
     "chains",
-    "trailing_wisps",
-    "mask_face",
-    "tattered_shroud"
+    "trailing_wisps"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39352,9 +39333,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
-    "weapon_socket",
-    "loincloth"
+    "fins",
+    "scales_armored",
+    "beak_hooked"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39428,8 +39409,8 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "extra_arms",
-    "joint_spikes"
+    "joint_spikes",
+    "human_mask"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39503,8 +39484,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
+    "tail_bushy",
     "fur_tufts",
-    "whiskers",
     "ears_tall"
    ],
    "material": "paper_ink_spirit",
@@ -39580,9 +39561,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "beak_hooked",
-    "crest",
-    "talons"
+    "wing_feathers",
+    "mask",
+    "weapon_socket"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39732,9 +39713,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "club_socket",
-    "scar_decals",
-    "chain_belt"
+    "horns",
+    "loincloth",
+    "club_socket"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39808,9 +39789,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "tusks",
-    "hair_mane"
+    "tattered_cape",
+    "chain_belt",
+    "bone_trinkets"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39884,10 +39865,10 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "tail_plumes",
-    "beak_hooked",
-    "talons",
-    "crest"
+    "mask",
+    "weapon_socket",
+    "wing_feathers",
+    "talons"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -39961,8 +39942,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "claws"
+    "tail_bushy",
+    "ears_tall"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -40035,10 +40016,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "horn_single",
-    "ears_tall",
-    "fur_tufts",
-    "whiskers"
+    "stone_growths",
+    "scar_decals",
+    "claws",
+    "scale_ridges"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -40111,10 +40092,10 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "mouth_clusters",
-    "human_mask",
+    "extra_arms",
     "joint_spikes",
-    "eye_clusters"
+    "eye_clusters",
+    "mouth_clusters"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -40187,10 +40168,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "fangs_long",
-    "claws",
-    "tail_club"
+    "scar_decals",
+    "stone_growths",
+    "scale_ridges",
+    "claws"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -40266,7 +40247,7 @@
    "baseMesh": "golem_base",
    "parts": [
     "rune_core",
-    "plate_armor"
+    "stone_growths"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -40340,9 +40321,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
+    "fangs",
     "web_spinneret",
-    "humanoid_torso",
-    "fangs"
+    "leg_spikes"
    ],
    "material": "dungeon_stone",
    "palette": [
@@ -40416,8 +40397,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "chain_belt",
     "stone_growths",
+    "crown",
     "scar_decals"
    ],
    "material": "dungeon_stone",
@@ -40493,8 +40474,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "weapon_socket"
+    "mask",
+    "crystal_growths"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -40568,10 +40549,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "tail",
+    "cloak",
     "weapon_socket",
-    "armor_plates"
+    "mask",
+    "crystal_growths"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -40645,10 +40626,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "lantern_core",
+    "wing_feathers",
     "mask_face",
-    "tattered_shroud",
-    "chains"
+    "glowing_spots",
+    "trailing_wisps"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -40722,8 +40703,8 @@
    "baseMesh": "floating_base",
    "parts": [
     "lantern_core",
-    "trailing_wisps",
-    "mask_face"
+    "mask_face",
+    "trailing_wisps"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -40798,9 +40779,9 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "whiskers",
-    "tail_bushy",
-    "fur_tufts"
+    "tongue",
+    "tail_thin",
+    "neck_frill"
    ],
    "material": "sand_hide",
    "palette": [
@@ -40875,9 +40856,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "mandibles",
-    "carapace_ridges",
-    "wing_cases"
+    "stinger",
+    "claws",
+    "carapace_ridges"
    ],
    "material": "sand_hide",
    "palette": [
@@ -40951,9 +40932,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "tattered_shroud",
+    "crystal_growths",
     "trailing_wisps",
-    "lantern_core"
+    "chains"
    ],
    "material": "sand_hide",
    "palette": [
@@ -41027,8 +41008,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "scale_ridges",
-    "fins"
+    "teeth_ring",
+    "scale_ridges"
    ],
    "material": "sand_hide",
    "palette": [
@@ -41103,8 +41084,8 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "cloak",
-    "armor_plates",
     "weapon_socket",
+    "armor_plates",
     "mask"
    ],
    "material": "cloth_leather_metal",
@@ -41179,8 +41160,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "armor_plates"
+    "weapon_socket",
+    "chains"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41253,8 +41234,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "horns"
+    "chains",
+    "cloak"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41328,8 +41309,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "armor_plates"
+    "mask",
+    "cloak"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41404,8 +41385,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates"
+    "cloak",
+    "mask"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41479,9 +41460,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
     "mask",
-    "armor_plates"
+    "chains",
+    "cloak"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41557,9 +41538,9 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "weapon_socket",
-    "horns",
-    "mask",
-    "cloak"
+    "cloak",
+    "chains",
+    "mask"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41636,7 +41617,7 @@
    "parts": [
     "weapon_socket",
     "cloak",
-    "tail",
+    "crude_armor",
     "armor_plates"
    ],
    "material": "cloth_leather_metal",
@@ -41711,10 +41692,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "tail",
-    "mask",
-    "armor_plates"
+    "armor_plates",
+    "chains",
+    "cloak",
+    "crude_armor"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -41788,9 +41769,9 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "ears_tall",
-    "fur_tufts",
-    "whiskers"
+    "scales_armored",
+    "moss_cover",
+    "tail_thin"
    ],
    "material": "fur_soft",
    "palette": [
@@ -41864,9 +41845,9 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "fangs",
     "membrane_wings",
-    "tail_thin"
+    "lantern_core",
+    "glowing_spots"
    ],
    "material": "fur_soft",
    "palette": [
@@ -42015,8 +41996,8 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "lure",
-    "fins_sail"
+    "fins",
+    "whiskers"
    ],
    "material": "fur_soft",
    "palette": [
@@ -42090,10 +42071,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "ears_tall",
-    "fur_tufts",
+    "whiskers",
     "tail_bushy",
-    "horn_single"
+    "ears_tall",
+    "fur_tufts"
    ],
    "material": "fur_soft",
    "palette": [
@@ -42168,8 +42149,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "horn_single",
-    "tail_bushy"
+    "ears_tall",
+    "whiskers"
    ],
    "material": "fur_soft",
    "palette": [
@@ -42244,8 +42225,8 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
-    "tail_bushy",
-    "horn_single"
+    "claws",
+    "whiskers"
    ],
    "material": "fur_soft",
    "palette": [
@@ -42319,10 +42300,9 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "teeth_rows",
-    "lure",
-    "gills",
-    "scales_armored"
+    "scales_armored",
+    "fins_sail",
+    "glowing_spots"
    ],
    "material": "fur_soft",
    "palette": [
@@ -42396,9 +42376,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "crown_slot",
-    "inner_core",
-    "face_decal"
+    "drip_trail",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -42472,9 +42451,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
+    "inner_core",
     "surface_bubbles",
-    "drip_trail",
-    "face_decal"
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -42549,10 +42528,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "crown_slot",
-    "face_decal",
+    "inner_core",
     "drip_trail",
-    "inner_core"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -42627,9 +42605,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "crown_slot",
-    "inner_core",
     "surface_bubbles",
+    "inner_core",
     "drip_trail"
    ],
    "material": "translucent_gel_sss",
@@ -42780,10 +42757,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
-    "crown_slot",
-    "surface_bubbles",
-    "drip_trail"
+    "drip_trail",
+    "inner_core",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -42859,7 +42835,7 @@
    "baseMesh": "blob_base",
    "parts": [
     "drip_trail",
-    "face_decal"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -42933,7 +42909,7 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "face_decal",
+    "crystal_growths",
     "surface_bubbles",
     "inner_core"
    ],
@@ -43010,10 +42986,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
+    "inner_core",
     "drip_trail",
-    "crown_slot",
-    "surface_bubbles",
-    "face_decal"
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -43087,8 +43062,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "surface_bubbles",
-    "face_decal"
+    "crown_slot",
+    "drip_trail"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -43162,10 +43137,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "surface_bubbles",
     "drip_trail",
-    "crown_slot",
-    "face_decal"
+    "surface_bubbles",
+    "inner_core"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -43240,9 +43214,9 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
-    "surface_bubbles",
-    "crown_slot",
-    "drip_trail"
+    "inner_core",
+    "drip_trail",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -43316,9 +43290,8 @@
    "rigId": "rig_blob",
    "baseMesh": "blob_base",
    "parts": [
+    "inner_core",
     "surface_bubbles",
-    "crown_slot",
-    "face_decal",
     "drip_trail"
    ],
    "material": "translucent_gel_sss",
@@ -43394,9 +43367,9 @@
    "baseMesh": "blob_base",
    "parts": [
     "crown_slot",
-    "surface_bubbles",
     "drip_trail",
-    "inner_core"
+    "inner_core",
+    "surface_bubbles"
    ],
    "material": "translucent_gel_sss",
    "palette": [
@@ -43470,10 +43443,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
+    "crude_armor",
+    "nose_hooked",
     "loincloth",
-    "ears_long",
-    "weapon_socket",
-    "nose_hooked"
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -43546,10 +43519,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
     "weapon_socket",
-    "loincloth",
-    "crude_armor"
+    "crude_armor",
+    "ears_long",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -43623,9 +43596,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "crude_armor",
-    "loincloth"
+    "ears_long",
+    "nose_hooked",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -43700,8 +43673,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "crude_armor",
-    "loincloth"
+    "weapon_socket",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -43777,8 +43750,8 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "armor_plates",
-    "weapon_socket",
-    "mask"
+    "scar_decals",
+    "crude_armor"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -43853,8 +43826,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "nose_hooked",
-    "ears_long"
+    "loincloth",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -43928,8 +43901,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
-    "weapon_socket"
+    "mount",
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -44002,9 +43975,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "horns",
-    "weapon_socket"
+    "cloak",
+    "ears_long",
+    "armor_plates"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -44077,10 +44050,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "tail",
-    "mask",
-    "armor_plates"
+    "weapon_socket",
+    "crude_armor",
+    "scar_decals",
+    "bone_trinkets"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -44154,8 +44127,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "hair_mane",
-    "tusks"
+    "crown",
+    "armor_plates",
+    "weapon_socket"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -44230,9 +44204,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
     "horns",
-    "tail"
+    "weapon_socket",
+    "thorns"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -44306,10 +44280,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "tusks",
+    "horns",
     "club_socket",
     "chain_belt",
-    "scar_decals"
+    "loincloth"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -44383,8 +44357,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
-    "bone_trinkets"
+    "crude_armor",
+    "loincloth"
    ],
    "material": "fur_short",
    "palette": [
@@ -44458,8 +44432,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "bone_trinkets",
-    "ears_long"
+    "crude_armor",
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -44533,8 +44507,8 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "ears_long",
-    "loincloth"
+    "loincloth",
+    "bone_trinkets"
    ],
    "material": "fur_short",
    "palette": [
@@ -44609,10 +44583,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
+    "whiskers",
     "crude_armor",
     "ears_long",
-    "loincloth"
+    "bone_trinkets"
    ],
    "material": "fur_short",
    "palette": [
@@ -44686,10 +44660,10 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "ears_long",
+    "gear_joints",
     "bone_trinkets",
-    "nose_hooked"
+    "crude_armor",
+    "loincloth"
    ],
    "material": "fur_short",
    "palette": [
@@ -44762,9 +44736,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "loincloth",
+    "bone_trinkets",
     "ears_long",
-    "nose_hooked"
+    "tail_thin"
    ],
    "material": "fur_short",
    "palette": [
@@ -44839,9 +44813,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
+    "crude_armor",
     "weapon_socket",
-    "loincloth",
-    "crude_armor"
+    "loincloth"
    ],
    "material": "fur_short",
    "palette": [
@@ -44915,9 +44889,9 @@
    "rigId": "rig_small_biped",
    "baseMesh": "small_biped_base",
    "parts": [
-    "weapon_socket",
-    "ears_long",
-    "crude_armor",
+    "jewelry",
+    "bone_trinkets",
+    "tail_thin",
     "loincloth"
    ],
    "material": "fur_short",
@@ -44992,9 +44966,9 @@
    "baseMesh": "quad_small_base",
    "parts": [
     "horn_single",
+    "fur_tufts",
     "whiskers",
-    "ears_tall",
-    "fur_tufts"
+    "ears_tall"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45067,9 +45041,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "armored_back",
-    "antlers",
+    "tail_bushy",
+    "mane",
+    "scar_decals",
     "claws"
    ],
    "material": "fur_groom",
@@ -45145,10 +45119,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
-    "antlers",
-    "armored_back",
-    "mane"
+    "tusks",
+    "fur_tufts",
+    "tail_thin",
+    "scar_decals"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45223,9 +45197,9 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "claws",
-    "armored_back",
-    "mane",
-    "tail_club"
+    "fangs_long",
+    "scar_decals",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45300,7 +45274,7 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "fangs_long",
-    "tail_club"
+    "mane"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45375,8 +45349,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "antlers",
-    "fangs_long"
+    "beak_hooked",
+    "fur_tufts"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45450,8 +45424,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "armored_back",
-    "antlers"
+    "antlers",
+    "scar_decals"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45525,10 +45499,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "tail_club",
-    "antlers",
-    "armored_back",
-    "mane"
+    "claws",
+    "fangs_long",
+    "scar_decals",
+    "tail_bushy"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45602,8 +45576,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "claws"
+    "armored_back",
+    "tail_club"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45677,10 +45651,10 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "claws",
     "fangs_long",
-    "tail_club"
+    "whiskers",
+    "tail_thin",
+    "claws"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45754,8 +45728,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "mane",
-    "antlers"
+    "scar_decals",
+    "mane"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45830,7 +45804,7 @@
    "baseMesh": "quad_large_base",
    "parts": [
     "armored_back",
-    "tail_club"
+    "horns"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45905,9 +45879,9 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
+    "antlers",
     "fur_tufts",
-    "tail_bushy",
-    "horn_single"
+    "ears_tall"
    ],
    "material": "fur_groom",
    "palette": [
@@ -45982,10 +45956,10 @@
    "rigId": "rig_quad_small",
    "baseMesh": "quad_small_base",
    "parts": [
+    "whiskers",
     "fur_tufts",
-    "horn_single",
     "ears_tall",
-    "whiskers"
+    "tail_bushy"
    ],
    "material": "fur_groom",
    "palette": [
@@ -46059,9 +46033,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "mask",
-    "cloak"
+    "loincloth",
+    "mane",
+    "fur_tufts"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46135,8 +46109,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "armor_plates"
+    "claws",
+    "tail_thin"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46210,10 +46184,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "weapon_socket",
-    "cloak",
-    "armor_plates"
+    "scar_decals",
+    "fangs",
+    "fur_tufts",
+    "claws"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46287,8 +46261,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "mask"
+    "thorns",
+    "fur_tufts"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46362,10 +46336,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "armor_plates",
-    "tail",
-    "horns"
+    "fangs_long",
+    "fur_tufts",
+    "claws",
+    "ears_tall"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46440,9 +46414,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "horns",
-    "tail"
+    "fangs_long",
+    "tail_bushy",
+    "claws"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46517,9 +46491,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "mask",
-    "armor_plates"
+    "horn_crown",
+    "crystal_growths",
+    "mane"
    ],
    "material": "fur_rough",
    "palette": [
@@ -46593,10 +46567,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
+    "mandibles",
+    "carapace_ridges",
     "antennae",
-    "stinger",
-    "wing_cases",
-    "mandibles"
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -46671,8 +46645,8 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "hair_bristles",
-    "humanoid_torso"
+    "fangs",
+    "web_spinneret"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -46747,9 +46721,9 @@
    "rigId": "rig_swarm",
    "baseMesh": "swarm_base",
    "parts": [
-    "formation_shapes",
+    "individual_unit",
     "swarm_core",
-    "individual_unit"
+    "formation_shapes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -46824,8 +46798,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "mandibles",
-    "wing_cases"
+    "carapace_ridges",
+    "antennae"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -46899,9 +46873,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "eye_cluster",
+    "fangs",
     "hair_bristles",
-    "humanoid_torso"
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -46975,9 +46949,9 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "mandibles",
-    "carapace_ridges",
-    "antennae"
+    "claws",
+    "wing_cases",
+    "mandibles"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -47051,8 +47025,8 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "carapace_ridges",
     "antennae",
+    "leg_spikes",
     "mandibles"
    ],
    "material": "chitin_gloss",
@@ -47127,10 +47101,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
+    "leg_spikes",
     "antennae",
     "wing_cases",
-    "stinger",
-    "mandibles"
+    "claws"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -47204,8 +47178,8 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
-    "humanoid_torso"
+    "humanoid_torso",
+    "eye_cluster"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -47280,8 +47254,8 @@
    "baseMesh": "swarm_base",
    "parts": [
     "formation_shapes",
-    "swarm_core",
-    "individual_unit"
+    "individual_unit",
+    "swarm_core"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -47355,9 +47329,10 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "web_spinneret",
+    "crown",
+    "jewelry",
     "eye_cluster",
-    "hair_bristles"
+    "web_spinneret"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -47432,10 +47407,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "wing_cases",
-    "antennae",
-    "stinger",
-    "mandibles"
+    "mandibles",
+    "carapace_ridges",
+    "leg_spikes",
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -47509,9 +47484,9 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "tail_thin",
-    "fangs",
-    "horns_small"
+    "stinger",
+    "membrane_wings",
+    "mandibles"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -47585,8 +47560,8 @@
    "rigId": "rig_flyer_small",
    "baseMesh": "flyer_small_base",
    "parts": [
-    "tail_thin",
-    "fangs"
+    "membrane_wings",
+    "stinger"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -47660,9 +47635,9 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "horns_swept",
-    "fins",
-    "hood"
+    "mandibles",
+    "carapace_ridges",
+    "antennae"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -47736,10 +47711,10 @@
    "rigId": "rig_hexapod",
    "baseMesh": "hexapod_base",
    "parts": [
-    "mandibles",
-    "wing_cases",
     "carapace_ridges",
-    "antennae"
+    "leg_spikes",
+    "antennae",
+    "mandibles"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -47890,10 +47865,10 @@
    "rigId": "rig_wyvern",
    "baseMesh": "wyvern_base",
    "parts": [
-    "talons",
     "horn_crown",
-    "tail_spike",
-    "neck_frill"
+    "wing_membrane",
+    "mandibles",
+    "stinger"
    ],
    "material": "chitin_matte",
    "palette": [
@@ -47968,10 +47943,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "horns",
-    "mask",
-    "tail"
+    "cloak",
+    "scar_decals",
+    "loincloth",
+    "claws"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48046,10 +48021,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates",
-    "horns",
-    "tail"
+    "bone_trinkets",
+    "tattered_cape",
+    "crude_armor"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48123,9 +48097,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask",
-    "armor_plates"
+    "claws",
+    "loincloth",
+    "scar_decals"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48201,8 +48175,8 @@
    "baseMesh": "aberrant_base",
    "parts": [
     "joint_spikes",
-    "extra_arms",
-    "eye_clusters"
+    "eye_clusters",
+    "mouth_clusters"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48277,10 +48251,10 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "rattle_tail",
-    "scale_ridges",
-    "horns_swept",
-    "hood"
+    "lantern_core",
+    "drip_trail",
+    "suckers",
+    "glowing_spots"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48354,9 +48328,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "trailing_wisps",
-    "lantern_core",
-    "chains"
+    "chains",
+    "tattered_shroud",
+    "trailing_wisps"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48431,10 +48405,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "mask",
-    "horns",
-    "tail"
+    "claws",
+    "scar_decals",
+    "loincloth",
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48509,7 +48483,7 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
+    "tattered_shroud",
     "trailing_wisps",
     "chains"
    ],
@@ -48585,9 +48559,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
     "armor_plates",
-    "weapon_socket"
+    "weapon_socket",
+    "empty_visor"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48661,8 +48635,8 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
-    "tattered_shroud"
+    "hair_mane",
+    "chains"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48737,10 +48711,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "tail",
     "cloak",
-    "mask"
+    "armor_plates",
+    "weapon_socket",
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48814,9 +48788,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
     "cloak",
-    "weapon_socket"
+    "jewelry",
+    "tattered_cape"
    ],
    "material": "rot_bone",
    "palette": [
@@ -48890,7 +48864,7 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "mask_face",
+    "crown",
     "chains",
     "lantern_core"
    ],
@@ -48966,8 +48940,8 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "cloak"
+    "tattered_cape",
+    "jewelry"
    ],
    "material": "rot_bone",
    "palette": [
@@ -49042,8 +49016,8 @@
    "rigId": "rig_dragon",
    "baseMesh": "dragon_base",
    "parts": [
-    "whiskers_long",
-    "spine_plates"
+    "wing_membrane",
+    "horn_crown"
    ],
    "material": "rot_bone",
    "palette": [
@@ -49116,10 +49090,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "mask",
-    "armor_plates",
-    "cloak",
-    "horns"
+    "weapon_socket",
+    "rune_core",
+    "scar_decals",
+    "ears_long"
    ],
    "material": "rough_skin_leather",
    "palette": [
@@ -49192,9 +49166,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "tail",
-    "horns",
-    "weapon_socket"
+    "tattered_cape",
+    "armor_plates",
+    "cloak"
    ],
    "material": "rot_bone",
    "palette": [
@@ -49267,10 +49241,9 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "lantern_core",
-    "trailing_wisps",
     "tattered_shroud",
-    "chains"
+    "trailing_wisps",
+    "glowing_spots"
    ],
    "material": "rot_bone",
    "palette": [
@@ -49343,9 +49316,9 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
+    "crown",
+    "cap",
     "moss_cover",
-    "branch_arms",
-    "bark_plates",
     "glowing_knots"
    ],
    "material": "bark_leaf",
@@ -49420,8 +49393,8 @@
    "baseMesh": "octopod_base",
    "parts": [
     "eye_cluster",
-    "leg_spikes",
-    "humanoid_torso"
+    "hair_bristles",
+    "leg_spikes"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -49494,10 +49467,9 @@
    "rigId": "rig_naga",
    "baseMesh": "naga_base",
    "parts": [
-    "hood",
-    "multiple_arms",
-    "crown",
-    "jewelry"
+    "hair_mane",
+    "fins",
+    "scale_patterns"
    ],
    "material": "wet_scale",
    "palette": [
@@ -49569,9 +49541,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "cloak",
-    "weapon_socket",
-    "horns"
+    "chains",
+    "mask",
+    "weapon_socket"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -49644,8 +49616,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
-    "chain_belt"
+    "hair_mane",
+    "club_socket"
    ],
    "material": "thick_skin",
    "palette": [
@@ -49718,8 +49690,8 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "hair_mane",
-    "club_socket"
+    "crown",
+    "tusks"
    ],
    "material": "thick_skin",
    "palette": [
@@ -49792,10 +49764,10 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "armor_plates",
     "cloak",
-    "horns"
+    "chains",
+    "mask",
+    "crude_armor"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -49869,7 +49841,7 @@
    "baseMesh": "golem_base",
    "parts": [
     "crystal_growths",
-    "rune_core"
+    "moss_cover"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -49942,8 +49914,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "chain_belt",
-    "scar_decals"
+    "horns",
+    "mask",
+    "club_socket",
+    "chain_belt"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -50016,10 +49990,10 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "joint_spikes",
     "eye_clusters",
-    "human_mask",
-    "extra_arms"
+    "joint_spikes",
+    "mouth_clusters",
+    "human_mask"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -50092,9 +50066,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "scar_decals",
+    "crown",
     "stone_growths",
-    "tusks"
+    "armor_plates"
    ],
    "material": "thick_skin",
    "palette": [
@@ -50167,9 +50141,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "chain_belt",
-    "stone_growths",
-    "club_socket"
+    "bone_trinkets",
+    "scar_decals",
+    "tattered_cape"
    ],
    "material": "paper_ink_spirit",
    "palette": [
@@ -50242,9 +50216,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "horns",
-    "weapon_socket",
-    "cloak"
+    "armor_plates",
+    "tail",
+    "horns"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -50317,8 +50291,8 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "gills",
-    "lure",
+    "glowing_spots",
+    "fins_sail",
     "scales_armored"
    ],
    "material": "wet_scale",
@@ -50392,8 +50366,9 @@
    "rigId": "rig_octopod",
    "baseMesh": "octopod_base",
    "parts": [
-    "humanoid_torso",
-    "hair_bristles"
+    "crown",
+    "jewelry",
+    "web_spinneret"
    ],
    "material": "chitin_gloss",
    "palette": [
@@ -50466,8 +50441,8 @@
    "rigId": "rig_golem",
    "baseMesh": "golem_base",
    "parts": [
-    "empty_visor",
-    "crystal_growths"
+    "moss_cover",
+    "empty_visor"
    ],
    "material": "stone_metal_runes",
    "palette": [
@@ -50540,8 +50515,8 @@
    "rigId": "rig_cephalopod",
    "baseMesh": "cephalopod_base",
    "parts": [
+    "jewelry",
     "tentacles",
-    "beak",
     "glowing_spots"
    ],
    "material": "wet_scale",
@@ -50615,10 +50590,10 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "stone_growths",
-    "club_socket",
-    "tusks",
-    "scar_decals"
+    "horns",
+    "scar_decals",
+    "armor_plates",
+    "stone_growths"
    ],
    "material": "thick_skin",
    "palette": [
@@ -50691,8 +50666,8 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
+    "claws",
     "mane",
-    "tail_club",
     "fangs_long"
    ],
    "material": "mixed_hide",
@@ -50766,8 +50741,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "scale_ridges",
-    "fins"
+    "teeth_ring",
+    "scale_ridges"
    ],
    "material": "sand_hide",
    "palette": [
@@ -50840,8 +50815,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "rattle_tail",
-    "scale_ridges"
+    "mask",
+    "neck_frill"
    ],
    "material": "scale_matte",
    "palette": [
@@ -50914,9 +50889,9 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
-    "mouth_clusters",
-    "eye_clusters",
-    "human_mask"
+    "wing_membrane",
+    "human_mask",
+    "extra_arms"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -50989,10 +50964,10 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "beak_hooked",
-    "crest",
+    "wing_feathers",
     "talons",
-    "wing_feathers"
+    "tail_plumes",
+    "beak_hooked"
    ],
    "material": "feather_groom",
    "palette": [
@@ -51065,8 +51040,8 @@
    "rigId": "rig_serpent",
    "baseMesh": "serpent_base",
    "parts": [
-    "scale_ridges",
-    "horns_swept"
+    "neck_frill",
+    "scale_ridges"
    ],
    "material": "wet_scale",
    "palette": [
@@ -51139,10 +51114,10 @@
    "rigId": "rig_fish",
    "baseMesh": "fish_base",
    "parts": [
-    "fins_sail",
-    "scales_armored",
     "teeth_rows",
-    "lure"
+    "lure",
+    "scales_armored",
+    "fins_sail"
    ],
    "material": "wet_scale",
    "palette": [
@@ -51215,10 +51190,10 @@
    "rigId": "rig_aberrant",
    "baseMesh": "aberrant_base",
    "parts": [
+    "eye_clusters",
+    "mouth_clusters",
     "joint_spikes",
-    "human_mask",
-    "extra_arms",
-    "eye_clusters"
+    "extra_arms"
    ],
    "material": "wet_flesh_unsettling",
    "palette": [
@@ -51292,9 +51267,9 @@
    "baseMesh": "wyvern_base",
    "parts": [
     "horn_crown",
-    "talons",
+    "wing_membrane",
     "tail_spike",
-    "neck_frill"
+    "talons"
    ],
    "material": "dragon_scale",
    "palette": [
@@ -51367,9 +51342,9 @@
    "rigId": "rig_avian",
    "baseMesh": "avian_base",
    "parts": [
-    "talons",
-    "beak_hooked",
-    "tail_plumes"
+    "wing_feathers",
+    "crest",
+    "talons"
    ],
    "material": "feather_groom",
    "palette": [
@@ -51443,8 +51418,8 @@
    "baseMesh": "medium_biped_base",
    "parts": [
     "armor_plates",
-    "tail",
-    "mask"
+    "weapon_socket",
+    "horns"
    ],
    "material": "demon_hide_emissive",
    "palette": [
@@ -51518,7 +51493,7 @@
    "baseMesh": "small_biped_base",
    "parts": [
     "bone_trinkets",
-    "weapon_socket"
+    "ears_long"
    ],
    "material": "rubbery_skin",
    "palette": [
@@ -51591,9 +51566,9 @@
    "rigId": "rig_medium_biped",
    "baseMesh": "medium_biped_base",
    "parts": [
-    "weapon_socket",
-    "cloak",
-    "tail"
+    "mask",
+    "crude_armor",
+    "armor_plates"
    ],
    "material": "cloth_leather_metal",
    "palette": [
@@ -51666,9 +51641,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "claws",
     "fangs_long",
-    "armored_back"
+    "tail_thin",
+    "claws"
    ],
    "material": "fur_groom",
    "palette": [
@@ -51741,10 +51716,10 @@
    "rigId": "rig_plant_walker",
    "baseMesh": "plant_walker_base",
    "parts": [
-    "branch_arms",
-    "bark_plates",
-    "moss_cover",
-    "glowing_knots"
+    "crown",
+    "cloak",
+    "thorns",
+    "bark_plates"
    ],
    "material": "bark_leaf",
    "palette": [
@@ -51817,9 +51792,9 @@
    "rigId": "rig_large_biped",
    "baseMesh": "large_biped_base",
    "parts": [
-    "tusks",
+    "stone_growths",
     "scar_decals",
-    "hair_mane"
+    "chain_belt"
    ],
    "material": "thick_skin",
    "palette": [
@@ -51892,10 +51867,10 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "tattered_shroud",
     "lantern_core",
-    "chains",
-    "trailing_wisps"
+    "mask_face",
+    "trailing_wisps",
+    "tattered_shroud"
    ],
    "material": "porcelain_red_glow",
    "palette": [
@@ -51968,9 +51943,9 @@
    "rigId": "rig_quad_large",
    "baseMesh": "quad_large_base",
    "parts": [
-    "fangs_long",
-    "tail_club",
-    "antlers"
+    "armored_back",
+    "stone_growths",
+    "horns"
    ],
    "material": "fur_groom",
    "palette": [
@@ -52043,7 +52018,7 @@
    "rigId": "rig_floating",
    "baseMesh": "floating_base",
    "parts": [
-    "tattered_shroud",
+    "crown",
     "lantern_core",
     "chains"
    ],
