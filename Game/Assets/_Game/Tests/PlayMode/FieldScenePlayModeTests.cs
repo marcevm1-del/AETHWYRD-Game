@@ -58,6 +58,12 @@ namespace Ascend.Game.Tests
             Assert.IsNotNull(Object.FindFirstObjectByType<WorldClock>(), "the clock");
             Assert.AreEqual(2, Object.FindObjectsByType<Waystone>(FindObjectsSortMode.None).Length, "both waystones (start and treeline) have their component");
             Assert.Greater(Object.FindFirstObjectByType<SiegeDirector>().Templates.Length, 0, "raider templates");
+
+            // Monsters live in the forest and beyond: none inside the town ward, where you start.
+            Assert.IsNotNull(Object.FindFirstObjectByType<TownWard>(), "Brindlewick's ward");
+            var inTown = Object.FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None).Where(m => TownWard.Contains(m.transform.position)).Select(m => m.SpeciesId).ToList();
+            Assert.IsEmpty(inTown, "monsters living in town: " + string.Join(", ", inTown));
+            Assert.IsTrue(TownWard.Contains(Object.FindFirstObjectByType<PlayerCombat>().transform.position), "you start inside the ward");
         }
     }
 }

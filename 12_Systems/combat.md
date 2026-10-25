@@ -143,6 +143,17 @@ Ring 0 passes when, in a 10-minute session against slimes, goblins and rabbits:
 - [ ] Reaching S Style Rank feels earned and fun.
 - [ ] Nothing feels floaty: every hit has weight.
 
+**Where the fight lives (built).** Monsters stay in the forest and beyond; the town is safe ground.
+- **Town ward** (`TownWard`): a box over Brindlewick, Millbrook's fields and the treeline camp (x −38…38, z −60…33). The field's own monsters don't notice you inside it, break off a chase when you step back in, and never walk across its edge. Monsters brought in on purpose ignore it: siege raiders, escort ambushes and defence-event raids (anything `MonsterSpawner.Spawn` creates). Core rule: `AiSense.TargetWarded`.
+- **Ring 0's level-3 camps** sit just past the treeline:
+  - 3 blue slimes at **Millbrook's old well** (26, 40), for "Slime in the Well";
+  - the **goblin pack of 5** by the Old Watchtower (−22, 46);
+  - 2 horned rabbits in the **east meadow** beyond the trees (48, 34), for "Rabbit Season".
+- **Whisperwood's camps** get harder the deeper you go:
+  - level 8 through the middle of the wood, with passive grazers (sheep, tortoise) in the meadows beyond its flanks;
+  - level 13 deep in, each at least 24 m from Grukk's clearing so a fight there doesn't pull the tyrant.
+- **Spacing:** camps are spaced so their alert circles don't chain, and a fight with one camp doesn't wake the next.
+
 ## 13. Combat Readability and Player Choice
 
 The action should feel expressive without requiring the player to decode a wall of effects. Every dangerous action needs a readable **source → tell → active moment → recovery**. The tell may use color, silhouette, sound and movement together; color alone is never enough. Camera shake, impact flashes and effects must leave the enemy and player visible during the decision window.

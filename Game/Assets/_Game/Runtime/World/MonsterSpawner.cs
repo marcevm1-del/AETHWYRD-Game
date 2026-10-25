@@ -42,6 +42,7 @@ namespace Ascend.Game
                 go.SetActive(true);
             }
             if (body != null) body.Respawns = respawns;
+            if (body != null && body.TryGetComponent<MonsterController>(out var ai)) ai.IgnoresWard = true; // raids and ambushes come into town on purpose
             return body;
         }
 

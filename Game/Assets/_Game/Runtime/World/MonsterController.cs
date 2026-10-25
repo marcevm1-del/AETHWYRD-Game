@@ -187,6 +187,7 @@ namespace Ascend.Game
                 DistanceToPlayer = toPlayer.magnitude, DistanceFromHome = toHome.magnitude,
                 HpFraction = _body.MaxHp > 0 ? _body.Hp / (double)_body.MaxHp : 1, HasToken = hasToken,
                 PackmatesNear = _brain.IsPack ? PackmatesNear() : 0,
+                TargetWarded = !IgnoresWard && TownWard.Contains(targetPos),
             });
             if (_brain.State == AiState.Windup && !_holdsToken) _holdsToken = AggroDirector.Tokens.TryTake(_tokenId);
             if (_brain.State == AiState.Windup && _lastState != AiState.Windup) CombatFx.Play(CombatFx.Sfx.Telegraph, transform.position, 0.6f);
@@ -194,7 +195,7 @@ namespace Ascend.Game
             if (cmd.ReleaseToken) ReleaseToken();
             if (_brain.State != AiState.Staggered) IsStuck = false;
 
-            if (_hopLeft > 0f) { _hopLeft -= dt; transform.position += Blocked(_hopVelocity.normalized, _hopVelocity.magnitude * dt); UpdateTelegraph(); return; }
+            if (_hopLeft > 0f) { _hopLeft -= dt; transform.position += Warded(Blocked(_hopVelocity.normalized, _hopVelocity.magnitude * dt)); UpdateTelegraph(); return; }
             if (IsDashing) { DashStep(dt); UpdateTelegraph(); return; }
             if (IsStuck) { UpdateTelegraph(); return; }
             if (MarchTarget.HasValue && (_brain.State == AiState.Idle || _brain.State == AiState.Return) && !Arrived)
@@ -226,7 +227,7 @@ namespace Ascend.Game
             }
             if (dir.sqrMagnitude < 1e-4f) return;
             dir = Unstick(dir, dt);
-            transform.position += Blocked(dir, (float)cmd.Speed * dt);
+            transform.position += Warded(Blocked(dir, (float)cmd.Speed * dt));
             if (cmd.Move != AiMove.Circle && !cmd.Face) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(dir), _turnSpeed * dt);
         }
 
@@ -326,6 +327,22 @@ namespace Ascend.Game
 
         /// <summary>Raiders march here when nothing has their attention, carrying their home (leash centre) with them.</summary>
         public Vector3? MarchTarget { get; set; }
+
+        /// <summary>Raiders, ambushers and defence-event monsters come into town on purpose; the field's own monsters don't (TownWard).</summary>
+        public bool IgnoresWard { get; set; }
+
+        /// <summary>A step that would carry a field monster into a town ward slides along its edge instead (or stops).</summary>
+        Vector3 Warded(Vector3 step)
+        {
+            if (IgnoresWard || step.sqrMagnitude < 1e-8f) return step;
+            Vector3 p = transform.position;
+            if (!TownWard.Contains(p + step) || TownWard.Contains(p)) return step; // already inside (e.g. placed there): let it walk out
+            var alongX = new Vector3(step.x, 0f, 0f);
+            if (!TownWard.Contains(p + alongX)) return alongX;
+            var alongZ = new Vector3(0f, 0f, step.z);
+            if (!TownWard.Contains(p + alongZ)) return alongZ;
+            return Vector3.zero;
+        }
         public bool Arrived => MarchTarget.HasValue && Flat(MarchTarget.Value - transform.position).magnitude < 2f;
         static Vector3 Flat(Vector3 v) { v.y = 0; return v; }
 
@@ -396,7 +413,7 @@ namespace Ascend.Game
                 CombatFx.Play(CombatFx.Sfx.Block, transform.position);
                 return;
             }
-            transform.position += _dashDir * step;
+            transform.position += Warded(_dashDir * step);
             _dashLeft -= step;
             Vector3 toPlayer = _player.transform.position - transform.position; toPlayer.y = 0;
             if (!_dashHit && toPlayer.magnitude <= DashContactM)

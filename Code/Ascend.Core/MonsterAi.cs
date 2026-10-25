@@ -80,6 +80,8 @@ namespace Ascend.Core
         public bool HasToken;
         /// <summary>Living monsters of its own species nearby (pack odds, after Project Greyborn's bot AI).</summary>
         public int PackmatesNear;
+        /// <summary>The target stands inside a town ward this monster won't enter: it doesn't notice them, and breaks off and goes home.</summary>
+        public bool TargetWarded;
     }
 
     /// <summary>What the brain wants this tick.</summary>
@@ -185,6 +187,7 @@ namespace Ascend.Core
             _stateTime += dt;
             var b = _motion.Behavior;
             if (AlertedFor > 0) { AlertedFor = Math.Max(0, AlertedFor - dt); s.DistanceToPlayer = Math.Min(s.DistanceToPlayer, b.AlertRadius); }
+            if (s.TargetWarded) { AlertedFor = 0; s.DistanceToPlayer = double.MaxValue; } // out of reach behind the ward
             var nav = _motion.NavAgent;
             var cmd = new AiCommand { Move = AiMove.None, Speed = 0 };
 
@@ -192,6 +195,7 @@ namespace Ascend.Core
             double leash = IsTerritorial ? Math.Min(b.LeashRadius, b.AlertRadius * 1.5) : b.LeashRadius;
             bool busy = State == AiState.Windup || State == AiState.Active || State == AiState.Recovery || State == AiState.Staggered;
             if (!busy && State != AiState.Return && State != AiState.Idle && s.DistanceFromHome > leash) Enter(AiState.Return);
+            if (!busy && s.TargetWarded && (State == AiState.Chase || State == AiState.Reposition || State == AiState.Flee)) Enter(AiState.Return);
             // A pack hunter left alone and hurt falls back home instead of fighting on (Greyborn's fight-or-flee odds).
             if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < LoneRetreatHp && State == AiState.Chase) Enter(AiState.Return);
             if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= b.RetreatHpPct && State != AiState.Return)

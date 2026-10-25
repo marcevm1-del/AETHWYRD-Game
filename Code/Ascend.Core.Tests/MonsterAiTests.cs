@@ -64,6 +64,21 @@ static class MonsterAiTests
         Assert.True(last.WantsToken && last.Move == AiMove.Circle, "asks for a token and circles");
     }
 
+    public static void AWardedTargetIsIgnoredAndAChaseBreaksOff()
+    {
+        var b = Brain("mon_goblin");
+        b.Tick(Dt, new AiSense { DistanceToPlayer = 5, DistanceFromHome = 0, HpFraction = 1, TargetWarded = true });
+        Assert.Equal(AiState.Idle, b.State, "a goblin doesn't notice you inside the town ward");
+        b.Tick(Dt, Near(5));
+        Assert.Equal(AiState.Chase, b.State, "step out and it comes for you");
+        var cmd = b.Tick(Dt, new AiSense { DistanceToPlayer = 3, DistanceFromHome = 8, HpFraction = 1, TargetWarded = true });
+        Assert.Equal(AiState.Return, b.State, "back inside the ward: it gives up");
+        Assert.Equal(AiMove.Home, cmd.Move, "and heads home");
+        b.Alert();
+        b.Tick(Dt, new AiSense { DistanceToPlayer = 3, DistanceFromHome = 0.2, HpFraction = 1, TargetWarded = true });
+        Assert.True(b.State == AiState.Idle || b.State == AiState.Return, "a packmate's call doesn't drag it past the ward");
+    }
+
     public static void StaggerInterruptsTheWindup()
     {
         var b = Brain("mon_goblin");

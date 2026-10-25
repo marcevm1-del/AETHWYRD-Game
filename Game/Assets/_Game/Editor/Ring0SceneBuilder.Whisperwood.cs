@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,27 +14,49 @@ namespace Ascend.EditorTools
     /// </summary>
     public static partial class Ring0SceneBuilder
     {
-        // (species, count, centre x, centre z, spread): near the gate are the gentle and early camps; deeper are wolves,
-        // archers and the undead; the far clearing is the tyrant's.
+        // The town ward over Brindlewick, Millbrook's fields and the treeline camp (x -38..38, z -60..33).
+        static readonly Vector2 WardCentre = new Vector2(0f, -13.5f), WardSize = new Vector2(76f, 93f);
+
+        // (species, count, centre x, centre z, spread). Every camp sits outside the town ward and is spaced so their
+        // alert circles don't chain: Ring 0's level-3 camps just past the treeline (the well, the goblin pack) and in the
+        // east meadow; the level-8 camps through the middle of the wood and the passive grazers in the meadows beyond its
+        // flanks; the level-13 camps deep in, each 24 m or more from Grukk so a fight there doesn't pull the tyrant.
+        static readonly (string id, int count, float x, float z, float spread)[] FieldCamps =
+        {
+            ("mon_blue_slime", 3, 26f, 40f, 2.4f),     // Millbrook's old well (Slime in the Well)
+            ("mon_goblin", 5, -22f, 46f, 2.4f),        // the goblin pack, by the Old Watchtower
+            ("mon_horned_rabbit", 2, 48f, 34f, 3f),    // the east meadow beyond the trees (Rabbit Season)
+        };
+
         static readonly (string id, int count, float x, float z, float spread)[] WhisperwoodCamps =
         {
-            ("mon_fluffcap_sheep", 3, 12f, 32f, 2.5f),
-            ("mon_moss_tortoise", 1, -12f, 33f, 0f),
-            ("mon_lantern_moth", 2, 4f, 36f, 1.5f),
-            ("mon_green_slime", 4, -6f, 38f, 2f),
-            ("mon_grove_goblin", 3, 10f, 44f, 2f),
-            ("mon_kobold_scavenger", 2, -16f, 44f, 1.5f),
-            ("mon_giant_ant", 4, 0f, 48f, 2f),
-            ("mon_walking_mushroom", 2, -9f, 52f, 1.5f),
-            ("mon_puffcap_mushroom", 2, -12f, 54f, 1.5f),
-            ("mon_mandrake", 1, 16f, 54f, 0f),
-            ("mon_giant_crow", 2, 20f, 60f, 2f),
-            ("mon_forest_wolf", 3, -4f, 62f, 2.5f),
-            ("mon_goblin_archer", 2, 9f, 66f, 3f),
-            ("mon_cave_spider", 2, -18f, 66f, 2f),
-            ("mon_skeleton", 2, 0f, 74f, 3f),
+            ("mon_lantern_moth", 2, 4f, 42f, 2f),
+            ("mon_moss_tortoise", 1, -46f, 48f, 0f),   // west meadow, beyond the trees
+            ("mon_fluffcap_sheep", 3, 50f, 54f, 4f),   // east meadow, beyond the trees
+            ("mon_green_slime", 4, 22f, 56f, 3f),
+            ("mon_kobold_scavenger", 2, -28f, 62f, 2f),
+            ("mon_giant_ant", 4, -2f, 62f, 3f),
+            ("mon_giant_crow", 2, 34f, 68f, 2f),
+            ("mon_grove_goblin", 3, 16f, 70f, 2.5f),
+            ("mon_walking_mushroom", 2, -14f, 70f, 2f),
+            ("mon_puffcap_mushroom", 2, -30f, 80f, 2f),
+            ("mon_mandrake", 1, 30f, 82f, 0f),
+            ("mon_forest_wolf", 3, -24f, 74f, 3f),
+            ("mon_goblin_archer", 2, 24f, 76f, 3f),
+            ("mon_cave_spider", 2, -30f, 92f, 2f),
+            ("mon_skeleton", 2, 28f, 92f, 2.5f),
             ("mon_grukk_goblin_chief_of_hollowpine", 1, 0f, 88f, 0f),
         };
+
+        /// <summary>Where a camp's monsters stand: evenly round its centre (the centre itself for a single monster).</summary>
+        static IEnumerable<Vector3> CampSpots((string id, int count, float x, float z, float spread) c)
+        {
+            for (int i = 0; i < c.count; i++)
+            {
+                float a = i / (float)c.count * Mathf.PI * 2f;
+                yield return c.count == 1 ? new Vector3(c.x, 0, c.z) : new Vector3(c.x + Mathf.Cos(a) * c.spread, 0, c.z + Mathf.Sin(a) * c.spread);
+            }
+        }
 
         static void BuildWhisperwood(Transform world, Material ground, Material wood, Material accent)
         {
@@ -57,7 +81,7 @@ namespace Ascend.EditorTools
                 if (Mathf.Abs(at.x) < 2.5f) continue; // the path north
                 if (new Vector2(at.x, at.z - 88f).magnitude < 11f) continue; // Grukk's clearing
                 bool nearCamp = false;
-                foreach (var c in WhisperwoodCamps) if (new Vector2(at.x - c.x, at.z - c.z).magnitude < c.spread + 2.5f) { nearCamp = true; break; }
+                foreach (var c in WhisperwoodCamps.Concat(FieldCamps)) if (new Vector2(at.x - c.x, at.z - c.z).magnitude < c.spread + 2.5f) { nearCamp = true; break; }
                 if (nearCamp) continue;
                 float h = 3f + (float)rng.NextDouble() * 4f;
                 Prim(PrimitiveType.Cylinder, $"Trunk_{placed}", at + Vector3.up * h * 0.5f, new Vector3(0.5f, h * 0.5f, 0.5f), bark, root);

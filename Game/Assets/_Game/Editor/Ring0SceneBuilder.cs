@@ -185,20 +185,27 @@ namespace Ascend.EditorTools
             so.FindProperty("cameraTransform").objectReferenceValue = cam.transform;
             so.ApplyModifiedPropertiesWithoutUndo();
 
+            // The town ward (TownWard): Brindlewick, Millbrook's fields and the treeline camp. The field's own monsters
+            // stay out of it; raids, ambushes and defence events still come in.
+            var ward = new GameObject("Brindlewick_Ward").AddComponent<Ascend.Game.TownWard>();
+            ward.transform.SetParent(world, false);
+            ward.transform.position = new Vector3(WardCentre.x, 0f, WardCentre.y);
+            ward.Size = WardSize;
+
             // Ring 0 monsters: Blender models (Tools/blender/ring0_monsters.py) when present, else labelled primitives.
-            // The fun-test field (combat.md §12): a slime patch close by, a goblin pack of 5 deeper in, rabbits on the far side.
+            // The fun-test field (combat.md §12), now out of town: a slime patch at Millbrook's old well just past the
+            // treeline, the goblin pack of 5 deeper in on the west side, rabbits in the east meadow beyond the trees.
             var monsters = new GameObject("Ring0_Monsters").transform;
-            foreach (var at in new[] { new Vector3(10f, 0, 8f), new Vector3(12.5f, 0, 9.5f), new Vector3(11f, 0, 11.5f) }) // outside their 10.7 m alert radius from the start
+            var well = FieldCamps[0];
+            Prim(PrimitiveType.Cylinder, "Millbrook_Old_Well", new Vector3(well.x, 0.45f, well.z), new Vector3(1.6f, 0.45f, 1.6f), Mat("Stone", new Color(0.62f, 0.62f, 0.66f)), world);
+            Label(world, new Vector3(well.x, 1.6f, well.z), "Millbrook's old well", new Color(1f, 0.92f, 0.7f), 0.03f);
+            foreach (var at in CampSpots(FieldCamps[0]))
                 if (!Model(monsters, "mon_blue_slime", "Blue_Slime", at))
                     Dummy(monsters, "mon_blue_slime", PrimitiveType.Sphere, at + Vector3.up * 0.25f, new Vector3(0.55f, 0.45f, 0.55f), slime);
-            for (int i = 0; i < 5; i++)
-            {
-                float a = i / 5f * Mathf.PI * 2f;
-                var at = new Vector3(-8f + Mathf.Cos(a) * 1.8f, 0, 12f + Mathf.Sin(a) * 1.8f);
+            foreach (var at in CampSpots(FieldCamps[1]))
                 if (!Model(monsters, "mon_goblin", "Goblin", at))
                     Dummy(monsters, "mon_goblin", PrimitiveType.Capsule, at + Vector3.up * 0.5f, new Vector3(0.45f, 0.5f, 0.45f), goblin);
-            }
-            foreach (var at in new[] { new Vector3(0f, 0, 9f), new Vector3(9f, 0, 15f) })
+            foreach (var at in CampSpots(FieldCamps[2]))
                 if (!Model(monsters, "mon_horned_rabbit", "Horned_Rabbit", at))
                 {
                     var rab = Dummy(monsters, "mon_horned_rabbit", PrimitiveType.Cube, at + Vector3.up * 0.2f, new Vector3(0.3f, 0.3f, 0.45f), rabbit);
