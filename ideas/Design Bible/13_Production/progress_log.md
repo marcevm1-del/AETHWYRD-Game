@@ -2,10 +2,19 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-10-25
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Creatures in Blender | Procedural high-poly creature generator (Tools/blender/ascend_creatures, an add-on) for all 680 species: metaball-sculpted bodies on 25 body plans, painted per vertex (belly/back tones, spots, stripes, Voronoi scales, creases, glowing cracks), ~110 recipe parts as bevelled meshes (anime eyes, teeth, horns, antlers, claws, armour, cloaks, masks, wings, growths, weapons); species profiles give boars, elks, bears, sabretooths, salamanders, Cerberus, werewolves, skeletons and orcs their own silhouettes; Phantom, Vesper-Touched, Elder/Ancient and elemental variants get their own treatment; adjustable live (seed, size, element, pattern, colours); 31 family asset libraries and contact sheets (13_Production/creature_system.md) | 177 + 136 |
+| Regional building system | Blender-only procedural building generator (Tools/blender/ascend_buildings, an add-on): 28 core building types plus regional signatures (yurts, toadstools, pagodas, torii and paifang gates, longhouses, lighthouses, stepped pyramids, domed halls, adobe towers, tree houses) in 21 architectural families covering all 48 gazetteer regions; high-poly (every tile, stone, brick, log and plank a bevelled instanced part; a house ~430k tris realized), adjustable live (type, region, size, floors, seed, restyle a whole selection), 48 regional asset libraries with previews and contact sheets; CC0 packs (Kenney, Nobiax, 3TD ruins) imported as a second asset library with a licence register (13_Production/building_system.md, third_party_assets.md) | 177 + 136 |
+| Brindlewick grows to 50 buildings | 34 more buildings in the Brindlewick kit (Market Street, Hall Square, Rose Lane, farmstead), anime pass (steeper flared roofs, saturated colours, flower boxes, turrets, balconies), Ascend/Toon cel shader with ink outlines, street packer, wider town ward | 177 + 136 |
+
 ## 2026-10-24
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Brindlewick buildings | 34 procedural building and structure models from Blender (guild hall, inn, smithy, houses, temple, orphanage, barn, windmill, gatehouse and palisade, market stalls, lamps, plaza and roads, training yard, treeline camp, waystones, well, watchtower ruin, Grukk's ruins and goblin camp) placed around the plaza | 177 + 136 |
 | Monsters out of town | Town ward over Brindlewick and the treeline camp (field monsters never enter, break off chases; raids/ambushes/defence exempt); every camp moved into the forest and the meadows beyond, spaced so alert circles don't chain; Millbrook's old well; fixes the instant goblin deaths at the start | 177 + 136 |
 | Map labels and seas | Sea names from the atlas (named once a nearby coast is known), cartography pass on labels (priority order, no overlaps, halos, 4.5:1 pencil contrast), siege banner graphic, capture input lock; in-game shots on the design canvas | 176 + 133 |
 | World map in game | Core port of the atlas map (bit-exact, tested), new relief renderer (painted + parchment), map placement data in regions.json, MapKnowledge (inked/pencilled/blank, guild map seal, Rank E System overlay), Area + World map window (Tab/M), terrain minimap, map saves, atlas relief upgrade | 175 + 133 |

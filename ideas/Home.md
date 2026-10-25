@@ -72,6 +72,9 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]
 - [[Design Bible/12_Systems/world_map|12_Systems/world_map]]
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
+- [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
+- [[Design Bible/13_Production/building_system|13_Production/building_system]]
+- [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
@@ -79,6 +82,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
 - [[Design Bible/13_Production/reference_games|13_Production/reference_games]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
+- [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
 
 ## Classes (12)

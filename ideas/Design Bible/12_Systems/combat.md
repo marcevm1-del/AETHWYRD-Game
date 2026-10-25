@@ -144,7 +144,7 @@ Ring 0 passes when, in a 10-minute session against slimes, goblins and rabbits:
 - [ ] Nothing feels floaty: every hit has weight.
 
 **Where the fight lives (built).** Monsters stay in the forest and beyond; the town is safe ground.
-- **Town ward** (`TownWard`): a box over Brindlewick, Millbrook's fields and the treeline camp (x −38…38, z −60…33). The field's own monsters don't notice you inside it, break off a chase when you step back in, and never walk across its edge. Monsters brought in on purpose ignore it: siege raiders, escort ambushes and defence-event raids (anything `MonsterSpawner.Spawn` creates). Core rule: `AiSense.TargetWarded`.
+- **Town ward** (`TownWard`): a box over Brindlewick (with its new quarter and farmstead), Millbrook's fields and the treeline camp (x −75…75, z −98…33). The field's own monsters don't notice you inside it, break off a chase when you step back in, and never walk across its edge. Monsters brought in on purpose ignore it: siege raiders, escort ambushes and defence-event raids (anything `MonsterSpawner.Spawn` creates). Core rule: `AiSense.TargetWarded`.
 - **Ring 0's level-3 camps** sit just past the treeline:
   - 3 blue slimes at **Millbrook's old well** (26, 40), for "Slime in the Well";
   - the **goblin pack of 5** by the Old Watchtower (−22, 46);
