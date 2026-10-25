@@ -1,0 +1,12 @@
+# This is an Asset Catalog Definition file for Blender.
+
+VERSION 1
+
+7a441039-b27a-5084-9d03-fc3ad175ae15:CC0:CC0
+b083e2f3-edc5-5991-90c5-ee16da5f7203:CC0/Kenney Retro Fantasy Kit:CC0-Kenney Retro Fantasy Kit
+c7076e36-972e-5f03-a286-5ecb3d387a54:CC0/Nobiax Modular Building:CC0-Nobiax Modular Building
+30e4ff84-af53-557a-b2b7-9fd9c3aafdb6:CC0/Nobiax Rocks:CC0-Nobiax Rocks
+fe5f8dfa-35e9-5c06-a4f5-29c1f3a10863:CC0/Nobiax Bushes:CC0-Nobiax Bushes
+a6e36a4f-1b98-5514-ad48-cca66812df88:CC0/Nobiax Hedges:CC0-Nobiax Hedges
+beb9a3b3-0c18-5fcb-ac22-589a7de206fb:CC0/Nobiax Wooden Crates:CC0-Nobiax Wooden Crates
+8449c747-1e3b-52f7-ad6b-ae85e5681836:CC0/3TD Fantasy Ruins:CC0-3TD Fantasy Ruins

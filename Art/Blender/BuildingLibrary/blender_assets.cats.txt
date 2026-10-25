@@ -1,0 +1,77 @@
+# This is an Asset Catalog Definition file for Blender.
+#
+# Written by Tools/blender/ascend_buildings/library.py
+
+VERSION 1
+
+d192a0a6-392f-522f-9193-f0fac63aaa02:Ascend Buildings:Ascend Buildings
+cf730e85-02f9-5597-9e62-f744924328cb:Ascend Buildings/Storybook half-timber:Ascend Buildings-Storybook half-timber
+a0b9d0bf-3f1f-5b25-ac30-4943250c5a1b:Ascend Buildings/Storybook half-timber/Aldmere:Ascend Buildings-Storybook half-timber-Aldmere
+424bdc24-d776-57b7-b050-1c18acb5cd62:Ascend Buildings/Storybook half-timber/Whisperwood:Ascend Buildings-Storybook half-timber-Whisperwood
+f0867646-58b2-5e2b-8eac-a8049e61b5f8:Ascend Buildings/Fen stilt village:Ascend Buildings-Fen stilt village
+4d3d0d54-6331-5005-9a99-1b2f4d0cea00:Ascend Buildings/Fen stilt village/Greymoor:Ascend Buildings-Fen stilt village-Greymoor
+68fa97b2-81b9-5155-baa3-92bd532900a4:Ascend Buildings/Labyrinth stone:Ascend Buildings-Labyrinth stone
+65dcc415-ee04-5139-be8c-8201bc632291:Ascend Buildings/Labyrinth stone/Great Labyrinth (Floors 1-40):Ascend Buildings-Labyrinth stone-Great Labyrinth (Floors 1-40)
+9a59cd3d-8a09-5b49-a2c7-89bc895bdd59:Ascend Buildings/Labyrinth stone/Great Labyrinth (Floors 41-90):Ascend Buildings-Labyrinth stone-Great Labyrinth (Floors 41-90)
+685bbf4f-87b4-544c-a3cd-4a13ce0f40cf:Ascend Buildings/Labyrinth stone/Great Labyrinth (Floors 91-120):Ascend Buildings-Labyrinth stone-Great Labyrinth (Floors 91-120)
+fe801f0d-af71-59bb-b430-ede6df1b3334:Ascend Buildings/Elven living wood:Ascend Buildings-Elven living wood
+7dbe4307-cb50-509d-83e3-3ed6c93f4f0e:Ascend Buildings/Elven living wood/Sylvaran:Ascend Buildings-Elven living wood-Sylvaran
+256dac98-d71f-53d6-938c-096366b310bc:Ascend Buildings/Thimblefolk toadstools:Ascend Buildings-Thimblefolk toadstools
+d4c21243-848a-5604-863d-6a6d6acb8188:Ascend Buildings/Thimblefolk toadstools/Mossdeep:Ascend Buildings-Thimblefolk toadstools-Mossdeep
+01ad7291-fb7e-54c9-af13-7852fadb5bf6:Ascend Buildings/Lagoon canal city:Ascend Buildings-Lagoon canal city
+6f735c63-750b-513b-b1ba-c0d3529958bd:Ascend Buildings/Lagoon canal city/Lirian:Ascend Buildings-Lagoon canal city-Lirian
+ba2a177a-2e50-51f7-bc28-bd38a984d2b3:Ascend Buildings/Wind-plains:Ascend Buildings-Wind-plains
+78aea4b1-2bdf-5ae6-a339-e21be4b179de:Ascend Buildings/Wind-plains/Fanghold:Ascend Buildings-Wind-plains-Fanghold
+7a58aa74-2980-5c12-8581-44a0424f72dc:Ascend Buildings/Dwarven basalt halls:Ascend Buildings-Dwarven basalt halls
+6887000f-8bca-5c06-a531-4ff1e9bd3a8a:Ascend Buildings/Dwarven basalt halls/Iron Hold:Ascend Buildings-Dwarven basalt halls-Iron Hold
+4365ba49-d341-5abf-844a-dd8f6c9d60b8:Ascend Buildings/Storybook half-timber/Moraveil:Ascend Buildings-Storybook half-timber-Moraveil
+761b0d1e-847a-553c-8e87-f712a49f8b32:Ascend Buildings/Storybook half-timber/Strife Marches:Ascend Buildings-Storybook half-timber-Strife Marches
+c09acd69-aa18-5a39-abd7-670de2e75a67:Ascend Buildings/White-stone duchies:Ascend Buildings-White-stone duchies
+e8c648a6-ebbb-5274-95ed-5b5331a76f9c:Ascend Buildings/White-stone duchies/Velmark:Ascend Buildings-White-stone duchies-Velmark
+37a97a1d-17f7-5d12-b9e1-2ca46250ae94:Ascend Buildings/Star-sky cedar halls:Ascend Buildings-Star-sky cedar halls
+245baabb-de6d-52ce-8476-931863c2661b:Ascend Buildings/Star-sky cedar halls/Hoshizora:Ascend Buildings-Star-sky cedar halls-Hoshizora
+c8394e0f-3a5d-5f04-b8a1-268c70924a2d:Ascend Buildings/Star-sky cedar halls/Kitsune Isles:Ascend Buildings-Star-sky cedar halls-Kitsune Isles
+f13b75d7-a37c-50e0-b2aa-6d84960c537c:Ascend Buildings/Fjord longhouses:Ascend Buildings-Fjord longhouses
+baee21f8-827d-5e2e-ba7a-1e915b24b104:Ascend Buildings/Fjord longhouses/Frostveil:Ascend Buildings-Fjord longhouses-Frostveil
+9b8d546a-75c9-5474-a7a4-deca32630c43:Ascend Buildings/Hundred-stair sect halls:Ascend Buildings-Hundred-stair sect halls
+c41684ca-9625-55ff-ad7a-5b6f9540a010:Ascend Buildings/Hundred-stair sect halls/Shen-Lu:Ascend Buildings-Hundred-stair sect halls-Shen-Lu
+9c79d1d4-9ae4-5924-a22d-82778c246793:Ascend Buildings/Sky-gate hanok:Ascend Buildings-Sky-gate hanok
+a09b85ab-ed11-586d-8b65-1a3da421a245:Ascend Buildings/Sky-gate hanok/Haneul:Ascend Buildings-Sky-gate hanok-Haneul
+19345e7c-aa29-5362-bdeb-14f769ecb932:Ascend Buildings/Fjord longhouses/Whitewater Reach:Ascend Buildings-Fjord longhouses-Whitewater Reach
+6c7bf7bd-521e-511e-b829-824a12d6bef8:Ascend Buildings/Dark spires:Ascend Buildings-Dark spires
+04b2279c-47dd-5ea6-abd4-70139ed6bc99:Ascend Buildings/Dark spires/Umbravel:Ascend Buildings-Dark spires-Umbravel
+5f664e6d-b6e3-55c7-aae8-0e161af2dad8:Ascend Buildings/Glass-desert adobe:Ascend Buildings-Glass-desert adobe
+5822b7fb-f0fa-555e-b8c4-6fcde3c3da79:Ascend Buildings/Glass-desert adobe/Sunscar:Ascend Buildings-Glass-desert adobe-Sunscar
+36440d56-508b-50d5-b471-02b619af1ceb:Ascend Buildings/Salvage coast:Ascend Buildings-Salvage coast
+5b9d4fe7-c437-580f-8a7b-997210880612:Ascend Buildings/Salvage coast/Goldmere Coast:Ascend Buildings-Salvage coast-Goldmere Coast
+30aa868a-d027-5ce2-ba7d-91e3e4f982c6:Ascend Buildings/Garden cities:Ascend Buildings-Garden cities
+e4fadee6-b981-53d0-a346-b200bd728f3d:Ascend Buildings/Garden cities/Zarvan:Ascend Buildings-Garden cities-Zarvan
+ec5842f0-451c-58e0-a6f2-ff95cd032df9:Ascend Buildings/Glass-desert adobe/Zaruma:Ascend Buildings-Glass-desert adobe-Zaruma
+83b9d9fc-e7be-550d-bbe6-3b301fa3d55a:Ascend Buildings/Salvage coast/Dunewhale Drift:Ascend Buildings-Salvage coast-Dunewhale Drift
+fbc11b41-e36d-5f1d-882e-2a8a813161be:Ascend Buildings/Temple jungle:Ascend Buildings-Temple jungle
+f8465656-679e-516d-b0d2-91470f9ae906:Ascend Buildings/Temple jungle/Xochitl Mire:Ascend Buildings-Temple jungle-Xochitl Mire
+242c4337-6862-5415-af07-f9cfbe838a16:Ascend Buildings/Temple jungle/Lumbaya:Ascend Buildings-Temple jungle-Lumbaya
+b3b54303-4335-544b-9d9b-7c2b08e510ec:Ascend Buildings/White-stone duchies/Stormreach:Ascend Buildings-White-stone duchies-Stormreach
+8450649b-3f2d-5084-9cbc-c91c4ea1e5ec:Ascend Buildings/Salvage coast/True-Name Isles:Ascend Buildings-Salvage coast-True-Name Isles
+a3f6cb58-eed5-5f3f-88b7-3bcbcb620a4e:Ascend Buildings/Salvage coast/Hollow Sea:Ascend Buildings-Salvage coast-Hollow Sea
+ce6c78fa-27a9-51e3-97b5-5626a6986171:Ascend Buildings/Storybook half-timber/Ashira Vale:Ascend Buildings-Storybook half-timber-Ashira Vale
+c2380d57-4c55-5723-8bd9-01098ab0b760:Ascend Buildings/Dwarven basalt halls/Dragon Spine:Ascend Buildings-Dwarven basalt halls-Dragon Spine
+c2e9d81e-b867-5b87-a55f-a4f7396f0604:Ascend Buildings/Heavenfolk marble:Ascend Buildings-Heavenfolk marble
+543b4aa0-1c20-5389-803e-79a07411e649:Ascend Buildings/Heavenfolk marble/Sky Archipelago:Ascend Buildings-Heavenfolk marble-Sky Archipelago
+119e6a81-d125-51da-960a-38014b6acfc2:Ascend Buildings/Heavenfolk marble/Heavenreach:Ascend Buildings-Heavenfolk marble-Heavenreach
+0f5a51c7-055b-5294-828b-78c270f0c696:Ascend Buildings/White-stone duchies/Vharlen:Ascend Buildings-White-stone duchies-Vharlen
+53a0621b-b14a-5a80-88ac-3901f6477f4b:Ascend Buildings/Clockwork tiers:Ascend Buildings-Clockwork tiers
+11a32c99-b2dc-5db1-a95d-0e2b345dfe6d:Ascend Buildings/Clockwork tiers/Gearholm:Ascend Buildings-Clockwork tiers-Gearholm
+17b78110-3fce-529d-bf6f-f2c611d6e0d1:Ascend Buildings/Clockwork tiers/Cinderhole:Ascend Buildings-Clockwork tiers-Cinderhole
+a6b4184e-6f05-56ca-a4a7-f0760bb582a6:Ascend Buildings/White-stone duchies/Bastion:Ascend Buildings-White-stone duchies-Bastion
+e83df67e-2931-56b2-9d73-9e46d0d3b272:Ascend Buildings/Elven living wood/Everdusk:Ascend Buildings-Elven living wood-Everdusk
+76817ad7-be98-5143-b306-dde3ec6bfb5a:Ascend Buildings/Carved-mountain terraces:Ascend Buildings-Carved-mountain terraces
+6cad1da2-1b4b-5af6-8e78-dd10abc5443e:Ascend Buildings/Carved-mountain terraces/Apu Highlands:Ascend Buildings-Carved-mountain terraces-Apu Highlands
+bb68fd02-1a01-59dc-90c2-734536640cba:Ascend Buildings/Salvage coast/Lustrine Shores:Ascend Buildings-Salvage coast-Lustrine Shores
+2ce2d1bc-4807-53e1-9de6-a607740f9f27:Ascend Buildings/Fen stilt village/Quaking Lands:Ascend Buildings-Fen stilt village-Quaking Lands
+d11a2a84-271a-599a-b196-8c3bf9f05fd7:Ascend Buildings/White-stone duchies/Aurumdeep:Ascend Buildings-White-stone duchies-Aurumdeep
+acaacb2f-0b85-5285-80c2-349acd34abae:Ascend Buildings/Dark spires/Nox Dominion:Ascend Buildings-Dark spires-Nox Dominion
+81fdc09d-c7f1-5834-83a0-3cd6664c044e:Ascend Buildings/Wind-plains/Calamity Steppe:Ascend Buildings-Wind-plains-Calamity Steppe
+6b726266-59f5-5c07-a8e8-38bd53f334ef:Ascend Buildings/Wind-plains/The Maw:Ascend Buildings-Wind-plains-The Maw
+3d410082-3621-583f-9271-94a86718ed68:Ascend Buildings/Labyrinth stone/Root of the World:Ascend Buildings-Labyrinth stone-Root of the World
+230573e9-9f99-5de7-8e1a-b10ff7078f01:Ascend Buildings/Labyrinth stone/Vesper:Ascend Buildings-Labyrinth stone-Vesper

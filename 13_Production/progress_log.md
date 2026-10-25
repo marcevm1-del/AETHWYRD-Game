@@ -2,6 +2,13 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-10-25
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Regional building system | Blender-only procedural building generator (Tools/blender/ascend_buildings, an add-on): 28 core building types plus regional signatures (yurts, toadstools, pagodas, torii and paifang gates, longhouses, lighthouses, stepped pyramids, domed halls, adobe towers, tree houses) in 21 architectural families covering all 48 gazetteer regions; high-poly (every tile, stone, brick, log and plank a bevelled instanced part; a house ~430k tris realized), adjustable live (type, region, size, floors, seed, restyle a whole selection), 48 regional asset libraries with previews and contact sheets; CC0 packs (Kenney, Nobiax, 3TD ruins) imported as a second asset library with a licence register (13_Production/building_system.md, third_party_assets.md) | 177 + 136 |
+| Brindlewick grows to 50 buildings | 34 more buildings in the Brindlewick kit (Market Street, Hall Square, Rose Lane, farmstead), anime pass (steeper flared roofs, saturated colours, flower boxes, turrets, balconies), Ascend/Toon cel shader with ink outlines, street packer, wider town ward | 177 + 136 |
+
 ## 2026-10-24
 
 | Commit | What changed | Tests |
