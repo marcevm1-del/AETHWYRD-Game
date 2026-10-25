@@ -1,0 +1,36 @@
+# This is an Asset Catalog Definition file for Blender.
+
+VERSION 1
+
+95f26d40-84fd-5f06-b6ca-bc2422f1150c:Ascend Creatures:Ascend Creatures
+b1975eb4-fa87-50b0-b3c1-d14127023bdd:Ascend Creatures/Aberrations:Ascend Creatures-aberrations
+81ca3fc6-2548-5285-9f7b-ae7bd831b9fb:Ascend Creatures/Aquatic:Ascend Creatures-aquatic
+2008e97f-863a-5961-9719-70765984cdf6:Ascend Creatures/Avians:Ascend Creatures-avians
+da5bd77e-5fd1-56bb-a80a-cd3cab83e6f8:Ascend Creatures/Beasts:Ascend Creatures-beasts
+0d4ac155-97d5-5384-ada3-690dc9e3368c:Ascend Creatures/Centaurs & Taurs:Ascend Creatures-centaurs_taurs
+006661d3-d8c2-562d-bf53-1e6494b6cb4b:Ascend Creatures/Chimeras & Mythic Beasts:Ascend Creatures-chimeras_mythic_beasts
+964bb0a4-77ff-524a-9981-72ce8249f17b:Ascend Creatures/Constructs & Mimics:Ascend Creatures-constructs_mimics
+03060b49-5f78-5808-9504-ab8ef3b52b9f:Ascend Creatures/Demons:Ascend Creatures-demons
+cd53d3a6-4fcc-54d1-9a75-cd9541ca25d4:Ascend Creatures/Dragons:Ascend Creatures-dragons
+498da6c4-356b-56f2-889a-534f5ff1ab1c:Ascend Creatures/Elementals & Spirits:Ascend Creatures-elementals_spirits
+1dca64a0-7a1c-5178-877a-0391d108c161:Ascend Creatures/Familiars & Gentle Creatures:Ascend Creatures-familiars_gentle_creatures
+61db6481-9cb5-543a-91b2-b296b4ba81e9:Ascend Creatures/Floor-born:Ascend Creatures-floor_born
+a5314667-1338-55be-a2de-155bd97a1722:Ascend Creatures/Goblinoids:Ascend Creatures-goblinoids
+31b8274e-9105-558f-abce-f6c8521d2820:Ascend Creatures/Gremlins:Ascend Creatures-gremlins
+1fffd983-2936-5052-927e-22bed3233e0f:Ascend Creatures/Humanoid Enemies:Ascend Creatures-humanoid_enemies
+96e565de-48dc-58fe-b729-d1ed49ab0994:Ascend Creatures/Insects & Arachnids:Ascend Creatures-insects_arachnids
+4f963d08-c9ba-5b82-bbde-f46ba88b1531:Ascend Creatures/Killer Insects:Ascend Creatures-killer_insects
+a02c4f8f-ebc3-5825-a01b-6c21b4515dd3:Ascend Creatures/Kobolds:Ascend Creatures-kobolds
+48c81bc2-d6ed-5896-8edb-368fd70d3d19:Ascend Creatures/Lycanthropes:Ascend Creatures-lycanthropes
+9484e9c4-6caf-5546-8c73-a5c1d4254a86:Ascend Creatures/Minotaurs & Beastmen:Ascend Creatures-minotaurs_beastmen
+0da42ea6-7244-5fd4-af10-287ba2d45c18:Ascend Creatures/Orcs, Ogres & Giants:Ascend Creatures-orcs_ogres_giants
+683d31be-f08a-56be-b652-5ff60aa4f02d:Ascend Creatures/Plants & Fungi:Ascend Creatures-plants_fungi
+4467878a-2903-59f5-8201-f86cc3006665:Ascend Creatures/Reptiles:Ascend Creatures-reptiles
+6d97b1fb-f4a4-59cf-9105-a3c9a68518f4:Ascend Creatures/Sandborne:Ascend Creatures-sandborne
+30abda7c-50c9-594d-97cb-10cff85fce94:Ascend Creatures/Serpentfolk:Ascend Creatures-serpentfolk
+47b37cf6-c006-5003-bbea-d6faf4301302:Ascend Creatures/Shadows:Ascend Creatures-shadows
+909132a1-f374-5f86-b7b6-5123ad75aa5e:Ascend Creatures/Slimes:Ascend Creatures-slimes
+2fcd99fd-efe7-5c4a-9993-07ba5547f09c:Ascend Creatures/The Headless:Ascend Creatures-the_headless
+c82fb2fb-094d-5c82-85a2-b5dfbc872ca9:Ascend Creatures/Undead:Ascend Creatures-undead
+4701eea6-85bb-574f-8e01-f22cc2bd9d8b:Ascend Creatures/Vesperites (Moon Raiders):Ascend Creatures-vesperites_moon_raiders
+24bc6be8-be20-5dc2-acc5-a0e3e6395be5:Ascend Creatures/Yokai-Inspired Spirits:Ascend Creatures-yokai_inspired_spirits
