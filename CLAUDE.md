@@ -36,4 +36,4 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
   - Creatures: `Tools/blender/build_creature_library.py` (docs: `13_Production/creature_system.md`).
 
 ## The agent team
-There are 25 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
+There are 26 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
