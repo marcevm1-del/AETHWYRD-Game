@@ -72,6 +72,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]
 - [[Design Bible/12_Systems/world_map|12_Systems/world_map]]
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
+- [[Design Bible/13_Production/agent_team|13_Production/agent_team]]
 - [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
 - [[Design Bible/13_Production/building_system|13_Production/building_system]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
