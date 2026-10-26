@@ -943,5 +943,455 @@
   "id": "pat_errand_roof_day_done",
   "description": "Side quest \"Roof Day\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "mor_word_truce_done",
+  "description": "Side quest \"The Word for \"Truce\"\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_mushrooms_done",
+  "description": "Side quest \"Mushrooms and Malice\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_worm_done",
+  "description": "Side quest \"The Worm's Lesson\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_ladders_done",
+  "description": "Side quest \"Ladders and Stairs\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_sixteen_done",
+  "description": "Side quest \"Sixteen Years of Quiet\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_warband_done",
+  "description": "Side quest \"The Warband at the Gate\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_drill_done",
+  "description": "Side quest \"Drill Day\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_child_done",
+  "description": "Side quest \"A Safe Road for a Sick Child\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_rope_done",
+  "description": "Side quest \"Two Children, One Rope\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mor_refugees_done",
+  "description": "Side quest \"What the Disaster Left\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_coin_done",
+  "description": "Side quest \"The Coin From Every Kingdom\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_barons_done",
+  "description": "Side quest \"Two Barons, One Village\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_father_done",
+  "description": "Side quest \"The Man Whose Father Sings\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_exit_done",
+  "description": "Side quest \"A Contract With an Exit\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_horse_done",
+  "description": "Side quest \"The Horse That Broke the Peace\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_smuggler_done",
+  "description": "Side quest \"Smuggler's Honour\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_song_done",
+  "description": "Side quest \"The Deserter's Song\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_wheat_done",
+  "description": "Side quest \"Wheat on the Field of Coins\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_chapel_done",
+  "description": "Side quest \"A Chapel in the Cellar\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "mar_door_done",
+  "description": "Side quest \"The Choir's Quiet Door\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_kaelsday_round_done",
+  "description": "Side quest \"The Kaelsday Round\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_gallery_family_saved",
+  "description": "Side quest \"Down in the Gallery\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_ledger_walls_done",
+  "description": "Side quest \"The Ledger in the Walls\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_oakes_farm_held",
+  "description": "Side quest \"A Long Night at Oakes Farm\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_condemned_resolved",
+  "description": "Side quest \"Condemned, With Regret\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_eleventh_clause_found",
+  "description": "Side quest \"The Eleventh Clause\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_petition_resolved",
+  "description": "Side quest \"The Quiet Petition\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_offering_laid",
+  "description": "Side quest \"The Last Mason of the Old Rite\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_hollin_cross_ledger",
+  "description": "Side quest \"Hollin Cross Pays Its Tithe\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vel_brightstone_evacuated",
+  "description": "Side quest \"The Order of Evacuation\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_year_done",
+  "description": "Side quest \"The Year Nobody Recited\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_tithe_done",
+  "description": "Side quest \"The Unpaid Tithe\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_dowry_done",
+  "description": "Side quest \"A Dowry in Salt\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_awning_done",
+  "description": "Side quest \"The Night the Awning Held\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_glass_done",
+  "description": "Side quest \"What the Glass Remembers\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_sunrise_done",
+  "description": "Side quest \"The Last Sunrise on the Streaks\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_door_done",
+  "description": "Side quest \"A Shovel Under Seal\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_road_done",
+  "description": "Side quest \"The Walker's Road\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_eighth_done",
+  "description": "Side quest \"The Eighth Well\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sun_ration_done",
+  "description": "Side quest \"The Ration Council\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_bird_done",
+  "description": "Side quest \"The Bird Who Knew the Manual\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_herb_done",
+  "description": "Side quest \"A Herb That Does Not Grow\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_bout_done",
+  "description": "Side quest \"The First Bout in Forty Years\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_hunger_done",
+  "description": "Side quest \"The Hand Behind the Hunger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_letters_done",
+  "description": "Side quest \"Letters Between Two Graves\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_bucket_done",
+  "description": "Side quest \"A Bucket for Every Step\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_tiger_done",
+  "description": "Side quest \"The Tiger on the Grey Pass\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_walked_done",
+  "description": "Side quest \"The Night the Mountain Walked\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_hands_done",
+  "description": "Side quest \"Hands Without Qi\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "shl_tea_done",
+  "description": "Side quest \"Tea for Three Precedences\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_rose_bled_done",
+  "description": "Side quest \"The Rose That Bled\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_two_houses_done",
+  "description": "Side quest \"Two Houses, One Tribute\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_nightingale_done",
+  "description": "Side quest \"The Nightingale Who Would Not Sing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_poets_garden_done",
+  "description": "Side quest \"A Cup for the Poet's Garden\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_seven_wells_done",
+  "description": "Side quest \"Seven Wells, One Song\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_unarmed_caravan_done",
+  "description": "Side quest \"The Unarmed Caravan\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_poem_asked_done",
+  "description": "Side quest \"The Poem Zahhar Asked For\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_forty_days_done",
+  "description": "Side quest \"Forty Days Again\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_basin_done",
+  "description": "Side quest \"The Basin from the Caves\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zar_who_drinks_done",
+  "description": "Side quest \"Who Drinks First\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_quiet_done",
+  "description": "Side quest \"The Storm-Caller Who Went Quiet\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_rope_done",
+  "description": "Side quest \"A Rope Along the Cliffs\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_egg_done",
+  "description": "Side quest \"The Egg in the Gatherer's Basket\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_rope_contest_done",
+  "description": "Side quest \"The Best Rope in the World\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_struck_done",
+  "description": "Side quest \"Struck, and Blessed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_guano_done",
+  "description": "Side quest \"The Guano Accords\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_rod_forest_done",
+  "description": "Side quest \"Rod Forest\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_funeral_done",
+  "description": "Side quest \"A Funeral for the Lightning\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_feather_done",
+  "description": "Side quest \"The Fledgling's Feather\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "str_nest_done",
+  "description": "Side quest \"The Nest Seen by Lightning\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_divorce_done",
+  "description": "Side quest \"A Divorce From the Sea\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_berg_done",
+  "description": "Side quest \"The Berg With Something Inside\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_quiet_feet_done",
+  "description": "Side quest \"Quiet Feet\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_sixteenth_done",
+  "description": "Side quest \"The Sixteenth Year\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_doll_done",
+  "description": "Side quest \"A Doll for the Sea\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_floe_done",
+  "description": "Side quest \"The Broken Floe\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_wyrm_done",
+  "description": "Side quest \"Ice Wyrm Season\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_wedding_done",
+  "description": "Side quest \"A Wedding Under the Aurora\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_boat_eaters_done",
+  "description": "Side quest \"The Boat-Eaters' Reckoning\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "whr_bone_bergs_done",
+  "description": "Side quest \"What the Bone Bergs Carry\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_sea_legs_done",
+  "description": "Side quest \"Sea Legs, Sand Legs\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_calendar_done",
+  "description": "Side quest \"The Calendar of Her Songs\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_lullaby_done",
+  "description": "Side quest \"A Lullaby the Whale Does Not Know\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_barnacle_done",
+  "description": "Side quest \"Barnacle Rot\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_glass_garden_done",
+  "description": "Side quest \"The Glass Garden\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_sandfish_done",
+  "description": "Side quest \"Sand-Fish Season\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_death_sung_done",
+  "description": "Side quest \"A Death Sung Wrong\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_vote_done",
+  "description": "Side quest \"The Captain's Vote\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_other_town_done",
+  "description": "Side quest \"The Other Town\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dwd_hums_done",
+  "description": "Side quest \"What She Hums at Night\" resolved",
+  "setBy": "quest"
  }
 ]

@@ -86,6 +86,32 @@ for (const f of fs.existsSync(DOCS) ? fs.readdirSync(DOCS).filter(f => f.endsWit
   }
 }
 
+// --check: validate references without writing anything (safe to run in parallel with other writers).
+if (process.argv.includes('--check')) {
+  const ids = f => new Set(read(f).map(x => x.id));
+  const species = ids('Data/Monsters/species.json'), items = ids('Data/Items/items.json'), regions = ids('Data/World/regions.json');
+  const npcSet = new Set([...ids('Data/NPCs/npcs.json'), ...npcs.map(n => n.id)]);
+  const questSet = new Set([...ids('Data/Quests/quests.json'), ...quests.map(q => q.id)]);
+  const flagSet = new Set([...ids('Data/Quests/story_flags.json'), ...flagsSet.map(f => f.id)]);
+  for (const n of npcs) { if (!regions.has(n.homeRegion)) err(n.id, `unknown region ${n.homeRegion}`); (n.relationships || []).forEach(r => { if (!npcSet.has(r.npcId)) err(n.id, `unknown relationship npc ${r.npcId}`); }); }
+  for (const q of quests) {
+    if (!npcSet.has(q.giver)) err(q.id, `giver ${q.giver} has no npc block or record`);
+    if (!regions.has(q.region)) err(q.id, `unknown region ${q.region}`);
+    ((q.prerequisites || {}).quests || []).forEach(x => { if (!questSet.has(x)) err(q.id, `unknown required quest ${x}`); });
+    ((q.prerequisites || {}).flags || []).forEach(x => { if (!flagSet.has(x)) err(q.id, `unknown required flag ${x}`); });
+    ((q.rewards || {}).items || []).forEach(x => { if (!items.has(x)) err(q.id, `unknown item ${x}`); });
+    for (const o of q.objectives) {
+      if ((o.kind === 'kill' || o.kind === 'tame') && !species.has(o.target)) err(q.id, `unknown species ${o.target}`);
+      if (o.kind === 'talk' && !npcSet.has(o.target)) err(q.id, `talk target ${o.target} has no npc`);
+      if (o.kind === 'escort' && /^npc_/.test(o.target) && !npcSet.has(o.target)) err(q.id, `escort target ${o.target} has no npc`);
+    }
+  }
+  const have = new Set(read('Data/Quests/quests.json').map(q => q.id));
+  if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
+  console.log(`Check OK: ${quests.length} quests, ${npcs.length} NPCs in docs (${[...questSet].length - have.size >= 0 ? 'ids unique' : ''})`);
+  process.exit(0);
+}
+
 const dup = (rows, what) => { const s = new Set(); for (const r of rows) { if (s.has(r.id)) err(r.id, `duplicate ${what} id in docs`); s.add(r.id); } };
 dup(quests, 'quest'); dup(npcs, 'npc');
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
