@@ -9,7 +9,7 @@ The player has seen the mural of nine thrones (Mystery #1)
 
 - **Set by:** quest
 - **Written by:** [[Quests/The Mural of Nine Thrones|The Mural of Nine Thrones]]
-- **Read by:** No quest prerequisite currently indexed
+- **Read by:** [[Quests/Eight Lamps and an Empty Niche|Eight Lamps and an Empty Niche]]
 
 ## State ownership
 

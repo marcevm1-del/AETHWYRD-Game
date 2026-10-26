@@ -32,6 +32,30 @@ tags: [inn]
 > [!warning]- Spoiler
 > The fire is a bound fire spirit who wants to be free.
 
+## Nearby contracts
+
+- [[Quests/Wood for the Last Fire|Wood for the Last Fire]] (B, Gathering)
+- [[Quests/The Frozen Fleet|The Frozen Fleet]] (B, Defense)
+- [[Quests/A Frost Troll at the Door|A Frost Troll at the Door]] (B, Faction)
+- [[Quests/A Burning Ship on Ice|A Burning Ship on Ice]] (B, OddJob)
+- [[Quests/A Saga About the Living|A Saga About the Living]] (B, Faction)
+- [[Quests/The Survivor Who Came Back Older|The Survivor Who Came Back Older]] (A, Investigation)
+- [[Quests/A Cave of Summer|A Cave of Summer]] (A, Exploration)
+- [[Quests/The Thing|The Thing]] (A, Faction)
+- [[Quests/The Last Fire Goes Out|The Last Fire Goes Out]] (A, Defense)
+- [[Quests/The Saga, Sung|The Saga, Sung]] (A, Hidden)
+
+## Local people
+
+- [[NPCs/Fire-Keeper Hrefna|Fire-Keeper Hrefna]] — Keeper of the Last Fire
+- [[NPCs/Harbourmaster Eyvind|Harbourmaster Eyvind]] — Harbourmaster
+- [[NPCs/Goodwife Gudrun|Goodwife Gudrun]] — Goodwife of a longhouse stead
+- [[NPCs/Thora Jarl's-Widow|Thora Jarl's-Widow]] — Widow of Jarl Bjorn Ironmantle
+- [[NPCs/Skald Ragnhild|Skald Ragnhild]] — Skald of Skjaldheim
+- [[NPCs/Old Halvard|Old Halvard]] — Survivor of the northern fleet
+- [[NPCs/Ice-Guide Sigrid|Ice-Guide Sigrid]] — Glacier guide
+- [[NPCs/Lawspeaker Vigdis|Lawspeaker Vigdis]] — Lawspeaker of the Thing
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

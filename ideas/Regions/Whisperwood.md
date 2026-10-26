@@ -99,6 +99,15 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[NPCs/Wren Ashbourne|Wren Ashbourne]]: Ranger trainer, Whisperwood hunter
 - [[NPCs/Wandering Merchant Ottoline|Wandering Merchant Ottoline]]: Traveling merchant
+- [[NPCs/Nan Corrow|Nan Corrow]]: Millbrook grandmother, keeper of the bread step
+- [[NPCs/Linnet Holloway|Linnet Holloway]]: Seven-year-old who visits her grandfather
+- [[NPCs/Fenna Tilly|Fenna Tilly]]: Weaver, aunt to the Glowcap twins
+- [[NPCs/Hesper Dunn|Hesper Dunn]]: Miller of Millbrook
+- [[NPCs/Marit Holloway|Marit Holloway]]: Charcoal burner, mother of Linnet
+- [[NPCs/Tobias -Ladle- Pryce|Tobias "Ladle" Pryce]]: Retired adventurer, Silver Ladle party
+- [[NPCs/Pocket|Pocket]]: Kobold foreman, quarry crew
+- [[NPCs/Tilda Cobb|Tilda Cobb]]: Shepherd girl
+- [[NPCs/Grandmother Brub|Grandmother Brub]]: Moss-Tooth clan cook
 
 ## Quests
 
@@ -114,6 +123,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/Joren's Last Contract|Joren's Last Contract]] (E)
 - [[Quests/The Wolves' Second Race|The Wolves' Second Race]] (E)
 - [[Quests/The Fog Merchant's Coin|The Fog Merchant's Coin]] (E)
+- [[Quests/Bread on the Step|Bread on the Step]] (F)
+- [[Quests/Glowcap Night|Glowcap Night]] (F)
+- [[Quests/The White Stag|The White Stag]] (E)
+- [[Quests/The Mill That Ran Backwards|The Mill That Ran Backwards]] (E)
+- [[Quests/Lost in the Hush|Lost in the Hush]] (E)
+- [[Quests/The Last Contract of the Silver Ladle|The Last Contract of the Silver Ladle]] (E)
+- [[Quests/Lanterns, Not Lamp Oil|Lanterns, Not Lamp Oil]] (E)
+- [[Quests/The Wolf Who Counted Sheep|The Wolf Who Counted Sheep]] (E)
+- [[Quests/Stew Diplomacy|Stew Diplomacy]] (E)
+- [[Quests/Eight Lamps and an Empty Niche|Eight Lamps and an Empty Niche]] (E)
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]] (undefined)
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]] (undefined)
 - [[Quests/Weekly Board/Scrap Run|Scrap Run]] (undefined)

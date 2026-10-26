@@ -95,9 +95,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The One-Eyed Smiths|The One-Eyed Smiths]] (Cyclops clan, led by Master Smith Oculra): Ancient allies of the dwarves who see the flaws in metal and the cracks in futures. Skarn wants them as his armourers.
 - [[Clans/The Hold-clans|The Hold-clans]] (Dwarf Clan, led by Matriarch Hulda Ironbraid): The great clans of Karak Dûn, each with its craft, colours and grudges: smith-clans led by matriarchs, merchant clans who never leave the trade halls, engineer clans with pistols and goggles, and the old warrior clans who guard the gates.
 
+## People
+
+- [[NPCs/Hesta Coalhand|Hesta Coalhand]]: Master smith of the Coalhand clan
+- [[NPCs/Grumbald Oakbarrel|Grumbald Oakbarrel]]: Keeper of the Great Hall's record mug
+- [[NPCs/Foreman Dibble Quickpick|Foreman Dibble Quickpick]]: Gnome foreman, outer mines
+- [[NPCs/Engineer Fizzwick Gearsoft|Engineer Fizzwick Gearsoft]]: Gnome engineer
+- [[NPCs/High Thane Brunhild Ironvow|High Thane Brunhild Ironvow]]: High Thane of Karak Dûn
+- [[NPCs/Runemaster Orm Sparkbrow|Runemaster Orm Sparkbrow]]: Runemaster of the sealed shaft
+- [[NPCs/Kessa Quickspark|Kessa Quickspark]]: Rune-smith apprentice
+- [[NPCs/Furnace-Warden Dorn Coalheart|Furnace-Warden Dorn Coalheart]]: Warden of the furnace-heart
+- [[NPCs/Embra Ironvow|Embra Ironvow]]: The Thane's eleven-year-old granddaughter
+- [[NPCs/Old Baldur Anvilfast|Old Baldur Anvilfast]]: Anvil-keeper of the Great Hall
+
 ## Inns
 
 - [[Inns/The Anvil's Rest|The Anvil's Rest]] (Khazdûr Gate)
+
+## Quests
+
+- [[Quests/The Stone She Carried|The Stone She Carried]] (C)
+- [[Quests/Three Hundred and One Mugs|Three Hundred and One Mugs]] (C)
+- [[Quests/The Tap Code|The Tap Code]] (C)
+- [[Quests/Amend the Law|Amend the Law]] (C)
+- [[Quests/The Giant's Envoy|The Giant's Envoy]] (B)
+- [[Quests/The Seal Is Warm|The Seal Is Warm]] (B)
+- [[Quests/Runes in Cold Iron|Runes in Cold Iron]] (B)
+- [[Quests/A Flame From Every Forge|A Flame From Every Forge]] (B)
+- [[Quests/The Thane's Granddaughter|The Thane's Granddaughter]] (A)
+- [[Quests/The Anvil That Counted|The Anvil That Counted]] (A)
 
 ## Monsters (89)
 

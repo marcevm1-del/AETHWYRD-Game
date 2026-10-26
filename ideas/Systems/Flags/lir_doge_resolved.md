@@ -1,0 +1,16 @@
+---
+type: story-flag
+id: "lir_doge_resolved"
+tags: [system, story-flag]
+---
+# lir_doge_resolved
+
+Side quest "Which Doge?" resolved
+
+- **Set by:** quest
+- **Written by:** [[Quests/Which Doge-|Which Doge?]]
+- **Read by:** No quest prerequisite currently indexed
+
+## State ownership
+
+This flag records one durable story fact. Quest gating should use it when it changes availability; presentation should check who knows the fact before exposing it in dialogue or rumor. Do not create duplicate flags for the same meaning.

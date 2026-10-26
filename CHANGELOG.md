@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — One hundred side quests (2026-10-26)
+- Added `11_Quests_Encounters/side_quests/`: ten region files of ten side quests each (Whisperwood and Millbrook, Aldmere, Greymoor, Mossdeep, Sylvaran, Lirian, Fanghold, Iron Hold, Hoshizora, Frostveil), about 63,000 words. Every quest has its premise, the truth behind it, four scenes with dialogue and branching choices, outcomes and a visible receipt. Ranks E to A, mostly Ring 2 to 5; no Tyrant dies and no siege ends.
+- Added `side_quests_index.md`: totals, the conventions, the rules these quests keep and the table of proposed new facts and seeds.
+- Added `Tools/quests/build_side_quests.js` (also `npm run sidequests`, and part of `npm run build`): builds quest, NPC and story-flag rows from hidden data blocks in the docs, idempotently, so prose and data cannot drift.
+- Data: 100 quests, about 96 supporting NPCs and 100 new story flags. `npm run validate` passes (npcs 138, quests 153, flags 149). Rewards are first-pass tuning from the promotion table. C# tests were not run (no .NET SDK on this host).
+- Proposed in Canon §6 only; no locked Canon row changed.
+
 ## Unreleased — Brindlewick storylines and side quests (2026-10-26)
 - Added `07_Characters/brindlewick_storylines.md`: twelve interlocking NPC arcs for the Cradle (Marta and Teo, Holt/Tomlin/Pike, Aster and Corwin, Pell and Ivy, Eolande, Brutus, Hollis, Rosie and Nobody, Wendel, the orphans, the Crimson Wolves, four small stories), with wants, fears, Act-by-Act beats, signposted choices and visible endings.
 - Added `11_Quests_Encounters/brindlewick_side_quests.md`: 36 side quests (F to C) built on the quest outcome grammar, a ring placement table, and clue maps for the orphanage mystery (14 clues) and the Mina problem (11 clues).

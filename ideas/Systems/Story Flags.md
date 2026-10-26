@@ -53,3 +53,105 @@ Story flags are the compact bridge between quest outcomes and later world respon
 - [[Systems/Flags/sal_scale_traded|sal_scale_traded]] — Old Sal has traded a Rainbow Koi scale for a story
 - [[Systems/Flags/clue_vesper_coin|clue_vesper_coin]] — Clue: a coin from the fog merchant is Valdrisian
 - [[Systems/Flags/blade_named|blade_named]] — The player has told Brannoc the name of their blade
+- [[Systems/Flags/ww_bread_step_resolved|ww_bread_step_resolved]] — Side quest "Bread on the Step" resolved
+- [[Systems/Flags/ww_glowcap_night_resolved|ww_glowcap_night_resolved]] — Side quest "Glowcap Night" resolved
+- [[Systems/Flags/ww_white_stag_resolved|ww_white_stag_resolved]] — Side quest "The White Stag" resolved
+- [[Systems/Flags/ww_mill_resolved|ww_mill_resolved]] — Side quest "The Mill That Ran Backwards" resolved
+- [[Systems/Flags/ww_hush_resolved|ww_hush_resolved]] — Side quest "Lost in the Hush" resolved
+- [[Systems/Flags/ww_silver_ladle_resolved|ww_silver_ladle_resolved]] — Side quest "The Last Contract of the Silver Ladle" resolved
+- [[Systems/Flags/ww_quarry_resolved|ww_quarry_resolved]] — Side quest "Lanterns, Not Lamp Oil" resolved
+- [[Systems/Flags/ww_counter_resolved|ww_counter_resolved]] — Side quest "The Wolf Who Counted Sheep" resolved
+- [[Systems/Flags/ww_stew_resolved|ww_stew_resolved]] — Side quest "Stew Diplomacy" resolved
+- [[Systems/Flags/ww_eight_lamps_resolved|ww_eight_lamps_resolved]] — Side quest "Eight Lamps and an Empty Niche" resolved
+- [[Systems/Flags/ald_doorstep_resolved|ald_doorstep_resolved]] — Side quest "A Sword Under Every Doorstep" resolved
+- [[Systems/Flags/ald_ring_resolved|ald_ring_resolved]] — Side quest "The Ring in the Barrow" resolved
+- [[Systems/Flags/ald_toll_resolved|ald_toll_resolved]] — Side quest "The River Toll Quarrel" resolved
+- [[Systems/Flags/ald_wheels_resolved|ald_wheels_resolved]] — Side quest "The Wheel Thief of Eastgate" resolved
+- [[Systems/Flags/ald_ledger_resolved|ald_ledger_resolved]] — Side quest "The Plough Finds a Ledger" resolved
+- [[Systems/Flags/ald_mirror_resolved|ald_mirror_resolved]] — Side quest "The Friend in the Mirror" resolved
+- [[Systems/Flags/clue_mirrors_pamphlet|clue_mirrors_pamphlet]] — Clue found in "The Friend in the Mirror"
+- [[Systems/Flags/ald_stand_down_resolved|ald_stand_down_resolved]] — Side quest "Stand Down, Soldier" resolved
+- [[Systems/Flags/ald_duelist_resolved|ald_duelist_resolved]] — Side quest "The Duelist's Last Request" resolved
+- [[Systems/Flags/ald_king_resolved|ald_king_resolved]] — Side quest "The King Wants to Go Fishing" resolved
+- [[Systems/Flags/ald_baron_resolved|ald_baron_resolved]] — Side quest "What the Baron Refused" resolved
+- [[Systems/Flags/gm_hut_resolved|gm_hut_resolved]] — Side quest "The Walking Hut Loses Its Way" resolved
+- [[Systems/Flags/gm_moot_resolved|gm_moot_resolved]] — Side quest "The Eel Moot" resolved
+- [[Systems/Flags/gm_wisp_resolved|gm_wisp_resolved]] — Side quest "Lanterns in Jars" resolved
+- [[Systems/Flags/gm_clapper_resolved|gm_clapper_resolved]] — Side quest "The Clapper in the Peat" resolved
+- [[Systems/Flags/gm_price_resolved|gm_price_resolved]] — Side quest "The Witch's Price" resolved
+- [[Systems/Flags/gm_flood_resolved|gm_flood_resolved]] — Side quest "High Water on the Stilts" resolved
+- [[Systems/Flags/gm_tea_resolved|gm_tea_resolved]] — Side quest "Tea with the Hag of Lowmere" resolved
+- [[Systems/Flags/gm_ferry_resolved|gm_ferry_resolved]] — Side quest "The Ferryman's Holiday" resolved
+- [[Systems/Flags/gm_choir_resolved|gm_choir_resolved]] — Side quest "The Choir Passes" resolved
+- [[Systems/Flags/gm_book_resolved|gm_book_resolved]] — Side quest "The Book of Small Things" resolved
+- [[Systems/Flags/md_milk_resolved|md_milk_resolved]] — Side quest "A Thimble of Milk" resolved
+- [[Systems/Flags/md_beetle_resolved|md_beetle_resolved]] — Side quest "The Beetle Rider's Test" resolved
+- [[Systems/Flags/md_recount_resolved|md_recount_resolved]] — Side quest "The Seed Recount" resolved
+- [[Systems/Flags/md_tapestry_resolved|md_tapestry_resolved]] — Side quest "The Blue in the Tapestry" resolved
+- [[Systems/Flags/md_cat_resolved|md_cat_resolved]] — Side quest "A Cat Called Disaster" resolved
+- [[Systems/Flags/md_aphid_resolved|md_aphid_resolved]] — Side quest "The Aphid Run" resolved
+- [[Systems/Flags/md_honey_resolved|md_honey_resolved]] — Side quest "The Honey That Wasn't" resolved
+- [[Systems/Flags/md_larder_resolved|md_larder_resolved]] — Side quest "The Webcrawler's Larder" resolved
+- [[Systems/Flags/md_shade_resolved|md_shade_resolved]] — Side quest "The Old Shade Grows Cold" resolved
+- [[Systems/Flags/md_accord_resolved|md_accord_resolved]] — Side quest "The Big Folk Are Asked" resolved
+- [[Systems/Flags/syl_bridge_resolved|syl_bridge_resolved]] — Side quest "The Crooked Bridge" resolved
+- [[Systems/Flags/syl_moon_resolved|syl_moon_resolved]] — Side quest "The Girl Who Drank the Moon" resolved
+- [[Systems/Flags/syl_bow_resolved|syl_bow_resolved]] — Side quest "A Bow Must Be Asked For" resolved
+- [[Systems/Flags/syl_silence_resolved|syl_silence_resolved]] — Side quest "Two Hundred Years of Silence" resolved
+- [[Systems/Flags/syl_spores_resolved|syl_spores_resolved]] — Side quest "The Gentle Spores" resolved
+- [[Systems/Flags/syl_remember_resolved|syl_remember_resolved]] — Side quest "What the Trees Remember" resolved
+- [[Systems/Flags/syl_pilgrim_resolved|syl_pilgrim_resolved]] — Side quest "The Pilgrim and the World Tree" resolved
+- [[Systems/Flags/syl_sunwine_resolved|syl_sunwine_resolved]] — Side quest "A Cup of Sunwine" resolved
+- [[Systems/Flags/syl_watch_resolved|syl_watch_resolved]] — Side quest "The Rootward Watch" resolved
+- [[Systems/Flags/syl_planting_resolved|syl_planting_resolved]] — Side quest "The Last Planting" resolved
+- [[Systems/Flags/lir_coin_resolved|lir_coin_resolved]] — Side quest "A Coin for Every Deal" resolved
+- [[Systems/Flags/lir_song_resolved|lir_song_resolved]] — Side quest "The Counter-Song" resolved
+- [[Systems/Flags/lir_heart_resolved|lir_heart_resolved]] — Side quest "A Glass Heart for the Lagoon" resolved
+- [[Systems/Flags/lir_doge_resolved|lir_doge_resolved]] — Side quest "Which Doge?" resolved
+- [[Systems/Flags/lir_rooftops_resolved|lir_rooftops_resolved]] — Side quest "Under the Rooftops" resolved
+- [[Systems/Flags/lir_gondolier_resolved|lir_gondolier_resolved]] — Side quest "The Deaf Gondolier" resolved
+- [[Systems/Flags/lir_masks_resolved|lir_masks_resolved]] — Side quest "The Auction of Masks" resolved
+- [[Systems/Flags/lir_gaps_resolved|lir_gaps_resolved]] — Side quest "The Three Gaps" resolved
+- [[Systems/Flags/lir_isolde_resolved|lir_isolde_resolved]] — Side quest "The Last Song of Isolde Verro" resolved
+- [[Systems/Flags/lir_maelsday_resolved|lir_maelsday_resolved]] — Side quest "Maelsday, All at Once" resolved
+- [[Systems/Flags/fan_foal_resolved|fan_foal_resolved]] — Side quest "The Foal Nobody Named" resolved
+- [[Systems/Flags/fan_pasture_resolved|fan_pasture_resolved]] — Side quest "Champion of Pasture Nine" resolved
+- [[Systems/Flags/fan_eagle_resolved|fan_eagle_resolved]] — Side quest "The Eagle-Feather Trade" resolved
+- [[Systems/Flags/fan_ledger_resolved|fan_ledger_resolved]] — Side quest "The Ledger Is Longer Than the Whip" resolved
+- [[Systems/Flags/fan_seat_resolved|fan_seat_resolved]] — Side quest "The Grandmother's Seat" resolved
+- [[Systems/Flags/fan_stampede_resolved|fan_stampede_resolved]] — Side quest "Stampede Season" resolved
+- [[Systems/Flags/fan_wind_resolved|fan_wind_resolved]] — Side quest "The Wind Carries the Dead" resolved
+- [[Systems/Flags/fan_tax_resolved|fan_tax_resolved]] — Side quest "Kade's Water Tax" resolved
+- [[Systems/Flags/fan_stallion_resolved|fan_stallion_resolved]] — Side quest "The Last Free Stallion" resolved
+- [[Systems/Flags/fan_moot_resolved|fan_moot_resolved]] — Side quest "The Moot of Nine Fires" resolved
+- [[Systems/Flags/ih_stone_resolved|ih_stone_resolved]] — Side quest "The Stone She Carried" resolved
+- [[Systems/Flags/ih_mugs_resolved|ih_mugs_resolved]] — Side quest "Three Hundred and One Mugs" resolved
+- [[Systems/Flags/ih_tap_resolved|ih_tap_resolved]] — Side quest "The Tap Code" resolved
+- [[Systems/Flags/ih_law_resolved|ih_law_resolved]] — Side quest "Amend the Law" resolved
+- [[Systems/Flags/ih_envoy_resolved|ih_envoy_resolved]] — Side quest "The Giant's Envoy" resolved
+- [[Systems/Flags/ih_seal_resolved|ih_seal_resolved]] — Side quest "The Seal Is Warm" resolved
+- [[Systems/Flags/ih_runes_resolved|ih_runes_resolved]] — Side quest "Runes in Cold Iron" resolved
+- [[Systems/Flags/ih_flame_resolved|ih_flame_resolved]] — Side quest "A Flame From Every Forge" resolved
+- [[Systems/Flags/ih_granddaughter_resolved|ih_granddaughter_resolved]] — Side quest "The Thane's Granddaughter" resolved
+- [[Systems/Flags/ih_anvil_resolved|ih_anvil_resolved]] — Side quest "The Anvil That Counted" resolved
+- [[Systems/Flags/hsz_pillar_resolved|hsz_pillar_resolved]] — Side quest "The Last Pillar" resolved
+- [[Systems/Flags/hsz_seat_resolved|hsz_seat_resolved]] — Side quest "The Spirit Who Had No Seat" resolved
+- [[Systems/Flags/hsz_kappa_resolved|hsz_kappa_resolved]] — Side quest "The Kappa's Bow" resolved
+- [[Systems/Flags/hsz_carver_resolved|hsz_carver_resolved]] — Side quest "The Mask-Carver" resolved
+- [[Systems/Flags/hsz_festival_resolved|hsz_festival_resolved]] — Side quest "Fourteen People and a Festival" resolved
+- [[Systems/Flags/hsz_tengu_resolved|hsz_tengu_resolved]] — Side quest "The Tengu's Test" resolved
+- [[Systems/Flags/hsz_sword_resolved|hsz_sword_resolved]] — Side quest "The Sword Given to the Gods" resolved
+- [[Systems/Flags/hsz_village_resolved|hsz_village_resolved]] — Side quest "The Masked Village" resolved
+- [[Systems/Flags/hsz_lantern_resolved|hsz_lantern_resolved]] — Side quest "The Hundredth Lantern" resolved
+- [[Systems/Flags/hsz_letter_resolved|hsz_letter_resolved]] — Side quest "A Letter Written in Courtesy" resolved
+- [[Systems/Flags/fv_wood_resolved|fv_wood_resolved]] — Side quest "Wood for the Last Fire" resolved
+- [[Systems/Flags/fv_fleet_resolved|fv_fleet_resolved]] — Side quest "The Frozen Fleet" resolved
+- [[Systems/Flags/fv_troll_resolved|fv_troll_resolved]] — Side quest "A Frost Troll at the Door" resolved
+- [[Systems/Flags/fv_ship_resolved|fv_ship_resolved]] — Side quest "A Burning Ship on Ice" resolved
+- [[Systems/Flags/fv_saga_resolved|fv_saga_resolved]] — Side quest "A Saga About the Living" resolved
+- [[Systems/Flags/fv_survivor_resolved|fv_survivor_resolved]] — Side quest "The Survivor Who Came Back Older" resolved
+- [[Systems/Flags/clue_shattered_sky|clue_shattered_sky]] — Clue found in "The Survivor Who Came Back Older"
+- [[Systems/Flags/fv_summer_resolved|fv_summer_resolved]] — Side quest "A Cave of Summer" resolved
+- [[Systems/Flags/fv_thing_resolved|fv_thing_resolved]] — Side quest "The Thing" resolved
+- [[Systems/Flags/fv_lastfire_resolved|fv_lastfire_resolved]] — Side quest "The Last Fire Goes Out" resolved
+- [[Systems/Flags/fv_saga_sung_resolved|fv_saga_sung_resolved]] — Side quest "The Saga, Sung" resolved

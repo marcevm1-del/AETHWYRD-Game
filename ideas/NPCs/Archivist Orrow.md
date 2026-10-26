@@ -24,5 +24,9 @@ A meticulous Academy archivist who audits provincial libraries for missing volum
 
 This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
 
+## Quests given
+
+- [[Quests/What the Baron Refused|What the Baron Refused]]
+
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** He was one of Eolande's students.

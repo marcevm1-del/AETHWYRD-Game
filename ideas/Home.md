@@ -992,7 +992,7 @@ Every population record is included in the complete register on its species note
 - [[Monsters/Beasts/Quakeback, the Earthshaker Behemoth|Quakeback, the Earthshaker Behemoth]] ([[Regions/Quaking Lands|Quaking Lands]])
 - [[Monsters/Undead/The Mad Magician of Aurumdeep, Sinker of Kingdoms|The Mad Magician of Aurumdeep, Sinker of Kingdoms]] ([[Regions/Aurumdeep|Aurumdeep]])
 
-## People (42)
+## People (138)
 ### Adventurers' Guild
 - [[NPCs/Mina Feathersby|Mina Feathersby]]
 - [[NPCs/Rodrick -Old Bear- Hale|Rodrick "Old Bear" Hale]]
@@ -1048,6 +1048,102 @@ Every population record is included in the complete register on its species note
 - [[NPCs/Corwin Fiddle|Corwin Fiddle]]
 - [[NPCs/Hesk Molloway|Hesk Molloway]]
 - [[NPCs/Wandering Merchant Ottoline|Wandering Merchant Ottoline]]
+- [[NPCs/Nan Corrow|Nan Corrow]]
+- [[NPCs/Linnet Holloway|Linnet Holloway]]
+- [[NPCs/Fenna Tilly|Fenna Tilly]]
+- [[NPCs/Hesper Dunn|Hesper Dunn]]
+- [[NPCs/Marit Holloway|Marit Holloway]]
+- [[NPCs/Tobias -Ladle- Pryce|Tobias "Ladle" Pryce]]
+- [[NPCs/Pocket|Pocket]]
+- [[NPCs/Tilda Cobb|Tilda Cobb]]
+- [[NPCs/Grandmother Brub|Grandmother Brub]]
+- [[NPCs/Calla Reeve|Calla Reeve]]
+- [[NPCs/Ysolt Marne|Ysolt Marne]]
+- [[NPCs/Hatty Swan|Hatty Swan]]
+- [[NPCs/Maud Axle|Maud Axle]]
+- [[NPCs/Rook Tull|Rook Tull]]
+- [[NPCs/Edda Pryor|Edda Pryor]]
+- [[NPCs/Sister Agna Dunmoor|Sister Agna Dunmoor]]
+- [[NPCs/Ser Bertram Colt|Ser Bertram Colt]]
+- [[NPCs/Osric Finch|Osric Finch]]
+- [[NPCs/Tolliver Pegg|Tolliver Pegg]]
+- [[NPCs/Elder Marrel Sedge|Elder Marrel Sedge]]
+- [[NPCs/Idony Fenwater|Idony Fenwater]]
+- [[NPCs/Sorrel|Sorrel]]
+- [[NPCs/Granny Hexel|Granny Hexel]]
+- [[NPCs/Alder Rushmoor|Alder Rushmoor]]
+- [[NPCs/Ysmay of Lowmere|Ysmay of Lowmere]]
+- [[NPCs/Ferryman Odran|Ferryman Odran]]
+- [[NPCs/Hester Mallow|Hester Mallow]]
+- [[NPCs/Mother Yarrow|Mother Yarrow]]
+- [[NPCs/Dilly Tuffet|Dilly Tuffet]]
+- [[NPCs/Captain Reedle Brisk|Captain Reedle Brisk]]
+- [[NPCs/Speaker Maplin Thorne|Speaker Maplin Thorne]]
+- [[NPCs/Odalie Fern|Odalie Fern]]
+- [[NPCs/Fiddlewick Brambly|Fiddlewick Brambly]]
+- [[NPCs/Pomfrey Dew|Pomfrey Dew]]
+- [[NPCs/Beatrix Combe|Beatrix Combe]]
+- [[NPCs/Nettle Thrum|Nettle Thrum]]
+- [[NPCs/Tam Thrum|Tam Thrum]]
+- [[NPCs/Elder Mossy Pennywhistle|Elder Mossy Pennywhistle]]
+- [[NPCs/Ilmarin Thistledown|Ilmarin Thistledown]]
+- [[NPCs/Elwyn Moonfern|Elwyn Moonfern]]
+- [[NPCs/Aerendil Ashwood|Aerendil Ashwood]]
+- [[NPCs/Lady Thessaly Elmwhisper|Lady Thessaly Elmwhisper]]
+- [[NPCs/Oriel Fenwood|Oriel Fenwood]]
+- [[NPCs/Ashael of the Silver Bark|Ashael of the Silver Bark]]
+- [[NPCs/Joran Tarn|Joran Tarn]]
+- [[NPCs/Chamberlain Eredhel Fairbrook|Chamberlain Eredhel Fairbrook]]
+- [[NPCs/Bowmaster Lirael Swiftthorn|Bowmaster Lirael Swiftthorn]]
+- [[NPCs/Old Ambrael|Old Ambrael]]
+- [[NPCs/Pico Stella|Pico Stella]]
+- [[NPCs/Carlotta Dessi|Carlotta Dessi]]
+- [[NPCs/Maestro Orsino Vetri|Maestro Orsino Vetri]]
+- [[NPCs/Secretary Fabrizio Ledo|Secretary Fabrizio Ledo]]
+- [[NPCs/Nerea Salt|Nerea Salt]]
+- [[NPCs/Tullio Brenta|Tullio Brenta]]
+- [[NPCs/Lucia Marchetti|Lucia Marchetti]]
+- [[NPCs/Captain Beatrice Morosina|Captain Beatrice Morosina]]
+- [[NPCs/Paolo Verro|Paolo Verro]]
+- [[NPCs/Lantern-Mistress Ottavia Ruzzini|Lantern-Mistress Ottavia Ruzzini]]
+- [[NPCs/Yaska Windtooth|Yaska Windtooth]]
+- [[NPCs/Elder Oyun|Elder Oyun]]
+- [[NPCs/Eagle-Keeper Batu|Eagle-Keeper Batu]]
+- [[NPCs/Mother Sarnai|Mother Sarnai]]
+- [[NPCs/Naran Dusksong|Naran Dusksong]]
+- [[NPCs/Camp-Master Bayar|Camp-Master Bayar]]
+- [[NPCs/Old Temuge|Old Temuge]]
+- [[NPCs/Speaker Dolgor|Speaker Dolgor]]
+- [[NPCs/Rider Khulan|Rider Khulan]]
+- [[NPCs/Moot-Keeper Tsetseg|Moot-Keeper Tsetseg]]
+- [[NPCs/Hesta Coalhand|Hesta Coalhand]]
+- [[NPCs/Grumbald Oakbarrel|Grumbald Oakbarrel]]
+- [[NPCs/Foreman Dibble Quickpick|Foreman Dibble Quickpick]]
+- [[NPCs/Engineer Fizzwick Gearsoft|Engineer Fizzwick Gearsoft]]
+- [[NPCs/High Thane Brunhild Ironvow|High Thane Brunhild Ironvow]]
+- [[NPCs/Runemaster Orm Sparkbrow|Runemaster Orm Sparkbrow]]
+- [[NPCs/Kessa Quickspark|Kessa Quickspark]]
+- [[NPCs/Furnace-Warden Dorn Coalheart|Furnace-Warden Dorn Coalheart]]
+- [[NPCs/Embra Ironvow|Embra Ironvow]]
+- [[NPCs/Old Baldur Anvilfast|Old Baldur Anvilfast]]
+- [[NPCs/Master Carpenter Daigo Hanamura|Master Carpenter Daigo Hanamura]]
+- [[NPCs/Little Hana|Little Hana]]
+- [[NPCs/Boatman Genji|Boatman Genji]]
+- [[NPCs/Okuni the Carver|Okuni the Carver]]
+- [[NPCs/Headwoman Fumiko|Headwoman Fumiko]]
+- [[NPCs/Tengu Soujo|Tengu Soujo]]
+- [[NPCs/Swordsmith Munetoshi|Swordsmith Munetoshi]]
+- [[NPCs/Priestess Aoi|Priestess Aoi]]
+- [[NPCs/Lantern-Keeper Shino|Lantern-Keeper Shino]]
+- [[NPCs/Courier-Fox Benten|Courier-Fox Benten]]
+- [[NPCs/Fire-Keeper Hrefna|Fire-Keeper Hrefna]]
+- [[NPCs/Harbourmaster Eyvind|Harbourmaster Eyvind]]
+- [[NPCs/Goodwife Gudrun|Goodwife Gudrun]]
+- [[NPCs/Thora Jarl's-Widow|Thora Jarl's-Widow]]
+- [[NPCs/Skald Ragnhild|Skald Ragnhild]]
+- [[NPCs/Old Halvard|Old Halvard]]
+- [[NPCs/Ice-Guide Sigrid|Ice-Guide Sigrid]]
+- [[NPCs/Lawspeaker Vigdis|Lawspeaker Vigdis]]
 
 ## Clans and peoples (87)
 - [[Clans/The Clockborn|The Clockborn]] — AI Clan
@@ -1155,7 +1251,7 @@ Every population record is included in the complete register on its species note
 - [[Fauna/Reef Dragon|Reef Dragon]] — Water Base
 - [[Fauna/Turtle Drake|Turtle Drake]] — Water Base
 
-## Quests (53)
+## Quests (153)
 - [[Quests/Rabbit Season|Rabbit Season]] (F, Subjugation)
 - [[Quests/Slime in the Well|Slime in the Well]] (F, OddJob)
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] (E, Trial)
@@ -1209,6 +1305,106 @@ Every population record is included in the complete register on its species note
 - [[Quests/A Story for a Scale|A Story for a Scale]] (E, OddJob)
 - [[Quests/The Fog Merchant's Coin|The Fog Merchant's Coin]] (E, OddJob)
 - [[Quests/The Name of the Blade|The Name of the Blade]] (E, OddJob)
+- [[Quests/Bread on the Step|Bread on the Step]] (F, OddJob)
+- [[Quests/Glowcap Night|Glowcap Night]] (F, Gathering)
+- [[Quests/The White Stag|The White Stag]] (E, Exploration)
+- [[Quests/The Mill That Ran Backwards|The Mill That Ran Backwards]] (E, Investigation)
+- [[Quests/Lost in the Hush|Lost in the Hush]] (E, Escort)
+- [[Quests/The Last Contract of the Silver Ladle|The Last Contract of the Silver Ladle]] (E, Escort)
+- [[Quests/Lanterns, Not Lamp Oil|Lanterns, Not Lamp Oil]] (E, Faction)
+- [[Quests/The Wolf Who Counted Sheep|The Wolf Who Counted Sheep]] (E, Subjugation)
+- [[Quests/Stew Diplomacy|Stew Diplomacy]] (E, Faction)
+- [[Quests/Eight Lamps and an Empty Niche|Eight Lamps and an Empty Niche]] (E, Exploration)
+- [[Quests/A Sword Under Every Doorstep|A Sword Under Every Doorstep]] (E, Investigation)
+- [[Quests/The Ring in the Barrow|The Ring in the Barrow]] (E, Exploration)
+- [[Quests/The River Toll Quarrel|The River Toll Quarrel]] (E, Faction)
+- [[Quests/The Wheel Thief of Eastgate|The Wheel Thief of Eastgate]] (E, Investigation)
+- [[Quests/The Plough Finds a Ledger|The Plough Finds a Ledger]] (D, Investigation)
+- [[Quests/The Friend in the Mirror|The Friend in the Mirror]] (D, Investigation)
+- [[Quests/Stand Down, Soldier|Stand Down, Soldier]] (D, Faction)
+- [[Quests/The Duelist's Last Request|The Duelist's Last Request]] (C, Hidden)
+- [[Quests/The King Wants to Go Fishing|The King Wants to Go Fishing]] (C, Escort)
+- [[Quests/What the Baron Refused|What the Baron Refused]] (C, Investigation)
+- [[Quests/The Walking Hut Loses Its Way|The Walking Hut Loses Its Way]] (D, Investigation)
+- [[Quests/The Eel Moot|The Eel Moot]] (D, Faction)
+- [[Quests/Lanterns in Jars|Lanterns in Jars]] (D, OddJob)
+- [[Quests/The Clapper in the Peat|The Clapper in the Peat]] (D, Exploration)
+- [[Quests/The Witch's Price|The Witch's Price]] (D, Faction)
+- [[Quests/High Water on the Stilts|High Water on the Stilts]] (D, Defense)
+- [[Quests/Tea with the Hag of Lowmere|Tea with the Hag of Lowmere]] (C, Faction)
+- [[Quests/The Ferryman's Holiday|The Ferryman's Holiday]] (C, Hidden)
+- [[Quests/The Choir Passes|The Choir Passes]] (C, Investigation)
+- [[Quests/The Book of Small Things|The Book of Small Things]] (C, Faction)
+- [[Quests/A Thimble of Milk|A Thimble of Milk]] (D, OddJob)
+- [[Quests/The Beetle Rider's Test|The Beetle Rider's Test]] (D, OddJob)
+- [[Quests/The Seed Recount|The Seed Recount]] (D, Faction)
+- [[Quests/The Blue in the Tapestry|The Blue in the Tapestry]] (D, Exploration)
+- [[Quests/A Cat Called Disaster|A Cat Called Disaster]] (D, OddJob)
+- [[Quests/The Aphid Run|The Aphid Run]] (D, Defense)
+- [[Quests/The Honey That Wasn't|The Honey That Wasn't]] (C, Investigation)
+- [[Quests/The Webcrawler's Larder|The Webcrawler's Larder]] (C, Escort)
+- [[Quests/The Old Shade Grows Cold|The Old Shade Grows Cold]] (C, Faction)
+- [[Quests/The Big Folk Are Asked|The Big Folk Are Asked]] (C, Faction)
+- [[Quests/The Crooked Bridge|The Crooked Bridge]] (D, OddJob)
+- [[Quests/The Girl Who Drank the Moon|The Girl Who Drank the Moon]] (D, Investigation)
+- [[Quests/A Bow Must Be Asked For|A Bow Must Be Asked For]] (D, OddJob)
+- [[Quests/Two Hundred Years of Silence|Two Hundred Years of Silence]] (C, Faction)
+- [[Quests/The Gentle Spores|The Gentle Spores]] (C, Investigation)
+- [[Quests/What the Trees Remember|What the Trees Remember]] (C, Exploration)
+- [[Quests/The Pilgrim and the World Tree|The Pilgrim and the World Tree]] (C, Escort)
+- [[Quests/A Cup of Sunwine|A Cup of Sunwine]] (B, Investigation)
+- [[Quests/The Rootward Watch|The Rootward Watch]] (B, Defense)
+- [[Quests/The Last Planting|The Last Planting]] (B, Faction)
+- [[Quests/A Coin for Every Deal|A Coin for Every Deal]] (D, OddJob)
+- [[Quests/The Counter-Song|The Counter-Song]] (D, Investigation)
+- [[Quests/A Glass Heart for the Lagoon|A Glass Heart for the Lagoon]] (D, OddJob)
+- [[Quests/Which Doge-|Which Doge?]] (C, Investigation)
+- [[Quests/Under the Rooftops|Under the Rooftops]] (C, Exploration)
+- [[Quests/The Deaf Gondolier|The Deaf Gondolier]] (C, Escort)
+- [[Quests/The Auction of Masks|The Auction of Masks]] (C, Hidden)
+- [[Quests/The Three Gaps|The Three Gaps]] (B, Defense)
+- [[Quests/The Last Song of Isolde Verro|The Last Song of Isolde Verro]] (B, Investigation)
+- [[Quests/Maelsday, All at Once|Maelsday, All at Once]] (B, Faction)
+- [[Quests/The Foal Nobody Named|The Foal Nobody Named]] (D, OddJob)
+- [[Quests/Champion of Pasture Nine|Champion of Pasture Nine]] (D, Faction)
+- [[Quests/The Eagle-Feather Trade|The Eagle-Feather Trade]] (D, Investigation)
+- [[Quests/The Ledger Is Longer Than the Whip|The Ledger Is Longer Than the Whip]] (C, Investigation)
+- [[Quests/The Grandmother's Seat|The Grandmother's Seat]] (C, Faction)
+- [[Quests/Stampede Season|Stampede Season]] (C, Defense)
+- [[Quests/The Wind Carries the Dead|The Wind Carries the Dead]] (C, Hidden)
+- [[Quests/Kade's Water Tax|Kade's Water Tax]] (B, Faction)
+- [[Quests/The Last Free Stallion|The Last Free Stallion]] (B, Capture)
+- [[Quests/The Moot of Nine Fires|The Moot of Nine Fires]] (B, Faction)
+- [[Quests/The Stone She Carried|The Stone She Carried]] (C, Investigation)
+- [[Quests/Three Hundred and One Mugs|Three Hundred and One Mugs]] (C, OddJob)
+- [[Quests/The Tap Code|The Tap Code]] (C, Investigation)
+- [[Quests/Amend the Law|Amend the Law]] (C, Faction)
+- [[Quests/The Giant's Envoy|The Giant's Envoy]] (B, Faction)
+- [[Quests/The Seal Is Warm|The Seal Is Warm]] (B, Exploration)
+- [[Quests/Runes in Cold Iron|Runes in Cold Iron]] (B, Hidden)
+- [[Quests/A Flame From Every Forge|A Flame From Every Forge]] (B, Faction)
+- [[Quests/The Thane's Granddaughter|The Thane's Granddaughter]] (A, Escort)
+- [[Quests/The Anvil That Counted|The Anvil That Counted]] (A, Hidden)
+- [[Quests/The Last Pillar|The Last Pillar]] (C, Exploration)
+- [[Quests/The Spirit Who Had No Seat|The Spirit Who Had No Seat]] (C, OddJob)
+- [[Quests/The Kappa's Bow|The Kappa's Bow]] (C, Faction)
+- [[Quests/The Mask-Carver|The Mask-Carver]] (B, Investigation)
+- [[Quests/Fourteen People and a Festival|Fourteen People and a Festival]] (B, Faction)
+- [[Quests/The Tengu's Test|The Tengu's Test]] (B, Hidden)
+- [[Quests/The Sword Given to the Gods|The Sword Given to the Gods]] (B, OddJob)
+- [[Quests/The Masked Village|The Masked Village]] (A, Faction)
+- [[Quests/The Hundredth Lantern|The Hundredth Lantern]] (A, Hidden)
+- [[Quests/A Letter Written in Courtesy|A Letter Written in Courtesy]] (A, Faction)
+- [[Quests/Wood for the Last Fire|Wood for the Last Fire]] (B, Gathering)
+- [[Quests/The Frozen Fleet|The Frozen Fleet]] (B, Defense)
+- [[Quests/A Frost Troll at the Door|A Frost Troll at the Door]] (B, Faction)
+- [[Quests/A Burning Ship on Ice|A Burning Ship on Ice]] (B, OddJob)
+- [[Quests/A Saga About the Living|A Saga About the Living]] (B, Faction)
+- [[Quests/The Survivor Who Came Back Older|The Survivor Who Came Back Older]] (A, Investigation)
+- [[Quests/A Cave of Summer|A Cave of Summer]] (A, Exploration)
+- [[Quests/The Thing|The Thing]] (A, Faction)
+- [[Quests/The Last Fire Goes Out|The Last Fire Goes Out]] (A, Defense)
+- [[Quests/The Saga, Sung|The Saga, Sung]] (A, Hidden)
 
 ## Inns (20)
 - [[Inns/The Sleeping Griffon|The Sleeping Griffon]]

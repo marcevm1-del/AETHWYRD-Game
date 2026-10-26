@@ -1,0 +1,16 @@
+---
+type: story-flag
+id: "lir_song_resolved"
+tags: [system, story-flag]
+---
+# lir_song_resolved
+
+Side quest "The Counter-Song" resolved
+
+- **Set by:** quest
+- **Written by:** [[Quests/The Counter-Song|The Counter-Song]]
+- **Read by:** No quest prerequisite currently indexed
+
+## State ownership
+
+This flag records one durable story fact. Quest gating should use it when it changes availability; presentation should check who knows the fact before exposing it in dialogue or rumor. Do not create duplicate flags for the same meaning.

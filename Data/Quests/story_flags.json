@@ -233,5 +233,515 @@
   "id": "blade_named",
   "description": "The player has told Brannoc the name of their blade",
   "setBy": "quest"
+ },
+ {
+  "id": "ww_bread_step_resolved",
+  "description": "Side quest \"Bread on the Step\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_glowcap_night_resolved",
+  "description": "Side quest \"Glowcap Night\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_white_stag_resolved",
+  "description": "Side quest \"The White Stag\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_mill_resolved",
+  "description": "Side quest \"The Mill That Ran Backwards\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_hush_resolved",
+  "description": "Side quest \"Lost in the Hush\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_silver_ladle_resolved",
+  "description": "Side quest \"The Last Contract of the Silver Ladle\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_quarry_resolved",
+  "description": "Side quest \"Lanterns, Not Lamp Oil\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_counter_resolved",
+  "description": "Side quest \"The Wolf Who Counted Sheep\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_stew_resolved",
+  "description": "Side quest \"Stew Diplomacy\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ww_eight_lamps_resolved",
+  "description": "Side quest \"Eight Lamps and an Empty Niche\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_doorstep_resolved",
+  "description": "Side quest \"A Sword Under Every Doorstep\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_ring_resolved",
+  "description": "Side quest \"The Ring in the Barrow\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_toll_resolved",
+  "description": "Side quest \"The River Toll Quarrel\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_wheels_resolved",
+  "description": "Side quest \"The Wheel Thief of Eastgate\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_ledger_resolved",
+  "description": "Side quest \"The Plough Finds a Ledger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_mirror_resolved",
+  "description": "Side quest \"The Friend in the Mirror\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_mirrors_pamphlet",
+  "description": "Clue found in \"The Friend in the Mirror\"",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_stand_down_resolved",
+  "description": "Side quest \"Stand Down, Soldier\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_duelist_resolved",
+  "description": "Side quest \"The Duelist's Last Request\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_king_resolved",
+  "description": "Side quest \"The King Wants to Go Fishing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ald_baron_resolved",
+  "description": "Side quest \"What the Baron Refused\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_hut_resolved",
+  "description": "Side quest \"The Walking Hut Loses Its Way\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_moot_resolved",
+  "description": "Side quest \"The Eel Moot\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_wisp_resolved",
+  "description": "Side quest \"Lanterns in Jars\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_clapper_resolved",
+  "description": "Side quest \"The Clapper in the Peat\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_price_resolved",
+  "description": "Side quest \"The Witch's Price\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_flood_resolved",
+  "description": "Side quest \"High Water on the Stilts\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_tea_resolved",
+  "description": "Side quest \"Tea with the Hag of Lowmere\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_ferry_resolved",
+  "description": "Side quest \"The Ferryman's Holiday\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_choir_resolved",
+  "description": "Side quest \"The Choir Passes\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gm_book_resolved",
+  "description": "Side quest \"The Book of Small Things\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_milk_resolved",
+  "description": "Side quest \"A Thimble of Milk\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_beetle_resolved",
+  "description": "Side quest \"The Beetle Rider's Test\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_recount_resolved",
+  "description": "Side quest \"The Seed Recount\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_tapestry_resolved",
+  "description": "Side quest \"The Blue in the Tapestry\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_cat_resolved",
+  "description": "Side quest \"A Cat Called Disaster\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_aphid_resolved",
+  "description": "Side quest \"The Aphid Run\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_honey_resolved",
+  "description": "Side quest \"The Honey That Wasn't\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_larder_resolved",
+  "description": "Side quest \"The Webcrawler's Larder\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_shade_resolved",
+  "description": "Side quest \"The Old Shade Grows Cold\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "md_accord_resolved",
+  "description": "Side quest \"The Big Folk Are Asked\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_bridge_resolved",
+  "description": "Side quest \"The Crooked Bridge\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_moon_resolved",
+  "description": "Side quest \"The Girl Who Drank the Moon\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_bow_resolved",
+  "description": "Side quest \"A Bow Must Be Asked For\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_silence_resolved",
+  "description": "Side quest \"Two Hundred Years of Silence\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_spores_resolved",
+  "description": "Side quest \"The Gentle Spores\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_remember_resolved",
+  "description": "Side quest \"What the Trees Remember\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_pilgrim_resolved",
+  "description": "Side quest \"The Pilgrim and the World Tree\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_sunwine_resolved",
+  "description": "Side quest \"A Cup of Sunwine\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_watch_resolved",
+  "description": "Side quest \"The Rootward Watch\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "syl_planting_resolved",
+  "description": "Side quest \"The Last Planting\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_coin_resolved",
+  "description": "Side quest \"A Coin for Every Deal\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_song_resolved",
+  "description": "Side quest \"The Counter-Song\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_heart_resolved",
+  "description": "Side quest \"A Glass Heart for the Lagoon\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_doge_resolved",
+  "description": "Side quest \"Which Doge?\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_rooftops_resolved",
+  "description": "Side quest \"Under the Rooftops\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_gondolier_resolved",
+  "description": "Side quest \"The Deaf Gondolier\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_masks_resolved",
+  "description": "Side quest \"The Auction of Masks\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_gaps_resolved",
+  "description": "Side quest \"The Three Gaps\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_isolde_resolved",
+  "description": "Side quest \"The Last Song of Isolde Verro\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lir_maelsday_resolved",
+  "description": "Side quest \"Maelsday, All at Once\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_foal_resolved",
+  "description": "Side quest \"The Foal Nobody Named\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_pasture_resolved",
+  "description": "Side quest \"Champion of Pasture Nine\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_eagle_resolved",
+  "description": "Side quest \"The Eagle-Feather Trade\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_ledger_resolved",
+  "description": "Side quest \"The Ledger Is Longer Than the Whip\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_seat_resolved",
+  "description": "Side quest \"The Grandmother's Seat\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_stampede_resolved",
+  "description": "Side quest \"Stampede Season\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_wind_resolved",
+  "description": "Side quest \"The Wind Carries the Dead\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_tax_resolved",
+  "description": "Side quest \"Kade's Water Tax\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_stallion_resolved",
+  "description": "Side quest \"The Last Free Stallion\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fan_moot_resolved",
+  "description": "Side quest \"The Moot of Nine Fires\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_stone_resolved",
+  "description": "Side quest \"The Stone She Carried\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_mugs_resolved",
+  "description": "Side quest \"Three Hundred and One Mugs\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_tap_resolved",
+  "description": "Side quest \"The Tap Code\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_law_resolved",
+  "description": "Side quest \"Amend the Law\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_envoy_resolved",
+  "description": "Side quest \"The Giant's Envoy\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_seal_resolved",
+  "description": "Side quest \"The Seal Is Warm\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_runes_resolved",
+  "description": "Side quest \"Runes in Cold Iron\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_flame_resolved",
+  "description": "Side quest \"A Flame From Every Forge\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_granddaughter_resolved",
+  "description": "Side quest \"The Thane's Granddaughter\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ih_anvil_resolved",
+  "description": "Side quest \"The Anvil That Counted\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_pillar_resolved",
+  "description": "Side quest \"The Last Pillar\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_seat_resolved",
+  "description": "Side quest \"The Spirit Who Had No Seat\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_kappa_resolved",
+  "description": "Side quest \"The Kappa's Bow\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_carver_resolved",
+  "description": "Side quest \"The Mask-Carver\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_festival_resolved",
+  "description": "Side quest \"Fourteen People and a Festival\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_tengu_resolved",
+  "description": "Side quest \"The Tengu's Test\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_sword_resolved",
+  "description": "Side quest \"The Sword Given to the Gods\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_village_resolved",
+  "description": "Side quest \"The Masked Village\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_lantern_resolved",
+  "description": "Side quest \"The Hundredth Lantern\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hsz_letter_resolved",
+  "description": "Side quest \"A Letter Written in Courtesy\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_wood_resolved",
+  "description": "Side quest \"Wood for the Last Fire\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_fleet_resolved",
+  "description": "Side quest \"The Frozen Fleet\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_troll_resolved",
+  "description": "Side quest \"A Frost Troll at the Door\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_ship_resolved",
+  "description": "Side quest \"A Burning Ship on Ice\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_saga_resolved",
+  "description": "Side quest \"A Saga About the Living\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_survivor_resolved",
+  "description": "Side quest \"The Survivor Who Came Back Older\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_shattered_sky",
+  "description": "Clue found in \"The Survivor Who Came Back Older\"",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_summer_resolved",
+  "description": "Side quest \"A Cave of Summer\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_thing_resolved",
+  "description": "Side quest \"The Thing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_lastfire_resolved",
+  "description": "Side quest \"The Last Fire Goes Out\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "fv_saga_sung_resolved",
+  "description": "Side quest \"The Saga, Sung\" resolved",
+  "setBy": "quest"
  }
 ]

@@ -31,6 +31,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 - [[Quests/Notes in the Margins|Notes in the Margins]]
 - [[Quests/The Reading Room Audit|The Reading Room Audit]]
 - [[Quests/The Cookbook Question|The Cookbook Question]]
+- [[Quests/Eight Lamps and an Empty Niche|Eight Lamps and an Empty Niche]]
 - [[Quests/Weekly Board/The Fortune Is Always Bad|The Fortune Is Always Bad]]
 
 > [!warning]- Spoilers (Canon §3)

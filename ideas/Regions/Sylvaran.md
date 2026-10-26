@@ -100,9 +100,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Thorro|Thorro]] (Predator): A bear-like river predator that fishes the moonwells.
 
+## People
+
+- [[NPCs/Ilmarin Thistledown|Ilmarin Thistledown]]: Apprentice bridge-grower
+- [[NPCs/Elwyn Moonfern|Elwyn Moonfern]]: Moonwell hamlet keeper
+- [[NPCs/Aerendil Ashwood|Aerendil Ashwood]]: Master bowyer
+- [[NPCs/Lady Thessaly Elmwhisper|Lady Thessaly Elmwhisper]]: Elder of House Elmwhisper
+- [[NPCs/Oriel Fenwood|Oriel Fenwood]]: Hamlet warden
+- [[NPCs/Ashael of the Silver Bark|Ashael of the Silver Bark]]: Dryad of an old silver birch
+- [[NPCs/Joran Tarn|Joran Tarn]]: Pilgrim
+- [[NPCs/Chamberlain Eredhel Fairbrook|Chamberlain Eredhel Fairbrook]]: Chamberlain of the Queen's court
+- [[NPCs/Bowmaster Lirael Swiftthorn|Bowmaster Lirael Swiftthorn]]: Bowmaster of the Rootward Watch
+- [[NPCs/Old Ambrael|Old Ambrael]]: Retired tree-planter
+
 ## Inns
 
 - [[Inns/Leafhall Rest|Leafhall Rest]] (Sylvaran court city)
+
+## Quests
+
+- [[Quests/The Crooked Bridge|The Crooked Bridge]] (D)
+- [[Quests/The Girl Who Drank the Moon|The Girl Who Drank the Moon]] (D)
+- [[Quests/A Bow Must Be Asked For|A Bow Must Be Asked For]] (D)
+- [[Quests/Two Hundred Years of Silence|Two Hundred Years of Silence]] (C)
+- [[Quests/The Gentle Spores|The Gentle Spores]] (C)
+- [[Quests/What the Trees Remember|What the Trees Remember]] (C)
+- [[Quests/The Pilgrim and the World Tree|The Pilgrim and the World Tree]] (C)
+- [[Quests/A Cup of Sunwine|A Cup of Sunwine]] (B)
+- [[Quests/The Rootward Watch|The Rootward Watch]] (B)
+- [[Quests/The Last Planting|The Last Planting]] (B)
 
 ## Monsters (16)
 

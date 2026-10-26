@@ -98,9 +98,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Velvet Bee|Velvet Bee]] (Insect): A sparrow-sized bee with a furry body, the source of Mossdeep honey.
 
+## People
+
+- [[NPCs/Dilly Tuffet|Dilly Tuffet]]: Keeper of the Giant's shrine
+- [[NPCs/Captain Reedle Brisk|Captain Reedle Brisk]]: Captain of the Beetle Riders
+- [[NPCs/Speaker Maplin Thorne|Speaker Maplin Thorne]]: Speaker of the toadstool council
+- [[NPCs/Odalie Fern|Odalie Fern]]: Moss-weaver
+- [[NPCs/Fiddlewick Brambly|Fiddlewick Brambly]]: Baker
+- [[NPCs/Pomfrey Dew|Pomfrey Dew]]: Herd-master
+- [[NPCs/Beatrix Combe|Beatrix Combe]]: Honey-keeper guild-head
+- [[NPCs/Nettle Thrum|Nettle Thrum]]: Mother of a missing rider
+- [[NPCs/Tam Thrum|Tam Thrum]]: Seventeen-year-old beetle rider
+- [[NPCs/Elder Mossy Pennywhistle|Elder Mossy Pennywhistle]]: Keeper of the Old Shade
+
 ## Inns
 
 - [[Inns/The Thimble & Thistle|The Thimble & Thistle]] (Mossdeep)
+
+## Quests
+
+- [[Quests/A Thimble of Milk|A Thimble of Milk]] (D)
+- [[Quests/The Beetle Rider's Test|The Beetle Rider's Test]] (D)
+- [[Quests/The Seed Recount|The Seed Recount]] (D)
+- [[Quests/The Blue in the Tapestry|The Blue in the Tapestry]] (D)
+- [[Quests/A Cat Called Disaster|A Cat Called Disaster]] (D)
+- [[Quests/The Aphid Run|The Aphid Run]] (D)
+- [[Quests/The Honey That Wasn't|The Honey That Wasn't]] (C)
+- [[Quests/The Webcrawler's Larder|The Webcrawler's Larder]] (C)
+- [[Quests/The Old Shade Grows Cold|The Old Shade Grows Cold]] (C)
+- [[Quests/The Big Folk Are Asked|The Big Folk Are Asked]] (C)
 
 ## Monsters (11)
 

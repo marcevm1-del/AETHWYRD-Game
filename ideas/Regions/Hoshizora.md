@@ -95,9 +95,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Shogun's Houses|The Shogun's Houses]] (Emperor Clan, led by Lord Takeda Ryunosuke of the Crimson House): The great houses that serve the shogun, each with its own armour colour and crest. Some have quietly accepted Kurogane's masks.
 - [[Clans/The Ember-tails|The Ember-tails]] (Red Panda Clan, led by Kip Embertail, Street-Captain): Cheerful wanderers of the bamboo villages.
 
+## People
+
+- [[NPCs/Master Carpenter Daigo Hanamura|Master Carpenter Daigo Hanamura]]: Master shrine carpenter
+- [[NPCs/Little Hana|Little Hana]]: Festival organiser, aged nine
+- [[NPCs/Boatman Genji|Boatman Genji]]: River boatman
+- [[NPCs/Okuni the Carver|Okuni the Carver]]: Mask-carver
+- [[NPCs/Headwoman Fumiko|Headwoman Fumiko]]: Headwoman of a village of fourteen
+- [[NPCs/Tengu Soujo|Tengu Soujo]]: Tengu swordmaster
+- [[NPCs/Swordsmith Munetoshi|Swordsmith Munetoshi]]: Master swordsmith
+- [[NPCs/Priestess Aoi|Priestess Aoi]]: Priestess of Kasumi shrine
+- [[NPCs/Lantern-Keeper Shino|Lantern-Keeper Shino]]: Keeper of the Hundred Lanterns
+- [[NPCs/Courier-Fox Benten|Courier-Fox Benten]]: Go-between and courier
+
 ## Inns
 
 - [[Inns/Ryokan Moon-on-Water|Ryokan Moon-on-Water]] (Hoshizora City)
+
+## Quests
+
+- [[Quests/The Last Pillar|The Last Pillar]] (C)
+- [[Quests/The Spirit Who Had No Seat|The Spirit Who Had No Seat]] (C)
+- [[Quests/The Kappa's Bow|The Kappa's Bow]] (C)
+- [[Quests/The Mask-Carver|The Mask-Carver]] (B)
+- [[Quests/Fourteen People and a Festival|Fourteen People and a Festival]] (B)
+- [[Quests/The Tengu's Test|The Tengu's Test]] (B)
+- [[Quests/The Sword Given to the Gods|The Sword Given to the Gods]] (B)
+- [[Quests/The Masked Village|The Masked Village]] (A)
+- [[Quests/The Hundredth Lantern|The Hundredth Lantern]] (A)
+- [[Quests/A Letter Written in Courtesy|A Letter Written in Courtesy]] (A)
 
 ## Monsters (102)
 

@@ -94,6 +94,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Lagoon Folk|The Lagoon Folk]] (Merfolk Clan, led by Queen Corallin of the Water-Gates): The sea-elves and merfolk of Lirian's outer lagoon, trading through water-gates.
 - [[Clans/The Canal Otters|The Canal Otters]] (Otter Clan, led by Gondolier Pip Slipwater): Lirian's gondoliers and divers, cheerful and nosy.
 
+## People
+
+- [[NPCs/Pico Stella|Pico Stella]]: Canal diver
+- [[NPCs/Carlotta Dessi|Carlotta Dessi]]: Street singer
+- [[NPCs/Maestro Orsino Vetri|Maestro Orsino Vetri]]: Master glassblower
+- [[NPCs/Secretary Fabrizio Ledo|Secretary Fabrizio Ledo]]: Secretary to the Doge
+- [[NPCs/Nerea Salt|Nerea Salt]]: Diver-captain of the Lantern Guild
+- [[NPCs/Tullio Brenta|Tullio Brenta]]: Deaf gondolier
+- [[NPCs/Lucia Marchetti|Lucia Marchetti]]: Seamstress with a stolen name
+- [[NPCs/Captain Beatrice Morosina|Captain Beatrice Morosina]]: Captain of the fast fleet
+- [[NPCs/Paolo Verro|Paolo Verro]]: Accompanist to Isolde Verro
+- [[NPCs/Lantern-Mistress Ottavia Ruzzini|Lantern-Mistress Ottavia Ruzzini]]: Lantern-Mistress of Maelsday
+
+## Quests
+
+- [[Quests/A Coin for Every Deal|A Coin for Every Deal]] (D)
+- [[Quests/The Counter-Song|The Counter-Song]] (D)
+- [[Quests/A Glass Heart for the Lagoon|A Glass Heart for the Lagoon]] (D)
+- [[Quests/Which Doge-|Which Doge?]] (C)
+- [[Quests/Under the Rooftops|Under the Rooftops]] (C)
+- [[Quests/The Deaf Gondolier|The Deaf Gondolier]] (C)
+- [[Quests/The Auction of Masks|The Auction of Masks]] (C)
+- [[Quests/The Three Gaps|The Three Gaps]] (B)
+- [[Quests/The Last Song of Isolde Verro|The Last Song of Isolde Verro]] (B)
+- [[Quests/Maelsday, All at Once|Maelsday, All at Once]] (B)
+
 ## Monsters (30)
 
 | Monster | Family | Rank | Level |

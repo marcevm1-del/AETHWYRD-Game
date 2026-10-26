@@ -1957,5 +1957,3958 @@
   "setsFlags": [
    "blade_named"
   ]
+ },
+ {
+  "id": "qst_ww_bread_on_the_step",
+  "title": "Bread on the Step",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_nan_corrow",
+  "region": "reg_whisperwood",
+  "summary": "Nan's bread vanishes from a ruined waystation step every night. The thief is an eighty-year-late courier with a letter for her grandmother.",
+  "requirements": {
+   "minLevel": 4
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_waystation_step"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_nan_corrow"
+   },
+   {
+    "kind": "choice",
+    "target": "read_aloud_or_leave_alone"
+   }
+  ],
+  "rewards": {
+   "gold": 80,
+   "gp": 9,
+   "xp": 230,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_bread_step_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_glowcap_night",
+  "title": "Glowcap Night",
+  "rank": "F",
+  "type": "Gathering",
+  "giver": "npc_fenna_tilly",
+  "region": "reg_whisperwood",
+  "summary": "Millbrook's children gather glowcaps for the Lantern of the Year. One twin wants the prize; the other wants to free a moth.",
+  "requirements": {
+   "minLevel": 5
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_glowcap_dell",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "free_share_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "gp": 8,
+   "xp": 200,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_glowcap_night_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_white_stag",
+  "title": "The White Stag",
+  "rank": "E",
+  "type": "Exploration",
+  "giver": "npc_wren_ashbourne",
+  "region": "reg_whisperwood",
+  "summary": "Wren has tracked the White Stag for ten years without ever drawing her bow. The stag is guarding the last white fawns from poachers.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_stag_ravine"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_wren_ashbourne"
+   },
+   {
+    "kind": "choice",
+    "target": "report_talk_or_ward"
+   }
+  ],
+  "rewards": {
+   "gold": 240,
+   "gp": 18,
+   "xp": 780
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_white_stag_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_mill_runs_backwards",
+  "title": "The Mill That Ran Backwards",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_hesper_dunn",
+  "region": "reg_whisperwood",
+  "summary": "Millbrook's wheel turns backwards every night. A displaced river child is doing it to be noticed.",
+  "requirements": {
+   "minLevel": 11
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "millbrook_mill_night"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_hesper_dunn"
+   },
+   {
+    "kind": "reach",
+    "target": "brindle_weir"
+   },
+   {
+    "kind": "choice",
+    "target": "fishway_remove_or_relocate"
+   }
+  ],
+  "rewards": {
+   "gold": 250,
+   "gp": 18,
+   "xp": 800
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_mill_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_lost_in_the_hush",
+  "title": "Lost in the Hush",
+  "rank": "E",
+  "type": "Escort",
+  "giver": "npc_marit_holloway",
+  "region": "reg_whisperwood",
+  "summary": "A child has walked into the Hush, where sound dies. She is visiting her deaf grandfather in secret.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_hush_marker"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_linnet_holloway"
+   },
+   {
+    "kind": "choice",
+    "target": "how_to_tell_marit"
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 830
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_hush_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_silver_ladle",
+  "title": "The Last Contract of the Silver Ladle",
+  "rank": "E",
+  "type": "Escort",
+  "giver": "npc_tobias_pryce",
+  "region": "reg_whisperwood",
+  "summary": "Four seventy-year-old adventurers go back to a sinkhole to bring home their dead leader's lute, and need someone to watch their backs.",
+  "requirements": {
+   "minLevel": 13
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_old_sinkhole"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_tobias_pryce"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_goblin",
+    "count": 4
+   },
+   {
+    "kind": "kill",
+    "target": "mon_blue_slime",
+    "count": 4
+   },
+   {
+    "kind": "choice",
+    "target": "let_them_lead_or_help"
+   }
+  ],
+  "rewards": {
+   "gold": 280,
+   "gp": 22,
+   "xp": 900
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_silver_ladle_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_lanterns_not_lamp_oil",
+  "title": "Lanterns, Not Lamp Oil",
+  "rank": "E",
+  "type": "Faction",
+  "giver": "npc_pocket_kobold",
+  "region": "reg_whisperwood",
+  "summary": "The kobold quarry crew is on strike. They want lanterns instead of lamp oil, and a small hat.",
+  "requirements": {
+   "minLevel": 11
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pocket_kobold"
+   },
+   {
+    "kind": "reach",
+    "target": "whisperwood_quarry_office"
+   },
+   {
+    "kind": "choice",
+    "target": "fair_cheap_or_inspect"
+   }
+  ],
+  "rewards": {
+   "gold": 240,
+   "gp": 18,
+   "xp": 760
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_quarry_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_wolf_counted_sheep",
+  "title": "The Wolf Who Counted Sheep",
+  "rank": "E",
+  "type": "Subjugation",
+  "giver": "npc_tilda_cobb",
+  "region": "reg_whisperwood",
+  "summary": "A bounty is on a lone wolf that sleeps beside the Cobb flock. The girl who feeds her asks you to look first.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "cobb_farm_barn_night"
+   },
+   {
+    "kind": "choice",
+    "target": "bounty_relocate_or_tame"
+   }
+  ],
+  "rewards": {
+   "gold": 220,
+   "gp": 16,
+   "xp": 740
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_counter_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_stew_diplomacy",
+  "title": "Stew Diplomacy",
+  "rank": "E",
+  "type": "Faction",
+  "giver": "npc_grandmother_brub",
+  "region": "reg_whisperwood",
+  "summary": "The six Hollowpine goblin clans will not share a table. Grandmother Brub needs one ingredient from each clan for a stew nobody has made in a generation.",
+  "requirements": {
+   "minLevel": 14
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_grandmother_brub"
+   },
+   {
+    "kind": "reach",
+    "target": "hollowpine_six_camps",
+    "count": 6
+   },
+   {
+    "kind": "choice",
+    "target": "barter_favour_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 320,
+   "gp": 24,
+   "xp": 1100
+  },
+  "prerequisites": {
+   "flags": [
+    "tyrant_slain_reg_whisperwood"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_stew_resolved"
+  ]
+ },
+ {
+  "id": "qst_ww_eight_lamps",
+  "title": "Eight Lamps and an Empty Niche",
+  "rank": "E",
+  "type": "Exploration",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_whisperwood",
+  "summary": "Eolande wants the old kingdom's waystation lamps relit. Eight are carved. The ninth niche has been defaced.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_old_road_lamps",
+    "count": 8
+   },
+   {
+    "kind": "reach",
+    "target": "whisperwood_ninth_niche"
+   },
+   {
+    "kind": "choice",
+    "target": "sketch_lamp_or_coin"
+   }
+  ],
+  "rewards": {
+   "gold": 270,
+   "gp": 20,
+   "xp": 880
+  },
+  "prerequisites": {
+   "flags": [
+    "saw_nine_thrones_mural"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ww_eight_lamps_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_doorstep_sword",
+  "title": "A Sword Under Every Doorstep",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_calla_reeve",
+  "region": "reg_aldmere",
+  "summary": "Calla has found a sword under her doorstep. Every farm in the valley has one. The barrow dead remember why.",
+  "requirements": {
+   "minLevel": 16
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_calla_reeve"
+   },
+   {
+    "kind": "reach",
+    "target": "barrow_road_night"
+   },
+   {
+    "kind": "choice",
+    "target": "put_back_church_or_tell"
+   }
+  ],
+  "rewards": {
+   "gold": 300,
+   "gp": 22,
+   "xp": 1000
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ald_doorstep_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_ring_in_barrow",
+  "title": "The Ring in the Barrow",
+  "rank": "E",
+  "type": "Exploration",
+  "giver": "npc_ysolt_marne",
+  "region": "reg_aldmere",
+  "summary": "A groom has vanished the night before his wedding to ask a barrow's dead for his great-grandfather's ring. They said yes, on one condition.",
+  "requirements": {
+   "minLevel": 17
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "greyhollow_barrow_hall"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_ysolt_marne"
+   },
+   {
+    "kind": "choice",
+    "target": "chapel_or_barrow_wedding"
+   }
+  ],
+  "rewards": {
+   "gold": 300,
+   "gp": 22,
+   "xp": 1000
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ald_ring_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_river_toll",
+  "title": "The River Toll Quarrel",
+  "rank": "E",
+  "type": "Faction",
+  "giver": "npc_hatty_swan",
+  "region": "reg_aldmere",
+  "summary": "Two noble houses and the river guild have argued over a toll for forty years. The ledger shows the money has been going somewhere else.",
+  "requirements": {
+   "minLevel": 18
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hatty_swan"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_council_chamber"
+   },
+   {
+    "kind": "choice",
+    "target": "expose_settle_or_leverage"
+   }
+  ],
+  "rewards": {
+   "gold": 340,
+   "gp": 24,
+   "xp": 1100
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ald_toll_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_wheel_thief",
+  "title": "The Wheel Thief of Eastgate",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_maud_axle",
+  "region": "reg_aldmere",
+  "summary": "Eleven wheels have vanished from a cartwright's yard. The thief is a nine-year-old building a soapbox racer.",
+  "requirements": {
+   "minLevel": 15
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "eastgate_yard_night"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_maud_axle"
+   },
+   {
+    "kind": "choice",
+    "target": "take_it_to_maud_buy_or_race"
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 900
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "ald_wheels_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_ledger",
+  "title": "The Plough Finds a Ledger",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_rook_tull",
+  "region": "reg_aldmere",
+  "summary": "A plough turns up a rotted strongbox and a ledger from the Grey Harvest. It names the family that sold grain at famine prices, and the families that paid.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rook_tull"
+   },
+   {
+    "kind": "reach",
+    "target": "ventnor_house"
+   },
+   {
+    "kind": "choice",
+    "target": "expose_restitution_or_bury"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "ald_ledger_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_mirror_friend",
+  "title": "The Friend in the Mirror",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_edda_pryor",
+  "region": "reg_aldmere",
+  "summary": "The children of a Candle Street orphanage have a friend in the mirror. A pamphlet bearing a hand-mirror sigil has been pushed under the door.",
+  "requirements": {
+   "minLevel": 36
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "candle_street_nursery_night"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_edda_pryor"
+   },
+   {
+    "kind": "choice",
+    "target": "name_candle_or_cover"
+   }
+  ],
+  "rewards": {
+   "gold": 1400,
+   "gp": 85,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "ald_mirror_resolved",
+   "clue_mirrors_pamphlet"
+  ]
+ },
+ {
+  "id": "qst_ald_stand_down",
+  "title": "Stand Down, Soldier",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_agna_dunmoor",
+  "region": "reg_aldmere",
+  "summary": "The Greyhollow dead wait nightly at a crossroads for an order nobody has given. A captain's seal in an old cairn can discharge the lesser dead.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_agna_dunmoor"
+   },
+   {
+    "kind": "reach",
+    "target": "greyhollow_crossroads_night"
+   },
+   {
+    "kind": "reach",
+    "target": "merrin_halt_cairn"
+   },
+   {
+    "kind": "choice",
+    "target": "read_the_order"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "ald_stand_down_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_duelist_request",
+  "title": "The Duelist's Last Request",
+  "rank": "C",
+  "type": "Hidden",
+  "giver": "npc_bertram_colt",
+  "region": "reg_aldmere",
+  "summary": "A retired duelist asks you to lose a mock duel in front of his granddaughter. He has been hiding a gift for forty years.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bertram_colt"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_practice_yard"
+   },
+   {
+    "kind": "choice",
+    "target": "lose_win_or_confess"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ald_duelist_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_king_fishing",
+  "title": "The King Wants to Go Fishing",
+  "rank": "C",
+  "type": "Escort",
+  "giver": "npc_osric_finch",
+  "region": "reg_aldmere",
+  "summary": "King Alaric IV has asked for one afternoon of fishing. His valet asks you to get him out of the palace.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_osric_finch"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_osric_finch"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_river_bend"
+   },
+   {
+    "kind": "choice",
+    "target": "return_before_curfew_or_stay"
+   }
+  ],
+  "rewards": {
+   "gold": 4200,
+   "gp": 230,
+   "xp": 15500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ald_king_resolved"
+  ]
+ },
+ {
+  "id": "qst_ald_baron_refused",
+  "title": "What the Baron Refused",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_archivist_orrow",
+  "region": "reg_aldmere",
+  "summary": "Ashgrave's sealed letters say he refused an order to seize the valley's grain in the Grey Harvest. The dead who march are still hauling it.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_archivist_orrow"
+   },
+   {
+    "kind": "reach",
+    "target": "greyhollow_barrow_chest"
+   },
+   {
+    "kind": "reach",
+    "target": "barrow_road_night"
+   },
+   {
+    "kind": "choice",
+    "target": "publish_feed_or_both"
+   }
+  ],
+  "rewards": {
+   "gold": 4500,
+   "gp": 245,
+   "xp": 16500
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_ald_stand_down"
+   ],
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ald_baron_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_walking_hut",
+  "title": "The Walking Hut Loses Its Way",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_tolliver_pegg",
+  "region": "reg_greymoor",
+  "summary": "The Walking Hut has started walking in circles. It is looking for its sibling, which the Choir's silence swallowed.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tolliver_pegg"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_hut_circle"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_second_hut"
+   },
+   {
+    "kind": "choice",
+    "target": "follow_or_witchwood_home"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "gm_hut_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_eel_moot",
+  "title": "The Eel Moot",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_marrel_sedge",
+  "region": "reg_greymoor",
+  "summary": "Two families claim the same eel trap. The moot asks a stranger to say, quietly, what they saw.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_marrel_sedge"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_eel_trap"
+   },
+   {
+    "kind": "choice",
+    "target": "nessa_corm_or_pettifer"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "gm_moot_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_lanterns_in_jars",
+  "title": "Lanterns in Jars",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_idony_fenwater",
+  "region": "reg_greymoor",
+  "summary": "A farmed wisp hums a lullaby nobody remembers. It is the last song of a drowned boatman, and his daughter has been singing it without knowing why.",
+  "requirements": {
+   "minLevel": 36
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_idony_fenwater"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_willow_house"
+   },
+   {
+    "kind": "choice",
+    "target": "give_release_or_sing"
+   }
+  ],
+  "rewards": {
+   "gold": 1400,
+   "gp": 85,
+   "xp": 5800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "gm_wisp_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_clapper_peat",
+  "title": "The Clapper in the Peat",
+  "rank": "D",
+  "type": "Exploration",
+  "giver": "npc_sorrel_boy",
+  "region": "reg_greymoor",
+  "summary": "A boy believes the Silence is his fault because he rang the abbey bell last. The clapper was taken by a monk who is still guarding it in the peat.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sorrel_boy"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_abbey_crypt"
+   },
+   {
+    "kind": "choice",
+    "target": "give_hide_or_keep"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "gm_clapper_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_witch_price",
+  "title": "The Witch's Price",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_granny_hexel",
+  "region": "reg_greymoor",
+  "summary": "A child stole a jar of salve from a witch. Granny Hexel needs an outsider to argue for him in the witches' court.",
+  "requirements": {
+   "minLevel": 44
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_granny_hexel"
+   },
+   {
+    "kind": "reach",
+    "target": "witchwood_court"
+   },
+   {
+    "kind": "choice",
+    "target": "memory_service_or_favour"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6900
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "gm_price_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_high_water",
+  "title": "High Water on the Stilts",
+  "rank": "D",
+  "type": "Defense",
+  "giver": "npc_alder_rushmoor",
+  "region": "reg_greymoor",
+  "summary": "A flood is coming to three stilt-villages. The player decides who and what goes first, and whether to open the sluice.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_alder_rushmoor"
+   },
+   {
+    "kind": "defend",
+    "target": "greymoor_dyke"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_three_villages",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "dyke_or_sluice"
+   }
+  ],
+  "rewards": {
+   "gold": 1800,
+   "gp": 100,
+   "xp": 7000
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "gm_flood_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_tea_hag",
+  "title": "Tea with the Hag of Lowmere",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_ysmay_hag",
+  "region": "reg_greymoor",
+  "summary": "A bog hag with beautiful manners has invited you to tea, and has been practising for two hundred years.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ysmay_hag"
+   },
+   {
+    "kind": "reach",
+    "target": "lowmere_hut"
+   },
+   {
+    "kind": "choice",
+    "target": "honest_polite_or_help_bake"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "gm_tea_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_ferryman_holiday",
+  "title": "The Ferryman's Holiday",
+  "rank": "C",
+  "type": "Hidden",
+  "giver": "npc_ferryman_odran",
+  "region": "reg_greymoor",
+  "summary": "The ferryman who carries Greymoor's dead asks you to take the pole for one night. Each passenger has one thing to say.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ferryman_odran"
+   },
+   {
+    "kind": "reach",
+    "target": "lowmere_reach_night"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_abbey_shore"
+   },
+   {
+    "kind": "choice",
+    "target": "comfort_truth_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 220,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "gm_ferry_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_choir_passes",
+  "title": "The Choir Passes",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_hester_mallow",
+  "region": "reg_greymoor",
+  "summary": "The Choir of Silence passes through the village tonight. A widow wants to hold on to her husband's memory for one more night.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hester_mallow"
+   },
+   {
+    "kind": "defend",
+    "target": "greymoor_reed_house_night"
+   },
+   {
+    "kind": "choice",
+    "target": "speak_guard_or_both"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "gm_choir_resolved"
+  ]
+ },
+ {
+  "id": "qst_gm_book_small_things",
+  "title": "The Book of Small Things",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_mother_yarrow",
+  "region": "reg_greymoor",
+  "summary": "A witch-elder believes the best defence against the Choir of Silence is writing down the small things people want to keep.",
+  "requirements": {
+   "minLevel": 68
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_mother_yarrow"
+   },
+   {
+    "kind": "reach",
+    "target": "greymoor_villages_pages",
+    "count": 5
+   },
+   {
+    "kind": "choice",
+    "target": "name_the_book"
+   }
+  ],
+  "rewards": {
+   "gold": 4600,
+   "gp": 250,
+   "xp": 17000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gm_choir_passes"
+   ],
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "gm_book_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_thimble_milk",
+  "title": "A Thimble of Milk",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_dilly_tuffet",
+  "region": "reg_mossdeep",
+  "summary": "A shrine-keeper has left a thimble of milk for a legendary giant for sixty years. It always vanishes. The giant is real, and shy.",
+  "requirements": {
+   "minLevel": 36
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dilly_tuffet"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_giants_shrine_dusk"
+   },
+   {
+    "kind": "choice",
+    "target": "meet_thank_or_watch"
+   }
+  ],
+  "rewards": {
+   "gold": 1400,
+   "gp": 85,
+   "xp": 5800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "md_milk_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_beetle_test",
+  "title": "The Beetle Rider's Test",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_reedle_brisk",
+  "region": "reg_mossdeep",
+  "summary": "A twelve-year-old is taking the beetle rider's test. The Captain wants you riding close, without her knowing.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_reedle_brisk"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_beetle_course"
+   },
+   {
+    "kind": "choice",
+    "target": "nudge_hold_or_confess"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6000
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "md_beetle_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_seed_recount",
+  "title": "The Seed Recount",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_maplin_thorne",
+  "region": "reg_mossdeep",
+  "summary": "The council's vote on whether to ask the big folk for help has one seed too many. The culprit is a mouse, and the town is divided.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_maplin_thorne"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_council_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "ask_refuse_or_abstain"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "md_recount_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_blue_tapestry",
+  "title": "The Blue in the Tapestry",
+  "rank": "D",
+  "type": "Exploration",
+  "giver": "npc_odalie_fern",
+  "region": "reg_mossdeep",
+  "summary": "A moss-weaver needs the last blue thread to finish her grandmother's tapestry. It nests at the edge of Mother Webcrawler's range.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_odalie_fern"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_glowfly_hollow"
+   },
+   {
+    "kind": "choice",
+    "target": "take_gently_or_quickly"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6400
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "md_tapestry_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_cat_disaster",
+  "title": "A Cat Called Disaster",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_fiddlewick_brambly",
+  "region": "reg_mossdeep",
+  "summary": "A stray kitten the size of a landslide has overturned Fiddlewick's pie cart twice. She is just playing.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fiddlewick_brambly"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_fern_clearing_dusk"
+   },
+   {
+    "kind": "choice",
+    "target": "oswin_farm_or_guardian"
+   }
+  ],
+  "rewards": {
+   "gold": 1400,
+   "gp": 85,
+   "xp": 5800
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_md_thimble_milk"
+   ],
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "md_cat_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_aphid_run",
+  "title": "The Aphid Run",
+  "rank": "D",
+  "type": "Defense",
+  "giver": "npc_pomfrey_dew",
+  "region": "reg_mossdeep",
+  "summary": "A hailstorm is coming and a thousand aphids must be driven under cover, including a very stubborn bull.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pomfrey_dew"
+   },
+   {
+    "kind": "defend",
+    "target": "mossdeep_aphid_pasture"
+   },
+   {
+    "kind": "choice",
+    "target": "ask_push_or_lead"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "md_aphid_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_honey_fraud",
+  "title": "The Honey That Wasn't",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_beatrix_combe",
+  "region": "reg_mossdeep",
+  "summary": "Mossdeep honey is being mixed with syrup between the hive and the Aldmere market. The Thimblefolk are paid for the full jar and cheated of the difference.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_beatrix_combe"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_honey_market"
+   },
+   {
+    "kind": "choice",
+    "target": "public_quiet_or_sting"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "md_honey_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_webcrawler_larder",
+  "title": "The Webcrawler's Larder",
+  "rank": "C",
+  "type": "Escort",
+  "giver": "npc_nettle_thrum",
+  "region": "reg_mossdeep",
+  "summary": "Seven beetle riders are being held alive in Mother Webcrawler's larder. A mother asks a big-folk stranger to bring her son home.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_nettle_thrum"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_high_fern_larder"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_tam_thrum"
+   },
+   {
+    "kind": "choice",
+    "target": "cut_stealth_or_speak"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "md_larder_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_old_shade_cold",
+  "title": "The Old Shade Grows Cold",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_mossy_pennywhistle",
+  "region": "reg_mossdeep",
+  "summary": "The warm springs beneath the Old Shade are cooling. A prospector has tunnelled into the tree's mana-line without knowing it is alive.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_mossy_pennywhistle"
+   },
+   {
+    "kind": "reach",
+    "target": "old_shade_roots_tunnel"
+   },
+   {
+    "kind": "choice",
+    "target": "close_redirect_or_alternative"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "md_shade_resolved"
+  ]
+ },
+ {
+  "id": "qst_md_big_folk_asked",
+  "title": "The Big Folk Are Asked",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_maplin_thorne",
+  "region": "reg_mossdeep",
+  "summary": "The Thimblefolk council has written an eleven-page request to the big folk. It is really a peace-offer to Mother Webcrawler.",
+  "requirements": {
+   "minLevel": 68
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_maplin_thorne"
+   },
+   {
+    "kind": "reach",
+    "target": "mossdeep_webcrawler_gate"
+   },
+   {
+    "kind": "choice",
+    "target": "tithe_hunting_ground_or_nothing"
+   }
+  ],
+  "rewards": {
+   "gold": 4600,
+   "gp": 250,
+   "xp": 17000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_md_seed_recount"
+   ],
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "md_accord_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_crooked_bridge",
+  "title": "The Crooked Bridge",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_ilmarin_thistledown",
+  "region": "reg_sylvaran",
+  "summary": "A living bridge has grown crooked, away from the court and down toward the moonwell hamlets. The court wants it cut.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ilmarin_thistledown"
+   },
+   {
+    "kind": "reach",
+    "target": "lothaniel_crooked_bridge_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "gift_mirror_or_toll_free"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "syl_bridge_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_girl_drank_moon",
+  "title": "The Girl Who Drank the Moon",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_elwyn_moonfern",
+  "region": "reg_sylvaran",
+  "summary": "A seven-year-old drank from a forbidden moonwell. The well is dark and the child now shines. The court wants the glow returned.",
+  "requirements": {
+   "minLevel": 44
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_elwyn_moonfern"
+   },
+   {
+    "kind": "reach",
+    "target": "sylvaran_moonwell_hamlet"
+   },
+   {
+    "kind": "choice",
+    "target": "legend_trial_or_child_speaks"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "syl_moon_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_bow_asked",
+  "title": "A Bow Must Be Asked For",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_aerendil_ashwood",
+  "region": "reg_sylvaran",
+  "summary": "A bowyer's apprentice has to make a war-bow in a week. The ash she wants has said no three times.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_aerendil_ashwood"
+   },
+   {
+    "kind": "reach",
+    "target": "sylvaran_river_bend_ash"
+   },
+   {
+    "kind": "choice",
+    "target": "storm_limb_or_other_tree"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "syl_bow_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_two_hundred_years",
+  "title": "Two Hundred Years of Silence",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_thessaly_elmwhisper",
+  "region": "reg_sylvaran",
+  "summary": "A three-hundred-year-old noblewoman hasn't spoken to her sister in two hundred years and can't remember why.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_thessaly_elmwhisper"
+   },
+   {
+    "kind": "reach",
+    "target": "elmwhisper_library"
+   },
+   {
+    "kind": "choice",
+    "target": "read_leave_or_burn"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "syl_silence_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_gentle_spores",
+  "title": "The Gentle Spores",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_oriel_fenwood",
+  "region": "reg_sylvaran",
+  "summary": "A hamlet has grown suspiciously cheerful. A spore garden beneath it is tended by a gardener who doesn't know what he's growing.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_oriel_fenwood"
+   },
+   {
+    "kind": "reach",
+    "target": "sylvaran_spore_garden"
+   },
+   {
+    "kind": "choice",
+    "target": "burn_cure_or_warn"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "syl_spores_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_trees_remember",
+  "title": "What the Trees Remember",
+  "rank": "C",
+  "type": "Exploration",
+  "giver": "npc_ashael_dryad",
+  "region": "reg_sylvaran",
+  "summary": "A dryad dreams of something older than the elves. She asks you to follow the dream to its end, and the quest never explains it.",
+  "requirements": {
+   "minLevel": 68
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ashael_dryad"
+   },
+   {
+    "kind": "reach",
+    "target": "sylvaran_spiral_stone"
+   },
+   {
+    "kind": "choice",
+    "target": "court_archivist_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 4500,
+   "gp": 245,
+   "xp": 16500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "syl_remember_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_pilgrim",
+  "title": "The Pilgrim and the World Tree",
+  "rank": "C",
+  "type": "Escort",
+  "giver": "npc_joran_tarn",
+  "region": "reg_sylvaran",
+  "summary": "A human carpenter has walked four hundred miles to reach the World Tree. He won't say why.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_joran_tarn"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_joran_tarn"
+   },
+   {
+    "kind": "reach",
+    "target": "world_tree_root"
+   },
+   {
+    "kind": "choice",
+    "target": "speak_for_him_or_let_him"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "syl_pilgrim_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_sunwine",
+  "title": "A Cup of Sunwine",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_eredhel_fairbrook",
+  "region": "reg_sylvaran",
+  "summary": "A guest has collapsed at the Queen's garden party over a cup of sunwine meant for the Prince.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_eredhel_fairbrook"
+   },
+   {
+    "kind": "reach",
+    "target": "lothaniel_garden_pavilion"
+   },
+   {
+    "kind": "choice",
+    "target": "name_hand_over_or_tell_prince"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "syl_sunwine_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_rootward_watch",
+  "title": "The Rootward Watch",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_lirael_swiftthorn",
+  "region": "reg_sylvaran",
+  "summary": "A spore-touched beast herd is coming for a moonwell hamlet. The Rootward Watch has forty archers and one night.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lirael_swiftthorn"
+   },
+   {
+    "kind": "defend",
+    "target": "sylvaran_east_hedge"
+   },
+   {
+    "kind": "choice",
+    "target": "hold_the_gap_or_flank"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "syl_watch_resolved"
+  ]
+ },
+ {
+  "id": "qst_syl_last_planting",
+  "title": "The Last Planting",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_old_ambrael",
+  "region": "reg_sylvaran",
+  "summary": "An elf who has planted a tree every year for nine hundred years has one seed left, and wants to plant it at the edge of the blight.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_ambrael"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_old_ambrael"
+   },
+   {
+    "kind": "reach",
+    "target": "sylvaran_blight_edge"
+   },
+   {
+    "kind": "choice",
+    "target": "plant_with_him_or_alone"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 60000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "syl_planting_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_coin_deal",
+  "title": "A Coin for Every Deal",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_pico_stella",
+  "region": "reg_lirian",
+  "summary": "A coin-diver finds a singing deal-coin from an eight-hundred-year-old unpaid bargain. The sea-spirit is still waiting.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pico_stella"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_pillar_nine_bells"
+   },
+   {
+    "kind": "choice",
+    "target": "pour_say_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "lir_coin_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_counter_song",
+  "title": "The Counter-Song",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_carlotta_dessi",
+  "region": "reg_lirian",
+  "summary": "A street singer has found a counter-melody that breaks the Drowned Choir's call. The singing ban says she's breaking the law.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_carlotta_dessi"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_watch_house"
+   },
+   {
+    "kind": "choice",
+    "target": "test_train_or_doge"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "lir_song_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_glass_heart",
+  "title": "A Glass Heart for the Lagoon",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_orsino_vetri",
+  "region": "reg_lirian",
+  "summary": "A merfolk groom has commissioned a glass heart that beats, for a sea-elf bride. The glassblower has never made one.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_orsino_vetri"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_east_water_gate"
+   },
+   {
+    "kind": "choice",
+    "target": "ask_trade_or_pledge"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "lir_heart_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_which_doge",
+  "title": "Which Doge?",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_fabrizio_ledo",
+  "region": "reg_lirian",
+  "summary": "The Doge has three masked doubles, and one has died. The real Doge is hiding in a cellar.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fabrizio_ledo"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_doge_cellar"
+   },
+   {
+    "kind": "choice",
+    "target": "expose_turn_or_let_doge"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "lir_doge_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_under_rooftops",
+  "title": "Under the Rooftops",
+  "rank": "C",
+  "type": "Exploration",
+  "giver": "npc_nerea_salt",
+  "region": "reg_lirian",
+  "summary": "A diver-captain has found a house in the drowned city with a lit window. The family inside is still at dinner.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_nerea_salt"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_drowned_house"
+   },
+   {
+    "kind": "choice",
+    "target": "stay_free_or_promise"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "lir_rooftops_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_deaf_gondolier",
+  "title": "The Deaf Gondolier",
+  "rank": "C",
+  "type": "Escort",
+  "giver": "npc_tullio_brenta",
+  "region": "reg_lirian",
+  "summary": "A deaf gondolier, immune to the Choir's song, wants to be asked as a gondolier, not a charm.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tullio_brenta"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_tullio_brenta"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_north_canal_dusk"
+   },
+   {
+    "kind": "choice",
+    "target": "hum_cover_or_talk"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "lir_gondolier_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_masks_auction",
+  "title": "The Auction of Masks",
+  "rank": "C",
+  "type": "Hidden",
+  "giver": "npc_lucia_marchetti",
+  "region": "reg_lirian",
+  "summary": "A seamstress can't say her own name. It's on a lot at a secret auction where names are sold.",
+  "requirements": {
+   "minLevel": 68
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lucia_marchetti"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_masked_auction"
+   },
+   {
+    "kind": "choice",
+    "target": "bid_steal_or_expose"
+   }
+  ],
+  "rewards": {
+   "gold": 4500,
+   "gp": 245,
+   "xp": 16500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "lir_masks_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_three_gaps",
+  "title": "The Three Gaps",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_beatrice_morosina",
+  "region": "reg_lirian",
+  "summary": "Pirates are coming for all three sandbar gaps at once. The raid is a diversion for a honey ship.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_beatrice_morosina"
+   },
+   {
+    "kind": "defend",
+    "target": "lirian_sandbar_middle_gap"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_honey_freighter"
+   },
+   {
+    "kind": "choice",
+    "target": "ram_board_or_parley"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "lir_gaps_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_isolde_verro",
+  "title": "The Last Song of Isolde Verro",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_paolo_verro",
+  "region": "reg_lirian",
+  "summary": "Lirian's greatest soprano has walked into the canal to finish a hymn with the Drowned Choir.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_paolo_verro"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_drowned_cathedral"
+   },
+   {
+    "kind": "choice",
+    "target": "tender_solemn_or_bright"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 720,
+   "xp": 54000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "lir_isolde_resolved"
+  ]
+ },
+ {
+  "id": "qst_lir_maelsday",
+  "title": "Maelsday, All at Once",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_ottavia_ruzzini",
+  "region": "reg_lirian",
+  "summary": "On Maelsday every lantern in Lirian is lit at once. This year someone is sabotaging the lighting.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ottavia_ruzzini"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_six_districts",
+    "count": 6
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_palace_steps"
+   },
+   {
+    "kind": "choice",
+    "target": "confront_expose_or_inspire"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 60000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_lir_counter_song",
+    "qst_lir_isolde_verro"
+   ],
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "lir_maelsday_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_foal_nobody_named",
+  "title": "The Foal Nobody Named",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_yaska_windtooth",
+  "region": "reg_fanghold",
+  "summary": "A wild foal has followed a ten-year-old into camp. By custom only the wind may name it, and she won't eat until it does.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_yaska_windtooth"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_windtooth_ridge"
+   },
+   {
+    "kind": "choice",
+    "target": "milk_story_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "fan_foal_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_champion_pasture",
+  "title": "Champion of Pasture Nine",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_elder_oyun",
+  "region": "reg_fanghold",
+  "summary": "Two clans claim the same pasture. The rival champion has been paid to win, and the silver is Kade's.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_elder_oyun"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_pasture_nine"
+   },
+   {
+    "kind": "choice",
+    "target": "expose_win_or_tell"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "fan_pasture_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_eagle_feathers",
+  "title": "The Eagle-Feather Trade",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_batu_eagle",
+  "region": "reg_fanghold",
+  "summary": "Eleven sacred eagles have died this season and their feathers are on sale. The thief is a fourteen-year-old with a debt.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_batu_eagle"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_market_ninth_stall"
+   },
+   {
+    "kind": "choice",
+    "target": "report_hide_or_penance"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "fan_eagle_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_ledger_whip",
+  "title": "The Ledger Is Longer Than the Whip",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_mother_sarnai",
+  "region": "reg_fanghold",
+  "summary": "A clan mother's granddaughter was sold at the Deep Well. She wants the ledger that names everyone Kade has traded.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_mother_sarnai"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_deep_well_clerk_room"
+   },
+   {
+    "kind": "choice",
+    "target": "carry_take_clerk_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "fan_ledger_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_grandmothers_seat",
+  "title": "The Grandmother's Seat",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_naran_dusksong",
+  "region": "reg_fanghold",
+  "summary": "A dying clan elder's seat goes to the winner of an arm-wrestle. A scholar heir faces her warrior cousin, and the old woman has set a second test.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_naran_dusksong"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_riddle_stone"
+   },
+   {
+    "kind": "choice",
+    "target": "naran_temur_or_odval"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "fan_seat_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_stampede_season",
+  "title": "Stampede Season",
+  "rank": "C",
+  "type": "Defense",
+  "giver": "npc_bayar_camp",
+  "region": "reg_fanghold",
+  "summary": "A saiga stampede is thundering toward the Dusksong camp. The fire that spooked it was set on purpose.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bayar_camp"
+   },
+   {
+    "kind": "defend",
+    "target": "fanghold_dusksong_camp"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_upwind_fire"
+   },
+   {
+    "kind": "choice",
+    "target": "stop_surrender_or_question"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "fan_stampede_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_wind_carries_dead",
+  "title": "The Wind Carries the Dead",
+  "rank": "C",
+  "type": "Hidden",
+  "giver": "npc_old_temuge",
+  "region": "reg_fanghold",
+  "summary": "An old man carries his wife's ashes to a stone marker where she once heard the wind speak. He is afraid of going alone.",
+  "requirements": {
+   "minLevel": 68
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_temuge"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_old_temuge"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_stone_marker"
+   },
+   {
+    "kind": "choice",
+    "target": "listen_pour_or_speak"
+   }
+  ],
+  "rewards": {
+   "gold": 4500,
+   "gp": 245,
+   "xp": 16500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "fan_wind_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_water_tax",
+  "title": "Kade's Water Tax",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_speaker_dolgor",
+  "region": "reg_fanghold",
+  "summary": "Kade has taxed the Deep Well. The clans are tempted to deny his men water, which would break the oath they swore to defend.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_speaker_dolgor"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_water_peace_stone"
+   },
+   {
+    "kind": "choice",
+    "target": "break_keep_or_third_way"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fan_tax_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_last_stallion",
+  "title": "The Last Free Stallion",
+  "rank": "B",
+  "type": "Capture",
+  "giver": "npc_rider_khulan",
+  "region": "reg_fanghold",
+  "summary": "A rider has chased the last wild stallion of the Old Herd for three years. Kade's slavers are hunting him tonight.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rider_khulan"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_stallion_plateau"
+   },
+   {
+    "kind": "choice",
+    "target": "ride_free_or_fight"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 720,
+   "xp": 54000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fan_stallion_resolved"
+  ]
+ },
+ {
+  "id": "qst_fan_moot_nine_fires",
+  "title": "The Moot of Nine Fires",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_moot_keeper_tsetseg",
+  "region": "reg_fanghold",
+  "summary": "The clans meet in a full moot for the first time in a generation to decide whether to march on the Deep Well.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_moot_keeper_tsetseg"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_nine_fires",
+    "count": 9
+   },
+   {
+    "kind": "choice",
+    "target": "children_water_or_each_other"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 60000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_fan_ledger_whip",
+    "qst_fan_water_tax"
+   ],
+   "act": 3,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fan_moot_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_stone_she_carried",
+  "title": "The Stone She Carried",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_hesta_coalhand",
+  "region": "reg_iron_hold",
+  "summary": "A master smith's first-forge hearth-stone is missing, which is an omen. The finder is an orc child who thought it was pretty.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hesta_coalhand"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_outer_labour_camp"
+   },
+   {
+    "kind": "choice",
+    "target": "return_quietly_or_publicly"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ih_stone_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_three_hundred_mugs",
+  "title": "Three Hundred and One Mugs",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_grumbald_oakbarrel",
+  "region": "reg_iron_hold",
+  "summary": "A gnome has drunk one mug more than the Great Hall's two-hundred-year record. The record mug has a false bottom.",
+  "requirements": {
+   "minLevel": 60
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_grumbald_oakbarrel"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_great_hall_table"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_keep_quiet_or_revise"
+   }
+  ],
+  "rewards": {
+   "gold": 3600,
+   "gp": 200,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ih_mugs_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_tap_code",
+  "title": "The Tap Code",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_dibble_quickpick",
+  "region": "reg_iron_hold",
+  "summary": "Eleven miners are trapped below the Ashen Mines, tapping a new code. Something deeper is tapping back.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dibble_quickpick"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_collapsed_shaft"
+   },
+   {
+    "kind": "choice",
+    "target": "answer_ignore_or_seal"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ih_tap_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_amend_the_law",
+  "title": "Amend the Law",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_fizzwick_gearsoft",
+  "region": "reg_iron_hold",
+  "summary": "A six-hundred-year-old law forbids gnomes from lighting flame in the main halls. A plaque might interpret it without amending it.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fizzwick_gearsoft"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_hall_of_laws"
+   },
+   {
+    "kind": "choice",
+    "target": "plaque_signature_or_thane"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ih_law_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_giants_envoy",
+  "title": "The Giant's Envoy",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_brunhild_ironvow",
+  "region": "reg_iron_hold",
+  "summary": "Skarn has sent an envoy under a white banner, offering to withdraw his army if the Thane lends him the furnace-heart for one night.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brunhild_ironvow"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_thane_hall_parley"
+   },
+   {
+    "kind": "choice",
+    "target": "refuse_open_letter_or_burn"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ih_envoy_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_seal_is_warm",
+  "title": "The Seal Is Warm",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_orm_sparkbrow",
+  "region": "reg_iron_hold",
+  "summary": "The seal on the deepest shaft is warm and getting warmer. A single hammer-stroke answers from behind it.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_orm_sparkbrow"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_sealed_shaft"
+   },
+   {
+    "kind": "choice",
+    "target": "answer_listen_or_seal"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_ih_tap_code"
+   ],
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ih_seal_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_runes_cold_iron",
+  "title": "Runes in Cold Iron",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_kessa_quickspark",
+  "region": "reg_iron_hold",
+  "summary": "An apprentice has rebuilt half of a forbidden rune-technique from scrap. The masters want it kept buried.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_kessa_quickspark"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_runemasters_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "share_test_or_hide"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 720,
+   "xp": 54000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ih_runes_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_flame_every_forge",
+  "title": "A Flame From Every Forge",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_dorn_coalheart",
+  "region": "reg_iron_hold",
+  "summary": "The furnace-heart is guttering. Dorn needs a flame from each of nineteen clan forges, carried by a non-dwarf, to relight it.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dorn_coalheart"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_nineteen_forges",
+    "count": 19
+   },
+   {
+    "kind": "choice",
+    "target": "pour_name_or_bold"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 58000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ih_flame_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_thanes_granddaughter",
+  "title": "The Thane's Granddaughter",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_brunhild_ironvow",
+  "region": "reg_iron_hold",
+  "summary": "Skarn's orcs have taken the Thane's granddaughter hostage. The Thane cannot spend an army on a rescue.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brunhild_ironvow"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_grakkor_camp"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_embra_ironvow"
+   },
+   {
+    "kind": "choice",
+    "target": "fight_sneak_or_bargain"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 130000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "ih_granddaughter_resolved"
+  ]
+ },
+ {
+  "id": "qst_ih_anvil_counted",
+  "title": "The Anvil That Counted",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_baldur_anvilfast",
+  "region": "reg_iron_hold",
+  "summary": "The Great Anvil has counted every blow for a thousand years except the first. Old Baldur asks the player to strike it.",
+  "requirements": {
+   "minLevel": 134
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_baldur_anvilfast"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_great_hall_anvil"
+   },
+   {
+    "kind": "choice",
+    "target": "strike_once_thrice_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1700,
+   "xp": 148000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "ih_anvil_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_last_pillar",
+  "title": "The Last Pillar",
+  "rank": "C",
+  "type": "Exploration",
+  "giver": "npc_daigo_hanamura",
+  "region": "reg_hoshizora",
+  "summary": "The great shrine's last pillar was left bare, and the priests call it unlucky. The carpenter has forgotten why he did it.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_daigo_hanamura"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_shrine_storehouse"
+   },
+   {
+    "kind": "choice",
+    "target": "leave_finish_or_festival"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "hsz_pillar_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_spirit_no_seat",
+  "title": "The Spirit Who Had No Seat",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_little_hana",
+  "region": "reg_hoshizora",
+  "summary": "A nine-year-old organiser has counted seventy-one seats and seventy-two spirits. The extra is a shy umbrella-spirit.",
+  "requirements": {
+   "minLevel": 60
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_little_hana"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_village_green_dusk"
+   },
+   {
+    "kind": "choice",
+    "target": "give_tell_or_sit"
+   }
+  ],
+  "rewards": {
+   "gold": 3600,
+   "gp": 200,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "hsz_seat_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_kappa_bow",
+  "title": "The Kappa's Bow",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_genji_boatman",
+  "region": "reg_hoshizora",
+  "summary": "A kappa has blocked the ford three times. A boatman's bow is too shallow, and a deep bow would spill the water in the kappa's dish.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_genji_boatman"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_kappa_ford"
+   },
+   {
+    "kind": "choice",
+    "target": "cup_cucumber_or_insult"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "hsz_kappa_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_mask_carver",
+  "title": "The Mask-Carver",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_okuni_carver",
+  "region": "reg_hoshizora",
+  "summary": "A carver has been ordered to make three hundred identical masks for Kurogane. The masks work best when carved without love.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_okuni_carver"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_kasumi_village"
+   },
+   {
+    "kind": "choice",
+    "target": "love_crack_or_burn"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "hsz_carver_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_fourteen_festival",
+  "title": "Fourteen People and a Festival",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_headwoman_fumiko",
+  "region": "reg_hoshizora",
+  "summary": "A village of fourteen must host the spirit festival tomorrow, or the spirits will forget it.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_headwoman_fumiko"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_neighbouring_villages",
+    "count": 4
+   },
+   {
+    "kind": "choice",
+    "target": "dance_feast_or_story"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "hsz_festival_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_tengu_test",
+  "title": "The Tengu's Test",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_tengu_soujo",
+  "region": "reg_hoshizora",
+  "summary": "A tengu swordmaster teaches a technique that does not strike. He asks the player to lose first.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tengu_soujo"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_cedar_bridge"
+   },
+   {
+    "kind": "choice",
+    "target": "strike_wait_or_lower"
+   }
+  ],
+  "rewards": {
+   "gold": 13000,
+   "gp": 760,
+   "xp": 56000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "hsz_tengu_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_sword_given",
+  "title": "The Sword Given to the Gods",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_munetoshi_smith",
+  "region": "reg_hoshizora",
+  "summary": "A swordsmith will not sell his masterwork to the oni. He asks the player to give it to the gods instead.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_munetoshi_smith"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_mountain_shrine"
+   },
+   {
+    "kind": "choice",
+    "target": "lay_draw_or_pray"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 60000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "hsz_sword_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_masked_village",
+  "title": "The Masked Village",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_priestess_aoi",
+  "region": "reg_hoshizora",
+  "summary": "A village has been masked by Kurogane. A priestess searches its streets for the one child who is still laughing.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_priestess_aoi"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_kasumi_bell_tower"
+   },
+   {
+    "kind": "choice",
+    "target": "laugh_smuggle_or_fight"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 130000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_hsz_mask_carver"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "hsz_village_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_hundredth_lantern",
+  "title": "The Hundredth Lantern",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_shino_lantern",
+  "region": "reg_hoshizora",
+  "summary": "Once a century a hundred lanterns walk to the shogun's castle. The hundredth must be carried by someone who belongs nowhere.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_shino_lantern"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_lantern_road",
+    "count": 6
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_shogun_gate"
+   },
+   {
+    "kind": "choice",
+    "target": "speak_silence_or_pause"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "hsz_lantern_resolved"
+  ]
+ },
+ {
+  "id": "qst_hsz_letter_courtesy",
+  "title": "A Letter Written in Courtesy",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_courier_benten",
+  "region": "reg_hoshizora",
+  "summary": "An oni warlord has sent a perfectly polite letter. It asks for a reply, and for understanding.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_courier_benten"
+   },
+   {
+    "kind": "reach",
+    "target": "hoshizora_red_bridge"
+   },
+   {
+    "kind": "choice",
+    "target": "verse_prose_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1700,
+   "xp": 150000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_hsz_masked_village"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "hsz_letter_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_wood_last_fire",
+  "title": "Wood for the Last Fire",
+  "rank": "B",
+  "type": "Gathering",
+  "giver": "npc_hrefna_firekeeper",
+  "region": "reg_frostveil",
+  "summary": "The Last Fire has two logs left. The sacred grove that supplies it is in Ymgrir's territory.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hrefna_firekeeper"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_sacred_grove"
+   },
+   {
+    "kind": "choice",
+    "target": "fight_sneak_or_talk"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fv_wood_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_frozen_fleet",
+  "title": "The Frozen Fleet",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_eyvind_harbourmaster",
+  "region": "reg_frostveil",
+  "summary": "Forty fishing boats and two hundred sailors are frozen in the outer fjord. A channel must be cut before the next storm.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_eyvind_harbourmaster"
+   },
+   {
+    "kind": "defend",
+    "target": "frostveil_outer_fjord"
+   },
+   {
+    "kind": "choice",
+    "target": "feed_cut_or_carry"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fv_fleet_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_troll_at_door",
+  "title": "A Frost Troll at the Door",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_gudrun_goodwife",
+  "region": "reg_frostveil",
+  "summary": "A frost troll has knocked on a goodwife's door. By the law of the hearth, no guest may be turned away.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gudrun_goodwife"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_longhouse_hearth"
+   },
+   {
+    "kind": "choice",
+    "target": "welcome_watch_or_drive_off"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 720,
+   "xp": 54000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fv_troll_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_burning_ship",
+  "title": "A Burning Ship on Ice",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_thora_widow",
+  "region": "reg_frostveil",
+  "summary": "A jarl's funeral ship must reach open water to burn. The fjord is frozen for two leagues.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_thora_widow"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_ice_edge"
+   },
+   {
+    "kind": "choice",
+    "target": "story_silence_or_song"
+   }
+  ],
+  "rewards": {
+   "gold": 13000,
+   "gp": 760,
+   "xp": 56000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fv_ship_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_saga_living",
+  "title": "A Saga About the Living",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_skald_ragnhild",
+  "region": "reg_frostveil",
+  "summary": "A skald wants to write a saga about someone who is still alive, and asks the player to help choose whom.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_skald_ragnhild"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_three_candidates",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "aud_tryggve_sunniva_or_all"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 60000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "fv_saga_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_survivor_older",
+  "title": "The Survivor Who Came Back Older",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_old_halvard",
+  "region": "reg_frostveil",
+  "summary": "A man from the fleet that sailed north forty years ago has come back, aged forty years in what he says was three weeks.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_halvard"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_last_fire"
+   },
+   {
+    "kind": "choice",
+    "target": "keep_skalds_or_thing"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 130000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "fv_survivor_resolved",
+   "clue_shattered_sky"
+  ]
+ },
+ {
+  "id": "qst_fv_cave_summer",
+  "title": "A Cave of Summer",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_sigrid_iceguide",
+  "region": "reg_frostveil",
+  "summary": "A glacier guide has found a warm cave with green grass inside the ice. It is the skalds' hundred-year summer, and it is dying.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sigrid_iceguide"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_glacier_cave"
+   },
+   {
+    "kind": "choice",
+    "target": "learn_bring_or_let_end"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "fv_summer_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_the_thing",
+  "title": "The Thing",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_lawspeaker_vigdis",
+  "region": "reg_frostveil",
+  "summary": "The jarls have called the Thing to elect a war-king. A neutral witness is needed for a vote that could go three ways, or none.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lawspeaker_vigdis"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_great_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "correct_recount_or_let_stand"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1700,
+   "xp": 150000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "fv_thing_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_last_fire_out",
+  "title": "The Last Fire Goes Out",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_hrefna_firekeeper",
+  "region": "reg_frostveil",
+  "summary": "Ymgrir's blizzard has reached Skjaldheim. The Last Fire must not go out.",
+  "requirements": {
+   "minLevel": 140
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hrefna_firekeeper"
+   },
+   {
+    "kind": "defend",
+    "target": "frostveil_skjaldheim_hearth"
+   },
+   {
+    "kind": "choice",
+    "target": "burn_tapestry_sword_or_story"
+   }
+  ],
+  "rewards": {
+   "gold": 36000,
+   "gp": 1700,
+   "xp": 148000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_fv_wood_last_fire"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "fv_lastfire_resolved"
+  ]
+ },
+ {
+  "id": "qst_fv_saga_sung",
+  "title": "The Saga, Sung",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_skald_ragnhild",
+  "region": "reg_frostveil",
+  "summary": "The skald will sing her saga of the living at the closing feast. She has one verse left, and wants the player to write it.",
+  "requirements": {
+   "minLevel": 144
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_skald_ragnhild"
+   },
+   {
+    "kind": "reach",
+    "target": "frostveil_closing_feast"
+   },
+   {
+    "kind": "choice",
+    "target": "triumph_tenderness_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 36000,
+   "gp": 1700,
+   "xp": 150000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_fv_saga_living",
+    "qst_fv_the_thing"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "fv_saga_sung_resolved"
+  ]
  }
 ]

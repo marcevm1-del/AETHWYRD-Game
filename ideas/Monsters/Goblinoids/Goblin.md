@@ -105,6 +105,7 @@ These are presentation and spawn variants of this species, not separate core com
 
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Goblins in the Granary|Goblins in the Granary]] — rank E, in [[Regions/Aldmere|Aldmere]]
+- [[Quests/The Last Contract of the Silver Ladle|The Last Contract of the Silver Ladle]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
 - [[Quests/Weekly Board/Goblin Cull|Goblin Cull]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 

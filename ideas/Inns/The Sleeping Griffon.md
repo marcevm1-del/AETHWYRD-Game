@@ -77,6 +77,16 @@ tags: [inn]
 - [[Quests/Yesterday's Bread|Yesterday's Bread]] (F, OddJob)
 - [[Quests/A Story for a Scale|A Story for a Scale]] (E, OddJob)
 - [[Quests/The Name of the Blade|The Name of the Blade]] (E, OddJob)
+- [[Quests/A Sword Under Every Doorstep|A Sword Under Every Doorstep]] (E, Investigation)
+- [[Quests/The Ring in the Barrow|The Ring in the Barrow]] (E, Exploration)
+- [[Quests/The River Toll Quarrel|The River Toll Quarrel]] (E, Faction)
+- [[Quests/The Wheel Thief of Eastgate|The Wheel Thief of Eastgate]] (E, Investigation)
+- [[Quests/The Plough Finds a Ledger|The Plough Finds a Ledger]] (D, Investigation)
+- [[Quests/The Friend in the Mirror|The Friend in the Mirror]] (D, Investigation)
+- [[Quests/Stand Down, Soldier|Stand Down, Soldier]] (D, Faction)
+- [[Quests/The Duelist's Last Request|The Duelist's Last Request]] (C, Hidden)
+- [[Quests/The King Wants to Go Fishing|The King Wants to Go Fishing]] (C, Escort)
+- [[Quests/What the Baron Refused|What the Baron Refused]] (C, Investigation)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined, Defense)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined, OddJob)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined, Escort)
@@ -116,7 +126,7 @@ tags: [inn]
 - [[NPCs/Garrick -Ironjaw-|Garrick "Ironjaw"]] — Guild examiner
 - [[NPCs/Marta Gruel|Marta Gruel]] — Innkeeper, the Sleeping Griffon
 - [[NPCs/Teo Gruel|Teo Gruel]] — Stable boy, the Sleeping Griffon
-- 28 more residents are listed on the region page.
+- 37 more residents are listed on the region page.
 
 ## Stay and departure
 

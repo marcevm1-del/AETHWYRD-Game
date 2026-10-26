@@ -21,4 +21,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/The White Stag|The White Stag]]
 - [[Quests/Weekly Board/Wolves on the Road|Wolves on the Road]]

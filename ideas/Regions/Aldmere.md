@@ -138,6 +138,15 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Sister Ivy Thorne|Sister Ivy Thorne]]: Choir of Mirrors preacher (former orphanage nun)
 - [[NPCs/Inquisitor Halvane|Inquisitor Halvane]]: Inquisitor of the Holy Church
 - [[NPCs/Archivist Orrow|Archivist Orrow]]: Academy archivist
+- [[NPCs/Calla Reeve|Calla Reeve]]: Farmer, last of the Reeve line
+- [[NPCs/Ysolt Marne|Ysolt Marne]]: Bride-to-be, baker
+- [[NPCs/Hatty Swan|Hatty Swan]]: Bargewoman, river-guild speaker
+- [[NPCs/Maud Axle|Maud Axle]]: Cartwright, Eastgate
+- [[NPCs/Rook Tull|Rook Tull]]: Farmhand
+- [[NPCs/Edda Pryor|Edda Pryor]]: Matron, Candle Street orphanage
+- [[NPCs/Sister Agna Dunmoor|Sister Agna Dunmoor]]: Morrowyn's lantern-keeper, Greyhollow
+- [[NPCs/Ser Bertram Colt|Ser Bertram Colt]]: Retired tournament duelist
+- [[NPCs/Osric Finch|Osric Finch]]: Royal valet
 
 ## Inns
 
@@ -186,6 +195,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/Yesterday's Bread|Yesterday's Bread]] (F)
 - [[Quests/A Story for a Scale|A Story for a Scale]] (E)
 - [[Quests/The Name of the Blade|The Name of the Blade]] (E)
+- [[Quests/A Sword Under Every Doorstep|A Sword Under Every Doorstep]] (E)
+- [[Quests/The Ring in the Barrow|The Ring in the Barrow]] (E)
+- [[Quests/The River Toll Quarrel|The River Toll Quarrel]] (E)
+- [[Quests/The Wheel Thief of Eastgate|The Wheel Thief of Eastgate]] (E)
+- [[Quests/The Plough Finds a Ledger|The Plough Finds a Ledger]] (D)
+- [[Quests/The Friend in the Mirror|The Friend in the Mirror]] (D)
+- [[Quests/Stand Down, Soldier|Stand Down, Soldier]] (D)
+- [[Quests/The Duelist's Last Request|The Duelist's Last Request]] (C)
+- [[Quests/The King Wants to Go Fishing|The King Wants to Go Fishing]] (C)
+- [[Quests/What the Baron Refused|What the Baron Refused]] (C)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined)

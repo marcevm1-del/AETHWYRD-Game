@@ -100,9 +100,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Wart Bird|Wart Bird]] (Flyers): A heavy, flightless-looking bird that can glide short distances; herders use them as watch-birds.
 
+## People
+
+- [[NPCs/Yaska Windtooth|Yaska Windtooth]]: Ten-year-old wolfkin girl
+- [[NPCs/Elder Oyun|Elder Oyun]]: Eldest woman of the Greymane clan
+- [[NPCs/Eagle-Keeper Batu|Eagle-Keeper Batu]]: Keeper of the sacred eagles
+- [[NPCs/Mother Sarnai|Mother Sarnai]]: Eldest woman of the Ashfeather clan
+- [[NPCs/Naran Dusksong|Naran Dusksong]]: Heir of the Dusksong clan, scholar
+- [[NPCs/Camp-Master Bayar|Camp-Master Bayar]]: Camp-master
+- [[NPCs/Old Temuge|Old Temuge]]: Widower
+- [[NPCs/Speaker Dolgor|Speaker Dolgor]]: Speaker of the Water-Peace
+- [[NPCs/Rider Khulan|Rider Khulan]]: Young wolfkin rider
+- [[NPCs/Moot-Keeper Tsetseg|Moot-Keeper Tsetseg]]: Keeper of the great moot
+
 ## Inns
 
 - [[Inns/The Howling Hearth|The Howling Hearth]] (Fanghold)
+
+## Quests
+
+- [[Quests/The Foal Nobody Named|The Foal Nobody Named]] (D)
+- [[Quests/Champion of Pasture Nine|Champion of Pasture Nine]] (D)
+- [[Quests/The Eagle-Feather Trade|The Eagle-Feather Trade]] (D)
+- [[Quests/The Ledger Is Longer Than the Whip|The Ledger Is Longer Than the Whip]] (C)
+- [[Quests/The Grandmother's Seat|The Grandmother's Seat]] (C)
+- [[Quests/Stampede Season|Stampede Season]] (C)
+- [[Quests/The Wind Carries the Dead|The Wind Carries the Dead]] (C)
+- [[Quests/Kade's Water Tax|Kade's Water Tax]] (B)
+- [[Quests/The Last Free Stallion|The Last Free Stallion]] (B)
+- [[Quests/The Moot of Nine Fires|The Moot of Nine Fires]] (B)
 
 ## Monsters (32)
 

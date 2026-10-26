@@ -33,6 +33,32 @@ tags: [inn]
 > [!warning]- Spoiler
 > Grandma Ruka was an S-rank adventurer who retired after the Siege of Marrowgate.
 
+## Nearby contracts
+
+- [[Quests/The Foal Nobody Named|The Foal Nobody Named]] (D, OddJob)
+- [[Quests/Champion of Pasture Nine|Champion of Pasture Nine]] (D, Faction)
+- [[Quests/The Eagle-Feather Trade|The Eagle-Feather Trade]] (D, Investigation)
+- [[Quests/The Ledger Is Longer Than the Whip|The Ledger Is Longer Than the Whip]] (C, Investigation)
+- [[Quests/The Grandmother's Seat|The Grandmother's Seat]] (C, Faction)
+- [[Quests/Stampede Season|Stampede Season]] (C, Defense)
+- [[Quests/The Wind Carries the Dead|The Wind Carries the Dead]] (C, Hidden)
+- [[Quests/Kade's Water Tax|Kade's Water Tax]] (B, Faction)
+- [[Quests/The Last Free Stallion|The Last Free Stallion]] (B, Capture)
+- [[Quests/The Moot of Nine Fires|The Moot of Nine Fires]] (B, Faction)
+
+## Local people
+
+- [[NPCs/Yaska Windtooth|Yaska Windtooth]] — Ten-year-old wolfkin girl
+- [[NPCs/Elder Oyun|Elder Oyun]] — Eldest woman of the Greymane clan
+- [[NPCs/Eagle-Keeper Batu|Eagle-Keeper Batu]] — Keeper of the sacred eagles
+- [[NPCs/Mother Sarnai|Mother Sarnai]] — Eldest woman of the Ashfeather clan
+- [[NPCs/Naran Dusksong|Naran Dusksong]] — Heir of the Dusksong clan, scholar
+- [[NPCs/Camp-Master Bayar|Camp-Master Bayar]] — Camp-master
+- [[NPCs/Old Temuge|Old Temuge]] — Widower
+- [[NPCs/Speaker Dolgor|Speaker Dolgor]] — Speaker of the Water-Peace
+- [[NPCs/Rider Khulan|Rider Khulan]] — Young wolfkin rider
+- [[NPCs/Moot-Keeper Tsetseg|Moot-Keeper Tsetseg]] — Keeper of the great moot
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

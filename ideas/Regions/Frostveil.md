@@ -101,9 +101,33 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Moorwah|Moorwah]] (Herbivore): A shaggy, long-snouted grazer; Frostveil's draught animal and a ground mount.
 
+## People
+
+- [[NPCs/Fire-Keeper Hrefna|Fire-Keeper Hrefna]]: Keeper of the Last Fire
+- [[NPCs/Harbourmaster Eyvind|Harbourmaster Eyvind]]: Harbourmaster
+- [[NPCs/Goodwife Gudrun|Goodwife Gudrun]]: Goodwife of a longhouse stead
+- [[NPCs/Thora Jarl's-Widow|Thora Jarl's-Widow]]: Widow of Jarl Bjorn Ironmantle
+- [[NPCs/Skald Ragnhild|Skald Ragnhild]]: Skald of Skjaldheim
+- [[NPCs/Old Halvard|Old Halvard]]: Survivor of the northern fleet
+- [[NPCs/Ice-Guide Sigrid|Ice-Guide Sigrid]]: Glacier guide
+- [[NPCs/Lawspeaker Vigdis|Lawspeaker Vigdis]]: Lawspeaker of the Thing
+
 ## Inns
 
 - [[Inns/The Last Fire|The Last Fire]] (Frostveil hold)
+
+## Quests
+
+- [[Quests/Wood for the Last Fire|Wood for the Last Fire]] (B)
+- [[Quests/The Frozen Fleet|The Frozen Fleet]] (B)
+- [[Quests/A Frost Troll at the Door|A Frost Troll at the Door]] (B)
+- [[Quests/A Burning Ship on Ice|A Burning Ship on Ice]] (B)
+- [[Quests/A Saga About the Living|A Saga About the Living]] (B)
+- [[Quests/The Survivor Who Came Back Older|The Survivor Who Came Back Older]] (A)
+- [[Quests/A Cave of Summer|A Cave of Summer]] (A)
+- [[Quests/The Thing|The Thing]] (A)
+- [[Quests/The Last Fire Goes Out|The Last Fire Goes Out]] (A)
+- [[Quests/The Saga, Sung|The Saga, Sung]] (A)
 
 ## Monsters (17)
 

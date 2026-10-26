@@ -95,9 +95,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Bogkin|The Bogkin]] (Amphibian Clan, led by Choir-Mother Gullagrum): Greymoor's frogfolk live in the deeper meres and trade with the stilt-villages by night. They croak in harmonies that carry under the fog, and the Hollow Abbot's silence is killing their songs.
 - [[Clans/The Shellmoot|The Shellmoot]] (Snail Clan, led by Grandfather Spiraleth): Greymoor's oldest folk, who remember the abbey on dry ground.
 
+## People
+
+- [[NPCs/Tolliver Pegg|Tolliver Pegg]]: Walking Hut trader
+- [[NPCs/Elder Marrel Sedge|Elder Marrel Sedge]]: Moot elder
+- [[NPCs/Idony Fenwater|Idony Fenwater]]: Wisp farmer
+- [[NPCs/Sorrel|Sorrel]]: Eel-fisher's son
+- [[NPCs/Granny Hexel|Granny Hexel]]: Witch-judge of the Witchwood
+- [[NPCs/Alder Rushmoor|Alder Rushmoor]]: Flood warden
+- [[NPCs/Ysmay of Lowmere|Ysmay of Lowmere]]: Bog hag
+- [[NPCs/Ferryman Odran|Ferryman Odran]]: Ferryman of the drowned
+- [[NPCs/Hester Mallow|Hester Mallow]]: Widow, reed-weaver
+- [[NPCs/Mother Yarrow|Mother Yarrow]]: Witch-elder, keeper of the book
+
 ## Inns
 
 - [[Inns/The Crooked Lantern|The Crooked Lantern]] (Greymoor Stilts)
+
+## Quests
+
+- [[Quests/The Walking Hut Loses Its Way|The Walking Hut Loses Its Way]] (D)
+- [[Quests/The Eel Moot|The Eel Moot]] (D)
+- [[Quests/Lanterns in Jars|Lanterns in Jars]] (D)
+- [[Quests/The Clapper in the Peat|The Clapper in the Peat]] (D)
+- [[Quests/The Witch's Price|The Witch's Price]] (D)
+- [[Quests/High Water on the Stilts|High Water on the Stilts]] (D)
+- [[Quests/Tea with the Hag of Lowmere|Tea with the Hag of Lowmere]] (C)
+- [[Quests/The Ferryman's Holiday|The Ferryman's Holiday]] (C)
+- [[Quests/The Choir Passes|The Choir Passes]] (C)
+- [[Quests/The Book of Small Things|The Book of Small Things]] (C)
 
 ## Monsters (26)
 
