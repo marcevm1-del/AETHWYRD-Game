@@ -729,6 +729,13 @@ objectives:
 > ► **"Come back next year."** — **ILSABET:** "Oh, I shall."
 > ► **"Share a flask."** — She produces two cups.
 
+**Scene 7: the last page.** Before she lets the player go, Ilsabet reads aloud the last page of her notebook, a list of every place the moths have rested this autumn, in the order they chose.
+
+**ILSABET:** "A drift of pine. A cracked boat. A lamp on a post. The cove. Do you see it? They are not looking for glass. They are looking for *company.*"
+> ► **"Perhaps they are lonely."** — **ILSABET:** "Perhaps we all are."
+> ► **"Perhaps they are just moths."** — **ILSABET:** "Perhaps. I like my version."
+> ► **"Add a line for me."** — She hands you the pencil.
+
 **Outcomes and receipt.**
 - The cove stays secret for now. Telling the guild brings guards, and a gatherers' dispute; keeping it quiet keeps it dim and safe.
 - **Receipt:** a pencilled field-map, one corner torn off, with a small moth drawn where the cove would be.

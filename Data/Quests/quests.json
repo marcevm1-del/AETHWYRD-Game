@@ -21827,5 +21827,389 @@
   "setsFlags": [
    "bas_night_between_done"
   ]
+ },
+ {
+  "id": "qst_ldp_door_wandered",
+  "title": "The Door That Wandered",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_burl_wallknock",
+  "region": "reg_labyrinth_deep",
+  "summary": "A deep gnome family's door has left its wall. It has gone to the place where its last user died.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_burl_wallknock"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_floor50_gallery"
+   },
+   {
+    "kind": "choice",
+    "target": "carry_leave_or_knock"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ldp_door_wandered_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_gnome_news",
+  "title": "News for the Gnome Walls",
+  "rank": "B",
+  "type": "Delivery",
+  "giver": "npc_quillow_deepbarrow",
+  "region": "reg_labyrinth_deep",
+  "summary": "A deep gnome trader wants news of a surface family. The news is eleven years late.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_quillow_deepbarrow"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_dunmere_farmhouse"
+   },
+   {
+    "kind": "choice",
+    "target": "gentle_unknown_or_bread"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ldp_gnome_news_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_chalk_nowhere",
+  "title": "Chalk to Nowhere",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_sorrel_dunmarch",
+  "region": "reg_labyrinth_deep",
+  "summary": "A clerk has logged fourteen chalk arrows that point at bare walls. She wants someone else to look.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sorrel_dunmarch"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_floor53_arrow"
+   },
+   {
+    "kind": "choice",
+    "target": "circle_question_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 11800,
+   "gp": 700,
+   "xp": 49000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "ldp_chalk_nowhere_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_third_share",
+  "title": "The Oath of the Third Share",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_corwin_verrow",
+  "region": "reg_labyrinth_deep",
+  "summary": "A party broke a raid council's oath to pay for a healer. The council is divided.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_corwin_verrow"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_council_tent"
+   },
+   {
+    "kind": "choice",
+    "target": "fine_clause_or_strike"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "ldp_third_share_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_ones_stayed",
+  "title": "The Ones Who Stayed",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_tobin_reedwater",
+  "region": "reg_labyrinth_deep",
+  "summary": "A young adventurer who stayed too long in the Sunken City wants to go home and has forgotten the way.",
+  "requirements": {
+   "minLevel": 124
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tobin_reedwater"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_marit_pellwater"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_tobin_reedwater"
+   },
+   {
+    "kind": "choice",
+    "target": "rest_green_or_carry"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1450,
+   "xp": 126000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "ldp_ones_stayed_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_right_direction",
+  "title": "Read in the Right Direction",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_emmerich_vaneholt",
+  "region": "reg_labyrinth_deep",
+  "summary": "A book hangs open on the ceiling of the upside-down library. A scholar wants only its title.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_emmerich_vaneholt"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_floor72_ceiling_shelf"
+   },
+   {
+    "kind": "choice",
+    "target": "title_copy_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 28500,
+   "gp": 1500,
+   "xp": 127000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "ldp_right_direction_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_lantern_out",
+  "title": "When the Lantern Goes Out",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_alder_oilwright",
+  "region": "reg_labyrinth_deep",
+  "summary": "A lantern-bearer's lantern went out, the council turned back, and one man went on alone.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_alder_oilwright"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_floor60_dark_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "rule_kind_or_relight"
+   }
+  ],
+  "rewards": {
+   "gold": 28500,
+   "gp": 1500,
+   "xp": 127000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "ldp_lantern_out_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_lantern_stair",
+  "title": "The Lantern at the Stair",
+  "rank": "S",
+  "type": "Exploration",
+  "giver": "npc_ione_carrowby",
+  "region": "reg_labyrinth_deep",
+  "summary": "Survivors of the floor-ninety raid left a lantern at the stair. It is still lit, though its oil is gone.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ione_carrowby"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_floor90_stair_lantern"
+   },
+   {
+    "kind": "choice",
+    "target": "lit_dry_or_circle"
+   }
+  ],
+  "rewards": {
+   "gold": 66000,
+   "gp": 2900,
+   "xp": 305000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "ldp_lantern_stair_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_nests_hang",
+  "title": "Nests That Hang Down",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_pomeroy_featherstone",
+  "region": "reg_labyrinth_deep",
+  "summary": "A naturalist wants a nest measured in the inverted forest, where chicks fall up.",
+  "requirements": {
+   "minLevel": 170
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pomeroy_featherstone"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_pomeroy_featherstone"
+   },
+   {
+    "kind": "choice",
+    "target": "catch_parents_or_hold"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "ldp_nests_hang_done"
+  ]
+ },
+ {
+  "id": "qst_ldp_city_streets",
+  "title": "The City Changed Its Streets",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_rosamund_wetherby",
+  "region": "reg_labyrinth_deep",
+  "summary": "A cartographer's father mapped the Sunken City completely, and the city changed its streets. She wants to know whether it minds.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rosamund_wetherby"
+   },
+   {
+    "kind": "reach",
+    "target": "labyrinth_sunken_city_survey_tower"
+   },
+   {
+    "kind": "choice",
+    "target": "burn_blank_or_show"
+   }
+  ],
+  "rewards": {
+   "gold": 75000,
+   "gp": 3200,
+   "xp": 340000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "ldp_city_streets_done"
+  ]
  }
 ]

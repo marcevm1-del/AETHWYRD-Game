@@ -179,6 +179,15 @@ backstory: A very old, very patient reader who has counted the breaths of Quakeb
 > ► **"Write a joint chart."** — **CORR:** "Two names. Alphabetical."
 > ► **"Leave them to it."** — They are already arguing.
 
+**Scene 6: the council.** The next morning the council meets in the hall, and a clerk asks, with great delicacy, whether the town ought to pay Maud for the extra bell-ringing. The room goes very quiet.
+
+**ELDER:** "I voted against her."
+**MAUD:** "I know. I counted."
+**ELDER:** "I would like to vote again."
+> ► **"Let them."** — A show of hands, slow and embarrassed.
+> ► **"Ask her to name a price."** — **MAUD:** "A good chair. With arms."
+> ► **"Leave the room."** — They manage without you.
+
 **Outcomes and receipt.**
 - The town survives in good order. If the player moved the whole town, the council is humbled and angry; if only the stores and old, it is grateful and vague.
 - **Receipt:** a small tremor-bowl of fired clay, marked with two readers' initials.
@@ -248,6 +257,15 @@ objectives:
 **Scene 5: the pool.** The new spring is still. The town stands at its edge in silence, then kneels, one by one, and puts a palm flat on the water.
 
 **GIDEON:** "Down with the houses. By nightfall, no one will know we were ever anywhere else."
+
+**Scene 6: the far valley, evening.** After the houses are up, the players of the town's drums set out a slow marching beat, not for walking, but for remembering. The old and the young sit together at the water's edge and eat from one big pot.
+
+**GIDEON:** "We will not go back. The old spring was good for sixty years, and it is gone. We will have to name this one."
+**CHILD:** "Can we call it Breath?"
+**GIDEON:** "...Ask your mother."
+> ► **"Call it Breath."** — The child lights up.
+> ► **"Call it the Second."** — Gideon laughs.
+> ► **"Let the town choose."** — They argue until midnight.
 
 **Outcomes and receipt.**
 - The town arrives. If the player scouted ahead, a risk is cleared at a cost; if they walked at the back, a quiet pride follows.
@@ -320,6 +338,14 @@ objectives:
 **MOTHER:** (whispering) "...It's a coincidence."
 **WICK:** "Yes, Mam."
 
+**Scene 6: the reader's note.** Some days later the village tremor-reader leaves a short, careful note pinned to the player's pack: a list of the six tests, with a small drawing of a boy and a bowl.
+
+**READER (note):** "Four of six. Could be chance. I will keep testing, quietly, with no one looking. If I learn anything it will not be in the council minutes."
+**READER (note):** "He is a very good boy."
+> ► **"Keep it."** — It goes in the Journal.
+> ► **"Burn it."** — Safer, sadder.
+> ► **"Give it to his mother."** — She reads it twice, and puts it in a drawer.
+
 **Outcomes and receipt.**
 - The child keeps his humming and the town keeps its peace. No one decides whether it works.
 - **Receipt:** a small clay whistle that Wick has made, which hums when the ground does.
@@ -388,6 +414,15 @@ objectives:
 **Scene 5: the morning.** A child from each town is seen at the spring's edge, each with a stick, drawing the same shape in the mud.
 
 **HANNE:** "That is a house. They are both drawing houses."
+
+**Scene 6: a debt in labour.** Within a week the town's tax is drawn up in the Stillers' way: each family owes the spring a share of labour. The newcomers send the first work-party at dawn, unasked, to re-rope the spring's fence.
+
+**HANNE:** "They have been here six days. They have already mended my fence."
+**WREN:** "We are not good at sitting still."
+**HANNE:** "Then you are Stillers after all."
+> ► **"Join the work-party."** — A morning of rope and laughter.
+> ► **"Share the first meal."** — A very long table.
+> ► **"Walk the boundary with Hanne."** — She tells you every stone's name.
 
 **Outcomes and receipt.**
 - Two towns share a spring. The agreement is rough, and the shared chart is the first of its kind.
@@ -462,6 +497,15 @@ objectives:
 > ► **"Check the pegs."** — Dunstan approves.
 > ► **"Say goodbye to the old site."** — You do, and she smiles.
 
+**Scene 6: the next house.** Within the month Dunstan is asked to move three more houses. He sends the old woman along to supervise, since she has opinions.
+
+**OLD WOMAN:** "Do not tie it like that. Tie it like *this.*"
+**DUNSTAN:** "That is exactly how I tied it."
+**OLD WOMAN:** "Then it is wrong in a better way."
+> ► **"Ask her to teach the knot."** — She does, grandly.
+> ► **"Offer to carry the cat."** — The cat declines.
+> ► **"Help raise the next roof."** — Another long afternoon.
+
 **Outcomes and receipt.**
 - The house is moved and the old woman is quietly furious and entirely happy.
 - **Receipt:** a small wooden peg, carved with the date and the words "Down and up."
@@ -525,6 +569,14 @@ objectives:
 **AMBROSE:** "I do not know who I am writing it for."
 
 **Scene 5: the second visit.** A season later, the player passes the rise again. The cairn is one stone taller. The sprig of pine is fresh.
+
+**Scene 6: the margin.** Weeks later a letter arrives at the player's inn, sealed with a thumbprint of ink. Inside is a single drawing of the Sitting Hill, finished in a different hand.
+
+**LETTER:** "It was drawn, I think, by the same hand that drew the first. The paper is new."
+**LETTER:** "I am told this is impossible. I am told this by someone I do not trust."
+> ► **"Keep the letter."** — It goes in the Journal.
+> ► **"Send a reply."** — You write one line and are not sure to whom.
+> ► **"Return to the cairn."** — The sprig is fresh.
 
 **Outcomes and receipt.**
 - The map is copied, the margin note added. The Sitting Hill remains a question.
@@ -596,6 +648,22 @@ objectives:
 
 **DACIAN:** "I'd still be on the Ridge, wrapped in wool, if you hadn't."
 
+**Scene 6: the goat.** On the way home the player passes the reader's goat, now unaccountably the most confident animal on the road. It trots beside the player for a mile and then, at a signpost, sits down and refuses to go on.
+
+**DACIAN:** "That animal has opinions about my crystals."
+**DACIAN:** "I think it is jealous."
+> ► **"Buy it a ribbon."** — It eats the ribbon.
+> ► **"Pat it."** — It leans, a lot.
+> ► **"Walk on."** — It follows at a sulky distance.
+
+**Scene 7: what the town keeps.** Before the player leaves, the people of the place press small, practical gifts into their hands: a heel of bread, a coil of cord, a flask of something sharp.
+
+**ELDER:** "It is not payment. Payment is the guild's business."
+**ELDER:** "This is what you give a guest who has stood a watch with you."
+> ► **"Accept it all."** — Gracious.
+> ► **"Take only the bread."** — Understood, and approved.
+> ► **"Share it out on the road."** — They like that best.
+
 **Outcomes and receipt.**
 - The crystal becomes the town's early-warning tick. Going through the cut makes it hum louder, and scares the reader's goat.
 - **Receipt:** a small chip of the same crystal, which hums faintly when the ground does.
@@ -663,6 +731,23 @@ objectives:
 **Scene 5: the tremor.** At dawn, a small, ordinary tremor rolls through. Ewart does not wake. The neighbours stand in the doorway, listening to him breathe.
 
 **NEIGHBOUR (whispering):** "There. It's back."
+
+**Scene 6: the quiet valley.** A month later the ground in the valley wakes at last, a gentle, rolling tremor at midmorning. The cart-shed is empty. Ewart is in the field, eyes closed, face lifted, standing very still.
+
+**EWART:** "There you are."
+**NEIGHBOUR:** "You were worried about it."
+**EWART:** "I was. I am not now."
+> ► **"Welcome back."** — He nods.
+> ► **"Come and eat."** — He does.
+> ► **"Stay a moment."** — You do, and the ground rocks you both.
+
+**Scene 7: what the town keeps.** Before the player leaves, the people of the place press small, practical gifts into their hands: a heel of bread, a coil of cord, a flask of something sharp.
+
+**ELDER:** "It is not payment. Payment is the guild's business."
+**ELDER:** "This is what you give a guest who has stood a watch with you."
+> ► **"Accept it all."** — Gracious.
+> ► **"Take only the bread."** — Understood, and approved.
+> ► **"Share it out on the road."** — They like that best.
 
 **Outcomes and receipt.**
 - Ewart sleeps again. The town grows a custom of rocking-beds for the calm-sick.
@@ -734,6 +819,22 @@ objectives:
 > ► **"Decline."** — He shrugs.
 > ► **"Sign for the herd."** — He barks a laugh.
 
+**Scene 6: the log of the night.** Rhys keeps the watch-log in a plain hand and a firm line. Underneath the night's count, he adds a short note about the large beast that stopped at the lip.
+
+**RHYS:** "'One beast, as high as a cart. Stood. Looked across. Left.' I do not know what to call that."
+**RHYS:** "I will call it 'courtesy.'"
+> ► **"Courtesy is right."** — He writes it in.
+> ► **"Call it fear."** — **RHYS:** "Could be both."
+> ► **"Leave it unnamed."** — He underlines the gap.
+
+**Scene 7: what the town keeps.** Before the player leaves, the people of the place press small, practical gifts into their hands: a heel of bread, a coil of cord, a flask of something sharp.
+
+**ELDER:** "It is not payment. Payment is the guild's business."
+**ELDER:** "This is what you give a guest who has stood a watch with you."
+> ► **"Accept it all."** — Gracious.
+> ► **"Take only the bread."** — Understood, and approved.
+> ► **"Share it out on the road."** — They like that best.
+
 **Outcomes and receipt.**
 - The crossing holds. The siege is not touched. The watch adds a new rule: light before the third tremor.
 - **Receipt:** a watch-log page with the player's name beside forty tally marks.
@@ -800,6 +901,22 @@ objectives:
 **Scene 5: the log.** Back in the hut Bertram writes in a thick, thumbed book: 9, 10, 8, and a small symbol the player has never seen.
 
 **BERTRAM:** "For the next reader."
+
+**Scene 6: the path down.** Bertram walks the player a little way down the Ridge's long flank in the early light, one hand resting on the warm rock as if on a sleeping dog.
+
+**BERTRAM:** "I used to say goodnight to it. When I was young and foolish."
+**BERTRAM:** "I think I will start again."
+> ► **"Say it with him."** — The words are small.
+> ► **"Say nothing."** — He nods.
+> ► **"Ask what he'll write next."** — **BERTRAM:** "A single line. 'Still here.'"
+
+**Scene 7: what the town keeps.** Before the player leaves, the people of the place press small, practical gifts into their hands: a heel of bread, a coil of cord, a flask of something sharp.
+
+**ELDER:** "It is not payment. Payment is the guild's business."
+**ELDER:** "This is what you give a guest who has stood a watch with you."
+> ► **"Accept it all."** — Gracious.
+> ► **"Take only the bread."** — Understood, and approved.
+> ► **"Share it out on the road."** — They like that best.
 
 **Outcomes and receipt.**
 - The log is kept; the third breath is recorded and unexplained.

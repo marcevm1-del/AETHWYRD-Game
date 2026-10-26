@@ -2793,5 +2793,55 @@
   "id": "qkl_ridge_done",
   "description": "Side quest \"Quakeback's Ridge Breathes\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "ldp_door_wandered_done",
+  "description": "Side quest \"The Door That Wandered\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_gnome_news_done",
+  "description": "Side quest \"News for the Gnome Walls\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_chalk_nowhere_done",
+  "description": "Side quest \"Chalk to Nowhere\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_third_share_done",
+  "description": "Side quest \"The Oath of the Third Share\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_ones_stayed_done",
+  "description": "Side quest \"The Ones Who Stayed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_right_direction_done",
+  "description": "Side quest \"Read in the Right Direction\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_lantern_out_done",
+  "description": "Side quest \"When the Lantern Goes Out\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_lantern_stair_done",
+  "description": "Side quest \"The Lantern at the Stair\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_nests_hang_done",
+  "description": "Side quest \"Nests That Hang Down\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ldp_city_streets_done",
+  "description": "Side quest \"The City Changed Its Streets\" resolved",
+  "setBy": "quest"
  }
 ]
