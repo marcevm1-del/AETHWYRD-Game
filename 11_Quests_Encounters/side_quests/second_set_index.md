@@ -46,6 +46,10 @@ Thirty-eight more regions, ten quests each, ranks D to SS. Each file has its own
 | [[56_labyrinth_deep]] | Labyrinth, Drowned Floors | qst_ldp_ | B–S |
 
 ## Open points for approval
+- **Sky Archipelago** has three SS quests with first-pass rewards (140–150k gold). New items to approve: the Set Tables' covered eleventh dish, the Titan builder machine, the guild–Heavenfolk landing code, the serpents' song that stops after bar 12, the storm thundering a count of 41.
+- **Bastion** (stays besieged, no SiegeDefence): "cold joints" as why walls break, the inward-facing first gate, the rule that any captain may call a vote. **Quest 2** lets the Warden quietly allow a "wandering cart"; confirm that is not too much siege policy for a side quest.
+- **Labyrinth, Drowned Floors:** moving Gnome Walls doors, the raid-council oath clause, a guild lift at the top of the sunken-city stair, the floor-90 stair lantern with no oil. Zephiel, the Maze King and the floor-39 killer are never mentioned.
+- Collect ids `sky_garden_cutting` and `bastion_barley_sheaf` do not exist in `Data/Items`.
 - **SS rewards** (Nox Dominion, Calamity Steppe, Maw, Root of the World, Vesper) are first-pass guesses extrapolated from the S→SS promotion row; no SSS/EX quests exist (the rank enum stops at SSS).
 - **More new races** to confirm: "Demon", "Slime", "Vesperite".
 - **Collect ids that do not exist** in `Data/Items` (validator does not check): `nox_ashwheat_sheaf`, `steppe_ship_bird_feather`, `maw_resin_leaf`, `rot_hesk_lantern`, `hollow_sea_starter_algae`.
