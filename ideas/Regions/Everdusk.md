@@ -95,9 +95,36 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Wingborn|The Wingborn]] (Fairy Clan, led by Captain Sylphine Thistledart): The Summer Court's soldiery and messengers, losing ground to the Briar King's thorns.
 - [[Clans/The Pipers|The Pipers]] (Satyr/Faun Clan, led by Fennick Reedsong): Musicians and messengers of both courts, who are allowed to cross between them.
 
+## People
+
+- [[NPCs/Woodcutter Torben Oakleft|Woodcutter Torben Oakleft]]: Woodcutter whose daughter went to a revel
+- [[NPCs/Linnea Oakleft|Linnea Oakleft]]: Woodcutter's daughter at a fey revel
+- [[NPCs/Herald Sennet Quickdew|Herald Sennet Quickdew]]: Herald of the Summer Court
+- [[NPCs/Cooper Merrick Reedmarsh|Cooper Merrick Reedmarsh]]: Barrel-maker with a bargain
+- [[NPCs/Mother Isolt Hazelmere|Mother Isolt Hazelmere]]: Mother of a boy who said thank you
+- [[NPCs/Edge-keeper Tamsen Mossback|Edge-keeper Tamsen Mossback]]: Keeper of the Edge Stones
+- [[NPCs/Nissa Underbough|Nissa Underbough]]: Woman stolen as a child and returned as an adult
+- [[NPCs/Pathwarden Sorcha Hawthornwake|Pathwarden Sorcha Hawthornwake]]: Warden of the shifting paths
+- [[NPCs/Courtier Ysmere Rimeglass|Courtier Ysmere Rimeglass]]: Courtier of the Winter Court
+- [[NPCs/Elowen Briarlight|Elowen Briarlight]]: Nine-year-old who asked whether it is day
+- [[NPCs/Lady Calanthe Evenfall|Lady Calanthe Evenfall]]: Lady of the Last Glade
+
 ## Inns
 
 - [[Inns/The Hour That Isn't|The Hour That Isn't]] (Everdusk court)
+
+## Quests
+
+- [[Quests/Back Before Dawn|Back Before Dawn]] (A)
+- [[Quests/Generous Terms|Generous Terms]] (A)
+- [[Quests/The Bargain That Would Not Break|The Bargain That Would Not Break]] (A)
+- [[Quests/A Debt of Thanks|A Debt of Thanks]] (A)
+- [[Quests/The Edge Stones Are Walking|The Edge Stones Are Walking]] (A)
+- [[Quests/The Child Who Came Back|The Child Who Came Back]] (A)
+- [[Quests/Paths That Remember|Paths That Remember]] (S)
+- [[Quests/A Courtier of the Winter Court|A Courtier of the Winter Court]] (S)
+- [[Quests/Day or Night|Day or Night]] (S)
+- [[Quests/A Guest at the Last Glade|A Guest at the Last Glade]] (S)
 
 ## Monsters (12)
 

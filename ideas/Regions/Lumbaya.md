@@ -95,6 +95,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Silverbacks|The Silverbacks]] (Gorilla Clan, led by Engineer Obaku Stonepalm): The jungle's engineers and guardians, who rebuilt the temple roads. They can smell fear, and they fear the Nightmother.
 - [[Clans/The Slow Sages|The Slow Sages]] (Sloth Clan, led by Sage Bradyon Who-Waits): Lumbaya's canopy-dwelling sages, who keep the old star-records.
 
+## People
+
+- [[NPCs/Sefa Rootsong|Sefa Rootsong]]: Farmer who fears her husband has been replaced
+- [[NPCs/Elder Mabu Fernwake|Elder Mabu Fernwake]]: Elder who leads the dusk count
+- [[NPCs/Temple-Keeper Oruna Starcount|Temple-Keeper Oruna Starcount]]: Temple-keeper who wants to restore the star alignments
+- [[NPCs/Kiki Lowcanopy|Kiki Lowcanopy]]: Child who saw a face
+- [[NPCs/Widow Calu Reedflute|Widow Calu Reedflute]]: Widow who wants to say a name
+- [[NPCs/Tavo Nightbasket|Tavo Nightbasket]]: Fruit-seller who went to the Night Market once
+- [[NPCs/Stair-Warden Imeru Figroot|Stair-Warden Imeru Figroot]]: Warden of the Root Stair
+- [[NPCs/Healer Zanu Brightbark|Healer Zanu Brightbark]]: Village healer
+- [[NPCs/Auntie Lowa Drumhand|Auntie Lowa Drumhand]]: Song-keeper of three villages
+- [[NPCs/Ysa Nokoma-Kin|Ysa Nokoma-Kin]]: Grand-niece of Auntie Nokoma
+
+## Quests
+
+- [[Quests/A Question Only He Would Know|A Question Only He Would Know]] (B)
+- [[Quests/Counting the Children|Counting the Children]] (B)
+- [[Quests/The Fourth Alignment|The Fourth Alignment]] (A)
+- [[Quests/Her Mother's Face|Her Mother's Face]] (B)
+- [[Quests/A Name to Hum|A Name to Hum]] (B)
+- [[Quests/The Night Market Stall|The Night Market Stall]] (A)
+- [[Quests/What the Root Stair Climbs To|What the Root Stair Climbs To]] (A)
+- [[Quests/Leaf, Bark and Fever|Leaf, Bark and Fever]] (B)
+- [[Quests/A Song for a Password|A Song for a Password]] (A)
+- [[Quests/Auntie Nokoma Has Not Aged|Auntie Nokoma Has Not Aged]] (A)
+
 ## Monsters (36)
 
 | Monster | Family | Rank | Level |

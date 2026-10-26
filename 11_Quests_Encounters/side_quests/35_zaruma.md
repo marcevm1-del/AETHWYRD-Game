@@ -376,7 +376,7 @@ objectives:
 **ABENI:** "Not a drop wasted."
 The two caravans make camp side by side, and by evening are sharing a fire.
 
-**Afterword: the cup.** In the weeks that follow, Abeni sends boys with cups to the player's camp, unasked. She tells the wardens of the next three wells about the contest, the pause and the boy who would not ask. "It was never about who gives more," she says, laughing. "It is about who notices the one at the back." By autumn it has become the road's favourite story, told differently at every well, and always ending with a cup.
+**Afterword: the cup.** In the weeks that follow, Abeni sends boys with cups to the player's camp, unasked. She tells the wardens of the next three wells about the contest, the pause and the boy who would not ask. "It was never about who gives more," she says, laughing. "It is about who notices the one at the back." By autumn it has become the road's favourite story, told differently at every well, and always ending with a cup. The boy, when last heard of, has grown tall, carries water for the caravans and refuses payment, on the grounds that he is still repaying a very old cup.
 
 **Outcomes and receipt.**
 - The dispute is settled. If the player judged by thirst, Abeni records it as a precedent; if they judged by lots, she shakes her head and says nothing.
@@ -442,7 +442,7 @@ On the Mile, the player hears a low, cold laugh from the dark. On the scrub, a h
 **BAHATI (arriving, wheel mended, panting):** "I told you she'd come."
 The family cheers; the baby cries; the player is fed three breakfasts.
 
-**Afterword: the road.** The family keeps the player three days, which is, the grandmother informs them, the minimum polite visit. Each night someone new arrives from a neighbouring town, having heard the road is open, and the household grows louder. On the last evening the baby is passed round the fire and, when it reaches the player, stops crying and stares with great seriousness. "He is judging you," the grandmother says. "Be gentle. He will remember."
+**Afterword: the road.** The family keeps the player three days, which is, the grandmother informs them, the minimum polite visit. Each night someone new arrives from a neighbouring town, having heard the road is open, and the household grows louder. On the last evening the baby is passed round the fire and, when it reaches the player, stops crying and stares with great seriousness. "He is judging you," the grandmother says. "Be gentle. He will remember." At dawn the player leaves with a parcel of food, a blessing in three languages and a small kola nut wrapped in cloth, which the grandmother says is for the road home, and not to be eaten until it is needed.
 
 **Outcomes and receipt.**
 - The child is named. If the player took the Golden Mile, the story spreads along the road; if the wells, three wardens add the baby to their guest-lists.

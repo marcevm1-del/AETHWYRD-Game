@@ -94,6 +94,33 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Drifting|The Drifting]] (Medusae Clan, led by Elder Lumessa the Pale Bell): They light the Hollow Sea and guide the boat-towns. The Lumen-Eater imitates them.
 - [[Clans/The Inkwardens|The Inkwardens]] (Octopoda Clan, led by Chartmaster Octavian Deepink): Deep sea-folk of the Hollow Sea, keepers of the deepest charts.
 
+## People
+
+- [[NPCs/Captain Ulvric Duskwake|Captain Ulvric Duskwake]]: Captain of the boat-town Low Lantern
+- [[NPCs/Navigator Lisbet Gloamwren|Navigator Lisbet Gloamwren]]: Navigator of Low Lantern
+- [[NPCs/Bailer Corrin Ropemark|Bailer Corrin Ropemark]]: Rope-hand who found a survivor
+- [[NPCs/Surveyor Tilda Dawnfield|Surveyor Tilda Dawnfield]]: Surface-born surveyor seeking passage
+- [[NPCs/Gardener Ombra Kelpwhistle|Gardener Ombra Kelpwhistle]]: Tender of the Glow Gardens
+- [[NPCs/Widow Selvi Quillfin|Widow Selvi Quillfin]]: Keeper of a family's lamp-fish
+- [[NPCs/Songkeeper Dovan Echorill|Songkeeper Dovan Echorill]]: Songkeeper who carries songs between boat-towns
+- [[NPCs/Hull-Warden Sorrin Tarrow|Hull-Warden Sorrin Tarrow]]: Hull-warden of the boat-town Seven Knots
+- [[NPCs/Archivist Ruvane Undermere|Archivist Ruvane Undermere]]: Archivist of the first-boat records
+- [[NPCs/Elder Gwyn Tideless|Elder Gwyn Tideless]]: Elder whose mother left on the boat-town that sailed up
+- [[NPCs/Dill Fernglow|Dill Fernglow]]: Seven-year-old with a named fish
+
+## Quests
+
+- [[Quests/The Navigator Who Dreams of Sun|The Navigator Who Dreams of Sun]] (B)
+- [[Quests/The Man on the Rock|The Man on the Rock]] (B)
+- [[Quests/A Guide Across the Dark|A Guide Across the Dark]] (B)
+- [[Quests/The Glow Gardens Are Dimming|The Glow Gardens Are Dimming]] (B)
+- [[Quests/The Ancestor Fish|The Ancestor Fish]] (B)
+- [[Quests/A Song for Saltlamp Row|A Song for Saltlamp Row]] (B)
+- [[Quests/Night of the Loose Lashings|Night of the Loose Lashings]] (A)
+- [[Quests/Behind the Great Waterfall|Behind the Great Waterfall]] (A)
+- [[Quests/The Town That Sailed Up|The Town That Sailed Up]] (A)
+- [[Quests/A Light We Know|A Light We Know]] (A)
+
 ## Monsters (5)
 
 | Monster | Family | Rank | Level |

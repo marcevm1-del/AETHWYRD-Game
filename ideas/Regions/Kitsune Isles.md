@@ -98,9 +98,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Ghost Fox|Ghost Fox]] (Predator): A pale, flame-tailed fox, maybe a spirit, maybe an animal.
 
+## People
+
+- [[NPCs/Sorabi Tsukigata|Sorabi Tsukigata]]: Apprentice fox-witness
+- [[NPCs/Amane Kozue|Amane Kozue]]: Keeper of the Ninth Tail Teahouse
+- [[NPCs/Kasamaro|Kasamaro]]: Umbrella spirit
+- [[NPCs/Innkeeper Ohane Matsukage|Innkeeper Ohane Matsukage]]: Spirit innkeeper
+- [[NPCs/Dusk-Lamp Warden Rinji Hotaru|Dusk-Lamp Warden Rinji Hotaru]]: Warden of the dusk lamps
+- [[NPCs/Procession-Master Sakae Midorikawa|Procession-Master Sakae Midorikawa]]: Master of fox-wedding processions
+- [[NPCs/Gatekeeper Toma Shirabe|Gatekeeper Toma Shirabe]]: Gatekeeper of the Ninefold Shrine
+- [[NPCs/Gonbei Tanukida|Gonbei Tanukida]]: Tanuki merchant
+- [[NPCs/Haruto Umikage|Haruto Umikage]]: Fisherman of the Umikage line
+- [[NPCs/Festival-Marshal Chiyo Akatsuki|Festival-Marshal Chiyo Akatsuki]]: Marshal of Lantern Night
+
 ## Inns
 
 - [[Inns/The Ninth Tail Teahouse|The Ninth Tail Teahouse]] (Fox Shrine Isle)
+
+## Quests
+
+- [[Quests/The Rice and the Blood|The Rice and the Blood]] (C)
+- [[Quests/Tea for the Sunken Shrine|Tea for the Sunken Shrine]] (C)
+- [[Quests/The Umbrella That Waited|The Umbrella That Waited]] (C)
+- [[Quests/The Inn That Began to Eat|The Inn That Began to Eat]] (B)
+- [[Quests/The Lamp at the Door|The Lamp at the Door]] (B)
+- [[Quests/A Wedding in the Sun-Shower|A Wedding in the Sun-Shower]] (B)
+- [[Quests/The Nine Gates|The Nine Gates]] (B)
+- [[Quests/Leaf Money|Leaf Money]] (A)
+- [[Quests/What the Tide Remembers|What the Tide Remembers]] (A)
+- [[Quests/Lantern Night|Lantern Night]] (A)
 
 ## Monsters (40)
 

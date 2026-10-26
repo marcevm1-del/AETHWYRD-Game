@@ -95,6 +95,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The River-Lords|The River-Lords]] (Hippo Clan, led by Admiral Hippolyte Fordwarden): They control the river fords on the gold road and charge tolls in gold, which makes them Mansacor's next target.
 - [[Clans/The Pridelands|The Pridelands]] (Lion Clan, led by Prince Kofi Goldmane): The royal lineage of Zaruma, who rule by generosity and are shamed by the gold road's closing.
 
+## People
+
+- [[NPCs/Caravan-Master Ibori Dakar|Caravan-Master Ibori Dakar]]: Caravan-master of the northern run
+- [[NPCs/Elder-Treasurer Mosi Kamarah|Elder-Treasurer Mosi Kamarah]]: Treasurer of the council of elders
+- [[NPCs/Griot Fantah Koroma|Griot Fantah Koroma]]: Griot of the founding song
+- [[NPCs/Well-Warden Abeni Tafari|Well-Warden Abeni Tafari]]: Warden of a town well
+- [[NPCs/Carter Bahati Dube|Carter Bahati Dube]]: Kola carter
+- [[NPCs/Delver Sheka Nyambura|Delver Sheka Nyambura]]: Miner of the southern hills
+- [[NPCs/Mother Adwoa Lemba|Mother Adwoa Lemba]]: Elder griot of the road songs
+- [[NPCs/Zola Marimba|Zola Marimba]]: Griot's apprentice
+- [[NPCs/Market-Marshal Rashidi Ngoma|Market-Marshal Rashidi Ngoma]]: Marshal of a gold-road market
+- [[NPCs/Day-Priest Tendai Olufemi|Day-Priest Tendai Olufemi]]: Priest of the day-gods
+
+## Quests
+
+- [[Quests/Heavier Than Their Camels|Heavier Than Their Camels]] (B)
+- [[Quests/The Open Hand's Ledger|The Open Hand's Ledger]] (B)
+- [[Quests/The Missing Verse|The Missing Verse]] (B)
+- [[Quests/The Well Won't Be Hurried|The Well Won't Be Hurried]] (B)
+- [[Quests/Kola Before Dark|Kola Before Dark]] (B)
+- [[Quests/The Seam It Will Not Touch|The Seam It Will Not Touch]] (A)
+- [[Quests/The Golden Mile by Night|The Golden Mile by Night]] (A)
+- [[Quests/The Griot's Apprentice|The Griot's Apprentice]] (A)
+- [[Quests/Market Day at the Well|Market Day at the Well]] (A)
+- [[Quests/The Test of the Open Hand|The Test of the Open Hand]] (A)
+
 ## Monsters (31)
 
 | Monster | Family | Rank | Level |

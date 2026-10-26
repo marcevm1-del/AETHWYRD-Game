@@ -636,7 +636,7 @@ objectives:
 **AYAME:** "A cousin's."
 **GONBEI:** "A child of the *trade.*"
 
-**Afterword: the pearl.** Ayame's first lesson to her tanuki apprentice is how to hold her breath, and the second is how to count coins in the open air, in daylight, twice. Gonbei, hovering at the market gate, is observed counting his own leaf-money with his lips moving. A week later the sign is joined by a smaller one in the child's careful hand: *Honest leaves, honest weights, honest dives.* Nobody can remember who ordered it.
+**Afterword: the pearl.** Ayame's first lesson to her tanuki apprentice is how to hold her breath, and the second is how to count coins in the open air, in daylight, twice. Gonbei, hovering at the market gate, is observed counting his own leaf-money with his lips moving. A week later the sign is joined by a smaller one in the child's careful hand: *Honest leaves, honest weights, honest dives.* Nobody can remember who ordered it. Gonbei, asked, denies everything, and is later seen polishing the sign.
 
 **Outcomes and receipt.**
 - The case is settled. If the player proposed tanuki-craft, Ayame learns to spot a leaf at a glance; if gold, Gonbei pays with a heavy heart but a clean name.

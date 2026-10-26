@@ -94,6 +94,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Heavenfolk|The Heavenfolk]] (Angel Clan, led by Elder Aeryth Highwind): The winged people of the eyries, divided into lantern-bearers who guide the dead to the Ledges of Last Flight and armoured wingguard who once escorted royal messengers and now serve no king.
 - [[Clans/The Snowmanes|The Snowmanes]] (Yeti Clan, led by Porter-Chief Yuval Frostmane): Snowline dwellers who carry goods up the Long Stair for the Heavenfolk.
 
+## People
+
+- [[NPCs/Cadet Ceyla Ashwing|Cadet Ceyla Ashwing]]: Young flyer who wants to carry messages again
+- [[NPCs/Merchant Bartolo Sellick|Merchant Bartolo Sellick]]: Valley merchant with a crate for the eyrie
+- [[NPCs/Vesna Valewind|Vesna Valewind]]: Yak-herder whose son was taken as tribute
+- [[NPCs/Stair-keeper Gethin Tallstep|Stair-keeper Gethin Tallstep]]: Keeper of the Long Stair
+- [[NPCs/Wingmistress Kaelis Thornfeather|Wingmistress Kaelis Thornfeather]]: Leader of the young flyers' escort
+- [[NPCs/Eldest Mavren Hightalon|Eldest Mavren Hightalon]]: Eldest of the council of flyers
+- [[NPCs/Flyer Tolvik Swiftrest|Flyer Tolvik Swiftrest]]: Flyer searching for a missing brother
+- [[NPCs/Keeper Ilvane Greywing|Keeper Ilvane Greywing]]: Keeper of the Ledges of Last Flight
+- [[NPCs/Chart-flyer Peregrin Windrede|Chart-flyer Peregrin Windrede]]: Maker of flight charts
+- [[NPCs/Wrangler Rennick Lowperch|Wrangler Rennick Lowperch]]: Falcon-wrangler of the foothills
+
+## Quests
+
+- [[Quests/The First Message|The First Message]] (A)
+- [[Quests/Eleven Thousand Steps|Eleven Thousand Steps]] (A)
+- [[Quests/A Climber, Not a Flyer|A Climber, Not a Flyer]] (A)
+- [[Quests/A Ledge for a Stranger|A Ledge for a Stranger]] (A)
+- [[Quests/Flight in Numbers|Flight in Numbers]] (A)
+- [[Quests/The Council Cannot Decide|The Council Cannot Decide]] (A)
+- [[Quests/The Stone That Ends in Air|The Stone That Ends in Air]] (A)
+- [[Quests/The Letter She Carried|The Letter She Carried]] (S)
+- [[Quests/Above the Weather|Above the Weather]] (S)
+- [[Quests/The Bronze Feather|The Bronze Feather]] (S)
+
 ## Monsters (16)
 
 | Monster | Family | Rank | Level |

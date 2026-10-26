@@ -94,6 +94,31 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Scaleborn|The Scaleborn]] (Dragonkin Clan, led by Brother Pyrrin Emberscale): Lay brothers and sisters of the dragon-monasteries who believe they hatched from the sleeper's dreams. Vyrmax calls them traitors to the drakes.
 - [[Clans/The Wyvern Oath|The Wyvern Oath]] (Dragon/wyvern Rider Clan, led by Rider-Abbess Calyx Thornwing): An order who raise wyverns from eggs in the monastery hatcheries. (Canon: the player cannot ride flying mounts, so riders are NPCs and allies, never mounts the player controls.)
 
+## People
+
+- [[NPCs/Doorkeeper Brother Ulm|Doorkeeper Brother Ulm]]: Doorkeeper of the Skull
+- [[NPCs/Brother Casimir|Brother Casimir]]: Bone-warden of the middle monasteries
+- [[NPCs/Cantor Sister Ysolde|Cantor Sister Ysolde]]: Cantor of the evening lullaby
+- [[NPCs/Herbalist Sister Marren|Herbalist Sister Marren]]: Herbalist who presses fire-lily oil
+- [[NPCs/Pilgrim Anwen Greaves|Pilgrim Anwen Greaves]]: Pilgrim walking the whole Bone Road
+- [[NPCs/Abbot Thessaly|Abbot Thessaly]]: Abbot who presides over the council
+- [[NPCs/Archivist Sister Perrin|Archivist Sister Perrin]]: Archivist of the restricted shelves
+- [[NPCs/Brother Otho Vane|Brother Otho Vane]]: Bone-surveyor
+- [[NPCs/Elder Brother Quill|Elder Brother Quill]]: Eldest monk of the Skull
+
+## Quests
+
+- [[Quests/Boots at the Door|Boots at the Door]] (A)
+- [[Quests/Chips From a Rib|Chips From a Rib]] (A)
+- [[Quests/The Lullaby Cantor's Cold|The Lullaby Cantor's Cold]] (A)
+- [[Quests/Fire-Lily Harvest|Fire-Lily Harvest]] (A)
+- [[Quests/A Pilgrim Who Cannot Climb|A Pilgrim Who Cannot Climb]] (A)
+- [[Quests/The Abbots Split|The Abbots Split]] (A)
+- [[Quests/The Drake Who Came to the Gate|The Drake Who Came to the Gate]] (S)
+- [[Quests/The Book of the Burned Monk|The Book of the Burned Monk]] (S)
+- [[Quests/The Warm Vertebra|The Warm Vertebra]] (S)
+- [[Quests/What the Mountain Dreams|What the Mountain Dreams]] (S)
+
 ## Monsters (22)
 
 | Monster | Family | Rank | Level |

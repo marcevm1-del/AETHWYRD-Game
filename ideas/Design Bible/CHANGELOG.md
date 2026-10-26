@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased — Second regional set: 140 side quests (2026-10-26)
-- Added 140 original quests in files 19–32 (Moraveil, Strife Marches, Velmark, Umbravel, Goldmere Coast, Sunscar, Shen-Lu, Haneul, Zarvan, Gearholm, Xochitl Mire, Stormreach, Whitewater Reach, Dunewhale Drift) with `second_set_index.md`; files 19, 20 and 30–32 written directly, files 21–29 by three writing agents.
-- Data: 140 quests, supporting NPCs and flags merged. `npm run validate` passes (quests 333, npcs 348, flags 329). C# tests not run (no .NET SDK).
+## Unreleased — Second regional set: 260 side quests (2026-10-26)
+- Added 260 original quests in files 19–44 (Moraveil to Cinderhole: also Upper Labyrinth, Kitsune Isles, Zaruma, Lumbaya, True-Name Isles, Ashira Vale, Hollow Sea, Heavenreach, Everdusk, Dragon Spine, Vharlen) with `second_set_index.md`; files 19, 20, 30–32 and 42–44 written directly, files 21–29 and 33–41 by six writing agents.
+- Data: 260 quests, supporting NPCs and flags merged. `npm run validate` passes (quests 453, npcs 470, flags 449). C# tests not run (no .NET SDK).
 - Proposed in Canon §6 only.
 
 ## Unreleased — Forty pattern side quests and research (2026-10-26)

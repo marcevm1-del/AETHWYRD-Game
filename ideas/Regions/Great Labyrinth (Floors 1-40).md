@@ -73,10 +73,36 @@ Lamp oil and old stone; the echo of distant fights; dwarf ale on floor thirty; t
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Bell-Warden Gerta Dunnock|Bell-Warden Gerta Dunnock]]: Keeper of the rescue bell
+- [[NPCs/Dessa Wrenfield|Dessa Wrenfield]]: Rookie adventurer
+- [[NPCs/Odalys Reedwhistle|Odalys Reedwhistle]]: Retired porter
+- [[NPCs/Brannoch Stoutbelt|Brannoch Stoutbelt]]: Barkeep of the Deep Pint
+- [[NPCs/Tik Ashgleam|Tik Ashgleam]]: Dungeon-born kobold salvager
+- [[NPCs/Springkeeper Ilsabet Rue|Springkeeper Ilsabet Rue]]: Keeper of the floor 30 spring
+- [[NPCs/Healer Wynne Harrowgate|Healer Wynne Harrowgate]]: Temple healer, newly licensed
+- [[NPCs/Tam Ledgerwick|Tam Ledgerwick]]: Ledger-keeper of the ghost market
+- [[NPCs/Hostess Lenore Hartsong|Hostess Lenore Hartsong]]: Hostess of the ghost market
+- [[NPCs/Skritch Cindertoe|Skritch Cindertoe]]: Kobold map-seller
+
 ## Inns
 
 - [[Inns/The Deep Pint|The Deep Pint]] (Labyrinth Floor 30 safe town)
 - [[Inns/The Lantern Wake|The Lantern Wake]] (Labyrinth Floor 40 ghost market)
+
+## Quests
+
+- [[Quests/The Crossed Chalk|The Crossed Chalk]] (D)
+- [[Quests/Carry the Lamp|Carry the Lamp]] (D)
+- [[Quests/Reset Day|Reset Day]] (D)
+- [[Quests/A Cask for the Quiet Floor|A Cask for the Quiet Floor]] (D)
+- [[Quests/Lost and Found|Lost and Found]] (D)
+- [[Quests/The Spring Under Siege|The Spring Under Siege]] (C)
+- [[Quests/First Descent|First Descent]] (C)
+- [[Quests/Paid in Stories|Paid in Stories]] (C)
+- [[Quests/A Letter for the Surface|A Letter for the Surface]] (C)
+- [[Quests/The Map of a Floor That Isn't|The Map of a Floor That Isn't]] (C)
 
 ## Monsters (128)
 

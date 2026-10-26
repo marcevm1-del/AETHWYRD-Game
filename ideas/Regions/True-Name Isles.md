@@ -98,6 +98,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Turtle Drake|Turtle Drake]] (Water Base): A shelled sea-drake that carries islands of coral on its back.
 
+## People
+
+- [[NPCs/Selke Brinehand|Selke Brinehand]]: Mother of a child who returned empty
+- [[NPCs/Namer Orsolo Tidewrit|Namer Orsolo Tidewrit]]: Senior namer of the council
+- [[NPCs/Grandmother Pehu Saltwick|Grandmother Pehu Saltwick]]: Old woman who wants to listen at the Silent Reef
+- [[NPCs/Navigator Maru Longwake|Navigator Maru Longwake]]: Navigator who claims to have found where names are kept
+- [[NPCs/Navigator-Emeritus Lio Marenpath|Navigator-Emeritus Lio Marenpath]]: Greatest navigator of her age
+- [[NPCs/Clerk Wim Inkwater|Clerk Wim Inkwater]]: Clerk of the Hall of Names
+- [[NPCs/Ilsabet Fenrow|Ilsabet Fenrow]]: Foreign mother waiting for a Naming Voyage
+- [[NPCs/Boatwright Dovrik Plankmaker|Boatwright Dovrik Plankmaker]]: Boatwright of the Naming boats
+- [[NPCs/Vigilkeeper Odu Lanternwright|Vigilkeeper Odu Lanternwright]]: Keeper of the vigil lanterns
+- [[NPCs/Pillar-Tender Ennis Hollowtide|Pillar-Tender Ennis Hollowtide]]: Tender of the Naming Rocks
+
+## Quests
+
+- [[Quests/The Girl Who Came Home Empty|The Girl Who Came Home Empty]] (B)
+- [[Quests/A Name on Loan|A Name on Loan]] (A)
+- [[Quests/Listening Reef|Listening Reef]] (B)
+- [[Quests/The Navigator's Chart|The Navigator's Chart]] (A)
+- [[Quests/Said Once|Said Once]] (B)
+- [[Quests/The Blank Ledger|The Blank Ledger]] (B)
+- [[Quests/Parents From Far Away|Parents From Far Away]] (B)
+- [[Quests/A Boat Nobody May Sail|A Boat Nobody May Sail]] (A)
+- [[Quests/The Lantern Vigil|The Lantern Vigil]] (A)
+- [[Quests/The Pillar That Does Not Answer|The Pillar That Does Not Answer]] (A)
+
 ## Monsters (13)
 
 | Monster | Family | Rank | Level |

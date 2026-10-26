@@ -89,6 +89,33 @@ Warm bread and honey; birdsong all day; laughter from every doorway; a sweetness
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Hettie Ashdown|Hettie Ashdown]]: Woman from Aldmere looking for her husband
+- [[NPCs/Baker Maudine Crumb|Baker Maudine Crumb]]: Baker who was once a famous adventurer
+- [[NPCs/Posy Applewhite|Posy Applewhite]]: Child who asks why there are no old people
+- [[NPCs/Miller Alwyn Haskell|Miller Alwyn Haskell]]: Miller whose mill stands below the hum
+- [[NPCs/Brannoch Hive|Brannoch Hive]]: Retired soldier who keeps bees
+- [[NPCs/Surveyor Ostrel Stonepace|Surveyor Ostrel Stonepace]]: Road surveyor
+- [[NPCs/Postmistress Lisbet Callow|Postmistress Lisbet Callow]]: Postmistress of Ashira
+- [[NPCs/Investigator Dessa Marchbank|Investigator Dessa Marchbank]]: Guild investigator
+- [[NPCs/Innkeeper Hob Brackley|Innkeeper Hob Brackley]]: Innkeeper of the Open Door
+- [[NPCs/Hale Dunmarrow|Hale Dunmarrow]]: Traveller who lost his daughter a week ago
+- [[NPCs/Gardener Lenna Honeywell|Gardener Lenna Honeywell]]: Gardener of the Warden's Garden
+
+## Quests
+
+- [[Quests/The Husband Who Stopped Writing|The Husband Who Stopped Writing]] (B)
+- [[Quests/The Baker's Dream|The Baker's Dream]] (B)
+- [[Quests/Why There Are No Old People|Why There Are No Old People]] (B)
+- [[Quests/The Hill That Hums|The Hill That Hums]] (B)
+- [[Quests/Wanting the Ache Back|Wanting the Ache Back]] (B)
+- [[Quests/The Milestones That Stop Counting|The Milestones That Stop Counting]] (B)
+- [[Quests/Letters That Say the Same Thing|Letters That Say the Same Thing]] (B)
+- [[Quests/The Investigator Who Was Happy|The Investigator Who Was Happy]] (B)
+- [[Quests/The Man Who Would Not Be Comforted|The Man Who Would Not Be Comforted]] (B)
+- [[Quests/Honey for the Warden|Honey for the Warden]] (B)
+
 ## Monsters (4)
 
 | Monster | Family | Rank | Level |

@@ -335,3 +335,123 @@ Story flags are the compact bridge between quest outcomes and later world respon
 - [[Systems/Flags/xoc_night_causeway_done|xoc_night_causeway_done]] — Side quest "Flowers for the Night Causeway" resolved
 - [[Systems/Flags/xoc_ring_water_done|xoc_ring_water_done]] — Side quest "The Ring of Equal Water" resolved
 - [[Systems/Flags/xoc_boy_feeding_done|xoc_boy_feeding_done]] — Side quest "The Boy Who Stopped Feeding the River" resolved
+- [[Systems/Flags/dsp_boots_done|dsp_boots_done]] — Side quest "Boots at the Door" resolved
+- [[Systems/Flags/dsp_chips_done|dsp_chips_done]] — Side quest "Chips From a Rib" resolved
+- [[Systems/Flags/dsp_cantor_done|dsp_cantor_done]] — Side quest "The Lullaby Cantor's Cold" resolved
+- [[Systems/Flags/dsp_lily_done|dsp_lily_done]] — Side quest "Fire-Lily Harvest" resolved
+- [[Systems/Flags/dsp_pilgrim_done|dsp_pilgrim_done]] — Side quest "A Pilgrim Who Cannot Climb" resolved
+- [[Systems/Flags/dsp_abbots_done|dsp_abbots_done]] — Side quest "The Abbots Split" resolved
+- [[Systems/Flags/dsp_drake_gate_done|dsp_drake_gate_done]] — Side quest "The Drake Who Came to the Gate" resolved
+- [[Systems/Flags/dsp_burned_monk_done|dsp_burned_monk_done]] — Side quest "The Book of the Burned Monk" resolved
+- [[Systems/Flags/dsp_vertebra_done|dsp_vertebra_done]] — Side quest "The Warm Vertebra" resolved
+- [[Systems/Flags/dsp_dreams_done|dsp_dreams_done]] — Side quest "What the Mountain Dreams" resolved
+- [[Systems/Flags/vhl_recruit_done|vhl_recruit_done]] — Side quest "The Recruit Who Could Not Swear" resolved
+- [[Systems/Flags/vhl_horn_done|vhl_horn_done]] — Side quest "Horn Practice" resolved
+- [[Systems/Flags/vhl_grain_done|vhl_grain_done]] — Side quest "A Grain Wagon for Fort Seven" resolved
+- [[Systems/Flags/vhl_spy_done|vhl_spy_done]] — Side quest "The Spy Who Paid His Bill" resolved
+- [[Systems/Flags/vhl_letters_done|vhl_letters_done]] — Side quest "Letters From the Fallen Fort" resolved
+- [[Systems/Flags/vhl_dinner_done|vhl_dinner_done]] — Side quest "The Senate Dinner" resolved
+- [[Systems/Flags/vhl_rank_done|vhl_rank_done]] — Side quest "Rank and File" resolved
+- [[Systems/Flags/vhl_general_done|vhl_general_done]] — Side quest "The General Who Wanted to Retire" resolved
+- [[Systems/Flags/vhl_pledge_done|vhl_pledge_done]] — Side quest "What the Pledge Cost" resolved
+- [[Systems/Flags/vhl_horns_done|vhl_horns_done]] — Side quest "The Night the Horns Failed" resolved
+- [[Systems/Flags/cnd_mask_done|cnd_mask_done]] — Side quest "A Mask for a Stranger" resolved
+- [[Systems/Flags/cnd_chimney_done|cnd_chimney_done]] — Side quest "The Last Open Chimney" resolved
+- [[Systems/Flags/cnd_debt_done|cnd_debt_done]] — Side quest "Debt of the Old Miners" resolved
+- [[Systems/Flags/cnd_lullaby_done|cnd_lullaby_done]] — Side quest "Smuggler's Lullaby" resolved
+- [[Systems/Flags/cnd_moths_done|cnd_moths_done]] — Side quest "The Ash-Moth Census" resolved
+- [[Systems/Flags/cnd_mask_thief_done|cnd_mask_thief_done]] — Side quest "A Mask Without a Face" resolved
+- [[Systems/Flags/cnd_apprentice_done|cnd_apprentice_done]] — Side quest "Alchemist's Apprentice" resolved
+- [[Systems/Flags/cnd_choking_done|cnd_choking_done]] — Side quest "Choking District" resolved
+- [[Systems/Flags/cnd_fire_done|cnd_fire_done]] — Side quest "The Fire That Will Not Pay" resolved
+- [[Systems/Flags/cnd_smoke_done|cnd_smoke_done]] — Side quest "What Vasque Keeps in the Smoke" resolved
+- [[Systems/Flags/lab_chalk_done|lab_chalk_done]] — Side quest "The Crossed Chalk" resolved
+- [[Systems/Flags/lab_lamp_done|lab_lamp_done]] — Side quest "Carry the Lamp" resolved
+- [[Systems/Flags/lab_reset_day_done|lab_reset_day_done]] — Side quest "Reset Day" resolved
+- [[Systems/Flags/lab_cask_done|lab_cask_done]] — Side quest "A Cask for the Quiet Floor" resolved
+- [[Systems/Flags/lab_lost_found_done|lab_lost_found_done]] — Side quest "Lost and Found" resolved
+- [[Systems/Flags/lab_spring_done|lab_spring_done]] — Side quest "The Spring Under Siege" resolved
+- [[Systems/Flags/lab_first_descent_done|lab_first_descent_done]] — Side quest "First Descent" resolved
+- [[Systems/Flags/lab_stories_done|lab_stories_done]] — Side quest "Paid in Stories" resolved
+- [[Systems/Flags/lab_letter_done|lab_letter_done]] — Side quest "A Letter for the Surface" resolved
+- [[Systems/Flags/lab_map_done|lab_map_done]] — Side quest "The Map of a Floor That Isn't" resolved
+- [[Systems/Flags/kit_witness_done|kit_witness_done]] — Side quest "The Rice and the Blood" resolved
+- [[Systems/Flags/kit_tea_done|kit_tea_done]] — Side quest "Tea for the Sunken Shrine" resolved
+- [[Systems/Flags/kit_umbrella_done|kit_umbrella_done]] — Side quest "The Umbrella That Waited" resolved
+- [[Systems/Flags/kit_inn_done|kit_inn_done]] — Side quest "The Inn That Began to Eat" resolved
+- [[Systems/Flags/kit_lamp_done|kit_lamp_done]] — Side quest "The Lamp at the Door" resolved
+- [[Systems/Flags/kit_wedding_done|kit_wedding_done]] — Side quest "A Wedding in the Sun-Shower" resolved
+- [[Systems/Flags/kit_gates_done|kit_gates_done]] — Side quest "The Nine Gates" resolved
+- [[Systems/Flags/kit_leaf_done|kit_leaf_done]] — Side quest "Leaf Money" resolved
+- [[Systems/Flags/kit_tide_done|kit_tide_done]] — Side quest "What the Tide Remembers" resolved
+- [[Systems/Flags/kit_lantern_done|kit_lantern_done]] — Side quest "Lantern Night" resolved
+- [[Systems/Flags/zrm_decoy_done|zrm_decoy_done]] — Side quest "Heavier Than Their Camels" resolved
+- [[Systems/Flags/zrm_ledger_done|zrm_ledger_done]] — Side quest "The Open Hand's Ledger" resolved
+- [[Systems/Flags/zrm_verse_done|zrm_verse_done]] — Side quest "The Missing Verse" resolved
+- [[Systems/Flags/zrm_well_done|zrm_well_done]] — Side quest "The Well Won't Be Hurried" resolved
+- [[Systems/Flags/zrm_kola_done|zrm_kola_done]] — Side quest "Kola Before Dark" resolved
+- [[Systems/Flags/zrm_seam_done|zrm_seam_done]] — Side quest "The Seam It Will Not Touch" resolved
+- [[Systems/Flags/zrm_mile_done|zrm_mile_done]] — Side quest "The Golden Mile by Night" resolved
+- [[Systems/Flags/zrm_apprentice_done|zrm_apprentice_done]] — Side quest "The Griot's Apprentice" resolved
+- [[Systems/Flags/zrm_market_done|zrm_market_done]] — Side quest "Market Day at the Well" resolved
+- [[Systems/Flags/zrm_test_done|zrm_test_done]] — Side quest "The Test of the Open Hand" resolved
+- [[Systems/Flags/lum_question_done|lum_question_done]] — Side quest "A Question Only He Would Know" resolved
+- [[Systems/Flags/lum_counting_done|lum_counting_done]] — Side quest "Counting the Children" resolved
+- [[Systems/Flags/lum_alignment_done|lum_alignment_done]] — Side quest "The Fourth Alignment" resolved
+- [[Systems/Flags/lum_mothers_face_done|lum_mothers_face_done]] — Side quest "Her Mother's Face" resolved
+- [[Systems/Flags/lum_hum_done|lum_hum_done]] — Side quest "A Name to Hum" resolved
+- [[Systems/Flags/lum_night_stall_done|lum_night_stall_done]] — Side quest "The Night Market Stall" resolved
+- [[Systems/Flags/lum_root_stair_done|lum_root_stair_done]] — Side quest "What the Root Stair Climbs To" resolved
+- [[Systems/Flags/lum_fever_done|lum_fever_done]] — Side quest "Leaf, Bark and Fever" resolved
+- [[Systems/Flags/lum_password_done|lum_password_done]] — Side quest "A Song for a Password" resolved
+- [[Systems/Flags/lum_nokoma_done|lum_nokoma_done]] — Side quest "Auntie Nokoma Has Not Aged" resolved
+- [[Systems/Flags/tni_empty_girl_done|tni_empty_girl_done]] — Side quest "The Girl Who Came Home Empty" resolved
+- [[Systems/Flags/tni_name_loan_done|tni_name_loan_done]] — Side quest "A Name on Loan" resolved
+- [[Systems/Flags/tni_reef_done|tni_reef_done]] — Side quest "Listening Reef" resolved
+- [[Systems/Flags/tni_chart_done|tni_chart_done]] — Side quest "The Navigator's Chart" resolved
+- [[Systems/Flags/tni_said_once_done|tni_said_once_done]] — Side quest "Said Once" resolved
+- [[Systems/Flags/tni_ledger_done|tni_ledger_done]] — Side quest "The Blank Ledger" resolved
+- [[Systems/Flags/tni_parents_done|tni_parents_done]] — Side quest "Parents From Far Away" resolved
+- [[Systems/Flags/tni_boat_done|tni_boat_done]] — Side quest "A Boat Nobody May Sail" resolved
+- [[Systems/Flags/tni_vigil_done|tni_vigil_done]] — Side quest "The Lantern Vigil" resolved
+- [[Systems/Flags/tni_pillar_done|tni_pillar_done]] — Side quest "The Pillar That Does Not Answer" resolved
+- [[Systems/Flags/ash_husband_done|ash_husband_done]] — Side quest "The Husband Who Stopped Writing" resolved
+- [[Systems/Flags/ash_baker_done|ash_baker_done]] — Side quest "The Baker's Dream" resolved
+- [[Systems/Flags/ash_old_people_done|ash_old_people_done]] — Side quest "Why There Are No Old People" resolved
+- [[Systems/Flags/ash_hill_done|ash_hill_done]] — Side quest "The Hill That Hums" resolved
+- [[Systems/Flags/ash_ache_done|ash_ache_done]] — Side quest "Wanting the Ache Back" resolved
+- [[Systems/Flags/ash_milestones_done|ash_milestones_done]] — Side quest "The Milestones That Stop Counting" resolved
+- [[Systems/Flags/ash_letters_done|ash_letters_done]] — Side quest "Letters That Say the Same Thing" resolved
+- [[Systems/Flags/ash_investigator_done|ash_investigator_done]] — Side quest "The Investigator Who Was Happy" resolved
+- [[Systems/Flags/ash_comfort_done|ash_comfort_done]] — Side quest "The Man Who Would Not Be Comforted" resolved
+- [[Systems/Flags/ash_honey_done|ash_honey_done]] — Side quest "Honey for the Warden" resolved
+- [[Systems/Flags/hol_dreams_sun_done|hol_dreams_sun_done]] — Side quest "The Navigator Who Dreams of Sun" resolved
+- [[Systems/Flags/hol_man_rock_done|hol_man_rock_done]] — Side quest "The Man on the Rock" resolved
+- [[Systems/Flags/hol_guide_dark_done|hol_guide_dark_done]] — Side quest "A Guide Across the Dark" resolved
+- [[Systems/Flags/hol_gardens_done|hol_gardens_done]] — Side quest "The Glow Gardens Are Dimming" resolved
+- [[Systems/Flags/hol_ancestor_fish_done|hol_ancestor_fish_done]] — Side quest "The Ancestor Fish" resolved
+- [[Systems/Flags/hol_saltlamp_done|hol_saltlamp_done]] — Side quest "A Song for Saltlamp Row" resolved
+- [[Systems/Flags/hol_lashings_done|hol_lashings_done]] — Side quest "Night of the Loose Lashings" resolved
+- [[Systems/Flags/hol_behind_falls_done|hol_behind_falls_done]] — Side quest "Behind the Great Waterfall" resolved
+- [[Systems/Flags/hol_town_sailed_done|hol_town_sailed_done]] — Side quest "The Town That Sailed Up" resolved
+- [[Systems/Flags/hol_light_known_done|hol_light_known_done]] — Side quest "A Light We Know" resolved
+- [[Systems/Flags/hvr_first_message_done|hvr_first_message_done]] — Side quest "The First Message" resolved
+- [[Systems/Flags/hvr_eleven_steps_done|hvr_eleven_steps_done]] — Side quest "Eleven Thousand Steps" resolved
+- [[Systems/Flags/hvr_climber_done|hvr_climber_done]] — Side quest "A Climber, Not a Flyer" resolved
+- [[Systems/Flags/hvr_ledge_done|hvr_ledge_done]] — Side quest "A Ledge for a Stranger" resolved
+- [[Systems/Flags/hvr_flight_done|hvr_flight_done]] — Side quest "Flight in Numbers" resolved
+- [[Systems/Flags/hvr_council_done|hvr_council_done]] — Side quest "The Council Cannot Decide" resolved
+- [[Systems/Flags/hvr_stone_air_done|hvr_stone_air_done]] — Side quest "The Stone That Ends in Air" resolved
+- [[Systems/Flags/hvr_letter_done|hvr_letter_done]] — Side quest "The Letter She Carried" resolved
+- [[Systems/Flags/hvr_above_weather_done|hvr_above_weather_done]] — Side quest "Above the Weather" resolved
+- [[Systems/Flags/hvr_bronze_feather_done|hvr_bronze_feather_done]] — Side quest "The Bronze Feather" resolved
+- [[Systems/Flags/evd_back_dawn_done|evd_back_dawn_done]] — Side quest "Back Before Dawn" resolved
+- [[Systems/Flags/evd_terms_done|evd_terms_done]] — Side quest "Generous Terms" resolved
+- [[Systems/Flags/evd_bargain_done|evd_bargain_done]] — Side quest "The Bargain That Would Not Break" resolved
+- [[Systems/Flags/evd_debt_thanks_done|evd_debt_thanks_done]] — Side quest "A Debt of Thanks" resolved
+- [[Systems/Flags/evd_edge_stones_done|evd_edge_stones_done]] — Side quest "The Edge Stones Are Walking" resolved
+- [[Systems/Flags/evd_child_back_done|evd_child_back_done]] — Side quest "The Child Who Came Back" resolved
+- [[Systems/Flags/evd_paths_done|evd_paths_done]] — Side quest "Paths That Remember" resolved
+- [[Systems/Flags/evd_courtier_done|evd_courtier_done]] — Side quest "A Courtier of the Winter Court" resolved
+- [[Systems/Flags/evd_day_night_done|evd_day_night_done]] — Side quest "Day or Night" resolved
+- [[Systems/Flags/evd_last_glade_guest_done|evd_last_glade_guest_done]] — Side quest "A Guest at the Last Glade" resolved

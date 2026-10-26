@@ -487,7 +487,7 @@ The slimes withdraw, and gather again.
 
 **Scene 4: the morning.** The first reset after the night brings the slimes back, but they do not return to the spring; they go to the basin, and the porters leave them be. A hand-lettered sign goes up: *Slime Pool. Do Not Poke.*
 
-**Afterword: the paddle.** In the grey hour after dawn Ilsabet sits on the spring wall with her feet in the water and a cold cup of tea, looking unusually pleased with herself. "I spent twenty years telling people the body will heal if you stop shouting at it," she says. "Turns out a spring is the same." She asks the player to sign the little board that hangs by the basin. Beneath the sign that reads *Do Not Poke* someone has already scrawled, in a child's hand: *But gently, if you must.*
+**Afterword: the paddle.** In the grey hour after dawn Ilsabet sits on the spring wall with her feet in the water and a cold cup of tea, looking unusually pleased with herself. "I spent twenty years telling people the body will heal if you stop shouting at it," she says. "Turns out a spring is the same." She asks the player to sign the little board that hangs by the basin. Beneath the sign that reads *Do Not Poke* someone has already scrawled, in a child's hand: *But gently, if you must.* By the next reset the basin has a bench, a bucket of lanterns and a regular visitor: a porter who sits beside it every evening and tells the slimes about his day, as if they were old friends.
 
 **Outcomes and receipt.**
 - The spring runs clean. If the player fought the slimes, the water is foul for a month and Ilsabet closes the safe town to casual visitors. If the player built the pool, the safe town gains a quiet, glowing nook children visit at dusk.

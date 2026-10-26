@@ -94,9 +94,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Iron Legions|The Iron Legions]] (Romanian Clan, led by Legate Severa Marcellan): Vharlen's legions, drilled from childhood, who carry their founders' pledge into every battle and bury their standards with their dead.
 - [[Clans/The Warhorse Kin|The Warhorse Kin]] (Horse Clan, led by Breeder Equina Strideheart): Breeders of Vharlen's warhorses.
 
+## People
+
+- [[NPCs/Drillmaster Hana Corvus|Drillmaster Hana Corvus]]: Drillmaster of the capital recruits
+- [[NPCs/Warden Pell Orrin|Warden Pell Orrin]]: Horn-warden of a garrison town
+- [[NPCs/Quartermaster Ilsa Brandt|Quartermaster Ilsa Brandt]]: Quartermaster of Fort Seven
+- [[NPCs/Innkeeper Gerd Aldous|Innkeeper Gerd Aldous]]: Innkeeper in the diplomats' quarter
+- [[NPCs/Clerk Tobin Wray|Clerk Tobin Wray]]: Clerk of the dead-letter office
+- [[NPCs/Senator Valeria Dunmore|Senator Valeria Dunmore]]: Senator of the generals' bench
+- [[NPCs/Sergeant Joss Harrow|Sergeant Joss Harrow]]: Sergeant offered a promotion
+- [[NPCs/General Auric Stolt|General Auric Stolt]]: General named as a possible heir
+- [[NPCs/Chaplain Merel Aden|Chaplain Merel Aden]]: Chaplain of the barracks shrine
+- [[NPCs/Watch-Captain Rhea Kordan|Watch-Captain Rhea Kordan]]: Watch-captain of a pass fort
+
 ## Inns
 
 - [[Inns/The Imperial Grand Hotel|The Imperial Grand Hotel]] (Vharlen capital)
+
+## Quests
+
+- [[Quests/The Recruit Who Could Not Swear|The Recruit Who Could Not Swear]] (B)
+- [[Quests/Horn Practice|Horn Practice]] (B)
+- [[Quests/A Grain Wagon for Fort Seven|A Grain Wagon for Fort Seven]] (B)
+- [[Quests/The Spy Who Paid His Bill|The Spy Who Paid His Bill]] (B)
+- [[Quests/Letters From the Fallen Fort|Letters From the Fallen Fort]] (B)
+- [[Quests/The Senate Dinner|The Senate Dinner]] (A)
+- [[Quests/Rank and File|Rank and File]] (A)
+- [[Quests/The General Who Wanted to Retire|The General Who Wanted to Retire]] (A)
+- [[Quests/What the Pledge Cost|What the Pledge Cost]] (A)
+- [[Quests/The Night the Horns Failed|The Night the Horns Failed]] (A)
 
 ## Monsters (35)
 

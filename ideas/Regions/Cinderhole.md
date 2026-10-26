@@ -94,6 +94,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Undercity Whiskers|The Undercity Whiskers]] (Mouse/Rat Clan, led by Mask-Maker Skritch Velvetnose): Rat-folk of Cinderhole's lowest tunnels, smugglers and mask-makers.
 - [[Clans/The Velvet Knives|The Velvet Knives]] (Panthar Clan, led by The Velvet Mother, Noirelle): Cinderhole's quietest guild, who sell secrets to Vasque and his enemies alike.
 
+## People
+
+- [[NPCs/Maskmaker Odile Fenn|Maskmaker Odile Fenn]]: Maskmaker who reads people by their requests
+- [[NPCs/Sweep-Captain Bruno Kell|Sweep-Captain Bruno Kell]]: Captain of the chimney-sweeps
+- [[NPCs/Miner Eskil Drogan|Miner Eskil Drogan]]: Miner who keeps the old tally
+- [[NPCs/Smuggler Neve Lasko|Smuggler Neve Lasko]]: Smuggler of refugees
+- [[NPCs/Naturalist Lio Pemberly|Naturalist Lio Pemberly]]: Naturalist who counts ash moths
+- [[NPCs/Mask Thief Tam Soot|Mask Thief Tam Soot]]: Mask thief
+- [[NPCs/Alchemist Zenobia Quill|Alchemist Zenobia Quill]]: Alchemist who trains apprentices
+- [[NPCs/Doctor Hale Arvid|Doctor Hale Arvid]]: Doctor of the choked districts
+- [[NPCs/Old Miner Sigrun Dahl|Old Miner Sigrun Dahl]]: Oldest living miner
+- [[NPCs/The Whisperer in the Flue|The Whisperer in the Flue]]: A voice in a flue
+
+## Quests
+
+- [[Quests/A Mask for a Stranger|A Mask for a Stranger]] (A)
+- [[Quests/The Last Open Chimney|The Last Open Chimney]] (A)
+- [[Quests/Debt of the Old Miners|Debt of the Old Miners]] (A)
+- [[Quests/Smuggler's Lullaby|Smuggler's Lullaby]] (A)
+- [[Quests/The Ash-Moth Census|The Ash-Moth Census]] (A)
+- [[Quests/A Mask Without a Face|A Mask Without a Face]] (A)
+- [[Quests/Alchemist's Apprentice|Alchemist's Apprentice]] (A)
+- [[Quests/Choking District|Choking District]] (A)
+- [[Quests/The Fire That Will Not Pay|The Fire That Will Not Pay]] (A)
+- [[Quests/What Vasque Keeps in the Smoke|What Vasque Keeps in the Smoke]] (A)
+
 ## Monsters (9)
 
 | Monster | Family | Rank | Level |

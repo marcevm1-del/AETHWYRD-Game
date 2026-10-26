@@ -992,7 +992,7 @@ Every population record is included in the complete register on its species note
 - [[Monsters/Beasts/Quakeback, the Earthshaker Behemoth|Quakeback, the Earthshaker Behemoth]] ([[Regions/Quaking Lands|Quaking Lands]])
 - [[Monsters/Undead/The Mad Magician of Aurumdeep, Sinker of Kingdoms|The Mad Magician of Aurumdeep, Sinker of Kingdoms]] ([[Regions/Aurumdeep|Aurumdeep]])
 
-## People (348)
+## People (470)
 ### Adventurers' Guild
 - [[NPCs/Mina Feathersby|Mina Feathersby]]
 - [[NPCs/Rodrick -Old Bear- Hale|Rodrick "Old Bear" Hale]]
@@ -1354,6 +1354,128 @@ Every population record is included in the complete register on its species note
 - [[NPCs/Captain Bram Saltwind|Captain Bram Saltwind]]
 - [[NPCs/Old Teodor Wake|Old Teodor Wake]]
 - [[NPCs/Singer Iolanthe Veil|Singer Iolanthe Veil]]
+- [[NPCs/Bell-Warden Gerta Dunnock|Bell-Warden Gerta Dunnock]]
+- [[NPCs/Dessa Wrenfield|Dessa Wrenfield]]
+- [[NPCs/Odalys Reedwhistle|Odalys Reedwhistle]]
+- [[NPCs/Brannoch Stoutbelt|Brannoch Stoutbelt]]
+- [[NPCs/Tik Ashgleam|Tik Ashgleam]]
+- [[NPCs/Springkeeper Ilsabet Rue|Springkeeper Ilsabet Rue]]
+- [[NPCs/Healer Wynne Harrowgate|Healer Wynne Harrowgate]]
+- [[NPCs/Tam Ledgerwick|Tam Ledgerwick]]
+- [[NPCs/Hostess Lenore Hartsong|Hostess Lenore Hartsong]]
+- [[NPCs/Skritch Cindertoe|Skritch Cindertoe]]
+- [[NPCs/Sorabi Tsukigata|Sorabi Tsukigata]]
+- [[NPCs/Amane Kozue|Amane Kozue]]
+- [[NPCs/Kasamaro|Kasamaro]]
+- [[NPCs/Innkeeper Ohane Matsukage|Innkeeper Ohane Matsukage]]
+- [[NPCs/Dusk-Lamp Warden Rinji Hotaru|Dusk-Lamp Warden Rinji Hotaru]]
+- [[NPCs/Procession-Master Sakae Midorikawa|Procession-Master Sakae Midorikawa]]
+- [[NPCs/Gatekeeper Toma Shirabe|Gatekeeper Toma Shirabe]]
+- [[NPCs/Gonbei Tanukida|Gonbei Tanukida]]
+- [[NPCs/Haruto Umikage|Haruto Umikage]]
+- [[NPCs/Festival-Marshal Chiyo Akatsuki|Festival-Marshal Chiyo Akatsuki]]
+- [[NPCs/Caravan-Master Ibori Dakar|Caravan-Master Ibori Dakar]]
+- [[NPCs/Elder-Treasurer Mosi Kamarah|Elder-Treasurer Mosi Kamarah]]
+- [[NPCs/Griot Fantah Koroma|Griot Fantah Koroma]]
+- [[NPCs/Well-Warden Abeni Tafari|Well-Warden Abeni Tafari]]
+- [[NPCs/Carter Bahati Dube|Carter Bahati Dube]]
+- [[NPCs/Delver Sheka Nyambura|Delver Sheka Nyambura]]
+- [[NPCs/Mother Adwoa Lemba|Mother Adwoa Lemba]]
+- [[NPCs/Zola Marimba|Zola Marimba]]
+- [[NPCs/Market-Marshal Rashidi Ngoma|Market-Marshal Rashidi Ngoma]]
+- [[NPCs/Day-Priest Tendai Olufemi|Day-Priest Tendai Olufemi]]
+- [[NPCs/Sefa Rootsong|Sefa Rootsong]]
+- [[NPCs/Elder Mabu Fernwake|Elder Mabu Fernwake]]
+- [[NPCs/Temple-Keeper Oruna Starcount|Temple-Keeper Oruna Starcount]]
+- [[NPCs/Kiki Lowcanopy|Kiki Lowcanopy]]
+- [[NPCs/Widow Calu Reedflute|Widow Calu Reedflute]]
+- [[NPCs/Tavo Nightbasket|Tavo Nightbasket]]
+- [[NPCs/Stair-Warden Imeru Figroot|Stair-Warden Imeru Figroot]]
+- [[NPCs/Healer Zanu Brightbark|Healer Zanu Brightbark]]
+- [[NPCs/Auntie Lowa Drumhand|Auntie Lowa Drumhand]]
+- [[NPCs/Ysa Nokoma-Kin|Ysa Nokoma-Kin]]
+- [[NPCs/Selke Brinehand|Selke Brinehand]]
+- [[NPCs/Namer Orsolo Tidewrit|Namer Orsolo Tidewrit]]
+- [[NPCs/Grandmother Pehu Saltwick|Grandmother Pehu Saltwick]]
+- [[NPCs/Navigator Maru Longwake|Navigator Maru Longwake]]
+- [[NPCs/Navigator-Emeritus Lio Marenpath|Navigator-Emeritus Lio Marenpath]]
+- [[NPCs/Clerk Wim Inkwater|Clerk Wim Inkwater]]
+- [[NPCs/Ilsabet Fenrow|Ilsabet Fenrow]]
+- [[NPCs/Boatwright Dovrik Plankmaker|Boatwright Dovrik Plankmaker]]
+- [[NPCs/Vigilkeeper Odu Lanternwright|Vigilkeeper Odu Lanternwright]]
+- [[NPCs/Pillar-Tender Ennis Hollowtide|Pillar-Tender Ennis Hollowtide]]
+- [[NPCs/Hettie Ashdown|Hettie Ashdown]]
+- [[NPCs/Baker Maudine Crumb|Baker Maudine Crumb]]
+- [[NPCs/Posy Applewhite|Posy Applewhite]]
+- [[NPCs/Miller Alwyn Haskell|Miller Alwyn Haskell]]
+- [[NPCs/Brannoch Hive|Brannoch Hive]]
+- [[NPCs/Surveyor Ostrel Stonepace|Surveyor Ostrel Stonepace]]
+- [[NPCs/Postmistress Lisbet Callow|Postmistress Lisbet Callow]]
+- [[NPCs/Investigator Dessa Marchbank|Investigator Dessa Marchbank]]
+- [[NPCs/Innkeeper Hob Brackley|Innkeeper Hob Brackley]]
+- [[NPCs/Hale Dunmarrow|Hale Dunmarrow]]
+- [[NPCs/Gardener Lenna Honeywell|Gardener Lenna Honeywell]]
+- [[NPCs/Captain Ulvric Duskwake|Captain Ulvric Duskwake]]
+- [[NPCs/Navigator Lisbet Gloamwren|Navigator Lisbet Gloamwren]]
+- [[NPCs/Bailer Corrin Ropemark|Bailer Corrin Ropemark]]
+- [[NPCs/Surveyor Tilda Dawnfield|Surveyor Tilda Dawnfield]]
+- [[NPCs/Gardener Ombra Kelpwhistle|Gardener Ombra Kelpwhistle]]
+- [[NPCs/Widow Selvi Quillfin|Widow Selvi Quillfin]]
+- [[NPCs/Songkeeper Dovan Echorill|Songkeeper Dovan Echorill]]
+- [[NPCs/Hull-Warden Sorrin Tarrow|Hull-Warden Sorrin Tarrow]]
+- [[NPCs/Archivist Ruvane Undermere|Archivist Ruvane Undermere]]
+- [[NPCs/Elder Gwyn Tideless|Elder Gwyn Tideless]]
+- [[NPCs/Dill Fernglow|Dill Fernglow]]
+- [[NPCs/Cadet Ceyla Ashwing|Cadet Ceyla Ashwing]]
+- [[NPCs/Merchant Bartolo Sellick|Merchant Bartolo Sellick]]
+- [[NPCs/Vesna Valewind|Vesna Valewind]]
+- [[NPCs/Stair-keeper Gethin Tallstep|Stair-keeper Gethin Tallstep]]
+- [[NPCs/Wingmistress Kaelis Thornfeather|Wingmistress Kaelis Thornfeather]]
+- [[NPCs/Eldest Mavren Hightalon|Eldest Mavren Hightalon]]
+- [[NPCs/Flyer Tolvik Swiftrest|Flyer Tolvik Swiftrest]]
+- [[NPCs/Keeper Ilvane Greywing|Keeper Ilvane Greywing]]
+- [[NPCs/Chart-flyer Peregrin Windrede|Chart-flyer Peregrin Windrede]]
+- [[NPCs/Wrangler Rennick Lowperch|Wrangler Rennick Lowperch]]
+- [[NPCs/Woodcutter Torben Oakleft|Woodcutter Torben Oakleft]]
+- [[NPCs/Linnea Oakleft|Linnea Oakleft]]
+- [[NPCs/Herald Sennet Quickdew|Herald Sennet Quickdew]]
+- [[NPCs/Cooper Merrick Reedmarsh|Cooper Merrick Reedmarsh]]
+- [[NPCs/Mother Isolt Hazelmere|Mother Isolt Hazelmere]]
+- [[NPCs/Edge-keeper Tamsen Mossback|Edge-keeper Tamsen Mossback]]
+- [[NPCs/Nissa Underbough|Nissa Underbough]]
+- [[NPCs/Pathwarden Sorcha Hawthornwake|Pathwarden Sorcha Hawthornwake]]
+- [[NPCs/Courtier Ysmere Rimeglass|Courtier Ysmere Rimeglass]]
+- [[NPCs/Elowen Briarlight|Elowen Briarlight]]
+- [[NPCs/Lady Calanthe Evenfall|Lady Calanthe Evenfall]]
+- [[NPCs/Doorkeeper Brother Ulm|Doorkeeper Brother Ulm]]
+- [[NPCs/Brother Casimir|Brother Casimir]]
+- [[NPCs/Cantor Sister Ysolde|Cantor Sister Ysolde]]
+- [[NPCs/Herbalist Sister Marren|Herbalist Sister Marren]]
+- [[NPCs/Pilgrim Anwen Greaves|Pilgrim Anwen Greaves]]
+- [[NPCs/Abbot Thessaly|Abbot Thessaly]]
+- [[NPCs/Archivist Sister Perrin|Archivist Sister Perrin]]
+- [[NPCs/Brother Otho Vane|Brother Otho Vane]]
+- [[NPCs/Elder Brother Quill|Elder Brother Quill]]
+- [[NPCs/Drillmaster Hana Corvus|Drillmaster Hana Corvus]]
+- [[NPCs/Warden Pell Orrin|Warden Pell Orrin]]
+- [[NPCs/Quartermaster Ilsa Brandt|Quartermaster Ilsa Brandt]]
+- [[NPCs/Innkeeper Gerd Aldous|Innkeeper Gerd Aldous]]
+- [[NPCs/Clerk Tobin Wray|Clerk Tobin Wray]]
+- [[NPCs/Senator Valeria Dunmore|Senator Valeria Dunmore]]
+- [[NPCs/Sergeant Joss Harrow|Sergeant Joss Harrow]]
+- [[NPCs/General Auric Stolt|General Auric Stolt]]
+- [[NPCs/Chaplain Merel Aden|Chaplain Merel Aden]]
+- [[NPCs/Watch-Captain Rhea Kordan|Watch-Captain Rhea Kordan]]
+- [[NPCs/Maskmaker Odile Fenn|Maskmaker Odile Fenn]]
+- [[NPCs/Sweep-Captain Bruno Kell|Sweep-Captain Bruno Kell]]
+- [[NPCs/Miner Eskil Drogan|Miner Eskil Drogan]]
+- [[NPCs/Smuggler Neve Lasko|Smuggler Neve Lasko]]
+- [[NPCs/Naturalist Lio Pemberly|Naturalist Lio Pemberly]]
+- [[NPCs/Mask Thief Tam Soot|Mask Thief Tam Soot]]
+- [[NPCs/Alchemist Zenobia Quill|Alchemist Zenobia Quill]]
+- [[NPCs/Doctor Hale Arvid|Doctor Hale Arvid]]
+- [[NPCs/Old Miner Sigrun Dahl|Old Miner Sigrun Dahl]]
+- [[NPCs/The Whisperer in the Flue|The Whisperer in the Flue]]
 
 ## Clans and peoples (87)
 - [[Clans/The Clockborn|The Clockborn]] — AI Clan
@@ -1461,7 +1583,7 @@ Every population record is included in the complete register on its species note
 - [[Fauna/Reef Dragon|Reef Dragon]] — Water Base
 - [[Fauna/Turtle Drake|Turtle Drake]] — Water Base
 
-## Quests (333)
+## Quests (453)
 - [[Quests/Rabbit Season|Rabbit Season]] (F, Subjugation)
 - [[Quests/Slime in the Well|Slime in the Well]] (F, OddJob)
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] (E, Trial)
@@ -1795,6 +1917,126 @@ Every population record is included in the complete register on its species note
 - [[Quests/The Captain's Vote|The Captain's Vote]] (A, Faction)
 - [[Quests/The Other Town|The Other Town]] (A, Exploration)
 - [[Quests/What She Hums at Night|What She Hums at Night]] (A, Hidden)
+- [[Quests/The Crossed Chalk|The Crossed Chalk]] (D, Investigation)
+- [[Quests/Carry the Lamp|Carry the Lamp]] (D, OddJob)
+- [[Quests/Reset Day|Reset Day]] (D, Faction)
+- [[Quests/A Cask for the Quiet Floor|A Cask for the Quiet Floor]] (D, Delivery)
+- [[Quests/Lost and Found|Lost and Found]] (D, Escort)
+- [[Quests/The Spring Under Siege|The Spring Under Siege]] (C, Defense)
+- [[Quests/First Descent|First Descent]] (C, Escort)
+- [[Quests/Paid in Stories|Paid in Stories]] (C, Hidden)
+- [[Quests/A Letter for the Surface|A Letter for the Surface]] (C, Delivery)
+- [[Quests/The Map of a Floor That Isn't|The Map of a Floor That Isn't]] (C, Exploration)
+- [[Quests/The Rice and the Blood|The Rice and the Blood]] (C, OddJob)
+- [[Quests/Tea for the Sunken Shrine|Tea for the Sunken Shrine]] (C, Exploration)
+- [[Quests/The Umbrella That Waited|The Umbrella That Waited]] (C, Hidden)
+- [[Quests/The Inn That Began to Eat|The Inn That Began to Eat]] (B, Investigation)
+- [[Quests/The Lamp at the Door|The Lamp at the Door]] (B, Faction)
+- [[Quests/A Wedding in the Sun-Shower|A Wedding in the Sun-Shower]] (B, Escort)
+- [[Quests/The Nine Gates|The Nine Gates]] (B, Exploration)
+- [[Quests/Leaf Money|Leaf Money]] (A, OddJob)
+- [[Quests/What the Tide Remembers|What the Tide Remembers]] (A, Hidden)
+- [[Quests/Lantern Night|Lantern Night]] (A, Defense)
+- [[Quests/Heavier Than Their Camels|Heavier Than Their Camels]] (B, Escort)
+- [[Quests/The Open Hand's Ledger|The Open Hand's Ledger]] (B, Faction)
+- [[Quests/The Missing Verse|The Missing Verse]] (B, Investigation)
+- [[Quests/The Well Won't Be Hurried|The Well Won't Be Hurried]] (B, OddJob)
+- [[Quests/Kola Before Dark|Kola Before Dark]] (B, Delivery)
+- [[Quests/The Seam It Will Not Touch|The Seam It Will Not Touch]] (A, Hidden)
+- [[Quests/The Golden Mile by Night|The Golden Mile by Night]] (A, Exploration)
+- [[Quests/The Griot's Apprentice|The Griot's Apprentice]] (A, Companion)
+- [[Quests/Market Day at the Well|Market Day at the Well]] (A, Defense)
+- [[Quests/The Test of the Open Hand|The Test of the Open Hand]] (A, Divine)
+- [[Quests/A Question Only He Would Know|A Question Only He Would Know]] (B, Investigation)
+- [[Quests/Counting the Children|Counting the Children]] (B, Faction)
+- [[Quests/The Fourth Alignment|The Fourth Alignment]] (A, Exploration)
+- [[Quests/Her Mother's Face|Her Mother's Face]] (B, Hidden)
+- [[Quests/A Name to Hum|A Name to Hum]] (B, OddJob)
+- [[Quests/The Night Market Stall|The Night Market Stall]] (A, Investigation)
+- [[Quests/What the Root Stair Climbs To|What the Root Stair Climbs To]] (A, Exploration)
+- [[Quests/Leaf, Bark and Fever|Leaf, Bark and Fever]] (B, Gathering)
+- [[Quests/A Song for a Password|A Song for a Password]] (A, Faction)
+- [[Quests/Auntie Nokoma Has Not Aged|Auntie Nokoma Has Not Aged]] (A, Hidden)
+- [[Quests/The Girl Who Came Home Empty|The Girl Who Came Home Empty]] (B, Investigation)
+- [[Quests/A Name on Loan|A Name on Loan]] (A, Faction)
+- [[Quests/Listening Reef|Listening Reef]] (B, Escort)
+- [[Quests/The Navigator's Chart|The Navigator's Chart]] (A, Exploration)
+- [[Quests/Said Once|Said Once]] (B, Hidden)
+- [[Quests/The Blank Ledger|The Blank Ledger]] (B, Investigation)
+- [[Quests/Parents From Far Away|Parents From Far Away]] (B, OddJob)
+- [[Quests/A Boat Nobody May Sail|A Boat Nobody May Sail]] (A, OddJob)
+- [[Quests/The Lantern Vigil|The Lantern Vigil]] (A, Defense)
+- [[Quests/The Pillar That Does Not Answer|The Pillar That Does Not Answer]] (A, Exploration)
+- [[Quests/The Husband Who Stopped Writing|The Husband Who Stopped Writing]] (B, Investigation)
+- [[Quests/The Baker's Dream|The Baker's Dream]] (B, Hidden)
+- [[Quests/Why There Are No Old People|Why There Are No Old People]] (B, OddJob)
+- [[Quests/The Hill That Hums|The Hill That Hums]] (B, Exploration)
+- [[Quests/Wanting the Ache Back|Wanting the Ache Back]] (B, OddJob)
+- [[Quests/The Milestones That Stop Counting|The Milestones That Stop Counting]] (B, Exploration)
+- [[Quests/Letters That Say the Same Thing|Letters That Say the Same Thing]] (B, Delivery)
+- [[Quests/The Investigator Who Was Happy|The Investigator Who Was Happy]] (B, Investigation)
+- [[Quests/The Man Who Would Not Be Comforted|The Man Who Would Not Be Comforted]] (B, Escort)
+- [[Quests/Honey for the Warden|Honey for the Warden]] (B, Hidden)
+- [[Quests/The Navigator Who Dreams of Sun|The Navigator Who Dreams of Sun]] (B, OddJob)
+- [[Quests/The Man on the Rock|The Man on the Rock]] (B, Investigation)
+- [[Quests/A Guide Across the Dark|A Guide Across the Dark]] (B, Escort)
+- [[Quests/The Glow Gardens Are Dimming|The Glow Gardens Are Dimming]] (B, Gathering)
+- [[Quests/The Ancestor Fish|The Ancestor Fish]] (B, OddJob)
+- [[Quests/A Song for Saltlamp Row|A Song for Saltlamp Row]] (B, Delivery)
+- [[Quests/Night of the Loose Lashings|Night of the Loose Lashings]] (A, Defense)
+- [[Quests/Behind the Great Waterfall|Behind the Great Waterfall]] (A, Exploration)
+- [[Quests/The Town That Sailed Up|The Town That Sailed Up]] (A, Investigation)
+- [[Quests/A Light We Know|A Light We Know]] (A, Hidden)
+- [[Quests/The First Message|The First Message]] (A, Delivery)
+- [[Quests/Eleven Thousand Steps|Eleven Thousand Steps]] (A, OddJob)
+- [[Quests/A Climber, Not a Flyer|A Climber, Not a Flyer]] (A, Exploration)
+- [[Quests/A Ledge for a Stranger|A Ledge for a Stranger]] (A, Hidden)
+- [[Quests/Flight in Numbers|Flight in Numbers]] (A, Defense)
+- [[Quests/The Council Cannot Decide|The Council Cannot Decide]] (A, Faction)
+- [[Quests/The Stone That Ends in Air|The Stone That Ends in Air]] (A, Investigation)
+- [[Quests/The Letter She Carried|The Letter She Carried]] (S, Investigation)
+- [[Quests/Above the Weather|Above the Weather]] (S, Exploration)
+- [[Quests/The Bronze Feather|The Bronze Feather]] (S, Hidden)
+- [[Quests/Back Before Dawn|Back Before Dawn]] (A, Escort)
+- [[Quests/Generous Terms|Generous Terms]] (A, Faction)
+- [[Quests/The Bargain That Would Not Break|The Bargain That Would Not Break]] (A, Investigation)
+- [[Quests/A Debt of Thanks|A Debt of Thanks]] (A, OddJob)
+- [[Quests/The Edge Stones Are Walking|The Edge Stones Are Walking]] (A, Exploration)
+- [[Quests/The Child Who Came Back|The Child Who Came Back]] (A, Hidden)
+- [[Quests/Paths That Remember|Paths That Remember]] (S, Exploration)
+- [[Quests/A Courtier of the Winter Court|A Courtier of the Winter Court]] (S, Escort)
+- [[Quests/Day or Night|Day or Night]] (S, Investigation)
+- [[Quests/A Guest at the Last Glade|A Guest at the Last Glade]] (S, OddJob)
+- [[Quests/Boots at the Door|Boots at the Door]] (A, OddJob)
+- [[Quests/Chips From a Rib|Chips From a Rib]] (A, Investigation)
+- [[Quests/The Lullaby Cantor's Cold|The Lullaby Cantor's Cold]] (A, OddJob)
+- [[Quests/Fire-Lily Harvest|Fire-Lily Harvest]] (A, Gathering)
+- [[Quests/A Pilgrim Who Cannot Climb|A Pilgrim Who Cannot Climb]] (A, Escort)
+- [[Quests/The Abbots Split|The Abbots Split]] (A, Faction)
+- [[Quests/The Drake Who Came to the Gate|The Drake Who Came to the Gate]] (S, Faction)
+- [[Quests/The Book of the Burned Monk|The Book of the Burned Monk]] (S, Investigation)
+- [[Quests/The Warm Vertebra|The Warm Vertebra]] (S, Exploration)
+- [[Quests/What the Mountain Dreams|What the Mountain Dreams]] (S, Hidden)
+- [[Quests/The Recruit Who Could Not Swear|The Recruit Who Could Not Swear]] (B, OddJob)
+- [[Quests/Horn Practice|Horn Practice]] (B, OddJob)
+- [[Quests/A Grain Wagon for Fort Seven|A Grain Wagon for Fort Seven]] (B, Escort)
+- [[Quests/The Spy Who Paid His Bill|The Spy Who Paid His Bill]] (B, Investigation)
+- [[Quests/Letters From the Fallen Fort|Letters From the Fallen Fort]] (B, Delivery)
+- [[Quests/The Senate Dinner|The Senate Dinner]] (A, Faction)
+- [[Quests/Rank and File|Rank and File]] (A, Faction)
+- [[Quests/The General Who Wanted to Retire|The General Who Wanted to Retire]] (A, OddJob)
+- [[Quests/What the Pledge Cost|What the Pledge Cost]] (A, Investigation)
+- [[Quests/The Night the Horns Failed|The Night the Horns Failed]] (A, Defense)
+- [[Quests/A Mask for a Stranger|A Mask for a Stranger]] (A, OddJob)
+- [[Quests/The Last Open Chimney|The Last Open Chimney]] (A, Defense)
+- [[Quests/Debt of the Old Miners|Debt of the Old Miners]] (A, Investigation)
+- [[Quests/Smuggler's Lullaby|Smuggler's Lullaby]] (A, Escort)
+- [[Quests/The Ash-Moth Census|The Ash-Moth Census]] (A, Gathering)
+- [[Quests/A Mask Without a Face|A Mask Without a Face]] (A, Hidden)
+- [[Quests/Alchemist's Apprentice|Alchemist's Apprentice]] (A, OddJob)
+- [[Quests/Choking District|Choking District]] (A, Faction)
+- [[Quests/The Fire That Will Not Pay|The Fire That Will Not Pay]] (A, Exploration)
+- [[Quests/What Vasque Keeps in the Smoke|What Vasque Keeps in the Smoke]] (A, Hidden)
 
 ## Inns (20)
 - [[Inns/The Sleeping Griffon|The Sleeping Griffon]]
