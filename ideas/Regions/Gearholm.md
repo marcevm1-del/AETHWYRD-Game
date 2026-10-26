@@ -94,6 +94,14 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Clockborn|The Clockborn]] (AI Clan, led by Archivist Seven-of-Brass): Gearholm's first automaton porters woke up one winter and asked for names. They live in the middle tiers as a quiet guild of repairers and archivists, still arguing with the city over whether they are citizens or property.
 - [[Clans/The Cog-Touched|The Cog-Touched]] (AI Infected Clan, led by Maren Vey, the Half-Wound): People and Clockborn alike whom Cogmaw has begun to absorb. They still remember their names for a while; the Undercity hides the early cases.
 
+## People
+
+- [[NPCs/Journeyman Pott Brasswick|Journeyman Pott Brasswick]]: Thorgrim's journeyman smith
+
+## Quests
+
+- [[Quests/The Smallest Job|The Smallest Job]] (B)
+
 ## Monsters (5)
 
 | Monster | Family | Rank | Level |

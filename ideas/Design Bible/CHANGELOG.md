@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Forty pattern side quests and research (2026-10-26)
+- Researched how Skyrim, Genshin Impact, The Witcher 3, Breath of the Wild, Elden Ring and similar games structure side content; recorded the findings, sources, caveats and our adaptations in `side_quests/side_quests_inspiration_notes.md` (ideas only, per `CLAUDE.md`).
+- Added forty original quests in eight pattern files (11–18): Cairns and Notes, Bargains of the Eight, Riddles of the Realm, Hangouts, Contracts with a Twist, Guild Ladders, Strange Visitors, Slow-Life Errands; `patterns_index.md`.
+- Added `Tools/quests/build_side_quest_table.js`, which writes `all_side_quests.md` (a table of every side quest); `npm run build` runs it. The generator now reads `romanceable` on NPC blocks.
+- Data: 40 quests, about 35 supporting NPCs (including Kiri, Sir Aldric Voss and Bram Copperpot) and 40 flags. `npm run validate` passes (quests 193, npcs 173, flags 189). C# tests not run (no .NET SDK on this host).
+- Proposed in Canon §6 only.
+
 ## Unreleased — One hundred side quests (2026-10-26)
 - Added `11_Quests_Encounters/side_quests/`: ten region files of ten side quests each (Whisperwood and Millbrook, Aldmere, Greymoor, Mossdeep, Sylvaran, Lirian, Fanghold, Iron Hold, Hoshizora, Frostveil), about 63,000 words. Every quest has its premise, the truth behind it, four scenes with dialogue and branching choices, outcomes and a visible receipt. Ranks E to A, mostly Ring 2 to 5; no Tyrant dies and no siege ends.
 - Added `side_quests_index.md`: totals, the conventions, the rules these quests keep and the table of proposed new facts and seeds.

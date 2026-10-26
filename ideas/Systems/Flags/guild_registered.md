@@ -9,7 +9,7 @@ The player holds an Adventurers' Guild card
 
 - **Set by:** quest
 - **Written by:** [[Quests/The Wooden Card|The Wooden Card]]
-- **Read by:** [[Quests/A Bowl of Stew|A Bowl of Stew]], [[Quests/Candles for the Hall|Candles for the Hall]], [[Quests/The Sound of Rank|The Sound of Rank]], [[Quests/Boxing Barn|Boxing Barn]], [[Quests/The Overdue Books|The Overdue Books]], [[Quests/Bread on the Step|Bread on the Step]], [[Quests/Glowcap Night|Glowcap Night]]
+- **Read by:** [[Quests/A Bowl of Stew|A Bowl of Stew]], [[Quests/Candles for the Hall|Candles for the Hall]], [[Quests/The Sound of Rank|The Sound of Rank]], [[Quests/Boxing Barn|Boxing Barn]], [[Quests/The Overdue Books|The Overdue Books]], [[Quests/Bread on the Step|Bread on the Step]], [[Quests/Glowcap Night|Glowcap Night]], [[Quests/A Basket for the Bridge-Keeper|A Basket for the Bridge-Keeper]], [[Quests/Seed Swap|Seed Swap]], [[Quests/A Hum for the Koi|A Hum for the Koi]], [[Quests/Roof Day|Roof Day]]
 
 ## State ownership
 

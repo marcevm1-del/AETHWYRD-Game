@@ -32,6 +32,15 @@ tags: [inn]
 > [!warning]- Spoiler
 > If you spared Grukk twice, he runs it, and he named it after his father.
 
+## Nearby contracts
+
+- [[Quests/First Snow|First Snow]] (D, Companion)
+- [[Quests/The Beast That Ate the Bridge|The Beast That Ate the Bridge]] (C, Bounty)
+
+## Local people
+
+- [[NPCs/Orlo Marrow|Orlo Marrow]] — Farmer, bridge-owner
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

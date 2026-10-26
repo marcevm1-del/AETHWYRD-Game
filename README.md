@@ -41,6 +41,7 @@
 | 09 | [item_and_economy_design.md](09_Equipment/item_and_economy_design.md) | Expanded item taxonomy, readable prices, gear identity, crafting, loot safety, trade routes, economy scope and Ring 0 slice |
 | 09 | [monster_core_pricing.md](09_Equipment/monster_core_pricing.md) | Proposed copper buyback ladder, crafting and research uses, specialist demand and anti-exploit rules |
 | 11 | [brindlewick_side_quests.md](11_Quests_Encounters/brindlewick_side_quests.md) | 36 Brindlewick side quests with approaches, outcomes and receipts, plus the orphanage and Mina clue maps (draft) |
+| 11 | [side_quests/patterns_index.md](11_Quests_Encounters/side_quests/patterns_index.md) | Forty pattern side quests (found stories, shrine bargains, puzzles, hangouts, contracts, faction tests, road encounters, cozy errands), plus [the research note](11_Quests_Encounters/side_quests/side_quests_inspiration_notes.md) and [a table of all side quests](11_Quests_Encounters/side_quests/all_side_quests.md) (draft) |
 | 11 | [side_quests/side_quests_index.md](11_Quests_Encounters/side_quests/side_quests_index.md) | One hundred side quests across ten regions, each with its story, dialogue, choices and outcomes (draft); built into `Data/` by `Tools/quests/build_side_quests.js` |
 | 11 | [guild_hall_talk_and_lexicon.md](11_Quests_Encounters/guild_hall_talk_and_lexicon.md) | Everyday adventurer vocabulary, guild-hall discussion samples and ambient dialogue rules |
 | 09 | [legendary_artifacts.md](09_Equipment/legendary_artifacts.md) | Divine artifacts, sentient weapons, legendaries |

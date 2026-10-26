@@ -41,6 +41,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 - [[Quests/The Boy on the North Road|The Boy on the North Road]]
 - [[Quests/Every Bed in the Griffon|Every Bed in the Griffon]]
 - [[Quests/Edric's Sword|Edric's Sword]]
+- [[Quests/A Basket for the Bridge-Keeper|A Basket for the Bridge-Keeper]]
 - [[Quests/Weekly Board/The Lost Cat (Again)|The Lost Cat (Again)]]
 - [[Quests/Weekly Board/A Basket of Mushrooms|A Basket of Mushrooms]]
 - [[Quests/Weekly Board/Rush Hour at the Griffon|Rush Hour at the Griffon]]

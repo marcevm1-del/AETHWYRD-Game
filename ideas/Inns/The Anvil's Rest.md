@@ -45,6 +45,7 @@ tags: [inn]
 - [[Quests/A Flame From Every Forge|A Flame From Every Forge]] (B, Faction)
 - [[Quests/The Thane's Granddaughter|The Thane's Granddaughter]] (A, Escort)
 - [[Quests/The Anvil That Counted|The Anvil That Counted]] (A, Hidden)
+- [[Quests/A Nail for the Anvil|A Nail for the Anvil]] (C, Companion)
 
 ## Local people
 

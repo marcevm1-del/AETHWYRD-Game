@@ -94,6 +94,14 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Nightwings|The Nightwings]] (Chiroptera Clan, led by Courier-Lord Vesk Duskmantle): Umbravel's bat-kin, who carry messages between the silk districts and scout the deep webs. They are gentle with the city and merciless with intruders.
 - [[Clans/The Hollow Ones|The Hollow Ones]] (Shade Clan, led by The Unshadowed): Shadow-folk of the deepest webs, who never come into the light.
 
+## People
+
+- [[NPCs/Weaver Nadira Duskthread|Weaver Nadira Duskthread]]: Master silk-weaver
+
+## Quests
+
+- [[Quests/The Thread That Hums|The Thread That Hums]] (C)
+
 ## Monsters (47)
 
 | Monster | Family | Rank | Level |

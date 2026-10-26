@@ -99,6 +99,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Feather Serpent|Feather Serpent]] (Flyers): A winged serpent of the river-cities, sacred to the Eagle lodge.
 
+## People
+
+- [[NPCs/Priest-Astronomer Citlalin|Priest-Astronomer Citlalin]]: Priest-astronomer of the ball court
+- [[NPCs/Boatwright Tzitzi|Boatwright Tzitzi]]: Boatwright
+
+## Quests
+
+- [[Quests/The Ball Court of the River-Kings|The Ball Court of the River-Kings]] (B)
+- [[Quests/The Head That Grew Back|The Head That Grew Back]] (B)
+
 ## Monsters (26)
 
 | Monster | Family | Rank | Level |

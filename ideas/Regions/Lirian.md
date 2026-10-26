@@ -119,6 +119,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/The Three Gaps|The Three Gaps]] (B)
 - [[Quests/The Last Song of Isolde Verro|The Last Song of Isolde Verro]] (B)
 - [[Quests/Maelsday, All at Once|Maelsday, All at Once]] (B)
+- [[Quests/The Honest Game|The Honest Game]] (D)
 
 ## Monsters (30)
 

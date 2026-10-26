@@ -992,7 +992,7 @@ Every population record is included in the complete register on its species note
 - [[Monsters/Beasts/Quakeback, the Earthshaker Behemoth|Quakeback, the Earthshaker Behemoth]] ([[Regions/Quaking Lands|Quaking Lands]])
 - [[Monsters/Undead/The Mad Magician of Aurumdeep, Sinker of Kingdoms|The Mad Magician of Aurumdeep, Sinker of Kingdoms]] ([[Regions/Aurumdeep|Aurumdeep]])
 
-## People (138)
+## People (173)
 ### Adventurers' Guild
 - [[NPCs/Mina Feathersby|Mina Feathersby]]
 - [[NPCs/Rodrick -Old Bear- Hale|Rodrick "Old Bear" Hale]]
@@ -1144,6 +1144,41 @@ Every population record is included in the complete register on its species note
 - [[NPCs/Old Halvard|Old Halvard]]
 - [[NPCs/Ice-Guide Sigrid|Ice-Guide Sigrid]]
 - [[NPCs/Lawspeaker Vigdis|Lawspeaker Vigdis]]
+- [[NPCs/Echo of Guide Tamar|Echo of Guide Tamar]]
+- [[NPCs/Voice of Keeper Orsolya|Voice of Keeper Orsolya]]
+- [[NPCs/The Voice on the Stair|The Voice on the Stair]]
+- [[NPCs/Echo of Captain Reva Sunder|Echo of Captain Reva Sunder]]
+- [[NPCs/Echo of Ketil the Whaler|Echo of Ketil the Whaler]]
+- [[NPCs/Coin-Priest Lucrezio|Coin-Priest Lucrezio]]
+- [[NPCs/Sister Mercy Aldous|Sister Mercy Aldous]]
+- [[NPCs/Journeyman Pott Brasswick|Journeyman Pott Brasswick]]
+- [[NPCs/Banner-Warden Halla Thunderbrow|Banner-Warden Halla Thunderbrow]]
+- [[NPCs/Dreamwarden Soyeon|Dreamwarden Soyeon]]
+- [[NPCs/Lantern-Examiner Gyeong|Lantern-Examiner Gyeong]]
+- [[NPCs/Master Azar|Master Azar]]
+- [[NPCs/Weaver Nadira Duskthread|Weaver Nadira Duskthread]]
+- [[NPCs/Priest-Astronomer Citlalin|Priest-Astronomer Citlalin]]
+- [[NPCs/Storm-Caller Bryn Galehand|Storm-Caller Bryn Galehand]]
+- [[NPCs/Kiri|Kiri]]
+- [[NPCs/Sir Aldric Voss|Sir Aldric Voss]]
+- [[NPCs/Bram Copperpot|Bram Copperpot]]
+- [[NPCs/Orlo Marrow|Orlo Marrow]]
+- [[NPCs/Reeve Matthias Quarrel|Reeve Matthias Quarrel]]
+- [[NPCs/Boatwright Tzitzi|Boatwright Tzitzi]]
+- [[NPCs/Harbour-Clerk Vandersee|Harbour-Clerk Vandersee]]
+- [[NPCs/The Lost Calf|The Lost Calf]]
+- [[NPCs/Elder Nuka|Elder Nuka]]
+- [[NPCs/Tess of the Third Stair|Tess of the Third Stair]]
+- [[NPCs/Magister Halloran Quince|Magister Halloran Quince]]
+- [[NPCs/Auditor Serafina Galt|Auditor Serafina Galt]]
+- [[NPCs/Father Corvin|Father Corvin]]
+- [[NPCs/Alpha Dorjan|Alpha Dorjan]]
+- [[NPCs/Barnaby Spindle|Barnaby Spindle]]
+- [[NPCs/The Driver of the Late Cart|The Driver of the Late Cart]]
+- [[NPCs/Old Maudlin Penn|Old Maudlin Penn]]
+- [[NPCs/Chester|Chester]]
+- [[NPCs/Dunmore the Light-Handed|Dunmore the Light-Handed]]
+- [[NPCs/Gorm|Gorm]]
 
 ## Clans and peoples (87)
 - [[Clans/The Clockborn|The Clockborn]] — AI Clan
@@ -1251,7 +1286,7 @@ Every population record is included in the complete register on its species note
 - [[Fauna/Reef Dragon|Reef Dragon]] — Water Base
 - [[Fauna/Turtle Drake|Turtle Drake]] — Water Base
 
-## Quests (153)
+## Quests (193)
 - [[Quests/Rabbit Season|Rabbit Season]] (F, Subjugation)
 - [[Quests/Slime in the Well|Slime in the Well]] (F, OddJob)
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] (E, Trial)
@@ -1405,6 +1440,46 @@ Every population record is included in the complete register on its species note
 - [[Quests/The Thing|The Thing]] (A, Faction)
 - [[Quests/The Last Fire Goes Out|The Last Fire Goes Out]] (A, Defense)
 - [[Quests/The Saga, Sung|The Saga, Sung]] (A, Hidden)
+- [[Quests/The Table Set for Six|The Table Set for Six]] (B, Exploration)
+- [[Quests/The Lighthouse That Wasn't Lit|The Lighthouse That Wasn't Lit]] (B, Investigation)
+- [[Quests/Ninety-Nine Steps|Ninety-Nine Steps]] (B, Exploration)
+- [[Quests/The Wedding Tent|The Wedding Tent]] (C, Exploration)
+- [[Quests/A Quiet Place to Wait|A Quiet Place to Wait]] (A, Exploration)
+- [[Quests/Heads, Tails and the Edge|Heads, Tails and the Edge]] (B, Divine)
+- [[Quests/A Lantern for the Unclaimed|A Lantern for the Unclaimed]] (B, Divine)
+- [[Quests/The Smallest Job|The Smallest Job]] (B, Divine)
+- [[Quests/A Banner for the Coward|A Banner for the Coward]] (B, Divine)
+- [[Quests/The Dream That Was Yours|The Dream That Was Yours]] (B, Divine)
+- [[Quests/Six Lanterns of the Examination Hall|Six Lanterns of the Examination Hall]] (B, Investigation)
+- [[Quests/The River That Remembered Its Bed|The River That Remembered Its Bed]] (B, Exploration)
+- [[Quests/The Thread That Hums|The Thread That Hums]] (C, Investigation)
+- [[Quests/The Ball Court of the River-Kings|The Ball Court of the River-Kings]] (B, Exploration)
+- [[Quests/Cairn of Winds|Cairn of Winds]] (B, Exploration)
+- [[Quests/The Longest Lunch|The Longest Lunch]] (E, Companion)
+- [[Quests/First Snow|First Snow]] (D, Companion)
+- [[Quests/The Honest Game|The Honest Game]] (D, Companion)
+- [[Quests/A Pint With the Captain|A Pint With the Captain]] (D, Companion)
+- [[Quests/A Nail for the Anvil|A Nail for the Anvil]] (C, Companion)
+- [[Quests/The Beast That Ate the Bridge|The Beast That Ate the Bridge]] (C, Bounty)
+- [[Quests/The Tithe-Hound|The Tithe-Hound]] (C, Investigation)
+- [[Quests/The Head That Grew Back|The Head That Grew Back]] (B, Bounty)
+- [[Quests/Back Pay for the Dead|Back Pay for the Dead]] (B, Bounty)
+- [[Quests/A Calf Lost on the Ice|A Calf Lost on the Ice]] (A, Bounty)
+- [[Quests/The Nobody Test|The Nobody Test]] (C, Faction)
+- [[Quests/The Thesis Defence|The Thesis Defence]] (D, Faction)
+- [[Quests/The Honest Scale|The Honest Scale]] (B, Faction)
+- [[Quests/The Candle Count|The Candle Count]] (C, Faction)
+- [[Quests/The Alpha's Dinner|The Alpha's Dinner]] (B, Faction)
+- [[Quests/The Puppet on the Milestone|The Puppet on the Milestone]] (E, OddJob)
+- [[Quests/The Cart That Pulled Itself|The Cart That Pulled Itself]] (D, OddJob)
+- [[Quests/The Collector of Last Words|The Collector of Last Words]] (C, OddJob)
+- [[Quests/The Mimic Who Wanted a Friend|The Mimic Who Wanted a Friend]] (D, OddJob)
+- [[Quests/The Highwayman Who Took Only Burdens|The Highwayman Who Took Only Burdens]] (B, Hidden)
+- [[Quests/A Basket for the Bridge-Keeper|A Basket for the Bridge-Keeper]] (F, Delivery)
+- [[Quests/Seed Swap|Seed Swap]] (F, Gathering)
+- [[Quests/A Hum for the Koi|A Hum for the Koi]] (F, OddJob)
+- [[Quests/A Cake for Tamsin|A Cake for Tamsin]] (E, OddJob)
+- [[Quests/Roof Day|Roof Day]] (E, OddJob)
 
 ## Inns (20)
 - [[Inns/The Sleeping Griffon|The Sleeping Griffon]]

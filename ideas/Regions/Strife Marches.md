@@ -96,6 +96,18 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Plague-Beaks|The Plague-Beaks]] (Raven/Crow Clan, led by Doctor Corvin Ashbeak): Battlefield healers and grave-keepers who follow every army.
 - [[Clans/The Red Barons|The Red Barons]] (Vampire Clan, led by Baron Valcourt Sanguine): Old blood-lords of the ruined castles who profit from every war.
 
+## People
+
+- [[NPCs/Echo of Captain Reva Sunder|Echo of Captain Reva Sunder]]: Echo of a mercenary captain
+- [[NPCs/Sister Mercy Aldous|Sister Mercy Aldous]]: Lantern-sister of Morrowyn
+- [[NPCs/Dunmore the Light-Handed|Dunmore the Light-Handed]]: Highwayman
+
+## Quests
+
+- [[Quests/The Wedding Tent|The Wedding Tent]] (C)
+- [[Quests/A Lantern for the Unclaimed|A Lantern for the Unclaimed]] (B)
+- [[Quests/The Highwayman Who Took Only Burdens|The Highwayman Who Took Only Burdens]] (B)
+
 ## Monsters (84)
 
 | Monster | Family | Rank | Level |

@@ -31,6 +31,16 @@ tags: [inn]
 > [!warning]- Spoiler
 > The guesthouse's jars hold a mountain spirit's tears.
 
+## Nearby contracts
+
+- [[Quests/The Dream That Was Yours|The Dream That Was Yours]] (B, Divine)
+- [[Quests/Six Lanterns of the Examination Hall|Six Lanterns of the Examination Hall]] (B, Investigation)
+
+## Local people
+
+- [[NPCs/Dreamwarden Soyeon|Dreamwarden Soyeon]] — Dream-warden of Maelis's shrine
+- [[NPCs/Lantern-Examiner Gyeong|Lantern-Examiner Gyeong]] — Keeper of the Examination Hall's six lanterns
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

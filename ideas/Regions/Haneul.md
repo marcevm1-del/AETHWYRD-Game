@@ -98,9 +98,19 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Tingra|Tingra]] (Predator): A lean, striped hunter of the mountain passes.
 
+## People
+
+- [[NPCs/Dreamwarden Soyeon|Dreamwarden Soyeon]]: Dream-warden of Maelis's shrine
+- [[NPCs/Lantern-Examiner Gyeong|Lantern-Examiner Gyeong]]: Keeper of the Examination Hall's six lanterns
+
 ## Inns
 
 - [[Inns/Cloud Gate Guesthouse|Cloud Gate Guesthouse]] (Haneul capital)
+
+## Quests
+
+- [[Quests/The Dream That Was Yours|The Dream That Was Yours]] (B)
+- [[Quests/Six Lanterns of the Examination Hall|Six Lanterns of the Examination Hall]] (B)
 
 ## Monsters (13)
 

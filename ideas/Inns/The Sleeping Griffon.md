@@ -87,6 +87,18 @@ tags: [inn]
 - [[Quests/The Duelist's Last Request|The Duelist's Last Request]] (C, Hidden)
 - [[Quests/The King Wants to Go Fishing|The King Wants to Go Fishing]] (C, Escort)
 - [[Quests/What the Baron Refused|What the Baron Refused]] (C, Investigation)
+- [[Quests/The Longest Lunch|The Longest Lunch]] (E, Companion)
+- [[Quests/A Pint With the Captain|A Pint With the Captain]] (D, Companion)
+- [[Quests/The Nobody Test|The Nobody Test]] (C, Faction)
+- [[Quests/The Thesis Defence|The Thesis Defence]] (D, Faction)
+- [[Quests/The Candle Count|The Candle Count]] (C, Faction)
+- [[Quests/The Puppet on the Milestone|The Puppet on the Milestone]] (E, OddJob)
+- [[Quests/The Collector of Last Words|The Collector of Last Words]] (C, OddJob)
+- [[Quests/The Mimic Who Wanted a Friend|The Mimic Who Wanted a Friend]] (D, OddJob)
+- [[Quests/Seed Swap|Seed Swap]] (F, Gathering)
+- [[Quests/A Hum for the Koi|A Hum for the Koi]] (F, OddJob)
+- [[Quests/A Cake for Tamsin|A Cake for Tamsin]] (E, OddJob)
+- [[Quests/Roof Day|Roof Day]] (E, OddJob)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined, Defense)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined, OddJob)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined, Escort)
@@ -126,7 +138,7 @@ tags: [inn]
 - [[NPCs/Garrick -Ironjaw-|Garrick "Ironjaw"]] — Guild examiner
 - [[NPCs/Marta Gruel|Marta Gruel]] — Innkeeper, the Sleeping Griffon
 - [[NPCs/Teo Gruel|Teo Gruel]] — Stable boy, the Sleeping Griffon
-- 37 more residents are listed on the region page.
+- 46 more residents are listed on the region page.
 
 ## Stay and departure
 

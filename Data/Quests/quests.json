@@ -5910,5 +5910,1569 @@
   "setsFlags": [
    "fv_saga_sung_resolved"
   ]
+ },
+ {
+  "id": "qst_pat_cairn_sixth_chair",
+  "title": "The Table Set for Six",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_echo_guide_tamar",
+  "region": "reg_sunscar",
+  "summary": "A caravan guide's echo sits at a laid table with an empty chair. The sixth guide went for water and never came back.",
+  "requirements": {
+   "minLevel": 104
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "sunscar_set_table"
+   },
+   {
+    "kind": "reach",
+    "target": "sunscar_dry_gully"
+   },
+   {
+    "kind": "choice",
+    "target": "pour_leave_or_toast"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_cairn_sixth_chair_done"
+  ]
+ },
+ {
+  "id": "qst_pat_cairn_dark_light",
+  "title": "The Lighthouse That Wasn't Lit",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_voice_keeper_orsolya",
+  "region": "reg_goldmere_coast",
+  "summary": "A lighthouse has been dark for thirty years. The keeper's log says she stopped lighting it on purpose.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "goldmere_dark_lighthouse"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_voice_keeper_orsolya"
+   },
+   {
+    "kind": "choice",
+    "target": "relight_dark_shutter_or_report"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_cairn_dark_light_done"
+  ]
+ },
+ {
+  "id": "qst_pat_cairn_ninety_nine",
+  "title": "Ninety-Nine Steps",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_voice_on_the_stair",
+  "region": "reg_shen_lu",
+  "summary": "A quiet stair in Shen-Lu has ninety-nine carved stories and a blank hundredth step. The voice that counts them has never reached the end.",
+  "requirements": {
+   "minLevel": 108
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "shenlu_ninety_nine_stair",
+    "count": 3
+   },
+   {
+    "kind": "reach",
+    "target": "shenlu_hundredth_step"
+   },
+   {
+    "kind": "choice",
+    "target": "carve_a_line"
+   }
+  ],
+  "rewards": {
+   "gold": 13000,
+   "gp": 760,
+   "xp": 56000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_cairn_ninety_nine_done"
+  ]
+ },
+ {
+  "id": "qst_pat_cairn_wedding_tent",
+  "title": "The Wedding Tent",
+  "rank": "C",
+  "type": "Exploration",
+  "giver": "npc_echo_captain_reva",
+  "region": "reg_strife_marches",
+  "summary": "A wedding tent stands on a ridge in the Strife Marches, set for two rival companies. The couple never arrived.",
+  "requirements": {
+   "minLevel": 74
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "marches_wedding_tent"
+   },
+   {
+    "kind": "reach",
+    "target": "marches_secret_path"
+   },
+   {
+    "kind": "choice",
+    "target": "vows_notes_or_captains"
+   }
+  ],
+  "rewards": {
+   "gold": 4600,
+   "gp": 255,
+   "xp": 17000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_cairn_wedding_tent_done"
+  ]
+ },
+ {
+  "id": "qst_pat_cairn_quiet_wait",
+  "title": "A Quiet Place to Wait",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_echo_whaler_ketil",
+  "region": "reg_whitewater_reach",
+  "summary": "An old sled-dog sits beside an overturned sled on the ice, waiting for a whaler who said he would be back by supper.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whitewater_sled_shelf"
+   },
+   {
+    "kind": "reach",
+    "target": "whitewater_pressure_ridge"
+   },
+   {
+    "kind": "choice",
+    "target": "release_walk_or_take_dog"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "pat_cairn_quiet_wait_done"
+  ]
+ },
+ {
+  "id": "qst_pat_bargain_vex",
+  "title": "Heads, Tails and the Edge",
+  "rank": "B",
+  "type": "Divine",
+  "giver": "npc_coin_priest_lucrezio",
+  "region": "reg_goldmere_coast",
+  "summary": "Vex has set a wager over a fisherman's debt. The coin lands on its edge, and the god has a plan.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_coin_priest_lucrezio"
+   },
+   {
+    "kind": "reach",
+    "target": "goldmere_vex_shrine"
+   },
+   {
+    "kind": "choice",
+    "target": "find_a_way_or_pay"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_bargain_vex_done"
+  ]
+ },
+ {
+  "id": "qst_pat_bargain_morrowyn",
+  "title": "A Lantern for the Unclaimed",
+  "rank": "B",
+  "type": "Divine",
+  "giver": "npc_sister_mercy_aldous",
+  "region": "reg_strife_marches",
+  "summary": "A lantern-sister has lit a lantern for every body she found on the Marches' battlefields. One hundred have no name.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sister_mercy_aldous"
+   },
+   {
+    "kind": "reach",
+    "target": "marches_battlefield_graves",
+    "count": 5
+   },
+   {
+    "kind": "choice",
+    "target": "name_companion_or_dedicate"
+   }
+  ],
+  "rewards": {
+   "gold": 10000,
+   "gp": 600,
+   "xp": 44000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_bargain_morrowyn_done"
+  ]
+ },
+ {
+  "id": "qst_pat_bargain_thorgrim",
+  "title": "The Smallest Job",
+  "rank": "B",
+  "type": "Divine",
+  "giver": "npc_journeyman_pott",
+  "region": "reg_gearholm",
+  "summary": "Thorgrim asks for one perfect repair of a child's broken toy-clock, with no magic and no shortcuts.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_journeyman_pott"
+   },
+   {
+    "kind": "reach",
+    "target": "gearholm_undercity_workshop"
+   },
+   {
+    "kind": "choice",
+    "target": "spell_new_spring_or_help"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_bargain_thorgrim_done"
+  ]
+ },
+ {
+  "id": "qst_pat_bargain_kaelthas",
+  "title": "A Banner for the Coward",
+  "rank": "B",
+  "type": "Divine",
+  "giver": "npc_halla_thunderbrow",
+  "region": "reg_stormreach",
+  "summary": "A soldier who fled a battle carrying a wounded friend asks to walk the storm under Kaelthas's banner to be cleared of cowardice.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_halla_thunderbrow"
+   },
+   {
+    "kind": "reach",
+    "target": "stormreach_storm_cliff"
+   },
+   {
+    "kind": "choice",
+    "target": "walk_with_hold_or_for"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_bargain_kaelthas_done"
+  ]
+ },
+ {
+  "id": "qst_pat_bargain_maelis",
+  "title": "The Dream That Was Yours",
+  "rank": "B",
+  "type": "Divine",
+  "giver": "npc_dreamwarden_soyeon",
+  "region": "reg_haneul",
+  "summary": "Maelis sends the player a dream of a stranger about to fail the great examination. The god asks only for a kindness.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dreamwarden_soyeon"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_candidate_room"
+   },
+   {
+    "kind": "choice",
+    "target": "encourage_ask_or_promise"
+   }
+  ],
+  "rewards": {
+   "gold": 10500,
+   "gp": 620,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_bargain_maelis_done"
+  ]
+ },
+ {
+  "id": "qst_pat_riddle_six_lanterns",
+  "title": "Six Lanterns of the Examination Hall",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_lantern_examiner_gyeong",
+  "region": "reg_haneul",
+  "summary": "The Examination Hall's doors will not open when its six virtue-lanterns are lit in the usual order. A poem on the lintel says to begin where the learned stop.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lantern_examiner_gyeong"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_exam_hall_lintel"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_six_lanterns",
+    "count": 6
+   },
+   {
+    "kind": "choice",
+    "target": "light_the_seventh"
+   }
+  ],
+  "rewards": {
+   "gold": 10500,
+   "gp": 620,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_riddle_six_lanterns_done"
+  ]
+ },
+ {
+  "id": "qst_pat_riddle_river_bed",
+  "title": "The River That Remembered Its Bed",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_master_azar",
+  "region": "reg_zarvan",
+  "summary": "A dry, unmapped aqueduct keeps trying to flood toward a garden that is not on any plan. Three sluices, three elements.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_master_azar"
+   },
+   {
+    "kind": "reach",
+    "target": "zarvan_three_sluices",
+    "count": 3
+   },
+   {
+    "kind": "reach",
+    "target": "zarvan_first_garden"
+   },
+   {
+    "kind": "choice",
+    "target": "copy_the_stone"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_riddle_river_bed_done"
+  ]
+ },
+ {
+  "id": "qst_pat_riddle_thread_hums",
+  "title": "The Thread That Hums",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_nadira_duskthread",
+  "region": "reg_umbravel",
+  "summary": "One thread in Umbravel's web hums a single wrong note. Five more threads, plucked in order, open a pouch with a mother's unfinished lullaby.",
+  "requirements": {
+   "minLevel": 70
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_nadira_duskthread"
+   },
+   {
+    "kind": "reach",
+    "target": "umbravel_humming_thread"
+   },
+   {
+    "kind": "reach",
+    "target": "umbravel_five_threads",
+    "count": 5
+   },
+   {
+    "kind": "choice",
+    "target": "sing_play_or_listen"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 240,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_riddle_thread_hums_done"
+  ]
+ },
+ {
+  "id": "qst_pat_riddle_ball_court",
+  "title": "The Ball Court of the River-Kings",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_priest_citlalin",
+  "region": "reg_xochitl_mire",
+  "summary": "A priest has found the hidden court of the river-kings' oldest ceremony, a ball-game with three rules, one forgotten.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_priest_citlalin"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_hidden_court"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_three_hoops",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "give_keep_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 10500,
+   "gp": 620,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_riddle_ball_court_done"
+  ]
+ },
+ {
+  "id": "qst_pat_riddle_cairn_winds",
+  "title": "Cairn of Winds",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_bryn_galehand",
+  "region": "reg_stormreach",
+  "summary": "A bolted cairn at the top of Stormreach has never been opened. A storm is coming, and a bolt can be steered.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bryn_galehand"
+   },
+   {
+    "kind": "reach",
+    "target": "stormreach_cairn_rods",
+    "count": 5
+   },
+   {
+    "kind": "reach",
+    "target": "stormreach_cairn_door"
+   },
+   {
+    "kind": "choice",
+    "target": "read_add_or_return"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_riddle_cairn_winds_done"
+  ]
+ },
+ {
+  "id": "qst_pat_hang_lyra",
+  "title": "The Longest Lunch",
+  "rank": "E",
+  "type": "Companion",
+  "giver": "npc_lyra_brightwood",
+  "region": "reg_aldmere",
+  "summary": "Lyra decides to eat at every one of Hall Square's thirty-one stalls in a day. It is a joke she is making to herself about money.",
+  "requirements": {
+   "minLevel": 22
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lyra_brightwood"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_hall_square_stalls",
+    "count": 31
+   },
+   {
+    "kind": "choice",
+    "target": "pay_split_ask_or_nudge"
+   }
+  ],
+  "rewards": {
+   "gold": 300,
+   "gp": 22,
+   "xp": 1000
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "E"
+  },
+  "setsFlags": [
+   "pat_hang_lyra_done"
+  ]
+ },
+ {
+  "id": "qst_pat_hang_kiri",
+  "title": "First Snow",
+  "rank": "D",
+  "type": "Companion",
+  "giver": "npc_kiri",
+  "region": "reg_moraveil",
+  "summary": "The first snow of the year falls on Moraveil. Kiri has never seen snow from somewhere warm, with nothing to fear.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_kiri"
+   },
+   {
+    "kind": "reach",
+    "target": "moraveil_snow_field"
+   },
+   {
+    "kind": "choice",
+    "target": "join_decide_throw_or_suggest"
+   }
+  ],
+  "rewards": {
+   "gold": 1600,
+   "gp": 95,
+   "xp": 6500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "pat_hang_kiri_done"
+  ]
+ },
+ {
+  "id": "qst_pat_hang_bram",
+  "title": "The Honest Game",
+  "rank": "D",
+  "type": "Companion",
+  "giver": "npc_bram_copperpot",
+  "region": "reg_lirian",
+  "summary": "Bram wants to lose a card game fairly, to prove his luck isn't a trick. His luck refuses.",
+  "requirements": {
+   "minLevel": 44
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bram_copperpot"
+   },
+   {
+    "kind": "reach",
+    "target": "lirian_card_room"
+   },
+   {
+    "kind": "choice",
+    "target": "cheat_straight_or_change"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "pat_hang_bram_done"
+  ]
+ },
+ {
+  "id": "qst_pat_hang_aldric",
+  "title": "A Pint With the Captain",
+  "rank": "D",
+  "type": "Companion",
+  "giver": "npc_sir_aldric_voss",
+  "region": "reg_aldmere",
+  "summary": "Aldric wants to walk past his old guard-post once, with someone beside him, and say nothing.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sir_aldric_voss"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_old_guardhouse"
+   },
+   {
+    "kind": "choice",
+    "target": "speak_step_or_introduce"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "pat_hang_aldric_done"
+  ]
+ },
+ {
+  "id": "qst_pat_hang_torvald",
+  "title": "A Nail for the Anvil",
+  "rank": "C",
+  "type": "Companion",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_iron_hold",
+  "summary": "Torvald offers to teach the player to forge a single nail. It takes all night, and a wrapped blade stays in the corner.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_torvald_stonebeard"
+   },
+   {
+    "kind": "reach",
+    "target": "ih_torvald_forge"
+   },
+   {
+    "kind": "choice",
+    "target": "sing_silence_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_hang_torvald_done"
+  ]
+ },
+ {
+  "id": "qst_pat_contract_bridge",
+  "title": "The Beast That Ate the Bridge",
+  "rank": "C",
+  "type": "Bounty",
+  "giver": "npc_farmer_orlo_marrow",
+  "region": "reg_moraveil",
+  "summary": "A beast has been wrecking a farm-bridge every night. The stones are moved, not broken, and a very large egg lies by a flooded cave.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_farmer_orlo_marrow"
+   },
+   {
+    "kind": "reach",
+    "target": "moraveil_flooded_cave"
+   },
+   {
+    "kind": "choice",
+    "target": "fight_drive_off_or_build"
+   }
+  ],
+  "rewards": {
+   "gold": 4200,
+   "gp": 230,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_contract_bridge_done"
+  ]
+ },
+ {
+  "id": "qst_pat_contract_tithe_hound",
+  "title": "The Tithe-Hound",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_reeve_quarrel",
+  "region": "reg_velmark",
+  "summary": "A stone hound follows the duchy's reeve through the streets. It is the land's creditor, and four generations of tithes are unpaid.",
+  "requirements": {
+   "minLevel": 68
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_reeve_quarrel"
+   },
+   {
+    "kind": "reach",
+    "target": "velmark_archive_charter"
+   },
+   {
+    "kind": "choice",
+    "target": "destroy_pay_or_schedule"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_contract_tithe_hound_done"
+  ]
+ },
+ {
+  "id": "qst_pat_contract_hydra_head",
+  "title": "The Head That Grew Back",
+  "rank": "B",
+  "type": "Bounty",
+  "giver": "npc_boatwright_ixchel",
+  "region": "reg_xochitl_mire",
+  "summary": "One head of the mire's hydra smashes canoes. It is always the left, and it always grows back, because nobody has fed it in four hundred years.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_boatwright_ixchel"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_half_sunk_altar"
+   },
+   {
+    "kind": "choice",
+    "target": "cut_feed_or_learn_name"
+   }
+  ],
+  "rewards": {
+   "gold": 10500,
+   "gp": 620,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_contract_hydra_head_done"
+  ]
+ },
+ {
+  "id": "qst_pat_contract_ghost_invoice",
+  "title": "Back Pay for the Dead",
+  "rank": "B",
+  "type": "Bounty",
+  "giver": "npc_harbour_clerk_vandersee",
+  "region": "reg_goldmere_coast",
+  "summary": "A phantom ship sends invoices to the harbour clerk. Its crew is owed forty-one years of unpaid wages.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_harbour_clerk_vandersee"
+   },
+   {
+    "kind": "reach",
+    "target": "goldmere_merry_anselm"
+   },
+   {
+    "kind": "choice",
+    "target": "sink_exorcise_or_negotiate"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_contract_ghost_invoice_done"
+  ]
+ },
+ {
+  "id": "qst_pat_contract_calf",
+  "title": "A Calf Lost on the Ice",
+  "rank": "A",
+  "type": "Bounty",
+  "giver": "npc_elder_nuka",
+  "region": "reg_whitewater_reach",
+  "summary": "A floe has followed an ice-fishing village for three weeks, against the current. It is a lost leviathan calf.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_elder_nuka"
+   },
+   {
+    "kind": "reach",
+    "target": "whitewater_hunting_floe"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_leviathan_calf"
+   },
+   {
+    "kind": "choice",
+    "target": "destroy_guide_or_sing"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "pat_contract_calf_done"
+  ]
+ },
+ {
+  "id": "qst_pat_guild_nobody_test",
+  "title": "The Nobody Test",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_nobody_courier_tess",
+  "region": "reg_aldmere",
+  "summary": "The Shadow Syndicate's test: take a lender's ledger, and leave a gift in its place.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_nobody_courier_tess"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_lenders_counting_room"
+   },
+   {
+    "kind": "choice",
+    "target": "take_burn_or_copy"
+   }
+  ],
+  "rewards": {
+   "gold": 3900,
+   "gp": 215,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_guild_nobody_done"
+  ]
+ },
+ {
+  "id": "qst_pat_guild_thesis",
+  "title": "The Thesis Defence",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_magister_halloran",
+  "region": "reg_aldmere",
+  "summary": "The Academy admits outsiders by argument. The player must defend something they honestly believe before the Hall of Questions.",
+  "requirements": {
+   "minLevel": 44
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_magister_halloran"
+   },
+   {
+    "kind": "reach",
+    "target": "arcanum_hall_of_questions"
+   },
+   {
+    "kind": "choice",
+    "target": "mercy_rank_monsters_or_kindness"
+   }
+  ],
+  "rewards": {
+   "gold": 1700,
+   "gp": 100,
+   "xp": 6800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "pat_guild_thesis_done"
+  ]
+ },
+ {
+  "id": "qst_pat_guild_honest_scale",
+  "title": "The Honest Scale",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_consortium_auditor_serafina",
+  "region": "reg_goldmere_coast",
+  "summary": "The Consortium wants a market audited quietly. One scale of forty is off by two grains, and the owner doesn't know.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_consortium_auditor_serafina"
+   },
+   {
+    "kind": "reach",
+    "target": "goldmere_market_forty_stalls",
+    "count": 40
+   },
+   {
+    "kind": "choice",
+    "target": "report_fix_or_refund"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_guild_honest_scale_done"
+  ]
+ },
+ {
+  "id": "qst_pat_guild_candle_count",
+  "title": "The Candle Count",
+  "rank": "C",
+  "type": "Faction",
+  "giver": "npc_father_corvin_pell",
+  "region": "reg_aldmere",
+  "summary": "The Church sends the player to audit a poor parish whose books have never balanced, because its priest feeds fifty people a week.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_father_corvin_pell"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_tallow_lane_parish"
+   },
+   {
+    "kind": "choice",
+    "target": "irregularity_explanation_or_fix"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_guild_candle_count_done"
+  ]
+ },
+ {
+  "id": "qst_pat_guild_alpha_dinner",
+  "title": "The Alpha's Dinner",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_alpha_dorjan",
+  "region": "reg_fanghold",
+  "summary": "The Beastkin Federation's Alpha invites the player to dinner. There are forty small courtesies, and he will notice every one.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_alpha_dorjan"
+   },
+   {
+    "kind": "reach",
+    "target": "fanghold_alphas_yurt"
+   },
+   {
+    "kind": "choice",
+    "target": "eat_polite_decline_or_wind"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_guild_alpha_dinner_done"
+  ]
+ },
+ {
+  "id": "qst_pat_visitor_puppet",
+  "title": "The Puppet on the Milestone",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_barnaby_spindle",
+  "region": "reg_aldmere",
+  "summary": "A marionette sits on a milestone each dawn, waiting. Its puppeteer's master died before finishing the last scene.",
+  "requirements": {
+   "minLevel": 16
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_barnaby_spindle"
+   },
+   {
+    "kind": "reach",
+    "target": "ashby_old_theatre"
+   },
+   {
+    "kind": "choice",
+    "target": "finish_listen_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 280,
+   "gp": 20,
+   "xp": 900
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "E"
+  },
+  "setsFlags": [
+   "pat_visitor_puppet_done"
+  ]
+ },
+ {
+  "id": "qst_pat_visitor_late_cart",
+  "title": "The Cart That Pulled Itself",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_cart_driver_ghost",
+  "region": "reg_velmark",
+  "summary": "A ghost carter on the White Duchies' road is sixty years late delivering a wedding cake.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_cart_driver_ghost"
+   },
+   {
+    "kind": "reach",
+    "target": "velmark_hallowmere_cottage"
+   },
+   {
+    "kind": "choice",
+    "target": "bring_driver_or_cake"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 90,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "pat_visitor_late_cart_done"
+  ]
+ },
+ {
+  "id": "qst_pat_visitor_last_words",
+  "title": "The Collector of Last Words",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_maudlin_penn",
+  "region": "reg_aldmere",
+  "summary": "An old woman at a roadside table collects people's last words. She asks the player for theirs.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_maudlin_penn"
+   },
+   {
+    "kind": "choice",
+    "target": "glad_thanks_end_or_own"
+   }
+  ],
+  "rewards": {
+   "gold": 3700,
+   "gp": 205,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "pat_visitor_last_words_done"
+  ]
+ },
+ {
+  "id": "qst_pat_visitor_mimic",
+  "title": "The Mimic Who Wanted a Friend",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_chester_mimic",
+  "region": "reg_aldmere",
+  "summary": "A mimic that looks like a chest has waited two hundred years to be opened kindly.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_chester_mimic"
+   },
+   {
+    "kind": "reach",
+    "target": "aldmere_barrow_road_cairn"
+   },
+   {
+    "kind": "choice",
+    "target": "leave_take_or_book"
+   }
+  ],
+  "rewards": {
+   "gold": 1400,
+   "gp": 85,
+   "xp": 5800
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "pat_visitor_mimic_done"
+  ]
+ },
+ {
+  "id": "qst_pat_visitor_highwayman",
+  "title": "The Highwayman Who Took Only Burdens",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_dunmore_light_hand",
+  "region": "reg_strife_marches",
+  "summary": "A highwayman on the Marches road takes only the heaviest thing a traveller carries, and keeps it safe.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dunmore_light_hand"
+   },
+   {
+    "kind": "reach",
+    "target": "marches_highwayman_hollow"
+   },
+   {
+    "kind": "choice",
+    "target": "reclaim_leave_or_share"
+   }
+  ],
+  "rewards": {
+   "gold": 10000,
+   "gp": 600,
+   "xp": 44000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "pat_visitor_highwayman_done"
+  ]
+ },
+ {
+  "id": "qst_pat_errand_basket",
+  "title": "A Basket for the Bridge-Keeper",
+  "rank": "F",
+  "type": "Delivery",
+  "giver": "npc_marta_gruel",
+  "region": "reg_whisperwood",
+  "summary": "Marta sends a basket to the Millbrook bridge-keeper, a troll whose toll is one true story.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gorm_bridge_keeper"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_first_day_or_after_lunch"
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "gp": 6,
+   "xp": 140,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "pat_errand_basket_done"
+  ]
+ },
+ {
+  "id": "qst_pat_errand_seed_swap",
+  "title": "Seed Swap",
+  "rank": "F",
+  "type": "Gathering",
+  "giver": "npc_gilda_marsh",
+  "region": "reg_aldmere",
+  "summary": "Seed Swap Day in Brindlewick. Five households want what the others have, and nobody will say so.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gilda_marsh"
+   },
+   {
+    "kind": "reach",
+    "target": "brindlewick_five_households",
+    "count": 5
+   },
+   {
+    "kind": "choice",
+    "target": "plant_the_garden"
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "gp": 7,
+   "xp": 160,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "pat_errand_seed_swap_done"
+  ]
+ },
+ {
+  "id": "qst_pat_errand_koi_hum",
+  "title": "A Hum for the Koi",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_old_sal",
+  "region": "reg_aldmere",
+  "summary": "Old Sal thinks a shy Rainbow Koi will come to a hummed song. He can't hum; the player can.",
+  "requirements": {
+   "minLevel": 4
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_sal"
+   },
+   {
+    "kind": "reach",
+    "target": "brindlewick_millrace_dock_dawn"
+   },
+   {
+    "kind": "choice",
+    "target": "calm_hopeful_or_tender"
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "gp": 6,
+   "xp": 150
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "pat_errand_koi_hum_done"
+  ]
+ },
+ {
+  "id": "qst_pat_errand_cake",
+  "title": "A Cake for Tamsin",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_hugo_brand",
+  "region": "reg_aldmere",
+  "summary": "Tamsin turns ten and has never had a cake. Hugo needs honey, vanilla and eggs, and it must be a surprise.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hugo_brand"
+   },
+   {
+    "kind": "reach",
+    "target": "brindlewick_cake_ingredients",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "host_the_party"
+   }
+  ],
+  "rewards": {
+   "gold": 220,
+   "gp": 16,
+   "xp": 650
+  },
+  "prerequisites": {
+   "flags": [
+    "met_brother_caspian"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "pat_errand_cake_done"
+  ]
+ },
+ {
+  "id": "qst_pat_errand_roof_day",
+  "title": "Roof Day",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_miller_jory",
+  "region": "reg_aldmere",
+  "summary": "The mill roof has seven leaks and the rain is coming. Jory needs the whole town, and someone who can ask.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_miller_jory"
+   },
+   {
+    "kind": "reach",
+    "target": "brindlewick_mill_neighbours",
+    "count": 5
+   },
+   {
+    "kind": "choice",
+    "target": "host_roof_day"
+   }
+  ],
+  "rewards": {
+   "gold": 230,
+   "gp": 17,
+   "xp": 680
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "pat_errand_roof_day_done"
+  ]
  }
 ]

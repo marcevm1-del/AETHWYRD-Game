@@ -22,6 +22,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/A Story for a Scale|A Story for a Scale]]
+- [[Quests/A Hum for the Koi|A Hum for the Koi]]
 - [[Quests/Weekly Board/Old Sal's Fishing Contest|Old Sal's Fishing Contest]]
 
 > [!warning]- Spoilers (Canon §3)

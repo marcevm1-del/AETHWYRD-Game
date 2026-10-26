@@ -97,9 +97,17 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Sand-Stingers|The Sand-Stingers]] (Scorpiones Clan, led by Matriarch Qarra Duneclaw): Nomads of the deep desert who guard the Colossus's path.
 - [[Clans/The Unburied Court|The Unburied Court]] (Undead Egyptian Clan, led by Pharaoh-in-Waiting Sekhemrah): The vanished empire's dead, waiting in the Sunken Towers.
 
+## People
+
+- [[NPCs/Echo of Guide Tamar|Echo of Guide Tamar]]: Echo of a caravan guide
+
 ## Inns
 
 - [[Inns/The Oasis Caravanserai|The Oasis Caravanserai]] (Oasis of Seven Wells)
+
+## Quests
+
+- [[Quests/The Table Set for Six|The Table Set for Six]] (B)
 
 ## Monsters (46)
 

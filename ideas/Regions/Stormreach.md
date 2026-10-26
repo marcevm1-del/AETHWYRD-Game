@@ -93,6 +93,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Clans/The Thunder-Eyries|The Thunder-Eyries]] (Eagle clan, led by Wind-Scout Kerrak Boltfeather): Bird-folk who nest above the cliff-towns and serve as storm-callers' scouts. Raikaru hunts them first.
 
+## People
+
+- [[NPCs/Banner-Warden Halla Thunderbrow|Banner-Warden Halla Thunderbrow]]: Banner-warden of Kaelthas's shrine
+- [[NPCs/Storm-Caller Bryn Galehand|Storm-Caller Bryn Galehand]]: Storm-caller
+
+## Quests
+
+- [[Quests/A Banner for the Coward|A Banner for the Coward]] (B)
+- [[Quests/Cairn of Winds|Cairn of Winds]] (B)
+
 ## Monsters (21)
 
 | Monster | Family | Rank | Level |

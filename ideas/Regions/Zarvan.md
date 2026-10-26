@@ -95,6 +95,14 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Coilborn|The Coilborn]] (Snake Clan, led by Warden Nagasha of the Springs): Guardians of the garden springs, old allies of the divs.
 - [[Clans/The Ibis Scribes|The Ibis Scribes]] (Stork/ibis Clan, led by Scribe Tahut Reedpen): Zarvan's poets and archivists, keepers of the universities.
 
+## People
+
+- [[NPCs/Master Azar|Master Azar]]: Aqueduct engineer
+
+## Quests
+
+- [[Quests/The River That Remembered Its Bed|The River That Remembered Its Bed]] (B)
+
 ## Monsters (45)
 
 | Monster | Family | Rank | Level |

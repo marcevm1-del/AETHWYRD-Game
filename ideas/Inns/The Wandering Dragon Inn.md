@@ -33,6 +33,14 @@ tags: [inn]
 > [!warning]- Spoiler
 > Feng is a sealed martial saint guarding a forbidden manual.
 
+## Nearby contracts
+
+- [[Quests/Ninety-Nine Steps|Ninety-Nine Steps]] (B, Exploration)
+
+## Local people
+
+- [[NPCs/The Voice on the Stair|The Voice on the Stair]] — Voice of the stair
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

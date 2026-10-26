@@ -112,6 +112,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Speaker Dolgor|Speaker Dolgor]]: Speaker of the Water-Peace
 - [[NPCs/Rider Khulan|Rider Khulan]]: Young wolfkin rider
 - [[NPCs/Moot-Keeper Tsetseg|Moot-Keeper Tsetseg]]: Keeper of the great moot
+- [[NPCs/Alpha Dorjan|Alpha Dorjan]]: Alpha of the Beastkin Federation's eastern packs
 
 ## Inns
 
@@ -129,6 +130,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/Kade's Water Tax|Kade's Water Tax]] (B)
 - [[Quests/The Last Free Stallion|The Last Free Stallion]] (B)
 - [[Quests/The Moot of Nine Fires|The Moot of Nine Fires]] (B)
+- [[Quests/The Alpha's Dinner|The Alpha's Dinner]] (B)
 
 ## Monsters (32)
 

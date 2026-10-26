@@ -9,7 +9,7 @@ The player has met Brother Caspian and the orphans
 
 - **Set by:** quest
 - **Written by:** [[Quests/A Bowl of Stew|A Bowl of Stew]]
-- **Read by:** [[Quests/The Tune Under the Hymn|The Tune Under the Hymn]], [[Quests/Junior Receptionist Day|Junior Receptionist Day]], [[Quests/Bo's Moon Drawings|Bo's Moon Drawings]], [[Quests/Yesterday's Bread|Yesterday's Bread]]
+- **Read by:** [[Quests/The Tune Under the Hymn|The Tune Under the Hymn]], [[Quests/Junior Receptionist Day|Junior Receptionist Day]], [[Quests/Bo's Moon Drawings|Bo's Moon Drawings]], [[Quests/Yesterday's Bread|Yesterday's Bread]], [[Quests/A Cake for Tamsin|A Cake for Tamsin]]
 
 ## State ownership
 

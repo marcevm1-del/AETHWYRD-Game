@@ -155,3 +155,43 @@ Story flags are the compact bridge between quest outcomes and later world respon
 - [[Systems/Flags/fv_thing_resolved|fv_thing_resolved]] — Side quest "The Thing" resolved
 - [[Systems/Flags/fv_lastfire_resolved|fv_lastfire_resolved]] — Side quest "The Last Fire Goes Out" resolved
 - [[Systems/Flags/fv_saga_sung_resolved|fv_saga_sung_resolved]] — Side quest "The Saga, Sung" resolved
+- [[Systems/Flags/pat_cairn_sixth_chair_done|pat_cairn_sixth_chair_done]] — Side quest "The Table Set for Six" resolved
+- [[Systems/Flags/pat_cairn_dark_light_done|pat_cairn_dark_light_done]] — Side quest "The Lighthouse That Wasn't Lit" resolved
+- [[Systems/Flags/pat_cairn_ninety_nine_done|pat_cairn_ninety_nine_done]] — Side quest "Ninety-Nine Steps" resolved
+- [[Systems/Flags/pat_cairn_wedding_tent_done|pat_cairn_wedding_tent_done]] — Side quest "The Wedding Tent" resolved
+- [[Systems/Flags/pat_cairn_quiet_wait_done|pat_cairn_quiet_wait_done]] — Side quest "A Quiet Place to Wait" resolved
+- [[Systems/Flags/pat_bargain_vex_done|pat_bargain_vex_done]] — Side quest "Heads, Tails and the Edge" resolved
+- [[Systems/Flags/pat_bargain_morrowyn_done|pat_bargain_morrowyn_done]] — Side quest "A Lantern for the Unclaimed" resolved
+- [[Systems/Flags/pat_bargain_thorgrim_done|pat_bargain_thorgrim_done]] — Side quest "The Smallest Job" resolved
+- [[Systems/Flags/pat_bargain_kaelthas_done|pat_bargain_kaelthas_done]] — Side quest "A Banner for the Coward" resolved
+- [[Systems/Flags/pat_bargain_maelis_done|pat_bargain_maelis_done]] — Side quest "The Dream That Was Yours" resolved
+- [[Systems/Flags/pat_riddle_six_lanterns_done|pat_riddle_six_lanterns_done]] — Side quest "Six Lanterns of the Examination Hall" resolved
+- [[Systems/Flags/pat_riddle_river_bed_done|pat_riddle_river_bed_done]] — Side quest "The River That Remembered Its Bed" resolved
+- [[Systems/Flags/pat_riddle_thread_hums_done|pat_riddle_thread_hums_done]] — Side quest "The Thread That Hums" resolved
+- [[Systems/Flags/pat_riddle_ball_court_done|pat_riddle_ball_court_done]] — Side quest "The Ball Court of the River-Kings" resolved
+- [[Systems/Flags/pat_riddle_cairn_winds_done|pat_riddle_cairn_winds_done]] — Side quest "Cairn of Winds" resolved
+- [[Systems/Flags/pat_hang_lyra_done|pat_hang_lyra_done]] — Side quest "The Longest Lunch" resolved
+- [[Systems/Flags/pat_hang_kiri_done|pat_hang_kiri_done]] — Side quest "First Snow" resolved
+- [[Systems/Flags/pat_hang_bram_done|pat_hang_bram_done]] — Side quest "The Honest Game" resolved
+- [[Systems/Flags/pat_hang_aldric_done|pat_hang_aldric_done]] — Side quest "A Pint With the Captain" resolved
+- [[Systems/Flags/pat_hang_torvald_done|pat_hang_torvald_done]] — Side quest "A Nail for the Anvil" resolved
+- [[Systems/Flags/pat_contract_bridge_done|pat_contract_bridge_done]] — Side quest "The Beast That Ate the Bridge" resolved
+- [[Systems/Flags/pat_contract_tithe_hound_done|pat_contract_tithe_hound_done]] — Side quest "The Tithe-Hound" resolved
+- [[Systems/Flags/pat_contract_hydra_head_done|pat_contract_hydra_head_done]] — Side quest "The Head That Grew Back" resolved
+- [[Systems/Flags/pat_contract_ghost_invoice_done|pat_contract_ghost_invoice_done]] — Side quest "Back Pay for the Dead" resolved
+- [[Systems/Flags/pat_contract_calf_done|pat_contract_calf_done]] — Side quest "A Calf Lost on the Ice" resolved
+- [[Systems/Flags/pat_guild_nobody_done|pat_guild_nobody_done]] — Side quest "The Nobody Test" resolved
+- [[Systems/Flags/pat_guild_thesis_done|pat_guild_thesis_done]] — Side quest "The Thesis Defence" resolved
+- [[Systems/Flags/pat_guild_honest_scale_done|pat_guild_honest_scale_done]] — Side quest "The Honest Scale" resolved
+- [[Systems/Flags/pat_guild_candle_count_done|pat_guild_candle_count_done]] — Side quest "The Candle Count" resolved
+- [[Systems/Flags/pat_guild_alpha_dinner_done|pat_guild_alpha_dinner_done]] — Side quest "The Alpha's Dinner" resolved
+- [[Systems/Flags/pat_visitor_puppet_done|pat_visitor_puppet_done]] — Side quest "The Puppet on the Milestone" resolved
+- [[Systems/Flags/pat_visitor_late_cart_done|pat_visitor_late_cart_done]] — Side quest "The Cart That Pulled Itself" resolved
+- [[Systems/Flags/pat_visitor_last_words_done|pat_visitor_last_words_done]] — Side quest "The Collector of Last Words" resolved
+- [[Systems/Flags/pat_visitor_mimic_done|pat_visitor_mimic_done]] — Side quest "The Mimic Who Wanted a Friend" resolved
+- [[Systems/Flags/pat_visitor_highwayman_done|pat_visitor_highwayman_done]] — Side quest "The Highwayman Who Took Only Burdens" resolved
+- [[Systems/Flags/pat_errand_basket_done|pat_errand_basket_done]] — Side quest "A Basket for the Bridge-Keeper" resolved
+- [[Systems/Flags/pat_errand_seed_swap_done|pat_errand_seed_swap_done]] — Side quest "Seed Swap" resolved
+- [[Systems/Flags/pat_errand_koi_hum_done|pat_errand_koi_hum_done]] — Side quest "A Hum for the Koi" resolved
+- [[Systems/Flags/pat_errand_cake_done|pat_errand_cake_done]] — Side quest "A Cake for Tamsin" resolved
+- [[Systems/Flags/pat_errand_roof_day_done|pat_errand_roof_day_done]] — Side quest "Roof Day" resolved

@@ -33,6 +33,20 @@ tags: [inn]
 > [!warning]- Spoiler
 > Delphine runs the smugglers' ring; she'll trade secrets for favors.
 
+## Nearby contracts
+
+- [[Quests/The Lighthouse That Wasn't Lit|The Lighthouse That Wasn't Lit]] (B, Investigation)
+- [[Quests/Heads, Tails and the Edge|Heads, Tails and the Edge]] (B, Divine)
+- [[Quests/Back Pay for the Dead|Back Pay for the Dead]] (B, Bounty)
+- [[Quests/The Honest Scale|The Honest Scale]] (B, Faction)
+
+## Local people
+
+- [[NPCs/Voice of Keeper Orsolya|Voice of Keeper Orsolya]] — Voice in a lighthouse lamp
+- [[NPCs/Coin-Priest Lucrezio|Coin-Priest Lucrezio]] — Coin-priest of Vex's shrine
+- [[NPCs/Harbour-Clerk Vandersee|Harbour-Clerk Vandersee]] — Harbour clerk
+- [[NPCs/Auditor Serafina Galt|Auditor Serafina Galt]] — Merchants' Consortium auditor
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.

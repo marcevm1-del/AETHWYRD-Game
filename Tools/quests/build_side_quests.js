@@ -59,7 +59,7 @@ for (const f of fs.existsSync(DOCS) ? fs.readdirSync(DOCS).filter(f => f.endsWit
         role: b.role, backstory: b.backstory };
       if (b.secret) n.secret = b.secret;
       if (b.faction) n.faction = b.faction;
-      n.romanceable = false; n.canDie = b.candie !== 'false' && b.can_die !== 'false';
+      n.romanceable = b.romanceable === 'true'; n.canDie = b.candie !== 'false' && b.can_die !== 'false';
       if (b.rel) n.relationships = list(b.rel).map(r => { const [npcId, kind] = r.split('='); return { npcId: npcId.trim(), kind: (kind || '').trim() }; });
       npcs.push(JSON.parse(JSON.stringify(n)));
     } else {

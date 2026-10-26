@@ -18,3 +18,7 @@ The miller on the Brindle river, whose family has ground the town's flour for si
 ## Continuity note
 
 This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
+
+## Quests given
+
+- [[Quests/Roof Day|Roof Day]]

@@ -95,9 +95,17 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Hundred-Stair Monks|The Hundred-Stair Monks]] (Monk Clan, led by Abbot Wen Jinghai of the Still Flame): The martial monks of Shen-Lu's sects, split into orders devoted to fire, stillness and the staff, who settle doctrine by duel.
 - [[Clans/The Brew-Bears|The Brew-Bears]] (Panda Clan, led by Master Brewer Bao Tuan): Shen-Lu's brewers and wandering fighters, beloved at every crossroads.
 
+## People
+
+- [[NPCs/The Voice on the Stair|The Voice on the Stair]]: Voice of the stair
+
 ## Inns
 
 - [[Inns/The Wandering Dragon Inn|The Wandering Dragon Inn]] (Jade Crossroads)
+
+## Quests
+
+- [[Quests/Ninety-Nine Steps|Ninety-Nine Steps]] (B)
 
 ## Monsters (60)
 

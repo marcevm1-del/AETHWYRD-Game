@@ -21,4 +21,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/Seed Swap|Seed Swap]]
 - [[Quests/Weekly Board/Market Day Mayhem|Market Day Mayhem]]

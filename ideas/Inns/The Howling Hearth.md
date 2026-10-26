@@ -45,6 +45,7 @@ tags: [inn]
 - [[Quests/Kade's Water Tax|Kade's Water Tax]] (B, Faction)
 - [[Quests/The Last Free Stallion|The Last Free Stallion]] (B, Capture)
 - [[Quests/The Moot of Nine Fires|The Moot of Nine Fires]] (B, Faction)
+- [[Quests/The Alpha's Dinner|The Alpha's Dinner]] (B, Faction)
 
 ## Local people
 
@@ -58,6 +59,7 @@ tags: [inn]
 - [[NPCs/Speaker Dolgor|Speaker Dolgor]] — Speaker of the Water-Peace
 - [[NPCs/Rider Khulan|Rider Khulan]] — Young wolfkin rider
 - [[NPCs/Moot-Keeper Tsetseg|Moot-Keeper Tsetseg]] — Keeper of the great moot
+- [[NPCs/Alpha Dorjan|Alpha Dorjan]] — Alpha of the Beastkin Federation's eastern packs
 
 ## Stay and departure
 

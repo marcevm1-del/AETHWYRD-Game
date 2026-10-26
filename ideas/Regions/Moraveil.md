@@ -95,9 +95,18 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Longears|The Longears]] (Hare Clan, led by Scout-Captain Tansy Quickfoot): Moraveil's fastest messengers and most stubborn farmers, who sit on the joint council beside humans and goblins.
 - [[Clans/The Hill-Orcs|The Hill-Orcs]] (Orc Clan, led by Shaman Urzha Redbeard): Wild orc clans of Moraveil's northern hills; some follow Grakkus, some fear him.
 
+## People
+
+- [[NPCs/Orlo Marrow|Orlo Marrow]]: Farmer, bridge-owner
+
 ## Inns
 
 - [[Inns/The Friendly Goblin|The Friendly Goblin]] (Moraveil market town)
+
+## Quests
+
+- [[Quests/First Snow|First Snow]] (D)
+- [[Quests/The Beast That Ate the Bridge|The Beast That Ate the Bridge]] (C)
 
 ## Monsters (102)
 

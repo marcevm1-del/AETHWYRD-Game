@@ -89,6 +89,16 @@ Dust of cut stone; ledger ink; church bells on the hour; the deep grinding of so
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Reeve Matthias Quarrel|Reeve Matthias Quarrel]]: Reeve of the White Duchies
+- [[NPCs/The Driver of the Late Cart|The Driver of the Late Cart]]: Ghost carter
+
+## Quests
+
+- [[Quests/The Tithe-Hound|The Tithe-Hound]] (C)
+- [[Quests/The Cart That Pulled Itself|The Cart That Pulled Itself]] (D)
+
 ## Monsters (10)
 
 | Monster | Family | Rank | Level |

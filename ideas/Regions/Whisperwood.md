@@ -108,6 +108,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Pocket|Pocket]]: Kobold foreman, quarry crew
 - [[NPCs/Tilda Cobb|Tilda Cobb]]: Shepherd girl
 - [[NPCs/Grandmother Brub|Grandmother Brub]]: Moss-Tooth clan cook
+- [[NPCs/Gorm|Gorm]]: Bridge-keeper
 
 ## Quests
 
@@ -133,6 +134,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/The Wolf Who Counted Sheep|The Wolf Who Counted Sheep]] (E)
 - [[Quests/Stew Diplomacy|Stew Diplomacy]] (E)
 - [[Quests/Eight Lamps and an Empty Niche|Eight Lamps and an Empty Niche]] (E)
+- [[Quests/A Basket for the Bridge-Keeper|A Basket for the Bridge-Keeper]] (F)
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]] (undefined)
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]] (undefined)
 - [[Quests/Weekly Board/Scrap Run|Scrap Run]] (undefined)

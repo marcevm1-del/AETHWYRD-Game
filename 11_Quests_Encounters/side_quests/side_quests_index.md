@@ -4,6 +4,8 @@
 
 **Status: draft proposal.** `Canon.md` wins; `Data/` is canonical for numbers. These **100 side quests** (ten regions, ten quests each) are the long-form companion to the 36 Brindlewick quests in [[brindlewick_side_quests]]. Every quest has a premise, the truth behind it, four scenes with dialogue and branching choices, outcomes and a visible receipt.
 
+**More:** forty pattern quests (found stories, shrine bargains, puzzles, companion hangouts, contracts with a twist, faction tests, road encounters, cozy errands) are in [[patterns_index]]. A generated table of *every* side quest is in [[all_side_quests]].
+
 **How the files work.** Each region file holds the prose *and*, in hidden `<!-- quest -->` and `<!-- npc -->` comments, the data for that quest. `node Tools/quests/build_side_quests.js` reads those comments and merges them into `Data/Quests/quests.json`, `Data/Quests/story_flags.json` and `Data/NPCs/npcs.json`. It is idempotent, and it also runs as part of `npm run build`. Edit the prose and the block together; do not edit the generated rows by hand.
 
 ⚠️ **Spoilers:** several quests plant seeds for later reveals. They are all marked, and none answers a Canon question.

@@ -99,6 +99,17 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Whale-Roach|Whale-Roach]] (Water Base): A many-legged, whale-sized crustacean that scavenges the floes.
 
+## People
+
+- [[NPCs/Echo of Ketil the Whaler|Echo of Ketil the Whaler]]: Echo of an old whaler
+- [[NPCs/The Lost Calf|The Lost Calf]]: Lost leviathan calf
+- [[NPCs/Elder Nuka|Elder Nuka]]: Village elder
+
+## Quests
+
+- [[Quests/A Quiet Place to Wait|A Quiet Place to Wait]] (A)
+- [[Quests/A Calf Lost on the Ice|A Calf Lost on the Ice]] (A)
+
 ## Monsters (14)
 
 | Monster | Family | Rank | Level |

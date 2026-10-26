@@ -147,6 +147,15 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Sister Agna Dunmoor|Sister Agna Dunmoor]]: Morrowyn's lantern-keeper, Greyhollow
 - [[NPCs/Ser Bertram Colt|Ser Bertram Colt]]: Retired tournament duelist
 - [[NPCs/Osric Finch|Osric Finch]]: Royal valet
+- [[NPCs/Kiri|Kiri]]: Companion (Rogue)
+- [[NPCs/Sir Aldric Voss|Sir Aldric Voss]]: Companion (Guardian)
+- [[NPCs/Bram Copperpot|Bram Copperpot]]: Companion (Merchant)
+- [[NPCs/Tess of the Third Stair|Tess of the Third Stair]]: Syndicate runner
+- [[NPCs/Magister Halloran Quince|Magister Halloran Quince]]: Magister of the Academy's Hall of Questions
+- [[NPCs/Father Corvin|Father Corvin]]: Parish priest of St. Ansel's, Tallow Lane
+- [[NPCs/Barnaby Spindle|Barnaby Spindle]]: Travelling puppeteer
+- [[NPCs/Old Maudlin Penn|Old Maudlin Penn]]: Collector of last words
+- [[NPCs/Chester|Chester]]: A friendly chest
 
 ## Inns
 
@@ -205,6 +214,18 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/The Duelist's Last Request|The Duelist's Last Request]] (C)
 - [[Quests/The King Wants to Go Fishing|The King Wants to Go Fishing]] (C)
 - [[Quests/What the Baron Refused|What the Baron Refused]] (C)
+- [[Quests/The Longest Lunch|The Longest Lunch]] (E)
+- [[Quests/A Pint With the Captain|A Pint With the Captain]] (D)
+- [[Quests/The Nobody Test|The Nobody Test]] (C)
+- [[Quests/The Thesis Defence|The Thesis Defence]] (D)
+- [[Quests/The Candle Count|The Candle Count]] (C)
+- [[Quests/The Puppet on the Milestone|The Puppet on the Milestone]] (E)
+- [[Quests/The Collector of Last Words|The Collector of Last Words]] (C)
+- [[Quests/The Mimic Who Wanted a Friend|The Mimic Who Wanted a Friend]] (D)
+- [[Quests/Seed Swap|Seed Swap]] (F)
+- [[Quests/A Hum for the Koi|A Hum for the Koi]] (F)
+- [[Quests/A Cake for Tamsin|A Cake for Tamsin]] (E)
+- [[Quests/Roof Day|Roof Day]] (E)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined)

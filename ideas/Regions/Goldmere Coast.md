@@ -101,9 +101,23 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Reef Dragon|Reef Dragon]] (Water Base): A long, spiny sea-dragon that nests in the wrecks.
 
+## People
+
+- [[NPCs/Voice of Keeper Orsolya|Voice of Keeper Orsolya]]: Voice in a lighthouse lamp
+- [[NPCs/Coin-Priest Lucrezio|Coin-Priest Lucrezio]]: Coin-priest of Vex's shrine
+- [[NPCs/Harbour-Clerk Vandersee|Harbour-Clerk Vandersee]]: Harbour clerk
+- [[NPCs/Auditor Serafina Galt|Auditor Serafina Galt]]: Merchants' Consortium auditor
+
 ## Inns
 
 - [[Inns/The Drowned Mermaid|The Drowned Mermaid]] (Port Goldmere)
+
+## Quests
+
+- [[Quests/The Lighthouse That Wasn't Lit|The Lighthouse That Wasn't Lit]] (B)
+- [[Quests/Heads, Tails and the Edge|Heads, Tails and the Edge]] (B)
+- [[Quests/Back Pay for the Dead|Back Pay for the Dead]] (B)
+- [[Quests/The Honest Scale|The Honest Scale]] (B)
 
 ## Monsters (21)
 

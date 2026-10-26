@@ -124,6 +124,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/A Flame From Every Forge|A Flame From Every Forge]] (B)
 - [[Quests/The Thane's Granddaughter|The Thane's Granddaughter]] (A)
 - [[Quests/The Anvil That Counted|The Anvil That Counted]] (A)
+- [[Quests/A Nail for the Anvil|A Nail for the Anvil]] (C)
 
 ## Monsters (89)
 
