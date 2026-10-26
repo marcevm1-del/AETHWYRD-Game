@@ -18379,6 +18379,390 @@
   ]
  },
  {
+  "id": "qst_qkl_reader_unbelieved",
+  "title": "The Reader Nobody Believed",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_maud_thrane",
+  "region": "reg_quaking_lands",
+  "summary": "A tremor-reader predicts a long quake in nine days and her council will not listen. The player reconciles her chart with a rival reader's.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_maud_thrane"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_spring_town_council_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "move_stores_or_watch"
+   }
+  ],
+  "rewards": {
+   "gold": 69000,
+   "gp": 3000,
+   "xp": 315000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_reader_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_moving_day",
+  "title": "Moving Day on the Ridge",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_gideon_ropewright",
+  "region": "reg_quaking_lands",
+  "summary": "A town of two thousand must cross Quakeback's Ridge before its spring fails. The Ridge breathes every nine minutes.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gideon_ropewright"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_gideon_ropewright"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_ridge_far_valley"
+   },
+   {
+    "kind": "choice",
+    "target": "back_scout_or_carry"
+   }
+  ],
+  "rewards": {
+   "gold": 75000,
+   "gp": 3200,
+   "xp": 340000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_moving_day_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_singing_child",
+  "title": "The Child Who Sings to the Ground",
+  "rank": "S",
+  "type": "Hidden",
+  "giver": "npc_wick_larkspur",
+  "region": "reg_quaking_lands",
+  "summary": "A seven-year-old hums to the floor when it shakes, and sometimes the shaking stops. His mother wants it to be a coincidence.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_wick_larkspur"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_larkspur_porch"
+   },
+   {
+    "kind": "choice",
+    "target": "quiet_hum_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 3000,
+   "xp": 310000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_singing_child_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_next_spring",
+  "title": "Room at the Next Spring",
+  "rank": "S",
+  "type": "Faction",
+  "giver": "npc_hanne_veld",
+  "region": "reg_quaking_lands",
+  "summary": "A cracked spring-town's three hundred survivors have walked to a keeper whose pool holds two hundred.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hanne_veld"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_small_still_spring"
+   },
+   {
+    "kind": "choice",
+    "target": "chart_watch_or_pool"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3100,
+   "xp": 330000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_next_spring_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_carry_house",
+  "title": "A House You Can Carry",
+  "rank": "S",
+  "type": "OddJob",
+  "giver": "npc_dunstan_pellow",
+  "region": "reg_quaking_lands",
+  "summary": "A rope-wright has promised an old woman her house will be down and up again in a day.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dunstan_pellow"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_new_house_field"
+   },
+   {
+    "kind": "choice",
+    "target": "bed_loom_or_knot"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 3000,
+   "xp": 310000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_carry_house_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_oldest_maps",
+  "title": "The Oldest Maps Are All Wrong",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_ambrose_quenby",
+  "region": "reg_quaking_lands",
+  "summary": "The Stillers' oldest maps show mountains that are gone. One shows a mountain that is not yet there.",
+  "requirements": {
+   "minLevel": 174
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ambrose_quenby"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_sitting_hill_cairn"
+   },
+   {
+    "kind": "choice",
+    "target": "add_take_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 73000,
+   "gp": 3150,
+   "xp": 335000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_maps_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_crystal_hum",
+  "title": "Crystals From Below",
+  "rank": "S",
+  "type": "Delivery",
+  "giver": "npc_dacian_moorfield",
+  "region": "reg_quaking_lands",
+  "summary": "A trader must carry a humming quake-crystal three days to a reader past the Ridge.",
+  "requirements": {
+   "minLevel": 170
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dacian_moorfield"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_far_reader_house"
+   },
+   {
+    "kind": "choice",
+    "target": "round_through_or_wool"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_crystal_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_calm_sick",
+  "title": "Nervous in Calm Weather",
+  "rank": "S",
+  "type": "OddJob",
+  "giver": "npc_ewart_longmeadow",
+  "region": "reg_quaking_lands",
+  "summary": "The ground has been still for three weeks, and a carter who sleeps through quakes cannot sleep through the quiet.",
+  "requirements": {
+   "minLevel": 164
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ewart_longmeadow"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_longmeadow_cart_shed"
+   },
+   {
+    "kind": "choice",
+    "target": "heartbeat_barrel_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 67000,
+   "gp": 3000,
+   "xp": 305000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_calm_sick_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_gorge_watch",
+  "title": "The New Gorge Watch",
+  "rank": "S",
+  "type": "Defense",
+  "giver": "npc_rhys_cairnford",
+  "region": "reg_quaking_lands",
+  "summary": "An aftershock will bring stone beasts out of the cracks. The rope-ferry across the New Gorge must be held for one night.",
+  "requirements": {
+   "minLevel": 184
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rhys_cairnford"
+   },
+   {
+    "kind": "defend",
+    "target": "qkl_new_gorge_ferry"
+   },
+   {
+    "kind": "choice",
+    "target": "fires_hold_or_children"
+   }
+  ],
+  "rewards": {
+   "gold": 82000,
+   "gp": 3400,
+   "xp": 370000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_gorge_watch_done"
+  ]
+ },
+ {
+  "id": "qst_qkl_ridge_breathes",
+  "title": "Quakeback's Ridge Breathes",
+  "rank": "S",
+  "type": "Exploration",
+  "giver": "npc_bertram_greywether",
+  "region": "reg_quaking_lands",
+  "summary": "An elder reader has counted the Ridge's breaths for fifty years. The count is no longer even.",
+  "requirements": {
+   "minLevel": 190
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bertram_greywether"
+   },
+   {
+    "kind": "reach",
+    "target": "qkl_ridge_vigil"
+   },
+   {
+    "kind": "choice",
+    "target": "aloud_fingers_or_palm"
+   }
+  ],
+  "rewards": {
+   "gold": 88000,
+   "gp": 3600,
+   "xp": 395000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "qkl_ridge_done"
+  ]
+ },
+ {
   "id": "qst_aur_gilded_partner",
   "title": "The Gilded Partner",
   "rank": "A",

@@ -2743,5 +2743,55 @@
   "id": "ves_white_moon_done",
   "description": "Side quest \"The White Moon\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "qkl_reader_done",
+  "description": "Side quest \"The Reader Nobody Believed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_moving_day_done",
+  "description": "Side quest \"Moving Day on the Ridge\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_singing_child_done",
+  "description": "Side quest \"The Child Who Sings to the Ground\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_next_spring_done",
+  "description": "Side quest \"Room at the Next Spring\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_carry_house_done",
+  "description": "Side quest \"A House You Can Carry\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_maps_done",
+  "description": "Side quest \"The Oldest Maps Are All Wrong\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_crystal_done",
+  "description": "Side quest \"Crystals From Below\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_calm_sick_done",
+  "description": "Side quest \"Nervous in Calm Weather\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_gorge_watch_done",
+  "description": "Side quest \"The New Gorge Watch\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "qkl_ridge_done",
+  "description": "Side quest \"Quakeback's Ridge Breathes\" resolved",
+  "setBy": "quest"
  }
 ]
