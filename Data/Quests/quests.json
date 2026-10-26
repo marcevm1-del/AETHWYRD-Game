@@ -17615,5 +17615,3068 @@
   "setsFlags": [
    "cnd_smoke_done"
   ]
+ },
+ {
+  "id": "qst_apu_three_ends",
+  "title": "The Cord With Three Ends",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_wayra_quispehuaman",
+  "region": "reg_apu_highlands",
+  "summary": "An old cord can be read from either end and says two different things about the stone giant's name. It was tied by two people.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_wayra_quispehuaman"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_cord_house_long_table"
+   },
+   {
+    "kind": "choice",
+    "target": "record_both_one_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_three_ends_done"
+  ]
+ },
+ {
+  "id": "qst_apu_mourning_wall",
+  "title": "Mourning a Wall",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_tupaq_illapayoc",
+  "region": "reg_apu_highlands",
+  "summary": "A mason's first wall has fallen overnight and nobody will come to mourn it, for fear of grieving twice.",
+  "requirements": {
+   "minLevel": 124
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tupaq_illapayoc"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_ayllu_stones_terrace"
+   },
+   {
+    "kind": "choice",
+    "target": "rebuild_asis_gap_or_together"
+   }
+  ],
+  "rewards": {
+   "gold": 29000,
+   "gp": 1450,
+   "xp": 128000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_mourning_wall_done"
+  ]
+ },
+ {
+  "id": "qst_apu_last_runner",
+  "title": "The Last Runner of the Relay",
+  "rank": "A",
+  "type": "Delivery",
+  "giver": "npc_sumaq_rimaypa",
+  "region": "reg_apu_highlands",
+  "summary": "A relay runner carries a private cord to the next city across a gorge where the road used to be.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sumaq_rimaypa"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_hatun_pampa_bridge"
+   },
+   {
+    "kind": "choice",
+    "target": "scree_ledge_or_carry"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_last_runner_done"
+  ]
+ },
+ {
+  "id": "qst_apu_bridge_reweave",
+  "title": "The Bridge Is Rewoven Once a Year",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_chaska_mamanipa",
+  "region": "reg_apu_highlands",
+  "summary": "The yearly rope bridge must be rewoven in three days with half its grass-rope spoiled, and the dry grass lies across a water-quarrel.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_chaska_mamanipa"
+   },
+   {
+    "kind": "collect",
+    "target": "apu_dry_grass_rope",
+    "count": 4
+   },
+   {
+    "kind": "choice",
+    "target": "finish_together_daughter_or_chaska"
+   }
+  ],
+  "rewards": {
+   "gold": 29500,
+   "gp": 1480,
+   "xp": 130000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_bridge_done"
+  ]
+ },
+ {
+  "id": "qst_apu_llama_stair",
+  "title": "The Llama Who Would Not Climb",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_inti_paucarwaman",
+  "region": "reg_apu_highlands",
+  "summary": "A boy's lead llama refuses a stair that is about to fall into a gorge.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_inti_paucarwaman"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_upper_stair"
+   },
+   {
+    "kind": "choice",
+    "target": "mark_send_or_warn"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_llama_done"
+  ]
+ },
+ {
+  "id": "qst_apu_hundred_potatoes",
+  "title": "A Hundred Kinds of Potato",
+  "rank": "A",
+  "type": "Gathering",
+  "giver": "npc_rumi_cusihuaman",
+  "region": "reg_apu_highlands",
+  "summary": "A fallen terrace took the only field of four potato kinds, and four families may still hold a few tubers in their cellars.",
+  "requirements": {
+   "minLevel": 134
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rumi_cusihuaman"
+   },
+   {
+    "kind": "collect",
+    "target": "apu_heirloom_seed_potato",
+    "count": 4
+   },
+   {
+    "kind": "choice",
+    "target": "plant_widow_runners_or_families"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_potatoes_done"
+  ]
+ },
+ {
+  "id": "qst_apu_work_day",
+  "title": "Work Day at the Falling Terrace",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_yachay_apazaqolla",
+  "region": "reg_apu_highlands",
+  "summary": "Four hundred villagers gather to shore up a cracked terrace, and the player must keep the work site safe.",
+  "requirements": {
+   "minLevel": 140
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_yachay_apazaqolla"
+   },
+   {
+    "kind": "defend",
+    "target": "apu_condor_terrace"
+   },
+   {
+    "kind": "choice",
+    "target": "stagger_clear_or_hold"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1700,
+   "xp": 148000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_work_day_done"
+  ]
+ },
+ {
+  "id": "qst_apu_knots_return",
+  "title": "The Girl Who Came Back for the Knots",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_illari_ticapampa",
+  "region": "reg_apu_highlands",
+  "summary": "A girl back from the coast wants to learn the cords from a keeper who is afraid to teach her.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_illari_ticapampa"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_cord_annex_room"
+   },
+   {
+    "kind": "choice",
+    "target": "teach_one_trust_or_practise"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "apu_knots_done"
+  ]
+ },
+ {
+  "id": "qst_apu_masons_mark",
+  "title": "The Mason's Mark",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_atoq_huamancho",
+  "region": "reg_apu_highlands",
+  "summary": "The oldest walls have no builder, and the giant spares them. A mason-elder asks the player to map which stones he leaves and which he breaks.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_atoq_huamancho"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_oldest_walls"
+   },
+   {
+    "kind": "choice",
+    "target": "map_thumb_or_test"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 3000,
+   "xp": 315000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "apu_masons_mark_done"
+  ]
+ },
+ {
+  "id": "qst_apu_cord_gap",
+  "title": "The Cord That Ends in a Gap",
+  "rank": "S",
+  "type": "Exploration",
+  "giver": "npc_sisa_condoriqui",
+  "region": "reg_apu_highlands",
+  "summary": "A cord-keeper's family cord stops mid-sentence. The other end is said to be on the Giant's Bed.",
+  "requirements": {
+   "minLevel": 174
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sisa_condoriqui"
+   },
+   {
+    "kind": "reach",
+    "target": "apu_giants_bed_summit"
+   },
+   {
+    "kind": "choice",
+    "target": "read_tie_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 75000,
+   "gp": 3200,
+   "xp": 340000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "apu_cord_gap_done"
+  ]
+ },
+ {
+  "id": "qst_lus_cradle_lamp",
+  "title": "The Lamp That Would Not Light",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_isolde_thorneglass",
+  "region": "reg_lustrine_shores",
+  "summary": "A lampwright cannot make a lamp from a drowned child's cradle-glass because it holds no moon-light. The people who loved the child must give it.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_isolde_thorneglass"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_lamp_market_workshop"
+   },
+   {
+    "kind": "choice",
+    "target": "shape_cradle_boat_or_plain"
+   }
+  ],
+  "rewards": {
+   "gold": 29500,
+   "gp": 1480,
+   "xp": 130000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_cradle_lamp_done"
+  ]
+ },
+ {
+  "id": "qst_lus_tide_salt",
+  "title": "The Tide-Table Salt",
+  "rank": "A",
+  "type": "Delivery",
+  "giver": "npc_osric_brinewick",
+  "region": "reg_lustrine_shores",
+  "summary": "A salt-panner needs his finest salt carried across a flooding tide-flat for a widow's wedding.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_osric_brinewick"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_groom_house_across_flat"
+   },
+   {
+    "kind": "choice",
+    "target": "cross_fast_slow_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_tide_salt_done"
+  ]
+ },
+ {
+  "id": "qst_lus_pale_mornings",
+  "title": "Pale Mornings",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_linnet_harrowmere",
+  "region": "reg_lustrine_shores",
+  "summary": "A nurse cares for gatherers found empty-eyed on the flats. One has begun to hum a tune, and the player carries it home.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_linnet_harrowmere"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_pale_morning_house"
+   },
+   {
+    "kind": "choice",
+    "target": "net_son_or_second_half"
+   }
+  ],
+  "rewards": {
+   "gold": 33000,
+   "gp": 1650,
+   "xp": 145000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_pale_mornings_done"
+  ]
+ },
+ {
+  "id": "qst_lus_largest_piece",
+  "title": "The Largest Piece",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_verity_merrowdale",
+  "region": "reg_lustrine_shores",
+  "summary": "A village's greatest offering-stone has vanished from the beach on the longest night. The thieves are its own children.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_verity_merrowdale"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_children_sea_cave"
+   },
+   {
+    "kind": "choice",
+    "target": "shallows_beach_or_split"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_largest_piece_done"
+  ]
+ },
+ {
+  "id": "qst_lus_gull_fledgling",
+  "title": "The Fledgling in the Foam",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_tobin_tallowmere",
+  "region": "reg_lustrine_shores",
+  "summary": "A boy has a glass-gull chick in a bucket and an hour before the tide floods the stack where its colony lives.",
+  "requirements": {
+   "minLevel": 120
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tobin_tallowmere"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_gull_stack"
+   },
+   {
+    "kind": "choice",
+    "target": "glove_seaweed_or_climb"
+   }
+  ],
+  "rewards": {
+   "gold": 27500,
+   "gp": 1380,
+   "xp": 122000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_gull_done"
+  ]
+ },
+ {
+  "id": "qst_lus_old_key",
+  "title": "The Key the Songs Changed To",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_corwen_tidesong",
+  "region": "reg_lustrine_shores",
+  "summary": "The fishers' songs changed key the year the red moon rose. The last singer of the old key is forgetting the third verse.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_corwen_tidesong"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_singers_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "both_new_or_yearly"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_old_key_done"
+  ]
+ },
+ {
+  "id": "qst_lus_dark_mile",
+  "title": "One Night on the Dark Mile",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_marrek_soltane",
+  "region": "reg_lustrine_shores",
+  "summary": "A mile of glass beach has gone dim, and the guild-warden needs forty gatherers walked safely home at the high tide.",
+  "requirements": {
+   "minLevel": 146
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_marrek_soltane"
+   },
+   {
+    "kind": "defend",
+    "target": "lus_dark_mile"
+   },
+   {
+    "kind": "choice",
+    "target": "sand_line_or_decoy"
+   }
+  ],
+  "rewards": {
+   "gold": 35000,
+   "gp": 1750,
+   "xp": 152000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_dark_mile_done"
+  ]
+ },
+ {
+  "id": "qst_lus_moth_count",
+  "title": "The Moon-Moth Count",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_ilsabet_ferrow",
+  "region": "reg_lustrine_shores",
+  "summary": "The moon-moths of the Glass Flats are flying in a new direction, to a cove where the glass still shines.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ilsabet_ferrow"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_moth_cove"
+   },
+   {
+    "kind": "choice",
+    "target": "secret_guild_or_pencil"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "lus_moth_count_done"
+  ]
+ },
+ {
+  "id": "qst_lus_dark_beach",
+  "title": "The Beach That Went Out",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_marit_dunmore",
+  "region": "reg_lustrine_shores",
+  "summary": "A beachkeeper's glass beach went dark in a single tide. A vigil of gatherers speaking names into the glass brings back a faint, human light.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_marit_dunmore"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_dark_beach_vigil"
+   },
+   {
+    "kind": "choice",
+    "target": "lay_keep_or_water"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "lus_dark_beach_done"
+  ]
+ },
+ {
+  "id": "qst_lus_lantern_passenger",
+  "title": "The Lantern Has a Passenger",
+  "rank": "S",
+  "type": "Exploration",
+  "giver": "npc_perpetua_vask",
+  "region": "reg_lustrine_shores",
+  "summary": "The Lamp Market's oldest lamp shows something walking inside it once an hour. A keeper asks the player to watch the night.",
+  "requirements": {
+   "minLevel": 178
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_perpetua_vask"
+   },
+   {
+    "kind": "reach",
+    "target": "lus_lamp_market_first_lamp"
+   },
+   {
+    "kind": "choice",
+    "target": "press_step_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 76000,
+   "gp": 3250,
+   "xp": 345000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "lus_lantern_done"
+  ]
+ },
+ {
+  "id": "qst_aur_gilded_partner",
+  "title": "The Gilded Partner",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_pell_ashgrove",
+  "region": "reg_aurumdeep",
+  "summary": "A diver's partner was turned to gold in a theatre seat. The fences have priced him by the pound.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pell_ashgrove"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_golden_theatre_gallery"
+   },
+   {
+    "kind": "choice",
+    "target": "law_pay_or_stand"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_gilded_partner_done"
+  ]
+ },
+ {
+  "id": "qst_aur_prompt_book",
+  "title": "The Prompt-Book",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_tilda_vantoor",
+  "region": "reg_aurumdeep",
+  "summary": "A survivor's granddaughter wants the theatre's prompt-book read, because it may record the Magician's promise to the king.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tilda_vantoor"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_prompt_corner"
+   },
+   {
+    "kind": "choice",
+    "target": "lift_copy_or_keep"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_prompt_book_done"
+  ]
+ },
+ {
+  "id": "qst_aur_king_waits",
+  "title": "The King Who Waits",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_oskar_tidewell",
+  "region": "reg_aurumdeep",
+  "summary": "A deep diver swears he saw the king alive on his throne in the Sunken Palace. He wants someone to check.",
+  "requirements": {
+   "minLevel": 134
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_oskar_tidewell"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_palace_throne_room"
+   },
+   {
+    "kind": "choice",
+    "target": "take_bow_or_sit"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 145000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_king_waits_done"
+  ]
+ },
+ {
+  "id": "qst_aur_empty_seat",
+  "title": "An Empty Seat at Every Table",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_dagobert_kettle",
+  "region": "reg_aurumdeep",
+  "summary": "A loud celebration and a silent vigil have been booked into the same hall on the anniversary of the sinking.",
+  "requirements": {
+   "minLevel": 124
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dagobert_kettle"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_camp_long_table"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_share_or_hush"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_empty_seat_done"
+  ]
+ },
+ {
+  "id": "qst_aur_coin_step",
+  "title": "The Coin on the First Step",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_tamsin_quill",
+  "region": "reg_aurumdeep",
+  "summary": "Coins keep vanishing from the first step of the water. A nine-year-old who counts them has a theory.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tamsin_quill"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_first_step"
+   },
+   {
+    "kind": "choice",
+    "target": "ask_alone_or_fresh"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_coin_step_done"
+  ]
+ },
+ {
+  "id": "qst_aur_fools_gold",
+  "title": "Fool's Gold Season",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_garrick_lathe",
+  "region": "reg_aurumdeep",
+  "summary": "Three honest gold bars turned to paint by dawn. The camp's assayer wants to know why.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_garrick_lathe"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_counting_house_vault"
+   },
+   {
+    "kind": "choice",
+    "target": "publish_council_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 30500,
+   "gp": 1520,
+   "xp": 138000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_fools_gold_done"
+  ]
+ },
+ {
+  "id": "qst_aur_settled_water",
+  "title": "Settled in the Water",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_marit_deepclaim",
+  "region": "reg_aurumdeep",
+  "summary": "Two crews claim the same drowned avenue, and the council's rule is that the water decides.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_marit_deepclaim"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_drowned_avenue"
+   },
+   {
+    "kind": "choice",
+    "target": "back_let_or_foul"
+   }
+  ],
+  "rewards": {
+   "gold": 31500,
+   "gp": 1580,
+   "xp": 142000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_settled_water_done"
+  ]
+ },
+ {
+  "id": "qst_aur_last_dance",
+  "title": "The Last Dance on the Card",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_merewen_verrane",
+  "region": "reg_aurumdeep",
+  "summary": "A dead lady in the Hall of Mirrors has waited a century for her partner to return for the last dance on her card.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_merewen_verrane"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_merewen_verrane"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_bandstand_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "wind_truth_or_dance"
+   }
+  ],
+  "rewards": {
+   "gold": 33000,
+   "gp": 1650,
+   "xp": 148000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_last_dance_done"
+  ]
+ },
+ {
+  "id": "qst_aur_blind_fish",
+  "title": "The Census of the Blind Fish",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_lucan_marsh",
+  "region": "reg_aurumdeep",
+  "summary": "Fish fall in number wherever a lamp dies. A naturalist needs someone to count them at depth.",
+  "requirements": {
+   "minLevel": 138
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lucan_marsh"
+   },
+   {
+    "kind": "reach",
+    "target": "aurumdeep_lamp_street_transects"
+   },
+   {
+    "kind": "choice",
+    "target": "name_warn_or_ban"
+   }
+  ],
+  "rewards": {
+   "gold": 33500,
+   "gp": 1680,
+   "xp": 150000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_blind_fish_done"
+  ]
+ },
+ {
+  "id": "qst_aur_hundredth_step",
+  "title": "The Hundredth Step",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_hesper_gladewick",
+  "region": "reg_aurumdeep",
+  "summary": "Panicked cave bats and a tremor threaten a stair landing and a last convoy of supplies.",
+  "requirements": {
+   "minLevel": 148
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hesper_gladewick"
+   },
+   {
+    "kind": "defend",
+    "target": "aurumdeep_long_stair_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "catch_shore_or_clear"
+   }
+  ],
+  "rewards": {
+   "gold": 38000,
+   "gp": 1900,
+   "xp": 170000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "aur_hundredth_step_done"
+  ]
+ },
+ {
+  "id": "qst_nox_guest_cellar",
+  "title": "A Guest in the Cellar",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_vesk_ambermaw",
+  "region": "reg_nox_dominion",
+  "summary": "A demon innkeeper has hidden a human deserter for three weeks and wants him taken eighty miles to the border.",
+  "requirements": {
+   "minLevel": 164
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_vesk_ambermaw"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_edrin_rook"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_southern_border_marker"
+   },
+   {
+    "kind": "choice",
+    "target": "apprentice_porter_or_crystal"
+   }
+  ],
+  "rewards": {
+   "gold": 66000,
+   "gp": 2850,
+   "xp": 300000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "nox_guest_cellar_done"
+  ]
+ },
+ {
+  "id": "qst_nox_humans_like",
+  "title": "What Humans Are Really Like",
+  "rank": "S",
+  "type": "OddJob",
+  "giver": "npc_dathrak_cindermoor",
+  "region": "reg_nox_dominion",
+  "summary": "A demon child has run away to find out what humans are like. His father wants him home.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dathrak_cindermoor"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_old_watch_post"
+   },
+   {
+    "kind": "choice",
+    "target": "answer_ask_or_father"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 2950,
+   "xp": 310000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "nox_humans_like_done"
+  ]
+ },
+ {
+  "id": "qst_nox_statue_face",
+  "title": "The Statue With the Wrong Face",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_karrow_slate",
+  "region": "reg_nox_dominion",
+  "summary": "A hero's statue on a ruined fortress keeps growing a new face, and the mason who mends the walls cannot say why.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_karrow_slate"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_hero_road_statue"
+   },
+   {
+    "kind": "choice",
+    "target": "wake_finish_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "nox_statue_face_done"
+  ]
+ },
+ {
+  "id": "qst_nox_ash_wheat",
+  "title": "Ash-Wheat Before the Levy",
+  "rank": "S",
+  "type": "Gathering",
+  "giver": "npc_brukka_ashfield",
+  "region": "reg_nox_dominion",
+  "summary": "A farmer has four days to bring in a harvest the army will requisition on Saturday.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brukka_ashfield"
+   },
+   {
+    "kind": "collect",
+    "target": "nox_ashwheat_sheaf",
+    "count": 36
+   },
+   {
+    "kind": "choice",
+    "target": "cut_tie_or_children"
+   }
+  ],
+  "rewards": {
+   "gold": 67000,
+   "gp": 2900,
+   "xp": 305000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "nox_ash_wheat_done"
+  ]
+ },
+ {
+  "id": "qst_nox_one_well",
+  "title": "Two Sides of One Well",
+  "rank": "S",
+  "type": "Faction",
+  "giver": "npc_ysmira_dawnwell",
+  "region": "reg_nox_dominion",
+  "summary": "The shared well's rope has snapped, and two refugee camps blame each other.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ysmira_dawnwell"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_border_town_well"
+   },
+   {
+    "kind": "choice",
+    "target": "flat_round_or_both"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3100,
+   "xp": 330000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "nox_one_well_done"
+  ]
+ },
+ {
+  "id": "qst_nox_day_prayer",
+  "title": "The Day-Prayer",
+  "rank": "S",
+  "type": "Hidden",
+  "giver": "npc_selka_embertongue",
+  "region": "reg_nox_dominion",
+  "summary": "An old woman prays to the day-gods in secret. Her granddaughter has started getting up early.",
+  "requirements": {
+   "minLevel": 162
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_selka_embertongue"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_embertongue_cottage"
+   },
+   {
+    "kind": "choice",
+    "target": "silent_word_or_watch"
+   }
+  ],
+  "rewards": {
+   "gold": 65000,
+   "gp": 2800,
+   "xp": 295000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "nox_day_prayer_done"
+  ]
+ },
+ {
+  "id": "qst_nox_singing_obsidian",
+  "title": "Singing Obsidian",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_brannic_glassvein",
+  "region": "reg_nox_dominion",
+  "summary": "Fourteen miners are trapped behind a collapse. The only way in runs through a vein of obsidian that rings when struck.",
+  "requirements": {
+   "minLevel": 208
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brannic_glassvein"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_singing_seam_collapse"
+   },
+   {
+    "kind": "choice",
+    "target": "strike_hum_or_dig"
+   }
+  ],
+  "rewards": {
+   "gold": 135000,
+   "gp": 5500,
+   "xp": 650000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "nox_singing_obsidian_done"
+  ]
+ },
+ {
+  "id": "qst_nox_honest_scale",
+  "title": "The Honest Scale",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_zahlia_brightscale",
+  "region": "reg_nox_dominion",
+  "summary": "A requisition ledger lists fire-crystals a merchant never delivered, and someone has signed for them.",
+  "requirements": {
+   "minLevel": 212
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_zahlia_brightscale"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_ninth_company_depot"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_fund_or_report"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 5700,
+   "xp": 680000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "nox_honest_scale_done"
+  ]
+ },
+ {
+  "id": "qst_nox_hero_road_marks",
+  "title": "Marks on the Hero's Road",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_ivrel_sootquill",
+  "region": "reg_nox_dominion",
+  "summary": "In the deepest ruined fortress, among the heroes' boasts, a scholar has found a child's drawing in an unknown script.",
+  "requirements": {
+   "minLevel": 218
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ivrel_sootquill"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_sixth_fortress_wall"
+   },
+   {
+    "kind": "choice",
+    "target": "copy_rub_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 145000,
+   "gp": 5900,
+   "xp": 700000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "nox_hero_marks_done"
+  ]
+ },
+ {
+  "id": "qst_nox_shared_lullaby",
+  "title": "The Lullaby Both Sides Know",
+  "rank": "SS",
+  "type": "Faction",
+  "giver": "npc_nerezza_lowflame",
+  "region": "reg_nox_dominion",
+  "summary": "Demon children and human prisoners sing the same lullaby in different words. A bard wants them to hear one another.",
+  "requirements": {
+   "minLevel": 224
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_nerezza_lowflame"
+   },
+   {
+    "kind": "reach",
+    "target": "nox_border_town_shared_tavern"
+   },
+   {
+    "kind": "choice",
+    "target": "oil_force_or_knock"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6200,
+   "xp": 740000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "nox_lullaby_done"
+  ]
+ },
+ {
+  "id": "qst_maw_second_rhythm",
+  "title": "The Second Rhythm",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_harl_brennick",
+  "region": "reg_the_maw",
+  "summary": "A veteran breath-counter hears a slow second rhythm under the Maw's breath, and needs a better ear to tell him whether he is wrong.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_harl_brennick"
+   },
+   {
+    "kind": "reach",
+    "target": "maw_rim_listening_stones"
+   },
+   {
+    "kind": "choice",
+    "target": "honest_rounded_or_ledger_only"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 3000,
+   "xp": 310000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_second_rhythm_done"
+  ]
+ },
+ {
+  "id": "qst_maw_one_word",
+  "title": "One Word From Below",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_dagna_fenwick",
+  "region": "reg_the_maw",
+  "summary": "A lost S-rank party sent back one word. A marshal keeps their lantern lit and wants the player to bring back anything more.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dagna_fenwick"
+   },
+   {
+    "kind": "reach",
+    "target": "maw_throat_second_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "take_leave_or_call"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_one_word_done"
+  ]
+ },
+ {
+  "id": "qst_maw_foot_of_field",
+  "title": "A Foot of Field",
+  "rank": "S",
+  "type": "OddJob",
+  "giver": "npc_piet_haldane",
+  "region": "reg_the_maw",
+  "summary": "A farmer's barley field dropped a foot overnight and something beneath it sings at dusk. He wants to know whether to plough.",
+  "requirements": {
+   "minLevel": 170
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_piet_haldane"
+   },
+   {
+    "kind": "reach",
+    "target": "maw_haldane_field"
+   },
+   {
+    "kind": "choice",
+    "target": "stay_leave_or_unsure"
+   }
+  ],
+  "rewards": {
+   "gold": 66000,
+   "gp": 3000,
+   "xp": 300000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_foot_of_field_done"
+  ]
+ },
+ {
+  "id": "qst_maw_resin_ledger",
+  "title": "Resin for the Ledger",
+  "rank": "S",
+  "type": "Gathering",
+  "giver": "npc_ibb_quillon",
+  "region": "reg_the_maw",
+  "summary": "An archivist wants three layered resin samples from the Throat's upper wall, a second ledger written by the pit itself.",
+  "requirements": {
+   "minLevel": 174
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ibb_quillon"
+   },
+   {
+    "kind": "collect",
+    "target": "maw_resin_leaf",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "publish_warn_or_seal"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3000,
+   "xp": 325000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_resin_ledger_done"
+  ]
+ },
+ {
+  "id": "qst_maw_rim_walk",
+  "title": "The Rim Walk",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_sabeth_corran",
+  "region": "reg_the_maw",
+  "summary": "A surveyor must walk the Rim's full circuit to measure a sinking that has started to move in steps, and she needs a guard.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sabeth_corran"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_sabeth_corran"
+   },
+   {
+    "kind": "choice",
+    "target": "hurry_measure_or_cairn"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3000,
+   "xp": 325000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_rim_walk_done"
+  ]
+ },
+ {
+  "id": "qst_maw_honest_count",
+  "title": "The Honest Count",
+  "rank": "S",
+  "type": "Faction",
+  "giver": "npc_halvard_stone",
+  "region": "reg_the_maw",
+  "summary": "A quartermaster fears the watch camp will leave in the night. The player listens to three groups of watchers and carries their fear to the marshal.",
+  "requirements": {
+   "minLevel": 178
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_halvard_stone"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_dagna_fenwick"
+   },
+   {
+    "kind": "choice",
+    "target": "meeting_rotate_or_release"
+   }
+  ],
+  "rewards": {
+   "gold": 74000,
+   "gp": 3000,
+   "xp": 330000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_honest_count_done"
+  ]
+ },
+ {
+  "id": "qst_maw_workers_carry",
+  "title": "What the Workers Carry",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_tessaly_mourne",
+  "region": "reg_the_maw",
+  "summary": "A scholar of the swarm has drawn a worker carrying a pebble up from the pit instead of down, and laying it in an arc on the Rim.",
+  "requirements": {
+   "minLevel": 182
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tessaly_mourne"
+   },
+   {
+    "kind": "reach",
+    "target": "maw_rim_pebble_arc"
+   },
+   {
+    "kind": "choice",
+    "target": "take_add_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 76000,
+   "gp": 3200,
+   "xp": 340000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "maw_workers_carry_done"
+  ]
+ },
+ {
+  "id": "qst_maw_third_province_bell",
+  "title": "A Bell for the Third Province",
+  "rank": "SS",
+  "type": "OddJob",
+  "giver": "npc_ottoline_reeve",
+  "region": "reg_the_maw",
+  "summary": "A survivor of the stripped Third Province wants to ring her mother's house-bell once, at the out-breath, on a Rim where noise is forbidden.",
+  "requirements": {
+   "minLevel": 212
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ottoline_reeve"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_dagna_fenwick"
+   },
+   {
+    "kind": "choice",
+    "target": "ring_far_or_refuse"
+   }
+  ],
+  "rewards": {
+   "gold": 130000,
+   "gp": 6000,
+   "xp": 700000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "maw_third_province_bell_done"
+  ]
+ },
+ {
+  "id": "qst_maw_quiet_cull",
+  "title": "The Quiet Cull",
+  "rank": "SS",
+  "type": "Subjugation",
+  "giver": "npc_brannoch_gale",
+  "region": "reg_the_maw",
+  "summary": "A culling captain must thin the flyers before they breach the Rim, while a line of soldiers stands aside and waits for the party to leave.",
+  "requirements": {
+   "minLevel": 220
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brannoch_gale"
+   },
+   {
+    "kind": "reach",
+    "target": "maw_throat_second_tier"
+   },
+   {
+    "kind": "choice",
+    "target": "flyers_only_press_or_withdraw"
+   }
+  ],
+  "rewards": {
+   "gold": 135000,
+   "gp": 6200,
+   "xp": 730000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "maw_quiet_cull_done"
+  ]
+ },
+ {
+  "id": "qst_maw_held_breath",
+  "title": "The Held Breath",
+  "rank": "SS",
+  "type": "Hidden",
+  "giver": "npc_wyl_ashgrove",
+  "region": "reg_the_maw",
+  "summary": "A night-watcher has noticed the pause between the Maw's breaths lengthening, and wants company to hold the count through the darkest hour.",
+  "requirements": {
+   "minLevel": 228
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_wyl_ashgrove"
+   },
+   {
+    "kind": "reach",
+    "target": "maw_rim_night_station"
+   },
+   {
+    "kind": "choice",
+    "target": "hold_breathe_or_speak"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 6500,
+   "xp": 760000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "maw_held_breath_done"
+  ]
+ },
+ {
+  "id": "qst_rot_shard_grew",
+  "title": "The Shard That Grew",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_lioba_wren",
+  "region": "reg_root_of_the_world",
+  "summary": "A Church shard of root-light grows a hair each spring. A sister asks the player to compare it with the Cracked Root.",
+  "requirements": {
+   "minLevel": 208
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lioba_wren"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_cracked_root"
+   },
+   {
+    "kind": "choice",
+    "target": "record_closer_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 130000,
+   "gp": 6000,
+   "xp": 700000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_shard_grew_done"
+  ]
+ },
+ {
+  "id": "qst_rot_someone_weeping",
+  "title": "Someone Weeping",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_cass_thornby",
+  "region": "reg_root_of_the_world",
+  "summary": "An adventurer heard weeping inside the Cracked Root, was laughed at, and wants someone to listen with her.",
+  "requirements": {
+   "minLevel": 214
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_cass_thornby"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_cracked_root_crack"
+   },
+   {
+    "kind": "choice",
+    "target": "speak_ask_or_silent"
+   }
+  ],
+  "rewards": {
+   "gold": 135000,
+   "gp": 6000,
+   "xp": 710000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_someone_weeping_done"
+  ]
+ },
+ {
+  "id": "qst_rot_slime_saw",
+  "title": "What the Slime Saw",
+  "rank": "SS",
+  "type": "Hidden",
+  "giver": "npc_gloam_slime",
+  "region": "reg_root_of_the_world",
+  "summary": "An ancient slime that has learned to speak asks the player to hear all it remembers and say which parts are worth keeping.",
+  "requirements": {
+   "minLevel": 222
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gloam_slime"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_crystal_bridge_pool"
+   },
+   {
+    "kind": "choice",
+    "target": "humming_all_or_share"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 6200,
+   "xp": 730000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_slime_saw_done"
+  ]
+ },
+ {
+  "id": "qst_rot_bridge_mapper",
+  "title": "The Bridge Mapper",
+  "rank": "SS",
+  "type": "Escort",
+  "giver": "npc_rook_ellery",
+  "region": "reg_root_of_the_world",
+  "summary": "A mapper with failing knees must chart the forty-first Crystal Bridge, and apologises to each span before he steps on it.",
+  "requirements": {
+   "minLevel": 226
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rook_ellery"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_rook_ellery"
+   },
+   {
+    "kind": "choice",
+    "target": "apologise_hum_or_silent"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 6200,
+   "xp": 740000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_bridge_mapper_done"
+  ]
+ },
+ {
+  "id": "qst_rot_three_stories",
+  "title": "Three Stories, One Stone",
+  "rank": "SS",
+  "type": "Faction",
+  "giver": "npc_ketil_anvard",
+  "region": "reg_root_of_the_world",
+  "summary": "A dwarf, an elf and a deacon at the Kneeling Stones each hold a different faith's story of the Root. The player helps them stand together.",
+  "requirements": {
+   "minLevel": 230
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ketil_anvard"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_kneeling_stones"
+   },
+   {
+    "kind": "choice",
+    "target": "offerings_silence_or_speak"
+   }
+  ],
+  "rewards": {
+   "gold": 145000,
+   "gp": 6400,
+   "xp": 760000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_three_stories_done"
+  ]
+ },
+ {
+  "id": "qst_rot_take_nothing",
+  "title": "Take Nothing",
+  "rank": "SS",
+  "type": "OddJob",
+  "giver": "npc_isaure_venn",
+  "region": "reg_root_of_the_world",
+  "summary": "A druid whose grove is dying asks the Root, courteously, for one cutting of its light, and needs a witness to the asking.",
+  "requirements": {
+   "minLevel": 234
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_isaure_venn"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_bright_root"
+   },
+   {
+    "kind": "choice",
+    "target": "wait_plant_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 145000,
+   "gp": 6400,
+   "xp": 770000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_take_nothing_done"
+  ]
+ },
+ {
+  "id": "qst_rot_letter_landing",
+  "title": "A Letter for the Landing",
+  "rank": "SS",
+  "type": "Delivery",
+  "giver": "npc_pernel_gray",
+  "region": "reg_root_of_the_world",
+  "summary": "A courier holds a lost adventurer's last letter, addressed to a place, asking only that a lantern be kept lit.",
+  "requirements": {
+   "minLevel": 238
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pernel_gray"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_hesk_camp"
+   },
+   {
+    "kind": "collect",
+    "target": "rot_hesk_lantern",
+    "count": 1
+   },
+   {
+    "kind": "choice",
+    "target": "hang_double_or_search"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6500,
+   "xp": 780000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_letter_landing_done"
+  ]
+ },
+ {
+  "id": "qst_rot_old_one_forgot",
+  "title": "The Old One Who Forgot",
+  "rank": "SS",
+  "type": "Companion",
+  "giver": "npc_davos_quenby",
+  "region": "reg_root_of_the_world",
+  "summary": "A scholar believes he has found the name of an elder draconic being that has forgotten what it was, and asks the player whether to say it.",
+  "requirements": {
+   "minLevel": 242
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_davos_quenby"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_dragon_hollow"
+   },
+   {
+    "kind": "choice",
+    "target": "read_ask_or_sit"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6500,
+   "xp": 790000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_old_one_done"
+  ]
+ },
+ {
+  "id": "qst_rot_gate_word",
+  "title": "The Word the Gate Wants",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_imke_sorrowby",
+  "region": "reg_root_of_the_world",
+  "summary": "A construct gate has refused a linguist for nine years because she cannot recall the word she gave it. It was never a password.",
+  "requirements": {
+   "minLevel": 246
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_imke_sorrowby"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_bridge_gate"
+   },
+   {
+    "kind": "choice",
+    "target": "ask_clue_or_force"
+   }
+  ],
+  "rewards": {
+   "gold": 155000,
+   "gp": 6600,
+   "xp": 800000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_gate_word_done"
+  ]
+ },
+ {
+  "id": "qst_rot_second_kneeling",
+  "title": "The Second Kneeling",
+  "rank": "SS",
+  "type": "Hidden",
+  "giver": "npc_odalys_reik",
+  "region": "reg_root_of_the_world",
+  "summary": "Two Kneeling Stones share every measurement but one is warm, and its hollow holds a fresh pair of handprints no one made.",
+  "requirements": {
+   "minLevel": 252
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_odalys_reik"
+   },
+   {
+    "kind": "reach",
+    "target": "rot_kneeling_stones_warm"
+   },
+   {
+    "kind": "choice",
+    "target": "kneel_press_or_watch"
+   }
+  ],
+  "rewards": {
+   "gold": 160000,
+   "gp": 6800,
+   "xp": 820000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "rot_second_kneeling_done"
+  ]
+ },
+ {
+  "id": "qst_sky_dinner",
+  "title": "What Was for Dinner",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_ysmere_quillbrook",
+  "region": "reg_sky_archipelago",
+  "summary": "A scholar wants to know what the Titans were going to eat at the Set Tables. The eleventh dish is still covered.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ysmere_quillbrook"
+   },
+   {
+    "kind": "reach",
+    "target": "sky_set_tables_eleventh_dish"
+   },
+   {
+    "kind": "choice",
+    "target": "lift_leave_or_lamp"
+   }
+  ],
+  "rewards": {
+   "gold": 66000,
+   "gp": 2900,
+   "xp": 305000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_dinner_done"
+  ]
+ },
+ {
+  "id": "qst_sky_whale_tower",
+  "title": "The Whale in the Tower",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_oswin_thistlewake",
+  "region": "reg_sky_archipelago",
+  "summary": "A sky whale has wedged into a ruined Titan tower. The winter winds are nine days away.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_oswin_thistlewake"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_oswin_thistlewake"
+   },
+   {
+    "kind": "choice",
+    "target": "arch_stair_or_stay"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 3000,
+   "xp": 315000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_whale_tower_done"
+  ]
+ },
+ {
+  "id": "qst_sky_bridge_grows",
+  "title": "The Bridge That Grows",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_sereth_skyhand",
+  "region": "reg_sky_archipelago",
+  "summary": "A Titan machine is rebuilding a broken bridge toward an island that drifted away long ago.",
+  "requirements": {
+   "minLevel": 170
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sereth_skyhand"
+   },
+   {
+    "kind": "reach",
+    "target": "sky_growing_bridge_end"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_finish_or_chart"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_bridge_grows_done"
+  ]
+ },
+ {
+  "id": "qst_sky_licence_quiet",
+  "title": "A Licence to Be Quiet",
+  "rank": "S",
+  "type": "Faction",
+  "giver": "npc_mirelle_tarn_voss",
+  "region": "reg_sky_archipelago",
+  "summary": "The guild licenses expeditions and the Heavenfolk drive them off. A neutral hand is needed for a code both will sign.",
+  "requirements": {
+   "minLevel": 170
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_mirelle_tarn_voss"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_elder_quillon_aerith"
+   },
+   {
+    "kind": "choice",
+    "target": "no_dig_guides_or_meeting"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_licence_quiet_done"
+  ]
+ },
+ {
+  "id": "qst_sky_stranded_crew",
+  "title": "The Stranded Crew",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_dessa_kell",
+  "region": "reg_sky_archipelago",
+  "summary": "Forty scavengers lost their lift stones and are stranded on a cold island, with eleven days of food.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dessa_kell"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_dessa_kell"
+   },
+   {
+    "kind": "choice",
+    "target": "captain_fate_carry_or_sing"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_stranded_crew_done"
+  ]
+ },
+ {
+  "id": "qst_sky_thin_air",
+  "title": "Thin Air",
+  "rank": "S",
+  "type": "Hidden",
+  "giver": "npc_ruan_pelt",
+  "region": "reg_sky_archipelago",
+  "summary": "A hermit who has stayed too long is losing the names of things. He wants a letter carried to his granddaughter.",
+  "requirements": {
+   "minLevel": 174
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ruan_pelt"
+   },
+   {
+    "kind": "reach",
+    "target": "sky_landing_below_terrace"
+   },
+   {
+    "kind": "choice",
+    "target": "miss_well_or_plain"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3100,
+   "xp": 330000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_thin_air_done"
+  ]
+ },
+ {
+  "id": "qst_sky_hanging_garden",
+  "title": "Cuttings From the Hanging Garden",
+  "rank": "S",
+  "type": "Gathering",
+  "giver": "npc_halloran_vesper_moss",
+  "region": "reg_sky_archipelago",
+  "summary": "A botanist wants a cutting from each of twelve strange trees so a garden can outlast the drifting island.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_halloran_vesper_moss"
+   },
+   {
+    "kind": "collect",
+    "target": "sky_garden_cutting",
+    "count": 11
+   },
+   {
+    "kind": "choice",
+    "target": "branch_fruit_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 75000,
+   "gp": 3200,
+   "xp": 340000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "sky_hanging_garden_done"
+  ]
+ },
+ {
+  "id": "qst_sky_knife_home",
+  "title": "The Knife Goes Home",
+  "rank": "SS",
+  "type": "Companion",
+  "giver": "npc_edda_brightmantle",
+  "region": "reg_sky_archipelago",
+  "summary": "A family has kept a Titan's table knife for two generations. Its keeper wants it carried back to the Set Tables.",
+  "requirements": {
+   "minLevel": 206
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_edda_brightmantle"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_edda_brightmantle"
+   },
+   {
+    "kind": "choice",
+    "target": "set_edda_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 6000,
+   "xp": 650000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "sky_knife_home_done"
+  ]
+ },
+ {
+  "id": "qst_sky_serpent_choir",
+  "title": "The Serpents' Amphitheatre",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_calder_windfall",
+  "region": "reg_sky_archipelago",
+  "summary": "Wind serpents sing in a Titan amphitheatre every night and stop at the same bar. A songwright wants to know what they wait for.",
+  "requirements": {
+   "minLevel": 208
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_calder_windfall"
+   },
+   {
+    "kind": "reach",
+    "target": "sky_amphitheatre_stage"
+   },
+   {
+    "kind": "choice",
+    "target": "sing_play_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 145000,
+   "gp": 6200,
+   "xp": 670000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "sky_serpent_choir_done"
+  ]
+ },
+ {
+  "id": "qst_sky_storm_count",
+  "title": "The Count at the Edge of the Storm",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_veyra_cloudmantle",
+  "region": "reg_sky_archipelago",
+  "summary": "A stormwatcher has noticed that the storm around the Highest Island thunders in a pattern. She wants a second set of ears.",
+  "requirements": {
+   "minLevel": 210
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_veyra_cloudmantle"
+   },
+   {
+    "kind": "reach",
+    "target": "sky_highest_island_ledge"
+   },
+   {
+    "kind": "choice",
+    "target": "lock_alone_or_record"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6500,
+   "xp": 700000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "sky_storm_count_done"
+  ]
+ },
+ {
+  "id": "qst_bas_flaw_footing",
+  "title": "The Flaw in the Footing",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_odrun_flintlay",
+  "region": "reg_bastion",
+  "summary": "A mason found a deliberate hollow in the new ring's footing. Whoever laid it knew the survey.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_odrun_flintlay"
+   },
+   {
+    "kind": "reach",
+    "target": "bastion_new_ring_footing"
+   },
+   {
+    "kind": "choice",
+    "target": "report_error_or_shift"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "bas_flaw_footing_done"
+  ]
+ },
+ {
+  "id": "qst_bas_deserter_hearing",
+  "title": "The Deserter Who Wanted a Hearing",
+  "rank": "B",
+  "type": "Escort",
+  "giver": "npc_tarn_hollowgrass",
+  "region": "reg_bastion",
+  "summary": "A horde rider walked in under a white cloth. He wants to ask the Warden for one day's road for his sister.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tarn_hollowgrass"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_tarn_hollowgrass"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_warden_ysolt_greywall"
+   },
+   {
+    "kind": "choice",
+    "target": "truce_escort_or_refuse"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "bas_deserter_done"
+  ]
+ },
+ {
+  "id": "qst_bas_barley_rings",
+  "title": "Barley Between the Rings",
+  "rank": "B",
+  "type": "Gathering",
+  "giver": "npc_hesper_furrow_reeve",
+  "region": "reg_bastion",
+  "summary": "A farmwife's last field stands between two rings, in sight of the horde's scouts. A third of a ward's bread depends on it.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hesper_furrow_reeve"
+   },
+   {
+    "kind": "collect",
+    "target": "bastion_barley_sheaf",
+    "count": 200
+   },
+   {
+    "kind": "choice",
+    "target": "stand_flat_or_signal"
+   }
+  ],
+  "rewards": {
+   "gold": 11800,
+   "gp": 700,
+   "xp": 49000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "bas_barley_done"
+  ]
+ },
+ {
+  "id": "qst_bas_cold_joints",
+  "title": "Cold Joints",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_joram_vellacott",
+  "region": "reg_bastion",
+  "summary": "The outer ring falls in one night, every time. The captain wants to know how the horde knows where to scratch.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_joram_vellacott"
+   },
+   {
+    "kind": "reach",
+    "target": "bastion_outer_ring_parapet"
+   },
+   {
+    "kind": "choice",
+    "target": "captain_masons_or_bait"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "bas_cold_joints_done"
+  ]
+ },
+ {
+  "id": "qst_bas_fennel_row",
+  "title": "The Drum at Fennel Row",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_mab_thistlewick",
+  "region": "reg_bastion",
+  "summary": "Thirty militiamen hold a village between the rings. Tonight a raiding band tests it.",
+  "requirements": {
+   "minLevel": 124
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_mab_thistlewick"
+   },
+   {
+    "kind": "defend",
+    "target": "bastion_fennel_row"
+   },
+   {
+    "kind": "choice",
+    "target": "door_drum_or_line"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1450,
+   "xp": 126000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "bas_fennel_row_done"
+  ]
+ },
+ {
+  "id": "qst_bas_captains_stone",
+  "title": "The Captain's Stone",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_ansa_keelgrave",
+  "region": "reg_bastion",
+  "summary": "A widow wants her husband's stone from the broken ring set into the new one. The roll says six years. He held nine.",
+  "requirements": {
+   "minLevel": 125
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ansa_keelgrave"
+   },
+   {
+    "kind": "reach",
+    "target": "bastion_new_ring_course"
+   },
+   {
+    "kind": "choice",
+    "target": "name_set_or_line"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1450,
+   "xp": 126000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "bas_captains_stone_done"
+  ]
+ },
+ {
+  "id": "qst_bas_hold_outer",
+  "title": "Whether to Hold the Outer Ring",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_teodra_mossgate",
+  "region": "reg_bastion",
+  "summary": "An inner-ring captain wants the outer ring abandoned. The Warden refuses. Both have numbers.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_teodra_mossgate"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_warden_ysolt_greywall"
+   },
+   {
+    "kind": "choice",
+    "target": "smaller_rotate_or_vote"
+   }
+  ],
+  "rewards": {
+   "gold": 28500,
+   "gp": 1500,
+   "xp": 127000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "bas_hold_outer_done"
+  ]
+ },
+ {
+  "id": "qst_bas_inward_gate",
+  "title": "The Gate That Faced Inward",
+  "rank": "S",
+  "type": "Hidden",
+  "giver": "npc_perdita_underhill",
+  "region": "reg_bastion",
+  "summary": "A plan of the first fort shows a gate that faces inward. Behind a plastered arch in the undercroft is a bench.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_perdita_underhill"
+   },
+   {
+    "kind": "reach",
+    "target": "bastion_undercroft_arch"
+   },
+   {
+    "kind": "choice",
+    "target": "leave_cup_or_sit"
+   }
+  ],
+  "rewards": {
+   "gold": 66000,
+   "gp": 2900,
+   "xp": 305000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "bas_inward_gate_done"
+  ]
+ },
+ {
+  "id": "qst_bas_cub_rings",
+  "title": "A Cub in the Broken Rings",
+  "rank": "S",
+  "type": "OddJob",
+  "giver": "npc_wren_gravelmouth",
+  "region": "reg_bastion",
+  "summary": "A nine-year-old has hidden a sabretooth cub in the ruins of a broken ring. She does not know where it should go.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_wren_gravelmouth"
+   },
+   {
+    "kind": "reach",
+    "target": "bastion_broken_ring_nest"
+   },
+   {
+    "kind": "choice",
+    "target": "keep_north_or_tarn"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 3000,
+   "xp": 315000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "bas_cub_rings_done"
+  ]
+ },
+ {
+  "id": "qst_bas_night_between",
+  "title": "The Night Between the Rings",
+  "rank": "S",
+  "type": "Defense",
+  "giver": "npc_berwyn_stonehall",
+  "region": "reg_bastion",
+  "summary": "The outer ring broke early and the next is not done. Four thousand people stand between them. The masons need one night.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_berwyn_stonehall"
+   },
+   {
+    "kind": "defend",
+    "target": "bastion_road_between_rings"
+   },
+   {
+    "kind": "choice",
+    "target": "ford_wounded_or_gate"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "bas_night_between_done"
+  ]
  }
 ]

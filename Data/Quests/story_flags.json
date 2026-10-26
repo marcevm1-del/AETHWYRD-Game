@@ -2243,5 +2243,405 @@
   "id": "evd_last_glade_guest_done",
   "description": "Side quest \"A Guest at the Last Glade\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "apu_three_ends_done",
+  "description": "Side quest \"The Cord With Three Ends\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_mourning_wall_done",
+  "description": "Side quest \"Mourning a Wall\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_last_runner_done",
+  "description": "Side quest \"The Last Runner of the Relay\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_bridge_done",
+  "description": "Side quest \"The Bridge Is Rewoven Once a Year\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_llama_done",
+  "description": "Side quest \"The Llama Who Would Not Climb\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_potatoes_done",
+  "description": "Side quest \"A Hundred Kinds of Potato\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_work_day_done",
+  "description": "Side quest \"Work Day at the Falling Terrace\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_knots_done",
+  "description": "Side quest \"The Girl Who Came Back for the Knots\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_masons_mark_done",
+  "description": "Side quest \"The Mason's Mark\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "apu_cord_gap_done",
+  "description": "Side quest \"The Cord That Ends in a Gap\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_cradle_lamp_done",
+  "description": "Side quest \"The Lamp That Would Not Light\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_tide_salt_done",
+  "description": "Side quest \"The Tide-Table Salt\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_pale_mornings_done",
+  "description": "Side quest \"Pale Mornings\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_largest_piece_done",
+  "description": "Side quest \"The Largest Piece\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_gull_done",
+  "description": "Side quest \"The Fledgling in the Foam\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_old_key_done",
+  "description": "Side quest \"The Key the Songs Changed To\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_dark_mile_done",
+  "description": "Side quest \"One Night on the Dark Mile\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_moth_count_done",
+  "description": "Side quest \"The Moon-Moth Count\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_dark_beach_done",
+  "description": "Side quest \"The Beach That Went Out\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lus_lantern_done",
+  "description": "Side quest \"The Lantern Has a Passenger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_gilded_partner_done",
+  "description": "Side quest \"The Gilded Partner\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_prompt_book_done",
+  "description": "Side quest \"The Prompt-Book\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_king_waits_done",
+  "description": "Side quest \"The King Who Waits\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_empty_seat_done",
+  "description": "Side quest \"An Empty Seat at Every Table\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_coin_step_done",
+  "description": "Side quest \"The Coin on the First Step\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_fools_gold_done",
+  "description": "Side quest \"Fool's Gold Season\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_settled_water_done",
+  "description": "Side quest \"Settled in the Water\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_last_dance_done",
+  "description": "Side quest \"The Last Dance on the Card\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_blind_fish_done",
+  "description": "Side quest \"The Census of the Blind Fish\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "aur_hundredth_step_done",
+  "description": "Side quest \"The Hundredth Step\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_guest_cellar_done",
+  "description": "Side quest \"A Guest in the Cellar\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_humans_like_done",
+  "description": "Side quest \"What Humans Are Really Like\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_statue_face_done",
+  "description": "Side quest \"The Statue With the Wrong Face\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_ash_wheat_done",
+  "description": "Side quest \"Ash-Wheat Before the Levy\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_one_well_done",
+  "description": "Side quest \"Two Sides of One Well\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_day_prayer_done",
+  "description": "Side quest \"The Day-Prayer\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_singing_obsidian_done",
+  "description": "Side quest \"Singing Obsidian\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_honest_scale_done",
+  "description": "Side quest \"The Honest Scale\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_hero_marks_done",
+  "description": "Side quest \"Marks on the Hero's Road\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "nox_lullaby_done",
+  "description": "Side quest \"The Lullaby Both Sides Know\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_second_rhythm_done",
+  "description": "Side quest \"The Second Rhythm\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_one_word_done",
+  "description": "Side quest \"One Word From Below\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_foot_of_field_done",
+  "description": "Side quest \"A Foot of Field\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_resin_ledger_done",
+  "description": "Side quest \"Resin for the Ledger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_rim_walk_done",
+  "description": "Side quest \"The Rim Walk\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_honest_count_done",
+  "description": "Side quest \"The Honest Count\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_workers_carry_done",
+  "description": "Side quest \"What the Workers Carry\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_third_province_bell_done",
+  "description": "Side quest \"A Bell for the Third Province\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_quiet_cull_done",
+  "description": "Side quest \"The Quiet Cull\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "maw_held_breath_done",
+  "description": "Side quest \"The Held Breath\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_shard_grew_done",
+  "description": "Side quest \"The Shard That Grew\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_someone_weeping_done",
+  "description": "Side quest \"Someone Weeping\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_slime_saw_done",
+  "description": "Side quest \"What the Slime Saw\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_bridge_mapper_done",
+  "description": "Side quest \"The Bridge Mapper\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_three_stories_done",
+  "description": "Side quest \"Three Stories, One Stone\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_take_nothing_done",
+  "description": "Side quest \"Take Nothing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_letter_landing_done",
+  "description": "Side quest \"A Letter for the Landing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_old_one_done",
+  "description": "Side quest \"The Old One Who Forgot\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_gate_word_done",
+  "description": "Side quest \"The Word the Gate Wants\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "rot_second_kneeling_done",
+  "description": "Side quest \"The Second Kneeling\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_dinner_done",
+  "description": "Side quest \"What Was for Dinner\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_whale_tower_done",
+  "description": "Side quest \"The Whale in the Tower\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_bridge_grows_done",
+  "description": "Side quest \"The Bridge That Grows\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_licence_quiet_done",
+  "description": "Side quest \"A Licence to Be Quiet\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_stranded_crew_done",
+  "description": "Side quest \"The Stranded Crew\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_thin_air_done",
+  "description": "Side quest \"Thin Air\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_hanging_garden_done",
+  "description": "Side quest \"Cuttings From the Hanging Garden\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_knife_home_done",
+  "description": "Side quest \"The Knife Goes Home\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_serpent_choir_done",
+  "description": "Side quest \"The Serpents' Amphitheatre\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "sky_storm_count_done",
+  "description": "Side quest \"The Count at the Edge of the Storm\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_flaw_footing_done",
+  "description": "Side quest \"The Flaw in the Footing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_deserter_done",
+  "description": "Side quest \"The Deserter Who Wanted a Hearing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_barley_done",
+  "description": "Side quest \"Barley Between the Rings\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_cold_joints_done",
+  "description": "Side quest \"Cold Joints\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_fennel_row_done",
+  "description": "Side quest \"The Drum at Fennel Row\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_captains_stone_done",
+  "description": "Side quest \"The Captain's Stone\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_hold_outer_done",
+  "description": "Side quest \"Whether to Hold the Outer Ring\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_inward_gate_done",
+  "description": "Side quest \"The Gate That Faced Inward\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_cub_rings_done",
+  "description": "Side quest \"A Cub in the Broken Rings\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "bas_night_between_done",
+  "description": "Side quest \"The Night Between the Rings\" resolved",
+  "setBy": "quest"
  }
 ]
