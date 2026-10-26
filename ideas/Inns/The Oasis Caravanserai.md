@@ -36,10 +36,32 @@ tags: [inn]
 ## Nearby contracts
 
 - [[Quests/The Table Set for Six|The Table Set for Six]] (B, Exploration)
+- [[Quests/The Year Nobody Recited|The Year Nobody Recited]] (B, Investigation)
+- [[Quests/The Unpaid Tithe|The Unpaid Tithe]] (B, Escort)
+- [[Quests/A Dowry in Salt|A Dowry in Salt]] (B, Faction)
+- [[Quests/The Night the Awning Held|The Night the Awning Held]] (B, Defense)
+- [[Quests/What the Glass Remembers|What the Glass Remembers]] (B, Exploration)
+- [[Quests/The Last Sunrise on the Streaks|The Last Sunrise on the Streaks]] (B, OddJob)
+- [[Quests/A Shovel Under Seal|A Shovel Under Seal]] (A, Investigation)
+- [[Quests/The Walker's Road|The Walker's Road]] (A, Exploration)
+- [[Quests/The Eighth Well|The Eighth Well]] (A, Hidden)
+- [[Quests/The Ration Council|The Ration Council]] (A, Trial)
 
 ## Local people
 
+- [[NPCs/Dalia Ferrin|Dalia Ferrin]] — Treasure-hunter
 - [[NPCs/Echo of Guide Tamar|Echo of Guide Tamar]] — Echo of a caravan guide
+- [[NPCs/Keeper Zahra Merin|Keeper Zahra Merin]] — Senior water-keeper and reciter
+- [[NPCs/Tarek Ashur|Tarek Ashur]] — Apprentice water-keeper
+- [[NPCs/Old Hadiya Qasr|Old Hadiya Qasr]] — Last survivor of a lost caravan
+- [[NPCs/Matchmaker Yusra Bell-Tamin|Matchmaker Yusra Bell-Tamin]] — Matchmaker to the nomad tribes
+- [[NPCs/Caravanserai-master Odo Marsh|Caravanserai-master Odo Marsh]] — Master of the Oasis Caravanserai
+- [[NPCs/Glass-singer Idris Valmont-Sef|Glass-singer Idris Valmont-Sef]] — Hermit who listens to the glass
+- [[NPCs/Nuru Taleb|Nuru Taleb]] — Retired caravan guide
+- [[NPCs/Calla Ferrin|Calla Ferrin]] — Treasure-hunter
+- [[NPCs/Keeper Imran Sabeh|Keeper Imran Sabeh]] — Water-keeper and surveyor
+- [[NPCs/Elder Mother Kalsum|Elder Mother Kalsum]] — Elder of a nomad tribe
+- 1 more residents are listed on the region page.
 
 ## Stay and departure
 

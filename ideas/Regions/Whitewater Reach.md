@@ -104,11 +104,31 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Echo of Ketil the Whaler|Echo of Ketil the Whaler]]: Echo of an old whaler
 - [[NPCs/The Lost Calf|The Lost Calf]]: Lost leviathan calf
 - [[NPCs/Elder Nuka|Elder Nuka]]: Village elder
+- [[NPCs/Orla Seaward|Orla Seaward]]: Fisher who wants a divorce from the sea
+- [[NPCs/Ice-Reader Juno|Ice-Reader Juno]]: Ice-reader of the northern villages
+- [[NPCs/Brisa Softfoot|Brisa Softfoot]]: Teacher of the soft step
+- [[NPCs/Nerys Coldwater|Nerys Coldwater]]: Girl about to marry the sea
+- [[NPCs/Ovi|Ovi]]: Six-year-old who owes the sea a doll
+- [[NPCs/Scholar Kjeld Rimeworth|Scholar Kjeld Rimeworth]]: Ice-scholar
+- [[NPCs/Camp-Warden Taga Whitebrow|Camp-Warden Taga Whitebrow]]: Warden of a winter camp
+- [[NPCs/Celebrant Dorin Netweaver|Celebrant Dorin Netweaver]]: Celebrant of weddings
+- [[NPCs/Elder Isbrand Keelsplit|Elder Isbrand Keelsplit]]: Elder of the Boat-Eater families
+- [[NPCs/Cartographer Wenna Bonefield|Cartographer Wenna Bonefield]]: Cartographer of the Bone Bergs
 
 ## Quests
 
 - [[Quests/A Quiet Place to Wait|A Quiet Place to Wait]] (A)
 - [[Quests/A Calf Lost on the Ice|A Calf Lost on the Ice]] (A)
+- [[Quests/A Divorce From the Sea|A Divorce From the Sea]] (A)
+- [[Quests/The Berg With Something Inside|The Berg With Something Inside]] (A)
+- [[Quests/Quiet Feet|Quiet Feet]] (A)
+- [[Quests/The Sixteenth Year|The Sixteenth Year]] (A)
+- [[Quests/A Doll for the Sea|A Doll for the Sea]] (A)
+- [[Quests/The Broken Floe|The Broken Floe]] (A)
+- [[Quests/Ice Wyrm Season|Ice Wyrm Season]] (A)
+- [[Quests/A Wedding Under the Aurora|A Wedding Under the Aurora]] (A)
+- [[Quests/The Boat-Eaters' Reckoning|The Boat-Eaters' Reckoning]] (S)
+- [[Quests/What the Bone Bergs Carry|What the Bone Bergs Carry]] (S)
 
 ## Monsters (14)
 

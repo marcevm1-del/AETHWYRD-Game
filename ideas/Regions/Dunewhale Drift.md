@@ -98,9 +98,35 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Plated Crawler|Plated Crawler]] (Insect): An armoured centipede that burrows in Thalassa's hide.
 
+## People
+
+- [[NPCs/Purser Mira Lashline|Purser Mira Lashline]]: Purser who greets visitors
+- [[NPCs/Archivist Oben Cordwain|Archivist Oben Cordwain]]: Keeper of the calendar of Thalassa's songs
+- [[NPCs/Kesi|Kesi]]: Whale-singer in training
+- [[NPCs/Rigger Haldane Hookmark|Rigger Haldane Hookmark]]: Master rigger of the hide-cables
+- [[NPCs/Glazier Anselm Tarr|Glazier Anselm Tarr]]: Glazier who gathers Glassmaw's glass
+- [[NPCs/Netmaster Ruan|Netmaster Ruan]]: Netmaster of the sand-fishers
+- [[NPCs/Singer Dalia Oneiros|Singer Dalia Oneiros]]: Whale-singer who sings the dead
+- [[NPCs/Captain Bram Saltwind|Captain Bram Saltwind]]: Captain of the Drift
+- [[NPCs/Old Teodor Wake|Old Teodor Wake]]: Oldest rider of the Drift
+- [[NPCs/Singer Iolanthe Veil|Singer Iolanthe Veil]]: Night-singer of the Crown
+
 ## Inns
 
 - [[Inns/The Whale's Belly|The Whale's Belly]] (Dunewhale town)
+
+## Quests
+
+- [[Quests/Sea Legs, Sand Legs|Sea Legs, Sand Legs]] (B)
+- [[Quests/The Calendar of Her Songs|The Calendar of Her Songs]] (B)
+- [[Quests/A Lullaby the Whale Does Not Know|A Lullaby the Whale Does Not Know]] (B)
+- [[Quests/Barnacle Rot|Barnacle Rot]] (B)
+- [[Quests/The Glass Garden|The Glass Garden]] (B)
+- [[Quests/Sand-Fish Season|Sand-Fish Season]] (B)
+- [[Quests/A Death Sung Wrong|A Death Sung Wrong]] (A)
+- [[Quests/The Captain's Vote|The Captain's Vote]] (A)
+- [[Quests/The Other Town|The Other Town]] (A)
+- [[Quests/What She Hums at Night|What She Hums at Night]] (A)
 
 ## Monsters (10)
 

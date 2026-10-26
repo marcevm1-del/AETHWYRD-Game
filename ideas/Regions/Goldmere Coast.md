@@ -107,6 +107,20 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Coin-Priest Lucrezio|Coin-Priest Lucrezio]]: Coin-priest of Vex's shrine
 - [[NPCs/Harbour-Clerk Vandersee|Harbour-Clerk Vandersee]]: Harbour clerk
 - [[NPCs/Auditor Serafina Galt|Auditor Serafina Galt]]: Merchants' Consortium auditor
+- [[NPCs/Salvage-Captain Marisol Dray|Salvage-Captain Marisol Dray]]: Salvage captain who found the drifting ship
+- [[NPCs/Captain Oswin Teague|Captain Oswin Teague]]: Captain of the drifting ship
+- [[NPCs/Captain Hollis Crake|Captain Hollis Crake]]: Elected captain of the stilt-town
+- [[NPCs/Councillor Mabyn Sallow|Councillor Mabyn Sallow]]: Salvage-council member for the harbour reefs
+- [[NPCs/Auctioneer Dunstan Gavelle|Auctioneer Dunstan Gavelle]]: Auctioneer of salvage claims
+- [[NPCs/Tolly Sandwick|Tolly Sandwick]]: Beachcombing child, aged ten
+- [[NPCs/Old Cobbler Jessup Lamb|Old Cobbler Jessup Lamb]]: Retired bootmaker
+- [[NPCs/Hostess Perpetua Gull|Hostess Perpetua Gull]]: Innkeeper of the Drowned Mermaid
+- [[NPCs/Rope-Captain Duvessa Pike|Rope-Captain Duvessa Pike]]: Elected rope-captain of the bridges
+- [[NPCs/Diver-Master Ossian Haldane|Diver-Master Ossian Haldane]]: Master of the deep-divers
+- [[NPCs/Pilot Marguerite Calloway|Pilot Marguerite Calloway]]: Channel pilot
+- [[NPCs/Salvage-Speaker Evander Slate|Salvage-Speaker Evander Slate]]: Speaker of the salvage council
+- [[NPCs/Captain Wilhelmina Stroud|Captain Wilhelmina Stroud]]: Salvage captain, tribute's advocate
+- [[NPCs/Dive-Mother Ketura Maine|Dive-Mother Ketura Maine]]: Teacher of the young divers
 
 ## Inns
 
@@ -118,6 +132,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/Heads, Tails and the Edge|Heads, Tails and the Edge]] (B)
 - [[Quests/Back Pay for the Dead|Back Pay for the Dead]] (B)
 - [[Quests/The Honest Scale|The Honest Scale]] (B)
+- [[Quests/A Hot Meal and No Crew|A Hot Meal and No Crew]] (B)
+- [[Quests/Neutral Ground|Neutral Ground]] (B)
+- [[Quests/Three Bidders Dead|Three Bidders Dead]] (B)
+- [[Quests/Whose Boots Are These|Whose Boots Are These]] (B)
+- [[Quests/The Parrot Who Kept the Books|The Parrot Who Kept the Books]] (B)
+- [[Quests/The Bridges of Saltreach|The Bridges of Saltreach]] (B)
+- [[Quests/The Flagship's Bell|The Flagship's Bell]] (A)
+- [[Quests/The Channel Moves|The Channel Moves]] (A)
+- [[Quests/A Tribute Proposed|A Tribute Proposed]] (A)
+- [[Quests/The Sea's Coins|The Sea's Coins]] (A)
 
 ## Monsters (21)
 

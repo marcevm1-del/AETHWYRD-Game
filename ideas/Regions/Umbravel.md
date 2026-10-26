@@ -97,10 +97,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## People
 
 - [[NPCs/Weaver Nadira Duskthread|Weaver Nadira Duskthread]]: Master silk-weaver
+- [[NPCs/Lamplighter Ainsel Corvane|Lamplighter Ainsel Corvane]]: District lamplighter
+- [[NPCs/Sevrin Loomis|Sevrin Loomis]]: Husband of a cocooned family
+- [[NPCs/Trader Hortensia Bellweather|Trader Hortensia Bellweather]]: Surface honey-trader
+- [[NPCs/Bridgewarden Teodric Vane|Bridgewarden Teodric Vane]]: Warden of the cut bridges
+- [[NPCs/Guildmaster Ilario Spoole|Guildmaster Ilario Spoole]]: Guildmaster of the Shuttle-Makers
+- [[NPCs/Bat-Warden Linden Amber|Bat-Warden Linden Amber]]: Warden of the blind bats
+- [[NPCs/Mip|Mip]]: Bat-warden's apprentice, aged nine
+- [[NPCs/Guildmistress Ysaline Orrin|Guildmistress Ysaline Orrin]]: Guildmistress of the oldest webs
+- [[NPCs/Lift-Warden Orsa Venn|Lift-Warden Orsa Venn]]: Warden of the lift cables
+- [[NPCs/Old Tamsin Brightwire|Old Tamsin Brightwire]]: Retired blind weaver
+- [[NPCs/Engineer Pellory Gimblewick|Engineer Pellory Gimblewick]]: Chief engineer of the lifts
+- [[NPCs/Strand-Reader Lissandre Veyl|Strand-Reader Lissandre Veyl]]: Reader of tuned strands
 
 ## Quests
 
 - [[Quests/The Thread That Hums|The Thread That Hums]] (C)
+- [[Quests/Dawn-Lamp Hour|Dawn-Lamp Hour]] (C)
+- [[Quests/A Family in the Cocoon|A Family in the Cocoon]] (C)
+- [[Quests/Honey for the Deep Webs|Honey for the Deep Webs]] (C)
+- [[Quests/Who Cut the Bridge-|Who Cut the Bridge?]] (C)
+- [[Quests/A Line of Daylight|A Line of Daylight]] (C)
+- [[Quests/Restored, Quietly|Restored, Quietly]] (B)
+- [[Quests/The Vigil at Lift Nine|The Vigil at Lift Nine]] (B)
+- [[Quests/The Knot She Always Tied|The Knot She Always Tied]] (B)
+- [[Quests/Chain or Silk|Chain or Silk]] (B)
+- [[Quests/A Letter in the Web|A Letter in the Web]] (B)
 
 ## Monsters (47)
 

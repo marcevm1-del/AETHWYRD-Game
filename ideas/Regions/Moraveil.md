@@ -98,6 +98,15 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## People
 
 - [[NPCs/Orlo Marrow|Orlo Marrow]]: Farmer, bridge-owner
+- [[NPCs/Pib Wennick|Pib Wennick]]: Bilingual schoolgirl, aged eleven
+- [[NPCs/Merchant Osgar Pell|Merchant Osgar Pell]]: Mushroom merchant accused of poisoning
+- [[NPCs/Elder Grubnak|Elder Grubnak]]: Cave-elder of the goblin village
+- [[NPCs/Engineer Fizz Ladderlimb|Engineer Fizz Ladderlimb]]: Goblin cliff-engineer
+- [[NPCs/Zik Tallowtongue|Zik Tallowtongue]]: Goblin councillor, founder of the truce
+- [[NPCs/Warband-Captain Skarra|Warband-Captain Skarra]]: Goblin warband captain
+- [[NPCs/Marra Cobb-Wennick|Marra Cobb-Wennick]]: Human councillor, founder of the truce
+- [[NPCs/Orc-Mother Hrega|Orc-Mother Hrega]]: Orc mother of a sick child
+- [[NPCs/Refugee-Elder Mok|Refugee-Elder Mok]]: Elder of a smashed goblin village
 
 ## Inns
 
@@ -107,6 +116,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Quests/First Snow|First Snow]] (D)
 - [[Quests/The Beast That Ate the Bridge|The Beast That Ate the Bridge]] (C)
+- [[Quests/The Word for -Truce-|The Word for "Truce"]] (C)
+- [[Quests/Mushrooms and Malice|Mushrooms and Malice]] (C)
+- [[Quests/The Worm's Lesson|The Worm's Lesson]] (C)
+- [[Quests/Ladders and Stairs|Ladders and Stairs]] (C)
+- [[Quests/Sixteen Years of Quiet|Sixteen Years of Quiet]] (B)
+- [[Quests/The Warband at the Gate|The Warband at the Gate]] (B)
+- [[Quests/Drill Day|Drill Day]] (B)
+- [[Quests/A Safe Road for a Sick Child|A Safe Road for a Sick Child]] (B)
+- [[Quests/Two Children, One Rope|Two Children, One Rope]] (A)
+- [[Quests/What the Disaster Left|What the Disaster Left]] (A)
 
 ## Monsters (102)
 

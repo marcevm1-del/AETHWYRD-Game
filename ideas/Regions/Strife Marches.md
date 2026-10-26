@@ -101,12 +101,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Echo of Captain Reva Sunder|Echo of Captain Reva Sunder]]: Echo of a mercenary captain
 - [[NPCs/Sister Mercy Aldous|Sister Mercy Aldous]]: Lantern-sister of Morrowyn
 - [[NPCs/Dunmore the Light-Handed|Dunmore the Light-Handed]]: Highwayman
+- [[NPCs/Sexton Ansgar Tull|Sexton Ansgar Tull]]: Sexton of the battlefield
+- [[NPCs/Mistress Edith Wray|Mistress Edith Wray]]: Village headwoman of Hollowmere
+- [[NPCs/Cobb Hearn|Cobb Hearn]]: Farmer whose father sings
+- [[NPCs/Captain Edda Greyhand|Captain Edda Greyhand]]: Mercenary captain
+- [[NPCs/Steward Aldous Reed|Steward Aldous Reed]]: Ghost steward of Castle Varn
+- [[NPCs/Nell Quickfingers|Nell Quickfingers]]: Smuggler
+- [[NPCs/Corporal Ambrose Fenn|Corporal Ambrose Fenn]]: Deserter and songwriter
+- [[NPCs/Sergeant Bertil Roke|Sergeant Bertil Roke]]: Retired mercenary sergeant
+- [[NPCs/Sister Odile|Sister Odile]]: Hidden chapel-keeper
+- [[NPCs/Ilse Brandt|Ilse Brandt]]: Sister of a Choir convert
 
 ## Quests
 
 - [[Quests/The Wedding Tent|The Wedding Tent]] (C)
 - [[Quests/A Lantern for the Unclaimed|A Lantern for the Unclaimed]] (B)
 - [[Quests/The Highwayman Who Took Only Burdens|The Highwayman Who Took Only Burdens]] (B)
+- [[Quests/The Coin From Every Kingdom|The Coin From Every Kingdom]] (C)
+- [[Quests/Two Barons, One Village|Two Barons, One Village]] (C)
+- [[Quests/The Man Whose Father Sings|The Man Whose Father Sings]] (C)
+- [[Quests/A Contract With an Exit|A Contract With an Exit]] (B)
+- [[Quests/The Horse That Broke the Peace|The Horse That Broke the Peace]] (B)
+- [[Quests/Smuggler's Honour|Smuggler's Honour]] (C)
+- [[Quests/The Deserter's Song|The Deserter's Song]] (C)
+- [[Quests/Wheat on the Field of Coins|Wheat on the Field of Coins]] (B)
+- [[Quests/A Chapel in the Cellar|A Chapel in the Cellar]] (C)
+- [[Quests/The Choir's Quiet Door|The Choir's Quiet Door]] (B)
 
 ## Monsters (84)
 

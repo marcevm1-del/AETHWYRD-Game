@@ -98,10 +98,36 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## People
 
 - [[NPCs/Master Azar|Master Azar]]: Aqueduct engineer
+- [[NPCs/Head Gardener Parvaneh Sohrabi|Head Gardener Parvaneh Sohrabi]]: Head gardener of the Sixth Terrace
+- [[NPCs/Apprentice Dara|Apprentice Dara]]: Gardener's apprentice, aged fifteen
+- [[NPCs/Perfumer Mahtab Ghorbani|Perfumer Mahtab Ghorbani]]: Mistress of the House of the Dawn Petal
+- [[NPCs/Perfumer Jamshid Rahimi|Perfumer Jamshid Rahimi]]: Master of the House of Noon Gold
+- [[NPCs/Bird-Keeper Tooba Mansouri|Bird-Keeper Tooba Mansouri]]: Keeper of the palace nightingales
+- [[NPCs/Old Golnar Eshraghi|Old Golnar Eshraghi]]: Last living student of a famous poet
+- [[NPCs/Water-Master Anoush Farrokhi|Water-Master Anoush Farrokhi]]: Water-master and judge of the water-court
+- [[NPCs/Clerk Ardavan Shirazi|Clerk Ardavan Shirazi]]: Junior clerk of the water-masters
+- [[NPCs/Headwoman Nasrin Davoudi|Headwoman Nasrin Davoudi]]: Headwoman of a mountain village
+- [[NPCs/Caravan-Master Hormoz Esfandiari|Caravan-Master Hormoz Esfandiari]]: Master of the rose-tribute caravan
+- [[NPCs/Student Farid Nouri|Student Farid Nouri]]: Student of the poet Roshanak Behrouzi
+- [[NPCs/Poet Roshanak Behrouzi|Poet Roshanak Behrouzi]]: Famous poet, taken as tribute
+- [[NPCs/Chief Engineer Soraya Tahmasbi|Chief Engineer Soraya Tahmasbi]]: Chief engineer of the aqueduct guild
+- [[NPCs/Professor Kamran Delavar|Professor Kamran Delavar]]: Keeper of the Hall of Antiquities
+- [[NPCs/Water-Master Roxana Ardalan|Water-Master Roxana Ardalan]]: Water-master of the lower terraces
+- [[NPCs/Water-Master Siavash Kermani|Water-Master Siavash Kermani]]: Senior water-master of the capital
 
 ## Quests
 
 - [[Quests/The River That Remembered Its Bed|The River That Remembered Its Bed]] (B)
+- [[Quests/The Rose That Bled|The Rose That Bled]] (B)
+- [[Quests/Two Houses, One Tribute|Two Houses, One Tribute]] (B)
+- [[Quests/The Nightingale Who Would Not Sing|The Nightingale Who Would Not Sing]] (B)
+- [[Quests/A Cup for the Poet's Garden|A Cup for the Poet's Garden]] (B)
+- [[Quests/Seven Wells, One Song|Seven Wells, One Song]] (B)
+- [[Quests/The Unarmed Caravan|The Unarmed Caravan]] (B)
+- [[Quests/The Poem Zahhar Asked For|The Poem Zahhar Asked For]] (A)
+- [[Quests/Forty Days Again|Forty Days Again]] (A)
+- [[Quests/The Basin from the Caves|The Basin from the Caves]] (A)
+- [[Quests/Who Drinks First|Who Drinks First]] (A)
 
 ## Monsters (45)
 

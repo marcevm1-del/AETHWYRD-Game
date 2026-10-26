@@ -195,3 +195,143 @@ Story flags are the compact bridge between quest outcomes and later world respon
 - [[Systems/Flags/pat_errand_koi_hum_done|pat_errand_koi_hum_done]] — Side quest "A Hum for the Koi" resolved
 - [[Systems/Flags/pat_errand_cake_done|pat_errand_cake_done]] — Side quest "A Cake for Tamsin" resolved
 - [[Systems/Flags/pat_errand_roof_day_done|pat_errand_roof_day_done]] — Side quest "Roof Day" resolved
+- [[Systems/Flags/mor_word_truce_done|mor_word_truce_done]] — Side quest "The Word for "Truce"" resolved
+- [[Systems/Flags/mor_mushrooms_done|mor_mushrooms_done]] — Side quest "Mushrooms and Malice" resolved
+- [[Systems/Flags/mor_worm_done|mor_worm_done]] — Side quest "The Worm's Lesson" resolved
+- [[Systems/Flags/mor_ladders_done|mor_ladders_done]] — Side quest "Ladders and Stairs" resolved
+- [[Systems/Flags/mor_sixteen_done|mor_sixteen_done]] — Side quest "Sixteen Years of Quiet" resolved
+- [[Systems/Flags/mor_warband_done|mor_warband_done]] — Side quest "The Warband at the Gate" resolved
+- [[Systems/Flags/mor_drill_done|mor_drill_done]] — Side quest "Drill Day" resolved
+- [[Systems/Flags/mor_child_done|mor_child_done]] — Side quest "A Safe Road for a Sick Child" resolved
+- [[Systems/Flags/mor_rope_done|mor_rope_done]] — Side quest "Two Children, One Rope" resolved
+- [[Systems/Flags/mor_refugees_done|mor_refugees_done]] — Side quest "What the Disaster Left" resolved
+- [[Systems/Flags/mar_coin_done|mar_coin_done]] — Side quest "The Coin From Every Kingdom" resolved
+- [[Systems/Flags/mar_barons_done|mar_barons_done]] — Side quest "Two Barons, One Village" resolved
+- [[Systems/Flags/mar_father_done|mar_father_done]] — Side quest "The Man Whose Father Sings" resolved
+- [[Systems/Flags/mar_exit_done|mar_exit_done]] — Side quest "A Contract With an Exit" resolved
+- [[Systems/Flags/mar_horse_done|mar_horse_done]] — Side quest "The Horse That Broke the Peace" resolved
+- [[Systems/Flags/mar_smuggler_done|mar_smuggler_done]] — Side quest "Smuggler's Honour" resolved
+- [[Systems/Flags/mar_song_done|mar_song_done]] — Side quest "The Deserter's Song" resolved
+- [[Systems/Flags/mar_wheat_done|mar_wheat_done]] — Side quest "Wheat on the Field of Coins" resolved
+- [[Systems/Flags/mar_chapel_done|mar_chapel_done]] — Side quest "A Chapel in the Cellar" resolved
+- [[Systems/Flags/mar_door_done|mar_door_done]] — Side quest "The Choir's Quiet Door" resolved
+- [[Systems/Flags/vel_kaelsday_round_done|vel_kaelsday_round_done]] — Side quest "The Kaelsday Round" resolved
+- [[Systems/Flags/vel_gallery_family_saved|vel_gallery_family_saved]] — Side quest "Down in the Gallery" resolved
+- [[Systems/Flags/vel_ledger_walls_done|vel_ledger_walls_done]] — Side quest "The Ledger in the Walls" resolved
+- [[Systems/Flags/vel_oakes_farm_held|vel_oakes_farm_held]] — Side quest "A Long Night at Oakes Farm" resolved
+- [[Systems/Flags/vel_condemned_resolved|vel_condemned_resolved]] — Side quest "Condemned, With Regret" resolved
+- [[Systems/Flags/vel_eleventh_clause_found|vel_eleventh_clause_found]] — Side quest "The Eleventh Clause" resolved
+- [[Systems/Flags/vel_petition_resolved|vel_petition_resolved]] — Side quest "The Quiet Petition" resolved
+- [[Systems/Flags/vel_offering_laid|vel_offering_laid]] — Side quest "The Last Mason of the Old Rite" resolved
+- [[Systems/Flags/vel_hollin_cross_ledger|vel_hollin_cross_ledger]] — Side quest "Hollin Cross Pays Its Tithe" resolved
+- [[Systems/Flags/vel_brightstone_evacuated|vel_brightstone_evacuated]] — Side quest "The Order of Evacuation" resolved
+- [[Systems/Flags/sun_year_done|sun_year_done]] — Side quest "The Year Nobody Recited" resolved
+- [[Systems/Flags/sun_tithe_done|sun_tithe_done]] — Side quest "The Unpaid Tithe" resolved
+- [[Systems/Flags/sun_dowry_done|sun_dowry_done]] — Side quest "A Dowry in Salt" resolved
+- [[Systems/Flags/sun_awning_done|sun_awning_done]] — Side quest "The Night the Awning Held" resolved
+- [[Systems/Flags/sun_glass_done|sun_glass_done]] — Side quest "What the Glass Remembers" resolved
+- [[Systems/Flags/sun_sunrise_done|sun_sunrise_done]] — Side quest "The Last Sunrise on the Streaks" resolved
+- [[Systems/Flags/sun_door_done|sun_door_done]] — Side quest "A Shovel Under Seal" resolved
+- [[Systems/Flags/sun_road_done|sun_road_done]] — Side quest "The Walker's Road" resolved
+- [[Systems/Flags/sun_eighth_done|sun_eighth_done]] — Side quest "The Eighth Well" resolved
+- [[Systems/Flags/sun_ration_done|sun_ration_done]] — Side quest "The Ration Council" resolved
+- [[Systems/Flags/shl_bird_done|shl_bird_done]] — Side quest "The Bird Who Knew the Manual" resolved
+- [[Systems/Flags/shl_herb_done|shl_herb_done]] — Side quest "A Herb That Does Not Grow" resolved
+- [[Systems/Flags/shl_bout_done|shl_bout_done]] — Side quest "The First Bout in Forty Years" resolved
+- [[Systems/Flags/shl_hunger_done|shl_hunger_done]] — Side quest "The Hand Behind the Hunger" resolved
+- [[Systems/Flags/shl_letters_done|shl_letters_done]] — Side quest "Letters Between Two Graves" resolved
+- [[Systems/Flags/shl_bucket_done|shl_bucket_done]] — Side quest "A Bucket for Every Step" resolved
+- [[Systems/Flags/shl_tiger_done|shl_tiger_done]] — Side quest "The Tiger on the Grey Pass" resolved
+- [[Systems/Flags/shl_walked_done|shl_walked_done]] — Side quest "The Night the Mountain Walked" resolved
+- [[Systems/Flags/shl_hands_done|shl_hands_done]] — Side quest "Hands Without Qi" resolved
+- [[Systems/Flags/shl_tea_done|shl_tea_done]] — Side quest "Tea for Three Precedences" resolved
+- [[Systems/Flags/zar_rose_bled_done|zar_rose_bled_done]] — Side quest "The Rose That Bled" resolved
+- [[Systems/Flags/zar_two_houses_done|zar_two_houses_done]] — Side quest "Two Houses, One Tribute" resolved
+- [[Systems/Flags/zar_nightingale_done|zar_nightingale_done]] — Side quest "The Nightingale Who Would Not Sing" resolved
+- [[Systems/Flags/zar_poets_garden_done|zar_poets_garden_done]] — Side quest "A Cup for the Poet's Garden" resolved
+- [[Systems/Flags/zar_seven_wells_done|zar_seven_wells_done]] — Side quest "Seven Wells, One Song" resolved
+- [[Systems/Flags/zar_unarmed_caravan_done|zar_unarmed_caravan_done]] — Side quest "The Unarmed Caravan" resolved
+- [[Systems/Flags/zar_poem_asked_done|zar_poem_asked_done]] — Side quest "The Poem Zahhar Asked For" resolved
+- [[Systems/Flags/zar_forty_days_done|zar_forty_days_done]] — Side quest "Forty Days Again" resolved
+- [[Systems/Flags/zar_basin_done|zar_basin_done]] — Side quest "The Basin from the Caves" resolved
+- [[Systems/Flags/zar_who_drinks_done|zar_who_drinks_done]] — Side quest "Who Drinks First" resolved
+- [[Systems/Flags/str_quiet_done|str_quiet_done]] — Side quest "The Storm-Caller Who Went Quiet" resolved
+- [[Systems/Flags/str_rope_done|str_rope_done]] — Side quest "A Rope Along the Cliffs" resolved
+- [[Systems/Flags/str_egg_done|str_egg_done]] — Side quest "The Egg in the Gatherer's Basket" resolved
+- [[Systems/Flags/str_rope_contest_done|str_rope_contest_done]] — Side quest "The Best Rope in the World" resolved
+- [[Systems/Flags/str_struck_done|str_struck_done]] — Side quest "Struck, and Blessed" resolved
+- [[Systems/Flags/str_guano_done|str_guano_done]] — Side quest "The Guano Accords" resolved
+- [[Systems/Flags/str_rod_forest_done|str_rod_forest_done]] — Side quest "Rod Forest" resolved
+- [[Systems/Flags/str_funeral_done|str_funeral_done]] — Side quest "A Funeral for the Lightning" resolved
+- [[Systems/Flags/str_feather_done|str_feather_done]] — Side quest "The Fledgling's Feather" resolved
+- [[Systems/Flags/str_nest_done|str_nest_done]] — Side quest "The Nest Seen by Lightning" resolved
+- [[Systems/Flags/whr_divorce_done|whr_divorce_done]] — Side quest "A Divorce From the Sea" resolved
+- [[Systems/Flags/whr_berg_done|whr_berg_done]] — Side quest "The Berg With Something Inside" resolved
+- [[Systems/Flags/whr_quiet_feet_done|whr_quiet_feet_done]] — Side quest "Quiet Feet" resolved
+- [[Systems/Flags/whr_sixteenth_done|whr_sixteenth_done]] — Side quest "The Sixteenth Year" resolved
+- [[Systems/Flags/whr_doll_done|whr_doll_done]] — Side quest "A Doll for the Sea" resolved
+- [[Systems/Flags/whr_floe_done|whr_floe_done]] — Side quest "The Broken Floe" resolved
+- [[Systems/Flags/whr_wyrm_done|whr_wyrm_done]] — Side quest "Ice Wyrm Season" resolved
+- [[Systems/Flags/whr_wedding_done|whr_wedding_done]] — Side quest "A Wedding Under the Aurora" resolved
+- [[Systems/Flags/whr_boat_eaters_done|whr_boat_eaters_done]] — Side quest "The Boat-Eaters' Reckoning" resolved
+- [[Systems/Flags/whr_bone_bergs_done|whr_bone_bergs_done]] — Side quest "What the Bone Bergs Carry" resolved
+- [[Systems/Flags/dwd_sea_legs_done|dwd_sea_legs_done]] — Side quest "Sea Legs, Sand Legs" resolved
+- [[Systems/Flags/dwd_calendar_done|dwd_calendar_done]] — Side quest "The Calendar of Her Songs" resolved
+- [[Systems/Flags/dwd_lullaby_done|dwd_lullaby_done]] — Side quest "A Lullaby the Whale Does Not Know" resolved
+- [[Systems/Flags/dwd_barnacle_done|dwd_barnacle_done]] — Side quest "Barnacle Rot" resolved
+- [[Systems/Flags/dwd_glass_garden_done|dwd_glass_garden_done]] — Side quest "The Glass Garden" resolved
+- [[Systems/Flags/dwd_sandfish_done|dwd_sandfish_done]] — Side quest "Sand-Fish Season" resolved
+- [[Systems/Flags/dwd_death_sung_done|dwd_death_sung_done]] — Side quest "A Death Sung Wrong" resolved
+- [[Systems/Flags/dwd_vote_done|dwd_vote_done]] — Side quest "The Captain's Vote" resolved
+- [[Systems/Flags/dwd_other_town_done|dwd_other_town_done]] — Side quest "The Other Town" resolved
+- [[Systems/Flags/dwd_hums_done|dwd_hums_done]] — Side quest "What She Hums at Night" resolved
+- [[Systems/Flags/umb_dawn_lamp_done|umb_dawn_lamp_done]] — Side quest "Dawn-Lamp Hour" resolved
+- [[Systems/Flags/umb_cocoon_family_freed|umb_cocoon_family_freed]] — Side quest "A Family in the Cocoon" resolved
+- [[Systems/Flags/umb_honey_delivered|umb_honey_delivered]] — Side quest "Honey for the Deep Webs" resolved
+- [[Systems/Flags/umb_bridge_cut_solved|umb_bridge_cut_solved]] — Side quest "Who Cut the Bridge?" resolved
+- [[Systems/Flags/umb_daylight_found|umb_daylight_found]] — Side quest "A Line of Daylight" resolved
+- [[Systems/Flags/umb_contract_restored|umb_contract_restored]] — Side quest "Restored, Quietly" resolved
+- [[Systems/Flags/umb_lift_nine_held|umb_lift_nine_held]] — Side quest "The Vigil at Lift Nine" resolved
+- [[Systems/Flags/umb_tamsin_knot_tied|umb_tamsin_knot_tied]] — Side quest "The Knot She Always Tied" resolved
+- [[Systems/Flags/umb_lift_three_hybrid|umb_lift_three_hybrid]] — Side quest "Chain or Silk" resolved
+- [[Systems/Flags/umb_queens_terms_read|umb_queens_terms_read]] — Side quest "A Letter in the Web" resolved
+- [[Systems/Flags/han_candidate_done|han_candidate_done]] — Side quest "The Candidate's Road" resolved
+- [[Systems/Flags/han_survey_done|han_survey_done]] — Side quest "The Exile's Survey" resolved
+- [[Systems/Flags/han_shoes_done|han_shoes_done]] — Side quest "Shoes at the Cloud Gate" resolved
+- [[Systems/Flags/han_loft_done|han_loft_done]] — Side quest "A Guest in the Rice Loft" resolved
+- [[Systems/Flags/han_paper_done|han_paper_done]] — Side quest "The Paper Varos Set" resolved
+- [[Systems/Flags/han_terrace_done|han_terrace_done]] — Side quest "Terrace Seven Holds" resolved
+- [[Systems/Flags/han_tablets_done|han_tablets_done]] — Side quest "Tablets Down the Pass" resolved
+- [[Systems/Flags/han_drums_done|han_drums_done]] — Side quest "Drums on the Wall" resolved
+- [[Systems/Flags/han_watchman_done|han_watchman_done]] — Side quest "The Watchman Who Still Faces North" resolved
+- [[Systems/Flags/han_shrines_done|han_shrines_done]] — Side quest "Shrines at Every Bend" resolved
+- [[Systems/Flags/gea_part_below_done|gea_part_below_done]] — Side quest "The Part From Below" resolved
+- [[Systems/Flags/gea_thank_nine_done|gea_thank_nine_done]] — Side quest "Thank You, Number Nine" resolved
+- [[Systems/Flags/gea_seven_faces_done|gea_seven_faces_done]] — Side quest "Seven Faces, One Slow" resolved
+- [[Systems/Flags/gea_two_patents_done|gea_two_patents_done]] — Side quest "Two Patents, One Gadget" resolved
+- [[Systems/Flags/gea_child_gremlin_done|gea_child_gremlin_done]] — Side quest "The Child and the Gremlin" resolved
+- [[Systems/Flags/gea_name_kept_done|gea_name_kept_done]] — Side quest "A Name Worth Keeping" resolved
+- [[Systems/Flags/gea_council_knew_done|gea_council_knew_done]] — Side quest "What the Council Knew" resolved
+- [[Systems/Flags/gea_names_soot_done|gea_names_soot_done]] — Side quest "The Names Under the Soot" resolved
+- [[Systems/Flags/gea_medicine_rattle_done|gea_medicine_rattle_done]] — Side quest "Medicine for the Rattle" resolved
+- [[Systems/Flags/gea_last_car_done|gea_last_car_done]] — Side quest "The Last Car Down" resolved
+- [[Systems/Flags/gmc_hot_meal_ruled|gmc_hot_meal_ruled]] — Side quest "A Hot Meal and No Crew" resolved
+- [[Systems/Flags/gmc_truce_struck|gmc_truce_struck]] — Side quest "Neutral Ground" resolved
+- [[Systems/Flags/gmc_map_margin_restored|gmc_map_margin_restored]] — Side quest "Three Bidders Dead" resolved
+- [[Systems/Flags/gmc_boots_walked_home|gmc_boots_walked_home]] — Side quest "Whose Boots Are These" resolved
+- [[Systems/Flags/gmc_parrot_figures_aired|gmc_parrot_figures_aired]] — Side quest "The Parrot Who Kept the Books" resolved
+- [[Systems/Flags/gmc_saltreach_bridges_held|gmc_saltreach_bridges_held]] — Side quest "The Bridges of Saltreach" resolved
+- [[Systems/Flags/gmc_flagship_bell_found|gmc_flagship_bell_found]] — Side quest "The Flagship's Bell" resolved
+- [[Systems/Flags/gmc_grain_convoy_arrived|gmc_grain_convoy_arrived]] — Side quest "The Channel Moves" resolved
+- [[Systems/Flags/gmc_tribute_decided|gmc_tribute_decided]] — Side quest "A Tribute Proposed" resolved
+- [[Systems/Flags/gmc_sea_coins_solved|gmc_sea_coins_solved]] — Side quest "The Sea's Coins" resolved
+- [[Systems/Flags/xoc_garden_drifted_done|xoc_garden_drifted_done]] — Side quest "The Garden That Drifted" resolved
+- [[Systems/Flags/xoc_match_far_side_done|xoc_match_far_side_done]] — Side quest "The Match on the Far Side" resolved
+- [[Systems/Flags/xoc_blanket_canoe_done|xoc_blanket_canoe_done]] — Side quest "A Blanket by Canoe" resolved
+- [[Systems/Flags/xoc_posts_moved_done|xoc_posts_moved_done]] — Side quest "The Posts Have Moved" resolved
+- [[Systems/Flags/xoc_clay_beans_done|xoc_clay_beans_done]] — Side quest "Clay Beans" resolved
+- [[Systems/Flags/xoc_priest_back_done|xoc_priest_back_done]] — Side quest "The Priest Who Came Back" resolved
+- [[Systems/Flags/xoc_star_counters_done|xoc_star_counters_done]] — Side quest "What the Star-Counters Saw" resolved
+- [[Systems/Flags/xoc_night_causeway_done|xoc_night_causeway_done]] — Side quest "Flowers for the Night Causeway" resolved
+- [[Systems/Flags/xoc_ring_water_done|xoc_ring_water_done]] — Side quest "The Ring of Equal Water" resolved
+- [[Systems/Flags/xoc_boy_feeding_done|xoc_boy_feeding_done]] — Side quest "The Boy Who Stopped Feeding the River" resolved

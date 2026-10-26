@@ -1593,5 +1593,55 @@
   "id": "gmc_sea_coins_solved",
   "description": "Side quest \"The Sea's Coins\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "xoc_garden_drifted_done",
+  "description": "Side quest \"The Garden That Drifted\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_match_far_side_done",
+  "description": "Side quest \"The Match on the Far Side\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_blanket_canoe_done",
+  "description": "Side quest \"A Blanket by Canoe\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_posts_moved_done",
+  "description": "Side quest \"The Posts Have Moved\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_clay_beans_done",
+  "description": "Side quest \"Clay Beans\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_priest_back_done",
+  "description": "Side quest \"The Priest Who Came Back\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_star_counters_done",
+  "description": "Side quest \"What the Star-Counters Saw\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_night_causeway_done",
+  "description": "Side quest \"Flowers for the Night Causeway\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_ring_water_done",
+  "description": "Side quest \"The Ring of Equal Water\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "xoc_boy_feeding_done",
+  "description": "Side quest \"The Boy Who Stopped Feeding the River\" resolved",
+  "setBy": "quest"
  }
 ]

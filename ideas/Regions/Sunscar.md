@@ -99,7 +99,19 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 ## People
 
+- [[NPCs/Dalia Ferrin|Dalia Ferrin]]: Treasure-hunter
 - [[NPCs/Echo of Guide Tamar|Echo of Guide Tamar]]: Echo of a caravan guide
+- [[NPCs/Keeper Zahra Merin|Keeper Zahra Merin]]: Senior water-keeper and reciter
+- [[NPCs/Tarek Ashur|Tarek Ashur]]: Apprentice water-keeper
+- [[NPCs/Old Hadiya Qasr|Old Hadiya Qasr]]: Last survivor of a lost caravan
+- [[NPCs/Matchmaker Yusra Bell-Tamin|Matchmaker Yusra Bell-Tamin]]: Matchmaker to the nomad tribes
+- [[NPCs/Caravanserai-master Odo Marsh|Caravanserai-master Odo Marsh]]: Master of the Oasis Caravanserai
+- [[NPCs/Glass-singer Idris Valmont-Sef|Glass-singer Idris Valmont-Sef]]: Hermit who listens to the glass
+- [[NPCs/Nuru Taleb|Nuru Taleb]]: Retired caravan guide
+- [[NPCs/Calla Ferrin|Calla Ferrin]]: Treasure-hunter
+- [[NPCs/Keeper Imran Sabeh|Keeper Imran Sabeh]]: Water-keeper and surveyor
+- [[NPCs/Elder Mother Kalsum|Elder Mother Kalsum]]: Elder of a nomad tribe
+- [[NPCs/Keeper-Elect Basma Orlin|Keeper-Elect Basma Orlin]]: Keeper-elect and ration steward
 
 ## Inns
 
@@ -108,6 +120,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## Quests
 
 - [[Quests/The Table Set for Six|The Table Set for Six]] (B)
+- [[Quests/The Year Nobody Recited|The Year Nobody Recited]] (B)
+- [[Quests/The Unpaid Tithe|The Unpaid Tithe]] (B)
+- [[Quests/A Dowry in Salt|A Dowry in Salt]] (B)
+- [[Quests/The Night the Awning Held|The Night the Awning Held]] (B)
+- [[Quests/What the Glass Remembers|What the Glass Remembers]] (B)
+- [[Quests/The Last Sunrise on the Streaks|The Last Sunrise on the Streaks]] (B)
+- [[Quests/A Shovel Under Seal|A Shovel Under Seal]] (A)
+- [[Quests/The Walker's Road|The Walker's Road]] (A)
+- [[Quests/The Eighth Well|The Eighth Well]] (A)
+- [[Quests/The Ration Council|The Ration Council]] (A)
 
 ## Monsters (46)
 

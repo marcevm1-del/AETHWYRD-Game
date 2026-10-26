@@ -97,11 +97,31 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[NPCs/Banner-Warden Halla Thunderbrow|Banner-Warden Halla Thunderbrow]]: Banner-warden of Kaelthas's shrine
 - [[NPCs/Storm-Caller Bryn Galehand|Storm-Caller Bryn Galehand]]: Storm-caller
+- [[NPCs/Isaura Windlass|Isaura Windlass]]: Storm-caller who has lost her power
+- [[NPCs/Harbour-Warden Tavi Longline|Harbour-Warden Tavi Longline]]: Harbour-warden of a trapped cove
+- [[NPCs/Pila Seabrow|Pila Seabrow]]: Egg-gatherer
+- [[NPCs/Rope-Master Gurr|Rope-Master Gurr]]: Master rope-maker
+- [[NPCs/Odd Thunderhand|Odd Thunderhand]]: Man struck by lightning
+- [[NPCs/Reeve Marga Bellows|Reeve Marga Bellows]]: Reeve of the guano-cliffs
+- [[NPCs/Rod-Warden Fenwick Sparks|Rod-Warden Fenwick Sparks]]: Warden of the Rod Forest
+- [[NPCs/Ysa Ashpeak|Ysa Ashpeak]]: Daughter of a dead storm-caller
+- [[NPCs/Hermit Old Bolt|Hermit Old Bolt]]: Hermit of the Black Peaks
+- [[NPCs/Councillor Eila Greyfeather|Councillor Eila Greyfeather]]: Councillor of the storm-callers' guild
 
 ## Quests
 
 - [[Quests/A Banner for the Coward|A Banner for the Coward]] (B)
 - [[Quests/Cairn of Winds|Cairn of Winds]] (B)
+- [[Quests/The Storm-Caller Who Went Quiet|The Storm-Caller Who Went Quiet]] (B)
+- [[Quests/A Rope Along the Cliffs|A Rope Along the Cliffs]] (B)
+- [[Quests/The Egg in the Gatherer's Basket|The Egg in the Gatherer's Basket]] (A)
+- [[Quests/The Best Rope in the World|The Best Rope in the World]] (B)
+- [[Quests/Struck, and Blessed|Struck, and Blessed]] (B)
+- [[Quests/The Guano Accords|The Guano Accords]] (B)
+- [[Quests/Rod Forest|Rod Forest]] (B)
+- [[Quests/A Funeral for the Lightning|A Funeral for the Lightning]] (A)
+- [[Quests/The Fledgling's Feather|The Fledgling's Feather]] (A)
+- [[Quests/The Nest Seen by Lightning|The Nest Seen by Lightning]] (A)
 
 ## Monsters (21)
 

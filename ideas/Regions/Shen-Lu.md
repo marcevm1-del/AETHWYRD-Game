@@ -98,6 +98,18 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## People
 
 - [[NPCs/The Voice on the Stair|The Voice on the Stair]]: Voice of the stair
+- [[NPCs/Innkeeper Pei Lanxiu|Innkeeper Pei Lanxiu]]: Innkeeper of a rival teahouse beside the Wandering Dragon Inn
+- [[NPCs/Scribe, the Mynah|Scribe, the Mynah]]: Talking mynah that holds a secret manual
+- [[NPCs/Master Gao Liren|Master Gao Liren]]: Master of the Cloudfall Sect
+- [[NPCs/Lin Yuehua|Lin Yuehua]]: Ill disciple
+- [[NPCs/Steward Wen Haoyu|Steward Wen Haoyu]]: Steward of the old tournament ground
+- [[NPCs/Elder Shu Mingzhe|Elder Shu Mingzhe]]: Elder of the Stillwater Sect
+- [[NPCs/Old Fu|Old Fu]]: Gardener of the founders' graves
+- [[NPCs/Carrier-boss Tian Gua|Carrier-boss Tian Gua]]: Boss of the water carriers
+- [[NPCs/Huntress Ren Xuelian|Huntress Ren Xuelian]]: Mountain huntress
+- [[NPCs/Headman Bo Jiangshu|Headman Bo Jiangshu]]: Village headman
+- [[NPCs/Master Lu Zhiyan|Master Lu Zhiyan]]: Master of the Ashen Reed Sect
+- [[NPCs/Tea-seller Yan Pu|Tea-seller Yan Pu]]: Tea-seller
 
 ## Inns
 
@@ -106,6 +118,16 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## Quests
 
 - [[Quests/Ninety-Nine Steps|Ninety-Nine Steps]] (B)
+- [[Quests/The Bird Who Knew the Manual|The Bird Who Knew the Manual]] (B)
+- [[Quests/A Herb That Does Not Grow|A Herb That Does Not Grow]] (B)
+- [[Quests/The First Bout in Forty Years|The First Bout in Forty Years]] (B)
+- [[Quests/The Hand Behind the Hunger|The Hand Behind the Hunger]] (A)
+- [[Quests/Letters Between Two Graves|Letters Between Two Graves]] (B)
+- [[Quests/A Bucket for Every Step|A Bucket for Every Step]] (B)
+- [[Quests/The Tiger on the Grey Pass|The Tiger on the Grey Pass]] (A)
+- [[Quests/The Night the Mountain Walked|The Night the Mountain Walked]] (A)
+- [[Quests/Hands Without Qi|Hands Without Qi]] (A)
+- [[Quests/Tea for Three Precedences|Tea for Three Precedences]] (B)
 
 ## Monsters (60)
 

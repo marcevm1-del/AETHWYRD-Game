@@ -11484,6 +11484,401 @@
   ]
  },
  {
+  "id": "qst_xoc_garden_drifted",
+  "title": "The Garden That Drifted",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_xoc_nenetl",
+  "region": "reg_xochitl_mire",
+  "summary": "A floating garden has drifted into another city's canal, and the three-dawns rule is about to hand it over.",
+  "requirements": {
+   "minLevel": 58
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_nenetl"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_xoc_tochin"
+   },
+   {
+    "kind": "choice",
+    "target": "tow_share_or_gift"
+   }
+  ],
+  "rewards": {
+   "gold": 3600,
+   "gp": 200,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "xoc_garden_drifted_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_match_far_side",
+  "title": "The Match on the Far Side",
+  "rank": "C",
+  "type": "Escort",
+  "giver": "npc_xoc_ocelotl",
+  "region": "reg_xochitl_mire",
+  "summary": "A ball team must cross the hydra's hunting-water to play the spring match against a rival city.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_ocelotl"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_xoc_ocelotl"
+   },
+   {
+    "kind": "choice",
+    "target": "posted_star_or_decoy"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "xoc_match_far_side_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_blanket_canoe",
+  "title": "A Blanket by Canoe",
+  "rank": "C",
+  "type": "Delivery",
+  "giver": "npc_xoc_teyolia",
+  "region": "reg_xochitl_mire",
+  "summary": "A grandmother's blanket must cross cut water to reach a great-grandchild, with a whole city's letters in the same canoe.",
+  "requirements": {
+   "minLevel": 66
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_teyolia"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_reed_crown_pier"
+   },
+   {
+    "kind": "choice",
+    "target": "night_dawn_or_bridge"
+   }
+  ],
+  "rewards": {
+   "gold": 4100,
+   "gp": 225,
+   "xp": 15500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "xoc_blanket_canoe_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_posts_moved",
+  "title": "The Posts Have Moved",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_xoc_calli",
+  "region": "reg_xochitl_mire",
+  "summary": "Someone is moving the canoe-road posts at night. The new line is a little safer.",
+  "requirements": {
+   "minLevel": 69
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_calli"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_xoc_mayel"
+   },
+   {
+    "kind": "choice",
+    "target": "report_show_or_carve"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 235,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "xoc_posts_moved_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_clay_beans",
+  "title": "Clay Beans",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_xoc_cozcatl",
+  "region": "reg_xochitl_mire",
+  "summary": "A market is flooded with baked-clay cacao beans, made by a potter who just wanted to feed his children.",
+  "requirements": {
+   "minLevel": 73
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_cozcatl"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_xoc_papalotl"
+   },
+   {
+    "kind": "choice",
+    "target": "arrest_token_or_return"
+   }
+  ],
+  "rewards": {
+   "gold": 4600,
+   "gp": 255,
+   "xp": 17000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "xoc_clay_beans_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_priest_came_back",
+  "title": "The Priest Who Came Back",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_xoc_ihuitl",
+  "region": "reg_xochitl_mire",
+  "summary": "An exiled priest wants to restore the feeding rites. The city does not know what they really were.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_ihuitl"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_xoc_mecatl"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_feeding_steps"
+   },
+   {
+    "kind": "choice",
+    "target": "report_pledging_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 10400,
+   "gp": 610,
+   "xp": 45000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "xoc_priest_back_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_star_counters",
+  "title": "What the Star-Counters Saw",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_xoc_yolotli",
+  "region": "reg_xochitl_mire",
+  "summary": "Two observatories' tables, lined up by half a day, show the hydra hunts hardest on dark-moon nights.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_yolotli"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_star_tower_tables"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_xoc_nochtli"
+   },
+   {
+    "kind": "choice",
+    "target": "publish_league_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 640,
+   "xp": 47000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "xoc_star_counters_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_night_causeway",
+  "title": "Flowers for the Night Causeway",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_xoc_tlali",
+  "region": "reg_xochitl_mire",
+  "summary": "The night flower market runs beside the hydra's lagoon. Four hundred sellers must load the morning offering without a sound.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_tlali"
+   },
+   {
+    "kind": "defend",
+    "target": "xochitl_night_causeway"
+   },
+   {
+    "kind": "choice",
+    "target": "fire_barge_or_child"
+   }
+  ],
+  "rewards": {
+   "gold": 11800,
+   "gp": 680,
+   "xp": 49500
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "xoc_night_causeway_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_ring_equal_water",
+  "title": "The Ring of Equal Water",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_xoc_cuicatl",
+  "region": "reg_xochitl_mire",
+  "summary": "The league of river-cities meets for the first time in a generation, and no king wants the most honoured seat.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_cuicatl"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_three_canoes_ring"
+   },
+   {
+    "kind": "choice",
+    "target": "lash_lot_or_feast"
+   }
+  ],
+  "rewards": {
+   "gold": 12400,
+   "gp": 710,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_xoc_blanket_canoe"
+   ],
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "xoc_ring_water_done"
+  ]
+ },
+ {
+  "id": "qst_xoc_boy_stopped_feeding",
+  "title": "The Boy Who Stopped Feeding the River",
+  "rank": "B",
+  "type": "Escort",
+  "giver": "npc_xoc_ayotl",
+  "region": "reg_xochitl_mire",
+  "summary": "A grieving boy has stopped putting flowers on the water. His father is alive on a mud island at the end of the channel.",
+  "requirements": {
+   "minLevel": 106
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_xoc_ayotl"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_xoc_ayotl"
+   },
+   {
+    "kind": "reach",
+    "target": "xochitl_salt_lantern_reed_island"
+   },
+   {
+    "kind": "choice",
+    "target": "pole_walk_or_flower"
+   }
+  ],
+  "rewards": {
+   "gold": 13000,
+   "gp": 760,
+   "xp": 56000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "xoc_boy_feeding_done"
+  ]
+ },
+ {
   "id": "qst_str_storm_caller_quiet",
   "title": "The Storm-Caller Who Went Quiet",
   "rank": "B",

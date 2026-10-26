@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — Second regional set: 140 side quests (2026-10-26)
+- Added 140 original quests in files 19–32 (Moraveil, Strife Marches, Velmark, Umbravel, Goldmere Coast, Sunscar, Shen-Lu, Haneul, Zarvan, Gearholm, Xochitl Mire, Stormreach, Whitewater Reach, Dunewhale Drift) with `second_set_index.md`; files 19, 20 and 30–32 written directly, files 21–29 by three writing agents.
+- Data: 140 quests, supporting NPCs and flags merged. `npm run validate` passes (quests 333, npcs 348, flags 329). C# tests not run (no .NET SDK).
+- Proposed in Canon §6 only.
+
 ## Unreleased — Forty pattern side quests and research (2026-10-26)
 - Researched how Skyrim, Genshin Impact, The Witcher 3, Breath of the Wild, Elden Ring and similar games structure side content; recorded the findings, sources, caveats and our adaptations in `side_quests/side_quests_inspiration_notes.md` (ideas only, per `CLAUDE.md`).
 - Added forty original quests in eight pattern files (11–18): Cairns and Notes, Bargains of the Eight, Riddles of the Realm, Hangouts, Contracts with a Twist, Guild Ladders, Strange Visitors, Slow-Life Errands; `patterns_index.md`.

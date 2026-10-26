@@ -93,11 +93,34 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[NPCs/Reeve Matthias Quarrel|Reeve Matthias Quarrel]]: Reeve of the White Duchies
 - [[NPCs/The Driver of the Late Cart|The Driver of the Late Cart]]: Ghost carter
+- [[NPCs/Clerk Hobart Pellam|Clerk Hobart Pellam]]: Tithe-collector for the ward
+- [[NPCs/Brenna Stoke|Brenna Stoke]]: Quarry-worker's wife
+- [[NPCs/Journeyman Corbin Thaxe|Journeyman Corbin Thaxe]]: Journeyman mason
+- [[NPCs/Farmer Tamsyn Oakes|Farmer Tamsyn Oakes]]: Wheat farmer
+- [[NPCs/Notary Isolde Fairweather|Notary Isolde Fairweather]]: Notary and clerk of the lending-house
+- [[NPCs/Widow Philippa Garrow|Widow Philippa Garrow]]: Owner of a cracked terraced house
+- [[NPCs/Archivist Ottoline Pyke|Archivist Ottoline Pyke]]: Junior archivist of the Court
+- [[NPCs/Seneschal Percival Ostrander|Seneschal Percival Ostrander]]: Seneschal to the Grand Duke
+- [[NPCs/Banker Lucan Ferris|Banker Lucan Ferris]]: Guild banker and councillor
+- [[NPCs/Old Gideon Marl|Old Gideon Marl]]: Retired stonemason
+- [[NPCs/Keeper Aldith Crewe|Keeper Aldith Crewe]]: Keeper of a collapsed town's memory
+- [[NPCs/Marshal Cordelia Haverlock|Marshal Cordelia Haverlock]]: Ducal marshal in charge of evacuation
+- [[NPCs/Foreman Rudd Ketteridge|Foreman Rudd Ketteridge]]: Quarry foreman
 
 ## Quests
 
 - [[Quests/The Tithe-Hound|The Tithe-Hound]] (C)
 - [[Quests/The Cart That Pulled Itself|The Cart That Pulled Itself]] (D)
+- [[Quests/The Kaelsday Round|The Kaelsday Round]] (C)
+- [[Quests/Down in the Gallery|Down in the Gallery]] (C)
+- [[Quests/The Ledger in the Walls|The Ledger in the Walls]] (C)
+- [[Quests/A Long Night at Oakes Farm|A Long Night at Oakes Farm]] (C)
+- [[Quests/Condemned, With Regret|Condemned, With Regret]] (C)
+- [[Quests/The Eleventh Clause|The Eleventh Clause]] (B)
+- [[Quests/The Quiet Petition|The Quiet Petition]] (B)
+- [[Quests/The Last Mason of the Old Rite|The Last Mason of the Old Rite]] (B)
+- [[Quests/Hollin Cross Pays Its Tithe|Hollin Cross Pays Its Tithe]] (B)
+- [[Quests/The Order of Evacuation|The Order of Evacuation]] (B)
 
 ## Monsters (10)
 

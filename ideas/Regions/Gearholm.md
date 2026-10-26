@@ -97,10 +97,37 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 ## People
 
 - [[NPCs/Journeyman Pott Brasswick|Journeyman Pott Brasswick]]: Thorgrim's journeyman smith
+- [[NPCs/Inventor Marguerite Tallspindle|Inventor Marguerite Tallspindle]]: Upper-city inventor
+- [[NPCs/Boiler-Tender Bess Cobbler|Boiler-Tender Bess Cobbler]]: Boiler-tender and self-taught coil-winder
+- [[NPCs/Shrine-Keeper Fenwick Oilwell|Shrine-Keeper Fenwick Oilwell]]: Keeper of the Undercity engine shrines
+- [[NPCs/Council Engineer Brindle Cogwhistle|Council Engineer Brindle Cogwhistle]]: Council salvage engineer
+- [[NPCs/Clock-Keeper Winifred Ottery|Clock-Keeper Winifred Ottery]]: Keeper of the Seven-City Clock
+- [[NPCs/Registrar Philomena Quill|Registrar Philomena Quill]]: Registrar of the Patent Hall
+- [[NPCs/Inventor Tobble Sprocket|Inventor Tobble Sprocket]]: Claimant to a patent on the self-winding teapot
+- [[NPCs/Inventor Cornelia Ashby-Wick|Inventor Cornelia Ashby-Wick]]: Claimant to a patent on the self-winding teapot
+- [[NPCs/Pim Soot|Pim Soot]]: Boiler-tender's daughter, aged nine
+- [[NPCs/Spindle-Twelve|Spindle-Twelve]]: Clockborn repairer, rebuilt twelve times
+- [[NPCs/Guild-Master Cornelius Brightwater|Guild-Master Cornelius Brightwater]]: Guild-master of the Clockworkers' Guild
+- [[NPCs/Union Steward Hobb Ratchet|Union Steward Hobb Ratchet]]: Steward of the boiler-tenders' union
+- [[NPCs/Under-Clerk Odette Winch|Under-Clerk Odette Winch]]: Under-clerk of the council record
+- [[NPCs/Boiler-Mother Tansy Oldfield|Boiler-Mother Tansy Oldfield]]: Eldest boiler-tender of the Fourth Engine Hall
+- [[NPCs/Surgeon Pepperill Dunn|Surgeon Pepperill Dunn]]: Surgeon of the Rattle
+- [[NPCs/Cleaner-Sergeant Dunstan Hale|Cleaner-Sergeant Dunstan Hale]]: Council cleaner at the Rattle checkpoint
+- [[NPCs/Conductor Orla Bright|Conductor Orla Bright]]: Conductor of the Long Funicular
 
 ## Quests
 
 - [[Quests/The Smallest Job|The Smallest Job]] (B)
+- [[Quests/The Part From Below|The Part From Below]] (B)
+- [[Quests/Thank You, Number Nine|Thank You, Number Nine]] (B)
+- [[Quests/Seven Faces, One Slow|Seven Faces, One Slow]] (B)
+- [[Quests/Two Patents, One Gadget|Two Patents, One Gadget]] (B)
+- [[Quests/The Child and the Gremlin|The Child and the Gremlin]] (B)
+- [[Quests/A Name Worth Keeping|A Name Worth Keeping]] (B)
+- [[Quests/What the Council Knew|What the Council Knew]] (A)
+- [[Quests/The Names Under the Soot|The Names Under the Soot]] (A)
+- [[Quests/Medicine for the Rattle|Medicine for the Rattle]] (A)
+- [[Quests/The Last Car Down|The Last Car Down]] (A)
 
 ## Monsters (5)
 

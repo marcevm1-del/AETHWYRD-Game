@@ -103,11 +103,37 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[NPCs/Priest-Astronomer Citlalin|Priest-Astronomer Citlalin]]: Priest-astronomer of the ball court
 - [[NPCs/Boatwright Tzitzi|Boatwright Tzitzi]]: Boatwright
+- [[NPCs/Chinampa-Keeper Nenetl|Chinampa-Keeper Nenetl]]: Keeper of the Marigold Reach floating gardens
+- [[NPCs/Chinampa-Keeper Tochin|Chinampa-Keeper Tochin]]: Keeper of the Heron Stair floating gardens
+- [[NPCs/Captain Ocelotl|Captain Ocelotl]]: Captain of the Marigold Reach ball team
+- [[NPCs/Old Weaver Teyolia|Old Weaver Teyolia]]: Weaver and grandmother
+- [[NPCs/Road-Warden Calli|Road-Warden Calli]]: Warden of the Salt Lantern canoe-road
+- [[NPCs/Old Fisherwoman Mayel|Old Fisherwoman Mayel]]: Retired fisherwoman
+- [[NPCs/Market-Judge Cozcatl|Market-Judge Cozcatl]]: Judge of the Heron Stair market
+- [[NPCs/Potter Papalotl|Potter Papalotl]]: Potter of the lower canal
+- [[NPCs/Steward Ihuitl|Steward Ihuitl]]: Steward to the king of Reed Crown
+- [[NPCs/Priest Mecatl|Priest Mecatl]]: Old priest who has returned from exile
+- [[NPCs/Star-Counter Yolotli|Star-Counter Yolotli]]: Young astronomer at the Star Tower
+- [[NPCs/Star-Counter Nochtli|Star-Counter Nochtli]]: Senior astronomer of the Marigold Reach observatory
+- [[NPCs/Market-Warden Tlali|Market-Warden Tlali]]: Warden of the night flower market
+- [[NPCs/League Herald Cuicatl|League Herald Cuicatl]]: Herald of the league of river-cities
+- [[NPCs/Ayotl|Ayotl]]: Fisher's son, aged ten
+- [[NPCs/Fisher Itzmin|Fisher Itzmin]]: Stranded fisher
 
 ## Quests
 
 - [[Quests/The Ball Court of the River-Kings|The Ball Court of the River-Kings]] (B)
 - [[Quests/The Head That Grew Back|The Head That Grew Back]] (B)
+- [[Quests/The Garden That Drifted|The Garden That Drifted]] (C)
+- [[Quests/The Match on the Far Side|The Match on the Far Side]] (C)
+- [[Quests/A Blanket by Canoe|A Blanket by Canoe]] (C)
+- [[Quests/The Posts Have Moved|The Posts Have Moved]] (C)
+- [[Quests/Clay Beans|Clay Beans]] (C)
+- [[Quests/The Priest Who Came Back|The Priest Who Came Back]] (B)
+- [[Quests/What the Star-Counters Saw|What the Star-Counters Saw]] (B)
+- [[Quests/Flowers for the Night Causeway|Flowers for the Night Causeway]] (B)
+- [[Quests/The Ring of Equal Water|The Ring of Equal Water]] (B)
+- [[Quests/The Boy Who Stopped Feeding the River|The Boy Who Stopped Feeding the River]] (B)
 
 ## Monsters (26)
 
