@@ -19148,6 +19148,391 @@
   ]
  },
  {
+  "id": "qst_cal_chart_no_names",
+  "title": "The Chart Without Names",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_brevin_tarrant",
+  "region": "reg_calamity_steppe",
+  "summary": "A cartographer must chart a Calamity trail without ever naming the beast that made it.",
+  "requirements": {
+   "minLevel": 164
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brevin_tarrant"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_flattened_swathe"
+   },
+   {
+    "kind": "choice",
+    "target": "describe_silent_or_pet"
+   }
+  ],
+  "rewards": {
+   "gold": 66000,
+   "gp": 2850,
+   "xp": 300000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "cal_chart_no_names_done"
+  ]
+ },
+ {
+  "id": "qst_cal_clan_offering",
+  "title": "What the Clans Leave at the Edge",
+  "rank": "S",
+  "type": "Hidden",
+  "giver": "npc_ruuk_dawnpaw",
+  "region": "reg_calamity_steppe",
+  "summary": "After fifty years of offerings at the steppe's edge, something has left one back.",
+  "requirements": {
+   "minLevel": 168
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ruuk_dawnpaw"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_eastern_edge_bowl"
+   },
+   {
+    "kind": "choice",
+    "target": "feather_stone_or_hand"
+   }
+  ],
+  "rewards": {
+   "gold": 68000,
+   "gp": 2950,
+   "xp": 310000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "cal_clan_offering_done"
+  ]
+ },
+ {
+  "id": "qst_cal_trail_bends",
+  "title": "The Trail That Bends",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_cadogan_pike",
+  "region": "reg_calamity_steppe",
+  "summary": "Every Calamity trail charted this year bends around the same empty patch of grass.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_cadogan_pike"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_the_bend"
+   },
+   {
+    "kind": "choice",
+    "target": "sit_chalk_or_dig"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "cal_trail_bends_done"
+  ]
+ },
+ {
+  "id": "qst_cal_white_flats",
+  "title": "Fights at the White Flats",
+  "rank": "S",
+  "type": "Escort",
+  "giver": "npc_fitzroy_amberlane",
+  "region": "reg_calamity_steppe",
+  "summary": "A scholar wants to see why giants who fight over salt always stop. He needs an escort across the Salt Pans.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fitzroy_amberlane"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_fitzroy_amberlane"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_salt_pans_fight"
+   },
+   {
+    "kind": "choice",
+    "target": "down_lee_or_steady"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3100,
+   "xp": 330000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "cal_white_flats_done"
+  ]
+ },
+ {
+  "id": "qst_cal_crater_garden",
+  "title": "The Hermit's Crater Garden",
+  "rank": "S",
+  "type": "OddJob",
+  "giver": "npc_bellamy_quarrel",
+  "region": "reg_calamity_steppe",
+  "summary": "A hermit has grown peas for nine years in a footprint-crater. He wants the harvest carried to the tower.",
+  "requirements": {
+   "minLevel": 166
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bellamy_quarrel"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_crater_garden"
+   },
+   {
+    "kind": "choice",
+    "target": "wave_offer_or_still"
+   }
+  ],
+  "rewards": {
+   "gold": 67000,
+   "gp": 2900,
+   "xp": 305000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "cal_crater_garden_done"
+  ]
+ },
+ {
+  "id": "qst_cal_ship_feather",
+  "title": "A Feather as Long as a Boat",
+  "rank": "S",
+  "type": "Gathering",
+  "giver": "npc_corra_windfall",
+  "region": "reg_calamity_steppe",
+  "summary": "The guild wants a shed feather from the ship-sized birds. The nearest one lies in a nest with a chick.",
+  "requirements": {
+   "minLevel": 180
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_corra_windfall"
+   },
+   {
+    "kind": "collect",
+    "target": "steppe_ship_bird_feather",
+    "count": 1
+   },
+   {
+    "kind": "choice",
+    "target": "wait_move_or_follow"
+   }
+  ],
+  "rewards": {
+   "gold": 74000,
+   "gp": 3150,
+   "xp": 335000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "cal_ship_feather_done"
+  ]
+ },
+ {
+  "id": "qst_cal_beneath_grass",
+  "title": "Beneath the Grass",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_dunya_ironwheel",
+  "region": "reg_calamity_steppe",
+  "summary": "A caravan wagon has fallen through the ground into a giant's burrow with eleven scholars aboard.",
+  "requirements": {
+   "minLevel": 208
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dunya_ironwheel"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_burrow_hollow"
+   },
+   {
+    "kind": "choice",
+    "target": "hush_hum_or_hurry"
+   }
+  ],
+  "rewards": {
+   "gold": 135000,
+   "gp": 5500,
+   "xp": 650000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "cal_beneath_grass_done"
+  ]
+ },
+ {
+  "id": "qst_cal_tusks_hollow",
+  "title": "The Hollow Inside the Tusks",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_jorun_tuskward",
+  "region": "reg_calamity_steppe",
+  "summary": "Every Calamity visits the Tusks, and every footprint points in. A bone-reader wants to see what is at the centre.",
+  "requirements": {
+   "minLevel": 214
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_jorun_tuskward"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_tusks_hollow"
+   },
+   {
+    "kind": "choice",
+    "target": "step_touch_or_lip"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 5700,
+   "xp": 680000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "cal_tusks_hollow_done"
+  ]
+ },
+ {
+  "id": "qst_cal_grave_closed",
+  "title": "The Grave the Grass Closed",
+  "rank": "SS",
+  "type": "OddJob",
+  "giver": "npc_rhosyn_fellowes",
+  "region": "reg_calamity_steppe",
+  "summary": "Six years ago a surveyor was buried on the steppe. The grass has closed over the cairn, and his sister wants to find it.",
+  "requirements": {
+   "minLevel": 218
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rhosyn_fellowes"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_closed_grave_hill"
+   },
+   {
+    "kind": "choice",
+    "target": "dig_leave_or_mark"
+   }
+  ],
+  "rewards": {
+   "gold": 145000,
+   "gp": 5900,
+   "xp": 700000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "cal_grave_closed_done"
+  ]
+ },
+ {
+  "id": "qst_cal_calf_dry_river",
+  "title": "The Calf in the Dry River",
+  "rank": "SS",
+  "type": "Faction",
+  "giver": "npc_wrenna_grassmantle",
+  "region": "reg_calamity_steppe",
+  "summary": "A lost behemoth calf is being followed by predators. A beastmaster needs help walking it back to its herd.",
+  "requirements": {
+   "minLevel": 224
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_wrenna_grassmantle"
+   },
+   {
+    "kind": "reach",
+    "target": "steppe_dry_riverbed_cut"
+   },
+   {
+    "kind": "choice",
+    "target": "stand_torch_or_weapon"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6200,
+   "xp": 740000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "cal_calf_river_done"
+  ]
+ },
+ {
   "id": "qst_maw_second_rhythm",
   "title": "The Second Rhythm",
   "rank": "S",
@@ -19911,6 +20296,386 @@
   },
   "setsFlags": [
    "rot_second_kneeling_done"
+  ]
+ },
+ {
+  "id": "qst_ves_map_matched",
+  "title": "The Map That Matched",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_tobias_wickham",
+  "region": "reg_vesper",
+  "summary": "A scholar's map of the red moon's marks matches a city on no map of the world, and he asks the player to walk one street to see whether the school exists.",
+  "requirements": {
+   "minLevel": 208
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tobias_wickham"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_willow_row_school"
+   },
+   {
+    "kind": "choice",
+    "target": "touch_ring_or_copy"
+   }
+  ],
+  "rewards": {
+   "gold": 130000,
+   "gp": 6000,
+   "xp": 700000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_map_matched_done"
+  ]
+ },
+ {
+  "id": "qst_ves_one_followed",
+  "title": "The One Who Followed",
+  "rank": "SS",
+  "type": "Escort",
+  "giver": "npc_sorrel_vesperite",
+  "region": "reg_vesper",
+  "summary": "A vesperite that once followed an adventurer to the surface asks the player to help it find the person whose name it half remembers.",
+  "requirements": {
+   "minLevel": 214
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sorrel_vesperite"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_sorrel_vesperite"
+   },
+   {
+    "kind": "choice",
+    "target": "blue_door_hum_or_walk"
+   }
+  ],
+  "rewards": {
+   "gold": 135000,
+   "gp": 6000,
+   "xp": 710000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_one_followed_done"
+  ]
+ },
+ {
+  "id": "qst_ves_red_flowers_song",
+  "title": "The Song of the Red Flowers",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_hester_lamm",
+  "region": "reg_vesper",
+  "summary": "An old woman in Aldmere recognises the song of the red moon's flowers as her grandmother's lullaby, and the player carries her humming to them.",
+  "requirements": {
+   "minLevel": 220
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hester_lamm"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_garden_of_light"
+   },
+   {
+    "kind": "choice",
+    "target": "hum_listen_or_pick"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 6200,
+   "xp": 730000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_red_flowers_done"
+  ]
+ },
+ {
+  "id": "qst_ves_names_doors",
+  "title": "Names on the Doors",
+  "rank": "SS",
+  "type": "OddJob",
+  "giver": "npc_cador_fell",
+  "region": "reg_vesper",
+  "summary": "A delver is copying every name-plate from the doors of the Broken Streets, certain that someone will one day come looking, and needs help with the last two hundred.",
+  "requirements": {
+   "minLevel": 226
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_cador_fell"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_street_of_plates"
+   },
+   {
+    "kind": "choice",
+    "target": "exact_correct_or_skip"
+   }
+  ],
+  "rewards": {
+   "gold": 140000,
+   "gp": 6200,
+   "xp": 740000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_names_doors_done"
+  ]
+ },
+ {
+  "id": "qst_ves_floating_quarter",
+  "title": "Across the Floating Quarter",
+  "rank": "SS",
+  "type": "Escort",
+  "giver": "npc_gawen_trelawn",
+  "region": "reg_vesper",
+  "summary": "A pilot who talks to the drifting stones needs a guard for his twelfth crossing of the Floating Quarter, to retrieve a surveyor's marker.",
+  "requirements": {
+   "minLevel": 232
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gawen_trelawn"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_gawen_trelawn"
+   },
+   {
+    "kind": "choice",
+    "target": "enter_close_or_marker"
+   }
+  ],
+  "rewards": {
+   "gold": 145000,
+   "gp": 6400,
+   "xp": 760000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_floating_quarter_done"
+  ]
+ },
+ {
+  "id": "qst_ves_three_words",
+  "title": "Three Words for the Moon",
+  "rank": "SS",
+  "type": "Faction",
+  "giver": "npc_petronel_voss",
+  "region": "reg_vesper",
+  "summary": "A priest, an elf and a Lustrine fisher meet at the way-camp, each with a different word for the moon, and the player helps them say what each truly fears.",
+  "requirements": {
+   "minLevel": 238
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_petronel_voss"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_way_camp_fire"
+   },
+   {
+    "kind": "choice",
+    "target": "petronel_linnea_or_bellamy"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6500,
+   "xp": 780000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_three_words_done"
+  ]
+ },
+ {
+  "id": "qst_ves_baker_not_there",
+  "title": "The Baker Who Is Not There",
+  "rank": "SS",
+  "type": "Hidden",
+  "giver": "npc_wilmot_crane",
+  "region": "reg_vesper",
+  "summary": "A ghost opens a bakery in the Broken Streets every dawn for customers who do not come, and asks the first visitor in an age to buy a loaf.",
+  "requirements": {
+   "minLevel": 242
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_wilmot_crane"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_baker_shopfront"
+   },
+   {
+    "kind": "choice",
+    "target": "buy_ask_or_truth"
+   }
+  ],
+  "rewards": {
+   "gold": 150000,
+   "gp": 6500,
+   "xp": 790000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_baker_done"
+  ]
+ },
+ {
+  "id": "qst_ves_edge_light",
+  "title": "The Edge of the Light",
+  "rank": "SS",
+  "type": "Exploration",
+  "giver": "npc_dessa_orrin",
+  "region": "reg_vesper",
+  "summary": "A cartographer's maps of the Red Heart approach always end in a straight line. She asks the player to walk the last mile and say whether it is her hand or the ground.",
+  "requirements": {
+   "minLevel": 246
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dessa_orrin"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_edge_of_light"
+   },
+   {
+    "kind": "choice",
+    "target": "stop_step_or_call"
+   }
+  ],
+  "rewards": {
+   "gold": 155000,
+   "gp": 6600,
+   "xp": 800000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_edge_light_done"
+  ]
+ },
+ {
+  "id": "qst_ves_mothers_lantern",
+  "title": "A Mother's Lantern",
+  "rank": "SS",
+  "type": "Investigation",
+  "giver": "npc_margit_sallow",
+  "region": "reg_vesper",
+  "summary": "A mother who walked to the way-camp with her missing son's lantern twin asks the player to find a sign that he was here.",
+  "requirements": {
+   "minLevel": 250
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_margit_sallow"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_chalk_lintel"
+   },
+   {
+    "kind": "choice",
+    "target": "copy_mark_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 160000,
+   "gp": 6800,
+   "xp": 820000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_mothers_lantern_done"
+  ]
+ },
+ {
+  "id": "qst_ves_white_moon",
+  "title": "The White Moon",
+  "rank": "SS",
+  "type": "Hidden",
+  "giver": "npc_thaddeus_nole",
+  "region": "reg_vesper",
+  "summary": "A historian has nine hundred contradictory memories of the moon's colour, and asks the player the only question he has left.",
+  "requirements": {
+   "minLevel": 256
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_thaddeus_nole"
+   },
+   {
+    "kind": "reach",
+    "target": "ves_historian_tent"
+   },
+   {
+    "kind": "choice",
+    "target": "red_white_or_none"
+   }
+  ],
+  "rewards": {
+   "gold": 165000,
+   "gp": 7000,
+   "xp": 840000
+  },
+  "prerequisites": {
+   "act": 6,
+   "rank": "SS"
+  },
+  "setsFlags": [
+   "ves_white_moon_done"
   ]
  },
  {

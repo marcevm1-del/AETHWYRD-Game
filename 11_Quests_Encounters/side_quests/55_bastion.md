@@ -181,6 +181,14 @@ backstory: A stooped master mason with plaster in his beard who has laid the fou
 **PELL:** "What is it?"
 **ODRUN:** "A stone from the last broken ring. Your mother is in the wall now. Same as the builders."
 
+**Scene 3b: the third course.** While Pell works, Odrun shows the player how a good footing is read, the way a doctor reads a pulse.
+
+**ODRUN:** "Lay your palm flat. Cold is good. Damp is bad. Hollow is a lie."
+**ODRUN:** "Every mason in this city has a mark. You learn it before you learn your letters. Pell's is a small bird."
+**ODRUN:** "A man who signs his work in a bird does not poison a wall out of malice. He does it out of grief that has nowhere else to stand."
+*He taps the rubble with a hammer. It answers with a flat, dead note, like a bell with a crack.*
+**ODRUN:** "I will not hang a boy for loving his mother. But I will not let him sleep on it either."
+
 **Outcomes and receipt.**
 - Report: Pell is sentenced to a labour term on the next ring, which the Warden commutes after Odrun's note. Survey error: Pell works the footing himself, quietly, for a season. Shift: the ring is three days late and the grave is inside the wall.
 - **Receipt:** a stone-mason's mark, scratched by Pell on the new course: a small bird.
@@ -246,6 +254,17 @@ objectives:
 **YSOLT:** "Carts do wander. In wartime. It would be a pity if one lost its way north."
 *Tarn bows, very low, and does not trust himself to speak.*
 
+**Scene 2b: the white cloth.** At the Citadel's outer gate, a baker presses a loaf into the escort's hands without a word, then walks away with her face turned.
+
+**TARN:** "Why would she do that?"
+**ESCORT:** "Because she lost a son at the Ford, and she has decided that you are not the one who owes her."
+**TARN:** "I owe her anyway."
+**ESCORT:** "Eat the bread."
+*Tarn eats the bread. It is the first thing he has eaten in two days. He weeps without making a sound.*
+**TARN:** "On the steppe we say the cities poison their food. I thought I would die of it."
+**TARN:** "It is only bread."
+> ► **"It is only bread."** — He nods, wiping his face with a rough wolfkin hand.
+
 **Outcomes and receipt.**
 - Truce: a single day's quiet at the north road; the girl is brought south. Escort: the player and two guards go in quiet and return at dawn with the child. Refusal: Tarn leaves alone and is not seen again; a note of thanks arrives months later with no signature.
 - **Receipt:** a wolfkin-braided cord Tarn gave his sister, handed to the player for safekeeping.
@@ -307,6 +326,16 @@ objectives:
 **HESPER:** "Take a sheaf for yourself."
 **HESPER:** "Not for the bread. For luck. Hang it over your door."
 *The player sets it on the Warden's steps, where it stands for months, drying gold.*
+
+**Scene 2b: the counting.** Between sheaves, Hesper tells the player the thing she has told no one: the numbers.
+
+**HESPER:** "The Warden says the granaries are full. They are two-thirds. A cook told me."
+**HESPER:** "I do not blame her. If the city knew, the city would panic, and a panicking city is worse than a hungry one."
+**HESPER:** "So I cut. Quietly. And I do not say why."
+*She straightens, one hand at her back, and looks along the golden rows.*
+**HESPER:** "My mother used to say: a harvest is a promise you keep with your back."
+**HESPER:** "I have kept it thirty years. I would like to keep it thirty-one."
+> ► **"You will."** — She snorts. "Keep cutting."
 
 **Outcomes and receipt.**
 - The barley goes to the ward's ovens. If the player stood and faced the riders, the soldiers on the wall hear of it and do not stop talking for a week.
@@ -371,6 +400,15 @@ objectives:
 *The seam is keyed, braced, and gives nothing. The cat's claws skid. The rider stares, then pulls the cat away.*
 **JORAM:** (a dry rasp of a laugh) "Seven weeks since I last heard a rider say a word."
 
+**Scene 2b: the masons' calendar.** In the masons' yard, Beck unrolls the working calendar: a long strip of linen marked with dots for every course laid, day by day.
+
+**BECK:** "Every day a dot. Every rest a gap. Anyone who watches the yard can read it."
+**BECK:** "A smoke from the kiln means mortar is mixed. A lull means a cold day. Anyone with eyes on the ring for a week knows our rhythm."
+**BECK:** "And a horde has had eyes on us for fifty years."
+*He lays his hand flat on the linen.*
+**BECK:** "I don't think they're clever. I think they're *patient.* It is worse."
+> ► **"Change the rhythm."** — **BECK:** "Yes. Never lay the same hour twice. Ha. That would drive a mason mad."
+
 **Outcomes and receipt.**
 - Joram: the wall is keyed in every joint within the month. Masons first: a mason's guild standard is written. Bait: a false joint, well-watched, draws a scouting party into archer range.
 - **Receipt:** a keyed stone block with the date and the words *"cold joint, mended"* chiselled by Beck.
@@ -432,6 +470,15 @@ objectives:
 **MAB:** "Eleven barrels. A bell with a dent. One thatched roof."
 **MAB:** "And Fennel Row."
 *She sits on an overturned bucket and, for the first time in two days, does not stand up.*
+
+**Scene 2b: the pie.** An hour before dusk Mab inspects the defences. The defences include seven pies, cooling on the sill of the granary.
+
+**MAB:** "Rhubarb. They are for after."
+**MAB:** "The last time we held this row we ate nothing for two days. I swore that the next time, we would eat *after.*"
+**MAB:** "A village that fights on an empty stomach will remember it. A village that fights knowing a pie is waiting fights like cats."
+*She sets a hand on the nearest crust, protectively.*
+**MAB:** "Touch the pies before the fight and I will have you posted to the latrine."
+> ► **"I'll guard the pies."** — **MAB:** "Good. Everyone needs a post worth dying for."
 
 **Outcomes and receipt.**
 - Fennel Row holds. Each role of the player earns a different gift: the granary door, a thanks from the ward; the drum, a drumming song written about the night; the line-break, riders who do not return to that flank for a month.
@@ -496,6 +543,14 @@ objectives:
 
 **ANSA:** "That is all. That is all I wanted."
 *A child nearby, holding a spear taller than herself, murmurs the wall-song under her breath: "Stone on stone on stone, a name beneath each course."*
+
+**Scene 2b: the record room.** Before the stone is moved, Ansa shows the player the ledger of fallen captains in the Warden's hall, a list thirty pages long, all in the same hand.
+
+**ANSA:** "She writes them herself. Every one. In her own hand, the night they die."
+**ANSA:** "She wrote Hale's name wrong the first time. She crossed it out and wrote it again, and she wept, which I am told she does not do."
+**ANSA:** "That is why I do not blame the clerk. A city that has this many names to carry will drop one sometimes."
+*Her finger rests on a line: "Hale Keelgrave, outer ring, six years." Someone has scratched out the six and written nine above it.*
+**ANSA:** "She corrected it herself. Months ago. Nobody told the masons."
 
 **Outcomes and receipt.**
 - The stone is placed in the course with the right name; the roll is corrected to nine years. If the player added a line, the same phrase later appears on other stones.
@@ -562,6 +617,15 @@ objectives:
 **TEODRA:** "Not what I wanted."
 **YSOLT:** "Not what I wanted either. That is how I know it is fair."
 
+**Scene 2b: the numbers.** Teodra spreads three sheets of figures across her table and lets the player read them in silence.
+
+**TEODRA:** "Cost of holding the outer ring: one soldier in nine, every year."
+**TEODRA:** "Cost of the next ring built without the outer to hold the horde: two soldiers in nine, for one summer, and then none."
+**TEODRA:** "I have done the sums ten times. They always say: let it go."
+*Her pen taps once, hard, against the page.*
+**TEODRA:** "And yet. I look at the Warden's face, and I see someone for whom numbers are not the whole of it. I envy her that. I also think it will kill us."
+> ► **"Both can be true."** — **TEODRA:** "That is exactly what I am afraid of."
+
 **Outcomes and receipt.**
 - The outer ring holds, with a leaner garrison. Death rolls fall. If the player chose the vote, Teodra and Ysolt accept the result; a stricter rule is added to the oath that *any captain may call a vote.*
 - **Receipt:** Teodra's old clerk's pen, a spear-shaped nib, left on the player's table with a note: *"Count me among the habits."*
@@ -623,6 +687,14 @@ objectives:
 
 **PERDITA:** "I will not write what I think. I will write *'a bench, facing a gate.'*"
 **PERDITA:** "It seems to be enough."
+
+**Scene 2b: the plan, unrolled.** In the archive, Perdita spreads the whole old plan across a table and weights its corners with inkwells.
+
+**PERDITA:** "Here is the gate to the north, the steppe gate. Here, to the south, a postern. And here, in the heart of the keep, the *inward* gate."
+**PERDITA:** "Whoever drew it was careful. Every door has a name. The inward gate has none."
+**PERDITA:** "I counted the lines. He drew it four times. Each time, he left the name blank, as if he meant to fill it in, and then did not."
+*She smooths a curling corner.*
+**PERDITA:** "I have worked here thirty years. I thought I knew every secret this city had. I find I rather like being wrong."
 
 **Outcomes and receipt.**
 - The chamber is resealed or left open; the Warden is told or is not. Nothing else is found; nothing else happens.
@@ -687,6 +759,16 @@ objectives:
 **WREN:** "No he won't. Cats don't. Do they?"
 *The cub licks her chin. It does not answer. It does not need to.*
 
+**Scene 2b: the sausage.** Wren shows the player her secret supplier, a scarred butcher who has been "losing" sausages for three weeks and has not once reported the theft.
+
+**BUTCHER:** "A sausage goes missing. A crumb of bread. I don't count anymore."
+**BUTCHER:** "My late wife would have fed her. She fed every stray. I would be a poor husband to her memory if I stopped."
+**WREN:** "He knows!"
+**BUTCHER:** "Of course I know. Whose idea do you think it was to leave the back door unlatched?"
+*Wren stares. Then she throws her arms around his apron.*
+**WREN:** "I didn't say it was a *sabretooth,* though."
+**BUTCHER:** "Wren. I have a *butcher's* nose."
+
 **Outcomes and receipt.**
 - The cub is raised quietly in a stable at the Citadel (the Warden pretends not to see); or carried north under a white cloth to a camp that will keep it; or given to the deserter's sister, who has asked for something small to hold.
 - **Receipt:** a tiny claw-shaped charm on a string; Wren wears it for the rest of the siege.
@@ -749,6 +831,15 @@ objectives:
 *From beyond it, a roar rises. A fall of stone. The outer ring, finally, is gone.*
 **BERWYN:** "A stone from that ring goes into the next one. Find me a stone."
 *A child in the crowd holds up a fist-sized chunk of the broken wall.*
+
+**Scene 2b: the last course.** At midnight Berwyn stops everything for one minute. He walks the length of the unfinished ring with a lantern, and lays his hand on every tower.
+
+**BERWYN:** "Eight rings. I have set the footing of eight. I have buried none of them."
+**BERWYN:** "A city is a long promise. I have helped to make eight of it."
+**BERWYN:** "If the ninth fails, it will not be the stone. It will be that we did not have the *time.*"
+*He turns to the player, plaster in his beard, eyes bright.*
+**BERWYN:** "So. Give me the time. I will do the rest."
+> ► **"You'll have it."** — He claps a hand to the player's shoulder and goes back to work.
 
 **Outcomes and receipt.**
 - The new ring stands. The horde is at its gate by sunrise. The number saved depends on the choices: the ford saves the rear, the stretchers the wounded, the gate the whole city.

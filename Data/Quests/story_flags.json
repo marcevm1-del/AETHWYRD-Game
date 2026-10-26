@@ -2643,5 +2643,105 @@
   "id": "bas_night_between_done",
   "description": "Side quest \"The Night Between the Rings\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "cal_chart_no_names_done",
+  "description": "Side quest \"The Chart Without Names\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_clan_offering_done",
+  "description": "Side quest \"What the Clans Leave at the Edge\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_trail_bends_done",
+  "description": "Side quest \"The Trail That Bends\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_white_flats_done",
+  "description": "Side quest \"Fights at the White Flats\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_crater_garden_done",
+  "description": "Side quest \"The Hermit's Crater Garden\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_ship_feather_done",
+  "description": "Side quest \"A Feather as Long as a Boat\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_beneath_grass_done",
+  "description": "Side quest \"Beneath the Grass\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_tusks_hollow_done",
+  "description": "Side quest \"The Hollow Inside the Tusks\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_grave_closed_done",
+  "description": "Side quest \"The Grave the Grass Closed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cal_calf_river_done",
+  "description": "Side quest \"The Calf in the Dry River\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_map_matched_done",
+  "description": "Side quest \"The Map That Matched\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_one_followed_done",
+  "description": "Side quest \"The One Who Followed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_red_flowers_done",
+  "description": "Side quest \"The Song of the Red Flowers\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_names_doors_done",
+  "description": "Side quest \"Names on the Doors\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_floating_quarter_done",
+  "description": "Side quest \"Across the Floating Quarter\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_three_words_done",
+  "description": "Side quest \"Three Words for the Moon\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_baker_done",
+  "description": "Side quest \"The Baker Who Is Not There\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_edge_light_done",
+  "description": "Side quest \"The Edge of the Light\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_mothers_lantern_done",
+  "description": "Side quest \"A Mother's Lantern\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ves_white_moon_done",
+  "description": "Side quest \"The White Moon\" resolved",
+  "setBy": "quest"
  }
 ]
