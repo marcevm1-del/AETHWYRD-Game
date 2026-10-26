@@ -13025,5 +13025,1150 @@
   "setsFlags": [
    "dwd_hums_done"
   ]
+ },
+ {
+  "id": "qst_dsp_boots_door",
+  "title": "Boots at the Door",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_brother_ulm",
+  "region": "reg_dragon_spine",
+  "summary": "A doorkeeper needs help hushing a pilgrim festival so that nothing echoes off the bones.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brother_ulm"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_skull_gate"
+   },
+   {
+    "kind": "choice",
+    "target": "whisper_slippers_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "dsp_boots_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_chips_rib",
+  "title": "Chips From a Rib",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_brother_casimir",
+  "region": "reg_dragon_spine",
+  "summary": "Relics are vanishing from ribs no miner could reach; the thief has a reason.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brother_casimir"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_high_rib"
+   },
+   {
+    "kind": "choice",
+    "target": "report_pay_or_return"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "dsp_chips_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_cantor_cold",
+  "title": "The Lullaby Cantor's Cold",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_sister_ysolde",
+  "region": "reg_dragon_spine",
+  "summary": "The cantor's voice fails on the lowest note of the evening lullaby.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sister_ysolde"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_skull_choir"
+   },
+   {
+    "kind": "choice",
+    "target": "rest_teach_or_cover"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "dsp_cantor_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_fire_lily",
+  "title": "Fire-Lily Harvest",
+  "rank": "A",
+  "type": "Gathering",
+  "giver": "npc_sister_marren",
+  "region": "reg_dragon_spine",
+  "summary": "Fire-lilies bloom for one night on the vents and the herbalist needs careful hands.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sister_marren"
+   },
+   {
+    "kind": "collect",
+    "target": "fire_lily",
+    "count": 12
+   },
+   {
+    "kind": "choice",
+    "target": "book_high_or_leave_one"
+   }
+  ],
+  "rewards": {
+   "gold": 29500,
+   "gp": 1480,
+   "xp": 130000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "dsp_lily_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_pilgrim_climb",
+  "title": "A Pilgrim Who Cannot Climb",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_anwen_greaves",
+  "region": "reg_dragon_spine",
+  "summary": "A pilgrim with a ruined knee wants to walk the whole Bone Road.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_anwen_greaves"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_anwen_greaves"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_skull_gate"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "dsp_pilgrim_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_abbots_split",
+  "title": "The Abbots Split",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_abbot_thessaly",
+  "region": "reg_dragon_spine",
+  "summary": "The council is split between fighting Vyrmax and bargaining with him; the abbot asks for honest witnesses.",
+  "requirements": {
+   "minLevel": 134
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_abbot_thessaly"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_council_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "fighters_bargainers_or_novices"
+   }
+  ],
+  "rewards": {
+   "gold": 32500,
+   "gp": 1620,
+   "xp": 142000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "dsp_abbots_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_drake_gate",
+  "title": "The Drake Who Came to the Gate",
+  "rank": "S",
+  "type": "Faction",
+  "giver": "npc_brother_ulm",
+  "region": "reg_dragon_spine",
+  "summary": "A starving drake hatchling has come to the monastery gate alone.",
+  "requirements": {
+   "minLevel": 172
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brother_ulm"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_burning_peaks_edge"
+   },
+   {
+    "kind": "choice",
+    "target": "return_raise_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 70000,
+   "gp": 3000,
+   "xp": 320000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dsp_boots_door"
+   ],
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "dsp_drake_gate_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_burned_monk",
+  "title": "The Book of the Burned Monk",
+  "rank": "S",
+  "type": "Investigation",
+  "giver": "npc_sister_perrin",
+  "region": "reg_dragon_spine",
+  "summary": "A monk burned by a fire from the rock left a ritual book; a second reader compares it to the lullaby.",
+  "requirements": {
+   "minLevel": 176
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sister_perrin"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_restricted_shelves"
+   },
+   {
+    "kind": "choice",
+    "target": "aloud_compare_or_burn"
+   }
+  ],
+  "rewards": {
+   "gold": 72000,
+   "gp": 3100,
+   "xp": 330000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "dsp_burned_monk_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_warm_vertebra",
+  "title": "The Warm Vertebra",
+  "rank": "S",
+  "type": "Exploration",
+  "giver": "npc_brother_otho_vane",
+  "region": "reg_dragon_spine",
+  "summary": "A brass probe says one vertebra is warmer than any in ninety years of records.",
+  "requirements": {
+   "minLevel": 180
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brother_otho_vane"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_warm_vertebra"
+   },
+   {
+    "kind": "choice",
+    "target": "record_touch_or_tell"
+   }
+  ],
+  "rewards": {
+   "gold": 74000,
+   "gp": 3200,
+   "xp": 335000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "dsp_vertebra_done"
+  ]
+ },
+ {
+  "id": "qst_dsp_mountain_dreams",
+  "title": "What the Mountain Dreams",
+  "rank": "S",
+  "type": "Hidden",
+  "giver": "npc_elder_brother_quill",
+  "region": "reg_dragon_spine",
+  "summary": "The eldest monk asks the player to sit in the skull's eye socket until the mountain talks in its sleep.",
+  "requirements": {
+   "minLevel": 184
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_elder_brother_quill"
+   },
+   {
+    "kind": "reach",
+    "target": "dragon_spine_skull_eye"
+   },
+   {
+    "kind": "choice",
+    "target": "listen_hum_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 76000,
+   "gp": 3300,
+   "xp": 340000
+  },
+  "prerequisites": {
+   "act": 5,
+   "rank": "S"
+  },
+  "setsFlags": [
+   "dsp_dreams_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_recruit_swear",
+  "title": "The Recruit Who Could Not Swear",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_hana_corvus",
+  "region": "reg_vharlen",
+  "summary": "A recruit who passed every drill will not speak the barracks pledge.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hana_corvus"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_barracks_roof"
+   },
+   {
+    "kind": "choice",
+    "target": "argue_listen_or_read"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 54000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "vhl_recruit_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_horn_practice",
+  "title": "Horn Practice",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_pell_orrin",
+  "region": "reg_vharlen",
+  "summary": "A horn-warden teaches the town's children the alarm calls without frightening them.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pell_orrin"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_garrison_field"
+   },
+   {
+    "kind": "choice",
+    "target": "gentle_hard_or_child"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 680,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "vhl_horn_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_grain_wagon",
+  "title": "A Grain Wagon for Fort Seven",
+  "rank": "B",
+  "type": "Escort",
+  "giver": "npc_ilsa_brandt",
+  "region": "reg_vharlen",
+  "summary": "Fort Seven is two days short of grain and needs one wagon through the pass.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ilsa_brandt"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_ilsa_brandt"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_fort_seven"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 720,
+   "xp": 56000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "vhl_grain_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_spy_bill",
+  "title": "The Spy Who Paid His Bill",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_gerd_aldous",
+  "region": "reg_vharlen",
+  "summary": "A too-punctual guest at a diplomats' inn is certainly a spy, but whose?",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gerd_aldous"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_diplomats_inn"
+   },
+   {
+    "kind": "choice",
+    "target": "truth_lie_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 54000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "vhl_spy_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_fallen_letters",
+  "title": "Letters From the Fallen Fort",
+  "rank": "B",
+  "type": "Delivery",
+  "giver": "npc_tobin_wray",
+  "region": "reg_vharlen",
+  "summary": "The last letters of soldiers from two fallen forts must be carried to their families by hand.",
+  "requirements": {
+   "minLevel": 104
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tobin_wray"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_family_doorsteps"
+   },
+   {
+    "kind": "choice",
+    "target": "truth_silence_or_stay"
+   }
+  ],
+  "rewards": {
+   "gold": 13000,
+   "gp": 750,
+   "xp": 58000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "vhl_letters_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_senate_dinner",
+  "title": "The Senate Dinner",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_valeria_dunmore",
+  "region": "reg_vharlen",
+  "summary": "A senator hosts a dinner at which the empire's next heir is quietly sounded out.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_valeria_dunmore"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_palace_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "toasts_kitchen_or_silence"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "vhl_dinner_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_rank_file",
+  "title": "Rank and File",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_joss_harrow",
+  "region": "reg_vharlen",
+  "summary": "A sergeant is offered the commission of the man who died in his place.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_joss_harrow"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_funeral_cairn"
+   },
+   {
+    "kind": "choice",
+    "target": "give_keep_or_mother"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "vhl_rank_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_general_retire",
+  "title": "The General Who Wanted to Retire",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_auric_stolt",
+  "region": "reg_vharlen",
+  "summary": "A general named as a possible heir would rather keep bees and needs a way out that shames no one.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_auric_stolt"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_general_garden"
+   },
+   {
+    "kind": "choice",
+    "target": "rival_persuade_or_bees"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1600,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "vhl_general_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_pledge_cost",
+  "title": "What the Pledge Cost",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_merel_voss_aden",
+  "region": "reg_vharlen",
+  "summary": "A chaplain asks for a rubbing of the carved pledge and learns there is a chiselled-out line beneath it.",
+  "requirements": {
+   "minLevel": 134
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_merel_voss_aden"
+   },
+   {
+    "kind": "reach",
+    "target": "vharlen_barracks_vault"
+   },
+   {
+    "kind": "choice",
+    "target": "read_public_or_keep"
+   }
+  ],
+  "rewards": {
+   "gold": 32500,
+   "gp": 1620,
+   "xp": 142000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "vhl_pledge_done"
+  ]
+ },
+ {
+  "id": "qst_vhl_horns_failed",
+  "title": "The Night the Horns Failed",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_rhea_kordan",
+  "region": "reg_vharlen",
+  "summary": "After two false alarms, a real one is not believed, and the pass fort needs a gate held.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rhea_kordan"
+   },
+   {
+    "kind": "defend",
+    "target": "vharlen_pass_fort"
+   },
+   {
+    "kind": "choice",
+    "target": "beacon_alone_or_cooks"
+   }
+  ],
+  "rewards": {
+   "gold": 33000,
+   "gp": 1650,
+   "xp": 145000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "vhl_horns_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_mask_stranger",
+  "title": "A Mask for a Stranger",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_odile_fenn",
+  "region": "reg_cinderhole",
+  "summary": "A frightened newcomer asks for the smallest mask in the market.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_odile_fenn"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_mask_market"
+   },
+   {
+    "kind": "choice",
+    "target": "sell_choose_or_talk"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_mask_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_last_chimney",
+  "title": "The Last Open Chimney",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_bruno_kell",
+  "region": "reg_cinderhole",
+  "summary": "Sweeps have kept a condemned chimney open by hand; tonight the wardens come to close it.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bruno_kell"
+   },
+   {
+    "kind": "defend",
+    "target": "cinderhole_great_chimney"
+   },
+   {
+    "kind": "choice",
+    "target": "stair_talk_or_evacuate"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_chimney_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_old_miners_debt",
+  "title": "Debt of the Old Miners",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_eskil_drogan",
+  "region": "reg_cinderhole",
+  "summary": "A miner's family tally of the old miners' greed has a second column nobody has read.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_eskil_drogan"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_old_seam"
+   },
+   {
+    "kind": "choice",
+    "target": "greed_kindness_or_both"
+   }
+  ],
+  "rewards": {
+   "gold": 29000,
+   "gp": 1450,
+   "xp": 128000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_debt_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_smugglers_lullaby",
+  "title": "Smuggler's Lullaby",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_neve_lasko",
+  "region": "reg_cinderhole",
+  "summary": "A smuggler of refugees carries a child who will not stop singing through the wardens' tunnels.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_neve_lasko"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_neve_lasko"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_terrace_edge"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1500,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_lullaby_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_ash_moths",
+  "title": "The Ash-Moth Census",
+  "rank": "A",
+  "type": "Gathering",
+  "giver": "npc_lio_pemberly",
+  "region": "reg_cinderhole",
+  "summary": "A naturalist counts ash moths and finds they avoid the districts with closed chimneys.",
+  "requirements": {
+   "minLevel": 126
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lio_pemberly"
+   },
+   {
+    "kind": "collect",
+    "target": "ash_moth_count",
+    "count": 20
+   },
+   {
+    "kind": "choice",
+    "target": "count_map_or_release"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1400,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_moths_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_mask_no_face",
+  "title": "A Mask Without a Face",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_pip_soot",
+  "region": "reg_cinderhole",
+  "summary": "A thief who gives away stolen masks has been found out by a warden.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pip_soot"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_mask_market_back"
+   },
+   {
+    "kind": "choice",
+    "target": "hide_talk_or_pay"
+   }
+  ],
+  "rewards": {
+   "gold": 29000,
+   "gp": 1450,
+   "xp": 128000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_mask_thief_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_alchemist_apprentice",
+  "title": "Alchemist's Apprentice",
+  "rank": "A",
+  "type": "OddJob",
+  "giver": "npc_zenobia_quill",
+  "region": "reg_cinderhole",
+  "summary": "An alchemist's accident-prone apprentice is secretly trying to build a filter for the choked districts.",
+  "requirements": {
+   "minLevel": 132
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_zenobia_quill"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_alchemist_cave"
+   },
+   {
+    "kind": "choice",
+    "target": "step_in_back_or_think"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1550,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_apprentice_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_choking_district",
+  "title": "Choking District",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_hale_arvid",
+  "region": "reg_cinderhole",
+  "summary": "A doctor in a closed district needs hand-pumped bellows to ventilate his ward.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hale_arvid"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_closed_district"
+   },
+   {
+    "kind": "choice",
+    "target": "fetch_build_or_steal"
+   }
+  ],
+  "rewards": {
+   "gold": 33000,
+   "gp": 1650,
+   "xp": 145000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_choking_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_fire_not_pay",
+  "title": "The Fire That Will Not Pay",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_sigrun_dahl",
+  "region": "reg_cinderhole",
+  "summary": "The oldest miner says the fire is an invitation no one answered and walks to the first seam.",
+  "requirements": {
+   "minLevel": 140
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sigrun_dahl"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_first_seam"
+   },
+   {
+    "kind": "choice",
+    "target": "sit_eat_or_guard"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1700,
+   "xp": 150000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_fire_done"
+  ]
+ },
+ {
+  "id": "qst_cnd_vasque_smoke",
+  "title": "What Vasque Keeps in the Smoke",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_smoke_whisperer",
+  "region": "reg_cinderhole",
+  "summary": "A voice in a flue keeps three lost things for someone it cannot remember.",
+  "requirements": {
+   "minLevel": 144
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_smoke_whisperer"
+   },
+   {
+    "kind": "reach",
+    "target": "cinderhole_whisper_flue"
+   },
+   {
+    "kind": "choice",
+    "target": "speak_write_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 35000,
+   "gp": 1750,
+   "xp": 155000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "cnd_smoke_done"
+  ]
  }
 ]

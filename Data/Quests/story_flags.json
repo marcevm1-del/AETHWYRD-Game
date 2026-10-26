@@ -1643,5 +1643,155 @@
   "id": "xoc_boy_feeding_done",
   "description": "Side quest \"The Boy Who Stopped Feeding the River\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "dsp_boots_done",
+  "description": "Side quest \"Boots at the Door\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_chips_done",
+  "description": "Side quest \"Chips From a Rib\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_cantor_done",
+  "description": "Side quest \"The Lullaby Cantor's Cold\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_lily_done",
+  "description": "Side quest \"Fire-Lily Harvest\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_pilgrim_done",
+  "description": "Side quest \"A Pilgrim Who Cannot Climb\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_abbots_done",
+  "description": "Side quest \"The Abbots Split\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_drake_gate_done",
+  "description": "Side quest \"The Drake Who Came to the Gate\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_burned_monk_done",
+  "description": "Side quest \"The Book of the Burned Monk\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_vertebra_done",
+  "description": "Side quest \"The Warm Vertebra\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "dsp_dreams_done",
+  "description": "Side quest \"What the Mountain Dreams\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_recruit_done",
+  "description": "Side quest \"The Recruit Who Could Not Swear\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_horn_done",
+  "description": "Side quest \"Horn Practice\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_grain_done",
+  "description": "Side quest \"A Grain Wagon for Fort Seven\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_spy_done",
+  "description": "Side quest \"The Spy Who Paid His Bill\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_letters_done",
+  "description": "Side quest \"Letters From the Fallen Fort\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_dinner_done",
+  "description": "Side quest \"The Senate Dinner\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_rank_done",
+  "description": "Side quest \"Rank and File\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_general_done",
+  "description": "Side quest \"The General Who Wanted to Retire\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_pledge_done",
+  "description": "Side quest \"What the Pledge Cost\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "vhl_horns_done",
+  "description": "Side quest \"The Night the Horns Failed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_mask_done",
+  "description": "Side quest \"A Mask for a Stranger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_chimney_done",
+  "description": "Side quest \"The Last Open Chimney\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_debt_done",
+  "description": "Side quest \"Debt of the Old Miners\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_lullaby_done",
+  "description": "Side quest \"Smuggler's Lullaby\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_moths_done",
+  "description": "Side quest \"The Ash-Moth Census\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_mask_thief_done",
+  "description": "Side quest \"A Mask Without a Face\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_apprentice_done",
+  "description": "Side quest \"Alchemist's Apprentice\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_choking_done",
+  "description": "Side quest \"Choking District\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_fire_done",
+  "description": "Side quest \"The Fire That Will Not Pay\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "cnd_smoke_done",
+  "description": "Side quest \"What Vasque Keeps in the Smoke\" resolved",
+  "setBy": "quest"
  }
 ]
