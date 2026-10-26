@@ -673,7 +673,7 @@ objectives:
 id: qst_han_drums_on_wall
 title: Drums on the Wall
 rank: A
-type: SiegeDefence
+type: Defense
 giver: npc_oh_seongmin
 region: reg_haneul
 level: 136

@@ -4,7 +4,7 @@
 
 **Total:** 260 quests.  
 **By rank:** F 5 · E 16 · D 30 · C 58 · B 99 · A 50 · S 2.  
-**By type:** Faction 53 · Investigation 44 · OddJob 37 · Exploration 33 · Hidden 24 · Defense 21 · Escort 18 · Divine 5 · Companion 5 · Delivery 5 · Gathering 4 · Bounty 4 · Trial 3 · Capture 2 · Subjugation 1 · SiegeDefence 1.
+**By type:** Faction 53 · Investigation 44 · OddJob 37 · Exploration 33 · Hidden 24 · Defense 22 · Escort 18 · Divine 5 · Companion 5 · Delivery 5 · Gathering 4 · Bounty 4 · Trial 3 · Capture 2 · Subjugation 1.
 
 
 ## [Whisperwood and Millbrook: Ten Side Quests](01_whisperwood_millbrook.md)
@@ -338,7 +338,7 @@
 | The Paper Varos Set | A | Investigation | Haneul | Baek Seonwoo | 131 |
 | Terrace Seven Holds | B | Defense | Haneul | Sergeant Jo Dalsu | 96 |
 | Tablets Down the Pass | B | Delivery | Haneul | Widow Na Okja | 100 |
-| Drums on the Wall | A | SiegeDefence | Haneul | Oh Seongmin | 136 |
+| Drums on the Wall | A | Defense | Haneul | Oh Seongmin | 136 |
 | The Watchman Who Still Faces North | B | Exploration | Haneul | Kwon Haru | 103 |
 | Shrines at Every Bend | A | Defense | Haneul | Eom Sora | 142 |
 
