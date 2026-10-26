@@ -105,6 +105,7 @@ These are presentation and spawn variants of this species, not separate core com
 
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
+- [[Quests/The Wolves' Second Race|The Wolves' Second Race]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.

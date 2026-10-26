@@ -26,4 +26,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/The Name of the Blade|The Name of the Blade]]
 - [[Quests/Weekly Board/Forge Rush|Forge Rush]]

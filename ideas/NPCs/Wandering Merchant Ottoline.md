@@ -21,6 +21,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/The Fog Merchant's Coin|The Fog Merchant's Coin]]
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]]
 - [[Quests/Weekly Board/Dice with a Stranger|Dice with a Stranger]]
 

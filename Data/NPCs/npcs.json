@@ -113,6 +113,16 @@
     "part": "night",
     "place": "Hollis's shack"
    }
+  ],
+  "relationships": [
+   {
+    "npcId": "npc_teo_gruel",
+    "kind": "secret student"
+   },
+   {
+    "npcId": "npc_brutus_kale",
+    "kind": "trains"
+   }
   ]
  },
  {
@@ -263,6 +273,13 @@
     "part": "night",
     "place": "The Sleeping Griffon bar"
    }
+  ],
+  "states": [
+   {
+    "flag": "edrics_sword_resolved",
+    "role": "Innkeeper, the Sleeping Griffon",
+    "note": "The sword has left the wall and the ledger hangs in its bracket; the Griffon is quieter on Morrowsdays."
+   }
   ]
  },
  {
@@ -313,7 +330,17 @@
   "secret": "She was an Inquisitor once and left after refusing an order to burn a village.",
   "faction": "Holy Church of Lumina",
   "romanceable": false,
-  "canDie": true
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_sister_ivy_thorne",
+    "kind": "old friend"
+   },
+   {
+    "npcId": "npc_inquisitor_halvane",
+    "kind": "former superior"
+   }
+  ]
  },
  {
   "id": "npc_eolande_fairweather",
@@ -327,7 +354,13 @@
   "secret": "Her research notes on the harvest are hidden inside a cookbook in the library.",
   "faction": "Mages' Academy",
   "romanceable": false,
-  "canDie": true
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_archivist_orrow",
+    "kind": "former student"
+   }
+  ]
  },
  {
   "id": "npc_brannoc_emberfist",
@@ -407,6 +440,10 @@
    {
     "npcId": "npc_bertrand_pike",
     "kind": "reports to"
+   },
+   {
+    "npcId": "npc_marta_gruel",
+    "kind": "owes a life to her husband"
    }
   ],
   "schedule": [
@@ -586,7 +623,14 @@
   "backstory": "A loud D-Rank brawler who has been stuck at D for six years and takes it out on every rookie with a wooden card.",
   "secret": "He is terrified of failing his C-Rank trial again and drinks to avoid trying.",
   "romanceable": false,
-  "canDie": true
+  "canDie": true,
+  "states": [
+   {
+    "flag": "brutus_fifth_attempt_resolved",
+    "role": "C-Rank adventurer, Hollis's yard assistant",
+    "note": "Passed the C trial; sits at the middle table and buys a round for rookies."
+   }
+  ]
  },
  {
   "id": "npc_tamsin_orphan",
@@ -672,6 +716,13 @@
     "npcId": "npc_captain_holt",
     "kind": "captain"
    }
+  ],
+  "states": [
+   {
+    "flag": "tomlin_registration_resolved",
+    "role": "Warden, north gate",
+    "note": "Registered as a Warden; an oak card under his tabard and a hand over his heart when he waves rookies through."
+   }
   ]
  },
  {
@@ -685,7 +736,20 @@
   "backstory": "A candlemaker who makes the lanterns for Lantern Night and lights one every evening for a son who never came back from Whisperwood.",
   "secret": "Her son's Guild card is in the Hall of Cards. He was the first victim of the Named hobgoblin Scarjaw.",
   "romanceable": false,
-  "canDie": true
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_fiddler_corwin",
+    "kind": "neighbour"
+   }
+  ],
+  "states": [
+   {
+    "flag": "joren_contract_resolved",
+    "role": "Candlemaker, Temple Hill",
+    "note": "Lights Joren's lantern once, at the Hall of Cards; keeps a pot of moon-moss on her sill."
+   }
+  ]
  },
  {
   "id": "npc_fiddler_corwin",
@@ -715,6 +779,10 @@
    {
     "npcId": "npc_mina_feathersby",
     "kind": "colleague"
+   },
+   {
+    "npcId": "npc_bertrand_pike",
+    "kind": "audits"
    }
   ]
  },
@@ -743,5 +811,69 @@
   "secret": "Some of her wares come from Vesper.",
   "romanceable": false,
   "canDie": true
+ },
+ {
+  "id": "npc_sister_ivy_thorne",
+  "name": "Sister Ivy Thorne",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Aldmere orphanages",
+  "role": "Choir of Mirrors preacher (former orphanage nun)",
+  "backstory": "A former nun of the Orphanage of the Small Lantern who left the Order when the \"adopted\" children never wrote back. She now leads the Choir of Mirrors, believing Azrael will end the gods' harvest of children's souls. She and Sister Pell were novices together.",
+  "secret": "She still keeps every letter Pell ever wrote to her.",
+  "faction": "Red Moon Cult",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_sister_pell",
+    "kind": "old friend"
+   },
+   {
+    "npcId": "npc_brother_caspian",
+    "kind": "former superior"
+   }
+  ]
+ },
+ {
+  "id": "npc_inquisitor_halvane",
+  "name": "Inquisitor Halvane",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Aldmere City",
+  "role": "Inquisitor of the Holy Church",
+  "backstory": "A patient, courteous Inquisitor who once commanded a company of the Order. He speaks softly and asks the same question three ways. He is not cruel; he believes he is saving souls.",
+  "secret": "He still has Sister Pell's name in his orders.",
+  "faction": "Holy Church of Lumina",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_sister_pell",
+    "kind": "former subordinate"
+   }
+  ]
+ },
+ {
+  "id": "npc_archivist_orrow",
+  "name": "Archivist Orrow",
+  "tier": "major",
+  "race": "Human",
+  "homeRegion": "reg_aldmere",
+  "settlement": "Aldmere City",
+  "role": "Academy archivist",
+  "backstory": "A meticulous Academy archivist who audits provincial libraries for missing volumes, and who has never once lost a book. He is more curious than he lets on.",
+  "secret": "He was one of Eolande's students.",
+  "faction": "Mages' Academy",
+  "romanceable": false,
+  "canDie": true,
+  "relationships": [
+   {
+    "npcId": "npc_eolande_fairweather",
+    "kind": "former teacher"
+   }
+  ]
  }
 ]

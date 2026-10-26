@@ -9,7 +9,7 @@ The player passed the F→E trial
 
 - **Set by:** quest
 - **Written by:** [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]]
-- **Read by:** No quest prerequisite currently indexed
+- **Read by:** [[Quests/The North Road Ledger|The North Road Ledger]], [[Quests/Tomlin Tries Again|Tomlin Tries Again]], [[Quests/Joren's Last Contract|Joren's Last Contract]], [[Quests/The Inquisitor at the Shrine|The Inquisitor at the Shrine]], [[Quests/Brindlewick's Got Talent|Brindlewick's Got Talent]]
 
 ## State ownership
 

@@ -20,5 +20,9 @@ Marta's fourteen-year-old son, who wants to be an adventurer more than anything 
 - mother: [[NPCs/Marta Gruel|Marta Gruel]]
 - secret student: [[NPCs/Old Hollis|Old Hollis]]
 
+## Quests given
+
+- [[Quests/The Stable Boy's Broom|The Stable Boy's Broom]]
+
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** He has been secretly training with Old Hollis at night.

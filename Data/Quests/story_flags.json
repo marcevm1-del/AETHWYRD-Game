@@ -48,5 +48,190 @@
   "id": "caspian_unmasked",
   "description": "Lantern Night, Act V: Brother Caspian is revealed as the Red Prophet",
   "setBy": "story"
+ },
+ {
+  "id": "marrowgate_fell",
+  "description": "The first demon army has taken Marrowgate (Act III beat); survivors reach Brindlewick",
+  "setBy": "story"
+ },
+ {
+  "id": "marta_ledger_seen",
+  "description": "The player has seen the red ink in Marta's ledger",
+  "setBy": "quest"
+ },
+ {
+  "id": "teo_broom_resolved",
+  "description": "The player has resolved Teo's secret training",
+  "setBy": "quest"
+ },
+ {
+  "id": "teo_north_road_resolved",
+  "description": "Teo has been brought home from the north road",
+  "setBy": "quest"
+ },
+ {
+  "id": "griffon_shelters_refugees",
+  "description": "The Sleeping Griffon is sheltering Marrowgate's refugees",
+  "setBy": "quest"
+ },
+ {
+  "id": "edrics_sword_resolved",
+  "description": "Edric's sword has been reforged and given",
+  "setBy": "quest"
+ },
+ {
+  "id": "pike_road_payments_known",
+  "description": "The player knows about the mayor's secret road patrol",
+  "setBy": "quest"
+ },
+ {
+  "id": "tomlin_registration_resolved",
+  "description": "Guard Tomlin has taken the registration appraisal again",
+  "setBy": "quest"
+ },
+ {
+  "id": "holt_count_resolved",
+  "description": "Captain Holt's gate count has been done",
+  "setBy": "quest"
+ },
+ {
+  "id": "aster_candles_delivered",
+  "description": "The player has delivered Widow Aster's candles",
+  "setBy": "quest"
+ },
+ {
+  "id": "corwin_rank_ear_met",
+  "description": "Fiddler Corwin has named the player's step",
+  "setBy": "quest"
+ },
+ {
+  "id": "joren_contract_resolved",
+  "description": "Joren's last contract has been finished",
+  "setBy": "quest"
+ },
+ {
+  "id": "lantern_night_brindlewick_joined",
+  "description": "The player has made a lantern for Brindlewick's Lantern Night",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_orphan_melody",
+  "description": "Clue: the orphans' hymn tune is older than the orphanage",
+  "setBy": "quest"
+ },
+ {
+  "id": "pell_boxing_met",
+  "description": "The player has sparred or watched in Pell's barn",
+  "setBy": "quest"
+ },
+ {
+  "id": "inquisitor_shrine_resolved",
+  "description": "The Inquisitor at the shrine has been dealt with",
+  "setBy": "quest"
+ },
+ {
+  "id": "quiet_pharmacy_resolved",
+  "description": "The medicine to the fugitive saint has been delivered or reported",
+  "setBy": "quest"
+ },
+ {
+  "id": "ivy_letter_read",
+  "description": "The player has read Sister Ivy's letter to Pell",
+  "setBy": "quest"
+ },
+ {
+  "id": "eolande_books_returned",
+  "description": "Eolande's overdue books are back on the shelf",
+  "setBy": "quest"
+ },
+ {
+  "id": "cookbook_margins_decoded",
+  "description": "The player has read the cookbook's margin notes",
+  "setBy": "quest"
+ },
+ {
+  "id": "reading_room_audit_resolved",
+  "description": "The Academy audit of the reading room is resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_mina_cookbook",
+  "description": "Clue: \"Mina\" asked for a cookbook by name",
+  "setBy": "quest"
+ },
+ {
+  "id": "brutus_six_years_met",
+  "description": "The player has talked to Brutus at dawn",
+  "setBy": "quest"
+ },
+ {
+  "id": "brutus_fifth_attempt_resolved",
+  "description": "Brutus's fifth attempt at the C trial is resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hollis_buried_sword_story",
+  "description": "Hollis has told the story of the buried sword",
+  "setBy": "quest"
+ },
+ {
+  "id": "grey_sack_opened",
+  "description": "Millbrook's Grey Sack has been opened or left sealed",
+  "setBy": "quest"
+ },
+ {
+  "id": "rosie_talent_show_done",
+  "description": "Brindlewick's talent show has been judged",
+  "setBy": "quest"
+ },
+ {
+  "id": "rosie_second_verse_resolved",
+  "description": "Rosie's warning in song has been acted on",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_left_handed_forms",
+  "description": "Clue: the guild forms are signed in the wrong hand",
+  "setBy": "quest"
+ },
+ {
+  "id": "tamsin_receptionist_day_done",
+  "description": "The player has played Junior Receptionist Day with Tamsin",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_bo_drawings",
+  "description": "Clue: Bo's drawings show the red moon with buildings",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_lark_adoption",
+  "description": "Clue: Lark's adoption date is on a cult ledger",
+  "setBy": "quest"
+ },
+ {
+  "id": "yesterdays_bread_delivered",
+  "description": "The player has carried Hugo's bread to the orphanage",
+  "setBy": "quest"
+ },
+ {
+  "id": "wolves_second_race_resolved",
+  "description": "The Crimson Wolves' second race is over",
+  "setBy": "quest"
+ },
+ {
+  "id": "sal_scale_traded",
+  "description": "Old Sal has traded a Rainbow Koi scale for a story",
+  "setBy": "quest"
+ },
+ {
+  "id": "clue_vesper_coin",
+  "description": "Clue: a coin from the fog merchant is Valdrisian",
+  "setBy": "quest"
+ },
+ {
+  "id": "blade_named",
+  "description": "The player has told Brannoc the name of their blade",
+  "setBy": "quest"
  }
 ]

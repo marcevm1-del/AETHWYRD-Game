@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-10-26
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Brindlewick storylines and side quests | Twelve NPC arcs ([[07_Characters/brindlewick_storylines]]) and 36 side quests F to C ([[11_Quests_Encounters/brindlewick_side_quests]]); 36 quests, 37 story flags and 3 supporting NPCs added to Data/; orphanage (14) and Mina (11) clue maps; Canon §6 proposal row. Rewards are first-pass | `npm run validate` passes (npcs 42, quests 53, flags 47); C# tests not run (no .NET SDK on the build host) |
+
 ## 2026-10-25
 
 | Commit | What changed | Tests |

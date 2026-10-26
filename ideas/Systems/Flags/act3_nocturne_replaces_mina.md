@@ -9,7 +9,7 @@ Early Act III: Lady Nocturne has replaced Mina at the guild counter
 
 - **Set by:** story
 - **Written by:** No quest setter currently indexed
-- **Read by:** No quest prerequisite currently indexed
+- **Read by:** [[Quests/The Cookbook Question|The Cookbook Question]], [[Quests/Rosie's Second Verse|Rosie's Second Verse]], [[Quests/Left-Handed Forms|Left-Handed Forms]]
 
 ## State ownership
 

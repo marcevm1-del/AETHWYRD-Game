@@ -9,7 +9,7 @@ Old Hollis has trained the player as a Swordsman
 
 - **Set by:** quest
 - **Written by:** [[Quests/A Thousand Swings|A Thousand Swings]]
-- **Read by:** No quest prerequisite currently indexed
+- **Read by:** [[Quests/The Buried Sword|The Buried Sword]]
 
 ## State ownership
 

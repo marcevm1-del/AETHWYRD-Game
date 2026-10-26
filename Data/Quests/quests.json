@@ -537,5 +537,1425 @@
    "gp": 8,
    "xp": 260
   }
+ },
+ {
+  "id": "qst_odd_payday_at_the_griffon",
+  "title": "Payday at the Griffon",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Payday means drinking, and drinking means fists. Marta needs someone sober by the door.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "sleeping_griffon_common_room"
+   },
+   {
+    "kind": "choice",
+    "target": "keep_the_peace_how"
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "gp": 8,
+   "xp": 180,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_bowl_of_stew"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "marta_ledger_seen"
+  ]
+ },
+ {
+  "id": "qst_odd_stable_boys_broom",
+  "title": "The Stable Boy's Broom",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_teo_gruel",
+  "region": "reg_aldmere",
+  "summary": "Teo has been sneaking out at night. He asks you to come and say nothing.",
+  "requirements": {
+   "minLevel": 8
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "hollis_yard_at_night"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_marta_keep_secret_or_broker"
+   }
+  ],
+  "rewards": {
+   "gold": 150,
+   "gp": 12,
+   "xp": 500
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_odd_payday_at_the_griffon"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "teo_broom_resolved"
+  ]
+ },
+ {
+  "id": "qst_esc_boy_on_north_road",
+  "title": "The Boy on the North Road",
+  "rank": "E",
+  "type": "Escort",
+  "giver": "npc_marta_gruel",
+  "region": "reg_whisperwood",
+  "summary": "Teo has followed a party north to \"help\". Marta asks you to bring him home, and not to shame him.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "whisperwood_north_road"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_teo_gruel"
+   },
+   {
+    "kind": "choice",
+    "target": "bring_him_home_or_let_him_prove_it"
+   }
+  ],
+  "rewards": {
+   "gold": 180,
+   "gp": 14,
+   "xp": 600
+  },
+  "prerequisites": {
+   "flags": [
+    "teo_broom_resolved",
+    "tyrant_slain_reg_whisperwood"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "teo_north_road_resolved"
+  ]
+ },
+ {
+  "id": "qst_fac_every_bed_in_the_griffon",
+  "title": "Every Bed in the Griffon",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Marrowgate is gone and the refugees have nowhere to go. Marta has forty beds and sixty people.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_healing_herb",
+    "count": 10
+   },
+   {
+    "kind": "reach",
+    "target": "brindlewick_refugee_row",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "who_gets_the_beds"
+   }
+  ],
+  "rewards": {
+   "gold": 1300,
+   "gp": 80,
+   "xp": 5500,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "marrowgate_fell"
+   ],
+   "act": 3,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "griffon_shelters_refugees"
+  ]
+ },
+ {
+  "id": "qst_odd_edrics_sword",
+  "title": "Edric's Sword",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Marta takes her husband's sword off the wall and asks you to carry it to Brannoc.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brannoc_emberfist"
+   },
+   {
+    "kind": "reach",
+    "target": "edrics_cairn"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_holt"
+   },
+   {
+    "kind": "choice",
+    "target": "sword_to_marta_or_teo"
+   }
+  ],
+  "rewards": {
+   "gold": 3600,
+   "gp": 200,
+   "xp": 13000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "edrics_sword_resolved"
+  ]
+ },
+ {
+  "id": "qst_inv_north_road_ledger",
+  "title": "The North Road Ledger",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_aldmere",
+  "summary": "Wendel has found a line in the town accounts that matches no road. He asks you to look, because he cannot.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_bertrand_pike"
+   },
+   {
+    "kind": "reach",
+    "target": "north_road_camp"
+   },
+   {
+    "kind": "choice",
+    "target": "expose_help_or_replace"
+   }
+  ],
+  "rewards": {
+   "gold": 240,
+   "gp": 18,
+   "xp": 800,
+   "items": [
+    "itm_copper_compass"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "pike_road_payments_known"
+  ]
+ },
+ {
+  "id": "qst_odd_tomlin_tries_again",
+  "title": "Tomlin Tries Again",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_guard_tomlin",
+  "region": "reg_aldmere",
+  "summary": "Tomlin failed the registration appraisal on one question. He asks you to help him answer it.",
+  "requirements": {
+   "minLevel": 8
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_guild_clerk_wendel"
+   },
+   {
+    "kind": "reach",
+    "target": "guild_appraisal_room"
+   },
+   {
+    "kind": "choice",
+    "target": "the_oath_question"
+   }
+  ],
+  "rewards": {
+   "gold": 160,
+   "gp": 12,
+   "xp": 450
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "tomlin_registration_resolved"
+  ]
+ },
+ {
+  "id": "qst_def_count_at_the_gate",
+  "title": "The Count at the Gate",
+  "rank": "D",
+  "type": "Defense",
+  "giver": "npc_captain_holt",
+  "region": "reg_aldmere",
+  "summary": "A surge of undead walks the north road. Holt needs another set of eyes on the gate, and an honest count at dawn.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "defend",
+    "target": "north_gate_night"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_zombie",
+    "count": 12
+   },
+   {
+    "kind": "kill",
+    "target": "mon_skeleton",
+    "count": 6
+   },
+   {
+    "kind": "talk",
+    "target": "npc_guard_tomlin"
+   }
+  ],
+  "rewards": {
+   "gold": 1400,
+   "gp": 90,
+   "xp": 6000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "holt_count_resolved"
+  ]
+ },
+ {
+  "id": "qst_deliv_candles_for_the_hall",
+  "title": "Candles for the Hall",
+  "rank": "F",
+  "type": "Delivery",
+  "giver": "npc_widow_aster",
+  "region": "reg_aldmere",
+  "summary": "The guild hall's candles are low. Aster asks you to carry a bundle to Wendel, and to stay for tea.",
+  "requirements": {
+   "minLevel": 2
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_guild_clerk_wendel"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_widow_aster"
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "gp": 6,
+   "xp": 110,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "aster_candles_delivered"
+  ]
+ },
+ {
+  "id": "qst_odd_sound_of_rank",
+  "title": "The Sound of Rank",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_fiddler_corwin",
+  "region": "reg_aldmere",
+  "summary": "The blind fiddler claims he can tell your rank by the sound of your steps. He asks you to prove him wrong.",
+  "requirements": {
+   "minLevel": 1
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "guild_square_walk",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "walk_run_or_sneak"
+   }
+  ],
+  "rewards": {
+   "gold": 30,
+   "gp": 6,
+   "xp": 100
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "corwin_rank_ear_met"
+  ]
+ },
+ {
+  "id": "qst_exp_joren_last_contract",
+  "title": "Joren's Last Contract",
+  "rank": "E",
+  "type": "Exploration",
+  "giver": "npc_widow_aster",
+  "region": "reg_whisperwood",
+  "summary": "Joren was gathering moon-moss for his mother's wicks when he died. Aster asks you to finish the contract.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "joren_last_camp"
+   },
+   {
+    "kind": "reach",
+    "target": "moon_moss_hollow"
+   },
+   {
+    "kind": "choice",
+    "target": "sneak_lure_or_fight_the_named_hobgoblin"
+   }
+  ],
+  "rewards": {
+   "gold": 230,
+   "gp": 18,
+   "xp": 750,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "aster_candles_delivered",
+    "rank_e_reached"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "joren_contract_resolved"
+  ]
+ },
+ {
+  "id": "qst_odd_lantern_night_brindlewick",
+  "title": "Lantern Night in Brindlewick",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_widow_aster",
+  "region": "reg_aldmere",
+  "summary": "Every autumn the town lights a lantern for each name in the Hall of Cards. Aster shows you how to make one.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "temple_hill_lantern_row"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_tamsin_orphan"
+   },
+   {
+    "kind": "choice",
+    "target": "whom_to_light_for"
+   }
+  ],
+  "rewards": {
+   "gold": 200,
+   "gp": 16,
+   "xp": 650
+  },
+  "prerequisites": {
+   "flags": [
+    "aster_candles_delivered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "lantern_night_brindlewick_joined"
+  ]
+ },
+ {
+  "id": "qst_inv_tune_under_the_hymn",
+  "title": "The Tune Under the Hymn",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_fiddler_corwin",
+  "region": "reg_aldmere",
+  "summary": "Corwin heard the orphans singing at noon and dropped his bow. He knows the tune. He does not know why.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fiddler_corwin"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_eolande_fairweather"
+   },
+   {
+    "kind": "reach",
+    "target": "orphanage_garden_noon"
+   }
+  ],
+  "rewards": {
+   "gold": 1250,
+   "gp": 75,
+   "xp": 5200
+  },
+  "prerequisites": {
+   "flags": [
+    "met_brother_caspian"
+   ],
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "clue_orphan_melody"
+  ]
+ },
+ {
+  "id": "qst_odd_boxing_barn",
+  "title": "Boxing Barn",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "Sister Pell boxes in the barn behind the shrine on weekends. She says a good cleric is a good guard first.",
+  "requirements": {
+   "minLevel": 5
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "solenne_shrine_barn"
+   },
+   {
+    "kind": "choice",
+    "target": "spar_or_watch"
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "gp": 8,
+   "xp": 170
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "pell_boxing_met"
+  ]
+ },
+ {
+  "id": "qst_fac_inquisitor_at_the_shrine",
+  "title": "The Inquisitor at the Shrine",
+  "rank": "E",
+  "type": "Faction",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "An Inquisitor has arrived in Brindlewick. Pell goes white, and asks you not to say she is here.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sister_pell"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_inquisitor_halvane"
+   },
+   {
+    "kind": "choice",
+    "target": "hide_confront_or_expose"
+   }
+  ],
+  "rewards": {
+   "gold": 280,
+   "gp": 22,
+   "xp": 900
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "inquisitor_shrine_resolved"
+  ]
+ },
+ {
+  "id": "qst_fac_quiet_pharmacy",
+  "title": "The Quiet Pharmacy",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_fennick_reed",
+  "region": "reg_aldmere",
+  "summary": "Fennick sends a parcel of medicine somewhere every month. This month he cannot carry it.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_healing_herb",
+    "count": 6
+   },
+   {
+    "kind": "reach",
+    "target": "fugitive_safehouse"
+   },
+   {
+    "kind": "choice",
+    "target": "deliver_conceal_or_report"
+   }
+  ],
+  "rewards": {
+   "gold": 1200,
+   "gp": 75,
+   "xp": 5000,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "quiet_pharmacy_resolved"
+  ]
+ },
+ {
+  "id": "qst_inv_letter_familiar_hand",
+  "title": "A Letter in a Familiar Hand",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "Pell has received a letter in Sister Ivy's hand for the first time in twenty years. It says only: *Ask him where Mira went.*",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sister_pell"
+   },
+   {
+    "kind": "reach",
+    "target": "ivy_drop_point"
+   },
+   {
+    "kind": "choice",
+    "target": "ask_caspian_or_search_the_ledger"
+   }
+  ],
+  "rewards": {
+   "gold": 3500,
+   "gp": 200,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "ivy_letter_read"
+  ]
+ },
+ {
+  "id": "qst_odd_overdue_books",
+  "title": "The Overdue Books",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "Eolande's library has lost eleven books. She has a list of borrowers, and a lot of patience.",
+  "requirements": {
+   "minLevel": 2
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_dax_rowan"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_brutus_kale"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_whiskers"
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "gp": 6,
+   "xp": 140
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "eolande_books_returned"
+  ]
+ },
+ {
+  "id": "qst_inv_notes_in_the_margins",
+  "title": "Notes in the Margins",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "The library's cookbook has margin notes in Eolande's hand. They are not about cooking.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "library_cookbook_margins",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "share_or_keep"
+   }
+  ],
+  "rewards": {
+   "gold": 200,
+   "gp": 16,
+   "xp": 650
+  },
+  "prerequisites": {
+   "flags": [
+    "eolande_books_returned"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "cookbook_margins_decoded"
+  ]
+ },
+ {
+  "id": "qst_fac_reading_room_audit",
+  "title": "The Reading Room Audit",
+  "rank": "D",
+  "type": "Faction",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "An Academy archivist is coming to inventory the Brindlewick library. Eolande has one night to decide what it contains.",
+  "requirements": {
+   "minLevel": 40
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_archivist_orrow"
+   },
+   {
+    "kind": "reach",
+    "target": "library_back_room"
+   },
+   {
+    "kind": "choice",
+    "target": "hide_hand_over_or_copy"
+   }
+  ],
+  "rewards": {
+   "gold": 1300,
+   "gp": 80,
+   "xp": 5400
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "reading_room_audit_resolved"
+  ]
+ },
+ {
+  "id": "qst_inv_the_cookbook_question",
+  "title": "The Cookbook Question",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "\"Mina\" asked Eolande for the cookbook by name. Mina has never cooked in her life.",
+  "requirements": {
+   "minLevel": 63
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_eolande_fairweather"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_mina_feathersby"
+   },
+   {
+    "kind": "choice",
+    "target": "confront_watch_or_tell_nobody"
+   }
+  ],
+  "rewards": {
+   "gold": 3300,
+   "gp": 190,
+   "xp": 12500
+  },
+  "prerequisites": {
+   "flags": [
+    "act3_nocturne_replaces_mina"
+   ],
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "clue_mina_cookbook"
+  ]
+ },
+ {
+  "id": "qst_odd_six_years_at_d",
+  "title": "Six Years at D",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_brutus_kale",
+  "region": "reg_aldmere",
+  "summary": "The morning after the brawl you find Brutus swinging at a post behind the Griffon, alone.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "griffon_back_yard_dawn"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_brutus_kale"
+   },
+   {
+    "kind": "choice",
+    "target": "coach_push_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 210,
+   "gp": 16,
+   "xp": 700
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_hidden_tavern_brawl"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "brutus_six_years_met"
+  ]
+ },
+ {
+  "id": "qst_odd_fifth_attempt",
+  "title": "The Fifth Attempt",
+  "rank": "D",
+  "type": "OddJob",
+  "giver": "npc_brutus_kale",
+  "region": "reg_aldmere",
+  "summary": "Brutus has booked the C trial again. He asks you to be his second in the Gauntlet's last room.",
+  "requirements": {
+   "minLevel": 42
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_examiner_garrick"
+   },
+   {
+    "kind": "reach",
+    "target": "gauntlet_last_room"
+   },
+   {
+    "kind": "choice",
+    "target": "second_him_or_step_back"
+   }
+  ],
+  "rewards": {
+   "gold": 1500,
+   "gp": 95,
+   "xp": 6200
+  },
+  "prerequisites": {
+   "flags": [
+    "brutus_six_years_met"
+   ],
+   "act": 3,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "brutus_fifth_attempt_resolved"
+  ]
+ },
+ {
+  "id": "qst_hidden_buried_sword",
+  "title": "The Buried Sword",
+  "rank": "E",
+  "type": "Hidden",
+  "giver": "npc_old_hollis",
+  "region": "reg_aldmere",
+  "summary": "After the tenth defeat Hollis digs up the third post. The sword underneath is not his.",
+  "requirements": {
+   "minLevel": 10
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "hollis_third_post"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_old_hollis"
+   },
+   {
+    "kind": "choice",
+    "target": "keep_or_return_the_sword"
+   }
+  ],
+  "rewards": {
+   "gold": 220,
+   "gp": 18,
+   "xp": 750
+  },
+  "prerequisites": {
+   "flags": [
+    "swordsman_class_trained"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "hollis_buried_sword_story"
+  ]
+ },
+ {
+  "id": "qst_exp_sack_we_dont_open",
+  "title": "The Sack We Don't Open",
+  "rank": "E",
+  "type": "Exploration",
+  "giver": "npc_farmer_hesk",
+  "region": "reg_aldmere",
+  "summary": "Every granary in Aldmere keeps one sealed sack that is never opened. Millbrook's is the one the goblins keep trying to reach.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "millbrook_granary_cellar"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_old_hollis"
+   },
+   {
+    "kind": "choice",
+    "target": "open_or_leave_sealed"
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 850
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_def_goblins_granary"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "grey_sack_opened"
+  ]
+ },
+ {
+  "id": "qst_odd_brindlewicks_got_talent",
+  "title": "Brindlewick's Got Talent",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_rosie_quill",
+  "region": "reg_aldmere",
+  "summary": "Rosie needs a judge for the town's talent show. One of the contestants is not what they seem.",
+  "requirements": {
+   "minLevel": 11
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rosie_quill"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_imp",
+    "count": 1
+   },
+   {
+    "kind": "choice",
+    "target": "judge_the_show"
+   }
+  ],
+  "rewards": {
+   "gold": 240,
+   "gp": 18,
+   "xp": 800
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "rosie_talent_show_done"
+  ]
+ },
+ {
+  "id": "qst_inv_rosies_second_verse",
+  "title": "Rosie's Second Verse",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_rosie_quill",
+  "region": "reg_aldmere",
+  "summary": "Rosie dropped a verse tonight. It is the one that means *someone is watching*.",
+  "requirements": {
+   "minLevel": 62
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_rosie_quill"
+   },
+   {
+    "kind": "reach",
+    "target": "tavern_stage_night"
+   },
+   {
+    "kind": "choice",
+    "target": "extract_window_or_bait"
+   }
+  ],
+  "rewards": {
+   "gold": 3400,
+   "gp": 195,
+   "xp": 13500
+  },
+  "prerequisites": {
+   "flags": [
+    "act3_nocturne_replaces_mina"
+   ],
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "rosie_second_verse_resolved"
+  ]
+ },
+ {
+  "id": "qst_inv_left_handed_forms",
+  "title": "Left-Handed Forms",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_aldmere",
+  "summary": "Wendel brings you three forms signed in the wrong hand. He is too polite to say whose.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "guild_form_copies",
+    "count": 3
+   },
+   {
+    "kind": "talk",
+    "target": "npc_nobody"
+   },
+   {
+    "kind": "choice",
+    "target": "confront_wait_or_expose"
+   }
+  ],
+  "rewards": {
+   "gold": 3600,
+   "gp": 200,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "flags": [
+    "act3_nocturne_replaces_mina"
+   ],
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "clue_left_handed_forms"
+  ]
+ },
+ {
+  "id": "qst_odd_junior_receptionist_day",
+  "title": "Junior Receptionist Day",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_tamsin_orphan",
+  "region": "reg_aldmere",
+  "summary": "Tamsin wants to be Mina when she grows up. Today she is Mina and you are an extremely impressive rookie.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tamsin_orphan"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_mina_feathersby"
+   }
+  ],
+  "rewards": {
+   "gold": 30,
+   "gp": 6,
+   "xp": 120
+  },
+  "prerequisites": {
+   "flags": [
+    "met_brother_caspian"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "tamsin_receptionist_day_done"
+  ]
+ },
+ {
+  "id": "qst_inv_bos_moon_drawings",
+  "title": "Bo's Moon Drawings",
+  "rank": "E",
+  "type": "Investigation",
+  "giver": "npc_bo_orphan",
+  "region": "reg_aldmere",
+  "summary": "Bo only talks to Whiskers. He draws the two moons, over and over. Whiskers watches you until you notice.",
+  "requirements": {
+   "minLevel": 8
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_whiskers"
+   },
+   {
+    "kind": "reach",
+    "target": "bo_drawing_sites",
+    "count": 6
+   }
+  ],
+  "rewards": {
+   "gold": 180,
+   "gp": 14,
+   "xp": 550
+  },
+  "prerequisites": {
+   "flags": [
+    "met_brother_caspian"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "clue_bo_drawings"
+  ]
+ },
+ {
+  "id": "qst_inv_a_home_soon",
+  "title": "A Home Soon",
+  "rank": "D",
+  "type": "Investigation",
+  "giver": "npc_lark_orphan",
+  "region": "reg_aldmere",
+  "summary": "Lark tells everyone she will be adopted on the next Blood Vesper. She is so happy that nobody has the heart to ask where.",
+  "requirements": {
+   "minLevel": 38
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lark_orphan"
+   },
+   {
+    "kind": "reach",
+    "target": "orphanage_ledger_room"
+   },
+   {
+    "kind": "choice",
+    "target": "protect_lark_how"
+   }
+  ],
+  "rewards": {
+   "gold": 1300,
+   "gp": 80,
+   "xp": 5500
+  },
+  "prerequisites": {
+   "act": 2,
+   "rank": "D"
+  },
+  "setsFlags": [
+   "clue_lark_adoption"
+  ]
+ },
+ {
+  "id": "qst_odd_yesterdays_bread",
+  "title": "Yesterday's Bread",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_hugo_brand",
+  "region": "reg_aldmere",
+  "summary": "Hugo takes yesterday's bread to the orphanage every noon. Today his hands are full and a queue has formed.",
+  "requirements": {
+   "minLevel": 2
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hugo_brand"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_brother_caspian"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_tamsin_orphan"
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "gp": 6,
+   "xp": 110
+  },
+  "prerequisites": {
+   "flags": [
+    "met_brother_caspian"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "yesterdays_bread_delivered"
+  ]
+ },
+ {
+  "id": "qst_rival_wolves_second_race",
+  "title": "The Wolves' Second Race",
+  "rank": "E",
+  "type": "Bounty",
+  "giver": "npc_dax_rowan",
+  "region": "reg_whisperwood",
+  "summary": "Pim has stolen a bounty from under you again, and apologised, and Dax has finally decided to race you for it.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_hobgoblin",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "race_cheat_or_team_up"
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 850
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_rival_crimson_wolves"
+   ],
+   "act": 2
+  },
+  "setsFlags": [
+   "wolves_second_race_resolved"
+  ]
+ },
+ {
+  "id": "qst_odd_story_for_a_scale",
+  "title": "A Story for a Scale",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_old_sal",
+  "region": "reg_aldmere",
+  "summary": "Old Sal will trade you a scale from the Rainbow Koi, if you tell him a story he has not heard.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_sal"
+   },
+   {
+    "kind": "choice",
+    "target": "tell_a_true_story"
+   }
+  ],
+  "rewards": {
+   "gold": 200,
+   "gp": 14,
+   "xp": 600
+  },
+  "prerequisites": {
+   "act": 1
+  },
+  "setsFlags": [
+   "sal_scale_traded"
+  ]
+ },
+ {
+  "id": "qst_odd_fog_merchants_coin",
+  "title": "The Fog Merchant's Coin",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_traveling_merchant_pell",
+  "region": "reg_whisperwood",
+  "summary": "A fox-kin peddler sells things she swears she found. One of them sings when you hold it.",
+  "requirements": {
+   "minLevel": 12
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "foggy_edge_morning"
+   },
+   {
+    "kind": "choice",
+    "target": "buy_trade_or_ask"
+   }
+  ],
+  "rewards": {
+   "gold": 250,
+   "gp": 18,
+   "xp": 800
+  },
+  "prerequisites": {
+   "act": 2
+  },
+  "setsFlags": [
+   "clue_vesper_coin"
+  ]
+ },
+ {
+  "id": "qst_odd_name_of_the_blade",
+  "title": "The Name of the Blade",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_brannoc_emberfist",
+  "region": "reg_aldmere",
+  "summary": "Brannoc will not sell a blade to anyone who has not told him its name. He asks yours.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_brannoc_emberfist"
+   },
+   {
+    "kind": "choice",
+    "target": "name_your_blade"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_torvald_stonebeard"
+   }
+  ],
+  "rewards": {
+   "gold": 180,
+   "gp": 14,
+   "xp": 550
+  },
+  "prerequisites": {
+   "act": 1
+  },
+  "setsFlags": [
+   "blade_named"
+  ]
  }
 ]

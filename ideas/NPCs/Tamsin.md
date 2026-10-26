@@ -21,4 +21,5 @@ A sharp eight-year-old who runs the other orphans like a small general and wants
 
 ## Quests given
 
+- [[Quests/Junior Receptionist Day|Junior Receptionist Day]]
 - [[Quests/Weekly Board/Bad Dreams at the Orphanage|Bad Dreams at the Orphanage]]

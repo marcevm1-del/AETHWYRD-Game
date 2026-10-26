@@ -29,6 +29,7 @@
 | 05 | [skills_and_magic.md](05_Skills_Magic/skills_and_magic.md) | Stats, spells by element, weapon arts, Unique Skills (Chosen/Fated), fusions, status effects |
 | 06 | [races_and_origins.md](06_Races_Origins/races_and_origins.md) | Races, Origins, character creator |
 | 07 | [companion_relationship_pacing.md](07_Characters/companion_relationship_pacing.md) | Trust, disagreement, optional romance, scene pacing and recoverable departures |
+| 07 | [brindlewick_storylines.md](07_Characters/brindlewick_storylines.md) | Twelve NPC arcs for Brindlewick: wants, fears, beats by Act, choices and visible endings (draft) |
 | 07 | [companions_and_npcs.md](07_Characters/companions_and_npcs.md) | Companions, pacing, Mortal Bonds, mascots, NPCs, villains, factions |
 | 08 | [monster_design_kit.md](08_Bestiary/monster_design_kit.md) | Research, 25 rigs, design recipe, Menace axis, Boss Suitability, data files |
 | 08 | [boss_encounter_storytelling.md](08_Bestiary/boss_encounter_storytelling.md) | Boss phases, monologues, music transitions, fair retries and Ring 0 prototype |
@@ -39,6 +40,7 @@
 | 09 | [gear_systems_and_sets.md](09_Equipment/gear_systems_and_sets.md) | Slots, rarity, materials, sets, upgrades, Relics |
 | 09 | [item_and_economy_design.md](09_Equipment/item_and_economy_design.md) | Expanded item taxonomy, readable prices, gear identity, crafting, loot safety, trade routes, economy scope and Ring 0 slice |
 | 09 | [monster_core_pricing.md](09_Equipment/monster_core_pricing.md) | Proposed copper buyback ladder, crafting and research uses, specialist demand and anti-exploit rules |
+| 11 | [brindlewick_side_quests.md](11_Quests_Encounters/brindlewick_side_quests.md) | 36 Brindlewick side quests with approaches, outcomes and receipts, plus the orphanage and Mina clue maps (draft) |
 | 11 | [guild_hall_talk_and_lexicon.md](11_Quests_Encounters/guild_hall_talk_and_lexicon.md) | Everyday adventurer vocabulary, guild-hall discussion samples and ambient dialogue rules |
 | 09 | [legendary_artifacts.md](09_Equipment/legendary_artifacts.md) | Divine artifacts, sentient weapons, legendaries |
 | 10 | [brindlewick.md](10_World/brindlewick.md) | Ring 1 hub town: history, districts, daily rhythm, people, quests, secrets |

@@ -9,7 +9,7 @@ Grukk, Goblin Chief of Hollowpine, is dead; Whisperwood is Liberated
 
 - **Set by:** quest
 - **Written by:** [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]]
-- **Read by:** No quest prerequisite currently indexed
+- **Read by:** [[Quests/The Boy on the North Road|The Boy on the North Road]]
 
 ## State ownership
 

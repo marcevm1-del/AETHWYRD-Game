@@ -32,4 +32,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/Yesterday's Bread|Yesterday's Bread]]
 - [[Quests/Weekly Board/Hot Bread Delivery|Hot Bread Delivery]]

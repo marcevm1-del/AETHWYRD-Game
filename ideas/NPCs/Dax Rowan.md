@@ -28,4 +28,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/The Crimson Wolves|The Crimson Wolves]]
+- [[Quests/The Wolves' Second Race|The Wolves' Second Race]]
 - [[Quests/Weekly Board/Race the Crimson Wolves|Race the Crimson Wolves]]

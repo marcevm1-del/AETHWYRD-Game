@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Brindlewick storylines and side quests (2026-10-26)
+- Added `07_Characters/brindlewick_storylines.md`: twelve interlocking NPC arcs for the Cradle (Marta and Teo, Holt/Tomlin/Pike, Aster and Corwin, Pell and Ivy, Eolande, Brutus, Hollis, Rosie and Nobody, Wendel, the orphans, the Crimson Wolves, four small stories), with wants, fears, Act-by-Act beats, signposted choices and visible endings.
+- Added `11_Quests_Encounters/brindlewick_side_quests.md`: 36 side quests (F to C) built on the quest outcome grammar, a ring placement table, and clue maps for the orphanage mystery (14 clues) and the Mina problem (11 clues).
+- Data: 36 quests, 37 story flags and 3 supporting NPCs (Sister Ivy Thorne, Inquisitor Halvane, Archivist Orrow) added to `Data/`; relationships and NPC states added to nine existing NPCs. `npm run validate` passes (npcs 42, quests 53, flags 47). Rewards are first-pass tuning.
+- Proposed in Canon §6 only; no locked Canon row changed. Preserved: Caspian and Nocturne reveals, the loss rules, Named-monster rules, and the Hollis tearjerker.
+
 ## Unreleased — Isekai knowledge and platform boundaries (2026-10-24)
 - Expanded the draft old-life/job section into a memory → hypothesis → verified Aetherian knowledge → capability model, with bounded recognition moments, alternate essential-clue routes, sensory memory, dialogue agency, replay considerations and vertical-slice validation.
 - Removed job-based persistent XP, combat, crafting, economy, trust, hidden System and skill advantages; kept the blurred death cause and Aetheria as the story's center, with race/origin options in draft status.

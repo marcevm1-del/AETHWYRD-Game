@@ -102,6 +102,12 @@ These are presentation and spawn variants of this species, not separate core com
 | `pop_01822` | Aldmere Imp Albino | [[Regions/Aldmere\|Aldmere]] | Albino | E+ | 32 | 0.6 m | Day & Night | Like a typical Imp, but a rare pale form with white skin or fur and red eyes. |
 | `pop_01823` | Aldmere Imp Elderborn | [[Regions/Aldmere\|Aldmere]] | Elderborn | D | 48 | 0.81 m | Day & Night | Like a typical Imp, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
 
+## Contracts and story encounters
+
+- [[Quests/Brindlewick's Got Talent|Brindlewick's Got Talent]] — rank E, in [[Regions/Aldmere|Aldmere]]
+
+These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
+
 ## Design recipe
 
 Rig `rig_flyer_small` · mesh `flyer_small_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration

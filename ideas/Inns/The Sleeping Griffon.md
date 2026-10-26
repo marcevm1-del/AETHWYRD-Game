@@ -45,6 +45,38 @@ tags: [inn]
 - [[Quests/The Tavern Brawl|The Tavern Brawl]] (E, Hidden)
 - [[Quests/Goblins in the Granary|Goblins in the Granary]] (E, Defense)
 - [[Quests/Night of the Smiling Scarecrow|Night of the Smiling Scarecrow]] (E, Investigation)
+- [[Quests/Payday at the Griffon|Payday at the Griffon]] (F, OddJob)
+- [[Quests/The Stable Boy's Broom|The Stable Boy's Broom]] (E, OddJob)
+- [[Quests/Every Bed in the Griffon|Every Bed in the Griffon]] (D, Faction)
+- [[Quests/Edric's Sword|Edric's Sword]] (C, OddJob)
+- [[Quests/The North Road Ledger|The North Road Ledger]] (E, Investigation)
+- [[Quests/Tomlin Tries Again|Tomlin Tries Again]] (E, OddJob)
+- [[Quests/The Count at the Gate|The Count at the Gate]] (D, Defense)
+- [[Quests/Candles for the Hall|Candles for the Hall]] (F, Delivery)
+- [[Quests/The Sound of Rank|The Sound of Rank]] (F, OddJob)
+- [[Quests/Lantern Night in Brindlewick|Lantern Night in Brindlewick]] (E, OddJob)
+- [[Quests/The Tune Under the Hymn|The Tune Under the Hymn]] (D, Investigation)
+- [[Quests/Boxing Barn|Boxing Barn]] (F, OddJob)
+- [[Quests/The Inquisitor at the Shrine|The Inquisitor at the Shrine]] (E, Faction)
+- [[Quests/The Quiet Pharmacy|The Quiet Pharmacy]] (D, Faction)
+- [[Quests/A Letter in a Familiar Hand|A Letter in a Familiar Hand]] (C, Investigation)
+- [[Quests/The Overdue Books|The Overdue Books]] (F, OddJob)
+- [[Quests/Notes in the Margins|Notes in the Margins]] (E, Investigation)
+- [[Quests/The Reading Room Audit|The Reading Room Audit]] (D, Faction)
+- [[Quests/The Cookbook Question|The Cookbook Question]] (C, Investigation)
+- [[Quests/Six Years at D|Six Years at D]] (E, OddJob)
+- [[Quests/The Fifth Attempt|The Fifth Attempt]] (D, OddJob)
+- [[Quests/The Buried Sword|The Buried Sword]] (E, Hidden)
+- [[Quests/The Sack We Don't Open|The Sack We Don't Open]] (E, Exploration)
+- [[Quests/Brindlewick's Got Talent|Brindlewick's Got Talent]] (E, OddJob)
+- [[Quests/Rosie's Second Verse|Rosie's Second Verse]] (C, Investigation)
+- [[Quests/Left-Handed Forms|Left-Handed Forms]] (C, Investigation)
+- [[Quests/Junior Receptionist Day|Junior Receptionist Day]] (F, OddJob)
+- [[Quests/Bo's Moon Drawings|Bo's Moon Drawings]] (E, Investigation)
+- [[Quests/A Home Soon|A Home Soon]] (D, Investigation)
+- [[Quests/Yesterday's Bread|Yesterday's Bread]] (F, OddJob)
+- [[Quests/A Story for a Scale|A Story for a Scale]] (E, OddJob)
+- [[Quests/The Name of the Blade|The Name of the Blade]] (E, OddJob)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined, Defense)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined, OddJob)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined, Escort)
@@ -84,7 +116,7 @@ tags: [inn]
 - [[NPCs/Garrick -Ironjaw-|Garrick "Ironjaw"]] — Guild examiner
 - [[NPCs/Marta Gruel|Marta Gruel]] — Innkeeper, the Sleeping Griffon
 - [[NPCs/Teo Gruel|Teo Gruel]] — Stable boy, the Sleeping Griffon
-- 25 more residents are listed on the region page.
+- 28 more residents are listed on the region page.
 
 ## Stay and departure
 

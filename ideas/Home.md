@@ -41,6 +41,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/05_Skills_Magic/skills_and_magic|05_Skills_Magic/skills_and_magic]]
 - [[Design Bible/06_Races_Origins/clans_guardians_fauna|06_Races_Origins/clans_guardians_fauna]]
 - [[Design Bible/06_Races_Origins/races_and_origins|06_Races_Origins/races_and_origins]]
+- [[Design Bible/07_Characters/brindlewick_storylines|07_Characters/brindlewick_storylines]]
 - [[Design Bible/07_Characters/companion_relationship_pacing|07_Characters/companion_relationship_pacing]]
 - [[Design Bible/07_Characters/companions_and_npcs|07_Characters/companions_and_npcs]]
 - [[Design Bible/08_Bestiary/bestiary_lore|08_Bestiary/bestiary_lore]]
@@ -60,6 +61,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/10_World/reactive_world_and_field_journal|10_World/reactive_world_and_field_journal]]
 - [[Design Bible/10_World/world|10_World/world]]
 - [[Design Bible/10_World/world_map_concept|10_World/world_map_concept]]
+- [[Design Bible/11_Quests_Encounters/brindlewick_side_quests|11_Quests_Encounters/brindlewick_side_quests]]
 - [[Design Bible/11_Quests_Encounters/guild_hall_talk_and_lexicon|11_Quests_Encounters/guild_hall_talk_and_lexicon]]
 - [[Design Bible/11_Quests_Encounters/quest_outcome_grammar|11_Quests_Encounters/quest_outcome_grammar]]
 - [[Design Bible/11_Quests_Encounters/quests_and_encounters|11_Quests_Encounters/quests_and_encounters]]
@@ -74,6 +76,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/agent_team|13_Production/agent_team]]
 - [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
+- [[Design Bible/13_Production/art_direction|13_Production/art_direction]]
 - [[Design Bible/13_Production/building_system|13_Production/building_system]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
@@ -989,7 +992,7 @@ Every population record is included in the complete register on its species note
 - [[Monsters/Beasts/Quakeback, the Earthshaker Behemoth|Quakeback, the Earthshaker Behemoth]] ([[Regions/Quaking Lands|Quaking Lands]])
 - [[Monsters/Undead/The Mad Magician of Aurumdeep, Sinker of Kingdoms|The Mad Magician of Aurumdeep, Sinker of Kingdoms]] ([[Regions/Aurumdeep|Aurumdeep]])
 
-## People (39)
+## People (42)
 ### Adventurers' Guild
 - [[NPCs/Mina Feathersby|Mina Feathersby]]
 - [[NPCs/Rodrick -Old Bear- Hale|Rodrick "Old Bear" Hale]]
@@ -1003,6 +1006,7 @@ Every population record is included in the complete register on its species note
 
 ### Holy Church of Lumina
 - [[NPCs/Sister Pell|Sister Pell]]
+- [[NPCs/Inquisitor Halvane|Inquisitor Halvane]]
 
 ### Iron Hold
 - [[NPCs/Torvald Stonebeard|Torvald Stonebeard]]
@@ -1010,9 +1014,11 @@ Every population record is included in the complete register on its species note
 
 ### Mages' Academy
 - [[NPCs/Magistra Eolande Fairweather|Magistra Eolande Fairweather]]
+- [[NPCs/Archivist Orrow|Archivist Orrow]]
 
 ### Red Moon Cult
 - [[NPCs/Brother Caspian|Brother Caspian]]
+- [[NPCs/Sister Ivy Thorne|Sister Ivy Thorne]]
 
 ### Shadow Syndicate
 - [[NPCs/-Nobody-|"Nobody"]]
@@ -1149,7 +1155,7 @@ Every population record is included in the complete register on its species note
 - [[Fauna/Reef Dragon|Reef Dragon]] — Water Base
 - [[Fauna/Turtle Drake|Turtle Drake]] — Water Base
 
-## Quests (17)
+## Quests (53)
 - [[Quests/Rabbit Season|Rabbit Season]] (F, Subjugation)
 - [[Quests/Slime in the Well|Slime in the Well]] (F, OddJob)
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] (E, Trial)
@@ -1167,6 +1173,42 @@ Every population record is included in the complete register on its species note
 - [[Quests/The Crimson Wolves|The Crimson Wolves]] (E, Subjugation)
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]] (E, SiegeDefence)
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]] (E, Subjugation)
+- [[Quests/Payday at the Griffon|Payday at the Griffon]] (F, OddJob)
+- [[Quests/The Stable Boy's Broom|The Stable Boy's Broom]] (E, OddJob)
+- [[Quests/The Boy on the North Road|The Boy on the North Road]] (E, Escort)
+- [[Quests/Every Bed in the Griffon|Every Bed in the Griffon]] (D, Faction)
+- [[Quests/Edric's Sword|Edric's Sword]] (C, OddJob)
+- [[Quests/The North Road Ledger|The North Road Ledger]] (E, Investigation)
+- [[Quests/Tomlin Tries Again|Tomlin Tries Again]] (E, OddJob)
+- [[Quests/The Count at the Gate|The Count at the Gate]] (D, Defense)
+- [[Quests/Candles for the Hall|Candles for the Hall]] (F, Delivery)
+- [[Quests/The Sound of Rank|The Sound of Rank]] (F, OddJob)
+- [[Quests/Joren's Last Contract|Joren's Last Contract]] (E, Exploration)
+- [[Quests/Lantern Night in Brindlewick|Lantern Night in Brindlewick]] (E, OddJob)
+- [[Quests/The Tune Under the Hymn|The Tune Under the Hymn]] (D, Investigation)
+- [[Quests/Boxing Barn|Boxing Barn]] (F, OddJob)
+- [[Quests/The Inquisitor at the Shrine|The Inquisitor at the Shrine]] (E, Faction)
+- [[Quests/The Quiet Pharmacy|The Quiet Pharmacy]] (D, Faction)
+- [[Quests/A Letter in a Familiar Hand|A Letter in a Familiar Hand]] (C, Investigation)
+- [[Quests/The Overdue Books|The Overdue Books]] (F, OddJob)
+- [[Quests/Notes in the Margins|Notes in the Margins]] (E, Investigation)
+- [[Quests/The Reading Room Audit|The Reading Room Audit]] (D, Faction)
+- [[Quests/The Cookbook Question|The Cookbook Question]] (C, Investigation)
+- [[Quests/Six Years at D|Six Years at D]] (E, OddJob)
+- [[Quests/The Fifth Attempt|The Fifth Attempt]] (D, OddJob)
+- [[Quests/The Buried Sword|The Buried Sword]] (E, Hidden)
+- [[Quests/The Sack We Don't Open|The Sack We Don't Open]] (E, Exploration)
+- [[Quests/Brindlewick's Got Talent|Brindlewick's Got Talent]] (E, OddJob)
+- [[Quests/Rosie's Second Verse|Rosie's Second Verse]] (C, Investigation)
+- [[Quests/Left-Handed Forms|Left-Handed Forms]] (C, Investigation)
+- [[Quests/Junior Receptionist Day|Junior Receptionist Day]] (F, OddJob)
+- [[Quests/Bo's Moon Drawings|Bo's Moon Drawings]] (E, Investigation)
+- [[Quests/A Home Soon|A Home Soon]] (D, Investigation)
+- [[Quests/Yesterday's Bread|Yesterday's Bread]] (F, OddJob)
+- [[Quests/The Wolves' Second Race|The Wolves' Second Race]] (E, Bounty)
+- [[Quests/A Story for a Scale|A Story for a Scale]] (E, OddJob)
+- [[Quests/The Fog Merchant's Coin|The Fog Merchant's Coin]] (E, OddJob)
+- [[Quests/The Name of the Blade|The Name of the Blade]] (E, OddJob)
 
 ## Inns (20)
 - [[Inns/The Sleeping Griffon|The Sleeping Griffon]]

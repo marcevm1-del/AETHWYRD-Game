@@ -23,5 +23,10 @@ A flamboyant singer who knows every song in Aldmere and every secret in Brindlew
 
 This character is marked mortal in the data. Any death scene must follow the project’s loss rules and preserve essential progression through alternate routes or a replacement role.
 
+## Quests given
+
+- [[Quests/Brindlewick's Got Talent|Brindlewick's Got Talent]]
+- [[Quests/Rosie's Second Verse|Rosie's Second Verse]]
+
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** She reports to the Shadow Syndicate, and through it to "Nobody".

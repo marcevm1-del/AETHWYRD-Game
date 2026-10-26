@@ -22,6 +22,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/Goblins in the Granary|Goblins in the Granary]]
+- [[Quests/The Sack We Don't Open|The Sack We Don't Open]]
 - [[Quests/Weekly Board/Fix the Fence|Fix the Fence]]
 
 > [!warning]- Spoilers (Canon §3)

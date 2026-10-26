@@ -22,6 +22,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/The Crying Mandrake|The Crying Mandrake]]
+- [[Quests/The Quiet Pharmacy|The Quiet Pharmacy]]
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]]
 - [[Quests/Weekly Board/Mandrake Harvest|Mandrake Harvest]]
 

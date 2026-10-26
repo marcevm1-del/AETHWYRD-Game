@@ -21,4 +21,6 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/The Sound of Rank|The Sound of Rank]]
+- [[Quests/The Tune Under the Hymn|The Tune Under the Hymn]]
 - [[Quests/Weekly Board/Busking with Corwin|Busking with Corwin]]

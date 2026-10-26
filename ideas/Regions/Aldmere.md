@@ -135,6 +135,9 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[NPCs/Corwin Fiddle|Corwin Fiddle]]: Street musician
 - [[NPCs/Wendel Pratt|Wendel Pratt]]: Guild clerk
 - [[NPCs/Hesk Molloway|Hesk Molloway]]: Turnip farmer, Millbrook
+- [[NPCs/Sister Ivy Thorne|Sister Ivy Thorne]]: Choir of Mirrors preacher (former orphanage nun)
+- [[NPCs/Inquisitor Halvane|Inquisitor Halvane]]: Inquisitor of the Holy Church
+- [[NPCs/Archivist Orrow|Archivist Orrow]]: Academy archivist
 
 ## Inns
 
@@ -151,6 +154,38 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/The Tavern Brawl|The Tavern Brawl]] (E)
 - [[Quests/Goblins in the Granary|Goblins in the Granary]] (E)
 - [[Quests/Night of the Smiling Scarecrow|Night of the Smiling Scarecrow]] (E)
+- [[Quests/Payday at the Griffon|Payday at the Griffon]] (F)
+- [[Quests/The Stable Boy's Broom|The Stable Boy's Broom]] (E)
+- [[Quests/Every Bed in the Griffon|Every Bed in the Griffon]] (D)
+- [[Quests/Edric's Sword|Edric's Sword]] (C)
+- [[Quests/The North Road Ledger|The North Road Ledger]] (E)
+- [[Quests/Tomlin Tries Again|Tomlin Tries Again]] (E)
+- [[Quests/The Count at the Gate|The Count at the Gate]] (D)
+- [[Quests/Candles for the Hall|Candles for the Hall]] (F)
+- [[Quests/The Sound of Rank|The Sound of Rank]] (F)
+- [[Quests/Lantern Night in Brindlewick|Lantern Night in Brindlewick]] (E)
+- [[Quests/The Tune Under the Hymn|The Tune Under the Hymn]] (D)
+- [[Quests/Boxing Barn|Boxing Barn]] (F)
+- [[Quests/The Inquisitor at the Shrine|The Inquisitor at the Shrine]] (E)
+- [[Quests/The Quiet Pharmacy|The Quiet Pharmacy]] (D)
+- [[Quests/A Letter in a Familiar Hand|A Letter in a Familiar Hand]] (C)
+- [[Quests/The Overdue Books|The Overdue Books]] (F)
+- [[Quests/Notes in the Margins|Notes in the Margins]] (E)
+- [[Quests/The Reading Room Audit|The Reading Room Audit]] (D)
+- [[Quests/The Cookbook Question|The Cookbook Question]] (C)
+- [[Quests/Six Years at D|Six Years at D]] (E)
+- [[Quests/The Fifth Attempt|The Fifth Attempt]] (D)
+- [[Quests/The Buried Sword|The Buried Sword]] (E)
+- [[Quests/The Sack We Don't Open|The Sack We Don't Open]] (E)
+- [[Quests/Brindlewick's Got Talent|Brindlewick's Got Talent]] (E)
+- [[Quests/Rosie's Second Verse|Rosie's Second Verse]] (C)
+- [[Quests/Left-Handed Forms|Left-Handed Forms]] (C)
+- [[Quests/Junior Receptionist Day|Junior Receptionist Day]] (F)
+- [[Quests/Bo's Moon Drawings|Bo's Moon Drawings]] (E)
+- [[Quests/A Home Soon|A Home Soon]] (D)
+- [[Quests/Yesterday's Bread|Yesterday's Bread]] (F)
+- [[Quests/A Story for a Scale|A Story for a Scale]] (E)
+- [[Quests/The Name of the Blade|The Name of the Blade]] (E)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined)

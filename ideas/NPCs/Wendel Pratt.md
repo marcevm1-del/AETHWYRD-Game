@@ -19,6 +19,7 @@ Mina's overworked assistant, who files every report in triplicate and has a crus
 ## Relationships
 
 - colleague: [[NPCs/Mina Feathersby|Mina Feathersby]]
+- audits: [[NPCs/Mayor Bertrand Pike|Mayor Bertrand Pike]]
 
 ## Continuity note
 
@@ -26,5 +27,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/The North Road Ledger|The North Road Ledger]]
+- [[Quests/Left-Handed Forms|Left-Handed Forms]]
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]]
 - [[Quests/Weekly Board/Sewer Duty|Sewer Duty]]

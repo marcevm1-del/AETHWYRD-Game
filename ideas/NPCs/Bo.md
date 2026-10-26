@@ -19,5 +19,9 @@ A shy six-year-old rabbit-kin who only speaks to Whiskers and draws pictures of 
 
 - guardian: [[NPCs/Brother Caspian|Brother Caspian]]
 
+## Quests given
+
+- [[Quests/Bo's Moon Drawings|Bo's Moon Drawings]]
+
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** He draws the red moon with buildings on it.

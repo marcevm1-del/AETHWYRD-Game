@@ -19,5 +19,9 @@ A ten-year-old who has been told she will be "adopted" soon and is so happy abou
 
 - guardian: [[NPCs/Brother Caspian|Brother Caspian]]
 
+## Quests given
+
+- [[Quests/A Home Soon|A Home Soon]]
+
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** Her name is on the cult ledger found in Act II. If the player solves the mystery early, she is saved.

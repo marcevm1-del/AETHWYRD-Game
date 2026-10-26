@@ -104,6 +104,7 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Contracts and story encounters
 
+- [[Quests/The Count at the Gate|The Count at the Gate]] — rank D, in [[Regions/Aldmere|Aldmere]]
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.

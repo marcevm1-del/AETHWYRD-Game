@@ -18,6 +18,7 @@ A grey-haired gate captain who has watched three generations of rookies walk out
 ## Relationships
 
 - reports to: [[NPCs/Mayor Bertrand Pike|Mayor Bertrand Pike]]
+- owes a life to her husband: [[NPCs/Marta Gruel|Marta Gruel]]
 
 ## Schedule
 
@@ -33,4 +34,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]]
+- [[Quests/The Count at the Gate|The Count at the Gate]]
 - [[Quests/Weekly Board/Drill the Militia|Drill the Militia]]
