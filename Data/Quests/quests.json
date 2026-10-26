@@ -9029,6 +9029,417 @@
   ]
  },
  {
+  "id": "qst_gmc_hot_meal_no_crew",
+  "title": "A Hot Meal and No Crew",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_marisol_dray",
+  "region": "reg_goldmere_coast",
+  "summary": "A crewless ship with a hot dinner on its table raises a salvage-law claim, and the captain's reason for leaving it was a hunch.",
+  "requirements": {
+   "minLevel": 88
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_marisol_dray"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_oswin_teague"
+   },
+   {
+    "kind": "reach",
+    "target": "drifting_ship_great_cabin"
+   },
+   {
+    "kind": "choice",
+    "target": "dray_teague_or_split"
+   }
+  ],
+  "rewards": {
+   "gold": 10000,
+   "gp": 600,
+   "xp": 44000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gmc_hot_meal_ruled"
+  ]
+ },
+ {
+  "id": "qst_gmc_neutral_ground",
+  "title": "Neutral Ground",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_captain_hollis_crake",
+  "region": "reg_goldmere_coast",
+  "summary": "A pirate captain and a port councillor both want a truce and neither will walk first onto the other's end of a rope bridge.",
+  "requirements": {
+   "minLevel": 91
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_captain_hollis_crake"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_councillor_mabyn_sallow"
+   },
+   {
+    "kind": "reach",
+    "target": "saltreach_rope_bridge_middle"
+   },
+   {
+    "kind": "choice",
+    "target": "count_sing_or_cut"
+   }
+  ],
+  "rewards": {
+   "gold": 10500,
+   "gp": 630,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gmc_truce_struck"
+  ]
+ },
+ {
+  "id": "qst_gmc_three_bidders",
+  "title": "Three Bidders Dead",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_auctioneer_gavelle",
+  "region": "reg_goldmere_coast",
+  "summary": "A flagship map has killed three bidders, and its missing margin carried a warning the auctioneer cut away.",
+  "requirements": {
+   "minLevel": 94
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_auctioneer_gavelle"
+   },
+   {
+    "kind": "reach",
+    "target": "drowned_mermaid_map_vault"
+   },
+   {
+    "kind": "choice",
+    "target": "withdraw_restore_or_post"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 48000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gmc_map_margin_restored"
+  ]
+ },
+ {
+  "id": "qst_gmc_whose_boots",
+  "title": "Whose Boots Are These",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_tolly_sandwick",
+  "region": "reg_goldmere_coast",
+  "summary": "A child finds eighty-year-old boots on the tide-line and the custom says someone must walk them home.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_tolly_sandwick"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_cobbler_jessup_lamb"
+   },
+   {
+    "kind": "reach",
+    "target": "port_goldmere_sea_steps"
+   },
+   {
+    "kind": "choice",
+    "target": "water_shrine_or_reef"
+   }
+  ],
+  "rewards": {
+   "gold": 11500,
+   "gp": 690,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gmc_boots_walked_home"
+  ]
+ },
+ {
+  "id": "qst_gmc_parrot_books",
+  "title": "The Parrot Who Kept the Books",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_perpetua_gull",
+  "region": "reg_goldmere_coast",
+  "summary": "A parrot has been reciting the council's true accounts, which show the port's income is half what has been announced.",
+  "requirements": {
+   "minLevel": 101
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_perpetua_gull"
+   },
+   {
+    "kind": "reach",
+    "target": "drowned_mermaid_back_room"
+   },
+   {
+    "kind": "choice",
+    "target": "song_boarding_or_truth"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 710,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gmc_parrot_figures_aired"
+  ]
+ },
+ {
+  "id": "qst_gmc_bridges_saltreach",
+  "title": "The Bridges of Saltreach",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_duvessa_pike",
+  "region": "reg_goldmere_coast",
+  "summary": "Raiders cut the rope-ways of a stilt-town while its children are moved to the port.",
+  "requirements": {
+   "minLevel": 105
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_duvessa_pike"
+   },
+   {
+    "kind": "defend",
+    "target": "saltreach_middle_span"
+   },
+   {
+    "kind": "choice",
+    "target": "rail_lights_or_ferry"
+   }
+  ],
+  "rewards": {
+   "gold": 13000,
+   "gp": 760,
+   "xp": 56000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gmc_neutral_ground"
+   ],
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gmc_saltreach_bridges_held"
+  ]
+ },
+ {
+  "id": "qst_gmc_flagship_bell",
+  "title": "The Flagship's Bell",
+  "rank": "A",
+  "type": "Exploration",
+  "giver": "npc_ossian_haldane",
+  "region": "reg_goldmere_coast",
+  "summary": "A diver-master swears the flagship's bell has rung every night since the Sunken Fleet went down, and the wreck hides a dry cabin and a legible log.",
+  "requirements": {
+   "minLevel": 122
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ossian_haldane"
+   },
+   {
+    "kind": "reach",
+    "target": "sunken_fleet_flagship_stern"
+   },
+   {
+    "kind": "choice",
+    "target": "read_copy_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 28000,
+   "gp": 1500,
+   "xp": 125000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gmc_three_bidders"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gmc_flagship_bell_found"
+  ]
+ },
+ {
+  "id": "qst_gmc_channel_moves",
+  "title": "The Channel Moves",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_marguerite_calloway",
+  "region": "reg_goldmere_coast",
+  "summary": "The brood has crooked the safe channel, and nine grain-ships need a guide through shifting water.",
+  "requirements": {
+   "minLevel": 128
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_marguerite_calloway"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_marguerite_calloway"
+   },
+   {
+    "kind": "reach",
+    "target": "port_goldmere_safe_channel_bar"
+   },
+   {
+    "kind": "choice",
+    "target": "widen_shortcut_or_split"
+   }
+  ],
+  "rewards": {
+   "gold": 30000,
+   "gp": 1560,
+   "xp": 132000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gmc_bridges_saltreach"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gmc_grain_convoy_arrived"
+  ]
+ },
+ {
+  "id": "qst_gmc_tribute_proposed",
+  "title": "A Tribute Proposed",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_salvage_speaker_slate",
+  "region": "reg_goldmere_coast",
+  "summary": "A salvage captain proposes paying the Krakenmother one cargo in ten, and the council's vote is tied.",
+  "requirements": {
+   "minLevel": 134
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_salvage_speaker_slate"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_wilhelmina_stroud"
+   },
+   {
+    "kind": "choice",
+    "target": "test_refuse_or_nongold"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1620,
+   "xp": 138000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gmc_neutral_ground"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gmc_tribute_decided"
+  ]
+ },
+ {
+  "id": "qst_gmc_sea_coins",
+  "title": "The Sea's Coins",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_ketura_maine",
+  "region": "reg_goldmere_coast",
+  "summary": "Someone has been taking the coins divers drop for the sea, and the thieves are hungry children watched by something very large.",
+  "requirements": {
+   "minLevel": 140
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ketura_maine"
+   },
+   {
+    "kind": "reach",
+    "target": "brine_maiden_hulk"
+   },
+   {
+    "kind": "choice",
+    "target": "lead_guard_or_speak"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1680,
+   "xp": 146000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gmc_whose_boots"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gmc_sea_coins_solved"
+  ]
+ },
+ {
   "id": "qst_sun_year_not_recited",
   "title": "The Year Nobody Recited",
   "rank": "B",

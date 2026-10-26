@@ -1543,5 +1543,55 @@
   "id": "gea_last_car_done",
   "description": "Side quest \"The Last Car Down\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "gmc_hot_meal_ruled",
+  "description": "Side quest \"A Hot Meal and No Crew\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_truce_struck",
+  "description": "Side quest \"Neutral Ground\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_map_margin_restored",
+  "description": "Side quest \"Three Bidders Dead\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_boots_walked_home",
+  "description": "Side quest \"Whose Boots Are These\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_parrot_figures_aired",
+  "description": "Side quest \"The Parrot Who Kept the Books\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_saltreach_bridges_held",
+  "description": "Side quest \"The Bridges of Saltreach\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_flagship_bell_found",
+  "description": "Side quest \"The Flagship's Bell\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_grain_convoy_arrived",
+  "description": "Side quest \"The Channel Moves\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_tribute_decided",
+  "description": "Side quest \"A Tribute Proposed\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gmc_sea_coins_solved",
+  "description": "Side quest \"The Sea's Coins\" resolved",
+  "setBy": "quest"
  }
 ]
