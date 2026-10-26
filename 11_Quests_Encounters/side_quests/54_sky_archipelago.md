@@ -546,6 +546,12 @@ objectives:
 *He touches the label gently, as one touches a sleeping child's hair. Then he sits straight on the stool, and says it plainly: "I would like to go home now."*
 > ► **"Then we'll go."** — He folds the label into his pocket.
 
+**Scene 2b: the neighbours.** On the way down they pass the camps of other hermits, who raise a hand to Ruan without a word, and he raises one back, whole and certain.
+
+**RUAN:** "That is the weaver. And that is the man who keeps bees, though I cannot think how. And that is... that is..."
+**RUAN:** "A good neighbour. I will remember that, if nothing else."
+*A woman at the next terrace calls out, "Going down at last, Ruan?" and he answers, with unexpected firmness, "Going home."*
+
 **Outcomes and receipt.**
 - If the letter said *come,* Heather brings a mule and a warm room. If it said only *well,* she sits with him until he asks to go home. If the player spoke for him, the thin-air forgetting eases a little at lower altitude.
 - **Receipt:** a pressed sprig of heather, and a label in a cramped hand: *FRIEND.*
@@ -615,6 +621,13 @@ objectives:
 *The bird tilts her head, eyes the clay trays and utters one dry, scornful chirp.*
 **HALLORAN:** "That is a yes. Possibly. With reservations."
 > ► **"Take her with us."** — **HALLORAN:** "She will go where she pleases. She always has."
+
+**Scene 2b: the damp wrapping.** Halloran teaches the player how to wrap a cutting so it survives the climb, with wet moss and a wick of wool.
+
+**HALLORAN:** "A cutting is a very small, very stubborn person. It needs water, a little darkness, and someone who believes in it."
+**HALLORAN:** "Talk to them, if you like. I do. I tell them what a lovely view they are about to leave."
+*She tucks a twig into its cradle and strokes it once with a thumb.*
+**HALLORAN:** "There. Brave little thing."
 
 **Outcomes and receipt.**
 - Branch: the twelfth tree is wounded but lives; the cutting takes in a week. Fruit: a single silver seed that sprouts a sapling with fruit that hangs *down.* Leave: eleven cuttings, and a promise to return.

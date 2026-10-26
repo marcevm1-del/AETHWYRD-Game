@@ -178,6 +178,15 @@ backstory: A sharp, patient cartographer whose father drew the whole Sunken City
 *The air is very still. Then the door swings once, gently, on hinges that are not there.*
 **BURL:** "She heard me."
 
+**Scene 3b: the sister's chair.** In the gallery the player finds, beside the door, a small folding stool and a tin cup, coated in dust.
+
+**BURL:** "Hers. She sat here to wait for the shift change. She always waited a little longer than she needed."
+**BURL:** "She liked a door that was still open. She said it meant someone might yet come through."
+**BURL:** "I scolded her for it. I said doors are for going through, not for sitting beside."
+*He wipes the cup with his sleeve, slowly, as if she might want it again.*
+**BURL:** "I think the door was only doing what she taught it."
+> ► **"Sit with it a while."** — He lowers himself onto the stool, and does not speak for a long time.
+
 **Outcomes and receipt.**
 - Carry: the door returns to the family wall and the paler patch fills in. Leave: Burl builds a new door in the wall and leaves the old one with a candle. Knock: the door answers once; Burl decides, with the player, which way to go.
 - **Receipt:** a small gnome-made latch, warm to the touch, that never quite closes.
@@ -241,6 +250,14 @@ objectives:
 **QUILLOW:** "It tastes of her. It tastes of a girl who was not afraid of walls."
 *He does not offer the player any. He slides a mana crystal across the table instead, without a word.*
 
+**Scene 2b: the old kitchen.** Before leaving Dunmere, the young Marrow shows the player the kitchen where Hettie baked, a low room with a crooked oven.
+
+**MARROW:** "She said she traded bread for crystals when she was little. We thought she was dreaming of a fairy tale."
+**MARROW:** "She kept a crystal in the window all her life. It glowed on the longest nights."
+*On the sill stands a small, dull stone. When the player lifts it, it brightens, as if answering a hand it knows.*
+**MARROW:** "Take it down, if you like. I think it has been waiting."
+> ► **"I'll take it to Quillow."** — **MARROW:** "Tell him the oven still works."
+
 **Outcomes and receipt.**
 - Quillow is told honestly. If the player lied that it was gentle, he suspects but does not say. If the player brings the bread, the Marrows are invited into the Gnome Walls trade as a second family.
 - **Receipt:** a small crystal that glows faintly when held near bread.
@@ -303,6 +320,15 @@ objectives:
 **SORREL:** "I will log it. *'Arrow, wall, warm. No answer needed.'*"
 **SORREL:** "Then I will light a candle for each of the fourteen."
 *She does. Fourteen small flames burn on a ledge in the raid camp, and no one disturbs them.*
+
+**Scene 2b: the camp's ledge.** That evening Sorrel shows the player the shelf where she keeps the logbooks of every council that has passed through floor fifty-two, a hundred and six volumes in all.
+
+**SORREL:** "People think the Labyrinth is danger and gold. It is paperwork."
+**SORREL:** "Somebody has to write down who went in. Somebody has to write down who did not come out."
+**SORREL:** "I have written eleven hundred names in the second column. I know each hand."
+*She runs a finger down a page of small, neat entries, and stops at a smudge.*
+**SORREL:** "The fourteenth arrow was drawn by a girl who dotted her i's with stars. I recognised it."
+> ► **"Add a star."** — Sorrel smiles, thinly, and does.
 
 **Outcomes and receipt.**
 - A circle: the marks stop appearing in that corridor for a season. A question: the arrow smudges, then reappears fresh the next morning. Leave: the marks are logged and the fourteen candles remain.
@@ -372,6 +398,15 @@ objectives:
 **PARTY LEADER:** "Thank you."
 **CORWIN:** "Do not thank me. Pay."
 
+**Scene 2b: the healer's cot.** After the hearing is called, Tam, the healer, asks to speak to the player alone, and keeps his voice very low.
+
+**TAM:** "I was dying. Do you know what that is like? It is not dramatic. It is extremely boring."
+**TAM:** "They sold the relic, and I woke up, and the first thing I saw was Mira's face."
+**TAM:** "I have been trying to be worth it since. I am not sure I am."
+*His hand rests on a blanket sewn with small stars.*
+**TAM:** "If the council wants blood, let it be mine. They have already paid enough."
+> ► **"They would not agree."** — **TAM:** "No. That is what makes them so annoying."
+
 **Outcomes and receipt.**
 - A fine, a clause or a strike: the party keeps their licences unless the player upholds the oath exactly. If a clause is added, the oath is the first in the deep band to name an exception.
 - **Receipt:** a copy of the amended oath, signed by twelve hands and one smudged thumbprint.
@@ -437,6 +472,15 @@ objectives:
 *A pale, dusty sunbeam lies across the floor. He kneels in it.*
 **TOBIN:** "Marit packed the bread in my bag. I did not see her do it."
 
+**Scene 2b: the last supper.** On the last night Tobin eats with the whole hall, and the community takes turns telling him small things he should not forget to do on the surface.
+
+**VOICE:** "Smell the grass. Properly. With your whole face."
+**VOICE:** "Do not trust the first rain. It is warm and a liar."
+**VOICE:** "Tell someone you love that they are loved. Everyone forgets."
+*Tobin laughs, then cries, then laughs again, while a child tugs at his sleeve and asks if he will bring back a pebble from the top.*
+**MARIT:** "He will bring back a pebble. Hush."
+> ► **"I'll bring the pebble."** — The child solemnly shakes the player's hand.
+
 **Outcomes and receipt.**
 - Tobin reaches the surface. If the player carried him part way, he forgives himself more slowly; if he walked it alone, he does not forget it. Marit asks only for word that he arrived.
 - **Receipt:** a hunk of stale bread, kept in a wrapper, from Marit via Tobin.
@@ -498,6 +542,15 @@ objectives:
 **EMMERICH:** "The title?"
 **EMMERICH:** (when told) "...*On the Keeping of Rooms.* That is no recipe. That is no hymn."
 **EMMERICH:** "I do not know what it is. But I shall now spend the next eleven years finding out."
+
+**Scene 2b: the other readers.** In the library's lower hall the player meets two rival scholars huddled over a candle, arguing about whether the building reads the readers.
+
+**SCHOLAR A:** "It rearranges the shelves when we leave. I have proof."
+**SCHOLAR B:** "It rearranges them because *you* put them back wrong."
+**SCHOLAR A:** "I have never put anything back wrong in my life."
+*A book slips from a shelf above them and lands, open, on Scholar A's head.*
+**SCHOLAR B:** "Page forty. I rest my case."
+**EMMERICH (over the speaking-stone, sighing):** "They have been like that for six years. Ignore them. Mind the turn."
 
 **Outcomes and receipt.**
 - Title, copy or leave: Emmerich gets one of three answers. The title alone satisfies him; the page makes him weep; leaving it makes him laugh.
@@ -561,6 +614,14 @@ objectives:
 **ALDER:** "Davin used to say that a lantern is not a promise to come back. It is a promise to *try.*"
 **ALDER:** "I will go home. I will tell the council I broke nothing. And I will tell them I would break it for him."
 
+**Scene 2b: the other three.** Back at the fire, the three who turned back sit apart, each with a separate silence, and the player talks to them one by one.
+
+**GIRL:** "I would have followed him. I was so angry that I did not."
+**BOY:** "I was glad Alder said no. I am ashamed of being glad."
+**OLD ARCHER:** "Davin was always going to go on. I told him so at the first stair. He laughed."
+*None of them look at one another. The fire pops. Alder, listening from the dark, lets out a breath he has held a month.*
+**OLD ARCHER:** "There is no right way to feel about a rule, lad. Only the way you carry it."
+
 **Outcomes and receipt.**
 - Alder does not give up the lantern but takes a season off. If the player lit it again with him, he carries it down again the next year. The council quietly adds Davin's name to the lantern's staff.
 - **Receipt:** a small brass tag stamped *Davin,* fastened to the lantern's handle.
@@ -620,6 +681,15 @@ objectives:
 **IONE:** (when the player arrives) "You brought it."
 **IONE:** "It's still lit. Eleven weeks. Gods."
 *She takes it with both hands and says nothing for a very long time.*
+
+**Scene 2b: the survivors.** Before the descent, Ione introduces the player to five survivors of the raid, who sit mending gear and do not speak of the stair.
+
+**SURVIVOR:** "It was quiet. That is all I will say. It was very quiet."
+**SURVIVOR:** "I stopped praying, you know. Below sixty. I started again at the stair."
+**SURVIVOR:** "To whom, I do not know. But I started."
+*Ione puts a hand on the survivor's shoulder, and lets it rest there.*
+**IONE:** "That is all any of us have. A lantern, and a habit of hoping."
+> ► **"I'll bring it back."** — **IONE:** "Do. I would like to say thank you to the flame."
 
 **Outcomes and receipt.**
 - The lantern is returned. If the player noted the chalk circle, Ione goes white and asks not to be told more. If not, she gives the lantern to the survivors, who keep it lit.
@@ -683,6 +753,15 @@ objectives:
 **POMEROY:** "Nine inches across. Six deep. Five eggs, now four chicks and an egg."
 **POMEROY:** "I have never held a chick in my hat before. I will never wash it."
 
+**Scene 2b: the sky underfoot.** On the rope bridge Pomeroy stops to show the player the one thing he has never explained to anyone, a patch of the pale floor-sky that looks like dawn.
+
+**POMEROY:** "It is not the sun, of course. It is a kind of reflection off the ceiling stone of the floor below."
+**POMEROY:** "But I always think: somewhere up there, a morning is starting."
+**POMEROY:** "The birds think so too. They sing at it. Every day. A little earlier than the day before."
+*A tiny bird lands on his hat and sings, shrill and joyful, at the glow beneath them.*
+**POMEROY:** "Yes, yes. I see it too."
+> ► **"It's beautiful."** — He beams, and says nothing more.
+
 **Outcomes and receipt.**
 - The chick is caught, by hand, by the parents or by hat. Each way leaves the nest whole. Pomeroy publishes the record in the guild library under the player's name.
 - **Receipt:** a speckled feather that always falls toward the ceiling.
@@ -745,6 +824,14 @@ objectives:
 **ROSAMUND:** "One street. Out of ten thousand."
 **ROSAMUND:** "I think that is a *yes.* I think that is a *thank you.*"
 *She sets her pen down for the first time in thirty years.*
+
+**Scene 2b: the father's study.** Before the survey Rosamund opens her father's old chest, in which his first maps lie wrapped in oilcloth, the lines faded but fine.
+
+**ROSAMUND:** "He drew with a quill from a bird that no longer exists. He said the city liked a steady hand."
+**ROSAMUND:** "Look. In the margin, he wrote: *'I think it is looking back.'*"
+**ROSAMUND:** "He wrote it in the fourth year. I did not read it until after he died."
+*She closes the chest gently, as one closes a door on a sleeping child.*
+**ROSAMUND:** "I used to be angry at the city. Now I am only curious. I think that is what he would have wanted."
 
 **Outcomes and receipt.**
 - The blank is left, the map shown or the map burnt. In every case a single street stays still for a week. Rosamund hangs the final map, blank centre and all, in her map room.

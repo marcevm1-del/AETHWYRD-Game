@@ -337,6 +337,13 @@ objectives:
 **HESPER:** "I have kept it thirty years. I would like to keep it thirty-one."
 > ► **"You will."** — She snorts. "Keep cutting."
 
+**Scene 2b: the lunch.** At midday Hesper unwraps a cloth beside the stooks and offers the player a heel of bread and a hard, sharp cheese.
+
+**HESPER:** "My husband brought me this cheese on the day we married. Thirty-four years ago. He is dead. The cheese is not, quite."
+**HESPER:** "He used to say the field was the only honest thing in Bastion, because it asks nothing it will not give back."
+*She chews slowly, watching the horizon where the riders are still dots.*
+**HESPER:** "Eat. A man cannot cut barley on honour alone."
+
 **Outcomes and receipt.**
 - The barley goes to the ward's ovens. If the player stood and faced the riders, the soldiers on the wall hear of it and do not stop talking for a week.
 - **Receipt:** a small braided barley knot, hung over the player's door.
@@ -479,6 +486,13 @@ objectives:
 *She sets a hand on the nearest crust, protectively.*
 **MAB:** "Touch the pies before the fight and I will have you posted to the latrine."
 > ► **"I'll guard the pies."** — **MAB:** "Good. Everyone needs a post worth dying for."
+
+**Scene 2b: the bell-ringer.** An old man named Dobb climbs the church tower with a mallet and a flask, and winks at the player from the window.
+
+**DOBB:** "Forty years I rang for weddings. Never once for a war."
+**DOBB:** "I find I rather prefer it. A bell on a wedding is polite. A bell in a war is *useful.*"
+*He takes a swig, spits in his palms and grips the rope.*
+**DOBB:** "Tell the sergeant I am ready. And tell her I have a very large lung."
 
 **Outcomes and receipt.**
 - Fennel Row holds. Each role of the player earns a different gift: the granary door, a thanks from the ward; the drum, a drumming song written about the night; the line-break, riders who do not return to that flank for a month.
@@ -768,6 +782,14 @@ objectives:
 *Wren stares. Then she throws her arms around his apron.*
 **WREN:** "I didn't say it was a *sabretooth,* though."
 **BUTCHER:** "Wren. I have a *butcher's* nose."
+
+**Scene 2b: the nest's visitor.** That night the cub hunts, badly, a beetle on the rubble, and Wren sits very still while it pounces on her shoelace instead.
+
+**WREN:** "He thinks he is a hunter. He is mostly a sock."
+**WREN:** "I will not say he is a good boy. I will say he is trying."
+*The cub trips, rolls, and lies on its back with all four paws in the air, outraged at the ground.*
+**WREN:** "See? A very fierce animal."
+> ► **"Very fierce."** — She nods gravely, and offers it a bit of sausage.
 
 **Outcomes and receipt.**
 - The cub is raised quietly in a stable at the Citadel (the Warden pretends not to see); or carried north under a white cloth to a camp that will keep it; or given to the deserter's sister, who has asked for something small to hold.
