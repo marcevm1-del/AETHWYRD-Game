@@ -8639,6 +8639,396 @@
   ]
  },
  {
+  "id": "qst_umb_dawn_lamp_hour",
+  "title": "Dawn-Lamp Hour",
+  "rank": "C",
+  "type": "OddJob",
+  "giver": "npc_ainsel_corvane",
+  "region": "reg_umbravel",
+  "summary": "A lamplighter's moths desert his lanterns for one enormous, brooding cave-moth.",
+  "requirements": {
+   "minLevel": 58
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ainsel_corvane"
+   },
+   {
+    "kind": "reach",
+    "target": "low_lantern_ward_crack"
+   },
+   {
+    "kind": "choice",
+    "target": "move_nest_or_light"
+   }
+  ],
+  "rewards": {
+   "gold": 3600,
+   "gp": 200,
+   "xp": 14000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "umb_dawn_lamp_done"
+  ]
+ },
+ {
+  "id": "qst_umb_family_cocoon",
+  "title": "A Family in the Cocoon",
+  "rank": "C",
+  "type": "Escort",
+  "giver": "npc_sevrin_loomis",
+  "region": "reg_umbravel",
+  "summary": "A silk-dyer's wife and daughter are alive inside a cocoon, and the guilds say cutting it would insult the Queen.",
+  "requirements": {
+   "minLevel": 61
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sevrin_loomis"
+   },
+   {
+    "kind": "reach",
+    "target": "spindle_terrace_cocoon"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_sevrin_loomis"
+   },
+   {
+    "kind": "choice",
+    "target": "cut_offer_or_bargain"
+   }
+  ],
+  "rewards": {
+   "gold": 3800,
+   "gp": 210,
+   "xp": 14500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "umb_cocoon_family_freed"
+  ]
+ },
+ {
+  "id": "qst_umb_honey_deep_webs",
+  "title": "Honey for the Deep Webs",
+  "rank": "C",
+  "type": "Delivery",
+  "giver": "npc_hortensia_bellweather",
+  "region": "reg_umbravel",
+  "summary": "A stranded surface trader has forty jars of honey the Queen's brood keep asking about, and the guilds want it as leverage.",
+  "requirements": {
+   "minLevel": 64
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_hortensia_bellweather"
+   },
+   {
+    "kind": "reach",
+    "target": "underweb_stair_honey_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "give_split_or_taste"
+   }
+  ],
+  "rewards": {
+   "gold": 4000,
+   "gp": 225,
+   "xp": 15000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "umb_honey_delivered"
+  ]
+ },
+ {
+  "id": "qst_umb_who_cut_bridge",
+  "title": "Who Cut the Bridge?",
+  "rank": "C",
+  "type": "Investigation",
+  "giver": "npc_teodric_vane",
+  "region": "reg_umbravel",
+  "summary": "A bridge to Weavers' Row was cut with a blade, not a claw, and the guilds blame the Queen.",
+  "requirements": {
+   "minLevel": 67
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_teodric_vane"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_guildmaster_ilario_spoole"
+   },
+   {
+    "kind": "choice",
+    "target": "accuse_repay_or_bridgewarden"
+   }
+  ],
+  "rewards": {
+   "gold": 4100,
+   "gp": 230,
+   "xp": 15500
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "umb_bridge_cut_solved"
+  ]
+ },
+ {
+  "id": "qst_umb_line_of_daylight",
+  "title": "A Line of Daylight",
+  "rank": "C",
+  "type": "Exploration",
+  "giver": "npc_linden_amber",
+  "region": "reg_umbravel",
+  "summary": "The city's blind bats are leaving upward, toward a crack in the cavern roof where a bar of sunlight falls at noon.",
+  "requirements": {
+   "minLevel": 70
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_linden_amber"
+   },
+   {
+    "kind": "reach",
+    "target": "cavern_roof_daylight_crack"
+   },
+   {
+    "kind": "choice",
+    "target": "stand_map_or_seal"
+   }
+  ],
+  "rewards": {
+   "gold": 4300,
+   "gp": 240,
+   "xp": 16000
+  },
+  "prerequisites": {
+   "act": 3,
+   "rank": "C"
+  },
+  "setsFlags": [
+   "umb_daylight_found"
+  ]
+ },
+ {
+  "id": "qst_umb_restored_quietly",
+  "title": "Restored, Quietly",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_ysaline_orrin",
+  "region": "reg_umbravel",
+  "summary": "A guildmistress wants the broken silk contract restored without public vote, and the families who lost homes would never be told.",
+  "requirements": {
+   "minLevel": 88
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ysaline_orrin"
+   },
+   {
+    "kind": "reach",
+    "target": "silk_contract_hall_frame"
+   },
+   {
+    "kind": "choice",
+    "target": "quiet_public_or_witnessed"
+   }
+  ],
+  "rewards": {
+   "gold": 10000,
+   "gp": 600,
+   "xp": 44000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_umb_who_cut_bridge"
+   ],
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "umb_contract_restored"
+  ]
+ },
+ {
+  "id": "qst_umb_vigil_lift_nine",
+  "title": "The Vigil at Lift Nine",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_orsa_venn",
+  "region": "reg_umbravel",
+  "summary": "The brood climbs the cables of the lift that carries lower-web families to safety, and the lift-warden will not close it.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_orsa_venn"
+   },
+   {
+    "kind": "defend",
+    "target": "lift_nine_winch_house"
+   },
+   {
+    "kind": "choice",
+    "target": "pulley_lanterns_or_ride"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 47000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "umb_lift_nine_held"
+  ]
+ },
+ {
+  "id": "qst_umb_knot_she_tied",
+  "title": "The Knot She Always Tied",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_old_tamsin_brightwire",
+  "region": "reg_umbravel",
+  "summary": "An old blind weaver has left a silk offering at the edge of the deep webs every night for fifty years, and tonight someone answers.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_tamsin_brightwire"
+   },
+   {
+    "kind": "reach",
+    "target": "underweb_stair_deep_edge"
+   },
+   {
+    "kind": "choice",
+    "target": "tie_ask_or_second_knot"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 700,
+   "xp": 50000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "umb_tamsin_knot_tied"
+  ]
+ },
+ {
+  "id": "qst_umb_chain_or_silk",
+  "title": "Chain or Silk",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_pellory_gimblewick",
+  "region": "reg_umbravel",
+  "summary": "A gnome engineer wants to replace a lift's silk cables with chain, and the spider that runs it has not been told.",
+  "requirements": {
+   "minLevel": 99
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_pellory_gimblewick"
+   },
+   {
+    "kind": "reach",
+    "target": "lift_three_rafters"
+   },
+   {
+    "kind": "choice",
+    "target": "hybrid_gradual_or_cancel"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 730,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "umb_lift_three_hybrid"
+  ]
+ },
+ {
+  "id": "qst_umb_letter_in_web",
+  "title": "A Letter in the Web",
+  "rank": "B",
+  "type": "Investigation",
+  "giver": "npc_lissandre_veyl",
+  "region": "reg_umbravel",
+  "summary": "The deep webs have sent a knotted strand to the Contract Hall, and reading it shows the Queen's opening terms.",
+  "requirements": {
+   "minLevel": 108
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_lissandre_veyl"
+   },
+   {
+    "kind": "reach",
+    "target": "silk_contract_hall_reading_chamber"
+   },
+   {
+    "kind": "choice",
+    "target": "answer_silk_hall_or_hold"
+   }
+  ],
+  "rewards": {
+   "gold": 14000,
+   "gp": 800,
+   "xp": 60000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_umb_restored_quietly"
+   ],
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "umb_queens_terms_read"
+  ]
+ },
+ {
   "id": "qst_sun_year_not_recited",
   "title": "The Year Nobody Recited",
   "rank": "B",
@@ -8888,7 +9278,7 @@
   "title": "A Shovel Under Seal",
   "rank": "A",
   "type": "Investigation",
-  "giver": "npc_dalia_ferrin",
+  "giver": "npc_calla_ferrin",
   "region": "reg_sunscar",
   "summary": "A treasure-hunter and the water-keepers disagree over whether a buried machine should be opened, and neither knows what it is.",
   "requirements": {
@@ -8897,7 +9287,7 @@
   "objectives": [
    {
     "kind": "talk",
-    "target": "npc_dalia_ferrin"
+    "target": "npc_calla_ferrin"
    },
    {
     "kind": "reach",
@@ -9477,6 +9867,427 @@
   ]
  },
  {
+  "id": "qst_han_candidates_road",
+  "title": "The Candidate's Road",
+  "rank": "B",
+  "type": "Escort",
+  "giver": "npc_seo_jiwan",
+  "region": "reg_haneul",
+  "summary": "A candidate and his formidable mother must reach the Examination Hall along a ridge road watched by demons.",
+  "requirements": {
+   "minLevel": 89
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_seo_jiwan"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_seo_jiwan"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_madam_seo_hyeja"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_examination_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "shrine_lure_or_wait"
+   }
+  ],
+  "rewards": {
+   "gold": 10200,
+   "gp": 610,
+   "xp": 44500
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "han_candidate_done"
+  ]
+ },
+ {
+  "id": "qst_han_exiles_survey",
+  "title": "The Exile's Survey",
+  "rank": "A",
+  "type": "Faction",
+  "giver": "npc_yoon_taesik",
+  "region": "reg_haneul",
+  "summary": "A scholar exiled for proving the wall faced the wrong enemy wants to come home and survey it for the real one.",
+  "requirements": {
+   "minLevel": 127
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_yoon_taesik"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_council_hall"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_wall_top"
+   },
+   {
+    "kind": "choice",
+    "target": "map_soldiers_or_walk"
+   }
+  ],
+  "rewards": {
+   "gold": 29000,
+   "gp": 1520,
+   "xp": 128000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "han_survey_done"
+  ]
+ },
+ {
+  "id": "qst_han_shoes_cloud_gate",
+  "title": "Shoes at the Cloud Gate",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_ha_mirae",
+  "region": "reg_haneul",
+  "summary": "An outland mercenary will not take off his boots at a guesthouse where nobody has ever worn them past the sill.",
+  "requirements": {
+   "minLevel": 91
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_ha_mirae"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_dorjin_vael"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_guesthouse_bath"
+   },
+   {
+    "kind": "choice",
+    "target": "socks_bath_or_leave"
+   }
+  ],
+  "rewards": {
+   "gold": 10400,
+   "gp": 620,
+   "xp": 45000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "han_shoes_done"
+  ]
+ },
+ {
+  "id": "qst_han_rice_loft_guest",
+  "title": "A Guest in the Rice Loft",
+  "rank": "B",
+  "type": "Hidden",
+  "giver": "npc_gu_jaesung",
+  "region": "reg_haneul",
+  "summary": "A shy mountain spirit hiding from demons has tidied a farmer's rice loft into towers, and the farmer wants it gone.",
+  "requirements": {
+   "minLevel": 93
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gu_jaesung"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_spirit_of_the_loft"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_terrace_four_kitchen"
+   },
+   {
+    "kind": "choice",
+    "target": "stay_shrine_or_hide"
+   }
+  ],
+  "rewards": {
+   "gold": 10600,
+   "gp": 630,
+   "xp": 45500
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "han_loft_done"
+  ]
+ },
+ {
+  "id": "qst_han_paper_varos_set",
+  "title": "The Paper Varos Set",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_baek_seonwoo",
+  "region": "reg_haneul",
+  "summary": "Varos has sent the capital an eleven-question examination paper, and the chief examiner needs help answering it.",
+  "requirements": {
+   "minLevel": 131
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_baek_seonwoo"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_capital_archive"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_baek_seonwoo"
+   },
+   {
+    "kind": "choice",
+    "target": "defy_honest_or_refuse"
+   }
+  ],
+  "rewards": {
+   "gold": 30500,
+   "gp": 1580,
+   "xp": 134000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_han_exiles_survey"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "han_paper_done"
+  ]
+ },
+ {
+  "id": "qst_han_terrace_seven",
+  "title": "Terrace Seven Holds",
+  "rank": "B",
+  "type": "Defense",
+  "giver": "npc_sergeant_jo_dalsu",
+  "region": "reg_haneul",
+  "summary": "Forty soldiers hold a granary terrace for one night so six hundred sacks of barley can be moved down the pass.",
+  "requirements": {
+   "minLevel": 96
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_sergeant_jo_dalsu"
+   },
+   {
+    "kind": "defend",
+    "target": "haneul_terrace_seven"
+   },
+   {
+    "kind": "choice",
+    "target": "east_oil_or_carts"
+   }
+  ],
+  "rewards": {
+   "gold": 11000,
+   "gp": 650,
+   "xp": 47000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "han_terrace_done"
+  ]
+ },
+ {
+  "id": "qst_han_tablets_down_pass",
+  "title": "Tablets Down the Pass",
+  "rank": "B",
+  "type": "Delivery",
+  "giver": "npc_widow_na_okja",
+  "region": "reg_haneul",
+  "summary": "A widow asks the player to slip into a demon-held gate-town and carry her family's seven ancestor tablets down the pass.",
+  "requirements": {
+   "minLevel": 100
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_widow_na_okja"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_upper_town_blue_house"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_refugee_shrine"
+   },
+   {
+    "kind": "choice",
+    "target": "altar_back_or_lure"
+   }
+  ],
+  "rewards": {
+   "gold": 11800,
+   "gp": 690,
+   "xp": 49000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "han_tablets_done"
+  ]
+ },
+ {
+  "id": "qst_han_drums_on_wall",
+  "title": "Drums on the Wall",
+  "rank": "A",
+  "type": "SiegeDefence",
+  "giver": "npc_oh_seongmin",
+  "region": "reg_haneul",
+  "summary": "On the anniversary of the winter the wall held, the garrison plays the drum-vigil while a raid tries to silence it.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_oh_seongmin"
+   },
+   {
+    "kind": "defend",
+    "target": "haneul_drum_platform"
+   },
+   {
+    "kind": "choice",
+    "target": "east_shout_or_drum"
+   }
+  ],
+  "rewards": {
+   "gold": 32000,
+   "gp": 1640,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_han_terrace_seven"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "han_drums_done"
+  ]
+ },
+ {
+  "id": "qst_han_watchman_north",
+  "title": "The Watchman Who Still Faces North",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_kwon_haru",
+  "region": "reg_haneul",
+  "summary": "An old watchman has faced north for sixty years, long after the wrong enemy was known, and a young sentry wants to know why.",
+  "requirements": {
+   "minLevel": 103
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_kwon_haru"
+   },
+   {
+    "kind": "reach",
+    "target": "haneul_north_post"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_old_watchman_chae"
+   },
+   {
+    "kind": "choice",
+    "target": "relieve_watch_or_teach"
+   }
+  ],
+  "rewards": {
+   "gold": 12500,
+   "gp": 730,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "han_watchman_done"
+  ]
+ },
+ {
+  "id": "qst_han_shrines_every_bend",
+  "title": "Shrines at Every Bend",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_eom_sora",
+  "region": "reg_haneul",
+  "summary": "A shrine-keeper asks the player to hold the last twelve of the pass's forty bend-shrines through one dark night.",
+  "requirements": {
+   "minLevel": 142
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_eom_sora"
+   },
+   {
+    "kind": "defend",
+    "target": "haneul_bend_shrines"
+   },
+   {
+    "kind": "choice",
+    "target": "ninth_tenth_or_gather"
+   }
+  ],
+  "rewards": {
+   "gold": 34000,
+   "gp": 1700,
+   "xp": 148000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_han_rice_loft_guest"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "han_shrines_done"
+  ]
+ },
+ {
   "id": "qst_zar_rose_that_bled",
   "title": "The Rose That Bled",
   "rank": "B",
@@ -9868,6 +10679,397 @@
   },
   "setsFlags": [
    "zar_who_drinks_done"
+  ]
+ },
+ {
+  "id": "qst_gea_part_from_below",
+  "title": "The Part From Below",
+  "rank": "B",
+  "type": "Delivery",
+  "giver": "npc_gea_marguerite",
+  "region": "reg_gearholm",
+  "summary": "An upper-city inventor needs a coil from the Undercity and is afraid to fetch it. The coil-winder has never been named on anything.",
+  "requirements": {
+   "minLevel": 90
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_marguerite"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_bess"
+   },
+   {
+    "kind": "choice",
+    "target": "quiet_name_or_bring_her"
+   }
+  ],
+  "rewards": {
+   "gold": 10400,
+   "gp": 610,
+   "xp": 45000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gea_part_below_done"
+  ]
+ },
+ {
+  "id": "qst_gea_thank_you_nine",
+  "title": "Thank You, Number Nine",
+  "rank": "B",
+  "type": "OddJob",
+  "giver": "npc_gea_fenwick",
+  "region": "reg_gearholm",
+  "summary": "The council is stripping forty lifts and pumps for barricades. Undercity custom says each must be thanked first.",
+  "requirements": {
+   "minLevel": 92
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_fenwick"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_brindle"
+   },
+   {
+    "kind": "reach",
+    "target": "gearholm_east_lift_number_nine"
+   }
+  ],
+  "rewards": {
+   "gold": 10800,
+   "gp": 625,
+   "xp": 46000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gea_thank_nine_done"
+  ]
+ },
+ {
+  "id": "qst_gea_seven_faces",
+  "title": "Seven Faces, One Slow",
+  "rank": "B",
+  "type": "Exploration",
+  "giver": "npc_gea_winifred",
+  "region": "reg_gearholm",
+  "summary": "The seventh face of the great clock loses four minutes a day. The founders' instructions survive in a nursery rhyme.",
+  "requirements": {
+   "minLevel": 95
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_winifred"
+   },
+   {
+    "kind": "reach",
+    "target": "gearholm_clock_tower_third_face"
+   },
+   {
+    "kind": "choice",
+    "target": "toe_room_or_tinker"
+   }
+  ],
+  "rewards": {
+   "gold": 11200,
+   "gp": 645,
+   "xp": 47500
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gea_seven_faces_done"
+  ]
+ },
+ {
+  "id": "qst_gea_two_patents",
+  "title": "Two Patents, One Gadget",
+  "rank": "B",
+  "type": "Trial",
+  "giver": "npc_gea_quill",
+  "region": "reg_gearholm",
+  "summary": "Two inventors claim the same self-winding teapot. Both built it from the same missing page.",
+  "requirements": {
+   "minLevel": 98
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_quill"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_tobble"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_cornelia"
+   },
+   {
+    "kind": "choice",
+    "target": "split_author_or_crowd"
+   }
+  ],
+  "rewards": {
+   "gold": 11600,
+   "gp": 665,
+   "xp": 49000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gea_two_patents_done"
+  ]
+ },
+ {
+  "id": "qst_gea_child_gremlin",
+  "title": "The Child and the Gremlin",
+  "rank": "B",
+  "type": "Escort",
+  "giver": "npc_gea_pim",
+  "region": "reg_gearholm",
+  "summary": "A child has hidden a gremlin that refuses to join the King's song. Everyone else wants to catch it.",
+  "requirements": {
+   "minLevel": 102
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_pim"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_gea_pim"
+   },
+   {
+    "kind": "choice",
+    "target": "clockborn_rattle_or_away"
+   }
+  ],
+  "rewards": {
+   "gold": 12000,
+   "gp": 690,
+   "xp": 52000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gea_child_gremlin_done"
+  ]
+ },
+ {
+  "id": "qst_gea_name_worth_keeping",
+  "title": "A Name Worth Keeping",
+  "rank": "B",
+  "type": "Faction",
+  "giver": "npc_gea_spindle_twelve",
+  "region": "reg_gearholm",
+  "summary": "A Clockborn repairer asks its guild-master for its name in writing, not its freedom.",
+  "requirements": {
+   "minLevel": 106
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_spindle_twelve"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_brightwater"
+   },
+   {
+    "kind": "choice",
+    "target": "letter_hearing_or_self"
+   }
+  ],
+  "rewards": {
+   "gold": 12800,
+   "gp": 740,
+   "xp": 55000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "B"
+  },
+  "setsFlags": [
+   "gea_name_kept_done"
+  ]
+ },
+ {
+  "id": "qst_gea_council_knew",
+  "title": "What the Council Knew",
+  "rank": "A",
+  "type": "Investigation",
+  "giver": "npc_gea_hobb",
+  "region": "reg_gearholm",
+  "summary": "The boiler-tenders' union wants proof that the council knew about the gremlins and did nothing. The proof is in the lever register.",
+  "requirements": {
+   "minLevel": 124
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_hobb"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_odette"
+   },
+   {
+    "kind": "choice",
+    "target": "quiet_open_or_vote"
+   }
+  ],
+  "rewards": {
+   "gold": 29000,
+   "gp": 1520,
+   "xp": 128000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gea_council_knew_done"
+  ]
+ },
+ {
+  "id": "qst_gea_names_soot",
+  "title": "The Names Under the Soot",
+  "rank": "A",
+  "type": "Hidden",
+  "giver": "npc_gea_tansy",
+  "region": "reg_gearholm",
+  "summary": "A generation ago an engine exploded and the council listed thirty-one names. The soot-wall holds two hundred and twelve.",
+  "requirements": {
+   "minLevel": 130
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_tansy"
+   },
+   {
+    "kind": "reach",
+    "target": "gearholm_fourth_engine_hall"
+   },
+   {
+    "kind": "choice",
+    "target": "cause_names_or_tansy"
+   }
+  ],
+  "rewards": {
+   "gold": 31000,
+   "gp": 1580,
+   "xp": 135000
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_gea_council_knew"
+   ],
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gea_names_soot_done"
+  ]
+ },
+ {
+  "id": "qst_gea_medicine_rattle",
+  "title": "Medicine for the Rattle",
+  "rank": "A",
+  "type": "Escort",
+  "giver": "npc_gea_dunn",
+  "region": "reg_gearholm",
+  "summary": "A surgeon needs cold water and medicine carried through gremlin pipe-ways to the Cog-Touched quarter, past a council cleaner.",
+  "requirements": {
+   "minLevel": 136
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_dunn"
+   },
+   {
+    "kind": "escort",
+    "target": "npc_gea_dunn"
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gea_hale"
+   },
+   {
+    "kind": "choice",
+    "target": "inspectors_vents_or_wardens"
+   }
+  ],
+  "rewards": {
+   "gold": 32500,
+   "gp": 1620,
+   "xp": 140000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gea_medicine_rattle_done"
+  ]
+ },
+ {
+  "id": "qst_gea_last_car",
+  "title": "The Last Car Down",
+  "rank": "A",
+  "type": "Defense",
+  "giver": "npc_gea_orla",
+  "region": "reg_gearholm",
+  "summary": "The council orders the funicular stopped at the third tier. A conductor with six hundred people on the platform refuses.",
+  "requirements": {
+   "minLevel": 142
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_gea_orla"
+   },
+   {
+    "kind": "defend",
+    "target": "gearholm_funicular_lowest_station"
+   },
+   {
+    "kind": "choice",
+    "target": "platform_brake_or_gate"
+   }
+  ],
+  "rewards": {
+   "gold": 35000,
+   "gp": 1680,
+   "xp": 148000
+  },
+  "prerequisites": {
+   "act": 4,
+   "rank": "A"
+  },
+  "setsFlags": [
+   "gea_last_car_done"
   ]
  },
  {

@@ -1393,5 +1393,155 @@
   "id": "dwd_hums_done",
   "description": "Side quest \"What She Hums at Night\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "umb_dawn_lamp_done",
+  "description": "Side quest \"Dawn-Lamp Hour\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_cocoon_family_freed",
+  "description": "Side quest \"A Family in the Cocoon\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_honey_delivered",
+  "description": "Side quest \"Honey for the Deep Webs\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_bridge_cut_solved",
+  "description": "Side quest \"Who Cut the Bridge?\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_daylight_found",
+  "description": "Side quest \"A Line of Daylight\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_contract_restored",
+  "description": "Side quest \"Restored, Quietly\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_lift_nine_held",
+  "description": "Side quest \"The Vigil at Lift Nine\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_tamsin_knot_tied",
+  "description": "Side quest \"The Knot She Always Tied\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_lift_three_hybrid",
+  "description": "Side quest \"Chain or Silk\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "umb_queens_terms_read",
+  "description": "Side quest \"A Letter in the Web\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_candidate_done",
+  "description": "Side quest \"The Candidate's Road\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_survey_done",
+  "description": "Side quest \"The Exile's Survey\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_shoes_done",
+  "description": "Side quest \"Shoes at the Cloud Gate\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_loft_done",
+  "description": "Side quest \"A Guest in the Rice Loft\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_paper_done",
+  "description": "Side quest \"The Paper Varos Set\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_terrace_done",
+  "description": "Side quest \"Terrace Seven Holds\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_tablets_done",
+  "description": "Side quest \"Tablets Down the Pass\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_drums_done",
+  "description": "Side quest \"Drums on the Wall\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_watchman_done",
+  "description": "Side quest \"The Watchman Who Still Faces North\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "han_shrines_done",
+  "description": "Side quest \"Shrines at Every Bend\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_part_below_done",
+  "description": "Side quest \"The Part From Below\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_thank_nine_done",
+  "description": "Side quest \"Thank You, Number Nine\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_seven_faces_done",
+  "description": "Side quest \"Seven Faces, One Slow\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_two_patents_done",
+  "description": "Side quest \"Two Patents, One Gadget\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_child_gremlin_done",
+  "description": "Side quest \"The Child and the Gremlin\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_name_kept_done",
+  "description": "Side quest \"A Name Worth Keeping\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_council_knew_done",
+  "description": "Side quest \"What the Council Knew\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_names_soot_done",
+  "description": "Side quest \"The Names Under the Soot\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_medicine_rattle_done",
+  "description": "Side quest \"Medicine for the Rattle\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "gea_last_car_done",
+  "description": "Side quest \"The Last Car Down\" resolved",
+  "setBy": "quest"
  }
 ]

@@ -21,7 +21,7 @@
 | 4 | The Night the Awning Held | B | Defense | Caravanserai-master Odo Marsh | A storm and two hundred guests |
 | 5 | What the Glass Remembers | B | Exploration | Glass-singer Idris Valmont-Sef | A map written in heat |
 | 6 | The Last Sunrise on the Streaks | B | OddJob | Blind guide Nuru Taleb | One more walk |
-| 7 | A Shovel Under Seal | A | Investigation | Dalia Ferrin | A digger and a locked door |
+| 7 | A Shovel Under Seal | A | Investigation | Calla Ferrin | A digger and a locked door |
 | 8 | The Walker's Road | A | Exploration | Keeper Imran Sabeh | Following the footprints |
 | 9 | The Eighth Well | A | Hidden | Elder Mother Kalsum | A well that is only sung |
 | 10 | The Ration Council | A | Trial | Keeper-Elect Basma Orlin | Who drinks first |
@@ -99,8 +99,8 @@ role: Retired caravan guide
 backstory: A blind, laughing old guide who led caravans across Sunscar for fifty years by sound and smell and who wants to hear the sun come up over the glass one last time.
 -->
 <!-- npc
-id: npc_dalia_ferrin
-name: Dalia Ferrin
+id: npc_calla_ferrin
+name: Calla Ferrin
 tier: major
 race: Human
 region: reg_sunscar
@@ -528,11 +528,11 @@ objectives:
 
 ## 7. A Shovel Under Seal
 
-*A · Investigation · the Sunken Towers · giver Dalia Ferrin*
+*A · Investigation · the Sunken Towers · giver Calla Ferrin*
 
-**The short version.** Dalia Ferrin found a door in the ruins as a girl. The water-keepers buried it. She says whatever is behind it could save the oasis, and she has a shovel.
+**The short version.** Calla Ferrin found a door in the ruins as a girl. The water-keepers buried it. She says whatever is behind it could save the oasis, and she has a shovel.
 
-**What is really going on.** Nobody in the room knows what is behind the door. The keepers buried it because the last person who woke it did not come back; Dalia wants it opened because the wells are dying. Both are right about the facts. Neither can say what the thing *is*, and this quest does not find out.
+**What is really going on.** Nobody in the room knows what is behind the door. The keepers buried it because the last person who woke it did not come back; Calla wants it opened because the wells are dying. Both are right about the facts. Neither can say what the thing *is*, and this quest does not find out.
 
 **Scene 1: the caravanserai.**
 
@@ -553,28 +553,28 @@ objectives:
 
 **Scene 3: the keepers.** Keeper Zahra and two elders arrive at the dune. They do not draw weapons. They bring tea.
 
-**ZAHRA:** "Dalia. I thought you'd come this week."
+**ZAHRA:** "Calla. I thought you'd come this week."
 **ZAHRA:** "We buried it because the man who opened it first was a keeper too. He is not in our recital, because he is not *finished.*"
 **ZAHRA:** "I will not tell you more. I do not know more. That is the *whole* trouble."
 > ► **"Let her survey it, not dig."** — A compromise.
 > ► **"Re-seal it properly."** — The keepers nod.
 > ► **"Open it, with the keepers present."** — A terrible silence.
 
-**Scene 4: the settlement.** Whatever the player argues, the door stays shut. The keepers promise to *watch* it, and Dalia is given a place at the watch, as a keeper of the door, not of the oasis.
+**Scene 4: the settlement.** Whatever the player argues, the door stays shut. The keepers promise to *watch* it, and Calla is given a place at the watch, as a keeper of the door, not of the oasis.
 
 **DALIA:** "I still want to know."
 **ZAHRA:** "So do we. Sit down. Have some tea."
 
 **Outcomes and receipt.**
-- The door stays closed. A survey permits Dalia to measure it from outside; a re-seal puts a fresh stone cap on it; the third choice ends in a *tense, unresolved stand-off,* no one hurt, and a shared watch.
-- **Receipt:** a stone cairn with a lantern, lit nightly, and Dalia's name on the watch-roster. Nothing is explained.
+- The door stays closed. A survey permits Calla to measure it from outside; a re-seal puts a fresh stone cap on it; the third choice ends in a *tense, unresolved stand-off,* no one hurt, and a shared watch.
+- **Receipt:** a stone cairn with a lantern, lit nightly, and Calla's name on the watch-roster. Nothing is explained.
 
 <!-- quest
 id: qst_sun_shovel_under_seal
 title: A Shovel Under Seal
 rank: A
 type: Investigation
-giver: npc_dalia_ferrin
+giver: npc_calla_ferrin
 region: reg_sunscar
 level: 126
 act: 4
@@ -584,7 +584,7 @@ reward: 29000 | 1520 | 128000
 sets: sun_door_done
 summary: A treasure-hunter and the water-keepers disagree over whether a buried machine should be opened, and neither knows what it is.
 objectives:
-  talk npc_dalia_ferrin
+  talk npc_calla_ferrin
   reach sunscar_buried_door
   talk npc_keeper_zahra_merin
   choice survey_reseal_or_open
