@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased — Second regional set: 260 side quests (2026-10-26)
-- Added 260 original quests in files 19–44 (Moraveil to Cinderhole: also Upper Labyrinth, Kitsune Isles, Zaruma, Lumbaya, True-Name Isles, Ashira Vale, Hollow Sea, Heavenreach, Everdusk, Dragon Spine, Vharlen) with `second_set_index.md`; files 19, 20, 30–32 and 42–44 written directly, files 21–29 and 33–41 by six writing agents.
-- Data: 260 quests, supporting NPCs and flags merged. `npm run validate` passes (quests 453, npcs 470, flags 449). C# tests not run (no .NET SDK).
+## Unreleased — Second regional set: 380 side quests (2026-10-26)
+- Added 380 original quests in files 19–56 (Moraveil to the Drowned Floors, including Apu Highlands, Lustrine Shores, Quaking Lands, Aurumdeep, Nox Dominion, Calamity Steppe, the Maw, Root of the World, Vesper, Sky Archipelago, Bastion and the deep Labyrinth; also Upper Labyrinth, Kitsune Isles, Zaruma, Lumbaya, True-Name Isles, Ashira Vale, Hollow Sea, Heavenreach, Everdusk, Dragon Spine, Vharlen) with `second_set_index.md`; files 19, 20, 30–32 and 42–44 written directly, files 21–29 and 33–41 by six writing agents.
+- Data: 380 quests, supporting NPCs and flags merged. `npm run validate` passes (quests 573, npcs 594, flags 569). C# tests not run (no .NET SDK).
 - Proposed in Canon §6 only.
 
 ## Unreleased — Forty pattern side quests and research (2026-10-26)

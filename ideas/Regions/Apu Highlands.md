@@ -93,6 +93,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Shulon|Shulon]] (Herbivore): A long-necked, llama-like climber used on the terrace roads; a ground mount.
 
+## People
+
+- [[NPCs/Cord-Keeper Wayra Quispehuaman|Cord-Keeper Wayra Quispehuaman]]: Cord-keeper of the Cord House
+- [[NPCs/Mason Tupaq Illapayoc|Mason Tupaq Illapayoc]]: Master mason of a terrace wall
+- [[NPCs/Chaski Sumaq Rimaypa|Chaski Sumaq Rimaypa]]: Relay runner
+- [[NPCs/Bridge-Mother Ch'aska Mamanipa|Bridge-Mother Ch'aska Mamanipa]]: Master of the yearly bridge-weaving
+- [[NPCs/Herder Inti Paucarwaman|Herder Inti Paucarwaman]]: Young llama herder
+- [[NPCs/Seed-Keeper Rumi Cusihuaman|Seed-Keeper Rumi Cusihuaman]]: Keeper of terrace seed stock
+- [[NPCs/Steward Yachay Apazaqolla|Steward Yachay Apazaqolla]]: Steward of a great family's work days
+- [[NPCs/Illari Ticapampa|Illari Ticapampa]]: Returned coast-worker who wants to learn the knots
+- [[NPCs/Mason-Elder Atoq Huamancho|Mason-Elder Atoq Huamancho]]: Elder mason who keeps the wall-lore
+- [[NPCs/Cord-Keeper Sisa Condoriqui|Cord-Keeper Sisa Condoriqui]]: Cord-keeper of the summit shrine
+
+## Quests
+
+- [[Quests/The Cord With Three Ends|The Cord With Three Ends]] (A)
+- [[Quests/Mourning a Wall|Mourning a Wall]] (A)
+- [[Quests/The Last Runner of the Relay|The Last Runner of the Relay]] (A)
+- [[Quests/The Bridge Is Rewoven Once a Year|The Bridge Is Rewoven Once a Year]] (A)
+- [[Quests/The Llama Who Would Not Climb|The Llama Who Would Not Climb]] (A)
+- [[Quests/A Hundred Kinds of Potato|A Hundred Kinds of Potato]] (A)
+- [[Quests/Work Day at the Falling Terrace|Work Day at the Falling Terrace]] (A)
+- [[Quests/The Girl Who Came Back for the Knots|The Girl Who Came Back for the Knots]] (A)
+- [[Quests/The Mason's Mark|The Mason's Mark]] (S)
+- [[Quests/The Cord That Ends in a Gap|The Cord That Ends in a Gap]] (S)
+
 ## Monsters (4)
 
 | Monster | Family | Rank | Level |

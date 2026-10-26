@@ -455,3 +455,123 @@ Story flags are the compact bridge between quest outcomes and later world respon
 - [[Systems/Flags/evd_courtier_done|evd_courtier_done]] — Side quest "A Courtier of the Winter Court" resolved
 - [[Systems/Flags/evd_day_night_done|evd_day_night_done]] — Side quest "Day or Night" resolved
 - [[Systems/Flags/evd_last_glade_guest_done|evd_last_glade_guest_done]] — Side quest "A Guest at the Last Glade" resolved
+- [[Systems/Flags/apu_three_ends_done|apu_three_ends_done]] — Side quest "The Cord With Three Ends" resolved
+- [[Systems/Flags/apu_mourning_wall_done|apu_mourning_wall_done]] — Side quest "Mourning a Wall" resolved
+- [[Systems/Flags/apu_last_runner_done|apu_last_runner_done]] — Side quest "The Last Runner of the Relay" resolved
+- [[Systems/Flags/apu_bridge_done|apu_bridge_done]] — Side quest "The Bridge Is Rewoven Once a Year" resolved
+- [[Systems/Flags/apu_llama_done|apu_llama_done]] — Side quest "The Llama Who Would Not Climb" resolved
+- [[Systems/Flags/apu_potatoes_done|apu_potatoes_done]] — Side quest "A Hundred Kinds of Potato" resolved
+- [[Systems/Flags/apu_work_day_done|apu_work_day_done]] — Side quest "Work Day at the Falling Terrace" resolved
+- [[Systems/Flags/apu_knots_done|apu_knots_done]] — Side quest "The Girl Who Came Back for the Knots" resolved
+- [[Systems/Flags/apu_masons_mark_done|apu_masons_mark_done]] — Side quest "The Mason's Mark" resolved
+- [[Systems/Flags/apu_cord_gap_done|apu_cord_gap_done]] — Side quest "The Cord That Ends in a Gap" resolved
+- [[Systems/Flags/lus_cradle_lamp_done|lus_cradle_lamp_done]] — Side quest "The Lamp That Would Not Light" resolved
+- [[Systems/Flags/lus_tide_salt_done|lus_tide_salt_done]] — Side quest "The Tide-Table Salt" resolved
+- [[Systems/Flags/lus_pale_mornings_done|lus_pale_mornings_done]] — Side quest "Pale Mornings" resolved
+- [[Systems/Flags/lus_largest_piece_done|lus_largest_piece_done]] — Side quest "The Largest Piece" resolved
+- [[Systems/Flags/lus_gull_done|lus_gull_done]] — Side quest "The Fledgling in the Foam" resolved
+- [[Systems/Flags/lus_old_key_done|lus_old_key_done]] — Side quest "The Key the Songs Changed To" resolved
+- [[Systems/Flags/lus_dark_mile_done|lus_dark_mile_done]] — Side quest "One Night on the Dark Mile" resolved
+- [[Systems/Flags/lus_moth_count_done|lus_moth_count_done]] — Side quest "The Moon-Moth Count" resolved
+- [[Systems/Flags/lus_dark_beach_done|lus_dark_beach_done]] — Side quest "The Beach That Went Out" resolved
+- [[Systems/Flags/lus_lantern_done|lus_lantern_done]] — Side quest "The Lantern Has a Passenger" resolved
+- [[Systems/Flags/aur_gilded_partner_done|aur_gilded_partner_done]] — Side quest "The Gilded Partner" resolved
+- [[Systems/Flags/aur_prompt_book_done|aur_prompt_book_done]] — Side quest "The Prompt-Book" resolved
+- [[Systems/Flags/aur_king_waits_done|aur_king_waits_done]] — Side quest "The King Who Waits" resolved
+- [[Systems/Flags/aur_empty_seat_done|aur_empty_seat_done]] — Side quest "An Empty Seat at Every Table" resolved
+- [[Systems/Flags/aur_coin_step_done|aur_coin_step_done]] — Side quest "The Coin on the First Step" resolved
+- [[Systems/Flags/aur_fools_gold_done|aur_fools_gold_done]] — Side quest "Fool's Gold Season" resolved
+- [[Systems/Flags/aur_settled_water_done|aur_settled_water_done]] — Side quest "Settled in the Water" resolved
+- [[Systems/Flags/aur_last_dance_done|aur_last_dance_done]] — Side quest "The Last Dance on the Card" resolved
+- [[Systems/Flags/aur_blind_fish_done|aur_blind_fish_done]] — Side quest "The Census of the Blind Fish" resolved
+- [[Systems/Flags/aur_hundredth_step_done|aur_hundredth_step_done]] — Side quest "The Hundredth Step" resolved
+- [[Systems/Flags/nox_guest_cellar_done|nox_guest_cellar_done]] — Side quest "A Guest in the Cellar" resolved
+- [[Systems/Flags/nox_humans_like_done|nox_humans_like_done]] — Side quest "What Humans Are Really Like" resolved
+- [[Systems/Flags/nox_statue_face_done|nox_statue_face_done]] — Side quest "The Statue With the Wrong Face" resolved
+- [[Systems/Flags/nox_ash_wheat_done|nox_ash_wheat_done]] — Side quest "Ash-Wheat Before the Levy" resolved
+- [[Systems/Flags/nox_one_well_done|nox_one_well_done]] — Side quest "Two Sides of One Well" resolved
+- [[Systems/Flags/nox_day_prayer_done|nox_day_prayer_done]] — Side quest "The Day-Prayer" resolved
+- [[Systems/Flags/nox_singing_obsidian_done|nox_singing_obsidian_done]] — Side quest "Singing Obsidian" resolved
+- [[Systems/Flags/nox_honest_scale_done|nox_honest_scale_done]] — Side quest "The Honest Scale" resolved
+- [[Systems/Flags/nox_hero_marks_done|nox_hero_marks_done]] — Side quest "Marks on the Hero's Road" resolved
+- [[Systems/Flags/nox_lullaby_done|nox_lullaby_done]] — Side quest "The Lullaby Both Sides Know" resolved
+- [[Systems/Flags/maw_second_rhythm_done|maw_second_rhythm_done]] — Side quest "The Second Rhythm" resolved
+- [[Systems/Flags/maw_one_word_done|maw_one_word_done]] — Side quest "One Word From Below" resolved
+- [[Systems/Flags/maw_foot_of_field_done|maw_foot_of_field_done]] — Side quest "A Foot of Field" resolved
+- [[Systems/Flags/maw_resin_ledger_done|maw_resin_ledger_done]] — Side quest "Resin for the Ledger" resolved
+- [[Systems/Flags/maw_rim_walk_done|maw_rim_walk_done]] — Side quest "The Rim Walk" resolved
+- [[Systems/Flags/maw_honest_count_done|maw_honest_count_done]] — Side quest "The Honest Count" resolved
+- [[Systems/Flags/maw_workers_carry_done|maw_workers_carry_done]] — Side quest "What the Workers Carry" resolved
+- [[Systems/Flags/maw_third_province_bell_done|maw_third_province_bell_done]] — Side quest "A Bell for the Third Province" resolved
+- [[Systems/Flags/maw_quiet_cull_done|maw_quiet_cull_done]] — Side quest "The Quiet Cull" resolved
+- [[Systems/Flags/maw_held_breath_done|maw_held_breath_done]] — Side quest "The Held Breath" resolved
+- [[Systems/Flags/rot_shard_grew_done|rot_shard_grew_done]] — Side quest "The Shard That Grew" resolved
+- [[Systems/Flags/rot_someone_weeping_done|rot_someone_weeping_done]] — Side quest "Someone Weeping" resolved
+- [[Systems/Flags/rot_slime_saw_done|rot_slime_saw_done]] — Side quest "What the Slime Saw" resolved
+- [[Systems/Flags/rot_bridge_mapper_done|rot_bridge_mapper_done]] — Side quest "The Bridge Mapper" resolved
+- [[Systems/Flags/rot_three_stories_done|rot_three_stories_done]] — Side quest "Three Stories, One Stone" resolved
+- [[Systems/Flags/rot_take_nothing_done|rot_take_nothing_done]] — Side quest "Take Nothing" resolved
+- [[Systems/Flags/rot_letter_landing_done|rot_letter_landing_done]] — Side quest "A Letter for the Landing" resolved
+- [[Systems/Flags/rot_old_one_done|rot_old_one_done]] — Side quest "The Old One Who Forgot" resolved
+- [[Systems/Flags/rot_gate_word_done|rot_gate_word_done]] — Side quest "The Word the Gate Wants" resolved
+- [[Systems/Flags/rot_second_kneeling_done|rot_second_kneeling_done]] — Side quest "The Second Kneeling" resolved
+- [[Systems/Flags/sky_dinner_done|sky_dinner_done]] — Side quest "What Was for Dinner" resolved
+- [[Systems/Flags/sky_whale_tower_done|sky_whale_tower_done]] — Side quest "The Whale in the Tower" resolved
+- [[Systems/Flags/sky_bridge_grows_done|sky_bridge_grows_done]] — Side quest "The Bridge That Grows" resolved
+- [[Systems/Flags/sky_licence_quiet_done|sky_licence_quiet_done]] — Side quest "A Licence to Be Quiet" resolved
+- [[Systems/Flags/sky_stranded_crew_done|sky_stranded_crew_done]] — Side quest "The Stranded Crew" resolved
+- [[Systems/Flags/sky_thin_air_done|sky_thin_air_done]] — Side quest "Thin Air" resolved
+- [[Systems/Flags/sky_hanging_garden_done|sky_hanging_garden_done]] — Side quest "Cuttings From the Hanging Garden" resolved
+- [[Systems/Flags/sky_knife_home_done|sky_knife_home_done]] — Side quest "The Knife Goes Home" resolved
+- [[Systems/Flags/sky_serpent_choir_done|sky_serpent_choir_done]] — Side quest "The Serpents' Amphitheatre" resolved
+- [[Systems/Flags/sky_storm_count_done|sky_storm_count_done]] — Side quest "The Count at the Edge of the Storm" resolved
+- [[Systems/Flags/bas_flaw_footing_done|bas_flaw_footing_done]] — Side quest "The Flaw in the Footing" resolved
+- [[Systems/Flags/bas_deserter_done|bas_deserter_done]] — Side quest "The Deserter Who Wanted a Hearing" resolved
+- [[Systems/Flags/bas_barley_done|bas_barley_done]] — Side quest "Barley Between the Rings" resolved
+- [[Systems/Flags/bas_cold_joints_done|bas_cold_joints_done]] — Side quest "Cold Joints" resolved
+- [[Systems/Flags/bas_fennel_row_done|bas_fennel_row_done]] — Side quest "The Drum at Fennel Row" resolved
+- [[Systems/Flags/bas_captains_stone_done|bas_captains_stone_done]] — Side quest "The Captain's Stone" resolved
+- [[Systems/Flags/bas_hold_outer_done|bas_hold_outer_done]] — Side quest "Whether to Hold the Outer Ring" resolved
+- [[Systems/Flags/bas_inward_gate_done|bas_inward_gate_done]] — Side quest "The Gate That Faced Inward" resolved
+- [[Systems/Flags/bas_cub_rings_done|bas_cub_rings_done]] — Side quest "A Cub in the Broken Rings" resolved
+- [[Systems/Flags/bas_night_between_done|bas_night_between_done]] — Side quest "The Night Between the Rings" resolved
+- [[Systems/Flags/cal_chart_no_names_done|cal_chart_no_names_done]] — Side quest "The Chart Without Names" resolved
+- [[Systems/Flags/cal_clan_offering_done|cal_clan_offering_done]] — Side quest "What the Clans Leave at the Edge" resolved
+- [[Systems/Flags/cal_trail_bends_done|cal_trail_bends_done]] — Side quest "The Trail That Bends" resolved
+- [[Systems/Flags/cal_white_flats_done|cal_white_flats_done]] — Side quest "Fights at the White Flats" resolved
+- [[Systems/Flags/cal_crater_garden_done|cal_crater_garden_done]] — Side quest "The Hermit's Crater Garden" resolved
+- [[Systems/Flags/cal_ship_feather_done|cal_ship_feather_done]] — Side quest "A Feather as Long as a Boat" resolved
+- [[Systems/Flags/cal_beneath_grass_done|cal_beneath_grass_done]] — Side quest "Beneath the Grass" resolved
+- [[Systems/Flags/cal_tusks_hollow_done|cal_tusks_hollow_done]] — Side quest "The Hollow Inside the Tusks" resolved
+- [[Systems/Flags/cal_grave_closed_done|cal_grave_closed_done]] — Side quest "The Grave the Grass Closed" resolved
+- [[Systems/Flags/cal_calf_river_done|cal_calf_river_done]] — Side quest "The Calf in the Dry River" resolved
+- [[Systems/Flags/ves_map_matched_done|ves_map_matched_done]] — Side quest "The Map That Matched" resolved
+- [[Systems/Flags/ves_one_followed_done|ves_one_followed_done]] — Side quest "The One Who Followed" resolved
+- [[Systems/Flags/ves_red_flowers_done|ves_red_flowers_done]] — Side quest "The Song of the Red Flowers" resolved
+- [[Systems/Flags/ves_names_doors_done|ves_names_doors_done]] — Side quest "Names on the Doors" resolved
+- [[Systems/Flags/ves_floating_quarter_done|ves_floating_quarter_done]] — Side quest "Across the Floating Quarter" resolved
+- [[Systems/Flags/ves_three_words_done|ves_three_words_done]] — Side quest "Three Words for the Moon" resolved
+- [[Systems/Flags/ves_baker_done|ves_baker_done]] — Side quest "The Baker Who Is Not There" resolved
+- [[Systems/Flags/ves_edge_light_done|ves_edge_light_done]] — Side quest "The Edge of the Light" resolved
+- [[Systems/Flags/ves_mothers_lantern_done|ves_mothers_lantern_done]] — Side quest "A Mother's Lantern" resolved
+- [[Systems/Flags/ves_white_moon_done|ves_white_moon_done]] — Side quest "The White Moon" resolved
+- [[Systems/Flags/qkl_reader_done|qkl_reader_done]] — Side quest "The Reader Nobody Believed" resolved
+- [[Systems/Flags/qkl_moving_day_done|qkl_moving_day_done]] — Side quest "Moving Day on the Ridge" resolved
+- [[Systems/Flags/qkl_singing_child_done|qkl_singing_child_done]] — Side quest "The Child Who Sings to the Ground" resolved
+- [[Systems/Flags/qkl_next_spring_done|qkl_next_spring_done]] — Side quest "Room at the Next Spring" resolved
+- [[Systems/Flags/qkl_carry_house_done|qkl_carry_house_done]] — Side quest "A House You Can Carry" resolved
+- [[Systems/Flags/qkl_maps_done|qkl_maps_done]] — Side quest "The Oldest Maps Are All Wrong" resolved
+- [[Systems/Flags/qkl_crystal_done|qkl_crystal_done]] — Side quest "Crystals From Below" resolved
+- [[Systems/Flags/qkl_calm_sick_done|qkl_calm_sick_done]] — Side quest "Nervous in Calm Weather" resolved
+- [[Systems/Flags/qkl_gorge_watch_done|qkl_gorge_watch_done]] — Side quest "The New Gorge Watch" resolved
+- [[Systems/Flags/qkl_ridge_done|qkl_ridge_done]] — Side quest "Quakeback's Ridge Breathes" resolved
+- [[Systems/Flags/ldp_door_wandered_done|ldp_door_wandered_done]] — Side quest "The Door That Wandered" resolved
+- [[Systems/Flags/ldp_gnome_news_done|ldp_gnome_news_done]] — Side quest "News for the Gnome Walls" resolved
+- [[Systems/Flags/ldp_chalk_nowhere_done|ldp_chalk_nowhere_done]] — Side quest "Chalk to Nowhere" resolved
+- [[Systems/Flags/ldp_third_share_done|ldp_third_share_done]] — Side quest "The Oath of the Third Share" resolved
+- [[Systems/Flags/ldp_ones_stayed_done|ldp_ones_stayed_done]] — Side quest "The Ones Who Stayed" resolved
+- [[Systems/Flags/ldp_right_direction_done|ldp_right_direction_done]] — Side quest "Read in the Right Direction" resolved
+- [[Systems/Flags/ldp_lantern_out_done|ldp_lantern_out_done]] — Side quest "When the Lantern Goes Out" resolved
+- [[Systems/Flags/ldp_lantern_stair_done|ldp_lantern_stair_done]] — Side quest "The Lantern at the Stair" resolved
+- [[Systems/Flags/ldp_nests_hang_done|ldp_nests_hang_done]] — Side quest "Nests That Hang Down" resolved
+- [[Systems/Flags/ldp_city_streets_done|ldp_city_streets_done]] — Side quest "The City Changed Its Streets" resolved

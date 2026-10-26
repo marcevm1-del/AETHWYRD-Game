@@ -97,6 +97,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Lantern Moth-Hawk|Lantern Moth-Hawk]] (Flyers): A moth-winged raptor that hunts by moon-glass light.
 
+## People
+
+- [[NPCs/Lampwright Isolde Thorneglass|Lampwright Isolde Thorneglass]]: Lampwright of the Lamp Market
+- [[NPCs/Salt-Panner Osric Brinewick|Salt-Panner Osric Brinewick]]: Salt-panner of the marsh pans
+- [[NPCs/Nurse Linnet Harrowmere|Nurse Linnet Harrowmere]]: Nurse of the pale-morning house
+- [[NPCs/Elder Verity Merrowdale|Elder Verity Merrowdale]]: Elder of a dune village
+- [[NPCs/Tobin Tallowmere|Tobin Tallowmere]]: Boy who found a glass-gull fledgling
+- [[NPCs/Singer Corwen Tidesong|Singer Corwen Tidesong]]: Singer of the slow songs
+- [[NPCs/Guild-Warden Marrek Soltane|Guild-Warden Marrek Soltane]]: Warden of the glass-gatherers' guild
+- [[NPCs/Naturalist Ilsabet Ferrow|Naturalist Ilsabet Ferrow]]: Naturalist of the moon-moth flats
+- [[NPCs/Beachkeeper Marit Dunmore|Beachkeeper Marit Dunmore]]: Beachkeeper of a dark beach
+- [[NPCs/Lamp-Keeper Perpetua Vask|Lamp-Keeper Perpetua Vask]]: Keeper of the Lamp Market's oldest lamp
+
+## Quests
+
+- [[Quests/The Lamp That Would Not Light|The Lamp That Would Not Light]] (A)
+- [[Quests/The Tide-Table Salt|The Tide-Table Salt]] (A)
+- [[Quests/Pale Mornings|Pale Mornings]] (A)
+- [[Quests/The Largest Piece|The Largest Piece]] (A)
+- [[Quests/The Fledgling in the Foam|The Fledgling in the Foam]] (A)
+- [[Quests/The Key the Songs Changed To|The Key the Songs Changed To]] (A)
+- [[Quests/One Night on the Dark Mile|One Night on the Dark Mile]] (A)
+- [[Quests/The Moon-Moth Count|The Moon-Moth Count]] (A)
+- [[Quests/The Beach That Went Out|The Beach That Went Out]] (S)
+- [[Quests/The Lantern Has a Passenger|The Lantern Has a Passenger]] (S)
+
 ## Monsters (6)
 
 | Monster | Family | Rank | Level |

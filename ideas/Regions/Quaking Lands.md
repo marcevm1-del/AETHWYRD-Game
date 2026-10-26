@@ -97,6 +97,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Stone-Horned Ox|Stone-Horned Ox]] (Herbivore): A ram-horned grazer that senses tremors; the Stillhorns' herds.
 
+## People
+
+- [[NPCs/Tremor-Reader Maud Thrane|Tremor-Reader Maud Thrane]]: Tremor-reader of a spring-town
+- [[NPCs/Town-Warden Gideon Ropewright|Town-Warden Gideon Ropewright]]: Warden of a town that must move
+- [[NPCs/Wick Larkspur|Wick Larkspur]]: Child who sings to the ground
+- [[NPCs/Spring-Keeper Hanne Veld|Spring-Keeper Hanne Veld]]: Keeper of a still spring
+- [[NPCs/Rope-Wright Dunstan Pellow|Rope-Wright Dunstan Pellow]]: Rope-wright and house-mover
+- [[NPCs/Map-Maker Ambrose Quenby|Map-Maker Ambrose Quenby]]: Map-maker of the old charts
+- [[NPCs/Crystal-Trader Dacian Moorfield|Crystal-Trader Dacian Moorfield]]: Trader in quake-crystals
+- [[NPCs/Ewart Longmeadow|Ewart Longmeadow]]: Stiller who cannot sleep in calm
+- [[NPCs/Watch-Captain Rhys Cairnford|Watch-Captain Rhys Cairnford]]: Watch-captain of the New Gorge crossing
+- [[NPCs/Elder Reader Bertram Greywether|Elder Reader Bertram Greywether]]: Elder tremor-reader of the Ridge
+
+## Quests
+
+- [[Quests/The Reader Nobody Believed|The Reader Nobody Believed]] (S)
+- [[Quests/Moving Day on the Ridge|Moving Day on the Ridge]] (S)
+- [[Quests/The Child Who Sings to the Ground|The Child Who Sings to the Ground]] (S)
+- [[Quests/Room at the Next Spring|Room at the Next Spring]] (S)
+- [[Quests/A House You Can Carry|A House You Can Carry]] (S)
+- [[Quests/The Oldest Maps Are All Wrong|The Oldest Maps Are All Wrong]] (S)
+- [[Quests/Crystals From Below|Crystals From Below]] (S)
+- [[Quests/Nervous in Calm Weather|Nervous in Calm Weather]] (S)
+- [[Quests/The New Gorge Watch|The New Gorge Watch]] (S)
+- [[Quests/Quakeback's Ridge Breathes|Quakeback's Ridge Breathes]] (S)
+
 ## Monsters (13)
 
 | Monster | Family | Rank | Level |

@@ -94,6 +94,33 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Clans/The Shieldwall|The Shieldwall]] (Greecian Clan, led by Polemarch Kassandros Brightshield): Bastion's phalanx, drilled to hold a line of shields against cavalry. Every ring's captain comes from their ranks.
 - [[Clans/The Hornwall|The Hornwall]] (Rhino Clan, led by Master Mason Rhinald Stonebrow): Bastion's master masons, who build the new rings.
 
+## People
+
+- [[NPCs/Mason Odrun Flintlay|Mason Odrun Flintlay]]: Mason who found a flaw in the new ring's footing
+- [[NPCs/Tarn Hollowgrass|Tarn Hollowgrass]]: Horde rider who deserted
+- [[NPCs/Warden Ysolt Greywall|Warden Ysolt Greywall]]: Warden of Bastion
+- [[NPCs/Farmwife Hesper Furrow-Reeve|Farmwife Hesper Furrow-Reeve]]: Farmwife with a field no one can reach
+- [[NPCs/Captain Joram Vellacott|Captain Joram Vellacott]]: Captain of the outermost ring
+- [[NPCs/Sergeant Mab Thistlewick|Sergeant Mab Thistlewick]]: Sergeant of a village militia
+- [[NPCs/Widow Ansa Keelgrave|Widow Ansa Keelgrave]]: Widow of a fallen outer-ring captain
+- [[NPCs/Ring-Captain Teodra Mossgate|Ring-Captain Teodra Mossgate]]: Captain of an inner ring
+- [[NPCs/Archivist Perdita Underhill|Archivist Perdita Underhill]]: Archivist of the Citadel
+- [[NPCs/Wren Gravelmouth|Wren Gravelmouth]]: Nine-year-old scavenger of the Broken Rings
+- [[NPCs/Master Mason Berwyn Stonehall|Master Mason Berwyn Stonehall]]: Master mason of the next ring
+
+## Quests
+
+- [[Quests/The Flaw in the Footing|The Flaw in the Footing]] (B)
+- [[Quests/The Deserter Who Wanted a Hearing|The Deserter Who Wanted a Hearing]] (B)
+- [[Quests/Barley Between the Rings|Barley Between the Rings]] (B)
+- [[Quests/Cold Joints|Cold Joints]] (A)
+- [[Quests/The Drum at Fennel Row|The Drum at Fennel Row]] (A)
+- [[Quests/The Captain's Stone|The Captain's Stone]] (A)
+- [[Quests/Whether to Hold the Outer Ring|Whether to Hold the Outer Ring]] (A)
+- [[Quests/The Gate That Faced Inward|The Gate That Faced Inward]] (S)
+- [[Quests/A Cub in the Broken Rings|A Cub in the Broken Rings]] (S)
+- [[Quests/The Night Between the Rings|The Night Between the Rings]] (S)
+
 ## Monsters (4)
 
 | Monster | Family | Rank | Level |

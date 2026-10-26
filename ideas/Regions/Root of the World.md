@@ -73,6 +73,32 @@ A deep hum felt in the bones; the slow pulse of light; air like the inside of a 
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Sister Lioba Wren|Sister Lioba Wren]]: Church reliquarian
+- [[NPCs/Cass Thornby|Cass Thornby]]: Adventurer who heard weeping
+- [[NPCs/Gloam|Gloam]]: Ancient slime that learned to speak
+- [[NPCs/Rook Ellery|Rook Ellery]]: Bridge mapper
+- [[NPCs/Pilgrim-Priest Ketil Anvard|Pilgrim-Priest Ketil Anvard]]: Dwarven pilgrim-priest
+- [[NPCs/Isaure Venn|Isaure Venn]]: Druid who wants a cutting
+- [[NPCs/Pernel Gray|Pernel Gray]]: Courier for the dead
+- [[NPCs/Davos Quenby|Davos Quenby]]: Scholar of the old dragons
+- [[NPCs/Imke Sorrowby|Imke Sorrowby]]: Guild linguist
+- [[NPCs/Archivist Odalys Reik|Archivist Odalys Reik]]: Guild archivist
+
+## Quests
+
+- [[Quests/The Shard That Grew|The Shard That Grew]] (SS)
+- [[Quests/Someone Weeping|Someone Weeping]] (SS)
+- [[Quests/What the Slime Saw|What the Slime Saw]] (SS)
+- [[Quests/The Bridge Mapper|The Bridge Mapper]] (SS)
+- [[Quests/Three Stories, One Stone|Three Stories, One Stone]] (SS)
+- [[Quests/Take Nothing|Take Nothing]] (SS)
+- [[Quests/A Letter for the Landing|A Letter for the Landing]] (SS)
+- [[Quests/The Old One Who Forgot|The Old One Who Forgot]] (SS)
+- [[Quests/The Word the Gate Wants|The Word the Gate Wants]] (SS)
+- [[Quests/The Second Kneeling|The Second Kneeling]] (SS)
+
 ## Monsters (2)
 
 | Monster | Family | Rank | Level |

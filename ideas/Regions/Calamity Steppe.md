@@ -77,6 +77,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Fauna/Saurian Longneck|Saurian Longneck]] (Herbivore): A dinosaur-sized grazer with glowing spine plates; one of the steppe's giants.
 
+## People
+
+- [[NPCs/Cartographer Brevin Tarrant|Cartographer Brevin Tarrant]]: Guild cartographer of monster trails
+- [[NPCs/Offering-Keeper Ruuk Dawnpaw|Offering-Keeper Ruuk Dawnpaw]]: Wolfkin offering-keeper at the steppe's edge
+- [[NPCs/Tower-Warden Cadogan Pike|Tower-Warden Cadogan Pike]]: Warden of the northernmost guild watchtower
+- [[NPCs/Scholar Fitzroy Amberlane|Scholar Fitzroy Amberlane]]: Scholar of giant behaviour
+- [[NPCs/Hermit Bellamy Quarrel|Hermit Bellamy Quarrel]]: Hermit who grows a garden in a crater
+- [[NPCs/Skywatcher Corra Windfall|Skywatcher Corra Windfall]]: Watcher of the ship-sized birds
+- [[NPCs/Caravan-Mistress Dunya Ironwheel|Caravan-Mistress Dunya Ironwheel]]: Mistress of an armoured steppe caravan
+- [[NPCs/Bone-Reader Jorun Tuskward|Bone-Reader Jorun Tuskward]]: Bone-reader who studies the Tusks
+- [[NPCs/Captain Rhosyn Fellowes|Captain Rhosyn Fellowes]]: Expedition captain looking for a grave
+- [[NPCs/Beastmaster Wrenna Grassmantle|Beastmaster Wrenna Grassmantle]]: Beastmaster who watches a calf
+
+## Quests
+
+- [[Quests/The Chart Without Names|The Chart Without Names]] (S)
+- [[Quests/What the Clans Leave at the Edge|What the Clans Leave at the Edge]] (S)
+- [[Quests/The Trail That Bends|The Trail That Bends]] (S)
+- [[Quests/Fights at the White Flats|Fights at the White Flats]] (S)
+- [[Quests/The Hermit's Crater Garden|The Hermit's Crater Garden]] (S)
+- [[Quests/A Feather as Long as a Boat|A Feather as Long as a Boat]] (S)
+- [[Quests/Beneath the Grass|Beneath the Grass]] (SS)
+- [[Quests/The Hollow Inside the Tusks|The Hollow Inside the Tusks]] (SS)
+- [[Quests/The Grave the Grass Closed|The Grave the Grass Closed]] (SS)
+- [[Quests/The Calf in the Dry River|The Calf in the Dry River]] (SS)
+
 ## Monsters (8)
 
 | Monster | Family | Rank | Level |

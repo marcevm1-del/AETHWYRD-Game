@@ -1,0 +1,33 @@
+---
+type: quest
+id: qst_bas_fennel_row
+rank: "A"
+tags: [quest, defense]
+---
+# The Drum at Fennel Row
+
+> Thirty militiamen hold a village between the rings. Tonight a raiding band tests it.
+
+| Field | Value |
+|---|---|
+| Rank · type | A · Defense |
+| Giver | [[NPCs/Sergeant Mab Thistlewick\|Sergeant Mab Thistlewick]] |
+| Region | [[Regions/Bastion\|Bastion]] |
+| Requirements | minLevel: 124 |
+| Prerequisites | Act 4; rank A |
+| Rewards | 28000 gold, 1450 GP, 126000 XP |
+
+## Objectives
+
+1. talk: [[NPCs/Sergeant Mab Thistlewick|Sergeant Mab Thistlewick]]
+2. {"kind":"defend","target":"bastion_fennel_row"}
+3. Resolve the choice: **door_drum_or_line**
+
+## Play loop
+
+1. **Read the brief:** separate confirmed facts from uncertainty.
+2. **Prepare:** choose equipment, companions and supplies that fit the rank and objective.
+3. **Investigate and act:** follow the objectives; where permitted, support combat with tracking, conversation, stealth, crafting or monster knowledge.
+4. **Return and resolve:** claim the listed rewards and apply only the story flags or world-state changes recorded in source data.
+
+**Flags set:** [[Systems/Flags/bas_fennel_row_done|bas_fennel_row_done]]

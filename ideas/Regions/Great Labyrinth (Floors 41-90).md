@@ -73,6 +73,33 @@ Cold damp air; the drip of the sunken city; the smell of mana like struck flint;
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Burl Wallknock|Burl Wallknock]]: Deep gnome who lost a door
+- [[NPCs/Quillow Deepbarrow|Quillow Deepbarrow]]: Deep gnome trader
+- [[NPCs/Clerk Sorrel Dunmarch|Clerk Sorrel Dunmarch]]: Clerk of a raid council
+- [[NPCs/Council-Keeper Corwin Verrow|Council-Keeper Corwin Verrow]]: Keeper of a raid council's oath
+- [[NPCs/Tobin Reedwater|Tobin Reedwater]]: Young adventurer who stayed too long
+- [[NPCs/Marit Pellwater|Marit Pellwater]]: Elder of the adventurers who stayed
+- [[NPCs/Scholar Emmerich Vaneholt|Scholar Emmerich Vaneholt]]: Scholar who wants a book read right way up
+- [[NPCs/Lantern-Bearer Alder Oilwright|Lantern-Bearer Alder Oilwright]]: Lantern-bearer of a raid council
+- [[NPCs/Raid-Captain Ione Carrowby|Raid-Captain Ione Carrowby]]: Survivor of the floor-ninety raid
+- [[NPCs/Naturalist Pomeroy Featherstone|Naturalist Pomeroy Featherstone]]: Naturalist of the inverted forest
+- [[NPCs/Cartographer Rosamund Wetherby|Cartographer Rosamund Wetherby]]: Cartographer, daughter of the first mapper
+
+## Quests
+
+- [[Quests/The Door That Wandered|The Door That Wandered]] (B)
+- [[Quests/News for the Gnome Walls|News for the Gnome Walls]] (B)
+- [[Quests/Chalk to Nowhere|Chalk to Nowhere]] (B)
+- [[Quests/The Oath of the Third Share|The Oath of the Third Share]] (A)
+- [[Quests/The Ones Who Stayed|The Ones Who Stayed]] (A)
+- [[Quests/Read in the Right Direction|Read in the Right Direction]] (A)
+- [[Quests/When the Lantern Goes Out|When the Lantern Goes Out]] (A)
+- [[Quests/The Lantern at the Stair|The Lantern at the Stair]] (S)
+- [[Quests/Nests That Hang Down|Nests That Hang Down]] (S)
+- [[Quests/The City Changed Its Streets|The City Changed Its Streets]] (S)
+
 ## Monsters (86)
 
 | Monster | Family | Rank | Level |

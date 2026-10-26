@@ -93,6 +93,32 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 - [[Clans/The Gilded|The Gilded]] (Golden Clan, led by Last Steward Aurelion Vane-Gold): Descendants of Aurumdeep's survivors, sworn to guard their drowned kingdom from treasure-hunters.
 
+## People
+
+- [[NPCs/Diver Pell Ashgrove|Diver Pell Ashgrove]]: Diver whose partner was turned to gold
+- [[NPCs/Tilda Vantoor|Tilda Vantoor]]: Survivor's descendant and keeper of the family records
+- [[NPCs/Diver Oskar Tidewell|Diver Oskar Tidewell]]: Deep diver who saw a man on the throne
+- [[NPCs/Cook Dagobert Kettle|Cook Dagobert Kettle]]: Camp cook who hosts the vigil table
+- [[NPCs/Tamsin Quill|Tamsin Quill]]: Child who tends the coin step
+- [[NPCs/Assayer Garrick Lathe|Assayer Garrick Lathe]]: Council assayer of recovered gold
+- [[NPCs/Arbiter Marit Deepclaim|Arbiter Marit Deepclaim]]: Council arbiter of diving claims
+- [[NPCs/Lady Merewen Verrane|Lady Merewen Verrane]]: One of the polite dead, holder of an unfinished dance
+- [[NPCs/Scholar Lucan Marsh|Scholar Lucan Marsh]]: Naturalist of the flooded streets
+- [[NPCs/Porter-Captain Hesper Gladewick|Porter-Captain Hesper Gladewick]]: Captain of the Long Stair porters
+
+## Quests
+
+- [[Quests/The Gilded Partner|The Gilded Partner]] (A)
+- [[Quests/The Prompt-Book|The Prompt-Book]] (A)
+- [[Quests/The King Who Waits|The King Who Waits]] (A)
+- [[Quests/An Empty Seat at Every Table|An Empty Seat at Every Table]] (A)
+- [[Quests/The Coin on the First Step|The Coin on the First Step]] (A)
+- [[Quests/Fool's Gold Season|Fool's Gold Season]] (A)
+- [[Quests/Settled in the Water|Settled in the Water]] (A)
+- [[Quests/The Last Dance on the Card|The Last Dance on the Card]] (A)
+- [[Quests/The Census of the Blind Fish|The Census of the Blind Fish]] (A)
+- [[Quests/The Hundredth Step|The Hundredth Step]] (A)
+
 ## Monsters (20)
 
 | Monster | Family | Rank | Level |

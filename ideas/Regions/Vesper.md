@@ -73,6 +73,32 @@ Silence and red dust; starlight without air; flowers of light opening in the rui
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Scholar Tobias Wickham|Scholar Tobias Wickham]]: Scholar of the red moon
+- [[NPCs/Sorrel (npc_sorrel_vesperite)|Sorrel]]: Vesperite searching for someone
+- [[NPCs/Hester Lamm|Hester Lamm]]: Old woman who knows the song
+- [[NPCs/Cador Fell|Cador Fell]]: Delver who catalogues doors
+- [[NPCs/Pilot Gawen Trelawn|Pilot Gawen Trelawn]]: Pilot of the Floating Quarter
+- [[NPCs/Priest Petronel Voss|Priest Petronel Voss]]: Church priest of the omen
+- [[NPCs/Wilmot Crane|Wilmot Crane]]: Ghostly baker of the ruins
+- [[NPCs/Cartographer Dessa Orrin|Cartographer Dessa Orrin]]: Guild cartographer
+- [[NPCs/Margit Sallow|Margit Sallow]]: Mother of a lost adventurer
+- [[NPCs/Historian Thaddeus Nole|Historian Thaddeus Nole]]: Collector of memories of the moon
+
+## Quests
+
+- [[Quests/The Map That Matched|The Map That Matched]] (SS)
+- [[Quests/The One Who Followed|The One Who Followed]] (SS)
+- [[Quests/The Song of the Red Flowers|The Song of the Red Flowers]] (SS)
+- [[Quests/Names on the Doors|Names on the Doors]] (SS)
+- [[Quests/Across the Floating Quarter|Across the Floating Quarter]] (SS)
+- [[Quests/Three Words for the Moon|Three Words for the Moon]] (SS)
+- [[Quests/The Baker Who Is Not There|The Baker Who Is Not There]] (SS)
+- [[Quests/The Edge of the Light|The Edge of the Light]] (SS)
+- [[Quests/A Mother's Lantern|A Mother's Lantern]] (SS)
+- [[Quests/The White Moon|The White Moon]] (SS)
+
 ## Monsters (19)
 
 | Monster | Family | Rank | Level |

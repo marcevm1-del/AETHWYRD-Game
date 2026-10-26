@@ -73,6 +73,33 @@ Thin cold air; wind through empty halls; the crunch of white stone; the sound of
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Scholar Ysmere Quillbrook|Scholar Ysmere Quillbrook]]: Scholar of Titan table customs
+- [[NPCs/Hermit Oswin Thistlewake|Hermit Oswin Thistlewake]]: Hermit who feeds a trapped sky whale
+- [[NPCs/Bridge-Warden Sereth Skyhand|Bridge-Warden Sereth Skyhand]]: Heavenfolk warden of the Broken Bridges
+- [[NPCs/Licence-Officer Mirelle Tarn-Voss|Licence-Officer Mirelle Tarn-Voss]]: Guild expedition licence officer
+- [[NPCs/Elder Quillon Aerith|Elder Quillon Aerith]]: Heavenfolk elder who speaks for the sacred islands
+- [[NPCs/Quartermaster Dessa Kell|Quartermaster Dessa Kell]]: Quartermaster of a stranded scavenger crew
+- [[NPCs/Old Ruan Pelt|Old Ruan Pelt]]: Hermit who has stayed too many seasons
+- [[NPCs/Botanist Halloran Vesper-Moss|Botanist Halloran Vesper-Moss]]: Botanist studying the upward-fruiting trees
+- [[NPCs/Edda Brightmantle|Edda Brightmantle]]: Daughter of the expedition leader who brought back a Titan knife
+- [[NPCs/Songwright Calder Windfall|Songwright Calder Windfall]]: Songwright who listens to the wind serpents
+- [[NPCs/Stormwatcher Veyra Cloudmantle|Stormwatcher Veyra Cloudmantle]]: Heavenfolk stormwatcher
+
+## Quests
+
+- [[Quests/What Was for Dinner|What Was for Dinner]] (S)
+- [[Quests/The Whale in the Tower|The Whale in the Tower]] (S)
+- [[Quests/The Bridge That Grows|The Bridge That Grows]] (S)
+- [[Quests/A Licence to Be Quiet|A Licence to Be Quiet]] (S)
+- [[Quests/The Stranded Crew|The Stranded Crew]] (S)
+- [[Quests/Thin Air|Thin Air]] (S)
+- [[Quests/Cuttings From the Hanging Garden|Cuttings From the Hanging Garden]] (S)
+- [[Quests/The Knife Goes Home|The Knife Goes Home]] (SS)
+- [[Quests/The Serpents' Amphitheatre|The Serpents' Amphitheatre]] (SS)
+- [[Quests/The Count at the Edge of the Storm|The Count at the Edge of the Storm]] (SS)
+
 ## Monsters (30)
 
 | Monster | Family | Rank | Level |

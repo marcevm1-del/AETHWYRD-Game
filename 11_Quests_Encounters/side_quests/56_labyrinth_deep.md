@@ -423,7 +423,7 @@ objectives:
 > ► **"Will you come too?"** — **MARIT:** "I stopped climbing twenty-two years ago."
 > ► **"What do you want him to know?"** — **MARIT:** "That the door is open both ways."
 
-**Scene 3: the climb.** Eleven floors of stair. On the thirty-first step Tobin sits down, shaking.
+**Scene 3: the climb.** Floor after floor of stair, and a surface lift at the top. On the thirty-first step Tobin sits down, shaking.
 
 **TOBIN:** "I can't. I can't, I can't, I'm sorry."
 **TOBIN:** "What if it's too bright? What if nothing there knows me?"
@@ -431,7 +431,7 @@ objectives:
 > ► **"Tell me about green."** — He begins to describe a hillside, and keeps going.
 > ► **"I'll carry you."** — **TOBIN:** "No. I have to do it on my feet."
 
-**Scene 4: the stair.** At the top, the Labyrinth's last door opens on a thin strip of daylight that comes from a crack somewhere. Tobin walks into it with both hands up.
+**Scene 4: the stair.** At the top, the guild lift opens on the Labyrinth gate, and beyond it a thin strip of real daylight. Tobin walks into it with both hands up.
 
 **TOBIN:** (hoarse) "It's so *bright.*"
 *A pale, dusty sunbeam lies across the floor. He kneels in it.*

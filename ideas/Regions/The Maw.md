@@ -73,6 +73,32 @@ A wind that pulls and pushes; the hum of a million wings; resin and dust; the de
 
 Use the rank band and terrain together when planning an outing. Listed monsters are the local baseline; weather, time, migration and story events can create exceptions, but should communicate why the ecology changed. In a besieged region, defend settlements when a posted event fits your route, then decide whether to pursue the Tyrant or prepare further. Liberation changes daily life and contracts; it does not erase ordinary wildlife or world events.
 
+## People
+
+- [[NPCs/Breath-Counter Harl Brennick|Breath-Counter Harl Brennick]]: Chief breath-counter of the Watch Camp
+- [[NPCs/Marshal Dagna Fenwick|Marshal Dagna Fenwick]]: Marshal of the Watch Camp
+- [[NPCs/Piet Haldane|Piet Haldane]]: Farmer on the sinking ground
+- [[NPCs/Archivist Ibb Quillon|Archivist Ibb Quillon]]: Archivist of the Breath Ledger
+- [[NPCs/Surveyor Sabeth Corran|Surveyor Sabeth Corran]]: Land surveyor of the sinking Rim
+- [[NPCs/Quartermaster Halvard Stone|Quartermaster Halvard Stone]]: Quartermaster of the Watch Camp
+- [[NPCs/Scholar Tessaly Mourne|Scholar Tessaly Mourne]]: Scholar of the swarm
+- [[NPCs/Ottoline Reeve|Ottoline Reeve]]: Survivor of the stripped provinces
+- [[NPCs/Captain Brannoch Gale|Captain Brannoch Gale]]: Captain of the culling parties
+- [[NPCs/Night-Watcher Wyl Ashgrove|Night-Watcher Wyl Ashgrove]]: Night-watcher on the Rim
+
+## Quests
+
+- [[Quests/The Second Rhythm|The Second Rhythm]] (S)
+- [[Quests/One Word From Below|One Word From Below]] (S)
+- [[Quests/A Foot of Field|A Foot of Field]] (S)
+- [[Quests/Resin for the Ledger|Resin for the Ledger]] (S)
+- [[Quests/The Rim Walk|The Rim Walk]] (S)
+- [[Quests/The Honest Count|The Honest Count]] (S)
+- [[Quests/What the Workers Carry|What the Workers Carry]] (S)
+- [[Quests/A Bell for the Third Province|A Bell for the Third Province]] (SS)
+- [[Quests/The Quiet Cull|The Quiet Cull]] (SS)
+- [[Quests/The Held Breath|The Held Breath]] (SS)
+
 ## Monsters (14)
 
 | Monster | Family | Rank | Level |

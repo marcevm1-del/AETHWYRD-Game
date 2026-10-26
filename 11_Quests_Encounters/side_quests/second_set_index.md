@@ -1,8 +1,8 @@
-# 11e — Second Regional Set: 260 Side Quests (index)
+# 11e — Second Regional Set: 380 Side Quests (index)
 
 > **Status: draft proposal.** `Canon.md` wins; `Data/` is canonical for numbers. Quests are built into `Data/` by `Tools/quests/build_side_quests.js`; the full table is [[all_side_quests]].
 
-Twenty-six more regions, ten quests each, ranks D to S. Each file has its own cast, scenes, dialogue, choices, outcomes and receipts. None kills a Tyrant, ends a siege or answers an open Canon question; unexplained seeds are labelled in each file.
+Thirty-eight more regions, ten quests each, ranks D to SS. Each file has its own cast, scenes, dialogue, choices, outcomes and receipts. None kills a Tyrant, ends a siege or answers an open Canon question; unexplained seeds are labelled in each file.
 
 | File | Region | Prefix | Ranks |
 |---|---|---|---|
@@ -32,8 +32,27 @@ Twenty-six more regions, ten quests each, ranks D to S. Each file has its own ca
 | [[42_dragon_spine]] | Dragon Spine | qst_dsp_ | A–S |
 | [[43_vharlen]] | Vharlen | qst_vhl_ | B–A |
 | [[44_cinderhole]] | Cinderhole | qst_cnd_ | A |
+| [[45_apu_highlands]] | Apu Highlands | qst_apu_ | A–S |
+| [[46_lustrine_shores]] | Lustrine Shores | qst_lus_ | A–S |
+| [[47_quaking_lands]] | Quaking Lands | qst_qkl_ | S |
+| [[48_aurumdeep]] | Aurumdeep | qst_aur_ | A |
+| [[49_nox_dominion]] | Nox Dominion | qst_nox_ | S–SS |
+| [[50_calamity_steppe]] | Calamity Steppe | qst_cal_ | S–SS |
+| [[51_the_maw]] | The Maw | qst_maw_ | S–SS |
+| [[52_root_of_the_world]] | Root of the World | qst_rot_ | SS |
+| [[53_vesper]] | Vesper | qst_ves_ | SS |
+| [[54_sky_archipelago]] | Sky Archipelago | qst_sky_ | S–SS |
+| [[55_bastion]] | Bastion | qst_bas_ | B–S |
+| [[56_labyrinth_deep]] | Labyrinth, Drowned Floors | qst_ldp_ | B–S |
 
 ## Open points for approval
+- **SS rewards** (Nox Dominion, Calamity Steppe, Maw, Root of the World, Vesper) are first-pass guesses extrapolated from the S→SS promotion row; no SSS/EX quests exist (the rank enum stops at SSS).
+- **More new races** to confirm: "Demon", "Slime", "Vesperite".
+- **Collect ids that do not exist** in `Data/Items` (validator does not check): `nox_ashwheat_sheaf`, `steppe_ship_bird_feather`, `maw_resin_leaf`, `rot_hesk_lantern`, `hollow_sea_starter_algae`.
+- **Maw quest 8** uses `talk` on an NPC who is not its giver; several unnamed speakers in the Maw/Root/Vesper files have no NPC block.
+- **Apu Highlands** renames the real-world Q'eswachaka as "the Rope Gorge"; **Lustrine Shores quest 10** says "the player's own hand" in the lamp (reword if too player-specific).
+- **Word counts:** many agent-written quests run 480–700 words, below the 650–900 target; a lengthening pass is possible.
+- **New lore and seeds** for files 45–56 are listed at the end of each file (Apu thumb-hollows, Lustrine memory-lamps, Quaking Ridge cycle, Aurumdeep fool's gold, Nox shared well and hidden day-prayer, Steppe release call, Maw second rhythm, Root weeping, Vesper lantern and moon-colour contradictions).
 - **Ashira Vale** is all rank B because the gazetteer gives it a "B–B" band; confirm that is intended.
 - **More S-rank rewards** (Heavenreach, Everdusk, Dragon Spine) are extrapolated from the promotion table.
 - **Hollow Sea quest 4** collects `hollow_sea_starter_algae`, an item that does not exist yet (the validator does not check collect targets; same for several earlier quests).
