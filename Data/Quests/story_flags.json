@@ -1793,5 +1793,455 @@
   "id": "cnd_smoke_done",
   "description": "Side quest \"What Vasque Keeps in the Smoke\" resolved",
   "setBy": "quest"
+ },
+ {
+  "id": "lab_chalk_done",
+  "description": "Side quest \"The Crossed Chalk\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_lamp_done",
+  "description": "Side quest \"Carry the Lamp\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_reset_day_done",
+  "description": "Side quest \"Reset Day\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_cask_done",
+  "description": "Side quest \"A Cask for the Quiet Floor\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_lost_found_done",
+  "description": "Side quest \"Lost and Found\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_spring_done",
+  "description": "Side quest \"The Spring Under Siege\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_first_descent_done",
+  "description": "Side quest \"First Descent\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_stories_done",
+  "description": "Side quest \"Paid in Stories\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_letter_done",
+  "description": "Side quest \"A Letter for the Surface\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lab_map_done",
+  "description": "Side quest \"The Map of a Floor That Isn't\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_witness_done",
+  "description": "Side quest \"The Rice and the Blood\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_tea_done",
+  "description": "Side quest \"Tea for the Sunken Shrine\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_umbrella_done",
+  "description": "Side quest \"The Umbrella That Waited\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_inn_done",
+  "description": "Side quest \"The Inn That Began to Eat\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_lamp_done",
+  "description": "Side quest \"The Lamp at the Door\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_wedding_done",
+  "description": "Side quest \"A Wedding in the Sun-Shower\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_gates_done",
+  "description": "Side quest \"The Nine Gates\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_leaf_done",
+  "description": "Side quest \"Leaf Money\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_tide_done",
+  "description": "Side quest \"What the Tide Remembers\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "kit_lantern_done",
+  "description": "Side quest \"Lantern Night\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_decoy_done",
+  "description": "Side quest \"Heavier Than Their Camels\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_ledger_done",
+  "description": "Side quest \"The Open Hand's Ledger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_verse_done",
+  "description": "Side quest \"The Missing Verse\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_well_done",
+  "description": "Side quest \"The Well Won't Be Hurried\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_kola_done",
+  "description": "Side quest \"Kola Before Dark\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_seam_done",
+  "description": "Side quest \"The Seam It Will Not Touch\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_mile_done",
+  "description": "Side quest \"The Golden Mile by Night\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_apprentice_done",
+  "description": "Side quest \"The Griot's Apprentice\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_market_done",
+  "description": "Side quest \"Market Day at the Well\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "zrm_test_done",
+  "description": "Side quest \"The Test of the Open Hand\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_question_done",
+  "description": "Side quest \"A Question Only He Would Know\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_counting_done",
+  "description": "Side quest \"Counting the Children\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_alignment_done",
+  "description": "Side quest \"The Fourth Alignment\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_mothers_face_done",
+  "description": "Side quest \"Her Mother's Face\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_hum_done",
+  "description": "Side quest \"A Name to Hum\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_night_stall_done",
+  "description": "Side quest \"The Night Market Stall\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_root_stair_done",
+  "description": "Side quest \"What the Root Stair Climbs To\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_fever_done",
+  "description": "Side quest \"Leaf, Bark and Fever\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_password_done",
+  "description": "Side quest \"A Song for a Password\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "lum_nokoma_done",
+  "description": "Side quest \"Auntie Nokoma Has Not Aged\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_empty_girl_done",
+  "description": "Side quest \"The Girl Who Came Home Empty\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_name_loan_done",
+  "description": "Side quest \"A Name on Loan\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_reef_done",
+  "description": "Side quest \"Listening Reef\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_chart_done",
+  "description": "Side quest \"The Navigator's Chart\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_said_once_done",
+  "description": "Side quest \"Said Once\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_ledger_done",
+  "description": "Side quest \"The Blank Ledger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_parents_done",
+  "description": "Side quest \"Parents From Far Away\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_boat_done",
+  "description": "Side quest \"A Boat Nobody May Sail\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_vigil_done",
+  "description": "Side quest \"The Lantern Vigil\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "tni_pillar_done",
+  "description": "Side quest \"The Pillar That Does Not Answer\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_husband_done",
+  "description": "Side quest \"The Husband Who Stopped Writing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_baker_done",
+  "description": "Side quest \"The Baker's Dream\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_old_people_done",
+  "description": "Side quest \"Why There Are No Old People\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_hill_done",
+  "description": "Side quest \"The Hill That Hums\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_ache_done",
+  "description": "Side quest \"Wanting the Ache Back\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_milestones_done",
+  "description": "Side quest \"The Milestones That Stop Counting\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_letters_done",
+  "description": "Side quest \"Letters That Say the Same Thing\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_investigator_done",
+  "description": "Side quest \"The Investigator Who Was Happy\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_comfort_done",
+  "description": "Side quest \"The Man Who Would Not Be Comforted\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "ash_honey_done",
+  "description": "Side quest \"Honey for the Warden\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_dreams_sun_done",
+  "description": "Side quest \"The Navigator Who Dreams of Sun\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_man_rock_done",
+  "description": "Side quest \"The Man on the Rock\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_guide_dark_done",
+  "description": "Side quest \"A Guide Across the Dark\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_gardens_done",
+  "description": "Side quest \"The Glow Gardens Are Dimming\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_ancestor_fish_done",
+  "description": "Side quest \"The Ancestor Fish\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_saltlamp_done",
+  "description": "Side quest \"A Song for Saltlamp Row\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_lashings_done",
+  "description": "Side quest \"Night of the Loose Lashings\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_behind_falls_done",
+  "description": "Side quest \"Behind the Great Waterfall\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_town_sailed_done",
+  "description": "Side quest \"The Town That Sailed Up\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hol_light_known_done",
+  "description": "Side quest \"A Light We Know\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_first_message_done",
+  "description": "Side quest \"The First Message\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_eleven_steps_done",
+  "description": "Side quest \"Eleven Thousand Steps\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_climber_done",
+  "description": "Side quest \"A Climber, Not a Flyer\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_ledge_done",
+  "description": "Side quest \"A Ledge for a Stranger\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_flight_done",
+  "description": "Side quest \"Flight in Numbers\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_council_done",
+  "description": "Side quest \"The Council Cannot Decide\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_stone_air_done",
+  "description": "Side quest \"The Stone That Ends in Air\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_letter_done",
+  "description": "Side quest \"The Letter She Carried\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_above_weather_done",
+  "description": "Side quest \"Above the Weather\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "hvr_bronze_feather_done",
+  "description": "Side quest \"The Bronze Feather\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_back_dawn_done",
+  "description": "Side quest \"Back Before Dawn\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_terms_done",
+  "description": "Side quest \"Generous Terms\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_bargain_done",
+  "description": "Side quest \"The Bargain That Would Not Break\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_debt_thanks_done",
+  "description": "Side quest \"A Debt of Thanks\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_edge_stones_done",
+  "description": "Side quest \"The Edge Stones Are Walking\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_child_back_done",
+  "description": "Side quest \"The Child Who Came Back\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_paths_done",
+  "description": "Side quest \"Paths That Remember\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_courtier_done",
+  "description": "Side quest \"A Courtier of the Winter Court\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_day_night_done",
+  "description": "Side quest \"Day or Night\" resolved",
+  "setBy": "quest"
+ },
+ {
+  "id": "evd_last_glade_guest_done",
+  "description": "Side quest \"A Guest at the Last Glade\" resolved",
+  "setBy": "quest"
  }
 ]
