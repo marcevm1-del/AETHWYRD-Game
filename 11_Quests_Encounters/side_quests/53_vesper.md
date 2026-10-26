@@ -56,7 +56,7 @@ race: Human
 region: reg_vesper
 settlement: Aldmere
 role: Old woman who knows the song
-backstory: A tiny, sharp-eyed woman of ninety who hums a lullaby her grandmother sang and who was stopped dead, at the market, when a visitor played her a recording of the red flowers' song.
+backstory: A tiny, sharp-eyed woman of ninety who hums a lullaby her grandmother sang and who was stopped dead, at the market, when a visitor played her a song-crystal of the red flowers' song.
 -->
 <!-- npc
 id: npc_cador_fell
@@ -178,6 +178,8 @@ backstory: A precise, white-haired historian who has spent a decade collecting w
 > ► **"Leave it unfinished."** — **TOBIAS:** "Perhaps. Some lessons wait."
 > ► **"I will keep it."** — **TOBIAS:** "Then it has a pupil again."
 
+**If the player rang the bell.** The small bell is heard again that night by the camp's sentries, three clear notes, from the direction of Willow Row. Nobody goes to look. In the morning a child's footprint, no bigger than a hand, is pressed in the red dust before the school door, pointing out.
+
 **Outcomes and receipt.**
 - Tobias publishes with the player's name beside his; the scholars' argument ends and a larger one begins.
 - **Receipt:** a child's slate in the Journal relic page (cosmetic), with a line of sums.
@@ -251,6 +253,10 @@ objectives:
 > ► **"Perhaps she will find you."** — **SORREL:** "Perhaps."
 > ► **"I cannot promise."** — **SORREL:** "That is honest. I like it."
 
+**If the player hummed the sound.** Sorrel is still for a long moment, then hums it back, and the blue paint on the door-edge seems, for an instant, to brighten. *"That was close,"* Sorrel says. *"Not the name. The way it was said."* The camp's sentries report a soft, bell-like humming on the Willow Row side for three nights afterwards.
+
+**If the player refused to promise.** Sorrel does not mind. *"Honest people are rarer than kind ones,"* it says. *"I have met one of each now."* It touches the player's sleeve with two cool fingers, and the glow of its hand lingers on the cloth for an hour.
+
 **Outcomes and receipt.**
 - Sorrel stays near the blue door and hums in the evenings. If the player promised to carry the message, a later scene shows a letter left for a woman at Aldmere's rain-gate.
 - **Receipt:** a small blue chip of paint from the door-edge (cosmetic).
@@ -322,6 +328,8 @@ objectives:
 > ► **"Do you want to go there?"** — **HESTER:** "At ninety? I'll send you."
 > ► **"Perhaps it was always singing."** — **HESTER:** "I'd like that to be true."
 
+**If the player picked a flower.** Its light goes out in the hand with a faint sigh, and the song stops across the whole garden for the length of a heartbeat. The petals do not wilt. Hester, told of it, is quiet, then says, *"Put it in water. They like water."* In her kitchen it opens, once, and sings one note.
+
 **Outcomes and receipt.**
 - Hester teaches the song to her neighbours' children. If the player picked a flower, it lights again, faintly, at night, on her sill, for a week.
 - **Receipt:** twelve notes of a lullaby in the Journal music page; no source.
@@ -391,6 +399,10 @@ objectives:
 > ► **"Perhaps."** — **CADOR:** "That's enough to copy for."
 > ► **"I don't know."** — **CADOR:** "Neither do I. That's why I copy."
 > ► **"No."** — **CADOR:** "I'd rather not hear it. But thank you."
+
+**If the player corrected a faded letter.** Cador frowns, then copies the correction and writes *(conj.)* beside it in small letters, a scholar's mark for a guess. *"The plate is the plate,"* he says. *"Your eyes are your own. Both go in the book."* He is not offended; he is only careful, as he is about everything.
+
+**If the player left a plate uncopied.** *Illegible* goes into the ledger with a small flourish that is almost a bow, and Cador adds the plate's number so that nobody searches for it twice.
 
 **Outcomes and receipt.**
 - The ledger is deposited with the guild's archivist, with the player's name as second copyist. If the player hung a lantern, it is lit when they next pass.
@@ -462,6 +474,10 @@ objectives:
 > ► **"Thank you for taking me."** — **GAWEN:** "Thank you for not falling."
 > ► **"Will you go again?"** — **GAWEN:** "Until the stones stop."
 > ► **"What was the table for?"** — **GAWEN:** "I never ask."
+
+**If the player jumped early.** The slab beneath them rocks, and Gawen catches the player's belt with a mutter of *"mules, mules."* Nobody falls. Afterwards he is cross for the length of one crossing and then, abruptly, laughs, and tells the story of his own first early jump, which ended in the sky.
+
+**If the player waited a beat longer.** The gap widens and they must cross a second, longer stone; Gawen says nothing, but at the next platform presses a boiled sweet into the player's hand, the pilot's mark of respect.
 
 **Outcomes and receipt.**
 - Gawen retrieves the marker and adds the player's name to his log. If the player entered the dining room, a later scene mentions a sixth plate that was washed, once, by hand.
@@ -536,6 +552,10 @@ objectives:
 > ► **"Will you meet again?"** — **BELLAMY:** "We'll write."
 > ► **"Safe road."** — **PETRONEL:** "And a quiet sky."
 
+**If the player added a fourth word.** The player's word goes into Petronel's prayer-book margin in a careful hand. Linnea reads it upside-down across the fire and says, *"Odd. I would have chosen that."* Bellamy, grudgingly, says the same. Petronel blushes, and writes both their names beside it.
+
+**If the fire is left to burn out.** In the grey hour before dawn the three sit with their cloaks over their knees and say nothing, and none of them has a creed to protect. That is, by their own testimony, the longest rest they have had in years.
+
 **Outcomes and receipt.**
 - The three leave without a settled answer. The player may add a fourth word, which Petronel records in the margin of his prayer-book.
 - **Receipt:** three words on a slip: *unknown, old, far.*
@@ -606,6 +626,10 @@ objectives:
 > ► **"Rest now."** — **WILMOT:** "Tomorrow's market day."
 > ► **"Do you remember who you are?"** — **WILMOT:** "A baker. What else is there?"
 
+**If the player told Wilmot the truth.** He is quiet, hands floury on the empty counter. *"I know, dear,"* he says again, gently. *"But the asking is the baking. If I stop, the street has nobody to say good morning to."* The player is left with the sense that the ghost has understood more than he lets on.
+
+**If the player asks about the Pell girls.** Wilmot glances at the empty doorway and lowers his voice. *"Lovely children. They always want the plum. Always short a penny."* He does not say more, and the player does not press.
+
 **Outcomes and receipt.**
 - Wilmot is gone each dusk and back each dawn. If the player shared the bun, the next dawn the street smells faintly of plum for an hour.
 - **Receipt:** a coin, warm, in the player's pocket, though they gave it away.
@@ -675,6 +699,10 @@ objectives:
 > ► **"What will you do with it?"** — **DESSA:** "Send it. Without commentary."
 > ► **"Will anyone go further?"** — **DESSA:** "Perhaps. Not by my map."
 > ► **"What do you think is there?"** — **DESSA:** "I think someone is expected."
+
+**If the player took one step past the line.** The light softens, as a person might lower their voice. The player feels no threat, only a clear sense of having stepped into someone's doorway. They step back, and the light brightens again, graciously. Dessa, watching, writes only: *"The ground is polite."*
+
+**If the player called out.** Nothing answers. But for the length of a breath the vesperite at the roadside lifts its head and turns toward the player, then bows its head again, as if in thanks for the manners.
 
 **Outcomes and receipt.**
 - The guild receives a map with a clear road and a blank. If the player stepped past the line, a faint warmth clings to their boots for a day.
@@ -747,6 +775,10 @@ objectives:
 > ► **"May I copy the mark for you?"** — **MARGIT:** "Please."
 > ► **"I'll look again."** — **MARGIT:** "Not on my account."
 
+**If the player added a mark beneath the others.** The chalk does not smear, however hard the dust blows. Margit, who comes to see it, touches the player's mark with one finger, then draws, beside it, with her own chalk, a small and rather bad lantern. *"He never could draw either,"* she says, and laughs, and then does not.
+
+**If the lintel is left untouched.** Margit stands before it a full hour in silence. When she comes away she says only, *"Thank you for leaving it as he left it,"* and hangs the second lantern in the archway, burning.
+
 **Outcomes and receipt.**
 - Margit stays at the way-camp a season, keeping the lantern. If the player added a mark beneath the others, she sets her own beside it before she leaves.
 - **Receipt:** a chalk rubbing of a lantern, a date and a small hand.
@@ -817,6 +849,10 @@ objectives:
 > ► **"Thank you."** — **THADDEUS:** "Thank *you.*"
 > ► **"What if I never change it?"** — **THADDEUS:** "Then it is yours."
 > ► **"Will you ever finish?"** — **THADDEUS:** "I hope not."
+
+**If the player says they remember it white.** Thaddeus writes *white* and does not underline it. *"You are the fourteenth,"* he says. *"The others were a sailor, a nun and a child. All sure. All different whites."* He puts the slip among its fellows, and the pile, for a moment, looks almost like a small drift of snow.
+
+**If the player says they do not remember.** *"Then you are the most honest of us,"* he says, and writes it in a larger hand than the rest.
 
 **Outcomes and receipt.**
 - Thaddeus's collection reaches nine hundred and one. The player's slip is the only one that could be added to or amended later.
