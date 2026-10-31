@@ -38,9 +38,38 @@ def decorate(c, cx, cy, w, d, zf, top, rise, ridge="x"):
         flag_line(c, (cx - w / 2, cy - d / 2 - 0.1, zf + min(H, 3.0) - 0.2), (cx + w / 2, cy - d / 2 - 0.1, zf + min(H, 3.0) - 0.2), False)
     if s.has("webs") and c.chance(0.7):
         webs(c, cx - w / 2, cy - d / 2, top)
-    if s.has("silk"):
+    if s.has("silk"):  # warm silk lanterns on every facade: two on the front, one by a corner of each other face
+        zl = min(H - 0.6, 2.4)
         for x in (-w / 4, w / 4):
-            K.wall_lantern(c, front, x, min(H - 0.6, 2.4))
+            silk_lantern(c, front, x, zl)
+        for face, L in (("right", d), ("back", w), ("left", d)):
+            silk_lantern(c, K.face_matrix(cx, cy, w, d, zf, face), L / 2 - 0.95, zl)
+    if s.has("facade_lanterns"):  # two glowing globe lanterns on every house front (Greymoor, Whisperwood)
+        # Kept towards the corners, clear of the door lantern (review fix). Door lanterns hang right of the door, so a narrow front (< 5.5 m) keeps only the left one.
+        off = max(w / 4, w / 2 - 0.75)
+        for x in ((-off, off) if w >= 5.5 else (-off,)):
+            silk_lantern(c, front, x, min(H - 0.6, 2.3))
+    if s.has("bronze_bands"):  # Iron Hold: broad bronze bands (0.44 m) at every floor line and under the eaves
+        n = max(1, int(round(H / s.floor_h)))
+        for k in range(1, n + 1):
+            z = zf + (k * H / n if k < n else H - 0.22)
+            c.g.rbox((w + 0.26, d + 0.26, 0.44), "trim", None, 0.05, c.seg(), (cx, cy, z))
+    if s.has("cloth_bands"):  # wind-plains: a red felt band under the eaves over a narrower blue one
+        c.g.rbox((w + 0.22, d + 0.22, 0.32), "cloth_a", None, 0.04, 1, (cx, cy, top - 0.2))
+        c.g.rbox((w + 0.2, d + 0.2, 0.16), "cloth_b", None, 0.03, 1, (cx, cy, top - 0.48))
+    if s.has("facade_banners") and H >= 2.6 and "own_banners" not in c.notes:  # a banner on every front (Fanghold,
+        # Aldmere), unless the archetype hangs its own (tavern, guild hall, watchtower, barracks: review fix)
+        xs = (-w / 2 + 0.9, w / 2 - 0.9) if w >= 8.5 else (-w / 2 + 0.9,)
+        for x in xs:
+            K.banner(c, front, x, H - 0.35, 1.6, 0.6)
+    if s.has("climbing_ivy"):  # Whisperwood: ivy climbing the front and one side
+        if c.chance(0.7):
+            K.ivy(c, front, w, H * 0.85)
+        if c.chance(0.5):
+            K.ivy(c, right, d, H * 0.85)
+    if s.has("civic_finials") and rise > 0 and w * d >= 115:  # Aldmere: finials on civic-sized roofs
+        for x, y in ends:
+            K.finial(c, T(x, y, ridge_z), 1.1)
     if s.has("nets") and c.chance(0.7):
         net(c, right, d, H)
     if s.has("buoys") and c.chance(0.7):
@@ -74,6 +103,18 @@ def decorate(c, cx, cy, w, d, zf, top, rise, ridge="x"):
             x = cx + (w / 2 + 0.5) * max(-1, min(1, math.cos(a) * 1.4))
             y = cy + (d / 2 + 0.5) * max(-1, min(1, math.sin(a) * 1.4))
             c.g.inst("tuft|leaf%s" % c.rng.choice(["", "~3", "~4"]), T(x, y, 0) @ RZ(c.rng.uniform(0, 360)))
+
+
+def silk_lantern(c, m, x, z):
+    """A round silk lantern on an iron bracket, with a cloth cap and tassel (Umbravel)."""
+    g = c.g
+    g.rbox((0.06, 0.5, 0.06), "metal", m, 0.015, 1, (x, -0.25, z + 0.42))
+    g.cylinder(0.01, 0.18, "metal", m @ T(x, -0.5, z + 0.24), segs=4)
+    g.lathe([(0.0, -0.3), (0.13, -0.27), (0.22, -0.12), (0.24, 0.0), (0.22, 0.12), (0.13, 0.27), (0.0, 0.3)], "lamp",
+            m @ T(x, -0.5, z - 0.08), segs=12)
+    for zz in (0.22, -0.38):
+        g.cylinder(0.11, 0.08, "cloth_a", m @ T(x, -0.5, z + zz), segs=10, bevel=0.02)
+    g.box((0.04, 0.04, 0.26), "cloth_a", m, (x, -0.5, z - 0.55))
 
 
 def gear(c, m, x, z, r):

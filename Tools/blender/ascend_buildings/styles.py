@@ -28,6 +28,8 @@ BASE_PALETTE = {
     "flower_a": (0.92, 0.22, 0.28), "flower_b": (0.98, 0.55, 0.75), "flower_c": (1.00, 0.85, 0.25), "flower_d": (0.45, 0.55, 0.95),
     "snow": (0.94, 0.96, 1.00), "glow": (0.35, 0.95, 0.90), "gold": (1.00, 0.76, 0.28), "ground": (0.45, 0.38, 0.28),
     "wood_light": (0.62, 0.45, 0.28), "thatch": (0.78, 0.62, 0.32),
+    # lit window panes (emissive: the key contains "glow") and forge embers on chimney caps (emissive: "ember")
+    "window_glow": (1.00, 0.72, 0.36), "ember": (1.00, 0.50, 0.12),
 }
 
 DEFAULTS = dict(
@@ -36,6 +38,11 @@ DEFAULTS = dict(
     roof_keys=("roof_a",), ridge="tile", curve=0.0, window="shutter", door="plank", floor_h=2.9, jetty=0.0,
     chimney="stone", band="beam", corner="post", extras=(), ruin=0.0, snow=False, remap={}, stilt_h=1.8,
     window_w=0.95, window_h=1.15, parapet=False, palette={},
+    # window_glass: the palette key for window panes ("window_glow" lights them). banner_scale: banner size factor.
+    # cover_mix: (cover, roof_key, chance, ridge) gives that share of a region's buildings another roof covering.
+    window_glass="glass", banner_scale=1.0, cover_mix=None,
+    # ember_cap: forge chimneys carry a glowing coal bed and grate instead of the plain lamp slab (Iron Hold).
+    ember_cap=False,
 )
 
 FAMILIES = {
@@ -73,7 +80,9 @@ FAMILIES = {
         remap={"cottage": "mushroom_house", "house": "mushroom_house", "townhouse": "mushroom_tower",
                "shop": "mushroom_shop", "inn": "mushroom_cluster", "tavern": "mushroom_cluster",
                "guild_hall": "mushroom_cluster", "temple": "mushroom_tower", "watchtower": "mushroom_tower",
-               "library": "mushroom_tower", "granary": "mushroom_house"},
+               "library": "mushroom_tower", "granary": "mushroom_house", "smithy": "mushroom_smithy",
+               "barn": "mushroom_barn", "stable": "mushroom_stable", "gatehouse": "mushroom_gate",
+               "wall_segment": "hedge_wall"},
         palette={"wall_a": (0.94, 0.90, 0.80), "wall_b": (0.90, 0.84, 0.70), "roof_a": (0.82, 0.18, 0.15),
                  "roof_b": (0.62, 0.36, 0.20), "roof_c": (0.55, 0.32, 0.62), "accent": (0.98, 0.96, 0.90),
                  "door": (0.50, 0.32, 0.18)},
@@ -90,9 +99,11 @@ FAMILIES = {
     "steppe": dict(
         label="Wind-plains (felt yurts, stone forts)", walls="rubble", wall_keys=("wall_a", "wall_b"), base="plinth",
         base_h=0.3, roof="gable", pitch=30, cover="plank", roof_keys=("roof_a", "roof_b"), ridge="board", round_roof="yurt",
-        window="slit", door="double", chimney="none", band="beam", corner="post", extras=("banners", "ropes"),
+        window="slit", door="double", chimney="none", band="beam", corner="post",
+        extras=("banners", "ropes", "cloth_bands", "facade_banners"), banner_scale=2.0,
         remap={"cottage": "yurt", "house": "yurt_large"},
-        palette={"wall_a": (0.70, 0.62, 0.50), "wall_b": (0.62, 0.55, 0.45), "stone": (0.66, 0.60, 0.50),
+        # red cloth_a / blue cloth_b bands on eaves and door frames of every building, banners 2x, stone #B8A58A
+        palette={"wall_a": (0.76, 0.68, 0.55), "wall_b": (0.68, 0.61, 0.50), "stone": (0.72, 0.65, 0.54),
                  "roof_a": (0.45, 0.33, 0.22), "roof_b": (0.38, 0.30, 0.22), "cloth_a": (0.78, 0.20, 0.14),
                  "cloth_b": (0.20, 0.36, 0.66), "accent": (0.90, 0.86, 0.76)},
     ),
@@ -121,7 +132,7 @@ FAMILIES = {
         base_h=0.7, roof="curved", tower_roof="curved", round_roof="curved", pitch=38, curve=0.6, overhang=0.9,
         cover="barrel", roof_keys=("roof_a", "roof_b"), ridge="raised", window="lattice", door="sliding", floor_h=3.0,
         chimney="none", band="beam", corner="column", extras=("paper_lanterns", "noren"),
-        remap={"temple": "pagoda", "gatehouse": "torii_gate"},
+        remap={"temple": "pagoda", "gatehouse": "torii_gate", "granary": "kura"},  # kura: raised white storehouse (B1)
         palette={"wall_a": (0.95, 0.93, 0.88), "trim": (0.26, 0.16, 0.10), "trim_dark": (0.16, 0.10, 0.07),
                  "roof_a": (0.24, 0.28, 0.34), "roof_b": (0.42, 0.30, 0.22), "stone": (0.66, 0.64, 0.60),
                  "accent": (0.85, 0.22, 0.12), "cloth_a": (0.18, 0.24, 0.42), "lamp": (1.0, 0.62, 0.35),
@@ -164,7 +175,10 @@ FAMILIES = {
         label="Glass-desert adobe (flat roofs, domes, vigas)", walls="adobe", wall_keys=("wall_a", "wall_b", "wall_c"),
         base="none", roof="flat", tower_roof="dome", round_roof="dome", parapet=True, cover="plaster",
         roof_keys=("roof_a",), ridge="none", window="horseshoe", door="arched", floor_h=3.1, chimney="none", band="none",
-        corner="none", extras=("vigas", "awnings", "domes", "pots"),
+        corner="none", extras=("vigas", "awnings", "pots"),
+        # domes only on civic and temple types (<= 1 in 4): towers of guild/town hall and library, domed_hall, and
+        # the remapped temple and bathhouse below. Flat roofs no longer get a dome each.
+        remap={"temple": "domed_temple", "bathhouse": "domed_bathhouse"},
         palette={"wall_a": (0.88, 0.72, 0.52), "wall_b": (0.82, 0.62, 0.44), "wall_c": (0.92, 0.82, 0.66),
                  "roof_a": (0.94, 0.90, 0.82), "trim": (0.42, 0.28, 0.16), "shutter": (0.14, 0.55, 0.66),
                  "door": (0.20, 0.40, 0.55), "cloth_a": (0.86, 0.36, 0.20), "cloth_b": (0.95, 0.88, 0.70),
@@ -174,7 +188,8 @@ FAMILIES = {
         label="Garden cities (ochre brick, turquoise domes, iwans)", walls="brick", wall_keys=("wall_a",), base="plinth",
         base_h=0.45, roof="flat", tower_roof="onion", round_roof="dome", parapet=True, cover="glaze",
         roof_keys=("roof_a", "roof_b"), ridge="none", window="pointed", door="pointed", floor_h=3.3, chimney="none",
-        band="tile", corner="column", extras=("tile_bands", "domes", "finials", "fountains"),
+        band="tile", corner="column", extras=("tile_bands", "finials", "fountains"),
+        remap={"temple": "domed_temple", "bathhouse": "domed_bathhouse"},  # onions on civic and temple types only
         palette={"wall_a": (0.84, 0.66, 0.44), "stone": (0.84, 0.66, 0.44), "mortar": (0.92, 0.86, 0.74),
                  "roof_a": (0.10, 0.56, 0.62), "roof_b": (0.12, 0.30, 0.62), "accent": (0.10, 0.56, 0.62),
                  "accent_b": (0.95, 0.92, 0.85), "trim": (0.12, 0.30, 0.62), "frame": (0.10, 0.40, 0.50),
@@ -221,11 +236,11 @@ FAMILIES = {
         label="Dark spires (black stone, pointed arches, silk lanterns)", walls="ashlar", wall_keys=("stone",),
         base="plinth", base_h=0.6, roof="gable", tower_roof="spire", pitch=62, overhang=0.3, cover="slate",
         roof_keys=("roof_a", "roof_b"), ridge="tile", window="pointed", door="pointed", floor_h=3.3, chimney="stone",
-        band="stone", corner="buttress", extras=("lanterns", "finials", "webs"),
+        band="stone", corner="buttress", extras=("lanterns", "finials", "webs"), window_glass="window_glow",
         palette={"stone": (0.30, 0.27, 0.34), "stone_dark": (0.20, 0.18, 0.23), "mortar": (0.16, 0.15, 0.18),
                  "roof_a": (0.24, 0.20, 0.30), "roof_b": (0.18, 0.16, 0.22), "glass": (0.70, 0.45, 1.0),
                  "lamp": (0.78, 0.48, 1.0), "frame": (0.16, 0.14, 0.18), "door": (0.25, 0.14, 0.18),
-                 "cloth_a": (0.45, 0.18, 0.55), "glow": (0.78, 0.48, 1.0)},
+                 "cloth_a": (0.45, 0.18, 0.55), "glow": (0.78, 0.48, 1.0), "window_glow": (0.78, 0.48, 1.0)},
     ),
     "celestial": dict(
         label="Heavenfolk marble (gold trim, domes, columns)", walls="ashlar", wall_keys=("stone",), base="platform",
@@ -248,9 +263,25 @@ FAMILIES = {
 
 # Region -> family plus overrides. Order and names follow 10_World/gazetteer.md.
 REGIONS = {
-    "aldmere": ("Aldmere", "storybook", dict(roof_keys=("roof_b", "roof_d", "roof_a"), palette={"roof_d": (0.32, 0.36, 0.44)})),
-    "whisperwood": ("Whisperwood", "storybook", {}),
-    "greymoor": ("Greymoor", "fenland", {}),
+    # Aldmere, the royal valley: ashlar ground floors, slate roofs dominant, royal blue #3357AD and gold banners,
+    # finials on civic-sized buildings. Pitch 54, turrets and flower boxes stay (review P1).
+    "aldmere": ("Aldmere", "storybook", dict(ground_walls="ashlar", cover="slate", roof_keys=("roof_d", "roof_d", "roof_a"),
+                                            extras=("flower_boxes", "lanterns", "weathervane", "facade_banners", "civic_finials"), banner_scale=1.7,
+                                            palette={"roof_d": (0.30, 0.34, 0.42), "roof_a": (0.24, 0.36, 0.62),
+                                                     "stone": (0.84, 0.81, 0.74), "stone_dark": (0.66, 0.63, 0.58),
+                                                     "mortar": (0.62, 0.60, 0.56), "cloth_a": (0.20, 0.34, 0.68),
+                                                     "cloth_b": (0.95, 0.78, 0.30)})),
+    # Whisperwood, the forest village: timber, moss and lanterns, thatch on 1 roof in 3, ivy, warmer plaster.
+    "whisperwood": ("Whisperwood", "storybook", dict(
+        extras=("flower_boxes", "lanterns", "weathervane", "ivy", "climbing_ivy", "moss", "facade_lanterns"),
+        cover_mix=("thatch", "thatch", 1.0 / 3.0, "roll"),
+        palette={"wall_a": (0.95, 0.85, 0.64), "wall_b": (0.96, 0.78, 0.55), "wall_c": (0.94, 0.73, 0.60),
+                 "wall_d": (0.92, 0.82, 0.62), "wall_e": (0.86, 0.84, 0.62), "trim": (0.34, 0.20, 0.10),
+                 "thatch": (0.76, 0.60, 0.30)})),
+    # Greymoor: wall_c lifted to #8A7A62, two green lanterns (#BFFF8C) per house front, painted doors #4F7A6A.
+    "greymoor": ("Greymoor", "fenland", dict(extras=("lanterns", "moss", "ropes", "facade_lanterns"),
+                                            palette={"wall_c": (0.54, 0.48, 0.38), "door": (0.31, 0.48, 0.42),
+                                                     "lamp": (0.52, 1.0, 0.26)})),  # #BFFF8C as linear
     "labyrinth_upper": ("Great Labyrinth (Floors 1-40)", "ancient", {}),
     "labyrinth_deep": ("Great Labyrinth (Floors 41-90)", "ancient", dict(ruin=0.4, palette={"glow": (0.25, 0.75, 1.0), "stone": (0.36, 0.44, 0.48)})),
     "labyrinth_abyss": ("Great Labyrinth (Floors 91-120)", "ancient", dict(palette={"glow": (1.0, 0.92, 0.65), "stone": (0.30, 0.30, 0.34)})),
@@ -258,7 +289,13 @@ REGIONS = {
     "mossdeep": ("Mossdeep", "mushroom", {}),
     "lirian": ("Lirian", "lagoon", {}),
     "fanghold": ("Fanghold", "steppe", {}),
-    "iron_hold": ("Iron Hold", "dwarven", {}),
+    # Iron Hold (review B3): basalt kept; bronze bands 0.44 m (2x the old 0.22 band) replace the stone band; copper
+    # roof_b on 1 roof in 3; forge-orange #FF8C26 on runes, windows and lamps; forge chimneys carry an ember cap
+    # (construct.chimney). Region-only, so Dragon Spine keeps the plain dwarven family (review fix).
+    "iron_hold": ("Iron Hold", "dwarven", dict(
+        band="none", extras=("runes", "lanterns", "buttresses", "bronze_bands"), window_glass="window_glow",
+        roof_keys=("roof_a", "roof_a", "roof_b"), ember_cap=True,
+        palette={"roof_b": (0.72, 0.45, 0.20), "window_glow": (1.0, 0.55, 0.15), "ember": (1.0, 0.55, 0.15)})),
     "moraveil": ("Moraveil", "storybook", dict(palette={"wall_a": (0.92, 0.84, 0.62), "roof_a": (0.62, 0.36, 0.20)})),
     "strife_marches": ("Strife Marches", "storybook", dict(ground_walls="rubble", roof_keys=("roof_d", "roof_b"),
                                                           palette={"wall_a": (0.84, 0.80, 0.70), "wall_b": (0.80, 0.74, 0.64)})),
@@ -269,7 +306,10 @@ REGIONS = {
     "shen_lu": ("Shen-Lu", "shenlu", {}),
     "haneul": ("Haneul", "haneul", {}),
     "whitewater_reach": ("Whitewater Reach", "nordic", dict(cover="plank", palette={"wall_a": (0.50, 0.46, 0.42), "roof_a": (0.40, 0.42, 0.46)})),
-    "umbravel": ("Umbravel", "gothic", dict(extras=("lanterns", "webs", "silk"), palette={"lamp": (1.0, 0.82, 0.55)})),
+    # Umbravel: stone #4C4557 -> #5A5068, lit violet windows, violet silk lanterns on every facade (ornaments.silk)
+    "umbravel": ("Umbravel", "gothic", dict(extras=("lanterns", "webs", "silk"),
+                                            palette={"lamp": (0.55, 0.32, 1.0), "stone": (0.35, 0.31, 0.41),
+                                                     "stone_dark": (0.25, 0.22, 0.29), "mortar": (0.20, 0.18, 0.23)})),
     "sunscar": ("Sunscar", "desert", {}),
     "goldmere_coast": ("Goldmere Coast", "coastal", {}),
     "zarvan": ("Zarvan", "garden", {}),
@@ -295,7 +335,7 @@ REGIONS = {
     "lustrine_shores": ("Lustrine Shores", "coastal", dict(palette={"lamp": (0.65, 0.82, 1.0), "glass": (0.65, 0.82, 1.0)})),
     "quaking_lands": ("Quaking Lands", "fenland", dict(base="plinth", extras=("ropes", "lanterns"))),
     "aurumdeep": ("Aurumdeep", "whitestone", dict(ruin=0.3, palette={"stone": (0.82, 0.70, 0.45), "roof_a": (0.85, 0.62, 0.22)})),
-    "nox_dominion": ("Nox Dominion", "gothic", dict(palette={"stone": (0.16, 0.14, 0.16), "glass": (1.0, 0.30, 0.15), "lamp": (1.0, 0.35, 0.15), "glow": (1.0, 0.35, 0.15)})),
+    "nox_dominion": ("Nox Dominion", "gothic", dict(palette={"stone": (0.16, 0.14, 0.16), "glass": (1.0, 0.30, 0.15), "lamp": (1.0, 0.35, 0.15), "glow": (1.0, 0.35, 0.15), "window_glow": (1.0, 0.30, 0.15)})),
     "calamity_steppe": ("Calamity Steppe", "steppe", {}),
     "the_maw": ("The Maw", "steppe", dict(palette={"wall_a": (0.50, 0.44, 0.40)})),
     "root_of_the_world": ("Root of the World", "ancient", dict(extras=("runes", "crystals"), palette={"glow": (0.75, 0.85, 1.0)})),

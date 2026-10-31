@@ -506,6 +506,15 @@ def mimic(b, look):
     b.mouth = V(0, -0.2, 0.36)
 
 
+MUSHROOM_WORDS = ("mushroom", "puffcap", "fungus", "spore", "myc", "toadstool")
+
+
+def is_mushroom(look):
+    """Mushrooms are matched on the name only: generic body wording ("mushroom-capped walking body") is shared by treants."""
+    name = getattr(look, "name", "").lower()
+    return any(w in name for w in MUSHROOM_WORDS)
+
+
 def plant(b, look, walker=True):
     b.kind = "plant"
     if walker:
@@ -529,6 +538,15 @@ def plant(b, look, walker=True):
     b.tail_root, b.tail_dir = V(0, 0.12, 0.25), V(0, 1, 0)
     b.wing_root = b.head + V(0, 0, 0.08)
     b.mouth = b.head + V(0, -b.head_r * 0.9, -b.head_r * 0.3)
+    if is_mushroom(look):
+        # Mushroom folk: a round face under a raised cap (features.plant_crown lifts the rim above the brow), with big
+        # low-set eyes snapped onto the real skull surface so the preview camera (yaw -35, pitch 14) sees both.
+        b.head, b.head_r = b.head + V(0, -0.02, 0), 0.15  # a rounder, wider face than the plain stalk top
+        b.ball(b.head, b.head_r * 0.95)
+        cute = look.menace in ("soft", "animal")
+        b.eye_size, b.eye_spread, b.eye_up = (0.38, 22, 2) if cute else (0.3, 24, 4)
+        b.eye_snap = True
+        b.mouth = b.head + V(0, -b.head_r * 0.9, -b.head_r * 0.38)
 
 
 def swarm(b, look):

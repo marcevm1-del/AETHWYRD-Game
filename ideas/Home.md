@@ -57,6 +57,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/10_World/cultural_presence_and_named_population|10_World/cultural_presence_and_named_population]]
 - [[Design Bible/10_World/exploration_and_discovery|10_World/exploration_and_discovery]]
 - [[Design Bible/10_World/gazetteer|10_World/gazetteer]]
+- [[Design Bible/10_World/physical_geography|10_World/physical_geography]]
 - [[Design Bible/10_World/reactive_world_and_field_journal|10_World/reactive_world_and_field_journal]]
 - [[Design Bible/10_World/world|10_World/world]]
 - [[Design Bible/10_World/world_map_concept|10_World/world_map_concept]]

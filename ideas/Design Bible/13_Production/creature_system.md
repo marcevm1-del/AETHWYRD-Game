@@ -34,6 +34,7 @@ From `reports/design_review_2026-10-25.md`, checked with before/after renders:
   - **Birds:** a tapered two-tone beak (hooked for raptors) and wings folded along the flanks as overlapping feathers.
   - **Spread feather wings:** one attached fan.
   - **Plants:** mushrooms get a spotted cap with gills, trees a leafy canopy, flower monsters petals, and the rest a leaf crown.
+  - **Mushroom faces (rule):** a mushroom's face must read from the preview camera (yaw -35, pitch 14). The cap rim sits above the brow (head + 0.95 head radii) and reaches no further than 2.3 head radii, so the line of sight from the eyes passes under it. Mushrooms have a rounder head ball, eyes snapped onto the real skull surface (`eye_snap`, `features.surface_hit`), no moss or pods on the face, and the metaball `cap` blob is skipped (it swallowed the face). Cute ones (soft or animal menace) get big low eyes (0.38, 22 degrees) and a small open smile (`features.mushroom_mouth`); the spore lords keep their teeth. Mushrooms are matched on the name (`plans.is_mushroom`), so treants, flowers and the Mandrake are untouched.
 - **Slime face decal (C4):** now a small round mouth.
 
 ## Using it in Blender
@@ -68,5 +69,5 @@ Add `-- --families Slimes,Beasts` or `-- --ids mon_goblin` to build a subset.
 - **Rigs and poses.** These are static T- and A-poses; `Data/Monsters/rigs.json` and `Tools/blender/build_rig.py` would be the next step.
 - **Unity.** These are high-poly sources, not game meshes. Going into Unity needs a baked low-poly with normal maps, a rig and LODs.
 - **Description detail.** Some recipe parts don't fit their animal (the data gives the Forest Wolf antlers). The generator follows the data; fix it in `species.json`.
-- **Still open from the review:** biped limb taper, hands and a breaking shape per family (C5); mushroom faces sit under their caps.
+- **Still open from the review:** biped limb taper, hands and a breaking shape per family (C5). (Mushroom faces under their caps: fixed 2026-10-31.)
 - **Coverage.** The rarer body plans (aberrations, swarms, cephalopods, plants) are simpler than the quadrupeds and bipeds. The giants (Behemoth Ascendant, Hive Mother) are modelled at their true size, up to 2 km.
