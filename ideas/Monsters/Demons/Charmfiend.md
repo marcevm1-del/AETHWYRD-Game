@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,498 tris · 0.691 × 0.736 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Charmfiend is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a beautiful porcelain mask hiding a hollow face. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
+> The Charmfiend is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in brimstone red, with violet markings. Its most striking feature is a beautiful porcelain mask hiding a hollow face. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#b72f3e` `#662b34` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

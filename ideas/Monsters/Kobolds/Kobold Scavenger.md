@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (3,122 tris · 0.453 × 0.533 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kobold Scavenger is a small creature with a hunched, wiry humanoid frame, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show a dog-like head with a chipped snout and a sack of stolen tools. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
+> The Kobold Scavenger is a small creature with a hunched, wiry humanoid frame, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue. Guild sketches always show a dog-like head with a chipped snout and a sack of stolen tools. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#57728c` `#394a5d` `#8ab1de` · triangle-based silhouette, sharp asymmetric spikes

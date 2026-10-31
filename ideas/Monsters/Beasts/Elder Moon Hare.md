@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,330 tris · 0.309 × 0.8 × 0.515 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Moon Hare is a small creature with a small, quick four-legged body, about 0.8 m long. Its coat is smooth and clean, colored in warm gold and pearl white. Guild sketches always show white fur that glows under the full moon. It has wide curious eyes with star-shaped highlights. Battle-worn plates and trophies hang from its body. It waddles, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Moon Hare is a small creature with a small, quick four-legged body, about 0.8 m long. Its coat is smooth and clean, colored in cream, with gold markings. Guild sketches always show white fur that glows under the full moon. It has wide curious eyes with star-shaped highlights. Battle-worn plates and trophies hang from its body. It waddles, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `holy_motes` · palette `#d6cda7` `#998f6f` `#ffd166` · circle-based, soft silhouette

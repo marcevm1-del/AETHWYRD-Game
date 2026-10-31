@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,742 tris · 0.691 × 0.766 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Diego Alvarez, Voice of the Choir of Chains is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for a Veilborn con man in a red silk coat, smiling like a salesman. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
+> The Diego Alvarez, Voice of the Choir of Chains is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in leather browns and dull steel, with crimson markings. Look for a Veilborn con man in a red silk coat, smiling like a salesman. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `blood_mist` · palette `#966839` `#62666f` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

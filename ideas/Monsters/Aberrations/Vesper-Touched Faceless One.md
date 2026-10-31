@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (2,820 tris · 2.068 × 2.11 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Faceless One is a person-sized creature with an asymmetric body with too many limbs, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Look for a smooth blank face that slowly learns to look like yours. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by warped air, as if space bends around it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Faceless One is a person-sized creature with an asymmetric body with too many limbs, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in mauve, with violet-edged markings. Look for a smooth blank face that slowly learns to look like yours. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by warped air, as if space bends around it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `void_distortion` · palette `#8f6e89` `#60495b` `#8a7cff` · broken symmetry, mimicry, audio-first reveal

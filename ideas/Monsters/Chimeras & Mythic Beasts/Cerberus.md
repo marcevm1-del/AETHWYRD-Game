@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,370 tris · 1.289 × 5 × 2.908 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cerberus is a huge creature with a long-legged predatory quadruped build, about 5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is three heads with three different moods. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Cerberus is a huge creature with a long-legged predatory quadruped build, about 5 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ember-orange markings. Its most striking feature is three heads with three different moods. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `embers_heat_haze` · palette `#765b3e` `#4f412c` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies]
 
 > [!note] 3D model: procedural blockout in Unity (2,606 tris · 0.976 × 1.605 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Rogue Mage is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show burnt academy robes and ink-stained fingers. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
+> The Rogue Mage is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in leather browns and dull steel, with ember-orange markings. Guild sketches always show burnt academy robes and ink-stained fingers. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `embers_heat_haze` · palette `#864c34` `#575e63` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

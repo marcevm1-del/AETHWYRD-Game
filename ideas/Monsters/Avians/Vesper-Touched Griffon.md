@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (3,374 tris · 0.773 × 3 × 1.745 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Griffon is a large creature with a powerful four-legged hunter's body, about 3 m long. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe an eagle's front and a lion's back. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by swirling leaves and a constant breeze. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Griffon is a large creature with a powerful four-legged hunter's body, about 3 m long. Its plumage is rough, scarred and spiked, colored in crow-black, with pale jade markings. Survivors describe an eagle's front and a lion's back. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by swirling leaves and a constant breeze. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#4e505a` `#404148` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

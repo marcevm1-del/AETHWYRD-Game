@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,560 tris · 1.075 × 1.977 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Moon Beast is a large creature with a lean humanoid frame, about 2.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is fur that ripples like oil under moonlight. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Moon Beast is a large creature with a lean humanoid frame, about 2.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in black-brown, with violet markings. Its most striking feature is fur that ripples like oil under moonlight. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `shadow_wisps` · palette `#5f4943` `#463b3f` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

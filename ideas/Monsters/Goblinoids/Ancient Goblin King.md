@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,170 tris · 3.607 × 2.391 × 4.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Goblin King is a large creature with a giant, barrel-chested humanoid body, about 4.2 m tall. Its skin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe throne-backed armor and a crown of hammered coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Goblin King is a large creature with a giant, barrel-chested humanoid body, about 4.2 m tall. Its skin is rough, scarred and spiked, colored in moss green and leather brown, with ochre markings. Survivors describe throne-backed armor and a crown of hammered coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `rough_skin_leather` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `rough_skin_leather` · VFX `rock_debris` · palette `#779f3f` `#7e4330` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

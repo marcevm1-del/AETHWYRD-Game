@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (1,698 tris · 0.37 × 0.342 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Shadow Wisp is a tiny creature with a floating, cloth-like shape, about 0.4 m tall. Its smoke-like body is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe a flickering smudge of darkness. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by shadows that lean toward it.
+> The Shadow Wisp is a tiny creature with a floating, cloth-like shape, about 0.4 m tall. Its smoke-like body is rough, scarred and spiked, colored in smoky violet. Survivors describe a flickering smudge of darkness. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_floating` · mesh `floating_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#655b8c` `#544a79` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

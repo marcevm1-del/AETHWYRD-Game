@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (2,464 tris · 1.656 × 1.634 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Skinwalker Mimic is a person-sized creature with an asymmetric body with too many limbs, about 1.8 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. It calls you in your companion's voice. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It crawls across ceilings, surrounded by shadows that lean toward it.
+> The Skinwalker Mimic is a person-sized creature with an asymmetric body with too many limbs, about 1.8 m tall. Its skin is stretched, stitched and constantly shifting, colored in mauve, with violet markings. It calls you in your companion's voice. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It crawls across ceilings, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#7f6482` `#544257` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

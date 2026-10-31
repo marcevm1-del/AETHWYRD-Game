@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,742 tris · 0.845 × 0.937 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Bog Werewolf is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
+> The Bog Werewolf is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with sickly green markings. Look for a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `toxic_fog` · palette `#7a4f40` `#52392e` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

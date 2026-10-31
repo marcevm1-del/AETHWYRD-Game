@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,336 tris · 0.902 × 3.5 × 2.035 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Bandit Bear is a large creature with a heavy, muscular quadruped frame, about 3.5 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Guild sketches always show a dark mask-like band across its eyes. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Bandit Bear is a large creature with a heavy, muscular quadruped frame, about 3.5 m long. Its coat is weathered and natural, colored in ash-grey. Guild sketches always show a dark mask-like band across its eyes. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8b8884` `#5b5955` `#cbc8c1` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (4,152 tris · 3.523 × 4 × 5.389 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vel'thara, the Web Queen is a large creature with an eight-legged arachnid body, about 4 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a crown of spider-silk and eight jeweled eyes above Umbravel's markets. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
+> The Vel'thara, the Web Queen is a large creature with an eight-legged arachnid body, about 4 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in amber, with violet markings. Its most striking feature is a crown of spider-silk and eight jeweled eyes above Umbravel's markets. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#c0842e` `#7a521c` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

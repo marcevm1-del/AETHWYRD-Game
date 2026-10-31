@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,274 tris · 10.386 × 12.8 × 7.024 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Arachne Matriarch is a huge creature with a bulbous spider frame on long jointed legs, about 12.8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a crown of silk and eight eyes like jewels. It has eyes that never blink. The air distorts slightly around its outline. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Arachne Matriarch is a huge creature with a bulbous spider frame on long jointed legs, about 12.8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in glossy brown, with violet markings. Guild sketches always show a crown of silk and eight eyes like jewels. It has eyes that never blink. The air distorts slightly around its outline. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#815733` `#533822` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

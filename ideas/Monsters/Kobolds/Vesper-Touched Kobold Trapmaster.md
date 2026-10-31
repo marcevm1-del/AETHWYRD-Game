@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,490 tris · 0.356 × 0.455 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Kobold Trapmaster is a small creature with a small, compact humanoid body, about 1 m tall. Its mangy fur is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Its most striking feature is a harness of gears, springs and tripwires. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Kobold Trapmaster is a small creature with a small, compact humanoid body, about 1 m tall. Its mangy fur is patchy and subtly wrong, as if assembled from memory, colored in rust-red, with crimson markings. Its most striking feature is a harness of gears, springs and tripwires. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `blood_mist` · palette `#a95a36` `#673522` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

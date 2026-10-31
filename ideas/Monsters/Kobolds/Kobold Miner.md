@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,494 tris · 0.445 × 0.435 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kobold Miner is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a candle-helmet and a pick worn smooth from use. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
+> The Kobold Miner is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is weathered and natural, colored in rust-red, with ochre markings. Survivors describe a candle-helmet and a pick worn smooth from use. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `rock_debris` · palette `#a56535` `#643b21` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

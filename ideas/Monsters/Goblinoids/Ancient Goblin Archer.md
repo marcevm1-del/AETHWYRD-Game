@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (3,302 tris · 0.755 × 0.888 × 1.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Goblin Archer is a person-sized creature with a small, compact humanoid body, about 1.5 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show a crooked bow strung with gut and a quiver of bone-tipped arrows. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Goblin Archer is a person-sized creature with a small, compact humanoid body, about 1.5 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Guild sketches always show a crooked bow strung with gut and a quiver of bone-tipped arrows. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#83966f` `#5e4934` `#b5cf9a` · triangle-based silhouette, sharp asymmetric spikes

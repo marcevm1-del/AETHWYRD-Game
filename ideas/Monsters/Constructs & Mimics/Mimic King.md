@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (758 tris · 5.906 × 6.36 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mimic King is a huge creature with a disguised body pretending to be furniture, about 6 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Its most striking feature is a treasure vault that walks on a hundred stolen legs. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
+> The Mimic King is a huge creature with a disguised body pretending to be furniture, about 6 m tall. Its surface is stretched, stitched and constantly shifting, colored in riveted iron. Its most striking feature is a treasure vault that walks on a hundred stolen legs. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#737a82` `#50565d` `#9aa2ae` · broken symmetry, mimicry, audio-first reveal

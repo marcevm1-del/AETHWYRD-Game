@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (2,850 tris · 1.463 × 2.408 × 2.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Skeleton is a large creature with a lean humanoid frame, about 2.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show yellowed bones held together by blue grave-light. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Skeleton is a large creature with a lean humanoid frame, about 2.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in bleached bone and grave-cloth, with violet markings. Guild sketches always show yellowed bones held together by blue grave-light. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#e4d0ba` `#92806e` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

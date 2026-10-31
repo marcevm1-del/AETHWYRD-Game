@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (4,334 tris · 1.361 × 1.4 × 1.475 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cavern Spider is a person-sized creature with an eight-legged arachnid body, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show green-striped legs and dripping fangs. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
+> The Cavern Spider is a person-sized creature with an eight-legged arachnid body, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in amber, with ochre markings. Guild sketches always show green-striped legs and dripping fangs. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#b7742c` `#74481b` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

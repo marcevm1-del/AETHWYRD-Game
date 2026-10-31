@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,330 tris · 0.232 × 0.6 × 0.439 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Horned Rabbit is a small creature with a compact quadruped frame, about 0.6 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Its most striking feature is a single spiral horn and oversized hind feet. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Horned Rabbit is a small creature with a compact quadruped frame, about 0.6 m long. Its coat is weathered and natural, colored in dark brown. Its most striking feature is a single spiral horn and oversized hind feet. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `dust_puffs` · palette `#5e5040` `#433830` `#886e5d` · real-animal silhouette with one fantasy exaggeration

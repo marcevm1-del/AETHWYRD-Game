@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,708 tris · 1.619 × 4.2 × 3.654 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Thunderhorn Elk is a large creature with a heavy, muscular quadruped frame, about 4.2 m long. Its coat is weathered and natural, colored in storm violet shot through with electric yellow. Look for branching antlers that crackle in storms. It has alert animal eyes. Faint runes glow along its body when it fights. It prowls, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Thunderhorn Elk is a large creature with a heavy, muscular quadruped frame, about 4.2 m long. Its coat is weathered and natural, colored in dark brown, with electric-yellow markings. Look for branching antlers that crackle in storms. It has alert animal eyes. Faint runes glow along its body when it fights. It prowls, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `arc_sparks` · palette `#644b44` `#473633` `#ffe14d` · real-animal silhouette with one fantasy exaggeration

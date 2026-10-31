@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (1,494 tris · 25.306 × 60 × 43.569 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Leviathan Young is a colossal creature with a heavy-jawed fish frame, about 60 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show fins like the sails of a warship. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Leviathan Young is a colossal creature with a heavy-jawed fish frame, about 60 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in teal, with gold markings. Guild sketches always show fins like the sails of a warship. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `holy_motes` · palette `#458f8b` `#2e635f` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

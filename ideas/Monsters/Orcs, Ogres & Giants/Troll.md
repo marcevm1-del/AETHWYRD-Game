@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,222 tris · 2.748 × 1.763 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Troll is a large creature with a massive hunched brute frame, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in leaf greens over bark brown. Guild sketches always show moss-covered skin that knits itself back together. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms.
+> The Troll is a large creature with a massive hunched brute frame, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in stone-grey, with leaf-green markings. Guild sketches always show moss-covered skin that knits itself back together. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `pollen_petals` · palette `#7f8290` `#555862` `#8fd16a` · triangle-based silhouette, sharp asymmetric spikes

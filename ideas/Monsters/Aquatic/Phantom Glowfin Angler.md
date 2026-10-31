@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (1,450 tris · 1.184 × 3 × 1.445 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Glowfin Angler is a large creature with a heavy-jawed fish frame, about 3 m long. Its scales and skin are stretched, stitched and constantly shifting, colored in warm gold and pearl white. Survivors describe a lure of light dangling over a mouth of glass teeth. It has too many eyes, opening one after another. Battle-worn plates and trophies hang from its body. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Glowfin Angler is a large creature with a heavy-jawed fish frame, about 3 m long. Its scales and skin are stretched, stitched and constantly shifting, colored in silver, with gold markings. Survivors describe a lure of light dangling over a mouth of glass teeth. It has too many eyes, opening one after another. Battle-worn plates and trophies hang from its body. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `holy_motes` · palette `#a6b6bd` `#6b7a83` `#ffd166` · broken symmetry, mimicry, audio-first reveal

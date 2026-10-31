@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,756 tris · 0.773 × 3 × 1.535 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Qilin is a large creature with a powerful four-legged hunter's body, about 3 m long. Its hide is smooth and clean, colored in warm gold and pearl white. Look for scales, antlers and hooves that never bend the grass. It has two bright dot eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by soft radiance and floating motes of light.
+> The Qilin is a large creature with a powerful four-legged hunter's body, about 3 m long. Its hide is smooth and clean, colored in lion-tawny, with gold markings. Look for scales, antlers and hooves that never bend the grass. It has two bright dot eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#c09f57` `#7e6539` `#ffd166` · circle-based, soft silhouette

@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (2,544 tris · 1.301 × 1.398 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Bog Death Knight is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its flesh and bone are rough, scarred and spiked, colored in bruise purple with sickly green. Look for black plate, a cloak of ash and a sword of cold fire. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
+> The Bog Death Knight is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its flesh and bone are rough, scarred and spiked, colored in grave-mould grey-green. Look for black plate, a cloak of ash and a sword of cold fire. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `toxic_fog` · palette `#8c9979` `#5b654f` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

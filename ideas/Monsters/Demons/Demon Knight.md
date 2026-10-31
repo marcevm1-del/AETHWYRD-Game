@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,826 tris · 1.355 × 1.695 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Demon Knight is a large creature with a broad-shouldered humanoid build, about 2.5 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is black-steel armor engraved with the Overlord's sigil. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by shadows that lean toward it.
+> The Demon Knight is a large creature with a broad-shouldered humanoid build, about 2.5 m tall. Its hide is rough, scarred and spiked, colored in bruised violet. Its most striking feature is black-steel armor engraved with the Overlord's sigil. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#634470` `#453551` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

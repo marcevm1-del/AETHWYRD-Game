@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,842 tris · 1.38 × 6 × 2.694 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Sphinx is a huge creature with a long-legged predatory quadruped build, about 6 m long. Its hide is rough, scarred and spiked, colored in warm gold and pearl white. Look for a lion's body and a calm, ancient face. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Sphinx is a huge creature with a long-legged predatory quadruped build, about 6 m long. Its hide is rough, scarred and spiked, colored in lion-tawny, with gold markings. Look for a lion's body and a calm, ancient face. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#a16b49` `#69432f` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

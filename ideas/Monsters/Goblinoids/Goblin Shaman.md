@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,720 tris · 0.494 × 0.501 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Goblin Shaman is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe a skull headdress and a staff hung with smoking charms. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Goblin Shaman is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather, with ember-orange markings. Survivors describe a skull headdress and a staff hung with smoking charms. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `embers_heat_haze` · palette `#85906b` `#5b4032` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

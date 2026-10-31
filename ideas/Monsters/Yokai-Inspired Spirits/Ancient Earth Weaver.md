@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (3,408 tris · 7.831 × 9 × 5.296 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Earth Weaver is a huge creature with a squat, many-legged arachnid build, about 9 m long. Its form is patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Look for a tiger-striped spider the size of a house. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Earth Weaver is a huge creature with a squat, many-legged arachnid build, about 9 m long. Its form is patchy and subtly wrong, as if assembled from memory, colored in lacquer red, with ochre markings. Look for a tiger-striped spider the size of a house. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `paper_ink_spirit` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_octopod` · mesh `octopod_base` · material `paper_ink_spirit` · VFX `rock_debris` · palette `#ac393b` `#6b272a` `#d1a15a` · elongated, irregular silhouette; still-then-sudden timing

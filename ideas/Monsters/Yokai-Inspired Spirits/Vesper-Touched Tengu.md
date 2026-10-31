@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,198 tris · 0.874 × 1.923 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Tengu is a person-sized creature with a feathered avian body, about 2 m tall. Its form is rough, scarred and spiked, colored in pale jade and cloud white. Guild sketches always show crow wings, a long red mask and a feather fan. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Tengu is a person-sized creature with a feathered avian body, about 2 m tall. Its form is rough, scarred and spiked, colored in indigo, with pale jade markings. Guild sketches always show crow wings, a long red mask and a feather fan. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `paper_ink_spirit` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `paper_ink_spirit` · VFX `wind_ribbons` · palette `#4a5f79` `#364256` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

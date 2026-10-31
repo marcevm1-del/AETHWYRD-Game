@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,326 tris · 55.507 × 37.087 × 80 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in leaf greens over bark brown. Its most striking feature is a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by drifting pollen and tiny blossoms.
+> The Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in deep fern green and dark bark. Its most striking feature is a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#5b8047` `#4d382e` `#8fd16a` · triangle-based silhouette, sharp asymmetric spikes

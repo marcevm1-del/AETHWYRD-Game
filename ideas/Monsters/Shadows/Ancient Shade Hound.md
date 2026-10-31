@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (2,856 tris · 0.484 × 2.1 × 1.543 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Shade Hound is a person-sized creature with a long-legged predatory quadruped build, about 2.1 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a dog made of smoke with ember eyes. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Shade Hound is a person-sized creature with a long-legged predatory quadruped build, about 2.1 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in smoky violet. Guild sketches always show a dog made of smoke with ember eyes. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_quad_large` · mesh `quad_large_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#595482` `#494570` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

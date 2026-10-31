@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,602 tris · 5.153 × 3.155 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Taurgrim, the Maze King is a huge creature with a towering, heavy-limbed body, about 6 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a crown fused to its horns and a labrys of starmetal. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by pebbles that tremble and float near it.
+> The Taurgrim, the Maze King is a huge creature with a towering, heavy-limbed body, about 6 m tall. Its hide is rough, scarred and spiked, colored in tan, with ochre markings. Guild sketches always show a crown fused to its horns and a labrys of starmetal. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -88,4 +88,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `rock_debris` · palette `#92614d` `#624034` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

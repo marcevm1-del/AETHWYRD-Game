@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,308 tris · 2.314 × 6 × 5.219 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Night Silver Fenrir is a huge creature with a heavy, muscular quadruped frame, about 6 m long. Its coat is weathered and natural, colored in ink black with bruised violet. Guild sketches always show silver fur that glows like moonlight. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Night Silver Fenrir is a huge creature with a heavy, muscular quadruped frame, about 6 m long. Its coat is weathered and natural, colored in warm brown, with violet markings. Guild sketches always show silver fur that glows like moonlight. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `shadow_wisps` · palette `#856744` `#56402e` `#9a86d8` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,482 tris · 1.532 × 1.646 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Meadow Orc Lord is a large creature with an upright humanoid build, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in pale jade and cloud white. Look for a horned helm and a cloak of wolf pelts. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
+> The Meadow Orc Lord is a large creature with an upright humanoid build, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with pale jade markings. Look for a horned helm and a cloak of wolf pelts. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `wind_ribbons` · palette `#668044` `#44562e` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

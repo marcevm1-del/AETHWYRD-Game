@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (3,976 tris · 4.55 × 20 × 8.407 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Abyssal Sea Serpent is a colossal creature with a massive snake-like frame, about 20 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Guild sketches always show a long fin running down its spine. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by fine mist and droplets that orbit it. Adapted to sea lands, it has deep-water coloring and glowing lures.
+> The Abyssal Sea Serpent is a colossal creature with a massive snake-like frame, about 20 m long. Its scales and skin are rough, scarred and spiked, colored in silver, with sea-blue markings. Guild sketches always show a long fin running down its spine. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by fine mist and droplets that orbit it. Adapted to sea lands, it has deep-water coloring and glowing lures.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `wet_scale` · VFX `mist_droplets` · palette `#8f99a3` `#5d6571` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

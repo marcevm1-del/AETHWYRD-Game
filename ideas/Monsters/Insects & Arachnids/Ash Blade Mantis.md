@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,294 tris · 1.819 × 2 × 1.128 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ash Blade Mantis is a person-sized creature with a six-legged armored body, about 2 m long. Its chitin is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe forearms shaped like curved scythes. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
+> The Ash Blade Mantis is a person-sized creature with a six-legged armored body, about 2 m long. Its chitin is rough, scarred and spiked, colored in iridescent green, with ember-orange markings. Survivors describe forearms shaped like curved scythes. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `embers_heat_haze` · palette `#428044` `#2e5630` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

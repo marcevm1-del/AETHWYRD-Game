@@ -9,6 +9,7 @@ const path = require('path');
 const FAMILIES = require('./families');
 const TYRANTS = require('./tyrants');
 const { chooseParts } = require('./part_rules');
+const { paletteFor, valueOf, MIN_V } = require('./palettes');
 
 const ROOT = path.join(__dirname, '..', '..');
 const DATA = path.join(ROOT, 'Data');
@@ -293,14 +294,14 @@ function lootTableFor(famKey, fam, rank) {
 }
 
 // ---------- description ----------
-function describe(sp, fam) {
+function describe(sp, fam, tone) {
   const rig = RIGS[sp.rig], menace = MEN[sp.menace], el = EL[sp.element] || EL.None;
   const dim = sp.rig === 'swarm' ? `each one is about ${sp.size} m long, but the swarm covers several meters` : `about ${sp.size} m ${LONG_RIGS.has(sp.rig) ? 'long' : 'tall'}`;
   const sizeWord = sp.size < 0.5 ? 'tiny' : sp.size < 1.2 ? 'small' : sp.size < 2.5 ? 'person-sized' : sp.size < 5 ? 'large' : sp.size < 15 ? 'huge' : 'colossal';
   const sig = /^(it |only |its )/i.test(sp.signature) ? cap(sp.signature) + '.' : pick(['Its most striking feature is ', 'Look for ', 'Guild sketches always show ', 'Survivors describe ']) + sp.signature + '.';
   const parts = [
     `The ${sp.name} is a ${sizeWord} creature with ${pick(rig.build)}, ${dim}.`,
-    `Its ${fam.covering} ${/s$| and /.test(fam.covering) ? 'are' : 'is'} ${menace.tex}, colored in ${el.tone}.`,
+    `Its ${fam.covering} ${/s$| and /.test(fam.covering) ? 'are' : 'is'} ${menace.tex}, colored in ${tone || el.tone}.`,
     sig,
     `It has ${pick(menace.eyes)}. ${ORN[rankLetter(sp.rank)]}`,
     el.aura ? `It ${pick(menace.motion)}, surrounded by ${el.aura}.` : `It ${pick(menace.motion)}. It has no visible aura; you hear its breathing before you see it.`
@@ -354,8 +355,9 @@ function finalize(sp, fam, famKey) {
   sp.habitats = sp.habitatRegions.map(r => r.id);
   sp.lootTableId = lootTableFor(famKey, fam, sp.rank);
   sp.fieldNote = `Weak to ${el.weak}. ${ADVICE[sp.behavior]}`;
-  sp.designRecipe = { rigId: sp.rigId, baseMesh: `${sp.rig}_base`, parts, material: fam.material, palette: el.pal, menaceStyle: MEN[sp.menace].shape, rankOrnament: rankLetter(sp.rank), vfx: el.vfx, animSetId: sp.animSetId, scale: sp.size };
-  sp.look = describe(sp, fam);
+  const colour = paletteFor(sp, famKey, el); // family colour + element accent (palettes.js, design review C2)
+  sp.designRecipe = { rigId: sp.rigId, baseMesh: `${sp.rig}_base`, parts, material: fam.material, palette: colour.palette, menaceStyle: MEN[sp.menace].shape, rankOrnament: rankLetter(sp.rank), vfx: el.vfx, animSetId: sp.animSetId, scale: sp.size };
+  sp.look = describe(sp, fam, colour.tone);
   species.push(sp);
   return sp;
 }

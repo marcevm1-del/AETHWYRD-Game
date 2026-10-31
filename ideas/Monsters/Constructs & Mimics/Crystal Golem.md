@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (960 tris · 3.467 × 2.371 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crystal Golem is a large creature with a blocky construct body, about 3.5 m tall. Its surface is weathered and natural, colored in warm gold and pearl white. Its most striking feature is a body of prisms that splits light into rainbows. It has alert animal eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
+> The Crystal Golem is a large creature with a blocky construct body, about 3.5 m tall. Its surface is weathered and natural, colored in weathered stone, with gold markings. Its most striking feature is a body of prisms that splits light into rainbows. It has alert animal eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#8b8a84` `#5b5a55` `#ffd166` · real-animal silhouette with one fantasy exaggeration

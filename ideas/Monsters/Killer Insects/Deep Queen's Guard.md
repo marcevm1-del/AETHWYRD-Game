@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (3,918 tris · 2.067 × 2 × 1.808 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Deep Queen's Guard is a person-sized creature with a six-legged armored body, about 2 m long. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Look for a shield-shaped head plate. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
+> The Deep Queen's Guard is a person-sized creature with a six-legged armored body, about 2 m long. Its chitin is rough, scarred and spiked, colored in black, with violet markings. Look for a shield-shaped head plate. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `shadow_wisps` · palette `#5d5b66` `#47444d` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

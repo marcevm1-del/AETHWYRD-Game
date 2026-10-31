@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,752 tris · 1.473 × 1.583 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Rot Demon Knight is a large creature with an upright humanoid build, about 2.5 m tall. Its hide is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show black-steel armor engraved with the Overlord's sigil. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Rot Demon Knight is a large creature with an upright humanoid build, about 2.5 m tall. Its hide is rough, scarred and spiked, colored in bruised violet, with sickly green markings. Guild sketches always show black-steel armor engraved with the Overlord's sigil. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `toxic_fog` · palette `#614674` `#443754` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

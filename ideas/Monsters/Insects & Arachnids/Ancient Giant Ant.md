@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,966 tris · 0.6 × 0.9 × 0.525 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Giant Ant is a small creature with a six-legged armored body, about 0.9 m long. Its chitin is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show red-brown chitin and mandibles like pliers. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Giant Ant is a small creature with a six-legged armored body, about 0.9 m long. Its chitin is weathered and natural, colored in glossy brown, with ochre markings. Guild sketches always show red-brown chitin and mandibles like pliers. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#6e422b` `#462b1d` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

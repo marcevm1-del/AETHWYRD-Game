@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (1,780 tris · 1.306 × 0.5 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Imp is a small creature with a tiny, darting winged build, about 0.6 m tall. Its hide is weathered and natural, colored in ember reds fading to soot black. Guild sketches always show bat wings, a pointed tail and a cheeky grin. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by heat-shimmer and drifting sparks.
+> The Imp is a small creature with a tiny, darting winged build, about 0.6 m tall. Its hide is weathered and natural, colored in brimstone red, with ember-orange markings. Guild sketches always show bat wings, a pointed tail and a cheeky grin. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#a12936` `#5a262d` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

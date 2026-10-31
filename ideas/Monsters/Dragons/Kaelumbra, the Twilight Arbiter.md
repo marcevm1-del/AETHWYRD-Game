@@ -13,7 +13,7 @@ tags: [monster, dragons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,638 tris · 146.209 × 150 × 91.601 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kaelumbra, the Twilight Arbiter is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 150 m long. Its scales are weathered and natural, colored in starless black with faint violet edges. Look for a body split down the middle, half dawn-gold and half dusk-violet. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by warped air, as if space bends around it.
+> The Kaelumbra, the Twilight Arbiter is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 150 m long. Its scales are weathered and natural, colored in bronze, with violet-edged markings. Look for a body split down the middle, half dawn-gold and half dusk-violet. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `void_distortion` · palette `#d19543` `#845d2a` `#8a7cff` · real-animal silhouette with one fantasy exaggeration

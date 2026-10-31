@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (3,680 tris · 9.804 × 7 × 9.825 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hive Tyrant is a huge creature with a bipedal winged body with wing-arms, about 7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a winged queen-killer with a crown of stingers. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Hive Tyrant is a huge creature with a bipedal winged body with wing-arms, about 7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in lacquer-red, with sickly green markings. Survivors describe a winged queen-killer with a crown of stingers. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_wyvern` · mesh `wyvern_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#ac2c32` `#60292d` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

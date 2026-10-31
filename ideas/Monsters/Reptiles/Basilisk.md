@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (3,188 tris · 0.823 × 4 × 2.269 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Basilisk is a large creature with a powerful four-legged hunter's body, about 4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Its most striking feature is a crown of horns and eyes that petrify. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it.
+> The Basilisk is a large creature with a powerful four-legged hunter's body, about 4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in teal-grey, with ochre markings. Its most striking feature is a crown of horns and eyes that petrify. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `scale_matte` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_quad_large` · mesh `quad_large_base` · material `scale_matte` · VFX `rock_debris` · palette `#507383` `#38505d` `#d1a15a` · elongated, irregular silhouette; still-then-sudden timing

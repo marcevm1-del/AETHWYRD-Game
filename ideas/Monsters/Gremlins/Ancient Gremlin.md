@@ -13,7 +13,7 @@ tags: [monster, gremlins]
 
 > [!note] 3D model: procedural blockout in Unity (2,722 tris · 0.446 × 0.483 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Gremlin is a small creature with a small, compact humanoid body, about 0.9 m tall. Its skin is weathered and natural, colored in storm violet shot through with electric yellow. Look for bat ears, a wrench and a laugh like a squeaky hinge. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Gremlin is a small creature with a small, compact humanoid body, about 0.9 m tall. Its skin is weathered and natural, colored in lime-green, with electric-yellow markings. Look for bat ears, a wrench and a laugh like a squeaky hinge. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#7aa34b` `#4e6c31` `#ffe14d` · real-animal silhouette with one fantasy exaggeration

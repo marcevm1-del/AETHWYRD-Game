@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (1,366 tris · 0.932 × 1.145 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ash Wraith is a person-sized creature with a drifting, half-formed body, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Survivors describe a hooded shape of smoke with cold blue eyes. It has pale, pupil-less eyes. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Ash Wraith is a person-sized creature with a drifting, half-formed body, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with ember-orange markings. Survivors describe a hooded shape of smoke with cold blue eyes. It has pale, pupil-less eyes. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `embers_heat_haze` · palette `#90a683` `#5e6e56` `#ff7a3d` · elongated, irregular silhouette; still-then-sudden timing

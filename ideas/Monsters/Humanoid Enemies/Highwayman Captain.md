@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies]
 
 > [!note] 3D model: procedural blockout in Unity (3,120 tris · 0.976 × 0.676 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Highwayman Captain is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a feathered hat and two pistols of Veilborn design. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
+> The Highwayman Captain is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in worn green and leather brown. Its most striking feature is a feathered hat and two pistols of Veilborn design. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `dust_puffs` · palette `#536043` `#433931` `#839a6b` · triangle-based silhouette, sharp asymmetric spikes

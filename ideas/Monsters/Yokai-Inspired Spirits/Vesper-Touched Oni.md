@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,496 tris · 2.129 × 1.071 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Oni is a large creature with a massive hunched brute frame, about 3.5 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Look for horns, a tiger-skin wrap and an iron club. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Oni is a large creature with a massive hunched brute frame, about 3.5 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in lacquer red, with ember-orange markings. Look for horns, a tiger-skin wrap and an iron club. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_large_biped` · mesh `large_biped_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#ac5239` `#6c3427` `#ff7a3d` · elongated, irregular silhouette; still-then-sudden timing

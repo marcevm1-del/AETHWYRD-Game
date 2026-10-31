@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,716 tris · 0.502 × 0.509 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Grove Goblin Trapper is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in leaf greens over bark brown. Its most striking feature is snares and rusted bells hanging from its belt. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms. Adapted to forest lands, it has moss-green coloring that blends with the undergrowth.
+> The Grove Goblin Trapper is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is snares and rusted bells hanging from its belt. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms. Adapted to forest lands, it has moss-green coloring that blends with the undergrowth.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `pollen_petals` · palette `#78906b` `#5b4d32` `#8fd16a` · triangle-based silhouette, sharp asymmetric spikes

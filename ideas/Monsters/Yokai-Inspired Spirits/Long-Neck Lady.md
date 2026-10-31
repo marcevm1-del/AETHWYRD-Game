@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,276 tris · 1.236 × 1.29 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Long-Neck Lady is a person-sized creature with a tall, impossibly thin frame, about 1.7 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a neck that stretches across rooftops. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Long-Neck Lady is a person-sized creature with a tall, impossibly thin frame, about 1.7 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in lacquer red, with violet markings. Guild sketches always show a neck that stretches across rooftops. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `paper_ink_spirit` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_aberrant` · mesh `aberrant_base` · material `paper_ink_spirit` · VFX `shadow_wisps` · palette `#b85b3d` `#733a2a` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

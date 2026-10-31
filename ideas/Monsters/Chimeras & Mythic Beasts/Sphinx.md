@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,708 tris · 2.314 × 6 × 5.219 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sphinx is a huge creature with a long-legged predatory quadruped build, about 6 m long. Its hide is weathered and natural, colored in warm gold and pearl white. Guild sketches always show a lion's body and a calm, ancient face. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
+> The Sphinx is a huge creature with a long-legged predatory quadruped build, about 6 m long. Its hide is weathered and natural, colored in lion-tawny, with gold markings. Guild sketches always show a lion's body and a calm, ancient face. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#a8854c` `#6e5432` `#ffd166` · real-animal silhouette with one fantasy exaggeration

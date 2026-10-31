@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (2,794 tris · 3.183 × 3.5 × 1.973 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Queen Ant is a large creature with a low, wide insectoid build, about 3.5 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a swollen abdomen pulsing with eggs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Queen Ant is a large creature with a low, wide insectoid build, about 3.5 m long. Its chitin is rough, scarred and spiked, colored in glossy brown, with ochre markings. Look for a swollen abdomen pulsing with eggs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#70462c` `#482e1d` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

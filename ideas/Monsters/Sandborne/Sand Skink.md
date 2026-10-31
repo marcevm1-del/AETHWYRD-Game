@@ -13,7 +13,7 @@ tags: [monster, sandborne]
 
 > [!note] 3D model: procedural blockout in Unity (2,284 tris · 0.193 × 0.5 × 0.298 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sand Skink is a small creature with a small, quick four-legged body, about 0.5 m long. Its sand-scoured hide is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is sand-colored scales and a tongue that tastes for water. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by pebbles that tremble and float near it.
+> The Sand Skink is a small creature with a small, quick four-legged body, about 0.5 m long. Its sand-scoured hide is weathered and natural, colored in sunbaked clay, with ochre markings. Its most striking feature is sand-colored scales and a tongue that tastes for water. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `sand_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `sand_hide` · VFX `rock_debris` · palette `#af794a` `#734d30` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

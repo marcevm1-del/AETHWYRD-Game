@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (1,870 tris · 2.499 × 2.042 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Zephyr Hornet Lancer is a person-sized creature with a tiny, darting winged build, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in pale jade and cloud white. Its most striking feature is a lance-like stinger and humming armored wings. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Zephyr Hornet Lancer is a person-sized creature with a tiny, darting winged build, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in black, with pale jade markings. Its most striking feature is a lance-like stinger and humming armored wings. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `wind_ribbons` · palette `#4f5059` `#3c3b43` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

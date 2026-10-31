@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,416 tris · 1.26 × 1.4 × 0.782 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Venom Spider is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is green-striped legs and dripping fangs. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
+> The Venom Spider is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in amber, with sickly green markings. Its most striking feature is green-striped legs and dripping fangs. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `toxic_fog` · palette `#b0642a` `#703e1a` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

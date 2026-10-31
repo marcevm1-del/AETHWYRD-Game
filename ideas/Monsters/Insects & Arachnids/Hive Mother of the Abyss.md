@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,920 tris · 58.752 × 57.533 × 60 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hive Mother of the Abyss is a colossal creature with an asymmetric body with too many limbs, about 60 m tall. Its chitin is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Look for a living hive-mountain that sings. It has a human-like face in the wrong place. Its presence is world-scale; the sky changes color when it appears. It crawls across ceilings, surrounded by warped air, as if space bends around it.
+> The Hive Mother of the Abyss is a colossal creature with an asymmetric body with too many limbs, about 60 m tall. Its chitin is stretched, stitched and constantly shifting, colored in glossy brown, with violet-edged markings. Look for a living hive-mountain that sings. It has a human-like face in the wrong place. Its presence is world-scale; the sky changes color when it appears. It crawls across ceilings, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `chitin_gloss` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_aberrant` · mesh `aberrant_base` · material `chitin_gloss` · VFX `void_distortion` · palette `#774e2f` `#4c321f` `#8a7cff` · broken symmetry, mimicry, audio-first reveal

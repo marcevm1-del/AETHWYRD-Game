@@ -13,7 +13,7 @@ tags: [monster, gremlins, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,306 tris · 1.51 × 1.776 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cogmaw, the Gremlin Engine-King is a large creature with a small, compact humanoid body, about 3 m tall. Its skin is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Look for a throne bolted onto a walking furnace that eats machines. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body.
+> The Cogmaw, the Gremlin Engine-King is a large creature with a small, compact humanoid body, about 3 m tall. Its skin is rough, scarred and spiked, colored in lime-green, with electric-yellow markings. Look for a throne bolted onto a walking furnace that eats machines. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#6fa04a` `#466a30` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

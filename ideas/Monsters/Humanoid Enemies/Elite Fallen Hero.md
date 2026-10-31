@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies]
 
 > [!note] 3D model: procedural blockout in Unity (3,182 tris · 1.626 × 2.056 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elite Fallen Hero is a large creature with a lean humanoid frame, about 3 m tall. Its clothing and gear are rough, scarred and spiked, colored in warm gold and pearl white. Look for tarnished hero armor and eyes that have seen the truth of the System. It has narrow glowing eyes. The air distorts slightly around its outline. It circles its prey, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elite Fallen Hero is a large creature with a lean humanoid frame, about 3 m tall. Its clothing and gear are rough, scarred and spiked, colored in worn green and leather brown, with gold markings. Look for tarnished hero armor and eyes that have seen the truth of the System. It has narrow glowing eyes. The air distorts slightly around its outline. It circles its prey, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `holy_motes` · palette `#526144` `#443c32` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

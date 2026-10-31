@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (858 tris · 9.45 × 10.176 × 9.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Mimic King is a huge creature with an object-shaped body that hides its true form, about 9.6 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Survivors describe a treasure vault that walks on a hundred stolen legs. It has a human-like face in the wrong place. Its regal silhouette is crowned by a halo-like ring of aura. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Mimic King is a huge creature with an object-shaped body that hides its true form, about 9.6 m tall. Its surface is stretched, stitched and constantly shifting, colored in riveted iron. Survivors describe a treasure vault that walks on a hundred stolen legs. It has a human-like face in the wrong place. Its regal silhouette is crowned by a halo-like ring of aura. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#696e77` `#4a4e56` `#9aa2ae` · broken symmetry, mimicry, audio-first reveal

@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (858 tris · 0.984 × 1.06 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Grin in the Walls is a small creature with a hollow shell posing as an everyday object, about 1 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Only its smile is ever visible. It has too many eyes, opening one after another. A distinctive marking runs along its back. It unfolds into something larger, surrounded by shadows that lean toward it.
+> The Grin in the Walls is a small creature with a hollow shell posing as an everyday object, about 1 m tall. Its skin is stretched, stitched and constantly shifting, colored in raw pink, with violet markings. Only its smile is ever visible. It has too many eyes, opening one after another. A distinctive marking runs along its back. It unfolds into something larger, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#ab836c` `#705647` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

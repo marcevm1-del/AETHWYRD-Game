@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,540 tris · 0.889 × 0.902 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Kobold Packleader is a person-sized creature with a hunched, wiry humanoid frame, about 1.8 m tall. Its mangy fur is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe a collar of teeth from rival packs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Kobold Packleader is a person-sized creature with a hunched, wiry humanoid frame, about 1.8 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue. Survivors describe a collar of teeth from rival packs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#5f8499` `#3e5666` `#8ab1de` · triangle-based silhouette, sharp asymmetric spikes

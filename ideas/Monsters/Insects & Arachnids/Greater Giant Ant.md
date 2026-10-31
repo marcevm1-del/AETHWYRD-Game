@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,486 tris · 0.66 × 1 × 0.577 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Giant Ant is a small creature with a low, wide insectoid build, about 1 m long. Its chitin is weathered and natural, colored in ochre, clay and mossy stone. Look for red-brown chitin and mandibles like pliers. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Giant Ant is a small creature with a low, wide insectoid build, about 1 m long. Its chitin is weathered and natural, colored in glossy brown, with ochre markings. Look for red-brown chitin and mandibles like pliers. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#75422e` `#4b2b1f` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

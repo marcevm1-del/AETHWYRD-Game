@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,368 tris · 0.309 × 0.8 × 0.585 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thunder Floor Crawler is a small creature with a low, springy quadruped build, about 0.8 m long. Its stone-like hide is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe stone-colored skin that matches the walls it was born from. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Thunder Floor Crawler is a small creature with a low, springy quadruped build, about 0.8 m long. Its stone-like hide is rough, scarred and spiked, colored in dungeon stone, with electric-yellow markings. Survivors describe stone-colored skin that matches the walls it was born from. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -93,4 +93,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `dungeon_stone` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_small` · mesh `quad_small_base` · material `dungeon_stone` · VFX `arc_sparks` · palette `#7b7f8b` `#53565f` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

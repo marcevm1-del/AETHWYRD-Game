@@ -13,7 +13,7 @@ tags: [monster, gremlins]
 
 > [!note] 3D model: procedural blockout in Unity (2,324 tris · 0.593 × 0.601 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Gremlin King is a person-sized creature with a small, compact humanoid body, about 1.2 m tall. Its skin is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Its most striking feature is a throne bolted onto a walking boiler. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by crackling arcs that jump across its body.
+> The Gremlin King is a person-sized creature with a small, compact humanoid body, about 1.2 m tall. Its skin is rough, scarred and spiked, colored in lime-green, with electric-yellow markings. Its most striking feature is a throne bolted onto a walking boiler. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#6e9d49` `#46682f` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

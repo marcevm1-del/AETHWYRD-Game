@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (3,032 tris · 0.395 × 0.279 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Puffcap Mushroom is a small creature with a mushroom-capped walking body, about 0.5 m tall. Its bark and leaves are smooth and clean, colored in leaf greens over bark brown. Look for a spotted cap that sneezes giggle-spores. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
+> The Puffcap Mushroom is a small creature with a mushroom-capped walking body, about 0.5 m tall. Its bark and leaves are smooth and clean, colored in warm brown, with leaf-green markings. Look for a spotted cap that sneezes giggle-spores. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · circle-based, soft silhouette
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#aa7e4b` `#6f502e` `#8fd16a` · circle-based, soft silhouette

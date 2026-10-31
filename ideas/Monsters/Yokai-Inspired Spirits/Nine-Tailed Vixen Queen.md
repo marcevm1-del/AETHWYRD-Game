@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,824 tris · 3.085 × 8 × 6.959 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Nine-Tailed Vixen Queen is a huge creature with a powerful four-legged hunter's body, about 8 m long. Its form is weathered and natural, colored in ember reds fading to soot black. Guild sketches always show nine tails that each hold a different spell. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
+> The Nine-Tailed Vixen Queen is a huge creature with a powerful four-legged hunter's body, about 8 m long. Its form is weathered and natural, colored in paper white, with ember-orange markings. Guild sketches always show nine tails that each hold a different spell. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#d8d4c0` `#8a8672` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

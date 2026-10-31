@@ -13,7 +13,7 @@ tags: [monster, centaurs-taurs]
 
 > [!note] 3D model: procedural blockout in Unity (3,010 tris · 1.365 × 2.897 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Scorpion Rider is a large creature with a centauroid body with a humanoid torso on a four-legged base, about 3 m tall. Its coat is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a humanoid torso on a giant scorpion body. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
+> The Scorpion Rider is a large creature with a centauroid body with a humanoid torso on a four-legged base, about 3 m tall. Its coat is rough, scarred and spiked, colored in chestnut, with sickly green markings. Guild sketches always show a humanoid torso on a giant scorpion body. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `toxic_fog` · palette `#856644` `#563f2e` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

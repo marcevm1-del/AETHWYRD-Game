@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (3,308 tris · 17.442 × 20 × 15.428 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dawn Bone Dragon is a colossal creature with an ancient, serpentine dragon body, about 20 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show a dragon skeleton held together by green fire. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Dawn Bone Dragon is a colossal creature with an ancient, serpentine dragon body, about 20 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with gold markings. Guild sketches always show a dragon skeleton held together by green fire. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `rot_bone` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_dragon` · mesh `dragon_base` · material `rot_bone` · VFX `holy_motes` · palette `#e4deba` `#928c6e` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

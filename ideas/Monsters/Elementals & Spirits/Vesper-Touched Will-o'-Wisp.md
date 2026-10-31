@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#292940` · broken symmetry, mimicry, audio-first reveal

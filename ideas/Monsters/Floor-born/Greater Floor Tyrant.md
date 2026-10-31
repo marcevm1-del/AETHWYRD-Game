@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,558 tris · 10.994 × 6.642 × 12.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Floor Tyrant is a huge creature with a giant, barrel-chested humanoid body, about 12.8 m tall. Its stone-like hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a crown of stalactites. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Floor Tyrant is a huge creature with a giant, barrel-chested humanoid body, about 12.8 m tall. Its stone-like hide is rough, scarred and spiked, colored in rusted iron, with ochre markings. Look for a crown of stalactites. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#806c45` `#55472e` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

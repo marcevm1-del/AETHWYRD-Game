@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (2,296 tris · 0.062 × 0.05 × 0.045 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Firefly Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is weathered and natural, colored in warm gold and pearl white. Look for hundreds of soft lantern lights moving together. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Firefly Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is weathered and natural, colored in amber, with gold markings. Look for hundreds of soft lantern lights moving together. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `holy_motes` · palette `#d07e32` `#844e1e` `#ffd166` · real-animal silhouette with one fantasy exaggeration

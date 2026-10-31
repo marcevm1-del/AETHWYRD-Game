@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (1,784 tris · 2.893 × 2.434 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Corpse Flower is a large creature with a rooted plant body, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a rotting bloom the size of a cart. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
+> The Corpse Flower is a large creature with a rooted plant body, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in deep fern green and dark bark, with violet markings. Its most striking feature is a rotting bloom the size of a cart. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `shadow_wisps` · palette `#4f7b45` `#4b3b2c` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

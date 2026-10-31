@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,184 tris · 5.475 × 3.72 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Frost Giant is a huge creature with a massive hunched brute frame, about 9 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in pale blues and frost-white. Look for a beard of icicles and armor of glacier ice. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by falling snow motes and frosted ground where it steps. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Frost Giant is a huge creature with a massive hunched brute frame, about 9 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in stone-grey, with frost-blue markings. Look for a beard of icicles and armor of glacier ice. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by falling snow motes and frosted ground where it steps. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `frost_trail_snow` · palette `#70747f` `#4b4f56` `#9fdcff` · elongated, irregular silhouette; still-then-sudden timing

@@ -109,4 +109,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_blob` · mesh `blob_base` · material `translucent_gel_sss` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · circle-based, soft silhouette
+Rig `rig_blob` · mesh `blob_base` · material `translucent_gel_sss` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#402824` · circle-based, soft silhouette

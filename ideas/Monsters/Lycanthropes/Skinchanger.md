@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,806 tris · 1.318 × 1.619 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Skinchanger is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its fur is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its most striking feature is half its body stuck mid-transformation, forever. It has too many eyes, opening one after another. Faint runes glow along its body when it fights. It unfolds into something larger, surrounded by shadows that lean toward it.
+> The Skinchanger is a person-sized creature with a broad-shouldered humanoid build, about 2.4 m tall. Its fur is stretched, stitched and constantly shifting, colored in snow-white, with violet markings. Its most striking feature is half its body stuck mid-transformation, forever. It has too many eyes, opening one after another. Faint runes glow along its body when it fights. It unfolds into something larger, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `shadow_wisps` · palette `#f3f4f9` `#a4a8b5` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

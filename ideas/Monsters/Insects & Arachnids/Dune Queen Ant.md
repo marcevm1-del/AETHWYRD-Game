@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,398 tris · 3.676 × 3.5 × 3.215 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dune Queen Ant is a large creature with a six-legged armored body, about 3.5 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a swollen abdomen pulsing with eggs. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
+> The Dune Queen Ant is a large creature with a six-legged armored body, about 3.5 m long. Its chitin is rough, scarred and spiked, colored in glossy brown, with ochre markings. Survivors describe a swollen abdomen pulsing with eggs. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#834834` `#542f22` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

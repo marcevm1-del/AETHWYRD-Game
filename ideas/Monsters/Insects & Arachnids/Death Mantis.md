@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,898 tris · 1.771 × 3 × 2.187 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Death Mantis is a large creature with a segmented six-limbed frame, about 3 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is black chitin and a skull-like head. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Death Mantis is a large creature with a segmented six-limbed frame, about 3 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in blue-black, with violet markings. Its most striking feature is black chitin and a skull-like head. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#415170` `#303a51` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

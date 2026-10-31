@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (3,642 tris · 15.653 × 10 × 11.112 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Drake Lord is a huge creature with a sleek flying build, about 10 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show a crown of broken horns from rivals it killed. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Drake Lord is a huge creature with a sleek flying build, about 10 m long. Its scales are rough, scarred and spiked, colored in crimson, with ember-orange markings. Guild sketches always show a crown of broken horns from rivals it killed. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#b52f37` `#71252b` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

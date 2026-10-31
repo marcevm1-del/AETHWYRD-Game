@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (5,558 tris · 1.626 × 4 × 2.083 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dune Naga Priestess is a large creature with a humanoid upper body on a long serpent tail, about 4 m long. Its scales are rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a hood of jeweled scales and temple tattoos. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
+> The Dune Naga Priestess is a large creature with a humanoid upper body on a long serpent tail, about 4 m long. Its scales are rough, scarred and spiked, colored in green, with ochre markings. Guild sketches always show a hood of jeweled scales and temple tattoos. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `rock_debris` · palette `#4a8044` `#31562e` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

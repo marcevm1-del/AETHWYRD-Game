@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,150 tris · 3.516 × 7.736 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thunderbird is a huge creature with a feathered avian body, about 8 m tall. Its plumage is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe wings that drum thunder. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by crackling arcs that jump across its body.
+> The Thunderbird is a huge creature with a feathered avian body, about 8 m tall. Its plumage is rough, scarred and spiked, colored in blue, with electric-yellow markings. Survivors describe wings that drum thunder. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `arc_sparks` · palette `#4969a5` `#314872` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

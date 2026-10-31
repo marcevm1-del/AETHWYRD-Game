@@ -13,7 +13,7 @@ tags: [monster, centaurs-taurs]
 
 > [!note] 3D model: procedural blockout in Unity (2,428 tris · 1.244 × 2.642 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Centaur Lancer is a large creature with a powerful taur build, about 2.6 m tall. Its coat is weathered and natural, colored in muted greys and dusty browns. Survivors describe a long lance and painted barding. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides. It has no visible aura; you hear its breathing before you see it.
+> The Centaur Lancer is a large creature with a powerful taur build, about 2.6 m tall. Its coat is weathered and natural, colored in dapple-grey. Survivors describe a long lance and painted barding. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `dust_puffs` · palette `#cccac0` `#8d8a83` `#fffaf0` · real-animal silhouette with one fantasy exaggeration

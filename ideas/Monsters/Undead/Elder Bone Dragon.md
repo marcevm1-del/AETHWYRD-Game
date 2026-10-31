@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (3,034 tris · 27.908 × 32 × 24.684 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Bone Dragon is a colossal creature with a four-legged, two-winged dragon body, about 32 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a dragon skeleton held together by green fire. It has eyes that never blink. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Bone Dragon is a colossal creature with a four-legged, two-winged dragon body, about 32 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with violet markings. Its most striking feature is a dragon skeleton held together by green fire. It has eyes that never blink. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_dragon` · mesh `dragon_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#ebe5bf` `#969171` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

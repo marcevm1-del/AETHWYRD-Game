@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,336 tris · 0.967 × 3 × 1.805 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Nue is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is stretched, stitched and constantly shifting, colored in warm gold and pearl white. Look for a monkey's face, a tiger's body and a snake for a tail. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Nue is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is stretched, stitched and constantly shifting, colored in lion-tawny, with gold markings. Look for a monkey's face, a tiger's body and a snake for a tail. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#bda156` `#7b6638` `#ffd166` · broken symmetry, mimicry, audio-first reveal

@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#401d14` · triangle-based silhouette, sharp asymmetric spikes

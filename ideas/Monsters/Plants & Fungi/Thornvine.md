@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (1,550 tris · 3.127 × 2.353 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thornvine is a large creature with a huge bulbous flower on a thick stalk, about 3 m tall. Its bark and leaves are rough, scarred and spiked, colored in leaf greens over bark brown. Guild sketches always show vines covered in hooked thorns. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms.
+> The Thornvine is a large creature with a huge bulbous flower on a thick stalk, about 3 m tall. Its bark and leaves are rough, scarred and spiked, colored in leaf green over bark brown. Guild sketches always show vines covered in hooked thorns. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#5e8537` `#563b2e` `#8fd16a` · triangle-based silhouette, sharp asymmetric spikes

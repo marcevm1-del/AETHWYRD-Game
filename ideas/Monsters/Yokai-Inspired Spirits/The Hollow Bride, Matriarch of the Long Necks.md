@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,820 tris · 1.488 × 1.501 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The The Hollow Bride, Matriarch of the Long Necks is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a wedding veil over a neck that stretches across rooftops. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
+> The The Hollow Bride, Matriarch of the Long Necks is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in indigo, with violet markings. Its most striking feature is a wedding veil over a neck that stretches across rooftops. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `paper_ink_spirit` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_aberrant` · mesh `aberrant_base` · material `paper_ink_spirit` · VFX `shadow_wisps` · palette `#505783` `#3a3e5c` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

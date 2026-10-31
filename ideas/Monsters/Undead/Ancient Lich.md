@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (1,750 tris · 2.004 × 2.24 × 3.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Lich is a large creature with a drifting, half-formed body, about 3.3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in pale blues and frost-white. Look for a crowned skull with a phylactery chained to its chest. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by falling snow motes and frosted ground where it steps. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Lich is a large creature with a drifting, half-formed body, about 3.3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with frost-blue markings. Look for a crowned skull with a phylactery chained to its chest. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by falling snow motes and frosted ground where it steps. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `frost_trail_snow` · palette `#ddccb4` `#8d7e6a` `#9fdcff` · elongated, irregular silhouette; still-then-sudden timing

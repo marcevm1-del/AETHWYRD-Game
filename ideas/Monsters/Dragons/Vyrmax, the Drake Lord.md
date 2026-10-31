@@ -13,7 +13,7 @@ tags: [monster, dragons, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,270 tris · 21.914 × 14 × 15.557 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vyrmax, the Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 14 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Look for a crown of broken horns from every rival drake it killed. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
+> The Vyrmax, the Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 14 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with ember-orange markings. Look for a crown of broken horns from every rival drake it killed. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#636372` `#454551` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

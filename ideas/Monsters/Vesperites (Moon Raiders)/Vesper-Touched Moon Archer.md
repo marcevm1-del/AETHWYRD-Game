@@ -13,7 +13,7 @@ tags: [monster, vesperites-moon-raiders]
 
 > [!note] 3D model: procedural blockout in Unity (3,124 tris · 0.835 × 1.535 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Moon Archer is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Its most striking feature is a bow of red glass and robes like falling silk. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Moon Archer is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in twilight blue, with crimson markings. Its most striking feature is a bow of red glass and robes like falling silk. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#436084` `#32475f` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

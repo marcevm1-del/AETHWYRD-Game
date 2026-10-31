@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,606 tris · 0.096 × 0.4 × 0.16 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sky Snowmole is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pale jade and cloud white. Look for a white nose and shovel-like paws. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Sky Snowmole is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pastel pink, with pale jade markings. Look for a white nose and shovel-like paws. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `wind_ribbons` · palette `#deafcb` `#9f7991` `#8fe0bd` · circle-based, soft silhouette

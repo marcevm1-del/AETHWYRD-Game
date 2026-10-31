@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (1,032 tris · 28.283 × 60 × 34.492 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Leviathan Young is a colossal creature with a streamlined aquatic body, about 60 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Its most striking feature is fins like the sails of a warship. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by fine mist and droplets that orbit it.
+> The Leviathan Young is a colossal creature with a streamlined aquatic body, about 60 m long. Its scales and skin are rough, scarred and spiked, colored in teal, with sea-blue markings. Its most striking feature is fins like the sails of a warship. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `mist_droplets` · palette `#499884` `#31695a` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,160 tris · 2.623 × 5.77 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Great Tengu King is a huge creature with a tall, long-legged bird build, about 6 m tall. Its form is weathered and natural, colored in pale jade and cloud white. Its most striking feature is a mask of red lacquer and a fan that summons typhoons. It has alert animal eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
+> The Great Tengu King is a huge creature with a tall, long-legged bird build, about 6 m tall. Its form is weathered and natural, colored in lacquer red, with pale jade markings. Its most striking feature is a mask of red lacquer and a fan that summons typhoons. It has alert animal eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `paper_ink_spirit` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_avian` · mesh `avian_base` · material `paper_ink_spirit` · VFX `wind_ribbons` · palette `#9f4335` `#642c24` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

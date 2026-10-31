@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (898 tris · 0.984 × 1.06 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Storm Grin in the Walls is a small creature with an object-shaped body that hides its true form, about 1 m tall. Its skin is stretched, stitched and constantly shifting, colored in storm violet shot through with electric yellow. Only its smile is ever visible. It has too many eyes, opening one after another. A distinctive marking runs along its back. It copies the walk of whatever it hunts, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Storm Grin in the Walls is a small creature with an object-shaped body that hides its true form, about 1 m tall. Its skin is stretched, stitched and constantly shifting, colored in raw pink, with electric-yellow markings. Only its smile is ever visible. It has too many eyes, opening one after another. A distinctive marking runs along its back. It copies the walk of whatever it hunts, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `wet_flesh_unsettling` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `wet_flesh_unsettling` · VFX `arc_sparks` · palette `#9e7863` `#674f42` `#ffe14d` · broken symmetry, mimicry, audio-first reveal

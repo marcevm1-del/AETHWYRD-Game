@@ -13,7 +13,7 @@ tags: [monster, sandborne]
 
 > [!note] 3D model: procedural blockout in Unity (1,108 tris · 1.453 × 1.371 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Glass Wraith is a person-sized creature with a bodiless, glowing form, about 2 m tall. Its sand-scoured hide is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show a figure of fused desert glass, humming with old magic. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light.
+> The Glass Wraith is a person-sized creature with a bodiless, glowing form, about 2 m tall. Its sand-scoured hide is patchy and subtly wrong, as if assembled from memory, colored in sand gold. Guild sketches always show a figure of fused desert glass, humming with old magic. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `sand_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `sand_hide` · VFX `holy_motes` · palette `#c0aa5c` `#806f39` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

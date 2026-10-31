@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (1,366 tris · 0.233 × 0.5 × 0.25 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Rainbow Koi is a small creature with a streamlined aquatic body, about 0.5 m long. Its coat is smooth and clean, colored in deep blues with a glassy shine. Guild sketches always show scales that shimmer every color. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by fine mist and droplets that orbit it.
+> The Rainbow Koi is a small creature with a streamlined aquatic body, about 0.5 m long. Its coat is smooth and clean, colored in mint, with sea-blue markings. Guild sketches always show scales that shimmer every color. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · circle-based, soft silhouette
+Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `mist_droplets` · palette `#afce99` `#789365` `#4fa8e8` · circle-based, soft silhouette

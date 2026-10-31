@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,174 tris · 34.355 × 20.304 × 40 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Primeval Titan-Kin is a colossal creature with a towering, heavy-limbed body, about 40 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a body of living bedrock wearing fragments of Titan armor. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Primeval Titan-Kin is a colossal creature with a towering, heavy-limbed body, about 40 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with ochre markings. Its most striking feature is a body of living bedrock wearing fragments of Titan armor. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `rock_debris` · palette `#5a8245` `#3d572e` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

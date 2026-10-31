@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (3,418 tris · 2.417 × 3 × 1.634 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Maze Weaver is a large creature with a squat, many-legged arachnid build, about 3 m long. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. It rebuilds corridors behind you. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
+> The Maze Weaver is a large creature with a squat, many-legged arachnid build, about 3 m long. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in dungeon stone, with violet markings. It rebuilds corridors behind you. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `dungeon_stone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_octopod` · mesh `octopod_base` · material `dungeon_stone` · VFX `shadow_wisps` · palette `#787e87` `#50555c` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

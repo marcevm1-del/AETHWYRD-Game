@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,482 tris · 1.296 × 1.393 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Goblin General is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a war banner and a horn carved from an ogre's tusk. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
+> The Goblin General is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is a war banner and a horn carved from an ogre's tusk. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#7e8c68` `#584131` `#b5cf9a` · triangle-based silhouette, sharp asymmetric spikes

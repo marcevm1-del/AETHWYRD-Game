@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (3,100 tris · 0.835 × 1.18 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Goblin Champion is a person-sized creature with a lean humanoid frame, about 2 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for a trophy cloak stitched from adventurers' capes. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Goblin Champion is a person-sized creature with a lean humanoid frame, about 2 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in moss green and leather brown, with crimson markings. Look for a trophy cloak stitched from adventurers' capes. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `blood_mist` · palette `#6bad45` `#895c35` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

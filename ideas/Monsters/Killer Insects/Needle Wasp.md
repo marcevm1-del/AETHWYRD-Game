@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (2,494 tris · 0.449 × 0.367 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Needle Wasp is a tiny creature with a tiny, darting winged build, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Look for a stinger as long as its body. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
+> The Needle Wasp is a tiny creature with a tiny, darting winged build, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Look for a stinger as long as its body. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#5d5c67` `#46444e` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

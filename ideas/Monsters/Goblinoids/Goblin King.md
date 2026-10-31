@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,182 tris · 2.405 × 1.461 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Goblin King is a large creature with a massive hunched brute frame, about 2.8 m tall. Its skin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for throne-backed armor and a crown of hammered coins. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it.
+> The Goblin King is a large creature with a massive hunched brute frame, about 2.8 m tall. Its skin is rough, scarred and spiked, colored in moss green and leather brown, with ochre markings. Look for throne-backed armor and a crown of hammered coins. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -108,4 +108,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `rough_skin_leather` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `rough_skin_leather` · VFX `rock_debris` · palette `#73bf4c` `#97683a` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

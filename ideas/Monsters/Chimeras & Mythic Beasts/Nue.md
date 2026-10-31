@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,088 tris · 0.608 × 3 × 1.701 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Nue is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in storm violet shot through with electric yellow. Its most striking feature is a monkey's face, a tiger's body and a snake for a tail. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by crackling arcs that jump across its body.
+> The Nue is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in lion-tawny, with electric-yellow markings. Its most striking feature is a monkey's face, a tiger's body and a snake for a tail. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `arc_sparks` · palette `#b37a52` `#754d35` `#ffe14d` · elongated, irregular silhouette; still-then-sudden timing

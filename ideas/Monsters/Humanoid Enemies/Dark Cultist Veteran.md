@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies]
 
 > [!note] 3D model: procedural blockout in Unity (2,744 tris · 1.21 × 1.693 × 2.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dark Cultist Veteran is a large creature with a broad-shouldered humanoid build, about 2.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Its most striking feature is red robes and a mask shaped like a crescent moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Dark Cultist Veteran is a large creature with a broad-shouldered humanoid build, about 2.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in leather browns and dull steel, with crimson markings. Its most striking feature is red robes and a mask shaped like a crescent moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `blood_mist` · palette `#905f37` `#5e636b` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

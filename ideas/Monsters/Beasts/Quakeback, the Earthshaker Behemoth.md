@@ -13,7 +13,7 @@ tags: [monster, beasts, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,794 tris · 5.156 × 20 × 11.631 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Quakeback, the Earthshaker Behemoth is a colossal creature with a long-legged predatory quadruped build, about 20 m long. Its coat is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a back of shifting tectonic plates that sets off the hourly quakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
+> The Quakeback, the Earthshaker Behemoth is a colossal creature with a long-legged predatory quadruped build, about 20 m long. Its coat is rough, scarred and spiked, colored in ash-grey, with ochre markings. Survivors describe a back of shifting tectonic plates that sets off the hourly quakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#8f8d88` `#5e5c58` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

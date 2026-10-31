@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (3,270 tris · 12.522 × 8 × 8.889 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Wyvern is a huge creature with a sleek flying build, about 8 m long. Its scales are rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe tattered wings and a venom-tipped tail. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by swirling leaves and a constant breeze.
+> The Wyvern is a huge creature with a sleek flying build, about 8 m long. Its scales are rough, scarred and spiked, colored in emerald, with pale jade markings. Survivors describe tattered wings and a venom-tipped tail. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `wind_ribbons` · palette `#3d7839` `#2c5127` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (5,570 tris · 2.023 × 4 × 2.554 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Naga Warrior is a large creature with a coiling half-serpent frame, about 4 m long. Its scales are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for four arms holding four blades. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by fine mist and droplets that orbit it.
+> The Naga Warrior is a large creature with a coiling half-serpent frame, about 4 m long. Its scales are rough, scarred and spiked, colored in violet, with sea-blue markings. Look for four arms holding four blades. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `mist_droplets` · palette `#8d6694` `#5d4366` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

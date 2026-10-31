@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,736 tris · 0.722 × 2.8 × 1.628 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thunderhorn Elk is a large creature with a long-legged predatory quadruped build, about 2.8 m long. Its coat is weathered and natural, colored in storm violet shot through with electric yellow. Guild sketches always show branching antlers that crackle in storms. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by crackling arcs that jump across its body.
+> The Thunderhorn Elk is a large creature with a long-legged predatory quadruped build, about 2.8 m long. Its coat is weathered and natural, colored in dark brown, with electric-yellow markings. Guild sketches always show branching antlers that crackle in storms. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `arc_sparks` · palette `#5a453d` `#40312e` `#ffe14d` · real-animal silhouette with one fantasy exaggeration

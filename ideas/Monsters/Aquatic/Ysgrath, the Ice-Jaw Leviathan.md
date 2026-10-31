@@ -13,7 +13,7 @@ tags: [monster, aquatic, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,488 tris · 17.799 × 45 × 21.707 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ysgrath, the Ice-Jaw Leviathan is a colossal creature with a streamlined aquatic body, about 45 m long. Its scales and skin are rough, scarred and spiked, colored in pale blues and frost-white. Look for jaws of blue ice that break the frozen sea from below. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
+> The Ysgrath, the Ice-Jaw Leviathan is a colossal creature with a streamlined aquatic body, about 45 m long. Its scales and skin are rough, scarred and spiked, colored in sea-blue. Look for jaws of blue ice that break the frozen sea from below. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `frost_trail_snow` · palette `#3a7595` `#274f68` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

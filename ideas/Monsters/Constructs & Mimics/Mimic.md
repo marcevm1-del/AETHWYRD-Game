@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (798 tris · 0.984 × 1.06 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mimic is a small creature with an object-shaped body that hides its true form, about 1 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Look for a treasure chest with a tongue and a ring of teeth. It has no eyes at all, only a wide and patient mouth. A distinctive marking runs along its back. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
+> The Mimic is a small creature with an object-shaped body that hides its true form, about 1 m tall. Its surface is stretched, stitched and constantly shifting, colored in weathered stone. Look for a treasure chest with a tongue and a ring of teeth. It has no eyes at all, only a wide and patient mouth. A distinctive marking runs along its back. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#8e8c87` `#5d5b57` `#cbc8c1` · broken symmetry, mimicry, audio-first reveal

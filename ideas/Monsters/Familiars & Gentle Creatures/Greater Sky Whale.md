@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (1,490 tris · 50.629 × 128 × 54.311 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Sky Whale is a colossal creature with a long, finned body, about 128 m long. Its coat is smooth and clean, colored in pale jade and cloud white. Guild sketches always show a gentle giant drifting between floating islands. It has big round glossy eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by swirling leaves and a constant breeze. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Sky Whale is a colossal creature with a long, finned body, about 128 m long. Its coat is smooth and clean, colored in mint, with pale jade markings. Guild sketches always show a gentle giant drifting between floating islands. It has big round glossy eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by swirling leaves and a constant breeze. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · circle-based, soft silhouette
+Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `wind_ribbons` · palette `#abc592` `#758c61` `#8fe0bd` · circle-based, soft silhouette

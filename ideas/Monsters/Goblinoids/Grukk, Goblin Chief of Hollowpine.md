@@ -13,7 +13,7 @@ tags: [monster, goblinoids, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,120 tris · 1.301 × 0.902 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Grukk, Goblin Chief of Hollowpine is a person-sized creature with a lean humanoid frame, about 2.4 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is cult runes carved into its red-eyed hide and a cleaver named Hungry. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Grukk, Goblin Chief of Hollowpine is a person-sized creature with a lean humanoid frame, about 2.4 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather, with ember-orange markings. Its most striking feature is cult runes carved into its red-eyed hide and a cleaver named Hungry. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `embers_heat_haze` · palette `#8a9b73` `#624936` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,840 tris · 2.121 × 3.491 × 3.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Fenrir-Blooded Lord is a large creature with a lean humanoid frame, about 3.6 m tall. Its fur is rough, scarred and spiked, colored in pale blues and frost-white. Its most striking feature is a crown of frost spikes growing from its mane. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
+> The Fenrir-Blooded Lord is a large creature with a lean humanoid frame, about 3.6 m tall. Its fur is rough, scarred and spiked, colored in black-brown, with frost-blue markings. Its most striking feature is a crown of frost spikes growing from its mane. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `frost_trail_snow` · palette `#53453b` `#403537` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

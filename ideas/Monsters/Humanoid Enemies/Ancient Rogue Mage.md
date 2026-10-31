@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies]
 
 > [!note] 3D model: procedural blockout in Unity (2,726 tris · 1.591 × 1.709 × 2.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Rogue Mage is a large creature with a broad-shouldered humanoid build, about 2.7 m tall. Its clothing and gear are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is burnt academy robes and ink-stained fingers. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Rogue Mage is a large creature with a broad-shouldered humanoid build, about 2.7 m tall. Its clothing and gear are rough, scarred and spiked, colored in leather browns and dull steel, with ember-orange markings. Its most striking feature is burnt academy robes and ink-stained fingers. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `embers_heat_haze` · palette `#926738` `#5f646c` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

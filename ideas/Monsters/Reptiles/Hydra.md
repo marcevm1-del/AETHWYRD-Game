@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (3,976 tris · 2.047 × 9 × 3.783 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hydra is a huge creature with a coiling, legless body, about 9 m long. Its scales are rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show five heads on long necks, each with its own temper. It has narrow glowing eyes. Faint runes glow along its body when it fights. It circles its prey, surrounded by a low toxic haze that clings to the ground.
+> The Hydra is a huge creature with a coiling, legless body, about 9 m long. Its scales are rough, scarred and spiked, colored in teal-grey, with sickly green markings. Guild sketches always show five heads on long necks, each with its own temper. It has narrow glowing eyes. Faint runes glow along its body when it fights. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `toxic_fog` · palette `#4a677a` `#344856` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

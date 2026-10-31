@@ -13,7 +13,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,826 tris · 2.823 × 1.79 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The The Briar King, Lord of the Winter Court is a large creature with a walking body of bark and root, about 4 m tall. Its bark and leaves are rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe a crown of frozen thorns and a cloak of dead roses. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.
+> The The Briar King, Lord of the Winter Court is a large creature with a walking body of bark and root, about 4 m tall. Its bark and leaves are rough, scarred and spiked, colored in moss green and lichen grey, with frost-blue markings. Survivors describe a crown of frozen thorns and a cloak of dead roses. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `frost_trail_snow` · palette `#6d8b43` `#46512f` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

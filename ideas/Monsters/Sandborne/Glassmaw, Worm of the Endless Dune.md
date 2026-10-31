@@ -13,7 +13,7 @@ tags: [monster, sandborne, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,584 tris · 18.634 × 70 × 26.632 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Glassmaw, Worm of the Endless Dune is a colossal creature with a massive snake-like frame, about 70 m long. Its sand-scoured hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a round mouth ringed with teeth of desert glass. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
+> The Glassmaw, Worm of the Endless Dune is a colossal creature with a massive snake-like frame, about 70 m long. Its sand-scoured hide is rough, scarred and spiked, colored in sunbaked clay, with ochre markings. Its most striking feature is a round mouth ringed with teeth of desert glass. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `sand_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `sand_hide` · VFX `rock_debris` · palette `#c19751` `#806135` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,294 tris · 5.093 × 5.6 × 3.157 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Queen Ant is a huge creature with a segmented six-limbed frame, about 5.6 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a swollen abdomen pulsing with eggs. It has burning slit pupils. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Queen Ant is a huge creature with a segmented six-limbed frame, about 5.6 m long. Its chitin is rough, scarred and spiked, colored in glossy brown, with ochre markings. Guild sketches always show a swollen abdomen pulsing with eggs. It has burning slit pupils. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#805932` `#523922` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (1,828 tris · 1.25 × 1.019 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thorn Imp is a small creature with a bat-like flying frame, about 0.6 m tall. Its hide is weathered and natural, colored in leaf greens over bark brown. Guild sketches always show bat wings, a pointed tail and a cheeky grin. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Thorn Imp is a small creature with a bat-like flying frame, about 0.6 m tall. Its hide is weathered and natural, colored in brimstone red, with leaf-green markings. Guild sketches always show bat wings, a pointed tail and a cheeky grin. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `demon_hide_emissive` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `demon_hide_emissive` · VFX `pollen_petals` · palette `#a5342a` `#5d2a27` `#8fd16a` · real-animal silhouette with one fantasy exaggeration

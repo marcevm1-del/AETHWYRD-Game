@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (4,020 tris · 1.221 × 6 × 3.186 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Tunnel Centipede is a huge creature with a coiling, legless body, about 6 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a hundred legs and a head like a split mask. It has eyes that never blink. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Tunnel Centipede is a huge creature with a coiling, legless body, about 6 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in black, with sickly green markings. Survivors describe a hundred legs and a head like a split mask. It has eyes that never blink. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_serpent` · mesh `serpent_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#5b5964` `#44424c` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

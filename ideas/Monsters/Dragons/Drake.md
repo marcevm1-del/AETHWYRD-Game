@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (2,776 tris · 0.688 × 2 × 1.343 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Drake is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its scales are weathered and natural, colored in ember reds fading to soot black. Survivors describe stubby wings and a smoking snout. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
+> The Drake is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its scales are weathered and natural, colored in sapphire, with ember-orange markings. Survivors describe stubby wings and a smoking snout. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -98,4 +98,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#307895` `#265267` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

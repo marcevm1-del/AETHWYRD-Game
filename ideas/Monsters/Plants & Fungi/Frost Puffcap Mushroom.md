@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,552 tris · 0.403 × 0.294 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Frost Puffcap Mushroom is a small creature with a mushroom-capped walking body, about 0.5 m tall. Its bark and leaves are smooth and clean, colored in pale blues and frost-white. Its most striking feature is a spotted cap that sneezes giggle-spores. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Frost Puffcap Mushroom is a small creature with a mushroom-capped walking body, about 0.5 m tall. Its bark and leaves are smooth and clean, colored in warm brown, with frost-blue markings. Its most striking feature is a spotted cap that sneezes giggle-spores. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · circle-based, soft silhouette
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `frost_trail_snow` · palette `#9e8246` `#68532b` `#9fdcff` · circle-based, soft silhouette

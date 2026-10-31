@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (3,036 tris · 0.751 × 0.833 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Hobgoblin is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Survivors describe a broad scarred chest and a helmet two sizes too small. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Hobgoblin is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in grey-green and patched leather, with crimson markings. Survivors describe a broad scarred chest and a helmet two sizes too small. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `blood_mist` · palette `#849b73` `#615036` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

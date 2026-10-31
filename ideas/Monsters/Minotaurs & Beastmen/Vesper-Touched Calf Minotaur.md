@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,196 tris · 1.217 × 0.836 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Calf Minotaur is a person-sized creature with a massive hunched brute frame, about 2 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for stubby horns and a bronze nose ring. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Calf Minotaur is a person-sized creature with a massive hunched brute frame, about 2 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in tan, with crimson markings. Look for stubby horns and a bronze nose ring. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `blood_mist` · palette `#7f6743` `#55442d` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

@@ -13,7 +13,7 @@ tags: [monster, dragons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,026 tris · 146.209 × 150 × 91.601 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Solvoryn, the Dawnwyrm is a colossal creature with a four-legged, two-winged dragon body, about 150 m long. Its scales are weathered and natural, colored in warm gold and pearl white. Survivors describe feathered wings of golden light. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by soft radiance and floating motes of light.
+> The Solvoryn, the Dawnwyrm is a colossal creature with a four-legged, two-winged dragon body, about 150 m long. Its scales are weathered and natural, colored in emerald, with gold markings. Survivors describe feathered wings of golden light. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `holy_motes` · palette `#427d3c` `#2f5429` `#ffd166` · real-animal silhouette with one fantasy exaggeration

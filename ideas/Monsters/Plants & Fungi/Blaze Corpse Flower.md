@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (1,820 tris · 2.886 × 2.427 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Blaze Corpse Flower is a large creature with a huge bulbous flower on a thick stalk, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Survivors describe a rotting bloom the size of a cart. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Blaze Corpse Flower is a large creature with a huge bulbous flower on a thick stalk, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in deep fern green and dark bark, with ember-orange markings. Survivors describe a rotting bloom the size of a cart. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `embers_heat_haze` · palette `#4e8047` `#4e3f2e` `#ff7a3d` · elongated, irregular silhouette; still-then-sudden timing

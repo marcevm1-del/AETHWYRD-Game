@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,932 tris · 1.083 × 4.2 × 2.443 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Hippogriff is a large creature with a heavy, muscular quadruped frame, about 4.2 m long. Its plumage is weathered and natural, colored in pale jade and cloud white. Guild sketches always show an eagle's head on a horse's body. It has dark, wary eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by swirling leaves and a constant breeze. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Hippogriff is a large creature with a heavy, muscular quadruped frame, about 4.2 m long. Its plumage is weathered and natural, colored in crow-black, with pale jade markings. Guild sketches always show an eagle's head on a horse's body. It has dark, wary eyes. Faint runes glow along its body when it fights. It stalks low to the ground, surrounded by swirling leaves and a constant breeze. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#585663` `#48464f` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

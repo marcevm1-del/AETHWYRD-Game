@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,292 tris · 1.24 × 1.2 × 1.085 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Meadow Armor Beetle is a person-sized creature with a six-legged armored body, about 1.2 m long. Its chitin is weathered and natural, colored in pale jade and cloud white. Its most striking feature is a shell like polished bronze. It has amber predator eyes. A distinctive marking runs along its back. It prowls, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
+> The Meadow Armor Beetle is a person-sized creature with a six-legged armored body, about 1.2 m long. Its chitin is weathered and natural, colored in amber, with pale jade markings. Its most striking feature is a shell like polished bronze. It has amber predator eyes. A distinctive marking runs along its back. It prowls, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#c5872f` `#7d541d` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

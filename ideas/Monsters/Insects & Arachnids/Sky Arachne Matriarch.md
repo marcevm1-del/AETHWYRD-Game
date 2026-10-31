@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,426 tris · 6.444 × 8 × 4.986 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sky Arachne Matriarch is a huge creature with a squat, many-legged arachnid build, about 8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in pale jade and cloud white. Guild sketches always show a crown of silk and eight eyes like jewels. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It moves in jerky stop-motion bursts, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
+> The Sky Arachne Matriarch is a huge creature with a squat, many-legged arachnid build, about 8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in glossy brown, with pale jade markings. Guild sketches always show a crown of silk and eight eyes like jewels. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It moves in jerky stop-motion bursts, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#7f5532` `#513721` `#8fe0bd` · elongated, irregular silhouette; still-then-sudden timing

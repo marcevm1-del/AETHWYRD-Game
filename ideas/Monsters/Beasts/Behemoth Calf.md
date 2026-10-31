@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,580 tris · 1.356 × 4 × 2.686 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Behemoth Calf is a large creature with a powerful four-legged hunter's body, about 4 m long. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is a stone-plated back and stump-like legs. It has dark, wary eyes. Faint runes glow along its body when it fights. It lopes in long strides, surrounded by pebbles that tremble and float near it.
+> The Behemoth Calf is a large creature with a powerful four-legged hunter's body, about 4 m long. Its coat is weathered and natural, colored in warm brown, with ochre markings. Its most striking feature is a stone-plated back and stump-like legs. It has dark, wary eyes. Faint runes glow along its body when it fights. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#8a6046` `#593c30` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

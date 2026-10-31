@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,238 tris · 6.871 × 4.156 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Zahhar, King of the Divs is a huge creature with a towering, heavy-limbed body, about 8 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe horns of black iron and a throne carried by lesser divs. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by shadows that lean toward it.
+> The Zahhar, King of the Divs is a huge creature with a towering, heavy-limbed body, about 8 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Survivors describe horns of black iron and a throne carried by lesser divs. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#738848` `#4d5b31` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

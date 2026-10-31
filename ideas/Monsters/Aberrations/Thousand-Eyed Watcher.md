@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (1,252 tris · 6.178 × 5.161 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thousand-Eyed Watcher is a huge creature with a bodiless, glowing form, about 6 m tall. Its skin is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Its most striking feature is a cloud of eyes that blink in sequence. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by warped air, as if space bends around it.
+> The Thousand-Eyed Watcher is a huge creature with a bodiless, glowing form, about 6 m tall. Its skin is stretched, stitched and constantly shifting, colored in sickly teal, with violet-edged markings. Its most striking feature is a cloud of eyes that blink in sequence. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `wet_flesh_unsettling` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_floating` · mesh `floating_base` · material `wet_flesh_unsettling` · VFX `void_distortion` · palette `#668576` `#435950` `#8a7cff` · broken symmetry, mimicry, audio-first reveal

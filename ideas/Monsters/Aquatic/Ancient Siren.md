@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (6,104 tris · 1.37 × 3 × 2.509 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Siren is a large creature with an elegant serpentfolk build, about 3 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a fish tail and a voice that sounds like home. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Siren is a large creature with an elegant serpentfolk build, about 3 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with sea-blue markings. Look for a fish tail and a voice that sounds like home. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_naga` · mesh `naga_base` · material `wet_scale` · VFX `mist_droplets` · palette `#98a4ad` `#636d78` `#4fa8e8` · elongated, irregular silhouette; still-then-sudden timing

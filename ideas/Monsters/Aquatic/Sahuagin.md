@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (2,572 tris · 1.119 × 1.416 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sahuagin is a person-sized creature with a lean humanoid frame, about 1.9 m tall. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Guild sketches always show a shark-like head and webbed hands. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
+> The Sahuagin is a person-sized creature with a lean humanoid frame, about 1.9 m tall. Its scales and skin are rough, scarred and spiked, colored in silver, with sea-blue markings. Guild sketches always show a shark-like head and webbed hands. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `wet_scale` · VFX `mist_droplets` · palette `#a8bcc0` `#6d7f85` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

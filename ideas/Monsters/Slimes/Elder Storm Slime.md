@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_blob` · mesh `blob_base` · material `translucent_gel_sss` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_blob` · mesh `blob_base` · material `translucent_gel_sss` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1e1e40` · real-animal silhouette with one fantasy exaggeration

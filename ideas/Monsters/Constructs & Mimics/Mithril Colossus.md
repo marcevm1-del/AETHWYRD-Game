@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (2,644 tris · 47.028 × 32.165 × 50 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mithril Colossus is a colossal creature with a heavy, hand-built humanoid shell, about 50 m tall. Its surface is weathered and natural, colored in warm gold and pearl white. Survivors describe silver plating and a face like a temple mask. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
+> The Mithril Colossus is a colossal creature with a heavy, hand-built humanoid shell, about 50 m tall. Its surface is weathered and natural, colored in weathered stone, with gold markings. Survivors describe silver plating and a face like a temple mask. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#888581` `#5a5754` `#ffd166` · real-animal silhouette with one fantasy exaggeration

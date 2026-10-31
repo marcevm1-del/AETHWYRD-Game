@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,116 tris · 0.576 × 0.565 × 1.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Wererat is a person-sized creature with an upright humanoid build, about 1.5 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a hunched rodent body with human hands. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Wererat is a person-sized creature with an upright humanoid build, about 1.5 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in snow-white, with sickly green markings. Survivors describe a hunched rodent body with human hands. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `toxic_fog` · palette `#f7f9fe` `#a7acb8` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,610 tris · 1.718 × 1.024 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Calf Minotaur is a person-sized creature with a towering, heavy-limbed body, about 2 m tall. Its hide is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show stubby horns and a bronze nose ring. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
+> The Calf Minotaur is a person-sized creature with a towering, heavy-limbed body, about 2 m tall. Its hide is rough, scarred and spiked, colored in tan. Guild sketches always show stubby horns and a bronze nose ring. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `dust_puffs` · palette `#7f5c43` `#553c2d` `#cb9a6b` · triangle-based silhouette, sharp asymmetric spikes

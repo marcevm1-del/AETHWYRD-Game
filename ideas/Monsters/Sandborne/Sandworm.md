@@ -13,7 +13,7 @@ tags: [monster, sandborne]
 
 > [!note] 3D model: procedural blockout in Unity (3,940 tris · 9.1 × 40 × 16.815 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sandworm is a colossal creature with a massive snake-like frame, about 40 m long. Its sand-scoured hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a round mouth ringed with crystal teeth. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Sandworm is a colossal creature with a massive snake-like frame, about 40 m long. Its sand-scoured hide is rough, scarred and spiked, colored in sunbaked clay, with ochre markings. Survivors describe a round mouth ringed with crystal teeth. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `sand_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `sand_hide` · VFX `rock_debris` · palette `#b66c4d` `#784432` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

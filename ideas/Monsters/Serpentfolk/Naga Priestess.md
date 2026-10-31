@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (6,134 tris · 2.023 × 4 × 2.554 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Naga Priestess is a large creature with a coiling half-serpent frame, about 4 m long. Its scales are rough, scarred and spiked, colored in ink black with bruised violet. Look for a hood of jeweled scales and temple tattoos. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it.
+> The Naga Priestess is a large creature with a coiling half-serpent frame, about 4 m long. Its scales are rough, scarred and spiked, colored in green, with violet markings. Look for a hood of jeweled scales and temple tattoos. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `shadow_wisps` · palette `#508446` `#35592f` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

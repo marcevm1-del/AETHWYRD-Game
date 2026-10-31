@@ -13,7 +13,7 @@ tags: [monster, sandborne, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,366 tris · 419.936 × 900 × 450.484 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dunewhale Thalassa is a colossal creature with a long, finned body, about 900 m long. Its sand-scoured hide is smooth and clean, colored in ochre, clay and mossy stone. Look for a whale of stone and sand carrying a town on its back. It has wide curious eyes with star-shaped highlights. Its presence is world-scale; the sky changes color when it appears. It hops in little bursts, surrounded by pebbles that tremble and float near it.
+> The Dunewhale Thalassa is a colossal creature with a long, finned body, about 900 m long. Its sand-scoured hide is smooth and clean, colored in sunbaked clay, with ochre markings. Look for a whale of stone and sand carrying a town on its back. It has wide curious eyes with star-shaped highlights. Its presence is world-scale; the sky changes color when it appears. It hops in little bursts, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -88,4 +88,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `sand_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
+Rig `rig_fish` · mesh `fish_base` · material `sand_hide` · VFX `rock_debris` · palette `#bc794f` `#7c4d33` `#d1a15a` · circle-based, soft silhouette

@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (3,256 tris · 0.458 × 0.522 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Umbrella Spirit is a small creature with a small, compact humanoid body, about 0.8 m tall. Its form is smooth and clean, colored in deep blues with a glassy shine. Survivors describe a one-eyed paper umbrella hopping on one leg. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by fine mist and droplets that orbit it.
+> The Umbrella Spirit is a small creature with a small, compact humanoid body, about 0.8 m tall. Its form is smooth and clean, colored in lacquer red, with sea-blue markings. Survivors describe a one-eyed paper umbrella hopping on one leg. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · circle-based, soft silhouette
+Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#a84137` `#692a26` `#4fa8e8` · circle-based, soft silhouette

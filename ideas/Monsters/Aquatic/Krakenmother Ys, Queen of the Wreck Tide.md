@@ -13,7 +13,7 @@ tags: [monster, aquatic, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,898 tris · 34.452 × 40 × 45.496 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Krakenmother Ys, Queen of the Wreck Tide is a colossal creature with a tentacled, soft-bodied form, about 40 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a mother kraken wearing sunken ships like jewelry. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.
+> The Krakenmother Ys, Queen of the Wreck Tide is a colossal creature with a tentacled, soft-bodied form, about 40 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in sea-blue. Look for a mother kraken wearing sunken ships like jewelry. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_cephalopod` · mesh `cephalopod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_cephalopod` · mesh `cephalopod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#3d8d9d` `#29606e` `#4fa8e8` · elongated, irregular silhouette; still-then-sudden timing

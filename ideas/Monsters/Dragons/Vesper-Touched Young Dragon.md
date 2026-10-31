@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (3,482 tris · 10.465 × 12 × 9.257 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Young Dragon is a huge creature with a vast quadruped dragon frame with cathedral wings, about 12 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Guild sketches always show a proud crest and scales that shine like new coins. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Young Dragon is a huge creature with a vast quadruped dragon frame with cathedral wings, about 12 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in bronze, with ember-orange markings. Guild sketches always show a proud crest and scales that shine like new coins. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#c5913f` `#7c5a27` `#ff7a3d` · elongated, irregular silhouette; still-then-sudden timing

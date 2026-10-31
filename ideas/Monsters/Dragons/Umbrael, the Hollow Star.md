@@ -13,7 +13,7 @@ tags: [monster, dragons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,202 tris · 87.212 × 100 × 77.138 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Umbrael, the Hollow Star is a colossal creature with a four-legged, two-winged dragon body, about 100 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Its most striking feature is scales like a night sky full of dying stars. It has eyes set slightly too far apart. Its presence is world-scale; the sky changes color when it appears. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
+> The Umbrael, the Hollow Star is a colossal creature with a four-legged, two-winged dragon body, about 100 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in sapphire, with violet-edged markings. Its most striking feature is scales like a night sky full of dying stars. It has eyes set slightly too far apart. Its presence is world-scale; the sky changes color when it appears. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `void_distortion` · palette `#2d6d8a` `#234b5f` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (1,998 tris · 172.258 × 200 × 234.778 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Abyssal Kraken Queen is a colossal creature with a tentacled, soft-bodied form, about 200 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show tentacles that can wrap around whole islands. It has pale, pupil-less eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It glides without moving its legs, surrounded by warped air, as if space bends around it.
+> The Abyssal Kraken Queen is a colossal creature with a tentacled, soft-bodied form, about 200 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with violet-edged markings. Guild sketches always show tentacles that can wrap around whole islands. It has pale, pupil-less eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It glides without moving its legs, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_cephalopod` · mesh `cephalopod_base` · material `wet_scale` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_cephalopod` · mesh `cephalopod_base` · material `wet_scale` · VFX `void_distortion` · palette `#9aa4b0` `#646c7a` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

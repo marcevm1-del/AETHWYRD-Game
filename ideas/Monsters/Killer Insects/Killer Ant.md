@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (3,342 tris · 0.525 × 1 × 0.394 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Killer Ant is a small creature with a segmented six-limbed frame, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in muted greys and dusty browns. Its most striking feature is a pale soldier ant with a jaw that never stops working. It has pale, pupil-less eyes. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts. It has no visible aura; you hear its breathing before you see it.
+> The Killer Ant is a small creature with a segmented six-limbed frame, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in black. Its most striking feature is a pale soldier ant with a jaw that never stops working. It has pale, pupil-less eyes. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `dust_puffs` · palette `#4f4f58` `#3c3a43` `#7b7b8a` · elongated, irregular silhouette; still-then-sudden timing

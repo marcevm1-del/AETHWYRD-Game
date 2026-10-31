@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,822 tris · 1.288 × 5.6 × 2.514 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Chimera is a huge creature with a powerful four-legged hunter's body, about 5.6 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is lion, goat and serpent heads on one body. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Chimera is a huge creature with a powerful four-legged hunter's body, about 5.6 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ember-orange markings. Its most striking feature is lion, goat and serpent heads on one body. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `embers_heat_haze` · palette `#744d3d` `#4e372c` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

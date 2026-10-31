@@ -13,7 +13,7 @@ tags: [monster, gremlins]
 
 > [!note] 3D model: procedural blockout in Unity (2,518 tris · 0.297 × 0.339 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Gremlin is a small creature with a scrawny biped with long arms and bowed legs, about 0.6 m tall. Its skin is weathered and natural, colored in storm violet shot through with electric yellow. Its most striking feature is bat ears, a wrench and a laugh like a squeaky hinge. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by crackling arcs that jump across its body.
+> The Gremlin is a small creature with a scrawny biped with long arms and bowed legs, about 0.6 m tall. Its skin is weathered and natural, colored in lime-green, with electric-yellow markings. Its most striking feature is bat ears, a wrench and a laugh like a squeaky hinge. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#82a84e` `#537033` `#ffe14d` · real-animal silhouette with one fantasy exaggeration

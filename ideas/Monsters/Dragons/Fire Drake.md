@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (2,618 tris · 1.017 × 3 × 2.015 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Fire Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is ember scales and a magma-glowing belly. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
+> The Fire Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in sapphire, with ember-orange markings. Its most striking feature is ember scales and a magma-glowing belly. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#295780` `#203d58` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes
