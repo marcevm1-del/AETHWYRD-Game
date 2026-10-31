@@ -52,6 +52,11 @@ class Ctx:
         self.wall_key = self.rng.choice(list(style.wall_keys))
         self.roof_key = self.rng.choice(list(style.roof_keys))
         self.notes = []
+        mix = getattr(style, "cover_mix", None)  # e.g. Whisperwood: thatch on 1 roof in 3 (style is per building)
+        if mix and self.rng.random() < mix[2]:
+            style.cover, self.roof_key = mix[0], mix[1]
+            if len(mix) > 3:
+                style.ridge = mix[3]
 
     def seg(self):
         return 2 if self.hi else 1
@@ -563,7 +568,7 @@ def window(c, m, o, construction):
         frame_key = "trim"
     outline = o.outline()
     frame_along(c, m, outline, fw, fd, frame_key, -0.03)
-    glass_key = "glass"
+    glass_key = getattr(s, "window_glass", "glass")  # "window_glow" lights the panes (dark families)
     if kind == "trapezoid":
         glass_key = "trim_dark"
     g.slab_poly(outline, 0.04, glass_key, m @ T(0, 0.14, 0))
@@ -668,6 +673,10 @@ def door(c, m, o):
         ring_x = o.x + (o.w * 0.3 if leaves == 1 else 0.12)
         g.lathe([(0.05, -0.012), (0.065, 0.0), (0.05, 0.012), (0.035, 0.0), (0.05, -0.012)], "metal",
                 m @ T(ring_x, 0.0, z0 + o.h * 0.45) @ RX(90), segs=10, cap_bottom=False, cap_top=False)
+    if s.has("cloth_bands"):  # wind-plains: red cloth jambs and a blue lintel band round every door
+        for side in (-1, 1):
+            g.rbox((0.24, 0.07, o.h + 0.25), "cloth_a", m, 0.02, 1, (o.x + side * (o.w / 2 + 0.24), -0.1, z0 + (o.h + 0.25) / 2))
+        g.rbox((o.w + 0.8, 0.08, 0.3), "cloth_b", m, 0.02, 1, (o.x, -0.11, z1 + 0.3))
     if s.has("noren") and kind == "sliding":
         for k in range(3):
             g.rbox((o.w / 3 - 0.02, 0.03, 0.55), "cloth_a", m, 0.01, 1, (x0 + o.w / 6 + k * o.w / 3, -0.06, z1 - 0.3))
@@ -1263,8 +1272,20 @@ def chimney(c, x, y, z0, top, kind=None):
                 zz += hh
                 row += 1
         g.rbox((size + 0.16, size + 0.16, 0.14), "stone~2", None, 0.03, c.seg(), (x, y, z0 + h + 0.07))
-        if kind == "forge":
-            g.rbox((size - 0.3, size - 0.3, 0.1), "lamp", None, 0.02, 1, (x, y, z0 + h + 0.15))
+        if kind == "forge":  # an ember cap: a glowing coal bed, heaped coals and an iron grate over it
+            zt = z0 + h + 0.14
+            g.rbox((size - 0.24, size - 0.24, 0.14), "ember", None, 0.03, 1, (x, y, zt + 0.07))
+            for k in range(6):
+                a = 2 * math.pi * k / 6 + 0.4
+                rr = (size - 0.5) * 0.32
+                g.sphere(c.rng.uniform(0.12, 0.2), "ember" if k % 2 else "ember~2",
+                         T(x + rr * math.cos(a), y + rr * math.sin(a), zt + 0.16), segs=8, rings=5, squash=0.7)
+            g.sphere(0.22, "ember~2", T(x, y, zt + 0.2), segs=10, rings=6, squash=0.8)
+            for k in (-1, 0, 1):
+                g.box((size - 0.1, 0.05, 0.05), "metal", None, (x, y + k * (size - 0.4) / 3, zt + 0.36))
+            for sx in (-1, 1):
+                for sy in (-1, 1):
+                    g.box((0.06, 0.06, 0.4), "metal", None, (x + sx * (size / 2 - 0.08), y + sy * (size / 2 - 0.08), zt + 0.18))
         else:
             g.cylinder(0.14, 0.32, "accent", T(x + 0.12, y, z0 + h + 0.14), segs=10, r_top=0.11, bevel=0.03)
     elif kind == "brick":
@@ -1326,6 +1347,10 @@ def awning(c, m, x, z, w, depth=1.0):
 
 def banner(c, m, x, z, h=1.8, w=0.7):
     g = c.g
+    sc = getattr(c.s, "banner_scale", 1.0)
+    if sc != 1.0:  # bigger banners (Fanghold 2x), never trailing into the ground
+        h = min(h * sc, max(h, z - 0.7))
+        w = w * sc
     g.rbox((w + 0.2, 0.08, 0.08), "trim", m, 0.02, 1, (x, -0.12, z))
     g.rbox((w, 0.04, h), "cloth_a", m, 0.015, 1, (x, -0.12, z - h / 2))
     g.slab_poly([(x - w / 2, z - h), (x, z - h - 0.3), (x + w / 2, z - h)], 0.04, "cloth_a", m @ T(0, -0.12, 0))

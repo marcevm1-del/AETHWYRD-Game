@@ -936,6 +936,161 @@ def mushroom_cluster(c, p):
         bench(c, -2.4 + k * 2.4, -r - 2.0, 0.0)
 
 
+# Mossdeep's working buildings (review B2): toadstool or leaf-thatch forms instead of plain plaster boxes.
+
+
+def _stalk_post(c, x, y, h, r=0.16):
+    """A bulging stalk-coloured post (circle language for Mossdeep sheds)."""
+    c.g.lathe([(r * 1.3, 0.0), (r * 1.15, h * 0.2), (r * 0.95, h * 0.7), (r * 1.1, h)], "wall_a~3", T(x, y, 0), segs=12)
+
+
+def _ember_hearth(c, x, y, z=0.0):
+    g = c.g
+    g.rbox((1.8, 1.2, 0.9), "stone~3", None, 0.08, c.seg(), (x, y, z + 0.45))
+    g.rbox((1.3, 0.8, 0.1), "ember", None, 0.03, 1, (x, y, z + 0.92))
+    for k in range(4):
+        g.sphere(c.rng.uniform(0.1, 0.16), "ember~2", T(x - 0.4 + k * 0.27, y + c.rng.uniform(-0.2, 0.2), z + 0.98), segs=8, rings=5, squash=0.7)
+
+
+def mushroom_smithy(c, p):
+    """A toadstool forge: a squat red-capped workshop, a stone chimney through the cap, an open leaf-thatch forge."""
+    r = p.get("radius", 2.5)
+    c.roof_key = "roof_a"
+    info = round_block(c, 0, 0, r, 1, "cap", floor_h=p.get("height", 3.0), wall="stalk")
+    K.chimney(c, -r * 0.45, r * 0.45, 0.0, info["top"] + info["rise"] + 0.4, "forge")
+    # the open forge under a leaf-thatch lean-to on stalk posts
+    fx, fy, fw, fd = r + 1.9, -0.6, 3.6, 3.0
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            _stalk_post(c, fx + sx * (fw / 2 - 0.2), fy + sy * (fd / 2 - 0.2), 2.5)
+    K.roof(c, T(fx, fy, 2.5), fw, fd, "curved", pitch=34, cover="leaf", key="leaf", overhang=0.35)
+    _ember_hearth(c, fx + 0.6, fy + 0.7)
+    g = c.g
+    g.rbox((0.5, 0.45, 0.55), "stone_dark", None, 0.04, 1, (fx - 0.6, fy - 0.5, 0.28))
+    g.lathe([(0.0, 0.0), (0.22, 0.0), (0.22, 0.25), (0.45, 0.32), (0.5, 0.45), (0.0, 0.45)], "metal",
+            T(fx - 0.6, fy - 0.5, 0.55) @ RZ(90) @ Matrix.Diagonal((1.5, 0.6, 1, 1)), segs=8)
+    g.lathe([(0.0, 0.0), (0.4, 0.0), (0.45, 0.4), (0.4, 0.8), (0.0, 0.75)], "wood_light~1", T(fx + fw / 2 + 0.6, fy - 1.0, 0), segs=16)
+    g.cylinder(0.38, 0.05, "glass", T(fx + fw / 2 + 0.6, fy - 1.0, 0.72), segs=16)
+    K.sign(c, T(r * 0.7, -r - 0.2, 0), 0.0, 2.4, "hammer")
+
+
+def mushroom_barn(c, p):
+    """A broad, squat brown toadstool barn with a little toadstool silo and hay."""
+    r = p.get("radius", 3.7)
+    c.roof_key = "roof_b"
+    round_block(c, 0, 0, r, 1, "cap", floor_h=p.get("height", 3.4), wall="stalk")
+    _cap_colour(c)
+    round_block(c, r + 1.7, 1.4, 1.35, 2, "cap", floor_h=2.3, wall="stalk", door=False, windows=False)
+    hay(c, -r - 1.3, -1.6, 0.0)
+    for k in range(4):
+        a = c.rng.uniform(0, 2 * math.pi)
+        c.g.inst("tuft|leaf%s" % c.rng.choice(["", "~3"]), T((r + 0.4) * math.cos(a), (r + 0.4) * math.sin(a), 0))
+
+
+def mushroom_stable(c, p):
+    """A leaf-thatched open stable on stalk posts, with stalls, a trough and a toadstool tack room at one end."""
+    w, d = p.get("width", 10.0), p.get("depth", 4.6)
+    g = c.g
+    g.rbox((w, d, 0.2), "wood_light~3", None, 0.04, c.seg(), (0, 0, 0.1))
+    n = 4
+    for k in range(n + 1):
+        x = -w / 2 + 0.25 + k * (w - 0.5) / n
+        for y in (-d / 2 + 0.25, d / 2 - 0.25):
+            _stalk_post(c, x, y, 2.6)
+        g.rbox((0.12, d * 0.7, 1.3), "trim", None, 0.03, c.seg(), (x, 0.2, 0.85))
+    for k in range(n):
+        x = -w / 2 + 0.25 + (k + 0.5) * (w - 0.5) / n
+        g.rbox(((w - 0.5) / n * 0.8, 0.08, 1.0), "door", None, 0.03, c.seg(), (x, -d / 2 + 0.35, 0.7))
+    g.rbox((w, 0.12, 0.2), "trim", None, 0.03, c.seg(), (0, d / 2 - 0.25, 1.5))
+    K.roof(c, T(0, 0, 2.6), w + 0.2, d, "curved", pitch=40, cover="leaf", key="leaf", overhang=0.55)
+    _cap_colour(c)
+    round_block(c, w / 2 + 1.6, 0.4, 1.4, 1, "cap", floor_h=2.4, wall="stalk", windows=False)
+    hay(c, -w / 2 - 1.2, 0.0, 0.0)
+    g.rbox((2.2, 0.6, 0.6), "wood_light~1", None, 0.04, 1, (-1.0, -d / 2 - 0.8, 0.3))  # trough
+
+
+def mushroom_gate(c, p):
+    """A gate of two toadstool towers joined by a bent root arch hung with lanterns and vines."""
+    span = p.get("width", 4.6)
+    r = 1.7
+    g = c.g
+    for side in (-1, 1):
+        _cap_colour(c)
+        round_block(c, side * (span / 2 + r - 0.2), 0, r, p.get("floors", 2), "cap", floor_h=3.0, wall="stalk", door=False)
+        K.wall_lantern(c, T(side * (span / 2 + 0.25), -1.25, 0), 0.0, 2.3)
+    # the root arch: a thick, slightly knotted bough bent over the road
+    R = span / 2 + 0.2
+    zc = 3.4
+    n = 14
+    for k in range(n):
+        a0, a1 = math.pi * k / n, math.pi * (k + 1) / n
+        p0 = (R * math.cos(a0), zc + R * 0.9 * math.sin(a0))
+        p1 = (R * math.cos(a1), zc + R * 0.9 * math.sin(a1))
+        ln = math.dist(p0, p1)
+        ang = math.degrees(math.atan2(p1[1] - p0[1], p1[0] - p0[0]))
+        th = 0.8 + 0.12 * math.sin(k * 1.7)
+        g.rbox((ln + 0.14, 0.85, th), "trim%s" % c.rng.choice(["", "~3", "~4"]), T((p0[0] + p1[0]) / 2, 0, (p0[1] + p1[1]) / 2) @ RY(-ang), 0.18, c.seg())
+        if k % 2 == 0:
+            g.inst("ivy|leaf%s" % c.rng.choice(["", "~3"]), T((p0[0] + p1[0]) / 2, -0.32, (p0[1] + p1[1]) / 2 - 0.2))
+            g.inst("ivy|leaf%s" % c.rng.choice(["", "~3"]), T((p0[0] + p1[0]) / 2, 0.32, (p0[1] + p1[1]) / 2 - 0.2) @ RZ(180))
+    K.round_roof(c, T(0, 0, zc + R * 0.9 + 0.2), 0.55, "cap", "roof_a", c.s.cover)  # a small toadstool on the keystone
+    g.cylinder(0.12, 0.3, "wall_a", T(0, 0, zc + R * 0.9), segs=10)
+    g.cylinder(0.015, 0.7, "trim", T(0, 0, zc + R * 0.9 - 0.95), segs=4)  # a lantern hung from the arch
+    g.lathe([(0.0, -0.2), (0.12, -0.16), (0.16, 0.0), (0.12, 0.16), (0.0, 0.2)], "lamp", T(0, 0, zc + R * 0.9 - 1.15), segs=10)
+
+
+def hedge_wall(c, p):
+    """A hedge wall on a bed of roots, sprouting little toadstools (Mossdeep's wall segment)."""
+    L = p.get("width", 10.0)
+    H = p.get("height", 2.4)
+    g = c.g
+    g.rbox((L, 1.2, H), "leaf~1", None, 0.45, c.seg(), (0, 0, H / 2 + 0.2))
+    for side in (-1, 1):  # leafy bumps on both faces and the top
+        for i in range(int(L / 0.5)):
+            for j in range(int(H / 0.5)):
+                x = -L / 2 + 0.25 + i * 0.5 + c.rng.uniform(-0.1, 0.1)
+                z = 0.4 + j * 0.5 + c.rng.uniform(-0.1, 0.1)
+                g.inst("bush|leaf%s" % c.rng.choice(["", "~3", "~4"]), T(x, side * 0.6, z) @ RZ(c.rng.uniform(0, 360)) @ Matrix.Diagonal((0.9, 0.9, 0.9, 1)))
+                if c.chance(0.08):
+                    g.inst("flower|flower_%s" % c.rng.choice("abcd"), T(x, side * 0.72, z + 0.1))
+    for i in range(int(L / 0.5)):
+        g.inst("bush|leaf%s" % c.rng.choice(["", "~3"]), T(-L / 2 + 0.25 + i * 0.5, c.rng.uniform(-0.3, 0.3), H + 0.15) @ Matrix.Diagonal((1.0, 1.0, 0.8, 1)))
+    for side in (-1, 1):  # gnarled roots along the foot
+        x = -L / 2
+        while x < L / 2 - 0.5:
+            ln = min(c.rng.uniform(1.2, 2.4), L / 2 - x)
+            g.cylinder(c.rng.uniform(0.16, 0.26), ln, "trim%s" % c.rng.choice(["", "~3"]), T(x, side * 0.62, 0.2) @ RY(90) @ RX(c.rng.uniform(-6, 6)), segs=10, bevel=0.06)
+            x += ln * 0.8
+    for k in range(int(L / 3.0)):  # little toadstools growing at the foot
+        x = -L / 2 + 1.5 + k * 3.0 + c.rng.uniform(-0.5, 0.5)
+        y = c.rng.choice((-1, 1)) * 0.95
+        h = c.rng.uniform(0.35, 0.7)
+        g.lathe([(0.1, 0.0), (0.12, h * 0.5), (0.08, h)], "wall_a", T(x, y, 0), segs=10)
+        K.round_roof(c, T(x, y, h), c.rng.uniform(0.22, 0.34), "cap", c.rng.choice(["roof_a", "roof_c", "roof_b"]), c.s.cover)
+
+
+# Desert and garden civic buildings (review B2): the dome goes on the temple and the bathhouse, not on every roof.
+
+
+def _civic_dome(c, x, y, z, r):
+    K.round_roof(c, T(x, y, z), r, "onion" if c.s.tower_roof == "onion" else "dome", c.roof_key, c.s.cover)
+
+
+def domed_temple(c, p):
+    w, d = p.get("width", 10.0), p.get("depth", 14.0)
+    info = block(c, 0, 0, w, d, 1, ridge="y", door_x=0.0, wide_door=True, ground_h=p.get("nave_h", 5.6), chimney="none",
+                 door_kind="pointed" if c.s.door == "pointed" else "arched")
+    _civic_dome(c, 0, 1.0, info["top"] + 0.25, min(w, d) * 0.36)
+    tower(c, w / 2 + 0.9, -d / 2 + 0.9, 2.4, 5.5, door=False, round_=True)  # a minaret
+
+
+def domed_bathhouse(c, p):
+    w, d = p.get("width", 11.0), p.get("depth", 8.0)
+    info = block(c, 0, 0, w, d, 1, door_x=0.0, wide_door=True, ground_h=3.6, chimney="none")
+    _civic_dome(c, -w * 0.18, 0, info["top"] + 0.25, d * 0.32)
+    _civic_dome(c, w * 0.32, 0, info["top"] + 0.25, d * 0.16)
+
+
 def pagoda(c, p):
     tiers = p.get("floors", 4)
     size = p.get("width", 7.0)
@@ -1092,6 +1247,9 @@ ARCHETYPES = {
     "pagoda": pagoda, "torii_gate": torii_gate, "paifang_gate": paifang_gate, "lighthouse": lighthouse,
     "stepped_pyramid": stepped_pyramid, "domed_hall": domed_hall, "adobe_tower": adobe_tower,
     "adobe_mosque_hall": domed_hall, "tent": tent, "tent_large": tent_large, "tree_house": tree_house,
+    "mushroom_smithy": mushroom_smithy, "mushroom_barn": mushroom_barn, "mushroom_stable": mushroom_stable,
+    "mushroom_gate": mushroom_gate, "hedge_wall": hedge_wall, "domed_temple": domed_temple,
+    "domed_bathhouse": domed_bathhouse,
 }
 
 # What every settlement may need, in catalogue order (regional remaps swap some of these out).

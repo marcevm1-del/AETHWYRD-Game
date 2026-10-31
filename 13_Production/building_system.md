@@ -45,6 +45,8 @@ blender -b --factory-startup -P Tools/blender/build_building_library.py -- --all
 ```
 - With no arguments it builds one region per family.
 - `--regions a,b` picks specific regions; `--variants 3` adds seeds.
+- `--types smithy,barn,temple` builds only those archetypes (regional remaps still apply) for a quick look-dev pass; without it every region builds its whole catalogue.
+- `--sheet-dir <dir>` and `--out-dir <dir>` move the contact sheets and the `.blend` libraries (and their preview tiles); `--no-blend` throws the `.blend` away.
 - About 20 s and 40 MB per region; all 48 take about 15 minutes.
 
 ## Building types (archetypes)
@@ -59,7 +61,7 @@ The 28 core types cover what the town guide in [[anime_town_places_and_taverns]]
 | Civic, learning, faith | guild hall (tower, banners), town hall (clock tower), library, bathhouse (cupola), temple (nave and bell tower), shrine |
 | Defence | watchtower (lookout), gatehouse (arch, portcullis), wall segment (stone wall or log palisade by region), barracks (weapon rack) |
 | Infrastructure | well, bridge (stone arch or timber), fountain, lamp post |
-| Signatures | yurt, large yurt, tent, toadstool house, toadstool tower, toadstool shop, toadstool cluster, pagoda, torii gate, paifang gate, lighthouse, stepped pyramid, domed hall, adobe tower, tree house |
+| Signatures | yurt, large yurt, tent, toadstool house, toadstool tower, toadstool shop, toadstool cluster, toadstool forge, toadstool barn, leaf-thatch stable, toadstool gate, hedge wall, pagoda, torii gate, paifang gate, lighthouse, stepped pyramid, domed hall, domed temple, domed bathhouse, adobe tower, tree house |
 
 The adjustable parameters are width, depth and floors (0 keeps the type's default), seed, and detail (high or medium). They're stored on the object as `ab_*` custom properties.
 
@@ -70,7 +72,7 @@ The adjustable parameters are width, depth and floors (0 keeps the type's defaul
 | Storybook half-timber | Timber frame over pastel plaster, steep flat-tile roofs in blue/red/green/slate, shutters, flower boxes, ivy | Whisperwood, Aldmere, Moraveil, Strife Marches (rubble ground floors, muted), Ashira Vale (bunting) |
 | Fen stilt village | Weathered boards on stilts with ladders, reed thatch, rope, moss, green-glow lanterns | Greymoor, Quaking Lands (on footings) |
 | Elven living wood | Bark columns and pale panels, curved leaf-scale roofs, onion towers, round windows, crystals, vines, tree house | Sylvaran, Everdusk (dusk gold) |
-| Thimblefolk toadstools | Spotted caps on bulging stalks, round doors and portholes; leaf-thatched workshops | Mossdeep |
+| Thimblefolk toadstools | Spotted caps on bulging stalks, round doors and portholes; a toadstool forge with a stone chimney, a toadstool barn, a leaf-thatch stable, a gate of two toadstool towers under a root arch, a hedge wall | Mossdeep |
 | Lagoon canal city | Pastel stucco over a rusticated ground floor, quoins, arched shuttered windows, low barrel-tile hips, funnel chimneys, balconies, mooring poles | Lirian |
 | Wind-plains | Rubble stone, plank roofs, banners; yurts and tents | Fanghold, Calamity Steppe, The Maw |
 | Dwarven basalt halls | Black ashlar, slate and bronze, rune-lit doors, slit windows, forge chimneys, buttresses | Iron Hold, Dragon Spine (bone ribs, prayer flags) |
@@ -79,8 +81,8 @@ The adjustable parameters are width, depth and floors (0 keeps the type's defaul
 | Hundred-stair sect halls | Red columns, glazed green/gold barrel tiles, strong upturn, pagoda, paifang | Shen-Lu |
 | Sky-gate hanok | Dancheong-painted beams, grey tiles, gentle curves | Haneul |
 | Fjord longhouses | Log walls with corner ends, turf roofs under snow, dragon-board gables | Frostveil, Whitewater Reach (plank roofs) |
-| Glass-desert adobe | Mud walls, flat roofs with parapets and domes, vigas, horseshoe arches, awnings, pots | Sunscar, Zaruma (red mud, adobe towers) |
-| Garden cities | Ochre brick, turquoise tile bands, onion domes, pointed iwans, domed halls | Zarvan |
+| Glass-desert adobe | Mud walls, flat roofs with parapets, vigas, horseshoe arches, awnings, pots; domes only on civic and temple buildings | Sunscar, Zaruma (red mud, adobe towers) |
+| Garden cities | Ochre brick, turquoise tile bands, pointed iwans; onion domes only on civic and temple buildings | Zarvan |
 | Salvage coast | Clapboard and ship timber on stilts, portholes, nets, buoys, lighthouses | Goldmere Coast, True-Name Isles, Hollow Sea (glow lamps), Lustrine Shores (moon-glass lamps), Dunewhale Drift (canvas) |
 | Temple jungle | Carved stone with painted bands, steep palm thatch, terraces, stepped pyramids | Xochitl Mire (stilts, flowers), Lumbaya (ruined) |
 | Carved-mountain terraces | Fitted stone, trapezoid doors and windows, steep thatch, textiles | Apu Highlands |
@@ -92,6 +94,16 @@ The adjustable parameters are width, depth and floors (0 keeps the type's defaul
 **Where the region identities come from:** each one follows [[gazetteer]]. Examples: Greymoor's ironwood stilts, Lirian's canals and glass, Fanghold's yurt camps, Karak Dûn's basalt and forge-fire, Frostveil's turf-roofed longhouses, Zaruma's mud-brick towers, Stormreach's lightning rods and Thimblefolk's toadstools.
 
 **Proposal:** the family-per-region table is proposed in Canon §6.
+
+### Signature and palette rules (design review 2026-10-25, B2–B4)
+
+- **A signature goes on at most 1 building in 4.** In the desert and garden families only the guild hall, town hall and library towers, the domed hall, and the temple and bathhouse (remapped to `domed_temple` and `domed_bathhouse`) carry a dome or onion: 6 of the 30 catalogue types. Flat roofs no longer get a dome each.
+- **Mossdeep** remaps every working building too: `smithy` → `mushroom_smithy`, `barn` → `mushroom_barn`, `stable` → `mushroom_stable`, `gatehouse` → `mushroom_gate`, `wall_segment` → `hedge_wall`.
+- **Dark families glow.** `window_glass="window_glow"` lights the panes (dwarven forge orange `#FF8C26`, gothic violet, Nox red). Forge chimneys carry an ember cap. Iron Hold has 0.44 m bronze bands (`bronze_bands`) and copper `roof_b` on 1 roof in 3. Umbravel's stone is `#5A5068`, with silk lanterns on all four facades.
+- **Greymoor**: `wall_c` `#8A7A62`, two green lanterns on every house front (`facade_lanterns`), painted doors `#4F7A6A`.
+- **Wind-plains**: red and blue cloth bands under every eave and round every door (`cloth_bands`), a banner on every front (`facade_banners`), banners 2× (`banner_scale`), stone `#B8A58A`.
+- **Whisperwood vs Aldmere.** Whisperwood: warmer plaster, moss on roofs, climbing ivy, two lanterns per front, thatch on about 1 roof in 3 (`cover_mix`). Aldmere: ashlar ground floors, slate roofs (mostly slate grey), royal-blue `#3357AD` and gold banners, and finials on roofs of 115 m² or more (civic-sized). Both keep pitch 54, turrets and flower boxes.
+- Emission strength is set in `blend.py` (3.0 for every glowing key) and belongs to the technical-artist.
 
 ## How it's built (for changes)
 
