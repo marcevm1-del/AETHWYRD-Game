@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,314 tris · 475.336 × 293.722 × 500 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Titan of the First Age is a colossal creature with a blocky construct body, about 500 m tall. Its surface is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a walking continent of machinery and stone. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by pebbles that tremble and float near it.
+> The Titan of the First Age is a colossal creature with a blocky construct body, about 500 m tall. Its surface is rough, scarred and spiked, colored in weathered stone, with ochre markings. Its most striking feature is a walking continent of machinery and stone. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#8b8a84` `#5b5a55` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

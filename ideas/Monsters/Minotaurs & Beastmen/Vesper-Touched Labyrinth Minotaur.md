@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,568 tris · 2.434 × 1.676 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Labyrinth Minotaur is a large creature with a towering, heavy-limbed body, about 4 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Survivors describe horns carved with maze runes. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Labyrinth Minotaur is a large creature with a towering, heavy-limbed body, about 4 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in dark chestnut, with ochre markings. Survivors describe horns carved with maze runes. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `rock_debris` · palette `#705638` `#4e3c2a` `#d1a15a` · elongated, irregular silhouette; still-then-sudden timing

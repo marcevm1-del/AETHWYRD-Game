@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,346 tris · 0.578 × 1.5 × 1.305 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hellhound is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show a dog with a furnace glow inside its ribs. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
+> The Hellhound is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its hide is rough, scarred and spiked, colored in char-black, with ember-orange markings. Guild sketches always show a dog with a furnace glow inside its ribs. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#565161` `#46424f` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

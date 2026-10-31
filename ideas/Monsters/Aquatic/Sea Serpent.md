@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (3,816 tris · 5.324 × 20 × 8.698 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sea Serpent is a colossal creature with a long, sinuous serpentine body, about 20 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a long fin running down its spine. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by fine mist and droplets that orbit it.
+> The Sea Serpent is a colossal creature with a long, sinuous serpentine body, about 20 m long. Its scales and skin are rough, scarred and spiked, colored in silver, with sea-blue markings. Look for a long fin running down its spine. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `wet_scale` · VFX `mist_droplets` · palette `#9baab1` `#64727a` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

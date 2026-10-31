@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,806 tris · 1.843 × 2.577 × 4.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Blood Vesper Alpha is a large creature with a broad-shouldered humanoid build, about 4.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Guild sketches always show red-veined fur that only appears under the red moon. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Blood Vesper Alpha is a large creature with a broad-shouldered humanoid build, about 4.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in wolf-grey, with crimson markings. Guild sketches always show red-veined fur that only appears under the red moon. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `blood_mist` · palette `#7f7f86` `#55555c` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

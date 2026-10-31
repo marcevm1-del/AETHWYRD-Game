@@ -88,4 +88,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_blob` · mesh `blob_base` · material `translucent_gel_sss` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_blob` · mesh `blob_base` · material `translucent_gel_sss` · VFX `void_distortion` · palette `#1b1b40` `#3d2c8d` `#c9c9ff` · broken symmetry, mimicry, audio-first reveal

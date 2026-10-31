@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,302 tris · 0.386 × 1 × 0.732 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Fox Spirit is a small creature with a low, springy quadruped build, about 1 m long. Its form is weathered and natural, colored in ember reds fading to soot black. Look for three tails tipped with blue flame. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
+> The Fox Spirit is a small creature with a low, springy quadruped build, about 1 m long. Its form is weathered and natural, colored in indigo, with ember-orange markings. Look for three tails tipped with blue flame. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#4d627f` `#384559` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

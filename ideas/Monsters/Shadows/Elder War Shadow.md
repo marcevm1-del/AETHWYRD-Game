@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (2,474 tris · 1.228 × 0.785 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder War Shadow is a large creature with a broad-shouldered humanoid build, about 3.2 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a humanoid silhouette with blades for hands. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder War Shadow is a large creature with a broad-shouldered humanoid build, about 3.2 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in storm-grey, with violet markings. Survivors describe a humanoid silhouette with blades for hands. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#545577` `#41405b` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

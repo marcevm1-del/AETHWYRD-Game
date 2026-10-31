@@ -88,4 +88,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `void_distortion` · palette `#1b1b40` `#3d2c8d` `#c9c9ff` · triangle-based silhouette, sharp asymmetric spikes

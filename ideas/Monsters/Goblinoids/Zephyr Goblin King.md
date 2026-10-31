@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,562 tris · 2.405 × 1.383 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Zephyr Goblin King is a large creature with a giant, barrel-chested humanoid body, about 2.8 m tall. Its skin is rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe throne-backed armor and a crown of hammered coins. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Zephyr Goblin King is a large creature with a giant, barrel-chested humanoid body, about 2.8 m tall. Its skin is rough, scarred and spiked, colored in moss green and leather brown, with pale jade markings. Survivors describe throne-backed armor and a crown of hammered coins. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `rough_skin_leather` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `rough_skin_leather` · VFX `wind_ribbons` · palette `#5daa43` `#876534` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,494 tris · 2.917 × 3 × 1.809 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Arachne is a large creature with a bulbous spider frame on long jointed legs, about 3 m long. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is a woman's upper body rising from a spider's. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it.
+> The Arachne is a large creature with a bulbous spider frame on long jointed legs, about 3 m long. Its chitin is rough, scarred and spiked, colored in blue-black, with violet markings. Its most striking feature is a woman's upper body rising from a spider's. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#425173` `#313b53` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

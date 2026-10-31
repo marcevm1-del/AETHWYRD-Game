@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,606 tris · 0.096 × 0.4 × 0.16 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Moss Kitten is a tiny creature with a compact quadruped frame, about 0.4 m long. Its coat is smooth and clean, colored in leaf greens over bark brown. Look for fur that flickers like candle flame. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Moss Kitten is a tiny creature with a compact quadruped frame, about 0.4 m long. Its coat is smooth and clean, colored in pastel pink, with leaf-green markings. Look for fur that flickers like candle flame. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `pollen_petals` · palette `#d1a4bd` `#957286` `#8fd16a` · circle-based, soft silhouette

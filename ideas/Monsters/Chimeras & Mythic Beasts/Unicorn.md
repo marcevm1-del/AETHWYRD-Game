@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,204 tris · 0.453 × 2 × 0.79 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Unicorn is a person-sized creature with a heavy, muscular quadruped frame, about 2 m long. Its hide is smooth and clean, colored in warm gold and pearl white. Look for a spiral horn of pearl. It has wide curious eyes with star-shaped highlights. An elegant crest and glowing veins of mana mark it as a champion of its kind. It hops in little bursts, surrounded by soft radiance and floating motes of light.
+> The Unicorn is a person-sized creature with a heavy, muscular quadruped frame, about 2 m long. Its hide is smooth and clean, colored in lion-tawny, with gold markings. Look for a spiral horn of pearl. It has wide curious eyes with star-shaped highlights. An elegant crest and glowing veins of mana mark it as a champion of its kind. It hops in little bursts, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#a5854b` `#6c5431` `#ffd166` · circle-based, soft silhouette

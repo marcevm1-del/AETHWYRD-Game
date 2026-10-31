@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,278 tris · 0.703 × 2.33 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Harpy is a person-sized creature with a broad-winged bird frame, about 1.6 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Its most striking feature is a bird body with a shrieking human-like face. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
+> The Harpy is a person-sized creature with a broad-winged bird frame, about 1.6 m tall. Its plumage is rough, scarred and spiked, colored in crow-black, with pale jade markings. Its most striking feature is a bird body with a shrieking human-like face. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#4f505b` `#414149` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

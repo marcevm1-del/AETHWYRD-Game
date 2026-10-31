@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (1,322 tris · 16.987 × 48 × 26.818 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Night Leviathan is a colossal creature with a long, finned body, about 48 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Survivors describe a shadow whale that swims through walls. It has eyes that never blink. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Night Leviathan is a colossal creature with a long, finned body, about 48 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in smoky violet, with violet-edged markings. Survivors describe a shadow whale that swims through walls. It has eyes that never blink. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `shadow_smoke` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_fish` · mesh `fish_base` · material `shadow_smoke` · VFX `void_distortion` · palette `#51517d` `#42436b` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

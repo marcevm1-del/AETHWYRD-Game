@@ -13,7 +13,7 @@ tags: [monster, the-headless]
 
 > [!note] 3D model: procedural blockout in Unity (1,692 tris · 1.073 × 2.411 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Headless Rider is a large creature with a headless rider frame, about 2.6 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a lantern burning where its head should be. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
+> The Headless Rider is a large creature with a headless rider frame, about 2.6 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in gunmetal, with violet markings. Guild sketches always show a lantern burning where its head should be. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `shadow_wisps` · palette `#606271` `#454652` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

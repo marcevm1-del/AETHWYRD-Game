@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,134 tris · 6.871 × 3.95 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Floor Tyrant is a huge creature with a giant, barrel-chested humanoid body, about 8 m tall. Its stone-like hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a crown of stalactites. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Floor Tyrant is a huge creature with a giant, barrel-chested humanoid body, about 8 m tall. Its stone-like hide is rough, scarred and spiked, colored in rusted iron, with ochre markings. Survivors describe a crown of stalactites. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#8e7a4c` `#5f5134` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

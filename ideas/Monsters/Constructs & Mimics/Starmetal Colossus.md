@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (2,268 tris · 114.081 × 70.493 × 120 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Starmetal Colossus is a colossal creature with a towering machine-like frame, about 120 m tall. Its surface is weathered and natural, colored in warm gold and pearl white. Survivors describe a starmetal body that hums with Titan songs. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It prowls, surrounded by soft radiance and floating motes of light.
+> The Starmetal Colossus is a colossal creature with a towering machine-like frame, about 120 m tall. Its surface is weathered and natural, colored in bronze, with gold markings. Survivors describe a starmetal body that hums with Titan songs. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It prowls, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#a8884a` `#6a5630` `#ffd166` · real-animal silhouette with one fantasy exaggeration

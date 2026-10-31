@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,728 tris · 2.314 × 6 × 5.219 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Silver Fenrir is a huge creature with a powerful four-legged hunter's body, about 6 m long. Its coat is weathered and natural, colored in warm gold and pearl white. Its most striking feature is silver fur that glows like moonlight. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by soft radiance and floating motes of light.
+> The Silver Fenrir is a huge creature with a powerful four-legged hunter's body, about 6 m long. Its coat is weathered and natural, colored in warm brown, with gold markings. Its most striking feature is silver fur that glows like moonlight. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#886845` `#58412f` `#ffd166` · real-animal silhouette with one fantasy exaggeration

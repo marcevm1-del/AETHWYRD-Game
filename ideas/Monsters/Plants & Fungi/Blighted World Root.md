@@ -13,7 +13,7 @@ tags: [monster, plants-fungi, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,496 tris · 222.353 × 229.833 × 300 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Blighted World Root is a colossal creature with a huge bulbous flower on a thick stalk, about 300 m tall. Its bark and leaves are stretched, stitched and constantly shifting, colored in ink black with bruised violet. Guild sketches always show black roots that pulse like veins. It has no eyes at all, only a wide and patient mouth. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by shadows that lean toward it.
+> The Blighted World Root is a colossal creature with a huge bulbous flower on a thick stalk, about 300 m tall. Its bark and leaves are stretched, stitched and constantly shifting, colored in deep fern green and dark bark, with violet markings. Guild sketches always show black roots that pulse like veins. It has no eyes at all, only a wide and patient mouth. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `shadow_wisps` · palette `#57854a` `#513e30` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

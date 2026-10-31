@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,790 tris · 2.357 × 2.949 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Abyss Prince is a large creature with an upright humanoid build, about 4 m tall. Its hide is rough, scarred and spiked, colored in starless black with faint violet edges. Survivors describe a crown of black flame and wings of torn night. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by warped air, as if space bends around it.
+> The Abyss Prince is a large creature with an upright humanoid build, about 4 m tall. Its hide is rough, scarred and spiked, colored in char-black, with violet-edged markings. Survivors describe a crown of black flame and wings of torn night. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `void_distortion` · palette `#4e4b5a` `#403d49` `#8a7cff` · triangle-based silhouette, sharp asymmetric spikes

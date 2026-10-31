@@ -13,7 +13,7 @@ tags: [monster, gremlins]
 
 > [!note] 3D model: procedural blockout in Unity (3,306 tris · 0.593 × 0.523 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ruin Gremlin King is a person-sized creature with a hunched, wiry humanoid frame, about 1.2 m tall. Its skin is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a throne bolted onto a walking boiler. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
+> The Ruin Gremlin King is a person-sized creature with a hunched, wiry humanoid frame, about 1.2 m tall. Its skin is rough, scarred and spiked, colored in lime-green, with violet markings. Guild sketches always show a throne bolted onto a walking boiler. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `shadow_wisps` · palette `#719344` `#49612c` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

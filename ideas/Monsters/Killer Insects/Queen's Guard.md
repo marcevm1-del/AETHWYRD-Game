@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (3,504 tris · 1.333 × 2 × 1.166 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Queen's Guard is a person-sized creature with a segmented six-limbed frame, about 2 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a shield-shaped head plate. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Queen's Guard is a person-sized creature with a segmented six-limbed frame, about 2 m long. Its chitin is rough, scarred and spiked, colored in black, with ochre markings. Look for a shield-shaped head plate. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `rock_debris` · palette `#595b64` `#42424c` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

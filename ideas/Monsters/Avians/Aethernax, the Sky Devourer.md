@@ -13,7 +13,7 @@ tags: [monster, avians, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,146 tris · 123.862 × 304.554 × 400 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Aethernax, the Sky Devourer is a colossal creature with a tall, long-legged bird build, about 400 m tall. Its plumage is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Survivors describe wings that leave holes in the sky. It has pale, pupil-less eyes. Its presence is world-scale; the sky changes color when it appears. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it.
+> The Aethernax, the Sky Devourer is a colossal creature with a tall, long-legged bird build, about 400 m tall. Its plumage is patchy and subtly wrong, as if assembled from memory, colored in pale buff, with violet-edged markings. Survivors describe wings that leave holes in the sky. It has pale, pupil-less eyes. Its presence is world-scale; the sky changes color when it appears. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `void_distortion` · palette `#c8b49a` `#8a7660` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

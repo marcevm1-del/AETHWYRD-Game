@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (2,942 tris · 1.157 × 3 × 2.61 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Frost Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in pale blues and frost-white. Guild sketches always show blue-white scales with frost on every edge. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps.
+> The Frost Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in emerald, with frost-blue markings. Guild sketches always show blue-white scales with frost on every edge. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `frost_trail_snow` · palette `#38753c` `#274f28` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

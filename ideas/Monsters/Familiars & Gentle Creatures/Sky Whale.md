@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (1,494 tris · 37.71 × 80 × 40.454 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sky Whale is a colossal creature with a heavy-jawed fish frame, about 80 m long. Its coat is smooth and clean, colored in pale jade and cloud white. Its most striking feature is a gentle giant drifting between floating islands. It has big round glossy eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It waddles, surrounded by swirling leaves and a constant breeze.
+> The Sky Whale is a colossal creature with a heavy-jawed fish frame, about 80 m long. Its coat is smooth and clean, colored in mint, with pale jade markings. Its most striking feature is a gentle giant drifting between floating islands. It has big round glossy eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It waddles, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · circle-based, soft silhouette
+Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `wind_ribbons` · palette `#acd29b` `#749567` `#8fe0bd` · circle-based, soft silhouette

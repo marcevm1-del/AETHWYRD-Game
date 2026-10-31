@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (1,764 tris · 2.454 × 2.065 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Thornvine is a large creature with a cluster of vines around a central bloom, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in leaf greens over bark brown. Survivors describe vines covered in hooked thorns. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by drifting pollen and tiny blossoms. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Thornvine is a large creature with a cluster of vines around a central bloom, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in leaf green over bark brown. Survivors describe vines covered in hooked thorns. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by drifting pollen and tiny blossoms. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_plant_rooted` · mesh `plant_rooted_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#55903c` `#5d4831` `#8fd16a` · elongated, irregular silhouette; still-then-sudden timing

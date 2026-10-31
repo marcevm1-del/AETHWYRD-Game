@@ -13,7 +13,7 @@ tags: [monster, vesperites-moon-raiders]
 
 > [!note] 3D model: procedural blockout in Unity (2,498 tris · 0.691 × 0.736 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper Shard-Thrall is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Guild sketches always show porcelain skin cracked with red light. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
+> The Vesper Shard-Thrall is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in dusk violet, with crimson markings. Guild sketches always show porcelain skin cracked with red light. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#67598a` `#564976` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

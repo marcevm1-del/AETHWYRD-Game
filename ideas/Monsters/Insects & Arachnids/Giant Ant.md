@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,168 tris · 0.546 × 0.6 × 0.279 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Giant Ant is a small creature with a low, wide insectoid build, about 0.6 m long. Its chitin is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is red-brown chitin and mandibles like pliers. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
+> The Giant Ant is a small creature with a low, wide insectoid build, about 0.6 m long. Its chitin is weathered and natural, colored in glossy brown, with ochre markings. Its most striking feature is red-brown chitin and mandibles like pliers. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -110,4 +110,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#78562f` `#4d3820` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

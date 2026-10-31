@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (1,432 tris · 1.314 × 1.314 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ghost is a person-sized creature with a bodiless, glowing form, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in ink black with bruised violet. Look for a translucent figure frozen in its last moment. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
+> The Ghost is a person-sized creature with a bodiless, glowing form, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in bleached bone and grave-cloth, with violet markings. Look for a translucent figure frozen in its last moment. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#c7b9a2` `#7f7260` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

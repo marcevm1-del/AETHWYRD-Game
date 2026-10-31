@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,636 tris · 0.241 × 1 × 0.327 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Rime Fluffcap Sheep is a small creature with a low, springy quadruped build, about 1 m long. Its coat is smooth and clean, colored in pale blues and frost-white. Survivors describe wool so light it floats. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
+> The Rime Fluffcap Sheep is a small creature with a low, springy quadruped build, about 1 m long. Its coat is smooth and clean, colored in pastel pink, with frost-blue markings. Survivors describe wool so light it floats. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `frost_trail_snow` · palette `#e6b5d6` `#a57d98` `#9fdcff` · circle-based, soft silhouette

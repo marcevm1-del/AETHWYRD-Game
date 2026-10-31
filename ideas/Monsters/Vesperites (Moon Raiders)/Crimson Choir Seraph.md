@@ -13,7 +13,7 @@ tags: [monster, vesperites-moon-raiders]
 
 > [!note] 3D model: procedural blockout in Unity (1,848 tris · 2.543 × 2.63 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crimson Choir Seraph is a large creature with a floating, cloth-like shape, about 3.5 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for six wings of red glass and a singing mask. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
+> The Crimson Choir Seraph is a large creature with a floating, cloth-like shape, about 3.5 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in twilight blue, with crimson markings. Look for six wings of red glass and a singing mask. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#394970` `#2a3651` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

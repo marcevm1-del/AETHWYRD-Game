@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (2,550 tris · 1.178 × 1.939 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Lizardman is a person-sized creature with a lean humanoid frame, about 2 m tall. Its scales are weathered and natural, colored in deep blues with a glassy shine. Survivors describe a proud crest and a coral-tipped spear. It has dark, wary eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by fine mist and droplets that orbit it.
+> The Lizardman is a person-sized creature with a lean humanoid frame, about 2 m tall. Its scales are weathered and natural, colored in sand-coloured, with sea-blue markings. Survivors describe a proud crest and a coral-tipped spear. It has dark, wary eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `scale_matte` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `scale_matte` · VFX `mist_droplets` · palette `#9a8d4d` `#665c32` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

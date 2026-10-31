@@ -13,7 +13,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,780 tris · 2.463 × 1.666 × 5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mycelia, the Spore Lord is a huge creature with a tall, tree-like walking frame, about 5 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a crown of glowing fungus fed by the World Tree's Blight. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Mycelia, the Spore Lord is a huge creature with a tall, tree-like walking frame, about 5 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in dusky violet, with sickly green markings. Look for a crown of glowing fungus fed by the World Tree's Blight. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8f649f` `#61426e` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

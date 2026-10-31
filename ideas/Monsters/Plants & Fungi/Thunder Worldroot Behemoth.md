@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,094 tris · 56.102 × 36.071 × 80 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thunder Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Thunder Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in deep fern green and dark bark, with electric-yellow markings. Survivors describe a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `arc_sparks` · palette `#538148` `#4e3d2e` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

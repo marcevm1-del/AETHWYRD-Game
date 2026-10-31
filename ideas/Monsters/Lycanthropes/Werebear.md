@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,162 tris · 1.626 × 1.747 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe tribal tattoos showing through thick bear fur. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
+> The Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is rough, scarred and spiked, colored in brown, with ochre markings. Survivors describe tribal tattoos showing through thick bear fur. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `rock_debris` · palette `#806943` `#564a30` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

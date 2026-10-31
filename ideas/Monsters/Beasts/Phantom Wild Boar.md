@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,942 tris · 0.54 × 1.4 × 1.218 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Wild Boar is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its coat is rough, scarred and spiked, colored in warm gold and pearl white. Look for curved tusks and a ridge of bristles like iron wire. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Wild Boar is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its coat is rough, scarred and spiked, colored in warm brown, with gold markings. Look for curved tusks and a ridge of bristles like iron wire. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#805741` `#53362c` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

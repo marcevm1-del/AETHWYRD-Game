@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,906 tris · 0.453 × 0.533 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kobold Shaman is a small creature with a small, compact humanoid body, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in ember reds fading to soot black. Look for tin-can wind chimes and singed whiskers. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
+> The Kobold Shaman is a small creature with a small, compact humanoid body, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue, with ember-orange markings. Look for tin-can wind chimes and singed whiskers. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `embers_heat_haze` · palette `#61759d` `#404c69` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

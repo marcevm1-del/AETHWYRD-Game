@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,730 tris · 0.396 × 0.466 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kobold Sneak is a small creature with a small, compact humanoid body, about 0.8 m tall. Its mangy fur is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe soot-blackened fur for hiding in tunnels. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
+> The Kobold Sneak is a small creature with a small, compact humanoid body, about 0.8 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue, with violet markings. Survivors describe soot-blackened fur for hiding in tunnels. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `shadow_wisps` · palette `#6576a2` `#424c6c` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

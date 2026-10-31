@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,490 tris · 0.503 × 0.574 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is weathered and natural, colored in deep blues with a glassy shine. Look for a dish-like hollow on its head full of water. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it.
+> The River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is weathered and natural, colored in lacquer red, with sea-blue markings. Look for a dish-like hollow on its head full of water. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#a53639` `#672528` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

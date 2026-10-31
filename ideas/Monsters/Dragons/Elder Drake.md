@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (2,328 tris · 1.234 × 3.2 × 2.784 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Drake is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its scales are weathered and natural, colored in ember reds fading to soot black. Survivors describe stubby wings and a smoking snout. It has dark, wary eyes. A distinctive marking runs along its back. It prowls, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Drake is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its scales are weathered and natural, colored in sapphire, with ember-orange markings. Survivors describe stubby wings and a smoking snout. It has dark, wary eyes. A distinctive marking runs along its back. It prowls, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#2b7986` `#22535c` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

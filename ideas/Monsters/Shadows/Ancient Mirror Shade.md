@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (3,012 tris · 1.629 × 0.978 × 2.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Mirror Shade is a large creature with a broad-shouldered humanoid build, about 2.7 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Look for your own silhouette, a heartbeat behind you. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Mirror Shade is a large creature with a broad-shouldered humanoid build, about 2.7 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in smoky violet. Look for your own silhouette, a heartbeat behind you. It has no eyes at all, only a wide and patient mouth. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#565584` `#464672` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

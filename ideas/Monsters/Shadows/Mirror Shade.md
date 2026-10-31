@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (2,438 tris · 1.051 × 0.6 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mirror Shade is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Guild sketches always show your own silhouette, a heartbeat behind you. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by shadows that lean toward it.
+> The Mirror Shade is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in smoky violet. Guild sketches always show your own silhouette, a heartbeat behind you. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#5c5888` `#4c4875` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

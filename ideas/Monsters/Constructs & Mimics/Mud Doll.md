@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (2,494 tris · 0.449 × 0.44 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mud Doll is a small creature with a scrawny biped with long arms and bowed legs, about 0.8 m tall. Its surface is smooth and clean, colored in ochre, clay and mossy stone. Look for a child's clay figure with thumbprint eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by pebbles that tremble and float near it.
+> The Mud Doll is a small creature with a scrawny biped with long arms and bowed legs, about 0.8 m tall. Its surface is smooth and clean, colored in bronze, with ochre markings. Look for a child's clay figure with thumbprint eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
+Rig `rig_small_biped` · mesh `small_biped_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#9d7e45` `#63502d` `#d1a15a` · circle-based, soft silhouette

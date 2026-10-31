@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (2,692 tris · 0.878 × 0.527 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Ghoul is a person-sized creature with an upright humanoid build, about 1.6 m tall. Its flesh and bone are stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its most striking feature is grey, hairless skin and long black nails. It has a human-like face in the wrong place. A distinctive marking runs along its back. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Ghoul is a person-sized creature with an upright humanoid build, about 1.6 m tall. Its flesh and bone are stretched, stitched and constantly shifting, colored in bleached bone and grave-cloth, with violet markings. Its most striking feature is grey, hairless skin and long black nails. It has a human-like face in the wrong place. A distinctive marking runs along its back. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#e9d9be` `#958770` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

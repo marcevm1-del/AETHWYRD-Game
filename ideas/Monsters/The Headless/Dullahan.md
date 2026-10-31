@@ -13,7 +13,7 @@ tags: [monster, the-headless]
 
 > [!note] 3D model: procedural blockout in Unity (1,798 tris · 1.244 × 0.878 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dullahan is a large creature with a tall, headless knightly build, about 2.8 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its own laughing head carried under one arm. It has eyes that never blink. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Dullahan is a large creature with a tall, headless knightly build, about 2.8 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in gunmetal, with violet markings. Its own laughing head carried under one arm. It has eyes that never blink. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `shadow_wisps` · palette `#565b65` `#3e424a` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

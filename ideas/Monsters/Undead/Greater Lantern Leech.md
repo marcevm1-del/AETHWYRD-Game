@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (3,938 tris · 0.204 × 1 × 0.531 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Lantern Leech is a small creature with a massive snake-like frame, about 1 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a glow on its back like a lost traveler's lantern. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by fine mist and droplets that orbit it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Lantern Leech is a small creature with a massive snake-like frame, about 1 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with sea-blue markings. Look for a glow on its back like a lost traveler's lantern. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by fine mist and droplets that orbit it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `rot_bone` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_serpent` · mesh `serpent_base` · material `rot_bone` · VFX `mist_droplets` · palette `#8c9f7e` `#5c6a53` `#4fa8e8` · elongated, irregular silhouette; still-then-sudden timing

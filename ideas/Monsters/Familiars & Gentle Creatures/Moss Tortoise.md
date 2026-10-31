@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,254 tris · 0.309 × 0.8 × 0.515 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Moss Tortoise is a small creature with a compact quadruped frame, about 0.8 m long. Its coat is smooth and clean, colored in leaf greens over bark brown. Its most striking feature is herbs and flowers growing on its shell. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by drifting pollen and tiny blossoms.
+> The Moss Tortoise is a small creature with a compact quadruped frame, about 0.8 m long. Its coat is smooth and clean, colored in pastel pink, with leaf-green markings. Its most striking feature is herbs and flowers growing on its shell. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `pollen_petals` · palette `#d5a7bd` `#987486` `#8fd16a` · circle-based, soft silhouette

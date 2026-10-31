@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (3,146 tris · 2.121 × 2.682 × 3.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thunder Fenrir-Blooded Lord is a large creature with an upright humanoid build, about 3.6 m tall. Its fur is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Its most striking feature is a crown of frost spikes growing from its mane. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Thunder Fenrir-Blooded Lord is a large creature with an upright humanoid build, about 3.6 m tall. Its fur is rough, scarred and spiked, colored in black-brown, with electric-yellow markings. Its most striking feature is a crown of frost spikes growing from its mane. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `arc_sparks` · palette `#5f4b43` `#473b3f` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

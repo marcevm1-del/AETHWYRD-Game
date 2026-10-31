@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (4,152 tris · 0.911 × 1 × 0.987 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Cave Spider is a small creature with an eight-legged arachnid body, about 1 m long. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a pale body that glows faintly in the dark. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by a low toxic haze that clings to the ground. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Cave Spider is a small creature with an eight-legged arachnid body, about 1 m long. Its chitin is rough, scarred and spiked, colored in glossy brown, with sickly green markings. Guild sketches always show a pale body that glows faintly in the dark. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by a low toxic haze that clings to the ground. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `toxic_fog` · palette `#73412d` `#492a1e` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

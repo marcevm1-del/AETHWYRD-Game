@@ -13,7 +13,7 @@ tags: [monster, the-headless]
 
 > [!note] 3D model: procedural blockout in Unity (1,872 tris · 1.555 × 3.245 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Pale Herald is a large creature with a tall, headless knightly build, about 3.5 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show a cape of fog trailing behind a headless knight. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by warped air, as if space bends around it.
+> The Pale Herald is a large creature with a tall, headless knightly build, about 3.5 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in violet-black, with violet-edged markings. Guild sketches always show a cape of fog trailing behind a headless knight. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `void_distortion` · palette `#6b5c8f` `#594c7b` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

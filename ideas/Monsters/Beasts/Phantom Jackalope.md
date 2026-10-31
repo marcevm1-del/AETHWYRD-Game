@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,654 tris · 0.096 × 0.4 × 0.182 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in warm gold and pearl white. Guild sketches always show tiny antlers on a fluffy rabbit. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in cream, with gold markings. Guild sketches always show tiny antlers on a fluffy rabbit. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `holy_motes` · palette `#cdbfa0` `#92846a` `#ffd166` · real-animal silhouette with one fantasy exaggeration

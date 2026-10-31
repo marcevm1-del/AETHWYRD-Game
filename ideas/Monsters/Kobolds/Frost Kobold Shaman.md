@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (3,150 tris · 0.446 × 0.524 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Frost Kobold Shaman is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in pale blues and frost-white. Look for tin-can wind chimes and singed whiskers. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Frost Kobold Shaman is a small creature with a scrawny biped with long arms and bowed legs, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue. Look for tin-can wind chimes and singed whiskers. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `frost_trail_snow` · palette `#667ea5` `#43516e` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

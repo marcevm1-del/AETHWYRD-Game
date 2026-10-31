@@ -13,7 +13,7 @@ tags: [monster, aquatic, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,490 tris · 4.247 × 12 × 7.312 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Lumen-Eater, the Abyss Angler is a huge creature with a heavy-jawed fish frame, about 12 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Look for a lure of stolen moonlight dangling over a mouth of glass teeth. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Lumen-Eater, the Abyss Angler is a huge creature with a heavy-jawed fish frame, about 12 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with violet markings. Look for a lure of stolen moonlight dangling over a mouth of glass teeth. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `shadow_wisps` · palette `#99a8af` `#637079` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

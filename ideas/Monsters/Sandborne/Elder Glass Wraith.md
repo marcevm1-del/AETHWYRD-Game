@@ -13,7 +13,7 @@ tags: [monster, sandborne]
 
 > [!note] 3D model: procedural blockout in Unity (1,276 tris · 2.325 × 2.256 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Glass Wraith is a large creature with a floating, cloth-like shape, about 3.2 m tall. Its sand-scoured hide is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Look for a figure of fused desert glass, humming with old magic. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Glass Wraith is a large creature with a floating, cloth-like shape, about 3.2 m tall. Its sand-scoured hide is patchy and subtly wrong, as if assembled from memory, colored in sand gold. Look for a figure of fused desert glass, humming with old magic. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `sand_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `sand_hide` · VFX `holy_motes` · palette `#c2885d` `#82573a` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

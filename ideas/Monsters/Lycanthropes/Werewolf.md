@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,706 tris · 0.918 × 1.018 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Werewolf is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Survivors describe a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Werewolf is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with violet markings. Survivors describe a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `shadow_wisps` · palette `#806243` `#564530` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

@@ -95,4 +95,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_floating` · mesh `floating_base` · material `elemental_emissive` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2f1c40` · triangle-based silhouette, sharp asymmetric spikes

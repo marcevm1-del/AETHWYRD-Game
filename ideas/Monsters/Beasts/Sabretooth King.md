@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,942 tris · 1.234 × 3.2 × 2.784 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Sabretooth King is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Look for two sabre fangs as long as swords. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps.
+> The Sabretooth King is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its coat is rough, scarred and spiked, colored in dark brown, with frost-blue markings. Look for two sabre fangs as long as swords. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `frost_trail_snow` · palette `#57483b` `#40342e` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,122 tris · 0.396 × 0.388 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Umbrella Spirit is a small creature with a hunched, wiry humanoid frame, about 0.8 m tall. Its form is weathered and natural, colored in deep blues with a glassy shine. Survivors describe a one-eyed paper umbrella hopping on one leg. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Umbrella Spirit is a small creature with a hunched, wiry humanoid frame, about 0.8 m tall. Its form is weathered and natural, colored in lacquer red, with sea-blue markings. Survivors describe a one-eyed paper umbrella hopping on one leg. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#a53b37` `#672726` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

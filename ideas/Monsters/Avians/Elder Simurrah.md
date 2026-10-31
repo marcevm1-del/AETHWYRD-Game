@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,302 tris · 15.903 × 52.683 × 32 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Simurrah is a colossal creature with a feathered avian body, about 32 m tall. Its plumage is smooth and clean, colored in warm gold and pearl white. Look for a healing bird with peacock-eyed plumage. It has big round glossy eyes. The air distorts slightly around its outline. It hops in little bursts, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Simurrah is a colossal creature with a feathered avian body, about 32 m tall. Its plumage is smooth and clean, colored in blue, with gold markings. Look for a healing bird with peacock-eyed plumage. It has big round glossy eyes. The air distorts slightly around its outline. It hops in little bursts, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -96,4 +96,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `holy_motes` · palette `#517fb7` `#36587f` `#ffd166` · circle-based, soft silhouette

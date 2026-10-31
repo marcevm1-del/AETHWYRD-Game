@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (3,414 tris · 0.143 × 0.6 × 0.322 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Lantern Leech is a small creature with a massive snake-like frame, about 0.6 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Survivors describe a glow on its back like a lost traveler's lantern. It has eyes that never blink. It has no ornament at all: simple, readable shapes. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.
+> The Lantern Leech is a small creature with a massive snake-like frame, about 0.6 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with sea-blue markings. Survivors describe a glow on its back like a lost traveler's lantern. It has eyes that never blink. It has no ornament at all: simple, readable shapes. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `rot_bone` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_serpent` · mesh `serpent_base` · material `rot_bone` · VFX `mist_droplets` · palette `#90a683` `#5e6e56` `#4fa8e8` · elongated, irregular silhouette; still-then-sudden timing

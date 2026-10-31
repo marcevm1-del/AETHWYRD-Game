@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,028 tris · 0.208 × 0.13 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mandrake is a tiny creature with a tall, tree-like walking frame, about 0.3 m tall. Its bark and leaves are weathered and natural, colored in leaf greens over bark brown. Its most striking feature is a screaming root with a leafy tuft. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
+> The Mandrake is a tiny creature with a tall, tree-like walking frame, about 0.3 m tall. Its bark and leaves are weathered and natural, colored in moss green and lichen grey. Its most striking feature is a screaming root with a leafy tuft. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -109,4 +109,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#709547` `#495732` `#8fd16a` · real-animal silhouette with one fantasy exaggeration

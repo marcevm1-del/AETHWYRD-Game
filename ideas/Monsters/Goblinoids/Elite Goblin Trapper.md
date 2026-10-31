@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (3,122 tris · 0.805 × 0.947 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elite Goblin Trapper is a person-sized creature with a small, compact humanoid body, about 1.6 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is snares and rusted bells hanging from its belt. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elite Goblin Trapper is a person-sized creature with a small, compact humanoid body, about 1.6 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is snares and rusted bells hanging from its belt. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#829d74` `#635537` `#b5cf9a` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (2,180 tris · 0.653 × 0.913 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hollow Mourner is a person-sized creature with a lean humanoid frame, about 1.7 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a weeping figure that moves only when you look away. It has pale, pupil-less eyes. It has no ornament at all: simple, readable shapes. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Hollow Mourner is a person-sized creature with a lean humanoid frame, about 1.7 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with violet markings. Guild sketches always show a weeping figure that moves only when you look away. It has pale, pupil-less eyes. It has no ornament at all: simple, readable shapes. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#849576` `#56634e` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

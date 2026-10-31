@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (3,370 tris · 0.387 × 1.5 × 0.872 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mud Hellhound is a person-sized creature with a long-legged predatory quadruped build, about 1.5 m long. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a dog with a furnace glow inside its ribs. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
+> The Mud Hellhound is a person-sized creature with a long-legged predatory quadruped build, about 1.5 m long. Its hide is rough, scarred and spiked, colored in char-black, with ochre markings. Guild sketches always show a dog with a furnace glow inside its ribs. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `rock_debris` · palette `#4b4855` `#3e3a46` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

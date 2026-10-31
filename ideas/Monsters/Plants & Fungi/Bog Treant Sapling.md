@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,568 tris · 1.625 × 1.185 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Bog Treant Sapling is a person-sized creature with a walking body of bark and root, about 2 m tall. Its bark and leaves are smooth and clean, colored in bruise purple with sickly green. Guild sketches always show a young tree with a sleepy face. It has wide curious eyes with star-shaped highlights. A distinctive marking runs along its back. It hops in little bursts, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
+> The Bog Treant Sapling is a person-sized creature with a walking body of bark and root, about 2 m tall. Its bark and leaves are smooth and clean, colored in deep fern green and dark bark. Guild sketches always show a young tree with a sleepy face. It has wide curious eyes with star-shaped highlights. A distinctive marking runs along its back. It hops in little bursts, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · circle-based, soft silhouette
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#4d7e46` `#4c3e2d` `#b8e986` · circle-based, soft silhouette

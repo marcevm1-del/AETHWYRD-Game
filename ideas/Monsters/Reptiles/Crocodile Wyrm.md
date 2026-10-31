@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (4,058 tris · 1.592 × 7 × 2.943 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crocodile Wyrm is a huge creature with a long, sinuous serpentine body, about 7 m long. Its scales are rough, scarred and spiked, colored in deep blues with a glassy shine. Survivors describe a back of armored ridges like a sunken log. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by fine mist and droplets that orbit it.
+> The Crocodile Wyrm is a huge creature with a long, sinuous serpentine body, about 7 m long. Its scales are rough, scarred and spiked, colored in green, with sea-blue markings. Survivors describe a back of armored ridges like a sunken log. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `mist_droplets` · palette `#57934e` `#396334` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

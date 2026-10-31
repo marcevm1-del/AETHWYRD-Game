@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (3,752 tris · 14.005 × 10 × 14.036 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 10 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Look for a crown of broken horns from rivals it killed. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It moves in jerky stop-motion bursts, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 10 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in crimson, with ember-orange markings. Look for a crown of broken horns from rivals it killed. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It moves in jerky stop-motion bursts, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_wyvern` · mesh `wyvern_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#ab422d` `#6b2e23` `#ff7a3d` · elongated, irregular silhouette; still-then-sudden timing

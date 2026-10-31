@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,632 tris · 1.402 × 1.501 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ruin Wall Stalker is a person-sized creature with an asymmetric body with too many limbs, about 2 m tall. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. It peels itself out of the wall. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
+> The Ruin Wall Stalker is a person-sized creature with an asymmetric body with too many limbs, about 2 m tall. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in rusted iron, with violet markings. It peels itself out of the wall. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 
 | Field | Value |
 |---|---|
@@ -93,4 +93,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `dungeon_stone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_aberrant` · mesh `aberrant_base` · material `dungeon_stone` · VFX `shadow_wisps` · palette `#7d6443` `#53422d` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

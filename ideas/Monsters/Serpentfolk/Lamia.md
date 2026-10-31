@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (5,370 tris · 1.423 × 3.5 × 1.885 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Lamia is a large creature with an elegant serpentfolk build, about 3.5 m long. Its scales are rough, scarred and spiked, colored in bruise purple with sickly green. Survivors describe a coiling tail and hypnotic golden eyes. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground.
+> The Lamia is a large creature with an elegant serpentfolk build, about 3.5 m long. Its scales are rough, scarred and spiked, colored in green. Survivors describe a coiling tail and hypnotic golden eyes. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `toxic_fog` · palette `#5c8948` `#3c5c31` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

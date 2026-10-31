@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,194 tris · 0.793 × 1.458 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cinderlord Vasque, the Smoke Mage is a person-sized creature with a broad-shouldered humanoid build, about 1.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in ember reds fading to soot black. Its most striking feature is a gas mask of brass and lungs full of living smoke. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks.
+> The Cinderlord Vasque, the Smoke Mage is a person-sized creature with a broad-shouldered humanoid build, about 1.9 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in worn green and leather brown, with ember-orange markings. Its most striking feature is a gas mask of brass and lungs full of living smoke. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `embers_heat_haze` · palette `#5e7451` `#51493b` `#ff7a3d` · elongated, irregular silhouette; still-then-sudden timing

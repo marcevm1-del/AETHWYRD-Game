@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (3,742 tris · 4.559 × 22.4 × 11.643 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Gorgon Wyrm is a colossal creature with a coiling, legless body, about 22.4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Guild sketches always show a stone-crusted body that leaves statues in its wake. It has eyes set slightly too far apart. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Gorgon Wyrm is a colossal creature with a coiling, legless body, about 22.4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in teal-grey, with ochre markings. Guild sketches always show a stone-crusted body that leaves statues in its wake. It has eyes set slightly too far apart. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `rock_debris` · palette `#455e72` `#314250` `#d1a15a` · elongated, irregular silhouette; still-then-sudden timing

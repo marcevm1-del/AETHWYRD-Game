@@ -13,7 +13,7 @@ tags: [monster, beasts, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,714 tris · 1.356 × 4 × 2.686 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thrakka, Sabretooth Khan of the Steppe Horde is a large creature with a long-legged predatory quadruped build, about 4 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Guild sketches always show two sabre fangs as long as spears and a horde that follows its howl. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.
+> The Thrakka, Sabretooth Khan of the Steppe Horde is a large creature with a long-legged predatory quadruped build, about 4 m long. Its coat is rough, scarred and spiked, colored in cream, with frost-blue markings. Guild sketches always show two sabre fangs as long as spears and a horde that follows its howl. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `frost_trail_snow` · palette `#ded5ad` `#9f9473` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (3,360 tris · 1.05 × 1 × 0.919 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Reef Crab is a small creature with a segmented six-limbed frame, about 1 m long. Its scales and skin are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show one claw much bigger than the other. It has amber predator eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by fine mist and droplets that orbit it. Adapted to coast lands, it has salt-crusted, barnacle-flecked hide.
+> The Reef Crab is a small creature with a segmented six-limbed frame, about 1 m long. Its scales and skin are weathered and natural, colored in teal, with sea-blue markings. Guild sketches always show one claw much bigger than the other. It has amber predator eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by fine mist and droplets that orbit it. Adapted to coast lands, it has salt-crusted, barnacle-flecked hide.
 
 | Field | Value |
 |---|---|
@@ -95,4 +95,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_hexapod` · mesh `hexapod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#4c9f8e` `#346d61` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (2,770 tris · 1.207 × 1.483 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Volt Smiling Scarecrow is a person-sized creature with an upright humanoid build, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in storm violet shot through with electric yellow. Survivors describe a stitched sack face with a painted smile that is never in the same field twice. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It copies the walk of whatever it hunts, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Volt Smiling Scarecrow is a person-sized creature with an upright humanoid build, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in bronze, with electric-yellow markings. Survivors describe a stitched sack face with a painted smile that is never in the same field twice. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It copies the walk of whatever it hunts, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `stone_metal_runes` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `stone_metal_runes` · VFX `arc_sparks` · palette `#b0834d` `#6f5332` `#ffe14d` · broken symmetry, mimicry, audio-first reveal

@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,322 tris · 0.506 × 2.2 × 0.988 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Bandit Bear is a person-sized creature with a long-legged predatory quadruped build, about 2.2 m long. Its coat is rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show a dark mask-like band across its eyes. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Bandit Bear is a person-sized creature with a long-legged predatory quadruped build, about 2.2 m long. Its coat is rough, scarred and spiked, colored in ash-grey, with gold markings. Guild sketches always show a dark mask-like band across its eyes. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#898882` `#5a5954` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (818 tris · 1.969 × 2.12 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Door Mimic is a person-sized creature with a disguised body pretending to be furniture, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in arterial crimson and dried-blood brown. Guild sketches always show a dungeon door that breathes. It has no eyes at all, only a wide and patient mouth. Small scars and rough edges mark it as a survivor. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Door Mimic is a person-sized creature with a disguised body pretending to be furniture, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in riveted iron, with crimson markings. Guild sketches always show a dungeon door that breathes. It has no eyes at all, only a wide and patient mouth. Small scars and rough edges mark it as a survivor. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `blood_mist` · palette `#737782` `#50545d` `#e0344a` · broken symmetry, mimicry, audio-first reveal

@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (4,152 tris · 2.732 × 3 × 2.96 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Frost Arachne is a large creature with a squat, many-legged arachnid build, about 3 m long. Its chitin is rough, scarred and spiked, colored in pale blues and frost-white. Guild sketches always show a woman's upper body rising from a spider's. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
+> The Frost Arachne is a large creature with a squat, many-legged arachnid build, about 3 m long. Its chitin is rough, scarred and spiked, colored in blue-black. Guild sketches always show a woman's upper body rising from a spider's. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `frost_trail_snow` · palette `#435175` `#323b54` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

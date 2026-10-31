@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (1,006 tris · 3.467 × 2.371 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Crystal Golem is a large creature with a towering machine-like frame, about 3.5 m tall. Its surface is rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show a body of prisms that splits light into rainbows. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Crystal Golem is a large creature with a towering machine-like frame, about 3.5 m tall. Its surface is rough, scarred and spiked, colored in weathered stone, with gold markings. Guild sketches always show a body of prisms that splits light into rainbows. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#86847f` `#585652` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

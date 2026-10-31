@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,300 tris · 0.286 × 0.198 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Mandrake is a tiny creature with a walking body of bark and root, about 0.4 m tall. Its bark and leaves are weathered and natural, colored in leaf greens over bark brown. Look for a screaming root with a leafy tuft. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by drifting pollen and tiny blossoms. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Mandrake is a tiny creature with a walking body of bark and root, about 0.4 m tall. Its bark and leaves are weathered and natural, colored in moss green and lichen grey. Look for a screaming root with a leafy tuft. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by drifting pollen and tiny blossoms. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#6e9648` `#485833` `#8fd16a` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,794 tris · 1.252 × 2.303 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Look for tribal tattoos showing through thick bear fur. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with gold markings. Look for tribal tattoos showing through thick bear fur. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `holy_motes` · palette `#70573b` `#4c3d2a` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

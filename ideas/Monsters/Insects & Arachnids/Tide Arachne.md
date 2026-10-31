@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,360 tris · 2.822 × 3 × 1.705 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Tide Arachne is a large creature with a squat, many-legged arachnid build, about 3 m long. Its chitin is rough, scarred and spiked, colored in deep blues with a glassy shine. Its most striking feature is a woman's upper body rising from a spider's. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Tide Arachne is a large creature with a squat, many-legged arachnid build, about 3 m long. Its chitin is rough, scarred and spiked, colored in blue-black. Its most striking feature is a woman's upper body rising from a spider's. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `mist_droplets` · palette `#494b7f` `#36365c` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

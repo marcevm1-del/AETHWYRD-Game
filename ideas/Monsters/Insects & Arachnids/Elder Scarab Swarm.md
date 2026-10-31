@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (2,334 tris · 0.124 × 0.1 × 0.113 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Scarab Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.1 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is golden beetles that flow like spilled coins. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Scarab Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.1 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in iridescent green, with violet markings. Its most striking feature is golden beetles that flow like spilled coins. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#3d773f` `#2b502d` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,312 tris · 0.309 × 0.8 × 0.515 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crag Moss Tortoise is a small creature with a low, springy quadruped build, about 0.8 m long. Its coat is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe herbs and flowers growing on its shell. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
+> The Crag Moss Tortoise is a small creature with a low, springy quadruped build, about 0.8 m long. Its coat is smooth and clean, colored in pastel pink, with ochre markings. Survivors describe herbs and flowers growing on its shell. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `rock_debris` · palette `#f5c1d8` `#af8699` `#d1a15a` · circle-based, soft silhouette

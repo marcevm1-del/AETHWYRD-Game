@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (1,660 tris · 1.308 × 1.353 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Tide Banshee is a person-sized creature with a drifting, half-formed body, about 1.8 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Guild sketches always show long white hair and a mouth that opens far too wide. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Tide Banshee is a person-sized creature with a drifting, half-formed body, about 1.8 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in dusk-violet, with sea-blue markings. Guild sketches always show long white hair and a mouth that opens far too wide. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `rot_bone` · VFX `mist_droplets` · palette `#585888` `#484975` `#4fa8e8` · elongated, irregular silhouette; still-then-sudden timing

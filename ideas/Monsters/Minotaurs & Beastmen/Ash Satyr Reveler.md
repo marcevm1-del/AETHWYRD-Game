@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,742 tris · 0.921 × 0.914 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ash Satyr Reveler is a person-sized creature with an upright humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in ember reds fading to soot black. Survivors describe goat legs and a panpipe that makes you dance. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Ash Satyr Reveler is a person-sized creature with an upright humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in charcoal, with ember-orange markings. Survivors describe goat legs and a panpipe that makes you dance. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `short_hide` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `short_hide` · VFX `embers_heat_haze` · palette `#575451` `#403d3c` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

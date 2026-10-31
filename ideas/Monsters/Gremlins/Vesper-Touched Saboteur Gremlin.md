@@ -13,7 +13,7 @@ tags: [monster, gremlins]
 
 > [!note] 3D model: procedural blockout in Unity (2,656 tris · 0.25 × 0.318 × 0.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Saboteur Gremlin is a small creature with a scrawny biped with long arms and bowed legs, about 0.7 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in storm violet shot through with electric yellow. Its most striking feature is goggles and a bag of stolen bolts. It has pale, pupil-less eyes. A distinctive marking runs along its back. It glides without moving its legs, surrounded by crackling arcs that jump across its body. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Saboteur Gremlin is a small creature with a scrawny biped with long arms and bowed legs, about 0.7 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in lavender, with electric-yellow markings. Its most striking feature is goggles and a bag of stolen bolts. It has pale, pupil-less eyes. A distinctive marking runs along its back. It glides without moving its legs, surrounded by crackling arcs that jump across its body. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#7d71a3` `#514871` `#ffe14d` · elongated, irregular silhouette; still-then-sudden timing

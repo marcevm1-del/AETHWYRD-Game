@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,374 tris · 10.311 × 40 × 23.263 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ember Behemoth Ascendant is a colossal creature with a heavy, muscular quadruped frame, about 40 m long. Its coat is rough, scarred and spiked, colored in ember reds fading to soot black. Look for a back that carries the ruins of a fortress it once trampled. It has eyes that catch torchlight like coins. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
+> The Ember Behemoth Ascendant is a colossal creature with a heavy, muscular quadruped frame, about 40 m long. Its coat is rough, scarred and spiked, colored in cream, with ember-orange markings. Look for a back that carries the ruins of a fortress it once trampled. It has eyes that catch torchlight like coins. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `embers_heat_haze` · palette `#c9bb9c` `#8f8168` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

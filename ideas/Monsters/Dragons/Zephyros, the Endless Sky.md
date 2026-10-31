@@ -13,7 +13,7 @@ tags: [monster, dragons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,708 tris · 87.725 × 90 × 54.961 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Zephyros, the Endless Sky is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 90 m long. Its scales are weathered and natural, colored in pale jade and cloud white. Guild sketches always show a body made half of clouds. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It stalks low to the ground, surrounded by swirling leaves and a constant breeze.
+> The Zephyros, the Endless Sky is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 90 m long. Its scales are weathered and natural, colored in sapphire, with pale jade markings. Guild sketches always show a body made half of clouds. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It stalks low to the ground, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `wind_ribbons` · palette `#2c7487` `#22505d` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

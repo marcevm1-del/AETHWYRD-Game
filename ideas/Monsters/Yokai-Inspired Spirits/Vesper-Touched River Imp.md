@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,702 tris · 0.503 × 0.592 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a dish-like hollow on its head full of water. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is rough, scarred and spiked, colored in lacquer red, with sea-blue markings. Look for a dish-like hollow on its head full of water. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `paper_ink_spirit` · VFX `mist_droplets` · palette `#c15440` `#79362c` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

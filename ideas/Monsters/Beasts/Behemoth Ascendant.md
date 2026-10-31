@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,374 tris · 10.311 × 40 × 23.263 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Behemoth Ascendant is a colossal creature with a heavy, muscular quadruped frame, about 40 m long. Its coat is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a back that carries the ruins of a fortress it once trampled. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
+> The Behemoth Ascendant is a colossal creature with a heavy, muscular quadruped frame, about 40 m long. Its coat is rough, scarred and spiked, colored in cream, with ochre markings. Guild sketches always show a back that carries the ruins of a fortress it once trampled. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#cbb59e` `#917c69` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

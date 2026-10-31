@@ -13,7 +13,7 @@ tags: [monster, dragons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,290 tris · 77.978 × 80 × 48.854 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ignivar, the Ember Throne is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 80 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is a hoard of molten gold fused into its scales. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
+> The Ignivar, the Ember Throne is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 80 m long. Its scales are rough, scarred and spiked, colored in sapphire, with ember-orange markings. Its most striking feature is a hoard of molten gold fused into its scales. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#2b7484` `#22505b` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

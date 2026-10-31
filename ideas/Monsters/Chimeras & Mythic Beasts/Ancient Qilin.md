@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,236 tris · 1.16 × 4.5 × 2.302 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Qilin is a large creature with a long-legged predatory quadruped build, about 4.5 m long. Its hide is smooth and clean, colored in warm gold and pearl white. Look for scales, antlers and hooves that never bend the grass. It has wide curious eyes with star-shaped highlights. The air distorts slightly around its outline. It waddles, surrounded by soft radiance and floating motes of light. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Qilin is a large creature with a long-legged predatory quadruped build, about 4.5 m long. Its hide is smooth and clean, colored in lion-tawny, with gold markings. Look for scales, antlers and hooves that never bend the grass. It has wide curious eyes with star-shaped highlights. The air distorts slightly around its outline. It waddles, surrounded by soft radiance and floating motes of light. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `holy_motes` · palette `#b48552` `#765435` `#ffd166` · circle-based, soft silhouette

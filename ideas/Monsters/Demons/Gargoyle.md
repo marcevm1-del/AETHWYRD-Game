@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (3,788 tris · 3.131 × 2 × 2.222 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Gargoyle is a person-sized creature with a lean, wing-armed drake frame, about 2 m long. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a stone body that cracks when it moves. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Gargoyle is a person-sized creature with a lean, wing-armed drake frame, about 2 m long. Its hide is rough, scarred and spiked, colored in char-black, with ochre markings. Guild sketches always show a stone body that cracks when it moves. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `demon_hide_emissive` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_wyvern` · mesh `wyvern_base` · material `demon_hide_emissive` · VFX `rock_debris` · palette `#4f4c5a` `#413e4a` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

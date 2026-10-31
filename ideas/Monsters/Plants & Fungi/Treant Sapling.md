@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,088 tris · 1.576 × 1.121 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Treant Sapling is a person-sized creature with a mushroom-capped walking body, about 2 m tall. Its bark and leaves are smooth and clean, colored in leaf greens over bark brown. Its most striking feature is a young tree with a sleepy face. It has two bright dot eyes. A distinctive marking runs along its back. It hops in little bursts, surrounded by drifting pollen and tiny blossoms.
+> The Treant Sapling is a person-sized creature with a mushroom-capped walking body, about 2 m tall. Its bark and leaves are smooth and clean, colored in deep fern green and dark bark. Its most striking feature is a young tree with a sleepy face. It has two bright dot eyes. A distinctive marking runs along its back. It hops in little bursts, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · circle-based, soft silhouette
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4e713f` `#453329` `#8fd16a` · circle-based, soft silhouette

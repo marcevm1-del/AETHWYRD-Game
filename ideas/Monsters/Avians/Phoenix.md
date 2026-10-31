@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,240 tris · 2.998 × 9.932 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phoenix is a huge creature with a broad-winged bird frame, about 6 m tall. Its plumage is smooth and clean, colored in ember reds fading to soot black. Look for feathers of living flame that fall as embers. It has wide curious eyes with star-shaped highlights. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by heat-shimmer and drifting sparks.
+> The Phoenix is a huge creature with a broad-winged bird frame, about 6 m tall. Its plumage is smooth and clean, colored in pale buff, with ember-orange markings. Look for feathers of living flame that fall as embers. It has wide curious eyes with star-shaped highlights. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · circle-based, soft silhouette
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `embers_heat_haze` · palette `#bbb390` `#81795a` `#ff7a3d` · circle-based, soft silhouette

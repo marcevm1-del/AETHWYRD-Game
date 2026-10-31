@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (3,242 tris · 0.317 × 1.4 × 0.629 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ruin Hound is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its stone-like hide is rough, scarred and spiked, colored in ink black with bruised violet. Look for a brick-patterned hide. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
+> The Ruin Hound is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its stone-like hide is rough, scarred and spiked, colored in rusted iron, with violet markings. Look for a brick-patterned hide. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 
 | Field | Value |
 |---|---|
@@ -93,4 +93,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dungeon_stone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dungeon_stone` · VFX `shadow_wisps` · palette `#876d48` `#5a4831` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

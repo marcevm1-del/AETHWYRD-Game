@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,264 tris · 0.692 × 0.422 × 1.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elite Kobold Miner is a person-sized creature with a small, compact humanoid body, about 1.4 m tall. Its mangy fur is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is a candle-helmet and a pick worn smooth from use. It has alert animal eyes. A distinctive marking runs along its back. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elite Kobold Miner is a person-sized creature with a small, compact humanoid body, about 1.4 m tall. Its mangy fur is weathered and natural, colored in rust-red, with ochre markings. Its most striking feature is a candle-helmet and a pick worn smooth from use. It has alert animal eyes. A distinctive marking runs along its back. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `rock_debris` · palette `#c1533e` `#763026` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

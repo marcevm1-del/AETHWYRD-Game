@@ -13,7 +13,7 @@ tags: [monster, vesperites-moon-raiders, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,660 tris · 6.178 × 5.739 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ilyanthe, the Moon Harvester is a huge creature with a bodiless, glowing form, about 6 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in arterial crimson and dried-blood brown. Its most striking feature is a lantern cage of red glass holding the stolen souls of the gem-folk. It has too many eyes, opening one after another. Its regal silhouette is crowned by a halo-like ring of aura. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron.
+> The Ilyanthe, the Moon Harvester is a huge creature with a bodiless, glowing form, about 6 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in dusk violet, with crimson markings. Its most striking feature is a lantern cage of red glass holding the stolen souls of the gem-folk. It has too many eyes, opening one after another. Its regal silhouette is crowned by a halo-like ring of aura. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_floating` · mesh `floating_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#605a8b` `#4f4a78` `#e0344a` · broken symmetry, mimicry, audio-first reveal

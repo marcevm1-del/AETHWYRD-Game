@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (946 tris · 3.963 × 2.71 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Core Sentinel is a large creature with a blocky construct body, about 4 m tall. Its stone-like hide is rough, scarred and spiked, colored in warm gold and pearl white. Look for a dungeon-core crystal for a heart. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Core Sentinel is a large creature with a blocky construct body, about 4 m tall. Its stone-like hide is rough, scarred and spiked, colored in dungeon stone, with gold markings. Look for a dungeon-core crystal for a heart. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `dungeon_stone` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_golem` · mesh `golem_base` · material `dungeon_stone` · VFX `holy_motes` · palette `#767b86` `#4f535b` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

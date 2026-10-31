@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,164 tris · 0.976 × 0.664 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hobgoblin is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Look for a broad scarred chest and a helmet two sizes too small. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey. It has no visible aura; you hear its breathing before you see it.
+> The Hobgoblin is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Look for a broad scarred chest and a helmet two sizes too small. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -111,4 +111,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#738361` `#53402e` `#b5cf9a` · triangle-based silhouette, sharp asymmetric spikes

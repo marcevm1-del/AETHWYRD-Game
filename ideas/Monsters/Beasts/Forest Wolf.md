@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,708 tris · 0.463 × 1.2 × 1.044 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Forest Wolf is a person-sized creature with a long-legged predatory quadruped build, about 1.2 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Look for a grey-green coat that blends with ferns. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
+> The Forest Wolf is a person-sized creature with a long-legged predatory quadruped build, about 1.2 m long. Its coat is weathered and natural, colored in grey-green with a cream ruff. Look for a grey-green coat that blends with ferns. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -112,4 +112,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#7e8c78` `#56604f` `#f0e6cc` · real-animal silhouette with one fantasy exaggeration

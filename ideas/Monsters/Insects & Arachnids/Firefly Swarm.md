@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (2,296 tris · 0.068 × 0.05 × 0.038 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Firefly Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is smooth and clean, colored in warm gold and pearl white. Guild sketches always show hundreds of soft lantern lights moving together. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by soft radiance and floating motes of light.
+> The Firefly Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is smooth and clean, colored in amber, with gold markings. Guild sketches always show hundreds of soft lantern lights moving together. It has wide curious eyes with star-shaped highlights. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `holy_motes` · palette `#c5912f` `#7d5b1d` `#ffd166` · circle-based, soft silhouette

@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,052 tris · 21.418 × 15.522 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Bog Ancient Treant is a colossal creature with a tall, tree-like walking frame, about 30 m tall. Its bark and leaves are weathered and natural, colored in bruise purple with sickly green. Its most striking feature is a forest growing from its shoulders. It has amber predator eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
+> The Bog Ancient Treant is a colossal creature with a tall, tree-like walking frame, about 30 m tall. Its bark and leaves are weathered and natural, colored in leaf green over bark brown. Its most striking feature is a forest growing from its shoulders. It has amber predator eyes. Its regal silhouette is crowned by a halo-like ring of aura. It lopes in long strides, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#599940` `#634d35` `#b8e986` · real-animal silhouette with one fantasy exaggeration

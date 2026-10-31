@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,636 tris · 0.096 × 0.4 × 0.131 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Snowmole is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pale blues and frost-white. Survivors describe a white nose and shovel-like paws. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by falling snow motes and frosted ground where it steps.
+> The Snowmole is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pastel pink, with frost-blue markings. Survivors describe a white nose and shovel-like paws. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `frost_trail_snow` · palette `#e5b4d6` `#a47d99` `#9fdcff` · circle-based, soft silhouette

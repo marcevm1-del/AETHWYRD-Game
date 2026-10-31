@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (3,236 tris · 0.924 × 1 × 0.491 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Giant Crab is a small creature with a low, wide insectoid build, about 1 m long. Its scales and skin are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show one claw much bigger than the other. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by fine mist and droplets that orbit it.
+> The Giant Crab is a small creature with a low, wide insectoid build, about 1 m long. Its scales and skin are weathered and natural, colored in teal, with sea-blue markings. Guild sketches always show one claw much bigger than the other. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -98,4 +98,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_hexapod` · mesh `hexapod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#46918d` `#2f6460` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

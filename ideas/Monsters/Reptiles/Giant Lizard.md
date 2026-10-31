@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (2,852 tris · 0.516 × 2 × 1.163 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Giant Lizard is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its scales are weathered and natural, colored in ochre, clay and mossy stone. Survivors describe sun-baked scales and a frilled neck. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
+> The Giant Lizard is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its scales are weathered and natural, colored in sand-coloured, with ochre markings. Survivors describe sun-baked scales and a frilled neck. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `scale_matte` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `scale_matte` · VFX `rock_debris` · palette `#a28551` `#6b5735` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

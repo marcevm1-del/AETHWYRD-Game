@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,204 tris · 1.152 × 2.118 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Werebear is a large creature with a lean humanoid frame, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. Look for tribal tattoos showing through thick bear fur. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Werebear is a large creature with a lean humanoid frame, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with ochre markings. Look for tribal tattoos showing through thick bear fur. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `rock_debris` · palette `#826744` `#574931` `#d1a15a` · elongated, irregular silhouette; still-then-sudden timing

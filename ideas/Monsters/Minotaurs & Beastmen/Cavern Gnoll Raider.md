@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,482 tris · 1.178 × 1.266 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cavern Gnoll Raider is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Guild sketches always show a hyena head and a laugh that carries for miles. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
+> The Cavern Gnoll Raider is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its hide is rough, scarred and spiked, colored in tan, with ochre markings. Guild sketches always show a hyena head and a laugh that carries for miles. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `short_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `short_hide` · VFX `rock_debris` · palette `#846246` `#59412f` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

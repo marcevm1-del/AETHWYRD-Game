@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,608 tris · 0.406 × 2 × 1.134 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Dire Wolf is a person-sized creature with a long-legged predatory quadruped build, about 2 m long. Its coat is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Look for a horse-sized frame and a jaw full of jagged fangs. It has pale, pupil-less eyes. A distinctive marking runs along its back. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Dire Wolf is a person-sized creature with a long-legged predatory quadruped build, about 2 m long. Its coat is patchy and subtly wrong, as if assembled from memory, colored in cream, with gold markings. Look for a horse-sized frame and a jaw full of jagged fangs. It has pale, pupil-less eyes. A distinctive marking runs along its back. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#c8b19c` `#8f7968` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (2,698 tris · 1.548 × 4.5 × 3.022 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Thunder Drake is a large creature with a heavy, muscular quadruped frame, about 4.5 m long. Its scales are rough, scarred and spiked, colored in storm violet shot through with electric yellow. Look for horns that work like lightning rods. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Thunder Drake is a large creature with a heavy, muscular quadruped frame, about 4.5 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with electric-yellow markings. Look for horns that work like lightning rods. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `arc_sparks` · palette `#6b6a7a` `#4a4a56` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, aberrations, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,632 tris · 2.397 × 2.11 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The The Nightmother, Queen of the Nightshifters is a person-sized creature with a tall, impossibly thin frame, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe a kindly village grandmother whose shadow has wings. It has a human-like face in the wrong place. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it.
+> The The Nightmother, Queen of the Nightshifters is a person-sized creature with a tall, impossibly thin frame, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in mauve, with violet markings. Survivors describe a kindly village grandmother whose shadow has wings. It has a human-like face in the wrong place. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#816584` `#564358` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

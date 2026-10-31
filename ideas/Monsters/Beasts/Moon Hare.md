@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,330 tris · 0.193 × 0.5 × 0.322 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Moon Hare is a small creature with a low, springy quadruped build, about 0.5 m long. Its coat is smooth and clean, colored in warm gold and pearl white. Survivors describe white fur that glows under the full moon. It has two bright dot eyes. A distinctive marking runs along its back. It bounces happily, surrounded by soft radiance and floating motes of light.
+> The Moon Hare is a small creature with a low, springy quadruped build, about 0.5 m long. Its coat is smooth and clean, colored in cream, with gold markings. Survivors describe white fur that glows under the full moon. It has two bright dot eyes. A distinctive marking runs along its back. It bounces happily, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `holy_motes` · palette `#c5b999` `#8d8066` `#ffd166` · circle-based, soft silhouette

@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (2,250 tris · 1.03 × 1.695 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Living Armor is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its surface is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe an empty suit of plate that walks. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
+> The Living Armor is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its surface is rough, scarred and spiked, colored in bronze. Survivors describe an empty suit of plate that walks. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#9c6245` `#633e2d` `#f4ae6b` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,498 tris · 3.865 × 2.222 × 4.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kurogane, the Oni Warlord is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its form is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show an iron club wrapped in torn prayer chains and a mask of red lacquer. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
+> The Kurogane, the Oni Warlord is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its form is rough, scarred and spiked, colored in lacquer red, with ember-orange markings. Guild sketches always show an iron club wrapped in torn prayer chains and a mask of red lacquer. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#a65737` `#683826` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

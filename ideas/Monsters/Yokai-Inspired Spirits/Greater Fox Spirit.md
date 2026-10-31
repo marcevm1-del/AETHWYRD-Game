@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,312 tris · 0.618 × 1.6 × 1.171 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Fox Spirit is a person-sized creature with a compact quadruped frame, about 1.6 m long. Its form is weathered and natural, colored in ember reds fading to soot black. Look for three tails tipped with blue flame. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Fox Spirit is a person-sized creature with a compact quadruped frame, about 1.6 m long. Its form is weathered and natural, colored in indigo, with ember-orange markings. Look for three tails tipped with blue flame. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#445271` `#32394f` `#ff7a3d` · real-animal silhouette with one fantasy exaggeration

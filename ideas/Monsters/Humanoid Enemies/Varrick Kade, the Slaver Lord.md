@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,188 tris · 1.03 × 1.107 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Varrick Kade, the Slaver Lord is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in muted greys and dusty browns. Look for a whip of braided chains and a ledger of every beastkin he has sold. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
+> The Varrick Kade, the Slaver Lord is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in worn green and leather brown. Look for a whip of braided chains and a ledger of every beastkin he has sold. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `dust_puffs` · palette `#5a6848` `#483d35` `#839a6b` · triangle-based silhouette, sharp asymmetric spikes

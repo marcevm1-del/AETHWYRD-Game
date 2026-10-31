@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,342 tris · 1.574 × 3 × 1.181 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Gale Death Mantis is a large creature with a six-legged armored body, about 3 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in pale jade and cloud white. Survivors describe black chitin and a skull-like head. It has eyes that never blink. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Gale Death Mantis is a large creature with a six-legged armored body, about 3 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in blue-black, with pale jade markings. Survivors describe black chitin and a skull-like head. It has eyes that never blink. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#4d4d86` `#3a3960` `#8fe0bd` · elongated, irregular silhouette; still-then-sudden timing

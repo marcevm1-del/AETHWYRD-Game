@@ -13,7 +13,7 @@ tags: [monster, demons, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,142 tris · 1.152 × 1.226 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Varos, Herald of the Red Gate is a large creature with a lean humanoid frame, about 3 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show a demon who steps out of every Gate that opens in Haneul's towns. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
+> The Varos, Herald of the Red Gate is a large creature with a lean humanoid frame, about 3 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in brimstone red, with violet-edged markings. Guild sketches always show a demon who steps out of every Gate that opens in Haneul's towns. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `void_distortion` · palette `#a13129` `#5a2826` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

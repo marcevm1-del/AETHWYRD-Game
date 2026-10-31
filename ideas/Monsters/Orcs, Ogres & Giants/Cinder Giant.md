@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,254 tris · 7.73 × 4.632 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cinder Giant is a huge creature with a giant, barrel-chested humanoid body, about 9 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show skin like cooling lava and a forge-hammer. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by heat-shimmer and drifting sparks. Adapted to volcanic lands, it has ash-dark coloring with glowing cracks.
+> The Cinder Giant is a huge creature with a giant, barrel-chested humanoid body, about 9 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with ember-orange markings. Guild sketches always show skin like cooling lava and a forge-hammer. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by heat-shimmer and drifting sparks. Adapted to volcanic lands, it has ash-dark coloring with glowing cracks.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `embers_heat_haze` · palette `#6d954f` `#496435` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

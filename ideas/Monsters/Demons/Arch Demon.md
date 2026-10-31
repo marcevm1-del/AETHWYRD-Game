@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (3,270 tris · 12.522 × 8 × 8.889 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Arch Demon is a huge creature with a sleek flying build, about 8 m long. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show four wings and a voice like a choir. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
+> The Arch Demon is a huge creature with a sleek flying build, about 8 m long. Its hide is rough, scarred and spiked, colored in brimstone red, with violet markings. Guild sketches always show four wings and a voice like a choir. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_wyvern` · mesh `wyvern_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#a23629` `#5b2b27` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

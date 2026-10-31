@@ -13,7 +13,7 @@ tags: [monster, avians, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,822 tris · 33.058 × 26.029 × 35 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Raikaru, the Storm Roc is a colossal creature with a tall, long-legged bird build, about 35 m tall. Its plumage is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe wings that carry the weekly world-storm on their back. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
+> The Raikaru, the Storm Roc is a colossal creature with a tall, long-legged bird build, about 35 m tall. Its plumage is rough, scarred and spiked, colored in brown, with electric-yellow markings. Survivors describe wings that carry the weekly world-storm on their back. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `arc_sparks` · palette `#8f6549` `#5d3f31` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

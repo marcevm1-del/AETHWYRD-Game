@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,136 tris · 21.472 × 13.65 × 25 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ukhu-Tal, Stone Giant of the First Making is a colossal creature with a massive hunched brute frame, about 25 m tall. Its hide is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a body of terraced stone older than the Titans' war. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by pebbles that tremble and float near it.
+> The Ukhu-Tal, Stone Giant of the First Making is a colossal creature with a massive hunched brute frame, about 25 m tall. Its hide is weathered and natural, colored in olive-green, with ochre markings. Survivors describe a body of terraced stone older than the Titans' war. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `rock_debris` · palette `#668948` `#455c31` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

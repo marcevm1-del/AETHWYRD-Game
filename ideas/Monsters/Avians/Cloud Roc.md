@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,902 tris · 28.456 × 33.737 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cloud Roc is a colossal creature with a feathered avian body, about 30 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Look for a shadow as big as a cloud. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to sky lands, it has cloud-pale coloring and lighter bones.
+> The Cloud Roc is a colossal creature with a feathered avian body, about 30 m tall. Its plumage is rough, scarred and spiked, colored in pale buff, with pale jade markings. Look for a shadow as big as a cloud. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to sky lands, it has cloud-pale coloring and lighter bones.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#bfb893` `#847c5c` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

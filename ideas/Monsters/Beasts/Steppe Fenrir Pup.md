@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,336 tris · 0.387 × 1.5 × 0.872 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Steppe Fenrir Pup is a person-sized creature with a powerful four-legged hunter's body, about 1.5 m long. Its coat is weathered and natural, colored in pale jade and cloud white. Look for frosted fur and breath that freezes the air. It has dark, wary eyes. Faint runes glow along its body when it fights. It prowls, surrounded by swirling leaves and a constant breeze. Adapted to steppe lands, it has wind-burnt coloring and a lean frame.
+> The Steppe Fenrir Pup is a person-sized creature with a powerful four-legged hunter's body, about 1.5 m long. Its coat is weathered and natural, colored in warm brown, with pale jade markings. Look for frosted fur and breath that freezes the air. It has dark, wary eyes. Faint runes glow along its body when it fights. It prowls, surrounded by swirling leaves and a constant breeze. Adapted to steppe lands, it has wind-burnt coloring and a lean frame.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `wind_ribbons` · palette `#8b5d47` `#5a3a30` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

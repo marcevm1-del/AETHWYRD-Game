@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,420 tris · 47.436 × 47.857 × 50 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Nameless Abomination is a colossal creature with a tall, impossibly thin frame, about 50 m tall. Its hide is stretched, stitched and constantly shifting, colored in starless black with faint violet edges. Guild sketches always show a blank page given teeth. It has too many eyes, opening one after another. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by warped air, as if space bends around it.
+> The Nameless Abomination is a colossal creature with a tall, impossibly thin frame, about 50 m tall. Its hide is stretched, stitched and constantly shifting, colored in brown and dark umber, with violet-edged markings. Guild sketches always show a blank page given teeth. It has too many eyes, opening one after another. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -88,4 +88,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `mixed_hide` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_aberrant` · mesh `aberrant_base` · material `mixed_hide` · VFX `void_distortion` · palette `#735e3c` `#4d422b` `#8a7cff` · broken symmetry, mimicry, audio-first reveal

@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,890 tris · 0.516 × 2 × 1.163 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Meadow Dire Wolf is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its coat is rough, scarred and spiked, colored in pale jade and cloud white. Its most striking feature is a horse-sized frame and a jaw full of jagged fangs. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
+> The Meadow Dire Wolf is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its coat is rough, scarred and spiked, colored in cream, with pale jade markings. Its most striking feature is a horse-sized frame and a jaw full of jagged fangs. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `wind_ribbons` · palette `#dfcfad` `#9f8f74` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

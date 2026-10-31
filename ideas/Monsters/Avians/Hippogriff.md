@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,304 tris · 1.08 × 2.8 × 2.436 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hippogriff is a large creature with a powerful four-legged hunter's body, about 2.8 m long. Its plumage is weathered and natural, colored in pale jade and cloud white. Survivors describe an eagle's head on a horse's body. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
+> The Hippogriff is a large creature with a powerful four-legged hunter's body, about 2.8 m long. Its plumage is weathered and natural, colored in crow-black, with pale jade markings. Survivors describe an eagle's head on a horse's body. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#4e4f5a` `#404048` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

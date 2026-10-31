@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (3,650 tris · 0.487 × 0.5 × 0.269 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hatchling is a small creature with an ancient, serpentine dragon body, about 0.5 m long. Its scales are smooth and clean, colored in ember reds fading to soot black. Look for a too-big head and wings it can't use yet. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by heat-shimmer and drifting sparks.
+> The Hatchling is a small creature with an ancient, serpentine dragon body, about 0.5 m long. Its scales are smooth and clean, colored in crimson, with ember-orange markings. Look for a too-big head and wings it can't use yet. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · circle-based, soft silhouette
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `embers_heat_haze` · palette `#b4362f` `#702825` `#ff7a3d` · circle-based, soft silhouette

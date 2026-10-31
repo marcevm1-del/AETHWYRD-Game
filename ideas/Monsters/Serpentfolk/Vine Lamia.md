@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (5,558 tris · 1.423 × 3.5 × 1.823 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vine Lamia is a large creature with an elegant serpentfolk build, about 3.5 m long. Its scales are rough, scarred and spiked, colored in leaf greens over bark brown. Guild sketches always show a coiling tail and hypnotic golden eyes. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
+> The Vine Lamia is a large creature with an elegant serpentfolk build, about 3.5 m long. Its scales are rough, scarred and spiked, colored in green. Guild sketches always show a coiling tail and hypnotic golden eyes. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `pollen_petals` · palette `#5d8747` `#3e5b30` `#8fd16a` · triangle-based silhouette, sharp asymmetric spikes

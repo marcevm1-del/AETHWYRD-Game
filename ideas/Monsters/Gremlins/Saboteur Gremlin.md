@@ -13,7 +13,7 @@ tags: [monster, gremlins]
 
 > [!note] 3D model: procedural blockout in Unity (2,678 tris · 0.351 × 0.31 × 0.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Saboteur Gremlin is a small creature with a hunched, wiry humanoid frame, about 0.7 m tall. Its skin is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Guild sketches always show goggles and a bag of stolen bolts. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by crackling arcs that jump across its body.
+> The Saboteur Gremlin is a small creature with a hunched, wiry humanoid frame, about 0.7 m tall. Its skin is rough, scarred and spiked, colored in lavender, with electric-yellow markings. Guild sketches always show goggles and a bag of stolen bolts. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rubbery_skin` · VFX `arc_sparks` · palette `#8f85c0` `#5c5585` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

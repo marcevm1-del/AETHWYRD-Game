@@ -13,7 +13,7 @@ tags: [monster, aquatic, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,414 tris · 7.145 × 30 × 16.085 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The The Nameless Tide, a Serpent Without a Name is a colossal creature with a long, sinuous serpentine body, about 30 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in deep blues with a glassy shine. Look for a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.
+> The The Nameless Tide, a Serpent Without a Name is a colossal creature with a long, sinuous serpentine body, about 30 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in teal, with sea-blue markings. Look for a sea serpent whose true name was stolen, and which drowns anyone who speaks theirs. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_serpent` · mesh `serpent_base` · material `wet_scale` · VFX `mist_droplets` · palette `#4da084` `#346e59` `#4fa8e8` · elongated, irregular silhouette; still-then-sudden timing

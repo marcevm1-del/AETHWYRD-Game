@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,730 tris · 0.495 × 0.583 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Kobold Trapmaster is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its mangy fur is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe a harness of gears, springs and tripwires. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
+> The Kobold Trapmaster is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its mangy fur is rough, scarred and spiked, colored in rust-red. Survivors describe a harness of gears, springs and tripwires. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#b4533a` `#6e3024` `#ff8e52` · triangle-based silhouette, sharp asymmetric spikes

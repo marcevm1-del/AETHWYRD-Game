@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (5,514 tris · 6.07 × 12 × 7.874 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Night Serpent Empress is a huge creature with a humanoid upper body on a long serpent tail, about 12 m long. Its scales are rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a crown of living snakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Night Serpent Empress is a huge creature with a humanoid upper body on a long serpent tail, about 12 m long. Its scales are rough, scarred and spiked, colored in violet. Guild sketches always show a crown of living snakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `shadow_wisps` · palette `#78628e` `#4e4062` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

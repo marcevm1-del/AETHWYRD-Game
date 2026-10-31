@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (3,346 tris · 24.368 × 25 × 15.267 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Adult Dragon is a colossal creature with an ancient, serpentine dragon body, about 25 m long. Its scales are rough, scarred and spiked, colored in storm violet shot through with electric yellow. Survivors describe cathedral wings and a voice that shakes stone. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
+> The Adult Dragon is a colossal creature with an ancient, serpentine dragon body, about 25 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with electric-yellow markings. Survivors describe cathedral wings and a voice that shakes stone. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `arc_sparks` · palette `#676574` `#484752` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes
