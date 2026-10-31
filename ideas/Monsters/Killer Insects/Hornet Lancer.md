@@ -35,11 +35,11 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override); animation set `anim_flyer_small`.
 - **Dimensions:** 0.4 m high × 1.2 m long × 0.61 m wide; prefab scale 1.5.
 - **Physics:** 76 kg, gravity ×1.4, poise 67, knockback resistance 0.31, death style `flip_legs_curl`.
 - **Navigation:** speed 4.02 m/s, turn 456°/s, stopping distance 0.57 m.
-- **Attack count:** 5; **signature:** a lance-like stinger and humming armored wings.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 

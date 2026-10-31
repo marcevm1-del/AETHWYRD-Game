@@ -27,7 +27,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 40104 · 808 · 581 · 581 · 581 · 100 |
 | XP · gold | 9993 · 1815 |
 | Ring | 5 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/giant_biped\|giant_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Lumbaya\|Lumbaya]], [[Regions/Hoshizora\|Hoshizora]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -36,10 +36,10 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 12 m high × 4.8 m long × 14.4 m wide; prefab scale 6.
-- **Physics:** 38102.4 kg, gravity ×1, poise 1569, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 1.19 m/s, turn 60°/s, stopping distance 1.84 m.
+- **Rig:** [[Systems/Rigs/giant_biped|giant_biped]] (override (base species)); animation set `anim_plant_walker`.
+- **Dimensions:** 12 m high × 4.08 m long × 5.28 m wide; prefab scale 1.2.
+- **Physics:** 29030.4 kg, gravity ×1, poise 638, knockback resistance 1, death style `cinematic_collapse`.
+- **Navigation:** speed 6.4 m/s, turn 87°/s, stopping distance 2.56 m.
 - **Attack count:** 5; **signature:** a moss beard and owls living in its branches.
 
 ## Attacks and responses

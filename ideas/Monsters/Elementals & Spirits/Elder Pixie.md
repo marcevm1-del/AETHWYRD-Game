@@ -36,7 +36,7 @@ tags: [monster, elementals-spirits]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/spirit_float|spirit_float]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/spirit_float|spirit_float]] (override (base species)); animation set `anim_flyer_small`.
 - **Dimensions:** 0.3 m high × 0.09 m long × 0.19 m wide; prefab scale 0.3.
 - **Physics:** 0.5 kg, gravity ×0, poise 5, knockback resistance 0.06, death style `dissolve_into_motes`.
 - **Navigation:** speed 2.89 m/s, turn 900°/s, stopping distance 0.5 m.

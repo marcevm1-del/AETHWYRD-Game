@@ -10,7 +10,8 @@ Giants 6–20 m. Same skeleton as large_biped plus climbable surfaces and weak-p
 | Field | Value |
 |---|---|
 | Aliases | giant, titan, colossus_humanoid, frost_giant |
-| Species using rig | 0 |
+| Species using rig | 6 |
+| Families represented | Plants & Fungi |
 | Bone count · budget | 37 · 70 |
 | Unity avatar · material | Humanoid · flesh |
 | Reference size · axis | 10 · height |
@@ -32,7 +33,12 @@ Giants 6–20 m. Same skeleton as large_biped plus climbable surfaces and weak-p
 
 ## Species
 
-
+- [[Monsters/Plants & Fungi/Elder Treant|Elder Treant]] — anim_plant_walker, 12 m high, override rig selection
+- [[Monsters/Plants & Fungi/Ancient Treant|Ancient Treant]] — anim_plant_walker, 30 m high, override rig selection
+- [[Monsters/Plants & Fungi/Worldroot Behemoth|Worldroot Behemoth]] — anim_plant_walker, 80 m high, override rig selection
+- [[Monsters/Plants & Fungi/Tide Elder Treant|Tide Elder Treant]] — anim_plant_walker, 12 m high, override (base species) rig selection
+- [[Monsters/Plants & Fungi/Bog Ancient Treant|Bog Ancient Treant]] — anim_plant_walker, 30 m high, override (base species) rig selection
+- [[Monsters/Plants & Fungi/Thunder Worldroot Behemoth|Thunder Worldroot Behemoth]] — anim_plant_walker, 80 m high, override (base species) rig selection
 
 ## Production checks
 

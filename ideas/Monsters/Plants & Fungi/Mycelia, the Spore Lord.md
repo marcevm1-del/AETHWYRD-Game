@@ -26,7 +26,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 20372 · 613 · 441 · 441 · 441 · 100 |
 | XP · gold | 127464 · 1225 |
 | Ring | 3 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Sylvaran\|Sylvaran]] |
 | Tyrant | Yes |
 | Genre | Fairy-tale Forest |
@@ -36,11 +36,11 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 5 m high × 2 m long × 6 m wide; prefab scale 2.5.
-- **Physics:** 2625 kg, gravity ×1, poise 416, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.65 m/s, turn 80°/s, stopping distance 1 m.
-- **Attack count:** 5; **signature:** a crown of glowing fungus fed by the World Tree's Blight.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 5 m high × 1.5 m long × 2.1 m wide; prefab scale 1.429.
+- **Physics:** 2250 kg, gravity ×1.3, poise 308, knockback resistance 0.87, death style `heavy_fall_dust`.
+- **Navigation:** speed 6.6 m/s, turn 170°/s, stopping distance 1.4 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 

@@ -27,7 +27,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 4840 · 293 · 211 · 211 · 211 · 100 |
 | XP · gold | 1888 · 423 |
 | Ring | 3 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Xochitl Mire\|Xochitl Mire]], [[Regions/Greymoor\|Greymoor]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -36,10 +36,10 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 2 m high × 0.8 m long × 2.4 m wide; prefab scale 1.
-- **Physics:** 168 kg, gravity ×1, poise 72, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.39 m/s, turn 127°/s, stopping distance 0.64 m.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override (base species)); animation set `anim_plant_walker`.
+- **Dimensions:** 2 m high × 0.6 m long × 0.84 m wide; prefab scale 0.571.
+- **Physics:** 144 kg, gravity ×1.3, poise 138, knockback resistance 0.81, death style `heavy_fall_dust`.
+- **Navigation:** speed 3.95 m/s, turn 269°/s, stopping distance 0.8 m.
 - **Attack count:** 5; **signature:** a young tree with a sleepy face.
 
 ## Attacks and responses

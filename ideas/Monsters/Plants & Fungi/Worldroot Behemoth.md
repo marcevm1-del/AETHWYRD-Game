@@ -26,7 +26,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 144467 · 1418 · 1021 · 1021 · 1021 · 100 |
 | XP · gold | 24842 · 4024 |
 | Ring | 8 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/giant_biped\|giant_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Nox Dominion\|Nox Dominion]], [[Regions/Great Labyrinth (Floors 91-120)\|Great Labyrinth (Floors 91-120)]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -35,11 +35,11 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 80 m high × 32 m long × 96 m wide; prefab scale 40.
-- **Physics:** 10752000 kg, gravity ×1, poise 36691, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 2.79 m/s, turn 60°/s, stopping distance 10 m.
-- **Attack count:** 5; **signature:** a walking forest with a glowing heartwood core.
+- **Rig:** [[Systems/Rigs/giant_biped|giant_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 80 m high × 27.2 m long × 35.2 m wide; prefab scale 8.
+- **Physics:** 8192000 kg, gravity ×1, poise 14922, knockback resistance 1, death style `cinematic_collapse`.
+- **Navigation:** speed 15 m/s, turn 60°/s, stopping distance 12.4 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 

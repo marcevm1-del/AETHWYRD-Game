@@ -2,6 +2,16 @@
  "version": 1,
  "notes": "Hand-authored motion design for Ring 0–1 monsters. Merged on top of the generated profile by Tools/monster_gen/motion.js. Frame numbers are at 30 fps for the rig's reference size. attacks{} keys must be attack IDs the species has.",
  "species": {
+  "mon_treant_sapling": { "rigKey": "large_biped", "note": "rig_plant_walker: walks (2 m). The family keyword 'plant' matched plant_rooted, which cannot walk; large_biped lists treants." },
+  "mon_spore_lord": { "rigKey": "large_biped", "note": "rig_plant_walker, 3 m walking body of bark and root: a hulking biped, not a rooted plant." },
+  "mon_elder_treant": { "rigKey": "giant_biped", "note": "rig_plant_walker, 12 m: giant band (6-20 m) with climbable surfaces." },
+  "mon_ancient_treant": { "rigKey": "giant_biped", "note": "rig_plant_walker, 30 m: giant_biped scaled up, climbable." },
+  "mon_worldroot_behemoth": { "rigKey": "giant_biped", "note": "rig_plant_walker, 80 m: giant_biped scaled up, climbable." },
+  "mon_needle_wasp": { "rigKey": "hexapod", "note": "rig_flyer_small insect: confirmed hexapod (no rig has insect wings yet; it hovers)." },
+  "mon_hornet_lancer": { "rigKey": "hexapod", "note": "rig_flyer_small insect: confirmed hexapod (no rig has insect wings yet; it hovers)." },
+  "mon_mycelia_the_spore_lord": { "rigKey": "large_biped", "note": "Tyrant, rig_plant_walker, 5 m walking frame: a hulking biped, not a rooted plant." },
+  "mon_the_briar_king_lord_of_the_winter_court": { "rigKey": "large_biped", "note": "Tyrant, rig_plant_walker, 4 m walking body of bark and root." },
+  "mon_pixie": { "rigKey": "spirit_float", "note": "rig_flyer_small fairy: confirmed spirit_float (legless floating)." },
   "mon_blue_slime": {
    "rigKey": "blob", "expectedSize": 0.4, "footstep": "squelch",
    "summary": "A teardrop of glossy blue gel that bounces everywhere it goes. The first monster most players fight: cute, readable, and slightly sneaky (Engulf).",

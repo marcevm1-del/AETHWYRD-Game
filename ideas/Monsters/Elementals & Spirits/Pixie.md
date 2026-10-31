@@ -35,11 +35,11 @@ tags: [monster, elementals-spirits]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/spirit_float|spirit_float]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/spirit_float|spirit_float]] (override); animation set `anim_flyer_small`.
 - **Dimensions:** 0.2 m high × 0.06 m long × 0.13 m wide; prefab scale 0.2.
 - **Physics:** 0.5 kg, gravity ×0, poise 4, knockback resistance 0.03, death style `dissolve_into_motes`.
 - **Navigation:** speed 2.24 m/s, turn 900°/s, stopping distance 0.5 m.
-- **Attack count:** 5; **signature:** dragonfly wings and a mischievous grin.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
