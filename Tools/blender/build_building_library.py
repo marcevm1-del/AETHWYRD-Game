@@ -59,16 +59,18 @@ def main():
         regions = arg("--regions").split(",")
     else:
         regions = library.representative_regions()
-    library.write_catalogs(out_dir)
-    for rid in regions:
-        t = time.time()
-        library.clear_scene()
-        path, objs = library.build_region(rid, out_dir, sheet_dir, seed=int(arg("--seed", 1)), detail=arg("--detail", "high"),
-                                          extra_seeds=int(arg("--variants", 1)) - 1)
-        mb = os.path.getsize(path) / 1e6
-        print("[AB] %-20s %2d buildings  %6.1f MB  %5.1fs  %s" % (rid, len(objs), mb, time.time() - t, path), flush=True)
-    if no_blend:
-        shutil.rmtree(out_dir, ignore_errors=True)
+    try:
+        library.write_catalogs(out_dir)
+        for rid in regions:
+            t = time.time()
+            library.clear_scene()
+            path, objs = library.build_region(rid, out_dir, sheet_dir, seed=int(arg("--seed", 1)),
+                                              detail=arg("--detail", "high"), extra_seeds=int(arg("--variants", 1)) - 1)
+            mb = os.path.getsize(path) / 1e6
+            print("[AB] %-20s %2d buildings  %6.1f MB  %5.1fs  %s" % (rid, len(objs), mb, time.time() - t, path), flush=True)
+    finally:
+        if no_blend:  # the temp folder goes even when a build fails
+            shutil.rmtree(out_dir, ignore_errors=True)
 
 
 main()

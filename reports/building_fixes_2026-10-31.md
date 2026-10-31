@@ -47,3 +47,56 @@ After sheets show only the `--types` set per region (8 buildings each), not the 
 - Whisperwood thatch is a 1-in-3 chance per building, so the 8 sampled buildings show 4 thatched roofs.
 - Aldmere "civic" finials use a footprint of at least 115 m² as a stand-in for civic buildings (the town hall, guild hall and temple qualify), because ornaments cannot see the archetype.
 - The new extras (`bronze_bands`, `cloth_bands`, `facade_banners`, `facade_lanterns`, `climbing_ivy`, `civic_finials`) are in `ornaments.py`, and the window glow, ember cap, cloth door jambs, banner scale and `cover_mix` are in `construct.py`. The task allowed these files when needed.
+
+## B1: shared props follow the family (wave 2)
+
+Owner: environment-artist. Source: [[design_review_2026-10-25]] B1. Not committed.
+
+| Fix | File · function / key |
+|---|---|
+| Market stall canopy always `cloth_a` (was a random pick of three), posts `trim` | `archetypes.py` `market_stall` |
+| Lamp post per family: paper lantern on a wooden post (hoshizora, shenlu, haneul), brass gas lamp (clockwork), iron basket of glowing coal (dwarven), two silk lanterns on an iron crook (gothic), green fen lamp in a cage on a crooked pole (fenland); the iron lamp stays the default | `archetypes.py` `LAMP_FORMS`, `paper_lamp_post`, `gas_lamp_post`, `coal_basket_post`, `silk_lamp_post` (reuses `ornaments.silk_lantern`), `fen_lamp_post` |
+| Wall segment: battered adobe with rounded merlons, vigas, spouts and round end buttresses (desert); ochre brick with turquoise tile bands and turquoise-capped merlons (garden); nordic keeps the log palisade it already had | `archetypes.py` `wall_segment`, `adobe_wall`, `banded_brick_wall` |
+| Fountain basin and column in the family masonry; adobe families use their wall plaster; garden gets a turquoise tile rim | `archetypes.py` `fountain` |
+| Mill: desert and garden → wind-catcher tower beside a mill house; nordic → watermill with an overshot wheel and flume; dwarven → water-wheel forge (wheel, flume, axle, forge chimney, glowing hearth); clockwork and gothic → dropped from the catalogue | `archetypes.py` `MILL_FORMS`, `MILL_DROPPED`, `wind_catcher`, `watermill`, `water_forge`, `flume`, `catalogue` |
+| Hoshizora granary → raised kura storehouse (stone base, namako-tiled dark skirt, white plaster, barred windows, tile gable roof with crest) | `styles.py` hoshizora `remap` `granary` → `kura`; `archetypes.py` `kura` |
+| Docs | `13_Production/building_system.md` (new B1 table) |
+
+Garden's wind-catcher is a call of mine: Zarvan is the "dry mountain wind" garden city and the wind-catcher fits it better than dropping the mill.
+
+### Before / after (B1 types: market_stall, lamp_post, fountain, wall_segment, mill, granary)
+
+| Region | Before (full catalogue) | After | Render (s, detail high) |
+|---|---|---|---|
+| Hoshizora | [before](building_fixes_2026-10-31/b1_before/hoshizora.png) | [after](building_fixes_2026-10-31/b1_after/hoshizora.png) | 55 |
+| Iron Hold | [before](building_fixes_2026-10-31/b1_before/iron_hold.png) | [after](building_fixes_2026-10-31/b1_after/iron_hold.png) | 48 (re-run with the wheel moved) |
+| Sunscar | [before](building_fixes_2026-10-31/b1_before/sunscar.png) | [after](building_fixes_2026-10-31/b1_after/sunscar.png) | 39 |
+| Frostveil | [before](building_fixes_2026-10-31/b1_before/frostveil.png) | [after](building_fixes_2026-10-31/b1_after/frostveil.png) | 42 (re-run with the wheel moved) |
+| Zarvan | [before](building_fixes_2026-10-31/b1_before/zarvan.png) | [after](building_fixes_2026-10-31/b1_after/zarvan.png) | 50 |
+| Gearholm | [before](building_fixes_2026-10-31/b1_before/gearholm.png) | [after](building_fixes_2026-10-31/b1_after/gearholm.png) (no mill: dropped) | 38 |
+
+Whisperwood (default family) rendered with the same types to a scratch folder: iron lamp, grey stone fountain, stone wall, sail windmill and round granary unchanged; only the stall canopy rule applies.
+
+## Code-review fixes on 7c1cc44 (wave 2)
+
+| Finding | Fix |
+|---|---|
+| 1. `facade_banners` z-fought with banners the archetype already hangs | tavern (when `banners`), guild hall, watchtower (when `banners`) and barracks put `own_banners` in `c.notes` before `block()`; `ornaments.decorate` skips `facade_banners` then |
+| 2. Dragon Spine lost its bands and inherited Iron Hold's palette | dwarven family restored to its pre-wave-1 values; the bronze bands, `band="none"`, copper `roof_b` 1 in 3, lit windows and ember colours moved to the `iron_hold` region override |
+| 3. Ember cap on every smithy, extra rng draws | new style flag `ember_cap` (default False, True for Iron Hold); other forge chimneys get the old glowing slab again, with no extra draws |
+| 4. Facade lanterns hit the door lantern on narrow fronts | lanterns at `max(w/4, w/2 - 0.75)`; fronts under 5.5 m keep only the left one (door lanterns hang right of the door) |
+| 5. `--no-blend` temp folder leaked on failure | `build_building_library.py`: the rmtree is in a `finally` |
+| Lantern colours (technical-artist) | Greymoor `lamp` (0.52, 1.0, 0.26) (#BFFF8C as linear); Umbravel `lamp` violet (0.55, 0.32, 1.0) |
+
+Re-rendered after sheets: iron_hold, umbravel, greymoor, fanghold (cottage, house, inn, smithy, shop, temple, tavern, watchtower; 402 s for the four) and whisperwood, aldmere (cottage, house, townhouse, manor, inn, guild_hall, town_hall, temple; 236 s for the two), with blend.py's per-key glow strengths.
+
+### Checks
+
+- `python3 -m py_compile` on archetypes, styles, construct, ornaments and build_building_library: OK; `__pycache__` removed.
+- Geometry smoke test (no render, Blender 5.2.3) of all 28 core types in 18 regions, hashed against the same test on 7c1cc44: 0 errors. Every changed hash is an intended change: market stall everywhere, smithy everywhere (forge slab back), Dragon Spine (family restored, roof-key draw back to two keys), homes and civic buildings in Whisperwood and Greymoor (lantern spacing), banner archetypes in Fanghold, Calamity Steppe and Aldmere, and the B1 props in the named families. Untouched types in untouched families are identical. Gearholm and Umbravel catalogues: 28 → 27 (no mill).
+
+### Notes
+
+- `--types` overrides `catalogue()`, so a dropped type is still built if named: leave `mill` out for Gearholm, Cinderhole, Umbravel and Nox Dominion (done for the Gearholm sheet).
+- Iron Hold's fountain water is orange because the dwarven `glass` key (also used for windows) is orange; a separate water key would need a palette change across families.
+- The preview camera crops the top of the tall, thin lamp posts a little (`preview.camera` framing).

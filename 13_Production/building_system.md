@@ -57,7 +57,7 @@ The 28 core types cover what the town guide in [[anime_town_places_and_taverns]]
 |---|---|
 | Homes | cottage, house, townhouse (gable to the street, balcony), manor (wings, corner tower), stilt house, longhouse, longhouse hall |
 | Trade | shop (shopfront, awning, icon sign), inn (wing, porch, benches, sign), tavern, warehouse (hoist beam), market stall |
-| Craft and farm | smithy (open forge, chimney, anvil, quench barrel), barn, stable (stalls, trough), granary, mill (watermill or windmill by region) |
+| Craft and farm | smithy (open forge, chimney, anvil, quench barrel), barn, stable (stalls, trough), granary (Hoshizora: raised `kura` storehouse), mill (sail windmill by default; watermill in wet families; family forms below) |
 | Civic, learning, faith | guild hall (tower, banners), town hall (clock tower), library, bathhouse (cupola), temple (nave and bell tower), shrine |
 | Defence | watchtower (lookout), gatehouse (arch, portcullis), wall segment (stone wall or log palisade by region), barracks (weapon rack) |
 | Infrastructure | well, bridge (stone arch or timber), fountain, lamp post |
@@ -99,11 +99,24 @@ The adjustable parameters are width, depth and floors (0 keeps the type's defaul
 
 - **A signature goes on at most 1 building in 4.** In the desert and garden families only the guild hall, town hall and library towers, the domed hall, and the temple and bathhouse (remapped to `domed_temple` and `domed_bathhouse`) carry a dome or onion: 6 of the 30 catalogue types. Flat roofs no longer get a dome each.
 - **Mossdeep** remaps every working building too: `smithy` → `mushroom_smithy`, `barn` → `mushroom_barn`, `stable` → `mushroom_stable`, `gatehouse` → `mushroom_gate`, `wall_segment` → `hedge_wall`.
-- **Dark families glow.** `window_glass="window_glow"` lights the panes (dwarven forge orange `#FF8C26`, gothic violet, Nox red). Forge chimneys carry an ember cap. Iron Hold has 0.44 m bronze bands (`bronze_bands`) and copper `roof_b` on 1 roof in 3. Umbravel's stone is `#5A5068`, with silk lanterns on all four facades.
-- **Greymoor**: `wall_c` `#8A7A62`, two green lanterns on every house front (`facade_lanterns`), painted doors `#4F7A6A`.
-- **Wind-plains**: red and blue cloth bands under every eave and round every door (`cloth_bands`), a banner on every front (`facade_banners`), banners 2× (`banner_scale`), stone `#B8A58A`.
+- **Dark families glow.** `window_glass="window_glow"` lights the panes (Iron Hold forge orange `#FF8C26`, gothic violet, Nox red). Iron Hold's region override (not the dwarven family, so Dragon Spine keeps its stone bands and plain palette) adds 0.44 m bronze bands (`bronze_bands`, replacing the stone band), copper `roof_b` on 1 roof in 3 and `ember_cap=True`, which gives its forge chimneys a glowing coal bed and grate; every other forge chimney keeps the plain glowing hearth slab. Umbravel's stone is `#5A5068`, with violet silk lanterns (`lamp` linear `(0.55, 0.32, 1.0)`) on all four facades.
+- **Greymoor**: `wall_c` `#8A7A62`, green lanterns on every house front (`facade_lanterns`: two towards the corners, one on fronts under 5.5 m so it clears the door lantern; `lamp` is `#BFFF8C` as linear `(0.52, 1.0, 0.26)`), painted doors `#4F7A6A`.
+- **Wind-plains**: red and blue cloth bands under every eave and round every door (`cloth_bands`), a banner on every front (`facade_banners`, skipped on the tavern, guild hall, watchtower and barracks, which hang their own: the archetype puts `own_banners` in `c.notes`), banners 2× (`banner_scale`), stone `#B8A58A`.
 - **Whisperwood vs Aldmere.** Whisperwood: warmer plaster, moss on roofs, climbing ivy, two lanterns per front, thatch on about 1 roof in 3 (`cover_mix`). Aldmere: ashlar ground floors, slate roofs (mostly slate grey), royal-blue `#3357AD` and gold banners, and finials on roofs of 115 m² or more (civic-sized). Both keep pitch 54, turrets and flower boxes.
-- Emission strength is set in `blend.py` (3.0 for every glowing key) and belongs to the technical-artist.
+- Emission strength is set per glow key in `blend.py` (`GLOW_STRENGTH`) and belongs to the technical-artist.
+
+### Shared props follow the family (design review 2026-10-25, B1)
+
+| Prop | Rule |
+|---|---|
+| Market stall | Canopy always `cloth_a`, posts `trim`, so the family palette colours it |
+| Lamp post (`LAMP_FORMS`) | Hoshizora, Shen-Lu, Haneul: paper lantern on a wooden post. Clockwork: brass gas lamp. Dwarven: iron basket of glowing coal. Gothic: two silk lanterns on an iron crook. Fenland: green fen lamp in a cage on a crooked pole. Everyone else: the iron lamp |
+| Wall segment | Desert: battered adobe with rounded merlons, vigas and round end buttresses (`adobe_wall`). Garden: ochre brick with turquoise tile bands and turquoise-capped merlons (`banded_brick_wall`). Nordic and other timber families: the log palisade. Others unchanged |
+| Fountain | Basin and column in the family stone; adobe families use their wall plaster; garden adds a turquoise tile rim |
+| Mill (`MILL_FORMS`, `MILL_DROPPED`) | Desert and garden: `wind_catcher` (mill house plus slotted wind-catcher tower). Nordic: `watermill` (overshot wheel and flume). Dwarven: `water_forge` (water wheel, forge chimney, glowing hearth). Clockwork and gothic: dropped from the catalogue (no fitting form). Others: windmill or watermill as before |
+| Granary | Hoshizora family remaps `granary` → `kura`: a raised white-plaster storehouse on a stone base, a dark namako-tiled skirt, barred windows and a tile gable roof |
+
+A dropped type is left out by `catalogue()`, but `--types` builds whatever it is given, so leave `mill` out of a `--types` list for Gearholm, Cinderhole, Umbravel and Nox Dominion.
 
 ## How it's built (for changes)
 

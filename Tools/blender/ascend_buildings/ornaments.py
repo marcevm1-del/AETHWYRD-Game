@@ -45,7 +45,9 @@ def decorate(c, cx, cy, w, d, zf, top, rise, ridge="x"):
         for face, L in (("right", d), ("back", w), ("left", d)):
             silk_lantern(c, K.face_matrix(cx, cy, w, d, zf, face), L / 2 - 0.95, zl)
     if s.has("facade_lanterns"):  # two glowing globe lanterns on every house front (Greymoor, Whisperwood)
-        for x in (-w / 4, w / 4):
+        # Kept towards the corners, clear of the door lantern (review fix). Door lanterns hang right of the door, so a narrow front (< 5.5 m) keeps only the left one.
+        off = max(w / 4, w / 2 - 0.75)
+        for x in ((-off, off) if w >= 5.5 else (-off,)):
             silk_lantern(c, front, x, min(H - 0.6, 2.3))
     if s.has("bronze_bands"):  # Iron Hold: broad bronze bands (0.44 m) at every floor line and under the eaves
         n = max(1, int(round(H / s.floor_h)))
@@ -55,7 +57,8 @@ def decorate(c, cx, cy, w, d, zf, top, rise, ridge="x"):
     if s.has("cloth_bands"):  # wind-plains: a red felt band under the eaves over a narrower blue one
         c.g.rbox((w + 0.22, d + 0.22, 0.32), "cloth_a", None, 0.04, 1, (cx, cy, top - 0.2))
         c.g.rbox((w + 0.2, d + 0.2, 0.16), "cloth_b", None, 0.03, 1, (cx, cy, top - 0.48))
-    if s.has("facade_banners") and H >= 2.6:  # a banner on every front (Fanghold, Aldmere)
+    if s.has("facade_banners") and H >= 2.6 and "own_banners" not in c.notes:  # a banner on every front (Fanghold,
+        # Aldmere), unless the archetype hangs its own (tavern, guild hall, watchtower, barracks: review fix)
         xs = (-w / 2 + 0.9, w / 2 - 0.9) if w >= 8.5 else (-w / 2 + 0.9,)
         for x in xs:
             K.banner(c, front, x, H - 0.35, 1.6, 0.6)

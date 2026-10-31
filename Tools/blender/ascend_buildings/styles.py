@@ -41,6 +41,8 @@ DEFAULTS = dict(
     # window_glass: the palette key for window panes ("window_glow" lights them). banner_scale: banner size factor.
     # cover_mix: (cover, roof_key, chance, ridge) gives that share of a region's buildings another roof covering.
     window_glass="glass", banner_scale=1.0, cover_mix=None,
+    # ember_cap: forge chimneys carry a glowing coal bed and grate instead of the plain lamp slab (Iron Hold).
+    ember_cap=False,
 )
 
 FAMILIES = {
@@ -107,16 +109,13 @@ FAMILIES = {
     ),
     "dwarven": dict(
         label="Dwarven basalt halls (runes and bronze)", walls="ashlar", wall_keys=("stone",), base="plinth", base_h=0.8,
-        roof="hip", tower_roof="pyramid", pitch=32, overhang=0.3, cover="slate", roof_keys=("roof_a", "roof_a", "roof_b"),
-        ridge="tile", window="slit", door="double", floor_h=3.3, chimney="forge", band="none", corner="quoin",
-        extras=("runes", "lanterns", "buttresses", "bronze_bands"), window_glass="window_glow",
-        # basalt kept; bronze bands 0.44 m (2x the old 0.22 band); copper roof_b on 1 roof in 3; forge-orange #FF8C26
-        # on runes, windows and lamps; forge chimneys carry an ember cap (construct.chimney)
+        roof="hip", tower_roof="pyramid", pitch=32, overhang=0.3, cover="slate", roof_keys=("roof_a", "roof_b"),
+        ridge="tile", window="slit", door="double", floor_h=3.3, chimney="forge", band="stone", corner="quoin",
+        extras=("runes", "lanterns", "buttresses"),
         palette={"stone": (0.27, 0.26, 0.29), "stone_dark": (0.18, 0.17, 0.19), "mortar": (0.14, 0.13, 0.15),
-                 "roof_a": (0.30, 0.30, 0.34), "roof_b": (0.72, 0.45, 0.20), "trim": (0.72, 0.45, 0.20),
+                 "roof_a": (0.30, 0.30, 0.34), "roof_b": (0.55, 0.36, 0.22), "trim": (0.72, 0.45, 0.20),
                  "frame": (0.72, 0.45, 0.20), "door": (0.30, 0.22, 0.16), "glow": (1.0, 0.55, 0.15),
-                 "lamp": (1.0, 0.60, 0.20), "glass": (0.95, 0.55, 0.20), "window_glow": (1.0, 0.55, 0.15),
-                 "ember": (1.0, 0.55, 0.15)},
+                 "lamp": (1.0, 0.60, 0.20), "glass": (0.95, 0.55, 0.20)},
     ),
     "whitestone": dict(
         label="White-stone duchies (ashlar, slate, arches)", walls="ashlar", wall_keys=("stone",), base="plinth",
@@ -133,7 +132,7 @@ FAMILIES = {
         base_h=0.7, roof="curved", tower_roof="curved", round_roof="curved", pitch=38, curve=0.6, overhang=0.9,
         cover="barrel", roof_keys=("roof_a", "roof_b"), ridge="raised", window="lattice", door="sliding", floor_h=3.0,
         chimney="none", band="beam", corner="column", extras=("paper_lanterns", "noren"),
-        remap={"temple": "pagoda", "gatehouse": "torii_gate"},
+        remap={"temple": "pagoda", "gatehouse": "torii_gate", "granary": "kura"},  # kura: raised white storehouse (B1)
         palette={"wall_a": (0.95, 0.93, 0.88), "trim": (0.26, 0.16, 0.10), "trim_dark": (0.16, 0.10, 0.07),
                  "roof_a": (0.24, 0.28, 0.34), "roof_b": (0.42, 0.30, 0.22), "stone": (0.66, 0.64, 0.60),
                  "accent": (0.85, 0.22, 0.12), "cloth_a": (0.18, 0.24, 0.42), "lamp": (1.0, 0.62, 0.35),
@@ -282,7 +281,7 @@ REGIONS = {
     # Greymoor: wall_c lifted to #8A7A62, two green lanterns (#BFFF8C) per house front, painted doors #4F7A6A.
     "greymoor": ("Greymoor", "fenland", dict(extras=("lanterns", "moss", "ropes", "facade_lanterns"),
                                             palette={"wall_c": (0.54, 0.48, 0.38), "door": (0.31, 0.48, 0.42),
-                                                     "lamp": (0.75, 1.0, 0.55)})),
+                                                     "lamp": (0.52, 1.0, 0.26)})),  # #BFFF8C as linear
     "labyrinth_upper": ("Great Labyrinth (Floors 1-40)", "ancient", {}),
     "labyrinth_deep": ("Great Labyrinth (Floors 41-90)", "ancient", dict(ruin=0.4, palette={"glow": (0.25, 0.75, 1.0), "stone": (0.36, 0.44, 0.48)})),
     "labyrinth_abyss": ("Great Labyrinth (Floors 91-120)", "ancient", dict(palette={"glow": (1.0, 0.92, 0.65), "stone": (0.30, 0.30, 0.34)})),
@@ -290,7 +289,13 @@ REGIONS = {
     "mossdeep": ("Mossdeep", "mushroom", {}),
     "lirian": ("Lirian", "lagoon", {}),
     "fanghold": ("Fanghold", "steppe", {}),
-    "iron_hold": ("Iron Hold", "dwarven", {}),
+    # Iron Hold (review B3): basalt kept; bronze bands 0.44 m (2x the old 0.22 band) replace the stone band; copper
+    # roof_b on 1 roof in 3; forge-orange #FF8C26 on runes, windows and lamps; forge chimneys carry an ember cap
+    # (construct.chimney). Region-only, so Dragon Spine keeps the plain dwarven family (review fix).
+    "iron_hold": ("Iron Hold", "dwarven", dict(
+        band="none", extras=("runes", "lanterns", "buttresses", "bronze_bands"), window_glass="window_glow",
+        roof_keys=("roof_a", "roof_a", "roof_b"), ember_cap=True,
+        palette={"roof_b": (0.72, 0.45, 0.20), "window_glow": (1.0, 0.55, 0.15), "ember": (1.0, 0.55, 0.15)})),
     "moraveil": ("Moraveil", "storybook", dict(palette={"wall_a": (0.92, 0.84, 0.62), "roof_a": (0.62, 0.36, 0.20)})),
     "strife_marches": ("Strife Marches", "storybook", dict(ground_walls="rubble", roof_keys=("roof_d", "roof_b"),
                                                           palette={"wall_a": (0.84, 0.80, 0.70), "wall_b": (0.80, 0.74, 0.64)})),
@@ -301,9 +306,9 @@ REGIONS = {
     "shen_lu": ("Shen-Lu", "shenlu", {}),
     "haneul": ("Haneul", "haneul", {}),
     "whitewater_reach": ("Whitewater Reach", "nordic", dict(cover="plank", palette={"wall_a": (0.50, 0.46, 0.42), "roof_a": (0.40, 0.42, 0.46)})),
-    # Umbravel: stone #4C4557 -> #5A5068, lit violet windows, warm silk lanterns on every facade (ornaments.silk)
+    # Umbravel: stone #4C4557 -> #5A5068, lit violet windows, violet silk lanterns on every facade (ornaments.silk)
     "umbravel": ("Umbravel", "gothic", dict(extras=("lanterns", "webs", "silk"),
-                                            palette={"lamp": (1.0, 0.82, 0.55), "stone": (0.35, 0.31, 0.41),
+                                            palette={"lamp": (0.55, 0.32, 1.0), "stone": (0.35, 0.31, 0.41),
                                                      "stone_dark": (0.25, 0.22, 0.29), "mortar": (0.20, 0.18, 0.23)})),
     "sunscar": ("Sunscar", "desert", {}),
     "goldmere_coast": ("Goldmere Coast", "coastal", {}),

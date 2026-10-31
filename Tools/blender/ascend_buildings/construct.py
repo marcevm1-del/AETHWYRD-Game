@@ -1272,7 +1272,9 @@ def chimney(c, x, y, z0, top, kind=None):
                 zz += hh
                 row += 1
         g.rbox((size + 0.16, size + 0.16, 0.14), "stone~2", None, 0.03, c.seg(), (x, y, z0 + h + 0.07))
-        if kind == "forge":  # an ember cap: a glowing coal bed, heaped coals and an iron grate over it
+        if kind == "forge" and not getattr(s, "ember_cap", False):  # the plain glowing hearth slab (every region)
+            g.rbox((size - 0.3, size - 0.3, 0.1), "lamp", None, 0.02, 1, (x, y, z0 + h + 0.15))
+        elif kind == "forge":  # Iron Hold's ember cap: a glowing coal bed, heaped coals and an iron grate over it
             zt = z0 + h + 0.14
             g.rbox((size - 0.24, size - 0.24, 0.14), "ember", None, 0.03, 1, (x, y, zt + 0.07))
             for k in range(6):
