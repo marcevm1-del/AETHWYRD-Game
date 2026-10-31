@@ -33,6 +33,7 @@ from ascend_buildings import preview
 PREFIX = "TP_"
 SHADOW_TINT = (0.58, 0.56, 0.78)
 OUTLINE_MUL = 0.35
+OUTLINE_ALPHA_MUL = 0.6  # hull opacity relative to a see-through body (Phantom variants)
 RIM_COLOUR = (1.0, 0.97, 0.9)
 RIM = {"creature": 0.35, "building": 0.0}
 OUTLINE_PX = {"creature": 1.5, "building": 2.0}   # art_direction.md section 3
@@ -284,7 +285,7 @@ def toon_material(mat, kind="creature"):
 
 def outline_material(mat):
     """Backface-culled emission copy of mat in its local colour x 0.35 (vertex colours included)."""
-    m, base, _e, _s, _a = _strip(mat)
+    m, base, _e, _s, alpha = _strip(mat)
     m.name = PREFIX + "ol_" + mat.name
     nt = m.node_tree
     N, L = nt.nodes, nt.links
@@ -294,13 +295,28 @@ def outline_material(mat):
     b.default_value = (OUTLINE_MUL, OUTLINE_MUL, OUTLINE_MUL, 1)
     emit = N.new("ShaderNodeEmission")
     L.new(res, emit.inputs["Color"])
-    L.new(emit.outputs[0], out.inputs["Surface"])
+    shader = emit.outputs[0]
+    # See-through materials (Phantom variants): an opaque hull would show its far wall through the body and make
+    # the ghost read solid, so the hull fades with the body (x OUTLINE_ALPHA_MUL) and is blended, not dithered.
+    see_through = alpha[0] is not None or (alpha[1] if alpha[1] is not None else 1.0) < 1.0
+    if see_through:
+        k = N.new("ShaderNodeMath")
+        k.operation = "MULTIPLY"
+        k.inputs[1].default_value = OUTLINE_ALPHA_MUL
+        _feed(nt, alpha[0], alpha[1], k.inputs[0])
+        tr = N.new("ShaderNodeBsdfTransparent")
+        ms = N.new("ShaderNodeMixShader")
+        L.new(k.outputs[0], ms.inputs["Fac"])
+        L.new(tr.outputs[0], ms.inputs[1])
+        L.new(shader, ms.inputs[2])
+        shader = ms.outputs[0]
+    L.new(shader, out.inputs["Surface"])
     m.use_backface_culling = True
     for attr in ("use_backface_culling_shadow",):
         if hasattr(m, attr):
             setattr(m, attr, True)
     try:
-        m.surface_render_method = "DITHERED"
+        m.surface_render_method = "BLENDED" if see_through else "DITHERED"
     except (AttributeError, TypeError):
         pass
     return m
@@ -319,24 +335,62 @@ def _flat_material(name, rgb):
 # Baking, hull, apply
 
 
+def _realize_state(o):
+    """The AB_Instancer 'Realize' input of a library building (None when o has no instancer)."""
+    md = o.modifiers.get("AB_Instancer")
+    if md is None or md.node_group is None:
+        return None
+    ident = next((i.identifier for i in md.node_group.interface.items_tree if getattr(i, "name", "") == "Realize"),
+                 None)
+    if ident is None:
+        return None
+    props = getattr(md, "properties", None)
+    if props is not None and hasattr(props, "inputs"):
+        return bool(getattr(props.inputs, ident).value)
+    return bool(md.get(ident, False))
+
+
 def _bake(o, dg):
-    """A new object holding o's evaluated mesh (building instances realised), at o's transform."""
-    try:
-        from ascend_buildings import blend as ABblend
-        ABblend.set_realize(o, True)
-    except Exception:
-        pass
+    """A new object holding o's evaluated mesh (building instances realised), at o's transform. The instancer's
+    Realize switch is put back afterwards. o itself is hidden (render and viewport) so the toon copy replaces it;
+    its previous hide state is stored on the copy (tp_src, tp_src_hide_render, tp_src_hide_viewport), see restore()."""
+    ABblend, was = None, _realize_state(o)
+    if was is not None and not was:
+        try:
+            from ascend_buildings import blend as ABblend
+            ABblend.set_realize(o, True)
+        except Exception:
+            ABblend = None
     dg.update()
     ev = o.evaluated_get(dg)
     me = bpy.data.meshes.new_from_object(ev, preserve_all_data_layers=True, depsgraph=dg)
+    if ABblend is not None:
+        ABblend.set_realize(o, False)
     me.name = PREFIX + o.name
     t = bpy.data.objects.new(PREFIX + o.name, me)
     t.matrix_world = o.matrix_world.copy()
     for c in o.users_collection:
         c.objects.link(t)
+    t["tp_src"] = o.name
+    t["tp_src_hide_render"] = bool(o.hide_render)
+    t["tp_src_hide_viewport"] = bool(o.hide_viewport)
     o.hide_render = True
     o.hide_viewport = True
     return t
+
+
+def restore(made):
+    """Undoes apply() for a live session: unhides the originals and deletes the toon copies and hulls in made."""
+    for t in made:
+        src = bpy.data.objects.get(t.get("tp_src", "")) if "tp_src_hide_render" in t else None
+        if src is not None:
+            src.hide_render = bool(t["tp_src_hide_render"])
+            src.hide_viewport = bool(t["tp_src_hide_viewport"])
+    for t in made:
+        me = t.data
+        bpy.data.objects.remove(t, do_unlink=True)
+        if me is not None and me.users == 0:
+            bpy.data.meshes.remove(me)
 
 
 def _hull(src, thickness, cache):
@@ -385,7 +439,8 @@ def outline_thickness(objs, kind="creature", tile=320, margin=MARGIN):
 
 def apply(objs, kind="creature", tile=320, frame=None):
     """Bakes objs to toon copies with inverted-hull outlines. frame: the objects the camera will frame (defaults to
-    objs) so the outline is sized in pixels. Returns the new objects (copies + hulls); the originals are hidden."""
+    objs) so the outline is sized in pixels. Returns the new objects (copies + hulls); the originals are hidden
+    (pass the returned list to restore() to undo in a live session)."""
     dg = bpy.context.evaluated_depsgraph_get()
     t = outline_thickness(frame or objs, kind, tile)
     toon_cache, ol_cache, made = {}, {}, []
