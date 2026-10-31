@@ -42,11 +42,12 @@ namespace Ascend.Game
 
         void OnEnable() => _status.Enable();
         void OnDisable() => _status.Disable();
-        void OnDestroy() { _status.Dispose(); MonsterDummy.WorldLabels = true; }
+        void OnDestroy() { _status.Dispose(); MonsterDummy.WorldLabels = true; FaceCamera.NpcNameLabels = true; }
 
         void Start()
         {
             MonsterDummy.WorldLabels = false; // the HUD draws nameplates instead
+            FaceCamera.NpcNameLabels = false;  // for NPCs too, so no name is drawn twice
             if (player == null) player = FindFirstObjectByType<PlayerCombat>();
             Bind();
         }
@@ -372,7 +373,15 @@ namespace Ascend.Game
         {
             var cam = Camera.main;
             if (cam == null) return;
-            var placed = new List<Rect>();
+            // Start with the HUD panels taken, so a nameplate never covers the vitals, the minimap and quest tracker,
+            // or the skill bar (reports/baseline_2026-10-25.md, bug 4). Keep these in step with the layout in OnGUI.
+            float sw = Screen.width, sh = Screen.height, barW = 6 * 58f + 5 * 6f;
+            var placed = new List<Rect>
+            {
+                new Rect(0, 0, 440, 140),                         // top-left: level badge, HP/MP/SP, rank, clock
+                new Rect(sw - 345, 0, 345, 420),                  // top-right: Style Rank, minimap, region, quest, party
+                new Rect((sw - barW) / 2f - 10, sh - 130, barW + 20, 130), // bottom-centre: Combo Budget and skill bar
+            };
             var me = player.transform.position;
             var monsters = FindObjectsByType<MonsterDummy>(FindObjectsSortMode.None)
                 .Where(m => m != null && !m.IsDead).OrderBy(m => (m.transform.position - me).sqrMagnitude).Take(10);
@@ -393,11 +402,13 @@ namespace Ascend.Game
             {
                 if (g == null || g.GetComponent<QuestBoard>() != null) continue;
                 if (!OnScreen(cam, g.transform.position + Vector3.up * 1.3f, 16f, out var p)) continue;
-                var rect = new Rect(p.x - 90, p.y - 22, 180, 20);
+                string role = g.Role;
+                var rect = new Rect(p.x - 90, p.y - 22, 180, string.IsNullOrEmpty(role) ? 20 : 34);
                 if (placed.Any(o => o.Overlaps(rect))) continue;
                 placed.Add(rect);
                 var s = new GUIStyle(_small) { normal = { textColor = new Color(0.7f, 0.85f, 1f) } };
-                Shadowed(rect, g.DisplayName, s, TextAnchor.MiddleCenter);
+                Shadowed(new Rect(rect.x, rect.y, rect.width, 20), g.DisplayName, s, TextAnchor.MiddleCenter);
+                if (!string.IsNullOrEmpty(role)) Shadowed(new Rect(rect.x, rect.y + 18, rect.width, 16), role, _tiny, TextAnchor.MiddleCenter);
             }
         }
 
