@@ -2,6 +2,13 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-10-31
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Ring 0 baseline fixes | Fixes four bugs from reports/baseline_2026-10-25.md. (1) A new game no longer starts at 1/162 HP: PlayerDefense fills HP on the first real stats, whatever the Awake order. (2) World labels get a FaceCamera billboard so they never read mirrored. (3) NPC world name labels hide while the HUD draws nameplates, and the nameplate gains the NPC's role. (4) Nameplates keep clear of the HUD panels. (7) Farmer Odo moves out of the test ramp. Unity was not available in this session, so the scene must be rebuilt (BuildBatch) and the PlayMode tests rerun locally | 177 + (not run) |
+| Review fixes | Code review of the baseline fixes: an NPC world label hides only while its own HUD nameplate is drawn (far NPCs keep their names); nameplates keep clear of the whole party panel; labels turn after the camera moves (no jitter); a loaded game refills HP after gear is equipped | 177 + (not run) |
+
 ## 2026-10-25
 
 | Commit | What changed | Tests |

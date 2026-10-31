@@ -16,7 +16,7 @@ namespace Ascend.EditorTools
             // Brindlewick side of the field (Ring 0).
             Npc(root, "npc_mina_feathersby", new Vector3(3.5f, 0, -3f), new Color(0.85f, 0.55f, 0.75f));   // guild receptionist
             Npc(root, "npc_rodrick_hale", new Vector3(8f, 0, -5.5f), new Color(0.45f, 0.35f, 0.6f));    // the F→E trial (Goblin Chief of Hollowpine)
-            Npc(root, "npc_farmer_odo", new Vector3(6.5f, 0, 3.5f), new Color(0.75f, 0.6f, 0.35f));        // by the slime patch
+            Npc(root, "npc_farmer_odo", new Vector3(4.5f, 0, 3.5f), new Color(0.75f, 0.6f, 0.35f));        // by the slime patch, clear of the test ramp
             Npc(root, "npc_marta_gruel", new Vector3(-6.5f, 0, -1.5f), new Color(0.85f, 0.4f, 0.3f));        // the Sleeping Griffon's keeper
             Npc(root, "npc_torvald_stonebeard", new Vector3(-4f, 0, -5f), new Color(0.5f, 0.4f, 0.35f));   // smithy stall
             Npc(root, "npc_traveling_merchant_pell", new Vector3(5f, 0, 25f), new Color(0.9f, 0.6f, 0.2f)); // wagon at the Whisperwood edge
@@ -176,6 +176,7 @@ namespace Ascend.EditorTools
             var label = Label(parent, feet + Vector3.up * 2.05f, AscendData.Db.Npcs.TryGetValue(npcId, out var n) ? $"{n.Name}\n<size=36>{n.Role}</size>" : npcId, Color.white, 0.03f);
             label.GetComponent<TextMesh>().richText = true;
             label.name = "Label_" + npcId;
+            label.GetComponent<FaceCamera>().NpcId = npcId; // hidden while the HUD draws its nameplate
             var marker = Label(parent, feet + Vector3.up * 2.65f, "", new Color(1f, 0.85f, 0.2f), 0.09f);
             marker.name = "Marker_" + npcId;
             giver.SetMarker(marker.GetComponent<TextMesh>());
@@ -191,6 +192,7 @@ namespace Ascend.EditorTools
             go.GetComponent<MeshRenderer>().sharedMaterial = tm.font.material;
             tm.characterSize = size; tm.fontSize = 48; tm.anchor = TextAnchor.LowerCenter; tm.alignment = TextAlignment.Center;
             tm.color = color; tm.text = text;
+            go.AddComponent<FaceCamera>(); // turn toward the camera at runtime so it never reads mirrored
             return go;
         }
 
