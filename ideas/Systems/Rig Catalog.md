@@ -11,8 +11,8 @@ The motion pipeline uses 25 reusable body plans for 680 species. A shared rig is
 - [[Systems/Rigs/stub_biped|stub_biped]] — 6 species
 - [[Systems/Rigs/small_biped|small_biped]] — 57 species
 - [[Systems/Rigs/medium_biped|medium_biped]] — 138 species
-- [[Systems/Rigs/large_biped|large_biped]] — 43 species
-- [[Systems/Rigs/giant_biped|giant_biped]] — 0 species
+- [[Systems/Rigs/large_biped|large_biped]] — 49 species
+- [[Systems/Rigs/giant_biped|giant_biped]] — 6 species
 - [[Systems/Rigs/golem|golem]] — 17 species
 - [[Systems/Rigs/quad_small|quad_small]] — 27 species
 - [[Systems/Rigs/quad_medium|quad_medium]] — 6 species
@@ -27,7 +27,7 @@ The motion pipeline uses 25 reusable body plans for 680 species. A shared rig is
 - [[Systems/Rigs/membrane_flyer|membrane_flyer]] — 4 species
 - [[Systems/Rigs/wyvern|wyvern]] — 12 species
 - [[Systems/Rigs/spirit_float|spirit_float]] — 44 species
-- [[Systems/Rigs/plant_rooted|plant_rooted]] — 19 species
+- [[Systems/Rigs/plant_rooted|plant_rooted]] — 7 species
 - [[Systems/Rigs/aquatic|aquatic]] — 14 species
 - [[Systems/Rigs/tentacled|tentacled]] — 7 species
 - [[Systems/Rigs/swarm|swarm]] — 8 species

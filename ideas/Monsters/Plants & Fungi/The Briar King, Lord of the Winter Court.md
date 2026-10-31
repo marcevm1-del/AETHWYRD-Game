@@ -26,7 +26,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 37096 · 953 · 686 · 686 · 686 · 100 |
 | XP · gold | 261258 · 2293 |
 | Ring | 7 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Everdusk\|Everdusk]] |
 | Tyrant | Yes |
 | Genre | Fairy-tale Forest |
@@ -36,11 +36,11 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 4 m high × 1.6 m long × 4.8 m wide; prefab scale 2.
-- **Physics:** 1478.4 kg, gravity ×1.05, poise 362, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.57 m/s, turn 90°/s, stopping distance 0.88 m.
-- **Attack count:** 5; **signature:** a crown of frozen thorns and a cloak of dead roses.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 4 m high × 1.2 m long × 1.68 m wide; prefab scale 1.143.
+- **Physics:** 1267.2 kg, gravity ×1.37, poise 327, knockback resistance 0.93, death style `heavy_fall_dust`.
+- **Navigation:** speed 5.88 m/s, turn 190°/s, stopping distance 1.2 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 

@@ -10,8 +10,8 @@ Hulking bipeds 2.5–5 m: wide shoulders, long arms (can knuckle-walk), heavy fo
 | Field | Value |
 |---|---|
 | Aliases | ogre, troll, minotaur, treant, giant_humanoid, hobgoblin_large |
-| Species using rig | 43 |
-| Families represented | Goblinoids, Orcs, Ogres & Giants, Minotaurs & Beastmen, Yokai-Inspired Spirits, Floor-born |
+| Species using rig | 49 |
+| Families represented | Goblinoids, Orcs, Ogres & Giants, Minotaurs & Beastmen, Plants & Fungi, Yokai-Inspired Spirits, Floor-born |
 | Bone count · budget | 35 · 55 |
 | Unity avatar · material | Humanoid · flesh |
 | Reference size · axis | 3.5 · height |
@@ -50,6 +50,8 @@ Hulking bipeds 2.5–5 m: wide shoulders, long arms (can knuckle-walk), heavy fo
 - [[Monsters/Minotaurs & Beastmen/Minotaur|Minotaur]] — anim_large_biped, 3.2 m high, rigId rig selection
 - [[Monsters/Minotaurs & Beastmen/Labyrinth Minotaur|Labyrinth Minotaur]] — anim_large_biped, 4 m high, rigId rig selection
 - [[Monsters/Minotaurs & Beastmen/Taurgrim, the Maze King|Taurgrim, the Maze King]] — anim_large_biped, 6 m high, rigId rig selection
+- [[Monsters/Plants & Fungi/Treant Sapling|Treant Sapling]] — anim_plant_walker, 2 m high, override rig selection
+- [[Monsters/Plants & Fungi/Spore Lord|Spore Lord]] — anim_plant_walker, 3 m high, override rig selection
 - [[Monsters/Yokai-Inspired Spirits/Oni|Oni]] — anim_large_biped, 3.5 m high, rigId rig selection
 - [[Monsters/Yokai-Inspired Spirits/Hunger Colossus|Hunger Colossus]] — anim_large_biped, 30 m high, rigId rig selection
 - [[Monsters/Floor-born/Floor Tyrant|Floor Tyrant]] — anim_large_biped, 8 m high, rigId rig selection
@@ -66,17 +68,21 @@ Hulking bipeds 2.5–5 m: wide shoulders, long arms (can knuckle-walk), heavy fo
 - [[Monsters/Minotaurs & Beastmen/Vesper-Touched Calf Minotaur|Vesper-Touched Calf Minotaur]] — anim_large_biped, 2 m high, rigId rig selection
 - [[Monsters/Minotaurs & Beastmen/Deep Minotaur|Deep Minotaur]] — anim_large_biped, 3.2 m high, rigId rig selection
 - [[Monsters/Minotaurs & Beastmen/Vesper-Touched Labyrinth Minotaur|Vesper-Touched Labyrinth Minotaur]] — anim_large_biped, 4 m high, rigId rig selection
+- [[Monsters/Plants & Fungi/Bog Treant Sapling|Bog Treant Sapling]] — anim_plant_walker, 2 m high, override (base species) rig selection
+- [[Monsters/Plants & Fungi/Bog Spore Lord|Bog Spore Lord]] — anim_plant_walker, 3 m high, override (base species) rig selection
 - [[Monsters/Yokai-Inspired Spirits/Vesper-Touched Oni|Vesper-Touched Oni]] — anim_large_biped, 3.5 m high, rigId rig selection
 - [[Monsters/Yokai-Inspired Spirits/Rain Hunger Colossus|Rain Hunger Colossus]] — anim_large_biped, 30 m high, rigId rig selection
 - [[Monsters/Floor-born/Greater Floor Tyrant|Greater Floor Tyrant]] — anim_large_biped, 12.8 m high, rigId rig selection
 - [[Monsters/Goblinoids/Ancient Goblin King|Ancient Goblin King]] — anim_large_biped, 4.2 m high, rigId rig selection
 - [[Monsters/Goblinoids/Blight Oni Warlord|Blight Oni Warlord]] — anim_large_biped, 4.5 m high, rigId rig selection
+- [[Monsters/Plants & Fungi/Mycelia, the Spore Lord|Mycelia, the Spore Lord]] — anim_plant_walker, 5 m high, override rig selection
 - [[Monsters/Orcs, Ogres & Giants/Skarn, the Fire Giant Warlord|Skarn, the Fire Giant Warlord]] — anim_large_biped, 9.5 m high, rigId rig selection
 - [[Monsters/Orcs, Ogres & Giants/Grakkus, the Orc Disaster|Grakkus, the Orc Disaster]] — anim_large_biped, 4.5 m high, rigId rig selection
 - [[Monsters/Yokai-Inspired Spirits/Kurogane, the Oni Warlord|Kurogane, the Oni Warlord]] — anim_large_biped, 4.5 m high, rigId rig selection
 - [[Monsters/Orcs, Ogres & Giants/Ymgrir, the Frost Sovereign|Ymgrir, the Frost Sovereign]] — anim_large_biped, 11 m high, rigId rig selection
 - [[Monsters/Yokai-Inspired Spirits/Wuxiang, the Hunger Colossus|Wuxiang, the Hunger Colossus]] — anim_large_biped, 30 m high, rigId rig selection
 - [[Monsters/Orcs, Ogres & Giants/Zahhar, King of the Divs|Zahhar, King of the Divs]] — anim_large_biped, 8 m high, rigId rig selection
+- [[Monsters/Plants & Fungi/The Briar King, Lord of the Winter Court|The Briar King, Lord of the Winter Court]] — anim_plant_walker, 4 m high, override rig selection
 - [[Monsters/Orcs, Ogres & Giants/Ukhu-Tal, Stone Giant of the First Making|Ukhu-Tal, Stone Giant of the First Making]] — anim_large_biped, 25 m high, rigId rig selection
 
 ## Production checks

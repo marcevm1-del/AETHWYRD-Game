@@ -37,8 +37,8 @@ Six-legged insects. Tripod gait (3 legs down at once), procedural leg IK on unev
 - [[Monsters/Insects & Arachnids/Queen Ant|Queen Ant]] — anim_hexapod, 1.16 m high, rigId rig selection
 - [[Monsters/Insects & Arachnids/Death Mantis|Death Mantis]] — anim_hexapod, 0.99 m high, rigId rig selection
 - [[Monsters/Killer Insects/Killer Ant|Killer Ant]] — anim_hexapod, 0.33 m high, rigId rig selection
-- [[Monsters/Killer Insects/Needle Wasp|Needle Wasp]] — anim_flyer_small, 0.1 m high, keyword rig selection
-- [[Monsters/Killer Insects/Hornet Lancer|Hornet Lancer]] — anim_flyer_small, 0.4 m high, keyword rig selection
+- [[Monsters/Killer Insects/Needle Wasp|Needle Wasp]] — anim_flyer_small, 0.1 m high, override rig selection
+- [[Monsters/Killer Insects/Hornet Lancer|Hornet Lancer]] — anim_flyer_small, 0.4 m high, override rig selection
 - [[Monsters/Killer Insects/Queen's Guard|Queen's Guard]] — anim_hexapod, 0.66 m high, rigId rig selection
 - [[Monsters/Killer Insects/Bone Weevil|Bone Weevil]] — anim_hexapod, 0.33 m high, rigId rig selection
 - [[Monsters/Aquatic/Giant Crab|Giant Crab]] — anim_hexapod, 0.33 m high, rigId rig selection
@@ -49,8 +49,8 @@ Six-legged insects. Tripod gait (3 legs down at once), procedural leg IK on unev
 - [[Monsters/Insects & Arachnids/Dune Queen Ant|Dune Queen Ant]] — anim_hexapod, 1.16 m high, rigId rig selection
 - [[Monsters/Insects & Arachnids/Gale Death Mantis|Gale Death Mantis]] — anim_hexapod, 0.99 m high, rigId rig selection
 - [[Monsters/Killer Insects/Thorn Killer Ant|Thorn Killer Ant]] — anim_hexapod, 0.33 m high, rigId rig selection
-- [[Monsters/Killer Insects/Cavern Needle Wasp|Cavern Needle Wasp]] — anim_flyer_small, 0.1 m high, keyword rig selection
-- [[Monsters/Killer Insects/Greater Hornet Lancer|Greater Hornet Lancer]] — anim_flyer_small, 0.63 m high, keyword rig selection
+- [[Monsters/Killer Insects/Cavern Needle Wasp|Cavern Needle Wasp]] — anim_flyer_small, 0.1 m high, override (base species) rig selection
+- [[Monsters/Killer Insects/Greater Hornet Lancer|Greater Hornet Lancer]] — anim_flyer_small, 0.63 m high, override (base species) rig selection
 - [[Monsters/Killer Insects/Ancient Queen's Guard|Ancient Queen's Guard]] — anim_hexapod, 0.99 m high, rigId rig selection
 - [[Monsters/Killer Insects/Venom Bone Weevil|Venom Bone Weevil]] — anim_hexapod, 0.33 m high, rigId rig selection
 - [[Monsters/Aquatic/Reef Crab|Reef Crab]] — anim_hexapod, 0.33 m high, rigId rig selection
@@ -61,8 +61,8 @@ Six-legged insects. Tripod gait (3 legs down at once), procedural leg IK on unev
 - [[Monsters/Insects & Arachnids/Elder Queen Ant|Elder Queen Ant]] — anim_hexapod, 1.85 m high, rigId rig selection
 - [[Monsters/Insects & Arachnids/Ancient Death Mantis|Ancient Death Mantis]] — anim_hexapod, 1.49 m high, rigId rig selection
 - [[Monsters/Killer Insects/Radiant Killer Ant|Radiant Killer Ant]] — anim_hexapod, 0.33 m high, rigId rig selection
-- [[Monsters/Killer Insects/Greater Needle Wasp|Greater Needle Wasp]] — anim_flyer_small, 0.17 m high, keyword rig selection
-- [[Monsters/Killer Insects/Zephyr Hornet Lancer|Zephyr Hornet Lancer]] — anim_flyer_small, 0.4 m high, keyword rig selection
+- [[Monsters/Killer Insects/Greater Needle Wasp|Greater Needle Wasp]] — anim_flyer_small, 0.17 m high, override (base species) rig selection
+- [[Monsters/Killer Insects/Zephyr Hornet Lancer|Zephyr Hornet Lancer]] — anim_flyer_small, 0.4 m high, override (base species) rig selection
 - [[Monsters/Killer Insects/Deep Queen's Guard|Deep Queen's Guard]] — anim_hexapod, 0.66 m high, rigId rig selection
 - [[Monsters/Killer Insects/Gale Bone Weevil|Gale Bone Weevil]] — anim_hexapod, 0.33 m high, rigId rig selection
 

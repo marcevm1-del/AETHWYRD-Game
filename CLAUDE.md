@@ -30,6 +30,7 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
   - `-quit -executeMethod Ascend.EditorTools.Ring0SceneBuilder.BuildBatch` (scene)
   - `-quit -executeMethod Ascend.EditorTools.BuildPlayer.BuildRing0` (player)
   - `-runTests -testPlatform PlayMode -testResults <xml>` (tests)
+- **Update this PC and check everything:** double-click `Tools/pc/update_and_verify.cmd` (pulls `main`, runs `npm run build`, rebuilds the scene, runs PlayMode tests, builds the player, takes screenshots; logs in `Game/Logs/verify_<time>/`).
 - **In-game screenshot:** `Game/Builds/Ring0/ProjectAscend.exe -screen-width 1600 -screen-height 900 -screen-fullscreen 0 -ascendShot <png> [-ascendShotAt x,z] [-ascendShotYaw deg]`
 - **Blender 5.2:** `E:/SteamLibrary/steamapps/common/Blender/blender.exe -b --factory-startup -P <script>`
   - Buildings: `Tools/blender/build_building_library.py` (docs: `13_Production/building_system.md`).

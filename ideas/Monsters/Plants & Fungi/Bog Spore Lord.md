@@ -27,7 +27,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 10495 · 443 · 319 · 319 · 319 · 100 |
 | XP · gold | 3743 · 769 |
 | Ring | 3 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Xochitl Mire\|Xochitl Mire]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -36,10 +36,10 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 3 m high × 1.2 m long × 3.6 m wide; prefab scale 1.5.
-- **Physics:** 567 kg, gravity ×1, poise 149, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.58 m/s, turn 104°/s, stopping distance 0.76 m.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override (base species)); animation set `anim_plant_walker`.
+- **Dimensions:** 3 m high × 0.9 m long × 1.26 m wide; prefab scale 0.857.
+- **Physics:** 486 kg, gravity ×1.3, poise 188, knockback resistance 0.84, death style `heavy_fall_dust`.
+- **Navigation:** speed 5.92 m/s, turn 219°/s, stopping distance 1 m.
 - **Attack count:** 5; **signature:** a mushroom crown and a cloak of mycelium.
 
 ## Attacks and responses

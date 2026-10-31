@@ -36,7 +36,7 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override (base species)); animation set `anim_flyer_small`.
 - **Dimensions:** 0.17 m high × 0.5 m long × 0.25 m wide; prefab scale 0.625.
 - **Physics:** 5.5 kg, gravity ×1.4, poise 17, knockback resistance 0.31, death style `flip_legs_curl`.
 - **Navigation:** speed 2.72 m/s, turn 707°/s, stopping distance 0.5 m.
