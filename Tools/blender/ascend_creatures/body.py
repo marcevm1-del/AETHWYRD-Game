@@ -30,6 +30,7 @@ class Body:
         self.eye_spread = 35.0           # degrees either side of the face direction
         self.eye_up = 12.0               # degrees above it
         self.eye_size = 0.32             # eye radius as a fraction of head_r
+        self.eye_out = 0.86              # eye centre distance from the head centre, as a fraction of head_r
         self.eye_count = 2
         self.mouth = None                # point on the face for teeth / beaks
         self.snout = None
@@ -96,7 +97,7 @@ class Body:
             d = f.copy()
             d.rotate(_axis_rot(V(0, 0, 1), math.radians(a)))
             d = (d + V(0, 0, math.tan(math.radians(up)))).normalized()
-            p = self.head + d * self.head_r * 0.86
+            p = self.head + d * self.head_r * self.eye_out
             out.append((p, d, r))
         return out
 
@@ -231,7 +232,7 @@ def smooth(t, a, b):
 def paint(verts, normals, curv, look, body):
     """Per-vertex colour (linear RGB) and glow mask from the look's palette and pattern."""
     main, dark, accent = (np.array(c) for c in (look.main, look.dark, look.accent))
-    belly_c = np.clip(main * 0.55 + accent * 0.45 + 0.04, 0, 1) if look.belly else main
+    belly_c = np.clip(main * 0.7 + accent * 0.15 + 0.12, 0, 1) if look.belly else main  # lighter body tone, a touch of accent
     nz = normals[:, 2]
     z = verts[:, 2]
     zmin, zmax = z.min(), z.max()

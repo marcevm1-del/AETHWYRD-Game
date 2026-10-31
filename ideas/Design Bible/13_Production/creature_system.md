@@ -24,6 +24,18 @@
   - **Vesper-Touched:** red glowing cracks and red crystal.
   - **Elemental:** element growths such as embers, ice crystals, stone, moss, spores, fins and wisps.
 
+## Design review fixes (2026-10-31)
+
+From `reports/design_review_2026-10-25.md`, checked with before/after renders:
+- **Faces (C1):** a mask only where the species' look text or signature names one. Every mask has a style: carved bone, painted wood with stripes, a horned demon face or a metal visor. Each also has a brow ridge and glowing eye points, never a plain oval. Quadruped eyes are bigger (0.30, small 0.36), set forward (30/34°) and sit on the real skull surface (`eye_out`). Werewolf eyes sit above the muzzle.
+- **Colour:** the belly is a lighter body tone with only 15% accent (it was 45%, which turned werewolf chests purple). Species palettes come from `Tools/monster_gen/palettes.js`.
+- **Dragons (C3):** a deep chest raised at the front and a long rising S-neck. Two main swept horns (2.1× head radius) under any crown, and a wider wingspan.
+- **Birds and plants (C6):**
+  - **Birds:** a tapered two-tone beak (hooked for raptors) and wings folded along the flanks as overlapping feathers.
+  - **Spread feather wings:** one attached fan.
+  - **Plants:** mushrooms get a spotted cap with gills, trees a leafy canopy, flower monsters petals, and the rest a leaf crown.
+- **Slime face decal (C4):** now a small round mouth.
+
 ## Using it in Blender
 
 1. **Install.** Zip `Tools/blender/ascend_creatures` and install it like the buildings add-on. `ascend_buildings` must be installed too, because the creatures reuse its mesh helpers.
@@ -56,4 +68,5 @@ Add `-- --families Slimes,Beasts` or `-- --ids mon_goblin` to build a subset.
 - **Rigs and poses.** These are static T- and A-poses; `Data/Monsters/rigs.json` and `Tools/blender/build_rig.py` would be the next step.
 - **Unity.** These are high-poly sources, not game meshes. Going into Unity needs a baked low-poly with normal maps, a rig and LODs.
 - **Description detail.** Some recipe parts don't fit their animal (the data gives the Forest Wolf antlers). The generator follows the data; fix it in `species.json`.
+- **Still open from the review:** biped limb taper, hands and a breaking shape per family (C5); mushroom faces sit under their caps.
 - **Coverage.** The rarer body plans (aberrations, swarms, cephalopods, plants) are simpler than the quadrupeds and bipeds. The giants (Behemoth Ascendant, Hive Mother) are modelled at their true size, up to 2 km.

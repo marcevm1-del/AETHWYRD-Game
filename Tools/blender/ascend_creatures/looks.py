@@ -80,8 +80,14 @@ class Look:
         self.menace = ("soft" if menace.startswith("circle") else "spiky" if menace.startswith("triangle") else
                        "elongated" if menace.startswith("elongated") else "broken" if menace.startswith("broken") else "animal")
         self.parts = list(o.get("parts") or rec.get("parts", []))
+        # A mask only where the description names one (design review C1): a stray plain mask hides the face and
+        # reads as placeholder (or as another studio's character).
+        if "mask" not in species.get("look", "").lower() and "mask" not in species.get("signature", "").lower():
+            self.parts = [p for p in self.parts if p not in ("mask", "mask_face", "human_mask")]
         self.base = o.get("base") or rec.get("baseMesh", "medium_biped_base")
         look_text = species.get("look", "").lower()
+        self.look_text = look_text
+        self.name = species.get("name", "")
         self.eye_style = ("dot" if "dot eye" in look_text or self.gel else "slit" if "slit" in look_text else
                           "glow" if any(w in look_text for w in ("burning", "glowing", "glow", "ember")) else
                           "beady" if "beady" in look_text or "wary" in look_text else "anime")
