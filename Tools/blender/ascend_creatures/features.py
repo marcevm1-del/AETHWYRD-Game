@@ -15,6 +15,7 @@ from mathutils import Matrix, Vector
 from ascend_buildings.geo import Geo, trs
 
 from .body import V
+from .plans import is_mushroom
 
 # ================================================================================================================
 # helpers
@@ -187,7 +188,8 @@ def organic(b, look):
         b.chain([b.mouth, b.mouth + f * hr * 0.4 + Vector((0, 0, -hr * 0.3)), b.mouth + f * hr * 0.6 + Vector((0, 0, -hr * 0.6))], [hr * 0.14, hr * 0.08])
     if "humanoid_torso" in parts and b.kind not in ("taur", "naga", "biped"):
         b.chain([b.neck, b.neck + Vector((0, -0.05, 0.25))], [tr * 0.6, tr * 0.5])
-    if "cap" in parts:  # mushroom folk: the head becomes a cap
+    if "cap" in parts and not (b.kind == "plant" and is_mushroom(look)):  # mushroom folk: the head becomes a cap
+        # (plant mushrooms get their cap from plant_crown instead: this blob swallowed the face, see creature_system.md)
         b.ellip(b.head + Vector((0, 0, hr * 0.55)), (hr * 1.9, hr * 1.9, hr * 0.9))
 
 
@@ -213,6 +215,23 @@ class Ctx:
         return [(Vector(self.v[i]), Vector(self.n[i])) for i in pick]
 
 
+def surface_hit(c, origin, d, width):
+    """The outermost tessellated body point within `width` of the ray origin + t*d (t > 0), or None. Used to sit
+    faces on the real skull surface where metaballs swell past head_r."""
+    v = np.asarray(c.v)
+    if not len(v):
+        return None
+    o, dd = np.array(origin[:]), np.array(Vector(d).normalized()[:])
+    rel = v - o
+    t = rel @ dd
+    perp = np.linalg.norm(rel - np.outer(t, dd), axis=1)
+    ok = (t > 0) & (perp < width)
+    if not ok.any():
+        return None
+    i = np.flatnonzero(ok)[np.argmax(t[ok])]
+    return Vector(o + dd * t[i])
+
+
 def eyes(c):
     b, look, g = c.b, c.look, c.g
     if not b.eye_count:
@@ -227,6 +246,8 @@ def eyes(c):
         pts += b.eye_points()
     b.head = main_head
     for p, d, r in pts:
+        if getattr(b, "eye_snap", False):  # on the real surface (the head ball blends into the stalk and swells)
+            p = surface_hit(c, b.head, d, r * 0.35) or p
         p = p - d * r * 0.2  # sit the eye into its socket
         m = aim(p, d)
         if style == "dot":  # slimes: glossy black ovals with a sparkle
@@ -585,7 +606,11 @@ def growths(c, kind):
     mat = {"stone_growths": "stone", "crystal_growths": "crystal", "moss_cover": "moss", "thorns": "wood",
            "spore_pods": "spore", "glowing_spots": "glow", "glowing_knots": "glow", "scar_decals": "dark"}[kind]
     n = {"moss_cover": 26, "scar_decals": 6, "glowing_spots": 18}.get(kind, 10)
-    for p, nn in c.surface(lambda v, n: n[2] > -0.1, n):
+    pred = lambda v, n: n[2] > -0.1  # noqa: E731
+    if getattr(b, "eye_snap", False):  # keep the snapped face (mushrooms) clear of moss and pods
+        fc = b.head + b.face.normalized() * b.head_r * 0.8
+        pred = lambda v, n: n[2] > -0.1 and (Vector(v) - fc).length > b.head_r * 1.1  # noqa: E731
+    for p, nn in c.surface(pred, n):
         s = b.torso_r * rng.uniform(0.12, 0.3)
         if kind == "crystal_growths":
             for k in range(3):
@@ -777,6 +802,19 @@ def _profile_z(prof, r):
     return prof[-1][1]
 
 
+def mushroom_mouth(c):
+    """A small open smile on the skull surface for the cute mushrooms; the menacing ones already get teeth in mouth()."""
+    b, g = c.b, c.g
+    if c.look.menace not in ("soft", "animal") or b.mouth is None:
+        return
+    hr = b.head_r
+    d = (Vector(b.mouth) - b.head).normalized()
+    p = surface_hit(c, b.head, d, hr * 0.12) or Vector(b.mouth)
+    m = aim(p - d * hr * 0.03, d)
+    g.sphere(hr * 0.24, "mouth", m @ trs((0, 0, 0), (0, 0, 0), (1.3, 0.7, 0.4)), segs=14, rings=8)
+    g.sphere(hr * 0.12, "tongue", m @ trs((0, -hr * 0.07, hr * 0.05), (0, 0, 0), (1.3, 0.6, 0.4)), segs=10, rings=6)
+
+
 def plant_crown(c):
     """Plants wear a crown so they read as plants, not cactus stumps (design review C6): mushrooms a spotted cap,
     flower monsters a ring of petals, everything else a fan of leaves."""
@@ -784,11 +822,15 @@ def plant_crown(c):
     hr = b.head_r
     top = b.head + Vector((0, 0, hr * 0.75))
     name = look.name.lower()  # the name only: generic body wording ("mushroom-capped walking body") misleads
-    if any(w in name for w in ("mushroom", "puffcap", "fungus", "spore", "myc", "toadstool")):
-        R, H = hr * 2.6, hr * 1.4
+    if is_mushroom(look):
+        # The rim sits above the brow (head + 0.95 hr) and reaches 2.3 hr, so from the preview camera (pitch 14) the
+        # line of sight from the eyes passes under it: the face reads, the cap stays big and spotted.
+        R, H = hr * 2.3, hr * 1.35
+        top = b.head + Vector((0, 0, hr * 1.15))
         prof = [(R * 0.98, 0), (R, H * 0.12), (R * 0.85, H * 0.55), (R * 0.5, H * 0.9), (0, H)]
         g.lathe(prof, "main", T3(top.x, top.y, top.z - hr * 0.2), segs=28)
-        g.lathe([(R * 0.98, 0), (hr * 0.4, -H * 0.1), (0, -H * 0.05)], "cloth_light", T3(top.x, top.y, top.z - hr * 0.2), segs=28)  # gills
+        g.lathe([(R * 0.98, 0), (hr * 0.45, -hr * 0.14), (0, -hr * 0.12)], "cloth_light", T3(top.x, top.y, top.z - hr * 0.2), segs=28)  # gills
+        mushroom_mouth(c)
         rng = b.rng
         for k in range(9):  # pale spots on the cap
             a = 2 * math.pi * k / 9 + rng.uniform(-0.2, 0.2)
