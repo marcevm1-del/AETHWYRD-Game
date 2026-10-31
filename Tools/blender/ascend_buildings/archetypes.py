@@ -856,6 +856,8 @@ def watchtower_full(c, p):
 
 
 def gatehouse(c, p):
+    if c.s.has("banners"):
+        c.notes.append("own_banners")  # the gate hangs its own banner: no facade_banners on the towers under it
     span = p.get("width", 4.5)
     tw = 4.2
     floors = p.get("floors", 3)

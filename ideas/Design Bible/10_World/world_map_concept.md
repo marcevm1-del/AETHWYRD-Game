@@ -43,7 +43,19 @@ Brindlewick (F, built) sits in western Whisperwood. Millbrook is east on the str
 
 The in-game Ring 0 scene (Whisperwood field north of Brindlewick, North Gate) is a local close-up and doesn't contradict this. It is the patch of wood around the town.
 
-## 5. Open questions
+## 5. Physical geography
+
+The atlas's relief is turned into heights, rivers, lakes, ranges, passes and climate belts by `Tools/atlas/build_physical_map.js`. The output is `Data/World/physical_map.json` and the image `10_World/maps/physical_map.png`. The details are in [[physical_geography]].
+
+In short:
+- a northern wall of mountains (Iron Hold, Cinderhole, the Dragon Spine, Frostveil) is crossed by the Karak Dûn and Ashen Mines passes;
+- a north-eastern massif covers Hoshizora, Haneul, Gearholm and Heavenreach;
+- a 141 km trunk river runs from Sylvaran through Aldmere, Velmark and Lirian to the Goldmere Coast, and the River and grain corridor follows it;
+- all five corridors above are passable under 2,000 m.
+
+It also lists where the region data disagrees with the relief: Lirian and Stormreach are landlocked, and Vharlen and the Quaking Lands are mostly low.
+
+## 6. Open questions
 
 - Where the sixth corridor goes.
 - Hollowpine: world.md lists the Hollowpine Highlands as an Aldmere sub-zone, while the atlas makes Grukk the "goblin chief of Hollowpine" in Whisperwood. The inset puts the highlands on the Whisperwood–Aldmere border; please confirm.
