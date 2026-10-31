@@ -14,7 +14,9 @@ def _j(b, x, amt=0.08):
 
 
 def leg(b, hip, knee, foot, r0, r1, foot_size=None):
-    b.chain([hip, knee, foot], [r0, (r0 + r1) / 2, r1])
+    # Tapered, with a thigh swell a third of the way down (design review C5: limbs were tubes of one thickness).
+    b.chain([hip, knee, foot], [r0, r0 * 0.38 + r1 * 0.62, r1])
+    b.ball(V(hip).lerp(V(knee), 0.35), r0 * 1.08)
     if foot_size:
         b.ellip(V(foot) + V(0, -foot_size[1] * 0.45, -foot_size[2] * 0.3), foot_size)
     b.hips.append(V(hip))
@@ -22,8 +24,13 @@ def leg(b, hip, knee, foot, r0, r1, foot_size=None):
 
 
 def arm(b, sh, el, hand, r0, r1, fist):
-    b.chain([sh, el, hand], [r0, (r0 + r1) / 2, r1])
-    b.ball(hand, fist)
+    # Tapered with an upper-arm swell, and a mitten hand with a thumb instead of a ball (design review C5).
+    b.chain([sh, el, hand], [r0, r0 * 0.38 + r1 * 0.62, r1])
+    b.ball(V(sh).lerp(V(el), 0.4), r0 * 1.08)
+    d = (V(hand) - V(el)).normalized()
+    b.ball(hand, fist * 0.85)
+    b.ball(V(hand) + d * fist * 0.75, fist * 0.72)
+    b.ball(V(hand) + d * fist * 0.15 + V(0, -fist * 0.7, 0), fist * 0.38)  # thumb, forward
     b.shoulders.append(V(sh))
     b.hands.append(V(hand))
 
@@ -70,10 +77,20 @@ def biped(b, look, build="medium"):
     else:  # human-sized
         hr = _j(b, 0.085) * hm
         b.head, b.head_r = V(0, -0.01 - hunch, 0.905 - hunch * 0.5), hr
-        b.ellip((0, -hunch * 0.4, 0.67), (0.13 * bk, 0.09 * bk, 0.12))
-        b.ellip((0, 0, 0.53), (0.1 * bk, 0.075 * bk, 0.08))
-        b.ellip((0, 0.005, 0.45), (0.115 * bk, 0.085 * bk, 0.07))
-        if P["thin"]:  # skeletons and scarecrows: a ribcage of hoops over a thin spine
+        bony = P["thin"] and any(w in look.name.lower() for w in ("skelet", "bone", "lich", "ossu"))
+        if bony:  # spine, collarbones and a small pelvis; the ribs are hard parts
+            b.chain([(0, 0.02, 0.46), (0, 0.03, 0.6), (0, 0.0, 0.77)], [0.022, 0.02, 0.02])
+            b.chain([(-0.16 * bk, 0, 0.75), (0, -0.01, 0.77), (0.16 * bk, 0, 0.75)], 0.016)
+        else:
+            b.ellip((0, -hunch * 0.4, 0.67), (0.13 * bk, 0.09 * bk, 0.12))
+        b.ellip((0, 0, 0.53), (0.1 * bk, 0.075 * bk, 0.08)) if not bony else b.ball((0, 0.01, 0.47), 0.05)
+        if not bony:
+            b.ellip((0, 0.005, 0.45), (0.115 * bk, 0.085 * bk, 0.07))
+        if P["thin"] and any(w in look.name.lower() for w in ("skelet", "bone", "lich", "ossu")):
+            # Skeletons: an open ribcage of bone bars (features.ribcage) over a thin spine, not hoops melted into a
+            # solid torso, so the background shows through (design review C5).
+            b.ribcage = (V(0, 0.0, 0.58), V(0, 0.0, 0.76), 0.11 * bk)
+        elif P["thin"]:  # scarecrows and living armour: a ribcage of hoops over a thin spine
             for k in range(4):
                 b.ellip((0, -0.01, 0.6 + k * 0.045), (0.11 * bk, 0.075, 0.016))
         b.ellip(b.head, (hr, hr * 1.05, hr * 1.08))
@@ -88,7 +105,7 @@ def biped(b, look, build="medium"):
         hr = b.head_r
         b.snout = b.head + V(0, -hr * (0.75 + 0.45 * P["snout"]), -hr * 0.3)
         b.ellip(b.snout, (hr * 0.5, hr * (0.4 + 0.45 * P["snout"]), hr * 0.45))
-        b.eye_spread, b.eye_up = 36, 20
+        b.eye_spread, b.eye_up = 36, 12  # above the muzzle, not on the forehead (design review C1.3; was 20)
     b.spine = [b.neck + V(0, b.torso_r * 0.7, 0), V(0, b.torso_r * 0.75, b.neck.z * 0.65), V(0, b.torso_r * 0.7, b.hips[0].z + 0.02)]
     b.tail_root, b.tail_dir = V(0, b.torso_r * 0.7, b.hips[0].z), V(0, 1, -0.3).normalized()
     b.wing_root = V(0, b.torso_r * 0.8, b.neck.z - 0.08)
@@ -174,7 +191,10 @@ def quad(b, look, build="large"):
             leg(b, (s * hx, hy, zc - br * 0.3), (s * (hx + splay), hy + 0.06 * legf, lg * 0.5), (s * (hx + splay * 1.3), hy + 0.01, 0.035),
                 r0 * 1.12, r1, (r1 * 1.25, r1 * 1.7, r1 * 0.85))
     b.torso_r, b.neck = br, neck0 + V(0, -nl * 0.4, nl * 0.4)
-    b.eye_size, b.eye_spread, b.eye_up = (0.3 if small else 0.24), (46 if small else 40), (15 if not low else 30)
+    # Bigger, forward-set eyes so they read from the 3/4 camera (design review C1.2; was 0.24/0.30, 40/46 deg, 15 deg up).
+    # The metaball skull swells past head_r where the neck and muzzle join, so the eyes sit further out to stay on the surface.
+    b.eye_size, b.eye_spread, b.eye_up = (0.36 if small else 0.30), (34 if small else 30), (12 if not low else 20)
+    b.eye_out = 1.0
     b.spine = [neck0 + V(0, 0, br * 0.5), V(0, yc, zc + br * 0.9), V(0, (yc + yh) / 2, zc + br * 0.85), V(0, yh, zc + br * 0.9)]
     b.tail_root = V(0, yh + br * 0.8, zc + br * 0.25)
     b.face = V(0, -1, -0.05).normalized()
@@ -346,18 +366,18 @@ def dragon(b, look, wyvern=False):
         b.ball((0, -0.16, 0.52), 0.14)
         for s in (-1, 1):
             leg(b, (s * 0.11, 0.1, 0.4), (s * 0.15, -0.02, 0.24), (s * 0.13, 0.04, 0.04), 0.1, 0.045, (0.06, 0.1, 0.035))
-        neck = [(0, -0.22, 0.58), (0, -0.36, 0.7), (0, -0.5, 0.74)]
+        neck = [(0, -0.22, 0.58), (0, -0.34, 0.72), (0, -0.4, 0.86), (0, -0.52, 0.92)]
         z0 = 0.46
     else:
-        b.ball((0, -0.17, 0.38), 0.16)
-        b.ellip((0, 0.04, 0.38), (0.15, 0.25, 0.14))
-        b.ball((0, 0.24, 0.4), 0.14)
+        b.ball((0, -0.17, 0.43), 0.18)  # deep chest, front raised so the back slopes down to the hips
+        b.ellip((0, 0.04, 0.4), (0.15, 0.25, 0.15), rot=(-6, 0, 0))
+        b.ball((0, 0.24, 0.38), 0.14)
         for s in (-1, 1):
             leg(b, (s * 0.1, -0.2, 0.33), (s * 0.15, -0.24, 0.16), (s * 0.14, -0.27, 0.035), 0.08, 0.045, (0.06, 0.08, 0.035))
             leg(b, (s * 0.11, 0.26, 0.36), (s * 0.15, 0.34, 0.19), (s * 0.14, 0.28, 0.035), 0.095, 0.045, (0.06, 0.08, 0.035))
-        neck = [(0, -0.28, 0.45), (0, -0.42, 0.56), (0, -0.56, 0.6)]
+        neck = [(0, -0.28, 0.5), (0, -0.4, 0.64), (0, -0.46, 0.8), (0, -0.58, 0.9)]  # a long S-curve, >= 1.2x head-to-shoulder
         z0 = 0.4
-    b.chain(neck, [0.11, 0.07])
+    b.chain(neck, [0.115, 0.065])
     hr = 0.1
     b.head, b.head_r = V(neck[-1]) + V(0, -0.07, 0.03), hr
     b.ellip(b.head, (hr * 0.95, hr * 1.15, hr * 0.85))
@@ -373,7 +393,7 @@ def dragon(b, look, wyvern=False):
                V(0.12, 0.74, z0 - 0.12)]
     b.tail_root, b.tail_dir = V(tail[-1]), V(-0.2, 1, -0.1).normalized()
     b.wing_root = V(0, -0.12, z0 + 0.15)
-    b.wing_span = 1.15 if not wyvern else 1.3
+    b.wing_span = 1.35 if not wyvern else 1.45  # wingspan well over 2.2x body length
     b.mouth = b.snout + V(0, -hr * 0.7, -hr * 0.2)
     b.hands = b.feet[:2]
 
