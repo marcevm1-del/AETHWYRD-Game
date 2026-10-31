@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ascend.Game
@@ -5,24 +6,38 @@ namespace Ascend.Game
     /// <summary>
     /// Turns a world label (a TextMesh) toward the main camera every frame, so it never reads mirrored from behind
     /// (reports/baseline_2026-10-25.md, bug 2). The scene builder adds it to every label it makes.
-    /// NPC name labels also hide while the HUD draws its own nameplates, so a name is never drawn twice (bug 3).
+    /// An NPC's name label also hides while the HUD is drawing that NPC's nameplate, so a name is never drawn twice
+    /// (bug 3); beyond nameplate range, or when the nameplate is skipped, the world label shows as before.
+    /// Runs after the follow camera's LateUpdate so labels aim at this frame's camera position.
     /// </summary>
     [DisallowMultipleComponent]
+    [DefaultExecutionOrder(1000)]
     public sealed class FaceCamera : MonoBehaviour
     {
-        [SerializeField] bool npcName;
+        [SerializeField] string npcId;
         MeshRenderer _renderer;
 
-        /// <summary>True for an NPC's name label: hidden while <see cref="NpcNameLabels"/> is off.</summary>
-        public bool NpcName { get => npcName; set => npcName = value; }
-        /// <summary>RingZeroHud turns this off while it draws NPC nameplates, and back on when it goes away.</summary>
-        public static bool NpcNameLabels { get; set; } = true;
+        /// <summary>Set on an NPC's name label: the npcs.json id whose HUD nameplate replaces it.</summary>
+        public string NpcId { get => npcId; set => npcId = value; }
+
+        static readonly Dictionary<string, int> _nameplateFrame = new Dictionary<string, int>();
+
+        /// <summary>Called by the HUD each frame it draws this NPC's nameplate.</summary>
+        public static void NameplateDrawn(string id)
+        {
+            if (!string.IsNullOrEmpty(id)) _nameplateFrame[id] = Time.frameCount;
+        }
 
         void Awake() => _renderer = GetComponent<MeshRenderer>();
 
         void LateUpdate()
         {
-            if (npcName && _renderer != null && _renderer.enabled != NpcNameLabels) _renderer.enabled = NpcNameLabels;
+            if (!string.IsNullOrEmpty(npcId) && _renderer != null)
+            {
+                // OnGUI runs after LateUpdate, so a nameplate drawn last frame counts as current.
+                bool covered = _nameplateFrame.TryGetValue(npcId, out int f) && Time.frameCount - f <= 2;
+                if (_renderer.enabled == covered) _renderer.enabled = !covered;
+            }
             var cam = Camera.main;
             if (cam == null) return;
             Vector3 away = transform.position - cam.transform.position; // TextMesh glyphs read correctly with +Z pointing away

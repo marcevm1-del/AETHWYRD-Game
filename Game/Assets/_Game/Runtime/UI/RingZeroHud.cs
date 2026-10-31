@@ -42,12 +42,11 @@ namespace Ascend.Game
 
         void OnEnable() => _status.Enable();
         void OnDisable() => _status.Disable();
-        void OnDestroy() { _status.Dispose(); MonsterDummy.WorldLabels = true; FaceCamera.NpcNameLabels = true; }
+        void OnDestroy() { _status.Dispose(); MonsterDummy.WorldLabels = true; }
 
         void Start()
         {
             MonsterDummy.WorldLabels = false; // the HUD draws nameplates instead
-            FaceCamera.NpcNameLabels = false;  // for NPCs too, so no name is drawn twice
             if (player == null) player = FindFirstObjectByType<PlayerCombat>();
             Bind();
         }
@@ -177,7 +176,7 @@ namespace Ascend.Game
                     if (tracked.distance >= 0) { Shadowed(new Rect(sw - 330, ry, 312, 20), $"{tracked.distance:0} m", _small, TextAnchor.MiddleRight); ry += 20; }
                 }
             }
-            PartyPanel(sw - 228, ry + 8);
+            _topRightBottom = PartyPanel(sw - 228, ry + 8) + 8; // nameplates keep clear of all of it next frame
 
             // ---- Top-centre: boss, siege, lock-on.
             var boss = MonsterController.ActiveBoss;
@@ -379,7 +378,7 @@ namespace Ascend.Game
             var placed = new List<Rect>
             {
                 new Rect(0, 0, 440, 140),                         // top-left: level badge, HP/MP/SP, rank, clock
-                new Rect(sw - 345, 0, 345, 420),                  // top-right: Style Rank, minimap, region, quest, party
+                new Rect(sw - 345, 0, 345, _topRightBottom),      // top-right: Style Rank, minimap, region, quest, party
                 new Rect((sw - barW) / 2f - 10, sh - 130, barW + 20, 130), // bottom-centre: Combo Budget and skill bar
             };
             var me = player.transform.position;
@@ -408,6 +407,7 @@ namespace Ascend.Game
                 placed.Add(rect);
                 var s = new GUIStyle(_small) { normal = { textColor = new Color(0.7f, 0.85f, 1f) } };
                 Shadowed(new Rect(rect.x, rect.y, rect.width, 20), g.DisplayName, s, TextAnchor.MiddleCenter);
+                FaceCamera.NameplateDrawn(g.NpcId); // its world label hides while this plate shows
                 if (!string.IsNullOrEmpty(role)) Shadowed(new Rect(rect.x, rect.y + 18, rect.width, 16), role, _tiny, TextAnchor.MiddleCenter);
             }
         }
@@ -478,7 +478,10 @@ namespace Ascend.Game
         }
 
         /// <summary>The party: you, your companion, then partners, numbered, with HP.</summary>
-        void PartyPanel(float x, float y)
+        float _topRightBottom = 420f; // bottom of the top-right column (minimap, quest, party), from the last OnGUI
+
+        /// <summary>Draws the party rows; returns the y just below the panel.</summary>
+        float PartyPanel(float x, float y)
         {
             int n = 1;
             void Row(string who, float hp, float max, string note)
@@ -492,13 +495,14 @@ namespace Ascend.Game
             var comps = FindObjectsByType<CompanionAI>(FindObjectsSortMode.None).Where(cp => cp != null && cp.Joined).ToList();
             var taming = player.GetComponent<PlayerTaming>();
             bool anyone = comps.Count > 0 || (taming != null && taming.Following.Count > 0);
-            if (!anyone) return; // solo: the vitals top-left are enough
+            if (!anyone) return y; // solo: the vitals top-left are enough
             Row("You", _defense != null ? _defense.Hp : player.Stats.Hp, _defense != null ? _defense.MaxHp : player.Stats.Hp, null);
             foreach (var comp in comps) Row(comp.Name, comp.Hp, comp.MaxHp, comp.Downed ? "down" : comp.Order.ToString());
             if (taming != null)
                 foreach (var f in taming.Following)
                     if (f != null && f.Data != null) Row(f.Data.Name, f.Body.Hp, f.Body.MaxHp, f.KnockedOut ? "resting" : $"{f.Role} · bond {f.Data.Bond}");
-            if (taming != null && taming.Roster.Ranch.Any()) Shadowed(new Rect(x, y, 210, 18), $"Ranch: {taming.Roster.Ranch.Count()}", _tiny);
+            if (taming != null && taming.Roster.Ranch.Any()) { Shadowed(new Rect(x, y, 210, 18), $"Ranch: {taming.Roster.Ranch.Count()}", _tiny); y += 18; }
+            return y;
         }
 
         /// <summary>The first active quest's next objective and where it is (the tracker, the radar and the map).</summary>

@@ -176,7 +176,7 @@ namespace Ascend.EditorTools
             var label = Label(parent, feet + Vector3.up * 2.05f, AscendData.Db.Npcs.TryGetValue(npcId, out var n) ? $"{n.Name}\n<size=36>{n.Role}</size>" : npcId, Color.white, 0.03f);
             label.GetComponent<TextMesh>().richText = true;
             label.name = "Label_" + npcId;
-            label.GetComponent<FaceCamera>().NpcName = true; // hidden while the HUD draws its nameplate
+            label.GetComponent<FaceCamera>().NpcId = npcId; // hidden while the HUD draws its nameplate
             var marker = Label(parent, feet + Vector3.up * 2.65f, "", new Color(1f, 0.85f, 0.2f), 0.09f);
             marker.name = "Marker_" + npcId;
             giver.SetMarker(marker.GetComponent<TextMesh>());
