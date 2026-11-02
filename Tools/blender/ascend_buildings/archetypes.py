@@ -530,12 +530,20 @@ def smithy(c, p):
     # forge hearth and its chimney against the back wall
     g.rbox((2.2, 1.6, 1.0), "stone~3", None, 0.06, c.seg(), (-1.5, d / 2 - 1.2, zf + 0.5))
     g.rbox((1.4, 0.9, 0.12), "lamp", None, 0.03, 1, (-1.5, d / 2 - 1.2, zf + 1.02))
+    if c.s.forge_mouth:  # review B3 (Iron Hold): a lit forge mouth, a 1.2 x 0.8 m glow in the hearth facing the open bay
+        # a second, brick-built forge against the back wall, mid-bay, so the mouth shows between the posts
+        # (low and well inside the bay: the eaves hide the back wall above about 1 m at the sheet camera's pitch)
+        fx, fy = 0.3, d / 2 - 1.9
+        g.rbox((1.8, 0.9, 1.15), "stone~3", None, 0.06, c.seg(), (fx, fy, zf + 0.575))
+        g.rbox((1.6, 0.08, 1.0), "stone_dark", None, 0.03, 1, (fx, fy - 0.47, zf + 0.5))  # dark surround
+        g.box((1.2, 0.03, 0.8), "ember", None, (fx, fy - 0.53, zf + 0.5))
+        g.rbox((2.0, 1.0, 0.14), "stone~1", None, 0.04, 1, (fx, fy, zf + 1.2))
     K.chimney(c, -1.5, d / 2 - 0.7, zf, info["top"] + info["rise"], "forge")
     # anvil, quench barrel, tool rack
     g.rbox((0.5, 0.45, 0.55), "stone_dark", None, 0.04, 1, (1.2, -0.6, zf + 0.28))
     g.lathe([(0.0, 0.0), (0.22, 0.0), (0.22, 0.25), (0.45, 0.32), (0.5, 0.45), (0.0, 0.45)], "metal", T(1.2, -0.6, zf + 0.55) @ RZ(90) @ Matrix.Diagonal((1.5, 0.6, 1, 1)), segs=8)
     g.lathe([(0.0, 0.0), (0.4, 0.0), (0.45, 0.4), (0.4, 0.8), (0.0, 0.75)], "wood_light~1", T(2.4, 0.4, zf), segs=16)
-    g.cylinder(0.38, 0.05, "glass", T(2.4, 0.4, zf + 0.72), segs=16)
+    g.cylinder(0.38, 0.05, "water", T(2.4, 0.4, zf + 0.72), segs=16)
     for k in range(4):
         g.rbox((0.05, 0.05, 0.9), "metal~2", None, 0.01, 1, (-w / 2 + 0.8 + k * 0.25, d / 2 - 0.35, zf + 1.5))
 
@@ -565,7 +573,84 @@ def stable(c, p):
 
 
 def granary(c, p):
+    form = GRANARY_FORMS.get(c.s.family)
+    if form:  # review B1: the family's own grain store; the round tower stays the default
+        return form(c, p)
     round_block(c, 0, 0, p.get("radius", 2.6), p.get("floors", 2), "cone", floor_h=3.2)
+
+
+def _prof_r(prof, z):
+    """The radius of a lathe profile [(r, z), ...] (z rising) at height z."""
+    for (r0, z0), (r1, z1) in zip(prof, prof[1:]):
+        if z0 <= z <= z1 and z1 > z0:
+            return r0 + (r1 - r0) * (z - z0) / (z1 - z0)
+    return prof[-1][0]
+
+
+def beehive_granary(c, p):
+    """Desert (Sunscar, Zaruma): three beehive mud domes, 2.5-3.5 m, in the wall plaster, with a top hatch, a wooden
+    plug, climbing pegs and a ladder against the tallest."""
+    g = c.g
+    domes = ((-1.5, 0.4, 1.45, 3.5), (1.35, 0.85, 1.2, 2.9), (0.1, -1.45, 1.05, 2.5))
+    for k, (x, y, r, h) in enumerate(domes):
+        prof = [(r, 0.0), (r * 1.03, h * 0.18), (r * 0.97, h * 0.42), (r * 0.8, h * 0.66), (r * 0.52, h * 0.86),
+                (r * 0.2, h * 0.97), (0.0, h)]
+        g.cylinder(r + 0.14, 0.24, "wall_a~3", T(x, y, 0), segs=28, bevel=0.08)  # mud footing ring
+        g.lathe(prof, "wall_a" if k != 1 else "wall_a~4", T(x, y, 0.2), segs=28)
+        g.lathe([(r * 0.2 + 0.06, h * 0.95), (r * 0.2 + 0.08, h * 1.0), (0.0, h + 0.08)], "wall_a~3", T(x, y, 0.2), segs=16)
+        # the filling hatch facing the camera side, a wooden plug and a mud lip
+        a = math.radians(-120 + 25 * k)
+        zh = h * 0.72
+        rr = _prof_r(prof, zh)
+        hm = T(x, y, 0.2) @ RZ(math.degrees(a) + 90) @ T(0, -rr + 0.05, zh)
+        g.rbox((0.62, 0.2, 0.55), "wall_a~3", hm, 0.12, c.seg())
+        g.rbox((0.42, 0.16, 0.38), "trim", hm @ T(0, -0.06, 0), 0.05, 1)
+        g.rbox((0.48, 0.04, 0.06), "trim_dark", hm @ T(0, -0.15, 0.06), 0.01, 1)
+        if k == 0:  # wooden climbing pegs up the tallest dome
+            for j in range(4):
+                zp = 0.6 + j * 0.55
+                rp = _prof_r(prof, zp)
+                g.cylinder(0.05, 0.5, "trim", T(x, y, 0.2) @ RZ(math.degrees(a) + 90 + 30) @ T(0, -rp + 0.15, zp) @ RX(90), segs=6)
+    # a pole ladder leaning on the tallest dome
+    lx, ly = -1.5 + 1.75 * math.cos(math.radians(-150)), 0.4 + 1.75 * math.sin(math.radians(-150))
+    lm = T(lx, ly, 0) @ RZ(-60) @ RX(-12)  # leaning in towards the dome
+    for sx in (-0.22, 0.22):
+        g.cylinder(0.05, 2.9, "trim", lm @ T(sx, 0, 0), segs=6)
+    for j in range(6):
+        g.cylinder(0.035, 0.5, "wood_light", lm @ T(-0.25, 0, 0.35 + j * 0.45) @ RY(90), segs=6)
+    for x, y in ((1.2, -0.6), (1.75, -0.2)):  # grain sacks
+        g.sphere(0.3, "cloth_b~3", T(x, y, 0.26), segs=10, rings=6, squash=0.8)
+
+
+def basalt_silo(c, p):
+    """Dwarven (Iron Hold, Dragon Spine): a squat basalt silo under a copper cone (#B87333, never thatch), bronze bands,
+    lit slit windows and a lantern by the door."""
+    g, s = c.g, c.s
+    r, H = p.get("radius", 3.0), 3.6
+    info = round_block(c, 0, 0, r, 1, None, floor_h=H, wall="ashlar", windows=False)
+    z0, top = info["zf"], info["top"]
+    for zb in (z0 + 0.25, top - 0.25):  # bronze bands
+        g.cylinder(r + 0.06, 0.4, "trim", T(0, 0, zb - 0.2), segs=32, bevel=0.04)
+    glass = getattr(s, "window_glass", "glass")
+    for a in (-150, -35, 150):  # slit windows (lit in Iron Hold), clear of the door at -90
+        m = T(0, 0, z0) @ RZ(a) @ T(r, 0, 0) @ RZ(90)
+        g.rbox((0.42, 0.2, 1.25), "stone_dark", m, 0.03, 1, (0, -0.02, H * 0.55))
+        g.box((0.2, 0.06, 1.0), glass, m, (0, -0.11, H * 0.55))
+    dm = T(0, 0, z0) @ RZ(-90) @ T(r + 0.02, 0, 0) @ RZ(90)
+    K.wall_lantern(c, dm @ T(0, 0.14, 0), 1.05, 2.35)
+    # the squat copper cone with standing seams, a copper drip ring and a finial
+    R, h = r + 0.45, (r + 0.45) * 0.62
+    g.lathe([(R - 0.05, -0.25), (0.05, h - 0.12)], "roof_under", T(0, 0, top), segs=28)
+    g.lathe([(R, -0.3), (R, -0.16), (0.1, h), (0.0, h)], "roof_copper", T(0, 0, top), segs=32)
+    g.cylinder(R + 0.04, 0.12, "roof_copper~1", T(0, 0, top - 0.3), segs=32, bevel=0.03)
+    p0, p1 = (R, -0.16), (0.14, h - 0.05)
+    ln = math.hypot(p1[0] - p0[0], p1[1] - p0[1])
+    tilt = math.degrees(math.atan2(p1[0] - p0[0], p1[1] - p0[1]))
+    for k in range(20 if c.hi else 12):
+        g.rbox((0.06, 0.06, ln), "roof_copper~3", T(0, 0, top) @ RZ(k * 360 / (20 if c.hi else 12)) @
+               T((p0[0] + p1[0]) / 2 + 0.03, 0, (p0[1] + p1[1]) / 2) @ RY(tilt), 0.015, 1)
+    g.cylinder(0.22, 0.25, "roof_copper~1", T(0, 0, top + h - 0.1), segs=12, bevel=0.05)
+    g.lathe([(0.0, 0.0), (0.09, 0.05), (0.0, 0.7)], "roof_copper", T(0, 0, top + h + 0.15), segs=8)
 
 
 def kura(c, p):
@@ -667,7 +752,7 @@ def flume(c, x, y0, y1, z):
     g.rbox((0.8, L, 0.1), "trim", None, 0.02, c.seg(), (x, yc, z))
     for sx in (-1, 1):
         g.rbox((0.08, L, 0.4), "trim~3", None, 0.02, 1, (x + sx * 0.38, yc, z + 0.2))
-    g.rbox((0.62, L, 0.04), "glass", None, 0.01, 1, (x, yc, z + 0.12))
+    g.rbox((0.62, L, 0.04), "water", None, 0.01, 1, (x, yc, z + 0.12))
     n = max(2, int(L / 2.2) + 1)
     for k in range(n):
         y = min(y0, y1) + 0.4 + (L - 0.8) * k / (n - 1)
@@ -907,6 +992,8 @@ def wall_segment(c, p):
         return adobe_wall(c, L, H)
     if s.family == "garden":
         return banded_brick_wall(c, L, H)
+    if s.family == "hoshizora":
+        return plaster_wall(c, L, H)
     construction = s.walls if s.walls not in ("post_panel", "stalk", "timber_frame", "adobe", "plaster") else "rubble"
     if s.walls == "adobe":
         construction = "adobe"
@@ -937,6 +1024,27 @@ def adobe_wall(c, L, H):
     for sx in (-1, 1):  # round buttress towers at the ends
         g.cylinder(1.05, H + 0.9, key + "~3", T(sx * L / 2, 0, 0), segs=24, r_top=0.85, bevel=0.1)
         g.sphere(0.85, key + "~3", T(sx * L / 2, 0, H + 0.9), segs=20, rings=8, squash=0.35)
+
+
+def plaster_wall(c, L, H):
+    """Hoshizora: a white plaster wall (#F2EDE0) on a 0.8 m stone base, under a small tiled coping roof (#3D4757)."""
+    g = c.g
+    zb, t = 0.8, 0.56
+    for face_y, rot in ((-0.42, 0), (0.42, 180)):  # dressed stone base, both faces
+        K.build_wall(c, T(0, face_y, 0) @ RZ(rot), L, zb, [], "ashlar", "stone")
+    g.rbox((L, 0.84, zb - 0.04), "stone~3", None, 0.03, 1, (0, 0, (zb - 0.04) / 2))
+    g.rbox((L + 0.04, 0.9, 0.08), "stone~2", None, 0.03, 1, (0, 0, zb))
+    g.rbox((L, t, H - zb), "wall_a", None, 0.04, c.seg(), (0, 0, zb + (H - zb) / 2))  # white plaster body
+    for face_y in (-t / 2, t / 2):  # a dark timber rail under the coping
+        g.rbox((L + 0.02, 0.06, 0.2), "trim_dark", None, 0.02, 1, (0, face_y + (0.02 if face_y > 0 else -0.02), H - 0.24))
+    for k in range(int(L / 2.5) + 1):  # thin plaster pilasters every 2.5 m
+        x = -L / 2 + 0.2 + k * (L - 0.4) / max(1, int(L / 2.5))
+        g.rbox((0.22, t + 0.08, H - zb - 0.3), "wall_a~3", None, 0.03, 1, (x, 0, zb + (H - zb - 0.3) / 2))
+
+    def gable_fill(fm, D, rise):
+        g.slab_poly([(-D / 2, 0), (D / 2, 0), (0, rise)], 0.12, "wall_a", fm @ T(0, 0.06, 0))
+
+    K.roof(c, T(0, 0, H), L, t, "gable", 30, "barrel", "roof_a", "tile", 0.32, gable_fill)
 
 
 def banded_brick_wall(c, L, H):
@@ -986,7 +1094,7 @@ def well(c, p):
     r = p.get("radius", 1.0)
     round_block(c, 0, 0, r, 1, None, floor_h=0.85, door=False, windows=False,
                 wall=c.s.walls if c.s.walls in ("ashlar", "rubble", "brick", "fitted") else "rubble")
-    g.cylinder(r - 0.1, 0.05, "glass", T(0, 0, 0.6), segs=24)
+    g.cylinder(r - 0.1, 0.05, "water", T(0, 0, 0.6), segs=24)
     for sx in (-1, 1):
         g.rbox((0.16, 0.16, 2.3), "trim", None, 0.03, c.seg(), (sx * (r + 0.05), 0, 1.15))
     g.cylinder(0.08, 2.3, "trim", T(-r - 0.1, 0, 1.9) @ RY(90), segs=10)
@@ -1044,6 +1152,9 @@ def bridge(c, p):
 
 
 def fountain(c, p):
+    form = FOUNTAIN_FORMS.get(c.s.family)
+    if form:  # review B1: Hoshizora's stone water basin, the nordic well-house; the tiered fountain stays the default
+        return form(c, p)
     g = c.g
     r = p.get("radius", 2.4)
     # review B1: the basin in the family's masonry; adobe families use their wall plaster (other families keep stone)
@@ -1052,11 +1163,76 @@ def fountain(c, p):
     if c.s.family == "garden":  # a turquoise tile rim
         g.lathe([(r + 0.12, 0.0), (r + 0.16, 0.0), (r + 0.16, 0.18), (r - 0.27, 0.18), (r - 0.27, 0.0)], "accent", T(0, 0, 0.56), segs=40,
                 cap_bottom=False, cap_top=False)
-    g.cylinder(r - 0.25, 0.05, "glass", T(0, 0, 0.5), segs=40)
+    g.cylinder(r - 0.25, 0.05, "water", T(0, 0, 0.5), segs=40)
     g.lathe([(0.35, 0.0), (0.25, 0.8), (0.3, 1.2), (1.0, 1.35), (1.05, 1.55), (0.85, 1.55), (0.2, 1.45), (0.15, 2.2), (0.3, 2.4), (0.0, 2.6)], column, T(0, 0, 0.4), segs=28)
-    g.cylinder(0.85, 0.04, "glass", T(0, 0, 1.92), segs=28)
+    g.cylinder(0.85, 0.04, "water", T(0, 0, 1.92), segs=28)
     finial_like = c.s.family in ("garden", "celestial", "desert")
     g.sphere(0.25, "gold" if finial_like else "glow", T(0, 0, 3.15), segs=12, rings=8)
+
+
+def stone_basin(c, p):
+    """Hoshizora: a low carved stone water basin fed by a wooden spout on a post, with a ladle and river stones."""
+    g = c.g
+    bw, bd, bh, t = 2.6, 1.5, 0.62, 0.22
+    g.rbox((bw, bd, 0.2), "stone~3", None, 0.05, 1, (0, 0, 0.1))
+    for sy in (-1, 1):
+        g.rbox((bw, t, bh), "stone~2", None, 0.07, c.seg(), (0, sy * (bd - t) / 2, bh / 2))
+    for sx in (-1, 1):
+        g.rbox((t, bd - 2 * t + 0.02, bh), "stone~2", None, 0.07, c.seg(), (sx * (bw - t) / 2, 0, bh / 2))
+    g.box((bw - 2 * t + 0.02, bd - 2 * t + 0.02, 0.04), "water", None, (0, 0, bh - 0.12))
+    px, py = bw / 2 - 0.55, bd / 2 + 0.2  # the spout post behind the basin
+    g.rbox((0.3, 0.3, 0.25), "stone~1", None, 0.04, 1, (px, py, 0.125))
+    g.rbox((0.18, 0.18, 1.45), "trim", None, 0.03, c.seg(), (px, py, 0.25 + 0.725))
+    g.rbox((0.24, 0.24, 0.06), "trim_dark", None, 0.02, 1, (px, py, 1.72))
+    g.cylinder(0.06, 1.0, "wood_light", T(px, py + 0.05, 1.3) @ RX(98), segs=10)  # the wooden spout
+    for k in range(3):
+        t = 0.15 + k * 0.3  # binding collars along the spout
+        g.cylinder(0.068, 0.04, "trim", T(px, py + 0.05 - 0.99 * t, 1.3 - 0.14 * t) @ RX(98), segs=10)
+    ys = py + 0.05 - 0.98
+    g.cylinder(0.03, 1.3 - 0.13 - (bh - 0.12), "water", T(px, ys, bh - 0.1), segs=8)  # the falling stream
+    g.cylinder(0.12, 0.03, "water~2", T(px, ys, bh - 0.1), segs=12)
+    # a bamboo-handled ladle across the rim
+    g.cylinder(0.025, 0.9, "wood_light", T(-0.5, -bd / 2 + t / 2, bh + 0.03) @ RY(90) @ RX(0), segs=6)
+    g.cylinder(0.09, 0.09, "wood_light~1", T(0.45, -bd / 2 + t / 2, bh - 0.02), segs=10)
+    for x, y, r_ in ((-bw / 2 - 0.35, -0.3, 0.3), (-bw / 2 - 0.2, 0.45, 0.22), (bw / 2 + 0.3, -0.4, 0.26), (0.2, -bd / 2 - 0.55, 0.42)):
+        g.sphere(r_, "stone~3", T(x, y, 0.0), segs=12, rings=6, squash=0.45)
+
+
+def well_house(c, p):
+    """Nordic (Frostveil, Whitewater Reach): a covered well-house, a log crib under a turf roof on two posts, with a
+    windlass and bucket."""
+    g, s = c.g, c.s
+    hs, logr = 0.9, 0.13
+    for j in range(5):  # the log crib, courses alternating along x and y
+        z = logr + j * 0.2
+        key = c.wall_key + ("~3" if j % 2 else "")
+        for sgn in (-1, 1):
+            if j % 2 == 0:
+                g.cylinder(logr, 2 * hs + 0.5, key, T(-hs - 0.25, sgn * hs, z) @ RY(90), segs=10, bevel=0.03)
+            else:
+                g.cylinder(logr, 2 * hs + 0.5, key, T(sgn * hs, -hs - 0.25, z) @ RX(-90), segs=10, bevel=0.03)
+    g.box((2 * hs, 2 * hs, 0.04), "water", None, (0, 0, 0.62))
+    PX, PH = hs + 0.45, 2.35
+    for sx in (-1, 1):  # two posts with top plates carrying the eaves, and braces
+        g.rbox((0.22, 0.22, PH), "trim", None, 0.03, c.seg(), (sx * PX, 0, PH / 2))
+        g.rbox((0.22, 2.3, 0.22), "trim", None, 0.03, 1, (sx * PX, 0, PH - 0.11))
+        for sy in (-1, 1):
+            g.rbox((0.12, 0.7, 0.12), "trim~3", T(sx * PX, sy * 0.38, PH - 0.42) @ RX(sy * 45), 0.02, 1)
+    g.cylinder(0.12, 2 * PX, "wood_light", T(-PX, 0, 1.45) @ RY(90), segs=12)  # windlass
+    g.rbox((0.08, 0.08, 0.45), "metal", None, 0.02, 1, (PX + 0.15, 0, 1.25))
+    g.rbox((0.3, 0.08, 0.08), "metal", None, 0.02, 1, (PX + 0.15, 0.1, 1.04))
+    g.cylinder(0.015, 0.35, "trim_dark", T(0, -0.12, 1.08), segs=4)
+    g.lathe([(0.0, 0.0), (0.18, 0.0), (0.22, 0.32), (0.0, 0.32)], "wood_light~1", T(0, -0.12, 0.76), segs=12)
+    g.cylinder(0.225, 0.04, "metal", T(0, -0.12, 0.98), segs=12)
+
+    def gable_fill(fm, D, rise):
+        g.slab_poly([(-D / 2, 0), (D / 2, 0), (0, rise)], 0.1, c.wall_key + "~3", fm @ T(0, 0.05, 0))
+
+    K.roof(c, T(0, 0, PH), 2 * PX + 0.3, 2.3, "gable", 40, "turf", "roof_a", "board", 0.3, gable_fill)
+
+
+FOUNTAIN_FORMS = {"hoshizora": stone_basin, "nordic": well_house}
+GRANARY_FORMS = {"desert": beehive_granary, "dwarven": basalt_silo}
 
 
 def lamp_post(c, p):
@@ -1151,8 +1327,79 @@ def fen_lamp_post(c, p):
         g.inst("tuft|leaf~3", T(0.32 * math.cos(math.radians(a)), 0.32 * math.sin(math.radians(a)), 0) @ RZ(a))
 
 
+def brass_lantern_post(c, p):
+    """Desert (Sunscar, Zaruma): a pierced-brass lantern (0.45 m) on a 2.4 m adobe pillar with a rounded cap."""
+    g, key = c.g, c.wall_key
+    g.rbox((0.72, 0.72, 0.3), key + "~3", None, 0.1, c.seg(), (0, 0, 0.15))
+    g.rbox((0.48, 0.48, 2.0), key, None, 0.1, c.seg(), (0, 0, 1.25))
+    g.rbox((0.56, 0.56, 0.12), key + "~4", None, 0.05, 1, (0, 0, 2.2))
+    g.sphere(0.28, key, T(0, 0, 2.25), segs=16, rings=8, squash=0.55)  # the rounded cap, up to 2.4 m
+    g.rbox((0.22, 0.06, 0.36), "trim_dark", None, 0.04, 1, (0, -0.24, 1.55))  # a small niche
+    z = 2.38
+    g.cylinder(0.15, 0.05, "gold~1", T(0, 0, z), segs=12, bevel=0.015)
+    g.lathe([(0.0, 0.0), (0.1, 0.0), (0.15, 0.1), (0.15, 0.22), (0.1, 0.31), (0.0, 0.31)], "lamp", T(0, 0, z + 0.04), segs=12)
+    for k in range(8):  # the pierced shell: brass ribs and bands with the glow between
+        g.rbox((0.035, 0.035, 0.3), "gold~1", T(0, 0, z + 0.04) @ RZ(45 * k) @ T(0.155, 0, 0.155), 0.008, 1)
+    for zz in (0.1, 0.24):
+        g.lathe([(0.158, 0.0), (0.168, 0.0), (0.168, 0.03), (0.158, 0.03)], "gold~1", T(0, 0, z + zz), segs=16,
+                cap_bottom=False, cap_top=False)
+    g.lathe([(0.0, 0.0), (0.18, 0.0), (0.16, 0.05), (0.09, 0.1), (0.035, 0.14), (0.0, 0.16)], "gold~1", T(0, 0, z + 0.34), segs=12)
+    g.sphere(0.035, "gold", T(0, 0, z + 0.52), segs=8, rings=5)
+    g.cylinder(0.01, 0.04, "gold", T(0, 0, z + 0.48), segs=4)
+
+
+def glazed_lantern_post(c, p):
+    """Garden (Zarvan): a turquoise-glazed lantern on a slim ochre brick column, 2.6 m, with turquoise bands."""
+    g = c.g
+    g.rbox((0.56, 0.56, 0.35), "stone~3", None, 0.05, c.seg(), (0, 0, 0.175))
+    g.cylinder(0.15, 1.95, "wall_a", T(0, 0, 0.35), segs=12)  # slim brick shaft
+    if c.hi:
+        for j in range(int(1.95 / 0.18)):
+            g.cylinder(0.153, 0.02, "mortar", T(0, 0, 0.35 + 0.09 + j * 0.18), segs=12, caps=False)
+    for zz in (0.9, 2.05):
+        g.cylinder(0.165, 0.1, "accent", T(0, 0, 0.35 + zz - 0.05), segs=12, bevel=0.02)
+    g.rbox((0.42, 0.42, 0.14), "wall_a~3", None, 0.03, 1, (0, 0, 2.37))
+    g.rbox((0.48, 0.48, 0.09), "accent", None, 0.03, 1, (0, 0, 2.555))  # turquoise tile cap at 2.6 m
+    z = 2.6
+    g.lathe([(0.0, 0.0), (0.11, 0.0), (0.15, 0.12), (0.15, 0.26), (0.0, 0.28)], "lamp", T(0, 0, z), segs=12)
+    for k in range(6):  # glazed pointed-arch frame
+        g.rbox((0.06, 0.06, 0.34), "accent", T(0, 0, z) @ RZ(60 * k + 30) @ T(0.16, 0, 0.17), 0.015, 1)
+    g.lathe([(0.0, 0.0), (0.22, 0.0), (0.2, 0.06), (0.13, 0.16), (0.05, 0.27), (0.0, 0.32)], "roof_a", T(0, 0, z + 0.32), segs=12)
+    g.lathe([(0.0, 0.0), (0.04, 0.04), (0.0, 0.18)], "gold", T(0, 0, z + 0.62), segs=6)
+
+
+def hooded_lantern_post(c, p):
+    """Nordic (Frostveil, Whitewater Reach): an iron lantern under a small shingle hood on a 2.5 m log post."""
+    g, s = c.g, c.s
+    g.cylinder(0.3, 0.2, "stone~1", T(0, 0, 0), segs=10, bevel=0.06)
+    g.cylinder(0.14, 2.3, c.wall_key, T(0, 0, 0.2), segs=10, r_top=0.12)  # the log post, 2.5 m
+    g.cylinder(0.125, 0.05, c.wall_key + "~3", T(0, 0, 1.2), segs=10)
+    g.rbox((0.44, 0.44, 0.07), "trim", None, 0.02, 1, (0, 0, 2.53))
+    z = 2.57  # the iron lantern: corner bars, top and bottom plates and the glow between
+    g.rbox((0.3, 0.3, 0.05), "metal", None, 0.015, 1, (0, 0, z + 0.025))
+    g.rbox((0.21, 0.21, 0.3), "lamp", None, 0.02, 1, (0, 0, z + 0.2))
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            g.rbox((0.04, 0.04, 0.32), "metal", None, 0.01, 1, (sx * 0.12, sy * 0.12, z + 0.2))
+    g.lathe([(0.17, 0.0), (0.0, 0.1)], "metal", T(0, 0, z + 0.36), segs=4, phase=math.pi / 4)
+    for sx in (-1, 1):  # two uprights carry the hood
+        g.rbox((0.05, 0.05, 0.58), "trim", None, 0.01, 1, (sx * 0.2, 0, z + 0.29))
+    zh, pitch, half = z + 0.6, 38.0, 0.34
+    for sy in (-1, 1):  # shingle hood: a little gable along x
+        hm = T(0, sy * half / 2 * math.cos(math.radians(pitch)), zh + 0.13 - half / 2 * math.sin(math.radians(pitch))) @ RX(-sy * pitch)
+        g.rbox((0.66, half + 0.04, 0.04), "trim~1", hm, 0.01, 1)
+        if c.hi:
+            for j in range(3):
+                for k in range(5):
+                    g.rbox((0.13, 0.15, 0.025), "wood_light%s" % ("~3" if (j + k) % 2 else ""), hm @ T(-0.26 + k * 0.13 + (0.065 if j % 2 else 0) * (1 if k < 4 else 0), sy * (half / 2 - 0.06 - j * 0.11), 0.03 + 0.012 * j), 0.005, 1)
+    g.rbox((0.7, 0.07, 0.06), "trim", None, 0.01, 1, (0, 0, zh + 0.14))
+    if s.snow:
+        g.rbox((0.62, 0.34, 0.05), "snow", None, 0.02, 1, (0, 0, zh + 0.18))
+
+
 LAMP_FORMS = {"hoshizora": paper_lamp_post, "shenlu": paper_lamp_post, "haneul": paper_lamp_post,
-              "clockwork": gas_lamp_post, "dwarven": coal_basket_post, "gothic": silk_lamp_post, "fenland": fen_lamp_post}
+              "clockwork": gas_lamp_post, "dwarven": coal_basket_post, "gothic": silk_lamp_post, "fenland": fen_lamp_post,
+              "desert": brass_lantern_post, "garden": glazed_lantern_post, "nordic": hooded_lantern_post}
 
 
 # ================================================================================================================
@@ -1250,7 +1497,7 @@ def mushroom_smithy(c, p):
     g.lathe([(0.0, 0.0), (0.22, 0.0), (0.22, 0.25), (0.45, 0.32), (0.5, 0.45), (0.0, 0.45)], "metal",
             T(fx - 0.6, fy - 0.5, 0.55) @ RZ(90) @ Matrix.Diagonal((1.5, 0.6, 1, 1)), segs=8)
     g.lathe([(0.0, 0.0), (0.4, 0.0), (0.45, 0.4), (0.4, 0.8), (0.0, 0.75)], "wood_light~1", T(fx + fw / 2 + 0.6, fy - 1.0, 0), segs=16)
-    g.cylinder(0.38, 0.05, "glass", T(fx + fw / 2 + 0.6, fy - 1.0, 0.72), segs=16)
+    g.cylinder(0.38, 0.05, "water", T(fx + fw / 2 + 0.6, fy - 1.0, 0.72), segs=16)
     K.sign(c, T(r * 0.7, -r - 0.2, 0), 0.0, 2.4, "hammer")
 
 

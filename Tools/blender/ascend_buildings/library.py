@@ -102,7 +102,7 @@ def build_region(region, out_dir, sheet_dir=None, seed=1, detail="high", preview
             p = os.path.join(tmp_dir, o.name + ".png")
             for other in objs:
                 other.hide_render = other is not o
-            preview.camera([o], yaw=-32, pitch=18, margin=1.15)
+            preview.camera([o], yaw=-32, pitch=18, margin=1.2, aspect=320 / 420)  # vertical fit (review N2)
             preview.render(p, (420, 320), 16)
             tiles.append(p)
             if previews:
