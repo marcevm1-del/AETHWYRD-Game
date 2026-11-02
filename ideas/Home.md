@@ -87,6 +87,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
 - [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
+- [[Design Bible/13_Production/tutorial_vision|13_Production/tutorial_vision]]
 
 ## Classes (12)
 - [[Classes/Swordsman|Swordsman]]: Balanced melee DPS
