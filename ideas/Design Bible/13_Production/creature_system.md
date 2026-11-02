@@ -37,6 +37,15 @@ From `reports/design_review_2026-10-25.md`, checked with before/after renders:
   - **Mushroom faces (rule):** a mushroom's face must read from the preview camera (yaw -35, pitch 14). The cap rim sits above the brow (head + 0.95 head radii) and reaches no further than 2.3 head radii, so the line of sight from the eyes passes under it. Mushrooms have a rounder head ball, eyes snapped onto the real skull surface (`eye_snap`, `features.surface_hit`), no moss or pods on the face, and the metaball `cap` blob is skipped (it swallowed the face). Cute ones (soft or animal menace) get big low eyes (0.38, 22 degrees) and a small open smile (`features.mushroom_mouth`); the spore lords keep their teeth. Mushrooms are matched on the name (`plans.is_mushroom`), so treants, flowers and the Mandrake are untouched.
 - **Slime face decal (C4):** now a small round mouth.
 
+## Design review fixes (2026-11-02)
+
+From `reports/design_review_2026-10-31.md` (C1, C3, C5, mushroom faces, N4), with before/after sheets in `reports/blender_wave_2026-11-02/creatures/`:
+- **Werewolf eyes (C1):** `eye_size` 0.26, snapped onto the real skull surface (they were buried in the metaball swell), a glowing amber iris `#FFB347` in a narrowed dark almond with a slit pupil (`eye_style` `glow_iris`), under a brow ridge 0.15 hr deep (`body.brow`).
+- **Skull (C1):** skeletons (`plans.skull`) get a cranium, a narrower upper face, cheekbones and carved sockets. `features.skull_parts` adds dark sockets (r 0.22 hr, `#2A2238`) with a glow point (r 0.12 hr), a separate jaw 0.05 hr under the upper face and square teeth. No nose, no lids, bone `#E8DFC8`.
+- **Dragons and wyverns (C3):** the wings span ≥ 2.2× the nose-to-tail length (`wing_span` 2.5 / 2.4) with thicker finger bones and deeper scallops. Hind legs are digitigrade (hip, knee forward, hock, toes) with thighs 1.4× the forelimb radius, and the shoulders sit at 0.8× the hip height, so the back slopes. The tail (about 1.1 units) is longer than the torso (0.74) and ends in a flat spade (`features.dragon_spade`, which replaces `tail_blade` on dragons). Wyverns, the Gargoyle and the Arch Demon share the wyvern plan.
+- **Bipeds (C5):** `leg`/`arm(taper=True)` swell the thigh and upper arm to 1.15 r0 and thin the ankle and wrist to 0.72 r1. The loincloth (`features.loincloth`) is a curved trapezoid (top 0.8× hip width, bottom 0.55×, 0.35× leg long) in two segments with a 10° flare, folds, a back flap, a waist cord, cloth `#8A5A35` and a 0.03 m darker hem. Skeleton ribs: five thin sloping bars with wide gaps and a short sternum. The sword blade is at least 7 cm wide (`Ctx.metres` turns real-world sizes into model units).
+- **Mushroom faces:** F–E mushrooms get dot eyes (0.36, 24°, `eye_up` 0) and a tiny "o" mouth (0.12 hr). There are no teeth, and the painted spots stay off the face. Spore Lords (matched on the name) keep the teeth grin and get glowing irises. Growths of every species keep their edge ≥ 0.5 hr from any eye's edge.
+
 ## Using it in Blender
 
 1. **Install.** Zip `Tools/blender/ascend_creatures` and install it like the buildings add-on. `ascend_buildings` must be installed too, because the creatures reuse its mesh helpers.
@@ -69,5 +78,5 @@ Add `-- --families Slimes,Beasts` or `-- --ids mon_goblin` to build a subset.
 - **Rigs and poses.** These are static T- and A-poses; `Data/Monsters/rigs.json` and `Tools/blender/build_rig.py` would be the next step.
 - **Unity.** These are high-poly sources, not game meshes. Going into Unity needs a baked low-poly with normal maps, a rig and LODs.
 - **Description detail.** Some recipe parts don't fit their animal (the data gives the Forest Wolf antlers). The generator follows the data; fix it in `species.json`.
-- **Still open from the review:** biped limb taper, hands and a breaking shape per family (C5). (Mushroom faces under their caps: fixed 2026-10-31.)
+- **Still open:** at sheet size the bigger wings make a dragon's body small in its tile, and all four dragon species share one silhouette.
 - **Coverage.** The rarer body plans (aberrations, swarms, cephalopods, plants) are simpler than the quadrupeds and bipeds. The giants (Behemoth Ascendant, Hive Mother) are modelled at their true size, up to 2 km.

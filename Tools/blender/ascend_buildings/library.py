@@ -55,7 +55,7 @@ def clear_scene():
                 block.remove(x)
 
 
-def build_region(region, out_dir, sheet_dir=None, seed=1, detail="high", previews=True, extra_seeds=0):
+def build_region(region, out_dir, sheet_dir=None, seed=1, detail="high", previews=True, extra_seeds=0, toon=True):
     """Generates the region's catalogue into out_dir/<region>.blend. Returns (path, [objects])."""
     name, fam, _ = styles.REGIONS[region]
     col = bpy.data.collections.new("Buildings_%s" % region)
@@ -94,7 +94,28 @@ def build_region(region, out_dir, sheet_dir=None, seed=1, detail="high", preview
             objs.append(o)
     os.makedirs(out_dir, exist_ok=True)
     tiles = []
-    if previews or sheet_dir:
+    if toon:
+        try:
+            import toon_preview as tp                # Tools/blender on sys.path (the build scripts set it)
+        except ImportError:
+            print("[AB] toon_preview not importable; using the plain preview")
+            toon = False
+    if (previews or sheet_dir) and toon:
+        # The toon preview is the standard for sheets (style guide 3.1); it restores the scene so the .blend saves clean.
+        tmp_dir = os.path.join(out_dir, "_previews", region)
+        os.makedirs(tmp_dir, exist_ok=True)
+        toon_tiles = tp.render_tiles(objs, tmp_dir, kind="building", tile=(420, 320), yaw=-32, samples=16)
+        if previews:
+            for o, t in zip(objs, toon_tiles):
+                try:
+                    with bpy.context.temp_override(id=o):
+                        bpy.ops.ed.lib_id_load_custom_preview(filepath=t[0])
+                except Exception as e:  # previews are a convenience; the assets work without them
+                    print("[AB] preview failed for", o.name, e)
+        if sheet_dir:
+            os.makedirs(sheet_dir, exist_ok=True)
+            tp.sheet(toon_tiles, os.path.join(sheet_dir, "%s.png" % region), cols=6, tile=(420, 320))
+    elif previews or sheet_dir:                      # --plain: the old grey preview, for geometry debugging
         preview.setup(ground=True)
         tmp_dir = os.path.join(out_dir, "_previews", region)
         os.makedirs(tmp_dir, exist_ok=True)

@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,596 tris · 1.178 × 1.939 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in sun-brown. Survivors describe tusks, war paint and a dented iron axe. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
+> The Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Survivors describe tusks, war paint and a dented iron axe. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `dust_puffs` · palette `#a37c5f` `#6a523f` `#dfb183` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `dust_puffs` · palette `#79944e` `#526335` `#a0cb6b` · triangle-based silhouette, sharp asymmetric spikes

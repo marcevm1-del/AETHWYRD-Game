@@ -65,7 +65,8 @@ def main():
             t = time.time()
             library.clear_scene()
             path, objs = library.build_region(rid, out_dir, sheet_dir, seed=int(arg("--seed", 1)),
-                                              detail=arg("--detail", "high"), extra_seeds=int(arg("--variants", 1)) - 1)
+                                              detail=arg("--detail", "high"), extra_seeds=int(arg("--variants", 1)) - 1,
+                                              toon=not arg("--plain"))
             mb = os.path.getsize(path) / 1e6
             print("[AB] %-20s %2d buildings  %6.1f MB  %5.1fs  %s" % (rid, len(objs), mb, time.time() - t, path), flush=True)
     finally:

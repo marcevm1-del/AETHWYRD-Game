@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (3,172 tris · 1.296 × 1.639 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Meadow Orc Berserker is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in sun-brown, with pale jade markings. Guild sketches always show blood-red war paint and broken chains on its wrists. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
+> The Meadow Orc Berserker is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with pale jade markings. Guild sketches always show blood-red war paint and broken chains on its wrists. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `wind_ribbons` · palette `#8c6752` `#5b4437` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `wind_ribbons` · palette `#6c7f43` `#49562d` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

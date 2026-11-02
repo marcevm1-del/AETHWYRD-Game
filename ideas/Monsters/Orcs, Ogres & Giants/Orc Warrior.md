@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (3,182 tris · 1.138 × 1.439 × 2.1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Orc Warrior is a person-sized creature with a broad-shouldered humanoid build, about 2.1 m tall. Its hide is rough, scarred and spiked, colored in stone-grey. Guild sketches always show a fur mantle and rust-stained chain mail. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
+> The Orc Warrior is a person-sized creature with a broad-shouldered humanoid build, about 2.1 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Guild sketches always show a fur mantle and rust-stained chain mail. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `dust_puffs` · palette `#737882` `#4d5159` `#b1b8c8` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `dust_puffs` · palette `#698446` `#47592f` `#a0cb6b` · triangle-based silhouette, sharp asymmetric spikes

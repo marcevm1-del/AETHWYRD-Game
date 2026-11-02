@@ -1034,7 +1034,7 @@ def hard(c):
         ribcage(c)
     if getattr(b, "skull", False):
         skull_parts(c)
-    if b.kind == "dragon":
+    if b.kind == "dragon" and not set(c.look.parts) & {"stinger", "tail_spike"}:  # one tail tip each (review)
         dragon_spade(c)
     if b.kind == "biped":
         breaking_shapes(c)

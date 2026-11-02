@@ -928,21 +928,32 @@ def render_tiles(objs, tile_dir, kind="creature", tile=(320, 320), yaw=-35.0, pi
         log("TILE %s %.1fs fill %.0f%% '%s'" % (name, time.time() - t0, fill * 100, lab))
         out.append(rec)
     if restore_scene:
-        for x in made_all:
-            if x.get("tp_figure") or x.get("tp_ground"):
-                me = x.data
-                bpy.data.objects.remove(x, do_unlink=True)
-                if me.users == 0:
-                    bpy.data.meshes.remove(me)
-        restore([x for x in made_all if x.name in bpy.data.objects])
+        # Split first: reading .name on an object already removed raises ReferenceError (review finding 1).
+        helpers = [x for x in made_all if x.get("tp_figure") or x.get("tp_ground")]
+        keep = [x for x in made_all if not (x.get("tp_figure") or x.get("tp_ground"))]
+        for x in helpers:
+            me = x.data
+            bpy.data.objects.remove(x, do_unlink=True)
+            if me is not None and me.users == 0:
+                bpy.data.meshes.remove(me)
+        restore(keep)
         _restore_state(sc, state)
     return out
 
 
 def _scene_state(sc):
     vs = sc.view_settings
+    ee = {}
+    for k in dir(sc.eevee):                              # every plain EEVEE setting, so a saved library is unchanged
+        if not k.startswith("_") and k not in ("bl_rna", "rna_type"):
+            try:
+                v = getattr(sc.eevee, k)
+            except Exception:
+                continue
+            if isinstance(v, (bool, int, float, str)):
+                ee[k] = v
     return dict(world=sc.world, engine=sc.render.engine, vt=vs.view_transform, look=vs.look, exp=vs.exposure,
-                gamma=vs.gamma, camera=sc.camera)
+                gamma=vs.gamma, camera=sc.camera, had_cam=bpy.data.objects.get("AB_Cam") is not None, eevee=ee)
 
 
 def _restore_state(sc, s):
@@ -956,6 +967,19 @@ def _restore_state(sc, s):
     sc.view_settings.exposure = s["exp"]
     sc.view_settings.gamma = s["gamma"]
     sc.camera = s["camera"]
+    for k, v in s.get("eevee", {}).items():
+        try:
+            setattr(sc.eevee, k, v)
+        except Exception:
+            pass
+    cam = bpy.data.objects.get("AB_Cam")
+    if cam is not None and not s.get("had_cam", True):   # the camera this preview created goes too
+        if sc.camera is cam:
+            sc.camera = None
+        data = cam.data
+        bpy.data.objects.remove(cam, do_unlink=True)
+        if data is not None and data.users == 0:
+            bpy.data.cameras.remove(data)
     sun = bpy.data.objects.get(PREFIX + "Sun")
     if sun is not None:
         bpy.data.objects.remove(sun, do_unlink=True)

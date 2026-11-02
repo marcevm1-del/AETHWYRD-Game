@@ -94,7 +94,7 @@ if args.plain:
         o.location = (0.0, 0.0, home.z)
         bpy.context.view_layer.update()
         p = os.path.join(tmp, o.name + ".png")
-        preview.camera([o], yaw=args.yaw, pitch=pitch, margin=tp.MARGIN)
+        preview.camera([o], yaw=args.yaw, pitch=pitch, margin=tp.MARGIN, aspect=1.0)
         t = time.time()
         preview.render(p, (TS, TS), args.samples)
         lo, hi = preview.bounds([o])

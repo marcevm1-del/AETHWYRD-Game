@@ -307,7 +307,7 @@ REGIONS = {
         band="none", extras=("runes", "lanterns", "buttresses", "bronze_bands"), window_glass="window_glow",
         roof_keys=("roof_a", "roof_a", "roof_b"), ember_cap=True, forge_mouth=True,
         # review N1: dark, cool water #5E8FA8, so the fountain contrasts with the forge glow
-        palette={"roof_b": (0.72, 0.45, 0.20), "window_glow": (1.0, 0.55, 0.15), "ember": (1.0, 0.55, 0.15),
+        palette={"roof_b": (0.48, 0.17, 0.03), "window_glow": (1.0, 0.55, 0.15), "ember": (1.0, 0.55, 0.15),
                  "water": (0.37, 0.56, 0.66)})),
     "moraveil": ("Moraveil", "storybook", dict(palette={"wall_a": (0.92, 0.84, 0.62), "roof_a": (0.62, 0.36, 0.20)})),
     "strife_marches": ("Strife Marches", "storybook", dict(ground_walls="rubble", roof_keys=("roof_d", "roof_b"),

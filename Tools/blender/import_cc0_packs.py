@@ -172,7 +172,7 @@ def main():
             p = os.path.join(tmp, o.name + ".png")
             for other in objs:
                 other.hide_render = other is not o
-            preview.camera([o], yaw=-32, pitch=20, margin=1.25)
+            preview.camera([o], yaw=-32, pitch=20, margin=1.25, aspect=240 / 320)
             preview.render(p, (320, 240), 8)
             tiles.append(p)
             try:

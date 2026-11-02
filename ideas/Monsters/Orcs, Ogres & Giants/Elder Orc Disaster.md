@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,182 tris · 5.497 × 3.379 × 6.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Orc Disaster is a huge creature with a massive hunched brute frame, about 6.4 m tall. Its hide is rough, scarred and spiked, colored in sun-brown, with violet markings. Guild sketches always show a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. The air distorts slightly around its outline. It charges without hesitation, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Orc Disaster is a huge creature with a massive hunched brute frame, about 6.4 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Guild sketches always show a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. The air distorts slightly around its outline. It charges without hesitation, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#a1865e` `#68583f` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#6c924d` `#496234` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

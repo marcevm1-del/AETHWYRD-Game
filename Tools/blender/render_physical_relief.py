@@ -44,7 +44,7 @@ D = json.load(open(os.path.join(REPO, "Data", "World", "physical_map.json"), enc
 W, H, CK = D["grid"]["width"], D["grid"]["height"], D["grid"]["cellKm"]
 elev = np.array(D["elevation"]["rows"], dtype=np.float64)          # (H, W) metres
 biome = np.array([list(r) for r in D["biomes"]["rows"]])           # (H, W) chars
-CODES = "0123456789abcdefghijklmnopqrstuvwxyzABC"
+CODES = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"  # = REG_CH in build_physical_map.js
 reg_rows = D["regions"]["rows"]
 region = np.array([[CODES.find(c) if c != "." else -1 for c in r] for r in reg_rows], dtype=np.int32)
 LEGEND = D["regions"]["legend"]
