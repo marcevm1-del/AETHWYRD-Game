@@ -269,6 +269,9 @@ def paint(verts, normals, curv, look, body):
             m = smooth(vals, 0.6, 0.8)
         else:
             m = smooth(vals, 0.1, 0.35) * 0.4
+        if getattr(body, "eye_snap", False) and body.kind == "plant":  # mushrooms: keep the painted spots off the face
+            fc = np.array(body.head + body.face.normalized() * body.head_r * 0.8)
+            m = m * smooth(np.linalg.norm(verts - fc, axis=1), body.head_r * 0.9, body.head_r * 1.3)
         tgt = dark if look.pattern != "spots" else (accent if look.spot_light else dark)
         col = col * (1 - m[:, None]) + tgt * m[:, None]
     # creases darker (a baked cavity), ridges a touch lighter

@@ -98,6 +98,8 @@ class Look:
         self.vfx = rec.get("vfx", "")
         self.family = species.get("family", "")
         self.rank = rec.get("rankOrnament", "F")
+        self.size = float(o.get("size") or species.get("sizeMeters") or 1.0)  # metres, for real-world minimums
+        self.glow_iris = None  # a plan may set a glowing iris colour (linear RGB); defaults to the element glow
 
     def palette(self):
         """Colours for the hard-surface parts (keys used by features.py)."""
@@ -112,5 +114,8 @@ class Look:
             "iris": g if self.eye_style in ("glow", "slit") else tuple(min(1, c * 1.1) for c in self.accent),
             "mouth": (0.25, 0.05, 0.06), "teeth": (0.95, 0.92, 0.84), "tongue": (0.75, 0.25, 0.3),
             "gold": (1.0, 0.72, 0.22), "gem": g, "glow": g, "crystal": g, "membrane": tuple(c * 0.8 for c in self.dark),
+            # fixed colours from the design review (2026-10-31): glowing irises, skull sockets and bone, loincloth
+            "glow_iris": self.glow_iris or g, "socket": hex_lin("#2A2238"), "skull_bone": hex_lin("#E8DFC8"),
+            "loin": hex_lin("#8A5A35"), "loin_hem": hex_lin("#5A3820"),
             "feather": self.main, "feather_tip": self.dark, "petal": self.accent, "spore": self.accent, "ink": (0.05, 0.05, 0.07),
         }
