@@ -13,7 +13,7 @@ tags: [monster, sandborne]
 
 > [!note] 3D model: procedural blockout in Unity (2,812 tris · 0.193 × 0.8 × 0.297 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Sand Skink is a small creature with a compact quadruped frame, about 0.8 m long. Its sand-scoured hide is weathered and natural, colored in ochre, clay and mossy stone. Look for sand-colored scales and a tongue that tastes for water. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Sand Skink is a small creature with a compact quadruped frame, about 0.8 m long. Its sand-scoured hide is weathered and natural, colored in sunbaked clay, with ochre markings. Look for sand-colored scales and a tongue that tastes for water. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `sand_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `sand_hide` · VFX `rock_debris` · palette `#a36e45` `#6b462c` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

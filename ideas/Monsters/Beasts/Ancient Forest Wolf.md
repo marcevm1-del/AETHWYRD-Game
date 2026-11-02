@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,824 tris · 0.694 × 1.8 × 1.566 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Forest Wolf is a person-sized creature with a powerful four-legged hunter's body, about 1.8 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Its most striking feature is a grey-green coat that blends with ferns. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Forest Wolf is a person-sized creature with a powerful four-legged hunter's body, about 1.8 m long. Its coat is weathered and natural, colored in dark brown. Its most striking feature is a grey-green coat that blends with ferns. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#5e5040` `#433830` `#886e5d` · real-animal silhouette with one fantasy exaggeration

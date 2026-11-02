@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,194 tris · 4.173 × 7.676 × 10 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Alley Abyss Herald is a huge creature with a lean humanoid frame, about 10 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in muted greys and dusty browns. Guild sketches always show a tall figure with a void where its face should be. It has eyes that never blink. The air distorts slightly around its outline. It glides without moving its legs. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
+> The Alley Abyss Herald is a huge creature with a lean humanoid frame, about 10 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in char-black. Guild sketches always show a tall figure with a void where its face should be. It has eyes that never blink. The air distorts slightly around its outline. It glides without moving its legs. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `dust_puffs` · palette `#4a4856` `#3d3b46` `#716b80` · elongated, irregular silhouette; still-then-sudden timing

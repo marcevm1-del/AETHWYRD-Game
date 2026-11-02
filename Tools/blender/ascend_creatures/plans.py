@@ -6,6 +6,7 @@ creatures are rounder, spiky ones hunch forward, elongated ones stretch, broken 
 import math
 
 from .body import V
+from .looks import hex_lin
 
 
 def _j(b, x, amt=0.08):
@@ -13,17 +14,33 @@ def _j(b, x, amt=0.08):
     return x * (1 + b.rng.uniform(-amt, amt))
 
 
-def leg(b, hip, knee, foot, r0, r1, foot_size=None):
-    b.chain([hip, knee, foot], [r0, (r0 + r1) / 2, r1])
+def leg(b, hip, knee, foot, r0, r1, foot_size=None, taper=False):
+    # Tapered, with a thigh swell a third of the way down (design review C5: limbs were tubes of one thickness).
+    # taper=True (bipeds, review 2026-10-31): a visible taper, thigh >= 1.3x shin: narrow knee, thinner ankle.
+    if taper:
+        b.chain([hip, knee, foot], [r0, r1 * 0.95, r1 * 0.72])
+        b.ball(V(hip).lerp(V(knee), 0.32), r0 * 1.15)
+    else:
+        b.chain([hip, knee, foot], [r0, r0 * 0.38 + r1 * 0.62, r1])
+        b.ball(V(hip).lerp(V(knee), 0.35), r0 * 1.08)
     if foot_size:
         b.ellip(V(foot) + V(0, -foot_size[1] * 0.45, -foot_size[2] * 0.3), foot_size)
     b.hips.append(V(hip))
     b.feet.append(V(foot))
 
 
-def arm(b, sh, el, hand, r0, r1, fist):
-    b.chain([sh, el, hand], [r0, (r0 + r1) / 2, r1])
-    b.ball(hand, fist)
+def arm(b, sh, el, hand, r0, r1, fist, taper=False):
+    # Tapered with an upper-arm swell, and a mitten hand with a thumb instead of a ball (design review C5).
+    if taper:  # bipeds: upper arm >= 1.3x forearm, thin wrist
+        b.chain([sh, el, hand], [r0, r1 * 0.95, r1 * 0.72])
+        b.ball(V(sh).lerp(V(el), 0.4), r0 * 1.15)
+    else:
+        b.chain([sh, el, hand], [r0, r0 * 0.38 + r1 * 0.62, r1])
+        b.ball(V(sh).lerp(V(el), 0.4), r0 * 1.08)
+    d = (V(hand) - V(el)).normalized()
+    b.ball(hand, fist * 0.85)
+    b.ball(V(hand) + d * fist * 0.75, fist * 0.72)
+    b.ball(V(hand) + d * fist * 0.15 + V(0, -fist * 0.7, 0), fist * 0.38)  # thumb, forward
     b.shoulders.append(V(sh))
     b.hands.append(V(hand))
 
@@ -47,11 +64,12 @@ def biped(b, look, build="medium"):
         b.ellip(b.head, (hr, hr * 0.95, hr * 0.92))
         b.chain([(0, -hunch * 0.6, 0.55), b.head], 0.07 * lm)
         for s in (-1, 1):
-            leg(b, (s * 0.07, 0, 0.3), (s * 0.085, -0.02, 0.16), (s * 0.09, -0.01, 0.045), 0.06 * lm, 0.045 * lm, (0.06, 0.1, 0.04))
+            leg(b, (s * 0.07, 0, 0.3), (s * 0.085, -0.02, 0.16), (s * 0.09, -0.01, 0.045), 0.06 * lm, 0.045 * lm, (0.06, 0.1, 0.04), taper=True)
             arm(b, (s * 0.15 * bk, -hunch * 0.5, 0.55), (s * 0.21 * bk, -0.02 - hunch, 0.55 - 0.13 * st), (s * 0.23 * bk, -0.06 - hunch * 1.5, 0.55 - 0.25 * st),
-                0.045 * lm, 0.036 * lm, 0.05 * lm)
+                0.045 * lm, 0.036 * lm, 0.05 * lm, taper=True)
         b.neck, b.torso_r = V(0, -hunch * 0.5, 0.6), 0.15 * bk
         b.eye_size, b.eye_spread = 0.22, 27
+        b.hip_w = 0.25 * bk
     elif build == "large":  # ogres, trolls, minotaurs: small head, huge shoulders, long arms
         hr = _j(b, 0.1) * hm
         b.head, b.head_r = V(0, -0.1 - hunch, 0.83), hr
@@ -61,38 +79,79 @@ def biped(b, look, build="medium"):
         b.ellip(b.head, (hr, hr * 1.05, hr * 0.95))
         b.chain([(0, -0.05, 0.74), b.head], 0.09 * lm)
         for s in (-1, 1):
-            leg(b, (s * 0.1 * bk, 0, 0.34), (s * 0.12 * bk, -0.03, 0.19), (s * 0.13 * bk, -0.02, 0.05), 0.095 * lm, 0.07 * lm, (0.085, 0.12, 0.05))
+            leg(b, (s * 0.1 * bk, 0, 0.34), (s * 0.12 * bk, -0.03, 0.19), (s * 0.13 * bk, -0.02, 0.05), 0.095 * lm, 0.07 * lm, (0.085, 0.12, 0.05), taper=True)
             arm(b, (s * 0.27 * bk, -0.02, 0.73), (s * 0.35 * bk, -0.03 - hunch, 0.73 - 0.23 * st), (s * 0.37 * bk, -0.08 - hunch * 1.5, 0.73 - 0.49 * st),
-                0.09 * lm, 0.07 * lm, 0.095 * lm)
+                0.09 * lm, 0.07 * lm, 0.095 * lm, taper=True)
             b.ball((s * 0.25 * bk, -0.01, 0.75), 0.11 * lm)   # shoulder mass
         b.neck, b.torso_r = V(0, -0.05, 0.76), 0.24 * bk
         b.eye_size, b.eye_spread = 0.22, 32
+        b.hip_w = 0.34 * bk
     else:  # human-sized
         hr = _j(b, 0.085) * hm
         b.head, b.head_r = V(0, -0.01 - hunch, 0.905 - hunch * 0.5), hr
-        b.ellip((0, -hunch * 0.4, 0.67), (0.13 * bk, 0.09 * bk, 0.12))
-        b.ellip((0, 0, 0.53), (0.1 * bk, 0.075 * bk, 0.08))
-        b.ellip((0, 0.005, 0.45), (0.115 * bk, 0.085 * bk, 0.07))
-        if P["thin"]:  # skeletons and scarecrows: a ribcage of hoops over a thin spine
+        bony = P["thin"] and any(w in look.name.lower() for w in ("skelet", "bone", "lich", "ossu"))
+        if bony:  # spine, collarbones and a small pelvis; the ribs are hard parts
+            b.chain([(0, 0.02, 0.46), (0, 0.03, 0.6), (0, 0.0, 0.77)], [0.022, 0.02, 0.02])
+            b.chain([(-0.16 * bk, 0, 0.75), (0, -0.01, 0.77), (0.16 * bk, 0, 0.75)], 0.016)
+        else:
+            b.ellip((0, -hunch * 0.4, 0.67), (0.13 * bk, 0.09 * bk, 0.12))
+        b.ellip((0, 0, 0.53), (0.1 * bk, 0.075 * bk, 0.08)) if not bony else b.ball((0, 0.01, 0.47), 0.05)
+        if not bony:
+            b.ellip((0, 0.005, 0.45), (0.115 * bk, 0.085 * bk, 0.07))
+        if P["thin"] and any(w in look.name.lower() for w in ("skelet", "bone", "lich", "ossu")):
+            # Skeletons: an open ribcage of bone bars (features.ribcage) over a thin spine, not hoops melted into a
+            # solid torso, so the background shows through (design review C5).
+            b.ribcage = (V(0, 0.0, 0.58), V(0, 0.0, 0.76), 0.11 * bk)
+        elif P["thin"]:  # scarecrows and living armour: a ribcage of hoops over a thin spine
             for k in range(4):
                 b.ellip((0, -0.01, 0.6 + k * 0.045), (0.11 * bk, 0.075, 0.016))
-        b.ellip(b.head, (hr, hr * 1.05, hr * 1.08))
+        if not bony:
+            b.ellip(b.head, (hr, hr * 1.05, hr * 1.08))
         b.chain([(0, -hunch * 0.5, 0.77), b.head], 0.042 * lm)
         for s in (-1, 1):
-            leg(b, (s * 0.065, 0, 0.44), (s * 0.068, -0.012, 0.245), (s * 0.072, 0.0, 0.05), 0.058 * lm, 0.036 * lm, (0.042, 0.085, 0.032))
+            leg(b, (s * 0.065, 0, 0.44), (s * 0.068, -0.012, 0.245), (s * 0.072, 0.0, 0.05), 0.058 * lm, 0.036 * lm, (0.042, 0.085, 0.032), taper=True)
             arm(b, (s * 0.165 * bk, -hunch * 0.4, 0.74), (s * 0.21 * bk, 0.01 - hunch, 0.74 - 0.18 * st), (s * 0.225 * bk, -0.03 - hunch * 2, 0.74 - 0.35 * st),
-                0.042 * lm, 0.03 * lm, 0.036 * lm)
+                0.042 * lm, 0.03 * lm, 0.036 * lm, taper=True)
         b.neck, b.torso_r = V(0, -hunch * 0.4, 0.78), 0.13 * bk
         b.eye_size, b.eye_spread = 0.27, 28
+        b.hip_w = 0.23 * bk
+        if bony:
+            skull(b, look)
     if P["snout"] > 0:  # beast heads: a muzzle (werewolves, lizardmen, minotaurs, gnolls)
         hr = b.head_r
         b.snout = b.head + V(0, -hr * (0.75 + 0.45 * P["snout"]), -hr * 0.3)
         b.ellip(b.snout, (hr * 0.5, hr * (0.4 + 0.45 * P["snout"]), hr * 0.45))
-        b.eye_spread, b.eye_up = 36, 20
+        b.eye_spread, b.eye_up = 36, 12  # above the muzzle, not on the forehead (design review C1.3; was 20)
+        if "werewolf" in look.name.lower():
+            # Review 2026-10-31 C1: the eyes were 2-3 px violet dots buried in the skull swell. Now 0.26 hr, snapped
+            # onto the real surface, a glowing amber iris (B+ treatment) under a brow ridge 0.15 hr deep.
+            b.eye_size, b.eye_snap, b.eye_style = 0.26, True, "glow_iris"
+            b.brow = 0.15
+            look.glow_iris = hex_lin("#FFB347")
     b.spine = [b.neck + V(0, b.torso_r * 0.7, 0), V(0, b.torso_r * 0.75, b.neck.z * 0.65), V(0, b.torso_r * 0.7, b.hips[0].z + 0.02)]
     b.tail_root, b.tail_dir = V(0, b.torso_r * 0.7, b.hips[0].z), V(0, 1, -0.3).normalized()
     b.wing_root = V(0, b.torso_r * 0.8, b.neck.z - 0.08)
     b.mouth = (b.snout + V(0, -b.head_r * 0.35, -b.head_r * 0.15)) if b.snout else b.head + V(0, -b.head_r * 0.92, -b.head_r * 0.42)
+    b.leg_len = b.hips[0].z - b.feet[0].z
+    if getattr(b, "skull", False):
+        b.mouth = None  # features.skull_parts draws the teeth and the separate jaw
+
+
+def skull(b, look):
+    """Skeletons (review 2026-10-31 C1): a skull, not a mannequin head. Cranium, a narrower upper face, cheekbones and
+    two carved sockets; features.skull_parts adds the dark sockets (r 0.22 hr) with a glow point (r 0.12 hr) and a
+    jaw separated by a 0.05 hr gap. No nose, no lids; bone #E8DFC8."""
+    hr, h = b.head_r, b.head
+    b.skull = True
+    b.ellip(h + V(0, hr * 0.12, hr * 0.15), (hr * 0.95, hr * 1.02, hr * 0.92))          # cranium
+    b.ellip(h + V(0, -hr * 0.42, -hr * 0.38), (hr * 0.6, hr * 0.5, hr * 0.42))          # upper face / maxilla
+    for s in (-1, 1):
+        b.ball(h + V(s * hr * 0.52, -hr * 0.55, -hr * 0.22), hr * 0.2)                  # cheekbones
+    b.eye_size, b.eye_spread, b.eye_up = 0.22, 30, 4
+    b.eye_style, b.eye_snap = "socket", True
+    for p, d, r in b.eye_points():
+        b.ball(p + d * r * 0.4, r * 1.25, neg=True)                                     # carved sockets
+    look.main = hex_lin("#E8DFC8")
 
 
 def headless(b, look):
@@ -174,7 +233,10 @@ def quad(b, look, build="large"):
             leg(b, (s * hx, hy, zc - br * 0.3), (s * (hx + splay), hy + 0.06 * legf, lg * 0.5), (s * (hx + splay * 1.3), hy + 0.01, 0.035),
                 r0 * 1.12, r1, (r1 * 1.25, r1 * 1.7, r1 * 0.85))
     b.torso_r, b.neck = br, neck0 + V(0, -nl * 0.4, nl * 0.4)
-    b.eye_size, b.eye_spread, b.eye_up = (0.3 if small else 0.24), (46 if small else 40), (15 if not low else 30)
+    # Bigger, forward-set eyes so they read from the 3/4 camera (design review C1.2; was 0.24/0.30, 40/46 deg, 15 deg up).
+    # The metaball skull swells past head_r where the neck and muzzle join, so the eyes sit further out to stay on the surface.
+    b.eye_size, b.eye_spread, b.eye_up = (0.36 if small else 0.30), (34 if small else 30), (12 if not low else 20)
+    b.eye_out = 1.0
     b.spine = [neck0 + V(0, 0, br * 0.5), V(0, yc, zc + br * 0.9), V(0, (yc + yh) / 2, zc + br * 0.85), V(0, yh, zc + br * 0.9)]
     b.tail_root = V(0, yh + br * 0.8, zc + br * 0.25)
     b.face = V(0, -1, -0.05).normalized()
@@ -338,42 +400,66 @@ def flyer_small(b, look):
     b.hands = b.feet
 
 
+def _dleg(b, pts, r0, r1, foot):
+    """A dragon leg as a jointed chain (hip, knee, [hock], toe) with a haunch swell and a foot."""
+    pts = [V(p) for p in pts]
+    b.chain(pts, [r0] + [r0 + (r1 - r0) * (i + 1) / (len(pts) - 1) for i in range(len(pts) - 1)])
+    b.ball(pts[0].lerp(pts[1], 0.35), r0 * 1.15)
+    b.ellip(pts[-1] + V(0, -foot[1] * 0.45, -foot[2] * 0.3), foot)
+    b.hips.append(pts[0])
+    b.feet.append(pts[-1])
+
+
 def dragon(b, look, wyvern=False):
-    """Dragons and wyverns: a heavy low body, a forward S-neck, a big horned wedge head and a long tapering tail."""
+    """Dragons and wyverns (design review 2026-10-31 C3): a deep chest, a rising S-neck, a big horned wedge head,
+    digitigrade hind legs with heavy thighs (1.4x the forelimb radius), forelegs 0.8x the hind leg height so the back
+    slopes down to the shoulders, a tail longer than the body ending in a spade, and wings spanning >= 2.2x the
+    creature's nose-to-tail length (features.wings)."""
     b.kind = "dragon"
+    fr = 0.07                       # forelimb radius; hind thighs are 1.4x
     if wyvern:  # two legs, the wings are its arms
-        b.ellip((0, 0.0, 0.46), (0.15, 0.27, 0.15), rot=(-18, 0, 0))
-        b.ball((0, -0.16, 0.52), 0.14)
-        for s in (-1, 1):
-            leg(b, (s * 0.11, 0.1, 0.4), (s * 0.15, -0.02, 0.24), (s * 0.13, 0.04, 0.04), 0.1, 0.045, (0.06, 0.1, 0.035))
-        neck = [(0, -0.22, 0.58), (0, -0.36, 0.7), (0, -0.5, 0.74)]
-        z0 = 0.46
+        b.ellip((0, 0.0, 0.48), (0.15, 0.27, 0.15), rot=(-12, 0, 0))
+        b.ball((0, -0.16, 0.53), 0.14)
+        b.ball((0, 0.17, 0.48), 0.13)
+        for s in (-1, 1):  # hip, knee forward, hock back and up, toes
+            _dleg(b, [(s * 0.11, 0.1, 0.44), (s * 0.16, -0.03, 0.29), (s * 0.15, 0.12, 0.13), (s * 0.14, 0.06, 0.035)],
+                  fr * 1.4, fr * 0.5, (0.06, 0.1, 0.035))
+        neck = [(0, -0.22, 0.6), (0, -0.34, 0.74), (0, -0.4, 0.88), (0, -0.52, 0.94)]
+        tail = [(0, 0.3, 0.47), (0.03, 0.5, 0.41), (0.1, 0.7, 0.3), (0.17, 0.9, 0.2), (0.2, 1.1, 0.13), (0.17, 1.3, 0.1)]
+        z0 = 0.48
     else:
-        b.ball((0, -0.17, 0.38), 0.16)
-        b.ellip((0, 0.04, 0.38), (0.15, 0.25, 0.14))
-        b.ball((0, 0.24, 0.4), 0.14)
+        b.ball((0, -0.17, 0.4), 0.17)   # deep chest, now lower than the haunches so the back slopes
+        b.ellip((0, 0.04, 0.43), (0.15, 0.25, 0.15), rot=(8, 0, 0))
+        b.ball((0, 0.25, 0.46), 0.15)   # high haunches
+        hind_h = 0.42
         for s in (-1, 1):
-            leg(b, (s * 0.1, -0.2, 0.33), (s * 0.15, -0.24, 0.16), (s * 0.14, -0.27, 0.035), 0.08, 0.045, (0.06, 0.08, 0.035))
-            leg(b, (s * 0.11, 0.26, 0.36), (s * 0.15, 0.34, 0.19), (s * 0.14, 0.28, 0.035), 0.095, 0.045, (0.06, 0.08, 0.035))
-        neck = [(0, -0.28, 0.45), (0, -0.42, 0.56), (0, -0.56, 0.6)]
-        z0 = 0.4
-    b.chain(neck, [0.11, 0.07])
+            # forelegs: shoulder at 0.8x the hip height; elbow back, wrist forward
+            _dleg(b, [(s * 0.1, -0.2, hind_h * 0.8), (s * 0.15, -0.11, 0.2), (s * 0.15, -0.24, 0.08), (s * 0.15, -0.27, 0.035)],
+                  fr, fr * 0.6, (0.06, 0.08, 0.035))
+        for s in (-1, 1):
+            # digitigrade hind legs: hip, knee forward, hock back and up, toes
+            _dleg(b, [(s * 0.12, 0.27, hind_h), (s * 0.17, 0.16, 0.27), (s * 0.16, 0.33, 0.14), (s * 0.15, 0.27, 0.035)],
+                  fr * 1.4, fr * 0.55, (0.065, 0.09, 0.035))
+        neck = [(0, -0.28, 0.48), (0, -0.4, 0.62), (0, -0.46, 0.78), (0, -0.58, 0.88)]  # a long S-curve
+        tail = [(0, 0.36, 0.47), (0.03, 0.56, 0.4), (0.1, 0.76, 0.28), (0.17, 0.95, 0.17), (0.2, 1.15, 0.11), (0.17, 1.36, 0.09)]
+        z0 = 0.43
+    b.chain(neck, [0.115, 0.065])
     hr = 0.1
     b.head, b.head_r = V(neck[-1]) + V(0, -0.07, 0.03), hr
     b.ellip(b.head, (hr * 0.95, hr * 1.15, hr * 0.85))
     b.snout = b.head + V(0, -hr * 1.3, -hr * 0.22)
     b.ellip(b.snout, (hr * 0.62, hr * 1.0, hr * 0.5))
     b.ellip(b.head + V(0, -hr * 0.35, hr * 0.45), (hr * 0.7, hr * 0.6, hr * 0.25))  # brow ridge
-    tail = [(0, 0.34, z0 + 0.02), (0.04, 0.55, z0 - 0.08), (0.12, 0.74, z0 - 0.2), (0.16, 0.92, z0 - 0.3), (0.1, 1.08, z0 - 0.34)]
-    b.chain(tail, [0.1, 0.012])
+    b.chain(tail, [0.105, 0.014])
     b.torso_r, b.neck = 0.15, V(neck[1])
     b.face = V(0, -1, -0.05).normalized()
     b.eye_size, b.eye_spread, b.eye_up = 0.2, 40, 26
-    b.spine = [V(neck[1]) + V(0, 0, 0.08), V(0, -0.12, z0 + 0.15), V(0, 0.08, z0 + 0.15), V(0, 0.28, z0 + 0.13), V(0.04, 0.55, z0 + 0.03),
-               V(0.12, 0.74, z0 - 0.12)]
-    b.tail_root, b.tail_dir = V(tail[-1]), V(-0.2, 1, -0.1).normalized()
-    b.wing_root = V(0, -0.12, z0 + 0.15)
-    b.wing_span = 1.15 if not wyvern else 1.3
+    b.spine = [V(neck[1]) + V(0, 0, 0.08), V(0, -0.12, z0 + 0.13), V(0, 0.08, z0 + 0.15), V(0, 0.28, z0 + 0.16), V(tail[1]) + V(0, 0, 0.07),
+               V(tail[2]) + V(0, 0, 0.05)]
+    b.tail_root, b.tail_dir = V(tail[-1]), (V(tail[-1]) - V(tail[-2])).normalized()
+    b.tail_tip, b.tail_tip_dir = V(tail[-1]), b.tail_dir.copy()   # the spade sits here (features.dragon_spade)
+    b.wing_root = V(0, -0.13, z0 + 0.14)
+    b.wing_span = 2.5 if not wyvern else 2.4  # +80%: tip to tip >= 2.2x nose-to-tail length
     b.mouth = b.snout + V(0, -hr * 0.7, -hr * 0.2)
     b.hands = b.feet[:2]
 
@@ -486,6 +572,19 @@ def mimic(b, look):
     b.mouth = V(0, -0.2, 0.36)
 
 
+MUSHROOM_WORDS = ("mushroom", "puffcap", "fungus", "spore", "myc", "toadstool")
+
+
+def is_mushroom(look):
+    """Mushrooms are matched on the name only: generic body wording ("mushroom-capped walking body") is shared by treants."""
+    name = getattr(look, "name", "").lower()
+    return any(w in name for w in MUSHROOM_WORDS)
+
+
+def is_spore_lord(look):
+    return "spore lord" in getattr(look, "name", "").lower()
+
+
 def plant(b, look, walker=True):
     b.kind = "plant"
     if walker:
@@ -509,6 +608,22 @@ def plant(b, look, walker=True):
     b.tail_root, b.tail_dir = V(0, 0.12, 0.25), V(0, 1, 0)
     b.wing_root = b.head + V(0, 0, 0.08)
     b.mouth = b.head + V(0, -b.head_r * 0.9, -b.head_r * 0.3)
+    if is_mushroom(look):
+        # Mushroom folk: a round face under a raised cap (features.plant_crown lifts the rim above the brow), with big
+        # low-set eyes snapped onto the real skull surface so the preview camera (yaw -35, pitch 14) sees both.
+        b.head, b.head_r = b.head + V(0, -0.02, 0), 0.15  # a rounder, wider face than the plain stalk top
+        b.ball(b.head, b.head_r * 0.95)
+        b.eye_snap = True
+        if is_spore_lord(look):
+            # Spore Lords keep their teeth grin; their eyes get the glowing-iris treatment, no googly whites.
+            b.eye_size, b.eye_spread, b.eye_up = 0.3, 24, 4
+            b.eye_style = "glow_iris"
+        else:
+            # F-E mushrooms (review 2026-10-31): the slime/familiar row of art_direction 6.1. Dot eyes 0.36, 24 deg
+            # either side of the face axis, eye_up 0, and a tiny "o" mouth (features.mushroom_mouth).
+            b.eye_size, b.eye_spread, b.eye_up = 0.36, 24, 0
+            b.eye_style = "dot"
+        b.mouth = b.head + V(0, -b.head_r * 0.9, -b.head_r * 0.38)
 
 
 def swarm(b, look):

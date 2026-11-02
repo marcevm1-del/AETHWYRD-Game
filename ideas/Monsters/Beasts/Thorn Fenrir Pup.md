@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,832 tris · 0.387 × 1.5 × 0.872 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thorn Fenrir Pup is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its coat is weathered and natural, colored in leaf greens over bark brown. Look for frosted fur and breath that freezes the air. It has amber predator eyes. Faint runes glow along its body when it fights. It prowls, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Thorn Fenrir Pup is a person-sized creature with a heavy, muscular quadruped frame, about 1.5 m long. Its coat is weathered and natural, colored in warm brown, with leaf-green markings. Look for frosted fur and breath that freezes the air. It has amber predator eyes. Faint runes glow along its body when it fights. It prowls, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `pollen_petals` · palette `#806742` `#53402c` `#8fd16a` · real-animal silhouette with one fantasy exaggeration

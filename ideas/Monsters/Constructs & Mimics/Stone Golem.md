@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (940 tris · 2.939 × 1.816 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Stone Golem is a large creature with a blocky construct body, about 3 m tall. Its surface is weathered and natural, colored in ochre, clay and mossy stone. Look for a rune glowing on its back. It has dark, wary eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
+> The Stone Golem is a large creature with a blocky construct body, about 3 m tall. Its surface is weathered and natural, colored in riveted iron, with ochre markings. Look for a rune glowing on its back. It has dark, wary eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#666973` `#474a53` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

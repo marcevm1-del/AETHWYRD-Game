@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,238 tris · 2.748 × 1.662 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Deep Minotaur is a large creature with a giant, barrel-chested humanoid body, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a bull's head, a massive labrys axe and snorting breath. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
+> The Deep Minotaur is a large creature with a giant, barrel-chested humanoid body, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in tan, with violet markings. Guild sketches always show a bull's head, a massive labrys axe and snorting breath. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `short_hide` · VFX `shadow_wisps` · palette `#876a47` `#5b4630` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

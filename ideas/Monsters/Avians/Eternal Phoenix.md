@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,912 tris · 32.213 × 38.192 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Eternal Phoenix is a colossal creature with a broad-winged bird frame, about 30 m tall. Its plumage is smooth and clean, colored in ember reds fading to soot black. Survivors describe a sun-bright body that rises again from its own ash. It has wide curious eyes with star-shaped highlights. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It bounces happily, surrounded by heat-shimmer and drifting sparks.
+> The Eternal Phoenix is a colossal creature with a broad-winged bird frame, about 30 m tall. Its plumage is smooth and clean, colored in blue, with ember-orange markings. Survivors describe a sun-bright body that rises again from its own ash. It has wide curious eyes with star-shaped highlights. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It bounces happily, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · circle-based, soft silhouette
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `embers_heat_haze` · palette `#506cb5` `#364a7e` `#ff7a3d` · circle-based, soft silhouette

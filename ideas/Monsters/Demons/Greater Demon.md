@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,508 tris · 2.062 × 2.216 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Demon is a large creature with a lean humanoid frame, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is a noble's coat and a crown of horns. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by shadows that lean toward it.
+> The Greater Demon is a large creature with a lean humanoid frame, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in brimstone red, with violet markings. Its most striking feature is a noble's coat and a crown of horns. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `shadow_wisps` · palette `#992736` `#56242c` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

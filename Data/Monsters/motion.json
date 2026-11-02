@@ -21455,7 +21455,7 @@
    "speciesId": "mon_needle_wasp",
    "name": "Needle Wasp",
    "rigKey": "hexapod",
-   "rigVia": "keyword",
+   "rigVia": "override",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 0.3,
@@ -21742,13 +21742,22 @@
     "footstep": "chitin_tick",
     "vocalPitch": 1.44
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_hornet_lancer",
    "name": "Hornet Lancer",
    "rigKey": "hexapod",
-   "rigVia": "keyword",
+   "rigVia": "override",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 1.2,
@@ -22034,7 +22043,16 @@
     "footstep": "chitin_tick",
     "vocalPitch": 0.95
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_tunnel_centipede",
@@ -50319,7 +50337,7 @@
    "speciesId": "mon_pixie",
    "name": "Pixie",
    "rigKey": "spirit_float",
-   "rigVia": "keyword",
+   "rigVia": "override",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 0.2,
@@ -50588,7 +50606,16 @@
     "footstep": "none",
     "vocalPitch": 1.62
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_salamander_spirit",
@@ -54837,57 +54864,67 @@
   {
    "speciesId": "mon_treant_sapling",
    "name": "Treant Sapling",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "large_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 2,
-   "prefabScale": 1,
+   "prefabScale": 0.571,
    "heightM": 2,
-   "lengthM": 0.8,
-   "widthM": 2.4,
+   "lengthM": 0.6,
+   "widthM": 0.84,
    "physics": {
-    "massKg": 168,
-    "gravityScale": 1,
-    "linearDrag": 1,
+    "massKg": 144,
+    "gravityScale": 1.3,
+    "linearDrag": 0.05,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 0.24,
+    "colliderRadius": 0.4,
     "colliderHeight": 2,
     "colliderAxis": "z",
-    "knockbackResist": 1,
-    "launchable": "false",
-    "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 72,
+    "knockbackResist": 0.81,
+    "launchable": "only_while_staggered",
+    "ragdoll": "partial",
+    "deathStyle": "heavy_fall_dust",
+    "poise": 138,
     "hitstopMult": 1.06,
     "footstepShake": 0
    },
    "navAgent": {
-    "radius": 1.2,
+    "radius": 0.42,
     "height": 2,
-    "speed": 0.4,
-    "walkSpeed": 0.4,
-    "angularSpeed": 127,
-    "acceleration": 1.96,
-    "stoppingDistance": 0.64,
+    "speed": 4.08,
+    "walkSpeed": 1.36,
+    "angularSpeed": 269,
+    "acceleration": 4.41,
+    "stoppingDistance": 0.8,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 0.4,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 1.36,
+      "froude": 0.2
+     },
+     {
+      "name": "run",
+      "speed": 3.04,
+      "froude": 1
+     },
+     {
+      "name": "knuckle_charge",
+      "speed": 4.08,
+      "froude": 1.8
      }
     ],
-    "playRate": 1,
-    "turnDegPerSec": 127,
-    "accel": 1.96,
-    "jumpHeight": 0,
+    "playRate": 1.323,
+    "turnDegPerSec": 269,
+    "accel": 4.41,
+    "jumpHeight": 0.3,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "true",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -54921,9 +54958,9 @@
    "behavior": {
     "name": "Territorial",
     "aiPattern": "territorial_guard",
-    "alertRadius": 12,
-    "leashRadius": 15,
-    "preferredRange": 2.24,
+    "alertRadius": 9.07,
+    "leashRadius": 11.34,
+    "preferredRange": 2.4,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -54948,15 +54985,15 @@
      "recoverySec": 0.5,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 0.36,
      "lungeDistance": 0.9,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 17,
-      "active": 4,
-      "recovery": 15
+      "windup": 13,
+      "active": 3,
+      "recovery": 11
      },
      "notes": ""
     },
@@ -54970,15 +55007,15 @@
      "recoverySec": 0.91,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 0.36,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 42,
-      "active": 10,
-      "recovery": 27
+      "windup": 32,
+      "active": 7,
+      "recovery": 21
      },
      "notes": ""
     },
@@ -54992,15 +55029,15 @@
      "recoverySec": 0.5,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.36,
      "lungeDistance": 0.9,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 14,
-      "active": 4,
-      "recovery": 15
+      "windup": 11,
+      "active": 3,
+      "recovery": 11
      },
      "notes": ""
     },
@@ -55014,15 +55051,15 @@
      "recoverySec": 0.81,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.36,
      "lungeDistance": 0.56,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 25,
-      "active": 8,
-      "recovery": 24
+      "windup": 19,
+      "active": 6,
+      "recovery": 18
      },
      "notes": ""
     },
@@ -55036,165 +55073,200 @@
      "recoverySec": 0.61,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "horn_R",
      "hitboxRadius": 0.36,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 33,
-      "active": 7,
-      "recovery": 18
+      "windup": 25,
+      "active": 5,
+      "recovery": 14
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.306,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.306,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.459,
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.191,
      "damping": 0.3,
-     "gravity": 0
+     "gravity": 0.3
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 579,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_L",
+     "bone": "horn_L",
+     "hp": 463,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 579,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_R",
+     "bone": "horn_R",
+     "hp": 463,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
+     "partId": "weapon",
+     "bone": "weapon_R",
+     "hp": 964,
+     "materialTag": "weapon",
+     "onBreak": "disarm_grapple_mode"
+    },
+    {
+     "partId": "leg_L",
+     "bone": "thigh_L",
      "hp": 1157,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "materialTag": "",
+     "onBreak": "limp_knockdown"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
+     "shape": "sphere",
+     "radius": 0.16,
+     "dmgMult": 1.4,
+     "partId": "head"
+    },
+    {
+     "bone": "chest",
+     "shape": "capsule",
+     "radius": 0.34,
+     "height": 0.6,
+     "dmgMult": 1
+    },
+    {
+     "bone": "belly",
      "shape": "sphere",
      "radius": 0.3,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "dmgMult": 1.1
     },
     {
-     "bone": "stem_02",
+     "bone": "thigh_L",
      "shape": "capsule",
      "radius": 0.14,
-     "height": 0.6,
-     "dmgMult": 0.8
+     "height": 0.5,
+     "dmgMult": 0.9,
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_L",
+     "bone": "thigh_R",
      "shape": "capsule",
-     "radius": 0.06,
-     "height": 0.4,
-     "dmgMult": 1,
-     "partId": "vine_L"
+     "radius": 0.14,
+     "height": 0.5,
+     "dmgMult": 0.9,
+     "partId": "leg_R"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "forearm_L",
      "shape": "capsule",
-     "radius": 0.06,
+     "radius": 0.1,
      "height": 0.4,
-     "dmgMult": 1,
-     "partId": "vine_R"
+     "dmgMult": 0.8,
+     "partId": "arm_L"
+    },
+    {
+     "bone": "forearm_R",
+     "shape": "capsule",
+     "radius": 0.1,
+     "height": 0.4,
+     "dmgMult": 0.8,
+     "partId": "arm_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "heavy_breathing",
+    "footstep_camera_shake",
+    "ground_crack_decal_on_land",
     "fx:wind_sway",
     "fx:pollen"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.81
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_spore_lord",
    "name": "Spore Lord",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "large_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 3,
-   "prefabScale": 1.5,
+   "prefabScale": 0.857,
    "heightM": 3,
-   "lengthM": 1.2,
-   "widthM": 3.6,
+   "lengthM": 0.9,
+   "widthM": 1.26,
    "physics": {
-    "massKg": 567,
-    "gravityScale": 1,
-    "linearDrag": 1,
+    "massKg": 486,
+    "gravityScale": 1.3,
+    "linearDrag": 0.05,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 0.36,
+    "colliderRadius": 0.6,
     "colliderHeight": 3,
     "colliderAxis": "z",
-    "knockbackResist": 1,
-    "launchable": "false",
-    "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 149,
-    "hitstopMult": 1.13,
-    "footstepShake": 0.005
+    "knockbackResist": 0.84,
+    "launchable": "only_while_staggered",
+    "ragdoll": "partial",
+    "deathStyle": "heavy_fall_dust",
+    "poise": 188,
+    "hitstopMult": 1.12,
+    "footstepShake": 0.003
    },
    "navAgent": {
-    "radius": 1.8,
+    "radius": 0.63,
     "height": 3,
-    "speed": 0.5,
-    "walkSpeed": 0.5,
-    "angularSpeed": 104,
-    "acceleration": 1.86,
-    "stoppingDistance": 0.76,
+    "speed": 5.11,
+    "walkSpeed": 1.7,
+    "angularSpeed": 219,
+    "acceleration": 4.19,
+    "stoppingDistance": 1,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 0.5,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 1.7,
+      "froude": 0.2
+     },
+     {
+      "name": "run",
+      "speed": 3.81,
+      "froude": 1
+     },
+     {
+      "name": "knuckle_charge",
+      "speed": 5.11,
+      "froude": 1.8
      }
     ],
-    "playRate": 0.816,
-    "turnDegPerSec": 104,
-    "accel": 1.86,
-    "jumpHeight": 0,
+    "playRate": 1.08,
+    "turnDegPerSec": 219,
+    "accel": 4.19,
+    "jumpHeight": 0.45,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "true",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -55231,9 +55303,9 @@
    "behavior": {
     "name": "Passive",
     "aiPattern": "passive_wander+stalker",
-    "alertRadius": 9.8,
-    "leashRadius": 24.49,
-    "preferredRange": 7.71,
+    "alertRadius": 7.41,
+    "leashRadius": 18.52,
+    "preferredRange": 6.6,
     "circleRadius": 0,
     "retreatHpPct": 0.6,
     "notes": [
@@ -55258,15 +55330,15 @@
      "recoverySec": 0.59,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 0.54,
      "lungeDistance": 1.22,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 20,
-      "active": 6,
-      "recovery": 22
+      "windup": 15,
+      "active": 4,
+      "recovery": 17
      },
      "notes": ""
     },
@@ -55280,15 +55352,15 @@
      "recoverySec": 1.07,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 0.54,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 49,
-      "active": 15,
-      "recovery": 39
+      "windup": 37,
+      "active": 11,
+      "recovery": 30
      },
      "notes": ""
     },
@@ -55302,15 +55374,15 @@
      "recoverySec": 0.59,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.54,
      "lungeDistance": 1.22,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 17,
-      "active": 6,
-      "recovery": 22
+      "windup": 13,
+      "active": 4,
+      "recovery": 17
      },
      "notes": ""
     },
@@ -55324,15 +55396,15 @@
      "recoverySec": 0.95,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.54,
      "lungeDistance": 0.77,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 29,
-      "active": 12,
-      "recovery": 35
+      "windup": 22,
+      "active": 9,
+      "recovery": 26
      },
      "notes": ""
     },
@@ -55346,110 +55418,135 @@
      "recoverySec": 0.71,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "jaw",
      "hitboxRadius": 0.54,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 38,
-      "active": 10,
-      "recovery": 26
+      "windup": 29,
+      "active": 7,
+      "recovery": 20
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.48,
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.2,
      "damping": 0.3,
-     "gravity": 0
+     "gravity": 0.36
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 1310,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_L",
+     "bone": "horn_L",
+     "hp": 1048,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 1310,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_R",
+     "bone": "horn_R",
+     "hp": 1048,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
+     "partId": "weapon",
+     "bone": "weapon_R",
+     "hp": 2183,
+     "materialTag": "weapon",
+     "onBreak": "disarm_grapple_mode"
+    },
+    {
+     "partId": "leg_L",
+     "bone": "thigh_L",
      "hp": 2620,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "materialTag": "",
+     "onBreak": "limp_knockdown"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
+     "shape": "sphere",
+     "radius": 0.24,
+     "dmgMult": 1.4,
+     "partId": "head"
+    },
+    {
+     "bone": "chest",
+     "shape": "capsule",
+     "radius": 0.51,
+     "height": 0.9,
+     "dmgMult": 1
+    },
+    {
+     "bone": "belly",
      "shape": "sphere",
      "radius": 0.45,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "dmgMult": 1.1
     },
     {
-     "bone": "stem_02",
+     "bone": "thigh_L",
      "shape": "capsule",
      "radius": 0.21,
-     "height": 0.9,
-     "dmgMult": 0.8
+     "height": 0.75,
+     "dmgMult": 0.9,
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_L",
+     "bone": "thigh_R",
      "shape": "capsule",
-     "radius": 0.09,
-     "height": 0.6,
-     "dmgMult": 1,
-     "partId": "vine_L"
+     "radius": 0.21,
+     "height": 0.75,
+     "dmgMult": 0.9,
+     "partId": "leg_R"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "forearm_L",
      "shape": "capsule",
-     "radius": 0.09,
+     "radius": 0.15,
      "height": 0.6,
-     "dmgMult": 1,
-     "partId": "vine_R"
+     "dmgMult": 0.8,
+     "partId": "arm_L"
+    },
+    {
+     "bone": "forearm_R",
+     "shape": "capsule",
+     "radius": 0.15,
+     "height": 0.6,
+     "dmgMult": 0.8,
+     "partId": "arm_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "heavy_breathing",
+    "footstep_camera_shake",
+    "ground_crack_decal_on_land",
     "fx:slow_sway",
     "fx:bubbling"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.72
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_corpse_flower",
@@ -55765,57 +55862,62 @@
   {
    "speciesId": "mon_elder_treant",
    "name": "Elder Treant",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "giant_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 12,
-   "prefabScale": 6,
+   "prefabScale": 1.2,
    "heightM": 12,
-   "lengthM": 4.8,
-   "widthM": 14.4,
+   "lengthM": 4.08,
+   "widthM": 5.28,
    "physics": {
-    "massKg": 36288,
+    "massKg": 27648,
     "gravityScale": 1,
-    "linearDrag": 1,
+    "linearDrag": 0.02,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 1.44,
+    "colliderRadius": 2.16,
     "colliderHeight": 12,
     "colliderAxis": "z",
     "knockbackResist": 1,
     "launchable": "false",
     "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 1543,
-    "hitstopMult": 1.34,
+    "deathStyle": "cinematic_collapse",
+    "poise": 627,
+    "hitstopMult": 1.33,
     "footstepShake": 0.6
    },
    "navAgent": {
-    "radius": 7.2,
+    "radius": 2.64,
     "height": 12,
-    "speed": 1.03,
-    "walkSpeed": 1.03,
-    "angularSpeed": 60,
+    "speed": 5.53,
+    "walkSpeed": 2.77,
+    "angularSpeed": 87,
     "acceleration": 1.96,
-    "stoppingDistance": 1.84,
+    "stoppingDistance": 2.56,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 1.03,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 2.77,
+      "froude": 0.15
+     },
+     {
+      "name": "run",
+      "speed": 5.53,
+      "froude": 0.6
      }
     ],
-    "playRate": 0.408,
-    "turnDegPerSec": 60,
+    "playRate": 0.913,
+    "turnDegPerSec": 87,
     "accel": 1.96,
     "jumpHeight": 0,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "wade",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -55847,9 +55949,9 @@
    "behavior": {
     "name": "Passive",
     "aiPattern": "passive_wander",
-    "alertRadius": 19.6,
-    "leashRadius": 48.99,
-    "preferredRange": 16.14,
+    "alertRadius": 8.76,
+    "leashRadius": 21.91,
+    "preferredRange": 8.73,
     "circleRadius": 0,
     "retreatHpPct": 0.6,
     "notes": [
@@ -55874,15 +55976,15 @@
      "recoverySec": 0.91,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 3.07,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 61,
-      "active": 19,
-      "recovery": 67
+      "windup": 27,
+      "active": 9,
+      "recovery": 30
      },
      "notes": ""
     },
@@ -55896,15 +55998,15 @@
      "recoverySec": 1.63,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 2.16,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 148,
-      "active": 48,
-      "recovery": 120
+      "windup": 66,
+      "active": 22,
+      "recovery": 54
      },
      "notes": ""
     },
@@ -55918,15 +56020,15 @@
      "recoverySec": 0.91,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 3.07,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 51,
-      "active": 19,
-      "recovery": 67
+      "windup": 23,
+      "active": 9,
+      "recovery": 30
      },
      "notes": ""
     },
@@ -55940,15 +56042,15 @@
      "recoverySec": 1.45,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 1.92,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 88,
-      "active": 40,
-      "recovery": 107
+      "windup": 39,
+      "active": 18,
+      "recovery": 48
      },
      "notes": ""
     },
@@ -55962,165 +56064,173 @@
      "recoverySec": 1.09,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 115,
-      "active": 32,
-      "recovery": 80
+      "windup": 52,
+      "active": 14,
+      "recovery": 36
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.36,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.36,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.54,
-     "damping": 0.3,
-     "gravity": 0
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.18,
+     "damping": 0.35,
+     "gravity": 0.3
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 5296,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_L",
+     "bone": "calf_L",
+     "hp": 7061,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 5296,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_R",
+     "bone": "calf_R",
+     "hp": 7061,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
-     "hp": 10591,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "partId": "weakpoint",
+     "bone": "back_weakpoint",
+     "hp": 5296,
+     "materialTag": "",
+     "onBreak": "break_gauge_full"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
      "shape": "sphere",
-     "radius": 1.8,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "radius": 0.96,
+     "dmgMult": 1.4,
+     "partId": "head"
     },
     {
-     "bone": "stem_02",
+     "bone": "back_weakpoint",
+     "shape": "sphere",
+     "radius": 0.6,
+     "dmgMult": 3,
+     "partId": "weakpoint"
+    },
+    {
+     "bone": "chest",
      "shape": "capsule",
-     "radius": 0.84,
+     "radius": 2.04,
      "height": 3.6,
      "dmgMult": 0.8
     },
     {
-     "bone": "vine_03_L",
+     "bone": "calf_L",
      "shape": "capsule",
-     "radius": 0.36,
-     "height": 2.4,
+     "radius": 0.6,
+     "height": 2.64,
      "dmgMult": 1,
-     "partId": "vine_L"
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "calf_R",
      "shape": "capsule",
-     "radius": 0.36,
-     "height": 2.4,
+     "radius": 0.6,
+     "height": 2.64,
      "dmgMult": 1,
-     "partId": "vine_R"
+     "partId": "leg_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "footstep_camera_shake",
+    "shake_off_climber",
+    "slow_head_track",
     "fx:wind_sway",
     "fx:pollen"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.47
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_ancient_treant",
    "name": "Ancient Treant",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "giant_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 30,
-   "prefabScale": 15,
+   "prefabScale": 3,
    "heightM": 30,
-   "lengthM": 12,
-   "widthM": 36,
+   "lengthM": 10.2,
+   "widthM": 13.2,
    "physics": {
-    "massKg": 567000,
+    "massKg": 432000,
     "gravityScale": 1,
-    "linearDrag": 1,
+    "linearDrag": 0.02,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 3.6,
+    "colliderRadius": 5.4,
     "colliderHeight": 30,
     "colliderAxis": "z",
     "knockbackResist": 1,
     "launchable": "false",
     "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 6932,
+    "deathStyle": "cinematic_collapse",
+    "poise": 2817,
     "hitstopMult": 1.4,
     "footstepShake": 0.6
    },
    "navAgent": {
-    "radius": 15,
+    "radius": 6.6,
     "height": 30,
-    "speed": 1.89,
-    "walkSpeed": 1.89,
+    "speed": 10.13,
+    "walkSpeed": 5.06,
     "angularSpeed": 60,
     "acceleration": 1.96,
-    "stoppingDistance": 4,
+    "stoppingDistance": 5.8,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 1.89,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 5.06,
+      "froude": 0.15
+     },
+     {
+      "name": "run",
+      "speed": 10.13,
+      "froude": 0.6
      }
     ],
-    "playRate": 0.4,
+    "playRate": 0.577,
     "turnDegPerSec": 60,
     "accel": 1.96,
     "jumpHeight": 0,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "wade",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -56152,9 +56262,9 @@
    "behavior": {
     "name": "Ambush",
     "aiPattern": "ambush_strike",
-    "alertRadius": 15.49,
-    "leashRadius": 46.48,
-    "preferredRange": 7.47,
+    "alertRadius": 6.93,
+    "leashRadius": 20.78,
+    "preferredRange": 7.13,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -56179,15 +56289,15 @@
      "recoverySec": 0.87,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 60,
-      "active": 20,
-      "recovery": 65
+      "windup": 41,
+      "active": 14,
+      "recovery": 45
      },
      "notes": ""
     },
@@ -56201,15 +56311,15 @@
      "recoverySec": 1.56,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 5.4,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 145,
-      "active": 50,
-      "recovery": 117
+      "windup": 100,
+      "active": 34,
+      "recovery": 81
      },
      "notes": ""
     },
@@ -56223,15 +56333,15 @@
      "recoverySec": 0.87,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 50,
-      "active": 20,
-      "recovery": 65
+      "windup": 35,
+      "active": 14,
+      "recovery": 45
      },
      "notes": ""
     },
@@ -56245,15 +56355,15 @@
      "recoverySec": 1.39,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 1.92,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 86,
-      "active": 41,
-      "recovery": 104
+      "windup": 60,
+      "active": 29,
+      "recovery": 72
      },
      "notes": ""
     },
@@ -56267,157 +56377,165 @@
      "recoverySec": 1.04,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 113,
-      "active": 33,
-      "recovery": 78
+      "windup": 78,
+      "active": 23,
+      "recovery": 54
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.36,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.36,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.54,
-     "damping": 0.3,
-     "gravity": 0
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.18,
+     "damping": 0.35,
+     "gravity": 0.3
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 9697,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_L",
+     "bone": "calf_L",
+     "hp": 12929,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 9697,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_R",
+     "bone": "calf_R",
+     "hp": 12929,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
-     "hp": 19394,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "partId": "weakpoint",
+     "bone": "back_weakpoint",
+     "hp": 9697,
+     "materialTag": "",
+     "onBreak": "break_gauge_full"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
      "shape": "sphere",
-     "radius": 4.5,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "radius": 2.4,
+     "dmgMult": 1.4,
+     "partId": "head"
     },
     {
-     "bone": "stem_02",
+     "bone": "back_weakpoint",
+     "shape": "sphere",
+     "radius": 1.5,
+     "dmgMult": 3,
+     "partId": "weakpoint"
+    },
+    {
+     "bone": "chest",
      "shape": "capsule",
-     "radius": 2.1,
+     "radius": 5.1,
      "height": 9,
      "dmgMult": 0.8
     },
     {
-     "bone": "vine_03_L",
+     "bone": "calf_L",
      "shape": "capsule",
-     "radius": 0.9,
-     "height": 6,
+     "radius": 1.5,
+     "height": 6.6,
      "dmgMult": 1,
-     "partId": "vine_L"
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "calf_R",
      "shape": "capsule",
-     "radius": 0.9,
-     "height": 6,
+     "radius": 1.5,
+     "height": 6.6,
      "dmgMult": 1,
-     "partId": "vine_R"
+     "partId": "leg_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "footstep_camera_shake",
+    "shake_off_climber",
+    "slow_head_track",
     "fx:wind_sway",
     "fx:pollen"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.45
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_worldroot_behemoth",
    "name": "Worldroot Behemoth",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "giant_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 80,
-   "prefabScale": 40,
+   "prefabScale": 8,
    "heightM": 80,
-   "lengthM": 32,
-   "widthM": 96,
+   "lengthM": 27.2,
+   "widthM": 35.2,
    "physics": {
-    "massKg": 10752000,
+    "massKg": 8192000,
     "gravityScale": 1,
-    "linearDrag": 1,
+    "linearDrag": 0.02,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 9.6,
+    "colliderRadius": 12,
     "colliderHeight": 80,
     "colliderAxis": "z",
     "knockbackResist": 1,
     "launchable": "false",
     "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 36691,
+    "deathStyle": "cinematic_collapse",
+    "poise": 14922,
     "hitstopMult": 1.4,
     "footstepShake": 0.6
    },
    "navAgent": {
     "radius": 15,
     "height": 40,
-    "speed": 2.79,
-    "walkSpeed": 2.79,
+    "speed": 15,
+    "walkSpeed": 7.5,
     "angularSpeed": 60,
     "acceleration": 1.96,
-    "stoppingDistance": 10,
+    "stoppingDistance": 12.4,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 2.79,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 7.5,
+      "froude": 0.15
+     },
+     {
+      "name": "run",
+      "speed": 15,
+      "froude": 0.6
      }
     ],
     "playRate": 0.4,
@@ -56425,7 +56543,7 @@
     "accel": 1.96,
     "jumpHeight": 0,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "wade",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -56459,9 +56577,9 @@
    "behavior": {
     "name": "Passive",
     "aiPattern": "passive_wander",
-    "alertRadius": 50.6,
-    "leashRadius": 126.49,
-    "preferredRange": 47.55,
+    "alertRadius": 22.63,
+    "leashRadius": 56.57,
+    "preferredRange": 28.97,
     "circleRadius": 0,
     "retreatHpPct": 0.6,
     "notes": [
@@ -56486,7 +56604,7 @@
      "recoverySec": 0.79,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
@@ -56508,7 +56626,7 @@
      "recoverySec": 1.43,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 6,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
@@ -56530,7 +56648,7 @@
      "recoverySec": 0.79,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
@@ -56552,7 +56670,7 @@
      "recoverySec": 1.27,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 1.92,
      "trackingWindupDegPerSec": 36,
@@ -56574,7 +56692,7 @@
      "recoverySec": 0.95,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
@@ -56589,95 +56707,98 @@
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.36,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.36,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.54,
-     "damping": 0.3,
-     "gravity": 0
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.18,
+     "damping": 0.35,
+     "gravity": 0.3
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 21670,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_L",
+     "bone": "calf_L",
+     "hp": 28893,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 21670,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_R",
+     "bone": "calf_R",
+     "hp": 28893,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
-     "hp": 43340,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "partId": "weakpoint",
+     "bone": "back_weakpoint",
+     "hp": 21670,
+     "materialTag": "",
+     "onBreak": "break_gauge_full"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
      "shape": "sphere",
-     "radius": 12,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "radius": 6.4,
+     "dmgMult": 1.4,
+     "partId": "head"
     },
     {
-     "bone": "stem_02",
+     "bone": "back_weakpoint",
+     "shape": "sphere",
+     "radius": 4,
+     "dmgMult": 3,
+     "partId": "weakpoint"
+    },
+    {
+     "bone": "chest",
      "shape": "capsule",
-     "radius": 5.6,
+     "radius": 13.6,
      "height": 24,
      "dmgMult": 0.8
     },
     {
-     "bone": "vine_03_L",
+     "bone": "calf_L",
      "shape": "capsule",
-     "radius": 2.4,
-     "height": 16,
+     "radius": 4,
+     "height": 17.6,
      "dmgMult": 1,
-     "partId": "vine_L"
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "calf_R",
      "shape": "capsule",
-     "radius": 2.4,
-     "height": 16,
+     "radius": 4,
+     "height": 17.6,
      "dmgMult": 1,
-     "partId": "vine_R"
+     "partId": "leg_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "footstep_camera_shake",
+    "shake_off_climber",
+    "slow_head_track",
     "fx:wind_sway",
     "fx:pollen"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.45
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_blighted_world_root",
@@ -109716,7 +109837,7 @@
    "speciesId": "mon_cavern_needle_wasp",
    "name": "Cavern Needle Wasp",
    "rigKey": "hexapod",
-   "rigVia": "keyword",
+   "rigVia": "override (base species)",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 0.3,
@@ -110007,7 +110128,7 @@
    "speciesId": "mon_greater_hornet_lancer",
    "name": "Greater Hornet Lancer",
    "rigKey": "hexapod",
-   "rigVia": "keyword",
+   "rigVia": "override (base species)",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 1.9,
@@ -134392,7 +134513,7 @@
    "speciesId": "mon_elder_pixie",
    "name": "Elder Pixie",
    "rigKey": "spirit_float",
-   "rigVia": "keyword",
+   "rigVia": "override (base species)",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 0.3,
@@ -138575,57 +138696,67 @@
   {
    "speciesId": "mon_bog_treant_sapling",
    "name": "Bog Treant Sapling",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "large_biped",
+   "rigVia": "override (base species)",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 2,
-   "prefabScale": 1,
+   "prefabScale": 0.571,
    "heightM": 2,
-   "lengthM": 0.8,
-   "widthM": 2.4,
+   "lengthM": 0.6,
+   "widthM": 0.84,
    "physics": {
-    "massKg": 168,
-    "gravityScale": 1,
-    "linearDrag": 1,
+    "massKg": 144,
+    "gravityScale": 1.3,
+    "linearDrag": 0.05,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 0.24,
+    "colliderRadius": 0.4,
     "colliderHeight": 2,
     "colliderAxis": "z",
-    "knockbackResist": 1,
-    "launchable": "false",
-    "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 72,
+    "knockbackResist": 0.81,
+    "launchable": "only_while_staggered",
+    "ragdoll": "partial",
+    "deathStyle": "heavy_fall_dust",
+    "poise": 138,
     "hitstopMult": 1.06,
     "footstepShake": 0
    },
    "navAgent": {
-    "radius": 1.2,
+    "radius": 0.42,
     "height": 2,
-    "speed": 0.39,
-    "walkSpeed": 0.39,
-    "angularSpeed": 127,
-    "acceleration": 1.86,
-    "stoppingDistance": 0.64,
+    "speed": 3.95,
+    "walkSpeed": 1.32,
+    "angularSpeed": 269,
+    "acceleration": 4.19,
+    "stoppingDistance": 0.8,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 0.39,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 1.32,
+      "froude": 0.2
+     },
+     {
+      "name": "run",
+      "speed": 2.95,
+      "froude": 1
+     },
+     {
+      "name": "knuckle_charge",
+      "speed": 3.95,
+      "froude": 1.8
      }
     ],
-    "playRate": 1,
-    "turnDegPerSec": 127,
-    "accel": 1.86,
-    "jumpHeight": 0,
+    "playRate": 1.323,
+    "turnDegPerSec": 269,
+    "accel": 4.19,
+    "jumpHeight": 0.3,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "true",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -138661,9 +138792,9 @@
    "behavior": {
     "name": "Territorial",
     "aiPattern": "territorial_guard",
-    "alertRadius": 12,
-    "leashRadius": 15,
-    "preferredRange": 2.24,
+    "alertRadius": 9.07,
+    "leashRadius": 11.34,
+    "preferredRange": 2.4,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -138688,15 +138819,15 @@
      "recoverySec": 0.5,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 0.36,
      "lungeDistance": 0.9,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 17,
-      "active": 4,
-      "recovery": 15
+      "windup": 13,
+      "active": 3,
+      "recovery": 11
      },
      "notes": ""
     },
@@ -138710,15 +138841,15 @@
      "recoverySec": 0.91,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 0.36,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 42,
-      "active": 10,
-      "recovery": 27
+      "windup": 32,
+      "active": 7,
+      "recovery": 21
      },
      "notes": ""
     },
@@ -138732,15 +138863,15 @@
      "recoverySec": 0.5,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.36,
      "lungeDistance": 0.9,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 14,
-      "active": 4,
-      "recovery": 15
+      "windup": 11,
+      "active": 3,
+      "recovery": 11
      },
      "notes": ""
     },
@@ -138754,15 +138885,15 @@
      "recoverySec": 0.81,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.36,
      "lungeDistance": 0.56,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 25,
-      "active": 8,
-      "recovery": 24
+      "windup": 19,
+      "active": 6,
+      "recovery": 18
      },
      "notes": ""
     },
@@ -138776,107 +138907,123 @@
      "recoverySec": 0.61,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "jaw",
      "hitboxRadius": 0.36,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 76,
-     "trackingActiveDegPerSec": 13,
+     "trackingWindupDegPerSec": 161,
+     "trackingActiveDegPerSec": 27,
      "animFrames": {
-      "windup": 33,
-      "active": 7,
-      "recovery": 18
+      "windup": 25,
+      "active": 5,
+      "recovery": 14
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.272,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.272,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.408,
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.17,
      "damping": 0.3,
-     "gravity": 0
+     "gravity": 0.36
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 726,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_L",
+     "bone": "horn_L",
+     "hp": 581,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 726,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_R",
+     "bone": "horn_R",
+     "hp": 581,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
+     "partId": "weapon",
+     "bone": "weapon_R",
+     "hp": 1210,
+     "materialTag": "weapon",
+     "onBreak": "disarm_grapple_mode"
+    },
+    {
+     "partId": "leg_L",
+     "bone": "thigh_L",
      "hp": 1452,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "materialTag": "",
+     "onBreak": "limp_knockdown"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
+     "shape": "sphere",
+     "radius": 0.16,
+     "dmgMult": 1.4,
+     "partId": "head"
+    },
+    {
+     "bone": "chest",
+     "shape": "capsule",
+     "radius": 0.34,
+     "height": 0.6,
+     "dmgMult": 1
+    },
+    {
+     "bone": "belly",
      "shape": "sphere",
      "radius": 0.3,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "dmgMult": 1.1
     },
     {
-     "bone": "stem_02",
+     "bone": "thigh_L",
      "shape": "capsule",
      "radius": 0.14,
-     "height": 0.6,
-     "dmgMult": 0.8
+     "height": 0.5,
+     "dmgMult": 0.9,
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_L",
+     "bone": "thigh_R",
      "shape": "capsule",
-     "radius": 0.06,
-     "height": 0.4,
-     "dmgMult": 1,
-     "partId": "vine_L"
+     "radius": 0.14,
+     "height": 0.5,
+     "dmgMult": 0.9,
+     "partId": "leg_R"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "forearm_L",
      "shape": "capsule",
-     "radius": 0.06,
+     "radius": 0.1,
      "height": 0.4,
-     "dmgMult": 1,
-     "partId": "vine_R"
+     "dmgMult": 0.8,
+     "partId": "arm_L"
+    },
+    {
+     "bone": "forearm_R",
+     "shape": "capsule",
+     "radius": 0.1,
+     "height": 0.4,
+     "dmgMult": 0.8,
+     "partId": "arm_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "heavy_breathing",
+    "footstep_camera_shake",
+    "ground_crack_decal_on_land",
     "fx:slow_sway",
     "fx:bubbling"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.81
    },
    "signature": null
@@ -138884,57 +139031,67 @@
   {
    "speciesId": "mon_bog_spore_lord",
    "name": "Bog Spore Lord",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "large_biped",
+   "rigVia": "override (base species)",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 3,
-   "prefabScale": 1.5,
+   "prefabScale": 0.857,
    "heightM": 3,
-   "lengthM": 1.2,
-   "widthM": 3.6,
+   "lengthM": 0.9,
+   "widthM": 1.26,
    "physics": {
-    "massKg": 567,
-    "gravityScale": 1,
-    "linearDrag": 1,
+    "massKg": 486,
+    "gravityScale": 1.3,
+    "linearDrag": 0.05,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 0.36,
+    "colliderRadius": 0.6,
     "colliderHeight": 3,
     "colliderAxis": "z",
-    "knockbackResist": 1,
-    "launchable": "false",
-    "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 149,
-    "hitstopMult": 1.13,
-    "footstepShake": 0.005
+    "knockbackResist": 0.84,
+    "launchable": "only_while_staggered",
+    "ragdoll": "partial",
+    "deathStyle": "heavy_fall_dust",
+    "poise": 188,
+    "hitstopMult": 1.12,
+    "footstepShake": 0.003
    },
    "navAgent": {
-    "radius": 1.8,
+    "radius": 0.63,
     "height": 3,
-    "speed": 0.58,
-    "walkSpeed": 0.58,
-    "angularSpeed": 104,
-    "acceleration": 1.86,
-    "stoppingDistance": 0.76,
+    "speed": 5.92,
+    "walkSpeed": 1.97,
+    "angularSpeed": 219,
+    "acceleration": 4.19,
+    "stoppingDistance": 1,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 0.58,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 1.97,
+      "froude": 0.2
+     },
+     {
+      "name": "run",
+      "speed": 4.41,
+      "froude": 1
+     },
+     {
+      "name": "knuckle_charge",
+      "speed": 5.92,
+      "froude": 1.8
      }
     ],
-    "playRate": 0.816,
-    "turnDegPerSec": 104,
-    "accel": 1.86,
-    "jumpHeight": 0,
+    "playRate": 1.08,
+    "turnDegPerSec": 219,
+    "accel": 4.19,
+    "jumpHeight": 0.45,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "true",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -138971,9 +139128,9 @@
    "behavior": {
     "name": "Ambush",
     "aiPattern": "ambush_strike+stalker",
-    "alertRadius": 4.9,
-    "leashRadius": 14.7,
-    "preferredRange": 1.58,
+    "alertRadius": 3.7,
+    "leashRadius": 11.11,
+    "preferredRange": 1.6,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -138998,15 +139155,15 @@
      "recoverySec": 0.59,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 0.54,
      "lungeDistance": 1.22,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 20,
-      "active": 6,
-      "recovery": 22
+      "windup": 15,
+      "active": 4,
+      "recovery": 17
      },
      "notes": ""
     },
@@ -139020,15 +139177,15 @@
      "recoverySec": 1.07,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 0.54,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 49,
-      "active": 15,
-      "recovery": 39
+      "windup": 37,
+      "active": 11,
+      "recovery": 30
      },
      "notes": ""
     },
@@ -139042,15 +139199,15 @@
      "recoverySec": 0.59,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.54,
      "lungeDistance": 1.22,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 17,
-      "active": 6,
-      "recovery": 22
+      "windup": 13,
+      "active": 4,
+      "recovery": 17
      },
      "notes": ""
     },
@@ -139064,15 +139221,15 @@
      "recoverySec": 0.95,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.54,
      "lungeDistance": 0.77,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 29,
-      "active": 12,
-      "recovery": 35
+      "windup": 22,
+      "active": 9,
+      "recovery": 26
      },
      "notes": ""
     },
@@ -139086,107 +139243,123 @@
      "recoverySec": 0.71,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "jaw",
      "hitboxRadius": 0.54,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 62,
-     "trackingActiveDegPerSec": 10,
+     "trackingWindupDegPerSec": 132,
+     "trackingActiveDegPerSec": 22,
      "animFrames": {
-      "windup": 38,
-      "active": 10,
-      "recovery": 26
+      "windup": 29,
+      "active": 7,
+      "recovery": 20
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.48,
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.2,
      "damping": 0.3,
-     "gravity": 0
+     "gravity": 0.36
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 1574,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_L",
+     "bone": "horn_L",
+     "hp": 1259,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 1574,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_R",
+     "bone": "horn_R",
+     "hp": 1259,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
+     "partId": "weapon",
+     "bone": "weapon_R",
+     "hp": 2624,
+     "materialTag": "weapon",
+     "onBreak": "disarm_grapple_mode"
+    },
+    {
+     "partId": "leg_L",
+     "bone": "thigh_L",
      "hp": 3149,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "materialTag": "",
+     "onBreak": "limp_knockdown"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
+     "shape": "sphere",
+     "radius": 0.24,
+     "dmgMult": 1.4,
+     "partId": "head"
+    },
+    {
+     "bone": "chest",
+     "shape": "capsule",
+     "radius": 0.51,
+     "height": 0.9,
+     "dmgMult": 1
+    },
+    {
+     "bone": "belly",
      "shape": "sphere",
      "radius": 0.45,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "dmgMult": 1.1
     },
     {
-     "bone": "stem_02",
+     "bone": "thigh_L",
      "shape": "capsule",
      "radius": 0.21,
-     "height": 0.9,
-     "dmgMult": 0.8
+     "height": 0.75,
+     "dmgMult": 0.9,
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_L",
+     "bone": "thigh_R",
      "shape": "capsule",
-     "radius": 0.09,
-     "height": 0.6,
-     "dmgMult": 1,
-     "partId": "vine_L"
+     "radius": 0.21,
+     "height": 0.75,
+     "dmgMult": 0.9,
+     "partId": "leg_R"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "forearm_L",
      "shape": "capsule",
-     "radius": 0.09,
+     "radius": 0.15,
      "height": 0.6,
-     "dmgMult": 1,
-     "partId": "vine_R"
+     "dmgMult": 0.8,
+     "partId": "arm_L"
+    },
+    {
+     "bone": "forearm_R",
+     "shape": "capsule",
+     "radius": 0.15,
+     "height": 0.6,
+     "dmgMult": 0.8,
+     "partId": "arm_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "heavy_breathing",
+    "footstep_camera_shake",
+    "ground_crack_decal_on_land",
     "fx:slow_sway",
     "fx:bubbling"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.72
    },
    "signature": null
@@ -139504,57 +139677,62 @@
   {
    "speciesId": "mon_tide_elder_treant",
    "name": "Tide Elder Treant",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "giant_biped",
+   "rigVia": "override (base species)",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 12,
-   "prefabScale": 6,
+   "prefabScale": 1.2,
    "heightM": 12,
-   "lengthM": 4.8,
-   "widthM": 14.4,
+   "lengthM": 4.08,
+   "widthM": 5.28,
    "physics": {
-    "massKg": 38102.4,
+    "massKg": 29030.4,
     "gravityScale": 1,
-    "linearDrag": 1,
+    "linearDrag": 0.02,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 1.44,
+    "colliderRadius": 2.16,
     "colliderHeight": 12,
     "colliderAxis": "z",
     "knockbackResist": 1,
     "launchable": "false",
     "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 1569,
-    "hitstopMult": 1.35,
+    "deathStyle": "cinematic_collapse",
+    "poise": 638,
+    "hitstopMult": 1.33,
     "footstepShake": 0.6
    },
    "navAgent": {
-    "radius": 7.2,
+    "radius": 2.64,
     "height": 12,
-    "speed": 1.19,
-    "walkSpeed": 1.19,
-    "angularSpeed": 60,
+    "speed": 6.4,
+    "walkSpeed": 3.2,
+    "angularSpeed": 87,
     "acceleration": 1.86,
-    "stoppingDistance": 1.84,
+    "stoppingDistance": 2.56,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 1.19,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 3.2,
+      "froude": 0.15
+     },
+     {
+      "name": "run",
+      "speed": 6.4,
+      "froude": 0.6
      }
     ],
-    "playRate": 0.408,
-    "turnDegPerSec": 60,
+    "playRate": 0.913,
+    "turnDegPerSec": 87,
     "accel": 1.86,
     "jumpHeight": 0,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "wade",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -139588,9 +139766,9 @@
    "behavior": {
     "name": "Ambush",
     "aiPattern": "ambush_strike",
-    "alertRadius": 9.8,
-    "leashRadius": 29.39,
-    "preferredRange": 3.89,
+    "alertRadius": 4.38,
+    "leashRadius": 13.15,
+    "preferredRange": 3.26,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -139615,15 +139793,15 @@
      "recoverySec": 0.91,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 3.07,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 61,
-      "active": 19,
-      "recovery": 67
+      "windup": 27,
+      "active": 9,
+      "recovery": 30
      },
      "notes": ""
     },
@@ -139637,15 +139815,15 @@
      "recoverySec": 1.63,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 2.16,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 148,
-      "active": 48,
-      "recovery": 120
+      "windup": 66,
+      "active": 22,
+      "recovery": 54
      },
      "notes": ""
     },
@@ -139659,15 +139837,15 @@
      "recoverySec": 0.91,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 3.07,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 51,
-      "active": 19,
-      "recovery": 67
+      "windup": 23,
+      "active": 9,
+      "recovery": 30
      },
      "notes": ""
     },
@@ -139681,15 +139859,15 @@
      "recoverySec": 1.45,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 1.92,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 88,
-      "active": 40,
-      "recovery": 107
+      "windup": 39,
+      "active": 18,
+      "recovery": 48
      },
      "notes": ""
     },
@@ -139703,107 +139881,101 @@
      "recoverySec": 1.09,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 2.16,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 36,
-     "trackingActiveDegPerSec": 6,
+     "trackingWindupDegPerSec": 52,
+     "trackingActiveDegPerSec": 9,
      "animFrames": {
-      "windup": 115,
-      "active": 32,
-      "recovery": 80
+      "windup": 52,
+      "active": 14,
+      "recovery": 36
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.28,
-     "damping": 0.2,
-     "gravity": 0.22
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.28,
-     "damping": 0.2,
-     "gravity": 0.22
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.42,
-     "damping": 0.3,
-     "gravity": 0
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.14,
+     "damping": 0.35,
+     "gravity": 0.33
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 6016,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_L",
+     "bone": "calf_L",
+     "hp": 8021,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 6016,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_R",
+     "bone": "calf_R",
+     "hp": 8021,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
-     "hp": 12031,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "partId": "weakpoint",
+     "bone": "back_weakpoint",
+     "hp": 6016,
+     "materialTag": "",
+     "onBreak": "break_gauge_full"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
      "shape": "sphere",
-     "radius": 1.8,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "radius": 0.96,
+     "dmgMult": 1.4,
+     "partId": "head"
     },
     {
-     "bone": "stem_02",
+     "bone": "back_weakpoint",
+     "shape": "sphere",
+     "radius": 0.6,
+     "dmgMult": 3,
+     "partId": "weakpoint"
+    },
+    {
+     "bone": "chest",
      "shape": "capsule",
-     "radius": 0.84,
+     "radius": 2.04,
      "height": 3.6,
      "dmgMult": 0.8
     },
     {
-     "bone": "vine_03_L",
+     "bone": "calf_L",
      "shape": "capsule",
-     "radius": 0.36,
-     "height": 2.4,
+     "radius": 0.6,
+     "height": 2.64,
      "dmgMult": 1,
-     "partId": "vine_L"
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "calf_R",
      "shape": "capsule",
-     "radius": 0.36,
-     "height": 2.4,
+     "radius": 0.6,
+     "height": 2.64,
      "dmgMult": 1,
-     "partId": "vine_R"
+     "partId": "leg_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "footstep_camera_shake",
+    "shake_off_climber",
+    "slow_head_track",
     "fx:drip_particles",
     "fx:surface_wobble"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.47
    },
    "signature": null
@@ -139811,57 +139983,62 @@
   {
    "speciesId": "mon_bog_ancient_treant",
    "name": "Bog Ancient Treant",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "giant_biped",
+   "rigVia": "override (base species)",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 30,
-   "prefabScale": 15,
+   "prefabScale": 3,
    "heightM": 30,
-   "lengthM": 12,
-   "widthM": 36,
+   "lengthM": 10.2,
+   "widthM": 13.2,
    "physics": {
-    "massKg": 567000,
+    "massKg": 432000,
     "gravityScale": 1,
-    "linearDrag": 1,
+    "linearDrag": 0.02,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 3.6,
+    "colliderRadius": 5.4,
     "colliderHeight": 30,
     "colliderAxis": "z",
     "knockbackResist": 1,
     "launchable": "false",
     "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 6932,
+    "deathStyle": "cinematic_collapse",
+    "poise": 2817,
     "hitstopMult": 1.4,
     "footstepShake": 0.6
    },
    "navAgent": {
-    "radius": 15,
+    "radius": 6.6,
     "height": 30,
-    "speed": 1.66,
-    "walkSpeed": 1.66,
+    "speed": 8.93,
+    "walkSpeed": 4.47,
     "angularSpeed": 60,
     "acceleration": 1.86,
-    "stoppingDistance": 4,
+    "stoppingDistance": 5.8,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 1.66,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 4.47,
+      "froude": 0.15
+     },
+     {
+      "name": "run",
+      "speed": 8.93,
+      "froude": 0.6
      }
     ],
-    "playRate": 0.4,
+    "playRate": 0.577,
     "turnDegPerSec": 60,
     "accel": 1.86,
     "jumpHeight": 0,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "wade",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -139895,9 +140072,9 @@
    "behavior": {
     "name": "Territorial",
     "aiPattern": "territorial_guard",
-    "alertRadius": 46.48,
-    "leashRadius": 58.09,
-    "preferredRange": 11.35,
+    "alertRadius": 20.78,
+    "leashRadius": 25.98,
+    "preferredRange": 8.86,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -139922,15 +140099,15 @@
      "recoverySec": 0.87,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 60,
-      "active": 20,
-      "recovery": 65
+      "windup": 41,
+      "active": 14,
+      "recovery": 45
      },
      "notes": ""
     },
@@ -139944,15 +140121,15 @@
      "recoverySec": 1.56,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 5.4,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 145,
-      "active": 50,
-      "recovery": 117
+      "windup": 100,
+      "active": 34,
+      "recovery": 81
      },
      "notes": ""
     },
@@ -139966,15 +140143,15 @@
      "recoverySec": 0.87,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 50,
-      "active": 20,
-      "recovery": 65
+      "windup": 35,
+      "active": 14,
+      "recovery": 45
      },
      "notes": ""
     },
@@ -139988,15 +140165,15 @@
      "recoverySec": 1.39,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 5.4,
      "lungeDistance": 1.92,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 86,
-      "active": 41,
-      "recovery": 104
+      "windup": 60,
+      "active": 29,
+      "recovery": 72
      },
      "notes": ""
     },
@@ -140010,107 +140187,101 @@
      "recoverySec": 1.04,
      "windupJitter": 0,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "jaw",
      "hitboxRadius": 5.4,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
      "trackingActiveDegPerSec": 6,
      "animFrames": {
-      "windup": 113,
-      "active": 33,
-      "recovery": 78
+      "windup": 78,
+      "active": 23,
+      "recovery": 54
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.48,
-     "damping": 0.3,
-     "gravity": 0
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.16,
+     "damping": 0.35,
+     "gravity": 0.36
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 10877,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_L",
+     "bone": "calf_L",
+     "hp": 14503,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 10877,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_R",
+     "bone": "calf_R",
+     "hp": 14503,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
-     "hp": 21755,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "partId": "weakpoint",
+     "bone": "back_weakpoint",
+     "hp": 10877,
+     "materialTag": "",
+     "onBreak": "break_gauge_full"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
      "shape": "sphere",
-     "radius": 4.5,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "radius": 2.4,
+     "dmgMult": 1.4,
+     "partId": "head"
     },
     {
-     "bone": "stem_02",
+     "bone": "back_weakpoint",
+     "shape": "sphere",
+     "radius": 1.5,
+     "dmgMult": 3,
+     "partId": "weakpoint"
+    },
+    {
+     "bone": "chest",
      "shape": "capsule",
-     "radius": 2.1,
+     "radius": 5.1,
      "height": 9,
      "dmgMult": 0.8
     },
     {
-     "bone": "vine_03_L",
+     "bone": "calf_L",
      "shape": "capsule",
-     "radius": 0.9,
-     "height": 6,
+     "radius": 1.5,
+     "height": 6.6,
      "dmgMult": 1,
-     "partId": "vine_L"
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "calf_R",
      "shape": "capsule",
-     "radius": 0.9,
-     "height": 6,
+     "radius": 1.5,
+     "height": 6.6,
      "dmgMult": 1,
-     "partId": "vine_R"
+     "partId": "leg_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "footstep_camera_shake",
+    "shake_off_climber",
+    "slow_head_track",
     "fx:slow_sway",
     "fx:bubbling"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.45
    },
    "signature": null
@@ -140118,49 +140289,54 @@
   {
    "speciesId": "mon_thunder_worldroot_behemoth",
    "name": "Thunder Worldroot Behemoth",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "giant_biped",
+   "rigVia": "override (base species)",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 80,
-   "prefabScale": 40,
+   "prefabScale": 8,
    "heightM": 80,
-   "lengthM": 32,
-   "widthM": 96,
+   "lengthM": 27.2,
+   "widthM": 35.2,
    "physics": {
-    "massKg": 10752000,
+    "massKg": 8192000,
     "gravityScale": 1,
-    "linearDrag": 1,
+    "linearDrag": 0.02,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 9.6,
+    "colliderRadius": 12,
     "colliderHeight": 80,
     "colliderAxis": "z",
     "knockbackResist": 1,
     "launchable": "false",
     "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 36691,
+    "deathStyle": "cinematic_collapse",
+    "poise": 14922,
     "hitstopMult": 1.4,
     "footstepShake": 0.6
    },
    "navAgent": {
     "radius": 15,
     "height": 40,
-    "speed": 3.18,
-    "walkSpeed": 3.18,
+    "speed": 17.05,
+    "walkSpeed": 8.52,
     "angularSpeed": 60,
     "acceleration": 2.75,
-    "stoppingDistance": 10,
+    "stoppingDistance": 12.4,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 3.18,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 8.52,
+      "froude": 0.15
+     },
+     {
+      "name": "run",
+      "speed": 17.05,
+      "froude": 0.6
      }
     ],
     "playRate": 0.4,
@@ -140168,7 +140344,7 @@
     "accel": 2.75,
     "jumpHeight": 0,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "wade",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -140205,9 +140381,9 @@
    "behavior": {
     "name": "Territorial",
     "aiPattern": "territorial_guard",
-    "alertRadius": 75.89,
-    "leashRadius": 94.87,
-    "preferredRange": 22.25,
+    "alertRadius": 33.94,
+    "leashRadius": 42.43,
+    "preferredRange": 17.66,
     "circleRadius": 0,
     "retreatHpPct": 0,
     "notes": [
@@ -140232,7 +140408,7 @@
      "recoverySec": 0.79,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
@@ -140254,7 +140430,7 @@
      "recoverySec": 1.43,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 6,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
@@ -140276,7 +140452,7 @@
      "recoverySec": 0.79,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 3.07,
      "trackingWindupDegPerSec": 36,
@@ -140298,7 +140474,7 @@
      "recoverySec": 1.27,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 1.92,
      "trackingWindupDegPerSec": 36,
@@ -140320,7 +140496,7 @@
      "recoverySec": 0.95,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 6,
      "lungeDistance": 0,
      "trackingWindupDegPerSec": 36,
@@ -140335,92 +140511,86 @@
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.48,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.48,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.72,
-     "damping": 0.3,
-     "gravity": 0
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.24,
+     "damping": 0.35,
+     "gravity": 0.3
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 23189,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_L",
+     "bone": "calf_L",
+     "hp": 30919,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 23189,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "leg_R",
+     "bone": "calf_R",
+     "hp": 30919,
+     "materialTag": "giant_s_hide",
+     "onBreak": "kneel_exposes_head"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
-     "hp": 46378,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "partId": "weakpoint",
+     "bone": "back_weakpoint",
+     "hp": 23189,
+     "materialTag": "",
+     "onBreak": "break_gauge_full"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
      "shape": "sphere",
-     "radius": 12,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "radius": 6.4,
+     "dmgMult": 1.4,
+     "partId": "head"
     },
     {
-     "bone": "stem_02",
+     "bone": "back_weakpoint",
+     "shape": "sphere",
+     "radius": 4,
+     "dmgMult": 3,
+     "partId": "weakpoint"
+    },
+    {
+     "bone": "chest",
      "shape": "capsule",
-     "radius": 5.6,
+     "radius": 13.6,
      "height": 24,
      "dmgMult": 0.8
     },
     {
-     "bone": "vine_03_L",
+     "bone": "calf_L",
      "shape": "capsule",
-     "radius": 2.4,
-     "height": 16,
+     "radius": 4,
+     "height": 17.6,
      "dmgMult": 1,
-     "partId": "vine_L"
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "calf_R",
      "shape": "capsule",
-     "radius": 2.4,
-     "height": 16,
+     "radius": 4,
+     "height": 17.6,
      "dmgMult": 1,
-     "partId": "vine_R"
+     "partId": "leg_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "footstep_camera_shake",
+    "shake_off_climber",
+    "slow_head_track",
     "fx:arc_between_bones",
     "fx:micro_jitter_0.02m"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.45
    },
    "signature": null
@@ -191695,7 +191865,7 @@
    "speciesId": "mon_greater_needle_wasp",
    "name": "Greater Needle Wasp",
    "rigKey": "hexapod",
-   "rigVia": "keyword",
+   "rigVia": "override (base species)",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 0.5,
@@ -191988,7 +192158,7 @@
    "speciesId": "mon_zephyr_hornet_lancer",
    "name": "Zephyr Hornet Lancer",
    "rigKey": "hexapod",
-   "rigVia": "keyword",
+   "rigVia": "override (base species)",
    "unityAvatar": "Generic",
    "animSetId": "anim_flyer_small",
    "sizeMeters": 1.2,
@@ -199076,57 +199246,67 @@
   {
    "speciesId": "mon_mycelia_the_spore_lord",
    "name": "Mycelia, the Spore Lord",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "large_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 5,
-   "prefabScale": 2.5,
+   "prefabScale": 1.429,
    "heightM": 5,
-   "lengthM": 2,
-   "widthM": 6,
+   "lengthM": 1.5,
+   "widthM": 2.1,
    "physics": {
-    "massKg": 2625,
-    "gravityScale": 1,
-    "linearDrag": 1,
+    "massKg": 2250,
+    "gravityScale": 1.3,
+    "linearDrag": 0.05,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 0.6,
+    "colliderRadius": 1,
     "colliderHeight": 5,
     "colliderAxis": "z",
-    "knockbackResist": 1,
-    "launchable": "false",
-    "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 416,
-    "hitstopMult": 1.21,
-    "footstepShake": 0.067
+    "knockbackResist": 0.87,
+    "launchable": "only_while_staggered",
+    "ragdoll": "partial",
+    "deathStyle": "heavy_fall_dust",
+    "poise": 308,
+    "hitstopMult": 1.2,
+    "footstepShake": 0.056
    },
    "navAgent": {
-    "radius": 3,
+    "radius": 1.05,
     "height": 5,
-    "speed": 0.65,
-    "walkSpeed": 0.65,
-    "angularSpeed": 80,
-    "acceleration": 1.86,
-    "stoppingDistance": 1,
+    "speed": 6.6,
+    "walkSpeed": 2.2,
+    "angularSpeed": 170,
+    "acceleration": 4.19,
+    "stoppingDistance": 1.4,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 0.65,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 2.2,
+      "froude": 0.2
+     },
+     {
+      "name": "run",
+      "speed": 4.92,
+      "froude": 1
+     },
+     {
+      "name": "knuckle_charge",
+      "speed": 6.6,
+      "froude": 1.8
      }
     ],
-    "playRate": 0.632,
-    "turnDegPerSec": 80,
-    "accel": 1.86,
-    "jumpHeight": 0,
+    "playRate": 0.837,
+    "turnDegPerSec": 170,
+    "accel": 4.19,
+    "jumpHeight": 0.75,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "true",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -199163,9 +199343,9 @@
    "behavior": {
     "name": "Passive",
     "aiPattern": "passive_wander+stalker",
-    "alertRadius": 12.65,
-    "leashRadius": 31.62,
-    "preferredRange": 10.09,
+    "alertRadius": 9.56,
+    "leashRadius": 23.9,
+    "preferredRange": 8.17,
     "circleRadius": 0,
     "retreatHpPct": 0.6,
     "notes": [
@@ -199190,15 +199370,15 @@
      "recoverySec": 0.74,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 0.9,
      "lungeDistance": 1.8,
-     "trackingWindupDegPerSec": 48,
-     "trackingActiveDegPerSec": 8,
+     "trackingWindupDegPerSec": 102,
+     "trackingActiveDegPerSec": 17,
      "animFrames": {
-      "windup": 32,
-      "active": 10,
-      "recovery": 35
+      "windup": 24,
+      "active": 7,
+      "recovery": 26
      },
      "notes": ""
     },
@@ -199212,15 +199392,15 @@
      "recoverySec": 1.33,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 0.9,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 48,
-     "trackingActiveDegPerSec": 8,
+     "trackingWindupDegPerSec": 102,
+     "trackingActiveDegPerSec": 17,
      "animFrames": {
-      "windup": 78,
-      "active": 24,
-      "recovery": 63
+      "windup": 59,
+      "active": 18,
+      "recovery": 48
      },
      "notes": ""
     },
@@ -199234,15 +199414,15 @@
      "recoverySec": 0.74,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.9,
      "lungeDistance": 1.8,
-     "trackingWindupDegPerSec": 48,
-     "trackingActiveDegPerSec": 8,
+     "trackingWindupDegPerSec": 102,
+     "trackingActiveDegPerSec": 17,
      "animFrames": {
-      "windup": 27,
-      "active": 10,
-      "recovery": 35
+      "windup": 20,
+      "active": 7,
+      "recovery": 26
      },
      "notes": ""
     },
@@ -199256,15 +199436,15 @@
      "recoverySec": 1.18,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.9,
      "lungeDistance": 1.12,
-     "trackingWindupDegPerSec": 48,
-     "trackingActiveDegPerSec": 8,
+     "trackingWindupDegPerSec": 102,
+     "trackingActiveDegPerSec": 17,
      "animFrames": {
-      "windup": 46,
-      "active": 20,
-      "recovery": 56
+      "windup": 35,
+      "active": 15,
+      "recovery": 42
      },
      "notes": ""
     },
@@ -199278,110 +199458,135 @@
      "recoverySec": 0.88,
      "windupJitter": 0.25,
      "feintChance": 0.1,
-     "hitboxBone": "bulb",
+     "hitboxBone": "jaw",
      "hitboxRadius": 0.9,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 48,
-     "trackingActiveDegPerSec": 8,
+     "trackingWindupDegPerSec": 102,
+     "trackingActiveDegPerSec": 17,
      "animFrames": {
-      "windup": 61,
-      "active": 16,
-      "recovery": 42
+      "windup": 46,
+      "active": 12,
+      "recovery": 32
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.32,
-     "damping": 0.2,
-     "gravity": 0.24
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.48,
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.2,
      "damping": 0.3,
-     "gravity": 0
+     "gravity": 0.36
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 3056,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_L",
+     "bone": "horn_L",
+     "hp": 2445,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 3056,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_R",
+     "bone": "horn_R",
+     "hp": 2445,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
+     "partId": "weapon",
+     "bone": "weapon_R",
+     "hp": 5093,
+     "materialTag": "weapon",
+     "onBreak": "disarm_grapple_mode"
+    },
+    {
+     "partId": "leg_L",
+     "bone": "thigh_L",
      "hp": 6112,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "materialTag": "",
+     "onBreak": "limp_knockdown"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
+     "shape": "sphere",
+     "radius": 0.4,
+     "dmgMult": 1.4,
+     "partId": "head"
+    },
+    {
+     "bone": "chest",
+     "shape": "capsule",
+     "radius": 0.85,
+     "height": 1.5,
+     "dmgMult": 1
+    },
+    {
+     "bone": "belly",
      "shape": "sphere",
      "radius": 0.75,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "dmgMult": 1.1
     },
     {
-     "bone": "stem_02",
+     "bone": "thigh_L",
      "shape": "capsule",
      "radius": 0.35,
-     "height": 1.5,
-     "dmgMult": 0.8
+     "height": 1.25,
+     "dmgMult": 0.9,
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_L",
+     "bone": "thigh_R",
      "shape": "capsule",
-     "radius": 0.15,
-     "height": 1,
-     "dmgMult": 1,
-     "partId": "vine_L"
+     "radius": 0.35,
+     "height": 1.25,
+     "dmgMult": 0.9,
+     "partId": "leg_R"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "forearm_L",
      "shape": "capsule",
-     "radius": 0.15,
+     "radius": 0.25,
      "height": 1,
-     "dmgMult": 1,
-     "partId": "vine_R"
+     "dmgMult": 0.8,
+     "partId": "arm_L"
+    },
+    {
+     "bone": "forearm_R",
+     "shape": "capsule",
+     "radius": 0.25,
+     "height": 1,
+     "dmgMult": 0.8,
+     "partId": "arm_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "heavy_breathing",
+    "footstep_camera_shake",
+    "ground_crack_decal_on_land",
     "fx:slow_sway",
     "fx:bubbling"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.62
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_mother_webcrawler_terror_of_the_small",
@@ -209215,57 +209420,67 @@
   {
    "speciesId": "mon_the_briar_king_lord_of_the_winter_court",
    "name": "The Briar King, Lord of the Winter Court",
-   "rigKey": "plant_rooted",
-   "rigVia": "keyword",
-   "unityAvatar": "Generic",
+   "rigKey": "large_biped",
+   "rigVia": "override",
+   "unityAvatar": "Humanoid",
    "animSetId": "anim_plant_walker",
    "sizeMeters": 4,
-   "prefabScale": 2,
+   "prefabScale": 1.143,
    "heightM": 4,
-   "lengthM": 1.6,
-   "widthM": 4.8,
+   "lengthM": 1.2,
+   "widthM": 1.68,
    "physics": {
-    "massKg": 1478.4,
-    "gravityScale": 1.05,
-    "linearDrag": 1,
+    "massKg": 1267.2,
+    "gravityScale": 1.37,
+    "linearDrag": 0.05,
     "buoyancy": 0,
     "colliderType": "capsule",
-    "colliderRadius": 0.48,
+    "colliderRadius": 0.8,
     "colliderHeight": 4,
     "colliderAxis": "z",
-    "knockbackResist": 1,
-    "launchable": "false",
-    "ragdoll": "none",
-    "deathStyle": "wilt_collapse",
-    "poise": 362,
-    "hitstopMult": 1.18,
-    "footstepShake": 0.032
+    "knockbackResist": 0.93,
+    "launchable": "only_while_staggered",
+    "ragdoll": "partial",
+    "deathStyle": "heavy_fall_dust",
+    "poise": 327,
+    "hitstopMult": 1.17,
+    "footstepShake": 0.026
    },
    "navAgent": {
-    "radius": 2.4,
+    "radius": 0.84,
     "height": 4,
-    "speed": 0.57,
-    "walkSpeed": 0.57,
-    "angularSpeed": 90,
-    "acceleration": 1.57,
-    "stoppingDistance": 0.88,
+    "speed": 5.88,
+    "walkSpeed": 1.96,
+    "angularSpeed": 190,
+    "acceleration": 3.53,
+    "stoppingDistance": 1.2,
     "baseOffset": 0,
     "areaMask": "Walkable"
    },
    "locomotion": {
     "gaits": [
      {
-      "name": "uproot_crawl",
-      "speed": 0.57,
-      "froude": 0.05
+      "name": "walk",
+      "speed": 1.96,
+      "froude": 0.2
+     },
+     {
+      "name": "run",
+      "speed": 4.38,
+      "froude": 1
+     },
+     {
+      "name": "knuckle_charge",
+      "speed": 5.88,
+      "froude": 1.8
      }
     ],
-    "playRate": 0.707,
-    "turnDegPerSec": 90,
-    "accel": 1.57,
-    "jumpHeight": 0,
+    "playRate": 0.935,
+    "turnDegPerSec": 190,
+    "accel": 3.53,
+    "jumpHeight": 0.6,
     "canClimb": "false",
-    "canSwim": "false",
+    "canSwim": "true",
     "canFly": "false",
     "hovers": "false",
     "flySpeed": 0,
@@ -209302,9 +209517,9 @@
    "behavior": {
     "name": "Passive",
     "aiPattern": "passive_wander",
-    "alertRadius": 11.31,
-    "leashRadius": 28.28,
-    "preferredRange": 8.97,
+    "alertRadius": 8.55,
+    "leashRadius": 21.38,
+    "preferredRange": 7.21,
     "circleRadius": 0,
     "retreatHpPct": 0.6,
     "notes": [
@@ -209329,15 +209544,15 @@
      "recoverySec": 0.61,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "vine_06_L",
+     "hitboxBone": "head",
      "hitboxRadius": 0.72,
      "lungeDistance": 1.52,
-     "trackingWindupDegPerSec": 54,
-     "trackingActiveDegPerSec": 9,
+     "trackingWindupDegPerSec": 114,
+     "trackingActiveDegPerSec": 19,
      "animFrames": {
-      "windup": 23,
-      "active": 8,
-      "recovery": 26
+      "windup": 18,
+      "active": 6,
+      "recovery": 19
      },
      "notes": ""
     },
@@ -209351,15 +209566,15 @@
      "recoverySec": 1.09,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "vine_06_R",
+     "hitboxBone": "weapon_R",
      "hitboxRadius": 0.72,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 54,
-     "trackingActiveDegPerSec": 9,
+     "trackingWindupDegPerSec": 114,
+     "trackingActiveDegPerSec": 19,
      "animFrames": {
-      "windup": 57,
-      "active": 20,
-      "recovery": 46
+      "windup": 43,
+      "active": 15,
+      "recovery": 35
      },
      "notes": ""
     },
@@ -209373,15 +209588,15 @@
      "recoverySec": 0.61,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.72,
      "lungeDistance": 1.52,
-     "trackingWindupDegPerSec": 54,
-     "trackingActiveDegPerSec": 9,
+     "trackingWindupDegPerSec": 114,
+     "trackingActiveDegPerSec": 19,
      "animFrames": {
-      "windup": 20,
-      "active": 8,
-      "recovery": 26
+      "windup": 15,
+      "active": 6,
+      "recovery": 19
      },
      "notes": ""
     },
@@ -209395,15 +209610,15 @@
      "recoverySec": 0.97,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "head",
      "hitboxRadius": 0.72,
      "lungeDistance": 0.95,
-     "trackingWindupDegPerSec": 54,
-     "trackingActiveDegPerSec": 9,
+     "trackingWindupDegPerSec": 114,
+     "trackingActiveDegPerSec": 19,
      "animFrames": {
-      "windup": 34,
-      "active": 16,
-      "recovery": 41
+      "windup": 26,
+      "active": 12,
+      "recovery": 31
      },
      "notes": ""
     },
@@ -209417,110 +209632,135 @@
      "recoverySec": 0.73,
      "windupJitter": 0.05,
      "feintChance": 0,
-     "hitboxBone": "bulb",
+     "hitboxBone": "jaw",
      "hitboxRadius": 0.72,
      "lungeDistance": 0,
-     "trackingWindupDegPerSec": 54,
-     "trackingActiveDegPerSec": 9,
+     "trackingWindupDegPerSec": 114,
+     "trackingActiveDegPerSec": 19,
      "animFrames": {
-      "windup": 44,
-      "active": 13,
-      "recovery": 31
+      "windup": 34,
+      "active": 10,
+      "recovery": 23
      },
      "notes": ""
     }
    ],
    "springs": [
     {
-     "root": "petal_01_L",
-     "length": 2,
-     "stiffness": 0.56,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "petal_01_R",
-     "length": 2,
-     "stiffness": 0.56,
-     "damping": 0.2,
-     "gravity": 0.2
-    },
-    {
-     "root": "stem_02",
-     "length": 3,
-     "stiffness": 0.84,
+     "root": "belly",
+     "length": 1,
+     "stiffness": 0.35,
      "damping": 0.3,
-     "gravity": 0
+     "gravity": 0.3
     }
    ],
    "parts": [
     {
-     "partId": "vine_L",
-     "bone": "vine_03_L",
-     "hp": 5564,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_L",
+     "bone": "horn_L",
+     "hp": 4452,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "vine_R",
-     "bone": "vine_03_R",
-     "hp": 5564,
-     "materialTag": "sap",
-     "onBreak": "lose_grab_reach"
+     "partId": "horn_R",
+     "bone": "horn_R",
+     "hp": 4452,
+     "materialTag": "horn_shard",
+     "onBreak": "stagger"
     },
     {
-     "partId": "bulb",
-     "bone": "bulb",
+     "partId": "weapon",
+     "bone": "weapon_R",
+     "hp": 9274,
+     "materialTag": "weapon",
+     "onBreak": "disarm_grapple_mode"
+    },
+    {
+     "partId": "leg_L",
+     "bone": "thigh_L",
      "hp": 11129,
-     "materialTag": "seed",
-     "onBreak": "stun_long"
+     "materialTag": "",
+     "onBreak": "limp_knockdown"
     }
    ],
    "hurtboxes": [
     {
-     "bone": "bulb",
+     "bone": "head",
+     "shape": "sphere",
+     "radius": 0.32,
+     "dmgMult": 1.4,
+     "partId": "head"
+    },
+    {
+     "bone": "chest",
+     "shape": "capsule",
+     "radius": 0.68,
+     "height": 1.2,
+     "dmgMult": 1
+    },
+    {
+     "bone": "belly",
      "shape": "sphere",
      "radius": 0.6,
-     "dmgMult": 1.6,
-     "partId": "bulb"
+     "dmgMult": 1.1
     },
     {
-     "bone": "stem_02",
+     "bone": "thigh_L",
      "shape": "capsule",
      "radius": 0.28,
-     "height": 1.2,
-     "dmgMult": 0.8
+     "height": 1,
+     "dmgMult": 0.9,
+     "partId": "leg_L"
     },
     {
-     "bone": "vine_03_L",
+     "bone": "thigh_R",
      "shape": "capsule",
-     "radius": 0.12,
-     "height": 0.8,
-     "dmgMult": 1,
-     "partId": "vine_L"
+     "radius": 0.28,
+     "height": 1,
+     "dmgMult": 0.9,
+     "partId": "leg_R"
     },
     {
-     "bone": "vine_03_R",
+     "bone": "forearm_L",
      "shape": "capsule",
-     "radius": 0.12,
+     "radius": 0.2,
      "height": 0.8,
-     "dmgMult": 1,
-     "partId": "vine_R"
+     "dmgMult": 0.8,
+     "partId": "arm_L"
+    },
+    {
+     "bone": "forearm_R",
+     "shape": "capsule",
+     "radius": 0.2,
+     "height": 0.8,
+     "dmgMult": 0.8,
+     "partId": "arm_R"
     }
    ],
    "procedural": [
-    "wind_sway",
-    "vine_fabrik_reach_to_target",
-    "bulb_track_target",
-    "dormant_disguise_pose",
+    "look_at_target",
+    "foot_ik_ground",
+    "heavy_breathing",
+    "footstep_camera_shake",
+    "ground_crack_decal_on_land",
     "fx:breath_mist",
     "fx:frost_crackle"
    ],
    "audio": {
-    "footstep": "wood_knock",
+    "footstep": "soft_pad",
     "vocalPitch": 0.66
    },
-   "signature": null
+   "signature": {
+    "summary": "",
+    "idle": [],
+    "movement": [],
+    "combat": [],
+    "hitReact": [],
+    "death": "",
+    "blender": [],
+    "unity": []
+   }
   },
   {
    "speciesId": "mon_ukhu_tal_stone_giant_of_the_first_making",

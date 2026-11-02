@@ -13,7 +13,7 @@ tags: [monster, vesperites-moon-raiders]
 
 > [!note] 3D model: procedural blockout in Unity (1,606 tris · 5.905 × 8.364 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Vesper Harvester is a huge creature with a drifting, half-formed body, about 9 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in arterial crimson and dried-blood brown. Survivors describe a lantern cage that holds stolen souls. It has no eyes at all, only a wide and patient mouth. The air distorts slightly around its outline. It unfolds into something larger, surrounded by a faint red mist that smells of iron. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Vesper Harvester is a huge creature with a drifting, half-formed body, about 9 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in dusk violet, with crimson markings. Survivors describe a lantern cage that holds stolen souls. It has no eyes at all, only a wide and patient mouth. The air distorts slightly around its outline. It unfolds into something larger, surrounded by a faint red mist that smells of iron. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -95,4 +95,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_floating` · mesh `floating_base` · material `porcelain_red_glow` · VFX `blood_mist` · palette `#5d5a8b` `#4c4a77` `#e0344a` · broken symmetry, mimicry, audio-first reveal

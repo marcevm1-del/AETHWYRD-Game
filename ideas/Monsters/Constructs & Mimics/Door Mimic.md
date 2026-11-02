@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (858 tris · 1.969 × 2.12 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Door Mimic is a person-sized creature with a disguised body pretending to be furniture, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in muted greys and dusty browns. Guild sketches always show a dungeon door that breathes. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It unfolds into something larger. It has no visible aura; you hear its breathing before you see it.
+> The Door Mimic is a person-sized creature with a disguised body pretending to be furniture, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in riveted iron. Guild sketches always show a dungeon door that breathes. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It unfolds into something larger. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_mimic` · mesh `mimic_base` · material `stone_metal_runes` · VFX `dust_puffs` · palette `#6c727a` `#4b5058` `#9aa2ae` · broken symmetry, mimicry, audio-first reveal

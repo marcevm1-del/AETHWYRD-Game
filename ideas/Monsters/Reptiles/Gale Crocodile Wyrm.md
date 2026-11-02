@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (3,780 tris · 1.592 × 7 × 2.88 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Gale Crocodile Wyrm is a huge creature with a massive snake-like frame, about 7 m long. Its scales are rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe a back of armored ridges like a sunken log. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Gale Crocodile Wyrm is a huge creature with a massive snake-like frame, about 7 m long. Its scales are rough, scarred and spiked, colored in green, with pale jade markings. Survivors describe a back of armored ridges like a sunken log. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_serpent` · mesh `serpent_base` · material `scale_matte` · VFX `wind_ribbons` · palette `#678d4b` `#445f32` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

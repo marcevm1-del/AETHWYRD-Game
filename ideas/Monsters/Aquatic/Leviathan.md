@@ -13,7 +13,7 @@ tags: [monster, aquatic, unique]
 
 > [!note] 3D model: procedural blockout in Unity (1,364 tris · 282.828 × 600 × 344.92 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Leviathan is a colossal creature with a heavy-jawed fish frame, about 600 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for a body so vast it moves the horizon. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
+> The Leviathan is a colossal creature with a heavy-jawed fish frame, about 600 m long. Its scales and skin are rough, scarred and spiked, colored in sea-blue. Look for a body so vast it moves the horizon. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_fish` · mesh `fish_base` · material `wet_scale` · VFX `mist_droplets` · palette `#449aaf` `#2e697b` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

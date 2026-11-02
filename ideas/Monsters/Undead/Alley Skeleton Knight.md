@@ -13,7 +13,7 @@ tags: [monster, undead]
 
 > [!note] 3D model: procedural blockout in Unity (2,250 tris · 1.084 × 1.784 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Alley Skeleton Knight is a person-sized creature with an upright humanoid build, about 2 m tall. Its flesh and bone are rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is rusted plate armor and a shield it still keeps polished. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
+> The Alley Skeleton Knight is a person-sized creature with an upright humanoid build, about 2 m tall. Its flesh and bone are rough, scarred and spiked, colored in bleached bone and grave-cloth. Its most striking feature is rusted plate armor and a shield it still keeps polished. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. Adapted to city lands, it has soot-stained hide and scavenged scraps.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `dust_puffs` · palette `#cac1a4` `#817961` `#fff1d0` · triangle-based silhouette, sharp asymmetric spikes

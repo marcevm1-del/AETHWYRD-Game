@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,294 tris · 0.482 × 1.4 × 0.94 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Labyrinth Hound is a person-sized creature with a heavy, muscular quadruped frame, about 1.4 m long. Its stone-like hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Survivors describe a brick-patterned hide. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it.
+> The Labyrinth Hound is a person-sized creature with a heavy, muscular quadruped frame, about 1.4 m long. Its stone-like hide is rough, scarred and spiked, colored in rusted iron, with ochre markings. Survivors describe a brick-patterned hide. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#8c784b` `#5d4f33` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

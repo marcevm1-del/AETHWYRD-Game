@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,528 tris · 8.401 × 5.084 × 12 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Tide Elder Treant is a huge creature with a mushroom-capped walking body, about 12 m tall. Its bark and leaves are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show a moss beard and owls living in its branches. It has dark, wary eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It lopes in long strides, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
+> The Tide Elder Treant is a huge creature with a mushroom-capped walking body, about 12 m tall. Its bark and leaves are weathered and natural, colored in leaf green over bark brown, with sea-blue markings. Guild sketches always show a moss beard and owls living in its branches. It has dark, wary eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It lopes in long strides, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -27,7 +27,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 40104 · 808 · 581 · 581 · 581 · 100 |
 | XP · gold | 9993 · 1815 |
 | Ring | 5 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/giant_biped\|giant_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Lumbaya\|Lumbaya]], [[Regions/Hoshizora\|Hoshizora]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -36,10 +36,10 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 12 m high × 4.8 m long × 14.4 m wide; prefab scale 6.
-- **Physics:** 38102.4 kg, gravity ×1, poise 1569, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 1.19 m/s, turn 60°/s, stopping distance 1.84 m.
+- **Rig:** [[Systems/Rigs/giant_biped|giant_biped]] (override (base species)); animation set `anim_plant_walker`.
+- **Dimensions:** 12 m high × 4.08 m long × 5.28 m wide; prefab scale 1.2.
+- **Physics:** 29030.4 kg, gravity ×1, poise 638, knockback resistance 1, death style `cinematic_collapse`.
+- **Navigation:** speed 6.4 m/s, turn 87°/s, stopping distance 2.56 m.
 - **Attack count:** 5; **signature:** a moss beard and owls living in its branches.
 
 ## Attacks and responses
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `mist_droplets` · palette `#56923c` `#5e4832` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

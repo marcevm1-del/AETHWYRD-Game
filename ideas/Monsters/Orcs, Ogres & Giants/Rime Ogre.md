@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,506 tris · 3.006 × 1.728 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Rime Ogre is a large creature with a giant, barrel-chested humanoid body, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe a sagging belly, a tree-trunk club and a toll sack. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
+> The Rime Ogre is a large creature with a giant, barrel-chested humanoid body, about 3.5 m tall. Its hide is rough, scarred and spiked, colored in sun-brown, with frost-blue markings. Survivors describe a sagging belly, a tree-trunk club and a toll sack. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `frost_trail_snow` · palette `#a97963` `#6e5042` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

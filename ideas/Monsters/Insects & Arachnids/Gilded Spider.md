@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,320 tris · 1.275 × 1.4 × 0.791 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Gilded Spider is a person-sized creature with a squat, many-legged arachnid build, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in warm gold and pearl white. Look for green-striped legs and dripping fangs. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Gilded Spider is a person-sized creature with a squat, many-legged arachnid build, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in amber, with gold markings. Look for green-striped legs and dripping fangs. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `holy_motes` · palette `#cf8f32` `#84591e` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

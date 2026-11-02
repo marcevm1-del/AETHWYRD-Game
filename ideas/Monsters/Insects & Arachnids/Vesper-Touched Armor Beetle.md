@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (2,880 tris · 0.704 × 1.2 × 0.436 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Armor Beetle is a person-sized creature with a segmented six-limbed frame, about 1.2 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a shell like polished bronze. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Armor Beetle is a person-sized creature with a segmented six-limbed frame, about 1.2 m long. Its chitin is rough, scarred and spiked, colored in amber, with ochre markings. Look for a shell like polished bronze. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#b87f2c` `#754f1b` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

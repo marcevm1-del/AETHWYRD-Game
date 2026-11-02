@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,610 tris · 3.436 × 2.09 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Orc Disaster is a large creature with a giant, barrel-chested humanoid body, about 4 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Look for a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
+> The Orc Disaster is a large creature with a giant, barrel-chested humanoid body, about 4 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Look for a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#768a49` `#4f5d31` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

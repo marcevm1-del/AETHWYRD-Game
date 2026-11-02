@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (2,346 tris · 0.617 × 1.6 × 1.392 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Salamander is a person-sized creature with a powerful four-legged hunter's body, about 1.6 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show a tail that burns like a torch. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Salamander is a person-sized creature with a powerful four-legged hunter's body, about 1.6 m long. Its scales are rough, scarred and spiked, colored in green, with ember-orange markings. Guild sketches always show a tail that burns like a torch. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `scale_matte` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `scale_matte` · VFX `embers_heat_haze` · palette `#658647` `#425a30` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

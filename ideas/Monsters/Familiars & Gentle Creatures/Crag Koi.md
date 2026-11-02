@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (950 tris · 0.198 × 0.5 × 0.212 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crag Koi is a small creature with a long, finned body, about 0.5 m long. Its coat is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe scales that shimmer every color. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
+> The Crag Koi is a small creature with a long, finned body, about 0.5 m long. Its coat is smooth and clean, colored in mint, with ochre markings. Survivors describe scales that shimmer every color. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
+Rig `rig_fish` · mesh `fish_base` · material `fur_soft` · VFX `rock_debris` · palette `#aac592` `#758d61` `#d1a15a` · circle-based, soft silhouette

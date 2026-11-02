@@ -6,7 +6,7 @@ contact sheet per family.
     blender -b --factory-startup -P Tools/blender/build_creature_library.py                       # all 680 species
     blender -b --factory-startup -P Tools/blender/build_creature_library.py -- --families slimes,orcs_ogres_giants  (names or slugs)
     blender -b --factory-startup -P Tools/blender/build_creature_library.py -- --ids mon_goblin,mon_forest_wolf
-    (add --detail medium, --no-sheets as needed)
+    (add --detail medium, --no-sheets as needed; --plain for the old grey preview instead of the toon sheet)
 
 Output: Art/Blender/CreatureLibrary/<family>.blend (not in git) and 13_Production/screenshots/creatures/<family>.png.
 """
@@ -99,7 +99,22 @@ def main():
                     ad.tags.new(tag)
             objs.append(o)
         tiles = []
-        if objs:
+        if objs and not arg("--plain"):
+            # The toon preview is the standard for sheets (style guide 3.1); it restores the scene for the save.
+            import toon_preview as tp
+            pdir = os.path.join(out_dir, "_previews", slug(fam))
+            os.makedirs(pdir, exist_ok=True)
+            toon_tiles = tp.render_tiles(objs, pdir, kind="creature", tile=(320, 320), yaw=-35, samples=12)
+            for o, tt in zip(objs, toon_tiles):
+                try:
+                    with bpy.context.temp_override(id=o):
+                        bpy.ops.ed.lib_id_load_custom_preview(filepath=tt[0])
+                except Exception:
+                    pass
+            if sheet_dir:
+                os.makedirs(sheet_dir, exist_ok=True)
+                tp.sheet(toon_tiles, os.path.join(sheet_dir, "%s.png" % slug(fam)), cols=8, tile=(320, 320))
+        elif objs:                                       # --plain: the old grey preview, for geometry debugging
             preview.setup(ground=True)
             pdir = os.path.join(out_dir, "_previews", slug(fam))
             os.makedirs(pdir, exist_ok=True)
@@ -107,7 +122,7 @@ def main():
                 p = os.path.join(pdir, o.name + ".png")
                 for other in objs:
                     other.hide_render = other is not o
-                preview.camera([o], yaw=-35, pitch=14, margin=1.15)
+                preview.camera([o], yaw=-35, pitch=14, margin=1.15, aspect=1.0)
                 preview.render(p, (320, 320), 12)
                 tiles.append(p)
                 try:

@@ -10,7 +10,7 @@ Rooted plants that attack in place: man-eating flowers, vine traps, ambush trees
 | Field | Value |
 |---|---|
 | Aliases | plant, man_eater_plant, vine, flower_monster, tree_ambush |
-| Species using rig | 19 |
+| Species using rig | 7 |
 | Families represented | Plants & Fungi |
 | Bone count · budget | 30 · 40 |
 | Unity avatar · material | Generic · wood |
@@ -34,23 +34,11 @@ Rooted plants that attack in place: man-eating flowers, vine traps, ambush trees
 
 - [[Monsters/Plants & Fungi/Thornvine|Thornvine]] — anim_plant_rooted, 3 m high, rigId rig selection
 - [[Monsters/Plants & Fungi/Man-Eater Plant|Man-Eater Plant]] — anim_plant_rooted, 2.5 m high, rigId rig selection
-- [[Monsters/Plants & Fungi/Treant Sapling|Treant Sapling]] — anim_plant_walker, 2 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Spore Lord|Spore Lord]] — anim_plant_walker, 3 m high, keyword rig selection
 - [[Monsters/Plants & Fungi/Corpse Flower|Corpse Flower]] — anim_plant_rooted, 4 m high, rigId rig selection
-- [[Monsters/Plants & Fungi/Elder Treant|Elder Treant]] — anim_plant_walker, 12 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Ancient Treant|Ancient Treant]] — anim_plant_walker, 30 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Worldroot Behemoth|Worldroot Behemoth]] — anim_plant_walker, 80 m high, keyword rig selection
 - [[Monsters/Plants & Fungi/Blighted World Root|Blighted World Root]] — anim_plant_rooted, 300 m high, rigId rig selection
 - [[Monsters/Plants & Fungi/Vesper-Touched Thornvine|Vesper-Touched Thornvine]] — anim_plant_rooted, 3 m high, rigId rig selection
 - [[Monsters/Plants & Fungi/Vine Man-Eater Plant|Vine Man-Eater Plant]] — anim_plant_rooted, 2.5 m high, rigId rig selection
-- [[Monsters/Plants & Fungi/Bog Treant Sapling|Bog Treant Sapling]] — anim_plant_walker, 2 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Bog Spore Lord|Bog Spore Lord]] — anim_plant_walker, 3 m high, keyword rig selection
 - [[Monsters/Plants & Fungi/Blaze Corpse Flower|Blaze Corpse Flower]] — anim_plant_rooted, 4 m high, rigId rig selection
-- [[Monsters/Plants & Fungi/Tide Elder Treant|Tide Elder Treant]] — anim_plant_walker, 12 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Bog Ancient Treant|Bog Ancient Treant]] — anim_plant_walker, 30 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Thunder Worldroot Behemoth|Thunder Worldroot Behemoth]] — anim_plant_walker, 80 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/Mycelia, the Spore Lord|Mycelia, the Spore Lord]] — anim_plant_walker, 5 m high, keyword rig selection
-- [[Monsters/Plants & Fungi/The Briar King, Lord of the Winter Court|The Briar King, Lord of the Winter Court]] — anim_plant_walker, 4 m high, keyword rig selection
 
 ## Production checks
 

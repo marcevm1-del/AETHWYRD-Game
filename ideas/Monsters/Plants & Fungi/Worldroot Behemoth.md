@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,326 tris · 55.507 × 37.087 × 80 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in leaf greens over bark brown. Its most striking feature is a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by drifting pollen and tiny blossoms.
+> The Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in deep fern green and dark bark. Its most striking feature is a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -26,7 +26,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 144467 · 1418 · 1021 · 1021 · 1021 · 100 |
 | XP · gold | 24842 · 4024 |
 | Ring | 8 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/giant_biped\|giant_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Nox Dominion\|Nox Dominion]], [[Regions/Great Labyrinth (Floors 91-120)\|Great Labyrinth (Floors 91-120)]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -35,11 +35,11 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 80 m high × 32 m long × 96 m wide; prefab scale 40.
-- **Physics:** 10752000 kg, gravity ×1, poise 36691, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 2.79 m/s, turn 60°/s, stopping distance 10 m.
-- **Attack count:** 5; **signature:** a walking forest with a glowing heartwood core.
+- **Rig:** [[Systems/Rigs/giant_biped|giant_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 80 m high × 27.2 m long × 35.2 m wide; prefab scale 8.
+- **Physics:** 8192000 kg, gravity ×1, poise 14922, knockback resistance 1, death style `cinematic_collapse`.
+- **Navigation:** speed 15 m/s, turn 60°/s, stopping distance 12.4 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#5b8047` `#4d382e` `#8fd16a` · triangle-based silhouette, sharp asymmetric spikes

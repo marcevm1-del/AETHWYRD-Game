@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (360 tris · 4.755 × 3.072 × 4.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Stone Golem is a large creature with a blocky construct body, about 4.8 m tall. Its surface is weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is a rune glowing on its back. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Stone Golem is a large creature with a blocky construct body, about 4.8 m tall. Its surface is weathered and natural, colored in riveted iron, with ochre markings. Its most striking feature is a rune glowing on its back. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#747d83` `#51595e` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

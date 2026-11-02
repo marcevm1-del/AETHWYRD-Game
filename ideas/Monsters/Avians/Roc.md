@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,734 tris · 28.456 × 33.737 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Roc is a colossal creature with a tall, long-legged bird build, about 30 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Survivors describe a shadow as big as a cloud. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
+> The Roc is a colossal creature with a tall, long-legged bird build, about 30 m tall. Its plumage is rough, scarred and spiked, colored in pale buff, with pale jade markings. Survivors describe a shadow as big as a cloud. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#cfc6a0` `#8f8564` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

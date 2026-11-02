@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (950 tris · 10.617 × 30 × 18.279 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Night Leviathan is a colossal creature with a heavy-jawed fish frame, about 30 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in starless black with faint violet edges. Guild sketches always show a shadow whale that swims through walls. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it.
+> The Night Leviathan is a colossal creature with a heavy-jawed fish frame, about 30 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in smoky violet, with violet-edged markings. Guild sketches always show a shadow whale that swims through walls. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by warped air, as if space bends around it.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_fish` · mesh `fish_base` · material `shadow_smoke` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_fish` · mesh `fish_base` · material `shadow_smoke` · VFX `void_distortion` · palette `#56517d` `#47426c` `#8a7cff` · elongated, irregular silhouette; still-then-sudden timing

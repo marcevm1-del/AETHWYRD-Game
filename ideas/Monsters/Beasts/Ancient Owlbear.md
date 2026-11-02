@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,646 tris · 0.884 × 3.9 × 1.751 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Owlbear is a large creature with a long-legged predatory quadruped build, about 3.9 m long. Its coat is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is an owl's feathered face on a bear's muscled body. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Owlbear is a large creature with a long-legged predatory quadruped build, about 3.9 m long. Its coat is rough, scarred and spiked, colored in warm brown. Its most striking feature is an owl's feathered face on a bear's muscled body. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#92714a` `#5e4732` `#ca9a67` · triangle-based silhouette, sharp asymmetric spikes

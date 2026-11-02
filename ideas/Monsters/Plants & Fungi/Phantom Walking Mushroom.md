@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,568 tris · 0.421 × 0.293 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are weathered and natural, colored in warm gold and pearl white. Guild sketches always show a waddling cap on stubby legs. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are weathered and natural, colored in red with pale spots, with gold markings. Guild sketches always show a waddling cap on stubby legs. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `holy_motes` · palette `#d45841` `#92362a` `#ffd166` · real-animal silhouette with one fantasy exaggeration

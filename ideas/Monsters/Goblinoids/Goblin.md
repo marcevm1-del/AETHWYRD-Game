@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: hand-built Ring 0 model, or not exported yet.
 
-> The Goblin is a small creature with a hunched, wiry humanoid frame, about 1 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Guild sketches always show a grin of needle teeth under a stolen tin helmet. It has burning slit pupils. It has no ornament at all: simple, readable shapes. It circles its prey. It has no visible aura; you hear its breathing before you see it.
+> The Goblin is a small creature with a hunched, wiry humanoid frame, about 1 m tall. Its skin is rough, scarred and spiked, colored in moss green and leather brown. Guild sketches always show a grin of needle teeth under a stolen tin helmet. It has burning slit pupils. It has no ornament at all: simple, readable shapes. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -112,4 +112,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#6fae45` `#8a5a35` `#b8bec6` · triangle-based silhouette, sharp asymmetric spikes

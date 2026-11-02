@@ -14,6 +14,15 @@ from . import geo
 PARTS_COLLECTION = "AB_Parts"
 INSTANCER = "AB_Instancer"
 GLOW_KEYS = ("lamp", "magic", "rune", "ember", "crystal", "glow")
+# Emission strength per glow key, first match wins (technical-artist, toon check 2026-10-31). Above about 1.8 a
+# lantern clips to white in the toon look and loses its hue (Greymoor #BFFF8C, Umbravel violet); embers stay at
+# 2.5 for Iron Hold's forge read; windows ("window_glow", "glow") and magic parts at 2.0.
+GLOW_STRENGTH = (("ember", 2.5), ("lamp", 1.5), ("magic", 2.0), ("rune", 2.0), ("crystal", 2.0), ("glow", 2.0))
+
+
+def glow_strength(key):
+    """Emission strength for a palette key: 0 when it does not glow."""
+    return next((v for k, v in GLOW_STRENGTH if k in key), 0.0)
 
 
 # ----------------------------------------------------------------------------------------------------------------
@@ -44,7 +53,7 @@ def material(palette_id, key, colour):
             bsdf.inputs[nm].default_value = (*rgb, 1.0) if glow else (0, 0, 0, 1)
             break
     if "Emission Strength" in bsdf.inputs:
-        bsdf.inputs["Emission Strength"].default_value = 3.0 if glow else 0.0
+        bsdf.inputs["Emission Strength"].default_value = glow_strength(key) if glow else 0.0
     mat.diffuse_color = (*rgb, 1.0)
     mat["ab_key"] = key
     mat["ab_palette"] = palette_id

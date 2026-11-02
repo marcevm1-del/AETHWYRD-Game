@@ -13,7 +13,7 @@ tags: [monster, demons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,788 tris · 3.252 × 3.494 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Abyss Prince is a huge creature with an upright humanoid build, about 6 m tall. Its hide is rough, scarred and spiked, colored in starless black with faint violet edges. Its most striking feature is a crown of black flame and wings of torn night. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by warped air, as if space bends around it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Abyss Prince is a huge creature with an upright humanoid build, about 6 m tall. Its hide is rough, scarred and spiked, colored in char-black, with violet-edged markings. Its most striking feature is a crown of black flame and wings of torn night. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by warped air, as if space bends around it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `void_distortion` · palette `#0b0b1a` `#3d2c8d` `#c9c9ff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `demon_hide_emissive` · VFX `void_distortion` · palette `#4b4654` `#3e3944` `#8a7cff` · triangle-based silhouette, sharp asymmetric spikes

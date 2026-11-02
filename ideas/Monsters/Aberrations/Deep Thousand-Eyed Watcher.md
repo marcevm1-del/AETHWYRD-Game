@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (1,420 tris · 6.178 × 5.161 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Deep Thousand-Eyed Watcher is a huge creature with a floating, cloth-like shape, about 6 m tall. Its skin is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe a cloud of eyes that blink in sequence. It has too many eyes, opening one after another. An elegant crest and glowing veins of mana mark it as a champion of its kind. It copies the walk of whatever it hunts, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
+> The Deep Thousand-Eyed Watcher is a huge creature with a floating, cloth-like shape, about 6 m tall. Its skin is stretched, stitched and constantly shifting, colored in sickly teal, with violet markings. Survivors describe a cloud of eyes that blink in sequence. It has too many eyes, opening one after another. An elegant crest and glowing veins of mana mark it as a champion of its kind. It copies the walk of whatever it hunts, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_floating` · mesh `floating_base` · material `wet_flesh_unsettling` · VFX `shadow_wisps` · palette `#6d8e81` `#485e57` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

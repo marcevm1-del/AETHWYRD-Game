@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,154 tris · 0.155 × 0.4 × 0.257 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ember Kitten is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in ember reds fading to soot black. Guild sketches always show fur that flickers like candle flame. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by heat-shimmer and drifting sparks.
+> The Ember Kitten is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pastel pink, with ember-orange markings. Guild sketches always show fur that flickers like candle flame. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `embers_heat_haze` · palette `#f4c0d1` `#ae8593` `#ff7a3d` · circle-based, soft silhouette

@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,534 tris · 7.73 × 5.108 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Frost Giant is a huge creature with a massive hunched brute frame, about 9 m tall. Its hide is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe a beard of icicles and armor of glacier ice. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
+> The Frost Giant is a huge creature with a massive hunched brute frame, about 9 m tall. Its hide is rough, scarred and spiked, colored in stone-grey, with frost-blue markings. Survivors describe a beard of icicles and armor of glacier ice. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `frost_trail_snow` · palette `#7b808b` `#52575f` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

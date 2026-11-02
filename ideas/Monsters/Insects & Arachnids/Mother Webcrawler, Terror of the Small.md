@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (4,296 tris · 1.083 × 1.2 × 1.607 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mother Webcrawler, Terror of the Small is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.2 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a spider no bigger than a cat, which to the Thimblefolk is a mountain. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Mother Webcrawler, Terror of the Small is a person-sized creature with a bulbous spider frame on long jointed legs, about 1.2 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in glossy brown, with sickly green markings. Look for a spider no bigger than a cat, which to the Thimblefolk is a mountain. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_octopod` · mesh `octopod_base` · material `chitin_gloss` · VFX `toxic_fog` · palette `#836134` `#543f22` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

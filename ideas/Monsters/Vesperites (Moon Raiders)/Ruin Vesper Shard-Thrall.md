@@ -13,7 +13,7 @@ tags: [monster, vesperites-moon-raiders]
 
 > [!note] 3D model: procedural blockout in Unity (2,106 tris · 0.751 × 0.8 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ruin Vesper Shard-Thrall is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show porcelain skin cracked with red light. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
+> The Ruin Vesper Shard-Thrall is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in dusk violet. Guild sketches always show porcelain skin cracked with red light. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `porcelain_red_glow` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `porcelain_red_glow` · VFX `shadow_wisps` · palette `#594c76` `#4a3f66` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

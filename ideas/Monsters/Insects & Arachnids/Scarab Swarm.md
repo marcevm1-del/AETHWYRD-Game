@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (2,334 tris · 0.082 × 0.05 × 0.066 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Scarab Swarm is a tiny creature with a swarm of many small bodies moving as one, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in ink black with bruised violet. Look for golden beetles that flow like spilled coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it.
+> The Scarab Swarm is a tiny creature with a swarm of many small bodies moving as one, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in iridescent green, with violet markings. Look for golden beetles that flow like spilled coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -108,4 +108,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_swarm` · mesh `swarm_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#44844f` `#305938` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

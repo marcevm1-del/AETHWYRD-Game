@@ -13,7 +13,7 @@ tags: [monster, dragons, unique]
 
 > [!note] 3D model: procedural blockout in Unity (3,756 tris · 1949.453 × 2000 × 1221.352 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Terragon, the Mountain That Breathes is a colossal creature with an ancient, serpentine dragon body, about 2000 m long. Its scales are weathered and natural, colored in ochre, clay and mossy stone. Its most striking feature is forests growing along its back. It has alert animal eyes. Its presence is world-scale; the sky changes color when it appears. It prowls, surrounded by pebbles that tremble and float near it.
+> The Terragon, the Mountain That Breathes is a colossal creature with an ancient, serpentine dragon body, about 2000 m long. Its scales are weathered and natural, colored in iron-grey, with ochre markings. Its most striking feature is forests growing along its back. It has alert animal eyes. Its presence is world-scale; the sky changes color when it appears. It prowls, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_dragon` · mesh `dragon_base` · material `dragon_scale` · VFX `rock_debris` · palette `#6a6877` `#4a4854` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, lycanthropes]
 
 > [!note] 3D model: procedural blockout in Unity (2,680 tris · 1.335 × 1.481 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Blood Vesper Alpha is a large creature with an upright humanoid build, about 3.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Survivors describe red-veined fur that only appears under the red moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by a faint red mist that smells of iron.
+> The Blood Vesper Alpha is a large creature with an upright humanoid build, about 3.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in wolf-grey, with crimson markings. Survivors describe red-veined fur that only appears under the red moon. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by a faint red mist that smells of iron.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `fur_rough` · VFX `blood_mist` · palette `#88878e` `#5b5a62` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

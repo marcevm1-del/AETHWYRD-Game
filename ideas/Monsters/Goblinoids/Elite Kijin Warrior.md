@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,582 tris · 2.059 × 2.604 × 3.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elite Kijin Warrior is a large creature with a broad-shouldered humanoid build, about 3.8 m tall. Its skin is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is twin horns, a disciplined stance and a lacquered blade. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elite Kijin Warrior is a large creature with a broad-shouldered humanoid build, about 3.8 m tall. Its skin is rough, scarred and spiked, colored in olive and hide brown, with ember-orange markings. Its most striking feature is twin horns, a disciplined stance and a lacquered blade. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rough_skin_leather` · VFX `embers_heat_haze` · palette `#8a984a` `#69492f` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

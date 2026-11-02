@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (3,174 tris · 9.804 × 7 × 9.825 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vine Hive Tyrant is a huge creature with a sleek flying build, about 7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in leaf greens over bark brown. Its most striking feature is a winged queen-killer with a crown of stingers. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
+> The Vine Hive Tyrant is a huge creature with a sleek flying build, about 7 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in lacquer-red, with leaf-green markings. Its most striking feature is a winged queen-killer with a crown of stingers. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `chitin_matte` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_wyvern` · mesh `wyvern_base` · material `chitin_matte` · VFX `pollen_petals` · palette `#af392d` `#622d2a` `#8fd16a` · elongated, irregular silhouette; still-then-sudden timing

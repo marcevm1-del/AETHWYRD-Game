@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (3,146 tris · 1.355 × 1.714 × 2.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Shade Knight is a person-sized creature with an upright humanoid build, about 2.3 m tall. Its smoke-like body is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show armor with nothing but darkness inside. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by shadows that lean toward it.
+> The Shade Knight is a person-sized creature with an upright humanoid build, about 2.3 m tall. Its smoke-like body is rough, scarred and spiked, colored in storm-grey, with violet markings. Guild sketches always show armor with nothing but darkness inside. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#565a7a` `#42445e` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

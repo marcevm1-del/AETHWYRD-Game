@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,184 tris · 0.272 × 1.2 × 0.539 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Radiant Wolf is a person-sized creature with a heavy, muscular quadruped frame, about 1.2 m long. Its coat is weathered and natural, colored in warm gold and pearl white. Its most striking feature is a grey-green coat that blends with ferns. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Radiant Wolf is a person-sized creature with a heavy, muscular quadruped frame, about 1.2 m long. Its coat is weathered and natural, colored in dark brown, with gold markings. Its most striking feature is a grey-green coat that blends with ferns. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `holy_motes` · palette `#664f46` `#493834` `#ffd166` · real-animal silhouette with one fantasy exaggeration

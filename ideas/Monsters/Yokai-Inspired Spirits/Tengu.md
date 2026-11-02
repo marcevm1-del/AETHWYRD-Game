@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (2,770 tris · 1.889 × 1.487 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Tengu is a person-sized creature with a broad-winged bird frame, about 2 m tall. Its form is weathered and natural, colored in pale jade and cloud white. Look for crow wings, a long red mask and a feather fan. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by swirling leaves and a constant breeze.
+> The Tengu is a person-sized creature with a broad-winged bird frame, about 2 m tall. Its form is weathered and natural, colored in indigo, with pale jade markings. Look for crow wings, a long red mask and a feather fan. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `paper_ink_spirit` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_avian` · mesh `avian_base` · material `paper_ink_spirit` · VFX `wind_ribbons` · palette `#444d6f` `#31364f` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

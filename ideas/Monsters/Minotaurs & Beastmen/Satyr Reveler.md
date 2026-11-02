@@ -13,7 +13,7 @@ tags: [monster, minotaurs-beastmen]
 
 > [!note] 3D model: procedural blockout in Unity (2,706 tris · 1.002 × 0.994 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Satyr Reveler is a person-sized creature with a broad-shouldered humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in leaf greens over bark brown. Look for goat legs and a panpipe that makes you dance. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
+> The Satyr Reveler is a person-sized creature with a broad-shouldered humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in charcoal, with leaf-green markings. Look for goat legs and a panpipe that makes you dance. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `short_hide` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `short_hide` · VFX `pollen_petals` · palette `#595653` `#423f3e` `#8fd16a` · real-animal silhouette with one fantasy exaggeration

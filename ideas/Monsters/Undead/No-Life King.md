@@ -13,7 +13,7 @@ tags: [monster, undead, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,744 tris · 1.252 × 1.751 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The No-Life King is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a king of bone on a throne of a thousand skulls. It has eyes that never blink. Its presence is world-scale; the sky changes color when it appears. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The No-Life King is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with violet markings. Guild sketches always show a king of bone on a throne of a thousand skulls. It has eyes that never blink. Its presence is world-scale; the sky changes color when it appears. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `rot_bone` · VFX `shadow_wisps` · palette `#92a986` `#5f7058` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

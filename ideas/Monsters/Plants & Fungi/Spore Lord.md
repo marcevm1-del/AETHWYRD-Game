@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,492 tris · 1.53 × 1.034 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Spore Lord is a large creature with a walking body of bark and root, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Survivors describe a mushroom crown and a cloak of mycelium. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Spore Lord is a large creature with a walking body of bark and root, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in warm brown, with sickly green markings. Survivors describe a mushroom crown and a cloak of mycelium. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -26,7 +26,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 8733 · 393 · 283 · 283 · 283 · 100 |
 | XP · gold | 3073 · 648 |
 | Ring | 2 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Xochitl Mire\|Xochitl Mire]], [[Regions/Lumbaya\|Lumbaya]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -35,11 +35,11 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 3 m high × 1.2 m long × 3.6 m wide; prefab scale 1.5.
-- **Physics:** 567 kg, gravity ×1, poise 149, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.5 m/s, turn 104°/s, stopping distance 0.76 m.
-- **Attack count:** 5; **signature:** a mushroom crown and a cloak of mycelium.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 3 m high × 0.9 m long × 1.26 m wide; prefab scale 0.857.
+- **Physics:** 486 kg, gravity ×1.3, poise 188, knockback resistance 0.84, death style `heavy_fall_dust`.
+- **Navigation:** speed 5.11 m/s, turn 219°/s, stopping distance 1 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#a28647` `#6a552c` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

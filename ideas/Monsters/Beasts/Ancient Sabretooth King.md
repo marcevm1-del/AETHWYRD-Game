@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,718 tris · 1.652 × 4.8 × 3.224 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Sabretooth King is a large creature with a long-legged predatory quadruped build, about 4.8 m long. Its coat is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe two sabre fangs as long as swords. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Sabretooth King is a large creature with a long-legged predatory quadruped build, about 4.8 m long. Its coat is rough, scarred and spiked, colored in dark brown, with frost-blue markings. Survivors describe two sabre fangs as long as swords. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `frost_trail_snow` · palette `#5a4c3d` `#40362e` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

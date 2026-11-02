@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (1,046 tris · 2.449 × 1.513 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Core Sentinel is a large creature with a blocky construct body, about 2.5 m tall. Its stone-like hide is rough, scarred and spiked, colored in warm gold and pearl white. Survivors describe a dungeon-core crystal for a heart. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by soft radiance and floating motes of light.
+> The Core Sentinel is a large creature with a blocky construct body, about 2.5 m tall. Its stone-like hide is rough, scarred and spiked, colored in dungeon stone, with gold markings. Survivors describe a dungeon-core crystal for a heart. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `dungeon_stone` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_golem` · mesh `golem_base` · material `dungeon_stone` · VFX `holy_motes` · palette `#798088` `#51575d` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

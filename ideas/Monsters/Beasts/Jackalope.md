@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,682 tris · 0.096 × 0.4 × 0.16 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is smooth and clean, colored in muted greys and dusty browns. Look for tiny antlers on a fluffy rabbit. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It bounces happily. It has no visible aura; you hear its breathing before you see it.
+> The Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is smooth and clean, colored in cream. Look for tiny antlers on a fluffy rabbit. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It bounces happily. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `dust_puffs` · palette `#ded5ac` `#9e9573` `#ffecc6` · circle-based, soft silhouette

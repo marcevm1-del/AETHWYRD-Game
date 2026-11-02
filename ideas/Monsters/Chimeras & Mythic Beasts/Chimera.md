@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,246 tris · 0.805 × 3.5 × 1.571 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Chimera is a large creature with a heavy, muscular quadruped frame, about 3.5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Look for lion, goat and serpent heads on one body. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Chimera is a large creature with a heavy, muscular quadruped frame, about 3.5 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ember-orange markings. Look for lion, goat and serpent heads on one body. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `embers_heat_haze` · palette `#836945` `#584a31` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (1,848 tris · 0.436 × 0.451 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Lantern Ghost is a small creature with a drifting, half-formed body, about 0.6 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Its most striking feature is a paper lantern with a torn mouth. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Lantern Ghost is a small creature with a drifting, half-formed body, about 0.6 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in paper white, with gold markings. Its most striking feature is a paper lantern with a torn mouth. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `paper_ink_spirit` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_floating` · mesh `floating_base` · material `paper_ink_spirit` · VFX `holy_motes` · palette `#d2cebb` `#86826f` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

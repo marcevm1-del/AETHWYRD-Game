@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (1,906 tris · 3.957 × 3.234 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Hornet Lancer is a person-sized creature with a small winged body, about 1.9 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a lance-like stinger and humming armored wings. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Hornet Lancer is a person-sized creature with a small winged body, about 1.9 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Guild sketches always show a lance-like stinger and humming armored wings. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -36,7 +36,7 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override (base species)); animation set `anim_flyer_small`.
 - **Dimensions:** 0.63 m high × 1.9 m long × 0.97 m wide; prefab scale 2.375.
 - **Physics:** 301.8 kg, gravity ×1.4, poise 150, knockback resistance 0.34, death style `flip_legs_curl`.
 - **Navigation:** speed 5.3 m/s, turn 363°/s, stopping distance 0.67 m.
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#585963` `#42414b` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

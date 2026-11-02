@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,176 tris · 6.012 × 3.874 × 7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hill Giant is a huge creature with a massive hunched brute frame, about 7 m tall. Its hide is weathered and natural, colored in ochre, clay and mossy stone. Look for a boulder slung over its shoulder like a sack. It has alert animal eyes. Faint runes glow along its body when it fights. It lopes in long strides, surrounded by pebbles that tremble and float near it.
+> The Hill Giant is a huge creature with a massive hunched brute frame, about 7 m tall. Its hide is weathered and natural, colored in stone-grey, with ochre markings. Look for a boulder slung over its shoulder like a sack. It has alert animal eyes. Faint runes glow along its body when it fights. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `rock_debris` · palette `#7a7f89` `#52565e` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

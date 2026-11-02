@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,256 tris · 0.77 × 2.5 × 2.121 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Nightmare Steed is a large creature with a long-legged predatory quadruped build, about 2.5 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Guild sketches always show flame hooves and a mane of smoke. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Nightmare Steed is a large creature with a long-legged predatory quadruped build, about 2.5 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in brimstone red, with gold markings. Guild sketches always show flame hooves and a mane of smoke. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `holy_motes` · palette `#af2d32` `#622a2d` `#ffd166` · elongated, irregular silhouette; still-then-sudden timing

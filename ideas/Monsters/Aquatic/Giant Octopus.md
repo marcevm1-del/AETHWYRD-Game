@@ -13,7 +13,7 @@ tags: [monster, aquatic]
 
 > [!note] 3D model: procedural blockout in Unity (1,648 tris · 9.626 × 10 × 10.147 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Giant Octopus is a huge creature with a huge many-armed sea body, about 10 m long. Its scales and skin are rough, scarred and spiked, colored in deep blues with a glassy shine. Look for skin that changes color to match the rocks. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by fine mist and droplets that orbit it.
+> The Giant Octopus is a huge creature with a huge many-armed sea body, about 10 m long. Its scales and skin are rough, scarred and spiked, colored in sea-blue. Look for skin that changes color to match the rocks. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_cephalopod` · mesh `cephalopod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_cephalopod` · mesh `cephalopod_base` · material `wet_scale` · VFX `mist_droplets` · palette `#3d749d` `#294e6e` `#4fa8e8` · triangle-based silhouette, sharp asymmetric spikes

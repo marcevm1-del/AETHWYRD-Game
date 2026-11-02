@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,486 tris · 2.656 × 4.5 × 3.28 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Death Mantis is a large creature with a low, wide insectoid build, about 4.5 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show black chitin and a skull-like head. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Death Mantis is a large creature with a low, wide insectoid build, about 4.5 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in blue-black, with violet markings. Guild sketches always show black chitin and a skull-like head. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `shadow_wisps` · palette `#47597b` `#344059` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

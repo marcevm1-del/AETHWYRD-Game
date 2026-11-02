@@ -13,7 +13,7 @@ tags: [monster, centaurs-taurs]
 
 > [!note] 3D model: procedural blockout in Unity (3,004 tris · 1.241 × 2.018 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crag Centaur Lancer is a large creature with a powerful taur build, about 2.6 m tall. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Look for a long lance and painted barding. It has dark, wary eyes. Faint runes glow along its body when it fights. It prowls, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Crag Centaur Lancer is a large creature with a powerful taur build, about 2.6 m tall. Its coat is weathered and natural, colored in dapple-grey, with ochre markings. Look for a long lance and painted barding. It has dark, wary eyes. Faint runes glow along its body when it fights. It prowls, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `rock_debris` · palette `#c1bfb6` `#85837c` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

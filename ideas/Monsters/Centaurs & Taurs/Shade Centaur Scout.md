@@ -13,7 +13,7 @@ tags: [monster, centaurs-taurs]
 
 > [!note] 3D model: procedural blockout in Unity (2,364 tris · 1.092 × 2.318 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Shade Centaur Scout is a person-sized creature with a centauroid body with a humanoid torso on a four-legged base, about 2.4 m tall. Its coat is weathered and natural, colored in ink black with bruised violet. Look for a horsebow and a braided mane. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
+> The Shade Centaur Scout is a person-sized creature with a centauroid body with a humanoid torso on a four-legged base, about 2.4 m tall. Its coat is weathered and natural, colored in chestnut, with violet markings. Look for a horsebow and a braided mane. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_taur` · mesh `taur_base` · material `horse_coat` · VFX `shadow_wisps` · palette `#8d6548` `#5b3f31` `#9a86d8` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,176 tris · 1.017 × 3 × 2.015 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Griffon is a large creature with a long-legged predatory quadruped build, about 3 m long. Its plumage is weathered and natural, colored in pale jade and cloud white. Its most striking feature is an eagle's front and a lion's back. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by swirling leaves and a constant breeze.
+> The Griffon is a large creature with a long-legged predatory quadruped build, about 3 m long. Its plumage is weathered and natural, colored in crow-black, with pale jade markings. Its most striking feature is an eagle's front and a lion's back. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#555562` `#46464e` `#8fe0bd` · real-animal silhouette with one fantasy exaggeration

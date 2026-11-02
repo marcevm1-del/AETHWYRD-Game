@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (2,682 tris · 0.12 × 0.5 × 0.201 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Frost Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in pale blues and frost-white. Look for a wide smile and bulging golden eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Frost Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in teal-grey, with frost-blue markings. Look for a wide smile and bulging golden eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -95,4 +95,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `scale_matte` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `scale_matte` · VFX `frost_trail_snow` · palette `#486977` `#334954` `#9fdcff` · circle-based, soft silhouette

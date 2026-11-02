@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (3,418 tris · 3.1 × 3 × 2.712 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Queen's Guard is a large creature with a segmented six-limbed frame, about 3 m long. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a shield-shaped head plate. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Queen's Guard is a large creature with a segmented six-limbed frame, about 3 m long. Its chitin is rough, scarred and spiked, colored in black, with ochre markings. Its most striking feature is a shield-shaped head plate. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_matte` · VFX `rock_debris` · palette `#575861` `#41414a` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

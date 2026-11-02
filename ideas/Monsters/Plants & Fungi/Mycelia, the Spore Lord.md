@@ -13,7 +13,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,780 tris · 2.463 × 1.666 × 5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mycelia, the Spore Lord is a huge creature with a tall, tree-like walking frame, about 5 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in bruise purple with sickly green. Look for a crown of glowing fungus fed by the World Tree's Blight. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
+> The Mycelia, the Spore Lord is a huge creature with a tall, tree-like walking frame, about 5 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in dusky violet, with sickly green markings. Look for a crown of glowing fungus fed by the World Tree's Blight. It has eyes that never blink. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -26,7 +26,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 | HP · ATK · DEF · MATK · MDEF · SPD | 20372 · 613 · 441 · 441 · 441 · 100 |
 | XP · gold | 127464 · 1225 |
 | Ring | 3 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Sylvaran\|Sylvaran]] |
 | Tyrant | Yes |
 | Genre | Fairy-tale Forest |
@@ -36,11 +36,11 @@ tags: [monster, plants-fungi, tyrant, unique]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 5 m high × 2 m long × 6 m wide; prefab scale 2.5.
-- **Physics:** 2625 kg, gravity ×1, poise 416, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.65 m/s, turn 80°/s, stopping distance 1 m.
-- **Attack count:** 5; **signature:** a crown of glowing fungus fed by the World Tree's Blight.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 5 m high × 1.5 m long × 2.1 m wide; prefab scale 1.429.
+- **Physics:** 2250 kg, gravity ×1.3, poise 308, knockback resistance 0.87, death style `heavy_fall_dust`.
+- **Navigation:** speed 6.6 m/s, turn 170°/s, stopping distance 1.4 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8f649f` `#61426e` `#b8e986` · elongated, irregular silhouette; still-then-sudden timing

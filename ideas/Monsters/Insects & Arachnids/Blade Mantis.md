@@ -13,7 +13,7 @@ tags: [monster, insects-arachnids]
 
 > [!note] 3D model: procedural blockout in Unity (3,830 tris · 2.067 × 2 × 1.808 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Blade Mantis is a person-sized creature with a low, wide insectoid build, about 2 m long. Its chitin is rough, scarred and spiked, colored in pale jade and cloud white. Its most striking feature is forearms shaped like curved scythes. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze.
+> The Blade Mantis is a person-sized creature with a low, wide insectoid build, about 2 m long. Its chitin is rough, scarred and spiked, colored in iridescent green, with pale jade markings. Its most striking feature is forearms shaped like curved scythes. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `wind_ribbons` · palette `#3c753d` `#2a4e2b` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, dragons]
 
 > [!note] 3D model: procedural blockout in Unity (2,794 tris · 1.032 × 3 × 2.015 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Thunder Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in storm violet shot through with electric yellow. Its most striking feature is horns that work like lightning rods. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by crackling arcs that jump across its body.
+> The Thunder Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with electric-yellow markings. Its most striking feature is horns that work like lightning rods. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `arc_sparks` · palette `#ffe14d` `#6c5ce7` `#1b1b3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `dragon_scale` · VFX `arc_sparks` · palette `#747785` `#51535e` `#ffe14d` · triangle-based silhouette, sharp asymmetric spikes

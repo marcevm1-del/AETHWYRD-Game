@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits]
 
 > [!note] 3D model: procedural blockout in Unity (1,646 tris · 0.555 × 0.464 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Lantern Ghost is a small creature with a floating, cloth-like shape, about 0.6 m tall. Its form is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is a paper lantern with a torn mouth. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
+> The Lantern Ghost is a small creature with a floating, cloth-like shape, about 0.6 m tall. Its form is rough, scarred and spiked, colored in paper white, with ember-orange markings. Its most striking feature is a paper lantern with a torn mouth. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_floating` · mesh `floating_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_floating` · mesh `floating_base` · material `paper_ink_spirit` · VFX `embers_heat_haze` · palette `#ddd4c4` `#8d8574` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

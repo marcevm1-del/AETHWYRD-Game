@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,456 tris · 0.851 × 0.695 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Lantern Moth is a small creature with a bat-like flying frame, about 0.5 m tall. Its coat is smooth and clean, colored in warm gold and pearl white. Survivors describe wings that glow like paper lanterns. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Lantern Moth is a small creature with a bat-like flying frame, about 0.5 m tall. Its coat is smooth and clean, colored in soft cream, with gold markings. Survivors describe wings that glow like paper lanterns. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `fur_soft` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `fur_soft` · VFX `holy_motes` · palette `#fad0ac` `#b58e70` `#ffd166` · circle-based, soft silhouette

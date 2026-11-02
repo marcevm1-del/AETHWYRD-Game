@@ -13,7 +13,7 @@ tags: [monster, yokai-inspired-spirits, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,544 tris · 18.251 × 12.24 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Wuxiang, the Hunger Colossus is a colossal creature with a massive hunched brute frame, about 30 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Guild sketches always show a skeleton giant built from the bones of the starved. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
+> The Wuxiang, the Hunger Colossus is a colossal creature with a massive hunched brute frame, about 30 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in lacquer red, with violet markings. Guild sketches always show a skeleton giant built from the bones of the starved. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `paper_ink_spirit` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_large_biped` · mesh `large_biped_base` · material `paper_ink_spirit` · VFX `shadow_wisps` · palette `#a93f38` `#6a2926` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

@@ -13,7 +13,7 @@ tags: [monster, goblinoids]
 
 > [!note] 3D model: procedural blockout in Unity (2,310 tris · 0.741 × 0.598 × 1.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Goblin Wolf Rider is a person-sized creature with a scrawny biped with long arms and bowed legs, about 1.5 m tall. Its skin is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a bone saddle on a snarling war-wolf mount. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Goblin Wolf Rider is a person-sized creature with a scrawny biped with long arms and bowed legs, about 1.5 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is a bone saddle on a snarling war-wolf mount. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `rough_skin_leather` · VFX `dust_puffs` · palette `#7c8e6a` `#5a4632` `#b5cf9a` · triangle-based silhouette, sharp asymmetric spikes

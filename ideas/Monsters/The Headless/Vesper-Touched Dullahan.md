@@ -13,7 +13,7 @@ tags: [monster, the-headless]
 
 > [!note] 3D model: procedural blockout in Unity (1,746 tris · 2.188 × 3.611 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Dullahan is a large creature with an armored humanoid body without a head, about 2.8 m tall. Its armor is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its own laughing head carried under one arm. It has too many eyes, opening one after another. An elegant crest and glowing veins of mana mark it as a champion of its kind. It unfolds into something larger, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Dullahan is a large creature with an armored humanoid body without a head, about 2.8 m tall. Its armor is stretched, stitched and constantly shifting, colored in gunmetal, with violet markings. Its own laughing head carried under one arm. It has too many eyes, opening one after another. An elegant crest and glowing veins of mana mark it as a champion of its kind. It unfolds into something larger, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_headless` · mesh `headless_base` · material `old_iron` · VFX `shadow_wisps` · palette `#565d65` `#3e434a` `#9a86d8` · broken symmetry, mimicry, audio-first reveal

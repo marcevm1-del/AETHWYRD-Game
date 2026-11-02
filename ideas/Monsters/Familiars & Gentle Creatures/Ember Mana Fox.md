@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,682 tris · 0.144 × 0.6 × 0.241 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ember Mana Fox is a small creature with a compact quadruped frame, about 0.6 m long. Its coat is smooth and clean, colored in ember reds fading to soot black. Its most striking feature is ears that twitch toward magic. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Ember Mana Fox is a small creature with a compact quadruped frame, about 0.6 m long. Its coat is smooth and clean, colored in powder blue, with ember-orange markings. Its most striking feature is ears that twitch toward magic. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `embers_heat_haze` · palette `#a7cae1` `#738fa3` `#ff7a3d` · circle-based, soft silhouette

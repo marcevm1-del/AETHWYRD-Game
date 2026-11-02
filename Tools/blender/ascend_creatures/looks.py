@@ -80,8 +80,14 @@ class Look:
         self.menace = ("soft" if menace.startswith("circle") else "spiky" if menace.startswith("triangle") else
                        "elongated" if menace.startswith("elongated") else "broken" if menace.startswith("broken") else "animal")
         self.parts = list(o.get("parts") or rec.get("parts", []))
+        # A mask only where the description names one (design review C1): a stray plain mask hides the face and
+        # reads as placeholder (or as another studio's character).
+        if "mask" not in species.get("look", "").lower() and "mask" not in species.get("signature", "").lower():
+            self.parts = [p for p in self.parts if p not in ("mask", "mask_face", "human_mask")]
         self.base = o.get("base") or rec.get("baseMesh", "medium_biped_base")
         look_text = species.get("look", "").lower()
+        self.look_text = look_text
+        self.name = species.get("name", "")
         self.eye_style = ("dot" if "dot eye" in look_text or self.gel else "slit" if "slit" in look_text else
                           "glow" if any(w in look_text for w in ("burning", "glowing", "glow", "ember")) else
                           "beady" if "beady" in look_text or "wary" in look_text else "anime")
@@ -92,6 +98,8 @@ class Look:
         self.vfx = rec.get("vfx", "")
         self.family = species.get("family", "")
         self.rank = rec.get("rankOrnament", "F")
+        self.size = float(o.get("size") or species.get("sizeMeters") or 1.0)  # metres, for real-world minimums
+        self.glow_iris = None  # a plan may set a glowing iris colour (linear RGB); defaults to the element glow
 
     def palette(self):
         """Colours for the hard-surface parts (keys used by features.py)."""
@@ -106,5 +114,8 @@ class Look:
             "iris": g if self.eye_style in ("glow", "slit") else tuple(min(1, c * 1.1) for c in self.accent),
             "mouth": (0.25, 0.05, 0.06), "teeth": (0.95, 0.92, 0.84), "tongue": (0.75, 0.25, 0.3),
             "gold": (1.0, 0.72, 0.22), "gem": g, "glow": g, "crystal": g, "membrane": tuple(c * 0.8 for c in self.dark),
+            # fixed colours from the design review (2026-10-31): glowing irises, skull sockets and bone, loincloth
+            "glow_iris": self.glow_iris or g, "socket": hex_lin("#2A2238"), "skull_bone": hex_lin("#E8DFC8"),
+            "loin": hex_lin("#8A5A35"), "loin_hem": hex_lin("#5A3820"),
             "feather": self.main, "feather_tip": self.dark, "petal": self.accent, "spore": self.accent, "ink": (0.05, 0.05, 0.07),
         }

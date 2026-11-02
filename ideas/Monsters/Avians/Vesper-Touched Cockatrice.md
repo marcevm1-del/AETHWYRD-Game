@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,782 tris · 0.756 × 0.896 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Cockatrice is a small creature with a tall, long-legged bird build, about 0.8 m tall. Its plumage is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a rooster's head and a lizard's tail. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Cockatrice is a small creature with a tall, long-legged bird build, about 0.8 m tall. Its plumage is rough, scarred and spiked, colored in blue, with ochre markings. Its most striking feature is a rooster's head and a lizard's tail. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `rock_debris` · palette `#5294b9` `#376680` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

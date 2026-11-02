@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (1,906 tris · 1.041 × 0.851 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Needle Wasp is a small creature with a small winged body, about 0.5 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Guild sketches always show a stinger as long as its body. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Needle Wasp is a small creature with a small winged body, about 0.5 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Guild sketches always show a stinger as long as its body. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -36,7 +36,7 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override (base species)); animation set `anim_flyer_small`.
 - **Dimensions:** 0.17 m high × 0.5 m long × 0.25 m wide; prefab scale 0.625.
 - **Physics:** 5.5 kg, gravity ×1.4, poise 17, knockback resistance 0.31, death style `flip_legs_curl`.
 - **Navigation:** speed 2.72 m/s, turn 707°/s, stopping distance 0.5 m.
@@ -99,4 +99,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#565660` `#414049` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

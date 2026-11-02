@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (2,942 tris · 0.964 × 2.5 × 2.175 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Nightmare Steed is a large creature with a powerful four-legged hunter's body, about 2.5 m long. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Look for flame hooves and a mane of smoke. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
+> The Nightmare Steed is a large creature with a powerful four-legged hunter's body, about 2.5 m long. Its hide is rough, scarred and spiked, colored in brimstone red, with ember-orange markings. Look for flame hooves and a mane of smoke. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -107,4 +107,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `demon_hide_emissive` · VFX `embers_heat_haze` · palette `#a03429` `#5a2a26` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

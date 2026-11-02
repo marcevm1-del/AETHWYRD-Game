@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (3,122 tris · 0.705 × 0.829 × 1.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Shade Kobold Warlord is a person-sized creature with a hunched, wiry humanoid frame, about 1.4 m tall. Its mangy fur is rough, scarred and spiked, colored in ink black with bruised violet. Look for scavenged knight armor hammered to fit. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Shade Kobold Warlord is a person-sized creature with a hunched, wiry humanoid frame, about 1.4 m tall. Its mangy fur is rough, scarred and spiked, colored in rust-red, with violet markings. Look for scavenged knight armor hammered to fit. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `shadow_wisps` · palette `#c05c3e` `#753526` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

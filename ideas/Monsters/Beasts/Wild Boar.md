@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,756 tris · 0.361 × 1.4 × 0.814 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Wild Boar is a person-sized creature with a heavy, muscular quadruped frame, about 1.4 m long. Its coat is weathered and natural, colored in ochre, clay and mossy stone. Look for curved tusks and a ridge of bristles like iron wire. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
+> The Wild Boar is a person-sized creature with a heavy, muscular quadruped frame, about 1.4 m long. Its coat is weathered and natural, colored in warm brown, with ochre markings. Look for curved tusks and a ridge of bristles like iron wire. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -112,4 +112,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `rock_debris` · palette `#886045` `#583c2f` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

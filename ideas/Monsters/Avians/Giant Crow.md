@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,770 tris · 0.567 × 0.446 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Giant Crow is a small creature with a feathered avian body, about 0.6 m tall. Its plumage is weathered and natural, colored in ink black with bruised violet. Guild sketches always show a beak full of stolen shiny things. It has amber predator eyes. It has no ornament at all: simple, readable shapes. It stalks low to the ground, surrounded by shadows that lean toward it.
+> The Giant Crow is a small creature with a feathered avian body, about 0.6 m tall. Its plumage is weathered and natural, colored in crow-black, with violet markings. Guild sketches always show a beak full of stolen shiny things. It has amber predator eyes. It has no ornament at all: simple, readable shapes. It stalks low to the ground, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -110,4 +110,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `shadow_wisps` · palette `#4d4b57` `#3f3e46` `#9a86d8` · real-animal silhouette with one fantasy exaggeration

@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,120 tris · 0.376 × 1.247 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cockatrice is a small creature with a tall, long-legged bird build, about 0.8 m tall. Its plumage is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe a rooster's head and a lizard's tail. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
+> The Cockatrice is a small creature with a tall, long-legged bird build, about 0.8 m tall. Its plumage is weathered and natural, colored in blue, with ochre markings. Survivors describe a rooster's head and a lizard's tail. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `rock_debris` · palette `#4e82b1` `#34597b` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

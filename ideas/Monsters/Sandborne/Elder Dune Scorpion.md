@@ -13,7 +13,7 @@ tags: [monster, sandborne]
 
 > [!note] 3D model: procedural blockout in Unity (3,830 tris · 3.307 × 3.2 × 2.893 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Elder Dune Scorpion is a large creature with a low, wide insectoid build, about 3.2 m long. Its sand-scoured hide is rough, scarred and spiked, colored in bruise purple with sickly green. Look for a glass-like tail stinger. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Elder Dune Scorpion is a large creature with a low, wide insectoid build, about 3.2 m long. Its sand-scoured hide is rough, scarred and spiked, colored in sunbaked clay, with sickly green markings. Look for a glass-like tail stinger. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_hexapod` · mesh `hexapod_base` · material `sand_hide` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_hexapod` · mesh `hexapod_base` · material `sand_hide` · VFX `toxic_fog` · palette `#aa7d47` `#70502e` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

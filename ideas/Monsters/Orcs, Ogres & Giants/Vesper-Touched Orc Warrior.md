@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,550 tris · 0.876 × 1.612 × 2.1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Vesper-Touched Orc Warrior is a person-sized creature with a lean humanoid frame, about 2.1 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in arterial crimson and dried-blood brown. Look for a fur mantle and rust-stained chain mail. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
+> The Vesper-Touched Orc Warrior is a person-sized creature with a lean humanoid frame, about 2.1 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in olive-green, with crimson markings. Look for a fur mantle and rust-stained chain mail. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `blood_mist` · palette `#8b0000` `#d7263d` `#1a0505` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `blood_mist` · palette `#638144` `#43572e` `#e0344a` · elongated, irregular silhouette; still-then-sudden timing

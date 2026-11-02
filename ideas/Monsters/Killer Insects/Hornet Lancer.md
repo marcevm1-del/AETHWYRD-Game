@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (2,490 tris · 1.796 × 1.465 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Hornet Lancer is a person-sized creature with a bat-like flying frame, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is a lance-like stinger and humming armored wings. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground.
+> The Hornet Lancer is a person-sized creature with a bat-like flying frame, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Its most striking feature is a lance-like stinger and humming armored wings. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -35,11 +35,11 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override); animation set `anim_flyer_small`.
 - **Dimensions:** 0.4 m high × 1.2 m long × 0.61 m wide; prefab scale 1.5.
 - **Physics:** 76 kg, gravity ×1.4, poise 67, knockback resistance 0.31, death style `flip_legs_curl`.
 - **Navigation:** speed 4.02 m/s, turn 456°/s, stopping distance 0.57 m.
-- **Attack count:** 5; **signature:** a lance-like stinger and humming armored wings.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
@@ -106,4 +106,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#52515b` `#3e3c45` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

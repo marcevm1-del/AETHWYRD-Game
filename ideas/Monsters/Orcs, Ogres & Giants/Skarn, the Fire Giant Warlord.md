@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,498 tris · 8.159 × 4.691 × 9.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Skarn, the Fire Giant Warlord is a huge creature with a towering, heavy-limbed body, about 9.5 m tall. Its hide is rough, scarred and spiked, colored in ember reds fading to soot black. Survivors describe a forge-hammer the size of a house and a beard of living flame. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
+> The Skarn, the Fire Giant Warlord is a huge creature with a towering, heavy-limbed body, about 9.5 m tall. Its hide is rough, scarred and spiked, colored in sun-brown, with ember-orange markings. Survivors describe a forge-hammer the size of a house and a beard of living flame. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `embers_heat_haze` · palette `#9e755d` `#674d3e` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

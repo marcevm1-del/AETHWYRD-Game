@@ -38,10 +38,19 @@ namespace Ascend.Game
             _motor = GetComponent<PlayerMotor>();
             _combat = GetComponent<PlayerCombat>();
             _t = AscendData.Db.Tuning;
-            if (_combat == null) return; // PlayerCombat is added first, so its stats exist by now
+            if (_combat == null) return;
+            // Unity does not order Awake between components loaded with a scene, so PlayerCombat may not have derived
+            // its stats yet (Stats.Hp is still 0). Then the first StatsChanged fills HP instead of clamping it, so a new
+            // game never starts at 1 HP (reports/baseline_2026-10-25.md, bug 1).
+            bool statsReady = _combat.Stats.Hp > 0;
             MaxHp = Hp = Mathf.Max(1, _combat.Stats.Hp);
             _combat.LeveledUp += (_, __) => { MaxHp = Mathf.Max(1, _combat.Stats.Hp); Hp = MaxHp; }; // a level-up heals fully
-            _combat.StatsChanged += () => { MaxHp = Mathf.Max(1, _combat.Stats.Hp); Hp = Mathf.Min(Hp, MaxHp); }; // gear can change max HP
+            _combat.StatsChanged += () =>
+            {
+                MaxHp = Mathf.Max(1, _combat.Stats.Hp);
+                if (!statsReady && _combat.Stats.Hp > 0) { statsReady = true; Hp = MaxHp; } // first real stats: start full
+                else Hp = Mathf.Min(Hp, MaxHp); // gear can change max HP
+            };
         }
 
         /// <summary>Block button state; a fresh press starts the parry window.</summary>

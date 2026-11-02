@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,568 tris · 1.625 × 1.185 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Bog Treant Sapling is a person-sized creature with a walking body of bark and root, about 2 m tall. Its bark and leaves are smooth and clean, colored in bruise purple with sickly green. Guild sketches always show a young tree with a sleepy face. It has wide curious eyes with star-shaped highlights. A distinctive marking runs along its back. It hops in little bursts, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
+> The Bog Treant Sapling is a person-sized creature with a walking body of bark and root, about 2 m tall. Its bark and leaves are smooth and clean, colored in deep fern green and dark bark. Guild sketches always show a young tree with a sleepy face. It has wide curious eyes with star-shaped highlights. A distinctive marking runs along its back. It hops in little bursts, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 
 | Field | Value |
 |---|---|
@@ -27,7 +27,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 4840 · 293 · 211 · 211 · 211 · 100 |
 | XP · gold | 1888 · 423 |
 | Ring | 3 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/large_biped\|large_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Aldmere\|Aldmere]], [[Regions/Xochitl Mire\|Xochitl Mire]], [[Regions/Greymoor\|Greymoor]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -36,10 +36,10 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 2 m high × 0.8 m long × 2.4 m wide; prefab scale 1.
-- **Physics:** 168 kg, gravity ×1, poise 72, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 0.39 m/s, turn 127°/s, stopping distance 0.64 m.
+- **Rig:** [[Systems/Rigs/large_biped|large_biped]] (override (base species)); animation set `anim_plant_walker`.
+- **Dimensions:** 2 m high × 0.6 m long × 0.84 m wide; prefab scale 0.571.
+- **Physics:** 144 kg, gravity ×1.3, poise 138, knockback resistance 0.81, death style `heavy_fall_dust`.
+- **Navigation:** speed 3.95 m/s, turn 269°/s, stopping distance 0.8 m.
 - **Attack count:** 5; **signature:** a young tree with a sleepy face.
 
 ## Attacks and responses
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · circle-based, soft silhouette
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `toxic_fog` · palette `#4d7e46` `#4c3e2d` `#b8e986` · circle-based, soft silhouette

@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (2,402 tris · 0.464 × 0.178 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Cavern Needle Wasp is a tiny creature with a small winged body, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a stinger as long as its body. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
+> The Cavern Needle Wasp is a tiny creature with a small winged body, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in black, with ochre markings. Look for a stinger as long as its body. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 
 | Field | Value |
 |---|---|
@@ -36,7 +36,7 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override (base species)); animation set `anim_flyer_small`.
 - **Dimensions:** 0.1 m high × 0.3 m long × 0.15 m wide; prefab scale 0.375.
 - **Physics:** 1.5 kg, gravity ×1.54, poise 9, knockback resistance 0.46, death style `flip_legs_curl`.
 - **Navigation:** speed 1.91 m/s, turn 900°/s, stopping distance 0.5 m.
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `rock_debris` · palette `#4f4f58` `#3c3a43` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

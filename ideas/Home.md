@@ -57,6 +57,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/10_World/cultural_presence_and_named_population|10_World/cultural_presence_and_named_population]]
 - [[Design Bible/10_World/exploration_and_discovery|10_World/exploration_and_discovery]]
 - [[Design Bible/10_World/gazetteer|10_World/gazetteer]]
+- [[Design Bible/10_World/physical_geography|10_World/physical_geography]]
 - [[Design Bible/10_World/reactive_world_and_field_journal|10_World/reactive_world_and_field_journal]]
 - [[Design Bible/10_World/world|10_World/world]]
 - [[Design Bible/10_World/world_map_concept|10_World/world_map_concept]]
@@ -74,6 +75,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/agent_team|13_Production/agent_team]]
 - [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
+- [[Design Bible/13_Production/art_direction|13_Production/art_direction]]
 - [[Design Bible/13_Production/building_system|13_Production/building_system]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
@@ -85,6 +87,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
 - [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
+- [[Design Bible/13_Production/tutorial_vision|13_Production/tutorial_vision]]
 
 ## Classes (12)
 - [[Classes/Swordsman|Swordsman]]: Balanced melee DPS

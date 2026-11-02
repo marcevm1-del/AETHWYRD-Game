@@ -13,7 +13,7 @@ tags: [monster, familiars-gentle-creatures]
 
 > [!note] 3D model: procedural blockout in Unity (2,810 tris · 0.144 × 0.6 × 0.241 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mana Fox is a small creature with a small, quick four-legged body, about 0.6 m long. Its coat is smooth and clean, colored in warm gold and pearl white. Look for ears that twitch toward magic. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by soft radiance and floating motes of light.
+> The Mana Fox is a small creature with a small, quick four-legged body, about 0.6 m long. Its coat is smooth and clean, colored in powder blue, with gold markings. Look for ears that twitch toward magic. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_soft` · VFX `holy_motes` · palette `#aed5eb` `#7897aa` `#ffd166` · circle-based, soft silhouette

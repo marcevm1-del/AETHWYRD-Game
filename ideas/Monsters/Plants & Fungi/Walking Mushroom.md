@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,532 tris · 0.494 × 0.353 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are smooth and clean, colored in leaf greens over bark brown. Look for a waddling cap on stubby legs. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
+> The Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are smooth and clean, colored in red with pale spots, with leaf-green markings. Look for a waddling cap on stubby legs. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -109,4 +109,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · circle-based, soft silhouette
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#d85f42` `#953b2b` `#8fd16a` · circle-based, soft silhouette

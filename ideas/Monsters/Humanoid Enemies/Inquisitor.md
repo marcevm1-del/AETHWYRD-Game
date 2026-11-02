@@ -13,7 +13,7 @@ tags: [monster, humanoid-enemies]
 
 > [!note] 3D model: procedural blockout in Unity (3,058 tris · 1.119 × 0.776 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Inquisitor is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in warm gold and pearl white. Guild sketches always show silver anti-magic chains and a sun-shaped mask. It has burning slit pupils. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by soft radiance and floating motes of light.
+> The Inquisitor is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in leather browns and dull steel, with gold markings. Guild sketches always show silver anti-magic chains and a sun-shaped mask. It has burning slit pupils. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -105,4 +105,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `cloth_leather_metal` · VFX `holy_motes` · palette `#8c6336` `#5b5f68` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

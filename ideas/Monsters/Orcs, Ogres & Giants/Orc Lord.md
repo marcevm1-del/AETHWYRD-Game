@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,508 tris · 1.532 × 1.646 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Orc Lord is a large creature with a lean humanoid frame, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is a horned helm and a cloak of wolf pelts. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
+> The Orc Lord is a large creature with a lean humanoid frame, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Its most striking feature is a horned helm and a cloak of wolf pelts. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `dust_puffs` · palette `#719851` `#4c6636` `#a0cb6b` · triangle-based silhouette, sharp asymmetric spikes

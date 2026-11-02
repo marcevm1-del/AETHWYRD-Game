@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (406 tris · 6.935 × 4.602 × 7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The The Tithe Colossus, Hunger of the Foundation Stones is a huge creature with a heavy, hand-built humanoid shell, about 7 m tall. Its surface is rough, scarred and spiked, colored in warm gold and pearl white. Look for a Foundation Stone that woke up hungry for the nobles' mana. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by soft radiance and floating motes of light.
+> The The Tithe Colossus, Hunger of the Foundation Stones is a huge creature with a heavy, hand-built humanoid shell, about 7 m tall. Its surface is rough, scarred and spiked, colored in riveted iron, with gold markings. Look for a Foundation Stone that woke up hungry for the nobles' mana. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `holy_motes` · palette `#6a6e78` `#4a4d56` `#ffd166` · triangle-based silhouette, sharp asymmetric spikes

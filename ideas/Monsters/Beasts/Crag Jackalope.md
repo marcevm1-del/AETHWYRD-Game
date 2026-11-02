@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,654 tris · 0.096 × 0.4 × 0.16 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Crag Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe tiny antlers on a fluffy rabbit. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
+> The Crag Jackalope is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is smooth and clean, colored in cream, with ochre markings. Survivors describe tiny antlers on a fluffy rabbit. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `rock_debris` · palette `#ceb6a0` `#937c6b` `#d1a15a` · circle-based, soft silhouette

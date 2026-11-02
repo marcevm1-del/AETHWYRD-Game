@@ -1,13 +1,13 @@
 # The Agent Team
 
-> 25 specialist Claude subagents that build Project Ascend together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
+> 27 specialist Claude subagents that build Project Ascend together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
 
 ## How to use them
 
 - **In a Claude Code session in this repo:** ask for an agent by name ("have the creature-artist rig the slimes") or let Claude pick one from its description.
 - **Big pushes start with the producer.** It splits the goal into one task per agent and gives each task its files, its definition of done and its checks. It puts tasks that share no files into the same **wave**.
 - **Parallel work:** agents in one wave can run at the same time, each in its own session or git worktree. Agents in the next wave start when the earlier wave's work is merged and green.
-- **Every change ends with the code-reviewer and the qa-tester** before it is committed.
+- **Every change ends with the code-reviewer and the qa-tester** before it is committed. **Art, world, character and UI work also goes past the anime-fantasy-director** before it is locked.
 
 ## Roster and ownership
 
@@ -38,6 +38,8 @@
 | 23 | **technical-artist** | Art & audio | Shaders, materials, import post-processors, bake/LOD scripts |
 | 24 | **animator-rigger** | Art & audio | Rig and motion data and scripts, `monster_motion_bible.md`, animator assets |
 | 25 | **audio-designer** | Art & audio | Audio specs in `13_Production/`, `Game/Assets/_Game/Audio/` |
+| 26 | **anime-fantasy-director** | Leadership | `13_Production/art_direction.md` (style guide), `reports/design_review_*.md`; reviews and directs everyone for genre fit and design quality |
+| 27 | **youtube-beta** (beta) | Tools | `Tools/tutorial_vision/`, `13_Production/tutorial_vision.md`, the Blender/Unity MCP entries, `TutorialVisionCapture.cs`; learns techniques from video tutorials by reading their frames and applies them in Blender or Unity |
 
 **Two files have shared owners:**
 - `Code/Ascend.Core/MonsterAi.cs`, `Companions.cs` and `BossPhases.cs` belong to ai-engineer together with core-rules-engineer. Only one of them edits these in any given wave.

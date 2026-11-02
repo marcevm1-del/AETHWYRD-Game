@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (2,840 tris · 0.12 × 0.5 × 0.201 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Swamp Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in deep blues with a glassy shine. Survivors describe a wide smile and bulging golden eyes. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by fine mist and droplets that orbit it.
+> The Swamp Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in teal-grey, with sea-blue markings. Survivors describe a wide smile and bulging golden eyes. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by fine mist and droplets that orbit it.
 
 | Field | Value |
 |---|---|
@@ -98,4 +98,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `scale_matte` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · circle-based, soft silhouette
+Rig `rig_quad_small` · mesh `quad_small_base` · material `scale_matte` · VFX `mist_droplets` · palette `#517c86` `#39575e` `#4fa8e8` · circle-based, soft silhouette

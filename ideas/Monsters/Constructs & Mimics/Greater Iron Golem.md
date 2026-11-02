@@ -13,7 +13,7 @@ tags: [monster, constructs-mimics]
 
 > [!note] 3D model: procedural blockout in Unity (2,496 tris · 6.084 × 4.161 × 6.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Greater Iron Golem is a huge creature with a heavy, hand-built humanoid shell, about 6.4 m tall. Its surface is weathered and natural, colored in ochre, clay and mossy stone. Survivors describe riveted iron and a furnace heart. It has amber predator eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
+> The Greater Iron Golem is a huge creature with a heavy, hand-built humanoid shell, about 6.4 m tall. Its surface is weathered and natural, colored in riveted iron, with ochre markings. Survivors describe riveted iron and a furnace heart. It has amber predator eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
 | Field | Value |
 |---|---|
@@ -102,4 +102,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_golem` · mesh `golem_base` · material `stone_metal_runes` · VFX `rock_debris` · palette `#6f777e` `#4e545a` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

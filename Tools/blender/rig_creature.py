@@ -869,7 +869,7 @@ def rig_one(sid, rigs, detail, out_dir, save, tiles_dir, rig_override=None):
         preview.setup()
         bpy.context.scene.render.film_transparent = False
         yaw = -32 if r["body"].kind in ("blob", "biped") else -58
-        preview.camera([obj], yaw=yaw, pitch=14, margin=1.45)
+        preview.camera([obj], yaw=yaw, pitch=14, margin=1.45, aspect=TILE[1] / TILE[0])
         for pname in ["rest"] + list(poses):
             if pname == "rest":
                 clear_pose(arm, obj)

@@ -13,7 +13,7 @@ tags: [monster, shadows]
 
 > [!note] 3D model: procedural blockout in Unity (2,180 tris · 0.431 × 1.4 × 1.188 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Shade Hound is a person-sized creature with a powerful four-legged hunter's body, about 1.4 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in ink black with bruised violet. Its most striking feature is a dog made of smoke with ember eyes. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
+> The Shade Hound is a person-sized creature with a powerful four-legged hunter's body, about 1.4 m long. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in smoky violet. Its most striking feature is a dog made of smoke with ember eyes. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_quad_large` · mesh `quad_large_base` · material `shadow_smoke` · VFX `shadow_wisps` · palette `#504e78` `#424068` `#9a86d8` · elongated, irregular silhouette; still-then-sudden timing

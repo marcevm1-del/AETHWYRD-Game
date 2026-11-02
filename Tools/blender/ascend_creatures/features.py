@@ -15,6 +15,7 @@ from mathutils import Matrix, Vector
 from ascend_buildings.geo import Geo, trs
 
 from .body import V
+from .plans import is_mushroom, is_spore_lord
 
 # ================================================================================================================
 # helpers
@@ -114,10 +115,15 @@ def organic(b, look):
     hr, tr = b.head_r, b.torso_r
     rng = b.rng
     # brows: angry for spiky creatures
-    if look.menace == "spiky" and b.eye_count and b.kind not in ("blob", "swarm", "mimic"):
+    if look.menace == "spiky" and b.eye_count and b.kind not in ("blob", "swarm", "mimic") and not getattr(b, "skull", False):
         for p, d, r in b.eye_points():
             b.ellip(p + d * 0.2 * hr + Vector((0, 0, r * 1.15)), (r * 1.1, r * 0.55, r * 0.35))
-    if b.kind == "biped" and b.eye_count and "mask" not in parts:  # a little nose
+    if getattr(b, "brow", 0) and b.eye_count:  # a brow ridge over each eye, `brow` head radii deep (werewolves)
+        for p, d, r in b.eye_points():
+            a = math.degrees(math.atan2(d.x, -d.y))
+            b.ellip(b.head + (d + Vector((0, 0, 0.42))).normalized() * hr * (0.93 + b.brow * 0.5),
+                    (r * 1.45, hr * b.brow, r * 0.5), rot=(0, 0, a))
+    if b.kind == "biped" and b.eye_count and "mask" not in parts and not getattr(b, "skull", False):  # a little nose
         f = b.face.normalized()
         b.ellip(b.head + f * hr * 0.92 + Vector((0, 0, -hr * 0.12)), (hr * 0.13, hr * 0.12, hr * 0.12))
     if look.family in ("Goblinoids", "Kobolds", "Gremlins", "Demons") and b.kind == "biped" and not parts & {"ears_long", "ears_tall"}:
@@ -143,6 +149,8 @@ def organic(b, look):
     if b.P.get("tail") is True:
         tail_len = 1.0
     want_tail = tails or (b.kind in ("quad", "bird") and tail_len) or (b.kind == "biped" and b.P.get("tail") is True)
+    if b.kind == "dragon":  # the plan draws the whole tail (longer than the body) and its tip
+        want_tail = False
     for ti in range(int(b.P.get("tails", 1)) if want_tail and b.tail_root is not None else 0):
         kind = tails[0] if tails else ("tail_bushy" if look.style.startswith("fur") and b.kind == "quad" else "tail")
         L = {"tail_thin": 0.45, "stinger": 0.4, "tail_plumes": 0.25}.get(kind, 0.38) * (1.4 if b.kind in ("biped",) else 1.0)
@@ -187,7 +195,8 @@ def organic(b, look):
         b.chain([b.mouth, b.mouth + f * hr * 0.4 + Vector((0, 0, -hr * 0.3)), b.mouth + f * hr * 0.6 + Vector((0, 0, -hr * 0.6))], [hr * 0.14, hr * 0.08])
     if "humanoid_torso" in parts and b.kind not in ("taur", "naga", "biped"):
         b.chain([b.neck, b.neck + Vector((0, -0.05, 0.25))], [tr * 0.6, tr * 0.5])
-    if "cap" in parts:  # mushroom folk: the head becomes a cap
+    if "cap" in parts and not (b.kind == "plant" and is_mushroom(look)):  # mushroom folk: the head becomes a cap
+        # (plant mushrooms get their cap from plant_crown instead: this blob swallowed the face, see creature_system.md)
         b.ellip(b.head + Vector((0, 0, hr * 0.55)), (hr * 1.9, hr * 1.9, hr * 0.9))
 
 
@@ -203,6 +212,13 @@ class Ctx:
         self.v = verts
         self.n = normals
         self.rng = body.rng
+        ext = np.asarray(verts).max(0) - np.asarray(verts).min(0) if len(verts) else np.ones(3)
+        self.unit = look.size / max(1e-6, float(ext.max()))  # metres per model unit (generate.creature scales the same way)
+        self.eye_pos = []
+
+    def metres(self, m):
+        """A real-world length in model units."""
+        return m / self.unit
 
     def surface(self, pred, count):
         """Random body-surface points (and normals) whose position/normal satisfy pred(p, n)."""
@@ -213,11 +229,30 @@ class Ctx:
         return [(Vector(self.v[i]), Vector(self.n[i])) for i in pick]
 
 
+def surface_hit(c, origin, d, width, max_t=None, nearest=False):
+    """The outermost tessellated body point within `width` of the ray origin + t*d (t > 0), or None. Used to sit
+    faces on the real skull surface where metaballs swell past head_r."""
+    v = np.asarray(c.v)
+    if not len(v):
+        return None
+    o, dd = np.array(origin[:]), np.array(Vector(d).normalized()[:])
+    rel = v - o
+    t = rel @ dd
+    perp = np.linalg.norm(rel - np.outer(t, dd), axis=1)
+    ok = (t > 0) & (perp < width)
+    if max_t is not None:
+        ok &= t < max_t
+    if not ok.any():
+        return None
+    i = np.flatnonzero(ok)[np.argmin(t[ok]) if nearest else np.argmax(t[ok])]
+    return Vector(o + dd * t[i])
+
+
 def eyes(c):
     b, look, g = c.b, c.look, c.g
     if not b.eye_count:
         return
-    style = look.eye_style
+    style = getattr(b, "eye_style", None) or look.eye_style
     if b.kind in ("spider", "insect") and style == "anime":
         style = "beady"
     pts = list(b.eye_points())
@@ -227,8 +262,23 @@ def eyes(c):
         pts += b.eye_points()
     b.head = main_head
     for p, d, r in pts:
+        if getattr(b, "eye_snap", False):  # on the real surface (the head ball blends into the stalk and swells)
+            p = surface_hit(c, b.head, d, r * 0.35) or p
+        c.eye_pos.append(Vector(p))
+        if style == "socket":  # skulls: a hollow dark socket (r 0.22 hr) with a glow point (r 0.12 hr) deep inside
+            hr = b.head_r
+            m = aim(p, d)
+            g.sphere(hr * 0.22, "socket", m @ trs((0, 0, 0), (0, 0, 0), (1.0, 0.92, 0.3)), segs=16, rings=8)
+            g.sphere(hr * 0.12, "glow_iris", m @ trs((0, 0, hr * 0.03), (0, 0, 0), (1, 1, 0.35)), segs=12, rings=8)
+            continue
         p = p - d * r * 0.2  # sit the eye into its socket
         m = aim(p, d)
+        if style == "glow_iris":  # B+ and menacing: a narrowed dark almond, a glowing iris, a slit pupil, no white
+            g.sphere(r, "eye_dark", m @ trs((0, 0, 0), (0, 0, 0), (1.15, 0.72, 0.5)), segs=18, rings=10)
+            g.sphere(r * 0.8, "glow_iris", m @ trs((0, 0, r * 0.22), (0, 0, 0), (1.1, 0.72, 0.45)), segs=18, rings=10)
+            g.sphere(r * 0.5, "eye_dark", m @ trs((0, 0, r * 0.42), (0, 0, 0), (0.28, 0.95, 0.4)), segs=12, rings=8)
+            g.sphere(r * 0.14, "highlight", m @ trs((-r * 0.32, r * 0.2, r * 0.6)), segs=8, rings=6)
+            continue
         if style == "dot":  # slimes: glossy black ovals with a sparkle
             g.sphere(r * 1.0, "eye_dark", m @ trs((0, 0, r * 0.35), (0, 0, 0), (0.75, 1.0, 0.45)), segs=16, rings=10)
             g.sphere(r * 0.28, "highlight", m @ trs((-r * 0.25, r * 0.35, r * 0.8)), segs=8, rings=6)
@@ -268,9 +318,19 @@ def mouth(c):
     f = b.face.normalized()
     m0 = Vector(b.mouth)
     if parts & {"beak", "beak_hooked"} or b.kind == "bird":
+        # A tapered two-tone beak (design review C6: the old flattened tube read as a box or goggles):
+        # an upper mandible cone with a lower mandible tucked under it; hooked beaks curl the upper tip down.
         hooked = "beak_hooked" in parts
-        tip = m0 + f * hr * (0.9 if not hooked else 0.75) + Vector((0, 0, -hr * (0.05 if not hooked else 0.3)))
-        tube(c.g, curve(m0 - f * hr * 0.1, f, hr * 0.85, 0.7 if hooked else 0.15, 6, (0, 0, -1)), [hr * 0.32, hr * 0.02], "gold" if c.look.main[0] < 0.6 else "horn", 12, flat=0.8)
+        col = "gold" if c.look.main[0] < 0.6 else "horn"
+        L = hr * (0.75 if hooked else 0.65)
+        d = (f + Vector((0, 0, -0.18))).normalized()
+        base = m0 - f * hr * 0.12
+        c.g.lathe([(hr * 0.26, 0), (hr * 0.2, L * 0.35), (hr * 0.1, L * 0.75), (0, L)], col, aim(base + Vector((0, 0, hr * 0.04)), d), segs=14)
+        c.g.lathe([(hr * 0.18, 0), (hr * 0.1, L * 0.45), (0, L * 0.8)], col + "~1",
+                  aim(base - Vector((0, 0, hr * 0.08)), (f + Vector((0, 0, -0.3))).normalized()), segs=12)
+        if hooked:
+            tipp = base + d * L * 0.92 + Vector((0, 0, hr * 0.02))
+            c.g.lathe([(hr * 0.07, 0), (0, hr * 0.22)], col, aim(tipp, (f * 0.3 + Vector((0, 0, -1))).normalized()), segs=8)
         return
     if "mandibles" in parts or b.kind in ("insect", "spider"):
         side = f.cross(Vector((0, 0, 1))).normalized()
@@ -285,6 +345,8 @@ def mouth(c):
             c.g.lathe([(0, 0), (hr * 0.35, hr * 0.3), (0, hr * 0.8)], "petal", aim(m0, d) @ trs((0, 0, 0), (0, 0, 0), (1, 0.25, 1)), segs=10)
         teeth_row(c, m0 + f * hr * 0.1, hr * 0.4, hr * 0.18, 6)
         return
+    if b.kind == "plant" and is_mushroom(c.look) and not is_spore_lord(c.look):
+        return  # F-E mushrooms: only the tiny "o" mouth (mushroom_mouth); the teeth grin is the Spore Lords' alone
     big = parts & {"fangs_long", "tusks", "teeth_rows", "teeth_ring", "hinge_jaw"}
     if c.look.menace in ("spiky", "broken", "elongated") or big or "fangs" in parts:
         teeth_row(c, m0 + f * hr * 0.06, hr * 0.5, hr * 0.14, 7, curve_=0.4)
@@ -319,8 +381,9 @@ def horns(c):
             q = pts[k]
             g.lathe([(hr * 0.17 * (1 - k / 10) + 0.002, -0.004), (hr * 0.17 * (1 - k / 10) + 0.006, 0), (hr * 0.17 * (1 - k / 10) + 0.002, 0.004)],
                     "claw", aim(q, (pts[k + 1] - pts[k])), segs=10, cap_bottom=False, cap_top=False)
-    if parts & {"horns", "horns_swept", "horns_small"} or (b.kind == "dragon" and not parts & {"horn_single", "horn_crown", "antlers"}):
-        L = hr * (1.5 if "horns_swept" in parts else 0.6 if "horns_small" in parts else 1.1)
+    # Dragons always wear two main horns swept back, at least 0.8x the head's length, under any crown (design review C3).
+    if parts & {"horns", "horns_swept", "horns_small"} or (b.kind == "dragon" and not parts & {"horn_single", "antlers"}):
+        L = hr * (2.1 if b.kind == "dragon" else 1.5 if "horns_swept" in parts else 0.6 if "horns_small" in parts else 1.1)
         for s in (-1, 1):
             p = top + Vector((s * hr * 0.45, hr * 0.1, -hr * 0.1))
             if "horns_swept" in parts or b.kind == "dragon":
@@ -452,11 +515,47 @@ def cloth(c, kind):
                     b.head.z + r * math.sin(ph) * 1.1 - hr * 0.1)
         g.patch(fn, 20, 10, "cloth", None, 0.015)
     if kind == "loincloth" and b.hips:
-        z = b.hips[0].z + tr * 0.15
-        for side in (-1, 1):
-            def fn(u, v, side=side):
-                return ((u - 0.5) * tr * 1.2, side * tr * 0.92 + side * v * 0.04, z - v * tr * 1.6)
-            g.patch(fn, 6, 6, mat, None, 0.012)
+        loincloth(c)
+
+
+def loincloth(c):
+    """Shaped cloth, not a board (review 2026-10-31 C5/N4): a trapezoid, top 0.8x the hip width, bottom 0.55x, 0.35x
+    the leg long, in two segments (the lower one flares 10 degrees out), curved round the hips, with a back flap.
+    Cloth #8A5A35 with a 0.03 m darker hem."""
+    b, g = c.b, c.g
+    hw = getattr(b, "hip_w", None) or (abs(b.hips[0].x) * 2 + b.torso_r)
+    leg = getattr(b, "leg_len", None) or (b.hips[0].z - (b.feet[0].z if b.feet else 0.0))
+    L, w0, w1 = 0.35 * leg, 0.8 * hw, 0.55 * hw
+    z0 = b.hips[0].z + b.torso_r * 0.2
+    hem = min(c.metres(0.03), L * 0.3)
+    k1, fl = 0.45, math.radians(10)
+    for side, Ls in ((-1, L), (1, L * 0.85)):  # front panel, then the shorter back flap
+        hit = surface_hit(c, Vector((0, 0, z0)), Vector((0, side, 0)), hw * 0.2)
+        y0 = hit.y if hit is not None else side * b.torso_r * 0.8
+        y0 += side * c.metres(0.006)
+
+        def fn(u, v, side=side, Ls=Ls, y0=y0):
+            w = w0 + (w1 - w0) * v
+            x = (u - 0.5) * w
+            if v <= k1:   # the upper segment hangs straight down the belly
+                dz, dy = v * Ls, 0.0
+            else:         # the lower one flares out 10 degrees
+                t = (v - k1) * Ls
+                dz, dy = k1 * Ls + t * math.cos(fl), t * math.sin(fl)
+            wrap = (x / (w0 * 0.5)) ** 2 * hw * 0.28 * (1 - 0.45 * v)  # edges curve back round the hips
+            fold = hw * 0.035 * math.sin(u * math.pi * 5) * (0.25 + v)     # soft vertical folds, deeper at the hem
+            return (x, y0 + side * (dy - wrap + fold), z0 - dz - hw * 0.03 * v * math.sin(u * math.pi * 3))
+        cut = 1 - hem / Ls
+        g.patch(lambda u, v, fn=fn: fn(u, v * cut), 24, 8, "loin", None, c.metres(0.008))
+        g.patch(lambda u, v, fn=fn: fn(u, cut + v * (1 - cut)), 24, 1, "loin_hem", None, c.metres(0.009))
+    # a waist cord on the body surface that the cloth hangs from
+    ring = []
+    for k in range(24):
+        a = 2 * math.pi * k / 24
+        d = Vector((math.cos(a), math.sin(a), 0))
+        hit = surface_hit(c, Vector((0, 0, z0 + c.metres(0.01))), d, hw * 0.06, hw * 1.5, nearest=True)
+        ring.append((hit if hit is not None else d * hw * 0.5 + Vector((0, 0, z0))) + d * c.metres(0.008))
+    tube(g, ring + ring[:1], c.metres(0.014), "loin_hem", 8, cap=False)
 
 
 def mask(c, kind):
@@ -469,14 +568,29 @@ def mask(c, kind):
         e = (v - 0.5) * 2.0
         a = (u - 0.5) * 2.2 * math.sqrt(max(0.05, 1 - e * e * 0.85))
         return (math.sin(a) * hr * 0.75, e * hr * 0.9, math.cos(a) * hr * 0.25 - e * e * hr * 0.12)
-    key = {"human_mask": "eye_white", "mask_face": "bone", "empty_visor": "metal", "face_decal": "accent"}.get(kind, "bone")
-    if kind == "face_decal":
-        for s in (-1, 1):
-            g.rbox((hr * 0.12, hr * 0.5, hr * 0.02), "accent", m @ trs((s * hr * 0.4, -hr * 0.2, hr * 0.17), (0, 0, s * 10)), hr * 0.01, 1)
+    if kind == "face_decal":  # a small round mouth (design review C4: two bars read as a glitch)
+        g.sphere(hr * 0.12, "mouth", m @ trs((0, -hr * 0.42, hr * 0.12), (0, 0, 0), (1.2, 0.8, 0.35)), segs=12, rings=8)
         return
+    # Never a plain oval on a dark body (design review C1): every mask gets a species style, a brow ridge and
+    # glowing eye points in its holes.
+    look = c.look
+    words = (look.family + " " + getattr(look, "look_text", "")).lower()
+    style = ("metal" if kind == "empty_visor" else "demon" if "demon" in words or "oni" in words
+             else "wood" if any(w in words for w in ("yokai", "wood", "plant", "scarecrow", "spirit")) else "bone")
+    key = {"metal": "metal", "demon": "accent", "wood": "wood", "bone": "bone"}[style]
+    if kind == "human_mask":
+        key = "eye_white"
     g.patch(fn, 14, 12, key, m @ trs((0, 0, hr * 0.02)), hr * 0.06)
-    for s in (-1, 1):  # eye holes painted dark, glowing for empty visors
-        g.sphere(hr * 0.13, "glow" if kind == "empty_visor" else "eye_dark", m @ trs((s * hr * 0.32, hr * 0.15, hr * 0.3), (0, 0, 0), (1.3, 0.8, 0.3)), segs=10, rings=6)
+    g.rbox((hr * 0.62, hr * 0.1, hr * 0.08), key + "~1", m @ trs((0, hr * 0.36, hr * 0.27)), hr * 0.04, 2)  # brow ridge
+    if style == "demon":  # horn nubs, noh-demon style
+        for s in (-1, 1):
+            tube(g, [m @ Vector((s * hr * 0.4, hr * 0.62, hr * 0.2)), m @ Vector((s * hr * 0.62, hr * 1.05, hr * 0.32))], [hr * 0.11, hr * 0.02], "horn", 8)
+    elif style == "wood":  # a painted motif: two stripes under the eyes
+        for s in (-1, 1):
+            g.rbox((hr * 0.05, hr * 0.28, hr * 0.02), "accent", m @ trs((s * hr * 0.32, -hr * 0.18, hr * 0.29)), hr * 0.01, 1)
+    for s in (-1, 1):  # eye holes with a glowing point in each
+        g.sphere(hr * 0.13, "eye_dark", m @ trs((s * hr * 0.32, hr * 0.15, hr * 0.3), (0, 0, 0), (1.3, 0.8, 0.3)), segs=10, rings=6)
+        g.sphere(hr * 0.06, "glow", m @ trs((s * hr * 0.32, hr * 0.15, hr * 0.36)), segs=8, rings=6)
 
 
 def wings(c, kind):
@@ -494,22 +608,41 @@ def wings(c, kind):
     span = getattr(b, "wing_span", None) or span
     for s in (-1, 1):
         sh = root + Vector((s * b.torso_r * 0.5, 0.02, 0.02))
+        if feather and b.kind == "bird":
+            # A standing bird folds its wings along its flanks: overlapping feathers laid back from the shoulder,
+            # flat against the body and longest at the tips. Spread wings read as a box end-on from the front.
+            tr = b.torso_r
+            wrist = sh + Vector((s * tr * 0.55, tr * 0.6, -tr * 0.15))
+            tube(g, [sh, wrist], [tr * 0.18, tr * 0.12], "feather", 10)
+            n = 9
+            for k in range(n):
+                t = k / (n - 1)
+                base = sh.lerp(wrist, t) + Vector((s * tr * 0.08, 0, -tr * 0.05 * t))
+                L = tr * (1.0 + 0.9 * t)
+                d = Vector((s * 0.12, 1.0, -0.35 - 0.25 * (1 - t))).normalized()
+                g.sphere(0.5, "feather_tip" if k >= n - 3 else "feather",
+                         aim(base + d * L * 0.48, d) @ trs((0, 0, 0), (0, 0, 0), (tr * 0.07, tr * 0.42, L)), segs=10, rings=6)
+            continue
         if feather:
             elbow = sh + Vector((s * span * 0.45, span * 0.12, span * 0.35))
             tip = elbow + Vector((s * span * 0.6, span * 0.25, -span * 0.05))
             tube(g, [sh, elbow], [b.torso_r * 0.12, b.torso_r * 0.08], "feather", 10)
             tube(g, [elbow, tip], [b.torso_r * 0.08, b.torso_r * 0.02], "feather", 10)
-            for k in range(9):  # primaries and secondaries
-                t = k / 8
-                base = elbow.lerp(tip, t) if t > 0.3 else sh.lerp(elbow, t / 0.3)
-                L = span * (0.32 + 0.25 * t)
-                d = Vector((s * 0.25 * t, 0.55, -1)).normalized()
-                g.sphere(0.5, "feather_tip" if k > 5 else "feather", aim(base + d * L * 0.5, d) @ trs((0, 0, 0), (0, 0, 0), (span * 0.07, span * 0.018, L * 0.55)), segs=8, rings=6)
+            # Primaries and secondaries as one overlapping fan swept back from the arm, attached at their roots and
+            # flat in the wing plane, the outer three longest (design review C6: they floated as separate dashes).
+            n = 13
+            for k in range(n):
+                t = k / (n - 1)
+                base = sh.lerp(elbow, t / 0.35) if t < 0.35 else elbow.lerp(tip, (t - 0.35) / 0.65)
+                L = span * (0.3 + 0.22 * t + (0.14 if k >= n - 3 else 0.0))
+                d = Vector((s * (0.1 + 0.5 * t * t), 0.6, -0.8)).normalized()  # down and back: a spread wing, not edge-on
+                g.sphere(0.5, "feather_tip" if k >= n - 3 else "feather",
+                         aim(base + d * L * 0.48, d) @ trs((0, 0, 0), (0, 0, 0), (span * 0.17, span * 0.025, L)), segs=10, rings=6)
             continue
         # a bat/dragon wing: arm up and out, a wrist, four fingers fanning back and down, a scalloped membrane
         elbow = sh + Vector((s * span * 0.3, span * 0.05, span * 0.32))
         wrist = elbow + Vector((s * span * 0.32, -span * 0.08, span * 0.12))
-        r0 = b.torso_r * (0.16 if b.kind == "dragon" else 0.12)
+        r0 = b.torso_r * (0.24 if b.kind == "dragon" else 0.12)
         tube(g, [sh, elbow, wrist], [r0, r0 * 0.6], "main", 12)
         g.lathe([(r0 * 0.4, 0), (0, r0 * 2.2)], "claw", aim(wrist, (s * 0.3, -0.6, 0.8)), segs=6)  # thumb claw
         fingers = []
@@ -524,8 +657,8 @@ def wings(c, kind):
             a, z = edge[i], edge[i + 1]
             for t in (0.0, 0.33, 0.66):
                 q = a.lerp(z, t)
-                if i >= 2 and t > 0:
-                    q = q.lerp(wrist, 0.12 * math.sin(math.pi * t))
+                if i >= 2 and t > 0:  # deep scallops between the finger bones (dragons, review 2026-10-31)
+                    q = q.lerp(wrist, (0.3 if b.kind == "dragon" else 0.12) * math.sin(math.pi * t))
                 verts.append(tuple(q))
         verts.append(tuple(edge[-1]))
         n = len(verts)
@@ -540,7 +673,16 @@ def growths(c, kind):
     mat = {"stone_growths": "stone", "crystal_growths": "crystal", "moss_cover": "moss", "thorns": "wood",
            "spore_pods": "spore", "glowing_spots": "glow", "glowing_knots": "glow", "scar_decals": "dark"}[kind]
     n = {"moss_cover": 26, "scar_decals": 6, "glowing_spots": 18}.get(kind, 10)
-    for p, nn in c.surface(lambda v, n: n[2] > -0.1, n):
+    pred = lambda v, n: n[2] > -0.1  # noqa: E731
+    if getattr(b, "eye_snap", False):  # keep the snapped face (mushrooms) clear of moss and pods
+        fc = b.head + b.face.normalized() * b.head_r * 0.8
+        pred = lambda v, n: n[2] > -0.1 and (Vector(v) - fc).length > b.head_r * 1.1  # noqa: E731
+    # every growth stays >= 0.5 hr from any eye (review 2026-10-31): eye edge to growth edge
+    clear = b.head_r * (0.5 + b.eye_size) + b.torso_r * 0.3
+    eyes_at = list(c.eye_pos)
+    base_pred = pred
+    pred = lambda v, n: base_pred(v, n) and all((Vector(v) - e).length > clear for e in eyes_at)  # noqa: E731
+    for p, nn in c.surface(pred, n):
         s = b.torso_r * rng.uniform(0.12, 0.3)
         if kind == "crystal_growths":
             for k in range(3):
@@ -576,8 +718,10 @@ def weapon(c, kind):
         g.lathe([(s * 0.04, 0), (0, s * 0.25)], "metal", aim(h + Vector((0, -s * 0.9, s * 0.15)), (0, -1, 0.15)), segs=8)
     else:  # sword
         m = aim(h, (0.0, -0.35, 1))
-        g.rbox((s * 0.06, s * 0.015, s * 0.7), "metal", m, s * 0.006, 2, (0, 0, s * 0.42))
-        g.lathe([(s * 0.03, 0), (0, s * 0.08)], "metal", m @ trs((0, 0, s * 0.77)), segs=4)
+        bw = max(s * 0.1, c.metres(0.07))  # thick enough to read at 20 m: blade width >= 6 cm (art_direction 7.6)
+        g.rbox((bw, max(s * 0.022, c.metres(0.015)), s * 0.7), "metal", m, s * 0.006, 2, (0, 0, s * 0.42))
+        g.rbox((bw * 0.25, max(s * 0.024, c.metres(0.016)), s * 0.6), "metal_dark", m, s * 0.004, 1, (0, 0, s * 0.38))  # fuller
+        g.lathe([(bw * 0.5, 0), (0, s * 0.1)], "metal", m @ trs((0, 0, s * 0.77)) @ trs((0, 0, 0), (0, 0, 45)) @ trs((0, 0, 0), (0, 0, 0), (1, 0.3, 1)), segs=4)
         g.rbox((s * 0.2, s * 0.04, s * 0.03), "gold", m, s * 0.01, 2, (0, 0, s * 0.06))
         g.cylinder(s * 0.018, s * 0.13, "leather", m @ trs((0, 0, -s * 0.08)), segs=8)
         g.sphere(s * 0.025, "gold", m @ trs((0, 0, -s * 0.09)), segs=8, rings=5)
@@ -723,6 +867,146 @@ def mimic_box(c):
         g.lathe([(0.018, 0), (0, 0.06)], "teeth", lid @ trs((x, -d + 0.04, 0.0), (180, 0, 0)), segs=6)
 
 
+def _profile_z(prof, r):
+    """Height of a lathe profile [(radius, z) from rim to pole] at radius r, a touch proud of the surface."""
+    for (r0, z0), (r1, z1) in zip(prof, prof[1:]):
+        if r1 <= r <= r0:
+            t = (r0 - r) / max(1e-9, r0 - r1)
+            return z0 + (z1 - z0) * t + (prof[-1][1] * 0.02)
+    return prof[-1][1]
+
+
+def mushroom_mouth(c):
+    """F-E mushrooms: a tiny "o" mouth (radius 0.12 hr) on the skull surface, centred under the eyes. The Spore Lords
+    keep their teeth grin from mouth()."""
+    b, g = c.b, c.g
+    if is_spore_lord(c.look) or b.mouth is None:
+        return
+    hr = b.head_r
+    d = (Vector(b.mouth) - b.head).normalized()
+    p = surface_hit(c, b.head, d, hr * 0.12) or Vector(b.mouth)
+    m = aim(p - d * hr * 0.02, d)
+    g.sphere(hr * 0.12, "mouth", m @ trs((0, 0, 0), (0, 0, 0), (0.9, 1.1, 0.45)), segs=14, rings=8)
+
+
+def plant_crown(c):
+    """Plants wear a crown so they read as plants, not cactus stumps (design review C6): mushrooms a spotted cap,
+    flower monsters a ring of petals, everything else a fan of leaves."""
+    b, g, look = c.b, c.g, c.look
+    hr = b.head_r
+    top = b.head + Vector((0, 0, hr * 0.75))
+    name = look.name.lower()  # the name only: generic body wording ("mushroom-capped walking body") misleads
+    if is_mushroom(look):
+        # The rim sits above the brow (head + 0.95 hr) and reaches 2.3 hr, so from the preview camera (pitch 14) the
+        # line of sight from the eyes passes under it: the face reads, the cap stays big and spotted.
+        R, H = hr * 2.3, hr * 1.35
+        top = b.head + Vector((0, 0, hr * 1.15))
+        prof = [(R * 0.98, 0), (R, H * 0.12), (R * 0.85, H * 0.55), (R * 0.5, H * 0.9), (0, H)]
+        g.lathe(prof, "main", T3(top.x, top.y, top.z - hr * 0.2), segs=28)
+        g.lathe([(R * 0.98, 0), (hr * 0.45, -hr * 0.14), (0, -hr * 0.12)], "cloth_light", T3(top.x, top.y, top.z - hr * 0.2), segs=28)  # gills
+        mushroom_mouth(c)
+        rng = b.rng
+        for k in range(9):  # pale spots on the cap
+            a = 2 * math.pi * k / 9 + rng.uniform(-0.2, 0.2)
+            rr = R * rng.uniform(0.35, 0.8)
+            z = _profile_z(prof, rr)
+            p = top + Vector((math.cos(a) * rr, math.sin(a) * rr, z - hr * 0.2))
+            n = Vector((math.cos(a) * rr / R, math.sin(a) * rr / R, 1.0)).normalized()
+            g.sphere(hr * rng.uniform(0.16, 0.26), "eye_white", aim(p, n) @ trs((0, 0, 0), (0, 0, 0), (1, 1, 0.25)), segs=10, rings=6)
+        return
+    if any(w in name for w in ("treant", "tree", "root", "briar", "oak", "willow")):
+        # trees: a leafy canopy of overlapping clumps over the crown
+        rng = b.rng
+        for k in range(9):
+            a = 2 * math.pi * k / 9
+            rr = hr * (1.4 if k % 2 else 0.9)
+            p = top + Vector((math.cos(a) * rr, math.sin(a) * rr + hr * 0.2, hr * (0.9 + 0.5 * rng.random())))
+            g.sphere(hr * rng.uniform(0.75, 1.05), "leaf", T3(p.x, p.y, p.z), segs=14, rings=10)
+        g.sphere(hr * 1.1, "leaf~2", T3(top.x, top.y + hr * 0.2, top.z + hr * 1.7), segs=14, rings=10)
+        return
+    petals = any(w in name for w in ("flower", "bloom", "blossom", "rose", "lotus", "lily", "orchid"))
+    n = 7 if petals else 6
+    for k in range(n):
+        a = 2 * math.pi * k / n
+        d = Vector((math.cos(a) * 0.55, math.sin(a) * 0.55, 1.0)).normalized()
+        L = hr * (1.4 if petals else 2.4)
+        g.sphere(0.5, "petal" if petals else "leaf", aim(top + d * L * 0.45, d) @ trs((0, 0, 0), (0, 0, 0), (L * 0.42, L * 0.08, L)), segs=12, rings=8)
+
+
+def ribcage(c):
+    """An open ribcage of bone bars round a thin spine: each rib curves from the spine round to a sternum bar with
+    gaps between, so the background shows through (design review C5)."""
+    b, g = c.b, c.g
+    z0, z1, w = b.ribcage[0].z, b.ribcage[1].z, b.ribcage[2]
+    # Review 2026-10-31: five thin ribs, wide gaps, each sloping down to the front, a short sternum and no fill.
+    n = 5
+    for k in range(n):
+        t = k / (n - 1)
+        z = z0 + (z1 - z0) * t
+        rw = w * (0.75 + 0.35 * math.sin(math.pi * (0.25 + 0.6 * t)))
+        for s in (-1, 1):
+            pts = []
+            for j in range(9):
+                a = math.pi * (0.5 - 0.88 * j / 8)  # from the spine at the back, round the side to the front
+                pts.append(Vector((s * math.cos(a) * rw, 0.02 + math.sin(a) * rw * 0.75, z - 0.05 * j / 8)))
+            tube(g, pts, [rw * 0.075, rw * 0.05], "skull_bone", 8)
+    tube(g, [Vector((0, -w * 0.68, z1 - 0.05)), Vector((0, -w * 0.7, z1 - 0.005))], [w * 0.07, w * 0.06], "skull_bone", 8)  # sternum
+
+
+def skull_parts(c):
+    """The skull's jaw: a separate bone U below the upper face with a 0.05 hr gap (dark inside), and a row of square
+    upper teeth on the maxilla edge (review 2026-10-31 C1)."""
+    b, g = c.b, c.g
+    hr, h = b.head_r, b.head
+    mx = h + Vector((0, -hr * 0.42, -hr * 0.38))
+    hit = surface_hit(c, mx, Vector((0, 0, -1)), hr * 0.12, hr * 0.9)
+    zb = hit.z if hit is not None else mx.z - hr * 0.42
+    jr = hr * 0.11
+    zt = zb - hr * 0.05 - jr  # jaw centreline: its top sits 0.05 hr under the upper face
+    pts = []
+    for s in (-1, 1):
+        side = [Vector((s * hr * 0.5, h.y - hr * 0.05, zb + hr * 0.22)), Vector((s * hr * 0.5, h.y - hr * 0.2, zt)),
+                Vector((s * hr * 0.32, h.y - hr * 0.62, zt - hr * 0.04))]
+        pts = side + pts[::-1] if s < 0 else pts + side[::-1]
+    pts.insert(3, Vector((0, h.y - hr * 0.82, zt - hr * 0.06)))
+    tube(g, pts, jr, "skull_bone", 10)
+    g.sphere(hr * 0.42, "socket", T3(0, h.y - hr * 0.45, zb - hr * 0.08) @ trs((0, 0, 0), (0, 0, 0), (1.0, 0.8, 0.22)), segs=14, rings=6)  # the dark gap
+    for k in range(6):  # upper teeth on the maxilla edge
+        x = (k - 2.5) * hr * 0.11
+        g.rbox((hr * 0.085, hr * 0.06, hr * 0.12), "skull_bone~2", None, hr * 0.015, 1,
+               (x, h.y - hr * 0.82 + abs(x) * 0.5, zb - hr * 0.01))
+
+
+def dragon_spade(c):
+    """Dragons and wyverns end their tail in a flat spade (review 2026-10-31 C3)."""
+    b = c.b
+    tip, d = getattr(b, "tail_tip", None), getattr(b, "tail_tip_dir", None)
+    if tip is None:
+        return
+    L, W = 0.2, 0.17
+    poly = [(0, -L * 0.05), (W * 0.32, -L * 0.12), (W * 0.5, L * 0.22), (W * 0.28, L * 0.6), (0, L), (-W * 0.28, L * 0.6),
+            (-W * 0.5, L * 0.22), (-W * 0.32, -L * 0.12)]
+    c.g.slab_poly(poly[::-1], 0.022, "dark", aim(tip - d * 0.03, d))
+
+
+def breaking_shapes(c):
+    """One shape per biped family that breaks the mannequin silhouette (design review C5)."""
+    b, g, look = c.b, c.g, c.look
+    name, fam = look.name.lower(), look.family
+    tr, hr = b.torso_r, b.head_r
+    parts = set(look.parts)
+    if fam == "Goblinoids" and "loincloth" not in parts and "hobgoblin" not in name:
+        cloth(c, "loincloth")
+    if "hobgoblin" in name or ("general" in name and fam == "Goblinoids"):  # one big pauldron on the left shoulder
+        sh = b.shoulders[0] if b.shoulders else b.neck
+        g.lathe([(tr * 0.55, 0), (tr * 0.5, tr * 0.18), (tr * 0.3, tr * 0.3), (0, tr * 0.34)], "metal",
+                T3(sh.x, sh.y, sh.z + tr * 0.02) @ trs((0, 0, 0), (0, -25, 0)), segs=18)
+    if "orc" in name.split():  # orcs: a topknot
+        top = b.head + Vector((0, hr * 0.15, hr * 0.95))
+        tube(g, [top, top + Vector((0, hr * 0.15, hr * 0.45)), top + Vector((0, hr * 0.55, hr * 0.5))], [hr * 0.22, hr * 0.12], "dark", 10)
+        g.sphere(hr * 0.12, "gold", T3(top.x, top.y + hr * 0.08, top.z + hr * 0.2), segs=10, rings=6)
+
+
 def swarm_wings(c):
     for p in getattr(c.b, "units", []):
         for s in (-1, 1):
@@ -744,6 +1028,16 @@ def hard(c):
         mimic_box(c)
     if b.kind == "swarm":
         swarm_wings(c)
+    if b.kind == "plant":
+        plant_crown(c)
+    if getattr(b, "ribcage", None):
+        ribcage(c)
+    if getattr(b, "skull", False):
+        skull_parts(c)
+    if b.kind == "dragon" and not set(c.look.parts) & {"stinger", "tail_spike"}:  # one tail tip each (review)
+        dragon_spade(c)
+    if b.kind == "biped":
+        breaking_shapes(c)
     if (b.kind in ("bird", "bat", "dragon") or b.P.get("wings")) and not any(p in parts for p in ("wing_cases", "wing_membrane", "wing_feathers", "membrane_wings")):
         wings(c, "wing_feathers" if b.kind == "bird" else "wing_membrane")
     for p in parts:
@@ -780,6 +1074,8 @@ def hard(c):
                 for k in range(4):
                     a = k * 90
                     c.g.lathe([(r * 0.3, 0), (0, r * 1.5)], "bone", aim(tip, d) @ trs((0, 0, 0), (0, 0, a)) @ trs((0, 0, 0), (70, 0, 0)), segs=6)
+            elif p == "tail_blade" and b.kind == "dragon":
+                pass  # the dragon's spade is its blade (dragon_spade)
             elif p == "tail_blade":
                 c.g.slab_poly([(0, 0), (r * 1.6, r * 0.8), (0, r * 4), (-r * 1.6, r * 0.8)], r * 0.25, "metal", aim(tip, d) @ trs((0, 0, 0), (90, 0, 0)))
             else:

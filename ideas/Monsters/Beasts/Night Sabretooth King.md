@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,842 tris · 0.736 × 3.2 × 1.437 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Night Sabretooth King is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its coat is rough, scarred and spiked, colored in ink black with bruised violet. Its most striking feature is two sabre fangs as long as swords. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Night Sabretooth King is a large creature with a heavy, muscular quadruped frame, about 3.2 m long. Its coat is rough, scarred and spiked, colored in dark brown, with violet markings. Its most striking feature is two sabre fangs as long as swords. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `shadow_wisps` · palette `#614c42` `#453631` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,194 tris · 3.865 × 2.45 × 4.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Grakkus, the Orc Disaster is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its hide is rough, scarred and spiked, colored in ink black with bruised violet. Guild sketches always show a body swollen with devoured power and a crown of goblin bones. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
+> The Grakkus, the Orc Disaster is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Guild sketches always show a body swollen with devoured power and a crown of goblin bones. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#2d2a4a` `#6b5b95` `#0d0d14` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_large_biped` · mesh `large_biped_base` · material `thick_skin` · VFX `shadow_wisps` · palette `#82954f` `#576435` `#9a86d8` · triangle-based silhouette, sharp asymmetric spikes

@@ -1,8 +1,8 @@
 # Art Direction: the Project Ascend Style Guide
 
-> **Owner:** anime-fantasy-director. **Status:** v1, 2026-10-25. Every art, shader, UI and bestiary agent builds to this page. When it disagrees with a tool's defaults, this page wins. When it disagrees with `Canon.md`, Canon wins and this page is the bug.
+> **Owner:** anime-fantasy-director. **Status:** v1.1, 2026-10-31 (adds §3.1 contact-sheet preview standard; Umbravel lantern and water-key notes in §4.2). Every art, shader, UI and bestiary agent builds to this page. When it disagrees with a tool's defaults, this page wins. When it disagrees with `Canon.md`, Canon wins and this page is the bug.
 > **Sources:** Canon §1 (bright, flowing, Genshin-style cel-shaded anime; teen; no fanservice; warmth over comedy) · [[anime_building_style]] · [[building_system]] · [[creature_system]] · `12_Systems/hud_and_ui.md` · `08_Bestiary/monster_motion_bible.md` · `Tools/blender/ascend_buildings/styles.py`.
-> **Latest review:** `reports/design_review_2026-10-25.md`.
+> **Latest review:** `reports/design_review_2026-10-31.md` (previous: `reports/design_review_2026-10-25.md`).
 
 ---
 
@@ -51,6 +51,21 @@
 | Bloom | Only on emissives | Threshold 1.0, intensity 0.4. Lamps, runes, cores, magic. Never on white walls |
 | Time of day | Morning gold, noon clean, dusk orange-violet, night blue with warm windows | Night is navy `#1B2440` with lit windows (`lamp` emission 2.0), never black |
 
+### 3.1 Contact-sheet preview standard (set 2026-10-31)
+
+Every contact sheet used to approve a look is rendered with the toon preview (`Tools/blender/toon_preview.py`, `render_toon_sheet.py`). The plain render (`--plain`) is for geometry debugging only and never for sign-off.
+
+| Element | Rule |
+|---|---|
+| Shading | Two-tone ramp, shadow = base x (0.58, 0.56, 0.78); cream rim 0.35 on creatures |
+| Outlines | Inverted hull at local colour x 0.35; 1.5 px creatures, 2 px buildings at tile size |
+| Colour transform | **`Standard`** view transform, no look, exposure 0. AgX/Filmic is not allowed in previews because it bleaches emissives to white |
+| Emission | lamp 1.5, window glow 2.0, ember 2.5, magic/rune/crystal 2.0. A lit pixel keeps saturation of at least 50% and its hue within 15 degrees of its palette key; a white lantern is a failed render |
+| Sky and ground | Painted sky band; ground disc 3x the subject's bounds, `#8CC860` fading to `#A8D47A` at the rim |
+| Framing | The camera frames the **subject only**. The subject fills 70-85% of the tile's shorter side, and the camera fits on the **vertical** field of view so tall, thin props (lamp posts, towers) are never cropped |
+| Scale reference (creatures) | A 1.7 m flat lavender-grey `#A9A6C2` human silhouette (head 1/7 of height, shoulders, legs; not a capsule), standing behind and to the right of the subject. It may be cropped by the frame: a shin beside a rabbit is enough. The tile label gives the species and its height in metres |
+| Camera | Yaw -35 degrees, pitch 16-28 degrees, the same for before and after sheets |
+
 ---
 
 ## 4. Shape language
@@ -84,7 +99,7 @@ Every design is **one dominant shape + one secondary**, never three in balance. 
 | Temple jungle (Xochitl Mire, Lumbaya) | Steep triangle on steps | Palm thatch, stepped pyramids | Carved stone `#C2B28F`, thatch `#B28F4C`, accent teal `#1A9E99` + red bands |
 | Carved-mountain terraces (Apu Highlands) | Trapezoid | Fitted stone, steep thatch | Stone `#9E9180`, thatch gold `#D1B266`, accent textiles red + yellow |
 | Clockwork tiers (Gearholm, Cinderhole) | Square + gears | Copper roofs, pipes, big gear faces | Red brick `#9E4733`, verdigris copper `#599E8C`, brass `#D99E40`. Gears at least 1.2 m across on landmarks so they read |
-| Dark spires (Umbravel, Nox Dominion) | Tall sharp triangle | Spires, pointed arches, webs | Black-violet stone `#4C4557`, slate `#3D334C`, accent **violet window glow `#C77AFF`** (Umbravel: warm silk lanterns); Nox: obsidian + red-orange glow |
+| Dark spires (Umbravel, Nox Dominion) | Tall sharp triangle | Spires, pointed arches, webs | Black-violet stone `#4C4557` (Umbravel `#5A5068`), slate `#3D334C`, accent **violet window glow `#C77AFF`**; Umbravel silk lanterns stay **warm amber `#FFB852`** (one cool and one warm light per facade, never violet lanterns); Nox: obsidian + red-orange glow |
 | Heavenfolk marble (Heavenreach, Sky Archipelago) | Circle + column | Domes, columns, wings | Marble `#F2F2F7`, gold `#FFC74C`, sky glass `#9EC7F2` |
 | Labyrinth stone (Great Labyrinth, Root of the World, Vesper) | Heavy square | Runes, crenels, ruin | Grey block `#8C8F94`, accent rune glow by band (teal / blue / pale gold); Vesper red stone |
 
@@ -92,6 +107,7 @@ Every design is **one dominant shape + one secondary**, never three in balance. 
 - Shared props (market stall, lamp post, fountain, well, bridge, wall, windmill, granary tower) **must take the family's materials and forms**. A red-canopy European stall in Sunscar or a sail windmill in Frostveil breaks the region.
 - A family's signature element (dome, onion, toadstool cap, pagoda roof) goes on **at most 1 building in 4**. Ubiquity kills a signature.
 - Dark families (dwarven, gothic, fenland) keep their overall value low but must carry **at least 3 warm emissive points per building** (door, 2 windows or chimney) so they read as homes, not ruins.
+- **Water is never the window colour.** Every family has its own `water` key (default `#7FB3D0`; dark families a darker cool blue such as `#5E8FA8`). Orange or violet water reads as lava or poison.
 
 ### 4.3 Creature families
 

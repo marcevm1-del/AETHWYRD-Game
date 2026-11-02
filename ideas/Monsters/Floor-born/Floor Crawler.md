@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,164 tris · 0.309 × 0.8 × 0.585 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Floor Crawler is a small creature with a low, springy quadruped build, about 0.8 m long. Its stone-like hide is rough, scarred and spiked, colored in muted greys and dusty browns. Its most striking feature is stone-colored skin that matches the walls it was born from. It has burning slit pupils. It has no ornament at all: simple, readable shapes. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
+> The Floor Crawler is a small creature with a low, springy quadruped build, about 0.8 m long. Its stone-like hide is rough, scarred and spiked, colored in dungeon stone. Its most striking feature is stone-colored skin that matches the walls it was born from. It has burning slit pupils. It has no ornament at all: simple, readable shapes. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -95,4 +95,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `dungeon_stone` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_small` · mesh `quad_small_base` · material `dungeon_stone` · VFX `dust_puffs` · palette `#868c97` `#5a5f67` `#b1b8c8` · triangle-based silhouette, sharp asymmetric spikes

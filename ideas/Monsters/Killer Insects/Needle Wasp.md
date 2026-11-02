@@ -13,7 +13,7 @@ tags: [monster, killer-insects]
 
 > [!note] 3D model: procedural blockout in Unity (2,494 tris · 0.449 × 0.367 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Needle Wasp is a tiny creature with a tiny, darting winged build, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in bruise purple with sickly green. Look for a stinger as long as its body. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
+> The Needle Wasp is a tiny creature with a tiny, darting winged build, about 0.3 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Look for a stinger as long as its body. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by a low toxic haze that clings to the ground.
 
 | Field | Value |
 |---|---|
@@ -35,11 +35,11 @@ tags: [monster, killer-insects]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (keyword); animation set `anim_flyer_small`.
+- **Rig:** [[Systems/Rigs/hexapod|hexapod]] (override); animation set `anim_flyer_small`.
 - **Dimensions:** 0.1 m high × 0.3 m long × 0.15 m wide; prefab scale 0.375.
 - **Physics:** 1.2 kg, gravity ×1.4, poise 7, knockback resistance 0.28, death style `flip_legs_curl`.
 - **Navigation:** speed 2.11 m/s, turn 900°/s, stopping distance 0.5 m.
-- **Attack count:** 5; **signature:** a stinger as long as its body.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_flyer_small` · mesh `flyer_small_base` · material `chitin_matte` · VFX `toxic_fog` · palette `#5d5c67` `#46444e` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

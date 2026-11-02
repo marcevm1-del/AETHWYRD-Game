@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (2,862 tris · 1.003 × 2.6 × 2.262 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Owlbear is a large creature with a long-legged predatory quadruped build, about 2.6 m long. Its coat is rough, scarred and spiked, colored in muted greys and dusty browns. Survivors describe an owl's feathered face on a bear's muscled body. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
+> The Owlbear is a large creature with a long-legged predatory quadruped build, about 2.6 m long. Its coat is rough, scarred and spiked, colored in warm brown. Survivors describe an owl's feathered face on a bear's muscled body. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8f6549` `#5c3f31` `#ca9a67` · triangle-based silhouette, sharp asymmetric spikes

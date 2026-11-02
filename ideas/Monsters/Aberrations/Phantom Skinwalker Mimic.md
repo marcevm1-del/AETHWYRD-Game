@@ -13,7 +13,7 @@ tags: [monster, aberrations]
 
 > [!note] 3D model: procedural blockout in Unity (2,676 tris · 1.836 × 1.726 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Phantom Skinwalker Mimic is a person-sized creature with a tall, impossibly thin frame, about 1.8 m tall. Its skin is stretched, stitched and constantly shifting, colored in warm gold and pearl white. It calls you in your companion's voice. It has a human-like face in the wrong place. It has no ornament at all: simple, readable shapes. It copies the walk of whatever it hunts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
+> The Phantom Skinwalker Mimic is a person-sized creature with a tall, impossibly thin frame, about 1.8 m tall. Its skin is stretched, stitched and constantly shifting, colored in mauve, with gold markings. It calls you in your companion's voice. It has a human-like face in the wrong place. It has no ornament at all: simple, readable shapes. It copies the walk of whatever it hunts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · broken symmetry, mimicry, audio-first reveal
+Rig `rig_aberrant` · mesh `aberrant_base` · material `wet_flesh_unsettling` · VFX `holy_motes` · palette `#8d6d89` `#5e485b` `#ffd166` · broken symmetry, mimicry, audio-first reveal

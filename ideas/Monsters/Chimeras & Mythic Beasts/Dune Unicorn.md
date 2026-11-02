@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,332 tris · 0.516 × 2 × 1.023 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Dune Unicorn is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its hide is smooth and clean, colored in ochre, clay and mossy stone. Survivors describe a spiral horn of pearl. It has two bright dot eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
+> The Dune Unicorn is a person-sized creature with a powerful four-legged hunter's body, about 2 m long. Its hide is smooth and clean, colored in lion-tawny, with ochre markings. Survivors describe a spiral horn of pearl. It has two bright dot eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · circle-based, soft silhouette
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `rock_debris` · palette `#a27a4a` `#6a4d30` `#d1a15a` · circle-based, soft silhouette

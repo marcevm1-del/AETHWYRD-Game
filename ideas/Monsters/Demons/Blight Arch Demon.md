@@ -13,7 +13,7 @@ tags: [monster, demons]
 
 > [!note] 3D model: procedural blockout in Unity (3,270 tris · 12.522 × 8 × 8.889 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Blight Arch Demon is a huge creature with a sleek flying build, about 8 m long. Its hide is rough, scarred and spiked, colored in bruise purple with sickly green. Its most striking feature is four wings and a voice like a choir. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Blight Arch Demon is a huge creature with a sleek flying build, about 8 m long. Its hide is rough, scarred and spiked, colored in brimstone red, with sickly green markings. Its most striking feature is four wings and a voice like a choir. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_wyvern` · mesh `wyvern_base` · material `demon_hide_emissive` · VFX `toxic_fog` · palette `#8e44ad` `#b8e986` `#2d1b3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_wyvern` · mesh `wyvern_base` · material `demon_hide_emissive` · VFX `toxic_fog` · palette `#a32a39` `#5b272f` `#b8e986` · triangle-based silhouette, sharp asymmetric spikes

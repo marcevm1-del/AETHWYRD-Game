@@ -13,7 +13,7 @@ tags: [monster, floor-born]
 
 > [!note] 3D model: procedural blockout in Unity (2,820 tris · 1.32 × 1.501 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Wall Stalker is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in ochre, clay and mossy stone. It peels itself out of the wall. It has eyes set slightly too far apart. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by pebbles that tremble and float near it.
+> The Wall Stalker is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in rusted iron, with ochre markings. It peels itself out of the wall. It has eyes set slightly too far apart. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -96,4 +96,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_aberrant` · mesh `aberrant_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · elongated, irregular silhouette; still-then-sudden timing
+Rig `rig_aberrant` · mesh `aberrant_base` · material `dungeon_stone` · VFX `rock_debris` · palette `#856a47` `#594630` `#d1a15a` · elongated, irregular silhouette; still-then-sudden timing

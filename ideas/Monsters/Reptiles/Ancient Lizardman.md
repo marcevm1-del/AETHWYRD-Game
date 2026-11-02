@@ -13,7 +13,7 @@ tags: [monster, reptiles]
 
 > [!note] 3D model: procedural blockout in Unity (2,106 tris · 1.768 × 1.684 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Lizardman is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its scales are weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show a proud crest and a coral-tipped spear. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
+> The Ancient Lizardman is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its scales are weathered and natural, colored in sand-coloured, with sea-blue markings. Guild sketches always show a proud crest and a coral-tipped spear. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `scale_matte` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `scale_matte` · VFX `mist_droplets` · palette `#a99b54` `#706537` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

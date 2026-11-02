@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: procedural blockout in Unity (3,208 tris · 0.506 × 2.2 × 0.988 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Bandit Bear is a person-sized creature with a long-legged predatory quadruped build, about 2.2 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Guild sketches always show a dark mask-like band across its eyes. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it.
+> The Bandit Bear is a person-sized creature with a long-legged predatory quadruped build, about 2.2 m long. Its coat is weathered and natural, colored in ash-grey. Guild sketches always show a dark mask-like band across its eyes. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_large` · mesh `quad_large_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8b8a84` `#5b5a55` `#cbc8c1` · real-animal silhouette with one fantasy exaggeration

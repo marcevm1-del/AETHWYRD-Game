@@ -13,7 +13,7 @@ tags: [monster, chimeras-mythic-beasts, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,746 tris · 1.15 × 5 × 2.245 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Mansacor, the Gold-Eating Manticore is a huge creature with a powerful four-legged hunter's body, about 5 m long. Its hide is rough, scarred and spiked, colored in ochre, clay and mossy stone. Look for a hide studded with swallowed gold coins that ring when it moves. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
+> The Mansacor, the Gold-Eating Manticore is a huge creature with a powerful four-legged hunter's body, about 5 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ochre markings. Look for a hide studded with swallowed gold coins that ring when it moves. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 
 | Field | Value |
 |---|---|
@@ -89,4 +89,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `rock_debris` · palette `#8b5a2b` `#c2a878` `#4a4a3a` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_quad_large` · mesh `quad_large_base` · material `mixed_hide` · VFX `rock_debris` · palette `#846a45` `#594b32` `#d1a15a` · triangle-based silhouette, sharp asymmetric spikes

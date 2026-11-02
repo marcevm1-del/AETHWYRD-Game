@@ -39,7 +39,7 @@ Legless floating beings. No gravity, motion from noise curves; a trailing tail c
 - [[Monsters/Shadows/Umbral Reaper|Umbral Reaper]] — anim_floating, 3 m high, rigId rig selection
 - [[Monsters/Elementals & Spirits/Wisp|Wisp]] — anim_floating, 0.3 m high, override rig selection
 - [[Monsters/Elementals & Spirits/Will-o'-Wisp|Will-o'-Wisp]] — anim_floating, 0.3 m high, rigId rig selection
-- [[Monsters/Elementals & Spirits/Pixie|Pixie]] — anim_flyer_small, 0.2 m high, keyword rig selection
+- [[Monsters/Elementals & Spirits/Pixie|Pixie]] — anim_flyer_small, 0.2 m high, override rig selection
 - [[Monsters/Elementals & Spirits/Ifrit|Ifrit]] — anim_floating, 5 m high, rigId rig selection
 - [[Monsters/Elementals & Spirits/Storm Djinn|Storm Djinn]] — anim_floating, 4 m high, rigId rig selection
 - [[Monsters/Elementals & Spirits/Elemental Sovereign|Elemental Sovereign]] — anim_floating, 20 m high, rigId rig selection
@@ -58,7 +58,7 @@ Legless floating beings. No gravity, motion from noise curves; a trailing tail c
 - [[Monsters/Shadows/Greater Umbral Reaper|Greater Umbral Reaper]] — anim_floating, 4.8 m high, rigId rig selection
 - [[Monsters/Elementals & Spirits/Storm Wisp|Storm Wisp]] — anim_floating, 0.3 m high, override (base species) rig selection
 - [[Monsters/Elementals & Spirits/Vesper-Touched Will-o'-Wisp|Vesper-Touched Will-o'-Wisp]] — anim_floating, 0.3 m high, rigId rig selection
-- [[Monsters/Elementals & Spirits/Elder Pixie|Elder Pixie]] — anim_flyer_small, 0.3 m high, keyword rig selection
+- [[Monsters/Elementals & Spirits/Elder Pixie|Elder Pixie]] — anim_flyer_small, 0.3 m high, override (base species) rig selection
 - [[Monsters/Elementals & Spirits/Phantom Ifrit|Phantom Ifrit]] — anim_floating, 5 m high, rigId rig selection
 - [[Monsters/Elementals & Spirits/Crag Djinn|Crag Djinn]] — anim_floating, 4 m high, rigId rig selection
 - [[Monsters/Elementals & Spirits/Venom Elemental Sovereign|Venom Elemental Sovereign]] — anim_floating, 20 m high, rigId rig selection

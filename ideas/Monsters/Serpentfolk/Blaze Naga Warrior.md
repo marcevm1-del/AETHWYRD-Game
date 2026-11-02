@@ -13,7 +13,7 @@ tags: [monster, serpentfolk]
 
 > [!note] 3D model: procedural blockout in Unity (5,514 tris · 2.023 × 4 × 2.625 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Blaze Naga Warrior is a large creature with a humanoid upper body on a long serpent tail, about 4 m long. Its scales are rough, scarred and spiked, colored in ember reds fading to soot black. Look for four arms holding four blades. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Blaze Naga Warrior is a large creature with a humanoid upper body on a long serpent tail, about 4 m long. Its scales are rough, scarred and spiked, colored in violet, with ember-orange markings. Look for four arms holding four blades. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -101,4 +101,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_naga` · mesh `naga_base` · material `scale_gloss` · VFX `embers_heat_haze` · palette `#9974a8` `#644d74` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

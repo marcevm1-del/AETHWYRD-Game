@@ -13,7 +13,7 @@ tags: [monster, kobolds]
 
 > [!note] 3D model: procedural blockout in Unity (2,702 tris · 0.403 × 0.473 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Snow Kobold Sneak is a small creature with a hunched, wiry humanoid frame, about 0.8 m tall. Its mangy fur is rough, scarred and spiked, colored in pale blues and frost-white. Guild sketches always show soot-blackened fur for hiding in tunnels. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
+> The Snow Kobold Sneak is a small creature with a hunched, wiry humanoid frame, about 0.8 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue. Guild sketches always show soot-blackened fur for hiding in tunnels. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -100,4 +100,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `frost_trail_snow` · palette `#bfe9ff` `#5fa8d3` `#f4fbff` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `frost_trail_snow` · palette `#57748d` `#394b5e` `#9fdcff` · triangle-based silhouette, sharp asymmetric spikes

@@ -13,7 +13,7 @@ tags: [monster, beasts]
 
 > [!note] 3D model: hand-built Ring 0 model, or not exported yet.
 
-> The Horned Rabbit is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in muted greys and dusty browns. Survivors describe a single spiral horn and oversized hind feet. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
+> The Horned Rabbit is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in warm brown with a cream belly. Survivors describe a single spiral horn and oversized hind feet. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
 
 | Field | Value |
 |---|---|
@@ -111,4 +111,4 @@ These links show where the species already matters to authored play. A contract 
 
 ## Design recipe
 
-Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `dust_puffs` · palette `#8a8f98` `#5b5f66` `#c9c2b5` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_quad_small` · mesh `quad_small_base` · material `fur_groom` · VFX `dust_puffs` · palette `#a8774e` `#7a5434` `#f0e0c0` · real-animal silhouette with one fantasy exaggeration

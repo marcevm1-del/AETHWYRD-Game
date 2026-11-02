@@ -87,8 +87,14 @@ def bounds(objs):
     return lo, hi
 
 
-def camera(objs, yaw=-35.0, pitch=28.0, ortho=False, margin=1.15, lens=50.0):
+def camera(objs, yaw=-35.0, pitch=28.0, ortho=False, margin=1.15, lens=50.0, aspect=None):
+    """Frames objs: the bounds diagonal (times margin) fits the frame's SHORTER side (review N2), so tall, thin props
+    are not cropped on landscape tiles. aspect = height / width of the image it will render (default: the scene's
+    render resolution; pass it when the resolution is set after framing, as the sheet builders do)."""
     sc = bpy.context.scene
+    if aspect is None:
+        aspect = sc.render.resolution_y / max(1, sc.render.resolution_x)
+    short = min(aspect, 1.0 / aspect)  # the shorter side over the longer one (Blender's sensor spans the longer side)
     col = _col()
     cam = bpy.data.objects.get("AB_Cam")
     if cam is None:
@@ -101,13 +107,15 @@ def camera(objs, yaw=-35.0, pitch=28.0, ortho=False, margin=1.15, lens=50.0):
                 -math.cos(math.radians(yaw)) * math.cos(math.radians(pitch)),
                 math.sin(math.radians(pitch))))
     cam.data.lens = lens
+    cam.data.sensor_fit = "AUTO"
+    cam.data.sensor_width = 36.0
     if ortho:
         cam.data.type = "ORTHO"
-        cam.data.ortho_scale = size * margin
+        cam.data.ortho_scale = size * margin / short
         cam.location = centre + d * size * 2
     else:
         cam.data.type = "PERSP"
-        fov = 2 * math.atan(18 / lens)
+        fov = 2 * math.atan(18 * short / lens)  # the field of view across the shorter side
         cam.location = centre + d * (size * margin / 2 / math.tan(fov / 2))
     cam.data.clip_end = 5000
     cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
@@ -130,7 +138,7 @@ def contact_sheet(objs, path, cols=4, tile=(640, 480), yaw=-32.0, pitch=16.0, sa
     for i, o in enumerate(objs):
         for other in objs:
             other.hide_render = other is not o
-        camera([o], yaw=yaw, pitch=pitch, margin=1.2)
+        camera([o], yaw=yaw, pitch=pitch, margin=1.2, aspect=tile[1] / tile[0])
         render(tmp, tile, samples)
         img = bpy.data.images.load(tmp, check_existing=False)
         px = np.array(img.pixels[:], dtype=np.float32).reshape(tile[1], tile[0], 4)

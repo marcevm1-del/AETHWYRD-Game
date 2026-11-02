@@ -13,7 +13,7 @@ tags: [monster, plants-fungi]
 
 > [!note] 3D model: procedural blockout in Unity (2,780 tris · 20.829 × 13.226 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Ancient Treant is a colossal creature with a mushroom-capped walking body, about 30 m tall. Its bark and leaves are weathered and natural, colored in leaf greens over bark brown. Its most striking feature is a forest growing from its shoulders. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by drifting pollen and tiny blossoms.
+> The Ancient Treant is a colossal creature with a mushroom-capped walking body, about 30 m tall. Its bark and leaves are weathered and natural, colored in leaf green over bark brown. Its most striking feature is a forest growing from its shoulders. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by drifting pollen and tiny blossoms.
 
 | Field | Value |
 |---|---|
@@ -26,7 +26,7 @@ tags: [monster, plants-fungi]
 | HP · ATK · DEF · MATK · MDEF · SPD | 64647 · 953 · 686 · 686 · 686 · 100 |
 | XP · gold | 13063 · 2293 |
 | Ring | 4 |
-| Rig · animation | [[Systems/Rigs/plant_rooted\|plant_rooted]] · `anim_plant_walker` |
+| Rig · animation | [[Systems/Rigs/giant_biped\|giant_biped]] · `anim_plant_walker` |
 | Habitats | [[Regions/Shen-Lu\|Shen-Lu]], [[Regions/Moraveil\|Moraveil]] |
 | Genre | Fairy-tale Forest |
 | Trope | Screaming mandrakes, walking mushrooms and ancient treants |
@@ -35,11 +35,11 @@ tags: [monster, plants-fungi]
 
 ## Motion implementation
 
-- **Rig:** [[Systems/Rigs/plant_rooted|plant_rooted]] (keyword); animation set `anim_plant_walker`.
-- **Dimensions:** 30 m high × 12 m long × 36 m wide; prefab scale 15.
-- **Physics:** 567000 kg, gravity ×1, poise 6932, knockback resistance 1, death style `wilt_collapse`.
-- **Navigation:** speed 1.89 m/s, turn 60°/s, stopping distance 4 m.
-- **Attack count:** 5; **signature:** a forest growing from its shoulders.
+- **Rig:** [[Systems/Rigs/giant_biped|giant_biped]] (override); animation set `anim_plant_walker`.
+- **Dimensions:** 30 m high × 10.2 m long × 13.2 m wide; prefab scale 3.
+- **Physics:** 432000 kg, gravity ×1, poise 2817, knockback resistance 1, death style `cinematic_collapse`.
+- **Navigation:** speed 10.13 m/s, turn 60°/s, stopping distance 5.8 m.
+- **Attack count:** 5; **signature:** [object Object].
 
 ## Attacks and responses
 
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#4caf50` `#a5d66f` `#3e2723` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_plant_walker` · mesh `plant_walker_base` · material `bark_leaf` · VFX `pollen_petals` · palette `#5d963e` `#614934` `#8fd16a` · real-animal silhouette with one fantasy exaggeration

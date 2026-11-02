@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (1,992 tris · 10.7 × 23.539 × 20 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Simurrah is a colossal creature with a feathered avian body, about 20 m tall. Its plumage is smooth and clean, colored in warm gold and pearl white. Its most striking feature is a healing bird with peacock-eyed plumage. It has two bright dot eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by soft radiance and floating motes of light.
+> The Simurrah is a colossal creature with a feathered avian body, about 20 m tall. Its plumage is smooth and clean, colored in blue, with gold markings. Its most striking feature is a healing bird with peacock-eyed plumage. It has two bright dot eyes. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by soft radiance and floating motes of light.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `holy_motes` · palette `#fff3b0` `#ffd166` `#ffffff` · circle-based, soft silhouette
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `holy_motes` · palette `#506cb6` `#364a7e` `#ffd166` · circle-based, soft silhouette

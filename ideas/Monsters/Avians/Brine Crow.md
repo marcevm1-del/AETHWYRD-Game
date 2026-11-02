@@ -13,7 +13,7 @@ tags: [monster, avians]
 
 > [!note] 3D model: procedural blockout in Unity (2,736 tris · 0.569 × 0.448 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Brine Crow is a small creature with a broad-winged bird frame, about 0.6 m tall. Its plumage is weathered and natural, colored in deep blues with a glassy shine. Guild sketches always show a beak full of stolen shiny things. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
+> The Brine Crow is a small creature with a broad-winged bird frame, about 0.6 m tall. Its plumage is weathered and natural, colored in crow-black, with sea-blue markings. Guild sketches always show a beak full of stolen shiny things. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
 | Field | Value |
 |---|---|
@@ -95,4 +95,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `mist_droplets` · palette `#2f7fd1` `#9ad7ff` `#123a5c` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `mist_droplets` · palette `#4d4b57` `#3f3e46` `#4fa8e8` · real-animal silhouette with one fantasy exaggeration

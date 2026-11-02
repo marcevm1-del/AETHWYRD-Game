@@ -103,4 +103,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_serpent` · mesh `serpent_base` · material `elemental_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#3a1a12` · real-animal silhouette with one fantasy exaggeration
+Rig `rig_serpent` · mesh `serpent_base` · material `elemental_emissive` · VFX `embers_heat_haze` · palette `#e2502b` `#ffb347` `#401d14` · real-animal silhouette with one fantasy exaggeration

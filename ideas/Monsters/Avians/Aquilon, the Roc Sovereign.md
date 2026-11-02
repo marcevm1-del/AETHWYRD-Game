@@ -13,7 +13,7 @@ tags: [monster, avians, tyrant, unique]
 
 > [!note] 3D model: procedural blockout in Unity (2,172 tris · 18.824 × 62.356 × 40 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Aquilon, the Roc Sovereign is a colossal creature with a feathered avian body, about 40 m tall. Its plumage is rough, scarred and spiked, colored in pale jade and cloud white. Look for a shadow as big as a cloud over the plateau. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by swirling leaves and a constant breeze.
+> The Aquilon, the Roc Sovereign is a colossal creature with a feathered avian body, about 40 m tall. Its plumage is rough, scarred and spiked, colored in crow-black, with pale jade markings. Look for a shadow as big as a cloud over the plateau. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by swirling leaves and a constant breeze.
 
 | Field | Value |
 |---|---|
@@ -90,4 +90,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#a8e6cf` `#dcedc1` `#5b8c85` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_avian` · mesh `avian_base` · material `feather_groom` · VFX `wind_ribbons` · palette `#53515d` `#44424b` `#8fe0bd` · triangle-based silhouette, sharp asymmetric spikes
