@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-02
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Tutorial Vision (youtube-beta agent) | Learn techniques from video tutorials by reading their frames: Tools/tutorial_vision/tv.py (yt-dlp fetch, FFmpeg activity scan that keeps the frame after each on-screen action, change crops upscaled for small UI text, Tesseract OCR, narration per frame, contact sheets, frames/crops on demand, compare), tv_blender.py (node materials from a JSON spec with old-socket mapping, previews, dumps), TutorialVisionCapture.cs (Game/Scene view capture for MCP for Unity), the youtube-beta agent, 13_Production/tutorial_vision.md. Tested on a real Blender tutorial (owl body material recovered from colour-picker crops and recreated within ~0.05 RGB) and a real Unity tutorial (Player hierarchy and transforms recovered); report in reports/tutorial_vision_test_2026-11-02.md | 177 + (not run) |
+
 ## 2026-10-31
 
 | Commit | What changed | Tests |
