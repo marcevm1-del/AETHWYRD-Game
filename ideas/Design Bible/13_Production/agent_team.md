@@ -2,6 +2,8 @@
 
 > 27 specialist Claude subagents that build Project Ascend together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
 
+> **Handover:** unfinished agent tasks, with briefs ready to paste, are in `13_Production/handover/` (latest: `handover_2026-11-02.md`).
+
 ## How to use them
 
 - **In a Claude Code session in this repo:** ask for an agent by name ("have the creature-artist rig the slimes") or let Claude pick one from its description.

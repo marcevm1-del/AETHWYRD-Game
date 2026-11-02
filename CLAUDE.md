@@ -2,6 +2,8 @@
 
 A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 URP, data-driven JSON). This repo is the design bible, the data, the tools, the Unity project and the Obsidian vault at once.
 
+**Start here:** read the latest handover in `13_Production/handover/` (state, unfinished agent work with ready briefs, what waits on the user).
+
 ## Rules that always apply
 - **Canon wins:** `Canon.md` beats every other doc; `Data/` is canonical for numbers. Never edit a locked Canon row; propose changes in Canon §6 for the user's OK.
 - **Commercial game:** take only ideas and mechanics from other studios' games, never their code, art, text or data. Third-party assets only as listed in `13_Production/third_party_assets.md`.
