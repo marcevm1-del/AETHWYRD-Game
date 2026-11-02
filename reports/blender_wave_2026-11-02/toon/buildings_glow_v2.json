@@ -1,0 +1,142 @@
+{
+ "AB_iron_hold_house": [
+  {
+   "material": "AB_iron_hold_glow",
+   "pixels": 0,
+   "key": "#FFC46C",
+   "key_hue": 35.78583361490242,
+   "key_sat": 0.5764171208316976
+  },
+  {
+   "material": "AB_iron_hold_lamp",
+   "pixels": 0,
+   "key": "#FFCB7C",
+   "key_hue": 36.45698775685501,
+   "key_sat": 0.5154707921684548
+  },
+  {
+   "material": "AB_iron_hold_window_glow",
+   "pixels": 0,
+   "key": "#FFC46C",
+   "key_hue": 35.78583361490242,
+   "key_sat": 0.5764171208316976
+  },
+  {
+   "material": "AB_iron_hold_ember",
+   "pixels": 35,
+   "key": "#FFC46C",
+   "key_hue": 35.78583361490242,
+   "key_sat": 0.5764171208316976,
+   "hue": 35.80792580682052,
+   "sat": 0.5764705538749695,
+   "pass": 1.0
+  },
+  {
+   "material": "AB_iron_hold_ember~2",
+   "pixels": 2,
+   "key": "#FFCE72",
+   "key_hue": 39.0853037768882,
+   "key_sat": 0.553276251981235,
+   "hue": 39.1489426379512,
+   "sat": 0.5529411435127258,
+   "pass": 1.0
+  }
+ ],
+ "AB_iron_hold_smithy": [
+  {
+   "material": "AB_iron_hold_window_glow.001",
+   "pixels": 1,
+   "key": "#FFC46C",
+   "key_hue": 35.78583361490242,
+   "key_sat": 0.5764171208316976,
+   "hue": 35.753427181699685,
+   "sat": 0.5748031406539622,
+   "pass": 1.0
+  },
+  {
+   "material": "AB_iron_hold_lamp.001",
+   "pixels": 0,
+   "key": "#FFCB7C",
+   "key_hue": 36.45698775685501,
+   "key_sat": 0.5154707921684548
+  },
+  {
+   "material": "AB_iron_hold_ember.001",
+   "pixels": 35,
+   "key": "#FFC46C",
+   "key_hue": 35.78583361490242,
+   "key_sat": 0.5764171208316976,
+   "hue": 35.7592864868816,
+   "sat": 0.5764705538749695,
+   "pass": 1.0
+  },
+  {
+   "material": "AB_iron_hold_ember~2.001",
+   "pixels": 4,
+   "key": "#FFCE72",
+   "key_hue": 39.0853037768882,
+   "key_sat": 0.553276251981235,
+   "hue": 38.97363448435229,
+   "sat": 0.5540296235762437,
+   "pass": 1.0
+  }
+ ],
+ "AB_umbravel_house": [
+  {
+   "material": "AB_umbravel_lamp",
+   "pixels": 132,
+   "key": "#C499FF",
+   "key_hue": 264.99754496526737,
+   "key_sat": 0.39875660313505895,
+   "hue": 265.02146117413986,
+   "sat": 0.3999999761581421,
+   "pass": 0.0
+  },
+  {
+   "material": "AB_umbravel_window_glow",
+   "pixels": 75,
+   "key": "#E5B8FF",
+   "key_hue": 277.604387325138,
+   "key_sat": 0.27797265175077374,
+   "hue": 277.55640724850446,
+   "sat": 0.27843135595321655,
+   "pass": 0.0
+  }
+ ],
+ "AB_greymoor_house": [
+  {
+   "material": "AB_greymoor_lamp",
+   "pixels": 92,
+   "key": "#BFFF8B",
+   "key_hue": 93.31655782505644,
+   "key_sat": 0.4531457273623534,
+   "hue": 93.29110565413855,
+   "sat": 0.4527559111659186,
+   "pass": 0.0
+  }
+ ],
+ "AB_hoshizora_lamp_post": [
+  {
+   "material": "AB_hoshizora_lamp",
+   "pixels": 2547,
+   "key": "#FFCEA0",
+   "key_hue": 29.416247238646584,
+   "key_sat": 0.373790323609212,
+   "hue": 29.401805049256364,
+   "sat": 0.37254899740219116,
+   "pass": 0.0
+  }
+ ],
+ "AB_gearholm_lamp_post": [
+  {
+   "material": "AB_clockwork_lamp",
+   "pixels": 278,
+   "key": "#FFE7B3",
+   "key_hue": 41.17784323111263,
+   "key_sat": 0.29858929081508595,
+   "hue": 41.20788352734055,
+   "sat": 0.29803919792175293,
+   "pass": 0.0
+  }
+ ]
+}
