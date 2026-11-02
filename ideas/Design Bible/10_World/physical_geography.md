@@ -149,3 +149,14 @@ The build is deterministic. Two runs give byte-identical JSON and PNG. It takes 
 - `lakes[].surfaceM` are the water-plane heights. `rivers[].path` are the spline centrelines, with `drainageKm2`/`flowIndex` for width. `corridors[].legs[].path` are the road splines. `passes[]` mark where roads crest.
 - `biomes.rows` and `regions.rows` are splat and region masks. The biome legend is in the JSON.
 - At 1 unit = 1 km the continent is 150 × 100 km. Streaming it needs tiled terrains, about 1–2 km per tile. Ring 0's 200 m patch around Brindlewick is one corner of a single 0.5 km cell, so local scenes stay hand-built and only take their base height and slope from this map.
+
+## 10. 3D relief
+
+Two Blender renders of the same data, for a feel of the land rather than for measuring: [`maps/physical_relief_3d.png`](maps/physical_relief_3d.png) (the whole continent, oblique from the south) and [`maps/physical_relief_heartland.png`](maps/physical_relief_heartland.png) (Aldmere and Whisperwood up close). Heights are exaggerated 5.5x and smoothed by a 1.6-cell Gaussian (display only, the coastline is kept; sea depths a further 4x less), so ranges read as massifs. Colours follow the biome palette of `physical_map.png`, rivers are blue ribbons, lakes sit at `lakes[].surfaceM`, the sea runs past the frame, the sun comes from the north-west, and region names sit on parchment cards drawn over the render at each region's centroid.
+
+```
+blender -b --factory-startup -P Tools/blender/render_physical_relief.py -- --repo .
+        [--exag 5.5] [--blur 1.6] [--step 1] [--res 1920x1080] [--samples 32] [--only whole|heartland] [--out-dir 10_World/maps]
+```
+
+Deterministic, about 5 minutes for both views on a software-GL container (`--step 2 --res 960x540` for a quick look). Rerun after `build_physical_map.js` changes the JSON.

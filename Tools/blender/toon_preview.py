@@ -1,27 +1,38 @@
 """
-Toon preview mode for contact sheets (design review 2026-10-25, R1).
+Toon preview mode for contact sheets (design review 2026-10-25 R1; tuned to style guide section 3.1, 2026-11-02).
 
 Approximates the in-game `Ascend/Toon` look inside Blender (EEVEE) so a contact sheet can be used to approve a look:
 
 * two tones per material: Shader-to-RGB of a white diffuse lit by one sun -> constant ramp
   (lit = base colour, shadow = base x (0.58, 0.56, 0.78)), cast shadows included;
 * a soft cream rim (0.35) on creatures;
-* ink outlines as an inverted hull (outline colour = local colour x 0.35), sized in pixels at the tile size;
-  Freestyle is switched on instead if the hull cannot be built;
+* emissive parts (lamps, windows, embers, glow cracks) shown in their own hue at full value, never added on top of
+  the base colour (that clipped to cream/white); Standard view transform, no look, exposure 0;
+* ink outlines as an inverted hull (outline colour = local colour x 0.35), sized in pixels at the tile size after
+  the camera is fitted; Freestyle is switched on instead if the hull cannot be built;
 * a painted-sky world (pale warm horizon -> soft blue) that does not light the subject;
-* a light-grass ground disc 3x the subject's bounds, fading into the horizon haze at its rim;
-* for creatures, a 1.7 m flat-grey human silhouette standing one body-width to the side.
+* a lawn disc 3x the subject's bounds, #8CC860 fading to #A8D47A at its rim;
+* the camera frames the SUBJECT only (its projected extent fills 1/margin = 83% of the tile's shorter side) and is
+  fitted on both the horizontal and the vertical field of view, so tall props are never cropped;
+* for creatures, a 1.7 m flat lavender-grey #A9A6C2 human silhouette (head 1/7 of height, shoulders, arms, legs)
+  standing behind and to the right of the subject; it may be cropped by the frame.
 
 Everything is built on copies: the subject is baked to a new mesh (building instances realised) and its materials
 are copied, so the generators' shared materials and objects are untouched (the originals are only hidden).
 
+One call for sheet builders (does the conversion, renders, and puts the scene back so the .blend can be saved):
+
     import toon_preview as tp
-    tp.setup_world()
-    fig = tp.add_scale_figure(obj)                    # creatures only
-    group = tp.apply([obj, fig], kind="creature", tile=320)
-    ground = tp.ground_for(group)
+    tiles = tp.render_tiles(objs, tile_dir, kind="building", tile=(420, 320), yaw=-32, pitch=18, samples=16)
+    tp.sheet(tiles, out_png, cols=6, tile=(420, 320))      # tiles = [(png, label)], labels carry the height in m
+
+Lower level:
+    tp.setup_world(); made = tp.apply([obj], kind="creature", tile=320); fig = tp.add_scale_figure(obj)
+    g = tp.ground_for(made); tp.camera(made, tile=(320, 320))
 """
 import math
+import os
+import time
 
 import bmesh
 import bpy
@@ -40,10 +51,11 @@ OUTLINE_PX = {"creature": 1.5, "building": 2.0}   # art_direction.md section 3
 STEP = 0.1          # lit where N.L (times cast shadow) exceeds this
 SUN_ENERGY = math.pi  # a white diffuse facing this sun reads 1.0 through Shader-to-RGB, so the ramp works in N.L
 SUN_ROT = (math.radians(48), 0.0, math.radians(32))
-MARGIN = 1.15       # the camera margin the sheet uses (preview.camera)
+MARGIN = 1.2        # camera margin (style guide 3.1): the subject fills 1/1.2 = 83% of the tile's shorter side
+LENS = 50.0
+PITCH = {"creature": 16.0, "building": 18.0}   # style guide 3.1: pitch 16-28 degrees
 FIGURE_HEIGHT = 1.7
-FIGURE_RADIUS = 0.17
-FIGURE_GREY = (0.56, 0.57, 0.6)
+FIGURE_HEX = "#A9A6C2"
 
 
 def lin(c):
@@ -55,6 +67,7 @@ def lin(c):
 
 GRASS = lin("#8CC860")
 HAZE = lin("#BFD9A0")       # distant fields, also the world below the horizon
+GRASS_RIM = lin("#A8D47A")  # lawn rim (style guide 3.1)
 HORIZON = lin("#F6ECD6")    # pale warm
 SKY_MID = lin("#CFE8F5")
 ZENITH = lin("#6AAEE6")     # soft blue
@@ -255,18 +268,52 @@ def toon_material(mat, kind="creature"):
         mx.inputs[7].default_value = (*RIM_COLOUR, 1)
         col = mx.outputs[2]
     glowing = ecol[0] is not None or estr[0] is not None or (estr[1] or 0) > 0
-    if glowing:  # keep emissive parts (lamps, cores, glow cracks) bright
-        es = N.new("ShaderNodeMath")
-        es.operation = "MULTIPLY"
-        es.inputs[1].default_value = 0.5
-        _feed(nt, estr[0], estr[1], es.inputs[0])
-        em, ea, eb, eres = _mix(nt, "MULTIPLY")
-        _feed(nt, ecol[0], ecol[1], ea)
-        L.new(es.outputs[0], eb)  # float -> grey colour
-        add, aa, ab, ares = _mix(nt, "ADD")
-        L.new(col, aa)
-        L.new(eres, ab)
-        col = ares
+    if glowing:  # keep emissive parts (lamps, cores, glow cracks) bright, in their own hue
+        # Hue-preserving glow (review N3/B3): the shaded colour is MIXED towards the emission colour scaled so its
+        # brightest channel is 1, by factor clamp(strength). The old base + emission*0.5 ADD pushed two channels
+        # past 1, which the display clips, so #FF8C26 read cream and violet read white. Strength >= 1 shows the
+        # key at full value; below 1 (Phantom 0.6, faint glow cracks) it is a partial glow.
+        if ecol[0] is None:
+            c = tuple(ecol[1][:3])
+            k = max(c) if max(c) > 1e-6 else 1.0
+            gsock, gval = None, (c[0] / k, c[1] / k, c[2] / k, 1.0)
+            if max(c) > 1e-6:
+                m["tp_glow_key"] = [c[0], c[1], c[2]]
+        else:
+            sep = N.new("ShaderNodeSeparateColor")
+            L.new(ecol[0], sep.inputs[0])
+            m1 = N.new("ShaderNodeMath")
+            m1.operation = "MAXIMUM"
+            m2 = N.new("ShaderNodeMath")
+            m2.operation = "MAXIMUM"
+            m3 = N.new("ShaderNodeMath")
+            m3.operation = "MAXIMUM"
+            m3.inputs[1].default_value = 1e-4
+            inv = N.new("ShaderNodeMath")
+            inv.operation = "DIVIDE"
+            inv.inputs[0].default_value = 1.0
+            sc_ = N.new("ShaderNodeVectorMath")
+            sc_.operation = "SCALE"
+            L.new(sep.outputs[0], m1.inputs[0])
+            L.new(sep.outputs[1], m1.inputs[1])
+            L.new(m1.outputs[0], m2.inputs[0])
+            L.new(sep.outputs[2], m2.inputs[1])
+            L.new(m2.outputs[0], m3.inputs[0])
+            L.new(m3.outputs[0], inv.inputs[1])
+            L.new(ecol[0], sc_.inputs[0])
+            L.new(inv.outputs[0], sc_.inputs["Scale"])
+            gsock, gval = sc_.outputs[0], None
+        w = N.new("ShaderNodeMath")
+        w.operation = "MULTIPLY"
+        w.use_clamp = True
+        w.inputs[1].default_value = 1.0
+        _feed(nt, estr[0], estr[1], w.inputs[0])
+        gm, ga, gb, gres = _mix(nt, "MIX")
+        L.new(w.outputs[0], gm.inputs["Factor"])
+        L.new(col, ga)
+        _feed(nt, gsock, gval, gb)
+        col = gres
+        m["tp_glow"] = True
     emit = N.new("ShaderNodeEmission")
     emit.inputs["Strength"].default_value = 1.0
     L.new(col, emit.inputs["Color"])
@@ -430,20 +477,114 @@ def _hull(src, thickness, cache):
     return h
 
 
-def outline_thickness(objs, kind="creature", tile=320, margin=MARGIN):
-    """World-space hull thickness that reads as OUTLINE_PX at the tile size when the camera frames objs."""
-    lo, hi = preview.bounds(objs)
-    size = (hi - lo).length
-    return OUTLINE_PX.get(kind, 1.5) * size * margin / float(tile)
-
-
-def apply(objs, kind="creature", tile=320, frame=None):
-    """Bakes objs to toon copies with inverted-hull outlines. frame: the objects the camera will frame (defaults to
-    objs) so the outline is sized in pixels. Returns the new objects (copies + hulls); the originals are hidden
-    (pass the returned list to restore() to undo in a live session)."""
+def _world_points(objs, cap=250000):
+    """World-space vertex positions of objs (evaluated), as an (n, 3) array; strided down to about cap points."""
     dg = bpy.context.evaluated_depsgraph_get()
-    t = outline_thickness(frame or objs, kind, tile)
-    toon_cache, ol_cache, made = {}, {}, []
+    out = []
+    for o in objs:
+        if o.type != "MESH":
+            continue
+        ev = o.evaluated_get(dg)
+        try:
+            me = ev.to_mesh()
+        except RuntimeError:
+            continue
+        n = len(me.vertices)
+        if n:
+            co = np.empty(n * 3, dtype=np.float64)
+            me.vertices.foreach_get("co", co)
+            m = np.array(o.matrix_world)
+            out.append(co.reshape(-1, 3) @ m[:3, :3].T + m[:3, 3])
+        ev.to_mesh_clear()
+    if not out:
+        lo, hi = preview.bounds(objs)
+        return np.array([[x, y, z] for x in (lo.x, hi.x) for y in (lo.y, hi.y) for z in (lo.z, hi.z)])
+    p = np.concatenate(out)
+    if len(p) > cap:
+        p = p[:: int(math.ceil(len(p) / cap))]
+    return p
+
+
+def _tile_wh(tile):
+    return (tile, tile) if isinstance(tile, (int, float)) else (int(tile[0]), int(tile[1]))
+
+
+def _view(yaw, pitch):
+    """(d, right, up): d points from the subject to the camera."""
+    d = Vector((math.sin(math.radians(yaw)) * math.cos(math.radians(pitch)),
+                -math.cos(math.radians(yaw)) * math.cos(math.radians(pitch)),
+                math.sin(math.radians(pitch))))
+    rot = (-d).to_track_quat("-Z", "Y")
+    return d, rot @ Vector((1, 0, 0)), rot @ Vector((0, 1, 0))
+
+
+def fit(objs, yaw=-35.0, pitch=16.0, tile=320, margin=MARGIN, lens=LENS):
+    """Perspective fit of objs: returns (aim, distance, tan_half_h, tan_half_v, fill). Every vertex lies inside the
+    frame shrunk by margin on BOTH axes (vertical fit included, review N2), and the projected extent is centred.
+    fill = the subject's larger projected extent as a fraction of the tile's shorter side."""
+    w, h = _tile_wh(tile)
+    t = 18.0 / lens  # sensor_fit AUTO, 36 mm across the larger tile dimension
+    th, tv = (t, t * h / w) if w >= h else (t * w / h, t)
+    P = _world_points(objs)
+    d, r, u = _view(yaw, pitch)
+    d, r, u = (np.array(v[:]) for v in (d, r, u))
+    aim = P.min(0) * 0.5 + P.max(0) * 0.5
+    D = 1.0
+    for _ in range(8):
+        q = P - aim
+        x, y, z = q @ r, q @ u, q @ d
+        D = float(np.max(np.maximum(np.abs(x) * margin / th, np.abs(y) * margin / tv) + z))
+        depth = np.maximum(D - z, 1e-6)
+        sx, sy = x / depth / th, y / depth / tv
+        cx, cy = (sx.max() + sx.min()) / 2, (sy.max() + sy.min()) / 2
+        if abs(cx) < 1e-4 and abs(cy) < 1e-4:
+            break
+        aim = aim + r * cx * th * D + u * cy * tv * D
+    q = P - aim
+    x, y, z = q @ r, q @ u, q @ d
+    depth = np.maximum(D - z, 1e-6)
+    sx, sy = x / depth / th, y / depth / tv
+    ext_w = (sx.max() - sx.min()) / 2 * w   # projected extent in pixels
+    ext_h = (sy.max() - sy.min()) / 2 * h
+    return Vector(aim), D, th, tv, max(ext_w, ext_h) / float(min(w, h))
+
+
+def camera(objs, yaw=-35.0, pitch=16.0, tile=320, margin=MARGIN, lens=LENS):
+    """Places the scene camera (AB_Cam, shared with preview.camera) framed on objs only. Returns (cam, fill)."""
+    sc = bpy.context.scene
+    aim, D, th, tv, fill = fit(objs, yaw, pitch, tile, margin, lens)
+    cam = bpy.data.objects.get("AB_Cam")
+    if cam is None:
+        cam = bpy.data.objects.new("AB_Cam", bpy.data.cameras.new("AB_Cam"))
+        _col().objects.link(cam)
+    d, _r, _u = _view(yaw, pitch)
+    cam.data.type = "PERSP"
+    cam.data.lens = lens
+    cam.data.sensor_width = 36.0
+    cam.data.sensor_fit = "AUTO"
+    cam.data.shift_x = cam.data.shift_y = 0.0
+    cam.data.clip_start = max(0.01, D * 0.01)
+    cam.data.clip_end = max(5000.0, D * 20)
+    cam.location = aim + d * D
+    cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
+    sc.camera = cam
+    return cam, fill
+
+
+def outline_thickness(objs, kind="creature", tile=320, margin=MARGIN, yaw=-35.0, pitch=None):
+    """World-space hull thickness that reads as OUTLINE_PX at the tile size once camera() frames objs."""
+    w, h = _tile_wh(tile)
+    pitch = PITCH.get(kind, 16.0) if pitch is None else pitch
+    aim, D, th, tv, _f = fit(objs, yaw, pitch, (w, h), margin)
+    return OUTLINE_PX.get(kind, 1.5) * (2 * th * D) / float(w)
+
+
+def apply(objs, kind="creature", tile=320, frame=None, yaw=-35.0, pitch=None, margin=MARGIN):
+    """Bakes objs to toon copies with inverted-hull outlines. frame: the objects the camera will frame (defaults to
+    the baked copies), used to size the outline in pixels. Returns the new objects (copies + hulls); the originals
+    are hidden (pass the returned list to restore() to undo)."""
+    dg = bpy.context.evaluated_depsgraph_get()
+    toon_cache, ol_cache, copies = {}, {}, []
     for o in objs:
         if o.type != "MESH":
             continue
@@ -456,11 +597,15 @@ def apply(objs, kind="creature", tile=320, frame=None):
                 tm["tp_src"] = m.name
                 toon_cache[m.name] = tm
             c.data.materials[i] = toon_cache[m.name]
-        made.append(c)
+        copies.append(c)
+    bpy.context.view_layer.update()
+    t = outline_thickness(frame or copies, kind, tile, margin, yaw, pitch) if copies else 0.01
+    made = list(copies)
+    for c in copies:
         try:
             made.append(_hull(c, t, ol_cache))
         except Exception as e:  # fallback: screen-space Freestyle lines
-            print("TOON hull failed on %s (%s); using Freestyle" % (o.name, e))
+            print("TOON hull failed on %s (%s); using Freestyle" % (c.name, e))
             enable_freestyle(OUTLINE_PX.get(kind, 1.5))
     return made
 
@@ -486,63 +631,104 @@ def enable_freestyle(px=1.5, scene=None):
 # Scale figure and ground
 
 
-def _capsule(bm, r, z0, z1, segs=16, rings=10):
-    """A capsule of radius r from z0 to z1 (bottom to top) added to bm."""
-    res = bmesh.ops.create_uvsphere(bm, u_segments=segs, v_segments=rings, radius=r)
-    mid = (z1 - z0) - 2 * r
-    for v in res["verts"]:
-        v.co.z += (z0 + r) + (mid if v.co.z > 1e-6 else 0.0)
-
-
-def _extent_along(obj, centre, right):
-    """How far obj's evaluated vertices reach from centre along the (horizontal) right vector."""
-    dg = bpy.context.evaluated_depsgraph_get()
-    ev = obj.evaluated_get(dg)
-    try:
-        me = ev.to_mesh()
-        n = len(me.vertices)
-        co = np.empty(n * 3, dtype=np.float64)
-        me.vertices.foreach_get("co", co)
-        ev.to_mesh_clear()
-        m = np.array(obj.matrix_world)
-        w = co.reshape(-1, 3) @ m[:3, :3].T + m[:3, 3]
-        r = np.array([right.x, right.y, 0.0])
-        return float(((w - np.array([centre.x, centre.y, 0.0])) @ r).max()) if n else 0.0
-    except Exception:
-        lo, hi = preview.bounds([obj])
-        return max((Vector((x, y, 0)) - Vector((centre.x, centre.y, 0))).dot(right)
-                   for x in (lo.x, hi.x) for y in (lo.y, hi.y))
-
-
-def add_scale_figure(obj, yaw=-35.0, gap=0.45):
-    """A 1.7 m flat-grey human silhouette standing a body-width beside obj, on the camera's right."""
-    lo, hi = preview.bounds([obj])
-    centre = (lo + hi) / 2
-    right = Vector((math.cos(math.radians(yaw)), math.sin(math.radians(yaw)), 0.0))
-    ext = _extent_along(obj, centre, right)
-    me = bpy.data.meshes.new(PREFIX + "Figure")
+def _figure_mesh(name, h=FIGURE_HEIGHT):
+    """A simple human silhouette h tall, facing -Y, feet at z=0: head 1/7 of h, neck, shoulders, torso, hips,
+    arms hanging clear of the torso, two legs and feet. Built from overlapping primitives (it is flat-shaded)."""
+    s = h / 1.7
     bm = bmesh.new()
-    head_r = 0.125
-    _capsule(bm, FIGURE_RADIUS, 0.0, FIGURE_HEIGHT - 2 * head_r - 0.03)
-    hs = bmesh.ops.create_uvsphere(bm, u_segments=16, v_segments=10, radius=head_r)
-    for v in hs["verts"]:
-        v.co.z += FIGURE_HEIGHT - head_r
+
+    def ellipsoid(c, rad, segs=16, rings=10):
+        res = bmesh.ops.create_uvsphere(bm, u_segments=segs, v_segments=rings, radius=1.0)
+        for v in res["verts"]:
+            v.co = Vector((c[0] + v.co.x * rad[0], c[1] + v.co.y * rad[1], c[2] + v.co.z * rad[2])) * s
+
+    def limb(p0, p1, r0, r1, flat=1.0, segs=12):
+        p0, p1 = Vector(p0), Vector(p1)
+        axis = p1 - p0
+        res = bmesh.ops.create_cone(bm, cap_ends=True, cap_tris=False, segments=segs, radius1=r0, radius2=r1,
+                                    depth=axis.length)
+        q = Vector((0, 0, 1)).rotation_difference(axis.normalized())
+        mid = (p0 + p1) / 2
+        for v in res["verts"]:
+            co = Vector((v.co.x, v.co.y * flat, v.co.z))
+            v.co = (q @ co + mid) * s
+
+    head_h = 1.7 / 7.0                                        # 0.243 m
+    ellipsoid((0, 0, 1.7 - head_h / 2), (0.082, 0.095, head_h / 2))
+    limb((0, 0, 1.38), (0, 0, 1.50), 0.05, 0.045)             # neck
+    limb((0, 0, 0.90), (0, 0, 1.40), 0.15, 0.20, flat=0.58)   # torso, widening to the shoulders
+    ellipsoid((0, 0, 1.38), (0.205, 0.11, 0.06))              # shoulder line
+    ellipsoid((0, 0, 0.90), (0.155, 0.10, 0.10))              # hips
+    for sx in (-1, 1):
+        limb((sx * 0.21, 0, 1.38), (sx * 0.245, 0, 1.08), 0.052, 0.043)   # upper arm
+        limb((sx * 0.245, 0, 1.08), (sx * 0.265, 0, 0.80), 0.043, 0.034)  # forearm
+        ellipsoid((sx * 0.268, 0, 0.75), (0.034, 0.045, 0.06))           # hand
+        limb((sx * 0.085, 0, 0.90), (sx * 0.095, 0, 0.47), 0.075, 0.057)  # thigh
+        limb((sx * 0.095, 0, 0.47), (sx * 0.10, 0, 0.07), 0.057, 0.042)   # shin
+        ellipsoid((sx * 0.10, -0.045, 0.04), (0.048, 0.11, 0.04))         # foot
+    me = bpy.data.meshes.new(name)
     bm.to_mesh(me)
     bm.free()
     for p in me.polygons:
         p.use_smooth = True
-    me.materials.append(_flat_material(PREFIX + "FigureGrey", lin(FIGURE_GREY)))
-    fig = bpy.data.objects.new(PREFIX + "Figure_" + obj.name, me)
-    pos = Vector((centre.x, centre.y, 0.0)) + right * (ext + gap + FIGURE_RADIUS)
+    return me
+
+
+def _figure_material():
+    """Flat (unlit) lavender-grey #A9A6C2: a silhouette, not a character."""
+    name = PREFIX + "FigureFlat"
+    mat = bpy.data.materials.get(name)
+    if mat is not None:
+        return mat
+    mat = bpy.data.materials.new(name)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    for n in list(nt.nodes):
+        nt.nodes.remove(n)
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    em = nt.nodes.new("ShaderNodeEmission")
+    em.inputs["Color"].default_value = (*lin(FIGURE_HEX), 1)
+    em.inputs["Strength"].default_value = 1.0
+    nt.links.new(em.outputs[0], out.inputs["Surface"])
+    mat.diffuse_color = (*lin(FIGURE_HEX), 1)
+    return mat
+
+
+def _extent_along(objs, centre, axis):
+    """How far the objects' vertices reach from centre along a horizontal axis."""
+    P = _world_points(objs)
+    a = np.array([axis.x, axis.y, 0.0])
+    return float(((P - np.array([centre.x, centre.y, 0.0])) @ a).max())
+
+
+def add_scale_figure(obj, yaw=-35.0, gap=None):
+    """A 1.7 m flat lavender-grey human silhouette standing behind and to the right of obj (as the camera at yaw
+    sees it), facing the camera. It is not framed: on small creatures only a leg or an arm shows at the tile edge.
+    obj may be one object or a list (e.g. the toon copies from apply())."""
+    objs = obj if isinstance(obj, (list, tuple)) else [obj]
+    objs = [o for o in objs if not o.get("tp_hull")]
+    lo, hi = preview.bounds(objs)
+    centre = (lo + hi) / 2
+    right = Vector((math.cos(math.radians(yaw)), math.sin(math.radians(yaw)), 0.0))
+    back = Vector((-math.sin(math.radians(yaw)), math.cos(math.radians(yaw)), 0.0))
+    ext_r = _extent_along(objs, centre, right)
+    ext_b = _extent_along(objs, centre, back)
+    gap = 0.1 * max(0.3, ext_r) if gap is None else gap
+    fig = bpy.data.objects.new(PREFIX + "Figure_" + objs[0].name, _figure_mesh(PREFIX + "Figure"))
+    fig.data.materials.append(_figure_material())
+    # its inner arm sits about at the subject's right edge, half a body-depth behind it
+    pos = Vector((centre.x, centre.y, 0.0)) + right * (ext_r + gap + 0.2) + back * (0.5 * max(ext_b, 0.0) + 0.15)
     fig.location = (pos.x, pos.y, min(0.0, lo.z))
-    for c in obj.users_collection:
+    fig.rotation_euler = (0.0, 0.0, math.radians(yaw))
+    for c in objs[0].users_collection:
         c.objects.link(fig)
     fig["tp_figure"] = True
     return fig
 
 
 def ground_for(objs, scale=3.0, min_radius=4.0):
-    """A light-grass disc with radius 3x the subjects' bounds, fading into the horizon haze at its rim."""
+    """A lawn disc with radius 3x the subjects' bounds: #8CC860, fading to #A8D47A at the rim (style guide 3.1)."""
+    objs = [o for o in objs if not o.get("tp_figure")]
     lo, hi = preview.bounds(objs)
     r = max(min_radius, scale * max(hi.x - lo.x, hi.y - lo.y))
     n = 96
@@ -558,12 +744,12 @@ def ground_for(objs, scale=3.0, min_radius=4.0):
     ln.operation = "LENGTH"
     mr = nt.nodes.new("ShaderNodeMapRange")
     mr.interpolation_type = "SMOOTHSTEP"
-    mr.inputs["From Min"].default_value = r * 0.55
-    mr.inputs["From Max"].default_value = r * 0.97
+    mr.inputs["From Min"].default_value = r * 0.35
+    mr.inputs["From Max"].default_value = r * 0.98
     mx = nt.nodes.new("ShaderNodeMix")
     mx.data_type = "RGBA"
     mx.inputs[6].default_value = (*GRASS, 1)
-    mx.inputs[7].default_value = (*HAZE, 1)
+    mx.inputs[7].default_value = (*GRASS_RIM, 1)
     nt.links.new(tc.outputs["Object"], ln.inputs[0])
     nt.links.new(ln.outputs["Value"], mr.inputs["Value"])
     nt.links.new(mr.outputs["Result"], mx.inputs["Factor"])
@@ -573,4 +759,317 @@ def ground_for(objs, scale=3.0, min_radius=4.0):
     g = bpy.data.objects.new(PREFIX + "Ground", me)
     g.location = ((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, min(0.0, lo.z) - 0.005)
     _col().objects.link(g)
+    g["tp_ground"] = True
     return g
+
+
+# ----------------------------------------------------------------------------------------------------------------
+# Glow check (style guide 3.1: a lit pixel keeps saturation >= 50% and its hue within 15 degrees of its key)
+
+MASK_COLOURS = [(1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (0, 1, 1), (1, 0, 1)]
+
+
+def _emit_mat(name, rgb):
+    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    for n in list(nt.nodes):
+        nt.nodes.remove(n)
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    em = nt.nodes.new("ShaderNodeEmission")
+    em.inputs["Color"].default_value = (*rgb, 1)
+    nt.links.new(em.outputs[0], out.inputs["Surface"])
+    return mat
+
+
+def _srgb(c):
+    return tuple(12.92 * x if x <= 0.0031308 else 1.055 * x ** (1 / 2.4) - 0.055 for x in (min(1.0, max(0.0, v)) for v in c))
+
+
+def _hsv(rgb):
+    """rgb (n, 3) in 0-1 -> hue degrees, saturation 0-1 (HSV)."""
+    mx, mn = rgb.max(1), rgb.min(1)
+    dl = np.maximum(mx - mn, 1e-9)
+    r, g, b = rgb[:, 0], rgb[:, 1], rgb[:, 2]
+    h = np.where(mx == r, ((g - b) / dl) % 6, np.where(mx == g, (b - r) / dl + 2, (r - g) / dl + 4)) * 60.0
+    s = np.where(mx > 1e-9, (mx - mn) / np.maximum(mx, 1e-9), 0.0)
+    return h, s
+
+
+def _load_px(path):
+    img = bpy.data.images.load(path, check_existing=False)
+    px = np.array(img.pixels[:], dtype=np.float32).reshape(img.size[1], img.size[0], 4)[:, :, :3]
+    bpy.data.images.remove(img)
+    return px
+
+
+def glow_check(visible, beauty_png, res, mask_png):
+    """Renders an ID mask of the glowing materials of the visible toon objects (one flat colour per glow material)
+    and measures the beauty render's pixels inside each mask (eroded by 1 px). Returns a list of dicts:
+    material, key (sRGB hex of the material's emission colour), pixels, hue, sat (medians), pass (fraction of
+    pixels with sat >= 0.5 and hue within 15 deg of the key)."""
+    sc = bpy.context.scene
+    glow = {}
+    for o in visible:
+        if o.type != "MESH":
+            continue
+        for m in o.data.materials:
+            if m is not None and m.get("tp_glow") and m.name not in glow and len(glow) < len(MASK_COLOURS):
+                glow[m.name] = MASK_COLOURS[len(glow)]
+    if not glow:
+        return []
+    black = _emit_mat(PREFIX + "MaskOff", (0, 0, 0))
+    hull_black = _emit_mat(PREFIX + "MaskHull", (0, 0, 0))
+    hull_black.use_backface_culling = True  # like the outline materials: the hull is an inverted shell
+    masks = {k: _emit_mat(PREFIX + "Mask%d" % i, c) for i, (k, c) in enumerate(glow.items())}
+    saved = []
+    for o in visible:
+        if o.type != "MESH":
+            continue
+        mats = list(o.data.materials)
+        saved.append((o, mats))
+        for i, m in enumerate(mats):
+            off = hull_black if o.get("tp_hull") else black
+            o.data.materials[i] = masks.get(m.name, off) if m is not None else off
+    world, samples = sc.world, sc.eevee.taa_render_samples
+    sc.world = None
+    try:
+        preview.render(mask_png, res, 1)
+    finally:
+        sc.world = world
+        sc.eevee.taa_render_samples = samples
+        for o, mats in saved:
+            for i, m in enumerate(mats):
+                o.data.materials[i] = m
+    mk, bt = _load_px(mask_png), _load_px(beauty_png)
+    out = []
+    for name, c in glow.items():
+        sel = np.all(np.abs(mk - np.array(c, dtype=np.float32)) < 0.2, axis=2)
+        core = sel.copy()
+        core[1:, :] &= sel[:-1, :]
+        core[:-1, :] &= sel[1:, :]
+        core[:, 1:] &= sel[:, :-1]
+        core[:, :-1] &= sel[:, 1:]
+        mat = bpy.data.materials.get(name)
+        key = mat.get("tp_glow_key") if mat is not None else None
+        rec = {"material": name.replace(PREFIX, "", 1), "pixels": int(core.sum())}
+        if key is not None:
+            ks = np.array([_srgb(key)])
+            kh, kss = _hsv(ks)
+            rec["key"] = "#%02X%02X%02X" % tuple(int(round(v * 255)) for v in ks[0])
+            rec["key_hue"], rec["key_sat"] = float(kh[0]), float(kss[0])
+        if rec["pixels"]:
+            h, s = _hsv(bt[core].astype(np.float64))
+            rec["hue"] = float(np.degrees(np.angle(np.mean(np.exp(1j * np.radians(h))))) % 360)
+            rec["sat"] = float(np.median(s))
+            if key is not None:
+                dh = np.abs((h - rec["key_hue"] + 180) % 360 - 180)
+                rec["pass"] = float(np.mean((s >= 0.5) & (dh <= 15)))
+        out.append(rec)
+    return out
+
+
+# ----------------------------------------------------------------------------------------------------------------
+# Tiles and sheets
+
+
+def _height(objs):
+    lo, hi = preview.bounds([o for o in objs if not o.get("tp_hull") and not o.get("tp_figure")])
+    return hi.z - lo.z
+
+
+def label_for(name, height):
+    n = name[len(PREFIX):] if name.startswith(PREFIX) else name
+    for p in ("mon_", "AB_"):
+        if n.startswith(p):
+            n = n[len(p):]
+    return "%s %.2f m" % (n.replace("_", " "), height) if height < 10 else "%s %.1f m" % (n.replace("_", " "), height)
+
+
+def render_tiles(objs, tile_dir, kind="creature", tile=(320, 320), yaw=-35.0, pitch=None, samples=12,
+                 figure=None, margin=MARGIN, glow_report=False, restore_scene=True, log=print):
+    """Renders each object of objs on its own in the toon preview, to tile_dir/<name>.png.
+    figure: add the 1.7 m scale figure (default: creatures only). Returns [(png path, label)] where the label
+    carries the subject's height in metres. With glow_report, each tile with glowing materials is also measured
+    (glow_check) and the records are stored as tiles' third element. restore_scene puts the scene back afterwards
+    (originals visible, toon objects deleted, world/colour settings restored) so a library .blend can be saved."""
+    sc = bpy.context.scene
+    w, h = _tile_wh(tile)
+    pitch = PITCH.get(kind, 16.0) if pitch is None else pitch
+    figure = (kind == "creature") if figure is None else figure
+    state = _scene_state(sc)
+    setup_world(sc)
+    os.makedirs(tile_dir, exist_ok=True)
+    groups, made_all = [], []
+    for o in objs:
+        made = apply([o], kind=kind, tile=(w, h), yaw=yaw, pitch=pitch, margin=margin)
+        subj = [x for x in made if not x.get("tp_hull")]
+        extra = []
+        if figure and subj:
+            extra.append(add_scale_figure(subj, yaw=yaw))
+        if subj:
+            extra.append(ground_for(subj))
+        groups.append((o.name, made + extra, subj))
+        made_all += made + extra
+    others = [x for x in objs]
+    out = []
+    for name, vis, subj in groups:
+        keep = set(x.name for x in vis)
+        for x in made_all + others:
+            x.hide_render = x.name not in keep
+        p = os.path.join(tile_dir, name + ".png")
+        cam, fill = camera(subj, yaw, pitch, (w, h), margin)
+        t0 = time.time()
+        preview.render(p, (w, h), samples)
+        lab = label_for(name, _height(subj))
+        rec = (p, lab)
+        if glow_report:
+            rec = (p, lab, glow_check(vis, p, (w, h), os.path.join(tile_dir, "_mask_" + name + ".png")))
+        log("TILE %s %.1fs fill %.0f%% '%s'" % (name, time.time() - t0, fill * 100, lab))
+        out.append(rec)
+    if restore_scene:
+        # Split first: reading .name on an object already removed raises ReferenceError (review finding 1).
+        helpers = [x for x in made_all if x.get("tp_figure") or x.get("tp_ground")]
+        keep = [x for x in made_all if not (x.get("tp_figure") or x.get("tp_ground"))]
+        for x in helpers:
+            me = x.data
+            bpy.data.objects.remove(x, do_unlink=True)
+            if me is not None and me.users == 0:
+                bpy.data.meshes.remove(me)
+        restore(keep)
+        _restore_state(sc, state)
+    return out
+
+
+def _scene_state(sc):
+    vs = sc.view_settings
+    ee = {}
+    for k in dir(sc.eevee):                              # every plain EEVEE setting, so a saved library is unchanged
+        if not k.startswith("_") and k not in ("bl_rna", "rna_type"):
+            try:
+                v = getattr(sc.eevee, k)
+            except Exception:
+                continue
+            if isinstance(v, (bool, int, float, str)):
+                ee[k] = v
+    return dict(world=sc.world, engine=sc.render.engine, vt=vs.view_transform, look=vs.look, exp=vs.exposure,
+                gamma=vs.gamma, camera=sc.camera, had_cam=bpy.data.objects.get("AB_Cam") is not None, eevee=ee)
+
+
+def _restore_state(sc, s):
+    sc.world = s["world"]
+    try:
+        sc.render.engine = s["engine"]
+        sc.view_settings.view_transform = s["vt"]
+        sc.view_settings.look = s["look"]
+    except TypeError:
+        pass
+    sc.view_settings.exposure = s["exp"]
+    sc.view_settings.gamma = s["gamma"]
+    sc.camera = s["camera"]
+    for k, v in s.get("eevee", {}).items():
+        try:
+            setattr(sc.eevee, k, v)
+        except Exception:
+            pass
+    cam = bpy.data.objects.get("AB_Cam")
+    if cam is not None and not s.get("had_cam", True):   # the camera this preview created goes too
+        if sc.camera is cam:
+            sc.camera = None
+        data = cam.data
+        bpy.data.objects.remove(cam, do_unlink=True)
+        if data is not None and data.users == 0:
+            bpy.data.cameras.remove(data)
+    sun = bpy.data.objects.get(PREFIX + "Sun")
+    if sun is not None:
+        bpy.data.objects.remove(sun, do_unlink=True)
+    for nm in ("AB_Sun", "AB_Ground"):
+        o = bpy.data.objects.get(nm)
+        if o is not None:
+            o.hide_render = False
+    col = bpy.data.collections.get(PREFIX + "Rig")
+    if col is not None and not col.objects:
+        bpy.data.collections.remove(col)
+
+
+# 5 x 7 bitmap font for tile labels (upper case, digits, ". - : / ( )" and a lower-case "m" for metres)
+_FONT = {
+    "A": "01110 10001 10001 11111 10001 10001 10001", "B": "11110 10001 10001 11110 10001 10001 11110",
+    "C": "01110 10001 10000 10000 10000 10001 01110", "D": "11110 10001 10001 10001 10001 10001 11110",
+    "E": "11111 10000 10000 11110 10000 10000 11111", "F": "11111 10000 10000 11110 10000 10000 10000",
+    "G": "01110 10001 10000 10111 10001 10001 01111", "H": "10001 10001 10001 11111 10001 10001 10001",
+    "I": "01110 00100 00100 00100 00100 00100 01110", "J": "00111 00010 00010 00010 00010 10010 01100",
+    "K": "10001 10010 10100 11000 10100 10010 10001", "L": "10000 10000 10000 10000 10000 10000 11111",
+    "M": "10001 11011 10101 10101 10001 10001 10001", "N": "10001 10001 11001 10101 10011 10001 10001",
+    "O": "01110 10001 10001 10001 10001 10001 01110", "P": "11110 10001 10001 11110 10000 10000 10000",
+    "Q": "01110 10001 10001 10001 10101 10010 01101", "R": "11110 10001 10001 11110 10100 10010 10001",
+    "S": "01111 10000 10000 01110 00001 00001 11110", "T": "11111 00100 00100 00100 00100 00100 00100",
+    "U": "10001 10001 10001 10001 10001 10001 01110", "V": "10001 10001 10001 10001 10001 01010 00100",
+    "W": "10001 10001 10001 10101 10101 10101 01010", "X": "10001 10001 01010 00100 01010 10001 10001",
+    "Y": "10001 10001 10001 01010 00100 00100 00100", "Z": "11111 00001 00010 00100 01000 10000 11111",
+    "0": "01110 10001 10011 10101 11001 10001 01110", "1": "00100 01100 00100 00100 00100 00100 01110",
+    "2": "01110 10001 00001 00010 00100 01000 11111", "3": "11111 00010 00100 00010 00001 10001 01110",
+    "4": "00010 00110 01010 10010 11111 00010 00010", "5": "11111 10000 11110 00001 00001 10001 01110",
+    "6": "00110 01000 10000 11110 10001 10001 01110", "7": "11111 00001 00010 00100 01000 01000 01000",
+    "8": "01110 10001 10001 01110 10001 10001 01110", "9": "01110 10001 10001 01111 00001 00010 01100",
+    ".": "00000 00000 00000 00000 00000 01100 01100", "-": "00000 00000 00000 11111 00000 00000 00000",
+    ":": "00000 01100 01100 00000 01100 01100 00000", "/": "00001 00001 00010 00100 01000 10000 10000",
+    "(": "00010 00100 01000 01000 01000 00100 00010", ")": "01000 00100 00010 00010 00010 00100 01000",
+    "m": "00000 00000 11010 10101 10101 10101 10101", " ": "00000 00000 00000 00000 00000 00000 00000",
+}
+LABEL_H = 24
+LABEL_BG = lin("#F6ECD6")
+LABEL_INK = lin("#3B2A1A")
+
+
+def _draw_text(band, text, ink):
+    """Draws text centred into band (h, w, 3), top row first, at scale 2 (1 if it does not fit)."""
+    h, w = band.shape[:2]
+    text = "".join(c if c == "m" and (i > 0 and text[i - 1] == " ") and i == len(text) - 1 else c.upper()
+                   for i, c in enumerate(text))
+    for sc_ in (2, 1):
+        adv = 6 * sc_
+        if len(text) * adv - sc_ <= w - 8:
+            break
+    tw = len(text) * adv - sc_
+    x0, y0 = max(2, (w - tw) // 2), (h - 7 * sc_) // 2
+    for i, ch in enumerate(text):
+        g = _FONT.get(ch, _FONT[" "]).split()
+        for r, row in enumerate(g):
+            for c, bit in enumerate(row):
+                if bit == "1":
+                    y, x = y0 + r * sc_, x0 + i * adv + c * sc_
+                    if x + sc_ <= w:
+                        band[y:y + sc_, x:x + sc_] = ink
+    return band
+
+
+def sheet(tiles, out, cols=4, tile=(320, 320)):
+    """Tiles [(png, label[, ...])] or [png] into one PNG, with a label band under every labelled tile."""
+    w, h = _tile_wh(tile)
+    labelled = any(isinstance(t, (list, tuple)) for t in tiles)
+    bh = LABEL_H if labelled else 0
+    cols = max(1, min(cols, len(tiles)))
+    rows = (len(tiles) + cols - 1) // cols
+    th = h + bh
+    img = np.ones((rows * th, cols * w, 3), dtype=np.float32)  # top row first
+    for i, t in enumerate(tiles):
+        p, lab = (t[0], t[1]) if isinstance(t, (list, tuple)) else (t, None)
+        px = _load_px(p)[::-1]  # Blender stores the bottom row first
+        r, c = divmod(i, cols)
+        y0, x0 = r * th, c * w
+        img[y0:y0 + h, x0:x0 + w] = px[:h, :w]
+        if bh:
+            band = np.empty((bh, w, 3), dtype=np.float32)
+            band[:] = _srgb(LABEL_BG)
+            if lab:
+                _draw_text(band, lab, np.array(_srgb(LABEL_INK), dtype=np.float32))
+            img[y0 + h:y0 + th, x0:x0 + w] = band
+    flat = np.concatenate([img[::-1], np.ones(img.shape[:2] + (1,), dtype=np.float32)], axis=2)
+    im = bpy.data.images.new(PREFIX + "Sheet", cols * w, rows * th, alpha=False)
+    im.pixels[:] = flat.ravel()
+    im.filepath_raw = out
+    im.file_format = "PNG"
+    im.save()
+    bpy.data.images.remove(im)
+    return out

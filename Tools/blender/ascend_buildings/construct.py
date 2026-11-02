@@ -1353,10 +1353,11 @@ def banner(c, m, x, z, h=1.8, w=0.7):
     if sc != 1.0:  # bigger banners (Fanghold 2x), never trailing into the ground
         h = min(h * sc, max(h, z - 0.7))
         w = w * sc
+    field, charge = getattr(c.s, "banner_keys", ("cloth_a", "cloth_b"))  # Aldmere: gold field, blue charge (review B4)
     g.rbox((w + 0.2, 0.08, 0.08), "trim", m, 0.02, 1, (x, -0.12, z))
-    g.rbox((w, 0.04, h), "cloth_a", m, 0.015, 1, (x, -0.12, z - h / 2))
-    g.slab_poly([(x - w / 2, z - h), (x, z - h - 0.3), (x + w / 2, z - h)], 0.04, "cloth_a", m @ T(0, -0.12, 0))
-    g.rbox((w * 0.5, 0.05, w * 0.5), "cloth_b", m @ T(x, -0.15, z - h * 0.45) @ RY(45), 0.01, 1)
+    g.rbox((w, 0.04, h), field, m, 0.015, 1, (x, -0.12, z - h / 2))
+    g.slab_poly([(x - w / 2, z - h), (x, z - h - 0.3), (x + w / 2, z - h)], 0.04, field, m @ T(0, -0.12, 0))
+    g.rbox((w * 0.5, 0.05, w * 0.5), charge, m @ T(x, -0.15, z - h * 0.45) @ RY(45), 0.01, 1)
 
 
 def ivy(c, m, L, H):

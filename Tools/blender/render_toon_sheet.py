@@ -3,13 +3,18 @@ Renders a contact sheet of creatures or buildings, in the toon preview (default)
 
 blender -b --factory-startup -P Tools/blender/render_toon_sheet.py -- --repo <repo> --out <sheet.png>
         (--creatures id,id,.. | --buildings region:type,type,..[;region:type,..])
-        [--plain] [--detail medium] [--tile 320] [--cols 4] [--yaw -35] [--seed 0] [--tiles <dir>]
+        [--plain] [--detail medium] [--tile 320] [--cols 4] [--yaw -35] [--pitch <deg>] [--seed 0]
+        [--tiles <dir>] [--glow-report <json>]
 
-Toon mode: toon_preview.py (two-tone + rim, inverted-hull outlines, painted sky, 3x ground disc, 1.7 m figure
-beside each creature). Plain mode: ascend_buildings.preview.setup() as the existing sheets use it.
-Tiles are written to --tiles (default <out>_tiles next to the sheet) and kept.
+Toon mode (style guide 3.1): toon_preview.render_tiles() - two-tone + rim, hue-keeping emission under the Standard
+view transform, inverted-hull outlines, painted sky, lawn disc, camera framed on the subject only (vertical fit,
+margin 1.2), 1.7 m lavender-grey figure behind and right of each creature. Plain mode (geometry debugging only):
+ascend_buildings.preview.setup() as the existing sheets use it. Every tile gets a label band with the subject's
+height in metres. --glow-report renders an ID mask per tile and writes the saturation/hue of every glowing material
+(acceptance: saturation >= 50%, hue within 15 degrees of the key). Tiles are kept in --tiles (default <out>_tiles).
 """
 import argparse
+import json
 import os
 import sys
 import time
@@ -25,9 +30,11 @@ ap.add_argument("--detail", default="medium")
 ap.add_argument("--tile", type=int, default=320)
 ap.add_argument("--cols", type=int, default=4)
 ap.add_argument("--yaw", type=float, default=-35.0)
+ap.add_argument("--pitch", type=float, default=None)
 ap.add_argument("--seed", type=int, default=0)
 ap.add_argument("--samples", type=int, default=12)
 ap.add_argument("--tiles", default="")
+ap.add_argument("--glow-report", default="")
 args = ap.parse_args(argv)
 if bool(args.creatures) == bool(args.buildings):
     ap.error("give exactly one of --creatures or --buildings")
@@ -36,10 +43,11 @@ sys.path.insert(0, os.path.join(os.path.abspath(args.repo), "Tools", "blender"))
 import bpy  # noqa: E402
 
 from ascend_buildings import library as blib, preview  # noqa: E402
+import toon_preview as tp  # noqa: E402
 
 kind = "creature" if args.creatures else "building"
-pitch, margin = (14.0, 1.15) if kind == "creature" else (16.0, 1.2)
 TS = args.tile
+pitch = args.pitch if args.pitch is not None else tp.PITCH[kind]
 
 blib.clear_scene()
 col = bpy.data.collections.new("Sheet")
@@ -73,48 +81,40 @@ else:
             subjects.append(o)
 print("GENERATED %d %ss in %.1fs" % (len(subjects), kind, time.time() - t0))
 
-groups = []  # (name, [render objects], [framed objects])
-if args.plain:
-    preview.setup(ground=True)
-    for o in subjects:
-        groups.append((o.name, [o], [o]))
-else:
-    import toon_preview as tp
-    tp.setup_world()
-    t1 = time.time()
-    for o in subjects:
-        frame = [o]
-        if kind == "creature":
-            frame.append(tp.add_scale_figure(o, yaw=args.yaw))
-        made = tp.apply(frame, kind=kind, tile=TS, frame=frame)
-        g = tp.ground_for(made)
-        groups.append((o.name, made + [g], made))
-    print("TOON converted in %.1fs" % (time.time() - t1))
-
-everything = [x for _, objs, _ in groups for x in objs]
-tiles = []
 tmp = args.tiles or os.path.splitext(args.out)[0] + "_tiles"
 os.makedirs(tmp, exist_ok=True)
-times = []
-for name, objs, frame in groups:
-    keep = set(x.name for x in objs)
-    for x in everything:
-        x.hide_render = x.name not in keep
-    p = os.path.join(tmp, name + ".png")
-    home = None
-    if args.plain:  # the plain rig's ground is a 400 m disc at the origin: shoot every subject there
-        home = objs[0].location.copy()
-        objs[0].location = (0.0, 0.0, home.z)
+t1 = time.time()
+if args.plain:
+    preview.setup(ground=True)
+    tiles = []
+    for o in subjects:
+        for x in subjects:
+            x.hide_render = x is not o
+        home = o.location.copy()  # the plain rig's ground is a 400 m disc at the origin: shoot every subject there
+        o.location = (0.0, 0.0, home.z)
         bpy.context.view_layer.update()
-    preview.camera(frame, yaw=args.yaw, pitch=pitch, margin=margin)
-    t = time.time()
-    preview.render(p, (TS, TS), args.samples)
-    if home is not None:
-        objs[0].location = home
-    times.append(time.time() - t)
-    print("TILE %s %.1fs" % (name, times[-1]))
-    tiles.append(p)
+        p = os.path.join(tmp, o.name + ".png")
+        preview.camera([o], yaw=args.yaw, pitch=pitch, margin=tp.MARGIN, aspect=1.0)
+        t = time.time()
+        preview.render(p, (TS, TS), args.samples)
+        lo, hi = preview.bounds([o])
+        tiles.append((p, tp.label_for(o.name, hi.z - lo.z)))
+        o.location = home
+        print("TILE %s %.1fs" % (o.name, time.time() - t))
+else:
+    tiles = tp.render_tiles(subjects, tmp, kind=kind, tile=(TS, TS), yaw=args.yaw, pitch=pitch,
+                            samples=args.samples, glow_report=bool(args.glow_report), restore_scene=False)
+dt = time.time() - t1
 os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
-blib.tile_sheet(tiles, args.out, cols=min(args.cols, len(tiles)), tile=(TS, TS))
-print("SHEET %s %d tiles, %.1fs per tile (%s)" % (args.out, len(tiles), sum(times) / max(1, len(times)),
+tp.sheet(tiles, args.out, cols=args.cols, tile=(TS, TS))
+if args.glow_report:
+    rep = {os.path.splitext(os.path.basename(t[0]))[0]: t[2] for t in tiles if len(t) > 2}
+    with open(args.glow_report, "w") as f:
+        json.dump(rep, f, indent=1)
+    for name, recs in rep.items():
+        for r in recs:
+            print("GLOW %-24s %-28s key %s (h %5.1f s %3.0f%%)  px %5d  hue %5.1f  sat %3.0f%%  pass %3.0f%%" % (
+                name, r["material"], r.get("key", "-"), r.get("key_hue", -1), 100 * r.get("key_sat", 0),
+                r["pixels"], r.get("hue", -1), 100 * r.get("sat", 0), 100 * r.get("pass", 0)))
+print("SHEET %s %d tiles, %.1fs per tile (%s)" % (args.out, len(tiles), dt / max(1, len(tiles)),
                                                    "plain" if args.plain else "toon"))

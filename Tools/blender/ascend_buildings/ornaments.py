@@ -57,10 +57,12 @@ def decorate(c, cx, cy, w, d, zf, top, rise, ridge="x"):
     if s.has("cloth_bands"):  # wind-plains: a red felt band under the eaves over a narrower blue one
         c.g.rbox((w + 0.22, d + 0.22, 0.32), "cloth_a", None, 0.04, 1, (cx, cy, top - 0.2))
         c.g.rbox((w + 0.2, d + 0.2, 0.16), "cloth_b", None, 0.03, 1, (cx, cy, top - 0.48))
-    if s.has("facade_banners") and H >= 2.6 and "own_banners" not in c.notes:  # a banner on every front (Fanghold,
-        # Aldmere), unless the archetype hangs its own (tavern, guild hall, watchtower, barracks: review fix)
+    if (s.has("facade_banners") and H >= 2.6 and "own_banners" not in c.notes
+            and w * d >= getattr(s, "facade_banner_min_area", 0.0)):  # a banner on every front (Fanghold, Aldmere),
+        # unless the archetype hangs its own (tavern, guild hall, watchtower, barracks: review fix). Fanghold (review
+        # N6): at most 1 per front and none on a footprint under 40 m2.
         xs = (-w / 2 + 0.9, w / 2 - 0.9) if w >= 8.5 else (-w / 2 + 0.9,)
-        for x in xs:
+        for x in xs[:max(0, int(getattr(s, "facade_banner_cap", 2)))]:
             K.banner(c, front, x, H - 0.35, 1.6, 0.6)
     if s.has("climbing_ivy"):  # Whisperwood: ivy climbing the front and one side
         if c.chance(0.7):

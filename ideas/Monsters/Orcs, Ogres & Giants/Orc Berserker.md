@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,484 tris · 1.296 × 0.899 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Orc Berserker is a person-sized creature with a lean humanoid frame, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in sun-brown, with ember-orange markings. Its most striking feature is blood-red war paint and broken chains on its wrists. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
+> The Orc Berserker is a person-sized creature with a lean humanoid frame, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with ember-orange markings. Its most striking feature is blood-red war paint and broken chains on its wrists. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 
 | Field | Value |
 |---|---|
@@ -104,4 +104,4 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Design recipe
 
-Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `embers_heat_haze` · palette `#a1735e` `#694c3f` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes
+Rig `rig_medium_biped` · mesh `medium_biped_base` · material `thick_skin` · VFX `embers_heat_haze` · palette `#81934e` `#566234` `#ff7a3d` · triangle-based silhouette, sharp asymmetric spikes

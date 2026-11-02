@@ -96,7 +96,8 @@ function paletteFor(sp, famKey, el) {
   // Variants keep their base species' tone, so a family line reads as one creature in different moods.
   const anchor = sp.baseSpeciesId || sp.id;
   const bony = famKey === 'undead' && /skelet|bone|lich|ossu/i.test(sp.name); // skeletons read as bone, not shroud
-  const t = bony ? tones[0] : tones[Math.floor(hash(anchor, 'tone') * tones.length)];
+  const orc = famKey === 'orc_giant' && /\borcs?\b/i.test(sp.name);            // orcs olive-green (review N7), not tan
+  const t = bony || orc ? tones[0] : tones[Math.floor(hash(anchor, 'tone') * tones.length)];
   const dh = (hash(sp.id, 'hue') - 0.5) * 24, dv = (hash(sp.id, 'val') - 0.5) * 0.2;
   const acc = ACCENT[sp.element] || null;
   const accent = acc ? acc[0] : shift(t.main, 0, 0.45);

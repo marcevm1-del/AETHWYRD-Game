@@ -10,6 +10,8 @@ Palette keys used by the generator:
   stone, stone_dark, mortar   masonry                          roof_a..roof_d    roof coverings
   roof_under       roof deck and fascia                        ridge             ridge caps
   door, frame, shutter, glass, lamp, metal, accent, accent_b   cloth_a, cloth_b  banners, awnings, canvas
+  water            fountain, well and trough water (never "glass": windows and water stay separate, review N1)
+  roof_copper      copper roofs and cones (dwarven granary silo)   banner_field  a banner's field when the style sets it
   leaf, moss, flower_a..flower_d, snow, glow (runes, crystals), gold, ground
 A key may carry a tone suffix: "stone~1" is a darker shade of stone, ~2 lighter, ~3 slightly darker, ~4 slightly lighter.
 """
@@ -30,6 +32,8 @@ BASE_PALETTE = {
     "wood_light": (0.62, 0.45, 0.28), "thatch": (0.78, 0.62, 0.32),
     # lit window panes (emissive: the key contains "glow") and forge embers on chimney caps (emissive: "ember")
     "window_glow": (1.00, 0.72, 0.36), "ember": (1.00, 0.50, 0.12),
+    # review N1: water has its own key in every family (#7FB3D0); review B1: copper cone #B87333
+    "water": (0.50, 0.70, 0.82), "roof_copper": (0.48, 0.17, 0.03),  # copper as linear (#B87333 read as straw)
 }
 
 DEFAULTS = dict(
@@ -43,6 +47,11 @@ DEFAULTS = dict(
     window_glass="glass", banner_scale=1.0, cover_mix=None,
     # ember_cap: forge chimneys carry a glowing coal bed and grate instead of the plain lamp slab (Iron Hold).
     ember_cap=False,
+    # forge_mouth: the smithy's hearth shows a 1.2 x 0.8 m glowing mouth in its open bay (Iron Hold, review B3).
+    forge_mouth=False,
+    # banner_keys: (field, charge) palette keys of every banner. facade_banner_cap: most facade banners per front.
+    # facade_banner_min_area: no facade banners on a block whose footprint is under this many m2 (review N6).
+    banner_keys=("cloth_a", "cloth_b"), facade_banner_cap=2, facade_banner_min_area=0.0,
 )
 
 FAMILIES = {
@@ -101,6 +110,7 @@ FAMILIES = {
         base_h=0.3, roof="gable", pitch=30, cover="plank", roof_keys=("roof_a", "roof_b"), ridge="board", round_roof="yurt",
         window="slit", door="double", chimney="none", band="beam", corner="post",
         extras=("banners", "ropes", "cloth_bands", "facade_banners"), banner_scale=2.0,
+        facade_banner_cap=1, facade_banner_min_area=40.0,  # review N6: 1 per front, none under 40 m2 (yurts keep their pole banner)
         remap={"cottage": "yurt", "house": "yurt_large"},
         # red cloth_a / blue cloth_b bands on eaves and door frames of every building, banners 2x, stone #B8A58A
         palette={"wall_a": (0.76, 0.68, 0.55), "wall_b": (0.68, 0.61, 0.50), "stone": (0.72, 0.65, 0.54),
@@ -135,7 +145,7 @@ FAMILIES = {
         remap={"temple": "pagoda", "gatehouse": "torii_gate", "granary": "kura"},  # kura: raised white storehouse (B1)
         palette={"wall_a": (0.95, 0.93, 0.88), "trim": (0.26, 0.16, 0.10), "trim_dark": (0.16, 0.10, 0.07),
                  "roof_a": (0.24, 0.28, 0.34), "roof_b": (0.42, 0.30, 0.22), "stone": (0.66, 0.64, 0.60),
-                 "accent": (0.85, 0.22, 0.12), "cloth_a": (0.18, 0.24, 0.42), "lamp": (1.0, 0.62, 0.35),
+                 "accent": (0.85, 0.22, 0.12), "cloth_a": (0.18, 0.24, 0.42), "lamp": (1.0, 0.425, 0.119),  # glow sat >= 50%
                  "frame": (0.30, 0.20, 0.12), "glass": (0.96, 0.92, 0.82)},
     ),
     "shenlu": dict(
@@ -230,7 +240,7 @@ FAMILIES = {
         palette={"wall_a": (0.62, 0.28, 0.20), "stone": (0.62, 0.28, 0.20), "mortar": (0.72, 0.66, 0.58),
                  "stone_dark": (0.40, 0.36, 0.34), "roof_a": (0.35, 0.62, 0.55), "roof_b": (0.70, 0.42, 0.25),
                  "trim": (0.85, 0.62, 0.25), "metal": (0.85, 0.62, 0.25), "frame": (0.22, 0.20, 0.20),
-                 "lamp": (1.0, 0.80, 0.45)},
+                 "lamp": (1.0, 0.613, 0.119)},  # brass gas glow, linear; sRGB saturation 62% (style guide >= 50%)
     ),
     "gothic": dict(
         label="Dark spires (black stone, pointed arches, silk lanterns)", walls="ashlar", wall_keys=("stone",),
@@ -267,10 +277,11 @@ REGIONS = {
     # finials on civic-sized buildings. Pitch 54, turrets and flower boxes stay (review P1).
     "aldmere": ("Aldmere", "storybook", dict(ground_walls="ashlar", cover="slate", roof_keys=("roof_d", "roof_d", "roof_a"),
                                             extras=("flower_boxes", "lanterns", "weathervane", "facade_banners", "civic_finials"), banner_scale=1.7,
+                                            banner_keys=("banner_field", "cloth_a"),  # review B4: gold field #D9A833, blue charge
                                             palette={"roof_d": (0.30, 0.34, 0.42), "roof_a": (0.24, 0.36, 0.62),
                                                      "stone": (0.84, 0.81, 0.74), "stone_dark": (0.66, 0.63, 0.58),
                                                      "mortar": (0.62, 0.60, 0.56), "cloth_a": (0.20, 0.34, 0.68),
-                                                     "cloth_b": (0.95, 0.78, 0.30)})),
+                                                     "cloth_b": (0.95, 0.78, 0.30), "banner_field": (0.85, 0.66, 0.20)})),
     # Whisperwood, the forest village: timber, moss and lanterns, thatch on 1 roof in 3, ivy, warmer plaster.
     "whisperwood": ("Whisperwood", "storybook", dict(
         extras=("flower_boxes", "lanterns", "weathervane", "ivy", "climbing_ivy", "moss", "facade_lanterns"),
@@ -281,7 +292,7 @@ REGIONS = {
     # Greymoor: wall_c lifted to #8A7A62, two green lanterns (#BFFF8C) per house front, painted doors #4F7A6A.
     "greymoor": ("Greymoor", "fenland", dict(extras=("lanterns", "moss", "ropes", "facade_lanterns"),
                                             palette={"wall_c": (0.54, 0.48, 0.38), "door": (0.31, 0.48, 0.42),
-                                                     "lamp": (0.52, 1.0, 0.26)})),  # #BFFF8C as linear
+                                                     "lamp": (0.388, 1.0, 0.119)})),  # #BFFF8C hue at 62% sRGB saturation, linear
     "labyrinth_upper": ("Great Labyrinth (Floors 1-40)", "ancient", {}),
     "labyrinth_deep": ("Great Labyrinth (Floors 41-90)", "ancient", dict(ruin=0.4, palette={"glow": (0.25, 0.75, 1.0), "stone": (0.36, 0.44, 0.48)})),
     "labyrinth_abyss": ("Great Labyrinth (Floors 91-120)", "ancient", dict(palette={"glow": (1.0, 0.92, 0.65), "stone": (0.30, 0.30, 0.34)})),
@@ -294,8 +305,10 @@ REGIONS = {
     # (construct.chimney). Region-only, so Dragon Spine keeps the plain dwarven family (review fix).
     "iron_hold": ("Iron Hold", "dwarven", dict(
         band="none", extras=("runes", "lanterns", "buttresses", "bronze_bands"), window_glass="window_glow",
-        roof_keys=("roof_a", "roof_a", "roof_b"), ember_cap=True,
-        palette={"roof_b": (0.72, 0.45, 0.20), "window_glow": (1.0, 0.55, 0.15), "ember": (1.0, 0.55, 0.15)})),
+        roof_keys=("roof_a", "roof_a", "roof_b"), ember_cap=True, forge_mouth=True,
+        # review N1: dark, cool water #5E8FA8, so the fountain contrasts with the forge glow
+        palette={"roof_b": (0.48, 0.17, 0.03), "window_glow": (1.0, 0.55, 0.15), "ember": (1.0, 0.55, 0.15),
+                 "water": (0.37, 0.56, 0.66)})),
     "moraveil": ("Moraveil", "storybook", dict(palette={"wall_a": (0.92, 0.84, 0.62), "roof_a": (0.62, 0.36, 0.20)})),
     "strife_marches": ("Strife Marches", "storybook", dict(ground_walls="rubble", roof_keys=("roof_d", "roof_b"),
                                                           palette={"wall_a": (0.84, 0.80, 0.70), "wall_b": (0.80, 0.74, 0.64)})),
@@ -306,9 +319,11 @@ REGIONS = {
     "shen_lu": ("Shen-Lu", "shenlu", {}),
     "haneul": ("Haneul", "haneul", {}),
     "whitewater_reach": ("Whitewater Reach", "nordic", dict(cover="plank", palette={"wall_a": (0.50, 0.46, 0.42), "roof_a": (0.40, 0.42, 0.46)})),
-    # Umbravel: stone #4C4557 -> #5A5068, lit violet windows, violet silk lanterns on every facade (ornaments.silk)
+    # Umbravel: stone #4C4557 -> #5A5068, lit violet windows (#C77AFF, family window_glow), warm amber silk lanterns
+    # on every facade (ornaments.silk): review B3 puts the lamp back to #FFB852 (linear 1.0, 0.48, 0.09), one cool and
+    # one warm light per facade.
     "umbravel": ("Umbravel", "gothic", dict(extras=("lanterns", "webs", "silk"),
-                                            palette={"lamp": (0.55, 0.32, 1.0), "stone": (0.35, 0.31, 0.41),
+                                            palette={"lamp": (1.0, 0.48, 0.09), "window_glow": (0.571, 0.195, 1.0), "stone": (0.35, 0.31, 0.41),
                                                      "stone_dark": (0.25, 0.22, 0.29), "mortar": (0.20, 0.18, 0.23)})),
     "sunscar": ("Sunscar", "desert", {}),
     "goldmere_coast": ("Goldmere Coast", "coastal", {}),
