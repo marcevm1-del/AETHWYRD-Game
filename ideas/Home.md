@@ -85,6 +85,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
 - [[Design Bible/13_Production/reference_games|13_Production/reference_games]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
+- [[Design Bible/13_Production/spell_look_and_feel|13_Production/spell_look_and_feel]]
 - [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
 - [[Design Bible/13_Production/tutorial_vision|13_Production/tutorial_vision]]

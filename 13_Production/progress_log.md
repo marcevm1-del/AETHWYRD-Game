@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Spell look and feel | 13_Production/spell_look_and_feel.md (the rulebook) plus 7 new workbook sheets: Look & Feel gives every one of the 2,417 spells timings in seconds and frames, hit weight with the existing hit-stop and shake tiers, palette hexes, shape and size in metres, motion, Unity VFX build and budget, audio, aftermath, telegraph and icon; Feel Rules, Chant Tiers, Feel Disciplines, Feel Categories, Feel Forms and Reactions VFX hold the rules. Built on art_direction, combat_tuning.json and the canon chant tiers; proposed, not Canon. | data only, no Core/Unity change |
 | Spell Codex workbook | 05_Skills_Magic/Aetheria_Spell_Codex.xlsx (2,417 proposed spells): merges the three supplied spell PDFs (116 + 1,000 + 1,001), adds 300 new, every spell has Description, Visual Design and How It Works at 50-100 words, 12 disciplines x 12 categories; sheets Spells, Categories, Disciplines, Source Crosswalk, New Spells. Rebuild with Tools/spellcodex/build_spell_codex.py. Proposed content, not Canon. | data only, no Core/Unity change |
 
 ## 2026-11-02

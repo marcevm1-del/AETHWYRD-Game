@@ -17,6 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from data_core import DISCIPLINES, CATEGORIES, CAT_NAMES, CAT_TARGET, USE, PAD_DESC, PAD_VIS, PAD_HOW
 import data_extra  # noqa: F401  (merges extra sentence variety into the banks)
+import feel_sheets
 from data_families import B as BASES, FORM_TEXT, FORM_TARGET
 from data_nouns import NOUNS, ADJ, STUFF
 from data_actions import ACTIONS, IMAGERY
@@ -253,6 +254,8 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
         ("Disciplines - the 12 disciplines with visual identity, sub-disciplines and counts.", None),
         ("Source Crosswalk - the separate sheet keeping every original entry from the three PDFs, mapped to its new ID.", None),
         ("New Spells - the separate sheet listing only the newly invented expansion spells.", None),
+        ("Look & Feel - the production spec for every spell: timings in seconds and frames, hit weight, hit-stop and shake, palette hexes, shape and size in metres, motion, Unity VFX build and budget, audio, aftermath, telegraph and icon.", None),
+        ("Feel Rules, Chant Tiers, Feel Disciplines, Feel Categories, Feel Forms, Reactions VFX - the rulebook behind the Look & Feel sheet (also written up in 13_Production/spell_look_and_feel.md).", None),
         ("", None),
         ("Sources", "h"),
         ("Source 1 - Aetheria Spell Codex, Anime Naming Edition (116 spells). Original prose kept and extended.", None),
@@ -449,7 +452,7 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
     ns.freeze_panes = "C2"
     ns.auto_filter.ref = "A1:H%d" % (ri - 1)
 
-    wb.move_sheet("Spells", offset=-0)
+    feel_sheets.add_feel_sheets(wb, recs, DISC, HUES)
     wb.save(out)
 
 
@@ -463,6 +466,10 @@ def main():
             print(p)
         sys.exit(1)
     write_xlsx(recs, a_rows, b_ent, c_rows, out)
+    doc = os.path.join(HERE, "..", "..", "13_Production", "spell_look_and_feel.md")
+    if os.path.isdir(os.path.dirname(doc)):
+        feel_sheets.write_doc(doc, recs)
+        print("wrote", os.path.abspath(doc))
     by_src = collections.Counter(r["src"] for r in recs)
     print("wrote", os.path.abspath(out))
     print("total", len(recs), dict(by_src))
