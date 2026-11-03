@@ -640,17 +640,21 @@ def wings(c, kind):
                          aim(base + d * L * 0.48, d) @ trs((0, 0, 0), (0, 0, 0), (span * 0.17, span * 0.025, L)), segs=10, rings=6)
             continue
         # a bat/dragon wing: arm up and out, a wrist, four fingers fanning back and down, a scalloped membrane
-        elbow = sh + Vector((s * span * 0.3, span * 0.05, span * 0.32))
-        wrist = elbow + Vector((s * span * 0.32, -span * 0.08, span * 0.12))
+        lift = 1.0 if b.kind == "dragon" and span > 1.5 else 0.0   # big dragon wings are raised and swept back, clear of the body
+        elbow = sh + Vector((s * span * 0.3, span * 0.05, span * (0.32 + 0.04 * lift)))
+        wrist = elbow + Vector((s * span * 0.32, -span * 0.08, span * (0.12 + 0.05 * lift)))
         r0 = b.torso_r * (0.24 if b.kind == "dragon" else 0.12)
         tube(g, [sh, elbow, wrist], [r0, r0 * 0.6], "main", 12)
         g.lathe([(r0 * 0.4, 0), (0, r0 * 2.2)], "claw", aim(wrist, (s * 0.3, -0.6, 0.8)), segs=6)  # thumb claw
         fingers = []
-        for k, (out, back, down) in enumerate(((0.42, 0.05, 0.02), (0.36, 0.3, -0.22), (0.24, 0.48, -0.42), (0.1, 0.55, -0.55))):
+        fing = ((0.42, 0.05, 0.02), (0.36, 0.3, -0.22), (0.24, 0.48, -0.42), (0.1, 0.55, -0.55))
+        if lift:  # fingers fan back and only a little down, so the membrane stays above the back and tail
+            fing = ((0.42, 0.05, 0.06), (0.36, 0.3, -0.12), (0.24, 0.48, -0.28), (0.1, 0.55, -0.4))
+        for k, (out, back, down) in enumerate(fing):
             tipf = wrist + Vector((s * span * out, span * back, span * down))
             fingers.append(tipf)
             tube(g, [wrist, wrist.lerp(tipf, 0.5) + Vector((0, 0, span * 0.03)), tipf], [r0 * 0.45, r0 * 0.1], "main", 8)
-        trail = sh + Vector((s * span * 0.05, span * 0.42, -span * 0.12))  # where the membrane meets the flank
+        trail = sh + Vector((s * span * 0.05, span * 0.42, -span * (0.04 if lift else 0.12)))  # where the membrane meets the flank
         edge = [elbow, wrist] + fingers + [trail]
         verts, faces = [tuple(sh)], []
         for i in range(len(edge) - 1):  # scallop each span between finger tips inward a little
@@ -983,10 +987,10 @@ def dragon_spade(c):
     tip, d = getattr(b, "tail_tip", None), getattr(b, "tail_tip_dir", None)
     if tip is None:
         return
-    L, W = 0.2, 0.17
+    L, W = 0.36, 0.3   # big enough to read at contact-sheet size (was 0.2 x 0.17, hidden by the wings)
     poly = [(0, -L * 0.05), (W * 0.32, -L * 0.12), (W * 0.5, L * 0.22), (W * 0.28, L * 0.6), (0, L), (-W * 0.28, L * 0.6),
             (-W * 0.5, L * 0.22), (-W * 0.32, -L * 0.12)]
-    c.g.slab_poly(poly[::-1], 0.022, "dark", aim(tip - d * 0.03, d))
+    c.g.slab_poly(poly[::-1], 0.022, "bone", aim(tip - d * 0.03, d) @ trs((0, 0, 0), (0, 0, 50)))
 
 
 def breaking_shapes(c):

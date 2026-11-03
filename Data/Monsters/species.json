@@ -7751,8 +7751,8 @@
    "reg_aldmere"
   ],
   "lootTableId": "loot_orc_giant_e",
-  "signature": "tusks, war paint and a dented iron axe",
-  "look": "The Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Survivors describe tusks, war paint and a dented iron axe. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.",
+  "signature": "tusks, war paint and a dented iron sword",
+  "look": "The Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Survivors describe tusks, war paint and a dented iron sword. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.",
   "fieldNote": "Weak to Fire. Never alone. Kill the leader first and the rest may scatter.",
   "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
   "designRecipe": {
@@ -29477,8 +29477,8 @@
    "reg_aldmere"
   ],
   "lootTableId": "loot_orc_giant_e",
-  "signature": "tusks, war paint and a dented iron axe",
-  "look": "The Meadow Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with pale jade markings. Survivors describe tusks, war paint and a dented iron axe. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.",
+  "signature": "tusks, war paint and a dented iron sword",
+  "look": "The Meadow Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with pale jade markings. Survivors describe tusks, war paint and a dented iron sword. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.",
   "fieldNote": "Weak to Fire. Never alone. Kill the leader first and the rest may scatter.",
   "trope": "Orc warbands and the Orc Disaster that devours its way to power (Tensura)",
   "designRecipe": {

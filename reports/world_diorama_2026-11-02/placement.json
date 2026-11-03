@@ -1,0 +1,29 @@
+{
+ "seed": 7,
+ "up": 3,
+ "placement": {
+  "trees": {
+   "count": 23122,
+   "sha256": "cd01f795d72b32ff2cc67e30e7c2decf8234394dcb8308fc4e133af928bf95a0"
+  },
+  "houses": {
+   "count": 701,
+   "sha256": "0b044d2d074cf991d49777562d4243b4d6aeade7718cf2844b60d50d6cac0607"
+  },
+  "clouds": {
+   "count": 12,
+   "sha256": "c6521c036c9d5760363db43a06857c37f76d3b880cc1c302e42908403d4dd5e4"
+  },
+  "all": "28af1aab8d66c27e2dba544ef12697f173758c92e936f081b4d12b217dec3a20"
+ },
+ "skipped_settlements": [
+  [
+   "summer_court_glades",
+   "lake"
+  ],
+  [
+   "hoshizora_city",
+   "lake"
+  ]
+ ]
+}

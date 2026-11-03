@@ -29,7 +29,7 @@ def main():
     env = dict(os.environ, TV_CACHE=os.path.join(tmp, "cache"))
     vid = os.path.join(tmp, "synthetic.mp4")
     font = next((p for p in ("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "C:/Windows/Fonts/arial.ttf") if os.path.exists(p)), None)
-    text = ("drawtext=fontfile=%s:text='Roughness 0.35':x=900:y=200:fontsize=40:fontcolor=white:enable='gte(t,10)'," % font) if font else ""
+    text = ("drawtext=fontfile=%s:text='Roughness 0.35':x=900:y=200:fontsize=40:fontcolor=white:enable='gte(t,10)'," % font.replace(":", "\\\\:")) if font else ""
     vf = ("[0:v]drawbox=x=820:y=120:w=420:h=420:color=0x202024:t=fill:enable='gte(t,5)'," + text.rstrip(",") +
           "[bg];[bg][1:v]overlay=x='100+min(t-14\\,3)*150':y=560:enable='gte(t,14)'")
     r = subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=0x5a6e8c:s=1280x720:r=30:d=22",

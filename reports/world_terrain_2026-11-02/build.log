@@ -1,0 +1,93 @@
+00:27.500  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\heartland_x67.5_y55_s10_r20_preview.png'
+00:43.125  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\heartland_east_x77.5_y55_s10_r20_preview.png'
+00:59.563  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\aldmere_x61_y45_s10_r20_preview.png'
+01:07.703  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\aldmere_x61_y45_s10_r20_detail.png'
+01:22.891  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\ironhold_mountain_x61.5_y33_s10_r20_preview.png'
+01:31.141  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\dragonspine_mountain_x83_y23_s10_r20_preview.png'
+01:44.016  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\coast_southwest_x30_y80_s10_r20_preview.png'
+01:56.828  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\coast_southwest_x30_y80_s10_r20_detail.png'
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2667 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2684 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2682 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2658 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2676 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2680 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2659 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2675 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2683 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2664 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2685 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2680 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2660 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2683 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2676 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2656 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2676 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2689 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2654 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2679 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2678 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2664 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2674 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2669 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3178 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3167 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3183 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3169 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3172 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3184 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3165 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3185 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3184 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3176 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3160 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3188 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3167 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3179 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3191 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3166 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3189 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3185 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (31702:12.500  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\coast_southwest_x30_y80_s10_r20_delta.png'
+02:22.500  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\sunscar_desert_x65_y77_s10_r20_preview.png'
+02:25.985  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\brindlewick_closeup_x71.6_y59_s2_r10_preview.png'
+02:28.360  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\brindlewick_closeup_x71.6_y59_s2_r10_street.png'
+02:43.438  render           | Saved: 'E:\Ideas\Project-Ascend\Art\Blender\WorldTerrain\seam_pair_heartland_preview.png'
+world: 51 settlements (physical_map.settlements), 13 roads (physical_map.roads), 45 peaks, 30 rivers (smoothed paths: True), 21 lakes
+building 8 tile(s)
+    dressing 8e685a8cc96a2e73  {'trees': 8908, 'buildings': 76, 'walls': 0, 'fields': 6, 'paths': 1, 'deltas': 0, 'grassClumps': 0, 'barrel': 8, 'crate': 1, 'flower': 14, 'laundry': 10, 'reed': 303, 'rock': 98}
+Info: Saved as "heartland_x67.5_y55_s10_r20.blend"
+  heartland_x67.5_y55_s10_r20                   235.7.. 374.1 m  sha 1fbba684d7d1a2e6
+    dressing 54cc5fe388741bf9  {'trees': 9010, 'buildings': 2, 'walls': 0, 'fields': 0, 'paths': 0, 'deltas': 0, 'grassClumps': 0, 'reed': 232, 'rock': 95}
+Info: Saved as "heartland_east_x77.5_y55_s10_r20.blend"
+  heartland_east_x77.5_y55_s10_r20              231.6.. 331.7 m  sha 53067fb60eacddad
+    dressing e6b89dcf0b19b2fe  {'trees': 8947, 'buildings': 172, 'walls': 16, 'fields': 33, 'paths': 0, 'deltas': 0, 'grassClumps': 0, 'barrel': 3, 'flower': 28, 'reed': 143, 'rock': 59}
+Info: Saved as "aldmere_x61_y45_s10_r20.blend"
+  aldmere_x61_y45_s10_r20                       232.0.. 407.3 m  sha d69ba474ed00fde6
+    dressing 21d9c0be2f3ddb51  {'trees': 8966, 'buildings': 31, 'walls': 0, 'fields': 0, 'paths': 0, 'deltas': 0, 'grassClumps': 0, 'flower': 7, 'rock': 176}
+Info: Saved as "ironhold_mountain_x61.5_y33_s10_r20.blend"
+  ironhold_mountain_x61.5_y33_s10_r20           281.4..3111.6 m  sha 059bc6175e882afb
+    dressing c510cd321c27b7db  {'trees': 1781, 'buildings': 15, 'walls': 0, 'fields': 0, 'paths': 0, 'deltas': 0, 'grassClumps': 0, 'flower': 5, 'reed': 113, 'rock': 252}
+Info: Saved as "dragonspine_mountain_x83_y23_s10_r20.blend"
+  dragonspine_mountain_x83_y23_s10_r20          697.3..3080.0 m  sha cd1e4641a14775a0
+    dressing c26399e0019ea7c0  {'trees': 9080, 'buildings': 1, 'walls': 0, 'fields': 0, 'paths': 0, 'deltas': 1, 'grassClumps': 0, 'lighthouse': 1, 'reed': 177, 'rock': 72}
+Info: Saved as "coast_southwest_x30_y80_s10_r20.blend"
+  coast_southwest_x30_y80_s10_r20              -152.1.. 355.9 m  sha 89a047e6d02b7a81
+    dressing 1506c629f1735429  {'trees': 0, 'buildings': 37, 'walls': 0, 'fields': 0, 'paths': 0, 'deltas': 0, 'grassClumps': 0, 'barrel': 1, 'butte': 3, 'flower': 8, 'reed': 132, 'rock': 57}
+Info: Saved as "sunscar_desert_x65_y77_s10_r20.blend"
+  sunscar_desert_x65_y77_s10_r20                252.5.. 387.8 m  sha d44888dab0fafaf4
+    dressing 4fc5b28275a68639  {'trees': 2270, 'buildings': 35, 'walls': 0, 'fields': 3, 'paths': 1, 'deltas': 0, 'grassClumps': 3822, 'barrel': 7, 'crate': 1, 'flower': 14, 'laundry': 10, 'reed': 26, 'rock': 10}
+Info: Saved as "brindlewick_closeup_x71.6_y59_s2_r10.blend"
+  brindlewick_closeup_x71.6_y59_s2_r10          272.8.. 320.1 m  sha d036d79581cbf932
+Info: Saved as "seam_pair_heartland.blend"
+checks: seams ok=True (east 0 m, south 0 m, 10m vs 20m 0 m), peaks ok=True (max err 0.00%, nearest-grid 0.00%), roads ok=True (strict False; known hairpin limitation: {'road_04': 'road_04/1 over (0.032%)', 'road_05': 'road_05/9 over (0.442%)', 'road_12': 'road_12/4 over (0.098%)'}), pads ok=True, determinism=[True, True], dressing=[(True, 0, True), (True, 0, True), (True, 0, True)] -> overall True
+DONE in 287.0s (blend=True)
+8 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3163 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3191 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3165 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3189 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (3183 / 2048)
+
+Blender quit

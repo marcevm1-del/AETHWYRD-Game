@@ -1,0 +1,1265 @@
+{
+ "generated": "2026-11-02T23:45:08",
+ "seed": 1,
+ "bpy": true,
+ "dataSources": {
+  "settlements": "physical_map.settlements",
+  "roads": "physical_map.roads",
+  "riverPaths": "pathSmooth"
+ },
+ "determinism": [
+  {
+   "tile": "heartland_x67.5_y55_s10_r20",
+   "seed": 1,
+   "run1": "34f98d8a8116d418934342ba2fec98556e6416a4910c7583b2443db2ae67c930",
+   "run2": "34f98d8a8116d418934342ba2fec98556e6416a4910c7583b2443db2ae67c930",
+   "sameSeedEqual": true,
+   "otherSeedDiffers": true
+  },
+  {
+   "tile": "ironhold_mountain_x61.5_y33_s10_r20",
+   "seed": 1,
+   "run1": "a50e24d7d23cf7de18d740ccee812d16f0815848e66a6ab08f848ad02c783597",
+   "run2": "a50e24d7d23cf7de18d740ccee812d16f0815848e66a6ab08f848ad02c783597",
+   "sameSeedEqual": true,
+   "otherSeedDiffers": true
+  }
+ ],
+ "seams": {
+  "eastFloatMaxDiff": 0.0,
+  "eastU16MaxDiff": 0,
+  "southFloatMaxDiff": 0.0,
+  "southU16MaxDiff": 0,
+  "edgeSamples": 501,
+  "res10vs20MaxDiff": 0.0,
+  "ok": true
+ },
+ "peaks": {
+  "count": 45,
+  "maxErrPct": 0.0,
+  "maxErrGridPct": 0.0,
+  "outside5pct": [],
+  "ok": true,
+  "peaks": [
+   {
+    "name": null,
+    "atKm": [
+     27.8,
+     47.8
+    ],
+    "listedM": 3334.0,
+    "builtM": 3334.0,
+    "builtNearest20mGridM": 3334.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     119.3,
+     53.8
+    ],
+    "listedM": 3289.0,
+    "builtM": 3289.0,
+    "builtNearest20mGridM": 3289.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     89.8,
+     87.8
+    ],
+    "listedM": 3272.0,
+    "builtM": 3272.0,
+    "builtNearest20mGridM": 3272.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": "Oni Volcano",
+    "atKm": [
+     102.3,
+     42.3
+    ],
+    "listedM": 3222.0,
+    "builtM": 3222.0,
+    "builtNearest20mGridM": 3222.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     96.3,
+     27.8
+    ],
+    "listedM": 3219.0,
+    "builtM": 3219.0,
+    "builtNearest20mGridM": 3219.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": "Tribute Peak",
+    "atKm": [
+     118.8,
+     16.8
+    ],
+    "listedM": 3217.0,
+    "builtM": 3217.0,
+    "builtNearest20mGridM": 3217.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     113.3,
+     26.8
+    ],
+    "listedM": 3216.0,
+    "builtM": 3216.0,
+    "builtNearest20mGridM": 3216.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     31.3,
+     52.3
+    ],
+    "listedM": 3214.0,
+    "builtM": 3214.0,
+    "builtNearest20mGridM": 3214.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     83.8,
+     73.3
+    ],
+    "listedM": 3196.0,
+    "builtM": 3196.0,
+    "builtNearest20mGridM": 3196.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     81.8,
+     83.8
+    ],
+    "listedM": 3194.0,
+    "builtM": 3194.0,
+    "builtNearest20mGridM": 3194.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": "The Giant's Bed",
+    "atKm": [
+     19.8,
+     72.8
+    ],
+    "listedM": 3180.0,
+    "builtM": 3180.0,
+    "builtNearest20mGridM": 3180.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     87.8,
+     76.8
+    ],
+    "listedM": 3175.0,
+    "builtM": 3175.0,
+    "builtNearest20mGridM": 3175.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     101.3,
+     46.3
+    ],
+    "listedM": 3171.0,
+    "builtM": 3171.0,
+    "builtNearest20mGridM": 3171.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     115.3,
+     52.8
+    ],
+    "listedM": 3170.0,
+    "builtM": 3170.0,
+    "builtNearest20mGridM": 3170.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     123.3,
+     15.3
+    ],
+    "listedM": 3167.0,
+    "builtM": 3167.0,
+    "builtNearest20mGridM": 3167.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     91.3,
+     78.8
+    ],
+    "listedM": 3130.0,
+    "builtM": 3130.0,
+    "builtNearest20mGridM": 3130.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     109.3,
+     58.8
+    ],
+    "listedM": 3129.0,
+    "builtM": 3129.0,
+    "builtNearest20mGridM": 3129.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     114.8,
+     36.8
+    ],
+    "listedM": 3115.0,
+    "builtM": 3115.0,
+    "builtNearest20mGridM": 3115.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     116.8,
+     57.8
+    ],
+    "listedM": 3111.0,
+    "builtM": 3111.0,
+    "builtNearest20mGridM": 3111.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     101.3,
+     26.3
+    ],
+    "listedM": 3107.0,
+    "builtM": 3107.0,
+    "builtNearest20mGridM": 3107.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     116.3,
+     23.8
+    ],
+    "listedM": 3103.0,
+    "builtM": 3103.0,
+    "builtNearest20mGridM": 3103.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     77.3,
+     27.8
+    ],
+    "listedM": 3101.0,
+    "builtM": 3101.0,
+    "builtNearest20mGridM": 3101.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     114.3,
+     33.3
+    ],
+    "listedM": 3095.0,
+    "builtM": 3095.0,
+    "builtNearest20mGridM": 3095.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     23.8,
+     71.3
+    ],
+    "listedM": 3084.0,
+    "builtM": 3084.0,
+    "builtNearest20mGridM": 3084.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     64.3,
+     35.8
+    ],
+    "listedM": 3083.0,
+    "builtM": 3083.0,
+    "builtNearest20mGridM": 3083.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     66.8,
+     24.8
+    ],
+    "listedM": 3079.0,
+    "builtM": 3079.0,
+    "builtNearest20mGridM": 3079.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     108.8,
+     54.8
+    ],
+    "listedM": 3079.0,
+    "builtM": 3079.0,
+    "builtNearest20mGridM": 3079.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     71.3,
+     21.3
+    ],
+    "listedM": 3077.0,
+    "builtM": 3077.0,
+    "builtNearest20mGridM": 3077.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     71.8,
+     39.8
+    ],
+    "listedM": 3039.0,
+    "builtM": 3039.0,
+    "builtNearest20mGridM": 3039.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     64.8,
+     28.8
+    ],
+    "listedM": 3038.0,
+    "builtM": 3038.0,
+    "builtNearest20mGridM": 3038.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": "The Burning Peaks",
+    "atKm": [
+     90.3,
+     32.8
+    ],
+    "listedM": 3036.0,
+    "builtM": 3036.0,
+    "builtNearest20mGridM": 3036.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     97.3,
+     44.3
+    ],
+    "listedM": 3034.0,
+    "builtM": 3034.0,
+    "builtNearest20mGridM": 3034.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     22.8,
+     49.8
+    ],
+    "listedM": 3025.0,
+    "builtM": 3025.0,
+    "builtNearest20mGridM": 3025.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": "The Overlord's mountain of fire",
+    "atKm": [
+     30.3,
+     21.8
+    ],
+    "listedM": 3020.0,
+    "builtM": 3020.0,
+    "builtNearest20mGridM": 3020.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     74.3,
+     31.8
+    ],
+    "listedM": 2969.0,
+    "builtM": 2969.0,
+    "builtNearest20mGridM": 2969.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     21.8,
+     12.8
+    ],
+    "listedM": 2941.0,
+    "builtM": 2941.0,
+    "builtNearest20mGridM": 2941.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     106.8,
+     39.8
+    ],
+    "listedM": 2924.0,
+    "builtM": 2924.0,
+    "builtNearest20mGridM": 2924.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     23.3,
+     21.3
+    ],
+    "listedM": 2900.0,
+    "builtM": 2900.0,
+    "builtNearest20mGridM": 2900.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     86.8,
+     28.8
+    ],
+    "listedM": 2793.0,
+    "builtM": 2793.0,
+    "builtNearest20mGridM": 2793.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     32.8,
+     58.3
+    ],
+    "listedM": 2547.0,
+    "builtM": 2547.0,
+    "builtNearest20mGridM": 2547.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     111.3,
+     17.3
+    ],
+    "listedM": 2547.0,
+    "builtM": 2547.0,
+    "builtNearest20mGridM": 2547.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     127.8,
+     8.8
+    ],
+    "listedM": 2399.0,
+    "builtM": 2399.0,
+    "builtNearest20mGridM": 2399.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     105.3,
+     80.3
+    ],
+    "listedM": 1726.0,
+    "builtM": 1726.0,
+    "builtNearest20mGridM": 1726.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     90.3,
+     21.8
+    ],
+    "listedM": 1626.0,
+    "builtM": 1626.0,
+    "builtNearest20mGridM": 1626.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   },
+   {
+    "name": null,
+    "atKm": [
+     27.8,
+     75.8
+    ],
+    "listedM": 1524.0,
+    "builtM": 1524.0,
+    "builtNearest20mGridM": 1524.0,
+    "errPct": 0.0,
+    "errGridPct": 0.0
+   }
+  ]
+ },
+ "roads": {
+  "roads": {
+   "road_01": {
+    "lengthKm": 12.94,
+    "maxGradePct": 8.77,
+    "p99GradePct": 7.35,
+    "ok": true,
+    "samples10m": 1293,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 12.94,
+    "maxCutFillM": 5.8,
+    "graded": true
+   },
+   "road_02": {
+    "lengthKm": 21.52,
+    "maxGradePct": 11.5,
+    "p99GradePct": 10.67,
+    "ok": true,
+    "samples10m": 2152,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 21.52,
+    "maxCutFillM": 5.1,
+    "graded": true
+   },
+   "road_03": {
+    "lengthKm": 11.46,
+    "maxGradePct": 8.69,
+    "p99GradePct": 8.09,
+    "ok": true,
+    "samples10m": 1146,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 11.46,
+    "maxCutFillM": 1.9,
+    "graded": true
+   },
+   "road_04": {
+    "lengthKm": 23.02,
+    "maxGradePct": 11.5,
+    "p99GradePct": 11.5,
+    "ok": true,
+    "samples10m": 2302,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": true,
+    "authoredLengthKm": 10.65,
+    "maxCutFillM": 134.1,
+    "graded": true
+   },
+   "road_05": {
+    "lengthKm": 22.08,
+    "maxGradePct": 19.36,
+    "p99GradePct": 11.5,
+    "ok": false,
+    "samples10m": 2207,
+    "samplesOverLimit": 1,
+    "pctOverLimit": 0.045,
+    "rerouted": true,
+    "authoredLengthKm": 22.74,
+    "maxCutFillM": 24.0,
+    "graded": true
+   },
+   "road_06": {
+    "lengthKm": 44.91,
+    "maxGradePct": 51.6,
+    "p99GradePct": 11.5,
+    "ok": false,
+    "samples10m": 4491,
+    "samplesOverLimit": 8,
+    "pctOverLimit": 0.178,
+    "rerouted": true,
+    "authoredLengthKm": 25.74,
+    "maxCutFillM": 22.7,
+    "graded": true
+   },
+   "road_07": {
+    "lengthKm": 15.46,
+    "maxGradePct": 7.93,
+    "p99GradePct": 6.53,
+    "ok": true,
+    "samples10m": 1545,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 15.46,
+    "maxCutFillM": 7.1,
+    "graded": true
+   },
+   "road_08": {
+    "lengthKm": 17.71,
+    "maxGradePct": 7.4,
+    "p99GradePct": 5.88,
+    "ok": true,
+    "samples10m": 1770,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 17.71,
+    "maxCutFillM": 7.0,
+    "graded": true
+   },
+   "road_09": {
+    "lengthKm": 26.24,
+    "maxGradePct": 11.06,
+    "p99GradePct": 8.11,
+    "ok": true,
+    "samples10m": 2624,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 26.24,
+    "maxCutFillM": 3.5,
+    "graded": true
+   },
+   "road_10": {
+    "lengthKm": 15.78,
+    "maxGradePct": 11.5,
+    "p99GradePct": 11.03,
+    "ok": true,
+    "samples10m": 1577,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 15.78,
+    "maxCutFillM": 9.6,
+    "graded": true
+   },
+   "road_11": {
+    "lengthKm": 19.55,
+    "maxGradePct": 11.5,
+    "p99GradePct": 11.44,
+    "ok": true,
+    "samples10m": 1954,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 19.55,
+    "maxCutFillM": 17.8,
+    "graded": true
+   },
+   "road_12": {
+    "lengthKm": 37.08,
+    "maxGradePct": 38.65,
+    "p99GradePct": 11.5,
+    "ok": false,
+    "samples10m": 3708,
+    "samplesOverLimit": 2,
+    "pctOverLimit": 0.054,
+    "rerouted": true,
+    "authoredLengthKm": 24.95,
+    "maxCutFillM": 22.2,
+    "graded": true
+   },
+   "road_13": {
+    "lengthKm": 10.07,
+    "maxGradePct": 11.5,
+    "p99GradePct": 11.5,
+    "ok": true,
+    "samples10m": 1006,
+    "samplesOverLimit": 0,
+    "pctOverLimit": 0.0,
+    "rerouted": false,
+    "authoredLengthKm": 10.07,
+    "maxCutFillM": 13.1,
+    "graded": true
+   }
+  },
+  "ok": true,
+  "strictOk": false,
+  "limitPct": 15.0,
+  "knownLimitation": {
+   "roads": {
+    "road_05": {
+     "maxGradePct": 19.36,
+     "samplesOverLimit": 1,
+     "pctOverLimit": 0.045,
+     "withinCeiling": true
+    },
+    "road_06": {
+     "maxGradePct": 51.6,
+     "samplesOverLimit": 8,
+     "pctOverLimit": 0.178,
+     "withinCeiling": true
+    },
+    "road_12": {
+     "maxGradePct": 38.65,
+     "samplesOverLimit": 2,
+     "pctOverLimit": 0.054,
+     "withinCeiling": true
+    }
+   },
+   "ceilingPctOfSamples": 0.5,
+   "what": "hairpin tips on re-routed mountain roads exceed 15 % for a few 10 m samples (two legs of the bed overlap)",
+   "fix": "world-designer: switchback waypoints or a gentler line for Aldmere-Karak Dun, Karak Dun-Cinderhole, Oasis-Zarvan; or build those tiles at 10 m"
+  }
+ },
+ "pads": {
+  "pads": {
+   "Brindlewick": {
+    "ring0SquareM": 200.0,
+    "heightMinM": 298.6487,
+    "heightMaxM": 298.6487,
+    "rangeM": 0.0,
+    "flatRadiusM": 160.0,
+    "padHeightM": 298.649,
+    "ok": true
+   },
+   "Millbrook": {
+    "ring0SquareM": 200.0,
+    "heightMinM": 307.9045,
+    "heightMaxM": 307.9045,
+    "rangeM": 0.0,
+    "flatRadiusM": 160.0,
+    "padHeightM": 307.905,
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "rivers": {
+  "rivers": {
+   "river_01": {
+    "points": 6813,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.1,
+    "widthM": [
+     6.0,
+     50.8
+    ]
+   },
+   "river_02": {
+    "points": 2068,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 96.3,
+    "widthM": [
+     5.3,
+     40.1
+    ]
+   },
+   "river_03": {
+    "points": 1479,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 96.3,
+    "widthM": [
+     4.9,
+     36.0
+    ]
+   },
+   "river_04": {
+    "points": 1131,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.1,
+    "widthM": [
+     4.2,
+     33.8
+    ]
+   },
+   "river_05": {
+    "points": 4343,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.6,
+    "widthM": [
+     5.9,
+     48.5
+    ]
+   },
+   "river_06": {
+    "points": 2623,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.6,
+    "widthM": [
+     4.8,
+     39.2
+    ]
+   },
+   "river_07": {
+    "points": 2698,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.3,
+    "widthM": [
+     4.9,
+     37.8
+    ]
+   },
+   "river_08": {
+    "points": 1128,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 98.8,
+    "widthM": [
+     4.6,
+     32.5
+    ]
+   },
+   "river_09": {
+    "points": 1878,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 97.4,
+    "widthM": [
+     5.7,
+     41.4
+    ]
+   },
+   "river_10": {
+    "points": 489,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 97.3,
+    "widthM": [
+     4.3,
+     27.3
+    ]
+   },
+   "river_11": {
+    "points": 775,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 97.8,
+    "widthM": [
+     3.8,
+     27.0
+    ]
+   },
+   "river_12": {
+    "points": 534,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 100.0,
+    "widthM": [
+     3.7,
+     25.3
+    ]
+   },
+   "river_13": {
+    "points": 1489,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 98.8,
+    "widthM": [
+     5.6,
+     41.3
+    ]
+   },
+   "river_14": {
+    "points": 1006,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 96.8,
+    "widthM": [
+     5.1,
+     34.6
+    ]
+   },
+   "river_15": {
+    "points": 600,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 98.0,
+    "widthM": [
+     4.2,
+     26.8
+    ]
+   },
+   "river_16": {
+    "points": 1652,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 98.5,
+    "widthM": [
+     5.5,
+     37.0
+    ]
+   },
+   "river_17": {
+    "points": 850,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.8,
+    "widthM": [
+     4.8,
+     31.3
+    ]
+   },
+   "river_18": {
+    "points": 685,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 95.6,
+    "widthM": [
+     4.5,
+     25.4
+    ]
+   },
+   "river_19": {
+    "points": 1198,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 97.7,
+    "widthM": [
+     5.4,
+     32.7
+    ]
+   },
+   "river_20": {
+    "points": 573,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 94.4,
+    "widthM": [
+     4.7,
+     25.6
+    ]
+   },
+   "river_21": {
+    "points": 882,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.5,
+    "widthM": [
+     5.6,
+     31.6
+    ]
+   },
+   "river_22": {
+    "points": 518,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 98.5,
+    "widthM": [
+     4.6,
+     24.4
+    ]
+   },
+   "river_23": {
+    "points": 768,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 96.0,
+    "widthM": [
+     5.8,
+     31.5
+    ]
+   },
+   "river_24": {
+    "points": 231,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 95.2,
+    "widthM": [
+     4.7,
+     25.1
+    ]
+   },
+   "river_25": {
+    "points": 1041,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 94.0,
+    "widthM": [
+     5.3,
+     30.3
+    ]
+   },
+   "river_26": {
+    "points": 1144,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.2,
+    "widthM": [
+     5.3,
+     29.3
+    ]
+   },
+   "river_27": {
+    "points": 1328,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.0,
+    "widthM": [
+     5.6,
+     29.1
+    ]
+   },
+   "river_28": {
+    "points": 733,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 98.2,
+    "widthM": [
+     5.2,
+     28.0
+    ]
+   },
+   "river_29": {
+    "points": 1186,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 99.6,
+    "widthM": [
+     5.6,
+     27.0
+    ]
+   },
+   "river_30": {
+    "points": 621,
+    "waterLevelMonotone": true,
+    "centrelineBelowWaterPct": 97.6,
+    "widthM": [
+     3.3,
+     26.4
+    ]
+   }
+  },
+  "smoothedPathsUsed": true
+ },
+ "dressing": [
+  {
+   "tile": "heartland_x67.5_y55_s10_r20",
+   "sameSeedEqual": true,
+   "dressingSha256": "d0814d71e67a57c6d6ff51a93dd9800a7950aed45226173d982b74f0b66a5347",
+   "ring0Violations": 0,
+   "heightHashBefore": "34f98d8a8116d418934342ba2fec98556e6416a4910c7583b2443db2ae67c930",
+   "heightHashAfter": "34f98d8a8116d418934342ba2fec98556e6416a4910c7583b2443db2ae67c930",
+   "heightHashUnchanged": true,
+   "counts": {
+    "trees": 8074,
+    "buildings": 85,
+    "walls": 0,
+    "fields": 12,
+    "fences": 6,
+    "paths": 1,
+    "deltas": 0,
+    "grassClumps": 0,
+    "barrel": 10,
+    "cart": 1,
+    "crate": 3,
+    "flower": 118,
+    "laundry": 10,
+    "planter": 6,
+    "reed": 324,
+    "rock": 106,
+    "slab": 14,
+    "tuft": 308,
+    "byKind": {
+     "town_gate": 1,
+     "lamp_post": 15,
+     "clock_tower": 1,
+     "house_cottage": 16,
+     "manor": 3,
+     "house_tall": 13,
+     "house_house": 18,
+     "row_house": 7,
+     "cottage_round": 3,
+     "farmhouse": 2,
+     "barn": 2,
+     "granary_silo": 1,
+     "windmill": 1,
+     "watermill": 2
+    }
+   }
+  },
+  {
+   "tile": "aldmere_x61_y45_s10_r20",
+   "sameSeedEqual": true,
+   "dressingSha256": "b5bddd18f0c73dcd0254f94a66114eccb145c1d8e58f3c8d5f13cefc6ea147df",
+   "ring0Violations": 0,
+   "heightHashBefore": "524472cbd8fd787ba0f98c59a2992d28936aba87186094e0ba1f104ad81120c9",
+   "heightHashAfter": "524472cbd8fd787ba0f98c59a2992d28936aba87186094e0ba1f104ad81120c9",
+   "heightHashUnchanged": true,
+   "counts": {
+    "trees": 6268,
+    "buildings": 256,
+    "walls": 16,
+    "fields": 129,
+    "fences": 300,
+    "paths": 6,
+    "deltas": 0,
+    "grassClumps": 0,
+    "barrel": 2,
+    "flower": 28,
+    "reed": 147,
+    "rock": 59,
+    "byKind": {
+     "guard_tower": 18,
+     "town_gate": 1,
+     "mage_tower": 1,
+     "manor": 1,
+     "house_tall": 34,
+     "cottage_round": 20,
+     "row_house": 9,
+     "house_house": 70,
+     "house_cottage": 64,
+     "farmhouse": 12,
+     "well": 2,
+     "barn": 11,
+     "granary_silo": 6,
+     "roadside_shrine": 4,
+     "windmill": 1,
+     "watermill": 2
+    }
+   }
+  },
+  {
+   "tile": "brindlewick_closeup_x71.6_y59_s2_r10",
+   "sameSeedEqual": true,
+   "dressingSha256": "9942b19b0993607d0cafd1f4f6fbcef29a02d1ac3c5a8b11f1aaae43d99e1e88",
+   "ring0Violations": 0,
+   "heightHashBefore": "7c90dc6093b4b9a28ee069e1a1db5385aaff99b1b92e78615c7f6725d456d269",
+   "heightHashAfter": "7c90dc6093b4b9a28ee069e1a1db5385aaff99b1b92e78615c7f6725d456d269",
+   "heightHashUnchanged": true,
+   "counts": {
+    "trees": 698,
+    "buildings": 43,
+    "walls": 0,
+    "fields": 9,
+    "fences": 6,
+    "paths": 1,
+    "deltas": 0,
+    "grassClumps": 10317,
+    "barrel": 9,
+    "cart": 1,
+    "crate": 3,
+    "flower": 118,
+    "laundry": 10,
+    "planter": 6,
+    "reed": 25,
+    "rock": 9,
+    "slab": 14,
+    "tuft": 308,
+    "byKind": {
+     "town_gate": 1,
+     "lamp_post": 15,
+     "clock_tower": 1,
+     "house_cottage": 9,
+     "manor": 3,
+     "house_tall": 4,
+     "house_house": 5,
+     "row_house": 2,
+     "farmhouse": 1,
+     "barn": 1,
+     "granary_silo": 1
+    }
+   }
+  }
+ ],
+ "rasterRoadGrade": {
+  "heartland_x67.5_y55_s10_r20": {
+   "road_01": {
+    "maxGradePct": 9.94,
+    "metresInTile": 6184,
+    "ok": true
+   }
+  },
+  "aldmere_x61_y45_s10_r20": {
+   "road_01": {
+    "maxGradePct": 7.6,
+    "metresInTile": 6765,
+    "ok": true
+   },
+   "road_02": {
+    "maxGradePct": 7.58,
+    "metresInTile": 5430,
+    "ok": true
+   },
+   "road_04": {
+    "maxGradePct": 7.93,
+    "metresInTile": 5151,
+    "ok": true
+   },
+   "road_07": {
+    "maxGradePct": 7.94,
+    "metresInTile": 5843,
+    "ok": true
+   }
+  },
+  "brindlewick_closeup_x71.6_y59_s2_r10": {
+   "road_01": {
+    "maxGradePct": 8.59,
+    "metresInTile": 1621,
+    "ok": true
+   }
+  }
+ },
+ "builtTiles": {
+  "heartland_x67.5_y55_s10_r20": {
+   "sha256": "34f98d8a8116d418934342ba2fec98556e6416a4910c7583b2443db2ae67c930"
+  },
+  "aldmere_x61_y45_s10_r20": {
+   "sha256": "524472cbd8fd787ba0f98c59a2992d28936aba87186094e0ba1f104ad81120c9"
+  },
+  "brindlewick_closeup_x71.6_y59_s2_r10": {
+   "sha256": "7c90dc6093b4b9a28ee069e1a1db5385aaff99b1b92e78615c7f6725d456d269"
+  }
+ },
+ "ok": true
+}

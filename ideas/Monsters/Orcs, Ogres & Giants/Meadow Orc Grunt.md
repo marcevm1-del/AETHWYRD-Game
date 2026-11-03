@@ -13,7 +13,7 @@ tags: [monster, orcs-ogres-giants]
 
 > [!note] 3D model: procedural blockout in Unity (2,508 tris · 1.178 × 1.266 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
 
-> The Meadow Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with pale jade markings. Survivors describe tusks, war paint and a dented iron axe. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
+> The Meadow Orc Grunt is a person-sized creature with a lean humanoid frame, about 2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with pale jade markings. Survivors describe tusks, war paint and a dented iron sword. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Adapted to plains lands, it has golden, grass-toned coloring.
 
 | Field | Value |
 |---|---|
@@ -40,7 +40,7 @@ tags: [monster, orcs-ogres-giants]
 - **Dimensions:** 2 m high × 0.6 m long × 0.64 m wide; prefab scale 1.111.
 - **Physics:** 93.6 kg, gravity ×1.2, poise 61, knockback resistance 0.33, death style `ragdoll`.
 - **Navigation:** speed 5.9 m/s, turn 283°/s, stopping distance 0.74 m.
-- **Attack count:** 5; **signature:** tusks, war paint and a dented iron axe.
+- **Attack count:** 5; **signature:** tusks, war paint and a dented iron sword.
 
 ## Attacks and responses
 
@@ -58,7 +58,7 @@ Meadow Orc Grunt is a **menacing giant** encountered at E+ rank, around level 32
 
 **Hunt preparation:** the recorded weakness is **Fire**. It is an advantage to exploit, not a mandatory loadout check; positioning, defense and direct damage remain valid ways to win.
 
-**Signature read:** tusks, war paint and a dented iron axe. Watch for its tell and leave a response window before committing to a long combo.
+**Signature read:** tusks, war paint and a dented iron sword. Watch for its tell and leave a response window before committing to a long combo.
 
 **Where it fits:** recorded in [[Regions/Fanghold|Fanghold]], [[Regions/Aldmere|Aldmere]]. Presence should reflect those regions’ climate, terrain and food web; sightings beyond them are migration or a deliberate encounter, not a default spawn.
 

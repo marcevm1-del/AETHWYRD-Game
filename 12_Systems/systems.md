@@ -319,6 +319,48 @@ A Hardcore character who dies becomes **part of history** for your next characte
 - Every timed or repeatable system (weekly board, sieges, expeditions, brewing) **waits for you**: nothing expires while the game is off, and the clock only runs while you play.
 - Missed Day Specials come back next week; missed siege defences auto-resolve (never destroying anything).
 
+### 11.3 Road travel times (wave 5 check, 2026-11-03)
+Checks the 13 roads in `Data/World/physical_map.json` (`roads[]`, read only) against `Data/World/world_tuning.json`. **Everything below that is not in a data file is a proposal** (Canon §6 route), not a locked rule.
+
+**What is tuned today.** `calendar.dayLengthRealMinutes` = 90 (Canon: tunable 60-120), 24 hours, dawn 6, night 20-6. So the clock runs **16 in-game minutes per real minute: 1 in-game hour = 3.75 real minutes**, daylight (6-20) = 52.5 real minutes, night = 37.5. One map unit is one kilometre (`world_map.md` §6). **No travel speed, slope penalty, mount speed or fast-travel rule is tuned anywhere** in `Data/` or the design docs. The only speed in the repo is "run speed 6.5 m/s" in `market_research_2026.md` A12. There are also no pacing targets for a road leg. Waystones exist (respawn, quick-stack) but no doc defines fast travel between them (only the Mapmaker class mentions "fast travel anywhere seen").
+
+**Proposed speeds** (new `travel` block in `world_tuning.json`, not applied): walk 2.0 m/s, run 6.5 m/s (the A12 figure), cart 4.0 m/s, mount 10.0 m/s. **Proposed slope rule** (Tobler-like, normalised to 1.0 on flat): `factor = clamp(exp(-3.5*|g+0.05|) / exp(-0.175), 0.15, 1.2)` with g = rise/run (a gentle descent is slightly faster, steep either way slower). Carts additionally cap at **12% grade** (factor 0.3 beyond it); a trade route needs the whole road under 12%. Any road piece steeper than **35%** is not a road: it is treated as a **stair or lift** and left out of the times below.
+
+**Proposed pacing targets.** On foot at run speed (how a player actually crosses a road): **<= 45 real min (12 in-game hours) per leg**; mounted (Rank D horse, `ranks.md`): **<= 40 real min**. A leg past 52 real min cannot be finished in one daylight stretch, and past 37.5 min it crosses night if started at dusk.
+
+Times use the real polyline points (elevation per point), in real minutes of play; "game h" = real min / 3.75. Walk is shown to make the point: at kilometre scale a 2 m/s walk is unplayable (21-69 in-game hours), so walk speed is for towns and fields only.
+
+| Road | Leg | km | Climb / descent (m) | Walk min | Run min (game h) | Cart min | Mount min | Fit |
+|---|---|---|---|---|---|---|---|---|
+| road_01 | Brindlewick - Aldmere | 12.9 | 101 / 112 | 108 | 33 (8.8) | 55 | 22 | Good: the F-rank road, one daylight stretch, 3 crossings |
+| road_02 | Aldmere - Velmark ducal towns | 21.5 | 162 / 159 | 180 | 55 (14.8) | 92 | 36 | Long on foot (> 45), 7 river crossings |
+| road_03 | Velmark - Lirian canal cities | 11.5 | 53 / 54 | 96 | 29 (7.8) | 49 | 19 | Good |
+| road_04 | Aldmere - Karak Dun | 10.7 (7.7 road + 3.0 stair) | 318 / 79 road; stair +2,078 | 78 | 24 (6.4) | 43 | 16 | **Fails**: last 3.0 km climbs 2,078 m, 1.0 km of road over 12% |
+| road_05 | Karak Dun - Cinderhole | 22.7 (20.5 road + 2.2 stair) | 638 / 1,366 road; stair -1,067 | 219 | 67 (17.9) | 154 | 44 | **Fails**: long and steep, 6.7 km over 12%, 4.2 km over 20% |
+| road_06 | Cinderhole - Dragon Bone monasteries | 25.7 (25.0 road + 0.7 stair) | 1,028 / 1,215 road | 260 | 80 (21.3) | 189 | 52 | **Fails**: longest leg, 8.1 km over 12% |
+| road_07 | Aldmere - Lothaniel | 15.5 | 142 / 86 | 131 | 40 (10.7) | 67 | 26 | Good |
+| road_08 | Lothaniel - Ashira | 17.7 | 98 / 94 | 148 | 45 (12.1) | 75 | 30 | Good (at the edge) |
+| road_09 | Lirian canal cities - Port Goldmere | 26.2 | 138 / 111 | 220 | 68 (18.0) | 111 | 44 | Too long, but flat: needs a waystone |
+| road_10 | Thimblefolk - Oasis of Qadira | 15.8 | 107 / 72 | 133 | 41 (10.9) | 67 | 27 | Good |
+| road_11 | Oasis of Qadira - Zaruma gold road | 19.5 | 47 / 113 | 161 | 50 (13.2) | 82 | 32 | Slightly long on foot (> 45), flat |
+| road_12 | Oasis of Qadira - Zarvan | 25.0 (22.4 road + 2.6 stair) | 459 / 203 road; stair +1,985 | 201 | 62 (16.5) | 110 | 40 | **Fails**: long, and the last 2.6 km climbs 1,985 m |
+| road_13 | Oasis of Qadira - Thalassa's Back | 10.1 | 8 / 296 | 79 | 24 (6.5) | 42 | 16 | Good (downhill, no crossings) |
+
+Climb/descent is the sum of height steps along the polyline (the file's `climbM` is net, so smaller). Stair figures are the segments steeper than 35%.
+
+**Flags**
+1. **The four hairpin roads (04, 05, 06, 12) are not drivable as authored.** Road over 12%: road_04 1.0 km, road_05 6.7 km, road_06 8.1 km, road_12 1.5 km; over 20%: 0.7 / 4.2 / 2.2 / 0.7 km. They have 0-1 turns sharper than 90 degrees, so the switchback waypoints (world_upgrade_plan 2b) are not there yet and the grade is a straight line up the hill.
+2. **Karak Dun (2,596 m) and Zarvan (2,583 m) sit on peaks.** road_04 and road_12 each end with a 2.6-3.0 km section gaining about 2,000 m. That matches the existing finding ("reached by road to within 2.5 km, then by their own stair or lift"). Climbing 2,000 m under 12% needs about 17 km of road, so a fully switchbacked road_04 would be about 25 km (not 10.7) and road_12 about 39 km. Better: lower the settlements (the 2b proposals) or keep them stair/lift towns and stop caravans at the foot.
+3. **Cart trade routes (§4.3) cannot reach Karak Dun, Cinderhole, the monasteries or Zarvan** until grade is under 12% end to end. Mountain towns suit stairs and lifts in the lore; record it in `Data/` so route registration rejects them.
+4. **Long legs.** Over 45 min on foot: roads 02, 05, 06, 09, 11. Over 40 mounted: 05, 06, 09 (road_12 is exactly 40). road_06 is 80 min on foot (21 in-game hours, longer than a night).
+5. **Walk speed is unusable for roads** (78-260 min). Use walk only inside towns.
+6. **Day/night.** Legs over 37.5 min cross night if started late, so an inn or camp (`inns.md`, "Wait / sleep anywhere safe") must be reachable mid-road. Legs under 30 min (03, 04, 13) fit inside one stretch with margin.
+
+**Proposals (need the user's OK, then data)**
+- Add `travel` to `world_tuning.json`: `{walkMps 2.0, runMps 6.5, cartMps 4.0, mountMps 10.0, slope {k 3.5, offset 0.05, minFactor 0.15, maxFactor 1.2}, cartMaxGrade 0.12, stairGrade 0.35, legTargetFootMin 45, legTargetMountMin 40}`. qa-tester: a test that fails when a road's run time exceeds `legTargetFootMin` without a waystone mid-road, and one that fails when a cart route crosses a segment over `cartMaxGrade`.
+- **Waystones on the road:** one mid-road waystone on roads 02, 05, 06, 09, 11, 12 (19 km and over) so no leg between waystones passes 40 min on foot; fast travel only between attuned waystones (free, but not during a siege), the Mapmaker widens it. That keeps roads meaningful on the first trip and cheap on the tenth.
+- **world-designer:** switchbacks for 04/05/06/12 (or lower / lift-serve Karak Dun and Zarvan), then rerun this table. **canon-keeper:** the speeds and the 45 / 40 min targets as a Canon §6 batch. Cart speed also feeds caravan pay and timing in §4.3.
+
 ## Combat Pillars
 > Summary of the pillars detailed in `12_Systems/combat.md`.
 

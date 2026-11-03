@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aetheria live renders</title>
+<style>
+  :root { --bg:#1d1b19; --ink:#f3e6c8; --mut:#b9a98a; --card:#2a2723; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px system-ui,sans-serif; }
+  header { padding:12px 16px; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  h1 { font-size:18px; margin:0; }
+  #stamp { color:var(--mut); }
+  main { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr)); gap:12px; padding:0 16px 16px; }
+  figure { margin:0; background:var(--card); border-radius:8px; overflow:hidden; }
+  figure img { width:100%; display:block; background:#000; aspect-ratio:16/9; object-fit:cover; }
+  figure.big img { aspect-ratio:auto; object-fit:contain; }
+  figcaption { padding:6px 10px; color:var(--mut); font-size:13px; }
+  figure.big { grid-column:1/-1; }
+</style>
+</head>
+<body>
+<header><h1>Aetheria live renders</h1><span id="stamp"></span><span>reloads every 2 minutes</span></header>
+<main id="grid"></main>
+<script>
+const base = "../";
+const items = [
+  ["Art/Blender/WorldTerrain/world/world_overview.png", "Whole world terrain (sector build, 150 tiles)", true],
+  ["10_World/maps/diorama_spine.png", "Dragon Spine diorama", true],
+  ["10_World/maps/diorama_continent.png", "Continent diorama", false],
+  ["10_World/maps/diorama_heartland.png", "Heartland diorama", false],
+  ["reports/world_terrain_2026-11-02/aldmere_x61_y45_s10_r20_detail.png", "Aldmere detail", false],
+  ["reports/world_terrain_2026-11-02/coast_southwest_x30_y80_s10_r20_delta.png", "Coast delta", false],
+  ["reports/world_terrain_2026-11-02/brindlewick_closeup_x71.6_y59_s2_r10_street.png", "Brindlewick street", false],
+  ["reports/world_terrain_2026-11-02/seam_pair_heartland_preview.png", "Seam pair", false],
+  ["reports/world_terrain_2026-11-02/dragonspine_mountain_x83_y23_s10_r20_preview.png", "Dragon Spine tile", false]
+];
+const creatures = [
+  ["reports/blender_wave_2026-11-02/creatures/w1_before.png", "Before: Young Dragon, Wyvern, Gargoyle, Arch Demon"],
+  ["reports/blender_wave_2026-11-02/creatures/w1_after.png", "After: the same four"],
+  ["reports/blender_wave_2026-11-02/creatures/w1_after_dragons.png", "After: Hatchling, Adult Dragon, Drake Lord, Bone Dragon"],
+  ["13_Production/screenshots/creatures/dragons.png", "Dragon contact sheet (full rebuild, queued after the place renders)"]
+];
+function card(grid, path, label, big, t) {
+  const f = document.createElement("figure");
+  if (big) f.className = "big";
+  const img = document.createElement("img");
+  img.src = base + encodeURI(path) + "?t=" + t;
+  img.alt = label;
+  img.loading = "lazy";
+  const cap = document.createElement("figcaption");
+  cap.textContent = label;
+  img.onerror = () => { img.style.display = "none"; cap.textContent = label + " (not rendered yet)"; };
+  f.append(img, cap);
+  grid.append(f);
+}
+function heading(grid, text) {
+  const h = document.createElement("h2");
+  h.textContent = text;
+  h.style.cssText = "grid-column:1/-1;margin:12px 0 0;font-size:16px";
+  grid.append(h);
+}
+async function places(grid, t) {
+  try {
+    const r = await fetch(base + "Art/Blender/WorldTerrain/places/places_manifest.json?t=" + t);
+    if (!r.ok) return;
+    const m = await r.json();
+    for (const [kind, title] of [["town", "Towns"], ["area", "Areas"]]) {
+      const list = m.items.filter(i => i.kind === kind);
+      heading(grid, title + " (" + list.length + " rendered)");
+      for (const i of list) card(grid, i.path, i.name + (kind === "town" ? " · " + i.region : ""), false, t);
+    }
+    heading(grid, "");
+  } catch (e) { /* manifest not there yet */ }
+}
+async function latest(grid, t) {
+  // the local server lists the folder; show the newest previews the terrain agent rendered
+  try {
+    const dir = "Art/Blender/WorldTerrain/";
+    const html = await (await fetch(base + dir + "?t=" + t)).text();
+    const names = [...html.matchAll(/href="([^"]+_(preview|detail|street)\.png)"/g)].map(m => decodeURIComponent(m[1]));
+    if (!names.length) return;
+    const withTime = await Promise.all(names.map(async n => {
+      const r = await fetch(base + dir + encodeURIComponent(n) + "?t=" + t, { method: "HEAD" });
+      return [n, Date.parse(r.headers.get("Last-Modified") || 0) || 0];
+    }));
+    withTime.sort((a, b) => b[1] - a[1]);
+    heading(grid, "Latest test renders (newest first)");
+    for (const [n, ms] of withTime.slice(0, 12))
+      card(grid, dir + n, n.replace(/_x[\d.]+_y[\d.]+_s\d+_r\d+/, "").replace(/_/g, " ") + " · " + new Date(ms).toLocaleTimeString(), false, t);
+  } catch (e) { /* folder not readable */ }
+}
+async function render() {
+  const t = Date.now();
+  const y = window.scrollY;
+  const grid = document.createElement("main");
+  grid.id = "grid";
+  await latest(grid, t);
+  heading(grid, "Map");
+  for (const [path, label, big] of items.slice(0, 4)) card(grid, path, label, big, t);
+  heading(grid, "Creatures (wave 1: dragon wings, tail spade, Gargoyle and Arch Demon)");
+  for (const [path, label] of creatures) card(grid, path, label, false, t);
+  await places(grid, t);
+  heading(grid, "Detail shots");
+  for (const [path, label, big] of items.slice(4)) card(grid, path, label, big, t);
+  document.getElementById("grid").replaceWith(grid);
+  window.scrollTo(0, y);
+  document.getElementById("stamp").textContent = "updated " + new Date().toLocaleTimeString();
+}
+render();
+setInterval(render, 120000);
+</script>
+</body>
+</html>

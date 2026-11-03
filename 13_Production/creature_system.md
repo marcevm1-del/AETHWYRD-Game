@@ -46,6 +46,13 @@ From `reports/design_review_2026-10-31.md` (C1, C3, C5, mushroom faces, N4), wit
 - **Bipeds (C5):** `leg`/`arm(taper=True)` swell the thigh and upper arm to 1.15 r0 and thin the ankle and wrist to 0.72 r1. The loincloth (`features.loincloth`) is a curved trapezoid (top 0.8× hip width, bottom 0.55×, 0.35× leg long) in two segments with a 10° flare, folds, a back flap, a waist cord, cloth `#8A5A35` and a 0.03 m darker hem. Skeleton ribs: five thin sloping bars with wide gaps and a short sternum. The sword blade is at least 7 cm wide (`Ctx.metres` turns real-world sizes into model units).
 - **Mushroom faces:** F–E mushrooms get dot eyes (0.36, 24°, `eye_up` 0) and a tiny "o" mouth (0.12 hr). There are no teeth, and the painted spots stay off the face. Spore Lords (matched on the name) keep the teeth grin and get glowing irises. Growths of every species keep their edge ≥ 0.5 hr from any eye's edge.
 
+## Wave 1 dragon fixes (2026-11-02 follow-up)
+
+Evidence: `reports/blender_wave_2026-11-02/creatures/w1_before.png`, `w1_after.png`, `w1_after_dragons.png`.
+- **Wing/body ratio:** one rule for every dragon and wyvern species: wing tip-to-tip = `plans.DRAGON_WING_RATIO` (1.6) x nose-to-tail length (was 2.2-2.5), body mass x `DRAGON_BULK` (1.4). The wings are raised and swept back (fingers fan down less) so the membrane no longer hangs over the body and tail.
+- **Tail spade:** 0.36 x 0.30 (was 0.2 x 0.17), bone-coloured, rolled 50 degrees, and the tail swings out to the side and low so the spade clears the wing at the preview camera.
+- **Gargoyle and Arch Demon** are on the wyvern plan but are not dragons: they keep the original wings (`WYVERN_WING_SPAN` 1.4, no lift). Their tail also got the side sweep.
+
 ## Using it in Blender
 
 1. **Install.** Zip `Tools/blender/ascend_creatures` and install it like the buildings add-on. `ascend_buildings` must be installed too, because the creatures reuse its mesh helpers.
@@ -78,5 +85,5 @@ Add `-- --families Slimes,Beasts` or `-- --ids mon_goblin` to build a subset.
 - **Rigs and poses.** These are static T- and A-poses; `Data/Monsters/rigs.json` and `Tools/blender/build_rig.py` would be the next step.
 - **Unity.** These are high-poly sources, not game meshes. Going into Unity needs a baked low-poly with normal maps, a rig and LODs.
 - **Description detail.** Some recipe parts don't fit their animal (the data gives the Forest Wolf antlers). The generator follows the data; fix it in `species.json`.
-- **Still open:** at sheet size the bigger wings make a dragon's body small in its tile, and all four dragon species share one silhouette.
+- **Still open:** all four dragon species share one silhouette.
 - **Coverage.** The rarer body plans (aberrations, swarms, cephalopods, plants) are simpler than the quadrupeds and bipeds. The giants (Behemoth Ascendant, Hive Mother) are modelled at their true size, up to 2 km.

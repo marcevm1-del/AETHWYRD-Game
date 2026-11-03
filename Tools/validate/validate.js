@@ -281,10 +281,16 @@ for (const d of WEEKDAYS) {
   if (wk.filter(q => q.slot === 'daily').length < 3) err(`weekly ${d}`, 'needs at least 3 dailies');
 }
 
+// 4) Physical map (Tools/validate/map_checks.js): errors fail the build, warnings are listed only
+const mapChecks = require('./map_checks').run(DATA);
+for (const e of mapChecks.errors) errors.push(e);
+
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
 if (errors.length) {
   console.error(`✗ ${errors.length} problem(s)\n` + errors.map(e => '  - ' + e).join('\n'));
   process.exit(1);
 }
+for (const w of mapChecks.warnings) console.warn('  ! ' + w);
 console.log(`✓ Data valid. ${counts}`);
+console.log(`  ${mapChecks.summary}`);

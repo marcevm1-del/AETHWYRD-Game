@@ -189,7 +189,7 @@ module.exports = {
     behaviors: ['Aggressive', 'Territorial', 'Pack'],
     trope: 'Orc warbands and the Orc Disaster that devours its way to power (Tensura)',
     cores: [
-      'Orc Grunt|E|3|None|2.0|tusks, war paint and a dented iron axe|medium_biped',
+      'Orc Grunt|E|3|None|2.0|tusks, war paint and a dented iron sword|medium_biped',
       'Orc Warrior|D|3|None|2.1|a fur mantle and rust-stained chain mail|medium_biped',
       'Orc Berserker|D+|3|Fire|2.2|blood-red war paint and broken chains on its wrists|medium_biped',
       'Ogre|C|3|Earth|3.5|a sagging belly, a tree-trunk club and a toll sack',

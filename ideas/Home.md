@@ -75,6 +75,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/agent_team|13_Production/agent_team]]
 - [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
+- [[Design Bible/13_Production/art_budgets|13_Production/art_budgets]]
 - [[Design Bible/13_Production/art_direction|13_Production/art_direction]]
 - [[Design Bible/13_Production/building_system|13_Production/building_system]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
@@ -85,9 +86,12 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
 - [[Design Bible/13_Production/reference_games|13_Production/reference_games]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
+- [[Design Bible/13_Production/terrain_unity_import|13_Production/terrain_unity_import]]
 - [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
 - [[Design Bible/13_Production/tutorial_vision|13_Production/tutorial_vision]]
+- [[Design Bible/13_Production/world_terrain|13_Production/world_terrain]]
+- [[Design Bible/13_Production/world_upgrade_plan|13_Production/world_upgrade_plan]]
 
 ## Classes (12)
 - [[Classes/Swordsman|Swordsman]]: Balanced melee DPS

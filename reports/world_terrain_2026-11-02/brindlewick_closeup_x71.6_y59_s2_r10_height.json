@@ -1,0 +1,298 @@
+{
+ "format": "ascend-terrain-heightmap/1",
+ "generator": "ascend_terrain/1",
+ "name": "brindlewick_closeup_x71.6_y59_s2_r10",
+ "seed": 1,
+ "tile": {
+  "x0Km": 71.6,
+  "y0Km": 59.0,
+  "sizeKm": 2.0,
+  "x1Km": 73.6,
+  "y1Km": 61.0,
+  "tileX": 35.8,
+  "tileY": 29.5
+ },
+ "resolutionM": 10,
+ "samples": 201,
+ "axes": "raster row 0 = north edge (map y = y0Km), column 0 = west edge (map x = x0Km); sample (i,j) at x = x0Km + i*res/1000, y = y0Km + j*res/1000; map y runs south. Edge rows/columns are shared with the neighbouring tile.",
+ "encoding": {
+  "bits": 16,
+  "minM": -1800.0,
+  "maxM": 3400.0,
+  "formula": "heightM = minM + value / 65535 * (maxM - minM)",
+  "stepM": 0.07934691386282139
+ },
+ "heightmapSha256": "7c90dc6093b4b9a28ee069e1a1db5385aaff99b1b92e78615c7f6725d456d269",
+ "stats": {
+  "minM": 267.2067265081188,
+  "maxM": 337.09723634624055,
+  "meanM": 301.31351663742254,
+  "seaFraction": 0.0,
+  "maxSlope": 0.5836589611503399,
+  "p99Slope": 0.3231904218012414
+ },
+ "files": {
+  "heightmap": "brindlewick_closeup_x71.6_y59_s2_r10_height.png",
+  "sidecar": "brindlewick_closeup_x71.6_y59_s2_r10_height.json",
+  "splat": "brindlewick_closeup_x71.6_y59_s2_r10_splat.png",
+  "top": "brindlewick_closeup_x71.6_y59_s2_r10_top.png",
+  "preview": "brindlewick_closeup_x71.6_y59_s2_r10_preview.png",
+  "street": "brindlewick_closeup_x71.6_y59_s2_r10_street.png",
+  "blend": "brindlewick_closeup_x71.6_y59_s2_r10.blend"
+ },
+ "seaLevelM": 0.0,
+ "settlements": [
+  {
+   "name": "Brindlewick",
+   "atKm": [
+    72.6,
+    60.0
+   ],
+   "size": "village",
+   "padFlatRadiusM": 160.0,
+   "padSkirtM": 140.0,
+   "padHeightM": 298.649,
+   "source": "physical_map.settlements",
+   "ring0": {
+    "sizeM": 200.0,
+    "centreKm": [
+     72.6,
+     60.0
+    ],
+    "heightM": 298.649,
+    "note": "the pad is exactly flat (no noise, no road, no river) for 160 m round the centre, so the hand-built Ring 0 field fits"
+   }
+  }
+ ],
+ "roads": [
+  {
+   "id": "road_01",
+   "lengthKm": 12.94
+  }
+ ],
+ "rivers": [
+  {
+   "id": "river_30",
+   "name": "Millbrook",
+   "flowIndex": 48.0,
+   "points": [
+    [
+     71.523,
+     59.004,
+     293.9,
+     10.9
+    ],
+    [
+     71.6113,
+     59.0509,
+     293.68,
+     10.9
+    ],
+    [
+     71.6939,
+     59.1071,
+     293.36,
+     10.9
+    ],
+    [
+     71.7818,
+     59.1526,
+     292.71,
+     10.9
+    ],
+    [
+     71.8754,
+     59.188,
+     291.81,
+     10.9
+    ],
+    [
+     71.97,
+     59.2181,
+     290.75,
+     10.9
+    ],
+    [
+     72.0693,
+     59.2299,
+     289.61,
+     10.9
+    ],
+    [
+     72.1683,
+     59.2447,
+     288.4,
+     10.9
+    ],
+    [
+     72.2679,
+     59.2537,
+     287.22,
+     10.9
+    ],
+    [
+     72.3678,
+     59.2586,
+     285.99,
+     11.0
+    ],
+    [
+     72.4672,
+     59.2676,
+     284.71,
+     11.0
+    ],
+    [
+     72.5662,
+     59.282,
+     283.46,
+     11.0
+    ],
+    [
+     72.6655,
+     59.2939,
+     282.33,
+     11.1
+    ],
+    [
+     72.7553,
+     59.3361,
+     281.31,
+     11.1
+    ],
+    [
+     72.8416,
+     59.3866,
+     280.27,
+     11.1
+    ],
+    [
+     72.9236,
+     59.4431,
+     279.05,
+     11.1
+    ],
+    [
+     72.9972,
+     59.5108,
+     277.61,
+     11.1
+    ],
+    [
+     73.0688,
+     59.5805,
+     276.15,
+     11.1
+    ],
+    [
+     73.1386,
+     59.6522,
+     274.84,
+     11.1
+    ],
+    [
+     73.2061,
+     59.726,
+     273.77,
+     11.1
+    ],
+    [
+     73.2723,
+     59.801,
+     272.78,
+     11.1
+    ],
+    [
+     73.3408,
+     59.8738,
+     271.74,
+     11.3
+    ],
+    [
+     73.4098,
+     59.9463,
+     270.64,
+     11.5
+    ],
+    [
+     73.4817,
+     60.0158,
+     269.63,
+     11.7
+    ],
+    [
+     73.5557,
+     60.083,
+     268.72,
+     11.8
+    ],
+    [
+     73.6356,
+     60.1422,
+     268.11,
+     12.0
+    ]
+   ],
+   "pointFields": "[xKm, yKm, waterSurfaceM, widthM]"
+  }
+ ],
+ "lakes": [],
+ "peaks": [],
+ "roadReports": {
+  "road_01": {
+   "rerouted": false,
+   "authoredLengthKm": 12.939784984113457,
+   "authoredMaxCutFillM": 5.8067855494412015,
+   "lengthKm": 12.939784984113457,
+   "profileMaxGrade": 0.08769335214168475,
+   "iterations": 3,
+   "maxCutFillM": 5.8067855494412015,
+   "naturalMaxGrade": 0.30476031816724275
+  }
+ },
+ "dressing": {
+  "layer": "separate from the heightmap: it reads heights, never writes them",
+  "sha256": "9942b19b0993607d0cafd1f4f6fbcef29a02d1ac3c5a8b11f1aaae43d99e1e88",
+  "counts": {
+   "trees": 698,
+   "buildings": 43,
+   "walls": 0,
+   "fields": 9,
+   "fences": 6,
+   "paths": 1,
+   "deltas": 0,
+   "grassClumps": 10317,
+   "barrel": 9,
+   "cart": 1,
+   "crate": 3,
+   "flower": 118,
+   "laundry": 10,
+   "planter": 6,
+   "reed": 25,
+   "rock": 9,
+   "slab": 14,
+   "tuft": 308,
+   "byKind": {
+    "town_gate": 1,
+    "lamp_post": 15,
+    "clock_tower": 1,
+    "house_cottage": 9,
+    "manor": 3,
+    "house_tall": 4,
+    "house_house": 5,
+    "row_house": 2,
+    "farmhouse": 1,
+    "barn": 1,
+    "granary_silo": 1
+   }
+  },
+  "ring0Violations": 0,
+  "landmarks": [
+   {
+    "name": "Brindlewick clock tower",
+    "xKm": 72.734,
+    "yKm": 59.986
+   }
+  ]
+ }
+}

@@ -410,6 +410,11 @@ def _dleg(b, pts, r0, r1, foot):
     b.feet.append(pts[-1])
 
 
+DRAGON_WING_RATIO = 1.6   # wing tip-to-tip / nose-to-tail length, for every dragon species (was 2.2-2.5)
+DRAGON_BULK = 1.4         # body mass scale vs the 2026-10-31 build, so the body reads as the mass under the wings
+WYVERN_WING_SPAN = 1.4    # Gargoyle and Arch Demon keep the original wyvern-plan wings (not the dragon rule)
+
+
 def dragon(b, look, wyvern=False):
     """Dragons and wyverns (design review 2026-10-31 C3): a deep chest, a rising S-neck, a big horned wedge head,
     digitigrade hind legs with heavy thighs (1.4x the forelimb radius), forelegs 0.8x the hind leg height so the back
@@ -418,19 +423,21 @@ def dragon(b, look, wyvern=False):
     b.kind = "dragon"
     fr = 0.07                       # forelimb radius; hind thighs are 1.4x
     if wyvern:  # two legs, the wings are its arms
-        b.ellip((0, 0.0, 0.48), (0.15, 0.27, 0.15), rot=(-12, 0, 0))
-        b.ball((0, -0.16, 0.53), 0.14)
-        b.ball((0, 0.17, 0.48), 0.13)
+        k = DRAGON_BULK
+        b.ellip((0, 0.0, 0.48), (0.15 * k, 0.27, 0.15 * k), rot=(-12, 0, 0))
+        b.ball((0, -0.16, 0.53), 0.14 * k)
+        b.ball((0, 0.17, 0.48), 0.13 * k)
         for s in (-1, 1):  # hip, knee forward, hock back and up, toes
             _dleg(b, [(s * 0.11, 0.1, 0.44), (s * 0.16, -0.03, 0.29), (s * 0.15, 0.12, 0.13), (s * 0.14, 0.06, 0.035)],
                   fr * 1.4, fr * 0.5, (0.06, 0.1, 0.035))
         neck = [(0, -0.22, 0.6), (0, -0.34, 0.74), (0, -0.4, 0.88), (0, -0.52, 0.94)]
-        tail = [(0, 0.3, 0.47), (0.03, 0.5, 0.41), (0.1, 0.7, 0.3), (0.17, 0.9, 0.2), (0.2, 1.1, 0.13), (0.17, 1.3, 0.1)]
+        tail = [(0, 0.3, 0.47), (0.03, 0.5, 0.41), (0.1, 0.7, 0.3), (-0.22, 0.88, 0.2), (-0.5, 1.0, 0.16), (-0.82, 1.1, 0.14)]
         z0 = 0.48
     else:
-        b.ball((0, -0.17, 0.4), 0.17)   # deep chest, now lower than the haunches so the back slopes
-        b.ellip((0, 0.04, 0.43), (0.15, 0.25, 0.15), rot=(8, 0, 0))
-        b.ball((0, 0.25, 0.46), 0.15)   # high haunches
+        k = DRAGON_BULK
+        b.ball((0, -0.17, 0.4 + 0.17 * (k - 1)), 0.17 * k)   # deep chest, now lower than the haunches so the back slopes
+        b.ellip((0, 0.04, 0.43 + 0.15 * (k - 1)), (0.15 * k, 0.25, 0.15 * k), rot=(8, 0, 0))
+        b.ball((0, 0.25, 0.46 + 0.15 * (k - 1)), 0.15 * k)   # high haunches
         hind_h = 0.42
         for s in (-1, 1):
             # forelegs: shoulder at 0.8x the hip height; elbow back, wrist forward
@@ -441,7 +448,7 @@ def dragon(b, look, wyvern=False):
             _dleg(b, [(s * 0.12, 0.27, hind_h), (s * 0.17, 0.16, 0.27), (s * 0.16, 0.33, 0.14), (s * 0.15, 0.27, 0.035)],
                   fr * 1.4, fr * 0.55, (0.065, 0.09, 0.035))
         neck = [(0, -0.28, 0.48), (0, -0.4, 0.62), (0, -0.46, 0.78), (0, -0.58, 0.88)]  # a long S-curve
-        tail = [(0, 0.36, 0.47), (0.03, 0.56, 0.4), (0.1, 0.76, 0.28), (0.17, 0.95, 0.17), (0.2, 1.15, 0.11), (0.17, 1.36, 0.09)]
+        tail = [(0, 0.36, 0.47), (0.03, 0.56, 0.4), (0.1, 0.76, 0.28), (-0.22, 0.93, 0.19), (-0.52, 1.06, 0.15), (-0.86, 1.16, 0.13)]
         z0 = 0.43
     b.chain(neck, [0.115, 0.065])
     hr = 0.1
@@ -451,7 +458,7 @@ def dragon(b, look, wyvern=False):
     b.ellip(b.snout, (hr * 0.62, hr * 1.0, hr * 0.5))
     b.ellip(b.head + V(0, -hr * 0.35, hr * 0.45), (hr * 0.7, hr * 0.6, hr * 0.25))  # brow ridge
     b.chain(tail, [0.105, 0.014])
-    b.torso_r, b.neck = 0.15, V(neck[1])
+    b.torso_r, b.neck = 0.15 * DRAGON_BULK, V(neck[1])
     b.face = V(0, -1, -0.05).normalized()
     b.eye_size, b.eye_spread, b.eye_up = 0.2, 40, 26
     b.spine = [V(neck[1]) + V(0, 0, 0.08), V(0, -0.12, z0 + 0.13), V(0, 0.08, z0 + 0.15), V(0, 0.28, z0 + 0.16), V(tail[1]) + V(0, 0, 0.07),
@@ -459,7 +466,13 @@ def dragon(b, look, wyvern=False):
     b.tail_root, b.tail_dir = V(tail[-1]), (V(tail[-1]) - V(tail[-2])).normalized()
     b.tail_tip, b.tail_tip_dir = V(tail[-1]), b.tail_dir.copy()   # the spade sits here (features.dragon_spade)
     b.wing_root = V(0, -0.13, z0 + 0.14)
-    b.wing_span = 2.5 if not wyvern else 2.4  # +80%: tip to tip >= 2.2x nose-to-tail length
+    # tip-to-tip = about 2.08 x wing_span (features.wings); one ratio for every dragon species. The Gargoyle and Arch
+    # Demon (wyvern plan, not dragons) keep the original smaller wings: see plans.WYVERN_WING_SPAN and features.wings.
+    length = (V(tail[-1]).y - (b.snout.y - hr * 0.8))
+    b.wing_span = DRAGON_WING_RATIO * length / 2.08
+    nm = look.name.lower()
+    if wyvern and any(w in nm for w in ("gargoyle", "arch demon")):
+        b.wing_span = WYVERN_WING_SPAN   # keeps its own wings (design review 2026-10-31 follow-up)
     b.mouth = b.snout + V(0, -hr * 0.7, -hr * 0.2)
     b.hands = b.feet[:2]
 

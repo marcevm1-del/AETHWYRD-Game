@@ -1,0 +1,197 @@
+{
+ "format": "ascend-terrain-heightmap/1",
+ "generator": "ascend_terrain/1",
+ "name": "ironhold_mountain_x61.5_y33_s10_r20",
+ "seed": 1,
+ "tile": {
+  "x0Km": 61.5,
+  "y0Km": 33.0,
+  "sizeKm": 10.0,
+  "x1Km": 71.5,
+  "y1Km": 43.0,
+  "tileX": 6.15,
+  "tileY": 3.3
+ },
+ "resolutionM": 20,
+ "samples": 501,
+ "axes": "raster row 0 = north edge (map y = y0Km), column 0 = west edge (map x = x0Km); sample (i,j) at x = x0Km + i*res/1000, y = y0Km + j*res/1000; map y runs south. Edge rows/columns are shared with the neighbouring tile.",
+ "encoding": {
+  "bits": 16,
+  "minM": -1800.0,
+  "maxM": 3400.0,
+  "formula": "heightM = minM + value / 65535 * (maxM - minM)",
+  "stepM": 0.07934691386282139
+ },
+ "heightmapSha256": "a50e24d7d23cf7de18d740ccee812d16f0815848e66a6ab08f848ad02c783597",
+ "stats": {
+  "minM": 300.03725466143214,
+  "maxM": 3104.464760756739,
+  "meanM": 1831.581766616402,
+  "seaFraction": 0.0,
+  "maxSlope": 5.6329022342329145,
+  "p99Slope": 1.9314282853646252
+ },
+ "files": {
+  "heightmap": "ironhold_mountain_x61.5_y33_s10_r20_height.png",
+  "sidecar": "ironhold_mountain_x61.5_y33_s10_r20_height.json",
+  "splat": "ironhold_mountain_x61.5_y33_s10_r20_splat.png",
+  "top": "ironhold_mountain_x61.5_y33_s10_r20_top.png",
+  "preview": "ironhold_mountain_x61.5_y33_s10_r20_preview.png",
+  "blend": "ironhold_mountain_x61.5_y33_s10_r20.blend"
+ },
+ "seaLevelM": 0.0,
+ "settlements": [
+  {
+   "name": "Ashen Mines camps",
+   "atKm": [
+    69.4,
+    36.3
+   ],
+   "size": "village",
+   "padFlatRadiusM": 50.0,
+   "padSkirtM": 70.0,
+   "padHeightM": 1948.348,
+   "source": "physical_map.settlements"
+  },
+  {
+   "name": "Karak Dûn",
+   "atKm": [
+    68.5,
+    40.6
+   ],
+   "size": "town",
+   "padFlatRadiusM": 80.0,
+   "padSkirtM": 100.0,
+   "padHeightM": 2473.743,
+   "source": "physical_map.settlements"
+  }
+ ],
+ "roads": [
+  {
+   "id": "road_04",
+   "lengthKm": 23.025
+  },
+  {
+   "id": "road_05",
+   "lengthKm": 22.078
+  },
+  {
+   "id": "road_06",
+   "lengthKm": 44.913
+  }
+ ],
+ "rivers": [
+  {
+   "id": "river_03",
+   "name": "Iron Hold River",
+   "flowIndex": 207.0,
+   "points": [
+    [
+     71.3952,
+     32.9236,
+     1370.95,
+     24.7
+    ],
+    [
+     71.4681,
+     32.992,
+     1370.95,
+     24.7
+    ],
+    [
+     71.5397,
+     33.0618,
+     1370.95,
+     24.7
+    ]
+   ],
+   "pointFields": "[xKm, yKm, waterSurfaceM, widthM]"
+  }
+ ],
+ "lakes": [
+  {
+   "id": "lake_11",
+   "surfaceM": 1262.0,
+   "atKm": [
+    69.7,
+    30.6
+   ]
+  },
+  {
+   "id": "lake_13",
+   "surfaceM": 1665.0,
+   "atKm": [
+    68.6,
+    37.9
+   ]
+  }
+ ],
+ "peaks": [
+  {
+   "name": null,
+   "atKm": [
+    64.3,
+    35.8
+   ],
+   "listedM": 3083.0
+  }
+ ],
+ "roadReports": {
+  "road_04": {
+   "rerouted": true,
+   "authoredLengthKm": 10.651834584761033,
+   "authoredMaxCutFillM": 1091.2745041250703,
+   "lengthKm": 23.024568824690736,
+   "profileMaxGrade": 0.11500000000001813,
+   "iterations": 3,
+   "maxCutFillM": 134.06755867591096,
+   "naturalMaxGrade": 0.9669093555840864
+  },
+  "road_05": {
+   "rerouted": true,
+   "authoredLengthKm": 22.744675946826586,
+   "authoredMaxCutFillM": 680.0280907834299,
+   "lengthKm": 22.07794795453236,
+   "profileMaxGrade": 0.11500000000000718,
+   "iterations": 3,
+   "maxCutFillM": 23.95805545732128,
+   "naturalMaxGrade": 0.8795419414703968
+  },
+  "road_06": {
+   "rerouted": true,
+   "authoredLengthKm": 25.737320956684435,
+   "authoredMaxCutFillM": 266.91298347087616,
+   "lengthKm": 44.91334227713288,
+   "profileMaxGrade": 0.11500000000001483,
+   "iterations": 3,
+   "maxCutFillM": 22.668480087669877,
+   "naturalMaxGrade": 0.705808291855588
+  }
+ },
+ "dressing": {
+  "layer": "separate from the heightmap: it reads heights, never writes them",
+  "sha256": "080e6ca9ea2b5fa1eb1a2bbf9f367d9053542ea8849866db27c9c26e19a735a9",
+  "counts": {
+   "trees": 1481,
+   "buildings": 32,
+   "walls": 0,
+   "fields": 0,
+   "fences": 0,
+   "paths": 0,
+   "deltas": 0,
+   "grassClumps": 0,
+   "flower": 7,
+   "rock": 173,
+   "byKind": {
+    "house_cottage": 10,
+    "house_tall": 6,
+    "house_house": 11,
+    "row_house": 1,
+    "cottage_round": 3,
+    "roadside_shrine": 1
+   }
+  },
+  "ring0Violations": 0,
+  "landmarks": []
+ }
+}

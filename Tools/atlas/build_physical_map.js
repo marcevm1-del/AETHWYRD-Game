@@ -586,6 +586,207 @@ for (const s of regionStats) { if (s.coastKm < 1) continue; const cells = s._cel
   for (const [nm, n] of cnt) seas.find(x => x.name === nm).coasts.push({ region: s.id, km: Math.round(n * CK) }); }
 for (const s of seas) s.coasts.sort((a, b) => b.km - a.km || (a.region < b.region ? -1 : 1));
 
+// ---------------------------------------------------------------- detail layer (additive): smooth rivers, settlements, roads
+// Everything below only ADDS fields (rivers[].pathCells/pathSmooth/order/endsIn, settlements[], roads[], detail, extra
+// checks and findings). Nothing above this line is changed by it, so older readers of physical_map.json see the same data.
+const DET = {
+  stepKm: 0.25,              // resample spacing of smooth rivers and roads
+  chaikinPasses: 3,          // corner-cutting passes that turn the 0.5 km cell staircase into a curve
+  slopeRadiusM: 300,         // settlement slope = steepest ground gradient within this radius
+  slopeLimitPct: 12,         // settlements steeper than this are listed under findings (not moved)
+  riverWidthK: 1.4,          // river width (m) = max(riverWidthMinM, K * sqrt(rain-weighted drainage km^2))
+  riverWidthMinM: 1.5,
+  roadSmoothPasses: 2,       // 3-point averaging passes on a road's elevation profile
+  roadNearKm: 0.75,          // a road "connects" a settlement within this distance of the line
+};
+const r2 = v => Math.round(v * 100) / 100, r3 = v => Math.round(v * 1000) / 1000;
+// Ground height on the atlas's own pixel grid (1200 x 800, 0.125 km): relief in metres plus the carved-pass notch; sea = 0.
+const hiG = new Float64Array(F.W * F.H);
+for (let k = 0; k < F.W * F.H; k++) {
+  if (F.regionAt[k] < 0) { hiG[k] = 0; continue; }
+  const c = cellOf((k % F.W) * F.SX, Math.floor(k / F.W) * F.SY);
+  hiG[k] = toMetres(F.hgt[k]) + (elevBeforeWater[c] - elevAtlas[c]);
+}
+function groundAt(ux, uy) {
+  const fx = Math.max(0, Math.min(F.W - 1.001, ux / F.SX)), fy = Math.max(0, Math.min(F.H - 1.001, uy / F.SY));
+  const i = Math.floor(fx), j = Math.floor(fy), tx = fx - i, ty = fy - j, g = (a, b) => hiG[(j + b) * F.W + i + a];
+  return g(0, 0) * (1 - tx) * (1 - ty) + g(1, 0) * tx * (1 - ty) + g(0, 1) * (1 - tx) * ty + g(1, 1) * tx * ty;
+}
+// The heightmap as the terrain mesh sees it: bilinear between cell centres of elevation.rows (whole metres).
+function gridAt(ux, uy) {
+  const fx = Math.max(0, Math.min(W - 1.001, ux / CK - .5)), fy = Math.max(0, Math.min(H - 1.001, uy / CK - .5));
+  const i = Math.floor(fx), j = Math.floor(fy), tx = fx - i, ty = fy - j, g = (a, b) => Math.round(elev[(j + b) * W + i + a]);
+  return g(0, 0) * (1 - tx) * (1 - ty) + g(1, 0) * tx * (1 - ty) + g(0, 1) * (1 - tx) * ty + g(1, 1) * tx * ty;
+}
+function maxSlopePct(ux, uy, rM) {
+  const rk = rM / 1000, pxr = Math.ceil(rk / F.SX) + 1, ci = Math.round(ux / F.SX), cj = Math.round(uy / F.SY); let best = 0;
+  for (let dj = -pxr; dj <= pxr; dj++) for (let di = -pxr; di <= pxr; di++) {
+    const i = ci + di, j = cj + dj; if (i < 1 || j < 1 || i >= F.W - 1 || j >= F.H - 1) continue;
+    if (Math.hypot(i * F.SX - ux, j * F.SY - uy) > rk) continue;
+    const k = j * F.W + i, gx = (hiG[k + 1] - hiG[k - 1]) / (2 * F.SX * 1000), gy = (hiG[k + F.W] - hiG[k - F.W]) / (2 * F.SY * 1000);
+    best = Math.max(best, 100 * Math.hypot(gx, gy));
+  }
+  return best;
+}
+function chaikinPts(pts, passes) { // pts: [x, y, u]; the ends stay put
+  for (let p = 0; p < passes && pts.length > 2; p++) {
+    const o = [pts[0]];
+    for (let i = 0; i < pts.length - 1; i++) { const a = pts[i], b = pts[i + 1]; o.push(a.map((v, k) => .75 * v + .25 * b[k]), a.map((v, k) => .25 * v + .75 * b[k])); }
+    o.push(pts[pts.length - 1]); pts = o;
+  }
+  return pts;
+}
+function resamplePts(pts, step) { // equal arclength spacing; keeps the last point exactly
+  const cum = [0]; for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+  const total = cum[cum.length - 1], n = Math.max(1, Math.round(total / step)), res = []; let seg = 0;
+  for (let s = 0; s <= n; s++) {
+    const d = total * s / n; while (seg < pts.length - 2 && cum[seg + 1] < d) seg++;
+    const span = cum[seg + 1] - cum[seg] || 1e-9, t = Math.max(0, Math.min(1, (d - cum[seg]) / span)), a = pts[seg], b = pts[seg + 1];
+    res.push(a.map((v, k) => v + (b[k] - v) * t));
+  }
+  return res;
+}
+// Strahler stream order over every cell that carries at least riverSourceFlow of drainage.
+const strahler = new Uint8Array(N);
+for (let i = order.length - 1; i >= 0; i--) {
+  const c = order[i]; if (flow[c] < T.riverSourceFlow) continue;
+  let m = 0, cnt = 0; for (const d of donors[c]) { const o = strahler[d]; if (!o) continue; if (o > m) { m = o; cnt = 1; } else if (o === m) cnt++; }
+  strahler[c] = m === 0 ? 1 : cnt >= 2 ? m + 1 : m;
+}
+// Smooth rivers: cell centres -> corner-cut curve -> a point every 0.25 km with water level (m), width (m) and stream order.
+for (const r of rivers) {
+  const cs = r._cells, n = cs.length, pts = cs.map((c, i) => [cx(c), cy(c), i]);
+  const zc = cs.map(c => filled[c]), fc = cs.map(c => flow[c]), oc = cs.map(c => strahler[c] || 1);
+  const lastRecv = recv[cs[n - 1]], seaEnd = lastRecv >= 0 && !land[lastRecv];
+  if (seaEnd) { pts.push([cx(lastRecv), cy(lastRecv), n]); zc.push(0); fc.push(fc[n - 1]); oc.push(oc[n - 1]); }
+  const m = pts.length, lerp = (arr, u) => { const i0 = Math.max(0, Math.min(m - 2, Math.floor(u))), t = Math.max(0, Math.min(1, u - i0)); return arr[i0] + (arr[i0 + 1] - arr[i0]) * t; };
+  const sm = resamplePts(chaikinPts(pts, DET.chaikinPasses), DET.stepKm);
+  let zPrev = Infinity;
+  r.pathCells = cs.map(c => [cx(c), cy(c)]);
+  r.pathSmooth = sm.map(([x, y, u]) => {
+    let z = r2(lerp(zc, u)); if (z > zPrev) z = zPrev; zPrev = z;   // water never rises going downstream
+    const w = Math.max(DET.riverWidthMinM, DET.riverWidthK * Math.sqrt(lerp(fc, u)));
+    return [r3(x), r3(y), z, Math.round(w * 10) / 10, oc[Math.max(0, Math.min(m - 1, Math.round(u)))]];
+  });
+  r.order = Math.max(...r.pathSmooth.map(p => p[4]));
+  const into = r.mouth.into && typeof r.mouth.into === 'object' ? r.mouth.into.id : r.mouth.into;
+  r.endsIn = seaEnd ? { type: 'sea', name: into } : { type: 'river', id: into };
+}
+{
+  const byId = new Map(rivers.map(r => [r.id, r])), bad = [];
+  for (const r of rivers) {
+    for (let i = 1; i < r.pathSmooth.length; i++) if (r.pathSmooth[i][2] > r.pathSmooth[i - 1][2]) bad.push(`${r.id} rises at point ${i}`);
+    let cur = r, hops = 0; while (cur.endsIn.type === 'river' && hops++ < 10) cur = byId.get(cur.endsIn.id) || { endsIn: { type: 'missing' } };
+    if (cur.endsIn.type !== 'sea') bad.push(`${r.id} ends in ${cur.endsIn.type}, not the sea`);
+  }
+  check('rivers_smooth_downhill_to_water', !bad.length, 'every smooth river point is at or below the one upstream, and every river (through its parent for tributaries and streams) ends in the sea (lakes on the way are crossed at their surface level)', bad);
+  if (bad.length) findings.push('Smooth rivers failed: ' + bad.join('; '));
+}
+
+// Settlements: regions.json map.places, text from the gazetteer, plus region anchors that corridors use as waypoints.
+const gazetteer = JSON.parse(fs.readFileSync(path.join(ROOT, 'Data', 'World', 'gazetteer.json'), 'utf8')).regions;
+const KIND = { 'ashby': 'town', 'greyhollow village': 'village', 'royal valley farms': 'farmland', 'brindlewick': 'village', 'millbrook': 'town', 'greymoor stilt-village': 'village',
+  'the walking hut market': 'market', 'canopy city lothaniel': 'city', 'moonwell hamlets': 'hamlet', 'thimblefolk mushroom town': 'town', 'lirian canal cities': 'city', 'fanghold': 'fortress',
+  'nomad yurt camps': 'camp', 'karak dûn': 'fortress', 'ashen mines camps': 'camp', 'moraveil goblin village': 'village', 'moraveil market town': 'town', 'border baronies': 'fort', 'mercenary forts': 'fort',
+  'velmark ducal towns': 'town', 'hoshizora city': 'city', 'bamboo sea villages': 'village', 'fox shrine isle': 'shrine', 'spirit inns': 'inn', 'skjaldheim': 'fortress', 'longhouse steads': 'farmstead',
+  'sect foothill towns': 'town', 'haneul gate-towns': 'town', 'ice-fishing villages': 'village', 'oasis of qadira': 'town', 'port goldmere': 'port', 'pirate stilt-towns': 'town', 'zarvan garden cities': 'city',
+  'zaruma gold-road towns': 'town', 'the town on thalassa\'s back': 'town', 'xochitl river-cities': 'city', 'lumbaya temple villages': 'village', 'stormreach cliff-towns': 'town', 'naming voyage harbor': 'port',
+  'ashira': 'town', 'dragon-bone monasteries': 'monastery', 'heavenfolk eyries': 'eyrie', 'vharlen frontier legions': 'fort', 'gearholm undercity': 'city', 'cinderhole': 'city', 'bastion outer ring': 'village',
+  'summer court glades': 'glade', 'terrace cities': 'city', 'lustrine glass beaches': 'village', 'stiller spring-towns': 'town', 'aldmere': 'capital' };
+const slug = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+const settlements = [];
+const addSettlement = (L, name, at, source) => {
+  const gz = ((gazetteer[L.id] || {}).settlements || []).find(s => s.name.toLowerCase() === name.toLowerCase());
+  const g = groundAt(at[0], at[1]), slope = maxSlopePct(at[0], at[1], DET.slopeRadiusM), [fld] = F.sample(at[0], at[1]);
+  const water = fld <= A.SEA_T ? 'sea' : lakeId[cellOf(at[0], at[1])] >= 0 ? 'lake' : null;
+  settlements.push({ id: slug(name), name, region: L.id, x: at[0], y: at[1], elevationM: Math.round(gridAt(at[0], at[1])), fineElevationM: Math.round(g), maxSlope300mPct: Math.round(slope * 10) / 10,
+    kind: KIND[name.toLowerCase()] || 'settlement', ring0: name === 'Brindlewick' || name === 'Millbrook', inWater: water,
+    source: gz ? source + ' + gazetteer' : source, ...(gz ? { gazetteer: gz.text } : {}) });
+};
+for (const L of lands) for (const [n, at] of Object.entries(L.places)) addSettlement(L, n, at, 'regions.json map.places');
+for (const co of CORRIDORS) for (const leg of co.legs) for (const spec of leg) {
+  if (spec === 'sea' || spec.includes(':')) continue; const L = lands[idx(spec)];
+  if (!settlements.some(s => s.id === slug(L.name))) addSettlement(L, L.name, [L.ax, L.ay], 'regions.json map.at (corridor waypoint without a map place)');
+}
+settlements.sort((a, b) => (a.region < b.region ? -1 : a.region > b.region ? 1 : a.id < b.id ? -1 : 1));
+for (const s of settlements) {
+  if (s.inWater) findings.push(`Settlement "${s.name}" (${s.region}) at ${s.x},${s.y} stands in ${s.inWater === 'sea' ? 'the sea' : 'a lake'} in the atlas land field (not moved).`);
+  if (s.maxSlope300mPct > DET.slopeLimitPct) findings.push(`Settlement "${s.name}" (${s.region}, ${s.kind}) at ${s.x},${s.y}, ${s.elevationM} m: steepest ground within ${DET.slopeRadiusM} m is ${s.maxSlope300mPct}% (over ${DET.slopeLimitPct}%); not moved.`);
+}
+{
+  const r0 = settlements.filter(s => s.ring0);
+  check('ring0_settlements_gentle', r0.length === 2 && r0.every(s => !s.inWater && s.maxSlope300mPct <= DET.slopeLimitPct), `Brindlewick and Millbrook are on dry ground with a slope within ${DET.slopeRadiusM} m of at most ${DET.slopeLimitPct}%`, r0.map(s => `${s.name}: ${s.elevationM} m, slope ${s.maxSlope300mPct}%`));
+}
+
+// Roads: the land legs of the five corridors, smoothed, with ground height at every point and the settlements they connect.
+const segDist = (px, py, a, b) => { const dx = b[0] - a[0], dy = b[1] - a[1], L2 = dx * dx + dy * dy, t = L2 ? Math.max(0, Math.min(1, ((px - a[0]) * dx + (py - a[1]) * dy) / L2)) : 0; return [Math.hypot(px - a[0] - t * dx, py - a[1] - t * dy), t]; };
+const segHit = (a, b, c, d) => { const r = [b[0] - a[0], b[1] - a[1]], s = [d[0] - c[0], d[1] - c[1]], den = r[0] * s[1] - r[1] * s[0]; if (Math.abs(den) < 1e-12) return null; const t = ((c[0] - a[0]) * s[1] - (c[1] - a[1]) * s[0]) / den, u = ((c[0] - a[0]) * r[1] - (c[1] - a[1]) * r[0]) / den; return t >= 0 && t <= 1 && u >= 0 && u <= 1 ? [a[0] + t * r[0], a[1] + t * r[1]] : null; };
+// The corridor route stops 2.5 km short of each town (it starts anywhere in the town's approach disc), so each end is joined
+// to its town by the same grade-and-altitude cost, with no height limit: the last climb (Karak Dûn, Zarvan) is the town's own.
+function leadRoute(from, to) {
+  const dist = new Float64Array(N).fill(Infinity), par = new Int32Array(N).fill(-1), hp = new Heap(); dist[from] = 0; hp.push(0, from);
+  while (hp.size) {
+    const [d, c] = hp.pop(); if (d > dist[c]) continue; if (c === to) break;
+    nbrs(c, (n, km) => { if (!land[n]) return; const grade = Math.abs(elev[n] - elev[c]) / 1000 / km, alt = Math.max(0, (elev[n] - 900) / 500), nd = d + km * (1 + 10 * grade + alt); if (nd < dist[n] - 1e-12) { dist[n] = nd; par[n] = c; hp.push(nd, n); } });
+  }
+  const p = []; for (let c = to; c >= 0; c = par[c]) p.push(c); p.reverse(); return p[0] === from ? p : [from, to];
+}
+const landCellNear = (x, y) => { const c = cellOf(x, y); if (land[c]) return c; let b = -1, bd = 1e9; for (let k = 0; k < N; k++) if (land[k]) { const d = Math.hypot(cx(k) - x, cy(k) - y); if (d < bd) { bd = d; b = k; } } return b; };
+const roads = [];
+for (const co of corridorOut) for (const l of co.legs) {
+  if (l.by !== 'land' || !l.passable || !l._path) continue;
+  const sf = settlements.find(s => s.name === l.from), st = settlements.find(s => s.name === l.to);
+  const inCells = leadRoute(landCellNear(sf.x, sf.y), l._path[0]), outCells = leadRoute(l._path[l._path.length - 1], landCellNear(st.x, st.y));
+  const cells = [...inCells, ...l._path.slice(1), ...outCells.slice(1)].map(c => [cx(c), cy(c), 0]);
+  const pl = a => { let k = 0; for (let i = 1; i < a.length; i++) k += Math.hypot(a[i][0] - a[i - 1][0], a[i][1] - a[i - 1][1]); return k; };
+  const rawAll = [[sf.x, sf.y, 0], ...cells, [st.x, st.y, 0]];
+  const stubFrom = pl([rawAll[0], ...cells.slice(0, inCells.length)]), stubTo = pl([...cells.slice(cells.length - outCells.length), rawAll[rawAll.length - 1]]);
+  const rp = resamplePts(chaikinPts(rawAll, DET.chaikinPasses), DET.stepKm);
+  let z = rp.map(p => gridAt(p[0], p[1]));
+  for (let p = 0; p < DET.roadSmoothPasses; p++) z = z.map((v, i) => i === 0 || i === z.length - 1 ? v : (z[i - 1] + 2 * v + z[i + 1]) / 4);
+  const pts = rp.map((p, i) => [r3(p[0]), r3(p[1]), Math.round(z[i] * 10) / 10]);
+  let km = 0, climb = 0, maxGrade = 0, top = null; const along = [0];
+  for (let i = 1; i < pts.length; i++) along.push(along[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+  km = along[along.length - 1];
+  for (let i = 0; i < pts.length; i++) { // the routed part only: the lead-ins to the towns are not held to the pass limit
+    if (along[i] < stubFrom - 1e-9 || along[i] > km - stubTo + 1e-9) continue;
+    if (!top || pts[i][2] > top[2]) top = pts[i];
+    if (i > 0 && along[i - 1] >= stubFrom - 1e-9) { const d = along[i] - along[i - 1], dz = pts[i][2] - pts[i - 1][2]; climb += Math.max(0, dz); maxGrade = Math.max(maxGrade, Math.abs(dz) / (d * 1000) * 100); }
+  }
+  if (!top) top = pts[0];
+  const conn = [];
+  for (const s of settlements) {
+    let best = null, acc = 0;
+    for (let i = 1; i < pts.length; i++) { const [d, t] = segDist(s.x, s.y, pts[i - 1], pts[i]), seg = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); if (d <= DET.roadNearKm && (!best || d < best.d)) best = { d, at: acc + t * seg }; acc += seg; }
+    if (best) conn.push({ id: s.id, atKm: Math.round(best.at * 10) / 10 });
+  }
+  conn.sort((a, b) => a.atKm - b.atKm || (a.id < b.id ? -1 : 1));
+  roads.push({ id: 'road_' + String(roads.length + 1).padStart(2, '0'), corridor: co.id, name: `${co.name}: ${l.from} to ${l.to}`, from: sf.id, to: st.id,
+    connects: conn.map(c => c.id), connectsAtKm: conn.map(c => c.atKm), lengthKm: r1(km), climbM: Math.round(climb), highestM: Math.round(top[2]), highestAt: [top[0], top[1]],
+    maxGradePct: Math.round(maxGrade * 10) / 10, approachKm: [r1(stubFrom), r1(stubTo)], endsM: [pts[0][2], pts[pts.length - 1][2]], passId: l.passId || null, regions: l.regions, crossings: [], points: pts });
+}
+for (const rd of roads) { // where a road crosses a river (a bridge or ford)
+  for (const rv of rivers) {
+    let prev = null;
+    for (let i = 1; i < rd.points.length; i++) for (let j = 1; j < rv.pathSmooth.length; j++) {
+      const h = segHit(rd.points[i - 1], rd.points[i], rv.pathSmooth[j - 1], rv.pathSmooth[j]);
+      if (h && !(prev && Math.hypot(prev[0] - h[0], prev[1] - h[1]) < 0.3)) { rd.crossings.push({ river: rv.id, at: [r3(h[0]), r3(h[1])], widthM: rv.pathSmooth[j][3] }); prev = h; }
+    }
+  }
+  rd.crossings.sort((a, b) => a.at[0] - b.at[0] || a.at[1] - b.at[1]);
+}
+check('roads_built', roads.length === corridorOut.reduce((n, co) => n + co.legs.filter(l => l.by === 'land' && l.passable).length, 0) && roads.every(r => r.points.length > 2 && r.highestM <= T.passLimitM + 100),
+  `one smooth road per land leg of the five corridors; the routed part (not the last stretch into a town) stays under ${T.passLimitM + 100} m on the heightmap`, roads.map(r => `${r.id} ${r.name}: ${r.lengthKm} km, highest ${r.highestM} m, max grade ${r.maxGradePct}%`));
+for (const rd of roads) if (rd.maxGradePct > 15) findings.push(`Road ${rd.id} (${rd.name}) is steeper than 15% on the heightmap (${rd.maxGradePct}% over 0.25 km, highest ${rd.highestM} m): switchbacks, stairs or a tunnel when it is built.`);
+const detail = {
+  note: 'Added layer (rivers[].pathCells/pathSmooth/order/endsIn, settlements[], roads[]). Older fields are unchanged. Generated by Tools/atlas/build_physical_map.js; docs 10_World/physical_geography.md §11.',
+  tuning: DET,
+  rivers: 'rivers[].path keeps the simplified cell points; rivers[].pathCells is every cell centre [x,y] km; rivers[].pathSmooth is [x km, y km, water level m, width m, Strahler stream order] every ~0.25 km from source to mouth (water level never rises downstream; tributaries end on their parent; main rivers end one sea cell offshore at 0 m); rivers[].order is the highest stream order; rivers[].endsIn says where it ends.',
+  settlements: 'settlements[]: id, name, region, x/y km, elevationM (the heightmap, bilinear on elevation.rows, so it sits on the terrain mesh), fineElevationM (atlas relief at 0.125 km), maxSlope300mPct (steepest gradient of the fine atlas relief within 300 m, percent), kind, ring0, inWater (sea|lake|null), source, gazetteer text.',
+  roads: 'roads[]: one per land leg of the five corridors; points are [x km, y km, heightmap m] every ~0.25 km; connects lists settlement ids within 0.75 km of the line in travel order; crossings are river crossings; approachKm is the length of the lead-in from the corridor route to each end settlement (not held to the 2,000 m pass limit; highestM, climbM and maxGradePct cover the corridor route only).',
+};
+log(`detail: ${settlements.length} settlements, ${roads.length} roads, ${rivers.reduce((n, r) => n + r.pathSmooth.length, 0)} smooth river points`);
+
 // ---------------------------------------------------------------- output JSON
 const rowsInt = a => Array.from({ length: H }, (_, j) => Array.from(a.slice(j * W, (j + 1) * W), v => Math.round(v)));
 const out = {
@@ -605,6 +806,7 @@ const out = {
   corridors: corridorOut.map(co => ({ ...co, legs: co.legs.map(({ _top, _path, ...l }) => l) })),
   regionStats: regionStats.map(({ _cells, ...s }) => s),
   checks, findings,
+  detail, settlements, roads,
 };
 // one row per line keeps the file diffable
 let json = JSON.stringify(out, null, 1);
