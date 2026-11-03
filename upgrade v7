@@ -1,0 +1,797 @@
+Absolutely. We'll remove multiplayer completely. Aetheria remains a single-player experience. No online servers, guilds, player trading, matchmaking, PvP, or multiplayer dependencies.
+
+For V7, I recommend a much better direction:
+
+### AETHERIA — UPGRADE V7
+
+### Advanced Exploration, Dungeons, Ancient Civilizations & Environmental Puzzles
+
+Single-player focused
+
+V7 should make exploring Aetheria an adventure in itself. Give players mysterious places to discover, elaborate dungeons to conquer, ancient civilizations to investigate, puzzles to solve, and secrets that reward curiosity.
+
+![地底都市の可能性｜シャシャ．虹](https://images.openai.com/static-rsc-4/TnjxzzAeUdd9ILt8lWlRNmpvkQHoDj0smsJQcKUCN3J2VuvHiTs-o8v22did04Lq5Z7Q_hr4ON8kSamX1cca7Dcbq5VRbDgDVtPj1_48uQ8-5tq9GiXmo6W3xHVldynbIpLGn1KQ_0JEB6lgOocGIJbsR1_bfctZNp3KBFGVqIm2drxJpaaLCDrlBYlMJitm?purpose=fullsize)
+
+![11 Haunted Places in South America: Exploring the Paranormal | Documentaries](https://images.openai.com/static-rsc-4/ErPHlxI4euHOZrzF-muQlhufAtYpIhMvd8onX-Qf_91EG_imaWCI4d7o0Ql6PHNnTh8yXp6xp9WZL8igrfyEida3dTiWlflFyEFsgfZeqOS4wof-t0pUqPADc7BMoFGtVI_V0I109W_gRGPAOus71eN-OqGaXzwiWNqWr4fHuvApbMeNXfqC-JC9saw-t7te?purpose=fullsize)
+
+![Coalition of Thenion Part II - The Hidden Hollows
+– Eldfall Chronicles](https://images.openai.com/static-rsc-4/HwnfW19e9iZO6AAdO13n9jvDi298etZKfITNW9YLTaIAMbGXZwjb2QPRybSE_ZkiAfiGs-5NwIQwEr0cG2dOGTWr9uCQKwpW6eTUkwzcr4b_GEXDDvLd7BTJjw3xIbeXCwM3gsawseCZc0RN8oX-0H1kVtYywNjhX3hTUGaOaH01FKlCu2LP4aRK14N78pXX?purpose=fullsize)
+
+### The upgrade progression
+
+| Version | Main focus                                  |
+| ------- | ------------------------------------------- |
+| V3      | Blender and 3D production                   |
+| V4      | Living world and dynamic narrative          |
+| V5      | Combat and enemy intelligence               |
+| V6      | Crafting, professions and survival          |
+| V7      | Exploration, dungeons and ancient mysteries |
+
+### 1\. Advanced dungeon generation
+
+Build a comprehensive dungeon framework with different layouts, mechanics, and challenges.
+
+![Dungeon | Fab](https://images.openai.com/static-rsc-4/dX5qr4fmiJ5XARDRsv7o-u_aVXmgbXXQIRPkgJsRG2qNkMXOInZCEbw4ve1LxS9oDXOOtvJEqqMom4WWkRpgkaycATFjAyFaJJFmxVi5SutM7YeUMmDgie8ifiHSQuMfoy6qpzVN1-ZkgaOMzYS2OM6cepPtRmQfxkADrYMyMxcB9SpoQGftRSlUy1EUd-1Z?purpose=fullsize)
+
+Dungeon categories:
+
+* Ancient temples.
+
+* Underground civilizations.
+
+* Abandoned fortresses.
+
+* Forgotten tombs.
+
+* Magical laboratories.
+
+* Cursed catacombs.
+
+* Monster lairs.
+
+* Elemental sanctuaries.
+
+* Lost libraries.
+
+* Ancient machine complexes.
+
+Dungeon features:
+
+* Multi-level layouts.
+
+* Secret rooms.
+
+* Hidden passages.
+
+* Locked chambers.
+
+* Environmental hazards.
+
+* Unique enemy populations.
+
+* Dungeon-specific bosses.
+
+* Traps and mechanisms.
+
+* Lore discoveries.
+
+* Hidden treasure chambers.
+
+* Shortcuts unlocked through exploration.
+
+Every major dungeon should have a distinctive identity rather than feeling like a rearranged copy of another dungeon.
+
+### 2\. Environmental puzzle system
+
+![Mayachin Shrine Guide: How to Solve 'A Fixed Device' (Zelda: TotK) · GameMe RU](https://images.openai.com/static-rsc-4/P0QAG_VxiGILkspsrYYchGpILcZd08TavWWDGltVqCmvUHPK7vKS_vtZTHdFz6z9cx-M8Rf6Nr8FyeOCRgqJK9C8LfwUJIoAt5gLwrzsAcxLZ_itzgZytGVPRhiXt5nM_fMBRBdwWLUtl4g3gQlXdUvdf2VzwoF1BOPsDF3f34p7-07k3omulFPP0Bvxt6nm?purpose=fullsize)
+
+![Mystical glowing scrolls amidst mountains | Free Photo Illustration - rawpixel](https://images.openai.com/static-rsc-4/B6XvKMoyntyQb5-Lax-1zAl4o84CYd8OuomQSozog-4NQjkVkRSakY3uoCMWBq0fBc4fwMhm3mhxAjwKuLisabXvluV1c1BLXYAQx_AdIX2pK5_YjYEj5WCnHjq7cVhSMba56zODrp1Jz4EDsKCzwIVYaw81jpSh0WkN8FvumAfr2j2MzlKMHhm0b60BEoP0?purpose=fullsize)
+
+![僕がゲームの「謎解き」が苦手な理由、ブレワイやティアキンなら大丈夫だった理由（前回記事に関する追記あり）｜Itaru Otomaru](https://images.openai.com/static-rsc-4/RyGZWtxYkxw_SNLTkthF1Lqy0-YV6qU6pmv4shHVgPtHD3sx_bIJqCZSdKL9T-PcGBliWholWUfBpgd3_6pTH-Wy9Q0SlcEY0DgeTmV5cFHHZehhImIa-jsXq9vf-kcKlPpZ1V99gRtVt178Lbv4XzTcwBw7nx-SLZua0Rgq1vF8WqhACAYUBVdwdbl-cI7x?purpose=fullsize)
+
+![Mystical ancient door glowing symbols | Premium Photo Illustration - rawpixel](https://images.openai.com/static-rsc-4/lybHstbKcI7fHpq02WJGeKEjpZrbA2AoeQ7qhffwagPblQfBq9JXWsKkUhv93kQjEWbv1QazTt7W77t7zSK9kANX1egwE1KfRMHK0hlnn3Ej-dmFUVZlAKGXTgF5LXHD7IoDtau3BmvMhts6-5APriOwS9WlFb7MmgQvAsBdeQSQW-yei3PeBsY5yEO5de5V?purpose=fullsize)
+
+![Тайный город – гробницы / Shadow of the Tomb Raider](https://images.openai.com/static-rsc-4/4uuxgF5ZBM_kDiGb-qPrlIdd_N0usrqEtMoOJcj9pgNicQJElsp0LYuvqXYcCC3Fm20Ht5xr477vxRBKPvxeYY1HQjaMSEJA2XlliVz_-5tl92JE9waeHBll_WC9i2uIsUkfSWz9eu9eJr8BALkEZtXTSG-GymPr0lhyoOjQt_tUt2e_6Om9eRoFvNNbmzbG?purpose=fullsize)
+
+![Guide for Call of the Sea - Chapter 6](https://images.openai.com/static-rsc-4/AXjOjKxJP7FdSpYcIsGMLu1MkSf17kmmVTwezRjDWrwGfDV6OyvRySpLrgLK8Rv3sNcKr5_HdzBantpPkAtTFZr6Ou8W5Prw_-onwkGXauhXY1xy4Id_952NyPfvqEssRT6Y8KcFJEKzuV2dwXp5PNQBdF3q0KqwLCtqssjSIvlzTkDaHHbwbuaUzX3jxyif?purpose=fullsize)
+
+![Join Echoes of the Lost Frontier - Discord / Owlbear Rodeo - Shadowdark RPG | StartPlaying Games](https://images.openai.com/static-rsc-4/G4oontDoLTm57n4N2Yi549mE9NscdGlBAc5DeqpDyd8_SX-sAZAWGKHOLBxGZpj2iLTUYsS6bNCwRlOI0TvAFLbdOGUgTxfYfbM4PK0ciCl7JlIUiZ8VsV9WvBKAsam1L8I9am4j_29fNa3c02yuEwdy0Qsj9TZz6L37-DbShjLj5sWFWzJNC_5rdMBlEgWS?purpose=fullsize)
+
+![Resonance: A Plague Tale Legacy – All Chapter 4 symbol puzzle solutions](https://images.openai.com/static-rsc-4/AfIJU_YYvZNE_j01wOCXo8lk9oWlDdvuz3SPmxwonbQ91ydyf6aBMXJ0eyguKBj1gbnKYo0_EX48oPfjEiyJ9UOIhkz2vMSSHFkPARy_wma8819G5UxkFULA-f1FgC0awstYdtjPPvJXHedAf6CqH7VaKACCi7ns08EMsN3OkMypYHz_f0tdbsP7cY4ZBDhI?purpose=fullsize)
+
+![Water Wheels Art - Prince of Persia: Warrior Within Art Gallery](https://images.openai.com/static-rsc-4/nQH8Yqe6JyleAsOaiqu8BYAv4rqy4iiLhJ3wM9ZDlAFMbqS9n5O-pihw_0pvv39LXNfCoCUFUjr_Hz7Z-gKAxb9cTIhccohVmNtkGBFVV3IpbNDktEZw8p9M9qFx48Wch9t56zt7n2Ky0exbD1517Ge0MXN0CKfaZhqHPIMra6YpRlI9aKxHHj3gto_cSyVd?purpose=fullsize)
+
+![Ancient Sigil Portal Builder | Daz 3D](https://images.openai.com/static-rsc-4/d6vJvoj24y80IWS6a5YpM0dZQp8LHEFeUV2urrd6S4fKvkYaAixGUkKsmL1-K9YB8snMNCoulPi65ycqwvwRpR1JQwyu4NH0uIz__qXFFiMLl6n-6dACqmk4kb82_T2LDksT_IIqkWfWvRlYOd8YoyGO8ovK_QUdhggriKCk1qE0T-NVK0mxyWpHFXQRAmx5?purpose=fullsize)
+
+![How To Solve The Imperial Gardens Dial Puzzle In Remnant 2](https://images.openai.com/static-rsc-4/cR0n1-vtP1QsW-JBk7gUE6CSoT_cXUGKH2rah4NnKttDXCnGem6Sf70F8-2UM8xk-1TJ5azRspWAESKM__TZ3e7WinFG_Fmv2tn60dwCD7aDxbe7AryjSZNnQuFtjypYr6JJT87VmqDbn4BhzqoyPnXXeR5PQCSKb6Nu8HHlty12vTGgHV1mEeGyLjHUNLFX?purpose=fullsize)
+
+![Resonance: A Plague Tale Legacy – Uma nova era de pragas (e aventuras) no Xbox! - Xbox Power](https://images.openai.com/static-rsc-4/-bnIGmEIs-gp6P0uVt0de2EMCMgyRvG31Oyb6eNahMgLMILYmVXt5oMylTD3uZzX2yOLpI7XYumQugm0D9u8SS_31MMcvkGqbuMOuXvgnhCkqI_8wr5RN9_sV9B19Ua7Qtf43b_ZBmKzyIQ-qYPIvwKHKFrfQnP8wBXN2wDcITMbRnneM_rzcOyQFgdpe9IW?purpose=fullsize)
+
+![Dragon's Dogma Image by Capcom #1367932 - Zerochan Anime Image Board](https://images.openai.com/static-rsc-4/M4YVrAtD6mNAvo9CCvNCh2L8uSwVcvDtcLQUHWfKLndgtKzCm3itTnX7sqRsV_e2Mo_XnDxRox-OS6DO6QTGL-LnfUQJ0r5hUFrcKBPWJxUOKEraTb6o86l5AMDIcyj_gIpJAkLZBKykSZC9YVupjQ4VxLWoiihkuXrUpUIZRFeQSE3tAiofnun3DD1TqsbB?purpose=fullsize)
+
+Introduce puzzles that require observation, experimentation, and understanding the environment.
+
+Puzzle types:
+
+| Type                  | Example                                             |
+| --------------------- | --------------------------------------------------- |
+| Rune puzzles          | Discover the correct ancient symbol sequence        |
+| Light puzzles         | Redirect beams of light                             |
+| Mechanical puzzles    | Activate gears in the correct order                 |
+| Elemental puzzles     | Use fire, ice, wind, or lightning                   |
+| Environmental puzzles | Manipulate water, pressure, or temperature          |
+| Sound puzzles         | Reproduce ancient musical patterns                  |
+| Physics puzzles       | Move objects and activate mechanisms                |
+| Time puzzles          | Coordinate mechanisms within a time limit           |
+| Navigation puzzles    | Find the correct route through a changing structure |
+
+Advanced addition: Puzzle Combination System
+
+Create puzzles with multiple interacting elements. For example, freeze a water channel, redirect a light beam, and activate a mechanical door.
+
+Allow players to discover optional solutions rather than requiring one arbitrary sequence.
+
+### 3\. Ancient civilizations and lost history
+
+![Kisah Kota Gaib Padang 12 Dihuni Makhluk Bergelimang Harta Miliki Pesawat dan Kapal Pesiar  - PAGE ALL : Okezone News](https://images.openai.com/static-rsc-4/Yp2LyRd27fDY3sgkx4ltv4Vebumx8QHVP-6NCv9JlZbvMdfdOdMh4uD5A4VR_OavJDKl6tpPqHhES7bXRYU0PyUnaMXP2KgO5ESkF9OsyejLX3HOYlCmGMfjPV7P8Xx1urZdHTa1AVCLAAzceYJ3yZxMFUDI3TYr0QBT_zQVdStNWaNc7yq1ELc835xrtyMW?purpose=fullsize)
+
+Give Aetheria a deep history that players gradually uncover.
+
+Create several ancient civilizations with distinct:
+
+* Architecture.
+
+* Technology.
+
+* Languages.
+
+* Religious traditions.
+
+* Symbols.
+
+* Artifacts.
+
+* Weapons.
+
+* Magical systems.
+
+* Historical conflicts.
+
+* Ruins and settlements.
+
+New system: Civilization Archive
+
+Players gradually reconstruct lost history by finding:
+
+* Ancient manuscripts.
+
+* Broken inscriptions.
+
+* Historical paintings.
+
+* Forgotten machines.
+
+* Royal records.
+
+* Archaeological objects.
+
+* Ancient maps.
+
+* Legendary artifacts.
+
+Connect discoveries together to reveal historical events and previously unknown locations.
+
+### 4\. Archaeology and artifact restoration
+
+![Aladin and Abu Explore Cave for Treasures | AI Art Generator | Easy-Peasy.AI](https://images.openai.com/static-rsc-4/7v9pxqJOHRWAOl91jxOIqHtdJ3wC8p2kCE9xJlU3M1fYKGzHl1wW7eGm_NOIEk5NUoemkr_AGqFmJfYeSQVn5wowXiAF53_UCX2Vn2j7LTNpr6Td8l6Cz2DIV3LSgn31mTDAq8QEclFn--zFY5TibfP7psf96xih6eBS91BuvCiKZuLiKtD0F9gN67axf0Qk?purpose=fullsize)
+
+![](https://images.openai.com/static-rsc-4/HhXOHLglkM-WLwdEUVewcF7el9bgzjNyle7839cpTWV6Yx-hJerrlaioeabyijDdijEaL1oevKNIb7JcgXqrWA4Vwj6HCvMTSK6aVLjNVs5it8tso2wukL8Nq4Y_5mwps1uQfg0D7EqtRwJ_oxX6BPJP7WDmY22AhsEqDkLG0q2XKnAeEbaIsufA-9TKcXhA?purpose=fullsize)
+
+![The Redemption of Atlantis — Truth Resonates](https://images.openai.com/static-rsc-4/jaE_tVuZagBiVVB9Ep8_XafK9hUEtiHRq3-nZvTCXB72McC1kZnaMPJ3HeDEJggpYvu3CF--6x_3UexrpxlPNYboNSkE2MDIyizwty9lY2avzrFOfns7J3tO9cARRV9q52SNbjvEYSVtcBsGP9oMOVFYDxkeVo1Zr-m4uROVAnUfQxcgSDC6J-rsVp7A2lfZ?purpose=fullsize)
+
+![Anime Archaeologist in a Castle Dungeon - ChatbotsPlace](https://images.openai.com/static-rsc-4/RGGtH1egk-KIinT4FVeIxgwV3kC9BPLCwOpYgWBxRHBk3oqHp4G7Os8Qpm_hEDVqfnIut_o6PIDT-QwEsjCmD-IQ5OXybGtOfqCCSgg6WRyONDcEAOddRgfD5eaePKIJQiZB1XParHaZMSMgvGS0tZiDNhRBdZyZYCgdtgH4x67IxD-ECR2QetJy3JTKOCKo?purpose=fullsize)
+
+![The 5 Most Mysterious Out of Place Artifacts | ILLUMINATION](https://images.openai.com/static-rsc-4/T9rcJL8QS5u329h6YKEuHdXe5P5iE6mSgeOx7utjeqgxU_DYldYwAbfK6BlHnsbVaZfx2Q-2jBX2j_D_6URk1ghaAJ8-sk4LU4ui37IT3mVT_tScIe1wWK2Qt2OeVAw9bjJgidSkBUBVlYh9I01FnDH4Xypt_vxyzzBoekhjxjcTvDbMWQiCYcv0QHfD7DXb?purpose=fullsize)
+
+![Path of Exile 2 Patch 0.5.2 Preview: Delirium, Ritual, Expedition, and Monster Nerfs Explained | Elyxir](https://images.openai.com/static-rsc-4/YXNIOHtS9o7vH6gO1n0BtWxMW-3qVZfbtRN95d44iO7qKgldroJKZnS4Rlfi-3Jpu3PXsgvWkY3LNiwcGWe25vRad600Pb08CFh222kZVlyNWPiq5wuOAcdlzAvjRiMDxeP5B-4T1HxOKqwD75EPKuLLq4okCzg335EMJvUemIwilYPi-fUaKOlYvG-wTJcE?purpose=fullsize)
+
+![Gods Unchained](https://images.openai.com/static-rsc-4/3yFcYqnsV-vhiNwYGO_0rtFSPc8Eq81elgqb8diOkTfDA3J3dQ36bZCaUABTO4lHApeiM8oQ6D2k3KsW2Jtsg2vyPReclbcEikeOaNn2UEeUWgrCiImWk8seaykSI6xiR1zUwDKUZrGTWpvvRITciGtvzZ4ZMqGr_YGOI0Cp9rK0j5qY0TynF-jPA49tB-w6?purpose=fullsize)
+
+![VAULT: IMMORTAL Vintage Melodies – Cymatics.fm](https://images.openai.com/static-rsc-4/jWCKqoUyERSPuZvqu14dRAcLXSNWtMJUHnnFkFp4h5OGYCGp6Inm71UOR5KRbfojUGdPqwyHHsXT9K7iqBqwGDBgTrpwxnfYJU-Qfznieuf5A0b5m4Ns_EbcXV07GWY2OATcIbWFM_3LLZWeVUM8BeDR9D_KOxGvdsnKTBX6AT0SRAuX21oqUeU_KZFguMGs?purpose=fullsize)
+
+![Traveler Discovers Sacred Relic in Hidden Cave | AI Art Generator | Easy-Peasy.AI](https://images.openai.com/static-rsc-4/LXPHdwe2-2ICgv2XCWD1joLfoAwsT8938vRIJ2H4YLpoGeHbYxGJFFW8fmHw7g7RlVFgbWhs8IQzxFqha1VlG0NxTew5ai39O7ikXUxiYjg6SV9FTRoo-KYOwv26FiWs_zUq1prQ5lJ7hA53WrL5vVj5r6AcYD4ejIQ9kxmgMWCFqMz3040QRYlk8Q4tWTeS?purpose=fullsize)
+
+![لعنة الياقوتة الزرقاء - أموالي منصة الناشرين](https://images.openai.com/static-rsc-4/Tdpsq8IQGLR4G1Z2EOOsyzme-wuKkfltT5oPFbrNPYA2Nmu1k7Kp4002S8iWAC0Ad-DYh8XOKnJeNxYIsAT_dOd4WFH38zjMc7er-O67dnYxbkZfWfh-D7USeh8xktjj5B7GoNDE9jlz2ag6gdBxyhTg7a0afilyrBcfJP0wXvlhUiI0piBAAYLIO3AehTmU?purpose=fullsize)
+
+![FFXIV Patch 7.41 Ois Crafter Relic Tools: Fast Data Set 6 Farming in Cosmic Exploration | Elyxir](https://images.openai.com/static-rsc-4/QeJqCeZPfB6TPmKs4NH4jDTlTD3dlMRUReYXIm7NkYCXxpd9pDVOK-OMeT20VEuLiQZAtS6IytLUzuIR5rD3RyH9BMSkMB5guRgoAfILGzMyCX_jXuE7rSUVytVVCnZEGzosddbaCAziSkSTvmzXiV5FhW5nojrPw1u2I32JZcZlXOd15Vj2CWoHSHR1wcNl?purpose=fullsize)
+
+![Arqueología y cine: entre la realidad y la ficción | Ideas Medioambientales](https://images.openai.com/static-rsc-4/z50LGYzeBEZQXrCW17XW1eX8wk3G-RCffyiZ0HwYNmOWoOLDWfqgbOqt0Hd4ZW-xcjG72UrfI3CGlGdmJH_gCGSBPXrQYJbLmvhGsGMZK8iWoEg0XO07nf29eQLusiiUFzKvINsKKY3V3wtZG5WfKje533fFy0xYHoKfH7h0KUZ3QEGFdfeOGRifDBSvaB0G?purpose=fullsize)
+
+Introduce a dedicated archaeology system.
+
+Features:
+
+* Excavation locations.
+
+* Buried objects.
+
+* Ancient artifact fragments.
+
+* Artifact identification.
+
+* Restoration minigames.
+
+* Historical research.
+
+* Artifact collections.
+
+* Museum displays.
+
+* Rare archaeological discoveries.
+
+Example progression:
+
+* Discover a buried ancient structure.
+
+* Excavate several artifact fragments.
+
+* Identify their civilization.
+
+* Restore the damaged artifact.
+
+* Unlock a historical entry.
+
+* Discover a clue pointing toward another hidden location.
+
+Some artifacts could also provide gameplay benefits, but not every discovery needs to be a weapon or upgrade.
+
+### 5\. Underground exploration
+
+![Crystal Cavern by Angela Brunson](https://images.openai.com/static-rsc-4/MhAcLYKYtQxfogCXns4XtgmS0zB4IKTeeaaarFQPgCLKM2_pNu3epf0smcs6veJLV68KaHQ3wfXkKrhq3pgAk3gRTkR62MI0yxCvKHFf0WwxKvyDq09mN7NZa6bwrIgu39Of6yyl39lZ9KLUDnwwnTgegr74XBKGJ_7WrDmoqjSVKAp7GL725o9MZQztvvIK?purpose=fullsize)
+
+![Masterpiece,8k,absurd res - Free AI Art by | Tensor.Art](https://images.openai.com/static-rsc-4/tVwFiYL7ZScTdfKM75KMngCUPm1XwKN87dERazcghKQSVe_GZZCJByZGBbz3rc4AUyMgHBw4p4aKgiOXoWIzZb9rhp0fAV1axCCw6Zkr7dc5c0dc2eWvGyWgvNiiLbWJ79cppCRVWNLfeAs0NjllSG3nu3of1rUdR_efFL8ymFUrsstuXnnjVkeEBF7jW0sC?purpose=fullsize)
+
+![Fading Echo reveals villain Maddock, voiced by Matt Mercer | SmartCDKeys](https://images.openai.com/static-rsc-4/DnR95vc-j-iQhj0u3LB7YNMKd2ADNZy_SdAzXjw74fQG6z5TRvsFYCoexbEvav0sKfrzZuXjTBfIT2w9lPY3BeBUDB8oo5z3ficcCSqScy6zn842eWGKOgEnr1pHRR3amo41mEgeq2xafTy2nI6ucm83UVGPKQyOS_-mHWg1GMJKAH0a6T-rsuBnRDzc2rKv?purpose=fullsize)
+
+![地底都市の可能性｜シャシャ．虹](https://images.openai.com/static-rsc-4/TnjxzzAeUdd9ILt8lWlRNmpvkQHoDj0smsJQcKUCN3J2VuvHiTs-o8v22did04Lq5Z7Q_hr4ON8kSamX1cca7Dcbq5VRbDgDVtPj1_48uQ8-5tq9GiXmo6W3xHVldynbIpLGn1KQ_0JEB6lgOocGIJbsR1_bfctZNp3KBFGVqIm2drxJpaaLCDrlBYlMJitm?purpose=fullsize)
+
+![Enchanting Crystal Cave Waterfall Magical Fantasy Background Backgrounds | PNG Free Download - Pikbest](https://images.openai.com/static-rsc-4/GMLdEHySfS-HsnfcvP4TnSyqWsPyv3V1D_WJ_3fNnlF39RMQ76j77LxuMYtz_w0WqLmyxLVDHzEHEfS9OVY1K7rsB1PLh6On86xkrwY70--Vg-Bs7eif4y_oqukPzoEsz-LyHhhGd9UfX8xJDEeWocmHeYog0Eg1LJV2ikof9KzJ0UXMdMhMoyIaiZ3S5ikT?purpose=fullsize)
+
+![Baldur's Gate 3 details Patch 6, adding Grymforge region, Sorcerer class, and numerous tweaks & fixes | RPG Site](https://images.openai.com/static-rsc-4/oEoPt2lduv3dJtVfxG6nwcUrVVlkGnP1A-5j8JousgabEEe8SNiM0T9HepcbtIZJ9UOc5l6ThlW85dTvOx60RU0E-aij02PFbQtk8q9GGTimNXUYOyS7QHpuOFgytvIvgFiDET4DwrKP_WeCtjFgOhGgkaSiBgphICKSHGOANoDZ_IDSFv1l-uWiB-4BLkwT?purpose=fullsize)
+
+![《魔法門之英雄無敵：上古紀元》公布遊戲音樂團隊陣容 預定明年第二季搶先體驗《Heroes of Might & Magic: Olden Era》 - 巴哈姆特](https://images.openai.com/static-rsc-4/jQVlobAoEDNXJrZ_h2VKF600M9MAQRW9cwA0jXmGtUqrw2JAhUXLQDjm-9Npm2-HDs4Z-xei9HF8zHGMHvDRgD8pVPx4Eda_xkDiND4RI43lDwXQkz6zasKdioh3n9p-6jdAU85Q4OE9MJDPItBfPkOxFX1qqJPk9EGUqag8uICF_mt3tBqBPL7Nilmp5kao?purpose=fullsize)
+
+![Four explorers stand at the edge of a glowing lava river — AI art by @hamsterwheel | BudgetPixel](https://images.openai.com/static-rsc-4/LVKO8cmrEyP7HyhzL6aqKV0nZepF2JA6xpLL7ZMLtKcMU0XLP-6M5AFq7hc7BOskr2aRJO9hDCWAX6V9c81bXDRuhTR5E5nVFvz0XqV9RfuvqnZgUyFQSrv_Wcc9UQajmm2wVZtj8TnV537mzTBp_ZILPJtFmyCdJONCpepva5hZUcfOdkOxqQESE2Y-YNuR?purpose=fullsize)
+
+![Final Fantasy Style: Illustrated Story Backgrounds Midjourney Prompt - promptsideas.com](https://images.openai.com/static-rsc-4/tXr2ISWu1sdJ9LzsW4l5OPP4FqF0n-RDBECi4a1vR0QmjuUIkICxEAoN1_jvbq8RnsuJ0Ftzaf2ZYfsPfexcOu9XdG5VbdXNkfN2KRx2vS4QRymcCU9Twgv9aihnkWD57ubSDZFnSV7_yGOle883XXgn8cDDkZV-hlGIbbAwVO4IxJbblfcU7mPnB2XZf5f6?purpose=fullsize)
+
+![Images of Ultra realistic african voodoo queen, highly detailed, digital painting, artstation, concept art, sharp focus, smooth, e... | Deep Dream Generator](https://images.openai.com/static-rsc-4/iSV_s04IB5IoaRV6ur0EXfKeBRp7qaIgLEEk40fA6RZMUmLv6c91cP68KpsN41LYeHTBv20_oH_Qcdn-kBmVlaQ6ESrWNZsKvkXcGNJ979xvYZarBGvbn7DiOyPmntEergSvloTjkA0xGSD9quwJoQR_C4j0RAezrlC2E_7ye7HX-371e1LbV6RAGs691ovJ?purpose=fullsize)
+
+![Explore the Secret Underworld of Agartha and Shambala](https://images.openai.com/static-rsc-4/Re4h3-P0Ncqq5ksRN5Z6bNMRziT6Udu7ll7Ck6FMLPDkC4ayj9XKJaPQ0G7wzg6q9V3qpVzLn89JHC7-pqdw_gEB6ktNuB3M6gVXJDAkcMFfOEO_y2Wj4K4vI4InKcF06mOJt49sQ8hU9PfrelsaAP1bkl7491WoXhd_nBFYk5SJaB7lM0YZQdiFVSR1Qyeu?purpose=fullsize)
+
+![Monk — skinnycheeks.gg](https://images.openai.com/static-rsc-4/y0eY-nMiIadu7deNWO-3WQ28VI1JkQjW8al_nGWHA0p5FiqzVJoajXzDFwIi5NfocQlLqVfQTDNA6cX6xVNyCiP1xHnOGvSSCiCUfGTG6Sa_wScP2cKdC7vHTnWegXt3yoGZ4eyMFzl0UlJmWLqmZmyP30lHZHrPXeQgh9bbO2SJJMaUISNgweK1u6PAqwYM?purpose=fullsize)
+
+![Explore Fantasy Landscape Art](https://images.openai.com/static-rsc-4/I0wV0x_tjHk98qiVYAum1FtkQnxN8y5Ap3ic6ym8zWrln9LBGJe4PiyXFF-rSZfIMfdBtW-UTV0ocb4PLLjF3ctjYfmACZWsYiHF2rHynzEYPwmTkscUlXVWdLrAoc-t4V0mBduTY4vcPw_-KCUKaJshbg-F3smMFewm3H3FqnPLeEUIpQWGRW3NsxZzKqfG?purpose=fullsize)
+
+Make underground areas feel like complete environments.
+
+Add:
+
+* Massive caverns.
+
+* Underground lakes.
+
+* Crystal forests.
+
+* Ancient subterranean cities.
+
+* Lava chambers.
+
+* Underground rivers.
+
+* Collapsed tunnels.
+
+* Hidden civilizations.
+
+* Deep-sea-like underground ecosystems.
+
+* Rare underground resources.
+
+Advanced system: Underground Ecosystems
+
+Different underground regions could have their own creatures, resources, environmental hazards, and ecological relationships.
+
+### 6\. Secrets and discovery progression
+
+Create a dedicated secret-discovery framework.
+
+Secret categories:
+
+* Hidden treasure rooms.
+
+* Secret bosses.
+
+* Ancient shortcuts.
+
+* Unmarked caves.
+
+* Hidden quest chains.
+
+* Rare crafting recipes.
+
+* Legendary equipment blueprints.
+
+* Secret NPC encounters.
+
+* Forgotten monuments.
+
+* Easter eggs.
+
+* Alternative dungeon entrances.
+
+Introduce a discovery journal that records clues without automatically revealing every solution.
+
+Important principle: Reward players for paying attention. Not every secret should be marked with an icon.
+
+### 7\. Dynamic exploration events
+
+Build on V4's World State Manager.
+
+Examples:
+
+* An earthquake exposes an underground entrance.
+
+* Heavy rainfall reveals an ancient passage.
+
+* A magical disturbance activates a forgotten structure.
+
+* A creature migrates into a previously safe cave.
+
+* An abandoned ruin becomes accessible after a regional quest.
+
+* An ancient machine changes the layout of a dungeon.
+
+These events should be driven by world state, player progress, and environmental conditions.
+
+### 8\. Traversal and environmental interaction
+
+![Nano Banana 2: обзор генератора изображений от Google, тесты и сравнение с конкурентами / Хабр](https://images.openai.com/static-rsc-4/RlISjUXa8aUN9F6gClZJn2VWuXaD8DMUAdXcuYg0OSL_nep3svRpR-pusKNeh0Iq8FSpE_KX0emxCsmAAP7WIepOznTUrzLB8_FofZV1u0Lzw2GhFdKxBtlZzBqJxPKqM4r5rv6Z25gFNCIWQEnRTmdv-LYA0w-6ApP20fvR36RwJJ1SaRp-l04CdTf003fp?purpose=fullsize)
+
+Expand exploration with new movement and interaction possibilities.
+
+* Climbing designated surfaces.
+
+* Rope climbing.
+
+* Ladders and elevators.
+
+* Swimming.
+
+* Diving.
+
+* Gliding, if compatible with the existing movement system.
+
+* Moving platforms.
+
+* Environmental switches.
+
+* Breakable walls.
+
+* Pushable objects.
+
+* Interactive ancient machinery.
+
+Add stamina and environmental restrictions only where they improve exploration rather than making movement tedious.
+
+### 9\. New exploration equipment
+
+Connect exploration tools with V6 crafting.
+
+| Equipment             | Function                              |
+| --------------------- | ------------------------------------- |
+| Ancient compass       | Detects nearby historical anomalies   |
+| Excavation kit        | Reveals buried objects                |
+| Climbing equipment    | Enables special climbing routes       |
+| Diving equipment      | Allows deeper underwater exploration  |
+| Rune detector         | Identifies nearby magical symbols     |
+| Surveying tool        | Records unexplored locations          |
+| Lantern upgrades      | Improves visibility in dark areas     |
+| Ancient key fragments | Unlocks specific forgotten structures |
+
+These tools should unlock new possibilities without turning every location into a checklist.
+
+### 10\. Dungeon bosses and unique encounters
+
+![Echoes of Above on Steam](https://images.openai.com/static-rsc-4/uJb_7w0Dof03DkdKN59hNI3MeM_-RLsucctQKwmpm5csFlz36EcRvcMoMWHG1UpE-1WzogXwpllGIWKG2_vKfx7rAAkVWasZzlAgdxW_PebOH2WhIG9LT9nFDWx_Bcedvcke0dOHLF4x_6VwH7vBxBBsmhfTvXw762hduBuUymlIay4bu5lsqhKzn-oCHWOg?purpose=fullsize)
+
+![LLM Interface CALYPSO inspires Dungeons & Dragons game masters](https://images.openai.com/static-rsc-4/ZyCXZl1VFEJwVsHlDLTd8BiP8mrbe3rwQo79266Wz8mU8dYYbsiQl6Vqb32kkjbIRr98A2lgpbmaUn5-e9GaR5r3ADyzBAZJuGJD4rZKdvF57gv6FVETj7-SRjwY-jCFgU8p1PROBmaULMaa7HLbgCBCjaom--JSDgXHT1kBLtiHqc-LWMFiyHMazA0vgiBm?purpose=fullsize)
+
+![Dungeons and Daily Reset - Istina server 50x Lineage 2 Fafurion - Lineage 2 Scarlet](https://images.openai.com/static-rsc-4/juyzImt5xWvE2dcFHY1TbqaxZaCNeyGp-Cy802QTpzet-aqZdeNrz5Pu5fqKfoKnV9XbMFGyyszrkeZ9biK6bIHPj7g19yIwYEUjMUIrcaQi_dh24ExvwPBceoXbYzUFmU0_L5m2tpPynKdX_NOgmEItBrxVB-ViiOlOVD32ieG2avv74AYu-XWz0tCMbbVU?purpose=fullsize)
+
+![Monster Images Generated by MagicShot.ai](https://images.openai.com/static-rsc-4/dnKhjHl-bFB9ybRduZ-44WuqWeQcbkon3gR-3Cojn_3MjAoeF9h-Yvfew_VVR1V169gZwI61tS8jhvALr6BWiHNwgLkWfePF5sO-OG-6d9XeXOUN6ZpPUbUw1ufdsAiXzc1bzURLzUDgLtfmC5Kew-Icy8XqqxwRzr9a5pqhq-1HIyML0xFcWHtdSH-lGUcP?purpose=fullsize)
+
+![NARAKA: BLADEPOINT | PlayNext](https://images.openai.com/static-rsc-4/lu7Uofdbp3ZLlbqkDuJ3u0vaIBEuQtrzI_dOSoJ108dMPyDMuwtuVKuqt5h9f_ultMox_gLArGApVzZW9bAymkeYmvsTuQfTlVNImG5PztDe_fUFaSHbSDeh38wMo8hI3ag7bi-udNhkZnEO5_JMhkmyxqYv60hjbAhAoOYuc2CmgIesAlV8zJ7a986wEI6y?purpose=fullsize)
+
+![Ori and the Will of the Wisps (XOne)](https://images.openai.com/static-rsc-4/yY32ydRExEko9rJdDx6tF1FQKj96i8XLXpNaPp4cNQvGxVbVAH1tltCO2nTMXCio2qvF0wsV7V1M_YNk1-QFBJSAMGhgHayrc87eilVA9ZlS8R2j6UCYgh8vvTNXo7A-GUVHnePxqL1EhJQSHGkBf7GVDTagARn5EfrVja3X1vbSim_h2LFhQmAssqYx4P9O?purpose=fullsize)
+
+![Lies of P: Overture Bundle](https://images.openai.com/static-rsc-4/QKT36YkgGkO3f4MaHepFtGmEjWOZszRsaVmxw3jCeWMKDsyWILgDMhCTgOxGuJmNHuFU2Wz8vxtSi_3il4AphqdXlgMLlWcC3rwKYkHsRdRBQNcrcyxGQzmAzJmLVv_17a2SIJ3wQFM7wzUU10vwfua_qX2UPKQ4qFUcpuEqlWemLOgGEHJGfAe-OjUKfknu?purpose=fullsize)
+
+![AI Generated Temple Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/Go9ozdfbbS4PaeQIRyrEzErdcqmc_N535_12U8BsI9PxrsqhQCTETbX_I2vulruPb8CiJI9H8K7LN72v02a3bXbJ5ECFTuQR6Yq1x6AM1iw-r7vL8WeYfuuBh4kLQd2gb-ikgN6peXVGeate9ZWcRooou1uckjJ_G5fbZuHs1_kTC8QJFian9cv4NxBAs2Pf?purpose=fullsize)
+
+![Save 60% on Trine 5: A Clockwork Conspiracy on Steam](https://images.openai.com/static-rsc-4/4EDXWviCXci6UCTA5LZTFgN2QZklkgkCENtH-jPQ3pQIvIplXikLWUcurX3CZg4t4nMdn-mPr91UV9GeH4BVtDXO_IImw_JImm-WOGmHV9wNkXRRTZx-XRqgR61ECEQVbbctiSorZnC3bevPC3NvbSCVu3XXwtl7dylYkRBKK2PSscAszfCL_i6S9oI_xSXo?purpose=fullsize)
+
+![Spider's Lair by scenesbycolleen on DeviantArt](https://images.openai.com/static-rsc-4/JaoKQBqQlRkUvZ_3gsPoitoUTmcnggxm4Jwd9fcKzIDB_ZDJEjxzy_Kp6AeSB9AH_tVBwGwElZfmwD9ESHlevMxff8N4VYxUksbR9wa80OZAIqIKrAhmGbU8Fi_lTRBa8OMwqRuanBopF4vkBsvHljAjmSEB9G9cZNhxT1z9SLwFGPYcopifqJp19bzc-p4M?purpose=fullsize)
+
+![Buy WoW boost from pros for any activity | Boostmatch](https://images.openai.com/static-rsc-4/M7HprCC4OkzlWEygHxyhaHh2H6gSe67wcXw1GbumIU5pcr03F-GkqGpOADu7sQ1BGISBCiNo5UG-_Lx4DVnu4_2dCUDhhk2MWLK-bREj33B6c1I72ON132bVtSGvFfedboDAJ25WkPIXWODCQoXO7u_rdf5sULJ24IOpZRZuXWVWTVQk7WJCpMikd0tvJocE?purpose=fullsize)
+
+![Twilight Path](https://images.openai.com/static-rsc-4/lJemhDpW_ShuEZOYIhjvDnIiVy3Z-t6caGu6NXRmxyDNlbk0trxx0Vhr7TOerUtBDxYxi8SBwOW9CpXyovVOHfZX6cEVEjmXFF_EXMS8wKLEU9slzaLoAuGGyyS5kM39-RjYFglcX7IB3FVEdwL7kM-9qcJAU_K2zJfmzKY6PA3cFJjwqTk72LZaUrEDh2rW?purpose=fullsize)
+
+Create bosses that are integrated into the history and mechanics of their locations.
+
+Potential encounters:
+
+* Ancient civilization guardians.
+
+* Forgotten kings.
+
+* Magical constructs.
+
+* Underground predators.
+
+* Cursed protectors.
+
+* Ancient machines.
+
+* Corrupted archaeological entities.
+
+Give each major dungeon boss:
+
+* A unique arena.
+
+* Environmental mechanics.
+
+* Distinct attack patterns.
+
+* Lore and historical significance.
+
+* Unique rewards.
+
+* Optional hidden challenges.
+
+### 11\. Exploration tools for developers
+
+Create an editor and debugging toolkit.
+
+* Dungeon layout editor.
+
+* Procedural dungeon configuration.
+
+* Puzzle logic editor.
+
+* Secret location editor.
+
+* Artifact database.
+
+* Civilization data editor.
+
+* Exploration progression inspector.
+
+* Dungeon spawn testing.
+
+* Trap and mechanism debugger.
+
+* Dungeon performance profiler.
+
+* Automated puzzle validation.
+
+A particularly valuable addition would be a Dungeon Designer, allowing developers to assemble rooms, connections, encounters, traps, and rewards through reusable components.
+
+### 12\. V7 roadmap
+
+* Phase 1 — Exploration foundation
+
+    * Location discovery.
+
+    * Exploration journal.
+
+    * Secret tracking.
+
+    * World exploration data.
+
+* Phase 2 — Dungeon framework
+
+    * Dungeon architecture.
+
+    * Modular rooms.
+
+    * Multi-level layouts.
+
+    * Traps and mechanisms.
+
+    * Dungeon rewards.
+
+* Phase 3 — Puzzle framework
+
+    * Rune puzzles.
+
+    * Mechanical puzzles.
+
+    * Elemental puzzles.
+
+    * Physics interactions.
+
+    * Puzzle combinations.
+
+* Phase 4 — Ancient history
+
+    * Civilizations.
+
+    * Historical records.
+
+    * Archaeology.
+
+    * Artifact restoration.
+
+    * Civilization Archive.
+
+* Phase 5 — Advanced exploration
+
+    * Underground ecosystems.
+
+    * Traversal upgrades.
+
+    * Dynamic discoveries.
+
+    * Hidden bosses.
+
+    * Environmental interactions.
+
+* Phase 6 — Content and polish
+
+    * Dungeon variety.
+
+    * Secret encounters.
+
+    * Exploration rewards.
+
+    * Developer tools.
+
+    * Performance and gameplay testing.
+
+### 13\. Extra ambitious ideas
+
+![Hydall's Library Building / Landmark in Golwildom, The Broken Kingdom | World Anvil](https://images.openai.com/static-rsc-4/GmbfUgaJRxyvkg3XuiKi8RYsBSJPOIRTP9ALMxDL15dcSCCm36fUKuLb1rIVr--bbIUvxCJFrbzY--cr-WOJZn0qjJ4C7-MXi9IbxchRxBwa8kCjhM6WvRKLWxqGGiHr_oa0Vu_armlnbgWOmMsEQEuxgfoCn3jbISQ9fa-y53ee2Qe1Rd8s6BrU9958qt6p?purpose=fullsize)
+
+The Infinite Archive
+
+An enormous ancient library containing lost knowledge, secret passages, and interconnected mysteries.
+
+![No Prep Module: The Forgotten City
+ Kassoon.com](https://images.openai.com/static-rsc-4/fBC2-7obaRx7tbkbSqGOq6XFYU4DKYchmINR_IK5pvf7cpYIyiiOfdZh63qC3FCOv-dnVVwHWKFVd7kQYnjMcQX9p_PcUrWbHL_bnetnb2qbdLbOv2tsgyu9NO6pJTNcgJBVRltOtOcAOHHtMahBhF1kwbFzJ4KKRblK_6Raei-46x2z0iRjO8CAC0rSFwV4?purpose=fullsize)
+
+Buried kingdoms
+
+Entire civilizations hidden beneath deserts, mountains, and forests.
+
+![The Forgotten City: A Lost Civilization’s Darkest Secret
+
+ | Horror](https://images.openai.com/static-rsc-4/7cUvRoMdEffivorP-jN6aWffODfY3hfyGvKVgk0frrHu0xHnSYaclmhYAhdVMSONM8ypAK0M6N_h-2beVnRN7BER_4cfJCn-PU1QCgkJtx6iqVyKYrGeGqGvR9nt-o9_FIgXJfQg8QJRgZIGmHI-obizVMPiYDuEKCzUK5ml4jT1Nh7lld532wcgZ8fVv0NA?purpose=fullsize)
+
+Lost dimensions
+
+Optional hidden areas with unusual rules, environments, and puzzle mechanics.
+
+![The Nexus Vaults — Heresy Malta: The Battle for Velaraxis](https://images.openai.com/static-rsc-4/x0ZwR9sKxthsFqWCm0DN66ln0KSuASIzCajRFXzFlkSfpSxmXaNVxro3UFoSzbfNLUrvqS6asAD3AGCubWX_aA1iwBlEi9gGbIhOkNM8oboqLK0NcTix9-Nnlf9IbGJg9NTBmXGvEJ1x5U1Rh2hdUnu1lGYWiKvFfomwC1cTpOi-k3fJR9KP889-0ZF14FsN?purpose=fullsize)
+
+Ancient megastructures
+
+Huge mechanical ruins with interconnected systems and environmental puzzles.
+
+### 14\. Master V7 development directive
+
+# AETHERIA — UPGRADE V7
+## ADVANCED EXPLORATION, DUNGEONS, ARCHAEOLOGY & ANCIENT CIVILIZATIONS
+
+### PRIMARY OBJECTIVE
+
+Expand Aetheria into a rich single-player exploration experience featuring sophisticated dungeons, environmental puzzles, ancient civilizations, archaeological discoveries, hidden locations, underground ecosystems, and meaningful secrets.
+
+This is strictly a SINGLE-PLAYER upgrade.
+
+Do not introduce multiplayer, online services, guild systems, matchmaking, PvP, or player-to-player trading.
+
+Preserve existing working systems and expand them.
+
+### 1. PROJECT DISCOVERY
+
+- Inspect the existing world and exploration architecture.
+- Identify current dungeon, quest, interaction, inventory, and world-state systems.
+- Reuse existing functionality wherever possible.
+- Document dependencies.
+- Create an implementation roadmap before major changes.
+
+### 2. DUNGEON FRAMEWORK
+
+Implement:
+
+- Modular dungeon layouts.
+- Multi-level dungeons.
+- Ancient temples.
+- Underground cities.
+- Forgotten fortresses.
+- Lost libraries.
+- Secret chambers.
+- Traps.
+- Mechanisms.
+- Dungeon-specific encounters.
+- Checkpoints.
+- Hidden rewards.
+- Unique dungeon bosses.
+
+### 3. ENVIRONMENTAL PUZZLES
+
+Implement:
+
+- Rune puzzles.
+- Light puzzles.
+- Mechanical puzzles.
+- Elemental puzzles.
+- Water and pressure puzzles.
+- Sound puzzles.
+- Physics-based puzzles.
+- Time-based puzzles.
+- Multi-stage puzzle combinations.
+- Optional puzzle solutions.
+
+### 4. ANCIENT CIVILIZATIONS
+
+Implement:
+
+- Civilization definitions.
+- Unique architecture.
+- Ancient languages.
+- Historical records.
+- Cultural symbols.
+- Ancient technology.
+- Lost settlements.
+- Historical events.
+- Civilization Archive.
+
+### 5. ARCHAEOLOGY
+
+Implement:
+
+- Excavation sites.
+- Buried objects.
+- Artifact fragments.
+- Artifact identification.
+- Restoration mechanics.
+- Historical research.
+- Artifact collections.
+- Museum displays.
+- Discovery rewards.
+
+### 6. EXPLORATION AND DISCOVERY
+
+Implement:
+
+- Hidden locations.
+- Secret passages.
+- Unmarked dungeons.
+- Secret bosses.
+- Hidden quest chains.
+- Exploration journals.
+- Clue tracking.
+- Discovery rewards.
+- Rare landmarks.
+- Environmental storytelling.
+
+### 7. UNDERGROUND ECOSYSTEMS
+
+Implement:
+
+- Underground biomes.
+- Unique creatures.
+- Rare resources.
+- Environmental hazards.
+- Underground rivers and lakes.
+- Crystal formations.
+- Subterranean settlements.
+- Regional ecosystem interactions.
+
+### 8. TRAVERSAL
+
+Expand environmental interaction with:
+
+- Climbing.
+- Swimming.
+- Diving.
+- Rope traversal.
+- Ladders.
+- Elevators.
+- Moving platforms.
+- Breakable obstacles.
+- Ancient machinery.
+- Environmental switches.
+
+Only implement movement mechanics that fit the existing game architecture.
+
+### 9. EXPLORATION EQUIPMENT
+
+Integrate with existing crafting and inventory systems:
+
+- Excavation tools.
+- Ancient compass.
+- Rune detector.
+- Diving equipment.
+- Surveying tools.
+- Specialized lanterns.
+- Ancient key fragments.
+- Climbing equipment.
+
+### 10. DUNGEON BOSSES
+
+Implement:
+
+- Unique boss encounters.
+- Dungeon-specific mechanics.
+- Multiple attack phases.
+- Environmental hazards.
+- Historical context.
+- Unique rewards.
+- Optional challenge encounters.
+
+### 11. DEVELOPER TOOLS
+
+Create:
+
+- Dungeon Designer.
+- Modular room editor.
+- Puzzle logic editor.
+- Artifact database.
+- Civilization editor.
+- Secret location editor.
+- Dungeon testing tools.
+- Trap debugger.
+- Exploration progression inspector.
+- Automated validation.
+
+### 12. TECHNICAL REQUIREMENTS
+
+- Single-player architecture.
+- Modular and reusable systems.
+- Data-driven configuration.
+- Reliable save/load integration.
+- Persistent discoveries.
+- Stable dungeon progression.
+- Performance-conscious world loading.
+- Automated puzzle and dungeon tests.
+- Clear documentation.
+- No unnecessary duplication.
+- No regressions to existing functionality.
+
+### 13. IMPLEMENTATION PRIORITIES
+
+P0: Exploration foundations and dungeon architecture.
+
+P1: Dungeon content, mechanisms, and puzzles.
+
+P2: Ancient civilizations, archaeology, and artifact restoration.
+
+P3: Underground ecosystems and advanced traversal.
+
+P4: Lost dimensions, megastructures, and other ambitious discoveries.
+
+### FINAL EXPECTATION
+
+Deliver a cohesive single-player Aetheria V7 exploration expansion.
+
+The world should reward curiosity, observation, experimentation, and discovery.
+
+Every major dungeon should feel memorable. Every civilization should have a distinct history. Every major discovery should contribute something meaningful to the player's understanding of Aetheria.
+
+Do not add multiplayer functionality under any circumstances.
+
+My recommendation: Make V7's signature feature the Ancient Dungeon & Discovery System. I would rather have 10 enormous, handcrafted, mysterious dungeons with interconnected secrets than 100 repetitive procedural caves.
+
+V7 should make players want to explore every corner of Aetheria because they genuinely don't know what they might discover.
