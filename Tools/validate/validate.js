@@ -25,7 +25,9 @@ const COLLECTIONS = {
   shops: { files: ['Items/shops.json'], schema: 'shop' },
   siege: { files: ['World/siege_waves.json'], schema: 'siege_wave' },
   classes: { files: ['Classes/classes.json'], schema: 'class' },
-  flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' }
+  flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' },
+  spells: { files: ['Spells/spells.json'], schema: 'spell' },
+  monsterSpells: { files: ['Spells/monster_spells.json'], schema: 'monster_spell' }
 };
 
 const errors = [];
@@ -226,6 +228,38 @@ for (const c of rows.classes) {
   if (c.kit.filter(k => k.slot === 'basic').length !== 1) err(c.id, 'needs exactly one basic attack string');
   const alloc = Object.values(c.recommendedAllocation).reduce((a, b) => a + b, 0);
   if (Math.abs(alloc - 1) > 0.001) err(c.id, `recommendedAllocation sums to ${alloc}, not 1`);
+}
+
+const speciesById0 = Object.fromEntries(rows.species.map(x => [x.id, x]));
+
+// Spells (Spells/spells.json, proposed): ranks follow the Canon bands and tiers, Forbidden is SS, the classes are real, and
+// every monster only casts spells at or below its own rank (Spells/monster_spells.json).
+const SPELL_BAND = { F: 1, E: 16, D: 36, C: 61, B: 91, A: 126, S: 166, SS: 211, SSS: 261 };
+const SPELL_TIER = { F: 'Basic', E: 'Basic', D: 'Intermediate', C: 'Intermediate', B: 'Advanced', A: 'Advanced', S: 'Grand', SS: 'Forbidden', SSS: 'Divine' };
+const SPELL_CHANT = { Basic: 0.5, Intermediate: 1.5, Advanced: 3, Grand: 5, Forbidden: 8, Divine: null };
+const spellById = Object.fromEntries(rows.spells.map(sp => [sp.id, sp]));
+for (const sp of rows.spells) {
+  for (const c of [...sp.primaryClasses, ...sp.altClasses]) ref(`${sp.id}.classes`, c, 'classes');
+  if (sp.minLevel !== SPELL_BAND[sp.rank]) err(sp.id, `minLevel ${sp.minLevel} is not the start of rank ${sp.rank} (${SPELL_BAND[sp.rank]})`);
+  if (sp.tier !== SPELL_TIER[sp.rank]) err(sp.id, `tier ${sp.tier} does not match rank ${sp.rank}`);
+  if (sp.chantSec !== SPELL_CHANT[sp.tier]) err(sp.id, `chant ${sp.chantSec} does not match tier ${sp.tier}`);
+  if ((sp.discipline === 'Forbidden Arts') !== (sp.rank === 'SS')) err(sp.id, 'Forbidden Arts spells are exactly the SS spells');
+  if (sp.rank === 'SSS' && sp.discipline !== 'Divine') err(sp.id, 'only Divine spells are SSS');
+  if (sp.element === 'Lightning' && sp.subDiscipline !== 'Storm') err(sp.id, 'Lightning spells are the Storm branch');
+  if (sp.element === 'Poison' && sp.subDiscipline !== 'Blight') err(sp.id, 'Poison spells are the Blight branch');
+}
+for (const m of rows.monsterSpells) {
+  ref(`${m.id}.speciesId`, m.speciesId, 'species');
+  if (m.spellIds.length !== m.telegraphs.length) err(m.id, 'spellIds and telegraphs must be the same length');
+  const species = speciesById0[m.speciesId];
+  m.spellIds.forEach(sid => {
+    ref(`${m.id}.spellIds`, sid, 'spells');
+    const sp = spellById[sid];
+    if (sp && species) {
+      const letter = species.rank.replace(/[+-]$/, '');
+      if (letter !== 'EX' && RANK_ORDER.indexOf(sp.rank) > RANK_ORDER.indexOf(letter)) err(m.id, `${sid} is rank ${sp.rank}, above ${species.name} (${species.rank})`);
+    }
+  });
 }
 
 // Regional Siege & Liberation: every region has a unique Tyrant living there, or is marked noSiege.

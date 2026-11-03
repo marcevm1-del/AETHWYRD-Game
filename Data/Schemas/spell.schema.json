@@ -1,0 +1,204 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Spell (proposed codex)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "discipline",
+  "category",
+  "subDiscipline",
+  "family",
+  "form",
+  "element",
+  "rank",
+  "tier",
+  "minLevel",
+  "chantSec",
+  "minClassTier",
+  "primaryClasses",
+  "altClasses",
+  "release",
+  "active",
+  "recovery",
+  "hitWeight",
+  "source",
+  "status"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^spl_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "discipline": {
+   "type": "string",
+   "enum": [
+    "Aethercraft",
+    "Flamecraft",
+    "Tidecraft",
+    "Galecraft",
+    "Stonecraft",
+    "Frostcraft",
+    "Verdance",
+    "Radiance",
+    "Umbral",
+    "Spiritbond",
+    "Divine",
+    "Forbidden Arts"
+   ]
+  },
+  "category": {
+   "type": "string",
+   "enum": [
+    "Strike",
+    "Barrage",
+    "Ward",
+    "Binding",
+    "Mobility",
+    "Sensing",
+    "Mending",
+    "Empowerment",
+    "Hex",
+    "Illusion",
+    "Pact",
+    "Utility"
+   ]
+  },
+  "subDiscipline": {
+   "type": "string",
+   "minLength": 1
+  },
+  "family": {
+   "type": "string",
+   "minLength": 1
+  },
+  "form": {
+   "type": "string",
+   "minLength": 1
+  },
+  "element": {
+   "type": "string",
+   "enum": [
+    "None",
+    "Fire",
+    "Water",
+    "Ice",
+    "Lightning",
+    "Earth",
+    "Wind",
+    "Nature",
+    "Poison",
+    "Light",
+    "Dark",
+    "Blood",
+    "Void"
+   ]
+  },
+  "rank": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "tier": {
+   "type": "string",
+   "enum": [
+    "Basic",
+    "Intermediate",
+    "Advanced",
+    "Grand",
+    "Forbidden",
+    "Divine"
+   ]
+  },
+  "minLevel": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 300
+  },
+  "chantSec": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": 0
+  },
+  "minClassTier": {
+   "type": "string",
+   "enum": [
+    "base",
+    "advanced",
+    "expert",
+    "master"
+   ]
+  },
+  "primaryClasses": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "pattern": "^cls_[a-z0-9_]+$"
+   }
+  },
+  "altClasses": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "pattern": "^cls_[a-z0-9_]+$"
+   }
+  },
+  "release": {
+   "type": "number",
+   "minimum": 0
+  },
+  "active": {
+   "type": "number",
+   "minimum": 0
+  },
+  "recovery": {
+   "type": "number",
+   "minimum": 0
+  },
+  "hitWeight": {
+   "type": "string",
+   "enum": [
+    "None",
+    "Light",
+    "Medium",
+    "Heavy",
+    "Launch"
+   ]
+  },
+  "source": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 4
+  },
+  "status": {
+   "type": "string",
+   "enum": [
+    "proposed",
+    "approved"
+   ]
+  },
+  "sliceWave": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 3
+  }
+ }
+}

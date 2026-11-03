@@ -1,0 +1,53 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Monster spell list (proposed)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "speciesId",
+  "role",
+  "spellIds",
+  "telegraphs"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^msp_[a-z0-9_]+$"
+  },
+  "speciesId": {
+   "type": "string",
+   "pattern": "^mon_[a-z0-9_]+$"
+  },
+  "role": {
+   "type": "string",
+   "enum": [
+    "caster",
+    "affinity"
+   ]
+  },
+  "spellIds": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 5,
+   "items": {
+    "type": "string",
+    "pattern": "^spl_[a-z0-9_]+$"
+   }
+  },
+  "telegraphs": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 5,
+   "items": {
+    "type": "string",
+    "enum": [
+     "blue",
+     "red",
+     "gold",
+     "none"
+    ]
+   }
+  }
+ }
+}

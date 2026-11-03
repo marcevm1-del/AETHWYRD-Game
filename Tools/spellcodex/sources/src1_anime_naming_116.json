@@ -1,0 +1,930 @@
+[
+ {
+  "n": 1,
+  "name": "Twinveil Lattice",
+  "disc": "Aethercraft",
+  "desc": "A twin framework of interlaced mana strands stretched between two anchor points. The lattice catches, redirects or stabilises any magical effect passing through it \u2014 a partner's misfired bolt, an enemy's curse, a collapsing barrier.",
+  "vis": "Two mirror-symmetrical grids of indigo light bloom in the air like folded paper screens, silver threads humming between them.",
+  "how": "The caster weaves a paired mana lattice and sets both halves resonating at the same frequency. Anything entering the first half is caught in the resonance and can be guided out through the second. Staggering the caster snaps both halves at once."
+ },
+ {
+  "n": 2,
+  "name": "Skypiercer Lance",
+  "disc": "Aethercraft",
+  "desc": "A needle-compressed stream of mana fired in a straight line, designed to interrupt a chanting enemy mid-sentence. Precise, fast, and narrow \u2014 it punishes exposed casters rather than armour.",
+  "vis": "A cyan beam no wider than a finger, trailing silver particle rings that spiral and dissolve behind it.",
+  "how": "Mana is compressed along the caster's line of sight into a high-pressure filament. The tighter the focus, the harder the interruption \u2014 but the lance loses force beyond mid-range and cannot bend around cover."
+ },
+ {
+  "n": 3,
+  "name": "Aegis Arc Bulwark",
+  "disc": "Aethercraft",
+  "desc": "A curved plane of solidified mana that absorbs impacts from one direction until its structure is overwhelmed. The signature defensive spell of frontline Aethercrafters.",
+  "vis": "A semi-circular shield of layered indigo glass, each impact rippling across its surface like rain on still water.",
+  "how": "The caster folds mana into a taut convex membrane. Force spreads across the curve and bleeds into the Weave \u2014 until total absorbed force exceeds the pattern's tolerance, and the bulwark shatters like glass."
+ },
+ {
+  "n": 4,
+  "name": "Fatestring Tether",
+  "disc": "Aethercraft",
+  "desc": "A taut filament of mana joining two visible points. It can pull the caster to an ally, restrain a falling object, or carry a spoken signal along its length.",
+  "vis": "A hair-thin silver line, visible only when it catches the light, humming with a faint chime when tension changes.",
+  "how": "The filament is a stabilised mana thread with a fixed maximum tension. Pulling harder than the thread's limit snaps it cleanly \u2014 it restrains, never truly binds a struggling Status-bearer for long."
+ },
+ {
+  "n": 5,
+  "name": "Truesight Lens",
+  "disc": "Aethercraft",
+  "desc": "Bends mana around a subject to expose concealed magic \u2014 glamours, hidden runes, disguised enchantments. It reveals magical residue, not lies.",
+  "vis": "A rotating cyan iris opens over the caster's eye; objects glow with false-colour outlines where magic clings to them.",
+  "how": "The lens diffracts ambient mana differently where patterns have been disturbed. Skilled casters read the distortion like a signature. Purely physical deception \u2014 makeup, acting, forged documents \u2014 passes through untouched."
+ },
+ {
+  "n": 6,
+  "name": "Shockring Pulse",
+  "disc": "Aethercraft",
+  "desc": "A measured ring of force expanding outward from the caster, shoving everyone nearby off balance and exposing unstable constructs, traps and hidden hollows.",
+  "vis": "A flat silver ring erupts from the caster's feet, kicking up dust in a perfect circle, debris briefly floating at its edge.",
+  "how": "The caster releases a uniform pressure wave in the mana field. It carries no cutting force \u2014 its value is disruption: broken footing, rattled concentration, and constructs whose faulty patterns ring visibly under the stress."
+ },
+ {
+  "n": 7,
+  "name": "Hexprison Cage",
+  "disc": "Aethercraft",
+  "desc": "A geometric enclosure of glowing edges that seals a space and limits movement. The occupant keeps their will and their voice \u2014 only their range of motion is taken.",
+  "vis": "Six indigo panels with silver edges snap together into a polyhedron around the target, each face inscribed with slow-drifting runes.",
+  "how": "A closed mana lattice is erected around a fixed volume. The cage resists passage of anything with mass; sustained force from within weakens one face at a time. It confines \u2014 it never commands the mind inside."
+ },
+ {
+  "n": 8,
+  "name": "Cloudstep Platform",
+  "disc": "Aethercraft",
+  "desc": "A brief foothold of hardened mana placed in open air \u2014 a stepping stone for a leap, a turn, or a controlled descent from a rooftop.",
+  "vis": "A small disc of pale cyan light, rippling like the surface of a pond, solid only for the instant weight lands on it.",
+  "how": "The caster compresses ambient mana into a rigid disc anchored to a point in space, not to the ground. It lasts seconds and supports one impact. True flight is impossible \u2014 this is a stone thrown across a river of air."
+ },
+ {
+  "n": 9,
+  "name": "Mirror-Soul Mirage",
+  "disc": "Aethercraft",
+  "desc": "A false mana image of the caster that moves on a simple command \u2014 a decoy for archers, a lure for ambushers. It can imitate shape and motion, never a living soul.",
+  "vis": "A translucent double steps out of the caster, edges smudged like wet ink, dissolving into silver motes when struck.",
+  "how": "The caster projects a shaped mana shell repeating a short movement loop. Any contact disrupts the pattern. Beings that sense souls \u2014 spirits, high monsters \u2014 see the emptiness behind the mask instantly."
+ },
+ {
+  "n": 10,
+  "name": "Leyline Suture",
+  "disc": "Aethercraft",
+  "desc": "Joins a damaged nonliving structure or a frayed local mana line without replacing what was lost \u2014 a cracked wall, a torn ward, a snapped cable of enchantment.",
+  "vis": "Silver thread stitches itself along the fracture in a neat glowing seam, pulling the two halves into alignment.",
+  "how": "The caster braids loose mana into a bridging lattice across the break. It restores continuity, not material: a wall holds, but the stone that fell away does not return. Wounds and living flesh are beyond this spell's reach."
+ },
+ {
+  "n": 11,
+  "name": "Oathmark Beacon",
+  "disc": "Aethercraft",
+  "desc": "Marks a point with a blazing mana signature that every ally can see across smoke, darkness and a crowded battlefield. The rally point of disciplined mage squads.",
+  "vis": "A pillar of indigo flame rising skyward, visible over walls, resolving into a chosen sigil at its peak.",
+  "how": "A shaped mana pattern is anchored to a location and set to radiate at a frequency the caster's allies share. Enemies see the light too \u2014 an Oathmark is a promise and a target in equal measure."
+ },
+ {
+  "n": 12,
+  "name": "Worldbind Anchor",
+  "disc": "Aethercraft",
+  "desc": "Pins a local mana pattern in place \u2014 a portal frame, a drifting platform, a bound spirit's vessel \u2014 against ordinary displacement, though not against overwhelming force.",
+  "vis": "Four silver chains of light plunge from the air into the target's shadow, locking it to the earth with a deep ringing note.",
+  "how": "The spell welds the target's mana signature to the local Weave. Anything short of a superior force cannot move it; anything stronger tears it free along with a piece of the anchoring pattern \u2014 leaving the caster staggered."
+ },
+ {
+  "n": 13,
+  "name": "Cinder Fang",
+  "disc": "Flamecraft",
+  "desc": "A compact ember dart that buries itself in the target and ignites dry material \u2014 cloth, oil, thatch. The opening strike of most Flamecraft duels.",
+  "vis": "A crimson fang of flame launched like a thrown knife, scattering amber sparks that linger in the air.",
+  "how": "A seed of superheated mana is compressed into a dart and given one clean trajectory. On impact the heat blooms outward, finding whatever fuel exists. In rain or on bare stone it is little more than a hot pebble."
+ },
+ {
+  "n": 14,
+  "name": "Phoenix Shroud",
+  "disc": "Flamecraft",
+  "desc": "A wavering veil of heat wrapped around the caster. Pursuers flinch from the shimmer; blades that strike through it come away warm and warped.",
+  "vis": "The caster's outline ripples like a mirage, gold feathers of heat-haze fanning out with every movement.",
+  "how": "A rotating layer of hot air and mana bends sight and singes what passes through. It discourages \u2014 it does not stop. Enough force, or a long enough reach, punches through the shimmer and finds flesh."
+ },
+ {
+  "n": 15,
+  "name": "Furnace Ring",
+  "disc": "Flamecraft",
+  "desc": "A circular band of roaring flame that springs up around the caster, claiming the ground as forbidden territory and punishing anyone who steps inside uninvited.",
+  "vis": "A ring of gold-orange fire rises waist-high, its inner edge calm as a hearth, its outer edge lashing like a whip.",
+  "how": "The caster ignites a ring of ambient fuel drawn in with the mana pattern. The ring holds as long as fuel and breath remain. Discipline is everything \u2014 loose casting turns the ring into a wildfire the caster must flee."
+ },
+ {
+  "n": 16,
+  "name": "Ashen Spear Lance",
+  "disc": "Flamecraft",
+  "desc": "A focused jet of flame driven forward like a spear, trading the wild spread of a cone for concentrated heat that bores through shield and stone.",
+  "vis": "A blinding white-gold lance, its core so hot it seems colourless, the air around it bending and blackening.",
+  "how": "All of the spell's heat is collapsed into a tight cylinder along one line. It burns through almost anything in its path for a heartbeat \u2014 then collapses, leaving a scar of drifting ash. It cannot turn; missing is missing."
+ },
+ {
+  "n": 17,
+  "name": "Kindle Thread",
+  "disc": "Flamecraft",
+  "desc": "Carries a thin flame along a chosen combustible path \u2014 a trail of oil, a rope, a line of dry grass \u2014 for traps, signals or controlled demolition.",
+  "vis": "A line of amber fire racing along the ground like a living thing, crackling softly as it devours its road.",
+  "how": "The caster lays a hair of flame at the start of a fuel path and lets chemistry do the rest; mana only guides and quickens the burn. Clever casters lay their threads before the enemy ever arrives."
+ },
+ {
+  "n": 18,
+  "name": "Solar Flare Burst",
+  "disc": "Flamecraft",
+  "desc": "A burst of heat and blinding light that forces every watcher to shield their eyes. Not a weapon \u2014 a heartbeat stolen from everyone looking the wrong way.",
+  "vis": "The caster's palm blooms into a small sun; the world whites out for an instant, shadows stamped onto walls.",
+  "how": "Mana excites the air into a single violent flash. It carries almost no concussive force; its power is total visual disruption. Enemies who fight blind, by ear and instinct, shrug it off."
+ },
+ {
+  "n": 19,
+  "name": "Emberbrand Edge",
+  "disc": "Flamecraft",
+  "desc": "Wraps an ally's weapon or gauntlet in a controlled burning glow, so every strike lands with added heat and every parry sheds sparks.",
+  "vis": "The weapon's edge sheathes itself in writhing crimson flame that leaves a fading orange trail with each swing.",
+  "how": "A shaped flame pattern clings to the metal without consuming it, fed by the caster's mana instead of the weapon. The brand lasts while focus holds \u2014 and a staggered caster brands nothing."
+ },
+ {
+  "n": 20,
+  "name": "Wildfire Footprint",
+  "disc": "Flamecraft",
+  "desc": "Every step the caster takes leaves a short-lived burning print, making pursuit through their path a scorching mistake.",
+  "vis": "Glowing footprints blooming behind the caster like flowers of fire, fading in heartbeats but arriving faster than pursuers can dodge.",
+  "how": "Heat is pressed into the ground with each footfall. The prints flare when stepped on. On stone they are a nuisance; on grass or spilled oil, they become a minefield the caster alone has mapped."
+ },
+ {
+  "n": 21,
+  "name": "Dragon Maw Breath",
+  "disc": "Flamecraft",
+  "desc": "A broad cone of flame vented from the caster's outflung arms, strongest at close range \u2014 a spell that says, very clearly, do not come near me.",
+  "vis": "A roaring fan of crimson and gold, the caster silhouetted black inside it like a wyrm mid-scream.",
+  "how": "The caster exhales shaped mana through both arms, fanning ignition across the air itself. It is hungry and brief: wind throws it back, rain smothers it, and casting it in a closed room endangers friend and foe alike."
+ },
+ {
+  "n": 22,
+  "name": "Soot Phantom",
+  "disc": "Flamecraft",
+  "desc": "Raises a smoky silhouette that copies the caster's last movement before dissolving \u2014 a decoy born of fire's own waste.",
+  "vis": "A column of living soot assembles into the caster's shape, its edges constantly flaking away into grey snow.",
+  "how": "The caster grabs the smoke their own fire has made and pins it into a human outline with a borrowed motion. It is convincing for a single glance and a single heartbeat. Beware the wind \u2014 it owns this decoy too."
+ },
+ {
+  "n": 23,
+  "name": "Riptide Whip",
+  "disc": "Tidecraft",
+  "desc": "Snaps nearby water into a striking lash that staggers an exposed opponent and soaks anything dry enough to burn.",
+  "vis": "A whip of sapphire water cracking through the air, scattering pearls of spray that hang an instant too long.",
+  "how": "The caster gives a body of water a single violent direction. The whip is fast but simple \u2014 it staggers and disrupts rather than cuts, and it needs a puddle, a barrel, or a very humid day to exist at all."
+ },
+ {
+  "n": 24,
+  "name": "Pearlguard Aegis",
+  "disc": "Tidecraft",
+  "desc": "A rotating shell of water that softens every incoming blow, spreading force across its whirling surface until it disperses entirely.",
+  "vis": "A sphere of spiralling turquoise water with a faint pearl sheen, impacts blooming across it like stones dropped in a pond.",
+  "how": "A vortex of water is set spinning fast enough to deflect and shed momentum. It turns blades and blunts arrows; slow, grinding pressure \u2014 a crushing grip, a landslide \u2014 pushes right through it."
+ },
+ {
+  "n": 25,
+  "name": "Undertow Snare",
+  "disc": "Tidecraft",
+  "desc": "Draws water around an enemy's legs to spoil their balance and drag at every step. It never touches their mind \u2014 only their footing.",
+  "vis": "Dark water coils up around the target's boots like grasping hands, each step splashing heavy as wet sand.",
+  "how": "The caster lends weight and pull to standing water, turning ground into a clinging current. Strong targets wade free in moments; the snare's real victory is the tempo it steals, one bad step at a time."
+ },
+ {
+  "n": 26,
+  "name": "Mistveil Shroud",
+  "disc": "Tidecraft",
+  "desc": "Spreads a low veil of vapour that conceals movement within it \u2014 though anyone close enough sees silhouettes glide through the white.",
+  "vis": "A knee-deep sea of slow-rolling mist swallowing the ground, shapes inside it blurred to grey ghosts.",
+  "how": "Moisture is lifted and suspended as a fog bank with a fixed life. The mist hides feet, numbers and direction \u2014 not outlines at arm's reach. A sharp wind disperses it; a Flamecrafter's spark makes it everyone's problem."
+ },
+ {
+  "n": 27,
+  "name": "Breakwall Surge",
+  "disc": "Tidecraft",
+  "desc": "Pushes a rolling wall of water across the ground, strongest on a slope or beside a true water source \u2014 a battlefield rearranged in one wave.",
+  "vis": "A cresting wall of deep blue rises to chest height and charges forward, white foam combing off its leading edge.",
+  "how": "The caster stacks volume and momentum behind a moving front. Flat dry ground limits it to a heavy shove; a riverbank or a downhill street makes it a siege engine. Everything the wave carries, it also drops."
+ },
+ {
+  "n": 28,
+  "name": "Drowned Bell Hush",
+  "disc": "Tidecraft",
+  "desc": "Wraps a chosen sound source in a dense bubble of water-thickened air, muffling noise within a limited area \u2014 a shouted alarm, a clattering cart, a chanting mage.",
+  "vis": "A faintly blue-tinged dome settles over the area, sounds arriving from inside warped and dim, as if heard through deep water.",
+  "how": "The caster thickens the air's moisture until sound waves lose their force crossing it. It quiets a workshop, a corridor, a scream \u2014 for a while, and only within the dome's bounds. Truly deafening force punches through."
+ },
+ {
+  "n": 29,
+  "name": "Current Needle Jet",
+  "disc": "Tidecraft",
+  "desc": "Fires a thin jet of pressurised water that cuts soft material at close range \u2014 rope, cloth, leather, a wax seal, a poorly guarded throat.",
+  "vis": "A glass-bright thread of water, almost invisible, hissing like a snake and cutting a clean line through whatever it touches.",
+  "how": "A finger-wide stream is pressurised until it carries a cutting edge. Its force dies within a dozen paces and it cannot pierce metal or bone-deep armour. A surgeon's weapon, or an assassin's."
+ },
+ {
+  "n": 30,
+  "name": "Raincall Veil",
+  "disc": "Tidecraft",
+  "desc": "Gathers existing moisture into a local shower \u2014 cooling a feverish ally, feeding parched crops, wetting a dry roof, feeding the Tidecrafter's own arsenal.",
+  "vis": "A soft curtain of rain falls on a circle the caster chooses, rainbow-edged in sunlight, drumming on earth that was dust a moment ago.",
+  "how": "The spell lifts humidity and condenses it overhead, never creating water \u2014 only relocating it. In a desert it is a drizzle; at sea, a downpour. Every drop falls back into the cycle the caster can draw from next."
+ },
+ {
+  "n": 31,
+  "name": "Mirrorpool Scry",
+  "disc": "Tidecraft",
+  "desc": "Smooths a water surface into a flawless mirror, reflecting what stands before it with unnatural clarity \u2014 though it cannot show what is absent.",
+  "vis": "A pond, basin or puddle stills to black-glass perfection, reflections within it sharp as a master's painting.",
+  "how": "Surface tension is flattened until ripples cannot form. The pool reflects the present moment only: no past, no distant places, no hidden thoughts. In motionless water, truth shows its face \u2014 the face that is turned to it."
+ },
+ {
+  "n": 32,
+  "name": "Foamstep Cushion",
+  "disc": "Tidecraft",
+  "desc": "Forms a brief cushion of froth beneath a falling ally or a leaping caster, turning a deadly drop into a bruising bounce.",
+  "vis": "A billowing white cloud bursts into existence under the falling body, compressing like a held breath and easing it down.",
+  "how": "Air is whipped into water until it becomes a dense, forgiving mass. It arrests a fall from a rooftop or a cliff edge \u2014 not an endless one. From too high, the foam simply becomes the last soft thing the faller ever touches."
+ },
+ {
+  "n": 33,
+  "name": "Zephyr Flash Step",
+  "disc": "Galecraft",
+  "desc": "Pushes the caster into a sudden burst of lateral movement \u2014 a sideways skip faster than a dodge, ending where clear footing waits.",
+  "vis": "A streak of sky-blue light, the caster's afterimage left standing a heartbeat after the real one has gone.",
+  "how": "A pressure differential slams the caster sideways along a line of sight. The burst is straight and short; the caster must see the landing. Walls, allies and open cellars all end the step the same way."
+ },
+ {
+  "n": 34,
+  "name": "Tempest Fan",
+  "disc": "Galecraft",
+  "desc": "Fans a broad gust outward to scatter light debris, snuff torches, spoil archers' aim and peel loose formations apart.",
+  "vis": "A visible arc of pale wind rolling out like a opened hand, leaves and dust swept into a spiralling wall.",
+  "how": "Air is gathered behind a sweeping arm and released in a wide front. Against mass it is a shove; against precision it is ruin \u2014 arrows wander, flames gutter, formations lose their neat edges. Armour ignores it entirely."
+ },
+ {
+  "n": 35,
+  "name": "Razorwind Blade",
+  "disc": "Galecraft",
+  "desc": "Compresses air into a narrow cutting current that slices at close range and dies quickly over distance \u2014 a blade made of the space between spaces.",
+  "vis": "A crescent of shimmering, distorted air, visible only by the way it bends light and splits the rain.",
+  "how": "A ribbon of air is pressurised into a transient edge. It opens skin, cloth and thin wood within a few paces and then dissolves into ordinary wind. Long fights bore it; close fights fear it."
+ },
+ {
+  "n": 36,
+  "name": "Cloudstep Cushion",
+  "disc": "Galecraft",
+  "desc": "A momentary cushion of hardened air beneath a leaping caster or a falling ally \u2014 a step on nothing, a hand catching from below.",
+  "vis": "A faint white disc blooms in mid-air, ringed with curling vapour, firm only under the instant of a footfall.",
+  "how": "Air is compressed into a brief rigid plane anchored in space. It holds one landing, one push, one heartbeat. Chain several and a Galecrafter can dance across a chasm \u2014 miss once and the sky collects its fee."
+ },
+ {
+  "n": 37,
+  "name": "Thunderclap Palm",
+  "disc": "Galecraft",
+  "desc": "Releases a concussive burst of air and sound at arm's length \u2014 a shockwave that interrupts a chant, bursts an eardrum's patience and empties breathing room.",
+  "vis": "The caster's open palm detonates a white ring of force, dust blasting outward in a perfect circle.",
+  "how": "Pressure is collapsed and released point-blank. The shock staggers, deafens and \u2014 most prized \u2014 snaps any chant it catches. It is a spell of proximity; at range it is merely a very loud noise."
+ },
+ {
+  "n": 38,
+  "name": "Whisperline Courier",
+  "disc": "Galecraft",
+  "desc": "Carries a short spoken message along a chosen current of air to a visible or familiar destination \u2014 words riding the wind to a friend's ear alone.",
+  "vis": "A silver thread of shimmer spiralling away from the caster's lips, unspooling across the battlefield toward its listener.",
+  "how": "The caster's voice is folded into a moving ribbon of air aimed at a known point. The message arrives clear at its target and as meaningless wind everywhere else. Longer than a breath of words, and the ribbon tears."
+ },
+ {
+  "n": 39,
+  "name": "Cyclone Snare",
+  "disc": "Galecraft",
+  "desc": "Spins a column of wind around a target, blinding them with their own debris and hedging every step \u2014 while the centre they stand in stays eerily calm.",
+  "vis": "A roaring grey-white tornado with a hollow eye, dust and grit orbiting the target like angry moons.",
+  "how": "A vortex is wound around a fixed point; the rim snatches at balance and sight while the core offers false safety. Patient targets simply walk out through the wall's worst edge \u2014 the snare buys seconds, not surrender."
+ },
+ {
+  "n": 40,
+  "name": "Featherfall Drift",
+  "disc": "Galecraft",
+  "desc": "Slows a falling body by thickening the air beneath it \u2014 a plunge turned into a descent, though no height is made entirely safe.",
+  "vis": "The faller surrounded by a soft blue glow, plummeting becoming a slow swaying descent like a seed on the wind.",
+  "how": "Drag is multiplied around the falling body. Falls become survivable, not comfortable; from a great enough height the spell only turns a scream into a longer one. It does nothing for what is thrown, only what falls."
+ },
+ {
+  "n": 41,
+  "name": "Arrowturn Deflection",
+  "disc": "Galecraft",
+  "desc": "Nudges a visible projectile off its line mid-flight \u2014 an arrow becomes a whisper past the ear. Heavy or magically anchored attacks barely feel it.",
+  "vis": "A faint blue hand of wind slapping sideways at the projectile's path, its trajectory bending like light through water.",
+  "how": "A lateral gust meets the projectile's flight and steals its aim. Speed is the enemy: slow knives shrug it off, and a boulder simply does not care. The caster must see the shot coming \u2014 unseen arrows arrive as surprises regardless."
+ },
+ {
+  "n": 42,
+  "name": "Vacuum Hollow",
+  "disc": "Galecraft",
+  "desc": "Briefly thins the air in a small space, smothering flames and silencing sound \u2014 never enough to suffocate, just enough to unmake fire and voice.",
+  "vis": "A sphere where the world goes quiet and dim, candle flames bending low and dying, dust hanging motionless in the hush.",
+  "how": "Air is thinned within a bounded pocket. Fire starves, sound dies, and breath grows thin for those inside \u2014 briefly. Lungs reclaim the space within moments; it is a snuffer, not a killer."
+ },
+ {
+  "n": 43,
+  "name": "Bastion Rise",
+  "disc": "Stonecraft",
+  "desc": "Raises a short wall of living earth to break line of sight, swallow a charge or give a beaten ally somewhere to breathe.",
+  "vis": "The ground swells like a held breath and bursts upward into a rough ochre rampart, stones grinding into place.",
+  "how": "Stonecraft loosens, lifts and recompacts soil and rock along a chosen line. The wall is real stone and real weight \u2014 it stops what hits it until force and time take it down. It rises only where earth exists; a marble ballroom offers nothing."
+ },
+ {
+  "n": 44,
+  "name": "Shatterknuckle",
+  "disc": "Stonecraft",
+  "desc": "Sends a focused vibration through stone to crack a weakened section \u2014 a door hinge, a bridge support, a statue's knee.",
+  "vis": "The caster's fist glows ochre; on impact, fracture lines race through the stone like lightning frozen mid-strike.",
+  "how": "A tuned pulse travels through solid mineral and finds its flaws. Whole, healthy stone shrugs it off; damaged, aged or poorly joined stone fails spectacularly. A mason's hammer and a saboteur's dream in one."
+ },
+ {
+  "n": 45,
+  "name": "Ironroot Brace",
+  "disc": "Stonecraft",
+  "desc": "Locks loose masonry together with veins of compressed mineral \u2014 a sagging arch, a cracked wall, a gate held shut for one more night.",
+  "vis": "Dark jade seams thread themselves through the stone like roots through soil, the whole structure groaning as it knits.",
+  "how": "Mineral is drawn and fused along stress lines, redistributing weight the way roots hold a slope. The brace holds until its stress limit \u2014 and the limit is honest. When it goes, everything it held goes with it."
+ },
+ {
+  "n": 46,
+  "name": "Quarry Fist",
+  "disc": "Stonecraft",
+  "desc": "Drives a compact mass of gathered stone forward as a blunt projectile \u2014 a flying boulder fist that punishes the slow.",
+  "vis": "Earth rips up and knits mid-air into a rough granite fist, moss and gravel trailing off it like knuckle hair.",
+  "how": "Nearby loose material is assembled and launched in one motion. It hits like a battering ram and crumbles on impact, returning to the dirt it came from. It cannot be fired where there is no stone to take."
+ },
+ {
+  "n": 47,
+  "name": "Sandveil Screen",
+  "disc": "Stonecraft",
+  "desc": "Lifts existing sand into a drifting screen that blinds the eye and clogs every exposed hinge, lock and mechanism it touches.",
+  "vis": "A rolling amber curtain of sand, glinting in the light, hissing like surf as it crawls across the field.",
+  "how": "Sand is given motion and altitude, hanging as a dense abrasive cloud. Eyes water shut; crossbow mechanisms grind; fine instruments die screaming. Water lays it down in moments \u2014 which is its own kind of trap."
+ },
+ {
+  "n": 48,
+  "name": "Pillarstep Column",
+  "disc": "Stonecraft",
+  "desc": "Raises a narrow stone column beneath the caster for a brief change of elevation \u2014 one honest storey, rising like a slow punch.",
+  "vis": "A smooth pillar erupts underfoot with a deep groan, lifting the caster above the fight in a heartbeat.",
+  "how": "The ground directly below is densified and driven upward as a shaft. It lifts; it does not carry. Descending is the caster's own problem, and columns left standing become cover, clutter, or tombstones."
+ },
+ {
+  "n": 49,
+  "name": "Faultline Mark",
+  "disc": "Stonecraft",
+  "desc": "Traces a visible fracture path through brittle ground, which gives way moments later along the drawn line.",
+  "vis": "A glowing jagged line races across the earth from the caster's touch, the ground behind it sighing apart into a fresh crack.",
+  "how": "The caster pre-stresses a line of ground and lets gravity finish the argument. Solid bedrock refuses the mark; thin shell, old flagstone and packed ruin obey beautifully. Timing is the art \u2014 draw it early, break it late."
+ },
+ {
+  "n": 50,
+  "name": "Gravelswarm Skitter",
+  "disc": "Stonecraft",
+  "desc": "Sends a low stream of pebbles skittering across the floor, turning every step in the area into a gamble on balance.",
+  "vis": "A hissing grey river of stones flowing ankle-high, popping and cracking underfoot like a pot at full boil.",
+  "how": "Small stones are given restless motion, rolling and shifting under any weight. Armoured feet ignore it; dancers, horses and charging lines do not. It is a spell of irritation that wins battles by making heroes look down."
+ },
+ {
+  "n": 51,
+  "name": "Crystal Ear",
+  "disc": "Stonecraft",
+  "desc": "Reads vibrations through connected stone \u2014 footsteps on a bridge, digging beneath a cellar, an army marching a valley away.",
+  "vis": "The caster presses palm to stone; faint rings of jade light pulse outward through walls and floors, each footfall a note.",
+  "how": "The caster's senses are lent to contiguous stone, hearing impacts as music through solid earth. The signal dies where stone ends; wooden floors, water and air are silence. A fortress of stone keeps no secrets from this ear."
+ },
+ {
+  "n": 52,
+  "name": "Obsidian Fan",
+  "disc": "Stonecraft",
+  "desc": "Forms a fan of razor volcanic shards from available obsidian \u2014 a fan of black glass that cuts beautifully and breaks just as beautifully.",
+  "vis": "A spreading hand of gleaming black blades blooms from the ground or the caster's arm, reflecting the world in dark mirror.",
+  "how": "Existing obsidian (or volcanic glass worked into the pattern) is shaped into edged fragments and hurled as a fan. The shards cut deep and shatter on armour. Without obsidian nearby, the spell is a wish."
+ },
+ {
+  "n": 53,
+  "name": "Rimefang Shard",
+  "disc": "Frostcraft",
+  "desc": "Forms a small ice shard from nearby moisture and sends it toward a precise target \u2014 a frozen tooth thrown with a surgeon's aim.",
+  "vis": "A needle of blue-white ice spins from the caster's hand, trailing a fine mist that crystallises on whatever it passes.",
+  "how": "Moisture is ripped from the air and flash-frozen along a line of intent. In humid air it is swift and sharp; in dry cold it is a slow, lonely pebble. Every shard returns to water when its brief purpose ends."
+ },
+ {
+  "n": 54,
+  "name": "Winterglass Shield",
+  "disc": "Frostcraft",
+  "desc": "Raises a translucent plate of ice that blocks one direction and fractures under repeated blows \u2014 honesty in a shield.",
+  "vis": "A slab of glass-clear ice with violet depths grows from the ground or the caster's braced arm, each hit blooming a white star of cracks.",
+  "how": "Water is frozen into a rigid plane along a chosen facing. It turns blades and catches arrows until accumulated fractures finish it \u2014 loudly. Fire undoes it quickly; so does time; so does simply walking around it."
+ },
+ {
+  "n": 55,
+  "name": "Snowfall Hush",
+  "disc": "Frostcraft",
+  "desc": "Spreads fine snow across a small area, softening every footstep and swallowing every track \u2014 silence and erasure in one gentle fall.",
+  "vis": "Feather-light snow falling only within a chosen circle, each flake catching light like ground glass, prints filling in as they are made.",
+  "how": "Moisture above the area is frozen and released as powder. Sound dies under it; trails vanish into it. It lasts until warmth wins \u2014 a spring morning undoes an hour of careful craft in minutes."
+ },
+ {
+  "n": 56,
+  "name": "Glacier Lock",
+  "disc": "Frostcraft",
+  "desc": "Freezes a wet surface around an object to hold it fast \u2014 a door to its frame, a boot to the ford, a sword hand to its own hilt.",
+  "vis": "Pale blue ice crawls and blossoms around the contact points, fern-patterns of frost racing outward with a delicate crackle.",
+  "how": "Existing water is flash-frozen at the points of contact, welding object to surface. Strength avails little; heat, oil and patience free the victim. Dry targets simply walk away from this spell's regard."
+ },
+ {
+  "n": 57,
+  "name": "Frostbite Thread",
+  "disc": "Frostcraft",
+  "desc": "Draws heat along a narrow line from whatever it touches \u2014 numbing bare skin, stiffening bowstrings, clouding glass, slowing fine mechanisms.",
+  "vis": "A hair-thin line of white-blue crawls across the target like frost on a windowpane, leaving numbness in its wake.",
+  "how": "Heat is leached rather than cold added \u2014 a distinction that matters to scholars and not at all to frozen fingers. It spreads along the drawn line and stops where warmth runs deep. Cloth and armour blunt it; exposure feeds it."
+ },
+ {
+  "n": 58,
+  "name": "Sleetveil Curtain",
+  "disc": "Frostcraft",
+  "desc": "Creates a slanted sheet of driving sleet that kills visibility and turns open ground into a skating hazard for everyone, caster included.",
+  "vis": "A grey-white wall of slanting ice rain hissing across a chosen lane, the ground beneath it going black and slick.",
+  "how": "Moisture is frozen mid-fall into a weather-front with an attitude. Eyes cannot pierce it; boots cannot trust beneath it. Allies get no exemption \u2014 a sleetveil is impartial, which is why veterans mark its edge before casting."
+ },
+ {
+  "n": 59,
+  "name": "Blue Comet Hammer",
+  "disc": "Frostcraft",
+  "desc": "Launches a dense, heavy mass of ice in a shallow arc \u2014 slow enough to see coming, heavy enough that seeing it doesn't save you.",
+  "vis": "A comet of compacted blue ice the size of a millstone, trailing glittering frost, arcing down like a small moon with a grudge.",
+  "how": "A large water mass is frozen into a ballast and thrown by pattern rather than arm. It lands like a dropped anvil and shatters into shrapnel slush. Evasion beats armour here; the comet punishes the rooted, not the brave."
+ },
+ {
+  "n": 60,
+  "name": "Everfrost Seal",
+  "disc": "Frostcraft",
+  "desc": "Chills a container, a wound dressing or a perishable thing to preserve its exact current state \u2014 it preserves; it never heals.",
+  "vis": "A delicate crust of white crystals forms over the sealed thing, holding it in an amber of ice, untouched by time's small rot.",
+  "how": "Heat is drawn until decay and change slow to a crawl. Herbs keep; blood keeps; a poisoned wound keeps its poison too. The seal is honest about its limits: what is frozen is stored, never mended."
+ },
+ {
+  "n": 61,
+  "name": "Snowblind Halo",
+  "disc": "Frostcraft",
+  "desc": "Throws glittering ice crystals into the air around the caster, dazzling anyone looking toward them \u2014 the sun itself turned into a weapon of misdirection.",
+  "vis": "A swirling crown of diamond dust catches every light, the caster becoming a blinding angel of pure glare.",
+  "how": "Suspended crystals redirect and multiply light toward every watching eye. It punishes the gaze, not the body; eyes closed or averted face an ordinary caster standing in very pretty weather. Darkness makes it jewellery."
+ },
+ {
+  "n": 62,
+  "name": "Winterstep Bridge",
+  "disc": "Frostcraft",
+  "desc": "Forms a temporary ice foothold on a wet or cold surface, then abandons it to melt or fracture \u2014 a stairway built one lying step at a time.",
+  "vis": "A rippling disc of ice freezes under each footfall with a musical chime, cracking away into the dark moments later.",
+  "how": "Each step flash-freezes a local patch of moisture into a brief platform. It climbs wet cliffs, crosses black rivers, walks thin air on borrowed cold. Warm days shorten the staircase; a missed step is the Weave's reply."
+ },
+ {
+  "n": 63,
+  "name": "Thornwall Bloom",
+  "disc": "Verdance",
+  "desc": "Drives existing roots and thorn-growth through the soil to raise a hazardous wall of living spikes across a chosen approach.",
+  "vis": "The earth splits with a green roar as a hedge of black thorns erupts and interweaves, rose-red buds opening along its crest.",
+  "how": "Dormant roots and seeds beneath the soil are woken, fed and aimed. The wall is real wood and real thorn \u2014 it bleeds sap when cut and dies when uprooted. Bare rock, salted ground and deep desert offer it nothing to wake."
+ },
+ {
+  "n": 64,
+  "name": "Briarmantle Wrap",
+  "disc": "Verdance",
+  "desc": "Weaves living vines around an ally as a light protective layer that turns an edge, catches a claw, and can be cut or burned away.",
+  "vis": "Green ropes spiral up the ally's body, leafing as they climb, until the wearer looks armoured in a living hedge.",
+  "how": "Nearby plant fibre is grown across the target in a flexible weave. It blunts and catches rather than blocks, and it feeds on ambient moisture as it lives. Steel parts it; fire ends the argument; and the wearer smells of crushed leaves."
+ },
+ {
+  "n": 65,
+  "name": "Pollen Lantern Glow",
+  "disc": "Verdance",
+  "desc": "Releases glowing pollen that hangs in the air, marking every current and revealing every movement that disturbs it \u2014 a living tripwire of light.",
+  "vis": "Golden-green motes drift and pool like underwater dust, flaring softly when something passes through them.",
+  "how": "The caster wakes a plant's pollen and lends it a slow, patient light. Air currents become visible rivers; anything moving through the cloud shoves motes aside and announces itself. Wind disperses the lantern; rain buries it."
+ },
+ {
+  "n": 66,
+  "name": "Rootsnare Grasp",
+  "disc": "Verdance",
+  "desc": "Snags an opponent's feet with nearby roots, restraining movement until the growth is severed \u2014 the earth itself taking sides.",
+  "vis": "Tendrils of root tear up through the soil and coil around ankles and calves, bark rough, grip patient and tireless.",
+  "how": "Roots within reach of the target are commandeered and given a single purpose: hold. Blades free the victim, fire kills the hold, and raw strength buys inches slowly. It restrains limbs \u2014 never will."
+ },
+ {
+  "n": 67,
+  "name": "Blooming Remedy",
+  "disc": "Verdance",
+  "desc": "Coaxes medicinal plants to release their full natural compounds \u2014 a poultice, a draught, a salve of the field. It aids healing; it is not healing.",
+  "vis": "The caster's hands glow soft green over herbs that unfurl, swell and weep their oils, the air filling with sharp, clean fragrance.",
+  "how": "The spell persuades living plants to pour out what they already hold \u2014 antiseptic saps, numbing resins, cooling oils. The body still does the mending; the remedy merely stacks the odds. No plant, no remedy."
+ },
+ {
+  "n": 68,
+  "name": "Seedshot Volley",
+  "disc": "Verdance",
+  "desc": "Fires hardened seeds from a living plant in a scattered burst \u2014 a shotgun of thorny grain with limited penetration and excellent discouragement.",
+  "vis": "A flower-head snaps forward like a catapult, spitting a fan of amber seeds that whistle through the air and punch into cloth and skin.",
+  "how": "Stored seeds are accelerated from a living host in one explosive release. It peppers groups, spoils faces, and rattles shields more than it pierces them. A living plant must serve as the barrel \u2014 carry one, or garden as you fight."
+ },
+ {
+  "n": 69,
+  "name": "Canopy Screen",
+  "disc": "Verdance",
+  "desc": "Bends leaves and branches into a temporary screen that conceals a small group \u2014 not invisibility, just the forest deciding not to notice you.",
+  "vis": "Foliage folds and layers itself into a green wall, birdsong hushing as the wood closes around the hidden.",
+  "how": "Plants within reach are guided to knit their cover over a bounded space. From outside, the screen reads as ordinary thicket \u2014 to eyes. Feet still crush twigs; voices still carry; and fire sees every leaf as fuel."
+ },
+ {
+  "n": 70,
+  "name": "Mossbridge Span",
+  "disc": "Verdance",
+  "desc": "Encourages moss and fibrous growth across a narrow gap, creating a fragile, springy foothold where no path existed.",
+  "vis": "A carpet of emerald moss leaps and knits itself across a chasm or stream, trembling underfoot like a held breath.",
+  "how": "Spores and fibres are rushed into a dense living mat. It carries light weights across patient distances and dies behind the crossing. Heavy armour, or heavy doubt, both find the bottom of the gap."
+ },
+ {
+  "n": 71,
+  "name": "Sapglass Snare",
+  "disc": "Verdance",
+  "desc": "Hardens plant resin into a sticky amber patch that seizes boots, wheels and paws \u2014 the forest's own flytrap.",
+  "vis": "A puddle of gold resin spreads and sets into glassy amber, anything touching it sinking in with a slow, helpless stick.",
+  "how": "Resin is drawn, pooled and flash-hardened into a tacky trap. Strength alone makes it worse; the escape is slow leverage, a blade, or a friend with rope. Cold makes it glass; heat makes it glue anew."
+ },
+ {
+  "n": 72,
+  "name": "Greenpulse Sense",
+  "disc": "Verdance",
+  "desc": "Reads stress and disturbance through connected roots and nearby plant life \u2014 a footfall on a far lawn, a fire in a distant copse, a camp in the brush.",
+  "vis": "The caster's fingers rest on bark; a green shimmer travels outward through leaves and soil, returning as faint tremors only they can read.",
+  "how": "The caster listens through the root-and-branch network of nearby vegetation, each plant reporting impacts and wounds as tremors. Paved stone, dead wood and barren ground are deafness. The bigger the green, the further the ear."
+ },
+ {
+  "n": 73,
+  "name": "Dawnbrand Blade",
+  "disc": "Radiance",
+  "desc": "Condenses a bright ray into a short striking flash that sears and leaves a burning afterimage on every watching eye.",
+  "vis": "A blade of solid gold light forms along the caster's arm, swinging once with the sound of a struck bell.",
+  "how": "Light is focused until it carries force. The brand cuts and dazzles in one motion, then spends itself. Against darkness-born things it is a terror; against a blindfolded swordsman it is merely a warm breeze."
+ },
+ {
+  "n": 74,
+  "name": "Halo Ward",
+  "disc": "Radiance",
+  "desc": "Forms a luminous arc above and around the caster that warns of incoming movement and softens one limited impact before collapsing.",
+  "vis": "A ring of rose-gold light hovers like a crown, flaring brighter a heartbeat before each strike lands.",
+  "how": "The halo reads disturbances in the light around it \u2014 a moving body dims the glow on its approach, ringing silent alarm. One blow is caught and shared across the whole ring; the second arrives uninvited."
+ },
+ {
+  "n": 75,
+  "name": "Prism Lance Split",
+  "disc": "Radiance",
+  "desc": "Splits a focused beam into several weaker rays, widening coverage at the cost of force \u2014 one answer for many targets, none of them final.",
+  "vis": "A single white beam fractures through an invisible prism into a fan of coloured spears, each bending slightly as it flies.",
+  "how": "The caster inserts a refraction pattern into the beam at release. Each child-ray carries a fraction of the parent's force and flies a fixed divergence. Versatility is the trade; a lone knight facing seven rays is annoyed, not stopped."
+ },
+ {
+  "n": 76,
+  "name": "Sunveil Blur",
+  "disc": "Radiance",
+  "desc": "Bends ambient light around a moving figure, blurring the outline into a smear \u2014 not invisibility, just a promise the eye cannot keep.",
+  "vis": "The caster smears at the edges like wet paint, their position always a half-step away from where the eye insists they are.",
+  "how": "Light passing near the caster is gently redirected, lagging and smearing the image. Stillness sharpens it; motion smears it. Rain, mirrors and sharp-eyed predators collect scattered truths the blur leaves behind."
+ },
+ {
+  "n": 77,
+  "name": "Truthglass Reveal",
+  "disc": "Radiance",
+  "desc": "Illuminates hidden ink, recent magical residue and surface alterations \u2014 the revealed truth of documents and doorways, never of minds.",
+  "vis": "A warm gold wash passes over the subject, and secrets surface like bruises: erased writing, ghosted seams, the smudge of spent enchantment.",
+  "how": "Raking light is tuned to catch the physical ghosts of alteration \u2014 different inks, disturbed dust, residue of mana. It shows what was done, not who did it or why. A pristine lie passes as clean."
+ },
+ {
+  "n": 78,
+  "name": "Beacon Crown Pillar",
+  "disc": "Radiance",
+  "desc": "Raises a tall column of light that every ally can use as a landmark across open terrain \u2014 a lighthouse carried in the palm.",
+  "vis": "A spear of brilliant white-gold climbs skyward, visible over hills and forests, crowned with the caster's chosen sigil.",
+  "how": "A fixed pattern of light is anchored and fed until it towers. It guides friends through storm and night \u2014 and advertises to every enemy where the caster stands willing to spend mana like water."
+ },
+ {
+  "n": 79,
+  "name": "Gleamstep Feint",
+  "disc": "Radiance",
+  "desc": "Flashes a bright mark at the caster's next foothold, disguising the true timing and direction of the movement that follows.",
+  "vis": "A burst of gold blooms at a decoy point; the caster is already elsewhere, the afterglow still explaining where they never went.",
+  "how": "Light is pre-positioned where the caster intends not to be and triggered with the step. Eyes and minds follow the flash; the body follows the caster. It works once on any watcher \u2014 twice on none."
+ },
+ {
+  "n": 80,
+  "name": "Lumen Thread",
+  "disc": "Radiance",
+  "desc": "Connects two visible points with a line of light for signalling or precise alignment \u2014 a surveyor's string made of dawn.",
+  "vis": "A hairline of pure gold light drawn taut between two points, humming faintly, unwavering in any wind.",
+  "how": "A fixed path of light is drawn and held between two anchor points. Messengers read it; engineers trust it; archers walk their aim along it. It marks both ends of itself for as long as it burns \u2014 betraying every line it draws."
+ },
+ {
+  "n": 81,
+  "name": "Aurora Veil",
+  "disc": "Radiance",
+  "desc": "Casts shifting bands of colour that scramble depth perception and disrupt visual tracking \u2014 the northern lights weaponised into a hundred dancing lies.",
+  "vis": "Curtains of green, rose and violet ripple through the air, distances collapsing and stretching inside their glow.",
+  "how": "Refraction layers bend and re-bend light in slow waves, so eyes build a world that keeps changing its mind. Missiles wander; charges mistime; depth becomes rumour. Closed eyes see through it perfectly."
+ },
+ {
+  "n": 82,
+  "name": "Mercy Flame",
+  "disc": "Radiance",
+  "desc": "Provides steady, clean warmth and light for treatment spaces \u2014 a hearth that burns nothing, asks nothing, and heals nothing by itself.",
+  "vis": "A small white flame floating at chest height, radiating a spring-morning warmth that unknots shivering hands and frightened faces.",
+  "how": "A gentle, self-feeding light pattern radiates comfort without fuel. Frostbite steadies; panic breathes; surgeons see. Wounds stay open, fevers stay fevers \u2014 the flame comforts the living; it does not argue with the dying."
+ },
+ {
+  "n": 83,
+  "name": "Nightfold Pocket",
+  "disc": "Umbral",
+  "desc": "Deepens an existing shadow into a short concealment pocket that swallows one willing body \u2014 and breaks the moment true light finds it.",
+  "vis": "A patch of dark folds inward like closing cloth, its occupant vanishing into violet-edged blackness.",
+  "how": "Ambient darkness is gathered, thickened and given interior. It hides; it does not transport, armoured or feed. A lantern's swing, a Radiant chant, or the dawn itself tears the pocket open and returns its contents to the world, blinking."
+ },
+ {
+  "n": 84,
+  "name": "Black Ribbon Path",
+  "disc": "Umbral",
+  "desc": "Sends a strip of darkness gliding across the ground to hide a movement, mask a trail or mark a silent route for following allies.",
+  "vis": "A ribbon of liquid night slides over floor and road, lightless and soundless, its edges fraying into smoke.",
+  "how": "Shadow is drawn into a mobile strip that swallows the light falling on whatever it crosses. Boots, wheels and dragged bodies pass beneath it unseen from above. From the side, in daylight, it is a black line on a bright road \u2014 a confession."
+ },
+ {
+  "n": 85,
+  "name": "Gloamstep Shift",
+  "disc": "Umbral",
+  "desc": "Moves the caster between two connected patches of shadow within a short visible distance \u2014 a blink that travels only where darkness already reaches.",
+  "vis": "The caster dissolves into violet smoke at one shadow and pours back out of another, motes of dark hanging between like a fading bridge.",
+  "how": "The caster's pattern is loaned to the dark and reclaimed from a second pool of it within sight. It cannot cross open light, water or bright wards. Where shadows touch, the Umbral walks; where they end, so does the trick."
+ },
+ {
+  "n": 86,
+  "name": "Silence Mantle",
+  "disc": "Umbral",
+  "desc": "Dampens the caster's footfalls, gear and breath-noise while leaving every other sound untouched \u2014 the world stays loud; only the caster leaves it.",
+  "vis": "A faint violet-grey haze clings to the caster like smoke; beneath it, boots strike and buckles swing in perfect, eerie quiet.",
+  "how": "A thin shadow-sheath absorbs the vibrations the caster makes. Speech is possible, at a strained whisper. It silences nothing else \u2014 a dropped torch clangs, a struck ally screams, and the mantle does not apologise for either."
+ },
+ {
+  "n": 87,
+  "name": "Eclipse Double",
+  "disc": "Umbral",
+  "desc": "Forms a dark duplicate that mimics one simple movement \u2014 a lunge, a fall, a turn \u2014 before dissolving into smoke.",
+  "vis": "A figure of black glass peels out of the caster's shadow, performs its single borrowed motion, and bursts into violet mist.",
+  "how": "The caster's own shadow is cut loose and lent one act. It has no weight, no warmth and no second performance. Keen eyes catch the gloss of it; blunt weapons pass through and learn nothing."
+ },
+ {
+  "n": 88,
+  "name": "Duskbind Chain",
+  "disc": "Umbral",
+  "desc": "Wraps a target's limbs in bands of living shadow that weaken under strong light \u2014 a restraint the sun itself can break.",
+  "vis": "Ropes of bruise-purple dark coil up from the ground around arms and legs, tightening with a cold, patient grip.",
+  "how": "Ambient shadow is braided into physical-seeming bands. They hold like rope, not iron; struggle slackens them, bright light burns them thin. In true darkness they are nearly unbreakable \u2014 a fact Umbral duelists arrange on purpose."
+ },
+ {
+  "n": 89,
+  "name": "Mothglass Lure",
+  "disc": "Umbral",
+  "desc": "Scatters dim false lights around the caster \u2014 will-o'-wisps that mislead the eye on distance, direction and number.",
+  "vis": "Soft magenta flames drift and bob at the caster's flanks, each one a lie about where a body might be.",
+  "how": "Small shadow-cast lights are seeded through the area, each suggesting a figure that isn't there. In darkness they shine; in brightness they gutter and confess. Old soldiers learn to shoot the light that moves wrong."
+ },
+ {
+  "n": 90,
+  "name": "Hollow Dark Orb",
+  "disc": "Umbral",
+  "desc": "Creates a small orb that drinks the light around it \u2014 dimming a corridor, drowning a lamp, deepening every shadow it feeds.",
+  "vis": "A bead of absolute blackness floats at the caster's fingers, the light around it bending and pouring inward like water down a drain.",
+  "how": "A fixed point of shadow-hunger is set loose; nearby light is bent into it and lost. It deepens gloom into darkness and darkness into blindness \u2014 for both sides. It swallows light, never objects; a sword thrust finds it as empty as any dark."
+ },
+ {
+  "n": 91,
+  "name": "Raven Mark Sigil",
+  "disc": "Umbral",
+  "desc": "Places a faint shadow-sign on a surface \u2014 a doorframe, a crate, a shoulder \u2014 for the caster's later recognition across any crowd.",
+  "vis": "A mark like a raven's folded wing inks itself invisibly into the shadow of the target, legible only to the caster's trained eye.",
+  "how": "A tiny pattern is written into an object's shadow, persisting while the shadow does. The caster reads their marks at a glance across a street or a battlefield. Sunlight wipes them daily \u2014 the raven signs its work in perishable ink."
+ },
+ {
+  "n": 92,
+  "name": "Lastlight Screen",
+  "disc": "Umbral",
+  "desc": "Raises a moving wall of shadow that conceals everything behind it \u2014 and blinds whoever hides there to everything beyond.",
+  "vis": "A tall curtain of slow-swirling night advances, swallowing silhouettes whole; behind it, the hidden move in mutual blindness.",
+  "how": "A dense shadow-front is given slow motion along a line. It blocks sight both ways \u2014 a wall that hides the archer from the knight and the knight from the archer. Skilled pairs cast it, cross behind it, and strike from inside their own eclipse."
+ },
+ {
+  "n": 93,
+  "name": "Foxfire Guide Call",
+  "disc": "Spiritbond",
+  "desc": "Asks a willing light-spirit to mark a safe route with drifting foxfire flames \u2014 a lantern that chooses its own path and answers questions with its silence.",
+  "vis": "Blue-white flames shaped like small running foxes pad ahead of the party, pausing and looking back where the way is false.",
+  "how": "The caster petitions a bonded spirit through their shared bond; the spirit, if willing and amused, sends its flame-kin ahead. The flames know ground and grudge better than maps. Spirits serve the bond, not the caster's schedule \u2014 refuse a spirit once and find fewer flames next time."
+ },
+ {
+  "n": 94,
+  "name": "Ancestral Echo Call",
+  "disc": "Spiritbond",
+  "desc": "Invites a willing spirit to repeat a remembered sound or gesture from the past \u2014 a last bell, a dropped sword, a door closing. Never anything it never witnessed.",
+  "vis": "Silver figures half-seen at the edge of sight act out one muted moment, voices arriving like words through deep water.",
+  "how": "The caster asks the local dead to lend a memory. What returns is a spirit's recollection \u2014 coloured by its perspective, incomplete by its nature. No spirit ever reveals what it did not see; history here keeps its own counsel."
+ },
+ {
+  "n": 95,
+  "name": "Wisp Errand",
+  "disc": "Spiritbond",
+  "desc": "Asks a small spirit to carry a light object across a nearby gap \u2014 a key, a letter, a lit candle \u2014 through places hands cannot go.",
+  "vis": "A mote of teal light cradles the object and bobs away through keyholes, grates and arrow-slits, humming tunelessly.",
+  "how": "The bond is shaped into a temporary errand; the spirit carries what it finds interesting and delivers what it remembers to. Weight and distance are negotiated by the spirit's mood. Bored spirits set things down early, in interesting places."
+ },
+ {
+  "n": 96,
+  "name": "Listening Pact",
+  "disc": "Spiritbond",
+  "desc": "Opens a brief channel for the caster to hear a bonded spirit's impressions of the area \u2014 what the stone noticed, what the river resented, what the old tree is tired of.",
+  "vis": "The caster's eyes film lilac; the world's edges sharpen as another set of senses pours in like tide through a cracked hull.",
+  "how": "The bond is widened, not deepened \u2014 the caster borrows the spirit's awareness for a breath or two. Impressions arrive as feelings and fragments, not words. A frightened spirit's fear arrives with the impressions, unedited."
+ },
+ {
+  "n": 97,
+  "name": "Mosskin Shelter Call",
+  "disc": "Spiritbond",
+  "desc": "Invites a plant spirit to strengthen an existing natural shelter \u2014 a hollow, a thicket, a leaning tree \u2014 into a refuge that holds warmth and hides scent.",
+  "vis": "Leaves knit and thicken overhead, moss creeps to plug the gaps, and the whole shelter settles with a sigh like an old animal bedding down.",
+  "how": "The spirit is asked, and if the shelter suits it, it lends its living strength. The refuge stays only while the spirit is content \u2014 and spirits abandon shelters that smell of blood, fire or cruelty. The spell enforces its own morality."
+ },
+ {
+  "n": 98,
+  "name": "Riverkin Turn Call",
+  "disc": "Spiritbond",
+  "desc": "Asks a water spirit to redirect a nearby current \u2014 to speed a boat, delay a flood, or turn a stream against pursuers wading it.",
+  "vis": "The water rises in a long, considering shape, tilts like a head being scratched, and then flows the way it was asked \u2014 mostly.",
+  "how": "The caster petitions; the current agrees if the spirit has strength and the request suits its temperament. Rivers remember insults across years. A refused river is not a stalled spell \u2014 it is a relationship to repair."
+ },
+ {
+  "n": 99,
+  "name": "Kindred Pulse Bond",
+  "disc": "Spiritbond",
+  "desc": "Shares a brief sensation between willing bonded allies and their spirits \u2014 one flash of warmth, one heartbeat of courage passed hand to hand along the bond.",
+  "vis": "A ring of soft gold-teal light pulses once through every bonded ally, shoulders straightening as the feeling passes through them.",
+  "how": "All parties consent; the bond carries a single shared moment. It cannot carry thoughts, commands or pain \u2014 only sensation, offered and accepted. Casters who use it as a battlefield signal learn that trust, like mana, spends and recovers."
+ },
+ {
+  "n": 100,
+  "name": "Parting Gift Burst",
+  "disc": "Spiritbond",
+  "desc": "Releases stored bond energy as one protective burst around the caster \u2014 after which the spirit withdraws, and may need days alone before it answers again.",
+  "vis": "The bonded spirit blooms into visible radiance, wraps the caster in a sphere of its essence, then scatters into motes that drift away without looking back.",
+  "how": "Everything saved in the bond \u2014 goodwill, memory, favour \u2014 is spent at once as a shield. It is powerful because it is final: the bond empties, the spirit goes quiet, and the caster walks alone until trust regrows. The strongest door is the one that closes."
+ },
+ {
+  "n": 101,
+  "name": "Vigil Light Prayer",
+  "disc": "Divine",
+  "desc": "Asks Lumina for a steady light that helps the fearful hold their ground in darkness \u2014 courage lent, never forced, in a glow no wind can kill.",
+  "vis": "A clean ivory flame rises and holds, and within its circle shoulders loosen, breaths slow, and shaking hands find their grip again.",
+  "how": "Devotion is offered; if favour holds, the answer comes as light that steadies the heart. It does not blind enemies or burn undead \u2014 it simply makes standing easier. When the light is refused, the faithful read the silence and stand anyway."
+ },
+ {
+  "n": 102,
+  "name": "Morrow's Measure Prayer",
+  "disc": "Divine",
+  "desc": "Requests a brief stabilising grace for a soul whose lantern has not yet gone out \u2014 the dying held at the threshold for minutes more, no further.",
+  "vis": "Pale gold settles over the fallen like evening light, the rattling breath steadying, the last minutes made quiet and whole.",
+  "how": "Within Morrowyn's narrow mercy, a prayer can hold a departing soul at the doorway. It buys time \u2014 for a goodbye, a rite, a healers' sprint. Past the boundary, no prayer, power or price turns the lantern back."
+ },
+ {
+  "n": 103,
+  "name": "Oathfire Witness Prayer",
+  "disc": "Divine",
+  "desc": "Calls a visible flame to bear witness to a freely spoken vow \u2014 burning steady for the true, guttering for the coerced, indifferent to lies the speaker believes.",
+  "vis": "A tongue of sacred fire rises between the swearing parties, writing the vow in light for the length of its keeping.",
+  "how": "The flame reads the oath's sincerity, not its morality. A heartfelt wicked vow burns as bright as a noble one. The Church keeps archives of guttered oathfires \u2014 a quiet ledger of every vow that was ever only words."
+ },
+ {
+  "n": 104,
+  "name": "Sanctuary of Hands Prayer",
+  "disc": "Divine",
+  "desc": "Asks for a protective presence around those sheltering together \u2014 strongest when they stand willingly, weakest when they are gathered by force.",
+  "vis": "Pale hands of light seem to rise from the ground around the group, overlapping into a dome that brightens with every joined will.",
+  "how": "Shared, willing devotion is the load-bearing wall of this miracle. Ten volunteers out-hold a hundred hostages. The sanctuary shields; it does not feed, warm for comfort, or punish \u2014 it simply says: not here, not these people."
+ },
+ {
+  "n": 105,
+  "name": "Pilgrim's Resolve Prayer",
+  "disc": "Divine",
+  "desc": "Seeks one moment of clarity when the caster is close to abandoning a chosen duty \u2014 a single breath in which the right path stands unmistakable.",
+  "vis": "The world's noise falls away; for one heartbeat the caster sees their road lit end to end, and their own feet upon it.",
+  "how": "Not courage, not comfort \u2014 clarity. The prayer lifts the fog for a moment and lets the pilgrim choose with open eyes. Gods do not choose for their devotees; that is the entire point of the gift."
+ },
+ {
+  "n": 106,
+  "name": "Last Bell Mercy Prayer",
+  "disc": "Divine",
+  "desc": "Requests aid for the dying within the narrow boundary already permitted \u2014 easing pain, clearing the mind, letting the final words arrive whole.",
+  "vis": "A sound like a distant bell made of light passes through the dying, and the fear goes out of their face, leaving something at peace.",
+  "how": "The most-restrained miracle in the liturgy: it touches only what the boundary allows. Pain dulls, terror quiets, meaning holds. Clerics who overstep this prayer lose the words for a season \u2014 the gods prune their own garden."
+ },
+ {
+  "n": 107,
+  "name": "Candour Crown Prayer",
+  "disc": "Divine",
+  "desc": "Casts a soft radiance that makes concealed writing, symbols and markings easier to see \u2014 revelation in the literal sense, never the figurative.",
+  "vis": "A dawn-coloured wash settles over pages and walls, and hidden things rise to the surface like stones in a clearing river.",
+  "how": "The light answers sincerity of purpose more than rank. It shows what was hidden, not why. The Inquisition favours this prayer and is, itself, exactly as visible to it as everyone else \u2014 a fact its scholars prefer not to discuss."
+ },
+ {
+  "n": 108,
+  "name": "Hearth of Grace Prayer",
+  "disc": "Divine",
+  "desc": "Asks for warmth and calm in a small refuge \u2014 grief stays, fear stays, but both are given a fire to sit beside.",
+  "vis": "A hearth-light blooms in the centre of the room, and the people around it find they can finally speak about the thing they couldn't.",
+  "how": "The miracle works on the room's heart, not its air. No wound closes, no mana returns \u2014 but despair loosens its grip by a finger's width, and in sieges, a finger's width has saved cities."
+ },
+ {
+  "n": 109,
+  "name": "Elsewhere Seam Fold",
+  "disc": "Forbidden Arts",
+  "desc": "Folds a short gap in space so a visible object seems nearer \u2014 an arm's reach that becomes a hand's breadth. Never a door. Never to another world.",
+  "vis": "The world creases like folded cloth, a seam of fractured violet light opening along the fold, edges glittering with wrong reflections.",
+  "how": "Space is pinched and re-laid so two nearby points briefly share distance. The caster reaches across the seam; what crosses is limited to what the seam's width allows. Each fold leaves the Weave slightly thinner there \u2014 and the Church's hunters can read a seam's scar like a signature."
+ },
+ {
+  "n": 110,
+  "name": "Borrowed Second Echo",
+  "disc": "Forbidden Arts",
+  "desc": "Steals a fraction of timing from the caster's next motion \u2014 acting a heartbeat before the moment arrives, and paying for it in disorientation after.",
+  "vis": "The caster flickers, their attack landing before its own image, the world around them briefly stuttering like a skipped heartbeat.",
+  "how": "Time's fabric is nicked and the stolen fraction is spent on a single action. The act cannot be changed or undone \u2014 only hurried. The echo always collects: vertigo, doubled memory, and a scar on the Weave that something, somewhere, must come and stitch."
+ },
+ {
+  "n": 111,
+  "name": "Nullglass Edge Cut",
+  "disc": "Forbidden Arts",
+  "desc": "Creates a thin void boundary that unthreads a small mana construct \u2014 a ward, a binding, an active enchantment \u2014 without limitlessly erasing matter.",
+  "vis": "A blade of nothing, visible only as a line where the world refuses to render, passes through the construct like cold through cloth.",
+  "how": "The caster draws a boundary where mana patterns cannot hold. Spells unravel against it; solid matter merely parts around an edge with no width. Void remembers every cut. Casters who overuse Nullglass report the world's edges looking worn."
+ },
+ {
+  "n": 112,
+  "name": "Folded Threshold Step",
+  "disc": "Forbidden Arts",
+  "desc": "Compresses the apparent distance across a doorway for one crossing \u2014 twenty paces of corridor stepped through in one stride, then the world snaps back.",
+  "vis": "The doorway stretches like pulled taffy; the caster steps; the space snaps taut behind them with a sound like a breaking violin string.",
+  "how": "Distance is folded across a bounded opening for a single passage. One crossing, one snap-back. Whatever the caster carried across, carried the fray with it \u2014 which is why Inquisition vaults are hung with detection weaves tuned precisely to this spell's scar."
+ },
+ {
+  "n": 113,
+  "name": "Afterimage Prison",
+  "disc": "Forbidden Arts",
+  "desc": "Repeats a target's last visible position as a temporal echo that misleads pursuit \u2014 a ghost of where they were, replayed for anyone watching the wrong moment.",
+  "vis": "A translucent copy of the target stands at their last position, cycling one small motion \u2014 a turned head, a lifted foot \u2014 in eerie silence.",
+  "how": "A recent moment is plucked and looped in place. It deceives eyes and simple wards; it cannot restrain, harm or speak. Hunters learn to count the target twice and trust the colder copy. The loop frays thin with every repetition."
+ },
+ {
+  "n": 114,
+  "name": "Hollow Interval Gap",
+  "disc": "Forbidden Arts",
+  "desc": "Creates a momentary gap in a sound or light sequence \u2014 a word drops out of a sentence, a flash never flashes. Noticeable to anyone truly paying attention.",
+  "vis": "For an instant the world's soundtrack and light skip, like a page turned too fast, careful observers left with the itch of a missing beat.",
+  "how": "A sliver of Time is lifted out of a local sequence. What was within it simply fails to happen for witnesses. It edits perception, not events \u2014 the word was spoken, the light shone; the interval only stole their arrival. Frays the Weave where attention was densest: crowds, rituals, battles."
+ },
+ {
+  "n": 115,
+  "name": "Starless Pin Anchor",
+  "disc": "Forbidden Arts",
+  "desc": "Anchors one point in space so loose objects drift toward it before the distortion collapses \u2014 a momentary gravity of nowhere.",
+  "vis": "A speck of depthless dark pins the air; dust, leaves and loose arrows lean and spiral slowly inward until the point winks out.",
+  "how": "A fixed coordinate is nailed against the world's motion, and unsecured matter reorients to it. The pin holds seconds and drags only the light and loose. Each anchor leaves a tiny bruise in the Weave \u2014 and the Church's registers map old bruises like plague marks."
+ },
+ {
+  "n": 116,
+  "name": "Yesterday's Trace Echo",
+  "disc": "Forbidden Arts",
+  "desc": "Shows a faint echo of a recent movement in a location \u2014 the shape of a fight, the path of a thief \u2014 incomplete, and never the thoughts of those who moved.",
+  "vis": "Grey-violet silhouettes replay brief moments in a place, smudged and partial, like figures painted in water that never quite dries.",
+  "how": "The caster reads the freshest impressions pressed into the local Weave. Hours old at most; incomplete at best; private thoughts never. Every reading frays the trace further \u2014 Forbidden detectives destroy their own evidence one look at a time."
+ }
+]
