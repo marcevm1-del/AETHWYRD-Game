@@ -1,0 +1,850 @@
+### AETHERIA — UPGRADE V8
+
+### Advanced Companions, Mounts, Pets & Creature Bonding System
+
+For V8, I recommend focusing on the creatures and companions that accompany the player throughout their journey.
+
+Aetheria should feel less like a world where the player travels alone and more like a world filled with creatures that can be discovered, befriended, trained, ridden, collected, and developed.
+
+This is strictly designed around your single-player vision.
+
+![Beast of Reincarnation release date set for August 4 | RPG Site](https://images.openai.com/static-rsc-4/mSMeDTbN0HlkxTq3VhHVQpLESo5eehgV4f1WBWy6XtTQI6r6VQpDW4tWJFe4MKBy6hVULLBGKcH6SPhp4I9s1CfvCLTh5EB2a1MeQER4tnTl9TRuUlCbM7-ikvqXDR9C7LgmExgPYqGCxpMF7QagcNaasmXvhtR_hUjo3jVaiW3dLbEZKwwdlz9JoUICMYwm?purpose=fullsize)
+
+![Fantasy Character Creator | BasedLabs](https://images.openai.com/static-rsc-4/VYXJFvD2tOpd4zYlRgu5tZaXB4hcMGJbI_ZoPpomLQ8qw-Gs9KuGxV35Vby3pJxv00mNBLIT86Ge14uDtz1nK2eNVjsrNZKYgFJ9pTnHYJ7qgrp8ahJXjYC867YA_m72AX8hkVzSh6Ck9Pmyuq-mwSsDIfbePtqPvZ8kPcS8l0uyEABa0bMEZRRXuHVxbw5E?purpose=fullsize)
+
+![《北方之靈 Spirit of the North》將登陸 NS、PC 平台 化身狐狸與北極光守護者探險《Spirit of the North: Enhanced Edition》 - 巴哈姆特](https://images.openai.com/static-rsc-4/7ZbP18f9hRH96eAp5mPkl4QSJl73QDPUECLeN7miynHr8vGWV4PqHI_2oBNIXP2ayZ_rdWSFFlkGsgK7CwTk0VeVo0angMSCpPd_UJS1c7D4rrDJU3JCfdrBNQri2V24U42t_fzLNCf6RENXpxg7iBpIQgU-cQlGu7N3m3nqSdakP66DGG37lTmLhvceX1IP?purpose=fullsize)
+
+### Upgrade progression
+
+| Version | Main focus                                  |
+| ------- | ------------------------------------------- |
+| V3      | Blender and 3D production                   |
+| V4      | Living world and narrative                  |
+| V5      | Combat and enemy intelligence               |
+| V6      | Crafting and professions                    |
+| V7      | Exploration and ancient civilizations       |
+| V8      | Companions, mounts and creature progression |
+
+### 1\. Advanced companion system
+
+Build a system that allows players to recruit and travel with intelligent companions.
+
+Companion categories:
+
+* Warriors.
+
+* Archers.
+
+* Mages.
+
+* Healers.
+
+* Assassins.
+
+* Guardians.
+
+* Magical creatures.
+
+* Ancient constructs.
+
+* Legendary companions.
+
+Companion features:
+
+* Individual personalities.
+
+* Loyalty progression.
+
+* Companion levels.
+
+* Unique abilities.
+
+* Equipment customization.
+
+* Relationship development.
+
+* Companion quests.
+
+* Combat behaviors.
+
+* Exploration assistance.
+
+* Contextual reactions.
+
+* Individual backstories.
+
+Advanced feature: Companion Personality System
+
+Companions should not all behave identically.
+
+One companion might be brave and aggressive, another cautious and defensive, while another might be curious and frequently investigate nearby discoveries.
+
+Their personalities should influence dialogue, reactions, and behavior.
+
+### 2\. Companion combat intelligence
+
+![Battle Companions by sandara on DeviantArt](https://images.openai.com/static-rsc-4/bhq9JNHwSxidKRlMMeTbuw32jtvT882XT4wG_8dHaWVTWb8XqZuhRZ47dIsAfdepzFmGREQ_SHBFHRfieAHhbDK0xhKv2KMtpIWBZ4MBxCTHAo3-wKzzdh8H8DeCb2Ao-VNeO0uitziGsbEL_V9ojnyR6pQeIw_zriKibXBU6J8394kd_eFwOLf1n8WXmms0?purpose=fullsize)
+
+![Avowed developers talk with me about companions, quests, and more for Obsidian's upcoming Xbox RPG | Windows Central](https://images.openai.com/static-rsc-4/VecnS1VqeFp3qfEO4FhcTQz4NifSDBO-3S4BkAoQhBBCyFt7-mmSI0cl_I2DAV_ohEu4xJ42m8R7Vhym_yuF1DHCfX2uY4wJ6_1O6l6PQvpMzsYEy3b1uLfCdy6GNamc9MdxnYQfyGP0OglRyvaAUVnnnw05_r3cjUlM_JgzABHpFZnPDnC8agtFMeOkBxCk?purpose=fullsize)
+
+![Here is what’s new with ESO’s Scions of Ithelia DLC!](https://images.openai.com/static-rsc-4/x_cvAXvX3BzkRCNgq6kV9RlIr9lLOOUoHcZwxMX3-qhgo9v0ySpED7zOq1QQ5dBAXNrvc05II7nTHgGipbgBGnEgqkUOzs2Oy4OFOX92zacFmBGFc2yiAuYLHW36sikO83KHx0Qkb8lVYgR--2_oRlI8Pb-FfwkU_aACvhsPQewnc0n2t0Pp_9vByiF-VPYo?purpose=fullsize)
+
+![Dragon's Dogma 2 review: "Embrace the chaos and there's nothing quite like it" | GamesRadar+](https://images.openai.com/static-rsc-4/a76cqaffDeGQS6-ya9WXOVN5ZDhtJHxsuFCChE6985KNS-1GFwOjRWfwTQSrC8-GYRLrl970fFhxGtRbQqsc-0l4_4tva_BpVfYPKLxjNOjsiZEXFLHmoOCsrrDCiMK5oQ8q2G5YtUkbaDiCGvH35bAtzlXVuxV9GpLhX50I-w3lqVl3hpxLj6ofuVfuh7sP?purpose=fullsize)
+
+![Soulframe Preludes 8 - Update Notes - Soulframe Community](https://images.openai.com/static-rsc-4/6p0DuZ6dp4wZdDXVLMcrj12ELJsMnD9AinWCiPR-pzbymsjl_nMYacnGrXsZ5MF-xjW-hKvltTknQlu36q1Chzp56mlls_vWqjO1FF0M8nPpL1uAsfBWtB_z7ph08pqU4j-peNcIeFDRT4T4SCYSE51XcqslwStRSaXYbd3VXmtFjhG9GKbD1lIydm3ROAWu?purpose=fullsize)
+
+![Économisez 85 % sur Edge Of Eternity sur Steam](https://images.openai.com/static-rsc-4/j3RgN6A7qNznuHOYFdn52k_atfNCX18VbcGOyK4ydqjkmGD8HKQO2pKPk-dtYqfczW09QywdvoC1uj3qftpDTzsE64cq3jv2LSGonZQLPVdpISktylzRdiMaEAOP49qVMpiyXu3apVOJxyLGsQI6x2KKA08AFXI_kOKV7_HTCDoK7ShOJd8C2DvKkiF2h5Dl?purpose=fullsize)
+
+![DLCゲームパック「失われた深淵」＆アップデート第35弾の登場 - TESO／ESO～エルダー・スクロールズ・オンライン～ DMM GAMES](https://images.openai.com/static-rsc-4/r6Bnigm0FCgXRYt0DECkjR8MaB3v--9c9PRQ48UhIVe8bmNM8juHpKzeFdNm4bSg1_4hKzUX0HuKKnW5cOmKAUClqVjov9JMtgzIF4ZxviMFngBm1Rua-vcNB0KhyhFplhkVeQdJxm6CA_35xcFF3_K8NBIS5iXvCGuFBqZpwJfFSN91O_CRhbpQI4F4gLUj?purpose=fullsize)
+
+![Lords Of The Fallen Length, Difficulty Level, And More Revealed In New Q&A | TechRaptor](https://images.openai.com/static-rsc-4/IrV-OBeM_Hlg7BDYfJJTTFouTm5cZf4mEoI5OPBCx8_Rv2a5DsuB7L66SwOSbw42oNSERPjXRirQ8t9ghBr69AJ5VOAVOjcRhvbheTxjs3EDTaiE70CUluZyuUZoDcpMJoS-ZTcV42HG0SV4zh73ng6y-lRX6k6ZibWy35o36_YZJhyKwsmbmShoBUSOyyTF?purpose=fullsize)
+
+![Trudvang Chronicles RPG: An Interview with Theodore Bergquist - obskures.de](https://images.openai.com/static-rsc-4/wtAUHWXoBth7g6XAxy--aqGeo2LaC9M3KDn9Zqlb1O7x7mV1VGIQqzks1eSw9r4R_aHRvTFs9e-wZtkZmIYn2QA9eSSADYNRBUXOYGiuVTUDpfZLSDmBLPcGM0Xl0n7BymfivzorfbCBndrW8wxCXN9p9po6aZKyBHHRQ3sTteBCXOAipOZRqwbPJHXDsI4z?purpose=fullsize)
+
+![Update 44 Base-Game Patch Now Live on All Platforms](https://images.openai.com/static-rsc-4/IvKRjJYDm0Iv_B9I62lJ51doEyQ_r9STMvEgGoFEuXDBLHcITdQTKPOrvoepNDQnitHcPrVmA7yAqP1o_FWA80whpYfmYtGq8l2Gle20t5co6DE7Lcy2jKndmpkFP5szNR_tFGrnOStLIvstFvhf5qPHO4P9w8BUA2OS_agb1AdF2gUFQD9O7ccyeuJfP6yW?purpose=fullsize)
+
+![Avowed Officially Delayed to February 18, 2025; New Live Stream Set for August 23](https://images.openai.com/static-rsc-4/MOcG2isQLLzK6Y1tvfxdN0Wxd82ZcmktkO0Zal9gVUiGaS8xE3XrSieWbuI_FJO_zV-tckgQeAX32pqtWHvhE-otpCs6LnKFtpSHkGzEKKHBFvdz8bhUi67g0VSMIOf2LQKeFTAWxY8zjMZA_sO1BaCcZHPDl0bztr_BfSLl_Uph5Ox3Of11RZRQ7FU5AuM9?purpose=fullsize)
+
+Make companions useful without allowing them to play the game for the player.
+
+Add:
+
+* Defensive behavior.
+
+* Offensive behavior.
+
+* Healing support.
+
+* Enemy targeting.
+
+* Threat recognition.
+
+* Formation positioning.
+
+* Ability cooldowns.
+
+* Retreat behavior.
+
+* Revive assistance.
+
+* Tactical commands.
+
+Player commands:
+
+| Command       | Behavior                              |
+| ------------- | ------------------------------------- |
+| Follow        | Stay close to the player              |
+| Hold position | Remain at a designated location       |
+| Attack        | Engage a selected enemy               |
+| Defend        | Protect the player                    |
+| Assist        | Help with the player's current target |
+| Retreat       | Move away from combat                 |
+| Interact      | Investigate a nearby object           |
+
+Add companion behavior presets such as Aggressive, Defensive, Supportive, and Balanced.
+
+### 3\. Creature taming and bonding
+
+![9 marvelous images from D&D's 'Wild Beyond the Witchlight'](https://images.openai.com/static-rsc-4/ccfEfukwehMOZcxguPjh30IwBKFVa3R0VPYnVJrQtJOYdeesdam0ARkOS18I7Huu2NAjUwCYCBH7PnspU3oO6m7B-MAnKB6gEvXLyeRvnbgXvfwcrHUwZDTLkBLQkews0EGyZiTxay9F818YrmoDn0bxiNK2RP1RaiHAUKhC01woIbia_Gwa0K-wnU8pOcpx?purpose=fullsize)
+
+![War Dragons — Romeo Echo_Delta](https://images.openai.com/static-rsc-4/HYK5oD4UQp4zFnASQQ8DIrZIGJ-Tv2R0IETRCNnVUkU1Z0ektKlmSreaHzLpKFX3cdsc9QSLocZO7p4QCuocLJ9YLui6nR2r4B7C_pGQ9laQ0hrGphYQBLZkv9a1Pc_MKzRjW-0o1B5mJ3WUKTHhdF2VryAR9dEewN10FtIG4fuaStdQRRzKx8v21EtpdapG?purpose=fullsize)
+
+![Cinematic Magical Creature Encounters ChatGPT Image Prompt | PromptBase](https://images.openai.com/static-rsc-4/IQnoRvWPeK7n7qEFr0EKeLj_Wgyz5BfP02_lXcSDE0WOkOHW8P8q_D86hrtCkvaNrcBcX93iG4ErrGGd_N91j0vDQPXbmJyZ_iMx_fqZ2i3XXfCt6FzO4d7ueAdXrOHLHp9-saPIkkh9lN970l-XvyvATvXvaeW9W5_m37MPAEwKLe0uI9dBEwFL1aSoqc-M?purpose=fullsize)
+
+![AI Wallpapers - Generate your own wallpapers](https://images.openai.com/static-rsc-4/uru-1aeH43cT8xouLfNmCyp4RAN151oBoeA4k_xf1Yo6TBJENfFIurw04Re1MrbO2ZsInZQz8_dxswPxbBC5H6N6SR75ko5Q6v5pcL7gWUJlGduACREZoivKHnZ3YiakXtjLHWwoqnd_1LkJyLPZ5ilSx6Ck_NNUDhqMI05K1M6ZZUasSgK0_zyp0wTJSUwM?purpose=fullsize)
+
+![Image Pack Realistic Dragon Illustration Generated by AI](https://images.openai.com/static-rsc-4/zf-Pu9Lfuh9lgy8bLiYFg5FxHnYvcw7zmIoWelPDizJaMo2PPEdX7bBXab9ZEenaJ-UO-Ytl89FwRdUt6ZE_v0lAlqMvL73PsbrwpRA6hEiObFlkL0u-HjhKBwdeOkKA7_cSzsJn9oNXJumHoEWNaTpY4NqiQtNIkMYeU5ebK_GcXEJh5ngQkKNimsx7zgjm?purpose=fullsize)
+
+![Die Legenden von Andor - Erweiterung Der Sternenschild kaufen](https://images.openai.com/static-rsc-4/ytlTOEArx6ZXuDr5bQNMpl-7J2XjVhM5RRWsNBYXRFSNFqlURA4ahMLnpjWGigeugALlME9ysge5MNhn1qzxgZci3_e7DoL3hdZjM6t2zYFOzx3kIvp710U_NN4mb4PfH7YSM2Z5gf8zcEMLmB1gmoOU00YPM3S78wPFmhMv4JAu-RJo-yFuWu42E1aJPkNB?purpose=fullsize)
+
+![Artist Interviews: Kaining Wang](https://images.openai.com/static-rsc-4/Wwk05fYaEJNZ9uqbcdt6rAdSbqfUJ9cGT2bwZQYcUBws6qZPz1-HYkdNS1yGlODvzISPXDiItcJ3QP4zSC1kANXW4MteO_wEs2BvblkrUFs0MECweo1ECh_AkB5NRipKI-4DOHWrk6C-1Q-S8KDLHiBqQM_e2oEbe-__Se3om7CB9FF0Z30Rw_EyfUsKod_g?purpose=fullsize)
+
+![Deer dream meanings | SSP Daily](https://images.openai.com/static-rsc-4/Hjb_9nd3Crprz5XE3UVRjmFEwaouZ84Qlv_r9P0c_QQxTGxI7lqL8Qrt4NdW5B52zxdlDlDD3ZiCaMFFFdWYWQ67dTQLdeHnywViTg6uXbp7wEyAiZ8ipWNhlJZZRrDwr9lniG5WkettXkIx97-J8m2WTeslFyTEAsfZ-p4OjPyobN9bDnzL-c1WuXfovu1m?purpose=fullsize)
+
+![大陸誌：グレンベルナ](https://images.openai.com/static-rsc-4/EvVjvfZYzLwGz8xbUmuOIYG7CyB1obnC0SvDsp_X7aDLJqQb99N9uFb7xn7i5bZiRVhdyaoBLvdNVKhpBmkiBH4kCs82-qJkfQROASsc-MkGHieIQzewrSHlRJb2WitCr_dvG1_vWoqzFEjC9jikZS_AiegNJhwc4S9KFi1OspggGvRXmBVPffFJLF7-j6uO?purpose=fullsize)
+
+![Monster Hunter Stories 2: Wings of Ruin Screenshot Gallery - Page 1 | PlayStationTrophies.org](https://images.openai.com/static-rsc-4/usay7WhcRkSvf3y4ZY8ej90Peogf4wV_5RwQ5h2tYAGkYlXRitZSGiWscAXMSRByzykoz-VipocUtWqC_okwQIsAKlsgEOI4q2zDbpk6Okd0pKx04T1Q2NnYyVWHYKl6rcSRwMSGUixpXyaqN8ZQ4z5AwYwD10bLNKhl5KocBEEonjjvOAzRtQH5ca4qb_Q7?purpose=fullsize)
+
+Introduce a creature bonding system.
+
+Possible creature categories:
+
+* Wolves.
+
+* Foxes.
+
+* Bears.
+
+* Birds.
+
+* Reptilian creatures.
+
+* Elemental creatures.
+
+* Magical insects.
+
+* Ancient beasts.
+
+* Rare mythical creatures.
+
+Taming mechanics:
+
+* Creature discovery.
+
+* Behavior observation.
+
+* Food preferences.
+
+* Trust progression.
+
+* Special interactions.
+
+* Creature-specific challenges.
+
+* Bonding animations.
+
+* Unique recruitment conditions.
+
+Avoid making every creature tameable. Rare creatures should require meaningful discovery or progression.
+
+### 4\. Mount system
+
+![Female warrior in armor on white horse in mountain landscape | Deep Dream Generator](https://images.openai.com/static-rsc-4/rbl7IXH-gT_VdSNKefFpC6WG3seLFJFi9nheJt-JJn5I6rm05yjmbXqO7vW8U6OD8fQ2Ep9-OlTPf77YzODAnRr57Owp8eZgma1Zh_lynqMsAL3szYfdRhimjjS3qDY8JrOqEoQ0wsA3ye31llYafHbkt9qtt-nVLKWukFSxWzhn9__ySzauxXHtnPfLkbiF?purpose=fullsize)
+
+![«Убийца World of Warcraft» умирает сам, Battlefield 6 раздавит Black Ops 7 — самое интересное за 29 октября](https://images.openai.com/static-rsc-4/qVVxmESEMhpMvgt8pxJbcZc71pr-bJK1Kx6iuSekDuOtWRsOpEzmEv_0Lr7XypGiHJOt4RM9jdko3eANQhyzBimIllD5QzCkUKHax-mOLQ5_AgU9jXv1YMptijx5XX2lYMuULWoO3h5AGIRRyh3p6-C1zmcYSBMxU1u062b-ByjvYA6smSYo_fmEWJCFyEyM?purpose=fullsize)
+
+![Griffin Flight Over a Medieval Town at Sunset | Deep Dream Generator](https://images.openai.com/static-rsc-4/1fCrDj8XEPUNdpzEVEcqsJyR3MLMjmVpHq7pE_oeOASoBtZXov7IqthrNT9sujn5epVx8E9LdOby3Gc_r2h5QwouvDGp8CQkpcJ9sG2qlIlp1EYADgmhiIzPVWyOM0hbz11yLEki3syRGmQCEayeeTKCKiws6MsEhe9_GQgVL26j-YBNV9-5Nmtq0n_7_sy2?purpose=fullsize)
+
+![wolf rider 01 by PiratskaSestka on DeviantArt](https://images.openai.com/static-rsc-4/2gyOHkpr7EhIwhlg0qPCAU_wRWGrId4sqn3T8rS6C0HP3fhH66bGdCIjQ8oEOZq-RKNweLzyqayFnV0jx1c2t9OUHqIuArEUEREuhhin1gEpqbD_o5HLvKS6chNE1J0m86BruuzBt5aUH7ilF4JpOauz2KcDUA3AuGmgkXFOpPGz_z0sFR3FIgITFVPoVDEo?purpose=fullsize)
+
+![Heroes' Arena Mount Wolf by e-danilov on deviantART | Мифические существа, Сказочные существа, Фэнтези рисунки](https://images.openai.com/static-rsc-4/0CcX05c1R_Pq69UgionIj1VwoukhNBDRVHUS1M669Uok-G8jxndJsT8hgXlmMGgBszTrzb1aNZtnFLFLdg4_7EFMpv3PFwcUHalil1vvFbRBX0iAzJFX4oksgDprRvrqlU7-olvnKk4MGPKgeSYhpuorzGVZ00y6YpBc_o1AOaBBTVb1azgA7y0-1h_NsQNW?purpose=fullsize)
+
+![Red Griffin by NG02 on DeviantArt](https://images.openai.com/static-rsc-4/9kxHDaxqoD78FUHcqV4zwL4tGH0m1yOvrmu3PqydWr-CvmgZuuhzxaoQwyTARZUNsNVU6YQIbaxsDSNKc8Tdy-qSDnkUImNvljUU_jlODF1OY_JCXIlzSitw_nw6p3SXAEsqPxcdEm-yeDApcFdcUjCY_B8cUdrlvu-tpennV73O1snf8X_ksajT9VgH3Nbo?purpose=fullsize)
+
+![Best Free AI Tools for Video & Image Generation](https://images.openai.com/static-rsc-4/qbCj2rvn-V4riENXB7I4X4zEes54S7HQ5d7vUlfEfdfR6NHSc-ujcAh_y-zNIfA0jQ9hd_SEVjyfNOKMZ-9KhKSRqOfR7U5wtd3ZFuO2C_1UIuJ1h8Fsc7dbS1weHvepuEJFIozxcgfbl5db-X_-wUtNO1rKtd4ByuDDG3SjuMAyNPbXVILMmHBgV31MBZzO?purpose=fullsize)
+
+![Грифон - картинки и фото poknok.art](https://images.openai.com/static-rsc-4/AD37elfgSCbir1IlSr3xMXQENv0ccRPrVRuhVv4bZnF3Bk1hMEsqkiK4lfeq5QV48IK9Po_xOcmFa0YUU6_-omJZaV10aCCPdr6oND1GmNyDbPZ17iTPLK1It780Pe8jFKzWPgDR_TOIswZAnOw7109ZW16P7i9rSYSIi5zjoDxSmPDeMC2hjX8wD3bYFc8S?purpose=fullsize)
+
+![*Central Figure: Cabuliwala on a White Horse**
+- **Positioning - SeaArt AI](https://images.openai.com/static-rsc-4/mLVEp59PzZEZGGynWmchV4TTwkF3Om1x24jf16svGx9klG5wctWuqTl4GBRcCZNpnKbSFDTtrGpZbnkRoKdhErE74jVZd52AJ385Ek0XbraJgGGp54CrLOKFm-COGh1ty19kQqFGYJFIMdv_ks9JdduQiZUifx-rmXAFJj2KCKKk1c_sluVTFBdQQYdQ0aGK?purpose=fullsize)
+
+![Archer riding a griffin, gryphon, wings, griffin, eagle, sky, arrow, fly, fantasy, HD wallpaper | Peakpx](https://images.openai.com/static-rsc-4/lxpAVD8ah8VdidNdIzW-3w1UGYt91vGNQNbaKyFzc1LD3i732qjRjp-UlCm3FuJGGSyTzEmsIkE4lIFWaF6UGjPq9wfRQGDnh05YwzfRq48bhOycmW_-iYbHk-FcuVB9HHIs0RRKh28Y3Qb5Ug68G7IuxT1GMSNVxO5YGH5n72kTSbZymLhPx0G1uoVqV1M2?purpose=fullsize)
+
+![������߼����Ѫ�ǡ��׺���Ѫ�������ǰ����������һ����в��������ǰ��������Ĺ����Ļ�顣__����_������Ϸ_������Ϸ_������](https://images.openai.com/static-rsc-4/VmU2stfrwmxxbtSU-125cVOES2AbkTJzItIdmAHJAYMfgvkVd284zisZmQDVAQLzZEwXHzFIdD381egonQbRoWAQy2wOtaRB5Q1kkD3o_0XVw_UGyi-7dMjU7lHkvfndRfgYTwBTCH9Ywkn4YLPz9XSPYUGh_3cPzRDpWrkomgmChFylbGxQr2SzD94-wmYa?purpose=fullsize)
+
+Expand world traversal with different mount families.
+
+| Mount type       | Specialty                    |
+| ---------------- | ---------------------------- |
+| Horses           | Standard ground travel       |
+| Wolves           | Fast forest travel           |
+| Bears            | Heavy terrain and resilience |
+| Griffins         | Aerial traversal             |
+| Dragons          | Rare advanced flying mounts  |
+| Desert creatures | Sand and desert traversal    |
+| Aquatic mounts   | Underwater exploration       |
+| Magical mounts   | Unique movement abilities    |
+
+Mount features:
+
+* Mount stamina.
+
+* Speed progression.
+
+* Mount animations.
+
+* Equipment and saddles.
+
+* Mount bonding.
+
+* Mount inventory.
+
+* Terrain suitability.
+
+* Mount abilities.
+
+* Customization.
+
+* Stable management.
+
+Flying mounts should be introduced carefully so they don't undermine V7's exploration and dungeon progression.
+
+### 5\. Creature growth and evolution
+
+![Dragon Fakemon Prompt - Free AI Monster Prompt](https://images.openai.com/static-rsc-4/Dw_3k5Bo4xcpbkUi-Pw_4cUTs9Hcx5HA3AGvuI1RZenhs2i_g3H0RGpLqyc_mGC4NQubw4XSRcbtGV6b63m2qsqwbSansgdhu4_nHbUNRoY4KYt6DGFxQqR7PLtzcDtjwhJ2isJS-nzlyJBDSqGnzrPsNt_uL0v53n7jkMJUDomU_hAN6aZszURmKD63XQOF?purpose=fullsize)
+
+Create progression systems for selected creatures.
+
+A creature might develop through:
+
+* Discovery.
+
+* Bonding.
+
+* Training.
+
+* Growth.
+
+* Specialization.
+
+* Advanced abilities.
+
+* Rare evolution.
+
+Potential growth influences:
+
+* Time spent together.
+
+* Combat experience.
+
+* Training activities.
+
+* Diet.
+
+* Environment.
+
+* Special discoveries.
+
+* Bond strength.
+
+Not every creature should evolve. Some should instead specialize or unlock abilities.
+
+### 6\. Companion equipment and customization
+
+![side view of realistic fantasy wolf | furry.ai](https://images.openai.com/static-rsc-4/ZVRK_tGWqVTTc5-B9EabRFhN1DExIIur4UNzRJBebOou9IXaDu1I0X_FPzOapX-vQBicy-ZWAT0-idGsea3l7PxqXyJzJBlIPThcqhEgmudCdeg5ZvJYhV3DABOLuA7rmVGE_2XBsO4-DijflVG13yljy4-0PSGrCT6VhCYnsL5O-NlOQNzlP-zpUydq-vfc?purpose=fullsize)
+
+![Skyward Serpent - gameready - BOOTH](https://images.openai.com/static-rsc-4/m22dPNmHVqEVrp3pCU9YazzErjd-fWHbjqO8OT2KFOaj48l0pgNDQdN1ojk193rt_G7gAbmmZpPwWkgn4V86b3bTa8symQoma31gJlrVLcTej70-mgZOf-7FeZc2zN3VHEnMR19yt5zf2icZoj8oMzy1gUHm9Gd8TtwZzNCglFwoBtp-oWhXBbWo6f4QBxMf?purpose=fullsize)
+
+![宠物共创 | 新春传说宠物诚邀勇者设计，上千勇者币奖励等你来赢 - 勇者联盟宠物共创 - TapTap 勇者联盟论坛](https://images.openai.com/static-rsc-4/sigzfGEc6VZYIXT-4nPYPNgNWQGdFjbsaHBonwB1ea0nVhqAJTdYLPv-ikry4sE4c96VJSdLfipfVp96LtlIMQzp6njxqJSumm3q858L75R0MkJQ-hRA8Os0t5mjh8G-7vSCy02-f49U76-f_WQ9GrtzrChMJ6pb3MPYiLOWAeiwid5kDpfJM6uf-LiPMeWx?purpose=fullsize)
+
+![AI Generated Wolves Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/Y62OqwdxvlYgqmvUuTBE5PIhYz7JtozzSiLsoT_3idnziHTWDe43dkvYKfSaUpvhBc5c9DiEnZR0mzgXEbvO2gIajIinNwwFhCxeS5i5vCJCBqkqbEmntXNU-ph0YclVO4dxz7LDuZqiAelYK-fIaPLZivdTYASN4_ea-l1aqZaNFLiFFHgN3YmrLJFoPU1f?purpose=fullsize)
+
+![Mystic Saddle Dragon - gameready - BOOTH](https://images.openai.com/static-rsc-4/-G60xvIdKS1FSd2FpjoP0uFIorHOVnOrdU_c2zjkaaHES6KJtV1hRIarfnzsk-736Uho90v_qjY2n7jMkrL5jX6kCgKII-hbSjGlWuaS0Edy9CRs8LVyjukHCYRgfxhjXsPQC6_AUzEZAeAJL6EZFhGTk05TsyUswklI_rSJjDP32OgXCkLqUb7uninM5QZn?purpose=fullsize)
+
+![Fantasy Dragon with Saddle - 3D Model by 3dseller](https://images.openai.com/static-rsc-4/gjAd2qDqbtj3ag2WemGAhzB_guLpUKv9d2tlDmyFjCfINbi6OCi9B8bEte-4n1mh4gFcjnDxsAq9l801Jw30sEUkLgLC97tzRxfV0gIBmJudmWa2QaXyFxtITOvq_zD9fzH5_S25kW8Xst_gK0QkDRlo0wnPg07cEKShRhkrySjc1du7uEx8O111JZKmJ-C5?purpose=fullsize)
+
+![Albion Owl Mount at Ricardo Fletcher blog](https://images.openai.com/static-rsc-4/1mMRjnXOfArqy4GL9NGB_zeahkgyuOhMawu6yFSybheR7Wd7w6b-mMy1_PRRjRNRcjnjZslep4_-CF8LHJpNCSSzbNx7vNZgeJ6mtr01zphRRBwFp3lyBY2ZQjfjKjzbQB_lhXehzETP0N8X3FCF1pVK8GrV22wMYf5h2AHTtDTcPrmq6IzssdW417GGDJL1?purpose=fullsize)
+
+![Patch Notes 0.186: Season of Splendor Update](https://images.openai.com/static-rsc-4/b-rTN6cq3j9A_ZV0DD-Hucoa96iVFsMcIzaHABffovHn-29f5YO2EUbSmnGoDQXOhY-NHRumcCcbqEAlfW6rM52D8ltMPY89C2LdCBSOeUXH40iN7b-CDTsvlBP1xmiMcS-_jgIOJoLisHUSmkxTsliQ4KLxTU4HzOEVlzVKPJMiu7tEen_tNe2CD8x26ejV?purpose=fullsize)
+
+![Majestic Fantasy Wolf HD Wallpaper | 1600x1076 | Wallpaper Abyss](https://images.openai.com/static-rsc-4/u1VyyqdAObDIa7niyxFwROKqByJADrhkb2J9kFkLvux9HCI7uZ8UsbmJhXo9O5JYW3rfRiqP0c_GFgluh_val63meCoJwup_7LXrG5UJf9mk54OpoHusrPIGn_Gh-xxww7LIiYy2lGhe639xgNsGlbqWlq9iQDuJmC8qWkT7K-puckfcXV_W4gfTvstviHa9?purpose=fullsize)
+
+![Stoick's Dragon Saddle](https://images.openai.com/static-rsc-4/P4WzwRRJ8w9KQ2aKoC25xBoRolPiIWkqdhDYFykNUYZZRRvgWQVzOVKXkvGiIoEbzFjgnA-qNv4bogg80r3PqOTUyVtOvtKGOanF3d9MFng49-R_rdsgfjBrhfLGaxM4VF_6UZHnw0gQGQfzIaljfkgqRYjIzK-RLudJeZBZe0x0XnMlXbGXU7ndV8i70X51?purpose=fullsize)
+
+![В мире декоративных питомцев - Топ 10 - alloder.pro: официальный фан-сайт игры "Аллоды Онлайн"](https://images.openai.com/static-rsc-4/hwUlQ9idPZKhSopywbyKhSRfK0DjZgoqhqjtBj7IXWcZ6EJezZJC3yhphc2CNjBK7PipRwx0PgktQLR5AQ5x36fUV3iTwNpbfiU35QC3moyG16qSODyb2_SSqLfHrHxUxylVR6JcZT0U7tLE40vNal6hqGJy9M93J3wHVt5D3Gc2o5NKjYd5KYyKc1M1HchT?purpose=fullsize)
+
+![Albion Owl Mount at Ricardo Fletcher blog](https://images.openai.com/static-rsc-4/X0t-YFhSaz_NC92mMIqG3sL41E6-j0xJh6qAjTLd5Bd9fo9YFmnmiARj4gag9qcKj8JpauUmGlBDRPP87jDGB5BdsOW-1Cs3lFXKTdqsCPaiBXziSIxEp1kEC6Ug6R0s5NLiUXgtt2V-c38_XbkNvkjWR5h74Z4OHMOdjIskr4aef-c8rJgwOtYUMyOisc-j?purpose=fullsize)
+
+Add customization systems:
+
+* Companion armor.
+
+* Protective accessories.
+
+* Saddles.
+
+* Cosmetic equipment.
+
+* Companion accessories.
+
+* Color variations.
+
+* Appearance progression.
+
+* Unique equipment sets.
+
+Connect this to V6's crafting system.
+
+### 7\. Companion personalities and relationships
+
+Make important companions feel like actual characters.
+
+Add:
+
+* Personal histories.
+
+* Dialogue trees.
+
+* Relationship levels.
+
+* Individual preferences.
+
+* Loyalty.
+
+* Trust.
+
+* Rivalries between companions.
+
+* Personal quests.
+
+* Reactions to player choices.
+
+* Exploration commentary.
+
+Advanced feature: Companion Conversations
+
+Companions could comment on discoveries, historical locations, enemies, and important decisions.
+
+For example, a companion with knowledge of an ancient civilization might recognize symbols found in a V7 dungeon.
+
+This also creates opportunities for companions to contribute to the story without forcing the player into dialogue constantly.
+
+### 8\. Companion quests and personal stories
+
+Give major companions individual storylines.
+
+Potential quest structures:
+
+* Discovering a companion's origins.
+
+* Finding a lost family member.
+
+* Recovering an ancient artifact.
+
+* Overcoming a personal fear.
+
+* Restoring an ancient creature sanctuary.
+
+* Resolving a conflict with another character.
+
+Rewards could include:
+
+* New companion abilities.
+
+* Unique equipment.
+
+* Appearance changes.
+
+* New dialogue.
+
+* Special interactions.
+
+* Rare creature discoveries.
+
+### 9\. Creature ecology and behavior
+
+![Uma Floresta Pode Ser Silenciosa Quando Nenhum Animal é Verdadeiramente Mudo? - Giggle Academy Blog](https://images.openai.com/static-rsc-4/7kbrEDauLn1fKgYa4XejLkM7UeGQ8zNf08QJ4LNpthfRyBl1RN7iYAstlo2S5bdGc_wrcIgyo4_J81xbR85rK-eh3tgk6ZX4r3XZ0E1ElZGvwNLdFoV5rqx47xzhFnvFUFSppvaPmg7C-RkWIVSGOizSN6EuVnRTxBBvFxitE-h9bGy6zdZuFkJeL-FrME_G?purpose=fullsize)
+
+![Woolly mammoth ice age landscape Images - Free Download on Magnific (formerly Freepik)](https://images.openai.com/static-rsc-4/5mOBzLnJT3BpXR_a1bMtoUvZQVLjKPPLL1CEgMFAgGaLX8novDowZx__3R-XtF_-LInanSOhndirJ2rntuA9wOXFJoqkBP9s1oovTXmgUHmMvlRNjEBewqL4w3B1-qgJAHr6sw-NatWnWCwNtbb2xp6ElFuapW1Hr357IQeDkHJxL3Q84YYvl3qUXlATB1zS?purpose=fullsize)
+
+![Monster Hunter Wilds – \[global\] Capcom Town Store](https://images.openai.com/static-rsc-4/UMXlZhFrksd10U_QvU6IpW72avXbn_TGEJ7MmZnM9y_QgoLgizhXxupdfPhJcmVt7iLHBvAr7a_yWqje4kEYk-aAaeOe-nHGq5ss5uXym4mnIS-RklhhS54xIdZ1LSAQ79Wg6vo0n64x9oMb8TYKFM4SCHLWAt9K6ORrWD8aEEkrZ0FgnON8ODWOJ2kwdt07?purpose=fullsize)
+
+![A painting of a forest with animals and a man in the middle - SeaArt AI](https://images.openai.com/static-rsc-4/GDqg1pzkkjIJwT7rHr3aW9N9nX-0KlKLbiHLc2H_BFU5GHATgaqOLr-A9YNId_gElJZO8MBT_Lci3PaTPSoa6DNgcicHjR20GW4S8PGSeFpg4m18qSanxlQh64u9ANFRCjpoMVb0Gf1Zf2WqtQ640adUiGu31ZCO8d-9A67EQ26-URr7u-y2Vmkbe6sEQwuX?purpose=fullsize)
+
+![Jotunheim: Land of Giants | Norse Mythology & Giant Realm Guide
+ – Nicole's ritual universe](https://images.openai.com/static-rsc-4/OXIahrS4CCfcYjAcuVM1Fh_pYzC5fv0okSn-1qenf_ibymUSewA9lrBB0_QAgTtQ-b1OsPBeAUsP2fU-xLDMuyYYyc1Y0R6i4HFWlDZy-XPM4NMWmt6xF18mbb3IaaFaGqrwdBko7oHJSmg1stplDqJC_Z2UjFlV6tU5xtVMZ1jFqSIwWQIBTB-6bmClqS71?purpose=fullsize)
+
+![The Desert Adventures of the UAE Animals | Story.com](https://images.openai.com/static-rsc-4/GLpyHlXKFfnYuiFFO1Ue32TkwHAdXaquJtY7o6005PcHiVJ6kFQGaNuIngMO71mDvjGzoQ8JJcj5U4MthpYvFTWme6eCF4SB-Rw7B5egoGbfGspmuV9lfZTi_QxCGV6lLO82aOXlyOVRXmT2HbRhaqoBAJH6c467KheBvHQlhLdkJRHWihzkBa03H-dzVIeh?purpose=fullsize)
+
+![Beast Folk: Mythical Creature - Mythical Encyclopedia](https://images.openai.com/static-rsc-4/Q_ondpJ3ITVDypL4tQJEZE9QpsYo-IKmEVL62FlqZULQyy1V2YxR2oJ1Mj0aUCyFh3JqpKgI0JMOt7bQITBzg9beqaq1rg0Um6Pw7UzE8udMGMmXcLyyYNTbZOzVQLTfaeijfCuFEm4wvyfyp19ORUGbDPqfJtWU12YoYYn5_i6vBlYrMC6SQkqhI71WUlpX?purpose=fullsize)
+
+![შამანიზმი და ცხოველების ფსიქოლოგია](https://images.openai.com/static-rsc-4/ug0S_Z4K3w9LZz4DH-vrBDIPRaWinlDlv6zRgIYPNYNUyXyicxIrx8cLK-CKzNJaVB9DnwcI1noqa4dldgl4g-UNd18GaaLv93SsmV9-feb7lv3QroIB8Ggdblw7J_g3mAFH1fETY3ZpRQbYrapvzf4BQQo4BAT5NrXb_F7apCqIuK3Cb5tYQxbyyCpKFGje?purpose=fullsize)
+
+![winter landscape wallpaper - Png Aura](https://images.openai.com/static-rsc-4/WX4KsciU8plNAYSYRj_6W2EfsfNouaFzxHDSR6tHdmvvTMyS-1f1ruT3aNoRoQ6ZvOUEC_tqi71T2AfoHiucRRJTkERAo7ZONcE_zPj3iQbmu2qMM1GBLox5q2BnwGdW2pmqEA3I5CKCDmhvswv9jknjhkP4ZQlK3_QPcKjc2tR8STBN0fAPwm_1lCpYL5-a?purpose=fullsize)
+
+![Çöl Hayvanlarının Serap Macerası - Masal Oku](https://images.openai.com/static-rsc-4/75tdRTcqYYYa4uX2BTu9MdWUAsHblX96U_6Ip6peAdOKoVwjxrvmXrSr27KWxFgULiQKh_swiOv7D8xVgHdvoRViF18gsco2IZ9pjg40Zyxr6OkeZv2INvb5H2wpkecVEsJKqEcX8SOjUDw3BL0g1TWKuUlJwGiIJBVmKWo9N1ed2i15TqDu1eSnN95kgEeq?purpose=fullsize)
+
+![Jerry Gadamus - Forest Neighbors - SunsOut - 1000 pieces | jigsa…](https://images.openai.com/static-rsc-4/iSQ73w6GkCJoFKmL2igtWl7fxDreMVN1Hn4zlkWsYbuzlhjhzhmYXKvGTjZwA_bqFWEKz6O0hls3H_P8OOFr0iEu0pCdYghNAQSjUqCi920PVfBVuchpFtKPA4AyA-YnAjHRw4UtYOr9PTD3SLjYc2g3Vf6fsIsfWlGb1BQVPtWyi_WoXZN1sNRpCQD2CHPf?purpose=fullsize)
+
+![Skymods - Total War: ROME II - Emperor Edition Mods Catalogue](https://images.openai.com/static-rsc-4/fXgGSp0kunNyWhbx61mvLs4Nw47gCQVzV00638eCivGZJw8XcmTxY0XsgQuwyKFfpPrFJGRPe7eSfvQg3tEz-ECoga0tffIwQh7n8WSI1pmxsspB6mwDS90uYpzpKpKdyhVqytZdfQPKpnA7-I9FHa81n28IX4WBaW30h1mr88p1ZJrdXBjdelsmP_ANI8mw?purpose=fullsize)
+
+Connect creatures to V4's living world.
+
+Add:
+
+* Habitat preferences.
+
+* Feeding behaviors.
+
+* Sleeping routines.
+
+* Territorial behavior.
+
+* Predator and prey relationships.
+
+* Migration.
+
+* Group behaviors.
+
+* Environmental reactions.
+
+* Weather responses.
+
+* Rare creature appearances.
+
+Wild creatures should have lives independent of the player.
+
+### 10\. Stables and creature sanctuaries
+
+![AD Honores — Serveur WoW 3.3.5 Fun](https://images.openai.com/static-rsc-4/CulMXbZrcWHHpyzI-3GqbPyUkHpBVMH_X8tUiJ9OEei-3TOpVaF96T8eUDAwS6OtU1xwtQKXS-wGOD6PoHGSEHFBY0otjS7yZHfO8Oghqg_jfupDKucIF-FpEAYXPC2UUEShIaZAwxzRCFF3XkO1bt3VMUzRzKg2i0D_UQIsfsDCG5wAQlkvZa95O7AvtfvF?purpose=fullsize)
+
+Give the player locations to care for their creatures.
+
+Features:
+
+* Personal stables.
+
+* Creature housing.
+
+* Mount selection.
+
+* Feeding areas.
+
+* Training grounds.
+
+* Creature storage.
+
+* Cosmetic customization.
+
+* Breeding, if appropriate.
+
+* Creature recovery.
+
+* Sanctuary upgrades.
+
+Make sanctuaries visually evolve as the player discovers more creatures.
+
+### 11\. Legendary creatures and rare discoveries
+
+![The Myth of the Phoenix: A Bird of Fire and Rebirth](https://images.openai.com/static-rsc-4/jG-qM6XV0-L9iFI18OvcKdNfj9oiupnw4BafWxdQCCdBfNs0NFJFFQ639z4cJkqGc23ufdSGdHJbUG_Ftfb1ElUfgxu2_vh6IO8y-OvKOWx48IFDW0QoGV5YcD4iptn0-yq7PDAfIoyJuhLCwkXQjX1DaQ-BBhGcOaRWefYQsp1ALocCdUtioj7R5xz8e8Cl?purpose=fullsize)
+
+![The Dragon Emperor Character in Nexia | World Anvil](https://images.openai.com/static-rsc-4/GvPPyajq3L6uJXLl6ofPVW8JwX9j2w1xCQbvEp6Urm_cgqg1PKjkSvJCQ04otHmBRoBOw2dA5dAf46AEivblQUxQfP1r7LJADgDXS_5PPxZhrMdQjgUN7IL6emWnN7ocw2WzIzfXHNgvliQbqf2zTdepKCzVgBQ2guuyx6cKB222Uhf1af6XjqZ2HGcZvO5l?purpose=fullsize)
+
+![The Verdant Sentinel by artificiallyyoursxo on DeviantArt](https://images.openai.com/static-rsc-4/dg9Eot9DftfjEEt_3VYo9tGDeP7R9TiMHAu9Rskt7Wf94maOfCo7-ZGy3vRcjvX5URBdzKOpn6l1V8Wq_cwNgmF4CtE3MOkspe3Q8K3qPfYU5FPeDPdS7EELsHv0d7HwZbFt7iHuV-WEjuU_Grb5ac15BwJeKdgbPDxYnzN7oO8bVXkCp6XkKiNBzHwVXhQP?purpose=fullsize)
+
+![故事基本設定V2-神獸設計(一)(文長16570字)](https://images.openai.com/static-rsc-4/zOSyn8UlGHSyCn-mgPzLSFadTlohKoYXUTIKxOCniIM3FstgfI0hC5oxMeUWRdnvIOHvE461NJHjHmnSHuyA9E1KTQ2b_-2IV6kKOloaSaRE7hCsWbWi5eCy0TbLwEJ0dM_nAYen21ZjNeyEeNWvaYJzVO_j-uC1rytUC_9UCQObmQ04v9Gt0rhFs96mecs_?purpose=fullsize)
+
+![天啓の龍神煌輝 - 龍の神秘が織り成す宇宙の調和 | the blue season](https://images.openai.com/static-rsc-4/3alfH7qwjp-YQQvXQttaZCvSQZ7QSmewPA7URP5Ff3BtFI58ccGijdXj235w0S_EGHnsH84hwrPtriILKpJNJ1re19Fo8ImSRHRpY2JUr1I1hstpj2ilwlB4XdLJ9gylnLtbl-0Lto7lxOn9hxZJ_MsNhOVl6Vrep9eaEcZHFsKSj6AssDvEEAN20MIDwiHD?purpose=fullsize)
+
+!["Vision of a Druid by Turcsan Tamas - Buy Now"](https://images.openai.com/static-rsc-4/PPk9unNdC1DD25MOrUcRs02vvcTjoHNUxSKnHL4EJqLAnOqHqx4y8Zivqrq-RnrgRklaDtRNItuLgxpDkKxcYSnJDt0yWDdNfexcz5hQfYxzXAqaJbj0xWvUh-8N2gUReUljFayhn61J0oalVH1nrnxMP3MszQBXobfCEESq6FP1-J0um50SQiRj4mFEKcfb?purpose=fullsize)
+
+![The Chinese Phoenix: Fenghuang, Beauty, and Harmony in Chinese Culture | - RPL School](https://images.openai.com/static-rsc-4/6cnvY1OAFK3CuGz1UY9WEe5sG-1Fm7CQHZidzhtimJgi8ZQwLnSfupujGkFbyqR43_6y6dacjzLPVLgZBhjnIoFZF1HCgH1NehsJiopeNNoXymEmnbYx9l93K3zOiYbhZP0Vymypo55itZbv0VBUVUG4YMFyvZ5_fX60JfjUFRrb7dQyV6JnoDNc0YsjWrFk?purpose=fullsize)
+
+![The Awakening of Celestial Dragons | Story.com](https://images.openai.com/static-rsc-4/6Lzc2ncUCQb4tToqfuGeQEi8YGRuLFBcPp_HSDlBGgVjkI1U1_k0kt5Z0cjNa2cjU9aRc4nqK84gGqQXXRa6XFLPr-8jweUeABSshHwUyGcQSIU3DxQvHr-Rnr-dE0H5_Iwk51R0Br3JOC9pt1077LjV6e2pSknbyo2X1wEOCV7iH3WdEOC7NOcWQkBI_Axt?purpose=fullsize)
+
+![Search Results for  forest - Arthub.ai](https://images.openai.com/static-rsc-4/YTcqUYlq0JpoNX-Ba2gWMMSujD_3BoXegb9RyZdpt75HwLdIbSunxf8g6MW0IUtac7W_6FdI-WFq21IBF8cFC3lQnA0HbV1f5tXqD3tOR5r08YOZUK8xSsEBp0Vgciid7zAhuj-_67Dlvq0iylbmDjwuyztP0vTta_UBLj2d4h_N8JdxqaByvFHypmC_dSZ5?purpose=fullsize)
+
+![Celestial Dragon in a Starry Cosmic Landscape | Deep Dream Generator](https://images.openai.com/static-rsc-4/KWhCXCZr5JNPrRN1eUlql9lLTFdp6tsn6coyLm6pSgVY9ekQkCsHDjHUmsw90jSrbdjMuFgPO6tlFLw9DB5X0-Bwyvf-qTBv4460B4BDC79jS1jFhqeXj8stqKcWZWXDj08XKsR3yHKDZTuG2vqzBVSu3MCy_XySWlzQAL1yuWyindHtCH66jXXMWldfLRmd?purpose=fullsize)
+
+Add extremely rare creatures with unique discovery requirements.
+
+Examples:
+
+* Ancient Phoenix.
+
+* Moonfang Wolf.
+
+* Celestial Griffin.
+
+* Crystalback Behemoth.
+
+* Storm Serpent.
+
+* Ancient Forest Guardian.
+
+* Abyssal Leviathan.
+
+Each should have:
+
+* Unique habitat.
+
+* Special discovery clues.
+
+* Distinctive behavior.
+
+* Unique bonding conditions.
+
+* Special abilities.
+
+* Legendary lore.
+
+* A meaningful reward.
+
+### 12\. Technical systems
+
+| System                  | Responsibility                     |
+| ----------------------- | ---------------------------------- |
+| Companion Manager       | Companion lifecycle and selection  |
+| Creature Database       | Creature definitions               |
+| Bonding Manager         | Trust and relationship progression |
+| Companion AI            | Movement and combat behavior       |
+| Mount Manager           | Mounting and traversal             |
+| Creature Growth Manager | Development and evolution          |
+| Stable Manager          | Creature storage and care          |
+| Companion Dialogue      | Contextual conversations           |
+| Creature Ecology        | Wild creature behaviors            |
+| Companion Save System   | Persistent progression             |
+
+Build these as modular systems and reuse V5's combat architecture, V6's crafting, V7's exploration, and V4's world simulation.
+
+### 13\. Extra ambitious ideas
+
+![Dragons | My Quantum Journey](https://images.openai.com/static-rsc-4/qAkZhh32k7iVPk_SZFw_xT4wCyYtMtO618AcFWK1liUiIThbJLpVFGQg0KnxuXpMxrlrLuG4RUjUOQyemuSXutBVn_cl_iN8LoS-ohuj37jIX4aYWFP6cJNAui5bvO4Lt_FknyUH8W_TGHpfoPqtY0-ztInYEHHgGWiAPbfa69doDYchyj3KsSpj6OnzrKFU?purpose=fullsize)
+
+Legendary bonded creatures
+
+Exceptionally rare creatures with individual stories, unique skills, and special relationships.
+
+![AI Generated Woodland Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/iIwScemlMZmt-w8ZtmN2kmuW3YXttpez1MlmyT0EzddrcmRqyPoPO0fIRRWj38OIZRFlmahEVytU6JPjOM39VfRzw6dAKxG_5n1XWN7PydxWZdm0_ugmiQUQrp-rPCjUksXNzJOAANjFNFlFs-a469teO9Is6P6NkWz28lBJYT7HJ-BLHFOLrduwR8Ck7D8E?purpose=fullsize)
+
+Living creature sanctuary
+
+A personal refuge where discovered creatures can live and interact.
+
+![Mystic Armored Wolf - gameready - BOOTH](https://images.openai.com/static-rsc-4/5VUmuDo0PvAsM-U5-xDhhjC0VdPfYsR9u_HWNWlRc_35RnMc_EllNLggtYsSQvwoMPV8W8G1IOpOXSgux-YvM_qw6x9w9UrOlJ_kO9TyL49A_rOglb3DgV6vEI86blpldgwKvF4Rm0QSDEGcrT2lp4jX4AjOAOvIxSmJA3BFWELEVJu4fzWCTKEzo1hAWYSH?purpose=fullsize)
+
+Advanced mount abilities
+
+Special movement, combat support, and traversal abilities.
+
+![The Enchanted Forest Adventure: Discover a Magical Quest](https://images.openai.com/static-rsc-4/0oz8Mv-yn6ewJyJ1rGxkI6ZLjawO6kMUf1bZ8Jc0MvujnQCyc5yYR24BfPtGH4mlHiUSBzbtfd6h4ClG3jcdF_FdtKgQyqIEKv2EN6bD-qgENvR1Kpyk11MLwDvxlSzGrgTKCK7Cz9NoXNBMZlwwx2pa1ti3H0OTWS9HGbQKDR7ZLIe6BW0VarKFaLln6hkx?purpose=fullsize)
+
+Exploration companions
+
+Certain creatures can locate hidden passages, rare resources, and secret discoveries.
+
+### 14\. V8 roadmap
+
+* Phase 1 — Companion foundation
+
+    * Creature database.
+
+    * Companion registration.
+
+    * Companion selection.
+
+    * Following behavior.
+
+    * Save/load persistence.
+
+* Phase 2 — Companion AI
+
+    * Tactical commands.
+
+    * Combat integration.
+
+    * Formation behavior.
+
+    * Defensive and offensive roles.
+
+* Phase 3 — Taming and bonding
+
+    * Creature discovery.
+
+    * Trust progression.
+
+    * Taming conditions.
+
+    * Bonding interactions.
+
+* Phase 4 — Mounts
+
+    * Mount framework.
+
+    * Riding animations.
+
+    * Traversal integration.
+
+    * Mount progression.
+
+* Phase 5 — Relationships and growth
+
+    * Companion dialogue.
+
+    * Personal quests.
+
+    * Growth and specialization.
+
+    * Customization.
+
+* Phase 6 — Ecology and sanctuaries
+
+    * Wild creature behaviors.
+
+    * Habitats.
+
+    * Creature sanctuaries.
+
+    * Legendary discoveries.
+
+    * Final balancing and testing.
+
+### 15\. Master V8 development directive
+
+# AETHERIA — UPGRADE V8
+## ADVANCED COMPANIONS, CREATURE BONDING, MOUNTS & CREATURE ECOLOGY
+
+### PRIMARY OBJECTIVE
+
+Expand Aetheria with a comprehensive single-player companion and creature ecosystem.
+
+Players should be able to discover, recruit, bond with, train, customize, and develop companions and creatures.
+
+This upgrade must remain strictly SINGLE-PLAYER.
+
+Do not introduce multiplayer, online services, guilds, matchmaking, or player-to-player trading.
+
+### 1. PROJECT DISCOVERY
+
+- Inspect existing character, NPC, creature, combat, animation, and inventory systems.
+- Identify existing mount or companion functionality.
+- Reuse existing AI and combat architecture.
+- Document integration points.
+- Create a staged implementation plan.
+
+### 2. COMPANION FRAMEWORK
+
+Implement:
+
+- Companion registration.
+- Companion selection.
+- Following.
+- Tactical commands.
+- Combat participation.
+- Companion roles.
+- Individual personalities.
+- Relationship progression.
+- Companion equipment.
+- Persistent companion data.
+
+### 3. COMPANION AI
+
+Implement:
+
+- Follow and formation behavior.
+- Enemy detection.
+- Combat assistance.
+- Defensive behavior.
+- Offensive behavior.
+- Healing support.
+- Retreat behavior.
+- Environmental awareness.
+- Contextual reactions.
+- Configurable behavior presets.
+
+### 4. CREATURE BONDING
+
+Implement:
+
+- Creature discovery.
+- Taming conditions.
+- Food preferences.
+- Trust progression.
+- Bonding interactions.
+- Creature-specific recruitment challenges.
+- Creature behavior customization.
+
+### 5. MOUNT SYSTEM
+
+Implement:
+
+- Ground mounts.
+- Flying mounts where appropriate.
+- Aquatic mounts where appropriate.
+- Riding animations.
+- Mount stamina.
+- Mount equipment.
+- Mount progression.
+- Terrain suitability.
+- Mount abilities.
+
+### 6. CREATURE DEVELOPMENT
+
+Implement:
+
+- Creature levels.
+- Growth stages.
+- Specialization.
+- Training.
+- Ability unlocks.
+- Bond progression.
+- Rare evolutions where appropriate.
+
+### 7. COMPANION STORYLINES
+
+Implement:
+
+- Individual backstories.
+- Personal quests.
+- Contextual dialogue.
+- Relationship milestones.
+- Companion reactions.
+- Unique rewards.
+- Historical knowledge and discovery interactions.
+
+### 8. CREATURE ECOLOGY
+
+Implement:
+
+- Habitat preferences.
+- Feeding.
+- Sleeping.
+- Territory.
+- Predator and prey relationships.
+- Migration.
+- Group behaviors.
+- Weather reactions.
+- Rare creature appearances.
+
+### 9. STABLES AND SANCTUARIES
+
+Implement:
+
+- Creature storage.
+- Stable management.
+- Feeding.
+- Training facilities.
+- Recovery.
+- Customization.
+- Sanctuary upgrades.
+- Creature display and interaction.
+
+### 10. DEVELOPER TOOLS
+
+Create:
+
+- Creature database editor.
+- Companion behavior inspector.
+- AI state debugger.
+- Mount testing area.
+- Bonding progression tester.
+- Creature spawn tools.
+- Companion quest editor.
+- Save diagnostics.
+
+### 11. TECHNICAL REQUIREMENTS
+
+- Modular architecture.
+- Reuse existing combat and AI systems.
+- Reliable companion persistence.
+- Stable following and navigation.
+- Performance-conscious creature simulation.
+- Data-driven creature definitions.
+- Clear validation and debugging.
+- Automated behavior tests.
+- No unnecessary duplication.
+- No regressions to existing systems.
+
+### 12. IMPLEMENTATION PRIORITIES
+
+P0: Companion foundations and persistence.
+
+P1: Companion AI and combat integration.
+
+P2: Creature bonding and taming.
+
+P3: Mounts and traversal.
+
+P4: Personal storylines, creature ecology, and sanctuaries.
+
+### FINAL EXPECTATION
+
+Deliver a cohesive single-player Aetheria V8 creature and companion expansion.
+
+Companions must feel like meaningful characters. Creatures must behave naturally. Mounts must expand exploration without undermining existing world design.
+
+Connect V8 to V4's world simulation, V5's combat, V6's crafting, and V7's exploration systems.
+
+Prioritize personality, useful behavior, meaningful progression, and technical stability.
+
+My recommendation: Make V8's defining feature the Companion Bonding System. A legendary creature should not simply be another item to collect. It should have a personality, a history, a unique way of interacting with the player, and a progression journey of its own.
