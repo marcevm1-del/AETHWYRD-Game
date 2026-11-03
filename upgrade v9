@@ -1,0 +1,670 @@
+### Aetheria V9 — Cinematic Storytelling, Audio & Immersion
+
+V9 should make Aetheria feel less like a game world and more like a living fantasy adventure.
+
+V3 improved the 3D production pipeline. V4 developed the living world. V5 expanded combat. V6 introduced crafting and professions. V7 deepened exploration and ancient civilizations. V8 added companions and creatures.
+
+V9 focuses on how the player experiences the world: cinematic scenes, expressive characters, immersive sound, dynamic music, emotional moments, and polished storytelling presentation.
+
+![Elden Ring Tarnished Edition su Switch 2, la data ora è ufficiale - Tom's Hardware](https://images.openai.com/static-rsc-4/-Yod9ESGZorUYJEgOVdhslVGGi5XbsC-y8TwAAhwnAH2lM09PH2tV_9bjHkEHuDt9bAdz205gnc_hYQ3NhL6iYzJJzsIHALwcufUqFEocEONBnldWS5XUOv-7_KbW-duITcPVHBwxGFx4ymR8wQrjPIAvyRkMwh5ix5GBpqkykE8zVv76LSkiK1bi5XAz78r?purpose=fullsize)
+
+![Diablo 4: Vessel of Hatred review | PC Gamer](https://images.openai.com/static-rsc-4/wFnbT4M6dPmhPg5yVUpxL_05ZB_SBvTbubZ__7ZJcMAnR2u_hn3xzeMVWNHJMvhB1wfJLYerf1ZCUQYl5xWDGdp7MpTDwIMYsHOomxzP6Jdq-EW2gKloQpvOJCl0TP8bSo9UubvCeibR-RlzW5Te3SrHAhQHPxx2HZ7ugLy3xZ_zVUeBrdnIWOHVvNb8kilP?purpose=fullsize)
+
+![Game Design AI - Game Asset Creation | Visualizee.ai](https://images.openai.com/static-rsc-4/jNjuxPOFI8fdEU34nGobFm0nLgm8G9JNj1p_8ZQgahH6TB2M0R-bNqiM5jllCeUzKV-aT7dNbK_Hv2ws3n8JbJeOgxAsR4oscP1_AGnOxIxtLL9KCmPifwcJ3UmdvrJ-LiUtKIpXDgqMtW-mE-RDgOjeuagNjad0CnmFH7dbdbA-DlJsqMR5WrrJmBVixPmx?purpose=fullsize)
+
+### 1\. Cinematic Director System
+
+Create a complete system for presenting important story moments.
+
+Features:
+
+* Dynamic camera angles and camera transitions.
+
+* Cinematic dialogue scenes.
+
+* Automatic camera framing for conversations.
+
+* Character-focused close-ups.
+
+* Environmental establishing shots.
+
+* Dramatic boss introductions.
+
+* Interactive cinematic sequences.
+
+* Seamless transitions between gameplay and cutscenes.
+
+* Context-sensitive camera movement.
+
+* Cinematic sequences that respond to player decisions.
+
+Advanced idea: A cinematic director that automatically chooses camera angles based on character positions, emotional intensity, and the scene's importance.
+
+### 2\. Advanced Dialogue & Character Expression
+
+Make conversations feel natural and believable.
+
+![Warlock: Dungeons & Dragons presume su gameplay con un trialer en gamescom 2026 | LEVEL UP](https://images.openai.com/static-rsc-4/Pk82OVfBJQ69VCXOIUEo8CteDo9H7kKrk1Iq7Q2nDfbneGIrWF7VHcG_CPTctNoaJGFZ4WEraQcNy5kIlyDfCC_W6El3Kba60VNkk_Tp1NOW9wyCFf6noBc7TSiUzVvmRPn_KCWsYVxdNSGQdOKLnvyxG8nCJsU2JrWZUVto2VO5KrPO3_FtrHKmjTJd9B9M?purpose=fullsize)
+
+![【バルダーズゲート３】アスタリオンの好感度上げ（ネタバレ含む）｜メルボルンの片隅で](https://images.openai.com/static-rsc-4/ftCs1JmS1-vG_Eqr8La47A3KKt2EVY48YOs33N6mOmOHJk9VP8xpCrRNjxXOQ4tsl7PCCWOpwSzauXJsbHlHct3u3p3dKS4CO9v8bk1XywepzxYV-C8Hwbj-dnl_jSGnfU2lBU5jIlMsMUShqiskxNxuVTjIEXzGXygXI2Qz9fPsWQl22uQb-m1vsC3fPN4i?purpose=fullsize)
+
+![Lucanis romance guide for Dragon Age: The Veilguard | PC Gamer](https://images.openai.com/static-rsc-4/gCfz--CXmXZql7z2s5OQnsr3yyEUtSfFu0SN644ewKCasbkizFus0s2tVHzrl3nv9zXPCHmc1YuZIt9zMDOeIYzvSXemA6McfLkqMS1ZBCRONtQa0C2jOBg0G5NKuc5Tu52z5zDXYGCB0C1AB7FseX5V7tCRCIW66Ud4uqMKlxA4nadqKOfuPfPIA-0vlrGc?purpose=fullsize)
+
+![Diablo 4: Vessel of Hatred review | PC Gamer](https://images.openai.com/static-rsc-4/wFnbT4M6dPmhPg5yVUpxL_05ZB_SBvTbubZ__7ZJcMAnR2u_hn3xzeMVWNHJMvhB1wfJLYerf1ZCUQYl5xWDGdp7MpTDwIMYsHOomxzP6Jdq-EW2gKloQpvOJCl0TP8bSo9UubvCeibR-RlzW5Te3SrHAhQHPxx2HZ7ugLy3xZ_zVUeBrdnIWOHVvNb8kilP?purpose=fullsize)
+
+![【バルダーズゲート3】選択肢によるストーリーの変化や分岐とエンディング数【BG3】 - ゲームウィズ](https://images.openai.com/static-rsc-4/mq9qSeBAbHUQBeO_a_uokBuUgBQgakWSrIjTR9XMgT1bKBZ30ZlpA9gSEYcSkLP1HNpNqTYJTl4TYBAxok-JMvuf0ibmXjJkR1qaKz3b5hgH1CqGKvWhnfUrACmfqKmSrnd_R8urWy9PhSu59Vaod-cfIIC0N_qttkPQTSy0Bx6QeUi50d6x-wPr9Z9bc_t0?purpose=fullsize)
+
+![BioWare fait le ménage tout les scénaristes de DA renvoyés après l'échec dévastateur de Veilguard sur le forum Actualités - 12-02-2025 14:49:38 - jeuxvideo.com](https://images.openai.com/static-rsc-4/4o6n-pXtB_aGxDd6T2xtXKuj4LqJoeIVFxSY8RS3kR27MqUML0I3gGv7AjM2OF9AJD63syYYszVxkHoBail2ctcMdJV6LmTT_jPjBcGqv0ko-fu-PHXi1KGSLgVyI3ThICafPxD3rys_Plp7_o5Dpz1pMxtJzWl5wShoLmRbevaS9lBmsWAxILVyUZ20owt8?purpose=fullsize)
+
+![How to complete The Price of Magic in Gothic Remake | PC Gamer](https://images.openai.com/static-rsc-4/jXJ1QKJx4eIiEFy-LzaOWHa8xunbLeJ5dw5WyTjto9Tf6TExoptearaNcrc7tOdCFLE4F2dTybsCTTHiFJ6KnM1L6zEGKsVl8UtAvgtjQe_rbAN9cSn52UO5mUwuDEpQ3GAKjI01LXImoooLXS0ZTn60t4B8eKYX-WSNe6QjmQ2bDnPwQ1ZLO3QBGhPkMLvh?purpose=fullsize)
+
+![Is Solasta 2 going to be released on PS5 or Xbox Series X? | GameWatcher](https://images.openai.com/static-rsc-4/b_am0jxOTREvQxo008zZ-HKwqKN0En8bzV8CTSwiD4fOi2rb80uMZbAMjV6fJuYg_5zVZAjaBSD334q9uDLCAQzlrO5ffnDTbzVh80RebHP3GqyYLctLcueP4sbJhNzAyZrA2DQe-4P1OnABaI3IcUHBQcg0UkF0OIc1DGuUgobbKe0Ytwu5mJi_aqKwW6Tp?purpose=fullsize)
+
+![مطور The Witcher 4 سيعرض "أجزاء كثيرة جدًا" من Ciri في المستقبل - سعودي جيمر](https://images.openai.com/static-rsc-4/VGfW0zakGA4IX9MZL3fIYKSGkUp43JNlInqH3XKRjzr2IGRjjKHD96ono6olCGMXeYgwdMemZeR0u491punhGdVF_6w_htCRKUtv8OegOitQ-IOJc6P2Mu-RMkFbrLnsJSpQHaNsOdy37BVJ_Mk7dvYomACPIkdtL6DcGb3HhnXYmly3HInaEMfxqdRIaWjK?purpose=fullsize)
+
+![Lae'zel BG3: Race, Stats, Build and Romance - Ensigame](https://images.openai.com/static-rsc-4/d1XB6FUez0rPG66TzN5wUHK3CYkHTpDioKeBHduS97Ap3ZcANWmF_QMoU-9SaMZnsduBbDwgZlsOkoTsTi5yY5-Mqy38d-J5N3-pKTf_8bhmj1r8bj3CLc0BkSaWxXpZUr2kgoAIz_boe-1mjxT7p01dgvQpENKwoFzbHmuaCgjuK-buSJRGMhpVE39B7n73?purpose=fullsize)
+
+Features:
+
+* Facial expression system.
+
+* Eye tracking and blinking.
+
+* Lip-sync animation.
+
+* Emotional dialogue animations.
+
+* Character-specific gestures.
+
+* Different reactions depending on dialogue choices.
+
+* Companion reactions during conversations.
+
+* Interruptions and contextual responses.
+
+* Character voice profiles.
+
+* Dialogue camera presets.
+
+Advanced idea: Characters should communicate emotions through body language, facial expressions, and voice—not just dialogue text.
+
+### 3\. Dynamic Music System
+
+Music should react to what happens in the world.
+
+Features:
+
+* Exploration music.
+
+* Combat music.
+
+* Boss music.
+
+* Dungeon ambience.
+
+* Ancient civilization soundtracks.
+
+* Emotional story themes.
+
+* Companion-specific musical themes.
+
+* Dynamic transitions between music tracks.
+
+* Different musical intensity levels.
+
+* Regional musical identities.
+
+![Inside Movie Score Recording, Where Films Really Get Made](https://images.openai.com/static-rsc-4/ZZlrl9DWu68M8VMVExS0DpuYnspCH2fI0ywV51XLpALzXo1hTZfVRNK_eHOjvKswVMfrJ1TGHaaubYzk-evYf1s8aLxO401HD2SZC6T8aOJrRa9LHkYzZO9atBTTynR_iKUhu60QN9iP6gjzgLb9x1D2BBTNMOp6cqE8tzRaqIo5MqQjrj4zwZzHDYOCBxbl?purpose=fullsize)
+
+![Video Games With Orchestral Soundtracks | G2A.COM](https://images.openai.com/static-rsc-4/IgNyEp9Yk-d8SVyCyOgleJV0gTmmTTsne86i9jR9-eEvPa5-IMEEmi3P2i92NBIeFCRaAsginL-2dvk3GqsQpAdfcqR1xmKtBCLPuOzCeuLy05jPS0LwWMOvePkp31y0t7Qw8L8fadJGBe4EU6nzJ8rZsNVqD-JIH6pBkNwY6aWKiIBha9BXzsx3GW8Vidfp?purpose=fullsize)
+
+![Npixel shares Gameplay Reveal trailer and screenshots for MMORPG Chrono Odyssey | RPG Site](https://images.openai.com/static-rsc-4/VKNrFa5omWgSlbEzgKpu25ElvyLuqImdy7Xw8NfRDF8fDsZoBvCVdrbX84LVATljL1WDcHIvTYMR9SiafpSTYXKqRnayBs3_RjfRaiJthAhMdd9sYuO9PZYf9XQIU6Lql-HRJtTaATlpxP1ziKjaGe9rUIo_A0px62VVOA5EK_IKcPTGdpy3smoexUkYeKIp?purpose=fullsize)
+
+![Scoring Berlin](https://images.openai.com/static-rsc-4/w58WemxQpsE1_NWUWx774c4O156vVZQr-KkL1uJomtZ9O81btwSfr11JcaIql1GsZuPMuraGe8d02A6wQefNXjceBz6wrLHWR5eMBYB7o7FQeRMbSCT6rH3-y7U65IUc2XT7Z2mCbBnc8QPZGiPoD2_tULpKKwokBG415pjrQiu0BkrD-MX6zLtdUI_hI1Yq?purpose=fullsize)
+
+![Remnant II - The Forgotten Kingdom | Deku Deals](https://images.openai.com/static-rsc-4/evEHuNNkCBllYhnvMiqaAuRYLvJHMA8w2yng1zlsMC3K0BfHkZhxs6vRUPBJczzJxcP_hK0K8m7Z_9Gon944NlHqBXOqm4gIYa6JGle_LE11k11gXoFPF7vfx6Wo4aicI6nq9w0D-nqH5h12L_pMotohaqF-_ka0wYJUgCaYMsHd_AHKn7uaO0UoCbPfcJsS?purpose=fullsize)
+
+![\[UE4\] Lost Temple Ruins by Jonas Axelsson](https://images.openai.com/static-rsc-4/pXX7B88h5TAszyLx4i2TJb0pUbh0vl5qyaqPY6PvFR5ELPMBnGlXmoYBmB4Nuyi2mD8saId-Y0D5ypqnsLt2ZMQmW4G734Esjr0pDc4uTNWkuu5eo8q5HsghCzsL8AQRTBzJrMbFDuehZWZZ93G8OMKUf8UVSGjGT3W_RkryqBIbmSN5qu9LkqNvRkZP4AKe?purpose=fullsize)
+
+![Het Spookslot-verleden herleeft in Danse Macabre](https://images.openai.com/static-rsc-4/K2OTOHuBXhJSfgFSrnND4JII9C5Y4WpHIqPRknfLG_OZwU9T8dMa4K55j5XqZYK6x6-VpH_e5kx6gWlXJpMPc5vxJ64BXZqysYXvVIqKu05CQyc3mbFYstSsZ8zcGfuB_WgmCsdDHnJ_wZFWPFVIaDlExxkywh6dyN0I5nfaYeKHq9FzCcb8hwNYblclUc6M?purpose=fullsize)
+
+![Stream Everdawn (Epic Orchestral Hybrid | Cinematic Music | Emotional Fantasy Soundtrack) by Matias Puumala | Listen online for free on SoundCloud](https://images.openai.com/static-rsc-4/Kugbbn0WgKlwxe-JvG5xZRdoFKyCshNBsej0EQpQx1JyUJv4sFT8Y7n6xHQZI6hcZjHcPYrG5J2ZKO-Ei5PQDtfVxdq0WU3On8O-AUMhwzaP7oC3UaEu3POomSIlETS3_MwfYmKKtcCsm3NGzmzHdb4VUglxBo6goazh9x72ixILiO5SeDMCDZMnj6zMngeV?purpose=fullsize)
+
+![Comprar GreedFall II: The Dying World - Xbox Series X|S | Xbox Live](https://images.openai.com/static-rsc-4/q-caFHlmmImlEcmBiXkOKQRku22GASPwLxImCxOxbs2PRpWNBbi0G63qb-KHCgfdj3Ag_2VALZUgzZLJ24ZrK35NWh5TC5mKaGcKcarpE9gmMmE5UZtoA2CJMYsOF-EM-BTDVsg6sZGM8W1Oi2oIWj-ZIDkjOy6sSbyysLTwxYXCLTosFe_BbQSXA6hkBCY7?purpose=fullsize)
+
+Advanced idea: Music changes dynamically according to danger, player health, exploration discoveries, weather, and story events.
+
+### 4\. Environmental Audio & Sound Design
+
+Give every location its own audio identity.
+
+Features:
+
+* 3D positional sound.
+
+* Footsteps that change depending on terrain.
+
+* Wind through forests and mountains.
+
+* Waterfalls, rivers, caves, and oceans.
+
+* Underground environmental ambience.
+
+* Creature sounds and distant wildlife.
+
+* Weather-dependent audio.
+
+* Interior and exterior acoustic differences.
+
+* Dungeon echoes and reverb.
+
+* Magical environmental sound effects.
+
+Advanced idea: A sound propagation system where caves, buildings, and open environments affect how sounds travel.
+
+### 5\. Advanced Animation & Performance
+
+Build on the Blender pipeline from V3 and the companion systems from V8.
+
+Features:
+
+* Motion matching.
+
+* Procedural character reactions.
+
+* Natural turning and movement.
+
+* Contextual interaction animations.
+
+* Improved facial animation.
+
+* Cinematic animation blending.
+
+* Character-specific idle animations.
+
+* Emotional body language.
+
+* Companion interaction animations.
+
+* Better transitions between locomotion, combat, and dialogue.
+
+Advanced idea: Characters have different movement styles and idle behaviors based on their personalities.
+
+### 6\. Immersive World Presentation
+
+Make the world visually and emotionally reactive.
+
+![2 Star Dungeons - News | Throne and Liberty](https://images.openai.com/static-rsc-4/S3XMWrzc6-mXIeosYEY_2smRsaiTDA-9ldcuYe_KFdO6ZAt1job0T8VYR4rmZgbR9A1AN9_K95m9qy0d24qKGfPJhIjGawl9TkZ5BgTJ1qhQvXKvHLdXwPew9fLi0dJLCY5EA1z8XYTzJa6_PF2-G6LEbUurk1R_2qrSCbAQi0K4VtwrCuDAyeFf7X8dSGE1?purpose=fullsize)
+
+![\[Notice\] Wednesday, 4 September update notes                             - Throne and Liberty](https://images.openai.com/static-rsc-4/fooBOVF7VfJ_GA7cCN12pXWqPHCvuKsdGRe5E9s7n0ThepPTBYJloSWexI43KpCeLOyLCqQRx5t7p8D5ViMni0EB4jicXSR-QnSGi1pQvruTFeBjAmlHckNZaxn-otNMsbyOSsErkY-Q-sKsW2eDs2nofkM5xDp14OTVtAXJnT00-sKIu6PCdfce98bTutkB?purpose=fullsize)
+
+![Square Enix Announces Project Athia For PS5 And PC - Game Informer](https://images.openai.com/static-rsc-4/ATzcl-_eDjTnk7j2o2Y5H3dxyhirYjDm1cdC0cVHQ25gCr9l9SGxfLlH2W_JezXHUcHAp1UuZSDfPOE2eag36SA73v0OYz8WyPoz2Phf-Ybb3XDh6TODnpjzrWSP_QghAS0SqKotyTHr24HM0rj4G1RJKZJoiHs_BWOfm6nmtIkE1pheAgPg-mPVMFd9uM5i?purpose=fullsize)
+
+![Mysterious Druid Grove | Czepeku Scenes](https://images.openai.com/static-rsc-4/lWeWKHN9LWAME0vJTK6iI1V6LYZwnROXRYHxJZuM7WEo2jFKLduG3HeeDln0-eL-gCCJ2vedsds26YOgNkzFrDBqI-peGmtUB4EEBX_DB4hgoJWsGwA7JGwh9N2QvxSLNKWBnx3jj65xSkoWjLBOKCGavrQKrTilnYatStBscR3B7Wf8MXkq5SIBpizkbPow?purpose=fullsize)
+
+![Modus reveals explosive action game Soulstice - Gamersyde](https://images.openai.com/static-rsc-4/29ty88T0Ls0yfupt5FdsgG1mJ0sZ9WiA7XEdDij0Tgklkbkm7tcCCLQ_JGqyyW58oVXxsUzGhqhGO0uC3kQUWsbZTtsS74ZXAdMEROJizlHK-HymXfzF8tQzv2KLNeKWFwOb_is8Z-jKeUPWn81OsmAyxj7jA32FzFGW-0odmcrwI9oqi5C7tr93DZhF-VUJ?purpose=fullsize)
+
+![10 Best Fantasy Games on PC - G2A News](https://images.openai.com/static-rsc-4/1TlKG0lvsCy37pPNpHfcGdIzimhgIDpMOT9kse9xBWX8gPWZXXs44I_g7xPBRuqgusjnGNnAHvmIyQ4h4Aewzjm1MtjfMN8cmCpc_-ny5WJjlfTMuEOEZxf_pdQI2hAwaQ-ENlNIBVtbp5pc5ETRCQ7D_wIhli2OWX8Ky3eDjKwlJKWKzhkAx08NFjgRnpZy?purpose=fullsize)
+
+![AI-Generated Stormy Mountain Fortress Medieval Castle with Lightning & Candlelit Windows | Realistic Mystical | vivago.ai](https://images.openai.com/static-rsc-4/BKyr1Tur9q7HZnG3FHIIMuyrWf2hQVELZPmwFQEwtO7k7epR4JDRzBE1-9wpft0qZIpnCAdx08CRpW6ESiPyQqB4HD0sY8NdSXfIv3JIUNLZ_qBbgTkF0V_bnvezrX7EhxdsuEqDNj9euupj3hqyN_LCPG3LoDqMhGPyyJ1rIcupQQBWbSOftX5srDkchMOM?purpose=fullsize)
+
+![Ancient ruins with mystical symbols | Free Photo Illustration - rawpixel](https://images.openai.com/static-rsc-4/tOnBR2648mdegE22zpwOTu3s26TxzLLWgoGUP1qOP9CHnTxviFmkmQuPM4Dzv-xFItMfG39tg-xj7sZ0CE_iUlPokdzAmEkBNgnwMNTPKBMHeKlw022-HLYglcYSTtNQYNVbYqxzq2o0V6NRmsPRdEzDQ0jMFennz70ZYWc5WxHyam2J4LchoOUkyWl4HvV-?purpose=fullsize)
+
+![Fachan: Mythical Creatures - Mythical Encyclopedia](https://images.openai.com/static-rsc-4/yo_LcufQA9sLnr-euTOcs68iuyS69RpHrBLPTEHAv7_FImdz4TKdqfAS7UNF5TdPKBWrTm7DEp4_NKlYj_USNhwmmz8xsI1kkvVo7QchiYkuF8oObNYhSMhb_UOcLvK35q02_5WTL5YUdhMKBXZJYj0wGERhN7q_YVe-44i23r0-ql6-zrQApdDWQtcQxHjv?purpose=fullsize)
+
+![Ionforge Labs - Fueling Worlds. Forging Legends.](https://images.openai.com/static-rsc-4/HKwkX5mMrodG-WzXUt_pZ4ri-WTL0Xzbd96k5Zy8sknJnkTUHkwfchi6FtmpXlfhhtalVLjaNS8c2_rMXVsjv6IODzDKWskHhJgxVMRvycySryV_SBigV0gKFDp8POdt5pf9sfv-OURcfdqfvQB6VD9TTQW3FMy5DwRiZxIvJ1sqt_vFW8PIsd_NfYqrGHTq?purpose=fullsize)
+
+![No Rest for the Wicked no Steam](https://images.openai.com/static-rsc-4/qxD-TCDawwn1Nq_G-YZAksA9AHEMBeZkMIM81ZAMFC-pW6-C1Mxgu9g_N0bB__fOHAFemaKvONxMHU-8nBONYvwJRPLrRaaheV63AUVfV_FTLHNpmylnESalqVoI79gj2WPP9-LXc3pTh-HFYi9ukAZKdQ1Q3wfXUI_ICkLOzXP75URBnfRo9y8v9CUEJ_Fz?purpose=fullsize)
+
+![Remnant II - DLC Bundle | Deku Deals](https://images.openai.com/static-rsc-4/TKwgu1PH-OrAVrWjjBQkU2JKt-Dps_xLmDcj46sVJ6_ynziebThkdAFW9v61TctnckoBUtOLFd4gbtfbLDAo7GCt-iSo071BBmdMASZabK84f6JEOtGFs-1NSbPhBr0haAJZNHeOkra0gi9qlAYT43HTt8X-CwY9CJj0jaPxY_oZVn6BOTpoxy2wMMtnCgEm?purpose=fullsize)
+
+![Knight in the Maze on Steam](https://images.openai.com/static-rsc-4/-Fw-uu_wCrZvCFddVu7cqFfkt0mZtVlykld60JSsa21XcT0zB778ro8bRsHPoRgTr_6pNk534Ad8TlaEMf8qKPWTptoNuLSxIKaVH1yTi31vqXnxetA1D4ea2AAvyZag2cak0wjWg8Z6g-H_RX1nFhjFlXYgGn_yL6Dx0U_1K9XUbFZp9NI-NMoGO2YTgI-Q?purpose=fullsize)
+
+Features:
+
+* Volumetric lighting.
+
+* Improved fog and atmospheric depth.
+
+* Dynamic cloud shadows.
+
+* Improved rain and snow presentation.
+
+* Water reflections and environmental effects.
+
+* Magical environmental reactions.
+
+* Cinematic sunrise and sunset.
+
+* Location-specific atmosphere.
+
+* Improved interior lighting.
+
+* Weather-reactive vegetation.
+
+Advanced idea: Important story locations visually change after major events in the player's adventure.
+
+### 7\. Interactive Cinematic Events
+
+Make important moments playable instead of relying entirely on cutscenes.
+
+Examples:
+
+* Escaping a collapsing ancient temple.
+
+* Witnessing a dragon flying over a mountain.
+
+* Helping a companion during a dangerous journey.
+
+* Discovering a hidden civilization.
+
+* Surviving a magical storm.
+
+* Entering a legendary boss arena.
+
+* Experiencing a major world event.
+
+Features:
+
+* Contextual player actions.
+
+* Interactive environmental sequences.
+
+* Cinematic traversal.
+
+* Scripted but flexible encounters.
+
+* Companion participation.
+
+* Multiple scene outcomes.
+
+* Gameplay-to-cinematic transitions.
+
+### 8\. Photo Mode
+
+![Echoes of the End — Analog Stick Gaming](https://images.openai.com/static-rsc-4/g4qO_ttsLmBcvamcpqLHgSt5_bTcWIGqd02RGay3-Hyc-FHTpng0y_bHemb9f41iS3zceqAlMlZY7CzlsAH8JnYcMcA31hCHyEEsQfh-Btgzc4fALizd7Ws53GwTWvzArPtvPV49EUppf9nASXBaQqUoHvJ0SiuUAxnrr_3o4XRGNheFnt6Et0pidkJCs5Ch?purpose=fullsize)
+
+![Day of Dragons game revenue and stats on Steam – Steam Marketing Tool](https://images.openai.com/static-rsc-4/CSFL4yhQeVSpq337j73JVNcLHpBKiZ6UScWAw3PXu_KF2Zciwrd5LVcR0RNathFNeYyTlOVwG8TshBuAS4a6Q_TV02zI5liwxN9txtjWMzrWuaZhLCVYtShYGKqQJs5HI62al6SCd7a7Yey51TZy_Dr4IWJOGZl3PIzLx333H3zeJYBleCC7DHm7ToZhP5f2?purpose=fullsize)
+
+![IGCS Depth of Field - Otis_Inf Photomode Mods](https://images.openai.com/static-rsc-4/u0jwT8sIv4fgyJYjIkHHRKn5rK4LMedu0_B0CX3UYLC9DfGolcuPgq1xBL-0WgVByTA1as5L7tjOja_YhYViB0l9KtDc912w7wNg78-B91_0riLEaScHMGDF8klOjwRUyaYxES2Nd2bDBtNY3ZeV-qjRA19sVhtLvbOgauXKu-bGSCe-ORp0gAaf7DIuirUo?purpose=fullsize)
+
+![How to Play Infinity Nikki on PC — GNL Magazine](https://images.openai.com/static-rsc-4/aaQO_f9Kx82Gwugy7wHvktW3wdEzhxG1W2IbI-QxoinWVxxskpqPBnsAI0GdLY2_s_8jF7slKjLS9jF0FukPFJ-xlotTfDWHyzbYvh2YEqzn5bgicujjiaEVDSm5Lk9H9Q2D0KtRFGxfY7e2KoTYbqgom7t4wQM1ZKBlJn6sqR6WAoLXkqj7N-XI3E9ImtBT?purpose=fullsize)
+
+![Crimson Desert Weapons Tier List: Best Picks for Every Playstyle | GAMES.GG](https://images.openai.com/static-rsc-4/vmrrXY_Q2pTcw4pzrRW-y8Z-7NptETyyYhzbU_pTO_Cqa4r0HBgixkRgUa3mxgsjMIIKGC4Ve1btu5g3zz6lzFtZM1ye7eIJniVXHFxK1SkBI7XTnxWboD57BeQGlLaWGxlcwOPpbFGJ1N_zjnhTGJXhj-BEMWBYttjTzE3CI5CBOm4isAJPhCr8NTWN8P5l?purpose=fullsize)
+
+![Patch 8 just released! | Baldur's Gate 3 (BG3)](https://images.openai.com/static-rsc-4/rVfbCBKwG8C5lpA1wmPBuyaP8sxqkxposTzQ2VooCvw-EEGDPwUmnlXrZvAXDgUdEo0peSY0Flm3yXEhZPy059gaJF8f_mgZ5hTO4WHwxQD3P-wXFfIOSQMutiVkWWgWfcLeBPEGOvRlJ2PETYJQWSKqJeF-qx5a_Er-Rgrqedt0OhPHsYJBScTO5Zx_kSuv?purpose=fullsize)
+
+![Multiclassing in BG3 | Tavern RPG – join our cozy forum community to discuss RPGs](https://images.openai.com/static-rsc-4/62Kc4bYaHqxTwH3v7KPs9EaYIdU4GVgM-TF1dgjkdg4yMH7XGliS-VkpN84E3-fJ3U11A2cpjjk0DFfQzp-w0rqwfNH-fYP6xsav1SvK264zLGpMzP8qhAo8OFcvX4dWmJ3tSbfKY7reGjPjMkUjNEJTRlmI4NJbcVnBYHTU0JaJwoWJVteUKDCclNRqlFv6?purpose=fullsize)
+
+![Project Tal Is Another Stunning Open World Action RPG Targeting PS5 | Push Square](https://images.openai.com/static-rsc-4/rAvJKflpQykuGSC0KBlrrLi-Lxtl1cMBm1q52oh8sE9y4EGB5ch0AdEwR57jGkfX8mPE6P8hjnRKIBLWNfpOuyGg0FWHK2maQFwajIgIM6-gO-Nq_6tJdOC66aWDRy4GfqnegH47RQceV5kzx4XDgGG0kkhcDPkES7PbutkKIXHCngME41fbSzx3ibFTGD1K?purpose=fullsize)
+
+![How to Find and Use Photo Mode in Final Fantasy XVI - Basics - Getting Started | Final Fantasy XVI | Gamer Guides®](https://images.openai.com/static-rsc-4/JwcSF1DFmrcO1uIoVNlBqx4sGW5fexJo0lle_WfZXsgE_w-EVJqINP97-Ttn0GvfI9NSVfbMQdQPz1BfYe2KGVWXbvlRRHVw9fPjtU3NIjvEPB0hEoFmm8HS8ZVFRQcy9PYUivZ66v--7SB_mmEDfeB6g9oCNfTgTQy36QG8ZDu8myQQVBpACziqaFJ5qm1p?purpose=fullsize)
+
+![Beasts of Maravilla Island | Nintendo Switch download software | Games | Nintendo UK](https://images.openai.com/static-rsc-4/sbTN2heS88GQ3poCHRAqdizaekyg2kDMcsA7dbU5phqKhRSOpZQhzxHd4gr8pPBIHlyZP53JNBcyLNDY3JIfTxKLTaVYumwZKppXbZTiUu7tfSyzevUMIrnhty-ZJ5o6d-fjkcgJsO73Y5wFy9YXMleLtdaG9RLmeRfpX9D476MjHLpet5TE1lVqKcRQE9Uo?purpose=fullsize)
+
+![Jaki komputer do Gothic Remake? Wymagania sprzętowe remake’u Gothica - x-kom](https://images.openai.com/static-rsc-4/vKkbdQEp1XpJKd_zp21wVSdWsl2ZWe3rgGsVB4oIEIGmBlwJJqXdSmCPorM3XKsOTQh0_b8QpJN4plHgEYjdP2N6eGzPOwy1ZUQwo-C8LW_bIbixU_xC8yQqjbrwXsb5422LN15C1yH8Rb06MNWy_mxVTw1hv-lI05EZc5Jv1B0xfSDdEYqE9XQ8VN02jCzZ?purpose=fullsize)
+
+![Dragon Age: The Veilguard performance analysis—decent frame rates and blessedly glitch-free | PC Gamer](https://images.openai.com/static-rsc-4/EVVqe3VZ4yGdXD40_Sjt71EMkH3Jerc9PJe978V2gmZ3RSeck4uQdy2uRfgPD1sCS87uJA3zFWmrQNTxmAsnOp_28h1jD-Kr9CYngkHToj5EpLWYszwRN0DgwuQ0ePi11YDXjwOld6TKAAiPEONkALWKp2PdWoYTrtNIVRBb5bORRoc3wvmvZzf-l1SCQof4?purpose=fullsize)
+
+![HC Aloy - Head Model Customizer at Horizon Forbidden West Nexus - Mods and community](https://images.openai.com/static-rsc-4/-v2y4hbzesZTK45EOazVc3CcR0TcTLUiDyp-OeLLtKwbxDWsOsFB9IxUxpz0FG22lOCjwCJBFkel2VpxU3hq9uU4RFlMyDqBwyPP_0obncHmTAXWkI9iukOomnWSLq1yEE13Nh5BwI8azaATzc5vBMsFOqYK_TnowvYeBILgmCx41EA-FE5CzTIMgAYu0xTw?purpose=fullsize)
+
+![Skyrim Wallpapers (65 images) - WallpaperCat](https://images.openai.com/static-rsc-4/wHKozyy8uuCgx3Coh2cv0IRC89wywfmWPfL5vd0I4dzKOyNeMXBaUq6-lhvNW9fyH4Y-AcSrVHiazK113U0X2MnaFj4W2vbtfAJ0D3caEzi2dtaWQ869XYsoBGigEYFW4yZA00AlsydmFVLS7cHqWRqd0PBcA-CT-WsAKa-mgJ2NAT88bimoNFAm8BWBHYqP?purpose=fullsize)
+
+Give players tools to capture their adventures.
+
+Features:
+
+* Free camera movement.
+
+* Camera distance and rotation.
+
+* Field-of-view adjustment.
+
+* Depth of field.
+
+* Exposure and brightness.
+
+* Time-of-day adjustment.
+
+* Weather selection.
+
+* Character pose selection.
+
+* Companion positioning.
+
+* Filters and visual effects.
+
+* Hide interface option.
+
+* Screenshot capture.
+
+Advanced idea: Special cinematic poses and composition presets for legendary creatures, bosses, and important locations.
+
+### 9\. Voice & Audio Production Studio
+
+Build an integrated audio workflow for developers.
+
+Features:
+
+* Dialogue recording management.
+
+* Voice line database.
+
+* Character voice profiles.
+
+* Audio import and validation.
+
+* Dialogue-to-animation synchronization.
+
+* Lip-sync preview.
+
+* Sound effect library.
+
+* Music event management.
+
+* Volume and audio mixing controls.
+
+* Subtitle synchronization.
+
+* Missing audio detection.
+
+### 10\. Accessibility & Presentation Options
+
+Make the experience comfortable and accessible.
+
+Features:
+
+* Customizable subtitles.
+
+* Subtitle size and background.
+
+* Dialogue text speed.
+
+* Camera shake controls.
+
+* Motion blur controls.
+
+* Color accessibility settings.
+
+* Separate music, dialogue, and effects volume.
+
+* Optional cinematic skipping.
+
+* Adjustable camera sensitivity.
+
+* Gameplay and cinematic brightness settings.
+
+### V9 — Development roadmap
+
+| Phase   | Development focus                         |
+| ------- | ----------------------------------------- |
+| Phase 1 | Cinematic camera and scene director       |
+| Phase 2 | Dialogue, facial expressions and lip-sync |
+| Phase 3 | Dynamic music and environmental audio     |
+| Phase 4 | Animation and character performance       |
+| Phase 5 | Environmental presentation                |
+| Phase 6 | Interactive cinematic events              |
+| Phase 7 | Photo mode                                |
+| Phase 8 | Audio production tools and accessibility  |
+| Phase 9 | Optimization, integration and testing     |
+
+### V9 — Suggested project structure
+
+```text
+Aetheria/
+├── Cinematics/
+│   ├── Director/
+│   ├── Cameras/
+│   ├── Cutscenes/
+│   ├── Sequences/
+│   └── Transitions/
+├── Dialogue/
+│   ├── Conversations/
+│   ├── FacialExpressions/
+│   ├── LipSync/
+│   ├── VoiceProfiles/
+│   └── Reactions/
+├── Audio/
+│   ├── Music/
+│   ├── Ambience/
+│   ├── SoundEffects/
+│   ├── Dialogue/
+│   └── Mixing/
+├── Animation/
+│   ├── MotionMatching/
+│   ├── CharacterPerformance/
+│   ├── FacialAnimation/
+│   └── CinematicAnimation/
+├── Presentation/
+│   ├── Lighting/
+│   ├── Atmosphere/
+│   ├── WeatherEffects/
+│   └── EnvironmentalEffects/
+├── PhotoMode/
+├── Accessibility/
+└── DeveloperTools/
+```
+
+### Master development directive — Aetheria V9
+
+The following is a proposed implementation brief, not a claim about the current repository's existing systems.
+
+# AETHERIA V9 — CINEMATIC STORYTELLING, AUDIO & IMMERSION
+
+## Project Objective
+
+Develop Aetheria V9 as a major single-player immersion and presentation upgrade.
+
+The objective is to transform the presentation of Aetheria through cinematic storytelling, expressive characters, dynamic music, advanced sound design, environmental atmosphere, interactive cinematic events, and photo mode.
+
+V9 must integrate with the existing architecture and preserve all established gameplay systems.
+
+## 1. Mandatory Project Rules
+
+- Aetheria is strictly a single-player game.
+- Do not introduce multiplayer, online co-op, PvP, matchmaking, guilds, or network-dependent gameplay.
+- Preserve existing gameplay functionality.
+- Do not unnecessarily replace existing systems.
+- Inspect the repository and identify the actual engine, architecture, and existing systems before implementation.
+- Reuse existing character, animation, dialogue, audio, and world systems wherever possible.
+- Keep systems modular and maintainable.
+- Prioritize performance and stability.
+- All new systems must be testable and documented.
+
+## 2. Cinematic Director
+
+Develop a cinematic presentation framework featuring:
+- Dynamic camera positioning.
+- Camera transitions.
+- Character framing.
+- Dialogue camera presets.
+- Cutscene sequences.
+- Boss introductions.
+- Environmental establishing shots.
+- Gameplay-to-cinematic transitions.
+- Scene event triggers.
+
+## 3. Advanced Dialogue Presentation
+
+Implement:
+- Facial expressions.
+- Eye tracking.
+- Blinking.
+- Lip synchronization.
+- Character gestures.
+- Emotional reactions.
+- Companion dialogue reactions.
+- Dialogue animation blending.
+- Voice profile integration.
+
+## 4. Dynamic Music
+
+Develop an adaptive music framework supporting:
+- Exploration.
+- Combat.
+- Boss encounters.
+- Dungeons.
+- Emotional scenes.
+- Regional themes.
+- Companion themes.
+- Smooth music transitions.
+- Intensity-based music layers.
+
+## 5. Environmental Sound
+
+Implement:
+- 3D positional audio.
+- Terrain-dependent footsteps.
+- Weather audio.
+- Creature ambience.
+- Cave and dungeon acoustics.
+- Interior and exterior audio behavior.
+- Environmental sound propagation.
+- Magical sound effects.
+
+## 6. Character Animation
+
+Improve:
+- Locomotion blending.
+- Motion matching where supported.
+- Contextual animations.
+- Facial animation.
+- Cinematic performance.
+- Character-specific idle behaviors.
+- Companion interactions.
+- Natural transitions between gameplay states.
+
+## 7. Environmental Presentation
+
+Implement:
+- Improved atmospheric lighting.
+- Volumetric fog where supported.
+- Weather presentation.
+- Environmental particles.
+- Water and reflection improvements.
+- Day/night atmosphere.
+- Location-specific visual effects.
+- Story-dependent environmental changes.
+
+## 8. Interactive Cinematic Events
+
+Create reusable tools for:
+- Scripted environmental sequences.
+- Interactive escape sequences.
+- Exploration discoveries.
+- Companion-assisted scenes.
+- Boss introductions.
+- World events.
+- Contextual player interactions.
+
+Keep interactive events compatible with normal gameplay and avoid taking control away from the player unnecessarily.
+
+## 9. Photo Mode
+
+Implement:
+- Free camera.
+- Camera rotation.
+- Camera distance.
+- Field of view.
+- Depth of field.
+- Exposure.
+- Time-of-day adjustment.
+- Weather controls.
+- Character and companion poses.
+- Interface visibility toggle.
+- Screenshot functionality.
+
+## 10. Audio Production Tools
+
+Create developer tools for:
+- Dialogue asset management.
+- Voice line organization.
+- Audio importing.
+- Missing audio validation.
+- Lip-sync preview.
+- Subtitle synchronization.
+- Music event configuration.
+- Audio mixing.
+- Sound effect preview.
+
+## 11. Accessibility
+
+Provide:
+- Subtitle customization.
+- Adjustable text size.
+- Camera shake controls.
+- Motion blur controls.
+- Separate audio volume controls.
+- Color accessibility options.
+- Dialogue speed controls.
+- Cinematic skip settings.
+
+## 12. Integration Requirements
+
+Integrate V9 with:
+- V3: Blender assets, character rigs, animation and production pipeline.
+- V4: World state, quests, NPC routines and narrative events.
+- V5: Combat animations, enemy reactions and boss presentations.
+- V6: Crafting and interaction animations.
+- V7: Dungeon discoveries, archaeology and ancient civilization sequences.
+- V8: Companion expressions, reactions, creature animations and mounts.
+
+Do not duplicate existing systems. Extend them through clearly defined interfaces.
+
+## 13. Developer Tools
+
+Create:
+- Cinematic sequence editor.
+- Camera preview tools.
+- Dialogue preview tools.
+- Lip-sync validation.
+- Audio event debugger.
+- Animation preview.
+- Photo mode testing tools.
+- Performance monitoring.
+- Missing asset detection.
+
+## 14. Testing Requirements
+
+Test:
+- Camera transitions.
+- Dialogue synchronization.
+- Facial animation.
+- Audio playback.
+- Music transitions.
+- Environmental sound.
+- Cinematic interruption and recovery.
+- Companion scene integration.
+- Performance in large environments.
+- Accessibility settings.
+- Save/load compatibility.
+
+## 15. Final Objective
+
+Deliver Aetheria V9 as a cohesive cinematic immersion upgrade.
+
+The player should experience a world with expressive characters, memorable scenes, beautiful environments, atmospheric audio, and cinematic moments that complement gameplay.
+
+Maintain the identity of Aetheria as a complete, strictly single-player fantasy adventure.
+
+### What V9 should achieve
+
+![Dragon Age: The Veilgaurd - Review — Analog Stick Gaming](https://images.openai.com/static-rsc-4/ARDSYNitFhBzUBoL9PC3X4ssLLszw9n1m1gO5jBYo0csOX9ErIAD_KScx7W9F5wIgtyfRAKEpAqNR6ScoknAvw8w8RwQd_lDFLconzQfy4EDLG9XhPqiilqqBxHR81deCyj3zQEGNGpnHhCPFpygQsIjuRYii8Vl0Zi4LAQqFnllB4FpiUSBoivbn6LiNalo?purpose=fullsize)
+
+More emotional storytelling
+
+Characters feel expressive and believable.
+
+![Dorun Global](https://images.openai.com/static-rsc-4/OARLJAJxbMyn74B7eiICODYZApcRCI7Q09qhHjYPMI4iTVhph3p7PYzF9KlriEq3KnzZ5cM97DcvBHk8Rlh08t-lxKFzx4jE1eXuZ7F2SQxQ7GKkE0H39UkRsqfLZamGKkIZuVffvDuAetewt7As-grnUG9ze6m4CC0PRR64Jmm8LEAZsGm2qhu8rKXCf74J?purpose=fullsize)
+
+More immersive atmosphere
+
+Music and sound make every location memorable.
+
+![Dragon's Dogma 2 w promocji i z wersją demo, którą można testować przez krótki czas - GRYOnline.pl](https://images.openai.com/static-rsc-4/qTP5U4x_Xw1WYiIhPe6TL6oJOTn4kQtwrSRR5g74iPTKIgMI3LvJUFeGlleNL2K1bogL026wJCcgSJPCnevv1GZS38dHJN3WLvP1m7paImifJz_eJxd81_M1TYEhG69CzRav9dIzLCkhuNOrv7QuyJMxwx3153lafKUpwLbgkWjrmWz9JpVIsDJnySeVyo3l?purpose=fullsize)
+
+More memorable moments
+
+Discoveries, battles, and story events receive cinematic presentation.
+
+My recommendation: Make V9 about emotional immersion rather than simply adding more content. Aetheria already has foundations for combat, exploration, crafting, and companions. Now give those systems the cinematic quality that makes players remember their adventures.
