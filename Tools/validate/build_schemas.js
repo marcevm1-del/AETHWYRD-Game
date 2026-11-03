@@ -182,6 +182,47 @@ const SCHEMAS = {
       telegraphs: { type: 'array', minItems: 1, maxItems: 5, items: { type: 'string', enum: ['blue', 'red', 'gold', 'none'] } }
     }
   },
+  thread: {
+    title: 'Spell thread (Loom, proposed)', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'kind', 'group', 'strain', 'categories', 'disciplines', 'minRank', 'hold', 'trigger', 'element', 'effect', 'status'],
+    properties: {
+      id: id('thr_'), name: { type: 'string', minLength: 1 }, kind: { type: 'string', enum: ['shape', 'power', 'attune', 'trigger'] },
+      group: { type: 'string', enum: ['weave', 'bond', 'faith', 'frayed', 'any'] }, strain: { type: 'number', minimum: 0.5, maximum: 2 },
+      categories: { type: 'array', minItems: 1, items: { type: 'string', enum: ['Strike', 'Barrage', 'Ward', 'Binding', 'Mobility', 'Sensing', 'Mending', 'Empowerment', 'Hex', 'Illusion', 'Pact', 'Utility'] } },
+      disciplines: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } },
+      minRank: RL, hold: { type: 'integer', minimum: 0 }, trigger: { type: 'string' }, element: EL, effect: { type: 'string', minLength: 1 },
+      status: { type: 'string', enum: ['proposed', 'approved'] }
+    }
+  },
+  loom_rank: {
+    title: 'Loom rank row (proposed)', type: 'object', additionalProperties: false,
+    required: ['id', 'rank', 'levelMin', 'tier', 'chantSec', 'loomSlots', 'maxThreadSockets', 'hold', 'attunePoints', 'unlocks', 'status'],
+    properties: {
+      id: id('lrk_'), rank: RL, levelMin: { type: 'integer', minimum: 1, maximum: 300 }, tier: { type: 'string', enum: ['Basic', 'Intermediate', 'Advanced', 'Grand', 'Forbidden', 'Divine'] },
+      chantSec: { type: ['number', 'null'], minimum: 0 }, loomSlots: { type: 'integer', minimum: 1, maximum: 12 }, maxThreadSockets: { type: 'integer', minimum: 1, maximum: 6 },
+      hold: { type: 'integer', minimum: 0 }, attunePoints: { type: 'integer', minimum: 0 }, unlocks: { type: 'string', minLength: 1 },
+      status: { type: 'string', enum: ['proposed', 'approved'] }
+    }
+  },
+  tree_node: {
+    title: 'Attunement tree node (proposed)', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'kind', 'cluster', 'effect', 'downside', 'cost', 'links', 'x', 'y'],
+    properties: {
+      id: id('att_'), name: { type: 'string', minLength: 1 }, kind: { type: 'string', enum: ['hub', 'start', 'small', 'notable', 'keystone', 'bridge'] },
+      cluster: { type: 'string', minLength: 1 }, effect: { type: 'string', minLength: 1 }, downside: { type: 'string' },
+      cost: { type: 'integer', minimum: 0, maximum: 5 }, links: { type: 'array', minItems: 1, items: id('att_') },
+      x: { type: 'number' }, y: { type: 'number' }, classKey: { type: 'string' }
+    }
+  },
+  ascension_node: {
+    title: 'Ascension node (proposed)', type: 'object', additionalProperties: false,
+    required: ['id', 'advancedClass', 'baseClass', 'kind', 'name', 'effect', 'downside', 'cost', 'requires', 'status'],
+    properties: {
+      id: id('asc_'), advancedClass: { type: 'string', minLength: 1 }, baseClass: id('cls_'), kind: { type: 'string', enum: ['gate', 'notable', 'keystone'] },
+      name: { type: 'string', minLength: 1 }, effect: { type: 'string', minLength: 1 }, downside: { type: 'string' }, cost: { type: 'integer', minimum: 0, maximum: 5 },
+      requires: { type: 'string' }, status: { type: 'string', enum: ['proposed', 'approved'] }
+    }
+  },
   class: {
     title: 'Player class', type: 'object', additionalProperties: false,
     required: ['id', 'name', 'tier', 'growth', 'recommendedAllocation', 'weapons', 'armor', 'mechanic', 'kit'],

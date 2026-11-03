@@ -27,7 +27,11 @@ const COLLECTIONS = {
   classes: { files: ['Classes/classes.json'], schema: 'class' },
   flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' },
   spells: { files: ['Spells/spells.json'], schema: 'spell' },
-  monsterSpells: { files: ['Spells/monster_spells.json'], schema: 'monster_spell' }
+  monsterSpells: { files: ['Spells/monster_spells.json'], schema: 'monster_spell' },
+  threads: { files: ['Spells/threads.json'], schema: 'thread' },
+  loomRanks: { files: ['Spells/loom_ranks.json'], schema: 'loom_rank' },
+  attunement: { files: ['Spells/attunement_tree.json'], schema: 'tree_node' },
+  ascension: { files: ['Spells/ascension.json'], schema: 'ascension_node' }
 };
 
 const errors = [];
@@ -260,6 +264,56 @@ for (const m of rows.monsterSpells) {
       if (letter !== 'EX' && RANK_ORDER.indexOf(sp.rank) > RANK_ORDER.indexOf(letter)) err(m.id, `${sid} is rank ${sp.rank}, above ${species.name} (${species.rank})`);
     }
   });
+}
+
+
+// Spell Loom (proposed): threads, rank table, attunement tree and ascension trees.
+const LOOM_RANKS = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'];
+rows.threads.forEach(t => {
+  if (t.kind === 'trigger' && t.hold <= 0) err(t.id, 'trigger threads must reserve Hold');
+  if (t.kind !== 'trigger' && t.hold !== 0) err(t.id, 'only trigger threads reserve Hold');
+  if (t.kind === 'attune' && t.element === 'None') err(t.id, 'attune threads name an element');
+  if (t.kind === 'power' && t.name !== 'Frugal' && t.strain < 1) err(t.id, 'only Frugal may have a Strain below 1');
+});
+const lrows = rows.loomRanks;
+if (lrows.map(r => r.rank).join() !== LOOM_RANKS.join()) err('loom_ranks', 'needs exactly one row per rank F to SSS in order');
+lrows.forEach((r, i) => {
+  if (r.levelMin !== SPELL_BAND[r.rank]) err(r.id, 'levelMin must be the Canon band start');
+  if (r.attunePoints !== Math.floor(r.levelMin / 3)) err(r.id, 'attunePoints must be floor(level / 3)');
+  if (i > 0 && (r.loomSlots < lrows[i - 1].loomSlots || r.maxThreadSockets < lrows[i - 1].maxThreadSockets || r.hold < lrows[i - 1].hold)) err(r.id, 'slots, sockets and Hold never fall as rank rises');
+});
+const treeById = Object.fromEntries(rows.attunement.map(n => [n.id, n]));
+for (const n of rows.attunement) {
+  for (const l of n.links) {
+    if (!treeById[l]) err(n.id, `links to unknown node ${l}`);
+    else if (!treeById[l].links.includes(n.id)) err(n.id, `link to ${l} is not mutual`);
+  }
+  if (n.kind === 'keystone' && !n.downside) err(n.id, 'a keystone needs a stated downside');
+  if (n.kind !== 'keystone' && n.downside) err(n.id, 'only keystones have a downside');
+}
+{
+  const seen = new Set(['att_hub']); const q = ['att_hub'];
+  while (q.length) { const c = q.pop(); for (const l of treeById[c] ? treeById[c].links : []) if (!seen.has(l)) { seen.add(l); q.push(l); } }
+  if (!treeById.att_hub) err('attunement', 'needs att_hub');
+  for (const n of rows.attunement) if (!seen.has(n.id)) err(n.id, 'not connected to the hub');
+  const clusters = {};
+  for (const n of rows.attunement.filter(n => n.kind !== 'hub' && n.kind !== 'start' && n.kind !== 'bridge')) { (clusters[n.cluster] = clusters[n.cluster] || []).push(n.kind); }
+  for (const [c, ks] of Object.entries(clusters)) if (ks.filter(k => k === 'keystone').length !== 1 || ks.filter(k => k === 'notable').length !== 3) err('attunement', `cluster ${c} needs 1 keystone and 3 notables`);
+  if (rows.attunement.filter(n => n.kind === 'start').length !== rows.classes.length) err('attunement', 'needs one start node per base class');
+  for (const n of rows.attunement.filter(n => n.kind === 'start')) ref(`${n.id}.classKey`, 'cls_' + n.classKey, 'classes');
+}
+{
+  const byClass = {};
+  for (const a of rows.ascension) {
+    ref(`${a.id}.baseClass`, a.baseClass, 'classes');
+    (byClass[a.advancedClass] = byClass[a.advancedClass] || []).push(a);
+    if (a.requires && !rows.ascension.some(x => x.id === a.requires)) err(a.id, `requires unknown node ${a.requires}`);
+    if (a.kind === 'keystone' && !a.downside) err(a.id, 'a keystone needs a stated downside');
+  }
+  for (const [c, nodes] of Object.entries(byClass)) {
+    const k = kind => nodes.filter(n => n.kind === kind).length;
+    if (k('gate') !== 1 || k('notable') !== 3 || k('keystone') !== 1) err('ascension', `${c} needs 1 gate, 3 notables and 1 keystone`);
+  }
 }
 
 // Regional Siege & Liberation: every region has a unique Tyrant living there, or is marked noSiege.

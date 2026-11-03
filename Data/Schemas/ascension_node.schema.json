@@ -1,0 +1,66 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Ascension node (proposed)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "advancedClass",
+  "baseClass",
+  "kind",
+  "name",
+  "effect",
+  "downside",
+  "cost",
+  "requires",
+  "status"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^asc_[a-z0-9_]+$"
+  },
+  "advancedClass": {
+   "type": "string",
+   "minLength": 1
+  },
+  "baseClass": {
+   "type": "string",
+   "pattern": "^cls_[a-z0-9_]+$"
+  },
+  "kind": {
+   "type": "string",
+   "enum": [
+    "gate",
+    "notable",
+    "keystone"
+   ]
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "effect": {
+   "type": "string",
+   "minLength": 1
+  },
+  "downside": {
+   "type": "string"
+  },
+  "cost": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 5
+  },
+  "requires": {
+   "type": "string"
+  },
+  "status": {
+   "type": "string",
+   "enum": [
+    "proposed",
+    "approved"
+   ]
+  }
+ }
+}

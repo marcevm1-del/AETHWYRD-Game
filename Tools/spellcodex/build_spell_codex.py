@@ -20,7 +20,7 @@ import data_extra  # noqa: F401  (merges extra sentence variety into the banks)
 import feel_sheets
 from slice_data import SLICE
 from slice_texts import T as POLISH
-import rank_class, rank_sheets, monster_spells
+import rank_class, rank_sheets, monster_spells, build_loom
 from data_families import B as BASES, FORM_TEXT, FORM_TARGET
 from data_nouns import NOUNS, ADJ, STUFF
 from data_actions import ACTIONS, IMAGERY
@@ -481,14 +481,17 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
 
     feel_sheets.add_feel_sheets(wb, recs, DISC, HUES)
     rank_sheets.add_rank_sheets(wb, recs, MONS, SPECIES, DISC, HUES, last)
+    if LOOM:
+        build_loom.add_loom_sheets(wb, *LOOM)
     wb.save(out)
 
 
 MONS, SPECIES = [], []
+LOOM = None
 
 
 def main():
-    global MONS, SPECIES
+    global MONS, SPECIES, LOOM
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "..", "05_Skills_Magic", "Aetheria_Spell_Codex.xlsx")
     recs, a_rows, b_ent, c_rows = build_records()
     problems = validate(recs)
@@ -502,10 +505,14 @@ def main():
     if os.path.exists(sp_path):
         SPECIES = json.load(open(sp_path, encoding="utf-8"))
         MONS = monster_spells.build(recs, sp_path)
+    if os.path.isdir(os.path.join(root, "Data")):
+        LOOM = build_loom.export(os.path.join(root, "Data", "Spells"))
     write_xlsx(recs, a_rows, b_ent, c_rows, out)
     if os.path.isdir(os.path.join(root, "Data")):
         rank_sheets.export_data(recs, MONS, os.path.join(root, "Data", "Spells"))
         print("wrote Data/Spells (spells.json, monster_spells.json)")
+        if LOOM:
+            build_loom.write_doc(os.path.join(root, "05_Skills_Magic", "spell_loom.md"), *LOOM)
         rank_sheets.write_rank_doc(os.path.join(root, "05_Skills_Magic", "spell_ranks_and_classes.md"), recs, MONS, SPECIES)
     doc = os.path.join(HERE, "..", "..", "13_Production", "spell_look_and_feel.md")
     if os.path.isdir(os.path.dirname(doc)):

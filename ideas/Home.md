@@ -40,6 +40,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/04_Classes/progression_experience|04_Classes/progression_experience]]
 - [[Design Bible/05_Skills_Magic/skills_and_magic|05_Skills_Magic/skills_and_magic]]
 - [[Design Bible/05_Skills_Magic/spell_codex_canon_check|05_Skills_Magic/spell_codex_canon_check]]
+- [[Design Bible/05_Skills_Magic/spell_loom|05_Skills_Magic/spell_loom]]
 - [[Design Bible/05_Skills_Magic/spell_ranks_and_classes|05_Skills_Magic/spell_ranks_and_classes]]
 - [[Design Bible/06_Races_Origins/clans_guardians_fauna|06_Races_Origins/clans_guardians_fauna]]
 - [[Design Bible/06_Races_Origins/races_and_origins|06_Races_Origins/races_and_origins]]

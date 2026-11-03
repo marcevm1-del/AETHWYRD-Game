@@ -1,0 +1,92 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Loom rank row (proposed)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "rank",
+  "levelMin",
+  "tier",
+  "chantSec",
+  "loomSlots",
+  "maxThreadSockets",
+  "hold",
+  "attunePoints",
+  "unlocks",
+  "status"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^lrk_[a-z0-9_]+$"
+  },
+  "rank": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "levelMin": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 300
+  },
+  "tier": {
+   "type": "string",
+   "enum": [
+    "Basic",
+    "Intermediate",
+    "Advanced",
+    "Grand",
+    "Forbidden",
+    "Divine"
+   ]
+  },
+  "chantSec": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": 0
+  },
+  "loomSlots": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 12
+  },
+  "maxThreadSockets": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 6
+  },
+  "hold": {
+   "type": "integer",
+   "minimum": 0
+  },
+  "attunePoints": {
+   "type": "integer",
+   "minimum": 0
+  },
+  "unlocks": {
+   "type": "string",
+   "minLength": 1
+  },
+  "status": {
+   "type": "string",
+   "enum": [
+    "proposed",
+    "approved"
+   ]
+  }
+ }
+}
