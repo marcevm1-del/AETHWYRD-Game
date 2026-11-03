@@ -13,8 +13,10 @@ Every spell has **Source, Chant tell, Release, Active, Recovery**, then a short 
 |---|---|
 | **Spell lifecycle** | Source -> Chant tell -> Release -> Active -> Recovery -> Afterglow. Every spell shows all five; the tell is never colour alone (shape, sound and motion also change). |
 | **Chant interrupt** | A stagger during chant or release shatters the ring into 12 shards over 0.25 s, plays a glass tick, then a 0.4 s fizzle puff in the discipline's mid colour. No damage VFX is spawned. |
-| **Reserved colours** | Telegraph blue #3DA5FF, red #FF3B30 and gold #FFC93C, quest gold #FFD34D, interaction cyan #7FE3FF and the rank colours may not be a spell's dominant colour and never pulse in a spell. Spell effects flicker (noise) or glow steady; only telegraphs pulse. |
+| **Reserved colours** | Telegraph blue #3DA5FF, red #FF3B30 and gold #FFC93C, quest gold #FFD34D, interaction cyan #7FE3FF and the rank colours may not be a spell's dominant colour and never pulse in a spell. Spell effects flicker (noise) or glow steady; only telegraphs pulse, with the single exception of the slow ritual breath below. |
+| **Ritual pulse (owner decision 2026-11-03)** | Divine and Radiance chant rings, charge-ups and Divine rituals may breathe slowly: 0.5 Hz (a 2 s cycle), +/-15% emission, ivory, rose or amber-peach only. Never during the Active phase of an enemy cast. Telegraph pulses are always 3 Hz or faster, so tempo, shape and colour all differ from the ritual breath. |
 | **Hostile casts** | Any spell cast by an enemy adds the shared telegraph on top of its own VFX: blue circle (parryable), red triangle (unblockable), gold square (grab), none for chip effects. Player casts never show a telegraph. |
+| **Enemy variant (owner decision 2026-11-03)** | Enemy-cast spells use a dimmer variant of the discipline palette: lightness x0.85, saturation x0.7, then 25% mixed toward the discipline shadow colour (hexes are in the Look & Feel sheet). Emission x0.6 (2.0 becomes 1.2), no white-hot core, outlines on solid constructs at x0.25 instead of x0.35, particle count x0.8, cast sound pitched -2 semitones with a gentle low-pass. The telegraph is drawn over this variant and keeps its full brightness, so the danger signal is always the brightest thing on screen. |
 | **Value and saturation** | Spell body S 25-60%; accent S 70-90%; above 90% only for the emissive core. No pure black or pure white: darkest #14102A, lightest #FFFBEA. Shadows lean violet-blue, lights warm. |
 | **60 / 30 / 10** | Every spell is 60% one palette colour, 30% a second, 10% an accent, plus an emissive core. The order depends on category (see Feel Categories). |
 | **Toon shading** | Effect meshes use the Ascend/Toon two-tone shader: hard terminator (_ShadowStep 0.5, softness 0.06), shadow tint 0.58/0.56/0.78. Particles, smoke and water have no outline. Solid constructs (walls, crystals, constructs) get a 1.5 px outline at the local colour x 0.35. |
@@ -58,10 +60,10 @@ Every spell has **Source, Chant tell, Release, Active, Recovery**, then a short 
 | **Stonecraft** | `#C98C3E` `#8A8478` `#4A4338` `#F0C26A` `#FFE2A0` | a square glyph ring with four corner stones | 1.25, 0.90 | Slow start (6 frames of anticipation), heavy settle with two bounces; debris falls under real gravity. | deep grind rising |
 | **Frostcraft** | `#8FD3F0` `#E8F4FA` `#7A78B8` `#C8B8F0` `#F4FBFF` | a six-point snowflake ring with six tick marks | 1.10, 0.95 | Grows in steps (a 12 fps stop-motion feel), then holds still; shatters at the full 60 fps. | glass ticks rising with a breath |
 | **Verdance** | `#5FB35A` `#A8D86A` `#2F6B3C` `#F0D36B` `#E8FFC0` | a leaf-and-vine ring with three budding nodes | 1.15, 0.90 | Unfurls in 0.4 s with a springy overshoot, sways idly at 0.6 Hz while active and withers when it ends. | leaf rustle swell with a wood creak |
-| **Radiance** | `#FFF1C9` `#FFB36B` `#B8A0D8` `#FF8FB1` `#FFFDF0` | an eight-ray sun ring | 0.90, 1.30 | Instant: full brightness in 2 frames, settles over 0.2 s. It glows steadily and never pulses, so it is never mistaken for a gold telegraph. | choir 'ah' swell |
+| **Radiance** | `#FFF1C9` `#FFB36B` `#B8A0D8` `#FF8FB1` `#FFFDF0` | an eight-ray sun ring | 0.90, 1.30 | Instant: full brightness in 2 frames, settles over 0.2 s. Steady in combat; during a chant or ritual only, the glow may breathe at 0.5 Hz (+/-15% emission, cream or amber-peach, never gold). | choir 'ah' swell |
 | **Umbral** | `#4A2F7A` `#2A2250` `#14102A` `#B7B3D6` `#8C7BD0` | a crescent-moon ring with three phase glyphs | 1.00, 0.95 | Slides against the light with no ease-in and stops dead; edges lag a few frames behind. | low drone with a muffled breath |
 | **Spiritbond** | `#6FD6A8` `#F2B867` `#2E6B63` `#EAF7F0` `#FFF4D6` | a paw-and-leaf curl ring with three small wisp glyphs | 1.30, 0.90 | Arrival is hesitant: a curved path with a pause at 70%; fireflies orbit; the light shifts from green (calm) to amber (eager) to dim (reluctant). | two or three notes on an ocarina or flute |
-| **Divine** | `#FFE8B8` `#F7B8A0` `#C9A6B8` `#FFF8E6` `#FFFBEA` | a double halo ring with candle-flame glyphs, left open until the prayer is answered | 1.40, 0.85 | Descends slowly from above like falling light, steady and never pulsing; the answer is a 0.3 s brightening, not a flash. | soft choir swell |
+| **Divine** | `#FFE8B8` `#F7B8A0` `#C9A6B8` `#FFF8E6` `#FFFBEA` | a double halo ring with candle-flame glyphs, left open until the prayer is answered | 1.40, 0.85 | Descends slowly from above like falling light, steady in combat; during a ritual the ring breathes at 0.5 Hz (+/-15% emission, ivory or rose, never gold); the answer is a 0.3 s brightening, not a flash. | soft choir swell |
 | **Forbidden Arts** | `#8A7FA3` `#B5543A` `#2B2536` `#F0ECF7` `#F5F2FA` | a ring broken into three offset arcs, one arc drawn 5 degrees out of phase | 1.10, 1.00 | Stutters: a 2-frame hold every 8 frames; edges repeat 1-2 frames late (frame echo). | detuned reversed piano with a sub rumble |
 
 Per-discipline shape language, materials, aftermath and rules of thumb are in the workbook sheet **Feel Disciplines**.
@@ -141,9 +143,60 @@ A form modifies the base spell's shape, motion, sound and pose; it never changes
 - Hit feedback calls the existing hit-stop and shake tiers by weight name; a spell never carries its own hit-stop number.
 - Test on three backdrops (sunlit grass, dark cave, night town) and in greyscale at 25% size before sign-off; keep the five-concurrent-spells budget under 2.0 ms GPU.
 
-## 9. Open questions for the owner
+## 9. Owner decisions (2026-11-03)
 
-1. Should hostile spells keep their discipline colours under the telegraph (current proposal), or switch to a dimmer 'enemy' variant?
-2. Should Divine and Radiance ever pulse during a ritual (currently never, to protect the gold grab telegraph)?
-3. Which 40 to 60 spells form the first vertical slice? The sheet's Source column and category counts help pick a balanced set.
+1. **Hostile spells use a dimmer enemy variant.** Lightness x0.85, saturation x0.7, 25% mixed toward the discipline shadow colour, emission x0.6, no white-hot core, outlines at x0.25, particles x0.8, cast sound pitched down 2 semitones. The telegraph keeps full brightness on top. Per-spell enemy hexes are in the Look & Feel sheet (Enemy Key, Mid, Accent).
+2. **Divine and Radiance may pulse during rituals.** Only the chant ring, charge-up and ritual: 0.5 Hz, +/-15% emission, ivory, rose or amber-peach, never gold, never during the Active phase of an enemy cast. Telegraph pulses are 3 Hz or faster, so they cannot be confused.
+3. **First vertical slice: 48 spells** (4 per discipline), listed below and in the sheet **Vertical Slice**. Wave 1 (12 spells, one per discipline) proves the pipeline; wave 2 (16) and wave 3 (20) fill it out. Category spread: Strike 6, Barrage 4, Ward 4, Binding 4, Mobility 5, Sensing 5, Mending 4, Empowerment 2, Hex 4, Illusion 4, Pact 2, Utility 4. It covers the Ring 0 Firestorm pair (Cinder Fang + Tempest Fan), Freeze (Undertow Snare + Glacier Lock), Twilight Burst (Sunveil Blur with Gloamstep Shift or Duskbind Chain), Wildfire (Seedshot Volley with any Fire spell), and the Spiritbond and Divine refusal feel.
+
+| Wave | Spell | Discipline | Category | What it proves |
+|---|---|---|---|---|
+| 1 | **Skypiercer Lance** | Aethercraft | Strike | The baseline Strike: one clean bolt that proves release, hit-stop and the stagger-interrupt loop. |
+| 1 | **Hearth of Grace Prayer** | Divine | Mending | Mending prayer: warm hush, bell, no flash, and the open ring awaiting the answer. |
+| 1 | **Yesterday's Trace Echo** | Forbidden Arts | Sensing | Time Sensing: the stuttering replay, Weave-scar decal and the world's colour drain. |
+| 1 | **Cinder Fang** | Flamecraft | Strike | Fire Strike: applies the Fire aura, half of the Ring 0 Firestorm test. |
+| 1 | **Glacier Lock** | Frostcraft | Binding | Ice Binding and the Freeze reaction partner: ice shell, then the Heavy shatter. |
+| 1 | **Tempest Fan** | Galecraft | Barrage | Wind Barrage: the other half of Firestorm, and the Swirl spread on every element. |
+| 1 | **Aurora Veil** | Radiance | Hex | Hex by light: the prism fan and depth confusion, with the ritual-breath rule at low intensity. |
+| 1 | **Foxfire Guide Call** | Spiritbond | Pact | Pact: hesitant arrival, mood colours and the quiet refusal. The key emotional test. |
+| 1 | **Bastion Rise** | Stonecraft | Ward | Ward as terrain: a wall that blocks line of sight, with the rubble crumble. |
+| 1 | **Undertow Snare** | Tidecraft | Binding | Water Binding: with Glacier Lock it tests the Freeze reaction (shell and shatter). |
+| 1 | **Gloamstep Shift** | Umbral | Mobility | Mobility through shadow: dark afterimages with silver edges, the proof that dark effects stay visible. |
+| 1 | **Blooming Remedy** | Verdance | Mending | Mending: soft motes, no flash, and the quiet bell. The tone benchmark for healing. |
+| 2 | **Aegis Arc Bulwark** | Aethercraft | Ward | Sustained Ward: absorb ripple, rising hum and the 0.5 s shatter on break. |
+| 2 | **Fatestring Tether** | Aethercraft | Binding | Binding with tension: strain flicker and snap, and the gold square grab telegraph when an enemy casts it. |
+| 2 | **Sanctuary of Hands Prayer** | Divine | Ward | Ward as refuge: dome of 2.5 m, ritual breath at 0.5 Hz, and the Public Prayer scale. |
+| 2 | **Nullglass Edge Cut** | Forbidden Arts | Strike | Void Strike: the thin dark line, the 25% desaturation and the scar. |
+| 2 | **Hollow Interval Gap** | Forbidden Arts | Hex | Time Hex: the gap in light and sound, and the lagging shadow. |
+| 2 | **Dragon Maw Breath** | Flamecraft | Barrage | Fire Barrage: cone ticks, the red triangle zone telegraph and scorch decals. |
+| 2 | **Rimefang Shard** | Frostcraft | Strike | Ice Strike: stop-motion growth, shatter at full 60 fps, Ice aura. |
+| 2 | **Razorwind Blade** | Galecraft | Strike | Wind Strike: streaks without glow, proving a discipline that reads by motion alone. |
+| 2 | **Zephyr Flash Step** | Galecraft | Mobility | Mobility: afterimages and speed streaks, and the fastest release in the game. |
+| 2 | **Beacon Crown Pillar** | Radiance | Utility | Utility: the tall light column, a landmark that must not be mistaken for a quest marker. |
+| 2 | **Kindred Pulse Bond** | Spiritbond | Empowerment | Empowerment between friends: the shared halo of caster and spirit. |
+| 2 | **Wisp Errand** | Spiritbond | Pact | Pact errand: the arc, the orbit and the dim-and-drift on refusal. |
+| 2 | **Quarry Fist** | Stonecraft | Strike | Heavy Strike: the 0.11 s hit-stop, shake 0.18 and debris physics. |
+| 2 | **Breakwall Surge** | Tidecraft | Barrage | Water Barrage: the wide wave, wet decals and flames extinguished within 1 m. |
+| 2 | **Eclipse Double** | Umbral | Illusion | Illusion decoy: the 12-frame loop and the pop when struck. |
+| 2 | **Seedshot Volley** | Verdance | Barrage | Nature Barrage: scatter of seeds, sprouts left behind, and Wildfire with Fire. |
+| 3 | **Truesight Lens** | Aethercraft | Sensing | Sensing: the 15% desaturation and outline pass, using a mid colour that is never interaction cyan. |
+| 3 | **Morrow's Measure Prayer** | Divine | Mending | Last-Rite feel: dim light, one bell, mercy with no flash. |
+| 3 | **Oathfire Witness Prayer** | Divine | Utility | Utility witness flame: a steady flame for a freely spoken vow. |
+| 3 | **Folded Threshold Step** | Forbidden Arts | Mobility | Space Mobility: the hairline seam and the pale blue-grey palette. |
+| 3 | **Emberbrand Edge** | Flamecraft | Empowerment | Empowerment: the weapon rim glow, trail and 2 s fade-out. |
+| 3 | **Soot Phantom** | Flamecraft | Illusion | Illusion: decoy at 60% opacity, dissolve edge and the shimmer tell on the enemy variant. |
+| 3 | **Winterglass Shield** | Frostcraft | Ward | Ward made of ice: brittle shards and the rime decal. |
+| 3 | **Winterstep Bridge** | Frostcraft | Mobility | Mobility surface: a temporary foothold that melts, with the stepping sound. |
+| 3 | **Vacuum Hollow** | Galecraft | Hex | Hex: the audio duck and the penalty tag over the target. |
+| 3 | **Mercy Flame** | Radiance | Mending | Mending light: the steady warm glow in a treatment space, no pulse in combat. |
+| 3 | **Sunveil Blur** | Radiance | Illusion | Illusion by light: blurred outline, and the Twilight Burst partner. |
+| 3 | **Listening Pact** | Spiritbond | Sensing | Sensing through a spirit: soft whispers and a gentle map. |
+| 3 | **Crystal Ear** | Stonecraft | Sensing | Sensing through stone: pulse ring and the vibration outline with a low-end ping. |
+| 3 | **Gravelswarm Skitter** | Stonecraft | Hex | Hex on the floor: the stream of stones as a footing penalty. |
+| 3 | **Foamstep Cushion** | Tidecraft | Mobility | Mobility landing: the froth puff, the 3 degree FOV kick and the soft landing sound. |
+| 3 | **Raincall Veil** | Tidecraft | Utility | Utility: persistent, low-cost marker with the 1.5 s fade and the performance budget. |
+| 3 | **Duskbind Chain** | Umbral | Binding | Shadow Binding: dim silver rim, the Dark aura and a slow break in strong light. |
+| 3 | **Raven Mark Sigil** | Umbral | Utility | Utility sigil in near-black plum with the silver edge rim. |
+| 3 | **Greenpulse Sense** | Verdance | Sensing | Sensing through roots: a slow pulse that follows the ground. |
+| 3 | **Canopy Screen** | Verdance | Illusion | Illusion by foliage: the veil's opacity and the caster's outline fade. |
 

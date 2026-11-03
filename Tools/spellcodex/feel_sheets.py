@@ -4,6 +4,7 @@ import os
 from data_core import DISCIPLINES, CAT_NAMES
 from data_feel import D, C, F, RULES, CHANT_TIERS, MASTERY_STEPS, CAT_MOTIF
 from feel_gen import spec, REACTIONS, PIPS, FORM_GROUPS
+from slice_data import SLICE
 
 
 def _lum(h):
@@ -121,25 +122,48 @@ def add_feel_sheets(wb, recs, DISC, HUES):
     # ---------------- Look & Feel (per spell) ----------------
     ws = wb.create_sheet("Look & Feel")
     cols = ["ID", "Spell Name", "Discipline", "Category", "Form / Variant", "Release (s)", "Active (s)", "Recovery (s)", "Hit Weight", "Hit-stop (s)",
-            "Shake", "Element Aura", "Range (m)", "Size (m)", "Key", "Mid", "Accent", "Core", "Particle Budget", "Light (m / intensity)",
+            "Shake", "Element Aura", "Range (m)", "Size (m)", "Key", "Mid", "Accent", "Core", "Enemy Key", "Enemy Mid", "Enemy Accent", "Particle Budget", "Light (m / intensity)",
             "Cast Pose and Chant Tell", "Timing and Cancel", "Shape, Size and Silhouette", "Motion", "Palette and Material", "VFX Build (Unity URP)",
             "Impact and Feedback", "Audio", "Aftermath", "Readability, Telegraph and Icon"]
-    widths = [10, 26, 14, 12, 16, 8, 8, 9, 9, 8, 7, 9, 8, 8, 10, 10, 10, 10, 9, 13, 52, 52, 56, 44, 62, 58, 52, 52, 40, 58]
+    widths = [10, 26, 14, 12, 16, 8, 8, 9, 9, 8, 7, 9, 8, 8, 10, 10, 10, 10, 10, 10, 10, 9, 13, 52, 52, 56, 44, 62, 58, 52, 52, 40, 58]
     header(ws, cols, widths)
     for ri, r in enumerate(recs, 2):
         s = spec(r)
         vals = [r["id"], r["name"], DISC[r["disc"]]["name"], r["cat"], r["form"], s["release"], s["active"], s["recovery"], s["weight"], s["hitstop"],
-                s["shake"], s["aura"], s["range"], s["size"], s["key"], s["mid"], s["accent"], s["core"], s["parts"], s["light"],
+                s["shake"], s["aura"], s["range"], s["size"], s["key"], s["mid"], s["accent"], s["core"], s["ekey"], s["emid"], s["eaccent"], s["parts"], s["light"],
                 s["pose"], s["timing"], s["shape"], s["motion"], s["palette"], s["vfx"], s["impact"], s["audio"], s["after"], s["read"]]
         longest = 0
         for j, v in enumerate(vals, 1):
-            cell = put(ws, ri, j, v, j == 2, swatch=(15 <= j <= 18))
-            if j >= 21:
+            cell = put(ws, ri, j, v, j == 2, swatch=(15 <= j <= 21))
+            if j >= 24:
                 longest = max(longest, len(v) / (widths[j - 1] * 1.15))
         ws.cell(row=ri, column=1).fill = PatternFill("solid", fgColor=HUES[r["disc"]])
         ws.row_dimensions[ri].height = min(409, max(60, (int(longest) + 1) * 13.2 + 6))
     ws.freeze_panes = "C2"
     ws.auto_filter.ref = "A1:%s%d" % (get_column_letter(len(cols)), len(recs) + 1)
+
+    # ---------------- Vertical Slice ----------------
+    ws = wb.create_sheet("Vertical Slice")
+    cols = ["Wave", "ID", "Spell Name", "Discipline", "Category", "VFX Size", "Release (s)", "Hit Weight", "Element Aura", "Key", "Enemy Key",
+            "Enemy-cast test", "What it proves"]
+    header(ws, cols, [7, 10, 28, 14, 12, 9, 9, 10, 10, 10, 10, 12, 100])
+    SIZE = {"Strike": "S", "Barrage": "L", "Ward": "M", "Binding": "M", "Mobility": "M", "Sensing": "M", "Mending": "S", "Empowerment": "S",
+            "Hex": "S", "Illusion": "L", "Pact": "L", "Utility": "S"}
+    ENEMY = {"Strike", "Barrage", "Binding", "Hex", "Illusion", "Pact"}
+    sl = sorted([r for r in recs if r.get("slice")], key=lambda r: (r["slice"], r["id"]))
+    for i, r in enumerate(sl, 2):
+        sp_ = spec(r)
+        vals = [r["slice"], r["id"], r["name"], DISC[r["disc"]]["name"], r["cat"], SIZE[r["cat"]], sp_["release"], sp_["weight"], sp_["aura"],
+                sp_["key"], sp_["ekey"], "Yes" if r["cat"] in ENEMY else "No", SLICE[r["name"]][1]]
+        for j, v in enumerate(vals, 1):
+            put(ws, i, j, v, j == 3, swatch=(j in (10, 11)))
+        ws.cell(row=i, column=2).fill = PatternFill("solid", fgColor=HUES[r["disc"]])
+        ws.row_dimensions[i].height = 30
+    ws.auto_filter.ref = "A1:M%d" % (len(sl) + 1)
+    ws.freeze_panes = "D2"
+
+
+DISC_NAME = {d['code']: d['name'] for d in DISCIPLINES}
 
 
 def write_doc(path, recs):
@@ -216,11 +240,21 @@ def write_doc(path, recs):
     a("- Hit feedback calls the existing hit-stop and shake tiers by weight name; a spell never carries its own hit-stop number.")
     a("- Test on three backdrops (sunlit grass, dark cave, night town) and in greyscale at 25% size before sign-off; keep the five-concurrent-spells budget under 2.0 ms GPU.")
     a("")
-    a("## 9. Open questions for the owner")
+    a("## 9. Owner decisions (2026-11-03)")
     a("")
-    a("1. Should hostile spells keep their discipline colours under the telegraph (current proposal), or switch to a dimmer 'enemy' variant?")
-    a("2. Should Divine and Radiance ever pulse during a ritual (currently never, to protect the gold grab telegraph)?")
-    a("3. Which 40 to 60 spells form the first vertical slice? The sheet's Source column and category counts help pick a balanced set.")
+    a("1. **Hostile spells use a dimmer enemy variant.** Lightness x0.85, saturation x0.7, 25% mixed toward the discipline shadow colour, emission x0.6, no white-hot core, outlines at x0.25, particles x0.8, cast sound pitched down 2 semitones. The telegraph keeps full brightness on top. Per-spell enemy hexes are in the Look & Feel sheet (Enemy Key, Mid, Accent).")
+    a("2. **Divine and Radiance may pulse during rituals.** Only the chant ring, charge-up and ritual: 0.5 Hz, +/-15% emission, ivory, rose or amber-peach, never gold, never during the Active phase of an enemy cast. Telegraph pulses are 3 Hz or faster, so they cannot be confused.")
+    import collections as _c
+    _sl = [x for x in recs if x.get("slice")]
+    _w = _c.Counter(x["slice"] for x in _sl)
+    _cat = _c.Counter(x["cat"] for x in _sl)
+    a("3. **First vertical slice: %d spells** (4 per discipline), listed below and in the sheet **Vertical Slice**. Wave 1 (%d spells, one per discipline) proves the pipeline; wave 2 (%d) and wave 3 (%d) fill it out. Category spread: %s. It covers the Ring 0 Firestorm pair (Cinder Fang + Tempest Fan), Freeze (Undertow Snare + Glacier Lock), Twilight Burst (Sunveil Blur with Gloamstep Shift or Duskbind Chain), Wildfire (Seedshot Volley with any Fire spell), and the Spiritbond and Divine refusal feel." % (
+        len(_sl), _w[1], _w[2], _w[3], ", ".join("%s %d" % (k, _cat[k]) for k in CAT_NAMES)))
+    a("")
+    a("| Wave | Spell | Discipline | Category | What it proves |")
+    a("|---|---|---|---|---|")
+    for r in sorted([x for x in recs if x.get("slice")], key=lambda x: (x["slice"], x["id"])):
+        a("| %d | **%s** | %s | %s | %s |" % (r["slice"], r["name"], DISC_NAME[r["disc"]], r["cat"], SLICE[r["name"]][1]))
     a("")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(L) + "\n")

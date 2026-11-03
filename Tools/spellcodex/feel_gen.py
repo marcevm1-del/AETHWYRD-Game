@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Generate the per-spell Look & Feel specification and the bible tables."""
-import zlib
+import zlib, colorsys
 from data_feel import D, C, F, SUB_KEY, MOTIF, CAT_MOTIF, HEAVY_FAMILIES, RULES, CHANT_TIERS, MASTERY_STEPS
 
 HS = {"Light": 0.04, "Medium": 0.07, "Heavy": 0.11, "Launch": 0.08, "None": 0.0}
@@ -22,6 +22,24 @@ FORM_GROUPS = [
 PIPS = {f: i + 1 for g in FORM_GROUPS for i, f in enumerate(g)}
 PIPS["Standard"] = 0
 PIPS["Signature"] = -1
+
+
+def _hex(h):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
+
+
+def _tohex(rgb):
+    return "#%02X%02X%02X" % tuple(max(0, min(255, int(round(c * 255)))) for c in rgb)
+
+
+def enemy_hex(h, shadow):
+    """Dimmer enemy variant: lightness x0.85, saturation x0.7, then 25% toward the discipline shadow."""
+    r, g, b = _hex(h)
+    hh, ll, ss = colorsys.rgb_to_hls(r, g, b)
+    rgb = colorsys.hls_to_rgb(hh, ll * 0.85, ss * 0.7)
+    sh = _hex(shadow)
+    return _tohex(tuple(rgb[i] * 0.75 + sh[i] * 0.25 for i in range(3)))
 
 
 def _j(key, salt):
@@ -132,11 +150,12 @@ def spec(rec):
     # 9 readability, telegraph and icon
     pips = PIPS.get(form, 0)
     pip_txt = "no pips" if pips == 0 else ("a star pip" if pips < 0 else "%d form pip%s" % (pips, "" if pips == 1 else "s"))
-    read = ("Hostile cast: %s Player cast: no telegraph. Silhouette test: reads as %s at 25%% size. Icon: %s, glyph is %s, two-tone %s / %s, 2 px outline at x0.35, %s in the corner." % (
-        c["tele"], c["read"], c["icon"], v["motif"], pal[0], pal[2], pip_txt))
+    ek, em, ea = (enemy_hex(pal[o[0]], pal[2]), enemy_hex(pal[o[1]], pal[2]), enemy_hex(pal[o[2]], pal[2]))
+    read = ("Hostile cast: %s Enemy variant: %s / %s / %s, emission x0.6, no white-hot core; the telegraph stays full brightness on top. Player cast: no telegraph. Silhouette test: reads as %s at 25%% size. Icon: %s, glyph is %s, two-tone %s / %s, 2 px outline at x0.35, %s in the corner." % (
+        c["tele"], ek, em, ea, c["read"], c["icon"], v["motif"], pal[0], pal[2], pip_txt))
     return dict(
         release=v["rel"], active=v["act"], recovery=v["rec"], weight=v["weight"], hitstop=hs, shake=sh,
-        aura=v["aura"] or "-", range=v["rng"], size=v["size"], key=pal[o[0]], mid=pal[o[1]], accent=pal[o[2]], core=pal[4],
+        aura=v["aura"] or "-", range=v["rng"], size=v["size"], key=pal[o[0]], mid=pal[o[1]], accent=pal[o[2]], core=pal[4], ekey=ek, emid=em, eaccent=ea,
         parts=v["parts"], light=("none" if not v["lr"] else "%.1f m / %.1f" % (v["lr"], v["li"])),
         pose=pose, timing=timing, shape=shape, motion=motion, palette=pal_txt, vfx=vfx, impact=impact, audio=audio,
         after=after, read=read)

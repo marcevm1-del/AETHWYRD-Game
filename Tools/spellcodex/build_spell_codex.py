@@ -18,6 +18,7 @@ sys.path.insert(0, HERE)
 from data_core import DISCIPLINES, CATEGORIES, CAT_NAMES, CAT_TARGET, USE, PAD_DESC, PAD_VIS, PAD_HOW
 import data_extra  # noqa: F401  (merges extra sentence variety into the banks)
 import feel_sheets
+from slice_data import SLICE
 from data_families import B as BASES, FORM_TEXT, FORM_TARGET
 from data_nouns import NOUNS, ADJ, STUFF
 from data_actions import ACTIONS, IMAGERY
@@ -205,6 +206,12 @@ def build_records():
         r["id"] = "%s-%04d" % (r["disc"], counters[r["disc"]])
     names = [r["name"].lower() for r in recs]
     assert len(set(names)) == len(names), "duplicate spell names"
+    hit = 0
+    for r in recs:
+        if r["src"] == 1 and r["name"] in SLICE:
+            r["slice"] = SLICE[r["name"]][0]
+            hit += 1
+    assert hit == len(SLICE) == 48, (hit, len(SLICE))
     return recs, a_rows, b_ent, c_rows
 
 
@@ -254,6 +261,7 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
         ("Disciplines - the 12 disciplines with visual identity, sub-disciplines and counts.", None),
         ("Source Crosswalk - the separate sheet keeping every original entry from the three PDFs, mapped to its new ID.", None),
         ("New Spells - the separate sheet listing only the newly invented expansion spells.", None),
+        ("Vertical Slice - the 48 spells chosen for the first playable slice (4 per discipline), in three build waves, with what each one proves. The Spells sheet marks them in the Slice Wave column.", None),
         ("Look & Feel - the production spec for every spell: timings in seconds and frames, hit weight, hit-stop and shake, palette hexes, shape and size in metres, motion, Unity VFX build and budget, audio, aftermath, telegraph and icon.", None),
         ("Feel Rules, Chant Tiers, Feel Disciplines, Feel Categories, Feel Forms, Reactions VFX - the rulebook behind the Look & Feel sheet (also written up in 13_Production/spell_look_and_feel.md).", None),
         ("", None),
@@ -292,8 +300,8 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
     # ---------- Spells ----------
     sp = wb.create_sheet("Spells")
     headers = ["ID", "Spell Name", "Discipline", "Category", "Sub-Discipline", "Family", "Form / Variant", "Targeting",
-               "Source", "Source Ref", "Description", "Visual Design", "How It Works", "Desc Words", "Visual Words", "How Words"]
-    widths = [10, 28, 15, 13, 13, 20, 18, 20, 20, 10, 62, 62, 62, 8, 8, 8]
+               "Source", "Source Ref", "Description", "Visual Design", "How It Works", "Desc Words", "Visual Words", "How Words", "Slice Wave"]
+    widths = [10, 28, 15, 13, 13, 20, 18, 20, 20, 10, 62, 62, 62, 8, 8, 8, 8]
     for i, (h, w) in enumerate(zip(headers, widths), 1):
         c = sp.cell(row=1, column=i, value=h)
         c.fill, c.font, c.border = HDR_FILL, HDR_FONT, BORDER
@@ -315,6 +323,9 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
             c = sp.cell(row=ri, column=ci, value="=LEN(TRIM(%s%d))-LEN(SUBSTITUTE(TRIM(%s%d),\" \",\"\"))+1" % (col, ri, col, ri))
             c.font, c.border = base_font, BORDER
             c.alignment = Alignment(horizontal="center", vertical="top")
+        c = sp.cell(row=ri, column=17, value=r.get("slice", ""))
+        c.font, c.border = base_font, BORDER
+        c.alignment = Alignment(horizontal="center", vertical="top")
         longest = max(len(r["desc"]), len(r["vis"]), len(r["how"]))
         sp.row_dimensions[ri].height = min(409, max(60, (longest // 68 + 1) * 13.5 + 6))
     sp.freeze_panes = "C2"
