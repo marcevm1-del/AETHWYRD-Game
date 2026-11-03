@@ -58,7 +58,8 @@ else {
 
 # 2. Data and rules tests.
 Push-Location $Repo
-npm run build *> (Join-Path $Out "npm_build.log")
+# Through cmd so the validator's warnings on stderr are logged, not turned into a terminating error by "Stop".
+cmd /c "npm run build > `"$(Join-Path $Out 'npm_build.log')`" 2>&1"
 $npmExit = $LASTEXITCODE
 Pop-Location
 $passed = Select-String -Path (Join-Path $Out "npm_build.log") -Pattern "tests passed" | Select-Object -Last 1
