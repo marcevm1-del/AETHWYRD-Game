@@ -147,56 +147,58 @@ A form modifies the base spell's shape, motion, sound and pose; it never changes
 
 1. **Hostile spells use a dimmer enemy variant.** Lightness x0.85, saturation x0.7, 25% mixed toward the discipline shadow colour, emission x0.6, no white-hot core, outlines at x0.25, particles x0.8, cast sound pitched down 2 semitones. The telegraph keeps full brightness on top. Per-spell enemy hexes are in the Look & Feel sheet (Enemy Key, Mid, Accent).
 2. **Divine and Radiance may pulse during rituals.** Only the chant ring, charge-up and ritual: 0.5 Hz, +/-15% emission, ivory, rose or amber-peach, never gold, never during the Active phase of an enemy cast. Telegraph pulses are 3 Hz or faster, so they cannot be confused.
-3. **First vertical slice: 48 spells** (4 per discipline), listed below and in the sheet **Vertical Slice**. Wave 1 (12 spells, one per discipline) proves the pipeline; wave 2 (16) and wave 3 (20) fill it out. Category spread: Strike 6, Barrage 4, Ward 4, Binding 4, Mobility 5, Sensing 5, Mending 4, Empowerment 2, Hex 4, Illusion 4, Pact 2, Utility 4. It covers the Ring 0 Firestorm pair (Cinder Fang + Tempest Fan), Freeze (Undertow Snare + Glacier Lock), Twilight Burst (Sunveil Blur with Gloamstep Shift or Duskbind Chain), Wildfire (Seedshot Volley with any Fire spell), and the Spiritbond and Divine refusal feel.
+3. **First vertical slice: 50 spells** (4 to 5 per discipline, text hand-written), listed below and in the sheet **Vertical Slice**. Wave 1 (12 spells, one per discipline) proves the pipeline; wave 2 (18) and wave 3 (20) fill it out. Category spread: Strike 6, Barrage 4, Ward 4, Binding 4, Mobility 5, Sensing 5, Mending 4, Empowerment 2, Hex 4, Illusion 4, Pact 4, Utility 4. It covers the Ring 0 Firestorm pair (Cinder Fang + Tempest Fan), Freeze (Undertow Snare + Glacier Lock), Twilight Burst (Sunveil Blur with Gloamstep Shift or Duskbind Chain), Wildfire (Seedshot Volley with any Fire spell), and the Spiritbond and Divine refusal feel.
 
-| Wave | Spell | Discipline | Category | What it proves |
-|---|---|---|---|---|
-| 1 | **Skypiercer Lance** | Aethercraft | Strike | The baseline Strike: one clean bolt that proves release, hit-stop and the stagger-interrupt loop. |
-| 1 | **Hearth of Grace Prayer** | Divine | Mending | Mending prayer: warm hush, bell, no flash, and the open ring awaiting the answer. |
-| 1 | **Yesterday's Trace Echo** | Forbidden Arts | Sensing | Time Sensing: the stuttering replay, Weave-scar decal and the world's colour drain. |
-| 1 | **Cinder Fang** | Flamecraft | Strike | Fire Strike: applies the Fire aura, half of the Ring 0 Firestorm test. |
-| 1 | **Glacier Lock** | Frostcraft | Binding | Ice Binding and the Freeze reaction partner: ice shell, then the Heavy shatter. |
-| 1 | **Tempest Fan** | Galecraft | Barrage | Wind Barrage: the other half of Firestorm, and the Swirl spread on every element. |
-| 1 | **Aurora Veil** | Radiance | Hex | Hex by light: the prism fan and depth confusion, with the ritual-breath rule at low intensity. |
-| 1 | **Foxfire Guide Call** | Spiritbond | Pact | Pact: hesitant arrival, mood colours and the quiet refusal. The key emotional test. |
-| 1 | **Bastion Rise** | Stonecraft | Ward | Ward as terrain: a wall that blocks line of sight, with the rubble crumble. |
-| 1 | **Undertow Snare** | Tidecraft | Binding | Water Binding: with Glacier Lock it tests the Freeze reaction (shell and shatter). |
-| 1 | **Gloamstep Shift** | Umbral | Mobility | Mobility through shadow: dark afterimages with silver edges, the proof that dark effects stay visible. |
-| 1 | **Blooming Remedy** | Verdance | Mending | Mending: soft motes, no flash, and the quiet bell. The tone benchmark for healing. |
-| 2 | **Aegis Arc Bulwark** | Aethercraft | Ward | Sustained Ward: absorb ripple, rising hum and the 0.5 s shatter on break. |
-| 2 | **Fatestring Tether** | Aethercraft | Binding | Binding with tension: strain flicker and snap, and the gold square grab telegraph when an enemy casts it. |
-| 2 | **Sanctuary of Hands Prayer** | Divine | Ward | Ward as refuge: dome of 2.5 m, ritual breath at 0.5 Hz, and the Public Prayer scale. |
-| 2 | **Nullglass Edge Cut** | Forbidden Arts | Strike | Void Strike: the thin dark line, the 25% desaturation and the scar. |
-| 2 | **Hollow Interval Gap** | Forbidden Arts | Hex | Time Hex: the gap in light and sound, and the lagging shadow. |
-| 2 | **Dragon Maw Breath** | Flamecraft | Barrage | Fire Barrage: cone ticks, the red triangle zone telegraph and scorch decals. |
-| 2 | **Rimefang Shard** | Frostcraft | Strike | Ice Strike: stop-motion growth, shatter at full 60 fps, Ice aura. |
-| 2 | **Razorwind Blade** | Galecraft | Strike | Wind Strike: streaks without glow, proving a discipline that reads by motion alone. |
-| 2 | **Zephyr Flash Step** | Galecraft | Mobility | Mobility: afterimages and speed streaks, and the fastest release in the game. |
-| 2 | **Beacon Crown Pillar** | Radiance | Utility | Utility: the tall light column, a landmark that must not be mistaken for a quest marker. |
-| 2 | **Kindred Pulse Bond** | Spiritbond | Empowerment | Empowerment between friends: the shared halo of caster and spirit. |
-| 2 | **Wisp Errand** | Spiritbond | Pact | Pact errand: the arc, the orbit and the dim-and-drift on refusal. |
-| 2 | **Quarry Fist** | Stonecraft | Strike | Heavy Strike: the 0.11 s hit-stop, shake 0.18 and debris physics. |
-| 2 | **Breakwall Surge** | Tidecraft | Barrage | Water Barrage: the wide wave, wet decals and flames extinguished within 1 m. |
-| 2 | **Eclipse Double** | Umbral | Illusion | Illusion decoy: the 12-frame loop and the pop when struck. |
-| 2 | **Seedshot Volley** | Verdance | Barrage | Nature Barrage: scatter of seeds, sprouts left behind, and Wildfire with Fire. |
-| 3 | **Truesight Lens** | Aethercraft | Sensing | Sensing: the 15% desaturation and outline pass, using a mid colour that is never interaction cyan. |
-| 3 | **Morrow's Measure Prayer** | Divine | Mending | Last-Rite feel: dim light, one bell, mercy with no flash. |
-| 3 | **Oathfire Witness Prayer** | Divine | Utility | Utility witness flame: a steady flame for a freely spoken vow. |
-| 3 | **Folded Threshold Step** | Forbidden Arts | Mobility | Space Mobility: the hairline seam and the pale blue-grey palette. |
-| 3 | **Emberbrand Edge** | Flamecraft | Empowerment | Empowerment: the weapon rim glow, trail and 2 s fade-out. |
-| 3 | **Soot Phantom** | Flamecraft | Illusion | Illusion: decoy at 60% opacity, dissolve edge and the shimmer tell on the enemy variant. |
-| 3 | **Winterglass Shield** | Frostcraft | Ward | Ward made of ice: brittle shards and the rime decal. |
-| 3 | **Winterstep Bridge** | Frostcraft | Mobility | Mobility surface: a temporary foothold that melts, with the stepping sound. |
-| 3 | **Vacuum Hollow** | Galecraft | Hex | Hex: the audio duck and the penalty tag over the target. |
-| 3 | **Mercy Flame** | Radiance | Mending | Mending light: the steady warm glow in a treatment space, no pulse in combat. |
-| 3 | **Sunveil Blur** | Radiance | Illusion | Illusion by light: blurred outline, and the Twilight Burst partner. |
-| 3 | **Listening Pact** | Spiritbond | Sensing | Sensing through a spirit: soft whispers and a gentle map. |
-| 3 | **Crystal Ear** | Stonecraft | Sensing | Sensing through stone: pulse ring and the vibration outline with a low-end ping. |
-| 3 | **Gravelswarm Skitter** | Stonecraft | Hex | Hex on the floor: the stream of stones as a footing penalty. |
-| 3 | **Foamstep Cushion** | Tidecraft | Mobility | Mobility landing: the froth puff, the 3 degree FOV kick and the soft landing sound. |
-| 3 | **Raincall Veil** | Tidecraft | Utility | Utility: persistent, low-cost marker with the 1.5 s fade and the performance budget. |
-| 3 | **Duskbind Chain** | Umbral | Binding | Shadow Binding: dim silver rim, the Dark aura and a slow break in strong light. |
-| 3 | **Raven Mark Sigil** | Umbral | Utility | Utility sigil in near-black plum with the silver edge rim. |
-| 3 | **Greenpulse Sense** | Verdance | Sensing | Sensing through roots: a slow pulse that follows the ground. |
-| 3 | **Canopy Screen** | Verdance | Illusion | Illusion by foliage: the veil's opacity and the caster's outline fade. |
+| Wave | Spell | Discipline | Category | Rank | What it proves | Signature moment |
+|---|---|---|---|---|---|---|
+| 1 | **Skypiercer Lance** | Aethercraft | Strike | E | The baseline Strike: one clean bolt that proves release, hit-stop and the stagger-interrupt loop. | The tail rings snap together into a single silver dot a heartbeat before impact, then bloom outward as the target's chant shatters. |
+| 1 | **Hearth of Grace Prayer** | Divine | Mending | E | Mending prayer: warm hush, bell, no flash, and the open ring awaiting the answer. | As the prayer is answered, every flame in the room brightens by the same small step at once, and for a heartbeat nobody speaks. |
+| 1 | **Yesterday's Trace Echo** | Forbidden Arts | Sensing | SS | Time Sensing: the stuttering replay, Weave-scar decal and the world's colour drain. | The echo always freezes for exactly one frame on the moment of greatest movement, and the player sees it in a single sharp still before it plays on. |
+| 1 | **Cinder Fang** | Flamecraft | Strike | E | Fire Strike: applies the Fire aura, half of the Ring 0 Firestorm test. | The first spark it sheds always lands at the target's feet a moment before the ember itself, like a warning that arrives too late. |
+| 1 | **Glacier Lock** | Frostcraft | Binding | D | Ice Binding and the Freeze reaction partner: ice shell, then the Heavy shatter. | The final click of the lock lands exactly on the beat after the target's last step, as though the ice had been waiting for it. |
+| 1 | **Tempest Fan** | Galecraft | Barrage | S | Wind Barrage: the other half of Firestorm, and the Swirl spread on every element. | When it meets a fire aura the fan's silver lines turn orange and curl into a spinning column, which is how the whole party learns a Firestorm has begun. |
+| 1 | **Aurora Veil** | Radiance | Hex | D | Hex by light: the prism fan and depth confusion, with the ritual-breath rule at low intensity. | At the very end the three colours converge into a single warm line across the horizon for one beat, like a sunrise that lasted a second. |
+| 1 | **Foxfire Guide Call** | Spiritbond | Pact | D | Pact: hesitant arrival, mood colours and the quiet refusal. The key emotional test. | If the fox declines, its light dims over a full second, it sits, and a soft two-note chime descends. No flash, no penalty: only a quiet no. |
+| 1 | **Bastion Rise** | Stonecraft | Ward | B | Ward as terrain: a wall that blocks line of sight, with the rubble crumble. | The wall's last act is a slow, deliberate crumble from the top, and the rubble it leaves stays put long enough to trip a pursuer. |
+| 1 | **Undertow Snare** | Tidecraft | Binding | D | Water Binding: with Glacier Lock it tests the Freeze reaction (shell and shatter). | A tiny whirlpool spins open in the ground at the moment it grips, so the player can see which foot is caught. |
+| 1 | **Gloamstep Shift** | Umbral | Mobility | E | Mobility through shadow: dark afterimages with silver edges, the proof that dark effects stay visible. | Their silver-edged afterimage stays one beat longer than expected, and sharp-eyed enemies learn to look at it rather than at where the caster went. |
+| 1 | **Blooming Remedy** | Verdance | Mending | E | Mending: soft motes, no flash, and the quiet bell. The tone benchmark for healing. | No flash accompanies it at all; the only sign it has worked is the patient's shoulders dropping a finger's width. |
+| 2 | **Aegis Arc Bulwark** | Aethercraft | Ward | B | Sustained Ward: absorb ripple, rising hum and the 0.5 s shatter on break. | On break the sixteen shards rise rather than fall, drifting upward for half a second as if the pattern were exhaling. |
+| 2 | **Fatestring Tether** | Aethercraft | Binding | D | Binding with tension: strain flicker and snap, and the gold square grab telegraph when an enemy casts it. | At the snapping limit the line sings one clear note that drops an octave as it breaks, so every ally knows the instant it let go. |
+| 2 | **Sanctuary of Hands Prayer** | Divine | Ward | B | Ward as refuge: dome of 2.5 m, ritual breath at 0.5 Hz, and the Public Prayer scale. | The ring's last note is the first chord played backwards, so the end of the prayer sounds like a door quietly closing. |
+| 2 | **Hallowed Calling** | Divine | Pact | D | Divine refusal feel: the open ring, the bell, and a quiet no that costs nothing. | An answered call closes the ring with a bell and a brightening; a refusal leaves the ring open and lets it fade, so the player feels the difference without being told. |
+| 2 | **Nullglass Edge Cut** | Forbidden Arts | Strike | SS | Void Strike: the thin dark line, the 25% desaturation and the scar. | The cut is silent, and the sound of the room returns one beat after the line closes, as if the world had needed a moment to catch up. |
+| 2 | **Hollow Interval Gap** | Forbidden Arts | Hex | SS | Time Hex: the gap in light and sound, and the lagging shadow. | The missing beat is replayed at double speed a second later, so anyone nearby hears the world stutter twice. |
+| 2 | **Dragon Maw Breath** | Flamecraft | Barrage | S | Fire Barrage: cone ticks, the red triangle zone telegraph and scorch decals. | For one frame the cone's centre goes dead white, then the colour floods outward like a lit fuse, and the sound arrives a heartbeat later. |
+| 2 | **Rimefang Shard** | Frostcraft | Strike | E | Ice Strike: stop-motion growth, shatter at full 60 fps, Ice aura. | The shard grows in four distinct stop-motion steps and then, on release, moves at the full speed of the sky with no in-between. |
+| 2 | **Razorwind Blade** | Galecraft | Strike | E | Wind Strike: streaks without glow, proving a discipline that reads by motion alone. | The whistle is always a perfect fifth above the caster's chant, so veterans can hear a Razorwind coming in the middle of a crowd. |
+| 2 | **Zephyr Flash Step** | Galecraft | Mobility | F | Mobility: afterimages and speed streaks, and the fastest release in the game. | The third afterimage lingers a half-beat longer than the others and points exactly where the caster started, like an arrow home. |
+| 2 | **Beacon Crown Pillar** | Radiance | Utility | E | Utility: the tall light column, a landmark that must not be mistaken for a quest marker. | At the moment of casting the crown opens one ring at a time from the ground to the sky, each ring a half-second apart, like a staircase being lit. |
+| 2 | **Kindred Pulse Bond** | Spiritbond | Empowerment | D | Empowerment between friends: the shared halo of caster and spirit. | At the peak of the pulse the two lights briefly swap colours, spirit green to amber and amber to green, before returning. |
+| 2 | **Wisp Errand** | Spiritbond | Pact | D | Pact errand: the arc, the orbit and the dim-and-drift on refusal. | At seventy per cent of the way, the wisp always pauses, and on that pause the player learns whether it will deliver or drift away. |
+| 2 | **Dewdrop Covenant** | Spiritbond | Pact | B | A lasting Pact: the covenant rings, the dewdrop and the consequence of a broken promise. | If the covenant is accepted, the dewdrop holds its place for a full second and a tiny flower opens on the ground beneath it. |
+| 2 | **Quarry Fist** | Stonecraft | Strike | D | Heavy Strike: the 0.11 s hit-stop, shake 0.18 and debris physics. | The stone hangs one beat too long before it flies, and the whole screen's dust settles upward toward it as if the ground were holding its breath. |
+| 2 | **Breakwall Surge** | Tidecraft | Barrage | B | Water Barrage: the wide wave, wet decals and flames extinguished within 1 m. | For half a second the wave holds its curl at the top, a frozen green arch, and the whole crowd glances up before it falls. |
+| 2 | **Eclipse Double** | Umbral | Illusion | D | Illusion decoy: the 12-frame loop and the pop when struck. | When it pops, the silver outline lingers a single frame and the caster's real shadow flickers once to match it. |
+| 2 | **Seedshot Volley** | Verdance | Barrage | B | Nature Barrage: scatter of seeds, sprouts left behind, and Wildfire with Fire. | A single seed always lands on the caster's own shoe and sprouts a small flower there, which most mages pretend not to notice. |
+| 3 | **Truesight Lens** | Aethercraft | Sensing | E | Sensing: the 15% desaturation and outline pass, using a mid colour that is never interaction cyan. | When the lens finds a hidden rune it clicks once, and the rune's outline blooms into a full silver sigil that stays for two seconds. |
+| 3 | **Morrow's Measure Prayer** | Divine | Mending | E | Last-Rite feel: dim light, one bell, mercy with no flash. | A single bell tolls at the moment of answer, and the same bell tolls once more, softer, if the god declines. |
+| 3 | **Oathfire Witness Prayer** | Divine | Utility | E | Utility witness flame: a steady flame for a freely spoken vow. | When the vow is finished the flame stands perfectly straight for one breath, and the whole room hears it settle. |
+| 3 | **Folded Threshold Step** | Forbidden Arts | Mobility | SS | Space Mobility: the hairline seam and the pale blue-grey palette. | The footstep echoes a heartbeat after the caster has already passed, and in that echo a sharp listener hears which way they went. |
+| 3 | **Emberbrand Edge** | Flamecraft | Empowerment | D | Empowerment: the weapon rim glow, trail and 2 s fade-out. | On the first strike each cut leaves a bright after-line in the air that holds for one frame, like a chalk mark drawn by the blade. |
+| 3 | **Soot Phantom** | Flamecraft | Illusion | D | Illusion: decoy at 60% opacity, dissolve edge and the shimmer tell on the enemy variant. | When it breaks, the ash holds its shape for a single frame, so the player sees the decoy's silhouette in grey before it falls apart. |
+| 3 | **Winterglass Shield** | Frostcraft | Ward | D | Ward made of ice: brittle shards and the rime decal. | After the third crack the pane holds for exactly one more beat, long enough for the defender to step back, and then rings once like a struck glass. |
+| 3 | **Winterstep Bridge** | Frostcraft | Mobility | E | Mobility surface: a temporary foothold that melts, with the stepping sound. | Each step makes a different note on the way across, so the whole bridge plays a short scale that rises and then falls as it melts. |
+| 3 | **Vacuum Hollow** | Galecraft | Hex | D | Hex: the audio duck and the penalty tag over the target. | As it closes, every sound that was muffled inside plays back at once in a quick, overlapping rush, a half second of everything caught up. |
+| 3 | **Mercy Flame** | Radiance | Mending | E | Mending light: the steady warm glow in a treatment space, no pulse in combat. | When the flame is turned down, its glow lingers on the patient's hand for one extra breath, as if reluctant to leave. |
+| 3 | **Sunveil Blur** | Radiance | Illusion | D | Illusion by light: blurred outline, and the Twilight Burst partner. | The blur always lags exactly three frames behind the caster's real movement, so a sharp eye can learn to aim at the gap. |
+| 3 | **Listening Pact** | Spiritbond | Sensing | E | Sensing through a spirit: soft whispers and a gentle map. | The whispers always end on the same soft sigh, and the caster learns to tell a happy spirit from a worried one by that last note. |
+| 3 | **Crystal Ear** | Stonecraft | Sensing | E | Sensing through stone: pulse ring and the vibration outline with a low-end ping. | Each glint appears with a soft chime whose pitch drops as the weight rises, so a heavy footfall sounds like a low bell in the dark. |
+| 3 | **Gravelswarm Skitter** | Stonecraft | Hex | D | Hex on the floor: the stream of stones as a footing penalty. | The pebbles all stop at the same instant on the last click, and the sudden silence tells every runner to look down. |
+| 3 | **Foamstep Cushion** | Tidecraft | Mobility | F | Mobility landing: the froth puff, the 3 degree FOV kick and the soft landing sound. | The caster's landing sound is a soft chime rather than a thud, and the bubbles pop in a quick descending run like keys on a xylophone. |
+| 3 | **Raincall Veil** | Tidecraft | Utility | F | Utility: persistent, low-cost marker with the 1.5 s fade and the performance budget. | In the last second the rain slows to single drops that fall in perfect rhythm, like a clock winding down. |
+| 3 | **Duskbind Chain** | Umbral | Binding | D | Shadow Binding: dim silver rim, the Dark aura and a slow break in strong light. | The chains stop clinking one second before they dissolve, and in that silence the target can hear nothing but their own breath. |
+| 3 | **Raven Mark Sigil** | Umbral | Utility | F | Utility sigil in near-black plum with the silver edge rim. | The faint caw arrives in the caster's ear half a second before they see the sigil, as if the mark had been waiting for them. |
+| 3 | **Greenpulse Sense** | Verdance | Sensing | E | Sensing through roots: a slow pulse that follows the ground. | Each pulse is a little slower than the last, until the forest's own slow rhythm takes over and the caster's breathing matches it. |
+| 3 | **Canopy Screen** | Verdance | Illusion | D | Illusion by foliage: the veil's opacity and the caster's outline fade. | The last leaf to spring back always rustles twice, as if the tree itself were checking nobody saw. |
 

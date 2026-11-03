@@ -62,3 +62,6 @@ SLICE = {
     "Folded Threshold Step": (3, "Space Mobility: the hairline seam and the pale blue-grey palette."),
     "Hollow Interval Gap": (2, "Time Hex: the gap in light and sound, and the lagging shadow."),
 }
+
+from slice_texts import SLICE_EXTRA  # noqa: E402
+SLICE.update(SLICE_EXTRA)

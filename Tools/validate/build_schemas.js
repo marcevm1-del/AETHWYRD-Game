@@ -155,6 +155,33 @@ const SCHEMAS = {
       targetMinutes: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', minimum: 1 } }
     }
   },
+  spell: {
+    title: 'Spell (proposed codex)', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'discipline', 'category', 'subDiscipline', 'family', 'form', 'element', 'rank', 'tier', 'minLevel', 'chantSec', 'minClassTier', 'primaryClasses', 'altClasses', 'release', 'active', 'recovery', 'hitWeight', 'source', 'status'],
+    properties: {
+      id: id('spl_'), name: { type: 'string', minLength: 1 },
+      discipline: { type: 'string', enum: ['Aethercraft', 'Flamecraft', 'Tidecraft', 'Galecraft', 'Stonecraft', 'Frostcraft', 'Verdance', 'Radiance', 'Umbral', 'Spiritbond', 'Divine', 'Forbidden Arts'] },
+      category: { type: 'string', enum: ['Strike', 'Barrage', 'Ward', 'Binding', 'Mobility', 'Sensing', 'Mending', 'Empowerment', 'Hex', 'Illusion', 'Pact', 'Utility'] },
+      subDiscipline: { type: 'string', minLength: 1 }, family: { type: 'string', minLength: 1 }, form: { type: 'string', minLength: 1 },
+      element: EL, rank: RL, tier: { type: 'string', enum: ['Basic', 'Intermediate', 'Advanced', 'Grand', 'Forbidden', 'Divine'] },
+      minLevel: { type: 'integer', minimum: 1, maximum: 300 }, chantSec: { type: ['number', 'null'], minimum: 0 },
+      minClassTier: { type: 'string', enum: ['base', 'advanced', 'expert', 'master'] },
+      primaryClasses: { type: 'array', minItems: 1, items: id('cls_') }, altClasses: { type: 'array', items: id('cls_') },
+      release: { type: 'number', minimum: 0 }, active: { type: 'number', minimum: 0 }, recovery: { type: 'number', minimum: 0 },
+      hitWeight: { type: 'string', enum: ['None', 'Light', 'Medium', 'Heavy', 'Launch'] },
+      source: { type: 'integer', minimum: 1, maximum: 4 }, status: { type: 'string', enum: ['proposed', 'approved'] },
+      sliceWave: { type: 'integer', minimum: 1, maximum: 3 }
+    }
+  },
+  monster_spell: {
+    title: 'Monster spell list (proposed)', type: 'object', additionalProperties: false,
+    required: ['id', 'speciesId', 'role', 'spellIds', 'telegraphs'],
+    properties: {
+      id: id('msp_'), speciesId: id('mon_'), role: { type: 'string', enum: ['caster', 'affinity'] },
+      spellIds: { type: 'array', minItems: 1, maxItems: 5, items: id('spl_') },
+      telegraphs: { type: 'array', minItems: 1, maxItems: 5, items: { type: 'string', enum: ['blue', 'red', 'gold', 'none'] } }
+    }
+  },
   class: {
     title: 'Player class', type: 'object', additionalProperties: false,
     required: ['id', 'name', 'tier', 'growth', 'recommendedAllocation', 'weapons', 'armor', 'mechanic', 'kit'],

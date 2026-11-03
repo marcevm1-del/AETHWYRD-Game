@@ -19,6 +19,8 @@ from data_core import DISCIPLINES, CATEGORIES, CAT_NAMES, CAT_TARGET, USE, PAD_D
 import data_extra  # noqa: F401  (merges extra sentence variety into the banks)
 import feel_sheets
 from slice_data import SLICE
+from slice_texts import T as POLISH
+import rank_class, rank_sheets, monster_spells
 from data_families import B as BASES, FORM_TEXT, FORM_TARGET
 from data_nouns import NOUNS, ADJ, STUFF
 from data_actions import ACTIONS, IMAGERY
@@ -208,10 +210,18 @@ def build_records():
     assert len(set(names)) == len(names), "duplicate spell names"
     hit = 0
     for r in recs:
-        if r["src"] == 1 and r["name"] in SLICE:
+        r["disc_name"] = DISC[r["disc"]]["name"]
+        if r["name"] in POLISH:
+            r["desc"], r["vis"], r["how"], r["moment"] = POLISH[r["name"]]
+            r["polished"] = True
+        if r["name"] in SLICE:
             r["slice"] = SLICE[r["name"]][0]
             hit += 1
-    assert hit == len(SLICE) == 48, (hit, len(SLICE))
+    assert hit == len(SLICE) == len(POLISH) == 50, (hit, len(SLICE), len(POLISH))
+    rank_class.retag_subs(recs)
+    rank_class.assign_ranks(recs)
+    for r in recs:
+        r["classes"], r["alt"] = rank_class.class_access(r)
     return recs, a_rows, b_ent, c_rows
 
 
@@ -261,7 +271,8 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
         ("Disciplines - the 12 disciplines with visual identity, sub-disciplines and counts.", None),
         ("Source Crosswalk - the separate sheet keeping every original entry from the three PDFs, mapped to its new ID.", None),
         ("New Spells - the separate sheet listing only the newly invented expansion spells.", None),
-        ("Vertical Slice - the 48 spells chosen for the first playable slice (4 per discipline), in three build waves, with what each one proves. The Spells sheet marks them in the Slice Wave column.", None),
+        ("Vertical Slice - the 50 spells chosen for the first playable slice (hand-polished text), in three build waves, with rank, classes, what each one proves and its signature moment. The Spells sheet marks them in the Slice Wave column.", None),
+        ("Rank Ladder, Class Access, Monster Casters - every spell's rank, tier, level and chant (Canon bands), which classes learn it, and which monster species cast it. Machine-readable copies are in Data/Spells/.", None),
         ("Look & Feel - the production spec for every spell: timings in seconds and frames, hit weight, hit-stop and shake, palette hexes, shape and size in metres, motion, Unity VFX build and budget, audio, aftermath, telegraph and icon.", None),
         ("Feel Rules, Chant Tiers, Feel Disciplines, Feel Categories, Feel Forms, Reactions VFX - the rulebook behind the Look & Feel sheet (also written up in 13_Production/spell_look_and_feel.md).", None),
         ("", None),
@@ -300,8 +311,8 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
     # ---------- Spells ----------
     sp = wb.create_sheet("Spells")
     headers = ["ID", "Spell Name", "Discipline", "Category", "Sub-Discipline", "Family", "Form / Variant", "Targeting",
-               "Source", "Source Ref", "Description", "Visual Design", "How It Works", "Desc Words", "Visual Words", "How Words", "Slice Wave"]
-    widths = [10, 28, 15, 13, 13, 20, 18, 20, 20, 10, 62, 62, 62, 8, 8, 8, 8]
+               "Source", "Source Ref", "Description", "Visual Design", "How It Works", "Desc Words", "Visual Words", "How Words", "Slice Wave", "Rank", "Tier", "Min Level", "Chant (s)", "Element", "Primary Classes", "Secondary Classes", "Min Class Tier"]
+    widths = [10, 28, 15, 13, 13, 20, 18, 20, 20, 10, 62, 62, 62, 8, 8, 8, 8, 7, 13, 9, 9, 10, 34, 34, 12]
     for i, (h, w) in enumerate(zip(headers, widths), 1):
         c = sp.cell(row=1, column=i, value=h)
         c.fill, c.font, c.border = HDR_FILL, HDR_FONT, BORDER
@@ -323,9 +334,14 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
             c = sp.cell(row=ri, column=ci, value="=LEN(TRIM(%s%d))-LEN(SUBSTITUTE(TRIM(%s%d),\" \",\"\"))+1" % (col, ri, col, ri))
             c.font, c.border = base_font, BORDER
             c.alignment = Alignment(horizontal="center", vertical="top")
-        c = sp.cell(row=ri, column=17, value=r.get("slice", ""))
-        c.font, c.border = base_font, BORDER
-        c.alignment = Alignment(horizontal="center", vertical="top")
+        extra = [r.get("slice", ""), r["rank"], r["tier"], r["minLevel"], r["chant"] if r["chant"] is not None else "ritual", r["element"],
+                 rank_sheets.cls_names(r["classes"]), rank_sheets.cls_names(r["alt"]), r["minClassTier"].title()]
+        sp_class_ids = [", ".join(r["classes"]), ", ".join(r["alt"])]
+        for k, v in enumerate(extra):
+            col_i = 17 + k
+            c = sp.cell(row=ri, column=col_i, value=v)
+            c.font, c.border = base_font, BORDER
+            c.alignment = Alignment(horizontal="center", vertical="top", wrap_text=(col_i in (23, 24)))
         longest = max(len(r["desc"]), len(r["vis"]), len(r["how"]))
         sp.row_dimensions[ri].height = min(409, max(60, (longest // 68 + 1) * 13.5 + 6))
     sp.freeze_panes = "C2"
@@ -464,10 +480,15 @@ def write_xlsx(recs, a_rows, b_ent, c_rows, out):
     ns.auto_filter.ref = "A1:H%d" % (ri - 1)
 
     feel_sheets.add_feel_sheets(wb, recs, DISC, HUES)
+    rank_sheets.add_rank_sheets(wb, recs, MONS, SPECIES, DISC, HUES, last)
     wb.save(out)
 
 
+MONS, SPECIES = [], []
+
+
 def main():
+    global MONS, SPECIES
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "..", "05_Skills_Magic", "Aetheria_Spell_Codex.xlsx")
     recs, a_rows, b_ent, c_rows = build_records()
     problems = validate(recs)
@@ -476,7 +497,16 @@ def main():
         for p in problems[:30]:
             print(p)
         sys.exit(1)
+    root = os.path.join(HERE, "..", "..")
+    sp_path = os.path.join(root, "Data", "Monsters", "species.json")
+    if os.path.exists(sp_path):
+        SPECIES = json.load(open(sp_path, encoding="utf-8"))
+        MONS = monster_spells.build(recs, sp_path)
     write_xlsx(recs, a_rows, b_ent, c_rows, out)
+    if os.path.isdir(os.path.join(root, "Data")):
+        rank_sheets.export_data(recs, MONS, os.path.join(root, "Data", "Spells"))
+        print("wrote Data/Spells (spells.json, monster_spells.json)")
+        rank_sheets.write_rank_doc(os.path.join(root, "05_Skills_Magic", "spell_ranks_and_classes.md"), recs, MONS, SPECIES)
     doc = os.path.join(HERE, "..", "..", "13_Production", "spell_look_and_feel.md")
     if os.path.isdir(os.path.dirname(doc)):
         feel_sheets.write_doc(doc, recs)

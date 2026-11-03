@@ -9,7 +9,8 @@ RX = {"Light": "flinch", "Medium": "stagger", "Heavy": "knockback or knockdown",
 RING = {"Strike": 1.2, "Barrage": 1.6, "Ward": 1.4, "Binding": 1.2, "Mobility": 1.0, "Sensing": 1.2, "Mending": 1.4,
         "Empowerment": 1.0, "Hex": 1.2, "Illusion": 1.0, "Pact": 1.8, "Utility": 0.8}
 AURA_CATS = ("Strike", "Barrage", "Hex", "Binding")
-REACT = {"Fire": "Fire + Wind Firestorm, + Ice Thermal Shock, + Earth Magma, + Nature Wildfire",
+REACT = {"Lightning": "Lightning + Water Storm Prison, + Earth Grounded", "Poison": "Poison + Fire Miasma Blast",
+         "Fire": "Fire + Wind Firestorm, + Ice Thermal Shock, + Earth Magma, + Nature Wildfire",
          "Water": "Water + Ice Freeze, + Lightning Storm Prison", "Wind": "Wind + any element Swirl",
          "Earth": "Earth + Fire Magma, + Lightning Grounded", "Ice": "Ice + Water Freeze, + Fire Thermal Shock",
          "Nature": "Nature + Fire Wildfire", "Light": "Light + Dark Twilight Burst", "Dark": "Dark + Light Twilight Burst"}
@@ -97,7 +98,7 @@ def compute(rec):
     lr, li = c["light"]
     lr = _r1(lr * _j(key, "l")) if lr else 0
     li = round(li * _j(key, "i"), 1) if li else 0
-    aura = d["aura"] if (d["aura"] and rec["cat"] in AURA_CATS) else ""
+    aura = (rec.get("element") or d["aura"]) if (d["aura"] and rec["cat"] in AURA_CATS) else ""
     motif = MOTIF.get(fam.split()[-1]) or MOTIF.get(fam) or CAT_MOTIF[rec["cat"]]
     return dict(d=d, c=c, f=f, pal=pal, names=names, rel=rel, act=act, rec=recv, spd=spd, size=size, rng=rng,
                 weight=weight, parts=parts, lr=lr, li=li, aura=aura, motif=motif, sustained=sustained)
@@ -116,7 +117,11 @@ def spec(rec):
     # 2 timing
     cancel = _r05(0.35 * v["rec"])
     act_txt = "%.2f s (%d f)" % (v["act"], fx(v["act"])) if not v["sustained"] else "%.1f s%s" % (v["act"], " (until broken)" if cat in ("Ward", "Binding") else "")
-    timing = ("After the chant (0.5 / 1.5 / 3 / 5 s by tier): Release %.2f s (%d f) -> Active %s -> Recovery %.2f s (%d f). "
+    if rec.get("rank"):
+        chant_txt = ("Chant %s (%s tier, rank %s)" % (("%.1f s" % rec["chant"]) if rec["chant"] else "is a ritual", rec["tier"], rec["rank"]))
+    else:
+        chant_txt = "After the chant (0.5 / 1.5 / 3 / 5 s by tier)"
+    timing = (chant_txt + ", then Release %.2f s (%d f) -> Active %s -> Recovery %.2f s (%d f). "
               "Dodge-cancel opens %.2f s into recovery. A stagger during chant or release breaks the spell and plays the 0.4 s fizzle.") % (
         v["rel"], fx(v["rel"]), act_txt, v["rec"], fx(v["rec"]), cancel)
     # 3 shape, size and motion

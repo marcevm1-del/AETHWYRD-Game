@@ -144,22 +144,23 @@ def add_feel_sheets(wb, recs, DISC, HUES):
 
     # ---------------- Vertical Slice ----------------
     ws = wb.create_sheet("Vertical Slice")
-    cols = ["Wave", "ID", "Spell Name", "Discipline", "Category", "VFX Size", "Release (s)", "Hit Weight", "Element Aura", "Key", "Enemy Key",
-            "Enemy-cast test", "What it proves"]
-    header(ws, cols, [7, 10, 28, 14, 12, 9, 9, 10, 10, 10, 10, 12, 100])
+    cols = ["Wave", "ID", "Spell Name", "Discipline", "Category", "Rank", "Tier", "Primary Classes", "VFX Size", "Release (s)", "Hit Weight", "Element Aura",
+            "Key", "Enemy Key", "Enemy-cast test", "What it proves", "Signature moment"]
+    header(ws, cols, [7, 10, 28, 14, 12, 6, 13, 26, 9, 9, 10, 10, 10, 10, 12, 70, 80])
     SIZE = {"Strike": "S", "Barrage": "L", "Ward": "M", "Binding": "M", "Mobility": "M", "Sensing": "M", "Mending": "S", "Empowerment": "S",
             "Hex": "S", "Illusion": "L", "Pact": "L", "Utility": "S"}
     ENEMY = {"Strike", "Barrage", "Binding", "Hex", "Illusion", "Pact"}
     sl = sorted([r for r in recs if r.get("slice")], key=lambda r: (r["slice"], r["id"]))
     for i, r in enumerate(sl, 2):
         sp_ = spec(r)
-        vals = [r["slice"], r["id"], r["name"], DISC[r["disc"]]["name"], r["cat"], SIZE[r["cat"]], sp_["release"], sp_["weight"], sp_["aura"],
-                sp_["key"], sp_["ekey"], "Yes" if r["cat"] in ENEMY else "No", SLICE[r["name"]][1]]
+        vals = [r["slice"], r["id"], r["name"], DISC[r["disc"]]["name"], r["cat"], r["rank"], r["tier"],
+                ", ".join(x.replace("cls_", "").replace("_", " ").title() for x in r["classes"]), SIZE[r["cat"]], sp_["release"], sp_["weight"], sp_["aura"],
+                sp_["key"], sp_["ekey"], "Yes" if r["cat"] in ENEMY else "No", SLICE[r["name"]][1], r.get("moment", "")]
         for j, v in enumerate(vals, 1):
-            put(ws, i, j, v, j == 3, swatch=(j in (10, 11)))
+            put(ws, i, j, v, j == 3, swatch=(j in (13, 14)))
         ws.cell(row=i, column=2).fill = PatternFill("solid", fgColor=HUES[r["disc"]])
-        ws.row_dimensions[i].height = 30
-    ws.auto_filter.ref = "A1:M%d" % (len(sl) + 1)
+        ws.row_dimensions[i].height = 44
+    ws.auto_filter.ref = "A1:Q%d" % (len(sl) + 1)
     ws.freeze_panes = "D2"
 
 
@@ -248,13 +249,13 @@ def write_doc(path, recs):
     _sl = [x for x in recs if x.get("slice")]
     _w = _c.Counter(x["slice"] for x in _sl)
     _cat = _c.Counter(x["cat"] for x in _sl)
-    a("3. **First vertical slice: %d spells** (4 per discipline), listed below and in the sheet **Vertical Slice**. Wave 1 (%d spells, one per discipline) proves the pipeline; wave 2 (%d) and wave 3 (%d) fill it out. Category spread: %s. It covers the Ring 0 Firestorm pair (Cinder Fang + Tempest Fan), Freeze (Undertow Snare + Glacier Lock), Twilight Burst (Sunveil Blur with Gloamstep Shift or Duskbind Chain), Wildfire (Seedshot Volley with any Fire spell), and the Spiritbond and Divine refusal feel." % (
+    a("3. **First vertical slice: %d spells** (4 to 5 per discipline, text hand-written), listed below and in the sheet **Vertical Slice**. Wave 1 (%d spells, one per discipline) proves the pipeline; wave 2 (%d) and wave 3 (%d) fill it out. Category spread: %s. It covers the Ring 0 Firestorm pair (Cinder Fang + Tempest Fan), Freeze (Undertow Snare + Glacier Lock), Twilight Burst (Sunveil Blur with Gloamstep Shift or Duskbind Chain), Wildfire (Seedshot Volley with any Fire spell), and the Spiritbond and Divine refusal feel." % (
         len(_sl), _w[1], _w[2], _w[3], ", ".join("%s %d" % (k, _cat[k]) for k in CAT_NAMES)))
     a("")
-    a("| Wave | Spell | Discipline | Category | What it proves |")
-    a("|---|---|---|---|---|")
+    a("| Wave | Spell | Discipline | Category | Rank | What it proves | Signature moment |")
+    a("|---|---|---|---|---|---|---|")
     for r in sorted([x for x in recs if x.get("slice")], key=lambda x: (x["slice"], x["id"])):
-        a("| %d | **%s** | %s | %s | %s |" % (r["slice"], r["name"], DISC_NAME[r["disc"]], r["cat"], SLICE[r["name"]][1]))
+        a("| %d | **%s** | %s | %s | %s | %s | %s |" % (r["slice"], r["name"], DISC_NAME[r["disc"]], r["cat"], r["rank"], SLICE[r["name"]][1], r.get("moment", "")))
     a("")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(L) + "\n")
