@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-03
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Spell Codex workbook | 05_Skills_Magic/Aetheria_Spell_Codex.xlsx (2,417 proposed spells): merges the three supplied spell PDFs (116 + 1,000 + 1,001), adds 300 new, every spell has Description, Visual Design and How It Works at 50-100 words, 12 disciplines x 12 categories; sheets Spells, Categories, Disciplines, Source Crosswalk, New Spells. Rebuild with Tools/spellcodex/build_spell_codex.py. Proposed content, not Canon. | data only, no Core/Unity change |
+
 ## 2026-11-02
 
 | Commit | What changed | Tests |
