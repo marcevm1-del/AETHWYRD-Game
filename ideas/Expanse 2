@@ -1,0 +1,911 @@
+CLAUDE CODE MASTER PROMPT — AETHERIA EXPANSION
+
+Project Ascend | Worldbuilding, Gameplay Systems, Lore & Content Expansion
+
+You are working on Aetheria / Project Ascend, an ambitious open-world isekai high-fantasy RPG.
+
+Your task is to integrate and expand the new concepts below into the existing repository. Treat this as a major worldbuilding and game-design expansion.
+
+The existing repository contains established lore, design documentation, JSON data, Unity/C# foundations, generators, validators, and other project systems.
+
+IMPORTANT: Preserve the existing project. Do not overwrite established canon, delete existing content, or introduce contradictory mechanics without identifying the conflict first.
+
+---
+
+PART 1 — FIRST: UNDERSTAND THE EXISTING PROJECT
+
+Before making changes:
+
+1. Inspect the repository structure.
+2. Read the existing design bible and relevant documentation.
+3. Examine the current lore, races, classes, magic, monster classifications, factions, quests, and regions.
+4. Inspect JSON schemas, data files, generators, and validation systems.
+5. Identify existing features that overlap with the ideas in this prompt.
+6. Identify contradictions with established canon.
+7. Determine where each new feature belongs.
+8. Create an implementation plan before modifying files.
+
+Do not duplicate existing systems simply because they are described again here.
+
+Where an existing system already supports an idea, extend it instead of creating a competing system.
+
+If an idea conflicts with established canon, document the conflict and propose the least disruptive solution.
+
+---
+
+PART 2 — CORE DESIGN PHILOSOPHY
+
+Aetheria should feel like a living world rather than a collection of disconnected quests and locations.
+
+The world should contain:
+
+- Ancient civilizations and forgotten histories.
+- Living ecosystems and evolving monster populations.
+- Intelligent monster societies.
+- Kingdoms with independent political developments.
+- Dynamic weather and environmental phenomena.
+- Rare discoveries that are not guaranteed to be found.
+- Ancient technology and magical engineering.
+- Powerful beings beyond conventional classifications.
+- Meaningful relationships and companion development.
+- Mysteries that unfold across hundreds of hours.
+- Discoveries that permanently change the player's understanding of the world.
+
+Not every discovery should lead to combat.
+
+Some should be beautiful, peaceful, mysterious, tragic, frightening, or incomprehensible.
+
+The player should sometimes encounter something extraordinary without being expected to fight it.
+
+---
+
+PART 3 — NEW WORLD SYSTEMS
+
+Integrate the following concepts into the world simulation and design bible.
+
+1. Cities With Different Ages: Cities evolve from villages into towns, fortified settlements, and magical capitals.
+2. Buried Kingdoms That Resurface: Ancient cities periodically emerge from deserts, oceans, glaciers, or underground regions.
+3. Mana Rivers: Invisible magical currents influence spell strength, ecosystems, monsters, and dungeons.
+4. The Wandering Tower: A mysterious tower appears in different regions over time.
+5. Magical Seasons: Introduce unusual seasons such as Mana Bloom, Dragonwake, Spiritfall, and Eclipse Season.
+6. Civilization Evolution: Settlements develop according to resources, leadership, geography, and player influence.
+7. Construction Across Generations: Major buildings and monuments can take years to complete.
+8. Cultural Exchange: Civilizations exchange traditions, technologies, architecture, cuisine, and magic.
+9. Civilization Specializations: Kingdoms develop distinct strengths.
+10. Civilization Collapse and Recovery: Cities can decline or recover through world events and player actions.
+11. Local Laws and Customs: Each kingdom has unique rules regarding magic, adventurers, trade, and monsters.
+12. Traveling Parliament: Representatives from multiple civilizations meet to discuss world events.
+13. Great Census: Periodic population and species records can reveal disappearances and migrations.
+14. Different Calendars: Races and civilizations measure history differently.
+15. Ancestral Capitals: Each major race has a legendary original homeland.
+
+---
+
+PART 4 — NEW REGIONS
+
+Create and document these additional regions.
+
+1. Celestial Frontier
+
+A floating continent above the clouds.
+
+Features:
+
+- Floating islands.
+- Aerial civilizations.
+- Enormous flying creatures.
+- Ancient celestial ruins.
+- Unusual gravity.
+- Magical currents in the upper atmosphere.
+
+2. Subterranean Ocean
+
+An enormous underground ocean.
+
+Features:
+
+- Bioluminescent ecosystems.
+- Ancient aquatic kingdoms.
+- Deepborn civilizations.
+- Enormous underwater predators.
+- Sunless environments.
+- Forgotten oceanic ruins.
+
+3. Desert of Forgotten Gods
+
+A vast desert containing statues and ruins of forgotten divine beings.
+
+Features:
+
+- Moving statues.
+- Buried temples.
+- Ancient divine inscriptions.
+- Strange shadows.
+- Forgotten religious traditions.
+
+4. Forest of False Paths
+
+A forest that rearranges itself according to the memories of those entering it.
+
+Features:
+
+- Shifting paths.
+- Memory-based illusions.
+- Hidden settlements.
+- Creatures that manipulate perception.
+- Different routes for different explorers.
+
+5. Frozen Ocean of Eternity
+
+A frozen ocean containing ancient ships, creatures, and submerged civilizations.
+
+Features:
+
+- Deep ice caverns.
+- Frozen leviathans.
+- Ancient underwater structures.
+- Unusual cold-based magic.
+- Living organisms trapped beneath the ice.
+
+6. Kingdom That Moves Through Dimensions
+
+A civilization whose capital shifts between dimensions.
+
+7. Land of Eternal Twilight
+
+A region where the sun never fully rises or sets.
+
+8. Shattered Continent
+
+A continent broken into floating fragments following an ancient catastrophe.
+
+9. World Beneath the World
+
+A distorted reflection of Aetheria beneath normal reality.
+
+10. Forbidden Horizon
+
+A mysterious region beyond the known ocean where navigation and distance behave unpredictably.
+
+For every region, create:
+
+- Geography.
+- Climate.
+- Ecosystems.
+- Native species.
+- Intelligent populations.
+- Threat classifications.
+- Settlements.
+- Resources.
+- Dungeons.
+- Historical background.
+- Exploration mechanics.
+- Quest hooks.
+- Rare discoveries.
+
+---
+
+PART 5 — NEW RACES AND CIVILIZATIONS
+
+Develop these races and civilizations.
+
+1. Starborn: Descendants of celestial phenomena with star-like magical cores.
+2. Deepborn: An ancient underwater civilization.
+3. Hollowed: Former members of other races altered by primordial energy.
+4. First Giants: An ancient enormous humanoid race.
+5. Mirrorfolk: Beings whose reflections behave independently.
+6. Nameless Civilization: A people who deliberately erased their identity from history.
+7. Wandering Tribes: Nomadic civilizations living in moving settlements.
+8. Artificial Race: A civilization created through magic, runes, and forgotten technology.
+
+Also create:
+
+- Monster kingdoms.
+- Monster nobility.
+- Monster languages.
+- Monster religions.
+- Monster diplomatic systems.
+- Monster trade networks.
+- Monster architecture.
+- Monster succession conflicts.
+- First-contact questlines.
+
+Intelligent monsters must not automatically be hostile.
+
+Some should have complex societies, laws, politics, cultures, families, and economic systems.
+
+---
+
+PART 6 — MONSTER CLASSIFICATION EXPANSION
+
+Preserve the existing F–SSS classification and existing God-Class lore.
+
+Introduce supplementary classification categories:
+
+- Ancient-Class.
+- Cataclysm-Class.
+- Myth-Class.
+- Anomaly-Class.
+- Primordial-Class.
+- Transcendent-Class.
+- Unknown-Class.
+
+These must not simply form another linear power ladder.
+
+Separate:
+
+- Physical strength.
+- Magical strength.
+- Intelligence.
+- Territorial influence.
+- Ecological importance.
+- Existential threat.
+- Reality-altering capabilities.
+
+A creature may have relatively low combat strength but an enormous existential threat rating.
+
+Develop the concept of Classification Contradiction: different civilizations may classify the same entity differently.
+
+---
+
+PART 7 — NEW LEGENDARY CREATURES
+
+Add these as proposed new creatures. Check for name collisions with existing monsters before creating records.
+
+108. Vaelzoryn — The Dragon Without an End.
+109. Auralith — The Skyborne Whale.
+110. Omnareth — The Faceless Witness.
+111. Lunathyr — The Moon Devourer.
+112. Elaris — The Dreamwing.
+113. Gorvath — The Continental Sleeper.
+114. Nymoriel — The Thousand Faces.
+115. Veyrath — The Last Echo.
+116. Ormalyth — The World Serpent's Shadow.
+117. Xaltherion — The Unborn Colossus.
+
+Develop complete monster records for each, including:
+
+- Classification.
+- Habitat.
+- Appearance.
+- Behavior.
+- Intelligence.
+- Abilities.
+- Ecology.
+- History.
+- Encounter conditions.
+- Research requirements.
+- Possible rewards.
+- Relationships with existing God-Class and Primordial creatures.
+
+Do not make every creature a boss fight.
+
+Some should be observed, studied, protected, avoided, or encountered only through environmental effects.
+
+---
+
+PART 8 — ADVANCED MONSTER ECOLOGY
+
+Create interconnected monster ecosystems.
+
+Features should include:
+
+- Food web simulation.
+- Predator and prey populations.
+- Species competition.
+- Migration.
+- Hibernation.
+- Breeding seasons.
+- Monster dormancy cycles.
+- Magical pollution.
+- Ecosystem restoration.
+- Guardian species.
+- Species extinction.
+- Rare evolutionary mutations.
+- Ancient inherited memories.
+- Intelligent monster societies.
+- Creatures that hunt magical energy.
+- Creatures that disguise themselves as landscapes.
+
+Introduce the following mechanics:
+
+1. Food Web Simulation.
+2. Natural Disaster Cycles.
+3. Plant Intelligence.
+4. Changing Geography.
+5. Ecosystem Memory.
+6. Species Competition.
+7. Magical Pollution.
+8. Ecological Restoration.
+9. Seasonal Creature Behavior.
+10. Living Weather Systems.
+11. Monster Veterinarian profession.
+12. Creature Rehabilitation.
+13. Monster Photography and Documentation.
+14. Last of a Species questlines.
+
+Make ecological changes produce meaningful consequences.
+
+For example, killing an apex predator could cause prey populations to explode and destroy surrounding vegetation.
+
+---
+
+PART 9 — ADVANCED MAGIC SYSTEMS
+
+Expand the existing magic system with the following concepts:
+
+1. Magic With Consequences: Powerful magic can permanently alter geography and ecosystems.
+2. Spell Personalities: Magic gradually reflects its creator.
+3. Forbidden Spell Languages: Ancient words can influence magical laws.
+4. Magic That Learns: Spells adapt through repeated use.
+5. Elemental Source: Conventional elements may originate from deeper forces.
+6. Living Magic Circles: Magical formations can continue operating independently.
+7. Soulbound Magic: Abilities can be linked to memories, emotions, and promises.
+8. Magic Mutation: Spells can change through exposure to unusual energies.
+9. Authority Manifestation: Advanced characters can develop authority over concepts.
+10. Domain Creation: Powerful characters can establish temporary territories with altered magical conditions.
+11. Ability Inheritance.
+12. Soul Resonance.
+13. Magic Suppression Fields.
+14. Conceptual Damage.
+15. Ability Sacrifice.
+16. Adaptive Resistance.
+17. Forbidden Ninth Element.
+18. Power of Names.
+
+Maintain consistency with existing magical laws.
+
+Do not allow conceptual abilities to become unrestricted powers that trivialize gameplay.
+
+Every powerful ability must have limitations, conditions, costs, and counterplay.
+
+---
+
+PART 10 — ANCIENT TECHNOLOGY AND MAGICAL ENGINEERING
+
+Introduce:
+
+1. Magitech Civilization.
+2. Ancient Network.
+3. Autonomous Guardians.
+4. Living Forge.
+5. Magical Transportation Networks.
+6. Forgotten Weapons Program.
+7. Artificial Moons.
+8. Machine That Dreams.
+9. Mechanical Dragon.
+10. Last Workshop.
+
+Develop:
+
+- Ancient technological civilizations.
+- Lost manufacturing systems.
+- Magical communication networks.
+- Ancient transport infrastructure.
+- Autonomous machines.
+- Artifact production facilities.
+- Forgotten military installations.
+- Technology capable of interacting with divine entities.
+
+Connect these systems to the history of Aetheria.
+
+---
+
+PART 11 — DUNGEON EXPANSION
+
+Add these dungeon concepts:
+
+206. Dungeon That Eats Dungeons.
+207. Gravity Labyrinth.
+208. Siege That Never Ended.
+209. Dungeon With a Heart.
+210. Infinite Staircase.
+211. Dungeons That Remember Parties.
+212. Living Raid Boss.
+213. Dungeon Ecosystem.
+214. Sealed Floor.
+215. Dungeon That Escapes.
+
+Every dungeon should have:
+
+- Unique environmental identity.
+- Exploration mechanics.
+- Internal ecology where appropriate.
+- History.
+- Secrets.
+- Bosses or noncombat objectives.
+- Rewards.
+- Replayability conditions.
+- Possible world consequences.
+
+Some dungeons should evolve or move over time.
+
+---
+
+PART 12 — TIME AND REALITY MYSTERIES
+
+Develop:
+
+216. Forgotten Day.
+217. Future Ruins.
+218. Time-Stranded Adventurers.
+219. Repeated Civilization.
+220. Unmoving Hour.
+221. Memory Exchange.
+222. Unborn Ruins.
+223. Last Second.
+
+These concepts should connect to the existing central mystery involving:
+
+- The Status System.
+- Otherworlders.
+- Primordial entities.
+- The Ten Divine Calamities.
+- Ancient civilizations.
+- The history of Aetheria.
+- Possible world cycles.
+
+Do not reveal the entire mystery immediately.
+
+Use clues, conflicting accounts, ancient records, and environmental discoveries.
+
+---
+
+PART 13 — LEGENDARY ARTIFACTS
+
+Create detailed artifact records for:
+
+224. Crown of the First King.
+225. Hourglass of Lost Ages.
+226. Compass of the Unfound.
+227. Book of Unchosen Paths.
+228. Blade That Cannot Be Named.
+229. Mirror of Other Lives.
+230. Lantern of the Forgotten.
+231. Seed of the First Forest.
+232. Chain of Divine Oaths.
+233. Mask of the Unseen.
+
+Every artifact must have:
+
+- Rarity.
+- Origin.
+- History.
+- Appearance.
+- Powers.
+- Limitations.
+- Acquisition conditions.
+- Lore connections.
+- Crafting or restoration requirements.
+- Possible questlines.
+
+Artifacts should not all be obtainable through defeating enemies.
+
+Some may require archaeology, diplomacy, research, exploration, or difficult moral choices.
+
+---
+
+PART 14 — PROFESSIONS AND PLAYER ACTIVITIES
+
+Expand the profession system with:
+
+234. Monster Veterinarian.
+235. Ruin Architect.
+236. Dragon Negotiator.
+237. Magical Meteorologist.
+238. Spirit Medium.
+239. Ecosystem Engineer.
+240. Relic Appraiser.
+241. Expedition Quartermaster.
+242. Monster Linguist.
+243. Myth Historian.
+
+Also introduce:
+
+- Magical Archaeology.
+- Monster Photography.
+- Cartography Challenges.
+- Magical Cooking.
+- Creature Rehabilitation.
+- Treasure Hunting.
+- Magical Photography Studio.
+- Personal Museum.
+
+These should provide meaningful progression, unlocks, equipment, discoveries, and relationships.
+
+---
+
+PART 15 — KINGDOM POLITICS
+
+Develop:
+
+141. Royal Succession.
+142. Secret Royal Bloodlines.
+143. Adventurer Political Crisis.
+144. Kingdom Alliances.
+145. Hidden Council.
+146. Kingdom-Specific Laws.
+
+Political systems should allow:
+
+- Diplomacy.
+- Trade agreements.
+- Wars.
+- Succession disputes.
+- Espionage.
+- Marriage alliances.
+- Military cooperation.
+- Cultural conflicts.
+- Monster diplomacy.
+- Regional independence.
+
+Player choices should affect world state without forcing the player to become a ruler.
+
+---
+
+PART 16 — WORLD-SCALE PHENOMENA
+
+Develop:
+
+147. Eternal Eclipse.
+148. Great Rooting.
+149. Rain of Memories.
+150. Sky Fracture.
+151. Dragonwake.
+152. Crimson Moon.
+153. Starfall.
+154. Great Tide.
+155. First Bloom.
+
+Each event should have:
+
+- Trigger conditions.
+- Frequency or rarity.
+- Environmental effects.
+- Monster behavior changes.
+- Available activities.
+- Unique materials.
+- Questlines.
+- Potential permanent consequences.
+
+Some events should be visible across multiple regions simultaneously.
+
+---
+
+PART 17 — COMPANION SYSTEM EXPANSION
+
+Implement or design:
+
+118. Companion Personal Histories.
+119. Party Relationships.
+120. Legendary Companion Evolution.
+121. Companion Inheritance.
+122. Party Combination Arts.
+123. Independent Companion Adventures.
+124. Companion Memories.
+
+Also add:
+
+- NPC Life Milestones.
+- Family Legacies.
+- Unsent Letters.
+- Shared Traditions.
+- Memorial Days.
+- NPC Dreams.
+- Promise System.
+
+Companions and important NPCs should remember meaningful player actions.
+
+Relationships must evolve naturally rather than being limited to numerical affection meters.
+
+---
+
+PART 18 — EQUIPMENT AND CRAFTING
+
+Develop:
+
+125. Weapons That Develop Personalities.
+126. Living Armor.
+127. Experimental Crafting.
+128. Weapons With Historical Records.
+129. Relic Fusion.
+130. Equipment Evolution Trees.
+131. Unforgeable Materials.
+132. Blacksmith's Legacy.
+
+Equipment progression should allow unique builds and meaningful player identity.
+
+Avoid endless stat inflation.
+
+---
+
+PART 19 — ADDITIONAL UNUSUAL DISCOVERIES
+
+Create lore and quest concepts for:
+
+251. Ocean That Floats.
+252. City of Sleeping Giants.
+253. Last Dragon Egg.
+254. Invisible Kingdom.
+255. Forest That Walks.
+256. City That Appears in Dreams.
+257. Monster That Builds Monuments.
+258. Forgotten Sun.
+259. Infinite Nest.
+260. Living Map.
+261. Kingdom of One Person.
+262. Mountain That Answers.
+263. Silent Festival.
+264. Last Recorded Monster.
+265. Forgotten Companion.
+266. Garden of Reincarnation.
+267. City of Endless Doors.
+268. Star Beneath the Sea.
+269. Creature That Collects Names.
+270. Library of Living Species.
+271. Kingdom of Forgotten Heroes.
+272. Last Sound of Creation.
+273. Unfinished God.
+274. Door That Opens Once.
+275. World Beneath the Stars.
+
+Treat these as rare discoveries rather than ordinary map locations.
+
+Some should be discovered through indirect clues, rumors, ancient records, or unusual environmental conditions.
+
+---
+
+PART 20 — WORLD DISCOVERY ARCHIVE
+
+Create a unified World Discovery Archive.
+
+It should contain six collections:
+
+1. Bestiary.
+2. Atlas.
+3. Historical Archive.
+4. Relic Catalogue.
+5. Anomaly Register.
+6. Living Chronicle.
+
+Each entry should support progressive research states:
+
+- Rumored.
+- Suspected.
+- Observed.
+- Documented.
+- Understood.
+- Verified.
+
+The archive must distinguish between:
+
+- What the player has personally witnessed.
+- What NPCs have reported.
+- What historical records claim.
+- What researchers believe.
+- What has been independently verified.
+
+A fully documented creature may still have unknown properties.
+
+Implement the archive in a way that supports future UI development.
+
+---
+
+PART 21 — WORLD-UNIQUE DISCOVERIES
+
+Create a special discovery category.
+
+Examples:
+
+- A unique God-Class encounter.
+- An undiscovered island.
+- A lost civilization.
+- A peaceful primordial entity.
+- A forgotten NPC history.
+- A previously undocumented species.
+- A one-time celestial event.
+- A hidden dungeon.
+- A unique artifact.
+
+Requirements:
+
+1. Discoveries must have meaningful conditions.
+2. Not every player should encounter everything.
+3. Some discoveries may be affected by world events.
+4. NPCs and factions may discover things independently.
+5. The archive should record first verified discoveries.
+6. Some discoveries should remain mysterious even after completion.
+7. Avoid making all discoveries dependent on combat.
+8. Do not make content permanently missable without clear design justification and appropriate warnings.
+
+The goal is to make exploration feel unpredictable and rewarding.
+
+---
+
+PART 22 — FIVE EXPANSION PACK CONCEPTS
+
+Prepare long-term expansion documentation.
+
+Expansion I — Beyond the Heavens
+
+Celestial Frontier, aerial civilizations, sky creatures, artificial moons.
+
+Expansion II — The World Beneath
+
+Subterranean Ocean, Deepborn civilization, underwater kingdoms, ancient aquatic entities.
+
+Expansion III — The Graveyard of Gods
+
+Dead divine beings, divine artifacts, abandoned temples, forgotten gods.
+
+Expansion IV — The Fractured Realities
+
+Alternate dimensions, parallel timelines, reality anomalies, alternate Aetheria.
+
+Expansion V — The First Beginning
+
+Original world, primordial entities, Status System origin, world cycles, creation mystery.
+
+Do not implement these as immediate requirements for the base game. Create structured expansion plans and dependencies.
+
+---
+
+PART 23 — FIVE-LAYER CENTRAL MYSTERY
+
+Connect the new content to the main narrative through five discovery layers.
+
+Layer 1: The World Is Older Than Its History
+
+Recorded history begins long after Aetheria's actual formation.
+
+Layer 2: The Gods Are Not the First Beings
+
+Primordial entities existed before the modern gods.
+
+Layer 3: The World Has Been Recreated
+
+Evidence suggests Aetheria has experienced previous cycles of destruction and rebirth.
+
+Layer 4: The Status System Is Part of Something Larger
+
+The System is connected to the mechanism governing these world cycles.
+
+Layer 5: The Original Beginning
+
+The ultimate mystery concerns the origin of the first world and the entity responsible for its creation.
+
+Keep these revelations distributed throughout the game.
+
+Do not reveal everything in a single exposition scene.
+
+---
+
+PART 24 — IMPLEMENTATION REQUIREMENTS
+
+Do not simply dump these ideas into one enormous lore file.
+
+Organize the implementation into logical modules.
+
+Suggested structure:
+
+- "docs/world/"
+- "docs/regions/"
+- "docs/civilizations/"
+- "docs/mysteries/"
+- "docs/expansions/"
+- "docs/systems/"
+- "docs/professions/"
+- "docs/quests/"
+- "docs/artifacts/"
+- "docs/ecology/"
+- "data/monsters/"
+- "data/regions/"
+- "data/factions/"
+- "data/artifacts/"
+- "data/discoveries/"
+- "data/events/"
+- "data/professions/"
+- "data/dungeons/"
+
+Adapt these paths to the existing repository rather than forcing a new structure.
+
+For structured content, use the existing schemas where possible.
+
+For every new data entry:
+
+- Use stable IDs.
+- Avoid duplicate names and IDs.
+- Reference existing entities consistently.
+- Include classification and provenance.
+- Include discovery conditions where appropriate.
+- Include relevant relationships.
+- Validate references.
+- Preserve compatibility with existing generators.
+
+---
+
+PART 25 — QUALITY CONTROL
+
+Before completing the work:
+
+1. Check all new entries for duplicate IDs and names.
+2. Check consistency with established lore.
+3. Validate JSON and other structured data.
+4. Verify all references resolve.
+5. Run existing generators and validators where appropriate.
+6. Identify incomplete placeholder content.
+7. Check for contradictory classifications.
+8. Check that powerful abilities have limitations.
+9. Check that new systems do not duplicate existing systems.
+10. Document anything that could not be implemented safely.
+
+Do not silently invent implementation details that conflict with the current architecture.
+
+---
+
+PART 26 — PRIORITIZATION
+
+Do not attempt to build every gameplay system simultaneously.
+
+Use the following priorities:
+
+Priority 1 — Core foundations
+
+- World Discovery Archive.
+- Expanded world lore.
+- Region documentation.
+- Monster classification compatibility.
+- Monster ecosystem design.
+- Central mystery structure.
+
+Priority 2 — World depth
+
+- Intelligent monster civilizations.
+- Kingdom evolution.
+- Political systems.
+- Ancient civilizations.
+- New professions.
+- Artifacts and archaeology.
+
+Priority 3 — Gameplay systems
+
+- Dynamic environmental events.
+- Companion progression.
+- Advanced crafting.
+- Dungeon evolution.
+- Discovery mechanics.
+
+Priority 4 — Long-term content
+
+- Alternate realities.
+- Expansion packs.
+- Primordial mysteries.
+- World cycles.
+- Endgame discoveries.
+
+---
+
+PART 27 — FINAL DELIVERABLES
+
+When finished, provide:
+
+1. A summary of the existing repository architecture.
+2. A list of files created.
+3. A list of files modified.
+4. A list of existing systems extended.
+5. A list of new systems documented.
+6. A list of new monsters and artifacts added.
+7. A list of new regions and civilizations added.
+8. Any conflicts with established canon.
+9. Validation results.
+10. Remaining work and recommended next steps.
+
+MOST IMPORTANT FINAL INSTRUCTION:
+
+Make Aetheria feel like a world that existed long before the protagonist arrived and will continue existing after they leave.
+
+The player should not be the only source of history, power, discoveries, or change.
+
+The world must have its own civilizations, ecosystems, mysteries, conflicts, memories, and future.
+
+Build the foundations for an enormous, coherent, explorable fantasy universe—not just a larger collection of content.
