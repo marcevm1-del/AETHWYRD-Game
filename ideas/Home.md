@@ -38,6 +38,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/04_Classes/expert_master_legendary_hidden|04_Classes/expert_master_legendary_hidden]]
 - [[Design Bible/04_Classes/monster_evolution|04_Classes/monster_evolution]]
 - [[Design Bible/04_Classes/progression_experience|04_Classes/progression_experience]]
+- [[Design Bible/05_Skills_Magic/skill_map|05_Skills_Magic/skill_map]]
 - [[Design Bible/05_Skills_Magic/skills_and_magic|05_Skills_Magic/skills_and_magic]]
 - [[Design Bible/06_Races_Origins/clans_guardians_fauna|06_Races_Origins/clans_guardians_fauna]]
 - [[Design Bible/06_Races_Origins/races_and_origins|06_Races_Origins/races_and_origins]]

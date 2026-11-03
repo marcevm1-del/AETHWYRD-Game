@@ -30,6 +30,8 @@
 
 **Proficiency:** skills level **1–10 by use**. At Lv.10 → **Evolve** (stronger version) or **Fuse** (with another Lv.10 skill).
 
+**Skill map:** how skills are laid out and chosen per class (constellations, branches, Sparks, Facets, Keystones) is proposed in [[05_Skills_Magic/skill_map|skill_map.md]].
+
 ## 3. Magic by Element & Tier
 Spell tiers are tied to rank bands. Chant time drops as your skill rises.
 

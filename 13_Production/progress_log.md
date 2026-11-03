@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-03
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Skill map (Star Loom) proposal | 05_Skills_Magic/skill_map.md: survey of how genre games lay out skills (mechanics only), and the Star Loom: per-class constellations with a core star, three branches, Sparks, Facets, Keystones, Evolve and Fusion stars, guest stars; worked Swordsman map, branches and Keystone ideas for the other 11 base classes, UI notes, data shape and a Ring 0-2 slice. Canon §6 proposal row; link from skills_and_magic.md. Design only, no data or code | data valid; rules tests not run (no .NET in the cloud) + (not run) |
+
 ## 2026-11-02
 
 | Commit | What changed | Tests |
