@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-03
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Everything gathered | All local work committed and merged with GitHub: the 3D world terrain and diorama tools (Tools/blender/ascend_terrain and builders), Unity terrain import scripts, physical map and map checks, settlement blurbs, Canon §6 world-upgrade proposals W1-W7, creature and data follow-ups, the 2026-11-02 handover; vault rebuilt | 177 + PC check |
+
 ## 2026-11-02
 
 | Commit | What changed | Tests |

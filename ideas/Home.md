@@ -29,6 +29,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/02_Lore/cosmology|02_Lore/cosmology]]
 - [[Design Bible/02_Lore/history|02_Lore/history]]
 - [[Design Bible/02_Lore/life_in_aetheria|02_Lore/life_in_aetheria]]
+- [[Design Bible/02_Lore/settlement_blurbs|02_Lore/settlement_blurbs]]
 - [[Design Bible/02_Lore/story|02_Lore/story]]
 - [[Design Bible/02_Lore/whisperwood_kinship_arc|02_Lore/whisperwood_kinship_arc]]
 - [[Design Bible/02_Lore/world_systems|02_Lore/world_systems]]

@@ -19,13 +19,14 @@ Status keys: ✅ done · 🔄 running · ⏳ waiting on a slot · ❓ waiting on
 | 1 | creature-artist | Dragon spade, dragon body vs wing ratio, wyvern wings off Gargoyle/Arch Demon | Renders of the affected species | ✅ wing ratio 1.6x (needs director OK) |
 | 2a | tools-pipeline-engineer | Validator rules: road grade, settlement slope/lake, river joins (warnings) | `npm run build` green with counts | ✅ 0 errors, 28 warnings |
 | 2b | world-designer | Fix river_20's 22 m hang; propose (not apply) moves for the 21 steep and 2 lake settlements; switchback waypoints for roads 04/05/06/12 | Validator findings drop; proposals listed | ⏳ after the place renders |
+| 3a | environment-artist | 🔄 MOUNTAINS FIRST (user): global hydraulic + thermal erosion raster, ridge-network peaks instead of cone stamps, natural snowline, cirque lakes; then rebuild world + re-render places |
 | 3 | environment-artist | Natural pass 2: Cinderhole bowl, river valleys and fans readable at 10 km, oxbows, terrace steps at towns; new `_albedo.png` + `_dressing.json` exports for Unity | Director review of the place renders | ⏳ |
-| 3 | bestiary-designer | Spore Lords rank C; Orc Grunt look text (sword) | Build green, contradiction check 0 | 🔄 |
-| 4 | canon-keeper | One Canon §6 batch: 9 road names, range/pass/river names, "Karak" echo, snow on volcanic ground | Proposals cite their data | ⏳ |
-| 4 | narrative-writer | In-world blurbs for the 51 settlements (drafts) | Names match the gazetteer | 🔄 |
+| 3 | bestiary-designer | Spore Lords rank C; Orc Grunt look text (sword) | Build green, contradiction check 0 | ✅ Orc fixed; Spore Lord already C (Mycelia B+ ❓) |
+| 4 | canon-keeper | One Canon §6 batch: 9 road names, range/pass/river names, "Karak" echo, snow on volcanic ground | Proposals cite their data | ✅ 12 rows (W1a–W7e) in Canon §6, awaiting ❓ |
+| 4 | narrative-writer | In-world blurbs for the 51 settlements (drafts) | Names match the gazetteer | ✅ 51 blurbs, 66 new details tagged |
 | 5 | anime-fantasy-director | Review every town and area render + dioramas + creatures; rank fixes | `reports/design_review_2026-11-02.md` | ⏳ |
-| 5 | systems-designer | Travel times on the 13 roads vs world_tuning | Table, build green | ⏳ |
-| 6 | quest-designer | Quest targets sit on the new settlements and roads | 0 orphans | ⏳ |
+| 5 | systems-designer | Travel times on the 13 roads vs world_tuning | Table, build green | ✅ systems.md §11.3; speeds/targets are proposals; 04/05/06/12 fail |
+| 6 | quest-designer | Quest targets sit on the new settlements and roads | 0 orphans | 🔄 |
 | 6 | items-designer | Loot and recipes after the Bestiary change | Validator recipe rule passes | ⏳ |
 | 7 | code-reviewer | Review all uncommitted work | Findings, blockers first | ⏳ |
 | 7 | qa-tester | `npm run build`, PlayMode, screenshots | Counts and logs | ⏳ |
