@@ -1,0 +1,327 @@
+<title>The Star Loom</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mulish:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one great passive web on a night sky. A slim "System window" bar on top, the web fills the screen, an info card floats bottom-left. Deliberately single dark theme. */
+:root{
+  --sky:#0b0e20; --sky2:#141938; --panel:rgba(20,25,56,.94); --line:#2b3264;
+  --ink:#ebe8f6; --mute:#9aa0c8; --gold:#f2c66d; --blue:#7fb4ff; --rose:#ff8fa8; --teal:#6fe0d2; --warn:#ff9a7a;
+  --f-display:"Marcellus SC","Cormorant SC",Georgia,serif;
+  --f-body:"Mulish","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--sky);color:var(--ink)}
+body{font-family:var(--f-body);font-size:14px;line-height:1.45;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 28px}
+.wrap{max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;background:var(--sky2);border:1px solid var(--line);border-radius:6px;padding:10px 14px}
+h1{font-family:var(--f-display);font-weight:400;font-size:24px;letter-spacing:.06em;color:var(--gold);margin:0 8px 0 0}
+.ctl{display:flex;align-items:center;gap:6px;color:var(--mute);font-size:13px}
+select,input[type=number],input[type=search]{background:var(--sky);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:4px 6px;font:13px var(--f-body)}
+input[type=number]{width:58px;font-family:var(--f-mono)}
+input[type=search]{width:170px}
+.pts{font:500 13px var(--f-mono);color:var(--ink);font-variant-numeric:tabular-nums;background:var(--sky);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.pts b{color:var(--gold)} .pts.r b{color:var(--rose)}
+.btn{font:700 12px var(--f-body);border-radius:4px;padding:6px 10px;cursor:pointer;border:1px solid var(--gold);background:transparent;color:var(--gold)}
+.btn:hover{background:rgba(242,198,109,.12)}
+.btn:focus-visible,select:focus-visible,input:focus-visible,canvas:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.spacer{flex:1 1 auto}
+.stage{position:relative;height:min(78vh,860px);min-height:440px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--sky)}
+canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+canvas.drag{cursor:grabbing}
+.zoom{position:absolute;right:12px;top:12px;display:flex;flex-direction:column;gap:6px}
+.zoom button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:700 16px var(--f-body);cursor:pointer}
+.zoom button.w{width:auto;border-radius:17px;padding:0 10px;font-size:12px}
+.tip{position:absolute;pointer-events:none;max-width:270px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:9px 11px;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.tip h3{font-family:var(--f-display);font-weight:400;font-size:17px;margin:0}
+.tip .k{font:500 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+.tip p{margin:5px 0 0}
+.tip .c{color:var(--mute);font-size:12px;margin-top:6px}
+.card{position:absolute;left:12px;bottom:12px;max-width:min(330px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:12.5px;color:var(--mute)}
+.card b{color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;border:1.5px solid}
+.toast{position:absolute;left:50%;top:12px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--blue);color:var(--ink);border-radius:999px;padding:5px 14px;font-size:13px}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.notes div{background:var(--sky2);border:1px solid var(--line);border-radius:6px;padding:10px 14px;min-width:0}
+.notes h2{font-family:var(--f-display);font-weight:400;font-size:15px;letter-spacing:.08em;color:var(--gold);margin:0 0 4px}
+.notes p{margin:0;color:var(--mute)}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <h1>The Star Loom</h1>
+    <label class="ctl" for="cls">Class <select id="cls"></select></label>
+    <label class="ctl" for="lvl">Level <input type="number" id="lvl" min="1" max="300" value="60"></label>
+    <span class="pts" id="pts"></span>
+    <span class="pts" id="rsp"></span>
+    <button class="btn" id="reset">Reset tree</button>
+    <span class="spacer"></span>
+    <label class="ctl" for="q">Find <input type="search" id="q" placeholder="e.g. parry, bomb, STR"></label>
+  </div>
+
+  <div class="stage" id="stage">
+    <canvas id="cv" tabindex="0" aria-label="Passive skill web. Drag to pan, scroll or pinch to zoom, click a star to light the path to it."></canvas>
+    <div class="zoom">
+      <button id="zin" aria-label="Zoom in">+</button>
+      <button id="zout" aria-label="Zoom out">−</button>
+      <button id="fit" class="w">Whole web</button>
+      <button id="home" class="w">My class</button>
+    </div>
+    <div class="card" id="card">
+      <b>Click a star</b> to light the shortest path to it (1 Spark per star; Sparks follow the rank bands, about 190 by the end). Click a lit star to refund it (1 refund point). Drag to pan, scroll or pinch to zoom.
+      <div class="legend">
+        <span><i class="dot" style="border-color:#8d93c4"></i>Path · +5 stat</span>
+        <span><i class="dot" style="border-color:#7fb4ff"></i>Minor</span>
+        <span><i class="dot" style="border-color:#f2c66d"></i>Notable</span>
+        <span><i class="dot" style="border-color:#ff8fa8"></i>Keystone</span>
+        <span><i class="dot" style="border-color:#6fe0d2"></i>Echo socket</span>
+      </div>
+    </div>
+    <div class="tip" id="tip" hidden></div>
+    <div class="toast" id="toast" hidden></div>
+  </div>
+
+  <div class="notes">
+    <div><h2>One web, twelve doors</h2><p>Every class starts at its own star on the inner ring, placed by its two main stats. Neighbours share stats, so a Swordsman can walk into Lancer or Guardian ground.</p></div>
+    <div><h2>Wheels and crescents</h2><p>Clusters of minor stars guard a named notable. The highways between them give +5 to the local stat, so the trip there still counts.</p></div>
+    <div><h2>Keystones and Echo sockets</h2><p>Each sector ends in a Keystone that bends a rule and costs something. Echo sockets hold an Echo Shard from a defeated monster.</p></div>
+  </div>
+</div>
+
+<script>
+const SECT=[
+ {cls:"Swordsman",st:["STR","AGI"],sm:["+5% sword damage","+4% attack speed with swords","+6% crit damage","+8 STR"],
+  no:[["Honest Blade","+20% sword damage against foes who are blocking."],["Dawn Swings","Your first hit after a dodge deals +30% damage."],["Petal Edge","Crits leave a petal mark; marked foes take +8% damage."],["Clean Cut","+12% attack speed. Combo finishers break 1 poise bar."],["Running Steel","Attacking while moving costs no extra stamina."],["Iaido Breath","Sheathing charges your next draw-cut for +40% damage."],["Broom Lesson","Perfect dodges refund 10 SP."],["Crescent Habit","Sword waves travel 50% farther."]],
+  key:["Edge of Glass","+40% damage dealt. You take 25% more damage."]},
+ {cls:"Lancer",st:["AGI","STR"],sm:["+5% spear damage","+4% movement speed","+6% Momentum gain","+8 AGI"],
+  no:[["Long Reach","Spear attacks gain 0.5 m reach."],["Comet Heart","Diving attacks from the air deal +25% damage."],["Charge Line","Charging through foes staggers each one."],["Pike Discipline","Sweeps push foes back 2 m."],["Wind at the Heel","+10% movement speed for 4 s after a leap."],["Dragon Vault","One extra jump in the air."],["Patient Point","+15% crit chance on thrusts against foes standing still."],["Banner Bearer","Allies near you gain +5% attack speed."]],
+  key:["Endless Charge","Momentum never fades while you move. You can't block."]},
+ {cls:"Martial Artist",st:["AGI","VIT"],sm:["+5% unarmed damage","+3% dodge distance","+6 VIT","+8 AGI"],
+  no:[["Iron Body","+1 poise bar while you are mid-combo."],["Hundred Hands","Every 10th hit in a chain is a guaranteed crit."],["Still Mountain","Counters landed while standing still heal 3% HP."],["Sky Ladder","Juggled foes fall 20% slower."],["Breath Control","+25% stamina regen during a chain."],["Stone Palm","Palm strikes break armour for 4 s."],["Light Step","Dodging through an attack refunds its stamina."],["Rooted Spirit","Above 50% HP you can't be knocked down."]],
+  key:["Empty Hands","Unarmed strikes use your best weapon's damage. You can't equip weapons."]},
+ {cls:"Rogue",st:["AGI","DEX"],sm:["+5% dagger damage","+6% crit chance from stealth","+4% evasion","+8 DEX"],
+  no:[["Quiet Feet","Enemies notice you 30% more slowly."],["Second Shadow","Smoke Bomb lasts twice as long."],["Coin Sense","+20% Steal chance."],["Venom Craft","Poisons stack 2 more times."],["Knife Rain","+2 thrown knives."],["Back Door","Backstabs ignore 30% armour."],["Shade Walk","Shadow Step costs 25% less."],["Fence's Friend","Shops pay 5% more for loot."]],
+  key:["Ghost Contract","Every kill returns you to stealth. Healing on you is 50% weaker."]},
+ {cls:"Ranger",st:["DEX","AGI"],sm:["+5% bow damage","+5% Focus gain","+4% projectile speed","+8 DEX"],
+  no:[["Eagle's Patience","Fully drawn shots deal +25% damage."],["Trapper's Hands","Traps arm twice as fast."],["Wind-Read","Arrows curve slightly toward marked foes."],["Tracker's Eye","Tracks and spoor stay visible 30 s longer."],["Quick Quiver","+1 arrow on Multishot."],["Hide in Grass","Camouflage breaks on your second shot, not the first."],["Hunter's Stride","Shooting while moving costs no accuracy."],["Last Arrow","+20% crit chance against foes under 25% HP."]],
+  key:["Single Breath","Every shot is a charged shot. No quick shots."]},
+ {cls:"Artisan",st:["DEX","INT"],sm:["+6% gadget damage","+5% crafting quality","+4% turret health","+8 INT"],
+  no:[["Spare Parts","Destroyed gadgets refund 25% of their materials."],["Long Fuse","Bombs gain +1 m blast radius."],["Tinker's Luck","10% chance to craft one extra item."],["Field Forge","Field Repair also grants +10% armour for 20 s."],["Clockwork Pair","+1 turret."],["Appraiser's Eye","Appraise also shows hidden material traits."],["Overclock Safety","Overclock no longer damages your gadgets."],["Masterhand","Masterwork Strike always crits."]],
+  key:["Overcrafted","Gadgets gain one quality tier. They cost twice the materials."]},
+ {cls:"Mage",st:["INT","WIS"],sm:["+5% spell damage","+6 max MP","−4% chant time","+8 INT"],
+  no:[["Quick Tongue","Basic-tier spells chant 25% faster."],["Deep Chant","Advanced-tier spells gain +20% area."],["Twin Element","Alternating two elements adds +10% damage."],["Mana Spring","+30% MP regen while not chanting."],["Still Mind","Hits don't break chants below Advanced tier."],["Scholar's Habit","Each spellbook teaches one extra spell."],["Ward Weave","Mana Shield absorbs 20% more."],["Element Echo","Elemental reactions last 2 s longer."]],
+  key:["Blood Chant","Spells cost HP instead of MP."]},
+ {cls:"Occultist",st:["INT","LUK"],sm:["+5% curse effect","+6% life drain","+4% shade damage","+8 LUK"],
+  no:[["Grave Whisper","Summon Shade lasts 50% longer."],["Thin Veil","Curses spread to one nearby foe."],["Black Ledger","Kills restore 3 MP."],["Bone Garden","Bone Prison roots 1 s longer."],["Night Pact","Dark Pact costs 20% less HP."],["Hollow Luck","Cursed foes drop 10% more loot."],["Ashen Calm","Corruption fades 25% more slowly."],["Shadow Court","+1 shade."]],
+  key:["Hungry Dark","Life drain overheals into a shield. No natural HP regen."]},
+ {cls:"Cleric",st:["WIS","VIT"],sm:["+5% healing","+6% holy damage","+4% cleanse speed","+8 WIS"],
+  no:[["Morning Bell","Heals over time tick 20% faster."],["Patron's Favour","+25% Devotion bonus."],["Lantern Hands","Holy Light blinds for 1 s."],["Quiet Shrine","Sanctuary gains +2 m radius."],["Mender","Revive brings allies back at 50% HP."],["Saint's Patience","Overhealing becomes a small shield."],["Undying Prayer","Smite Undead deals +40% damage."],["Pilgrim's Road","+10% movement speed without heavy armour."]],
+  key:["Martyr's Grace","Your heals are 50% stronger. You can't heal yourself."]},
+ {cls:"Bard",st:["CHA","WIS"],sm:["+5% song effect","+4% on-beat window","+6 CHA","+8 WIS"],
+  no:[["Encore","Songs last 3 s longer."],["Tavern Darling","Inn prices −10%; one extra rumour per visit."],["Crowd Reader","Charm lasts 30% longer."],["Sharp Note","The off-beat penalty is halved."],["Duet","Your songs also buff your tamed partners."],["Grand Stage","Grand Finale gains +1 m radius per song playing."],["Lullaby Hands","Sleeping foes take +25% damage from the hit that wakes them."],["Busker's Coin","Performances earn 20% more."]],
+  key:["One-Note Wonder","Only one song can play at a time. Its effect is doubled."]},
+ {cls:"Tamer",st:["CHA","VIT"],sm:["+5% partner damage","+6% Bond gain","+4% partner HP","+8 CHA"],
+  no:[["Gentle Hand","+10% taming chance."],["Feral Bond","Feral Link also shares 10% of your stats."],["Pack Call","Rally reaches partners 10 m farther."],["Whistle Code","Swap has no cooldown out of combat."],["Shared Meal","Feeding a partner gives you +5% HP for 10 minutes."],["Nest Keeper","Eggs hatch 25% faster."],["Unison Breath","Unison Attack cooldown −20%."],["Evolution Spark","Partners need 15% less XP to evolve."]],
+  key:["Shared Heart","You and your partner share one HP pool, +30% larger."]},
+ {cls:"Guardian",st:["VIT","STR"],sm:["+6% armour","+5% block chance","+3% max HP","+8 VIT"],
+  no:[["Gatekeeper","Blocking restores 2% HP."],["Oakroot Stance","Standing still for 1 s gives +25% armour."],["Bridge Holder","Allies behind you take 10% less damage."],["Iron Lung","Stamina regenerates while blocking."],["Wall of Millbrook","Shield Wall costs 30% less stamina."],["Unbowed","+1 poise bar."],["Rampart Crash","Shield hits stagger 25% more."],["Last Light","Below 20% HP, +30% defence."]],
+  key:["Immovable Oath","You can't be staggered. You can't dodge-roll, only step."]}
+];
+
+// ---------- build the web (deterministic) ----------
+let seed=1337;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const N=[],ADJ=[],E=[];
+const rad=d=>d*Math.PI/180;
+const pol=(r,d)=>({x:Math.cos(rad(d))*r,y:Math.sin(rad(d))*r});
+function add(o){o.id=N.length;N.push(o);ADJ.push(new Set());return o.id}
+function link(a,b){if(a===b||ADJ[a].has(b))return;ADJ[a].add(b);ADJ[b].add(a);E.push([a,b])}
+function sectorAt(d){let k=Math.round(((d+90)%360+360)%360/30)%12;return k}
+function statAt(d){const k=sectorAt(d);let off=((d+90)%360+360)%360-k*30;if(off>180)off-=360;return SECT[k].st[off<0?1:0]}
+function travel(r,d){const p=pol(r,d);const s=statAt(d);return add({t:"path",x:p.x,y:p.y,name:`+5 ${s}`,text:`+5 to ${s}.`,sec:sectorAt(d)})}
+
+const heart=add({t:"heart",x:0,y:0,name:"Heart of the Loom",text:"+3 to every stat. Every class's paths meet here.",sec:-1});
+const inner=[];for(let i=0;i<12;i++){inner.push(travel(150,-90+30*i));link(inner[i],heart)}
+for(let i=0;i<12;i++)link(inner[i],inner[(i+1)%12]);
+const RINGS={300:24,760:72,1100:96,1450:120};const RG={};
+for(const [r,n] of Object.entries(RINGS)){RG[r]=[];for(let k=0;k<n;k++)RG[r].push(travel(+r,-90+k*360/n));
+  for(let k=0;k<n;k++){const gap=(+r===760||+r===1450)&&rnd()<.11&&(k%(n/24))!==0&&((k+1)%(n/24))!==0;if(!gap)link(RG[r][k],RG[r][(k+1)%n]);}}
+const ringAt=(r,d)=>RG[r][Math.round((((d+90)%360+360)%360)/360*RINGS[r])%RINGS[r]];
+function spoke(a,b,d,mids){let prev=a;mids.forEach(r=>{const id=travel(r,d);link(prev,id);prev=id});link(prev,b);return prev}
+const START=[],KEYS=[];
+for(let i=0;i<12;i++){
+  const a=-90+30*i,S=SECT[i];
+  spoke(inner[i],ringAt(300,a),a,[225]);
+  const sp=pol(520,a);const st=add({t:"start",x:sp.x,y:sp.y,name:S.cls,text:`${S.cls} start. Main stats ${S.st.join(" and ")}.`,sec:i});START.push(st);
+  spoke(ringAt(300,a),st,a,[410]);spoke(st,ringAt(760,a),a,[640]);
+  spoke(ringAt(760,a),ringAt(1100,a),a,[875,990]);spoke(ringAt(1100,a),ringAt(1450,a),a,[1215,1335]);
+  const so=N[ringAt(1100,a)];so.t="socket";so.name="Echo Socket";so.text="Set an Echo Shard here to carry a defeated monster's imprint: a one-shot summon or a small passive of its kind.";
+  const kp=pol(1790,a);const k=add({t:"key",x:kp.x,y:kp.y,name:S.key[0],text:S.key[1],sec:i});KEYS.push(k);
+  spoke(ringAt(1450,a),k,a,[1560,1675]);
+  const b=a+15;if(i%3!==0)spoke(ringAt(300,b),ringAt(760,b),b,[415,530,645]);
+  spoke(ringAt(760,b),ringAt(1100,b),b,[875,990]);spoke(ringAt(1100,b),ringAt(1450,b),b,[1215,1335]);
+}
+const HIGH=N.filter(n=>n.t==="path"||n.t==="socket").map(n=>n.id);
+function nearestHigh(x,y,skip){let best=-1,bd=1e9;for(const id of HIGH){if(skip&&skip.has(id))continue;const n=N[id];const d=Math.hypot(n.x-x,n.y-y);if(d<bd){bd=d;best=id}}return [best,bd]}
+// clusters
+for(let i=0;i<12;i++){
+  const a=-90+30*i,S=SECT[i];let j=0;
+  for(const [r,off] of [[640,9],[930,9],[1270,8],[1610,9]])for(const sg of [-1,1]){
+    const d=a+sg*off,P=pol(r,d),[no,ne]=S.no[j],sm=S.sm;
+    const nid=add({t:"notable",x:P.x,y:P.y,name:no,text:ne,sec:i});
+    const [h]=nearestHigh(P.x,P.y);const H=N[h];const face=Math.atan2(H.y-P.y,H.x-P.x)*180/Math.PI;
+    const ring=[];
+    if((i+j)%2===0){ // wheel
+      for(let k=0;k<6;k++){const q=pol(1,face+k*60);ring.push(add({t:"minor",x:P.x+q.x*56,y:P.y+q.y*56,name:sm[k%4],text:sm[k%4]+".",sec:i}))}
+      for(let k=0;k<6;k++)link(ring[k],ring[(k+1)%6]);link(nid,ring[0]);link(nid,ring[3]);
+      link(ring[0],h);
+      const [h2,d2]=nearestHigh(N[ring[3]].x,N[ring[3]].y,new Set([h]));if(d2<150)link(ring[3],h2);
+    }else{ // crescent
+      for(let k=0;k<4;k++){const q=pol(1,face-75+k*50);ring.push(add({t:"minor",x:P.x+q.x*58,y:P.y+q.y*58,name:sm[(k+1)%4],text:sm[(k+1)%4]+".",sec:i}))}
+      for(let k=0;k<3;k++)link(ring[k],ring[k+1]);link(ring[3],nid);link(ring[0],nid);
+      link(ring[1],h);
+    }
+    j++;
+  }
+}
+const maxR=1900;
+
+// ---------- state ----------
+const $=id=>document.getElementById(id);
+let cls=0,alloc=new Set(),respecUsed=0,hover=-1,sel=-1,preview=[],query="",matches=new Set();
+const RESPEC=12;
+const BANDS=[[15,1],[35,1],[60,1],[90,2],[125,2],[165,2],[210,3],[260,3],[300,4]],TRIALS=[12,32,56,86,120,160,205,260];
+function pointsTotal(){const L=Math.min(300,Math.max(1,+$("lvl").value||1));let p=0,lo=1;for(const [hi,per] of BANDS){const top=Math.min(L,hi);if(top>lo){let c=0;for(let l=lo+1;l<=top;l++)if((l-lo)%per===0||per===1)c++;p+=c}if(L<=hi)break;lo=hi}return p+2*TRIALS.filter(t=>L>=t).length}
+function spentPts(){return alloc.size-1}
+function blocked(id){return N[id].t==="start"&&id!==START[cls]}
+function pathTo(target){
+  if(alloc.has(target)||blocked(target))return [];
+  const prev=new Map();const q=[];alloc.forEach(a=>{prev.set(a,-1);q.push(a)});
+  let h=0;while(h<q.length){const u=q[h++];if(u===target)break;for(const v of ADJ[u]){if(prev.has(v)||blocked(v))continue;prev.set(v,u);q.push(v)}}
+  if(!prev.has(target))return [];
+  const p=[];let c=target;while(c!==-1&&!alloc.has(c)){p.push(c);c=prev.get(c)}return p.reverse();
+}
+function connectedWithout(x){
+  const s=START[cls];const seen=new Set([s]);const q=[s];
+  while(q.length){const u=q.pop();for(const v of ADJ[u])if(v!==x&&alloc.has(v)&&!seen.has(v)){seen.add(v);q.push(v)}}
+  return seen.size===alloc.size-1;
+}
+let toastT;function toast(m){const t=$("toast");t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,1800)}
+function clickNode(id){
+  if(alloc.has(id)){
+    if(id===START[cls]){toast("Your class star can't be refunded.");return}
+    if(respecUsed>=RESPEC){toast("No refund points left. Reset the tree instead.");return}
+    if(!connectedWithout(id)){toast("Refund the stars beyond it first.");return}
+    alloc.delete(id);respecUsed++;
+  }else{
+    const p=pathTo(id);if(!p.length){toast(blocked(id)?"Another class's starting star.":"Not reachable.");return}
+    const left=pointsTotal()-spentPts();if(p.length>left){toast(`Needs ${p.length} points; you have ${left}.`);return}
+    p.forEach(x=>alloc.add(x));
+  }
+  preview=hover>=0?pathTo(hover):[];updateBar();draw();showTip(lastTip);
+}
+function updateBar(){
+  const left=pointsTotal()-spentPts();const e=$("pts");e.innerHTML=`Sparks <b>${left}</b> / ${pointsTotal()}`;e.className="pts"+(left<0?" r":"");
+  $("rsp").innerHTML=`Refunds <b>${RESPEC-respecUsed}</b>`;
+}
+function setClass(i,preset){
+  cls=i;alloc=new Set([START[i]]);respecUsed=0;
+  if(preset){const S=SECT[i];for(const name of preset){const t=N.find(n=>n.name===name&&n.sec===i);if(t)pathTo(t.id).forEach(x=>alloc.add(x))}}
+  updateBar();goHome();
+}
+
+// ---------- view ----------
+const cv=$("cv"),ctx=cv.getContext("2d");let W=0,H=0,DPR=1,view={x:0,y:0,s:.2};
+function resize(){const r=cv.getBoundingClientRect();DPR=Math.min(2,window.devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;draw()}
+function fit(){view.s=Math.min(W,H)/(maxR*2.12);view.x=W/2;view.y=H/2;draw()}
+function goHome(){const s=N[START[cls]];view.s=Math.max(.42,Math.min(W,H)/1500);view.x=W/2-s.x*view.s;view.y=H/2-s.y*view.s;draw()}
+const toS=n=>({x:n.x*view.s+view.x,y:n.y*view.s+view.y});
+const RAD={path:9,minor:10,notable:19,socket:17,key:31,start:38,heart:28};
+const COL={path:"#8d93c4",minor:"#7fb4ff",notable:"#f2c66d",socket:"#6fe0d2",key:"#ff8fa8",start:"#ebe8f6",heart:"#f2c66d"};
+function draw(){
+  if(!W)return;
+  ctx.setTransform(DPR,0,0,DPR,0,0);ctx.fillStyle="#0b0e20";ctx.fillRect(0,0,W,H);
+  // dust
+  let s2=99;const r2=()=>(s2=(s2*16807)%2147483647)/2147483647;ctx.fillStyle="#c9cdf0";
+  for(let i=0;i<160;i++){ctx.globalAlpha=.08+r2()*.25;ctx.fillRect(r2()*W,r2()*H,1.2,1.2)}ctx.globalAlpha=1;
+  ctx.setTransform(DPR*view.s,0,0,DPR*view.s,DPR*view.x,DPR*view.y);
+  const g=ctx.createRadialGradient(0,0,0,0,0,maxR);g.addColorStop(0,"rgba(60,72,150,.35)");g.addColorStop(1,"rgba(11,14,32,0)");ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,maxR,0,7);ctx.fill();
+  // sector labels
+  ctx.textAlign="center";ctx.textBaseline="middle";
+  for(let i=0;i<12;i++){const p=pol(1985,-90+30*i);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(rad(30*i));ctx.fillStyle=i===cls?"rgba(242,198,109,.55)":"rgba(154,160,200,.32)";ctx.font=`${Math.max(26,13/view.s)}px "Marcellus SC",Georgia,serif`;ctx.fillText(SECT[i].st.join(" · "),0,0);ctx.restore()}
+  const lw=px=>px/view.s;
+  // edges
+  const pv=new Set(preview);
+  ctx.lineCap="round";
+  ctx.strokeStyle="rgba(120,128,190,.38)";ctx.lineWidth=lw(1.4);ctx.beginPath();
+  for(const [a,b] of E){if((alloc.has(a)&&alloc.has(b)))continue;ctx.moveTo(N[a].x,N[a].y);ctx.lineTo(N[b].x,N[b].y)}ctx.stroke();
+  ctx.strokeStyle="rgba(127,180,255,.9)";ctx.lineWidth=lw(2.6);ctx.beginPath();
+  for(const [a,b] of E){const ia=pv.has(a)||alloc.has(a),ib=pv.has(b)||alloc.has(b);if(ia&&ib&&(pv.has(a)||pv.has(b))){ctx.moveTo(N[a].x,N[a].y);ctx.lineTo(N[b].x,N[b].y)}}ctx.stroke();
+  ctx.shadowColor="rgba(242,198,109,.8)";ctx.shadowBlur=8*DPR;ctx.strokeStyle="#f2c66d";ctx.lineWidth=lw(3);ctx.beginPath();
+  for(const [a,b] of E){if(alloc.has(a)&&alloc.has(b)){ctx.moveTo(N[a].x,N[a].y);ctx.lineTo(N[b].x,N[b].y)}}ctx.stroke();ctx.shadowBlur=0;
+  // nodes
+  for(const n of N){
+    const R=Math.max(RAD[n.t],2.2/view.s),c=COL[n.t],on=alloc.has(n.id),pr=pv.has(n.id);
+    if(n.t==="key"||n.t==="start"||n.t==="heart"||n.t==="socket"){ctx.beginPath();ctx.arc(n.x,n.y,R+9,0,7);ctx.strokeStyle=on?c:"rgba(154,160,200,.35)";ctx.lineWidth=lw(1.2);ctx.stroke()}
+    if(n.t==="notable"||n.t==="key"){ctx.beginPath();for(let k=0;k<12;k++){const rr=k%2?R+3:R+10;const a=rad(k*30-90);k?ctx.lineTo(n.x+Math.cos(a)*rr,n.y+Math.sin(a)*rr):ctx.moveTo(n.x+Math.cos(a)*rr,n.y+Math.sin(a)*rr)}ctx.closePath();ctx.strokeStyle=on?c:"rgba(154,160,200,.28)";ctx.lineWidth=lw(1);ctx.stroke()}
+    if(on){ctx.beginPath();ctx.arc(n.x,n.y,R*2,0,7);ctx.fillStyle=c;ctx.globalAlpha=.14;ctx.fill();ctx.globalAlpha=1}
+    ctx.beginPath();ctx.arc(n.x,n.y,R,0,7);
+    ctx.fillStyle=on?c:(pr?"#1d2a55":"#11152e");ctx.fill();
+    ctx.strokeStyle=pr?"#7fb4ff":c;ctx.globalAlpha=on||pr?1:(n.t==="start"&&n.id!==START[cls]?.45:.8);ctx.lineWidth=lw(n.t==="path"?1.2:1.8);ctx.stroke();ctx.globalAlpha=1;
+    if(n.t==="start"){ctx.beginPath();ctx.arc(n.x,n.y,R*.45,0,7);ctx.fillStyle=on?"#0b0e20":c;ctx.globalAlpha=n.id===START[cls]?1:.45;ctx.fill();ctx.globalAlpha=1}
+    if(matches.has(n.id)){ctx.beginPath();ctx.arc(n.x,n.y,R+14,0,7);ctx.strokeStyle="#6fe0d2";ctx.lineWidth=lw(2.4);ctx.stroke()}
+    if(n.id===hover){ctx.beginPath();ctx.arc(n.x,n.y,R+5,0,7);ctx.strokeStyle="#ffffff";ctx.lineWidth=lw(1.6);ctx.stroke()}
+  }
+  // labels (screen-size text)
+  const lab=(n,size,color,dy)=>{ctx.font=`${size/view.s}px ${n.t==="notable"?'"Mulish",sans-serif':'"Marcellus SC",Georgia,serif'}`;ctx.fillStyle=color;ctx.fillText(n.name,n.x,n.y+dy)};
+  for(const n of N){
+    if(n.t==="start")lab(n,14,n.id===START[cls]?"#f2c66d":"rgba(235,232,246,.6)",RAD.start+24);
+    else if(n.t==="heart"&&view.s>.25)lab(n,13,"#f2c66d",RAD.heart+22);
+    else if(n.t==="key"&&view.s>.16)lab(n,12.5,"#ff8fa8",RAD.key+26);
+    else if(n.t==="notable"&&view.s>.5)lab(n,11,alloc.has(n.id)?"#f2c66d":"rgba(235,232,246,.75)",-RAD.notable-20);
+  }
+}
+
+// ---------- input ----------
+const ptrs=new Map();let drag=null,moved=false,pinch0=null,lastTip=null;
+function hit(sx,sy){let best=-1,bd=1e9;const wx=(sx-view.x)/view.s,wy=(sy-view.y)/view.s;for(const n of N){const d=Math.hypot(n.x-wx,n.y-wy);const lim=Math.max(RAD[n.t]+6,12/view.s);if(d<lim&&d<bd){bd=d;best=n.id}}return best}
+function zoomAt(f,sx,sy){const ns=Math.min(2.2,Math.max(.08,view.s*f));const k=ns/view.s;view.x=sx-(sx-view.x)*k;view.y=sy-(sy-view.y)*k;view.s=ns;draw()}
+const local=e=>{const r=cv.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top}};
+cv.addEventListener("pointerdown",e=>{cv.setPointerCapture(e.pointerId);const p=local(e);ptrs.set(e.pointerId,p);moved=false;if(ptrs.size===1)drag={x:p.x,y:p.y,vx:view.x,vy:view.y};if(ptrs.size===2){const [a,b]=[...ptrs.values()];pinch0={d:Math.hypot(a.x-b.x,a.y-b.y),s:view.s}}});
+cv.addEventListener("pointermove",e=>{
+  const p=local(e);
+  if(ptrs.has(e.pointerId)){ptrs.set(e.pointerId,p);
+    if(ptrs.size===2&&pinch0){const [a,b]=[...ptrs.values()];const d=Math.hypot(a.x-b.x,a.y-b.y);zoomAt(pinch0.s*d/pinch0.d/view.s,(a.x+b.x)/2,(a.y+b.y)/2);moved=true;return}
+    if(drag&&(moved||Math.hypot(p.x-drag.x,p.y-drag.y)>5)){moved=true;cv.classList.add("drag");view.x=drag.vx+p.x-drag.x;view.y=drag.vy+p.y-drag.y;draw();return}
+  }
+  if(e.pointerType==="mouse"){const h=hit(p.x,p.y);if(h!==hover){hover=h;preview=h>=0?pathTo(h):[];draw()}showTip(h>=0?{id:h,x:p.x,y:p.y}:null)}
+});
+cv.addEventListener("pointerup",e=>{const p=local(e);ptrs.delete(e.pointerId);if(ptrs.size<2)pinch0=null;cv.classList.remove("drag");
+  if(!moved&&ptrs.size===0){const h=hit(p.x,p.y);if(h>=0){if(e.pointerType!=="mouse"){if(sel!==h){sel=h;hover=h;preview=pathTo(h);draw();showTip({id:h,x:p.x,y:p.y,touch:true});return}}clickNode(h)}else if(e.pointerType!=="mouse"){sel=-1;hover=-1;preview=[];showTip(null);draw()}}
+  drag=null;});
+cv.addEventListener("pointerleave",e=>{if(e.pointerType==="mouse"){hover=-1;preview=[];showTip(null);draw()}});
+cv.addEventListener("wheel",e=>{e.preventDefault();const p=local(e);zoomAt(Math.exp(-e.deltaY*.0015),p.x,p.y)},{passive:false});
+function showTip(t){
+  lastTip=t;const tip=$("tip");if(!t){tip.hidden=true;return}
+  const n=N[t.id];const kind={path:"Path star",minor:"Minor star",notable:"Notable",socket:"Echo socket",key:"Keystone",start:"Class start",heart:"Heart"}[n.t];
+  const p=pathTo(t.id);let c;
+  if(alloc.has(n.id))c=n.id===START[cls]?"Your starting star.":`Lit. Click to refund (1 refund point).`;
+  else if(blocked(n.id))c="Another class's starting star. Paths go around it.";
+  else c=`Lights ${p.length} star${p.length>1?"s":""} · ${p.length} point${p.length>1?"s":""}.${t.touch?" Tap again to light.":""}`;
+  tip.innerHTML=`<div class="k" style="color:${COL[n.t]}">${kind}${n.sec>=0?" · "+SECT[n.sec].cls+" ground":""}</div><h3>${n.name}</h3><p>${n.text}</p><div class="c">${c}</div>`;
+  tip.hidden=false;const sw=$("stage").clientWidth,sh=$("stage").clientHeight;const tw=tip.offsetWidth,th=tip.offsetHeight;
+  let x=t.x+16,y=t.y+16;if(x+tw>sw-8)x=t.x-tw-16;if(y+th>sh-8)y=t.y-th-16;tip.style.left=Math.max(8,x)+"px";tip.style.top=Math.max(8,y)+"px";
+}
+$("zin").onclick=()=>zoomAt(1.35,W/2,H/2);$("zout").onclick=()=>zoomAt(1/1.35,W/2,H/2);$("fit").onclick=fit;$("home").onclick=goHome;
+cv.addEventListener("keydown",e=>{const st=60;if(e.key==="+"||e.key==="=")zoomAt(1.25,W/2,H/2);else if(e.key==="-")zoomAt(.8,W/2,H/2);else if(e.key==="ArrowLeft"){view.x+=st;draw()}else if(e.key==="ArrowRight"){view.x-=st;draw()}else if(e.key==="ArrowUp"){view.y+=st;draw()}else if(e.key==="ArrowDown"){view.y-=st;draw()}else return;e.preventDefault()});
+SECT.forEach((s,i)=>{const o=document.createElement("option");o.value=i;o.textContent=s.cls;$("cls").appendChild(o)});
+$("cls").onchange=e=>setClass(+e.target.value);
+$("lvl").oninput=()=>{updateBar()};
+$("reset").onclick=()=>{setClass(cls);toast("Tree reset. Refund points restored.")};
+$("q").oninput=e=>{query=e.target.value.trim().toLowerCase();matches=new Set(query.length>1?N.filter(n=>(n.name+" "+n.text).toLowerCase().includes(query)).map(n=>n.id):[]);draw()};
+new ResizeObserver(()=>{const first=!W;resize();if(first)goHome()}).observe(cv);
+setClass(0,["Dawn Swings","Honest Blade","Clean Cut"]);
+</script>

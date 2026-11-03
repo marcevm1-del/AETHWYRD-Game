@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Star Loom v0.2: PoE-inspired skill system | 05_Skills_Magic/skill_map.md rewritten as a full systems design doc: analysis of PoE 1 principles (adapt vs reject), one shared passive web (~1,100 stars, 12 class starts, notables, Masteries, 12 Keystones, Echo sockets, bridge stars), Class Crowns for class identity, active skill categories and acquisition, Wefts (skill modifiers: Form, Element, Payload, Rhythm, Echo, Trigger, Combo) with Weave capacity, a fixed resolve pipeline and prohibited combinations, 6 example builds, Spark curve over the 300 levels, milestones, balance harness, Core data shapes and pseudocode, risks, roadmap. Interactive prototype saved as Tools/prototypes/star_loom.html. Canon §6 row updated. Design only | data valid; rules tests not run (no .NET in the cloud) + (not run) |
 | Skill map (Star Loom) proposal | 05_Skills_Magic/skill_map.md: survey of how genre games lay out skills (mechanics only), and the Star Loom: per-class constellations with a core star, three branches, Sparks, Facets, Keystones, Evolve and Fusion stars, guest stars; worked Swordsman map, branches and Keystone ideas for the other 11 base classes, UI notes, data shape and a Ring 0-2 slice. Canon §6 proposal row; link from skills_and_magic.md. Design only, no data or code | data valid; rules tests not run (no .NET in the cloud) + (not run) |
 
 ## 2026-11-02
