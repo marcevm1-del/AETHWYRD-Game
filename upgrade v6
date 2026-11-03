@@ -1,0 +1,983 @@
+### AETHERIA — UPGRADE V6
+
+### Crafting, Professions, Survival & Equipment Evolution
+
+For V6, I recommend focusing on something completely different from V3, V4, and V5:
+
+Build a complete crafting, gathering, resource, equipment, and profession ecosystem.
+
+The idea is to make the world economically and mechanically interconnected. Players should be able to gather materials, discover recipes, manufacture equipment, build useful objects, specialize in professions, and create increasingly powerful items.
+
+### The upgrade progression
+
+| Version | Main focus                         |
+| ------- | ---------------------------------- |
+| V3      | Blender and 3D production          |
+| V4      | Living world and dynamic narrative |
+| V5      | Combat and enemy intelligence      |
+| V6      | Crafting, professions and survival |
+
+![Blizzard announces „important PTR” for Diablo 4. Major changes are coming to the game that will affect its whole future - gamepressure.com](https://images.openai.com/static-rsc-4/7Rh-UeI8DW2fAh5CjVJElJ1fDEs_ofVpYvk4HiXk_xcH08TTV3siM7BlJfXWpYLM4qMmjhy5DIrW89qlgfkQwf5Bt-1M6EYln9_Bs93wKps-fLpUuxwEwxQJBSsiE0g_iuaiLVp4pHgov3JPIJZJuEMZLTRp9wh-N43H-p6BknKW90nwz24qNrTtZu7rpyE2?purpose=fullsize)
+
+![Alchemist Business Simulation on Steam](https://images.openai.com/static-rsc-4/8McMM1rpEJ8ZUXnR2WvyEBPuSN4fMckWwiInqBE3gypDEmCB2iG8iZi2Gl08Sg1zvLojxqftP7VUuSJk5fsoFk-_k6_XGLmpnUo-CJlS1Uchogc9uqgyFqJujUn-XxWB7YAu0Ur0PXPkMWwINVdDUxXaNRwb84RAOb-ReKanoWkOjJDCXri537UR_APu_I_H?purpose=fullsize)
+
+![How to Make Hardened Leather Enshrouded: Ultimate Guide - Enshrouded Quests](https://images.openai.com/static-rsc-4/FJ8o_LYcL_BpiLY2vdeblWahIrbPq_IclZ2fa1aJFH4C9p4af9Uw7NfU8vHHGfVmWITT90sAQt1lKC4uRARNudHagPrjSUsecdaffRCcLd2u1_2DZtwQ-kZhkoFPAEJ5Pdv8QtrHLYmrgxNqJ7YgoBuSHBKZwDLr8ZLgcNnEeBnlo8SF6sUvfEGt22Rsw8hK?purpose=fullsize)
+
+### 1\. Advanced crafting system
+
+Create a flexible crafting system supporting many item categories.
+
+Craftable categories:
+
+* Weapons.
+
+* Armor.
+
+* Shields.
+
+* Jewelry.
+
+* Potions.
+
+* Food.
+
+* Tools.
+
+* Building materials.
+
+* Accessories.
+
+* Magical artifacts.
+
+* Ammunition.
+
+* Consumables.
+
+Advanced crafting features:
+
+* Recipe discovery.
+
+* Material requirements.
+
+* Crafting quality.
+
+* Item rarity.
+
+* Crafting difficulty.
+
+* Failure and success chances.
+
+* Critical crafting outcomes.
+
+* Multiple crafting stations.
+
+* Recipe experimentation.
+
+* Custom item naming.
+
+* Crafting experience.
+
+* Specialization bonuses.
+
+New idea: Crafting quality system
+
+The same recipe could produce different results based on materials, player skill, station quality, and optional crafting bonuses.
+
+For example:
+
+* Poorly crafted iron sword.
+
+* Standard iron sword.
+
+* Reinforced iron sword.
+
+* Mastercrafted iron sword.
+
+* Legendary enchanted iron sword.
+
+### 2\. Profession system
+
+![Skills - Infovault - Zuluhotel Omega](https://images.openai.com/static-rsc-4/01cVD4V3ekcZLnJLzP1A5ocLOSp89FiiMSBvsRbG2Yz_35lv1GdxpggbG0Xl3XGFkEr_5dA6qhfePhr3moHqPCD5bUMfpRV1RV55EIV17p2skEdEffobG0I3UHDEqylM-zL-a0UaqbtefosL09fc4ZFaExU5dyi525rcWYfhYxB9dWbbPIPeQxvTDosGlKxK?purpose=fullsize)
+
+![AI Generated Apothecary Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/zPbCCr8RpEq7eLsZoUQxYvTp5AVH6jjBcgRVl2ZkgXqGE4sH8EBNc07Y-AwML1pL1rdFju_eOxEgUTaMczgFuZVDcq04esl_vjqhzybEDb7ZJKcYnizsEqPKpsYsRfWfx471qB4UYu6ikjM8vavSsVlY7W-iENm5QFaGqj_OkX-I9-SPtdDTFLiVmGW0wjPX?purpose=fullsize)
+
+![How to Make Hardened Leather Enshrouded: Ultimate Guide - Enshrouded Quests](https://images.openai.com/static-rsc-4/FJ8o_LYcL_BpiLY2vdeblWahIrbPq_IclZ2fa1aJFH4C9p4af9Uw7NfU8vHHGfVmWITT90sAQt1lKC4uRARNudHagPrjSUsecdaffRCcLd2u1_2DZtwQ-kZhkoFPAEJ5Pdv8QtrHLYmrgxNqJ7YgoBuSHBKZwDLr8ZLgcNnEeBnlo8SF6sUvfEGt22Rsw8hK?purpose=fullsize)
+
+![Images of In the village blacksmith’s workshop, a scene of lively activity unfolds, drawn in the whimsical style of Alundra. | Deep Dream Generator](https://images.openai.com/static-rsc-4/felgP6Lo95TzmuG-_PNeX-POVWeFX3FLuvQYx54SGhUlLtAJ3B3yltujUZsukKUJdujxCJdzJmWbWziZNVg8U454LCdVwE3CYpzCEfQGPnz5wb2Bdray5e0PgbL3QRUlp19be4PH286qXLQqyP8hoQy1fHB2yPwhZqJEzuIcr6Yztdi7BsT_IqCec7YcRTo_?purpose=fullsize)
+
+![Dungeon Merchants - Discover the Realms' Finest Wares](https://images.openai.com/static-rsc-4/brMm8cuzHjppDhweXHmP4pTtjo0hv2SS7FTvzglxRbsVGpX6zO6xIt3vpI1I1l2g8gk18nVnGfn0aNbwnBaQvbhvz002AwaRtpHHh2HMPY1uIWiWuHM5ui1elKzT6qAmPhxFdJjfwJAhY7mxtj1IBeBg-ZWeymuWXPDvwnDhxypQ7CLLhcNEUsbauireQgus?purpose=fullsize)
+
+![The History and Origins of Leatherworking in the UK | British Leather Craft Heritage
+ – Lw Leatherworking](https://images.openai.com/static-rsc-4/7WqmHVTniGTmAGfmt_mDMD0EbRurlkI_H_i0pP0bFWrLC9Ye96aNNfo2Q0gfKOO-OfQZImG1k4NWSD3XTscl61WNJm8jIu1VstStc08m2vpicjH_iCK1WC-CBaX4GG3cTex3w9wkqs-xCzamT5bifGbSP5DUWsMg2Zr-MV9_eCFn1RjQvDRZgYMz48pBhz7f?purpose=fullsize)
+
+![AI Generated Potions Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/gvSMl7e8vzsDVKrDyMr2vdvXCG6PV-Nl36rqSgsyEerGjc6lAq1ZWHLFsQWichuXJYGjyQrfwMSdAR6YuKoU4kwcN_LacrnmfzaL-m8SRZjVewscxF7Ck4vZSVwxg0TAdlqleLxCqa3PTo9J6zKiMe7ZQmU7QrH72LZjUKyR9Y0vPt-XaMcWb2xh308LycYL?purpose=fullsize)
+
+![Lederverarbeitung von Midnight: Levelguide von 1 bis 100](https://images.openai.com/static-rsc-4/PkMl_VJ9awGZgt2CGK7oz4B7f7nmtbNMBIP9uC9KdB8uuEdgYUFG9khepiFFzqMT6qbj4OrPP0luC0Nt7QrXP0BsLj2jU0N2Q_abZ-LgB5jLry_Lxg1YyweONmkZiqpcOPo7PSDmmToGfhq3HiLVpX1c0S55VhWkYtAYENCiX3x3IxztsUWFTkJrUn68AUID?purpose=fullsize)
+
+![A história e o património do artesanato em couro](https://images.openai.com/static-rsc-4/qwdEBoayxHBBf6BxDFXCihvye6nQGkgr5YSp6MG2q8TCfVhgAWngvgK3GRKCLn24ZLh_ACtI9zbpuiBs6Tu4y_k0JMEF1de9trCGxhWRW4_42JsbiiW_rHwDaZR4jbNCFsEt2Ka1M1Ys-hrNGhWdU6rwk1gFGYVts4r2HW8gWBZ1sPLhUAthloRhHSVQGCwr?purpose=fullsize)
+
+![Enshrouded Update 8 adds Adventure Sharing for community bases | SmartCDKeys](https://images.openai.com/static-rsc-4/X-d3d6U5Ph3zJ36R9_cdtvKnox2ZGRF3fOmjjAk-6whZwOwaqRQaUwEQSqqnekbdnX0qFXlg45QsIpD8JSzxnAKAGZ8zQZvuCGjL-TfaEGWA7mftgJFA-VabYx_BuJmcxIrgmAIG4-giNqKAZT3Lov-Nzv_LHVnbKWL53mmShyRKfANEmao7ckCw4pWZTFe7?purpose=fullsize)
+
+![Enchanted Study: Anime HD Wallpaper by VIKPIE](https://images.openai.com/static-rsc-4/e4PGYT-kuru9fAUGIKfevJDCzeTayLxuIxHoWtzZcMwWYU9FoPS9PRjCdhVjWDBLsucyA_xCCXTvxbBNk85mkBNWQtPUvihFCJscfimKYrC2jJieF0jj4so_sEvm6VyXCU3Rdz_a_2P-gsMivxHemHiwAssWElW_rMXmzH4cYy3kXa4UrcekKLRHT41QjEw9?purpose=fullsize)
+
+![A Deal With The Elf King Chapter Summary | Elise Kova](https://images.openai.com/static-rsc-4/qHxvO_aZjZthYMRwBD_RIjFsVkWmns25J43ItHVBTV8tLBBARThtg-B9PABuuNpE3ZWChT41CWvYCDnEYGUUV0x0D85Xz-TcOSTl2hoZapKERXLj1a6T7KjCsiqJDhonqqyUW5SHdNT4CYm5soS-d-b_eDB7Hu65Q0fFDNy0qu7fRoTGxskdaQ9nG9U8DSLT?purpose=fullsize)
+
+Give players meaningful professions with separate progression paths.
+
+| Profession    | Main purpose                     |
+| ------------- | -------------------------------- |
+| Blacksmith    | Weapons and metal armor          |
+| Armorer       | Protective equipment             |
+| Alchemist     | Potions and compounds            |
+| Enchanter     | Magical item enhancements        |
+| Jeweler       | Rings, amulets and gems          |
+| Cook          | Food and temporary bonuses       |
+| Leatherworker | Leather armor and accessories    |
+| Carpenter     | Furniture, structures and tools  |
+| Engineer      | Mechanical devices and traps     |
+| Herbalist     | Plants and medicinal ingredients |
+| Hunter        | Creature materials and trophies  |
+| Miner         | Ores and minerals                |
+
+Each profession should have:
+
+* Experience progression.
+
+* Unlockable recipes.
+
+* Profession perks.
+
+* Mastery levels.
+
+* Specialized crafting stations.
+
+* Rare recipe discoveries.
+
+* Profession challenges.
+
+* Unique rewards.
+
+### 3\. Resource gathering and harvesting
+
+![Bergbau von Midnight: Levelguide von 1 bis 100](https://images.openai.com/static-rsc-4/geMW0TcVpPUal8dgVQvh-pp8dLJOWwdfOt7UNmSP2ZrEwbIuH-IE1MXJnFb-8js3rroyJKNDQS2tW8jGpzsNk9VugWv9u6UVUMMdcddpO142WQBypEIXPwQ7CafVQM0iQpnSA2FWd81KWtnLnTEiNRB2ACxuvCamuYqItAWmnxzZmBz7oUPUfsBrOuvqWKpN?purpose=fullsize)
+
+![AI Generated Gatherer Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/Q5ry0UbwqW_c6eLUNJbnPmh2Saku5rpqMyBAcu0fVKP5PycfaK0dH7T2F7HjL1nLwkOIoK8yfLt6FN_xnnQN8jZl9kqzKTyhTkR_RV3nw6eafgv-6jjZUCZw79EITuftq9OnlQlJXE2t1cgTwe1PnwSYawenc6aFKD-QKM-cRNHB-XjAlZ-G_cI9KG_72APO?purpose=fullsize)
+
+![⚔️COMBAT OVERHAUL UPDATE⚔️ · IfSunSets update for 12 July 2025 · SteamDB](https://images.openai.com/static-rsc-4/ieFhc9IvXksgURO-qusG3adPllh0JdZHbu5V1RpsVVfrEamVVt8hU5aXLhXmTi9P3SO084O7IvzsGsEXHphtwcfCR0tdAP_DFqNkjr0nU6Q2LoIVOy7d1sWnpeRoX_szsciJhC0Yros0Ikmicl0GL8PINZ6_NRvlKIO_Ex0iLQsaYw-k8eyaQsDztfqmxste?purpose=fullsize)
+
+![Midnight Herbalism Guide - Builds, Leveling, Specs, and Best Picks](https://images.openai.com/static-rsc-4/Lhl-n0u3pUde2lJy4-IMdoGKGGglvnPjQoMt8AKr5tUCLGkjOejIBzGvFPw5LnecoYVFwHS66ydlrHVs2VCy9_GbQUdLKe0cs_qdDcJZ89IEZ9JB3xYJB6Tc1v5NJSOR0FCR2jZwhX1YvfTpC2NGlYIgiXCFZ1UnuN7qPwFYZdx78IZTDjRL46hoF5Cy2uhS?purpose=fullsize)
+
+![The Forge Roblox Codes July 2026 for Free Race Rerolls Luck Totems and More | Adellion](https://images.openai.com/static-rsc-4/AQq7L5hrm82z90s8n0cRbZSW5LL6dCfybCOEFD2G3KKUUPMofkOsngGDYCXLW2IhTDYiq3dDzeeJiycUKc6xNnMlSlH-JTpSV1aiN6taMs89wCsaFgP7Tn0eBnANEgyNrWqeIFvNVFoVn6xR7ZNMeAarVyQvefYhmjmbZf7lgxi6vprUfpkYe7Dx3V3UmKXB?purpose=fullsize)
+
+![Detect Poison and Disease 5e - D&D Character Guide – DND Toolkit](https://images.openai.com/static-rsc-4/0Qv9NU9b1obHTa-bhofbmD5jqDIxbO9cEvdl8IaW4e2eMkHMMSsIWF9UMc_Hq6uE_EHQlTEW5TzjekLL6yQREjq6UTzrbXQurDa6Jc9XLPuLlI873cnaNKjF64pt3iwknAFPB1hJnR26uqFTFsIgkg2lSd8xHB-58VMCecyTqrI8yRO6i_BP1OS3vsRDKQ4Y?purpose=fullsize)
+
+![Diablo IV Trophies Gallery — Art Bully Productions LLC - Game and Cinematic Art Services](https://images.openai.com/static-rsc-4/7mEIMOlsu2rWMknPokiC3b3fNL-LvBbn7upwQEtrL6FcduR097TEQSNWr6AdX6tnDGST04RfR3lBvLpqhN63hMSAElzmZ7agWKOlNQVHheMquBzIfsKLx4pwIX_oxUbIEk_mVspxUsEYl7Qo2Mdp7LwfqIkq5e6ljSDgW2gQzZ8RQYim7kInAsaMJ_BDVHDB?purpose=fullsize)
+
+![Hunting Trophy Icons :: Behance](https://images.openai.com/static-rsc-4/AdiR_IhAebmm9DZxN5XezfPU5Z-IUVtQQLrgf7xyW2w6ceZBDjknVUH2EWymLLpBDwmWNKU24El0_825_kMDtlmhtVArhEk1K2kZo5P7DRhW8DD93Dga7vWt4cvkfb2ahWTSAzIXxRtoo1l1TCwhbnMzRA_zHYiOi-RB6rpdlcQ7PFvokJv5phHT4UPMJ_Y7?purpose=fullsize)
+
+![a dwarven city in a mine, medievalism, dark fantasy, highly detailed, digital painting, extremely detailed, 8k, dynamic lighting, award winning, hyperrealistic, hdr, matte background, Ultra realistic. | Deep Dream Generator](https://images.openai.com/static-rsc-4/ojQV7RKFSLmxIJjjp7N2bT60eruTO5vRUEUNaczInFI9FtYQ8JiLC5KPimNfwkxv8yuosYb7pA-leKqpWR4GrI--2PATKkqEHzSHRmtr4KiwnsLzjs53B9tXbS0jxv90485lVM6EYof-grzg-HEz7qjC4WsWAB0hfeXC35YeyoatAHk9_BdM2yBghzG_PCPy?purpose=fullsize)
+
+![Pinterest | Elf druid, Druid, Elf art](https://images.openai.com/static-rsc-4/egPmBxtnWp4Q0tXjAPFAN3CJzeVgYKknfntxT4BXKZyin869sIMnBsoMY9Cl4XzdaRTUiInCikJFQFyfcoLoKaX3YnMxKjWrBZ8hLmfASMnGIfXNURGH-Ij3FCE8hoEP0iFl1c7HxJYf9he1K0I1z4kNmZPnsDUvNiueuyHbpakUPiGj0n9vM7IgkBRFd5GZ?purpose=fullsize)
+
+![RPG游戏怪物素材表 - AI Prompt | CreateVision](https://images.openai.com/static-rsc-4/yTV-0Lk5nu7VDDnPMfFtiqZIamxaL2c9WVQa3xlapNL2-jjoGcuoJY4cseHfW3HGbWX4yBmjTz5GDB6bGyIk1NoYeLBFpHgiq2E-1p2Xrk6YDq379yk7UM0B9ZtbV3U9bdsuI0cd8Su7CLMV_G3uGKBAhUQifJo6emYeOpmO3uDK00w8QdPlEVkPTsqTBhFq?purpose=fullsize)
+
+Build a complete resource collection ecosystem.
+
+Resource types:
+
+* Ores.
+
+* Minerals.
+
+* Gems.
+
+* Wood.
+
+* Herbs.
+
+* Mushrooms.
+
+* Animal materials.
+
+* Monster parts.
+
+* Magical crystals.
+
+* Ancient relic fragments.
+
+* Rare elemental materials.
+
+Gathering improvements:
+
+* Resource node depletion.
+
+* Resource regeneration.
+
+* Tool requirements.
+
+* Gathering animations.
+
+* Resource rarity.
+
+* Regional resource distribution.
+
+* Environmental conditions.
+
+* Rare gathering discoveries.
+
+* Gathering proficiency.
+
+* Special harvesting tools.
+
+Advanced addition: Resource Ecology.
+
+Resources should have regional availability and regeneration rules. Overharvesting could temporarily reduce local availability, while certain events or seasons could increase it.
+
+### 4\. Equipment progression and customization
+
+![Dark Knight - Male and Female Download - Asset Unreal](https://images.openai.com/static-rsc-4/hgi73n3NvFXSZ8PXIppu3hMLvHXZOdULDEHlzsuE1NcuY_oXxdtNb3yTkGkCV5D3El0YT5KHCO20Hxq7W34YfCLNPx-rwbajHybhD4XgExWvDYDJCMjxr5Cu6H0Oawz1mbwhqTkYn6Z4Mrxc7nySR_ZE3krCE74QFvYjI2eJMyvbv_szuMHlDAR7Kp0kKRcS?purpose=fullsize)
+
+![Sword Of The Angels from The Bible (Made with AI) by MasterMochiKun on DeviantArt](https://images.openai.com/static-rsc-4/PYP5Nx732Gx8XtVb0I9eLdcRNbDgJZaNlJZ_9D75g-EtFJiYOYtCoNmnVD37SOw1BVIez8O0A81pGHlaR_PLs5gXUrRt5yzthByFIYjXHVUqMilkjn45YPf3bhUTxGkZGe4OAYn0MCUPYqZGvnyPy7Tbkd19IUBTPAQrkhJ3Sul1RcmPb0k8Deevc3fTzaX2?purpose=fullsize)
+
+![Guardians of the Sea](https://images.openai.com/static-rsc-4/hzpUQoZXS89zK9PgZi6pLm_HAqiAnCJVEDJTLBw9tgNO6qPSUg8s8SRj1dtONYVb-X1Ki8yRC_i2ZiuSWk3ByqytFifjiz5FufEAPczbdgot4ennuM0_YVdMsDyc3N63VnRkVXJE1fHQ3HLE3aFnb4dfJseKu1Q4jnuFR5P1KT3RD70u83hRLFWaDrB_fr8n?purpose=fullsize)
+
+![Modular Heavy Armour - Dark Warrior Fantasy - Metahuman Download - Asset Unreal](https://images.openai.com/static-rsc-4/f3O6lWt91FRIyAsi71NXgrD0xsJcw2uqWGLRO3qCo3dm7I3Su_VdHhJoH7TLf9evze9Ma3Tc1-Gnuvz_tDCFgWdkcHbSOGV_XRx11djLPnAQ3Lsk--2-tkO1BTSdLDoXUw_XLJXsahpftV-M8taz-aveiwsRMK26GLeejga6Wb7wYMex7ZUuUWqrcwSHmPtI?purpose=fullsize)
+
+![Game Armor Set Art Armor Sets Midjourney Prompt | PromptBase](https://images.openai.com/static-rsc-4/-Aj5CplSRmobDVokGMjy-jmb51DcWhAOErXFZqXqUKKLoDy-ISbw7RI521jlM8Gx1EnzUcJHXf6mRd7UYqlvt6A8Z8GGOr3QJknQPPinvX0_PAR0t3BNMJHbxPZoaL1eC7QbmF-WzNEQO9loQrd6hneyOZs1Bbj9hDfyhHmd-G849amORliWBBsCvyHMX1xk?purpose=fullsize)
+
+![Isometric Fantasy Weapon Forges FLUX Prompt | PromptBase](https://images.openai.com/static-rsc-4/90QqeiD8XmMyxTXw-ubCwDZLZYAtL-mTLw8rElpNNvIlYYVx-4pUY_Ct6WPsQlMqNjgsO7WHVhwXgif6CzVNOHbawrBrMSiImTGVD-Ud0dK91Fu-NsPJRku0_VM34Ud-_8uOfQY839T7XHm16-rD7sDUECF97gQUyRYzn0U8gWxUQVLTbTSvhM8XVe0YL3ol?purpose=fullsize)
+
+![Щиты из игр (60 фото) - фоны и картинки для рабочего стола fonzon.club](https://images.openai.com/static-rsc-4/GOkdHsZLTAcL-6b0XJfUpg9yeD3cVtxrWJegvSFIBolPXnk28yTRKJcNM3ayFqaPYQN2BoDBY4Lr1VoxJMVMcQuXmQDAmHaudozoLGIYWq4w9-oM044uQDelwHpcuhDO55QsNETES4YcjEOMQbxWScqwiB1_SWRvs7LJGcldv1a_DUgCJXKzGg6DdLgfeWMB?purpose=fullsize)
+
+![](https://images.openai.com/static-rsc-4/-vBgK9iv7rczzSzaloCGESw_9PVIxg8rad2Xnfs62NLXMDMDWBdBnLQ_1brG5aN5buM54tCv5V1s8xKDlt1cdi5e_4elr0oSkXN0DsluHV1dASISFk5vOvVHoxOxM4EuqzeYvxrZu8-LGtRSNj0vtYmv4YHVmZAJDzDwNvSICuSEgHLnR2i2ywe2PijV-_HS?purpose=fullsize)
+
+![WoW-Mania Armory](https://images.openai.com/static-rsc-4/iIcXACCUd7_o--ss1lryGgLMa-dMTmPNWw8VA1W4HAkMl_kJ-AFMQBHfZ_8RSuZzNdIQF6a_z4gioSp-1g5NvGND2PmajyUGnEX9V_NyMCeliPWXzlfrElgTAQR6MGS64qGBE_HSWuwRjxNMjbIT_rJBIeSlEAcdszJhq1wntftbAR7qNNYAea4KBNBc41s5?purpose=fullsize)
+
+![Fallen Knight - Male and Female](https://images.openai.com/static-rsc-4/JGkWARdOF9BUHhUW-TV-VNRFtpuwVi-9cnajPkw_BYTIPQ619NHxy7mPlTeK8E_gEF2R7xr4Ux4fViy75YRICcb8P3esd8eGmiRonhVDRPRngwMh0iH2OzJl7E72-IQ0e55yg0bELrV0qK-ls6HQVU3ucSVl-_1CQH74kY3marvKSoZ4Ods1SVZYBvnBp_1t?purpose=fullsize)
+
+![Midjourney Object Prompts: Master Creation & Design | Prompt Genius](https://images.openai.com/static-rsc-4/HebJDU83tiGn0TVh0ouRNntarOVKoXBPEBC6fl1_QQ3VuCO155U_HhH226s0VnESeliAIpchUZw-sbrdlkrCqodpCoEQcpJR7xvYBaIYPBoT0sJRdEucU_c7RyllAmNQs1T6ieH_z8w80m5E_LKObGKZRB1kJzmly37cG_mrm0VTHOFkOfQx9J5pT_OjJ3WB?purpose=fullsize)
+
+![Craft Legendary Character Portraits DALL·E Prompt | PromptBase](https://images.openai.com/static-rsc-4/D8H0jJatnQo0gnPAp7xIA522Qo_5t6MxFw_iEVCGsb4vfuYPbznZEDkj1JvQ-FVrZC9kUnAol-rHpjH4L-RVE5aVBT7aKS5P-UHeJU1magLvzedCP0NVf7r5S7E03C-_viLw-UmXqlOWpz8RRqL4N_m6Rt-MDuNxWj0YxscdSseVNsSbf0sHBdzKaRfh42GV?purpose=fullsize)
+
+![New Armor Sets | Coming in Depths of Eterra Update - Last Epoch News](https://images.openai.com/static-rsc-4/T14LWaTkDzlkoUqa4dud3-vnUB7NbNN7Q1BeCjNCcOTh4fff7D4Vpepds58aoiB9eJMHQNmdsmMSl4MOIyCZ0iguIuGj5mQHqi0Y1-3y_yjq8LVuZZXHcGUX8_GQBcbaKZwrmTrKMfxY4M1gPyOVMC3mr3uFLEBC-1p_NBBFkZV7bOT3TGA74CMAtTLKXorh?purpose=fullsize)
+
+![Armor Class | Monsters and Magic](https://images.openai.com/static-rsc-4/_VggEACBiFPAzjqCWOLyYJeoLONsuG7NE7RbddR1opjB4OuMSiYfZhdTElELz5exVQx_sirptae5tqdtQvfAXO4ByCzW9k6t1K2Jv5l3VP23rrdNKPmWaMROrUSdpeiz2k0DhTKnv8mfy7gDB4U7cLky77W18w9LSELV9M9dZ6LAvlsWh2kPdd-FeGmlIPkx?purpose=fullsize)
+
+![Weapon #16 by Illiriea on DeviantArt](https://images.openai.com/static-rsc-4/Iv3EWFDtu6r0Q0Ew4jdmXA_OwP_Nt0d8O5PSkQ-V7oGZQnA6fRqNdOL9RZRPcOUox09MX_iBcbj6J1ecwTRHyRpsrReenNOdFmnT0ksH4C4LO2yT26f9qkdi8_9T1M6IH3qY7GHhlBDQ_TwQCY6ylMz1f6bNq-3L7D2C0NKfm_64d_0s8gaYNv_DfwMAGMTr?purpose=fullsize)
+
+![Erdographic Profesyonel Grafik ve Tasarım Çözümleri](https://images.openai.com/static-rsc-4/PpJy5KTXm8P-EOmeX_eqSz_ysy3mE9lXQGjftXGaSFeLWF5ALwDB5NMQMhKmCXdavzbfjwrV0ht8hjntF9dxyYhYeiQAagGwgJpvnl1F_nDeZhixXrbGrEtH8vRZg8UD93S7IxLJFOv6OetAZzieQaE2OtKo-KoE7N0qu0lM16eoNVOSuRWPVk6yjgFDkiIB?purpose=fullsize)
+
+![Explore Concept Art RPG Art](https://images.openai.com/static-rsc-4/77P5FIviKmtcj8jKDYljkN7tBNGeB_qqat2TQkMV09_mPmr0jXvHfYIbHhLbfynaPHH-XjPZr2LhkNurqbW5xgCenyNdhsBFSfpVOnzK-V58fLYLs13udDBfe_X3R8H8kSUAb5TSwSXjpvFUdrE0cGHkVpt5xq3l-VR4cMusU5sR05J27eY89aPv-Y51MMcu?purpose=fullsize)
+
+![Draw any medieval fantasy weapons, armors and items art by Lataviaughes | Fiverr](https://images.openai.com/static-rsc-4/KSX4Zge0jWgL7RVsdtac8uOVRz-nvErdFzWeYFXw6SlaoBLD95jAO45eRi36phb20KbnbBnnyjnG7RtU_nGFsWORwp3SUn1jjTV9lP4u305bkXnS0eZn4oM9DUpb2K_yetfTRhenyvpsN0Yl2hEZb1Qz0Ec0jN7gGG6t2SmPUqk7hT7iowKWMqrJjXAmYGyk?purpose=fullsize)
+
+Expand equipment beyond basic statistics.
+
+Equipment customization:
+
+* Weapon components.
+
+* Armor components.
+
+* Material substitution.
+
+* Visual variations.
+
+* Engravings.
+
+* Runes.
+
+* Gems.
+
+* Elemental properties.
+
+* Cosmetic customization.
+
+* Equipment sets.
+
+New feature: Modular equipment construction
+
+A weapon could be constructed from several components:
+
+* Blade.
+
+* Handle.
+
+* Guard.
+
+* Pommel.
+
+* Material.
+
+* Rune slot.
+
+Different components can affect its appearance, attributes, and abilities.
+
+### 5\. Enchanting and magical item creation
+
+Build a dedicated system for modifying equipment with magic.
+
+Enchanting categories:
+
+* Elemental enchantments.
+
+* Defensive enchantments.
+
+* Offensive enchantments.
+
+* Utility enchantments.
+
+* Resource bonuses.
+
+* Movement bonuses.
+
+* Critical effects.
+
+* Resistance bonuses.
+
+* Unique legendary effects.
+
+Advanced features:
+
+* Multiple enchantment slots.
+
+* Enchantment rarity.
+
+* Rune combinations.
+
+* Enchantment extraction.
+
+* Enchantment replacement.
+
+* Compatibility restrictions.
+
+* Magical instability.
+
+* Legendary enchantment discoveries.
+
+Example combinations:
+
+| Rune combination  | Potential effect          |
+| ----------------- | ------------------------- |
+| Fire + Strength   | Increased fire damage     |
+| Ice + Defense     | Defensive frost effect    |
+| Lightning + Speed | Faster combat actions     |
+| Earth + Vitality  | Improved survivability    |
+| Shadow + Critical | Improved critical attacks |
+
+Make effects configurable and carefully balance combinations.
+
+### 6\. Survival and environmental needs
+
+![A group of people sitting around a campfire in the woods - SeaArt AI](https://images.openai.com/static-rsc-4/1G0pt9H7C3r_lnExXRGG2I27Q2q1PgBP1Ww5O47job36vTEsGdROqCzKQxrGLj026vZP3Tco9NHfEQC2-l5eeTAGqYDuqJZazQeaWfd_9idG9Z59jdv6-ofjMMX4E5wXPXFtgzdwIBRU_8VHQgxccXln3_6btJTY3oST_WQFaL-FOb9yacmuCf_8kKZZ_ARn?purpose=fullsize)
+
+Introduce optional survival systems that deepen exploration without making the game unnecessarily tedious.
+
+* Hunger.
+
+* Thirst.
+
+* Temperature.
+
+* Fatigue.
+
+* Rest.
+
+* Camping.
+
+* Cooking.
+
+* Weather exposure.
+
+* Environmental hazards.
+
+* Poisonous environments.
+
+* Cold and heat resistance.
+
+* Shelter quality.
+
+Advanced survival feature: Preparation matters.
+
+Before entering a frozen mountain, players may want warm equipment, food, medicine, and suitable supplies.
+
+Provide difficulty settings so survival can be optional or adjustable.
+
+### 7\. Cooking and food system
+
+Create a complete food preparation system.
+
+* Raw ingredients.
+
+* Recipes.
+
+* Cooking stations.
+
+* Meal quality.
+
+* Food rarity.
+
+* Temporary buffs.
+
+* Regional cuisine.
+
+* Rare recipes.
+
+* Special meals.
+
+* Ingredient substitutions.
+
+Possible food effects:
+
+* Increased stamina regeneration.
+
+* Improved resistance.
+
+* Health regeneration.
+
+* Increased carrying capacity.
+
+* Improved gathering.
+
+* Temporary elemental resistance.
+
+Rare meals could require ingredients from different regions.
+
+### 8\. Player housing and personal workshops
+
+![Online:Water's Edge - UESP Wiki - The Unofficial Elder Scrolls Pages](https://images.openai.com/static-rsc-4/fwkrNA4xpRxYbJX7clor7QgunKGTzxEys6eNLF1914ccJfQTdI3nHAtRU943-ydK09yGeIPutOy-pBcpExrK6srCTSY4RFxJAgxluC1mOIC8QXwGib7efL4uiIUQ1GrCDp_X4k0S_SSoLDrykhORRBbNJKyPbyJY3p3bxZmsiJLIvbkygq1-Trn5ULwMfIHD?purpose=fullsize)
+
+![Step-by-Step Guide to Crafting Powerful Equipment in Idle Clans](https://images.openai.com/static-rsc-4/dP5kbxAkZ0_8QOWzjurT1z9HxZ_9f9Rpuc7BoP7SrdPMETxt74r0GRboQQapXniQdDIOhLug9m3ukkGl6ToAbiQtUnJpAnS-NokiegqkjA8Ph6G2Wgtr4BcVTs2xU66em-MZFySH4ary7gnmEYnZ72LraOqUjHfKxn00pawgzlIYgoXrgKG6dfhfEFRcYdom?purpose=fullsize)
+
+![Study and Rune Workshop, Silver Veil Lodge | Wizard's tower, Viking house, Shadows of the empire](https://images.openai.com/static-rsc-4/bLMRF5t69th_Er5Jqt1QNKIzYN0ZF9IzDuWUjv0n3r48DyRpN_zF22XUoHYUZ4R_Kg5C4_ox6T6V1DNSVpHqFlVXVSFYygVpvW5k6Zk5XMy4YpypS6CWdoB1l-fcm6JWAeOuNrtFaICb9tw9b-q6_RQzX9qswSUhAHWR0TXoxKcVmxBt3kSBBayqhqKNDtWl?purpose=fullsize)
+
+![Decorate your own home in The Elder Scrolls Online](https://images.openai.com/static-rsc-4/vwbpTQ7ETSWOMApyFqySbd2E3uD0RnxbNxIxH1P5eYZd8X6oqDxGcDXAkmfFBHrFxWxsQ3IB7Vl0LpatnxDEQvnfG1nWPcZWtXWK-CLFG8XC3imggQ39rbTquhJnI38eLeYtc2WbJJcWke8OG-KnLIUW1fZn2PhQ-iGuMjivu6GNjt1Ujr52jRfh-sWBqM5I?purpose=fullsize)
+
+![Chat, roleplay, and learn more about March on Spellbound](https://images.openai.com/static-rsc-4/mjPg3nRCQAUfVqMr7NWBx-v6eCfkWChsK80spLyLoLT0SFxokUt7VLQmm172CMuEks8vkPayhSKhNMpje94vB9fa61nNvb7tHmS_L6fHhJnwICNxa1tijuLFMwpi1ZqS3Un6KVEQXGVPHNmG3Pk-1o8XWYZ8PWsqnp4wklq4aXFHdH1nAklCTiXndaY_eVph?purpose=fullsize)
+
+![Skills - Infovault - Zuluhotel Omega](https://images.openai.com/static-rsc-4/01cVD4V3ekcZLnJLzP1A5ocLOSp89FiiMSBvsRbG2Yz_35lv1GdxpggbG0Xl3XGFkEr_5dA6qhfePhr3moHqPCD5bUMfpRV1RV55EIV17p2skEdEffobG0I3UHDEqylM-zL-a0UaqbtefosL09fc4ZFaExU5dyi525rcWYfhYxB9dWbbPIPeQxvTDosGlKxK?purpose=fullsize)
+
+![100 Odd Things You Might Find in a Wizard's Tower - LitRPG Reads](https://images.openai.com/static-rsc-4/T6jOp1T8HKuGrCIhRlqufq5ZuJkdcWSDxcvxZVyTsCkOaIf_8v5ITmAib3eRJIydSjykLaqmzWUDPhlahNuQFDlRbtWP4FOAmK3QsuDq7bY4QkZzYZbqcOLXMFclfkSOAUey4D1QXtMcKsYGmqDvViTGZE2BXibSPrZsF98genoBXpZOOmdZsXhnC8oQsVAP?purpose=fullsize)
+
+![Magic tower | Fab](https://images.openai.com/static-rsc-4/yVz52eDYsV2vPJZqnMYXhToAAwJS9w3mJ9Z7L2sLFFZRLY2CzLLTcSjplHiannyQoE4DoFj90HKrxRNYmgaZQD9OaDhdOqUZM9Q8BT4mFYhHKfr2Wk2-fjC3XAAy18TKb_VkzjkvPrmi1C1NGPFqBZaUSKitoDu53Z93B0hznyQfgSF-IXcxCG_A_6GPD_m-?purpose=fullsize)
+
+![A bit of magic by Noldofinve | Fantasy landscape, Fantasy places, Fantasy art](https://images.openai.com/static-rsc-4/L0FBntgPeiia7GTw0deYbJf4ilnCU7O6fQeSLgQGK8W11bEdilMOw9Chy02bP9pN0Mxzxghbf5toogkKHl7nS8Tc3IPkw4DpE8hdNWBl1MtrhIsUG5RDSQY17TudAh9LKhKmTRdZbUfFKfZgFf81bmjw8sIfNfDuMrw5yKFoV4itTvei17Kv3U6W1P0ogC7j?purpose=fullsize)
+
+![Breton Country House — Elder Scrolls Online](https://images.openai.com/static-rsc-4/YD1GaDLHR5zsutROcui41n4DRxwlbVpge1K3XnKR2IzCMqeyX3PKW3iKIrp6hKOMH6zdtHWo-9FwwxjER3rQBF4NC6pqevTISoS3jNqe-ZHZJSFVXEAA_7H8vhncEmyYwkSFA149dY--L2W8v2b2zRvuxhhXvX8hsR7d1hqmVedRTjK8Tq6jyX9busDlaI-Z?purpose=fullsize)
+
+![Blacksmith’s shop Visual development paintingHow to Train Your Dragon MMOHumaNature Studios copyright 2009 (2) | Images :: Behance](https://images.openai.com/static-rsc-4/e9VgxOhylrE5MN_mCbTTnMZsGzayDCnphCZhKvMzetftUvtLeYDBmrjfwbMv1SpIlE5w00Bpz2UpxTdjN6IzHnpFyQxVepskWp09Kj2rjNIl9xnzLbLhxHvmq5cN6rHVkPM6HLSILUHow1kBe-462oiddwamBcxQUyxGfW27oG3Nvsnd7H02E35f87xKCHrR?purpose=fullsize)
+
+![Арт дом фэнтези комната - фото и картинки abrakadabra.fun](https://images.openai.com/static-rsc-4/w7gv12j2ceWpNCBUyizTpWotZ2NmPVc4q-VPY_myde2pxpmKQz-0FtHBGIXr_9utgAFJA8r1MfqknOd8JsziiR6hsLzipDFvb16ZL8p_B2EcGtHochU2lYMSvphTzMbpVPFkbq8bwK0nuII85-5Ajf_SpMVdr6O5NY9jhBt3BFqR_iQrHIhcpRSuTan4ThNc?purpose=fullsize)
+
+![ESO Fashion | Golden Gryphon Luxury \[EU\] (Elder Scrolls Online)](https://images.openai.com/static-rsc-4/-yt8nDIqkDQVI3Xo7Ei-po3lYX019Cq67FTag66HJNfOl-7bhT5PyzKAH1OgjnilfQk-XMxBARbZC9EwE8M_ybqZLUbqYpGtFClvsz_sq7j8i6QlOAC2SFQZyqfJOf8f2GduNs61pWBX42p1R8pIkKcuPz1FrU71xVk05zyWLPV8IfFQfDEDmkg36no24BZ7?purpose=fullsize)
+
+Give players a place to store, craft, customize, and display their achievements.
+
+Housing features:
+
+* Personal homes.
+
+* Storage rooms.
+
+* Crafting workshops.
+
+* Display stands.
+
+* Trophy rooms.
+
+* Furniture placement.
+
+* Decorative items.
+
+* Functional upgrades.
+
+* Farming plots.
+
+* Companion spaces.
+
+Workshop progression:
+
+| Upgrade           | Benefit                 |
+| ----------------- | ----------------------- |
+| Basic forge       | Standard metal crafting |
+| Improved forge    | Advanced recipes        |
+| Enchanting table  | Magical item creation   |
+| Alchemy lab       | Advanced potions        |
+| Storage expansion | More materials          |
+| Master workshop   | High-level crafting     |
+
+### 9\. Farming and agriculture
+
+![How to Make Liquid Food in Soulmask](https://images.openai.com/static-rsc-4/SRvyLht-ibXpH2pA7nKjt5twjTFKUFFGWKV_PmMfkXrPEEvw2p8AC0kFY9_fG423xLhKR5u0PGSSlKeMFxAenory4svv_geuHHiacWY-8YC8XzKxfHAFZnNiTex47D-1CwBG1jEmJ3gu5jGCD74XQi6HVAoamU6ZO6zYJW6kTbofR3xeKJVIEssAo3aJnbY0?purpose=fullsize)
+
+Add a farming system that connects with cooking, alchemy, and the economy.
+
+* Crop planting.
+
+* Growth stages.
+
+* Watering.
+
+* Fertilization.
+
+* Seasonal crops.
+
+* Rare magical plants.
+
+* Harvest quality.
+
+* Seed collection.
+
+* Greenhouses.
+
+* Livestock.
+
+* Farm upgrades.
+
+* Automated irrigation.
+
+Allow players to cultivate ingredients that are otherwise difficult to find.
+
+### 10\. Trading and player economy expansion
+
+Build upon V4's economy system.
+
+* Player-to-merchant selling.
+
+* Buy and sell orders.
+
+* Resource pricing.
+
+* Crafting material demand.
+
+* Rare item markets.
+
+* Profession-based trading.
+
+* Merchant specialization.
+
+* Regional trade restrictions.
+
+* Supply shortages.
+
+* Market events.
+
+New idea: Artisan reputation
+
+Players who repeatedly produce high-quality goods can develop a reputation as master artisans.
+
+That reputation could unlock:
+
+* Exclusive commissions.
+
+* Rare blueprints.
+
+* Special customers.
+
+* Better contracts.
+
+* Unique crafting materials.
+
+### 11\. Item discovery and legendary crafting
+
+![Majestic sword in stone pedestal with intricate engravings | Deep Dream Generator](https://images.openai.com/static-rsc-4/0-wI_OBXjhTMH_jc3ZM0audO-WGxYYPBLw_Ck-DkVd57raEJ-O8Ia6fAOUjThctuT9bXen2kMjYIU63aD1FGJESvjr7AvCoplzzPQBLKZtyUlbP1qakOcnzP7OZ15RIrRPCAPtNT2kP0VCkC051qNdvGgaWxF01SWE279sWv-qs5s-Ba_YwgZmQ_qremFbuU?purpose=fullsize)
+
+![Gleaming Emerald Orb in Ornate Structure Within Sunlit Temple | Dungeons and dragons art, Artifact art, Dragon artwork](https://images.openai.com/static-rsc-4/fnCxxgd-Fr0ttQ9uUW09XgRHcLMXYtE1ElNJJIM2keEIqFSnDPxRsgpyjkrtgr7B7zaXhQTEUcs34X_aLwK016liUqaAk_HEwn0epjumWzkkD2mR7OlWEBdvewahHuOSCBoR_kulTmoVXMrIQ7VFvkGuEfnVPFM5AVArOU1WvFbK4CR99DD3HG-Vq5P9Nv8M?purpose=fullsize)
+
+![Emerald Dragon Scale Full Armor | Dragon armor, Dragon scale armor, Fantasy armor](https://images.openai.com/static-rsc-4/iQ4Re7TRjg79k7fcZVL7mlKLJX1iuVU3cvNPxznPdDcYAYsAPpuGyYHU-ktguTX4nRL5F9Dn1q4lBnySSGn_NBV4qRgnOGDW6bDzGkk0ntOkwHMBKhr8XWPfjjWlUMkLC4_dKH4F-XEapO63aQvQPI6flZZkG_ZpvNjfafUPmxDHtQGVURrmpcduCwAvrGXt?purpose=fullsize)
+
+![The Art of Legacy in Dungeons & Dragons: Using Campaign History](https://images.openai.com/static-rsc-4/plhPk0Hn-Eo7M04P7RVYHbhbl54g7sIlH-6MPcAP5OX7GOzWqsGPtQ4Xutjwu94rzIXPAUm61GOegOZKMsGgw0Viw9K68q8ifNnb8xPXY9zIqDAeo3zLT8xWF1LpzofH1FAKEgESYP_KemZTwtcPWDlS2f2bF6QkQKStrODthlBGO7GxSweAoFSZNZSIzmZN?purpose=fullsize)
+
+![(masterpiece,Exceptional Quality,Mirror-like,Cinematic Experience - SeaArt AI](https://images.openai.com/static-rsc-4/3GbfuswW0cP-wrWadmZl7rQOL1GZCZ9DmyO2S4XeTYpl_2GDjM0xVEXYaBPxL1-EULzrJ1fDDE4pi27OzyfZ1NaFTju95NBkmEZFOkIr_1k7-9i8YkEi31jiA_qyMRBBfhOCh3pPiDmZ6_nmrddSPrDTJ1jwp5yYUpUKmCaGqJwuFo5j5JlY9yNK_Fteho8i?purpose=fullsize)
+
+![Red Dragon Scale Armor in 2025 | Dragon armor, Dragon scale armor, Fantasy armor](https://images.openai.com/static-rsc-4/NcJg0npHizRHZyM1QqfNN4GRFniU9NU0QanyIhKGezN6KDa3MZf-XEig8liNDAHlcvMtU3PF7EYV1h9DSKfSPnEGs247yJ6VbkOx_2JlCVTwn98pTW1FEakvV9VHhVv7OpjQr02e1NISv0G_4WedRG0A5k9YuTSV37HDeDfS5swPAx5a_KM6lt0WOANiVVmN?purpose=fullsize)
+
+!['Enchanted Sword in Ancient Chamber' Poster, picture, metal print, paint by anartdk | Displate](https://images.openai.com/static-rsc-4/PUzSnmof0PWb8ryKhA3J7AxuEoF_Xgl9g4Dn3pLLnZ86T_Fqq4KamqjtmuNUtQe4ADVaXi3Vo_mgATMs9GT0SZtGzoijhA7tED0nD4zJHrpqtQP0Nez1ypC5hsa3go6zIHgjtKm-DMAalpthK5I-5cmujMZQA3BG8kDRpPefEY84inQY8W_m07Fl3N8txGLM?purpose=fullsize)
+
+![Опис | INFERNALBATTLE.COM INTERLUDE X50.000](https://images.openai.com/static-rsc-4/0M7ZkR9AZjOGE-hd0-cnYdC8C_5lHPFLq0siegLFilYFJmpox83Xm5P71a7BfXlcpeiwZoqXURtyQf1GyiS1b_c5f0Uijiu5K-WF6dZDjvb6n_QM0AAxptW3BpALtEtx37Wn8njX6FcSiZgZ_ukGeHvIjT2AYXSxuNbRIDtiaSwoqOdw69CvP-hsB73F9yJZ?purpose=fullsize)
+
+![Dragon Scale Mail 5e — Caverns & Creatures](https://images.openai.com/static-rsc-4/eCXc7KrNgLBLK852uByKN8AkWWV2bRFclxVZLYz5baN896VGouxshf4f0gcC4b-FlgSMses6BpzurdzQKOVChrEO2603NJ0C3oY0IJwE_MTyWwJjdI09RfdUmptul8qivgtMmecTVaKKLY0ipvPON1RNPd0_z51TxqodFbS7ynNFTDkubsSUXMH4kfio1YLR?purpose=fullsize)
+
+![Lore and Legends of Chapter Nine, "Items and Artifacts, Worldbuilding Threads, and Hidden Truths" for｜IX EDUCATION](https://images.openai.com/static-rsc-4/GLVCulVEIi_N5dN8khjpzjlmcwcb-W58twDIait2r8N06TPTLZskUVVL88LprTJQLc8lLDNoQQoIOGXRYP9wwLZMGLKO2xPMNReofeBxaiRM65KvebrUjw2xtPuYlqKkOLV-chEOK9-yr9OswlthifbSUMeintJXiXw3mSYKPU0ebpxsflhfsKXqn2etCzsh?purpose=fullsize)
+
+![A Mystical Ancient Sword Glowing With Ethereal Energy Rests Embedded In A Rough-hewn Photo | JPG Free Download - Pikbest](https://images.openai.com/static-rsc-4/T7fG0f8kB_BFWHFYUBJQ5wsf0vzjMok-uwe7aHjGhzoQutGwzyzlIFTqxybyvyGo-QnLGphnh1LATVDPGrhErdk8VIS8s7_g2yjlpZCUrg5z9wiq_oM4gg0Kc57yOh1f1ZAQxcSzXuhggHRHzz3bUWzRSswCsSAK2SiEoEp_DmLFOsHN5EwzWsEV-d1Q8tIQ?purpose=fullsize)
+
+![Golden Dragon Scale Armor | Dragon armor, Fantasy armor, Dragon scale armor](https://images.openai.com/static-rsc-4/z6q836EpmPnt3QL33B_xHe7gNfGVV7NR9su03qiJ9-Vnq0Po_G8YJJML1rfmJi82kU0z1DYN-CNjO4LcjEssiQ70alfAtwSWU_4E9_glMI-cmcHMa2sXL4FdHfBFEARSEJTIQT7X-l1GPlkHHWcT3jjvPW7YlPnd6BBzFhiIJAyvULiDOdVhMqWB_U_SPEiA?purpose=fullsize)
+
+![Обновление «Расколотый Санктуарий» для Diablo Immortal выйдет 13 декабря](https://images.openai.com/static-rsc-4/yiP9xwMpxBWeGOxyjg4XFqrIjxth0xg0KHfORRaIFBGOsH8FHGp-9AGe30Hcxvl70__sY2N_k6GsGBT2wt-a0qmR8z7UPKFSyfYd074OOw5SJCwEiXHTW3oWRnXm-UtCZZWWz2MRSMw0dVa8r2YDHDv8ZGC3zp_GGzXCUNpsYwt7IUqbV014fOFefDe2k-Q5?purpose=fullsize)
+
+![Ter'angreal-Namen-Generator | Namen für das Rad der Zeit-Universum](https://images.openai.com/static-rsc-4/613n4kMTxTzpjfLRuNKsgZerEuhF2oxszYWmMu_u9Ub-nwwCtaa0NyFvcdg76cX9Tooy69AlKiL0zu_kkcC_vmbDQGS682hYJzplbkfZ9BtvbP7AEHcQ-mXqvcnt5EPsj1yWyDK2daFPs3kmNCzkvE47YsGJwXpIMYUXZ-xQqXd5X7YIf41tmkW3f5xOHN6u?purpose=fullsize)
+
+![源自远古龙族的愤怒 海上BOSS利维坦曝光_上古世纪激活码_17173上古世纪专区](https://images.openai.com/static-rsc-4/4OmfWXgxafVN2BfnlKREh3qxa2AiEUM4VzzP7geQgpGib4nWmd93idxZXoApH9g4ckjFT2kMQ8dPZSg3tQsm6TSkTug5BBrpz4MMNdCDPQ8i0ZPAMZ_weXyLRDkY7PRcSG4RxJ14s6_MHccB5Rt_iEcE_Ehq2msRhRrvMcPtmF8V5ckjpglHm2MeGsx3nxfE?purpose=fullsize)
+
+Make legendary items a major long-term activity.
+
+Add:
+
+* Ancient blueprints.
+
+* Lost recipes.
+
+* Legendary crafting materials.
+
+* Unique crafting challenges.
+
+* Multi-region collection quests.
+
+* Artifact reconstruction.
+
+* Secret crafting stations.
+
+* Master artisan trials.
+
+* Unique item histories.
+
+A legendary weapon might require:
+
+* Discovering an ancient blueprint.
+
+* Finding a rare ore.
+
+* Defeating a powerful creature.
+
+* Collecting a magical catalyst.
+
+* Unlocking a master forge.
+
+* Completing a special crafting process.
+
+### 12\. New technical systems
+
+Build the infrastructure that connects all these features.
+
+| System              | Responsibility                |
+| ------------------- | ----------------------------- |
+| Item Database       | Central item definitions      |
+| Recipe Manager      | Crafting recipes              |
+| Crafting Manager    | Crafting execution            |
+| Profession Manager  | Skill and mastery progression |
+| Resource Manager    | Gathering and regeneration    |
+| Inventory Manager   | Item storage and stacking     |
+| Equipment Manager   | Equipping and customization   |
+| Enchantment Manager | Magical modifications         |
+| Survival Manager    | Environmental needs           |
+| Farming Manager     | Crops and growth              |
+| Housing Manager     | Player property               |
+| Economy Integration | Prices and trading            |
+
+Use data-driven item definitions and avoid hardcoding individual recipes into gameplay logic.
+
+### 13\. Additional ambitious ideas
+
+![\[뉴스\] 아이스본에 추가될 무기를 고르자! 몬헌 월드 무기 디자인 컨테스트 후보작 | 웹진 인벤](https://images.openai.com/static-rsc-4/yhR7VmVQr6XGNTAx16Fb65r5td9iuj-XlrEPEPa1YC8IEqfLfRtyjOfKa1s5OFhDlmao76rGx1eAw3MrWY6mWVkMilry74oPpboAGvCy4Q4PkSbgFJlo-CrpYMZmL2Egwp-p1KlJtsKgxi-X_A13xZllodqmJyqohE4uBVCSFEMEaDVsTkPovxOhRRBchGEP?purpose=fullsize)
+
+Living equipment
+
+Rare equipment evolves through use, challenges, and discoveries.
+
+![WoW News vom Februar 2026](https://images.openai.com/static-rsc-4/wVCjV6eX-niX9Po23N_R0trnPeImNNPtqaAhRKr8o272pmW2UUh4gwXMWizxgIfE7CTB67R_TfzfQdM9WtTdyHBeQD5uDH6nPkwKvTQh0WfjgL6VY6wb7TDOnBkxJ2cYBSLkQxDEJIpt3JK_LcYBk9N7_fIt1s4hlH0SiNBiaL3PBvGXKyfWg4Bht12nOSNY?purpose=fullsize)
+
+Master crafting challenges
+
+Special crafting encounters requiring timing, precision, and material knowledge.
+
+![Search Results for  wind effects - Arthub.ai](https://images.openai.com/static-rsc-4/ngixgsT1i9l8sbakGO7GupIamyjwJrmeTyByV-kDFQEGL7jg9hkIDn4_8Km8wR1LujM_mOsNr3BGX4jB8BICeXYMKWDRYfBO3ptqs5rta5jMxHdajMYywEoJ-1PL0QZ2iRiKKdzaFjSt6-Snd2IiPVNBenp2XoYWnwAlLvX9BVIcMXrIxPhA6GKGz99DUQx2?purpose=fullsize)
+
+Rare resource cultivation
+
+Grow unusual materials that cannot easily be gathered in the wild.
+
+![Guilds - High Desert Institute](https://images.openai.com/static-rsc-4/lPWvSswaa_01EYBiPJBbcgSkLVCJM1XMY1ickPsMVdPP8MILXnPq6dak0qob9id1YH4Ips4nJG2_wVGptDn4MXtIiWTtWS-kq13qfI1fQHWeRspct7UNhh8jckyuZhM85NQK9xQWbbldZPeEPqfmHROzoEko56gSdmw0XFS9ExQF-_56o5MFIrEM71LxIXbu?purpose=fullsize)
+
+Artisan guilds
+
+Join specialized guilds, complete commissions, and compete for prestigious titles.
+
+### 14\. V6 implementation roadmap
+
+* Phase 1 — Item and inventory foundation
+
+    * Item database.
+
+    * Item categories.
+
+    * Item rarity.
+
+    * Stacking and storage.
+
+    * Equipment definitions.
+
+* Phase 2 — Crafting and professions
+
+    * Recipe manager.
+
+    * Crafting stations.
+
+    * Crafting quality.
+
+    * Profession progression.
+
+    * Recipe discovery.
+
+* Phase 3 — Gathering and resources
+
+    * Resource nodes.
+
+    * Gathering tools.
+
+    * Regional distribution.
+
+    * Resource regeneration.
+
+    * Rare materials.
+
+* Phase 4 — Equipment and enchanting
+
+    * Modular equipment.
+
+    * Item upgrades.
+
+    * Enchantments.
+
+    * Runes.
+
+    * Legendary crafting.
+
+* Phase 5 — Survival and player property
+
+    * Cooking.
+
+    * Environmental survival.
+
+    * Farming.
+
+    * Housing.
+
+    * Personal workshops.
+
+* Phase 6 — Economy and integration
+
+    * Merchant integration.
+
+    * Artisan reputation.
+
+    * Market systems.
+
+    * Quest rewards.
+
+    * World-state integration.
+
+    * Testing and balancing.
+
+### 15\. Master V6 development directive
+
+# AETHERIA — UPGRADE V6
+## ADVANCED CRAFTING, PROFESSIONS, SURVIVAL & EQUIPMENT EXPANSION
+
+### PRIMARY OBJECTIVE
+
+Expand Aetheria with a comprehensive item creation, crafting, gathering, profession, equipment customization, enchanting, survival, farming, and housing ecosystem.
+
+This upgrade must focus on additions, expansions, and improvements. Preserve existing working systems.
+
+### 1. PROJECT DISCOVERY
+
+- Inspect the existing inventory and item architecture.
+- Identify crafting, equipment, gathering, economy, and progression systems.
+- Identify existing data structures and save formats.
+- Reuse existing systems wherever possible.
+- Document integration points.
+- Create a staged implementation plan before major changes.
+
+### 2. ITEM AND INVENTORY SYSTEM
+
+Implement or expand:
+
+- Central item database.
+- Item categories.
+- Rarity and quality.
+- Item stacking.
+- Item durability where appropriate.
+- Item metadata.
+- Storage containers.
+- Equipment slots.
+- Item comparison.
+- Item descriptions.
+- Item serialization and persistence.
+
+### 3. CRAFTING SYSTEM
+
+Implement:
+
+- Data-driven recipes.
+- Crafting stations.
+- Material requirements.
+- Recipe discovery.
+- Crafting quality.
+- Crafting difficulty.
+- Success and failure outcomes.
+- Recipe experimentation.
+- Crafting experience.
+- Batch crafting.
+- Crafting history.
+
+### 4. PROFESSIONS
+
+Implement:
+
+- Blacksmithing.
+- Armoring.
+- Alchemy.
+- Enchanting.
+- Jewelry.
+- Cooking.
+- Leatherworking.
+- Carpentry.
+- Engineering.
+- Herbalism.
+- Hunting.
+- Mining.
+
+Each profession should support experience, mastery, perks, unlockable recipes, and specialized challenges.
+
+### 5. RESOURCE GATHERING
+
+Implement:
+
+- Resource nodes.
+- Gathering tools.
+- Regional resources.
+- Resource rarity.
+- Regeneration.
+- Gathering proficiency.
+- Rare discoveries.
+- Environmental modifiers.
+- Resource ecology.
+
+### 6. EQUIPMENT CUSTOMIZATION
+
+Implement:
+
+- Modular weapon components.
+- Armor components.
+- Material variations.
+- Equipment upgrades.
+- Runes.
+- Gems.
+- Enchantments.
+- Cosmetic customization.
+- Legendary equipment progression.
+
+### 7. ENCHANTING
+
+Implement:
+
+- Enchantment categories.
+- Elemental effects.
+- Defensive effects.
+- Offensive effects.
+- Utility effects.
+- Rune combinations.
+- Enchantment slots.
+- Compatibility rules.
+- Extraction and replacement.
+
+### 8. SURVIVAL AND COOKING
+
+Implement configurable:
+
+- Hunger.
+- Thirst.
+- Temperature.
+- Fatigue.
+- Camping.
+- Shelter.
+- Environmental exposure.
+- Cooking.
+- Food buffs.
+- Survival difficulty settings.
+
+### 9. FARMING AND HOUSING
+
+Implement:
+
+- Crop cultivation.
+- Growth stages.
+- Seasonal effects.
+- Harvesting.
+- Rare plants.
+- Livestock where appropriate.
+- Player housing.
+- Furniture placement.
+- Storage upgrades.
+- Functional workshops.
+- Trophy and display rooms.
+
+### 10. ECONOMY INTEGRATION
+
+Implement:
+
+- Merchant trading.
+- Regional material demand.
+- Crafting commissions.
+- Artisan reputation.
+- Profession-based rewards.
+- Rare recipe markets.
+- Economic events.
+
+### 11. DEVELOPER TOOLS
+
+Create:
+
+- Item database editor.
+- Recipe editor.
+- Crafting simulator.
+- Profession inspector.
+- Resource node debugger.
+- Equipment previewer.
+- Enchantment tester.
+- Economy inspector.
+- Inventory diagnostics.
+- Save compatibility tests.
+
+### 12. TECHNICAL REQUIREMENTS
+
+- Modular architecture.
+- Data-driven definitions.
+- Reliable inventory serialization.
+- Versioned save migration.
+- Consistent item identifiers.
+- Performance-conscious resource simulation.
+- Clear validation and error messages.
+- Automated tests.
+- Documentation.
+- No unnecessary duplication.
+- No regressions to existing systems.
+
+### 13. PRIORITIES
+
+P0: Item database, inventory foundation, crafting architecture.
+
+P1: Recipes, professions, gathering, and equipment.
+
+P2: Enchanting, item customization, and legendary crafting.
+
+P3: Cooking, survival, farming, and housing.
+
+P4: Advanced economy, artisan guilds, living equipment, and ambitious systems.
+
+### FINAL EXPECTATION
+
+Deliver a cohesive Aetheria V6 crafting and progression expansion.
+
+The systems must connect meaningfully: gathering feeds crafting, crafting feeds equipment progression, professions unlock specialized recipes, the economy rewards skilled artisans, and exploration provides rare materials.
+
+Prioritize depth, flexibility, usability, balance, and long-term extensibility.
+
+### My recommendation for V6
+
+The most important feature should be Modular Crafting & Equipment Creation.
+
+Don't make crafting just another menu where players exchange materials for items. Make it a system where materials, components, player expertise, recipes, and crafting stations all influence the final result.
+
+That gives Aetheria another major pillar beyond exploration and combat.
