@@ -1,0 +1,822 @@
+### AETHERIA — UPGRADE V5
+
+### Combat Evolution, Advanced AI & Tactical Gameplay
+
+For V5, I recommend a completely different focus: transform Aetheria's combat into a deep, responsive, intelligent action system.
+
+* V3: Blender and 3D production.
+
+* V4: Living world, NPCs, quests, and world simulation.
+
+* V5: Combat, enemies, bosses, abilities, weapons, and tactical encounters.
+
+The goal is to make every battle feel engaging, every enemy behave differently, and every weapon and ability have a purpose.
+
+![Open world action RPG Project TAL unveiled with announcement trailer | RPG Site](https://images.openai.com/static-rsc-4/aZpRJ8-z93LryfYOJP3aC21ljOtUFVZKid70jquu-FhEtLq_a5yUmyMETgTHRNEnTZRxaCyXiAc-rp4C9WJfjJMg1T8GjBYMeTRUxHVkO9MUVGV5EO5PwFSMH60K41N8Yp7i_dWzlv6DzPZh2krFJKbAkw8xT3nxPyPgFPsOJZcUFuWbXin-RNP5Aj2bBVeG?purpose=fullsize)
+
+![Italian action game Soulstice isn't just another Dark Souls clone | PC Gamer](https://images.openai.com/static-rsc-4/JVYsf_6XUgynNu6fhOMWnOmcRoAGBcPkCJp0nKt3zQsqMrML2lqmPr43Po8k8h69dLi-tOE_I_NG5cy7sb_gOmTBLHQTMK1cDauxnm8K16qfA1LnREt3Vlgxfg1cVy7xDrTAnwIcsUeDD06Sq7Gb_0bOhW0UuThpdx-WbpC6rUrzOsYNA7nOWE_X7EzEPJ2i?purpose=fullsize)
+
+![Lords of the Fallen II](https://images.openai.com/static-rsc-4/_YBa-4p-tb_4MF3FYqFYAf4FHIOQyucInA-5SGqAGky2nN5yPulu6yKi_PFgz3LVxa91HfB2r1AfUKnD0ImiAoihBhotnG6M2cSmnMB0HR-wdqNJ3QJJNXhNjD8QmpZjO3G3JjZtaRoUnps-z-8jH1dFWSTyQsOieufBSQD9TtMMhblaC_BD0wT7piMG2Enw?purpose=fullsize)
+
+### 1\. Advanced combat framework
+
+Build a unified combat system that supports multiple combat styles.
+
+Core additions:
+
+* Light and heavy attacks.
+
+* Charged attacks.
+
+* Combo chains.
+
+* Directional attacks.
+
+* Weapon-specific movesets.
+
+* Dodging and rolling.
+
+* Blocking and parrying.
+
+* Perfect dodge windows.
+
+* Stagger and knockback.
+
+* Interruptible attacks.
+
+* Aerial combat.
+
+* Finishing moves.
+
+* Target locking.
+
+* Context-sensitive attacks.
+
+Advanced feature: Combat Flow System
+
+Combat should respond to timing, positioning, weapon choice, enemy state, and player decisions.
+
+For example:
+
+* An enemy begins a heavy attack.
+
+* The player performs a perfectly timed dodge.
+
+* The enemy enters a brief recovery state.
+
+* The player executes a counterattack.
+
+* A successful counter builds a special combat resource.
+
+### 2\. Enemy intelligence and combat behaviors
+
+![Fantasy AI Image Generator & Prompt | Gallery Detail | Lavie AI](https://images.openai.com/static-rsc-4/zlK8zTBtuc00YEElOcXx_k3qv-qPMEIHlfkCdY96fHtj7dIMKKo9m_GzWN4RKZEF1c5_RuES8fzVCI4jEBapuurug87QxmnNWo0_f1hbwUrhUX-YP7pH0qHHdDj3v5ZQJFwHb8uJRHnW0xm_NbNsfgsYSU5oOuziOrtgMY_XItQ4PzC5p2CrzN_ps38gOopr?purpose=fullsize)
+
+![The Mogger and the Aarambh | Story.com](https://images.openai.com/static-rsc-4/Mzs-g_MIQskquVvJbSCbkj7fHd_-EdclDoQFVQQZUA0SPuDd0tGl4CD1Lre2Xaf7Mb6q_P_wfLmAe7HWP2EDyhcboNILvgeDJRzZS8Vi80kmXb0GOMeLnQCtKW6h0CRGV-dT7cZNSvkXtYmZXFy8_YZ-aokG6GRNcQXE9y_u3Jv50ZOkQ6dQPls2ODWOLAHo?purpose=fullsize)
+
+![30 Best Mysterious Character Design Ideas You Should Check](https://images.openai.com/static-rsc-4/M7tce8Cgx0ljQfmYnIj6xWkEtGkzNfsfIVo3O-G354Nd94O6jNKPxXt3o7e2xJe_kwa11dpXL8hPmzjnkfUIfL__k_CaQ1lnrTJfAgGhRdmy2tdfoNcrD6dMBuXXaExtZ051mCHLg0RpJAHNByB9_2qZ6p7mDlMZBtrswrACwX0Azdw9cxjnaKJ8DKPoZde9?purpose=fullsize)
+
+![WoW Shadowlands Patch 9.1 - Chains of Domination](https://images.openai.com/static-rsc-4/n0w-XG1ERYoVw9636GCGykNxRyXF8aSeGzYVFT8ciDYBvmhCM4e5aQ24ht1oPxnatvnnOdoeNMOZ2fdO53Rkhaw0pl-66U5lhm2AYTHFRY9TnNQxUDIiOa06eKP3tKxbjLLONxGLvXZe6VeIkySjJOvMogL-jBka3xC3zoof6GB1qNW0vtajtzbOmuGC4Ir1?purpose=fullsize)
+
+![The Beast](https://images.openai.com/static-rsc-4/krK6vWre0m5tYn_l17mUpbEmey7gVUGv-HC55rlP3DTrxzqTNQzO7AFecexmdhPqsWJOpY_Uj5TeWy0vD2tBmwRnaSgDjOyyv5tNA75fm2qu8HCpJd-ZW3Rne8zRrusD064pqyXGTXdclt7Qh62tDcunVrQVnF57Yy3WMXi79GiBQ8MOfnc35oooDscEIr0F?purpose=fullsize)
+
+![Age of Magic: Wallpapers :: Behance](https://images.openai.com/static-rsc-4/fopT_F6kKarop7Y52kyQjjeCrmPyGugVAu3Npata0-yyMzXS1lDj7FfFJPWWRkr2FPan7XR3HylQbkmnaaf0l71p7Ia1jSs0mdCCHKTFsufR4QnuQGTZFmwHwUCbdKKGuRK6RzQt-bNd4TExzaIP57V-7t29UHuDEzbzrnhOEDg_9vXq4Oy9zRTRkShRMBoy?purpose=fullsize)
+
+![Vydavatel Lords of the Fallen nebude do svých her dávat politickou agendu - novinka](https://images.openai.com/static-rsc-4/xCVSEQkRWIvlCjnXwGDksLxHfuHlei55s_bf_5pyGthWlw5wL7672wHxkz6IW1XmFh1TBhTWqyTQ--06CiX6CV-MODb796A31oBTo2z23KoKnnwSnsIlZgIxJFUi6uPBZFNF-nrIS8Dap3rVXLhH4I0rLFEk6PPdzbJ2PO2bdYdj7sO9OMNjg2F9ysDffHLq?purpose=fullsize)
+
+![Russell Dongjun Lu | Concept Art World](https://images.openai.com/static-rsc-4/k28mAaRT1lrK5d5mT6LO4RJczc_kLVbcSKQpmhRQHIVWORkzJ_4rM3dtoqNYjUAxEZNz_qWAZLugLT__HhWNVT0d17-6JShOhucnMIbFafOFmV19vl_a1kRNOnKtqU9iimKVhqiekl7-EXISI-l4QZtcAg8Nj4OsjXl1O5CLMq6EdTI2v07ID1YncygcxXcq?purpose=fullsize)
+
+![Person confronting giant horned monster in dark, foggy landscape | Deep Dream Generator](https://images.openai.com/static-rsc-4/cDx4xvImDL5r4TkqNTnbCRvhon-AWlG33MA3-yY35yrGWqYoIziwjRvv5nxYiec9dX5-vVtu9m94MMmXjI7AbLBN90-pkcc9jscJf40G5DdbUJN8uDXT9K3gpK9nGLTj0EwvU7L_Ro_2w6IUydUoHrQNxpoDd1SR7lHpVyzoUjD8cZaWfvq2j2ZaEoebYKqk?purpose=fullsize)
+
+![Steam Community :: Legends of Eisenwald](https://images.openai.com/static-rsc-4/PSxwbhEhzvc8a9UNRM7gvnr_DTze-IeoRgKKl04TVKJnn9gLNlc3_yPkDULbKdyQhYlWtBKnVX2SLP3o1gC9bN-JyDDv0GF8S6xGW8aCgQeoNRk_tKrPV_bJfnqLrRda2KH_HT8wtmsKW7PaOARLg1Aur-dWj86zNv4z79R-jlIYADss-oh3u4wAE3A5xi92?purpose=fullsize)
+
+![Pin on Fantasy](https://images.openai.com/static-rsc-4/8eFN3Ua__VpXCAGwCZUd5fRHbIz6D0en3NGeNNj49grUtgo5DcnY5lRShgQ3wce7IDK8f8uPP48vGfP-znfYcw8fVvzxWkgtShpmWO6YDDUMvalIhjQqg-siRQDtlfSl0lcbrcTGJCASGIVUj-kYYL4N3M3adsEoCLyqnS0FuXndk4u0rUFJEJhGBeuxdEVS?purpose=fullsize)
+
+![Rogue: Variant Assassin  in Midgard | World Anvil](https://images.openai.com/static-rsc-4/O5Nz1M0cXaTFlTkjo62XhyLrgWZAYCWoxrrhSTiA0Yqswzy11iEKet52qZrGGCPrVHty__9CFG5eEnEwE3MMkN8XgJmP1NRFexobMXEiAZH5wVgm85wH9aOtsfI8FXcrwvDfxNfyXgUYHzZ16bn7Xuxs8crhhBB_MGwxkDG4EmP5uCK2hXKFrySQnaDRM5_H?purpose=fullsize)
+
+Give enemies distinct tactical identities.
+
+| Enemy archetype | Combat behavior                       |
+| --------------- | ------------------------------------- |
+| Berserker       | Aggressive attacks and heavy pressure |
+| Guardian        | Blocks and protects allies            |
+| Assassin        | Flanks and performs ambushes          |
+| Archer          | Maintains distance and uses cover     |
+| Mage            | Uses ranged magic and area attacks    |
+| Hunter          | Tracks and pursues the player         |
+| Commander       | Coordinates nearby enemies            |
+| Brute           | Slow attacks with high impact         |
+| Support         | Heals or strengthens allies           |
+| Shapeshifter    | Changes tactics during combat         |
+
+Advanced AI additions:
+
+* Threat assessment.
+
+* Player movement prediction.
+
+* Attack telegraphing.
+
+* Tactical positioning.
+
+* Group coordination.
+
+* Retreat and regroup behavior.
+
+* Environmental awareness.
+
+* Adaptive attack selection.
+
+* Difficulty scaling based on encounter design.
+
+Avoid enemies that simply run toward the player and repeatedly attack.
+
+### 3\. Boss battle framework
+
+![PvPvE Extraction RPG Dungeonborne Gets One Last Playtest Ahead of Launch | TechRaptor](https://images.openai.com/static-rsc-4/rsGUIIXAKvGWl4DMQJjkMJ8rIdO-hG5MaXDMjK5DpG3-ZyvxADFVIG22HUd8pVuRIdorGXf2EdGhWyJJDU1DfUBSynCI0XHgPmh8CdKITPLxrq80-abPT5L3gT5MUzhgABfFWNLMA1hPUSQ7xcWrZcVkZizY6z_ogcTPwzYYObFiD6Fi1kHcJzesDYT9eVz9?purpose=fullsize)
+
+![Awesome GPT Image 2 Prompts](https://images.openai.com/static-rsc-4/qnQDVJ7kRtSEzrGW8ZK6a8xcVvWnm4rdUieHHiOzC67Hr0bD1V-mWiCOafQqwLtU3NezgacTgWCUXKQ4Gey_Gx5EWcs96rmbzO9bYOGA_fN7t3C-ugWyZ0cAgxHqG9MBuPKVMSybCSpKfenYuF--i3UkCbw56OjizuEXTzNn3bw_IDYMZbMHBT-i5vp1PZ_j?purpose=fullsize)
+
+![Last Epoch is everything I wished Diablo 4 was, and the first ARPG to drag me away from Path of Exile in over a decade | PC Gamer](https://images.openai.com/static-rsc-4/sdfEmLUZF3rB4JEyI5taRd6aLdvGlCVrsnHHgOMyrwIWYVkvvdljEC0J-wUtuo9gL817ZMjX8U_4BOaZP4aDj4a3W2hqA3SE-GYjohXo6PgZbOEX-nvefiyBv_ojsHQHdjRx3K6uJRLkQvjODha1QXHRp0aLCG26v_p8Z8v3183QZU4R0e1VXYXNbz3Fe-Nh?purpose=fullsize)
+
+![《龙之信条2：黑暗觉者》新截图 觉醒者和金发美女等_3DM单机](https://images.openai.com/static-rsc-4/HkZMHuO8m7t5m3JC3duhoifHVb1l4iHkihqSjsNe4K-btV0Lx9JmsRhW8jhrKyW3632z-DLg2kSGaeNyfaAHKq2_hKwAmQY4e6RimXGpINWVWbcecJJI7Lx4T6oIDcXAOMrDep8ySi5_wiB7Emo8stZ4nth79NksbY-sX7HJyOJqNTr5u6N-UeZb7n3H147w?purpose=fullsize)
+
+![Red Refuge (Hard) – Tenacity](https://images.openai.com/static-rsc-4/jOH8RuyPFcSOzUiS2V8ZS2dc_qNJlS9qIB0H7zTYCwjJefNv8ruLWyYnBXhMlMI-znWbF6QwYzz0WJBEOob4fXllRxFHgokjlRVTgcSuqtvKkYlnOG7Jh9JJUjAXLR0G3ANHWswRUXGRamvtb2El3mtjAgAyeU4IJyZanMDVDmG11aozCd2YbYQSmOuxgvfO?purpose=fullsize)
+
+![《死灵之地》（Necrom）预览：理智边缘与尼米克堡垒 - 新闻 - 上古卷轴OL攻略](https://images.openai.com/static-rsc-4/MJqI94rbUmdXJMWQr2-a_tmV9QOo-7sEueYpu2w_5xlXURHvYQR2fCqk_fyezIjrmjPpIks5Yb7NjlZAcx8SOaIF33IJQIRCwHbQrnizVMUzMPDBROzov8eeuKdDysaguSnSRn4yLLr0LREoOaSZRlW4bQL5SlbK2k0XQ0jUTpFioZbJch1Lt1Tm69PzvJqJ?purpose=fullsize)
+
+![Is Elden Ring’s DLC Difficulty Justifiable? | Gamers](https://images.openai.com/static-rsc-4/dRWtja3sx_CKiuXa8mu4rlWJWxuwW19Gi8-9b66mk8DwVqmGhxLsg-75gbG936Pv9jlNKS_Eq0TZPQX1RjxcY9wepgsCQdWRoNxifQUHczJV9AVJ2wFyvS0gv2ROw-FlfxG_zFndugJ4TQHHTgp4vWxJS730dqPLJ2war60nVi1Ms4ipedbXsjTEJWviKn7W?purpose=fullsize)
+
+![Join Become Legends. Face the Lich-God - D&D Beyond / Discord / Owlbear Rodeo - D20 Modern | StartPlaying Games](https://images.openai.com/static-rsc-4/NUjb_dpLkqZkLYwhhXuM0nVMG6_-uxW7QkBH-D4exWsej1XM3FhB6c0lJcGS37Bult01NCT5s6fYknSyHsdT8bElio78tK3XqSP0G6xmBpFHuo3cjqLqwEGp_Y7VWYIR2JvgKcpZsKdk90YLhmoCG_wZrfo78MiizmX4WVE0BX26dRSuRxb560eA5XMquZI4?purpose=fullsize)
+
+![Golem Boss Art - Guild Wars 2 Art Gallery](https://images.openai.com/static-rsc-4/7aE5M3yzncw0v04XaT7-cTmeHkRZ5gwE0pQWU4bjL0DHub7dQok34YZTBG6V6BuDP-kwenzGIHduM78QBAtga4I-eUTOV_AJGq078I8OO5_Xl9hgA6oDVCr8sljU8OMiqWOQky3_vS4o-JW7YWwnjls8hM3h0EMabyT5Bh8nQo28MylnCLytouHcjx0ZiWgF?purpose=fullsize)
+
+![Tides of Annihilation : boss, durée de vie, armes, de nouveaux détails sur le gameplay qui donnent envie ! - Breakflip](https://images.openai.com/static-rsc-4/vVWtCcTzTj8O1P8YlkoUp_H4Mhwz2enpDkCaWcy9gwhk5c3ES2x35gd-ntcSQCErw5VLzrOX_gOk9vA4TQ-xELgdjPPu3BYCU-kVcoRNn5yoRt3zD_BHiFvG7EjWGN0rS54kBzCSHXttujoimQJb1T2xRtHUyEsZvFjhExpzH_TTJ_U4AAljJHorsbO_kqr2?purpose=fullsize)
+
+![Asterigos: Call of the Paragons di Steam](https://images.openai.com/static-rsc-4/wZPavdvYCc2PkoStBdpHax67bB914pzh7okMUNT2qso8DogIx7c_d4ZiqW_EVxUj0ww-w1EdOwfSwnO68J9n1VA7C7c96NSNmc1EaWk-Ll6YRfAhux4epUGSi3jMmooTFahvaCUQPpdjjn2LWG5F-Rqbzn1u3IiOmiOBJYyYmkRNrGZclnlTVBqjXk6E5FD8?purpose=fullsize)
+
+![Monster Abilities Part 4 – Intelligence – DMDave Publishing](https://images.openai.com/static-rsc-4/3zf_s01S5k9uCGaIXZsqhUCxAhhqWFZyXdYyoeIZeaSN8c7GeMMvSxM5Li8KFMfjT-E40Ctq8v2wSaVSmiolHhnENxg2gsZAh9dmqSeGOcbL_eqmBxeUrw7UmUJK1aUMOrXcmKnhEvj_SkC28OR3CIF2W3gZRe5D7B5MI87Naz7oNHINs027AQnW0TNbRXVT?purpose=fullsize)
+
+Create a reusable boss framework.
+
+Boss features:
+
+* Multiple combat phases.
+
+* Unique attack patterns.
+
+* Phase transitions.
+
+* Environmental hazards.
+
+* Summoned enemies.
+
+* Weak points.
+
+* Armor destruction.
+
+* Special executions.
+
+* Dynamic music states.
+
+* Unique victory sequences.
+
+Example boss structure:
+
+The Ancient Colossus
+
+![Awesome GPT Image 2 Prompts](https://images.openai.com/static-rsc-4/qnQDVJ7kRtSEzrGW8ZK6a8xcVvWnm4rdUieHHiOzC67Hr0bD1V-mWiCOafQqwLtU3NezgacTgWCUXKQ4Gey_Gx5EWcs96rmbzO9bYOGA_fN7t3C-ugWyZ0cAgxHqG9MBuPKVMSybCSpKfenYuF--i3UkCbw56OjizuEXTzNn3bw_IDYMZbMHBT-i5vp1PZ_j?purpose=fullsize)
+
+* Phase 1 — Awakening
+
+    Slow attacks, ground slams, and defensive armor.
+
+* Phase 2 — Overload
+
+    Runes activate, attacks become faster, and arena hazards appear.
+
+* Phase 3 — Collapse
+
+    Armor breaks, weak points become exposed, and the boss gains desperate attacks.
+
+### 4\. Weapon mastery and combat identity
+
+Build a complete weapon framework rather than treating weapons as simple damage values.
+
+![Greatsword Showcase - News | Official New World: Aeternum Website](https://images.openai.com/static-rsc-4/IU5mIklijLBFcNfBrk4yRlElgumRRPu5ALckamgEexP_Idd1uVBsdbGs4BgchIV3snOSTA_jsNn4A4U9ro-L-0ERtBg8xjKXkp9ohNkE5qg89YNQE_OTyjC4GbMBeYkhWZz6U9oKSovsdFlOVrtNZ4dYoqIuUHXkma2f8gBMNAjZVn07vIIg_OzQP-bmjrWD?purpose=fullsize)
+
+Greatswords
+
+Heavy attacks, stagger, powerful finishers.
+
+![The Best 25 Midjourney Prompts for Weapon](https://images.openai.com/static-rsc-4/w6dvM1s03tRJ6ZinUmr77idV0TRSgECj2hpXRw81hTOVBCg-M5w_NuELUSlrsuZQIHagosaYS8TLsMUyUFLkRTBFwNJh_lmQeyKAYg4cQd0tvZyZZ0PDG12YtUaN9B_yAuqK8h8zjwAT0n5QVDg-KvHAZB5H5CB24hBkhFuz58JrNBujLPVk_FwdKCBHPBhc?purpose=fullsize)
+
+Dual daggers
+
+Speed, evasion, critical attacks.
+
+![Mage Staff design commission by Modefact on DeviantArt](https://images.openai.com/static-rsc-4/5kcotMwK053oE8T3OBpuoI6iBNT3H7f_neavjBYrK_sM5AqjpfunYaAIFWB72N8eCcfn8fkNp4-Xojk_xrwPswSJ9WJzkmH6hAdvi-TECh1jZCnwrhpCREeDTqb-0c2bgjLcy0BXXqRjytd3XVg4Xx-Rma42EWUowD_uQD3-2q7_y3lowVCTzFzY7922s2lm?purpose=fullsize)
+
+Magic staffs
+
+Spell amplification and ranged combat.
+
+![spears by Wen-M on DeviantArt](https://images.openai.com/static-rsc-4/u54hEgvWWhgYr5t156EIPEARt9d04NxRUBB2wZHfo9IlV3Kmq2ia29qxI1Y9csnxQSuY-wF3tLcmwljywdwPUx_mrFmdV0X3V334l4tVV8vAgJ_wxpITYqO1S3WgUz2hco0Oys-0UZd9BszXtoj8Unpl1QZxDtmpm_EqexWC2D5RnRlC_K9VpzPvuzlsniiA?purpose=fullsize)
+
+Spears
+
+Reach, precision, counterattacks.
+
+Additional weapon families:
+
+* Axes.
+
+* Hammers.
+
+* Bows.
+
+* Crossbows.
+
+* Shields.
+
+* Polearms.
+
+* Fist weapons.
+
+* Magical blades.
+
+* Legendary weapons.
+
+Each weapon family should have its own:
+
+* Attack animations.
+
+* Combo system.
+
+* Heavy attacks.
+
+* Special ability.
+
+* Mastery progression.
+
+* Combat strengths and weaknesses.
+
+* Sound and visual effects.
+
+### 5\. Ability and magic system
+
+![Shadow of the Erdtree cover story: The culmination of decades of FromSoftware RPGs, and a gargantuan finale for Elden Ring | PC Gamer](https://images.openai.com/static-rsc-4/033CtVjudZDy7z-B8OdRFEw33cSRTAM7GvsnQ4Ly3C00x8Rl-zDYNGSmxrPyfHe_wRz3KzTpLs5WqV9OD9hylfqE-ePRHUpOIunxchBJ80ZYUcg6SDPMi7uqZNPNdKot6F7NOXXIW05dO3mCiw8B2o4qCSMfdoJ3DmNtok210zxgsZwrEueApmnafFQOzJNS?purpose=fullsize)
+
+![Valve reveals 2021's best Steam games by revenue and peak player count | TechSpot](https://images.openai.com/static-rsc-4/h_If9upSFUctQW83XNM0gLjty4BulrLdkYYXlLjFjZcd6LdpQIkWflFLs1rX4Shc_BuuBRPIAHURAf30UUl1lcO_9rC0ScngnIYLOrlXzKtZQ2uQzW8EIBYU7gAwvGXACw4ELYNSCx-bt6f2Jex1wfoDu2eCBgsGU3cHFPBrwUc7UYOyCL70hgzMMFzN6j3Z?purpose=fullsize)
+
+![Spells in World of DanMachi | Friends & Fables](https://images.openai.com/static-rsc-4/ZdTfovanLHaJlIvmwjmQAfQYqDLmveH504r5ssz41GfhAp83ptNQBXQb6FYvqEct84Ne0H9pDfNzQPs2ZtCPnBeSfmz-NgY4bGW7jKP1EhE9Hb8LlFoO5mbDlfgfV_S5RWTos1P_iM1J6u60B90mne1ZjVN6R8BuVLRU8AtR6jNtJxsPl3IPwkj436MDDsHN?purpose=fullsize)
+
+![Level Up Your Gaming Odyssey: Insights and Laughs Await! : LevelUpTalk](https://images.openai.com/static-rsc-4/g8htsYdxb-Xn3xbPuM4q5ZaDgzCvmSignbC5pqu1PGoD_TyFEPZT0Qa6ngfkkDfM223MQrm5qAaiW9bRCW9H4RbamSTW4KeSNhSW-ol0fSZYpZmu8YbREDnjn4Mnxc5m7gD--rMyO019sJnCCXZqIiSLfjp45MfkklrrvVqjmNdDlCkAeC7l9uozURT0Z94W?purpose=fullsize)
+
+![Rift Mage Build - Ice Breaker | Dragon Age: Inquisition (DAI)](https://images.openai.com/static-rsc-4/IHyHHl-IFcpVS2hEquR7CMNIZjfOpfCoOss4bwMBrhqb6Ok-GKBcsW1yR1vJb-BYQCpH78xuCd99jSnPpTN0VbDgnBYnHRJjkn-PAAroatAxbXXA9BjGpwN4XxkS470PScBKbmFkHNxpsjfov6y622iqg8uoa41YK_UkUxtNrer1CrEYsqDYOMos9C7VrG2S?purpose=fullsize)
+
+![PoE 2 Entangle Plant Caster with Cast-on-Crit Comet: Gem Links, Rotation, CI Defense, and Mana Fixes | Elyxir](https://images.openai.com/static-rsc-4/qW3dmAu1FOnNy2_SYQFvFNR_NA9uGsQ7ZbDAsWbybWotccpVWOhOzypDB4x0nUYoDrADJpPJ0cvLYfEjBukthFwT38bZ5M_GEhb3pZWSpdw3hIiLNqVVxQWiOb6bsge-THbhGffpYsWUcsZZOD68lhUq1rM5pl7A56LX_0wYkq5g5Ra-tv1zMl1ZYQxfF6M4?purpose=fullsize)
+
+![This mage-based battle royale game is so cool it makes me wish it wasn't battle royale | PC Gamer](https://images.openai.com/static-rsc-4/aDmrXrvcxnkOEraLphH-BrLojjQYVivJuZQGun6wHN3L8Fc2PWuoAJulAtXbe5obkBkoiaVAwh9M9uZvzETEByYI1DkRJb1HfF7nioSruTJen7QZm4mmVA4JXAZGEwIqkqMpiE588EQ3wVjNngJ3M8UDSl2oRh3yypM2lz1Xx0syh9REyKpmRnU6V4XtVYRD?purpose=fullsize)
+
+![Armor of Agathys 5e - Protective Spell in D&D 5th Edition – DND Toolkit](https://images.openai.com/static-rsc-4/xBHqQG8qAhkfv4PfXM2VuAsxMXg3QfRE6d3pdmiWp8mjeWI31UrNzmM9ahzgbfXm1lmn_d35RhhSmLtnwKk-L-eWz-lmlqgNLNonSlPcGlkUywF_2YGw6TbtlKbXK-CMYcrhuEm1o8CS2LHy13pEB-BWZv53ACu17nYDT1-GX3OjlOqecb0tsusaanT4O874?purpose=fullsize)
+
+![Buy Dragon's Dogma 2 Deluxe Edition - PC (Steam) - Europe](https://images.openai.com/static-rsc-4/kEUBSjQ4UU-Ti_NK61xDAJfuPlacllDAkNwH2yJ0NAVQNBh9FlFa-8Uw6GuO-6Pt3Hv9ausnJxazwtqXzX3MNTlaq7OjvM5_9TXiUQhs0ZKYk3kyhbT9K7B0VwnXWhz1NV2g99HixYvFtfSdVgxvZAGoknoEc4CcGT9AUvfgFABKNYnyjg_dy3KP76Czh4p5?purpose=fullsize)
+
+![Mastering the Tempest Mage Storm Sorcery Sorcerer in D&D 5e](https://images.openai.com/static-rsc-4/mFgK1kjdyVy795FFMPwYVK9QN7m97skxwZTKqrzNcOqfLiW_guT4qxQf-wYZqSt8aklRiR6TxuELZVLcecsRL5NQu00CIQ2ofkNsDoAH3L2GbSpt0oGpGDrmr5RrObTaWbpYfQ1M7obyewJPwPtGmcL-CS7c0KMnvR-q3JfgAjPq6T-6gFkPvyw-Mfd3k_Ut?purpose=fullsize)
+
+![Dark Souls 3: The Ringed City - So startet ihr den DLC](https://images.openai.com/static-rsc-4/94i9ej_5OTjcbkDnXhoH8n7vt_0-Z7okndeLCwVaO8ACaTeE3ykiPSPeL4M0vK_nXjqMB5gINCkJSAqcSNXJ6pTPVfPMuoIICZy2F6J2DOlfBNz31kjcfVlvCsS9s8APfGup0e3qGoTMwJIE_r9dJZtHdfwbcBP6aBLH7Sf-y9CeQ4KjM32kMoCalf14ANyJ?purpose=fullsize)
+
+![Top 10 D&D Most Damaging Spells That Obliterate Foes | Gamers Decide](https://images.openai.com/static-rsc-4/7Omjm3K_vrixS5RSnEMFNdr_vW2MXCDnbiHBlfOTzNt68I6QfLo4FBZYmWydfmGdDSLiPAjUfaxvRP-pVFFaNWBYuG_7fPd4U01Wh_Hc6tiNc_BQlpKApN9zgDvu3xppRtV6-POetHdIWkRj6YkNFaSL55Efd40BEc1bA_ELzNPUM8RsdTjxSLIp1FlMV7tS?purpose=fullsize)
+
+Create a flexible ability framework.
+
+Magic schools:
+
+* Fire.
+
+* Ice.
+
+* Lightning.
+
+* Earth.
+
+* Wind.
+
+* Shadow.
+
+* Light.
+
+* Nature.
+
+* Arcane.
+
+* Blood magic.
+
+Ability categories:
+
+* Offensive spells.
+
+* Defensive abilities.
+
+* Mobility abilities.
+
+* Summoning.
+
+* Healing.
+
+* Crowd control.
+
+* Buffs and debuffs.
+
+* Ultimate abilities.
+
+Advanced feature: Ability Synergies
+
+Allow abilities to interact:
+
+* Ice freezes enemies, then heavy attacks can shatter them.
+
+* Water amplifies lightning effects.
+
+* Wind spreads fire.
+
+* Earth creates defensive barriers.
+
+* Shadow abilities improve stealth attacks.
+
+Design these interactions with clear balance rules and readable visual feedback.
+
+### 6\. Damage, armor and status effects
+
+Develop a comprehensive combat calculation system.
+
+| System           | Additions                       |
+| ---------------- | ------------------------------- |
+| Damage           | Physical, elemental, magical    |
+| Defense          | Armor, resistance, blocking     |
+| Criticals        | Critical chance and multipliers |
+| Stagger          | Poise and interruption          |
+| Status           | Burn, freeze, poison, shock     |
+| Weaknesses       | Elemental vulnerabilities       |
+| Damage over time | Burning, bleeding, poison       |
+| Healing          | Direct healing and regeneration |
+
+Add combat feedback for damage numbers, critical hits, resistance, status application, and enemy stagger.
+
+Keep the calculations data-driven so weapons and enemies can be balanced without rewriting combat code.
+
+### 7\. Advanced hit detection and animation
+
+This is a particularly important technical upgrade.
+
+Implement:
+
+* Weapon collision detection.
+
+* Hitboxes and hurtboxes.
+
+* Animation-driven attack windows.
+
+* Root motion support where appropriate.
+
+* Motion blending.
+
+* Attack cancellation rules.
+
+* Combo timing windows.
+
+* Hit reactions.
+
+* Directional knockback.
+
+* Animation interruption.
+
+* Foot placement and movement consistency.
+
+Ensure a weapon only deals damage during the correct attack window, not simply whenever its collider touches an enemy.
+
+### 8\. Tactical combat environments
+
+![Аллоды Онлайн, часть 3. Рейды, траи и Excel (подчасть 1) - 03.05.18 14:22 | Пикабу](https://images.openai.com/static-rsc-4/jmRF4EK9GhXK305VWkXKd1t9TFAUjgGhROiaS6KPqKioFkAxJn3K5CyyJK56vMKJHgGAICLjAoxALR2o0lOIqBfDzFonEhVESP3JaykfECyi3g9JZ8ZfEw2sIqeu5TGM852bqtwy1gkZlN93-LDHO8glOcwPJwmOP9eKufSry5gJr82rwra0pFG3wGYbLwIY?purpose=fullsize)
+
+![Fire Joker review of the 3 reel slot with 800x max win and demo](https://images.openai.com/static-rsc-4/Os_Jf7Yb0GxJqfdvJcYLtc05q3IT6X-RADE5J3WqdzHKhwVDy7RuQStTUP_l7EK9KV0NRo0xYzfEGeI9ozCAN7QXRuszkLY2EPbxkxduULLUkIdUc4JwornuqEw247C8nClYN3Lv62UQE3gOffKKqG1gl3LeeolrGaZWn0bdxroiM6ZeIElwfde8YJSDb8T8?purpose=fullsize)
+
+![Battle arena with runes at night in magic forest](https://images.openai.com/static-rsc-4/hJjFfwzdbgq0pQhkJERxT-Mq3krW488GNfB-GLk5C2Pg5mas9tDaAgeCndDCO6WmB6Q1PA2HitLCqBksoL_wfQqQ2BDxM3bOZHLu-Uf5fqwiACror6sxoK3Qffl_1-FRlhHbQOmgdCSqooxpBJSgdj61eojXNzt7S4Oh6-2DWYkt1KtfigexU-A559o2MzjU?purpose=fullsize)
+
+![TOME: Immortal Arena--\\nMOBA Character Art :: Behance](https://images.openai.com/static-rsc-4/x57Z5obRbvdGpnbZCP0jLsBZI-P6VNPY_1NHUVvFsqCKmMstKuDo2GzTbLuX6uw5pz639Gq2fjhXPSDL-zXvHeZXf4WtG0ELUuvifv88s_mL5KH1f69rZfDBh0rG0pVot8BOR8uPGOpegzA_r3ntj__KwdxWjAuPa6hDsF1vZ__BGuW4UYyU5azrifKy1VkT?purpose=fullsize)
+
+![Save 51% on Stellar Dawn: Survivor on Steam](https://images.openai.com/static-rsc-4/MBj4DJy8pMjJ0BsHLtXknKMVLPO3VjbRHRIjnAdb4kRyuuAc83_NXPHt9pJrqptI2bE-7F478xh8EabZuo7bShRRoNVm_M0dfJFGWajQ7rSc6bje5bZv6teWYEUGyZFwKtix9XZo4yDB6Sd1RMynFILc12f3aNIH3Zv1l3iET1F5SjCheWlXU572FoLLaLpe?purpose=fullsize)
+
+![News
+ – Tagged "Eldritch"– Beneos Battlemaps](https://images.openai.com/static-rsc-4/-xwAMFs-jhXiHHUCWZGkWZ8gST3EH52hi31wkaLl11DdJw4dm6nRDnKKgGUxaTqWwcKImMRMMvBmrpVO5Vdz8tID9DBZQmzMOfPx8BuDkURVUXEa7KR2cHVpMlj7EdZkH65Gwa5t4F-SiqOLeRAtUdrWWUBV9A0rEv_ujr8vMtSnWTg-nzDr7kcczp9XQVhZ?purpose=fullsize)
+
+![Lava Boss Concept by JoshEiten on deviantART | Environmental art, Art, Concept art](https://images.openai.com/static-rsc-4/gfeVn0gtHlzXh61CzDhpnwwOI-uwQLGr-Kk1-5twbqVmYo30m07x-L3hnQtn5u0j2Q_-bP3gyNJpqLnR8w87NrPR41lKqIOfEWovDfqzb_5muTTu1q4EHh40c1jYMY2wEiu4hnVMfx1NduUGCm0mn-TjsSTb3VRcE1MYDgDy-uGXgyFwKuYah40XBCm4nY6a?purpose=fullsize)
+
+![Portfolio - Leartes Studios](https://images.openai.com/static-rsc-4/QyOiQN28JbYBKQN8eERgk8FX7tF_Ks4mnYTdhszu9INTwDBDt74nUB1-BUMBrCAKJ5_b7_Qofl237qlEWOTZ69m_p4lDArEJd0MeJwxWDal9JQs2GrFzI5leu-2caWj9oU7C5Ud0ThElyigWdw5jRoBvC0kjnTeSndpOdKJmm7VGGsLp8EopXZVUSrxNuety?purpose=fullsize)
+
+![Brigandine: Abyss sort le 27 août sur Switch 2, PS5 et PC | SmartCDKeys](https://images.openai.com/static-rsc-4/-NMuQGv5l97zQtlcdt9G-hWgNtvh5J2z06Z9gPf_fUPnulMCt92XyTLWIQez9uX5zjZtNgBM78MQjvmwxq_S_SfknB2qDraHe1KCmMRE3DtqvvW5-pkuld1QK8klk43m1_oP4C1NE3X5UtDWn4gyWPI5SQ8aHldl8c0Jic5XtFyQCVNia-0qOcdpmgmTdxA_?purpose=fullsize)
+
+![Goodbye Heroes of Newerth - HoN Shuts its doors today](https://images.openai.com/static-rsc-4/HHQUwscDejJ-Pw05zkEVb0cGFg9WrhJemKWggGJP1wTURFxSNc1MB81cCMk7yGbmxder9Unkv_eq_7ohZ3Y1elnMAX_o0m7GCPOUDdaRX4cjTYq7WkIHV30U8SD5qpS9HiqVoGuyXc7Gbtk49B6MHVRtHi6gZDOtlKqyOkpNFzHrb84t6VDcXjWOTwZfQsDu?purpose=fullsize)
+
+![Sil and the Fading World Demo on Steam](https://images.openai.com/static-rsc-4/r2PjlqIAK2UP3dFzpRk1Q1Q8OOEKA1sd0BhC4RQjowYfqkIWBg0A68H8o601bt29SyXe7tvgmCH20l6zmr51aXN5jXdteu5F-HyyYd67KC1fYCWX6P9EQX_KnRhayOayp4_qx3xLeNCFT6Xe65qkTy48hEiojKzl7YbQVEReQNcGuRc50gLv_pRmbD3bn76L?purpose=fullsize)
+
+![Teams | Raid: Shadow Legends | Gestal GG](https://images.openai.com/static-rsc-4/zj7x2ydALaSl6GEiYYBxjY_zAJw9eysBKuu1En7hEj93nDaLXYB0u5l23PKgqi7bzo4qJGVNnjp5btDcsRvTi1o7FbanEog8Jg3GY9fqJZLZLM6eEemm76eycwcsusxGKVam8DrLl1qoVkR5KUMc2s3nkCwR35GmZ5CUi7i8vLU4hp5HbQdm3JExSxvf4ZiA?purpose=fullsize)
+
+Make arenas part of the combat system.
+
+Add:
+
+* Destructible objects.
+
+* Explosive barrels.
+
+* Environmental traps.
+
+* Elevation advantages.
+
+* Narrow corridors.
+
+* Cover.
+
+* Breakable barriers.
+
+* Dangerous terrain.
+
+* Interactive mechanisms.
+
+* Boss-specific arena mechanics.
+
+Connect environmental combat interactions to the V4 world and event systems where appropriate.
+
+### 9\. Combat progression
+
+Add meaningful long-term development.
+
+* Weapon mastery trees.
+
+* Ability specialization.
+
+* Combat perks.
+
+* Combo unlocks.
+
+* Defensive mastery.
+
+* Elemental specialization.
+
+* Ultimate ability progression.
+
+* Enemy knowledge.
+
+* Boss challenge rewards.
+
+* Combat achievements.
+
+Allow different builds to play differently instead of simply increasing every damage statistic.
+
+### 10\. New combat game modes
+
+Potential additions:
+
+* Arena challenges: Survive increasingly difficult enemy waves.
+
+* Boss rush: Fight multiple bosses consecutively.
+
+* Horde defense: Protect a settlement or objective.
+
+* Duel challenges: One-on-one combat.
+
+* Hunting contracts: Track and eliminate powerful creatures.
+
+* Survival trials: Manage limited resources through encounters.
+
+* Faction battles: Participate in large-scale conflicts.
+
+* Training grounds: Practice combos and abilities.
+
+### 11\. Combat development tools
+
+Build developer-facing systems to make combat easier to test and balance.
+
+* Hitbox visualizer.
+
+* Hurtbox visualizer.
+
+* Damage calculator.
+
+* Enemy AI state inspector.
+
+* Boss phase editor.
+
+* Attack timing inspector.
+
+* Combo testing interface.
+
+* Weapon statistics editor.
+
+* Ability configuration editor.
+
+* Status effect debugger.
+
+* Combat performance profiler.
+
+* Encounter simulation tools.
+
+Especially important: Add a combat sandbox where developers can spawn any enemy, weapon, ability, or boss and test interactions without playing through the entire game.
+
+### 12\. V5 roadmap
+
+* Phase 1 — Combat foundation
+
+    * Combat architecture.
+
+    * Health and damage.
+
+    * Hit detection.
+
+    * Attack windows.
+
+    * Basic movement and dodging.
+
+* Phase 2 — Weapon framework
+
+    * Weapon families.
+
+    * Movesets.
+
+    * Combos.
+
+    * Blocking and parrying.
+
+    * Weapon mastery.
+
+* Phase 3 — Enemy AI
+
+    * Enemy states.
+
+    * Attack selection.
+
+    * Tactical positioning.
+
+    * Group coordination.
+
+    * Enemy archetypes.
+
+* Phase 4 — Magic and abilities
+
+    * Ability framework.
+
+    * Elemental effects.
+
+    * Status conditions.
+
+    * Ability synergies.
+
+* Phase 5 — Bosses
+
+    * Boss framework.
+
+    * Multiple phases.
+
+    * Unique mechanics.
+
+    * Arena interactions.
+
+* Phase 6 — Polish and balance
+
+    * Combat animations.
+
+    * Sound and VFX.
+
+    * Combat feedback.
+
+    * Difficulty tuning.
+
+    * Performance testing.
+
+### 13\. Additional ambitious V5 ideas
+
+![Final Fantasy VII Remake Intergrade | Play Reactor](https://images.openai.com/static-rsc-4/EWhO2O5aGUx8PjO6fwAL_CUUTn1IhJWuRdvjvJB7ds_Xbq6mI1LkRcCPALJzkOkTppvCReDUgin1ifeLe34lh9iAgii4N1brLQBlweBVE8d5Fs2vpdQ1VYqg7PgzaK9eQxcnyYNNgaEqVX4oYxtmuTP8C09m4_5FcYOa-DKGYAAsx-EFvYXegcIW3G0oHN77?purpose=fullsize)
+
+Dynamic finishing system
+
+Context-sensitive finishers depending on weapon, enemy, and combat situation.
+
+!['Kingdoms of Amalur: Re-Reckoning' review: 2012's best RPG aces its second chance](https://images.openai.com/static-rsc-4/7hrhIOqDcNxcDYChXbxiJCWBD0C3LCxBCSSnnqluWG3qABStehFgwWEb9MgMhDC7eRzMsxw5aOUgEoRd-Uqz-fEeOX3EnGT1HNca7loH15Nv3-jae1m_NVsFIYtadY6qlwD2C69XA_oQlbXCuLUog0nr2xrmJ6BKmccch5dIvZCOwL0CnxIhYdXNafYtwXpm?purpose=fullsize)
+
+Advanced enemy teamwork
+
+Enemies coordinate attacks, protect weaker allies, flank, and retreat.
+
+![Priston Trade | Mercado da Comunidade para Priston Tale](https://images.openai.com/static-rsc-4/SNisvinXAmxpkEKvOG1QIxHz55tyuSYc5OXNg1UKionLCC6rIKqK8uDqtMHrdaWx7FLDvQmPNReGF2_Zy6LOBNCI0-sLM6xAQnmTPed2Lu8OkTBdZ3sLRtfEwbQ03QWeze7X9Abq9hg8p1FkudvPiadyhUlhvc9DRCet0-vfLvVlJPAcqn0af3Cy7Oso1cIa?purpose=fullsize)
+
+Legendary weapon abilities
+
+Rare weapons have unique mechanics, transformations, and progression.
+
+![Speculation: Datamining Reveal Country List and Possible Throne and Liberty Founder's Packs | MMORPG.com](https://images.openai.com/static-rsc-4/qYdiFHLA4Hy6wQbjT9M0h9jztluqpvu0MHh5vYlEhwrY6cKFAPKCgRTlssi7yX_Nn0xfyFZ3mSv_38kTRGkPmQDAS9DTtEIT-sfpH1B84UHh73thp55rSY0UhBkfDNMTERSKD633a1lkYP6-NeUsMBfwkwpC_MyHyg2Fkj8Dw5TCuOXyaKPMvi_lHWtzAnas?purpose=fullsize)
+
+Destructible boss arenas
+
+Boss attacks change the environment and create new tactical challenges.
+
+### 14\. Master V5 development directive
+
+# AETHERIA — UPGRADE V5
+## ADVANCED COMBAT, ENEMY INTELLIGENCE & BATTLE SYSTEM EXPANSION
+
+### PRIMARY OBJECTIVE
+
+Expand Aetheria into a sophisticated action combat experience with responsive controls, advanced enemy AI, weapon-specific combat, abilities, magic, boss encounters, tactical environments, and deep combat progression.
+
+This upgrade must prioritize additions and improvements. Preserve existing working systems.
+
+### 1. PROJECT DISCOVERY
+
+- Inspect the current combat architecture.
+- Identify existing player controllers, enemies, weapons, animations, abilities, and damage systems.
+- Identify the game engine and its existing capabilities.
+- Reuse existing systems wherever possible.
+- Produce a technical implementation roadmap before making architectural changes.
+
+### 2. COMBAT FRAMEWORK
+
+Implement or expand:
+
+- Light and heavy attacks.
+- Charged attacks.
+- Combos.
+- Dodging and rolling.
+- Blocking and parrying.
+- Perfect dodge and counterattacks.
+- Stagger and knockback.
+- Target locking.
+- Aerial combat where appropriate.
+- Finishing moves.
+- Weapon-specific movesets.
+
+### 3. WEAPON FRAMEWORK
+
+Support multiple weapon families with independent:
+
+- Movesets.
+- Attack animations.
+- Damage characteristics.
+- Combo chains.
+- Special attacks.
+- Mastery progression.
+- Sound and VFX.
+- Balance configuration.
+
+### 4. ENEMY AI
+
+Implement:
+
+- Enemy archetypes.
+- State-based AI.
+- Threat assessment.
+- Tactical positioning.
+- Attack selection.
+- Attack telegraphing.
+- Group coordination.
+- Retreat behavior.
+- Environmental awareness.
+- Difficulty configuration.
+
+### 5. BOSS FRAMEWORK
+
+Implement:
+
+- Reusable boss architecture.
+- Multiple phases.
+- Unique attacks.
+- Phase transitions.
+- Weak points.
+- Environmental hazards.
+- Summoned enemies.
+- Boss-specific mechanics.
+- Victory sequences.
+- Boss testing tools.
+
+### 6. MAGIC AND ABILITIES
+
+Implement:
+
+- Modular ability framework.
+- Elemental magic.
+- Offensive and defensive abilities.
+- Mobility.
+- Summoning.
+- Healing.
+- Crowd control.
+- Buffs and debuffs.
+- Ability synergies.
+- Cooldowns and resource management.
+
+### 7. DAMAGE AND STATUS SYSTEM
+
+Implement:
+
+- Physical and elemental damage.
+- Armor and resistances.
+- Critical hits.
+- Stagger and poise.
+- Burn, freeze, poison, shock, and bleeding.
+- Damage over time.
+- Healing.
+- Configurable damage calculations.
+
+### 8. ANIMATION AND HIT DETECTION
+
+Implement:
+
+- Hitboxes and hurtboxes.
+- Animation-driven attack windows.
+- Root motion support.
+- Hit reactions.
+- Directional knockback.
+- Combo timing.
+- Attack interruption rules.
+- Reliable collision handling.
+- Animation blending.
+
+### 9. COMBAT ENVIRONMENTS
+
+Implement:
+
+- Environmental hazards.
+- Destructible objects.
+- Interactive arena elements.
+- Tactical positioning.
+- Cover and elevation.
+- Boss-specific arena interactions.
+
+### 10. PROGRESSION
+
+Implement:
+
+- Weapon mastery.
+- Combat skill trees.
+- Ability specialization.
+- Combat perks.
+- Combo unlocks.
+- Elemental specialization.
+- Boss challenge rewards.
+- Combat achievements.
+
+### 11. DEVELOPER TOOLS
+
+Create:
+
+- Combat sandbox.
+- Hitbox visualizer.
+- Damage debugger.
+- Enemy AI inspector.
+- Boss phase editor.
+- Weapon configuration tools.
+- Ability editor.
+- Encounter simulator.
+- Combat profiler.
+
+### 12. QUALITY REQUIREMENTS
+
+- Responsive controls.
+- Consistent hit detection.
+- Readable enemy telegraphs.
+- Balanced difficulty.
+- Modular architecture.
+- Data-driven configuration.
+- Reliable save/load integration.
+- Performance-conscious AI.
+- Automated combat tests.
+- No unnecessary duplication.
+- No regressions to existing systems.
+
+### 13. PRIORITIES
+
+P0: Combat foundation, damage, hit detection, and responsive controls.
+
+P1: Weapon framework, combos, defense, and enemy AI.
+
+P2: Abilities, elemental systems, and status effects.
+
+P3: Boss framework, arenas, and progression.
+
+P4: Advanced teamwork, destructible environments, and ambitious combat features.
+
+### FINAL EXPECTATION
+
+Deliver a cohesive Aetheria V5 combat expansion.
+
+Combat systems must work together rather than exist as disconnected features. Weapons, abilities, enemies, bosses, animations, and environmental interactions must form one consistent combat experience.
+
+Prioritize responsiveness, readability, tactical depth, extensibility, and performance.
+
+My strongest recommendation: Make V5's signature feature Intelligent Combat: enemies that coordinate, bosses that adapt their attack patterns, weapons that feel mechanically different, and abilities that interact with one another.
+
+That gives Aetheria a strong progression: V3 builds the world, V4 brings it to life, and V5 makes it exciting to fight in.
+
+15
+
+15
