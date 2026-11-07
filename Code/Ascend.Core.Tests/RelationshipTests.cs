@@ -235,4 +235,22 @@ static class RelationshipTests
         Assert.Equal(CompanionAvailability.Rival, RelationshipState.FromSave(null, r, "cmp_kaito").Availability, "old save starts Kaito as rival");
         Assert.True(typeof(RelationshipState).GetProperty("Availability").PropertyType.IsEnum, "enum, not a number");
     }
+
+    public static void RivalOrFallenKaitoIsNotARomanceCandidate()
+    {
+        var r = R();
+        var kaito = Row("cmp_kaito");
+        var s = r.NewState();
+        s.Trust = 90; s.Closeness = 90; s.Tension = 0; s.RomanceOptIn = true;
+        s.Availability = CompanionAvailability.Rival; Assert.True(!r.CanRomance(kaito, s), "a rival cannot be romanced");
+        s.Availability = CompanionAvailability.Fallen; Assert.True(!r.CanRomance(kaito, s), "a fallen Kaito cannot be romanced");
+        s.Availability = CompanionAvailability.Ally; Assert.True(r.CanRomance(kaito, s), "an allied Kaito can");
+    }
+
+    public static void UndefinedEnumNumbersInASaveFallBackToDefaults()
+    {
+        var r = R();
+        var save = new CompanionBondSave { CompanionId = "cmp_lyra", Availability = "7" };
+        Assert.Equal(CompanionAvailability.Ally, RelationshipState.FromSave(save, r, "cmp_lyra").Availability, "numeric junk is ignored");
+    }
 }

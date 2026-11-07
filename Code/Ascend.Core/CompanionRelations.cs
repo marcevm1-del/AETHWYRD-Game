@@ -105,7 +105,7 @@ namespace Ascend.Core
         }
 
         public CompanionAvailability KaitoStart =>
-            Enum.TryParse<CompanionAvailability>(Kaito?.Start, true, out var a) ? a : CompanionAvailability.Rival;
+            Enum.TryParse<CompanionAvailability>(Kaito?.Start, true, out var a) && Enum.IsDefined(typeof(CompanionAvailability), a) ? a : CompanionAvailability.Rival;
 
         public RelationshipState NewState(string companionId = null)
         {
@@ -139,7 +139,7 @@ namespace Ascend.Core
             int cap = Math.Max(0, MaxDeltaPerEvent);
             foreach (var kv in e.Deltas ?? new Dictionary<string, int>())
             {
-                if (!Enum.TryParse<RelationTrack>(kv.Key, true, out var t)) continue;
+                if (!Enum.TryParse<RelationTrack>(kv.Key, true, out var t) || !Enum.IsDefined(typeof(RelationTrack), t)) continue;
                 int d = Math.Max(-cap, Math.Min(cap, kv.Value));
                 s.Set(t, Clamp(s.Get(t) + d));
             }
@@ -173,6 +173,7 @@ namespace Ascend.Core
             if (NeverRomance.Contains(c.Id)) return false;
             if (!c.Romanceable || !c.Adult) return false;
             if (!s.RomanceOptIn || s.Departed) return false;
+            if (s.Availability != CompanionAvailability.Ally) return false;   // a rival or fallen Kaito is not a romance candidate
             var rm = Romance ?? new RomanceTuning();
             var cl = Track(RelationTrack.Closeness);
             var tr = Track(RelationTrack.Trust);
@@ -262,7 +263,7 @@ namespace Ascend.Core
                 Trust = RelationshipRules.Clamp(save.Trust), Respect = RelationshipRules.Clamp(save.Respect),
                 Closeness = RelationshipRules.Clamp(save.Closeness), Tension = RelationshipRules.Clamp(save.Tension),
                 RomanceOptIn = save.RomanceOptIn, Departed = save.Departed, Foreshadowed = save.Foreshadowed, RepairOffered = save.RepairOffered,
-                Availability = Enum.TryParse<CompanionAvailability>(save.Availability, true, out var a)
+                Availability = Enum.TryParse<CompanionAvailability>(save.Availability, true, out var a) && Enum.IsDefined(typeof(CompanionAvailability), a)
                     ? a
                     : ((companionId ?? save.CompanionId) == RelationshipRules.KaitoId ? rules.KaitoStart : CompanionAvailability.Ally),
             };
