@@ -77,6 +77,8 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/adoption-plan-2026-11-07|13_Production/adoption-plan-2026-11-07]]
 - [[Design Bible/13_Production/agent_team|13_Production/agent_team]]
+- [[Design Bible/13_Production/animation_clips_required|13_Production/animation_clips_required]]
+- [[Design Bible/13_Production/animation_v11_audit|13_Production/animation_v11_audit]]
 - [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
 - [[Design Bible/13_Production/art_budgets|13_Production/art_budgets]]
 - [[Design Bible/13_Production/art_direction|13_Production/art_direction]]

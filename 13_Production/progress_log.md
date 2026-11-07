@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Wave A1 | Player animation foundation (upgrade v11): locomotion data and rules, placeholder humanoid rig, animation driver, combat timing bridge, foot IK, PlayMode tests; placeholder clips only (clip list in `13_Production/animation_v11_audit.md`); Wave A2 (combat gaps) held on branch `claude/wave-a2-combat-18be8b` | 184 + PlayMode 158 (reported) |
 | Studio layer | Claude Code Game Studios v1.2.0 installed: 74 skills, 61 active agents (10 Godot/Unreal parked in `.claude/agents-retired/`), rules, docs, `project.yaml` for Unity, Ascend path map, Unity 6.6 engine-reference notes; merged with GitHub (upgrade v2-v11, formula, lore expansions, `Name Changer`) | 177 |
 
 ## 2026-11-03
