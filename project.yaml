@@ -1,0 +1,91 @@
+# CCGS project configuration for Project Ascend.
+# Schema: .claude/docs/effects-map.md. Per-developer overrides: project.local.yaml (gitignored).
+# Do NOT add modes.review_mode, modes.workflow, docs.density, qa.level,
+# modes.story_granularity or team.size here: modes.rigor supplies them.
+
+schema_version: 1
+
+framework:
+  version: "1.2.0"
+  last_upgraded: "2026-11-07"
+
+project:
+  name: "Project Ascend"
+  genre: "Open-world isekai action RPG"
+  version: "0.1.0"
+  stage: Pre-Production      # /adopt and /project-stage-detect will confirm
+  kind: game
+
+modes:
+  rigor: minimal             # a design bible and Canon.md already exist
+  automation: collaborative
+
+testing:
+  framework: unity-test-framework
+
+platform:
+  multiplayer: false         # strictly single-player, offline-complete
+  online: false
+  targets: [PC]
+  primary_input: "Keyboard/Mouse"
+  gamepad_support: "Full"
+  touch_support: "None"
+  cert_tier: steam
+
+engine:
+  name: "Unity"
+  version: "6000.6.7f1"
+  language: "C#"
+  rendering: "URP"
+  physics: "PhysX"
+
+specialists:
+  code: "unity-specialist"
+  shader: "unity-shader-specialist"
+  ui: "unity-ui-specialist"
+  additional: []
+
+paths:                       # Ascend layout, not the studio's default folders
+  code_root: "Game/Assets/_Game/Runtime"
+  core_rules: "Code/Ascend.Core"
+  tests: "Game/Assets/_Game/Tests"
+  rules_tests: "Code/Ascend.Core.Tests"
+  design: "00_Questions..12_Systems"
+  data: "Data"
+  production: "13_Production"
+
+naming:
+  classes: PascalCase
+  variables: camelCase
+  constants: PascalCase
+  files: PascalCase
+  scenes: PascalCase
+
+accessibility:
+  target: none
+
+cadence:
+  sprint_length: "2w"
+  milestone_length: "8w"
+
+performance:
+  target_framerate: 60
+  frame_budget_ms: 16.67
+  draw_call_limit: null
+  memory_ceiling_mb: null
+  enforce: warn
+
+commands:
+  build: "npm run build"
+  test: "node Tools/run_tests.js"
+  run: "Game/Builds/Ring0/ProjectAscend.exe -screen-width 1600 -screen-height 900 -screen-fullscreen 0"
+  smoke: "node Tools/run_tests.js"
+
+features:
+  session_state: on
+  token_budget_warn_at: 0.7
+  read_guard: off            # Canon and bestiary files exceed 40 KB
+  read_guard_kb: 40
+
+updates:
+  check: false
