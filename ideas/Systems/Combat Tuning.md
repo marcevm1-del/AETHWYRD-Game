@@ -149,7 +149,7 @@ Central tuning values for movement, camera, defense, attacks, poise, reactions, 
 | `firestorm.durationSec` | 4 |
 | `firestorm.tickSec` | 0.5 |
 | `firestorm.tickPower` | 0.35 |
-| `groupTactics.notes` | Symmetric peer behaviour for monster groups (combat.md section 10a). No leader, captain or rank exists; every monster runs the same rules from the same inputs. Nothing is remembered between fights or about the player (Canon 4d). All values are PROPOSALS until the user tunes them. The existing ai.maxSimultaneousAttackers (2) and the monster-data RetreatHpPct stay in force; loneRetreatHpFraction restates MonsterBrain.LoneRetreatHp (0.5) as its base. |
+| `groupTactics.notes` | Symmetric peer behaviour for monster groups (combat.md section 10a). No leader, captain or rank exists; every monster runs the same rules from the same inputs. Nothing is remembered between fights or about the player (Canon 4d). All values are PROPOSALS until the user tunes them. The existing ai.maxSimultaneousAttackers (2) and the monster-data RetreatHpPct stay in force; loneRetreatHpFraction restates MonsterBrain.LoneRetreatHp (0.5) as its base (a test pins them equal). THIS BLOCK IS THE SOURCE OF TRUTH: the in-code defaults of GroupTacticsTuning equal these numbers (a test pins that) and GroupTacticsData.ToTuning maps every key the brain reads. enabled=false makes the brain behave exactly as before tactics. READ BY THE BRAIN: enabled; flank.slotCount, flank.arcDeg; retreat.pressOnPlayerHp, retreat.pressOnRetreatScale, retreat.healthyPlayerHp, retreat.outnumberedRetreatBonus; threat.playerStrengthWeight, outnumberedWeight, ownWoundedWeight, alliesForFullSupport; yield.hpMargin, holdSec. RESERVED (read by nothing yet; kept so the design and data line up, and not to be tuned expecting an effect): flank.slotRadiusM, flank.reassignSec, retreat.packRetreatHpFraction, retreat.regroupHpFraction, retreat.regroupSec, threat.cautiousAbove, threat.boldBelow, yield.cooldownSec. The player HP fraction passed to the brain follows the 'zero or less means not supplied' convention, so the HP-based retreat rules stay off until the game fills it in. |
 | `groupTactics.enabled` | true |
 | `groupTactics.flank.slotCount` | 3 |
 | `groupTactics.flank.slotRadiusM` | 4.5 |
@@ -159,6 +159,10 @@ Central tuning values for movement, camera, defense, attacks, poise, reactions, 
 | `groupTactics.retreat.loneRetreatHpFraction` | 0.5 |
 | `groupTactics.retreat.regroupHpFraction` | 0.6 |
 | `groupTactics.retreat.regroupSec` | 4 |
+| `groupTactics.retreat.pressOnPlayerHp` | 0.25 |
+| `groupTactics.retreat.pressOnRetreatScale` | 0.5 |
+| `groupTactics.retreat.healthyPlayerHp` | 0.75 |
+| `groupTactics.retreat.outnumberedRetreatBonus` | 0.1 |
 | `groupTactics.threat.playerStrengthWeight` | 0.4 |
 | `groupTactics.threat.outnumberedWeight` | 0.35 |
 | `groupTactics.threat.ownWoundedWeight` | 0.25 |
