@@ -80,7 +80,9 @@ static class Repo
         Load<ReactionFile>("Data/Combat/reactions.json"),
         Load<BossWeakPointFile>("Data/Monsters/boss_weakpoints.json"),
         LoadOpt<QualityRules>("Data/Items/crafting_rules.json"),
-        LoadOpt<LifeSkillFile>("Data/Items/life_skills.json"));
+        LoadOpt<LifeSkillFile>("Data/Items/life_skills.json"),
+        LoadOpt<List<DungeonData>>("Data/World/dungeons.json"),
+        LoadOpt<PuzzleFile>("Data/World/puzzles.json"));
 }
 
 [Tests]
