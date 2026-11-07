@@ -2,29 +2,40 @@
 
 | Field | Value |
 |-------|-------|
-| **Engine Version** | Unity 6000.6.7f1 (Unity 6) |
-| **Installed at pin time** | 6000.6.7f1, `E:/Unity/Editors/6000.6.7f1/Editor/Unity.exe` (from `CLAUDE.md`) |
-| **Render pipeline** | URP |
+| **Engine Version** | Unity 6000.6.7f1 (Unity 6.6) |
+| **Installed at pin time** | 6000.6.7f1 (`Game/ProjectSettings/ProjectVersion.txt`), editor at `E:/Unity/Editors/6000.6.7f1/Editor/Unity.exe` |
+| **Render pipeline** | URP (`com.unity.render-pipelines.universal` 17.6.0 in `Game/Packages/manifest.json`) |
 | **Language** | C# |
 | **Project Pinned** | 2026-11-07 |
-| **Last Docs Verified** | NOT VERIFIED - no Unity 6000.6 API snapshot has been curated yet |
+| **Last Docs Verified** | 2026-11-07: the Unity 6.6 upgrade guide (6.5 -> 6.6) only. Nothing else here is verified against Unity's docs. |
 
 ## Knowledge Gap Warning
 
-Unity 6000.6 was released after the model's training data. Do not assume any
-API, package version or URP setting from memory. Check the installed package
-versions in `Game/Packages/manifest.json` and the project's own code in
-`Game/Assets/_Game/` before suggesting engine calls, and say when a claim is
-unverified.
+Unity 6.6 is newer than the model's reliable knowledge. Do not assume any API,
+package version or URP setting from memory. Check this folder first, then
+`Game/Packages/manifest.json`, then the project's own code in `Game/Assets/_Game/`.
+Say so when a claim is unverified.
 
-## Where the truth lives for this project
+## Packages the project actually uses (from `Game/Packages/manifest.json`)
 
-- Unity project: `Game/` (code root `Game/Assets/_Game/Runtime`, tests `Game/Assets/_Game/Tests`).
-- Engine-agnostic rules: `Code/Ascend.Core` and `Code/Ascend.Core.Tests`.
-- Batch commands (scene build, player build, PlayMode tests): see `CLAUDE.md` Commands.
-- Ascend's own docs under `13_Production/` win over this file.
+| Package | Version | Note |
+|---|---|---|
+| `com.unity.render-pipelines.universal` | 17.6.0 | URP. The 6.6 docs also show 7.x URP upgrade pages; the numbering is unexplained, treat as unverified. |
+| `com.unity.inputsystem` | 1.20.1 | New Input System. |
+| `com.unity.cinemachine` | 6.6.0 | The 6.6 upgrade guide says Cinemachine is now a core package and 2.x projects auto-upgrade to 3.x. This manifest value looks unusual; confirm what the editor resolved. |
+| `com.unity.test-framework` | 1.4.6 | Rules/PlayMode tests. |
+| `com.unity.nuget.newtonsoft-json` | 3.2.2 | JSON. |
+| `com.projectascend.core` | local (`Code/Ascend.Core`) | Engine-agnostic rules. |
 
-## TODO
+**Not installed:** Addressables, Entities/DOTS, Netcode. The Addressables, DOTS
+and networking agents have nothing to work on yet (see `plugins/`).
 
-Curate breaking-change notes for the Unity 6000.x versions the project uses
-(`/setup-engine` can fill this via WebSearch).
+## Files in this folder
+
+- `breaking-changes.md` - what changed 6.5 -> 6.6.
+- `deprecated-apis.md` - APIs to stop using, with replacements.
+- `current-best-practices.md` - project-grounded rules (small on purpose).
+- `modules/` - rendering, UI, physics notes.
+- `plugins/` - Addressables and DOTS status.
+
+Ascend's own docs under `13_Production/` win over this folder.
