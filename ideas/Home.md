@@ -78,6 +78,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
 - [[Design Bible/12_Systems/party_synergy|12_Systems/party_synergy]]
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]
+- [[Design Bible/12_Systems/world_graph|12_Systems/world_graph]]
 - [[Design Bible/12_Systems/world_map|12_Systems/world_map]]
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/adoption-plan-2026-11-07|13_Production/adoption-plan-2026-11-07]]
@@ -107,6 +108,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
 - [[Design Bible/13_Production/tutorial_vision|13_Production/tutorial_vision]]
+- [[Design Bible/13_Production/world_graph_v10_audit|13_Production/world_graph_v10_audit]]
 - [[Design Bible/13_Production/world_terrain|13_Production/world_terrain]]
 - [[Design Bible/13_Production/world_upgrade_plan|13_Production/world_upgrade_plan]]
 
