@@ -32,7 +32,7 @@ Status: **built** (Wave D), **partial**, **deferred** (later wave), **skipped** 
 | 6 Interactive cinematic events | **skipped** | Task brief: out of scope |
 | 7 Animation and character performance | **skipped** | Owned by Wave A1 (animation) |
 | 8 Photo mode (camera, FOV, DoF, exposure, time-of-day, weather, poses, filters, hide UI) | **built (rules + data)** | `PhotoMode`: hide-UI, pose and filter lists, override that never touches save or clock. Free camera, DoF and screenshot capture are engine work, deferred |
-| 9 Audio production tools (importer, validator, missing-audio detection) | **partial** | The validator already checks the three data files and event-name format. A missing-file report waits until audio files exist |
+| 9 Audio production tools (importer, validator, missing-audio detection) | **partial** | The validator already checks the four data files and event-name format. A missing-file report waits until audio files exist |
 | 10 Accessibility and presentation options | **built (model)** | `AccessibilitySettings` with a save field and safe defaults for old saves |
 | 10 Dialogue text speed, camera sensitivity, brightness | **partial** | Text speed is in the model (it is a pure setting). Camera sensitivity and brightness are input / display settings owned by the save-platform layer; deferred |
 | Roadmap phases 1, 2, 4, 5, 6 | **skipped** | Same reasons as their sections |
@@ -43,14 +43,14 @@ Status: **built** (Wave D), **partial**, **deferred** (later wave), **skipped** 
 |---|---|
 | Music mostly instrumental; rock energy for bosses | Layer names are instrumental stems; the one rock stem (`rock_lead`) is allowed only in `boss`. Validator + Core test |
 | No narrator; System Voice only | No voice, narrator or lip-sync field exists in any new schema. Subtitles carry a speaker name, never a narrator style |
-| Voice amount is the user's call | Nothing depends on voice. The mixer buses in the data list "voice" as one bus that stays silent until voice exists |
+| Voice amount is the user's call | Nothing depends on voice. The mixer buses in the data list dialogue as one bus that stays silent until voice exists |
 | One active score owner; no overlapping encounter scores | A single `MusicMachine` holds one current state; a test shows two simultaneous threats still yield one state |
 | No-combat-music option and reduced intensity | `MusicPrefs.NoCombatMusic` / `ReducedIntensity`, tested |
 | Phase changes follow gameplay state, not a timestamp | Boss phase is an input integer; layers follow it. No time-coded cues |
 | Random small enemies never trigger the boss transition | Boss state needs the boss input; threat tier alone caps at `elite`. Tested |
 | Retreat returns the score gradually | `retreatExitDelaySeconds` is longer than the normal exit delay. Tested |
-| Offline-first / in-game-time continuity | Photo mode overrides live in memory only; `PhotoSession` has no reference to `SaveGame` or the clock and reports `SavedState` as unchanged. A test snapshots the save and the clock before and after |
-| Teen rating | Photo poses are an allow-list in data; the validator rejects any pose whose tags include a blocked tag (`suggestive`, `undress`, `gore`, `weapon_threat_at_camera`). A test checks every shipped pose |
+| Offline-first / in-game-time continuity | Photo mode overrides live in memory only; `PhotoSession` has no reference to `SaveGame` or the clock and declares `ChangesSaveState` as false. A test snapshots the save and the clock before and after |
+| Teen rating | Photo poses are an allow-list in data; the validator rejects any pose whose tags include a blocked tag (`suggestive`, `undress`, `gore`, `weapon_at_camera`). A test checks every shipped pose |
 | Accessibility (`hud_and_ui.md` §14) | Three colorblind palettes, subtitle size / background, shake / flash / motion-blur sliders, reduced-flash, text scale, hold-vs-toggle per hold action. Ranges clamp; an old save without the field loads with safe defaults |
 | Companion themes only for the roster | `companionThemes` ids must exist in `companions.json`; unknown ids at runtime yield no theme |
 | No audio assets, no new third-party packages | None added. `third_party_assets.md` untouched |

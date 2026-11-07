@@ -27,7 +27,8 @@
     "defaultCrossfadeSeconds",
     "reducedIntensityScale",
     "regionArrivalStinger",
-    "bossPhaseStinger"
+    "bossPhaseStinger",
+    "companionThemeGain"
    ],
    "properties": {
     "defaultCrossfadeSeconds": {
@@ -47,6 +48,11 @@
     "bossPhaseStinger": {
      "type": "string",
      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "companionThemeGain": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
     }
    }
   },
@@ -75,7 +81,7 @@
   },
   "states": {
    "type": "array",
-   "minItems": 9,
+   "minItems": 10,
    "items": {
     "type": "object",
     "additionalProperties": false,

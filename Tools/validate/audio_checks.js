@@ -20,7 +20,7 @@ function run({ DATA, load, check, schema, err, companionIds, regionTerrain }) {
     if (layers.size !== m.layers.length) err(w, 'duplicate layer id');
     const ids = new Set(m.states.map(s => s.id));
     if (ids.size !== m.states.length) err(w, 'duplicate state id');
-    for (const need of ['explore', 'town', 'rest', 'uncertainty', 'aftermath', 'combat', 'elite', 'boss', 'cutscene']) if (!ids.has(need)) err(w, `missing state ${need}`);
+    for (const need of ['explore', 'dungeon', 'town', 'rest', 'uncertainty', 'aftermath', 'combat', 'elite', 'boss', 'cutscene']) if (!ids.has(need)) err(w, `missing state ${need}`);
     if (!layers.has('companion_theme')) err(w, 'missing companion_theme layer');
     for (const s of m.states) {
       const used = [...Object.keys(s.layers || {}), ...(s.phaseLayers || []).flatMap(p => Object.keys(p))];
@@ -38,7 +38,10 @@ function run({ DATA, load, check, schema, err, companionIds, regionTerrain }) {
       const [a, b] = k.split('>');
       if (!ids.has(a) || !ids.has(b)) err(w, `crossfade "${k}" names an unknown state`);
     }
-    for (const o of ['advantage', 'danger']) for (const l of Object.keys(m.overlays[o].layers)) if (!layers.has(l)) err(w, `overlay ${o}: unknown layer ${l}`);
+    for (const o of ['advantage', 'danger']) for (const l of Object.keys(m.overlays[o].layers)) {
+      if (!layers.has(l)) err(w, `overlay ${o}: unknown layer ${l}`);
+      if (l === 'rock_lead') err(w, `overlay ${o}: the rock stem is boss-only`);
+    }
     if (!(m.overlays.danger.exitAboveHp > m.overlays.danger.enterBelowHp)) err(w, 'danger overlay needs exit HP above enter HP (hysteresis)');
     const roster = new Set(companionIds);
     for (const c of m.companionThemes) if (!roster.has(c)) err(w, `companion theme for ${c}, who is not in Data/Companions/companions.json`);
@@ -53,6 +56,7 @@ function run({ DATA, load, check, schema, err, companionIds, regionTerrain }) {
     const surfaces = new Set(e.surfaces.map(s => s.id));
     if (surfaces.size !== e.surfaces.length) err(w, 'duplicate surface id');
     if (!surfaces.has(e.fallbackSurface)) err(w, 'fallbackSurface is not a surface');
+    for (const need of ['shallow_water', 'cobble']) if (!surfaces.has(need)) err(w, `missing required surface ${need}`);
     for (const t of MAP_TERRAIN) {
       if (!e.terrainSurface[t]) err(w, `terrain ${t} has no surface`);
       else if (!surfaces.has(e.terrainSurface[t])) err(w, `terrain ${t} maps to unknown surface ${e.terrainSurface[t]}`);

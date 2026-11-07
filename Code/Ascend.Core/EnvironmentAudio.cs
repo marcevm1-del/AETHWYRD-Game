@@ -100,6 +100,7 @@ namespace Ascend.Core
             if (surfaces.Count != f.Surfaces.Count) errors.Add("duplicate surface id");
             foreach (var s in surfaces) if (!EventSafe(s)) errors.Add($"surface id \"{s}\" is not event-safe");
             if (!surfaces.Contains(f.FallbackSurface ?? "")) errors.Add("fallback surface is not a surface");
+            foreach (var need in new[] { "shallow_water", "cobble" }) if (!surfaces.Contains(need)) errors.Add($"missing required surface {need}");
             if (f.Gaits.Count == 0) errors.Add("no gaits");
             foreach (var t in MapTerrain)
             {

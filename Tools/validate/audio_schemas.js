@@ -11,11 +11,11 @@ module.exports = function addAudioSchemas(SCHEMAS) {
     required: ['version', 'tuning', 'layers', 'states', 'crossfades', 'overlays', 'companionThemes'],
     properties: {
       version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
-      tuning: { type: 'object', additionalProperties: false, required: ['defaultCrossfadeSeconds', 'reducedIntensityScale', 'regionArrivalStinger', 'bossPhaseStinger'],
-        properties: { defaultCrossfadeSeconds: secs, reducedIntensityScale: gain, regionArrivalStinger: ev, bossPhaseStinger: ev } },
+      tuning: { type: 'object', additionalProperties: false, required: ['defaultCrossfadeSeconds', 'reducedIntensityScale', 'regionArrivalStinger', 'bossPhaseStinger', 'companionThemeGain'],
+        properties: { defaultCrossfadeSeconds: secs, reducedIntensityScale: gain, regionArrivalStinger: ev, bossPhaseStinger: ev, companionThemeGain: gain } },
       layers: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id'],
         properties: { id: ev, intense: { type: 'boolean' }, essential: { type: 'boolean' } } } },
-      states: { type: 'array', minItems: 9, items: { type: 'object', additionalProperties: false, required: ['id', 'priority', 'minHoldSeconds', 'enterDelaySeconds', 'exitDelaySeconds', 'layers'],
+      states: { type: 'array', minItems: 10, items: { type: 'object', additionalProperties: false, required: ['id', 'priority', 'minHoldSeconds', 'enterDelaySeconds', 'exitDelaySeconds', 'layers'],
         properties: {
           id: ev, priority: { type: 'integer', minimum: 0, maximum: 100 }, combatClass: { type: 'boolean' },
           minHoldSeconds: secs, enterDelaySeconds: secs, exitDelaySeconds: secs, retreatExitDelaySeconds: secs,

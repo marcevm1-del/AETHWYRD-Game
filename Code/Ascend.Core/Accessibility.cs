@@ -74,7 +74,7 @@ namespace Ascend.Core
             ToggleActions[action] = toggle;
         }
 
-        /// <summary>The music options the adaptive score reads.</summary>
+        /// <summary>The music options the adaptive score reads. A copy: push changes to a live machine by mutating MusicMachine.Prefs.</summary>
         public MusicPrefs ToMusicPrefs() => new MusicPrefs { NoCombatMusic = NoCombatMusic, ReducedIntensity = ReducedMusicIntensity };
 
         /// <summary>Subtitle text size multiplier from the data table.</summary>
@@ -175,7 +175,7 @@ namespace Ascend.Core
             if (fd.ScreenShake != d.ScreenShake || fd.FlashIntensity != d.FlashIntensity || fd.MotionBlur != d.MotionBlur || fd.TextScale != d.TextScale
                 || fd.HudScale != d.HudScale || fd.DialogueTextSpeed != d.DialogueTextSpeed || fd.SubtitleSize != d.SubtitleSize
                 || fd.SubtitleBackground != d.SubtitleBackground || fd.SubtitlesEnabled != d.SubtitlesEnabled || fd.ColorblindPalette != d.ColorblindPalette
-                || fd.ReducedFlash != d.ReducedFlash || fd.Volumes.Master != d.Volumes.Master || fd.Volumes.Music != d.Volumes.Music
+                || fd.ReducedFlash != d.ReducedFlash || fd.HighContrastPanels != d.HighContrastPanels || fd.DyslexiaFont != d.DyslexiaFont || fd.NoCombatMusic != d.NoCombatMusic || fd.ReducedMusicIntensity != d.ReducedMusicIntensity || fd.Volumes.Master != d.Volumes.Master || fd.Volumes.Music != d.Volumes.Music
                 || fd.Volumes.Effects != d.Volumes.Effects || fd.Volumes.Ambience != d.Volumes.Ambience || fd.Volumes.Dialogue != d.Volumes.Dialogue || fd.Volumes.Callouts != d.Volumes.Callouts)
                 errors.Add("data defaults differ from the Core defaults");
             return errors;

@@ -60,6 +60,7 @@ namespace Ascend.Core
         public double ReducedIntensityScale { get; set; } = 0.6;
         public string RegionArrivalStinger { get; set; }
         public string BossPhaseStinger { get; set; }
+        public double CompanionThemeGain { get; set; } = 0.8;
     }
 
     public sealed class MusicFile
@@ -134,7 +135,7 @@ namespace Ascend.Core
 
     public static class MusicRules
     {
-        public static readonly string[] RequiredStates = { "explore", "town", "rest", "uncertainty", "aftermath", "combat", "elite", "boss", "cutscene" };
+        public static readonly string[] RequiredStates = { "explore", "dungeon", "town", "rest", "uncertainty", "aftermath", "combat", "elite", "boss", "cutscene" };
 
         /// <summary>The one rock stem is allowed only in the boss state (Canon §1).</summary>
         public const string RockLayer = "rock_lead";
@@ -187,7 +188,10 @@ namespace Ascend.Core
                 if (f.Crossfades[key] < 0) errors.Add($"crossfade \"{key}\" is negative");
             }
             foreach (var kv in f.Overlays.Advantage.Layers.Concat(f.Overlays.Danger.Layers))
+            {
                 if (!layerIds.Contains(kv.Key)) errors.Add($"overlay uses unknown layer {kv.Key}");
+                if (kv.Key == RockLayer) errors.Add("the rock stem is boss-only (not allowed in an overlay)");
+            }
             if (f.Overlays.Danger.ExitAboveHp <= f.Overlays.Danger.EnterBelowHp) errors.Add("danger overlay needs exit HP above enter HP (hysteresis)");
             if (!layerIds.Contains("companion_theme")) errors.Add("missing companion_theme layer");
             if (f.Tuning.ReducedIntensityScale < 0 || f.Tuning.ReducedIntensityScale > 1) errors.Add("reducedIntensityScale outside 0..1");
@@ -270,6 +274,7 @@ namespace Ascend.Core
             _cur = _states[id];
             _held = 0; _cand = null; _candFor = 0; _retreating = false;
             _lastPhase = id == "boss" ? i.BossPhase : 0;
+            if (_cur.CombatClass) _danger = Math.Max(0, Math.Min(1, double.IsNaN(i.PlayerHpFraction) ? 1 : i.PlayerHpFraction)) <= _f.Overlays.Danger.EnterBelowHp;
             if (!_cur.CombatClass) { _adv = false; _advOff = 0; _danger = false; }
             if (!string.IsNullOrEmpty(_cur.StingerOnEnter)) stingers.Add(_cur.StingerOnEnter);
             return new MusicTransition { From = from, To = id, CrossfadeSeconds = Crossfade(from, id), Reason = reason };
@@ -287,13 +292,14 @@ namespace Ascend.Core
             if (input.Outcome == CombatOutcome.Retreat && _cur.CombatClass) _retreating = true;
             string desired = Desire(input);
 
-            if (input.Outcome == CombatOutcome.Victory && _cur.CombatClass && !Prefs.NoCombatMusic && !_states[desired].CombatClass && desired != "cutscene")
+            if (input.Outcome == CombatOutcome.Victory && _cur.CombatClass && !Prefs.NoCombatMusic && input.BossPhase <= 0 && desired != "cutscene")
             {
                 tr = Enter("aftermath", "victory", stingers, input);
             }
             else if (desired == _cur.Id)
             {
                 _cand = null; _candFor = 0;
+                if (_cur.CombatClass && input.Outcome != CombatOutcome.Retreat) _retreating = false; // the fight resumed
             }
             else
             {
@@ -305,7 +311,7 @@ namespace Ascend.Core
                 else
                 {
                     double exit = _retreating && _cur.RetreatExitDelaySeconds > 0 ? _cur.RetreatExitDelaySeconds : _cur.ExitDelaySeconds;
-                    go = _held >= _cur.MinHoldSeconds && _candFor >= exit;
+                    go = (Prefs.NoCombatMusic && _cur.CombatClass) || (_held >= _cur.MinHoldSeconds && _candFor >= exit); // turning combat music off applies at once
                 }
                 if (go) tr = Enter(desired, d.Priority >= _cur.Priority ? "escalate" : (_retreating ? "retreat" : "calm"), stingers, input);
             }
@@ -316,7 +322,7 @@ namespace Ascend.Core
             if (_cur.Id == "boss") _lastPhase = Math.Max(_lastPhase, input.BossPhase);
 
             // overlays (advantage with an off delay, danger with HP hysteresis); they only show in combat-class states
-            if (input.PlayerAdvantage) { _adv = true; _advOff = 0; }
+            if (input.PlayerAdvantage && _cur.CombatClass) { _adv = true; _advOff = 0; }
             else if (_adv) { _advOff += dt; if (_advOff >= _f.Overlays.Advantage.OffDelaySeconds) _adv = false; }
             double hp = Math.Max(0, Math.Min(1, double.IsNaN(input.PlayerHpFraction) ? 1 : input.PlayerHpFraction));
             if (hp <= _f.Overlays.Danger.EnterBelowHp) _danger = true;
@@ -327,7 +333,7 @@ namespace Ascend.Core
             {
                 if (_region != null && input.Region != null && !_cur.CombatClass && _cur.Id != "cutscene" && tr?.To != "aftermath" && !string.IsNullOrEmpty(_f.Tuning.RegionArrivalStinger))
                     stingers.Add(_f.Tuning.RegionArrivalStinger);
-                _region = input.Region;
+                if (input.Region != null) _region = input.Region; // a null tick must not make the next region look like the first
             }
 
             return Compose(input, tr, stingers);
@@ -343,7 +349,7 @@ namespace Ascend.Core
             Add(_cur.Layers);
             if (_cur.Id == "boss" && _cur.PhaseLayers.Count > 0)
             {
-                int n = Math.Min(Math.Max(input.BossPhase, 1), _cur.PhaseLayers.Count);
+                int n = Math.Min(Math.Max(_lastPhase, 1), _cur.PhaseLayers.Count); // held while the boss state lingers
                 for (int p = 0; p < n; p++) Add(_cur.PhaseLayers[p]);
             }
             if (_cur.CombatClass)
@@ -355,7 +361,7 @@ namespace Ascend.Core
             if (_cur.AllowCompanionTheme && !string.IsNullOrEmpty(input.CompanionId) && _themes.Contains(input.CompanionId) && (_roster == null || _roster.Contains(input.CompanionId)))
             {
                 themeEvent = MusicRules.ThemeEvent(input.CompanionId);
-                mix["companion_theme"] = 0.8;
+                mix["companion_theme"] = _f.Tuning.CompanionThemeGain;
             }
             if (Prefs.ReducedIntensity)
             {
@@ -373,7 +379,7 @@ namespace Ascend.Core
                 Layers = mix,
                 RegionMotifEvent = mix.ContainsKey("motif") && !string.IsNullOrEmpty(input.Region) ? "mus_motif_" + input.Region : null,
                 CompanionThemeEvent = themeEvent,
-                BossPhase = _cur.Id == "boss" ? input.BossPhase : 0,
+                BossPhase = _cur.Id == "boss" ? _lastPhase : 0,
                 Stingers = stingers,
                 Transition = tr,
                 HeldSeconds = _held,

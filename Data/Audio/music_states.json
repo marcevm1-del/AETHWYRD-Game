@@ -5,7 +5,8 @@
   "defaultCrossfadeSeconds": 2.5,
   "reducedIntensityScale": 0.6,
   "regionArrivalStinger": "mus_stinger_region_arrival",
-  "bossPhaseStinger": "mus_stinger_boss_phase"
+  "bossPhaseStinger": "mus_stinger_boss_phase",
+  "companionThemeGain": 0.8
  },
  "layers": [
   { "id": "bed", "essential": true },

@@ -85,7 +85,7 @@ namespace Ascend.Core
             if (t.FovDefault < t.FovMin || t.FovDefault > t.FovMax) errors.Add("fov default outside range");
             if (t.HourStep <= 0 || t.HourStep > 1) errors.Add("hour step must be in (0, 1]");
             if (t.FilterIntensityDefault < 0 || t.FilterIntensityDefault > 1) errors.Add("filter intensity default outside 0..1");
-            if (f.BlockedTags.Count == 0) errors.Add("blockedTags is empty: the teen-rating guard needs a list");
+            foreach (var need in new[] { "suggestive", "undress", "gore" }) if (!f.BlockedTags.Contains(need)) errors.Add($"blockedTags must include {need} (teen rating)");
             foreach (var need in new[] { "combat", "cutscene", "siege_battle", "dialogue" }) if (!f.BlockedWhen.Contains(need)) errors.Add($"blockedWhen needs {need}");
             if (!f.HideElements.Contains("hud")) errors.Add("hideElements needs hud");
             var ids = new HashSet<string>();
@@ -95,7 +95,7 @@ namespace Ascend.Core
                 if (!ids.Add(p.Id ?? "")) errors.Add($"duplicate pose {p.Id}");
                 if (p.Target != "player" && p.Target != "companion" && p.Target != "both") errors.Add($"pose {p.Id}: bad target {p.Target}");
                 if (p.Tags.Count == 0) errors.Add($"pose {p.Id}: no tags");
-                foreach (var tag in p.Tags) if (f.BlockedTags.Contains(tag)) errors.Add($"pose {p.Id}: blocked tag {tag}");
+                foreach (var tag in p.Tags) if (f.BlockedTags.Contains(tag, StringComparer.OrdinalIgnoreCase)) errors.Add($"pose {p.Id}: blocked tag {tag}");
             }
             if (f.Poses.Count == 0) errors.Add("no poses");
             if (!f.Filters.Any(x => x.Id == "filter_none")) errors.Add("filters need filter_none");
@@ -190,7 +190,7 @@ namespace Ascend.Core
         {
             Require();
             var p = _f.Poses.FirstOrDefault(x => x.Id == id);
-            if (p == null || p.Tags.Any(t => _f.BlockedTags.Contains(t))) return false;
+            if (p == null || p.Tags.Any(t => _f.BlockedTags.Contains(t, StringComparer.OrdinalIgnoreCase))) return false;
             if (p.Target != "player" && !_hasCompanion) return false;
             PoseId = id;
             return true;
@@ -201,7 +201,8 @@ namespace Ascend.Core
             Require();
             if (!_f.Filters.Any(x => x.Id == id)) return false;
             FilterId = id;
-            FilterIntensity = Math.Max(0, Math.Min(1, intensity ?? _f.Tuning.FilterIntensityDefault));
+            double v = intensity ?? _f.Tuning.FilterIntensityDefault;
+            FilterIntensity = double.IsNaN(v) ? _f.Tuning.FilterIntensityDefault : Math.Max(0, Math.Min(1, v));
             return true;
         }
 
@@ -248,6 +249,13 @@ namespace Ascend.Core
                 PoseId = PoseId, FilterId = FilterId, FilterIntensity = FilterIntensity, FrameId = FrameId, Fov = Fov,
                 Hour = EffectiveHour, Weather = EffectiveWeather, UiHidden = UiHidden, Number = ++_shots,
             };
+        }
+
+        /// <summary>Tell the session what the world is doing. If it has turned hostile (combat, a cutscene, a siege battle, dialogue) the session closes itself. Returns whether it is still open.</summary>
+        public bool Update(PhotoWorldState world)
+        {
+            if (IsOpen && !PhotoRules.CanOpen(_f, world, out _)) Close();
+            return IsOpen;
         }
 
         /// <summary>Closes the session. The overrides vanish; the game keeps its live hour and weather untouched.</summary>
