@@ -52,3 +52,7 @@ Proposed terrain and condition multipliers in `locomotion.json` (swamp 0.7, moun
 - Chained dodge may start up to 0.1 s late (Dodge to Locomotion has no interruption source).
 - FootIK ground mask is `~0`: other characters count as ground; restrict to terrain/static layers.
 - `blend.walkEnter/runEnter/idleMaxSpeed/hysteresis` are validated but unused at runtime; only `sprintEnter` is read (FootIK).
+## Check results (2026-11-07)
+- `npm run build`: data valid, 184 Core tests passed (7 new locomotion tests).
+- Unity PlayMode (full suite): 158 of 158 passed (22 new in `PlayerAnimationPlayModeTests`). The foot-IK ramp test is deliberately loose (pelvis drops a little; neither foot sinks or floats) because the idle clip sways the feet.
+- Screenshot: `13_Production/screenshots/animation_a1_player.png` (placeholder rig, idle pose; a still, not a motion capture).
