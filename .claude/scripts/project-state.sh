@@ -164,6 +164,12 @@ case "$(printf '%s' "$ENGINE" | tr '[:upper:]' '[:lower:]')" in
   unity) CODE_ROOT="Assets" ;;
   unreal*) CODE_ROOT="Source" ;;
 esac
+# Ascend: project.yaml `paths.code_root` overrides the engine default (our Unity
+# project lives in Game/, so Assets/ at the repo root does not exist).
+if [ -f project.yaml ]; then
+  PCR=$(sed -n 's/^[[:space:]]*code_root:[[:space:]]*"\{0,1\}\([^"#]*[^"# ]\).*/\1/p' project.yaml | head -1 | tr -d '\r')
+  if [ -n "$PCR" ] && [ -d "$PCR" ]; then CODE_ROOT="$PCR"; CSRC="project.yaml paths.code_root"; fi
+fi
 if [ -z "$CODE_ROOT" ]; then
   # No usable engine: believe the tree only when exactly one root is present.
   # Names are compared exactly against the listing, never with `[ -d Assets ]`,
