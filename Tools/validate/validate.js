@@ -469,6 +469,23 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
     const maxRetreat = Math.max(...Object.values(obj.presets).map(p => p.retreatHpMult)) * r.mortalBondsHpMult * r.lowHpFraction;
     if (!(maxRetreat < 1)) err(c.file, 'highest retreat threshold must stay below 1');
   }
+  if (name === 'companion_rules' && obj.relationships) {
+    const R = obj.relationships;
+    for (const [t, d] of Object.entries(R.tracks)) {
+      const m = d.stages.map(x => x.min);
+      if (m[0] !== 0) err(c.file, `relationships.tracks.${t}: first stage must start at 0`);
+      for (let i = 1; i < m.length; i++) if (!(m[i] > m[i - 1])) err(c.file, `relationships.tracks.${t}: stage mins must rise`);
+      if (new Set(d.stages.map(x => x.id)).size !== d.stages.length) err(c.file, `relationships.tracks.${t}: duplicate stage id`);
+    }
+    const has = (t, id) => R.tracks[t].stages.some(x => x.id === id);
+    if (!has('closeness', R.romance.minCloseness)) err(c.file, 'relationships.romance.minCloseness is not a closeness stage');
+    if (!has('trust', R.romance.minTrust)) err(c.file, 'relationships.romance.minTrust is not a trust stage');
+    if (!(R.departure.minTension > R.romance.maxTensionExclusive)) err(c.file, 'departure.minTension must exceed romance.maxTensionExclusive');
+    for (const [k, e] of Object.entries(R.events)) {
+      for (const [t, v] of Object.entries(e.deltas)) if (Math.abs(v) > R.maxDeltaPerEvent) err(c.file, `event ${k}: ${t} delta ${v} exceeds maxDeltaPerEvent ${R.maxDeltaPerEvent}`);
+      if (!e.once && !e.cooldownDays) err(c.file, `event ${k}: needs once or cooldownDays so it cannot be farmed`);
+    }
+  }
   if (name === 'locomotion' && obj.state && obj.baseSpeed) {
     // blend thresholds {0, walk, run, sprint} must strictly ascend
     const th = [0, 'walk', 'run', 'sprint'].map(k => (k === 0 ? 0 : obj.baseSpeed * obj.state[k]));

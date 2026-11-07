@@ -405,11 +405,26 @@ const SCHEMAS = {
     required: ['defaultOrder', 'leashMult', 'followDistanceMult', 'retreatHpMult', 'reviveEagerness', 'assistBias', 'skillCostCaution'],
     properties: { defaultOrder: { type: 'string', enum: ['Follow', 'Hold', 'Focus', 'Assist'] }, leashMult: mult, followDistanceMult: mult,
       retreatHpMult: mult, reviveEagerness: mult, assistBias: mult, skillCostCaution: mult } };
+  const TRACKS = ['trust', 'respect', 'closeness', 'tension'];
+  const pct = { type: 'integer', minimum: 0, maximum: 100 };
+  const stages = { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'min'], properties: { id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, min: pct } } };
+  const track = (extra) => ({ type: 'object', additionalProperties: false, required: ['start', 'stages'], properties: { start: pct, stages, ...extra } });
+  const REL = { type: 'object', additionalProperties: false, required: ['maxDeltaPerEvent', 'tracks', 'romance', 'departure', 'kaito', 'events'],
+    properties: {
+      maxDeltaPerEvent: { type: 'integer', minimum: 1, maximum: 20 },
+      tracks: { type: 'object', additionalProperties: false, required: TRACKS, properties: { trust: track({}), respect: track({}), closeness: track({}), tension: track({ easePerDay: { type: 'integer', minimum: 0, maximum: 10 } }) } },
+      romance: { type: 'object', additionalProperties: false, required: ['minCloseness', 'minTrust', 'maxTensionExclusive'], properties: { minCloseness: { type: 'string' }, minTrust: { type: 'string' }, maxTensionExclusive: { type: 'integer', minimum: 1, maximum: 100 } } },
+      departure: { type: 'object', additionalProperties: false, required: ['minTension', 'requiresForeshadow', 'requiresRepairOffered'], properties: { minTension: { type: 'integer', minimum: 1, maximum: 100 }, requiresForeshadow: { type: 'boolean', enum: [true] }, requiresRepairOffered: { type: 'boolean', enum: [true] } } },
+      kaito: { type: 'object', additionalProperties: false, required: ['start', 'states'], properties: { start: { type: 'string', enum: ['ally', 'rival', 'fallen'] }, states: { type: 'array', items: { type: 'string', enum: ['ally', 'rival', 'fallen'] }, minItems: 3, maxItems: 3 } } },
+      events: { type: 'object', minProperties: 1, propertyNames: { pattern: '^[a-z][a-z0-9_]*$' }, additionalProperties: { type: 'object', additionalProperties: false, required: ['deltas'],
+        properties: { deltas: { type: 'object', additionalProperties: false, properties: Object.fromEntries(TRACKS.map(t => [t, { type: 'integer', minimum: -20, maximum: 20 }])) },
+          once: { type: 'boolean' }, cooldownDays: { type: 'integer', minimum: 1 }, foreshadow: { type: 'boolean' }, offersRepair: { type: 'boolean' }, repair: { type: 'boolean' } } } }
+    } };
   SCHEMAS.companion_rules = {
     title: 'Companion command presets, retreat, revive and downed rules', type: 'object', additionalProperties: false,
-    required: ['version', 'presets', 'retreat', 'revive', 'downed'],
+    required: ['version', 'presets', 'retreat', 'revive', 'downed', 'relationships'],
     properties: {
-      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' }, relationships: REL,
       presets: { type: 'object', additionalProperties: false, required: PRESETS, properties: Object.fromEntries(PRESETS.map(p => [p, preset])) },
       retreat: { type: 'object', additionalProperties: false, required: ['lowHpFraction', 'hysteresis', 'recoverHpFraction', 'mortalBondsHpMult', 'needsSafePathWhenPlayerDowned'],
         properties: { lowHpFraction: frac, hysteresis: frac, recoverHpFraction: frac, mortalBondsHpMult: mult, needsSafePathWhenPlayerDowned: { type: 'boolean', enum: [true] } } },

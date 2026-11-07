@@ -91,6 +91,7 @@ namespace Ascend.Core
         public RetreatTuning Retreat { get; set; } = new RetreatTuning();
         public ReviveTuning Revive { get; set; } = new ReviveTuning();
         public DownedTuning Downed { get; set; } = new DownedTuning();
+        public RelationshipRules Relationships { get; set; } = new RelationshipRules();
 
         /// <summary>The tuning for a preset; a preset the file does not list is the identity (Balanced).</summary>
         public PresetTuning Preset(CompanionPreset p) =>
