@@ -168,4 +168,72 @@ static class BossWeakPointTests
         Assert.Near(1.0, BossTargeting.Resolve(boss, "P", "back", HitWeight.Light, 4.1).DamageMult, 1e-9, "closed after 4 s");
         Assert.Near(2.0, BossTargeting.Resolve(boss, "P", "back", HitWeight.Light).DamageMult, 1e-9, "no timer passed: phase rule only");
     }
+
+    // ------------------------------------------------------------------ armor numbers come from data (REAL Grukk data, not a toy armor)
+    static double ArmorHit(HitWeight w) => BossTargeting.BaseArmorDamage(w, Repo.Db.BossWeakPoints.ArmorDamageByWeight);
+
+    public static void ArmorDamageByWeightIsInDataAndFallsBackOnlyWhenAbsent()
+    {
+        var t = Repo.Db.BossWeakPoints.ArmorDamageByWeight;
+        Assert.True(t != null && t.Count == 6, "armorDamageByWeight has the six weights");
+        Assert.Near(1, ArmorHit(HitWeight.Light), 1e-9, "light from data");
+        Assert.Near(8, ArmorHit(HitWeight.Ultimate), 1e-9, "ultimate from data");
+        var custom = new System.Collections.Generic.Dictionary<string, double> { ["heavy"] = 7 };
+        Assert.Near(7, BossTargeting.BaseArmorDamage(HitWeight.Heavy, custom), 1e-9, "a data value wins (case-insensitive key)");
+        Assert.Near(BossTargeting.DefaultArmorDamage(HitWeight.Light), BossTargeting.BaseArmorDamage(HitWeight.Light, custom), 1e-9, "missing key falls back to the built-in");
+        Assert.Near(4, BossTargeting.BaseArmorDamage(HitWeight.Heavy, null), 1e-9, "no table at all: built-in");
+        var r = BossTargeting.Resolve(GrukkData, "Archers", "left_leg", HitWeight.Heavy, double.NaN, custom);
+        Assert.Near(7, r.ArmorDamage, 1e-9, "Resolve uses the supplied table");
+    }
+
+    public static void GrukksRealArmorBreaksUnderAPlausibleHeavyHitSequenceButNotFromOneLightHit()
+    {
+        var armorData = GrukkData.Armor;
+        // One light hit (and one heavy) leaves it standing.
+        var one = new BossArmor(armorData);
+        Assert.True(!one.Hit(ArmorHit(HitWeight.Light), 0), "a single light hit does not break it");
+        Assert.True(one.Value(0) > armorData.MaxArmor * 0.9, "and barely scratches it");
+        var heavy1 = new BossArmor(armorData);
+        Assert.True(!heavy1.Hit(ArmorHit(HitWeight.Heavy), 0), "a single heavy hit does not break it either");
+        // 8-10 heavy hits, one every 0.9 s (a heavy swing's whole cycle), break it well inside the regen delay between hits.
+        var heavies = new BossArmor(armorData);
+        int broke = -1; double t = 0;
+        for (int i = 1; i <= 12 && broke < 0; i++, t += 0.9)
+            if (heavies.Hit(ArmorHit(HitWeight.Heavy), t)) broke = i;
+        Assert.True(broke >= 8 && broke <= 10, $"heavy hits needed to break the armor should be 8-10 but were {broke}");
+        Assert.True(0.9 < armorData.RegenDelaySec, "the gap between hits is inside the regen delay");
+        // A combo of light, light, medium, heavy repeated: about four strings.
+        var combo = new BossArmor(armorData);
+        broke = -1; t = 0; int strings = 0;
+        while (broke < 0 && strings < 10)
+        {
+            strings++;
+            foreach (var w in new[] { HitWeight.Light, HitWeight.Light, HitWeight.Medium, HitWeight.Heavy })
+            { if (combo.Hit(ArmorHit(w), t)) broke = strings; t += 0.5; }
+            t += 0.3;
+        }
+        Assert.True(broke >= 3 && broke <= 5, $"about four plain strings should break it but it took {broke}");
+        Assert.True(combo.IsBroken(t - 0.8), "it reads broken right after");
+        // A weak point hit (armorDamageMult) is quicker: fewer heavies.
+        var wp = GrukkData.WeakPoints[0];
+        var weak = new BossArmor(armorData);
+        int wbroke = -1; t = 0;
+        for (int i = 1; i <= 12 && wbroke < 0; i++, t += 0.9)
+            if (weak.Hit(ArmorHit(HitWeight.Heavy) * wp.ArmorDamageMult, t)) wbroke = i;
+        Assert.True(wbroke > 0 && wbroke < 8, "weak point heavies break it in fewer hits");
+        // And it refills if left alone, so a slow trickle does not accumulate.
+        var trickle = new BossArmor(armorData);
+        for (int i = 0; i < 10; i++) Assert.True(!trickle.Hit(ArmorHit(HitWeight.Heavy), i * (armorData.RegenDelaySec + 0.1)), "one heavy every regen delay never breaks it");
+    }
+
+    public static void ArmorWithNoRegenDelayNeverRefillsAndStillBreaks()
+    {
+        foreach (var delay in new[] { 0.0, -3.0 })
+        {
+            var a = new BossArmor(new BossArmorData { MaxArmor = 10, BreakSec = 5, DamageTakenMultWhileBroken = 1.25, RegenDelaySec = delay });
+            Assert.True(!a.Hit(4, 0), "chip");
+            Assert.Near(6, a.Value(100), 1e-9, $"regenDelay {delay}: no refill, however long it waits");
+            Assert.True(a.Hit(6, 200), "and it still breaks normally");
+        }
+    }
 }

@@ -159,7 +159,7 @@ namespace Ascend.Core
         public bool IsTerritorial => Pattern.StartsWith("territorial") || Pattern.StartsWith("guardian");
 
         /// <summary>Group-tactics numbers (defaults in code). Replace from combat_tuning.json when loaded.</summary>
-        public GroupTacticsTuning Tactics { get; set; } = new GroupTacticsTuning();
+        public GroupTacticsTuning Tactics { get; set; } = GroupTacticsTuning.Default;
 
         public MonsterBrain(SpeciesData species, SpeciesMotion motion, IReadOnlyDictionary<string, AttackData> attacks, IRandom rng)
         {
@@ -209,8 +209,13 @@ namespace Ascend.Core
             if (s.TargetWarded) { AlertedFor = 0; s.DistanceToPlayer = double.MaxValue; } // out of reach behind the ward
             var nav = _motion.NavAgent;
             var cmd = new AiCommand { Move = AiMove.None, Speed = 0 };
-            var tac = Tactics ?? new GroupTacticsTuning();
-            cmd.ThreatLevel = ThreatAssessor.Score(s.PlayerHpFraction, Math.Max(s.PackmatesNear, s.AlliesNear), s.HpFraction, tac);
+            var tac = Tactics ?? GroupTacticsTuning.Default;
+            // Tactics disabled (groupTactics.enabled = false): behave exactly like the brain before tactics. The player's HP counts
+            // as "not supplied" for the retreat rules, there is no yielding, no flank angle and no threat score.
+            bool tacOn = tac.Enabled;
+            double playerHp = tacOn ? s.PlayerHpFraction : 0;
+            bool yieldToken = tacOn && s.YieldToken;
+            if (tacOn) cmd.ThreatLevel = ThreatAssessor.Score(s.PlayerHpFraction, Math.Max(s.PackmatesNear, s.AlliesNear), s.HpFraction, tac);
 
             // Leash: everyone gives up past the leash (territorial monsters sooner, at the alert radius ×1.5).
             double leash = IsTerritorial ? Math.Min(b.LeashRadius, b.AlertRadius * 1.5) : b.LeashRadius;
@@ -218,8 +223,8 @@ namespace Ascend.Core
             if (!busy && State != AiState.Return && State != AiState.Idle && s.DistanceFromHome > leash) Enter(AiState.Return);
             if (!busy && s.TargetWarded && (State == AiState.Chase || State == AiState.Reposition || State == AiState.Flee)) Enter(AiState.Return);
             // A pack hunter left alone and hurt falls back home instead of fighting on (Greyborn's fight-or-flee odds).
-            if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < RetreatRule.LoneThreshold(LoneRetreatHp, s.PlayerHpFraction, tac) && State == AiState.Chase) Enter(AiState.Return);
-            if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= RetreatRule.SpeciesThreshold(b.RetreatHpPct, s.PlayerHpFraction, tac) && State != AiState.Return)
+            if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < RetreatRule.LoneThreshold(LoneRetreatHp, playerHp, tac) && State == AiState.Chase) Enter(AiState.Return);
+            if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= RetreatRule.SpeciesThreshold(b.RetreatHpPct, playerHp, tac) && State != AiState.Return)
                 Enter(AiState.Flee);
 
             switch (State)
@@ -246,11 +251,11 @@ namespace Ascend.Core
                     if (choice.data != null)
                     {
                         cmd.WantsToken = true;
-                        if (s.HasToken && !s.YieldToken) { StartWindup(choice); cmd.Move = AiMove.None; break; }
+                        if (s.HasToken && !yieldToken) { StartWindup(choice); cmd.Move = AiMove.None; break; }
                         Enter(AiState.Reposition);
                         cmd.Move = AiMove.Circle; cmd.Speed = nav.WalkSpeed > 0 ? nav.WalkSpeed : nav.Speed * 0.4;
-                        if (s.YieldToken) { cmd.WantsToken = false; cmd.ReleaseToken = true; }
-                        if (s.FlankSlot > 0) cmd.FlankAngleDeg = FlankSlots.AngleDeg(s.FlankSlot, tac, s.FlankSlotCount);
+                        if (yieldToken) { cmd.WantsToken = false; cmd.ReleaseToken = true; }
+                        if (tacOn && s.FlankSlot > 0) cmd.FlankAngleDeg = FlankSlots.AngleDeg(s.FlankSlot, tac, s.FlankSlotCount);
                         break;
                     }
                     if (State == AiState.Reposition) Enter(AiState.Chase);

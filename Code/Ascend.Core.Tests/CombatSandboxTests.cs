@@ -240,4 +240,57 @@ static class CombatSandboxTests
         Assert.Near(0, r.ArmorAfter, 0, "no armor"); Assert.True(!r.ArmorBroken, "never broken");
         Assert.Near(1.0, r.BrokenArmorMult, 0, "neutral");
     }
+
+    // ------------------------------------------------------------------ tuning-driven defaults and limits
+    public static void TheSandboxReadsItsLimitsAndDefaultsFromTuning()
+    {
+        var sbt = Repo.Db.Tuning.Sandbox;
+        Assert.Equal(12345, sbt.DefaultSeed, "defaultSeed mirrors the JSON"); Assert.Equal(8, sbt.MaxDummies, "maxDummies"); Assert.Equal(1000, sbt.DefaultDummyHp, "defaultDummyHp");
+        var sb = Sandbox();
+        sb.AddDummy(new SandboxDummySpec { Id = "plain", SpeciesId = "mon_goblin" });   // Hp left at 0 -> tuning default
+        Assert.Equal(sbt.DefaultDummyHp, sb.Readout().Dummies[0].MaxHp, "a dummy with no HP gets sandbox.defaultDummyHp");
+        var many = Sandbox();
+        many.AddDummy(Dummy("m"), sbt.MaxDummies);
+        Assert.Equal(sbt.MaxDummies, many.Readout().Dummies.Count, "filled to the limit");
+        Assert.Throws<System.InvalidOperationException>(() => many.AddDummy(Dummy("extra")), "one more than maxDummies");
+        var over = Sandbox();
+        Assert.Throws<System.InvalidOperationException>(() => over.AddDummy(Dummy("o"), sbt.MaxDummies + 1), "a batch over the limit is refused whole");
+        Assert.Equal(0, over.Readout().Dummies.Count, "and adds none");
+        string Run()
+        {
+            var s = new CombatSandbox(Repo.Db.Tuning, null, Repo.Db.ReactionTable, Repo.Db.BossWeakPoints);
+            s.AddDummy(Dummy("d1"));
+            return Describe(s.Run(new[] { H(Element.Fire), H(Element.Water, HitWeight.Heavy, wait: 0.5) }));
+        }
+        Assert.Equal(Run(), Run(), "default seed is deterministic");
+    }
+
+    public static void ADummyWithoutPhasesTreatsABossRecordsWeakPointsAsExposedInAnyPhase()
+    {
+        // Documented behaviour: no Phases on the dummy -> no phase name -> the boss record's weak points count as exposed.
+        var sb = Sandbox();
+        sb.AddDummy(new SandboxDummySpec { Id = "g", SpeciesId = Grukk, Hp = 100000000, Weakness = Element.None });
+        var wp = Repo.Db.BossWeakPoints.Bosses.Single(b => b.SpeciesId == Grukk).WeakPoints[0];
+        var r = sb.Hit(H(Element.None, HitWeight.Light, target: "g", part: wp.BodyPart));
+        Assert.Equal(wp.Id, r.WeakPointId, "the weak point is hit without any phase");
+        Assert.Near(wp.DamageMult, r.WeakPointMult, 1e-9, "its multiplier applies");
+        // With phases supplied the exposure rules apply again.
+        var sb2 = Sandbox();
+        sb2.AddDummy(new SandboxDummySpec { Id = "g", SpeciesId = Grukk, Hp = 100000000, Weakness = Element.None, Phases = Repo.Db.Bosses[Grukk] });
+        var open = sb2.Hit(H(Element.None, HitWeight.Light, target: "g", part: wp.BodyPart));
+        Assert.True(open.Phase != null, "phased dummy reports a phase");
+        Assert.Equal(wp.ExposedInPhases.Contains(open.Phase), open.WeakPointId != null, "exposure follows the phase when phases are supplied");
+    }
+
+    public static void TheReadoutExposesTheUncappedProductOfEveryExtraMultiplier()
+    {
+        var sb = Sandbox();
+        sb.AddDummy(new SandboxDummySpec { Id = "g", SpeciesId = Grukk, Hp = 100000000, Weakness = Element.None, Armor = new BossArmorData { MaxArmor = 1, BreakSec = 30, DamageTakenMultWhileBroken = 1.25, RegenDelaySec = 6 } });
+        var wp = Repo.Db.BossWeakPoints.Bosses.Single(b => b.SpeciesId == Grukk).WeakPoints[0];
+        sb.Hit(H(Element.None, HitWeight.Light, target: "g", part: "left_leg"));   // breaks the 1-point armor
+        var last = sb.Hit(H(Element.None, HitWeight.Heavy, target: "g", part: wp.BodyPart));
+        double product = last.ShatterMult * last.ReactionMult * last.SynergyMult * last.WeakPointMult * last.BrokenArmorMult;
+        Assert.Near(product, last.TotalExtraMult, 1e-9, "TotalExtraMult is exactly the product of the parts");
+        Assert.True(last.TotalExtraMult >= wp.DamageMult * 1.25 - 1e-9, "weak point and broken armor stacked (no cap in rules)");
+    }
 }

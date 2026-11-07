@@ -16,6 +16,44 @@
   "notes": {
    "type": "string"
   },
+  "armorDamageByWeight": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "light",
+    "medium",
+    "heavy",
+    "launch",
+    "skill",
+    "ultimate"
+   ],
+   "properties": {
+    "light": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "medium": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "heavy": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "launch": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "skill": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "ultimate": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    }
+   }
+  },
   "bosses": {
    "type": "array",
    "items": {
@@ -55,7 +93,7 @@
        },
        "regenDelaySec": {
         "type": "number",
-        "minimum": 0
+        "exclusiveMinimum": 0
        }
       }
      },
@@ -87,11 +125,11 @@
         },
         "damageMult": {
          "type": "number",
-         "minimum": 0
+         "exclusiveMinimum": 0
         },
         "armorDamageMult": {
          "type": "number",
-         "minimum": 0
+         "exclusiveMinimum": 0
         },
         "exposedInPhases": {
          "type": "array",

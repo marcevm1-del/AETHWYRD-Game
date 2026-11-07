@@ -103,7 +103,7 @@ The ten pairs above now live in `Data/Combat/reactions.json` so feel can be tune
 - Each reaction lists its two elements (order does not matter), whether it **consumes the aura** (all do except Swirl), an optional **bonus damage multiplier**, and optional **DoT**, **hazard zone** and **status** (freeze or stun).
 - **Parity (matches today):** the pairs, aura consumption, Freeze 2.5 s and Storm Prison 1.2 s (copied from ⚙ `reactions`; a test keeps them equal), and the Firestorm zone (⚙ `firestorm`).
 - **Proposals (user tunes):** bonus multipliers (Thermal Shock x2.0, Twilight Burst x2.5, Firestorm x1.5 and so on), Wildfire's burn DoT, the Magma and Miasma ground zones, and all Swirl spread numbers.
-- **Swirl** (table `swirl`): Wind meeting a non-Wind element spreads that element to up to 3 neighbours within 5 m at x0.5 damage; the aura is kept.
+- **Swirl** (table `swirl`; stored under Wind + Fire, but as in the table above Wind with any other element triggers it): Wind meeting a non-Wind element spreads that element to up to 3 neighbours within 5 m at x0.5 damage; the aura is kept.
 - **Readability:** every hazard is a marked ground zone with a visible edge and a countdown, never an instant kill; the UI shows aura, trigger and remaining time (section 15).
 
 ### 7b. Reaction synergies
@@ -163,7 +163,7 @@ AI patterns come from `aiPattern` in species data. Each monster's turn: **pick a
 
 ### 10a. Group tactics (symmetric peers)
 Packs fight smarter without any monster being in charge. Numbers: ⚙ `groupTactics` in `combat_tuning.json`. **Hard rules (Canon 4d):** no leader, captain, commander or rank among monsters; no learning or adapting to the player; nothing is remembered between fights or about the player. Every monster runs the same rules from the same inputs.
-- **Flank slots:** each repositioning pack member is given one of ⚙ 3 angular slots (2 to 4 allowed) around the target, spread over a ⚙ 240 degree arc at ⚙ 4.5 m, assigned in a fixed member order and reassigned every ⚙ 1.5 s. Players see enemies come from several sides, but never more than ⚙ `ai.maxSimultaneousAttackers` attack at once.
+- **Flank slots:** each repositioning pack member is given one of ⚙ 3 angular slots (2 to 4 allowed) around the target, spread over a ⚙ 240 degree arc at ⚙ 4.5 m, assigned in a fixed member order (sorted by id, which is arbitrary and carries no rank) and reassigned every ⚙ 1.5 s. Players see enemies come from several sides, but never more than ⚙ `ai.maxSimultaneousAttackers` attack at once.
 - **Threat read:** each monster scores risk to itself from the player's HP fraction, how outnumbered it is and its own HP (weights 0.4 / 0.35 / 0.25). Above ⚙ 0.6 it fights cautiously (keeps range, feints); below ⚙ 0.3 it presses. No history is kept; the score is recomputed every tick.
 - **Retreat:** a pack member retreats at ⚙ 30% HP; a monster with no packmates nearby retreats at ⚙ 50% (today's rule). It rejoins after recovering to ⚙ 60% or after ⚙ 4 s. Retreat is visible, giving the player a choice to chase or not (section 14).
 - **Yield:** a repositioning monster gives its slot or aggro token to a peer who is healthier by ⚙ 20% HP, holds the yield for ⚙ 1.5 s and will not yield again for ⚙ 3 s. Symmetric: any peer can yield to any other.

@@ -14,7 +14,7 @@ namespace Ascend.Core
         public double BreakSec { get; set; }
         /// <summary>Damage multiplier on the boss while its armor is broken (above 1).</summary>
         public double DamageTakenMultWhileBroken { get; set; } = 1.0;
-        /// <summary>Seconds without an armor hit before an unbroken armor refills.</summary>
+        /// <summary>Seconds without an armor hit before an unbroken armor refills. Zero or less means it never refills.</summary>
         public double RegenDelaySec { get; set; }
     }
 
@@ -42,6 +42,8 @@ namespace Ascend.Core
     {
         public int Version { get; set; } = 1;
         public string Notes { get; set; }
+        /// <summary>Armor points one hit removes, by hit weight (keys light/medium/heavy/launch/skill/ultimate). Absent keys fall back to <see cref="BossTargeting.DefaultArmorDamage"/>.</summary>
+        public Dictionary<string, double> ArmorDamageByWeight { get; set; }
         public List<BossWeakPointData> Bosses { get; set; } = new List<BossWeakPointData>();
     }
 
@@ -100,7 +102,7 @@ namespace Ascend.Core
                 _brokenUntil = double.NegativeInfinity;
                 _lastHitAt = double.NegativeInfinity;
             }
-            else if (_value > 0 && _value < MaxArmor && now - _lastHitAt >= _d.RegenDelaySec)
+            else if (_d.RegenDelaySec > 0 && _value > 0 && _value < MaxArmor && now - _lastHitAt >= _d.RegenDelaySec)
             {
                 _value = MaxArmor;
             }
@@ -119,8 +121,8 @@ namespace Ascend.Core
 
     public static class BossTargeting
     {
-        /// <summary>Base armor damage a hit of this weight does to an unexposed part.</summary>
-        public static double BaseArmorDamage(HitWeight weight)
+        /// <summary>The built-in armor damage per weight, used only when the data file has no armorDamageByWeight entry for it.</summary>
+        public static double DefaultArmorDamage(HitWeight weight)
         {
             switch (weight)
             {
@@ -134,27 +136,39 @@ namespace Ascend.Core
             }
         }
 
+        /// <summary>Base armor damage a hit of this weight does to an unexposed part. Reads the data table (keys are lower-case weight names) when given, else the built-in defaults.</summary>
+        public static double BaseArmorDamage(HitWeight weight, IReadOnlyDictionary<string, double> byWeight = null)
+        {
+            if (byWeight != null)
+            {
+                string name = weight.ToString();
+                foreach (var kv in byWeight)
+                    if (string.Equals(kv.Key, name, StringComparison.OrdinalIgnoreCase)) return kv.Value;
+            }
+            return DefaultArmorDamage(weight);
+        }
+
         /// <summary>Resolves a hit on a body part during a phase (no exposure timer).</summary>
         public static TargetingResult Resolve(BossWeakPointData bossData, string phaseName, string hitPartId, HitWeight hitWeight) =>
-            Resolve(bossData, phaseName, hitPartId, hitWeight, double.NaN);
+            Resolve(bossData, phaseName, hitPartId, hitWeight, double.NaN, null);
 
         /// <summary>
         /// As above; <paramref name="secondsIntoPhase"/> (NaN = ignore) closes weak points that have an ExposedSec window.
-        /// A part matches a weak point by its BodyPart or Id, case-insensitive.
+        /// A part matches a weak point by its BodyPart or Id, case-insensitive. With <paramref name="anyPhase"/> the phase check is skipped (a harness target that has no phases).
         /// </summary>
-        public static TargetingResult Resolve(BossWeakPointData bossData, string phaseName, string hitPartId, HitWeight hitWeight, double secondsIntoPhase)
+        public static TargetingResult Resolve(BossWeakPointData bossData, string phaseName, string hitPartId, HitWeight hitWeight, double secondsIntoPhase, IReadOnlyDictionary<string, double> armorDamageByWeight = null, bool anyPhase = false)
         {
-            var res = new TargetingResult { DamageMult = 1.0, ArmorDamage = BaseArmorDamage(hitWeight) };
+            var res = new TargetingResult { DamageMult = 1.0, ArmorDamage = BaseArmorDamage(hitWeight, armorDamageByWeight) };
             if (bossData == null || string.IsNullOrEmpty(hitPartId)) return res;
             foreach (var wp in bossData.WeakPoints)
             {
                 bool part = string.Equals(wp.BodyPart, hitPartId, StringComparison.OrdinalIgnoreCase)
                          || string.Equals(wp.Id, hitPartId, StringComparison.OrdinalIgnoreCase);
                 if (!part) continue;
-                if (!wp.ExposedInPhases.Any(p => string.Equals(p, phaseName, StringComparison.OrdinalIgnoreCase))) continue;
+                if (!anyPhase && !wp.ExposedInPhases.Any(p => string.Equals(p, phaseName, StringComparison.OrdinalIgnoreCase))) continue;
                 if (wp.ExposedSec.HasValue && !double.IsNaN(secondsIntoPhase) && secondsIntoPhase > wp.ExposedSec.Value) continue;
                 res.DamageMult = wp.DamageMult > 0 ? wp.DamageMult : 1.0;
-                res.ArmorDamage = BaseArmorDamage(hitWeight) * (wp.ArmorDamageMult > 0 ? wp.ArmorDamageMult : 1.0);
+                res.ArmorDamage = BaseArmorDamage(hitWeight, armorDamageByWeight) * (wp.ArmorDamageMult > 0 ? wp.ArmorDamageMult : 1.0);
                 res.WeakPoint = wp;
                 break;
             }

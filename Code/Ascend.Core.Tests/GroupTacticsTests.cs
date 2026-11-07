@@ -176,9 +176,35 @@ static class GroupTacticsTests
         // The answer depends on the list contents, not the list order.
         var shuffled = new[] { M(9, 0.8), M(4, 0.8), M(2, 0.8) };
         Assert.Equal(PeerCoordinator.Winner(pack), PeerCoordinator.Winner(shuffled), "list order does not matter");
-        // Bucket gap: 0.31 vs 0.44 are one bucket (gap 0.15), so the id decides, not the 13 point lead.
+        // Gap: 0.31 vs 0.44 differ by 0.13, under the 0.2 gap, so the id decides, not the 13 point lead.
         var near = new[] { M(1, 0.31), M(2, 0.44) };
-        Assert.Equal(1, PeerCoordinator.Winner(near), "tiny HP lead inside a bucket does not decide");
+        Assert.Equal(1, PeerCoordinator.Winner(near), "tiny HP lead inside the gap does not decide");
+    }
+
+    public static void YieldComparesTheRealHpGapNotBuckets()
+    {
+        double gap = new GroupTacticsTuning().YieldHpGap;
+        // 0.59 vs 0.61 straddle a bucket edge (0.6) but are only 0.02 apart: equal, so the lower id keeps the token whichever side it is on.
+        var a = new[] { M(1, 0.61), M(2, 0.59) };
+        Assert.Equal(1, PeerCoordinator.Winner(a), "0.59 vs 0.61: id 1 (healthier here) wins by id");
+        var b = new[] { M(1, 0.59), M(2, 0.61) };
+        Assert.Equal(1, PeerCoordinator.Winner(b), "0.59 vs 0.61 with ids swapped: id 1 still wins, HP does not decide");
+        Assert.True(PeerCoordinator.ShouldYield(2, b) && !PeerCoordinator.ShouldYield(1, b), "the higher id yields despite the higher HP");
+        // A large gap: the healthier one wins even with the higher id.
+        var c = new[] { M(1, 0.2), M(2, 0.2 + gap + 0.3) };
+        Assert.Equal(2, PeerCoordinator.Winner(c), "a large HP gap: the healthier peer wins");
+        Assert.True(PeerCoordinator.ShouldYield(1, c) && !PeerCoordinator.ShouldYield(2, c), "the hurt one yields");
+        // Exactly the gap counts as a real lead.
+        var half = new GroupTacticsTuning { YieldHpGap = 0.5 };   // exactly representable, so the difference is exactly the gap
+        var d = new[] { M(1, 0.25), M(2, 0.75) };
+        Assert.Equal(2, PeerCoordinator.Winner(d, half), "a lead of exactly the gap decides");
+    }
+
+    public static void AnEvenPairAndTheOldBucketEdgeCaseNowAgree()
+    {
+        // Under buckets 0.29 vs 0.31 (gap 0.2 -> buckets 1 and 1) agreed, 0.39 vs 0.41 (1 vs 2) did not; now both are "equal".
+        Assert.Equal(1, PeerCoordinator.Winner(new[] { M(1, 0.39), M(2, 0.41) }), "0.39 vs 0.41 equal -> id");
+        Assert.Equal(1, PeerCoordinator.Winner(new[] { M(1, 0.29), M(2, 0.31) }), "0.29 vs 0.31 equal -> id");
     }
 
     public static void NobodyYieldsWhenAlonePeersDoNotWantItOrTheMemberIsUnknown()
@@ -396,10 +422,65 @@ static class GroupTacticsTests
         Assert.Equal(g.Threat.AlliesForFullSupport, t.ThreatAlliesFull, "ToTuning allies-for-full");
         Assert.Near(g.Yield.HpMargin, t.YieldHpGap, 1e-9, "ToTuning yield gap");
         Assert.Near(g.Yield.HoldSec, t.YieldSec, 1e-9, "ToTuning yield seconds");
-        // Everything ToTuning does not map keeps its in-code default (the retreat block is not mapped onto the brain yet).
-        var def = new GroupTacticsTuning();
-        Assert.Near(def.PressOnPlayerHp, t.PressOnPlayerHp, 0, "unmapped field keeps its default");
-        Assert.Near(def.OutnumberedRetreatBonus, t.OutnumberedRetreatBonus, 0, "unmapped field keeps its default");
+        Assert.Near(g.Retreat.PressOnPlayerHp, t.PressOnPlayerHp, 1e-9, "ToTuning pressOnPlayerHp");
+        Assert.Near(g.Retreat.PressOnRetreatScale, t.PressOnRetreatScale, 1e-9, "ToTuning pressOnRetreatScale");
+        Assert.Near(g.Retreat.HealthyPlayerHp, t.HealthyPlayerHp, 1e-9, "ToTuning healthyPlayerHp");
+        Assert.Near(g.Retreat.OutnumberedRetreatBonus, t.OutnumberedRetreatBonus, 1e-9, "ToTuning outnumberedRetreatBonus");
+        Assert.Near(j.GetProperty("retreat").GetProperty("pressOnPlayerHp").GetDouble(), t.PressOnPlayerHp, 1e-9, "JSON retreat.pressOnPlayerHp");
+        Assert.Near(j.GetProperty("retreat").GetProperty("pressOnRetreatScale").GetDouble(), t.PressOnRetreatScale, 1e-9, "JSON retreat.pressOnRetreatScale");
+        Assert.Near(j.GetProperty("retreat").GetProperty("healthyPlayerHp").GetDouble(), t.HealthyPlayerHp, 1e-9, "JSON retreat.healthyPlayerHp");
+        Assert.Near(j.GetProperty("retreat").GetProperty("outnumberedRetreatBonus").GetDouble(), t.OutnumberedRetreatBonus, 1e-9, "JSON retreat.outnumberedRetreatBonus");
+        Assert.Equal(g.Enabled, t.Enabled, "ToTuning enabled");
+    }
+
+    public static void InCodeDefaultsEqualTheDataSoTheJsonIsTheSingleSourceOfTruth()
+    {
+        // Every field of GroupTacticsTuning that ToTuning maps: the default constructed value must equal the value loaded from JSON.
+        var d = new GroupTacticsTuning();
+        var t = Repo.Db.Tuning.GroupTactics.ToTuning();
+        Assert.Equal(t.Enabled, d.Enabled, "Enabled");
+        Assert.Equal(t.FlankSlotCount, d.FlankSlotCount, "FlankSlotCount");
+        Assert.Near(t.FlankArcDeg, d.FlankArcDeg, 1e-12, "FlankArcDeg");
+        Assert.Near(t.PressOnPlayerHp, d.PressOnPlayerHp, 1e-12, "PressOnPlayerHp");
+        Assert.Near(t.PressOnRetreatScale, d.PressOnRetreatScale, 1e-12, "PressOnRetreatScale");
+        Assert.Near(t.HealthyPlayerHp, d.HealthyPlayerHp, 1e-12, "HealthyPlayerHp");
+        Assert.Near(t.OutnumberedRetreatBonus, d.OutnumberedRetreatBonus, 1e-12, "OutnumberedRetreatBonus");
+        Assert.Near(t.YieldHpGap, d.YieldHpGap, 1e-12, "YieldHpGap");
+        Assert.Near(t.YieldSec, d.YieldSec, 1e-12, "YieldSec");
+        Assert.Near(t.ThreatPlayerWeight, d.ThreatPlayerWeight, 1e-12, "ThreatPlayerWeight");
+        Assert.Near(t.ThreatAlliesWeight, d.ThreatAlliesWeight, 1e-12, "ThreatAlliesWeight");
+        Assert.Near(t.ThreatOwnHpWeight, d.ThreatOwnHpWeight, 1e-12, "ThreatOwnHpWeight");
+        Assert.Equal(t.ThreatAlliesFull, d.ThreatAlliesFull, "ThreatAlliesFull");
+        // And the mirror classes' own defaults equal the JSON too (an absent key behaves like the file).
+        var m = new GroupTacticsData();
+        var g = Repo.Db.Tuning.GroupTactics;
+        Assert.Near(g.Flank.ArcDeg, m.Flank.ArcDeg, 1e-12, "mirror arc"); Assert.Near(g.Yield.HpMargin, m.Yield.HpMargin, 1e-12, "mirror gap");
+        Assert.Near(g.Threat.OutnumberedWeight, m.Threat.OutnumberedWeight, 1e-12, "mirror allies weight");
+    }
+
+    public static void DisablingGroupTacticsMakesTheBrainBehaveLikeTheOldBrain()
+    {
+        var m = Repo.Db.Motion[Pack].Behavior;
+        var off = Repo.Db.Tuning.GroupTactics.ToTuning(); off.Enabled = false;
+        // 1. A healthy player no longer raises the lone-retreat limit (0.55 stays above 0.5).
+        var b = Brain(Pack); b.Tactics = off;
+        b.Tick(Dt, Sense(m.AlertRadius - 1));
+        var s = Sense(m.AlertRadius - 1, hp: 0.55, home: 3, packmates: 0); s.PlayerHpFraction = 1.0;
+        b.Tick(Dt, s);
+        Assert.True(b.State != AiState.Return, "tactics off: the player's HP changes nothing");
+        // 2. A yield order is ignored, no flank angle, no threat score.
+        var g = Brain("mon_goblin"); g.Tactics = off;
+        g.Tick(Dt, Sense(1.2, token: false));
+        var s2 = Sense(1.2, token: true); s2.YieldToken = true; s2.FlankSlot = 3; s2.FlankSlotCount = 3; s2.PlayerHpFraction = 0.5;
+        bool struck = false; AiCommand last = default;
+        for (double t = 0; t < 4 && !struck; t += Dt) { last = g.Tick(Dt, s2); struck = last.StrikeNow; }
+        Assert.True(struck, "tactics off: the yield order is ignored and it attacks");
+        Assert.Near(0, last.FlankAngleDeg, 1e-12, "no flank angle");
+        Assert.Near(0, last.ThreatLevel, 1e-12, "no threat score");
+        // 3. The same sense with tactics ON does yield.
+        var on = Brain("mon_goblin"); on.Tactics = Repo.Db.Tuning.GroupTactics.ToTuning();
+        on.Tick(Dt, Sense(1.2, token: false));
+        for (int i = 0; i < 120; i++) Assert.True(!on.Tick(Dt, s2).StrikeNow, "tactics on: it yields");
     }
 
     public static void AMapBackedTuningDrivesTheBrainWithoutBreakingIt()

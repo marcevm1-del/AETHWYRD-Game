@@ -319,4 +319,11 @@ static class ReactionTableTests
         Assert.Equal(Reaction.Grounded, r.Reaction, "grounded");
         Assert.Equal("storm_ground", r.Synergy?.Id, "storm_ground in window");
     }
+
+    public static void ParsedIdRejectsNumericAndUndefinedValues()
+    {
+        Assert.Equal(Reaction.Freeze, new ReactionData { Id = "Freeze" }.ParsedId, "a real name parses");
+        foreach (var bad in new[] { "3", "0", "-1", "99", " 3", "Freeze,Magma", "freeze", "", null, "NotAReaction", "1e1" })
+            Assert.Equal(Reaction.None, new ReactionData { Id = bad }.ParsedId, "\"" + bad + "\" is not a reaction id");
+    }
 }

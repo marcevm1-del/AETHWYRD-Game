@@ -63,3 +63,5 @@
 | P3 | Decide whether any weapon-mastery layer exists (v5 sections 4 and 9). Default answer: no trees; weapon identity comes from rhythm (combat.md 13) | Avoids a stat treadmill; needs a product decision |
 | P4 | Confirm the group-tactics ban list as Canon wording: "monster groups use symmetric peer rules only; no leader or rank, no memory of the player, nothing carried between fights" | Restates Canon 4d for the AI code and tests |
 | P5 | Confirm that "Guardian protects allies" may exist as a peer behaviour (a role any monster of that pattern has, with no command authority) | Item 20; only if the user wants it |
+
+Note (review fix pass): extra-damage multipliers (Shatter, reaction, synergy, weak point, broken armor) multiply together and are left uncapped in the rules on purpose, since every number is a proposal. The sandbox readout exposes the product per hit as `TotalExtraMult`; use it when tuning to judge how far stacking runs before any cap is proposed.

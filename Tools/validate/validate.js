@@ -1,7 +1,7 @@
 // Project Ascend data validator. Dependency-free (plain Node).
 // Usage: node Tools/validate/validate.js        → exit code 1 if anything is wrong
 // Checks: 1) every row against its JSON Schema (subset: type, required, properties,
-// additionalProperties:false, enum, pattern, minimum/maximum, minLength, minItems/maxItems, items)
+// additionalProperties:false, enum, pattern, minimum/maximum/exclusiveMinimum, minLength, minItems/maxItems, items)
 // 2) IDs unique across ALL data  3) every cross-reference points at an existing ID.
 const fs = require('fs');
 const path = require('path');
@@ -53,6 +53,7 @@ function check(v, s, where) {
   }
   if (typeof v === 'number') {
     if (s.minimum != null && v < s.minimum) err(where, `${v} < minimum ${s.minimum}`);
+    if (s.exclusiveMinimum != null && v <= s.exclusiveMinimum) err(where, `${v} must be greater than ${s.exclusiveMinimum}`);
     if (s.maximum != null && v > s.maximum) err(where, `${v} > maximum ${s.maximum}`);
   }
   if (Array.isArray(v)) {
@@ -174,6 +175,8 @@ if (fs.existsSync(path.join(DATA, 'Combat/reactions.json'))) {
     const key = (r.elements || []).slice().sort().join('+');
     if ((r.elements || []).length === 2 && r.elements[0] === r.elements[1]) err('reactions.json#' + r.id, 'elements must be two different elements');
     // Swirl is the catch-all (Wind meeting any element without its own row), so its listed pair is only a representative; it must still contain Wind.
+    // consumesAura false is the Swirl rule only (it keeps the aura); every other reaction consumes it.
+    if (r.id !== 'Swirl' && r.consumesAura !== true) err('reactions.json#' + r.id, 'consumesAura must be true for every reaction except Swirl');
     if (r.id === 'Swirl') { if (!(r.elements || []).includes('Wind')) err('reactions.json#Swirl', 'Swirl elements must include Wind'); }
     else {
     if (pairs.has(key)) err('reactions.json#' + r.id, `element pair ${key} already used by ${pairs.get(key)} (order does not matter)`); pairs.set(key, r.id);
@@ -196,8 +199,14 @@ if (fs.existsSync(path.join(DATA, 'Monsters/boss_weakpoints.json'))) {
   const phasesOf = {};
   if (fs.existsSync(path.join(DATA, 'Monsters/boss_phases.json'))) for (const b of load('Monsters/boss_phases.json').bosses || []) phasesOf[b.speciesId] = new Set((b.phases || []).map(p => p.name));
   const seenBoss = new Set();
+  const abw = wf.armorDamageByWeight;
+  if (abw) {
+    if (!(abw.light <= abw.medium && abw.medium <= abw.heavy && abw.heavy <= abw.ultimate)) err('boss_weakpoints.json armorDamageByWeight', 'armor damage must not shrink as the weight grows (light <= medium <= heavy <= ultimate)');
+  }
   for (const b of wf.bosses || []) {
     ref('boss_weakpoints', b.speciesId, 'species');
+    // Armor must be breakable: no more than 20 heavy hits (a guard against an unbreakable bar).
+    if (b.armor && abw && b.armor.maxArmor > 0 && b.armor.maxArmor / abw.heavy > 20) err(b.speciesId, `armor.maxArmor ${b.armor.maxArmor} needs ${Math.ceil(b.armor.maxArmor / abw.heavy)} heavy hits to break (more than 20): effectively unbreakable`);
     if (seenBoss.has(b.speciesId)) err(b.speciesId, 'two boss_weakpoints records for one species'); seenBoss.add(b.speciesId);
     const wids = new Set();
     for (const w of b.weakPoints || []) {
@@ -218,8 +227,20 @@ if (tuning.groupTactics) {
       if (v < 0) err(w, `${v} is negative`);
       if (/(fraction|pct)$/i.test(k) && v > 1) err(w, `${v} is a fraction and must be between 0 and 1`);
       if (/slot(s|count)$/i.test(k) && !(Number.isInteger(v) && v >= 1 && v <= 6)) err(w, `${v}: slot counts are whole numbers from 1 to 6`);
+      if (/^(pressOnPlayerHp|pressOnRetreatScale|healthyPlayerHp|outnumberedRetreatBonus|hpMargin)$/.test(k) && v > 1) err(w, `${v} must be between 0 and 1`);
+      if (k === 'arcDeg' && v > 360) err(w, `${v} degrees is more than a full circle`);
     }
   })(tuning.groupTactics, '');
+  const gr = tuning.groupTactics.retreat || {};
+  if (typeof gr.pressOnPlayerHp === 'number' && typeof gr.healthyPlayerHp === 'number' && gr.pressOnPlayerHp >= gr.healthyPlayerHp) err('combat_tuning.json groupTactics.retreat', 'pressOnPlayerHp must be below healthyPlayerHp');
+  if (tuning.groupTactics.enabled !== undefined && typeof tuning.groupTactics.enabled !== 'boolean') err('combat_tuning.json groupTactics.enabled', 'must be true or false');
+}
+// Sandbox defaults (combat_tuning.json "sandbox", optional).
+if (tuning.sandbox) {
+  for (const k of ['defaultSeed', 'maxDummies', 'defaultDummyHp']) {
+    const v = tuning.sandbox[k];
+    if (v !== undefined && !(Number.isInteger(v) && v >= 1)) err('combat_tuning.json sandbox.' + k, `${v} must be a whole number of at least 1`);
+  }
 }
 
 // Recipes (Items/recipes.json): known items and stations, and a result never ranked above its best material (systems.md §5.1).

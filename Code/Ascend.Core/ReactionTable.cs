@@ -52,7 +52,8 @@ namespace Ascend.Core
         public ReactionHazard Hazard { get; set; }
         public ReactionStatus Status { get; set; }
 
-        public Reaction ParsedId => Enum.TryParse(Id, out Reaction r) ? r : Reaction.None;
+        /// <summary>The enum value for <see cref="Id"/>; <see cref="Reaction.None"/> for null, numeric ("3", "-1") or undefined names.</summary>
+        public Reaction ParsedId => !string.IsNullOrEmpty(Id) && Enum.IsDefined(typeof(Reaction), Id) && Enum.TryParse(Id, out Reaction r) ? r : Reaction.None;
     }
 
     public sealed class SynergyData

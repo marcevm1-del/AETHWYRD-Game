@@ -103,7 +103,7 @@
      },
      "bonusDamageMult": {
       "type": "number",
-      "minimum": 0
+      "exclusiveMinimum": 0
      },
      "note": {
       "type": "string"
@@ -255,7 +255,7 @@
      },
      "bonusDamageMult": {
       "type": "number",
-      "minimum": 0
+      "exclusiveMinimum": 0
      },
      "note": {
       "type": "string"

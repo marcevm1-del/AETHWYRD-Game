@@ -14,7 +14,8 @@ namespace Ascend.Core
         public Element Element { get; set; } = Element.None;
         /// <summary>None = the element's default weakness (Elements.WeaknessOf) when the dummy has an element.</summary>
         public Element? Weakness { get; set; }
-        public int Hp { get; set; } = 1000;
+        /// <summary>Max HP; 0 (or less) means the tuning default (combat_tuning.json sandbox.defaultDummyHp).</summary>
+        public int Hp { get; set; }
         public double Defense { get; set; }
         /// <summary>Optional armor. Null falls back to the boss weak point data for SpeciesId, if any.</summary>
         public BossArmorData Armor { get; set; }
@@ -95,6 +96,7 @@ namespace Ascend.Core
         {
             public SandboxDummySpec Spec;
             public int Hp;
+            public int MaxHp;
             public ReactionState Reactions;
             public BossArmor Armor;
             public BossWeakPointData Boss;
@@ -113,10 +115,14 @@ namespace Ascend.Core
 
         public double Now { get; private set; }
 
-        public CombatSandbox(CombatTuning tuning, IRandom rng, ReactionTable table = null, BossWeakPointFile weakPoints = null)
+        /// <summary>The sandbox's seeded generator from tuning (sandbox.defaultSeed).</summary>
+        public static IRandom DefaultRandom(CombatTuning tuning) => new DeterministicRandom((ulong)Math.Max(0, tuning?.Sandbox.DefaultSeed ?? 12345));
+
+        /// <summary>A null <paramref name="rng"/> uses <see cref="DefaultRandom"/> (sandbox.defaultSeed), so unseeded runs are still reproducible.</summary>
+        public CombatSandbox(CombatTuning tuning, IRandom rng = null, ReactionTable table = null, BossWeakPointFile weakPoints = null)
         {
             _tuning = tuning ?? throw new ArgumentNullException(nameof(tuning));
-            _rng = rng ?? throw new ArgumentNullException(nameof(rng));
+            _rng = rng ?? DefaultRandom(tuning);
             _table = table ?? ReactionTable.Default;
             _weakPoints = weakPoints ?? new BossWeakPointFile();
             _calc = new DamageCalculator(_tuning.Damage);
@@ -126,6 +132,10 @@ namespace Ascend.Core
         public void AddDummy(SandboxDummySpec spec, int count = 1)
         {
             if (spec == null || string.IsNullOrEmpty(spec.Id)) throw new ArgumentException("dummy needs an id");
+            int max = Math.Max(1, _tuning.Sandbox.MaxDummies);
+            if (_dummies.Count + Math.Max(1, count) > max)
+                throw new InvalidOperationException($"the sandbox holds at most {max} dummies (combat_tuning.json sandbox.maxDummies); it has {_dummies.Count} and {Math.Max(1, count)} more were asked for");
+            int hp = spec.Hp > 0 ? spec.Hp : Math.Max(1, _tuning.Sandbox.DefaultDummyHp);
             for (int i = 1; i <= Math.Max(1, count); i++)
             {
                 string id = count <= 1 ? spec.Id : spec.Id + "_" + i;
@@ -135,7 +145,8 @@ namespace Ascend.Core
                 var d = new Dummy
                 {
                     Spec = spec,
-                    Hp = spec.Hp,
+                    Hp = hp,
+                    MaxHp = hp,
                     Reactions = new ReactionState(_tuning.Reactions, _table),
                     Boss = boss,
                     Armor = armorData != null ? new BossArmor(armorData) : null,
@@ -164,7 +175,7 @@ namespace Ascend.Core
             if (d.Fight != null)
             {
                 int before = d.Fight.PhaseIndex;
-                d.Fight.Update(d.Spec.Hp <= 0 ? 0 : (double)d.Hp / d.Spec.Hp);
+                d.Fight.Update((double)d.Hp / d.MaxHp);
                 if (d.Fight.PhaseIndex != before) d.PhaseStartedAt = now;
                 ro.Phase = d.Fight.Current.Name;
             }
@@ -173,7 +184,9 @@ namespace Ascend.Core
             double armorBonus = 1.0;
             if (d.Boss != null || d.Armor != null)
             {
-                var tr = BossTargeting.Resolve(d.Boss, ro.Phase, hit.BodyPart, hit.Weight, d.Fight != null ? now - d.PhaseStartedAt : double.NaN);
+                // A dummy with no Phases has no phase name (ro.Phase is null). When its boss record has weak points that is read as
+                // "any phase": every weak point of the record counts as exposed, so a bare dummy can still be used to test them.
+                var tr = BossTargeting.Resolve(d.Boss, ro.Phase, hit.BodyPart, hit.Weight, d.Fight != null ? now - d.PhaseStartedAt : double.NaN, _weakPoints.ArmorDamageByWeight, anyPhase: d.Fight == null);
                 ro.WeakPointMult = tr.DamageMult;
                 ro.WeakPointId = tr.WeakPoint?.Id;
                 ro.ArmorDamage = tr.ArmorDamage;
@@ -195,6 +208,8 @@ namespace Ascend.Core
             ro.Hazard = rr.Hazard;
             ro.Swirl = rr.Swirl;
 
+            // The product of every extra multiplier is exposed here and left UNCAPPED on purpose (all numbers are proposals);
+            // read TotalExtraMult in the readout to judge how far stacking runs.
             ro.TotalExtraMult = ro.ShatterMult * ro.ReactionMult * ro.SynergyMult * ro.WeakPointMult * ro.BrokenArmorMult;
 
             var weakness = d.Spec.Weakness ?? (d.Spec.Element != Element.None ? Elements.WeaknessOf(d.Spec.Element) : Element.None);
@@ -244,7 +259,7 @@ namespace Ascend.Core
                 {
                     Id = id,
                     Hp = d.Hp,
-                    MaxHp = d.Spec.Hp,
+                    MaxHp = d.MaxHp,
                     Aura = d.Reactions.Aura.Current(Now),
                     Frozen = d.Reactions.IsFrozen(Now),
                     Stunned = d.Reactions.IsStunned(Now),

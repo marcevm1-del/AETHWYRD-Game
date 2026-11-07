@@ -249,7 +249,7 @@ const SCHEMAS = {
         spreadDamageMult: { type: 'number', minimum: 0 }, maxSpreadTargets: { type: 'integer', minimum: 0 } } },
       reactions: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'elements', 'consumesAura'], properties: {
         id: REACTION, elements: { type: 'array', minItems: 2, maxItems: 2, items: EL }, consumesAura: { type: 'boolean' },
-        bonusDamageMult: { type: 'number', minimum: 0 }, note: { type: 'string' },
+        bonusDamageMult: { type: 'number', exclusiveMinimum: 0 }, note: { type: 'string' },
         dot: { type: 'object', additionalProperties: false, required: ['element', 'damagePerSecMult', 'durationSec', 'tickSec'], properties: {
           element: EL, damagePerSecMult: { type: 'number', minimum: 0 }, durationSec: { type: 'number', minimum: 0 }, tickSec: { type: 'number', minimum: 0 } } },
         hazard: { type: 'object', additionalProperties: false, required: ['kind', 'radiusM', 'durationSec', 'damagePerSecMult'], properties: {
@@ -258,7 +258,7 @@ const SCHEMAS = {
           kind: { type: 'string', enum: ['freeze', 'stun'] }, durationSec: { type: 'number', minimum: 0 } } } } } },
       synergies: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'first', 'then', 'windowSec', 'bonusDamageMult'], properties: {
         id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, first: REACTION, then: REACTION,
-        windowSec: { type: 'number', minimum: 0 }, bonusDamageMult: { type: 'number', minimum: 0 }, note: { type: 'string' } } } }
+        windowSec: { type: 'number', minimum: 0 }, bonusDamageMult: { type: 'number', exclusiveMinimum: 0 }, note: { type: 'string' } } } }
     }
   },
   // Boss armor and weak points (Data/Monsters/boss_weakpoints.json). boss_phases.json is untouched.
@@ -266,13 +266,16 @@ const SCHEMAS = {
     title: 'BossWeakPoints', type: 'object', additionalProperties: false, required: ['version', 'notes', 'bosses'],
     properties: {
       version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      armorDamageByWeight: { type: 'object', additionalProperties: false, required: ['light', 'medium', 'heavy', 'launch', 'skill', 'ultimate'], properties: {
+        light: { type: 'number', exclusiveMinimum: 0 }, medium: { type: 'number', exclusiveMinimum: 0 }, heavy: { type: 'number', exclusiveMinimum: 0 },
+        launch: { type: 'number', exclusiveMinimum: 0 }, skill: { type: 'number', exclusiveMinimum: 0 }, ultimate: { type: 'number', exclusiveMinimum: 0 } } },
       bosses: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['speciesId', 'armor', 'weakPoints'], properties: {
         speciesId: id('mon_'),
         armor: { type: 'object', additionalProperties: false, required: ['maxArmor', 'breakSec', 'damageTakenMultWhileBroken', 'regenDelaySec'], properties: {
-          maxArmor: { type: 'number', minimum: 0 }, breakSec: { type: 'number', minimum: 0 }, damageTakenMultWhileBroken: { type: 'number', minimum: 1 }, regenDelaySec: { type: 'number', minimum: 0 } } },
+          maxArmor: { type: 'number', minimum: 0 }, breakSec: { type: 'number', minimum: 0 }, damageTakenMultWhileBroken: { type: 'number', minimum: 1 }, regenDelaySec: { type: 'number', exclusiveMinimum: 0 } } },
         weakPoints: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'label', 'bodyPart', 'damageMult', 'armorDamageMult', 'exposedInPhases'], properties: {
           id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, label: { type: 'string', minLength: 1 }, bodyPart: { type: 'string', minLength: 1 },
-          damageMult: { type: 'number', minimum: 0 }, armorDamageMult: { type: 'number', minimum: 0 },
+          damageMult: { type: 'number', exclusiveMinimum: 0 }, armorDamageMult: { type: 'number', exclusiveMinimum: 0 },
           exposedInPhases: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } }, exposedSec: { type: 'number', minimum: 0 } } } } } } }
     }
   }

@@ -25,6 +25,7 @@ namespace Ascend.Core
         public double BossBreakKnockdownSec { get; set; }
         public AiTuning Ai { get; set; } = new AiTuning();
         public GroupTacticsData GroupTactics { get; set; } = new GroupTacticsData();
+        public SandboxTuning Sandbox { get; set; } = new SandboxTuning();
         public StyleTuning Style { get; set; } = new StyleTuning();
         public DamageTuning Damage { get; set; } = new DamageTuning();
     }
@@ -102,10 +103,16 @@ namespace Ascend.Core
         public GtThreat Threat { get; set; } = new GtThreat();
         public GtYield Yield { get; set; } = new GtYield();
 
+        /// <summary>Maps every field the brain reads onto the flat tuning. Fields documented as reserved in the JSON notes are not mapped.</summary>
         public GroupTacticsTuning ToTuning() => new GroupTacticsTuning
         {
+            Enabled = Enabled,
             FlankSlotCount = Flank.SlotCount,
             FlankArcDeg = Flank.ArcDeg,
+            PressOnPlayerHp = Retreat.PressOnPlayerHp,
+            PressOnRetreatScale = Retreat.PressOnRetreatScale,
+            HealthyPlayerHp = Retreat.HealthyPlayerHp,
+            OutnumberedRetreatBonus = Retreat.OutnumberedRetreatBonus,
             ThreatPlayerWeight = Threat.PlayerStrengthWeight,
             ThreatAlliesWeight = Threat.OutnumberedWeight,
             ThreatOwnHpWeight = Threat.OwnWoundedWeight,
@@ -114,10 +121,31 @@ namespace Ascend.Core
             YieldSec = Yield.HoldSec,
         };
     }
+    // Reserved (read by nothing yet, kept so the data and the design doc line up): flank.slotRadiusM, flank.reassignSec,
+    // retreat.packRetreatHpFraction, retreat.regroupHpFraction, retreat.regroupSec, threat.cautiousAbove, threat.boldBelow, yield.cooldownSec.
+    // retreat.loneRetreatHpFraction restates MonsterBrain.LoneRetreatHp (a test pins them equal).
     public sealed class GtFlank { public int SlotCount { get; set; } = 3; public double SlotRadiusM { get; set; } = 4.5; public double ArcDeg { get; set; } = 240; public double ReassignSec { get; set; } = 1.5; }
-    public sealed class GtRetreat { public double PackRetreatHpFraction { get; set; } = 0.3; public double LoneRetreatHpFraction { get; set; } = 0.5; public double RegroupHpFraction { get; set; } = 0.6; public double RegroupSec { get; set; } = 4; }
+    public sealed class GtRetreat
+    {
+        public double PackRetreatHpFraction { get; set; } = 0.3;
+        public double LoneRetreatHpFraction { get; set; } = 0.5;
+        public double RegroupHpFraction { get; set; } = 0.6;
+        public double RegroupSec { get; set; } = 4;
+        public double PressOnPlayerHp { get; set; } = 0.25;
+        public double PressOnRetreatScale { get; set; } = 0.5;
+        public double HealthyPlayerHp { get; set; } = 0.75;
+        public double OutnumberedRetreatBonus { get; set; } = 0.1;
+    }
     public sealed class GtThreat { public double PlayerStrengthWeight { get; set; } = 0.4; public double OutnumberedWeight { get; set; } = 0.35; public double OwnWoundedWeight { get; set; } = 0.25; public int AlliesForFullSupport { get; set; } = 4; public double CautiousAbove { get; set; } = 0.6; public double BoldBelow { get; set; } = 0.3; }
     public sealed class GtYield { public double HpMargin { get; set; } = 0.2; public double HoldSec { get; set; } = 1.5; public double CooldownSec { get; set; } = 3; }
+    /// <summary>Mirror of the sandbox block (combat.md 7e). Dev tool only.</summary>
+    public sealed class SandboxTuning
+    {
+        public int DefaultSeed { get; set; } = 12345;
+        /// <summary>Most dummies one sandbox holds.</summary>
+        public int MaxDummies { get; set; } = 8;
+        public int DefaultDummyHp { get; set; } = 1000;
+    }
     public sealed class AiTuning { public int MaxSimultaneousAttackers { get; set; } }
 
     public sealed class StyleTuning
