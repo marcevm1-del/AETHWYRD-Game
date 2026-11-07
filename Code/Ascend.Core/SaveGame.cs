@@ -65,6 +65,8 @@ namespace Ascend.Core
         public MapSave Map { get; set; }
         /// <summary>Dungeon rooms and clues the player knows: Unknown / Heard / Visited (null in older saves: nothing known; Upgrade fills it).</summary>
         public DungeonSave Dungeons { get; set; }
+        /// <summary>Great Labyrinth floors and stairs the player knows: Unknown / Heard / Visited (null in older saves; Upgrade fills it).</summary>
+        public LabyrinthSave Labyrinth { get; set; }
         /// <summary>Accessibility and presentation settings (null in older saves: safe defaults; Upgrade fills and clamps it).</summary>
         public AccessibilitySettings Accessibility { get; set; }
     }
@@ -115,6 +117,9 @@ namespace Ascend.Core
             s.InnNights ??= new Dictionary<string, int>();
             s.Dungeons ??= new DungeonSave();
             s.Dungeons.Dungeons ??= new Dictionary<string, DungeonProgressSave>();
+            s.Labyrinth ??= new LabyrinthSave();
+            s.Labyrinth.Floors ??= new Dictionary<string, MapStatus>();
+            s.Labyrinth.Stairs ??= new Dictionary<string, MapStatus>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;
