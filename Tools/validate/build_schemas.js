@@ -239,6 +239,29 @@ const SCHEMAS = {
     }
   }
 };
+// --- Player locomotion table (Data/Player/locomotion.json, a singleton object; Wave A1) ---
+{
+  const MULT = { type: 'number', exclusiveMinimum: 0, maximum: 3 };
+  const mults = keys => ({ type: 'object', additionalProperties: false, required: keys, properties: Object.fromEntries(keys.map(k => [k, MULT])) });
+  const num = (min, max) => ({ type: 'number', minimum: min, maximum: max });
+  SCHEMAS.locomotion = {
+    title: 'Player locomotion table', type: 'object', additionalProperties: false,
+    required: ['version', 'baseSpeed', 'state', 'terrain', 'condition', 'slope', 'blend', 'damping'],
+    properties: {
+      version: { type: 'integer', minimum: 1 },
+      baseSpeed: { type: 'number', minimum: 0.1, maximum: 30 },
+      state: mults(['idle', 'walk', 'run', 'sprint', 'air', 'dodge']),
+      terrain: mults(MAP_TERRAIN),
+      condition: { type: 'object', additionalProperties: false, properties: { exhausted: MULT, attacking: MULT, charging: MULT, encumbered: MULT, wet: MULT } },
+      slope: { type: 'object', additionalProperties: false, required: ['limitDeg', 'uphillK', 'downhillK', 'minMult', 'maxMult'],
+        properties: { limitDeg: num(0, 89), uphillK: num(0, 3), downhillK: num(0, 3), minMult: num(0, 1), maxMult: num(1, 3) } },
+      blend: { type: 'object', additionalProperties: false, required: ['idleMaxSpeed', 'walkEnter', 'runEnter', 'sprintEnter', 'hysteresis'],
+        properties: { idleMaxSpeed: num(0, 30), walkEnter: num(0, 30), runEnter: num(0, 30), sprintEnter: num(0, 30), hysteresis: num(0, 5) } },
+      damping: { type: 'object', additionalProperties: false, required: ['speedSec', 'groundedExitGraceSec', 'combatLayerBlendSec', 'pelvisSec'],
+        properties: { speedSec: num(0, 5), groundedExitGraceSec: num(0, 5), combatLayerBlendSec: num(0, 5), pelvisSec: num(0, 5) } }
+    }
+  };
+}
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

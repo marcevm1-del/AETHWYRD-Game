@@ -285,6 +285,28 @@ for (const d of WEEKDAYS) {
 const mapChecks = require('./map_checks').run(DATA);
 for (const e of mapChecks.errors) errors.push(e);
 
+// 5) Singleton data files (a single JSON object, not an array of rows). Wave A1: Player/locomotion.json
+const SINGLETONS = { locomotion: { file: 'Player/locomotion.json', schema: 'locomotion' } };
+for (const [name, c] of Object.entries(SINGLETONS)) {
+  if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
+  const obj = load(c.file);
+  check(obj, schema(c.schema), c.file);
+  if (name === 'locomotion' && obj.state && obj.baseSpeed) {
+    // blend thresholds {0, walk, run, sprint} must strictly ascend
+    const th = [0, 'walk', 'run', 'sprint'].map(k => (k === 0 ? 0 : obj.baseSpeed * obj.state[k]));
+    for (let i = 1; i < th.length; i++) if (!(th[i] > th[i - 1])) err(c.file, `blend thresholds must ascend (got ${th.map(x => +x.toFixed(3)).join(', ')})`);
+    // walk/run/sprint mirror Combat/combat_tuning.json movement (read-only); drift fails loudly
+    const mv = load('Combat/combat_tuning.json').movement || {};
+    for (const [k, m] of [['walk', 'walkSpeed'], ['run', 'runSpeed'], ['sprint', 'sprintSpeed']]) {
+      const v = obj.baseSpeed * obj.state[k];
+      if (typeof mv[m] !== 'number' || Math.abs(v - mv[m]) > 0.01) err(c.file, `baseSpeed*state.${k} = ${+v.toFixed(3)} but combat_tuning movement.${m} = ${mv[m]} (update the mirror)`);
+    }
+    // sane blend bands and slope clamps
+    if (!(obj.blend.walkEnter < obj.blend.runEnter && obj.blend.runEnter < obj.blend.sprintEnter)) err(c.file, 'blend.walkEnter < runEnter < sprintEnter required');
+    if (obj.slope.minMult > 1 || obj.slope.maxMult < 1) err(c.file, 'slope.minMult must be <= 1 and maxMult >= 1');
+  }
+}
+
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
 if (errors.length) {
