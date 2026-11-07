@@ -91,7 +91,7 @@ def main():
             ad.catalog_id = str(uuid.uuid5(NS, fam))
             ad.description = "%s (%s, %s, %.2f m). %s" % (s["name"], s.get("rank", ""), s.get("element", ""), s.get("sizeMeters", 1), s.get("signature", ""))
             try:
-                ad.author = "Project Ascend (procedural)"
+                ad.author = "AETHWYRD (procedural)"
             except AttributeError:
                 pass
             for tag in (slug(fam), s.get("element", "None").lower(), s.get("rank", "").lower(), s["designRecipe"]["baseMesh"], s.get("tier", "")):

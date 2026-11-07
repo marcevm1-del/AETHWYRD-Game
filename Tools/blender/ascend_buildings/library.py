@@ -85,7 +85,7 @@ def build_region(region, out_dir, sheet_dir=None, seed=1, detail="high", preview
             ad.description = "%s %s in the %s style. Rebuild, resize or restyle it in the Ascend sidebar." % (
                 name, a.replace("_", " "), styles.FAMILIES[fam]["label"])
             try:
-                ad.author = "Project Ascend (procedural)"
+                ad.author = "AETHWYRD (procedural)"
             except AttributeError:
                 pass
             for tag in (region, fam, a, o.get("ab_built_as", a)):

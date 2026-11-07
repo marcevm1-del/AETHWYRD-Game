@@ -32,7 +32,7 @@ Faction **undead**, F–C band. The templates below are the planned defense sequ
 
 ## Overview
 
-Aldmere is the kingdom at the centre of every map of Aetheria and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.
+Aldmere is the kingdom at the centre of every map of Aethwyrd and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.
 
 ## Geography
 

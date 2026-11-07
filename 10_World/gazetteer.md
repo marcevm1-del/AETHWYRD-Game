@@ -1,11 +1,11 @@
-# Aetheria Gazetteer
+# Aethwyrd Gazetteer
 
 _Draft v2 · spoiler-free · Canon.md wins on conflict._
 
 ## Aldmere
 _The Crown Valley · Ring 2 · F–C_
 
-Aldmere is the kingdom at the centre of every map of Aetheria and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.
+Aldmere is the kingdom at the centre of every map of Aethwyrd and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.
 
 **Geography.** The valley is wide, fertile and crossed by slow rivers that flood each spring and leave rich silt behind. To the west the farmland breaks into wet woods and fens that run toward Greymoor; to the east it rises into the gentle hills where the old barrows stand. The capital sits on a granite hill that the river curves around on three sides, and its walls have never been breached. Ruins of older Aldmeres lie under the fields, and ploughs turn up coins, armour and bones every year.
 
@@ -47,7 +47,7 @@ _Senses: Bells at dawn; fresh bread and wet stone; banners snapping on the walls
 ## Whisperwood
 _The Wood Where Every Map Begins · Ring 1 · F–E_
 
-Whisperwood is the first wild place most newcomers to Aetheria ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.
+Whisperwood is the first wild place most newcomers to Aethwyrd ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.
 
 **Geography.** The forest sits in a shallow bowl of land drained by dozens of brooks that feed the Millbrook stream. The ground is soft loam over limestone, which makes for sinkholes, little caves and springs that appear after rain and vanish by the next week. Toward the centre the canopy closes completely and the light turns green; the locals call this the Hush, because birdsong stops there. Moss-covered ruins of old waystations dot the old roads, built in a grey stone that does not occur anywhere in the wood.
 
@@ -68,7 +68,7 @@ Whisperwood is the first wild place most newcomers to Aetheria ever enter, and t
 **Tyrant & siege.** Grukk, Goblin Chief of Hollowpine, is not the biggest goblin in the wood, but he is the first in a long time who can count. He has united the six clans by sharing food fairly and punishing theft, and he raids the villages because their granaries could feed his people through winter. His camp lies among the deepest ruins in the Hush. Killing him lifts the siege on Brindlewick and Millbrook and is the trial that turns an F-rank adventurer into an E-rank one. Not every goblin in the wood will forgive whoever does it.
 
 **Settlements**
-- **Brindlewick** — A timber village where most adventurers wake up for the first time in Aetheria, home of the guild branch and the Sleeping Griffon inn.
+- **Brindlewick** — A timber village where most adventurers wake up for the first time in Aethwyrd, home of the guild branch and the Sleeping Griffon inn.
 - **Millbrook** — A mill town on the Millbrook stream with a working waterwheel, a cheese cellar and a stubborn council of millers.
 
 **Landmarks**
@@ -1887,7 +1887,7 @@ The Root of the World is the deepest place there is, far below the Underworld's 
 
 **Power & trade.** No power holds the Root. It belongs to whatever made the world.
 
-**Faith & customs.** Every faith in Aetheria has a story about the Root. The Church calls it the foundation stone of creation; the elves, the root of the World Tree; the dwarves, the first anvil. All of them agree that it should not be damaged, and that the cracks are a bad sign.
+**Faith & customs.** Every faith in Aethwyrd has a story about the Root. The Church calls it the foundation stone of creation; the elves, the root of the World Tree; the dwarves, the first anvil. All of them agree that it should not be damaged, and that the cracks are a bad sign.
 
 **History**
 - Now: Adventurers who have reached the Root report that the cracks in the roots are widening and that the light leaking from them is growing brighter.
@@ -1914,7 +1914,7 @@ _Senses: A deep hum felt in the bones; the slow pulse of light; air like the ins
 ## Vesper
 _The Red Moon · Ring 9 · SS–EX_
 
-Vesper is the red moon that hangs over Aetheria, and after the war is over it opens to those strong enough to reach it. Its surface is a broken landscape of ruins, crimson dust and floating stone, and its monsters are unlike anything on the world below. Nobody on the surface remembers the moon being red before; everybody remembers it red now. What lies at its heart is the last mystery of the world.
+Vesper is the red moon that hangs over Aethwyrd, and after the war is over it opens to those strong enough to reach it. Its surface is a broken landscape of ruins, crimson dust and floating stone, and its monsters are unlike anything on the world below. Nobody on the surface remembers the moon being red before; everybody remembers it red now. What lies at its heart is the last mystery of the world.
 
 **Geography.** From the surface, Vesper is a red disc with darker marks like the outlines of streets. Up close, those marks are exactly that: the ruins of a city, broken and scattered across the moon's surface, some of it drifting in the sky above. The ground is red dust and shattered stone, and the sky is black with stars. The gravity is light, and the silence is complete.
 
@@ -1924,7 +1924,7 @@ Vesper is the red moon that hangs over Aetheria, and after the war is over it op
 
 **Power & trade.** No power is known to hold Vesper.
 
-**Faith & customs.** Every faith in Aetheria fears the red moon. The Church calls it an omen; the elves, a wound in the sky; the fishers of the Lustrine Shores, a thief of light.
+**Faith & customs.** Every faith in Aethwyrd fears the red moon. The Church calls it an omen; the elves, a wound in the sky; the fishers of the Lustrine Shores, a thief of light.
 
 **History**
 - Now: After the war, Vesper opens to those who can reach it, and the truth of the red moon waits at its heart.

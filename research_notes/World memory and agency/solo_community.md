@@ -3,7 +3,7 @@
 ## What do official sources explicitly claim about optional platform features?
 
 ### Takeaway
-Steam documents several optional features that can complement an offline single-player game: Cloud synchronization, achievements/statistics, and screenshots. Steam Workshop enables community-created content, but its own documentation describes meaningful authoring, client-loading, validation, and moderation work. These are platform capabilities; their availability does not establish that a particular feature is right for Project Ascend.
+Steam documents several optional features that can complement an offline single-player game: Cloud synchronization, achievements/statistics, and screenshots. Steam Workshop enables community-created content, but its own documentation describes meaningful authoring, client-loading, validation, and moderation work. These are platform capabilities; their availability does not establish that a particular feature is right for AETHWYRD.
 
 ### Cited Findings
 - Steam Cloud stores selected game files remotely and makes saves available on another computer; the Steam client synchronizes them before and after sessions. Players can disable Cloud globally or per game. Auto-Cloud requires configuring file paths and quotas but does not require game code changes; the Cloud API offers more control. Steam warns that large or numerous files can consume bandwidth and delay shutdown/relaunch. [Steam Cloud](https://partner.steamgames.com/doc/features/cloud?l=schinese&language=english)
@@ -33,9 +33,9 @@ Steam documents several optional features that can complement an offline single-
 Ascend's settled product rules establish that play and progression must remain self-contained: premium, single-player, offline-first, with no online-gated rewards or real-world-time pressure. Optional services should add portability or expression while leaving the full game playable offline. The principle is grounded in canon; the feature ordering below is a recommendation inferred from canon and platform documentation.
 
 ### Cited Findings
-- Canon defines Project Ascend as a premium, one-time-purchase, single-player PC game and lists offline-first economy rules: no player marketplace, real-money currency, loot boxes, daily timers, or online-gated rewards. It also rules out real-world-time deadlines, live-service world states, and online-gated consequences. [Project Ascend Canon](../../Canon.md)
-- Canon says after a world-saving ending, players can continue in a peaceful open-ended world with optional exploration, hunting, bonds, building, slow-life activities, and regional recovery. [Project Ascend Canon](../../Canon.md)
-- Canon includes proposed accessibility-conscious choices: multiple navigation guidance modes with accessibility equivalents, readable/redundant combat cues, adjustable assists, and viable non-parry defense. [Project Ascend Canon](../../Canon.md)
+- Canon defines AETHWYRD as a premium, one-time-purchase, single-player PC game and lists offline-first economy rules: no player marketplace, real-money currency, loot boxes, daily timers, or online-gated rewards. It also rules out real-world-time deadlines, live-service world states, and online-gated consequences. [AETHWYRD Canon](../../Canon.md)
+- Canon says after a world-saving ending, players can continue in a peaceful open-ended world with optional exploration, hunting, bonds, building, slow-life activities, and regional recovery. [AETHWYRD Canon](../../Canon.md)
+- Canon includes proposed accessibility-conscious choices: multiple navigation guidance modes with accessibility equivalents, readable/redundant combat cues, adjustable assists, and viable non-parry defense. [AETHWYRD Canon](../../Canon.md)
 - Steam says platform features are optional and not all Steamworks features are appropriate for every product. [Steamworks Features](https://partner.steamgames.com/doc/features?l=english)
 - Microsoft accessibility guidance recommends that essential information not rely on one channel alone and discusses alternatives such as captions, visual/audio cues, remappable controls, and adjustable text. [Microsoft: Making games accessible](https://learn.microsoft.com/en-us/windows/uwp/gaming/accessibility-for-games)
 
@@ -61,7 +61,7 @@ The small-team risk is not simply API integration: every feature creates lifecyc
 - Steam achievements depend on Steamworks initialization and an online/logged-on user context for the documented setup path. [Step by Step: Achievements](https://partner.steamgames.com/doc/features/achievements/ach_guide?l=english&language=english)
 - Steam Workshop integration can require client loading, tools/editors, validation, file-format restrictions, guidelines, ISteamUGC, and in curated models developer review and game updates. [Steam Workshop](https://partner.steamgames.com/doc/features/workshop?l=french&language=english)
 - Steam documents moderation workflows for inappropriate/incompatible screenshots and UGC, including hiding, blurring, bans, and reports. [Community Moderation](https://partner.steamgames.com/doc/marketing/community_moderation?l=en)
-- Canon's scale is unusually demanding for a tiny team: it describes a 200–250 hour focused main story, 600–800 hours at explorer pace, a 1,000+ hour secret-ending route, ~2,500 named NPCs, 40 surface regions plus five Underworld layers and a 120-floor Great Labyrinth, and a long open-ended post-story. [Project Ascend Canon](../../Canon.md)
+- Canon's scale is unusually demanding for a tiny team: it describes a 200–250 hour focused main story, 600–800 hours at explorer pace, a 1,000+ hour secret-ending route, ~2,500 named NPCs, 40 surface regions plus five Underworld layers and a 120-floor Great Labyrinth, and a long open-ended post-story. [AETHWYRD Canon](../../Canon.md)
 
 ### Inferences
 - **Keep offline:** save/load as the authoritative game state; combat and progression; quest and region consequences; unlocks and ending eligibility; post-game world state; accessibility settings; and any promised content. The Steam API being unavailable must never block any of these.

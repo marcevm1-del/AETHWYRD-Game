@@ -7,11 +7,11 @@ mesh helpers). See 13_Production/creature_system.md.
 """
 bl_info = {
     "name": "Ascend Creatures",
-    "author": "Project Ascend",
+    "author": "AETHWYRD",
     "version": (1, 0, 0),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Ascend",
-    "description": "Procedural high-poly creatures for every Aetheria species",
+    "description": "Procedural high-poly creatures for every Aethwyrd species",
     "category": "Add Mesh",
 }
 

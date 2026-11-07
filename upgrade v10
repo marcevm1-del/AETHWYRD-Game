@@ -1,8 +1,8 @@
 Worked for 34s
 
-### Aetheria V10 — Continued: World Map & Technical Upgrade
+### Aethwyrd V10 — Continued: World Map & Technical Upgrade
 
-Continuing the redesigned V10, the key principle is that we should expand and improve Aetheria's existing world, not replace its geography with an unrelated procedural map.
+Continuing the redesigned V10, the key principle is that we should expand and improve Aethwyrd's existing world, not replace its geography with an unrelated procedural map.
 
 The existing design describes 40 surface regions, five canonical underworld layers, and the 120-floor Great Labyrinth. Its region data already uses fields such as `at`, `radius`, `ring`, `layer`, `terrain`, and `features`.
 
@@ -160,7 +160,7 @@ Region A
              +------ Region E
 ```
 
-The actual graph must be derived from Aetheria's canonical region layout, not invented by this example.
+The actual graph must be derived from Aethwyrd's canonical region layout, not invented by this example.
 
 ### 9.2 Region boundary validation
 
@@ -208,7 +208,7 @@ Avoid loading a completely different-looking environment at a region boundary.
 
 ### 10\. World Scale & Measurement Calibration
 
-Before deciding how many kilometres Aetheria covers, V10 should establish the physical scale of its existing geography.
+Before deciding how many kilometres Aethwyrd covers, V10 should establish the physical scale of its existing geography.
 
 This is more important than simply making the map bigger.
 
@@ -376,7 +376,7 @@ A route should not be considered valid merely because two points are close toget
 
 ### 12\. Surface World & Underworld Integration
 
-Aetheria already describes five canonical underground layers. V10 should treat them as a connected geographical system, not as five unrelated menus.
+Aethwyrd already describes five canonical underground layers. V10 should treat them as a connected geographical system, not as five unrelated menus.
 
 ![Welcome to Araea  in Araea | World Anvil](https://images.openai.com/static-rsc-4/tX9oxjMll16TvYjaDbzo4-wq_ScMAbw90wZ3Hrj9rDrMHQFNo-_D_NTjczS-VnJgUHbxwIH5QawLTFU0FcWHf62UAMJwA09HDI2t3iVS8SY3hl1Cd1AfFM8r4eIL-7eQJsChlLVK5PzV4_yg8qky6A7XvgRNnqXmIQgiCwlaNwJxm0sP13WFCOUvIISJukl0?purpose=fullsize)
 
@@ -738,7 +738,7 @@ Use compatible terrain resolutions, edge stitching where needed, consistent heig
 
 ### 15\. Terrain Rendering & URP Optimization
 
-The art direction matters. Aetheria's bright, anime-inspired cel-shaded visual identity should remain consistent across the new world systems.
+The art direction matters. Aethwyrd's bright, anime-inspired cel-shaded visual identity should remain consistent across the new world systems.
 
 V10 should not turn the world into a generic photorealistic landscape.
 
@@ -1008,7 +1008,7 @@ Do not save every terrain tile in full every time the player saves. Store the st
 
 ### 18\. World Map Developer Studio
 
-V10 should include an editor specifically for managing Aetheria's geography.
+V10 should include an editor specifically for managing Aethwyrd's geography.
 
 ![Unigine Developer](https://images.openai.com/static-rsc-4/vGsSWGnLvg_4Mk9N9wkAsHlxnfr6DVcr3_AkF6BNV8eNJSveHMzpi05Hm2VcfFiyVCFV_nKeLDcpbGhHEUwESqfRYWXinjoeXEysXWezDaW3XloBA7c4eQHpJbQ1iAwote1UPu1XblA3y7noGk2Rq0WZr0bSBhmsz2FwSEyPuVdX3GAXihoPl9DZRdXNt4C_?purpose=fullsize)
 
@@ -1115,7 +1115,7 @@ The tool should produce an actionable report with the affected IDs and file loca
 The architecture should separate the world into clear responsibilities.
 
 ```text
-Aetheria/
+Aethwyrd/
 │
 ├── World/
 │   ├── WorldBootstrap/
@@ -1246,24 +1246,24 @@ Instead:
 
 This will avoid creating a beautiful world map that does not correspond to the actual playable world.
 
-### 21\. Master Development Directive — Aetheria V10
+### 21\. Master Development Directive — Aethwyrd V10
 
 This is the consolidated implementation brief. It is deliberately written to require repository inspection before implementation.
 
-# AETHERIA V10
+# AETHWYRD V10
 # WORLD MAP, GEOGRAPHY, TERRAIN & WORLD STREAMING OVERHAUL
 
 ## PROJECT
 
-Aetheria — Unity 6, URP, 3D, third-person, strictly single-player fantasy RPG.
+Aethwyrd — Unity 6, URP, 3D, third-person, strictly single-player fantasy RPG.
 
 ## PRIMARY OBJECTIVE
 
-Upgrade Aetheria's existing world architecture into a detailed, scalable, geographically consistent, explorable world.
+Upgrade Aethwyrd's existing world architecture into a detailed, scalable, geographically consistent, explorable world.
 
 V10 must improve the actual world map, geographical representation, terrain systems, coordinate architecture, regional connectivity, underground navigation, streaming, persistence, and development tools.
 
-This is an upgrade to Aetheria's existing world, not a replacement of its canonical geography.
+This is an upgrade to Aethwyrd's existing world, not a replacement of its canonical geography.
 
 ## MANDATORY CANON PRESERVATION
 
@@ -1429,7 +1429,7 @@ Support:
 - Slope and elevation restrictions.
 - Natural biome transitions.
 
-Maintain Aetheria's bright anime-inspired cel-shaded art direction.
+Maintain Aethwyrd's bright anime-inspired cel-shaded art direction.
 
 Do not introduce incompatible photorealistic rendering.
 
@@ -1727,9 +1727,9 @@ V10 is not complete until:
 
 ## FINAL GOAL
 
-Deliver Aetheria V10 as a technically robust world-map and geographical infrastructure upgrade.
+Deliver Aethwyrd V10 as a technically robust world-map and geographical infrastructure upgrade.
 
-The result must be a coherent, explorable, persistent fantasy world built on Aetheria's actual canonical geography.
+The result must be a coherent, explorable, persistent fantasy world built on Aethwyrd's actual canonical geography.
 
 Do not replace the world. Improve the world that already exists.
 
@@ -1739,4 +1739,4 @@ I would make coordinate calibration, the world map, and region connectivity the 
 
 A larger map is not automatically a better world. A better world is one where the geography, playable terrain, map representation, navigation, and save data all describe the same place.
 
-The next sensible step is a file-by-file audit of the existing world implementation before deciding the final physical size. That will tell us whether Aetheria needs a larger world, more detailed regions, better streaming, or all three.
+The next sensible step is a file-by-file audit of the existing world implementation before deciding the final physical size. That will tell us whether Aethwyrd needs a larger world, more detailed regions, better streaming, or all three.

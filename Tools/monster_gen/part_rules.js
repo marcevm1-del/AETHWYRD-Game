@@ -1,4 +1,4 @@
-// Project Ascend — designRecipe part rules.
+// AETHWYRD — designRecipe part rules.
 // Chooses each species' designRecipe.parts from what the species is, not at random from its rig:
 //   1. FEATURES: parts the name/signature asks for ("curved tusks" -> tusks, "a crown of horns" -> horn_crown).
 //   2. PLANS:    the body plan's plausible optional parts (a wolf can have a mane, fangs, claws, a bushy tail,

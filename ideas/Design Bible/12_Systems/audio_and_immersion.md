@@ -85,7 +85,7 @@ A `PhotoSession` is a pure overlay. It holds no `SaveGame` and no clock, so it c
 ## 7. Open decisions (the user's call)
 
 - **Amount of voice acting** (Canon §1). Nothing in this wave assumes any. The dialogue volume bus and subtitles work either way.
-- **Game title** (placeholder Project Ascend). Event names do not contain it.
+- **Game title** (placeholder AETHWYRD). Event names do not contain it.
 
 ## 8. Skipped on purpose
 

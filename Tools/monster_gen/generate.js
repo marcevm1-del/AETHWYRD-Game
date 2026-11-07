@@ -1,4 +1,4 @@
-// Project Ascend — monster generator (v2).
+// AETHWYRD — monster generator (v2).
 // Usage (from the project root):  node Tools/monster_gen/generate.js
 // Inputs:  Tools/monster_gen/families.js, Data/World/regions.json
 // Outputs: Data/Monsters/{species,population,attacks,loot_tables}.json (+ .csv),

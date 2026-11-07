@@ -1,6 +1,6 @@
-### Aetheria V9 — Cinematic Storytelling, Audio & Immersion
+### Aethwyrd V9 — Cinematic Storytelling, Audio & Immersion
 
-V9 should make Aetheria feel less like a game world and more like a living fantasy adventure.
+V9 should make Aethwyrd feel less like a game world and more like a living fantasy adventure.
 
 V3 improved the 3D production pipeline. V4 developed the living world. V5 expanded combat. V6 introduced crafting and professions. V7 deepened exploration and ancient civilizations. V8 added companions and creatures.
 
@@ -411,7 +411,7 @@ Features:
 ### V9 — Suggested project structure
 
 ```text
-Aetheria/
+Aethwyrd/
 ├── Cinematics/
 │   ├── Director/
 │   ├── Cameras/
@@ -445,23 +445,23 @@ Aetheria/
 └── DeveloperTools/
 ```
 
-### Master development directive — Aetheria V9
+### Master development directive — Aethwyrd V9
 
 The following is a proposed implementation brief, not a claim about the current repository's existing systems.
 
-# AETHERIA V9 — CINEMATIC STORYTELLING, AUDIO & IMMERSION
+# AETHWYRD V9 — CINEMATIC STORYTELLING, AUDIO & IMMERSION
 
 ## Project Objective
 
-Develop Aetheria V9 as a major single-player immersion and presentation upgrade.
+Develop Aethwyrd V9 as a major single-player immersion and presentation upgrade.
 
-The objective is to transform the presentation of Aetheria through cinematic storytelling, expressive characters, dynamic music, advanced sound design, environmental atmosphere, interactive cinematic events, and photo mode.
+The objective is to transform the presentation of Aethwyrd through cinematic storytelling, expressive characters, dynamic music, advanced sound design, environmental atmosphere, interactive cinematic events, and photo mode.
 
 V9 must integrate with the existing architecture and preserve all established gameplay systems.
 
 ## 1. Mandatory Project Rules
 
-- Aetheria is strictly a single-player game.
+- Aethwyrd is strictly a single-player game.
 - Do not introduce multiplayer, online co-op, PvP, matchmaking, guilds, or network-dependent gameplay.
 - Preserve existing gameplay functionality.
 - Do not unnecessarily replace existing systems.
@@ -641,11 +641,11 @@ Test:
 
 ## 15. Final Objective
 
-Deliver Aetheria V9 as a cohesive cinematic immersion upgrade.
+Deliver Aethwyrd V9 as a cohesive cinematic immersion upgrade.
 
 The player should experience a world with expressive characters, memorable scenes, beautiful environments, atmospheric audio, and cinematic moments that complement gameplay.
 
-Maintain the identity of Aetheria as a complete, strictly single-player fantasy adventure.
+Maintain the identity of Aethwyrd as a complete, strictly single-player fantasy adventure.
 
 ### What V9 should achieve
 
@@ -667,4 +667,4 @@ More memorable moments
 
 Discoveries, battles, and story events receive cinematic presentation.
 
-My recommendation: Make V9 about emotional immersion rather than simply adding more content. Aetheria already has foundations for combat, exploration, crafting, and companions. Now give those systems the cinematic quality that makes players remember their adventures.
+My recommendation: Make V9 about emotional immersion rather than simply adding more content. Aethwyrd already has foundations for combat, exploration, crafting, and companions. Now give those systems the cinematic quality that makes players remember their adventures.

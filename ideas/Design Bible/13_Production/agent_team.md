@@ -1,6 +1,6 @@
 # The Agent Team
 
-> 27 specialist Claude subagents that build Project Ascend together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
+> 27 specialist Claude subagents that build AETHWYRD together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
 
 > **Handover:** unfinished agent tasks, with briefs ready to paste, are in `13_Production/handover/` (latest: `handover_2026-11-02.md`).
 

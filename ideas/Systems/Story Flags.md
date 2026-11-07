@@ -6,7 +6,7 @@ tags: [system, story-flags]
 
 Story flags are the compact bridge between quest outcomes and later world responses. Keep names stable, descriptions concrete and ownership clear. Use one flag for one fact; separate what happened from who knows it.
 
-- [[Systems/Flags/arrived_in_aetheria|arrived_in_aetheria]] — The player has woken in Aetheria (end of the prologue)
+- [[Systems/Flags/arrived_in_aetheria|arrived_in_aetheria]] — The player has woken in Aethwyrd (end of the prologue)
 - [[Systems/Flags/guild_registered|guild_registered]] — The player holds an Adventurers' Guild card
 - [[Systems/Flags/met_brother_caspian|met_brother_caspian]] — The player has met Brother Caspian and the orphans
 - [[Systems/Flags/rank_e_reached|rank_e_reached]] — The player passed the F→E trial

@@ -129,7 +129,7 @@ function draw() {
     // range crests: a soft brown hachure line
     for (const r of D.ranges) { if (r.crest.length < 2) continue; g.save(); g.strokeStyle = 'rgba(92,60,34,.45)'; g.lineWidth = 2; g.setLineDash([2, 4]); g.beginPath(); r.crest.forEach(([x, y], i) => { const [a, b] = P(x, y); i ? g.lineTo(a, b) : g.moveTo(a, b); }); g.stroke(); g.restore(); }
     // title band
-    g.fillStyle = INK; g.textAlign = 'left'; g.font = `700 40px ${SERIF}`; g.letterSpacing = '4px'; g.fillText('AETHERIA', OX, 58); g.letterSpacing = '0px';
+    g.fillStyle = INK; g.textAlign = 'left'; g.font = `700 40px ${SERIF}`; g.letterSpacing = '4px'; g.fillText('AETHWYRD', OX, 58); g.letterSpacing = '0px';
     g.font = `italic 500 20px ${SERIF}`; g.fillText('The physical map: relief, ranges, rivers, roads and passes', OX + 285, 56);
     g.font = `500 13px ${SERIF}`; g.fillStyle = '#5a4630'; g.fillText('Derived from the atlas (coastline seed 1207) and Data/World/regions.json by Tools/atlas/build_physical_map.js · 1 map unit = 1 km · north up', OX, 86);
     boxes.push([0, 0, cv.width, OY - 12]);

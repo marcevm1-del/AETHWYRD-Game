@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-07 — Renamed to AETHWYRD (user-chosen title and world name)
+- The title is **AETHWYRD**, the world **Aethwyrd**, the adjective **Aethwyrdian**. Replaced Aetheria/Aetherian/Aertheria and the working title "Project Ascend" in docs, data text, UI text, tool headers and metadata. Report: `13_Production/aethwyrd_migration_report.md`.
+- Canon §1 Title row (user-authorised edit). Old: `Open ("Project Ascend" placeholder). **Ask the user on/after 2026-11-01**`. New: `**AETHWYRD** (chosen by the user, 2026-11-07; the world is Aethwyrd, the adjective is Aethwyrdian; "Project Ascend" was only the working title)`.
+- Kept as deliberate exceptions: C# namespaces and asmdefs, package ids, the git remote and repo URL, story flag ids (save keys), Unity productName (it fixes the save folder), `ProjectAscend.exe`. No lore, mechanic or number changed.
+
+
 ## Unreleased — Isekai knowledge and platform boundaries (2026-10-24)
 - Expanded the draft old-life/job section into a memory → hypothesis → verified Aetherian knowledge → capability model, with bounded recognition moments, alternate essential-clue routes, sensory memory, dialogue agency, replay considerations and vertical-slice validation.
 - Removed job-based persistent XP, combat, crafting, economy, trust, hidden System and skill advantages; kept the blurred death cause and Aetheria as the story's center, with race/origin options in draft status.

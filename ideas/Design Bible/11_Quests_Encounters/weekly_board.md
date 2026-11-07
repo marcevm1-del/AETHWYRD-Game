@@ -2,7 +2,7 @@
 
 Repeatable, slice-of-life adventurer work that gives every in-game day its own flavor. Data: `Data/Quests/weekly_board.json` (schema `weekly_quest`, checked by `npm run validate`). Baseline numbers are for Brindlewick (F–E); other regions reuse the same templates (see §4).
 
-## 1. The Aetherian Week
+## 1. The Aethwyrdian Week
 7 days, each named for one of the Eight. **Ilvaris has no day**: the Church teaches that *"Fate keeps every day."* At 90 real minutes per in-game day, a week is about **10.5 hours of play**. (Secret: old ruins show a **nine-day** week; the scratched-out days belonged to Ilvaris and the Forgotten Ninth.)
 
 | # | Day | God | Name | Board theme |

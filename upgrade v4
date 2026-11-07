@@ -1,8 +1,8 @@
-### AETHERIA — UPGRADE V4
+### AETHWYRD — UPGRADE V4
 
 ### World Intelligence, Quest Design & Dynamic Narrative System
 
-For V4, I recommend moving away from Blender and focusing on something that can make Aetheria feel like a living, evolving world: its world systems, quests, NPCs, factions, exploration, and storytelling.
+For V4, I recommend moving away from Blender and focusing on something that can make Aethwyrd feel like a living, evolving world: its world systems, quests, NPCs, factions, exploration, and storytelling.
 
 V3 focused on building the assets. V4 should focus on giving those assets a world to belong to.
 
@@ -16,7 +16,7 @@ V3 focused on building the assets. V4 should focus on giving those assets a worl
 
 Recommended direction
 
-Core objective: Transform Aetheria from a collection of locations and characters into a world that reacts to player actions, remembers important events, and evolves over time.
+Core objective: Transform Aethwyrd from a collection of locations and characters into a world that reacts to player actions, remembers important events, and evolves over time.
 
 ### 1\. World simulation system
 
@@ -487,12 +487,12 @@ Rare, multi-stage events with permanent consequences.
 
 Here is the prompt to use as the main development instruction for the next upgrade.
 
-# AETHERIA — UPGRADE V4
+# AETHWYRD — UPGRADE V4
 ## LIVING WORLD, WORLD INTELLIGENCE & DYNAMIC NARRATIVE EXPANSION
 
 ### PRIMARY OBJECTIVE
 
-Expand Aetheria with a comprehensive world simulation, dynamic storytelling, intelligent NPCs, branching quests, faction interactions, exploration systems, and a persistent world state.
+Expand Aethwyrd with a comprehensive world simulation, dynamic storytelling, intelligent NPCs, branching quests, faction interactions, exploration systems, and a persistent world state.
 
 This upgrade should focus on ADDITIONS, EXPANSIONS, NEW FEATURES, and IMPROVEMENTS.
 
@@ -661,7 +661,7 @@ P4: Legendary events, advanced world simulation, optional ambitious features.
 
 ### FINAL EXPECTATION
 
-Deliver a cohesive Aetheria V4 world simulation and narrative expansion.
+Deliver a cohesive Aethwyrd V4 world simulation and narrative expansion.
 
 Do not merely create disconnected features. Make systems communicate with one another.
 
@@ -669,6 +669,6 @@ NPCs should react to world events. Quests should respond to faction activity. Fa
 
 Prioritize stability, modularity, meaningful gameplay, and long-term extensibility.
 
-The ultimate goal is to make Aetheria feel like a living world rather than a static collection of game levels.
+The ultimate goal is to make Aethwyrd feel like a living world rather than a static collection of game levels.
 
-My recommendation: Make V4's defining feature the Living World System. If Aetheria can remember what happened, react to what the player does, and evolve without scripted events controlling every detail, that will be a major step forward from V3.
+My recommendation: Make V4's defining feature the Living World System. If Aethwyrd can remember what happened, react to what the player does, and evolve without scripted events controlling every detail, that will be a major step forward from V3.

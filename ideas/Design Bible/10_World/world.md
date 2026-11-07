@@ -1,6 +1,6 @@
-# 10 — The World of Aetheria
+# 10 — The World of Aethwyrd
 
-> *"Every road in Aetheria leads somewhere wonderful. Most of them also lead somewhere that wants to eat you."*
+> *"Every road in Aethwyrd leads somewhere wonderful. Most of them also lead somewhere that wants to eat you."*
 
 One seamless map: **40 surface regions + 5 Underworld layers + the Great Labyrinth + Vesper (post-game)**. Rank bands and build rings per region live in `Data/World/regions.json` (canonical). Each region lists the anime and literature that inspired it; we combine and twist, never copy.
 

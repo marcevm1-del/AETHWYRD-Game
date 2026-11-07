@@ -32,7 +32,7 @@ Faction **goblinoid**, F–E band. The templates below are the planned defense s
 
 ## Overview
 
-Whisperwood is the first wild place most newcomers to Aetheria ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.
+Whisperwood is the first wild place most newcomers to Aethwyrd ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.
 
 ## Geography
 
@@ -71,7 +71,7 @@ Woodsmoke and wet leaves; the creak of the mill; honey on black bread; goblin dr
 
 ## Settlements
 
-- **Brindlewick:** A timber village where most adventurers wake up for the first time in Aetheria, home of the guild branch and the Sleeping Griffon inn.
+- **Brindlewick:** A timber village where most adventurers wake up for the first time in Aethwyrd, home of the guild branch and the Sleeping Griffon inn.
 - **Millbrook:** A mill town on the Millbrook stream with a working waterwheel, a cheese cellar and a stubborn council of millers.
 
 ## Landmarks

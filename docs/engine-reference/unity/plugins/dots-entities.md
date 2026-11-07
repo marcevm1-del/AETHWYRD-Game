@@ -1,4 +1,4 @@
-# DOTS / Entities - status in Project Ascend
+# DOTS / Entities - status in AETHWYRD
 
 **Not installed.** `com.unity.entities` (and related DOTS packages) are not in
 `Game/Packages/manifest.json` (checked 2026-11-07). Monster motion, springs and

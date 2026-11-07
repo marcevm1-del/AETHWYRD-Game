@@ -30958,7 +30958,7 @@
    "ring0": true,
    "inWater": null,
    "source": "regions.json map.places + gazetteer",
-   "gazetteer": "A timber village where most adventurers wake up for the first time in Aetheria, home of the guild branch and the Sleeping Griffon inn."
+   "gazetteer": "A timber village where most adventurers wake up for the first time in Aethwyrd, home of the guild branch and the Sleeping Griffon inn."
   },
   {
    "id": "millbrook",

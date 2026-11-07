@@ -1,4 +1,4 @@
-// Project Ascend — lightweight spring bones for ears, tails, manes, cap rims, feathers, slime lobes.
+// AETHWYRD — lightweight spring bones for ears, tails, manes, cap rims, feathers, slime lobes.
 // Verlet tail simulation (same idea as VRM spring bones). Values come from motion.json springs[]:
 //   stiffness 0..1 (pull back to the rest pose), damping 0..1 (velocity loss), gravity (m/s² scale, negative floats up).
 using System.Collections.Generic;

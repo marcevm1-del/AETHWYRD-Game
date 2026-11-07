@@ -255,7 +255,7 @@ Ground mounts (Canon: no flying) each have a personality (lazy, vain, fearless, 
 ## 48. Climate & Comfort
 Frostveil cold, Sunscar heat, swamp damp: a light **comfort** system. Wear the right clothes or eat warm/cool food, or slowly lose stamina regeneration. It's never deadly, just a reason to dress for the place. Outfits keep their look, with comfort enchantments added on top.
 
-## 49. Aetheria's Grand Cooking Contest
+## 49. Aethwyrd's Grand Cooking Contest
 A yearly **cooking contest** arc with rival chefs, monster-ingredient rounds, judges who cry when the food is good (the anime reaction), and a final round against a legendary chef. It uses the cooking minigame and monster cuisine (§9).
 
 ## 50. Concerts & the Bard Stage

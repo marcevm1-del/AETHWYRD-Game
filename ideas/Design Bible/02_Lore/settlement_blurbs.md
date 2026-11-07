@@ -27,7 +27,7 @@ A patchwork of manors, mills and orchards runs along the slow river, flat and ri
 ## Whisperwood (reg_whisperwood)
 
 **Brindlewick** _(village, 289 m)_
-A timber village of woodsmoke and creaking signboards, where a great many adventurers open their eyes for the first time in Aetheria. Woodcutters, charcoal burners and beekeepers make their living here, and honey on black bread is the smell of the morning. The Sleeping Griffon's loft beams are covered in rookies' carved names, and there is always room for one more.
+A timber village of woodsmoke and creaking signboards, where a great many adventurers open their eyes for the first time in Aethwyrd. Woodcutters, charcoal burners and beekeepers make their living here, and honey on black bread is the smell of the morning. The Sleeping Griffon's loft beams are covered in rookies' carved names, and there is always room for one more.
 
 **Millbrook** _(town, 328 m)_
 The waterwheel never stops turning, and the whole town hums with it: flour dust, wet wood, the cellar-cold smell of cheese. Millers, weavers and a few retired adventurers run the place through a council that argues about everything and agrees on very little. A miller swears the wheel turns backwards on nights the goblins come, and he would like someone to check.

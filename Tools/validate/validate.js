@@ -1,4 +1,4 @@
-// Project Ascend data validator. Dependency-free (plain Node).
+// AETHWYRD data validator. Dependency-free (plain Node).
 // Usage: node Tools/validate/validate.js        → exit code 1 if anything is wrong
 // Checks: 1) every row against its JSON Schema (subset: type, required, properties,
 // additionalProperties:false, enum, pattern, minimum/maximum/exclusiveMinimum, minLength, minItems/maxItems, items)

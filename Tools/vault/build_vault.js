@@ -554,9 +554,9 @@ const groupList = (ids, by) => {
   for (const id of ids) (g[by(byId[id])] = g[by(byId[id])] || []).push(id);
   return Object.keys(g).sort().map(k => `### ${k}\n${g[k].map(id => `- ${link(id)}`).join('\n')}`).join('\n\n');
 };
-let home = front({ tags: ['index'] }) + `# Aetheria Ideas
+let home = front({ tags: ['index'] }) + `# Aethwyrd Ideas
 
-The Project Ascend idea vault. Open this \`ideas/\` folder in Obsidian (*Open folder as vault*).
+The AETHWYRD idea vault. Open this \`ideas/\` folder in Obsidian (*Open folder as vault*).
 
 - **Write new ideas** in the \`Ideas\` folder, starting from [[Idea Inbox]]. Use the *Idea* template. The build never touches \`Ideas/\` or \`Templates/\`.
 - **Everything else is generated** from \`Data/\` and the design bible by \`npm run vault\`
@@ -660,7 +660,7 @@ tags: [idea]
 - Immediate outcome:
 - Long-term consequence:
 
-**World connection:** which people, place, creature, item or system makes this feel native to Aetheria?
+**World connection:** which people, place, creature, item or system makes this feel native to Aethwyrd?
 
 **Scope:** prototype / Ring 0 / later ring / optional
 

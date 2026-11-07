@@ -1,4 +1,4 @@
-# Physical Geography of Aetheria
+# Physical Geography of Aethwyrd
 
 > **Source of truth:** the atlas (`Tools/atlas/aetheria_atlas.html`, coastline seed 1207) for the coast, region borders and where the land is rough; `Data/World/regions.json` for each region's anchor, radius, terrain and places. This page and `Data/World/physical_map.json` add **height, water and climate** on top of them. They move no coast, region or town.
 > **Generated:** `node Tools/atlas/build_physical_map.js` writes `Data/World/physical_map.json` and `10_World/maps/physical_map.png`. Never edit the JSON by hand. §11 documents the detail layer (smooth rivers, settlements, roads) added for the Blender terrain and diorama work.

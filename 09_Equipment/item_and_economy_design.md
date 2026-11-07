@@ -175,7 +175,7 @@ Each step should offer at least two routes over the full game: for example, hunt
 
 Recipes come from explicit sources: profession trainers, shop stock, story rewards, journals, clan teachings, research tasks, monster observation, exploration, salvage, and optional experimentation. The crafting UI shows whether the player knows the exact recipe, has a hypothesis, or is missing a critical clue. Failed experimentation consumes only the limited, declared test ingredients; it does not consume unique or story items.
 
-Old-world knowledge can offer a hint or a substitute process, but should not make a modern Earth occupation universally superior to Aetherian expertise. The player's new-world relationships and practice remain necessary for advanced results.
+Old-world knowledge can offer a hint or a substitute process, but should not make a modern Earth occupation universally superior to Aethwyrdian expertise. The player's new-world relationships and practice remain necessary for advanced results.
 
 ### 6.3 Craft quality and mini-games
 

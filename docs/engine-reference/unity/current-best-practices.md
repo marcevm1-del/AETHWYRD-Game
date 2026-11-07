@@ -1,4 +1,4 @@
-# Unity - Best Practices for Project Ascend
+# Unity - Best Practices for AETHWYRD
 
 Deliberately short. Everything here comes from the project's own `CLAUDE.md`,
 `project.yaml`, manifest or the 6.6 upgrade guide, not from memory of Unity docs.

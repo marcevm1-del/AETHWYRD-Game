@@ -1,5 +1,5 @@
 // Builds the text-to-3D prompt for every species, from our own design data (species.json `look`, signature,
-// palette, size) so generated models stay original to Project Ascend. Ordered by ring (what the game needs first).
+// palette, size) so generated models stay original to AETHWYRD. Ordered by ring (what the game needs first).
 // Output: Art/Generation/monster_model_prompts.json (consumed by the Blender generation pass).
 // Run: node Tools/monster_gen/build_model_prompts.js
 const fs = require('fs');

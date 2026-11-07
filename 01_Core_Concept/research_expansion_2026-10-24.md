@@ -1,4 +1,4 @@
-# Comparable RPG Research: More Ways to Make Aetheria Feel Distinct
+# Comparable RPG Research: More Ways to Make Aethwyrd Feel Distinct
 
 **Research date:** 24 October 2026. **Status:** sourced observations plus clearly labeled Ascend design inferences. Official developer interviews and publisher materials are preferred; this is not a market-size or sales-performance report.
 

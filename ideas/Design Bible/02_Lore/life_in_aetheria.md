@@ -1,4 +1,4 @@
-# 02d — Life in Aetheria: Everything In Between (v0.3)
+# 02d — Life in Aethwyrd: Everything In Between (v0.3)
 
 ## 1. Otherworlders in Society
 - Everyone knows otherworlders exist. They're called **"Veilborn"**, or "Fallers" as slang.
@@ -206,7 +206,7 @@ This keeps towns distinct while allowing them to feel connected. Two places can 
 
 ### Dialogue and environmental guardrails
 
-- Avoid using a real-world culture as a one-to-one template for an Aetherian people. Draw from multiple sources and transform the combination into a setting-specific practice.
+- Avoid using a real-world culture as a one-to-one template for an Aethwyrdian people. Draw from multiple sources and transform the combination into a setting-specific practice.
 - Do not make unfamiliar customs inherently sinister, comic or primitive. Their meaning should come from context and character.
 - Let trade bring both opportunity and unequal power. A prosperous route can also create dangerous labor, extraction, debt or exclusion.
 - Show variation inside each region: urban and rural, old and young, wealthy and poor, settled and traveling, devout and uncertain.

@@ -20,7 +20,7 @@ Reads Data/World/physical_map.json (see 10_World/physical_geography.md, sections
   * Look: terrain is a hard two-tone cel (shadow tint 0.58 0.56 0.78 below N.L 0.32, cream light above, computed from the
     normal against the one NW sun), a 0.22 cream rim on the lit side, hard strata bands on rock. Painted sky gradient fixed
     to the horizon of each shot. Optional Freestyle outlines (--outline). Parchment plates (ink #3A2A1C on #F3E6C8) with
-    leader lines and an "Aetheria" cartouche are a camera overlay, auto-nudged so they do not overlap.
+    leader lines and an "Aethwyrd" cartouche are a camera overlay, auto-nudged so they do not overlap.
 Renders diorama_continent.png, diorama_heartland.png and diorama_spine.png (low angle over the Dragon Spine).
 Deterministic: all random input comes from numpy default_rng(--seed); --placement-only prints and writes the SHA-256 of the
 placement data (trees, houses, clouds) without rendering.
@@ -1703,7 +1703,7 @@ def shoot(name, target_map, dist, yaw, pitch, lens, sub, labels, lsize, clouds=T
     ov = Overlay(cam)
     if not args.no_labels:
         cw, ch = RES[0] * 0.185, RES[1] * 0.125
-        ov.cartouche("AETHERIA", sub, 24 + 8 + cw / 2, RES[1] - 24 - 8 - ch / 2, cw, ch)
+        ov.cartouche("AETHWYRD", sub, 24 + 8 + cw / 2, RES[1] - 24 - 8 - ch / 2, cw, ch)
         for text, at in labels:
             ov.label(text, at, lsize)
     sc.render.image_settings.file_format = "PNG"

@@ -1,9 +1,9 @@
 ---
 tags: [index]
 ---
-# Aetheria Ideas
+# Aethwyrd Ideas
 
-The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open folder as vault*).
+The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as vault*).
 
 - **Write new ideas** in the `Ideas` folder, starting from [[Idea Inbox]]. Use the *Idea* template. The build never touches `Ideas/` or `Templates/`.
 - **Everything else is generated** from `Data/` and the design bible by `npm run vault`

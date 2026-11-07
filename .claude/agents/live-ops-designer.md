@@ -8,8 +8,8 @@ disallowedTools: Bash
 ---
 
 <!-- ascend-path-map -->
-## Project Ascend path map
-This agent was written for the studio's default folders. In Project Ascend read and write these instead (CLAUDE.md "Studio layer" has the same map):
+## AETHWYRD path map
+This agent was written for the studio's default folders. In AETHWYRD read and write these instead (CLAUDE.md "Studio layer" has the same map):
 - `design/` -> `00_Questions` ... `12_Systems` (`design/gdd/` -> `12_Systems/`, `design/game-brief.md` -> `01_Core_Concept/`)
 - `production/` -> `13_Production/` (session state: `13_Production/session-state/active.md`, QA evidence: `13_Production/qa/evidence/`)
 - `tests/` -> `Code/Ascend.Core.Tests/` (rules) and `Game/Assets/_Game/Tests/` (Unity)

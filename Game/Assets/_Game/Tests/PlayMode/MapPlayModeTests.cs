@@ -84,7 +84,7 @@ namespace Ascend.Game.Tests
             Assert.IsTrue(lines.Any(l => l.StartsWith("Explored ")), "shows how much you've explored");
             WorldMapWindow.Instance.Show(WorldMapWindow.Page.World);
             lines = WorldMapWindow.Instance.Lines();
-            Assert.AreEqual("Aetheria", lines[0]);
+            Assert.AreEqual("Aethwyrd", lines[0]);
             Assert.IsTrue(lines.Any(l => l.StartsWith("Lands inked: 1 ")), string.Join(" | ", lines));
             Assert.IsTrue(lines.Any(l => l.Contains("Rank E map seal")), "the System overlay waits for Rank E");
             var wood = WorldMapWindow.Instance.RegionLines("reg_whisperwood");

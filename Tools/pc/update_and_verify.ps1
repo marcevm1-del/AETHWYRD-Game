@@ -1,4 +1,4 @@
-# Brings this PC's copy of Project Ascend up to date with GitHub and checks it end to end:
+# Brings this PC's copy of AETHWYRD up to date with GitHub and checks it end to end:
 #   1. pulls the latest main from GitHub (fast-forward only; stops if you have uncommitted changes)
 #   2. npm run build (data + C# rules tests, the same as CI)
 #   3. rebuilds the Ring 0 scene (Ring0SceneBuilder.BuildBatch)
@@ -38,7 +38,7 @@ function RunUnity([string]$Log, [string[]]$UnityArgs) {
     return $p.ExitCode
 }
 
-Write-Host "Project Ascend: update and verify ($Repo)" -ForegroundColor Cyan
+Write-Host "AETHWYRD: update and verify ($Repo)" -ForegroundColor Cyan
 
 # 1. Pull.
 if ($SkipPull) { Step "Pull from GitHub" "SKIPPED" "-SkipPull" }
@@ -109,7 +109,7 @@ if (-not (Test-Path $Unity)) {
     }
 }
 
-$summary = @("Project Ascend verify $Stamp") + ($Results | ForEach-Object { "{0,-8} {1,-24} {2}" -f $_.Status, $_.Step, $_.Detail })
+$summary = @("AETHWYRD verify $Stamp") + ($Results | ForEach-Object { "{0,-8} {1,-24} {2}" -f $_.Status, $_.Step, $_.Detail })
 $summary | Set-Content -Encoding UTF8 (Join-Path $Out "summary.txt")
 Write-Host ""
 $summary | ForEach-Object { Write-Host $_ }

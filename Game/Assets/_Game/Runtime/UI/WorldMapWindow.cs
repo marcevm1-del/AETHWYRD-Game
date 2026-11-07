@@ -10,7 +10,7 @@ namespace Ascend.Game
     /// The map (IMGUI placeholder; hud_and_ui.md §8, 12_Systems/world_map.md). Two pages:
     ///   Area: the ground around you drawn from above in ink, inked only where you've walked, with you, waystones,
     ///         people, named places, herb patches, your coin lantern and the tracked objective.
-    ///   World: Aetheria on parchment — lands you've visited inked with their towns, Tyrant and siege banner, lands
+    ///   World: Aethwyrd on parchment — lands you've visited inked with their towns, Tyrant and siege banner, lands
     ///         you've heard of pencilled in, the rest blank; the System overlay (from Rank E) tints known lands by ring
     ///         and lays a grid over the sheet.
     /// Tab / M / View opens and closes it. 1 / 2 or LB / RB switch pages; scroll, + / − or the triggers zoom; drag,
@@ -142,7 +142,7 @@ namespace Ascend.Game
             {
                 var lands = db.Regions.Values.Where(r => r.Map != null && r.Layer == "surface").ToList();
                 int visited = lands.Count(r => k.StatusOf(r.Id) == MapStatus.Visited), heard = lands.Count(r => k.StatusOf(r.Id) == MapStatus.Heard);
-                lines.Add("Aetheria");
+                lines.Add("Aethwyrd");
                 lines.Add($"Lands inked: {visited} · pencilled: {heard} · blank: {lands.Count - visited - heard}");
                 lines.Add(_owner.HasSystemOverlay ? $"System overlay: {(OverlayOn ? "on" : "off")} (O / Y)" : "System overlay: the guild's Rank E map seal");
                 if (!WorldMapArt.Ready) lines.Add(WorldMapArt.Error != null ? $"The map could not be drawn: {WorldMapArt.Error}" : "The cartographer is still inking the map…");

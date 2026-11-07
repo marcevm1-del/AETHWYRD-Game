@@ -24,7 +24,7 @@ Capture concepts that arrive in conversation, research, reference boards or play
 
 - Does it strengthen exploration, combat, investigation, social play or preparation?
 - Can the player understand the choice and its consequence?
-- Does it create a memorable Aetheria-specific moment?
+- Does it create a memorable Aethwyrd-specific moment?
 - Does it respect canon and avoid accidental spoilers?
 - Can a small version be prototyped before expanding it across the world?
 - Which notes should link to the idea or its eventual design?

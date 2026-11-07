@@ -1,4 +1,4 @@
-"""Project Ascend: rig a procedural creature (ascend_creatures) to its shared monster rig (Blender 5.x, headless).
+"""AETHWYRD: rig a procedural creature (ascend_creatures) to its shared monster rig (Blender 5.x, headless).
 
     blender -b --factory-startup -P Tools/blender/rig_creature.py                               # the four Ring 0 monsters
     blender -b --factory-startup -P Tools/blender/rig_creature.py -- --ids mon_goblin,mon_forest_wolf

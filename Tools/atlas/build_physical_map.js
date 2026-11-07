@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds the physical geography of Aetheria from the atlas (Tools/atlas/aetheria_atlas.html, coastline seed 1207):
+// Builds the physical geography of Aethwyrd from the atlas (Tools/atlas/aetheria_atlas.html, coastline seed 1207):
 //   Data/World/physical_map.json   heightmap (m), biomes, regions, ranges, peaks, rivers, lakes, seas, passes,
 //                                  the five trade corridors and the consistency checks
 //   10_World/maps/physical_map.png hillshaded relief with rivers, ranges, passes and labels (labels need Playwright;
