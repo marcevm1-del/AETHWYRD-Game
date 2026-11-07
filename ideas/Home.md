@@ -82,6 +82,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/12_Systems/world_map|12_Systems/world_map]]
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
 - [[Design Bible/13_Production/adoption-plan-2026-11-07|13_Production/adoption-plan-2026-11-07]]
+- [[Design Bible/13_Production/aethwyrd_migration_report|13_Production/aethwyrd_migration_report]]
 - [[Design Bible/13_Production/agent_team|13_Production/agent_team]]
 - [[Design Bible/13_Production/animation_clips_required|13_Production/animation_clips_required]]
 - [[Design Bible/13_Production/animation_v11_audit|13_Production/animation_v11_audit]]
