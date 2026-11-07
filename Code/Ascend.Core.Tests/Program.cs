@@ -52,6 +52,8 @@ static class Repo
         return d?.FullName ?? throw new Exception("Could not find the repo root (Data/Monsters)");
     }
     public static T Load<T>(string rel) => JsonSerializer.Deserialize<T>(File.ReadAllText(Path.Combine(Root(), rel)), Opts);
+    /// <summary>Loads an optional data file; null when absent (old data dirs still load).</summary>
+    public static T LoadOpt<T>(string rel) where T : class => File.Exists(Path.Combine(Root(), rel)) ? Load<T>(rel) : null;
     static GameDatabase _db;
     public static GameDatabase Db => _db ??= new GameDatabase(
         Load<List<RegionData>>("Data/World/regions.json"),
@@ -76,7 +78,9 @@ static class Repo
         Load<GatheringFile>("Data/World/gathering.json"),
         Load<BossFile>("Data/Monsters/boss_phases.json"),
         Load<ReactionFile>("Data/Combat/reactions.json"),
-        Load<BossWeakPointFile>("Data/Monsters/boss_weakpoints.json"));
+        Load<BossWeakPointFile>("Data/Monsters/boss_weakpoints.json"),
+        LoadOpt<QualityRules>("Data/Items/crafting_rules.json"),
+        LoadOpt<LifeSkillFile>("Data/Items/life_skills.json"));
 }
 
 [Tests]

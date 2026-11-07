@@ -249,12 +249,26 @@ const rankValue = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ?
 let recipeCount = 0;
 if (fs.existsSync(path.join(DATA, 'Items/recipes.json'))) {
   const rf = load('Items/recipes.json');
+  const rulesFile = fs.existsSync(path.join(DATA, 'Items/crafting_rules.json')) ? load('Items/crafting_rules.json') : null;
+  const skillsFile = fs.existsSync(path.join(DATA, 'Items/life_skills.json')) ? load('Items/life_skills.json') : null;
+  const skillById = Object.fromEntries(((skillsFile || {}).skills || []).map(s => [s.id, s]));
+  const recipeSchema = schema('recipe');
   for (const [station, npc] of Object.entries(rf.stations || {})) if (npc) ref('recipes.stations.' + station, npc, 'npcs');
   const seen = new Set();
   for (const r of rf.recipes || []) {
     recipeCount++;
     if (!/^rcp_[a-z0-9_]+$/.test(r.id || '')) err(r.id, 'recipe id must look like rcp_*');
     if (seen.has(r.id)) err(r.id, 'duplicate recipe id'); seen.add(r.id);
+    check(r, recipeSchema, `recipes.json#${r.id}`);
+    if (r.lifeRank && skillsFile && !skillsFile.ranks.includes(r.lifeRank)) err(r.id, `lifeRank "${r.lifeRank}" is not a life-skill rank`);
+    if (skillsFile) {
+      const sk = skillById[r.skill];
+      if (!sk) err(r.id, `skill "${r.skill}" is not in life_skills.json`);
+      else if (sk.kind !== 'craft') err(r.id, `skill "${r.skill}" is ${sk.kind}, only craft skills have recipes`);
+    }
+    if (r.attuneItem) ref(r.id + '.attuneItem', r.attuneItem, 'items');
+    if (r.xp != null && !(r.xp >= 1)) err(r.id, 'xp must be >= 1');
+    if (rulesFile && !(r.station in (rulesFile.stationQualityCap || {}))) err(r.id, `station "${r.station}" has no stationQualityCap in crafting_rules.json`);
     if (!(r.station in (rf.stations || {}))) err(r.id, `unknown station "${r.station}"`);
     ref(r.id + '.output', r.output && r.output.itemId, 'items');
     if (!r.inputs || r.inputs.length === 0) err(r.id, 'needs inputs');
@@ -368,11 +382,52 @@ const mapChecks = require('./map_checks').run(DATA);
 for (const e of mapChecks.errors) errors.push(e);
 
 // 5) Singleton data files (a single JSON object, not an array of rows). Wave A1: Player/locomotion.json
-const SINGLETONS = { locomotion: { file: 'Player/locomotion.json', schema: 'locomotion' } };
+const SINGLETONS = {
+  locomotion: { file: 'Player/locomotion.json', schema: 'locomotion' },
+  crafting_rules: { file: 'Items/crafting_rules.json', schema: 'crafting_rules' },
+  life_skills: { file: 'Items/life_skills.json', schema: 'life_skills' }
+};
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
   const obj = load(c.file);
   check(obj, schema(c.schema), c.file);
+  if (name === 'crafting_rules' && obj.qualityTiers) {
+    const tiers = obj.qualityTiers;
+    const ids = tiers.map(t => t.id);
+    if (new Set(ids).size !== ids.length) err(c.file, 'duplicate quality tier id');
+    tiers.forEach((t, i) => { if (t.index !== i) err(c.file, `qualityTiers[${i}] (${t.id}) must have index ${i}: tiers are contiguous from 0`); });
+    for (let i = 1; i < tiers.length; i++) {
+      if (!(tiers[i].statMult >= tiers[i - 1].statMult)) err(c.file, `statMult must not fall from ${tiers[i - 1].id} to ${tiers[i].id}`);
+      if (!(tiers[i].valueMult >= tiers[i - 1].valueMult)) err(c.file, `valueMult must not fall from ${tiers[i - 1].id} to ${tiers[i].id}`);
+    }
+    const normal = tiers.find(t => t.id === 'normal');
+    if (!normal) err(c.file, 'needs a "normal" tier');
+    else if (normal.statMult !== 1 || normal.valueMult !== 1 || normal.buffMult !== 1) err(c.file, 'normal tier multipliers must all be 1');
+    for (const [k, m] of [['rankQualityCap', obj.rankQualityCap], ['stationQualityCap', obj.stationQualityCap]])
+      for (const [key, tid] of Object.entries(m || {})) {
+        if (!ids.includes(tid)) err(c.file, `${k}.${key}: unknown tier "${tid}"`);
+        else if (!tiers.find(t => t.id === tid).craftable) err(c.file, `${k}.${key}: "${tid}" is not craftable`);
+      }
+    const caps = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'].map(r => ids.indexOf((obj.rankQualityCap || {})[r]));
+    for (let i = 1; i < caps.length; i++) if (caps[i] < caps[i - 1]) err(c.file, 'rankQualityCap must not fall as rank rises');
+  }
+  if (name === 'life_skills' && obj.skills) {
+    const sids = obj.skills.map(s => s.id);
+    if (new Set(sids).size !== sids.length) err(c.file, 'duplicate skill id');
+    const ranks = obj.ranks || [];
+    if (new Set(ranks).size !== ranks.length || ranks.join() !== 'F,E,D,C,B,A,S,SS,SSS') err(c.file, 'ranks must be F,E,D,C,B,A,S,SS,SSS once each, in order');
+    const xr = (obj.xp || {}).xpToReach || {};
+    if (xr.F !== 0) err(c.file, 'xpToReach.F must be 0');
+    for (let i = 1; i < ranks.length; i++) if (!(xr[ranks[i]] > xr[ranks[i - 1]])) err(c.file, `xpToReach must rise strictly (${ranks[i - 1]} -> ${ranks[i]})`);
+    for (const s of obj.skills) {
+      if (s.kind === 'craft' && !s.station) err(s.id, 'a craft skill needs a station');
+      if (s.kind !== 'craft' && s.station) err(s.id, `a ${s.kind} skill has no station`);
+    }
+    if (fs.existsSync(path.join(DATA, 'Items/crafting_rules.json'))) {
+      const rl = load('Items/crafting_rules.json');
+      for (const s of obj.skills) if (s.station && !(s.station in (rl.stationQualityCap || {}))) err(s.id, `station "${s.station}" has no stationQualityCap`);
+    }
+  }
   if (name === 'locomotion' && obj.state && obj.baseSpeed) {
     // blend thresholds {0, walk, run, sprint} must strictly ascend
     const th = [0, 'walk', 'run', 'sprint'].map(k => (k === 0 ? 0 : obj.baseSpeed * obj.state[k]));

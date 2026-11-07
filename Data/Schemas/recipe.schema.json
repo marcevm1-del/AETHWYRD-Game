@@ -1,0 +1,112 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Recipe",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "skill",
+  "station",
+  "output",
+  "inputs"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^rcp_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "skill": {
+   "type": "string",
+   "pattern": "^[a-z][a-z0-9_]*$"
+  },
+  "station": {
+   "type": "string",
+   "minLength": 1
+  },
+  "output": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "itemId",
+    "count"
+   ],
+   "properties": {
+    "itemId": {
+     "type": "string",
+     "pattern": "^itm_[a-z0-9_]+$"
+    },
+    "count": {
+     "type": "integer",
+     "minimum": 1
+    }
+   }
+  },
+  "inputs": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "itemId",
+     "count"
+    ],
+    "properties": {
+     "itemId": {
+      "type": "string",
+      "pattern": "^itm_[a-z0-9_]+$"
+     },
+     "count": {
+      "type": "integer",
+      "minimum": 1
+     }
+    }
+   }
+  },
+  "learnFrom": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "npcId",
+    "price"
+   ],
+   "properties": {
+    "npcId": {
+     "type": "string",
+     "pattern": "^npc_[a-z0-9_]+$"
+    },
+    "price": {
+     "type": "integer",
+     "minimum": 0
+    }
+   }
+  },
+  "lifeRank": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS"
+   ]
+  },
+  "xp": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "attuneItem": {
+   "type": "string",
+   "pattern": "^itm_[a-z0-9_]+$"
+  }
+ }
+}
