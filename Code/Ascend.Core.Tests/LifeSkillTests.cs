@@ -152,13 +152,13 @@ static class LifeSkillTests
         Assert.Equal(40L, cr.Skills.Xp("cooking"), "then 10");
     }
 
-    public static void RealRecipesAreAllCraftableAtRankFWithTheirSkillsInTheData()
+    public static void RealRecipesNameKnownSkillsAndRanks()
     {
         var ls = Fresh();
         foreach (var r in Repo.Db.Recipes.Recipes)
         {
             Assert.True(ls.IsKnown(r.Skill), r.Id + " names a skill that exists");
-            Assert.Equal("F", r.LifeRank, r.Id + " lifeRank defaults to F");
+            Assert.True(System.Array.IndexOf(new[] { "F", "E", "D", "C", "B", "A", "S", "SS", "SSS" }, r.LifeRank) >= 0, r.Id + " lifeRank is a real rank");
         }
     }
 

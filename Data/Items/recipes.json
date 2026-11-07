@@ -1,75 +1,15 @@
 {
- "notes": "Ring 0 recipes (12_Systems/systems.md §5; 09_Equipment/item_and_economy_design.md §6). Stations: a crafter NPC's workbench, or a campfire you can use anywhere. learnFrom: the NPC who teaches it (price in copper); omit to know it from the start. Standard quality only until the optional mini-games.",
+ "notes": "Ring 0 and early-ring recipes (12_Systems/systems.md section 5; 09_Equipment/item_and_economy_design.md section 6; crafting_v6_audit.md). Grouped by station then skill. Stations: a crafter NPC workbench (the hearth is the Sleeping Griffon kitchen, the only place cooking can reach Fine; the brewery is its cellar; the tannery is Wren's drying shed), or a campfire you can use anywhere (Normal at best). learnFrom: the NPC who teaches it (price in copper); omit to know it from the start. lifeRank gates the recipe by life-skill rank; attuneItem is the cheap extra input that adds the experiment bonus.",
  "stations": {
   "forge": "npc_torvald_stonebeard",
   "alembic": "npc_fennick_reed",
+  "tannery": "npc_wren_ashbourne",
+  "loom": "npc_ines_valbuena",
+  "hearth": "npc_marta_gruel",
+  "brewery": "npc_marta_gruel",
   "campfire": null
  },
  "recipes": [
-  {
-   "id": "rcp_minor_hp_potion",
-   "name": "Minor Healing Potion",
-   "skill": "alchemy",
-   "station": "alembic",
-   "output": {
-    "itemId": "itm_minor_hp_potion",
-    "count": 1
-   },
-   "inputs": [
-    {
-     "itemId": "itm_healing_herb",
-     "count": 2
-    },
-    {
-     "itemId": "itm_mat_slime_jelly",
-     "count": 1
-    }
-   ],
-   "learnFrom": {
-    "npcId": "npc_fennick_reed",
-    "price": 20
-   }
-  },
-  {
-   "id": "rcp_fire_bomb",
-   "name": "Fire Bomb",
-   "skill": "alchemy",
-   "station": "alembic",
-   "output": {
-    "itemId": "itm_fire_bomb",
-    "count": 1
-   },
-   "inputs": [
-    {
-     "itemId": "itm_mat_sap",
-     "count": 2
-    },
-    {
-     "itemId": "itm_core_f",
-     "count": 1
-    }
-   ],
-   "learnFrom": {
-    "npcId": "npc_fennick_reed",
-    "price": 30
-   }
-  },
-  {
-   "id": "rcp_hunters_skewer",
-   "name": "Hunter's Skewer",
-   "skill": "cooking",
-   "station": "campfire",
-   "output": {
-    "itemId": "itm_hunters_skewer",
-    "count": 1
-   },
-   "inputs": [
-    {
-     "itemId": "itm_mat_prime_meat",
-     "count": 2
-    }
-   ]
-  },
   {
    "id": "rcp_fangblade",
    "name": "Fangblade",
@@ -93,6 +33,8 @@
      "count": 1
     }
    ],
+   "lifeRank": "F",
+   "attuneItem": "itm_core_f",
    "learnFrom": {
     "npcId": "npc_torvald_stonebeard",
     "price": 40
@@ -117,9 +59,129 @@
      "count": 1
     }
    ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_pelt",
    "learnFrom": {
     "npcId": "npc_torvald_stonebeard",
     "price": 30
+   }
+  },
+  {
+   "id": "rcp_ironbound_mace",
+   "name": "Ironbound Mace",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_ironbound_mace",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_crude_iron",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mat_tusk",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_e",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_core_e",
+   "learnFrom": {
+    "npcId": "npc_brannoc_emberfist",
+    "price": 120
+   }
+  },
+  {
+   "id": "rcp_bronze_greaves",
+   "name": "Bronze Greaves",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_bronze_greaves",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_labyrinth_bronze",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mat_crude_iron",
+     "count": 2
+    }
+   ],
+   "lifeRank": "D",
+   "attuneItem": "itm_mat_crude_iron",
+   "learnFrom": {
+    "npcId": "npc_brannoc_emberfist",
+    "price": 260
+   }
+  },
+  {
+   "id": "rcp_cursed_iron_blade",
+   "name": "Cursed Iron Blade",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_cursed_iron_blade",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_cursed_iron",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mat_silver_bane_claw",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_c",
+     "count": 1
+    }
+   ],
+   "lifeRank": "C",
+   "xp": 34,
+   "attuneItem": "itm_core_c",
+   "learnFrom": {
+    "npcId": "npc_brannoc_emberfist",
+    "price": 1200
+   }
+  },
+  {
+   "id": "rcp_mythic_horn_lance",
+   "name": "Mythic Horn Lance",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_mythic_horn_lance",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_mythic_horn",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_cursed_iron",
+     "count": 3
+    },
+    {
+     "itemId": "itm_core_b",
+     "count": 1
+    }
+   ],
+   "lifeRank": "B",
+   "xp": 60,
+   "attuneItem": "itm_core_b",
+   "learnFrom": {
+    "npcId": "npc_brannoc_emberfist",
+    "price": 4500
    }
   },
   {
@@ -145,9 +207,658 @@
      "count": 1
     }
    ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_feather",
    "learnFrom": {
     "npcId": "npc_torvald_stonebeard",
     "price": 35
+   }
+  },
+  {
+   "id": "rcp_pearl_band",
+   "name": "Pearl Band",
+   "skill": "jewelcrafting",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_pearl_band",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_pearl",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_scrap_metal",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_f",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_pearl",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 30
+   }
+  },
+  {
+   "id": "rcp_fanged_amulet",
+   "name": "Fanged Amulet",
+   "skill": "jewelcrafting",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_fanged_amulet",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_tusk",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_fang",
+     "count": 3
+    },
+    {
+     "itemId": "itm_core_e",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_fang",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 150
+   }
+  },
+  {
+   "id": "rcp_temple_signet",
+   "name": "Temple Gold Signet",
+   "skill": "jewelcrafting",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_temple_signet",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_temple_gold",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_sand_pearl",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_c",
+     "count": 1
+    }
+   ],
+   "lifeRank": "C",
+   "attuneItem": "itm_mat_sand_pearl",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 900
+   }
+  },
+  {
+   "id": "rcp_minor_hp_potion",
+   "name": "Minor Healing Potion",
+   "skill": "alchemy",
+   "station": "alembic",
+   "output": {
+    "itemId": "itm_minor_hp_potion",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_healing_herb",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_slime_jelly",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_healing_herb",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 20
+   }
+  },
+  {
+   "id": "rcp_fire_bomb",
+   "name": "Fire Bomb",
+   "skill": "alchemy",
+   "station": "alembic",
+   "output": {
+    "itemId": "itm_fire_bomb",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_sap",
+     "count": 2
+    },
+    {
+     "itemId": "itm_core_f",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_sap",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 30
+   }
+  },
+  {
+   "id": "rcp_healing_potion",
+   "name": "Healing Potion",
+   "skill": "alchemy",
+   "station": "alembic",
+   "output": {
+    "itemId": "itm_healing_potion",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_healing_herb",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mandrake_root",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_e",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_healing_herb",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 60
+   }
+  },
+  {
+   "id": "rcp_greater_healing_potion",
+   "name": "Greater Healing Potion",
+   "skill": "alchemy",
+   "station": "alembic",
+   "output": {
+    "itemId": "itm_greater_healing_potion",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_healing_herb",
+     "count": 4
+    },
+    {
+     "itemId": "itm_mandrake_root",
+     "count": 2
+    },
+    {
+     "itemId": "itm_core_d",
+     "count": 1
+    }
+   ],
+   "lifeRank": "D",
+   "attuneItem": "itm_healing_herb",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 150
+   }
+  },
+  {
+   "id": "rcp_leather_cap",
+   "name": "Leather Cap",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_leather_cap",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 3
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_pelt"
+  },
+  {
+   "id": "rcp_hunters_jerkin",
+   "name": "Hunter Jerkin",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_hunters_jerkin",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 4
+    },
+    {
+     "itemId": "itm_mat_fang",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_pelt"
+  },
+  {
+   "id": "rcp_giants_hide_boots",
+   "name": "Giant Hide Boots",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_giants_hide_boots",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_giant_s_hide",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 2
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_pelt",
+   "learnFrom": {
+    "npcId": "npc_wren_ashbourne",
+    "price": 120
+   }
+  },
+  {
+   "id": "rcp_shadehide_cloak",
+   "name": "Shadehide Cloak",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_shadehide_cloak",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_cursed_fur",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_shade_essence",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 2
+    }
+   ],
+   "lifeRank": "D",
+   "attuneItem": "itm_mat_shade_essence",
+   "learnFrom": {
+    "npcId": "npc_wren_ashbourne",
+    "price": 300
+   }
+  },
+  {
+   "id": "rcp_serpent_scale_jerkin",
+   "name": "Serpent Scale Jerkin",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_serpent_scale_jerkin",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_serpent_scale",
+     "count": 4
+    },
+    {
+     "itemId": "itm_mat_horsehair",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_giant_s_hide",
+     "count": 1
+    }
+   ],
+   "lifeRank": "C",
+   "xp": 34,
+   "attuneItem": "itm_mat_horsehair",
+   "learnFrom": {
+    "npcId": "npc_wren_ashbourne",
+    "price": 1000
+   }
+  },
+  {
+   "id": "rcp_silk_hood",
+   "name": "Silk Hood",
+   "skill": "tailoring",
+   "station": "loom",
+   "output": {
+    "itemId": "itm_silk_hood",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_silk",
+     "count": 3
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_silk"
+  },
+  {
+   "id": "rcp_apprentice_robe",
+   "name": "Apprentice Robe",
+   "skill": "tailoring",
+   "station": "loom",
+   "output": {
+    "itemId": "itm_apprentice_robe",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_silk",
+     "count": 4
+    },
+    {
+     "itemId": "itm_mat_spirit_paper",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_silk"
+  },
+  {
+   "id": "rcp_inkwell_dye",
+   "name": "Inkwell Dye",
+   "skill": "tailoring",
+   "station": "loom",
+   "output": {
+    "itemId": "itm_inkwell_dye",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_sap",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_sap"
+  },
+  {
+   "id": "rcp_nightveil_hood",
+   "name": "Nightveil Hood",
+   "skill": "tailoring",
+   "station": "loom",
+   "output": {
+    "itemId": "itm_nightveil_hood",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_night_shard",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_silk",
+     "count": 3
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_night_shard",
+   "learnFrom": {
+    "npcId": "npc_ines_valbuena",
+    "price": 130
+   }
+  },
+  {
+   "id": "rcp_hexwarden_robe",
+   "name": "Hexwarden Robe",
+   "skill": "tailoring",
+   "station": "loom",
+   "output": {
+    "itemId": "itm_hexwarden_robe",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_cursed_fur",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_silk",
+     "count": 4
+    },
+    {
+     "itemId": "itm_mat_shade_essence",
+     "count": 1
+    }
+   ],
+   "lifeRank": "D",
+   "attuneItem": "itm_mat_silk",
+   "learnFrom": {
+    "npcId": "npc_ines_valbuena",
+    "price": 350
+   }
+  },
+  {
+   "id": "rcp_hunters_skewer",
+   "name": "Hunter's Skewer",
+   "skill": "cooking",
+   "station": "campfire",
+   "output": {
+    "itemId": "itm_hunters_skewer",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_prime_meat",
+     "count": 2
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_prime_meat"
+  },
+  {
+   "id": "rcp_mushroom_skewer",
+   "name": "Mushroom Skewer",
+   "skill": "cooking",
+   "station": "campfire",
+   "output": {
+    "itemId": "itm_mushroom_skewer",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_spore_cap",
+     "count": 2
+    },
+    {
+     "itemId": "itm_healing_herb",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_healing_herb"
+  },
+  {
+   "id": "rcp_tail_roast",
+   "name": "Tail Roast",
+   "skill": "cooking",
+   "station": "campfire",
+   "output": {
+    "itemId": "itm_tail_roast",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_tail_meat",
+     "count": 2
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_tail_meat"
+  },
+  {
+   "id": "rcp_hearth_stew",
+   "name": "Hearth Stew",
+   "skill": "cooking",
+   "station": "hearth",
+   "output": {
+    "itemId": "itm_hearth_stew",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_prime_meat",
+     "count": 2
+    },
+    {
+     "itemId": "itm_healing_herb",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_seed",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_seed",
+   "learnFrom": {
+    "npcId": "npc_marta_gruel",
+    "price": 20
+   }
+  },
+  {
+   "id": "rcp_hearth_loaf",
+   "name": "Hearth Loaf",
+   "skill": "cooking",
+   "station": "hearth",
+   "output": {
+    "itemId": "itm_hearth_loaf",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_seed",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mat_egg",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_egg",
+   "learnFrom": {
+    "npcId": "npc_hugo_brand",
+    "price": 20
+   }
+  },
+  {
+   "id": "rcp_tuskroast_platter",
+   "name": "Tuskroast Platter",
+   "skill": "cooking",
+   "station": "hearth",
+   "output": {
+    "itemId": "itm_tuskroast_platter",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_tusk",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_prime_meat",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_spore_cap",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_spore_cap",
+   "learnFrom": {
+    "npcId": "npc_marta_gruel",
+    "price": 90
+   }
+  },
+  {
+   "id": "rcp_hearth_ale",
+   "name": "Hearth Ale",
+   "skill": "brewing",
+   "station": "brewery",
+   "output": {
+    "itemId": "itm_hearth_ale",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_seed",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mat_sap",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_sap",
+   "learnFrom": {
+    "npcId": "npc_marta_gruel",
+    "price": 20
+   }
+  },
+  {
+   "id": "rcp_brimstone_bitters",
+   "name": "Brimstone Bitters",
+   "skill": "brewing",
+   "station": "brewery",
+   "output": {
+    "itemId": "itm_brimstone_bitters",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_seed",
+     "count": 3
+    },
+    {
+     "itemId": "itm_mandrake_root",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_brimstone",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_brimstone",
+   "learnFrom": {
+    "npcId": "npc_marta_gruel",
+    "price": 80
    }
   }
  ]

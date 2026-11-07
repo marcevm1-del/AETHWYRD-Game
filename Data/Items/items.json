@@ -375,5 +375,426 @@
    "heal": 200
   },
   "flavor": "Prime meat, campfire-charred. The best meal in Whisperwood is the one you cooked yourself."
+ },
+ {
+  "id": "itm_ironbound_mace",
+  "name": "Ironbound Mace",
+  "category": "weapon",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "slot": "main_hand",
+  "weaponType": "mace",
+  "value": 90,
+  "stats": {
+   "atk": 15,
+   "def": 4
+  },
+  "flavor": "Crude iron bands around a boar tusk. It settles arguments."
+ },
+ {
+  "id": "itm_bronze_greaves",
+  "name": "Bronze Greaves",
+  "category": "armor",
+  "rank": "D",
+  "rarity": "Uncommon",
+  "slot": "legs",
+  "armorWeight": "medium",
+  "value": 200,
+  "stats": {
+   "def": 11
+  },
+  "flavor": "Labyrinth bronze, beaten thin enough to walk in."
+ },
+ {
+  "id": "itm_cursed_iron_blade",
+  "name": "Cursed Iron Blade",
+  "category": "weapon",
+  "rank": "C",
+  "rarity": "Rare",
+  "slot": "main_hand",
+  "weaponType": "sword",
+  "value": 900,
+  "stats": {
+   "atk": 44,
+   "crit": 0.03
+  },
+  "flavor": "The iron hums when the lanterns go out. Brannoc says that is only the cooling."
+ },
+ {
+  "id": "itm_mythic_horn_lance",
+  "name": "Mythic Horn Lance",
+  "category": "weapon",
+  "rank": "B",
+  "rarity": "Rare",
+  "slot": "main_hand",
+  "weaponType": "spear",
+  "value": 3000,
+  "stats": {
+   "atk": 56
+  },
+  "flavor": "A single horn, drawn out and set on a long shaft. It is lighter than it has any right to be."
+ },
+ {
+  "id": "itm_pearl_band",
+  "name": "Pearl Band",
+  "category": "accessory",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "ring",
+  "value": 28,
+  "stats": {
+   "matk": 2
+  },
+  "flavor": "A river pearl in a plain band. Warm when someone is thinking of you."
+ },
+ {
+  "id": "itm_fanged_amulet",
+  "name": "Fanged Amulet",
+  "category": "accessory",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "slot": "amulet",
+  "value": 110,
+  "stats": {
+   "atk": 4
+  },
+  "flavor": "Three fangs and a tusk chip on a leather cord. Plain, sturdy, a little proud."
+ },
+ {
+  "id": "itm_temple_signet",
+  "name": "Temple Gold Signet",
+  "category": "accessory",
+  "rank": "C",
+  "rarity": "Rare",
+  "slot": "ring",
+  "value": 650,
+  "stats": {
+   "def": 5,
+   "mdef": 5
+  },
+  "flavor": "Temple gold rolled into a ring. It carries a faint memory of bells."
+ },
+ {
+  "id": "itm_healing_potion",
+  "name": "Healing Potion",
+  "category": "consumable",
+  "rank": "E",
+  "rarity": "Common",
+  "value": 40,
+  "stats": {
+   "heal": 300
+  },
+  "flavor": "Fennick keeps the second batch for people who promise to come back."
+ },
+ {
+  "id": "itm_greater_healing_potion",
+  "name": "Greater Healing Potion",
+  "category": "consumable",
+  "rank": "D",
+  "rarity": "Uncommon",
+  "value": 90,
+  "stats": {
+   "heal": 520
+  },
+  "flavor": "Deep green and slow to pour. It smells of a whole meadow."
+ },
+ {
+  "id": "itm_leather_cap",
+  "name": "Leather Cap",
+  "category": "armor",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "head",
+  "armorWeight": "light",
+  "value": 18,
+  "stats": {
+   "def": 4
+  },
+  "flavor": "Stitched in the tannery shed by someone who wanted you home for supper."
+ },
+ {
+  "id": "itm_hunters_jerkin",
+  "name": "Hunter Jerkin",
+  "category": "armor",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "chest",
+  "armorWeight": "light",
+  "value": 36,
+  "stats": {
+   "def": 6
+  },
+  "flavor": "Pelt and a fang for luck. It remembers the forest."
+ },
+ {
+  "id": "itm_giants_hide_boots",
+  "name": "Giant Hide Boots",
+  "category": "armor",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "slot": "feet",
+  "armorWeight": "light",
+  "value": 90,
+  "stats": {
+   "def": 8
+  },
+  "flavor": "Thick enough for stones, soft enough for a long road."
+ },
+ {
+  "id": "itm_shadehide_cloak",
+  "name": "Shadehide Cloak",
+  "category": "armor",
+  "rank": "D",
+  "rarity": "Uncommon",
+  "slot": "back",
+  "armorWeight": "light",
+  "value": 230,
+  "stats": {
+   "def": 5,
+   "mdef": 6
+  },
+  "flavor": "Cursed fur, calmed with shade essence. It only looks like it is watching you."
+ },
+ {
+  "id": "itm_serpent_scale_jerkin",
+  "name": "Serpent Scale Jerkin",
+  "category": "armor",
+  "rank": "C",
+  "rarity": "Rare",
+  "slot": "chest",
+  "armorWeight": "light",
+  "value": 700,
+  "stats": {
+   "def": 20
+  },
+  "flavor": "Overlapping scales over horsehair padding. It flexes like a held breath."
+ },
+ {
+  "id": "itm_silk_hood",
+  "name": "Silk Hood",
+  "category": "armor",
+  "rank": "F",
+  "rarity": "Common",
+  "slot": "head",
+  "armorWeight": "cloth",
+  "value": 20,
+  "stats": {
+   "def": 2,
+   "mdef": 3
+  },
+  "flavor": "Light, close-fitting and surprisingly warm."
+ },
+ {
+  "id": "itm_apprentice_robe",
+  "name": "Apprentice Robe",
+  "category": "armor",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "chest",
+  "armorWeight": "cloth",
+  "value": 38,
+  "stats": {
+   "def": 3,
+   "mdef": 5
+  },
+  "flavor": "Ines tucks a scrap of spirit paper into the hem. For luck, she says."
+ },
+ {
+  "id": "itm_inkwell_dye",
+  "name": "Inkwell Dye",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 12,
+  "flavor": "Deep blue-black, and a little goes a long way. A cosmetic dye for any outfit."
+ },
+ {
+  "id": "itm_nightveil_hood",
+  "name": "Nightveil Hood",
+  "category": "armor",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "slot": "head",
+  "armorWeight": "cloth",
+  "value": 95,
+  "stats": {
+   "def": 3,
+   "mdef": 7
+  },
+  "flavor": "Silk with a night shard woven in. Evenings feel kinder under it."
+ },
+ {
+  "id": "itm_hexwarden_robe",
+  "name": "Hexwarden Robe",
+  "category": "armor",
+  "rank": "D",
+  "rarity": "Uncommon",
+  "slot": "chest",
+  "armorWeight": "cloth",
+  "value": 260,
+  "stats": {
+   "def": 6,
+   "mdef": 12
+  },
+  "flavor": "Cursed fur lined with silk, tamed and quiet. It keeps odd draughts off."
+ },
+ {
+  "id": "itm_mushroom_skewer",
+  "name": "Mushroom Skewer",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 10,
+  "stats": {
+   "heal": 120
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "def",
+     "amount": 2
+    }
+   ],
+   "seconds": 300
+  },
+  "flavor": "Spore caps and a leaf of healing herb over the coals. Earthy and kind."
+ },
+ {
+  "id": "itm_tail_roast",
+  "name": "Tail Roast",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 14,
+  "stats": {
+   "heal": 160
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "atk",
+     "amount": 2
+    }
+   ],
+   "seconds": 480
+  },
+  "flavor": "Slow-roasted until the edges crackle. Best eaten while still too hot."
+ },
+ {
+  "id": "itm_hearth_stew",
+  "name": "Hearth Stew",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 22,
+  "stats": {
+   "heal": 200
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "def",
+     "amount": 3
+    },
+    {
+     "stat": "mdef",
+     "amount": 3
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "Marta ladle, Marta pot, and a seat by the fire."
+ },
+ {
+  "id": "itm_hearth_loaf",
+  "name": "Hearth Loaf",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 14,
+  "stats": {
+   "heal": 100
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "spd",
+     "amount": 3
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "Crusty, golden and still warm. Hugo swears the oven does half the work."
+ },
+ {
+  "id": "itm_tuskroast_platter",
+  "name": "Tuskroast Platter",
+  "category": "consumable",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 40,
+  "stats": {
+   "heal": 260
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "atk",
+     "amount": 4
+    },
+    {
+     "stat": "def",
+     "amount": 2
+    }
+   ],
+   "seconds": 900
+  },
+  "flavor": "A proper sit-down meal. Someone always asks for seconds."
+ },
+ {
+  "id": "itm_hearth_ale",
+  "name": "Hearth Ale",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 12,
+  "stats": {
+   "heal": 80
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "mdef",
+     "amount": 3
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "Golden, mild and made in the cellar under the Sleeping Griffon."
+ },
+ {
+  "id": "itm_brimstone_bitters",
+  "name": "Brimstone Bitters",
+  "category": "consumable",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 35,
+  "stats": {
+   "heal": 60
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "atk",
+     "amount": 3
+    },
+    {
+     "stat": "crit",
+     "amount": 0.02
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "A pinch of brimstone for a warm chest and a bright mind. Sip slowly."
  }
 ]
