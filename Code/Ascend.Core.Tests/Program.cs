@@ -74,7 +74,9 @@ static class Repo
         Load<RecipeFile>("Data/Items/recipes.json"),
         Load<GuildRankData>("Data/World/guild_ranks.json"),
         Load<GatheringFile>("Data/World/gathering.json"),
-        Load<BossFile>("Data/Monsters/boss_phases.json"));
+        Load<BossFile>("Data/Monsters/boss_phases.json"),
+        Load<ReactionFile>("Data/Combat/reactions.json"),
+        Load<BossWeakPointFile>("Data/Monsters/boss_weakpoints.json"));
 }
 
 [Tests]

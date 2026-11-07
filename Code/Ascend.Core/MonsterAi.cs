@@ -82,6 +82,18 @@ namespace Ascend.Core
         public int PackmatesNear;
         /// <summary>The target stands inside a town ward this monster won't enter: it doesn't notice them, and breaks off and goes home.</summary>
         public bool TargetWarded;
+
+        // ---- Group tactics (all optional: zero/false means "not supplied" and the brain acts exactly as before). Peers are symmetric; nothing here ranks one monster over another.
+        /// <summary>1-based flank slot assigned this frame by the game (FlankSlots.Assign); 0 = none.</summary>
+        public int FlankSlot;
+        /// <summary>How many slots are in play; 0 = the tuning default.</summary>
+        public int FlankSlotCount;
+        /// <summary>Living monsters of any species fighting nearby; combined with PackmatesNear for the threat score only.</summary>
+        public int AlliesNear;
+        /// <summary>Player HP fraction 0-1; 0 or less = not supplied.</summary>
+        public double PlayerHpFraction;
+        /// <summary>The game (via PeerCoordinator.ShouldYield) says a clearly healthier peer should take the token: skip the attack this tick and keep circling.</summary>
+        public bool YieldToken;
     }
 
     /// <summary>What the brain wants this tick.</summary>
@@ -97,6 +109,10 @@ namespace Ascend.Core
         public bool WantsToken;
         /// <summary>The token can be released (recovery ended, fleeing, returning home).</summary>
         public bool ReleaseToken;
+        /// <summary>0 calm to 1 dire, from ThreatAssessor this tick (information for the game; does not change the brain's choices).</summary>
+        public double ThreatLevel;
+        /// <summary>When circling with a flank slot: the slot's angle in degrees from the approach axis; otherwise 0.</summary>
+        public double FlankAngleDeg;
     }
 
     /// <summary>
@@ -141,6 +157,9 @@ namespace Ascend.Core
         }
 
         public bool IsTerritorial => Pattern.StartsWith("territorial") || Pattern.StartsWith("guardian");
+
+        /// <summary>Group-tactics numbers (defaults in code). Replace from combat_tuning.json when loaded.</summary>
+        public GroupTacticsTuning Tactics { get; set; } = GroupTacticsTuning.Default;
 
         public MonsterBrain(SpeciesData species, SpeciesMotion motion, IReadOnlyDictionary<string, AttackData> attacks, IRandom rng)
         {
@@ -190,6 +209,13 @@ namespace Ascend.Core
             if (s.TargetWarded) { AlertedFor = 0; s.DistanceToPlayer = double.MaxValue; } // out of reach behind the ward
             var nav = _motion.NavAgent;
             var cmd = new AiCommand { Move = AiMove.None, Speed = 0 };
+            var tac = Tactics ?? GroupTacticsTuning.Default;
+            // Tactics disabled (groupTactics.enabled = false): behave exactly like the brain before tactics. The player's HP counts
+            // as "not supplied" for the retreat rules, there is no yielding, no flank angle and no threat score.
+            bool tacOn = tac.Enabled;
+            double playerHp = tacOn ? s.PlayerHpFraction : 0;
+            bool yieldToken = tacOn && s.YieldToken;
+            if (tacOn) cmd.ThreatLevel = ThreatAssessor.Score(s.PlayerHpFraction, Math.Max(s.PackmatesNear, s.AlliesNear), s.HpFraction, tac);
 
             // Leash: everyone gives up past the leash (territorial monsters sooner, at the alert radius ×1.5).
             double leash = IsTerritorial ? Math.Min(b.LeashRadius, b.AlertRadius * 1.5) : b.LeashRadius;
@@ -197,8 +223,8 @@ namespace Ascend.Core
             if (!busy && State != AiState.Return && State != AiState.Idle && s.DistanceFromHome > leash) Enter(AiState.Return);
             if (!busy && s.TargetWarded && (State == AiState.Chase || State == AiState.Reposition || State == AiState.Flee)) Enter(AiState.Return);
             // A pack hunter left alone and hurt falls back home instead of fighting on (Greyborn's fight-or-flee odds).
-            if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < LoneRetreatHp && State == AiState.Chase) Enter(AiState.Return);
-            if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= b.RetreatHpPct && State != AiState.Return)
+            if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < RetreatRule.LoneThreshold(LoneRetreatHp, playerHp, tac) && State == AiState.Chase) Enter(AiState.Return);
+            if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= RetreatRule.SpeciesThreshold(b.RetreatHpPct, playerHp, tac) && State != AiState.Return)
                 Enter(AiState.Flee);
 
             switch (State)
@@ -225,9 +251,11 @@ namespace Ascend.Core
                     if (choice.data != null)
                     {
                         cmd.WantsToken = true;
-                        if (s.HasToken) { StartWindup(choice); cmd.Move = AiMove.None; break; }
+                        if (s.HasToken && !yieldToken) { StartWindup(choice); cmd.Move = AiMove.None; break; }
                         Enter(AiState.Reposition);
                         cmd.Move = AiMove.Circle; cmd.Speed = nav.WalkSpeed > 0 ? nav.WalkSpeed : nav.Speed * 0.4;
+                        if (yieldToken) { cmd.WantsToken = false; cmd.ReleaseToken = true; }
+                        if (tacOn && s.FlankSlot > 0) cmd.FlankAngleDeg = FlankSlots.AngleDeg(s.FlankSlot, tac, s.FlankSlotCount);
                         break;
                     }
                     if (State == AiState.Reposition) Enter(AiState.Chase);

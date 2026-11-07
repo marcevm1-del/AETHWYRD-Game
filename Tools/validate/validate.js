@@ -1,7 +1,7 @@
 // Project Ascend data validator. Dependency-free (plain Node).
 // Usage: node Tools/validate/validate.js        → exit code 1 if anything is wrong
 // Checks: 1) every row against its JSON Schema (subset: type, required, properties,
-// additionalProperties:false, enum, pattern, minimum/maximum, minLength, minItems/maxItems, items)
+// additionalProperties:false, enum, pattern, minimum/maximum/exclusiveMinimum, minLength, minItems/maxItems, items)
 // 2) IDs unique across ALL data  3) every cross-reference points at an existing ID.
 const fs = require('fs');
 const path = require('path');
@@ -53,6 +53,7 @@ function check(v, s, where) {
   }
   if (typeof v === 'number') {
     if (s.minimum != null && v < s.minimum) err(where, `${v} < minimum ${s.minimum}`);
+    if (s.exclusiveMinimum != null && v <= s.exclusiveMinimum) err(where, `${v} must be greater than ${s.exclusiveMinimum}`);
     if (s.maximum != null && v > s.maximum) err(where, `${v} > maximum ${s.maximum}`);
   }
   if (Array.isArray(v)) {
@@ -158,6 +159,87 @@ if (fs.existsSync(path.join(DATA, 'Monsters/boss_phases.json'))) {
     if (at[0] !== 1) err(b.speciesId, 'the first phase starts at atHpFraction 1.0');
     if (at.some((v, i) => i > 0 && !(v < at[i - 1] && v > 0))) err(b.speciesId, 'phase thresholds must fall from 1.0 toward 0');
     for (const p of b.phases || []) for (const s of p.summon || []) ref(b.speciesId + '.summon', s.speciesId, 'species');
+  }
+}
+
+// Reaction table (Combat/reactions.json): schema, known Reaction ids, one row per unordered element pair, synergies point at
+// real reactions, and Freeze / Storm Prison status seconds equal combat_tuning.json "reactions" (the tuning file stays the source).
+const tuningPath = path.join(DATA, 'Combat/combat_tuning.json');
+const tuning = fs.existsSync(tuningPath) ? load('Combat/combat_tuning.json') : {};
+if (fs.existsSync(path.join(DATA, 'Combat/reactions.json'))) {
+  const rf = load('Combat/reactions.json');
+  check(rf, schema('reactions'), 'reactions.json');
+  const rids = new Set(), pairs = new Map(), sids = new Set();
+  for (const r of rf.reactions || []) {
+    if (rids.has(r.id)) err('reactions.json#' + r.id, 'duplicate reaction id'); rids.add(r.id);
+    const key = (r.elements || []).slice().sort().join('+');
+    if ((r.elements || []).length === 2 && r.elements[0] === r.elements[1]) err('reactions.json#' + r.id, 'elements must be two different elements');
+    // Swirl is the catch-all (Wind meeting any element without its own row), so its listed pair is only a representative; it must still contain Wind.
+    // consumesAura false is the Swirl rule only (it keeps the aura); every other reaction consumes it.
+    if (r.id !== 'Swirl' && r.consumesAura !== true) err('reactions.json#' + r.id, 'consumesAura must be true for every reaction except Swirl');
+    if (r.id === 'Swirl') { if (!(r.elements || []).includes('Wind')) err('reactions.json#Swirl', 'Swirl elements must include Wind'); }
+    else {
+    if (pairs.has(key)) err('reactions.json#' + r.id, `element pair ${key} already used by ${pairs.get(key)} (order does not matter)`); pairs.set(key, r.id);
+    }
+    const t = tuning.reactions || {};
+    if (r.id === 'Freeze' && (!r.status || r.status.kind !== 'freeze' || r.status.durationSec !== t.freezeDurationSec)) err('reactions.json#Freeze', `status must be freeze for ${t.freezeDurationSec}s (combat_tuning.json reactions.freezeDurationSec)`);
+    if (r.id === 'StormPrison' && (!r.status || r.status.kind !== 'stun' || r.status.durationSec !== t.stormPrisonStunSec)) err('reactions.json#StormPrison', `status must be stun for ${t.stormPrisonStunSec}s (combat_tuning.json reactions.stormPrisonStunSec)`);
+  }
+  for (const sy of rf.synergies || []) {
+    if (sids.has(sy.id)) err('reactions.json#' + sy.id, 'duplicate synergy id'); sids.add(sy.id);
+    for (const k of ['first', 'then']) if (!rids.has(sy[k])) err('reactions.json#' + sy.id, `${k} "${sy[k]}" is not a reaction in "reactions"`);
+  }
+}
+
+// Boss weak points (Monsters/boss_weakpoints.json): real species, one record per boss, weak-point ids unique per boss,
+// and exposedInPhases name phases that boss really has in boss_phases.json (when the boss has phases).
+if (fs.existsSync(path.join(DATA, 'Monsters/boss_weakpoints.json'))) {
+  const wf = load('Monsters/boss_weakpoints.json');
+  check(wf, schema('boss_weakpoints'), 'boss_weakpoints.json');
+  const phasesOf = {};
+  if (fs.existsSync(path.join(DATA, 'Monsters/boss_phases.json'))) for (const b of load('Monsters/boss_phases.json').bosses || []) phasesOf[b.speciesId] = new Set((b.phases || []).map(p => p.name));
+  const seenBoss = new Set();
+  const abw = wf.armorDamageByWeight;
+  if (abw) {
+    if (!(abw.light <= abw.medium && abw.medium <= abw.heavy && abw.heavy <= abw.ultimate)) err('boss_weakpoints.json armorDamageByWeight', 'armor damage must not shrink as the weight grows (light <= medium <= heavy <= ultimate)');
+  }
+  for (const b of wf.bosses || []) {
+    ref('boss_weakpoints', b.speciesId, 'species');
+    // Armor must be breakable: no more than 20 heavy hits (a guard against an unbreakable bar).
+    if (b.armor && abw && b.armor.maxArmor > 0 && b.armor.maxArmor / abw.heavy > 20) err(b.speciesId, `armor.maxArmor ${b.armor.maxArmor} needs ${Math.ceil(b.armor.maxArmor / abw.heavy)} heavy hits to break (more than 20): effectively unbreakable`);
+    if (seenBoss.has(b.speciesId)) err(b.speciesId, 'two boss_weakpoints records for one species'); seenBoss.add(b.speciesId);
+    const wids = new Set();
+    for (const w of b.weakPoints || []) {
+      if (wids.has(w.id)) err(b.speciesId, `duplicate weak point id "${w.id}"`); wids.add(w.id);
+      if (phasesOf[b.speciesId]) for (const ph of w.exposedInPhases || []) if (!phasesOf[b.speciesId].has(ph)) err(`${b.speciesId}.${w.id}`, `exposedInPhases "${ph}" is not a phase in boss_phases.json (${[...phasesOf[b.speciesId]].join(', ')})`);
+    }
+  }
+}
+
+// Group tactics numbers (combat_tuning.json "groupTactics", optional): numbers never negative; keys ending Fraction / Pct are
+// 0..1; keys naming slots are whole numbers 1..6.
+if (tuning.groupTactics) {
+  (function walk(o, p) {
+    for (const [k, v] of Object.entries(o)) {
+      const w = `combat_tuning.json groupTactics${p}.${k}`;
+      if (v && typeof v === 'object' && !Array.isArray(v)) { walk(v, p + '.' + k); continue; }
+      if (typeof v !== 'number') continue;
+      if (v < 0) err(w, `${v} is negative`);
+      if (/(fraction|pct)$/i.test(k) && v > 1) err(w, `${v} is a fraction and must be between 0 and 1`);
+      if (/slot(s|count)$/i.test(k) && !(Number.isInteger(v) && v >= 1 && v <= 6)) err(w, `${v}: slot counts are whole numbers from 1 to 6`);
+      if (/^(pressOnPlayerHp|pressOnRetreatScale|healthyPlayerHp|outnumberedRetreatBonus|hpMargin)$/.test(k) && v > 1) err(w, `${v} must be between 0 and 1`);
+      if (k === 'arcDeg' && v > 360) err(w, `${v} degrees is more than a full circle`);
+    }
+  })(tuning.groupTactics, '');
+  const gr = tuning.groupTactics.retreat || {};
+  if (typeof gr.pressOnPlayerHp === 'number' && typeof gr.healthyPlayerHp === 'number' && gr.pressOnPlayerHp >= gr.healthyPlayerHp) err('combat_tuning.json groupTactics.retreat', 'pressOnPlayerHp must be below healthyPlayerHp');
+  if (tuning.groupTactics.enabled !== undefined && typeof tuning.groupTactics.enabled !== 'boolean') err('combat_tuning.json groupTactics.enabled', 'must be true or false');
+}
+// Sandbox defaults (combat_tuning.json "sandbox", optional).
+if (tuning.sandbox) {
+  for (const k of ['defaultSeed', 'maxDummies', 'defaultDummyHp']) {
+    const v = tuning.sandbox[k];
+    if (v !== undefined && !(Number.isInteger(v) && v >= 1)) err('combat_tuning.json sandbox.' + k, `${v} must be a whole number of at least 1`);
   }
 }
 

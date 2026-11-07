@@ -212,6 +212,12 @@ namespace Ascend.Core
         public GuildRankData GuildRanks { get; }
         public IReadOnlyDictionary<string, GatherNodeData> GatherNodes { get; }
         public IReadOnlyDictionary<string, BossData> Bosses { get; }
+        /// <summary>Data/Combat/reactions.json; the built-in defaults table when not loaded.</summary>
+        public ReactionFile Reactions { get; }
+        /// <summary>The table to use at runtime: built from <see cref="Reactions"/> when it has rows, else <see cref="ReactionTable.Default"/>.</summary>
+        public ReactionTable ReactionTable { get; }
+        /// <summary>Data/Monsters/boss_weakpoints.json (empty if not loaded).</summary>
+        public BossWeakPointFile BossWeakPoints { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -220,7 +226,8 @@ namespace Ascend.Core
             IEnumerable<QuestData> quests = null, IEnumerable<NpcData> npcs = null, IEnumerable<ClassData> classes = null,
             IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null,
             IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null, MotionFile motion = null,
-            IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null, BossFile bosses = null)
+            IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null, BossFile bosses = null,
+            ReactionFile reactions = null, BossWeakPointFile weakPoints = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
@@ -228,6 +235,10 @@ namespace Ascend.Core
             GuildRanks = guildRanks ?? new GuildRankData();
             GatherNodes = Index(gathering?.Nodes, n => n.Id, "gather node");
             Bosses = Index(bosses?.Bosses, b => b.SpeciesId, "boss");
+            Reactions = reactions ?? new ReactionFile();
+            ReactionTable = Reactions.Reactions.Count > 0 ? new ReactionTable(Reactions) : Ascend.Core.ReactionTable.Default;
+            BossWeakPoints = weakPoints ?? new BossWeakPointFile();
+            Index(BossWeakPoints.Bosses, b => b.SpeciesId, "boss weak point set");
             Index(Recipes.Recipes, r => r.Id, "recipe");
             WeeklyQuests = Index(weeklyBoard, q => q.Id, "weekly quest");
             Inns = Index(inns, i => i.Id, "inn");

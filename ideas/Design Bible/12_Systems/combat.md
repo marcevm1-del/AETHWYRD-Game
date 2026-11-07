@@ -98,6 +98,36 @@ Attacks apply an **element aura** to the target for ⚙ 6 s. Hitting an aura wit
 | Lightning + Earth | **Grounded** | Lightning damage absorbed, target slowed |
 **Ring 0 includes:** Fire + Wind = Firestorm (a thrown **Fire Bomb** consumable applies Fire; the Swordsman's *Air Slash* applies Wind).
 
+### 7a. Reaction table (data-driven, Wave A2)
+The ten pairs above now live in `Data/Combat/reactions.json` so feel can be tuned without code. With no table loaded the game behaves exactly as before.
+- Each reaction lists its two elements (order does not matter), whether it **consumes the aura** (all do except Swirl), an optional **bonus damage multiplier**, and optional **DoT**, **hazard zone** and **status** (freeze or stun).
+- **Parity (matches today):** the pairs, aura consumption, Freeze 2.5 s and Storm Prison 1.2 s (copied from ⚙ `reactions`; a test keeps them equal), and the Firestorm zone (⚙ `firestorm`).
+- **Proposals (user tunes):** bonus multipliers (Thermal Shock x2.0, Twilight Burst x2.5, Firestorm x1.5 and so on), Wildfire's burn DoT, the Magma and Miasma ground zones, and all Swirl spread numbers.
+- **Swirl** (⚙ table `swirl`): Wind meeting a non-Wind element spreads that element to up to 3 neighbours within 5 m at x0.5 damage; the aura is kept.
+- **Readability:** every hazard is a marked ground zone with a visible edge and a countdown, never an instant-kill; the UI shows aura, trigger and remaining time (section 15).
+
+### 7b. Reaction synergies
+A **synergy** is a bonus when a second reaction fires on the same target within a short window of the first. They are separate records, not new reactions. Six proposals ship in the table:
+| Synergy | First, then | Window | Bonus |
+|---|---|---|---|
+| Fanned Flames | Swirl, Firestorm | 4 s | x1.25 |
+| Thaw Burst | Freeze, Thermal Shock | 3 s | x1.4 |
+| Soaked Circuit | Freeze, Storm Prison | 3 s | x1.3 |
+| Scorched Earth | Magma, Wildfire | 5 s | x1.2 |
+| Miasma Ignition | Miasma Blast, Firestorm | 4 s | x1.25 |
+| Storm Ground | Storm Prison, Grounded | 3 s | x1.2 |
+Rules: bonuses do not stack with each other (the best one applies); a synergy never needs more than two elements the player already uses; the HUD flashes the synergy name once. A synergy adds Style points like a reaction (+40, not +80).
+
+### 7c. Boss armor and break
+Bosses may carry an **armor gauge** (`Data/Monsters/boss_weakpoints.json`, `armor`). It is separate from the Break gauge (section 4.3): hits fill armor damage first; at zero the armor **breaks** for `breakSec`, during which the boss takes `damageTakenMultWhileBroken` more damage. After `regenDelaySec` without armor damage it regenerates. A break always has a sound cue and a visible crack; it is a reward window, never a requirement.
+Fairness: no mandatory fight needs armor to be broken to be won (Canon combat/readability contract); it speeds the kill and rewards reading the boss.
+
+### 7d. Weak points
+A weak point is a named body part (`bodyPart` from the rig hurtboxes) with its own damage multiplier and armor-damage multiplier, **exposed only in listed phases** (`exposedInPhases`, optionally for `exposedSec` after a trigger). Exposure is announced: the part glows or the boss turns to show it, and the lock-on reticle gets a marker. The multiplier replaces the hurtbox multiplier for that part while exposed. Grukk has the starter record: the **cult-rune brand** on his chest, exposed in the Archers and Rage phases (x1.5 damage, x1.5 armor damage). Phases themselves stay in `boss_phases.json`.
+
+### 7e. Combat sandbox (dev tool)
+A headless **combat sandbox** spawns up to ⚙ `sandbox.maxDummies` dummies (species, element, HP, optional armor), applies scripted hits (element, weight, body part, attacker) on a manual clock and returns a readout per hit: damage, multiplier breakdown, reaction, synergy, armor and break state. It is deterministic (seeded, ⚙ `sandbox.defaultSeed`) and used by tests and the designer to judge reactions and armor without playing. It is a developer tool: no menu, no game mode, not shipped to players.
+
 ## 8. Style Rank
 | Rank | Points needed ⚙ | Bonus |
 |---|---|---|
@@ -131,6 +161,16 @@ AI patterns come from `aiPattern` in species data. Each monster's turn: **pick a
 | **Horned Rabbit** (F) | skittish_flee | Runs, then **Charge** (red, unblockable) when cornered; the classic rookie killer |
 - **Aggro token system:** at most ⚙ 2 enemies attack at once; others reposition or taunt (keeps big groups fair and cinematic).
 
+### 10a. Group tactics (symmetric peers)
+Packs fight smarter without any monster being in charge. Numbers: ⚙ `groupTactics` in `combat_tuning.json`. **Hard rules (Canon 4d):** no leader, captain, commander or rank among monsters; no learning or adapting to the player; nothing is remembered between fights or about the player. Every monster runs the same rules from the same inputs.
+- **Flank slots:** each pack member that is repositioning is given one of ⚙ 3 angular slots (2 to 4 allowed) around the target, spread over a ⚙ 240 degree arc at ⚙ 4.5 m, assigned in a fixed member order and reassigned every ⚙ 1.5 s. Players see enemies come from several sides, but never more than ⚙ `ai.maxSimultaneousAttackers` attack at once.
+- **Threat read:** each monster scores risk to itself from the player's HP fraction, how outnumbered it is and its own HP (weights 0.4 / 0.35 / 0.25). Above ⚙ 0.6 it fights cautiously (keeps range, feints); below ⚙ 0.3 it presses. No history is kept; the score is recomputed every tick.
+- **Retreat:** a pack member retreats at ⚙ 30% HP; a monster with no packmates nearby retreats at ⚙ 50% (today's rule). It rejoins after recovering to ⚙ 60% or after ⚙ 4 s. Retreat is visible: it turns and runs, giving the player a choice to chase or not (section 14).
+- **Yield:** a repositioning monster gives its slot or aggro token to a peer who is healthier by ⚙ 20% HP, holds the yield for ⚙ 1.5 s and will not yield again for ⚙ 3 s. This is symmetric: any peer can yield to any other.
+- **Archetypes:** the upgrade-v5 archetype list is expressed through existing `aiPattern` values; "Commander" is not used (rejected, Canon 4d), and "Shapeshifter" stays a boss-phase matter.
+Wiring into Unity is a later wave; until then this is exercised by Core tests only.
+
+
 ## 11. Feedback Checklist (every hit must have)
 1. Hit-stop · 2. Hit flash on the target (1 frame white) · 3. Impact VFX at the contact point · 4. Sound (layered: whoosh + impact + material) · 5. Damage number (toggleable) · 6. Reaction animation · 7. Controller rumble.
 
@@ -142,6 +182,10 @@ Ring 0 passes when, in a 10-minute session against slimes, goblins and rabbits:
 - [ ] Firestorm makes people say "whoa."
 - [ ] Reaching S Style Rank feels earned and fun.
 - [ ] Nothing feels floaty: every hit has weight.
+- [ ] Wave A2 additions: a Swirl-then-Firestorm opener makes you feel clever, and the Synergy flash is readable.
+- [ ] Breaking Grukk's armor feels like a payoff you noticed (sound plus crack), and fighting without it is still fair.
+- [ ] You can tell when Grukk's rune brand is exposed without being told.
+- [ ] A goblin pack comes from several sides, retreats visibly at low HP, and never feels like it has a boss goblin giving orders.
 
 **Where the fight lives (built).** Monsters stay in the forest and beyond; the town is safe ground.
 - **Town ward** (`TownWard`): a box over Brindlewick (with its new quarter and farmstead), Millbrook's fields and the treeline camp (x −75…75, z −98…33). The field's own monsters don't notice you inside it, break off a chase when you step back in, and never walk across its edge. Monsters brought in on purpose ignore it: siege raiders, escort ambushes and defence-event raids (anything `MonsterSpawner.Spawn` creates). Core rule: `AiSense.TargetWarded`.
