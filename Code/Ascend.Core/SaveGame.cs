@@ -67,6 +67,8 @@ namespace Ascend.Core
         public DungeonSave Dungeons { get; set; }
         /// <summary>Great Labyrinth floors and stairs the player knows: Unknown / Heard / Visited (null in older saves; Upgrade fills it).</summary>
         public LabyrinthSave Labyrinth { get; set; }
+        /// <summary>Living-world state: the event director's log and the discovery journal (null in older saves; Upgrade fills it).</summary>
+        public LivingWorldSave LivingWorld { get; set; }
         /// <summary>Accessibility and presentation settings (null in older saves: safe defaults; Upgrade fills and clamps it).</summary>
         public AccessibilitySettings Accessibility { get; set; }
     }
@@ -120,6 +122,12 @@ namespace Ascend.Core
             s.Labyrinth ??= new LabyrinthSave();
             s.Labyrinth.Floors ??= new Dictionary<string, MapStatus>();
             s.Labyrinth.Stairs ??= new Dictionary<string, MapStatus>();
+            s.LivingWorld ??= new LivingWorldSave();
+            s.LivingWorld.Events ??= new EventDirectorSave();
+            s.LivingWorld.Events.LastStartDay ??= new Dictionary<string, int>();
+            s.LivingWorld.Events.Active ??= new List<ActiveLivingEvent>();
+            s.LivingWorld.Journal ??= new DiscoveryJournalSave();
+            s.LivingWorld.Journal.Entries ??= new Dictionary<string, MapStatus>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;
