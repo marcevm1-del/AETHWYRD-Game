@@ -125,7 +125,7 @@ const out = {
 const text = JSON.stringify(out, null, 1) + '\n';
 if (process.argv.includes('--check')) {
   const cur = fs.existsSync(OUT) ? fs.readFileSync(OUT, 'utf8') : '';
-  if (cur !== text) { console.error('region_graph.json is out of date: run node Tools/atlas/build_region_graph.js'); process.exit(1); }
+  if (cur.split('\r\n').join('\n') !== text) { console.error('region_graph.json is out of date: run node Tools/atlas/build_region_graph.js'); process.exit(1); }
   console.log('region_graph.json is up to date');
 } else {
   fs.writeFileSync(OUT, text);

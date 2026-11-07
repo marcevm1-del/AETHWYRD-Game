@@ -20,7 +20,7 @@ Source: `upgrade v10` (repo root; image links ignored). Canon wins: §3/§4 worl
 | v10 says | The project has | Decision |
 |---|---|---|
 | "The 40 surface regions" | `regions.json` has **49 entries**. 40 are `layer: surface`, so v10 and Canon agree; the other 9 are 8 underworld rows and Vesper. Nothing is wrong, but any code that counts "regions" must filter by layer | Graph nodes are the 40 surface regions. Core exposes `SurfaceRegionCount`. A test pins 40 |
-| Map states Unknown / **Discovered / Surveyed** | Canon: **Unknown / Heard / Visited** | Not adopted. The Labyrinth record uses Heard / Visited. A fourth state is a Canon §6 proposal (W-F2), not built |
+| Map states Unknown / **Discovered / Surveyed** | Canon: **Unknown / Heard / Visited** | Not adopted. The Labyrinth record uses Heard / Visited. A fourth state is a Canon §6 proposal (WF1), not built |
 | A world size in metres | `physical_map.json` already says 1 map unit = 1 km (150 x 100 km) and Canon §6 "Map knowledge rules" says the same | Core reads that one value; the user's W3 decision can still change the data, not the code |
 | Tile size | Script default 10 km; 10.24 km recommended and pending | One data value flagged `placeholder`, not decided here |
 | "Do not create a second list of 120 floor definitions" | None existed as data | `labyrinth.json` is the first and only one; `dungeons.json` floors are cross-checked against it |

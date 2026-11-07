@@ -66,4 +66,16 @@ module.exports = function (SCHEMAS) {
           regionsJsonDepth: { type: 'integer', minimum: 1, maximum: 5 }, labyrinthBackDoor: { type: 'string', pattern: '^bd_\\d{3}$' }, weavePressure: { type: 'boolean' }
         } } }
     } };
+
+  SCHEMAS.world_scale = {
+    title: 'World scale (Wave F-lite)', type: 'object', additionalProperties: false,
+    required: ['version', 'unitKm', 'cellKm', 'mapUnits', 'builtTileKm', 'terrainTileKm', 'terrainTileKmStatus', 'origin'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, note: { type: 'string' },
+      unitKm: { type: 'number', exclusiveMinimum: 0 }, cellKm: { type: 'number', exclusiveMinimum: 0 },
+      mapUnits: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', exclusiveMinimum: 0 } },
+      builtTileKm: { type: 'number', exclusiveMinimum: 0 }, terrainTileKm: { type: 'number', exclusiveMinimum: 0 },
+      terrainTileKmStatus: { type: 'string', minLength: 1 },
+      origin: { type: 'object', additionalProperties: false, required: ['mapAt', 'status'], properties: { mapAt: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number' } }, status: { type: 'string', minLength: 1 } } }
+    } };
 };

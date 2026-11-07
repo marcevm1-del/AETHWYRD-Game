@@ -211,6 +211,26 @@ function run(ctx) {
     }
   }
 
+  // ---------- World scale ----------
+  const SF = 'World/world_scale.json';
+  if (!has(SF)) err(SF, 'file missing');
+  else {
+    const sc = load(SF);
+    check(sc, schema('world_scale'), SF);
+    if (pm) {
+      if (sc.unitKm !== pm.grid.unitKm || sc.cellKm !== pm.grid.cellKm) err(SF, 'unitKm / cellKm differ from physical_map.json grid');
+      if (sc.mapUnits.join() !== pm.grid.mapUnits.join()) err(SF, 'mapUnits differ from physical_map.json grid');
+    }
+    const sectors = path.join(ROOT, 'Tools', 'blender', 'build_world_sectors.py');
+    if (fs.existsSync(sectors)) {
+      const m = /--tile-km", type=float, default=([0-9.]+)/.exec(fs.readFileSync(sectors, 'utf8'));
+      if (!m) err(SF, 'cannot read the --tile-km default of build_world_sectors.py');
+      else if (+m[1] !== sc.builtTileKm) err(SF, `builtTileKm ${sc.builtTileKm} differs from build_world_sectors.py default ${m[1]}`);
+    }
+    if (!/^placeholder/.test(sc.terrainTileKmStatus) && !/^decided/.test(sc.terrainTileKmStatus)) err(SF, 'terrainTileKmStatus must start with "placeholder" or "decided"');
+    if (has('World/region_graph.json') && load('World/region_graph.json').scale.unitKm !== sc.unitKm) err(SF, 'unitKm differs from region_graph.json scale');
+  }
+
   const summary = `graph findings ${warnings.length} (unreachable regions ${counts.unreachable}, Labyrinth rank overlaps ${counts.bandRank}, Underworld depth mismatches ${counts.layerDepth}, other ${counts.other})`;
   return { warnings, counts, summary };
 }

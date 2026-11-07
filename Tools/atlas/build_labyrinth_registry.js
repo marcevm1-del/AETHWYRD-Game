@@ -8,7 +8,7 @@
 //   floors 120, 3 depth bands, regions        Canon section 2 table, regions.json (reg_labyrinth_upper / _deep / _abyss)
 //   12 biome decades with rank ranges         10_World/world.md, "THE GREAT LABYRINTH" table
 //   a guardian floor on every tenth floor     10_World/gazetteer.md (Floors 1-40), world.md
-//   safe towns on floors 30 and 40            gazetteer.md (Floors 1-40); world.md says "every 10 floors" (see world_graph.md, proposal W-F4)
+//   safe towns on floors 30 and 40            gazetteer.md (Floors 1-40); world.md says "every 10 floors" (see world_graph.md, proposal WF4)
 //   deep floors have camps, not towns         gazetteer.md (Floors 41-90); camp floors are inferred to be the guardian floors
 //   camps on the abyss guardian floors        gazetteer.md (Floors 91-120): "camps on the guardian floors", the Rememberer's Camp on floor 100
 //   B licence below floor 40, SS below 90     gazetteer.md ("only B-rank and above are licensed"), regions.json rankMin of the deep and abyss bands
@@ -105,7 +105,7 @@ const out = {
 const text = JSON.stringify(out, null, 1) + '\n';
 if (process.argv.includes('--check')) {
   const cur = fs.existsSync(OUT) ? fs.readFileSync(OUT, 'utf8') : '';
-  if (cur !== text) { console.error('labyrinth.json is out of date: run node Tools/atlas/build_labyrinth_registry.js'); process.exit(1); }
+  if (cur.split('\r\n').join('\n') !== text) { console.error('labyrinth.json is out of date: run node Tools/atlas/build_labyrinth_registry.js'); process.exit(1); }
   console.log('labyrinth.json is up to date');
 } else {
   fs.writeFileSync(OUT, text);

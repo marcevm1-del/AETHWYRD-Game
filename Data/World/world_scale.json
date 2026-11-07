@@ -1,0 +1,14 @@
+{
+ "version": 1,
+ "note": "The one data file Core reads for the world's scale (Code/Ascend.Core/WorldScale.cs). It restates figures that already exist and the validator keeps them equal: unitKm, cellKm and mapUnits mirror physical_map.json grid; builtTileKm is the --tile-km default of Tools/blender/build_world_sectors.py. NOTHING HERE IS A NEW SCALE DECISION. The values marked placeholder wait for the user (Canon section 6 W3 and 13_Production/world_upgrade_plan.md, 'Waiting on the user' item 3: rebuild tiles at 10.24 km, rebase to Brindlewick, out-of-map area). Docs: 12_Systems/world_graph.md.",
+ "unitKm": 1,
+ "cellKm": 0.5,
+ "mapUnits": [150, 100],
+ "builtTileKm": 10,
+ "terrainTileKm": 10.24,
+ "terrainTileKmStatus": "placeholder: 10.24 km makes 513-sample 20 m Unity tiles (terrain_unity_import.md); the tiles built today are builtTileKm. Awaiting the user's decision.",
+ "origin": {
+  "mapAt": [0, 0],
+  "status": "placeholder: the north-west corner of the map is metre (0, 0). Rebasing Unity's origin to Brindlewick is an open user decision; change this one value and every conversion follows."
+ }
+}
