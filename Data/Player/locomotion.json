@@ -1,0 +1,10 @@
+{
+ "version": 1,
+ "baseSpeed": 6.5,
+ "state": { "idle": 0.0, "walk": 0.3385, "run": 1.0, "sprint": 1.4615, "air": 1.0, "dodge": 1.0 },
+ "terrain": { "plains": 1.0, "forest": 0.95, "swamp": 0.7, "steppe": 1.0, "mountain": 0.85, "volcanic": 0.9, "tundra": 0.8, "desert": 0.85, "jungle": 0.85, "spirit": 1.0, "demon": 0.9 },
+ "condition": { "exhausted": 0.75, "attacking": 0.6, "charging": 0.5, "encumbered": 0.85, "wet": 0.95 },
+ "slope": { "limitDeg": 50, "uphillK": 0.8, "downhillK": 0.3, "minMult": 0.45, "maxMult": 1.25 },
+ "blend": { "idleMaxSpeed": 0.1, "walkEnter": 0.5, "runEnter": 4.0, "sprintEnter": 8.0, "hysteresis": 0.25 },
+ "damping": { "speedSec": 0.10, "groundedExitGraceSec": 0.08, "combatLayerBlendSec": 0.06, "pelvisSec": 0.12 }
+}

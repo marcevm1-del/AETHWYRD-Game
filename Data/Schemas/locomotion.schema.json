@@ -1,0 +1,284 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Player locomotion table",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "baseSpeed",
+  "state",
+  "terrain",
+  "condition",
+  "slope",
+  "blend",
+  "damping"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "baseSpeed": {
+   "type": "number",
+   "minimum": 0.1,
+   "maximum": 30
+  },
+  "state": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "idle",
+    "walk",
+    "run",
+    "sprint",
+    "air",
+    "dodge"
+   ],
+   "properties": {
+    "idle": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "walk": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "run": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "sprint": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "air": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "dodge": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    }
+   }
+  },
+  "terrain": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "plains",
+    "forest",
+    "swamp",
+    "steppe",
+    "mountain",
+    "volcanic",
+    "tundra",
+    "desert",
+    "jungle",
+    "spirit",
+    "demon"
+   ],
+   "properties": {
+    "plains": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "forest": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "swamp": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "steppe": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "mountain": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "volcanic": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "tundra": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "desert": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "jungle": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "spirit": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "demon": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    }
+   }
+  },
+  "condition": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "exhausted": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "attacking": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "charging": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "encumbered": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "wet": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    }
+   }
+  },
+  "slope": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "limitDeg",
+    "uphillK",
+    "downhillK",
+    "minMult",
+    "maxMult"
+   ],
+   "properties": {
+    "limitDeg": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 89
+    },
+    "uphillK": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "downhillK": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 3
+    },
+    "minMult": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "maxMult": {
+     "type": "number",
+     "minimum": 1,
+     "maximum": 3
+    }
+   }
+  },
+  "blend": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "idleMaxSpeed",
+    "walkEnter",
+    "runEnter",
+    "sprintEnter",
+    "hysteresis"
+   ],
+   "properties": {
+    "idleMaxSpeed": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 30
+    },
+    "walkEnter": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 30
+    },
+    "runEnter": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 30
+    },
+    "sprintEnter": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 30
+    },
+    "hysteresis": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 5
+    }
+   }
+  },
+  "damping": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "speedSec",
+    "groundedExitGraceSec",
+    "combatLayerBlendSec",
+    "pelvisSec"
+   ],
+   "properties": {
+    "speedSec": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 5
+    },
+    "groundedExitGraceSec": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 5
+    },
+    "combatLayerBlendSec": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 5
+    },
+    "pelvisSec": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 5
+    }
+   }
+  }
+ }
+}
