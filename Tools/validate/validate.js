@@ -527,6 +527,9 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
   }
 }
 
+// 4b) Wave E: dungeons and puzzles (Tools/validate/dungeon_checks.js)
+require('./dungeon_checks').run({ DATA, load, check, schema, err, items: new Set(rows.items.map(i => i.id)), species: new Map(rows.species.map(s => [s.id, s])), regions: rows.regions });
+
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
 if (errors.length) {

@@ -466,6 +466,67 @@ const SCHEMAS = {
           damageMult: { type: 'number', exclusiveMinimum: 0, maximum: 1.5 }, maxChainHits: { type: 'integer', minimum: 1 }, noMountInterior: { type: 'boolean', enum: [true] } } }
     } };
 }
+{
+  // Wave E: dungeons and puzzles (12_Systems/dungeons_and_puzzles.md). Canon: puzzles are never a mandatory gate (optional: true),
+  // dungeon cores are never allies (coreIsAlly: false), dungeons stay reusable (reusable: true).
+  const sid = prefix => ({ type: 'string', pattern: `^${prefix}[a-z0-9_]+$` });
+  const reward = { type: 'object', additionalProperties: false, required: ['itemId', 'count'],
+    properties: { itemId: sid('itm_'), count: { type: 'integer', minimum: 1, maximum: 9 } } };
+  const base = {
+    id: sid('pzl_'), name: { type: 'string', minLength: 1 }, optional: { type: 'boolean', enum: [true] },
+    hints: { type: 'array', minItems: 2, maxItems: 6, items: { type: 'string', minLength: 1 } }, reward
+  };
+  const wid = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
+  SCHEMAS.puzzles = {
+    title: 'Puzzle set (Wave E)', type: 'object', additionalProperties: false, required: ['version', 'tuning', 'puzzles'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      tuning: { type: 'object', additionalProperties: false, required: ['failsBeforeAssist'],
+        properties: { failsBeforeAssist: { type: 'integer', minimum: 1, maximum: 10 } } },
+      puzzles: { type: 'array', minItems: 1, items: {
+        type: 'object', additionalProperties: false, required: ['id', 'type', 'name', 'optional', 'hints'],
+        properties: {
+          ...base, type: { type: 'string', enum: ['lever_sequence', 'pressure_plate', 'rune_match'] },
+          levers: { type: 'array', minItems: 2, maxItems: 8, items: wid },
+          sequence: { type: 'array', minItems: 2, maxItems: 8, items: wid },
+          plates: { type: 'array', minItems: 1, maxItems: 6, items: { type: 'object', additionalProperties: false, required: ['id', 'weight'], properties: { id: wid, weight: { type: 'integer', minimum: 1, maximum: 99 } } } },
+          objects: { type: 'array', minItems: 1, maxItems: 10, items: { type: 'object', additionalProperties: false, required: ['id', 'weight'], properties: { id: wid, weight: { type: 'integer', minimum: 1, maximum: 99 } } } },
+          glyphs: { type: 'array', minItems: 2, maxItems: 8, items: wid },
+          sconces: { type: 'array', minItems: 2, maxItems: 8, items: { type: 'object', additionalProperties: false, required: ['id', 'start', 'target'],
+            properties: { id: wid, start: wid, target: wid, also: { type: 'array', items: wid } } } }
+        } } }
+    } };
+  const spawn = { type: 'object', additionalProperties: false, required: ['speciesId', 'min', 'max'],
+    properties: { speciesId: sid('mon_'), min: { type: 'integer', minimum: 0, maximum: 12 }, max: { type: 'integer', minimum: 1, maximum: 12 } } };
+  SCHEMAS.dungeon = {
+    title: 'Dungeon layout (Wave E)', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'regionId', 'floors', 'recommendedRank', 'reusable', 'coreIsAlly', 'entryRoom', 'rooms', 'connections'],
+    properties: {
+      id: sid('dng_'), name: { type: 'string', minLength: 1 }, theme: { type: 'string' }, summary: { type: 'string' },
+      regionId: sid('reg_'), floors: { type: 'array', minItems: 1, maxItems: 10, items: { type: 'integer', minimum: 1, maximum: 120 } },
+      recommendedRank: RL, reusable: { type: 'boolean', enum: [true] }, coreIsAlly: { type: 'boolean', enum: [false] },
+      entryRoom: sid('rm_'),
+      rooms: { type: 'array', minItems: 2, maxItems: 24, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'level', 'role', 'spawns'],
+        properties: {
+          id: sid('rm_'), name: { type: 'string', minLength: 1 }, level: { type: 'integer', minimum: 1, maximum: 6 },
+          role: { type: 'string', enum: ['entry', 'hub', 'key', 'checkpoint', 'boss', 'secret', 'combat', 'treasure'] },
+          checkpoint: { type: 'boolean' }, secret: { type: 'boolean' },
+          spawns: { type: 'array', items: spawn },
+          boss: { type: 'object', additionalProperties: false, required: ['speciesId'], properties: { speciesId: sid('mon_') } },
+          keys: { type: 'array', items: sid('key_') }, puzzles: { type: 'array', items: sid('pzl_') }
+        } } },
+      connections: { type: 'array', minItems: 1, maxItems: 60, items: { type: 'object', additionalProperties: false, required: ['id', 'from', 'to', 'kind'],
+        properties: {
+          id: sid('cn_'), from: sid('rm_'), to: sid('rm_'), kind: { type: 'string', enum: ['passage', 'stairs', 'door', 'secret', 'shortcut'] },
+          oneWay: { type: 'boolean' }, requiresKey: sid('key_'), requiresPuzzle: sid('pzl_'), revealedByClue: sid('clue_')
+        } } },
+      clues: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'roomId', 'kind', 'text'],
+        properties: {
+          id: sid('clue_'), roomId: sid('rm_'), kind: { type: 'string', enum: ['lever', 'secret', 'lore'] },
+          text: { type: 'string', minLength: 1 }, heard: { type: 'string' }, reveals: { type: 'string', minLength: 1 }
+        } } }
+    } };
+}
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

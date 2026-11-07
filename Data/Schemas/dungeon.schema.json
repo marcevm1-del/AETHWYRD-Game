@@ -1,0 +1,280 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Dungeon layout (Wave E)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "regionId",
+  "floors",
+  "recommendedRank",
+  "reusable",
+  "coreIsAlly",
+  "entryRoom",
+  "rooms",
+  "connections"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^dng_[a-z0-9_]+$"
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "theme": {
+   "type": "string"
+  },
+  "summary": {
+   "type": "string"
+  },
+  "regionId": {
+   "type": "string",
+   "pattern": "^reg_[a-z0-9_]+$"
+  },
+  "floors": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 10,
+   "items": {
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 120
+   }
+  },
+  "recommendedRank": {
+   "type": "string",
+   "enum": [
+    "F",
+    "E",
+    "D",
+    "C",
+    "B",
+    "A",
+    "S",
+    "SS",
+    "SSS",
+    "EX"
+   ]
+  },
+  "reusable": {
+   "type": "boolean",
+   "enum": [
+    true
+   ]
+  },
+  "coreIsAlly": {
+   "type": "boolean",
+   "enum": [
+    false
+   ]
+  },
+  "entryRoom": {
+   "type": "string",
+   "pattern": "^rm_[a-z0-9_]+$"
+  },
+  "rooms": {
+   "type": "array",
+   "minItems": 2,
+   "maxItems": 24,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "level",
+     "role",
+     "spawns"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^rm_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+     },
+     "role": {
+      "type": "string",
+      "enum": [
+       "entry",
+       "hub",
+       "key",
+       "checkpoint",
+       "boss",
+       "secret",
+       "combat",
+       "treasure"
+      ]
+     },
+     "checkpoint": {
+      "type": "boolean"
+     },
+     "secret": {
+      "type": "boolean"
+     },
+     "spawns": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "speciesId",
+        "min",
+        "max"
+       ],
+       "properties": {
+        "speciesId": {
+         "type": "string",
+         "pattern": "^mon_[a-z0-9_]+$"
+        },
+        "min": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 12
+        },
+        "max": {
+         "type": "integer",
+         "minimum": 1,
+         "maximum": 12
+        }
+       }
+      }
+     },
+     "boss": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "speciesId"
+      ],
+      "properties": {
+       "speciesId": {
+        "type": "string",
+        "pattern": "^mon_[a-z0-9_]+$"
+       }
+      }
+     },
+     "keys": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^key_[a-z0-9_]+$"
+      }
+     },
+     "puzzles": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^pzl_[a-z0-9_]+$"
+      }
+     }
+    }
+   }
+  },
+  "connections": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 60,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "from",
+     "to",
+     "kind"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^cn_[a-z0-9_]+$"
+     },
+     "from": {
+      "type": "string",
+      "pattern": "^rm_[a-z0-9_]+$"
+     },
+     "to": {
+      "type": "string",
+      "pattern": "^rm_[a-z0-9_]+$"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "passage",
+       "stairs",
+       "door",
+       "secret",
+       "shortcut"
+      ]
+     },
+     "oneWay": {
+      "type": "boolean"
+     },
+     "requiresKey": {
+      "type": "string",
+      "pattern": "^key_[a-z0-9_]+$"
+     },
+     "requiresPuzzle": {
+      "type": "string",
+      "pattern": "^pzl_[a-z0-9_]+$"
+     },
+     "revealedByClue": {
+      "type": "string",
+      "pattern": "^clue_[a-z0-9_]+$"
+     }
+    }
+   }
+  },
+  "clues": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "roomId",
+     "kind",
+     "text"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^clue_[a-z0-9_]+$"
+     },
+     "roomId": {
+      "type": "string",
+      "pattern": "^rm_[a-z0-9_]+$"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "lever",
+       "secret",
+       "lore"
+      ]
+     },
+     "text": {
+      "type": "string",
+      "minLength": 1
+     },
+     "heard": {
+      "type": "string"
+     },
+     "reveals": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  }
+ }
+}

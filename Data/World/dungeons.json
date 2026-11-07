@@ -1,0 +1,86 @@
+[
+ {
+  "id": "dng_salvage_warren",
+  "name": "The Salvage Warren",
+  "theme": "monster lair",
+  "regionId": "reg_labyrinth_upper",
+  "floors": [3, 4],
+  "recommendedRank": "E",
+  "reusable": true,
+  "coreIsAlly": false,
+  "summary": "A kobold salvage den under the third and fourth floors of the Great Labyrinth, where the dungeon-born kobolds stack the gear that adventurers lose. A rusted tally door guards the lower level. The old tally-keepers left a faster way for anyone who can read their chalk.",
+  "entryRoom": "rm_chalk_landing",
+  "rooms": [
+   {
+    "id": "rm_chalk_landing", "name": "Chalk Landing", "level": 1, "role": "entry", "checkpoint": true,
+    "spawns": [
+     { "speciesId": "mon_kobold_scavenger", "min": 1, "max": 2 },
+     { "speciesId": "mon_bone_crawler", "min": 1, "max": 1 }
+    ]
+   },
+   {
+    "id": "rm_scrap_hall", "name": "Scrap Hall", "level": 1, "role": "hub",
+    "spawns": [
+     { "speciesId": "mon_kobold_miner", "min": 1, "max": 2 },
+     { "speciesId": "mon_kobold_sneak", "min": 1, "max": 1 },
+     { "speciesId": "mon_red_slime", "min": 0, "max": 1 }
+    ],
+    "puzzles": ["pzl_warren_levers"]
+   },
+   {
+    "id": "rm_weighing_gallery", "name": "Weighing Gallery", "level": 1, "role": "key",
+    "spawns": [
+     { "speciesId": "mon_kobold_trapmaster", "min": 1, "max": 1 },
+     { "speciesId": "mon_bone_crawler", "min": 1, "max": 2 }
+    ],
+    "keys": ["key_rusted_tally"],
+    "puzzles": ["pzl_warren_plates"]
+   },
+   {
+    "id": "rm_lower_landing", "name": "Lower Landing", "level": 2, "role": "checkpoint", "checkpoint": true,
+    "spawns": [
+     { "speciesId": "mon_hollow_mourner", "min": 1, "max": 2 },
+     { "speciesId": "mon_red_slime", "min": 1, "max": 1 }
+    ]
+   },
+   {
+    "id": "rm_beetle_vault", "name": "Beetle Vault", "level": 2, "role": "boss",
+    "spawns": [],
+    "boss": { "speciesId": "mon_armor_beetle" }
+   },
+   {
+    "id": "rm_rune_cistern", "name": "Rune Cistern", "level": 2, "role": "secret", "secret": true,
+    "spawns": [],
+    "puzzles": ["pzl_warren_runes"]
+   }
+  ],
+  "connections": [
+   { "id": "cn_landing_hall", "from": "rm_chalk_landing", "to": "rm_scrap_hall", "kind": "passage" },
+   { "id": "cn_hall_gallery", "from": "rm_scrap_hall", "to": "rm_weighing_gallery", "kind": "passage" },
+   { "id": "cn_hall_lower_door", "from": "rm_scrap_hall", "to": "rm_lower_landing", "kind": "stairs", "requiresKey": "key_rusted_tally" },
+   { "id": "cn_hall_lower_lift", "from": "rm_scrap_hall", "to": "rm_lower_landing", "kind": "stairs", "requiresPuzzle": "pzl_warren_levers" },
+   { "id": "cn_lower_vault", "from": "rm_lower_landing", "to": "rm_beetle_vault", "kind": "passage" },
+   { "id": "cn_lower_cistern", "from": "rm_lower_landing", "to": "rm_rune_cistern", "kind": "secret", "revealedByClue": "clue_cistern_draught" },
+   { "id": "cn_vault_chute", "from": "rm_beetle_vault", "to": "rm_chalk_landing", "kind": "shortcut", "oneWay": true }
+  ],
+  "clues": [
+   {
+    "id": "clue_chalk_marks", "roomId": "rm_chalk_landing", "kind": "lever",
+    "text": "Four chalk marks on the wall, from the bottom up: a slate-grey scrape, an ash smudge, a white line, a tin-bright dot.",
+    "heard": "Porters say the kobolds chalk their own lift orders on the landing wall.",
+    "reveals": "pzl_warren_levers"
+   },
+   {
+    "id": "clue_cistern_draught", "roomId": "rm_lower_landing", "kind": "secret",
+    "text": "A cold draught leaks from a seam in the wall behind the broken lamp-post. The seam has a rune-lock on it.",
+    "heard": "The cook on floor three swears the tally-keepers hid their pay-chest somewhere under the lower stairs.",
+    "reveals": "cn_lower_cistern"
+   },
+   {
+    "id": "clue_runesmith_mural", "roomId": "rm_rune_cistern", "kind": "lore",
+    "text": "A faded mural: four runesmiths, each holding one glyph to the light. The oldest note says the lock was a children's game before it was a lock.",
+    "reveals": "pzl_warren_runes"
+   }
+  ]
+ }
+]

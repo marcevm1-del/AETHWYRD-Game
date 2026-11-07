@@ -1,0 +1,61 @@
+{
+ "version": 1,
+ "notes": "Wave E puzzle framework (12_Systems/dungeons_and_puzzles.md). Every puzzle is optional (Canon: puzzles are never a mandatory gate), can be skipped for free, has free hints and a free assist, and pays only an optional item reward. Numbers are placeholders until the user tunes them.",
+ "tuning": { "failsBeforeAssist": 3 },
+ "puzzles": [
+  {
+   "id": "pzl_warren_levers",
+   "type": "lever_sequence",
+   "name": "The Tally Levers",
+   "optional": true,
+   "hints": [
+    "The kobold tally-keepers chalked four marks on the landing wall, one for each lever.",
+    "Read the chalk marks from the bottom up: slate, ash, chalk, tin.",
+    "A wrong pull only resets the tally. Nothing is lost."
+   ],
+   "levers": ["lev_ash", "lev_tin", "lev_slate", "lev_chalk"],
+   "sequence": ["lev_slate", "lev_ash", "lev_chalk", "lev_tin"]
+  },
+  {
+   "id": "pzl_warren_plates",
+   "type": "pressure_plate",
+   "name": "The Weighing Floor",
+   "optional": true,
+   "hints": [
+    "Each plate wants an exact weight. Too much and the stone pops back up.",
+    "The east plate takes 3, the west plate takes 5.",
+    "Try the heaviest stone on the east plate, then fill the west plate with the rest."
+   ],
+   "plates": [
+    { "id": "plate_east", "weight": 3 },
+    { "id": "plate_west", "weight": 5 }
+   ],
+   "objects": [
+    { "id": "stone_pebble", "weight": 1 },
+    { "id": "stone_brick", "weight": 2 },
+    { "id": "stone_block", "weight": 2 },
+    { "id": "stone_slab", "weight": 3 }
+   ],
+   "reward": { "itemId": "itm_mat_rune_plate", "count": 2 }
+  },
+  {
+   "id": "pzl_warren_runes",
+   "type": "rune_match",
+   "name": "The Resonance Lock",
+   "optional": true,
+   "hints": [
+    "The old runesmiths set four sconces to match the mural above the cistern.",
+    "Turning a sconce also turns its neighbour. Start from the far left.",
+    "Each sconce cycles ember, tide, gale, stone and then back to ember."
+   ],
+   "glyphs": ["ember", "tide", "gale", "stone"],
+   "sconces": [
+    { "id": "sc_one", "start": "ember", "target": "gale", "also": ["sc_two"] },
+    { "id": "sc_two", "start": "ember", "target": "stone", "also": ["sc_three"] },
+    { "id": "sc_three", "start": "tide", "target": "ember", "also": [] },
+    { "id": "sc_four", "start": "stone", "target": "tide", "also": ["sc_one"] }
+   ],
+   "reward": { "itemId": "itm_core_e", "count": 1 }
+  }
+ ]
+}
