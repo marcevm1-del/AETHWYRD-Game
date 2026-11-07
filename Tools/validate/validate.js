@@ -416,7 +416,8 @@ const SINGLETONS = {
   locomotion: { file: 'Player/locomotion.json', schema: 'locomotion' },
   crafting_rules: { file: 'Items/crafting_rules.json', schema: 'crafting_rules' },
   life_skills: { file: 'Items/life_skills.json', schema: 'life_skills' },
-  companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' }
+  companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' },
+  mounts: { file: 'Companions/mounts.json', schema: 'mounts' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -485,6 +486,30 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       for (const [t, v] of Object.entries(e.deltas)) if (Math.abs(v) > R.maxDeltaPerEvent) err(c.file, `event ${k}: ${t} delta ${v} exceeds maxDeltaPerEvent ${R.maxDeltaPerEvent}`);
       if (!e.once && !e.cooldownDays) err(c.file, `event ${k}: needs once or cooldownDays so it cannot be farmed`);
     }
+  }
+  if (name === 'mounts' && obj.families) {
+    const BAD = /flying|aerial|celestial|dragon|griffin|griffon|aquatic|wyvern|pegasus|hippogriff|drake/i;
+    const FLY_RIG = /flyer|wyvern|dragon|avian|fish|floating|cephalopod|serpent|naga/i;
+    const FLY_TYPE = /^(Dragon|Avian|Aquatic|Spirit|Mythic Beast)$/;
+    const loco = load('Player/locomotion.json');
+    const species = Object.fromEntries(load('Monsters/species.json').map(s => [s.id, s]));
+    for (const [fk, f] of Object.entries(obj.families)) {
+      if (BAD.test(fk)) err(c.file, `family "${fk}" is a flying/celestial/dragon/aquatic mount (Canon: no flying mounts; aquatic is an open question)`);
+      for (const t of Object.keys(f.terrain)) if (!(t in loco.terrain)) err(c.file, `${fk}: terrain "${t}" is not a locomotion terrain`);
+      const st = f.stamina;
+      if (!(st.exhaustedBelow < st.recoverTo)) err(c.file, `${fk}: stamina.exhaustedBelow must be below recoverTo (hysteresis)`);
+      if (!(st.recoverTo <= st.max)) err(c.file, `${fk}: stamina.recoverTo must not exceed max`);
+      if (new Set(f.species).size !== f.species.length) err(c.file, `${fk}: duplicate species`);
+      for (const id of f.species) {
+        const sp = species[id];
+        if (BAD.test(id)) err(c.file, `${fk}: species id ${id} names a flying/celestial/dragon/aquatic creature`);
+        if (!sp) { err(c.file, `${fk}: species ${id} does not exist in species.json`); continue; }
+        if (FLY_RIG.test(sp.rigId) || FLY_TYPE.test(sp.type)) err(c.file, `${fk}: species ${id} (${sp.type}, ${sp.rigId}) flies, is a dragon/celestial/aquatic or not a ground beast`);
+        if (sp.isUnique || sp.isTyrant) err(c.file, `${fk}: species ${id} is a unique/tyrant`);
+        if (sp.sizeMeters < 1.2) err(c.file, `${fk}: species ${id} is too small to ride`);
+      }
+    }
+    if (obj.speedMps.value !== 10 || obj.speedMps.placeholder !== true) err(c.file, 'speedMps must stay the 10 m/s placeholder (placeholder true) until the user decides');
   }
   if (name === 'locomotion' && obj.state && obj.baseSpeed) {
     // blend thresholds {0, walk, run, sprint} must strictly ascend

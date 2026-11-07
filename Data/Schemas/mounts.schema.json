@@ -1,0 +1,275 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Ground mounts (Wave C; speed is a placeholder pending user decision)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "speedMps",
+  "exhaustedWalkFraction",
+  "condition",
+  "families",
+  "mountedCombat",
+  "knockedOutNotKilled"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "speedMps": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "value",
+    "placeholder",
+    "note"
+   ],
+   "properties": {
+    "value": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "placeholder": {
+     "type": "boolean"
+    },
+    "note": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "exhaustedWalkFraction": {
+   "type": "number",
+   "exclusiveMinimum": 0,
+   "maximum": 1
+  },
+  "condition": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "number",
+    "exclusiveMinimum": 0,
+    "maximum": 3
+   }
+  },
+  "knockedOutNotKilled": {
+   "type": "boolean",
+   "enum": [
+    true
+   ]
+  },
+  "families": {
+   "type": "object",
+   "minProperties": 1,
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "label",
+     "speedMult",
+     "terrain",
+     "stamina",
+     "carryBonus",
+     "unlockRank",
+     "knockoutOnly",
+     "species"
+    ],
+    "properties": {
+     "label": {
+      "type": "string"
+     },
+     "speedMult": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 3
+     },
+     "carryBonus": {
+      "type": "number",
+      "minimum": 0
+     },
+     "unlockRank": {
+      "type": "string",
+      "enum": [
+       "F",
+       "E",
+       "D",
+       "C",
+       "B",
+       "A",
+       "S"
+      ]
+     },
+     "knockoutOnly": {
+      "type": "boolean",
+      "enum": [
+       true
+      ]
+     },
+     "terrain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "plains",
+       "forest",
+       "swamp",
+       "steppe",
+       "mountain",
+       "volcanic",
+       "tundra",
+       "desert",
+       "jungle",
+       "spirit",
+       "demon"
+      ],
+      "properties": {
+       "plains": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "forest": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "swamp": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "steppe": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "mountain": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "volcanic": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "tundra": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "desert": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "jungle": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "spirit": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       },
+       "demon": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 3
+       }
+      }
+     },
+     "stamina": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "max",
+       "sprintDrainPerSec",
+       "regenPerSec",
+       "exhaustedBelow",
+       "recoverTo"
+      ],
+      "properties": {
+       "max": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "sprintDrainPerSec": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "regenPerSec": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "exhaustedBelow": {
+        "type": "number",
+        "minimum": 0
+       },
+       "recoverTo": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       }
+      }
+     },
+     "species": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^mon_"
+      }
+     }
+    }
+   }
+  },
+  "mountedCombat": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "bannedSkillTags",
+    "meleeReachCapM",
+    "dismountOnStagger",
+    "damageMult",
+    "maxChainHits",
+    "noMountInterior"
+   ],
+   "properties": {
+    "bannedSkillTags": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "meleeReachCapM": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "dismountOnStagger": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    },
+    "damageMult": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 1.5
+    },
+    "maxChainHits": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "noMountInterior": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    }
+   }
+  }
+ }
+}

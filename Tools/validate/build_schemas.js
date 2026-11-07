@@ -439,6 +439,33 @@ const SCHEMAS = {
     }
   };
 }
+{
+  const mult = { type: 'number', exclusiveMinimum: 0, maximum: 3 };
+  const TERR = ['plains', 'forest', 'swamp', 'steppe', 'mountain', 'volcanic', 'tundra', 'desert', 'jungle', 'spirit', 'demon'];
+  const num = { type: 'number', exclusiveMinimum: 0 };
+  SCHEMAS.mounts = {
+    title: 'Ground mounts (Wave C; speed is a placeholder pending user decision)', type: 'object', additionalProperties: false,
+    required: ['version', 'speedMps', 'exhaustedWalkFraction', 'condition', 'families', 'mountedCombat', 'knockedOutNotKilled'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      speedMps: { type: 'object', additionalProperties: false, required: ['value', 'placeholder', 'note'],
+        properties: { value: num, placeholder: { type: 'boolean' }, note: { type: 'string', minLength: 1 } } },
+      exhaustedWalkFraction: { type: 'number', exclusiveMinimum: 0, maximum: 1 },
+      condition: { type: 'object', additionalProperties: mult },
+      knockedOutNotKilled: { type: 'boolean', enum: [true] },
+      families: { type: 'object', minProperties: 1, additionalProperties: { type: 'object', additionalProperties: false,
+        required: ['label', 'speedMult', 'terrain', 'stamina', 'carryBonus', 'unlockRank', 'knockoutOnly', 'species'],
+        properties: { label: { type: 'string' }, speedMult: mult, carryBonus: { type: 'number', minimum: 0 },
+          unlockRank: { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S'] }, knockoutOnly: { type: 'boolean', enum: [true] },
+          terrain: { type: 'object', additionalProperties: false, required: TERR, properties: Object.fromEntries(TERR.map(t => [t, mult])) },
+          stamina: { type: 'object', additionalProperties: false, required: ['max', 'sprintDrainPerSec', 'regenPerSec', 'exhaustedBelow', 'recoverTo'],
+            properties: { max: num, sprintDrainPerSec: num, regenPerSec: num, exhaustedBelow: { type: 'number', minimum: 0 }, recoverTo: num } },
+          species: { type: 'array', minItems: 1, items: { type: 'string', pattern: '^mon_' } } } } },
+      mountedCombat: { type: 'object', additionalProperties: false, required: ['bannedSkillTags', 'meleeReachCapM', 'dismountOnStagger', 'damageMult', 'maxChainHits', 'noMountInterior'],
+        properties: { bannedSkillTags: { type: 'array', items: { type: 'string' } }, meleeReachCapM: num, dismountOnStagger: { type: 'boolean', enum: [true] },
+          damageMult: { type: 'number', exclusiveMinimum: 0, maximum: 1.5 }, maxChainHits: { type: 'integer', minimum: 1 }, noMountInterior: { type: 'boolean', enum: [true] } } }
+    } };
+}
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

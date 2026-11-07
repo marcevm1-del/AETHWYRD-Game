@@ -1,0 +1,186 @@
+{
+ "version": 1,
+ "notes": "Wave C ground mounts. All numbers are proposals (Canon section 6 rows 149-151). Ground families only: no flying, celestial, dragon or aquatic mounts.",
+ "speedMps": {
+  "value": 10,
+  "placeholder": true,
+  "note": "proposed in 13_Production/world_upgrade_plan.md, NOT approved (pending user decision)"
+ },
+ "exhaustedWalkFraction": 0.3385,
+ "condition": {
+  "encumbered": 0.85,
+  "wet": 0.95
+ },
+ "families": {
+  "horse": {
+   "label": "Horse",
+   "speedMult": 1.1,
+   "terrain": {
+    "plains": 1.15,
+    "forest": 0.95,
+    "swamp": 0.7,
+    "steppe": 1.2,
+    "mountain": 0.8,
+    "volcanic": 0.9,
+    "tundra": 0.8,
+    "desert": 0.85,
+    "jungle": 0.85,
+    "spirit": 1,
+    "demon": 0.9
+   },
+   "stamina": {
+    "max": 100,
+    "sprintDrainPerSec": 12,
+    "regenPerSec": 8,
+    "exhaustedBelow": 5,
+    "recoverTo": 35
+   },
+   "carryBonus": 10,
+   "unlockRank": "F",
+   "knockoutOnly": true,
+   "species": [
+    "mon_thunderhorn_elk"
+   ]
+  },
+  "wolf": {
+   "label": "Wolf",
+   "speedMult": 1.05,
+   "terrain": {
+    "plains": 1,
+    "forest": 1.2,
+    "swamp": 0.7,
+    "steppe": 1,
+    "mountain": 0.85,
+    "volcanic": 0.9,
+    "tundra": 0.95,
+    "desert": 0.85,
+    "jungle": 0.95,
+    "spirit": 1,
+    "demon": 0.9
+   },
+   "stamina": {
+    "max": 90,
+    "sprintDrainPerSec": 10,
+    "regenPerSec": 9,
+    "exhaustedBelow": 5,
+    "recoverTo": 35
+   },
+   "carryBonus": 5,
+   "unlockRank": "E",
+   "knockoutOnly": true,
+   "species": [
+    "mon_forest_wolf",
+    "mon_dire_wolf",
+    "mon_frost_fenrir_pup"
+   ]
+  },
+  "bear": {
+   "label": "Bear",
+   "speedMult": 0.9,
+   "terrain": {
+    "plains": 1,
+    "forest": 1,
+    "swamp": 0.95,
+    "steppe": 1,
+    "mountain": 1.1,
+    "volcanic": 0.9,
+    "tundra": 0.95,
+    "desert": 0.85,
+    "jungle": 0.85,
+    "spirit": 1,
+    "demon": 0.9
+   },
+   "stamina": {
+    "max": 140,
+    "sprintDrainPerSec": 14,
+    "regenPerSec": 7,
+    "exhaustedBelow": 8,
+    "recoverTo": 40
+   },
+   "carryBonus": 30,
+   "unlockRank": "D",
+   "knockoutOnly": true,
+   "species": [
+    "mon_bandit_bear",
+    "mon_elder_bandit_bear"
+   ]
+  },
+  "desert_beast": {
+   "label": "Desert beast",
+   "speedMult": 0.95,
+   "terrain": {
+    "plains": 1,
+    "forest": 0.95,
+    "swamp": 0.7,
+    "steppe": 1.05,
+    "mountain": 0.85,
+    "volcanic": 1,
+    "tundra": 0.8,
+    "desert": 1.2,
+    "jungle": 0.85,
+    "spirit": 1,
+    "demon": 0.9
+   },
+   "stamina": {
+    "max": 110,
+    "sprintDrainPerSec": 9,
+    "regenPerSec": 8,
+    "exhaustedBelow": 5,
+    "recoverTo": 35
+   },
+   "carryBonus": 20,
+   "unlockRank": "D",
+   "knockoutOnly": true,
+   "species": [
+    "mon_giant_lizard",
+    "mon_dune_scorpion",
+    "mon_elder_dune_scorpion"
+   ]
+  },
+  "large_ground_monster": {
+   "label": "Large ground monster",
+   "speedMult": 0.85,
+   "terrain": {
+    "plains": 1,
+    "forest": 0.95,
+    "swamp": 0.85,
+    "steppe": 1,
+    "mountain": 0.95,
+    "volcanic": 0.9,
+    "tundra": 0.8,
+    "desert": 0.85,
+    "jungle": 0.85,
+    "spirit": 1,
+    "demon": 0.9
+   },
+   "stamina": {
+    "max": 160,
+    "sprintDrainPerSec": 16,
+    "regenPerSec": 6,
+    "exhaustedBelow": 8,
+    "recoverTo": 45
+   },
+   "carryBonus": 40,
+   "unlockRank": "B",
+   "knockoutOnly": true,
+   "species": [
+    "mon_wild_boar",
+    "mon_behemoth_calf",
+    "mon_sabretooth_king"
+   ]
+  }
+ },
+ "mountedCombat": {
+  "bannedSkillTags": [
+   "big",
+   "aerial",
+   "channelled"
+  ],
+  "meleeReachCapM": 2.5,
+  "dismountOnStagger": true,
+  "damageMult": 0.85,
+  "maxChainHits": 3,
+  "noMountInterior": true
+ },
+ "knockedOutNotKilled": true
+}
