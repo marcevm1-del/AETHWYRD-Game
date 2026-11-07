@@ -1,0 +1,103 @@
+{
+ "version": 1,
+ "note": "Upgrade v4, Canon-safe subset (12_Systems/living_world.md). In-game days only: no real-time deadlines, no settlement changes, no ownership changes, no faction wars. Events may only do the four things in the effect kinds: stock a shop for a few days, spread a rumour, place a small encounter, pin a board note. Tuning decided 2026-11-07 by Claude under delegated creative control; the user may overrule.",
+ "schedules": {
+  "defaultEnabled": true,
+  "essentialTiers": ["core", "major"]
+ },
+ "events": {
+  "maxActive": 2,
+  "maxActivePerRegion": 1,
+  "catchUpDays": 7,
+  "pool": [
+   {
+    "id": "evt_grain_caravan",
+    "kind": "caravan",
+    "name": "Grain caravan",
+    "text": "A grain caravan rolls between Brindlewick and Aldmere. The drivers sell what they cannot fit in town.",
+    "regions": ["reg_whisperwood", "reg_aldmere"],
+    "weekdays": ["Solenday", "Thorsday", "Kaelsday"],
+    "chancePerDay": 0.4,
+    "cooldownDays": 7,
+    "durationDays": 2,
+    "effects": [
+     { "kind": "shop_stock", "text": "The drivers add spare seeds and herbs to the shelves at Reed's Remedies for a few days.", "shopId": "shop_reed_remedies", "itemIds": ["itm_healing_herb", "itm_mat_seed"] },
+     { "kind": "rumour", "text": "Word on the road: the grain wagons are running early this week." }
+    ]
+   },
+   {
+    "id": "evt_herb_peddlers",
+    "kind": "caravan",
+    "name": "Herb peddlers",
+    "text": "A small cart of herb peddlers stops for a day or two and shares news from the Greymoor road.",
+    "regions": ["reg_greymoor", "reg_aldmere"],
+    "chancePerDay": 0.3,
+    "cooldownDays": 6,
+    "durationDays": 2,
+    "effects": [
+     { "kind": "rumour", "text": "The peddlers say the Greymoor road is quiet and the reeds are thick." },
+     { "kind": "board_note", "text": "A peddler asks the board for a small errand: a bundle of Healing Herb for the cart." }
+    ]
+   },
+   {
+    "id": "evt_ore_wagons",
+    "kind": "caravan",
+    "name": "Ore wagons",
+    "text": "Iron Hold ore wagons pass through under guard and trade a little.",
+    "regions": ["reg_iron_hold"],
+    "weekdays": ["Maelsday", "Sylvasday", "Vexday"],
+    "chancePerDay": 0.3,
+    "cooldownDays": 8,
+    "durationDays": 2,
+    "effects": [
+     { "kind": "rumour", "text": "The wagon masters boast about a new seam under the Oath-Anvil." }
+    ]
+   },
+   {
+    "id": "evt_lost_peddler",
+    "kind": "wanderer",
+    "name": "Lost peddler",
+    "text": "A peddler has lost the road and a few kobolds are poking at the cart. Nobody is hurt.",
+    "regions": ["reg_whisperwood"],
+    "chancePerDay": 0.25,
+    "cooldownDays": 5,
+    "durationDays": 1,
+    "effects": [
+     { "kind": "small_encounter", "text": "A few kobolds pick through a spilled cart.", "speciesIds": ["mon_kobold_scavenger"] }
+    ]
+   },
+   {
+    "id": "evt_boar_crossing",
+    "kind": "wanderer",
+    "name": "Boar crossing",
+    "text": "A wild boar wanders across the fields near the road.",
+    "regions": ["reg_aldmere", "reg_whisperwood"],
+    "chancePerDay": 0.3,
+    "cooldownDays": 4,
+    "durationDays": 1,
+    "effects": [
+     { "kind": "small_encounter", "text": "A wild boar in the barley.", "speciesIds": ["mon_wild_boar"] }
+    ]
+   },
+   {
+    "id": "evt_jackalope_pack",
+    "kind": "wanderer",
+    "name": "Jackalope pack",
+    "text": "A pack of jackalopes bounds through the glades.",
+    "regions": ["reg_mossdeep", "reg_sylvaran"],
+    "chancePerDay": 0.25,
+    "cooldownDays": 5,
+    "durationDays": 1,
+    "effects": [
+     { "kind": "small_encounter", "text": "Jackalopes in the glade.", "speciesIds": ["mon_jackalope"] }
+    ]
+   }
+  ]
+ },
+ "journalCategories": [
+  { "id": "region", "name": "Regions" },
+  { "id": "landmark", "name": "Landmarks" },
+  { "id": "creature", "name": "Creatures" },
+  { "id": "secret", "name": "Secrets" }
+ ]
+}

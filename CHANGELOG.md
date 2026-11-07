@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-07 — Living world, Canon-safe subset of upgrade v4
+- Optional NPC schedule resolver (never gates access; essential tiers always available), a calendar-driven event director for caravans and small wandering encounters (in-game days, cooldowns, caps, four safe effect kinds), and a discovery journal in the Unknown / Heard / Visited style. New save field `LivingWorld` defaults safely for older saves.
+- Data `Data/World/living_world.json` with schema and validator checks; docs `12_Systems/living_world.md`; audit `13_Production/living_world_v4_audit.md`. 21 new Core tests (682 total). Not built: faction war or politics, dynamic economy, world simulation, procedural quests, settlement change, anything in `Game/`.
+
 ## 2026-11-07 — Canon section 6 proposals decided (delegated creative control)
 - Decided by Claude under the user's "do it all, stop asking me"; each decision is written in its proposal row and the user may overrule any of them. Rows decided: ground mounts, mount speed (10 m/s settled), aquatic mounts (left out), companion relationships, presets and questions (defaults), single rock stem, music options, photo mode, accessibility floor, audio buses, the four dungeon rows, W1a to W7e, WF1 to WF11, and the superseded "Physical feature names", "Region data vs the relief" and "Brindlewick's region" rows.
 - Locked row edit, Section 1 Voice. Old: `English first; amount of voice acting TBD by the user`. New: `English first. The System has a voice, plus a few short voiced key moments; no full voice acting and no lip-sync pipeline (decided 2026-11-07 ...)`.
