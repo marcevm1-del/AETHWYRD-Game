@@ -1,0 +1,72 @@
+{
+ "version": 1,
+ "notes": "Adaptive music state table (Wave D). Event names only: no audio files exist. Read by Code/Ascend.Core/AdaptiveMusic.cs. Docs: 12_Systems/audio_and_immersion.md. Canon: music is mostly instrumental; the single rock stem lives only in the boss state; one state owns the score at a time.",
+ "tuning": {
+  "defaultCrossfadeSeconds": 2.5,
+  "reducedIntensityScale": 0.6,
+  "regionArrivalStinger": "mus_stinger_region_arrival",
+  "bossPhaseStinger": "mus_stinger_boss_phase"
+ },
+ "layers": [
+  { "id": "bed", "essential": true },
+  { "id": "motif" },
+  { "id": "town_folk" },
+  { "id": "hearth", "essential": true },
+  { "id": "dungeon_drone" },
+  { "id": "pulse" },
+  { "id": "percussion", "intense": true },
+  { "id": "bass_weight", "intense": true },
+  { "id": "advantage_perc", "intense": true },
+  { "id": "strings_drive", "intense": true },
+  { "id": "rock_lead", "intense": true },
+  { "id": "resolve" },
+  { "id": "companion_theme" }
+ ],
+ "states": [
+  { "id": "explore", "priority": 10, "minHoldSeconds": 4, "enterDelaySeconds": 1.5, "exitDelaySeconds": 1.5, "daySplit": true, "allowCompanionTheme": true,
+    "layers": { "bed": 1.0, "motif": 0.8 } },
+  { "id": "dungeon", "priority": 10, "minHoldSeconds": 4, "enterDelaySeconds": 1.5, "exitDelaySeconds": 1.5,
+    "layers": { "bed": 0.9, "dungeon_drone": 0.9 } },
+  { "id": "town", "priority": 12, "minHoldSeconds": 6, "enterDelaySeconds": 2.0, "exitDelaySeconds": 3.0, "daySplit": true, "allowCompanionTheme": true,
+    "layers": { "bed": 0.9, "town_folk": 1.0, "motif": 0.6 } },
+  { "id": "rest", "priority": 15, "minHoldSeconds": 8, "enterDelaySeconds": 1.0, "exitDelaySeconds": 3.0, "allowCompanionTheme": true,
+    "layers": { "bed": 0.6, "hearth": 1.0 } },
+  { "id": "uncertainty", "priority": 20, "minHoldSeconds": 5, "enterDelaySeconds": 2.0, "exitDelaySeconds": 5.0,
+    "layers": { "bed": 1.0, "pulse": 0.8 } },
+  { "id": "aftermath", "priority": 25, "minHoldSeconds": 6, "enterDelaySeconds": 0, "exitDelaySeconds": 0, "stingerOnEnter": "mus_stinger_victory",
+    "layers": { "bed": 1.0, "resolve": 1.0, "motif": 0.5 } },
+  { "id": "combat", "priority": 40, "combatClass": true, "minHoldSeconds": 8, "enterDelaySeconds": 0, "exitDelaySeconds": 6, "retreatExitDelaySeconds": 12,
+    "layers": { "bed": 0.7, "pulse": 1.0, "percussion": 0.9 } },
+  { "id": "elite", "priority": 50, "combatClass": true, "minHoldSeconds": 8, "enterDelaySeconds": 0, "exitDelaySeconds": 6, "retreatExitDelaySeconds": 12, "stingerOnEnter": "mus_stinger_elite_pickup",
+    "layers": { "bed": 0.7, "pulse": 1.0, "percussion": 1.0, "strings_drive": 0.9 } },
+  { "id": "boss", "priority": 60, "combatClass": true, "minHoldSeconds": 15, "enterDelaySeconds": 0, "exitDelaySeconds": 8, "retreatExitDelaySeconds": 14, "stingerOnEnter": "mus_stinger_boss_intro",
+    "layers": { "bed": 0.6, "pulse": 1.0, "percussion": 1.0, "strings_drive": 1.0 },
+    "phaseLayers": [
+     { "motif": 0.8 },
+     { "bass_weight": 0.8, "rock_lead": 0.9 },
+     { "rock_lead": 1.0, "bass_weight": 1.0 }
+    ] },
+  { "id": "cutscene", "priority": 70, "minHoldSeconds": 3, "enterDelaySeconds": 0, "exitDelaySeconds": 0,
+    "layers": { "bed": 1.0, "motif": 1.0 } }
+ ],
+ "crossfades": {
+  "explore>combat": 0.6,
+  "uncertainty>combat": 0.4,
+  "town>combat": 0.6,
+  "dungeon>combat": 0.6,
+  "combat>aftermath": 1.2,
+  "elite>aftermath": 1.2,
+  "boss>aftermath": 2.0,
+  "aftermath>explore": 4.0,
+  "combat>uncertainty": 5.0,
+  "combat>explore": 5.0
+ },
+ "overlays": {
+  "advantage": { "offDelaySeconds": 3, "layers": { "advantage_perc": 1.0 } },
+  "danger": { "enterBelowHp": 0.3, "exitAboveHp": 0.45, "layers": { "bass_weight": 1.0 } }
+ },
+ "companionThemes": [
+  "cmp_lyra", "cmp_seraphine", "cmp_kiri", "cmp_aldric", "cmp_nyx", "cmp_bram", "cmp_kaito",
+  "cmp_mochi", "cmp_elira", "cmp_vexmor", "cmp_torvald", "cmp_suzune", "cmp_tobin", "cmp_elsie"
+ ]
+}

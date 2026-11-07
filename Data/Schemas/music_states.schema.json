@@ -1,0 +1,233 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Adaptive music states (Wave D)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "tuning",
+  "layers",
+  "states",
+  "crossfades",
+  "overlays",
+  "companionThemes"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "tuning": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "defaultCrossfadeSeconds",
+    "reducedIntensityScale",
+    "regionArrivalStinger",
+    "bossPhaseStinger"
+   ],
+   "properties": {
+    "defaultCrossfadeSeconds": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 60
+    },
+    "reducedIntensityScale": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "regionArrivalStinger": {
+     "type": "string",
+     "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "bossPhaseStinger": {
+     "type": "string",
+     "pattern": "^[a-z][a-z0-9_]*$"
+    }
+   }
+  },
+  "layers": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "intense": {
+      "type": "boolean"
+     },
+     "essential": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "states": {
+   "type": "array",
+   "minItems": 9,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "priority",
+     "minHoldSeconds",
+     "enterDelaySeconds",
+     "exitDelaySeconds",
+     "layers"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "priority": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+     },
+     "combatClass": {
+      "type": "boolean"
+     },
+     "minHoldSeconds": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 60
+     },
+     "enterDelaySeconds": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 60
+     },
+     "exitDelaySeconds": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 60
+     },
+     "retreatExitDelaySeconds": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 60
+     },
+     "daySplit": {
+      "type": "boolean"
+     },
+     "allowCompanionTheme": {
+      "type": "boolean"
+     },
+     "stingerOnEnter": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "layers": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      }
+     },
+     "phaseLayers": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "crossfades": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "number",
+    "minimum": 0,
+    "maximum": 60
+   }
+  },
+  "overlays": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "advantage",
+    "danger"
+   ],
+   "properties": {
+    "advantage": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "offDelaySeconds",
+      "layers"
+     ],
+     "properties": {
+      "offDelaySeconds": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 60
+      },
+      "layers": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    },
+    "danger": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "enterBelowHp",
+      "exitAboveHp",
+      "layers"
+     ],
+     "properties": {
+      "enterBelowHp": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "exitAboveHp": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "layers": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "companionThemes": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "pattern": "^cmp_[a-z0-9_]+$"
+   }
+  }
+ }
+}

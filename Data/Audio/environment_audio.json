@@ -1,0 +1,47 @@
+{
+ "version": 1,
+ "notes": "Environmental audio (Wave D). Event names only; no audio files exist. Terrain kinds are the map terrain vocabulary (MAP_TERRAIN in Tools/validate/build_schemas.js, Data/World/regions.json map.terrain). Read by Code/Ascend.Core/EnvironmentAudio.cs.",
+ "fallbackSurface": "grass",
+ "gaits": ["walk", "run", "sprint"],
+ "surfaces": [
+  { "id": "grass", "wettable": true }, { "id": "leaf_litter", "wettable": true }, { "id": "mud", "wettable": false },
+  { "id": "dry_grass", "wettable": true }, { "id": "rock", "wettable": true }, { "id": "ash", "wettable": false },
+  { "id": "snow", "wettable": false }, { "id": "sand", "wettable": true }, { "id": "jungle_foliage", "wettable": true },
+  { "id": "spirit_glow", "wettable": false }, { "id": "cinder", "wettable": false },
+  { "id": "cobble", "wettable": true }, { "id": "wood", "wettable": false }, { "id": "stone_floor", "wettable": false },
+  { "id": "shallow_water", "wettable": false }
+ ],
+ "terrainSurface": {
+  "plains": "grass", "forest": "leaf_litter", "swamp": "mud", "steppe": "dry_grass", "mountain": "rock",
+  "volcanic": "ash", "tundra": "snow", "desert": "sand", "jungle": "jungle_foliage", "spirit": "spirit_glow", "demon": "cinder"
+ },
+ "wetOverlayEvent": "sfx_step_wet_overlay",
+ "weather": [
+  { "id": "clear", "layers": { } },
+  { "id": "overcast", "layers": { "amb_wind_low": 0.6 } },
+  { "id": "rain", "layers": { "amb_rain_light": 1.0, "amb_wind_low": 0.4 }, "wetsSurfaces": true },
+  { "id": "storm", "layers": { "amb_rain_heavy": 1.0, "amb_wind_high": 0.9, "amb_thunder_distant": 0.8 }, "wetsSurfaces": true },
+  { "id": "snow", "layers": { "amb_wind_low": 0.7, "amb_snow_hush": 1.0 } },
+  { "id": "fog", "layers": { "amb_fog_hush": 1.0 } }
+ ],
+ "timeOfDay": {
+  "morning": { "amb_birds_dawn": 1.0, "amb_wind_soft": 0.4 },
+  "day": { "amb_insects_day": 0.7, "amb_wind_soft": 0.5 },
+  "dusk": { "amb_crickets_early": 0.8, "amb_birds_dusk": 0.6 },
+  "night": { "amb_crickets_night": 1.0, "amb_owl_distant": 0.4 }
+ },
+ "biomeBeds": {
+  "plains": "amb_bed_plains", "forest": "amb_bed_forest", "swamp": "amb_bed_swamp", "steppe": "amb_bed_steppe",
+  "mountain": "amb_bed_mountain", "volcanic": "amb_bed_volcanic", "tundra": "amb_bed_tundra", "desert": "amb_bed_desert",
+  "jungle": "amb_bed_jungle", "spirit": "amb_bed_spirit", "demon": "amb_bed_demon"
+ },
+ "reverbZones": [
+  { "id": "open_air", "reverbPreset": "rev_open_air", "indoor": false, "priority": 0, "weatherGain": 1.0, "timeOfDayGain": 1.0, "biomeBedGain": 1.0, "blendSeconds": 1.5, "layers": { } },
+  { "id": "forest_canopy", "reverbPreset": "rev_forest", "indoor": false, "priority": 10, "weatherGain": 0.8, "timeOfDayGain": 1.0, "biomeBedGain": 1.0, "blendSeconds": 1.5, "layers": { } },
+  { "id": "town_street", "reverbPreset": "rev_street", "indoor": false, "priority": 10, "weatherGain": 1.0, "timeOfDayGain": 0.6, "biomeBedGain": 0.4, "blendSeconds": 1.0, "layers": { "amb_town_murmur": 0.8 } },
+  { "id": "wood_room", "reverbPreset": "rev_wood_room", "indoor": true, "priority": 20, "weatherGain": 0.3, "timeOfDayGain": 0.2, "biomeBedGain": 0.0, "blendSeconds": 0.6, "layers": { "amb_room_tone": 0.5 } },
+  { "id": "stone_hall", "reverbPreset": "rev_stone_hall", "indoor": true, "priority": 20, "weatherGain": 0.2, "timeOfDayGain": 0.0, "biomeBedGain": 0.0, "blendSeconds": 0.6, "layers": { "amb_hall_tone": 0.6 } },
+  { "id": "cave", "reverbPreset": "rev_cave", "indoor": true, "priority": 30, "weatherGain": 0.0, "timeOfDayGain": 0.0, "biomeBedGain": 0.0, "blendSeconds": 0.8, "layers": { "amb_cave_drip": 0.8, "amb_cave_air": 0.6 } },
+  { "id": "ruin_interior", "reverbPreset": "rev_ruin", "indoor": true, "priority": 30, "weatherGain": 0.1, "timeOfDayGain": 0.0, "biomeBedGain": 0.0, "blendSeconds": 0.8, "layers": { "amb_ruin_hum": 0.7 } }
+ ]
+}

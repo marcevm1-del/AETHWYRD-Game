@@ -1,0 +1,37 @@
+{
+ "version": 1,
+ "notes": "Accessibility defaults, ranges and palettes (Wave D; values from 12_Systems/hud_and_ui.md section 14). Code/Ascend.Core/Accessibility.cs mirrors the ranges (AccessibilityLimits) and a test keeps them equal. Palette colours are first-pass and need checking with a colour-vision simulator in Unity.",
+ "defaults": {
+  "colorblindPalette": "off",
+  "subtitlesEnabled": true,
+  "subtitleSize": "medium",
+  "subtitleBackground": "box",
+  "dialogueTextSpeed": 1.0,
+  "textScale": 1.0,
+  "hudScale": 1.0,
+  "highContrastPanels": false,
+  "dyslexiaFont": false,
+  "screenShake": 0.6,
+  "flashIntensity": 0.6,
+  "motionBlur": 0.3,
+  "reducedFlash": false,
+  "noCombatMusic": false,
+  "reducedMusicIntensity": false,
+  "volumes": { "master": 1.0, "music": 0.8, "effects": 1.0, "ambience": 0.8, "dialogue": 1.0, "callouts": 0.8 }
+ },
+ "ranges": {
+  "textScale": [0.8, 2.0], "hudScale": [0.75, 1.5], "dialogueTextSpeed": [0.5, 3.0],
+  "screenShake": [0, 1], "flashIntensity": [0, 1], "motionBlur": [0, 1], "volume": [0, 1]
+ },
+ "reducedFlashCap": 0.25,
+ "subtitleSizes": { "small": 0.85, "medium": 1.0, "large": 1.3, "extraLarge": 1.6 },
+ "subtitleBackgrounds": ["none", "shadow", "box"],
+ "holdActions": ["sprint", "block", "aim", "charge_heavy", "companion_wheel", "second_palette"],
+ "palettes": {
+  "off": { "parry": "#3B82F6", "unblockable": "#EF4444", "grab": "#F5C542", "hpLow": "#E5E7EB", "positive": "#34D399", "negative": "#F87171" },
+  "protanopia": { "parry": "#0072B2", "unblockable": "#E69F00", "grab": "#F0E442", "hpLow": "#E5E7EB", "positive": "#56B4E9", "negative": "#D55E00" },
+  "deuteranopia": { "parry": "#0072B2", "unblockable": "#D55E00", "grab": "#F0E442", "hpLow": "#E5E7EB", "positive": "#56B4E9", "negative": "#CC79A7" },
+  "tritanopia": { "parry": "#009E73", "unblockable": "#D81B60", "grab": "#FFFFFF", "hpLow": "#E5E7EB", "positive": "#009E73", "negative": "#D81B60" }
+ },
+ "telegraphShapes": { "parry": "circle", "unblockable": "triangle", "grab": "square" }
+}

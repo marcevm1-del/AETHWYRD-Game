@@ -1,0 +1,172 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Photo mode (Wave D)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "tuning",
+  "blockedTags",
+  "blockedWhen",
+  "hideElements",
+  "poses",
+  "filters",
+  "frames"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "tuning": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "fovMin",
+    "fovMax",
+    "fovDefault",
+    "hourStep",
+    "filterIntensityDefault"
+   ],
+   "properties": {
+    "fovMin": {
+     "type": "number",
+     "minimum": 1
+    },
+    "fovMax": {
+     "type": "number",
+     "maximum": 120
+    },
+    "fovDefault": {
+     "type": "number"
+    },
+    "hourStep": {
+     "type": "number",
+     "minimum": 0.05,
+     "maximum": 1
+    },
+    "filterIntensityDefault": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "blockedTags": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "blockedWhen": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "enum": [
+     "combat",
+     "cutscene",
+     "siege_battle",
+     "dialogue"
+    ]
+   }
+  },
+  "hideElements": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "poses": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "target",
+     "tags"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^pose_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "target": {
+      "type": "string",
+      "enum": [
+       "player",
+       "companion",
+       "both"
+      ]
+     },
+     "tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     }
+    }
+   }
+  },
+  "filters": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "frames": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  }
+ }
+}

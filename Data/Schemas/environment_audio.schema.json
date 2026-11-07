@@ -1,0 +1,183 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Environmental audio (Wave D)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "fallbackSurface",
+  "gaits",
+  "surfaces",
+  "terrainSurface",
+  "wetOverlayEvent",
+  "weather",
+  "timeOfDay",
+  "biomeBeds",
+  "reverbZones"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "fallbackSurface": {
+   "type": "string",
+   "pattern": "^[a-z][a-z0-9_]*$"
+  },
+  "gaits": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "surfaces": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "wettable"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "wettable": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "terrainSurface": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "wetOverlayEvent": {
+   "type": "string",
+   "pattern": "^[a-z][a-z0-9_]*$"
+  },
+  "weather": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "layers"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "layers": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      }
+     },
+     "wetsSurfaces": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "timeOfDay": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "biomeBeds": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "reverbZones": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "reverbPreset",
+     "indoor",
+     "priority",
+     "weatherGain",
+     "timeOfDayGain",
+     "biomeBedGain",
+     "blendSeconds",
+     "layers"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "reverbPreset": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "indoor": {
+      "type": "boolean"
+     },
+     "priority": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+     },
+     "weatherGain": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "timeOfDayGain": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "biomeBedGain": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "blendSeconds": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 60
+     },
+     "layers": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

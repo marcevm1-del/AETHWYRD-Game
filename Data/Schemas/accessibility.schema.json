@@ -1,0 +1,257 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Accessibility defaults and palettes (Wave D)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "defaults",
+  "ranges",
+  "reducedFlashCap",
+  "subtitleSizes",
+  "subtitleBackgrounds",
+  "holdActions",
+  "palettes",
+  "telegraphShapes"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "defaults": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "colorblindPalette",
+    "subtitlesEnabled",
+    "subtitleSize",
+    "subtitleBackground",
+    "dialogueTextSpeed",
+    "textScale",
+    "hudScale",
+    "highContrastPanels",
+    "dyslexiaFont",
+    "screenShake",
+    "flashIntensity",
+    "motionBlur",
+    "reducedFlash",
+    "noCombatMusic",
+    "reducedMusicIntensity",
+    "volumes"
+   ],
+   "properties": {
+    "colorblindPalette": {
+     "type": "string",
+     "enum": [
+      "off",
+      "protanopia",
+      "deuteranopia",
+      "tritanopia"
+     ]
+    },
+    "subtitlesEnabled": {
+     "type": "boolean"
+    },
+    "subtitleSize": {
+     "type": "string",
+     "enum": [
+      "small",
+      "medium",
+      "large",
+      "extraLarge"
+     ]
+    },
+    "subtitleBackground": {
+     "type": "string",
+     "enum": [
+      "none",
+      "shadow",
+      "box"
+     ]
+    },
+    "dialogueTextSpeed": {
+     "type": "number"
+    },
+    "textScale": {
+     "type": "number"
+    },
+    "hudScale": {
+     "type": "number"
+    },
+    "highContrastPanels": {
+     "type": "boolean"
+    },
+    "dyslexiaFont": {
+     "type": "boolean"
+    },
+    "screenShake": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "flashIntensity": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "motionBlur": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "reducedFlash": {
+     "type": "boolean"
+    },
+    "noCombatMusic": {
+     "type": "boolean"
+    },
+    "reducedMusicIntensity": {
+     "type": "boolean"
+    },
+    "volumes": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "master",
+      "music",
+      "effects",
+      "ambience",
+      "dialogue",
+      "callouts"
+     ],
+     "properties": {
+      "master": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "music": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "effects": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "ambience": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "dialogue": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "callouts": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      }
+     }
+    }
+   }
+  },
+  "ranges": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "array",
+    "minItems": 2,
+    "maxItems": 2,
+    "items": {
+     "type": "number"
+    }
+   }
+  },
+  "reducedFlashCap": {
+   "type": "number",
+   "minimum": 0,
+   "maximum": 1
+  },
+  "subtitleSizes": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "number",
+    "minimum": 0.5,
+    "maximum": 3
+   }
+  },
+  "subtitleBackgrounds": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "enum": [
+     "none",
+     "shadow",
+     "box"
+    ]
+   }
+  },
+  "holdActions": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "palettes": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "parry",
+     "unblockable",
+     "grab",
+     "hpLow",
+     "positive",
+     "negative"
+    ],
+    "properties": {
+     "parry": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "unblockable": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "grab": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "hpLow": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "positive": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "negative": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     }
+    }
+   }
+  },
+  "telegraphShapes": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "string",
+    "enum": [
+     "circle",
+     "triangle",
+     "square"
+    ]
+   }
+  }
+ }
+}
