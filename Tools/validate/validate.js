@@ -533,6 +533,10 @@ require('./dungeon_checks').run({ DATA, load, check, schema, err, items: new Set
 // 4c) Wave D: audio, accessibility and photo mode (Tools/validate/audio_checks.js)
 require('./audio_checks').run({ DATA, load, check, schema, err, companionIds: rows.companions.map(c => c.id), regionTerrain: [...new Set(rows.regions.flatMap(r => (r.map && r.map.terrain) || []))] });
 
+// 4d) Wave F-lite: region graph, Labyrinth floors, Underworld layers (Tools/validate/graph_checks.js). Its findings are counted
+// separately from the map warnings above.
+const graphChecks = require('./graph_checks').run({ DATA, load, check, schema, err, regions: rows.regions });
+
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
 if (errors.length) {
@@ -542,3 +546,5 @@ if (errors.length) {
 for (const w of mapChecks.warnings) console.warn('  ! ' + w);
 console.log(`✓ Data valid. ${counts}`);
 console.log(`  ${mapChecks.summary}`);
+for (const w of graphChecks.warnings) console.warn('  ! ' + w);
+console.log(`  ${graphChecks.summary}`);
