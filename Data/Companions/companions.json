@@ -1,0 +1,380 @@
+[
+ {
+  "id": "cmp_lyra",
+  "name": "Lyra Brightwood",
+  "kind": "companion",
+  "npcId": "npc_lyra_brightwood",
+  "race": "Human",
+  "personalityTags": [
+   "brave",
+   "playful",
+   "loyal"
+  ],
+  "roleTags": [
+   "Vanguard",
+   "Skirmisher"
+  ],
+  "preferredRole": "Vanguard",
+  "presetDefault": "Aggressive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "First party member; front-line swordswoman who rushes dangerous targets.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_seraphine",
+  "name": "Seraphine Valcrest",
+  "kind": "companion",
+  "race": "High Elf",
+  "personalityTags": [
+   "proud",
+   "curious",
+   "cautious"
+  ],
+  "roleTags": [
+   "Arcanist"
+  ],
+  "preferredRole": "Arcanist",
+  "presetDefault": "Balanced",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Elemental caster; area control and setup from behind the line.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_kiri",
+  "name": "Kiri",
+  "kind": "companion",
+  "race": "Wolf-kin",
+  "personalityTags": [
+   "stoic",
+   "brave",
+   "loyal"
+  ],
+  "roleTags": [
+   "Skirmisher"
+  ],
+  "preferredRole": "Skirmisher",
+  "presetDefault": "Aggressive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Fast flanker; punishes recovery windows.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_aldric",
+  "name": "Sir Aldric Voss",
+  "kind": "companion",
+  "race": "Human",
+  "personalityTags": [
+   "stoic",
+   "loyal",
+   "proud"
+  ],
+  "roleTags": [
+   "Guardian"
+  ],
+  "preferredRole": "Guardian",
+  "presetDefault": "Defensive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Shield of the party; intercepts pressure and holds a position.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_nyx",
+  "name": "Nyx",
+  "kind": "companion",
+  "race": "Dragon (appears as a child)",
+  "personalityTags": [
+   "proud",
+   "playful",
+   "curious"
+  ],
+  "roleTags": [
+   "Specialist"
+  ],
+  "preferredRole": "Specialist",
+  "presetDefault": "Balanced",
+  "romanceable": false,
+  "adult": false,
+  "equipmentSlots": [
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Hidden Elder-Dragon spawn; fights beside you in Act V, never rideable and never romanceable.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2",
+  "note": "No weapon, armor or mount slot: reduced loadout (Canon section 4)."
+ },
+ {
+  "id": "cmp_bram",
+  "name": "Bram Copperpot",
+  "kind": "companion",
+  "race": "Halfling",
+  "personalityTags": [
+   "greedy",
+   "cautious",
+   "loyal"
+  ],
+  "roleTags": [
+   "Specialist"
+  ],
+  "preferredRole": "Specialist",
+  "presetDefault": "Defensive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Merchant-gambler; runs from fights and somehow lands a crit.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_kaito",
+  "name": "Kaito Hayase",
+  "kind": "companion",
+  "race": "Human (summoned)",
+  "personalityTags": [
+   "proud",
+   "brave",
+   "cautious"
+  ],
+  "roleTags": [
+   "Vanguard"
+  ],
+  "preferredRole": "Vanguard",
+  "presetDefault": "Aggressive",
+  "romanceable": true,
+  "adult": true,
+  "redeemableArc": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Rival hero; rival, enemy, ally or fallen villain depending on your choices.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_mochi",
+  "name": "Mochi",
+  "kind": "companion",
+  "race": "Slime",
+  "personalityTags": [
+   "playful",
+   "curious",
+   "loyal"
+  ],
+  "roleTags": [
+   "Specialist"
+  ],
+  "preferredRole": "Specialist",
+  "presetDefault": "Balanced",
+  "romanceable": false,
+  "adult": false,
+  "equipmentSlots": [
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Evolving slime familiar; expressive without words at first, never romanceable.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2",
+  "note": "Familiar: reduced loadout (no weapon or armor)."
+ },
+ {
+  "id": "cmp_elira",
+  "name": "Elira Sanctis",
+  "kind": "companion",
+  "race": "Human",
+  "personalityTags": [
+   "gentle",
+   "cautious",
+   "playful"
+  ],
+  "roleTags": [
+   "Mender"
+  ],
+  "preferredRole": "Mender",
+  "presetDefault": "Supportive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Healer; heals and cleanses when a safe opportunity arises.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_vexmor",
+  "name": "Vexmor Azharra",
+  "kind": "companion",
+  "race": "Demonkin",
+  "personalityTags": [
+   "proud",
+   "playful",
+   "loyal"
+  ],
+  "roleTags": [
+   "Arcanist",
+   "Skirmisher"
+  ],
+  "preferredRole": "Arcanist",
+  "presetDefault": "Aggressive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Warlock-hexblade; hex setup and close pressure.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_torvald",
+  "name": "Torvald Stonebeard",
+  "kind": "companion",
+  "npcId": "npc_torvald_stonebeard",
+  "race": "Dwarf",
+  "personalityTags": [
+   "stoic",
+   "proud",
+   "gentle"
+  ],
+  "roleTags": [
+   "Specialist"
+  ],
+  "preferredRole": "Specialist",
+  "presetDefault": "Defensive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Old smith-runesmith; support through craft and runes.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_suzune",
+  "name": "Suzune Kagura",
+  "kind": "companion",
+  "race": "Fox-kin",
+  "personalityTags": [
+   "serene",
+   "playful",
+   "curious"
+  ],
+  "roleTags": [
+   "Mender",
+   "Arcanist"
+  ],
+  "preferredRole": "Mender",
+  "presetDefault": "Supportive",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Shrine maiden and spirit summoner; heals and calls spirits.",
+  "sourceDoc": "07_Characters/companions_and_npcs.md#2"
+ },
+ {
+  "id": "cmp_tobin",
+  "name": "Tobin",
+  "kind": "childhoodFriend",
+  "race": "Origin-dependent",
+  "personalityTags": [],
+  "roleTags": [
+   "Specialist"
+  ],
+  "preferredRole": "Specialist",
+  "presetDefault": "Balanced",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Origin-dependent childhood friend (Canon section 4).",
+  "sourceDoc": "Canon.md#4",
+  "stub": true,
+  "note": "Stub: personality and role are TBD by narrative; Canon only says origin-dependent childhood friend, romanceable adult."
+ },
+ {
+  "id": "cmp_elsie",
+  "name": "Elsie",
+  "kind": "childhoodFriend",
+  "race": "Origin-dependent",
+  "personalityTags": [],
+  "roleTags": [
+   "Specialist"
+  ],
+  "preferredRole": "Specialist",
+  "presetDefault": "Balanced",
+  "romanceable": true,
+  "adult": true,
+  "equipmentSlots": [
+   "weapon",
+   "armor",
+   "accessory",
+   "charm"
+  ],
+  "rideable": false,
+  "partyRole": "Origin-dependent childhood friend (Canon section 4).",
+  "sourceDoc": "Canon.md#4",
+  "stub": true,
+  "note": "Stub: personality and role are TBD by narrative; Canon only says origin-dependent childhood friend, romanceable adult."
+ }
+]

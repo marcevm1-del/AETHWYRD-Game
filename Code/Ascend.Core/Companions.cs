@@ -26,7 +26,9 @@ namespace Ascend.Core
     /// <summary>The command wheel's first intents (companion_field_ai.md): Follow is Regroup.</summary>
     public enum CompanionOrder { Follow, Hold, Focus, Assist }
 
-    public enum CompanionAction { Downed, Dodge, Regroup, SignatureAssist, Attack, Guard, Follow }
+    public enum CompanionAction { Downed, Dodge, Regroup, SignatureAssist, Attack, Guard, Follow,
+        // Added by CompanionPresets.cs (v8); CompanionBrain.Decide never returns these.
+        Retreat, Revive, Interact }
 
     /// <summary>What the companion can see this moment.</summary>
     public struct CompanionSense

@@ -25,7 +25,9 @@ const COLLECTIONS = {
   shops: { files: ['Items/shops.json'], schema: 'shop' },
   siege: { files: ['World/siege_waves.json'], schema: 'siege_wave' },
   classes: { files: ['Classes/classes.json'], schema: 'class' },
-  flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' }
+  flags: { files: ['Quests/story_flags.json'], schema: 'story_flag' },
+  companions: { files: ['Companions/companions.json'], schema: 'companion' },
+  banter: { files: ['Companions/banter.json'], schema: 'banter' }
 };
 
 const errors = [];
@@ -50,6 +52,7 @@ function check(v, s, where) {
   if (typeof v === 'string') {
     if (s.pattern && !new RegExp(s.pattern).test(v)) err(where, `"${v}" does not match ${s.pattern}`);
     if (s.minLength != null && v.length < s.minLength) err(where, `shorter than ${s.minLength}`);
+    if (s.maxLength != null && v.length > s.maxLength) err(where, `longer than ${s.maxLength}`);
   }
   if (typeof v === 'number') {
     if (s.minimum != null && v < s.minimum) err(where, `${v} < minimum ${s.minimum}`);
@@ -110,6 +113,32 @@ for (const s of rows.species) {
 for (const p of rows.population) { ref(`${p.id}.speciesId`, p.speciesId, 'species'); ref(`${p.id}.regionId`, p.regionId, 'regions'); }
 for (const l of rows.loot) (l.entries || []).forEach((e, i) => ref(`${l.id}.entries[${i}]`, e.itemId, 'items'));
 for (const n of rows.npcs) { ref(`${n.id}.homeRegion`, n.homeRegion, 'regions'); (n.relationships || []).forEach(r => ref(`${n.id}.relationships`, r.npcId, 'npcs')); }
+// Companion roster (Wave C): exactly the 14 canonical ids, Canon romance flags, Nyx/Mochi never romanceable or rideable
+{
+  const CANON_IDS = ['cmp_lyra', 'cmp_seraphine', 'cmp_kiri', 'cmp_aldric', 'cmp_nyx', 'cmp_bram', 'cmp_kaito', 'cmp_mochi', 'cmp_elira', 'cmp_vexmor', 'cmp_torvald', 'cmp_suzune', 'cmp_tobin', 'cmp_elsie'];
+  const NOT_ROMANCEABLE = ['cmp_nyx', 'cmp_mochi'];
+  const got = rows.companions.map(c => c.id);
+  if (new Set(got).size !== got.length) err('companions', 'duplicate id');
+  for (const id of CANON_IDS) if (!got.includes(id)) err('companions', `missing canonical companion ${id}`);
+  for (const id of got) if (!CANON_IDS.includes(id)) err(id, 'not one of the 14 canonical companions');
+  for (const c of rows.companions) {
+    if (c.npcId) ref(`${c.id}.npcId`, c.npcId, 'npcs');
+    if (c.romanceable === NOT_ROMANCEABLE.includes(c.id)) err(c.id, `romanceable must be ${!NOT_ROMANCEABLE.includes(c.id)} (Canon section 4)`);
+    if (c.romanceable && !c.adult) err(c.id, 'a romanceable companion must be an adult');
+    if (c.rideable) err(c.id, 'companions are never rideable');
+    if (c.roleTags.indexOf(c.preferredRole) < 0) err(c.id, 'preferredRole must be one of roleTags');
+    if (new Set(c.personalityTags).size !== c.personalityTags.length) err(c.id, 'duplicate personalityTags');
+    if (new Set(c.equipmentSlots).size !== c.equipmentSlots.length) err(c.id, 'duplicate equipmentSlots');
+    if (!c.stub && (c.personalityTags.length < 3 || c.personalityTags.length > 4)) err(c.id, 'needs 3-4 personalityTags (stubs may have none)');
+    if (NOT_ROMANCEABLE.includes(c.id) && c.equipmentSlots.length >= 4) err(c.id, 'Nyx and Mochi get a reduced equipment set');
+    if (c.kind === 'childhoodFriend' !== (c.id === 'cmp_tobin' || c.id === 'cmp_elsie')) err(c.id, 'kind childhoodFriend is for Tobin and Elsie only');
+    if ((c.id === 'cmp_tobin' || c.id === 'cmp_elsie') && !c.stub) err(c.id, 'Tobin and Elsie are stubs until narrative writes them');
+    if (c.redeemableArc && c.id !== 'cmp_kaito') err(c.id, 'only Kaito has a redeemable arc (companion row)');
+  }
+  const kaito = rows.companions.find(c => c.id === 'cmp_kaito');
+  if (kaito && !kaito.redeemableArc) err('cmp_kaito', 'redeemableArc must be true');
+  for (const b of rows.banter) ref(`${b.id}.companionId`, b.companionId, 'companions');
+}
 for (const q of [...rows.quests, ...rows.weekly]) {
   ref(`${q.id}.giver`, q.giver, 'npcs'); ref(`${q.id}.region`, q.region, 'regions');
   ((q.prerequisites || {}).quests || []).forEach(p => ref(`${q.id}.prerequisites.quests`, p, 'quests'));
@@ -386,7 +415,8 @@ for (const e of mapChecks.errors) errors.push(e);
 const SINGLETONS = {
   locomotion: { file: 'Player/locomotion.json', schema: 'locomotion' },
   crafting_rules: { file: 'Items/crafting_rules.json', schema: 'crafting_rules' },
-  life_skills: { file: 'Items/life_skills.json', schema: 'life_skills' }
+  life_skills: { file: 'Items/life_skills.json', schema: 'life_skills' },
+  companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -428,6 +458,16 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       const rl = load('Items/crafting_rules.json');
       for (const s of obj.skills) if (s.station && !(s.station in (rl.stationQualityCap || {}))) err(s.id, `station "${s.station}" has no stationQualityCap`);
     }
+  }
+  if (name === 'companion_rules' && obj.presets) {
+    const b = obj.presets.Balanced;
+    if (b) for (const [k, v] of Object.entries(b)) if (k !== 'defaultOrder' && v !== 1) err(c.file, `presets.Balanced.${k} must be 1 (identity)`);
+    if (b && b.defaultOrder !== 'Follow') err(c.file, 'presets.Balanced.defaultOrder must be Follow');
+    const r = obj.retreat || {};
+    if (!(r.lowHpFraction + r.hysteresis < 1)) err(c.file, 'retreat.lowHpFraction + hysteresis must stay below 1');
+    if (!(r.recoverHpFraction > r.lowHpFraction)) err(c.file, 'retreat.recoverHpFraction must exceed lowHpFraction');
+    const maxRetreat = Math.max(...Object.values(obj.presets).map(p => p.retreatHpMult)) * r.mortalBondsHpMult * r.lowHpFraction;
+    if (!(maxRetreat < 1)) err(c.file, 'highest retreat threshold must stay below 1');
   }
   if (name === 'locomotion' && obj.state && obj.baseSpeed) {
     // blend thresholds {0, walk, run, sprint} must strictly ascend

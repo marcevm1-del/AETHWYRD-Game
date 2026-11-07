@@ -1,0 +1,35 @@
+{
+ "version": 1,
+ "notes": "Companion command presets, retreat, revive and downed rules (companion_field_ai.md, Canon section 5). Proposal numbers. Balanced is the identity preset. relationships and mounts are added by other waves.",
+ "presets": {
+  "Aggressive": { "defaultOrder": "Focus",  "leashMult": 1.3, "followDistanceMult": 1.15, "retreatHpMult": 0.7, "reviveEagerness": 0.8, "assistBias": 1.2, "skillCostCaution": 0.6 },
+  "Defensive":  { "defaultOrder": "Hold",   "leashMult": 0.7, "followDistanceMult": 0.8,  "retreatHpMult": 1.3, "reviveEagerness": 1.1, "assistBias": 0.9, "skillCostCaution": 1.4 },
+  "Supportive": { "defaultOrder": "Assist", "leashMult": 0.9, "followDistanceMult": 0.9,  "retreatHpMult": 1.1, "reviveEagerness": 1.4, "assistBias": 1.1, "skillCostCaution": 1.0 },
+  "Balanced":   { "defaultOrder": "Follow", "leashMult": 1.0, "followDistanceMult": 1.0,  "retreatHpMult": 1.0, "reviveEagerness": 1.0, "assistBias": 1.0, "skillCostCaution": 1.0 }
+ },
+ "retreat": {
+  "lowHpFraction": 0.25,
+  "hysteresis": 0.1,
+  "recoverHpFraction": 0.5,
+  "mortalBondsHpMult": 1.25,
+  "needsSafePathWhenPlayerDowned": true
+ },
+ "revive": {
+  "reviveRangeM": 3.0,
+  "reviveCastSec": 2.5,
+  "interruptible": true,
+  "cooldownSec": 8,
+  "healFractionOnRevive": 0.35,
+  "rareItemsRequireConsent": true
+ },
+ "downed": {
+  "gravelyWoundedRecoverySec": 120,
+  "recoverHpFractionAfterWounded": 0.3,
+  "mortalBonds": {
+   "defaultEnabled": false,
+   "deathRequiresLethalBlowWhileDowned": true,
+   "timerCanKill": false,
+   "pathingCanKill": false
+  }
+ }
+}

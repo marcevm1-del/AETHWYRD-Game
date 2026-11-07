@@ -367,6 +367,63 @@ const SCHEMAS = {
     }
   };
 }
+// --- Companion roster, banter and rules (Wave C; Data/Companions/*.json) ---
+{
+  const PERSONALITY = ['brave', 'cautious', 'curious', 'loyal', 'proud', 'gentle', 'playful', 'stoic', 'greedy', 'serene'];
+  const ROLES = ['Vanguard', 'Guardian', 'Skirmisher', 'Ranger', 'Arcanist', 'Mender', 'Tamer', 'Specialist'];
+  const PRESETS = ['Aggressive', 'Defensive', 'Supportive', 'Balanced'];
+  const SLOTS = ['weapon', 'armor', 'accessory', 'charm'];
+  const TRIGGERS = ['regionArrival', 'afterFight', 'restStop', 'campfire', 'lowHealth', 'revived', 'mounted', 'monsterSeen', 'questDone', 'idle'];
+  SCHEMAS.companion = {
+    title: 'Companion roster row', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'kind', 'race', 'personalityTags', 'roleTags', 'preferredRole', 'presetDefault', 'romanceable', 'adult', 'equipmentSlots', 'rideable', 'partyRole', 'sourceDoc'],
+    properties: {
+      id: id('cmp_'), name: { type: 'string', minLength: 1 }, kind: { type: 'string', enum: ['companion', 'childhoodFriend'] },
+      npcId: id('npc_'), race: { type: 'string', minLength: 1 },
+      personalityTags: { type: 'array', maxItems: 4, items: { type: 'string', enum: PERSONALITY } },
+      roleTags: { type: 'array', minItems: 1, maxItems: 2, items: { type: 'string', enum: ROLES } },
+      preferredRole: { type: 'string', enum: ROLES }, presetDefault: { type: 'string', enum: PRESETS },
+      romanceable: { type: 'boolean' }, adult: { type: 'boolean' }, redeemableArc: { type: 'boolean' },
+      equipmentSlots: { type: 'array', minItems: 1, maxItems: 4, items: { type: 'string', enum: SLOTS } },
+      rideable: { type: 'boolean', enum: [false] },
+      partyRole: { type: 'string', minLength: 1 }, sourceDoc: { type: 'string', minLength: 1 },
+      stub: { type: 'boolean' }, note: { type: 'string' }
+    }
+  };
+  SCHEMAS.banter = {
+    title: 'Companion banter line', type: 'object', additionalProperties: false,
+    required: ['id', 'companionId', 'trigger', 'priority', 'cooldownSec', 'line'],
+    properties: {
+      id: id('bnt_'), companionId: id('cmp_'), trigger: { type: 'string', enum: TRIGGERS },
+      priority: { type: 'integer', minimum: 0, maximum: 100 }, cooldownSec: { type: 'number', minimum: 0 },
+      line: { type: 'string', minLength: 1, maxLength: 160 }, tone: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }
+    }
+  };
+  const mult = { type: 'number', exclusiveMinimum: 0, maximum: 3 };
+  const frac = { type: 'number', minimum: 0, maximum: 1 };
+  const preset = { type: 'object', additionalProperties: false,
+    required: ['defaultOrder', 'leashMult', 'followDistanceMult', 'retreatHpMult', 'reviveEagerness', 'assistBias', 'skillCostCaution'],
+    properties: { defaultOrder: { type: 'string', enum: ['Follow', 'Hold', 'Focus', 'Assist'] }, leashMult: mult, followDistanceMult: mult,
+      retreatHpMult: mult, reviveEagerness: mult, assistBias: mult, skillCostCaution: mult } };
+  SCHEMAS.companion_rules = {
+    title: 'Companion command presets, retreat, revive and downed rules', type: 'object', additionalProperties: false,
+    required: ['version', 'presets', 'retreat', 'revive', 'downed'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      presets: { type: 'object', additionalProperties: false, required: PRESETS, properties: Object.fromEntries(PRESETS.map(p => [p, preset])) },
+      retreat: { type: 'object', additionalProperties: false, required: ['lowHpFraction', 'hysteresis', 'recoverHpFraction', 'mortalBondsHpMult', 'needsSafePathWhenPlayerDowned'],
+        properties: { lowHpFraction: frac, hysteresis: frac, recoverHpFraction: frac, mortalBondsHpMult: mult, needsSafePathWhenPlayerDowned: { type: 'boolean', enum: [true] } } },
+      revive: { type: 'object', additionalProperties: false, required: ['reviveRangeM', 'reviveCastSec', 'interruptible', 'cooldownSec', 'healFractionOnRevive', 'rareItemsRequireConsent'],
+        properties: { reviveRangeM: { type: 'number', exclusiveMinimum: 0, maximum: 20 }, reviveCastSec: { type: 'number', minimum: 0, maximum: 30 }, interruptible: { type: 'boolean' },
+          cooldownSec: { type: 'number', minimum: 0 }, healFractionOnRevive: { type: 'number', exclusiveMinimum: 0, maximum: 1 }, rareItemsRequireConsent: { type: 'boolean', enum: [true] } } },
+      downed: { type: 'object', additionalProperties: false, required: ['gravelyWoundedRecoverySec', 'recoverHpFractionAfterWounded', 'mortalBonds'],
+        properties: { gravelyWoundedRecoverySec: { type: 'number', exclusiveMinimum: 0 }, recoverHpFractionAfterWounded: { type: 'number', exclusiveMinimum: 0, maximum: 1 },
+          mortalBonds: { type: 'object', additionalProperties: false, required: ['defaultEnabled', 'deathRequiresLethalBlowWhileDowned', 'timerCanKill', 'pathingCanKill'],
+            properties: { defaultEnabled: { type: 'boolean', enum: [false] }, deathRequiresLethalBlowWhileDowned: { type: 'boolean', enum: [true] },
+              timerCanKill: { type: 'boolean', enum: [false] }, pathingCanKill: { type: 'boolean', enum: [false] } } } } }
+    }
+  };
+}
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

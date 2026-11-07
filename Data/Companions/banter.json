@@ -1,0 +1,974 @@
+[
+  {
+    "id": "bnt_lyra_regionarrival_1",
+    "companionId": "cmp_lyra",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "New place! Do you think they have a bakery? Asking for the party. Mostly for me.",
+    "tone": "cheerful"
+  },
+  {
+    "id": "bnt_lyra_afterfight_1",
+    "companionId": "cmp_lyra",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Did you see that? Tell me you saw that. I was amazing.",
+    "tone": "cheerful"
+  },
+  {
+    "id": "bnt_lyra_reststop_1",
+    "companionId": "cmp_lyra",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "I swear I had coins this morning. Maybe a rabbit took them.",
+    "tone": "cheerful"
+  },
+  {
+    "id": "bnt_lyra_campfire_1",
+    "companionId": "cmp_lyra",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "Third helping is not greedy. It is planning ahead.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_lyra_lowhealth_1",
+    "companionId": "cmp_lyra",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Ow, ow, okay, that one counted! Still standing, though!",
+    "tone": "cheerful"
+  },
+  {
+    "id": "bnt_lyra_revived_1",
+    "companionId": "cmp_lyra",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "Ha! Up again. Told you I was stubborn.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_lyra_mounted_1",
+    "companionId": "cmp_lyra",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Faster! No, slower! No, faster! I cannot decide, this is great!",
+    "tone": "cheerful"
+  },
+  {
+    "id": "bnt_lyra_questdone_1",
+    "companionId": "cmp_lyra",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "We did it! The reward is nice, but the thank-yous are better.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_seraphine_regionarrival_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Hmph. The mana density here is decent. Not that I was checking.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_seraphine_afterfight_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "That spell was mine. You merely stood where it was convenient.",
+    "tone": "tsundere"
+  },
+  {
+    "id": "bnt_seraphine_reststop_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "I am not tired. I am conserving mana. There is a difference.",
+    "tone": "tsundere"
+  },
+  {
+    "id": "bnt_seraphine_campfire_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "Do not look at my notes. ...Fine. One page. Just one.",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_seraphine_lowhealth_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Do not make that face. I am perfectly fine. Mostly.",
+    "tone": "tsundere"
+  },
+  {
+    "id": "bnt_seraphine_revived_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "I did not need help. ...Thank you. Do not repeat that to anyone.",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_seraphine_mounted_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "If I fall off, I will blame you. And the animal.",
+    "tone": "tsundere"
+  },
+  {
+    "id": "bnt_seraphine_monsterseen_1",
+    "companionId": "cmp_seraphine",
+    "trigger": "monsterSeen",
+    "priority": 2,
+    "cooldownSec": 180,
+    "line": "Fascinating anatomy. Hold still while I take notes on it.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_kiri_regionarrival_1",
+    "companionId": "cmp_kiri",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Smells new. Smells okay.",
+    "tone": "quiet"
+  },
+  {
+    "id": "bnt_kiri_afterfight_1",
+    "companionId": "cmp_kiri",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Done.",
+    "tone": "quiet"
+  },
+  {
+    "id": "bnt_kiri_reststop_1",
+    "companionId": "cmp_kiri",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Food?",
+    "tone": "food"
+  },
+  {
+    "id": "bnt_kiri_campfire_1",
+    "companionId": "cmp_kiri",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "...Warm. Good.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_kiri_monsterseen_1",
+    "companionId": "cmp_kiri",
+    "trigger": "monsterSeen",
+    "priority": 2,
+    "cooldownSec": 180,
+    "line": "Big. I can take it. Maybe.",
+    "tone": "quiet"
+  },
+  {
+    "id": "bnt_kiri_lowhealth_1",
+    "companionId": "cmp_kiri",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Still fighting.",
+    "tone": "quiet"
+  },
+  {
+    "id": "bnt_kiri_revived_1",
+    "companionId": "cmp_kiri",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "...Thanks.",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_kiri_mounted_1",
+    "companionId": "cmp_kiri",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Wind. Fast. I like it.",
+    "tone": "quiet"
+  },
+  {
+    "id": "bnt_kiri_questdone_1",
+    "companionId": "cmp_kiri",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Good. Now meat.",
+    "tone": "food"
+  },
+  {
+    "id": "bnt_aldric_regionarrival_1",
+    "companionId": "cmp_aldric",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Stay close. Quiet roads are seldom as quiet as they look.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_aldric_afterfight_1",
+    "companionId": "cmp_aldric",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Clean enough. My knees disagree.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_aldric_reststop_1",
+    "companionId": "cmp_aldric",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "A bench. Civilisation, at last.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_aldric_campfire_1",
+    "companionId": "cmp_aldric",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "I have stood many night watches. This is the best one I can remember.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_aldric_lowhealth_1",
+    "companionId": "cmp_aldric",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "A scratch. A large, inconvenient scratch.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_aldric_revived_1",
+    "companionId": "cmp_aldric",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "Back on my feet. The ground was overrated anyway.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_aldric_mounted_1",
+    "companionId": "cmp_aldric",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "I have ridden worse. Mostly mules. They had opinions.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_aldric_questdone_1",
+    "companionId": "cmp_aldric",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Well done. I will pretend I am not smiling.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_nyx_idle_1",
+    "companionId": "cmp_nyx",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "Little mortal, have you any sweets? Ancient beings get peckish.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_nyx_campfire_1",
+    "companionId": "cmp_nyx",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "A very long time I have lived, and honey cake is still your finest invention.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_nyx_afterfight_1",
+    "companionId": "cmp_nyx",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Hm. Adequate. I let you have that one.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_nyx_regionarrival_1",
+    "companionId": "cmp_nyx",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "I may have slept near here once. All your places look alike.",
+    "tone": "lazy"
+  },
+  {
+    "id": "bnt_nyx_reststop_1",
+    "companionId": "cmp_nyx",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Wake me when something interesting happens. Or when it is dessert.",
+    "tone": "lazy"
+  },
+  {
+    "id": "bnt_nyx_lowhealth_1",
+    "companionId": "cmp_nyx",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Do not fuss, little mortal. My kind do not faint. We merely... pause.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_nyx_revived_1",
+    "companionId": "cmp_nyx",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "A nap. That was only a very short nap.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_nyx_monsterseen_1",
+    "companionId": "cmp_nyx",
+    "trigger": "monsterSeen",
+    "priority": 2,
+    "cooldownSec": 180,
+    "line": "Cute. Do not tell it what it looks like to me.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_nyx_idle_2",
+    "companionId": "cmp_nyx",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "You ride that creature? How undignified. Do carry on, though.",
+    "tone": "smug"
+  },
+  {
+    "id": "bnt_bram_regionarrival_1",
+    "companionId": "cmp_bram",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Is it safe? Tell me it is safe. Is there a market? Tell me it is safe AND there is a market.",
+    "tone": "cowardly"
+  },
+  {
+    "id": "bnt_bram_afterfight_1",
+    "companionId": "cmp_bram",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "I was strategically behind that rock. Strategy!",
+    "tone": "cowardly"
+  },
+  {
+    "id": "bnt_bram_reststop_1",
+    "companionId": "cmp_bram",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Rest stop prices are a crime. I am just saying.",
+    "tone": "greedy"
+  },
+  {
+    "id": "bnt_bram_campfire_1",
+    "companionId": "cmp_bram",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "I would never leave you. I am only keeping my boots on. Just in case.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_bram_lowhealth_1",
+    "companionId": "cmp_bram",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Oh no, oh no, that is my good arm! Okay, my other good arm!",
+    "tone": "cowardly"
+  },
+  {
+    "id": "bnt_bram_revived_1",
+    "companionId": "cmp_bram",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "I am alive?! Obviously. I planned that.",
+    "tone": "cowardly"
+  },
+  {
+    "id": "bnt_bram_mounted_1",
+    "companionId": "cmp_bram",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Higher than I like. Lower than I fear. Fine, fine, keep going.",
+    "tone": "cowardly"
+  },
+  {
+    "id": "bnt_bram_questdone_1",
+    "companionId": "cmp_bram",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Reward! Reward! ...And the good feeling too, I suppose.",
+    "tone": "greedy"
+  },
+  {
+    "id": "bnt_bram_monsterseen_1",
+    "companionId": "cmp_bram",
+    "trigger": "monsterSeen",
+    "priority": 2,
+    "cooldownSec": 180,
+    "line": "That is big. That is very big. I will cheer from way back here.",
+    "tone": "cowardly"
+  },
+  {
+    "id": "bnt_kaito_regionarrival_1",
+    "companionId": "cmp_kaito",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Heroes always turn up at the important places. So, naturally, here I am.",
+    "tone": "arrogant"
+  },
+  {
+    "id": "bnt_kaito_afterfight_1",
+    "companionId": "cmp_kaito",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Of course I won. Obviously. Did you see? Never mind, I know you did.",
+    "tone": "arrogant"
+  },
+  {
+    "id": "bnt_kaito_reststop_1",
+    "companionId": "cmp_kaito",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Resting is part of the training arc. I read that somewhere.",
+    "tone": "arrogant"
+  },
+  {
+    "id": "bnt_kaito_campfire_1",
+    "companionId": "cmp_kaito",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "Back home I would have had a plan for this. ...Not that I miss it. Pass the stew.",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_kaito_lowhealth_1",
+    "companionId": "cmp_kaito",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "I am fine! This is a dramatic pose. Totally intentional.",
+    "tone": "arrogant"
+  },
+  {
+    "id": "bnt_kaito_revived_1",
+    "companionId": "cmp_kaito",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "Do not tell anyone I... never mind. Thanks. Just thanks.",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_kaito_mounted_1",
+    "companionId": "cmp_kaito",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Main character on a noble steed. This is the shot.",
+    "tone": "arrogant"
+  },
+  {
+    "id": "bnt_kaito_questdone_1",
+    "companionId": "cmp_kaito",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "One more for my legend. Yours too, I guess.",
+    "tone": "arrogant"
+  },
+  {
+    "id": "bnt_kaito_idle_1",
+    "companionId": "cmp_kaito",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "Do you ever wonder if you are ready? ...Forget it. Rhetorical.",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_mochi_regionarrival_1",
+    "companionId": "cmp_mochi",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "*bounces twice*",
+    "tone": "playful"
+  },
+  {
+    "id": "bnt_mochi_afterfight_1",
+    "companionId": "cmp_mochi",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Pyu!",
+    "tone": "playful"
+  },
+  {
+    "id": "bnt_mochi_reststop_1",
+    "companionId": "cmp_mochi",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "*melts into a contented puddle*",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_mochi_campfire_1",
+    "companionId": "cmp_mochi",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "*wobbles happily beside the fire*",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_mochi_monsterseen_1",
+    "companionId": "cmp_mochi",
+    "trigger": "monsterSeen",
+    "priority": 2,
+    "cooldownSec": 180,
+    "line": "*puffs up, ready to take on something twice its size*",
+    "tone": "playful"
+  },
+  {
+    "id": "bnt_mochi_lowhealth_1",
+    "companionId": "cmp_mochi",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "*shrinks and trembles* Pyu...?",
+    "tone": "shy"
+  },
+  {
+    "id": "bnt_mochi_revived_1",
+    "companionId": "cmp_mochi",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "*pops back to full size* Pyu!",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_mochi_mounted_1",
+    "companionId": "cmp_mochi",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "*hops onto the saddle and wobbles proudly* Pyu pyu!",
+    "tone": "playful"
+  },
+  {
+    "id": "bnt_mochi_questdone_1",
+    "companionId": "cmp_mochi",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "*spins in a circle* Pyu pyu!",
+    "tone": "playful"
+  },
+  {
+    "id": "bnt_elira_regionarrival_1",
+    "companionId": "cmp_elira",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "The people here look tired. Perhaps we can help, if we have time.",
+    "tone": "gentle"
+  },
+  {
+    "id": "bnt_elira_afterfight_1",
+    "companionId": "cmp_elira",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Is everyone all right? Let me see that scrape before it starts arguing.",
+    "tone": "gentle"
+  },
+  {
+    "id": "bnt_elira_reststop_1",
+    "companionId": "cmp_elira",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Sit. Drink water. Yes, you too. I will stand here feeling guilty about it.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_elira_campfire_1",
+    "companionId": "cmp_elira",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "I apologised to a door earlier. It did not accept.",
+    "tone": "dry"
+  },
+  {
+    "id": "bnt_elira_lowhealth_1",
+    "companionId": "cmp_elira",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Hold on, I have you. Breathe, and let me work.",
+    "tone": "gentle"
+  },
+  {
+    "id": "bnt_elira_revived_1",
+    "companionId": "cmp_elira",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "Oh, thank the light. You are all right, are you not? Everyone? Good.",
+    "tone": "gentle"
+  },
+  {
+    "id": "bnt_elira_mounted_1",
+    "companionId": "cmp_elira",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "I have been told to hold on tight. I am holding on very tight.",
+    "tone": "gentle"
+  },
+  {
+    "id": "bnt_elira_questdone_1",
+    "companionId": "cmp_elira",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Someone sleeps easier tonight. That is a good thing to carry.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_vexmor_regionarrival_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Everyone here smiles at us. I wonder which of them is lying.",
+    "tone": "teasing"
+  },
+  {
+    "id": "bnt_vexmor_afterfight_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Sloppy. I would say so, but you did win.",
+    "tone": "teasing"
+  },
+  {
+    "id": "bnt_vexmor_reststop_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "A proud warrior rests as proudly as she fights.",
+    "tone": "proud"
+  },
+  {
+    "id": "bnt_vexmor_campfire_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "Tell me a story with no moral. I have had my fill from people who do not live theirs.",
+    "tone": "proud"
+  },
+  {
+    "id": "bnt_vexmor_monsterseen_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "monsterSeen",
+    "priority": 2,
+    "cooldownSec": 180,
+    "line": "At least that one is honest about wanting to bite us.",
+    "tone": "teasing"
+  },
+  {
+    "id": "bnt_vexmor_lowhealth_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Do not stare. A scratch becomes a legend if you tell it right.",
+    "tone": "proud"
+  },
+  {
+    "id": "bnt_vexmor_revived_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "Hm. I owe you a debt. I always repay. Remember that.",
+    "tone": "proud"
+  },
+  {
+    "id": "bnt_vexmor_mounted_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "A fine beast, though it plainly respects you more than me. We shall fix that.",
+    "tone": "teasing"
+  },
+  {
+    "id": "bnt_vexmor_questdone_1",
+    "companionId": "cmp_vexmor",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "A promise kept. Rarer than gold, you know.",
+    "tone": "proud"
+  },
+  {
+    "id": "bnt_torvald_regionarrival_1",
+    "companionId": "cmp_torvald",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Look at that stonework. Crooked. Charming. Terrible. I love it.",
+    "tone": "grumpy"
+  },
+  {
+    "id": "bnt_torvald_afterfight_1",
+    "companionId": "cmp_torvald",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "Good. Now check your gear. A dull blade is a lazy blade.",
+    "tone": "grumpy"
+  },
+  {
+    "id": "bnt_torvald_reststop_1",
+    "companionId": "cmp_torvald",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "My knees say rest. My pride says no. Knees win.",
+    "tone": "grumpy"
+  },
+  {
+    "id": "bnt_torvald_campfire_1",
+    "companionId": "cmp_torvald",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "*hums a slow forge song* Strike once for the fire, twice for the name...",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_torvald_lowhealth_1",
+    "companionId": "cmp_torvald",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Bah! I have taken worse from a badly swung hammer.",
+    "tone": "grumpy"
+  },
+  {
+    "id": "bnt_torvald_revived_1",
+    "companionId": "cmp_torvald",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "Gah... who hit the anvil? Oh. Me. Never mind, carry on.",
+    "tone": "grumpy"
+  },
+  {
+    "id": "bnt_torvald_mounted_1",
+    "companionId": "cmp_torvald",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Dwarves belong on the ground. ...Mind the bumps, will you?",
+    "tone": "grumpy"
+  },
+  {
+    "id": "bnt_torvald_questdone_1",
+    "companionId": "cmp_torvald",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "Honest work. That is all a smith ever wanted.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_torvald_idle_1",
+    "companionId": "cmp_torvald",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "Bring me ore and a free evening, and I will make you something worth carrying.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_suzune_regionarrival_1",
+    "companionId": "cmp_suzune",
+    "trigger": "regionArrival",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "The spirits here whisper in a new accent. Shall we say hello?",
+    "tone": "serene"
+  },
+  {
+    "id": "bnt_suzune_afterfight_1",
+    "companionId": "cmp_suzune",
+    "trigger": "afterFight",
+    "priority": 2,
+    "cooldownSec": 90,
+    "line": "All tails still attached. That is always my first count.",
+    "tone": "serene"
+  },
+  {
+    "id": "bnt_suzune_reststop_1",
+    "companionId": "cmp_suzune",
+    "trigger": "restStop",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Even shrine bells are allowed to rest.",
+    "tone": "serene"
+  },
+  {
+    "id": "bnt_suzune_campfire_1",
+    "companionId": "cmp_suzune",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "I could tell you a spirit story. Or you could guess my mood from my tails.",
+    "tone": "mischievous"
+  },
+  {
+    "id": "bnt_suzune_lowhealth_1",
+    "companionId": "cmp_suzune",
+    "trigger": "lowHealth",
+    "priority": 3,
+    "cooldownSec": 120,
+    "line": "Ah... my tails have drooped. How unflattering.",
+    "tone": "serene"
+  },
+  {
+    "id": "bnt_suzune_revived_1",
+    "companionId": "cmp_suzune",
+    "trigger": "revived",
+    "priority": 3,
+    "cooldownSec": 300,
+    "line": "The spirits tugged my sleeve. I have decided to listen.",
+    "tone": "mischievous"
+  },
+  {
+    "id": "bnt_suzune_mounted_1",
+    "companionId": "cmp_suzune",
+    "trigger": "mounted",
+    "priority": 1,
+    "cooldownSec": 240,
+    "line": "Oh, the wind is in my tails. Please do not tell me they look silly.",
+    "tone": "mischievous"
+  },
+  {
+    "id": "bnt_suzune_questdone_1",
+    "companionId": "cmp_suzune",
+    "trigger": "questDone",
+    "priority": 2,
+    "cooldownSec": 300,
+    "line": "A debt a little smaller than before. The spirits will nod tonight.",
+    "tone": "serene"
+  },
+  {
+    "id": "bnt_suzune_idle_1",
+    "companionId": "cmp_suzune",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "My tails are swaying. Guess why. No, not that. Closer.",
+    "tone": "mischievous"
+  },
+  {
+    "id": "bnt_tobin_idle_1",
+    "companionId": "cmp_tobin",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "Good to be walking with you. The road feels shorter in company.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_tobin_campfire_1",
+    "companionId": "cmp_tobin",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "Nothing beats a quiet fire after a long day.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_elsie_idle_1",
+    "companionId": "cmp_elsie",
+    "trigger": "idle",
+    "priority": 1,
+    "cooldownSec": 420,
+    "line": "Take your time. I am in no hurry.",
+    "tone": "warm"
+  },
+  {
+    "id": "bnt_elsie_campfire_1",
+    "companionId": "cmp_elsie",
+    "trigger": "campfire",
+    "priority": 1,
+    "cooldownSec": 300,
+    "line": "I saved you a spot by the fire. It is the warm one.",
+    "tone": "warm"
+  }
+]
