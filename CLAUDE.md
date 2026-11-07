@@ -48,4 +48,4 @@ The studio's skills (`/start`, `/help`, `/adopt`, `/map-systems`, `/sprint-plan`
 - **Paths differ.** The studio's `design/`, `docs/`, `production/` and `tests/` map to our `00_Questions`–`12_Systems`, `13_Production/`, `Code/Ascend.Core.Tests/` and `Game/Assets/_Game/Tests/`. The Unity code root is `Game/Assets/_Game/Runtime` plus `Code/Ascend.Core`. Ask before creating a parallel studio folder.
 - **Ask before writing.** The studio's rule is "May I write this to [filepath]?". Locked Canon rows are never edited; propose in Canon §6.
 - The engine is Unity 6 URP, not Godot: ignore `docs/engine-reference/godot` references in studio docs.
-- Not yet configured: `project.yaml`, hooks. See the install plan.
+- `project.yaml` is configured for Unity (rigor `minimal`). Not installed yet: hooks, `settings.json`, the Unity engine-reference notes under `docs/engine-reference/unity/`.
