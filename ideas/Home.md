@@ -69,6 +69,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/11_Quests_Encounters/weekly_board|11_Quests_Encounters/weekly_board]]
 - [[Design Bible/12_Systems/combat|12_Systems/combat]]
 - [[Design Bible/12_Systems/companion_field_ai|12_Systems/companion_field_ai]]
+- [[Design Bible/12_Systems/crafting|12_Systems/crafting]]
 - [[Design Bible/12_Systems/hud_and_ui|12_Systems/hud_and_ui]]
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
 - [[Design Bible/12_Systems/party_synergy|12_Systems/party_synergy]]
@@ -85,6 +86,7 @@ The Project Ascend idea vault. Open this `ideas/` folder in Obsidian (*Open fold
 - [[Design Bible/13_Production/building_system|13_Production/building_system]]
 - [[Design Bible/13_Production/combat_v5_audit|13_Production/combat_v5_audit]]
 - [[Design Bible/13_Production/combat_wave_a2_plan|13_Production/combat_wave_a2_plan]]
+- [[Design Bible/13_Production/crafting_v6_audit|13_Production/crafting_v6_audit]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
@@ -1205,20 +1207,43 @@ Every population record is included in the complete register on its species note
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (115)
+## Items (141)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
 - [[Items/Talon Charm|Talon Charm]]
+- [[Items/Pearl Band|Pearl Band]]
+- [[Items/Fanged Amulet|Fanged Amulet]]
+- [[Items/Temple Gold Signet|Temple Gold Signet]]
 
 ### armor
 - [[Items/Guild Rookie Hood|Guild Rookie Hood]]
 - [[Items/Carapace Cap|Carapace Cap]]
+- [[Items/Bronze Greaves|Bronze Greaves]]
+- [[Items/Leather Cap|Leather Cap]]
+- [[Items/Hunter Jerkin|Hunter Jerkin]]
+- [[Items/Giant Hide Boots|Giant Hide Boots]]
+- [[Items/Shadehide Cloak|Shadehide Cloak]]
+- [[Items/Serpent Scale Jerkin|Serpent Scale Jerkin]]
+- [[Items/Silk Hood|Silk Hood]]
+- [[Items/Apprentice Robe|Apprentice Robe]]
+- [[Items/Nightveil Hood|Nightveil Hood]]
+- [[Items/Hexwarden Robe|Hexwarden Robe]]
 
 ### consumable
 - [[Items/Minor Healing Potion|Minor Healing Potion]]
 - [[Items/Fire Bomb|Fire Bomb]]
 - [[Items/Hunter's Skewer|Hunter's Skewer]]
+- [[Items/Healing Potion|Healing Potion]]
+- [[Items/Greater Healing Potion|Greater Healing Potion]]
+- [[Items/Inkwell Dye|Inkwell Dye]]
+- [[Items/Mushroom Skewer|Mushroom Skewer]]
+- [[Items/Tail Roast|Tail Roast]]
+- [[Items/Hearth Stew|Hearth Stew]]
+- [[Items/Hearth Loaf|Hearth Loaf]]
+- [[Items/Tuskroast Platter|Tuskroast Platter]]
+- [[Items/Hearth Ale|Hearth Ale]]
+- [[Items/Brimstone Bitters|Brimstone Bitters]]
 
 ### core
 - [[Items/F-Rank Monster Core|F-Rank Monster Core]]
@@ -1334,3 +1359,6 @@ Every population record is included in the complete register on its species note
 - [[Items/Guild Issue Lute|Guild Issue Lute]]
 - [[Items/Unmarked Grimoire|Unmarked Grimoire]]
 - [[Items/Fangblade|Fangblade]]
+- [[Items/Ironbound Mace|Ironbound Mace]]
+- [[Items/Cursed Iron Blade|Cursed Iron Blade]]
+- [[Items/Mythic Horn Lance|Mythic Horn Lance]]

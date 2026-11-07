@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Wave B | Crafting depth (upgrade v6): crafting quality tiers, life-skill ladders from the canonical list in `systems.md` section 5, 32 recipes (was 6) and 7 stations, 26 new output items, optional cooking buffs (no hunger, thirst or upkeep), schemas and 49+ tests; reference in `12_Systems/crafting.md`, audit in `13_Production/crafting_v6_audit.md` | 331 |
 | Wave A2 | Combat gaps (upgrade v5): data-driven elemental reactions and synergies, boss armor and weak points, group enemy tactics (no commanders, no adaptive named monsters), combat sandbox; merged with Wave A1, plus a schema fix so the idle speed may be 0 (the merged validator enforces exclusiveMinimum) | 260 + PlayMode 143/143 on the A2 branch |
 | Wave A1 | Player animation foundation (upgrade v11): locomotion data and rules, placeholder humanoid rig, animation driver, combat timing bridge, foot IK, PlayMode tests; placeholder clips only (clip list in `13_Production/animation_v11_audit.md`); Wave A2 (combat gaps) held on branch `claude/wave-a2-combat-18be8b` | 184 + PlayMode 158 (reported) |
 | Studio layer | Claude Code Game Studios v1.2.0 installed: 74 skills, 61 active agents (10 Godot/Unreal parked in `.claude/agents-retired/`), rules, docs, `project.yaml` for Unity, Ascend path map, Unity 6.6 engine-reference notes; merged with GitHub (upgrade v2-v11, formula, lore expansions, `Name Changer`) | 177 |
