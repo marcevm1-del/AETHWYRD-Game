@@ -291,7 +291,11 @@ const SCHEMAS = {
     properties: {
       version: { type: 'integer', minimum: 1 },
       baseSpeed: { type: 'number', minimum: 0.1, maximum: 30 },
-      state: mults(['idle', 'walk', 'run', 'sprint', 'air', 'dodge']),
+      state: (() => { // idle is a standing speed of 0, so it may be 0; the rest must move
+        const st = mults(['idle', 'walk', 'run', 'sprint', 'air', 'dodge']);
+        st.properties.idle = { type: 'number', minimum: 0, maximum: 3 };
+        return st;
+      })(),
       terrain: mults(MAP_TERRAIN),
       condition: { type: 'object', additionalProperties: false, properties: { exhausted: MULT, attacking: MULT, charging: MULT, encumbered: MULT, wet: MULT } },
       slope: { type: 'object', additionalProperties: false, required: ['limitDeg', 'uphillK', 'downhillK', 'minMult', 'maxMult'],
