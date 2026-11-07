@@ -82,6 +82,8 @@ Buy a **trade license** (rank D+) and register a route between two towns. Run it
 - **Banking:** a guild account works across regions (no carry-weight for coins), and a vault holds valuables. No interest-farming.
 
 ## 5. Crafting & Life Skills
+> Implementation (Wave B: quality tiers, life-skill ranks, 32 recipes, cooking buffs): `12_Systems/crafting.md`.
+
 | Life Skill | Produces | Station |
 |---|---|---|
 | Blacksmithing | Metal weapons/armor | Forge |

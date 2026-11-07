@@ -21,6 +21,12 @@ namespace Ascend.Core
         public List<ItemCount> Inputs { get; set; } = new List<ItemCount>();
         /// <summary>Who teaches it, for how much copper. Null: known from the start.</summary>
         public RecipeTeacher LearnFrom { get; set; }
+        /// <summary>The life rank needed in <see cref="Skill"/> (default F).</summary>
+        public string LifeRank { get; set; } = "F";
+        /// <summary>XP override for one craft; null uses the rank default from life_skills.json.</summary>
+        public int? Xp { get; set; }
+        /// <summary>Optional extra item spent to attune the craft (a quality bump); null: cannot be attuned.</summary>
+        public string AttuneItem { get; set; }
     }
 
     public sealed class RecipeFile
@@ -31,7 +37,32 @@ namespace Ascend.Core
         public List<RecipeData> Recipes { get; set; } = new List<RecipeData>();
     }
 
-    public enum CraftResult { Ok, Unknown, WrongStation, MissingMaterials, AlreadyKnown, NotEnoughMoney, NotTaughtHere, NoIdeaYet }
+    public enum CraftResult { Ok, Unknown, WrongStation, MissingMaterials, AlreadyKnown, NotEnoughMoney, NotTaughtHere, NoIdeaYet, RankTooLow }
+
+    public sealed class MakeOptions
+    {
+        /// <summary>Spend the recipe attuneItem for the experiment bonus.</summary>
+        public bool Attune { get; set; }
+        public ulong Seed { get; set; }
+        /// <summary>How many crafts so far (feeds the deterministic jitter).</summary>
+        public int CraftCounter { get; set; }
+        /// <summary>Consume the worst stacks first instead of the best.</summary>
+        public bool UseLowestQualityFirst { get; set; }
+    }
+
+    public sealed class MakeReport
+    {
+        public CraftResult Result { get; set; }
+        /// <summary>Inventory key of the output (itemId or itemId@tier); null unless Ok.</summary>
+        public string OutputKey { get; set; }
+        /// <summary>Quality tier id of the output.</summary>
+        public string Quality { get; set; }
+        public bool Mark { get; set; }
+        public bool Nameable { get; set; }
+        public long XpGained { get; set; }
+        /// <summary>The new skill rank if this craft raised it, else null.</summary>
+        public string RankedUp { get; set; }
+    }
 
     /// <summary>
     /// What the player knows and can make. Recipes are learned from their teacher (or known from the start); a craft
@@ -43,6 +74,10 @@ namespace Ascend.Core
         readonly RecipeFile _file;
         readonly HashSet<string> _known = new HashSet<string>();
         readonly HashSet<string> _seen = new HashSet<string>();
+        readonly QualityRules _rules;
+        readonly LifeSkills _skills;
+
+        public LifeSkills Skills => _skills;
 
         /// <summary>Materials you've handled (item_and_economy_design.md §6.2: hypotheses come from what you've held).</summary>
         public ICollection<string> SeenItems => _seen;
@@ -68,6 +103,7 @@ namespace Ascend.Core
             if (_known.Contains(r.Id)) return CraftResult.AlreadyKnown;
             if (!IsHypothesis(r)) return CraftResult.NoIdeaYet;
             if (!StationAvailable(r.Station, atNpcId)) return CraftResult.WrongStation;
+            if (RankTooLow(r)) return CraftResult.RankTooLow;
             if (Missing(r, inv).Count > 0) return CraftResult.MissingMaterials;
             foreach (var i in r.Inputs) inv.TryRemove(i.ItemId, i.Count);
             inv.Add(r.Output.ItemId, Math.Max(1, r.Output.Count));
@@ -75,8 +111,10 @@ namespace Ascend.Core
             return CraftResult.Ok;
         }
 
-        public Crafter(RecipeFile file)
+        public Crafter(RecipeFile file, QualityRules rules = null, LifeSkills skills = null)
         {
+            _rules = rules;
+            _skills = skills;
             _file = file ?? new RecipeFile();
             foreach (var r in _file.Recipes) if (r.LearnFrom == null) _known.Add(r.Id);
         }
@@ -115,8 +153,12 @@ namespace Ascend.Core
             var r = Recipe(recipeId);
             if (r == null || !_known.Contains(r.Id)) return CraftResult.Unknown;
             if (!StationAvailable(r.Station, atNpcId)) return CraftResult.WrongStation;
+            if (RankTooLow(r)) return CraftResult.RankTooLow;
             return Missing(r, inv).Count > 0 ? CraftResult.MissingMaterials : CraftResult.Ok;
         }
+
+        /// <summary>True when life skills are attached, know the recipe skill, and the recipe needs a higher rank. Unknown skills never gate.</summary>
+        bool RankTooLow(RecipeData r) => _skills != null && _skills.IsKnown(r.Skill) && _skills.RankIndex(r.LifeRank) > _skills.RankIdx(r.Skill);
 
         public CraftResult Craft(string recipeId, Inventory inv, string atNpcId)
         {
@@ -125,7 +167,99 @@ namespace Ascend.Core
             var r = Recipe(recipeId);
             foreach (var i in r.Inputs) inv.TryRemove(i.ItemId, i.Count);
             inv.Add(r.Output.ItemId, Math.Max(1, r.Output.Count));
+            _skills?.OnCraft(r, out _);
             return CraftResult.Ok;
+        }
+
+        /// <summary>Units of an item across every quality stack.</summary>
+        static int UnitsOf(Inventory inv, string itemId) =>
+            inv.Items.Where(kv => ItemQuality.BaseId(kv.Key) == itemId).Sum(kv => kv.Value);
+
+        /// <summary>
+        /// The quality-aware craft (crafting_v6_audit.md section 3.1). Never fails at random: it cannot start (unknown, station, rank,
+        /// missing materials or attune item; nothing is consumed) or it consumes exactly the inputs and yields at least Poor.
+        /// </summary>
+        public MakeReport Make(string recipeId, Inventory inv, string atNpcId, MakeOptions opt = null)
+        {
+            opt = opt ?? new MakeOptions();
+            var rep = new MakeReport { Result = CanMake(recipeId, inv, atNpcId) };
+            var r = Recipe(recipeId);
+            if (rep.Result == CraftResult.Ok && opt.Attune)
+            {
+                if (string.IsNullOrEmpty(r.AttuneItem)) rep.Result = CraftResult.MissingMaterials;
+                else
+                {
+                    int need = r.Inputs.Where(i => i.ItemId == r.AttuneItem).Sum(i => i.Count) + 1;
+                    if (UnitsOf(inv, r.AttuneItem) < need) rep.Result = CraftResult.MissingMaterials;
+                }
+            }
+            if (rep.Result != CraftResult.Ok) return rep;
+
+            var rules = _rules ?? new QualityRules();
+            int normal = rules.NormalIndex;
+            long tierSum = 0; int units = 0, best = int.MinValue;
+            foreach (var i in r.Inputs)
+            {
+                int left = i.Count;
+                foreach (var kv in Stacks(inv, i.ItemId, rules, opt.UseLowestQualityFirst))
+                {
+                    if (left <= 0) break;
+                    int take = Math.Min(left, kv.Value);
+                    int idx = rules.IndexOf(ItemQuality.Split(kv.Key).TierId);
+                    inv.TryRemove(kv.Key, take);
+                    tierSum += (long)idx * take; units += take; left -= take;
+                    if (idx > best) best = idx;
+                }
+            }
+            if (opt.Attune)
+            {
+                // The extra unit comes from the worst stack left, so it never costs the better ones; it does not count toward quality.
+                var spare = Stacks(inv, r.AttuneItem, rules, true).First();
+                inv.TryRemove(spare.Key, 1);
+            }
+            if (units == 0) best = normal;
+
+            var f = rules.Formula ?? new QualityFormula();
+            double mean = units > 0 ? (double)tierSum / units : normal;
+            int rankIdx = _skills != null ? _skills.RankIdx(r.Skill) : 0;
+            string rank = _skills != null ? _skills.Rank(r.Skill) : "F";
+            double jitter = DeterministicRandom.For(opt.Seed, r.Id, opt.CraftCounter).NextDouble() * f.JitterMax;
+            double score = mean + f.SkillBonusPerRank * rankIdx + (opt.Attune ? f.ExperimentBonus : 0) + jitter;
+            int cap = Math.Min(best + f.TierAboveBest, Math.Min(rules.RankCapIndex(rank), rules.StationCapIndex(r.Station)));
+            cap = Math.Min(cap, rules.MaxCraftableIndex);
+            int index = Math.Max(0, Math.Min((int)Math.Floor(score), cap));
+            string tier = rules.TierAt(index)?.Id ?? QualityRules.NormalId;
+
+            rep.Quality = tier;
+            rep.Mark = rules.Mark(tier);
+            rep.Nameable = rules.Nameable(tier);
+            rep.OutputKey = ItemQuality.Compose(r.Output.ItemId, tier);
+            inv.Add(rep.OutputKey, Math.Max(1, r.Output.Count));
+            if (_skills != null) { rep.XpGained = _skills.OnCraft(r, out var up); rep.RankedUp = up; }
+            return rep;
+        }
+
+        /// <summary>Like CanCraft, but counts materials across all quality stacks.</summary>
+        CraftResult CanMake(string recipeId, Inventory inv, string atNpcId)
+        {
+            var r = Recipe(recipeId);
+            if (r == null || !_known.Contains(r.Id)) return CraftResult.Unknown;
+            if (!StationAvailable(r.Station, atNpcId)) return CraftResult.WrongStation;
+            if (RankTooLow(r)) return CraftResult.RankTooLow;
+            return r.Inputs.Any(i => UnitsOf(inv, i.ItemId) < i.Count) ? CraftResult.MissingMaterials : CraftResult.Ok;
+        }
+
+        static List<KeyValuePair<string, int>> Stacks(Inventory inv, string itemId, QualityRules rules, bool lowestFirst)
+        {
+            var list = inv.Items.Where(kv => ItemQuality.BaseId(kv.Key) == itemId)
+                .Select(kv => new KeyValuePair<string, int>(kv.Key, kv.Value)).ToList();
+            list.Sort((a, b) =>
+            {
+                int c = rules.IndexOf(ItemQuality.Split(a.Key).TierId).CompareTo(rules.IndexOf(ItemQuality.Split(b.Key).TierId));
+                if (!lowestFirst) c = -c;
+                return c != 0 ? c : string.CompareOrdinal(a.Key, b.Key);
+            });
+            return list;
         }
 
         public void Load(IEnumerable<string> known, IEnumerable<string> seen = null)

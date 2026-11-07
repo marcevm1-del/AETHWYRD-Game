@@ -177,6 +177,8 @@ namespace Ascend.Core
         public int Value { get; set; }
         /// <summary>Raw item stats (atk, matk, def, crit, spd, applyElement…); values may be numbers or text.</summary>
         public Dictionary<string, object> Stats { get; set; } = new Dictionary<string, object>();
+        /// <summary>Optional meal block (cooking buffs): effects and seconds. Null for non-meals.</summary>
+        public MealData Meal { get; set; }
 
         /// <summary>A numeric stat, or 0 when absent or not a number (works with any JSON library's value type).</summary>
         public double Stat(string key)
@@ -218,6 +220,10 @@ namespace Ascend.Core
         public ReactionTable ReactionTable { get; }
         /// <summary>Data/Monsters/boss_weakpoints.json (empty if not loaded).</summary>
         public BossWeakPointFile BossWeakPoints { get; }
+        /// <summary>Data/Items/crafting_rules.json (empty rules when not loaded).</summary>
+        public QualityRules Quality { get; }
+        /// <summary>Data/Items/life_skills.json (empty when not loaded).</summary>
+        public LifeSkillFile LifeSkills { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -227,7 +233,8 @@ namespace Ascend.Core
             IEnumerable<StoryFlagData> flags = null, ProgressionRules progression = null,
             IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null, MotionFile motion = null,
             IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null, BossFile bosses = null,
-            ReactionFile reactions = null, BossWeakPointFile weakPoints = null)
+            ReactionFile reactions = null, BossWeakPointFile weakPoints = null,
+            QualityRules quality = null, LifeSkillFile lifeSkills = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
@@ -238,6 +245,8 @@ namespace Ascend.Core
             Reactions = reactions ?? new ReactionFile();
             ReactionTable = Reactions.Reactions.Count > 0 ? new ReactionTable(Reactions) : Ascend.Core.ReactionTable.Default;
             BossWeakPoints = weakPoints ?? new BossWeakPointFile();
+            Quality = quality ?? new QualityRules();
+            LifeSkills = lifeSkills ?? new LifeSkillFile();
             Index(BossWeakPoints.Bosses, b => b.SpeciesId, "boss weak point set");
             Index(Recipes.Recipes, r => r.Id, "recipe");
             WeeklyQuests = Index(weeklyBoard, q => q.Id, "weekly quest");

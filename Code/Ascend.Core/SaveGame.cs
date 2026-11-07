@@ -41,6 +41,8 @@ namespace Ascend.Core
         public List<PartnerData> Partners { get; set; } = new List<PartnerData>();
         public List<string> KnownRecipes { get; set; } = new List<string>();
         public List<string> HandledItems { get; set; } = new List<string>();
+        /// <summary>Life skill XP, ranks, passed commissions and first-time crafts (null in older saves: everything at F).</summary>
+        public LifeSkillSave LifeSkills { get; set; } = new LifeSkillSave();
         /// <summary>The companion travelling with you (NPC id), or null.</summary>
         public string Companion { get; set; }
         public RankLetter GuildRank { get; set; } = RankLetter.F;
@@ -102,6 +104,7 @@ namespace Ascend.Core
             s.Partners ??= new List<PartnerData>();
             s.KnownRecipes ??= new List<string>();
             s.HandledItems ??= new List<string>();
+            s.LifeSkills ??= new LifeSkillSave();
             s.Bestiary ??= new List<BestiaryEntry>();
             s.GatherNodes ??= new Dictionary<string, double>();
             s.RestBuffs ??= new List<RestBuff>();

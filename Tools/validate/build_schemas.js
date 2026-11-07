@@ -108,7 +108,10 @@ const SCHEMAS = {
       id: id('itm_'), name: { type: 'string', minLength: 1 },
       category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic'] },
       rank: RL, rarity: { type: 'string', enum: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic', 'Divine'] },
-      slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, setId: { type: 'string' }
+      slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, setId: { type: 'string' },
+      meal: { type: 'object', additionalProperties: false, required: ['effects', 'seconds'], description: 'cooking buff (Well Fed slot)', properties: {
+        effects: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['stat', 'amount'], properties: { stat: { type: 'string', minLength: 1 }, amount: { type: 'number' } } } },
+        seconds: { type: 'number', exclusiveMinimum: 0 } } }
     }
   },
   npc: {
@@ -304,6 +307,63 @@ const SCHEMAS = {
         properties: { idleMaxSpeed: num(0, 30), walkEnter: num(0, 30), runEnter: num(0, 30), sprintEnter: num(0, 30), hysteresis: num(0, 5) } },
       damping: { type: 'object', additionalProperties: false, required: ['speedSec', 'groundedExitGraceSec', 'combatLayerBlendSec', 'pelvisSec'],
         properties: { speedSec: num(0, 5), groundedExitGraceSec: num(0, 5), combatLayerBlendSec: num(0, 5), pelvisSec: num(0, 5) } }
+    }
+  };
+}
+// --- Crafting rules, life skills and recipe rows (Wave B; Data/Items/crafting_rules.json, life_skills.json, recipes.json) ---
+{
+  const TIER_ID = { type: 'string', enum: ['poor', 'normal', 'fine', 'superior', 'masterwork', 'legendary'] };
+  const RANKS9 = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'];
+  const R9 = { type: 'string', enum: RANKS9 };
+  const byKeys = (keys, val) => ({ type: 'object', additionalProperties: false, required: keys, properties: Object.fromEntries(keys.map(k => [k, val])) });
+  const STATIONS = ['campfire', 'forge', 'alembic', 'loom', 'tannery', 'hearth', 'brewery', 'jewelers_bench'];
+  const SKILL_ID = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
+  SCHEMAS.crafting_rules = {
+    title: 'Crafting quality rules', type: 'object', additionalProperties: false,
+    required: ['notes', 'qualityTiers', 'formula', 'rankQualityCap', 'stationQualityCap'],
+    properties: {
+      notes: { type: 'string' },
+      qualityTiers: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false,
+        required: ['id', 'name', 'index', 'statMult', 'valueMult', 'buffMult', 'mark', 'nameable', 'craftable'],
+        properties: { id: TIER_ID, name: { type: 'string', minLength: 1 }, index: { type: 'integer', minimum: 0, maximum: 9 },
+          statMult: { type: 'number', exclusiveMinimum: 0, maximum: 1.3 }, valueMult: { type: 'number', exclusiveMinimum: 0 },
+          buffMult: { type: 'number', exclusiveMinimum: 0 }, mark: { type: 'boolean' }, nameable: { type: 'boolean' }, craftable: { type: 'boolean' } } } },
+      formula: { type: 'object', additionalProperties: false, required: ['skillBonusPerRank', 'experimentBonus', 'jitterMax', 'tierAboveBest'],
+        properties: { skillBonusPerRank: { type: 'number', minimum: 0, maximum: 1 }, experimentBonus: { type: 'number', minimum: 0, maximum: 2 },
+          jitterMax: { type: 'number', minimum: 0, maximum: 0.99 }, tierAboveBest: { type: 'integer', minimum: 0, maximum: 5 } } },
+      rankQualityCap: byKeys(RANKS9, TIER_ID),
+      stationQualityCap: byKeys(STATIONS, TIER_ID)
+    }
+  };
+  SCHEMAS.life_skills = {
+    title: 'Life skill ladders', type: 'object', additionalProperties: false,
+    required: ['notes', 'ranks', 'commissionFromRank', 'xp', 'skills'],
+    properties: {
+      notes: { type: 'string' },
+      ranks: { type: 'array', minItems: 9, maxItems: 9, items: R9 },
+      commissionFromRank: R9,
+      xp: { type: 'object', additionalProperties: false,
+        required: ['xpToReach', 'firstCraftMultiplier', 'trivialRankGap', 'trivialMultiplier', 'minXp', 'defaultRecipeXpByRank', 'gatherXpPerNode'],
+        properties: {
+          xpToReach: byKeys(RANKS9, { type: 'integer', minimum: 0 }),
+          firstCraftMultiplier: { type: 'number', minimum: 1, maximum: 20 }, trivialRankGap: { type: 'integer', minimum: 1, maximum: 9 },
+          trivialMultiplier: { type: 'number', exclusiveMinimum: 0, maximum: 1 }, minXp: { type: 'integer', minimum: 1 },
+          defaultRecipeXpByRank: byKeys(RANKS9, { type: 'integer', minimum: 1 }),
+          gatherXpPerNode: byKeys(RANKS9, { type: 'integer', minimum: 1 }) } },
+      skills: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'kind', 'station'],
+        properties: { id: SKILL_ID, name: { type: 'string', minLength: 1 }, kind: { type: 'string', enum: ['craft', 'gather', 'deferred'] },
+          station: { type: ['string', 'null'] }, notes: { type: 'string' } } } }
+    }
+  };
+  // One row of recipes.json (validated row by row in validate.js; cross-references are checked there too).
+  const ITEM_COUNT = { type: 'object', additionalProperties: false, required: ['itemId', 'count'], properties: { itemId: id('itm_'), count: { type: 'integer', minimum: 1 } } };
+  SCHEMAS.recipe = {
+    title: 'Recipe', type: 'object', additionalProperties: false, required: ['id', 'name', 'skill', 'station', 'output', 'inputs'],
+    properties: {
+      id: id('rcp_'), name: { type: 'string', minLength: 1 }, skill: SKILL_ID, station: { type: 'string', minLength: 1 },
+      output: ITEM_COUNT, inputs: { type: 'array', minItems: 1, items: ITEM_COUNT },
+      learnFrom: { type: 'object', additionalProperties: false, required: ['npcId', 'price'], properties: { npcId: id('npc_'), price: { type: 'integer', minimum: 0 } } },
+      lifeRank: R9, xp: { type: 'integer', minimum: 1 }, attuneItem: id('itm_')
     }
   };
 }

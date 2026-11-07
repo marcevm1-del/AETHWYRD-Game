@@ -1,0 +1,98 @@
+{
+ "notes": "Crafting quality rules (12_Systems/crafting.md, 13_Production/crafting_v6_audit.md section 3). score = meanIngredientTierIndex + skillBonusPerRank*rankIdx (F=0..SSS=8) + experimentBonus (only if attuned) + jitter (0..jitterMax, deterministic, never negative); index = floor(score), clamped to [0, min(bestIngredientIndex + tierAboveBest, rankQualityCap, stationQualityCap)]. Nothing here can destroy materials or fail a craft (Canon section 5.1, Slow-Life). Portable camp kits (campfire) are Poor/Normal only. Legendary is reserved for quest and Tyrant recipes (craftable false). Stat bonuses stay small: Masterwork at most +25 percent.",
+ "qualityTiers": [
+  {
+   "id": "poor",
+   "name": "Poor",
+   "index": 0,
+   "statMult": 0.9,
+   "valueMult": 0.6,
+   "buffMult": 0.8,
+   "mark": false,
+   "nameable": false,
+   "craftable": true
+  },
+  {
+   "id": "normal",
+   "name": "Normal",
+   "index": 1,
+   "statMult": 1,
+   "valueMult": 1,
+   "buffMult": 1,
+   "mark": false,
+   "nameable": false,
+   "craftable": true
+  },
+  {
+   "id": "fine",
+   "name": "Fine",
+   "index": 2,
+   "statMult": 1.06,
+   "valueMult": 1.5,
+   "buffMult": 1.15,
+   "mark": true,
+   "nameable": false,
+   "craftable": true
+  },
+  {
+   "id": "superior",
+   "name": "Superior",
+   "index": 3,
+   "statMult": 1.12,
+   "valueMult": 2.5,
+   "buffMult": 1.3,
+   "mark": true,
+   "nameable": false,
+   "craftable": true
+  },
+  {
+   "id": "masterwork",
+   "name": "Masterwork",
+   "index": 4,
+   "statMult": 1.2,
+   "valueMult": 5,
+   "buffMult": 1.5,
+   "mark": true,
+   "nameable": true,
+   "craftable": true
+  },
+  {
+   "id": "legendary",
+   "name": "Legendary",
+   "index": 5,
+   "statMult": 1.3,
+   "valueMult": 12,
+   "buffMult": 2,
+   "mark": true,
+   "nameable": true,
+   "craftable": false
+  }
+ ],
+ "formula": {
+  "skillBonusPerRank": 0.25,
+  "experimentBonus": 0.5,
+  "jitterMax": 0.2,
+  "tierAboveBest": 1
+ },
+ "rankQualityCap": {
+  "F": "normal",
+  "E": "normal",
+  "D": "fine",
+  "C": "fine",
+  "B": "superior",
+  "A": "masterwork",
+  "S": "masterwork",
+  "SS": "masterwork",
+  "SSS": "masterwork"
+ },
+ "stationQualityCap": {
+  "campfire": "normal",
+  "forge": "masterwork",
+  "alembic": "masterwork",
+  "loom": "masterwork",
+  "tannery": "masterwork",
+  "hearth": "masterwork",
+  "brewery": "masterwork",
+  "jewelers_bench": "masterwork"
+ }
+}

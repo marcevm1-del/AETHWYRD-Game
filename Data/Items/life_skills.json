@@ -1,0 +1,175 @@
+{
+ "notes": "Life skill ladders (12_Systems/systems.md section 5 and 5.3; crafting_v6_audit.md section 3.2). Ranks are parallel F to SSS tracks. Rank-up from commissionFromRank onward needs the XP AND a passed masterwork commission; until then the skill sits at the threshold with no loss. XP per craft = recipe xp (or defaultRecipeXpByRank of the recipe's lifeRank) times firstCraftMultiplier on a recipe's first craft, times trivialMultiplier when the recipe rank is trivialRankGap or more below the skill rank; never below minXp, never a penalty, no decay. Gather XP uses gatherXpPerNode by skill rank with the same trivial rule. Skill ids follow systems.md section 5 in snake_case; deferred skills have no content yet.",
+ "ranks": [
+  "F",
+  "E",
+  "D",
+  "C",
+  "B",
+  "A",
+  "S",
+  "SS",
+  "SSS"
+ ],
+ "commissionFromRank": "D",
+ "xp": {
+  "xpToReach": {
+   "F": 0,
+   "E": 250,
+   "D": 800,
+   "C": 2600,
+   "B": 6600,
+   "A": 15600,
+   "S": 35600,
+   "SS": 75600,
+   "SSS": 145600
+  },
+  "firstCraftMultiplier": 3,
+  "trivialRankGap": 2,
+  "trivialMultiplier": 0.25,
+  "minXp": 1,
+  "defaultRecipeXpByRank": {
+   "F": 10,
+   "E": 14,
+   "D": 20,
+   "C": 28,
+   "B": 40,
+   "A": 56,
+   "S": 80,
+   "SS": 110,
+   "SSS": 150
+  },
+  "gatherXpPerNode": {
+   "F": 5,
+   "E": 7,
+   "D": 10,
+   "C": 14,
+   "B": 20,
+   "A": 28,
+   "S": 40,
+   "SS": 55,
+   "SSS": 75
+  }
+ },
+ "skills": [
+  {
+   "id": "blacksmithing",
+   "name": "Blacksmithing",
+   "kind": "craft",
+   "station": "forge",
+   "notes": "Metal weapons and armour. Armorer folds in here."
+  },
+  {
+   "id": "leatherworking",
+   "name": "Leatherworking",
+   "kind": "craft",
+   "station": "tannery",
+   "notes": "Light armour and bags."
+  },
+  {
+   "id": "tailoring",
+   "name": "Tailoring",
+   "kind": "craft",
+   "station": "loom",
+   "notes": "Cloth armour, cosmetics, dyes."
+  },
+  {
+   "id": "alchemy",
+   "name": "Alchemy",
+   "kind": "craft",
+   "station": "alembic",
+   "notes": "Potions, bombs, transmutation."
+  },
+  {
+   "id": "enchanting",
+   "name": "Enchanting",
+   "kind": "deferred",
+   "station": null,
+   "notes": "Enchanting table; separate wave."
+  },
+  {
+   "id": "runecraft",
+   "name": "Runecraft",
+   "kind": "deferred",
+   "station": null,
+   "notes": "Khazdur runes at the Iron Hold rune anvil; separate wave."
+  },
+  {
+   "id": "jewelcrafting",
+   "name": "Jewelcrafting",
+   "kind": "craft",
+   "station": "forge",
+   "notes": "Rings, amulets, gems. Shares the forge until the jeweler's bench is built."
+  },
+  {
+   "id": "cooking",
+   "name": "Cooking",
+   "kind": "craft",
+   "station": "hearth",
+   "notes": "Food buffs. Also works at the portable campfire (Poor/Normal only)."
+  },
+  {
+   "id": "brewing",
+   "name": "Brewing",
+   "kind": "craft",
+   "station": "brewery",
+   "notes": "Ales and spirits; days-long fermentation waits for Housing."
+  },
+  {
+   "id": "farming",
+   "name": "Farming",
+   "kind": "deferred",
+   "station": null,
+   "notes": "Housing wave."
+  },
+  {
+   "id": "animal_husbandry",
+   "name": "Animal Husbandry",
+   "kind": "deferred",
+   "station": null,
+   "notes": "Housing wave."
+  },
+  {
+   "id": "mining",
+   "name": "Mining",
+   "kind": "gather",
+   "station": null,
+   "notes": "XP from ore nodes."
+  },
+  {
+   "id": "logging",
+   "name": "Logging",
+   "kind": "gather",
+   "station": null,
+   "notes": "XP from timber nodes."
+  },
+  {
+   "id": "herbalism",
+   "name": "Herbalism",
+   "kind": "gather",
+   "station": null,
+   "notes": "XP from herb nodes."
+  },
+  {
+   "id": "fishing",
+   "name": "Fishing",
+   "kind": "gather",
+   "station": null,
+   "notes": "XP from fishing spots."
+  },
+  {
+   "id": "engineering",
+   "name": "Engineering",
+   "kind": "deferred",
+   "station": null,
+   "notes": "Otherworld; separate wave."
+  },
+  {
+   "id": "painting_music",
+   "name": "Painting and Music",
+   "kind": "deferred",
+   "station": null,
+   "notes": "Decor and buffs; separate wave."
+  }
+ ]
+}
