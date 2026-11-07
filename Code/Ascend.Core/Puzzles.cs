@@ -108,7 +108,7 @@ namespace Ascend.Core
         }
 
         /// <summary>The assist opens after the wrong tries or after every hint was read. It never costs anything.</summary>
-        public bool AssistAvailable => Status != PuzzleStatus.Solved && (Fails >= Tuning.FailsBeforeAssist || (Data.Hints.Count > 0 && HintsShown >= Data.Hints.Count));
+        public bool AssistAvailable => Status != PuzzleStatus.Solved && (Fails >= Tuning.FailsBeforeAssist || (Data.Hints != null && Data.Hints.Count > 0 && HintsShown >= Data.Hints.Count));
 
         public PuzzleAssist Assist() => AssistAvailable ? NextStep() : null;
 
@@ -200,7 +200,7 @@ namespace Ascend.Core
             return PlateResult.Placed;
         }
 
-        public bool Remove(string objectId) => !Locked && _placed.Remove(objectId);
+        public bool Remove(string objectId) => !Locked && objectId != null && _placed.Remove(objectId);
 
         /// <summary>One assignment of objects to plates (or none) that loads every plate exactly, or null.</summary>
         public Dictionary<string, string> FindSolution()
@@ -271,13 +271,13 @@ namespace Ascend.Core
         public string GlyphAt(string sconceId)
         {
             int i = Data.Sconces.FindIndex(s => s.Id == sconceId);
-            return i < 0 ? null : Data.Glyphs[_state[i]];
+            return i < 0 || Data.Glyphs.Count == 0 ? null : Data.Glyphs[_state[i]];
         }
 
         /// <summary>Turns a sconce one step (and its linked sconces). Returns false if the id is unknown or the lock is already open.</summary>
         public bool Turn(string sconceId)
         {
-            if (Locked) return false;
+            if (Locked || Data.Glyphs.Count == 0) return false;
             int i = Data.Sconces.FindIndex(s => s.Id == sconceId);
             if (i < 0) return false;
             Step(_state, i);
@@ -285,7 +285,7 @@ namespace Ascend.Core
             return true;
         }
 
-        void Step(int[] s, int i) { foreach (var j in _turns[i]) s[j] = (s[j] + 1) % Data.Glyphs.Count; }
+        void Step(int[] s, int i) { if (Data.Glyphs.Count == 0) return; foreach (var j in _turns[i]) s[j] = (s[j] + 1) % Data.Glyphs.Count; }
         bool Matches(int[] s) { for (int i = 0; i < s.Length; i++) if (s[i] != _goal[i]) return false; return true; }
 
         int[] Start() => Data.Sconces.Select(s => Math.Max(0, Data.Glyphs.IndexOf(s.Start))).ToArray();

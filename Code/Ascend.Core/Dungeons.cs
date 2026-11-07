@@ -318,6 +318,7 @@ namespace Ascend.Core
         {
             if (Layout.RoomById(Room).Boss == null || BossDefeated) return false;
             BossDefeated = true;
+            Knowledge.Cleared = true; // the journal remembers across resets
             return true;
         }
 
