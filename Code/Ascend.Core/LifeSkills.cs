@@ -193,7 +193,7 @@ namespace Ascend.Core
         {
             _xp.Clear(); _rank.Clear(); _passed.Clear(); _crafted.Clear();
             if (s == null) return;
-            foreach (var kv in s.Xp ?? new Dictionary<string, long>()) if (IsKnown(kv.Key) && kv.Value > 0) _xp[kv.Key] = kv.Value;
+            foreach (var kv in s.Xp ?? new Dictionary<string, long>()) if (IsKnown(kv.Key) && kv.Value > 0) _xp[kv.Key] = Math.Min(kv.Value, 1_000_000_000L);
             foreach (var kv in s.Commissions ?? new Dictionary<string, List<string>>())
                 if (IsKnown(kv.Key)) _passed[kv.Key] = new HashSet<string>((kv.Value ?? new List<string>()).Where(x => _ranks.Contains(x)));
             foreach (var kv in s.Rank ?? new Dictionary<string, string>()) if (IsKnown(kv.Key) && _ranks.Contains(kv.Value)) _rank[kv.Key] = _ranks.IndexOf(kv.Value);

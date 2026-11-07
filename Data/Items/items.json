@@ -374,6 +374,15 @@
   "stats": {
    "heal": 200
   },
+  "meal": {
+   "effects": [
+    {
+     "stat": "atk",
+     "amount": 2
+    }
+   ],
+   "seconds": 300
+  },
   "flavor": "Prime meat, campfire-charred. The best meal in Whisperwood is the one you cooked yourself."
  },
  {

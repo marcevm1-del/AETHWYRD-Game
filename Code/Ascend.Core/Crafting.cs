@@ -103,6 +103,7 @@ namespace Ascend.Core
             if (_known.Contains(r.Id)) return CraftResult.AlreadyKnown;
             if (!IsHypothesis(r)) return CraftResult.NoIdeaYet;
             if (!StationAvailable(r.Station, atNpcId)) return CraftResult.WrongStation;
+            if (RankTooLow(r)) return CraftResult.RankTooLow;
             if (Missing(r, inv).Count > 0) return CraftResult.MissingMaterials;
             foreach (var i in r.Inputs) inv.TryRemove(i.ItemId, i.Count);
             inv.Add(r.Output.ItemId, Math.Max(1, r.Output.Count));

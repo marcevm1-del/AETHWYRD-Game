@@ -272,6 +272,7 @@ if (fs.existsSync(path.join(DATA, 'Items/recipes.json'))) {
     if (!(r.station in (rf.stations || {}))) err(r.id, `unknown station "${r.station}"`);
     ref(r.id + '.output', r.output && r.output.itemId, 'items');
     if (!r.inputs || r.inputs.length === 0) err(r.id, 'needs inputs');
+    if (new Set((r.inputs || []).map(i => i.itemId)).size !== (r.inputs || []).length) err(r.id, 'duplicate itemId in inputs (merge the counts)');
     for (const i of r.inputs || []) { ref(r.id + '.inputs', i.itemId, 'items'); if (!(i.count >= 1)) err(r.id, 'input count must be ≥ 1'); }
     if (r.learnFrom) ref(r.id + '.learnFrom', r.learnFrom.npcId, 'npcs');
     const out = ITEMS_BY_ID[r.output && r.output.itemId];
