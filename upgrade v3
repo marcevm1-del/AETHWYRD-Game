@@ -1,0 +1,2896 @@
+Worked for 2m 44s
+
+### AETHERIA — UPGRADE V3
+
+### The Ultimate Blender, 3D Asset, Animation & World-Building Expansion Plan
+
+I want to change the approach completely.
+
+This time, we are not reviewing what is wrong with Aetheria as a game, rewriting its existing systems, or redesigning its established lore.
+
+We are focusing on what we can ADD to make Aetheria substantially better.
+
+The priority is Blender.
+
+I want Upgrade V3 to become a comprehensive expansion of the game's entire 3D production pipeline: character creation, modelling, sculpting, topology, materials, textures, rigging, animation, creatures, environments, procedural generation, visual effects, optimisation and exporting into Unity.
+
+We should approach Blender as the foundation of Aetheria's visual production pipeline.
+
+The goal is to create an asset-production system that allows a very small development team to produce an enormous amount of visually consistent, high-quality content without manually rebuilding everything from scratch.
+
+I would organise this around one central principle:
+
+Create once, reuse intelligently, customise extensively, and make every asset production-ready.
+
+### 1\. Blender Upgrade V3 — The master vision
+
+![Beginner’s Guide to 3D Anime Sculpting: Starting from Scratch | Coloso.](https://images.openai.com/static-rsc-4/q8UORgDyT7mSgusuIQuUVQCjbI_DnE9eCnEfoTZ4SK3X7L7kvZ7PR0p41_wsBuErc7TtB4n3yNaS7BZ3onehoORcv2cUMMIJj2HritYjCBv_tPDq1cWMbbzG8G7NdhKkH35VvbPi8FeUFbSpYC9qZCIIc71NsNABUcBRWlpWj8VFUu9n9tOIYKvGmyM2Z2gv?purpose=fullsize)
+
+![Stylized Fantasy Environment House Modeling: Alignment and Scale - CG Cookie](https://images.openai.com/static-rsc-4/uLe_c3BtpiGctP_PUI6b77feCGW7U_R-BAMItfbBPE5E8bOTVECioGVLlEsIrwkvXggFPcqVK63bHgWpElwn45ml5b3NgQoVsOFAQruc6BwjDOC-kA7jrU8UBJX1MofXSdt22FgK1m7XdsXoHGJulsHGRf47GhdSjZe9H1b-MRsWzkKkAIsV_E57CQBZ42ZI?purpose=fullsize)
+
+![Create 3d models of creatures by Animalart233 | Fiverr](https://images.openai.com/static-rsc-4/L0v9jMzXTe5i3ssFIWh9X5fqci8UiBH7XgPfhof_drHSdDXbkjFDuQUT25YGvI07NSG5RomGmx1j75IMOKiUgDvno3un1zvGnLESEy2fXVgyHbngzZh-nZNsywqiy4GNWwHxgpINIcNc1Qj7QtTomK77jlEH6ACUHbt7OEhIp9iEXswJ2z6N9_hAwdXEuRMp?purpose=fullsize)
+
+I would split Upgrade V3 into twelve major production departments.
+
+| Department                  | Main objective                             |
+| --------------------------- | ------------------------------------------ |
+| 01. Character Studio        | High-quality humanoid characters           |
+| 02. Creature Studio         | Monsters, bosses and wildlife              |
+| 03. Animation Studio        | Combat, movement and expressions           |
+| 04. Rigging Studio          | Reusable, advanced character rigs          |
+| 05. Environment Studio      | Regions, buildings and landscapes          |
+| 06. Material Studio         | Stylized materials and shaders             |
+| 07. Equipment Studio        | Weapons, armour and accessories            |
+| 08. Procedural Studio       | Automated asset generation                 |
+| 09. VFX Studio              | Magic, combat and environmental effects    |
+| 10. Optimization Studio     | Game-ready assets and LODs                 |
+| 11. Export Studio           | Automated Unity integration                |
+| 12. Asset Management Studio | Asset libraries, validation and versioning |
+
+I would not treat these as twelve unrelated Blender projects.
+
+They should become one connected production ecosystem.
+
+For example, creating a new monster should be able to involve:
+
+* Creature concept and proportions.
+
+* Base mesh generation.
+
+* Sculpting.
+
+* Retopology.
+
+* UV generation.
+
+* Material assignment.
+
+* Rig generation.
+
+* Animation assignment.
+
+* Collision generation.
+
+* LOD generation.
+
+* Export.
+
+* Unity validation.
+
+The fewer repetitive manual steps, the better.
+
+### 2\. Blender upgrades — what I would actually build
+
+### 2.1 Character Studio V3
+
+![Anime Jacket Girl - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/cG3yQQD34xp66UazSmKeSv6z--wHG662qyFNa5qKYArTDKuIrUephuy5hAG5s1tpv-DrMzre76sr-eUWGqVU2nKDE7K7bmNp5d9eiy80OHywvpK16MOCXZEJzqWNvLVw15191Ab0XnS1cBXqMNo-1gzCkAOxuo40dMW75u8DV7n2nEz_aUluGDKWqNHuHk2j?purpose=fullsize)
+
+![二次元角色模型blender角色模型6-blender布的](https://images.openai.com/static-rsc-4/LLz5N_--d1CJveaXqxWRcF4HG1-wgbyW5SVwsrZVVJUGWs531V1_QPHZN2uVv8he3frNcEj5CWur4eYSW_uuswpJf8IsOvArjXwcj4QBB6dCMrpedJxHY5fTrzZ6PyIGe_flboUXKXo93PyhnR3joKmHY3IzPBC3a5Hiool0mDW_iuqFjAUP5BKXIJgj8fiW?purpose=fullsize)
+
+![Cartoon Style, 2D to 3D adaptation \[Topology stage and so on...\] - Works in Progress - Blender Artists Community](https://images.openai.com/static-rsc-4/buGJ3yMSom-M9h-4U3XguUJ4jutWEhFtsSuXRUjwwGA9FtYqRvsVU7ea3vs8I1HmKOSYG_MUjtR1YMbQUEQYLPlUj2XIMa3D7e4Hxuv04R9JvVED4kq3XxDgUR4oeQKaWy7mqdt2ULPsLR4NASUDILF3tOgGxt2N0RJeYtQE2wbVKCXnf1REuG9F98BzqWdr?purpose=fullsize)
+
+![美女角色  古代人物  二次元法师  绑定动画-材质/特效作品-CG美术之家](https://images.openai.com/static-rsc-4/ep0jYnd76NyUhxyvl2KhN6CCTKVDrVYnam479eNJTxguAsV__Lkltp9IuJj86i9t1sV_qAkD8v25bsKbbXS3ZSFDCNgYqbXMT1FPA3_J212BisXr-VXDAD06_YmJiTtIDj_JXXhyh4a-xiGyr3jA-FADN4OL_bidDzjvwFWLii2x1ed97-cc6LzRHeEl5ds0?purpose=fullsize)
+
+![Character Modeling Services by Character Modeling Designer | Fiverr](https://images.openai.com/static-rsc-4/Ytkf5qgh83vFIzdw4kzW8U8_88EF2IOzJfkh68sksExOluS7VMYdQCsp6mCFhiwrX2LOWWo4KeMf6JKPiubTutA6i_V_GG8KFILHOp2pFgLJ6luUdh5tZ5wRrnCQCAKE1RijIEswG3phZUYE30LLYmqIXAs83np7bBrrjrH2JKuPsd9ej4DotiWI3TpMuJNZ?purpose=fullsize)
+
+![Working on Stylized Characters For Games](https://images.openai.com/static-rsc-4/exo15o_oIg3xVyqFs1HYslncWTkNPKfeDYS_8iXiPsYGfn7Jq3eR-2VD2jIC5ZGqvj5Ux3ZFz3iy3d6wjC1IqePo7WzWvgWEeS3SGEni0jYp3g6mOmIg17S66vpluIeUFEwfIrwp3_WICK5cbwsc9B6uFbk4aTWoQkrnWIvmzuvlpq3JnqzojW0EIIHV1uUa?purpose=fullsize)
+
+![3D Anime Character Creation: From Zero to Engine | Coloso.](https://images.openai.com/static-rsc-4/tw-9gZiF6QAJqtonb6qqHPNepb8v2AHQ8G3UMUxMqggfqh2WkYp9OUvg2-vjDqUNdB7WLA3NHO7fxm9bR3b8E_7tC8NRlaXdU7PmEdfSINy6FcEhoC_LvjaE7WsPeB-GN3NI0LJq-CXT13XiJGENLn0vnZP-mQ8AN-d9u1lC_Swge_YrMSKooE_60YW3FZH5?purpose=fullsize)
+
+![Sword Man - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/alEEb04txsms0rgQEno546LSaXfYneKnTz-3VKKRzmH5pnR5zb9wtiy6uMlK4C5AltY5LWB9QXm1WlbQVrzXwunXzeVs4TGYYGCAncCiUzOV_vkwWfiSoTst0DZmj5JF27AOjJgBFbO2MMbECUyF_T2-UsKuH0M_muorjmxjXkN40Chs5vCG11t2TPjFTVXJ?purpose=fullsize)
+
+![Blend Swap | Fantasy Cartoon Character](https://images.openai.com/static-rsc-4/yz8jfle2SOmqR6APa5EBPu7gRPz3CbJlPdvjfY3QTerwzq0Wa3uzXjTGvpZMNyJQ_aIbvoFVPV4xXzwxg-3i-vvP9mYYeemradgOkG4nstt9wg1c1qzvRuEdOq-MACFoVs8NwP5gtIGbP-_GnCLLNnekuGWBP0e5qzRl6UHuI9AGJSbRXaibhTLbN-BaCOcU?purpose=fullsize)
+
+![Character Design  Projects :: Photos, videos, logos, illustrations and branding :: Behance](https://images.openai.com/static-rsc-4/2UQgAUZWwpBBrgJntc9_j1NhrSTRdfo3pZjWrN5Hh1DkHLCAcCUljEqrYnPtDKqrGHX5wne-XdcrOxX4gGEXyL9G9yuRVrYxwAXqYI1z5c_-fZopek8hCEKlvDGdIZCKhivmAPcY2gcJY99MunpNoytcE2vP7CN_gIlUnH2pfxS8FkfXHoE9K5RlUdTD85UZ?purpose=fullsize)
+
+![【Blender初心者】美少女モデル作成動画の復習メモ⑩後ろ髪の仕上げ(作りこみ) - 「Vtuberの雑学メモ帳」](https://images.openai.com/static-rsc-4/13vJ_j2O53Ki4_K0khAWQGKVUlrGURCBj9lpJJffCzYlM-6a1PGUeYZzudcHTTRAsd8PYLcu_j2BDRyRPYWxY6ITni2Ga0TvspWcXicbIkIWK3g2LqDFkenC4okesPHUPsKzyorJnHIm_ofPkWhayNgJ_hX9aclG0g4h1QRgedEN0j5kagCvIRLNsCEJbKBh?purpose=fullsize)
+
+![Building the base mesh using the Skin Modifier - CG Cookie](https://images.openai.com/static-rsc-4/tcJFNEHdBjGBTb-27oLFmsOIf5ONl5gRB1i_mKbAMdc8BDpMQyltAc9HW2_qywDXVDqcvNTgvEW7ujv8Dr7kgaJKypzzIPLRF-8r7tScFGu78RZpiG65WqgeZSt-tSw-mpaVN0vKrYSmGbNjjYJDInIydO4wZJFQ11pzhZF2aFMscLn3miIjLGTuVwijW6qv?purpose=fullsize)
+
+![Anime Guy Swordsman](https://images.openai.com/static-rsc-4/DnPgScRoUbhN88RRqq7He8gKsqtrew6KZLkEY02GHDU6k8c9lY4zewEOCqS_ky1L-5f4QqR5ZpxhmCTTtYOEBTKzGUncNobqI5c0oPOGfPghGxHjEGvfQzmNnMoyu87IO4lKXq2JD2_3eROrQcR4W06jKnMrubOe60isWFizhuyc4tsKrmlfdWABJBlW7c0z?purpose=fullsize)
+
+![【Free DL】オリジナルキャラ「ミゼット-misette」Blender用3DCGフィギュア - FABRICA BRAC SKYFISH - BOOTH](https://images.openai.com/static-rsc-4/kDx9DzeL3ei6rmmQFFh9nWZreFWCQLIh0UsFZmeQF-vKoz8AVaJkEjSgswm70vyy1sHyZCYWus5ur1O5nWKW0E4UfKs_7KKZ4r3UfymAxJV8Z-0TwHX7SRXLx57pFOp_aeTYeRouECCg5qi9TNaVTK0zjvjX9QZtM5M1W85-AfOTOUywZCFCj7IeyHXB5ntX?purpose=fullsize)
+
+![Cannibal: Stylized Character Breakdown](https://images.openai.com/static-rsc-4/w--O7sYrPRNmRZ3QIisYkn3e0bv75U-3Wqn4mWZn2Bxx61vMrcwDLinb3J9ux5as2TTazBtkYOVvj86YMIujKWiVeUZNwxFKHMaRa2VNx9c5Rub3SxtCRhzmAYptXEKcv1yt6v4UfuBsOc7KK7LC_ZxAJfOG-gZRRRFmKgLmmQStB9135sM-jmEdqXyM_PQX?purpose=fullsize)
+
+I would make character production one of the most sophisticated parts of the pipeline.
+
+### New additions
+
+Character generation and customisation
+
+* Male and female base meshes.
+
+* Multiple body proportions.
+
+* Adjustable height and build.
+
+* Head-shape presets.
+
+* Facial feature controls.
+
+* Eye-shape and eye-size controls.
+
+* Nose, jaw and mouth adjustments.
+
+* Ear shape variations.
+
+* Skin-tone variations.
+
+* Hairline variations.
+
+* Body proportion presets.
+
+* Race-specific anatomical features.
+
+* Fantasy ears, horns, tails and wings.
+
+* Age and body-type variants.
+
+* Outfit and accessory attachment points.
+
+Face production
+
+* Dedicated facial topology standards.
+
+* Facial expression shape keys.
+
+* Blink and eye movement systems.
+
+* Lip-sync shape keys.
+
+* Phoneme sets.
+
+* Eyebrow controls.
+
+* Eye direction controls.
+
+* Emotion presets.
+
+* Facial deformation testing.
+
+Hair production
+
+I would give hair its own production system.
+
+* Procedural hair cards.
+
+* Hair clumps.
+
+* Stylised anime spikes.
+
+* Long hair.
+
+* Braids.
+
+* Ponytails.
+
+* Curly hair.
+
+* Bangs.
+
+* Facial hair.
+
+* Hair accessories.
+
+* Physics-ready hair sections.
+
+* Hair LOD generation.
+
+Character outfit system
+
+Rather than building every outfit from scratch, develop reusable clothing components.
+
+For example:
+
+* Base clothing.
+
+* Shirts.
+
+* Trousers.
+
+* Skirts.
+
+* Robes.
+
+* Cloaks.
+
+* Gloves.
+
+* Boots.
+
+* Armour pieces.
+
+* Belts.
+
+* Shoulder guards.
+
+* Neck accessories.
+
+* Back accessories.
+
+Add a modular outfit assembly tool that automatically attaches components to compatible body rigs.
+
+### My additional recommendation: Character DNA
+
+Give every character a structured appearance profile.
+
+This is not genetic simulation. It is a reproducible character-creation specification.
+
+For example:
+
+```json
+{
+  "character_id": "CHR_0001",
+  "body_preset": "athletic_medium",
+  "head_preset": "soft_angular",
+  "eye_preset": "large_anime",
+  "hair_style": "layered_medium",
+  "hair_color": "silver",
+  "skin_preset": "warm_light",
+  "race_features": [],
+  "outfit_id": "OUT_ADVENTURER_01",
+  "rig_profile": "AETHERIA_HUMANOID_V3"
+}
+```
+
+This means a character can be regenerated, modified and exported without relying on somebody remembering every modelling decision.
+
+The profile should store stable parameters and references, not depend on fragile Blender object names.
+
+### 2.2 Creature Studio V3
+
+![Dragon Creature Sculpt - ZBrushCentral](https://images.openai.com/static-rsc-4/iFAwr2a16cpjJFg1fnCdnvyqnMUCLI-en7wovpLcs68E2nBC2DYKgRJ3ZWVOJG2zsMjO-J-iWeC2mHiEualmyYDsmNKPQJcufrvDKlsLuP3Vc_WItkdd1geDrTP-MW6fuVTwcoHPwQBvM6yKWnGLWJJoD7j4hcXre2yaaghj3Uo20vK2wzR3CJIEMzTn30uR?purpose=fullsize)
+
+![Wolf_B3 - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/WK7gaOMD7s_vCVf2K8dydn36Laxw7ClLK7BVmFPHEXA9oxHgpgPKu3f75ErAYJgWPj66tx6tCp_zGnS1ySnQeI5FDbvm4VH2z8rd84SutgLgQSZhvu-5zg29hxBLgjBwJSLzlooVIUDsQmDIpP-JbYsy4VJy1P5yZ912RX9ci0tr0OCDl-DeneX6DfgKpO6C?purpose=fullsize)
+
+![Swarm Knight - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/tAWGbCCv5YoGbC2qI9V3pTSIhmxKNUQXDndy7NyX4sfjX_JWPLQ3Tcfbv_SDLvJJFizCkiD1s8af5nbWqy-7fk0vX3OmOp76rovfSJ9bmiwbI3ucJJDCQEq3cJcMXBw3hQfaSIqcI-X3rePzVX7MVKXAwh447BuuLtoxNBGcQ9y0C2cqkEArbWXX_RxY1wV4?purpose=fullsize)
+
+![Modelling additional Basemeshes - Stylized Character Workflow - Blender Studio](https://images.openai.com/static-rsc-4/QgR_9Uinb3luxgK6WhUmOML08j2ivXYDob0Rn3btmaIBTS-lN7MAf6Vrc75nPtnG1HKuko4meeDitaIuqVrvhnJAAkIbpncR3E6T099B2QU71DFQodC-cbbbB1cp6ME-hotQiB1WRWIlrSZmrGumiNz4ERblbo0h2lhunHfNcgBk3kMuix-YutdpUdxQLptF?purpose=fullsize)
+
+![3DCGクリエイター KEN@b3d | コロソ.](https://images.openai.com/static-rsc-4/JgBrQKjGqgNOleNNFNzz5vGQhjemDINaiLAuo3GYRvNM7mKaD-LM1U-8CRHxQTl8ETkcluT03R38asJUcC0RT3oJHsq4mVEsGHX1bSPs7SptlXUHaiT53NLSps7G7eaJv9lUw-RYs6D9dBNntRmU3lI8zSPBtj-UcsUhOhBAIaS-3qjC0TMooPya7ixWYVlV?purpose=fullsize)
+
+![Alpha - Spring - Blender Studio](https://images.openai.com/static-rsc-4/kkByXGmUzwhtKTdOo6lS8iAWn30afVizwiuzNevlYnuCw9Dw85TiuW1AFUIn2E5fNemr8YYBbDjC6TEOyplh2k06YmVtjcpqA_1lTvO79sv8zSanQMLAxoA4ofCnpvo9MbN6UiLnBQqDCwnM_scs_zfrVR5qyFqkVNL0SCW7wyKt7v7sCLTNcKIRyf76vBQf?purpose=fullsize)
+
+![3D artist — polycount](https://images.openai.com/static-rsc-4/FA3yO3LgnUxtcAKLBxOJKAu6_4-jm5OELPvPaXXxxsnoikJ79N4bDKK2UML_kunLy0oid56cnULK1o3uU1cE7NVGGwLz7kAdWGOd7a7_B497ss8r0Y3I2tEAYtPcbW0FxF7pMBN7y-7pskp90rZ3ioaWzY_Az78jv3jEWoJuuUGiYWdleQgZjJp6lYT6Uo4h?purpose=fullsize)
+
+![Fantasy Monster : Giant Boss - Buy Royalty Free 3D model by HATOGAME \[0adc265\] - Sketchfab Store](https://images.openai.com/static-rsc-4/SLFy7osM2AQpy450g96_esGMk44ad5pBnPJyujUOA6gt0W0yL7uTiwkige7W2AwghDnaUOVx2ADC-2-LVZSUwQscnWurI-UxU14Tg1ooRnipW7LqfcTG3q0Man0vpRGOUv_51MyFuxBbQvh6M8Er2X7zkbrduXCz9RM6ckAi3r2EtGyDkLJzkCcOZWAXmA-t?purpose=fullsize)
+
+![Blender 4 Sculpting Brushes: Create Amazing Sculpts Quickly | GameDev.tv](https://images.openai.com/static-rsc-4/flbJUYK1ey2bTepSnj0H9VWfz7Sbl3Y7MdZLBF34PAUVrnaCJT3-K8cri-Yhjh8AiUl1g-avZt4lLRHWnfPXlEaL65Hs6L8QJ8q_6H-xyKea8eZDzHCx4ak_GckRLZ6HAZw8MvOifpX-qoH4M0AvnjzpZsZzCFHRNWcd6S4NsGBkNfDDPohWf6il-pYT9CFZ?purpose=fullsize)
+
+![虫魑(Insect monster) - ZBrushCentral](https://images.openai.com/static-rsc-4/136B-1Cgz7IAWTEWNvCYLejiX7e5-PxTljH-eR0Zwtyrq9mLBA7q3GkU5ZnGHIkkRMW1PqYuwpi1PxLuCzwcGDh6-RVe6pj6yPWtl76LUmwONkm_xFMQwYbc8lSGAg8luWaWRVIXziRHM_SGpr1GG6koJCpON0QLeK2fmcfG3Jwr1z0YBsP3b62OSBmrny9L?purpose=fullsize)
+
+![Gate Guardian/Bestial form - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/Yac1d1mHCqEOQAXpJ3mNUlyBqABMHmz6NkRboSuyusS6LqmZXDuENl1EdytTVdPDPr7ik67zKJ4gLWglD6Y-yXLUYvntiJ6lQ5D8btnWhvv7WFjH5L0JjJIJ3e9kMPbPHwkgNpyp2wIB6j6PPgJMvyHJg0EcMiz5YD0Bz2yQM7MJoZ4beez6WUQ4ml8SNgmU?purpose=fullsize)
+
+![Model 3D Divine Wolf B2 - Descarcă Creaturi mitologice pe 3DModels.org](https://images.openai.com/static-rsc-4/dV4Li0ZLXykxSA_dR-K3ArSFMXSmtBAn61NfiQgmgtw5vRyif8MJRnc1a38pOTbv_wQGv_UG19HzGWq4eMXbaaSOOLIwU7iEFQ9tbFp3SoKSZm11di_aBcPkhGWokDYK3euOiiGzoGzAGSqfa575NNZHGXIwPMnU_qWXsTXBevVClTU8GDG9j1QxluHWpvsS?purpose=fullsize)
+
+![Monsters set 2: "Villain Bosses" | GameDev Market](https://images.openai.com/static-rsc-4/7_f_emM1_hkRZAXSvsenl7-b618IetBK3vHSyMxkEQXOFNckpnSG-94453uE2_ZiWVITSGJ9T-Y7SSP9oSl5lHB9zYmZ7bjRG2BQQzXptnnB96K4Zwl8cF18graZWcDXkZWpoYKr04bLIAaSbMDqVw2baCs-GQkaMihWHkdiY7RAPIJUikIk-QDVS7rp94au?purpose=fullsize)
+
+![Flea (Blender 4.0 alpha) - Works in Progress - Blender Artists Community](https://images.openai.com/static-rsc-4/9wTQRcxZuo6O2dCBOBh8f3PHdD1CqYxoF7ccW7H85wD29hiMj7C0DHVP3_77Rt64VD5KTaLz-Kw4J7V6eS7Wp01vcnuNzxLzswOTSB3SGnLg2zjjh7yqtWul24Y1sZUgGBwUjBySBt0Rbz2X6fkN2mnb5E8aipBNUfe-0sysLKBbKLPq23_Pgawfnj5Du2OQ?purpose=fullsize)
+
+![Demon Troll - Stylized Devils - RPG Character Animated Monster Warrior - #22](https://images.openai.com/static-rsc-4/g5lWw_CYOEW1mTTE8B36-8oEMhT0RYV7jOQ6xcMm44axFtji0eKICbLTvBOn36zorKDuVF6bc6eVVreIg-oWSQxSvKHQQol18t-hIoN4Q0tWhprepMl8bCKlAjEIwtfTQPLBy195Bb1HWHtkaaUdrBMpFwdem2qBaOKY7_4fep9b0HHkknG0fqbrIZL7uMK_?purpose=fullsize)
+
+![Creature Kitbash - Insects and creatures Pack - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/jR8pQc-k-TnwLCkRHdo9LncMBCUS9ImMxthFuvAGHP0ZKqpF8BLWzdZCM5zqdWijiDqSaIE0wgUqSw1FfchAjY4KCqkQoki_2muwjiV-uye4dMhqEp6nnzd-llEDg-lsQKemgoCpsDyB3m9KmcM9Kq17RPIfWRaEYvPLUzbmmhYOwnljcoQ3k0u7cJH0uUWR?purpose=fullsize)
+
+This should be one of the largest upgrades.
+
+Aetheria's creature ecosystem needs an asset pipeline capable of handling hundreds of distinct creatures and thousands of population variations.
+
+### New creature production categories
+
+| Category    | Production additions                        |
+| ----------- | ------------------------------------------- |
+| Beasts      | Quadruped rigs, paws, claws, tails          |
+| Humanoids   | Biped rigs, armour and equipment            |
+| Dragons     | Wings, necks, tails, flight rigs            |
+| Insects     | Multi-leg rigs, mandibles, segmented bodies |
+| Serpents    | Flexible spine and locomotion               |
+| Aquatic     | Swimming, fins and underwater rigs          |
+| Avian       | Wing deformation and flight                 |
+| Elementals  | Procedural geometry and magical surfaces    |
+| Giants      | Scaled rigs and large-scale animation       |
+| Aberrations | Modular anatomy and unusual deformation     |
+
+### Creature construction tools
+
+I would add:
+
+* Procedural horn generation.
+
+* Procedural spike generation.
+
+* Scale placement.
+
+* Fur and feather generation.
+
+* Claw generation.
+
+* Tail construction.
+
+* Wing construction.
+
+* Mandible construction.
+
+* Eye placement.
+
+* Teeth generation.
+
+* Armour plate placement.
+
+* Creature skin pattern generation.
+
+* Creature colour variation.
+
+* Scar and wound placement.
+
+* Asymmetrical features.
+
+* Mutation generation.
+
+### Creature variation engine
+
+One of my favourite potential additions:
+
+Take one base creature and create controlled variants.
+
+For example:
+
+![芬里尔雪狼-ElfArtWorld](https://images.openai.com/static-rsc-4/6lNdQdq1-gPH0hMIRstGMjtEVFlbuouqnFE9JGcg6u7uBpg9QOV4c3Uj3jxeeSVNvWFfKiLJweaDcN0-VbJrJBkubsNb7KZGAYz-OTotLaAGBvjSxQ0STCDTfEeVgZTJqeisLYzhV8XvE9GNtulzGafySY7sq9FIDqHivLRtBebxeKJehGpbLwpVmueOgRBU?purpose=fullsize)
+
+Common Wolf
+
+Base species
+
+![Glacial Spirit Wolf - gameready - BOOTH](https://images.openai.com/static-rsc-4/HwlKLj32dLeIp6gv6sRcpiJlcD0Yb8JCUQks818-HIOE6Mj8W64s8-_uIZgTO4L5Ugl4S3S5NKuFNS-aG-lJw8GuCaqfqN4Q5O8fo_FC-do8ODcjoi2Mrm6ZOXfcdIaHPe3f3_THH-pEc_nbsen_i5icvaWLBXXVxZwfy7VTST6nuhMGu9J8BVP-mZhiRVTD?purpose=fullsize)
+
+Frost Wolf
+
+Environmental variant
+
+![Embrace the Mystique: Red and Black Spirit Wolf](https://images.openai.com/static-rsc-4/OzLmJf6kQP0iIm9oe4qhtGxAd0-84Y1UfDfLHDhYE_WK0j1tO7btspVc2EM9nRrA6Bp7I23BQrO_HI3HfY-wRo_Lh1-nPuhYyJJQUoiWYRwLQzSuUWWMM-if6fXapb9gpc1t5VJFD3UBE76oRTtGB0ByMlBfXC_lusXJZ1N6JhCHgP1phaExmxk-GD6GGOE8?purpose=fullsize)
+
+Shadow Wolf
+
+Magical mutation
+
+![Stone wolf. Generate ai](https://images.openai.com/static-rsc-4/9ZoOV84GM4jWVoZUMODQwX2ieX0yHT9NwoFpWXVmQ94ci36Cn0rXfRHKYWgV4lcM8ts8GZHogjiUwatS54dD1iK3kkIOfX4n2F3JQngeqLUEXK6jSFEvYqd9BaPprfIgBVEfuQo3y-fCeQBdg1cG6-rG9yW0hftsviEHIVstpIdFqSgVRxs2qTmwAFa6UXcT?purpose=fullsize)
+
+Ancient Alpha
+
+Boss-scale variant
+
+The generator should change:
+
+* Silhouette.
+
+* Proportions.
+
+* Materials.
+
+* Markings.
+
+* Equipment.
+
+* Horns or spikes.
+
+* Scale.
+
+* Animation profile where required.
+
+But it should preserve the species' underlying identity.
+
+A Frost Wolf should still look recognisably like a wolf.
+
+### Creature quality-control additions
+
+Every generated creature should be checked for:
+
+* Intersecting geometry.
+
+* Missing faces.
+
+* Broken normals.
+
+* Unapplied transforms.
+
+* Invalid material references.
+
+* Rig compatibility.
+
+* Weight painting problems.
+
+* Missing animations.
+
+* Invalid collision geometry.
+
+* Excessive polygon count.
+
+* Missing LODs.
+
+* Invalid export settings.
+
+I would also add automatic screenshots and turntable renders for every creature so the bestiary can be visually reviewed without opening every project individually.
+
+### 2.3 Rigging Studio V3
+
+![4.5 viewport got worse compared to 4.4? at least for display character animations - Blender Development Discussion - Blender Artists Community](https://images.openai.com/static-rsc-4/Bqx0kQV-7coye5bArHh24PLKFbzaIUTKA0RJdU_aANGe8MCQJVyRC6a97vjjX6G3u0CkOY78hzx9b-5gvr6ArGn9k9tOGmWjlzvlrIqrD4plBF8YBYwjScNP9cGNKNR3KzVjgsfzqEARWEQe-pNeHRsWiuoTnv1nMwJgpTOqTWADOZ3yAhW0QL0pde2dOMqY?purpose=fullsize)
+
+![General Advice on Quadrupeds - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/LPU3MFd_ZmtBF23qm3EJyeGEUzaA5DH4NGLxzzb3XYxdiZRh08U5OdfeD8cfi3YEbc0U0yHptJZgVjF0NCtU65njMtOEQa5bNulcSn4JCeYj5tnaH3m9vvKE2tUfUEi-09QB7bgQ1Hy3m9L_KqdUpSbPevSytk_LL_OLDYdi_3bCa-ajmhLgNIewtiB1UWJx?purpose=fullsize)
+
+![Wing-A12345-Animated 3D Model by Animated3d](https://images.openai.com/static-rsc-4/OMBeQlH4qiD2o_IU5esutnDqCRAUklZBm5ZkwTCoGTlfAtcLJlfvT5-1Kd7dfroL200nX2naqi-ILvpcopKP8XlRbADGicANusVfKRhqHiZRCG0bppBq76ylY6ymIokLgdzawji3Jxl_fzG88YwXGH4xFBm6ChH15PKpc_IgPIqk51nWwh4XYUBh_qa96K8N?purpose=fullsize)
+
+![blender使用faceit绑定自己的表情动作_blender faceit-CSDN博客](https://images.openai.com/static-rsc-4/5B9lEjzpJoHadv3I0WPzzHdv2ZWURmgu3ZNvTpTZcB0ucABcyfvx4EDYti7HVvMEIaQJEjtkTvr7tdKqW770GRU5HkYL1JbxFlQNRwhX1tbb-BkXzJn0v1m1V_iDfnKErHY6pPkIpZXQp5Nvf0DnyXEA3ca-dTVWpza7Sjy3buzLzvvz0JXgfd9u9BARiPE8?purpose=fullsize)
+
+![Rigging - Charge - Blender Studio](https://images.openai.com/static-rsc-4/DEAytgzyGgIRGusugTwUAcA4UOtIbQdFBS-qSBfHEZC-lmI8DWxz3DyI6EJD-8Jc-o4UXBlHNr4quXzbXXbSigoSlHKiscLuyXwpRnnpaSXnLK4VeCXHa_o8VI9RJ8feWRTJ3_rVNN1VkyjZFjKVZkyKAzNQcc8oZNNEU3ihR5avCBL91Kei8hqx6NT7OOml?purpose=fullsize)
+
+![What is wrong with the weight painting that stretches the mesh on this model? - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/7uArqZXnLZIoDJ87UoG_qnfoFWXt-at2UQr9-szKDs9ZAQVTuMUZPDxNurEc36uGwEtPSgl5TnOo2bY1DII0QmUM1JSuape6vk3mHJyaYzpy5Xu3D_tNfyNK7kmzTCyG_j7QG0hilV9kkV0NDRiVr9ARKpviTMESzK6uJqIw-bTeDnOc1nNSxh4IW2Zr1Puw?purpose=fullsize)
+
+![3D Dragon Brown Rigged - TurboSquid 2012375](https://images.openai.com/static-rsc-4/PjyDWmHWDWE9b81W6zdCY7fw2b3U7H2Rn8k99ucI9-3ba7Sxi5cT06_SJqpma2FHB4vlmg698_bUCJ1azbVljESbTJPoNF6W1stFk0yILV-2PtzpATeB7SN4ZtErWCYrFPsjqs8HBnIZgCIzxHOBoWEOlr1M9TbOn9hxbTQJt0qxFHDR-ZY7flBnD_CWrgl4?purpose=fullsize)
+
+![Lip compress - Advanced Facial Rigging - Blender Studio](https://images.openai.com/static-rsc-4/8Zy0JvfYIeepGf85eKllKFCwlJa_s5cFunhfDdzJUqfROLM6W4AWc1pPzpDnZg5vfX1yxuYz7SgCReZkhnh3UiP6_QEXoJRS6-c4QBNM49mZ8kd9jNsOiztcoMYJYIbQHSXTZJfWnpv6kiZ13azxDFc9CRWJ5LcDqD6Fyv7nXlUhmxr_H2tX9G2-MdqU0G31?purpose=fullsize)
+
+![Issues attaching accessories to my character rig. Here's a video and more info on what's going on - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/vURWRoe4ppQwU868KZtOfj1_gZxyughVGQWsiunU-uhjJJ33GPmnmLRcMlY0E26AMrHP5S-Hgx3khjx9N4c52RakjIeaAAXeq180AvwgFNlwea6Sr5BYpSTbeaQLta5N0AejvHE3j6a_cFyKVqGlteeodostz1kUfgUsznmozByVrROkUihoNzLokblOBuZC?purpose=fullsize)
+
+![Quadruped - Metarig - Released Scripts and Themes - Blender Artists Community](https://images.openai.com/static-rsc-4/bTu6L4kpLWq4LqFPiqatszd15zWkybjghZZ4Ygj1rIoZQRkqe-G9o_VuI86rV-0qBKK9kuzRrWj83WoS346MVCE3hwHPL23IVXvvj4G13ontelaD7ys2gVjvHwNKgBToPz1YgEFb3mS9gnlwWsvAfm2UUXF55UxTr55JSOarYQtTZ4Q1ucWSNxrAVHipoEVH?purpose=fullsize)
+
+![Action Constraint Builder - Set Driven Key | Tinkerboi.com](https://images.openai.com/static-rsc-4/JLtJTPjocfcu1fFoUwy5NzCnNhKMcJSq5_O6Il_4ZYELDJlX0jKEcv1p3GZ0xQqYi9rYAatl-clByT_FvnuymCbfEC5bJZVGGhmHLFThUqmpMTNzu80plQ5X2AqYdjDsQkhRbc1uhrS3bX-LvaUl71ZiKoBSDKMB7tHQlLqZL0z1VtK1AhKVZiDjg4tzugW0?purpose=fullsize)
+
+![Toothless - How to Train your Dragon - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/pwJTn5DzU0PtAJ-3JjYle0XLJFRgCzXSqzmfV3jy84imQDSehCdpO9pEN0-t2ESOIExbsFPyosY4JoQQqyn3lcXlfQGMFVHHcz3Q9E5qd73RgnDFMF_2nHNUeZAl9C4qHV46cjYKGb9VYEPXn4XhK3kOqJ_b8C3VApRiClDkIWB_n48AhprnbRSTl9JbPkM-?purpose=fullsize)
+
+![Why shape keys - Facial Rigging - Blender Studio](https://images.openai.com/static-rsc-4/lt4eE9YHk4lArZeb9z367kzbM70RBPLh4WFxREhNh4Z3-VVjt9Z1OTx3qU4Mw098_LW0XeGlpo_PzrZqOuMUWOr98a_-sph1uGR_9LRCsPYC9b6sPmvzAeKZvPHQrap7C8O4b6Bm407UiCFUogPw_9_yyJ4F_y5HWHwt9-Ht5_rnh5XPahhk7zcISzEi3VTU?purpose=fullsize)
+
+I would build a reusable rig library.
+
+### Rig families
+
+* Humanoid.
+
+* Small humanoid.
+
+* Large humanoid.
+
+* Quadruped.
+
+* Canine.
+
+* Feline.
+
+* Avian.
+
+* Dragon.
+
+* Serpent.
+
+* Insect.
+
+* Aquatic.
+
+* Multi-limbed aberration.
+
+### Advanced rig additions
+
+* IK/FK switching.
+
+* Foot locking.
+
+* Hand controls.
+
+* Finger controls.
+
+* Spine controls.
+
+* Tail controls.
+
+* Wing controls.
+
+* Neck controls.
+
+* Head tracking.
+
+* Eye tracking.
+
+* Facial controls.
+
+* Jaw controls.
+
+* Deformation helpers.
+
+* Twist bones.
+
+* Secondary motion.
+
+* Animation constraints.
+
+* Automatic rig validation.
+
+### Automatic weight painting improvements
+
+Add a weight-painting assistant that:
+
+* Generates initial weights.
+
+* Detects excessive influence counts.
+
+* Detects unweighted vertices.
+
+* Identifies sharp deformation problems.
+
+* Checks elbow and knee bending.
+
+* Tests shoulder movement.
+
+* Tests hip movement.
+
+* Tests wrist rotation.
+
+* Tests neck deformation.
+
+* Tests tail deformation.
+
+A critical addition: create a standard deformation-test animation that every new rig must pass before approval.
+
+### Rig compatibility
+
+Create a standard export skeleton for Unity humanoid characters, with separate creature skeleton standards.
+
+Do not force every creature into a humanoid skeleton.
+
+The goal is reusable animation where it is appropriate, not universal rigs that compromise animation quality.
+
+### 2.4 Animation Studio V3
+
+![Sword sheath AnimSet | Fab](https://images.openai.com/static-rsc-4/fySkuYWbBVOnnHm5OahCoywtduiKBectLCGAqMgdDk69WbtbnW7VXIiVHCG9M-xZsZ-CkRxuCig-gGPVY2PGmqv7RbsyBBfVVls-DZ97QfcSqCQ5ocMa-Z8l2Gwp5SKd2JkV3x_N-QCUI3bCSx415w9-hvLGwB0rSLVMkAxQK2ZRu46mpAoKabBHcDz5gBgP?purpose=fullsize)
+
+![Forest Baronto - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/3qPMnByPHVpliAQYxNVpjcL40BNe2k67nwg0tZsDfbYfqM4h6MMBhEvIqYO5ouQ6G5nqd4bmK71TiUVdKKNJTvlm0JsvcLZzjXaffQNb45J5f8SJGS9l-jNraWb3aJ2J_fZ0uPyrvJDCf8QD9hb8cnc5ylj7ghWmnYtKHsQ8Lbd9l-Hlspsw_ixUgwu5scTN?purpose=fullsize)
+
+![How do you actually animate with the pose library? - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/LPv1pAVAcJeA9WLFsLbeujJ264YIPB05ZbgjN0bQJaa3WCBEXInesYQf9l2-3p3_d0laZXMYL0DgIbff-H2WT8IVB5ZgLU4xqV4J4YA6byEGvBLna271WfyUqKKq-i06HL5AiJnMx1LPPmgJuY2kx2UoMV8yk7kEGvT8Q3xAqE_jOjmZjTgiIczSYoBAgsZC?purpose=fullsize)
+
+![TUTO Blender : animer un Run Cycle Pose-to-Pose pro sur Tuto.com](https://images.openai.com/static-rsc-4/EiPXEsx9uFlBZLqPRhGiicyyEmflL0Asdr53Cdia125uCLpbdPXw3IIAEgOJZv9uXDgpWeDfuJShj2XXDrpqDScdnPiPQeLKifRYTo84DubDWN1IKmxHGVIwTYhvGnPdQVPgDej1OHMBgm0iuHpKq6CBn_jj1tDygwjI5TOHgo_R5JJt8_eBxZ-1pvOOvaos?purpose=fullsize)
+
+![Combo Attack Animation Test Made in Blender](https://images.openai.com/static-rsc-4/_zI3xnocxp6c92QqD3lDseZDJISHnK_bYjzz-I2-9F8P63k5oMAWGABv5Xq0x5bIp6a22BZgAj0Mjtb7QkqUqZ39bmDbia5LwpvMjRIfECV0Wm83vWVfUau6AvAoi--JAKVSQep_8oro14NxAGfUcFjYLm8Xoc1tNZs5KF7mFBrQ-gqTQ-Ojk5SCFS-CXvI8?purpose=fullsize)
+
+![Hyena-B2-Animated 3D Model by Animated3d](https://images.openai.com/static-rsc-4/z0d056qIPFFhzLQIkvrAcLyFBkrdSWtrhAeyVDRtbqyjxq_o1KssJ9ikQ0r-tBu8ErTcAQv2VQG-jKViIrnF3xZ8q3aMHTVCAEzr3zS5A9yL157gbf5SjiYtvmczTDdoajZ7UhtzSMtNuy7cCJBBcC0-rV7-muuM_FOgQhpx79BKG4jMrDdUQ19oy4rN5Zac?purpose=fullsize)
+
+![Kina Lillett <Player> now working on her wrinkle map + rigging - Works in Progress - Blender Artists Community](https://images.openai.com/static-rsc-4/jUsfhvHFawMno8ENzpR60fAYvQ3iofSj6LmfVezwbY3fD9yKBiH03v7zQaFjDRYjJCc3fnqdJNOnm3Y-WFmRNxz5hLob3UH8q6zeHp2jCXHT1sW5mrMTphW12LfMyVrZ0mKATl4hOW6VDvyux360gqlIsO6xHTJB5Zg5XMaNRf0asL5uo9mXR1ILlpvCHjL6?purpose=fullsize)
+
+![CTRL + Shift + V doesn't work properly - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/f4f2oNTU-2bpg1A6J0z9U3_5zbLFwEmuklnWMMjarBDLMVBjlDK3oyYeIEI2jC_t1_qtG4zQSIndaZmvDoP25ariDOQ7jB5Bi0Xf9PnvGpkfzFG2uMEoyYa3pCuCA33PHpTVUP7zl4-aAB3OORCPZ8y03yggS53wuqLNU8xJ491i3uV6qZlEFNt7sBvuQFEt?purpose=fullsize)
+
+![Magik - Blender Only 3D Model by Animator45](https://images.openai.com/static-rsc-4/RvFn_YP7fH3wilhpLzCCbKCyttEaCGjHGh-Lq82sljf-E-RbAzbcvm4ipsjXhiuOI1No3IJGYMd8Y-fWStVAFGwRbKSHun3uh2sH38oqMbWeXOk7Kau6GdT7R8UIueTB5Pnm1j7Stn7oWtul6_AV0qm2a6uCbpOWSQOmag9qrxUCb5p0BXxJX-VinD2TChJ_?purpose=fullsize)
+
+![Ctrl shift v not mirror properly - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/z6zl3nqmum1ZTJBWLnITI06RqgIz-YPRsnxkJDJ68QsQLDw23jZ7jtk3nRY0S715asdiVgI5IzGc2uDdRrWrHGPnU17v8qDD2VFrZA5lwl6VbKhOnWlKADvM9IF8oG-I0IQERRvcqR-jc53sbrRJImUipXtDbXtr1nS2hCGrkUUwUfXF0uHxzq_RfBcWpcG9?purpose=fullsize)
+
+![Customisable Female Basemesh v2.1 - Blender 5.0+ - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/YIDNRV2NJ0yQR0dtv9rDh5nIOIeEGb1aiiQFotbeCIjGqsKSACJsEJWJpzRrd5linRMJnMFN3CXgbi2ieMBDirYmG3Dz3_2p2-mLqmQwPUf95lP0Y39dPJ9l-sbZdfi7JaXbH8UaYiSafHRsku0c0xbZEJwCE84H94gLqy3yEW5-Xuek-PNRUfF_p7Fh3oqq?purpose=fullsize)
+
+![How to repeat a non-linear forward motion NLA Action Strip for a run cycle? - #2 by potus98 - Animation and Rigging - Blender Artists Community](https://images.openai.com/static-rsc-4/wBYlERRe8ZIQZyWs1tWHdOuq1Kn2aExCw8hB_D2MniaACbwtxwX1-wOKuRoUwufWtBXtmgUJtAkOnAuKRzPh8BhfwyjW7kg4BJlAeS4ALgw6gc-VkJqVzS95n8Zc5jEHtmYPiWSCs-ENvu8GpahLbnfpXVaBn7xv0Q_Qzq62Dv6VMbB-s2HM571bunZnBffN?purpose=fullsize)
+
+![Epic fantasy fight animation study - Animations - Blender Artists Community](https://images.openai.com/static-rsc-4/39nlwpHmKBrR1xcGTIT5ibJLVvjapkvNI3Ge8a-4sB81Dt0IZeUYIEw3KIXzrZd9KdkU1ff2OerY67RVXApi8YNZTlGGkThEolzeg6wSC-9lt32d-OThKm77YScf1IAwUfQVJurwTSP_oI6ELMmyD-bKlL5Rv53pUht4gtZh1nvtydNxSU26Kvg4mn3x0evu?purpose=fullsize)
+
+![Creator Spotlight: How Animator Bavelly Brings Warrior Cats and Prehistoric Animals to Life - Community & Events - Developer Forum | Roblox](https://images.openai.com/static-rsc-4/ISeW3JuiEEittVbq-F_sOBzZfh6xEe8xOp_4fqbo0c_O9sTpyHD93vtwnQUMMrV_phgdYCZpyyN5MwgF9Nwts6Uuel420so8hE-zv-kVzgk90HSiDn2xTFyJj2Q_mQ-9TLzDvjUWddJrmhdI7-gazlxKQ9gQ66LDwKExVGA9C2260o-aJZE_RlUbTGHyQrPt?purpose=fullsize)
+
+![Male - Archer RPG Game Character - Elric 3D Model by Hisqiefurqoni](https://images.openai.com/static-rsc-4/D4-BIlgUttB22FaE_tZasqhLhZLnbTWHZHLMbe-zkMCHenjfoCpzqedglWldhERLjACvWi2iUTFoe-rSa4APqai07SIjOzqRioiP5ZHTIHe4_hg74dgyKPUgykx9uQVD4I2H27geDViBWzXevSmFaKKfsSeWEcHvbtbJJW8EJg7QxF9iaPZhBNspo2tDVxhZ?purpose=fullsize)
+
+![Ojisan Elf- Sui 3D model animated | CGTrader](https://images.openai.com/static-rsc-4/J6AxwyziQgEDYiC4s_RTA49rNPRJm-PW_mQyHCIktmnLlSSZB1JK5OjNTkebAnr-NsOPcFdEcH_xt7CWU_FHSiFjTXTwX99Ipm0XSIfK2GAJYiibp6mSME3LUcFM0zgY_ppYgT1pc1ShH4Tlv637DyYqPM6EO0yWcN_jWbTiMsB7hWovpGbJCItzwgA1lfPE?purpose=fullsize)
+
+This is where I would invest heavily.
+
+A beautiful model with mediocre animation will still look like a mediocre game.
+
+### Humanoid animation library
+
+Create a central animation library covering:
+
+Locomotion
+
+* Idle.
+
+* Walk.
+
+* Jog.
+
+* Sprint.
+
+* Backward movement.
+
+* Strafing.
+
+* Jump.
+
+* Fall.
+
+* Land.
+
+* Crouch.
+
+* Swim.
+
+* Climb.
+
+* Roll.
+
+* Dodge.
+
+Combat
+
+* Light attacks.
+
+* Heavy attacks.
+
+* Combos.
+
+* Charged attacks.
+
+* Aerial attacks.
+
+* Parries.
+
+* Blocks.
+
+* Perfect dodges.
+
+* Hit reactions.
+
+* Stagger.
+
+* Knockdown.
+
+* Get-up.
+
+* Execution.
+
+* Victory.
+
+* Defeat.
+
+Interactions
+
+* Talking.
+
+* Greeting.
+
+* Sitting.
+
+* Standing.
+
+* Drinking.
+
+* Eating.
+
+* Reading.
+
+* Picking up objects.
+
+* Opening doors.
+
+* Gathering.
+
+* Crafting.
+
+* Fishing.
+
+* Climbing ladders.
+
+Emotions
+
+* Happiness.
+
+* Sadness.
+
+* Anger.
+
+* Fear.
+
+* Surprise.
+
+* Confusion.
+
+* Embarrassment.
+
+* Determination.
+
+* Exhaustion.
+
+### Animation additions that would make a huge difference
+
+Motion matching preparation
+
+Organise animation clips with consistent metadata, contact markers, root-motion information and movement tags. This makes it possible to experiment with motion matching later without rebuilding the entire library.
+
+Animation variation
+
+Generate controlled animation variations:
+
+* Different idle poses.
+
+* Different walk personalities.
+
+* Different running styles.
+
+* Different attack recoveries.
+
+* Different landing reactions.
+
+* Different victory poses.
+
+Animation retargeting
+
+Build tools to retarget compatible animations between characters with different proportions.
+
+Animation validation
+
+Automatically check:
+
+* Foot sliding.
+
+* Root movement.
+
+* Animation duration.
+
+* Missing keyframes.
+
+* Bone naming.
+
+* Contact timing.
+
+* Loop continuity.
+
+* Unintended mesh penetration.
+
+### 2.5 Environment Studio V3
+
+![Stylized Nature (Nature, Forest, Stylized Forest, Forest Pack, Nature Pack) | Fab](https://images.openai.com/static-rsc-4/M5kFmum6mkVFsUd6fXraAORXUlFk_4xlwe8QUdaHH23e7R78KRC1Vp_oYpm8lf9nd1swiwN_M8Pmtr6IWDId4Kg-7qkQAfIiiTPA2phA7vYQkXXNthjzmvL_o1Ys8RnyqiSRXJy8tAxWDtCJz1Ju_I39nrdO-qzu1vD4op6gGRrLQB9y4iP6jcfhBwpVVA7f?purpose=fullsize)
+
+![Village Test - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/JY0mguqdIK-9vS4cnNIsIbiMJsG-yn9wZX79uFr1pb8wyyGqawGIp80i5km6zmQ_uZEVBRIa2cP0lccuOb13xbMVqzEpH6vE5Onqy3HLeXunKrO1KV9InC9p6E-zYZV-M1hOrdoiYymUf8S9Ujv-_LcBn1FnqXhW2S-DoLiQcVfAq-J99t3VA4KRm15-LMBE?purpose=fullsize)
+
+![Geometry node landscape with erosion simulation - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/hjMA0RvR2cXn-xJzPRCZbGoYg8DUdAIQ2OIKeGR78SaA9m9GX78o_Zrfj5LvEfB2F8MBICmNcrSqvc5IIJFJTONHApY6v_O-0BIgML7EAQBLVVQDYqKBmNrj3FvP-hMMfMrsxM4fNala3pF0AH2zHcmVJLTDcRpgtrggBE-1_gjQ1I5BT9_RyVZnxfYRzaRk?purpose=fullsize)
+
+![Tomb - Cycles Environment Design - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/xH7iHrFv9k7qm79MoGso7PTGj1INfqvbGutBt7wvBJsf3tWChCfqGyn7JQi4rujqDSDzEN-MWXxbnOtO3VQrjX-qzwAO1CW_PEALXrjSpNUy33-x0b0NPulFo-qu_bWr66XBxq1aU_KiJTI7Pm-hagaZl3PJK0qhZx9clcsFUCACXMjiMxVMxYPcC5u-GNMj?purpose=fullsize)
+
+![Tree Toning - stylized trees assets - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/BTFSfUzYjj-SHtuBPj-9VPna48WHrFSHXqC1OOhzWTXVhQelImdzfZFNvz5z8AdBkSx9-LcgNh3VRl4pm_mZUVCqGSDR-GBJAnLaWXupXNsOyvGslU1jE2gfNLT9_qOLPN-18uYHYq1QEKPDJ0sgC6TY3GV80TxP06i362fJd1iKjrF22-EeGm3myXYTDjIW?purpose=fullsize)
+
+![Blender Environment - Final Render - Show - GameDev.tv](https://images.openai.com/static-rsc-4/VABfMXLdtGTc6oaUzt-pb9blXIM0Nrfa_hbn4WqZwhLUTjaSwXlB8jE_Fw_UbcNkG82SkKIkhpD1j6VOv-_AvEreQH2mCwRtrFYDi0b0MEe1knv3njFbBj6EDI6dOWyAUqyMies2L9fw0fo6R_Qi-Fcjb8S4iQ3yrElPE-YVeM0XWQjzVswoWr2yfEhbidaR?purpose=fullsize)
+
+![Create Fairytale-Style 3D Scenes with This Fantasy Environment Package](https://images.openai.com/static-rsc-4/LTgEbl5fNXZNvXMqbqBmjMspK4XEHYsCJS67GCDHDq6tkpjYauUj03o3j7Yaxl6O9EyQm1yYEq6ShTSanCj3dChSpT9W_H7jWhssxsy2UzdzDZP-QSGgDCruQ7BYoq5x9tA8kXoi-rMY3w7Iex2G6-8sDyDM2xLppG0ZvifBZbbzjaMyxHvWGrApPs_3vQ51?purpose=fullsize)
+
+![The Dungeon Door - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/hnw45fURGmlPCMzvNJXzcYDvwd9fn7d0dHhYEGcX-105KqGA5qzq6EiBOohQOwmId4sK62HJ2Yf2JZRaOkKG0pn0bPnJNb0jXJbNAqViGDM2006A8f-U8blbUI9_4QSSOcRB6ODa-ONHw3XUCcx-e_hsTzHALgZYroM440jwQvZaZiBsGZVNS9vamGToaUBP?purpose=fullsize)
+
+![Low Poly Shinto Shrine Forest Path \[FINISHED!\] — polycount](https://images.openai.com/static-rsc-4/QlrorGsU7lscuFU_cW4zIw2RCUhW4lP1CuafHCZ6ioSX_KiBudMRyI4jjb95j75usHtciWgFLrWCtR4svPDZPY0yAjd8x60pN0dX4ZHywKZnxAuiQvY4YXy9i6uNZTMLQt830Lln5-AlOP76W8Z0VYCcrJKXHzyHXnxOp1PLDHIIm0-Y9QbvObqaD2B0TDDG?purpose=fullsize)
+
+![Cavern Shrine - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/V9Mcc6L7D0_QhN9W8aUpOzg17IapIMuWirFf-h36P1IFe8f8HJzbKJ19cZPDJRYL8FEzzxJ91GEX16ZPrEK5VP8LmzrhQrIm9yVvQ_lWJHglZ77Zg40JUZOpagyYACY1oIR8S3_u-IXv-dY9LU42HN3ZT3wojg2EdO9wor6MNewFMP496a3kliFXjK3DoFOG?purpose=fullsize)
+
+![Low Poly Forest - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/3aLxT37XnIpbCBt9aQsZ4dJE2L_wdYTKasVeeB-PdW0jMG44kADudA1TnkiKhUHZTvESfGdZ8xneH75k12_cKRqjuhiTBJlBdR3q8_8nfXDAoLSEWZM9uItq-1AW-2-ZeYX2bmo48euumglHsd1jlZnGIn42sAZypKe33p8AwN-OS1MJ8mRmxpJsQ11U7ifJ?purpose=fullsize)
+
+![Light the Beacons - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/FYsTIhqOR3sQiaTRSs46iga6NecYcMDw0ZT70peQP4kaFzrVtSB1KWgoQo8ZC4ZSV92nrVBWsb9SMlqMsGHsfzRFTEYfw7XkFhkoZm_PwkV9tjMiRFdPnHH3zJpFhwkU7x_hxq5bTysgzPra6iE36Y3StWCeU-0no5gl5R6C1lQ2L7nx-k9E6h53oOx9dIO8?purpose=fullsize)
+
+![3Dアーティスト Yorshの現実を超えて：Blenderで作る様式化されたシーン | コロソ.](https://images.openai.com/static-rsc-4/iLNvK5F6ncNEywhm_q78adapA_AUACorhpHg05aK8x9GuVkTDSoAUNPnUVJhMzAVXpAtkHpXYlnRbi6KcbBXyn1BN7kTdDDq8P8k7Qq14B_yUgovv71PPUHJQKaIVzPzgOp-Au9m-q8qJFubrJMzO7tyYNhusv6jM1mWmJkP_N9sD8jS_VCJVC2t8b2dMTeB?purpose=fullsize)
+
+![Платные ассеты | Paid Assets - Andrey Sokolov | Boosty](https://images.openai.com/static-rsc-4/3HWMY4WYIBOc3YNtB3hP5Zw3vMryBn5S8myDdUZ7snza8oOJev1gcvW7eS59ucfQlkHXSs2WzGKOeYJt0NCJtGo2iQnHM6HUr9d6Kq0j9M5BLdf6NTEV24ND8ewDWQcP8sY0M1mzg6c1X5HCHk1NLrjQ3xaqW7akQfTKqYNT_1y6HAzkXGWtGoFhvHEs7Lil?purpose=fullsize)
+
+![Final result of "Blender Environment Artist: Create 3D Game Worlds" - Show - GameDev.tv](https://images.openai.com/static-rsc-4/QkxUEKWk4TPrVUlJ7BLNPp5mWI3AerfOmISN8gAouO3rfwxqKUxrTLSM3awKZ6PMRAmTG3dPIE7yFxp8kUBkdtFiFbMTTZ-0CXbLEdaija3pr9d-jBCbqyiK17cTxbDBe7ARcbTGBQaA7PRo4RBVb3BA4tGMd8Lpzp0dGG0OhIJVBKLzuvKNWMv4hIb7CodS?purpose=fullsize)
+
+![FictionLab - Next-Gen AI Story Platform - Free and Uncensored!](https://images.openai.com/static-rsc-4/1FlEObETS8RCj5Aw4BtLVa8ZFsiWzJ1r3Ohlp5PZV796QspEg8FDrVJqMOScL43g_TqzdUEYQayuE9N-zxBk0t5112Akx1hTgjgXmKvUUoG5fH6RFk83G2hQb5WeY7mL6VbQ2N97rf5ejkDE-PZ8szLhLZPa0iibQOnLIx0X9bFFoQCPttGcNtfc0Gn7Z-eB?purpose=fullsize)
+
+![Fantasy Dungeon (Unreal Engine 5.4) 2026 - Free Daz 3D Models](https://images.openai.com/static-rsc-4/mrSiryURluhci5yIFuJjdJWW43Wfh7IJdF7ZxH6NngVkpDTT4gNsIhBRJlE_qCLKWqtTGZqWgvqi7FbrxM7Q0cw2mDJqf1B4-xU35Mmyfk4UR5OGkQ9jUP8j00YMjPWuRH8m6ki_Rpn4Pmeo-o_AKHJPiPN2oA-pFyT8yQTTpZOxtcwnX0qeTu0-I1AisBsS?purpose=fullsize)
+
+![Stylized Environment Bundle - Plants Tree Terrain Mountain Library - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/2CGcwuHMRoHrhSeNY4rfBB3HE-7ECP7PifBivnDriFDzBqYZ46urrf1H_9hGmlLCLhzmOewibDwSagM6kfs1COeXrIUK-cDct2MS_f_lPogy01pFnimmxktMLuA9O2J4TBxkZ0hlCf1886yHFJiJ6i31QnABYqAxrg1NGFm9UL0dCQ_f1AczbOBTfxnYxr3A?purpose=fullsize)
+
+![Ancient Temple - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/oaMxapEkAfwSVvPEQAWXS9na0Sac7cHzhyRO8ISGBQCDcsCwiGT2YmsbK2R3WS7Jz4kYh17JJZX7M1BrImF1MboING4wF9eMaqO56QgTJVVs92Ba52rVOGpft7kyDWt_n4qGEVSQwhEjeAra_cppOnHbvxUM84EgB53nCWhIpH8VVNOZNrN_q_dQjZJrpCHc?purpose=fullsize)
+
+This should make the creation of Aetheria's 40 regions significantly more efficient.
+
+### Procedural environment generators
+
+Build reusable systems for:
+
+* Forests.
+
+* Grasslands.
+
+* Mountains.
+
+* Snowfields.
+
+* Deserts.
+
+* Swamps.
+
+* Jungles.
+
+* Beaches.
+
+* Rivers.
+
+* Lakes.
+
+* Caves.
+
+* Crystal formations.
+
+* Volcanic terrain.
+
+* Ruins.
+
+* Ancient temples.
+
+* Roads.
+
+* Bridges.
+
+* Settlements.
+
+### Geometry Nodes additions
+
+Use Geometry Nodes for:
+
+* Tree distribution.
+
+* Grass distribution.
+
+* Rocks.
+
+* Cliffs.
+
+* Fallen trees.
+
+* Flowers.
+
+* Mushrooms.
+
+* Ground clutter.
+
+* Crystal formations.
+
+* Environmental debris.
+
+* Modular architecture.
+
+* Roadside props.
+
+* Procedural fences.
+
+* Building variations.
+
+Introduce biome-specific asset libraries and density controls.
+
+For example, the same terrain system should be capable of producing a dense magical forest or a sparse autumn woodland by changing its configuration.
+
+### Modular architecture system
+
+Create modular pieces for:
+
+* Walls.
+
+* Floors.
+
+* Roofs.
+
+* Doors.
+
+* Windows.
+
+* Stairs.
+
+* Pillars.
+
+* Arches.
+
+* Towers.
+
+* Balconies.
+
+* Market stalls.
+
+* Fences.
+
+* Gates.
+
+* Bridges.
+
+Then create regional architectural kits.
+
+A city in one kingdom should not look identical to a village in another.
+
+### Environmental storytelling assets
+
+Add reusable props that tell stories:
+
+* Broken carts.
+
+* Abandoned camps.
+
+* Ancient statues.
+
+* Ruined shrines.
+
+* Battlefield debris.
+
+* Old signposts.
+
+* Forgotten graves.
+
+* Damaged houses.
+
+* Merchant stalls.
+
+* Adventurer camps.
+
+* Monster nests.
+
+* Ancient machinery.
+
+These are inexpensive ways to increase environmental storytelling.
+
+### 2.6 Material and Texture Studio V3
+
+![Stylized Cauldron - Game Ready Study - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/UOkBTtGRL5qr9ReoOZg6_MerWny_VVk_cxZdxleYH73wxOxgjOgFTN3Aq6hXe-jHOk7rv5gwHSOr_--WF_WF8KLYmQGMxyJxawf7Gn809cWNHagw8eumK3tadPblQwO1Vh7ZHjcFI8we7RySdwNvWY80UOtCEtDAD74q5p1pk-zNxWiLDq3H8J6FrbQinig3?purpose=fullsize)
+
+![アニメ風の髪の質感を作る【Blender / マテリアル / シェーダーノード】 – 忘却まとめ](https://images.openai.com/static-rsc-4/sZVzGRFPElfs4mfb3koiT2e34X-bay5JcA9uBMzNEB35kPRlSkzJeA5prJsxL43_uJaVaipHkLUcwcR3jHD1wDGluT3pF1ysPxOKG2mH0tY5iX6zMqPdH7zeX6AbB_hTR0ryT1edQgfClh0YD2nfGUyUIDLeezRP4EEvr8GiQST3emM08ac0jbgnhyheFXgM?purpose=fullsize)
+
+![Enchanted Crystal 02 | Fab](https://images.openai.com/static-rsc-4/LZj4jlxejs67HTrv3fv0dWdgVxOqNk0AOXQSK8IjJaWSk1cPLbuGuBIPkOB9aygYmqEDG9_09qEJ0EgVqwssACPa3F3-MQHVTPHExBxSggJS8nTIs8iNjZ5nmduPbc5N6j_SZnfzLq2ScFPMxB5p0gxkIAcZK51mHZqrnKUxWVRkx6wskanALwFMfCHyDifk?purpose=fullsize)
+
+![Working on Hand-Painted Bard's Backpack](https://images.openai.com/static-rsc-4/eWm1mPCe_M4UxnQ9UEMlDHA0Hu73CoGtei4k0ijBTqJ9ALXQNqudiPA9b8hqKy3YBIfiojs02Ck7xTHvf9MOSZAUKnYMMfzzGgbUcwwh-f2wZzX0g1uqhnQyhgZiss6c6rzgl0fotmD7-U52FaX4jYKZKqDPRxcUV1pbP4JSwHxQYgDKNUP-Z5OITC_Ho8ye?purpose=fullsize)
+
+![Fundamentals of Blender Materials and Shading - CG Cookie](https://images.openai.com/static-rsc-4/RmN9CZo7nP496ywsaWU0BmMcy19mgI6HqMWgJfNliMFl04M_w6Rv8TxJJUTyqhUWBwSIeo4zXxzuCPHarR_4soTPHqrOWaXC2T1zrMCtP_SCmylZ2g9O49NlkQXPOQT3agcSBKa84nLDuWjn3cJCigX1VHFS50YmCMyANE8E5G341Ho67JCyDv4OZAjYahbf?purpose=fullsize)
+
+![Toonkit 1.6 Is Released for Blender 3.x! - Page 2 - Released Scripts and Themes - Blender Artists Community](https://images.openai.com/static-rsc-4/3Ng2ukYZXNtv6cDE05b5WpEzQoG9iBxMFXwRRrM2noxs7zsxMn_o2PWf400_UOugKzkX4Hqi5Re84c953_0l0ppC7mu8XK-M-YCiGGTUFR3ig_dgSIl9YGhcIUAl_AwKIurvcZPldR1fQpn1g4Lof6K63t9kDwBtqEW3rm0ax2vsL6440aI5_kY6BguvGEzV?purpose=fullsize)
+
+![Magic Crystal - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/jofNN0vm-zAIoIxObfhDau7oHQUq7N3AJ47H8_582LrVnSY66F-_m99OVi_U8DsyK6MWt2j2fEmC3c_7au8p2zWwi8ZKO1R8T9yFa1uZDO3ZkjjRGbF7p5DSJHAXF2hgAIgQx3UmldVemHgLy30a7NZLN4u3PEIMvo8OP3mpS_q5_l8alY25YugQP4bb9c8l?purpose=fullsize)
+
+![Blender Addon - Tx Layer s by Bookyakuno - Download](https://images.openai.com/static-rsc-4/ze00q7QvCM5FZm1u03SDk0m_VB3bWdzC22AsMykhmfMowbm_FMrx7XMlLktzJKGNPzrMkrK9nAKgUay7e7raFDq6R2nvV6E3JqubUcrUViMxNivPeP_AEHzIrSBi7AEuZ_P9IMMRIDImePILBi-mFo8J4DtGGEXGZ_ftQmiuUeyFOKtHy2Gg0vFqlZOfYw1X?purpose=fullsize)
+
+![Add Ambient Occlusion in Blender as Texture — Bake Guide | NormalMap.ai](https://images.openai.com/static-rsc-4/GmvpQrvA-taeVUxqhwyKCuLM5IreqA9TwFD5bItubN6tTCn0rSBVRTXxOUsLFRPDyqFx9T924C3RIaqa8rMCQUlpdzfEfFYLnjZXu91bs5vsvkNwSvdKR1rNCzsQI5OJDpgEkRsxBJOFgWG7akx8iXN186tPnW71KZmeTAyKrbkFby7anFxdU4YFeH-R4OEM?purpose=fullsize)
+
+![Low Poly, Hand Painted, Game Ready, Nature Assets - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/msxMNsJxxK9x-WlMhcujnSShVrAA0ys7DnrYfgjipw5fefDhej8HpdTjR68d1eNWzjAWqAGDXvYPVp8umsFrDeyI8Ivo4cNz3O62768ABeTLLtrujlbDGtjnkjK9QgAISZ8H6UXwdjQWN-OB56SR16rMOIumd7vhk6Vk1EadfU3y4XhfbeDoNSOT-7jj8BsD?purpose=fullsize)
+
+![\[Addon\] Ucupaint: Tool to manage texture layers for Eevee and Cycles - Page 4 - Released Scripts and Themes - Blender Artists Community](https://images.openai.com/static-rsc-4/kS409oZDzuC2zNrPKxY3uZ895scSWE937wAIJ7ci19r5MVlsCKRx91B1aARURpcn4u1NAfor4dsc8GbYZww78jwYyr10rdB8uQi-UoXv80bFUtZUMUMSSQzwmV326t3k8Y-PfTpfujBVzTBIey2Z5o7l4X0RKcgCIDTpG5DqBxUkPK_HjdaM6sm6jxdx_tGW?purpose=fullsize)
+
+![materials - How do I make a transparent object glow from within in Blender 3.0? - Blender Stack Exchange](https://images.openai.com/static-rsc-4/GfA508-KRs84lYS9AOt0HMTqrOifLLQxnDbKhPCI67CLg-4vX7qbazdtuhLezUOPAaw9ctkT1Yqpb81Slrse0OozJJArKEXvyTCKhpMlLTFM_FNFruxKQHhHdTlZA8Mdb1Yub4UCov7RzkQ0Y4WCxEoYO6MhRG3Er8Z6NA-HLs4XX7cptUfX-J0NwbctMEOO?purpose=fullsize)
+
+![Finalizing Renders Project Files | BlendAtlas](https://images.openai.com/static-rsc-4/hhjT5jbTX1-Hb2wvXMxzBqevZr5a9aGHVA8Lud7Zvuyo7GD4oyNKf-obE24bvSR_zCCwKf1JNBY4aUna8XPIDk2q68DvLYVKyfOGQFykNgYNozjvPcoq2j4Sav5ZzfYLsntfYTihOofkn0rjiJWH7O8onyrG2FNpXIXMQU083zbSzzux3wgBmMmkujVQ3-j1?purpose=fullsize)
+
+![Toro & Spirits: Making a Hand-Painted Prop in Blender and 3D Coat](https://images.openai.com/static-rsc-4/EU0rMi3zMI5L-hAjw1JKqSUYBe3p6CFN53NQLz6azbQ89J6DE9pzOvM9zMDcyb2lnvzhP0cxCoSPbKjQGihsN5sWqfhSjyFlxxoG9mHjQaRfo15aYeAYZcOjwNNzbYaKsMnykETbIlalx2uclFg4jB0kOGzIFoU23IpgyjDerpDDxa9KaG-4J3qRm5hjArmx?purpose=fullsize)
+
+![Diffuse, Normal, and colored Specular maps? - Materials and Textures - Blender Artists Community](https://images.openai.com/static-rsc-4/X5z2YNYu4sPMSINzCP_XfmaWU4igxMan3Mxo9kgg-AXtXbk65jDJAxAMdhGOYyBtLpytbo3gnHSS72SYFFYid-9hykD1aOobIDyXgFBx7-vVtgPBcGrMPjWO6a27DMkmpJzDQh_8QADlIk449DecveRU-dVUBuOqdd2Q58mja_TQus7NtzqJT_pVY9EbWQEK?purpose=fullsize)
+
+I would create a unified Aetheria material library.
+
+### Material categories
+
+* Skin.
+
+* Hair.
+
+* Cloth.
+
+* Leather.
+
+* Metal.
+
+* Gold.
+
+* Silver.
+
+* Wood.
+
+* Stone.
+
+* Crystal.
+
+* Glass.
+
+* Water.
+
+* Ice.
+
+* Fire.
+
+* Magic.
+
+* Bone.
+
+* Scales.
+
+* Fur.
+
+* Feathers.
+
+* Emissive materials.
+
+### Shader improvements
+
+Build reusable node groups for:
+
+* Stylized lighting.
+
+* Anime shading.
+
+* Rim lighting.
+
+* Controlled shadow bands.
+
+* Hair highlights.
+
+* Eye highlights.
+
+* Emissive runes.
+
+* Magical glow.
+
+* Dissolve effects.
+
+* Elemental surfaces.
+
+* Damage masks.
+
+* Wetness.
+
+* Snow accumulation.
+
+* Moss.
+
+* Material variation.
+
+### Important Unity compatibility rule
+
+Do not assume a complicated Blender shader will export identically to Unity.
+
+Create a dedicated export-material conversion process.
+
+Use simple, predictable texture and material outputs for the game.
+
+Keep advanced Blender shaders for previews and marketing renders when they are not suitable for runtime.
+
+### 2.7 Equipment and Weapon Studio V3
+
+![Fantasy_sword_11 - Buy Royalty Free 3D model by Nicu_Tepes_Vulpe \[a082e91\] - Sketchfab Store](https://images.openai.com/static-rsc-4/oHTnDpuuwn-MSC68EpzK5IxPQIMGHwYFS4nB8oFc5MM0m-vOkqnmaF2J0sBrGx2M_drnOuePx4GMc2qdrNL-6wLkM1dXB8CX__lBoeRVOY5vvJZ4baPqXEhJGhHGwgIGsqSzFzXr0_6p54hqLi8FfSNY5ZZc3ut-HDOj4z_xKNn2pQlrnWDRAiuBsanEU1Qb?purpose=fullsize)
+
+![【3D装備モデル】ファンタジー風の鎧一式 vol.2 - さびねずみ - BOOTH](https://images.openai.com/static-rsc-4/YVdT_4BCmco566ev87cP98dfyfQyjyp1Q2NACdL1SFM-YiI3nfk0j8AYJlPEvsAYLaBY2w3USwgSDIkCafUuPtwnO9nrKaVyBdUAxMpKe3oRH6VlcMA9OJLLNHhJ9ZfOUHJQti2A5Oeb3Bx6SZGpQhgklyFPoLXLQtIBK0yVEd6R4t-YOB3O_p8FCda9zZN2?purpose=fullsize)
+
+![Weaponcraft - Lifebringer's Prismcaster - 3D model by roksolana.khrouchtch \[d793979\] - Sketchfab](https://images.openai.com/static-rsc-4/5OMj_RqvLZkVMore8U513h8bUpEXVuG9o6Fv8Wer7scEdS6oxx13M7paR0wv7B0zsNaO2YUU8WoiqvyLxw323lNPQV8jNRJDyMoG5QnwIleEAo0f5AdfqYPp2wETWrO5HfyP5lPcgkCcAwxbV3oS3A48WrdPr_ZoI5OoaIcQYoFQ_ePmL-SzgOPYS68Q5yRk?purpose=fullsize)
+
+![Dark Souls Faraam Golden Wing Shield for Cosplay 3D model 3D printable | CGTrader](https://images.openai.com/static-rsc-4/STuCfcmQ_khjClOyBJmYwGj6ziwkuP0QPhpn1us3JgZWmDBbIGVTbJgJ4YqPgjBGYKLt1OpEtw5kMFqsD-QTJ3GYFy0haz3lIUuG3jv4ry3G0exP-175e6RjJDya0m8jLNPmlqfD7jJBEKdF2x4BJcHd5_B8K17eiOprouhBiepkMAQSZhy99GfZ-UcC-Hbr?purpose=fullsize)
+
+![How to Create a Ceremonial Armor Covered in Gemstones for Nodevember](https://images.openai.com/static-rsc-4/LabRqWSCcqezxHqd6IeRiVejnAhxUTgIQXTmRFHh1TXcyKEgaLV9QUHCFdGPJGLjv0vb2_3P56NGrH5DL3OdhupmjzCp_5zmLBvn9MBKNoxJgNtTqT-fdU5DvYB227lHhVKqUGMKzI9b2f_-watAZrH0HB8cwnnZP1_wsRx-IF4hnTGjMvT1s9D_EdIunv62?purpose=fullsize)
+
+![Fantasy Knight 3D Model - TurboSquid 2309368](https://images.openai.com/static-rsc-4/Z-W6Kp1tu22LVXCLSKlLlPY1D0-mxuBZQ9K17Q62mihm2GXxttNOhUjjySJ67xDzYICPMqnmZBsJ97xFEy0mePVaUoymwpPTpA6vu3Fy53bK6Tl865GNmYXuLGelyDi4sH6OLKXMArwdv42VkY3GdkmbEYfYnMid67QKTSlzLVJIQMLiGV9jX-51_sAZdTfY?purpose=fullsize)
+
+![Arcane - VI  - CG Cookie](https://images.openai.com/static-rsc-4/aNrqiQYprnpcZofGJxPMwQrepvulp5t0gvdH-Kl8GwpSm8Tk3UvChHh3NgtOPpx59kjk4bhaQaSbe8-cKLivgCXXlH9OIi86U8XHWMHCkCxwiDTKovK1lymEm-C3MqRs0LRKaHbQqs1hb6C8Zh_uccEHXyYMbdbRwiZbHIBCzJV2BND9MQIjDgSkzXN7FugY?purpose=fullsize)
+
+![Crystal Staff](https://images.openai.com/static-rsc-4/l16XKW3inHYCWkPanTdRxPi8jcJtZiHSztB_jGOiSMfqAUiuD-wanaj25saYtZB9uXYKMYTeKEQGE98LMUKDC6K_NfbjifA7AjABEi3ne9wzicFBPLUlu7HiAMsimNAoPJu6otU3LJ3AK8p827XC-c_YkPzWKEQBi_hVH_Egne8xNDhM5H06c7Il5xAtnNXy?purpose=fullsize)
+
+![Ron'karar, the First Strike (Fantasy sword) - 3D model by Vinay Shravan \[374959a\] - Sketchfab](https://images.openai.com/static-rsc-4/2zdBu2cHRfJFoqgWzVUIhovoEksNn1VWRelFT5msJ3ojAtqFtX3rcz9BWvNC5cloF42I333aIbCmGIfDQIDLt2tcb-RNkkZRPZios5XNGGtVNUprk34sEhLDRc7-wrjvl_JsrvCUuFVgrjUnw6CzSr4j0uYOzaUSgc2DIT_sy5EA1m5ZnahBJt5jOmQui8yY?purpose=fullsize)
+
+![Fantasy sword 18 3d model by Nicu_Tepes | 3DOcean](https://images.openai.com/static-rsc-4/tk04rB3-zCzsU-GF-V2lA4-8ECKbA_yzmKnPPfUeM6LGgiiThgXJUgztoi7XEZ7iZK_5VseIrNxFXU3KuYGhojewGllXzr7_O8lmeYd2p3YeBaal7r8TfcElWJ4vxjq9tCIddUXbXmMAw2WvmRNiLbLBK2VgHIEZdZ6AFbP0n0Bmy8oWpUO9XbbXIUpoEV8q?purpose=fullsize)
+
+![まほうのつえ(Enchanted Staff) 마법 지팡이 - untitled-3d - BOOTH](https://images.openai.com/static-rsc-4/VQb2nG6VzMUNXcxXEqlLGcG6cdhMUyBFkJSp8nKu3Uusfs-r5X1F1VU-EnuHgmD1xdr-8m_m6UQWgTk8TrNbW1XXRFMhPj_XZh2ZJSxQ6ZdDEM4dXI50Qzy90_yp0IFgopdpI6rJnDEogfgh6Suyyv4zXDgys8QyT-PsRzAiqifAB64lNGhkyR52Msp3-0M3?purpose=fullsize)
+
+![Create a custom cosplay 3d sword armor helmet props for 3d printing by Adeoba879 | Fiverr](https://images.openai.com/static-rsc-4/E64y3ISoxGwBlcQ5L6CZzuYvCVbY1u1iacRPDC3DtZPsNubZ4P7XRkQjpJcFiA-9GcwTs3-0cySAsGpkQygwPbZsIC2XpQ4_3j720RhP1dXYxZbhxV8h-rUTAyvR40qYVONZpt19LnTlwBMLbFIwkNcRMN4TPO63dLfyqTjKDS4JY6mOqdR0rGRoakamzc37?purpose=fullsize)
+
+![What do you think about using base mesh, tools, and Addons? — polycount](https://images.openai.com/static-rsc-4/AK8RoSCecq2h_BykmJwcTbb2rPjDVQEUEC4VQaXH0i-SvKycy9dkKZRYzig3iJDbPBJMRBtGI9rpZXT2j9oXGaMaueTG_gfwFglnvu7OZ1N6YA-iXDT3T3DPkCyjDH7IoOjfIgooIQiDywq_72V7zaDKTvnsFfdJAuqLOTRa7ObKrrzIqqh3J93vxNS2uCqe?purpose=fullsize)
+
+![Gauntlet - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/VlwCSZStUdxxqMEhOxKYQ0bPGgW-DvspRnsjvwGyPdUzjvTWfOLWz4uLApwDG8k7M0RnupOalaU7uxT_WBgOjCkG5sNnK27-Vyb0GSRMEHsAaE0fQeImySaTkhHx-rVm2qDEmI0LGEdOTtx3OuvnmYgWh9gIq9y4vCkrMZ-L0t8H_TB3-re4CiTnph1vfC8X?purpose=fullsize)
+
+![Fantasy shield - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/qqHy6QPNJjaiQJD-RLIcv9J8kwn13TqO6rzU4bLAQff3ZUr49wU6i4cqAZz9JLQAPby9YyERT1Wq7hh1uAMXHAWo6uvdE1B04OB2380VobW070yVhSKvqXNG5clpctND-QkG8fbqKTuIpAARjT3WQWzMAH0T7k8smvR96zbRBnxQlJWBLxow3NUfdj1qB5-p?purpose=fullsize)
+
+![Grim Core - Crystal Staff - 3D model by Birger Bosbach (@birgerbosbach) \[3acf41f\] - Sketchfab](https://images.openai.com/static-rsc-4/MM7x1YzmIzG7LI2P2iXk7kkJS24xfNk3pdKZDgLmX80pytYYE08P11N_5BwizzCZTCOAmropXId4KynmF3CpTS_n843iWYCKALnPWcErVbfoEbl_69WXQNSHt7gvOsNuJGCCYhodeHp6dbkZk7gpoCyFaOsldXkmG44naRoZFdws8p2mTe_5XQRTGWvDapCO?purpose=fullsize)
+
+![Stylized Shield Pack for Blender & Game Design | 3D Weapon Assets - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/NE45XY8HinIJYNKomBzaGSzYWSJjNW2OWfg-z6cEk_GcDN1YqDDU4M02sQBuU_393f1cJZ9qck49f926x5f9M9auhJyFXJkc4Y5Co6KY7orVUUU4hvc6dUtbczbzwK_t2QadyANDGSFMUcHisclFmRscsXfzFtTg9u_GMlEhMyDrEWoqd9QkLjhnH3rUyg90?purpose=fullsize)
+
+Create an equipment production toolkit.
+
+Weapon generators
+
+* Sword blades.
+
+* Greatsword blades.
+
+* Daggers.
+
+* Spearheads.
+
+* Axe heads.
+
+* Hammer heads.
+
+* Staff heads.
+
+* Bow limbs.
+
+* Scythe blades.
+
+* Shield designs.
+
+Armour generators
+
+* Chest pieces.
+
+* Shoulder guards.
+
+* Gauntlets.
+
+* Greaves.
+
+* Helmets.
+
+* Masks.
+
+* Cloaks.
+
+* Belts.
+
+* Armour decorations.
+
+Equipment customisation
+
+* Material presets.
+
+* Engraving.
+
+* Runes.
+
+* Gems.
+
+* Emissive elements.
+
+* Damage and wear.
+
+* Metal variation.
+
+* Regional designs.
+
+* Rarity appearance.
+
+* Colour palettes.
+
+### Equipment attachment standards
+
+Create reusable attachment points for:
+
+* Hands.
+
+* Back.
+
+* Waist.
+
+* Shoulders.
+
+* Head.
+
+* Feet.
+
+Make weapon switching and equipment changes work without manual mesh adjustments for every character.
+
+### 2.8 Procedural Studio V3
+
+![Terrain Generator-Geometry Node Blender 4.3](https://images.openai.com/static-rsc-4/H4y_MFReFyQu8F8Ykm5Qm3XNl7TJ41rXAhSvrTC6wvuhhuyY00kMcbeGnIuFPWhwSQeiyK8jaRI0dPb6FlGtSyWkxW4fmdC5KLM7Gen8NaGxDJV0O6PI-cCusolbSLW1TeyHrsi7Coz4wtIVKj9jNBQyn9fY5VMT3ez5oFbqp1hy9HPRNIjB0CySBrCmWHfz?purpose=fullsize)
+
+This is arguably the most important technical investment.
+
+I would create a dedicated Aetheria Procedural Toolkit.
+
+Potential tools:
+
+| Tool                        | Function                       |
+| --------------------------- | ------------------------------ |
+| Aetheria Terrain Builder    | Terrain generation             |
+| Aetheria Flora Generator    | Trees, bushes and grass        |
+| Aetheria Rock Generator     | Procedural rock formations     |
+| Aetheria Dungeon Builder    | Modular dungeon assembly       |
+| Aetheria Architecture Kit   | Building generation            |
+| Aetheria Creature Builder   | Controlled creature variations |
+| Aetheria Equipment Builder  | Modular equipment              |
+| Aetheria Material Generator | Standardised materials         |
+| Aetheria Scatter Tool       | Environmental distribution     |
+| Aetheria LOD Generator      | Automatic LOD preparation      |
+
+I would make these modular Geometry Nodes groups with exposed controls, rather than enormous, unmanageable node networks.
+
+Blender's newer Geometry Nodes capabilities make this particularly interesting: Blender 4.5 introduced additional import, attribute and geometry functionality, while Blender 5.0 introduced further changes to geometry, volumes and SDF workflows. Blender Developer Documentation +1
+
+### 2.9 VFX Studio V3
+
+![魔法陣 - RAMIXYU - BOOTH](https://images.openai.com/static-rsc-4/nMLbQvC7LZU44POlIn8BTvQ_mdH8YJL_3qurUCV79Vi2TjuxRsXxjObqoq7IdhyWRnLKdBZtQC2iTi-mPPORaotR1GB0Gv8VesjtE0RJtG2qNeG6cNycW6Heef3O5yrKf0txDWbzVUSM5gaLhqJkBOUhZ5OsMiri5_qYIXtZN_Anxu246C7J-_7Q61ux2fMn?purpose=fullsize)
+
+![Anime lightning FX](https://images.openai.com/static-rsc-4/VIe242QENzOCkAUvltZJ_aEQGrQvdolG-Up73n8Nxl0IqQl8cSo7MQvKTLypKeAaYoVJoiOMiEej9T4OZ_MUUb22iLvhyoQf4apk-vDIzZ_xdKeTgeWAP80SA-U3R8yvKCA3zcOhZUAsM_naRW8uVcTeNp0rxRc4RHScFnSGaF6qNTQafoaRHD-CL8Aueqm8?purpose=fullsize)
+
+![Beginners Guide: Create an Animated Magic Portal - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/2tRKgyoZlYx7GuovZXQFHiKlm3WeRCtQDMkvncymWPBfRmw7v37QG336bNRLJxLTexu4Jf8sEjI93DTwr0D6jXj3VHVF8wOcZSmF30_OUPjA4NRypR55x2MGLi8Tpo1ogklzj6n0mMjvjLjEyG4Lk3NNBpXCLcabhhBwUvK3xnCLsCoVvI4g-VOnOwJSgx_B?purpose=fullsize)
+
+![ZOLTRAK Spell from Frieren - Animations - Blender Artists Community](https://images.openai.com/static-rsc-4/FLBT_aSG6tx4myDCROyFmdT8DUZaBJdLcGVSeu-w0TgmufJfR7Pk2OADH7g_x08omPtyxd5ofe08WQavfxqlYYRiOowyeqUBMnTk2WiWEOACfNSESv4vSj3k0Nbc1YKEWRBpFnuuGklotuBrdNURW_KXRFsFwD_qs7JDpfBYRLo44G49XGj2Av_sc_QeCAVK?purpose=fullsize)
+
+![Stylized Mesh Fire - Works in Progress - Blender Artists Community](https://images.openai.com/static-rsc-4/EVlwHpvq43Uw4dLcRvmpTKgqR5rNh8WqJJcxcEKdklQrVqWk3PJjEJqvbuVilRF4p9qTRfhmVSEWs0K4O7Sj1XtYnh9IC9PYWZKSsRoG-z7i52UcrtZEUc1ibexUi67ckQsGFDt8ouopovaXfCQva2Q7QefkXpdQ1y1_yZZP0ECeLpeIz0x16SWCeaMsW45S?purpose=fullsize)
+
+![Realistic Paladin / Holy Magic by Piloto Studio](https://images.openai.com/static-rsc-4/aOgsnW4DWwJ7yAkGNxE8F8KWNcIbKPGjl6V0AZb2fCkAIlnXLAOTOLfKev64c6Z2GOOV_dJTZm7sBAWwxytYLwDyfT2Bs7hR1BJXlu9pIt3Kcu7AjfQlJcILY19n9olj6BoWmi3xqWmcwC-6thPVnxPX_z-Q9jfkyA2LG42W15obP8PIXd8JJBam4sWQibYy?purpose=fullsize)
+
+![Electricity Aura V2 (Anime Style)](https://images.openai.com/static-rsc-4/ssXuyvXSd2EnyYh-f_6EUyKas5SooKDJj_uj0OngYF-9o8urJCRFCcDz1HCNXZ94IWMh5QlWitfNYUtNHtV06I5tPGSJVWYt1gh_8mOZ6_yH0n5qlEkMZBV3T5YhSDSjAXdvpUg7RFdiYEQqMPrv7DW4x5M_nW6wOIKqrN2SiPQHmjZiPIPgSiLhwvjJ9kJg?purpose=fullsize)
+
+![Magic Portal
+ – Realtime VFX Store](https://images.openai.com/static-rsc-4/EMgEc7omUIj1BM3hBe5e9QvA0l6qIxq24hQyvwBtF4mFWF31PTENdJnGwKWrKSVteie9Ddoz6K-wyHxO-ViloGFIUzUvM_Q-cEDbsuLYiASQC_c2W1eMpuvUJIxtOiKx55P68ES1w9bv4QxWJhLJKbggNRZoVNRHXkfJop2DOYJzIo-pjGVKcy6BuqRhr1CP?purpose=fullsize)
+
+![石人附魔-游戏特效原创作品-Magesbox](https://images.openai.com/static-rsc-4/3u8yXoIbrNPTByoGviZkDOaXY5fTFwmJniRmTlxopPyWrxOIvk_snfaEFi52ei1vhjRIMPJ4q24yYDtJ9TMgA7IqMPqh_zIngloatUA0RDdmQel4BU7TJ9ZnvRTLaWOTXBGcnX2wXb0tlSN2klyWTdD8ek4UvJ3oKfHeuTlyBver9fzd8QskksU5Y-pQk0PJ?purpose=fullsize)
+
+![Magic forest portal - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/rzMs2AUo2Wl9onnHCFrm1zEkLUCdc75MwFF8J89otiM1nz39VT7TU7kn-VmgYu6I8w9_ZQiy9Xthj_DJ5A0VnJbteIm5MFQdR6XeMjdjrTCABpkzXC9qPA4m-6LUltMdj0sQufwo60y-yBDXkUl-_V2uYQMDgQ-F8b9XVMNSVwQHspERTnkAg05yTaD8dS9l?purpose=fullsize)
+
+![Lightning Strike | BlendAtlas](https://images.openai.com/static-rsc-4/DWDAzRVy_N1Vbg2-wq_nbzFZms-JCQ_GL6PSOW35-SAdzpLZYGGIedi7_-dJxQlTOxXKzX7EjXUS7BtZl8jmwX_NC7rwveXfi03ZB2rlhGQmXM8VhzRxFNcQHVPgVbwxvsO7XgZxCjEwA3rB6-TA9RLtNvtisIsd-e4Yx-0EbVX-bXo54oxi_UiaD91QKWdL?purpose=fullsize)
+
+![Anime style Aura Tutorial - Tutorials, Tips and Tricks - Blender Artists Community](https://images.openai.com/static-rsc-4/WczyxQ0XnHwKM7z4E5Q-zaQTN00VkghHpvKzVWK3YB3rO_2ahY3Unk_CG40lMnT4cpcPbk0eFui-ZkMbzebeNQtKp_xGc4F2F9TJMvPQ0yBR6peWFO8BxY-KUSZt3jI1HSsitB79kHo6R2zBU8803nGfBBW3G5z5Eik2RCpiQIz546Z1b9At-a8k5rn89Bpm?purpose=fullsize)
+
+![【Blender】　炎魔法陣エフェクト　Fire magic circle effect - BlenderEffect - BOOTH](https://images.openai.com/static-rsc-4/lvbLfHRvWmqHftj5y_1wBxzlRSQXwZzfmLUSenklvbEV6YUxbJP82K10mfgY3-WjdJ8AHQXfNvezqC1Qy2r9mKYsgDbRcl5UAp9n-eVdjBLxqgVQJSgIikZS4olocV-z2smRdjki3tonMKmRRsoW-6d1Gk76IXzEv25yNbg73-C52HQLmB8x-QBe-GNUcWg4?purpose=fullsize)
+
+![Wormhole Portal Effect Shader  - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/CCj0AkWQff05MPwvPHSQ3W0l62qh0f3ORMahsDChnUaEKMVw433TyGUqZaFkBH2k40UqqZ-PEkG0zQqoSH-E-tP3ZaabFwTQPEQq836Wgs_GgAbEmlaZdzzwf5sQB6zJUSblL-7_Bx5NMkHSKKaa4xX0Pwc9JbeVwkebTydVrQj_yoyU-Dbcxf5xIJi6FyiS?purpose=fullsize)
+
+![How to create Principled Volume Shader for fire that looks like the default? - Materials and Textures - Blender Artists Community](https://images.openai.com/static-rsc-4/Q2vD3J0rWnrME1qDyrOITb94LA33jtBrITscMRTy0Xh3PjjaQFtZPn2CpfkcbfuUk6PU8NevIQxTQGv8vCEoVldnaZXO2yUpGHb-IUNKInn0AWBXhlxWE_ZrzPl7ItjnuXQFqdKHR168XL_mrJQ2tYvU8Yvt1MmYmoxqUtlTVJcfL3MMmb2ZHxaVHEK3N_lx?purpose=fullsize)
+
+I would create a library of reusable effects.
+
+### Magic
+
+* Fireballs.
+
+* Lightning.
+
+* Ice projectiles.
+
+* Magical barriers.
+
+* Healing circles.
+
+* Summoning circles.
+
+* Teleportation.
+
+* Portals.
+
+* Elemental explosions.
+
+* Runes.
+
+* Magical trails.
+
+### Combat
+
+* Sword trails.
+
+* Impact bursts.
+
+* Sparks.
+
+* Dust.
+
+* Shockwaves.
+
+* Slash effects.
+
+* Critical-hit effects.
+
+* Armour-break effects.
+
+* Boss attack indicators.
+
+### Environment
+
+* Falling leaves.
+
+* Snow.
+
+* Rain.
+
+* Fireflies.
+
+* Floating magical particles.
+
+* Ambient crystals.
+
+* Water splashes.
+
+* Environmental mist.
+
+Build the effects in Blender, but classify each effect according to its intended runtime implementation.
+
+Some will become textures, meshes or flipbooks. Others should be recreated using Unity's particle and shader systems. Blender simulations should not automatically be assumed to be suitable for real-time gameplay.
+
+### 2.10 Optimization Studio V3
+
+![High-poly vs low-poly в игровом арте: как выбирать](https://images.openai.com/static-rsc-4/O0h4_fy9nNsOVtgI4qT9iNA0zbz_uij_a3_8hqlYjleCyqWyqIfINSDY2Tc-_ccFHndDL-szzsd9aRWdIlseRY280vx5OyYnEaWK_LVupcWF1fdl3Huf870_J5VyI38rc6-Cm1tcvPmyfX4dyqDx1xtMaS5ne_CpOzg0zyrpzcSiORSpiW3iaTVnVYurN-ej?purpose=fullsize)
+
+I would add a dedicated optimisation department.
+
+### Automatic optimisation checks
+
+* Polygon budgets.
+
+* Triangle counts.
+
+* Vertex counts.
+
+* Material slot counts.
+
+* Texture dimensions.
+
+* UV overlap.
+
+* Mesh density.
+
+* Unused objects.
+
+* Hidden geometry.
+
+* Excessive modifiers.
+
+* Unused materials.
+
+* Excessive bone influences.
+
+* Non-manifold geometry.
+
+* Degenerate faces.
+
+* Missing normals.
+
+### LOD production
+
+Generate and validate:
+
+* LOD0.
+
+* LOD1.
+
+* LOD2.
+
+* LOD3.
+
+* Optional impostor representations for suitable distant assets.
+
+Do not use identical LOD rules for a hero character, a tree, a dragon and a small environmental prop.
+
+Each asset category needs its own quality profile.
+
+### Collision generation
+
+Create simplified collision meshes for:
+
+* Characters.
+
+* Creatures.
+
+* Buildings.
+
+* Props.
+
+* Weapons.
+
+* Environmental objects.
+
+Collision geometry should be independently validated.
+
+### Texture optimisation
+
+Add configurable export profiles for:
+
+* Hero characters.
+
+* Standard NPCs.
+
+* Large bosses.
+
+* Small creatures.
+
+* Environment props.
+
+* Terrain.
+
+* UI assets.
+
+### 2.11 Export Studio V3
+
+![glTF 2.0 — Blender Manual](https://images.openai.com/static-rsc-4/D_DM6pyY3omSvxpaXKKZ9v-CEDcwTeDVPf5-3iV8d-ckW84q-wwvUlSFrK_gMV6HOP5F-VUPr2AWsEgRYOQjELqAZJtbd_D3X1aprXQsfNO5QUNHJkSva-jOXnX6z1Wqxi8zvFwVGy0CRcy5nTDNLBzAZZQbllRUdLro0eTif627fW7Nrx4r9UL0AYNIbJli?purpose=fullsize)
+
+I would make exporting almost entirely automated.
+
+### Export profiles
+
+Character profile
+
+* Mesh.
+
+* Armature.
+
+* Skinning.
+
+* Shape keys where supported.
+
+* Animation clips.
+
+* Materials and textures.
+
+* Correct scale.
+
+* Correct orientation.
+
+Creature profile
+
+* Mesh.
+
+* Rig.
+
+* Animation clips.
+
+* Collision.
+
+* Materials.
+
+* LODs.
+
+Environment profile
+
+* Static meshes.
+
+* Modular pieces.
+
+* Collision.
+
+* UVs.
+
+* Materials.
+
+* LODs.
+
+Equipment profile
+
+* Static mesh.
+
+* Attachment metadata.
+
+* Materials.
+
+* Collision where appropriate.
+
+### Export validation
+
+Before exporting, check:
+
+* Correct object names.
+
+* Correct object origins.
+
+* Applied scale and rotation.
+
+* Correct unit settings.
+
+* Correct forward/up axis.
+
+* Correct armature.
+
+* Correct animation actions.
+
+* Correct material assignments.
+
+* Valid texture paths.
+
+* No unintended objects.
+
+* No unsupported modifiers.
+
+* Correct destination.
+
+Generate a report for every export.
+
+I would support both FBX and glTF where appropriate, then benchmark their actual Unity import behaviour. Blender's official exporter exposes options for meshes, normals, UVs, animations and compression, so these should be configured through tested export profiles rather than inconsistent manual settings. Blender Python API +1
+
+### 3\. The Blender Add-on I would build: Aetheria Studio
+
+![HARD SURFACE TOOLKIT ULTRA - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/HIIQwrVG0JX8aRu0uE39aKYVSF_ox4BhUxKiTvX_JGKPwpMdv4mAemsdqj3n9PTzmygXPsEa-V-jVMNhzFGB84Rq49g2Lkyz4WNN1KS30iGDEwNWDre_TNuglQDehoQQd1HGlPBnzOA_3rGZMgpK0H6MuSLfq4TK7mbD5y_l2IMgR6WMkumJi0sOO_roT06l?purpose=fullsize)
+
+This is the major feature I would actually commission for V3.
+
+Instead of having dozens of disconnected scripts, create a unified Blender add-on:
+
+AETHERIA STUDIO — BLENDER PRODUCTION SUITE V3
+
+A dedicated interface inside Blender.
+
+### Suggested interface
+
+AETHERIA STUDIO
+
+V3 concept
+
+PRODUCTION CONTROL CENTRE
+
+Character Studio
+
+Open department
+
+Creature Studio
+
+Open department
+
+Rigging Studio
+
+Open department
+
+Animation Studio
+
+Open department
+
+Environment Studio
+
+Open department
+
+Material Studio
+
+Open department
+
+Equipment Studio
+
+Open department
+
+Procedural Studio
+
+Open department
+
+VFX Studio
+
+Open department
+
+Optimization
+
+Open department
+
+Export Studio
+
+Open department
+
+Asset Library
+
+Open department
+
+Asset validation
+
+Mesh integrity
+
+Concept: Pass
+
+Naming conventions
+
+Pending
+
+Unity export
+
+Not exported
+
+Illustrative interface concept, not an existing working Blender add-on.
+
+### Features I would add to the add-on
+
+Production dashboard
+
+* Project selection.
+
+* Asset category.
+
+* Asset ID.
+
+* Current status.
+
+* Last modified.
+
+* Validation results.
+
+* Export history.
+
+One-click operations
+
+* Create asset template.
+
+* Create standard collection.
+
+* Apply naming conventions.
+
+* Generate LODs.
+
+* Generate collision.
+
+* Validate topology.
+
+* Validate materials.
+
+* Create preview renders.
+
+* Export to Unity.
+
+* Generate metadata.
+
+* Open asset folder.
+
+Batch processing
+
+* Process multiple creatures.
+
+* Process multiple props.
+
+* Generate previews.
+
+* Validate multiple files.
+
+* Export multiple assets.
+
+* Generate reports.
+
+Recovery and safety
+
+* Automatic version snapshots.
+
+* Non-destructive operations.
+
+* Backup before destructive processing.
+
+* Dry-run export.
+
+* Error logging.
+
+* Failed-operation recovery.
+
+* Asset provenance.
+
+One important architectural rule: the add-on should have separate modules for UI, asset operations, validation, export and configuration. It should not become one giant Python script.
+
+### 4\. Blender fixes and improvements — the technical V3 checklist
+
+This is the section I would give particular attention to.
+
+I want V3 to eliminate recurring technical problems before they affect production.
+
+### 4.1 Modelling and topology fixes
+
+* Detect non-manifold geometry.
+
+* Detect duplicate vertices.
+
+* Detect internal faces.
+
+* Detect loose geometry.
+
+* Detect flipped normals.
+
+* Detect degenerate faces.
+
+* Detect self-intersections where practical.
+
+* Detect excessive n-gons on deformation meshes.
+
+* Detect problematic edge flow.
+
+* Detect inconsistent smoothing.
+
+* Detect unapplied transforms.
+
+* Detect incorrect object origins.
+
+### 4.2 UV and texture fixes
+
+* Detect missing UV maps.
+
+* Detect overlapping UV islands.
+
+* Detect insufficient texture padding.
+
+* Detect incorrect texel density.
+
+* Detect stretched UVs.
+
+* Detect missing image textures.
+
+* Detect external image paths.
+
+* Detect oversized textures.
+
+* Detect inconsistent texture dimensions.
+
+* Detect colour-space mistakes.
+
+### 4.3 Rigging fixes
+
+* Detect vertices with no weights.
+
+* Detect invalid bone references.
+
+* Detect excessive bone influences.
+
+* Detect deformation collapse.
+
+* Detect broken IK constraints.
+
+* Detect missing control bones.
+
+* Detect incorrect rest poses.
+
+* Detect inconsistent bone naming.
+
+* Detect export skeleton incompatibility.
+
+### 4.4 Animation fixes
+
+* Detect foot sliding.
+
+* Detect broken animation loops.
+
+* Detect inconsistent frame rates.
+
+* Detect missing root motion.
+
+* Detect accidental object animation.
+
+* Detect empty actions.
+
+* Detect missing action names.
+
+* Detect discontinuous looping.
+
+* Detect broken retargeting.
+
+* Detect animations with missing required bones.
+
+### 4.5 Export fixes
+
+* Detect invalid file paths.
+
+* Detect incorrect units.
+
+* Detect wrong forward axis.
+
+* Detect missing materials.
+
+* Detect missing textures.
+
+* Detect unexported animation actions.
+
+* Detect unsupported modifiers.
+
+* Detect missing collision meshes.
+
+* Detect invalid LOD references.
+
+* Detect duplicate exported assets.
+
+Important: These should be real automated tests wherever possible, not merely warnings in documentation.
+
+Some checks, such as visually judging deformation or spotting every self-intersection, need more advanced inspection and should not be presented as perfectly solved by a simple script.
+
+### 5\. Blender version strategy — important for V3
+
+As of November 2026, Blender 5.2 LTS is the current long-term-support release, initially released in July 2026 and supported until July 2028. Blender
+
+![Window System Introduction - Blender 5.2 LTS Manual](https://images.openai.com/static-rsc-4/R3hlaRjeLJGHTsgNzbnFDDf7Pi_KkQYkzNDMHPNcFS91ILXtWAV_4nmN9WMwE9BSmVlbjZlVvfmGxDHqEvvS8-k4WYDNhzX-K_6tAHhobjYdGZkhhecG5weLucLoYOt4OTyCvC9ufCbEJ0ji-MdPQMV3Ce20jkkT0h67H4WjAS8sXxgJ6uGnEusInJAOsRE0?purpose=fullsize)
+
+Blender 5.2 LTS
+
+Recommended V3 baseline
+
+Use as the primary development target, subject to add-on and Unity pipeline compatibility tests.
+
+[Official release information](https://www.blender.org/releases/5-2/?utm_source=chatgpt.com)
+
+I would establish these rules:
+
+* Blender 5.2 LTS as the primary V3 development version.
+
+* Python add-ons must declare their supported Blender versions.
+
+* Test critical scripts against the selected Blender release.
+
+* Keep old project files backed up before migration.
+
+* Do not automatically convert every existing `.blend` file.
+
+* Create compatibility tests for the old pipeline.
+
+* Keep an isolated test environment for newer Blender versions.
+
+* Document every changed API or export behaviour.
+
+I would particularly investigate the new Geometry Nodes and physics capabilities, rather than assuming every new feature is useful for a game asset pipeline.
+
+The official Blender 5.2 release information and Python API should be the starting points for implementation. Blender +1
+
+### 6\. Upgrade V3 — the development roadmap
+
+I would not build everything simultaneously.
+
+I would organise it into eight stages, each delivering something useful.
+
+### Aetheria V3 production roadmap
+
+Proposed sequence · priority-led development
+
+* Stage 1 — Foundation
+
+    Critical priority
+
+    * Blender 5.2 LTS compatibility.
+
+    * Add-on architecture.
+
+    * Project configuration.
+
+    * Naming conventions.
+
+    * Asset metadata.
+
+    * Folder standards.
+
+    * Validation framework.
+
+    * Backup and recovery.
+
+* Stage 2 — Asset production
+
+    Critical priority
+
+    * Character templates.
+
+    * Creature templates.
+
+    * Modular equipment.
+
+    * Material library.
+
+    * Standard topology workflows.
+
+    * UV tooling.
+
+    * Preview rendering.
+
+* Stage 3 — Rigging and animation
+
+    High priority
+
+    * Humanoid rig.
+
+    * Creature rig families.
+
+    * Weight-painting tools.
+
+    * Animation library.
+
+    * Retargeting.
+
+    * Animation validation.
+
+* Stage 4 — Procedural world building
+
+    High priority
+
+    * Geometry Nodes library.
+
+    * Terrain generation.
+
+    * Vegetation.
+
+    * Rocks and environmental assets.
+
+    * Modular architecture.
+
+    * Dungeon generation.
+
+* Stage 5 — Materials and VFX
+
+    * Unified material library.
+
+    * Character shaders.
+
+    * Environment shaders.
+
+    * Magic effects.
+
+    * Combat effects.
+
+    * Environmental effects.
+
+* Stage 6 — Optimization and export
+
+    Critical priority
+
+    * LOD generation.
+
+    * Collision generation.
+
+    * Texture optimization.
+
+    * FBX/glTF export profiles.
+
+    * Unity import validation.
+
+    * Batch export.
+
+* Stage 7 — Automation
+
+    * Batch processing.
+
+    * Automated asset generation.
+
+    * Preview generation.
+
+    * Metadata creation.
+
+    * Asset library integration.
+
+    * Error reporting.
+
+* Stage 8 — Production expansion
+
+    * Advanced character customisation.
+
+    * More creature families.
+
+    * Expanded animation library.
+
+    * More procedural environments.
+
+    * Advanced VFX.
+
+    * Additional generators.
+
+    * Production analytics.
+
+### What should be considered a completed milestone?
+
+I would establish a tangible output for each stage.
+
+| Milestone            | Completion target                                          |
+| -------------------- | ---------------------------------------------------------- |
+| V3 Foundation        | A working add-on with validation and project configuration |
+| Character pipeline   | One production-ready humanoid exported into Unity          |
+| Creature pipeline    | Three different creature rig families working in Unity     |
+| Animation pipeline   | A reusable movement and combat library                     |
+| Environment pipeline | One complete procedural biome                              |
+| Material pipeline    | A consistent game-ready material library                   |
+| Export pipeline      | Automated, validated batch export                          |
+| V3 Production        | All departments connected and documented                   |
+
+I would use a vertical-slice approach: finish one representative asset from start to finish before scaling the system.
+
+### 7\. Additional advanced Blender ideas
+
+These are longer-term additions I would not want to lose during V3 planning.
+
+### AI-assisted asset production
+
+* Reference-image organisation.
+
+* Concept-art turnarounds.
+
+* Automated asset naming suggestions.
+
+* Texture generation assistance.
+
+* Material suggestions.
+
+* Topology diagnostics.
+
+* Animation tagging.
+
+* Asset classification.
+
+* Visual similarity search.
+
+* Automated preview descriptions.
+
+AI should assist artists, not automatically approve assets or replace technical validation.
+
+### Advanced procedural character tools
+
+* Adjustable body generators.
+
+* Facial proportion controls.
+
+* Procedural accessories.
+
+* Modular hairstyles.
+
+* Race-specific features.
+
+* Clothing generators.
+
+* Armour generators.
+
+* Facial expression libraries.
+
+### Advanced procedural creatures
+
+* Modular anatomy.
+
+* Controlled mutation.
+
+* Pattern generation.
+
+* Body proportion variations.
+
+* Environmental adaptation.
+
+* Procedural armour.
+
+* Rig-family assignment.
+
+### Cinematic Studio
+
+![3Dアーティスト Yorshの現実を超えて：Blenderで作る様式化されたシーン | コロソ.](https://images.openai.com/static-rsc-4/j-yQf5-SRrooc8bT4XZZ_w7QJVrvEIMcwYA_VETPS-PA1iIAzqvy_MbEPkhZcrSbwc3ekgtpd0rg6PzZgYgofWz_Js7WgLAQpi8rLgS_0OhNcr7CO4XcHeSfAPIGlXVlY_cpaamkPzHdxefTm3RXiJwyojOpY2SnWK_PY5tOYd_zp_eEYAgk_WVJTzhz63fP?purpose=fullsize)
+
+![Forest shrine - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/DcJxKPi7rPhgwmANEH57FjlcMGpC50JWLnME4B6Jp1gnxV3CEWFnt4OSPaOULF5F7WRSBt2PRH3I69ojvt6juZkcxm63X7pFWbU19RKqATDcBXJG_Rfg3GmEhQ2_aN_FcfOcFCVYnFQackJSX1TTSM5dKjKEb4PDmJovHT9St4KE4oopIcXlCGquLBSD2i5N?purpose=fullsize)
+
+![September Recap — Sweeper3D](https://images.openai.com/static-rsc-4/RhsMD0YpIajZ9w8CkKfNpqFE7Jrp1cF5VO_BFwjisVsEM4c1rOmW87N9O7SeEQCMJ9s2_-FbTN9TKRzO_xjZ_oqRGI2uWXlRhSfwDdviYBhgbjTdJHtc1SVcEaDfO8u3MiIgEsxne2EOrZNhZUT5S3au6L9H7HDKNbCL5aH-hUBU35z1n4v849KM1RT-glnd?purpose=fullsize)
+
+![GLOW PRODUCTION | Animation & Games](https://images.openai.com/static-rsc-4/bITUZD6GUnxinS2I9-nNxHCm9DqSKBTfFgKNkaNejuZvezog7R0wP84_awfpCW-_QmpwRjotUJK42cgKkwcY_cRN5HDE8acYntL0gQeB4KS7dOn1-MPcyEwFI6BPa190O8MO03VYxT0FmSoHPhDNF45HIUurzhhJPCeJ_UcXXS0oD1mZNTTFuB3UjGT7x0Yq?purpose=fullsize)
+
+![CG Fast Track](https://images.openai.com/static-rsc-4/9PEMGATtZpJypL6mXEGuhM_mvb6wzeG_Zs13W-Qc0keSicxKa38vCPGwTfIA52ZBbR19o6WJ3zSHosVU0TH9jyrg-bSjgO-cV2t8648mtykwi9ZxQ6GSHb-v0l2mRJF8fUAJ6ErmwJLenP5hqJ-X5z_RuNQpkhFHpd8wRjBcbXqEb_WVcttbEArAuwVt1f2m?purpose=fullsize)
+
+![Fantasy Castle created in blender - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/nebwlcTsGuyUaoahpYx7X8neGb84T0GxT1GfoARHSEczyoDbLkVmVnxPjsbLyE5kMxpp0esMbCOTwJ9mh0M057b80fv0zp094f3vBR67Ja8NGO9e6d3_iC96kHDJi3uRUwqnr_-lKD3D1AyrfeJFPP1hSjrCBu_49GYPxZGkAOfr-mQPOTvVrpOAz_k5YPxK?purpose=fullsize)
+
+![3Dジェネラリスト Metoraの"キャラクターを魅せる"3Dアニメーション表現 | コロソ.](https://images.openai.com/static-rsc-4/bKBblQWl0cEjjzwMzqCZOYrHGOJVOfbgoSvAaE0caRywacbePLmQrR7hkShFiF2I4N7lcw77fJszNoIXKsVn7G9YfXEeOkFdxmoqpz7RXzpxLv-nFeGFUx84nY5dUYbK3SPYZKI_V2ZOG24ta_oRWVI7RLvB4v_4gYwaVs7RmnCbPG7SkEENs_GbHQ781f9B?purpose=fullsize)
+
+![The Cave - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/0bhPdbOsykGw-lSuuDsU3CONVEJFILaB63YM-4QeSAcCexRxO_qfUEcuu9qZx5tDeQMpwr9EwAFYalsYXSFJm6dsgAd9hRxuhEJQSYVFoXOl8ZDPMeLbWeV8RetzQZrMH5IbnZs6hG5xPHmeoJxBCGCNdB0A3tCSlgD-1MTjrMD-oC9zj2s7lbf_SAnMWQMO?purpose=fullsize)
+
+![Alana Greyveil Showcase Animation - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/4iXq83--0M_g65xdxht4LP8y6FKV6u1yKs_LPXKYf8WIDWMWu4BXWfRHmuX3MD2cG1k1W7CMXxPoUg-OSV8WcHnyHeVeD2mqNTm0yAkpRbBLUHUdjX2sBjWG0fyGWqMo5f5eIZQRXl17Mred7bHOh-bAGHS4NHFcEP-_4mNaOrvYvx_D3oBxPSZj7sN7ZKei?purpose=fullsize)
+
+![Scene from Rob Tuytel's Modular Design Course - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/b0M_4FUTSnuvPTSdNP-5BChjL3uHifxX0uCTEL8MM2VaWmiC7fPLkD3JGRiRZbgjINKjIzzGF3P7_TCXRSr1-4mMH6S8QsbBgRLjBd_4wejZfRM5OYy0vpoLd_OIW4fIl4fA5INmWMmygygDwiNeQG1QWFmVjWh1LfskgiWgPoStspY4cY93yWxQ3vJaID_K?purpose=fullsize)
+
+![曾參與《BEASTARS》日本 3D 動畫師以 Blender 創作精彩機甲戰鬥短片 - 映CG 媒體 | InCG Media](https://images.openai.com/static-rsc-4/e52FqclX8y_G-9YrpwXZAknB5NyhIvVNqT8iHz3agjuP3CjtwXZ_46QcQVpjD4apLZFeXQLYs5eQjNTdSGzu-tNUu62lGQOQmsdluhOIsWfY3RuracBTiW0ByClJn_Fj0qubpJJKEUnbtqqUSqbyutDD3GY8OIS8gyCA1BBBRbFf29eZsI1parGoozzsfwwp?purpose=fullsize)
+
+![Night Castle - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/MiVnzRHUv0TB9-1LGsZx49k8vOQvMBO4zS7QYt-O_B5BM7pcpOEPTGif5QM0s1c5uHneBcLobQHYzl_lHyyQwGgMAjcDYi-HzOZOQEKeqAQmXe_XUezEs9utI9eExK_UI9r6B8ovkSlwVHBk-lIwJQhwSR8cyaijopaU8FtV8Wy1vR7v2iQNkS-LPain8EIa?purpose=fullsize)
+
+![使用 Houdini 创建动漫舞蹈的场景幕后花絮-Renderbus瑞云渲染](https://images.openai.com/static-rsc-4/_k_4VxjkXigHpmY9YGOoW6sTUOknDOLNE8FwC_Khn2iyWzakiEJekv4PmsBxDTi0cMiVjIEhX6sTdwQu7SeJFFD6CfSRHcUaTe8YUuvzG_dhMUhQhaZjV71lByzfaYso_dqYrtuwTARZEU51Yiebfw21IkdEsVab6vFaVDloGLHQTqD-90KYT5myXLnfpzQt?purpose=fullsize)
+
+![Dark Knight Scene (Blender Cycles & Davinci) - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/0Btpz3CRkOX3hTAcIIH92DfbasHqvQ9yYXP-gFhee43GUo25cKOmn5L0vkQLGC74hGKf4GS0hywm9zx4yrpak8EvHcEQWRC4ZqcjeyI_QlsGYSy52AxorQXyj-YyXSNHAB7H8lhugaxF1dSa999NHZE3tbrsESnJaty8JPoKOQwhRbR3DplcTHLyF5F57iHB?purpose=fullsize)
+
+![迷因工作室 鳴潮 小卡 卡提希婭 1/6 - seanmemory的創作 - 巴哈姆特](https://images.openai.com/static-rsc-4/Ca09ZeIG-VbKRkwcRXmABMDzBBALhy336_Mg11TRm614dbAoWbbx6wLuzjjIrrJwf2riZzMaECIsCk5S8EUDXjU9irt1M_NxX49XK4lYc8-hoj0diEIc-V9gPw-mI89TnZx7ueYv7fmQSJHUc2dgIisYiLhSCzWixU_fZ0hQUHHBfdAu9eqTyWXJUlhxe6ZU?purpose=fullsize)
+
+![Rivendell - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/HD72CCXkeT59t0cPT3xoony7OUGlJ27WvX3kIpGV9N79TWeM-r0UIsk7_k20DaqJKokZXGVbnPSbGDW7CAU078XbcsrtVfvU5j98CeLupSUVImNC9YkSbpsEJSO5HNUOl4HMJvvMYyAD0gde8bmNtbytw5_CqRpkiqp9wOrSkMhJQw_avdJkGo2ktSNLrtVP?purpose=fullsize)
+
+Create a separate cinematic workflow for:
+
+* Character introductions.
+
+* Boss introductions.
+
+* Story cutscenes.
+
+* Dialogue scenes.
+
+* Character close-ups.
+
+* Environmental establishing shots.
+
+* Promotional renders.
+
+* Trailers.
+
+This would give Aetheria a consistent presentation style across gameplay, marketing and storytelling.
+
+### Asset library and search
+
+Create a searchable asset database.
+
+Filter by:
+
+* Asset ID.
+
+* Asset type.
+
+* Region.
+
+* Biome.
+
+* Creature family.
+
+* Material.
+
+* Rig family.
+
+* Animation category.
+
+* Production status.
+
+* Export status.
+
+I would also create thumbnail previews and turntable videos for important assets.
+
+### Asset dependency tracking
+
+If a material, rig or base mesh is changed, the system should be able to identify which assets depend on it.
+
+This is particularly important for modular characters and creature variants.
+
+It prevents a shared base asset from being changed without understanding the consequences.
+
+### 8\. Exact folder structure I would introduce
+
+Rather than reorganising everything already in Aetheria, create a new V3 workspace and migrate approved additions gradually.
+
+```text
+Aetheria/
+│
+├── Blender_V3/
+│   │
+│   ├── Addons/
+│   │   └── aetheria_studio/
+│   │       ├── __init__.py
+│   │       ├── core/
+│   │       ├── ui/
+│   │       ├── config/
+│   │       ├── validators/
+│   │       ├── exporters/
+│   │       ├── generators/
+│   │       ├── utilities/
+│   │       └── tests/
+│   │
+│   ├── Templates/
+│   │   ├── Characters/
+│   │   ├── Creatures/
+│   │   ├── Environments/
+│   │   ├── Equipment/
+│   │   └── VFX/
+│   │
+│   ├── Asset_Library/
+│   │   ├── Characters/
+│   │   ├── Creatures/
+│   │   ├── Animations/
+│   │   ├── Environments/
+│   │   ├── Equipment/
+│   │   ├── Materials/
+│   │   ├── Textures/
+│   │   └── VFX/
+│   │
+│   ├── Geometry_Nodes/
+│   │   ├── Terrain/
+│   │   ├── Vegetation/
+│   │   ├── Architecture/
+│   │   ├── Creatures/
+│   │   └── Equipment/
+│   │
+│   ├── Rig_Library/
+│   ├── Animation_Library/
+│   ├── Export_Profiles/
+│   ├── Validation_Reports/
+│   ├── Preview_Renders/
+│   ├── Documentation/
+│   ├── Tests/
+│   └── Migration/
+│
+└── Unity_Integration_V3/
+    ├── Imported_Assets/
+    ├── Materials/
+    ├── Prefabs/
+    ├── Animations/
+    ├── Validation/
+    └── Import_Profiles/
+```
+
+I would also add an asset manifest for every production-ready asset.
+
+Example:
+
+```json
+{
+  "asset_id": "CREATURE_WOLF_001",
+  "asset_type": "creature",
+  "version": "3.0.0",
+  "source_file": "CREATURE_WOLF_001.blend",
+  "rig_profile": "QUADRUPED_CANINE_V3",
+  "material_profile": "AETHERIA_CREATURE_V3",
+  "lod_levels": [
+    "LOD0",
+    "LOD1",
+    "LOD2"
+  ],
+  "export_formats": [
+    "FBX"
+  ],
+  "validation_status": "pending",
+  "unity_status": "not_imported"
+}
+```
+
+The manifest should be generated and maintained by the production tools, rather than manually edited whenever an asset changes.
+
+### 9\. The actual Upgrade V3 master prompt
+
+This is the prompt I would give your coding agent to execute the Blender expansion.
+
+It is intentionally different from the previous prompt: it is an additions-only development assignment, not a general game audit.
+
+# AETHERIA — BLENDER UPGRADE V3
+## MASTER 3D PRODUCTION PIPELINE EXPANSION DIRECTIVE
+
+### MISSION
+
+You are responsible for designing and developing the next major iteration of Aetheria's Blender production ecosystem.
+
+Your primary objective is to expand, improve, automate and professionalise all Blender-related tooling, workflows, asset-generation systems and Unity integration.
+
+This is an additions-first project.
+
+You are NOT being asked to redesign Aetheria's existing gameplay, rewrite its lore, replace its existing systems or remove previously established features.
+
+Your responsibility is to make the existing 3D production capabilities more powerful and introduce new capabilities wherever they offer meaningful improvements.
+
+The ultimate objective is to create:
+
+**AETHERIA STUDIO V3 — A COMPLETE BLENDER-BASED GAME ASSET PRODUCTION ECOSYSTEM.**
+
+This should become a reusable, modular, extensible production suite for creating the characters, creatures, environments, equipment, animations, materials and visual effects required by Aetheria.
+
+The suite should minimise repetitive work, enforce production standards, support batch operations and export reliable game-ready assets into Unity.
+
+---
+
+## 1. INITIAL DISCOVERY
+
+Before implementation:
+
+1. Examine all existing Blender-related files.
+2. Find all Python scripts and add-ons.
+3. Examine all existing Geometry Nodes systems.
+4. Examine all `.blend` templates and libraries.
+5. Identify existing asset-generation tools.
+6. Identify existing naming conventions.
+7. Examine the current Unity export process.
+8. Identify Blender version dependencies.
+9. Identify known technical issues.
+10. Identify existing capabilities that can be extended.
+
+Do not assume that a proposed tool does not already exist.
+
+Build an inventory of existing Blender functionality.
+
+Identify which components can be improved without breaking compatibility.
+
+Keep the existing production pipeline operational during development.
+
+Create an isolated V3 workspace and migration plan.
+
+Do not overwrite existing production assets.
+
+---
+
+## 2. AETHERIA STUDIO V3 ADD-ON
+
+Develop a unified Blender add-on.
+
+Organise it into separate modules:
+
+- Core.
+- User interface.
+- Configuration.
+- Asset management.
+- Character tools.
+- Creature tools.
+- Rigging tools.
+- Animation tools.
+- Environment tools.
+- Material tools.
+- Equipment tools.
+- Procedural generation.
+- VFX tools.
+- Optimization.
+- Validation.
+- Export.
+- Logging.
+- Testing.
+
+Create a professional, consistent Blender interface.
+
+The add-on should provide:
+
+- Project selection.
+- Asset creation.
+- Asset templates.
+- Naming automation.
+- Asset metadata.
+- Batch processing.
+- Preview generation.
+- Validation.
+- Export profiles.
+- Export reports.
+- Error reporting.
+- Version history.
+
+Every destructive operation should offer appropriate safeguards.
+
+Provide dry-run functionality for batch operations.
+
+---
+
+## 3. CHARACTER STUDIO
+
+Develop a modular character-production toolkit.
+
+Add:
+
+- Male and female base meshes.
+- Adjustable body proportions.
+- Head-shape controls.
+- Facial feature controls.
+- Eye customisation.
+- Hairline controls.
+- Skin variations.
+- Race-specific anatomical features.
+- Horns, tails, ears and wings.
+- Procedural hairstyles.
+- Clothing components.
+- Armour components.
+- Modular accessories.
+- Facial expression libraries.
+- Lip-sync preparation.
+- Character preview rendering.
+
+Create a reproducible Character DNA profile.
+
+Character parameters must be stored in structured metadata.
+
+Support regeneration and controlled modification.
+
+Introduce facial deformation testing.
+
+Ensure that character models follow consistent topology, UV, material and rigging standards.
+
+---
+
+## 4. CREATURE STUDIO
+
+Develop an extensible creature-production system.
+
+Support:
+
+- Humanoids.
+- Quadrupeds.
+- Dragons.
+- Insects.
+- Serpents.
+- Aquatic creatures.
+- Avian creatures.
+- Elementals.
+- Giants.
+- Aberrations.
+
+Add modular creature-construction tools.
+
+Investigate procedural generation for:
+
+- Horns.
+- Spikes.
+- Scales.
+- Claws.
+- Teeth.
+- Wings.
+- Tails.
+- Fur.
+- Feathers.
+- Armour plates.
+- Creature markings.
+- Colour patterns.
+- Environmental variants.
+- Controlled mutations.
+
+Create a creature variation framework.
+
+Preserve the visual identity of the underlying species.
+
+Introduce automatic creature preview renders and turntables.
+
+Create creature-specific validation profiles.
+
+---
+
+## 5. RIGGING STUDIO
+
+Build a reusable rig library.
+
+Develop standard rig families for:
+
+- Humanoids.
+- Quadrupeds.
+- Canines.
+- Felines.
+- Dragons.
+- Avian creatures.
+- Serpents.
+- Insects.
+- Aquatic creatures.
+- Multi-limbed creatures.
+
+Add:
+
+- IK/FK systems.
+- Foot locking.
+- Hand controls.
+- Finger controls.
+- Spine controls.
+- Tail controls.
+- Wing controls.
+- Facial controls.
+- Eye tracking.
+- Deformation helpers.
+- Twist bones.
+- Rig validation.
+- Weight-painting assistance.
+
+Create standard rig testing animations.
+
+Validate rigs before export.
+
+Do not force incompatible creature anatomy into universal skeletons.
+
+---
+
+## 6. ANIMATION STUDIO
+
+Create a central animation-production library.
+
+Develop reusable animation categories:
+
+- Locomotion.
+- Combat.
+- Dodging.
+- Blocking.
+- Parries.
+- Hit reactions.
+- Stagger.
+- Knockdown.
+- Jumping.
+- Landing.
+- Swimming.
+- Climbing.
+- Interactions.
+- Emotions.
+- Dialogue.
+- Crafting.
+- Gathering.
+- Character idles.
+- Creature locomotion.
+- Creature attacks.
+- Boss attacks.
+
+Introduce animation tagging and metadata.
+
+Develop compatible retargeting workflows.
+
+Create animation loop validation.
+
+Investigate foot-sliding diagnostics, root-motion checks and contact-point validation.
+
+Support future motion-matching experiments through consistent animation metadata.
+
+---
+
+## 7. ENVIRONMENT STUDIO
+
+Build reusable procedural environment systems.
+
+Create modular generators for:
+
+- Forests.
+- Grasslands.
+- Mountains.
+- Snowfields.
+- Deserts.
+- Swamps.
+- Jungles.
+- Beaches.
+- Rivers.
+- Lakes.
+- Caves.
+- Crystal formations.
+- Volcanic terrain.
+- Ancient ruins.
+- Temples.
+- Roads.
+- Bridges.
+
+Create reusable Geometry Nodes groups.
+
+Add density controls, biome presets, distribution rules and randomisation controls.
+
+Create modular architectural libraries.
+
+Support region-specific architecture and environmental assets.
+
+Develop environmental storytelling prop libraries.
+
+Ensure generated environments can be converted into manageable game-ready assets.
+
+---
+
+## 8. MATERIAL AND TEXTURE STUDIO
+
+Develop a unified material library.
+
+Include:
+
+- Skin.
+- Hair.
+- Cloth.
+- Leather.
+- Metal.
+- Wood.
+- Stone.
+- Crystal.
+- Glass.
+- Water.
+- Ice.
+- Fire.
+- Magic.
+- Fur.
+- Scales.
+- Feathers.
+
+Create reusable shader node groups.
+
+Investigate stylized anime shading, rim lighting, controlled highlights, emissive surfaces and elemental materials.
+
+Introduce automated texture validation.
+
+Create Unity-compatible material export profiles.
+
+Never assume Blender-only shader networks will translate correctly into Unity.
+
+---
+
+## 9. EQUIPMENT STUDIO
+
+Develop modular equipment generators.
+
+Support:
+
+- Swords.
+- Greatswords.
+- Daggers.
+- Spears.
+- Axes.
+- Hammers.
+- Staffs.
+- Bows.
+- Scythes.
+- Shields.
+- Armour.
+- Helmets.
+- Gauntlets.
+- Boots.
+- Accessories.
+
+Add procedural customization for materials, decorations, engravings, runes, gems and damage.
+
+Standardise attachment points.
+
+Create equipment preview renders.
+
+---
+
+## 10. PROCEDURAL STUDIO
+
+Create the Aetheria Procedural Toolkit.
+
+Develop reusable Geometry Nodes groups for:
+
+- Terrain.
+- Vegetation.
+- Rocks.
+- Cliffs.
+- Architecture.
+- Dungeons.
+- Creature components.
+- Equipment components.
+- Environmental details.
+
+Make every node group modular.
+
+Expose meaningful controls.
+
+Avoid enormous, unmaintainable node graphs.
+
+Add documentation and example scenes for each generator.
+
+---
+
+## 11. VFX STUDIO
+
+Create reusable visual-effect production templates.
+
+Support:
+
+- Elemental magic.
+- Spell projectiles.
+- Magical barriers.
+- Portals.
+- Summoning circles.
+- Runes.
+- Sword trails.
+- Impact effects.
+- Explosions.
+- Sparks.
+- Dust.
+- Shockwaves.
+- Environmental particles.
+
+Classify each effect by intended Unity implementation.
+
+Prepare flipbook, mesh, texture and material outputs where appropriate.
+
+Do not assume offline Blender simulations can run directly as real-time game effects.
+
+---
+
+## 12. OPTIMIZATION STUDIO
+
+Implement automatic validation for:
+
+- Polygon counts.
+- Triangle counts.
+- UVs.
+- Texture sizes.
+- Material slots.
+- Normals.
+- Mesh integrity.
+- Unused geometry.
+- Rig influences.
+- Bone counts.
+- Animation integrity.
+- LOD structure.
+- Collision meshes.
+- Object transforms.
+
+Develop asset-category-specific quality profiles.
+
+Create LOD generation workflows.
+
+Create simplified collision-generation tools.
+
+Generate reports rather than silently changing production meshes.
+
+---
+
+## 13. EXPORT STUDIO
+
+Develop automated export profiles for:
+
+- Characters.
+- Creatures.
+- Equipment.
+- Environments.
+- Animations.
+- VFX assets.
+
+Support tested FBX and glTF workflows.
+
+Validate:
+
+- Scale.
+- Orientation.
+- Origins.
+- Naming.
+- Skeletons.
+- Materials.
+- Textures.
+- Animations.
+- LODs.
+- Collisions.
+- Output paths.
+
+Create automated export manifests.
+
+Support batch export.
+
+Produce readable error reports.
+
+Validate exported assets inside Unity rather than treating Blender export success as proof of correctness.
+
+---
+
+## 14. ASSET LIBRARY
+
+Develop a searchable asset library.
+
+Support filtering by:
+
+- ID.
+- Type.
+- Region.
+- Biome.
+- Species.
+- Material.
+- Rig.
+- Animation.
+- Production status.
+- Version.
+- Export status.
+
+Generate thumbnails.
+
+Generate preview renders.
+
+Track asset dependencies.
+
+Track source versions.
+
+Provide clear identification of outdated or invalid assets.
+
+---
+
+## 15. TECHNICAL QUALITY AND TESTING
+
+All Python code must be modular, documented and compatible with the selected Blender version.
+
+Use Blender's supported Python API.
+
+Implement:
+
+- Unit tests.
+- Integration tests.
+- Batch-processing tests.
+- Export tests.
+- Data validation.
+- Error logging.
+- Recovery handling.
+- Performance profiling.
+
+Test against the designated Blender LTS release.
+
+Protect existing `.blend` projects.
+
+Do not automatically migrate old files.
+
+Introduce explicit migration tools with backups and rollback support.
+
+---
+
+## 16. IMPLEMENTATION PRIORITIES
+
+Implement in the following order:
+
+P0:
+- V3 architecture.
+- Compatibility.
+- Add-on framework.
+- Validation.
+- Naming.
+- Metadata.
+- Export foundation.
+
+P1:
+- Character templates.
+- Creature templates.
+- Material library.
+- Rig library.
+- Unity export.
+
+P2:
+- Animation library.
+- Environment generation.
+- Equipment generation.
+- LOD tools.
+- Collision generation.
+
+P3:
+- Advanced procedural tools.
+- VFX tools.
+- Batch generation.
+- Asset database.
+- Advanced character customisation.
+
+P4:
+- AI-assisted workflows.
+- Advanced procedural creatures.
+- Advanced cinematic tooling.
+- Experimental generation systems.
+
+Do not start every subsystem simultaneously.
+
+Deliver working increments.
+
+---
+
+## 17. REQUIRED DELIVERABLES
+
+Create:
+
+1. Blender V3 technical architecture.
+2. Existing Blender tooling inventory.
+3. Aetheria Studio add-on.
+4. Character Studio.
+5. Creature Studio.
+6. Rigging Studio.
+7. Animation Studio.
+8. Environment Studio.
+9. Material Studio.
+10. Equipment Studio.
+11. Procedural Studio.
+12. VFX Studio.
+13. Optimization Studio.
+14. Export Studio.
+15. Asset metadata standard.
+16. Automated validation framework.
+17. Unity integration documentation.
+18. Migration documentation.
+19. Testing suite.
+20. V3 development roadmap.
+
+Each department must include documentation, usage instructions, example files and tests appropriate to its capabilities.
+
+---
+
+## FINAL INSTRUCTION
+
+Build Blender V3 as a professional production ecosystem.
+
+Do not destroy working functionality.
+
+Do not replace existing systems unnecessarily.
+
+Do not introduce untested dependencies.
+
+Do not confuse a prototype with a production-ready tool.
+
+Every addition must have a clear purpose, a documented workflow and a way to verify its output.
+
+Prioritise reliability, extensibility, automation, quality and compatibility.
+
+The finished system should allow Aetheria to produce a large and visually consistent collection of characters, creatures, environments, equipment, animations and effects with a manageable development workload.
+
+**Aetheria Studio V3 should turn Blender from an individual modelling tool into the central production workshop of Aetheria.**
+
+### 10\. What I would build first
+
+My strongest recommendation is to resist spending the first month building 15 procedural generators.
+
+Build the production infrastructure first.
+
+### My V3 starting priorities
+
+Recommended first five projects
+
+* Aetheria Studio add-on
+
+    The central interface, configuration, asset IDs, logging and module architecture.
+
+* Automated asset validator
+
+    Find broken meshes, UVs, materials, rigs, naming and export problems.
+
+* Character and creature templates
+
+    Standardise the foundation of all future character and monster production.
+
+* Universal export pipeline
+
+    Consistent, repeatable and validated delivery into Unity.
+
+* Geometry Nodes library
+
+    Begin building reusable environmental and procedural tools.
+
+I would measure success by how much repetitive work these systems eliminate, how reliably they produce game-ready assets, and how easily another artist could use them.
+
+One final distinction: I have not yet inspected the actual Blender scripts or `.blend` files in your repository, so these are proposed V3 additions and architectural directions, not claims that I have identified specific existing Blender bugs. The next implementation step should be to compare this blueprint against the actual current Blender tooling and preserve everything that already works.
+
+My preferred first milestone is one complete character, one creature, one environment and one weapon, all produced through Aetheria Studio V3 and successfully imported into Unity. Once that works, scale the tools to the rest of the game.
+
+16
+
+16

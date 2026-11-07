@@ -1,0 +1,1742 @@
+Worked for 34s
+
+### Aetheria V10 — Continued: World Map & Technical Upgrade
+
+Continuing the redesigned V10, the key principle is that we should expand and improve Aetheria's existing world, not replace its geography with an unrelated procedural map.
+
+The existing design describes 40 surface regions, five canonical underworld layers, and the 120-floor Great Labyrinth. Its region data already uses fields such as `at`, `radius`, `ring`, `layer`, `terrain`, and `features`.
+
+That gives V10 a foundation to build on. The existing region coordinates should remain valid while we introduce a more precise geographical coordinate system underneath them.
+
+One important distinction: the region coordinates currently describe map placement; they do not, by themselves, establish real-world distances in metres or kilometres. We should not assign a world size until the current map layout and intended travel distances have been calibrated.
+
+### 8\. Exploration, Cartography & Fog of War
+
+The map should represent what the player has actually discovered. It should not reveal every road, dungeon, settlement, or landmark from the beginning.
+
+![How to Design Region Maps for Sandbox DnD 5e Campaigns  — Dungeon Goblin](https://images.openai.com/static-rsc-4/RlQyDjTSpvZqGRMctgcwKgv_2eIiv27ayv7BfD8iZ7q5DKqZ6k--PHzXPKEuAbXdWTjmvTnRmbgClXx4DfG_utE1yLwNFe_lo-RpBmhPX4CaPpXYlwD_v_jnpSkfKdzcVwVZHrYufsORSwHMXJbrmPnT7idl4GdgWKlBhPEUyG2G7iLJchRFdyNKwbAhHDqk?purpose=fullsize)
+
+![Spells in Multi date | Friends & Fables](https://images.openai.com/static-rsc-4/8AL_vt9hIOnzHMPZsYFax3mPtJWToovVYVw1qhDM_EcGOfN34dtdp901wDXv3CVaL4iZq4nthxMGzzDwApXcNzO9_4JpWlfUyf8a3MwlVSPaq4K-IChC82MrEPhqNOWsa9JfHqBfOxyhtzdXcWeJnnXllY9AycJX1hR_SsfvMrQmwY_9Gh5lO_eObjCO90QW?purpose=fullsize)
+
+![Marc Moureau - Fantasy Cartography](https://images.openai.com/static-rsc-4/doXHXvqHmKS1E0eYJ8ZiGts1818RTHcRSxHzYHy9Vu-Lta2uBQlcf7d1IoCRqcEbOMxlwKpMlbneTZtWzBh04yd0DZHDhbKbngQpNNB_EijolNHR30_XLYn11oZxJyhfsZJjj5xGH1O-jEQkSdCGCCyeDREcgwRfVTSRyIU1LG72TkzwiVs9GyV4gS81IPCs?purpose=fullsize)
+
+![AI Map  Generator | Easy-Peasy.AI](https://images.openai.com/static-rsc-4/3MzfI6-RZvCD_KexTknvaKMTb6FXb9ZL8T-jiMZ3YH6NEcLRqHApEVgYjGk8VE4Zd-O7l51BOISKicy_ke3aDIhlv68Va8eUDB5czZM-_ZMsdIC53ZXQ_NDgrLqPDEBXXv5KOvxOqeYB2VQXLNwq0fIQetszolplv4zDQzhIppPTNQwoAXvIxEhFuNvdETc-?purpose=fullsize)
+
+![Shadow of the Colossus PS4 Boss Guide - How to Find and Kill All 16 Colossi - Guide | Push Square](https://images.openai.com/static-rsc-4/KvvONzH-L9pGuwK6IIlcvcCBSCIeO6sMtT04gnmaNnwr30h5WyTgMkKyOBrwwvMNUSz7W1YfLg8rXkQaIdFw1O0MuSDZqHITuLp5M-XgVxdWe2feHHIgrm69zGlbYDtok-y0qSsXMNJVwYvsR0FxpvUrw5AXRvtpmwjb33hlPnkWRgcRgwjnL2Edx71JgWpS?purpose=fullsize)
+
+![Do map illustration map design fantasy map maker cartography by Ceturani | Fiverr](https://images.openai.com/static-rsc-4/EDXNq_qkeVWZKwNzx7SdcakyQrC0F1d3HgJiCYQ83povRmkb-LxCSPT63imMbGe56SXl2CpARpSfz1KyYgieDULPS2i944F6HpS6tYLy08Fhp9D_pmfM8gE12ov4HgJ2MPUTXGWrr52UuzcQzMLNPabHlkxnNtJ1qcugBVCftvOY4iVIHn-XNAsVmFtW9uNd?purpose=fullsize)
+
+![Crafting RPG Stories: Creating Memorable Stories for Your RPG Campaigns](https://images.openai.com/static-rsc-4/XxOmTJElqDhZdRiTRcwLHQeUxU5GnCLFDRhEYqe95D8gC62BI7DEvFv3Z5ZFFBFOjpUIoCqoQFwEqiY4SvP4ymyeCe02g3o_XWtUqSN9NIj76JUrEQ-5dt95TbKj06I40Ds2iWW_rmuKJUeVAs2k28JRSwDuUx2ECquTZ7ns_JXwvPlqViGhuv5r3tcktgRY?purpose=fullsize)
+
+![Corruption of Champions - release date, videos, screenshots, reviews on RAWG](https://images.openai.com/static-rsc-4/aBYcHSVNsn7rnLpu3Rs9xZq5S7RyFhFC43BqdT_hx8EaeX1UUsEByb1U3UdavYt7jGa0L6jtapN5dmVNUnpgF-f0QjhvrXeh_4LkTQcVdhfbDk-rOegCQ-7VkvMYMKstJx6eixYEBOa04ZCp95wP-CrUh63HjBQdhWuzz8JiihivY6NbPMH9-HHvVZ4l0SRj?purpose=fullsize)
+
+![Make your fantasy maps by Esdeehardy | Fiverr](https://images.openai.com/static-rsc-4/Ru9LVbTAFVo3Q5lFAigtEBxqbMqiFNV9MD_25jBptEuV1D3HcmH2uk9TF-TOKHyFEMBE6NbMXH_zEg63Qu6DzEXu1Yra_okTU6tSHMS6RJlIYDHcF2m7RqKrjw1Fpx8QAjDhIjNr1I1TeYXq3lhmzNrKeiYxN7mrnyM25b-20XNDbQ3TwliGlNXIiho9qUIL?purpose=fullsize)
+
+![Kell nekünk térkép egy fantasyhoz? – Prológus – Egy jó könyvhöz.](https://images.openai.com/static-rsc-4/ORz7v-cFY4n9XimQ5QjIu4bT9HfIrbFsVxyoKUuigPgZ6nSp3JugORBTPsWK8SUa7TuVGExptnGQgkQNeF_stFrJQrEB4L3wbPONT3zvuQwtkG-QkLRBVtKHpCH0soOmZEEkj-qpBxXGmsFfotko8dhWReWN1563wjF5zGOjV6LYzh5N73PmJ9iIMtc28Co6?purpose=fullsize)
+
+### 8.1 Three levels of map knowledge
+
+Unknown territory
+
+* Region silhouette may be hidden or represented by unexplored fog.
+
+* No undiscovered landmarks are displayed.
+
+* Terrain details are concealed.
+
+* The player sees only information already established by the game's starting knowledge.
+
+Discovered territory
+
+* Broad terrain and geographical features become visible.
+
+* Major mountains, rivers, coastlines, and forests can appear.
+
+* Discovered settlements and landmarks are recorded.
+
+* The map may still contain inaccurate or incomplete details.
+
+Surveyed territory
+
+* Roads, paths, bridges, and smaller landmarks become visible.
+
+* The player can record points of interest.
+
+* Geographical details become more accurate.
+
+* Hidden routes can be added after they are physically discovered.
+
+### 8.2 Cartography progression
+
+Introduce cartography as an exploration activity rather than a conventional level grind.
+
+The player can:
+
+* Discover a region by travelling through it.
+
+* Survey a region from a high vantage point.
+
+* Visit settlements to obtain local maps.
+
+* Find old maps in ruins and libraries.
+
+* Discover ancient geographical records.
+
+* Map cave systems and underground passages.
+
+* Record personal notes and landmarks.
+
+* Compare old maps with the current state of the world.
+
+### 8.3 Technical discovery data
+
+Each discovered map feature should be stored independently.
+
+```json
+{
+  "discoveryId": "discovery_whisperwood_ruins",
+  "regionId": "reg_whisperwood",
+  "featureType": "ruins",
+  "worldPosition": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "discoveryState": "discovered",
+  "firstDiscoveredByPlayer": true,
+  "surveyed": false,
+  "notes": [],
+  "discoveredAt": 0
+}
+```
+
+The position values above are placeholders. They must be populated using the project's actual coordinate conversion, not copied directly from the illustrative data.
+
+Store player discovery separately from the static world definition. This prevents a map reset or world-data update from erasing exploration progress.
+
+### 9\. Region Connectivity & Geographical Accuracy
+
+This should be one of the most important V10 improvements.
+
+A world map is not just a collection of region icons. Its regions need to connect geographically and logically.
+
+![AI Fantasy Map Generator - Free D&D, RPG & World Map Maker](https://images.openai.com/static-rsc-4/6ul_G2tmrKQPpqRFJZ2YuVibl1CESyTHpU8TeM0Fa539Gogw6AKy_BEEjeE9MQFUyVK4iArBuCaV4GRm0tTPl4ZDErMltxPtChLcSLRqrtME5JmiCxFz9QFxqiW-Q1Z2gDTr-IxesHB0VQUKelNINDmFeWreLkwDg_PIRbCDLlqhlWieolWI5aUI6NBQq4s6?purpose=fullsize)
+
+### 9.1 Region connection graph
+
+Build a graph representing how the 40 surface regions connect.
+
+Each region is a node. Each valid geographical connection is an edge.
+
+Connections can describe:
+
+* Direct land borders.
+
+* Mountain passes.
+
+* Forest paths.
+
+* River crossings.
+
+* Bridges.
+
+* Coastal routes.
+
+* Underground entrances.
+
+* Special traversal connections.
+
+For example:
+
+```text
+Region A
+  |
+  +------ Region B
+  |          |
+  |          +------ Region D
+  |
+  +------ Region C
+             |
+             +------ Region E
+```
+
+The actual graph must be derived from Aetheria's canonical region layout, not invented by this example.
+
+### 9.2 Region boundary validation
+
+Create automated checks for:
+
+* Regions that overlap unexpectedly.
+
+* Regions that are unintentionally disconnected.
+
+* Incorrect neighbouring-region references.
+
+* Missing transition points.
+
+* Roads that end without a destination.
+
+* Rivers that cross boundaries incorrectly.
+
+* Mountain ranges that abruptly terminate.
+
+* Biome transitions that create visible seams.
+
+* Entrances that do not connect to their intended destinations.
+
+### 9.3 Regional transition system
+
+When the player moves between regions, the game should preserve continuity.
+
+For example, travelling from a forest into a mountainous region should gradually introduce:
+
+* Changes in elevation.
+
+* Different vegetation density.
+
+* Different rock formations.
+
+* Changes in ambient sound.
+
+* Different weather probabilities.
+
+* Different creature populations.
+
+* Changes in lighting and atmospheric effects.
+
+Avoid loading a completely different-looking environment at a region boundary.
+
+### 10\. World Scale & Measurement Calibration
+
+Before deciding how many kilometres Aetheria covers, V10 should establish the physical scale of its existing geography.
+
+This is more important than simply making the map bigger.
+
+### 10.1 Establish a canonical scale
+
+The existing region layout uses map coordinates and radius values. V10 should preserve those fields for backward compatibility and introduce a conversion layer.
+
+A possible conversion is:
+
+P_{world}=T(P_{map})
+
+Where:
+
+* is the existing map coordinate.
+
+* is the calibrated map-to-world transformation.
+
+* is the resulting Unity world position.
+
+If the existing map is a regular 2D coordinate system, this can initially be a scale-and-offset transformation. If the map uses different scales or irregular placements, use a more appropriate projection.
+
+### 10.2 Physical scale calibration
+
+Use known gameplay locations to establish the scale.
+
+* Identify the existing starting location.
+
+* Identify the planned Brindlewick and Whisperwood playable boundaries.
+
+* Measure intended distances between important landmarks.
+
+* Compare those distances with walking, running, and mounted travel times.
+
+* Establish the world-unit conversion.
+
+* Test whether the resulting terrain dimensions feel appropriate.
+
+* Record the scale in a central world configuration.
+
+Do not independently assign kilometre sizes to individual regions without a shared scale.
+
+### 10.3 Travel-time validation
+
+For each important journey, calculate:
+
+t=\\frac{d}{v}
+
+Where:
+
+* is travel time.
+
+* is the actual traversable route distance.
+
+* is the effective movement speed.
+
+The route distance must account for mountains, rivers, blocked paths, roads, and elevation. Straight-line distance alone is insufficient.
+
+The result should be a world that feels large because of its geography and journey design, not because the player is forced to cross enormous empty spaces.
+
+### 11\. Multi-Scale Map Rendering & Navigation
+
+V10 should have a proper map-rendering system rather than one static image with markers placed on top.
+
+![World map. Concept. Medieval. Fantasy. by BergionStyle on DeviantArt](https://images.openai.com/static-rsc-4/LAtmTqem_QYJZHGXVONSa6edfPDEgHPmmUezrW0QLwJ5kLXUOV7twM1quZ6YLR3iF9FTqGCylw0ArWrZfvIWnUUCHdophZsButwhDcLxxEtew7M4EWwu6yxlu5AMnTO-lLVffB_cm4-Vb_QWtW8IPoLHxI_QCul6CA4sUjSCB6nfO8o0Ls-COtOFQDeKgXqW?purpose=fullsize)
+
+![Shadowdale and Daggerdale Regional Map by falconire on DeviantArt](https://images.openai.com/static-rsc-4/Z8aODrKAaypdKt6AXRczexVh0bcCt1ON9b_L6vV7an-r_MtC6HM3fcti4qgTAq6UTYVGr09zrhR-Uniz1FtqMJ_guYGkQV_b-47HCfR0RqIlAgrtmlEZ3SPidZpssHO-Rhb24XnOaXaBFQmSgSM94o0H5Pt2ych6SZv_cmXv0jk70M4bLxiF-ZslgH-f0841?purpose=fullsize)
+
+![Blue Dungeon DM | Inkarnate - Create Fantasy Maps Online](https://images.openai.com/static-rsc-4/Hrry76iwQqDfFFh1atFYL5vwGA0MCiGjIPfCA4wF8iBDPGRMt_R03RftMeivN7OhHDRs2_TV2vZbDIfV4oIzHR2_pMVE_W2AP3bpcLALsmaKS8Nbm2L0VPdWZPi6SlvfLlc-3MPIGC2ckrr48F-M6q56d0q0wD1wHZm5x91Qxikp0UEvcr7uoR-qZNE6YOKO?purpose=fullsize)
+
+![Mike Schley | Individual Map Downloads](https://images.openai.com/static-rsc-4/RrKWzricPYk3_mfOnZWzcag7sRrKe11zXJEHMVW13azFo0eLlO0NrKual-bGr72rLScDjFaHr3qryhqzRUFFSQxeUsntXEpRzZcWRm28Abt_P13CcU_1huxWcwStfDY5NycFYdFqteF6zebLubWstYmnNTWyNYCZ-pNxYRdZ6WTNL_NrtklkGpCW5txHEHzO?purpose=fullsize)
+
+![IA Mapa de Fantasia  Gerador | Easy-Peasy.AI](https://images.openai.com/static-rsc-4/mRV7lRAw4AK5hWK5V1mKeCz1vguJH4E8NsGzINA-kOxG_u_0CigMGeRoaTkNwujw5BJvK6gfgSucX92SvfWSeg4GWzPWmnWkU4TvTXrGfVAbnBDFeljCLKKODz9-Ix847gP7ihvT4w4gXRd6hylgghQ9MK6saw6pAv7fkxnPrfxYkeZNMq3MAuruiixiDVLs?purpose=fullsize)
+
+![The Map Maker's Toolkit
+ – RPG Maps Forge](https://images.openai.com/static-rsc-4/FtK8guUktWT9_-Lmg_TkcqSWUsqsC9XqIRGQkF4qFIe5pm__fiVO2VhOyYMR1lX6rqIl8pmgJpJTv0fM12KVuOljMiPP0s8T1l4alPxHm7W9mmd1Cnf7X4-AfxMNOn_clALiWQZ5t_tB9_xp6vvA0tvS6K1QrBJg6BWp2W7zJGGYDo7-6VK6IjnUVlveJxMM?purpose=fullsize)
+
+![【Dark and Darker攻略】ダンジョン内のマップ画像まとめ](https://images.openai.com/static-rsc-4/3RGhvfkqGgn7Fc4OBrJx9bPzBki9zaUtGI2Xl1fJrmsO--nRsmmv4Z-aiGBtDVsJbTRk-jZv-JLfmloP6FPEig25aQo19Nzd9bxZMfmXVBE88BsY02_ifYPWp_F0Fnw_HgxV8_w7F9emkW9ZmOZFsp15uP2jzxYfeJvbAuDeV3BjFaXzFcIruz5IZ9JBTQH7?purpose=fullsize)
+
+![Digital illustration - Hire a Freelance Illustrator Services | Fiverr](https://images.openai.com/static-rsc-4/c0LGlDULbkw8Vkl-u9e2HibLmRibY3y5rEMOjcqc2cjTG-cUOnlIYZdO3JrBbLWbCoEfrsVY9ZYxDBlVm1BlGixlzAWxzWCuGRaxKcI-EiNNtswaJoQqGkUJybOdlg4_QEoqzCR8gvT37clB0ewxD5obZmXOwfaZSdNh-y00N7YJb3lFlJky8gALOaVRM5Ca?purpose=fullsize)
+
+![Flannae - Human Ethnicity in Greyhawk Oreth | World Anvil](https://images.openai.com/static-rsc-4/J2zoXp-MpIMsypkLAnEd58dMDfVj81VYVqnXQ4ixdGf69zNufkPO4lhOIu-Xop0yChSXIi-zaWDC7d0EXpL2KvfSiaaiMsVSE-lHXz57RH7ixJo4_zd-WeAEGmEnzHqsuFmQXX7QcBmy39FK4mny3vZPz0sS4Gc38L9m9FGhn6phIA9nC05PDV4xwSCiAMhW?purpose=fullsize)
+
+![Crypts - Dark and Darker Wiki](https://images.openai.com/static-rsc-4/P6RaHrTtwdoiym-mGauLY4_QLSU2QDwQDAad7lmkOCbCgzqJWpqIFwz8rtqr3212P7TLLAZoMAJiwoMYbsDbXR1ZpuSKPevxZ6Oa-ETUYa2fdIJlWkTWIl2NErFDKREyf3Ax3m1vmdi6D37VzKyRmY6y5mpfkSiKpCY7zAKnf5Y8z2zNCWJxPQ_hJtJi7YH6?purpose=fullsize)
+
+![Swamp Map Illustration Generator](https://images.openai.com/static-rsc-4/dUJs_UkWrcbNIHzAAE8l7xaO-DBPOLFAn5WHqyP3-cG09fXlX5cX7i1roZtwNQrcacBPzhFOlDTXtwSL5GDpSet_XK_7Ar0htwS6uKXygnaP3ZiAYxS0IcfefLlLCyAmkkJ0L9juSwsEoCSPN9qpZBbeTmlBaYvqBOW0-9Yzn28uEMEWgl01MZnuoHjVxiw3?purpose=fullsize)
+
+![Castle Battlemap, Dnd Map, Crypt, Dwarven, D&D, Battle Map, Dungeon, Gridded Map, Maps for Miniatures, Roll20, Fantasy Map, VTT, Digital Map - Etsy Canada](https://images.openai.com/static-rsc-4/-QKz0kb0dzRwetf9Z3sfgKBgttWxuxfS-ylsqTDntEc3zGfW_rMAjd-aZ9M8aNYH0bZawPKDpcuKs23vLrKG1PXE5mJoon_xklHhw_NyhiUbFohvsMNyKXzBXh86UUEJhXA8oGnCeKA3c0USBA6NK49QWUTOH7oo4J4c_V0RpZGx1odO5VttzL4-4Rb9No6H?purpose=fullsize)
+
+### 11.1 Four map presentation scales
+
+| Map scale | Displays                                                              | Purpose                |
+| --------- | --------------------------------------------------------------------- | ---------------------- |
+| World     | Continents, major territories, oceans and large geographical features | Long-distance planning |
+| Region    | Local terrain, settlements, roads and landmarks                       | Regional exploration   |
+| Local     | Nearby trails, structures, entrances and points of interest           | Immediate navigation   |
+| Interior  | Dungeons, caves, labyrinths and underground connections               | Indoor exploration     |
+
+Each scale should have its own visibility rules. Showing every individual tree, road, and landmark on the global map would make it unreadable.
+
+### 11.2 Zoom-dependent rendering
+
+Implement map detail levels:
+
+* Global view: simplified region shapes and major landmarks.
+
+* Continental view: major terrain features and settlement symbols.
+
+* Regional view: roads, rivers, villages, ruins, and local geography.
+
+* Local view: detailed exploration markers and discovered paths.
+
+Use a consistent symbol language across all zoom levels.
+
+### 11.3 Map rendering architecture
+
+Recommended Unity implementation:
+
+* A dedicated map camera or render pipeline.
+
+* A separate map presentation layer.
+
+* Region geometry generated from canonical data.
+
+* Map icons managed independently of world objects.
+
+* Zoom-based icon scaling.
+
+* Icon clustering at low zoom.
+
+* Visibility filters for discovered content.
+
+* Optional topographic overlays.
+
+* Separate map layers for surface and underground.
+
+* UI virtualization for large numbers of markers.
+
+Do not instantiate thousands of individual UI objects every time the map opens. Use pooled marker objects, spatial indexing, and visibility filtering.
+
+### 11.4 Player navigation
+
+The map should support:
+
+* Current player position.
+
+* Current region.
+
+* Compass direction.
+
+* Destination pins.
+
+* Custom player markers.
+
+* Quest destinations.
+
+* Known roads and routes.
+
+* Fast-travel locations where already supported by game design.
+
+* Route distance estimates.
+
+* Elevation and terrain warnings.
+
+A route should not be considered valid merely because two points are close together on the map. Navigation must understand blocked terrain and actual connections.
+
+### 12\. Surface World & Underworld Integration
+
+Aetheria already describes five canonical underground layers. V10 should treat them as a connected geographical system, not as five unrelated menus.
+
+![Welcome to Araea  in Araea | World Anvil](https://images.openai.com/static-rsc-4/tX9oxjMll16TvYjaDbzo4-wq_ScMAbw90wZ3Hrj9rDrMHQFNo-_D_NTjczS-VnJgUHbxwIH5QawLTFU0FcWHf62UAMJwA09HDI2t3iVS8SY3hl1Cd1AfFM8r4eIL-7eQJsChlLVK5PzV4_yg8qky6A7XvgRNnqXmIQgiCwlaNwJxm0sP13WFCOUvIISJukl0?purpose=fullsize)
+
+![AI Concept Art — Characters, Worlds & Creatures | Imagine Studio](https://images.openai.com/static-rsc-4/Nr6_wQYzwEqPntN_9RuIoGijbXdCPqOHD0HVnaqalPSam7CEey4e30A5Aqou1uJI5avOt8fhFhhtaRN36BCFbOab7XvPUNquvI03jQ4G9JDXxUSAlGXEnABTAaqGlRtqboUTe7FsPnmYVjukLaBTBRz03OsuuE_0gwpwhpYu7Odr3EpEVA0R0hUvv95HqEk0?purpose=fullsize)
+
+![ArtStation - Lava dungeon | Fantasy landscape, Fantasy art landscapes, Scenery](https://images.openai.com/static-rsc-4/j12bec26kfm0Fg6WS28s32xVRFTfEZgGQF65kt0oUqsdOnsu7QUzaTQccD9vZrWkbPc3-aG8pO48ZOteP50hygHoyEKqWRrqwj42tODfmP9OWgiiTOlSMb7YGJEdwIpFgW2tRZMuHA7PJmm1JNfCVuOdpg8d37BuIQiY2ndTzR7dn79qAvWPxy-ff_MxT_Vf?purpose=fullsize)
+
+![Labyrinth - XL Digital Map
+
+   – GAMETEEUK](https://images.openai.com/static-rsc-4/xhh_talC1ksTaryE1JQveR_95vo9cPl9j6HRjBA_GDS3-q8FiPyyD-uGcXiZwUOtD6x6x_xeTxJ3VAYS9HE-KusJ7ny-vc8WB73t5-LSHzGIuhEJxNfKBeXk_wtye4RsbPvDB-3tWcjJupsqbMbUsJiNz-LiY5i-z-NAiz6BLlsK1EF4JzLfxQCAywGOJu8A?purpose=fullsize)
+
+![Mushroom Lake Building / Landmark in Brewhaven | World Anvil](https://images.openai.com/static-rsc-4/0f-iuqRSwleWuckWmF-OxD0zxfXnL-vrm5nksGPvgWG6lWhnKuMvrW-46NeCOwF3OKqCc5D9_d5PzyuofjK0MmQKcvnqNCjLInXt0DZwJLLtQ1KrLfhYPqNwwMgbFzdkJHj3MJso3DzSXVW9e-wh8TM8hbdgpF8DRFF5C4ZHaigQo4C-xYONoBBU5prrvYXS?purpose=fullsize)
+
+![Secrets of the Hidden Race (5). Reptilian Cities Beneath the Earth and… | by Josh Cheng | Medium](https://images.openai.com/static-rsc-4/NEFSbhg_PylOZr1Q6leTuySJ55GgifA_PNkOhwCS7QMUK9gLCu12PyYhRELuqc_Vis73znQ5Hn9Y1lWfgwDQsOK8CBECWk0VoL_a7BGSwWvHAI4i8GmWQETlTte84D-yy-nWnbbRYPtQ3asmGTdonDDu8CMWJukOnfElq-YwIhwhSwTj0ZQL9vbRw16dxo2C?purpose=fullsize)
+
+![Stormkeeper | Stormkeeper.ru - специализированный ресурс для Шаманов в World of Warcraft!](https://images.openai.com/static-rsc-4/xALdtbTqtSQrhjriWfq12rCcujDhvyWqMJNk2ayA4e4_t2scHJHDMVX78c02ohHt0nSNwPVW9JxG8mgZbRrHAqLENcD3nSt2GGTNZyEZ_PZJaCVfCtmn4TbPwwCVbnuNaiD5zb8xFSKB8QwyBdEI1N_77mm37NR_PRgBrgWO4BxwRVHUAKvggzOH7uSPlfOo?purpose=fullsize)
+
+![Pin on Fantasy Dungeon Maps](https://images.openai.com/static-rsc-4/qSNXb02W0ojQcGR32GBvTkIJfiyW3bGXhY40D5ZDu1Ts6Io3_-5irG0DTnGvQZZXG_HXvTAP9U6rolXm3vMZ3GMIxOf8wzubLAqVflRkn8BorBPmoofbb7XUO43BBeRwqQsnR6hGI9p6yDx8XKDkUIdAY_68xtmtl8OrxE9wV4Vi7lwJcfp4Rxck6wqEuK1n?purpose=fullsize)
+
+![The House of Hades (Heroes of Olympus #4) by Rick Riordan — Review | The Diary of a Bookworm](https://images.openai.com/static-rsc-4/M7jqiCCXOQXVknCRtvWkaXEg19v5m8e6EPFV9WypszIVnSxpwGqQwdv3xnb0t82Rf8AiTkmWbFvE2IwrA9R7fffYCQf_6AykP7B4zhuPQvyWryNbPCuGN1oTouB7EbBvjG8ENEygfEzpulOIUji8r_CMiHFZ0_boeVSVd0-3ibTz0YeoWsMtTXURajSOB1rx?purpose=fullsize)
+
+![Lava forge, silentfield | Fantasy landscape, Gravity falls art, Dwarven city](https://images.openai.com/static-rsc-4/DK9risHztmcegHhxlRnkyULzOzhg5ZX77j-a6OUBSV9AUMrOqkGrofhwKH2VyCpQlvEJ6U6YlQNeMSUvEXi9LwNT_EHEZUhzpgpOJoiSJnw7k_F9-BiK42YSuaWcnMBSnKJS0ZXs22BzC62xyOVtAP0IYsV2Bw1FV7nYH1mteGmoPn5NgoJvriLPor9ldyJ0?purpose=fullsize)
+
+![The Halls of Geryon – Map & Merch! | Dyson's Dodecahedron](https://images.openai.com/static-rsc-4/noQZQOoSoWCUfa5Y2EJWR7-soGf0lmrxZKe7Q6GirV406ob9leshw90KOMkbkffXDMD2teuQ4SDE_ilfVtTJA6LOgMrYfurbWuHPhDrYu83fZY_PRaNm2yfY4aPqHZc9ohl_r92z2xNm4boIn-dxrGGXsOzhCNm-Rz1sfQvpekbyWPfpAfHqa4-Px-Gj-cFf?purpose=fullsize)
+
+### 12.1 Layer-specific maps
+
+Each canonical underworld layer should have:
+
+* Its own geographical map.
+
+* Distinct terrain representation.
+
+* Entrances and exits.
+
+* Vertical connections.
+
+* Known and unknown routes.
+
+* Landmarks.
+
+* Dungeon entrances.
+
+* Resource locations.
+
+* Player discovery state.
+
+### 12.2 Surface-to-underground connections
+
+Create a connection registry.
+
+For example:
+
+```json
+{
+  "connectionId": "surface_to_underworld_example",
+  "source": {
+    "layer": "surface",
+    "locationId": "example_surface_entrance"
+  },
+  "destination": {
+    "layer": "underworld",
+    "locationId": "example_underground_location"
+  },
+  "connectionType": "cave_entrance",
+  "isDiscovered": false
+}
+```
+
+This is an illustrative schema. Actual location IDs must come from the canonical world files.
+
+Connection types could include:
+
+* Natural cave entrances.
+
+* Deep shafts.
+
+* Ancient elevators.
+
+* Underground rivers.
+
+* Ruined stairways.
+
+* Hidden portals, if supported by existing lore.
+
+* Labyrinth entrances.
+
+### 12.3 Vertical navigation
+
+Add a map mode that communicates depth.
+
+The player should be able to see:
+
+* Which layer they are currently in.
+
+* How far below the surface they have travelled, where defined.
+
+* Which known entrances connect layers.
+
+* Which routes are blocked.
+
+* Which underground locations have been discovered.
+
+The map must never reveal unknown passages just because they exist in the underlying data.
+
+### 13\. Great Labyrinth — 120-Floor Navigation Upgrade
+
+![How to Design Dungeon Maps for Sandbox DnD Campaigns — Dungeon Goblin](https://images.openai.com/static-rsc-4/MO1LxCOwU7F0Of2sLPkYQV3_1ZnzWUUPmJs09OW4uKx9zwOwr8qF407UgOlXw4y8QEDC8og0YVQ-dFmEE3EPEihbE-ZK5YLKcUPYVDadlFKryL3jfuW8nE6KBFTOaOnPpqJp-foG3IxXkvB9BtQTib2gtTXXEaqWkrolzRLSYmAorRL0IFTJN15ub2SCkQ9y?purpose=fullsize)
+
+![Labyrinth - XL Digital Map
+
+   – GAMETEEUK](https://images.openai.com/static-rsc-4/xhh_talC1ksTaryE1JQveR_95vo9cPl9j6HRjBA_GDS3-q8FiPyyD-uGcXiZwUOtD6x6x_xeTxJ3VAYS9HE-KusJ7ny-vc8WB73t5-LSHzGIuhEJxNfKBeXk_wtye4RsbPvDB-3tWcjJupsqbMbUsJiNz-LiY5i-z-NAiz6BLlsK1EF4JzLfxQCAywGOJu8A?purpose=fullsize)
+
+![zeta](https://images.openai.com/static-rsc-4/DmviRZAord--ORZcco5CPGbsHfPX86kG-UuxiuoCiTljTNVDBFTB-CHGux7s9o5v4EG_dXVX14HrEQXytK9tl_LZn7g_50Z_Jiu7phJPSz0HVNGEXGehhsWCgd_C2sMElfvjIovDWCLhg13QBGokqg-l9aapYYhrKW9DMK_ReXnq0zJJv5l50TOwHoL0c8FG?purpose=fullsize)
+
+![ハイファンタジー_古代遺跡の各種ビジュアル - benibuta2024’s blog](https://images.openai.com/static-rsc-4/CEu7sYS0PFPwyBoET6k6PN8X9L8Ln6ZWAEYxLij4kTkfbR5YaYpEZhhpI9SpdSmyWME9FbgbRQigcK3aq3Kzvf8flET3BDwhWCLyWStaLHMfjy98PyMvbxbRnV34OkJ-4BJPkYUvzxpPL5GEkvuMfMBJbWFIe-mV0qE3oeIJMJXZxNhuyFyCxQeycb5qxpFd?purpose=fullsize)
+
+![Stream The Abyss - Abyssal Void \[185\] by BRAIO | Listen online for free on SoundCloud](https://images.openai.com/static-rsc-4/24CiwVtJsuwIni3KAIHGcGDeMpwz9m6FI2YYoZk4T7yV4OXlLTqL8qhpkvgkoCB8wsxPKkJxH7XG1G1jtvDA194e76ZF5NTjPOCccHhj_2exSQjruvM51NsHSqXrVbpxsGv6u6AvO8U7x0azqSsPp-f0BVRHu7i0TrqDFESipOW6oz4RWc-KRe7Unassyv2o?purpose=fullsize)
+
+![10 Gridless Underground Ruins Battle Maps | VTT Pack for Dnd, Pathfinder & Ttrpgs | High-res AI Digital Maps - Etsy UK](https://images.openai.com/static-rsc-4/eNQMPn8XaS5XLgk89vh8xkvFCChPFMUk_2li3wZwFWM6kHhutTi3XyvyLTviVdrZiHaLqDAiA2VcKHg1hYq2LjFNui7_d2_kWUxqDjVL-XOkmK5z4ebmGJSy9wRHKRS9pqKfjhKCLzzBZXmrOM6TUs8eoXyI9timczXXl8jvJhBpL8K83YYi9ppGwxuR7pbi?purpose=fullsize)
+
+![Best Dungeon Game Background Generator | Vondy](https://images.openai.com/static-rsc-4/hUz9bfwF0CYZPB5QBD6FYuXiFNp7ejjRLhaedVzy-2VtF3sHExnO7yx-rJsX0IwkTq3ovSOjSa8s-Adi5f3Qj79qTMqPucnzge3zae3-2XRX8L2OZR-HCaJ_WJK0NT_KF53VEDNLdaolX5y_-zxaAoiSHfom7YsfJKsybfXaBzakurbmzyLhoEwPITphFV1b?purpose=fullsize)
+
+![Plongez-vous Dans Le Monde Surréaliste Du Labyrinthe De L'esprit, Un Labyrinthe Captivant Qui Mélange Harmonieusement Des Éléments Anciens Et Futuristes. Cette Œuvre D'art Combine D'imposants Piliers De Pierre Ornés De Sculptures Complexes Et De Symboles Lumineux Avec Des Couloirs Métalliques Élégants Qui Semblent S'étendre À L'infini Entourant Le Labyrinthe Est Une Brume Éthérée. Qui Enchevêtre Des Faisceaux De Lumière Vibrants Ajoutant À L'enchantement Au Cœur Du Labyrinthe, Une Structure Cristalline Pulsée Émet Une Énergie Impressionnante Au Sein De Ce Réseau Complexe De Chemins, Un Explorateur Solitaire Peut Voir Ses Yeux Remplis D'émerveillement Et De Détermination Alors Qu'il Navigue À Travers Le Mystérieux La Palette De Couleurs De Cette Œuvre D'art Hypnotise Avec Des Bleus Profonds, Des Violets Luminescents, Des Ors Chatoyants Et Des Verts Irisés Évoquant Un Sentiment D'intrigue, De Découverte Et De Mystère. Banque D'Images et Photos Libres De Droits. Image 214319356](https://images.openai.com/static-rsc-4/fq37CUpJdrdFp-cUws8RYOYmlltWcivlwp8C1Su9FeR_5JCM5Qk4US94Z_2V-_IiwM5PpokQjkIbvH0NW03UXIYuG4uBvBs1C0lImKgsIW9KU3ADFm7b5IIPyhzROkCUrp4UObdwr-HiXYMGug9VUHPBmjWjf_BKU4O3klWGG-yNePH7JkCSspu6EZBhFJ9O?purpose=fullsize)
+
+![The Lost Labyrinth of Egypt — And the 40-Meter Tic-Tac Buried at Its Core](https://images.openai.com/static-rsc-4/KYK0PmJLD5Iw-6dga_ZNdUStKlyyJO2U3eS2hLvVJrnCa23pPtDrXTaMMKqyt0Fgdswa3JoxxTuAVB9FBWuXKktn16UP7t1_rUUz_fFL0rix0hRq4ChCIzdAH3L7hPxOHGKM7uFEGdbXCVfguh63pED2Bn-vEKe-pTKAL_BJPNvIuy1tkcKcfejxyLae16OU?purpose=fullsize)
+
+![DND Dwarf Stronghold Campaign](https://images.openai.com/static-rsc-4/zuv493KyI-njev935jD9QL4InAlfuB9JP3453wbcbjXri_nsZp6_m0JS3ssuUfOb6wpbaeqrl-cY7oltCBXMYam9Ie_mn_9FO7iE6ki3dGl_xpQNq6j5QH49_596J0jItK3TFWNY7Xjm-54jE63i97tLeNKdmlAoD2-o1fHzeF8LAYWKHfSsfVuXw0aFkwX_?purpose=fullsize)
+
+![World of DanMachi | Friends & Fables - AI RPG World](https://images.openai.com/static-rsc-4/Y4MyEAZStJRyTjCF90BHo9DQ0qN6kjv6l5WzKCLCWf5jphe3aVgp6KpTikfttlPF-YREVkJEUZ-rpBd4SggJycmYfIxXTBI_eP4ytMWX1yutptbIrv6-J-hvFatzCqiYS8lSbDhHjYRye-YUk2pV3kR1Bnf81RvWVBy3frUn-HbmL2_hozxwA22NgiLGBJG3?purpose=fullsize)
+
+![The Abyssal Labyrinth by Vestesta on DeviantArt](https://images.openai.com/static-rsc-4/XIBar1OC2TxdBQF8Zqn7bI14aZ3CCrdmKTjpaMOfIJZ9tFAdf_3nVnu_opmNoA-X_FdOHU5oxEoHfmRsKqgn_mvvB5dRfGRr_lv_fBbA9qUh8Owtcs_C3n19zCphtZqWjOijadJKDztqwfjqqJctf97mv0IliHadEIEDGngsnZnva0XclCDFJnW_jwPC_h73?purpose=fullsize)
+
+![Top 10 D&D Battlemaps For Out Of The Abyss](https://images.openai.com/static-rsc-4/dj-b7qDEml9jUsWI8z2P_D6mePLCB6yEXz6gnK7ARQdkX7gD5TkQ9ZFvQ4T6lOyZkv4qEzYCPIbydNVEZYOL8Wh02p3mVp1AEvKK_faBlmejwGaCow4N-Mm5wjyGbKR7ROySocIpYKRlvAo6nSxgdlJa-6YIlrzeIp0QoGaN7MpJiAd0M7ELchTp9D-H9qkK?purpose=fullsize)
+
+![Buy The Bard's Tale IV: Barrows Deep - PC (Steam)](https://images.openai.com/static-rsc-4/gXqXQpDohIyiTpAuWMtCuIcc_F-i5jyyKtIy2yv5_NBeIHeXQkhWlbUyVvNbGdaB33ho3Pi2KNTLsofq7SEa_tk_3oFBV0hD-Uo0Bl6mU9fY60FREnHuhgoUpqqJ8C8tytX0pPawMu8w5eB3kz6eKW5pmjkL8jPTQUaJntEZ2M8jqIf5MZHC4XiXUd-bMtLz?purpose=fullsize)
+
+![Missions de Guilde](https://images.openai.com/static-rsc-4/yUnY_SsTxKW6gXYyf_ySB8FCDXqwi2kqeUWLYwU-fNOq9k7Sx9sNwY7PXOkJR7eDvbhyznfBAVS2dXMwithDfKM8ST6XsZfYv5Ur53u0COdzi_tnklyTOh4mHYRsT82lkEo0n4xAIig4j3iMNO_gHg60JOZiVWTPhebNFaulxo1vcX0nYTze7WK1cyPKg1Qc?purpose=fullsize)
+
+The Great Labyrinth deserves its own navigation system.
+
+With 120 floors, a simple list of floor numbers will not be enough.
+
+### 13.1 Labyrinth floor map
+
+Each floor should support:
+
+* Floor identifier.
+
+* Floor name, where defined.
+
+* Floor geometry.
+
+* Entrance and exit locations.
+
+* Stairs and vertical connections.
+
+* Locked passages.
+
+* Discovered rooms.
+
+* Boss or major encounter locations.
+
+* Important landmarks.
+
+* Secret passage records.
+
+* Player exploration percentage.
+
+### 13.2 Labyrinth navigation interface
+
+Include:
+
+* Floor selector.
+
+* Current-floor map.
+
+* Known connected floors.
+
+* Vertical route diagram.
+
+* Discovered shortcuts.
+
+* Unexplored sections.
+
+* Landmark and boss markers.
+
+* Floor completion information.
+
+Do not show all 120 floors as if they are immediately accessible. The interface should distinguish known, discovered, reachable, and inaccessible floors.
+
+### 13.3 Floor data architecture
+
+```json
+{
+  "labyrinthId": "great_labyrinth",
+  "floorId": "floor_example",
+  "floorNumber": 1,
+  "mapData": {
+    "mapAsset": "placeholder_map_asset",
+    "entrances": [],
+    "exits": [],
+    "rooms": [],
+    "connections": []
+  },
+  "discovery": {
+    "discovered": false,
+    "surveyed": false
+  }
+}
+```
+
+Use the canonical floor definitions already present in the project. Do not create a second competing list of 120 floor definitions.
+
+### 14\. Unity 6 World Streaming & Additive Scene Architecture
+
+Major engineering system
+
+This is where V10 becomes a substantial technical upgrade rather than just a larger map.
+
+The Unity project should load the world progressively based on the player's position and destination.
+
+### 14.1 Sector-based streaming
+
+Divide the surface world into manageable streaming sectors.
+
+A sector should represent a loading and management boundary, not necessarily a lore region.
+
+That distinction matters:
+
+* One lore region can occupy several sectors.
+
+* One sector may contain part of a regional border.
+
+* A sector can contain terrain, vegetation, props, structures, and local content.
+
+* Region identity should remain independent of sector loading.
+
+This allows the existing 40-region geography to stay intact while Unity loads the actual environment in smaller units.
+
+### 14.2 Sector lifecycle
+
+Each sector should have a clear lifecycle:
+
+```text
+UNLOADED
+   |
+   v
+REQUESTED
+   |
+   v
+LOADING
+   |
+   v
+READY
+   |
+   v
+ACTIVE
+   |
+   v
+REDUCED SIMULATION
+   |
+   v
+UNLOADING
+   |
+   v
+UNLOADED
+```
+
+Each transition should be explicit and observable in development tools.
+
+### 14.3 Loading priorities
+
+Prioritize:
+
+* The sector containing the player.
+
+* Sectors immediately surrounding the player.
+
+* The player's movement direction.
+
+* The destination of a valid fast-travel transition.
+
+* Visible distant landmarks.
+
+* Distant background environments.
+
+The system should avoid loading an entire region just because the player enters it.
+
+### 14.4 Unity implementation options
+
+Use the technologies already adopted by the project wherever possible.
+
+Potential implementation components:
+
+* Unity additive scene loading.
+
+* Addressables for managed asset loading, if already included or approved for the project.
+
+* Async asset loading.
+
+* Terrain LOD.
+
+* Object pooling.
+
+* Culling groups.
+
+* Occlusion culling.
+
+* GPU instancing.
+
+* Spatial partitioning.
+
+* Background data preparation.
+
+* Explicit memory budgets.
+
+Avoid adding multiple overlapping streaming frameworks. One central streaming manager should coordinate the process.
+
+### 14.5 Loading and unloading safeguards
+
+* Never unload a sector containing the player.
+
+* Never remove an active quest-critical object without preserving its state.
+
+* Avoid unloading an NPC while its persistent state is being written.
+
+* Preserve opened chests, defeated enemies, collected resources, and environmental changes.
+
+* Handle loading failures with a safe recovery state.
+
+* Prevent duplicate activation when multiple systems request the same sector.
+
+* Use cancellation and prioritization for outdated requests.
+
+* Ensure adjacent terrain sections do not show gaps.
+
+### 14.6 Terrain transition quality
+
+The player should not see:
+
+* Sudden terrain holes.
+
+* Missing collision.
+
+* Visible tile boundaries.
+
+* Abrupt texture changes.
+
+* Trees popping into existence nearby.
+
+* Floating objects.
+
+* Disappearing landmarks.
+
+* Incorrect shadows at sector edges.
+
+Use compatible terrain resolutions, edge stitching where needed, consistent height samples, and appropriate LOD transitions.
+
+### 15\. Terrain Rendering & URP Optimization
+
+The art direction matters. Aetheria's bright, anime-inspired cel-shaded visual identity should remain consistent across the new world systems.
+
+V10 should not turn the world into a generic photorealistic landscape.
+
+### 15.1 Terrain material system
+
+Build reusable terrain material profiles for:
+
+* Grass.
+
+* Forest floors.
+
+* Soil.
+
+* Rock.
+
+* Sand.
+
+* Snow.
+
+* Mud.
+
+* Volcanic ground.
+
+* Crystal formations.
+
+* Shorelines.
+
+Each material profile should define:
+
+* Base colour.
+
+* Surface texture.
+
+* Normal detail, if appropriate.
+
+* Smoothness.
+
+* Shader parameters.
+
+* Biome compatibility.
+
+* Slope constraints.
+
+* Height constraints.
+
+* Seasonal variants where needed.
+
+### 15.2 Biome blending
+
+Avoid hard transitions between biomes.
+
+Blend using:
+
+* Height.
+
+* Slope.
+
+* Temperature.
+
+* Moisture.
+
+* Regional biome definitions.
+
+* Hand-authored transition masks.
+
+The goal is to make forests gradually transition into grasslands, highlands, or wetlands when the geography calls for it.
+
+### 15.3 Vegetation rendering
+
+Implement:
+
+* Distance-based vegetation density.
+
+* GPU instancing where suitable.
+
+* Vegetation LOD.
+
+* Wind animation.
+
+* Terrain-aligned placement.
+
+* Slope restrictions.
+
+* Biome-specific spawn rules.
+
+* Tree and rock clustering.
+
+* Collision simplification.
+
+* Persistent changes for harvested vegetation.
+
+Do not use thousands of individually managed GameObjects where instanced rendering or other batched approaches are more appropriate.
+
+### 15.4 Stylized world lighting
+
+Improve:
+
+* Consistent directional lighting.
+
+* Atmospheric depth.
+
+* Stylized distance fog.
+
+* Shadow distance management.
+
+* Seasonal colour variation.
+
+* Weather transitions.
+
+* Night-time visibility.
+
+* Region-specific lighting palettes.
+
+Use URP features that are compatible with the project's actual renderer configuration.
+
+### 16\. Roads, Paths & Traversal Network
+
+![Crossroads | Czepeku Scenes](https://images.openai.com/static-rsc-4/1rp7-AxU2w6nJhLm1bxNhxal61ACMSDMfqyx94Ek1dTrBuIseKp_8yKdazjdWfOxfYr2TQLQvje98hQJMOXPrYIPaMOqDNQYcL98BB862aM2AtCZIE3uce3F0Lurw8E1ZNk1vvDKNPqgWDiQcOCBCLL6ISFqeJbSgDnIgn1syaGKzWTKaLbKNYPApsOXKFJG?purpose=fullsize)
+
+![A serene, sunlit valley s - Free AI Image | Tensor.Art | Tensor.Art](https://images.openai.com/static-rsc-4/WspCo4no-qBQklkfmvwMEKHBaBsg9Wz39rJJzMqqyDZPyfcKhcfzOiQx3jmLvQe_rRjzYe9itrQB0urK6CW2_eoqBIEf22k3M2UU-AXhvKJA9uJLxyp2DSR96ByziMM9l7ZPFqgmSnfhCVbP_4kJeyOQ4dZBUVSl3G3zDL7Cepys51PS-F-_Xjawtu6mQGGV?purpose=fullsize)
+
+![The Great Rock Dale Geographic Location in Night Below | World Anvil](https://images.openai.com/static-rsc-4/nPOAY9nZ4fK4ve67BrjliehmrUQJCRXUPBotqxTOVZ6OxmAxwiWou3RZd1wuczhCCosr8GFqcGGbD5s555MP1YQ99FanbkSXNCJjVfgOvQDwaf7TFu_0IoqdSjMDYq_rvFAlKNGO3TWE-6CYW39DtTpYHwhLqJrIG4J9OzQzJcAvVk4aJTxpSpUzHVxEGXIz?purpose=fullsize)
+
+![Client Challenge](https://images.openai.com/static-rsc-4/q_R-fII9KBAToOZVYmjLFr_GxH_BavGCjMZ-zUJmN7WfEGGWOxFQZgaW_TIjkD3f4RC_OrryzUf3qMtpE3gFWfFloJScGBfzcxQ6495_uLmQOUVenMqzkRLFztdMPvMNYI9ynLSU4XvfpnHLHYHMPlMBOfjvsGknllpQqDGH4wUYcmr7zI5m8mmbERgqu0Hd?purpose=fullsize)
+
+![Ancient Stone Arch Bridge in a Lush Fantasy Landscape | Deep Dream Generator](https://images.openai.com/static-rsc-4/FekuglOvaXLi-guOazt10WcmCv6P_lOanwFmD7nQ4lMEVqST8UU_UulEEy8oWCGF7AtRP_xtRRC9QSUgykVxi2mzu8YJCpWC39GLzjwNLgO3r-J-yzN8bDFmBrxebcY5IL7KWzXQo9TMpMHqmigDc_qKwSwbb1yMD_Tm4vq5w25p_WA9WWWwRKiY8pY5sT5B?purpose=fullsize)
+
+![AI Generated Zoom Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/FlUHMK7a35cnIQDQX2kS1mR_20WJY91deIb2U2DtF8LMEdsqxVfdypVQ0QgRxWTwWGWtyb0X1S7-20ImGbOlnLDHeqZBaxCj6Vbqb459fvE8_IswTSGpFvBLrS4D-m-pSB_uWsLufQS5IUmij9lU9U--F8Er1gr3smYBdNkKmQ26jOF7JrnRfmypUbzfXSSE?purpose=fullsize)
+
+![Daggerheart Maps for the Witherwild](https://images.openai.com/static-rsc-4/8SvBn7qOZrxCx04OAHr2Z4_hfnijk8W9_mECRD9p-CWCCBnmZdX5AoYQ1XkKYanNBkjnTQ_qUGJmIkvfLAhNwp36sVBeOw944hCTpUDkH18QmZW1mITkapfVaSnhH93zQ81c0RyOSI3LJyF5yYOqqnoJiUrF3JMvIdxiBa5_VvRRMn2i6PiLCFBwTvxnBLCT?purpose=fullsize)
+
+![Wuyun Gorge  in Exandria broken | World Anvil](https://images.openai.com/static-rsc-4/G0-tUXPLxbpv5K4-9C0FYyuhOqPxdjlthJcaqD48I_88oI7xLLZE8uazPgSTUSzdaOR9qPKPgAapjLwo7qoq9hXSSYqwkxS8s7Dkt8oDiT819J_pfNmpoSKNGCfgPi7nug3Gaa72wLuTLbbaoQSt0n5wiBnQ52yMFPN3bQupVVfcfEjid3ClG_VocAXmm1YT?purpose=fullsize)
+
+![Hoarwell - Geography - Fenopaedia: The Tolkien Encyclopedia of Elfenomeno.com](https://images.openai.com/static-rsc-4/wkUaaSNvDMl_HvX9LoTLf3yAhHkMle5rxaR7nxSioiyKA-CEtcNxYECUAjYLb5h7a6dGlPgTU20Rd-JgyvUSLhBKzjhbnhwgN4mT3IRb8WJF8IarpT8rJetP5kv1NGgAyCECRWF-Mm-2f97r6UzbuqWivm3Q7ntEvtFm6q6dw6JgbfGlLozUoPeYOJctYPiu?purpose=fullsize)
+
+![Route Touristique de Combe Laval – フランス最も壮大な絶景ドライブコース｜mu_chin](https://images.openai.com/static-rsc-4/LnmFW9VmWLcKqVd3k2AHsuvdLdLlOzrUUfm912tptPcEvOcAdUd3-eQLPFNoXb3IO3RDuf2_jFQ_JJjPR8svYbJDGoVoqMyQpeuEV_lkvY9JN2xeMS1l1QqfCQkcmOogRavJu6C3rhV0ssmTfONcM-CB8vMIwrgqwcJpT0REWbPyiZyLMFCLxu6NuhZ4mjoD?purpose=fullsize)
+
+The world should have a proper traversal network.
+
+### Road categories
+
+* Main regional roads.
+
+* Secondary roads.
+
+* Village paths.
+
+* Mountain trails.
+
+* Forest trails.
+
+* Ancient roads.
+
+* Merchant routes.
+
+* Dungeon access paths.
+
+* Hidden trails.
+
+### Road generation and validation
+
+Roads should follow geography rather than cut through it.
+
+The system should account for:
+
+* Terrain slope.
+
+* Water crossings.
+
+* Mountain passes.
+
+* Cliff avoidance.
+
+* Settlement entrances.
+
+* Bridges.
+
+* Road intersections.
+
+* Navigation mesh connectivity.
+
+Use spline-based road authoring or the project's existing road system if available.
+
+### Traversal quality
+
+* Roads should be wider where traffic is expected.
+
+* Paths should narrow in difficult terrain.
+
+* Bridges should have valid collision.
+
+* Mountain paths should have safe turning areas.
+
+* Trails should remain visible at appropriate map zoom levels.
+
+* Hidden paths should not automatically appear on the player's map.
+
+### 17\. World Save Data & Persistent Geography
+
+This is essential for a world that can be streamed and explored over long play sessions.
+
+The static world definition and the player's changed world state should be stored separately.
+
+### Static world data
+
+Contains:
+
+* Region definitions.
+
+* Coordinates.
+
+* Terrain configuration.
+
+* Biome definitions.
+
+* Landmark definitions.
+
+* Road networks.
+
+* Layer definitions.
+
+* Connection definitions.
+
+### Persistent player world state
+
+Contains:
+
+* Discovered regions.
+
+* Surveyed regions.
+
+* Player markers.
+
+* Custom notes.
+
+* Discovered landmarks.
+
+* Opened shortcuts.
+
+* Changed world objects.
+
+* Collected resources.
+
+* Modified environmental objects.
+
+* Current map layer.
+
+### Save system requirements
+
+* Versioned world data.
+
+* Stable IDs.
+
+* Migration support.
+
+* Validation before loading.
+
+* Corrupt-sector recovery.
+
+* Efficient partial updates.
+
+* Separate player discovery data.
+
+* Safe serialization of world changes.
+
+Do not save every terrain tile in full every time the player saves. Store the static world once and persist only meaningful changes.
+
+### 18\. World Map Developer Studio
+
+V10 should include an editor specifically for managing Aetheria's geography.
+
+![Unigine Developer](https://images.openai.com/static-rsc-4/vGsSWGnLvg_4Mk9N9wkAsHlxnfr6DVcr3_AkF6BNV8eNJSveHMzpi05Hm2VcfFiyVCFV_nKeLDcpbGhHEUwESqfRYWXinjoeXEysXWezDaW3XloBA7c4eQHpJbQ1iAwote1UPu1XblA3y7noGk2Rq0WZr0bSBhmsz2FwSEyPuVdX3GAXihoPl9DZRdXNt4C_?purpose=fullsize)
+
+### 18.1 Region editor
+
+Display all canonical regions in one interface.
+
+Developer functions:
+
+* Select and inspect regions.
+
+* Edit region coordinates.
+
+* Edit region boundaries.
+
+* Edit map radius.
+
+* View biome assignments.
+
+* View neighbouring regions.
+
+* Edit geographical features.
+
+* Preview region transitions.
+
+* Validate region connectivity.
+
+* View progression ring assignments.
+
+* View surface and underground layer assignments.
+
+### 18.2 World map editor
+
+Add tools for:
+
+* Coastline editing.
+
+* Mountain range placement.
+
+* River drawing.
+
+* Lake placement.
+
+* Road authoring.
+
+* Forest boundary painting.
+
+* Biome painting.
+
+* Landmark placement.
+
+* Dungeon entrance placement.
+
+* Elevation preview.
+
+* Map label editing.
+
+### 18.3 Streaming debugger
+
+Display:
+
+* Active sectors.
+
+* Loading sectors.
+
+* Unloading sectors.
+
+* Sector memory usage.
+
+* Asset loading times.
+
+* Player position.
+
+* Current region.
+
+* Nearby sectors.
+
+* LOD levels.
+
+* Failed loading requests.
+
+### 18.4 Automated validation
+
+Create a world validation tool that checks:
+
+| Validation   | What it detects                        |
+| ------------ | -------------------------------------- |
+| Region IDs   | Duplicate or missing identifiers       |
+| Coordinates  | Invalid map coordinates                |
+| Boundaries   | Unexpected overlaps or gaps            |
+| Connectivity | Unintended disconnected regions        |
+| Biomes       | Missing or invalid biome definitions   |
+| Landmarks    | Missing location references            |
+| Entrances    | Broken layer connections               |
+| Roads        | Invalid endpoints                      |
+| Labyrinth    | Missing or duplicate floor definitions |
+| Streaming    | Missing sector data                    |
+| Save data    | Invalid persistent references          |
+
+The tool should produce an actionable report with the affected IDs and file locations.
+
+### 19\. Proposed V10 Technical Architecture
+
+The architecture should separate the world into clear responsibilities.
+
+```text
+Aetheria/
+│
+├── World/
+│   ├── WorldBootstrap/
+│   ├── WorldConfiguration/
+│   ├── WorldCoordinates/
+│   ├── WorldRegistry/
+│   └── WorldValidation/
+│
+├── WorldMap/
+│   ├── GlobalMap/
+│   ├── RegionalMap/
+│   ├── LocalMap/
+│   ├── UndergroundMap/
+│   ├── MapRendering/
+│   ├── MapNavigation/
+│   └── MapDiscovery/
+│
+├── Geography/
+│   ├── Regions/
+│   ├── RegionConnections/
+│   ├── Elevation/
+│   ├── MountainRanges/
+│   ├── Rivers/
+│   ├── Lakes/
+│   ├── Coastlines/
+│   └── Landmarks/
+│
+├── Terrain/
+│   ├── TerrainGeneration/
+│   ├── Heightmaps/
+│   ├── TerrainMaterials/
+│   ├── BiomeBlending/
+│   ├── Vegetation/
+│   ├── TerrainLOD/
+│   └── TerrainCollision/
+│
+├── WorldStreaming/
+│   ├── StreamingManager/
+│   ├── SectorRegistry/
+│   ├── SectorLoader/
+│   ├── SectorUnloader/
+│   ├── LoadingPriority/
+│   ├── MemoryManagement/
+│   └── StreamingDebug/
+│
+├── Traversal/
+│   ├── Roads/
+│   ├── Trails/
+│   ├── Bridges/
+│   ├── Navigation/
+│   └── PathValidation/
+│
+├── Underground/
+│   ├── LayerMaps/
+│   ├── Entrances/
+│   ├── Connections/
+│   ├── CaveMaps/
+│   └── LabyrinthMaps/
+│
+├── Exploration/
+│   ├── FogOfWar/
+│   ├── Discovery/
+│   ├── Cartography/
+│   ├── PlayerMarkers/
+│   └── MapNotes/
+│
+├── WorldPersistence/
+│   ├── StaticWorldData/
+│   ├── PlayerWorldState/
+│   ├── SectorState/
+│   ├── SaveMigration/
+│   └── SaveValidation/
+│
+└── WorldEditor/
+    ├── RegionEditor/
+    ├── GeographyEditor/
+    ├── MapEditor/
+    ├── TerrainEditor/
+    ├── StreamingDebugger/
+    └── ValidationTools/
+```
+
+This is a proposed logical structure, not an instruction to create duplicate folders if equivalent systems already exist in the repository.
+
+### 20\. V10 Development Roadmap
+
+I recommend splitting V10 into manageable engineering milestones. The existing production plan should remain intact, especially the Ring 0 prototype and Ring 1 playable area.
+
+| Phase | Development               | Completion requirement                                             |
+| ----- | ------------------------- | ------------------------------------------------------------------ |
+| 1     | Audit existing world data | All current map and region systems documented                      |
+| 2     | Coordinate calibration    | Existing map coordinates convert consistently into Unity positions |
+| 3     | Region connectivity       | Region graph validated                                             |
+| 4     | World map rendering       | Global, regional and local views functional                        |
+| 5     | Fog of war                | Discovery and survey states saved                                  |
+| 6     | Geography upgrade         | Elevation, rivers, mountains and coastlines supported              |
+| 7     | Terrain rendering         | Biome materials and blending implemented                           |
+| 8     | Streaming foundation      | Sector loading and unloading functional                            |
+| 9     | Traversal network         | Roads, trails, bridges and route validation                        |
+| 10    | Underground maps          | Five canonical layers connected                                    |
+| 11    | Labyrinth navigation      | 120-floor map navigation integrated                                |
+| 12    | Persistence               | Player discoveries and world changes saved                         |
+| 13    | Developer studio          | Editing and validation tools available                             |
+| 14    | Optimization              | Performance and memory budgets validated                           |
+| 15    | Integration               | Existing quests, creatures, NPCs and traversal work correctly      |
+
+### Recommended implementation order
+
+Do not start by generating all 40 regions in high detail.
+
+Instead:
+
+* Audit the existing coordinate and region definitions.
+
+* Implement the coordinate conversion without breaking existing references.
+
+* Build a working map using the current canonical data.
+
+* Complete the Ring 0 and Ring 1 geography.
+
+* Test terrain streaming with the actual playable environment.
+
+* Expand the same pipeline to additional regions.
+
+* Add underground and labyrinth navigation.
+
+* Complete optimization and persistence.
+
+This will avoid creating a beautiful world map that does not correspond to the actual playable world.
+
+### 21\. Master Development Directive — Aetheria V10
+
+This is the consolidated implementation brief. It is deliberately written to require repository inspection before implementation.
+
+# AETHERIA V10
+# WORLD MAP, GEOGRAPHY, TERRAIN & WORLD STREAMING OVERHAUL
+
+## PROJECT
+
+Aetheria — Unity 6, URP, 3D, third-person, strictly single-player fantasy RPG.
+
+## PRIMARY OBJECTIVE
+
+Upgrade Aetheria's existing world architecture into a detailed, scalable, geographically consistent, explorable world.
+
+V10 must improve the actual world map, geographical representation, terrain systems, coordinate architecture, regional connectivity, underground navigation, streaming, persistence, and development tools.
+
+This is an upgrade to Aetheria's existing world, not a replacement of its canonical geography.
+
+## MANDATORY CANON PRESERVATION
+
+Before implementation, inspect the repository and identify the current versions of all relevant world files, scripts, scenes, data definitions, and assets.
+
+Preserve the established world specifications:
+
+- 40 canonical surface regions.
+- Five canonical underworld layers.
+- The 120-floor Great Labyrinth.
+- Existing regional names and identities.
+- Existing progression rings.
+- Existing terrain and feature definitions.
+- Existing region coordinates and radii.
+- Existing Ring 0 and Ring 1 production priorities.
+- Existing Vesper and post-game world specifications.
+
+Do not invent replacement regions, rename established locations, change geographical relationships without authorization, or create competing definitions for existing world systems.
+
+All existing canonical data must remain compatible or receive a documented migration.
+
+## 1. WORLD ARCHITECTURE AUDIT
+
+Inspect and document:
+
+- Existing region JSON definitions.
+- World map coordinate system.
+- Region placement and radius calculations.
+- Region boundaries.
+- Existing terrain assets.
+- World scenes.
+- Player world positioning.
+- Existing map UI.
+- Existing discovery systems.
+- Existing underworld connections.
+- Great Labyrinth floor definitions.
+- World save data.
+- Existing Unity packages and rendering configuration.
+
+Produce a technical audit before making changes.
+
+Identify existing functionality, missing functionality, technical debt, and duplicate systems.
+
+## 2. WORLD COORDINATE SYSTEM
+
+Create a canonical coordinate conversion architecture.
+
+Requirements:
+
+- Preserve existing map coordinates.
+- Preserve existing region identifiers.
+- Preserve existing region radii and progression information.
+- Introduce a calibrated map-to-world conversion.
+- Define Unity world-unit conventions.
+- Define world origin and orientation.
+- Support surface and underground coordinates.
+- Support stable landmark positioning.
+- Support region-to-sector mapping.
+- Support coordinate conversion in both directions.
+
+Do not assign arbitrary kilometre dimensions.
+
+Calibrate physical world size using existing region layouts, planned gameplay distances, landmark positions, and travel-time targets.
+
+Store world scale centrally and make it configurable.
+
+## 3. WORLD MAP SYSTEM
+
+Develop four map presentation levels:
+
+- Global world map.
+- Regional map.
+- Local exploration map.
+- Underground map.
+
+Features:
+
+- Zoom and pan.
+- Region boundaries.
+- Region labels.
+- Settlement markers.
+- Landmark markers.
+- Roads and paths.
+- Rivers and lakes.
+- Mountain ranges.
+- Coastlines.
+- Quest markers.
+- Player position.
+- Custom player markers.
+- Discovery filters.
+- Layer selection.
+- Coordinate display.
+- Distance measurement.
+- Map scale indicator.
+- Compass.
+- Topographic view.
+
+Support a stylized illustrated map and an optional geographical/topographic presentation.
+
+Ensure map rendering remains performant with all canonical regions and their associated features.
+
+## 4. REGIONAL GEOGRAPHY
+
+Upgrade the representation of all existing surface regions.
+
+Implement systems for:
+
+- Region boundaries.
+- Geographical neighbours.
+- Terrain transitions.
+- Biome transitions.
+- Elevation differences.
+- Mountain ranges.
+- Valleys.
+- Rivers.
+- Lakes.
+- Coastlines.
+- Islands.
+- Natural landmarks.
+
+Create region connectivity validation.
+
+Do not treat lore region boundaries as mandatory terrain-loading boundaries.
+
+One region may contain multiple streaming sectors, and one sector may overlap a regional transition.
+
+## 5. TERRAIN GENERATION
+
+Build a modular terrain pipeline compatible with Unity 6 and the existing URP setup.
+
+Support:
+
+- Heightmap data.
+- Terrain elevation.
+- Slope masks.
+- Terrain material assignment.
+- Terrain LOD.
+- Terrain collision.
+- Erosion workflows where appropriate.
+- Biome blending.
+- Hand-authored terrain editing.
+- Deterministic procedural generation where useful.
+
+Procedural generation must not overwrite canonical, authored locations.
+
+Use deterministic seeds for generated content and preserve authored geographical landmarks.
+
+Store important generated world data so loading a save does not regenerate the entire world.
+
+## 6. BIOME SYSTEM
+
+Improve the biome implementation using existing canonical definitions.
+
+Support:
+
+- Biome terrain profiles.
+- Vegetation profiles.
+- Material profiles.
+- Environmental ambience.
+- Weather compatibility.
+- Creature habitat compatibility.
+- Resource distribution.
+- Slope and elevation restrictions.
+- Natural biome transitions.
+
+Maintain Aetheria's bright anime-inspired cel-shaded art direction.
+
+Do not introduce incompatible photorealistic rendering.
+
+## 7. MOUNTAINS, RIVERS AND WATER
+
+Implement geographical systems for:
+
+- Mountain ranges.
+- Peaks.
+- Valleys.
+- Mountain passes.
+- Cliffs.
+- Glaciers where appropriate.
+- River source locations.
+- River flow paths.
+- River width.
+- River crossings.
+- Lakes.
+- Wetlands.
+- Coastlines.
+- Shorelines.
+- Waterfalls.
+- Ocean regions.
+
+River paths must respect elevation and drainage.
+
+Avoid disconnected water systems, impossible uphill rivers, and visibly broken terrain boundaries.
+
+## 8. REGION CONNECTIVITY
+
+Create a region graph using canonical region IDs.
+
+Each connection should identify:
+
+- Source region.
+- Destination region.
+- Connection type.
+- Geographical location.
+- Traversal requirements.
+- Discovery requirements where applicable.
+- Availability state.
+
+Support roads, paths, mountain passes, bridges, waterways, cave connections, and underground entrances.
+
+Create automated validation for broken or unintended connections.
+
+## 9. WORLD STREAMING
+
+Implement a central sector-based world streaming system.
+
+The system must support:
+
+- Sector registration.
+- Sector discovery.
+- Asynchronous loading.
+- Asynchronous unloading.
+- Loading priorities.
+- Player-distance calculations.
+- Movement-direction prediction.
+- Prefetching.
+- Memory budgets.
+- Object pooling.
+- Reduced distant simulation.
+- Loading cancellation.
+- Error recovery.
+- Sector state preservation.
+
+Use additive scene loading and approved Unity asset-loading technologies where appropriate.
+
+Do not introduce multiple competing streaming managers.
+
+Maintain compatibility with the existing world and scene architecture.
+
+## 10. TERRAIN AND OBJECT LOD
+
+Implement:
+
+- Terrain LOD.
+- Vegetation LOD.
+- Prop LOD.
+- Distant landmark representation.
+- Reduced distant object simulation.
+- Appropriate culling.
+- GPU instancing where appropriate.
+- Shadow distance management.
+- Terrain transition handling.
+
+Avoid visible gaps, collision loss, severe pop-in, and unstable frame times.
+
+## 11. WORLD TRAVERSAL
+
+Develop a world traversal network supporting:
+
+- Main roads.
+- Secondary roads.
+- Village paths.
+- Mountain trails.
+- Forest trails.
+- Bridges.
+- River crossings.
+- Hidden paths.
+- Ancient roads.
+- Dungeon entrances.
+
+Support spline-based authoring where suitable.
+
+Route validation must account for terrain, obstacles, slope, and actual geographical connections.
+
+## 12. EXPLORATION AND CARTOGRAPHY
+
+Implement:
+
+- Unknown territory.
+- Discovered territory.
+- Surveyed territory.
+- Landmark discovery.
+- Region discovery.
+- Map notes.
+- Custom markers.
+- Exploration history.
+- Local mapping.
+- Underground exploration mapping.
+
+Discovery must be persistent and tied to the player's save.
+
+Do not reveal undiscovered locations simply because their static definitions exist.
+
+## 13. UNDERWORLD MAP SYSTEM
+
+Integrate all five existing canonical underworld layers.
+
+Support:
+
+- Individual layer maps.
+- Underground entrances.
+- Layer connections.
+- Vertical navigation.
+- Underground landmarks.
+- Cave networks.
+- Hidden passages.
+- Underground rivers and lakes where canon supports them.
+- Discovery and survey state.
+
+Maintain the existing canonical layer definitions.
+
+## 14. GREAT LABYRINTH
+
+Integrate the existing 120-floor Great Labyrinth.
+
+Implement:
+
+- Floor selector.
+- Floor maps.
+- Entrance and exit markers.
+- Vertical connections.
+- Discovered rooms.
+- Hidden passages.
+- Shortcuts.
+- Boss and landmark markers.
+- Exploration progress.
+- Floor-to-floor navigation.
+
+Use the canonical floor data.
+
+Do not create duplicate floor definitions.
+
+## 15. WORLD PERSISTENCE
+
+Separate immutable world definitions from player-specific world changes.
+
+Static data should include:
+
+- Regions.
+- Geography.
+- Terrain configuration.
+- Biomes.
+- Landmarks.
+- Roads.
+- Layer connections.
+- Labyrinth definitions.
+
+Player state should include:
+
+- Discovered locations.
+- Surveyed areas.
+- Custom map markers.
+- Player notes.
+- Discovered passages.
+- Modified world objects.
+- Persistent environmental changes.
+- Relevant sector state.
+
+Implement versioned serialization, validation, migration, and recovery.
+
+## 16. WORLD MAP DEVELOPER STUDIO
+
+Create or extend developer tools for:
+
+- Region editing.
+- Coordinate editing.
+- Region boundary visualization.
+- Terrain editing.
+- Biome painting.
+- Mountain placement.
+- River authoring.
+- Road authoring.
+- Landmark placement.
+- Underground connection editing.
+- Labyrinth map preview.
+- Map rendering preview.
+- Streaming visualization.
+- Performance monitoring.
+- Automated validation.
+
+Reuse existing project editor tools whenever possible.
+
+## 17. PERFORMANCE
+
+Profile the actual game before establishing final performance budgets.
+
+Measure:
+
+- Frame time.
+- CPU time.
+- GPU time.
+- Memory usage.
+- Terrain loading time.
+- Asset loading time.
+- Sector activation time.
+- Sector unloading time.
+- Draw calls.
+- Batches.
+- Active objects.
+- Terrain and vegetation rendering.
+
+Implement performance improvements based on measured bottlenecks.
+
+Do not introduce unnecessary systems simply because they are technically impressive.
+
+## 18. INTEGRATION
+
+Maintain compatibility with:
+
+- V3 asset production.
+- V4 world state and NPC systems.
+- V5 combat and enemy systems.
+- V6 resources and crafting.
+- V7 exploration and ancient civilizations.
+- V8 companions and creatures.
+- V9 cinematic presentation and audio.
+
+World streaming must preserve NPC, creature, quest, resource, and environmental state.
+
+## 19. IMPLEMENTATION ORDER
+
+1. Repository audit.
+2. Canonical world data audit.
+3. Coordinate calibration.
+4. Region graph and validation.
+5. World map rendering.
+6. Discovery and cartography.
+7. Terrain and geographical improvements.
+8. Surface sector streaming.
+9. Road and traversal integration.
+10. Underground mapping.
+11. Great Labyrinth mapping.
+12. World persistence.
+13. Developer tools.
+14. Optimization.
+15. Regression testing.
+
+Do not implement every feature simultaneously.
+
+Complete and test each milestone before moving to the next.
+
+## 20. ACCEPTANCE CRITERIA
+
+V10 is not complete until:
+
+- All 40 canonical surface regions remain intact.
+- Existing region IDs and progression information are preserved.
+- Existing map coordinates remain usable.
+- The coordinate conversion is documented and tested.
+- Region connections are validated.
+- Global, regional, local, and underground maps function.
+- Discovery and cartography persist after saving and loading.
+- Surface streaming works without visible sector gaps.
+- Terrain collision remains valid during streaming.
+- Underground layer connections work.
+- The 120-floor Great Labyrinth can be navigated through its map system.
+- Existing Ring 0 and Ring 1 gameplay remains functional.
+- Existing quests, NPCs, creatures, companions, and traversal systems remain compatible.
+- Performance is measured on target hardware.
+- No critical save compatibility or world-data errors remain.
+
+## FINAL GOAL
+
+Deliver Aetheria V10 as a technically robust world-map and geographical infrastructure upgrade.
+
+The result must be a coherent, explorable, persistent fantasy world built on Aetheria's actual canonical geography.
+
+Do not replace the world. Improve the world that already exists.
+
+### My strongest recommendation
+
+I would make coordinate calibration, the world map, and region connectivity the first three deliverables. Everything else depends on them.
+
+A larger map is not automatically a better world. A better world is one where the geography, playable terrain, map representation, navigation, and save data all describe the same place.
+
+The next sensible step is a file-by-file audit of the existing world implementation before deciding the final physical size. That will tell us whether Aetheria needs a larger world, more detailed regions, better streaming, or all three.

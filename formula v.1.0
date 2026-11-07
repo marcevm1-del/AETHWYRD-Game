@@ -1,0 +1,1513 @@
+### AETHERIA — Complete Game Formula & Mathematics Bible
+
+I would make this a dedicated technical upgrade: Aetheria Formula System V1.
+
+The goal is to establish the mathematical rules behind every major gameplay system, so combat, exploration, crafting, creatures, NPCs, world simulation, economy, progression, terrain, and the 120-floor Great Labyrinth all follow consistent formulas.
+
+This should be a central game-design and engineering specification, not a collection of random equations.
+
+One important rule: formulas below are proposed starting models, not claims about formulas already implemented in your repository. We should preserve existing canon, inspect the actual scripts and data, and replace any existing formula only when its behaviour has been understood.
+
+### 1\. Formula architecture
+
+Every formula should have:
+
+* A unique formula ID.
+
+* A system and subsystem.
+
+* Defined input variables.
+
+* Units and valid ranges.
+
+* A mathematical expression.
+
+* A description of the result.
+
+* Minimum and maximum constraints.
+
+* Configuration parameters.
+
+* Edge-case handling.
+
+* Automated tests.
+
+* Version information.
+
+### Proposed formula registry
+
+| Category         | Formula IDs | What they govern                       |
+| ---------------- | ----------- | -------------------------------------- |
+| Core mathematics | CORE        | Scaling, interpolation, probability    |
+| Player           | PLY         | Attributes, levels, health, stamina    |
+| Combat           | CMB         | Damage, defence, critical hits, status |
+| Magic            | MAG         | Mana, spells, elements, cooldowns      |
+| Enemies          | ENM         | AI threat, detection, combat decisions |
+| Bosses           | BOS         | Phases, difficulty, encounter scaling  |
+| Equipment        | EQP         | Weapons, armour, durability            |
+| Inventory        | INV         | Weight, capacity, item stacking        |
+| Crafting         | CRF         | Recipes, quality, success, materials   |
+| Professions      | PRF         | Experience, proficiency, mastery       |
+| World            | WRD         | Geography, distances, terrain          |
+| Exploration      | EXP         | Discovery, surveying, rewards          |
+| Movement         | MOV         | Walking, running, mounts, jumping      |
+| Creatures        | CRT         | Growth, taming, bonding, needs         |
+| Companions       | CMP         | Loyalty, commands, combat support      |
+| NPCs             | NPC         | Schedules, memory, relationships       |
+| Quests           | QST         | Progression, rewards, objectives       |
+| Economy          | ECO         | Prices, supply, demand, trade          |
+| Survival         | SUR         | Hunger, thirst, temperature            |
+| Weather          | WTH         | Weather probability and intensity      |
+| Ecology          | ECOLOG      | Wildlife populations and resources     |
+| Dungeons         | DNG         | Encounters, rewards, room generation   |
+| Labyrinth        | LAB         | 120-floor progression and difficulty   |
+| Loot             | LOT         | Drop probabilities and rarity          |
+| Progression      | PRG         | XP, ranks, unlocks                     |
+| Save systems     | SAV         | Persistent state and data integrity    |
+| Performance      | SYS         | Streaming budgets and simulation rates |
+
+### 2\. Core mathematical functions
+
+These should be implemented once and reused throughout the game. Avoid writing different versions of the same calculation in individual scripts.
+
+### 2.1 Clamp
+
+Restricts a value to an allowed range.
+
+\\operatorname{Clamp}(x,a,b)=\\min(\\max(x,a),b)
+
+Example: health cannot exceed maximum health or fall below zero.
+
+### 2.2 Linear interpolation
+
+\\operatorname{Lerp}(a,b,t)=a+(b-a)t
+
+Used for:
+
+* Weather transitions.
+
+* Movement acceleration.
+
+* Animation blending.
+
+* Damage scaling.
+
+* Environmental transitions.
+
+* Lighting changes.
+
+### 2.3 Normalized progression
+
+P=\\operatorname{Clamp}\\left(\\frac{x-x_{\\min}}{x_{\\max}-x_{\\min}},0,1\\right)
+
+Used to convert different measurements into a common 0–1 progression value.
+
+### 2.4 Diminishing returns
+
+R(x)=\\frac{x}{x+k}
+
+Where controls how quickly the benefit decreases.
+
+Useful for:
+
+* Resistance.
+
+* Detection.
+
+* Crafting bonuses.
+
+* Creature bonding.
+
+* Relationship values.
+
+### 2.5 Weighted random selection
+
+P(i)=\\frac{w_i}{\\sum_{j=1}^{n}w_j}
+
+Where is the weight of a possible outcome.
+
+Use this for loot, encounters, weather selection, and procedural content selection.
+
+### 2.6 Exponential smoothing
+
+x_{t+\\Delta t}=x_t+(x_{\\text{target}}-x_t)(1-e^{-k\\Delta t})
+
+Useful for smooth weather changes, environmental parameters, and simulation values.
+
+Engineering requirement: All time-dependent formulas should use elapsed time, not assume a fixed frame rate.
+
+### 3\. Player attributes, levels & progression
+
+### 3.1 Player level experience
+
+A configurable XP curve should govern character progression.
+
+One possible model:
+
+XP_{\\text{next}}(L)=A L^p+B L+C
+
+Where:
+
+* = current level.
+
+* = progression tuning parameters.
+
+* = curve steepness.
+
+This provides a controllable progression curve without making every level cost the same amount.
+
+Total XP required to reach level :
+
+XP_{\\text{total}}(L)=\\sum_{i=1}^{L-1}XP_{\\text{next}}(i)
+
+### 3.2 Attribute growth
+
+S(L)=S_0+gL+b(L)
+
+Where:
+
+* = starting attribute.
+
+* = attribute growth per level.
+
+* = bonuses from equipment, abilities, quests, and other sources.
+
+### 3.3 Health
+
+HP_{\\max}=HP_0+a_V V+a_L L+HP_{\\text{bonus}}
+
+Where is the relevant vitality attribute.
+
+### 3.4 Stamina
+
+STA_{\\max}=STA_0+s_E E+STA_{\\text{bonus}}
+
+Where is the relevant endurance attribute.
+
+### 3.5 Mana
+
+MP_{\\max}=MP_0+m_I I+m_W W+MP_{\\text{bonus}}
+
+Use the actual attributes defined by Aetheria's character system. The symbols and are illustrative and should not create new canonical attributes automatically.
+
+### 3.6 Attribute-derived damage
+
+D_{\\text{attribute}}=D_{\\text{base}}(1+\\alpha A)
+
+Where is the relevant offensive attribute and is its scaling coefficient.
+
+### 3.7 Attribute-derived resistance
+
+R_{\\text{attribute}}=\\operatorname{Clamp}(rA,0,R_{\\max})
+
+The resistance cap must be tuned to prevent characters from becoming completely immune to every threat.
+
+### 4\. Combat formula system
+
+![Blue Protocol preview: Anime MMO has brains and heart](https://images.openai.com/static-rsc-4/rPDO4iO2YhKv5_5cIiTCViT34rIrEDa6rermgl5-jAgrVH35RJhm7yAyK0G4wSdgdvjuRyD6kXhXGs_MVmOQyZLl1Ef-AoNhMXrXI_NIOXezHhveQAWkSuSVY8uWWdUX0c4oWCizXB_pdC8FArDlWpayLW7wxg4AYvNdO9d1-K-iYqGjtOUBmQKD4khbif88?purpose=fullsize)
+
+![Vindictus: Defying Fate | GAMES.GG](https://images.openai.com/static-rsc-4/bMktocDKZe7nfOaDC9y5eh197xTBehF2PZX3gz_0DozaGDEKqZkt6gXw0f7FMgafGyW_KxM5yJVcVaARCk8j8JbgdOHl7_VxhX7UMteZDEWWwF44Vusms5GzGKRZhoAChh1CI4_jRUXDHLYOCRuDspWeMRobFFbl8WxdJTWwzhoKguh6fQob7Us6rvpiSHeo?purpose=fullsize)
+
+![Genshin Impact Elements Guide | BoostRoom](https://images.openai.com/static-rsc-4/i957fi1lfoB3t5k9O9i8z4gqr2ua9LF15NPzHf5yer9KWwyrEeRuF2H_shktFKKLIKoyeEXIZq6VigYnqE1Nt_UUBaFzKr262U1cPt792hy011tX39-Oc10WBPqFZ1aAotef_-xOa-pdalCxKkDsiy5uT5WV0RNNNncgnfJdNcygSWIy6j5DdA_z0ZBOWjdK?purpose=fullsize)
+
+![《绯梦契约》各职业好用的技能推荐_绯梦契约_九游手机游戏](https://images.openai.com/static-rsc-4/9oIU0LtJBnGdktOxaXgtcb0-FvN5aiEvGqMy1vRHAP1H2Crkbvt_1X2Mmh2XinPW4NEhiH-3sS1gnhPriW-XZhwpruKfaK5G8G_Uk8GtcQcekQeX0gYQidqWfSxoWDv4k53Cmx_oQOIS-AJpHapn9ysuIkwhqMaBRg_6K-472I1jTPrIvC8IAn3pl_8I-Vly?purpose=fullsize)
+
+![Limit Zero Breakers launches for free worldwide for PC and mobile in 2026 | RPG Site](https://images.openai.com/static-rsc-4/J_s2PMgn-6zOaXvUTg7wvRzfZkNMxUwndNSxHYeNOpYYrQctU21b06sc_YY18BfNz5HKPJIAHM-IrxB-InTDY-3agZbqU1lMm0MRM6HeBfoqrYMkNv1p2HzBBBZP9fFuyRtAPXXfxRyluMIavw5oRAyWpCTHqjOZjgKaUFIhW5PoKqQf9BJ70fUlPCb0FuV5?purpose=fullsize)
+
+![Nexon unveils new 'Mabinogi Heroes' IP title, 'Vindictus: Defying Fate'
+ | Vortex Gaming](https://images.openai.com/static-rsc-4/0iF0w3CyVFKDLK5YJoQv8ylIekLLSgOTNWUGPIEihWQ9V1Bt1orTaJY7Afn4D4CZSphlQRrd--8ALoO_QvPIXenjXUNs4Li_G2Xfw8i70_9pmA3N8DHmYRlTmrwaHM58kx_z4vMpOFZbZph2XcwNJnsXxwUMFXZnt5qth-D3w2dkh8zTCIS8UDN4TghCZMok?purpose=fullsize)
+
+![MMORPGスマホゲームおすすめ特集｜協力・育成・冒険の没入感が止まらない人気ゲームアプリの選び方 - 新作・人気スマホアプリ情報局](https://images.openai.com/static-rsc-4/Ohguv6lCvxOfTztMTzp-F4wDYpazi8A2q3AKehefGuN_l-LN2UU65W6DexcTN9g-MI4wiZ6H-97FgxqZMWiyD_OfznGbKRQUKBHVAvY3GVaT0EjvdOaZgFje-x6sS5PRKwXnG1JOGfbL_wo3hCuaVB_VZmvS3b9YoQ3TcuZQFkysW-JyDZglxYxWOoMDSUZT?purpose=fullsize)
+
+![KurtzPel - release date, videos, screenshots, reviews on RAWG](https://images.openai.com/static-rsc-4/r56_6kjKGsTqsr5umCYZaDUKZyrQc8BJRezGzSQ9Pz5ywPczqZXS_tbD-wifqcjfF1ePNmCiTzzOp-JZAJy-ME-xS4Mn39Qq_uSqasu-B5PvH_Ii962VmxYzoGP4XHxG43X25BfCLxJYpTTgCpgupazWlDV-H5rK5hy7Ln6ITuaDiPOB4_qo5PNry14p6Za3?purpose=fullsize)
+
+![Nights of Azure 2: Bride of the New Moon for PlayStation 4](https://images.openai.com/static-rsc-4/O9LoD4sVnYc3XCbYj1kPKh9mmct430M6GEeiKQx7c2k0PPNVPzzyNnOlXfk4zuOuZuGSq4oII0oSwRvPJ1pdwR7CX2tXRsVihk1oQGbN4au_HQxpN1f4IDaXt7rDn9_uPY4XDoUhmpU7suzDujAtUUUPThFca10ABPvJJ0TX88CotB_lNVzc0Etq-unJDRtD?purpose=fullsize)
+
+![Kyoto Xanadu: The Blooming Phantom (2026) - Steam Games](https://images.openai.com/static-rsc-4/0dxFhLCaLSnAxP-3cq9JEl0V8YdUquiVfdlMQj-2jCB2faHdLV7WTHDwcHQtb5gXeZzV-rK_l9aJNSeMYAob9ZT-7SImZcnPj4nSudgyMbRKIoCnhhASjLQvPyl-XfQE0sbGZNAmGFqmUlrrTqzu99EfxXwNhzdMXCGX4M7mkTCvS1SXuONErLtuAu-V7VlZ?purpose=fullsize)
+
+![Vindictus: Defying Fate | GAMES.GG](https://images.openai.com/static-rsc-4/tB6wE2ELLzYR15wLODRkEMbWQ-gIzeO9fWCMh9Cx82gOrWt_6UYg0Cw2xsH_XvjvZ7YVT8U8Hy4vKFuhK055gGV29xaOXbD_hoaTySTY6BwFB6v_dHoFvAxU2vfRlPfi9XYpNReb7v5DjEVk67EsdEWeEFOcBCAByfAwgHfQhQ6Pk8_mIEymWZA_FGRlFoCN?purpose=fullsize)
+
+![スマホゲーム 属性相性 連鎖コンボ ― “弱点を突く一撃”が戦局をひっくり返す快感の本質 - 絶対にやるべき人気の無料アプリ情報局](https://images.openai.com/static-rsc-4/17Ug1i3jSRA4JKiP5Dfjnh6Afp8ZXKsj2TG0tVnP40HuDulinrn1rhL4xVU6p8e41le0wrhLf15U4BW5iqGodS2Uh0a3cVNMvWc-Q-Cz4fjVKddGDHyrAEOxI8tHWN506G4xHdWBUsPAFPwR9FeUCBC0pikvVhlEMokSpTJLRBI3NdPyw8A5Y5giLsYk8dfH?purpose=fullsize)
+
+![Eclipsera Legends - Unite. Battle. Rise.](https://images.openai.com/static-rsc-4/PcNyo9PGRorsqw-aWECNYo-ErqPm3q5IRpKbFILrvS95DroUeOTBD-a1W7trMpc6fjUmjqPzXS1_hFRqINwuIdQd-Armwbpyh9aQe5OHSAmzlRatFnqWkMTx-DrRsKnj6XBOzU2dF8ykZUYqce3aMZYSStKpVxTqKmWzqdnNmLqlstlaDwOCCvC4_C-zNNle?purpose=fullsize)
+
+Combat should have a central damage pipeline. Weapon scripts, spell scripts, enemies, and bosses should not each calculate damage differently.
+
+### 4.1 Physical damage
+
+D_{\\text{raw}}=
+(W+B)(1+S\\alpha)M
+
+Where:
+
+* = weapon damage.
+
+* = ability bonus.
+
+* = relevant player stat.
+
+* = scaling coefficient.
+
+* = attack multiplier.
+
+### 4.2 Armour mitigation
+
+A diminishing-return defence model:
+
+D_{\\text{after armour}}
+=
+D_{\\text{raw}}
+\\left(1-\\frac{A}{A+K_A}\\right)
+
+Where is effective armour and controls the strength of armour scaling.
+
+This avoids making each additional armour point equally powerful.
+
+### 4.3 Resistance
+
+D_{\\text{after resistance}}
+=
+D_{\\text{previous}}(1-R)
+
+Where is resistance expressed as a decimal.
+
+For example, 25% resistance means .
+
+### 4.4 Critical hits
+
+D_{\\text{critical}}=D_{\\text{normal}}C
+
+Where is the critical damage multiplier.
+
+Critical chance:
+
+P_{\\text{crit}}=
+\\operatorname{Clamp}(P_0+\\beta A,0,P_{\\max})
+
+Use the relevant critical attribute and ensure equipment bonuses cannot push critical chance beyond its defined cap.
+
+### 4.5 Hit probability
+
+P_{\\text{hit}}=
+\\operatorname{Clamp}
+\\left(
+P_0+\\alpha Acc-\\beta Eva,
+P_{\\min},P_{\\max}
+\\right)
+
+Where:
+
+* = attacker accuracy.
+
+* = target evasion.
+
+* = balance coefficients.
+
+### 4.6 Damage over time
+
+For a fixed damage-over-time effect:
+
+D_{\\text{total}}=D_{\\text{tick}}N
+
+Where is the number of valid ticks.
+
+A more flexible implementation uses elapsed time:
+
+D(t)=D_{\\text{rate}}\\Delta t
+
+The effect should track its remaining duration, tick interval, stacking rules, and source.
+
+### 4.7 Healing
+
+H=(H_0+\\alpha M)(1+B_H)
+
+Where is the relevant healing attribute and is the total healing bonus.
+
+Final health:
+
+HP_{\\text{new}}=\\min(HP_{\\max},HP_{\\text{current}}+H)
+
+### 4.8 Stagger
+
+Stagger=
+\\frac{Impact}{Stability+K_S}
+
+Apply stagger only when the result passes the target's threshold.
+
+### 4.9 Blocking
+
+D_{\\text{blocked}}=
+D_{\\text{incoming}}(1-B)
+
+Where is the block effectiveness.
+
+Blocking may also consume stamina:
+
+STA_{\\text{cost}}=C_0+D_{\\text{incoming}}C_1
+
+### 4.10 Dodging
+
+A dodge should use a combination of:
+
+* Direction.
+
+* Movement speed.
+
+* Dodge duration.
+
+* Invulnerability window, if the combat design supports one.
+
+* Stamina cost.
+
+* Recovery time.
+
+The exact invulnerability window should be an animation and combat-design parameter, not a universal formula derived from frame rate.
+
+### 4.11 Weapon durability
+
+Durability_{\\text{new}}=
+\\max(0,Durability_{\\text{current}}-C)
+
+Where depends on attack type, material, and equipment quality.
+
+Do not let durability loss become an invisible random punishment.
+
+### 5\. Magic, elemental effects & abilities
+
+### 5.1 Spell damage
+
+D_{\\text{spell}}=
+(B_s+\\alpha M)(1+E)(1+Q)
+
+Where:
+
+* = spell base damage.
+
+* = relevant magic attribute.
+
+* = elemental bonus.
+
+* = spell-specific bonus.
+
+### 5.2 Mana cost
+
+Cost_{\\text{mana}}=
+C_b(1-R_c)
+
+Where is cost reduction, clamped to its allowed range.
+
+### 5.3 Cooldown reduction
+
+T_{\\text{cooldown}}=
+T_0(1-R_{cd})
+
+Set a minimum cooldown to prevent zero-time ability loops.
+
+### 5.4 Elemental effectiveness
+
+Use an authored interaction matrix rather than arbitrary elemental multipliers scattered through scripts.
+
+| Interaction        | Multiplier example |
+| ------------------ | ------------------ |
+| Strong advantage   | 1.5                |
+| Neutral            | 1.0                |
+| Partial resistance | 0.75               |
+| Strong resistance  | 0.5                |
+
+These are sample tuning values. Aetheria's actual elemental relationships must come from its established magic canon.
+
+### 5.5 Status buildup
+
+B_{\\text{new}}=
+B_{\\text{current}}+I_{\\text{effect}}R_{\\text{target}}
+
+When buildup reaches the configured threshold, trigger the status effect and apply its stacking or reset rules.
+
+### 5.6 Ability scaling
+
+D_{\\text{ability}}=D_{\\text{weapon}}M_{\\text{ability}}+B_{\\text{ability}}
+
+This keeps weapon attacks and abilities compatible with the same damage pipeline.
+
+### 6\. Enemy AI & boss difficulty
+
+### 6.1 Enemy detection
+
+P_{\\text{detect}}=
+F(d,v,l,s)
+
+A detection model should consider:
+
+* : distance.
+
+* : player visibility.
+
+* : lighting.
+
+* : sound produced.
+
+For a basic distance component:
+
+D_{\\text{awareness}}=
+\\operatorname{Clamp}(1-d/R,0,1)
+
+Where is detection range.
+
+### 6.2 Enemy threat
+
+Threat=
+w_D Damage+w_P Proximity+w_H Healing+w_T Time
+
+Use threat to choose targets or priorities where applicable, without making enemies omniscient.
+
+### 6.3 Enemy difficulty scaling
+
+D_{\\text{enemy}}=
+D_{\\text{base}}(1+\\alpha L_{\\text{enemy}})
+
+Do not automatically scale every enemy to the player's level. Fixed regional difficulty and meaningful progression are important to the world.
+
+### 6.4 Boss phases
+
+Boss phase transitions should use explicit thresholds:
+
+P_{\\text{phase}}=\\frac{HP_{\\text{current}}}{HP_{\\max}}
+
+Example phase triggers:
+
+* Phase 1: above 70%.
+
+* Phase 2: 70% to 35%.
+
+* Phase 3: below 35%.
+
+These are proposed defaults only. Boss-specific mechanics may use timers, destroyed objects, arena states, or scripted events instead.
+
+### 6.5 Boss encounter budget
+
+B_{\\text{encounter}}=
+B_{\\text{base}}+B_{\\text{mechanics}}+B_{\\text{arena}}
+
+Use this to assess encounter complexity, not to automatically increase boss health until encounters become tedious.
+
+### 7\. Equipment, inventory & item calculations
+
+### 7.1 Equipment stat totals
+
+S_{\\text{final}}=
+S_{\\text{base}}+
+\\sum S_{\\text{equipment}}+
+\\sum S_{\\text{passive}}
+
+### 7.2 Item quality
+
+Q_{\\text{item}}=
+Q_{\\text{material}}+
+Q_{\\text{crafting}}+
+Q_{\\text{modifier}}
+
+Clamp quality to the permitted quality range.
+
+### 7.3 Equipment scaling
+
+Stat_{\\text{item}}=
+Stat_{\\text{base}}(1+\\alpha Q)
+
+Use a bounded quality coefficient to prevent excessive stat inflation.
+
+### 7.4 Inventory weight
+
+W_{\\text{inventory}}=
+\\sum_{i=1}^{n}q_iw_i
+
+Where is item quantity and is individual item weight.
+
+### 7.5 Carry capacity
+
+W_{\\max}=W_0+\\alpha STR
+
+### 7.6 Movement penalty
+
+P_{\\text{weight}}=
+\\operatorname{Clamp}
+\\left(\\frac{W_{\\text{inventory}}}{W_{\\max}},0,1\\right)
+
+Use a tunable penalty curve to affect movement, stamina, or other systems. Do not automatically punish the player for reaching a particular inventory percentage unless the game design calls for it.
+
+### 8\. Crafting, gathering & professions
+
+### 8.1 Crafting success probability
+
+P_{\\text{success}}=
+\\operatorname{Clamp}
+(P_0+\\alpha Skill+\\beta Tool+\\gamma Station-\\delta Difficulty,
+P_{\\min},P_{\\max})
+
+### 8.2 Crafted quality
+
+Q=
+Q_{\\text{recipe}}+
+Q_{\\text{materials}}+
+Q_{\\text{skill}}+
+Q_{\\text{tool}}
+
+### 8.3 Crafting time
+
+T_{\\text{craft}}=
+\\frac{T_0}{1+\\alpha Skill+\\beta Tool}
+
+Set a minimum time so that crafting cannot become instant accidentally.
+
+### 8.4 Gathering yield
+
+Y=
+\\max(0,Y_0+\\alpha Skill+\\beta Tool)
+
+Add resource-specific yield caps and possible bonus yields.
+
+### 8.5 Profession experience
+
+XP_{\\text{profession}}=
+XP_0M_{\\text{difficulty}}M_{\\text{quality}}
+
+Prevent repeated trivial actions from providing unlimited progression.
+
+### 8.6 Resource regeneration
+
+R_{t+\\Delta t}=
+\\min(R_{\\max},R_t+r\\Delta t)
+
+For ecological resources, regeneration should depend on the resource's environment and depletion state.
+
+### 9\. World geography, movement & exploration
+
+![Design a parchment styled fantasy map for your world by Isabeauws | Fiverr](https://images.openai.com/static-rsc-4/8d8h3fKp5dT_1YXWbPSnAbdadhxgkH-uAwiyiaK9EAuSmpA0ytql6SK9aBCpf1J8HlOGRD-lRagKorSoFyvHbA9HZXnCjhL7lqWetQMZCdL5RyZDmy6mosrVCH1rTM6QIpUNBRHPuttIw1bkhLlGq_WJIxzs1IBWVp6zFVLR2AwORiL7jrTPemZQyRenRK3Q?purpose=fullsize)
+
+![Create an amazing fantasy map illustration by Melanylarue | Fiverr](https://images.openai.com/static-rsc-4/52UaGyA_zuja5CO8jsjAftM-WBRFeRVne2mzxKzQqMLj5HEHQaKR2-01oNAWGYBVzVzIid0xAk-FnLfVAVDF0s3ICL_WWxutHMEwnmIDkUxZ23ezhHB_LmdU_G92Z4GMcs-xKdZwhFMf6jVV4WVW16iA4bLDEYvSt5HKow4mX437hE-mtPwYAboErnZcEzIw?purpose=fullsize)
+
+![Inkarnate - Create Fantasy Maps Online](https://images.openai.com/static-rsc-4/pXTJdm7NlIAtnmkUIFuE_GRuhI9ZCxfsQkOxAby1UETbFZi06-WeGnGE1lQaRnH0oDVNaAAfDwI79sjDY-WiLzvhkEBSM9Lg9syqVD-u8ScDBkP7BhA2QlmXoaBiwgkf6wOVng0CtpuZgqA77c4lxAaTzqq-csMoFbDswp0F7eekzXMoRczAFTh5hwyIXgb2?purpose=fullsize)
+
+![Make a fantasy map for you by Gilokwip | Fiverr](https://images.openai.com/static-rsc-4/fbN-4A3Em8HrLH_20FneXtDXD6YSnKidGYq-0Vh6i9rYcwT9ovk3Vnj-OYRD7Ai477ZL6Fc1Jc2AjuVvQ0WXVw2xEECD5s4csrgJBn-8wWK8Dh6Evx9huZgvrk-oVYjeWDWx0rrkqWIdkK8hKWiZxAiiyytY23NW8J9uXow1AN7iLOW4LYDY3BwmrI4uVUwJ?purpose=fullsize)
+
+![Top-Down Fantasy Terrain Map of Desert Canyons - ChatbotsPlace](https://images.openai.com/static-rsc-4/_kSjziXzWMoJ5WH9Rju-mMflAdqtx60xeNVsnmJid9HDRc41f1HaDdWCD5bcfRh6_qwv3VHgCN7FDzbZX1gHZdJocTkLs6XNN7ggFnKX8Q8Fr4hsBfN_8Xbx2GRx65JNAttqK6Wa4ekHJInmb8QVCJgQwClY02sBuMuZPatggiXN5miv7pGmvFd_e_IHyoib?purpose=fullsize)
+
+![Inkarnate - Create Fantasy Maps Online](https://images.openai.com/static-rsc-4/fB2VeNGocps8YQCiD8gD1WXzQ-MdOen13LQFe5_tb_X2VgH6CfPPgWaDZzSqkEGaCUmCKUN2LMSfmHihEmc8q7--tQMB3V0tj9VNlOzCX8bFZUfQDBAooeXNzDKULpV-gnf41hl0Xms_Q-upJsbUaEE0r1E6-GXa1ajUF2J60kufS-qlwd6Rbkztk1hIc20v?purpose=fullsize)
+
+![Fantasy Cartography by Mike Schley at Coroflot.com](https://images.openai.com/static-rsc-4/HOL3SA3-1aecuBjDFiWn2XSM7FCWlfLin5ngau0p9C4jt_zAhx74jBYkZrWrWemIYk2nx_LnnVMKw73GNvWaHKHj2QZjrjWaOg0ELSuHF4A-eNVtcwIviPzwqHTR6U2daz7aVh5notgjYW7PDLQXdxv2WsdWQe2DWaKhsmZFwZILWswHOncvcc49oWkw09Wd?purpose=fullsize)
+
+![Do fantasy map illustration by Sunnywhitt | Fiverr](https://images.openai.com/static-rsc-4/FhdbQyoVPI00IiBz0nE3AM19m8tJ6xuncTajHjzExuJFNeBuqTaAWR5n9zD46BvH9TW6vKwGatwMNjBkvdBgvlVGtVhXqhOlefJ3bPDQDDIfbOmkgbqGy0bTj3gNBdKrRMgpvMD_Ej4aclHLB5s4Dg3h512AgJQPA3f9gIpkQPBQLY9MxblPe2XxuCB1AFXD?purpose=fullsize)
+
+![幻想地圖產生器 - 利用 AI 製作獨特的幻想世界地圖 | Vheer](https://images.openai.com/static-rsc-4/QNiLUSd9-rv3hp8UvH5es-s4K-qvhHwPFVEDENv3TXaZjDE5XxuuwMQdVY6RXf-LXGf0JMokkVGCBH3YV3TsZWwepC57618eNeqJ7s2b3ZKjUWe-24Sxcv_5hfKfcPmFXQOpaibeMpbm-HPxZdAiGRWTWON3xy584cARP3NPR1GGfySar4_aTyG2UmDsqxv5?purpose=fullsize)
+
+![Inkarnate - Create Fantasy Maps Online](https://images.openai.com/static-rsc-4/B2V0NIzWAVhsKmpVQrek7dinOaw2b6JLhFnIdrkvAzHFH2CPFI8yIXEv2oYphA7k2JJTmtRB9v5wq97uaXwAuJJGSYrJmHb8W7-bl_AF6gplO0PB_OZuaNdF-Rl1rHRn6V6FipTpPLkTe4pbOTxaTanUVDn5DECpfx8uA8morvA7PeE8vQ0oIrKRK_uR-ArD?purpose=fullsize)
+
+![AI Fantasy World Generator: Maps, Worlds & Names | AIAI.com](https://images.openai.com/static-rsc-4/4W-3pXW0rLijbhmnohaqx8Y_HGKPktNL_or_xQtJTFSpbuRdMDx-s31kfQ-qypEfQstImD41nMfpJCwYLWWekVsdCJzihzIzziK3I8V5JaPb5VFIYJW2IqTShzXKvO0AQQULkA7AgRrczp6R5FcTdOatafjLAF_A5iCfRAkvVtQXXcVcF0vgb8aX85394Jmo?purpose=fullsize)
+
+![Cosraise — Forge Your Legend | 3D Fantasy MMORPG](https://images.openai.com/static-rsc-4/GJ6ocBWo9qjMI2FH0rtTQmJNLD-0FK3oLB6HwmbQuEE3TJi09TLHgHdWPan28JtVHED6avzDzXAbxQKtkOcPV5PceuCwtpqbPCbUe7kvnmJ_UmahD8pjuTL6O7gzGWRe5Z6L1rk1wrSysivMx5MVZQi5zcTYQf3UICQwAwq6AuxLR8FiJnuyVjdd1fBLEtau?purpose=fullsize)
+
+These formulas are particularly important to V10.
+
+### 9.1 World distance
+
+For two Unity positions:
+
+d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}
+
+Use the project's actual coordinate scale to convert this distance into metres or kilometres.
+
+### 9.2 Horizontal map distance
+
+d_h=\\sqrt{(x_2-x_1)^2+(z_2-z_1)^2}
+
+This is useful for map display and horizontal navigation.
+
+### 9.3 Route distance
+
+D_{\\text{route}}=\\sum_{i=1}^{n-1}d(P_i,P_{i+1})
+
+Calculate using actual route segments, not a straight line between destination markers.
+
+### 9.4 Travel time
+
+T_{\\text{travel}}=
+\\sum_i\\frac{d_i}{v_i}
+
+Movement speed should account for:
+
+* Terrain.
+
+* Slope.
+
+* Movement mode.
+
+* Mount type.
+
+* Obstacles.
+
+* Status effects.
+
+* Stamina.
+
+* Road bonuses.
+
+### 9.5 Terrain slope
+
+Slope=\\arctan\\left(\\sqrt{
+\\left(\\frac{\\partial h}{\\partial x}\\right)^2+
+\\left(\\frac{\\partial h}{\\partial z}\\right)^2
+}\\right)
+
+This can influence walking speed, terrain material selection, vegetation, and traversal restrictions.
+
+### 9.6 Elevation difference
+
+\\Delta h=h(P_2)-h(P_1)
+
+Use elevation difference for climb calculations and map information.
+
+### 9.7 Fog of war
+
+A simple exploration visibility model:
+
+Visible(P)=
+\\begin{cases}
+1 & d(P,P_{\\text{player}})\\le R\\\\
+0 & \\text{otherwise}
+\\end{cases}
+
+For realistic terrain visibility, include line-of-sight checks so mountains and obstacles can block discovery.
+
+### 9.8 Region progress
+
+Progress_{\\text{region}}=
+\\frac{\\sum w_i Discovered_i}{\\sum w_i}
+
+Where important discoveries can have different weights. Do not require finding every tiny collectible for a region to count as substantially explored.
+
+### 9.9 Terrain generation
+
+A basic multi-scale height function:
+
+H(x,z)=
+\\sum_{i=0}^{n-1}a_iN(f_ix,f_iz)
+
+Where:
+
+* = noise function.
+
+* = amplitude.
+
+* = frequency.
+
+This is only one component of terrain generation. Aetheria should combine authored terrain, large-scale landforms, drainage, erosion, and controlled procedural detail.
+
+### 9.10 River flow
+
+A simplified drainage accumulation model:
+
+Flow(P)=Rainfall(P)+\\sum Flow(P_{\\text{upstream}})
+
+Use terrain flow direction to identify downstream cells. River widths can then be derived from accumulated flow, subject to minimum and maximum widths.
+
+### 9.11 World map coordinate conversion
+
+P_{\\text{world}}=T(P_{\\text{map}})
+
+The conversion must be calibrated against the current repository's map coordinates. Do not assume that the existing `at` and `radius` values are metres.
+
+### 10\. Creatures, mounts & companion formulas
+
+![Aniimo, gioco monster collector gratuito che sfida Pok�mon: come funziona](https://images.openai.com/static-rsc-4/0zbGzXODPJLbVXSg46UNC_DXyOIlDgyjC-dxcsyDDF93qI1aQnN4fuNpMJ3H6jVURul7R7wGfMyfZErxKeEldEbKYCHRfVu76xwwwaNcGVU_ttQhLA-PmiJJsWU5QUWlqCwSAbZbJXn86hHz--pQx1WOaX74p1-H9Yzr0D3gRgSjlBCbSwTKS4Rfa174DSFE?purpose=fullsize)
+
+![ArenaNet](https://images.openai.com/static-rsc-4/G-xeOekbaD--_yWpSPR0akBCMXK2xpXczSbK0l4Tb5Ld2cEgzSZx2h8BB-2ApaZpzlb0wGySKNgdrFWM4PF0SjXyUbT0Kil5wV9NgEF_GITnoM4UzIbxRnz7RWZJAjhH_xiT9ttzpAs8ywnOT4Zyy3VNg00Ke00ofwD_SMmaPKm5HIFhYKV3FzckT0MudhRH?purpose=fullsize)
+
+![SoulPets AI Companion - Instant game by Jabali AI](https://images.openai.com/static-rsc-4/B0kdN8Y6eLsnO-C5rWxYUDaDadMabHsfjnCGEYUI8xVyR8fW0sQs2tMePg7fxdJdU9DK7iOsWB-4mtkSh983TlnrDsBKqoXdTVF2irBxl1uOvlqUvfiMeXZaI2uizGpjp6p5I1wzfvA-yi1ZYmRgbNoDX1rCi-7KJlkMI-Zy6bp2KRfZ0DOE4791W3r4w-UQ?purpose=fullsize)
+
+![](https://images.openai.com/static-rsc-4/qJxIsTodbvyjzuCwx9lHQSnqZ9eoxpm-0eO84322Q7kkFWsrw4tF3RrUVY52tFM3rnb5cHN7MDR1Cnt0dyQotWQ_6lKiD9GWVBph69vb_M0Y2qBjgqxjq80sU5O0XXFHAzi9Zr40J66QNYA9XdIbTUVvCiHQo0VyXhd3d8znQsFakRMWgNVR0y0FVHSJSl6k?purpose=fullsize)
+
+![Crystal of Atlan - Unlocking Pets and How to Use Them](https://images.openai.com/static-rsc-4/zNQNPV6QJkfpAyAhnYFeOcmOaA4Nk5PoeNfdQuEsAxZRTW6W9PgCe1hmKli8SHIQj0uTxMzF5l6n5rtTmWEoBBemngtfhSrWwknyzS0gOewntsYii-0xn_p0MKgSH1Yk5CVwMngxJ1xSZzdhTLUywt_KUbLc9Wk3r4Xwd2kzR6o88FCRlPoYgnsMpPs4sJDb?purpose=fullsize)
+
+![米莱宠物图鉴-NO.3311-洛克王国宠物数据大全-洛克小册子|洛克王国资料站](https://images.openai.com/static-rsc-4/fbKCKMlbnDW2xtWitPw6Vvkb4UIZ0NZzu7wQpgak-yc12-vq5oRhO4LhFYkrqRr9H6q_eGYBRXjww2PP1V2nV23-qaxfJUrREK_-49loQJ37SbBUz_hpd73tezZ3oILBgEIkPblcRP2XN-ZVgOrMiJxbcwEHr8Ylzyy84ab5e4dhFDwPacF2-VfFemeGhJ_L?purpose=fullsize)
+
+![ELDEN RING PS4 & PS5](https://images.openai.com/static-rsc-4/DHnd3QKYkRu-Li2KrkY_4EVRC02z5sY9Mf4oI38E_YQMYJ7clfUlkfajCaibPDCYG6Q3n3kFTlYUOa3QpOIgIrrYKu-GJ04ZZ69DQaIpGKwkZ7GRiowx5CIUkWlVlG5Mpx1nxbkdUUq1eAzkls8oSeOLXaJ-qP0aHDG2KQrP7Y1-g9SZ2CJ8WbMoER1pixVi?purpose=fullsize)
+
+![RAW - CommunityDragon](https://images.openai.com/static-rsc-4/uwVjYvXUqJmatUBGmJBA-5KZD2f_CjBmUpejsPrH-bObIshULyOmQnNVhm6zz1vyFn84H_SmcBaMg2aX1LENGh1eJltbf0c1YOh0l3YVQqoBqEprJOrC5_rVstmc3NkiX2hh9Pzxo6a617jlzZRpXHujZ17OyXc01Axfe5zJe1EgdLryI-JL2bDUM8i7lOsy?purpose=fullsize)
+
+![Another Eden Begins launches on September 17 worldwide for Switch 2, Switch, and Steam (Update) | RPG Site](https://images.openai.com/static-rsc-4/tPvbdmjGwOKvW2kj0W9LUC5yVDGkyLnYUvA8NiWIropgeJ3MR8gU_pnAW2aNO1r2iwpfNNtFRiG34JYfij_9svxsXlRDViSm6LShVfHsYUMGV8abVITMf85LkAqldv785jpd4yLGSTXC2CTxNMAU_XHjNHM5Zd2-fnJl7BIQQGXAARi3G-VAnR6DbuDtuoT_?purpose=fullsize)
+
+![Eldarya - O novo jogo da ChiNo Miko - Matamosca.com](https://images.openai.com/static-rsc-4/BUbpR_RukLpVNj4uZECqR_brMnoog-AEfdizLgZPX1EO6xvlSoLQEIGuakCeEEAMCiJhauWjaFvUdq1eirBj9Ww_NHWhXa9GkQm7CtlGKD23HV63QEdZT0u2Kf4BsdCOfiIUu052n64lAOvMMqbmtkoYYR0Yv2k1IK5G5hehm7FZetoSZiBGqUj3s2NgTO_f?purpose=fullsize)
+
+![Don't Forget To Complete Your Traveler's Log! Easiest Tasks for March 2024 - Actualités Wowhead](https://images.openai.com/static-rsc-4/syn8CSzXDwB0e110NCvxh89mZxpgBmdybgstL3rP11byjNrovzd_nn4wuIXGku7sN-PetJXnB_ue9H4WqaSKq-rFyWhM_vI3ZVxpkmqh10xk6Do9hw1cecRrOKXXAkbRzVQZ6MMN_8DAyRv6KFaHvaIiIb_4BaSp0upFXKxEY1BiaOoG6fdqKSQR2_t-vJar?purpose=fullsize)
+
+![Aruba from The Alchemist Code | ACDB](https://images.openai.com/static-rsc-4/iQf0OEQKy3trg-VSjnl7fFaoQmIhmKt2N4152gjVVGyIWCBlF0KqwQ7CMqwmcFPHC9DuuANiuVUGmUHrqw8HvyV4EHYcpJ2uQ9QLqCXN76Zxxw6da2WPx0gLwduJ_YQ-HN8RuKrXirvmRMNKtDwO0smihWyJ9Dw6f2s3YZnCmsM4pHQxxVhRcHi68vdi0Xyi?purpose=fullsize)
+
+![The Beastlands Organization in The Fractured Eden | World Anvil](https://images.openai.com/static-rsc-4/Xqt0ofFBmvku2A4kNoyp45I32_JrUx2aDRPZUWMaNhQZi6PglndwqOQoYsu55SE-bAq5SlsDKzgsNITVoENkn9-8FXkEvAjXZv9WxE38ZcN8RyppFKd6zjTf4jBu-kgcw9oCEkyKvmqhuDhs2xVsnsuyxUYBhw3EVFhVI-iDQo_H4a-U_eDFF2DxpMiuzGM_?purpose=fullsize)
+
+### 10.1 Creature growth
+
+Growth=\\operatorname{Clamp}\\left(\\frac{Age}{MaturityAge},0,1\\right)
+
+Creature stats can scale with growth:
+
+Stat_{\\text{creature}}=
+Stat_{\\text{juvenile}}+
+Growth(Stat_{\\text{adult}}-Stat_{\\text{juvenile}})
+
+### 10.2 Bonding
+
+Bond_{\\text{new}}=
+\\operatorname{Clamp}
+(Bond_{\\text{current}}+\\Delta B,0,100)
+
+Bonding gain can depend on:
+
+* Feeding.
+
+* Training.
+
+* Successful commands.
+
+* Exploration together.
+
+* Combat cooperation.
+
+* Care and attention.
+
+Repeated identical actions should have diminishing rewards.
+
+### 10.3 Creature trust
+
+Trust_{\\text{new}}=
+Trust_{\\text{current}}+
+Care+Training-Suffering
+
+Use separate trust and bonding values if they represent different gameplay concepts.
+
+### 10.4 Mount stamina
+
+STA_{\\text{mount,new}}=
+\\operatorname{Clamp}
+(STA_{\\text{mount}}-C_{\\text{movement}}\\Delta t+
+R_{\\text{recovery}}\\Delta t,0,STA_{\\max})
+
+### 10.5 Companion effectiveness
+
+Effectiveness=
+Base+
+\\alpha Bond+
+\\beta Training+
+\\gamma Equipment
+
+Apply appropriate caps to prevent companion stats from scaling without limit.
+
+### 10.6 Creature population
+
+A simplified population model:
+
+\\frac{dN}{dt}=rN\\left(1-\\frac{N}{K}\\right)-H
+
+Where:
+
+* = population.
+
+* = reproduction rate.
+
+* = environmental carrying capacity.
+
+* = losses from hunting, predators, and other causes.
+
+This is useful for the ecological simulation, but it should not run at full detail for every creature in every unloaded region.
+
+### 11\. NPCs, relationships & world simulation
+
+### 11.1 Relationship progression
+
+Relationship_{\\text{new}}=
+\\operatorname{Clamp}
+(Relationship_{\\text{current}}+\\sum Interaction_i, -100,100)
+
+Interactions can be weighted by their importance and context.
+
+### 11.2 NPC memory importance
+
+MemoryScore=
+Impact\\times Recency\\times Relevance
+
+One possible recency function:
+
+Recency=e^{-\\lambda t}
+
+Where is elapsed time.
+
+Important memories should not simply disappear because time passes. Major story events should be preserved separately from temporary memory.
+
+### 11.3 NPC daily schedule
+
+Activity(t)=Schedule(NPC,t,Location,WorldState)
+
+Use authored schedules and condition-based overrides rather than randomizing every NPC's location every frame.
+
+### 11.4 NPC needs
+
+Need_{\\text{new}}=
+\\operatorname{Clamp}(Need_{\\text{current}}+Rate\\Delta t,0,100)
+
+Needs can influence NPC activities, but should not make every NPC perform a complex simulation continuously.
+
+### 11.5 World event probability
+
+P_{\\text{event}}=
+\\operatorname{Clamp}(P_0M_{\\text{region}}M_{\\text{world state}},0,1)
+
+Use this for appropriate ambient events, not to randomly override major authored story events.
+
+### 12\. Quests, rewards & exploration discoveries
+
+### 12.1 Quest difficulty
+
+Difficulty=
+w_L Level+
+w_R RegionRank+
+w_C CombatChallenge+
+w_O ObjectiveComplexity
+
+### 12.2 Quest reward
+
+Reward=
+BaseReward\\times DifficultyMultiplier\\times QualityMultiplier
+
+Quest rewards should also account for fixed narrative rewards, unique items, and progression gates.
+
+### 12.3 Quest progress
+
+Progress=
+\\frac{\\sum CompletedObjectives_i}{\\sum RequiredObjectives_i}
+
+Some objectives may be optional or branching. Represent those explicitly rather than forcing every quest into a simple percentage.
+
+### 12.4 Exploration reward
+
+Reward_{\\text{discovery}}=
+BaseReward\\times Rarity\\times DiscoveryDifficulty
+
+### 12.5 Discovery rarity
+
+Use weighted selection:
+
+P(i)=\\frac{w_i}{\\sum w_j}
+
+Avoid generating the same category of discovery repeatedly in nearby locations. Add regional uniqueness and recent-discovery tracking.
+
+### 13\. Economy, trading & prices
+
+### 13.1 Item price
+
+Price=
+BasePrice\\times Quality\\times Rarity\\times Condition
+
+### 13.2 Supply and demand
+
+Price_{\\text{market}}=
+Price_{\\text{base}}
+\\left(\\frac{Demand}{Supply+\\epsilon}\\right)^\\alpha
+
+Where prevents division by zero.
+
+### 13.3 Merchant buying price
+
+Price_{\\text{buy}}=
+Price_{\\text{market}}(1+Markup)
+
+### 13.4 Merchant selling price
+
+Price_{\\text{sell}}=
+Price_{\\text{market}}(1-Discount)
+
+### 13.5 Regional economy
+
+Prices can vary by:
+
+* Resource availability.
+
+* Settlement size.
+
+* Transport difficulty.
+
+* Regional demand.
+
+* Merchant specialization.
+
+* Local events.
+
+* Supply disruptions.
+
+Do not allow market simulation to produce infinite prices or negative prices. Always define lower and upper bounds.
+
+### 14\. Survival, cooking & environmental conditions
+
+### 14.1 Hunger
+
+H_{t+\\Delta t}=
+\\operatorname{Clamp}(H_t-r_H\\Delta t,0,100)
+
+### 14.2 Thirst
+
+T_{t+\\Delta t}=
+\\operatorname{Clamp}(T_t-r_T\\Delta t,0,100)
+
+### 14.3 Temperature exposure
+
+E_{\\text{temperature}}=
+T_{\\text{environment}}-
+T_{\\text{comfort}}
+
+The actual exposure should account for clothing, weather, shelter, movement, and environmental hazards.
+
+### 14.4 Cooking quality
+
+Q_{\\text{food}}=
+Q_{\\text{ingredients}}+
+Q_{\\text{recipe}}+
+Q_{\\text{cooking skill}}+
+Q_{\\text{equipment}}
+
+### 14.5 Food recovery
+
+Recovery=
+BaseRecovery\\times QualityMultiplier
+
+All survival penalties should be clearly communicated and configurable. Avoid making survival systems unnecessarily punishing.
+
+### 15\. Weather, seasons & ecology
+
+### 15.1 Weather selection
+
+P(W_i)=
+\\frac{w_i(R,T,S,H)}{\\sum_j w_j(R,T,S,H)}
+
+Where:
+
+* = region.
+
+* = temperature.
+
+* = season.
+
+* = humidity.
+
+### 15.2 Temperature by elevation
+
+A simplified atmospheric model:
+
+T(h)=T_0-\\Gamma h
+
+Where is a configurable temperature lapse rate.
+
+### 15.3 Rain accumulation
+
+Rain_{\\text{total}}=
+\\sum RainRate_i\\Delta t
+
+### 15.4 Seasonal vegetation
+
+Growth_{\\text{vegetation}}=
+f(Temperature,Water,Season,Soil)
+
+### 15.5 Ecological resource regeneration
+
+R_{\\text{new}}=
+\\operatorname{Clamp}(R_{\\text{current}}+
+Regeneration-Consumption,0,R_{\\max})
+
+### 15.6 Weather transitions
+
+Weather_t=
+Weather_{t-1}+
+(Weather_{\\text{target}}-Weather_{t-1})\\alpha
+
+Use elapsed-time smoothing rather than abrupt random weather changes.
+
+### 16\. Dungeons, loot & the Great Labyrinth
+
+![How to Design Dungeon Maps for Sandbox DnD Campaigns — Dungeon Goblin](https://images.openai.com/static-rsc-4/MO1LxCOwU7F0Of2sLPkYQV3_1ZnzWUUPmJs09OW4uKx9zwOwr8qF407UgOlXw4y8QEDC8og0YVQ-dFmEE3EPEihbE-ZK5YLKcUPYVDadlFKryL3jfuW8nE6KBFTOaOnPpqJp-foG3IxXkvB9BtQTib2gtTXXEaqWkrolzRLSYmAorRL0IFTJN15ub2SCkQ9y?purpose=fullsize)
+
+![PoE2 0.5.5 Trial of Chaos Rework Guide | PoE2Path](https://images.openai.com/static-rsc-4/p-wwCciIn-UGXqM4tQfzlHaPJ9zjPAaJoKRVX7RfJ3U2lxK3q4hC21pwhCoDdetcgSW79M13uoBJUhUVfkVEL6z274UJ4cDc3rlnxsvsvrlysyW2Ngq7ZRjEGkjLEIwREbuQTZFDUboKayIlNmeEoGm17N74ZReKtt-E1UU3W415_ywheJOZFYht3Y8ZqUH_?purpose=fullsize)
+
+![Monomyth Game Customer Remake | Recreate a Playable Game Prototype with AI | SEELE AI](https://images.openai.com/static-rsc-4/8Uqz4hLpeDMkPAzpJZQ_FpCLGFubEHlGgTy-XlVWTwNI89OVb28SGJxwfRPzbPniVyO3bha8zUPtWLR8LNCP8EZJuJ8a6D9hEsAzCxlSR7xrs_9-OW0lIkZd7kI_Hp61fBRS_XytG2iaiKHtSI8Jff3UINaE3HJxSspik-Ap38qwR95izneHx6jyU_6eP7_c?purpose=fullsize)
+
+![zeta](https://images.openai.com/static-rsc-4/DmviRZAord--ORZcco5CPGbsHfPX86kG-UuxiuoCiTljTNVDBFTB-CHGux7s9o5v4EG_dXVX14HrEQXytK9tl_LZn7g_50Z_Jiu7phJPSz0HVNGEXGehhsWCgd_C2sMElfvjIovDWCLhg13QBGokqg-l9aapYYhrKW9DMK_ReXnq0zJJv5l50TOwHoL0c8FG?purpose=fullsize)
+
+![Enderal:Old Sherath - SureAI Wiki](https://images.openai.com/static-rsc-4/A4alRD3doVutgxb_OdZd5xHh6TUrNxRnl3PT_PxL5t2YCEgp-ZN9-H4OJXx364I0-OsE7voURv-QewsDZ3pDoswofOVpEIwuu-lUQB-XxAJhgohFU0_Qb7q4Nes6GO91x7T2p1pcID_7fTp91x6X_4dNXhxsBVp6eP69tGV4MLxJXKxge6gSsj1_L8uaTGPK?purpose=fullsize)
+
+![Afallon on Steam](https://images.openai.com/static-rsc-4/6tAyVTzwH5vJU23oTZIPmYWwralXmJlyKvpeoStxI5hDh5MA-pjiLizUAGF2OXj5TWkV2Y-pvkZg9E9QyIt9pwrcRD-OlFgWHI0xvs1TMME-56XK5jRnllpifQM9wQpYaPIomVQvjFMPKplmZ6FpmtakbIfk_Y-fMuVrGDDWKZkWFq2VfIOddrwJOnVhN3zQ?purpose=fullsize)
+
+![Ainime Games](https://images.openai.com/static-rsc-4/i70GQPR-IR-hjcCtAEap2NJCf87misokbGNjqGmCUeUzSI-3tLvtFpYymoX4URihiGkYFP1JA3L5aZCGSXAoDRTBXbWovFcm9PrilSI_pEZi7h5R9mDWMtaaQm_UNjrnE6PK0uns31JaDSgk0v9Pr1qsWyfHqCMhEbrtmE7X6pmnDOcU0OTH6VAOP58sSG8n?purpose=fullsize)
+
+![The Abyssal Labyrinth by Vestesta on DeviantArt](https://images.openai.com/static-rsc-4/XIBar1OC2TxdBQF8Zqn7bI14aZ3CCrdmKTjpaMOfIJZ9tFAdf_3nVnu_opmNoA-X_FdOHU5oxEoHfmRsKqgn_mvvB5dRfGRr_lv_fBbA9qUh8Owtcs_C3n19zCphtZqWjOijadJKDztqwfjqqJctf97mv0IliHadEIEDGngsnZnva0XclCDFJnW_jwPC_h73?purpose=fullsize)
+
+![10 Gridless Underground Ruins Battle Maps | VTT Pack for Dnd, Pathfinder & Ttrpgs | High-res AI Digital Maps - Etsy UK](https://images.openai.com/static-rsc-4/_xCgBS9XUpB9bVPemjxJ5BEUH9Jr-bDeLq0FQjopsuFaDuGPGuXK3TLhWMHS693NmZpxm8v9dTMF6ZQskgTuMmIURTYpMFRGxJ0vNXqhIWHWVPmh7YfiaOgpfdJMrSctZwiaU6pVpplUcDe72ermuJgLnqLnVw6_JxowSupisYvOmW_st1V6nZsa_RWocgRg?purpose=fullsize)
+
+![ハイファンタジー_古代遺跡の各種ビジュアル - benibuta2024’s blog](https://images.openai.com/static-rsc-4/P3MlxW37cBJKCHUrPcx9H1YXcbVfgIBmMzz4O9bNfUQ89xlzVZcNIVE4Uhb3iZ4bNJKW6qHZeOFEpOEO4aGXqgXUj4tGud2BIVmIfoQIwwlsVPjYcwxFQVNqZIJjnMMTw097ZpAnCYLv_fkNqMBFEbA6UX6SZzlCbh4gAx053kMbaMd6NYALj6MobKvNWBtB?purpose=fullsize)
+
+![Dragon's Dogma 2: Dark Arisen viene cargado de novedades y Capcom detalla la expansión para su ARPG - Vandal](https://images.openai.com/static-rsc-4/X-SzxVJP5-Zm-cS_IFQfQFjF_HIkOu8tqvt5nJXHXWOyNBXh3DHJh3XwYAJDnedFYzJrI0-xXNtsjYjJmQZ8pz8EikD7uI0jxmkqh-53peqtu5LM5vfUpCumeU_QwZbty7JLgb2cZiJxJEJhMHoA1EnOqqmTp9clefa7ezz9JeoXkDWWf2_H6fbrAYLBThmt?purpose=fullsize)
+
+![Luminarch Labyrinth - Dungeon Crawler RPG by Jabali AI](https://images.openai.com/static-rsc-4/VZgHNmcx_GGN8N1rTYvwz8lr3nJWugau364JzKhV1v-zoBKaeNhywcz-EFbrwLp1xhHx1Qz0SbinxDaP1RnOnHgJ6hErdUDa-HGuy9ZQgy5EqvpEv70V2cCDf9neA86ksY1t5n8KWcCZNvVBMtHH9oIP4RQ8hlJbpAILIxlOatnpiUYynj98J1F2jU7MhBPo?purpose=fullsize)
+
+![Unveiling Ar nosurge: Ode to an Unborn Star - Review & Item Insights](https://images.openai.com/static-rsc-4/kpcvef88wyobfF6gO0YWlt7Peh_onXotFal4qaxoIh4OGbiLWdPj7idxCX-6y9k0mw8Pc9bP3Sabg4JQPa-HP1pewNf5rHo0NfsgFxwNVJx73LjAMkJ6uU1nuSpJsPymSOl0HVmiNG89c1jMFi3Zim9nVNBkhUzFWWb3QtaXlp9btjVh5o8rcWtL6f_zhXKw?purpose=fullsize)
+
+![The Lord of the Rings: Return to Moria server hosting](https://images.openai.com/static-rsc-4/F5b9vcjsjUWlzYT2ymuDwSr0XcStTIDM7vDBLsgWus3LbXcInf2yljbmkUzOWzb1RHLzJdkAgHpoX1-X-qsaGS6RLtjA_W498VwoxdKH2e--k_ENCvAfI4e2RWkcus18nnKNH2fkg_Qx79ac6i5OyS8jfLSxwAkqevnY6WhYunkQoQi_jHl5eEiLjr7eKuLA?purpose=fullsize)
+
+![Ruinbound Resolve - Dungeon Crawler RPG by Jabali AI](https://images.openai.com/static-rsc-4/L-dflSDBf7Or-zJjJmLL0U4lzClIO-GX4GHhz0eoeUFjVYyCT2lumtz5IbOzqBRdeBwfmkLH-qmRtN_CW_gg98acesqsDGRBU6Kl00MWL2ZFSDFUn3fyqXC9_C7hGjggN71QiHKB46TuSraazYTvgKLjK8iyKa22hTcaX-qelhAbQucEc-Cmnwa3OJg-Y0QD?purpose=fullsize)
+
+### 16.1 Dungeon difficulty
+
+D_{\\text{dungeon}}=
+D_{\\text{base}}+
+\\alpha RegionRank+
+\\beta DungeonTier+
+\\gamma EncounterComplexity
+
+### 16.2 Encounter budget
+
+B_{\\text{encounter}}=
+B_{\\text{base}}\\times DifficultyMultiplier
+
+Allocate that budget between enemies, hazards, environmental puzzles, and other encounter elements.
+
+### 16.3 Loot rarity
+
+P_{\\text{rarity}}=
+\\frac{w_{\\text{rarity}}}{\\sum w_i}
+
+Then select an item within the chosen rarity category.
+
+### 16.4 Drop chance
+
+P_{\\text{drop}}=
+\\operatorname{Clamp}(P_0+B_{\\text{luck}},0,P_{\\max})
+
+### 16.5 Labyrinth floor progression
+
+For a preliminary mathematical model:
+
+D(n)=D_0+an+bn^2
+
+Where is the floor number.
+
+However, a linear or quadratic formula should not dictate every floor. The 120 floors should retain their authored identities, unique mechanics, and progression pacing.
+
+Use the formula to establish a baseline challenge curve, then apply individual floor overrides.
+
+### 16.6 Floor reward scaling
+
+Reward(n)=R_0(1+kn)^p
+
+Set an upper limit and account for unique story rewards.
+
+### 16.7 Boss difficulty by floor
+
+BossPower(n)=B_0(1+\\alpha n+\\beta n^2)
+
+Use this only as an initial balance curve. Unique bosses should be designed individually.
+
+### 17\. Game systems, performance & technical formulas
+
+Not every formula needs to affect gameplay. Some should govern how the game runs.
+
+### 17.1 World streaming distance
+
+d=\\sqrt{(x_p-x_s)^2+(z_p-z_s)^2}
+
+Use distance to determine sector loading priority, with separate loading and unloading thresholds.
+
+### 17.2 Simulation frequency
+
+f_{\\text{simulation}}=g(D,Importance,Activity)
+
+Nearby gameplay-critical objects receive full simulation. Distant objects can use reduced simulation or aggregated state.
+
+### 17.3 Memory budget
+
+M_{\\text{total}}=
+M_{\\text{terrain}}+
+M_{\\text{textures}}+
+M_{\\text{meshes}}+
+M_{\\text{objects}}+
+M_{\\text{systems}}
+
+Each subsystem should have a measured budget appropriate to target hardware.
+
+### 17.4 Frame time
+
+T_{\\text{frame}}=
+T_{\\text{CPU}}+T_{\\text{GPU}}
+
+This is a simplified conceptual model: CPU and GPU work can overlap, so actual frame timing must be measured with Unity profiling tools.
+
+### 17.5 Loading priority
+
+Priority=
+w_d\\frac{1}{d+\\epsilon}
++w_v Visibility
++w_m MovementDirection
++w_q GameplayImportance
+
+This can prioritize sectors that are close, visible, in the player's direction, or required for active gameplay.
+
+### 18\. Formula implementation standards
+
+This is where the mathematical design becomes maintainable code.
+
+I recommend one central formula library with separate gameplay modules.
+
+```text
+Aetheria/
+└── Systems/
+    └── FormulaSystem/
+        ├── Core/
+        │   ├── FormulaRegistry
+        │   ├── FormulaMath
+        │   ├── FormulaConfig
+        │   └── FormulaValidation
+        │
+        ├── Player/
+        ├── Combat/
+        ├── Magic/
+        ├── Enemies/
+        ├── Bosses/
+        ├── Equipment/
+        ├── Inventory/
+        ├── Crafting/
+        ├── Professions/
+        ├── World/
+        ├── Exploration/
+        ├── Movement/
+        ├── Creatures/
+        ├── Companions/
+        ├── NPCs/
+        ├── Quests/
+        ├── Economy/
+        ├── Survival/
+        ├── Weather/
+        ├── Ecology/
+        ├── Dungeons/
+        ├── Labyrinth/
+        ├── Loot/
+        ├── Progression/
+        └── Performance/
+```
+
+### Formula configuration
+
+Store tuning values outside individual gameplay scripts.
+
+Example:
+
+```json
+{
+  "formulaId": "combat.physical_damage",
+  "version": 1,
+  "enabled": true,
+  "parameters": {
+    "attributeScaling": 0.025,
+    "minimumDamage": 1.0,
+    "maximumMultiplier": 5.0
+  }
+}
+```
+
+The values are illustrative. Final coefficients must come from balancing tests.
+
+### Required formula testing
+
+Every formula should have:
+
+* Normal input tests.
+
+* Minimum input tests.
+
+* Maximum input tests.
+
+* Negative input tests.
+
+* Zero-value tests.
+
+* Extreme-value tests.
+
+* Repeated execution tests.
+
+* Save/load compatibility tests where applicable.
+
+* Performance tests where relevant.
+
+* Regression tests against existing game behaviour.
+
+### Important mathematical safeguards
+
+* Avoid division by zero.
+
+* Avoid NaN and infinity.
+
+* Clamp values at explicitly defined boundaries.
+
+* Use consistent units.
+
+* Use floating-point calculations where appropriate.
+
+* Use integer types for discrete quantities.
+
+* Use deterministic random seeds where reproducibility matters.
+
+* Avoid frame-rate-dependent calculations.
+
+* Avoid unbounded exponential growth.
+
+* Avoid uncontrolled stacking of bonuses.
+
+* Document rounding rules.
+
+* Separate simulation time from real-world time.
+
+### 19\. Formula development roadmap
+
+| Phase | Deliverable                              |
+| ----- | ---------------------------------------- |
+| 1     | Audit all existing gameplay calculations |
+| 2     | Build central formula registry           |
+| 3     | Implement shared mathematical functions  |
+| 4     | Player progression and attributes        |
+| 5     | Combat and magic                         |
+| 6     | Equipment and inventory                  |
+| 7     | Crafting and professions                 |
+| 8     | Movement and world geography             |
+| 9     | Creatures and companions                 |
+| 10    | NPCs and quests                          |
+| 11    | Economy and survival                     |
+| 12    | Weather and ecology                      |
+| 13    | Dungeons and Labyrinth                   |
+| 14    | Loot and rewards                         |
+| 15    | Save compatibility and validation        |
+| 16    | Full balancing and regression testing    |
+
+### 20\. Master directive for the development agent
+
+# AETHERIA — COMPLETE FORMULA SYSTEM
+## Mathematical Architecture, Gameplay Balancing & Simulation Framework
+
+### PROJECT REQUIREMENTS
+
+Develop a unified mathematical framework for Aetheria.
+
+The game is Unity 6, URP, third-person, 3D and strictly single-player.
+
+The objective is to establish consistent, configurable, documented and tested formulas for every major gameplay and technical system.
+
+### ABSOLUTE REQUIREMENTS
+
+1. Inspect the repository before implementation.
+2. Identify existing formulas and calculations.
+3. Document current behaviour before replacing anything.
+4. Preserve established game canon and progression.
+5. Do not invent attributes or mechanics that contradict existing design.
+6. Do not duplicate existing systems unnecessarily.
+7. Centralize reusable calculations.
+8. Make balancing coefficients configurable.
+9. Validate all inputs and outputs.
+10. Add automated tests for every formula.
+
+### REQUIRED FORMULA MODULES
+
+Implement or audit:
+
+- Core mathematical functions.
+- Player statistics and progression.
+- Experience and leveling.
+- Health, stamina and mana.
+- Physical combat.
+- Magic and elemental damage.
+- Critical hits and accuracy.
+- Armour and resistance.
+- Healing and status effects.
+- Blocking, dodging and stagger.
+- Enemy AI and threat.
+- Boss difficulty and phases.
+- Weapon and armour statistics.
+- Equipment durability.
+- Inventory and carrying capacity.
+- Item quality and rarity.
+- Crafting and gathering.
+- Profession progression.
+- Movement and traversal.
+- Mount movement and stamina.
+- Creature growth and bonding.
+- Companion effectiveness.
+- NPC relationships and memories.
+- Quest progress and rewards.
+- Economy and supply/demand.
+- Survival and cooking.
+- Weather and seasons.
+- Ecological populations.
+- World geography and distances.
+- Terrain generation.
+- Exploration and cartography.
+- Dungeon difficulty.
+- Loot generation.
+- The 120-floor Great Labyrinth.
+- World streaming.
+- Performance and memory management.
+- Save-state integrity.
+
+### FORMULA REGISTRY
+
+Every formula must have:
+
+- Unique identifier.
+- System name.
+- Formula version.
+- Input definitions.
+- Input units.
+- Output definition.
+- Mathematical expression.
+- Configurable coefficients.
+- Valid input ranges.
+- Output limits.
+- Edge-case handling.
+- Automated test coverage.
+
+### CENTRALIZED IMPLEMENTATION
+
+Create a central formula architecture with modular subsystems.
+
+Do not scatter mathematical constants throughout unrelated gameplay scripts.
+
+All shared calculations should use central reusable methods.
+
+Use configuration assets or data files for tunable parameters.
+
+Avoid hardcoding balance values into multiple locations.
+
+### BALANCE REQUIREMENTS
+
+Create test scenarios for:
+
+- Low-level characters.
+- Mid-progression characters.
+- High-level characters.
+- Different equipment combinations.
+- Different creature and companion progression levels.
+- Different enemy ranks.
+- Boss encounters.
+- Crafting progression.
+- Regional economy variations.
+- Exploration rewards.
+- Labyrinth progression.
+
+Check for runaway scaling, trivialized combat, impossible difficulty spikes, infinite reward loops and excessive resource generation.
+
+### TECHNICAL REQUIREMENTS
+
+- Prevent division by zero.
+- Prevent NaN and infinity.
+- Define rounding behaviour.
+- Define stacking behaviour.
+- Define caps and minimum values.
+- Use consistent units.
+- Use elapsed time for time-based calculations.
+- Use deterministic randomness where required.
+- Preserve save compatibility.
+- Provide formula configuration validation.
+- Provide debug visibility for important calculations.
+
+### DEVELOPER TOOLS
+
+Create a Formula Debugger that allows developers to:
+
+- Select a formula.
+- Inspect its parameters.
+- Enter test values.
+- Calculate outputs.
+- Compare different configurations.
+- View minimum and maximum behaviour.
+- Run test cases.
+- Inspect formula versions.
+- Identify invalid configurations.
+
+Create a Balance Simulator for combat, progression, loot, crafting and Labyrinth difficulty.
+
+### IMPLEMENTATION STRATEGY
+
+Work in stages.
+
+First audit the current project.
+
+Then create the core formula library.
+
+Next implement player, combat and progression calculations.
+
+After that integrate equipment, crafting, world systems, creatures, NPCs, economy and simulation.
+
+Finally perform balancing, regression tests, performance tests and save compatibility validation.
+
+Do not rewrite all gameplay systems simultaneously.
+
+### ACCEPTANCE CRITERIA
+
+The formula system is complete when:
+
+- Every major gameplay system has documented calculations.
+- Shared mathematical operations are centralized.
+- Coefficients are configurable.
+- Formulas have valid input and output ranges.
+- Automated tests pass.
+- Existing gameplay remains compatible.
+- Combat and progression can be simulated.
+- Formula changes can be tested without editing unrelated gameplay scripts.
+- No critical mathematical or save-data errors remain.
+
+### FINAL OBJECTIVE
+
+Build a complete mathematical foundation for Aetheria.
+
+Every major system should operate using consistent, understandable, testable and balanced rules.
+
+The formulas should support the game's design, not force the game into arbitrary mathematical behaviour.
+
+### My recommendation: build a balance simulator alongside the formulas
+
+This is probably the most valuable additional tool.
+
+### Example: Combat formula tester
+
+Illustrative formula playground — not Aetheria's verified current balance.
+
+Weapon base damage
+
+### 40
+
+Strength
+
+### 30
+
+Attribute scaling
+
+### 0.025
+
+Enemy armour
+
+### 20
+
+Apply critical damage (×1.5)
+
+Raw damage
+
+### 70.00
+
+Final damage
+
+### 58.33
+
+Example calculation: raw damage = weapon × (1 + strength × scaling); armour mitigation uses armour / (armour + 100).
+
+The balance simulator should eventually let you test entire character builds, weapons, enemies, bosses, creatures, crafting recipes, and progression curves before changing the actual game.
+
+The key is to create one mathematical source of truth for Aetheria. That way, if you change a damage coefficient or XP curve, every system using it can update consistently, and you can test the impact before releasing the change.

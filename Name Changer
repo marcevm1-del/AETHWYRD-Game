@@ -1,0 +1,182 @@
+# TASK: Rename the Entire Game Project to AETHWYRD
+
+I have officially chosen **AETHWYRD** as the new name of my game and its world.
+
+Your task is to perform a comprehensive, repository-wide name migration, replacing the previous name(s) with **AETHWYRD** wherever appropriate.
+
+This is a naming migration, NOT a lore rewrite or a game redesign.
+
+## 1. Naming conventions
+
+Use these conventions consistently:
+
+- Official world name: Aethwyrd
+- Official game title: AETHWYRD
+- Capitalized title in branding, logos and title screens: AETHWYRD
+- Normal prose: Aethwyrd
+- Adjectival form: Aethwyrdian (where grammatically appropriate)
+
+Previous names that must be identified:
+- Aetheria
+- Aetherian
+- Aetheria's
+- Aetherias
+- Aertheria
+- Aertherian
+- Any other clear spelling or grammatical variations of the old world name.
+
+Replace these with the appropriate Aethwyrd equivalent.
+
+Do not replace unrelated words merely because they contain similar letter sequences.
+
+## 2. Repository-wide audit
+
+Before modifying anything:
+
+1. Inspect the entire repository structure.
+2. Read the root Canon.md and all relevant documentation.
+3. Identify every occurrence of the previous name.
+4. Search source code, Markdown, JSON, YAML, XML, configuration files, localization files, assets, UI text, comments and metadata.
+5. Identify references in file paths, folder names, identifiers, class names, namespaces, constants and resource keys.
+6. Identify references in GitHub workflows, build scripts and project configuration.
+
+Create a migration report listing:
+- Files containing old names.
+- Occurrences found.
+- Files and folders requiring renaming.
+- Potentially risky replacements.
+- References that cannot safely be changed automatically.
+
+## 3. Protect existing canon and lore
+
+THIS IS EXTREMELY IMPORTANT.
+
+The existing lore is established project material.
+
+Do not:
+- Rewrite the history of Aethwyrd.
+- Change historical dates or chronology.
+- Modify the Great Weave.
+- Change the Five Elder Dragons.
+- Rewrite the Age of Dragons, Age of Titans or the Sundering.
+- Change Valdrisia, Vesper, Ezrath, Adrian, Celestine, Morthis or the Red Prophet.
+- Alter the System, its soul-harvesting purpose or its relationship with the Great Weave.
+- Change established factions, characters, civilizations, kingdoms, magic systems or historical events.
+- Turn proposed lore into established canon.
+- Remove historical information or shorten documents.
+
+Preserve all established content, structure, formatting, cross-references and distinctions between canon, draft and proposals.
+
+Only change naming references that genuinely refer to the old world or game title.
+
+## 4. Update all project files
+
+Update the following wherever applicable:
+
+- README and project documentation.
+- Canon.md.
+- All lore documents.
+- Historical timelines.
+- Character and faction documentation.
+- Worldbuilding documentation.
+- Game design documents.
+- Quest and mission documentation.
+- Item, spell and skill databases.
+- Magic rank and progression systems.
+- Guild documentation.
+- UI and menu text.
+- Loading screens.
+- Dialogue and localization.
+- Game configuration.
+- Source code and project metadata.
+- Build and deployment configuration.
+- Asset names and directory names where appropriate.
+- References in scripts and automated workflows.
+
+Also inspect references to the previous name inside asset metadata and image-generation prompts.
+
+Do not unnecessarily rename third-party dependencies, historical references or unrelated assets.
+
+## 5. Technical migration requirements
+
+If the old name appears in code:
+
+- Update namespaces and identifiers consistently.
+- Update import statements and references.
+- Update resource paths.
+- Update configuration keys where appropriate.
+- Update project and package metadata.
+- Update references in tests.
+- Update build and deployment scripts.
+- Ensure all renamed paths resolve correctly.
+
+Do not break backwards compatibility without a clear reason.
+
+If changing a resource identifier could invalidate existing saved games, database records or player data, preserve a compatibility mapping.
+
+Never rename internal identifiers blindly.
+
+## 6. GitHub and repository consistency
+
+Check:
+- README links.
+- Internal Markdown links.
+- Relative file paths.
+- GitHub Actions.
+- Repository configuration.
+- Documentation references.
+- Asset paths.
+- Build scripts.
+
+Make sure renamed files and folders are referenced correctly everywhere.
+
+Do not change the GitHub repository URL or remote configuration unless explicitly necessary and approved.
+
+## 7. Validation
+
+After the migration:
+
+1. Search the entire repository again for all old name variations.
+2. Confirm that no unintended references remain.
+3. Check for broken Markdown links.
+4. Check for broken resource paths.
+5. Run the available tests.
+6. Run the build or validation tools if available.
+7. Check that no lore content has been lost or accidentally modified.
+8. Review the Git diff for unintended changes.
+
+If a reference cannot safely be changed, document it rather than guessing.
+
+## 8. Final report
+
+When finished, provide:
+
+- Total files inspected.
+- Total files modified.
+- Total files and folders renamed.
+- Total old-name occurrences replaced.
+- Remaining old-name references, with explanations.
+- Tests and validation performed.
+- Any unresolved issues.
+- Confirmation that existing lore and canon were preserved.
+
+## 9. Execution instructions
+
+Work directly in the existing repository.
+
+Perform the migration, not just a proposal.
+
+Make changes in a controlled manner and inspect your work.
+
+Do not delete files.
+Do not rewrite unrelated content.
+Do not invent new lore.
+Do not change gameplay mechanics.
+
+If a potentially destructive or ambiguous change is encountered, stop and report it rather than making assumptions.
+
+**FINAL OBJECTIVE:**
+
+Every part of the project should consistently identify the game and its world as **AETHWYRD**, while preserving the entire existing game, lore, history, characters, mechanics and established canon.
+
+AETHWYRD is a new identity for the existing world, not a new world with rewritten history.

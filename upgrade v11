@@ -1,0 +1,749 @@
+### AETHERIA — V11: Complete Animation, Movement & Character Presentation System
+
+V11 upgrades how every character, creature, enemy, companion, and mount moves, reacts, performs actions, and communicates visually.
+
+V10 focused on the world map, geography, terrain, and world streaming. V11 builds on that foundation by making the world feel physically alive through responsive movement, believable animation, advanced character controllers, procedural motion, and cinematic presentation.
+
+This is a strictly single-player system.
+
+![Character Animation Fundamentals for Games](https://images.openai.com/static-rsc-4/lBYjx4X8T2RE_fdmY1A3X36ni-FBxbobQbsCzTv1l5bj64vNp5kZpn07-tWr41KUQMcnh-5miWFh5c5wncW4CDkFadqNN6-LVLXkv_9ZUNsyPgJzFDA2NBmvWogZcWqSCx5GyxdnEpOaPV8j1vFaiptcS7E1ifqcuZVLmA8GnOXQvwPTtl4S2h9RxXumuv6f?purpose=fullsize)
+
+![Combos | Combat System Design: Principles, Examples & How-to Create One](https://images.openai.com/static-rsc-4/wGO05X9TxgpIo5oog9Wk-Pd1ZLBjplDEbD3ynlkCX1f4q7xVnM0zHbnGVTfvlx3_OvkU_KqT8tY1U3ou4bAZ1BNqLQs4N1gjHSwmiixfOWpJud5eCXButWh5i40_ByVIjQXDEwWjXZBBlmVL6zbfx4lstO-yacO5K3LhrcbXiJwFtoeqhdUJhZR6no6kCXDc?purpose=fullsize)
+
+![Quadruped Run Cycle - GIF on Imgur](https://images.openai.com/static-rsc-4/r16Wqc3NA8l2N2Y6MWKFKf35V3y71KheOoqYvfO6fkVk1tHr-8YMyduzmdDGqVQP8rqX_oCx3N3vVgONrtpIEnJkV9fho4HZXUinnP_yOxuq7vvxLWLGSk8-8k5R5kSiKK9Ed1vyHADAcDzWQY3Lk5ipKKYVrALAUGes4kKsnDJsRgstVz9Fr8d07F7zITU6?purpose=fullsize)
+
+### 1\. V11 core objectives
+
+* Make player movement responsive, natural, and consistent.
+
+* Give every weapon and combat action distinct animation behavior.
+
+* Make enemies and bosses communicate their intentions through body language.
+
+* Improve creature, companion, and mount movement.
+
+* Support procedural animation for terrain, impacts, balance, and interactions.
+
+* Build a unified animation pipeline from Blender into Unity 6 URP.
+
+* Reduce animation costs through distance-based animation quality.
+
+* Create a developer studio for testing, previewing, and validating animation systems.
+
+### 2\. Advanced player movement
+
+![Kena: Bridge of Spirits - Screenshots](https://images.openai.com/static-rsc-4/WyjindcUu5iWzL9rpElx3DeTUx-CkzDwN7GYsnxjJ184oS4zdf7xMfLnxEjvsTKZqvR2yviHFDg-T0dIKRgfCd3QEW031uPg4pDtYfQc-w-NBbq-dKAJeB447Y0N5HPWMj8SnKFSAuwH4GGzGNhaZF2rZUHz83kT3sopv6kZRmbh2gxC1m7ewwDVHAab93j4?purpose=fullsize)
+
+![Guild Wars 3 Beta Start Date Confirmed – Fall 2027 | GameWatcher](https://images.openai.com/static-rsc-4/ZZDhfcOyboZjPh63vefoykAOGcma79jxAjcBkDzUoQAg2zwG1hP_1vSprJ6cX6GhA0w4qKWsfVrL7z36SOonehg4_hmWoPeH102mC8Q1Fa9n2SY3V0i647HwTzVhS_urxjXH9l0EGFPKzYw0HBkd0Ml01Z9tGr8KfeT3qnqeYzT5MSbX9quLaNrHhXSQ5cXO?purpose=fullsize)
+
+![Enshrouded se prepara para la versión 1.0, pero los desarrolladores no se detendrán ahí](https://images.openai.com/static-rsc-4/SyGp8wzjlIwwKugJlIRzwZC-QyQg9MpaDisHmXutqBmif9SRcLl6DPSpbrG3y-KkGDQBY7tz-YEpXzSLiQvo3ed5dvgL4u3nhcJRsTwvDzfa9o6miN__1dKMqEBxPbD9IDLqyyggGH750xbFQUpS7nlkTvflBpyPx3rhdXMR6gt34q5uEHdjzc2mMZZ0NgTe?purpose=fullsize)
+
+![Pre-purchase Fable on Steam](https://images.openai.com/static-rsc-4/LThK8Jqu47vlaYobqd569Bid_iqMYDqZcacUb_P9OFYyKHPankZaJX75B0XcMtxAPiTBYdwGtBhLxWGsV9ieYWFN_8flYk7NUVaVw77mFW7sasFV7lMwm06sMdlt8lCUOdS5q8RkSR-ktmj9qSI9I2uqrrRN-Y4p1KduS7ntqB5W3e40sXJnlpb7qq5WAZCr?purpose=fullsize)
+
+![Dragon's Dogma 2: Dark Arisen content revealed in more detail | RPG Site](https://images.openai.com/static-rsc-4/P0cGMjT88EeDFEjBV37UhWT1iuKgtegYUDUf28erJ8a7RUAsk_wCd6vPSnHq2xBUr8xLeLRve0KfMjxP6-SHCEvgcOeQtViSVY-FcDf3GWhQq-QwiGmEoHI6k2SKWJ8rDoHHXocEvpwKKLybukrIr_QP0F7ogVqFCAowCI4GpfWGG7agvWPKqdBV-4bjnkoF?purpose=fullsize)
+
+![Sword and Fairy: Together Forever (English) for PlayStation 5](https://images.openai.com/static-rsc-4/MrviQ8XRDmq2L8LPo6C2QVBDpufLABkt5wswIVAGxNSXAsJg4K5UXQl2pttqSSiQ79SpuSe8B33h4mnVPJ2qHS06F2GbDL7wmJkW_a6iCq-J64-0sShnMGZIb5z_H3zpjG80MiYMoLv4rKsylBE-nJLuFKOvkau-XUzn1AzyZBGdBTGyqUY-zbmSaLvo9XYM?purpose=fullsize)
+
+![Check Out New Updates from Upcoming ARPG Rise of Rebellion](https://images.openai.com/static-rsc-4/hKQcQ3jSqHx9-jiAHoGi-F1_X3rkoU8l2UReeQmosFPunWa0sXnYbkQTzo24jsAc7x-6BBCh4HN5Aksl_ZNaFHygIlT-nLMew7R91-IoVW7wwFHM2w02DDHHjevJtFeDH60qI4B4kSQb66wqrsRtdwYJQDc7AdUSGUeIsfIkWHlen3cTHVFalPPeRpYOT39q?purpose=fullsize)
+
+![Flintlock: The Siege of Dawn on Steam](https://images.openai.com/static-rsc-4/8ehDdXlbqbJVOiCMFKAmNLJND0RrSsmOrmFZD1r8U3SquhS_3Dvd-cXmDHNkmLipWLY7-yno4n3Rj8nr7BK5LXhb9G3A2N4-j0mWUwHtwUTkZLaAmdAWC2ijQrVMcVKnJRo_x1R--bQHFp9b1xGA4S0h--nyy3nlqCXFJaucN_WXxuJ_6dAmGyjgsGoSkViJ?purpose=fullsize)
+
+![Medieval fantasy RPG Of Ash and Steel launches on November 6 | RPG Site](https://images.openai.com/static-rsc-4/DxEO4P-VKd1WZlZqL1saXnZYKBiWKiMNuk7NxnBqnacLd0AcQeOTRmj20VllOmAQcsURyXriZf85MgGVUltKsw_HQMlBmHh4k-Ir-SRD1OjnxM-k4BpDKE2evg1Ml5FqnDo0X48fGIBcVK3yZ3mHGIoj0wYZkhcCC1MEkwBybzUHL9pKq0vcIXBTV8qFwwhB?purpose=fullsize)
+
+![저 배는 나의 것. 우하하! 드뎌 #항해를 시작 할 수 있게 되었어요. \[어쌔신 크리드 오디세이\]는 항해 게임이죵. 멋지게 한 컷. #그래픽 좋습니당. 이거보다 좀 더 좋게 #... | 어쌔신 크리드 오디세이 | 미니맵](https://images.openai.com/static-rsc-4/C7DJwKfVsYA_KGSfA8O_EFp0h9ft-l2Kf82RmSqDDKM_DwYdjGtkEiIfq3eVS_gZbwbf0J0AzyliXp6V_ff6_LUTe2QKpQIDgqtEGExmYDha3be6vQmh3P2pTlVDL5TpDw-U7HxcAraewgnJrKY33N3ovBs_RPHmPrvKx400KIyqdb8FmsztNe_BtYGfo5Qg?purpose=fullsize)
+
+![Luminary on Steam](https://images.openai.com/static-rsc-4/1sE3BAWgXBg8_qFD8yXYde0X8Ay0ged3oYYLv3EkIHmlDnWlciDe7_fFUoBeYRF4dHW1g_lr2PHwbaxVIVlpc0EWMREPrNco7ctFWXTG9NLTiyY-D2Pf4uVFAAJoqpi2Wbk1Y9cJsKQzpCKsYOCbCydAgaIaCh3ZRuXPQ4FtG5_hSls5Khotis-AqkLFgoCx?purpose=fullsize)
+
+![Asterigos Recensione: action leggero e piacevole, con un pizzico di Souls](https://images.openai.com/static-rsc-4/LnPY0zQfY9M5F4_Plzr2Nbq5NNxzTWasVUkOZc7_5icnD8ZUeNrsi6VsTv0mur5hcVxughqMAfr6xUvqM3kMuMTbvi1ezGJyKiaoesfd3f31fAwuUXB2qloZscTNsBA-LSdV1x3G-kFbMxVXRHp2LnOMYGsy7--R-sSewD_y5DkaYzwtJDa1w-3FceZNLthC?purpose=fullsize)
+
+### Movement states
+
+The player controller should support:
+
+| Category    | Movement states                              |
+| ----------- | -------------------------------------------- |
+| Ground      | Idle, walk, jog, sprint                      |
+| Directional | Forward, backward, strafe, diagonal          |
+| Terrain     | Uphill, downhill, slopes, uneven ground      |
+| Traversal   | Jump, fall, land, climb, vault               |
+| Water       | Enter, swim, dive, surface, exit             |
+| Combat      | Combat idle, combat walk, dodge, roll, block |
+| Interaction | Open, pull, push, carry, gather              |
+| Conditions  | Injured, exhausted, frozen, poisoned         |
+
+Movement transitions should blend smoothly without making the player feel sluggish.
+
+### Movement mathematics
+
+Define movement speed:
+
+V = V_b \\times M_{\\text{state}} \\times M_{\\text{terrain}}
+\\times M_{\\text{condition}}
+
+Where:
+
+* : base movement speed.
+
+* : walking, sprinting, swimming, and other state multipliers.
+
+* : terrain influence.
+
+* : effects of stamina, injuries, and status conditions.
+
+Acceleration:
+
+a = \\frac{V_{\\text{target}}-V_{\\text{current}}}{t}
+
+Slope influence:
+
+M_{\\text{slope}} =
+\\operatorname{Clamp}(1-k\\sin(\\theta),M_{\\min},M_{\\max})
+
+These are starting mathematical models. Final coefficients must be tuned through gameplay testing.
+
+### 3\. Advanced animation architecture
+
+Build one unified animation framework rather than independent animation controllers for every character.
+
+### Aetheria Animation Architecture
+
+Character or Creature Controller
+
+Input, AI commands, gameplay state
+
+Animation State Manager
+
+Movement, combat, interactions, reactions
+
+Animator State Machines
+
+Blend Trees
+
+Animation Layers
+
+Procedural Animation
+
+IK & Rigging
+
+Root Motion
+
+Unity Character Presentation
+
+Animation, movement, physics, audio, VFX and camera feedback
+
+### Animation layers
+
+Create independent layers for:
+
+* Full-body locomotion.
+
+* Upper-body weapon handling.
+
+* Facial expression.
+
+* Head and eye tracking.
+
+* Equipment and weapon handling.
+
+* Hit reactions.
+
+* Environmental interactions.
+
+* Special abilities.
+
+Layer blending must avoid conflicting animations and unintended skeletal deformation.
+
+### 4\. Advanced combat animation
+
+Combat animation must connect directly to the combat formulas and hit detection systems developed in the previous formula specification.
+
+![Asterigos: Curse of the Stars review – Stuck in the middle](https://images.openai.com/static-rsc-4/QDP8ZNNR8Em5rbvtx1uYUNUZFxAI5ygC3ObibmBtZv0TTH7W0d_z26zdzB9jQc2ldkYzXcdqHCw8rlRsjwa6wOpPKhmLq2CeI_XOexRo8pW5LjvulDxPiXiLrREKdzt6XDnAp9YWKfxXE4k_YIC8Uw3ndrdt7L2j-wciicXVCh6J1Zbimze5x9G9WkulMsph?purpose=fullsize)
+
+![Final Fantasy 14 devs made the Viper job because the MMO's community wanted to feel like a Sword Art Online icon, but immediately ran into a problem: "Kirito is kind of overpowered" | GamesRadar+](https://images.openai.com/static-rsc-4/uUrwIQzzlNO_c4h7fm_Igum69ODirq-556lhOrbB01xPXDpYIRLKDBcf_7jipSCqbLPk8TVMqX2cDHDUek8ALsiOVAyPwV_W9olrmp12muZhrRq9HYvEr6aUbaMfDw_caYe7zeyM7X-B_hX_AeQJYZFPRYmeX8rU-S-Vago8t20sN7XdygO7QcgVB6XvUkuG?purpose=fullsize)
+
+![Greatsword Life Staff Leveling Build](https://images.openai.com/static-rsc-4/mitjYzueGFA6wOcZJX7pNqSo-F7eWGSEKi3CaimfEXc-9oETOsgYOHfu0_N7gtjjz50m32C4sSe99wxEuyoYYmx1Afz26KXYxqJ4hEyN_ck_fwthcWiPp5fclhR2KQnfT8FQNz57lJTpA8WLZOKeOs0hwLaRWqOjWq6hqYwBqbFgWd86bT-pm3RmD884TpV2?purpose=fullsize)
+
+![DNF Battle Mage: Mystical Warrior in Action | AI Art Generator | Easy-Peasy.AI](https://images.openai.com/static-rsc-4/mf_cUIRhVe9SlNSfcyBnz8MSXjusfg6XpOX9dPjGEmRbbHyQo2vgF37z0B2KXfnI2emz_asLAVmJDdmatmKL7I7WS8Gd4CljXCwEdpbti5kDEMheNbCBKNDADf5FS17lYp6Y5oUYTUqXNofX9FteesDkiJX956xy4Mgop0tikZzY8Wp_o8M2PW76IWf-Mjwa?purpose=fullsize)
+
+![Fab](https://images.openai.com/static-rsc-4/OgYT_V41-DJgDrciVcUUeZpmx3zyzCUjB6WwmA06gE2tEGj0HcZrDiJ5QvUgRN3OqzD9VaR0sgHprfyiVv9AtDSCdqEjNHuqHuAqAJgEkaETSC-quyHowF4YENrlEKjkE_OWpKAyVDXTcwNJ3vCfIDcAFGJu8_akyCRaiduqRQni4SD4v3ig_tNrlbIu-93m?purpose=fullsize)
+
+![TwinBlade for Baldur's Gate 3 - mod.io](https://images.openai.com/static-rsc-4/OpSX7VRuS_9WGW9UTihLLkjeOMnU-K-n0QVQ7chpDooIw5cOvZd0o8GSwtw4uyIUp2BhykDBY7qqUY6ac5a23JGgh1AynLrPWRprzsNwfC5s9qOa8A-kmUZmZxCKqXIZKA72l_F4yOCRSas2vreRAuwZmsbLblZmSYqD7KGXah4HlVVU55jh0q9C0YU531vX?purpose=fullsize)
+
+![Darksword: Battle Eternity Fights onto Meta Quest](https://images.openai.com/static-rsc-4/a4qJ0UOF5okeDrsLxFIppYfwvDeDYKk_iN1xhzxr2A4uqZjuMyVKpNdgfs3CyRszJjEMT9x_UpDn8CfIw7PAosMQbSFFXzyMKHHUAs3wlaDOnM6ceFhHVqIv3mckfpMcv2jYKzRgNrjfLO3G6bJWW2f1wr7wTvwh0dMSxmJbofFT68kMZvfEFRL4fQfYkZfH?purpose=fullsize)
+
+![AI 기반 개인창작 캐릭터 디자인
+상업용 사용 가능
+맞춤 캐릭터 제작., 2D 캐릭터 포트폴리오 - 크몽](https://images.openai.com/static-rsc-4/OeGpjhyGFlHtCmgsuKeaVx3cjtzKvPchEh-S8R4i0RyY16wZYcXVMzTBwiEqt3z_C4WBUqdk5u7CL2HSIJeoa21JE8DWaJ7-ZExuqLOJZJ2dxlp7g9VWoXGiC4_k-gn_MmSz10O-3idyGKUlpVidjRZmNiEopkjF4IiXI5DAg3czCLNq_KpilSCrv1QncaxU?purpose=fullsize)
+
+![《古斯塔奥：帝國重生》Gustavo Kingdom Rebirth Cheat Engine Tables | TableVault](https://images.openai.com/static-rsc-4/dNe6F7J9CG1nhBMly-ulZZI-Nu5fdFbdeh9XD3BdImqcIvZXwIUQXdoZF9mB-3NIN9vD2-lmmkttcTDIMJ4inxHIeD1cqSqdDHruCCriyMqi_V8tOvUbwnbqTMV00PoiDz6ActlL-yZXX1dLaSbFC4lYiJm5ieDNJfIRiYu83cpsnNL9BUWE2_ORTMSRO8hi?purpose=fullsize)
+
+![Limit Zero Breakers Aims High with Anime-Style Action & Crossplay Launch - GameDaily](https://images.openai.com/static-rsc-4/kcb17kIxmskTer_oqr3xsw-3B3d6Aseg8VYVDv_SDSW3nRV4ib7vSNVSkPTx5ZiM47Q_8t6ZG9LN3JBxdHQeWvvHNms84o5kW05uz4fBmECFn3ufDVCGocvexZkRKhg7Uyt6prUskme_opjYZx8OaRyLhdUXW_4HhF13aBQbU--TMWr_xJQAM1fo-Xp1lYFs?purpose=fullsize)
+
+![Final Fantasy XVI: Echoes of the Fallen offers a compelling reason to return to Valisthea | RPG Site](https://images.openai.com/static-rsc-4/HcJxVsVVJtkE5jpeR0obnCbw3zO1p5ipJ57CtRIGcRjWPZbiMmc6_bz7Y18a6BOlQl_Wf0mD8BHXKMJeP5LvcOAvwMmrB2DQatyACblgKHt5RqL7oxcFLR9GfspI13RNjTXBaY8bHB_k2hO8jSK4BFh9fhElpNsjp9he_HwQu76yNgpa8c-30JWr3HrDROzR?purpose=fullsize)
+
+![Isekai anime generator - AI light novel fantasy art | Anifusion](https://images.openai.com/static-rsc-4/8qVFkzIpxi0gaTmYKoaq1LvlKhF556UMzgtrdzesjEpXDmlQ-jVkwhz7imF-q9lzzyRkGni9UGiHtyR0lICubFqxvtwN1a-8voDkL9cJl7paE-HiqAH0zRVEgVrF4rJH0XT56Nqe9v0FGSPjFs96lmd0b2IoYNA73CVyy5lADlQzMfLemgxjm_dCIy8VEVcO?purpose=fullsize)
+
+### Combat animation categories
+
+| Weapon type  | Required animation families                    |
+| ------------ | ---------------------------------------------- |
+| Sword        | Light attacks, heavy attacks, thrusts, parries |
+| Greatsword   | Heavy swings, charged attacks, recovery        |
+| Dual weapons | Alternating strikes, combinations              |
+| Axe          | Chops, overhead strikes, spinning attacks      |
+| Spear        | Thrusts, sweeps, defensive stances             |
+| Bow          | Draw, aim, release, reload                     |
+| Staff        | Casting, melee attacks, channeling             |
+| Shield       | Block, bash, counter, stagger                  |
+
+### Animation-driven combat timing
+
+Every attack should have defined timing windows:
+
+T_{\\text{attack}} =
+T_{\\text{startup}}+T_{\\text{active}}+T_{\\text{recovery}}
+
+During the active window, the combat system enables the relevant hit detection.
+
+Important requirements:
+
+* No damage during invalid attack windows.
+
+* No duplicate damage from one attack unless intentionally designed.
+
+* Animation cancellation follows gameplay rules.
+
+* Weapon trails synchronize with attack motion.
+
+* Hit reactions depend on impact direction and strength.
+
+* Boss attacks have clear visual warning animations.
+
+### 5\. Procedural animation and inverse kinematics
+
+![Creating Smooth Character Animations in Unity Using Inverse Kinematics (IK) – DevSourceHub](https://images.openai.com/static-rsc-4/Thx7qa7T4wLjriamto3Nh5luBli7_WTdYO17-igvjySDHJR1NyFX15hjYUUDsiDm-SD4piD1zmhDtzqh0gqCCW6ElvwqnOZ55qazcHHNTXi8_T7uN1Vf7iK5fkqI2Z0MeVzg_t2UaYPBeDG_ELg-kv69zG07eTZQjLA64kZ6mzNGBEtHCpmOMeOimp3h-tvf?purpose=fullsize)
+
+![IK Hands | Mohamed Musthafa](https://images.openai.com/static-rsc-4/Iob8L5U5wPPKg8TOJ5NDmba1WfBzWETmpa90uuGuRi2s-QC8FL56pDYO72TxKnYUM5MOq8DkX7T4EDjBZe6L1ZzEB4XgyuZtljLvg70OKwPtXVzolNHQfg4gq8NaI-AUtE_EP7UMpTYaGzzzx0pB-le52FaliyMAAUcuKfXSDcK8Tt80LhEfWVG9jbSNT4D-?purpose=fullsize)
+
+![A Ledge Climbing System Made in Unreal Engine](https://images.openai.com/static-rsc-4/tV1Z3Yjh-dHbK-A-36va8u0N3NNXTjNhPgVtLKZShW0JqDqFwEBtht0xZ4tdPSCffczbC_rvBpRm17pm7od0WM54qrEcmZZ9XHVERNuKMTax3hCHScAC3uhR5PIUOEChcnWMl4pgJi-boGMcH-P0bO-D2t0PWphcezkMaMaU8RuOoOa3Y0OIz2cwgEOUGYl7?purpose=fullsize)
+
+![Applying IK Constraints in UE4 – Peter Lantz](https://images.openai.com/static-rsc-4/SaaUIOFcN13Lksn6NXAmdKquP_Go_k6OswMZCxznGknJo_uXg7WJFLA8h_mAKWDEVimgCYITMYi_mkRKdER6Oe-u5Bjh1PLdM7BuI8FQzNqaDC_abtx6nCoui6-A2r-bKKaiMz_pMOoXHWh3fDCBTykxk-wIHNZ6L6sNavwb3UmDj3VQKnzvkBZHAFCWFVJ4?purpose=fullsize)
+
+![The Immersive Template Download - Asset Unreal](https://images.openai.com/static-rsc-4/RPphqXfRJcJOMvNnETtXU5vcdtlxl11xraq6jLMLEycdDHG0D4VoarZXvuUV1SyismTsJ6dLl53OJBc5UpGhdrxQdQHRH2i-ByJJ8jUwkrh0lBbW8QsUMBMxeo-QMSWxddFqiS5zD8a1K170a7i3ZmN4nSOXupF_Qi3GFpMM8Y23hqSaYzul1iz7lFkRj_1m?purpose=fullsize)
+
+![3D Skeletal Animation in Godot: AnimationPlayer and AnimationTree | UhiyamaLab](https://images.openai.com/static-rsc-4/4ruO8Ymm_kLMWX0lYUnov2r2gV8le4PmTQQ9LP2bQ-qN4vr6tMsj2Gz4hF-vlEAlVs7XWoQFp6QrXWyAMRDh9BIoB5n7Y3U7HsUiHPszPBUVXN1Elk5EAYopk-kUCxM0Ick80fS_MJTqtQbR93h4MQ3LMfs85AjRIvCFLFl1Bhhjp5Zm2IFfosFmZJglyIhw?purpose=fullsize)
+
+![AnimX: Forest Animals | V5.1 | Characters | By Indie Cat | Game Constructor | Unreal Engine / UE / UE4 / UE5 / Marketplace - Download Free Asset](https://images.openai.com/static-rsc-4/6TkLgO6vtFk5L3kpK7XZf0Z-5J8FAr5YeHZWIFAFmtIm2axEO0IhmWgaHx0QNHn_dft6crr6GGwyaXs9qncd8lAj4fOBg9_bnta-uTQLSz2H3EmVS3BwDR7hWL6oJjy9FxecwqHbggR1dZGgcBIMt94Cfdk1DjJ6hOOHeZ_m4fK7HaH203OqvosXyDAslo23?purpose=fullsize)
+
+![PPT - Locomotion In Interactive Environments PowerPoint Presentation, free download - ID:2739223](https://images.openai.com/static-rsc-4/b-c0RBeME5V7TcliYuBu2bgxgr_oPhtaMydhny7G73j50Oh6OaZpqivEl0ZBzJz3UhXEsTynnx3xgmQv4vUvYF0vKXT1gw4hH7-ATJBUr3FL3QDD9SLsoWDtb79LdiFftlWS7-e11UOxY272D0gG6_Y_pYgNRnC7wT84hGccPJD314yYLUP2VauhJXVBftgE?purpose=fullsize)
+
+![Game Constructor | Unreal Engine / UE / UE4 / UE5 / Marketplace - Free Assets Library](https://images.openai.com/static-rsc-4/pFJzWaDi7w_h8DRmNhiHF96gbO9Mdhtxoa0OfiJmLUSCejUMRWzD59HfI9wJXOgIEGcRSCM4cBIbuHpWYEzWsjNn9GsLINNbvzkKVEKFC3qPabos4y-1-FYjbCvTxiki1T--Sa8tNeFa91oWv5QL4Bqk8Skz8OqbB0W65Paprea6cJSy41zy2ixSGHk6mqIO?purpose=fullsize)
+
+Procedural animation should complement authored animations, not replace them.
+
+### Required systems
+
+Foot placement IK
+
+* Detect ground beneath each foot.
+
+* Adjust foot height to terrain.
+
+* Rotate feet to follow ground normals.
+
+* Prevent feet from sliding excessively.
+
+Hand IK
+
+* Support weapon grips.
+
+* Enable contextual object interactions.
+
+* Position hands on mount reins.
+
+* Support climbing and gathering.
+
+Look-at IK
+
+* Characters look toward relevant objects.
+
+* Enemies track the player when appropriate.
+
+* Companions respond to nearby events.
+
+Body balance
+
+* Adjust torso and pelvis during movement.
+
+* Respond to slopes and uneven surfaces.
+
+* Improve landing and impact reactions.
+
+Example foot placement:
+
+P_{\\text{foot}} =
+P_{\\text{animation}}+
+\\Delta P_{\\text{ground}}
+
+Apply smoothing and maximum-offset limits to avoid sudden foot movement.
+
+### 6\. Creature, companion and mount animation
+
+This system must integrate with V8 rather than create a separate creature framework.
+
+![BACKGROUND - Free AI Image | Tensor.Art](https://images.openai.com/static-rsc-4/iztZez3-Bu5OgrPx7JE6uLBJ8dIPWaixhNetwcppN7n7OeW83aHvL7pD5SZwy4KsqMfGrNFhijJeQYqPZ0EX_P_v22F2FVyDjK5fWq8KfIY8rQTvU-Xf4zfOWav4ejBUe5LN4QoRvpMsIMoi37pi2mcU1C76JtyaPoOGl3TVqwLAZxF6OwFscq3t4gngUL-j?purpose=fullsize)
+
+![Jagex announces RS4, the fourth RuneScape MMO](https://images.openai.com/static-rsc-4/M8cbvFSfJpVtIJWS4T5OkF4Ohg26v6HlH1aUFBAHjm0g5mboyCQkjeTyVPULVMlKtBYbS8GpnLRX8JGVr1eE7J2cDwm4JeOuFpfBO6WZ2ZRk6VTLWYywfq7nJaXBNwrxlc0-job08hz0GG9qgUON39aafC46znBMKVZtiQglFkRbDJloRqos02YXup_9lDKL?purpose=fullsize)
+
+![3DM Mod站](https://images.openai.com/static-rsc-4/txGRi7aYhu7BUQ6KiR5JclSmccou6G4f9McwGaKTrpNtpylMtcMbX0v9wZ__ePrk-u4bsSg-qanoihNuFgUSw8B_amams3gJGps-9xLdG2DMFosrzY76wOs64hMrLNzVW_PiF6caue_BToCOpAKMLwZBAHmZx0rWPE3EqZJld8q3Sp3pI7o37xyUfwlYD82f?purpose=fullsize)
+
+![Mystic Maelstrom](https://images.openai.com/static-rsc-4/ALtm_Ionrod3T2epQRMf-mtUqGVYaFXvBwIuBoFgoxTziANBjSvwWbO8ep4jVKM-P8QgPLHqGp1SVRRPVFoimhKM79Ec1dF55C9qVoktrLveg3jn-4BiVDzjpMP0Cn-OM5piPf1ZfuSaxOzIjo5hqqRuFWd3Hwt2aBD4hQgQn4joaFvengHFJKrcXgdjqaRL?purpose=fullsize)
+
+![King's Bounty 2 preview: A detailed fantasy RPG with deep lore and strategic turn-based combat shows promise | Windows Central](https://images.openai.com/static-rsc-4/3DlExBCWCCVDateR_5_F21Fljs4zzKSNjKdupya-2Y-eA07jJ-N_bWLnl6-rtqBxjR6GiU6KafnwtWC8WzJ3MKNIY4CuhC5w8E6mJsbRKZc22XEEbm_WGwCLzcWaLo6JrJDCP2VZhT0IL5YqFSN-DcTc_zh4wSAqHZTcMHd9wZ7NH6BI4ADH8HF0jJLsNyaf?purpose=fullsize)
+
+![Phantom Steed (spell) - The Authentic D&D Wiki](https://images.openai.com/static-rsc-4/l4_WwpXuroTu8mEGOrATrP_z9-OOrchUHWQ4Xz33F8qQZrjFVr_U4nHvP_BFookSosN-WM_NCCN43Px4ichGvqw14tcxemJ4Fdu5m6uceATWoNfo4vnOfkvnvzlL0o158XdeC_fMZhpL8F_NcB_DPa0kFQEYT6VcqoyF9YN643wvk5Tebm3jVlS4YF4aKZwN?purpose=fullsize)
+
+![Rayman Legends Retold revealed: same classic, new 3D coat | SmartCDKeys](https://images.openai.com/static-rsc-4/SwhRQn2IBtU91MHoz8Rh1kuvzkVtE5jlS8_Xd5AcsD2Q5Rt8Svy-kiSh2qOkTq3Cdgc0CN2TxVxDI4_KMR7NvnmYHTsiMaVsalwDK5bIUlHTKDL9f9O-6CMK3iI1zhkz6czhawXVTy2EXVNxZ4jVQUf_CjQxsYzR72hH2e28z1echXUPl6dUV6b3wePMtrAE?purpose=fullsize)
+
+![TOS' Companion Maker Event: Goro - General Discussion - Tree of Savior Forum](https://images.openai.com/static-rsc-4/mHJfHvsdF0fWg4sfnAwKqnc7_iFPQsE5y0wdZLg4uXAnKoFQnMsCUqGrY2XiYqnCf0qIt4sVsZFd9E-VmZA6iscVJnZ3n7eoXQlRjHA5hTRrggp0kn5os3WgS7oMjt2kINXs5x06Txv2-F-xiVoLyvjZhDldTGaPQwsVkvT4KjmyVckJKW4AdWk4F-9usPU4?purpose=fullsize)
+
+![The Wolf Queen's Reign | Story.com](https://images.openai.com/static-rsc-4/vIM3gfBHKbUfEBSlMdQ0-nrQQUFfWN79AtR04aPIFjbMyy9sv2VPiqo4UsDSem9ZyNsgPbummDQ_QICwwYcYpWFY61szTZGc9z7P4XAH2M1pLDPLWJWBlft5sL2UZExQyW3TmYmxhQXaK4_vJXJ4LGmfINoHA_YdKRriPmxlI6A16K7kW73wKqZPVuhIItJU?purpose=fullsize)
+
+![Guía de DragonSword: Awakening: Cómo desbloquear todos los Familiars | GAMES.GG](https://images.openai.com/static-rsc-4/C2hhujDQVm15KfuuT5HYDxaKpOhufsce6E8z7uk4hy_7HavzQr-b0GYEtuhC_6I66iPgTqajhyOFJeCCqJMeWCAozt1-m1PjdYuPLUanGR7YAoO9VaLftFwd-GJdZInZEjf24RH4tMkSTqXEB5P8DMaHzyba0Hi4cLp9iGZMOO-NFfDzbhThOZzEIkAO_qnM?purpose=fullsize)
+
+### Creature animation families
+
+* Idle and environmental behaviors.
+
+* Walking, running, sprinting.
+
+* Turning and stopping.
+
+* Jumping and landing.
+
+* Attacking and defending.
+
+* Feeding and resting.
+
+* Sleeping and waking.
+
+* Swimming and flying where appropriate.
+
+* Injured and frightened states.
+
+* Bonding and interaction animations.
+
+### Mount-specific animation
+
+* Mounting and dismounting.
+
+* Standing and waiting.
+
+* Walking and galloping.
+
+* Turning and reversing.
+
+* Jumping and landing.
+
+* Swimming where supported.
+
+* Stamina exhaustion.
+
+* Combat reactions.
+
+Mount movement must remain synchronized with rider positioning, equipment, and camera behavior.
+
+### 7\. Facial animation and character expression
+
+![مطور The Witcher 4 سيعرض "أجزاء كثيرة جدًا" من Ciri في المستقبل - سعودي جيمر](https://images.openai.com/static-rsc-4/VGfW0zakGA4IX9MZL3fIYKSGkUp43JNlInqH3XKRjzr2IGRjjKHD96ono6olCGMXeYgwdMemZeR0u491punhGdVF_6w_htCRKUtv8OegOitQ-IOJc6P2Mu-RMkFbrLnsJSpQHaNsOdy37BVJ_Mk7dvYomACPIkdtL6DcGb3HhnXYmly3HInaEMfxqdRIaWjK?purpose=fullsize)
+
+![【中文字幕】使用扫描模型创建面部表情 Creating Facial Blendshapes Using Photogrammetry-爱素材](https://images.openai.com/static-rsc-4/u6_ehraB3HqR1UjOvqxweqwjSxTCKLevZOI_D3UfIpTGtzsLXNR5LYM61OTj8cp5_xHGZquK47WKifTgmmX1dq4Wq3REn8D0jNBCzTb4ycCLpbqVoEGNwueTrkvXBbcoIHmVEPoTL7TQVWUigfLW9B5Kc6EPaHchcipw4SfCHIwJMflA4bnyIjwPQY2ldxZ4?purpose=fullsize)
+
+![Solasta 2 Reveals Early Access Date, Cast Members | GameWatcher](https://images.openai.com/static-rsc-4/hqANs__nq-h4Q6SORKMcOGgF4xTq2D6uIk_UTh2BOxTL8WaHLxWhIeeX-VQLZODg2aXSaSAoVJJFI4wGovgPICDemLashca12q2K9DHMnzo21kefWYG_JIKxrUBTVxnl0gW9jcXn5AiqRFpcFVBJTgcysdMiAN6F1DSWETdhG8MqSnHX0jYVSJIgwGCwquAe?purpose=fullsize)
+
+![A Realistic Facial Rig Made With BlendShapes & Joints](https://images.openai.com/static-rsc-4/xEw45nxh6PN9iMnQXiPSyW73LrTFwgYaMhJCRLHy_QaQqn1Egd7GibLKkpTXriWIBh1h4nEivBkYxwhzi90xCIt2zXujhRHjZrkx0pgidVb44MI3Lb3Pb2b0VWL3kHhFC_BPQF6VdZD_I5k-6R7bGc7cN2b1hcuNl6GNYH08ga1lP5HmaIIrzq5enAJSaPj_?purpose=fullsize)
+
+![Dragon's Dogma 2 sorprende al mundo entero con su creador de personajes y se nos ha ido de las manos](https://images.openai.com/static-rsc-4/gvZKvVGxsenuav9btKZArHfRPAjbRLiomY9zACSSL3Yz11n0m8zMxwOq3YDI6u96-Lg5wla9sE8mtiiWeXIQGHrFeIsgAuJpmaNvIWvZNxUSjy1Rz9m7iJL5zfOWlHlRYFfErYseNYkZIRUGS2ptKCUkpHYyAsTqaj7JvaGNjrNesze7SPrCxCclS2p_Q1aw?purpose=fullsize)
+
+![Realistic Rigged Female Character - Natalia V2 Model - TurboSquid 2354949](https://images.openai.com/static-rsc-4/FgwWms9lGVmDW89AR6eTZVHFD_LbmAHM5yncR-LduT-ugYYN1lmyFCpjE8Y0elP_V_FE2lHPcgE_iad-VkxI52bnCyframvTgnujrhBUTnx4x5OtMG-JIp8aajjq5m9zTesZzzYe9qALnc1K5Is-z46enncb3CFsVCtZTClvc_pMw_gSLt1AubS3YC87G-rC?purpose=fullsize)
+
+![The Blood of Dawnwalker's latest gameplay trailer starts out looking like a Witcher spinoff, then the main character starts walking on walls | PC Gamer](https://images.openai.com/static-rsc-4/mBeja77m4slmEpOfnHjIRBdPO9WX1H1P3fvBvL-WpVhwp8dS98ognxLYinvqNOaT6ofqJd0opqQVQ7bJm3x1YtdPEBNi-SR9z_6r5DgTbNB6a0jm-93uHMVhC8CSFufJL_c3EpOxn8W-Cb1TV62zQx2Dt1RfeMK-EibdC1sgDnwNGaNt9U4KIMWbDaCIWcZd?purpose=fullsize)
+
+![Rigging - Charge - Blender Studio](https://images.openai.com/static-rsc-4/DEAytgzyGgIRGusugTwUAcA4UOtIbQdFBS-qSBfHEZC-lmI8DWxz3DyI6EJD-8Jc-o4UXBlHNr4quXzbXXbSigoSlHKiscLuyXwpRnnpaSXnLK4VeCXHa_o8VI9RJ8feWRTJ3_rVNN1VkyjZFjKVZkyKAzNQcc8oZNNEU3ihR5avCBL91Kei8hqx6NT7OOml?purpose=fullsize)
+
+![Bound by Flame PC Review | GameWatcher](https://images.openai.com/static-rsc-4/uBYXGmgxjor8R1KM4deJwIuQ-5SJBbz29kxbNgib6QAw6Cdns813kVVdr3EUKNaSCAZJudCLyr4naBlCZ2dLX9IG7RDjlJQolXKuOtgPGtRjaznMdDfrfNECiXNWa6LOZNxNZ0XNobA4L1ytesVwpctLyTmtv8AA91eEV57MGxAZ1YQzyrrSHLzidNlbnNIx?purpose=fullsize)
+
+Build a facial expression framework supporting:
+
+* Neutral.
+
+* Happiness.
+
+* Anger.
+
+* Fear.
+
+* Sadness.
+
+* Surprise.
+
+* Confusion.
+
+* Pain.
+
+* Concentration.
+
+* Dialogue-specific expressions.
+
+Include:
+
+* Eye movement.
+
+* Blinking.
+
+* Eyebrow animation.
+
+* Lip synchronization.
+
+* Jaw movement.
+
+* Facial muscle blending.
+
+* Expression transitions.
+
+Facial animation should integrate with V4's NPC intelligence and V9's cinematic storytelling systems.
+
+### 8\. Animation quality and performance
+
+Animation quality should scale according to distance and gameplay importance.
+
+| Distance / importance        | Animation behavior                 |
+| ---------------------------- | ---------------------------------- |
+| Immediate player interaction | Full animation quality             |
+| Nearby characters            | Full or reduced procedural quality |
+| Medium distance              | Reduced update frequency           |
+| Far distance                 | Simplified animation               |
+| Outside simulation range     | Suspend unnecessary animation      |
+
+Do not use distance alone: an important boss, quest NPC, or visible companion may need higher quality even when farther away.
+
+### Performance requirements
+
+* Reuse compatible animation controllers.
+
+* Avoid unnecessary Animator updates.
+
+* Reduce expensive IK calculations at distance.
+
+* Use appropriate skeletal LOD.
+
+* Pool temporary animation effects.
+
+* Profile CPU and GPU animation costs separately.
+
+* Preserve correct animation behavior during world streaming.
+
+### 9\. Blender-to-Unity production pipeline
+
+This is an extension of V3's Blender production pipeline.
+
+### Animation asset workflow
+
+* Create character or creature model
+
+* Build skeleton and rig
+
+* Create control rig and constraints
+
+* Animate and polish motion
+
+* Validate skeleton and animation clips
+
+* Export FBX to Unity
+
+* Configure Animator and Avatar
+
+* Connect gameplay events and hit windows
+
+* Test in Unity animation sandbox
+
+Automate asset validation for:
+
+* Missing bones.
+
+* Incorrect bone hierarchy.
+
+* Inconsistent naming.
+
+* Invalid animation duration.
+
+* Incorrect frame rate.
+
+* Root-motion errors.
+
+* Missing required clips.
+
+* Unexpected scale changes.
+
+* Broken humanoid retargeting.
+
+### 10\. Aetheria Animation Developer Studio
+
+Create an integrated Unity Editor tool called Aetheria Animation Studio.
+
+![Hazel Engine](https://images.openai.com/static-rsc-4/oA1i19LKn1YWOborLL8fctBMdusgPeEApfrLbMsh7KkkN_gvT2IJ-3nPgzQepyzKxrV-ervcz6-dwciglhz5rFjG8ckk-6sCyyYj3BTkVITJuJPgvRrdUApFYANRnExhZvKmtsVM8GL--ZJGGa6fSCIN5n7tZmP-USAH6OerkEvkZS56R-kgM9jXRnKY2fJ5?purpose=fullsize)
+
+Its modules should include:
+
+| Module                | Purpose                       |
+| --------------------- | ----------------------------- |
+| Character Preview     | Inspect animated characters   |
+| Creature Preview      | Inspect creature rigs         |
+| Animation Library     | Search and organize clips     |
+| State Machine Editor  | Inspect animation transitions |
+| Blend Tree Inspector  | Tune movement blending        |
+| IK Debugger           | Visualize IK targets          |
+| Root Motion Inspector | Inspect displacement          |
+| Combat Timing Editor  | Configure attack windows      |
+| Retargeting Validator | Test rig compatibility        |
+| Performance Profiler  | Inspect animation costs       |
+| Batch Validator       | Validate asset libraries      |
+
+The studio should provide live previews, warnings, error reports, and test scenarios without requiring the game to be launched.
+
+### 11\. Implementation roadmap
+
+| Phase | Development                    | Priority |
+| ----- | ------------------------------ | -------- |
+| 1     | Animation architecture audit   | Critical |
+| 2     | Player movement and locomotion | Critical |
+| 3     | Combat animation integration   | Critical |
+| 4     | Creature and mount animations  | High     |
+| 5     | IK and procedural animation    | High     |
+| 6     | Facial animation               | High     |
+| 7     | Animation optimization         | High     |
+| 8     | Developer Studio               | High     |
+| 9     | Full-game integration and QA   | Critical |
+
+### 12\. Master development directive
+
+The following is the standalone instruction for the development agent.
+
+# AETHERIA V11 — COMPLETE ANIMATION, MOVEMENT & CHARACTER PRESENTATION SYSTEM
+
+## MISSION
+
+Develop and integrate Aetheria V11 into the existing Aetheria Unity 6 URP project.
+
+V11 establishes a unified animation, locomotion, procedural movement, inverse kinematics, combat animation, creature animation, mount animation, facial animation, and character presentation architecture.
+
+This is a strictly SINGLE-PLAYER RPG. Do not introduce multiplayer, networking, online cooperation, PvP, matchmaking, guilds, or player trading.
+
+## 1. REPOSITORY-FIRST REQUIREMENT
+
+Before changing anything:
+
+1. Inspect the complete repository structure.
+2. Inspect existing Unity scenes, prefabs, scripts, packages, animation controllers, rigs, models, materials, and import settings.
+3. Identify existing player, enemy, boss, companion, mount, and creature implementations.
+4. Inspect the existing Blender production pipeline and exported assets.
+5. Inspect existing movement, combat, camera, dialogue, and interaction systems.
+6. Identify existing animation assets and reusable components.
+7. Produce an audit documenting what exists, what is missing, and what must be preserved.
+
+Do not claim that an audit has been performed unless the repository has actually been inspected.
+
+Do not replace functioning systems simply to introduce a new architecture.
+
+## 2. ARCHITECTURE
+
+Implement a modular animation framework with:
+
+- Character animation management.
+- Creature animation management.
+- Locomotion state management.
+- Animation state transitions.
+- Blend tree management.
+- Animation layers.
+- Root-motion handling.
+- Inverse kinematics.
+- Procedural animation.
+- Facial animation.
+- Combat animation events.
+- Animation LOD.
+- Animation debugging.
+
+Use reusable systems where compatible, but preserve different rig requirements between humanoids, quadrupeds, flying creatures, and other skeletal structures.
+
+## 3. PLAYER MOVEMENT
+
+Support:
+
+- Idle.
+- Walk.
+- Jog.
+- Sprint.
+- Directional movement.
+- Strafe.
+- Jump.
+- Fall.
+- Landing.
+- Rolling.
+- Dodging.
+- Climbing.
+- Vaulting.
+- Swimming.
+- Diving.
+- Combat locomotion.
+- Carrying and pushing.
+- Contextual interactions.
+
+Movement must remain responsive, consistent, and frame-rate independent.
+
+Respect stamina, movement restrictions, terrain, status effects, and existing gameplay rules.
+
+## 4. COMBAT ANIMATION
+
+Integrate with the existing combat system.
+
+Support the actual weapons and abilities present in the project.
+
+Provide:
+- Startup, active, and recovery windows.
+- Correct animation event timing.
+- Weapon trail synchronization.
+- Hit reactions.
+- Blocking.
+- Parrying.
+- Dodging.
+- Stagger.
+- Knockback.
+- Death.
+- Boss-specific animations.
+
+Do not allow animation events to become an uncontrolled source of damage. The combat system must validate attacks and hit windows.
+
+## 5. PROCEDURAL ANIMATION
+
+Implement suitable versions of:
+
+- Foot placement.
+- Hand placement.
+- Look-at behavior.
+- Body balance.
+- Terrain adaptation.
+- Landing adjustments.
+- Mount rider positioning.
+
+Use authored animation as the foundation and procedural adjustments as controlled additions.
+
+## 6. CREATURES, COMPANIONS AND MOUNTS
+
+Integrate with V8.
+
+Reuse the existing creature and companion definitions.
+
+Support species-appropriate locomotion, interactions, attacks, reactions, resting, bonding, mount movement, and rider synchronization.
+
+Do not invent new creature species or alter established creature canon without authorization.
+
+## 7. FACIAL ANIMATION
+
+Implement a reusable facial animation architecture supporting expressions, blinking, eye tracking, jaw movement, dialogue lip synchronization, and expression blending where assets support it.
+
+Do not assume every model has a compatible facial rig.
+
+## 8. BLENDER PIPELINE
+
+Integrate with V3.
+
+Provide consistent rig naming, skeleton validation, animation export, Unity import validation, retargeting checks, and batch processing.
+
+Preserve existing working Blender tools.
+
+## 9. AETHERIA ANIMATION STUDIO
+
+Create an EditorWindow-based developer tool containing:
+
+- Character preview.
+- Creature preview.
+- Animation browser.
+- State-machine inspector.
+- Blend-tree inspector.
+- IK debugger.
+- Root-motion inspector.
+- Combat timing editor.
+- Retargeting validator.
+- Performance profiler.
+- Batch validation.
+
+All tools must be functional, not decorative mockups.
+
+## 10. PERFORMANCE
+
+Implement distance-aware animation updates, skeletal LOD where supported, reduced procedural calculations, and profiling.
+
+Preserve high animation quality for important visible characters, companions, bosses, and quest-critical NPCs.
+
+Ensure compatibility with V10's world streaming.
+
+## 11. TECHNICAL REQUIREMENTS
+
+- Target Unity 6 and the project's actual URP configuration.
+- Inspect installed packages before introducing dependencies.
+- Avoid unnecessary third-party packages.
+- Follow existing project naming and coding conventions.
+- Separate runtime code from editor tooling.
+- Avoid duplicate managers and competing state authorities.
+- Validate references and handle missing assets safely.
+- Make all animation timing independent of frame rate.
+- Ensure clean scene loading and unloading.
+- Avoid memory leaks and unnecessary allocations.
+- Add automated tests for critical movement and animation behavior.
+
+## 12. IMPLEMENTATION PROCESS
+
+Work in this order:
+
+1. Repository audit.
+2. Architecture proposal.
+3. Compatibility and dependency review.
+4. Player locomotion.
+5. Combat animation.
+6. Creature and mount animation.
+7. IK and procedural animation.
+8. Facial animation.
+9. Blender integration.
+10. Animation Studio.
+11. Performance optimization.
+12. Regression testing and documentation.
+
+Do not implement everything as one enormous script.
+
+Do not create duplicate systems when suitable implementations already exist.
+
+## 13. ACCEPTANCE CRITERIA
+
+V11 is complete only when:
+
+- The player has functional movement animation.
+- Movement transitions are responsive.
+- Combat animations synchronize with validated gameplay windows.
+- Enemy and boss reactions work.
+- Existing companions, creatures, and mounts remain compatible.
+- IK works on appropriate supported rigs.
+- Facial animation works on supported characters.
+- Blender exports pass validation.
+- The Animation Studio functions.
+- Animation performance has been profiled.
+- World streaming does not break animation state.
+- Existing gameplay systems continue to work.
+- Documentation and automated tests are included.
+
+## FINAL RULE
+
+Preserve Aetheria's established world, characters, mechanics, assets, progression, and single-player identity.
+
+Inspect first. Plan second. Implement third. Test continuously. Do not fabricate completed work or replace established game design with invented content.
+
+V11's central goal: make Aetheria's characters feel physically believable and responsive, while keeping animation tightly connected to movement, combat, creature behavior, and the world itself.

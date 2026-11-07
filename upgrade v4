@@ -1,0 +1,674 @@
+### AETHERIA — UPGRADE V4
+
+### World Intelligence, Quest Design & Dynamic Narrative System
+
+For V4, I recommend moving away from Blender and focusing on something that can make Aetheria feel like a living, evolving world: its world systems, quests, NPCs, factions, exploration, and storytelling.
+
+V3 focused on building the assets. V4 should focus on giving those assets a world to belong to.
+
+![ESO Plus Trial Week Gives Free Access to Every Piece of | GameWatcher](https://images.openai.com/static-rsc-4/kooRxxW-Coj6N24IsIqkfWdkYu3onYDoENmI4xAcQxUN9jusROXc35H-jIYeW7_9lkFeHbgyGeTo32oH43Pa0hTsSiIJpV9UfbnEUIRoKMbzMlFtzdWEwe2yLNQ1SZtkxjo8dSCJX-eFAfmnjc8R3VxyI9IJg4Qb_N7sq6ZimA8yDuOUI_sLB-1TA6cOcNNS?purpose=fullsize)
+
+![Amazon to publish NCSOFT MMORPG Throne and Liberty in North America, Europe, and Japan for PlayStation 5, Xbox Series X|S, and PC | RPG Site](https://images.openai.com/static-rsc-4/9ekfmRNLkC2Ue-0XwMGeZ5V9tZ2dtL4xUu7qOWUxAS9RAdMxZHp6oJduzl-QsLJvruGVCVx80bdYhlgtjqvITl0CLdpy7X3VlQSYiCCyhenHTxZBK5h3oumm2KwkZKlSAiEgJvMXiu0Av5fly3MxMz4s6BfQPu1hpmb-1qG0qfD_bLyIcSgAVcwkqcvIio5B?purpose=fullsize)
+
+![Monomyth Game Customer Remake | Recreate a Playable Game Prototype with AI | SEELE AI](https://images.openai.com/static-rsc-4/8Uqz4hLpeDMkPAzpJZQ_FpCLGFubEHlGgTy-XlVWTwNI89OVb28SGJxwfRPzbPniVyO3bha8zUPtWLR8LNCP8EZJuJ8a6D9hEsAzCxlSR7xrs_9-OW0lIkZd7kI_Hp61fBRS_XytG2iaiKHtSI8Jff3UINaE3HJxSspik-Ap38qwR95izneHx6jyU_6eP7_c?purpose=fullsize)
+
+### V4: The Living World Update
+
+Recommended direction
+
+Core objective: Transform Aetheria from a collection of locations and characters into a world that reacts to player actions, remembers important events, and evolves over time.
+
+### 1\. World simulation system
+
+Create systems that make the world feel active even when the player isn't interacting with it.
+
+* Dynamic day/night cycles.
+
+* Weather that changes by region.
+
+* Seasonal environmental changes.
+
+* NPC daily routines.
+
+* Traveling merchants and caravans.
+
+* Random world encounters.
+
+* Wildlife migration and predator/prey behavior.
+
+* Settlements that grow, decline, or change.
+
+* Regional danger levels.
+
+* World events that occur independently of the player.
+
+Advanced addition: World State Manager.
+
+It tracks variables such as:
+
+* Regional prosperity.
+
+* Political stability.
+
+* Monster activity.
+
+* Faction influence.
+
+* Resource availability.
+
+* Player reputation.
+
+* Regional corruption.
+
+* Active conflicts.
+
+These values should influence NPC behavior, quests, events, and locations.
+
+### 2\. Quest generation and storytelling
+
+![【光の勇者ログツィーノ】第一章の9〜最強冒険者ギルド、SS級クエストに挑む〜｜篝みづほ『光の勇者ログツィーノ』連載中](https://images.openai.com/static-rsc-4/AfehGG58HJ28cjNE1o035IeDzAyrW-nVWvo7zg_ClK_2xldGWKYEjzfZBPMeYBraVQ4Jr1uhnbpYjmklReEtSqLQnnt2rEdGlXQE4GsBdW13A1wdKwljKIftyQlyhhaSerxpeEeFZ6r8-oyc0CfWAQzl51MFKbYvFblEkzoggPAoQbFVaubnfUO-gJ4GC-Ls?purpose=fullsize)
+
+![Persian Deep Quest - Instant game by Jabali AI](https://images.openai.com/static-rsc-4/o7qX_7poF1Djx8vbdgpK4Tch4NosCvMhVw1wl0yPuah1Vb-rspFEgsnAo7EKZ-0UjFyceixCpF1LHYErW8Lh7J0vQ6SYKX072SdODL50Mpd-DPogTVHwrRH-Hheq9RQoFeBRlfklL7EuS9KNmDAysSJiSlkizmSnFi50wRNRsWQXjaVaENRSkP1oy4Z1JJ1N?purpose=fullsize)
+
+![Eternal Strands | GoodGame.hr](https://images.openai.com/static-rsc-4/9ENwmvBmoLNdspK2V9Nbgv58ud-5UtsgnlptDMcTb6W9Cpl36v2sPrz6oJn30fih8eG0ddwEIw7-JKXRunA9XQ_WKyaizh8mSXGT6yHoSgS1aoZZuFxA3GNVJw42YWdoyV6bKJJt-5jXkBe6FORuk2OcpGv2t2SqvyOUlvYh_3daQ0iH9UmmzoD3xd3cOpUJ?purpose=fullsize)
+
+![Guild Master Tycoon — Build Your Legend](https://images.openai.com/static-rsc-4/1hzpZ5-8BY8UNcpLL20BKM8bNqA42w_Ilf17W4-XMVe4XxDy3omgZEU4eUiZed4EU2vFeJJdXdJt0qi5qBQy7y4ATVxV61A_Pa9_ijcbJSwGuQQKvVkbs4dirdTHwpfGWNRtW-9BCo3KAxx8LA3wczMYGM2a87SL9T0f1BrYUAmGQSb6E-uqbi7iaSPZwnOL?purpose=fullsize)
+
+![Images of Maya Shaman with Torch at the End of a Stone Tunnel: Illustrate a mysterious, ancient stone tunnel leading to a shaman o... | Deep Dream Generator](https://images.openai.com/static-rsc-4/eil5PK6xxd4yo13Yw7DN-DQG8Wh8fIQX1nZPub8nuJM4qonNuQBMsgHKu7VqEhRTkXx1m9koAiHjmq38jZYAq88FnaWzUig-VKfMHVeUfrBlQBeAJTQRs-dKjnTFo9iPXy0y7SrDBNU1BuN_esUPufWZ8KZFwYG8_KTdg1TcSyqr-YHHc89azyMmLajwBI3x?purpose=fullsize)
+
+![Avalon | Immutable Play](https://images.openai.com/static-rsc-4/IAUNF4Ld8GqAIfsJFaIsrGLf1JC0PnWEq9SCPvbO8DiPW43y31jjdl8G333n-bX3_DQ9wQ_cJl4szIY4xrQGlN4CnKRtsEBQDWQwLyjEyZyzPB2tTUCamUIe3HzCyXmZhiTtPOwfgd1syQsxeHZmI_XHKIcmPf6kO1vV1vbqkTuZBsqVVKavQ9nEgjcmvjxh?purpose=fullsize)
+
+![ASTRIA ASCENDING Review: Falls Far Short Of RPG Greatness — GameTyrant](https://images.openai.com/static-rsc-4/v8JM2TKgV0uctHgn3_6uk9NxHW9hF8gU8dFh1zXPH-KfW4vdGrLD2lhXR0p52Y1CrRNJvMuVmz2JjgyK_GrcY8e_v-Sp8mN1idR4hzs9_zUL6X218X-o7KdDDX6D4licezjMQplsgmRt9gyIrRLZAflbyV6e-OhZcaZ7r05oTE8KupMU66ivjU3Bo17YsKAR?purpose=fullsize)
+
+![Create an eerie, atmosphe - Free AI Image | Tensor.Art | Tensor.Art](https://images.openai.com/static-rsc-4/4g-dByNTPsPKaUCMB--XbqrKlJcxDd7cMPw4DyVKHWsDqRXMT4lK27j7Wn3NAly63tgXrMPAYpMXFH49gBvqDwbVeNCwtU2Mj2jgf7lZG6UbntfIzaMabvJCwx_RT6vCDiLnT927EktXBQKnbF4kjxaqZBbYBnHhQPiOKxhV_F9FJ-BCcQUrukx2YSIDTa4Q?purpose=fullsize)
+
+![WestMarches.games | Campaign Manager for West Marches-style TTRPG campaigns](https://images.openai.com/static-rsc-4/kjTZc2xCUN-kqDFLrErfInmIgwIQcytn6PLUXrP20xzYWxoZcXehahlCHeBhYFhdubJcuu9Q1SHaJ6_HVa9rzyvk-6NvqorasBUewBGL5Cop7KRJgj7dgJIqh4aEt9EL0wDDUOTLpUe_zm6JWmjfidQ0XBg2JfFKbdJh489tSsjEm8NeWaDzurQh4HP1b_SL?purpose=fullsize)
+
+![Ash of Gods is a gorgeous but deeply flawed adventure | GamingOnLinux](https://images.openai.com/static-rsc-4/QKOAm5pgqRAoog-E7785ewvTGr8nQSG_wRXAd34S-6sPnchxo3nxjEt1Flv_pRFDr_Y8A4garuuijT5OOfb0pp1VH36F9ew7eZGPFKmAuIv8z2OHm4tAhiIkFdDt-fi2zXtwFpb6rtfmiq3MTBW93wENTSSu4hZCxjwHJBfa0v6E9TlXB0quM_aPg6Zg6NmS?purpose=fullsize)
+
+![The Lost City of Puzzles | Story.com](https://images.openai.com/static-rsc-4/-p-cqPjI5SqYU7YcbVa4CUADJA5GHV_n9hOiOKKLXxeQuP4iqb7eoHBoNQ5ybc2kcdmdx68EdrwXCvoIkhEFI3M6eIndyoAt4p1XfxDP0ury7Zlw6SGQmeUYYkT7HuzQFch4vmeavSlQpqLVkdzG3mSOQviEfBhNlZ5a_KakkRtnBSK17-P5dDGp7PKo_kFb?purpose=fullsize)
+
+![Battle Chasers: Nightwar Review | RPG Site](https://images.openai.com/static-rsc-4/AmvucLuBIUo2VgBALZiTP1ZewhNOvuJ4Cbsg7CUZNp1ZEOfBXE2yIRV3rjhWu16movaqVBlXgn52CrqB9HZilqSxLb-E75FRp3vjG76GBH-oRBwmoog198Hia-vRhV-BOA_AIG8KrrwSK8PAu-Bcawg3x8yzczEverLla7TDjvshesMI43gD-tNFg3gbbL2K?purpose=fullsize)
+
+Build a more advanced quest system.
+
+Quest categories:
+
+* Main storyline quests.
+
+* Regional storylines.
+
+* Character-specific quests.
+
+* Faction missions.
+
+* Exploration quests.
+
+* Bounty hunting.
+
+* Treasure hunts.
+
+* Mystery investigations.
+
+* Dynamic world events.
+
+* Hidden secret quests.
+
+* Multi-stage legendary quests.
+
+Quest generator additions:
+
+* Randomized objectives.
+
+* Multiple possible solutions.
+
+* Optional objectives.
+
+* Time-sensitive missions.
+
+* Branching outcomes.
+
+* Quest prerequisites.
+
+* Reputation requirements.
+
+* Consequences for failure.
+
+* Quest chains that evolve with world state.
+
+A quest should not simply say "kill five monsters." It could involve discovering why monsters are attacking a settlement, finding evidence, choosing who to trust, and deciding what happens afterward.
+
+### 3\. NPC intelligence and relationships
+
+Give important NPCs more depth than simple dialogue and interaction prompts.
+
+Add:
+
+* Personality profiles.
+
+* Individual memories.
+
+* Daily schedules.
+
+* Personal goals.
+
+* Fears and motivations.
+
+* Relationship progression.
+
+* Trust and suspicion.
+
+* Friendship and rivalry.
+
+* Family connections.
+
+* Faction loyalties.
+
+* Dialogue influenced by player decisions.
+
+NPC memory example:
+
+An NPC could remember that the player:
+
+* Saved their family.
+
+* Stole an important object.
+
+* Helped their faction.
+
+* Betrayed their employer.
+
+* Completed a personal quest.
+
+Those actions should affect future interactions.
+
+### 4\. Faction and political simulation
+
+![The Bloody War](https://images.openai.com/static-rsc-4/5PwIjaepj08725zyTCgkeo21TDcN7fW7UXE9EVDCFYbV6v63Gb6TpJTqNJ7hE8du9TT3r9rT07Y8ZjPMXXsqLJ-UXyq5JTE5Xc94ryZFkv1H-nhGfvsXqO9s3PY-YtuKsbjYZByHnpWHuf5qwRg7LcA9vNAWC0H4H5DNnf2vahyh2cbinKHDSajmJkcUrI3m?purpose=fullsize)
+
+Create factions that have independent goals and relationships.
+
+| System     | Proposed addition                       |
+| ---------- | --------------------------------------- |
+| Diplomacy  | Alliances, negotiations, treaties       |
+| Warfare    | Territory conflicts and invasions       |
+| Economy    | Taxes, trade, resource control          |
+| Reputation | Player standing with each faction       |
+| Espionage  | Sabotage, spying, information gathering |
+| Leadership | Rulers, commanders, succession          |
+| Territory  | Ownership, control, contested regions   |
+
+Possible dynamic events:
+
+* A faction declares war.
+
+* A ruler is assassinated.
+
+* A settlement changes ownership.
+
+* A trade route is blocked.
+
+* A rebellion begins.
+
+* Two rival factions form an alliance.
+
+Make these systems configurable so the world can be balanced and tested.
+
+### 5\. Exploration and discovery
+
+![Ancient Giant Ruins - Docents  in Interactive Eberron - Campaign of Dreams | World Anvil](https://images.openai.com/static-rsc-4/Vy67tk0EpD5c2G9plBHG5ZCQuxdvCUTVCMGxcCUJz2g6DJ3kgKHw_EXVRemyjWktec9BwDN8oPXYloKdxDgw21Pb9-mGp2wr1rM4oU5LZ8pVIe5PtacMITwDO9Av4IxLpDxmndVj7J3Qzqn-iPK7Dby7-2QLpQS4mZiiyIwq5ypkmc_Tp9QcG6TVb2GjgcIt?purpose=fullsize)
+
+![AI Concept Art — Characters, Worlds & Creatures | Imagine Studio](https://images.openai.com/static-rsc-4/Nr6_wQYzwEqPntN_9RuIoGijbXdCPqOHD0HVnaqalPSam7CEey4e30A5Aqou1uJI5avOt8fhFhhtaRN36BCFbOab7XvPUNquvI03jQ4G9JDXxUSAlGXEnABTAaqGlRtqboUTe7FsPnmYVjukLaBTBRz03OsuuE_0gwpwhpYu7Odr3EpEVA0R0hUvv95HqEk0?purpose=fullsize)
+
+![Cave Nagas, Сергей Забелин | Fantasy landscape, Concept art, Fantasy places](https://images.openai.com/static-rsc-4/NrISZrgg9N-SJ8l0Cq0k48_2DAmuxaktA6wvGNUT6xRXdnWVW8CrGtH-jOREgMrtPZ12z8nxBTp4WJ4hsort27R9HnNZimGYtH0rd_HXIePQNDrW5OiFMW738d8XSjIUy7MupBNPti4vQ-bnGdPXpG8H-zzSqXdsFLeWcCAKlV6Pgk1vm9WIrirBBPyGLDV3?purpose=fullsize)
+
+![101+ Kingdom Name Ideas: Sparking Imagination for Your Fantasy World](https://images.openai.com/static-rsc-4/lszwvl33-1HXvtUaa70SHk1WKfeYE_3t58AWZAFeC-6joXqj7RQREhggDLhsNO1yg22sbf9sH5kaFdQ5vadvhm-ZgnohBHWYbYR5d3vVpFFhUa573JQN5SHO1q310O29dDJcfRc1-lL89kuelDotGj3n2ugnQyNQxfnw5DMymA59BiyWo_MSRPGb3Gbuz73c?purpose=fullsize)
+
+![🌐🌍生成AIが考える『地底世界アガルタ』の２Dインタラクティブシミュレーション!!🌋🏛️｜藤本　伸樹](https://images.openai.com/static-rsc-4/L54z2BRsS9_QHVRIsnWDeQ16RERI1sjxoYg-11JkxN89U9c2bd-oXa0LghAY8VzBkZSO8lSHWU8UyMsmL68RFpi-pdx4T2m_x0e1HTn4gNcktj5xvx4j4zFtyxscJK6uq859qeNyKJleGuEN2LeLg5PM2y7w5OQXh9jVqE18qrhlZvtwVT7erw45RznKspnF?purpose=fullsize)
+
+![Lumina. A Benevolent Civilization Awaits | by Quantum Shadows | The Omni-Verse Chronicles | Medium](https://images.openai.com/static-rsc-4/e5CQ7jjTuqhO2LqxWVVgduMUOGyaqM0q00kXN_nIuapvw_2ryCevTTXsu4fVz24-bBDi1xfjx19FBVr5lvQvLto3Qz_jjxUhaJk5T2FbZvN-EuJ9D3JN3BnSPJw5LGwmnX59wGzjt7nmlPmRY0BWXLvYrRHJE534rSK-fuAQJWA4g2DdR5u6aX4Z2z-4V0_U?purpose=fullsize)
+
+![The Enchanted Cave | Story.com](https://images.openai.com/static-rsc-4/5NM3j89eeTZs3qo4zwjmUlAU8caL3Xyw8NF0LRTxkIlG76wQnPGlUvtijxdRR95NsS6vQCD3IdMbtcwXrVqKOtAjZ-5DiV_xHB4zKk4bzDvchj-P2RIrzaE6So7zu3_WBGkmVhjTL7Nd87pPYv_vBdAFcrLIoEe02QX07k8cRMlZyENc4g71I1Ll7tpeYYcN?purpose=fullsize)
+
+![AI地下宫殿绘画：地底王国的神秘建筑与黑暗奇幻场景创作 - FlowPix](https://images.openai.com/static-rsc-4/nYlmZFc897eRlbl0hqowonJXyiQiNXCJRaB-oGDHajXlHjsn1gCp8BVsx09lMnIbJF94wGS1ELiICFOvGj2le2Qbo2_A6Hw0CngEERRpnlF7HBdVigm_WYt26tmHlvKCbOBIyTffwlSHKBC7WYYpfu-Nl7wCwibJdAIUFKvLcEsTCn-13uZwz4296I0FRfbJ?purpose=fullsize)
+
+![AI Generated Crystals Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/9qfzgD8sfEV0gusku4Tj3-_uWGJbhfNs8zBpe4QaznXNJe-uebSJ1v4keU2SQxsyx75RQViOPDD7-drBoRufp3vKlgV7sWCL-PlyvGdHBnoPGfDAK6P7TTXYyourtGVXLvELrvEjUoOpcDK9yNx8Euy6iY5BrXHwKfVFbzOpR5jGHpqfMtY2D6M0qA3p-ezK?purpose=fullsize)
+
+![Chat, roleplay, and learn more about Wanderer on Spellbound](https://images.openai.com/static-rsc-4/rs1qCqkIz2AyazsNGOoIuDMhrElwGs9ZasF0Vp-8AcctWtZMxuaI0L6bwgi_PIip2W91b2OabR8dUKeACBtYoWkgHumECvvWqepgdB0CdxBB1nujncJs1HO0CCGh_xLaFlDxEmoQOnlrwS6uMBL9Gk354n3MSYmGou8b-EI9hU4XYgXzmwuWAROnzuOOfykd?purpose=fullsize)
+
+![Zauberhafte Höhle. Fantasy. | Fantasielandschaft, Abenteuer, Fantasy](https://images.openai.com/static-rsc-4/ytYpVy8nOvyEshmnnmRF9m9bt6vl4oy5RPo1S7YmVSX_gHA9AZTlOZaCMGR4LEl5wgP15fdZnmz66BsrevSorFMFP_xglUHwEEok1B1s_xqIaZritaf0oFLj38gzewrO06GkI9XDyM3s-h4YjvjuBpk6PZ1l8GMElPDJmZ_wtZkSHyHov0fzcpFerZfzN3eb?purpose=fullsize)
+
+![AI Generated Undergroundcity Photos and Artwork | Deep Dream Generator](https://images.openai.com/static-rsc-4/PW_KafQ9lltdLohL8B8eZpCRiJ_AqtJhdMoVTcYdNII2u7wHOlFJIAx6QOJGbUBd2tdQQrEy1LAS9saEZ40KVQQxwexuHY9tt_vdd5FGNqVEaanhwiRI9k3jBaW97KWI-k6sJLIkJV_OG8mkOl_wiK7ddnLLQTtfzwBVpm4LooWchvgdfZy3JHFBB0w5eptt?purpose=fullsize)
+
+Make exploration rewarding beyond collecting resources.
+
+Add:
+
+* Hidden locations.
+
+* Ancient civilizations.
+
+* Lost underground cities.
+
+* Secret passages.
+
+* Environmental puzzles.
+
+* Ancient inscriptions.
+
+* Rare landmarks.
+
+* Unmarked dungeons.
+
+* Forgotten monuments.
+
+* Discoverable historical records.
+
+* Unique exploration rewards.
+
+* Secret bosses and encounters.
+
+New feature: Discovery Journal
+
+Every discovery can be recorded with:
+
+* Location.
+
+* Discovery date.
+
+* Lore entry.
+
+* Related characters.
+
+* Related quests.
+
+* Important clues.
+
+* Unresolved mysteries.
+
+### 6\. World events and dynamic encounters
+
+Create an event manager that selects events based on region, world state, player level, and faction activity.
+
+Examples:
+
+* A village requests help defending against monsters.
+
+* A merchant caravan has disappeared.
+
+* A traveling healer arrives.
+
+* A dangerous creature appears near a settlement.
+
+* A faction patrol discovers the player.
+
+* A storm reveals a previously inaccessible location.
+
+* A rare resource becomes available.
+
+* An ancient ruin becomes active.
+
+Add event rarity, cooldowns, prerequisites, and consequences to avoid repetitive encounters.
+
+### 7\. Economy and trading
+
+Build an interconnected economic system.
+
+* Regional supply and demand.
+
+* Merchant inventories.
+
+* Dynamic item prices.
+
+* Resource scarcity.
+
+* Crafting material availability.
+
+* Trade routes.
+
+* Settlement wealth.
+
+* Faction-controlled markets.
+
+* Black markets.
+
+* Traveling merchants.
+
+* Economic events.
+
+For example, if a region is attacked and its trade routes are disrupted, food and equipment prices could increase.
+
+### 8\. Player progression and identity
+
+Expand progression beyond simply increasing character statistics.
+
+Potential additions:
+
+* Skill specialization.
+
+* Reputation progression.
+
+* Titles and achievements.
+
+* Exploration mastery.
+
+* Crafting professions.
+
+* Faction ranks.
+
+* Weapon mastery.
+
+* Unique character traits.
+
+* Long-term decisions.
+
+* Unlockable abilities.
+
+* Different progression paths.
+
+The objective is to let players develop different identities through their actions.
+
+### 9\. New technical systems
+
+These are the underlying systems that make V4 manageable.
+
+| System                   | Purpose                                 |
+| ------------------------ | --------------------------------------- |
+| World State Manager      | Tracks global and regional conditions   |
+| Quest Manager            | Handles quest progression and branching |
+| NPC Schedule Manager     | Controls daily routines                 |
+| NPC Relationship Manager | Tracks relationships and memories       |
+| Faction Manager          | Handles alliances and conflicts         |
+| Event Director           | Controls dynamic world events           |
+| Discovery Manager        | Records exploration                     |
+| Economy Manager          | Manages trade and prices                |
+| Dialogue Manager         | Controls contextual dialogue            |
+| Save Migration Manager   | Preserves data across updates           |
+
+Important: Keep these systems modular. Avoid creating one enormous manager responsible for everything.
+
+### 10\. V4 roadmap
+
+* Phase 1 — World foundations
+
+    * World State Manager.
+
+    * Regional data.
+
+    * Persistent world variables.
+
+    * Save/load support.
+
+    * Debugging tools.
+
+* Phase 2 — NPC intelligence
+
+    * NPC profiles.
+
+    * Schedules.
+
+    * Relationships.
+
+    * Memory.
+
+    * Contextual dialogue.
+
+* Phase 3 — Quest expansion
+
+    * Quest chains.
+
+    * Branching decisions.
+
+    * Quest generation.
+
+    * Rewards and consequences.
+
+    * Quest journal.
+
+* Phase 4 — Factions and world simulation
+
+    * Faction relationships.
+
+    * Territory control.
+
+    * Regional conflicts.
+
+    * Dynamic world events.
+
+* Phase 5 — Exploration and economy
+
+    * Discovery Journal.
+
+    * Hidden locations.
+
+    * Dynamic merchants.
+
+    * Trade routes.
+
+    * Regional resource systems.
+
+* Phase 6 — Integration and polish
+
+    * Connect all systems.
+
+    * Build debug dashboards.
+
+    * Test persistence.
+
+    * Test performance.
+
+    * Test world-state consequences.
+
+### 11\. Extra ambitious ideas
+
+![Sephirot, the Tree of Life Character in Gran Terra | World Anvil](https://images.openai.com/static-rsc-4/BS6j8I6XQ-WXLI3PD_ciKZY88bXyaDOdrp3vTd52OcRCfFms8jw6fsBejCKg4_HhV50rrMMxw4Fdel-oEwjJ0Opw4-2SNtZEpFFiOzShLd3mB_KKIJSCxX4PtlCEt2ledeFaUXC1bLAuhbVNsoOXDijoguvthVTXJaRP12SEadhaMw-Gd-YdVRulgu1JEhZi?purpose=fullsize)
+
+Living world history
+
+The world records major events and builds a persistent history.
+
+![Fantasy Map for RPG Campaigns - Hand-Drawn Style | AI Art Generator | Easy-Peasy.AI](https://images.openai.com/static-rsc-4/KU9t2r81yoyF_DaeQ0OgGSC6r0J0FsewrGW2ISP9JtgsGegCjO1SYPMioEIconNfK0WxUkHDFCXK31-u46VPyQYN6ZTZS1TuPtf27t0AKeZeHyOOhSFhnLMeVm4Qc4nBfE1PjvccHfrGtm0KYztObozdMLfM7Jeg4CgVYaIKGoImJs1-h-3gjno1I89VykWR?purpose=fullsize)
+
+World intelligence map
+
+Shows faction borders, conflicts, discoveries, trade routes, and regional threats.
+
+Settlement evolution
+
+Towns change visually and economically based on events.
+
+![Сила? Предел? Вознесись - и удержи баланс!](https://images.openai.com/static-rsc-4/cbRGcIgZtUEAntkdN2TWQNM9o6lNfyp4rWGCJaORSVCBqg2japlXgXg54DqME3kCRID-bsIzDMEgKHbraMcwSZ1bw0Kog56eNWXCuNa3WUq_LBFBqbXUtm2ab1Y5_MPBSvfpGiuRsnCXzE6ae1DXCGjMtG-13iNzPGJ7qiqv0ZShbmvze4nTTn-oM-fwkCOU?purpose=fullsize)
+
+Legendary world events
+
+Rare, multi-stage events with permanent consequences.
+
+### 12\. Master V4 development directive
+
+Here is the prompt to use as the main development instruction for the next upgrade.
+
+# AETHERIA — UPGRADE V4
+## LIVING WORLD, WORLD INTELLIGENCE & DYNAMIC NARRATIVE EXPANSION
+
+### PRIMARY OBJECTIVE
+
+Expand Aetheria with a comprehensive world simulation, dynamic storytelling, intelligent NPCs, branching quests, faction interactions, exploration systems, and a persistent world state.
+
+This upgrade should focus on ADDITIONS, EXPANSIONS, NEW FEATURES, and IMPROVEMENTS.
+
+Preserve all existing working systems and build upon the current architecture.
+
+### 1. INITIAL PROJECT DISCOVERY
+
+Before implementing anything:
+
+- Inspect the existing project structure.
+- Identify the game engine and current architecture.
+- Identify existing quest, NPC, dialogue, save, inventory, and world systems.
+- Reuse existing functionality wherever possible.
+- Identify integration opportunities.
+- Create a V4 implementation plan.
+- Do not replace working systems without a compelling technical reason.
+
+### 2. WORLD INTELLIGENCE
+
+Implement:
+
+- Global world state.
+- Regional world state.
+- Dynamic environmental conditions.
+- Regional danger.
+- Regional prosperity.
+- Resource availability.
+- Persistent world events.
+- World history.
+- State-driven world changes.
+
+### 3. NPC INTELLIGENCE
+
+Implement:
+
+- NPC profiles.
+- Personality attributes.
+- Daily schedules.
+- Individual goals.
+- Relationship progression.
+- Trust and suspicion.
+- Memory of player decisions.
+- Contextual dialogue.
+- NPC activity states.
+
+### 4. QUEST EXPANSION
+
+Implement:
+
+- Main and side quest chains.
+- Branching objectives.
+- Multiple solutions.
+- Optional objectives.
+- Dynamic quests.
+- Timed objectives.
+- Quest prerequisites.
+- Failure consequences.
+- World-state-dependent quest outcomes.
+- Quest journal improvements.
+
+### 5. FACTION SYSTEM
+
+Implement:
+
+- Faction identities.
+- Reputation.
+- Alliances.
+- Rivalries.
+- Territory control.
+- Diplomacy.
+- Conflicts.
+- Faction missions.
+- Leadership and succession.
+- Dynamic faction events.
+
+### 6. EXPLORATION
+
+Implement:
+
+- Hidden locations.
+- Ancient ruins.
+- Secret areas.
+- Environmental puzzles.
+- Discovery Journal.
+- Lore collections.
+- Exploration rewards.
+- Rare encounters.
+- Discoverable historical information.
+
+### 7. DYNAMIC WORLD EVENTS
+
+Implement an extensible event system supporting:
+
+- Random encounters.
+- Regional incidents.
+- Monster attacks.
+- Merchant caravans.
+- Faction conflicts.
+- Rare events.
+- Multi-stage world events.
+- Persistent consequences.
+
+### 8. ECONOMY
+
+Implement:
+
+- Regional supply and demand.
+- Merchant inventory.
+- Dynamic prices.
+- Trade routes.
+- Resource scarcity.
+- Settlement economy.
+- Faction economic influence.
+
+### 9. PLAYER PROGRESSION
+
+Expand:
+
+- Skill specializations.
+- Titles.
+- Reputation.
+- Professions.
+- Weapon mastery.
+- Achievements.
+- Character identity.
+- Long-term progression choices.
+
+### 10. DEVELOPMENT TOOLS
+
+Create:
+
+- World-state debugging dashboard.
+- Quest testing tools.
+- NPC schedule inspector.
+- Faction relationship visualizer.
+- Event simulation controls.
+- Economy inspector.
+- Save-state diagnostics.
+- Performance monitoring.
+
+### 11. TECHNICAL REQUIREMENTS
+
+- Modular architecture.
+- Data-driven configuration.
+- Reliable save/load.
+- Versioned save migration.
+- Event-driven communication where appropriate.
+- Performance-conscious simulation.
+- Debug logging.
+- Automated tests.
+- Clear documentation.
+- No unnecessary duplication.
+- No regressions to existing functionality.
+
+### 12. IMPLEMENTATION PRIORITIES
+
+P0: Project discovery, architecture, persistence, world-state foundation.
+
+P1: NPC intelligence, quest expansion, dialogue.
+
+P2: Factions, dynamic events, exploration.
+
+P3: Economy, settlement evolution, advanced progression.
+
+P4: Legendary events, advanced world simulation, optional ambitious features.
+
+### FINAL EXPECTATION
+
+Deliver a cohesive Aetheria V4 world simulation and narrative expansion.
+
+Do not merely create disconnected features. Make systems communicate with one another.
+
+NPCs should react to world events. Quests should respond to faction activity. Factions should influence settlements. The economy should react to regional conditions. Player decisions should create persistent consequences.
+
+Prioritize stability, modularity, meaningful gameplay, and long-term extensibility.
+
+The ultimate goal is to make Aetheria feel like a living world rather than a static collection of game levels.
+
+My recommendation: Make V4's defining feature the Living World System. If Aetheria can remember what happened, react to what the player does, and evolve without scripted events controlling every detail, that will be a major step forward from V3.
