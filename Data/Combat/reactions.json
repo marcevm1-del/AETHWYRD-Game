@@ -1,0 +1,127 @@
+{
+ "version": 1,
+ "notes": "Reaction table for 12_Systems/combat.md section 7a. PARITY (matches today's code, Elements.cs): the 10 pair ids and elements, consumesAura (true for every reaction except Swirl, which keeps the aura), and the Freeze (2.5 s) and Storm Prison (1.2 s) durations, copied from combat_tuning.json reactions; a test asserts they stay equal. Firestorm hazard numbers are copied from combat_tuning.json firestorm (tickPower 0.35 over tickSec 0.5 = 0.7 damagePerSecMult). PROPOSALS until the user tunes them (not in today's code): every bonusDamageMult other than 1.0, every dot, every hazard except Firestorm, the whole swirl block, and all synergies. No reaction here is gore or lethal-by-itself; hazards are readable ground zones with a visible edge and a duration. Hazard 'kind' values are free ids for the VFX and hazard system to map.",
+ "swirl": {
+  "element": "Wind",
+  "spreadRadiusM": 5,
+  "spreadDamageMult": 0.5,
+  "maxSpreadTargets": 3
+ },
+ "reactions": [
+  {
+   "id": "Firestorm",
+   "elements": ["Fire", "Wind"],
+   "consumesAura": true,
+   "bonusDamageMult": 1.5,
+   "hazard": { "kind": "fire_tornado_zone", "radiusM": 4, "durationSec": 4, "damagePerSecMult": 0.7 }
+  },
+  {
+   "id": "StormPrison",
+   "elements": ["Water", "Lightning"],
+   "consumesAura": true,
+   "bonusDamageMult": 1.2,
+   "status": { "kind": "stun", "durationSec": 1.2 }
+  },
+  {
+   "id": "Freeze",
+   "elements": ["Water", "Ice"],
+   "consumesAura": true,
+   "status": { "kind": "freeze", "durationSec": 2.5 }
+  },
+  {
+   "id": "ThermalShock",
+   "elements": ["Fire", "Ice"],
+   "consumesAura": true,
+   "bonusDamageMult": 2.0
+  },
+  {
+   "id": "Magma",
+   "elements": ["Earth", "Fire"],
+   "consumesAura": true,
+   "bonusDamageMult": 1.2,
+   "hazard": { "kind": "molten_ground", "radiusM": 3, "durationSec": 5, "damagePerSecMult": 0.5 }
+  },
+  {
+   "id": "Swirl",
+   "elements": ["Wind", "Fire"],
+   "consumesAura": false,
+   "bonusDamageMult": 1.0
+  },
+  {
+   "id": "Wildfire",
+   "elements": ["Nature", "Fire"],
+   "consumesAura": true,
+   "bonusDamageMult": 1.2,
+   "dot": { "element": "Fire", "damagePerSecMult": 0.3, "durationSec": 4, "tickSec": 0.5 }
+  },
+  {
+   "id": "TwilightBurst",
+   "elements": ["Light", "Dark"],
+   "consumesAura": true,
+   "bonusDamageMult": 2.5
+  },
+  {
+   "id": "MiasmaBlast",
+   "elements": ["Poison", "Fire"],
+   "consumesAura": true,
+   "bonusDamageMult": 1.5,
+   "hazard": { "kind": "poison_fog", "radiusM": 3.5, "durationSec": 5, "damagePerSecMult": 0.3 }
+  },
+  {
+   "id": "Grounded",
+   "elements": ["Lightning", "Earth"],
+   "consumesAura": true,
+   "bonusDamageMult": 0.8
+  }
+ ],
+ "synergies": [
+  {
+   "id": "fanned_flames",
+   "first": "Swirl",
+   "then": "Firestorm",
+   "windowSec": 4,
+   "bonusDamageMult": 1.25,
+   "note": "Wind spreads the fire, then the tornado catches: the Genshin-style Swirl-into-Firestorm opener, rewarded."
+  },
+  {
+   "id": "thaw_burst",
+   "first": "Freeze",
+   "then": "ThermalShock",
+   "windowSec": 3,
+   "bonusDamageMult": 1.4,
+   "note": "A frozen target hit by sudden heat cracks open. Fire after a freeze is the intended heavy-free route."
+  },
+  {
+   "id": "soaked_circuit",
+   "first": "Freeze",
+   "then": "StormPrison",
+   "windowSec": 3,
+   "bonusDamageMult": 1.3,
+   "note": "Meltwater conducts: lightning right after a freeze reads as a chain shock."
+  },
+  {
+   "id": "scorched_earth",
+   "first": "Magma",
+   "then": "Wildfire",
+   "windowSec": 5,
+   "bonusDamageMult": 1.2,
+   "note": "Molten ground lights dry growth; ties to authored dry grass only (combat.md section 15)."
+  },
+  {
+   "id": "miasma_ignition",
+   "first": "MiasmaBlast",
+   "then": "Firestorm",
+   "windowSec": 4,
+   "bonusDamageMult": 1.25,
+   "note": "Poison fog feeds the tornado."
+  },
+  {
+   "id": "storm_ground",
+   "first": "StormPrison",
+   "then": "Grounded",
+   "windowSec": 3,
+   "bonusDamageMult": 1.2,
+   "note": "A stunned, soaked target discharges into the earth."
+  }
+ ]
+}

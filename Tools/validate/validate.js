@@ -161,6 +161,67 @@ if (fs.existsSync(path.join(DATA, 'Monsters/boss_phases.json'))) {
   }
 }
 
+// Reaction table (Combat/reactions.json): schema, known Reaction ids, one row per unordered element pair, synergies point at
+// real reactions, and Freeze / Storm Prison status seconds equal combat_tuning.json "reactions" (the tuning file stays the source).
+const tuningPath = path.join(DATA, 'Combat/combat_tuning.json');
+const tuning = fs.existsSync(tuningPath) ? load('Combat/combat_tuning.json') : {};
+if (fs.existsSync(path.join(DATA, 'Combat/reactions.json'))) {
+  const rf = load('Combat/reactions.json');
+  check(rf, schema('reactions'), 'reactions.json');
+  const rids = new Set(), pairs = new Map(), sids = new Set();
+  for (const r of rf.reactions || []) {
+    if (rids.has(r.id)) err('reactions.json#' + r.id, 'duplicate reaction id'); rids.add(r.id);
+    const key = (r.elements || []).slice().sort().join('+');
+    if ((r.elements || []).length === 2 && r.elements[0] === r.elements[1]) err('reactions.json#' + r.id, 'elements must be two different elements');
+    // Swirl is the catch-all (Wind meeting any element without its own row), so its listed pair is only a representative; it must still contain Wind.
+    if (r.id === 'Swirl') { if (!(r.elements || []).includes('Wind')) err('reactions.json#Swirl', 'Swirl elements must include Wind'); }
+    else {
+    if (pairs.has(key)) err('reactions.json#' + r.id, `element pair ${key} already used by ${pairs.get(key)} (order does not matter)`); pairs.set(key, r.id);
+    }
+    const t = tuning.reactions || {};
+    if (r.id === 'Freeze' && (!r.status || r.status.kind !== 'freeze' || r.status.durationSec !== t.freezeDurationSec)) err('reactions.json#Freeze', `status must be freeze for ${t.freezeDurationSec}s (combat_tuning.json reactions.freezeDurationSec)`);
+    if (r.id === 'StormPrison' && (!r.status || r.status.kind !== 'stun' || r.status.durationSec !== t.stormPrisonStunSec)) err('reactions.json#StormPrison', `status must be stun for ${t.stormPrisonStunSec}s (combat_tuning.json reactions.stormPrisonStunSec)`);
+  }
+  for (const sy of rf.synergies || []) {
+    if (sids.has(sy.id)) err('reactions.json#' + sy.id, 'duplicate synergy id'); sids.add(sy.id);
+    for (const k of ['first', 'then']) if (!rids.has(sy[k])) err('reactions.json#' + sy.id, `${k} "${sy[k]}" is not a reaction in "reactions"`);
+  }
+}
+
+// Boss weak points (Monsters/boss_weakpoints.json): real species, one record per boss, weak-point ids unique per boss,
+// and exposedInPhases name phases that boss really has in boss_phases.json (when the boss has phases).
+if (fs.existsSync(path.join(DATA, 'Monsters/boss_weakpoints.json'))) {
+  const wf = load('Monsters/boss_weakpoints.json');
+  check(wf, schema('boss_weakpoints'), 'boss_weakpoints.json');
+  const phasesOf = {};
+  if (fs.existsSync(path.join(DATA, 'Monsters/boss_phases.json'))) for (const b of load('Monsters/boss_phases.json').bosses || []) phasesOf[b.speciesId] = new Set((b.phases || []).map(p => p.name));
+  const seenBoss = new Set();
+  for (const b of wf.bosses || []) {
+    ref('boss_weakpoints', b.speciesId, 'species');
+    if (seenBoss.has(b.speciesId)) err(b.speciesId, 'two boss_weakpoints records for one species'); seenBoss.add(b.speciesId);
+    const wids = new Set();
+    for (const w of b.weakPoints || []) {
+      if (wids.has(w.id)) err(b.speciesId, `duplicate weak point id "${w.id}"`); wids.add(w.id);
+      if (phasesOf[b.speciesId]) for (const ph of w.exposedInPhases || []) if (!phasesOf[b.speciesId].has(ph)) err(`${b.speciesId}.${w.id}`, `exposedInPhases "${ph}" is not a phase in boss_phases.json (${[...phasesOf[b.speciesId]].join(', ')})`);
+    }
+  }
+}
+
+// Group tactics numbers (combat_tuning.json "groupTactics", optional): numbers never negative; keys ending Fraction / Pct are
+// 0..1; keys naming slots are whole numbers 1..6.
+if (tuning.groupTactics) {
+  (function walk(o, p) {
+    for (const [k, v] of Object.entries(o)) {
+      const w = `combat_tuning.json groupTactics${p}.${k}`;
+      if (v && typeof v === 'object' && !Array.isArray(v)) { walk(v, p + '.' + k); continue; }
+      if (typeof v !== 'number') continue;
+      if (v < 0) err(w, `${v} is negative`);
+      if (/(fraction|pct)$/i.test(k) && v > 1) err(w, `${v} is a fraction and must be between 0 and 1`);
+      if (/slot(s|count)$/i.test(k) && !(Number.isInteger(v) && v >= 1 && v <= 6)) err(w, `${v}: slot counts are whole numbers from 1 to 6`);
+    }
+  })(tuning.groupTactics, '');
+}
+
 // Recipes (Items/recipes.json): known items and stations, and a result never ranked above its best material (systems.md §5.1).
 const RANK_ORDER = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
 const rankValue = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ? RANK_ORDER.indexOf(m[1]) * 3 + (m[2] === '+' ? 1 : m[2] === '-' ? -1 : 0) : -99; };

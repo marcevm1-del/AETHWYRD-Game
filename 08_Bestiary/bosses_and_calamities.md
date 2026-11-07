@@ -6,6 +6,12 @@
 - **Mercy/Talk** options exist for intelligent bosses. About 30% of bosses can be negotiated with, recruited or spared.
 - Single-player tuning: companions draw aggro. "Party Command" lets you call Union Skills at break windows.
 
+### Armor and weak points (Wave A2, proposals)
+- A boss may carry an **armor gauge** and named **weak points** exposed in chosen phases; data in `Data/Monsters/boss_weakpoints.json`, rules in `12_Systems/combat.md` sections 7c and 7d. Phases stay in `Data/Monsters/boss_phases.json`.
+- Armor break and weak-point exposure are always announced (sound, visible crack, glow) and are a reward window, never required to win.
+- **Goblin Chief Grukk** (starter record): armor 300, breaks for 5 s (+25% damage taken), regenerates after 6 s; the **cult-rune brand** on his chest is exposed in the Archers and Rage phases (x1.5 damage).
+- Other bosses below (Proving Golem's rotating runes, Ozymarch's clock-core, Mycelia's hearts) are natural next records; add them one at a time.
+
 ## 2. Dungeon Bosses (sample)
 | Boss | Rank | Dungeon | Phases / Mechanics | Unique drop |
 |---|---|---|---|---|

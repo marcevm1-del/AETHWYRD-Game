@@ -31,33 +31,14 @@ namespace Ascend.Core
             }
         }
 
-        static readonly Dictionary<(Element, Element), Reaction> Pairs = new Dictionary<(Element, Element), Reaction>();
-
-        static Elements()
-        {
-            void Both(Element a, Element b, Reaction r) { Pairs[(a, b)] = r; Pairs[(b, a)] = r; }
-            Both(Element.Fire, Element.Wind, Reaction.Firestorm);
-            Both(Element.Water, Element.Lightning, Reaction.StormPrison);
-            Both(Element.Water, Element.Ice, Reaction.Freeze);
-            Both(Element.Fire, Element.Ice, Reaction.ThermalShock);
-            Both(Element.Earth, Element.Fire, Reaction.Magma);
-            Both(Element.Nature, Element.Fire, Reaction.Wildfire);
-            Both(Element.Light, Element.Dark, Reaction.TwilightBurst);
-            Both(Element.Poison, Element.Fire, Reaction.MiasmaBlast);
-            Both(Element.Lightning, Element.Earth, Reaction.Grounded);
-        }
-
         /// <summary>
         /// Reaction when <paramref name="trigger"/> hits a target carrying <paramref name="aura"/>.
         /// Specific pairs win; otherwise Wind meeting any other element is a Swirl.
+        /// Uses <see cref="ReactionTable.Default"/>; pass a table to use loaded data.
         /// </summary>
-        public static Reaction React(Element aura, Element trigger)
-        {
-            if (aura == Element.None || trigger == Element.None || aura == trigger) return Reaction.None;
-            if (Pairs.TryGetValue((aura, trigger), out var r)) return r;
-            if (aura == Element.Wind || trigger == Element.Wind) return Reaction.Swirl;
-            return Reaction.None;
-        }
+        public static Reaction React(Element aura, Element trigger) => ReactionTable.Default.React(aura, trigger);
+
+        public static Reaction React(Element aura, Element trigger, ReactionTable table) => (table ?? ReactionTable.Default).React(aura, trigger);
     }
 
     /// <summary>
@@ -78,11 +59,15 @@ namespace Ascend.Core
         public Element Current(double now) => now < ExpiresAt ? Aura : Element.None;
 
         /// <summary>Applies an element hit and returns the triggered reaction, if any.</summary>
-        public Reaction Apply(Element element, double now)
+        public Reaction Apply(Element element, double now) => Apply(element, now, null);
+
+        /// <summary>As <see cref="Apply(Element,double)"/>, using <paramref name="table"/> (null = the default table).</summary>
+        public Reaction Apply(Element element, double now, ReactionTable table)
         {
+            table = table ?? ReactionTable.Default;
             if (element == Element.None) return Reaction.None;
             var aura = Current(now);
-            var reaction = Elements.React(aura, element);
+            var reaction = table.React(aura, element);
             if (reaction == Reaction.None)
             {
                 Aura = element;                       // new or refreshed aura
@@ -94,11 +79,12 @@ namespace Ascend.Core
                 Aura = aura == Element.Wind ? element : aura;
                 ExpiresAt = now + _durationSec;
             }
-            else
+            else if (table.ConsumesAura(reaction))
             {
                 Aura = Element.None;                  // reactions consume the aura
                 ExpiresAt = now;
             }
+            // else: the table says this reaction leaves the aura as it is
             return reaction;
         }
     }
@@ -111,27 +97,52 @@ namespace Ascend.Core
     public sealed class ReactionState
     {
         readonly ReactionTuning _t;
+        readonly ReactionTable _table;
+        Reaction _lastReaction = Reaction.None;
+        double _lastReactionAt = double.NegativeInfinity;
         public AuraState Aura { get; }
         public double FrozenUntil { get; private set; } = double.NegativeInfinity;
         public double StunnedUntil { get; private set; } = double.NegativeInfinity;
 
-        public ReactionState(ReactionTuning tuning)
+        public ReactionState(ReactionTuning tuning) : this(tuning, null) { }
+
+        /// <summary>A state driven by <paramref name="table"/> (null = <see cref="ReactionTable.Default"/>).</summary>
+        public ReactionState(ReactionTuning tuning, ReactionTable table)
         {
             _t = tuning ?? throw new ArgumentNullException(nameof(tuning));
+            _table = table ?? ReactionTable.Default;
             Aura = new AuraState(_t.AuraDurationSec);
         }
+
+        public ReactionTable Table => _table;
+        /// <summary>The last reaction this target suffered (for synergies), None before any.</summary>
+        public Reaction LastReaction => _lastReaction;
+        public double LastReactionAt => _lastReactionAt;
 
         public bool IsFrozen(double now) => now < FrozenUntil;
         public bool IsStunned(double now) => now < StunnedUntil;
         /// <summary>Frozen and stunned targets can't act.</summary>
         public bool CanAct(double now) => !IsFrozen(now) && !IsStunned(now);
 
-        public Reaction ApplyElement(Element element, double now)
+        public Reaction ApplyElement(Element element, double now) => ApplyElementDetailed(element, now).Reaction;
+
+        /// <summary>
+        /// Applies an element hit and returns everything it caused: the reaction, its bonus multiplier, DoT, hazard,
+        /// Swirl spread info and any synergy completed (a second reaction within the synergy window).
+        /// </summary>
+        public ReactionResult ApplyElementDetailed(Element element, double now)
         {
-            var r = Aura.Apply(element, now);
-            if (r == Reaction.Freeze) FrozenUntil = now + _t.FreezeDurationSec;
-            else if (r == Reaction.StormPrison) StunnedUntil = Math.Max(StunnedUntil, now + _t.StormPrisonStunSec);
-            return r;
+            var before = Aura.Current(now);
+            var r = Aura.Apply(element, now, _table);
+            if (r == Reaction.None) return ReactionResult.None;
+            var res = _table.Describe(r, before, element, _t);
+            if (res.StatusKind == "freeze") FrozenUntil = now + res.StatusDurationSec;
+            else if (res.StatusKind == "stun") StunnedUntil = Math.Max(StunnedUntil, now + res.StatusDurationSec);
+            var syn = _table.FindSynergy(_lastReaction, r, now - _lastReactionAt);
+            if (syn != null) { res.Synergy = syn; res.SynergyMult = syn.BonusDamageMult > 0 ? syn.BonusDamageMult : 1.0; }
+            _lastReaction = r;
+            _lastReactionAt = now;
+            return res;
         }
 
         /// <summary>

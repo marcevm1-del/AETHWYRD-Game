@@ -149,5 +149,28 @@ Central tuning values for movement, camera, defense, attacks, poise, reactions, 
 | `firestorm.durationSec` | 4 |
 | `firestorm.tickSec` | 0.5 |
 | `firestorm.tickPower` | 0.35 |
+| `groupTactics.notes` | Symmetric peer behaviour for monster groups (combat.md section 10a). No leader, captain or rank exists; every monster runs the same rules from the same inputs. Nothing is remembered between fights or about the player (Canon 4d). All values are PROPOSALS until the user tunes them. The existing ai.maxSimultaneousAttackers (2) and the monster-data RetreatHpPct stay in force; loneRetreatHpFraction restates MonsterBrain.LoneRetreatHp (0.5) as its base. |
+| `groupTactics.enabled` | true |
+| `groupTactics.flank.slotCount` | 3 |
+| `groupTactics.flank.slotRadiusM` | 4.5 |
+| `groupTactics.flank.arcDeg` | 240 |
+| `groupTactics.flank.reassignSec` | 1.5 |
+| `groupTactics.retreat.packRetreatHpFraction` | 0.3 |
+| `groupTactics.retreat.loneRetreatHpFraction` | 0.5 |
+| `groupTactics.retreat.regroupHpFraction` | 0.6 |
+| `groupTactics.retreat.regroupSec` | 4 |
+| `groupTactics.threat.playerStrengthWeight` | 0.4 |
+| `groupTactics.threat.outnumberedWeight` | 0.35 |
+| `groupTactics.threat.ownWoundedWeight` | 0.25 |
+| `groupTactics.threat.alliesForFullSupport` | 4 |
+| `groupTactics.threat.cautiousAbove` | 0.6 |
+| `groupTactics.threat.boldBelow` | 0.3 |
+| `groupTactics.yield.hpMargin` | 0.2 |
+| `groupTactics.yield.holdSec` | 1.5 |
+| `groupTactics.yield.cooldownSec` | 3 |
+| `sandbox.notes` | Defaults for the combat sandbox harness (combat.md section 7e). Dev tool only; no effect on play. |
+| `sandbox.defaultSeed` | 12345 |
+| `sandbox.maxDummies` | 8 |
+| `sandbox.defaultDummyHp` | 1000 |
 
 Edit the source JSON, validate it, and rerun the relevant review before treating a tuned value as approved. This vault note is generated and will be overwritten on rebuild.

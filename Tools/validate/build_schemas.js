@@ -8,6 +8,7 @@ fs.mkdirSync(OUT, { recursive: true });
 const RANK = { type: 'string', pattern: '^(F|E|D|C|B|A|S|SS|SSS|EX)[+-]?$' };
 const RL = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'] };
 const EL = { type: 'string', enum: ['None', 'Fire', 'Water', 'Ice', 'Lightning', 'Earth', 'Wind', 'Nature', 'Poison', 'Light', 'Dark', 'Blood', 'Void'] };
+const REACTION = { type: 'string', enum: ['Firestorm', 'StormPrison', 'Freeze', 'ThermalShock', 'Magma', 'Swirl', 'Wildfire', 'TwilightBurst', 'MiasmaBlast', 'Grounded'] };
 const FLAG = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
 const WEEKDAYS = ['Solenday', 'Maelsday', 'Thorsday', 'Sylvasday', 'Kaelsday', 'Morrowsday', 'Vexday'];
 const MAP_POINT = { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', minimum: 0, maximum: 150 } };
@@ -236,6 +237,43 @@ const SCHEMAS = {
       dish: { type: 'object', required: ['name', 'effect'], properties: { name: { type: 'string' }, effect: { type: 'string' } } },
       drink: { type: 'object', required: ['name', 'effect'], properties: { name: { type: 'string' }, effect: { type: 'string' } } },
       quirk: { type: 'string' }, rumorTheme: { type: 'string' }, events: { type: 'array', items: { type: 'string' } }, secret: { type: 'string' }
+    }
+  },
+  // Combat reaction table (Data/Combat/reactions.json; 12_Systems/combat.md). Root object, not a row list.
+  reactions: {
+    title: 'Reactions', type: 'object', additionalProperties: false, required: ['version', 'notes', 'swirl', 'reactions', 'synergies'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      swirl: { type: 'object', additionalProperties: false, required: ['element', 'spreadRadiusM', 'spreadDamageMult', 'maxSpreadTargets'], properties: {
+        element: { type: 'string', enum: ['Wind'] }, spreadRadiusM: { type: 'number', minimum: 0 },
+        spreadDamageMult: { type: 'number', minimum: 0 }, maxSpreadTargets: { type: 'integer', minimum: 0 } } },
+      reactions: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'elements', 'consumesAura'], properties: {
+        id: REACTION, elements: { type: 'array', minItems: 2, maxItems: 2, items: EL }, consumesAura: { type: 'boolean' },
+        bonusDamageMult: { type: 'number', minimum: 0 }, note: { type: 'string' },
+        dot: { type: 'object', additionalProperties: false, required: ['element', 'damagePerSecMult', 'durationSec', 'tickSec'], properties: {
+          element: EL, damagePerSecMult: { type: 'number', minimum: 0 }, durationSec: { type: 'number', minimum: 0 }, tickSec: { type: 'number', minimum: 0 } } },
+        hazard: { type: 'object', additionalProperties: false, required: ['kind', 'radiusM', 'durationSec', 'damagePerSecMult'], properties: {
+          kind: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, radiusM: { type: 'number', minimum: 0 }, durationSec: { type: 'number', minimum: 0 }, damagePerSecMult: { type: 'number', minimum: 0 } } },
+        status: { type: 'object', additionalProperties: false, required: ['kind', 'durationSec'], properties: {
+          kind: { type: 'string', enum: ['freeze', 'stun'] }, durationSec: { type: 'number', minimum: 0 } } } } } },
+      synergies: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'first', 'then', 'windowSec', 'bonusDamageMult'], properties: {
+        id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, first: REACTION, then: REACTION,
+        windowSec: { type: 'number', minimum: 0 }, bonusDamageMult: { type: 'number', minimum: 0 }, note: { type: 'string' } } } }
+    }
+  },
+  // Boss armor and weak points (Data/Monsters/boss_weakpoints.json). boss_phases.json is untouched.
+  boss_weakpoints: {
+    title: 'BossWeakPoints', type: 'object', additionalProperties: false, required: ['version', 'notes', 'bosses'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      bosses: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['speciesId', 'armor', 'weakPoints'], properties: {
+        speciesId: id('mon_'),
+        armor: { type: 'object', additionalProperties: false, required: ['maxArmor', 'breakSec', 'damageTakenMultWhileBroken', 'regenDelaySec'], properties: {
+          maxArmor: { type: 'number', minimum: 0 }, breakSec: { type: 'number', minimum: 0 }, damageTakenMultWhileBroken: { type: 'number', minimum: 1 }, regenDelaySec: { type: 'number', minimum: 0 } } },
+        weakPoints: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'label', 'bodyPart', 'damageMult', 'armorDamageMult', 'exposedInPhases'], properties: {
+          id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, label: { type: 'string', minLength: 1 }, bodyPart: { type: 'string', minLength: 1 },
+          damageMult: { type: 'number', minimum: 0 }, armorDamageMult: { type: 'number', minimum: 0 },
+          exposedInPhases: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } }, exposedSec: { type: 'number', minimum: 0 } } } } } } }
     }
   }
 };

@@ -204,5 +204,40 @@
   "durationSec": 4,
   "tickSec": 0.5,
   "tickPower": 0.35
+ },
+ "groupTactics": {
+  "notes": "Symmetric peer behaviour for monster groups (combat.md section 10a). No leader, captain or rank exists; every monster runs the same rules from the same inputs. Nothing is remembered between fights or about the player (Canon 4d). All values are PROPOSALS until the user tunes them. The existing ai.maxSimultaneousAttackers (2) and the monster-data RetreatHpPct stay in force; loneRetreatHpFraction restates MonsterBrain.LoneRetreatHp (0.5) as its base.",
+  "enabled": true,
+  "flank": {
+   "slotCount": 3,
+   "slotRadiusM": 4.5,
+   "arcDeg": 240,
+   "reassignSec": 1.5
+  },
+  "retreat": {
+   "packRetreatHpFraction": 0.3,
+   "loneRetreatHpFraction": 0.5,
+   "regroupHpFraction": 0.6,
+   "regroupSec": 4
+  },
+  "threat": {
+   "playerStrengthWeight": 0.4,
+   "outnumberedWeight": 0.35,
+   "ownWoundedWeight": 0.25,
+   "alliesForFullSupport": 4,
+   "cautiousAbove": 0.6,
+   "boldBelow": 0.3
+  },
+  "yield": {
+   "hpMargin": 0.2,
+   "holdSec": 1.5,
+   "cooldownSec": 3
+  }
+ },
+ "sandbox": {
+  "notes": "Defaults for the combat sandbox harness (combat.md section 7e). Dev tool only; no effect on play.",
+  "defaultSeed": 12345,
+  "maxDummies": 8,
+  "defaultDummyHp": 1000
  }
 }

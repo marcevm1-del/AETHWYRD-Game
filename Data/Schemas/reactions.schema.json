@@ -1,0 +1,267 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Reactions",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "notes",
+  "swirl",
+  "reactions",
+  "synergies"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "swirl": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "element",
+    "spreadRadiusM",
+    "spreadDamageMult",
+    "maxSpreadTargets"
+   ],
+   "properties": {
+    "element": {
+     "type": "string",
+     "enum": [
+      "Wind"
+     ]
+    },
+    "spreadRadiusM": {
+     "type": "number",
+     "minimum": 0
+    },
+    "spreadDamageMult": {
+     "type": "number",
+     "minimum": 0
+    },
+    "maxSpreadTargets": {
+     "type": "integer",
+     "minimum": 0
+    }
+   }
+  },
+  "reactions": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "elements",
+     "consumesAura"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "enum": [
+       "Firestorm",
+       "StormPrison",
+       "Freeze",
+       "ThermalShock",
+       "Magma",
+       "Swirl",
+       "Wildfire",
+       "TwilightBurst",
+       "MiasmaBlast",
+       "Grounded"
+      ]
+     },
+     "elements": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "string",
+       "enum": [
+        "None",
+        "Fire",
+        "Water",
+        "Ice",
+        "Lightning",
+        "Earth",
+        "Wind",
+        "Nature",
+        "Poison",
+        "Light",
+        "Dark",
+        "Blood",
+        "Void"
+       ]
+      }
+     },
+     "consumesAura": {
+      "type": "boolean"
+     },
+     "bonusDamageMult": {
+      "type": "number",
+      "minimum": 0
+     },
+     "note": {
+      "type": "string"
+     },
+     "dot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "element",
+       "damagePerSecMult",
+       "durationSec",
+       "tickSec"
+      ],
+      "properties": {
+       "element": {
+        "type": "string",
+        "enum": [
+         "None",
+         "Fire",
+         "Water",
+         "Ice",
+         "Lightning",
+         "Earth",
+         "Wind",
+         "Nature",
+         "Poison",
+         "Light",
+         "Dark",
+         "Blood",
+         "Void"
+        ]
+       },
+       "damagePerSecMult": {
+        "type": "number",
+        "minimum": 0
+       },
+       "durationSec": {
+        "type": "number",
+        "minimum": 0
+       },
+       "tickSec": {
+        "type": "number",
+        "minimum": 0
+       }
+      }
+     },
+     "hazard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "kind",
+       "radiusM",
+       "durationSec",
+       "damagePerSecMult"
+      ],
+      "properties": {
+       "kind": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+       },
+       "radiusM": {
+        "type": "number",
+        "minimum": 0
+       },
+       "durationSec": {
+        "type": "number",
+        "minimum": 0
+       },
+       "damagePerSecMult": {
+        "type": "number",
+        "minimum": 0
+       }
+      }
+     },
+     "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "kind",
+       "durationSec"
+      ],
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "freeze",
+         "stun"
+        ]
+       },
+       "durationSec": {
+        "type": "number",
+        "minimum": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "synergies": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "first",
+     "then",
+     "windowSec",
+     "bonusDamageMult"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "first": {
+      "type": "string",
+      "enum": [
+       "Firestorm",
+       "StormPrison",
+       "Freeze",
+       "ThermalShock",
+       "Magma",
+       "Swirl",
+       "Wildfire",
+       "TwilightBurst",
+       "MiasmaBlast",
+       "Grounded"
+      ]
+     },
+     "then": {
+      "type": "string",
+      "enum": [
+       "Firestorm",
+       "StormPrison",
+       "Freeze",
+       "ThermalShock",
+       "Magma",
+       "Swirl",
+       "Wildfire",
+       "TwilightBurst",
+       "MiasmaBlast",
+       "Grounded"
+      ]
+     },
+     "windowSec": {
+      "type": "number",
+      "minimum": 0
+     },
+     "bonusDamageMult": {
+      "type": "number",
+      "minimum": 0
+     },
+     "note": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

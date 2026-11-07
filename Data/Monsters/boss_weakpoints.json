@@ -1,0 +1,25 @@
+{
+ "version": 1,
+ "notes": "Boss armor and weak points (12_Systems/combat.md section 7c and 7d; 08_Bestiary/bosses_and_calamities.md). Separate from boss_phases.json, which is untouched. exposedInPhases names must exist in that boss's boss_phases.json phases. All numbers are PROPOSALS until the user tunes them. bodyPart is a rig hurtbox bone or partId (rigs.json). A weak point damageMult replaces the hurtbox dmgMult for that part while it is exposed (it does not stack on top); armorDamageMult scales how much of a hit goes to the armor gauge instead of the Break gauge. Armor is a fairness tool: breaking it opens a punish window that is announced by sound and a visible crack, never silent. TEMPLATE for future bosses (copy into 'bosses'): { 'speciesId': 'mon_<boss>', 'armor': { 'maxArmor': 400, 'breakSec': 5, 'damageTakenMultWhileBroken': 1.25, 'regenDelaySec': 6 }, 'weakPoints': [ { 'id': 'wp_<name>', 'label': 'Player-facing name', 'bodyPart': '<bone or partId>', 'damageMult': 1.5, 'armorDamageMult': 1.5, 'exposedInPhases': ['<Phase name>'], 'exposedSec': 4 } ] }.",
+ "bosses": [
+  {
+   "speciesId": "mon_grukk_goblin_chief_of_hollowpine",
+   "armor": {
+    "maxArmor": 300,
+    "breakSec": 5,
+    "damageTakenMultWhileBroken": 1.25,
+    "regenDelaySec": 6
+   },
+   "weakPoints": [
+    {
+     "id": "wp_rune_brand",
+     "label": "Cult-rune brand",
+     "bodyPart": "chest",
+     "damageMult": 1.5,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": ["Archers", "Rage"]
+    }
+   ]
+  }
+ ]
+}
