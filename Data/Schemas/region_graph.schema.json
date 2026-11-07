@@ -1,0 +1,208 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Region connection graph (Wave F-lite)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "source",
+  "scale",
+  "nodes",
+  "edges",
+  "portals"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "note": {
+   "type": "string"
+  },
+  "source": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "startRegion"
+   ],
+   "properties": {
+    "physicalMap": {
+     "type": "string"
+    },
+    "regions": {
+     "type": "string"
+    },
+    "startRegion": {
+     "type": "string",
+     "pattern": "^reg_[a-z0-9_]+$"
+    }
+   }
+  },
+  "scale": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "unitKm",
+    "passLimitM"
+   ],
+   "properties": {
+    "unitKm": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "passLimitM": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "minWalkBorderKm": {
+     "type": "number",
+     "minimum": 0
+    }
+   }
+  },
+  "edgeKinds": {
+   "type": "object"
+  },
+  "portals": {
+   "type": "array",
+   "maxItems": 0
+  },
+  "nodes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "ring",
+     "at"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^reg_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "ring": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9
+     },
+     "at": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 150
+      }
+     },
+     "isle": {
+      "type": "boolean"
+     },
+     "floating": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "edges": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "a",
+     "b",
+     "kind",
+     "km",
+     "kmBasis",
+     "foot"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^edge_[a-z0-9_]+$"
+     },
+     "a": {
+      "type": "string",
+      "pattern": "^reg_[a-z0-9_]+$"
+     },
+     "b": {
+      "type": "string",
+      "pattern": "^reg_[a-z0-9_]+$"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "road",
+       "pass",
+       "sea",
+       "border"
+      ]
+     },
+     "km": {
+      "type": "number",
+      "exclusiveMinimum": 0
+     },
+     "kmBasis": {
+      "type": "string",
+      "enum": [
+       "road_length",
+       "corridor_leg",
+       "anchor_straight_line"
+      ]
+     },
+     "foot": {
+      "type": "boolean"
+     },
+     "roadId": {
+      "type": "string"
+     },
+     "corridorId": {
+      "type": "string"
+     },
+     "passId": {
+      "type": "string"
+     },
+     "passName": {
+      "type": "string"
+     },
+     "passM": {
+      "type": "number"
+     },
+     "via": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^reg_[a-z0-9_]+$"
+      }
+     },
+     "riverCrossings": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "widestCrossingM": {
+      "type": "number",
+      "minimum": 0
+     },
+     "borderKm": {
+      "type": "number",
+      "minimum": 0
+     },
+     "lowestCrossingM": {
+      "type": "number"
+     }
+    }
+   }
+  }
+ }
+}
