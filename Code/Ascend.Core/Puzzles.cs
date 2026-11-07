@@ -163,7 +163,8 @@ namespace Ascend.Core
                 MarkSolved();
                 return LeverResult.Solved;
             }
-            Progress = 0; Fails++;
+            // A wrong pull restarts the tally; if that lever is also the first in the sequence it counts as step one.
+            Progress = Data.Sequence.Count > 1 && Data.Sequence[0] == leverId ? 1 : 0; Fails++;
             return LeverResult.Wrong;
         }
 

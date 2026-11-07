@@ -108,6 +108,17 @@ static class PuzzleTests
         Assert.Equal(PuzzleStatus.Unsolved, p.Status, "nothing lost");
     }
 
+    public static void ARepeatedFirstLeverCountsAsAFreshStart()
+    {
+        var d = new PuzzleData { Id = "pzl_rep", Type = PuzzleTypes.LeverSequence,
+            Levers = new List<string> { "a", "b", "c" }, Sequence = new List<string> { "a", "b", "a", "c" } };
+        var p = (LeverPuzzle)Puzzle.Create(d);
+        p.Pull("a"); p.Pull("b"); p.Pull("a");
+        Assert.Equal(LeverResult.Wrong, p.Pull("a"), "a again is wrong at step 4");
+        Assert.Equal(1, p.Progress, "but it restarts the tally at step one");
+        Assert.Equal(LeverResult.Correct, p.Pull("b"), "carry on from there");
+    }
+
     public static void LeverAssistOpensAfterFailsOrHintsAndNamesTheNextLever()
     {
         var p = (LeverPuzzle)Make("pzl_warren_levers");

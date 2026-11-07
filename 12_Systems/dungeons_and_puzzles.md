@@ -60,7 +60,7 @@ Rooms and clues are **Unknown** (blank), **Heard** (a rumour pencilled them; a c
 
 ## 8. Not built (see the audit)
 
-Procedural generation, other dungeon themes, floor traps and hazards, more puzzle families, the Dungeon Designer editor, the Civilization Archive, archaeology, traversal and exploration gear. Mapping `SaveGame.Dungeons` into the Unity `PlayerSave`, and the in-game journal page for clues, are Game work.
+Procedural generation, other dungeon themes, floor traps and hazards, more puzzle families, the Dungeon Designer editor, the Civilization Archive, archaeology, traversal and exploration gear. Calling `DungeonRun.Reset()` from the weekly calendar, saving mid-dungeon run state (keys and solved puzzles live only in `DungeonRun`, so quitting inside a dungeon loses them; only the knowledge record is saved), mapping `SaveGame.Dungeons` into the Unity `PlayerSave`, and the in-game journal page for clues, are Game work.
 
 ## 9. Proposals for Canon §6 (need the user's OK)
 

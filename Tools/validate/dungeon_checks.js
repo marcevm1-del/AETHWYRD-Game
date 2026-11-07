@@ -30,6 +30,7 @@ function runeSolvable(p) {
   const key = a => a.join(',');
   const seen = new Set([key(start)]), q = [start];
   while (q.length) {
+    if (seen.size > 250000) return false; // Core's search stops at the same cap, so the free assist would not work
     const cur = q.shift();
     if (key(cur) === key(goal)) return true;
     for (let i = 0; i < sc.length; i++) {
@@ -75,7 +76,9 @@ function canReach(d, s, optional, target) {
   return [...explore(d, optional, s).values()].some(x => x.room === target);
 }
 
-function run({ DATA, load, check, schema, err, items, species, regions }) {
+function run({ DATA, load, check, schema, err: rawErr, items, species, regions }) {
+  let n = 0; // errors so far: lets a dungeon or puzzle skip its graph and search checks once its references are broken
+  const err = (w, m) => { n++; rawErr(w, m); };
   const pPath = path.join(DATA, 'World/puzzles.json'), dPath = path.join(DATA, 'World/dungeons.json');
   const puzzles = {};
   if (fs.existsSync(pPath)) {
@@ -89,19 +92,24 @@ function run({ DATA, load, check, schema, err, items, species, regions }) {
       if (p.type === 'lever_sequence') {
         if (!p.levers || !p.sequence) { err(w, 'lever_sequence needs levers and sequence'); continue; }
         if (new Set(p.levers).size !== p.levers.length) err(w, 'duplicate lever id');
+        if (!p.sequence.length) err(w, 'empty sequence (unsolvable)');
         for (const s of p.sequence) if (!p.levers.includes(s)) err(w, `sequence names unknown lever "${s}"`);
       } else if (p.type === 'pressure_plate') {
         if (!p.plates || !p.objects) { err(w, 'pressure_plate needs plates and objects'); continue; }
-        if (!plateSolvable(p)) err(w, 'no assignment of the objects gives every plate its exact weight (unsolvable)');
+        if (!p.plates.length) err(w, 'no plates (unsolvable)');
+        else if (!plateSolvable(p)) err(w, 'no assignment of the objects gives every plate its exact weight (unsolvable)');
       } else if (p.type === 'rune_match') {
         if (!p.glyphs || !p.sconces) { err(w, 'rune_match needs glyphs and sconces'); continue; }
         const ids = new Set(p.sconces.map(s => s.id));
+        const n0 = n;
+        if (ids.size !== p.sconces.length) err(w, 'duplicate sconce id');
         for (const s of p.sconces) {
           if (!p.glyphs.includes(s.start) || !p.glyphs.includes(s.target)) err(w, `sconce ${s.id} uses a glyph not in glyphs`);
           for (const a of s.also || []) if (!ids.has(a)) err(w, `sconce ${s.id} also-turns unknown sconce "${a}"`);
         }
+        if (n > n0) continue;
         if (!p.sconces.some(s => s.start !== s.target)) err(w, 'already solved at the start');
-        else if (!runeSolvable(p)) err(w, 'the target pattern cannot be reached (unsolvable)');
+        else if (!runeSolvable(p)) err(w, 'the target pattern cannot be reached within the 250,000-state search cap (unsolvable or too large for the free assist)');
       }
     }
   }
@@ -122,6 +130,7 @@ function run({ DATA, load, check, schema, err, items, species, regions }) {
     for (const r of d.rooms || []) { if (rooms.has(r.id)) err(w, `duplicate room "${r.id}"`); rooms.set(r.id, r); }
     if (!rooms.has(d.entryRoom)) { err(w, `entryRoom "${d.entryRoom}" is not a room`); continue; }
     if (!rooms.get(d.entryRoom).checkpoint) err(w, 'the entry room must be a checkpoint');
+    const n0 = n;
     const rankCap = rankVal(region.rankMax);
     const allKeys = new Set(), conns = new Set(), clueIds = new Set((d.clues || []).map(c => c.id));
     for (const r of d.rooms || []) {
@@ -158,6 +167,7 @@ function run({ DATA, load, check, schema, err, items, species, regions }) {
       if (!rooms.has(cl.roomId)) err(`${w}.${cl.id}`, `clue in unknown room "${cl.roomId}"`);
       if (cl.reveals && !puzzles[cl.reveals] && !conns.has(cl.reveals)) err(`${w}.${cl.id}`, `reveals unknown puzzle or connection "${cl.reveals}"`);
     }
+    if (n > n0) continue; // broken references: report them, skip the graph checks
     // Canon: nothing optional may be mandatory.
     const req = explore(d, false), full = explore(d, true);
     const reqRooms = new Set([...req.values()].map(s => s.room)), fullRooms = new Set([...full.values()].map(s => s.room));
