@@ -1,20 +1,20 @@
 Worked for 2m 44s
 
-### AETHERIA — UPGRADE V3
+### AETHWYRD — UPGRADE V3
 
 ### The Ultimate Blender, 3D Asset, Animation & World-Building Expansion Plan
 
 I want to change the approach completely.
 
-This time, we are not reviewing what is wrong with Aetheria as a game, rewriting its existing systems, or redesigning its established lore.
+This time, we are not reviewing what is wrong with Aethwyrd as a game, rewriting its existing systems, or redesigning its established lore.
 
-We are focusing on what we can ADD to make Aetheria substantially better.
+We are focusing on what we can ADD to make Aethwyrd substantially better.
 
 The priority is Blender.
 
 I want Upgrade V3 to become a comprehensive expansion of the game's entire 3D production pipeline: character creation, modelling, sculpting, topology, materials, textures, rigging, animation, creatures, environments, procedural generation, visual effects, optimisation and exporting into Unity.
 
-We should approach Blender as the foundation of Aetheria's visual production pipeline.
+We should approach Blender as the foundation of Aethwyrd's visual production pipeline.
 
 The goal is to create an asset-production system that allows a very small development team to produce an enormous amount of visually consistent, high-quality content without manually rebuilding everything from scratch.
 
@@ -294,7 +294,7 @@ The profile should store stable parameters and references, not depend on fragile
 
 This should be one of the largest upgrades.
 
-Aetheria's creature ecosystem needs an asset pipeline capable of handling hundreds of distinct creatures and thousands of population variations.
+Aethwyrd's creature ecosystem needs an asset pipeline capable of handling hundreds of distinct creatures and thousands of population variations.
 
 ### New creature production categories
 
@@ -795,7 +795,7 @@ Automatically check:
 
 ![Ancient Temple - Finished Projects - Blender Artists Community](https://images.openai.com/static-rsc-4/oaMxapEkAfwSVvPEQAWXS9na0Sac7cHzhyRO8ISGBQCDcsCwiGT2YmsbK2R3WS7Jz4kYh17JJZX7M1BrImF1MboING4wF9eMaqO56QgTJVVs92Ba52rVOGpft7kyDWt_n4qGEVSQwhEjeAra_cppOnHbvxUM84EgB53nCWhIpH8VVNOZNrN_q_dQjZJrpCHc?purpose=fullsize)
 
-This should make the creation of Aetheria's 40 regions significantly more efficient.
+This should make the creation of Aethwyrd's 40 regions significantly more efficient.
 
 ### Procedural environment generators
 
@@ -971,7 +971,7 @@ These are inexpensive ways to increase environmental storytelling.
 
 ![Diffuse, Normal, and colored Specular maps? - Materials and Textures - Blender Artists Community](https://images.openai.com/static-rsc-4/X5z2YNYu4sPMSINzCP_XfmaWU4igxMan3Mxo9kgg-AXtXbk65jDJAxAMdhGOYyBtLpytbo3gnHSS72SYFFYid-9hykD1aOobIDyXgFBx7-vVtgPBcGrMPjWO6a27DMkmpJzDQh_8QADlIk449DecveRU-dVUBuOqdd2Q58mja_TQus7NtzqJT_pVY9EbWQEK?purpose=fullsize)
 
-I would create a unified Aetheria material library.
+I would create a unified Aethwyrd material library.
 
 ### Material categories
 
@@ -1185,22 +1185,22 @@ Make weapon switching and equipment changes work without manual mesh adjustments
 
 This is arguably the most important technical investment.
 
-I would create a dedicated Aetheria Procedural Toolkit.
+I would create a dedicated Aethwyrd Procedural Toolkit.
 
 Potential tools:
 
 | Tool                        | Function                       |
 | --------------------------- | ------------------------------ |
-| Aetheria Terrain Builder    | Terrain generation             |
-| Aetheria Flora Generator    | Trees, bushes and grass        |
-| Aetheria Rock Generator     | Procedural rock formations     |
-| Aetheria Dungeon Builder    | Modular dungeon assembly       |
-| Aetheria Architecture Kit   | Building generation            |
-| Aetheria Creature Builder   | Controlled creature variations |
-| Aetheria Equipment Builder  | Modular equipment              |
-| Aetheria Material Generator | Standardised materials         |
-| Aetheria Scatter Tool       | Environmental distribution     |
-| Aetheria LOD Generator      | Automatic LOD preparation      |
+| Aethwyrd Terrain Builder    | Terrain generation             |
+| Aethwyrd Flora Generator    | Trees, bushes and grass        |
+| Aethwyrd Rock Generator     | Procedural rock formations     |
+| Aethwyrd Dungeon Builder    | Modular dungeon assembly       |
+| Aethwyrd Architecture Kit   | Building generation            |
+| Aethwyrd Creature Builder   | Controlled creature variations |
+| Aethwyrd Equipment Builder  | Modular equipment              |
+| Aethwyrd Material Generator | Standardised materials         |
+| Aethwyrd Scatter Tool       | Environmental distribution     |
+| Aethwyrd LOD Generator      | Automatic LOD preparation      |
 
 I would make these modular Geometry Nodes groups with exposed controls, rather than enormous, unmanageable node networks.
 
@@ -1495,7 +1495,7 @@ Generate a report for every export.
 
 I would support both FBX and glTF where appropriate, then benchmark their actual Unity import behaviour. Blender's official exporter exposes options for meshes, normals, UVs, animations and compression, so these should be configured through tested export profiles rather than inconsistent manual settings. Blender Python API +1
 
-### 3\. The Blender Add-on I would build: Aetheria Studio
+### 3\. The Blender Add-on I would build: Aethwyrd Studio
 
 ![HARD SURFACE TOOLKIT ULTRA - Superhive (formerly Blender Market)](https://images.openai.com/static-rsc-4/HIIQwrVG0JX8aRu0uE39aKYVSF_ox4BhUxKiTvX_JGKPwpMdv4mAemsdqj3n9PTzmygXPsEa-V-jVMNhzFGB84Rq49g2Lkyz4WNN1KS30iGDEwNWDre_TNuglQDehoQQd1HGlPBnzOA_3rGZMgpK0H6MuSLfq4TK7mbD5y_l2IMgR6WMkumJi0sOO_roT06l?purpose=fullsize)
 
@@ -1503,13 +1503,13 @@ This is the major feature I would actually commission for V3.
 
 Instead of having dozens of disconnected scripts, create a unified Blender add-on:
 
-AETHERIA STUDIO — BLENDER PRODUCTION SUITE V3
+AETHWYRD STUDIO — BLENDER PRODUCTION SUITE V3
 
 A dedicated interface inside Blender.
 
 ### Suggested interface
 
-AETHERIA STUDIO
+AETHWYRD STUDIO
 
 V3 concept
 
@@ -1817,7 +1817,7 @@ I would not build everything simultaneously.
 
 I would organise it into eight stages, each delivering something useful.
 
-### Aetheria V3 production roadmap
+### Aethwyrd V3 production roadmap
 
 Proposed sequence · priority-led development
 
@@ -2082,7 +2082,7 @@ Create a separate cinematic workflow for:
 
 * Trailers.
 
-This would give Aetheria a consistent presentation style across gameplay, marketing and storytelling.
+This would give Aethwyrd a consistent presentation style across gameplay, marketing and storytelling.
 
 ### Asset library and search
 
@@ -2122,10 +2122,10 @@ It prevents a shared base asset from being changed without understanding the con
 
 ### 8\. Exact folder structure I would introduce
 
-Rather than reorganising everything already in Aetheria, create a new V3 workspace and migrate approved additions gradually.
+Rather than reorganising everything already in Aethwyrd, create a new V3 workspace and migrate approved additions gradually.
 
 ```text
-Aetheria/
+Aethwyrd/
 │
 ├── Blender_V3/
 │   │
@@ -2216,26 +2216,26 @@ This is the prompt I would give your coding agent to execute the Blender expansi
 
 It is intentionally different from the previous prompt: it is an additions-only development assignment, not a general game audit.
 
-# AETHERIA — BLENDER UPGRADE V3
+# AETHWYRD — BLENDER UPGRADE V3
 ## MASTER 3D PRODUCTION PIPELINE EXPANSION DIRECTIVE
 
 ### MISSION
 
-You are responsible for designing and developing the next major iteration of Aetheria's Blender production ecosystem.
+You are responsible for designing and developing the next major iteration of Aethwyrd's Blender production ecosystem.
 
 Your primary objective is to expand, improve, automate and professionalise all Blender-related tooling, workflows, asset-generation systems and Unity integration.
 
 This is an additions-first project.
 
-You are NOT being asked to redesign Aetheria's existing gameplay, rewrite its lore, replace its existing systems or remove previously established features.
+You are NOT being asked to redesign Aethwyrd's existing gameplay, rewrite its lore, replace its existing systems or remove previously established features.
 
 Your responsibility is to make the existing 3D production capabilities more powerful and introduce new capabilities wherever they offer meaningful improvements.
 
 The ultimate objective is to create:
 
-**AETHERIA STUDIO V3 — A COMPLETE BLENDER-BASED GAME ASSET PRODUCTION ECOSYSTEM.**
+**AETHWYRD STUDIO V3 — A COMPLETE BLENDER-BASED GAME ASSET PRODUCTION ECOSYSTEM.**
 
-This should become a reusable, modular, extensible production suite for creating the characters, creatures, environments, equipment, animations, materials and visual effects required by Aetheria.
+This should become a reusable, modular, extensible production suite for creating the characters, creatures, environments, equipment, animations, materials and visual effects required by Aethwyrd.
 
 The suite should minimise repetitive work, enforce production standards, support batch operations and export reliable game-ready assets into Unity.
 
@@ -2270,7 +2270,7 @@ Do not overwrite existing production assets.
 
 ---
 
-## 2. AETHERIA STUDIO V3 ADD-ON
+## 2. AETHWYRD STUDIO V3 ADD-ON
 
 Develop a unified Blender add-on.
 
@@ -2585,7 +2585,7 @@ Create equipment preview renders.
 
 ## 10. PROCEDURAL STUDIO
 
-Create the Aetheria Procedural Toolkit.
+Create the Aethwyrd Procedural Toolkit.
 
 Develop reusable Geometry Nodes groups for:
 
@@ -2812,7 +2812,7 @@ Create:
 
 1. Blender V3 technical architecture.
 2. Existing Blender tooling inventory.
-3. Aetheria Studio add-on.
+3. Aethwyrd Studio add-on.
 4. Character Studio.
 5. Creature Studio.
 6. Rigging Studio.
@@ -2851,9 +2851,9 @@ Every addition must have a clear purpose, a documented workflow and a way to ver
 
 Prioritise reliability, extensibility, automation, quality and compatibility.
 
-The finished system should allow Aetheria to produce a large and visually consistent collection of characters, creatures, environments, equipment, animations and effects with a manageable development workload.
+The finished system should allow Aethwyrd to produce a large and visually consistent collection of characters, creatures, environments, equipment, animations and effects with a manageable development workload.
 
-**Aetheria Studio V3 should turn Blender from an individual modelling tool into the central production workshop of Aetheria.**
+**Aethwyrd Studio V3 should turn Blender from an individual modelling tool into the central production workshop of Aethwyrd.**
 
 ### 10\. What I would build first
 
@@ -2865,7 +2865,7 @@ Build the production infrastructure first.
 
 Recommended first five projects
 
-* Aetheria Studio add-on
+* Aethwyrd Studio add-on
 
     The central interface, configuration, asset IDs, logging and module architecture.
 
@@ -2889,7 +2889,7 @@ I would measure success by how much repetitive work these systems eliminate, how
 
 One final distinction: I have not yet inspected the actual Blender scripts or `.blend` files in your repository, so these are proposed V3 additions and architectural directions, not claims that I have identified specific existing Blender bugs. The next implementation step should be to compare this blueprint against the actual current Blender tooling and preserve everything that already works.
 
-My preferred first milestone is one complete character, one creature, one environment and one weapon, all produced through Aetheria Studio V3 and successfully imported into Unity. Once that works, scale the tools to the rest of the game.
+My preferred first milestone is one complete character, one creature, one environment and one weapon, all produced through Aethwyrd Studio V3 and successfully imported into Unity. Once that works, scale the tools to the rest of the game.
 
 16
 

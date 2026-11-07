@@ -1,7 +1,7 @@
 {
   "name": "project-ascend-data",
   "private": true,
-  "description": "Design data tools for Project Ascend (no dependencies).",
+  "description": "Design data tools for AETHWYRD (no dependencies).",
   "scripts": {
     "gen": "node Tools/monster_gen/generate.js",
     "schemas": "node Tools/validate/build_schemas.js",

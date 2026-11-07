@@ -1,7 +1,7 @@
 # 02 — Lore & Cosmology (v0.2)
 
 > *"Before the world, there was the Loom. Before the Loom, there was the Thread. And the Thread was lonely."*
-> — Opening line of the *Canticle of Weaving*, sung in every temple of Aetheria
+> — Opening line of the *Canticle of Weaving*, sung in every temple of Aethwyrd
 
 ## 1. Creation Myth — The Weaving
 1. **The Thread:** a single endless strand of **Aether**, the raw substance of possibility, drifted through the void.
@@ -28,7 +28,7 @@
 
 ## 3. Ages of History (S.C. = Summoning Calendar)
 
-For the expanded chronology, lived experience, source conflicts and historical footprints, see [[Design Bible/02_Lore/history|The Deep History of Aetheria]]. This is a short cosmological index, not a competing timeline. BSC dates are approximate; 0 SC marks the First Summoning, not creation. Canon.md controls the exact spoilers and settled facts.
+For the expanded chronology, lived experience, source conflicts and historical footprints, see [[Design Bible/02_Lore/history|The Deep History of Aethwyrd]]. This is a short cosmological index, not a competing timeline. BSC dates are approximate; 0 SC marks the First Summoning, not creation. Canon.md controls the exact spoilers and settled facts.
 
 | Age | When | Events | What remains today |
 |---|---|---|---|

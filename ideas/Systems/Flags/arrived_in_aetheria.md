@@ -5,7 +5,7 @@ tags: [system, story-flag]
 ---
 # arrived_in_aetheria
 
-The player has woken in Aetheria (end of the prologue)
+The player has woken in Aethwyrd (end of the prologue)
 
 - **Set by:** quest
 - **Written by:** [[Quests/Status Granted|Status Granted]]

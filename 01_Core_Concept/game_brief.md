@@ -1,6 +1,6 @@
 # Game brief (one page)
 
-Working title: **Project Ascend** (placeholder, the user decides the title). This page is a summary. `Canon.md` wins any conflict, `01_Core_Concept/vision.md` has the full pillars, and `Data/` is canonical for numbers. It has no spoilers.
+Working title: **AETHWYRD** (placeholder, the user decides the title). This page is a summary. `Canon.md` wins any conflict, `01_Core_Concept/vision.md` has the full pillars, and `Data/` is canonical for numbers. It has no spoilers.
 
 ## The game in one paragraph
 An open-world isekai / high-fantasy adventurer RPG. You wake in a world with two moons and a card in your pocket that reads **Rank F**: a Status System has granted you a place at the bottom of the adventurers' ladder. You climb from F to SSS and beyond, build a class, tame and fight alongside monsters, and travel a large hand-designed world whose regions, creatures and people react to what you do.

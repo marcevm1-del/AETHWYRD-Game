@@ -1,4 +1,4 @@
-# CCGS project configuration for Project Ascend.
+# CCGS project configuration for AETHWYRD.
 # Schema: .claude/docs/effects-map.md. Per-developer overrides: project.local.yaml (gitignored).
 # Do NOT add modes.review_mode, modes.workflow, docs.density, qa.level,
 # modes.story_granularity or team.size here: modes.rigor supplies them.
@@ -10,7 +10,7 @@ framework:
   last_upgraded: "2026-11-07"
 
 project:
-  name: "Project Ascend"
+  name: "AETHWYRD"
   genre: "Open-world isekai action RPG"
   version: "0.1.0"
   stage: Pre-Production      # /adopt and /project-stage-detect will confirm

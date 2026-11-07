@@ -1,5 +1,5 @@
 """
-Ascend Buildings: a procedural, regional building generator for Project Ascend.
+Ascend Buildings: a procedural, regional building generator for AETHWYRD.
 
 In Blender: View3D > Sidebar (N) > Ascend. Add a building at the 3D cursor, then change its archetype, region, size,
 floors, seed or detail and it rebuilds in place. "Restyle selection" moves every selected building to another region's
@@ -9,11 +9,11 @@ Headless:  blender -b --factory-startup -P Tools/blender/build_building_library.
 """
 bl_info = {
     "name": "Ascend Buildings",
-    "author": "Project Ascend",
+    "author": "AETHWYRD",
     "version": (1, 0, 0),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Ascend",
-    "description": "Procedural high-detail buildings in every Aetheria regional style",
+    "description": "Procedural high-detail buildings in every Aethwyrd regional style",
     "category": "Add Mesh",
 }
 

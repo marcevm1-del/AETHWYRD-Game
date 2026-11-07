@@ -7,7 +7,7 @@ namespace Ascend.Core
     public enum DayPart { Morning, Day, Dusk, Night }
 
     /// <summary>
-    /// The Aetherian calendar (Canon §2): 7-day weeks (Solenday … Vexday), a 90-real-minute day by default.
+    /// The Aethwyrdian calendar (Canon §2): 7-day weeks (Solenday … Vexday), a 90-real-minute day by default.
     /// Day 0 is a Solenday. Pure math: callers pass the clock in.
     /// </summary>
     public sealed class GameCalendar

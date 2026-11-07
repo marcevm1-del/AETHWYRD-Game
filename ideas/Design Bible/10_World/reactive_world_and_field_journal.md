@@ -4,7 +4,7 @@
 
 ## Design promise
 
-Aetheria should reward attention. The player sees a disturbed fence, hears a villager's version, compares it with a monster's tracks, then chooses whether to prepare, ask around, follow the trail or simply go fight. The game should preserve what the player actually learned and make its next response understandable.
+Aethwyrd should reward attention. The player sees a disturbed fence, hears a villager's version, compares it with a monster's tracks, then chooses whether to prepare, ask around, follow the trail or simply go fight. The game should preserve what the player actually learned and make its next response understandable.
 
 The journal is a field notebook, not an omniscient quest log. It separates direct observation from testimony and inference. NPC memory is local and plausible, not a magical global reputation feed. A region's state is expressed through a small number of readable changes rather than hidden simulation meters.
 

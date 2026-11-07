@@ -34,8 +34,8 @@ Steam’s optional social layer can surround an offline-first game without being
 For Ascend, platform features should never be required to reach, preserve, or understand game progress. Prioritize local saves and recovery first, then consider Steam Cloud and achievements as optional platform conveniences; use community surfaces that Steam already hosts, and defer Workshop and custom photo mode until the game and team have room to support them.
 
 ### Cited Findings
-- Canon.md settles Ascend as premium, single-player-only PC, with offline-first economy, no online-gated rewards, no live-service time pressure, and a proposed platform boundary of local saves first, optional cloud/achievements/screenshots, Workshop deferred, and no in-game community services. This is a project source, not an external claim. [Project Ascend Canon.md](../../Canon.md)
-- Canon also sets an unusually long play commitment (roughly 200–250 focused hours for the main story, with a much longer explorer/post-game horizon), multiple endings, and recoverability rules intended to protect long saves. [Project Ascend Canon.md](../../Canon.md)
+- Canon.md settles Ascend as premium, single-player-only PC, with offline-first economy, no online-gated rewards, no live-service time pressure, and a proposed platform boundary of local saves first, optional cloud/achievements/screenshots, Workshop deferred, and no in-game community services. This is a project source, not an external claim. [AETHWYRD Canon.md](../../Canon.md)
+- Canon also sets an unusually long play commitment (roughly 200–250 focused hours for the main story, with a much longer explorer/post-game horizon), multiple endings, and recoverability rules intended to protect long saves. [AETHWYRD Canon.md](../../Canon.md)
 - Steam’s own conflict guidance says offline sessions postpone sync and can produce a conflict, while its achievement docs say achievements can be cached and uploaded later. [Steam Cloud conflict help](https://help.steampowered.com/en/faqs/view/68D2-35AB-09A9-7678); [Stats and Achievements](https://partner.steamgames.com/doc/features/achievements)
 
 ### Inferences

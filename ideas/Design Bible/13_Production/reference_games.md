@@ -1,6 +1,6 @@
 # Reference games
 
-Ideas borrowed from games on the E: drive and from your own earlier projects. **Rule:** from other studios' games we take mechanics, patterns and orders of magnitude only — never their code, art, text or data files (Project Ascend is a commercial Steam game; their code is proprietary). Your own projects (Project Greyborn) can lend code as well as ideas. Each entry says what we took, where it went, and what's left to consider.
+Ideas borrowed from games on the E: drive and from your own earlier projects. **Rule:** from other studios' games we take mechanics, patterns and orders of magnitude only — never their code, art, text or data files (AETHWYRD is a commercial Steam game; their code is proprietary). Your own projects (Project Greyborn) can lend code as well as ideas. Each entry says what we took, where it went, and what's left to consider.
 
 ## RimWorld (Ludeon) — read from its plain-text Defs (data, not code)
 

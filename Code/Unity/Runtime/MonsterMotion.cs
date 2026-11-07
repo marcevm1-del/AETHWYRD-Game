@@ -1,4 +1,4 @@
-// Project Ascend — per-monster motion component. Built onto prefabs by Ascend > Build Monster Prefabs (Editor).
+// AETHWYRD — per-monster motion component. Built onto prefabs by Ascend > Build Monster Prefabs (Editor).
 // Applies the profile from motion.json to the NavMeshAgent and Animator, exposes attack timings to the AI,
 // and receives animation events (footstep_L, hit_on, telegraph, ...) from clips.
 using System;

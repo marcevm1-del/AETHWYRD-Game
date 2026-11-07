@@ -22,7 +22,7 @@ tags: [inn]
 | common | 20 | Rested (2h) |  |
 | private | 100 | Well Rested (4h) |  |
 | suite | 1500 | Well Rested (8h) + meal |  |
-| The Rookie Loft | 60 | Well Rested (4h) | +10% XP for your first 7 days in Aetheria; the walls are carved with the names of every Veilborn who slept here first |
+| The Rookie Loft | 60 | Well Rested (4h) | +10% XP for your first 7 days in Aethwyrd; the walls are carved with the names of every Veilborn who slept here first |
 
 ## Inn events
 

@@ -1,4 +1,4 @@
-// Project Ascend — hurtboxes (where a monster can be hit) and breakable parts (horns, tails, wings...).
+// AETHWYRD — hurtboxes (where a monster can be hit) and breakable parts (horns, tails, wings...).
 using UnityEngine;
 using UnityEngine.Events;
 

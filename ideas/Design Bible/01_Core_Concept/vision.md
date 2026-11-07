@@ -1,7 +1,7 @@
 # 01 — Core Concept & Vision (v0.2)
 
 ## 1. High Concept
-**Aetheria** is a world woven from living magic, and for a thousand years it has been pulling souls in from other worlds. You are the newest one. The Goddess of Fate grants you a **Status**. The Adventurers' Guild stamps a wooden card with an **F**, and after that nobody is telling you what to do.
+**Aethwyrd** is a world woven from living magic, and for a thousand years it has been pulling souls in from other worlds. You are the newest one. The Goddess of Fate grants you a **Status**. The Adventurers' Guild stamps a wooden card with an **F**, and after that nobody is telling you what to do.
 
 The game takes the whole isekai/high-fantasy genre and builds it as **one hand-built 3D world** where every trope is a playable system. You can play the summoned hero, the reincarnated slime, the exiled noble with a "useless" skill, the frontier farmer, the dungeon diver, the dragon tamer, or the next Demon Overlord.
 
@@ -50,7 +50,7 @@ The game takes the whole isekai/high-fantasy genre and builds it as **one hand-b
 ### Endings
 **11 main endings + 1 secret (The Thirteenth Star, ~1,000 hrs)**, with epilogue variations bringing the total to ~100. The full list and requirements live in `02_Lore/story.md` → Endings. Headline examples: *The Hero's Dawn* (side with the gods), *The Crimson Throne* (become the Demon Overlord), *The Unwoven Sky* (destroy the System), *The Quiet Field* (walk away), *The Harvest* (the beautiful bad ending).
 
-**Afterstory:** after a world-saving ending, players can keep living in Aetheria in a peaceful open-ended state. Explore, hunt, spend time with companions, pursue crafting/farming/shop paths and help regions recover. New adventures remain optional, with the main world crisis resolved.
+**Afterstory:** after a world-saving ending, players can keep living in Aethwyrd in a peaceful open-ended state. Explore, hunt, spend time with companions, pursue crafting/farming/shop paths and help regions recover. New adventures remain optional, with the main world crisis resolved.
 
 ## 6. Product Facts
 - **Platform:** PC (Steam), target **Steam Deck Verified**, full controller + mouse/keyboard.
@@ -71,7 +71,7 @@ This section translates the creative brief into checks that can guide writing, c
 
 The intended emotional center is **curious → vulnerable → hopeful → capable → connected**. A new area should invite the player to ask a question; danger should make the answer feel earned; allies and visible recovery should let the player feel that their effort mattered. Awe, fear, grief and triumph can all appear, but the ordinary world should retain warmth and possibility.
 
-The player is not special because a prophecy excuses every choice. They become important through accumulated acts: accepting a contract, learning a creature, keeping a promise, choosing who to protect and returning to places they have changed. Old-world experience is a lens for dialogue and practical problem-solving, while Aetheria becomes the character’s lived home.
+The player is not special because a prophecy excuses every choice. They become important through accumulated acts: accepting a contract, learning a creature, keeping a promise, choosing who to protect and returning to places they have changed. Old-world experience is a lens for dialogue and practical problem-solving, while Aethwyrd becomes the character’s lived home.
 
 ### The hour-sized adventure
 
@@ -117,7 +117,7 @@ Companions are AI-controlled allies, not extra player characters. They should co
 
 The party’s daily life is part of the fantasy: banter during travel, focused comments during a hunt, a meal after danger and quiet acknowledgment after loss. Keep these moments short enough to preserve the player’s pace, and reserve longer scenes for earned relationships or pivotal choices. Permanent combat death remains opt-in under Canon §5; relationship writing should not imply otherwise.
 
-### Aetheria’s daily life
+### Aethwyrd’s daily life
 
 The in-game calendar should create texture—markets at dawn, work and training in daylight, social life in the evening, and greater exposure to danger after dark—without asking players to wait in real time. Each schedule should improve a useful play decision: finding a person, seeing a service, witnessing a local event or understanding who depends on whom.
 

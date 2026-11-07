@@ -48,7 +48,7 @@ Guerrilla says Machine Strike began as an activity to help settlements feel aliv
 
 CD Projekt RED quest designer Sarah Grummer describes turning emotional goals into playable challenges and character development, and says consequences may be revealed hours after an action. The studio also emphasizes testing long player paths because a change can break a distant scene. ([CDPR: Turning Emotions, Story, and Big Moments Into Gameplay](https://www.cdprojektred.com/en/blog/155/turning-emotions-story-and-big-moments-into-gameplay))
 
-**Ascend application (inference):** delay some social outcomes so Aetheria feels independent, but give the player a causal receipt later: a changed contract, a letter, a rumor, a companion's question or a settlement detail. Track a small number of meaningful flags and test representative long paths. This supports the existing bounded-NPC-memory proposal without implying that every named NPC simulates every event.
+**Ascend application (inference):** delay some social outcomes so Aethwyrd feels independent, but give the player a causal receipt later: a changed contract, a letter, a rumor, a companion's question or a settlement detail. Track a small number of meaningful flags and test representative long paths. This supports the existing bounded-NPC-memory proposal without implying that every named NPC simulates every event.
 
 ### 7. Player agency and world scale compete for the same content budget
 
@@ -66,7 +66,7 @@ Sucker Punch's post-launch reflection describes the scale multipliers in buildin
 
 HoYoverse's *Genshin Impact* music feature describes coordinating with the world, gameplay, visual and IP teams, then choosing musical elements that fit the distinctive styles of each location. It also describes refining local tempo and mood while keeping a coherent overarching musical identity. ([HoYoverse: Behind the Music of Genshin Impact](https://genshin.hoyoverse.com/en/news/detail/5000))
 
-**Ascend application (inference):** use one recognizable Aetheria musical motif, then let regional instrumentation and arrangement carry local history. A place can alter its arrangement after liberation or after a quest without needing an entirely new song. Treat actual cultural instrumentation with research and review; broad “exotic” shorthand is not enough.
+**Ascend application (inference):** use one recognizable Aethwyrd musical motif, then let regional instrumentation and arrangement carry local history. A place can alter its arrangement after liberation or after a quest without needing an entirely new song. Treat actual cultural instrumentation with research and review; broad “exotic” shorthand is not enough.
 
 The official *Genshin Impact* game page describes an immersive single-player campaign, but that game's wider online/service model is outside Ascend's locked single-player premium premise. The transferable reference here is regional identity and traversal presentation, not co-op, live events, monetization or an update treadmill. ([HoYoverse: Genshin Impact](https://genshin.hoyoverse.com/en/game))
 

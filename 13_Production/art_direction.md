@@ -1,4 +1,4 @@
-# Art Direction: the Project Ascend Style Guide
+# Art Direction: the AETHWYRD Style Guide
 
 > **Owner:** anime-fantasy-director. **Status:** v1.1, 2026-10-31 (adds §3.1 contact-sheet preview standard; Umbravel lantern and water-key notes in §4.2). Every art, shader, UI and bestiary agent builds to this page. When it disagrees with a tool's defaults, this page wins. When it disagrees with `Canon.md`, Canon wins and this page is the bug.
 > **Sources:** Canon §1 (bright, flowing, Genshin-style cel-shaded anime; teen; no fanservice; warmth over comedy) · [[anime_building_style]] · [[building_system]] · [[creature_system]] · `12_Systems/hud_and_ui.md` · `08_Bestiary/monster_motion_bible.md` · `Tools/blender/ascend_buildings/styles.py`.

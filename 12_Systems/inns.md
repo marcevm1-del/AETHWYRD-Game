@@ -62,7 +62,7 @@ Each evening at an inn rolls one event (more in festivals):
 ## 6. Signature Inns
 | Inn | Where | Keeper | House dish / drink | Signature room | Quirk |
 |---|---|---|---|---|---|
-| **The Sleeping Griffon** | Brindlewick (aldmere) | Marta Gruel | Marta's Rookie Stew / Griffon Gold (or honey milk) | *The Rookie Loft*: +10% XP for your first 7 days in Aetheria; the walls are carved with the names of every Veilborn who slept here first | Feeds every rookie on credit and remembers every debt |
+| **The Sleeping Griffon** | Brindlewick (aldmere) | Marta Gruel | Marta's Rookie Stew / Griffon Gold (or honey milk) | *The Rookie Loft*: +10% XP for your first 7 days in Aethwyrd; the walls are carved with the names of every Veilborn who slept here first | Feeds every rookie on credit and remembers every debt |
 | **The Crooked Lantern** | Greymoor Stilts (greymoor) | Mother Bramble (swamp witch) | Bog-eel Pie / Dreamwater Tea | *The Room That Moves*: Each night it opens onto a different hallway; one night it opens onto a hidden lore room | The building leans more every year; nobody admits it |
 | **Leafhall Rest** | Sylvaran court city (sylvaran) | Thalion Veyraleth (elf) | Moonleaf Salad / Starbloom Wine | *Heartwood Bower*: Sleep inside a living tree: +Spirit regen and a Sylvara Devotion point once a week | Charges humans double until they earn elven reputation (the court-elf snobbery, Canon) |
 | **The Thimble & Thistle** | Mossdeep (mossdeep) | Pipwick Burr (Thimblefolk) | One Blueberry (whole) / Dewdrop Cordial | *The Acorn Room*: Only reachable while shrunk; one crumb of bread feeds the whole party | You must drink a shrinking draught at the door |

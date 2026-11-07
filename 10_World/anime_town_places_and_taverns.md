@@ -219,7 +219,7 @@ Use the existing *A Bowl of Stew*, *The Tavern Brawl* and tavern event entries a
 
 1. **A visible clinic corner** in the existing temple/orphanage or guild branch, not necessarily a new building. It can serve status recovery, wounded defense scenes and a healer NPC already present in data.
 2. **An outdoor market canopy** along Market Row, which can change from ordinary trade to shortage, siege distribution and liberation celebration.
-3. **A public washhouse** near Millrace, inspired by the existing bath culture in Aetheria. It supports comfort and conversation; it is modest, mixed-use by schedule or separated by local custom, never a fanservice scene.
+3. **A public washhouse** near Millrace, inspired by the existing bath culture in Aethwyrd. It supports comfort and conversation; it is modest, mixed-use by schedule or separated by local custom, never a fanservice scene.
 4. **A memorial wall or Hall of Cards** in the guild hall, making the established tradition visible and giving return visits emotional weight.
 5. **A small performance corner** at the Sleeping Griffon rather than a separate performance building; local music adapts to events.
 6. **A route map and dispatch desk** at the guild branch, connecting route reports to the new information-flow design.

@@ -1,4 +1,4 @@
-// Project Ascend — builds one prefab per species from a rig FBX and motion.json.
+// AETHWYRD — builds one prefab per species from a rig FBX and motion.json.
 // Usage: select a rig model in the Project window (e.g. rig_small_biped.fbx), then
 //        right-click > Ascend > Build Monster Prefabs From Rig.
 // Every species in motion.json whose rigKey matches the file name gets a prefab in Assets/_Game/Prefabs/Monsters,

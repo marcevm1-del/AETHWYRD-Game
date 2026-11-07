@@ -1,5 +1,5 @@
 """
-World terrain tiles for Project Ascend, built from Data/World/physical_map.json (docs: 13_Production/world_terrain.md).
+World terrain tiles for AETHWYRD, built from Data/World/physical_map.json (docs: 13_Production/world_terrain.md).
 
 With Blender (blend + preview render):
   blender -b --factory-startup -P Tools/blender/build_world_terrain.py -- --suite

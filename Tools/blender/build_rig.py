@@ -1,4 +1,4 @@
-"""Project Ascend — Blender rig builder (Blender 4.x and 5.x; tested with 5.0.1).
+"""AETHWYRD — Blender rig builder (Blender 4.x and 5.x; tested with 5.0.1).
 
 Builds a monster armature from Data/Monsters/rigs.json, optionally with graybox proxy
 meshes skinned to it (so a rig is animatable and testable in Unity before final art),

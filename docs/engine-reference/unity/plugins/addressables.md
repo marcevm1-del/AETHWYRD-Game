@@ -1,4 +1,4 @@
-# Addressables - status in Project Ascend
+# Addressables - status in AETHWYRD
 
 **Not installed.** `com.unity.addressables` is not in `Game/Packages/manifest.json`
 (checked 2026-11-07). The ascend build uses scenes, Resources-style loading and

@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Aetheria Atlas</title>
+<title>Aethwyrd Atlas</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alegreya+Sans:wght@400;500;700&display=swap">
 <style>
@@ -84,11 +84,11 @@ dd{margin:0;font:16px var(--font-lore)}
 </style>
 
 <div class="page">
-  <section class="mapcard" aria-label="World map of Aetheria">
+  <section class="mapcard" aria-label="World map of Aethwyrd">
     <div class="stage">
       <canvas id="terrain" aria-hidden="true"></canvas>
       <canvas id="deco" aria-hidden="true"></canvas>
-      <canvas id="ovl" role="img" aria-label="Map of Aetheria; tap a region for details"></canvas>
+      <canvas id="ovl" role="img" aria-label="Map of Aethwyrd; tap a region for details"></canvas>
     </div>
   </section>
 
@@ -239,7 +239,7 @@ vesper:["The red moon. After the war it opens for those strong enough to reach i
 const GZL={};
 Object.assign(GZL,{
 whisperwood:{ep:"The Wood Where Every Map Begins",
-ov:"Whisperwood is the first wild place most newcomers to Aetheria ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.",
+ov:"Whisperwood is the first wild place most newcomers to Aethwyrd ever enter, and the first place most of them run out of. It is a broad, old-growth forest of oak, ash and hornbeam that swallows the southern cart-roads between Brindlewick and Millbrook, and it has been the guild's training ground for as long as there has been a guild. Its monsters are small, its paths are forgiving and its ruins are shallow, which is exactly why rookies grow careless in it. Right now the wood is besieged: the Hollowpine goblins have united under a chief who plans, and the two villages that live off the forest have learned to bolt their doors at dusk.",
 geo:"The forest sits in a shallow bowl of land drained by dozens of brooks that feed the Millbrook stream. The ground is soft loam over limestone, which makes for sinkholes, little caves and springs that appear after rain and vanish by the next week. Toward the centre the canopy closes completely and the light turns green; the locals call this the Hush, because birdsong stops there. Moss-covered ruins of old waystations dot the old roads, built in a grey stone that does not occur anywhere in the wood.",
 eco:"Whisperwood is a nursery ecosystem. Slimes graze the fallen leaves and are eaten by horned rabbits, which are eaten by forest wolves, which avoid the goblins, who eat everything. Mana Motes drift thickly in the Hush and feed the glowcaps that light the forest floor at night. The goblins of Hollowpine farm mushrooms in the sinkhole caves and trap wolves for their pelts; when the wolves grow scarce, they come for the villages' sheep instead, and then for the villages.",
 ppl:"Brindlewick folk are woodcutters, charcoal burners, beekeepers and innkeepers; they are practical, nosy and generous, and they have grown used to strangers who arrive confused and in odd clothes. Millbrook is a mill town of millers, weavers and a handful of retired adventurers who chose a quiet stream to grow old beside. The Hollowpine goblins are not one people but six clans with their own marks, feuds and recipes; most of them want full bellies and dry caves, and only some of them want war.",
@@ -247,13 +247,13 @@ pow:"No lord sits in Whisperwood. The villages answer nominally to the crown of 
 faith:"Wayside shrines to the seven day-gods stand at the forest's edges, and Sylvasday is a half-holiday when no one cuts green wood. Villagers leave bread on the steps of the old waystations for travellers who never came home, a custom older than anyone can explain. Rookies are expected to carve their names somewhere in Brindlewick before they leave; most carve them into the beams of the Sleeping Griffon's loft.",
 hist:["The Hollowpine clans have stopped raiding as rabble. Under Grukk they strike in coordinated waves one or two days a week, never two days running, and they retreat before the guild can respond.","A generation ago the wood was cleared of a goblin warband by a party of four rookies who later became famous. The villages built them a monument, and Grukk's father died in that clearing.","In their grandparents' time the waystations still had keepers, and the south road was the main road to the coast. A plague year emptied them, and the road shifted east and never came back.","The grey stone of the waystations matches the stone of the Great Labyrinth. Some scholars think the old roads once ran to its gates; most scholars think that is a story told to rookies."],
 ty:"Grukk, Goblin Chief of Hollowpine, is not the biggest goblin in the wood, but he is the first in a long time who can count. He has united the six clans by sharing food fairly and punishing theft, and he raids the villages because their granaries could feed his people through winter. His camp lies among the deepest ruins in the Hush. Killing him lifts the siege on Brindlewick and Millbrook and is the trial that turns an F-rank adventurer into an E-rank one. Not every goblin in the wood will forgive whoever does it.",
-set:[["Brindlewick","A timber village where most adventurers wake up for the first time in Aetheria, home of the guild branch and the Sleeping Griffon inn."],["Millbrook","A mill town on the Millbrook stream with a working waterwheel, a cheese cellar and a stubborn council of millers."]],
+set:[["Brindlewick","A timber village where most adventurers wake up for the first time in Aethwyrd, home of the guild branch and the Sleeping Griffon inn."],["Millbrook","A mill town on the Millbrook stream with a working waterwheel, a cheese cellar and a stubborn council of millers."]],
 lm:[["The Hush","The silent green heart of the forest, where the canopy closes and the Mana Motes drift like snow."],["The Rookie Stones","A ring of standing stones where the guild holds its first field tests; every stone is scratched with tally marks."],["Hollowpine Camp","The goblin stronghold, built into a ruined waystation with a cave behind it that is deeper than it should be."]],
 hk:["A Millbrook miller swears the waterwheel turns backwards on nights when the goblins raid.","The guild wants a map of the sinkhole caves before the next spring rains open new ones.","A goblin child keeps leaving carved wooden wolves on the Sleeping Griffon's doorstep."],
 sen:"Woodsmoke and wet leaves; the creak of the mill; honey on black bread; goblin drums, very far away."},
 
 aldmere:{ep:"The Crown Valley",
-ov:"Aldmere is the kingdom at the centre of every map of Aetheria and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.",
+ov:"Aldmere is the kingdom at the centre of every map of Aethwyrd and the realm most newcomers think of as home. Its royal city stands on a hill above a broad valley of wheatfields, orchards and wet woodland, and its roads run out to every corner of the continent. It is the safest large region in the world in daylight. At night it is not: the barrows of Greyhollow have opened, and the dead walk out of them under a banner that was struck from the kingdom's rolls long ago.",
 geo:"The valley is wide, fertile and crossed by slow rivers that flood each spring and leave rich silt behind. To the west the farmland breaks into wet woods and fens that run toward Greymoor; to the east it rises into the gentle hills where the old barrows stand. The capital sits on a granite hill that the river curves around on three sides, and its walls have never been breached. Ruins of older Aldmeres lie under the fields, and ploughs turn up coins, armour and bones every year.",
 eco:"Aldmere's wilds are tame by the standards of the world, which is why the kingdom grew rich. Deer, boar and flocks of fat pheasant fill the woods; wolves are rare and goblins rarer. The danger is old death: barrow-wights, skeletal soldiers and restless knights rise where the valley's many battles were fought. The fens to the west breed giant frogs and will-o-wisps, and farmers use smoke and salt lines to keep both out of the fields.",
 ppl:"Aldmerians are farmers, artisans, clerks and soldiers, proud of their crown and grumbling about its taxes. The capital is a crowded mix of every people on the continent: dwarven smiths, elven envoys, beastfolk caravaneers and Veilborn adventurers who were summoned here and never left. In the countryside families measure their worth in generations on the same land, and they are polite to strangers but slow to trust them.",
@@ -1098,7 +1098,7 @@ geo:"The Root is a cavern without visible walls or floor, crossed by immense pil
 eco:"Only elementals, aberrations, living plants, constructs, dragons and slimes survive here, the creatures that need no sun and can feed on raw mana. They cluster around the roots and drink the light that leaks from them. Some are so old that they seem to have forgotten what they were.",
 ppl:"No one lives at the Root. A few of the world's greatest adventurers have reached it, and they speak of it rarely and always with reverence.",
 pow:"No power holds the Root. It belongs to whatever made the world.",
-faith:"Every faith in Aetheria has a story about the Root. The Church calls it the foundation stone of creation; the elves, the root of the World Tree; the dwarves, the first anvil. All of them agree that it should not be damaged, and that the cracks are a bad sign.",
+faith:"Every faith in Aethwyrd has a story about the Root. The Church calls it the foundation stone of creation; the elves, the root of the World Tree; the dwarves, the first anvil. All of them agree that it should not be damaged, and that the cracks are a bad sign.",
 hist:["Adventurers who have reached the Root report that the cracks in the roots are widening and that the light leaking from them is growing brighter.","Within living memory a party reached the Root for the first time in a century and brought back a shard of root-light that still glows in the Church's treasury.","In their grandparents' time the Root was thought to be a metaphor.","Legend says the gods knelt here to weave the world, and that their kneeling marks are still pressed into the stone."],
 ty:"The Root of the World has no Tyrant and no siege; it is the Underworld's deepest layer and holds no settlements. Its monsters are some of the oldest beings in creation.",
 set:[],
@@ -1107,12 +1107,12 @@ hk:["The Church wants to know whether the shard in its treasury is growing.","A 
 sen:"A deep hum felt in the bones; the slow pulse of light; air like the inside of a bell; absolute, ancient stillness."},
 
 vesper:{ep:"The Red Moon",
-ov:"Vesper is the red moon that hangs over Aetheria, and after the war is over it opens to those strong enough to reach it. Its surface is a broken landscape of ruins, crimson dust and floating stone, and its monsters are unlike anything on the world below. Nobody on the surface remembers the moon being red before; everybody remembers it red now. What lies at its heart is the last mystery of the world.",
+ov:"Vesper is the red moon that hangs over Aethwyrd, and after the war is over it opens to those strong enough to reach it. Its surface is a broken landscape of ruins, crimson dust and floating stone, and its monsters are unlike anything on the world below. Nobody on the surface remembers the moon being red before; everybody remembers it red now. What lies at its heart is the last mystery of the world.",
 geo:"From the surface, Vesper is a red disc with darker marks like the outlines of streets. Up close, those marks are exactly that: the ruins of a city, broken and scattered across the moon's surface, some of it drifting in the sky above. The ground is red dust and shattered stone, and the sky is black with stars. The gravity is light, and the silence is complete.",
 eco:"Vesperites, creatures born from the red moon's light, roam the ruins: some delicate, some monstrous, some almost human. The undead, shadows, aberrations, constructs and demons wander among them. Nothing grows here, but the ruins sometimes bloom with flowers of red light.",
 ppl:"No one is known to live on Vesper. Those who reach it report that they feel watched, and that the ruins seem to remember them.",
 pow:"No power is known to hold Vesper.",
-faith:"Every faith in Aetheria fears the red moon. The Church calls it an omen; the elves, a wound in the sky; the fishers of the Lustrine Shores, a thief of light.",
+faith:"Every faith in Aethwyrd fears the red moon. The Church calls it an omen; the elves, a wound in the sky; the fishers of the Lustrine Shores, a thief of light.",
 hist:["After the war, Vesper opens to those who can reach it, and the truth of the red moon waits at its heart.","Within living memory the red moon's light has drawn vesperites down to the Lustrine Shores.","In their grandparents' time the scholars began to argue about the marks on the red moon's face, and why they looked like streets.","Nobody on the surface remembers the moon being red before. Everyone remembers it red now."],
 ty:"Vesper has no Tyrant and no siege; it is the post-game region. What waits there belongs to the end of the story.",
 set:[],
@@ -1120,7 +1120,7 @@ lm:[["The Broken Streets","Ruins of a city scattered across the moon's surface."
 hk:["A scholar's map of the marks on the red moon matches a city on no map of the world.","A vesperite has followed an adventurer back to the surface and is trying to find someone.","The red flowers that bloom in the ruins sing a song that an old woman in Aldmere recognises."],
 sen:"Silence and red dust; starlight without air; flowers of light opening in the ruins; the feeling that the city remembers you."}
 });
-// Clans of Aetheria — draft v1, from Marcé's Pinterest boards "Fantasy Clans" (87 sections) and companions.
+// Clans of Aethwyrd — draft v1, from Marcé's Pinterest boards "Fantasy Clans" (87 sections) and companions.
 // [boardSection, clanName, regionKey, look, culture, hook]
 const CLANS = [
 ["AI Clan","The Clockborn","gearholm","Hooded automatons with smooth faceplates and a single glowing visor slit, robed like monks over plated bodies.","Gearholm's first automaton porters woke up one winter and asked for names. They live in the middle tiers as a quiet guild of repairers and archivists, still arguing with the city over whether they are citizens or property.","A Clockborn archivist has found its own original blueprint, and the signature on it is not a gnome's."],
@@ -2972,8 +2972,8 @@ function drawOverlay(){
   const tz=Math.max(.55,Math.min(1.2,cw/dpr/1250));
   compass(g,40*dpr*tz,42*dpr*tz,30*dpr*tz,"#e3c27a");
   g.textAlign="left";g.fillStyle="#f6efd9";g.font=`700 ${46*dpr*tz}px "Cinzel",serif`;g.lineWidth=5*dpr;g.strokeStyle="rgba(5,12,20,.7)";
-  g.strokeText("Aetheria Atlas",82*dpr*tz,58*dpr*tz);g.fillText("Aetheria Atlas",82*dpr*tz,58*dpr*tz);
-  g.font=`500 ${15*dpr*tz}px "Cinzel",serif`;g.fillStyle="#d9cfb2";g.fillText("THE REALMS OF AETHERIA",84*dpr*tz,84*dpr*tz);
+  g.strokeText("Aethwyrd Atlas",82*dpr*tz,58*dpr*tz);g.fillText("Aethwyrd Atlas",82*dpr*tz,58*dpr*tz);
+  g.font=`500 ${15*dpr*tz}px "Cinzel",serif`;g.fillStyle="#d9cfb2";g.fillText("THE REALMS OF AETHWYRD",84*dpr*tz,84*dpr*tz);
   if(!small){g.textAlign="right";g.font=`italic 500 ${19*dpr*tz}px "Cormorant Garamond",serif`;g.fillStyle="#efe6cf";
     g.lineWidth=4*dpr;g.strokeStyle="rgba(5,12,20,.8)";for(const [t,yy] of [["A fractured land, bound by sky and myth.",40],["Explore, settle, and shape your fate.",64]]){g.strokeText(t,cw-24*dpr,yy*dpr*tz);g.fillText(t,cw-24*dpr,yy*dpr*tz)}}
   compass(g,cw-60*dpr*tz,ch-70*dpr*tz,42*dpr*tz,"#e3c27a");
@@ -3024,7 +3024,7 @@ function lore(r){
   const terr=r.biomes.filter(x=>x!=="underworld");
   const list=a=>a.length<2?a.join(""):a.slice(0,-1).join(", ")+" and "+a[a.length-1];
   let s;
-  if(r.layer==="moon") s=`<b>${r.name}</b> is the red moon hanging over Aetheria, a ${RING_WORD[9]} realm of ${list(terr)} for heroes ranked ${r.rmin} to ${r.rmax}.`;
+  if(r.layer==="moon") s=`<b>${r.name}</b> is the red moon hanging over Aethwyrd, a ${RING_WORD[9]} realm of ${list(terr)} for heroes ranked ${r.rmin} to ${r.rmax}.`;
   else if(r.layer==="underworld") s=`<b>${r.name}</b> lies beneath the surface, a ${RING_WORD[r.ring]} descent of ${list(terr)} for ranks ${r.rmin} to ${r.rmax}.`;
   else if(r.layer==="sky") s=`<b>${r.name}</b> drifts above the clouds: ${list(terr)} for ranks ${r.rmin} to ${r.rmax}.`;
   else s=`<b>${r.name}</b> is a ${RING_WORD[r.ring]} land of ${list(terr)} for adventurers ranked ${r.rmin} to ${r.rmax}.`;

@@ -1,4 +1,4 @@
-# Project Ascend — notes for Claude sessions and agents
+# AETHWYRD — notes for Claude sessions and agents (working folder name: Project-Ascend)
 
 A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 URP, data-driven JSON). This repo is the design bible, the data, the tools, the Unity project and the Obsidian vault at once.
 
@@ -42,8 +42,8 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
 ## The agent team
 There are 27 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
 
-## Studio layer (Claude Code Game Studios v1.2.0, installed on branch `studio-install`)
-The studio's skills (`/start`, `/help`, `/adopt`, `/map-systems`, `/sprint-plan` and the rest), 34 extra agents (directors, Unity specialists; the 10 Godot and Unreal specialists are parked in `.claude/agents-retired/`), rules, docs and helper scripts live in `.claude/`. Hooks, `settings.json` and the status line are **not** installed yet.
+## Studio layer for AETHWYRD (Claude Code Game Studios v1.2.0, installed on branch `studio-install`)
+The studio's skills for AETHWYRD (`/start`, `/help`, `/adopt`, `/map-systems`, `/sprint-plan` and the rest), 34 extra agents (directors, Unity specialists; the 10 Godot and Unreal specialists are parked in `.claude/agents-retired/`), rules, docs and helper scripts live in `.claude/`. Hooks, `settings.json` and the status line are **not** installed yet.
 - **Our rules win.** Where the studio's docs conflict with this file, `Canon.md` or `13_Production/agent_team.md`, follow ours. Our own agents keep their names: `producer`, `qa-tester`, `systems-designer`, `technical-artist` and `ux-designer` are ours, not the studio's.
 - **Paths differ.** The studio's `design/`, `docs/`, `production/` and `tests/` map to our `00_Questions`–`12_Systems`, `13_Production/`, `Code/Ascend.Core.Tests/` and `Game/Assets/_Game/Tests/`. The Unity code root is `Game/Assets/_Game/Runtime` plus `Code/Ascend.Core`. Ask before creating a parallel studio folder.
 - **Ask before writing.** The studio's rule is "May I write this to [filepath]?". Locked Canon rows are never edited; propose in Canon §6.

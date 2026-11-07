@@ -40,7 +40,7 @@ No power holds the Root. It belongs to whatever made the world.
 
 ## Faith & customs
 
-Every faith in Aetheria has a story about the Root. The Church calls it the foundation stone of creation; the elves, the root of the World Tree; the dwarves, the first anvil. All of them agree that it should not be damaged, and that the cracks are a bad sign.
+Every faith in Aethwyrd has a story about the Root. The Church calls it the foundation stone of creation; the elves, the root of the World Tree; the dwarves, the first anvil. All of them agree that it should not be damaged, and that the cracks are a bad sign.
 
 ## The Tyrant
 

@@ -17,7 +17,7 @@ Sanderson's second law guides this section: the limits matter more than the powe
 | **Raw Aether** | Eating cores raw or sleeping inside an Aether well brings on **Aether sickness**: fever, then changes to the body. This is the real danger behind the Predation heresy. The Predator path survives it because Status filters what is devoured. |
 
 **What magic cannot do** (tracked rules; any exception must be foreshadowed):
-1. **Create Aether.** Magic only moves and shapes it. There is no free energy anywhere in Aetheria.
+1. **Create Aether.** Magic only moves and shapes it. There is no free energy anywhere in Aethwyrd.
 2. **Make lasting gold or cores.** Transmuted metal reverts within a day (*"wizard's gold"*), which is why coins and cores keep their value.
 3. **Undo death once the soul's lantern goes out.** Revival works only within minutes, through Morrowyn's mercy (this matches the existing revive chance). The Lantern Seal is the single exception, and it cost a Hero's soul.
 4. **Rewrite a Status.** No spell changes a rank, a level or a Unique Skill; only growth does. *(⚠️ only the System, and its harvest, can.)*
@@ -99,7 +99,7 @@ The deep ages are already written. This section covers the history that living p
 ---
 
 ## 5. Class and Mobility (three ladders)
-Aetheria ranks people on three ladders at once, and the tension comes from where they disagree.
+Aethwyrd ranks people on three ladders at once, and the tension comes from where they disagree.
 1. **Birth:** nobility, knights, freemen, serfs (in Aldmere's feudal law). It changes slowly, through marriage, war or the crown.
 2. **Status:** **Appraisal Day at 12** sets a child's expectations for life. A serf's child who shows a Unique Skill gets scouted by the Academy or the Church (or quietly by the Inquisition), and a noble heir with a weak Status is a family's private shame.
 3. **Guild rank:** under the Wanderer's Charter, anyone can climb, and an S-Rank outranks most nobles socially. Rank is the fastest ladder in the world, and the deadliest: the Hall of Cards is full.

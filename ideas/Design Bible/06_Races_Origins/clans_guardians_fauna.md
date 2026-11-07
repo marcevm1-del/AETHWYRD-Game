@@ -1,4 +1,4 @@
-# Clans, Guardians & Fauna of Aetheria
+# Clans, Guardians & Fauna of Aethwyrd
 
 _Draft v4 · full clan profiles · Canon.md wins on conflict._
 

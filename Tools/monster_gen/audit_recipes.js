@@ -1,4 +1,4 @@
-// Project Ascend — designRecipe audit.
+// AETHWYRD — designRecipe audit.
 // Usage (from the project root):  node Tools/monster_gen/audit_recipes.js [--all] [--strict]
 // Reads Data/Monsters/species.json and flags recipes whose parts disagree with the species:
 //   CONTRA  a part implies anatomy or gear the species should not have

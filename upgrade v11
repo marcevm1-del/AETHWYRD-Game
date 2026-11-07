@@ -1,4 +1,4 @@
-### AETHERIA — V11: Complete Animation, Movement & Character Presentation System
+### AETHWYRD — V11: Complete Animation, Movement & Character Presentation System
 
 V11 upgrades how every character, creature, enemy, companion, and mount moves, reacts, performs actions, and communicates visually.
 
@@ -105,7 +105,7 @@ These are starting mathematical models. Final coefficients must be tuned through
 
 Build one unified animation framework rather than independent animation controllers for every character.
 
-### Aetheria Animation Architecture
+### Aethwyrd Animation Architecture
 
 Character or Creature Controller
 
@@ -487,9 +487,9 @@ Automate asset validation for:
 
 * Broken humanoid retargeting.
 
-### 10\. Aetheria Animation Developer Studio
+### 10\. Aethwyrd Animation Developer Studio
 
-Create an integrated Unity Editor tool called Aetheria Animation Studio.
+Create an integrated Unity Editor tool called Aethwyrd Animation Studio.
 
 ![Hazel Engine](https://images.openai.com/static-rsc-4/oA1i19LKn1YWOborLL8fctBMdusgPeEApfrLbMsh7KkkN_gvT2IJ-3nPgzQepyzKxrV-ervcz6-dwciglhz5rFjG8ckk-6sCyyYj3BTkVITJuJPgvRrdUApFYANRnExhZvKmtsVM8GL--ZJGGa6fSCIN5n7tZmP-USAH6OerkEvkZS56R-kgM9jXRnKY2fJ5?purpose=fullsize)
 
@@ -529,11 +529,11 @@ The studio should provide live previews, warnings, error reports, and test scena
 
 The following is the standalone instruction for the development agent.
 
-# AETHERIA V11 — COMPLETE ANIMATION, MOVEMENT & CHARACTER PRESENTATION SYSTEM
+# AETHWYRD V11 — COMPLETE ANIMATION, MOVEMENT & CHARACTER PRESENTATION SYSTEM
 
 ## MISSION
 
-Develop and integrate Aetheria V11 into the existing Aetheria Unity 6 URP project.
+Develop and integrate Aethwyrd V11 into the existing Aethwyrd Unity 6 URP project.
 
 V11 establishes a unified animation, locomotion, procedural movement, inverse kinematics, combat animation, creature animation, mount animation, facial animation, and character presentation architecture.
 
@@ -661,7 +661,7 @@ Provide consistent rig naming, skeleton validation, animation export, Unity impo
 
 Preserve existing working Blender tools.
 
-## 9. AETHERIA ANIMATION STUDIO
+## 9. AETHWYRD ANIMATION STUDIO
 
 Create an EditorWindow-based developer tool containing:
 
@@ -742,8 +742,8 @@ V11 is complete only when:
 
 ## FINAL RULE
 
-Preserve Aetheria's established world, characters, mechanics, assets, progression, and single-player identity.
+Preserve Aethwyrd's established world, characters, mechanics, assets, progression, and single-player identity.
 
 Inspect first. Plan second. Implement third. Test continuously. Do not fabricate completed work or replace established game design with invented content.
 
-V11's central goal: make Aetheria's characters feel physically believable and responsive, while keeping animation tightly connected to movement, combat, creature behavior, and the world itself.
+V11's central goal: make Aethwyrd's characters feel physically believable and responsive, while keeping animation tightly connected to movement, combat, creature behavior, and the world itself.

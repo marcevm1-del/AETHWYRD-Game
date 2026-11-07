@@ -1,6 +1,6 @@
 # Session Prompt — v0.11: Siege System, Weekly Board & Inns in Code + Review Fixes
 
-You're working on **Project Ascend**, a single-player 3D open-world isekai RPG (Unity 6, data-driven JSON), in the folder `E:\Ideas\Project-Ascend` (a Git repo). Read `README.md`, `Canon.md` and `CHANGELOG.md` first, then `12_Systems/systems.md` (Regional Siege & Liberation), `11_Quests_Encounters/weekly_board.md` and `12_Systems/inns.md`. **Canon.md wins every conflict.** I'm the creative director and I prefer you to decide and build rather than ask. Flag anything that needs my OK in `Canon.md` §6 (Proposed Locks) and keep going. Keep docs concise.
+You're working on **AETHWYRD**, a single-player 3D open-world isekai RPG (Unity 6, data-driven JSON), in the folder `E:\Ideas\Project-Ascend` (a Git repo). Read `README.md`, `Canon.md` and `CHANGELOG.md` first, then `12_Systems/systems.md` (Regional Siege & Liberation), `11_Quests_Encounters/weekly_board.md` and `12_Systems/inns.md`. **Canon.md wins every conflict.** I'm the creative director and I prefer you to decide and build rather than ask. Flag anything that needs my OK in `Canon.md` §6 (Proposed Locks) and keep going. Keep docs concise.
 
 Do the work in this order. Commit after each part. **This session is code and data**: build what's already designed; don't redesign it. The feature docs (`01_Core_Concept/the_big_upgrade.md`, `borrowed_features.md`, `12_Systems/hud_and_ui.md`) are proposals in Canon §6; don't implement them yet unless a task below says so.
 

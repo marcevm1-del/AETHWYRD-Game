@@ -1,4 +1,4 @@
-// Project Ascend — monster motion & physics generator.
+// AETHWYRD — monster motion & physics generator.
 // Reads  Data/Monsters/species.json, rigs.json, attacks.json, motion_overrides.json, Data/Combat/combat_tuning.json
 // Writes Data/Monsters/motion.json: one motion/physics profile per species, ready for Unity (Ascend/Build Monster Prefab).
 // Usage: node Tools/monster_gen/motion.js            (deterministic; rerun after any data change)

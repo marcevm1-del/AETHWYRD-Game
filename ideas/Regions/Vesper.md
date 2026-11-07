@@ -20,7 +20,7 @@ tags: [region, post-game]
 
 ## Overview
 
-Vesper is the red moon that hangs over Aetheria, and after the war is over it opens to those strong enough to reach it. Its surface is a broken landscape of ruins, crimson dust and floating stone, and its monsters are unlike anything on the world below. Nobody on the surface remembers the moon being red before; everybody remembers it red now. What lies at its heart is the last mystery of the world.
+Vesper is the red moon that hangs over Aethwyrd, and after the war is over it opens to those strong enough to reach it. Its surface is a broken landscape of ruins, crimson dust and floating stone, and its monsters are unlike anything on the world below. Nobody on the surface remembers the moon being red before; everybody remembers it red now. What lies at its heart is the last mystery of the world.
 
 ## Geography
 
@@ -40,7 +40,7 @@ No power is known to hold Vesper.
 
 ## Faith & customs
 
-Every faith in Aetheria fears the red moon. The Church calls it an omen; the elves, a wound in the sky; the fishers of the Lustrine Shores, a thief of light.
+Every faith in Aethwyrd fears the red moon. The Church calls it an omen; the elves, a wound in the sky; the fishers of the Lustrine Shores, a thief of light.
 
 ## The Tyrant
 

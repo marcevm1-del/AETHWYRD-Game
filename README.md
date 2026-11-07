@@ -1,4 +1,4 @@
-# PROJECT ASCEND (working title; name decision ~2026-11-01)
+# AETHWYRD (formerly "Project Ascend", the working title)
 ### Open-World Isekai / High-Fantasy Adventurer RPG — Design Bible v0.7
 
 > *"Somewhere between your last breath and your first, a voice said: **Status granted.** When you opened your eyes, the sky had two moons, the grass hummed with mana, and a little card in your pocket read **Rank F**."*

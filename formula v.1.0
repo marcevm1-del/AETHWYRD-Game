@@ -1,6 +1,6 @@
-### AETHERIA — Complete Game Formula & Mathematics Bible
+### AETHWYRD — Complete Game Formula & Mathematics Bible
 
-I would make this a dedicated technical upgrade: Aetheria Formula System V1.
+I would make this a dedicated technical upgrade: Aethwyrd Formula System V1.
 
 The goal is to establish the mathematical rules behind every major gameplay system, so combat, exploration, crafting, creatures, NPCs, world simulation, economy, progression, terrain, and the 120-floor Great Labyrinth all follow consistent formulas.
 
@@ -188,7 +188,7 @@ Where is the relevant endurance attribute.
 
 MP_{\\max}=MP_0+m_I I+m_W W+MP_{\\text{bonus}}
 
-Use the actual attributes defined by Aetheria's character system. The symbols and are illustrative and should not create new canonical attributes automatically.
+Use the actual attributes defined by Aethwyrd's character system. The symbols and are illustrative and should not create new canonical attributes automatically.
 
 ### 3.6 Attribute-derived damage
 
@@ -414,7 +414,7 @@ Use an authored interaction matrix rather than arbitrary elemental multipliers s
 | Partial resistance | 0.75               |
 | Strong resistance  | 0.5                |
 
-These are sample tuning values. Aetheria's actual elemental relationships must come from its established magic canon.
+These are sample tuning values. Aethwyrd's actual elemental relationships must come from its established magic canon.
 
 ### 5.5 Status buildup
 
@@ -699,7 +699,7 @@ Where:
 
 * = frequency.
 
-This is only one component of terrain generation. Aetheria should combine authored terrain, large-scale landforms, drainage, erosion, and controlled procedural detail.
+This is only one component of terrain generation. Aethwyrd should combine authored terrain, large-scale landforms, drainage, erosion, and controlled procedural detail.
 
 ### 9.10 River flow
 
@@ -1161,7 +1161,7 @@ This is where the mathematical design becomes maintainable code.
 I recommend one central formula library with separate gameplay modules.
 
 ```text
-Aetheria/
+Aethwyrd/
 └── Systems/
     └── FormulaSystem/
         ├── Core/
@@ -1291,12 +1291,12 @@ Every formula should have:
 
 ### 20\. Master directive for the development agent
 
-# AETHERIA — COMPLETE FORMULA SYSTEM
+# AETHWYRD — COMPLETE FORMULA SYSTEM
 ## Mathematical Architecture, Gameplay Balancing & Simulation Framework
 
 ### PROJECT REQUIREMENTS
 
-Develop a unified mathematical framework for Aetheria.
+Develop a unified mathematical framework for Aethwyrd.
 
 The game is Unity 6, URP, third-person, 3D and strictly single-player.
 
@@ -1466,7 +1466,7 @@ The formula system is complete when:
 
 ### FINAL OBJECTIVE
 
-Build a complete mathematical foundation for Aetheria.
+Build a complete mathematical foundation for Aethwyrd.
 
 Every major system should operate using consistent, understandable, testable and balanced rules.
 
@@ -1478,7 +1478,7 @@ This is probably the most valuable additional tool.
 
 ### Example: Combat formula tester
 
-Illustrative formula playground — not Aetheria's verified current balance.
+Illustrative formula playground — not Aethwyrd's verified current balance.
 
 Weapon base damage
 
@@ -1510,4 +1510,4 @@ Example calculation: raw damage = weapon × (1 + strength × scaling); armour mi
 
 The balance simulator should eventually let you test entire character builds, weapons, enemies, bosses, creatures, crafting recipes, and progression curves before changing the actual game.
 
-The key is to create one mathematical source of truth for Aetheria. That way, if you change a damage coefficient or XP curve, every system using it can update consistently, and you can test the impact before releasing the change.
+The key is to create one mathematical source of truth for Aethwyrd. That way, if you change a damage coefficient or XP curve, every system using it can update consistently, and you can test the impact before releasing the change.

@@ -1,4 +1,4 @@
-# 02b — The Deep History of Aetheria (v0.3)
+# 02b — The Deep History of Aethwyrd (v0.3)
 
 > *"History is the Weave remembering itself. Badly, and in its own favor."*
 > — Magistra Eolande Fairweather, *Lectures I Was Fired For*
@@ -17,7 +17,7 @@ Dates: **BSC** = Before the Summoning Calendar · **SC** = Summoning Calendar. *
 
 ### The historical record is not one book
 
-Aetheria has no neutral archive that survived every era. The Guild preserves contracts and deaths; royal courts preserve claims of lawful rule; temples preserve devotional memory; clans preserve routes, kinship and obligations; towns preserve practical disasters; and ruins preserve material evidence without explaining themselves. A player should routinely find several accounts of one event, each useful and each partial. That is intentional, not a puzzle with one easy “correct” narrator.
+Aethwyrd has no neutral archive that survived every era. The Guild preserves contracts and deaths; royal courts preserve claims of lawful rule; temples preserve devotional memory; clans preserve routes, kinship and obligations; towns preserve practical disasters; and ruins preserve material evidence without explaining themselves. A player should routinely find several accounts of one event, each useful and each partial. That is intentional, not a puzzle with one easy “correct” narrator.
 
 | Record keeper | What it preserves well | What it tends to hide or distort |
 |---|---|---|
@@ -27,7 +27,7 @@ Aetheria has no neutral archive that survived every era. The Guild preserves con
 | Clan and household memory | Kinship, migration paths, ecological knowledge, promises | Exact dates across generations; stories may compress a long displacement into one named journey |
 | Merchant ledgers and tavern talk | Prices, routes, shortages, credit, who was seen where | The reasons a price changed; rumor and self-serving gossip travel together |
 | Ruins, bones and altered landscapes | What physically happened, what was built over, where power changed the land | Names, intentions, moral judgment; artifacts do not label their own makers |
-| Veilborn journals | Personal experience, unfamiliar comparisons, small everyday changes | A complete view of Aetheria; a single visitor's perspective is not a world's history |
+| Veilborn journals | Personal experience, unfamiliar comparisons, small everyday changes | A complete view of Aethwyrd; a single visitor's perspective is not a world's history |
 
 **Presentation rule (draft):** when a major revelation has consequences, show at least two kinds of evidence before asking the player to judge it: a human account and a material or ecological trace. Do not require the player to read every collectible to understand the main conflict.
 
@@ -674,7 +674,7 @@ These are planning lenses, not named roads or settled routes. Their endpoints ar
 
 **Existing anchors:** Tomás's Lantern tradition, Greymoor's diary and Morrowyn's rites are established evidence strands; Moraveil contains a truce memory; Vesper carries the concealed Valdrisian history. The player must not be told the Vesper reveal before its Canon-approved act.
 
-**Possible exchange:** travelers carry a small memorial gesture—lighting, tying, turning, naming or leaving an object—while each community explains it differently. A similar action can mourn a dead person in one place, honor a promise in another, and mark a safe return elsewhere. The gesture must never be presented as a universal “Aetherian religion.”
+**Possible exchange:** travelers carry a small memorial gesture—lighting, tying, turning, naming or leaving an object—while each community explains it differently. A similar action can mourn a dead person in one place, honor a promise in another, and mark a safe return elsewhere. The gesture must never be presented as a universal “Aethwyrdian religion.”
 
 **Playable traces:** one prayer has a local verse absent from the neighboring shrine; a memorial object was repurposed without understanding its original meaning; families remember the same disaster through different names; the player can listen, restore a damaged memorial or leave it alone.
 

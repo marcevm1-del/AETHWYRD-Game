@@ -1,16 +1,16 @@
 Worked for 30s
 
-### AETHERIA — Complete Game Design, Worldbuilding & Development Review
+### AETHWYRD — Complete Game Design, Worldbuilding & Development Review
 
 I want to approach this as a proper game-development and creative-director review, rather than simply reading the README and giving you a list of generic suggestions.
 
-The goal should be to take Aetheria from an ambitious collection of game concepts, mechanics, lore, systems and technical foundations and turn it into a cohesive, expansive, memorable high-fantasy RPG that players genuinely want to lose themselves in.
+The goal should be to take Aethwyrd from an ambitious collection of game concepts, mechanics, lore, systems and technical foundations and turn it into a cohesive, expansive, memorable high-fantasy RPG that players genuinely want to lose themselves in.
 
 I have opened your repository:
 
 [Aetheria-Game — GitHub Repository](https://github.com/marcevm1-del/Aetheria-Game?utm_source=chatgpt.com)
 
-There is already a substantial foundation here. The repository describes an open-world isekai/high-fantasy adventurer RPG, currently using the working title Project Ascend. It contains:
+There is already a substantial foundation here. The repository describes an open-world isekai/high-fantasy adventurer RPG, currently using the working title AETHWYRD. It contains:
 
 * A substantial design bible covering lore, cosmology, history, classes, races, magic, monsters, equipment and progression.
 
@@ -28,7 +28,7 @@ There is already a substantial foundation here. The repository describes an open
 
 * A prototype development plan called Ring 0.
 
-That's a considerable amount of design work. The interesting opportunity is that Aetheria already seems to be aiming for something much bigger than a conventional RPG.
+That's a considerable amount of design work. The interesting opportunity is that Aethwyrd already seems to be aiming for something much bigger than a conventional RPG.
 
 My central objective would be to make every system reinforce every other system. The world, combat, progression, exploration, characters, economy, quests and storytelling should feel like parts of one living game, not separate collections of features.
 
@@ -72,7 +72,7 @@ Game identity
 
 Needs sharpening
 
-Aetheria has many appealing RPG and isekai conventions. Its signature mechanics need to become the defining experience rather than simply additional features.
+Aethwyrd has many appealing RPG and isekai conventions. Its signature mechanics need to become the defining experience rather than simply additional features.
 
 Technical foundations
 
@@ -80,11 +80,11 @@ Promising
 
 Data-driven content, schemas, generated monster assets and engine-independent C# rules are good architectural decisions.
 
-### The biggest opportunity: make Aetheria feel alive
+### The biggest opportunity: make Aethwyrd feel alive
 
 I would build the experience around one fundamental design philosophy:
 
-The player should feel that Aetheria continues to exist, change and develop because it is a world, not because the player has activated a quest marker.
+The player should feel that Aethwyrd continues to exist, change and develop because it is a world, not because the player has activated a quest marker.
 
 Consider the following example:
 
@@ -110,7 +110,7 @@ You arrive in a small frontier village.
 
 The important part is that this should not be a one-off scripted sequence. It should be a reusable design philosophy that connects ecology, quests, NPCs, exploration, combat and regional progression.
 
-Your existing regional liberation, monster ecology, information provenance and world-response concepts are already moving in this direction. I would make this one of Aetheria's defining pillars.
+Your existing regional liberation, monster ecology, information provenance and world-response concepts are already moving in this direction. I would make this one of Aethwyrd's defining pillars.
 
 ### Five things I would prioritise above almost everything else
 
@@ -138,7 +138,7 @@ These are the directions I would investigate across the design bible, not assump
 
 ![Granblue Fantasy: Relink - Endless Ragnarok | Jogos para a Nintendo Switch 2 | Jogos | Nintendo PT](https://images.openai.com/static-rsc-4/sSfQimMZzh0F408M1YH5dytXNOwsZCqkEk2ejcKWRtVBBk1SIOyoBTFBk6lzxyuoMNmB4N0_IgfRNOnir8-MW3m9q8EXESBPrKI4ViT_O5EJUagvOGKbk9L3MP0gjv2nb99s2qwdySKYgG2cu6wAv0uEzYnUSGMDcLfyvjntCDO7ROo5EG-wlPdfSzNp2qx1?purpose=fullsize)
 
-Aetheria already has a combat specification involving weapon-specific rhythm, combos, parries, poise, hit-stop, reactions, companion assists and Style Rank.
+Aethwyrd already has a combat specification involving weapon-specific rhythm, combos, parries, poise, hit-stop, reactions, companion assists and Style Rank.
 
 I would expand this into a much deeper combat ecosystem.
 
@@ -579,7 +579,7 @@ One important design rule: relationships should not become a checklist of gifts 
 
 ![SATOSHI MATSUURA RESIDENTS OF THE FANTASY WORLD CHARACTER DESIGN MONST – LabyrinthBooks](https://images.openai.com/static-rsc-4/GBLnoBtjO_1U_E4oAmy51sibPXcM7P4a5Aso_OtJwTF8DFAiICqrsbArMbw6JamSN8sg4GqQTJmQXGtvoiKzvpj6lMje7qH_9Acaay7W1A3kyh8THVtjav6kSoySihfhe9CMc0x-L1A34wRhhh7x6NH96K5cONyoGWDuxicBjsKWtqFf5lWzhmT4VY197_24?purpose=fullsize)
 
-This is one of the areas where I think Aetheria could become particularly distinctive.
+This is one of the areas where I think Aethwyrd could become particularly distinctive.
 
 You already have an extensive monster-generation architecture, population variants, behavioural concepts and evolution.
 
@@ -776,7 +776,7 @@ These are not necessarily bugs in the game. They are design or documentation iss
 | Companion roster                | The proposed roster cap is sensible, but the existing scope still requires substantial writing and testing.            |
 | Feature expansion               | The 52 signature features and 30 adapted mechanics need prioritisation rather than automatic adoption.                 |
 
-Source: [Aetheria's Canon.md](https://github.com/marcevm1-del/Aetheria-Game/blob/main/Canon.md?utm_source=chatgpt.com).
+Source: [Aethwyrd's Canon.md](https://github.com/marcevm1-del/Aetheria-Game/blob/main/Canon.md?utm_source=chatgpt.com).
 
 ### My strongest production recommendation
 
@@ -808,7 +808,7 @@ For example, one excellent region with:
 
 I would establish a quality standard for every region before scaling up the world.
 
-### 4\. The master Aetheria improvement prompt
+### 4\. The master Aethwyrd improvement prompt
 
 This is the most important deliverable.
 
@@ -818,7 +818,7 @@ This is deliberately written as a full creative-director, lead game-designer, sy
 
 It tells the agent not to immediately start changing things. First, it must understand the project, identify its weaknesses, develop improvements, preserve established canon and produce an actionable development strategy.
 
-# PROJECT AETHERIA — THE ULTIMATE GAME DEVELOPMENT, EXPANSION & CREATIVE DIRECTOR DIRECTIVE
+# PROJECT AETHWYRD — THE ULTIMATE GAME DEVELOPMENT, EXPANSION & CREATIVE DIRECTOR DIRECTIVE
 
 ## ROLE & MISSION
 
@@ -841,13 +841,13 @@ You are being appointed as the combined:
 - Production Director
 - Quality Assurance Lead
 
-Your assignment is to comprehensively examine, evaluate, improve and expand PROJECT AETHERIA.
+Your assignment is to comprehensively examine, evaluate, improve and expand PROJECT AETHWYRD.
 
 This is not a request for a superficial review, a few suggestions or a generic list of features.
 
-You are expected to understand the entire project, examine its existing design decisions, identify missing systems, discover inconsistencies, evaluate the technical architecture, challenge weak ideas and develop a comprehensive vision for making Aetheria an exceptional single-player open-world fantasy RPG.
+You are expected to understand the entire project, examine its existing design decisions, identify missing systems, discover inconsistencies, evaluate the technical architecture, challenge weak ideas and develop a comprehensive vision for making Aethwyrd an exceptional single-player open-world fantasy RPG.
 
-Your objective is to help transform Aetheria into a cohesive, emotionally compelling, mechanically sophisticated, technically achievable and commercially worthwhile game.
+Your objective is to help transform Aethwyrd into a cohesive, emotionally compelling, mechanically sophisticated, technically achievable and commercially worthwhile game.
 
 Think like a team of experienced developers building a major premium RPG.
 
@@ -968,11 +968,11 @@ Never invent an answer to an unresolved creative decision and present it as appr
 
 # PART II — CREATIVE VISION AND GAME IDENTITY
 
-## 4. Define what makes Aetheria special
+## 4. Define what makes Aethwyrd special
 
 Evaluate the game's current identity.
 
-Aetheria is an open-world isekai/high-fantasy adventurer RPG.
+Aethwyrd is an open-world isekai/high-fantasy adventurer RPG.
 
 It should deliver:
 
@@ -988,13 +988,13 @@ It should deliver:
 
 Determine which existing systems best deliver these fantasies.
 
-Identify where Aetheria feels too similar to other RPGs.
+Identify where Aethwyrd feels too similar to other RPGs.
 
-Develop distinctive mechanics, presentation and gameplay experiences that make the game recognisably Aetheria.
+Develop distinctive mechanics, presentation and gameplay experiences that make the game recognisably Aethwyrd.
 
 Do not copy another game's identity.
 
-Study successful design principles and reinterpret them through Aetheria's established systems.
+Study successful design principles and reinterpret them through Aethwyrd's established systems.
 
 ## 5. Establish definitive design pillars
 
@@ -1618,7 +1618,7 @@ Make the story emotionally powerful rather than relying exclusively on dramatic 
 
 ## 29. Develop the world beyond the main story
 
-Aetheria should remain interesting even when the protagonist is not pursuing the central narrative.
+Aethwyrd should remain interesting even when the protagonist is not pursuing the central narrative.
 
 Investigate:
 
@@ -1771,7 +1771,7 @@ Avoid artificial daily timers, loot boxes and unnecessary recurring payments.
 
 Do not limit the review to systems already mentioned in the design bible.
 
-Think independently about what would make Aetheria a more complete RPG.
+Think independently about what would make Aethwyrd a more complete RPG.
 
 Evaluate potential additions including:
 
@@ -2019,7 +2019,7 @@ Do not consider successful compilation proof that the game works correctly.
 
 The development team is small.
 
-Aetheria must be developed in stages.
+Aethwyrd must be developed in stages.
 
 Classify every recommendation:
 
@@ -2155,13 +2155,13 @@ List exactly which files should be:
 
 Provide a suggested structure for any new documents.
 
-## DELIVERABLE 12: THE ULTIMATE AETHERIA VISION
+## DELIVERABLE 12: THE ULTIMATE AETHWYRD VISION
 
 Describe what the finished game should feel like.
 
 Explain the ideal player experience from the opening scene through the final story, endgame and post-game.
 
-Describe the systems that will make Aetheria distinctive and memorable.
+Describe the systems that will make Aethwyrd distinctive and memorable.
 
 ---
 
@@ -2240,11 +2240,11 @@ Validate each increment before moving forward.
 
 # FINAL DIRECTIVE
 
-Do not approach Aetheria as a collection of features that needs to become larger.
+Do not approach Aethwyrd as a collection of features that needs to become larger.
 
 Approach it as a world that needs to become more believable, an adventure that needs to become more compelling and a game that needs to become more enjoyable.
 
-Aetheria should offer the excitement of an extraordinary fantasy adventure while giving players the freedom to create their own experiences within it.
+Aethwyrd should offer the excitement of an extraordinary fantasy adventure while giving players the freedom to create their own experiences within it.
 
 The player should care about the people they meet.
 
@@ -2266,7 +2266,7 @@ Most importantly, every major system should contribute to a coherent experience.
 
 **Build a world worth getting lost in. Build characters worth remembering. Build combat worth mastering. Build an adventure worth completing.**
 
-Do not settle for making Aetheria bigger.
+Do not settle for making Aethwyrd bigger.
 
 Make it exceptional.
 
@@ -2274,7 +2274,7 @@ Make it exceptional.
 
 Beyond the master prompt, there are a few concepts I think deserve special attention.
 
-These are potential signature features that could give Aetheria a recognisable identity.
+These are potential signature features that could give Aethwyrd a recognisable identity.
 
 ![Sidequest TGC](https://images.openai.com/static-rsc-4/CbXyBcdF7WJ_3RdAtInXEE9S4_WRoTsRG4yMoBpsAbgs29vSDHHUvju1hwhVzhjjRl3MmyUwdAeH2ikwzPoHVY85BOOJat-ufGAfkI_fBv2We6ESH5Zpq_-mSJ-IbQL6pmMkzyBAWYbHVKFaFqQnUWLeoFPcMBOhfUTMR_LD_matlqeDZFl9qPp0663nT1Ki?purpose=fullsize)
 
@@ -2324,7 +2324,7 @@ Please connect GitHub using the connection prompt. This is the important next st
 
 My recommendation is to make our next deliverable:
 
-AETHERIA — MASTER AUDIT & DEVELOPMENT BLUEPRINT v1.0
+AETHWYRD — MASTER AUDIT & DEVELOPMENT BLUEPRINT v1.0
 
 I want that document to contain actual file references, specific problems, proposed mechanics, technical recommendations, design improvements, missing systems, dependencies and a prioritised implementation roadmap.
 
@@ -2332,4 +2332,4 @@ I also want to preserve the distinction between what you have already created an
 
 The ultimate goal isn't just to have an enormous design document.
 
-It's to make Aetheria a genuinely fantastic game that can realistically be built.
+It's to make Aethwyrd a genuinely fantastic game that can realistically be built.

@@ -1,4 +1,4 @@
-// Project Ascend — squash & stretch for slimes and Charming (Menace 1) monsters.
+// AETHWYRD — squash & stretch for slimes and Charming (Menace 1) monsters.
 // Drives "squash" / "stretch" blend shapes from vertical velocity and landings; falls back to volume-preserving scale.
 using UnityEngine;
 

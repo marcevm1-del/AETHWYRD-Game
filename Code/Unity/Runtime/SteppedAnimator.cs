@@ -1,4 +1,4 @@
-// Project Ascend — stop-motion animation for Dread / Horror monsters (Menace 4–5).
+// AETHWYRD — stop-motion animation for Dread / Horror monsters (Menace 4–5).
 // Evaluates the Animator only at a low frame rate (e.g. 8 or 12 fps), so motion "jumps" between poses.
 // Optional bursts: every few seconds it switches to smooth motion for a moment (Horror), which is more unsettling.
 using UnityEngine;

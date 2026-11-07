@@ -1,4 +1,4 @@
-// Project Ascend — "it never moves while you watch it" (Smiling Scarecrow, Dread/Horror monsters).
+// AETHWYRD — "it never moves while you watch it" (Smiling Scarecrow, Dread/Horror monsters).
 // If the monster is inside the camera view and not hidden behind walls, its agent stops and its animation freezes.
 using UnityEngine;
 using UnityEngine.AI;

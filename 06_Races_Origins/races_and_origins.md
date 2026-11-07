@@ -80,7 +80,7 @@
 - The protagonist remembers their old life and remembers that they died, but cannot recall how. The final day is blurred; earlier memories remain theirs, not a collectible puzzle that the game needs to “solve.”
 - Old-world work offers only small practical perspective and dialogue. It grants no persistent XP, combat, crafting, economy or social-trust multiplier; hidden System access; or exclusive skill, class, job or essential quest route. It cannot make modern engineering instantly rebuild the world.
 - The first old-world memory should be ordinary and sensory—a familiar meal, a work habit, a person’s voice—so the player feels what has been lost without receiving a long Earth exposition dump.
-- New memories surface through situations and optional conversations. They can be warm, painful, funny or inconvenient. The protagonist compares worlds, but the story is about building a life in Aetheria rather than returning to Earth or discovering a secret “true self.”
+- New memories surface through situations and optional conversations. They can be warm, painful, funny or inconvenient. The protagonist compares worlds, but the story is about building a life in Aethwyrd rather than returning to Earth or discovering a secret “true self.”
 - Origin-specific treatment matters: the **Transported** character arrives without a local support network; the **Summoned Hero** is immediately placed inside institutions and public expectations. Both retain old memories, but the pressure of their new lives is different.
 
 #### Memory-to-capability distinction (design proposal)
@@ -89,12 +89,12 @@ Keep four states legible:
 
 1. **Memory:** a sensory or work-related recollection, or something the protagonist notices. It may prompt curiosity but does not establish a fact.
 2. **Hypothesis:** the player may voice or pursue a tentative interpretation (“this resembles…”). Dialogue remains optional and does not dictate personality.
-3. **Verified Aetherian knowledge:** local evidence, Appraisal, the field journal, books, training or an expert confirms, qualifies or disproves the idea. The journal should preserve uncertainty until then.
+3. **Verified Aethwyrdian knowledge:** local evidence, Appraisal, the field journal, books, training or an expert confirms, qualifies or disproves the idea. The journal should preserve uncertainty until then.
 4. **Capability:** reliable action still comes from ordinary class/skill growth, tools, materials, facilities and practice. Earth memory alone cannot perform a repair, treatment, craft or other consequential task.
 
 Use a small, authored number of job-recognition moments: a few high-value beats across the opening, a relevant guild/town scene, and possibly a later companion or side-story beat. Let the player notice, ask, or move on. A job can surface a clue or an alternate approach, but every essential clue and outcome needs another route through observation, Appraisal, a local expert, companion knowledge, exploration or ordinary skills; routes converge on shared outcomes. Avoid a job-specific systemic simulation and do not add quest or NPC lore solely to showcase a background.
 
-Sensory memories should be brief and situated—taste, sound, touch, routine or a remembered voice—with optional presentation and no exposition dump. Revisit the chosen lens later so it remains recognizable in a long story, while other dialogue choices, companions and ordinary approaches preserve replay variety. Validate a vertical slice by checking that players can identify what the memory suggested, what Aetherian evidence verified it, how they could reach the same essential result another way, and which earned capability enabled the action. Also check dialogue agency, clarity of uncertainty, replay variation and offline/local-save integrity.
+Sensory memories should be brief and situated—taste, sound, touch, routine or a remembered voice—with optional presentation and no exposition dump. Revisit the chosen lens later so it remains recognizable in a long story, while other dialogue choices, companions and ordinary approaches preserve replay variety. Validate a vertical slice by checking that players can identify what the memory suggested, what Aethwyrdian evidence verified it, how they could reach the same essential result another way, and which earned capability enabled the action. Also check dialogue agency, clarity of uncertainty, replay variation and offline/local-save integrity.
 
 ### 3.1 Creator Flow
 1. **Your old life:** name, the country you came from (Canon: anywhere on Earth), and old-life memory choices. One primary job plus optional sensory memories is a proposal, not settled canon. Regret selection and a recurring Earth-memory side story are also draft options.
@@ -106,7 +106,7 @@ Sensory memories should be brief and situated—taste, sound, touch, routine or 
 
 ### 3.2 Old-world job examples (draft prompts, not perks)
 
-These are optional dialogue/memory lenses, not a locked roster or progression package. A remembered practice can suggest a question; it never confirms an Aetherian fact or grants a durable advantage.
+These are optional dialogue/memory lenses, not a locked roster or progression package. A remembered practice can suggest a question; it never confirms an Aethwyrdian fact or grants a durable advantage.
 
 | Job memory | Possible first observation or question | Agency and alternate confirmation |
 |---|---|---|
@@ -118,7 +118,7 @@ These are optional dialogue/memory lenses, not a locked roster or progression pa
 | Athlete | Recognizes pacing, balance or a familiar training habit. | Learn movement through practice and class skills; no stamina or traversal bonus. |
 | Otaku | Recalls a genre convention and may choose a light in-character comment. | Other dialogue remains available; no trope multiplier or assumed player-facing fourth wall. |
 | Office worker | Notices a filing or scheduling problem. | Ask a clerk or inspect records; no trade advantage or automatic trust. |
-| Farmer | Recognizes a familiar crop pattern worth comparing. | Consult local growers and observe Aetherian conditions; no faster growth. |
+| Farmer | Recognizes a familiar crop pattern worth comparing. | Consult local growers and observe Aethwyrdian conditions; no faster growth. |
 | Musician | A rhythm or phrase recalls a musical idea. | Learn through local instruments and practice; no class-skill advantage. |
 | Soldier / police | Notices a familiar formation or safety question. | Read the scene, ask local guards or use ordinary combat knowledge; no combat bonus. |
 | Teacher | Wonders how a learner might understand an explanation. | Choose dialogue and help through ordinary play; no accelerated mentee growth or automatic affection. |

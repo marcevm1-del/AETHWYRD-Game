@@ -1,4 +1,4 @@
-// Project Ascend — rig library builder.
+// AETHWYRD — rig library builder.
 // Writes Data/Monsters/rigs.json: 25 shared monster rigs with skeletons, IK and spring chains,
 // hurtboxes, breakable parts, locomotion, physics and animation sets.
 // Usage: node Tools/monster_gen/build_rigs.js     (edit the definitions here, then rerun)

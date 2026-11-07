@@ -4,7 +4,7 @@
 
 ## The player promise
 
-Travel in Aetheria should feel scenic when the world is safe and attentive when the world is dangerous. The player should usually have a reason to continue beyond the quest marker: a silhouette on the horizon, a trace to interpret, an unusual sound, a person who needs help, an ecology clue or a route that may change what they know about a familiar place.
+Travel in Aethwyrd should feel scenic when the world is safe and attentive when the world is dangerous. The player should usually have a reason to continue beyond the quest marker: a silhouette on the horizon, a trace to interpret, an unusual sound, a person who needs help, an ecology clue or a route that may change what they know about a familiar place.
 
 Exploration is not a checklist of icons. It is a relationship between **what the player notices, what they infer and what they choose to pursue**. Guidance can be available without revealing every secret. A player who wants a clear route should be able to use it; a curious player should still find things the interface did not enumerate.
 

@@ -4,7 +4,7 @@
 
 ## The design goal
 
-Aetheria's cultures should be felt before the player reads a codex: how people greet, gather, build, trade, worship, travel, argue, celebrate and respond to danger. A settlement should look as if its residents have reasons to be there. The player should be able to recognize social difference without the game declaring that every individual from a culture behaves identically.
+Aethwyrd's cultures should be felt before the player reads a codex: how people greet, gather, build, trade, worship, travel, argue, celebrate and respond to danger. A settlement should look as if its residents have reasons to be there. The player should be able to recognize social difference without the game declaring that every individual from a culture behaves identically.
 
 The population goal is not to create 2,500 quest givers. It is to create a world where named people can be remembered, revisited and connected to their community, while the camera and authored content focus on the characters who matter now.
 
