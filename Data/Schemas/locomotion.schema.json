@@ -37,32 +37,32 @@
    "properties": {
     "idle": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "walk": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "run": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "sprint": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "air": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "dodge": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     }
    }
@@ -86,57 +86,57 @@
    "properties": {
     "plains": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "forest": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "swamp": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "steppe": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "mountain": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "volcanic": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "tundra": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "desert": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "jungle": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "spirit": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "demon": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     }
    }
@@ -147,27 +147,27 @@
    "properties": {
     "exhausted": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "attacking": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "charging": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "encumbered": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     },
     "wet": {
      "type": "number",
-     "minimum": 0,
+     "exclusiveMinimum": 0,
      "maximum": 3
     }
    }

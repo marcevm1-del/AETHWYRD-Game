@@ -160,6 +160,16 @@ namespace Ascend.EditorTools
             Prim(PrimitiveType.Cube, "Facing", new Vector3(0, 1.45f, 0.33f), new Vector3(0.18f, 0.12f, 0.2f), accent, p.transform, keepCollider: false);
             p.AddComponent<PlayerMotor>();
             p.AddComponent<PlayerCombat>();
+            // Animated placeholder visual (Ring0SceneBuilder.PlayerRig.cs): Animator + Visual rig on the root; the legacy capsule stays but is hidden.
+            AttachPlayerVisual(p, player, accent);
+            foreach (var legacy in new[] { "Body", "Facing" })
+            {
+                var lt = p.transform.Find(legacy);
+                if (lt != null && lt.TryGetComponent<Renderer>(out var lr)) lr.enabled = false;
+            }
+            p.AddComponent<CombatAnimationBridge>();
+            p.AddComponent<FootIK>();
+            p.AddComponent<PlayerAnimationDriver>();
             p.AddComponent<PlayerDefense>();
             p.AddComponent<LockOn>();
             p.AddComponent<PlayerInventory>();

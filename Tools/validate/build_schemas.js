@@ -241,7 +241,7 @@ const SCHEMAS = {
 };
 // --- Player locomotion table (Data/Player/locomotion.json, a singleton object; Wave A1) ---
 {
-  const MULT = { type: 'number', minimum: 0, maximum: 3 };
+  const MULT = { type: 'number', exclusiveMinimum: 0, maximum: 3 };
   const mults = keys => ({ type: 'object', additionalProperties: false, required: keys, properties: Object.fromEntries(keys.map(k => [k, MULT])) });
   const num = (min, max) => ({ type: 'number', minimum: min, maximum: max });
   SCHEMAS.locomotion = {
