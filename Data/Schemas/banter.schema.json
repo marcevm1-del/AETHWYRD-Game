@@ -1,0 +1,57 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Companion banter line",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "companionId",
+  "trigger",
+  "priority",
+  "cooldownSec",
+  "line"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^bnt_[a-z0-9_]+$"
+  },
+  "companionId": {
+   "type": "string",
+   "pattern": "^cmp_[a-z0-9_]+$"
+  },
+  "trigger": {
+   "type": "string",
+   "enum": [
+    "regionArrival",
+    "afterFight",
+    "restStop",
+    "campfire",
+    "lowHealth",
+    "revived",
+    "mounted",
+    "monsterSeen",
+    "questDone",
+    "idle"
+   ]
+  },
+  "priority": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 100
+  },
+  "cooldownSec": {
+   "type": "number",
+   "minimum": 0
+  },
+  "line": {
+   "type": "string",
+   "minLength": 1,
+   "maxLength": 160
+  },
+  "tone": {
+   "type": "string",
+   "pattern": "^[a-z][a-z0-9_]*$"
+  }
+ }
+}

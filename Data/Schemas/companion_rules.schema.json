@@ -1,0 +1,715 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Companion command presets, retreat, revive and downed rules",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "presets",
+  "retreat",
+  "revive",
+  "downed",
+  "relationships"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "relationships": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "maxDeltaPerEvent",
+    "tracks",
+    "romance",
+    "departure",
+    "kaito",
+    "events"
+   ],
+   "properties": {
+    "maxDeltaPerEvent": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 20
+    },
+    "tracks": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "trust",
+      "respect",
+      "closeness",
+      "tension"
+     ],
+     "properties": {
+      "trust": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "start",
+        "stages"
+       ],
+       "properties": {
+        "start": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 100
+        },
+        "stages": {
+         "type": "array",
+         "minItems": 2,
+         "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "id",
+           "min"
+          ],
+          "properties": {
+           "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+           },
+           "min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+           }
+          }
+         }
+        }
+       }
+      },
+      "respect": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "start",
+        "stages"
+       ],
+       "properties": {
+        "start": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 100
+        },
+        "stages": {
+         "type": "array",
+         "minItems": 2,
+         "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "id",
+           "min"
+          ],
+          "properties": {
+           "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+           },
+           "min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+           }
+          }
+         }
+        }
+       }
+      },
+      "closeness": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "start",
+        "stages"
+       ],
+       "properties": {
+        "start": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 100
+        },
+        "stages": {
+         "type": "array",
+         "minItems": 2,
+         "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "id",
+           "min"
+          ],
+          "properties": {
+           "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+           },
+           "min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+           }
+          }
+         }
+        }
+       }
+      },
+      "tension": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "start",
+        "stages"
+       ],
+       "properties": {
+        "start": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 100
+        },
+        "stages": {
+         "type": "array",
+         "minItems": 2,
+         "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "id",
+           "min"
+          ],
+          "properties": {
+           "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+           },
+           "min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+           }
+          }
+         }
+        },
+        "easePerDay": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 10
+        }
+       }
+      }
+     }
+    },
+    "romance": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "minCloseness",
+      "minTrust",
+      "maxTensionExclusive"
+     ],
+     "properties": {
+      "minCloseness": {
+       "type": "string"
+      },
+      "minTrust": {
+       "type": "string"
+      },
+      "maxTensionExclusive": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 100
+      }
+     }
+    },
+    "departure": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "minTension",
+      "requiresForeshadow",
+      "requiresRepairOffered"
+     ],
+     "properties": {
+      "minTension": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 100
+      },
+      "requiresForeshadow": {
+       "type": "boolean",
+       "enum": [
+        true
+       ]
+      },
+      "requiresRepairOffered": {
+       "type": "boolean",
+       "enum": [
+        true
+       ]
+      }
+     }
+    },
+    "kaito": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "start",
+      "states"
+     ],
+     "properties": {
+      "start": {
+       "type": "string",
+       "enum": [
+        "ally",
+        "rival",
+        "fallen"
+       ]
+      },
+      "states": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "ally",
+         "rival",
+         "fallen"
+        ]
+       },
+       "minItems": 3,
+       "maxItems": 3
+      }
+     }
+    },
+    "events": {
+     "type": "object",
+     "minProperties": 1,
+     "propertyNames": {
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "additionalProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "deltas"
+      ],
+      "properties": {
+       "deltas": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+         "trust": {
+          "type": "integer",
+          "minimum": -20,
+          "maximum": 20
+         },
+         "respect": {
+          "type": "integer",
+          "minimum": -20,
+          "maximum": 20
+         },
+         "closeness": {
+          "type": "integer",
+          "minimum": -20,
+          "maximum": 20
+         },
+         "tension": {
+          "type": "integer",
+          "minimum": -20,
+          "maximum": 20
+         }
+        }
+       },
+       "once": {
+        "type": "boolean"
+       },
+       "cooldownDays": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "foreshadow": {
+        "type": "boolean"
+       },
+       "offersRepair": {
+        "type": "boolean"
+       },
+       "repair": {
+        "type": "boolean"
+       }
+      }
+     }
+    }
+   }
+  },
+  "presets": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "Aggressive",
+    "Defensive",
+    "Supportive",
+    "Balanced"
+   ],
+   "properties": {
+    "Aggressive": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "defaultOrder",
+      "leashMult",
+      "followDistanceMult",
+      "retreatHpMult",
+      "reviveEagerness",
+      "assistBias",
+      "skillCostCaution"
+     ],
+     "properties": {
+      "defaultOrder": {
+       "type": "string",
+       "enum": [
+        "Follow",
+        "Hold",
+        "Focus",
+        "Assist"
+       ]
+      },
+      "leashMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "followDistanceMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "retreatHpMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "reviveEagerness": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "assistBias": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "skillCostCaution": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      }
+     }
+    },
+    "Defensive": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "defaultOrder",
+      "leashMult",
+      "followDistanceMult",
+      "retreatHpMult",
+      "reviveEagerness",
+      "assistBias",
+      "skillCostCaution"
+     ],
+     "properties": {
+      "defaultOrder": {
+       "type": "string",
+       "enum": [
+        "Follow",
+        "Hold",
+        "Focus",
+        "Assist"
+       ]
+      },
+      "leashMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "followDistanceMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "retreatHpMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "reviveEagerness": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "assistBias": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "skillCostCaution": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      }
+     }
+    },
+    "Supportive": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "defaultOrder",
+      "leashMult",
+      "followDistanceMult",
+      "retreatHpMult",
+      "reviveEagerness",
+      "assistBias",
+      "skillCostCaution"
+     ],
+     "properties": {
+      "defaultOrder": {
+       "type": "string",
+       "enum": [
+        "Follow",
+        "Hold",
+        "Focus",
+        "Assist"
+       ]
+      },
+      "leashMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "followDistanceMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "retreatHpMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "reviveEagerness": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "assistBias": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "skillCostCaution": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      }
+     }
+    },
+    "Balanced": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "defaultOrder",
+      "leashMult",
+      "followDistanceMult",
+      "retreatHpMult",
+      "reviveEagerness",
+      "assistBias",
+      "skillCostCaution"
+     ],
+     "properties": {
+      "defaultOrder": {
+       "type": "string",
+       "enum": [
+        "Follow",
+        "Hold",
+        "Focus",
+        "Assist"
+       ]
+      },
+      "leashMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "followDistanceMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "retreatHpMult": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "reviveEagerness": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "assistBias": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      },
+      "skillCostCaution": {
+       "type": "number",
+       "exclusiveMinimum": 0,
+       "maximum": 3
+      }
+     }
+    }
+   }
+  },
+  "retreat": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "lowHpFraction",
+    "hysteresis",
+    "recoverHpFraction",
+    "mortalBondsHpMult",
+    "needsSafePathWhenPlayerDowned"
+   ],
+   "properties": {
+    "lowHpFraction": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "hysteresis": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "recoverHpFraction": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "mortalBondsHpMult": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 3
+    },
+    "needsSafePathWhenPlayerDowned": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    }
+   }
+  },
+  "revive": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reviveRangeM",
+    "reviveCastSec",
+    "interruptible",
+    "cooldownSec",
+    "healFractionOnRevive",
+    "rareItemsRequireConsent"
+   ],
+   "properties": {
+    "reviveRangeM": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 20
+    },
+    "reviveCastSec": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 30
+    },
+    "interruptible": {
+     "type": "boolean"
+    },
+    "cooldownSec": {
+     "type": "number",
+     "minimum": 0
+    },
+    "healFractionOnRevive": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 1
+    },
+    "rareItemsRequireConsent": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    }
+   }
+  },
+  "downed": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "gravelyWoundedRecoverySec",
+    "recoverHpFractionAfterWounded",
+    "mortalBonds"
+   ],
+   "properties": {
+    "gravelyWoundedRecoverySec": {
+     "type": "number",
+     "exclusiveMinimum": 0
+    },
+    "recoverHpFractionAfterWounded": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 1
+    },
+    "mortalBonds": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "defaultEnabled",
+      "deathRequiresLethalBlowWhileDowned",
+      "timerCanKill",
+      "pathingCanKill"
+     ],
+     "properties": {
+      "defaultEnabled": {
+       "type": "boolean",
+       "enum": [
+        false
+       ]
+      },
+      "deathRequiresLethalBlowWhileDowned": {
+       "type": "boolean",
+       "enum": [
+        true
+       ]
+      },
+      "timerCanKill": {
+       "type": "boolean",
+       "enum": [
+        false
+       ]
+      },
+      "pathingCanKill": {
+       "type": "boolean",
+       "enum": [
+        false
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}

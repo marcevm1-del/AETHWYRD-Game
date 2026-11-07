@@ -367,6 +367,105 @@ const SCHEMAS = {
     }
   };
 }
+// --- Companion roster, banter and rules (Wave C; Data/Companions/*.json) ---
+{
+  const PERSONALITY = ['brave', 'cautious', 'curious', 'loyal', 'proud', 'gentle', 'playful', 'stoic', 'greedy', 'serene'];
+  const ROLES = ['Vanguard', 'Guardian', 'Skirmisher', 'Ranger', 'Arcanist', 'Mender', 'Tamer', 'Specialist'];
+  const PRESETS = ['Aggressive', 'Defensive', 'Supportive', 'Balanced'];
+  const SLOTS = ['weapon', 'armor', 'accessory', 'charm'];
+  const TRIGGERS = ['regionArrival', 'afterFight', 'restStop', 'campfire', 'lowHealth', 'revived', 'mounted', 'monsterSeen', 'questDone', 'idle'];
+  SCHEMAS.companion = {
+    title: 'Companion roster row', type: 'object', additionalProperties: false,
+    required: ['id', 'name', 'kind', 'race', 'personalityTags', 'roleTags', 'preferredRole', 'presetDefault', 'romanceable', 'adult', 'equipmentSlots', 'rideable', 'partyRole', 'sourceDoc'],
+    properties: {
+      id: id('cmp_'), name: { type: 'string', minLength: 1 }, kind: { type: 'string', enum: ['companion', 'childhoodFriend'] },
+      npcId: id('npc_'), race: { type: 'string', minLength: 1 },
+      personalityTags: { type: 'array', maxItems: 4, items: { type: 'string', enum: PERSONALITY } },
+      roleTags: { type: 'array', minItems: 1, maxItems: 2, items: { type: 'string', enum: ROLES } },
+      preferredRole: { type: 'string', enum: ROLES }, presetDefault: { type: 'string', enum: PRESETS },
+      romanceable: { type: 'boolean' }, adult: { type: 'boolean' }, redeemableArc: { type: 'boolean' },
+      equipmentSlots: { type: 'array', minItems: 1, maxItems: 4, items: { type: 'string', enum: SLOTS } },
+      rideable: { type: 'boolean', enum: [false] },
+      partyRole: { type: 'string', minLength: 1 }, sourceDoc: { type: 'string', minLength: 1 },
+      stub: { type: 'boolean' }, note: { type: 'string' }
+    }
+  };
+  SCHEMAS.banter = {
+    title: 'Companion banter line', type: 'object', additionalProperties: false,
+    required: ['id', 'companionId', 'trigger', 'priority', 'cooldownSec', 'line'],
+    properties: {
+      id: id('bnt_'), companionId: id('cmp_'), trigger: { type: 'string', enum: TRIGGERS },
+      priority: { type: 'integer', minimum: 0, maximum: 100 }, cooldownSec: { type: 'number', minimum: 0 },
+      line: { type: 'string', minLength: 1, maxLength: 160 }, tone: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }
+    }
+  };
+  const mult = { type: 'number', exclusiveMinimum: 0, maximum: 3 };
+  const frac = { type: 'number', minimum: 0, maximum: 1 };
+  const preset = { type: 'object', additionalProperties: false,
+    required: ['defaultOrder', 'leashMult', 'followDistanceMult', 'retreatHpMult', 'reviveEagerness', 'assistBias', 'skillCostCaution'],
+    properties: { defaultOrder: { type: 'string', enum: ['Follow', 'Hold', 'Focus', 'Assist'] }, leashMult: mult, followDistanceMult: mult,
+      retreatHpMult: mult, reviveEagerness: mult, assistBias: mult, skillCostCaution: mult } };
+  const TRACKS = ['trust', 'respect', 'closeness', 'tension'];
+  const pct = { type: 'integer', minimum: 0, maximum: 100 };
+  const stages = { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'min'], properties: { id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, min: pct } } };
+  const track = (extra) => ({ type: 'object', additionalProperties: false, required: ['start', 'stages'], properties: { start: pct, stages, ...extra } });
+  const REL = { type: 'object', additionalProperties: false, required: ['maxDeltaPerEvent', 'tracks', 'romance', 'departure', 'kaito', 'events'],
+    properties: {
+      maxDeltaPerEvent: { type: 'integer', minimum: 1, maximum: 20 },
+      tracks: { type: 'object', additionalProperties: false, required: TRACKS, properties: { trust: track({}), respect: track({}), closeness: track({}), tension: track({ easePerDay: { type: 'integer', minimum: 0, maximum: 10 } }) } },
+      romance: { type: 'object', additionalProperties: false, required: ['minCloseness', 'minTrust', 'maxTensionExclusive'], properties: { minCloseness: { type: 'string' }, minTrust: { type: 'string' }, maxTensionExclusive: { type: 'integer', minimum: 1, maximum: 100 } } },
+      departure: { type: 'object', additionalProperties: false, required: ['minTension', 'requiresForeshadow', 'requiresRepairOffered'], properties: { minTension: { type: 'integer', minimum: 1, maximum: 100 }, requiresForeshadow: { type: 'boolean', enum: [true] }, requiresRepairOffered: { type: 'boolean', enum: [true] } } },
+      kaito: { type: 'object', additionalProperties: false, required: ['start', 'states'], properties: { start: { type: 'string', enum: ['ally', 'rival', 'fallen'] }, states: { type: 'array', items: { type: 'string', enum: ['ally', 'rival', 'fallen'] }, minItems: 3, maxItems: 3 } } },
+      events: { type: 'object', minProperties: 1, propertyNames: { pattern: '^[a-z][a-z0-9_]*$' }, additionalProperties: { type: 'object', additionalProperties: false, required: ['deltas'],
+        properties: { deltas: { type: 'object', additionalProperties: false, properties: Object.fromEntries(TRACKS.map(t => [t, { type: 'integer', minimum: -20, maximum: 20 }])) },
+          once: { type: 'boolean' }, cooldownDays: { type: 'integer', minimum: 1 }, foreshadow: { type: 'boolean' }, offersRepair: { type: 'boolean' }, repair: { type: 'boolean' } } } }
+    } };
+  SCHEMAS.companion_rules = {
+    title: 'Companion command presets, retreat, revive and downed rules', type: 'object', additionalProperties: false,
+    required: ['version', 'presets', 'retreat', 'revive', 'downed', 'relationships'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' }, relationships: REL,
+      presets: { type: 'object', additionalProperties: false, required: PRESETS, properties: Object.fromEntries(PRESETS.map(p => [p, preset])) },
+      retreat: { type: 'object', additionalProperties: false, required: ['lowHpFraction', 'hysteresis', 'recoverHpFraction', 'mortalBondsHpMult', 'needsSafePathWhenPlayerDowned'],
+        properties: { lowHpFraction: frac, hysteresis: frac, recoverHpFraction: frac, mortalBondsHpMult: mult, needsSafePathWhenPlayerDowned: { type: 'boolean', enum: [true] } } },
+      revive: { type: 'object', additionalProperties: false, required: ['reviveRangeM', 'reviveCastSec', 'interruptible', 'cooldownSec', 'healFractionOnRevive', 'rareItemsRequireConsent'],
+        properties: { reviveRangeM: { type: 'number', exclusiveMinimum: 0, maximum: 20 }, reviveCastSec: { type: 'number', minimum: 0, maximum: 30 }, interruptible: { type: 'boolean' },
+          cooldownSec: { type: 'number', minimum: 0 }, healFractionOnRevive: { type: 'number', exclusiveMinimum: 0, maximum: 1 }, rareItemsRequireConsent: { type: 'boolean', enum: [true] } } },
+      downed: { type: 'object', additionalProperties: false, required: ['gravelyWoundedRecoverySec', 'recoverHpFractionAfterWounded', 'mortalBonds'],
+        properties: { gravelyWoundedRecoverySec: { type: 'number', exclusiveMinimum: 0 }, recoverHpFractionAfterWounded: { type: 'number', exclusiveMinimum: 0, maximum: 1 },
+          mortalBonds: { type: 'object', additionalProperties: false, required: ['defaultEnabled', 'deathRequiresLethalBlowWhileDowned', 'timerCanKill', 'pathingCanKill'],
+            properties: { defaultEnabled: { type: 'boolean', enum: [false] }, deathRequiresLethalBlowWhileDowned: { type: 'boolean', enum: [true] },
+              timerCanKill: { type: 'boolean', enum: [false] }, pathingCanKill: { type: 'boolean', enum: [false] } } } } }
+    }
+  };
+}
+{
+  const mult = { type: 'number', exclusiveMinimum: 0, maximum: 3 };
+  const TERR = ['plains', 'forest', 'swamp', 'steppe', 'mountain', 'volcanic', 'tundra', 'desert', 'jungle', 'spirit', 'demon'];
+  const num = { type: 'number', exclusiveMinimum: 0 };
+  SCHEMAS.mounts = {
+    title: 'Ground mounts (Wave C; speed is a placeholder pending user decision)', type: 'object', additionalProperties: false,
+    required: ['version', 'speedMps', 'exhaustedWalkFraction', 'condition', 'families', 'mountedCombat', 'knockedOutNotKilled'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      speedMps: { type: 'object', additionalProperties: false, required: ['value', 'placeholder', 'note'],
+        properties: { value: num, placeholder: { type: 'boolean' }, note: { type: 'string', minLength: 1 } } },
+      exhaustedWalkFraction: { type: 'number', exclusiveMinimum: 0, maximum: 1 },
+      condition: { type: 'object', additionalProperties: mult },
+      knockedOutNotKilled: { type: 'boolean', enum: [true] },
+      families: { type: 'object', minProperties: 1, additionalProperties: { type: 'object', additionalProperties: false,
+        required: ['label', 'speedMult', 'terrain', 'stamina', 'carryBonus', 'unlockRank', 'knockoutOnly', 'species'],
+        properties: { label: { type: 'string' }, speedMult: mult, carryBonus: { type: 'number', minimum: 0 },
+          unlockRank: { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S'] }, knockoutOnly: { type: 'boolean', enum: [true] },
+          terrain: { type: 'object', additionalProperties: false, required: TERR, properties: Object.fromEntries(TERR.map(t => [t, mult])) },
+          stamina: { type: 'object', additionalProperties: false, required: ['max', 'sprintDrainPerSec', 'regenPerSec', 'exhaustedBelow', 'recoverTo'],
+            properties: { max: num, sprintDrainPerSec: num, regenPerSec: num, exhaustedBelow: { type: 'number', minimum: 0 }, recoverTo: num } },
+          species: { type: 'array', minItems: 1, items: { type: 'string', pattern: '^mon_' } } } } },
+      mountedCombat: { type: 'object', additionalProperties: false, required: ['bannedSkillTags', 'meleeReachCapM', 'dismountOnStagger', 'damageMult', 'maxChainHits', 'noMountInterior'],
+        properties: { bannedSkillTags: { type: 'array', items: { type: 'string' } }, meleeReachCapM: num, dismountOnStagger: { type: 'boolean', enum: [true] },
+          damageMult: { type: 'number', exclusiveMinimum: 0, maximum: 1.5 }, maxChainHits: { type: 'integer', minimum: 1 }, noMountInterior: { type: 'boolean', enum: [true] } } }
+    } };
+}
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }
