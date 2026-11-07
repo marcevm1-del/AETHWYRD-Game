@@ -81,7 +81,7 @@ static class WorldScaleTests
         Assert.Equal((15, 10), s.TileCount(built: true), "10 km tiles built today");
         Assert.Near(10.24, s.TileKm(), 0, "proposed tile");
         Assert.Near(10.0, s.TileKm(built: true), 0, "built tile");
-        Assert.True(s.TileSizeIsPlaceholder, "10.24 km is flagged as awaiting the user's decision");
+        Assert.True(!s.TileSizeIsPlaceholder, "10.24 km was decided 2026-11-07 (Canon section 6 WF9)");
     }
 
     public static void APointFallsInTheTileThatStartsBeforeIt()

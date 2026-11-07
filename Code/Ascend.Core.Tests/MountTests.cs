@@ -16,11 +16,11 @@ static class MountTests
         Assert.Near(10.0 * t.Families["horse"].SpeedMult * t.Families["horse"].Terrain["plains"], t.Speed("horse", "plains"), 1e-9, "horse on plains");
     }
 
-    public static void PlaceholderFlagIsTrueAndSpeedIsTen()
+    public static void SpeedIsSettledAtTen()
     {
         var t = Load();
-        Assert.True(t.SpeedMps.Placeholder, "speed must stay flagged as a placeholder");
-        Assert.Near(10.0, t.SpeedMps.Value, 1e-9, "placeholder speed");
+        Assert.True(!t.SpeedMps.Placeholder, "speed was settled 2026-11-07 (Canon section 6, Mount speed)");
+        Assert.Near(10.0, t.SpeedMps.Value, 1e-9, "settled speed");
     }
 
     public static void TerrainSuitabilityFollowsTheFamilies()

@@ -16,10 +16,12 @@ const { spawnSync } = require('child_process');
 const RANK_ORDER = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
 const rankVal = r => { const m = /^([A-Z]+)([+-]?)$/.exec(r || ''); return m ? RANK_ORDER.indexOf(m[1]) * 3 + (m[2] === '+' ? 1 : m[2] === '-' ? -1 : 0) : NaN; };
 // Surface regions the graph is allowed to leave unreachable (each becomes a warning, anything else is an error).
+const STRICT_BAND_RANK = false;
 const KNOWN_UNREACHABLE = {
-  reg_kitsune_isles: 'no sailed leg or border in the data (the Naming Voyage is the only sea leg)',
-  reg_sky_archipelago: 'it floats; Canon bars flying mounts, so no walkable or sailed way exists'
 };
+// Decided 2026-11-07 (Canon section 6 WF3): the Sky Archipelago is not on the graph; Act IV reaches it by a story event (Zephiel).
+// It is an accepted exception, not a finding. If a route is ever added, remove it from here.
+const STORY_REACHED = { reg_sky_archipelago: 'it floats; flight and teleport are abilities only (Canon section 4), so the story event, not a route, reaches it' };
 
 function run(ctx) {
   const { DATA, load, check, schema, err, regions } = ctx;
@@ -87,7 +89,8 @@ function run(ctx) {
       const seen = new Set([g.source.startRegion]); const st = [g.source.startRegion];
       while (st.length) { const c = st.pop(); for (const n of adj[c]) if (!seen.has(n)) { seen.add(n); st.push(n); } }
       for (const id of nodeIds) {
-        if (seen.has(id)) { if (KNOWN_UNREACHABLE[id]) W('other', `${id} is now reachable: remove it from KNOWN_UNREACHABLE in graph_checks.js`); continue; }
+        if (!seen.has(id) && STORY_REACHED[id]) continue;
+        if (seen.has(id)) { if (STORY_REACHED[id]) W('other', `${id} is now reachable: remove it from STORY_REACHED in graph_checks.js`); if (KNOWN_UNREACHABLE[id]) W('other', `${id} is now reachable: remove it from KNOWN_UNREACHABLE in graph_checks.js`); continue; }
         if (KNOWN_UNREACHABLE[id]) W('unreachable', `${id} cannot be reached from ${g.source.startRegion}: ${KNOWN_UNREACHABLE[id]} (finding, regions.json untouched)`);
         else err(id, `not reachable from ${g.source.startRegion} by road, border or sea: a new orphan region`);
       }
@@ -138,7 +141,9 @@ function run(ctx) {
     // decade rank vs band rank: findings, not errors (world.md and regions.json disagree)
     for (const d of lab.decades) {
       const band = bandOf(d.floors[1]);
-      if (band && rankVal(d.rankMax) > rankVal(band.rankMax))
+      // Decided 2026-11-07 (Canon section 6 WF5): the band row is the licence range, the floor rank a guide to its hardest floors.
+      // The overlap is accepted, not a finding. Set STRICT_BAND_RANK to list it again.
+      if (STRICT_BAND_RANK && band && rankVal(d.rankMax) > rankVal(band.rankMax))
         W('bandRank', `floors ${d.floors[0]}-${d.floors[1]} (${d.biome}) run up to rank ${d.rankMax} in world.md, above the ${band.id} band's regions.json rankMax ${band.rankMax}`);
     }
     // stairs

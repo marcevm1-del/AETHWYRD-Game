@@ -509,7 +509,7 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
         if (sp.sizeMeters < 1.2) err(c.file, `${fk}: species ${id} is too small to ride`);
       }
     }
-    if (obj.speedMps.value !== 10 || obj.speedMps.placeholder !== true) err(c.file, 'speedMps must stay the 10 m/s placeholder (placeholder true) until the user decides');
+    if (obj.speedMps.value !== 10 || obj.speedMps.placeholder !== false) err(c.file, 'speedMps is settled at 10 m/s (placeholder false, decided 2026-11-07, Canon section 6 Mount speed)');
   }
   if (name === 'locomotion' && obj.state && obj.baseSpeed) {
     // blend thresholds {0, walk, run, sprint} must strictly ascend

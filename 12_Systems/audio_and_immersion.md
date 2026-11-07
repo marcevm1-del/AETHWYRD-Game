@@ -84,7 +84,7 @@ A `PhotoSession` is a pure overlay. It holds no `SaveGame` and no clock, so it c
 
 ## 7. Open decisions (the user's call)
 
-- **Amount of voice acting** (Canon §1). Nothing in this wave assumes any. The dialogue volume bus and subtitles work either way.
+- **Amount of voice acting** (Canon §1, decided 2026-11-07): the System has a voice and a few short voiced key moments; there is no full voice acting and no lip-sync pipeline. Every line stays subtitled, speaker names stay on, and the dialogue bus (default on, adjustable to silent) carries the System voice and the key moments.
 - **Game title** (placeholder AETHWYRD). Event names do not contain it.
 
 ## 8. Skipped on purpose
@@ -98,4 +98,4 @@ Added as rows in Canon §6; none edits a locked row.
 2. **Music options:** a no-combat-music option and a reduced-intensity option are always available, and one state owns the score at a time.
 3. **Photo mode contract:** time-of-day and weather overrides are session-only and never change the save or the in-game clock; photo mode is closed in combat, cutscenes, siege battles and dialogue; poses come from a teen-rating allow-list.
 4. **Accessibility floor:** telegraph shapes always on, three colorblind palettes, reduced-flash cap of 0.25, speaker names always shown, a hold-or-toggle choice for every hold action, and safe defaults for older saves.
-5. **Audio buses:** master, music, effects, ambience, dialogue and companion-callout volumes; the dialogue bus stays silent until the user decides on voice.
+5. **Audio buses:** master, music, effects, ambience, dialogue and companion-callout volumes; the dialogue bus carries the System voice and the short voiced key moments (decided 2026-11-07), is on by default and can be set to silent.

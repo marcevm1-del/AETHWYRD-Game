@@ -64,6 +64,17 @@ for (const c of pm.corridors) for (const leg of c.legs) {
   });
 }
 
+// decided sea legs (Canon section 6 WF3, decided 2026-11-07): the Kitsune Isles touch no land, so a sailed leg
+// Hoshizora City -> Fox Shrine Isle joins them to the mainland. Length = straight line between the two anchors (atlas unchanged).
+for (const [from, to] of [['Hoshizora City', 'Fox Shrine Isle']]) {
+  const sa = settlementByName[from], sb = settlementByName[to];
+  if (!sa || !sb) throw new Error(`decided sea leg ${from} -> ${to} has an unknown settlement`);
+  edges.push({
+    id: `edge_sea_${sa.region.slice(4)}_${sb.region.slice(4)}`, a: sa.region, b: sb.region, kind: 'sea',
+    km: Math.round(Math.hypot(sa.x - sb.x, sa.y - sb.y) * 10) / 10, kmBasis: 'anchor_straight_line', foot: false
+  });
+}
+
 // borders from the region raster
 const legend = pm.regions.legend;
 const KEY = '0123456789abcdefghijklmnopqrstuvwxyzABC';

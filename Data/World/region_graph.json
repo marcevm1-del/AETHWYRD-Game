@@ -568,6 +568,15 @@
    "corridorId": "coastal_weather_and_navigation"
   },
   {
+   "id": "edge_sea_hoshizora_kitsune_isles",
+   "a": "reg_hoshizora",
+   "b": "reg_kitsune_isles",
+   "kind": "sea",
+   "km": 22.6,
+   "kmBasis": "anchor_straight_line",
+   "foot": false
+  },
+  {
    "id": "edge_border_aldmere_fanghold",
    "a": "reg_aldmere",
    "b": "reg_fanghold",
