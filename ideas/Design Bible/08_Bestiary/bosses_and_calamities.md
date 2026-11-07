@@ -20,7 +20,7 @@
 | **Mother Webcrawler** | D | Silkhollow Cave | Webs on floor slow you; burn to clear | Spider Queen's Silk |
 | **Baron Ashgrave** (Death Knight) | C | Greyhollow Keep | Summons his old guard; P2 mounted charge | Ashgrave's Oathblade |
 | **The Drowned Choir** (3 Sirens) | C+ | Saltwater Grotto | Sing in harmony; silence one to break the song | Choir Pearl |
-| **Mycelia, the Spore Lord** | B | Fungal Deep | Spores = confusion; destroy 4 hearts across the cave | Spore Crown |
+| **Mycelia, the Spore Lord** | B+ | Fungal Deep | Spores = confusion; destroy 4 hearts across the cave | Spore Crown |
 | **Vault Warden Ozymarch** | B+ | Valdrisian Vault | Rewinds time on itself; break the clock-core | Chronoshard |
 | **Sylphara, Queen of Winds** | A | Spire of Gales | Arena becomes floating platforms | Windqueen's Veil |
 | **Bloodmoon Countess Velaria** | A+ | Crimson Manor | Ballroom fight; dance-floor tiles; mirror clones | Velaria's Rose |
