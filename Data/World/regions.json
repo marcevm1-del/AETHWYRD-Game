@@ -1592,7 +1592,7 @@
     86
    ],
    "gate": true,
-   "depth": 2
+   "depth": 3
   }
  },
  {
@@ -1669,7 +1669,7 @@
     40
    ],
    "gate": true,
-   "depth": 3
+   "depth": 4
   }
  },
  {
@@ -1699,7 +1699,7 @@
     60
    ],
    "gate": true,
-   "depth": 4
+   "depth": 5
   }
  },
  {

@@ -397,7 +397,7 @@ Sub-zones: Port Goldmere (Consortium), Saltwater Grotto, Coral Kingdom of Ys, Sh
 | 101–110 | Hall of Heroes (hidden) | SS+ |
 | 111–120 | The Loom (secret) | EX |
 
-- **Safe-floor towns** every 10 floors (underground merchants, a dwarven tavern on floor 30, a ghost market on 40).
+- **Safe-floor towns** on floors 30 and 40 only (underground merchants, a dwarven tavern on floor 30, a ghost market on 40); the deep band has camps and no towns, and guardian floors from 50 have camps (decided 2026-11-07, Canon §6 WF4; follows the gazetteer).
 - Each floor mixes **handcrafted rooms with procedural layouts**.
 - **Labyrinth Records**: personal best times, deepest floor (local leaderboard + Steam achievements).
 

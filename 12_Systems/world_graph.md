@@ -30,50 +30,21 @@ River crossings are a property of a road edge (`riverCrossings`, `widestCrossing
 
 **Totals today:** 99 edges (10 road, 3 pass, 1 sea, 85 border, of which 4 touch under 1 km and are not walkable).
 
-## 3. Findings (data left as it is)
+## 3. Findings, now decided (2026-11-07)
 
-| Finding | Detail | Proposal |
-|---|---|---|
-| Kitsune Isles has no way in | No border, no sailed leg | Canon §6 WF3 |
-| Sky Archipelago has no way in | It floats; no flying mounts | Canon §6 WF3 |
-| 38 of 40 regions form one continent | every other region is reachable from Whisperwood | n/a |
-| "40 regions" vs 49 rows | 40 surface, 8 underworld, 1 post-game | Canon §6 WF2 |
-| Underworld `map.depth` is 1, 2, 2, 3, 4 | world.md numbers the layers 1-5 | Canon §6 WF7 |
-| Floors 31-40 reach rank B and 81-90 reach SS | above their band rows in regions.json | Canon §6 WF5 |
+Decided by Claude under delegated creative control; the user may overrule. Each line is the Canon §6 row that records it.
 
-The validator prints these as `graph findings 7`, **separate from the 28 map warnings**, which did not change. A new orphan region is an error; the two known ones are warnings, and the list (`KNOWN_UNREACHABLE` in `graph_checks.js`) warns when one becomes reachable.
-
-## 4. The Great Labyrinth
-
-`labyrinth.json` is the one list of the 120 floors (v10: "do not create a second one"). Canon: 120 floors in 3 depth bands, `reg_labyrinth_upper` (1-40), `_deep` (41-90), `_abyss` (91-120); halls reset weekly; falling returns the player to the last checkpoint.
-
-| Property | Where it comes from |
+| Finding | Decision |
 |---|---|
-| 12 biome decades with rank ranges | `world.md` table (Stone maze ... The Loom) |
-| A guardian floor on every tenth floor | gazetteer, world.md |
-| Safe towns on 30 and 40; camps on guardian floors 50-100 (50-90 inferred); none elsewhere | gazetteer (WF4) |
-| Landmarks: the brewers' tavern (30), the ghost market (40), the Sunken City (55-58), the Inverted Forest (66), the upside-down library (72), the Rememberer's Camp (100), the Door at One-Twenty (120) | gazetteer landmarks and hooks |
-| The Salvage Warren (`dng_salvage_warren`) on floors 3-4 | `dungeons.json`, cross-checked |
-| Licence: the stair into floor 41 needs Rank B, into 91 Rank SS | gazetteer ("licensed"), regions.json rankMin (WF8) |
-| Hidden floors 101-110, secret floors 111-120 behind hidden stairs 100-101 and 110-111 | world.md (WF6) |
-| Back-doors on 30 / 60 / 90 leading to Underworld layers 3 / 4 / 5 | world.md; the pairing is inferred (WF6) |
+| Kitsune Isles had no way in | **Fixed (WF3):** a sailed leg Hoshizora City to Fox Shrine Isle (22.6 km straight line) is added in `Tools/atlas/build_region_graph.js`. `regions.json` and the atlas are untouched. |
+| Sky Archipelago has no way in | **Accepted (WF3):** it stays off the graph; Act IV reaches it by a story event (Zephiel). Listed as `STORY_REACHED` in `graph_checks.js`, not a finding. |
+| "40 regions" vs 49 rows | **Wording note (WF2):** 40 surface, 8 underworld, 1 post-game; Canon §2 World row now says so. |
+| Underworld `map.depth` was 1, 2, 2, 3, 4 | **Fixed (WF7):** `regions.json` map.depth is now 1-5, matching world.md. A data-only change; nothing reads it for placement. |
+| Floors 31-40 reach rank B and 81-90 reach SS | **Accepted (WF5):** the band row is the licence range, the floor rank a guide to its hardest floors. Not a finding (`STRICT_BAND_RANK` lists it again). |
 
-**Rules** (`Labyrinth`): you may only go from floor N to N+1 (no skipping), not below 120, not past a licence stair under the required guild rank, and not through a hidden stair that has not been found in place. Going up one floor is always allowed. Falling and the checkpoint rule are dungeon rules (`Dungeons.cs`), not stair rules.
+The validator prints `graph findings 0`, **separate from the 28 map warnings**. A new orphan region is an error; a story-reached region that becomes reachable is a warning.
 
-**Discovery** (`LabyrinthKnowledge`) uses the project's vocabulary exactly: floors and stairs are **Unknown / Heard / Visited**; a rumour pencils a hidden stair but only finding it in place opens it (the dungeon clue rule); hearing never downgrades a visit. Floor 1 starts Heard, like the Labyrinth on the world map (`world_tuning.json map.startHeard`). `AccessOf` tells a UI whether a floor is Unknown, Heard, Reachable or Visited, so it never shows 120 floors as open. `SyncToMap` inks or pencils the band's region on the world map.
-
-**Save:** `SaveGame.Labyrinth` (`LabyrinthSave`: floor and stair statuses by id). It is null in older saves; `SaveRules.Upgrade` fills it and loading it gives the new-game state. `SaveGame.CurrentVersion` stays 1 because the field only adds.
-
-## 5. The Underworld layers
-
-`underworld.json` lists the five layers in `world.md` order with their rank band, ring, surface gate and the surface region that owns the gate in the atlas raster (checked by the validator): Umbravel under Sunscar (C-B), the Hollow Sea under Goldmere Coast (B-A), Aurumdeep under Zarvan (A), the Maw under the Calamity Steppe (S-SS, Weave Pressure), the Root of the World under Whisperwood (SS-EX). Layers are regions, so their Unknown / Heard / Visited state is the existing `MapKnowledge`; there is no second save field. `UnderworldRegistry` gives order, `CanEnter` by rank and the Labyrinth back-door floor of a layer. The other ~55 entrances in `world.md` have no places in the data and are not invented.
-
-## 6. The coordinate helper
-
-`WorldScale` converts map units, km, Unity metres and terrain tiles. All numbers are read from `world_scale.json`, which restates `physical_map.json` (1 unit = 1 km, 150 x 100) and the sector builder's tile size; the validator fails the build if they drift apart.
-
-- **Axes:** map x east, map y south; Unity metres east (X) and north (Z), so Z = -(y - originY) x 1,000.
-- **Placeholders awaiting the user (Canon §6 WF9):** terrain tiles of 10.24 km (the tiles built today are 10 km; `TileKm(built: true)`) and the Unity origin (the map's north-west corner today; one value to rebase to Brindlewick).
+- **Scale (settled, Canon §6 WF9):** 1 map unit = 1 km, terrain tiles of 10.24 km (the tiles built today are 10 km and are rebuilt when streaming is built; `TileKm(built: true)`), Unity origin at the map's north-west corner (one value to rebase to Brindlewick later).
 - **Tiles:** tile (tx, ty) starts at tx x tileKm km east and ty x tileKm km south of the north-west corner, whatever the origin; 15 x 10 tiles at either size. Points outside the map have no tile.
 
 ## 7. Out of scope here

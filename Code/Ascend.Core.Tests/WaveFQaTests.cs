@@ -89,7 +89,8 @@ static class WaveFQaTests
                 Assert.True(G.Edges.Any(e => e.Kind == "sea" && e.CorridorId == c.GetProperty("id").GetString() && System.Math.Abs(e.Km - km) < 1e-9), "sea leg of " + c.GetProperty("id").GetString());
             }
         Assert.True(legs > 0, "there is at least one sea leg (not vacuous)");
-        Assert.Equal(legs, G.Edges.Count(e => e.Kind == "sea"), "no extra sea edges");
+        Assert.Equal(legs + 1, G.Edges.Count(e => e.Kind == "sea"), "no extra sea edges besides the decided Hoshizora - Fox Shrine Isle leg (WF3)");
+        Assert.True(G.Edges.Any(e => e.Kind == "sea" && e.CorridorId == null && e.A == "reg_hoshizora" && e.B == "reg_kitsune_isles"), "the decided leg is there");
     }
 
     public static void NoRoadEdgeIsDuplicatedAndBordersAreNotRoads()

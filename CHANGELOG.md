@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-07 — Canon section 6 proposals decided (delegated creative control)
+- Decided by Claude under the user's "do it all, stop asking me"; each decision is written in its proposal row and the user may overrule any of them. Rows decided: ground mounts, mount speed (10 m/s settled), aquatic mounts (left out), companion relationships, presets and questions (defaults), single rock stem, music options, photo mode, accessibility floor, audio buses, the four dungeon rows, W1a to W7e, WF1 to WF11, and the superseded "Physical feature names", "Region data vs the relief" and "Brindlewick's region" rows.
+- Locked row edit, Section 1 Voice. Old: `English first; amount of voice acting TBD by the user`. New: `English first. The System has a voice, plus a few short voiced key moments; no full voice acting and no lip-sync pipeline (decided 2026-11-07 ...)`.
+- Locked row edit, Section 2 World. Old: `... Canonical list: Data/World/regions.json`. New: same, plus `(49 rows: 40 surface, 8 underworld = 5 layers + 3 Labyrinth bands, 1 post-game)`. Numbers unchanged.
+- Settled scale: 1 map unit = 1 km, 10.24 km terrain tiles, origin at the north-west corner (`world_scale.json` placeholders are now "decided").
+- Data: sea leg Hoshizora City to Fox Shrine Isle added to the region graph (Kitsune Isles reachable); Sky Archipelago is a documented story-reached exception; Underworld `map.depth` in `regions.json` is now 1-5; the Labyrinth rank overlap is accepted. Validator: graph findings 0. Docs corrected: world.md safe floors, Mycelia B+, dragon wing ratio 1.6x, audio voice lines.
+- Decided but not yet applied (need a map-builder or lore pass): road and feature names (W1, W2a), region rewording (W3), settlement moves (W7a to W7c). The 28 map warnings are unchanged.
+
 ## 2026-11-07 — Renamed to AETHWYRD (user-chosen title and world name)
 - The title is **AETHWYRD**, the world **Aethwyrd**, the adjective **Aethwyrdian**. Replaced Aetheria/Aetherian/Aertheria and the working title "Project Ascend" in docs, data text, UI text, tool headers and metadata. Report: `13_Production/aethwyrd_migration_report.md`.
 - Canon §1 Title row (user-authorised edit). Old: `Open ("Project Ascend" placeholder). **Ask the user on/after 2026-11-01**`. New: `**AETHWYRD** (chosen by the user, 2026-11-07; the world is Aethwyrd, the adjective is Aethwyrdian; "Project Ascend" was only the working title)`.

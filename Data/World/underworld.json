@@ -4,8 +4,8 @@
  "layers": [
   { "layer": 1, "regionId": "reg_umbravel", "name": "Umbravel", "rankMin": "C", "rankMax": "B", "ring": 5, "gate": { "at": [70, 73], "surfaceRegionId": "reg_sunscar" }, "regionsJsonDepth": 1 },
   { "layer": 2, "regionId": "reg_hollow_sea", "name": "The Hollow Sea", "rankMin": "B", "rankMax": "A", "ring": 6, "gate": { "at": [104, 68], "surfaceRegionId": "reg_goldmere_coast" }, "regionsJsonDepth": 2 },
-  { "layer": 3, "regionId": "reg_aurumdeep", "name": "Aurumdeep, the Sunken Gold Kingdom", "rankMin": "A", "rankMax": "A", "ring": 7, "gate": { "at": [88, 86], "surfaceRegionId": "reg_zarvan" }, "regionsJsonDepth": 2, "labyrinthBackDoor": "bd_030" },
-  { "layer": 4, "regionId": "reg_the_maw", "name": "The Maw (Great Descent)", "rankMin": "S", "rankMax": "SS", "ring": 8, "gate": { "at": [16, 40], "surfaceRegionId": "reg_calamity_steppe" }, "regionsJsonDepth": 3, "labyrinthBackDoor": "bd_060", "weavePressure": true },
-  { "layer": 5, "regionId": "reg_root_of_the_world", "name": "The Root of the World", "rankMin": "SS", "rankMax": "EX", "ring": 8, "gate": { "at": [75, 60], "surfaceRegionId": "reg_whisperwood" }, "regionsJsonDepth": 4, "labyrinthBackDoor": "bd_090" }
+  { "layer": 3, "regionId": "reg_aurumdeep", "name": "Aurumdeep, the Sunken Gold Kingdom", "rankMin": "A", "rankMax": "A", "ring": 7, "gate": { "at": [88, 86], "surfaceRegionId": "reg_zarvan" }, "regionsJsonDepth": 3, "labyrinthBackDoor": "bd_030" },
+  { "layer": 4, "regionId": "reg_the_maw", "name": "The Maw (Great Descent)", "rankMin": "S", "rankMax": "SS", "ring": 8, "gate": { "at": [16, 40], "surfaceRegionId": "reg_calamity_steppe" }, "regionsJsonDepth": 4, "labyrinthBackDoor": "bd_060", "weavePressure": true },
+  { "layer": 5, "regionId": "reg_root_of_the_world", "name": "The Root of the World", "rankMin": "SS", "rankMax": "EX", "ring": 8, "gate": { "at": [75, 60], "surfaceRegionId": "reg_whisperwood" }, "regionsJsonDepth": 5, "labyrinthBackDoor": "bd_090" }
  ]
 }

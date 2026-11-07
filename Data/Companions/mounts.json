@@ -1,10 +1,10 @@
 {
  "version": 1,
- "notes": "Wave C ground mounts. All numbers are proposals (Canon section 6 rows 149-151). Ground families only: no flying, celestial, dragon or aquatic mounts.",
+ "notes": "Wave C ground mounts. Ground roster and speed decided 2026-11-07 (Canon section 6, Ground mounts); the other numbers remain tunable. Ground families only: no flying, celestial, dragon or aquatic mounts.",
  "speedMps": {
   "value": 10,
-  "placeholder": true,
-  "note": "proposed in 13_Production/world_upgrade_plan.md, NOT approved (pending user decision)"
+  "placeholder": false,
+  "note": "settled 2026-11-07 by Claude under delegated creative control (Canon section 6, Mount speed); the user may overrule. Base 10 m/s, about 1.5x run speed."
  },
  "exhaustedWalkFraction": 0.3385,
  "condition": {

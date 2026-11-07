@@ -71,17 +71,17 @@ static class RegionGraphTests
         Assert.True(G.Data.Portals.Count == 0, "no portal edges: Canon defines no portal or fast-travel place yet");
     }
 
-    public static void TheOnlyRegionsWithNoWayInAreKitsuneIslesAndTheSkyArchipelago()
+    public static void TheOnlyRegionWithNoWayInIsTheSkyArchipelago()
     {
-        // Findings, not fixes: regions.json is not edited. Kitsune Isles has no sailed leg in the data and the
-        // Sky Archipelago floats (Canon bars flying mounts, so nothing walks there).
+        // Decided 2026-11-07 (Canon section 6 WF3): a sailed leg Hoshizora City -> Fox Shrine Isle joins the Kitsune Isles; the
+        // Sky Archipelago floats and is reached by a story event, so it stays off the graph.
         var orphans = G.Orphans().OrderBy(x => x).ToList();
-        Assert.True(orphans.SequenceEqual(new[] { "reg_kitsune_isles", "reg_sky_archipelago" }), "orphans: " + string.Join(",", orphans));
+        Assert.True(orphans.SequenceEqual(new[] { "reg_sky_archipelago" }), "orphans: " + string.Join(",", orphans));
         var unreachable = G.Unreachable().OrderBy(x => x).ToList();
         Assert.True(unreachable.SequenceEqual(orphans), "everything else is reachable from the start region");
         Assert.Equal("reg_whisperwood", G.StartRegion, "starts in Whisperwood (Canon)");
-        Assert.Equal(2, G.Components().Count(c => c.Count == 1), "two lone regions");
-        Assert.Equal(38, G.Components()[0].Count, "one 38-region continent");
+        Assert.Equal(1, G.Components().Count(c => c.Count == 1), "one lone region");
+        Assert.Equal(39, G.Components()[0].Count, "one 39-region continent (the Isles are sailed to)");
     }
 
     public static void ShortestPathByRoadAddsUpTheRoadLengths()
