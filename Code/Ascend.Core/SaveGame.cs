@@ -63,6 +63,8 @@ namespace Ascend.Core
         public Dictionary<string, SiegeSave> Sieges { get; set; }
         /// <summary>The player's map: inked and pencilled regions, explored local cells (null in older saves: a fresh map).</summary>
         public MapSave Map { get; set; }
+        /// <summary>Dungeon rooms and clues the player knows: Unknown / Heard / Visited (null in older saves: nothing known; Upgrade fills it).</summary>
+        public DungeonSave Dungeons { get; set; }
     }
 
     public sealed class SiegeSave
@@ -109,6 +111,8 @@ namespace Ascend.Core
             s.GatherNodes ??= new Dictionary<string, double>();
             s.RestBuffs ??= new List<RestBuff>();
             s.InnNights ??= new Dictionary<string, int>();
+            s.Dungeons ??= new DungeonSave();
+            s.Dungeons.Dungeons ??= new Dictionary<string, DungeonProgressSave>();
             s.Version = SaveGame.CurrentVersion;
             return s;
         }

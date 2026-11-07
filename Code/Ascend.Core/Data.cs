@@ -224,6 +224,10 @@ namespace Ascend.Core
         public QualityRules Quality { get; }
         /// <summary>Data/Items/life_skills.json (empty when not loaded).</summary>
         public LifeSkillFile LifeSkills { get; }
+        /// <summary>Data/World/dungeons.json (empty when not loaded).</summary>
+        public IReadOnlyDictionary<string, DungeonData> Dungeons { get; }
+        /// <summary>Data/World/puzzles.json (empty when not loaded).</summary>
+        public PuzzleFile Puzzles { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -234,7 +238,8 @@ namespace Ascend.Core
             IEnumerable<WeeklyQuestData> weeklyBoard = null, IEnumerable<InnData> inns = null, MotionFile motion = null,
             IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null, BossFile bosses = null,
             ReactionFile reactions = null, BossWeakPointFile weakPoints = null,
-            QualityRules quality = null, LifeSkillFile lifeSkills = null)
+            QualityRules quality = null, LifeSkillFile lifeSkills = null,
+            IEnumerable<DungeonData> dungeons = null, PuzzleFile puzzles = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
@@ -247,6 +252,9 @@ namespace Ascend.Core
             BossWeakPoints = weakPoints ?? new BossWeakPointFile();
             Quality = quality ?? new QualityRules();
             LifeSkills = lifeSkills ?? new LifeSkillFile();
+            Puzzles = puzzles ?? new PuzzleFile();
+            Index(Puzzles.Puzzles, p => p.Id, "puzzle");
+            Dungeons = Index(dungeons, x => x.Id, "dungeon");
             Index(BossWeakPoints.Bosses, b => b.SpeciesId, "boss weak point set");
             Index(Recipes.Recipes, r => r.Id, "recipe");
             WeeklyQuests = Index(weeklyBoard, q => q.Id, "weekly quest");
