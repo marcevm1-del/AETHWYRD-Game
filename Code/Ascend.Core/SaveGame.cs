@@ -65,6 +65,8 @@ namespace Ascend.Core
         public MapSave Map { get; set; }
         /// <summary>Dungeon rooms and clues the player knows: Unknown / Heard / Visited (null in older saves: nothing known; Upgrade fills it).</summary>
         public DungeonSave Dungeons { get; set; }
+        /// <summary>Accessibility and presentation settings (null in older saves: safe defaults; Upgrade fills and clamps it).</summary>
+        public AccessibilitySettings Accessibility { get; set; }
     }
 
     public sealed class SiegeSave
@@ -113,6 +115,7 @@ namespace Ascend.Core
             s.InnNights ??= new Dictionary<string, int>();
             s.Dungeons ??= new DungeonSave();
             s.Dungeons.Dungeons ??= new Dictionary<string, DungeonProgressSave>();
+            s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;
         }

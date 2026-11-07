@@ -527,6 +527,7 @@ const SCHEMAS = {
         } } }
     } };
 }
+require('./audio_schemas')(SCHEMAS); // Wave D
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

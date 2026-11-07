@@ -1,0 +1,37 @@
+{
+ "version": 1,
+ "notes": "Photo mode data (Wave D). Everything here is a session-only override: it never touches the save or the in-game clock (Canon: in-game-time continuity). Expressions are deferred with facial animation. Read by Code/Ascend.Core/PhotoMode.cs.",
+ "tuning": { "fovMin": 20, "fovMax": 90, "fovDefault": 60, "hourStep": 0.25, "filterIntensityDefault": 1.0 },
+ "blockedTags": ["suggestive", "undress", "gore", "weapon_at_camera", "kneel_to_camera", "lying_pose_close"],
+ "blockedWhen": ["combat", "cutscene", "siege_battle", "dialogue"],
+ "hideElements": ["hud", "nameplates", "compass", "quest_tracker", "companion_icons", "damage_numbers"],
+ "poses": [
+  { "id": "pose_stand_relaxed", "name": "Relaxed stance", "target": "player", "tags": ["standing", "relaxed"] },
+  { "id": "pose_hero_ready", "name": "Ready for anything", "target": "player", "tags": ["standing", "heroic"] },
+  { "id": "pose_wave", "name": "Friendly wave", "target": "player", "tags": ["standing", "wave"] },
+  { "id": "pose_cheer", "name": "Cheer", "target": "player", "tags": ["standing", "cheer"] },
+  { "id": "pose_look_horizon", "name": "Gaze at the horizon", "target": "player", "tags": ["standing", "relaxed", "point"] },
+  { "id": "pose_sit_rest", "name": "Sit and rest", "target": "player", "tags": ["sitting", "relaxed"] },
+  { "id": "pose_stretch", "name": "Morning stretch", "target": "player", "tags": ["standing", "stretch"] },
+  { "id": "pose_guild_salute", "name": "Guild salute", "target": "player", "tags": ["standing", "salute"] },
+  { "id": "pose_sheathe", "name": "Sheathe the blade", "target": "player", "tags": ["standing", "sheathe"] },
+  { "id": "pose_companion_cheer", "name": "Companion cheer", "target": "companion", "tags": ["standing", "cheer"] },
+  { "id": "pose_companion_guard", "name": "Companion on guard", "target": "companion", "tags": ["standing", "guard"] },
+  { "id": "pose_shoulder_to_shoulder", "name": "Shoulder to shoulder", "target": "both", "tags": ["standing", "group", "companion_pair"] },
+  { "id": "pose_campfire_sit", "name": "Around the campfire", "target": "both", "tags": ["sitting", "group", "relaxed", "companion_pair"] }
+ ],
+ "filters": [
+  { "id": "filter_none", "name": "None" },
+  { "id": "filter_anime_cel", "name": "Anime cel" },
+  { "id": "filter_watercolor", "name": "Watercolor" },
+  { "id": "filter_sketch", "name": "Sketch" },
+  { "id": "filter_golden_hour", "name": "Golden hour" },
+  { "id": "filter_moonlit", "name": "Moonlit" }
+ ],
+ "frames": [
+  { "id": "frame_none", "name": "No frame" },
+  { "id": "frame_parchment", "name": "Parchment" },
+  { "id": "frame_guild_card", "name": "Guild card" },
+  { "id": "frame_journal_page", "name": "Journal page" }
+ ]
+}
