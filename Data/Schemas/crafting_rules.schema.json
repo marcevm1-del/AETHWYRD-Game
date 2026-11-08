@@ -236,7 +236,9 @@
     "tannery",
     "hearth",
     "brewery",
-    "jewelers_bench"
+    "jewelers_bench",
+    "rune_anvil",
+    "enchanting_table"
    ],
    "properties": {
     "campfire": {
@@ -317,6 +319,28 @@
      ]
     },
     "jewelers_bench": {
+     "type": "string",
+     "enum": [
+      "poor",
+      "normal",
+      "fine",
+      "superior",
+      "masterwork",
+      "legendary"
+     ]
+    },
+    "rune_anvil": {
+     "type": "string",
+     "enum": [
+      "poor",
+      "normal",
+      "fine",
+      "superior",
+      "masterwork",
+      "legendary"
+     ]
+    },
+    "enchanting_table": {
      "type": "string",
      "enum": [
       "poor",

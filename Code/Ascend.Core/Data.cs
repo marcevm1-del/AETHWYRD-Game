@@ -228,6 +228,8 @@ namespace Ascend.Core
         public IReadOnlyDictionary<string, DungeonData> Dungeons { get; }
         /// <summary>Data/World/puzzles.json (empty when not loaded).</summary>
         public PuzzleFile Puzzles { get; }
+        /// <summary>Data/Items/gear_rules.json: sockets, runes, rune words, enchantments, assemblies (empty when not loaded).</summary>
+        public GearRules Gear { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -239,7 +241,7 @@ namespace Ascend.Core
             IEnumerable<ShopData> shops = null, RecipeFile recipes = null, GuildRankData guildRanks = null, GatheringFile gathering = null, BossFile bosses = null,
             ReactionFile reactions = null, BossWeakPointFile weakPoints = null,
             QualityRules quality = null, LifeSkillFile lifeSkills = null,
-            IEnumerable<DungeonData> dungeons = null, PuzzleFile puzzles = null)
+            IEnumerable<DungeonData> dungeons = null, PuzzleFile puzzles = null, GearRules gear = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
@@ -252,6 +254,7 @@ namespace Ascend.Core
             BossWeakPoints = weakPoints ?? new BossWeakPointFile();
             Quality = quality ?? new QualityRules();
             LifeSkills = lifeSkills ?? new LifeSkillFile();
+            Gear = gear ?? new GearRules();
             Puzzles = puzzles ?? new PuzzleFile();
             Index(Puzzles.Puzzles, p => p.Id, "puzzle");
             Dungeons = Index(dungeons, x => x.Id, "dungeon");

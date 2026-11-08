@@ -93,6 +93,8 @@
   "tannery": "masterwork",
   "hearth": "masterwork",
   "brewery": "masterwork",
-  "jewelers_bench": "masterwork"
+  "jewelers_bench": "masterwork",
+  "rune_anvil": "masterwork",
+  "enchanting_table": "masterwork"
  }
 }

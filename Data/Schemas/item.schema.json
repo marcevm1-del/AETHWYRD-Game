@@ -27,7 +27,10 @@
     "accessory",
     "consumable",
     "key",
-    "relic"
+    "relic",
+    "rune",
+    "scroll",
+    "part"
    ]
   },
   "rank": {

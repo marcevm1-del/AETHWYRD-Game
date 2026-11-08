@@ -83,16 +83,16 @@
   {
    "id": "enchanting",
    "name": "Enchanting",
-   "kind": "deferred",
-   "station": null,
-   "notes": "Enchanting table; separate wave."
+   "kind": "craft",
+   "station": "enchanting_table",
+   "notes": "Scrolls at the enchanting table (Fennick Reed's bench); scrolls are applied to gear at the same table (12_Systems/gear_and_runes.md)."
   },
   {
    "id": "runecraft",
    "name": "Runecraft",
-   "kind": "deferred",
-   "station": null,
-   "notes": "Khazdur runes at the Iron Hold rune anvil; separate wave."
+   "kind": "craft",
+   "station": "rune_anvil",
+   "notes": "Khazdur runes at the rune anvil (Torvald Stonebeard, Iron Hold tradition); runes are socketed at the same anvil (12_Systems/gear_and_runes.md)."
   },
   {
    "id": "jewelcrafting",

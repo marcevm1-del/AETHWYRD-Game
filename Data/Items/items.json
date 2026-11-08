@@ -805,5 +805,168 @@
    "seconds": 600
   },
   "flavor": "A pinch of brimstone for a warm chest and a bright mind. Sip slowly."
+ },
+ {
+  "id": "itm_rune_ember",
+  "name": "Ember Rune",
+  "category": "rune",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 30,
+  "flavor": "A Khazdur glyph for heat, cut small enough to hold in a palm."
+ },
+ {
+  "id": "itm_rune_tide",
+  "name": "Tide Rune",
+  "category": "rune",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 30,
+  "flavor": "Cool to the touch even beside a forge."
+ },
+ {
+  "id": "itm_rune_stone",
+  "name": "Stone Rune",
+  "category": "rune",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 30,
+  "flavor": "Heavy for its size. Dwarves say it remembers being a mountain."
+ },
+ {
+  "id": "itm_rune_anvil",
+  "name": "Anvil Rune",
+  "category": "rune",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 32,
+  "flavor": "The first glyph an apprentice learns to strike."
+ },
+ {
+  "id": "itm_rune_hearth",
+  "name": "Hearth Rune",
+  "category": "rune",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 30,
+  "flavor": "Warm, and faintly smells of bread."
+ },
+ {
+  "id": "itm_rune_gale",
+  "name": "Gale Rune",
+  "category": "rune",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 55,
+  "flavor": "It hums when the wind turns."
+ },
+ {
+  "id": "itm_scroll_emberbrand",
+  "name": "Scroll of Emberbrand",
+  "category": "scroll",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 40,
+  "flavor": "Ink that glows like a banked coal."
+ },
+ {
+  "id": "itm_scroll_wardweave",
+  "name": "Scroll of Wardweave",
+  "category": "scroll",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 40,
+  "flavor": "A tight knot of lines, meant to be worn, not read."
+ },
+ {
+  "id": "itm_scroll_vitality",
+  "name": "Scroll of Vitality",
+  "category": "scroll",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 36,
+  "flavor": "Smells of crushed herbs."
+ },
+ {
+  "id": "itm_scroll_nightstep",
+  "name": "Scroll of Nightstep",
+  "category": "scroll",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 70,
+  "flavor": "The ink only shows in shadow."
+ },
+ {
+  "id": "itm_scroll_stormthread",
+  "name": "Scroll of Stormthread",
+  "category": "scroll",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 75,
+  "flavor": "The paper tingles when you hold it."
+ },
+ {
+  "id": "itm_part_scrap_blade",
+  "name": "Scrap Blade",
+  "category": "part",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 8,
+  "flavor": "A blade blank hammered out of salvage."
+ },
+ {
+  "id": "itm_part_iron_blade",
+  "name": "Iron Blade",
+  "category": "part",
+  "rank": "E",
+  "rarity": "Common",
+  "value": 24,
+  "flavor": "Clean steel, waiting for a hilt."
+ },
+ {
+  "id": "itm_part_pelt_hilt",
+  "name": "Pelt-Wrapped Hilt",
+  "category": "part",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 6,
+  "flavor": "Wolf pelt, wound tight and stitched."
+ },
+ {
+  "id": "itm_part_fang_hilt",
+  "name": "Fang-Capped Hilt",
+  "category": "part",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 9,
+  "flavor": "A hilt with a fang for a pommel."
+ },
+ {
+  "id": "itm_tempered_shortsword",
+  "name": "Tempered Shortsword",
+  "category": "weapon",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "slot": "main_hand",
+  "weaponType": "sword",
+  "value": 36,
+  "stats": {
+   "atk": 11
+  },
+  "flavor": "Two good parts, fitted by someone who cared."
+ },
+ {
+  "id": "itm_ironwrought_longsword",
+  "name": "Ironwrought Longsword",
+  "category": "weapon",
+  "rank": "E",
+  "rarity": "Rare",
+  "slot": "main_hand",
+  "weaponType": "sword",
+  "value": 150,
+  "stats": {
+   "atk": 20
+  },
+  "flavor": "Balanced on the finger, the way Torvald checks them."
  }
 ]

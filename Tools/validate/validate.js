@@ -417,7 +417,8 @@ const SINGLETONS = {
   crafting_rules: { file: 'Items/crafting_rules.json', schema: 'crafting_rules' },
   life_skills: { file: 'Items/life_skills.json', schema: 'life_skills' },
   companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' },
-  mounts: { file: 'Companions/mounts.json', schema: 'mounts' }
+  mounts: { file: 'Companions/mounts.json', schema: 'mounts' },
+  gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -459,6 +460,44 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       const rl = load('Items/crafting_rules.json');
       for (const s of obj.skills) if (s.station && !(s.station in (rl.stationQualityCap || {}))) err(s.id, `station "${s.station}" has no stationQualityCap`);
     }
+  }
+  if (name === 'gear_rules' && obj.runes) {
+    // Small and additive (09_Equipment/item_and_economy_design.md 5.4): per-source caps keep fittings from becoming mandatory.
+    const CAP = { atk: 6, matk: 6, def: 6, mdef: 6, hp: 40, crit: 0.03 };
+    const rf = load('Items/recipes.json');
+    const outputs = new Set(rf.recipes.map(r => r.output.itemId));
+    const statCheck = (who, st, mult = 1) => { for (const [k, v] of Object.entries(st)) if (v > CAP[k] * mult) err(who, `stat ${k} ${v} is above the cap ${CAP[k] * mult}`); };
+    const runeIds = obj.runes.map(r => r.id);
+    if (new Set(runeIds).size !== runeIds.length) err(c.file, 'duplicate rune');
+    for (const r of obj.runes) {
+      const it = ITEMS_BY_ID[r.id];
+      if (!it) err(r.id, 'rune item does not exist'); else if (it.category !== 'rune') err(r.id, `item category is ${it.category}, expected rune`);
+      if (!outputs.has(r.id)) err(r.id, 'no recipe makes this rune');
+      statCheck(r.id, r.stats);
+    }
+    for (const w of obj.runeWords) {
+      for (const rid of w.runes) if (!runeIds.includes(rid)) err(w.id, `rune ${rid} is not defined`);
+      statCheck(w.id, w.stats, 1.5);
+      for (const cat of w.fits) if (!w.runes.every(rid => (obj.runes.find(r => r.id === rid) || { fits: [] }).fits.includes(cat))) err(w.id, `not every rune fits ${cat}`);
+    }
+    const seqs = obj.runeWords.map(w => w.runes.join());
+    if (new Set(seqs).size !== seqs.length) err(c.file, 'two rune words share one rune sequence');
+    const encItems = obj.enchantments.map(e => e.itemId);
+    if (new Set(encItems).size !== encItems.length) err(c.file, 'two enchantments share a scroll');
+    for (const e of obj.enchantments) {
+      const it = ITEMS_BY_ID[e.itemId];
+      if (!it) err(e.id, 'scroll item does not exist'); else if (it.category !== 'scroll') err(e.id, `item category is ${it.category}, expected scroll`);
+      if (!outputs.has(e.itemId)) err(e.id, 'no recipe makes this scroll');
+      statCheck(e.id, e.stats, 1.5);
+      if (e.element && !e.fits.every(f => f === 'weapon')) err(e.id, 'only weapon enchantments apply an element');
+    }
+    for (const a of obj.assemblies) {
+      const out = ITEMS_BY_ID[a.output];
+      if (!out || out.category !== 'weapon') err(a.id, 'output must be a weapon item');
+      for (const p of [...a.blades, ...a.hilts]) { const it = ITEMS_BY_ID[p]; if (!it || it.category !== 'part') err(a.id, `${p} is not a part item`); else if (!outputs.has(p)) err(a.id, `no recipe makes ${p}`); }
+    }
+    for (const [k, st] of Object.entries(obj.stations)) if (!(st in rf.stations)) err(c.file, `stations.${k}: "${st}" is not a recipe station`);
+    if (/durab|repair|decay|break|destroy|fail/i.test(JSON.stringify(Object.keys(obj)))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
   }
   if (name === 'companion_rules' && obj.presets) {
     const b = obj.presets.Balanced;

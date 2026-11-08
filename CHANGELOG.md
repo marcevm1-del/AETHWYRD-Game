@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-08 — Part 2, step 1: runes, enchanting and modular weapons (finishes upgrade v6's equipment half)
+- Sockets by rarity (+1 on Masterwork), one enchantment slot per piece of gear, 6 runes, 4 rune words, 5 enchantment scrolls, weapon-only blade+hilt assembly. Runecraft and Enchanting are now craft skills with stations (`rune_anvil`, `enchanting_table`). No durability, repair or random loss. `Equipment` now reads quality keys and fittings; `SaveGame.GearFittings` defaults safely in old saves.
+- Data `Data/Items/gear_rules.json` with schema and validator checks; docs `12_Systems/gear_and_runes.md`; audit `13_Production/gear_v6b_audit.md`; decision G1 in Canon section 6. 14 new Core tests.
+
 ## 2026-11-07 — Living world, Canon-safe subset of upgrade v4
 - Optional NPC schedule resolver (never gates access; essential tiers always available), a calendar-driven event director for caravans and small wandering encounters (in-game days, cooldowns, caps, four safe effect kinds), and a discovery journal in the Unknown / Heard / Visited style. New save field `LivingWorld` defaults safely for older saves.
 - Data `Data/World/living_world.json` with schema and validator checks; docs `12_Systems/living_world.md`; audit `13_Production/living_world_v4_audit.md`. 21 new Core tests (682 total). Not built: faction war or politics, dynamic economy, world simulation, procedural quests, settlement change, anything in `Game/`.

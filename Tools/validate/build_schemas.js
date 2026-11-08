@@ -106,7 +106,7 @@ const SCHEMAS = {
     title: 'Item', type: 'object', additionalProperties: false, required: ['id', 'name', 'category'],
     properties: {
       id: id('itm_'), name: { type: 'string', minLength: 1 },
-      category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic'] },
+      category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic', 'rune', 'scroll', 'part'] },
       rank: RL, rarity: { type: 'string', enum: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic', 'Divine'] },
       slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, setId: { type: 'string' },
       meal: { type: 'object', additionalProperties: false, required: ['effects', 'seconds'], description: 'cooking buff (Well Fed slot)', properties: {
@@ -316,7 +316,7 @@ const SCHEMAS = {
   const RANKS9 = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'];
   const R9 = { type: 'string', enum: RANKS9 };
   const byKeys = (keys, val) => ({ type: 'object', additionalProperties: false, required: keys, properties: Object.fromEntries(keys.map(k => [k, val])) });
-  const STATIONS = ['campfire', 'forge', 'alembic', 'loom', 'tannery', 'hearth', 'brewery', 'jewelers_bench'];
+  const STATIONS = ['campfire', 'forge', 'alembic', 'loom', 'tannery', 'hearth', 'brewery', 'jewelers_bench', 'rune_anvil', 'enchanting_table'];
   const SKILL_ID = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
   SCHEMAS.crafting_rules = {
     title: 'Crafting quality rules', type: 'object', additionalProperties: false,
@@ -364,6 +364,33 @@ const SCHEMAS = {
       output: ITEM_COUNT, inputs: { type: 'array', minItems: 1, items: ITEM_COUNT },
       learnFrom: { type: 'object', additionalProperties: false, required: ['npcId', 'price'], properties: { npcId: id('npc_'), price: { type: 'integer', minimum: 0 } } },
       lifeRank: R9, xp: { type: 'integer', minimum: 1 }, attuneItem: id('itm_')
+    }
+  };
+}
+// --- Gear customisation: sockets, runes, rune words, enchantments, assemblies (Step 1 of part 2; Data/Items/gear_rules.json) ---
+{
+  const CATS = { type: 'array', minItems: 1, uniqueItems: true, items: { type: 'string', enum: ['weapon', 'armor', 'accessory'] } };
+  const STATS = { type: 'object', minProperties: 1, additionalProperties: false, properties: Object.fromEntries(['atk', 'matk', 'def', 'mdef', 'hp', 'crit'].map(k => [k, { type: 'number', exclusiveMinimum: 0 }])) };
+  const RARITIES = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic', 'Divine'];
+  SCHEMAS.gear_rules = {
+    title: 'Gear rules (sockets, runes, enchantments, assemblies)', type: 'object', additionalProperties: false,
+    required: ['notes', 'sockets', 'enchantSlots', 'stations', 'runes', 'runeWords', 'enchantments', 'assemblies'],
+    properties: {
+      notes: { type: 'string' },
+      sockets: { type: 'object', additionalProperties: false, required: ['byRarity', 'masterworkBonus', 'max'], properties: {
+        byRarity: { type: 'object', additionalProperties: false, required: RARITIES, properties: Object.fromEntries(RARITIES.map(r => [r, { type: 'integer', minimum: 0, maximum: 3 }])) },
+        masterworkBonus: { type: 'integer', minimum: 0, maximum: 1 }, max: { type: 'integer', minimum: 1, maximum: 3 } } },
+      enchantSlots: { type: 'integer', minimum: 1, maximum: 1 },
+      stations: { type: 'object', additionalProperties: false, required: ['socket', 'enchant', 'assemble'], properties: { socket: { type: 'string' }, enchant: { type: 'string' }, assemble: { type: 'string' } } },
+      runes: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'fits', 'stats'], properties: { id: id('itm_rune_'), fits: CATS, stats: STATS } } },
+      runeWords: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'runes', 'fits', 'stats'], properties: {
+        id: id('word_'), name: { type: 'string', minLength: 1 }, runes: { type: 'array', minItems: 2, maxItems: 3, items: id('itm_rune_') }, fits: CATS, stats: STATS } } },
+      enchantments: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'itemId', 'fits', 'stats'], properties: {
+        id: id('enc_'), name: { type: 'string', minLength: 1 }, itemId: id('itm_scroll_'), fits: CATS, stats: STATS, element: EL } } },
+      assemblies: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'skill', 'lifeRank', 'output', 'blades', 'hilts'], properties: {
+        id: id('asm_'), name: { type: 'string', minLength: 1 }, skill: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, lifeRank: { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'] },
+        xp: { type: 'integer', minimum: 1 }, output: id('itm_'),
+        blades: { type: 'array', minItems: 1, items: id('itm_part_') }, hilts: { type: 'array', minItems: 1, items: id('itm_part_') } } } }
     }
   };
 }

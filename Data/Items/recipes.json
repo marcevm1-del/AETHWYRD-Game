@@ -7,7 +7,9 @@
   "loom": "npc_ines_valbuena",
   "hearth": "npc_marta_gruel",
   "brewery": "npc_marta_gruel",
-  "campfire": null
+  "campfire": null,
+  "rune_anvil": "npc_torvald_stonebeard",
+  "enchanting_table": "npc_fennick_reed"
  },
  "recipes": [
   {
@@ -859,6 +861,356 @@
    "learnFrom": {
     "npcId": "npc_marta_gruel",
     "price": 80
+   }
+  },
+  {
+   "id": "rcp_part_scrap_blade",
+   "name": "Scrap Blade",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_part_scrap_blade",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_scrap_metal",
+     "count": 3
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_scrap_metal"
+  },
+  {
+   "id": "rcp_part_iron_blade",
+   "name": "Iron Blade",
+   "skill": "blacksmithing",
+   "station": "forge",
+   "output": {
+    "itemId": "itm_part_iron_blade",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_crude_iron",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_scrap_metal",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_crude_iron",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 60
+   }
+  },
+  {
+   "id": "rcp_part_pelt_hilt",
+   "name": "Pelt-Wrapped Hilt",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_part_pelt_hilt",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 2
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_pelt"
+  },
+  {
+   "id": "rcp_part_fang_hilt",
+   "name": "Fang-Capped Hilt",
+   "skill": "leatherworking",
+   "station": "tannery",
+   "output": {
+    "itemId": "itm_part_fang_hilt",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_pelt",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_fang",
+     "count": 2
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_fang"
+  },
+  {
+   "id": "rcp_rune_ember",
+   "name": "Ember Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_ember",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_soul_ember",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_rune_plate"
+  },
+  {
+   "id": "rcp_rune_tide",
+   "name": "Tide Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_tide",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_fish_scale",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_rune_plate"
+  },
+  {
+   "id": "rcp_rune_stone",
+   "name": "Stone Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_stone",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_scrap_metal",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_rune_plate"
+  },
+  {
+   "id": "rcp_rune_anvil",
+   "name": "Anvil Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_anvil",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_gear",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_rune_plate"
+  },
+  {
+   "id": "rcp_rune_hearth",
+   "name": "Hearth Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_hearth",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_candle_stub",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_rune_plate"
+  },
+  {
+   "id": "rcp_rune_gale",
+   "name": "Gale Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_gale",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_night_shard",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_feather",
+     "count": 2
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_feather",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 90
+   }
+  },
+  {
+   "id": "rcp_scroll_emberbrand",
+   "name": "Scroll of Emberbrand",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_emberbrand",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_soul_ember",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_ink_sac"
+  },
+  {
+   "id": "rcp_scroll_wardweave",
+   "name": "Scroll of Wardweave",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_wardweave",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_silk",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_ink_sac"
+  },
+  {
+   "id": "rcp_scroll_vitality",
+   "name": "Scroll of Vitality",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_vitality",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_healing_herb",
+     "count": 2
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_mat_ink_sac"
+  },
+  {
+   "id": "rcp_scroll_nightstep",
+   "name": "Scroll of Nightstep",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_nightstep",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_night_shard",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_feather",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_ink_sac",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 80
+   }
+  },
+  {
+   "id": "rcp_scroll_stormthread",
+   "name": "Scroll of Stormthread",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_stormthread",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_stinger",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_elemental_essence",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_ink_sac",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 100
    }
   }
  ]

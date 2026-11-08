@@ -53,9 +53,9 @@ static class RealCraftingTests
     static string Bad(List<string> list) => string.Join("; ", list);
 
     // 0: the data shape the other tests lean on.
-    public static void ThereAreThirtyTwoRecipesAndEveryReferenceResolves()
+    public static void EveryRecipeReferenceResolves()
     {
-        Assert.Equal(32, All.Count(), "recipe count");
+        Assert.True(All.Count() >= 32, "the 32 Wave B recipes are still there");
         var ls = new LifeSkills(Repo.Db.LifeSkills);
         var bad = new List<string>();
         foreach (var r in All)
