@@ -172,16 +172,27 @@ namespace Ascend.Core
         public void Load(IEnumerable<PartnerData> partners)
         {
             _all.Clear();
-            foreach (var p in partners ?? Enumerable.Empty<PartnerData>())
+            var list = (partners ?? Enumerable.Empty<PartnerData>()).Where(x => x != null).ToList();
+            // Saved ids are kept when unique; only missing or duplicate ids get a fresh one, which skips every id the save already uses.
+            var taken = new HashSet<string>();
+            var firstOwner = new Dictionary<string, PartnerData>();
+            foreach (var x in list) if (!string.IsNullOrEmpty(x.Id) && !firstOwner.ContainsKey(x.Id)) { firstOwner[x.Id] = x; taken.Add(x.Id); }
+            foreach (var p in list)
             {
+                bool keep = !string.IsNullOrEmpty(p.Id) && firstOwner[p.Id] == p;
                 var q = new PartnerData
                 {
-                    Id = string.IsNullOrEmpty(p.Id) || _all.Any(x => x.Id == p.Id) ? null : p.Id,
+                    Id = keep ? p.Id : null,
                     SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners,
                     Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved, Marking = p.Marking
                 };
                 q.AtHome = p.AtHome && !q.Active;
-                q.Id = q.Id ?? NextId();
+                if (q.Id == null)
+                {
+                    string fresh; int n = 1;
+                    do { fresh = "ptn_" + (n++).ToString("000"); } while (taken.Contains(fresh));
+                    taken.Add(fresh); q.Id = fresh;
+                }
                 _all.Add(q);
             }
         }

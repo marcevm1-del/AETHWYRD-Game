@@ -178,6 +178,8 @@ namespace Ascend.Core
             if (p == null || !_roster.All.Contains(p)) return;
             NoteSpecies(p.SpeciesId);
             if (_mountId == p.Id) _mountId = null;
+            _lastFed.Remove(p.Id ?? ""); // partner ids can be reused; never let a newcomer inherit a stranger's cooldowns
+            foreach (var k in _pairReady.Keys.Where(k => k.Split('|').Contains(p.Id)).ToList()) _pairReady.Remove(k);
             _roster.Release(p);
             Changed?.Invoke();
         }
@@ -198,7 +200,7 @@ namespace Ascend.Core
             if (itemId == null || itemId != FavouriteOf(p)) return FeedResult.NotFavouriteFood;
             if (inv == null || inv.Count(itemId) < 1) return FeedResult.NoItem;
             if (p.Bond >= _taming.MaxBond) return FeedResult.MaxBond;
-            if (_lastFed.TryGetValue(p.Id ?? "", out var last) && nowHour >= last && nowHour - last < _rules.Feeding.CooldownHours) return FeedResult.TooSoon;
+            if (_lastFed.TryGetValue(p.Id ?? "", out var last) && nowHour - last < _rules.Feeding.CooldownHours) return FeedResult.TooSoon; // a clock that ran back also counts as too soon
             inv.TryRemove(itemId);
             _lastFed[p.Id ?? ""] = nowHour;
             for (int i = 0; i < _rules.Feeding.AssistsPerFeed; i++) Partners.Assist(p, _taming);
@@ -210,7 +212,8 @@ namespace Ascend.Core
         public string MountFamilyOf(string speciesId) =>
             _mounts.Families.Where(kv => kv.Value != null && kv.Value.Species.Contains(speciesId)).Select(kv => kv.Key).FirstOrDefault();
 
-        public PartnerData Mount => _roster.ById(_mountId);
+        /// <summary>The chosen mount, or null if it is gone or its species is not a ground mount (a stale id never turns a new partner into a mount).</summary>
+        public PartnerData Mount { get { var p = _roster.ById(_mountId); return p != null && MountFamilyOf(p.SpeciesId) != null ? p : null; } }
 
         public MountResult SetMount(PartnerData p, string playerRank)
         {
@@ -352,6 +355,12 @@ namespace Ascend.Core
                     _eggs.Add(new EggSave { Id = e.Id, SpeciesId = e.SpeciesId, Marking = e.Marking, ReadyHour = e.ReadyHour });
             foreach (var kv in s?.LastFed ?? new Dictionary<string, double>()) if (!double.IsNaN(kv.Value) && !double.IsInfinity(kv.Value)) _lastFed[kv.Key] = kv.Value;
             foreach (var kv in s?.PairReady ?? new Dictionary<string, double>()) if (!double.IsNaN(kv.Value) && !double.IsInfinity(kv.Value)) _pairReady[kv.Key] = kv.Value;
+            // The counter never falls behind the eggs in the save, so a new egg cannot take an existing id.
+            foreach (var e in _eggs)
+                if (e.Id.StartsWith("egg_") && int.TryParse(e.Id.Substring(4), out var num)) _nextEgg = Math.Max(_nextEgg, num + 1);
+            // Cooldowns of partners that no longer exist are dropped (ids can be reused).
+            foreach (var k in _lastFed.Keys.Where(k => _roster.ById(k) == null).ToList()) _lastFed.Remove(k);
+            foreach (var k in _pairReady.Keys.Where(k => k.Split('|').Any(id => _roster.ById(id) == null)).ToList()) _pairReady.Remove(k);
             foreach (var x in s?.SpeciesSeen ?? new List<string>()) NoteSpecies(x);
             foreach (var m in s?.Markings ?? new List<string>()) if (!string.IsNullOrEmpty(m)) _markings.Add(m);
             Reconcile();

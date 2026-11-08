@@ -250,6 +250,35 @@ static class StablesTests
         Assert.True(st3.Eggs.Count == 0 && SaveRules.Validate(old).Count == 0, "an old save is fine");
     }
 
+    public static void IdsEggsAndCooldownsStayConsistent()
+    {
+        var r = new PartnerRoster(T);
+        r.Load(new List<PartnerData> { new PartnerData { SpeciesId = "mon_forest_wolf" }, new PartnerData { Id = "ptn_001", SpeciesId = "mon_forest_wolf" }, new PartnerData { Id = "ptn_001", SpeciesId = "mon_forest_wolf" } });
+        Assert.Equal(3, r.All.Select(p => p.Id).Distinct().Count(), "three distinct ids");
+        Assert.Equal("ptn_001", r.All[1].Id, "the saved id is kept, the id-less partner takes another");
+
+        var (st, r2) = Make("manor");
+        var old = Tame(r2, "mon_forest_wolf"); string oldId = old.Id;
+        st.SetMount(old, "E");
+        r2.Release(old); // a release that bypasses Stables
+        var fresh = Tame(r2, "mon_blue_slime");
+        Assert.Equal(oldId, fresh.Id, "ids are reused");
+        Assert.True(st.Mount == null, "a stale mount id never makes a slime the mount");
+
+        var s2 = new Stables(Repo.Db.Stables, r2, T, HomeAt("manor"), Repo.Db.Species);
+        s2.Load(new StablesSave { NextEgg = 1, Eggs = new List<EggSave> { new EggSave { Id = "egg_007", SpeciesId = "mon_forest_wolf" } } });
+        var egg = s2.AddNestEgg("mon_forest_wolf", 0, 1);
+        Assert.True(egg != null && egg.Id != "egg_007" && s2.Eggs.Select(e => e.Id).Distinct().Count() == 2, "a new egg never reuses an id");
+
+        var (st3, r3) = Make("home_plot");
+        var p = Tame(r3, "mon_forest_wolf"); string food = st3.FavouriteOf(p);
+        var inv = new Inventory(); inv.Add(food, 3);
+        st3.Feed(p, food, inv, 100);
+        st3.Release(p);
+        var q = Tame(r3, "mon_forest_wolf"); inv.Add(food, 0);
+        Assert.True(st3.Feed(q, food, inv, 101) == FeedResult.Ok, "the newcomer does not inherit the old cooldown");
+    }
+
     public static void ASmallerHomeNeverReleasesAnyone()
     {
         var (st, r) = Make("inn_room");
