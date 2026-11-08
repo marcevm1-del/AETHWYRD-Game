@@ -1,0 +1,416 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Gear rules (sockets, runes, enchantments, assemblies)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "notes",
+  "sockets",
+  "enchantSlots",
+  "stations",
+  "runes",
+  "runeWords",
+  "enchantments",
+  "assemblies"
+ ],
+ "properties": {
+  "notes": {
+   "type": "string"
+  },
+  "sockets": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "byRarity",
+    "masterworkBonus",
+    "max"
+   ],
+   "properties": {
+    "byRarity": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "Common",
+      "Uncommon",
+      "Rare",
+      "Epic",
+      "Legendary",
+      "Mythic",
+      "Divine"
+     ],
+     "properties": {
+      "Common": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      },
+      "Uncommon": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      },
+      "Rare": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      },
+      "Epic": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      },
+      "Legendary": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      },
+      "Mythic": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      },
+      "Divine": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3
+      }
+     }
+    },
+    "masterworkBonus": {
+     "type": "integer",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "max": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 3
+    }
+   }
+  },
+  "enchantSlots": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "stations": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "socket",
+    "enchant",
+    "assemble"
+   ],
+   "properties": {
+    "socket": {
+     "type": "string"
+    },
+    "enchant": {
+     "type": "string"
+    },
+    "assemble": {
+     "type": "string"
+    }
+   }
+  },
+  "runes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "fits",
+     "stats"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^itm_rune_[a-z0-9_]+$"
+     },
+     "fits": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "weapon",
+        "armor",
+        "accessory"
+       ]
+      }
+     },
+     "stats": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+       "atk": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "matk": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "def": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "mdef": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "hp": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "crit": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "runeWords": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "runes",
+     "fits",
+     "stats"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^word_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "runes": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+       "type": "string",
+       "pattern": "^itm_rune_[a-z0-9_]+$"
+      }
+     },
+     "fits": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "weapon",
+        "armor",
+        "accessory"
+       ]
+      }
+     },
+     "stats": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+       "atk": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "matk": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "def": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "mdef": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "hp": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "crit": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "enchantments": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "itemId",
+     "fits",
+     "stats"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^enc_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "itemId": {
+      "type": "string",
+      "pattern": "^itm_scroll_[a-z0-9_]+$"
+     },
+     "fits": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "weapon",
+        "armor",
+        "accessory"
+       ]
+      }
+     },
+     "stats": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+       "atk": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "matk": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "def": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "mdef": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "hp": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "crit": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       }
+      }
+     },
+     "element": {
+      "type": "string",
+      "enum": [
+       "None",
+       "Fire",
+       "Water",
+       "Ice",
+       "Lightning",
+       "Earth",
+       "Wind",
+       "Nature",
+       "Poison",
+       "Light",
+       "Dark",
+       "Blood",
+       "Void"
+      ]
+     }
+    }
+   }
+  },
+  "assemblies": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "skill",
+     "lifeRank",
+     "output",
+     "blades",
+     "hilts"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^asm_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "skill": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "lifeRank": {
+      "type": "string",
+      "enum": [
+       "F",
+       "E",
+       "D",
+       "C",
+       "B",
+       "A",
+       "S",
+       "SS",
+       "SSS"
+      ]
+     },
+     "xp": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "output": {
+      "type": "string",
+      "pattern": "^itm_[a-z0-9_]+$"
+     },
+     "blades": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^itm_part_[a-z0-9_]+$"
+      }
+     },
+     "hilts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^itm_part_[a-z0-9_]+$"
+      }
+     }
+    }
+   }
+  }
+ }
+}

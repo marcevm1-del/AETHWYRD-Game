@@ -53,6 +53,8 @@ namespace Ascend.Core
         public Dictionary<string, double> GatherNodes { get; set; } = new Dictionary<string, double>();
         /// <summary>Worn gear by slot. Null (older saves) keeps the starting kit.</summary>
         public Dictionary<string, string> Equipment { get; set; }
+        /// <summary>Runes and enchantments fitted to gear, by gear item key (null in older saves: none; Upgrade fills it).</summary>
+        public Dictionary<string, GearFitting> GearFittings { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
         public double? ClockSeconds { get; set; }
         public List<RestBuff> RestBuffs { get; set; } = new List<RestBuff>();
@@ -128,6 +130,7 @@ namespace Ascend.Core
             s.LivingWorld.Events.Active ??= new List<ActiveLivingEvent>();
             s.LivingWorld.Journal ??= new DiscoveryJournalSave();
             s.LivingWorld.Journal.Entries ??= new Dictionary<string, MapStatus>();
+            s.GearFittings ??= new Dictionary<string, GearFitting>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;

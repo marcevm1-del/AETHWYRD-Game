@@ -146,6 +146,8 @@ namespace Ascend.Core
         public int Atk, Matk, Def, Mdef, Hp;
         /// <summary>Added crit chance (fraction).</summary>
         public double Crit;
+        /// <summary>Element a weapon enchantment applies (null: none). Not used by derived stats.</summary>
+        public string ApplyElement;
     }
 
     public static class PlayerStats

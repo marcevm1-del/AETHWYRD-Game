@@ -82,7 +82,8 @@ static class Repo
         LoadOpt<QualityRules>("Data/Items/crafting_rules.json"),
         LoadOpt<LifeSkillFile>("Data/Items/life_skills.json"),
         LoadOpt<List<DungeonData>>("Data/World/dungeons.json"),
-        LoadOpt<PuzzleFile>("Data/World/puzzles.json"));
+        LoadOpt<PuzzleFile>("Data/World/puzzles.json"),
+        LoadOpt<GearRules>("Data/Items/gear_rules.json"));
 }
 
 [Tests]
