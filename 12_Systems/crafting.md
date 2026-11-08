@@ -20,7 +20,7 @@ tier  = floor(score), capped by: best ingredient + 1, the life-rank cap, the sta
 - Inventory keys: Normal is the plain `itemId`; other tiers are `itemId@tier` (`ItemQuality.Compose/Split`).
 
 ## Life skills
-Ids follow `systems.md` §5 (v6's Armorer/Carpenter/Hunter/Miner/Herbalist list was folded into these). Craft now: blacksmithing, leatherworking, tailoring, alchemy, jewelcrafting, cooking, brewing. Gather (XP only): mining, logging, herbalism, fishing. Enchanting and runecraft are craft skills now (see `gear_and_runes.md`). Listed for later waves: farming, animal_husbandry, engineering, painting_music.
+Ids follow `systems.md` §5 (v6's Armorer/Carpenter/Hunter/Miner/Herbalist list was folded into these). Craft now: blacksmithing, leatherworking, tailoring, alchemy, jewelcrafting, cooking, brewing. Gather (XP only): mining, logging, herbalism, fishing. Enchanting and runecraft are craft skills now (see `gear_and_runes.md`). Farming is a gather skill now (see `housing_and_farming.md`). Listed for later waves: animal_husbandry, engineering, painting_music.
 - Ranks F to SSS. Promotion needs the XP threshold; from **D** up it also needs a passed **masterwork commission** (`PassCommission`, called by quest content, §5.3). At the threshold without the commission, XP waits with no loss.
 - XP: each recipe pays by its `lifeRank` (or its `xp` override). The first craft of a recipe pays x3 once; crafting two or more ranks below yours pays x0.25, never below 1. No decay, no mandatory repetition.
 - A recipe above your rank in its skill is refused with `RankTooLow`. Rank also raises the quality cap.
@@ -33,7 +33,7 @@ Ids follow `systems.md` §5 (v6's Armorer/Carpenter/Hunter/Miner/Herbalist list 
 Meals carry a `meal` block (stat effects and 300 to 900 seconds). Eating sets a single **Well Fed** slot (a new meal replaces it, no stacking); strength and duration scale with quality (duration at most 2x). It ends silently with no debuff. There is no hunger, thirst, temperature or any upkeep; eating is never required. The campfire makes simple meals at Normal; the Griffon's hearth reaches Fine and above.
 
 ## Not built here
-Repair, survival meters, farming, housing, batch crafting, gathering-quality materials, shop stock for the new items, and Unity wiring (`AscendData.cs` loading, `Crafter.Make` in gameplay, `ItemQuality.Split` in inventory and HUD lookups, `LifeSkills.OnGather` in gather nodes, save/load of `SaveGame.LifeSkills`, applying meal stats).
+Repair, survival meters, batch crafting, gathering-quality materials, shop stock for the new items, and Unity wiring (`AscendData.cs` loading, `Crafter.Make` in gameplay, `ItemQuality.Split` in inventory and HUD lookups, `LifeSkills.OnGather` in gather nodes, save/load of `SaveGame.LifeSkills`, applying meal stats).
 
 ## Canon proposals (for `Canon.md` §6, not applied)
 1. **Quality ladder:** adopt Poor/Normal/Fine/Superior/Masterwork as the craftable tiers with the +20% stat ceiling and the deterministic no-failure rule (extends `systems.md` §5.1).

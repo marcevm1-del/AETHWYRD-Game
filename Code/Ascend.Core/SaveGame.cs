@@ -55,6 +55,8 @@ namespace Ascend.Core
         public Dictionary<string, string> Equipment { get; set; }
         /// <summary>Runes and enchantments fitted to gear, by gear item key (null in older saves: none; Upgrade fills it).</summary>
         public Dictionary<string, GearFitting> GearFittings { get; set; }
+        /// <summary>The home: tier, storage and crop plots (null in older saves: the base inn room; Upgrade fills it).</summary>
+        public HomeSave Home { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
         public double? ClockSeconds { get; set; }
         public List<RestBuff> RestBuffs { get; set; } = new List<RestBuff>();
@@ -131,6 +133,9 @@ namespace Ascend.Core
             s.LivingWorld.Journal ??= new DiscoveryJournalSave();
             s.LivingWorld.Journal.Entries ??= new Dictionary<string, MapStatus>();
             s.GearFittings ??= new Dictionary<string, GearFitting>();
+            s.Home ??= new HomeSave();
+            s.Home.Plots ??= new List<PlotSave>();
+            s.Home.Storage ??= new Dictionary<string, int>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;

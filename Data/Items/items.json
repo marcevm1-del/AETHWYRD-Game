@@ -968,5 +968,126 @@
    "atk": 20
   },
   "flavor": "Balanced on the finger, the way Torvald checks them."
+ },
+ {
+  "id": "itm_seed_healing_herb",
+  "name": "Healing Herb Seeds",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 2,
+  "flavor": "Tiny and dry. Plant them in good dirt and be patient."
+ },
+ {
+  "id": "itm_seed_wheat",
+  "name": "Wheat Seeds",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 2,
+  "flavor": "A pinch of gold in a paper twist."
+ },
+ {
+  "id": "itm_seed_turnip",
+  "name": "Turnip Seeds",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 1,
+  "flavor": "The easiest thing in the world to grow."
+ },
+ {
+  "id": "itm_seed_mandrake",
+  "name": "Mandrake Seeds",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 8,
+  "flavor": "Plant them gently. The mandrake grumbles in its sleep."
+ },
+ {
+  "id": "itm_crop_wheat",
+  "name": "Wheat Sheaf",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 4,
+  "flavor": "Heavy heads, sweet smell."
+ },
+ {
+  "id": "itm_crop_turnip",
+  "name": "Turnip",
+  "category": "material",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 3,
+  "flavor": "Round, pale, honest."
+ },
+ {
+  "id": "itm_turnip_mash",
+  "name": "Turnip Mash",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 10,
+  "stats": {
+   "heal": 80
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "def",
+     "amount": 1
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "Butter helps. Salt helps more."
+ },
+ {
+  "id": "itm_garden_stew",
+  "name": "Garden Stew",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 20,
+  "stats": {
+   "heal": 150
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "def",
+     "amount": 2
+    },
+    {
+     "stat": "mdef",
+     "amount": 2
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "Everything in it came from your own dirt."
+ },
+ {
+  "id": "itm_harvest_ale",
+  "name": "Harvest Ale",
+  "category": "consumable",
+  "rank": "F",
+  "rarity": "Common",
+  "value": 14,
+  "stats": {
+   "heal": 70
+  },
+  "meal": {
+   "effects": [
+    {
+     "stat": "atk",
+     "amount": 2
+    }
+   ],
+   "seconds": 600
+  },
+  "flavor": "Wheat, patience and a barrel."
  }
 ]

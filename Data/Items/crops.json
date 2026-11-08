@@ -1,0 +1,57 @@
+{
+ "notes": "Home crops (12_Systems/housing_and_farming.md). growHours are in-game hours (a day is 24 hours = 90 real minutes). A ripe crop waits for you forever: nothing withers, spoils or needs watering. Harvest quality comes from the Farming life rank only, no luck. A harvest returns seedsBack seeds so you never have to buy a crop twice.",
+ "skill": "farming",
+ "qualityByRank": {
+  "F": "normal",
+  "E": "normal",
+  "D": "fine",
+  "C": "fine",
+  "B": "superior",
+  "A": "superior",
+  "S": "masterwork",
+  "SS": "masterwork",
+  "SSS": "masterwork"
+ },
+ "crops": [
+  {
+   "id": "crop_turnip",
+   "name": "Turnip",
+   "seedItem": "itm_seed_turnip",
+   "yieldItem": "itm_crop_turnip",
+   "yieldCount": 3,
+   "seedsBack": 1,
+   "growHours": 24,
+   "rank": "F"
+  },
+  {
+   "id": "crop_healing_herb",
+   "name": "Healing Herb",
+   "seedItem": "itm_seed_healing_herb",
+   "yieldItem": "itm_healing_herb",
+   "yieldCount": 3,
+   "seedsBack": 1,
+   "growHours": 24,
+   "rank": "F"
+  },
+  {
+   "id": "crop_wheat",
+   "name": "Wheat",
+   "seedItem": "itm_seed_wheat",
+   "yieldItem": "itm_crop_wheat",
+   "yieldCount": 4,
+   "seedsBack": 1,
+   "growHours": 36,
+   "rank": "F"
+  },
+  {
+   "id": "crop_mandrake",
+   "name": "Mandrake",
+   "seedItem": "itm_seed_mandrake",
+   "yieldItem": "itm_mandrake_root",
+   "yieldCount": 1,
+   "seedsBack": 1,
+   "growHours": 72,
+   "rank": "E"
+  }
+ ]
+}

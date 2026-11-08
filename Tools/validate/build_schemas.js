@@ -394,6 +394,31 @@ const SCHEMAS = {
     }
   };
 }
+// --- Housing and farming (Step 2 of part 2; Data/World/housing.json, Data/Items/crops.json) ---
+{
+  const R9 = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'] };
+  SCHEMAS.housing = {
+    title: 'Home tiers', type: 'object', additionalProperties: false, required: ['notes', 'tiers', 'starterSeeds'],
+    properties: {
+      notes: { type: 'string' },
+      tiers: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'rank', 'cost', 'storageStacks', 'plots', 'features'], properties: {
+        id: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' }, name: { type: 'string', minLength: 1 }, rank: R9, cost: { type: 'integer', minimum: 0 },
+        storageStacks: { type: 'integer', minimum: 1, maximum: 500 }, plots: { type: 'integer', minimum: 0, maximum: 12 },
+        features: { type: 'array', uniqueItems: true, items: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' } } } } },
+      starterSeeds: { type: 'object', additionalProperties: { type: 'integer', minimum: 1, maximum: 10 } }
+    }
+  };
+  SCHEMAS.crops = {
+    title: 'Home crops', type: 'object', additionalProperties: false, required: ['notes', 'skill', 'qualityByRank', 'crops'],
+    properties: {
+      notes: { type: 'string' }, skill: { type: 'string', pattern: '^[a-z][a-z0-9_]*$' },
+      qualityByRank: { type: 'object', additionalProperties: false, required: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'], properties: Object.fromEntries(['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'].map(r => [r, { type: 'string', enum: ['poor', 'normal', 'fine', 'superior', 'masterwork'] }])) },
+      crops: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'seedItem', 'yieldItem', 'yieldCount', 'seedsBack', 'growHours', 'rank'], properties: {
+        id: id('crop_'), name: { type: 'string', minLength: 1 }, seedItem: id('itm_seed_'), yieldItem: id('itm_'), yieldCount: { type: 'integer', minimum: 1, maximum: 10 },
+        seedsBack: { type: 'integer', minimum: 1, maximum: 3 }, growHours: { type: 'number', minimum: 1, maximum: 240 }, rank: R9 } } }
+    }
+  };
+}
 // --- Companion roster, banter and rules (Wave C; Data/Companions/*.json) ---
 {
   const PERSONALITY = ['brave', 'cautious', 'curious', 'loyal', 'proud', 'gentle', 'playful', 'stoic', 'greedy', 'serene'];
