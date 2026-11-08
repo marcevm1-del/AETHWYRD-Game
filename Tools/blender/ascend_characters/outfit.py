@@ -68,8 +68,8 @@ def build(sp, L, body, col):
         b.mb.compact()
         cuff_x = L.arm()["shoulder"] + 0.105 * H
         parts["top"] = _finish(name + "_top", b.mb, body, col,
-                               _paint(prim, (lambda c: c[:, 2] < 0.505 * H, trim), (lambda c: c[:, 2] > 0.826 * H, trim),
-                                      (lambda c: np.abs(c[:, 0]) > cuff_x - 0.016 * H, trim)), "CH_cloth")
+                               _paint(prim, (lambda c: c[:, 2] < 0.525 * H, trim), (lambda c: c[:, 2] > 0.826 * H, trim),
+                                      (lambda c: np.abs(c[:, 0]) > cuff_x - 0.030 * H, trim)), "CH_cloth")
     if "bottom" in want:
         tight = L.female
 
@@ -101,7 +101,7 @@ def build(sp, L, body, col):
         b.mb.V = [(x, y, max(z, 0.0)) for x, y, z in b.mb.V]
         B.finish_weights(b.mb, L)
         parts["boots"] = _finish(name + "_boots", b.mb, body, col,
-                                 _paint(leather, (lambda c: c[:, 2] > zc - 0.03 * H, trim * 0.75 + leather * 0.25),
+                                 _paint(leather, (lambda c: c[:, 2] > zc - 0.04 * H, trim * 0.75 + leather * 0.25),
                                         (lambda c: c[:, 2] < 0.009 * H, dark)), "CH_leather")
     if "bracers" in want:
         b = B.Builder(L, lambda kind, i: 0.0065 * k)
@@ -145,7 +145,7 @@ def _skirt(sp, L, body, col, sec, trim):
     for a, b_ in zip(rings, rings[1:]):
         mb.band(a, b_)
     return _finish(sp["id"] + "_skirt", mb, body, col,
-                   _paint(sec, (lambda c_: c_[:, 2] < 0.375 * H, trim * 0.8 + sec * 0.2)), "CH_cloth")
+                   _paint(sec, (lambda c_: c_[:, 2] < 0.405 * H, trim * 0.8 + sec * 0.2)), "CH_cloth")
 
 
 def _box(mb, centre, size, w):
@@ -199,9 +199,9 @@ def _cloak(sp, L, body, col, cloakc, trim):
         drape = max(0.0, (0.76 - z) / 0.5)
         pts = []
         for t in th:
-            rx = a + (0.016 + 0.040 * drape) * H
+            rx = a + (0.034 + 0.060 * drape) * H
             ry = bk + (0.020 + 0.075 * drape) * H
-            wave = 1.0 + 0.05 * drape * math.sin(t * 5.0)
+            wave = 1.0 + 0.09 * drape * math.sin(t * 7.0)
             pts.append((math.sin(t) * rx * wave, L.yoff(z) * H - math.cos(t) * ry * wave, z * H))
         w = B.chain_weights(-z, ["UpperChest", "CloakBack_1", "CloakBack_2", "CloakBack_3"], [-0.745, -0.60, -0.46], 0.05)
         rows.append(mb.ring(np.array(pts), w, "cloak"))
@@ -211,7 +211,7 @@ def _cloak(sp, L, body, col, cloakc, trim):
 
     def paint(co):
         c = np.tile(cloakc, (len(co), 1))
-        c[co[:, 2] < 0.31 * H] = trim * 0.8 + cloakc * 0.2
+        c[co[:, 2] < 0.34 * H] = trim * 0.8 + cloakc * 0.2
         c[co[:, 2] > 0.81 * H] = trim * 0.7 + cloakc * 0.3
         return c
     return _finish(sp["id"] + "_cloak", mb, body, col, paint, "CH_cloth", levels=1)

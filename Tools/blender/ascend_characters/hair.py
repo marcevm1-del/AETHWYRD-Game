@@ -102,7 +102,8 @@ class Hair:
         d = end - rt
         ln = np.linalg.norm(d)
         p1 = rt + out * ln * ctrl[0]
-        p2 = end - d / (ln + 1e-9) * ln * 0.30 + np.array([0, 0, -1.0]) * ln * ctrl[1]
+        flip = np.array([1.0 if rt[0] >= 0 else -1.0, 0.0, 0.0]) * ln * 0.14 * (1 if int(abs(rt[0]) * 1000) % 2 else -1)
+        p2 = end - d / (ln + 1e-9) * ln * 0.30 + np.array([0, 0, -1.0]) * ln * ctrl[1] + flip
         t = np.linspace(0, 1, RINGS)
         path = _bez(rt, p1, p2, end, t)
         path = np.array([self.push_out(p) if i > 0 else p for i, p in enumerate(path)])
@@ -167,7 +168,7 @@ def _group(h, rings, ks, n, length, out, down, side=0.0, fwd=0.0, w0=0.0075, bon
     H = h.H
     cand = [(r, k) for r in rings for k in ks]
     h.rng.shuffle(cand)
-    for r, k in cand[:max(3, int(n * 0.55))]:
+    for r, k in cand[:max(4, int(n * 0.30))]:
         rt = h.root(r, k)
         sgn = 1.0 if rt[0] >= 0 else -1.0
         ln = h.rng.uniform(*length) * H
@@ -179,7 +180,7 @@ def _group(h, rings, ks, n, length, out, down, side=0.0, fwd=0.0, w0=0.0075, bon
         tang = np.array([o[1], -o[0], 0.0])        # around the head
         e = rt + (o * out * j() + np.array([0, 0, -1.0]) * down * j() + tang * side * sgn * 0 + np.array([sgn, 0, 0]) * side * j() +
                   np.array([0, -1.0, 0]) * fwd) * ln
-        h.clump(rt, e, w0=w0 * 1.75 * (0.85 + 0.3 * h.rng.random()), bone=bone, **kw)
+        h.clump(rt, e, w0=w0 * 3.3 * (0.85 + 0.3 * h.rng.random()), bone=bone, **kw)
 
 
 ALL = list(range(LY.NR))

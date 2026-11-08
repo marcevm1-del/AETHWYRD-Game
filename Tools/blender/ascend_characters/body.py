@@ -167,7 +167,7 @@ class Builder:
         rings = [loop]
         prev = loop
         n = len(self.ARM_S) if upto is None else upto
-        scale = L.limb ** 0.5
+        scale = L.limb ** 0.5 * 1.08
         for r in range(n):
             s = self.ARM_S[r]
             x = side * (sj + s * H)

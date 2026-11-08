@@ -196,9 +196,13 @@ class Face:
         t = np.linspace(-1, 1, n)
         cz = LY.Z[17] * self.H - 0.0035 * self.H
         x = t * half
-        z = cz + 0.0012 * self.H * (t ** 2)      # a very soft upward curl at the corners
-        w = 0.0012 * self.H * (1.0 - 0.5 * np.abs(t) ** 2)
+        z = cz + 0.0026 * self.H * (t ** 2)      # a soft smile: the corners lift
+        w = 0.0022 * self.H * (1.0 - 0.5 * np.abs(t) ** 2)
         P.ribbon(np.stack([x, z], axis=1), w, self.lip, 0.0018, "mouth")
+        # a small nose tick under the nose tip
+        nz = LY.Z[18] * self.H - 0.0075 * self.H
+        nt = np.linspace(-1, 1, 5)
+        P.ribbon(np.stack([nt * 0.0055 * self.H, nz - 0.0012 * self.H * (1 - nt ** 2)], axis=1), np.full(5, 0.0013 * self.H), tuple(c * 0.55 for c in self.skin), 0.0016, "nose")
         return P, half, cz
 
 

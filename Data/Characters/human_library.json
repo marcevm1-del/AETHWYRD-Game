@@ -12,19 +12,19 @@
    "id": "human_male_base", "sex": "male", "label": "Human male (base)",
    "heightM": 1.78, "heightBand": [1.68, 1.88], "headsTall": 7.25,
    "shoulderHalf": 0.106, "chestHalf": 0.100, "waistHalf": 0.080, "hipHalf": 0.093,
-   "chestDepth": 0.060, "neckHalf": 0.037, "headHalf": 0.0495,
+   "chestDepth": 0.060, "neckHalf": 0.037, "headHalf": 0.052,
    "hipJointZ": 0.520, "upperArmLen": 0.165, "foreArmLen": 0.135, "handLen": 0.088,
-   "thighHalf": 0.054, "calfHalf": 0.036, "ankleHalf": 0.0205, "footLen": 0.140,
-   "eyeWidth": 0.215, "eyeHeightRatio": 0.70
+   "thighHalf": 0.059, "calfHalf": 0.039, "ankleHalf": 0.0205, "footLen": 0.140,
+   "eyeWidth": 0.245, "eyeHeightRatio": 0.70
   },
   {
    "id": "human_female_base", "sex": "female", "label": "Human female (base)",
    "heightM": 1.66, "heightBand": [1.56, 1.76], "headsTall": 7.25,
    "shoulderHalf": 0.096, "chestHalf": 0.088, "waistHalf": 0.070, "hipHalf": 0.094,
-   "chestDepth": 0.057, "neckHalf": 0.032, "headHalf": 0.0480,
+   "chestDepth": 0.057, "neckHalf": 0.032, "headHalf": 0.0505,
    "hipJointZ": 0.520, "upperArmLen": 0.162, "foreArmLen": 0.132, "handLen": 0.083,
-   "thighHalf": 0.054, "calfHalf": 0.033, "ankleHalf": 0.0185, "footLen": 0.132,
-   "eyeWidth": 0.235, "eyeHeightRatio": 0.82
+   "thighHalf": 0.059, "calfHalf": 0.036, "ankleHalf": 0.0185, "footLen": 0.132,
+   "eyeWidth": 0.265, "eyeHeightRatio": 0.82
   }
  ],
  "builds": [
@@ -35,7 +35,7 @@
  "ages": [
   { "id": "young_adult", "label": "Young adult", "headScale": 1.03, "eyeScale": 1.05, "jaw": 0.96, "stoop": 0.0, "browDrop": 0.0 },
   { "id": "adult", "label": "Adult", "headScale": 1.0, "eyeScale": 1.0, "jaw": 1.0, "stoop": 0.0, "browDrop": 0.0 },
-  { "id": "older", "label": "Older", "headScale": 0.99, "eyeScale": 0.94, "jaw": 1.04, "stoop": 0.012, "browDrop": 0.0015 }
+  { "id": "older", "label": "Older", "headScale": 0.99, "eyeScale": 0.94, "jaw": 1.04, "stoop": 0.02, "browDrop": 0.0015 }
  ],
  "palettes": {
   "skin": [
