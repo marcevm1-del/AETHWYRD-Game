@@ -15,7 +15,16 @@ namespace Ascend.Game
     [RequireComponent(typeof(QuestGiver))]
     public sealed class CompanionAI : MonoBehaviour, IAlly
     {
-        static CompanionTuning T => AscendData.Db.World.Companions;
+        static CompanionTuning BaseTuning => AscendData.Db.World.Companions;
+        static CompanionRules Rules => AscendData.CompanionRules ?? new CompanionRules();
+        /// <summary>The base tuning with this companion's preset applied (Balanced is the identity). Rebuilt when the preset changes.</summary>
+        CompanionTuning T => _tuning ?? (_tuning = CompanionPresetBrain.ApplyPreset(BaseTuning, Rules, _preset));
+        CompanionTuning _tuning;
+        CompanionPreset _preset = CompanionPreset.Balanced;
+        bool _retreating, _retreatCommanded;
+        float _regen;
+        /// <summary>Out of a fight a hurt companion recovers this fraction of max HP per second (without it a retreat could never end).</summary>
+        public const float OutOfCombatRegenPerSec = 0.05f;
         /// <summary>Quiet mode for companion banter (companion_field_ai.md: frequency control).</summary>
         public static bool QuietBanter { get; set; }
 
@@ -36,6 +45,8 @@ namespace Ascend.Game
         readonly Dictionary<MonsterDummy, int> _assistedStagger = new Dictionary<MonsterDummy, int>();
 
         public CompanionOrder Order { get; private set; } = CompanionOrder.Follow;
+        public CompanionPreset Preset => _preset;
+        public bool Retreating => _retreating;
         public CompanionAction LastAction { get; private set; } = CompanionAction.Follow;
         public MonsterDummy Target { get; private set; }
         public int Hp { get; private set; }
@@ -105,6 +116,24 @@ namespace Ascend.Game
             Order = order;
             if (order == CompanionOrder.Hold) _holdAt = transform.position;
             Target = null;
+            _retreatCommanded = false;
+        }
+
+        /// <summary>Applies a stance (companion_rules.json presets): follow distance, leash, assist power and retreat threshold change. Her order becomes the preset's default order.</summary>
+        public void SetPreset(CompanionPreset preset)
+        {
+            _preset = preset;
+            _tuning = null;
+            Command(Rules.Preset(preset).Order);
+        }
+
+        /// <summary>One command-wheel entry (CompanionCommands.Map). Retreat runs to you and stays out of the fight until she has recovered or you give another order; Defend holds at your position.</summary>
+        public void CommandWheel(CompanionCommand command)
+        {
+            var effect = CompanionCommands.Map(command);
+            Command(effect.Order);
+            if (effect.HoldAtPlayer && _player != null) _holdAt = _player.transform.position;
+            _retreatCommanded = effect.Retreat;
         }
 
         void OnPlayerHit(MonsterDummy m, DamageResult r) => _lastPlayerHit = m;
@@ -139,7 +168,15 @@ namespace Ascend.Game
             var nearest = monsters.Where(m => Flat(m.transform.position - anchor).magnitude <= T.Leash && IsHostileNow(m))
                                   .OrderBy(m => Flat(m.transform.position - me).sqrMagnitude).FirstOrDefault();
 
-            var action = CompanionBrain.Decide(new CompanionSense
+            bool inFight = inCombat || nearest != null || threat != null;
+            if ((!inFight || _retreating) && Hp > 0 && Hp < MaxHp && !Downed)
+            {
+                _regen += MaxHp * OutOfCombatRegenPerSec * dt; int whole = (int)_regen; _regen -= whole;
+                Hp = Mathf.Min(MaxHp, Hp + whole);
+            }
+            if (!inFight) _retreatCommanded = false;
+            double hpFraction = MaxHp > 0 ? Hp / (double)MaxHp : 1.0;
+            var sense = new CompanionSense
             {
                 Downed = Downed, Order = Order,
                 DistanceToPlayer = Flat(_player.transform.position - me).magnitude,
@@ -147,7 +184,10 @@ namespace Ascend.Game
                 StaggeredEnemyNear = staggered != null,
                 PlayerTargetAlive = playerTarget != null,
                 EnemyInLeash = nearest != null, InCombat = inCombat,
-            }, T);
+            };
+            var action = CompanionPresetBrain.Decide(sense, T, Rules.Preset(_preset), hpFraction, false, false, Rules,
+                new CompanionContext { WasRetreating = _retreating, RetreatCommanded = _retreatCommanded });
+            _retreating = action == CompanionAction.Retreat;
             LastAction = action;
 
             switch (action)
@@ -158,6 +198,9 @@ namespace Ascend.Game
                 case CompanionAction.SignatureAssist: Strike(staggered, true, dt); break;
                 case CompanionAction.Attack: Strike(playerTarget ?? nearest, false, dt); break;
                 case CompanionAction.Guard: MoveTo(_holdAt, 0.3f, dt); break;
+                case CompanionAction.Retreat: Target = null; MoveTo(_player.transform.position, (float)T.PersonalSpace + 0.5f, dt, sprint: true); break;
+                case CompanionAction.Revive: // the player has no downed state in the runtime yet (death is a respawn), so Decide is never given playerDowned
+                case CompanionAction.Interact: FollowStep(dt); break; // Interact has no runtime behaviour yet; she just keeps following
                 default: FollowStep(dt); break;
             }
             if (!inCombat) Observe(monsters);
