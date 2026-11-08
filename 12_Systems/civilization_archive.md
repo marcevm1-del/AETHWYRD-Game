@@ -17,7 +17,7 @@ Entries use the same **Unknown / Heard / Visited** style as maps and dungeon clu
 | The Titans | history III and IV | Aether Engines of the Sky Cities (read), The War of Heaven and Stone (read) |
 | The Dwarves of Karak Dûn | history V, cosmology | Thorgrim's forge (restore), Khazdûr Runes (read, from the Runesmith's mural clue) |
 | The Sylvaran Court | history V | The Planting of Lothaniel (restore), The Felled Grove War (read) |
-| Valdrisia, the Old Magic Empire | history V and VI | Old Weave-tongue Primer (restore), Towers and Ley-line Farms (read), Roads That End at a Cliff (read), The Glass of the Ritual Circles (restore), The Battle of Ashen Gate, public account (read) |
+| Valdrisia, the Old Magic Empire | history V and VI | Old Weave-tongue Primer (restore), Towers and Ley-line Farms (read), Roads That End at a Cliff (read), The Glass of the Ritual Circles (restore), The Battle of Ashen Gate (read) |
 
 13 entries in all, 8 read in place and 5 restored.
 

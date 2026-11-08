@@ -89,7 +89,7 @@ namespace Ascend.Core
         public List<string> Restored { get; set; } = new List<string>();
     }
 
-    public enum ArchiveResult { Ok, Unknown, AlreadyDone, NotThere, NotFoundYet, WrongMethod, MissingFragments }
+    public enum ArchiveResult { Ok, Unknown, AlreadyDone, NotThere, NotFoundYet, WrongMethod, MissingFragments, NoBag }
 
     public sealed class RestoreReport
     {
@@ -177,11 +177,13 @@ namespace Ascend.Core
         {
             var f = _file.Fragment(fragmentId);
             if (f == null) return ArchiveResult.Unknown;
-            if (_found.Contains(f.Id)) return ArchiveResult.AlreadyDone;
             var at = f.FoundIn ?? new ArchivePlace();
             bool here = at.SiteId != null ? at.SiteId == siteId : (at.DungeonId != null && at.DungeonId == dungeonId && at.RoomId == roomId);
             if (!here) return ArchiveResult.NotThere;
-            if (inv == null) return ArchiveResult.NotThere;
+            if (inv == null) return ArchiveResult.NoBag;
+            // A fragment already found stays found. If it is no longer in the bag (stored away or spent elsewhere) and its artifact is not
+            // restored yet, digging at its place hands it back once more, so a restore can never become unreachable. The bag never holds two.
+            if (_found.Contains(f.Id) && (_restored.Contains(f.EntryId) || inv.Count(f.ItemId) > 0)) return ArchiveResult.AlreadyDone;
             _found.Add(f.Id);
             inv.Add(f.ItemId);
             Changed?.Invoke();

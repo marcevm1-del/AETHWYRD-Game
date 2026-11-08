@@ -19,7 +19,7 @@ Source: `upgrade v7` sections 3 and 4 (ancient civilizations, archaeology). Wave
 
 ## Canon and lore checks
 - **No new canon.** Entry text paraphrases `history.md` II to VI and the material clues in V. The sources are listed in the data and checked to exist. Anything new is marked draft.
-- **Spoiler order protected.** The public account only; Canon §3 secrets are scanned out by the validator and a test. The Ashen Gate entry is explicitly the public account (Malgareth's escape is a Canon §3 secret and does not appear).
+- **Spoiler order protected.** The public account only; Canon §3 secrets are scanned out by the validator and a test. The Ashen Gate entry states only the alliance defeated Malgareth, as history.md does (his escape is a Canon §3 secret and does not appear). Review notes: the Sunscar "glass" and "road" entries were trimmed so they do not point at the lost capital before Act V; the Aldmere ruin is assigned to the Dragons draft (not the dwarves).
 - **Never gating.** No quest, board, story flag or rank references the archive (checked by a test). The archive has no reward that unlocks anything.
 - **No locked Canon row changed.** Decision A1 is recorded in Canon section 6.
 

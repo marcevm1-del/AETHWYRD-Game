@@ -565,7 +565,7 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
     const fs2 = require('fs'), path2 = require('path');
     const sourceOk = src => { const m = /^(\S+\.md)/.exec(src); return m && fs2.existsSync(path2.join(DATA, '..', m[1])); };
     // The public account only: the Big Secrets of Canon section 3 and their spoiler order must never appear here.
-    const SPOILERS = /vesper|ezrath|hooded|caspian|nocturne|azrael|adrian|kaede|malchior|harvest|body-hop|soul|red moon|red prophet|unclosed knot|loom|tom\u00e1s|lantern seal|whiskers|umbrael's daughter/i;
+    const SPOILERS = /vesper|ezrath|hooded|caspian|nocturne|azrael|adrian|kaede|malchior|harvest|body-hop|soul|red moon|red prophet|unclosed knot|loom|\bunbound\b|traveler|noxveil|escaped|soldier|\bvex\b|\bnyx\b|\bmina\b|tom\u00e1s|lantern seal|whiskers|umbrael's daughter/i;
     for (const cv of obj.civilizations) {
       if (!sourceOk(cv.source)) err(cv.id, `source "${cv.source}" does not start with an existing lore file`);
       if (SPOILERS.test(cv.summary + cv.name)) err(cv.id, 'names a Canon section 3 secret (the archive shows public accounts only)');

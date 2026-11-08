@@ -64,6 +64,9 @@ static class ArchiveTests
         Assert.True(a.Excavate("frag_dun_a", null, "dng_salvage_warren", "rm_rune_cistern", inv) == ArchiveResult.Ok, "the rune cistern");
         Assert.Equal(1, inv.Count("itm_frag_dun_a"), "in the bag");
         Assert.True(a.Excavate("frag_dun_a", null, "dng_salvage_warren", "rm_rune_cistern", inv) == ArchiveResult.AlreadyDone && inv.Count("itm_frag_dun_a") == 1, "never twice: no grinding");
+        inv.TryRemove("itm_frag_dun_a"); // stored away or spent elsewhere
+        Assert.True(a.Excavate("frag_dun_a", null, "dng_salvage_warren", "rm_rune_cistern", inv) == ArchiveResult.Ok && inv.Count("itm_frag_dun_a") == 1, "a lost fragment is handed back once, so a restore stays reachable");
+        Assert.True(a.Excavate("frag_dun_a", null, "dng_salvage_warren", "rm_rune_cistern", null) == ArchiveResult.NoBag, "no bag is its own answer");
         Assert.True(a.Excavate("frag_missing", null, null, null, inv) == ArchiveResult.Unknown, "unknown");
     }
 
