@@ -106,7 +106,7 @@ const SCHEMAS = {
     title: 'Item', type: 'object', additionalProperties: false, required: ['id', 'name', 'category'],
     properties: {
       id: id('itm_'), name: { type: 'string', minLength: 1 },
-      category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic', 'rune', 'scroll', 'part'] },
+      category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic', 'rune', 'scroll', 'part', 'fragment'] },
       rank: RL, rarity: { type: 'string', enum: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic', 'Divine'] },
       slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, setId: { type: 'string' },
       meal: { type: 'object', additionalProperties: false, required: ['effects', 'seconds'], description: 'cooking buff (Well Fed slot)', properties: {
@@ -434,6 +434,27 @@ const SCHEMAS = {
         heritableMarkings: { type: 'array', uniqueItems: true, items: { type: 'string' } }, inheritMarkingChance: P, nestMarkingChance: P,
         markingPityEggs: { type: 'integer', minimum: 1 }, boardingSlotsPerEgg: { type: 'integer', minimum: 1 }, eggFloor: { type: 'integer', minimum: 1, maximum: 10 } } },
       sanctuary: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['minSpecies', 'name'], properties: { minSpecies: { type: 'integer', minimum: 0 }, name: { type: 'string', minLength: 1 } } } }
+    }
+  };
+}
+// --- Civilization Archive and archaeology (Step 4 of part 2; Data/World/civilization_archive.json) ---
+{
+  const PLACE = { type: 'object', additionalProperties: false, properties: { siteId: id('site_'), dungeonId: id('dng_'), roomId: { type: 'string', pattern: '^rm_[a-z0-9_]+$' }, clueId: { type: 'string', pattern: '^clue_[a-z0-9_]+$' } } };
+  SCHEMAS.civilization_archive = {
+    title: 'Civilization Archive', type: 'object', additionalProperties: false, required: ['notes', 'civilizations', 'sites', 'entries', 'fragments'],
+    properties: {
+      notes: { type: 'string' },
+      civilizations: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'age', 'source', 'summary'], properties: {
+        id: id('civ_'), name: { type: 'string', minLength: 1 }, age: { type: 'string', minLength: 1 }, source: { type: 'string', minLength: 3 }, summary: { type: 'string', minLength: 20 } } } },
+      sites: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'regionId', 'name', 'civilizationId', 'loreStatus'], properties: {
+        id: id('site_'), regionId: id('reg_'), name: { type: 'string', minLength: 1 }, civilizationId: id('civ_'), loreStatus: { type: 'string', enum: ['canon', 'draft'] } } } },
+      entries: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'civilizationId', 'kind', 'title', 'text', 'source', 'how', 'draft'], properties: {
+        id: id('ent_'), civilizationId: id('civ_'), kind: { type: 'string', enum: ['manuscript', 'inscription', 'painting', 'machine', 'record', 'object', 'map'] },
+        title: { type: 'string', minLength: 1 }, text: { type: 'string', minLength: 20, maxLength: 400 }, source: { type: 'string', minLength: 3 }, how: { type: 'string', enum: ['read', 'restore'] },
+        readAt: PLACE, hearsClues: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['dungeonId', 'clueId'], properties: { dungeonId: id('dng_'), clueId: { type: 'string', pattern: '^clue_[a-z0-9_]+$' } } } },
+        hearsRegions: { type: 'array', items: id('reg_') }, artifact: { type: 'string' }, draft: { type: 'boolean' } } } },
+      fragments: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'itemId', 'name', 'entryId', 'foundIn', 'draft'], properties: {
+        id: id('frag_'), itemId: id('itm_frag_'), name: { type: 'string', minLength: 1 }, entryId: id('ent_'), foundIn: PLACE, draft: { type: 'boolean' } } } }
     }
   };
 }

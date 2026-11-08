@@ -421,7 +421,8 @@ const SINGLETONS = {
   gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' },
   housing: { file: 'World/housing.json', schema: 'housing' },
   crops: { file: 'Items/crops.json', schema: 'crops' },
-  stables: { file: 'Companions/stables.json', schema: 'stables' }
+  stables: { file: 'Companions/stables.json', schema: 'stables' },
+  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -552,6 +553,56 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
     for (let i = 1; i < sn.length; i++) if (!(sn[i].minSpecies > sn[i - 1].minSpecies)) err(c.file, 'sanctuary levels must rise');
     if (!(obj.breeding.crossElementChance < 1 && obj.breeding.crossPityBreedings >= 2)) err(c.file, 'cross-element hatchlings must stay rare (chance below 1, pity at least 2)');
     if (/hunger|starv|sick|disease|escape|runaway|decay|upkeep|flying|aquatic|wyvern|dragon/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no hunger, sickness, escape, decay, upkeep or flying/aquatic mounts (Canon Slow-Life)');
+  }
+  if (name === 'civilization_archive' && obj.entries) {
+    const dungeons = load('World/dungeons.json');
+    const regions = load('World/regions.json');
+    const civ = new Set(obj.civilizations.map(x => x.id));
+    const site = Object.fromEntries(obj.sites.map(x => [x.id, x]));
+    const entry = Object.fromEntries(obj.entries.map(x => [x.id, x]));
+    for (const [what, list] of [['civilization', obj.civilizations], ['site', obj.sites], ['entry', obj.entries], ['fragment', obj.fragments]])
+      if (new Set(list.map(x => x.id)).size !== list.length) err(c.file, `duplicate ${what} id`);
+    const fs2 = require('fs'), path2 = require('path');
+    const sourceOk = src => { const m = /^(\S+\.md)/.exec(src); return m && fs2.existsSync(path2.join(DATA, '..', m[1])); };
+    // The public account only: the Big Secrets of Canon section 3 and their spoiler order must never appear here.
+    const SPOILERS = /vesper|ezrath|hooded|caspian|nocturne|azrael|adrian|kaede|malchior|harvest|body-hop|soul|red moon|red prophet|unclosed knot|loom|\bunbound\b|traveler|noxveil|escaped|soldier|\bvex\b|\bnyx\b|\bmina\b|tom\u00e1s|lantern seal|whiskers|umbrael's daughter/i;
+    for (const cv of obj.civilizations) {
+      if (!sourceOk(cv.source)) err(cv.id, `source "${cv.source}" does not start with an existing lore file`);
+      if (SPOILERS.test(cv.summary + cv.name)) err(cv.id, 'names a Canon section 3 secret (the archive shows public accounts only)');
+      if (!obj.entries.some(e => e.civilizationId === cv.id)) err(cv.id, 'has no entries');
+    }
+    for (const s of obj.sites) {
+      const rg = regions.find(r => r.id === s.regionId);
+      if (!rg) err(s.id, `unknown region ${s.regionId}`); else if (!((rg.map || {}).features || []).includes('ruins')) err(s.id, `region ${s.regionId} has no ruins feature in regions.json`);
+      if (!civ.has(s.civilizationId)) err(s.id, 'unknown civilization');
+    }
+    const placeOk = (who, p, needClue) => {
+      if (!p) { err(who, 'needs a place'); return; }
+      if (p.siteId) { if (!site[p.siteId]) err(who, `unknown site ${p.siteId}`); return; }
+      const d = dungeons.find(x => x.id === p.dungeonId);
+      if (!d) { err(who, `unknown dungeon ${p.dungeonId}`); return; }
+      if (needClue ? !(d.clues || []).some(cl => cl.id === p.clueId) : !(d.rooms || []).some(r => r.id === p.roomId)) err(who, `unknown ${needClue ? 'clue ' + p.clueId : 'room ' + p.roomId} in ${p.dungeonId}`);
+    };
+    const REWARD_KEYS = /quest|rank|gate|requires|mandatory|story|unlock|flag/i;
+    for (const e of obj.entries) {
+      if (!civ.has(e.civilizationId)) err(e.id, 'unknown civilization');
+      if (SPOILERS.test(e.text + e.title + (e.artifact || ''))) err(e.id, 'names a Canon section 3 secret (the archive shows public accounts only)');
+      if (!e.draft && !sourceOk(e.source)) err(e.id, `a non-draft entry needs an existing lore file as its source ("${e.source}")`);
+      if (REWARD_KEYS.test(Object.keys(e).join(' '))) err(e.id, 'archive entries never gate quests, ranks or the story');
+      if (e.how === 'read') { placeOk(e.id, e.readAt, !!(e.readAt && e.readAt.clueId)); if (obj.fragments.some(f => f.entryId === e.id)) err(e.id, 'a read entry has no fragments'); }
+      else if (obj.fragments.filter(f => f.entryId === e.id).length < 2) err(e.id, 'a restored entry needs at least 2 fragments');
+      for (const h of e.hearsClues || []) { const d = dungeons.find(x => x.id === h.dungeonId); if (!d || !(d.clues || []).some(cl => cl.id === h.clueId)) err(e.id, `hearsClues ${h.dungeonId}/${h.clueId} does not exist`); }
+      for (const r of e.hearsRegions || []) if (!regions.some(x => x.id === r)) err(e.id, `hearsRegions ${r} does not exist`);
+    }
+    for (const f of obj.fragments) {
+      const en = entry[f.entryId];
+      if (!en) err(f.id, `unknown entry ${f.entryId}`); else if (en.how !== 'restore') err(f.id, 'fragments belong to restore entries');
+      placeOk(f.id, f.foundIn, false);
+      if (!f.draft) err(f.id, 'fragment placement is new game content: it must be marked draft');
+      const it = ITEMS_BY_ID[f.itemId];
+      if (!it || it.category !== 'fragment') err(f.id, `item ${f.itemId} must exist with category fragment`);
+    }
+    if (REWARD_KEYS.test((JSON.stringify(obj.fragments).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'fragments carry no quest, rank or gate keys');
   }
   if (name === 'companion_rules' && obj.presets) {
     const b = obj.presets.Balanced;
