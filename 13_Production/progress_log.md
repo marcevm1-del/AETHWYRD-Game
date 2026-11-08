@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| 0bd25401 | Part 2 step 3: stables and sanctuary (home boarding by tier, guild kennel, optional treats, ground-mount choice, Canon breeding and egg nests); Stables.cs, stables.json, 15 tests | 726 |
 | 44a40a3b | Part 2 step 2: optional housing and farming (four home tiers, storage, never-withering crops feeding cooking and brewing); Housing.cs, housing.json, crops.json, 14 tests | 711 |
 | c2be388a | Part 2 step 1: runes, enchanting scrolls, sockets and weapon assembly (upgrade v6 equipment half); gear_rules.json, GearFittings.cs, 15 tests | 697 |
 | Verification | Unity PlayMode run on merged main (all waves A1 to F-lite, the AETHWYRD rename and the living-world subset): 163 of 163 passed, 0 failed, 0 skipped; 11 Unity `.meta` files added for Core scripts created without the editor | 682 + PlayMode 163 |
