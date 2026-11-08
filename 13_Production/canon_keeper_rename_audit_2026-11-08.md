@@ -12,7 +12,7 @@ Method: re-diffed the scripted rename commit `5726cffe` against its parent (165 
 - `.gitignore` `GitHub/Aetheria-Game/` and the `marcevm1-del/Aetheria-Game` URLs in `02_Lore/expansion lore 1` and `expansion lore 2` (repo URL kept).
 - `Aetherium` (line 286 of `expansion lore 2`): a different name (material), kept.
 - Historical logs (progress_log, handover, dated notes, CHANGELOG older entries, build logs): kept as written.
-- No lowercase `aetheria` remains in tracked files outside logs and the `ideas/` vault in this worktree.
+- Lowercase `aetheria` still appears in 20 files (docs, 3 C#/JSON files, Canon.md, CLAUDE.md). Every hit checked is a kept identifier: `life_in_aetheria.md`, `aetheria_atlas.html`, flag `arrived_in_aetheria`, or the repo/remote name. No prose hit.
 
 ## Findings to act on (none blocking)
 1. Canon header sentence in `01_Core_Concept` summary reads "Working title: **AETHWYRD** (placeholder, the user decides the title)" (hit in the diff for the core-concept page). The title is now decided; reword to "Title: **AETHWYRD** (chosen by the user, 2026-11-07)". Proposed, not edited here (page is a Canon summary).
