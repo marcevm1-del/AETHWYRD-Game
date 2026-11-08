@@ -38,6 +38,7 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
 - **Blender 5.2:** `E:/SteamLibrary/steamapps/common/Blender/blender.exe -b --factory-startup -P <script>`
   - Buildings: `Tools/blender/build_building_library.py` (docs: `13_Production/building_system.md`).
   - Creatures: `Tools/blender/build_creature_library.py` (docs: `13_Production/creature_system.md`).
+  - Humans (male and female base bodies and data variants): `Tools/blender/build_character_library.py`, checks `Tools/blender/check_characters.py`; run both with `--python-exit-code 1` (docs: `13_Production/character_system.md`).
 
 ## The agent team
 There are 27 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
