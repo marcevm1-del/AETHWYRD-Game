@@ -95,13 +95,9 @@ def _almond(a, b, tilt_deg, outer_sign, samples=20, upper=1.0, lower=0.62):
     th = np.linspace(0, 2 * math.pi, samples, endpoint=False)
     u = np.cos(th) * a
     s = np.sin(th)
-    v = np.where(s >= 0, b * upper * np.abs(s) ** 0.85, b * lower * -np.abs(s) ** 1.0 * -1.0 * -1.0)
-    v = np.where(s >= 0, b * upper * np.abs(s) ** 0.85, -b * lower * np.abs(s) ** 1.0)
-    # the upper lid peaks a little towards the inner third
-    v = v * (1.0 + 0.10 * np.where(s >= 0, -np.cos(th), 0.0))
-    t = math.radians(tilt_deg)
-    uu = u * math.cos(t) - v * math.sin(t) * outer_sign * 0.0
-    vv = v + u * math.sin(t) * 1.0     # outer corner up
+    v = np.where(s >= 0, b * upper * np.abs(s) ** 0.85, -b * lower * np.abs(s))
+    v = v * (1.0 + 0.10 * np.where(s >= 0, -np.cos(th), 0.0))   # the upper lid peaks towards the inner third
+    vv = v + u * math.sin(math.radians(tilt_deg))               # outer corner up
     return np.stack([u * outer_sign, vv], axis=1)
 
 
@@ -137,7 +133,6 @@ class Face:
             # iris: an ellipse clipped to the lid outline
             ri_x, ri_y = a * 0.62, b * 0.92
             th = np.linspace(0, 2 * math.pi, 20, endpoint=False)
-            up = np.interp(np.cos(th) * 0 + 0.0, [-1, 1], [0, 0])
             ix = np.cos(th) * ri_x
             iy = np.sin(th) * ri_y + b * 0.06
             top = np.max(out[:, 1]) * 0.97
@@ -174,7 +169,7 @@ class Face:
             ang2 = np.linspace(math.pi * 0.90, math.pi * 0.10, 8)
             lx2 = np.cos(ang2) * a * 0.92
             ly2 = -b * 0.62 * np.abs(np.sin(ang2)) + lx2 * math.sin(t_) - b * 0.04
-            P.ribbon(np.stack([-lx2 * sx * -1 * -1, ly2], axis=1) * np.array([1, 1]) + cen, np.full(8, b * 0.05), self.lash, 0.0027, "lower" + name)
+            P.ribbon(np.stack([lx2 * sx, ly2], axis=1) + cen, np.full(8, b * 0.05), self.lash, 0.0027, "lower" + name)
         return P
 
     # ----- brows ----------------------------------------------------------------------------------------------
@@ -202,7 +197,7 @@ class Face:
         cz = LY.Z[17] * self.H - 0.0035 * self.H
         x = t * half
         z = cz + 0.0012 * self.H * (t ** 2)      # a very soft upward curl at the corners
-        w = 0.0017 * self.H * (1.0 - 0.5 * np.abs(t) ** 2)
+        w = 0.0012 * self.H * (1.0 - 0.5 * np.abs(t) ** 2)
         P.ribbon(np.stack([x, z], axis=1), w, self.lip, 0.0018, "mouth")
         return P, half, cz
 
@@ -221,7 +216,7 @@ def ear_mesh(L, side, skin_hex, rng):
     cz = LY.Z[LY.EYE_RING] * H - 0.004 * H
     cy = 0.004 * H
     length = L.ears_scale
-    ry, rz, rx = 0.0165 * H, 0.0270 * H * length, 0.0065 * H
+    ry, rz, rx = 0.0120 * H, 0.0210 * H * length, 0.0050 * H
     segs, rings = 12, 7
     V, F, C = [], [], []
     skin = np.array(hex_lin(skin_hex))
@@ -230,7 +225,8 @@ def ear_mesh(L, side, skin_hex, rng):
         v = -math.pi / 2 + math.pi * i / rings
         for j in range(segs):
             u = 2 * math.pi * j / segs
-            x = rx * math.sin(v) * 0.0 + rx * (math.cos(v) * math.cos(u) * 0.35 + 0.65 * (math.cos(v) * math.cos(u) > 0) * math.cos(v) * math.cos(u))
+            cu = math.cos(v) * math.cos(u)
+            x = rx * (cu * 0.35 + 0.65 * max(cu, 0.0))
             y = ry * math.cos(v) * math.sin(u)
             z = rz * math.sin(v)
             # flare: the ear stands off the head a little more at the top, and tilts back
@@ -240,8 +236,7 @@ def ear_mesh(L, side, skin_hex, rng):
                 x += z * 0.20 * (1 + tip)
             xo = side * (x + rx * 1.1)
             V.append((cx + xo, cy + y, cz + z))
-            depth = max(0.0, -math.cos(v) * math.cos(u))
-            C.append(tuple(skin * (1 - 0.55 * max(0.0, math.cos(v) * math.cos(u)) * (1 - abs(math.sin(v)))) if False else (inner if math.cos(v) * math.cos(u) > 0.55 else skin)))
+            C.append(tuple(inner if math.cos(v) * math.cos(u) > 0.55 else skin))
     idx = lambda i, j: i * segs + j % segs
     for i in range(rings):
         for j in range(segs):

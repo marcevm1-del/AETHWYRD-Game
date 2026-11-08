@@ -75,6 +75,7 @@ class Layout:
         self.eye_w = b["eyeWidth"]
         self.eye_hr = b["eyeHeightRatio"]
         self.female = self.sex == "female"
+        self.ears_scale = float(spec.get("ears", 1.0))
         self._tables()
 
     # --- unit helpers --------------------------------------------------------------------------------------------
@@ -111,7 +112,6 @@ class Layout:
         bf += [v * hs for v in hbf]
         bb += [v * hs for v in hbb]
         self.A, self.BF, self.BB = a, bf, bb
-        p = [2.5] * 6 + [2.3] * 3 + [2.1] * 6 + [2.0] * 3 + [2.2] * 3 + [2.5, 2.5, 2.2, 2.0, 2.0, 2.0]
         self.P = [2.4, 2.4, 2.4, 2.3, 2.2, 2.3, 2.4, 2.4, 2.4, 2.4, 2.3, 2.1, 2.0, 2.0, 2.0,
                   2.0, 2.1, 2.3, 2.45, 2.45, 2.4, 2.2, 2.0, 2.0]
         assert len(self.A) == len(self.BF) == len(self.BB) == len(self.P) == N_MASTER, (len(self.A), N_MASTER)

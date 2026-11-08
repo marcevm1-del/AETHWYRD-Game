@@ -114,3 +114,44 @@ def edge_report(obj):
 
 def tri_count(obj):
     return sum(len(p.vertices) - 2 for p in obj.data.polygons)
+
+
+def orient_outward(obj, body_obj):
+    """Flips every connected island of obj so its normals point away from the body surface (clothes sit outside it)."""
+    import bpy
+    from mathutils.bvhtree import BVHTree
+    dg = bpy.context.evaluated_depsgraph_get()
+    tree = BVHTree.FromObject(body_obj, dg)
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    bm.faces.ensure_lookup_table()
+    seen = set()
+    flip = []
+    for f0 in bm.faces:
+        if f0.index in seen:
+            continue
+        isl, stack = [], [f0]
+        seen.add(f0.index)
+        while stack:
+            f = stack.pop()
+            isl.append(f)
+            for e in f.edges:
+                for g in e.link_faces:
+                    if g.index not in seen:
+                        seen.add(g.index)
+                        stack.append(g)
+        if all(len(e.link_faces) == 2 for f in isl for e in f.edges):
+            continue            # a closed island keeps the outward normals recalc_face_normals gave it
+        vote = 0.0
+        for f in isl:
+            c = f.calc_center_median()
+            loc, nrm, _i, dist = tree.find_nearest(c)
+            if loc is not None and dist < 0.5:
+                vote += f.normal.dot(c - loc)
+        if vote < 0:
+            flip += isl
+    if flip:
+        bmesh.ops.reverse_faces(bm, faces=flip)
+    bm.to_mesh(obj.data)
+    bm.free()
+    obj.data.update()

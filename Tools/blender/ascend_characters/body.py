@@ -64,6 +64,15 @@ class MB:
     def arrays(self):
         return np.array(self.V, dtype=np.float64), self.F
 
+    def compact(self):
+        """Drops vertices no face uses (the interior of each shoulder hole) and renumbers faces."""
+        used = sorted({i for f in self.F for i in f})
+        remap = {o: n for n, o in enumerate(used)}
+        self.V = [self.V[i] for i in used]
+        self.W = [self.W[i] for i in used]
+        self.T = [self.T[i] for i in used]
+        self.F = [tuple(remap[i] for i in f) for f in self.F]
+
     def pos(self, ids):
         return np.array([self.V[i] for i in ids])
 
@@ -118,10 +127,10 @@ class Builder:
         L, mb = self.L, self.mb
         pts = mb.pos(ring)
         c = pts.mean(0)
-        top = c + (pts - c) * 0.42 + np.array([0, 0, 0.0045 * L.H])
+        top = c + (pts - c) * 0.42 + np.array([0, 0, 0.0030 * L.H])
         r2 = mb.ring(top, {"Head": 1.0}, tag)
         mb.band(ring, r2)
-        apex = mb.add(c + np.array([0, 0, 0.0075 * L.H]), {"Head": 1.0}, tag)
+        apex = mb.add(np.array([c[0], c[1], L.H]), {"Head": 1.0}, tag)
         for i in range(NR):
             mb.F.append((r2[i], r2[(i + 1) % NR], apex))
         return apex
@@ -433,4 +442,5 @@ def build_body(L):
         leg = b.leg(side)
         b.foot(side, leg)
     finish_weights(b.mb, L)
+    b.mb.compact()
     return b
