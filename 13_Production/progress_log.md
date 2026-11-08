@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| c2be388a | Part 2 step 1: runes, enchanting scrolls, sockets and weapon assembly (upgrade v6 equipment half); gear_rules.json, GearFittings.cs, 15 tests | 697 |
 | Verification | Unity PlayMode run on merged main (all waves A1 to F-lite, the AETHWYRD rename and the living-world subset): 163 of 163 passed, 0 failed, 0 skipped; 11 Unity `.meta` files added for Core scripts created without the editor | 682 + PlayMode 163 |
 
 ## 2026-11-07

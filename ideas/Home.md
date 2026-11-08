@@ -74,6 +74,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/12_Systems/companions_and_mounts|12_Systems/companions_and_mounts]]
 - [[Design Bible/12_Systems/crafting|12_Systems/crafting]]
 - [[Design Bible/12_Systems/dungeons_and_puzzles|12_Systems/dungeons_and_puzzles]]
+- [[Design Bible/12_Systems/gear_and_runes|12_Systems/gear_and_runes]]
 - [[Design Bible/12_Systems/hud_and_ui|12_Systems/hud_and_ui]]
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
 - [[Design Bible/12_Systems/living_world|12_Systems/living_world]]
@@ -98,6 +99,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/crafting_v6_audit|13_Production/crafting_v6_audit]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
 - [[Design Bible/13_Production/dungeon_v7_audit|13_Production/dungeon_v7_audit]]
+- [[Design Bible/13_Production/gear_v6b_audit|13_Production/gear_v6b_audit]]
 - [[Design Bible/13_Production/living_world_v4_audit|13_Production/living_world_v4_audit]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
@@ -1219,7 +1221,7 @@ Every population record is included in the complete register on its species note
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (141)
+## Items (158)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
@@ -1354,6 +1356,27 @@ Every population record is included in the complete register on its species note
 - [[Items/Soft Fur|Soft Fur]]
 - [[Items/Shed Scale|Shed Scale]]
 
+### part
+- [[Items/Scrap Blade|Scrap Blade]]
+- [[Items/Iron Blade|Iron Blade]]
+- [[Items/Pelt-Wrapped Hilt|Pelt-Wrapped Hilt]]
+- [[Items/Fang-Capped Hilt|Fang-Capped Hilt]]
+
+### rune
+- [[Items/Ember Rune|Ember Rune]]
+- [[Items/Tide Rune|Tide Rune]]
+- [[Items/Stone Rune|Stone Rune]]
+- [[Items/Anvil Rune|Anvil Rune]]
+- [[Items/Hearth Rune|Hearth Rune]]
+- [[Items/Gale Rune|Gale Rune]]
+
+### scroll
+- [[Items/Scroll of Emberbrand|Scroll of Emberbrand]]
+- [[Items/Scroll of Wardweave|Scroll of Wardweave]]
+- [[Items/Scroll of Vitality|Scroll of Vitality]]
+- [[Items/Scroll of Nightstep|Scroll of Nightstep]]
+- [[Items/Scroll of Stormthread|Scroll of Stormthread]]
+
 ### weapon
 - [[Items/Guild Issue Sword|Guild Issue Sword]]
 - [[Items/Hollis's Practice Blade|Hollis's Practice Blade]]
@@ -1374,3 +1397,5 @@ Every population record is included in the complete register on its species note
 - [[Items/Ironbound Mace|Ironbound Mace]]
 - [[Items/Cursed Iron Blade|Cursed Iron Blade]]
 - [[Items/Mythic Horn Lance|Mythic Horn Lance]]
+- [[Items/Tempered Shortsword|Tempered Shortsword]]
+- [[Items/Ironwrought Longsword|Ironwrought Longsword]]
