@@ -69,6 +69,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/11_Quests_Encounters/quests_and_encounters|11_Quests_Encounters/quests_and_encounters]]
 - [[Design Bible/11_Quests_Encounters/weekly_board|11_Quests_Encounters/weekly_board]]
 - [[Design Bible/12_Systems/audio_and_immersion|12_Systems/audio_and_immersion]]
+- [[Design Bible/12_Systems/civilization_archive|12_Systems/civilization_archive]]
 - [[Design Bible/12_Systems/combat|12_Systems/combat]]
 - [[Design Bible/12_Systems/companion_field_ai|12_Systems/companion_field_ai]]
 - [[Design Bible/12_Systems/companions_and_mounts|12_Systems/companions_and_mounts]]
@@ -91,6 +92,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/animation_clips_required|13_Production/animation_clips_required]]
 - [[Design Bible/13_Production/animation_v11_audit|13_Production/animation_v11_audit]]
 - [[Design Bible/13_Production/anime_building_style|13_Production/anime_building_style]]
+- [[Design Bible/13_Production/archive_v7b_audit|13_Production/archive_v7b_audit]]
 - [[Design Bible/13_Production/art_budgets|13_Production/art_budgets]]
 - [[Design Bible/13_Production/art_direction|13_Production/art_direction]]
 - [[Design Bible/13_Production/audio_v9_audit|13_Production/audio_v9_audit]]
@@ -1225,7 +1227,7 @@ Every population record is included in the complete register on its species note
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (167)
+## Items (178)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
@@ -1277,6 +1279,19 @@ Every population record is included in the complete register on its species note
 - [[Items/EX-Rank Monster Core|EX-Rank Monster Core]]
 - [[Items/A-Rank Monster Core|A-Rank Monster Core]]
 - [[Items/SS-Rank Monster Core|SS-Rank Monster Core]]
+
+### fragment
+- [[Items/Covenant tablet, upper half|Covenant tablet, upper half]]
+- [[Items/Covenant tablet, lower half|Covenant tablet, lower half]]
+- [[Items/Foundation plate, left edge|Foundation plate, left edge]]
+- [[Items/Foundation plate, right edge|Foundation plate, right edge]]
+- [[Items/Seed-bowl rim|Seed-bowl rim]]
+- [[Items/Seed-bowl base|Seed-bowl base]]
+- [[Items/Primer leaf, first page|Primer leaf, first page]]
+- [[Items/Primer leaf, second page|Primer leaf, second page]]
+- [[Items/Primer leaf, binding|Primer leaf, binding]]
+- [[Items/Humming glass shard|Humming glass shard]]
+- [[Items/Humming glass rim|Humming glass rim]]
 
 ### key
 - [[Items/Oak Guild Card|Oak Guild Card]]
