@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-08
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Verification | Unity PlayMode run on merged main (all waves A1 to F-lite, the AETHWYRD rename and the living-world subset): 163 of 163 passed, 0 failed, 0 skipped; 11 Unity `.meta` files added for Core scripts created without the editor | 682 + PlayMode 163 |
+
 ## 2026-11-07
 
 | Commit | What changed | Tests |
