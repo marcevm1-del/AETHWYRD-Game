@@ -25,7 +25,9 @@ namespace Ascend.Game
         readonly List<MonsterDummy> _engaged = new List<MonsterDummy>();
         readonly List<MonsterDummy> _prevEngaged = new List<MonsterDummy>();
         MusicMachine _machine;
-        MusicInput _input = new MusicInput();
+        readonly MusicInput _own = new MusicInput();
+        MusicInput _inputOverride;
+        MusicInput _input { get => _inputOverride ?? _own; set => _inputOverride = value; }
         PlayerDefense _defense;
         double _elapsed;
         float _pollLeft;
@@ -78,7 +80,7 @@ namespace Ascend.Game
             _pollLeft -= dt;
             if (_pollLeft <= 0f) { Sample(); _pollLeft = PollSeconds; }
             Tick(dt, _input);
-            _input.Outcome = CombatOutcome.None; // a victory or retreat is announced for one tick only
+            if (ReferenceEquals(_input, _own)) _input.Outcome = CombatOutcome.None; // a victory or retreat is announced for one tick only (never touch an external input)
         }
 
         /// <summary>Advances the machine by dt seconds with these signals, logs a state change, returns the frame (null when not Ready).</summary>
@@ -139,7 +141,7 @@ namespace Ascend.Game
                 var external = SignalSource();
                 if (external != null) { _input = external; return; }
             }
-            var inp = _input;
+            var inp = _input = _own;
             Vector3 me = transform.position;
             inp.Place = TownWard.Contains(me) ? PlaceKind.Town : PlaceKind.Wilderness;
             var clock = WorldClock.Instance;
@@ -149,8 +151,10 @@ namespace Ascend.Game
 
             _prevEngaged.Clear(); _prevEngaged.AddRange(_engaged); _engaged.Clear();
             int threat = 0, bossPhase = 0;
-            foreach (var c in FindObjectsByType<MonsterController>(FindObjectsSortMode.None))
+            var monsters = MonsterController.Registry;
+            for (int mi = 0; mi < monsters.Count; mi++)
             {
+                var c = monsters[mi];
                 if (c == null || c.Brain == null) continue;
                 var state = c.Brain.State;
                 if (state == AiState.Idle || state == AiState.Return) continue;
@@ -166,8 +170,15 @@ namespace Ascend.Game
             inp.ThreatLevel = threat;
             inp.BossPhase = bossPhase;
             if (_wasInCombat && !inCombat)
-                inp.Outcome = _prevEngaged.Count > 0 && _prevEngaged.All(m => m == null || m.IsDead) ? CombatOutcome.Victory : CombatOutcome.Retreat;
+                inp.Outcome = AllGone(_prevEngaged) ? CombatOutcome.Victory : CombatOutcome.Retreat;
             _wasInCombat = inCombat;
+        }
+
+        static bool AllGone(List<MonsterDummy> list)
+        {
+            if (list.Count == 0) return false;
+            for (int i = 0; i < list.Count; i++) if (list[i] != null && !list[i].IsDead) return false;
+            return true;
         }
 
         static float Flat(Vector3 v) { v.y = 0; return v.magnitude; }
@@ -175,9 +186,10 @@ namespace Ascend.Game
         /// <summary>The roster id (cmp_...) of the companion travelling with the player, or null.</summary>
         static string JoinedCompanionId()
         {
-            foreach (var c in FindObjectsByType<CompanionAI>(FindObjectsSortMode.None))
+            var allies = Allies.All;
+            for (int i = 0; i < allies.Count; i++)
             {
-                if (c == null || !c.Joined) continue;
+                if (!(allies[i] is CompanionAI c) || c == null || !c.Joined) continue;
                 var giver = c.GetComponent<QuestGiver>();
                 if (giver == null) continue;
                 var row = AscendData.Companions.FirstOrDefault(x => x.NpcId == giver.NpcId);

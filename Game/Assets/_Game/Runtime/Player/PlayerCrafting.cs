@@ -116,7 +116,7 @@ namespace Ascend.Game
         }
 
         /// <summary>Can this known recipe be made here and now? Ok, MissingMaterials, WrongStation, RankTooLow, or Unknown (not learned).</summary>
-        public CraftResult StatusOf(string recipeId, string atNpcId) => Crafter.CanCraft(recipeId, _inv.Items, atNpcId);
+        public CraftResult StatusOf(string recipeId, string atNpcId) => Crafter.CanMake(recipeId, _inv.Items, atNpcId);
 
         /// <summary>Known recipes whose station is here. <paramref name="atNpcId"/> null = the campfire and other anywhere stations.</summary>
         public IEnumerable<RecipeData> CraftableHere(string atNpcId) =>
@@ -149,7 +149,7 @@ namespace Ascend.Game
         public string InputsText(RecipeData r) =>
             string.Join(", ", r.Inputs.Select(i => $"{i.Count} {Name(i.ItemId)} ({Have(i.ItemId)})"));
 
-        int Have(string itemId) => _inv.Items.Items.Where(kv => ItemQuality.BaseId(kv.Key) == itemId).Sum(kv => kv.Value);
+        int Have(string itemId) => _inv.Items.CountAll(itemId);
 
         /// <summary>Display name of an item or an item key with a quality: "Fine Fangblade".</summary>
         public static string Name(string itemKey)
@@ -210,11 +210,16 @@ namespace Ascend.Game
             return list;
         }
 
-        /// <summary>A masterwork commission handed in for the next rank of a skill. Returns the new rank when it promoted, else null.</summary>
+        /// <summary>The bag key of the piece that would pass the pending commission for a skill (null: none pending or none qualifies).</summary>
+        public string CommissionPiece(string skillId) => Crafter.CommissionPiece(skillId, _inv.Items);
+
+        /// <summary>Hands in the best-fitting finished piece for the skill's pending commission. Returns the new rank when it promoted, else null.</summary>
         public string PassCommission(string skillId)
         {
-            string up = Skills.PassCommission(skillId);
-            if (up != null) _inv.Toast($"{SkillName(skillId)} is now rank {up}!", 5f);
+            string piece = CommissionPiece(skillId);
+            string up = Crafter.HandInCommission(skillId, _inv.Items);
+            if (up != null) _inv.Toast($"Commission accepted: {Name(piece)}. {SkillName(skillId)} is now rank {up}!", 5f);
+            else _inv.Toast($"{SkillName(skillId)}: no finished piece to hand in for the commission yet.", 4f);
             return up;
         }
 

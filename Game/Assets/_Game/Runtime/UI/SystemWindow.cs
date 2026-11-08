@@ -34,7 +34,18 @@ namespace Ascend.Game
         static int _lastCloseFrame = -10;
 
         /// <summary>True while any Phase 1 window is open, and for the frame one closed (so the Esc that closed it cannot also open the status window).</summary>
-        public static bool AnyOpen => Time.frameCount - _lastCloseFrame <= 1 || All.Any(w => w != null && w._open);
+        public static bool AnyOpen
+        {
+            get
+            {
+                if (Time.frameCount - _lastCloseFrame <= 1) return true;
+                for (int i = 0; i < All.Count; i++) { var w = All[i]; if (w != null && w._open) return true; }
+                return false;
+            }
+        }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() { All.Clear(); _lastCloseFrame = -10; }
 
         /// <summary>Closes every open Phase 1 window (photo mode uses it when it opens).</summary>
         public static void CloseAll() { foreach (var w in All.ToList()) if (w != null && w._open) w.Close(); }

@@ -67,7 +67,7 @@ namespace Ascend.Core
         /// <summary>What this shop pays for one of the item (0 when it doesn't buy it).</summary>
         public long SellPrice(string itemId)
         {
-            if (!_items.TryGetValue(itemId, out var it) || it.Category == "key" || !Data.Buys.Categories.Contains(it.Category)) return 0;
+            if (!ItemQuality.TryGetItem(_items, itemId, out var it) || it.Category == "key" || !Data.Buys.Categories.Contains(it.Category)) return 0;
             long price = (long)Math.Floor(it.Value * Data.Buys.Rate);
             // Bought here earlier: resell for no more than it cost (anti-arbitrage, monster_core_pricing.md §7).
             if (_paid.TryGetValue(itemId, out var paid)) price = Math.Min(price, paid);
@@ -77,7 +77,7 @@ namespace Ascend.Core
         public TradeResult Sell(string itemId, Inventory inv, ICollection<string> questProtected = null)
         {
             if (inv.Count(itemId) <= 0) return TradeResult.NoneToSell;
-            if (questProtected != null && questProtected.Contains(itemId)) return TradeResult.Protected;
+            if (questProtected != null && (questProtected.Contains(itemId) || questProtected.Contains(ItemQuality.BaseId(itemId)))) return TradeResult.Protected;
             long price = SellPrice(itemId);
             if (price <= 0) return TradeResult.NotBought;
             inv.TryRemove(itemId);

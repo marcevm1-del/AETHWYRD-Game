@@ -49,9 +49,9 @@ namespace Ascend.Game
         /// <summary>Fire Bombs bought, crafted or looted go straight to the quick-item slot (G / D-pad up).</summary>
         void StockQuickItems()
         {
-            int bombs = Items.Count("itm_fire_bomb");
+            int bombs = Items.CountAll("itm_fire_bomb");
             if (bombs <= 0 || _combat == null) return;
-            Items.TryRemove("itm_fire_bomb", bombs);
+            Items.TryRemoveAll("itm_fire_bomb", bombs);
             _combat.GiveFireBombs(bombs);
         }
 
@@ -78,14 +78,17 @@ namespace Ascend.Game
             if (def == null || def.IsDead) return false;
             if (def.Hp >= def.MaxHp) { Toast("Already at full health"); return false; }
             var db = AscendData.Db;
-            var potion = Items.Items.Keys
-                .Select(id => db.Items.TryGetValue(id, out var it) ? it : null)
-                .Where(it => it != null && it.Category == "consumable" && it.Stat("heal") > 0)
-                .OrderBy(it => it.Stat("heal")).FirstOrDefault();
+            // A potion stack key may carry a quality ("itm_x@fine"): look it up by its base item, remove the exact stack.
+            string potionKey = null; ItemData potion = null;
+            foreach (var key in Items.Items.Keys.OrderBy(k => k, System.StringComparer.Ordinal))
+            {
+                if (!ItemQuality.TryGetItem(db.Items, key, out var it) || it.Category != "consumable" || it.Stat("heal") <= 0) continue;
+                if (potion == null || it.Stat("heal") < potion.Stat("heal")) { potionKey = key; potion = it; }
+            }
             if (potion == null) { Toast("No healing potions"); return false; }
-            Items.TryRemove(potion.Id);
+            Items.TryRemove(potionKey);
             def.Heal((int)potion.Stat("heal"));
-            Toast($"{potion.Name}: +{potion.Stat("heal"):0} HP");
+            Toast($"{PlayerCrafting.Name(potionKey)}: +{potion.Stat("heal"):0} HP");
             return true;
         }
 

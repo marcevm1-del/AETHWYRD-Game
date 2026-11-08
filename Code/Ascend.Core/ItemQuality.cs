@@ -90,5 +90,13 @@ namespace Ascend.Core
         }
 
         public static string BaseId(string key) => Split(key).ItemId;
+
+        /// <summary>The one way to look an inventory/slot key up in the item table: "itm_x@fine" resolves to "itm_x"'s data. False for null/unknown.</summary>
+        public static bool TryGetItem(IReadOnlyDictionary<string, ItemData> items, string key, out ItemData item)
+        {
+            item = null;
+            if (items == null || string.IsNullOrEmpty(key)) return false;
+            return items.TryGetValue(BaseId(key), out item);
+        }
     }
 }

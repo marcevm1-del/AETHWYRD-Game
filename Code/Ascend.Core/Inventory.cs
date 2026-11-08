@@ -18,6 +18,26 @@ namespace Ascend.Core
         public IReadOnlyDictionary<string, int> Items => _items;
         public int Count(string itemId) => _items.TryGetValue(itemId, out var n) ? n : 0;
 
+        /// <summary>Units of an item across every quality stack ("itm_x", "itm_x@fine"...).</summary>
+        public int CountAll(string itemId) => string.IsNullOrEmpty(itemId) ? 0 : _items.Where(kv => ItemQuality.BaseId(kv.Key) == itemId).Sum(kv => kv.Value);
+
+        /// <summary>Removes units of an item from any quality stacks (Normal first, then the others in key order). False, and nothing removed, when there are too few.</summary>
+        public bool TryRemoveAll(string itemId, int count = 1)
+        {
+            if (count <= 0 || CountAll(itemId) < count) return false;
+            int left = count;
+            foreach (var key in _items.Keys.Where(k => ItemQuality.BaseId(k) == itemId).OrderBy(k => k == itemId ? 0 : 1).ThenBy(k => k, StringComparer.Ordinal).ToList())
+            {
+                if (left <= 0) break;
+                int take = Math.Min(left, _items[key]);
+                int rest = _items[key] - take;
+                if (rest == 0) _items.Remove(key); else _items[key] = rest;
+                left -= take;
+            }
+            Changed?.Invoke();
+            return true;
+        }
+
         public void Add(string itemId, int count = 1)
         {
             if (string.IsNullOrEmpty(itemId) || count <= 0) return;

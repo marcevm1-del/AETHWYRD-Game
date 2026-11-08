@@ -106,11 +106,17 @@ namespace Ascend.Game
             return _text.ToString();
         }
 
+        GUIStyle _overlayStyle;
+        string _overlayText;
+        int _overlayFrame = -1;
+
         void OnGUI()
         {
             if (!OverlayVisible) return;
-            var style = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperLeft, fontSize = 13, wordWrap = false, richText = false };
-            GUI.Box(new Rect(8, 8, Mathf.Min(Screen.width - 16, 900), 12 * 20 + 24), OverlayText(), style);
+            _overlayStyle ??= new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperLeft, fontSize = 13, wordWrap = false, richText = false };
+            // OnGUI runs several times per frame: build the text once per frame.
+            if (_overlayFrame != Time.frameCount || _overlayText == null) { _overlayText = OverlayText(); _overlayFrame = Time.frameCount; }
+            GUI.Box(new Rect(8, 8, Mathf.Min(Screen.width - 16, 900), 12 * 20 + 24), _overlayText, _overlayStyle);
         }
     }
 }

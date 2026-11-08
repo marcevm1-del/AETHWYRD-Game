@@ -57,17 +57,18 @@ namespace Ascend.Game
             _options.Clear();
             var db = AscendData.Db;
             var eq = _combat.Equipment;
-            string Name(string id) => db.Items.TryGetValue(id, out var it) ? it.Name : id;
+            string Name(string key) => PlayerCrafting.Name(key);
 
             foreach (var kv in eq.Slots.OrderBy(k => k.Key))
             {
                 string slot = kv.Key, id = kv.Value;
-                _options.Add(new Option { Text = $"[{Pretty(slot)}] {Name(id)} — {StatText(db.Items[id])}  (take off)", Act = () => { eq.Unequip(slot, _inv.Items); _line = $"Took off {Name(id)}."; } });
+                string stats = ItemQuality.TryGetItem(db.Items, id, out var worn) ? StatText(worn) : "no stats";
+                _options.Add(new Option { Text = $"[{Pretty(slot)}] {Name(id)} — {stats}  (take off)", Act = () => { eq.Unequip(slot, _inv.Items); _line = $"Took off {Name(id)}."; } });
             }
             var now = eq.Bonus();
             foreach (var kv in _inv.Items.Items.OrderBy(k => k.Key))
             {
-                if (!db.Items.TryGetValue(kv.Key, out var it)) continue;
+                if (!ItemQuality.TryGetItem(db.Items, kv.Key, out var it)) continue;
                 string id = kv.Key;
                 if (Equipment.IsGear(it))
                 {
@@ -77,12 +78,12 @@ namespace Ascend.Game
                     string cmp = can == EquipResult.Ok ? Compare(now, eq.BonusWith(id)) : "";
                     _options.Add(new Option
                     {
-                        Text = $"Equip {it.Name} ×{kv.Value} [{Pretty(it.Slot)}] {cmp}{why}",
-                        Act = () => { var r = eq.Equip(id, _inv.Items, _combat.Class); _line = r == EquipResult.Ok ? $"Equipped {it.Name}." : "You can't use that."; },
+                        Text = $"Equip {Name(id)} ×{kv.Value} [{Pretty(it.Slot)}] {cmp}{why}",
+                        Act = () => { var r = eq.Equip(id, _inv.Items, _combat.Class); _line = r == EquipResult.Ok ? $"Equipped {Name(id)}." : "You can't use that."; },
                     });
                 }
                 else if (it.Category == "consumable" && it.Stat("heal") > 0)
-                    _options.Add(new Option { Text = $"Drink {it.Name} ×{kv.Value} (+{it.Stat("heal"):0} HP)", Act = () => _inv.DrinkHealingPotion() });
+                    _options.Add(new Option { Text = $"Drink {Name(id)} ×{kv.Value} (+{it.Stat("heal"):0} HP)", Act = () => _inv.DrinkHealingPotion() });
             }
             var crafting = _combat.GetComponent<PlayerCrafting>();
             if (crafting != null)

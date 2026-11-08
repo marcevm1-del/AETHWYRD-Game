@@ -84,6 +84,8 @@ namespace Ascend.Game
 
         public const float PackCallRadius = 12f, PackmateRadius = 10f;
         static readonly System.Collections.Generic.List<MonsterController> _registry = new System.Collections.Generic.List<MonsterController>();
+        /// <summary>Every enabled monster controller (no scene scan needed).</summary>
+        public static System.Collections.Generic.IReadOnlyList<MonsterController> Registry => _registry;
         void OnEnable() { if (!_registry.Contains(this)) _registry.Add(this); }
         void OnDisable() => _registry.Remove(this);
 

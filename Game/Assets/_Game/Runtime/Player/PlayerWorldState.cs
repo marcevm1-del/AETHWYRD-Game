@@ -308,7 +308,7 @@ namespace Ascend.Game
         /// <summary>
         /// Restores the Phase 1 parts from a loaded save (called by PlayerSave.Load after SaveRules.Upgrade). Every section is
         /// null-tolerant and isolated: a field missing from an older save keeps its fresh default and never stops the others.
-        /// Knowledge (dungeons, labyrinth, archive, journal) merges into what is known and never downgrades a visit.
+        /// Knowledge (dungeons, labyrinth, archive) is reset and then loaded, so a reload or slot switch replaces it (Core Load alone merges and never downgrades).
         /// </summary>
         public void Apply(SaveGame s)
         {
@@ -328,13 +328,14 @@ namespace Ascend.Game
                 if (_gear != null) { _gear.Load(_pendingFittings); _pendingFittings = null; }
                 else { _ = Gear; }
             });
-            Guard("archive load", () => _archive?.Load(s.Archive));
+            Guard("archive load", () => { _archive?.Reset(); _archive?.Load(s.Archive); });
             Guard("dungeons load", () =>
             {
+                foreach (var k in _dungeons.Values) k.Reset();
                 foreach (var kv in s.Dungeons?.Dungeons ?? new Dictionary<string, DungeonProgressSave>())
                     if (_dungeons.TryGetValue(kv.Key, out var k)) k.Load(kv.Value);
             });
-            Guard("labyrinth load", () => _labKnowledge?.Load(s.Labyrinth));
+            Guard("labyrinth load", () => { _labKnowledge?.Reset(); _labKnowledge?.Load(s.Labyrinth); });
             Guard("living world load", () =>
             {
                 var lw = s.LivingWorld;

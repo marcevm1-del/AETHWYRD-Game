@@ -104,7 +104,7 @@ namespace Ascend.Game
             foreach (var item in Log.QuestDrops(m.SpeciesId, _inv.Items))
             {
                 _inv.Items.Add(item);
-                string name = AscendData.Db.Items.TryGetValue(item, out var it) ? it.Name : item;
+                string name = ItemQuality.TryGetItem(AscendData.Db.Items, item, out var it) ? it.Name : item;
                 _inv.Toast($"+ {name} (quest)");
             }
             Log.OnKill(m.SpeciesId);
@@ -140,7 +140,7 @@ namespace Ascend.Game
             foreach (var f in q.SetsFlags ?? new List<string>()) _flags.Add(f);
             _inv.Toast($"Quest complete: {q.Title}", 5f);
             if (pay.Copper > 0) _inv.Toast($"+{Money.Format(pay.Copper, AscendData.Db.World.Currency)}");
-            foreach (var item in pay.Items) _inv.Toast($"+ {(AscendData.Db.Items.TryGetValue(item, out var it) ? it.Name : item)}");
+            foreach (var item in pay.Items) _inv.Toast($"+ {(ItemQuality.TryGetItem(AscendData.Db.Items, item, out var it) ? it.Name : item)}");
             if (q.Id.StartsWith("qst_wk_"))
             {
                 // Board quests repeat: remember the day it was done, and let the journal offer it again later.

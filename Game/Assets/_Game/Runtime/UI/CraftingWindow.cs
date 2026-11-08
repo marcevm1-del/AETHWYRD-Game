@@ -75,6 +75,19 @@ namespace Ascend.Game
                 string next = top ? "top rank" : s.CommissionPending ? "ready for a commission" : $"{s.XpToNext} XP to next rank";
                 rows.Add(new Row { Text = $"{s.Name}   rank {s.Rank}   {s.Xp} XP   ({next})", Bar = XpFraction(s, ladder, top) });
                 rows.Add(Info("      " + LadderText(ladder), true));
+                if (s.CommissionPending)
+                {
+                    string skillId = s.Id, piece = craft.CommissionPiece(skillId);
+                    rows.Add(new Row
+                    {
+                        Text = piece != null ? $"      Hand in {craft.ItemName(piece)} as your commission for the next rank" : "      Commission: make a finished piece of your best quality to hand in",
+                        Act = () =>
+                        {
+                            string up = craft.PassCommission(skillId);
+                            Line = up != null ? $"The commission is accepted — {SkillName(craft.Skills, skillId)} reached rank {up}!" : "You have no finished piece to hand in yet.";
+                        },
+                    });
+                }
             }
         }
 
@@ -97,7 +110,7 @@ namespace Ascend.Game
         {
             var inv = craft.GetComponent<PlayerInventory>();
             if (inv == null) return 0;
-            return inv.Items.Items.Where(kv => ItemQuality.BaseId(kv.Key) == itemId).Sum(kv => kv.Value);
+            return inv.Items.CountAll(itemId);
         }
 
         static string SkillName(LifeSkills skills, string id)

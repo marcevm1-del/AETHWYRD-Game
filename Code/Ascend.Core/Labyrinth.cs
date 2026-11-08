@@ -251,6 +251,13 @@ namespace Ascend.Core
             foreach (var n in _lab.Data.StartHeard ?? new List<int>()) HearFloor(n);
         }
 
+        /// <summary>Back to a new character's record (the start rumours only). Call before <see cref="Load"/> for a true load; Load alone merges.</summary>
+        public void Reset()
+        {
+            _floors.Clear(); _stairs.Clear(); Deepest = 0;
+            foreach (var n in _lab.Data.StartHeard ?? new List<int>()) HearFloor(n);
+        }
+
         public MapStatus StatusOfFloor(int n) => _floors.TryGetValue(n, out var s) ? s : MapStatus.Unknown;
         public MapStatus StatusOfFloor(string floorId) => StatusOfFloor(_lab.FloorById(floorId)?.N ?? 0);
         public MapStatus StatusOfStair(string stairId) => stairId != null && _stairs.TryGetValue(stairId, out var s) ? s : MapStatus.Unknown;
