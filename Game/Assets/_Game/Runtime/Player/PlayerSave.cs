@@ -32,6 +32,7 @@ namespace Ascend.Game
         PlayerCombat _combat;
         PlayerInventory _inv;
         PlayerRespawn _respawn;
+        PlayerWorldState _world;
 
         public string Slot { get => slot; set => slot = value; }
         public string PathOnDisk => Path.Combine(Folder ?? Application.persistentDataPath, slot + ".json");
@@ -43,6 +44,7 @@ namespace Ascend.Game
             _combat = GetComponent<PlayerCombat>();
             _inv = GetComponent<PlayerInventory>();
             _respawn = GetComponent<PlayerRespawn>();
+            _world = PlayerWorldState.Ensure(gameObject); // life skills, home, stables, archive, dungeons, labyrinth, living world, gear, accessibility
             _respawn.Respawned += OnRespawned;
             _respawn.PointSet += OnPointSet;
         }
@@ -104,6 +106,7 @@ namespace Ascend.Game
                 s.BoardDone = quests.BoardDone.ToDictionary(kv => kv.Key, kv => kv.Value);
                 s.GuildRank = quests.Rank.Rank; s.RankGp = quests.Rank.Gp; s.QuestsAtRank = quests.Rank.QuestsAtRank;
             }
+            _world.Capture(s);
             try
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(PathOnDisk));
@@ -147,6 +150,7 @@ namespace Ascend.Game
             foreach (var n in GatherNode.All) if (n != null) n.ReadyAtHour = s.GatherNodes.TryGetValue(n.Key, out var h) ? h : double.MinValue;
             if (TryGetComponent<PlayerCrafting>(out var crafting)) crafting.Load(s.KnownRecipes, s.HandledItems);
             if (TryGetComponent<PlayerTaming>(out var taming)) taming.Load(s.Partners);
+            _world.Apply(s); // after crafting and taming: stables need the partner roster, gear fittings need the crafter
             if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);
             if (TryGetComponent<PlayerQuests>(out var quests)) { quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags); quests.LoadBoard(s.BoardDone); quests.Rank.Load(s.GuildRank, s.RankGp, s.QuestsAtRank); }
             _combat.GiveFireBombs(s.FireBombs - _combat.FireBombs);

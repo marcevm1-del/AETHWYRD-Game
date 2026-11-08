@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 namespace Ascend.Game
@@ -10,6 +11,8 @@ namespace Ascend.Game
     /// in normal play. Optional <c>-ascendShotAt x,z</c> moves you somewhere else first, <c>-ascendShotYaw degrees</c> turns you. <c>-ascendShotMap area|world</c>
     /// opens the map on that page instead (with <c>-ascendShotZoom z</c>, <c>-ascendShotRank E</c> to stand at a guild rank
     /// and get its map seal, and <c>-ascendShotWalk</c> to ink a stroll around the village first).
+    /// <c>-ascendShotWindow crafting|companions|journal|accessibility|photo|overlay</c> opens that Phase 1 window (with a little demo data in the
+    /// throwaway save) before the shot.
     /// </summary>
     public sealed class ScreenshotRunner : MonoBehaviour
     {
@@ -18,6 +21,8 @@ namespace Ascend.Game
         int _frames;
         string _mapPage;
         bool _mapOpened;
+        string _window;
+        bool _windowOpened;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Boot()
@@ -64,6 +69,7 @@ namespace Ascend.Game
                 if (follow != null) follow.SnapBehind();
             }
             _at = Time.realtimeSinceStartup + 3f;
+            _window = Arg("-ascendShotWindow");
             _mapPage = Arg("-ascendShotMap");
             if (_mapPage != null && player != null && player.TryGetComponent<PlayerMap>(out var map))
             {
@@ -84,9 +90,82 @@ namespace Ascend.Game
             }
         }
 
+        /// <summary>Opens one Phase 1 window for the capture. A few demo entries go into this run's throwaway save so the page shows something.</summary>
+        static void OpenWindow(string name)
+        {
+            var combat = FindFirstObjectByType<PlayerCombat>();
+            var player = combat != null ? combat.gameObject : null;
+            switch ((name ?? "").ToLowerInvariant())
+            {
+                case "crafting": SeedCrafting(player); CraftingWindow.Instance.Open(player); break;
+                case "companions": CompanionWindow.Instance.Open(player); break;
+                case "journal": SeedJournal(player); JournalWindow.Instance.Open(player); break;
+                case "accessibility": AccessibilityWindow.Instance.Open(player); break;
+                case "photo":
+                    // The capture stands beside live monsters, so tell photo mode to ignore "combat"; the HUD then hides and the hint strip shows.
+                    PhotoModeController.IgnoreCombatForCapture = true;
+                    if (!PhotoModeController.Instance.Open()) Debug.LogWarning("ascendShotWindow photo: " + PhotoModeController.Instance.Message);
+                    break;
+                case "overlay": PlaytestOverlay.Instance.SetVisible(true); break;
+                default: Debug.LogWarning("ascendShotWindow: unknown window " + name); break;
+            }
+        }
+
+        static void SeedCrafting(GameObject player)
+        {
+            var craft = player != null ? player.GetComponent<PlayerCrafting>() : null;
+            var inv = player != null ? player.GetComponent<PlayerInventory>() : null;
+            if (craft == null || inv == null) return;
+            var skillsUsed = new System.Collections.Generic.HashSet<string>();
+            foreach (var r in craft.Crafter.All.Where(x => x.LifeRank == "F").Take(7))
+            {
+                craft.Crafter.Known.Add(r.Id);
+                foreach (var i in r.Inputs) if (inv.Items.Count(i.ItemId) < i.Count) inv.Items.Add(i.ItemId, i.Count);
+                if (skillsUsed.Add(r.Skill) && skillsUsed.Count <= 3) craft.Skills.AddXp(r.Skill, 120 * skillsUsed.Count);
+            }
+        }
+
+        static void SeedJournal(GameObject player)
+        {
+            // Resolve the world the way the windows do (the player's, else any in the scene), so seeding never silently does nothing.
+            var world = player != null ? player.GetComponent<PlayerWorldState>() : null;
+            if (world == null) world = FindFirstObjectByType<PlayerWorldState>();
+            if (world == null) { Debug.LogWarning("ascendShotWindow journal: no PlayerWorldState to seed"); return; }
+            int clues = 0, rooms = 0, entries = 0;
+            foreach (var kv in world.Dungeons)
+            {
+                if (!AscendData.Db.Dungeons.TryGetValue(kv.Key, out var d)) continue;
+                if (d.Rooms.Count > 0 && kv.Value.VisitRoom(string.IsNullOrEmpty(d.EntryRoom) ? d.Rooms[0].Id : d.EntryRoom)) rooms++;
+                for (int i = 0; i < d.Clues.Count && i < 3; i++)
+                {
+                    if (i == 0) { if (kv.Value.HearClue(d.Clues[i].Id)) clues++; }
+                    else if (kv.Value.VisitClue(d.Clues[i].Id)) clues++;
+                }
+            }
+            var archive = world.Archive;
+            if (archive != null)
+            {
+                int n = 0;
+                foreach (var e in archive.Data.Entries.Take(9))
+                {
+                    if (n++ % 3 == 0) { if (archive.Hear(e.Id)) entries++; }
+                    else if (e.ReadAt != null && e.ReadAt.SiteId != null && archive.ReadAtSite(e.Id, e.ReadAt.SiteId) == Ascend.Core.ArchiveResult.Ok) entries++;
+                }
+            }
+            Debug.Log($"ascendShotWindow journal: seeded {rooms} rooms, {clues} clues, {entries} archive entries");
+        }
+
         void Update()
         {
             if (_at < 0f || Time.realtimeSinceStartup < _at) return;
+            if (_window != null && !_windowOpened)
+            {
+                _windowOpened = true;
+                try { OpenWindow(_window); }
+                catch (Exception e) { Debug.LogWarning($"ascendShotWindow {_window}: {e}"); }
+                _at = Time.realtimeSinceStartup + 1.5f;
+                return;
+            }
             if (_mapPage != null)
             {
                 var map = FindFirstObjectByType<PlayerMap>();

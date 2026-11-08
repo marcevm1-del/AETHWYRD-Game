@@ -115,6 +115,9 @@ namespace Ascend.Core
 
         public CivilizationArchive(ArchiveFile file) { _file = file ?? new ArchiveFile(); }
 
+        /// <summary>Forgets everything. Call before <see cref="Load"/> for a true load; Load alone merges (never downgrades).</summary>
+        public void Reset() { _entries.Clear(); _found.Clear(); _restored.Clear(); Changed?.Invoke(); }
+
         public event Action Changed;
         public ArchiveFile Data => _file;
 

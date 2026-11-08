@@ -100,7 +100,7 @@ namespace Ascend.Core
                 {
                     var o = q.Objectives[i];
                     if (o.Kind != "collect") continue;
-                    int have = Math.Min(Need(o), inv?.Count(o.Target) ?? 0);
+                    int have = Math.Min(Need(o), inv?.CountAll(o.Target) ?? 0);
                     if (have != p.Counts[i]) { p.Counts[i] = have; Progressed?.Invoke(p.QuestId, i); }
                 }
                 Recheck(p);
@@ -113,7 +113,7 @@ namespace Ascend.Core
             var drops = new List<string>();
             foreach (var p in _active.Values)
                 foreach (var o in _quests[p.QuestId].Objectives)
-                    if (o.Kind == "collect" && o.From == speciesId && (inv?.Count(o.Target) ?? 0) < Need(o) && !drops.Contains(o.Target))
+                    if (o.Kind == "collect" && o.From == speciesId && (inv?.CountAll(o.Target) ?? 0) < Need(o) && !drops.Contains(o.Target))
                         drops.Add(o.Target);
             return drops;
         }
@@ -176,8 +176,8 @@ namespace Ascend.Core
             if (!_active.TryGetValue(questId, out var p) || p.Status != QuestStatus.ReadyToTurnIn) return false;
             var q = _quests[questId];
             foreach (var o in q.Objectives.Where(o => o.Kind == "collect"))
-                if (inv == null || inv.Count(o.Target) < Need(o)) return false;
-            foreach (var o in q.Objectives.Where(o => o.Kind == "collect")) inv.TryRemove(o.Target, Need(o));
+                if (inv == null || inv.CountAll(o.Target) < Need(o)) return false;
+            foreach (var o in q.Objectives.Where(o => o.Kind == "collect")) inv.TryRemoveAll(o.Target, Need(o));
             var r = q.Rewards ?? new QuestRewards();
             payout = new QuestPayout { Copper = r.Gold, GuildPoints = r.Gp, Xp = r.Xp, Items = (r.Items ?? new List<string>()).ToList() };
             inv?.AddCopper(r.Gold);

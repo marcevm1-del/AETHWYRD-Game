@@ -155,7 +155,7 @@ namespace Ascend.Game
             foreach (var r in c.All.Where(r => r.Station == station && c.Knows(r.Id)))
             {
                 var recipe = r;
-                bool ready = c.CanCraft(r.Id, _quests.GetComponent<PlayerInventory>().Items, _giver.NpcId) == CraftResult.Ok;
+                bool ready = crafting.StatusOf(r.Id, _giver.NpcId) == CraftResult.Ok;
                 _options.Add(new Option { Text = $"{(ready ? "Make" : "(missing)")} {r.Name} — {crafting.InputsText(r)}", Act = () => crafting.Make(recipe, _giver.NpcId) });
             }
             foreach (var r in c.All.Where(r => r.Station == station && c.IsHypothesis(r)))
@@ -202,7 +202,7 @@ namespace Ascend.Game
         {
             var db = AscendData.Db;
             var cur = db.World.Currency;
-            string Name(string id) => db.Items.TryGetValue(id, out var it) ? it.Name : id;
+            string Name(string key) => PlayerCrafting.Name(key);
             string Say(TradeResult r) => r switch
             {
                 TradeResult.Ok => null,
@@ -223,7 +223,7 @@ namespace Ascend.Game
                         string stock = left.HasValue ? $", {left} left" : "";
                         _options.Add(new Option
                         {
-                            Text = $"Buy {Name(o.ItemId)} — {Money.Format(o.Price, cur)} (you have {inv.Items.Count(o.ItemId)}{stock})",
+                            Text = $"Buy {Name(o.ItemId)} — {Money.Format(o.Price, cur)} (you have {inv.Items.CountAll(o.ItemId)}{stock})",
                             Act = () => Did(shop.Buy(offer.ItemId, inv.Items), $"Bought {Name(offer.ItemId)}."),
                         });
                     }
@@ -235,7 +235,7 @@ namespace Ascend.Game
                     foreach (var (itemId, count, price) in shop.Sellable(inv.Items).Take(7))
                     {
                         string id = itemId;
-                        string guard = protectedItems.Contains(id) ? " [quest]" : "";
+                        string guard = protectedItems.Contains(ItemQuality.BaseId(id)) ? " [quest]" : "";
                         _options.Add(new Option
                         {
                             Text = $"Sell {Name(id)} ×{count}{guard} — {Money.Format(price, cur)} each",

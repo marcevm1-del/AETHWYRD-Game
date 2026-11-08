@@ -89,7 +89,7 @@ namespace Ascend.Game
             Equipment = new Equipment(db.Items);
             var kit = new System.Collections.Generic.Dictionary<string, string>();
             foreach (var id in new[] { _class.StarterWeaponId }.Concat(startingGear ?? new string[0]))
-                if (id != null && db.Items.TryGetValue(id, out var it) && Equipment.IsGear(it) && Equipment.CanEquip(id, _class) == EquipResult.Ok) kit[it.Slot] = id;
+                if (id != null && ItemQuality.TryGetItem(db.Items, id, out var it) && Equipment.IsGear(it) && Equipment.CanEquip(id, _class) == EquipResult.Ok) kit[it.Slot] = id;
             Equipment.Load(kit);
             RecomputeStats();
             Equipment.Changed += RecomputeStats;

@@ -108,6 +108,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
+- [[Design Bible/13_Production/phase1_api|13_Production/phase1_api]]
 - [[Design Bible/13_Production/production|13_Production/production]]
 - [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
 - [[Design Bible/13_Production/project-stage-report|13_Production/project-stage-report]]

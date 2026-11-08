@@ -32,6 +32,9 @@ namespace Ascend.Core
 
         public DungeonKnowledge(DungeonData dungeon) { _d = dungeon; }
 
+        /// <summary>Forgets everything. Call before <see cref="Load"/> for a true load; Load alone merges (never downgrades).</summary>
+        public void Reset() { _rooms.Clear(); _clues.Clear(); Cleared = false; }
+
         public MapStatus StatusOfRoom(string roomId) => roomId != null && _rooms.TryGetValue(roomId, out var s) ? s : MapStatus.Unknown;
         public MapStatus StatusOfClue(string clueId) => clueId != null && _clues.TryGetValue(clueId, out var s) ? s : MapStatus.Unknown;
         public IEnumerable<string> VisitedRooms => _rooms.Where(kv => kv.Value == MapStatus.Visited).Select(kv => kv.Key);

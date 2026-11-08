@@ -105,7 +105,7 @@ namespace Ascend.Core
             if (!StationAvailable(r.Station, atNpcId)) return CraftResult.WrongStation;
             if (RankTooLow(r)) return CraftResult.RankTooLow;
             if (Missing(r, inv).Count > 0) return CraftResult.MissingMaterials;
-            foreach (var i in r.Inputs) inv.TryRemove(i.ItemId, i.Count);
+            foreach (var i in r.Inputs) inv.TryRemoveAll(i.ItemId, i.Count);
             inv.Add(r.Output.ItemId, Math.Max(1, r.Output.Count));
             _known.Add(r.Id);
             return CraftResult.Ok;
@@ -146,7 +146,7 @@ namespace Ascend.Core
 
         /// <summary>How many of each input you're short (empty when you can make it).</summary>
         public List<ItemCount> Missing(RecipeData r, Inventory inv) =>
-            r.Inputs.Where(i => inv.Count(i.ItemId) < i.Count).Select(i => new ItemCount { ItemId = i.ItemId, Count = i.Count - inv.Count(i.ItemId) }).ToList();
+            r.Inputs.Where(i => inv.CountAll(i.ItemId) < i.Count).Select(i => new ItemCount { ItemId = i.ItemId, Count = i.Count - inv.CountAll(i.ItemId) }).ToList();
 
         public CraftResult CanCraft(string recipeId, Inventory inv, string atNpcId)
         {
@@ -165,7 +165,7 @@ namespace Ascend.Core
             var can = CanCraft(recipeId, inv, atNpcId);
             if (can != CraftResult.Ok) return can;
             var r = Recipe(recipeId);
-            foreach (var i in r.Inputs) inv.TryRemove(i.ItemId, i.Count);
+            foreach (var i in r.Inputs) inv.TryRemoveAll(i.ItemId, i.Count);
             inv.Add(r.Output.ItemId, Math.Max(1, r.Output.Count));
             _skills?.OnCraft(r, out _);
             return CraftResult.Ok;
@@ -239,8 +239,31 @@ namespace Ascend.Core
             return rep;
         }
 
-        /// <summary>Like CanCraft, but counts materials across all quality stacks.</summary>
-        CraftResult CanMake(string recipeId, Inventory inv, string atNpcId)
+        /// <summary>
+        /// Stand-in for the quest-driven masterwork commission (crafting.md §5.3 names quest content; none exists yet): when the skill has the XP
+        /// for its next rank but is waiting on a commission, the bag key of one finished piece of that skill's recipes made at the best quality the
+        /// current rank can reach (rank quality cap), the lowest such stack. Null when nothing is waiting or nothing qualifies.
+        /// </summary>
+        public string CommissionPiece(string skillId, Inventory inv)
+        {
+            if (_skills == null || inv == null || !_skills.Eligible(skillId)) return null;
+            var rules = _rules ?? new QualityRules();
+            int need = Math.Min(rules.RankCapIndex(_skills.Rank(skillId)), rules.MaxCraftableIndex);
+            var outputs = new HashSet<string>(_file.Recipes.Where(r => r.Skill == skillId && r.Output != null).Select(r => r.Output.ItemId));
+            return inv.Items.Keys.Where(k => outputs.Contains(ItemQuality.BaseId(k)) && rules.IndexOf(ItemQuality.Split(k).TierId) >= need)
+                .OrderBy(k => rules.IndexOf(ItemQuality.Split(k).TierId)).ThenBy(k => k, StringComparer.Ordinal).FirstOrDefault();
+        }
+
+        /// <summary>Hands that piece in: it is taken and the commission passes. Returns the new rank, or null when nothing was handed in.</summary>
+        public string HandInCommission(string skillId, Inventory inv)
+        {
+            var key = CommissionPiece(skillId, inv);
+            if (key == null || !inv.TryRemove(key)) return null;
+            return _skills.PassCommission(skillId);
+        }
+
+        /// <summary>Can this recipe be made here and now, counting materials across all quality stacks (same as CanCraft).</summary>
+        public CraftResult CanMake(string recipeId, Inventory inv, string atNpcId)
         {
             var r = Recipe(recipeId);
             if (r == null || !_known.Contains(r.Id)) return CraftResult.Unknown;
