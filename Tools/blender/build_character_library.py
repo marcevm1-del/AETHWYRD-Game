@@ -34,6 +34,13 @@ def arg(name, default=None):
     return default
 
 
+def rel(path):
+    try:
+        return os.path.relpath(path, ROOT)
+    except ValueError:      # another drive (Windows)
+        return path
+
+
 def clear():
     for o in list(bpy.data.objects):
         bpy.data.objects.remove(o, do_unlink=True)
@@ -78,7 +85,7 @@ def main():
             shutil.rmtree(os.path.join(rep_dir, "_tiles"), ignore_errors=True)
         if not arg("--no-export"):
             files = EX.export(ch, os.path.join(out_root, name))
-            print("[AC] exported", {k: os.path.relpath(p, ROOT) for k, p in files.items()}, flush=True)
+            print("[AC] exported", {k: rel(p) for k, p in files.items()}, flush=True)
         if not arg("--no-blend"):
             os.makedirs(os.path.join(out_root, name), exist_ok=True)
             bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out_root, name, name + ".blend"), compress=True, copy=True)
