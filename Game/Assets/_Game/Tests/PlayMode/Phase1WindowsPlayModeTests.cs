@@ -60,12 +60,12 @@ namespace Ascend.Game.Tests
             var lines = w.Lines();
             Assert.IsTrue(lines.Any(l => l.StartsWith("RECIPES")), "recipes header");
             Assert.IsTrue(lines.Any(l => l.StartsWith("LIFE SKILLS")), "life skill header");
-            Assert.IsTrue(lines.Any(l => l.Contains("needs:")), "ingredient line (owned/needed)");
-            Assert.IsTrue(lines.Any(l => l.Contains("expected quality:")), "expected quality line");
+            Assert.IsTrue(lines.Any(l => l.Contains("Needs:")), "ingredient line (owned/needed)");
+            Assert.IsTrue(lines.Any(l => l.Contains("Expected quality:")), "expected quality line");
             Assert.IsTrue(lines.Any(l => l.Contains("F") && l.Contains("[F]")), "the rank ladder marks the current rank");
             Assert.IsNotEmpty(CraftingWindow.ExpectedQuality(_craft, recipe, false));
 
-            int row = RowStarting(w, recipe.Name + "  ");
+            int row = w.Rows.ToList().FindIndex(r => r.Text == recipe.Name);
             Assert.GreaterOrEqual(row, 0, "the recipe has a row");
             Assert.IsTrue(w.Rows[row].Selectable);
             long xpBefore = _craft.Skills.Xp(recipe.Skill);
@@ -85,7 +85,7 @@ namespace Ascend.Game.Tests
             _craft.Crafter.Known.Add(recipe.Id);
             var w = CraftingWindow.Instance;
             w.Open(_player);
-            int row = RowStarting(w, recipe.Name + "  ");
+            int row = w.Rows.ToList().FindIndex(r => r.Text == recipe.Name);
             Assert.GreaterOrEqual(row, 0);
             w.Choose(row);
             StringAssert.DoesNotStartWith("Made", w.Line);

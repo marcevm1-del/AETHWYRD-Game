@@ -65,7 +65,7 @@ namespace Ascend.Game
                 if (bond != null && rules != null) rows.Add(Info("      " + BondText(rules.Relationships, bond), true));
                 shown++;
             }
-            if (shown == 0) rows.Add(Info("No companion has joined you yet.", true));
+            if (shown == 0) rows.Add(Invite("No companion has joined you yet. Your first companion is out there; guild notice boards often mention strays."));
 
             var joined = JoinedCompanions();
             rows.Add(Header("COMMANDS — for the companion travelling with you"));

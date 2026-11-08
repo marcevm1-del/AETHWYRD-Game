@@ -23,7 +23,7 @@ namespace Ascend.Game
         public string AtNpcId { get; set; }
 
         protected override string Title => "CRAFTING";
-        protected override string Footer => "Recipes need the right station and life-skill rank. Quality can only go up from the materials you bring.";
+        protected override string Footer => "Quality depends on the materials you bring and your skill rank.";
 
         PlayerCrafting Craft
         {
@@ -41,27 +41,31 @@ namespace Ascend.Game
             if (craft == null || craft.Crafter == null) { rows.Add(Info("Crafting is not available yet.", true)); return; }
             var crafter = craft.Crafter;
             string station = AtNpcId == null ? "the campfire (anywhere)" : (crafter.StationOf(AtNpcId) ?? "a workbench");
-            rows.Add(Header($"RECIPES — working at {station}"));
+            rows.Add(Header($"RECIPES — at {station}"));
 
             var skills = craft.Skills;
             var known = crafter.All.Where(r => crafter.Knows(r.Id))
-                .OrderBy(r => r.Skill).ThenBy(r => skills != null ? skills.RankIndex(r.LifeRank) : 0).ThenBy(r => r.Name).ToList();
-            if (known.Count == 0) rows.Add(Info("You do not know any recipe yet. Teachers sell them, and handling materials may give you ideas.", true));
+                .OrderBy(r => craft.StatusOf(r.Id, AtNpcId) == CraftResult.Ok ? 0 : 1)   // what you can make right now comes first
+                .ThenBy(r => r.Skill).ThenBy(r => skills != null ? skills.RankIndex(r.LifeRank) : 0).ThenBy(r => r.Name).ToList();
+            if (known.Count == 0) rows.Add(Invite("You do not know any recipe yet. Teachers sell them, and handling materials may give you ideas."));
             foreach (var r in known)
             {
                 var recipe = r;
                 var status = craft.StatusOf(r.Id, AtNpcId);
-                rows.Add(new Row
+                var row = new Row
                 {
-                    Text = $"{r.Name}  ·  {SkillName(skills, r.Skill)} rank {r.LifeRank}  ·  {(status == CraftResult.Ok ? "ready to make" : craft.StatusText(status, r))}",
+                    Text = r.Name,
+                    Tag = $"{SkillName(skills, r.Skill)} {r.LifeRank}",
                     Act = () => DoCraft(craft, recipe, false),
-                });
-                var needs = r.Inputs.Select(i => $"{(Owned(craft, i.ItemId) >= i.Count ? "■" : "□")} {craft.ItemName(i.ItemId)} {Owned(craft, i.ItemId)}/{i.Count}");
-                string output = craft.ItemName(r.Output.ItemId) + (r.Output.Count > 1 ? $" ×{r.Output.Count}" : "");
-                rows.Add(Info("      needs: " + string.Join("   ", needs) + "   → makes " + output, true));
-                rows.Add(Info("      expected quality: " + ExpectedQuality(craft, r, false), true));
+                    Detail = DetailFor(craft, r, status),
+                };
+                row.Chip = ChipText(craft, r, status, out row.ChipColor);
                 if (!string.IsNullOrEmpty(r.AttuneItem))
-                    rows.Add(new Row { Text = $"      attuned craft (spends one extra {craft.ItemName(r.AttuneItem)}): " + ExpectedQuality(craft, r, true), Act = () => DoCraft(craft, recipe, true) });
+                {
+                    row.Alt = () => DoCraft(craft, recipe, true);
+                    row.AltLabel = "Boost";
+                }
+                rows.Add(row);
             }
 
             rows.Add(Header("LIFE SKILLS — rank ladder F to SSS"));
@@ -89,6 +93,45 @@ namespace Ascend.Game
                     });
                 }
             }
+        }
+
+        /// <summary>The status chip of a recipe row: Ready, or the one thing that is in the way.</summary>
+        string ChipText(PlayerCrafting craft, RecipeData r, CraftResult status, out ChipKind kind)
+        {
+            switch (status)
+            {
+                case CraftResult.Ok: kind = ChipKind.Good; return "Ready";
+                case CraftResult.MissingMaterials:
+                {
+                    kind = ChipKind.Bad;
+                    var miss = craft.Crafter.Missing(r, craft.GetComponent<PlayerInventory>().Items).ToList();
+                    return miss.Count == 1 ? $"Missing {miss[0].Count} {craft.ItemName(miss[0].ItemId)}" : $"Missing {miss.Count} materials";
+                }
+                case CraftResult.WrongStation: kind = ChipKind.Warn; return "Needs workbench";
+                case CraftResult.RankTooLow: kind = ChipKind.Warn; return $"Needs rank {r.LifeRank}";
+                default: kind = ChipKind.Neutral; return craft.StatusText(status, r);
+            }
+        }
+
+        /// <summary>Right-hand pane for one recipe: what it makes, what it needs (have/need), the expected quality and the boost.</summary>
+        List<string> DetailFor(PlayerCrafting craft, RecipeData r, CraftResult status)
+        {
+            string output = craft.ItemName(r.Output.ItemId) + (r.Output.Count > 1 ? $" ×{r.Output.Count}" : "");
+            var d = new List<string> { "# " + r.Name, "Makes " + output, "# Needs:" };
+            foreach (var i in r.Inputs)
+            {
+                int have = Owned(craft, i.ItemId);
+                d.Add(have >= i.Count ? $"+ {craft.ItemName(i.ItemId)}  {have}/{i.Count}  (have)" : $"! {craft.ItemName(i.ItemId)}  {have}/{i.Count}  (need {i.Count - have} more)");
+            }
+            d.Add("Expected quality: " + ExpectedQuality(craft, r, false));
+            if (!string.IsNullOrEmpty(r.AttuneItem))
+            {
+                int have = Owned(craft, r.AttuneItem);
+                d.Add($"- Boost (X): spend 1 extra {craft.ItemName(r.AttuneItem)} ({have} owned) for a better result: {ExpectedQuality(craft, r, true)}");
+            }
+            if (status == CraftResult.WrongStation) d.Add("! This needs a workbench. Visit the right maker, or craft it at their station.");
+            else if (status == CraftResult.RankTooLow) d.Add("! " + craft.StatusText(status, r));
+            return d;
         }
 
         // ------------------------------------------------------------------ pieces (public for tests)

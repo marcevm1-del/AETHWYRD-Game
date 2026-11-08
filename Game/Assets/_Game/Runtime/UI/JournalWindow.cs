@@ -21,8 +21,9 @@ namespace Ascend.Game
 
         public Page Current { get; private set; }
 
-        protected override string Title => Current == Page.Clues ? "JOURNAL  ·  Dungeon clues" : "JOURNAL  ·  Civilization Archive";
-        protected override string Footer => Current == Page.Clues ? "Left/Right: Archive ▶" : "◀ Left/Right: Dungeon clues";
+        protected override string Title => "JOURNAL";
+        protected override string[] Tabs => new[] { "Dungeon clues", "Civilization Archive" };
+        protected override int TabIndex => (int)Current;
 
         public void ShowPage(Page p) { Current = p; Rebuild(); }
 
@@ -78,7 +79,7 @@ namespace Ascend.Game
                 int unknown = d.Clues.Count - heard - found;
                 if (unknown > 0) rows.Add(Info($"  … {unknown} more {(unknown == 1 ? "clue" : "clues")} still to be found", true));
             }
-            if (dungeonsShown == 0) rows.Add(Info("No dungeon records yet. Ask around and look closely when you explore.", true));
+            if (dungeonsShown == 0) rows.Add(Invite("No dungeon records yet. Ask around and look closely when you explore."));
         }
 
         // ------------------------------------------------------------------ civilization archive
@@ -120,7 +121,7 @@ namespace Ascend.Game
                     }
                 }
             }
-            if (shown == 0) rows.Add(Info("No records yet. Inscriptions, ruins and old tales will be written here.", true));
+            if (shown == 0) rows.Add(Invite("No records yet. Inscriptions, ruins and old tales will be written here."));
             var restored = archive.RestoredArtifacts.Select(id => data.Entry(id)).Where(e => e != null).ToList();
             if (restored.Count > 0)
             {

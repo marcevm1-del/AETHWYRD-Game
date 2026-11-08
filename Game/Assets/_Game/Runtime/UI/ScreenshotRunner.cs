@@ -101,7 +101,11 @@ namespace Ascend.Game
                 case "companions": CompanionWindow.Instance.Open(player); break;
                 case "journal": SeedJournal(player); JournalWindow.Instance.Open(player); break;
                 case "accessibility": AccessibilityWindow.Instance.Open(player); break;
-                case "photo": PhotoModeController.Instance.Open(); break;
+                case "photo":
+                    // The capture stands beside live monsters, so tell photo mode to ignore "combat"; the HUD then hides and the hint strip shows.
+                    PhotoModeController.IgnoreCombatForCapture = true;
+                    if (!PhotoModeController.Instance.Open()) Debug.LogWarning("ascendShotWindow photo: " + PhotoModeController.Instance.Message);
+                    break;
                 case "overlay": PlaytestOverlay.Instance.SetVisible(true); break;
                 default: Debug.LogWarning("ascendShotWindow: unknown window " + name); break;
             }
@@ -123,22 +127,32 @@ namespace Ascend.Game
 
         static void SeedJournal(GameObject player)
         {
+            // Resolve the world the way the windows do (the player's, else any in the scene), so seeding never silently does nothing.
             var world = player != null ? player.GetComponent<PlayerWorldState>() : null;
-            if (world == null) return;
-            foreach (var kv in world.Dungeons.Take(2))
+            if (world == null) world = FindFirstObjectByType<PlayerWorldState>();
+            if (world == null) { Debug.LogWarning("ascendShotWindow journal: no PlayerWorldState to seed"); return; }
+            int clues = 0, rooms = 0, entries = 0;
+            foreach (var kv in world.Dungeons)
             {
                 if (!AscendData.Db.Dungeons.TryGetValue(kv.Key, out var d)) continue;
-                if (d.Rooms.Count > 0) kv.Value.VisitRoom(d.EntryRoom ?? d.Rooms[0].Id);
-                for (int i = 0; i < d.Clues.Count && i < 3; i++) { if (i == 0) kv.Value.HearClue(d.Clues[i].Id); else kv.Value.VisitClue(d.Clues[i].Id); }
+                if (d.Rooms.Count > 0 && kv.Value.VisitRoom(string.IsNullOrEmpty(d.EntryRoom) ? d.Rooms[0].Id : d.EntryRoom)) rooms++;
+                for (int i = 0; i < d.Clues.Count && i < 3; i++)
+                {
+                    if (i == 0) { if (kv.Value.HearClue(d.Clues[i].Id)) clues++; }
+                    else if (kv.Value.VisitClue(d.Clues[i].Id)) clues++;
+                }
             }
             var archive = world.Archive;
-            if (archive == null) return;
-            int n = 0;
-            foreach (var e in archive.Data.Entries.Take(9))
+            if (archive != null)
             {
-                if (n++ % 3 == 0) archive.Hear(e.Id);
-                else if (e.ReadAt != null && e.ReadAt.SiteId != null) archive.ReadAtSite(e.Id, e.ReadAt.SiteId);
+                int n = 0;
+                foreach (var e in archive.Data.Entries.Take(9))
+                {
+                    if (n++ % 3 == 0) { if (archive.Hear(e.Id)) entries++; }
+                    else if (e.ReadAt != null && e.ReadAt.SiteId != null && archive.ReadAtSite(e.Id, e.ReadAt.SiteId) == Ascend.Core.ArchiveResult.Ok) entries++;
+                }
             }
+            Debug.Log($"ascendShotWindow journal: seeded {rooms} rooms, {clues} clues, {entries} archive entries");
         }
 
         void Update()

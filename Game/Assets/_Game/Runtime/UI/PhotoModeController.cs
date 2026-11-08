@@ -26,6 +26,9 @@ namespace Ascend.Game
         /// <summary>True while photo mode wants the HUD gone (RingZeroHud checks it).</summary>
         public static bool HudHidden => _instance != null && _instance._open && _instance._hudHidden;
 
+        /// <summary>Set by the screenshot runner: capture shots stand beside live monsters, which would otherwise block photo mode as "combat".</summary>
+        public static bool IgnoreCombatForCapture { get; set; }
+
         bool _open, _hudHidden;
         double _fov = 60, _origFov;
         Camera _cam;
@@ -141,7 +144,7 @@ namespace Ascend.Game
             var clock = WorldClock.Instance;
             return new PhotoWorldState
             {
-                InCombat = InCombat(),
+                InCombat = !IgnoreCombatForCapture && InCombat(),
                 InDialogue = NpcDialog.IsOpen,
                 Hour = clock != null ? clock.Hour : 12,
                 Weather = "clear",
@@ -206,15 +209,15 @@ namespace Ascend.Game
             var old = GUI.matrix;
             GUI.matrix = Matrix4x4.Scale(new Vector3(k, k, 1f));
             var lines = Lines();
-            var r = new Rect((vw - 640) / 2f, vh - 86f, 640, 60);
+            var r = new Rect((vw - 760) / 2f, vh - 100f, 760, 74);
             var c = GUI.color;
             GUI.color = new Color(0.055f, 0.065f, 0.11f, 0.85f);
             GUI.DrawTexture(r, Texture2D.whiteTexture);
             GUI.color = c;
-            _style.fontSize = 16; _style.fontStyle = FontStyle.Bold; _style.normal.textColor = new Color(1f, 0.85f, 0.45f);
-            GUI.Label(new Rect(r.x, r.y + 2, r.width, 24), $"{lines[0]}  ·  {lines[1]}  ·  {lines[2]}", _style);
-            _style.fontSize = 14; _style.fontStyle = FontStyle.Normal; _style.normal.textColor = new Color(0.94f, 0.95f, 0.98f);
-            GUI.Label(new Rect(r.x, r.y + 28, r.width, 24), lines[3], _style);
+            _style.fontSize = 19; _style.fontStyle = FontStyle.Bold; _style.normal.textColor = new Color(0.498f, 0.89f, 1f);
+            GUI.Label(new Rect(r.x, r.y + 4, r.width, 30), $"{lines[0]}  ·  {lines[1]}  ·  {lines[2]}", _style);
+            _style.fontSize = 17; _style.fontStyle = FontStyle.Normal; _style.normal.textColor = new Color(0.96f, 0.97f, 1f);
+            GUI.Label(new Rect(r.x, r.y + 38, r.width, 30), SystemWindow.PadActive ? "D-Pad Up/Down zoom  ·  Y HUD  ·  A save photo  ·  B leave" : lines[3], _style);
             GUI.matrix = old;
         }
     }

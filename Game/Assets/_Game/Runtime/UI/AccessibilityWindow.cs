@@ -37,38 +37,40 @@ namespace Ascend.Game
             var world = World;
             if (world == null || world.Accessibility == null) { rows.Add(Info("Accessibility settings are not available yet.", true)); return; }
             var a = world.Accessibility;
+            var d = new AccessibilitySettings(); // the defaults, for the notch on each bar
 
             rows.Add(Header("TEXT AND PANELS"));
-            rows.Add(SliderRow("Text size", () => a.TextScale, v => a.TextScale = v, AccessibilityLimits.TextScaleMin, AccessibilityLimits.TextScaleMax, 0.1, "0.0#", "×"));
-            rows.Add(SliderRow("HUD size", () => a.HudScale, v => a.HudScale = v, AccessibilityLimits.HudScaleMin, AccessibilityLimits.HudScaleMax, 0.05, "0.0#", "×"));
+            rows.Add(SliderRow("Text size", () => a.TextScale, v => a.TextScale = v, AccessibilityLimits.TextScaleMin, AccessibilityLimits.TextScaleMax, 0.1, "0.0#", "×", def: d.TextScale));
+            rows.Add(NoteRow("Sample: The guild board opens at dawn. Read it like this."));
+            rows.Add(SliderRow("HUD size", () => a.HudScale, v => a.HudScale = v, AccessibilityLimits.HudScaleMin, AccessibilityLimits.HudScaleMax, 0.05, "0.0#", "×", def: d.HudScale));
             rows.Add(ToggleRow("High-contrast panels", () => a.HighContrastPanels, v => a.HighContrastPanels = v));
             rows.Add(ToggleRow("Dyslexia-friendly font", () => a.DyslexiaFont, v => a.DyslexiaFont = v));
             rows.Add(CycleRow("Colourblind mode", () => a.ColorblindPalette, v => a.ColorblindPalette = v));
             var pal = world.AccessibilityData != null && world.AccessibilityData.Palettes.Count > 0 ? AccessibilityRules.PaletteFor(world.AccessibilityData, a.ColorblindPalette) : null;
-            if (pal != null) rows.Add(Info($"      telegraph colours: parry {pal.Parry}  ·  unblockable {pal.Unblockable}  ·  grab {pal.Grab}   (shapes differ too)", true));
+            if (pal != null) rows.Add(NoteRow($"Telegraph colours: parry {pal.Parry}, unblockable {pal.Unblockable}, grab {pal.Grab}. Shapes differ too."));
 
             rows.Add(Header("SUBTITLES AND DIALOGUE"));
             rows.Add(ToggleRow("Subtitles", () => a.SubtitlesEnabled, v => a.SubtitlesEnabled = v));
             rows.Add(CycleRow("Subtitle size", () => a.SubtitleSize, v => a.SubtitleSize = v));
             rows.Add(CycleRow("Subtitle background", () => a.SubtitleBackground, v => a.SubtitleBackground = v));
-            rows.Add(SliderRow("Dialogue text speed", () => a.DialogueTextSpeed, v => a.DialogueTextSpeed = v, AccessibilityLimits.TextSpeedMin, AccessibilityLimits.TextSpeedMax, 0.25, "0.0#", "×"));
-            rows.Add(Info("      Speaker names are always shown.", true));
+            rows.Add(SliderRow("Dialogue text speed", () => a.DialogueTextSpeed, v => a.DialogueTextSpeed = v, AccessibilityLimits.TextSpeedMin, AccessibilityLimits.TextSpeedMax, 0.25, "0.0#", "×", def: d.DialogueTextSpeed));
+            rows.Add(NoteRow("Speaker names are always shown."));
 
             rows.Add(Header("MOTION AND FLASHES"));
-            rows.Add(SliderRow("Screen shake", () => a.ScreenShake, v => a.ScreenShake = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Flash intensity", () => a.FlashIntensity, v => a.FlashIntensity = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Motion blur", () => a.MotionBlur, v => a.MotionBlur = v, 0, 1, 0.1, "0%"));
+            rows.Add(SliderRow("Screen shake", () => a.ScreenShake, v => a.ScreenShake = v, 0, 1, 0.1, "0%", def: d.ScreenShake));
+            rows.Add(SliderRow("Flash intensity", () => a.FlashIntensity, v => a.FlashIntensity = v, 0, 1, 0.1, "0%", def: d.FlashIntensity));
+            rows.Add(NoteRow(a.ReducedFlash ? $"Flashes are currently {a.EffectiveFlash * 100:0}% strength (Reduced flashes is on)." : $"Flashes are currently {a.EffectiveFlash * 100:0}% strength. Turn on Reduced flashes to lower them."));
+            rows.Add(SliderRow("Motion blur", () => a.MotionBlur, v => a.MotionBlur = v, 0, 1, 0.1, "0%", def: d.MotionBlur));
             rows.Add(ToggleRow("Reduced flashes", () => a.ReducedFlash, v => a.ReducedFlash = v));
-            rows.Add(Info($"      flashes are drawn at {a.EffectiveFlash * 100:0}% strength", true));
 
             rows.Add(Header("SOUND"));
             var vol = a.Volumes;
-            rows.Add(SliderRow("Master volume", () => vol.Master, v => vol.Master = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Music volume", () => vol.Music, v => vol.Music = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Effects volume", () => vol.Effects, v => vol.Effects = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Ambience volume", () => vol.Ambience, v => vol.Ambience = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Dialogue volume", () => vol.Dialogue, v => vol.Dialogue = v, 0, 1, 0.1, "0%"));
-            rows.Add(SliderRow("Companion callouts", () => vol.Callouts, v => vol.Callouts = v, 0, 1, 0.1, "0%"));
+            rows.Add(SliderRow("Master volume", () => vol.Master, v => vol.Master = v, 0, 1, 0.1, "0%", def: d.Volumes.Master));
+            rows.Add(SliderRow("Music volume", () => vol.Music, v => vol.Music = v, 0, 1, 0.1, "0%", def: d.Volumes.Music));
+            rows.Add(SliderRow("Effects volume", () => vol.Effects, v => vol.Effects = v, 0, 1, 0.1, "0%", def: d.Volumes.Effects));
+            rows.Add(SliderRow("Ambience volume", () => vol.Ambience, v => vol.Ambience = v, 0, 1, 0.1, "0%", def: d.Volumes.Ambience));
+            rows.Add(SliderRow("Dialogue volume", () => vol.Dialogue, v => vol.Dialogue = v, 0, 1, 0.1, "0%", def: d.Volumes.Dialogue));
+            rows.Add(SliderRow("Companion callouts", () => vol.Callouts, v => vol.Callouts = v, 0, 1, 0.1, "0%", def: d.Volumes.Callouts));
             rows.Add(ToggleRow("No combat music", () => a.NoCombatMusic, v => a.NoCombatMusic = v));
             rows.Add(ToggleRow("Calmer music in fights", () => a.ReducedMusicIntensity, v => a.ReducedMusicIntensity = v));
 
@@ -97,7 +99,7 @@ namespace Ascend.Game
             return new Row { Text = $"{label}: {(get() ? "On" : "Off")}", Act = flip, Adjust = _ => flip() };
         }
 
-        Row SliderRow(string label, Func<double> get, Action<double> set, double lo, double hi, double step, string format, string suffix = "")
+        Row SliderRow(string label, Func<double> get, Action<double> set, double lo, double hi, double step, string format, string suffix = "", double def = double.NaN)
         {
             double v = get();
             string shown = format.EndsWith("%") ? (v * 100).ToString("0") + "%" : v.ToString(format, System.Globalization.CultureInfo.InvariantCulture) + suffix;
@@ -111,6 +113,7 @@ namespace Ascend.Game
                     Commit();
                 },
                 Bar = hi > lo ? (float)((v - lo) / (hi - lo)) : 0f,
+                BarDefault = hi > lo && !double.IsNaN(def) ? (float)((def - lo) / (hi - lo)) : -1f,
             };
         }
 
