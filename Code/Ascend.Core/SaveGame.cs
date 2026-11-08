@@ -59,6 +59,8 @@ namespace Ascend.Core
         public HomeSave Home { get; set; }
         /// <summary>Stable eggs, feeding times, the sanctuary collection and the chosen mount (null in older saves; Upgrade fills it).</summary>
         public StablesSave Stables { get; set; }
+        /// <summary>The Civilization Archive: entries Unknown / Heard / Visited, fragments found, artifacts restored (null in older saves; Upgrade fills it).</summary>
+        public ArchiveSave Archive { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
         public double? ClockSeconds { get; set; }
         public List<RestBuff> RestBuffs { get; set; } = new List<RestBuff>();
@@ -144,6 +146,10 @@ namespace Ascend.Core
             s.Stables.PairReady ??= new Dictionary<string, double>();
             s.Stables.SpeciesSeen ??= new List<string>();
             s.Stables.Markings ??= new List<string>();
+            s.Archive ??= new ArchiveSave();
+            s.Archive.Entries ??= new Dictionary<string, MapStatus>();
+            s.Archive.FoundFragments ??= new List<string>();
+            s.Archive.Restored ??= new List<string>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;

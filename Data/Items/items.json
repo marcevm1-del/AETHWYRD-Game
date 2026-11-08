@@ -1089,5 +1089,104 @@
    "seconds": 600
   },
   "flavor": "Wheat, patience and a barrel."
+ },
+ {
+  "id": "itm_frag_covenant_a",
+  "name": "Covenant tablet, upper half",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_covenant_b",
+  "name": "Covenant tablet, lower half",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_dun_a",
+  "name": "Foundation plate, left edge",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_dun_b",
+  "name": "Foundation plate, right edge",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_seedbowl_a",
+  "name": "Seed-bowl rim",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_seedbowl_b",
+  "name": "Seed-bowl base",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_primer_a",
+  "name": "Primer leaf, first page",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_primer_b",
+  "name": "Primer leaf, second page",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_primer_c",
+  "name": "Primer leaf, binding",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_glass_a",
+  "name": "Humming glass shard",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_frag_glass_b",
+  "name": "Humming glass rim",
+  "category": "fragment",
+  "rank": "F",
+  "rarity": "Uncommon",
+  "value": 0,
+  "flavor": "A broken piece of something old. Perhaps it fits with another."
  }
 ]

@@ -1,0 +1,377 @@
+{
+ "notes": "Civilization Archive (12_Systems/civilization_archive.md). Every civilization and entry here paraphrases lore that already exists in 02_Lore/history.md, cosmology.md and the Salvage Warren data, and shows only the PUBLIC account: the Big Secrets of Canon section 3 are never named in it (the validator scans for them). Entries and fragment placements marked draft (and sites with loreStatus draft) are new game placement or new wording that is NOT Canon until the user approves it. The archive is optional: no quest, rank, ending or main-story step reads it. Decided 2026-11-08 by Claude under delegated creative control; the user may overrule.",
+ "civilizations": [
+  {
+   "id": "civ_draconic",
+   "name": "The Dragons and the First Folk",
+   "age": "The Age of Dragons (~50,000 to ~30,000 BSC)",
+   "source": "02_Lore/history.md II",
+   "summary": "The Five Elder Dragons held the Weave taut while the first mortals lived in their shadow. Draconic became the first written language; its runes still appear on the oldest ruins."
+  },
+  {
+   "id": "civ_titans",
+   "name": "The Titans",
+   "age": "The Age of Titans and the Sundering (~30,000 to ~12,000 BSC)",
+   "source": "02_Lore/history.md III, IV",
+   "summary": "Giants of stone, crystal and machinery led by Atharos, the First Titan. They reshaped continents, raised the Sky Cities and went to war with the gods in the Sundering."
+  },
+  {
+   "id": "civ_khazdur",
+   "name": "The Dwarves of Karak Dûn",
+   "age": "The Age of First Kingdoms (~12,000 to ~3,000 BSC)",
+   "source": "02_Lore/history.md V; 02_Lore/cosmology.md",
+   "summary": "Dwarves learned craft from Thorgrim and founded Karak Dûn around 10,500 BSC. Their Khazdûr runes are the root of rune crafting."
+  },
+  {
+   "id": "civ_sylvaran",
+   "name": "The Sylvaran Court",
+   "age": "The Age of First Kingdoms (~12,000 to ~3,000 BSC)",
+   "source": "02_Lore/history.md V",
+   "summary": "Elves who learned from Sylvara planted the World Tree Lothaniel around 11,000 BSC. The Felled Grove War over Heartwood ore, around 5,000 BSC, left the first trace of the Blight."
+  },
+  {
+   "id": "civ_valdrisia",
+   "name": "Valdrisia, the Old Magic Empire",
+   "age": "The Age of First Kingdoms to the Long Night (~6,000 to ~3,000 BSC)",
+   "source": "02_Lore/history.md V, VI",
+   "summary": "Humans and elves who read Old Weave-tongue founded Valdrisia around 6,000 BSC in the then-green Sunscar region. It became an empire of towers and ley-line farms, and vanished in a single night about 3,000 BSC."
+  }
+ ],
+ "sites": [
+  {
+   "id": "site_sunscar_ruins",
+   "regionId": "reg_sunscar",
+   "name": "The ruins of the Sunscar",
+   "civilizationId": "civ_valdrisia",
+   "loreStatus": "canon"
+  },
+  {
+   "id": "site_strife_marches_ruins",
+   "regionId": "reg_strife_marches",
+   "name": "The ruins of the Strife Marches",
+   "civilizationId": "civ_draconic",
+   "loreStatus": "draft"
+  },
+  {
+   "id": "site_aldmere_ruins",
+   "regionId": "reg_aldmere",
+   "name": "The ruins of Aldmere",
+   "civilizationId": "civ_khazdur",
+   "loreStatus": "draft"
+  },
+  {
+   "id": "site_whisperwood_ruins",
+   "regionId": "reg_whisperwood",
+   "name": "The ruins of Whisperwood",
+   "civilizationId": "civ_sylvaran",
+   "loreStatus": "draft"
+  },
+  {
+   "id": "site_lumbaya_ruins",
+   "regionId": "reg_lumbaya",
+   "name": "The ruins of Lumbaya",
+   "civilizationId": "civ_titans",
+   "loreStatus": "draft"
+  },
+  {
+   "id": "site_nox_dominion_ruins",
+   "regionId": "reg_nox_dominion",
+   "name": "The ruins of the Nox Dominion",
+   "civilizationId": "civ_valdrisia",
+   "loreStatus": "draft"
+  }
+ ],
+ "entries": [
+  {
+   "id": "ent_draconic_warning_stones",
+   "civilizationId": "civ_draconic",
+   "kind": "inscription",
+   "title": "Draconic Warning Stones",
+   "text": "Draconic runes began as agreements, measures and warnings around ley sites. Later builders reused the stones as door lintels without always understanding them.",
+   "source": "02_Lore/history.md II, V (material clues)",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_strife_marches_ruins"
+   }
+  },
+  {
+   "id": "ent_draconic_covenant",
+   "civilizationId": "civ_draconic",
+   "kind": "record",
+   "title": "The Draconic Covenant",
+   "text": "Dragons protected the first mortals and the mortals kept the ley lines clean. The Covenant is said to have held for twenty thousand years.",
+   "source": "02_Lore/history.md II",
+   "how": "restore",
+   "draft": false,
+   "hearsRegions": [
+    "reg_strife_marches"
+   ]
+  },
+  {
+   "id": "ent_sky_city_engines",
+   "civilizationId": "civ_titans",
+   "kind": "machine",
+   "title": "The Aether Engines of the Sky Cities",
+   "text": "The Titans built Sky Cities powered by Aether engines. The Sky Archipelago is what remains of them.",
+   "source": "02_Lore/history.md III",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_lumbaya_ruins"
+   }
+  },
+  {
+   "id": "ent_war_of_heaven_and_stone",
+   "civilizationId": "civ_titans",
+   "kind": "painting",
+   "title": "The War of Heaven and Stone",
+   "text": "A mural of the war between the Titans and the gods, in which the last blow cracked the sky. The scar is still visible in the north as the Shattered Sky.",
+   "source": "02_Lore/history.md IV",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_lumbaya_ruins"
+   }
+  },
+  {
+   "id": "ent_karak_dun_founding",
+   "civilizationId": "civ_khazdur",
+   "kind": "record",
+   "title": "The Lighting of Thorgrim's Forge",
+   "text": "Around 10,500 BSC the dwarves founded Karak Dûn in the mountains and lit Thorgrim's forge.",
+   "source": "02_Lore/history.md V",
+   "how": "restore",
+   "draft": false,
+   "hearsClues": [
+    {
+     "dungeonId": "dng_salvage_warren",
+     "clueId": "clue_runesmith_mural"
+    }
+   ],
+   "artifact": "Karak Dûn foundation plate"
+  },
+  {
+   "id": "ent_khazdur_runes",
+   "civilizationId": "civ_khazdur",
+   "kind": "inscription",
+   "title": "Khazdûr Runes",
+   "text": "The dwarves' rune crafting, the root of runecraft. The Runesmith's mural in the Salvage Warren shows the glyphs in their order.",
+   "source": "02_Lore/cosmology.md; 12_Systems/systems.md 5",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "dungeonId": "dng_salvage_warren",
+    "clueId": "clue_runesmith_mural"
+   }
+  },
+  {
+   "id": "ent_lothaniel_planting",
+   "civilizationId": "civ_sylvaran",
+   "kind": "record",
+   "title": "The Planting of Lothaniel",
+   "text": "Around 11,000 BSC the elves planted the World Tree Lothaniel and the Sylvaran Court formed.",
+   "source": "02_Lore/history.md V",
+   "how": "restore",
+   "draft": false,
+   "hearsRegions": [
+    "reg_whisperwood"
+   ],
+   "artifact": "Seed-bowl of the Court"
+  },
+  {
+   "id": "ent_felled_grove_war",
+   "civilizationId": "civ_sylvaran",
+   "kind": "record",
+   "title": "The Felled Grove War",
+   "text": "Dwarves dug into the roots of the World Tree for Heartwood ore and the elves went to war. The wound is the first trace of the Blight. Later courts may have used the name for many cycles of retaliation.",
+   "source": "02_Lore/history.md V, open questions",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_whisperwood_ruins"
+   }
+  },
+  {
+   "id": "ent_old_weave_tongue",
+   "civilizationId": "civ_valdrisia",
+   "kind": "manuscript",
+   "title": "Old Weave-tongue Primer",
+   "text": "Valdrisia's power rested on who was allowed to learn Old Weave-tongue, who supplied the labour and who could refuse a levy.",
+   "source": "02_Lore/history.md V",
+   "how": "restore",
+   "draft": false,
+   "hearsRegions": [
+    "reg_sunscar"
+   ],
+   "artifact": "Weave-tongue primer"
+  },
+  {
+   "id": "ent_valdrisian_towers",
+   "civilizationId": "civ_valdrisia",
+   "kind": "machine",
+   "title": "Towers and Ley-line Farms",
+   "text": "The Old Magic Empire raised towers that touched the clouds and farmed the ley lines. The brilliance rested on enslaved beastkin labour, and that memory outlived the empire.",
+   "source": "02_Lore/history.md V",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_sunscar_ruins"
+   }
+  },
+  {
+   "id": "ent_valdrisian_roads",
+   "civilizationId": "civ_valdrisia",
+   "kind": "map",
+   "title": "Roads That End at a Cliff",
+   "text": "Valdrisian roads run straight and then stop at a cliff, where the missing capital once stood.",
+   "source": "02_Lore/history.md V (material clues)",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_sunscar_ruins"
+   }
+  },
+  {
+   "id": "ent_glass_circles",
+   "civilizationId": "civ_valdrisia",
+   "kind": "object",
+   "title": "The Glass of the Ritual Circles",
+   "text": "After the Night of Unweaving the land turned to desert and glass deserts mark the ritual circles. The glass hums.",
+   "source": "02_Lore/history.md VI",
+   "how": "restore",
+   "draft": false,
+   "hearsRegions": [
+    "reg_sunscar"
+   ],
+   "artifact": "Humming glass disc"
+  },
+  {
+   "id": "ent_ashen_gate_account",
+   "civilizationId": "civ_valdrisia",
+   "kind": "record",
+   "title": "The Battle of Ashen Gate (the public account)",
+   "text": "Elves, dwarves, humans and beastkin together ended the Long Night at the Battle of Ashen Gate, at a horrible cost. This is the account the survivors teach.",
+   "source": "02_Lore/history.md VI",
+   "how": "read",
+   "draft": false,
+   "readAt": {
+    "siteId": "site_nox_dominion_ruins"
+   }
+  }
+ ],
+ "fragments": [
+  {
+   "id": "frag_covenant_a",
+   "itemId": "itm_frag_covenant_a",
+   "name": "Covenant tablet, upper half",
+   "entryId": "ent_draconic_covenant",
+   "foundIn": {
+    "siteId": "site_strife_marches_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_covenant_b",
+   "itemId": "itm_frag_covenant_b",
+   "name": "Covenant tablet, lower half",
+   "entryId": "ent_draconic_covenant",
+   "foundIn": {
+    "siteId": "site_lumbaya_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_dun_a",
+   "itemId": "itm_frag_dun_a",
+   "name": "Foundation plate, left edge",
+   "entryId": "ent_karak_dun_founding",
+   "foundIn": {
+    "dungeonId": "dng_salvage_warren",
+    "roomId": "rm_rune_cistern"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_dun_b",
+   "itemId": "itm_frag_dun_b",
+   "name": "Foundation plate, right edge",
+   "entryId": "ent_karak_dun_founding",
+   "foundIn": {
+    "siteId": "site_aldmere_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_seedbowl_a",
+   "itemId": "itm_frag_seedbowl_a",
+   "name": "Seed-bowl rim",
+   "entryId": "ent_lothaniel_planting",
+   "foundIn": {
+    "siteId": "site_whisperwood_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_seedbowl_b",
+   "itemId": "itm_frag_seedbowl_b",
+   "name": "Seed-bowl base",
+   "entryId": "ent_lothaniel_planting",
+   "foundIn": {
+    "dungeonId": "dng_salvage_warren",
+    "roomId": "rm_weighing_gallery"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_primer_a",
+   "itemId": "itm_frag_primer_a",
+   "name": "Primer leaf, first page",
+   "entryId": "ent_old_weave_tongue",
+   "foundIn": {
+    "siteId": "site_sunscar_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_primer_b",
+   "itemId": "itm_frag_primer_b",
+   "name": "Primer leaf, second page",
+   "entryId": "ent_old_weave_tongue",
+   "foundIn": {
+    "siteId": "site_sunscar_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_primer_c",
+   "itemId": "itm_frag_primer_c",
+   "name": "Primer leaf, binding",
+   "entryId": "ent_old_weave_tongue",
+   "foundIn": {
+    "siteId": "site_nox_dominion_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_glass_a",
+   "itemId": "itm_frag_glass_a",
+   "name": "Humming glass shard",
+   "entryId": "ent_glass_circles",
+   "foundIn": {
+    "siteId": "site_sunscar_ruins"
+   },
+   "draft": true
+  },
+  {
+   "id": "frag_glass_b",
+   "itemId": "itm_frag_glass_b",
+   "name": "Humming glass rim",
+   "entryId": "ent_glass_circles",
+   "foundIn": {
+    "siteId": "site_nox_dominion_ruins"
+   },
+   "draft": true
+  }
+ ]
+}

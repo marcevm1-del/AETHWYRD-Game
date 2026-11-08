@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-08 — Part 2, step 4: Civilization Archive and archaeology (finishes the Canon-safe part of upgrade v7)
+- An optional Unknown / Heard / Visited archive of five civilizations and 13 entries drawn only from existing lore (public accounts, no Canon section 3 secrets), 11 once-only fragments at ruins and Salvage Warren rooms, and a deterministic restore action that rewards knowledge only. It gates no quest, rank or story step. `SaveGame.Archive` defaults safely for older saves.
+- Data `Data/World/civilization_archive.json` with schema and a lore-guard validator; docs `12_Systems/civilization_archive.md`; audit `13_Production/archive_v7b_audit.md`; decision A1 in Canon section 6 (fragment placements, artifact names and five site assignments are marked proposed). 10 new Core tests. Not built: mini-games, museum screen, new lore, artifact powers.
+
 ## 2026-11-08 — Part 2, step 3: stables and the sanctuary (finishes upgrade v8)
 - Home stable with capacity by home tier plus an unlimited guild kennel, optional favourite-food treats, ground-mount selection, a four-level sanctuary, and ranch breeding and egg nests exactly as Canon defines them (markings, rare cross-element hatchlings with a pity guarantee, Bond 3 hatchlings). No hunger, sickness, escape, or flying or aquatic mounts. Partners now have ids; `SaveGame.Stables` defaults safely for older saves.
 - Data `Data/Companions/stables.json` with schema and validator checks; docs `12_Systems/stables.md`; audit `13_Production/stables_v8_audit.md`; decision S1 in Canon section 6. 14 new Core tests. Not built: training grounds, cosmetics, monster jobs, recovery.
