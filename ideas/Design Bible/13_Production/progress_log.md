@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Title wording | Game brief, audio doc, mounts schema title and the v9 audit no longer call the title, voice or mount speed undecided | 682 + (not run) |
 | Living world (v4 subset) | Optional NPC schedule resolver, calendar-driven event director for caravans and small wanderers (cooldowns, caps, four safe effects), Unknown/Heard/Visited discovery journal, safe-default save field; data, schema, validator, docs and audit. Not built: faction war, economy sim, procedural quests, settlement change | 682 + (not run) |
 | Canon section 6 decided | Claude decided every open proposal (Waves C, D, E, F-lite, W1-W7, WF1-WF11) under delegated creative control, each in its row and CHANGELOG: voice = System voice + short key moments, three discovery states kept, 10.24 km tiles and 1 map unit = 1 km settled, mount speed 10 m/s, no aquatic mounts. Data: sea leg to the Kitsune Isles, Underworld depth 1-5, graph findings 0. Map renames and settlement moves are decided but not applied | 661 + (not run) |
 | AETHWYRD rename | The game is AETHWYRD, the world Aethwyrd (adjective Aethwyrdian), by the user's Name Changer. Prose, UI text and metadata renamed; identifiers, package ids, remote, save keys and Unity productName kept on purpose. Report in `13_Production/aethwyrd_migration_report.md`; Canon Title row updated | 661 + (not run) |

@@ -85,7 +85,7 @@ A `PhotoSession` is a pure overlay. It holds no `SaveGame` and no clock, so it c
 ## 7. Open decisions (the user's call)
 
 - **Amount of voice acting** (Canon §1, decided 2026-11-07): the System has a voice and a few short voiced key moments; there is no full voice acting and no lip-sync pipeline. Every line stays subtitled, speaker names stay on, and the dialogue bus (default on, adjustable to silent) carries the System voice and the key moments.
-- **Game title** (placeholder AETHWYRD). Event names do not contain it.
+- **Game title** (AETHWYRD, chosen by the user). Event names do not contain it.
 
 ## 8. Skipped on purpose
 

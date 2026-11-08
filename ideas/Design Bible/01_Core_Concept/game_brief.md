@@ -1,6 +1,6 @@
 # Game brief (one page)
 
-Working title: **AETHWYRD** (placeholder, the user decides the title). This page is a summary. `Canon.md` wins any conflict, `01_Core_Concept/vision.md` has the full pillars, and `Data/` is canonical for numbers. It has no spoilers.
+Title: **AETHWYRD** (chosen by the user; the world is Aethwyrd). This page is a summary. `Canon.md` wins any conflict, `01_Core_Concept/vision.md` has the full pillars, and `Data/` is canonical for numbers. It has no spoilers.
 
 ## The game in one paragraph
 An open-world isekai / high-fantasy adventurer RPG. You wake in a world with two moons and a card in your pocket that reads **Rank F**: a Status System has granted you a place at the bottom of the adventurers' ladder. You climb from F to SSS and beyond, build a class, tame and fight alongside monsters, and travel a large hand-designed world whose regions, creatures and people react to what you do.
@@ -13,7 +13,7 @@ An open-world isekai / high-fantasy adventurer RPG. You wake in a world with two
 | Business | Premium, one-time purchase, planned for Steam; release planning is deferred until near the end |
 | Art | Bright, flowing, Genshin-style cel-shaded anime look |
 | Music | Mostly instrumental (regional folk plus orchestra); anime-rock / J-pop energy for bosses |
-| Voice | English first; the amount of voice acting is undecided |
+| Voice | English first; the System has a voice plus a few short voiced key moments, no full voice acting (decided 2026-11-07, Canon section 1) |
 | Tone | Teen rating, no fanservice, warmth over comedy; serious themes deepen later |
 | Team | The user and Claude |
 
@@ -31,4 +31,4 @@ An open-world isekai / high-fantasy adventurer RPG. You wake in a world with two
 Built and tested: the rules layer (ranks, skills, crafting with quality tiers and life skills, gathering, inventory, taming, companions with presets and four relationship tracks, ground mounts, combat with reactions and boss armor, one dungeon with three puzzle types) and the Ring 0 graybox in Unity with a placeholder-animated player. See `13_Production/progress_log.md` and `13_Production/ring0_plan.md`.
 
 ## Open decisions (the user's)
-The title, the amount of voice acting, the world scale and tile size, and the Canon section 6 proposals.
+The title, voice acting, world scale and tile size, and the Canon section 6 proposals were all decided by 2026-11-07 (Canon section 6 rows carry the decisions; the user may overrule any). Still open: whether to install the studio hooks, and applying the decided road and feature names and settlement moves to the map data.

@@ -444,7 +444,7 @@ const SCHEMAS = {
   const TERR = ['plains', 'forest', 'swamp', 'steppe', 'mountain', 'volcanic', 'tundra', 'desert', 'jungle', 'spirit', 'demon'];
   const num = { type: 'number', exclusiveMinimum: 0 };
   SCHEMAS.mounts = {
-    title: 'Ground mounts (Wave C; speed is a placeholder pending user decision)', type: 'object', additionalProperties: false,
+    title: 'Ground mounts (Wave C; speed settled at 10 m/s on 2026-11-07)', type: 'object', additionalProperties: false,
     required: ['version', 'speedMps', 'exhaustedWalkFraction', 'condition', 'families', 'mountedCombat', 'knockedOutNotKilled'],
     properties: {
       version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },

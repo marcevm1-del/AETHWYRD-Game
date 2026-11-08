@@ -21,7 +21,7 @@ Status: **built** (Wave D), **partial**, **deferred** (later wave), **skipped** 
 | v9 section | Status | Decision |
 |---|---|---|
 | 1 Cinematic camera and scene director | **skipped** | Task brief: out of scope. Needs Unity and a camera rig |
-| 2 Dialogue, facial expressions, lip-sync, voice profiles, eye tracking | **skipped** | The amount of voice acting is the user's open decision (Canon §1). Nothing here assumes voiced lines. Subtitles are modelled (they are needed with or without voice) |
+| 2 Dialogue, facial expressions, lip-sync, voice profiles, eye tracking | **skipped** | The amount of voice acting was decided on 2026-11-07 (Canon §1: System voice plus short key moments, no lip-sync), so facial expressions and lip-sync stay skipped. Nothing here assumes voiced lines. Subtitles are modelled (they are needed with or without voice) |
 | 3 Dynamic music: exploration / combat / boss / tension, transitions, intensity levels, regional identity | **built** | `AdaptiveMusic` state machine, `Data/Audio/music_states.json` |
 | 3 Companion-specific themes | **built (event names)** | Only ids in `Data/Companions/companions.json`; validator and Core test enforce it |
 | 3 Ancient-civilization soundtracks | **deferred** | Needs a content decision; the region motif event takes any region id so a later region slots in |

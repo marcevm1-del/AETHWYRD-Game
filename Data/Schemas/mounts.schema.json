@@ -1,6 +1,6 @@
 {
  "$schema": "http://json-schema.org/draft-07/schema#",
- "title": "Ground mounts (Wave C; speed is a placeholder pending user decision)",
+ "title": "Ground mounts (Wave C; speed settled at 10 m/s on 2026-11-07)",
  "type": "object",
  "additionalProperties": false,
  "required": [
