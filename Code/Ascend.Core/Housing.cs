@@ -75,7 +75,7 @@ namespace Ascend.Core
 
     public enum UpgradeResult { Ok, Unknown, AlreadyHere, NotNext, RankTooLow, NotEnoughMoney }
     public enum StorageResult { Ok, NotEnough, Full, BadCount }
-    public enum PlantResult { Ok, NoSuchPlot, Occupied, UnknownCrop, NoSeed }
+    public enum PlantResult { Ok, NoSuchPlot, Occupied, UnknownCrop, NoSeed, BadTime }
     public enum PlotState { Empty, Growing, Ready }
 
     public sealed class HarvestReport
@@ -162,6 +162,7 @@ namespace Ascend.Core
             if (count < 1 || string.IsNullOrEmpty(key)) return StorageResult.BadCount;
             if (inv == null || inv.Count(key) < count) return StorageResult.NotEnough;
             if (!_storage.ContainsKey(key) && _storage.Count >= Tier.StorageStacks) return StorageResult.Full;
+            if (Stored(key) > int.MaxValue - count) return StorageResult.Full; // never wrap a stack
             inv.TryRemove(key, count);
             _storage[key] = Stored(key) + count;
             Changed?.Invoke();
@@ -172,6 +173,7 @@ namespace Ascend.Core
         {
             if (count < 1 || string.IsNullOrEmpty(key) || inv == null) return StorageResult.BadCount;
             if (Stored(key) < count) return StorageResult.NotEnough;
+            if (inv.Count(key) > int.MaxValue - count) return StorageResult.Full; // the bag cannot hold that many; nothing moves
             _storage[key] -= count;
             if (_storage[key] == 0) _storage.Remove(key);
             inv.Add(key, count);
@@ -193,12 +195,15 @@ namespace Ascend.Core
         public double HoursLeft(int plot, double nowHour)
         {
             if (State(plot, nowHour) != PlotState.Growing) return 0;
-            return _plots[plot].PlantedHour + _crops.Crop(_plots[plot].Crop).GrowHours - nowHour;
+            var c = _crops.Crop(_plots[plot].Crop);
+            // A clock that reads earlier than the planting hour (a reset clock, an old save) counts as just planted.
+            return Math.Min(c.GrowHours, _plots[plot].PlantedHour + c.GrowHours - nowHour);
         }
 
         public PlantResult Plant(int plot, string cropId, Inventory inv, double nowHour)
         {
             if (plot < 0 || plot >= _plots.Count) return PlantResult.NoSuchPlot;
+            if (double.IsNaN(nowHour) || double.IsInfinity(nowHour)) return PlantResult.BadTime;
             var c = _crops.Crop(cropId);
             if (c == null) return PlantResult.UnknownCrop;
             if (_plots[plot].Crop != null) return PlantResult.Occupied;
@@ -231,12 +236,13 @@ namespace Ascend.Core
             return rep;
         }
 
-        /// <summary>Pulls a crop that is still growing and gives the seed back. No penalty.</summary>
-        public bool Clear(int plot, Inventory inv)
+        /// <summary>Pulls a crop that is still growing and gives the seed back. No penalty. A ripe crop is refused (harvest it instead) so a mis-click never costs a yield.</summary>
+        public bool Clear(int plot, Inventory inv, double nowHour)
         {
-            if (plot < 0 || plot >= _plots.Count || _plots[plot].Crop == null) return false;
+            if (plot < 0 || plot >= _plots.Count || _plots[plot].Crop == null || inv == null) return false;
+            if (State(plot, nowHour) == PlotState.Ready) return false;
             var c = _crops.Crop(_plots[plot].Crop);
-            if (c != null) inv?.Add(c.SeedItem);
+            if (c != null) inv.Add(c.SeedItem);
             _plots[plot].Crop = null; _plots[plot].PlantedHour = 0;
             Changed?.Invoke();
             return true;
@@ -251,20 +257,21 @@ namespace Ascend.Core
             StarterSeedsGiven = _starterGiven
         };
 
-        /// <summary>Restores from a save. Null (an old save) means the base tier with nothing stored. Unknown tiers, crops and bad numbers are dropped quietly.</summary>
+        /// <summary>Restores from a save. Null (an old save) means the base tier with nothing stored. Only invalid entries (bad numbers, empty keys) are dropped; unknown tiers and crops are kept as they are.</summary>
         public void Load(HomeSave s)
         {
             _storage.Clear(); _plots.Clear();
-            _tier = s != null && _housing.Tier(s.Tier) != null ? s.Tier : (_housing.Tiers.Count > 0 ? _housing.Tiers[0].Id : BaseTierId);
+            // An unknown tier id is kept (a renamed tier must not downgrade the player or drop their things); the first tier is only the default for a missing one.
+            _tier = !string.IsNullOrEmpty(s?.Tier) ? s.Tier : (_housing.Tiers.Count > 0 ? _housing.Tiers[0].Id : BaseTierId);
             _starterGiven = s?.StarterSeedsGiven ?? false;
             foreach (var p in s?.Plots ?? new List<PlotSave>())
             {
-                bool ok = p != null && p.Crop != null && _crops.Crop(p.Crop) != null && !double.IsNaN(p.PlantedHour) && !double.IsInfinity(p.PlantedHour);
+                bool ok = p != null && p.Crop != null && !double.IsNaN(p.PlantedHour) && !double.IsInfinity(p.PlantedHour);
                 _plots.Add(ok ? new PlotSave { Crop = p.Crop, PlantedHour = p.PlantedHour } : new PlotSave());
             }
             ResizePlots();
             foreach (var kv in s?.Storage ?? new Dictionary<string, int>())
-                if (!string.IsNullOrEmpty(kv.Key) && kv.Value > 0 && _storage.Count < Tier.StorageStacks) _storage[kv.Key] = kv.Value;
+                if (!string.IsNullOrEmpty(kv.Key) && kv.Value > 0) _storage[kv.Key] = kv.Value; // the cap limits new deposits only; a load never drops stored items
             Changed?.Invoke();
         }
     }

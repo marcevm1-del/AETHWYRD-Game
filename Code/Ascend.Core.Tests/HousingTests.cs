@@ -115,8 +115,8 @@ static class HousingTests
         h.Plant(0, "crop_turnip", inv, 0);
         Assert.True(h.Plant(0, "crop_wheat", inv, 0) == PlantResult.Occupied, "occupied");
         Assert.Equal(3, inv.Count("itm_seed_wheat"), "the wheat seeds were not used");
-        Assert.True(h.Clear(0, inv) && inv.Count("itm_seed_turnip") == 3, "clearing returns the seed, no penalty");
-        Assert.True(!h.Clear(0, inv), "nothing to clear");
+        Assert.True(h.Clear(0, inv, 0) && inv.Count("itm_seed_turnip") == 3, "clearing returns the seed, no penalty");
+        Assert.True(!h.Clear(0, inv, 0), "nothing to clear");
     }
 
     public static void HarvestQualityFollowsTheFarmingRankAlone()
@@ -171,7 +171,7 @@ static class HousingTests
             {
                 case 0: h.Plant(p, "crop_turnip", inv, now); break;
                 case 1: if (h.Harvest(p, inv, now).Ok) harvests++; break;
-                default: h.Clear(p, inv); break;
+                default: h.Clear(p, inv, now); break;
             }
             Assert.Equal(baseline, Seeds(), "seeds are conserved (the harvest returns the one planted), step " + n);
         }
@@ -198,7 +198,7 @@ static class HousingTests
         Assert.Equal("inn_room", k.Tier.Id, "old saves start in the inn room");
     }
 
-    public static void BadSaveDataIsDroppedQuietly()
+    public static void LoadNeverDropsWhatThePlayerOwns()
     {
         var g = NewHome();
         g.Load(new HomeSave
@@ -207,8 +207,37 @@ static class HousingTests
             Plots = new List<PlotSave> { null, new PlotSave { Crop = "crop_gone", PlantedHour = 5 }, new PlotSave { Crop = "crop_wheat", PlantedHour = double.NaN } },
             Storage = new Dictionary<string, int> { ["a"] = -3, [""] = 2, ["itm_ok"] = 4 }
         });
-        Assert.Equal("inn_room", g.Tier.Id, "unknown tier falls back");
-        Assert.Equal(1, g.StacksUsed, "only the good stack");
-        for (int p = 0; p < g.PlotCount; p++) Assert.True(g.CropOf(p) == null, "bad plot " + p + " is empty");
+        Assert.Equal("castle", g.Tier.Id, "an unknown tier id is kept, not downgraded");
+        Assert.Equal(1, g.StacksUsed, "only the invalid stacks go");
+        Assert.Equal("crop_gone", g.CropOf(1), "an unknown crop stays in its plot");
+        Assert.True(g.CropOf(2) == null, "a plot with a nonsense hour is emptied");
+
+        var many = new HomeSave { Tier = "inn_room" };
+        for (int i = 0; i < 50; i++) many.Storage["itm_k" + i] = 1;
+        var h = NewHome(); h.Load(many);
+        Assert.Equal(50, h.StacksUsed, "50 stacks survive even in a 20-stack tier");
+        var inv = new Inventory(); inv.Add("itm_new");
+        Assert.True(h.Deposit("itm_new", 1, inv) == StorageResult.Full, "but nothing new fits");
+    }
+
+    public static void ClearRefusesARipeCropAndAClockThatRanBack()
+    {
+        var inv = new Inventory(); var h = HomeAt("rented_room", inv);
+        h.Plant(0, "crop_turnip", inv, 100);
+        Assert.True(!h.Clear(0, inv, 200), "a ripe crop is harvested, not cleared");
+        Assert.Near(24, h.HoursLeft(0, 10), 1e-9, "a clock that ran back counts as just planted");
+    }
+
+    public static void EdgeNumbersNeverDestroyAnything()
+    {
+        var inv = new Inventory(); var h = HomeAt("rented_room", inv);
+        Assert.True(h.Plant(0, "crop_turnip", inv, double.NaN) == PlantResult.BadTime, "NaN hour refused");
+        Assert.True(h.Plant(0, "crop_turnip", inv, double.PositiveInfinity) == PlantResult.BadTime, "infinite hour refused");
+        Assert.Equal(3, inv.Count("itm_seed_turnip"), "no seed was spent");
+        var big = new Inventory(); big.Add("itm_big", int.MaxValue);
+        Assert.True(h.Deposit("itm_big", int.MaxValue, big) == StorageResult.Ok, "a huge stack goes in");
+        big.Add("itm_big", 1);
+        Assert.True(h.Deposit("itm_big", 1, big) == StorageResult.Full && big.Count("itm_big") == 1, "a stack never wraps negative; nothing moved");
+        Assert.True(h.Withdraw("itm_big", 5, big) == StorageResult.Ok && h.Stored("itm_big") == int.MaxValue - 5, "normal withdraw works");
     }
 }
