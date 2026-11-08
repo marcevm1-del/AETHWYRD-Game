@@ -234,6 +234,8 @@ namespace Ascend.Core
         public HousingFile Housing { get; }
         /// <summary>Data/Items/crops.json (empty when not loaded).</summary>
         public CropFile Crops { get; }
+        /// <summary>Data/Companions/stables.json: boarding, feeding, breeding and sanctuary rules (empty when not loaded).</summary>
+        public StablesFile Stables { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -246,7 +248,7 @@ namespace Ascend.Core
             ReactionFile reactions = null, BossWeakPointFile weakPoints = null,
             QualityRules quality = null, LifeSkillFile lifeSkills = null,
             IEnumerable<DungeonData> dungeons = null, PuzzleFile puzzles = null, GearRules gear = null,
-            HousingFile housing = null, CropFile crops = null)
+            HousingFile housing = null, CropFile crops = null, StablesFile stables = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
@@ -262,6 +264,7 @@ namespace Ascend.Core
             Gear = gear ?? new GearRules();
             Housing = housing ?? new HousingFile();
             Crops = crops ?? new CropFile();
+            Stables = stables ?? new StablesFile();
             Puzzles = puzzles ?? new PuzzleFile();
             Index(Puzzles.Puzzles, p => p.Id, "puzzle");
             Dungeons = Index(dungeons, x => x.Id, "dungeon");

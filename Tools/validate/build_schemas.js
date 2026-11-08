@@ -419,6 +419,24 @@ const SCHEMAS = {
     }
   };
 }
+// --- Stables and sanctuary (Step 3 of part 2; Data/Companions/stables.json) ---
+{
+  const P = { type: 'number', minimum: 0, maximum: 1 };
+  SCHEMAS.stables = {
+    title: 'Stables, breeding and sanctuary', type: 'object', additionalProperties: false, required: ['notes', 'boardingByTier', 'feeding', 'breeding', 'sanctuary'],
+    properties: {
+      notes: { type: 'string' },
+      boardingByTier: { type: 'object', additionalProperties: { type: 'integer', minimum: 0, maximum: 40 } },
+      feeding: { type: 'object', additionalProperties: false, required: ['cooldownHours', 'assistsPerFeed'], properties: { cooldownHours: { type: 'number', minimum: 1 }, assistsPerFeed: { type: 'integer', minimum: 1, maximum: 3 } } },
+      breeding: { type: 'object', additionalProperties: false, required: ['requiresFeature', 'minBond', 'pairCooldownHours', 'incubateHours', 'hatchBond', 'crossElementChance', 'crossPityBreedings', 'heritableMarkings', 'inheritMarkingChance', 'nestMarkingChance', 'markingPityEggs', 'boardingSlotsPerEgg', 'eggFloor'], properties: {
+        requiresFeature: { type: 'string' }, minBond: { type: 'integer', minimum: 1, maximum: 10 }, pairCooldownHours: { type: 'number', minimum: 1 }, incubateHours: { type: 'number', minimum: 1 },
+        hatchBond: { type: 'integer', minimum: 0, maximum: 10 }, crossElementChance: P, crossPityBreedings: { type: 'integer', minimum: 1 },
+        heritableMarkings: { type: 'array', uniqueItems: true, items: { type: 'string' } }, inheritMarkingChance: P, nestMarkingChance: P,
+        markingPityEggs: { type: 'integer', minimum: 1 }, boardingSlotsPerEgg: { type: 'integer', minimum: 1 }, eggFloor: { type: 'integer', minimum: 1, maximum: 10 } } },
+      sanctuary: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['minSpecies', 'name'], properties: { minSpecies: { type: 'integer', minimum: 0 }, name: { type: 'string', minLength: 1 } } } }
+    }
+  };
+}
 // --- Companion roster, banter and rules (Wave C; Data/Companions/*.json) ---
 {
   const PERSONALITY = ['brave', 'cautious', 'curious', 'loyal', 'proud', 'gentle', 'playful', 'stoic', 'greedy', 'serene'];

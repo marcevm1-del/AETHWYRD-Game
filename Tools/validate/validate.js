@@ -420,7 +420,8 @@ const SINGLETONS = {
   mounts: { file: 'Companions/mounts.json', schema: 'mounts' },
   gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' },
   housing: { file: 'World/housing.json', schema: 'housing' },
-  crops: { file: 'Items/crops.json', schema: 'crops' }
+  crops: { file: 'Items/crops.json', schema: 'crops' },
+  stables: { file: 'Companions/stables.json', schema: 'stables' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -531,6 +532,26 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       if (!shops.some(s => (s.stock || []).some(x => x.itemId === cr.seedItem))) err(cr.id, `seed ${cr.seedItem} is not sold anywhere`);
     }
     if (/wither|decay|spoil|rot|water|chore/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'crops never wither, spoil or need watering (Canon Slow-Life)');
+  }
+  if (name === 'stables' && obj.boardingByTier) {
+    const hs = load('World/housing.json');
+    const tiers = hs.tiers.map(t => t.id);
+    for (const k of Object.keys(obj.boardingByTier)) if (!tiers.includes(k)) err(c.file, `boardingByTier.${k} is not a home tier`);
+    for (const t of hs.tiers) if (!(t.id in obj.boardingByTier)) err(c.file, `home tier ${t.id} has no boardingByTier entry`);
+    let prev = 0;
+    for (const t of hs.tiers) { const n = obj.boardingByTier[t.id] || 0; if (n < prev) err(c.file, `boarding must not fall at ${t.id}`); prev = n; }
+    const feat = obj.breeding.requiresFeature;
+    const first = hs.tiers.find(t => t.features.includes(feat));
+    if (!first) err(c.file, `no home tier has the "${feat}" feature`);
+    for (const t of hs.tiers) if (!t.features.includes(feat) && (obj.boardingByTier[t.id] || 0) > 0) err(c.file, `${t.id} boards partners but has no ${feat}`);
+    const pop = load('Monsters/population.json');
+    const tierNames = new Set(pop.map(p => p.tier));
+    for (const m of obj.breeding.heritableMarkings) if (!tierNames.has(m)) err(c.file, `marking "${m}" is not a population tier`);
+    const sn = obj.sanctuary;
+    if (sn[0].minSpecies !== 0) err(c.file, 'sanctuary must start at 0 species');
+    for (let i = 1; i < sn.length; i++) if (!(sn[i].minSpecies > sn[i - 1].minSpecies)) err(c.file, 'sanctuary levels must rise');
+    if (!(obj.breeding.crossElementChance < 1 && obj.breeding.crossPityBreedings >= 2)) err(c.file, 'cross-element hatchlings must stay rare (chance below 1, pity at least 2)');
+    if (/hunger|starv|sick|disease|escape|runaway|decay|upkeep|flying|aquatic|wyvern|dragon/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no hunger, sickness, escape, decay, upkeep or flying/aquatic mounts (Canon Slow-Life)');
   }
   if (name === 'companion_rules' && obj.presets) {
     const b = obj.presets.Balanced;

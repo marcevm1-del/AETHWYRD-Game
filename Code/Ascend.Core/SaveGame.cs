@@ -57,6 +57,8 @@ namespace Ascend.Core
         public Dictionary<string, GearFitting> GearFittings { get; set; }
         /// <summary>The home: tier, storage and crop plots (null in older saves: the base inn room; Upgrade fills it).</summary>
         public HomeSave Home { get; set; }
+        /// <summary>Stable eggs, feeding times, the sanctuary collection and the chosen mount (null in older saves; Upgrade fills it).</summary>
+        public StablesSave Stables { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
         public double? ClockSeconds { get; set; }
         public List<RestBuff> RestBuffs { get; set; } = new List<RestBuff>();
@@ -136,6 +138,12 @@ namespace Ascend.Core
             s.Home ??= new HomeSave();
             s.Home.Plots ??= new List<PlotSave>();
             s.Home.Storage ??= new Dictionary<string, int>();
+            s.Stables ??= new StablesSave();
+            s.Stables.Eggs ??= new List<EggSave>();
+            s.Stables.LastFed ??= new Dictionary<string, double>();
+            s.Stables.PairReady ??= new Dictionary<string, double>();
+            s.Stables.SpeciesSeen ??= new List<string>();
+            s.Stables.Markings ??= new List<string>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             s.Version = SaveGame.CurrentVersion;
             return s;

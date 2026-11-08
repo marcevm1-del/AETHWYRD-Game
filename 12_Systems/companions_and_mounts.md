@@ -39,7 +39,7 @@ Families: **horse, wolf, bear, desert beast, large ground monster**. Each has a 
 - **Never:** flying, celestial, dragon or aquatic mounts. The validator rejects such keys and any species that flies. Flight stays an ability (Canon).
 
 ## Not built (deferred)
-Stables and sanctuaries, breeding, legendary creatures, a creature database editor, saddle and companion cosmetics, Unity scene and animation work, a Unity bridge for the new rules (the engine side must fill `CompanionContext` and read `MountTable`).
+Legendary creatures (stables, sanctuary and breeding are built: see `stables.md`), a creature database editor, saddle and companion cosmetics, Unity scene and animation work, a Unity bridge for the new rules (the engine side must fill `CompanionContext` and read `MountTable`).
 
 ## Open questions for the user
 1. Tobin and Elsie: both in every game, or one per origin?

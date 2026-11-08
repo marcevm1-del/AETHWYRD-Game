@@ -143,7 +143,7 @@ namespace Ascend.Core
         /// <summary>Adds a newly tamed monster: it joins you if there's room, else goes to the ranch.</summary>
         public PartnerData Add(string speciesId, string name)
         {
-            var p = new PartnerData { SpeciesId = speciesId, Name = name, Active = Active.Count() < _t.ActivePartners };
+            var p = new PartnerData { Id = NextId(), SpeciesId = speciesId, Name = name, Active = Active.Count() < _t.ActivePartners };
             _all.Add(p);
             return p;
         }
@@ -159,11 +159,42 @@ namespace Ascend.Core
 
         public void Release(PartnerData p) => _all.Remove(p);
 
+        public PartnerData ById(string id) => id == null ? null : _all.FirstOrDefault(p => p.Id == id);
+
+        /// <summary>The next free partner id (ptn_001, ptn_002, ...). Old saves have none; Load gives every partner one.</summary>
+        string NextId()
+        {
+            int n = 1;
+            while (_all.Any(p => p.Id == "ptn_" + n.ToString("000"))) n++;
+            return "ptn_" + n.ToString("000");
+        }
+
         public void Load(IEnumerable<PartnerData> partners)
         {
             _all.Clear();
-            foreach (var p in partners ?? Enumerable.Empty<PartnerData>())
-                _all.Add(new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners, Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved });
+            var list = (partners ?? Enumerable.Empty<PartnerData>()).Where(x => x != null).ToList();
+            // Saved ids are kept when unique; only missing or duplicate ids get a fresh one, which skips every id the save already uses.
+            var taken = new HashSet<string>();
+            var firstOwner = new Dictionary<string, PartnerData>();
+            foreach (var x in list) if (!string.IsNullOrEmpty(x.Id) && !firstOwner.ContainsKey(x.Id)) { firstOwner[x.Id] = x; taken.Add(x.Id); }
+            foreach (var p in list)
+            {
+                bool keep = !string.IsNullOrEmpty(p.Id) && firstOwner[p.Id] == p;
+                var q = new PartnerData
+                {
+                    Id = keep ? p.Id : null,
+                    SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners,
+                    Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved, Marking = p.Marking
+                };
+                q.AtHome = p.AtHome && !q.Active;
+                if (q.Id == null)
+                {
+                    string fresh; int n = 1;
+                    do { fresh = "ptn_" + (n++).ToString("000"); } while (taken.Contains(fresh));
+                    taken.Add(fresh); q.Id = fresh;
+                }
+                _all.Add(q);
+            }
         }
     }
 
@@ -251,5 +282,11 @@ namespace Ascend.Core
         /// <summary>Shared victories toward the next Bond point.</summary>
         public int Assists { get; set; }
         public bool Evolved { get; set; }
+        /// <summary>Stable id (ptn_001). Null in old saves; the roster assigns one on load.</summary>
+        public string Id { get; set; }
+        /// <summary>Boarded in the home stable (limited by the home tier). False: travelling, or in the guild kennel (no limit).</summary>
+        public bool AtHome { get; set; }
+        /// <summary>A heritable marking such as Albino or Alpha (null: none). Cosmetic and collectable; no stat effect.</summary>
+        public string Marking { get; set; }
     }
 }
