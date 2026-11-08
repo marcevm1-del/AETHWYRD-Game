@@ -103,7 +103,7 @@ namespace Ascend.Core
 
     /// <summary>
     /// Sockets runes and applies enchantment scrolls. A fitting belongs to the item key (itemId or itemId@tier): copies of the
-    /// same key share it, so a second copy is plain until you refit. Socketing and scrolls happen at their stations (the rune
+    /// same key share it (every copy counts as fitted; only one can be worn per slot). Runes can always be pulled back out at the anvil. Socketing and scrolls happen at their stations (the rune
     /// anvil and the enchanting table); removing returns the item to the bag at no cost. A scroll replaces the old enchantment.
     /// </summary>
     public sealed class GearFitter
@@ -149,7 +149,7 @@ namespace Ascend.Core
             return Math.Min(n, _rules.Sockets.Max);
         }
 
-        public bool CanHoldEnchantment(string gearKey) => CategoryOf(gearKey) != null && _rules.EnchantSlots > 0;
+        public bool CanHoldEnchantment(string gearKey) => CategoryOf(gearKey) != null && _rules.EnchantSlots > 0 && Item(gearKey).Rarity != "Divine";
 
         public GearFitting Of(string gearKey) => gearKey != null && _fittings.TryGetValue(gearKey, out var f) ? f : null;
 
@@ -183,7 +183,8 @@ namespace Ascend.Core
             if (!StationOk(_rules.Stations.Socket, atNpcId)) return FitResult.WrongStation;
             var fit = Of(gearKey);
             if (fit == null || index < 0 || index >= fit.Runes.Count) return FitResult.NothingToRemove;
-            inv?.Add(fit.Runes[index]);
+            if (inv == null) return FitResult.NotOwned; // never remove a rune with nowhere to put it
+            inv.Add(fit.Runes[index]);
             fit.Runes.RemoveAt(index);
             Prune(gearKey);
             Changed?.Invoke();
@@ -199,7 +200,7 @@ namespace Ascend.Core
             if (!StationOk(_rules.Stations.Enchant, atNpcId)) return FitResult.WrongStation;
             var enc = _rules.EnchantmentOfScroll(ItemQuality.BaseId(scrollKey ?? ""));
             if (enc == null) return FitResult.NotAScroll;
-            if (!enc.Fits.Contains(cat) || _rules.EnchantSlots < 1) return FitResult.DoesNotFit;
+            if (!enc.Fits.Contains(cat) || !CanHoldEnchantment(gearKey)) return FitResult.DoesNotFit;
             if (inv == null || !inv.TryRemove(scrollKey)) return FitResult.NotOwned;
             var fit = Of(gearKey);
             if (fit == null) _fittings[gearKey] = fit = new GearFitting();
@@ -236,7 +237,7 @@ namespace Ascend.Core
             var fit = Of(gearKey);
             string cat = CategoryOf(gearKey);
             if (fit == null || cat == null) return null;
-            var ids = fit.Runes.Select(ItemQuality.BaseId).ToList();
+            var ids = fit.Runes.Take(SocketCount(gearKey)).Select(ItemQuality.BaseId).ToList(); // only runes in real sockets
             RuneWordData best = null;
             foreach (var w in _rules.RuneWords)
             {

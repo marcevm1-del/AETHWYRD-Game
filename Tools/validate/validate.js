@@ -497,7 +497,7 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       for (const p of [...a.blades, ...a.hilts]) { const it = ITEMS_BY_ID[p]; if (!it || it.category !== 'part') err(a.id, `${p} is not a part item`); else if (!outputs.has(p)) err(a.id, `no recipe makes ${p}`); }
     }
     for (const [k, st] of Object.entries(obj.stations)) if (!(st in rf.stations)) err(c.file, `stations.${k}: "${st}" is not a recipe station`);
-    if (/durab|repair|decay|break|destroy|fail/i.test(JSON.stringify(Object.keys(obj)))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
+    if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
   }
   if (name === 'companion_rules' && obj.presets) {
     const b = obj.presets.Balanced;

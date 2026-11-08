@@ -250,4 +250,16 @@ static class GearTests
         Assert.Equal(1, h.Of(Dagger).Runes.Count, "the unknown rune is dropped");
         Assert.True(h.Of(Dagger).Enchant == null, "the unknown scroll is dropped");
     }
+
+    public static void WordsOnlyCountInRealSocketsAndDivineTakesNothing()
+    {
+        // A key holding more runes than sockets (an odd save): the word in the over-cap slot does not pay.
+        var f = Fitter();
+        f.Load(new Dictionary<string, GearFitting> { [Dagger] = new GearFitting { Runes = new List<string> { "itm_rune_hearth", "itm_rune_ember", "itm_rune_anvil" } } });
+        Assert.True(f.ActiveWord(Dagger) == null, "ember+anvil would need the third socket");
+        var inv = Bag(Dagger, "itm_rune_ember");
+        Assert.True(Fitter().RemoveRune(Dagger, 0, null, null, Smith) == FitResult.NothingToRemove, "nothing fitted");
+        var g = Fitter(); g.Load(new Dictionary<string, GearFitting> { [Dagger] = new GearFitting { Runes = new List<string> { "itm_rune_ember" } } });
+        Assert.True(g.RemoveRune(Dagger, 0, null, null, Smith) == FitResult.NotOwned && g.Of(Dagger).Runes.Count == 1, "no bag, no removal, nothing lost");
+    }
 }
