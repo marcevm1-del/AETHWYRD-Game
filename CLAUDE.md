@@ -38,6 +38,8 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
 - **Blender 5.2:** `E:/SteamLibrary/steamapps/common/Blender/blender.exe -b --factory-startup -P <script>`
   - Buildings: `Tools/blender/build_building_library.py` (docs: `13_Production/building_system.md`).
   - Creatures: `Tools/blender/build_creature_library.py` (docs: `13_Production/creature_system.md`).
+- **AI concept images (Gemini first):** `python Tools/ai_images/generate_image.py --provider gemini --prompt "..."` (docs: `Tools/ai_images/README.md`). The user sets the key in their own shell (`GEMINI_API_KEY`); Claude never enters or stores keys. Output stays in the gitignored `Art/Generation/staging/`.
+- **TripoSR image to 3D:** `E:\Ideas\AI-Game-Toolkit\TripoSR\.venv\Scripts\python.exe Tools\ai3d\triposr_run.py <image>` (docs: `Tools/ai3d/README.md`). Both tools are registered in `13_Production/third_party_assets.md`.
 
 ## The agent team
 There are 27 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
@@ -48,4 +50,4 @@ The studio's skills for AETHWYRD (`/start`, `/help`, `/adopt`, `/map-systems`, `
 - **Paths differ.** The studio's `design/`, `docs/`, `production/` and `tests/` map to our `00_Questions`–`12_Systems`, `13_Production/`, `Code/Ascend.Core.Tests/` and `Game/Assets/_Game/Tests/`. The Unity code root is `Game/Assets/_Game/Runtime` plus `Code/Ascend.Core`. Ask before creating a parallel studio folder.
 - **Ask before writing.** The studio's rule is "May I write this to [filepath]?". Locked Canon rows are never edited; propose in Canon §6.
 - The engine is Unity 6 URP, not Godot: ignore `docs/engine-reference/godot` references in studio docs.
-- `project.yaml` is configured for Unity (rigor `minimal`). Not installed yet: hooks, `settings.json`, the Unity engine-reference notes under `docs/engine-reference/unity/`.
+- `project.yaml` is configured for Unity (rigor `minimal`). Not installed yet: hooks, `settings.json`. The Unity engine-reference notes are in `docs/engine-reference/unity/`.
