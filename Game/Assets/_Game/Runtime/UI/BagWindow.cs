@@ -191,6 +191,6 @@ namespace Ascend.Game
     /// <summary>Any window that takes over the controls (talk, bag).</summary>
     public static class UiModal
     {
-        public static bool Any => NpcDialog.IsOpen || BagWindow.IsOpen || BestiaryWindow.IsOpen || WorldMapWindow.IsOpen;
+        public static bool Any => NpcDialog.IsOpen || BagWindow.IsOpen || BestiaryWindow.IsOpen || WorldMapWindow.IsOpen || WindowHub.AnyOpen;
     }
 }

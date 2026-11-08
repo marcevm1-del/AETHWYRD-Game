@@ -133,7 +133,7 @@ namespace Ascend.Game
         // with the Combo Budget above it, party top-right below the quest, nameplates as a name over a slim red bar.
         void OnGUI()
         {
-            if (player == null) return;
+            if (player == null || PhotoModeController.HudHidden) return; // photo mode hides the HUD
             EnsureStyles();
             var c = player.Caster;
             float sw = Screen.width, sh = Screen.height;

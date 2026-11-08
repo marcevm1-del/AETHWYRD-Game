@@ -79,6 +79,10 @@ namespace Ascend.Core
         public LivingWorldSave LivingWorld { get; set; }
         /// <summary>Accessibility and presentation settings (null in older saves: safe defaults; Upgrade fills and clamps it).</summary>
         public AccessibilitySettings Accessibility { get; set; }
+        /// <summary>Bond tracks and flags per companion (null in older saves: starting values; Upgrade fills it).</summary>
+        public List<CompanionBondSave> CompanionBonds { get; set; }
+        /// <summary>Chosen behaviour preset per companion: companion id to preset name (null in older saves: data defaults; Upgrade fills it).</summary>
+        public Dictionary<string, string> CompanionPresets { get; set; }
     }
 
     public sealed class SiegeSave
@@ -151,6 +155,21 @@ namespace Ascend.Core
             s.Archive.FoundFragments ??= new List<string>();
             s.Archive.Restored ??= new List<string>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
+            // Companions: drop unusable rows quietly (no id, duplicates keep the last), never reject the save.
+            var bonds = new List<CompanionBondSave>();
+            foreach (var b in s.CompanionBonds ?? new List<CompanionBondSave>())
+            {
+                if (b == null || string.IsNullOrEmpty(b.CompanionId)) continue;
+                b.Seen ??= new List<string>();
+                bonds.RemoveAll(x => x.CompanionId == b.CompanionId);
+                bonds.Add(b);
+            }
+            s.CompanionBonds = bonds;
+            var presets = new Dictionary<string, string>();
+            foreach (var kv in s.CompanionPresets ?? new Dictionary<string, string>())
+                if (!string.IsNullOrEmpty(kv.Key) && Enum.TryParse<CompanionPreset>(kv.Value, true, out var cp) && Enum.IsDefined(typeof(CompanionPreset), cp))
+                    presets[kv.Key] = cp.ToString();
+            s.CompanionPresets = presets;
             s.Version = SaveGame.CurrentVersion;
             return s;
         }
