@@ -98,3 +98,12 @@ def turnaround(ch, out_png, tile=(360, 600)):
     faces = [tiles[5], tiles[6]]
     tp.sheet(faces, out_png.replace(".png", "_face.png"), cols=2, tile=(tile[0], tile[0]))
     return out_png
+
+
+def key_image(ch, out_png, tile=(640, 960), yaw=-28):
+    """One large three-quarter portrait in the relaxed pose (the image kept in 13_Production)."""
+    d = os.path.dirname(out_png)
+    os.makedirs(d, exist_ok=True)
+    p = _tile(ch, d, "key", yaw, "test", tile, pitch=4.0)
+    os.replace(p[0], out_png)
+    return out_png

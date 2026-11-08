@@ -422,7 +422,8 @@ const SINGLETONS = {
   housing: { file: 'World/housing.json', schema: 'housing' },
   crops: { file: 'Items/crops.json', schema: 'crops' },
   stables: { file: 'Companions/stables.json', schema: 'stables' },
-  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' }
+  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' },
+  characters: { file: 'Characters/human_library.json', schema: 'characters' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -654,6 +655,45 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       }
     }
     if (obj.speedMps.value !== 10 || obj.speedMps.placeholder !== false) err(c.file, 'speedMps is settled at 10 m/s (placeholder false, decided 2026-11-07, Canon section 6 Mount speed)');
+  }
+  if (name === 'characters' && obj.variants) {
+    // the human character library: every reference resolves, heights sit in their band, the two bases exist, the rig list is the Unity contract
+    const by = (rows) => new Map(rows.map(r => [r.id, r]));
+    const dupes = (rows, what) => { const s = new Set(); for (const r of rows) { if (s.has(r.id)) err(c.file, `duplicate ${what} id ${r.id}`); s.add(r.id); } };
+    for (const [rows, what] of [[obj.bodies, 'body'], [obj.builds, 'build'], [obj.ages, 'age'], [obj.hairStyles, 'hair style'], [obj.outfits, 'outfit'], [obj.variants, 'variant'],
+      [obj.palettes.skin, 'skin'], [obj.palettes.hair, 'hair colour'], [obj.palettes.eyes, 'eye colour'], [obj.palettes.outfit, 'outfit colourway']]) dupes(rows, what);
+    const bodies = by(obj.bodies), builds = by(obj.builds), ages = by(obj.ages), styles = by(obj.hairStyles), outfits = by(obj.outfits);
+    const skin = by(obj.palettes.skin), hair = by(obj.palettes.hair), eyes = by(obj.palettes.eyes), cols = by(obj.palettes.outfit);
+    for (const b of obj.bodies) {
+      if (!(b.heightBand[0] < b.heightBand[1])) err(c.file, `${b.id}: heightBand must ascend`);
+      if (b.heightM < b.heightBand[0] || b.heightM > b.heightBand[1]) err(c.file, `${b.id}: heightM ${b.heightM} outside its band`);
+      if (b.headsTall < obj.rig.headsTall[0] || b.headsTall > obj.rig.headsTall[1]) err(c.file, `${b.id}: headsTall ${b.headsTall} outside the rig band ${obj.rig.headsTall}`);
+    }
+    for (const v of obj.variants) {
+      const body = bodies.get(v.body);
+      if (!body) { err(c.file, `${v.id}: unknown body ${v.body}`); continue; }
+      if (v.heightM < body.heightBand[0] || v.heightM > body.heightBand[1]) err(c.file, `${v.id}: height ${v.heightM} outside the band ${body.heightBand} of ${body.id}`);
+      if (!builds.has(v.build)) err(c.file, `${v.id}: unknown build ${v.build}`);
+      if (!ages.has(v.age)) err(c.file, `${v.id}: unknown age ${v.age}`);
+      if (!skin.has(v.skin)) err(c.file, `${v.id}: unknown skin ${v.skin}`);
+      if (!eyes.has(v.eyes)) err(c.file, `${v.id}: unknown eye colour ${v.eyes}`);
+      if (!hair.has(v.hair.colour)) err(c.file, `${v.id}: unknown hair colour ${v.hair.colour}`);
+      const st = styles.get(v.hair.style);
+      if (!st) err(c.file, `${v.id}: unknown hair style ${v.hair.style}`); else if (st.body !== 'any' && st.body !== body.sex) err(c.file, `${v.id}: hair style ${st.id} is for ${st.body} bodies`);
+      const of = outfits.get(v.outfit.id);
+      if (!of) err(c.file, `${v.id}: unknown outfit ${v.outfit.id}`); else if (of.body !== body.sex) err(c.file, `${v.id}: outfit ${of.id} is cut for ${of.body} bodies`);
+      if (!cols.has(v.outfit.colours)) err(c.file, `${v.id}: unknown outfit colours ${v.outfit.colours}`);
+    }
+    for (const id of ['human_male_base', 'human_female_base']) {
+      const v = obj.variants.find(x => x.id === id);
+      if (!v || !v.isBase) err(c.file, `variant ${id} must exist with isBase true`);
+    }
+    const sets = [...obj.rig.requiredBones, ...obj.rig.extraBones];
+    if (new Set(sets).size !== sets.length) err(c.file, 'rig bone names overlap between requiredBones and extraBones');
+    for (const side of ['Left', 'Right']) for (const part of ['Shoulder', 'UpperArm', 'LowerArm', 'Hand', 'UpperLeg', 'LowerLeg', 'Foot', 'Toes'])
+      if (!obj.rig.requiredBones.includes(side + part)) err(c.file, `rig.requiredBones lacks ${side}${part}`);
+    for (const n of ['Hips', 'Spine', 'Chest', 'UpperChest', 'Neck', 'Head'])
+      if (!obj.rig.requiredBones.includes(n)) err(c.file, `rig.requiredBones lacks Unity bone ${n}`);
   }
   if (name === 'locomotion' && obj.state && obj.baseSpeed) {
     // blend thresholds {0, walk, run, sprint} must strictly ascend
