@@ -75,6 +75,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/12_Systems/crafting|12_Systems/crafting]]
 - [[Design Bible/12_Systems/dungeons_and_puzzles|12_Systems/dungeons_and_puzzles]]
 - [[Design Bible/12_Systems/gear_and_runes|12_Systems/gear_and_runes]]
+- [[Design Bible/12_Systems/housing_and_farming|12_Systems/housing_and_farming]]
 - [[Design Bible/12_Systems/hud_and_ui|12_Systems/hud_and_ui]]
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
 - [[Design Bible/12_Systems/living_world|12_Systems/living_world]]
@@ -100,6 +101,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
 - [[Design Bible/13_Production/dungeon_v7_audit|13_Production/dungeon_v7_audit]]
 - [[Design Bible/13_Production/gear_v6b_audit|13_Production/gear_v6b_audit]]
+- [[Design Bible/13_Production/housing_v6b_audit|13_Production/housing_v6b_audit]]
 - [[Design Bible/13_Production/living_world_v4_audit|13_Production/living_world_v4_audit]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
@@ -1221,7 +1223,7 @@ Every population record is included in the complete register on its species note
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (158)
+## Items (167)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
@@ -1258,6 +1260,9 @@ Every population record is included in the complete register on its species note
 - [[Items/Tuskroast Platter|Tuskroast Platter]]
 - [[Items/Hearth Ale|Hearth Ale]]
 - [[Items/Brimstone Bitters|Brimstone Bitters]]
+- [[Items/Turnip Mash|Turnip Mash]]
+- [[Items/Garden Stew|Garden Stew]]
+- [[Items/Harvest Ale|Harvest Ale]]
 
 ### core
 - [[Items/F-Rank Monster Core|F-Rank Monster Core]]
@@ -1279,6 +1284,12 @@ Every population record is included in the complete register on its species note
 - [[Items/Silver Wolf Pelt|Silver Wolf Pelt]]
 - [[Items/Healing Herb|Healing Herb]]
 - [[Items/Mandrake Root|Mandrake Root]]
+- [[Items/Healing Herb Seeds|Healing Herb Seeds]]
+- [[Items/Wheat Seeds|Wheat Seeds]]
+- [[Items/Turnip Seeds|Turnip Seeds]]
+- [[Items/Mandrake Seeds|Mandrake Seeds]]
+- [[Items/Wheat Sheaf|Wheat Sheaf]]
+- [[Items/Turnip|Turnip]]
 - [[Items/Slime Jelly|Slime Jelly]]
 - [[Items/Gel Core|Gel Core]]
 - [[Items/Relic Shard|Relic Shard]]
