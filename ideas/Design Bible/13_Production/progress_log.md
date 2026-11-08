@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Map pictures | Re-rendered all six map images (`physical_map.png`, `physical_relief_3d.png`, `physical_relief_heartland.png`, `diorama_continent.png`, `diorama_heartland.png`, `diorama_spine.png`): they still said AETHERIA from before the rename. Map data regenerates byte-for-byte identical. Fixed two title layout problems the longer name caused (title ran into the subtitle on the physical map; title filled its plate on the diorama) | - |
 | 19384040 | Part 2 step 4: Civilization Archive and archaeology (5 civilizations, 13 public-lore entries, 11 once-only fragments, optional restore, knowledge-only rewards); CivilizationArchive.cs, civilization_archive.json, 10 tests | 736 |
 | 0bd25401 | Part 2 step 3: stables and sanctuary (home boarding by tier, guild kennel, optional treats, ground-mount choice, Canon breeding and egg nests); Stables.cs, stables.json, 15 tests | 726 |
 | 44a40a3b | Part 2 step 2: optional housing and farming (four home tiers, storage, never-withering crops feeding cooking and brewing); Housing.cs, housing.json, crops.json, 14 tests | 711 |

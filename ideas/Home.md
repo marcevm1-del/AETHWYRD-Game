@@ -64,7 +64,6 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/10_World/world|10_World/world]]
 - [[Design Bible/10_World/world_map_concept|10_World/world_map_concept]]
 - [[Design Bible/11_Quests_Encounters/guild_hall_talk_and_lexicon|11_Quests_Encounters/guild_hall_talk_and_lexicon]]
-- [[Design Bible/11_Quests_Encounters/quest_location_audit_2026-11-03|11_Quests_Encounters/quest_location_audit_2026-11-03]]
 - [[Design Bible/11_Quests_Encounters/quest_outcome_grammar|11_Quests_Encounters/quest_outcome_grammar]]
 - [[Design Bible/11_Quests_Encounters/quests_and_encounters|11_Quests_Encounters/quests_and_encounters]]
 - [[Design Bible/11_Quests_Encounters/weekly_board|11_Quests_Encounters/weekly_board]]

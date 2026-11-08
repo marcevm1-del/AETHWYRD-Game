@@ -1557,7 +1557,7 @@ class Overlay:
         self.rect("CC2", PARCH, x, y, w - 23, h - 23, 0.9992)
         for sx_, sy_ in ((-1, -1), (1, -1), (-1, 1), (1, 1)):
             self.rect("CD", GOLD, x + sx_ * (w / 2 - 12), y + sy_ * (h / 2 - 12), 11, 11, 0.9990)
-        self.text(title, x, y + h * 0.13, h * 0.36, INK, 0.9990)
+        self.text(title, x, y + h * 0.13, h * 0.30, INK, 0.9990)  # AETHWYRD is wider than the old name: keep it inside the plate
         # ornament: gold rule with a diamond and two dots
         ry = y - h * 0.16
         self.rect("CL1", GOLD, x - w * 0.19, ry, w * 0.26, 2.5, 0.9990)
