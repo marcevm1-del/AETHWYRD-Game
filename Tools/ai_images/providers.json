@@ -1,0 +1,27 @@
+{
+  "note": "Provider settings for Tools/ai_images/generate_image.py. API keys are NEVER stored here or anywhere in the repo: they are read from the environment variables named in envKeys. Model ids change often; the ids below are starting points and have NOT been verified against a live account. Run `python Tools/ai_images/generate_image.py --provider gemini --list-models` (needs a key) to see what your account offers, then set the model here or with --model.",
+  "defaultProvider": "gemini",
+  "houseStyle": "anime fantasy illustration, bright flowing cel-shaded look, clean line art, soft saturated colours, single subject, plain background, no text, no watermark, no logo",
+  "providers": {
+    "gemini": {
+      "kind": "gemini-rest",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta",
+      "envKeys": ["GEMINI_API_KEY", "GOOGLE_API_KEY"],
+      "model": "gemini-2.5-flash-image",
+      "modelStatus": "unverified; other ids seen in Google docs: gemini-3.1-flash-image, gemini-2.0-flash-preview-image-generation",
+      "termsNote": "Google Gemini API terms apply. Check output ownership and any restrictions before an image goes anywhere near Game/."
+    },
+    "openai": {
+      "kind": "openai-images",
+      "endpoint": "https://api.openai.com/v1",
+      "envKeys": ["OPENAI_API_KEY"],
+      "model": "gpt-image-1",
+      "modelStatus": "unverified",
+      "termsNote": "OpenAI terms apply. Check output ownership and any restrictions before an image goes anywhere near Game/."
+    }
+  },
+  "otherProviders": [
+    "Optional, not wired in: the image tools in Claude Desktop (Higgsfield, Canva, Figma, Miro). They can cost paid credits, so use them only on purpose.",
+    "Optional, not wired in: a local ComfyUI or Stable Diffusion install. The GTX 1650 has 4 GB of VRAM, so SDXL-class models need cloud or CPU."
+  ]
+}

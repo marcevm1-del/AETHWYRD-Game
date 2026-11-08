@@ -36,5 +36,17 @@ None of these archives includes a licence file. Before any of them goes in, find
 | `books-oga-gpl.blend` | GPL art. It would oblige us to release derived assets under the GPL, which is a poor fit for a commercial game. Avoid |
 | `rea.zip` | "Reverse Engineer Anything", an MCP for reverse-engineering binaries. Taking code or data from other studios' games is ruled out, so it isn't used |
 | `tripo-ai-docs.zip`, the two `tripo-showcase-*.mp4` videos | Tripo's blog, SDK notes and two showcase turntables (an orc warrior, a moss-backed turtle) of the sculpted, stylised quality we're aiming for. Reference only |
-| `TripoSR.zip` (MIT), `TripoSG.zip` (MIT) | Open-source image-to-3D models. Running them locally means installing PyTorch and downloading model weights. Not done; a decision for the user |
+| `TripoSG.zip` (MIT) | Open-source image-to-3D model. Running it locally means installing PyTorch and downloading model weights. Not done; `localfit` in the AI Game Toolkit already wraps it. `TripoSR` was decided on 2026-11-08, see "AI generation tools" below |
 | `asset-sources-and-links.txt` | Bookmarks (Tripo Studio, Sketchfab, Fab, CGTrader, Poly Haven, Freesound, itch.io). Check each asset's licence there before downloading |
+
+## AI generation tools (decided 2026-11-08)
+
+The user asked for TripoSR to help build models and for Gemini and other image generators to be added. These are **tools**, not assets: nothing they make goes into `Game/` until the output has been reviewed, finished (Blender step in `13_Production/monster_model_pipeline.md`) and listed here.
+
+| Tool | What it does | Licence / terms | Where it lives | Status |
+|---|---|---|---|---|
+| TripoSR (VAST-AI-Research/TripoSR) | One image to a 3D mesh | MIT for code and weights (Tripo AI and Stability AI). Confirm the Hugging Face model card when the weights first download | Clone at `E:\Ideas\AI-Game-Toolkit\TripoSR` with its own `.venv`; wrapper `Tools/ai3d/triposr_run.py` | Cloned and wrapped. Install and first mesh: see `Tools/ai3d/README.md` |
+| Gemini API (Google) | Concept images from text | Google's Gemini API terms apply. Check output ownership and any commercial-use limits before an image is used in the game | `Tools/ai_images/generate_image.py` (stdlib only); key from the environment variable `GEMINI_API_KEY` or `GOOGLE_API_KEY`, set by the user, never stored | Wired, offline-tested. The live call is **not verified** (no key was used) and the model id in `providers.json` is unverified |
+| OpenAI Images API | Concept images from text | OpenAI's terms apply; same check as above | Same CLI, `--provider openai`, key from `OPENAI_API_KEY` | Wired, offline-tested, live call not verified |
+
+**Provenance rules.** Every generated file lands in the gitignored `Art/Generation/staging/` with a sidecar recording tool, model, prompt, date and hash. The AI Game Toolkit repos cloned on 2026-11-08 (`oss-for-generative-ai`, MIT; `awesome-learn-gamedev`, CC0) are reading lists and code samples only; nothing from them is copied into the game.

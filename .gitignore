@@ -79,3 +79,6 @@ Art/Blender/WorldTerrain/
 *_splat.png
 
 project.local.yaml
+
+# AI generation staging (images and meshes with sidecars): see 13_Production/third_party_assets.md
+Art/Generation/staging/
