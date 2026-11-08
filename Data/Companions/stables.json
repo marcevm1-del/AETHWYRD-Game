@@ -1,0 +1,49 @@
+{
+ "notes": "Stables and the sanctuary (12_Systems/stables.md). Boarding capacity follows the home tier (systems.md Taming Roster: the ranch grows with home upgrades) and needs the barn feature. Partners beyond it wait in the guild kennel, which has no limit, so taming is never refused. Feeding is an optional treat, never a need: no hunger, sickness, escape or loss, and absence is never punished. Breeding and egg nests follow Canon exactly (Big Upgrade section 27: ranch breeding passes on markings and variant traits, rare cross-element hatchlings, a marking collection; borrowed_features.md 12: eggs hatch at the ranch, hatchlings start at Bond 3). Ground mounts only; flying and aquatic mounts stay out. Decided 2026-11-08 by Claude under delegated creative control; the user may overrule.",
+ "boardingByTier": {
+  "inn_room": 0,
+  "rented_room": 0,
+  "home_plot": 6,
+  "manor": 12
+ },
+ "feeding": {
+  "cooldownHours": 24,
+  "assistsPerFeed": 1
+ },
+ "breeding": {
+  "requiresFeature": "barn",
+  "minBond": 3,
+  "pairCooldownHours": 72,
+  "incubateHours": 48,
+  "hatchBond": 3,
+  "crossElementChance": 0.15,
+  "crossPityBreedings": 4,
+  "heritableMarkings": [
+   "Albino",
+   "Alpha"
+  ],
+  "inheritMarkingChance": 0.5,
+  "nestMarkingChance": 0.1,
+  "markingPityEggs": 5,
+  "boardingSlotsPerEgg": 2,
+  "eggFloor": 2
+ },
+ "sanctuary": [
+  {
+   "minSpecies": 0,
+   "name": "Paddock"
+  },
+  {
+   "minSpecies": 5,
+   "name": "Meadow Run"
+  },
+  {
+   "minSpecies": 15,
+   "name": "Grove Sanctuary"
+  },
+  {
+   "minSpecies": 40,
+   "name": "Living Sanctuary"
+  }
+ ]
+}

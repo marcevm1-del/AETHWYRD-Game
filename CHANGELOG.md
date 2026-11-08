@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-08 — Part 2, step 3: stables and the sanctuary (finishes upgrade v8)
+- Home stable with capacity by home tier plus an unlimited guild kennel, optional favourite-food treats, ground-mount selection, a four-level sanctuary, and ranch breeding and egg nests exactly as Canon defines them (markings, rare cross-element hatchlings with a pity guarantee, Bond 3 hatchlings). No hunger, sickness, escape, or flying or aquatic mounts. Partners now have ids; `SaveGame.Stables` defaults safely for older saves.
+- Data `Data/Companions/stables.json` with schema and validator checks; docs `12_Systems/stables.md`; audit `13_Production/stables_v8_audit.md`; decision S1 in Canon section 6. 14 new Core tests. Not built: training grounds, cosmetics, monster jobs, recovery.
+
 ## 2026-11-08 — Part 2, step 2: optional housing and farming (finishes upgrade v6)
 - Four home tiers, a storage chest and crop plots (`Home`). Crops grow in in-game hours and wait forever: no withering, watering, upkeep or chores. Turnip, wheat, healing herb and mandrake feed three new cooking and brewing recipes. Farming is now a gather life skill. `SaveGame.Home` defaults safely for older saves.
 - Data `Data/World/housing.json`, `Data/Items/crops.json` with schemas and validator checks; docs `12_Systems/housing_and_farming.md`; audit `13_Production/housing_v6b_audit.md`; decision H1 in Canon section 6. 12 new Core tests. Not built: staff, shop front, village or territory, decorating, seasons.

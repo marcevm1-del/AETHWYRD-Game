@@ -143,7 +143,7 @@ namespace Ascend.Core
         /// <summary>Adds a newly tamed monster: it joins you if there's room, else goes to the ranch.</summary>
         public PartnerData Add(string speciesId, string name)
         {
-            var p = new PartnerData { SpeciesId = speciesId, Name = name, Active = Active.Count() < _t.ActivePartners };
+            var p = new PartnerData { Id = NextId(), SpeciesId = speciesId, Name = name, Active = Active.Count() < _t.ActivePartners };
             _all.Add(p);
             return p;
         }
@@ -159,11 +159,31 @@ namespace Ascend.Core
 
         public void Release(PartnerData p) => _all.Remove(p);
 
+        public PartnerData ById(string id) => id == null ? null : _all.FirstOrDefault(p => p.Id == id);
+
+        /// <summary>The next free partner id (ptn_001, ptn_002, ...). Old saves have none; Load gives every partner one.</summary>
+        string NextId()
+        {
+            int n = 1;
+            while (_all.Any(p => p.Id == "ptn_" + n.ToString("000"))) n++;
+            return "ptn_" + n.ToString("000");
+        }
+
         public void Load(IEnumerable<PartnerData> partners)
         {
             _all.Clear();
             foreach (var p in partners ?? Enumerable.Empty<PartnerData>())
-                _all.Add(new PartnerData { SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners, Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved });
+            {
+                var q = new PartnerData
+                {
+                    Id = string.IsNullOrEmpty(p.Id) || _all.Any(x => x.Id == p.Id) ? null : p.Id,
+                    SpeciesId = p.SpeciesId, Name = p.Name, Active = p.Active && Active.Count() < _t.ActivePartners,
+                    Bond = p.Bond, Assists = p.Assists, Evolved = p.Evolved, Marking = p.Marking
+                };
+                q.AtHome = p.AtHome && !q.Active;
+                q.Id = q.Id ?? NextId();
+                _all.Add(q);
+            }
         }
     }
 
@@ -251,5 +271,11 @@ namespace Ascend.Core
         /// <summary>Shared victories toward the next Bond point.</summary>
         public int Assists { get; set; }
         public bool Evolved { get; set; }
+        /// <summary>Stable id (ptn_001). Null in old saves; the roster assigns one on load.</summary>
+        public string Id { get; set; }
+        /// <summary>Boarded in the home stable (limited by the home tier). False: travelling, or in the guild kennel (no limit).</summary>
+        public bool AtHome { get; set; }
+        /// <summary>A heritable marking such as Albino or Alpha (null: none). Cosmetic and collectable; no stat effect.</summary>
+        public string Marking { get; set; }
     }
 }
