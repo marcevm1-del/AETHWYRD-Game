@@ -1,0 +1,155 @@
+{
+ "version": 1,
+ "notes": "Human character library: the two base bodies and the data that makes every other human a variant of them. Read by Tools/blender/ascend_characters (generator, rig validator). Height is metres; proportions are fractions of height. Colours are sRGB hex. A variant is deterministic: the same entry and seed always give the same mesh. See 13_Production/character_system.md.",
+ "rig": {
+  "requiredBones": ["Hips", "Spine", "Chest", "UpperChest", "Neck", "Head", "LeftShoulder", "LeftUpperArm", "LeftLowerArm", "LeftHand", "LeftThumbProximal", "LeftThumbIntermediate", "LeftThumbDistal", "LeftIndexProximal", "LeftIndexIntermediate", "LeftIndexDistal", "LeftMiddleProximal", "LeftMiddleIntermediate", "LeftMiddleDistal", "LeftRingProximal", "LeftRingIntermediate", "LeftRingDistal", "LeftLittleProximal", "LeftLittleIntermediate", "LeftLittleDistal", "LeftUpperLeg", "LeftLowerLeg", "LeftFoot", "LeftToes", "RightShoulder", "RightUpperArm", "RightLowerArm", "RightHand", "RightThumbProximal", "RightThumbIntermediate", "RightThumbDistal", "RightIndexProximal", "RightIndexIntermediate", "RightIndexDistal", "RightMiddleProximal", "RightMiddleIntermediate", "RightMiddleDistal", "RightRingProximal", "RightRingIntermediate", "RightRingDistal", "RightLittleProximal", "RightLittleIntermediate", "RightLittleDistal", "RightUpperLeg", "RightLowerLeg", "RightFoot", "RightToes"],
+  "extraBones": ["HairBack_1", "HairBack_2", "HairBack_3", "HairSideL_1", "HairSideL_2", "HairSideR_1", "HairSideR_2", "CloakBack_1", "CloakBack_2", "CloakBack_3"],
+  "maxInfluences": 4,
+  "headsTall": [6.5, 7.5]
+ },
+ "bodies": [
+  {
+   "id": "human_male_base", "sex": "male", "label": "Human male (base)",
+   "heightM": 1.78, "heightBand": [1.68, 1.88], "headsTall": 7.25,
+   "shoulderHalf": 0.106, "chestHalf": 0.100, "waistHalf": 0.080, "hipHalf": 0.093,
+   "chestDepth": 0.049, "neckHalf": 0.037, "headHalf": 0.0495,
+   "hipJointZ": 0.520, "upperArmLen": 0.165, "foreArmLen": 0.135, "handLen": 0.088,
+   "thighHalf": 0.054, "calfHalf": 0.036, "ankleHalf": 0.0205, "footLen": 0.140,
+   "eyeWidth": 0.215, "eyeHeightRatio": 0.70
+  },
+  {
+   "id": "human_female_base", "sex": "female", "label": "Human female (base)",
+   "heightM": 1.66, "heightBand": [1.56, 1.76], "headsTall": 7.25,
+   "shoulderHalf": 0.096, "chestHalf": 0.088, "waistHalf": 0.070, "hipHalf": 0.094,
+   "chestDepth": 0.046, "neckHalf": 0.032, "headHalf": 0.0480,
+   "hipJointZ": 0.520, "upperArmLen": 0.162, "foreArmLen": 0.132, "handLen": 0.083,
+   "thighHalf": 0.054, "calfHalf": 0.033, "ankleHalf": 0.0185, "footLen": 0.132,
+   "eyeWidth": 0.235, "eyeHeightRatio": 0.82
+  }
+ ],
+ "builds": [
+  { "id": "slim", "label": "Slim", "girth": 0.93, "shoulders": 0.97, "waist": 0.95, "limbs": 0.92 },
+  { "id": "average", "label": "Average", "girth": 1.0, "shoulders": 1.0, "waist": 1.0, "limbs": 1.0 },
+  { "id": "sturdy", "label": "Sturdy", "girth": 1.09, "shoulders": 1.05, "waist": 1.10, "limbs": 1.10 }
+ ],
+ "ages": [
+  { "id": "young_adult", "label": "Young adult", "headScale": 1.03, "eyeScale": 1.05, "jaw": 0.96, "stoop": 0.0, "browDrop": 0.0 },
+  { "id": "adult", "label": "Adult", "headScale": 1.0, "eyeScale": 1.0, "jaw": 1.0, "stoop": 0.0, "browDrop": 0.0 },
+  { "id": "older", "label": "Older", "headScale": 0.99, "eyeScale": 0.94, "jaw": 1.04, "stoop": 0.012, "browDrop": 0.0015 }
+ ],
+ "palettes": {
+  "skin": [
+   { "id": "porcelain", "label": "Porcelain", "hex": "#F6DCCB", "blush": "#F2A99B" },
+   { "id": "fair", "label": "Fair", "hex": "#F0CDB4", "blush": "#EB9F8D" },
+   { "id": "light", "label": "Light", "hex": "#E6B895", "blush": "#DD8F7A" },
+   { "id": "olive", "label": "Olive", "hex": "#CE9B6E", "blush": "#C57F63" },
+   { "id": "tan", "label": "Tan", "hex": "#B97E52", "blush": "#B06544" },
+   { "id": "brown", "label": "Brown", "hex": "#94603E", "blush": "#8E4B34" },
+   { "id": "deep", "label": "Deep", "hex": "#6B4330", "blush": "#6B3427" }
+  ],
+  "hair": [
+   { "id": "ink", "label": "Ink black", "hex": "#2A2636", "tip": "#46405A" },
+   { "id": "umber", "label": "Umber", "hex": "#4A3022", "tip": "#6E4A33" },
+   { "id": "chestnut", "label": "Chestnut", "hex": "#7A4A2C", "tip": "#A56A3E" },
+   { "id": "auburn", "label": "Auburn", "hex": "#9A4A28", "tip": "#C26E3A" },
+   { "id": "copper", "label": "Copper", "hex": "#C0642E", "tip": "#E08A48" },
+   { "id": "honey", "label": "Honey", "hex": "#CFA24E", "tip": "#EBC879" },
+   { "id": "flax", "label": "Flax", "hex": "#E2CC8E", "tip": "#F3E6B4" },
+   { "id": "slate", "label": "Slate blue", "hex": "#34406A", "tip": "#556098" },
+   { "id": "silver", "label": "Silver", "hex": "#B9BFCF", "tip": "#DDE1EC" },
+   { "id": "snow", "label": "Snow", "hex": "#E8E6EE", "tip": "#FFFFFF" }
+  ],
+  "eyes": [
+   { "id": "brown", "label": "Brown", "hex": "#7A4A2A" },
+   { "id": "amber", "label": "Amber", "hex": "#D79A33" },
+   { "id": "hazel", "label": "Hazel", "hex": "#9A7A3A" },
+   { "id": "green", "label": "Green", "hex": "#4E9F5A" },
+   { "id": "teal", "label": "Teal", "hex": "#3E9EA0" },
+   { "id": "blue", "label": "Blue", "hex": "#4C86C8" },
+   { "id": "grey", "label": "Grey", "hex": "#8995A8" },
+   { "id": "violet", "label": "Violet", "hex": "#8A68C6" }
+  ],
+  "outfit": [
+   { "id": "moss", "label": "Moss and oak", "primary": "#5E8A4E", "secondary": "#6E5236", "trim": "#E8DDB8", "leather": "#6B4429", "cloak": "#3F6A52" },
+   { "id": "ochre", "label": "Ochre and umber", "primary": "#CF9A3E", "secondary": "#5A4634", "trim": "#F3E9CC", "leather": "#74492A", "cloak": "#8A4B2E" },
+   { "id": "slate", "label": "Slate and cream", "primary": "#4D6AA0", "secondary": "#5E4C3E", "trim": "#F0E6C8", "leather": "#69432A", "cloak": "#3A4A78" },
+   { "id": "rose", "label": "Madder and bark", "primary": "#B5584A", "secondary": "#5C463A", "trim": "#F1E3C6", "leather": "#6E452B", "cloak": "#7C3E3A" },
+   { "id": "teal", "label": "Teal and sand", "primary": "#3F8F8A", "secondary": "#7A6444", "trim": "#F2E8C8", "leather": "#6A4528", "cloak": "#2F6670" }
+  ]
+ },
+ "hairStyles": [
+  { "id": "crop", "body": "male", "label": "Short crop" },
+  { "id": "swept_fringe", "body": "male", "label": "Swept fringe" },
+  { "id": "spiky", "body": "male", "label": "Spiky adventurer" },
+  { "id": "tied_back", "body": "male", "label": "Tied back" },
+  { "id": "long_shaggy", "body": "male", "label": "Long and shaggy" },
+  { "id": "bob", "body": "female", "label": "Chin-length bob" },
+  { "id": "long_loose", "body": "female", "label": "Long and loose" },
+  { "id": "high_ponytail", "body": "female", "label": "High ponytail" },
+  { "id": "side_braid", "body": "female", "label": "Side braid" },
+  { "id": "short_flick", "body": "female", "label": "Short with a flick" },
+  { "id": "bun_fringe", "body": "female", "label": "Bun and fringe" }
+ ],
+ "outfits": [
+  {
+   "id": "rank_f_adventurer_m", "body": "male", "label": "Rank-F adventurer (male fit)",
+   "parts": ["top", "bottom", "belt", "boots", "bracers", "cloak"],
+   "top": { "length": "hip", "sleeve": "short" }, "bottom": { "kind": "trousers" }
+  },
+  {
+   "id": "rank_f_adventurer_f", "body": "female", "label": "Rank-F adventurer (female fit)",
+   "parts": ["top", "bottom", "skirt", "belt", "boots", "bracers", "cloak"],
+   "top": { "length": "hip", "sleeve": "short" }, "bottom": { "kind": "leggings" }
+  }
+ ],
+ "variants": [
+  {
+   "id": "human_male_base", "body": "human_male_base", "isBase": true, "seed": 1,
+   "heightM": 1.78, "build": "average", "age": "adult", "skin": "light",
+   "hair": { "style": "swept_fringe", "colour": "chestnut" }, "eyes": "amber",
+   "outfit": { "id": "rank_f_adventurer_m", "colours": "moss" }, "cloak": true
+  },
+  {
+   "id": "human_male_young_slim", "body": "human_male_base", "seed": 11,
+   "heightM": 1.72, "build": "slim", "age": "young_adult", "skin": "fair",
+   "hair": { "style": "spiky", "colour": "copper" }, "eyes": "green",
+   "outfit": { "id": "rank_f_adventurer_m", "colours": "ochre" }, "cloak": false
+  },
+  {
+   "id": "human_male_sturdy_dark", "body": "human_male_base", "seed": 12,
+   "heightM": 1.86, "build": "sturdy", "age": "adult", "skin": "brown",
+   "hair": { "style": "crop", "colour": "ink" }, "eyes": "brown",
+   "outfit": { "id": "rank_f_adventurer_m", "colours": "slate" }, "cloak": true
+  },
+  {
+   "id": "human_male_elder_wayfarer", "body": "human_male_base", "seed": 13,
+   "heightM": 1.74, "build": "average", "age": "older", "skin": "olive",
+   "hair": { "style": "tied_back", "colour": "silver" }, "eyes": "grey",
+   "outfit": { "id": "rank_f_adventurer_m", "colours": "rose" }, "cloak": true
+  },
+  {
+   "id": "human_female_base", "body": "human_female_base", "isBase": true, "seed": 2,
+   "heightM": 1.66, "build": "average", "age": "adult", "skin": "fair",
+   "hair": { "style": "long_loose", "colour": "honey" }, "eyes": "blue",
+   "outfit": { "id": "rank_f_adventurer_f", "colours": "teal" }, "cloak": true
+  },
+  {
+   "id": "human_female_young_slim", "body": "human_female_base", "seed": 21,
+   "heightM": 1.60, "build": "slim", "age": "young_adult", "skin": "porcelain",
+   "hair": { "style": "high_ponytail", "colour": "slate" }, "eyes": "violet",
+   "outfit": { "id": "rank_f_adventurer_f", "colours": "rose" }, "cloak": false
+  },
+  {
+   "id": "human_female_sturdy_tall", "body": "human_female_base", "seed": 22,
+   "heightM": 1.74, "build": "sturdy", "age": "adult", "skin": "tan",
+   "hair": { "style": "side_braid", "colour": "umber" }, "eyes": "hazel",
+   "outfit": { "id": "rank_f_adventurer_f", "colours": "moss" }, "cloak": true
+  },
+  {
+   "id": "human_female_elder_scholar", "body": "human_female_base", "seed": 23,
+   "heightM": 1.62, "build": "average", "age": "older", "skin": "deep",
+   "hair": { "style": "bun_fringe", "colour": "snow" }, "eyes": "teal",
+   "outfit": { "id": "rank_f_adventurer_f", "colours": "ochre" }, "cloak": false
+  }
+ ]
+}
