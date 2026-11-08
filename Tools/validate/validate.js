@@ -418,7 +418,9 @@ const SINGLETONS = {
   life_skills: { file: 'Items/life_skills.json', schema: 'life_skills' },
   companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' },
   mounts: { file: 'Companions/mounts.json', schema: 'mounts' },
-  gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' }
+  gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' },
+  housing: { file: 'World/housing.json', schema: 'housing' },
+  crops: { file: 'Items/crops.json', schema: 'crops' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -498,6 +500,37 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
     }
     for (const [k, st] of Object.entries(obj.stations)) if (!(st in rf.stations)) err(c.file, `stations.${k}: "${st}" is not a recipe station`);
     if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
+  }
+  if (name === 'housing' && obj.tiers) {
+    const T = obj.tiers, ranks = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'];
+    if (new Set(T.map(t => t.id)).size !== T.length) err(c.file, 'duplicate tier id');
+    if (T[0].cost !== 0 || T[0].plots !== 0) err(c.file, 'the first tier is free and has no plots (it is the inn room everyone starts in)');
+    for (let i = 1; i < T.length; i++) {
+      if (ranks.indexOf(T[i].rank) < ranks.indexOf(T[i - 1].rank)) err(T[i].id, 'rank must not fall');
+      if (!(T[i].cost > T[i - 1].cost)) err(T[i].id, 'cost must rise');
+      if (T[i].storageStacks < T[i - 1].storageStacks || T[i].plots < T[i - 1].plots) err(T[i].id, 'storage and plots must not fall (an upgrade never takes anything away)');
+      for (const f of T[i - 1].features) if (!T[i].features.includes(f)) err(T[i].id, `feature "${f}" is lost on upgrade`);
+    }
+    if (/upkeep|rent|decay|wither|spoil|rot|tax|chore|guild/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' ') + T.map(t => t.features.join(' ')).join(' '))) err(c.file, 'no upkeep, decay or guild ownership (Canon Slow-Life; the player cannot own a guild)');
+    const crops = load('Items/crops.json');
+    for (const seed of Object.keys(obj.starterSeeds)) if (!crops.crops.some(cr => cr.seedItem === seed)) err(c.file, `starter seed ${seed} belongs to no crop`);
+  }
+  if (name === 'crops' && obj.crops) {
+    const rf = load('Items/recipes.json');
+    const used = new Set(rf.recipes.filter(r => ['cooking', 'brewing', 'alchemy'].includes(r.skill)).flatMap(r => r.inputs.map(i => i.itemId)));
+    const rl = load('Items/crafting_rules.json');
+    for (const [rk, tid] of Object.entries(obj.qualityByRank)) { const t = rl.qualityTiers.find(x => x.id === tid); if (!t || !t.craftable) err(c.file, `qualityByRank.${rk}: "${tid}" is not a craftable tier`); }
+    const ids = obj.crops.map(x => x.id);
+    if (new Set(ids).size !== ids.length) err(c.file, 'duplicate crop id');
+    const sk = load('Items/life_skills.json').skills.find(s => s.id === obj.skill);
+    if (!sk || sk.kind !== 'gather') err(c.file, `skill "${obj.skill}" must be a gather skill in life_skills.json`);
+    const shops = load('Items/shops.json');
+    for (const cr of obj.crops) {
+      ref(cr.id + '.seedItem', cr.seedItem, 'items'); ref(cr.id + '.yieldItem', cr.yieldItem, 'items');
+      if (!used.has(cr.yieldItem)) err(cr.id, `yield ${cr.yieldItem} feeds no cooking, brewing or alchemy recipe`);
+      if (!shops.some(s => (s.stock || []).some(x => x.itemId === cr.seedItem))) err(cr.id, `seed ${cr.seedItem} is not sold anywhere`);
+    }
+    if (/wither|decay|spoil|rot|water|chore/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'crops never wither, spoil or need watering (Canon Slow-Life)');
   }
   if (name === 'companion_rules' && obj.presets) {
     const b = obj.presets.Balanced;

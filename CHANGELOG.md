@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-08 — Part 2, step 2: optional housing and farming (finishes upgrade v6)
+- Four home tiers, a storage chest and crop plots (`Home`). Crops grow in in-game hours and wait forever: no withering, watering, upkeep or chores. Turnip, wheat, healing herb and mandrake feed three new cooking and brewing recipes. Farming is now a gather life skill. `SaveGame.Home` defaults safely for older saves.
+- Data `Data/World/housing.json`, `Data/Items/crops.json` with schemas and validator checks; docs `12_Systems/housing_and_farming.md`; audit `13_Production/housing_v6b_audit.md`; decision H1 in Canon section 6. 12 new Core tests. Not built: staff, shop front, village or territory, decorating, seasons.
+
 ## 2026-11-08 — Part 2, step 1: runes, enchanting and modular weapons (finishes upgrade v6's equipment half)
 - Sockets by rarity (+1 on Masterwork), one enchantment slot per piece of gear, 6 runes, 4 rune words, 5 enchantment scrolls, weapon-only blade+hilt assembly. Runecraft and Enchanting are now craft skills with stations (`rune_anvil`, `enchanting_table`). No durability, repair or random loss. `Equipment` now reads quality keys and fittings; `SaveGame.GearFittings` defaults safely in old saves.
 - Data `Data/Items/gear_rules.json` with schema and validator checks; docs `12_Systems/gear_and_runes.md`; audit `13_Production/gear_v6b_audit.md`; decision G1 in Canon section 6. 14 new Core tests.

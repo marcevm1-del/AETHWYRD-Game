@@ -1212,6 +1212,80 @@
     "npcId": "npc_fennick_reed",
     "price": 100
    }
+  },
+  {
+   "id": "rcp_turnip_mash",
+   "name": "Turnip Mash",
+   "skill": "cooking",
+   "station": "campfire",
+   "output": {
+    "itemId": "itm_turnip_mash",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_crop_turnip",
+     "count": 2
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_crop_turnip"
+  },
+  {
+   "id": "rcp_garden_stew",
+   "name": "Garden Stew",
+   "skill": "cooking",
+   "station": "hearth",
+   "output": {
+    "itemId": "itm_garden_stew",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_crop_turnip",
+     "count": 2
+    },
+    {
+     "itemId": "itm_healing_herb",
+     "count": 1
+    },
+    {
+     "itemId": "itm_crop_wheat",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_crop_wheat",
+   "learnFrom": {
+    "npcId": "npc_marta_gruel",
+    "price": 20
+   }
+  },
+  {
+   "id": "rcp_harvest_ale",
+   "name": "Harvest Ale",
+   "skill": "brewing",
+   "station": "brewery",
+   "output": {
+    "itemId": "itm_harvest_ale",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_crop_wheat",
+     "count": 3
+    },
+    {
+     "itemId": "itm_healing_herb",
+     "count": 1
+    }
+   ],
+   "lifeRank": "F",
+   "attuneItem": "itm_healing_herb",
+   "learnFrom": {
+    "npcId": "npc_marta_gruel",
+    "price": 20
+   }
   }
  ]
 }

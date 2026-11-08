@@ -1,0 +1,87 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Home tiers",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "notes",
+  "tiers",
+  "starterSeeds"
+ ],
+ "properties": {
+  "notes": {
+   "type": "string"
+  },
+  "tiers": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "rank",
+     "cost",
+     "storageStacks",
+     "plots",
+     "features"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "rank": {
+      "type": "string",
+      "enum": [
+       "F",
+       "E",
+       "D",
+       "C",
+       "B",
+       "A",
+       "S",
+       "SS",
+       "SSS"
+      ]
+     },
+     "cost": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "storageStacks": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500
+     },
+     "plots": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+     },
+     "features": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     }
+    }
+   }
+  },
+  "starterSeeds": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 10
+   }
+  }
+ }
+}

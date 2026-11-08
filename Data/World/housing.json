@@ -1,0 +1,84 @@
+{
+ "notes": "Home tiers (12_Systems/systems.md section 6 and 6.1; 12_Systems/housing_and_farming.md). A personal home only: Canon says the player cannot own a guild, and the village / territory stage (S rank) is a later design. Tiers are taken in order for a one-time price and the guild rank; there is no rent, upkeep, decay or chore. Prices are copper. Decided 2026-11-08 by Claude under delegated creative control; the user may overrule.",
+ "tiers": [
+  {
+   "id": "inn_room",
+   "name": "Inn Room",
+   "rank": "F",
+   "cost": 0,
+   "storageStacks": 20,
+   "plots": 0,
+   "features": [
+    "bed",
+    "storage_chest"
+   ]
+  },
+  {
+   "id": "rented_room",
+   "name": "Rented Room",
+   "rank": "C",
+   "cost": 800,
+   "storageStacks": 60,
+   "plots": 1,
+   "features": [
+    "bed",
+    "storage_chest",
+    "mailbox",
+    "kitchen",
+    "workshop",
+    "mirror",
+    "window_planter"
+   ]
+  },
+  {
+   "id": "home_plot",
+   "name": "Home and Garden",
+   "rank": "B",
+   "cost": 6000,
+   "storageStacks": 120,
+   "plots": 4,
+   "features": [
+    "bed",
+    "storage_chest",
+    "mailbox",
+    "kitchen",
+    "workshop",
+    "mirror",
+    "window_planter",
+    "garden",
+    "barn",
+    "guest_rooms",
+    "trophy_hall",
+    "expedition_board"
+   ]
+  },
+  {
+   "id": "manor",
+   "name": "Manor",
+   "rank": "A",
+   "cost": 40000,
+   "storageStacks": 200,
+   "plots": 6,
+   "features": [
+    "bed",
+    "storage_chest",
+    "mailbox",
+    "kitchen",
+    "workshop",
+    "mirror",
+    "window_planter",
+    "garden",
+    "barn",
+    "guest_rooms",
+    "trophy_hall",
+    "expedition_board",
+    "study"
+   ]
+  }
+ ],
+ "starterSeeds": {
+  "itm_seed_healing_herb": 3,
+  "itm_seed_wheat": 3,
+  "itm_seed_turnip": 3
+ }
+}

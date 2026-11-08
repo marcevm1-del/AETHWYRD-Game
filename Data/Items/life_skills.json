@@ -118,9 +118,9 @@
   {
    "id": "farming",
    "name": "Farming",
-   "kind": "deferred",
+   "kind": "gather",
    "station": null,
-   "notes": "Housing wave."
+   "notes": "Crops at home plots (12_Systems/housing_and_farming.md). XP per harvest, like a gathering node. Never withers, no chores."
   },
   {
    "id": "animal_husbandry",
