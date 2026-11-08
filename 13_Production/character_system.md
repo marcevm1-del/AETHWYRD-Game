@@ -9,7 +9,7 @@ Everything is procedural and original. No third-party mesh, texture or generated
 blender -b --factory-startup --python-exit-code 1 -P Tools/blender/build_character_library.py                   # all 8 variants (2 bases + 3 samples each)
 blender -b --factory-startup --python-exit-code 1 -P Tools/blender/build_character_library.py -- --ids human_female_base
 blender -b --factory-startup --python-exit-code 1 -P Tools/blender/build_character_library.py -- --variant '{"body":"human_male_base","seed":7,"build":"sturdy","age":"older","heightM":1.80}'
-options: --no-sheets --no-export --no-blend --hash-only --levels 1 --date YYYY-MM-DD --out <dir> --reports <dir>
+options: --keys (also overwrite the two key images in 13_Production/) --no-sheets --no-export --no-blend --hash-only --levels 1 --date YYYY-MM-DD --out <dir> --reports <dir>
 ```
 `--python-exit-code 1` is required: without it Blender exits 0 even when the script raises, so a broken rig would pass.
 In Python: `generate.character("human_female_base")` or `generate.character({...})` returns `{spec, layout, armature, parts, hash}`.
@@ -17,7 +17,7 @@ In Python: `generate.character("human_female_base")` or `generate.character({...
 Output (gitignored, local): `Art/Blender/CharacterLibrary/<id>/<id>.fbx` (rigged, Unity axis fix), `.glb` (viewing), `.blend`, `<id>.json` (sidecar: bones, parts, materials, shape keys, swap groups).
 
 ## Checks
-`blender -b --factory-startup --python-exit-code 1 -P Tools/blender/check_characters.py [-- --hashes <file>]`: every variant generates and validates; same seed gives the same mesh hash (in one process, and across processes with `--hashes`); a different seed changes the mesh; a renamed bone, stripped weights and a broken hierarchy are each caught by the validator. `npm run build` checks the JSON (references resolve, heights inside their band, the 52 required bones). `py_compile` all new Python files.
+`blender -b --factory-startup --python-exit-code 1 -P Tools/blender/check_characters.py [-- --hashes <file>]`: every variant generates and validates; same seed gives the same mesh hash (in one process, and across processes with `--hashes`); a different seed changes the mesh; a renamed bone, stripped weights and a broken hierarchy are each caught by the validator. `npm run build` checks the JSON only (schema, references resolve, heights inside their band, 52 distinct required bones including the six spine/head names and the shoulder/arm/leg/toe names on both sides); the full comparison with `skeleton.py` (all finger bones, extras, parents) runs in Blender (`validate.py`, `check_characters.py`). The mesh hash covers positions (0.1 mm), faces, weights, colours and bone positions. `py_compile` all new Python files.
 
 ## Data fields (`human_library.json`)
 - `bodies[]`: `id`, `sex`, `heightM`, `heightBand`, `headsTall` (7.25), and measurements as fractions of height (shoulder, chest, waist, hip half-widths, chest depth, neck, head, limb lengths, hand and foot size, eye width and height ratio).

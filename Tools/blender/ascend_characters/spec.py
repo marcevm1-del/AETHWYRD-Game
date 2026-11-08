@@ -97,5 +97,5 @@ def mesh_hash(arrays):
     for name, a in arrays:
         h.update(name.encode())
         h.update(b"%d;" % len(a))
-        h.update(repr([[round(float(x), 5) + 0.0 for x in row] for row in a]).encode())
+        h.update(repr([[round(float(x), 4) + 0.0 for x in row] for row in a]).encode())
     return h.hexdigest()[:16]

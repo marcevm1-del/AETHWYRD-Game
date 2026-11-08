@@ -31,10 +31,10 @@ def check(ch):
     for n in SK.HUMANOID_NAMES:
         if n.startswith("Left") and n in arm.data.bones and SK.mirror(n) in arm.data.bones:
             a, c = arm.data.bones[n], arm.data.bones[SK.mirror(n)]
-            if abs(a.head_local.x + c.head_local.x) > 2e-3 or abs(a.head_local.y - c.head_local.y) > 2e-3 or abs(a.head_local.z - c.head_local.z) > 2e-3:
+            if (abs(a.head_local.x + c.head_local.x) > 2e-3 or abs(a.head_local.y - c.head_local.y) > 2e-3 or abs(a.head_local.z - c.head_local.z) > 2e-3
+                    or abs(a.tail_local.x + c.tail_local.x) > 2e-3 or abs(a.tail_local.z - c.tail_local.z) > 2e-3):
                 out.append("%s and %s are not mirror images" % (n, SK.mirror(n)))
     bone_set = set(names)
-    used = set()
     for pname, o in ch["parts"].items():
         if o.type != "MESH":
             continue
@@ -54,7 +54,6 @@ def check(ch):
                 n_inf += 1
             if abs(sum(w.values()) - 1.0) > 0.01:
                 n_sum += 1
-            used.update(w)
         if n_bad:
             out.append("%s: %d vertices have no weights" % (pname, n_bad))
         if n_inf:
@@ -62,10 +61,24 @@ def check(ch):
         if n_sum:
             out.append("%s: %d vertices whose weights do not sum to 1" % (pname, n_sum))
     body = ch["parts"]["body"]
-    bw = {g for w in M.get_weights(body) for g in w}
+    cnt = {}
+    for w in M.get_weights(body):
+        for g, v in w.items():
+            if v > 0.05:
+                cnt[g] = cnt.get(g, 0) + 1
     for n in SK.HUMANOID_NAMES:
-        if n not in bw:
-            out.append("body has no weights on humanoid bone %s" % n)
+        if cnt.get(n, 0) < 4:
+            out.append("body has fewer than 4 vertices weighted on humanoid bone %s" % n)
+    for pname, o in ch["parts"].items():
+        a = M.co(o)
+        if not np.isfinite(a).all():
+            out.append("%s has non-finite coordinates" % pname)
+        if len(a) == 0 or len(o.data.polygons) == 0:
+            out.append("%s is empty" % pname)
+        if M.edge_report(o)["loose"]:
+            out.append("%s has loose vertices" % pname)
+    if (arm.location.length > 1e-6 or any(abs(s - 1.0) > 1e-6 for s in arm.scale) or any(abs(r) > 1e-6 for r in arm.rotation_euler)):
+        out.append("the armature object is moved, rotated or scaled")
     rep = M.edge_report(body)
     if rep["open"] or rep["nonmanifold"] or rep["loose"]:
         out.append("body topology: %s" % rep)

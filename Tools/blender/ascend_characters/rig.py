@@ -25,7 +25,7 @@ def build_armature(L, name, collection=None):
         b = eb.new(n)
         b.head, b.tail = Vector(h), Vector(t)
         if (b.tail - b.head).length < 1e-3:
-            b.tail = b.head + Vector((0, 0, 0.01))
+            raise ValueError("bone %s collapses in the layout (head == tail)" % n)
         b.roll = 0.0
         if parent:
             b.parent = eb[parent]

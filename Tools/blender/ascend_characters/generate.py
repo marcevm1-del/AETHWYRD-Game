@@ -12,7 +12,6 @@ Parts are objects named <id>_<part>. Colours are per-vertex ('Col'); materials a
 """
 import time
 
-import bmesh
 import bpy
 import numpy as np
 
@@ -46,7 +45,6 @@ def paint_skin(obj, L, skin, blush):
             d = np.linalg.norm(co - np.array([x, y, z]), axis=1) / r
             m = np.maximum(m, np.clip(1 - d, 0, 1) * k)
     col = base[None, :] * (1 - m[:, None]) + bl[None, :] * m[:, None]
-    # a slightly lighter belly of the forearms and a subtle cooler tone in the neck hollow keep the toon bands readable
     M.set_colours(obj, col)
 
 
@@ -67,7 +65,7 @@ def _decal_object(name, V, Fc, cols, group, material, weights_bone="Head", colle
     return o
 
 
-def _eye_keys(P, H, ew, eh):
+def _eye_keys(P, eh):
     n = len(P.uv)
     keys = {}
     for side, nm in (("L", "blink_L"), ("R", "blink_R")):
@@ -109,7 +107,7 @@ def character(variant, collection=None, levels=1, hair=True, outfit=True, log=No
     P = fc.eyes()
     V, Fe, C = F.bake(P, surf)
     eyes = _decal_object(name + "_eyes", V, Fe, C, "face", "CH_eyes", collection=col)
-    _shape_keys(eyes, _eye_keys(P, L.H, fc.ew, fc.eh))
+    _shape_keys(eyes, _eye_keys(P, fc.eh))
     parts["eyes"] = eyes
     P = fc.brows()
     V, Fb, C = F.bake(P, surf)
@@ -153,7 +151,16 @@ def character(variant, collection=None, levels=1, hair=True, outfit=True, log=No
     for o in parts.values():
         R.attach(arm, o)
     R.pose_rest(arm)
-    h = S.mesh_hash([(k, M.co(o)) for k, o in sorted(parts.items())])
+    items = []
+    for k, o in sorted(parts.items()):
+        items.append((k, M.co(o)))
+        items.append((k + ":faces", [[len(p.vertices)] + list(p.vertices) for p in o.data.polygons]))
+        items.append((k + ":weights", [[round(w.get(b, 0.0), 3) for b in sorted(w)] + [len(w)] for w in M.get_weights(o)]))
+        a = o.data.attributes.get("Col")
+        if a is not None:
+            items.append((k + ":col", [[round(c, 3) for c in d.color[:3]] for d in a.data]))
+    items.append(("bones", [list(b.head_local) + list(b.tail_local) for b in arm.data.bones]))
+    h = S.mesh_hash(items)
     arm["ch_hash"] = h
     for k, o in parts.items():
         o["ch_part"] = k

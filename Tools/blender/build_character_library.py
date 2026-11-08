@@ -4,7 +4,7 @@ rig, renders turnaround sheets in the toon preview, saves a .blend and exports F
 
     blender -b --factory-startup --python-exit-code 1 -P Tools/blender/build_character_library.py            # all 8 variants
     blender -b --factory-startup --python-exit-code 1 -P Tools/blender/build_character_library.py -- --ids human_male_base,human_female_base
-    options: --no-sheets  --no-export  --no-blend  --hash-only  --levels 1  --date 2026-11-08  --out <dir>  --reports <dir>
+    options: --keys  --no-sheets  --no-export  --no-blend  --hash-only  --levels 1  --date 2026-11-08  --out <dir>  --reports <dir>
     a JSON variant can be given instead of an id:  --variant '{"body":"human_male_base","seed":7,"build":"sturdy"}'
 
 --python-exit-code 1 matters: without it Blender exits 0 even when this script raises, and a broken rig would pass.
@@ -47,11 +47,12 @@ def main():
     date = arg("--date", time.strftime("%Y-%m-%d"))
     out_root = arg("--out", os.path.join(ROOT, "Art", "Blender", "CharacterLibrary"))
     rep_dir = arg("--reports", os.path.join(ROOT, "reports", "characters_" + date))
-    levels = int(arg("--levels", 1))
+    levels = int(arg("--levels", 1)) if isinstance(arg("--levels", 1), (str, int)) and arg("--levels", 1) is not True else 1
     if arg("--variant"):
         todo = [json.loads(arg("--variant"))]
     else:
-        todo = arg("--ids").split(",") if arg("--ids") else spec.variant_ids()
+        ids = arg("--ids")
+        todo = ids.split(",") if isinstance(ids, str) else spec.variant_ids()
     failures = []
     for v in todo:
         clear()
@@ -70,7 +71,7 @@ def main():
         if not arg("--no-sheets"):
             png = os.path.join(rep_dir, name + ".png")
             sheets.turnaround(ch, png)
-            if name in ("human_male_base", "human_female_base"):
+            if arg("--keys") and name in ("human_male_base", "human_female_base"):
                 key = os.path.join(ROOT, "13_Production", "character_%s_base.png" % ch["spec"]["sex"])
                 sheets.key_image(ch, key)
                 print("[AC] key image", key)
