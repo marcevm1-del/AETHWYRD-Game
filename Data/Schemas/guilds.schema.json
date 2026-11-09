@@ -7,6 +7,10 @@
   "notes",
   "reputation",
   "memberLadder",
+  "playerMaxTier",
+  "maxDiscountPercent",
+  "standings",
+  "reputationEvents",
   "facilities",
   "rivalries",
   "councilNote",
@@ -26,6 +30,41 @@
    "items": {
     "type": "string",
     "minLength": 1
+   }
+  },
+  "playerMaxTier": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 8
+  },
+  "maxDiscountPercent": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 25
+  },
+  "standings": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "distrustedBelow",
+    "bannedBelow",
+    "note"
+   ],
+   "properties": {
+    "distrustedBelow": {
+     "type": "integer",
+     "minimum": -1000,
+     "maximum": 0
+    },
+    "bannedBelow": {
+     "type": "integer",
+     "minimum": -1000,
+     "maximum": 0
+    },
+    "note": {
+     "type": "string",
+     "minLength": 1
+    }
    }
   },
   "reputation": {
@@ -48,6 +87,48 @@
     }
    }
   },
+  "reputationEvents": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "kind",
+     "delta",
+     "dailyCap",
+     "text"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "minLength": 1
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "gain",
+       "loss"
+      ]
+     },
+     "delta": {
+      "type": "integer",
+      "minimum": -500,
+      "maximum": 500
+     },
+     "dailyCap": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+     },
+     "text": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
   "memberLadder": {
    "type": "array",
    "minItems": 2,
@@ -59,7 +140,12 @@
      "tier",
      "name",
      "access",
-     "exampleRequirements"
+     "exampleRequirements",
+     "reputationToReach",
+     "contractsToReach",
+     "gate",
+     "playerCanHold",
+     "discountPercent"
     ],
     "properties": {
      "id": {
@@ -68,7 +154,8 @@
      },
      "tier": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 1,
+      "maximum": 8
      },
      "name": {
       "type": "string",
@@ -81,6 +168,33 @@
      "exampleRequirements": {
       "type": "string",
       "minLength": 1
+     },
+     "reputationToReach": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100000
+     },
+     "contractsToReach": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+     },
+     "gate": {
+      "type": "string",
+      "enum": [
+       "none",
+       "test",
+       "appointment",
+       "story"
+      ]
+     },
+     "playerCanHold": {
+      "type": "boolean"
+     },
+     "discountPercent": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 25
      }
     }
    }
@@ -162,6 +276,27 @@
       "minLength": 1
      },
      "usesMemberLadder": {
+      "type": "boolean"
+     },
+     "requiresAdventurerRank": {
+      "type": "string",
+      "enum": [
+       "F",
+       "E",
+       "D",
+       "C",
+       "B",
+       "A",
+       "S",
+       "SS",
+       "SSS"
+      ]
+     },
+     "unlockFlag": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+     },
+     "impliedContractsOnly": {
       "type": "boolean"
      },
      "ours": {

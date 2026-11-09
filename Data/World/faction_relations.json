@@ -1,0 +1,233 @@
+{
+ "notes": "DRAFT from the bible v1.0 section 12. Relations between the PLAYER and each monster group, tracked separately per group. The group-to-group table is flavour for event and quest writers only: it drives no hierarchy and no autonomous faction war (Canon 4d). Standing moves only through quests, flags and the player's own actions, never because the player was defeated.",
+ "playerStates": [
+  {
+   "id": "hostile",
+   "name": "Hostile",
+   "minPoints": -100,
+   "text": "Attacks on sight or actively obstructs the player."
+  },
+  {
+   "id": "wary",
+   "name": "Wary",
+   "minPoints": -40,
+   "text": "Avoids open conflict but distrusts outsiders."
+  },
+  {
+   "id": "neutral",
+   "name": "Neutral",
+   "minPoints": 0,
+   "text": "Trades or interacts under normal rules."
+  },
+  {
+   "id": "friendly",
+   "name": "Friendly",
+   "minPoints": 40,
+   "text": "Offers aid, information or safe passage."
+  },
+  {
+   "id": "allied",
+   "name": "Allied",
+   "minPoints": 80,
+   "text": "Shares resources, missions and coordinated support."
+  }
+ ],
+ "groupStates": [
+  {
+   "id": "subjugated",
+   "name": "Subjugated",
+   "text": "Obeys a stronger ruler or force, willingly or otherwise.",
+   "note": "Group-to-group only; shown in region state, not a player standing."
+  },
+  {
+   "id": "at_war",
+   "name": "At war",
+   "text": "Active conflict between factions, changing encounters and territory control.",
+   "note": "Group-to-group only; shown in region state, not a player standing."
+  }
+ ],
+ "startingStandingPoints": {
+  "Hostile": -70,
+  "Wary": -20,
+  "Neutral": 0,
+  "Friendly": 50,
+  "Allied": 85
+ },
+ "groups": [
+  {
+   "lineId": "evl_goblins",
+   "defaultState": "Wary",
+   "allyLines": [
+    "evl_orcs",
+    "evl_ogres"
+   ],
+   "rivalLines": [
+    "evl_hobgoblin_kind"
+   ],
+   "note": "Allies: orcs, ogres, mercenary groups. Tensions: hobgoblin states, nearby settlements."
+  },
+  {
+   "lineId": "evl_orcs",
+   "defaultState": "Wary",
+   "allyLines": [
+    "evl_ogres",
+    "evl_trolls"
+   ],
+   "rivalLines": [
+    "evl_dragons",
+    "evl_giants"
+   ],
+   "note": "Allies: ogres, trolls, some beast clans. Tensions: dragons, giants, rival orc clans."
+  },
+  {
+   "lineId": "evl_dragons",
+   "defaultState": "Neutral",
+   "allyLines": [
+    "evl_wyverns",
+    "evl_drakes",
+    "evl_fae"
+   ],
+   "rivalLines": [
+    "evl_giants"
+   ],
+   "note": "Allies: wyverns, drakes, selected fae courts. Tensions: giants, titans, rival dragon houses."
+  },
+  {
+   "lineId": "evl_undead",
+   "defaultState": "Hostile",
+   "allyLines": [
+    "evl_vampires",
+    "evl_spirits"
+   ],
+   "rivalLines": [
+    "evl_celestials"
+   ],
+   "note": "Allies: vampires, wraiths, necromantic factions. Tensions: celestials, exorcists, living kingdoms."
+  },
+  {
+   "lineId": "evl_demons",
+   "defaultState": "Hostile",
+   "allyLines": [
+    "evl_undead",
+    "evl_void"
+   ],
+   "rivalLines": [
+    "evl_celestials"
+   ],
+   "note": "Allies: corrupted undead, cults, void agents. Tensions: celestials, cursebreakers, rival demon courts."
+  },
+  {
+   "lineId": "evl_insects",
+   "defaultState": "Hostile",
+   "allyLines": [
+    "evl_arachnids",
+    "evl_plants"
+   ],
+   "rivalLines": [
+    "evl_beasts"
+   ],
+   "note": "Allies: arachnids, some plant monsters. Tensions: beasts, farmers, mining settlements."
+  },
+  {
+   "lineId": "evl_golems",
+   "defaultState": "Neutral",
+   "allyLines": [
+    "evl_elementals",
+    "evl_automata"
+   ],
+   "rivalLines": [
+    "evl_demons"
+   ],
+   "note": "Allies: elementals, construct guilds. Tensions: demons, thieves, incompetent commands."
+  },
+  {
+   "lineId": "evl_fae",
+   "defaultState": "Wary",
+   "allyLines": [
+    "evl_plants",
+    "evl_spirits"
+   ],
+   "rivalLines": [
+    "evl_demons"
+   ],
+   "note": "Allies: plant monsters, spirits, conservationists. Tensions: demons, exploitative hunters, oath-breakers."
+  },
+  {
+   "lineId": "evl_aquatic",
+   "defaultState": "Neutral",
+   "allyLines": [
+    "evl_hydras"
+   ],
+   "rivalLines": [],
+   "note": "Allies: sea serpents, hydras, coastal factions. Tensions: maritime empires, pollution, rival sea kings."
+  },
+  {
+   "lineId": "evl_void",
+   "defaultState": "Hostile",
+   "allyLines": [
+    "evl_automata"
+   ],
+   "rivalLines": [
+    "evl_celestials"
+   ],
+   "note": "Allies: other void entities, cults, unstable constructs. Tensions: celestial orders, reality wardens, world defenders."
+  },
+  {
+   "lineId": "evl_vampires",
+   "defaultState": "Wary",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_trolls",
+   "defaultState": "Wary",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_ogres",
+   "defaultState": "Wary",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_giants",
+   "defaultState": "Wary",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_hobgoblin_kind",
+   "defaultState": "Wary",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_arachnids",
+   "defaultState": "Hostile",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_celestials",
+   "defaultState": "Neutral",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  },
+  {
+   "lineId": "evl_spirits",
+   "defaultState": "Neutral",
+   "allyLines": [],
+   "rivalLines": [],
+   "note": "No relation row in the bible; defaults only."
+  }
+ ],
+ "exampleRule": "A player may be allied with an Orc clan while the Orc Empire remains hostile, or trusted by a Vampire house while the Exorcists Order distrusts them (per-faction and per-guild tracking)."
+}

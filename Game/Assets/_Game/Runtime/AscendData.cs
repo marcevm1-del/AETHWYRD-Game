@@ -79,6 +79,39 @@ namespace Ascend.Game
         /// <summary>Data/Companions/mounts.json; null when missing.</summary>
         public static MountTable Mounts => Once(ref _mounts, ref _mountsDone, "Companions/mounts.json");
 
+        // Monster lines, variations, guilds, contracts, factions, lairs and grade labels (Canon section 6 proposals M1 to M6). All optional.
+        static MonsterLines _lines; static VariationFile _variations; static GuildFile _guildFile; static ContractFile _contractFile;
+        static FactionFile _factionFile; static LairFile _lairs; static GradeFile _grades;
+        static bool _linesDone, _variationsDone, _guildDone, _contractDone, _factionDone, _lairsDone, _gradesDone;
+
+        /// <summary>Evolution lines and each species' place in them (Data/Monsters/evolution_lines.json, species_lines.json); null when missing.</summary>
+        public static MonsterLines MonsterLines
+        {
+            get
+            {
+                if (!_linesDone)
+                {
+                    _linesDone = true;
+                    var lines = ReadOpt<EvolutionLineFile>("Monsters/evolution_lines.json");
+                    var assigned = ReadOpt<SpeciesLineFile>("Monsters/species_lines.json");
+                    if (lines != null) { try { _lines = new MonsterLines(lines, assigned); } catch (Exception e) { Debug.LogWarning($"Ascend monster lines not loaded: {e.Message}"); } }
+                }
+                return _lines;
+            }
+        }
+        /// <summary>Data/Monsters/variations.json; null when missing.</summary>
+        public static VariationFile Variations => Once(ref _variations, ref _variationsDone, "Monsters/variations.json");
+        /// <summary>Data/World/guilds.json; null when missing.</summary>
+        public static GuildFile GuildFile => Once(ref _guildFile, ref _guildDone, "World/guilds.json");
+        /// <summary>Data/Quests/guild_contracts.json; null when missing.</summary>
+        public static ContractFile GuildContracts => Once(ref _contractFile, ref _contractDone, "Quests/guild_contracts.json");
+        /// <summary>Data/World/faction_relations.json; null when missing.</summary>
+        public static FactionFile Factions => Once(ref _factionFile, ref _factionDone, "World/faction_relations.json");
+        /// <summary>Data/World/lairs_and_events.json; null when missing.</summary>
+        public static LairFile Lairs => Once(ref _lairs, ref _lairsDone, "World/lairs_and_events.json");
+        /// <summary>Data/Items/grade_labels.json; null when missing.</summary>
+        public static GradeFile Grades => Once(ref _grades, ref _gradesDone, "Items/grade_labels.json");
+
         public static GameDatabase Load()
         {
             var items = Read<List<ItemData>>("Items/materials.json").Concat(Read<List<ItemData>>("Items/items.json"));

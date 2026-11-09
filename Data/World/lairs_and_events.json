@@ -1,0 +1,263 @@
+{
+ "notes": "DRAFT from the bible v1.0 section 11. Location-type tags for designing lairs and dungeons: a dungeon is an ecosystem and a faction stronghold, not a row of combat rooms. Nothing here adds a dungeon boss (Canon section 6: a boss is an existing species) or an enemy hierarchy (Canon 4d). World events are region-level only and are proposals for the living-world event director, not yet registered there.",
+ "locationTypes": [
+  {
+   "id": "lair_goblin_warren",
+   "name": "Goblin warrens",
+   "inhabitantLines": [
+    "evl_goblins",
+    "evl_hobgoblin_kind",
+    "evl_slimes"
+   ],
+   "signatureFeatures": "Traps, tunnels, alarms, workshops."
+  },
+  {
+   "id": "lair_orc_fortress",
+   "name": "Orc fortress",
+   "inhabitantLines": [
+    "evl_orcs",
+    "evl_ogres",
+    "evl_trolls"
+   ],
+   "signatureFeatures": "Barracks, war rooms, siege weapons."
+  },
+  {
+   "id": "lair_dragon_lair",
+   "name": "Dragon lair",
+   "inhabitantLines": [
+    "evl_dragons",
+    "evl_drakes",
+    "evl_wyverns"
+   ],
+   "signatureFeatures": "Treasure vault, elemental hazards, flight spaces."
+  },
+  {
+   "id": "lair_undead_crypt",
+   "name": "Undead crypt",
+   "inhabitantLines": [
+    "evl_undead"
+   ],
+   "signatureFeatures": "Curses, sealed chambers, soul anchors."
+  },
+  {
+   "id": "lair_demon_gate",
+   "name": "Demon gate",
+   "inhabitantLines": [
+    "evl_demons"
+   ],
+   "signatureFeatures": "Ritual circles, unstable portals, corruption."
+  },
+  {
+   "id": "lair_insect_hive",
+   "name": "Insect hive",
+   "inhabitantLines": [
+    "evl_insects",
+    "evl_arachnids"
+   ],
+   "signatureFeatures": "Caste chambers, pheromone zones, brood chambers."
+  },
+  {
+   "id": "lair_crystal_cavern",
+   "name": "Crystal cavern",
+   "inhabitantLines": [
+    "evl_crystals",
+    "evl_golems"
+   ],
+   "signatureFeatures": "Resonance puzzles, reflective attacks, mana fields."
+  },
+  {
+   "id": "lair_elemental_nexus",
+   "name": "Elemental nexus",
+   "inhabitantLines": [
+    "evl_elementals",
+    "evl_automata"
+   ],
+   "signatureFeatures": "Changing terrain, elemental surges."
+  },
+  {
+   "id": "lair_abyssal_trench",
+   "name": "Abyssal trench",
+   "inhabitantLines": [
+    "evl_aquatic"
+   ],
+   "signatureFeatures": "Pressure, darkness, currents, oxygen limits."
+  },
+  {
+   "id": "lair_void_rift",
+   "name": "Void rift",
+   "inhabitantLines": [
+    "evl_void"
+   ],
+   "signatureFeatures": "Spatial distortion, reality hazards, shifting rooms."
+  }
+ ],
+ "progression": [
+  {
+   "step": 1,
+   "id": "discovery",
+   "text": "Rumours, maps, guild contracts or environmental clues reveal the entrance."
+  },
+  {
+   "step": 2,
+   "id": "preparation",
+   "text": "The party chooses supplies, resistance gear, research and a retreat plan."
+  },
+  {
+   "step": 3,
+   "id": "entry",
+   "text": "The party meets scouts, environmental hazards and early warning signs."
+  },
+  {
+   "step": 4,
+   "id": "escalation",
+   "text": "Defenders adapt, alarms trigger, reinforcements arrive or the dungeon changes."
+  },
+  {
+   "step": 5,
+   "id": "objective",
+   "text": "Recover a relic, rescue captives, defeat a boss, close a rift or gather research."
+  },
+  {
+   "step": 6,
+   "id": "resolution",
+   "text": "Claim rewards, report to guilds, shift region state and change the area."
+  }
+ ],
+ "worldEvents": [
+  {
+   "id": "wev_goblin_warband_invasion",
+   "name": "Goblin Warband Invasion",
+   "text": "Multiple villages are threatened by a coordinated goblin host.",
+   "lines": [
+    "evl_goblins",
+    "evl_hobgoblin_kind"
+   ],
+   "requestedBy": [
+    "gld_mercenaries",
+    "gld_adventurers",
+    "gld_farmers"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  },
+  {
+   "id": "wev_dragon_migration",
+   "name": "Dragon Migration",
+   "text": "Draconic territories shift, disrupting trade routes and spawning rare hunts.",
+   "lines": [
+    "evl_dragons",
+    "evl_wyverns",
+    "evl_drakes"
+   ],
+   "requestedBy": [
+    "gld_monster_hunters",
+    "gld_merchants"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  },
+  {
+   "id": "wev_undead_moon",
+   "name": "Undead Moon",
+   "text": "Necromantic energy raises threats around graveyards and battlefields.",
+   "lines": [
+    "evl_undead",
+    "evl_spirits"
+   ],
+   "requestedBy": [
+    "gld_exorcists",
+    "gld_necromancers"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  },
+  {
+   "id": "wev_insect_queen_awakening",
+   "name": "Insect Queen Awakening",
+   "text": "A hive expands underground and threatens mines and towns.",
+   "lines": [
+    "evl_insects",
+    "evl_arachnids"
+   ],
+   "requestedBy": [
+    "gld_miners",
+    "gld_builders"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  },
+  {
+   "id": "wev_elemental_storm",
+   "name": "Elemental Storm",
+   "text": "A mana nexus destabilises, creating elemental outbreaks.",
+   "lines": [
+    "evl_elementals",
+    "evl_crystals"
+   ],
+   "requestedBy": [
+    "gld_mages",
+    "gld_enchanters"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  },
+  {
+   "id": "wev_leviathan_rising",
+   "name": "Leviathan Rising",
+   "text": "Sea routes close and coastal guilds request a joint expedition.",
+   "lines": [
+    "evl_aquatic"
+   ],
+   "requestedBy": [
+    "gld_maritime",
+    "gld_sailors"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  },
+  {
+   "id": "wev_void_breach",
+   "name": "Void Breach",
+   "text": "Reality distortions spread and require a multi-guild containment effort.",
+   "lines": [
+    "evl_void"
+   ],
+   "requestedBy": [
+    "gld_mages",
+    "gld_exorcists",
+    "gld_adventurers",
+    "gld_free_cities_council"
+   ],
+   "scope": "region",
+   "drivers": [
+    "ecology",
+    "region_state",
+    "story_flag"
+   ]
+  }
+ ]
+}

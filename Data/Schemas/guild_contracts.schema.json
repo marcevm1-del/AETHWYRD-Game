@@ -1,0 +1,289 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Guild contract templates and bounty rules",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "notes",
+  "categories",
+  "rewardBands",
+  "rewardBandsNote",
+  "copperByRank",
+  "scaling",
+  "bounty",
+  "templates"
+ ],
+ "properties": {
+  "notes": {
+   "type": "string",
+   "minLength": 1
+  },
+  "rewardBandsNote": {
+   "type": "string",
+   "minLength": 1
+  },
+  "categories": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "objectiveExamples",
+     "typicalReward"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^cqc_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "objectiveExamples": {
+      "type": "string",
+      "minLength": 1
+     },
+     "typicalReward": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "rewardBands": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "low",
+    "mid",
+    "high"
+   ],
+   "properties": {
+    "low": {
+     "type": "number",
+     "minimum": 0.1,
+     "maximum": 5
+    },
+    "mid": {
+     "type": "number",
+     "minimum": 0.1,
+     "maximum": 5
+    },
+    "high": {
+     "type": "number",
+     "minimum": 0.1,
+     "maximum": 5
+    }
+   }
+  },
+  "copperByRank": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 100000000
+   }
+  },
+  "scaling": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "note",
+    "factors"
+   ],
+   "properties": {
+    "note": {
+     "type": "string",
+     "minLength": 1
+    },
+    "factors": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "bounty": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "objectives",
+    "proofs",
+    "proofsAccepted",
+    "claim",
+    "listFields",
+    "targetsMayChange",
+    "targetChangeNote"
+   ],
+   "properties": {
+    "objectives": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "proofs": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "proofsAccepted": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     }
+    },
+    "claim": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "rule",
+      "minContributionShare",
+      "splitBy",
+      "escrow",
+      "reputationToQualifyingClaimants"
+     ],
+     "properties": {
+      "rule": {
+       "type": "string",
+       "minLength": 1
+      },
+      "minContributionShare": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "splitBy": {
+       "type": "string",
+       "minLength": 1
+      },
+      "escrow": {
+       "type": "boolean"
+      },
+      "reputationToQualifyingClaimants": {
+       "type": "boolean"
+      }
+     }
+    },
+    "listFields": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "targetsMayChange": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "targetChangeNote": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "templates": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "guildId",
+     "category",
+     "title",
+     "minRank",
+     "maxRank",
+     "cooldownDays",
+     "rewardBand",
+     "minTier",
+     "membersOnly"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^gct_[a-z0-9_]+$"
+     },
+     "guildId": {
+      "type": "string",
+      "pattern": "^gld_[a-z0-9_]+$"
+     },
+     "category": {
+      "type": "string",
+      "pattern": "^cqc_[a-z0-9_]+$"
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1
+     },
+     "minRank": {
+      "type": "string",
+      "enum": [
+       "F",
+       "E",
+       "D",
+       "C",
+       "B",
+       "A",
+       "S",
+       "SS",
+       "SSS"
+      ]
+     },
+     "maxRank": {
+      "type": "string",
+      "enum": [
+       "F",
+       "E",
+       "D",
+       "C",
+       "B",
+       "A",
+       "S",
+       "SS",
+       "SSS"
+      ]
+     },
+     "cooldownDays": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 60
+     },
+     "rewardBand": {
+      "type": "string",
+      "enum": [
+       "low",
+       "mid",
+       "high"
+      ]
+     },
+     "minTier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 7
+     },
+     "membersOnly": {
+      "type": "boolean"
+     }
+    }
+   }
+  }
+ }
+}

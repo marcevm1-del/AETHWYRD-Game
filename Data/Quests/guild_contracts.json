@@ -1,0 +1,855 @@
+{
+ "notes": "DRAFT from the bible v1.0 sections 8 and 9: ten quest categories, bounty board rules and two contract templates per guild (58 templates; the Adventurers Guild keeps the existing quest system). Templates are not quests. All numbers are placeholder tuning. Quest rewards must not create infinite material or currency loops: every template has a cooldown, and a guild gives only the daily reputation cap in guilds.json.",
+ "categories": [
+  {
+   "id": "cqc_hunt",
+   "name": "Hunt",
+   "objectiveExamples": "Track, defeat, capture or study a target.",
+   "typicalReward": "Currency, trophy, core, reputation."
+  },
+  {
+   "id": "cqc_gather",
+   "name": "Gather",
+   "objectiveExamples": "Collect herbs, crystals, monster parts or samples.",
+   "typicalReward": "Materials, recipes, crafting XP."
+  },
+  {
+   "id": "cqc_escort",
+   "name": "Escort",
+   "objectiveExamples": "Protect caravans, scholars, breeders or refugees.",
+   "typicalReward": "Currency, trade access, reputation."
+  },
+  {
+   "id": "cqc_explore",
+   "name": "Explore",
+   "objectiveExamples": "Map ruins, caves, nests, lairs or unknown regions.",
+   "typicalReward": "Maps, relics, discovery XP."
+  },
+  {
+   "id": "cqc_research",
+   "name": "Research",
+   "objectiveExamples": "Observe behaviour, identify species or test a weakness.",
+   "typicalReward": "Bestiary entries, recipes, guild standing."
+  },
+  {
+   "id": "cqc_rescue",
+   "name": "Rescue",
+   "objectiveExamples": "Recover captives, lost parties, eggs or injured creatures.",
+   "typicalReward": "Reputation, allies, rare rewards."
+  },
+  {
+   "id": "cqc_defence",
+   "name": "Defence",
+   "objectiveExamples": "Protect a settlement, gate, mine, village or convoy.",
+   "typicalReward": "Currency, settlement upgrades."
+  },
+  {
+   "id": "cqc_infiltration",
+   "name": "Sabotage / Infiltration",
+   "objectiveExamples": "Disable a threat, retrieve intelligence or expose a plot.",
+   "typicalReward": "Information, faction influence."
+  },
+  {
+   "id": "cqc_raid",
+   "name": "Boss / Raid",
+   "objectiveExamples": "Defeat a lair ruler, world boss or coordinated encounter.",
+   "typicalReward": "Legendary materials, titles, unique loot."
+  },
+  {
+   "id": "cqc_diplomacy",
+   "name": "Diplomacy",
+   "objectiveExamples": "Negotiate with a monster faction or resolve a guild dispute.",
+   "typicalReward": "Alliances, access, peace or trade."
+  }
+ ],
+ "rewardBands": {
+  "low": 0.6,
+  "mid": 1,
+  "high": 1.5
+ },
+ "rewardBandsNote": "rewardBands multiply copperByRank. Placeholder tuning.",
+ "copperByRank": {
+  "F": 50,
+  "E": 250,
+  "D": 900,
+  "C": 3000,
+  "B": 8000,
+  "A": 20000,
+  "S": 50000,
+  "SS": 120000,
+  "SSS": 300000
+ },
+ "scaling": {
+  "note": "Scale difficulty by threat rank, party size, gear, location, monster intelligence, environmental hazards and objective complexity, never by evolution stage alone.",
+  "factors": [
+   "threatRank",
+   "partySize",
+   "gear",
+   "location",
+   "monsterIntelligence",
+   "environmentalHazards",
+   "objectiveComplexity"
+  ]
+ },
+ "bounty": {
+  "objectives": [
+   "kill",
+   "capture",
+   "sample",
+   "investigate",
+   "relocate"
+  ],
+  "proofs": [
+   "core",
+   "marked_trophy",
+   "field_report",
+   "captured_target",
+   "witness_testimony"
+  ],
+  "proofsAccepted": {
+   "kill": [
+    "core",
+    "marked_trophy",
+    "witness_testimony"
+   ],
+   "capture": [
+    "captured_target",
+    "witness_testimony"
+   ],
+   "sample": [
+    "field_report",
+    "marked_trophy"
+   ],
+   "investigate": [
+    "field_report",
+    "witness_testimony"
+   ],
+   "relocate": [
+    "captured_target",
+    "witness_testimony"
+   ]
+  },
+  "claim": {
+   "rule": "first_valid_proof",
+   "minContributionShare": 0.15,
+   "splitBy": "contribution",
+   "escrow": true,
+   "reputationToQualifyingClaimants": true
+  },
+  "listFields": [
+   "targetIdentity",
+   "knownLocation",
+   "threatEstimate",
+   "behaviour",
+   "knownWeaknesses",
+   "proofRequirements",
+   "deadline",
+   "reward"
+  ],
+  "targetsMayChange": [
+   "move",
+   "evolve",
+   "gainAllies",
+   "changeTerritory"
+  ],
+  "targetChangeNote": "A target may change during an active bounty only by region state, ecology or story flags, never because it defeated the player (Canon 4d)."
+ },
+ "templates": [
+  {
+   "id": "gct_monster_hunters_1",
+   "guildId": "gld_monster_hunters",
+   "category": "cqc_hunt",
+   "title": "Field bounty: a named pest",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 1,
+   "rewardBand": "mid",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_monster_hunters_2",
+   "guildId": "gld_monster_hunters",
+   "category": "cqc_research",
+   "title": "Trophy survey for the hunters",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 3,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_rangers_1",
+   "guildId": "gld_rangers",
+   "category": "cqc_explore",
+   "title": "Mark a safe route through the wilds",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_rangers_2",
+   "guildId": "gld_rangers",
+   "category": "cqc_escort",
+   "title": "Guide a party over a dangerous pass",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_mercenaries_1",
+   "guildId": "gld_mercenaries",
+   "category": "cqc_escort",
+   "title": "Armed escort for a supply column",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_mercenaries_2",
+   "guildId": "gld_mercenaries",
+   "category": "cqc_defence",
+   "title": "Hold a gate for a season of siege work",
+   "minRank": "C",
+   "maxRank": "S",
+   "cooldownDays": 7,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_merchants_1",
+   "guildId": "gld_merchants",
+   "category": "cqc_escort",
+   "title": "Caravan protection on a trade road",
+   "minRank": "F",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "mid",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_merchants_2",
+   "guildId": "gld_merchants",
+   "category": "cqc_diplomacy",
+   "title": "Settle a market dispute fairly",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 5,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_blacksmiths_1",
+   "guildId": "gld_blacksmiths",
+   "category": "cqc_gather",
+   "title": "Fetch ore and charcoal for the forge",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_blacksmiths_2",
+   "guildId": "gld_blacksmiths",
+   "category": "cqc_hunt",
+   "title": "Hunt a metal-hided beast for masterwork scales",
+   "minRank": "C",
+   "maxRank": "A",
+   "cooldownDays": 5,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_alchemists_1",
+   "guildId": "gld_alchemists",
+   "category": "cqc_gather",
+   "title": "Collect catalyst herbs",
+   "minRank": "F",
+   "maxRank": "D",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_alchemists_2",
+   "guildId": "gld_alchemists",
+   "category": "cqc_research",
+   "title": "Test a monster extract for the Circle",
+   "minRank": "D",
+   "maxRank": "B",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_mages_1",
+   "guildId": "gld_mages",
+   "category": "cqc_research",
+   "title": "Observe a mana nexus for the Conclave",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_mages_2",
+   "guildId": "gld_mages",
+   "category": "cqc_gather",
+   "title": "Recover spell reagents",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_healers_1",
+   "guildId": "gld_healers",
+   "category": "cqc_rescue",
+   "title": "Carry the wounded back from a battlefield",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_healers_2",
+   "guildId": "gld_healers",
+   "category": "cqc_gather",
+   "title": "Find antidote herbs before the fever spreads",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_scholars_1",
+   "guildId": "gld_scholars",
+   "category": "cqc_research",
+   "title": "Identify and describe an unlisted species",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_scholars_2",
+   "guildId": "gld_scholars",
+   "category": "cqc_explore",
+   "title": "Copy an inscription from a ruin",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 3,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_cartographers_1",
+   "guildId": "gld_cartographers",
+   "category": "cqc_explore",
+   "title": "Survey an unmapped cave",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_cartographers_2",
+   "guildId": "gld_cartographers",
+   "category": "cqc_explore",
+   "title": "Chart a new landmark",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_beast_tamers_1",
+   "guildId": "gld_beast_tamers",
+   "category": "cqc_hunt",
+   "title": "Capture a compatible beast alive",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_beast_tamers_2",
+   "guildId": "gld_beast_tamers",
+   "category": "cqc_rescue",
+   "title": "Recover a runaway companion",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_bounty_registry_1",
+   "guildId": "gld_bounty_registry",
+   "category": "cqc_hunt",
+   "title": "Bring in a named target",
+   "minRank": "D",
+   "maxRank": "S",
+   "cooldownDays": 3,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_bounty_registry_2",
+   "guildId": "gld_bounty_registry",
+   "category": "cqc_hunt",
+   "title": "Deliver proof for a standing bounty",
+   "minRank": "F",
+   "maxRank": "B",
+   "cooldownDays": 1,
+   "rewardBand": "mid",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_maritime_1",
+   "guildId": "gld_maritime",
+   "category": "cqc_explore",
+   "title": "Run a coastal sea expedition",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_maritime_2",
+   "guildId": "gld_maritime",
+   "category": "cqc_gather",
+   "title": "Salvage a wreck before the tide",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_miners_1",
+   "guildId": "gld_miners",
+   "category": "cqc_defence",
+   "title": "Clear a cave-in and the things nesting in it",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_miners_2",
+   "guildId": "gld_miners",
+   "category": "cqc_gather",
+   "title": "Mine a vein for the Union",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_enchanters_1",
+   "guildId": "gld_enchanters",
+   "category": "cqc_research",
+   "title": "Test a rune on a living target",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_enchanters_2",
+   "guildId": "gld_enchanters",
+   "category": "cqc_gather",
+   "title": "Collect rune-stones",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_jewelers_1",
+   "guildId": "gld_jewelers",
+   "category": "cqc_gather",
+   "title": "Source rare crystals",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_jewelers_2",
+   "guildId": "gld_jewelers",
+   "category": "cqc_research",
+   "title": "Appraise a gem for the Guild",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_cooks_1",
+   "guildId": "gld_cooks",
+   "category": "cqc_gather",
+   "title": "Hunt for a rare ingredient",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_cooks_2",
+   "guildId": "gld_cooks",
+   "category": "cqc_escort",
+   "title": "Deliver camp supplies to a patrol",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_stablemasters_1",
+   "guildId": "gld_stablemasters",
+   "category": "cqc_escort",
+   "title": "Deliver a mount safely",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 2,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_stablemasters_2",
+   "guildId": "gld_stablemasters",
+   "category": "cqc_rescue",
+   "title": "Find a strayed mount",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 2,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_sailors_1",
+   "guildId": "gld_sailors",
+   "category": "cqc_escort",
+   "title": "Convoy through stormy water",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_sailors_2",
+   "guildId": "gld_sailors",
+   "category": "cqc_rescue",
+   "title": "Rescue a crew from a wreck",
+   "minRank": "C",
+   "maxRank": "S",
+   "cooldownDays": 5,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_builders_1",
+   "guildId": "gld_builders",
+   "category": "cqc_defence",
+   "title": "Reinforce a village gate",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_builders_2",
+   "guildId": "gld_builders",
+   "category": "cqc_gather",
+   "title": "Haul stone and timber for a bridge",
+   "minRank": "F",
+   "maxRank": "D",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_farmers_1",
+   "guildId": "gld_farmers",
+   "category": "cqc_defence",
+   "title": "Protect the harvest from raiders",
+   "minRank": "F",
+   "maxRank": "D",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_farmers_2",
+   "guildId": "gld_farmers",
+   "category": "cqc_gather",
+   "title": "Collect herbs for the Cooperative",
+   "minRank": "F",
+   "maxRank": "C",
+   "cooldownDays": 1,
+   "rewardBand": "low",
+   "minTier": 1,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_conservation_1",
+   "guildId": "gld_conservation",
+   "category": "cqc_rescue",
+   "title": "Relocate a rare species to safety",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_conservation_2",
+   "guildId": "gld_conservation",
+   "category": "cqc_research",
+   "title": "Record a nest for the Society",
+   "minRank": "E",
+   "maxRank": "B",
+   "cooldownDays": 3,
+   "rewardBand": "low",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_necromancers_1",
+   "guildId": "gld_necromancers",
+   "category": "cqc_research",
+   "title": "Contain a restless grave",
+   "minRank": "C",
+   "maxRank": "A",
+   "cooldownDays": 5,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": true
+  },
+  {
+   "id": "gct_necromancers_2",
+   "guildId": "gld_necromancers",
+   "category": "cqc_explore",
+   "title": "Recover funerary relics",
+   "minRank": "C",
+   "maxRank": "S",
+   "cooldownDays": 6,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": true
+  },
+  {
+   "id": "gct_exorcists_1",
+   "guildId": "gld_exorcists",
+   "category": "cqc_rescue",
+   "title": "Lift a haunting from a house",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_exorcists_2",
+   "guildId": "gld_exorcists",
+   "category": "cqc_research",
+   "title": "Break a curse on an heirloom",
+   "minRank": "D",
+   "maxRank": "S",
+   "cooldownDays": 5,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_relic_seekers_1",
+   "guildId": "gld_relic_seekers",
+   "category": "cqc_explore",
+   "title": "Authenticate a relic in the field",
+   "minRank": "D",
+   "maxRank": "S",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_relic_seekers_2",
+   "guildId": "gld_relic_seekers",
+   "category": "cqc_raid",
+   "title": "Recover a relic from a guarded vault",
+   "minRank": "B",
+   "maxRank": "SS",
+   "cooldownDays": 7,
+   "rewardBand": "high",
+   "minTier": 4,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_arena_1",
+   "guildId": "gld_arena",
+   "category": "cqc_diplomacy",
+   "title": "Arrange a sanctioned exhibition duel",
+   "minRank": "E",
+   "maxRank": "A",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 2,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_arena_2",
+   "guildId": "gld_arena",
+   "category": "cqc_raid",
+   "title": "Win a ranked tournament bout",
+   "minRank": "D",
+   "maxRank": "S",
+   "cooldownDays": 5,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_shadow_syndicate_1",
+   "guildId": "gld_shadow_syndicate",
+   "category": "cqc_infiltration",
+   "title": "Carry a message past the watch",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 3,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": true
+  },
+  {
+   "id": "gct_shadow_syndicate_2",
+   "guildId": "gld_shadow_syndicate",
+   "category": "cqc_infiltration",
+   "title": "Learn what a merchant is hiding",
+   "minRank": "C",
+   "maxRank": "S",
+   "cooldownDays": 5,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": true
+  },
+  {
+   "id": "gct_veiled_hand_1",
+   "guildId": "gld_veiled_hand",
+   "category": "cqc_infiltration",
+   "title": "Expose a plot before it ripens",
+   "minRank": "B",
+   "maxRank": "SS",
+   "cooldownDays": 7,
+   "rewardBand": "high",
+   "minTier": 4,
+   "membersOnly": true
+  },
+  {
+   "id": "gct_veiled_hand_2",
+   "guildId": "gld_veiled_hand",
+   "category": "cqc_diplomacy",
+   "title": "Broker a quiet truce between houses",
+   "minRank": "B",
+   "maxRank": "SS",
+   "cooldownDays": 7,
+   "rewardBand": "high",
+   "minTier": 4,
+   "membersOnly": true
+  },
+  {
+   "id": "gct_free_cities_council_1",
+   "guildId": "gld_free_cities_council",
+   "category": "cqc_diplomacy",
+   "title": "Carry a charter to a free city",
+   "minRank": "D",
+   "maxRank": "A",
+   "cooldownDays": 4,
+   "rewardBand": "mid",
+   "minTier": 3,
+   "membersOnly": false
+  },
+  {
+   "id": "gct_free_cities_council_2",
+   "guildId": "gld_free_cities_council",
+   "category": "cqc_diplomacy",
+   "title": "Arbitrate a dispute between guilds",
+   "minRank": "C",
+   "maxRank": "S",
+   "cooldownDays": 6,
+   "rewardBand": "high",
+   "minTier": 3,
+   "membersOnly": false
+  }
+ ]
+}

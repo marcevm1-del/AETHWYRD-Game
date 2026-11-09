@@ -79,6 +79,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/12_Systems/hud_and_ui|12_Systems/hud_and_ui]]
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
 - [[Design Bible/12_Systems/living_world|12_Systems/living_world]]
+- [[Design Bible/12_Systems/monster_lines_and_guilds|12_Systems/monster_lines_and_guilds]]
 - [[Design Bible/12_Systems/party_synergy|12_Systems/party_synergy]]
 - [[Design Bible/12_Systems/stables|12_Systems/stables]]
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]

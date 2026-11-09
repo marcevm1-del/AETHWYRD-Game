@@ -16,56 +16,175 @@
    "tier": 1,
    "name": "Applicant",
    "access": "Public services and basic notices.",
-   "exampleRequirements": "Registration, identity check or introductory task."
+   "exampleRequirements": "Registration, identity check or introductory task.",
+   "reputationToReach": 0,
+   "contractsToReach": 0,
+   "gate": "none",
+   "playerCanHold": true,
+   "discountPercent": 0
   },
   {
    "id": "gr_initiate",
    "tier": 2,
    "name": "Initiate",
    "access": "Training and low-risk contracts.",
-   "exampleRequirements": "Basic test, first contribution or recommendation."
+   "exampleRequirements": "Basic test, first contribution or recommendation.",
+   "reputationToReach": 10,
+   "contractsToReach": 1,
+   "gate": "none",
+   "playerCanHold": true,
+   "discountPercent": 0
   },
   {
    "id": "gr_member",
    "tier": 3,
    "name": "Member",
    "access": "Standard quests and guild facilities.",
-   "exampleRequirements": "Completed starter quest and code acceptance."
+   "exampleRequirements": "Completed starter quest and code acceptance.",
+   "reputationToReach": 40,
+   "contractsToReach": 3,
+   "gate": "none",
+   "playerCanHold": true,
+   "discountPercent": 2
   },
   {
    "id": "gr_veteran",
    "tier": 4,
    "name": "Veteran",
    "access": "Advanced contracts and specialist services.",
-   "exampleRequirements": "Reputation, successful missions, skill proof."
+   "exampleRequirements": "Reputation, successful missions, skill proof.",
+   "reputationToReach": 120,
+   "contractsToReach": 8,
+   "gate": "none",
+   "playerCanHold": true,
+   "discountPercent": 4
   },
   {
    "id": "gr_expert",
    "tier": 5,
    "name": "Expert",
    "access": "High-risk quests, mentorship and restricted facilities.",
-   "exampleRequirements": "Mastery test, significant contribution."
+   "exampleRequirements": "Mastery test, significant contribution.",
+   "reputationToReach": 300,
+   "contractsToReach": 15,
+   "gate": "test",
+   "playerCanHold": true,
+   "discountPercent": 6
   },
   {
    "id": "gr_officer",
    "tier": 6,
    "name": "Officer",
    "access": "Team leadership, quest approval and local administration.",
-   "exampleRequirements": "Trust, leadership record, guild vote or appointment."
+   "exampleRequirements": "Trust, leadership record, guild vote or appointment.",
+   "reputationToReach": 600,
+   "contractsToReach": 25,
+   "gate": "appointment",
+   "playerCanHold": true,
+   "discountPercent": 8
   },
   {
    "id": "gr_master",
    "tier": 7,
    "name": "Master",
    "access": "Regional authority, rare services and training rights.",
-   "exampleRequirements": "Exceptional achievements and senior approval."
+   "exampleRequirements": "Exceptional achievements and senior approval.",
+   "reputationToReach": 1200,
+   "contractsToReach": 40,
+   "gate": "appointment",
+   "playerCanHold": true,
+   "discountPercent": 10
   },
   {
    "id": "gr_grandmaster",
    "tier": 8,
    "name": "Grandmaster",
    "access": "Guild-wide influence and unique story access.",
-   "exampleRequirements": "Major narrative achievement; usually one or few."
+   "exampleRequirements": "Major narrative achievement; usually one or few.",
+   "reputationToReach": 2500,
+   "contractsToReach": 60,
+   "gate": "story",
+   "playerCanHold": false,
+   "discountPercent": 12
+  }
+ ],
+ "playerMaxTier": 7,
+ "maxDiscountPercent": 12,
+ "standings": {
+  "distrustedBelow": -50,
+  "bannedBelow": -150,
+  "note": "Below distrustedBelow the guild refuses services and contracts; below bannedBelow membership is revoked and tier resets. Standing recovers only by completing guild contracts or donations."
+ },
+ "reputationEvents": [
+  {
+   "id": "contract_completed",
+   "kind": "gain",
+   "delta": 10,
+   "dailyCap": 40,
+   "text": "A guild contract handed in."
+  },
+  {
+   "id": "donation",
+   "kind": "gain",
+   "delta": 2,
+   "dailyCap": 10,
+   "text": "A donation to the guild (per 100 copper)."
+  },
+  {
+   "id": "discovery",
+   "kind": "gain",
+   "delta": 8,
+   "dailyCap": 16,
+   "text": "A discovery the guild cares about."
+  },
+  {
+   "id": "rescue",
+   "kind": "gain",
+   "delta": 15,
+   "dailyCap": 30,
+   "text": "A rescue the guild recognises."
+  },
+  {
+   "id": "fair_conduct",
+   "kind": "gain",
+   "delta": 2,
+   "dailyCap": 6,
+   "text": "Fair conduct in guild dealings."
+  },
+  {
+   "id": "abandoned_mission",
+   "kind": "loss",
+   "delta": -15,
+   "dailyCap": 45,
+   "text": "An accepted mission abandoned."
+  },
+  {
+   "id": "stole_guild_property",
+   "kind": "loss",
+   "delta": -60,
+   "dailyCap": 120,
+   "text": "Guild property stolen."
+  },
+  {
+   "id": "harmed_protected_creature",
+   "kind": "loss",
+   "delta": -40,
+   "dailyCap": 80,
+   "text": "A protected creature harmed."
+  },
+  {
+   "id": "broke_contract",
+   "kind": "loss",
+   "delta": -30,
+   "dailyCap": 60,
+   "text": "A signed contract broken."
+  },
+  {
+   "id": "betrayed_member",
+   "kind": "loss",
+   "delta": -80,
+   "dailyCap": 160,
+   "text": "A guild member betrayed."
   }
  ],
  "facilities": [
@@ -360,6 +479,7 @@
    "standing": "Controversial",
    "services": "Containment licences, relic recovery, undead investigations.",
    "usesMemberLadder": true,
+   "requiresAdventurerRank": "C",
    "ours": {
     "canon": "Restricted/controversial: containment and funeral rites only, consistent with Canon section 3 secrets staying unspoiled."
    }
@@ -406,6 +526,7 @@
    "standing": "Illegal or morally grey",
    "services": "Rumours, stealth missions, black-market intelligence.",
    "usesMemberLadder": true,
+   "unlockFlag": "guild_shadow_syndicate_found",
    "ours": {
     "teenRating": "Information and stealth work only; no real-world crime detail."
    }
@@ -419,6 +540,8 @@
    "standing": "Criminal",
    "services": "High-risk contracts, faction plots, wanted notices.",
    "usesMemberLadder": true,
+   "unlockFlag": "guild_veiled_hand_found",
+   "impliedContractsOnly": true,
    "ours": {
     "teenRating": "Contracts are political and implied, never shown as graphic; offer as faction plots and wanted notices. Needs a Canon section 6 OK before any assassination contract is playable."
    }

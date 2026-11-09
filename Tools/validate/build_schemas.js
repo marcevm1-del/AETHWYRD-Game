@@ -618,44 +618,124 @@ const SCHEMAS = {
         } } }
     } };
 }
-// --- Monster evolution lines, guilds and variations (bible v1.0 import; draft data) ---
+// --- Monster evolution lines, guilds, variations, contracts, lairs, factions, grades (bible v1.0 import) ---
 {
   const S = { type: 'string', minLength: 1 };
   const SA = { type: 'array', items: S };
+  const N = (min, max) => ({ type: 'number', minimum: min, maximum: max });
+  const I = (min, max) => ({ type: 'integer', minimum: min, maximum: max });
+  const RK = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'] };
+  const LINE = id('evl_'), GLD = id('gld_');
   SCHEMAS.evolution_lines = {
-    title: 'Monster evolution lines', type: 'object', additionalProperties: false, required: ['notes', 'stageGrammar', 'groups'],
+    title: 'Monster evolution lines', type: 'object', additionalProperties: false,
+    required: ['notes', 'stageGrammar', 'conditionKinds', 'forbiddenTriggers', 'patterns', 'specializationFamilies', 'fusionRules', 'fusions', 'groups'],
     properties: {
       notes: S, stageGrammar: { type: 'array', minItems: 9, maxItems: 9, items: S },
+      conditionKinds: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'text'], properties: { id: S, text: S } } },
+      forbiddenTriggers: { type: 'array', minItems: 1, items: S },
+      patterns: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'text'], properties: { id: S, text: S } } },
+      specializationFamilies: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'text'], properties: { id: S, text: S } } },
+      fusionRules: { type: 'object', additionalProperties: false, required: ['requiresCatalyst', 'requiresStableEnergy', 'requiresCost', 'onlyListedPairs'], properties: { requiresCatalyst: { type: 'boolean' }, requiresStableEnergy: { type: 'boolean' }, requiresCost: { type: 'boolean' }, onlyListedPairs: { type: 'boolean' } } },
+      fusions: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['a', 'b', 'result', 'note'], properties: { a: LINE, b: LINE, result: S, note: S } } },
       groups: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'order', 'name', 'bibleFamily', 'familyKeys', 'identity', 'stages', 'branches', 'variants', 'signatureAbilities', 'society'],
         properties: {
-          id: id('evl_'), order: { type: 'integer', minimum: 1, maximum: 30 }, name: S, bibleFamily: S, familyKeys: SA, identity: S,
-          stages: { type: 'array', minItems: 9, maxItems: 9, items: { type: 'object', additionalProperties: false, required: ['stage', 'label'], properties: { stage: { type: 'integer', minimum: 1, maximum: 9 }, label: S } } },
+          id: LINE, order: I(1, 30), name: S, bibleFamily: S, familyKeys: SA, identity: S,
+          stages: { type: 'array', minItems: 9, maxItems: 9, items: { type: 'object', additionalProperties: false, required: ['stage', 'label'], properties: { stage: I(1, 9), label: S } } },
           branches: { type: 'array', minItems: 1, items: S }, variants: { type: 'array', minItems: 1, items: S }, signatureAbilities: S, society: S
         } } }
     }
   };
-  SCHEMAS.guilds = {
-    title: 'Guilds and factions', type: 'object', additionalProperties: false, required: ['notes', 'reputation', 'memberLadder', 'facilities', 'rivalries', 'councilNote', 'guilds'],
+  SCHEMAS.species_lines = {
+    title: 'Species to evolution line assignments', type: 'object', additionalProperties: false, required: ['notes', 'methods', 'unassigned', 'assignments'],
     properties: {
-      notes: S, councilNote: S, facilities: SA,
+      notes: S, methods: { type: 'object', additionalProperties: I(0, 1000) }, unassigned: { type: 'array', items: id('mon_') },
+      assignments: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['speciesId', 'lineId', 'stage', 'method'],
+        properties: { speciesId: id('mon_'), lineId: LINE, stage: I(1, 9), method: { type: 'string', enum: ['name', 'keyword', 'family', 'base'] } } } }
+    }
+  };
+  SCHEMAS.guilds = {
+    title: 'Guilds and factions', type: 'object', additionalProperties: false,
+    required: ['notes', 'reputation', 'memberLadder', 'playerMaxTier', 'maxDiscountPercent', 'standings', 'reputationEvents', 'facilities', 'rivalries', 'councilNote', 'guilds'],
+    properties: {
+      notes: S, councilNote: S, facilities: SA, playerMaxTier: I(1, 8), maxDiscountPercent: I(0, 25),
+      standings: { type: 'object', additionalProperties: false, required: ['distrustedBelow', 'bannedBelow', 'note'], properties: { distrustedBelow: I(-1000, 0), bannedBelow: I(-1000, 0), note: S } },
       reputation: { type: 'object', additionalProperties: false, required: ['perGuild', 'rules'], properties: { perGuild: { type: 'boolean' }, rules: SA } },
-      memberLadder: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'tier', 'name', 'access', 'exampleRequirements'], properties: { id: id('gr_'), tier: { type: 'integer', minimum: 1 }, name: S, access: S, exampleRequirements: S } } },
-      rivalries: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['a', 'b', 'text'], properties: { a: id('gld_'), b: id('gld_'), text: S } } },
+      reputationEvents: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'kind', 'delta', 'dailyCap', 'text'], properties: { id: S, kind: { type: 'string', enum: ['gain', 'loss'] }, delta: I(-500, 500), dailyCap: I(1, 1000), text: S } } },
+      memberLadder: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false,
+        required: ['id', 'tier', 'name', 'access', 'exampleRequirements', 'reputationToReach', 'contractsToReach', 'gate', 'playerCanHold', 'discountPercent'],
+        properties: { id: id('gr_'), tier: I(1, 8), name: S, access: S, exampleRequirements: S, reputationToReach: I(0, 100000), contractsToReach: I(0, 10000), gate: { type: 'string', enum: ['none', 'test', 'appointment', 'story'] }, playerCanHold: { type: 'boolean' }, discountPercent: I(0, 25) } } },
+      rivalries: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['a', 'b', 'text'], properties: { a: GLD, b: GLD, text: S } } },
       guilds: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'order', 'name', 'purpose', 'access', 'standing', 'services', 'usesMemberLadder'],
         properties: {
-          id: id('gld_'), order: { type: 'integer', minimum: 1, maximum: 30 }, name: S, purpose: S, access: { type: 'string', enum: ['public', 'restricted', 'hidden'] },
+          id: GLD, order: I(1, 30), name: S, purpose: S, access: { type: 'string', enum: ['public', 'restricted', 'hidden'] },
           standing: S, services: S, usesMemberLadder: { type: 'boolean' },
+          requiresAdventurerRank: RK, unlockFlag: { type: 'string', pattern: '^[a-z0-9_]+$' }, impliedContractsOnly: { type: 'boolean' },
           ours: { type: 'object', additionalProperties: false, properties: { mapsTo: S, canon: S, teenRating: S } }
         } } }
     }
   };
   SCHEMAS.variations = {
-    title: 'Universal monster variations', type: 'object', additionalProperties: false, required: ['notes', 'rarityTiers', 'balanceRules', 'variations'],
+    title: 'Universal monster variations', type: 'object', additionalProperties: false, required: ['notes', 'rarityTiers', 'stacking', 'balanceRules', 'variations'],
     properties: {
       notes: S, balanceRules: SA,
-      rarityTiers: { type: 'array', minItems: 5, maxItems: 5, items: { type: 'object', additionalProperties: false, required: ['tier', 'label'], properties: { tier: { type: 'integer', minimum: 1, maximum: 5 }, label: S } } },
-      variations: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'rarityTier', 'rarityLabel', 'effect', 'subtypes'],
-        properties: { id: id('var_'), name: S, rarityTier: { type: 'integer', minimum: 1, maximum: 5 }, rarityLabel: S, effect: S, subtypes: SA, existingModifier: S } } }
+      stacking: { type: 'object', additionalProperties: false, required: ['maxVariations', 'strengthByCount', 'note'], properties: { maxVariations: I(1, 6), strengthByCount: { type: 'array', minItems: 1, items: N(0, 1) }, note: S } },
+      rarityTiers: { type: 'array', minItems: 5, maxItems: 5, items: { type: 'object', additionalProperties: false, required: ['tier', 'label'], properties: { tier: I(1, 5), label: S } } },
+      variations: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false,
+        required: ['id', 'name', 'rarityTier', 'rarityLabel', 'effect', 'subtypes', 'statMods', 'excludedLines', 'exclusiveWith', 'visualCue', 'weaknessNote', 'rankShift', 'scriptedOnly'],
+        properties: {
+          id: id('var_'), name: S, rarityTier: I(1, 5), rarityLabel: S, effect: S, subtypes: SA,
+          statMods: { type: 'object', additionalProperties: N(0.1, 3), properties: { hp: N(0.1, 3), atk: N(0.1, 3), def: N(0.1, 3), matk: N(0.1, 3), mdef: N(0.1, 3), spd: N(0.1, 3) } },
+          excludedLines: { type: 'array', items: LINE }, exclusiveWith: { type: 'array', items: id('var_') }, element: S, visualCue: S, weaknessNote: S,
+          rankShift: { type: 'integer', enum: [0] }, scriptedOnly: { type: 'boolean' }, note: S, existingModifier: S
+        } } }
+    }
+  };
+  SCHEMAS.guild_contracts = {
+    title: 'Guild contract templates and bounty rules', type: 'object', additionalProperties: false, required: ['notes', 'categories', 'rewardBands', 'rewardBandsNote', 'copperByRank', 'scaling', 'bounty', 'templates'],
+    properties: {
+      notes: S, rewardBandsNote: S,
+      categories: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'objectiveExamples', 'typicalReward'], properties: { id: id('cqc_'), name: S, objectiveExamples: S, typicalReward: S } } },
+      rewardBands: { type: 'object', additionalProperties: false, required: ['low', 'mid', 'high'], properties: { low: N(0.1, 5), mid: N(0.1, 5), high: N(0.1, 5) } },
+      copperByRank: { type: 'object', additionalProperties: I(1, 100000000) },
+      scaling: { type: 'object', additionalProperties: false, required: ['note', 'factors'], properties: { note: S, factors: SA } },
+      bounty: { type: 'object', additionalProperties: false, required: ['objectives', 'proofs', 'proofsAccepted', 'claim', 'listFields', 'targetsMayChange', 'targetChangeNote'],
+        properties: {
+          objectives: SA, proofs: SA, proofsAccepted: { type: 'object', additionalProperties: { type: 'array', items: S } },
+          claim: { type: 'object', additionalProperties: false, required: ['rule', 'minContributionShare', 'splitBy', 'escrow', 'reputationToQualifyingClaimants'], properties: { rule: S, minContributionShare: N(0, 1), splitBy: S, escrow: { type: 'boolean' }, reputationToQualifyingClaimants: { type: 'boolean' } } },
+          listFields: SA, targetsMayChange: SA, targetChangeNote: S
+        } },
+      templates: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'guildId', 'category', 'title', 'minRank', 'maxRank', 'cooldownDays', 'rewardBand', 'minTier', 'membersOnly'],
+        properties: { id: id('gct_'), guildId: GLD, category: id('cqc_'), title: S, minRank: RK, maxRank: RK, cooldownDays: I(0, 60), rewardBand: { type: 'string', enum: ['low', 'mid', 'high'] }, minTier: I(1, 7), membersOnly: { type: 'boolean' } } } }
+    }
+  };
+  SCHEMAS.lairs_and_events = {
+    title: 'Lair types, dungeon progression and world events', type: 'object', additionalProperties: false, required: ['notes', 'locationTypes', 'progression', 'worldEvents'],
+    properties: {
+      notes: S,
+      locationTypes: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'inhabitantLines', 'signatureFeatures'], properties: { id: id('lair_'), name: S, inhabitantLines: { type: 'array', minItems: 1, items: LINE }, signatureFeatures: S } } },
+      progression: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['step', 'id', 'text'], properties: { step: I(1, 12), id: S, text: S } } },
+      worldEvents: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'text', 'lines', 'requestedBy', 'scope', 'drivers'],
+        properties: { id: id('wev_'), name: S, text: S, lines: { type: 'array', minItems: 1, items: LINE }, requestedBy: { type: 'array', minItems: 1, items: GLD }, scope: { type: 'string', enum: ['region'] }, drivers: SA } } }
+    }
+  };
+  SCHEMAS.faction_relations = {
+    title: 'Player and monster-group relations', type: 'object', additionalProperties: false, required: ['notes', 'playerStates', 'groupStates', 'startingStandingPoints', 'groups', 'exampleRule'],
+    properties: {
+      notes: S, exampleRule: S,
+      playerStates: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'minPoints', 'text'], properties: { id: S, name: S, minPoints: I(-100, 100), text: S } } },
+      groupStates: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'text', 'note'], properties: { id: S, name: S, text: S, note: S } } },
+      startingStandingPoints: { type: 'object', additionalProperties: I(-100, 100) },
+      groups: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['lineId', 'defaultState', 'allyLines', 'rivalLines', 'note'],
+        properties: { lineId: LINE, defaultState: { type: 'string', enum: ['Hostile', 'Wary', 'Neutral', 'Friendly', 'Allied'] }, allyLines: { type: 'array', items: LINE }, rivalLines: { type: 'array', items: LINE }, note: S } } }
+    }
+  };
+  SCHEMAS.grade_labels = {
+    title: 'Core and harvest grade display labels', type: 'object', additionalProperties: false, required: ['notes', 'grades', 'materialCategories', 'safeguards'],
+    properties: {
+      notes: S, safeguards: SA,
+      grades: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'tier', 'name', 'itemRarity', 'quality', 'designUse'],
+        properties: { id: id('gradelabel_'), tier: I(1, 10), name: S, itemRarity: { type: 'string', enum: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'] }, quality: S, designUse: S } } },
+      materialCategories: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['name', 'examples', 'uses'], properties: { name: S, examples: S, uses: S } } }
     }
   };
 }

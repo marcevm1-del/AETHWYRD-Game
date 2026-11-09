@@ -83,6 +83,12 @@ namespace Ascend.Core
         public List<CompanionBondSave> CompanionBonds { get; set; }
         /// <summary>Chosen behaviour preset per companion: companion id to preset name (null in older saves: data defaults; Upgrade fills it).</summary>
         public Dictionary<string, string> CompanionPresets { get; set; }
+        /// <summary>Per-guild reputation, membership tier and contracts handed in (null in older saves: no memberships; Upgrade fills it).</summary>
+        public GuildsSave Guilds { get; set; }
+        /// <summary>When each guild contract template was last handed in, for cooldowns (null in older saves; Upgrade fills it).</summary>
+        public ContractsSave Contracts { get; set; }
+        /// <summary>Standing points with each monster group the player has changed (null in older saves: data defaults; Upgrade fills it).</summary>
+        public FactionSave Factions { get; set; }
     }
 
     public sealed class SiegeSave
@@ -150,6 +156,12 @@ namespace Ascend.Core
             s.Stables.PairReady ??= new Dictionary<string, double>();
             s.Stables.SpeciesSeen ??= new List<string>();
             s.Stables.Markings ??= new List<string>();
+            s.Guilds ??= new GuildsSave();
+            s.Guilds.Guilds ??= new Dictionary<string, GuildMemberSave>();
+            s.Contracts ??= new ContractsSave();
+            s.Contracts.LastDone ??= new Dictionary<string, int>();
+            s.Factions ??= new FactionSave();
+            s.Factions.Points ??= new Dictionary<string, int>();
             s.Archive ??= new ArchiveSave();
             s.Archive.Entries ??= new Dictionary<string, MapStatus>();
             s.Archive.FoundFragments ??= new List<string>();

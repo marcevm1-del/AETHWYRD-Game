@@ -173,6 +173,37 @@ const out = {
   stageGrammar: [
     'Lesser', 'Common', 'Greater', 'Advanced', 'Elite', 'Superior', 'Lord', 'King / Queen / Emperor', 'Ancient / Mythical'
   ],
+  conditionKinds: [
+    { id: 'experience', text: 'Surviving encounters, hunting, defeating rivals or completing milestones.' },
+    { id: 'age', text: 'Natural growth, life-cycle changes or long dormancy.' },
+    { id: 'mana', text: 'Absorbing magical energy, elemental power, souls or monster cores.' },
+    { id: 'environment', text: 'Prolonged exposure to volcanic, frozen, abyssal, sacred, corrupted or high-mana regions.' },
+    { id: 'materials', text: 'Consuming rare minerals, plants, cores, bloodlines or crafted catalysts.' },
+    { id: 'achievement', text: 'Protecting a territory, leading a colony or surviving a catastrophe (never defeating the player).' },
+    { id: 'awakening', text: 'Unlocking a latent bloodline, forgotten memory, ancient form or unique ability.' }
+  ],
+  // Canon 4d: monsters never grow from defeating the player. The Core evolution check refuses these triggers.
+  forbiddenTriggers: ['defeated_player', 'player_death', 'player_hp_loss'],
+  patterns: [
+    { id: 'linear', text: 'One main route, such as Goblin > Hobgoblin > Goblin King.' },
+    { id: 'branching', text: 'A creature chooses a path, such as Orc > Berserker, Shaman or Guardian.' },
+    { id: 'special', text: 'A rare condition produces an exceptional form, such as Ancient Dragon > Awakened Dragon God.' }
+  ],
+  specializationFamilies: [
+    { id: 'warrior', text: 'Direct combat, weapons, armour, physical damage.' },
+    { id: 'magical', text: 'Spellcasting, elemental powers, curses and rituals.' },
+    { id: 'assassin', text: 'Stealth, ambush, mobility, poison and precision.' },
+    { id: 'guardian', text: 'Protection, durability, barriers and support.' },
+    { id: 'leader', text: 'Command, coordination, tactics and group buffs.' }
+  ],
+  // Fusion needs a catalyst, stable energy and a meaningful cost, and only compatible lines fuse (bible section 3).
+  fusionRules: { requiresCatalyst: true, requiresStableEnergy: true, requiresCost: true, onlyListedPairs: true },
+  fusions: [
+    { a: 'evl_elementals', b: 'evl_drakes', result: 'Flame Drake', note: 'Fire Elemental + Drake' },
+    { a: 'evl_golems', b: 'evl_crystals', result: 'Crystal Golem', note: 'Stone Golem + Crystal Monster' },
+    { a: 'evl_spirits', b: 'evl_beasts', result: 'Phantom Beast', note: 'Shadow Spirit + Beast' },
+    { a: 'evl_dragons', b: 'evl_hydras', result: 'Dragon Hydra', note: 'Dragon + Hydra' }
+  ],
   groups: lines
 };
 fs.writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n');

@@ -49,6 +49,29 @@ const OURS = {
   arena: { canon: 'No new Canon conflict, but Canon 4d forbids the arena from promoting named monsters.' }
 };
 
+
+const LADDER = [[0, 0, 'none'], [10, 1, 'none'], [40, 3, 'none'], [120, 8, 'none'], [300, 15, 'test'], [600, 25, 'appointment'], [1200, 40, 'appointment'], [2500, 60, 'story']];
+const DISCOUNT = [0, 0, 2, 4, 6, 8, 10, 12];
+// kind: gain or loss. dailyCap: most reputation one guild can give per in-game day for this event (anti-farming, bible section 14).
+const REP_EVENTS = [
+  { id: 'contract_completed', kind: 'gain', delta: 10, dailyCap: 40, text: 'A guild contract handed in.' },
+  { id: 'donation', kind: 'gain', delta: 2, dailyCap: 10, text: 'A donation to the guild (per 100 copper).' },
+  { id: 'discovery', kind: 'gain', delta: 8, dailyCap: 16, text: 'A discovery the guild cares about.' },
+  { id: 'rescue', kind: 'gain', delta: 15, dailyCap: 30, text: 'A rescue the guild recognises.' },
+  { id: 'fair_conduct', kind: 'gain', delta: 2, dailyCap: 6, text: 'Fair conduct in guild dealings.' },
+  { id: 'abandoned_mission', kind: 'loss', delta: -15, dailyCap: 45, text: 'An accepted mission abandoned.' },
+  { id: 'stole_guild_property', kind: 'loss', delta: -60, dailyCap: 120, text: 'Guild property stolen.' },
+  { id: 'harmed_protected_creature', kind: 'loss', delta: -40, dailyCap: 80, text: 'A protected creature harmed.' },
+  { id: 'broke_contract', kind: 'loss', delta: -30, dailyCap: 60, text: 'A signed contract broken.' },
+  { id: 'betrayed_member', kind: 'loss', delta: -80, dailyCap: 160, text: 'A guild member betrayed.' }
+];
+// Per-guild gates for non-public guilds. requiresAdventurerRank uses the Adventurers' Guild F to SSS rank. unlockFlag is a story flag.
+const GATES = {
+  necromancers: { requiresAdventurerRank: 'C' },
+  shadow_syndicate: { unlockFlag: 'guild_shadow_syndicate_found' },
+  veiled_hand: { unlockFlag: 'guild_veiled_hand_found', impliedContractsOnly: true }
+};
+
 const RANKS = [
   ['applicant', 'Applicant', 'Public services and basic notices.', 'Registration, identity check or introductory task.'],
   ['initiate', 'Initiate', 'Training and low-risk contracts.', 'Basic test, first contribution or recommendation.'],
@@ -93,13 +116,25 @@ const guilds = {
       'A player may be respected by one guild and distrusted by another; multiple compatible memberships are allowed.'
     ]
   },
-  memberLadder: RANKS.map(([key, name, access, requirements], i) => ({ id: `gr_${key}`, tier: i + 1, name, access, exampleRequirements: requirements })),
+  // Placeholder tuning (configurable; balance by playtest). gate: none = reputation and contracts only; test = a mastery test the quest
+  // system supplies; appointment = a vote or appointment by the guild; story = a story event only. Grandmaster is never held by the
+  // player through play (Canon section 4: the player cannot own or run a guild).
+  memberLadder: RANKS.map(([key, name, access, requirements], i) => ({
+    id: `gr_${key}`, tier: i + 1, name, access, exampleRequirements: requirements,
+    reputationToReach: LADDER[i][0], contractsToReach: LADDER[i][1], gate: LADDER[i][2], playerCanHold: i < 7,
+    discountPercent: DISCOUNT[i]
+  })),
+  playerMaxTier: 7,
+  maxDiscountPercent: 12,
+  standings: { distrustedBelow: -50, bannedBelow: -150, note: 'Below distrustedBelow the guild refuses services and contracts; below bannedBelow membership is revoked and tier resets. Standing recovers only by completing guild contracts or donations.' },
+  reputationEvents: REP_EVENTS,
   facilities: FACILITIES,
   rivalries: RIVALRIES.map(([a, b, text]) => ({ a: `gld_${a}`, b: `gld_${b}`, text })),
   councilNote: 'The Free Cities Guild Council can mediate charters, monopolies, sanctions and inter-city conflicts.',
   guilds: GUILDS.map(([slug, name, purpose, access, standing, services], i) => ({
     id: `gld_${slug}`, order: i + 1, name, purpose, access, standing, services,
     usesMemberLadder: slug !== 'adventurers',
+    ...(GATES[slug] || {}),
     ...(OURS[slug] ? { ours: OURS[slug] } : {})
   }))
 };
@@ -120,10 +155,29 @@ const VARIATIONS = [
   ['ancient', 'Ancient', 4, 'Ancestral or primordial traits; forgotten abilities.', ['Primordial', 'Ancestral', 'Prehistoric', 'Forgotten'], 'Ancient'],
   ['awakened', 'Awakened', 5, 'Unlocks hidden potential, intelligence or advanced abilities.', ['Magical', 'Physical', 'Spiritual', 'Transcendental'], null]
 ];
+
+// Placeholder balance (configurable). statMods multiply the base stat; only the part above 1 is scaled by the stacking strength.
+// excludedLines: evolution-line ids a variation cannot appear on without a special lore reason. exclusiveWith: never together.
+// rankShift is always 0: a variation never changes threat rank (bible sections 5 and 6).
+const VRULES = {
+  horned: { mods: { atk: 1.15 }, excl: ['slimes', 'spirits', 'elementals', 'void', 'crystals'], ex: [], cue: 'Horns, antlers or a crown of horns.', weak: 'Slow to turn; flanking hits.' },
+  petrified: { mods: { def: 1.4, mdef: 1.2, spd: 0.8 }, excl: ['golems', 'crystals', 'elementals', 'spirits', 'void', 'slimes'], ex: ['electrified'], cue: 'Grey stone skin, cracks and moss.', weak: 'Blunt and shattering hits.' },
+  corrupted: { mods: { atk: 1.1, matk: 1.2 }, excl: ['demons'], ex: ['blessed'], element: 'Dark', cue: 'Red veins and black smoke.', weak: 'Purification; Light.', note: 'Purify for bonus loot (bestiary_lore.md).' },
+  possessed: { mods: { atk: 1.2, def: 0.9 }, excl: ['spirits', 'void'], ex: ['blessed'], cue: 'Glowing eyes and jerky motion.', weak: 'Exorcism; Light.' },
+  blessed: { mods: { hp: 1.15, mdef: 1.2 }, excl: ['demons', 'undead', 'vampires', 'void'], ex: ['cursed', 'corrupted', 'possessed'], element: 'Light', cue: 'Soft gold glow and petals.', weak: 'Dark; corruption.' },
+  cursed: { mods: { matk: 1.1, def: 0.95 }, excl: ['celestials'], ex: ['blessed'], cue: 'Dark sigils and dripping ink.', weak: 'Cleansing; Light.' },
+  frozen: { mods: { matk: 1.1, spd: 0.95 }, excl: [], ex: ['infernal'], element: 'Ice', cue: 'Frost crust and icicles.', weak: 'Fire.' },
+  infernal: { mods: { atk: 1.1, matk: 1.1 }, excl: [], ex: ['frozen'], element: 'Fire', cue: 'Glowing cracks and embers.', weak: 'Water; Ice.' },
+  electrified: { mods: { spd: 1.2, matk: 1.1 }, excl: [], ex: ['petrified'], element: 'Lightning', cue: 'Arcing sparks and standing hair.', weak: 'Earth; insulation.' },
+  shadow: { mods: { spd: 1.15, def: 0.95 }, excl: [], ex: [], element: 'Dark', cue: 'Dim, blurred outline.', weak: 'Light.' },
+  ancient: { mods: { hp: 2.0 }, excl: [], ex: [], cue: 'Moss and crystals growing on it.', weak: 'None added.', note: 'x2 HP as in bestiary_lore.md; age only, no threat rank change.' },
+  awakened: { mods: { hp: 1.2, atk: 1.2, matk: 1.2, spd: 1.1 }, excl: [], ex: [], cue: 'A calm, aware stare and a soft halo.', weak: 'None added.', scripted: true }
+};
 const RARITY = ['Common', 'Uncommon', 'Rare', 'Very rare', 'Exceptional'];
 const variations = {
   notes: 'DRAFT from the bible v1.0 section 5. 12 universal variation modifiers with five rarity tiers. A variation modifies a creature; it never creates a new species and never sets threat rank. Overlaps with the existing Variant Modifiers in 08_Bestiary/bestiary_lore.md are recorded in ours.existingModifier. Needs the Canon section 6 OK before any is spawned.',
   rarityTiers: RARITY.map((label, i) => ({ tier: i + 1, label })),
+  stacking: { maxVariations: 3, strengthByCount: [1.0, 0.6, 0.35], note: 'The 2nd and 3rd variation apply only this share of the part of each stat multiplier above 1 (and a below-1 multiplier is softened the same way).' },
   balanceRules: [
     'Each variation defines compatible groups, attribute modifiers, new abilities, weaknesses and visual cues.',
     'Tags prevent nonsensical combinations unless a lore reason exists.',
@@ -134,6 +188,9 @@ const variations = {
   ],
   variations: VARIATIONS.map(([slug, name, tier, effect, subtypes, existing]) => ({
     id: `var_${slug}`, name, rarityTier: tier, rarityLabel: RARITY[tier - 1], effect, subtypes,
+    statMods: VRULES[slug].mods, excludedLines: VRULES[slug].excl.map(x => `evl_${x}`), exclusiveWith: VRULES[slug].ex.map(x => `var_${x}`),
+    ...(VRULES[slug].element ? { element: VRULES[slug].element } : {}), visualCue: VRULES[slug].cue, weaknessNote: VRULES[slug].weak,
+    rankShift: 0, scriptedOnly: !!VRULES[slug].scripted, ...(VRULES[slug].note ? { note: VRULES[slug].note } : {}),
     ...(existing ? { existingModifier: existing } : {})
   }))
 };

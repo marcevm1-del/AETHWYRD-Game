@@ -22,6 +22,15 @@
    "label": "Exceptional"
   }
  ],
+ "stacking": {
+  "maxVariations": 3,
+  "strengthByCount": [
+   1,
+   0.6,
+   0.35
+  ],
+  "note": "The 2nd and 3rd variation apply only this share of the part of each stat multiplier above 1 (and a below-1 multiplier is softened the same way)."
+ },
  "balanceRules": [
   "Each variation defines compatible groups, attribute modifiers, new abilities, weaknesses and visual cues.",
   "Tags prevent nonsensical combinations unless a lore reason exists.",
@@ -42,7 +51,22 @@
     "Double horn",
     "Crown horns",
     "Antlers"
-   ]
+   ],
+   "statMods": {
+    "atk": 1.15
+   },
+   "excludedLines": [
+    "evl_slimes",
+    "evl_spirits",
+    "evl_elementals",
+    "evl_void",
+    "evl_crystals"
+   ],
+   "exclusiveWith": [],
+   "visualCue": "Horns, antlers or a crown of horns.",
+   "weaknessNote": "Slow to turn; flanking hits.",
+   "rankShift": 0,
+   "scriptedOnly": false
   },
   {
    "id": "var_petrified",
@@ -55,7 +79,27 @@
     "Granite",
     "Marble",
     "Obsidian"
-   ]
+   ],
+   "statMods": {
+    "def": 1.4,
+    "mdef": 1.2,
+    "spd": 0.8
+   },
+   "excludedLines": [
+    "evl_golems",
+    "evl_crystals",
+    "evl_elementals",
+    "evl_spirits",
+    "evl_void",
+    "evl_slimes"
+   ],
+   "exclusiveWith": [
+    "var_electrified"
+   ],
+   "visualCue": "Grey stone skin, cracks and moss.",
+   "weaknessNote": "Blunt and shattering hits.",
+   "rankShift": 0,
+   "scriptedOnly": false
   },
   {
    "id": "var_corrupted",
@@ -69,6 +113,22 @@
     "Plague",
     "Chaotic"
    ],
+   "statMods": {
+    "atk": 1.1,
+    "matk": 1.2
+   },
+   "excludedLines": [
+    "evl_demons"
+   ],
+   "exclusiveWith": [
+    "var_blessed"
+   ],
+   "element": "Dark",
+   "visualCue": "Red veins and black smoke.",
+   "weaknessNote": "Purification; Light.",
+   "rankShift": 0,
+   "scriptedOnly": false,
+   "note": "Purify for bonus loot (bestiary_lore.md).",
    "existingModifier": "Corrupted"
   },
   {
@@ -82,7 +142,22 @@
     "Demon",
     "Ancient soul",
     "Parasite"
-   ]
+   ],
+   "statMods": {
+    "atk": 1.2,
+    "def": 0.9
+   },
+   "excludedLines": [
+    "evl_spirits",
+    "evl_void"
+   ],
+   "exclusiveWith": [
+    "var_blessed"
+   ],
+   "visualCue": "Glowing eyes and jerky motion.",
+   "weaknessNote": "Exorcism; Light.",
+   "rankShift": 0,
+   "scriptedOnly": false
   },
   {
    "id": "var_blessed",
@@ -95,7 +170,27 @@
     "Sacred",
     "Celestial",
     "Nature-blessed"
-   ]
+   ],
+   "statMods": {
+    "hp": 1.15,
+    "mdef": 1.2
+   },
+   "excludedLines": [
+    "evl_demons",
+    "evl_undead",
+    "evl_vampires",
+    "evl_void"
+   ],
+   "exclusiveWith": [
+    "var_cursed",
+    "var_corrupted",
+    "var_possessed"
+   ],
+   "element": "Light",
+   "visualCue": "Soft gold glow and petals.",
+   "weaknessNote": "Dark; corruption.",
+   "rankShift": 0,
+   "scriptedOnly": false
   },
   {
    "id": "var_cursed",
@@ -108,7 +203,21 @@
     "Death curse",
     "Ancient curse",
     "Soul curse"
-   ]
+   ],
+   "statMods": {
+    "matk": 1.1,
+    "def": 0.95
+   },
+   "excludedLines": [
+    "evl_celestials"
+   ],
+   "exclusiveWith": [
+    "var_blessed"
+   ],
+   "visualCue": "Dark sigils and dripping ink.",
+   "weaknessNote": "Cleansing; Light.",
+   "rankShift": 0,
+   "scriptedOnly": false
   },
   {
    "id": "var_frozen",
@@ -122,6 +231,19 @@
     "Glacier",
     "Absolute zero"
    ],
+   "statMods": {
+    "matk": 1.1,
+    "spd": 0.95
+   },
+   "excludedLines": [],
+   "exclusiveWith": [
+    "var_infernal"
+   ],
+   "element": "Ice",
+   "visualCue": "Frost crust and icicles.",
+   "weaknessNote": "Fire.",
+   "rankShift": 0,
+   "scriptedOnly": false,
    "existingModifier": "Regional"
   },
   {
@@ -136,6 +258,19 @@
     "Hellfire",
     "Solar"
    ],
+   "statMods": {
+    "atk": 1.1,
+    "matk": 1.1
+   },
+   "excludedLines": [],
+   "exclusiveWith": [
+    "var_frozen"
+   ],
+   "element": "Fire",
+   "visualCue": "Glowing cracks and embers.",
+   "weaknessNote": "Water; Ice.",
+   "rankShift": 0,
+   "scriptedOnly": false,
    "existingModifier": "Regional"
   },
   {
@@ -150,6 +285,19 @@
     "Storm",
     "Plasma"
    ],
+   "statMods": {
+    "spd": 1.2,
+    "matk": 1.1
+   },
+   "excludedLines": [],
+   "exclusiveWith": [
+    "var_petrified"
+   ],
+   "element": "Lightning",
+   "visualCue": "Arcing sparks and standing hair.",
+   "weaknessNote": "Earth; insulation.",
+   "rankShift": 0,
+   "scriptedOnly": false,
    "existingModifier": "Regional"
   },
   {
@@ -163,7 +311,18 @@
     "Phantom",
     "Night",
     "Void-shadow"
-   ]
+   ],
+   "statMods": {
+    "spd": 1.15,
+    "def": 0.95
+   },
+   "excludedLines": [],
+   "exclusiveWith": [],
+   "element": "Dark",
+   "visualCue": "Dim, blurred outline.",
+   "weaknessNote": "Light.",
+   "rankShift": 0,
+   "scriptedOnly": false
   },
   {
    "id": "var_ancient",
@@ -177,6 +336,16 @@
     "Prehistoric",
     "Forgotten"
    ],
+   "statMods": {
+    "hp": 2
+   },
+   "excludedLines": [],
+   "exclusiveWith": [],
+   "visualCue": "Moss and crystals growing on it.",
+   "weaknessNote": "None added.",
+   "rankShift": 0,
+   "scriptedOnly": false,
+   "note": "x2 HP as in bestiary_lore.md; age only, no threat rank change.",
    "existingModifier": "Ancient"
   },
   {
@@ -190,7 +359,19 @@
     "Physical",
     "Spiritual",
     "Transcendental"
-   ]
+   ],
+   "statMods": {
+    "hp": 1.2,
+    "atk": 1.2,
+    "matk": 1.2,
+    "spd": 1.1
+   },
+   "excludedLines": [],
+   "exclusiveWith": [],
+   "visualCue": "A calm, aware stare and a soft halo.",
+   "weaknessNote": "None added.",
+   "rankShift": 0,
+   "scriptedOnly": true
   }
  ]
 }

@@ -1,0 +1,105 @@
+{
+ "notes": "DRAFT from the bible v1.0 section 10. Core and harvest grades are DISPLAY LABELS over the existing item rarity (Common, Uncommon, Rare, Epic, Legendary) and the F to EX core price curve in 09_Equipment/monster_core_pricing.md. They add no second economy and no new prices (Canon proposal M5).",
+ "grades": [
+  {
+   "id": "gradelabel_cracked",
+   "tier": 1,
+   "name": "Cracked",
+   "itemRarity": "Common",
+   "quality": "Damaged or unstable",
+   "designUse": "Basic crafting or low-value sale."
+  },
+  {
+   "id": "gradelabel_common",
+   "tier": 2,
+   "name": "Common",
+   "itemRarity": "Common",
+   "quality": "Standard core or material",
+   "designUse": "Everyday recipes."
+  },
+  {
+   "id": "gradelabel_refined",
+   "tier": 3,
+   "name": "Refined",
+   "itemRarity": "Uncommon",
+   "quality": "Clean, high-quality harvest",
+   "designUse": "Improved gear and potions."
+  },
+  {
+   "id": "gradelabel_rare",
+   "tier": 4,
+   "name": "Rare",
+   "itemRarity": "Rare",
+   "quality": "Unusual properties or strong energy",
+   "designUse": "Specialist recipes and upgrades."
+  },
+  {
+   "id": "gradelabel_epic",
+   "tier": 5,
+   "name": "Epic",
+   "itemRarity": "Epic",
+   "quality": "Powerful, difficult-to-obtain material",
+   "designUse": "High-tier equipment and enchantments."
+  },
+  {
+   "id": "gradelabel_legendary",
+   "tier": 6,
+   "name": "Legendary",
+   "itemRarity": "Legendary",
+   "quality": "Unique properties or boss origin",
+   "designUse": "Named gear, major upgrades."
+  },
+  {
+   "id": "gradelabel_mythic",
+   "tier": 7,
+   "name": "Mythic",
+   "itemRarity": "Legendary",
+   "quality": "Primordial or world-scale source",
+   "designUse": "Endgame crafting and story-critical items."
+  }
+ ],
+ "materialCategories": [
+  {
+   "name": "Monster cores",
+   "examples": "Mana core, elemental core, corrupted core, ancient core.",
+   "uses": "Spell fuel, evolution catalysts, crafting, research."
+  },
+  {
+   "name": "Body parts",
+   "examples": "Horns, scales, claws, fangs, hides, wings, shells.",
+   "uses": "Weapons, armour, tools, trophies."
+  },
+  {
+   "name": "Liquids",
+   "examples": "Blood, venom, slime, ichor, gland extract.",
+   "uses": "Potions, poisons, alchemy, enchantments."
+  },
+  {
+   "name": "Minerals",
+   "examples": "Crystal shards, obsidian plates, golem fragments.",
+   "uses": "Jewellery, cores, runes, constructs."
+  },
+  {
+   "name": "Organic materials",
+   "examples": "Spores, herbs, roots, silk, chitin.",
+   "uses": "Medicine, food, textiles, alchemy."
+  },
+  {
+   "name": "Spiritual materials",
+   "examples": "Soul essence, ectoplasm, wraith residue.",
+   "uses": "Wards, spirit items, exorcism tools."
+  },
+  {
+   "name": "Relics",
+   "examples": "Runed bones, ancient tablets, scale fragments.",
+   "uses": "Research, quests, legendary crafting."
+  }
+ ],
+ "safeguards": [
+  "Use regional supply and demand so materials are not equally valuable everywhere.",
+  "Limit farming through spawn ecology, cooldowns, migration, lair depletion or harvest limits.",
+  "Make rare drops useful across several systems; no single material is mandatory for all builds.",
+  "Use guild commissions and trade contracts to create stable demand.",
+  "Track item provenance for unique boss drops, stolen relics and faction-owned resources."
+ ]
+}

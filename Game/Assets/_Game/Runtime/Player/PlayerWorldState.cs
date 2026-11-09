@@ -47,6 +47,7 @@ namespace Ascend.Game
         LifeSkills _lifeSkills;
         Home _home;
         CivilizationArchive _archive;
+        GuildStanding _guilds; GuildContractBoard _guildContracts; FactionStanding _factions;
         readonly Dictionary<string, DungeonKnowledge> _dungeons = new Dictionary<string, DungeonKnowledge>();
         Labyrinth _labyrinth;
         LabyrinthKnowledge _labKnowledge;
@@ -85,6 +86,14 @@ namespace Ascend.Game
             Guard("life skills", () => _lifeSkills = new LifeSkills(_db.LifeSkills));
             Guard("home", () => _home = new Home(_db.Housing, _db.Crops, _db.Quality, _lifeSkills));
             Guard("archive", () => _archive = new CivilizationArchive(_db.Archive));
+            Guard("guilds", () =>
+            {
+                var gf = AscendData.GuildFile;
+                if (gf == null) return;
+                _guilds = new GuildStanding(gf);
+                _guildContracts = new GuildContractBoard(AscendData.GuildContracts, _guilds);
+            });
+            Guard("factions", () => { var ff = AscendData.Factions; if (ff != null) _factions = new FactionStanding(ff); });
             Guard("dungeons", () => { foreach (var d in _db.Dungeons.Values) _dungeons[d.Id] = new DungeonKnowledge(d); });
             Guard("labyrinth", () =>
             {
@@ -122,6 +131,11 @@ namespace Ascend.Game
         public LifeSkills LifeSkills { get { Build(); return _lifeSkills; } }
         public Home Home { get { Build(); return _home; } }
         public CivilizationArchive Archive { get { Build(); return _archive; } }
+        /// <summary>Per-guild reputation and membership (null when guilds.json is missing).</summary>
+        public GuildStanding Guilds { get { Build(); return _guilds; } }
+        public GuildContractBoard GuildContracts { get { Build(); return _guildContracts; } }
+        /// <summary>The player's standing with each monster group (null when faction_relations.json is missing).</summary>
+        public FactionStanding Factions { get { Build(); return _factions; } }
         public IReadOnlyDictionary<string, DungeonKnowledge> Dungeons { get { Build(); return _dungeons; } }
         public Labyrinth Labyrinth { get { Build(); return _labyrinth; } }
         public LabyrinthKnowledge LabyrinthKnowledge { get { Build(); return _labKnowledge; } }
@@ -287,6 +301,9 @@ namespace Ascend.Game
             var stables = Stables;
             s.Stables = stables != null ? stables.Save() : (_pendingStables ?? new StablesSave());
             s.Archive = _archive != null ? _archive.Save() : new ArchiveSave();
+            s.Guilds = _guilds != null ? _guilds.Save() : new GuildsSave();
+            s.Contracts = _guildContracts != null ? _guildContracts.Save() : new ContractsSave();
+            s.Factions = _factions != null ? _factions.Save() : new FactionSave();
             s.Dungeons = new DungeonSave { Dungeons = _dungeons.ToDictionary(kv => kv.Key, kv => kv.Value.Save()) };
             s.Labyrinth = _labKnowledge != null ? _labKnowledge.Save() : new LabyrinthSave();
             s.LivingWorld = new LivingWorldSave
@@ -329,6 +346,7 @@ namespace Ascend.Game
                 else { _ = Gear; }
             });
             Guard("archive load", () => { _archive?.Reset(); _archive?.Load(s.Archive); });
+            Guard("guilds load", () => { _guilds?.Load(s.Guilds); _guildContracts?.Load(s.Contracts); _factions?.Load(s.Factions); });
             Guard("dungeons load", () =>
             {
                 foreach (var k in _dungeons.Values) k.Reset();

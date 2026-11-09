@@ -425,27 +425,91 @@ const SINGLETONS = {
   civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' },
   evolution_lines: { file: 'Monsters/evolution_lines.json', schema: 'evolution_lines' },
   guilds: { file: 'World/guilds.json', schema: 'guilds' },
-  variations: { file: 'Monsters/variations.json', schema: 'variations' }
+  variations: { file: 'Monsters/variations.json', schema: 'variations' },
+  species_lines: { file: 'Monsters/species_lines.json', schema: 'species_lines' },
+  guild_contracts: { file: 'Quests/guild_contracts.json', schema: 'guild_contracts' },
+  lairs_and_events: { file: 'World/lairs_and_events.json', schema: 'lairs_and_events' },
+  faction_relations: { file: 'World/faction_relations.json', schema: 'faction_relations' },
+  grade_labels: { file: 'Items/grade_labels.json', schema: 'grade_labels' }
 };
 
-// Bible v1.0 import cross-checks (evolution lines, guilds, variations).
+// Bible v1.0 import cross-checks (evolution lines, species lines, guilds, variations, contracts, lairs, factions).
 {
-  const sp = load('Monsters/species.json'); const fams = new Set(sp.map(s => s.familyKey));
-  if (fs.existsSync(path.join(DATA, 'Monsters/evolution_lines.json'))) {
-    const el = load('Monsters/evolution_lines.json'); const seen = new Set();
+  const ex = f => fs.existsSync(path.join(DATA, f));
+  if (ex('Monsters/species.json') && ex('Monsters/evolution_lines.json')) {
+    const sp = load('Monsters/species.json'); const fams = new Set(sp.map(s => s.familyKey)); const spIds = new Set(sp.map(s => s.id));
+    const el = load('Monsters/evolution_lines.json'); const lineIds = new Set(); const stageCount = {};
     for (const g of el.groups) {
-      if (seen.has(g.id)) err(g.id, 'duplicate group id'); seen.add(g.id);
+      if (lineIds.has(g.id)) err(g.id, 'duplicate group id'); lineIds.add(g.id);
       g.stages.forEach((st, i) => { if (st.stage !== i + 1) err(g.id, `stages must run 1..9 in order (index ${i})`); });
       for (const k of g.familyKeys) if (!fams.has(k)) err(g.id, `familyKey "${k}" is not in species.json`);
     }
     if (el.groups.length !== 30) err('evolution_lines.json', `expected 30 groups, got ${el.groups.length}`);
-  }
-  if (fs.existsSync(path.join(DATA, 'World/guilds.json'))) {
-    const gd = load('World/guilds.json'); const ids = new Set(gd.guilds.map(g => g.id));
-    if (ids.size !== gd.guilds.length) err('guilds.json', 'duplicate guild id');
-    if (gd.guilds.length !== 30) err('guilds.json', `expected 30 guilds, got ${gd.guilds.length}`);
-    for (const r of gd.rivalries) for (const k of [r.a, r.b]) if (!ids.has(k)) err('guilds.json', `rivalry names unknown guild ${k}`);
-    gd.memberLadder.forEach((m, i) => { if (m.tier !== i + 1) err('guilds.json', 'memberLadder tiers must rise 1..n'); });
+    for (const f of el.fusions || []) for (const k of [f.a, f.b]) if (!lineIds.has(k)) err('evolution_lines.json', `fusion names unknown line ${k}`);
+    const guildIds = ex('World/guilds.json') ? new Set(load('World/guilds.json').guilds.map(g => g.id)) : new Set();
+    if (ex('Monsters/species_lines.json')) {
+      const sl = load('Monsters/species_lines.json'); const seen = new Set();
+      for (const a of sl.assignments) {
+        if (!spIds.has(a.speciesId)) err('species_lines.json', `unknown species ${a.speciesId}`);
+        if (!lineIds.has(a.lineId)) err('species_lines.json', `unknown line ${a.lineId}`);
+        if (seen.has(a.speciesId)) err('species_lines.json', `species ${a.speciesId} assigned twice`); seen.add(a.speciesId);
+      }
+      for (const u of sl.unassigned) { if (!spIds.has(u)) err('species_lines.json', `unassigned names unknown species ${u}`); if (seen.has(u)) err('species_lines.json', `${u} both assigned and unassigned`); }
+      if (seen.size + sl.unassigned.length !== sp.length) err('species_lines.json', `assigned ${seen.size} + unassigned ${sl.unassigned.length} must equal ${sp.length} species`);
+    }
+    if (ex('Monsters/variations.json')) {
+      const va = load('Monsters/variations.json'); const vids = new Set(va.variations.map(x => x.id));
+      if (va.variations.length !== 12) err('variations.json', `expected 12 variations, got ${va.variations.length}`);
+      for (const x of va.variations) {
+        for (const l of x.excludedLines) if (!lineIds.has(l)) err(x.id, `excludedLines names unknown line ${l}`);
+        for (const o of x.exclusiveWith) { if (!vids.has(o)) err(x.id, `exclusiveWith unknown ${o}`); else if (!va.variations.find(y => y.id === o).exclusiveWith.includes(x.id)) err(x.id, `exclusiveWith ${o} is not mutual`); }
+      }
+      const sb = va.stacking.strengthByCount; if (sb.length < va.stacking.maxVariations) err('variations.json', 'strengthByCount needs one entry per allowed variation');
+      for (let i = 1; i < sb.length; i++) if (sb[i] > sb[i - 1]) err('variations.json', 'stacking strength must not rise');
+    }
+    if (ex('World/guilds.json')) {
+      const gd = load('World/guilds.json'); const ids = new Set(gd.guilds.map(g => g.id));
+      if (ids.size !== gd.guilds.length) err('guilds.json', 'duplicate guild id');
+      if (gd.guilds.length !== 30) err('guilds.json', `expected 30 guilds, got ${gd.guilds.length}`);
+      for (const r of gd.rivalries) for (const k of [r.a, r.b]) if (!ids.has(k)) err('guilds.json', `rivalry names unknown guild ${k}`);
+      const L = gd.memberLadder; L.forEach((m, i) => {
+        if (m.tier !== i + 1) err('guilds.json', 'memberLadder tiers must rise 1..n');
+        if (i && (m.reputationToReach <= L[i - 1].reputationToReach || m.contractsToReach < L[i - 1].contractsToReach)) err('guilds.json', `ladder tier ${m.tier} must need more reputation and no fewer contracts`);
+        if (m.discountPercent > gd.maxDiscountPercent) err('guilds.json', `tier ${m.tier} discount exceeds maxDiscountPercent`);
+        if (m.tier > gd.playerMaxTier && m.playerCanHold) err('guilds.json', `tier ${m.tier} is above playerMaxTier but playerCanHold`);
+        if (m.tier <= gd.playerMaxTier && !m.playerCanHold) err('guilds.json', `tier ${m.tier} is within playerMaxTier but not playerCanHold`);
+      });
+      if (L[L.length - 1].gate !== 'story' || L[L.length - 1].playerCanHold) err('guilds.json', 'the top tier must be story-gated and not held by the player (Canon section 4)');
+      if (gd.standings.bannedBelow >= gd.standings.distrustedBelow) err('guilds.json', 'bannedBelow must be lower than distrustedBelow');
+      if (ex('Quests/guild_contracts.json')) {
+        const gc = load('Quests/guild_contracts.json'); const cats = new Set(gc.categories.map(c => c.id)); const tids = new Set();
+        const order = gc.copperByRank ? Object.keys(gc.copperByRank) : []; if (order.join() !== 'F,E,D,C,B,A,S,SS,SSS') err('guild_contracts.json', 'copperByRank must list F..SSS in order');
+        for (const t of gc.templates) {
+          if (tids.has(t.id)) err(t.id, 'duplicate template id'); tids.add(t.id);
+          if (!ids.has(t.guildId)) err(t.id, `unknown guild ${t.guildId}`); if (!cats.has(t.category)) err(t.id, `unknown category ${t.category}`);
+          if (order.indexOf(t.minRank) > order.indexOf(t.maxRank)) err(t.id, 'minRank above maxRank');
+          if (t.cooldownDays < 1) err(t.id, 'every template needs a cooldown of at least 1 day (no infinite loops)');
+        }
+        const adv = gd.guilds.find(g => !g.usesMemberLadder);
+        for (const g of gd.guilds) if (g !== adv && !gc.templates.some(t => t.guildId === g.id)) err(g.id, 'guild has no contract template');
+        for (const [obj, accepted] of Object.entries(gc.bounty.proofsAccepted)) { if (!gc.bounty.objectives.includes(obj)) err('guild_contracts.json', `proofsAccepted names unknown objective ${obj}`); for (const pr of accepted) if (!gc.bounty.proofs.includes(pr)) err('guild_contracts.json', `unknown proof ${pr}`); }
+      }
+      if (ex('World/lairs_and_events.json')) {
+        const le = load('World/lairs_and_events.json');
+        for (const l of le.locationTypes) for (const k of l.inhabitantLines) if (!lineIds.has(k)) err(l.id, `unknown line ${k}`);
+        for (const e of le.worldEvents) { for (const k of e.lines) if (!lineIds.has(k)) err(e.id, `unknown line ${k}`); for (const k of e.requestedBy) if (!ids.has(k)) err(e.id, `unknown guild ${k}`); }
+      }
+    }
+    if (ex('World/faction_relations.json')) {
+      const fr = load('World/faction_relations.json'); const names = new Set(fr.playerStates.map(s => s.name)); const seenL = new Set();
+      for (const g of fr.groups) {
+        if (!lineIds.has(g.lineId)) err('faction_relations.json', `unknown line ${g.lineId}`); if (seenL.has(g.lineId)) err('faction_relations.json', `${g.lineId} listed twice`); seenL.add(g.lineId);
+        if (!names.has(g.defaultState)) err(g.lineId, `defaultState ${g.defaultState} is not a player state`);
+        for (const k of g.allyLines.concat(g.rivalLines)) if (!lineIds.has(k)) err(g.lineId, `unknown line ${k}`);
+        if (g.allyLines.some(k => g.rivalLines.includes(k))) err(g.lineId, 'a line cannot be both ally and rival');
+      }
+      const pts = fr.playerStates.map(s => s.minPoints); for (let i = 1; i < pts.length; i++) if (pts[i] <= pts[i - 1]) err('faction_relations.json', 'playerStates minPoints must rise');
+    }
   }
 }
 for (const [name, c] of Object.entries(SINGLETONS)) {
