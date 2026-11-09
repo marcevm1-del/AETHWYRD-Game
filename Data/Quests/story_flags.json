@@ -63,5 +63,25 @@
   "id": "first_rune_struck",
   "description": "The player struck their first pair of runes at Torvald's rune anvil",
   "setBy": "quest"
+ },
+ {
+  "id": "warren_lower_level_mapped",
+  "description": "The guild map shows a safe way to the Salvage Warren's lower level",
+  "setBy": "quest"
+ },
+ {
+  "id": "warren_beetle_felled",
+  "description": "The Armor Beetle of the Salvage Warren's vault has been felled",
+  "setBy": "quest"
+ },
+ {
+  "id": "warren_cistern_found",
+  "description": "The player found the Rune Cistern behind the Warren's secret seam",
+  "setBy": "quest"
+ },
+ {
+  "id": "warren_salvage_settled",
+  "description": "The guild has ruled on the Salvage Warren's lost-gear salvage",
+  "setBy": "quest"
  }
 ]

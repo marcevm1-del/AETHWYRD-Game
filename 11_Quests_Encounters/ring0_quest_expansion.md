@@ -18,3 +18,17 @@ A crafted item is asked for with a `collect` objective that has no `from`: the j
 | `qst_comp_two_on_the_road` Two on the Road | Mina | 4 forest wolves, 1 boar, `partySize` "2" | companions (party of two, the F-rank party size) | |
 
 Decisions (the user may overrule): farming and mount quests were left out because the first home plot arrives at C rank and no Ring 0 mount item exists; the Civilization Archive is never a quest gate (Canon), so no quest reads it.
+
+## 2. The Salvage Warren chain (job 2)
+
+Place: `dng_salvage_warren` (`Data/World/dungeons.json`, Great Labyrinth floors 3-4, rank E, reusable). Five quests in `reg_labyrinth_upper`, in order. All use existing NPCs and species; `reach` targets are the dungeon and room ids so the Unity side can fire them on entry.
+
+| # | Quest | Giver | Objectives | Sets flag |
+|---|---|---|---|---|
+| 1 | `qst_dng_warren_tally` The Tally of the Lost | Wendel | reach the Warren, 4 Kobold Scavengers, 3 stolen trinkets (drop from scavengers) | |
+| 2 | `qst_dng_warren_weighing` Weigh the Way Down | Garrick | Kobold Trapmaster, reach Lower Landing, choice: rusted key or chalk lift | `warren_lower_level_mapped` |
+| 3 | `qst_dng_warren_beetle` The Beetle Vault | Rodrick | Armor Beetle (the boss slot), 2 carapace shards | `warren_beetle_felled` |
+| 4 | `qst_dng_warren_cistern` The Runesmiths' Game (Hidden) | Torvald | reach the Rune Cistern (secret room), choice: open the lock or leave it | `warren_cistern_found` |
+| 5 | `qst_dng_warren_accord` The Tally-Keepers' Accord | Wendel | 3 Kobold Miners, choice: buy back, take a share, or seal | `warren_salvage_settled` |
+
+Rules held (`12_Systems/dungeons_and_puzzles.md`): no quest requires solving a puzzle or holding a puzzle reward (the cistern quest asks for the visit and a choice, not the lock); the key way and the lever way are both honoured in quest 2; kobolds are never allies (`coreIsAlly` false), so quest 5 offers a ruling, not a recruit; the boss is the plain Armor Beetle with no added hierarchy. Because the halls reset weekly, the repeatable run is on the weekly board (section 4).

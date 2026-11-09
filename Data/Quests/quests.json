@@ -845,5 +845,212 @@
    ],
    "act": 1
   }
+ },
+ {
+  "id": "qst_dng_warren_tally",
+  "title": "The Tally of the Lost",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_labyrinth_upper",
+  "summary": "Wendel keeps a ledger of gear adventurers lose in the Great Labyrinth, and every missing page points at the Salvage Warren under floors three and four. Go down to the Chalk Landing, thin out the scavengers, and bring back three trinkets he can match to the ledger.",
+  "requirements": {
+   "minLevel": 14,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "dng_salvage_warren"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_kobold_scavenger",
+    "count": 4
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_stolen_trinket",
+    "count": 3,
+    "from": "mon_kobold_scavenger"
+   }
+  ],
+  "rewards": {
+   "gold": 220,
+   "gp": 18,
+   "xp": 700,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "rank": "E"
+  }
+ },
+ {
+  "id": "qst_dng_warren_weighing",
+  "title": "Weigh the Way Down",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_examiner_garrick",
+  "region": "reg_labyrinth_upper",
+  "summary": "Garrick wants a safe way to the Warren's lower level written into the guild map. The rusted tally door needs the key from the Weighing Gallery; the old lift needs the chalk lever order. Take either, clear the Trapmaster, and tell him which you trusted. Both are fine, and nothing is lost by a wrong pull.",
+  "requirements": {
+   "minLevel": 15,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_kobold_trapmaster",
+    "count": 1
+   },
+   {
+    "kind": "reach",
+    "target": "rm_lower_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "rusted_key_or_chalk_lift"
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 800,
+   "items": [
+    "itm_fire_bomb"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dng_warren_tally"
+   ],
+   "rank": "E"
+  },
+  "setsFlags": [
+   "warren_lower_level_mapped"
+  ]
+ },
+ {
+  "id": "qst_dng_warren_beetle",
+  "title": "The Beetle Vault",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_rodrick_hale",
+  "region": "reg_labyrinth_upper",
+  "summary": "An Armor Beetle has made the Warren's vault its nest and sits on the lost-and-found of ten years of adventurers. Rodrick will not send anyone under E rank. Fell it, bring two carapace shards as proof, and take the chute home.",
+  "requirements": {
+   "minLevel": 16,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_armor_beetle",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_carapace_shard",
+    "count": 2,
+    "from": "mon_armor_beetle"
+   }
+  ],
+  "rewards": {
+   "gold": 380,
+   "gp": 28,
+   "xp": 1100,
+   "items": [
+    "itm_carapace_cap"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dng_warren_weighing"
+   ],
+   "rank": "E"
+  },
+  "setsFlags": [
+   "warren_beetle_felled"
+  ]
+ },
+ {
+  "id": "qst_dng_warren_cistern",
+  "title": "The Runesmiths' Game",
+  "rank": "E",
+  "type": "Hidden",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_labyrinth_upper",
+  "summary": "Torvald hears that a seam behind the broken lamp-post on the Warren's lower level hides a rune-lock that was a children's game before it was a lock. Find the draught, read the mural, and tell him how the sconces turn. The lock itself is optional; the visit is the quest.",
+  "requirements": {
+   "minLevel": 16
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "rm_rune_cistern"
+   },
+   {
+    "kind": "choice",
+    "target": "open_the_lock_or_leave_it_be"
+   }
+  ],
+  "rewards": {
+   "gold": 150,
+   "gp": 12,
+   "xp": 600,
+   "items": [
+    "itm_rune_gale"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_craft_first_glyph",
+    "qst_dng_warren_weighing"
+   ]
+  },
+  "setsFlags": [
+   "warren_cistern_found"
+  ]
+ },
+ {
+  "id": "qst_dng_warren_accord",
+  "title": "The Tally-Keepers' Accord",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_labyrinth_upper",
+  "summary": "With the vault quiet, the kobolds stack their salvage again, and Wendel needs a ruling: sell back what is clearly an adventurer's, take a share for the guild, or seal the lower level. The dungeon-born kobolds are not allies and will not follow you, but they keep honest tally.",
+  "requirements": {
+   "minLevel": 17
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_kobold_miner",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "buy_back_share_or_seal"
+   }
+  ],
+  "rewards": {
+   "gold": 300,
+   "gp": 22,
+   "xp": 900
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dng_warren_beetle"
+   ]
+  },
+  "setsFlags": [
+   "warren_salvage_settled"
+  ]
  }
 ]
