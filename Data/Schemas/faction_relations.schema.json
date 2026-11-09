@@ -6,7 +6,6 @@
  "required": [
   "notes",
   "playerStates",
-  "groupStates",
   "startingStandingPoints",
   "groups",
   "exampleRule"
@@ -47,37 +46,6 @@
       "maximum": 100
      },
      "text": {
-      "type": "string",
-      "minLength": 1
-     }
-    }
-   }
-  },
-  "groupStates": {
-   "type": "array",
-   "items": {
-    "type": "object",
-    "additionalProperties": false,
-    "required": [
-     "id",
-     "name",
-     "text",
-     "note"
-    ],
-    "properties": {
-     "id": {
-      "type": "string",
-      "minLength": 1
-     },
-     "name": {
-      "type": "string",
-      "minLength": 1
-     },
-     "text": {
-      "type": "string",
-      "minLength": 1
-     },
-     "note": {
       "type": "string",
       "minLength": 1
      }

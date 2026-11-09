@@ -1,7 +1,7 @@
 # Monster Classification & Guild System bible: integration assessment (2026-11-09)
 
 **Source:** `Monster Classification & Guild System, a fantasy game design bible, v1.0`, a 35-page PDF the user supplied (30 monster groups, 9 evolution stages, 12 variations, F to EX threat, societies, 30 guilds, quests, economy, dungeons, factions, a data model and a final-page Claude prompt).
-**Status:** DRAFT. Canon wins, so everything here is additive data plus proposals. No locked Canon row was edited and nothing is wired into Unity or the Core rules yet.
+**Status (2026-11-09, updated):** M1 to M6 approved by the user ("Yes all more not less"). Data, Core rules (with tests), save fields and Unity data wiring are built; UI is specified in `12_Systems/monster_lines_and_guilds.md` and not built. No locked Canon row was edited. Canon wins; the audit below was re-checked by the canon-keeper and its wording and naming fixes are applied.
 
 The PDF's own prompt says to inspect the repository first, report conflicts and propose the least disruptive integration. This is that report.
 
@@ -53,7 +53,7 @@ Counts are species in `species.json` whose `familyKey` is mapped. A family can s
 | 29 | Hybrids | chimera, minotaur, centaur | 35 |
 | 30 | Cosmic and Void | aberration, headless | 18 |
 
-**Game families with no bible group:** kobold (24), floorborn (12), sandborne (10), humanoid_enemy (22). They stay as they are. **Bible group with no game species:** Fallen and Celestial. Do not add celestial species until proposal M1 is answered.
+**Game families with no bible group:** kobold (24), floorborn (12), sandborne (10), humanoid_enemy (22). They stay as they are. **Bible group with no game species:** Fallen and Celestial. Two existing Vesperite seraph species (Crimson Choir Seraph and its variant) are placed there; no new celestial species are added without your say.
 
 ## 4. Conflicts with Canon and project rules (nothing applied)
 | # | Conflict | Least disruptive reading |
@@ -76,14 +76,23 @@ Counts are species in `species.json` whose `familyKey` is mapped. A family can s
 | M5 | Treat core and harvest grades (Cracked to Mythic) as a **display label** over the existing item rarity and core price curve, not a new economy |
 | M6 | Hidden guilds (Shadow Syndicate, Veiled Hand) are story content only, implied contracts, behind a Canon OK |
 
-## 6. Remaining work (backlog, in implementation order)
-1. **Assign species to lines.** Add optional `lineId` and `lineStage` to 680 species (script by name match first, hand review for the rest). Needs M1.
-2. **Variation rules in Core.** Compatibility tags, stacking and a "Threat is not inferred from stage" test in `Code/Ascend.Core`. Needs M2. The rules tests cannot run in this cloud container (no .NET SDK), so run `node Tools/run_tests.js` on the PC.
-3. **Guild membership.** Per-guild reputation save slot (a new field must default safely so old saves load), guild hall tabs in the HUD, service tables. Needs M3.
-4. **Quest templates per guild** and bounty claim rules, then dungeon-location tags.
-5. **Review wave:** canon-keeper on the Canon rows, bestiary-designer on lines versus species, anime-fantasy-director on the new guild identities.
+## 6. Remaining work
+1. **Stage review.** 612 species are placed; the stage for 277 of them is a rank-based guess (bestiary-designer to review). Nothing in code reads stage as rank.
+2. **UI** for the guild hall, contract board, bounty detail, bestiary additions, standing page and grade labels (spec in `12_Systems/monster_lines_and_guilds.md`; needs Unity).
+3. **Quest wiring and writing:** guild contracts into the quest log and weekly board, discovery quests for the two hidden guilds, per-guild quest text, guild NPCs and places (quest-designer, narrative-writer, world-designer).
+4. **Rewards:** `copperByRank` (F 50 to C 3,000) was set near the existing `gold` rewards in quests.json (F 40 to 60, a C bounty 4,500); confirm that field is copper and tune.
+5. **Unity compile and PlayMode** of the `AscendData` and `PlayerWorldState` additions on the PC.
+6. **IP review** of the species labels before release (see the renames below).
+
+### Canon audit fixes applied (2026-11-09)
+- Branch role words Captain, General and Commander became "Elder line" species forms; the `leader` family is a combat-role tag with no command chain; "leading a colony" became "guarding a colony".
+- "Adventurers' Consortium" is now **Adventurers' Guild**; the merchants guild is the existing **Merchants' Consortium** of Port Goldmere; the Shadow Syndicate is the existing faction. Officer and Master text is honorary (the player runs no guild).
+- Group states "Subjugated" and "At war" and the "Orc Empire" example were removed (M4).
+- Possible third-party names renamed: Metal Slime to Ore Slime, Healing Slime to Mending Slime, King Slime to Crowned Slime, Night Goblin to Gloam Goblin, Grand Marshal to High Knight, Soul Reaper to Soul Gleaner, Cave Troll to Cavern Troll.
+- Raw purpose text softened for the teen rating (Bounty Registry, Veiled Hand).
 
 ## 7. Checks that ran (2026-11-09, cloud)
-- `node Tools/bestiary/build_evolution_lines.js` and `build_guilds.js`: 30 groups, 270 stage rows, 178 branches, 30 guilds, 8 ladder tiers, 12 variations. The evolution file was regenerated and compared byte-for-byte (identical).
-- `node Tools/validate/build_schemas.js` then `node Tools/validate/validate.js`: **Data valid** (regions 49, species 680, population 6754 and the rest unchanged); the 28 existing map warnings are unchanged and unrelated.
-- `npm run build` reaches the rules tests and stops there: **"No .NET SDK found"**, so the C# rules tests did not run in this session. Unity was not run.
+- Generators rerun; the data is identical on a rerun.
+- `node Tools/validate/validate.js`: **Data valid**; the 28 existing map warnings are unchanged. Negative tests confirmed the new cross-checks catch five injected faults.
+- `node Tools/run_tests.js` with a .NET 8 SDK installed in the cloud scratch area: **776 tests passed** (746 before this work, 30 new). A code-reviewer pass found no blocking bugs; its five issues are fixed with a test.
+- Unity was not compiled or run.

@@ -1,5 +1,5 @@
 {
- "notes": "DRAFT from the bible v1.0 section 12. Relations between the PLAYER and each monster group, tracked separately per group. The group-to-group table is flavour for event and quest writers only: it drives no hierarchy and no autonomous faction war (Canon 4d). Standing moves only through quests, flags and the player's own actions, never because the player was defeated.",
+ "notes": "DRAFT from the bible v1.0 section 12. Relations between the PLAYER and each monster group, tracked separately per group. The group-to-group table is flavour for event and quest writers only: it drives no hierarchy and no autonomous faction war (Canon 4d). The bible Subjugated and At-war group states are not imported (Canon 4d, proposal M4). Standing moves only through quests, flags and the player's own actions, never because the player was defeated.",
  "playerStates": [
   {
    "id": "hostile",
@@ -30,20 +30,6 @@
    "name": "Allied",
    "minPoints": 80,
    "text": "Shares resources, missions and coordinated support."
-  }
- ],
- "groupStates": [
-  {
-   "id": "subjugated",
-   "name": "Subjugated",
-   "text": "Obeys a stronger ruler or force, willingly or otherwise.",
-   "note": "Group-to-group only; shown in region state, not a player standing."
-  },
-  {
-   "id": "at_war",
-   "name": "At war",
-   "text": "Active conflict between factions, changing encounters and territory control.",
-   "note": "Group-to-group only; shown in region state, not a player standing."
   }
  ],
  "startingStandingPoints": {
@@ -229,5 +215,5 @@
    "note": "No relation row in the bible; defaults only."
   }
  ],
- "exampleRule": "A player may be allied with an Orc clan while the Orc Empire remains hostile, or trusted by a Vampire house while the Exorcists Order distrusts them (per-faction and per-guild tracking)."
+ "exampleRule": "A player may be allied with an Orc clan while an Orc clan confederation remains hostile, or trusted by a Vampire house while the Exorcists Order distrusts them (per-faction and per-guild tracking)."
 }

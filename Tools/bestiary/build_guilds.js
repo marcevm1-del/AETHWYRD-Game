@@ -8,11 +8,11 @@ const D = path.join(__dirname, '..', '..', 'Data');
 // [slug, name, purpose, access, standing, services, tags]
 // access: public | restricted | hidden. tags drive the crosswalk to existing systems.
 const GUILDS = [
-  ['adventurers', "Adventurers' Consortium", 'General adventuring, party registration, quests, maps and expedition permits.', 'public', 'Neutral', 'Quest board, rank tests, party matching, expedition insurance.'],
+  ['adventurers', "Adventurers' Guild", 'General adventuring, party registration, quests, maps and expedition permits.', 'public', 'Neutral', 'Quest board, rank tests, party matching, expedition insurance.'],
   ['monster_hunters', "Monster Hunters' Guild", 'Specialized hunting, tracking, research and safe monster removal.', 'public', 'Neutral', 'Bounties, trophies, field reports, hunter licences.'],
   ['rangers', 'Ranger and Pathfinder Lodge', 'Wilderness navigation, scouting, escort and route mapping.', 'public', 'Generally protective', 'Trail maps, guide contracts, safe-camp networks.'],
   ['mercenaries', "Mercenary Companies' League", 'Professional armed contracts, guards and battlefield services.', 'public', 'Pragmatic', 'Escort contracts, siege work, military missions.'],
-  ['merchants', "Merchants' Trade Union", 'Trade routes, caravans, market standards and commercial disputes.', 'public', 'Profit-driven', 'Caravan protection, trade permits, auctions, price boards.'],
+  ['merchants', "Merchants' Consortium", 'Trade routes, caravans, market standards and commercial disputes.', 'public', 'Profit-driven', 'Caravan protection, trade permits, auctions, price boards.'],
   ['blacksmiths', "Blacksmiths' Forge Alliance", 'Weapon, armour and tool crafting and repair.', 'public', 'Craft-focused', 'Craft commissions, repair services, masterwork certification.'],
   ['alchemists', "Alchemists' Circle", 'Potions, antidotes, catalysts, monster extracts and transmutation.', 'public', 'Regulated', 'Potion orders, ingredient contracts, research licences.'],
   ['mages', "Mages' Conclave", 'Arcane study, spell certification, magical research and training.', 'public', 'Selective', 'Spell lessons, magical testing, research quests.'],
@@ -20,7 +20,7 @@ const GUILDS = [
   ['scholars', "Scholars' and Scribes' Society", 'Lore, translation, bestiary records, archives and identification.', 'public', 'Academic', 'Research tasks, ancient language translation, monster appraisal.'],
   ['cartographers', "Explorers' Cartographers' Guild", 'Mapping ruins, dungeons, caves and unknown regions.', 'public', 'Exploratory', 'Survey contracts, map sales, landmark discovery.'],
   ['beast_tamers', "Beast Tamers' Association", 'Capture, training, breeding and care of compatible beasts.', 'public', 'Regulated', 'Taming trials, stable services, companion permits.'],
-  ['bounty_registry', "Bounty Hunters' Registry", 'Capture or elimination of named targets and fugitives.', 'public', 'Strict rules', 'Target dossiers, proof-of-capture, reward escrow.'],
+  ['bounty_registry', "Bounty Hunters' Registry", 'Capture or bring in named targets and fugitives.', 'public', 'Strict rules', 'Target dossiers, proof-of-capture, reward escrow.'],
   ['maritime', 'Fisherfolk and Maritime Guild', 'Fishing, sea routes, aquatic monster knowledge and salvage.', 'public', 'Coastal', 'Sea expeditions, salvage rights, harbour contracts.'],
   ['miners', "Miners' and Delvers' Union", 'Mining, excavation, tunnel safety and mineral appraisal.', 'public', 'Industrial', 'Mining rights, escort requests, cave-clearing contracts.'],
   ['enchanters', "Enchanters' Atelier", 'Enchantments, runes, magical item upgrades and identification.', 'public', 'Specialist', 'Enchanting commissions, rune research, item appraisal.'],
@@ -36,14 +36,15 @@ const GUILDS = [
   ['relic_seekers', "Relic Seekers' Society", 'Recovery, authentication and protection of ancient artefacts.', 'public', 'Competitive', 'Relic expeditions, appraisal, ruin permits.'],
   ['arena', "Arena Champions' Association", 'Organized duels, tournaments, rankings and public challenges.', 'public', 'Competitive', 'Arena matches, sponsorships, training events.'],
   ['shadow_syndicate', 'Secretive Shadow Syndicate', 'Espionage, information brokerage, infiltration and covert work.', 'hidden', 'Illegal or morally grey', 'Rumours, stealth missions, black-market intelligence.'],
-  ['veiled_hand', "Veiled Hand Assassins' Network", 'Covert elimination, sabotage and political intrigue.', 'hidden', 'Criminal', 'High-risk contracts, faction plots, wanted notices.'],
+  ['veiled_hand', "Veiled Hand Assassins' Network", 'Covert contracts, sabotage and political intrigue.', 'hidden', 'Criminal', 'High-risk contracts, faction plots, wanted notices.'],
   ['free_cities_council', "Free Cities' Guild Council", 'Coordinates guild charters, dispute resolution and inter-city standards.', 'public', 'Political', 'Guild licensing, arbitration, regional policy.']
 ];
 
 // Our integration notes. Absent = no special handling.
 const OURS = {
-  adventurers: { mapsTo: "The existing Adventurers' Guild (Canon section 2 ranks F to SSS; Data/World/guild_ranks.json). Keeps its F to SSS ladder and Rank cards; the 8-step member ladder does NOT apply to it.", canon: 'Keeps the Canon name "Adventurers\' Guild" in game; "Consortium" is a bible alias only.' },
-  shadow_syndicate: { teenRating: 'Information and stealth work only; no real-world crime detail.' },
+  adventurers: { mapsTo: "The existing Adventurers' Guild (Canon section 2 ranks F to SSS; Data/World/guild_ranks.json). Keeps its F to SSS ladder and Rank cards; the 8-step member ladder does NOT apply to it.", canon: 'The bible calls it the Adventurers Consortium; the game name stays Adventurers Guild.' },
+  merchants: { mapsTo: "The existing Merchants' Consortium of Port Goldmere (02_Lore/history.md); the bible's Merchants' Trade Union is its local chapter name." },
+  shadow_syndicate: { mapsTo: 'The existing Shadow Syndicate underworld faction (02_Lore/world_systems.md, Data/NPCs/npcs.json).', teenRating: 'Information and stealth work only; no real-world crime detail.' },
   veiled_hand: { teenRating: 'Contracts are political and implied, never shown as graphic; offer as faction plots and wanted notices. Needs a Canon section 6 OK before any assassination contract is playable.' },
   necromancers: { canon: 'Restricted/controversial: containment and funeral rites only, consistent with Canon section 3 secrets staying unspoiled.' },
   arena: { canon: 'No new Canon conflict, but Canon 4d forbids the arena from promoting named monsters.' }
@@ -78,8 +79,8 @@ const RANKS = [
   ['member', 'Member', 'Standard quests and guild facilities.', 'Completed starter quest and code acceptance.'],
   ['veteran', 'Veteran', 'Advanced contracts and specialist services.', 'Reputation, successful missions, skill proof.'],
   ['expert', 'Expert', 'High-risk quests, mentorship and restricted facilities.', 'Mastery test, significant contribution.'],
-  ['officer', 'Officer', 'Team leadership, quest approval and local administration.', 'Trust, leadership record, guild vote or appointment.'],
-  ['master', 'Master', 'Regional authority, rare services and training rights.', 'Exceptional achievements and senior approval.'],
+  ['officer', 'Officer', 'Team leadership and quest recommendations (honorary standing; no guild property).', 'Trust, leadership record, guild vote or appointment.'],
+  ['master', 'Master', 'Rare services and teaching rights (honorary; the player never runs a guild).', 'Exceptional achievements and senior approval.'],
   ['grandmaster', 'Grandmaster', 'Guild-wide influence and unique story access.', 'Major narrative achievement; usually one or few.']
 ];
 
@@ -112,7 +113,7 @@ const guilds = {
       'Track reputation per guild, not as one global value.',
       'Positive: completed contracts, donations, discoveries, rescues, fair conduct.',
       'Negative: abandoning missions, stealing guild property, harming protected creatures, breaking contracts, betraying members.',
-      'High reputation unlocks discounts, rare recipes, restricted quests, mentors, titles and voting rights.',
+      'High reputation unlocks discounts, rare recipes, restricted quests, mentors, titles and an advisory say in guild votes.',
       'A player may be respected by one guild and distrusted by another; multiple compatible memberships are allowed.'
     ]
   },

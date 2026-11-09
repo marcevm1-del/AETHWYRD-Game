@@ -57,7 +57,7 @@ const REL = [
 ];
 const DEFAULT_OTHER = { vampires: 'Wary', trolls: 'Wary', ogres: 'Wary', giants: 'Wary', hobgoblin_kind: 'Wary', arachnids: 'Hostile', celestials: 'Neutral', spirits: 'Neutral' };
 const factions = {
-  notes: 'DRAFT from the bible v1.0 section 12. Relations between the PLAYER and each monster group, tracked separately per group. The group-to-group table is flavour for event and quest writers only: it drives no hierarchy and no autonomous faction war (Canon 4d). Standing moves only through quests, flags and the player\'s own actions, never because the player was defeated.',
+  notes: 'DRAFT from the bible v1.0 section 12. Relations between the PLAYER and each monster group, tracked separately per group. The group-to-group table is flavour for event and quest writers only: it drives no hierarchy and no autonomous faction war (Canon 4d). The bible Subjugated and At-war group states are not imported (Canon 4d, proposal M4). Standing moves only through quests, flags and the player\'s own actions, never because the player was defeated.',
   playerStates: [
     ['hostile', 'Hostile', -100, 'Attacks on sight or actively obstructs the player.'],
     ['wary', 'Wary', -40, 'Avoids open conflict but distrusts outsiders.'],
@@ -65,16 +65,12 @@ const factions = {
     ['friendly', 'Friendly', 40, 'Offers aid, information or safe passage.'],
     ['allied', 'Allied', 80, 'Shares resources, missions and coordinated support.']
   ].map(([id, name, minPoints, text]) => ({ id, name, minPoints, text })),
-  groupStates: [
-    ['subjugated', 'Subjugated', 'Obeys a stronger ruler or force, willingly or otherwise.'],
-    ['at_war', 'At war', 'Active conflict between factions, changing encounters and territory control.']
-  ].map(([id, name, text]) => ({ id, name, text, note: 'Group-to-group only; shown in region state, not a player standing.' })),
   startingStandingPoints: { Hostile: -70, Wary: -20, Neutral: 0, Friendly: 50, Allied: 85 },
   groups: [
     ...REL.map(([id, allies, rivals, start, text]) => ({ lineId: `evl_${id}`, defaultState: start, allyLines: L(allies), rivalLines: L(rivals), note: text })),
     ...Object.entries(DEFAULT_OTHER).map(([id, start]) => ({ lineId: `evl_${id}`, defaultState: start, allyLines: [], rivalLines: [], note: 'No relation row in the bible; defaults only.' }))
   ],
-  exampleRule: 'A player may be allied with an Orc clan while the Orc Empire remains hostile, or trusted by a Vampire house while the Exorcists Order distrusts them (per-faction and per-guild tracking).'
+  exampleRule: 'A player may be allied with an Orc clan while an Orc clan confederation remains hostile, or trusted by a Vampire house while the Exorcists Order distrusts them (per-faction and per-guild tracking).'
 };
 w('World/faction_relations.json', factions);
 

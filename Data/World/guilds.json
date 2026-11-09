@@ -6,7 +6,7 @@
    "Track reputation per guild, not as one global value.",
    "Positive: completed contracts, donations, discoveries, rescues, fair conduct.",
    "Negative: abandoning missions, stealing guild property, harming protected creatures, breaking contracts, betraying members.",
-   "High reputation unlocks discounts, rare recipes, restricted quests, mentors, titles and voting rights.",
+   "High reputation unlocks discounts, rare recipes, restricted quests, mentors, titles and an advisory say in guild votes.",
    "A player may be respected by one guild and distrusted by another; multiple compatible memberships are allowed."
   ]
  },
@@ -75,7 +75,7 @@
    "id": "gr_officer",
    "tier": 6,
    "name": "Officer",
-   "access": "Team leadership, quest approval and local administration.",
+   "access": "Team leadership and quest recommendations (honorary standing; no guild property).",
    "exampleRequirements": "Trust, leadership record, guild vote or appointment.",
    "reputationToReach": 600,
    "contractsToReach": 25,
@@ -87,7 +87,7 @@
    "id": "gr_master",
    "tier": 7,
    "name": "Master",
-   "access": "Regional authority, rare services and training rights.",
+   "access": "Rare services and teaching rights (honorary; the player never runs a guild).",
    "exampleRequirements": "Exceptional achievements and senior approval.",
    "reputationToReach": 1200,
    "contractsToReach": 40,
@@ -239,7 +239,7 @@
   {
    "id": "gld_adventurers",
    "order": 1,
-   "name": "Adventurers' Consortium",
+   "name": "Adventurers' Guild",
    "purpose": "General adventuring, party registration, quests, maps and expedition permits.",
    "access": "public",
    "standing": "Neutral",
@@ -247,7 +247,7 @@
    "usesMemberLadder": false,
    "ours": {
     "mapsTo": "The existing Adventurers' Guild (Canon section 2 ranks F to SSS; Data/World/guild_ranks.json). Keeps its F to SSS ladder and Rank cards; the 8-step member ladder does NOT apply to it.",
-    "canon": "Keeps the Canon name \"Adventurers' Guild\" in game; \"Consortium\" is a bible alias only."
+    "canon": "The bible calls it the Adventurers Consortium; the game name stays Adventurers Guild."
    }
   },
   {
@@ -283,12 +283,15 @@
   {
    "id": "gld_merchants",
    "order": 5,
-   "name": "Merchants' Trade Union",
+   "name": "Merchants' Consortium",
    "purpose": "Trade routes, caravans, market standards and commercial disputes.",
    "access": "public",
    "standing": "Profit-driven",
    "services": "Caravan protection, trade permits, auctions, price boards.",
-   "usesMemberLadder": true
+   "usesMemberLadder": true,
+   "ours": {
+    "mapsTo": "The existing Merchants' Consortium of Port Goldmere (02_Lore/history.md); the bible's Merchants' Trade Union is its local chapter name."
+   }
   },
   {
    "id": "gld_blacksmiths",
@@ -364,7 +367,7 @@
    "id": "gld_bounty_registry",
    "order": 13,
    "name": "Bounty Hunters' Registry",
-   "purpose": "Capture or elimination of named targets and fugitives.",
+   "purpose": "Capture or bring in named targets and fugitives.",
    "access": "public",
    "standing": "Strict rules",
    "services": "Target dossiers, proof-of-capture, reward escrow.",
@@ -528,6 +531,7 @@
    "usesMemberLadder": true,
    "unlockFlag": "guild_shadow_syndicate_found",
    "ours": {
+    "mapsTo": "The existing Shadow Syndicate underworld faction (02_Lore/world_systems.md, Data/NPCs/npcs.json).",
     "teenRating": "Information and stealth work only; no real-world crime detail."
    }
   },
@@ -535,7 +539,7 @@
    "id": "gld_veiled_hand",
    "order": 29,
    "name": "Veiled Hand Assassins' Network",
-   "purpose": "Covert elimination, sabotage and political intrigue.",
+   "purpose": "Covert contracts, sabotage and political intrigue.",
    "access": "hidden",
    "standing": "Criminal",
    "services": "High-risk contracts, faction plots, wanted notices.",

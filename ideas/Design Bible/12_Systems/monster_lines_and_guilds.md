@@ -11,7 +11,7 @@ Monsters sit in one of **30 groups** with nine named stages (Lesser Goblin to An
 | Threat rank is the species' own rating. Stage never sets it; variations never shift it (`rankShift` is 0 and validated) | Bible section 6; Canon section 2 |
 | Monsters never evolve or grow because they defeated the player; those triggers are refused in code | Canon 4d (`MonsterLines.IsTriggerAllowed`) |
 | No enemy hierarchy or autonomous faction war. Stage 7 to 9 names (Lord, King, Emperor) are species names. Group-to-group ally and rival lists are flavour only | Canon 4d, proposal M4 |
-| The Adventurers' Guild keeps its own F to SSS ranks and cards; the other 29 use the member ladder | `GuildRank`, proposal M3 |
+| The Adventurers' Guild (the bible's "Consortium") keeps its own F to SSS ranks and cards; the other 29 use the member ladder | `GuildRank`, proposal M3 |
 | The player holds up to Master (tier 7). Grandmaster is story-only. The player never owns or runs a guild | Canon section 4 |
 | Reputation is per guild. Every reputation event has a daily cap per guild; every contract has a cooldown. No farming loops | Bible section 14 |
 | Discounts are bounded (12% at Master, none while distrusted) and shown | Canon section 6 item economy guardrails |

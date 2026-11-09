@@ -719,11 +719,10 @@ const SCHEMAS = {
     }
   };
   SCHEMAS.faction_relations = {
-    title: 'Player and monster-group relations', type: 'object', additionalProperties: false, required: ['notes', 'playerStates', 'groupStates', 'startingStandingPoints', 'groups', 'exampleRule'],
+    title: 'Player and monster-group relations', type: 'object', additionalProperties: false, required: ['notes', 'playerStates', 'startingStandingPoints', 'groups', 'exampleRule'],
     properties: {
       notes: S, exampleRule: S,
       playerStates: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'minPoints', 'text'], properties: { id: S, name: S, minPoints: I(-100, 100), text: S } } },
-      groupStates: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'text', 'note'], properties: { id: S, name: S, text: S, note: S } } },
       startingStandingPoints: { type: 'object', additionalProperties: I(-100, 100) },
       groups: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['lineId', 'defaultState', 'allyLines', 'rivalLines', 'note'],
         properties: { lineId: LINE, defaultState: { type: 'string', enum: ['Hostile', 'Wary', 'Neutral', 'Friendly', 'Allied'] }, allyLines: { type: 'array', items: LINE }, rivalLines: { type: 'array', items: LINE }, note: S } } }

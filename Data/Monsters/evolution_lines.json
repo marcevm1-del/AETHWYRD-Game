@@ -34,7 +34,7 @@
   },
   {
    "id": "achievement",
-   "text": "Protecting a territory, leading a colony or surviving a catastrophe (never defeating the player)."
+   "text": "Protecting a territory, guarding a colony or surviving a catastrophe (never defeating the player)."
   },
   {
    "id": "awakening",
@@ -79,7 +79,7 @@
   },
   {
    "id": "leader",
-   "text": "Command, coordination, tactics and group buffs."
+   "text": "A combat-role tag for group calls and buffs. No command chain, no ranks of authority (Canon 4d)."
   }
  ],
  "fusionRules": {
@@ -167,14 +167,14 @@
     "Magic: Goblin Shaman > High Shaman > Arch Shaman",
     "Stealth: Goblin Rogue > Assassin > Shadow Goblin",
     "Engineering: Tinkerer > Siege Engineer > Master Inventor",
-    "Leadership: Captain > Chieftain > Goblin King"
+    "Elder line: Veteran > Chieftain > Goblin King"
    ],
    "variants": [
     "Cave Goblin",
     "Forest Goblin",
     "Mountain Goblin",
     "Swamp Goblin",
-    "Night Goblin"
+    "Gloam Goblin"
    ],
    "signatureAbilities": "Scouting, traps, scavenging, engineering, ambushes and improvised weapons.",
    "society": "Nests, camps, villages and fortified warrens. Strength comes from numbers, traps, adaptability and clever specialists."
@@ -231,7 +231,7 @@
     "Warrior: Orc Fighter > Elite Warrior > Orc Champion",
     "Magic: Orc Shaman > High Shaman > Warlock",
     "Beastmaster: Beast Tamer > War Beast Commander",
-    "Leadership: Captain > General > Chieftain > Warlord"
+    "Elder line: Veteran > Elder > Chieftain > Warlord"
    ],
    "variants": [
     "Iron Orc",
@@ -241,7 +241,7 @@
     "Blood Orc"
    ],
    "signatureAbilities": "War cries, heavy weapons, clan tactics, beast mounts and battle magic.",
-   "society": "Clan confederations, fortress states or empires. Leadership is earned through strength, strategy and victories."
+   "society": "Clan confederations, fortress states or empires. Standing is earned through strength, strategy and deeds, as a clan custom and not a command chain."
   },
   {
    "id": "evl_trolls",
@@ -267,7 +267,7 @@
     },
     {
      "stage": 4,
-     "label": "Cave Troll"
+     "label": "Cavern Troll"
     },
     {
      "stage": 5,
@@ -295,12 +295,12 @@
     "Stone: Stone Troll > Mountain > Living Mountain",
     "Combat: War Troll > Berserker Troll > Destroyer Troll",
     "Magic: Troll Shaman > Earth Troll Mage",
-    "Leadership: Elder Troll > Chieftain > Troll King"
+    "Elder line: Elder Troll > Chieftain > Troll King"
    ],
    "variants": [
     "Forest Troll",
     "Ice Troll",
-    "Cave Troll",
+    "Cavern Troll",
     "Swamp Troll",
     "Stone Troll"
    ],
@@ -359,7 +359,7 @@
     "Armoured: Ogre > Iron Ogre > Fortress Ogre",
     "Magic: Ogre Mage > Arcane Ogre > High Ogre Magus",
     "Hunter: Ogre Hunter > Ogre Executioner",
-    "Leadership: Chieftain > Ogre King > Colossus King"
+    "Elder line: Chieftain > Ogre King > Colossus King"
    ],
    "variants": [
     "Swamp Ogre",
@@ -420,8 +420,8 @@
    ],
    "branches": [
     "Legionnaire: Soldier > Legionnaire > Iron Legionnaire",
-    "Knight: Knight > Royal Knight > Grand Marshal",
-    "Commander: Captain > General > Emperor",
+    "Knight: Knight > Royal Knight > High Knight",
+    "Elder line: Veteran > Elder > Emperor",
     "Magic: Battle Mage > War Strategist > Arch Tactician",
     "Scout: Ranger > Shadow Scout > Pathfinder"
    ],
@@ -936,7 +936,7 @@
     "Water Spirit",
     "Forest Spirit",
     "Shadow Wraith",
-    "Soul Reaper",
+    "Soul Gleaner",
     "Astral Spirit"
    ],
    "variants": [
@@ -1188,7 +1188,7 @@
     }
    ],
    "branches": [
-    "Ant: Worker > Soldier > Elite Soldier > General > Queen",
+    "Ant: Worker > Soldier > Elite Soldier > Great Soldier > Queen",
     "Beetle: Beetle > Armoured Beetle > Colossus Beetle",
     "Wasp: Wasp > Hunter Wasp > Royal Wasp",
     "Spider-like line: Broodling > Giant Weaver > Broodmother",
@@ -1694,7 +1694,7 @@
     },
     {
      "stage": 6,
-     "label": "King Slime"
+     "label": "Crowned Slime"
     },
     {
      "stage": 7,
@@ -1713,8 +1713,8 @@
     "Fire Slime",
     "Water Slime",
     "Poison Slime",
-    "Metal Slime",
-    "Healing Slime",
+    "Ore Slime",
+    "Mending Slime",
     "Mimic Slime",
     "Acid Slime",
     "Magic Slime"
