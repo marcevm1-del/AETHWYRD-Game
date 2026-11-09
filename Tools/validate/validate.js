@@ -684,6 +684,9 @@ const graphChecks = require('./graph_checks').run({ DATA, load, check, schema, e
 // 4e) Upgrade v4 subset: living world (Tools/validate/living_checks.js)
 require('./living_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])), items: new Set(rows.items.map(i => i.id)), npcs: rows.npcs });
 
+// 4f) Libraries and books (Tools/validate/library_checks.js)
+const libChecks = require('./library_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
+
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
 if (errors.length) {
@@ -695,3 +698,4 @@ console.log(`✓ Data valid. ${counts}`);
 console.log(`  ${mapChecks.summary}`);
 for (const w of graphChecks.warnings) console.warn('  ! ' + w);
 console.log(`  ${graphChecks.summary}`);
+console.log(`  ${libChecks.summary}`);
