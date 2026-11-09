@@ -131,7 +131,7 @@ namespace Ascend.Core
 
         /// <summary>True when a trigger may be used to evolve a monster. Canon 4d: never because it defeated or hurt the player.</summary>
         public bool IsTriggerAllowed(string trigger) =>
-            !string.IsNullOrEmpty(trigger) && !_lines.ForbiddenTriggers.Contains(trigger);
+            !string.IsNullOrWhiteSpace(trigger) && !_lines.ForbiddenTriggers.Any(f => string.Equals(f, trigger.Trim(), StringComparison.OrdinalIgnoreCase));
 
         /// <summary>
         /// May a species step to its next stage? It needs a stage below 9, an allowed trigger and at least one known evolution condition
@@ -144,7 +144,7 @@ namespace Ascend.Core
             if (stage >= 9) return new EvolutionCheck(false, "already at the last stage", 0);
             if (!IsTriggerAllowed(trigger)) return new EvolutionCheck(false, "that trigger is not allowed (monsters never grow from defeating the player)", 0);
             var known = new HashSet<string>(_lines.ConditionKinds.Select(c => c.Id));
-            int met = (conditionsMet ?? Array.Empty<string>()).Count(c => known.Contains(c));
+            int met = (conditionsMet ?? Array.Empty<string>()).Where(c => c != null && known.Contains(c)).Distinct().Count();
             int need = stage >= 8 ? 2 : 1;
             if (met < need) return new EvolutionCheck(false, $"needs {need} evolution condition(s) met", 0);
             return new EvolutionCheck(true, "ok", stage + 1);

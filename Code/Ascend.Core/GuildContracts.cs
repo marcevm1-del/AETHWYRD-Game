@@ -157,6 +157,7 @@ namespace Ascend.Core
             var counted = (claimants ?? new List<BountyClaimant>()).Where(c => c.Share >= rules.Claim.MinContributionShare).OrderByDescending(c => c.Share).ThenBy(c => c.Id, StringComparer.Ordinal).ToList();
             if (counted.Count == 0) { result.Reason = "no claimant did enough of the work"; return result; }
             double total = counted.Sum(c => c.Share);
+            if (total <= 0 || reward < 0) { result.Reason = "nothing to split"; return result; }
             int paid = 0;
             foreach (var c in counted)
             {

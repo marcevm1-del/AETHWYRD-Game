@@ -336,6 +336,20 @@ static class MonsterGuildTests
         Assert.True(!BountyResolver.Resolve(rules, "nope", "core", 1000, claim).Valid, "unknown objective");
     }
 
+    public static void ReviewFixesHoldTheLineOnEdgeInput()
+    {
+        var late = Lines.SpeciesInLine("evl_goblins").First(sid => Lines.StageOf(sid) == 8);
+        Assert.True(!Lines.CheckEvolution(late, "age", new[] { "age", "age" }).Allowed, "the same condition twice counts once");
+        Assert.True(!Lines.IsTriggerAllowed("Defeated_Player"), "case does not matter");
+        Assert.True(!Lines.IsTriggerAllowed(" defeated_player "), "spaces do not matter");
+        Assert.True(!Lines.IsTriggerAllowed(" "), "blank is not a trigger");
+        var rules = ContractData.Bounty;
+        Assert.True(!BountyResolver.Resolve(rules, "kill", "core", -5, new List<BountyClaimant> { new BountyClaimant { Id = "a", Share = 1 } }).Valid, "negative reward");
+        var s = NewStanding(); s.Join("gld_cooks", RankLetter.F, NoFlags);
+        Assert.True(s.Apply("gld_cooks", "donation", 1, int.MaxValue) > 0, "a huge donation is capped, not lost");
+        Assert.Equal(10, s.Reputation("gld_cooks"), "stops at the donation daily cap");
+    }
+
     // ---------- factions, lairs, grades ----------
 
     public static void FactionStandingStartsAtTheDefaultAndMovesOnlyByActs()

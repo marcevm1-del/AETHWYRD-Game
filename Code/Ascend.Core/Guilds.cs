@@ -137,7 +137,7 @@ namespace Ascend.Core
             var g = Guild(id);
             if (g == null || !g.UsesMemberLadder) return false;
             if (!string.IsNullOrEmpty(g.UnlockFlag) && !(hasFlag?.Invoke(g.UnlockFlag) ?? false)) return false;
-            if (!string.IsNullOrEmpty(g.RequiresAdventurerRank) && Enum.TryParse(g.RequiresAdventurerRank, false, out RankLetter need) && adventurerRank < need) return false;
+            if (!string.IsNullOrEmpty(g.RequiresAdventurerRank) && Enum.TryParse(g.RequiresAdventurerRank, false, out RankLetter need) && Enum.IsDefined(typeof(RankLetter), need) && adventurerRank < need) return false;
             return true;
         }
 
@@ -164,7 +164,7 @@ namespace Ascend.Core
             string key = eventId;
             if (!s.DayCaps.TryGetValue(key, out var cap)) s.DayCaps[key] = cap = new GuildDayCapSave();
             if (cap.Day != day) { cap.Day = day; cap.Applied = 0; }
-            int want = Math.Abs(ev.Delta) * units;
+            int want = (int)Math.Min(int.MaxValue / 2, Math.Abs((long)ev.Delta) * (long)units);
             int room = Math.Max(0, ev.DailyCap - cap.Applied);
             int take = Math.Min(want, room);
             if (take <= 0) return 0;
