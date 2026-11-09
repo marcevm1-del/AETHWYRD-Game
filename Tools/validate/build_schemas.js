@@ -646,6 +646,19 @@ const SCHEMAS = {
         } } }
     } };
 }
+// --- Dungeon loot: room caches and their tables (Data/World/dungeon_loot.json) ---
+SCHEMAS.dungeon_loot = {
+  title: 'Dungeon loot', type: 'object', additionalProperties: false, required: ['notes', 'tables', 'caches'],
+  properties: {
+    notes: { type: 'string' },
+    tables: { type: 'array', minItems: 1, items: SCHEMAS.loot_table },
+    caches: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'dungeonId', 'roomId', 'kind', 'tableId', 'rolls', 'once'],
+      properties: {
+        id: { type: 'string', pattern: '^cache_[a-z0-9_]+$' }, dungeonId: { type: 'string', pattern: '^dng_[a-z0-9_]+$' }, roomId: { type: 'string', pattern: '^rm_[a-z0-9_]+$' },
+        kind: { type: 'string', enum: ['salvage_pile', 'chest', 'boss_cache', 'secret_chest'] }, tableId: { type: 'string', pattern: '^loot_[a-z0-9_]+$' },
+        rolls: { type: 'integer', minimum: 1, maximum: 3 }, once: { type: 'boolean' }, label: { type: 'string' }
+      } } }
+  } };
 require('./graph_schemas')(SCHEMAS); // Wave F-lite
 require('./audio_schemas')(SCHEMAS); // Wave D
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
