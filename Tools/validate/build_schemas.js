@@ -649,6 +649,7 @@ const SCHEMAS = {
 require('./graph_schemas')(SCHEMAS); // Wave F-lite
 require('./audio_schemas')(SCHEMAS); // Wave D
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
+require('./encounter_schemas')(SCHEMAS); // Regional encounter tables
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }
