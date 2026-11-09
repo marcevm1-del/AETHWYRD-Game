@@ -1,0 +1,340 @@
+{
+ "version": 1,
+ "note": "Libraries, archives, temples, schools and guild halls of Aethwyrd and the draft books on their shelves (12_Systems/libraries_and_books.md). Books are drafts, not Canon, until the user approves them. A library with status 'proposed' is not Canon either.",
+ "libraries": [
+  {
+   "id": "lib_brindlewick_guild_shelf",
+   "name": "Brindlewick Guild Branch Shelf",
+   "type": "guild_hall",
+   "region": "reg_whisperwood",
+   "settlement": "Brindlewick",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (Whisperwood: the guild branch); 10_World/brindlewick.md (Magistra Eolande Fairweather, mage trainer and librarian)",
+   "blurb": "The guild branch where most adventurers wake up keeps a small shelf for newcomers, tended by the village's mage trainer.",
+   "covers": [
+    "reg_whisperwood"
+   ]
+  },
+  {
+   "id": "lib_aldmere_royal_archive",
+   "name": "Aldmere Royal and Noble Archives",
+   "type": "archive",
+   "region": "reg_aldmere",
+   "settlement": "Aldmere City",
+   "status": "canon",
+   "source": "10_World/world.md (Aldmere City, five districts); 02_Lore/history.md (royal and noble archives)",
+   "blurb": "Copies of reeve's papers, valley records and travellers' notes kept in the crown city, with the road to the Labyrinth entrance below it.",
+   "covers": [
+    "reg_aldmere",
+    "reg_labyrinth_upper"
+   ]
+  },
+  {
+   "id": "lib_mages_academy",
+   "name": "The Mages' Academy Library",
+   "type": "school",
+   "region": "reg_aldmere",
+   "settlement": "Aldmere City (Academy district)",
+   "status": "canon",
+   "source": "02_Lore/history.md (Mages' Academy, est. 512); 10_World/world.md (Aldmere City Academy district)",
+   "blurb": "Lectures, copied demonstrations and the careful fragments of the old empire, kept where magic is taught.",
+   "covers": []
+  },
+  {
+   "id": "lib_aldmere_guild_hall",
+   "name": "Aldmere Guild Hall Reading Room",
+   "type": "guild_hall",
+   "region": "reg_aldmere",
+   "settlement": "Aldmere City",
+   "status": "proposed",
+   "source": "The Guild exists in Canon (Section 2 ranks); a reading room in its Aldmere hall is proposed",
+   "blurb": "Branch manuals, street-law notes and the guild's copies of local rules.",
+   "covers": []
+  },
+  {
+   "id": "lib_aldmere_cathedral_shelf",
+   "name": "Summoning Cathedral Shelf",
+   "type": "temple",
+   "region": "reg_aldmere",
+   "settlement": "Aldmere City (Temple district)",
+   "status": "canon",
+   "source": "10_World/world.md (Aldmere City: Summoning Cathedral, Temple district)",
+   "blurb": "Myth tellings and chapel notes left by pilgrims and keepers, shelved by the shrine floor.",
+   "covers": []
+  },
+  {
+   "id": "lib_peat_library",
+   "name": "The Peat Library",
+   "type": "library",
+   "region": "reg_greymoor",
+   "settlement": "Greymoor",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (Greymoor landmark: The Peat Library, a cave where the bog preserved a monastery's books)",
+   "blurb": "A bog-cave where a drowned monastery's books are dried and read with care.",
+   "covers": [
+    "reg_greymoor"
+   ]
+  },
+  {
+   "id": "lib_lothaniel_root_archive",
+   "name": "Lothaniel Root Archive",
+   "type": "archive",
+   "region": "reg_sylvaran",
+   "settlement": "Canopy City Lothaniel",
+   "status": "proposed",
+   "source": "Proposed reading room in Sylvaran's canopy city (settlement in gazetteer)",
+   "blurb": "Living-timber shelves kept by the canopy city, covering the mossy and summer lands around it.",
+   "covers": [
+    "reg_sylvaran",
+    "reg_mossdeep",
+    "reg_everdusk"
+   ]
+  },
+  {
+   "id": "lib_lirian_licence_archive",
+   "name": "Lirian Licence Archive",
+   "type": "archive",
+   "region": "reg_lirian",
+   "settlement": "Lirian canal cities",
+   "status": "proposed",
+   "source": "Proposed; Lirian's lock-licence quarrels (gazetteer) suggest a records house",
+   "blurb": "The canal cities keep every lock licence and, beside them, the grain and market notes of the trunk river.",
+   "covers": [
+    "reg_lirian",
+    "reg_velmark",
+    "reg_moraveil"
+   ]
+  },
+  {
+   "id": "lib_vharlen_legion_records",
+   "name": "Vharlen Legion Records House",
+   "type": "archive",
+   "region": "reg_vharlen",
+   "settlement": "Vharlen frontier legions",
+   "status": "proposed",
+   "source": "Proposed; Vharlen's frontier legions (gazetteer) would keep muster and road records",
+   "blurb": "Muster books, route notes and soldiers' letters from the northern frontier.",
+   "covers": [
+    "reg_vharlen",
+    "reg_fanghold",
+    "reg_strife_marches",
+    "reg_calamity_steppe"
+   ]
+  },
+  {
+   "id": "lib_bastion_watch_library",
+   "name": "Bastion Watch Library",
+   "type": "library",
+   "region": "reg_bastion",
+   "settlement": "Bastion outer ring",
+   "status": "proposed",
+   "source": "Proposed; Bastion's outer ring (gazetteer) is a defensive town",
+   "blurb": "A watch-house shelf of field notes about the dark country the Bastion stands against.",
+   "covers": [
+    "reg_bastion",
+    "reg_nox_dominion"
+   ]
+  },
+  {
+   "id": "lib_karak_dun_records",
+   "name": "Karak Dûn Hall of Records",
+   "type": "archive",
+   "region": "reg_iron_hold",
+   "settlement": "Karak Dûn",
+   "status": "proposed",
+   "source": "Proposed; Karak Dûn is canon (gazetteer); oath and craft records are implied by the Oath-Anvil tradition",
+   "blurb": "Craft marks, oath records and the working notes of the mines and the clockwork halls.",
+   "covers": [
+    "reg_iron_hold",
+    "reg_gearholm",
+    "reg_cinderhole"
+   ]
+  },
+  {
+   "id": "lib_shen_lu_sect_library",
+   "name": "Shen-Lu Foothill Sect Library",
+   "type": "school",
+   "region": "reg_shen_lu",
+   "settlement": "Sect foothill towns",
+   "status": "proposed",
+   "source": "Proposed; Shen-Lu sect foothill towns (gazetteer)",
+   "blurb": "A sect library of rules, practice notes and gate-town letters, open to guests who ask politely.",
+   "covers": [
+    "reg_shen_lu",
+    "reg_haneul"
+   ]
+  },
+  {
+   "id": "lib_hoshizora_shrine_library",
+   "name": "Hoshizora Shrine Library",
+   "type": "temple",
+   "region": "reg_hoshizora",
+   "settlement": "Hoshizora City",
+   "status": "proposed",
+   "source": "Proposed; household shrines of Hoshizora (gazetteer)",
+   "blurb": "River-mouth shrine shelves of festival notes, rain tables and household books.",
+   "covers": [
+    "reg_hoshizora"
+   ]
+  },
+  {
+   "id": "lib_fox_shrine_library",
+   "name": "Fox Shrine Isle Library",
+   "type": "temple",
+   "region": "reg_kitsune_isles",
+   "settlement": "Fox Shrine Isle",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (Kitsune Isles: Fox Shrine, The Ninefold Shrine)",
+   "blurb": "Stair-top shrine shelves where stories arrive by boat and leave changed.",
+   "covers": [
+    "reg_kitsune_isles",
+    "reg_true_name_isles"
+   ]
+  },
+  {
+   "id": "lib_dragon_bone_monastery_library",
+   "name": "Dragon-Bone Monastery Library",
+   "type": "temple",
+   "region": "reg_dragon_spine",
+   "settlement": "Dragon-bone monasteries",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (Dragon Spine: the Bone Road links every monastery)",
+   "blurb": "Monastery shelves along the Bone Road, with copies sent up to the eyries.",
+   "covers": [
+    "reg_dragon_spine",
+    "reg_heavenreach",
+    "reg_sky_archipelago"
+   ]
+  },
+  {
+   "id": "lib_skjaldheim_skald_hall",
+   "name": "Skjaldheim Skald Hall",
+   "type": "library",
+   "region": "reg_frostveil",
+   "settlement": "Skjaldheim",
+   "status": "proposed",
+   "source": "Proposed; Skjaldheim is canon (gazetteer); a skald hall is implied by longhouse culture",
+   "blurb": "Sagas, weather notes and ice-country road books kept in the fjord-head hall.",
+   "covers": [
+    "reg_frostveil",
+    "reg_whitewater_reach",
+    "reg_quaking_lands"
+   ]
+  },
+  {
+   "id": "lib_qadira_water_archive",
+   "name": "Qadira Water Archive",
+   "type": "archive",
+   "region": "reg_sunscar",
+   "settlement": "Oasis of Qadira",
+   "status": "proposed",
+   "source": "Proposed in 02_Lore/history.md (Sunscar: build a water archive, draft)",
+   "blurb": "Water-keepers' recitations and well records of the desert oasis and the dune country around it.",
+   "covers": [
+    "reg_sunscar",
+    "reg_dunewhale_drift",
+    "reg_apu_highlands"
+   ]
+  },
+  {
+   "id": "lib_zaruma_earth_towers",
+   "name": "Zaruma Earth Towers",
+   "type": "library",
+   "region": "reg_zaruma",
+   "settlement": "Zaruma gold-road towns",
+   "status": "canon",
+   "source": "02_Lore/history.md (Zaruma: a kingdom of scholars; library-mosque-style towers of earth)",
+   "blurb": "Griots and scribes keep the kingdom's histories in earth towers along the gold road.",
+   "covers": [
+    "reg_zaruma",
+    "reg_lustrine_shores"
+   ]
+  },
+  {
+   "id": "lib_port_goldmere_reading_room",
+   "name": "Port Goldmere Harbor Reading Room",
+   "type": "library",
+   "region": "reg_goldmere_coast",
+   "settlement": "Port Goldmere",
+   "status": "proposed",
+   "source": "Proposed; Port Goldmere is canon (gazetteer)",
+   "blurb": "Tide tables, trade notes and sailors' songs kept by the harbor masters.",
+   "covers": [
+    "reg_goldmere_coast"
+   ]
+  },
+  {
+   "id": "lib_xochitl_cord_archive",
+   "name": "Xochitl Cord Archive",
+   "type": "archive",
+   "region": "reg_xochitl_mire",
+   "settlement": "Xochitl river-cities",
+   "status": "proposed",
+   "source": "Proposed in 02_Lore/history.md (treat the cords as a land and labor archive, draft)",
+   "blurb": "Knotted records and river-city ledgers, read aloud by those who keep the cords.",
+   "covers": [
+    "reg_xochitl_mire"
+   ]
+  },
+  {
+   "id": "lib_lumbaya_sky_temple",
+   "name": "Lumbaya Sky Temple Shelf",
+   "type": "temple",
+   "region": "reg_lumbaya",
+   "settlement": "Lumbaya temple villages",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (Lumbaya: The Sky Temple)",
+   "blurb": "Temple village shelves of chapel notes, pilgrim letters and valley histories.",
+   "covers": [
+    "reg_lumbaya",
+    "reg_ashira_vale"
+   ]
+  },
+  {
+   "id": "lib_zarvan_garden_library",
+   "name": "Zarvan Garden Library",
+   "type": "library",
+   "region": "reg_zarvan",
+   "settlement": "Zarvan garden cities",
+   "status": "proposed",
+   "source": "Proposed; Zarvan's garden cities are canon (gazetteer)",
+   "blurb": "Terrace-garden reading rooms of aqueduct, planting and cliff-town notes.",
+   "covers": [
+    "reg_zarvan",
+    "reg_stormreach"
+   ]
+  },
+  {
+   "id": "lib_aurumdeep_camp_shelf",
+   "name": "Aurumdeep Explorers' Camp Shelf",
+   "type": "library",
+   "region": "reg_aurumdeep",
+   "settlement": "Aurumdeep explorers' camp",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (Aurumdeep explorers' camp; Labyrinth back-door from floor 30)",
+   "blurb": "Explorers leave their notes here for the next party: deep-country field notes and letters.",
+   "covers": [
+    "reg_aurumdeep",
+    "reg_root_of_the_world",
+    "reg_umbravel",
+    "reg_hollow_sea"
+   ]
+  },
+  {
+   "id": "lib_labyrinth_upside_down_library",
+   "name": "The Upside-Down Library (Floor 72)",
+   "type": "library",
+   "region": "reg_labyrinth_deep",
+   "settlement": "Great Labyrinth, floor 72",
+   "status": "canon",
+   "source": "Data/World/gazetteer.json (a scholar wants a book from the upside-down library on floor seventy-two, read in the right direction)",
+   "blurb": "A library hanging the wrong way up, whose books must be read in the right direction.",
+   "covers": [
+    "reg_labyrinth_deep",
+    "reg_labyrinth_abyss",
+    "reg_the_maw"
+   ],
+   "rankGate": "B"
+  }
+ ]
+}
