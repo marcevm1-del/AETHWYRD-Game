@@ -170,7 +170,9 @@ namespace Ascend.Core
                 if (!string.IsNullOrEmpty(kv.Key) && Enum.TryParse<CompanionPreset>(kv.Value, true, out var cp) && Enum.IsDefined(typeof(CompanionPreset), cp))
                     presets[kv.Key] = cp.ToString();
             s.CompanionPresets = presets;
-            s.Version = SaveGame.CurrentVersion;
+            // Only a version in range is stamped current. A future (or invalid) version stays as it is, so Validate, which the
+            // game runs after Upgrade, still rejects it instead of an old build loading a newer save and overwriting it.
+            if (s.Version >= 1 && s.Version <= SaveGame.CurrentVersion) s.Version = SaveGame.CurrentVersion;
             return s;
         }
 
