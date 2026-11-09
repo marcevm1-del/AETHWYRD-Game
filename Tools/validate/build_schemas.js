@@ -108,7 +108,7 @@ const SCHEMAS = {
       id: id('itm_'), name: { type: 'string', minLength: 1 },
       category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic', 'rune', 'scroll', 'part', 'fragment'] },
       rank: RL, rarity: { type: 'string', enum: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic', 'Divine'] },
-      slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, setId: { type: 'string' },
+      slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, description: { type: 'string', minLength: 10, description: 'plain player-facing explanation of what the item is and is for' }, icon: { type: 'string', pattern: '^icon_[a-z0-9_]+$', description: 'icon id, see 09_Equipment/item_icon_list.md' }, setId: { type: 'string' },
       meal: { type: 'object', additionalProperties: false, required: ['effects', 'seconds'], description: 'cooking buff (Well Fed slot)', properties: {
         effects: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['stat', 'amount'], properties: { stat: { type: 'string', minLength: 1 }, amount: { type: 'number' } } } },
         seconds: { type: 'number', exclusiveMinimum: 0 } } }

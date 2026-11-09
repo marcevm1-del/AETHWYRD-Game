@@ -2,6 +2,8 @@
  {
   "id": "itm_mat_slime_jelly",
   "name": "Slime Jelly",
+  "description": "Cool, wobbling jelly scraped from a slime. Alchemists boil it into the base of healing draughts.",
+  "icon": "icon_mat_slime_jelly",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -9,6 +11,8 @@
  {
   "id": "itm_mat_gel_core",
   "name": "Gel Core",
+  "description": "The firm heart of a slime, no bigger than a plum. It keeps its shape for years and sells for pocket change.",
+  "icon": "icon_mat_gel_core",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -16,6 +20,8 @@
  {
   "id": "itm_core_f",
   "name": "F-Rank Monster Core",
+  "description": "A pebble-sized core that stays warm after a monster falls. The first thing every Guild rookie learns to collect; crafters use it to bind a gear's first spark.",
+  "icon": "icon_core_f",
   "category": "core",
   "rank": "F",
   "value": 2
@@ -23,6 +29,8 @@
  {
   "id": "itm_core_e",
   "name": "E-Rank Monster Core",
+  "description": "A core the size of a thumb, humming faintly. Strong enough to finish E-rank gear and to brew proper healing potions.",
+  "icon": "icon_core_e",
   "category": "core",
   "rank": "E",
   "value": 4
@@ -30,6 +38,8 @@
  {
   "id": "itm_core_d",
   "name": "D-Rank Monster Core",
+  "description": "A dense, glassy core with a steady pulse. Alchemists pay well for it, and D-rank recipes ask for one.",
+  "icon": "icon_core_d",
   "category": "core",
   "rank": "D",
   "value": 8
@@ -37,6 +47,8 @@
  {
   "id": "itm_core_c",
   "name": "C-Rank Monster Core",
+  "description": "A bright core that is warm to the touch for a full day. Needed to forge C-rank gear that holds an edge or a ward.",
+  "icon": "icon_core_c",
   "category": "core",
   "rank": "C",
   "value": 16
@@ -44,6 +56,8 @@
  {
   "id": "itm_core_b",
   "name": "B-Rank Monster Core",
+  "description": "A core the size of a fist, heavy with stored power. B-rank masterwork recipes call for one, and so do some quiet Guild commissions.",
+  "icon": "icon_core_b",
   "category": "core",
   "rank": "B",
   "value": 32
@@ -51,6 +65,8 @@
  {
   "id": "itm_mat_relic_shard",
   "name": "Relic Shard",
+  "description": "A sliver of worked stone from a ruin older than the Guild. Scholars would like to know where you found it.",
+  "icon": "icon_mat_relic_shard",
   "category": "material",
   "rank": "B",
   "value": 18
@@ -58,6 +74,8 @@
  {
   "id": "itm_core_s",
   "name": "S-Rank Monster Core",
+  "description": "An S-rank core, cold and impossibly dense. Kept in lead-lined cases; the Guild logs every one that changes hands.",
+  "icon": "icon_core_s",
   "category": "core",
   "rank": "S",
   "value": 128
@@ -65,6 +83,8 @@
  {
   "id": "itm_core_sss",
   "name": "SSS-Rank Monster Core",
+  "description": "An SSS-rank core. Even held in a closed fist, the room goes quiet. Reserved for work of national consequence.",
+  "icon": "icon_core_sss",
   "category": "core",
   "rank": "SSS",
   "value": 512
@@ -72,6 +92,8 @@
  {
   "id": "itm_core_ex",
   "name": "EX-Rank Monster Core",
+  "description": "An EX-rank core, older than any record of it. No price is posted; the Guild only says that it exists.",
+  "icon": "icon_core_ex",
   "category": "core",
   "rank": "EX",
   "value": 1024
@@ -79,6 +101,8 @@
  {
   "id": "itm_mat_goblin_ear",
   "name": "Goblin Ear",
+  "description": "A notched goblin ear, the Guild's proof of a cleared warren. Small bounty, big stack.",
+  "icon": "icon_mat_goblin_ear",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -86,6 +110,8 @@
  {
   "id": "itm_mat_crude_blade",
   "name": "Crude Blade",
+  "description": "A goblin-made blade blank, pitted and bent. A smith can re-edge it into something honest.",
+  "icon": "icon_mat_crude_blade",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -93,6 +119,8 @@
  {
   "id": "itm_mat_stolen_trinket",
   "name": "Stolen Trinket",
+  "description": "A bit of shiny junk a goblin lifted from a traveller. Some owners will pay to get theirs back.",
+  "icon": "icon_mat_stolen_trinket",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -100,6 +128,8 @@
  {
   "id": "itm_core_a",
   "name": "A-Rank Monster Core",
+  "description": "A rare A-rank core that glows when you hold it near a heartbeat. Shops buy it, but few shops can afford to stock it.",
+  "icon": "icon_core_a",
   "category": "core",
   "rank": "A",
   "value": 64
@@ -107,6 +137,8 @@
  {
   "id": "itm_mat_kobold_fang",
   "name": "Kobold Fang",
+  "description": "A short, yellowed kobold fang. Strung on cord it makes a decent luck charm.",
+  "icon": "icon_mat_kobold_fang",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -114,6 +146,8 @@
  {
   "id": "itm_mat_scrap_metal",
   "name": "Scrap Metal",
+  "description": "Bent nails, snapped blades and cracked buckles. Torvald calls it the cheapest honest iron in town.",
+  "icon": "icon_mat_scrap_metal",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -121,6 +155,8 @@
  {
   "id": "itm_mat_candle_stub",
   "name": "Candle Stub",
+  "description": "A guttering candle end from a monster's nest. Wax and wick, with a bit of old light left in it.",
+  "icon": "icon_mat_candle_stub",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -128,6 +164,8 @@
  {
   "id": "itm_mat_pelt",
   "name": "Pelt",
+  "description": "A rough, serviceable animal pelt. The tannery turns it into caps, jerkins and hilt wrap.",
+  "icon": "icon_mat_pelt",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -135,6 +173,8 @@
  {
   "id": "itm_mat_fang",
   "name": "Fang",
+  "description": "A clean white fang from a wolf or boar. Smiths set it into blades; hunters wear it for luck.",
+  "icon": "icon_mat_fang",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -142,6 +182,8 @@
  {
   "id": "itm_mat_prime_meat",
   "name": "Prime Meat",
+  "description": "A good cut of fresh monster meat. Cook it the same day and it feeds a table.",
+  "icon": "icon_mat_prime_meat",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -149,6 +191,8 @@
  {
   "id": "itm_mat_cursed_fur",
   "name": "Cursed Fur",
+  "description": "Dark fur that seems to hold onto the shadows. It needs shade essence to calm it before it can be worn.",
+  "icon": "icon_mat_cursed_fur",
   "category": "material",
   "rank": "D",
   "value": 8
@@ -156,6 +200,8 @@
  {
   "id": "itm_mat_silver_bane_claw",
   "name": "Silver-Bane Claw",
+  "description": "A grey claw that dulls ordinary steel. Alloyed into a blade, it bites back at beasts that shrug off normal edges.",
+  "icon": "icon_mat_silver_bane_claw",
   "category": "material",
   "rank": "D",
   "value": 8
@@ -163,6 +209,8 @@
  {
   "id": "itm_mat_carapace_shard",
   "name": "Carapace Shard",
+  "description": "A curved plate of beetle shell, light and tough. Riveted to leather it turns a fair blow.",
+  "icon": "icon_mat_carapace_shard",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -170,6 +218,8 @@
  {
   "id": "itm_mat_silk",
   "name": "Silk",
+  "description": "Fine spider silk, strong as thread and soft as a scarf. Weavers use it for hoods, robes and scrolls.",
+  "icon": "icon_mat_silk",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -177,6 +227,8 @@
  {
   "id": "itm_mat_venom_sac",
   "name": "Venom Sac",
+  "description": "A sealed sac of pale venom. Handle it carefully; alchemists distil it into coatings and antidotes.",
+  "icon": "icon_mat_venom_sac",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -184,6 +236,8 @@
  {
   "id": "itm_mat_killer_mandible",
   "name": "Killer Mandible",
+  "description": "A serrated mandible from a hunting insect. Sharp enough to cut the cord it hangs from.",
+  "icon": "icon_mat_killer_mandible",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -191,6 +245,8 @@
  {
   "id": "itm_mat_stinger",
   "name": "Stinger",
+  "description": "A hollow stinger still crackling with trapped charge. Scroll-makers draw storm ink from it.",
+  "icon": "icon_mat_stinger",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -198,6 +254,8 @@
  {
   "id": "itm_mat_bone_dust",
   "name": "Bone Dust",
+  "description": "Fine grey dust from a restless skeleton. It is only dust, whatever the stories say.",
+  "icon": "icon_mat_bone_dust",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -205,6 +263,8 @@
  {
   "id": "itm_mat_grave_cloth",
   "name": "Grave Cloth",
+  "description": "A shred of shroud that has outlasted its owner. Weavers say it takes dye strangely.",
+  "icon": "icon_mat_grave_cloth",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -212,6 +272,8 @@
  {
   "id": "itm_mat_soul_ember",
   "name": "Soul Ember",
+  "description": "A faint orange spark that burns without fuel. It lights a rune of heat.",
+  "icon": "icon_mat_soul_ember",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -219,6 +281,8 @@
  {
   "id": "itm_mat_shade_essence",
   "name": "Shade Essence",
+  "description": "A cold wisp bottled from a shade. A little calms cursed fur; a lot makes the bottle sweat.",
+  "icon": "icon_mat_shade_essence",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -226,6 +290,8 @@
  {
   "id": "itm_mat_night_shard",
   "name": "Night Shard",
+  "description": "A fragment of black glass that only gleams after dark. Woven into cloth, it softens the evening.",
+  "icon": "icon_mat_night_shard",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -233,6 +299,8 @@
  {
   "id": "itm_mat_tusk",
   "name": "Tusk",
+  "description": "A heavy curved tusk, yellow at the root. Good for hilts, mace heads and amulets.",
+  "icon": "icon_mat_tusk",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -240,6 +308,8 @@
  {
   "id": "itm_mat_giant_s_hide",
   "name": "Giant's Hide",
+  "description": "A slab of thick, stone-scraped hide. The tannery calls it stubborn and soles it into boots.",
+  "icon": "icon_mat_giant_s_hide",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -247,6 +317,8 @@
  {
   "id": "itm_mat_crude_iron",
   "name": "Crude Iron",
+  "description": "Lumpy smelted iron, still full of grit. Torvald can work it into plain, dependable gear.",
+  "icon": "icon_mat_crude_iron",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -254,6 +326,8 @@
  {
   "id": "itm_mat_horn",
   "name": "Horn",
+  "description": "A ridged horn, hard as a pot handle. Carvers and smiths both buy it.",
+  "icon": "icon_mat_horn",
   "category": "material",
   "rank": "D",
   "value": 8
@@ -261,6 +335,8 @@
  {
   "id": "itm_mat_labyrinth_bronze",
   "name": "Labyrinth Bronze",
+  "description": "Old bronze pulled from the Labyrinth walls, green at the edges. Beaten thin it becomes surprisingly light armour.",
+  "icon": "icon_mat_labyrinth_bronze",
   "category": "material",
   "rank": "D",
   "value": 8
@@ -268,6 +344,8 @@
  {
   "id": "itm_mat_scale",
   "name": "Scale",
+  "description": "A palm-sized lizard scale, glossy and overlapping. Armourers stitch them in rows.",
+  "icon": "icon_mat_scale",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -275,6 +353,8 @@
  {
   "id": "itm_mat_reptile_eye",
   "name": "Reptile Eye",
+  "description": "A yellow, slit-pupilled eye kept in brine. Alchemists swear by it for night sight.",
+  "icon": "icon_mat_reptile_eye",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -282,6 +362,8 @@
  {
   "id": "itm_mat_tail_meat",
   "name": "Tail Meat",
+  "description": "Lean meat from a lizard's tail. Slow-roasted, it is the best thing in a long road's menu.",
+  "icon": "icon_mat_tail_meat",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -289,6 +371,8 @@
  {
   "id": "itm_mat_dragon_scale",
   "name": "Dragon Scale",
+  "description": "A small scale from a drake, warm to the touch. Hard enough to crack a chisel.",
+  "icon": "icon_mat_dragon_scale",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -296,6 +380,8 @@
  {
   "id": "itm_mat_dragon_blood",
   "name": "Dragon Blood",
+  "description": "A vial of thick, warm drake blood. It never quite cools, and alchemists treat it with respect.",
+  "icon": "icon_mat_dragon_blood",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -303,6 +389,8 @@
  {
   "id": "itm_mat_dragon_heart",
   "name": "Dragon Heart",
+  "description": "The heart of a young drake, still faintly beating in its salt jar. Rare, valuable and not for the squeamish.",
+  "icon": "icon_mat_dragon_heart",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -310,6 +398,8 @@
  {
   "id": "itm_mat_golem_core",
   "name": "Golem Core",
+  "description": "A smooth stone heart etched with tiny grooves. It holds the pattern that once made a golem walk.",
+  "icon": "icon_mat_golem_core",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -317,6 +407,8 @@
  {
   "id": "itm_mat_rune_plate",
   "name": "Rune Plate",
+  "description": "A blank slab of rune-carving stone. Khazdur masons cut every glyph onto one.",
+  "icon": "icon_mat_rune_plate",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -324,6 +416,8 @@
  {
   "id": "itm_mat_gear",
   "name": "Gear",
+  "description": "A hand-turned brass gear from an automaton. Runesmiths use it to anchor the Anvil Rune.",
+  "icon": "icon_mat_gear",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -331,6 +425,8 @@
  {
   "id": "itm_mat_elemental_essence",
   "name": "Elemental Essence",
+  "description": "A drop of raw elemental force held in glass. It never stays one temperature for long.",
+  "icon": "icon_mat_elemental_essence",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -338,6 +434,8 @@
  {
   "id": "itm_mat_spirit_mote",
   "name": "Spirit Mote",
+  "description": "A drifting speck of spirit-light. Catch one in a jar and it lights your desk for a week.",
+  "icon": "icon_mat_spirit_mote",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -345,6 +443,8 @@
  {
   "id": "itm_mat_sap",
   "name": "Sap",
+  "description": "Sticky, sweet tree sap. Cooks, alchemists and bomb-makers all keep a jar.",
+  "icon": "icon_mat_sap",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -352,6 +452,8 @@
  {
   "id": "itm_mat_seed",
   "name": "Seed",
+  "description": "A handful of wild seeds. Plant them, grind them, or put them in the stew.",
+  "icon": "icon_mat_seed",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -359,6 +461,8 @@
  {
   "id": "itm_mat_spore_cap",
   "name": "Spore Cap",
+  "description": "A mushroom cap that glows a little in the dark. Safe to eat once roasted.",
+  "icon": "icon_mat_spore_cap",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -366,6 +470,8 @@
  {
   "id": "itm_mat_demon_core",
   "name": "Demon Core",
+  "description": "A black core with an ember at its centre. It feels angry for no reason; do not carry it near the bread.",
+  "icon": "icon_mat_demon_core",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -373,6 +479,8 @@
  {
   "id": "itm_mat_horn_shard",
   "name": "Horn Shard",
+  "description": "A chip broken from a demon's horn. Warm to hold, and it smells faintly of struck flint.",
+  "icon": "icon_mat_horn_shard",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -380,6 +488,8 @@
  {
   "id": "itm_mat_brimstone",
   "name": "Brimstone",
+  "description": "A yellow lump of fire-stone from deep rock. A pinch warms a drink; a handful warms a fortress.",
+  "icon": "icon_mat_brimstone",
   "category": "material",
   "rank": "E",
   "value": 6
@@ -387,6 +497,8 @@
  {
   "id": "itm_core_ss",
   "name": "SS-Rank Monster Core",
+  "description": "An SS-rank core. Light bends faintly around it. Legend says each one is the last echo of something that should not have fallen.",
+  "icon": "icon_core_ss",
   "category": "core",
   "rank": "SS",
   "value": 256
@@ -394,6 +506,8 @@
  {
   "id": "itm_mat_fish_scale",
   "name": "Fish Scale",
+  "description": "A silver scale that catches the light like coin. Used in Tide Runes for their cool edge.",
+  "icon": "icon_mat_fish_scale",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -401,6 +515,8 @@
  {
   "id": "itm_mat_pearl",
   "name": "Pearl",
+  "description": "A small, round pearl from river or pond. Jewellers set it in bands and charms.",
+  "icon": "icon_mat_pearl",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -408,6 +524,8 @@
  {
   "id": "itm_mat_ink_sac",
   "name": "Ink Sac",
+  "description": "A full ink sac, blue-black and slow to dry. Scribes and scroll-makers always need more.",
+  "icon": "icon_mat_ink_sac",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -415,6 +533,8 @@
  {
   "id": "itm_mat_feather",
   "name": "Feather",
+  "description": "A long, glossy flight feather. Light as breath; used for charms and wind-touched scrolls.",
+  "icon": "icon_mat_feather",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -422,6 +542,8 @@
  {
   "id": "itm_mat_talon",
   "name": "Talon",
+  "description": "A hooked bird talon, sharp at the tip. Bound into charms for luck in the hunt.",
+  "icon": "icon_mat_talon",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -429,6 +551,8 @@
  {
   "id": "itm_mat_egg",
   "name": "Egg",
+  "description": "A speckled monster egg, warm and heavy. Bakers prize them.",
+  "icon": "icon_mat_egg",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -436,6 +560,8 @@
  {
   "id": "itm_mat_chimera_heart",
   "name": "Chimera Heart",
+  "description": "A three-chambered heart that still beats slowly. Alchemists and masters of the forge both want it.",
+  "icon": "icon_mat_chimera_heart",
   "category": "material",
   "rank": "B",
   "value": 18
@@ -443,6 +569,8 @@
  {
   "id": "itm_mat_mythic_horn",
   "name": "Mythic Horn",
+  "description": "A single spiral horn, light as a reed and strong as steel. Its owner is long gone; its worth is not.",
+  "icon": "icon_mat_mythic_horn",
   "category": "material",
   "rank": "B",
   "value": 18
@@ -450,6 +578,8 @@
  {
   "id": "itm_mat_serpent_scale",
   "name": "Serpent Scale",
+  "description": "A broad, patterned scale from a giant serpent. It flexes with the wearer and shrugs off cuts.",
+  "icon": "icon_mat_serpent_scale",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -457,6 +587,8 @@
  {
   "id": "itm_mat_temple_gold",
   "name": "Temple Gold",
+  "description": "Soft, pale gold taken from an old shrine. It carries a faint memory of bells.",
+  "icon": "icon_mat_temple_gold",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -464,6 +596,8 @@
  {
   "id": "itm_mat_horsehair",
   "name": "Horsehair",
+  "description": "Long, coarse hair from a spectral horse. Strong enough to pad armour or string a bow.",
+  "icon": "icon_mat_horsehair",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -471,6 +605,8 @@
  {
   "id": "itm_mat_painted_barding",
   "name": "Painted Barding",
+  "description": "A piece of ghost-cavalry barding, its paint still bright. Collectors pay more than armourers do.",
+  "icon": "icon_mat_painted_barding",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -478,6 +614,8 @@
  {
   "id": "itm_mat_rider_s_lantern",
   "name": "Rider's Lantern",
+  "description": "A tiny lantern from a ghost rider's saddle. It still burns, though nothing is inside.",
+  "icon": "icon_mat_rider_s_lantern",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -485,6 +623,8 @@
  {
   "id": "itm_mat_cursed_iron",
   "name": "Cursed Iron",
+  "description": "Black iron that hums when the lights go out. Smiths work it with respect and leather gloves.",
+  "icon": "icon_mat_cursed_iron",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -492,6 +632,8 @@
  {
   "id": "itm_mat_stolen_bolt",
   "name": "Stolen Bolt",
+  "description": "A crossbow bolt a thief has been saving. Not for you, but you may as well have it.",
+  "icon": "icon_mat_stolen_bolt",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -499,6 +641,8 @@
  {
   "id": "itm_mat_gremlin_ear",
   "name": "Gremlin Ear",
+  "description": "A small, pointed ear, Guild proof of a cleared gremlin nest.",
+  "icon": "icon_mat_gremlin_ear",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -506,6 +650,8 @@
  {
   "id": "itm_mat_unreal_fragment",
   "name": "Unreal Fragment",
+  "description": "A sliver of something that was not quite there. It flickers when you look away.",
+  "icon": "icon_mat_unreal_fragment",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -513,6 +659,8 @@
  {
   "id": "itm_mat_eye_of_nothing",
   "name": "Eye of Nothing",
+  "description": "A glassy sphere that reflects nothing at all. Scholars keep it in a drawer and do not discuss it.",
+  "icon": "icon_mat_eye_of_nothing",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -520,6 +668,8 @@
  {
   "id": "itm_mat_spirit_paper",
   "name": "Spirit Paper",
+  "description": "A sheet of thin paper cut with prayer marks. Tucked into a hem it is said to turn bad luck aside.",
+  "icon": "icon_mat_spirit_paper",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -527,6 +677,8 @@
  {
   "id": "itm_mat_fox_fire",
   "name": "Fox Fire",
+  "description": "A flicker of cool blue flame that never burns. It follows you home if you let it.",
+  "icon": "icon_mat_fox_fire",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -534,6 +686,8 @@
  {
   "id": "itm_mat_dungeon_core_shard",
   "name": "Dungeon Core Shard",
+  "description": "A chip from the heart of a dungeon. It hums when you walk near a dungeon door.",
+  "icon": "icon_mat_dungeon_core_shard",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -541,6 +695,8 @@
  {
   "id": "itm_mat_vesper_glass",
   "name": "Vesper Glass",
+  "description": "Dusk-coloured glass that holds the last light of evening. Prized by lamp-makers and a few tired poets.",
+  "icon": "icon_mat_vesper_glass",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -548,6 +704,8 @@
  {
   "id": "itm_mat_captured_soul_light",
   "name": "Captured Soul-Light",
+  "description": "A small blue light in a glass bead. It brightens near those who are grieving, and nobody knows why.",
+  "icon": "icon_mat_captured_soul_light",
   "category": "material",
   "rank": "C",
   "value": 12
@@ -555,6 +713,8 @@
  {
   "id": "itm_mat_desert_glass",
   "name": "Desert Glass",
+  "description": "Glass formed where lightning hit the dunes. Pale green and sharper than it looks.",
+  "icon": "icon_mat_desert_glass",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -562,6 +722,8 @@
  {
   "id": "itm_mat_sand_pearl",
   "name": "Sand Pearl",
+  "description": "A pearl made in the sand, not the sea. Warm in the hand and strangely heavy.",
+  "icon": "icon_mat_sand_pearl",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -569,6 +731,8 @@
  {
   "id": "itm_mat_coin_purse",
   "name": "Coin Purse",
+  "description": "A small, worn purse with a few coppers left in the seam. Return it to its owner if you can.",
+  "icon": "icon_mat_coin_purse",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -576,6 +740,8 @@
  {
   "id": "itm_mat_weapon",
   "name": "Weapon",
+  "description": "A battered weapon taken from a defeated foe. Not worth wielding, but the scrap is good.",
+  "icon": "icon_mat_weapon",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -583,6 +749,8 @@
  {
   "id": "itm_mat_bounty_proof",
   "name": "Bounty Proof",
+  "description": "A scrap of badge or cloth that proves a bounty. Take it to the Guild board.",
+  "icon": "icon_mat_bounty_proof",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -590,6 +758,8 @@
  {
   "id": "itm_mat_soft_fur",
   "name": "Soft Fur",
+  "description": "Soft, fine fur from a gentle beast. Tailors line cloaks with it.",
+  "icon": "icon_mat_soft_fur",
   "category": "material",
   "rank": "F",
   "value": 4
@@ -597,6 +767,8 @@
  {
   "id": "itm_mat_shed_scale",
   "name": "Shed Scale",
+  "description": "A scale naturally shed during a moult. Thin, light and good for charms.",
+  "icon": "icon_mat_shed_scale",
   "category": "material",
   "rank": "F",
   "value": 4
