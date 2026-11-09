@@ -74,7 +74,7 @@
   "category": "consumable",
   "rank": "F",
   "rarity": "Common",
-  "value": 10,
+  "value": 12,
   "stats": {
    "heal": 120
   },
@@ -563,7 +563,7 @@
   "category": "consumable",
   "rank": "E",
   "rarity": "Common",
-  "value": 40,
+  "value": 52,
   "stats": {
    "heal": 300
   },
@@ -577,7 +577,7 @@
   "category": "consumable",
   "rank": "D",
   "rarity": "Uncommon",
-  "value": 90,
+  "value": 96,
   "stats": {
    "heal": 520
   },
@@ -706,7 +706,7 @@
   "category": "consumable",
   "rank": "F",
   "rarity": "Common",
-  "value": 12,
+  "value": 15,
   "flavor": "Deep blue-black, and a little goes a long way. A cosmetic dye for any outfit."
  },
  {
@@ -751,7 +751,7 @@
   "category": "consumable",
   "rank": "F",
   "rarity": "Common",
-  "value": 10,
+  "value": 14,
   "stats": {
    "heal": 120
   },
@@ -824,7 +824,7 @@
   "category": "consumable",
   "rank": "F",
   "rarity": "Common",
-  "value": 14,
+  "value": 20,
   "stats": {
    "heal": 100
   },
@@ -874,7 +874,7 @@
   "category": "consumable",
   "rank": "F",
   "rarity": "Common",
-  "value": 12,
+  "value": 20,
   "stats": {
    "heal": 80
   },
@@ -897,7 +897,7 @@
   "category": "consumable",
   "rank": "E",
   "rarity": "Uncommon",
-  "value": 35,
+  "value": 58,
   "stats": {
    "heal": 60
   },
@@ -1045,7 +1045,7 @@
   "category": "part",
   "rank": "F",
   "rarity": "Common",
-  "value": 8,
+  "value": 15,
   "flavor": "A blade blank hammered out of salvage."
  },
  {
@@ -1067,7 +1067,7 @@
   "category": "part",
   "rank": "F",
   "rarity": "Common",
-  "value": 6,
+  "value": 10,
   "flavor": "Wolf pelt, wound tight and stitched."
  },
  {
@@ -1078,7 +1078,7 @@
   "category": "part",
   "rank": "F",
   "rarity": "Common",
-  "value": 9,
+  "value": 15,
   "flavor": "A hilt with a fang for a pommel."
  },
  {
@@ -1237,7 +1237,7 @@
   "category": "consumable",
   "rank": "F",
   "rarity": "Common",
-  "value": 14,
+  "value": 18,
   "stats": {
    "heal": 70
   },
