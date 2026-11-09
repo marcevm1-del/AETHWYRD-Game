@@ -2,7 +2,7 @@
 
 Generated from `Data/Items/items.json` and `materials.json`. Every entry carries an `icon` id (`icon_<item id without itm_>`). Icons are 128x128 transparent PNG, cel-shaded, one object on a 3/4 view, thick dark outline, rank colour accent on the rim (F grey, E green, D blue, C violet, B gold, A orange, S red, SS/SSS white-gold, EX prismatic). Mark of recipes: **R** = icon is for a craftable result (recipe output), listed first so art can match recipes.
 
-Total: 178 icons (86 materials/cores, 92 items).
+Total: 186 icons (86 materials/cores, 100 items).
 
 ## weapon (21)
 
@@ -79,7 +79,7 @@ Total: 178 icons (86 materials/cores, 92 items).
 | `icon_garden_stew` | Garden Stew | F | R | A stew made entirely from your own garden. Restores HP and tastes like pride. |
 | `icon_harvest_ale` | Harvest Ale | F | R | A light ale made from your own wheat. A modest pick-me-up with a farmer's pride. |
 
-## rune (6)
+## rune (11)
 
 | Icon id | Item | Rank | R | Draw note |
 |---|---|---|---|---|
@@ -89,8 +89,13 @@ Total: 178 icons (86 materials/cores, 92 items).
 | `icon_rune_anvil` | Anvil Rune | F | R | The first rune every dwarven apprentice learns. Socket it to improve how well gear takes upgrades. |
 | `icon_rune_hearth` | Hearth Rune | F | R | A rune of warmth and shelter. Socket it to sharpen recovery and comfort. |
 | `icon_rune_gale` | Gale Rune | E | R | A rune that hums when the wind turns. Socket it for speed and a lighter step. |
+| `icon_rune_spark` | Spark Rune | E | R | A rune of quick, crackling force. Socket it in a weapon or accessory for a little extra magic attack. |
+| `icon_rune_dusk` | Dusk Rune | E | R | A rune of the hour when lamps are lit. Socket it in armour or an accessory for extra magic defence. |
+| `icon_rune_bastion` | Bastion Rune | E | R | A squat, square rune cut for walls and shields. Socket it in armour for extra defence. |
+| `icon_rune_cinder` | Cinder Rune | D | R | A rune of low, patient heat. Socket it in a weapon for a firm boost to attack. |
+| `icon_rune_warden` | Warden Rune | D | R | A rune of watchfulness, cut by dwarves who guard doors for a living. Socket it in armour or an accessory for extra HP. |
 
-## scroll (5)
+## scroll (8)
 
 | Icon id | Item | Rank | R | Draw note |
 |---|---|---|---|---|
@@ -99,6 +104,9 @@ Total: 178 icons (86 materials/cores, 92 items).
 | `icon_scroll_vitality` | Scroll of Vitality | F | R | A scroll of healing herbs and steady breath. Binds to gear to improve vitality. |
 | `icon_scroll_nightstep` | Scroll of Nightstep | E | R | A scroll whose ink shows only in shadow. Binds to gear to quieten your steps. |
 | `icon_scroll_stormthread` | Scroll of Stormthread | E | R | A scroll that tingles in the hand. Binds a thread of lightning to your gear. |
+| `icon_scroll_rimebrand` | Scroll of Rimebrand | E | R | A scroll rimed with frost. Binds an Ice edge to a weapon and adds a little attack. |
+| `icon_scroll_ironhide` | Scroll of Ironhide | E | R | A heavy-inked scroll of iron grit. Binds to armour for extra defence. |
+| `icon_scroll_lanternlight` | Scroll of Lanternlight | E | R | A scroll that glows like a lantern behind paper. Binds to a charm or ring for extra magic attack. |
 
 ## part (4)
 

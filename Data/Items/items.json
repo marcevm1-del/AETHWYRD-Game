@@ -1372,5 +1372,93 @@
   "rarity": "Uncommon",
   "value": 0,
   "flavor": "A broken piece of something old. Perhaps it fits with another."
+ },
+ {
+  "id": "itm_rune_spark",
+  "name": "Spark Rune",
+  "description": "A rune of quick, crackling force. Socket it in a weapon or accessory for a little extra magic attack.",
+  "icon": "icon_rune_spark",
+  "category": "rune",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 55,
+  "flavor": "It crackles when you set it down."
+ },
+ {
+  "id": "itm_rune_dusk",
+  "name": "Dusk Rune",
+  "description": "A rune of the hour when lamps are lit. Socket it in armour or an accessory for extra magic defence.",
+  "icon": "icon_rune_dusk",
+  "category": "rune",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 55,
+  "flavor": "Dwarves cut it at lamp-lighting hour and swear it keeps the time."
+ },
+ {
+  "id": "itm_rune_bastion",
+  "name": "Bastion Rune",
+  "description": "A squat, square rune cut for walls and shields. Socket it in armour for extra defence.",
+  "icon": "icon_rune_bastion",
+  "category": "rune",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 58,
+  "flavor": "Square, plain and stubborn. It was never meant to be pretty."
+ },
+ {
+  "id": "itm_rune_cinder",
+  "name": "Cinder Rune",
+  "description": "A rune of low, patient heat. Socket it in a weapon for a firm boost to attack.",
+  "icon": "icon_rune_cinder",
+  "category": "rune",
+  "rank": "D",
+  "rarity": "Rare",
+  "value": 120,
+  "flavor": "Not a flame. The warmth left when one has done its work."
+ },
+ {
+  "id": "itm_rune_warden",
+  "name": "Warden Rune",
+  "description": "A rune of watchfulness, cut by dwarves who guard doors for a living. Socket it in armour or an accessory for extra HP.",
+  "icon": "icon_rune_warden",
+  "category": "rune",
+  "rank": "D",
+  "rarity": "Rare",
+  "value": 125,
+  "flavor": "Door-guards carry one. They say it listens when they sleep."
+ },
+ {
+  "id": "itm_scroll_rimebrand",
+  "name": "Scroll of Rimebrand",
+  "description": "A scroll rimed with frost. Binds an Ice edge to a weapon and adds a little attack.",
+  "icon": "icon_scroll_rimebrand",
+  "category": "scroll",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 76,
+  "flavor": "The ink frosts over if you hold it too long."
+ },
+ {
+  "id": "itm_scroll_ironhide",
+  "name": "Scroll of Ironhide",
+  "description": "A heavy-inked scroll of iron grit. Binds to armour for extra defence.",
+  "icon": "icon_scroll_ironhide",
+  "category": "scroll",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 72,
+  "flavor": "Dense, dark ink. It weighs more than it should."
+ },
+ {
+  "id": "itm_scroll_lanternlight",
+  "name": "Scroll of Lanternlight",
+  "description": "A scroll that glows like a lantern behind paper. Binds to a charm or ring for extra magic attack.",
+  "icon": "icon_scroll_lanternlight",
+  "category": "scroll",
+  "rank": "E",
+  "rarity": "Uncommon",
+  "value": 72,
+  "flavor": "The page glows a little, as if someone is reading it from the other side."
  }
 ]
