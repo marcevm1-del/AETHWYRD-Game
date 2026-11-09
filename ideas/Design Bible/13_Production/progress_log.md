@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-09
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Agent sessions, batch 1 | Seven agent branches merged: canon-keeper (rename audit, decision index, consistency check, watch list), code-reviewer (Core performance review, tech-debt register), anime-fantasy-director (human, UI and contact-sheet reviews, style checklist), audio-designer (music cue sheet), bestiary-designer (Salvage Warren residents, mount species, regional ecology), class-skill-designer (9 rune and enchantment skills with schema), core-rules-engineer (save migration tests and a fix so a newer save is never overwritten by an older build) | 755 |
+
 ## 2026-11-08
 
 | Commit | What changed | Tests |
