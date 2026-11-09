@@ -1,0 +1,189 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Guilds and factions",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "notes",
+  "reputation",
+  "memberLadder",
+  "facilities",
+  "rivalries",
+  "councilNote",
+  "guilds"
+ ],
+ "properties": {
+  "notes": {
+   "type": "string",
+   "minLength": 1
+  },
+  "councilNote": {
+   "type": "string",
+   "minLength": 1
+  },
+  "facilities": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "minLength": 1
+   }
+  },
+  "reputation": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "perGuild",
+    "rules"
+   ],
+   "properties": {
+    "perGuild": {
+     "type": "boolean"
+    },
+    "rules": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "memberLadder": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "tier",
+     "name",
+     "access",
+     "exampleRequirements"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^gr_[a-z0-9_]+$"
+     },
+     "tier": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "access": {
+      "type": "string",
+      "minLength": 1
+     },
+     "exampleRequirements": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "rivalries": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "a",
+     "b",
+     "text"
+    ],
+    "properties": {
+     "a": {
+      "type": "string",
+      "pattern": "^gld_[a-z0-9_]+$"
+     },
+     "b": {
+      "type": "string",
+      "pattern": "^gld_[a-z0-9_]+$"
+     },
+     "text": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "guilds": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "order",
+     "name",
+     "purpose",
+     "access",
+     "standing",
+     "services",
+     "usesMemberLadder"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^gld_[a-z0-9_]+$"
+     },
+     "order": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "purpose": {
+      "type": "string",
+      "minLength": 1
+     },
+     "access": {
+      "type": "string",
+      "enum": [
+       "public",
+       "restricted",
+       "hidden"
+      ]
+     },
+     "standing": {
+      "type": "string",
+      "minLength": 1
+     },
+     "services": {
+      "type": "string",
+      "minLength": 1
+     },
+     "usesMemberLadder": {
+      "type": "boolean"
+     },
+     "ours": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+       "mapsTo": {
+        "type": "string",
+        "minLength": 1
+       },
+       "canon": {
+        "type": "string",
+        "minLength": 1
+       },
+       "teenRating": {
+        "type": "string",
+        "minLength": 1
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

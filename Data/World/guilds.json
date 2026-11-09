@@ -1,0 +1,437 @@
+{
+ "notes": "DRAFT from the Monster Classification & Guild System bible v1.0 (user PDF), sections 8 and 9. 30 guilds, an 8-step membership ladder, per-guild reputation and facilities. Not yet wired to quests or the HUD; see 13_Production/monster_guild_integration.md for what needs the user OK. The player cannot own a guild (Canon section 4). The Adventurers Consortium is the existing Adventurers Guild and keeps the F to SSS rank ladder.",
+ "reputation": {
+  "perGuild": true,
+  "rules": [
+   "Track reputation per guild, not as one global value.",
+   "Positive: completed contracts, donations, discoveries, rescues, fair conduct.",
+   "Negative: abandoning missions, stealing guild property, harming protected creatures, breaking contracts, betraying members.",
+   "High reputation unlocks discounts, rare recipes, restricted quests, mentors, titles and voting rights.",
+   "A player may be respected by one guild and distrusted by another; multiple compatible memberships are allowed."
+  ]
+ },
+ "memberLadder": [
+  {
+   "id": "gr_applicant",
+   "tier": 1,
+   "name": "Applicant",
+   "access": "Public services and basic notices.",
+   "exampleRequirements": "Registration, identity check or introductory task."
+  },
+  {
+   "id": "gr_initiate",
+   "tier": 2,
+   "name": "Initiate",
+   "access": "Training and low-risk contracts.",
+   "exampleRequirements": "Basic test, first contribution or recommendation."
+  },
+  {
+   "id": "gr_member",
+   "tier": 3,
+   "name": "Member",
+   "access": "Standard quests and guild facilities.",
+   "exampleRequirements": "Completed starter quest and code acceptance."
+  },
+  {
+   "id": "gr_veteran",
+   "tier": 4,
+   "name": "Veteran",
+   "access": "Advanced contracts and specialist services.",
+   "exampleRequirements": "Reputation, successful missions, skill proof."
+  },
+  {
+   "id": "gr_expert",
+   "tier": 5,
+   "name": "Expert",
+   "access": "High-risk quests, mentorship and restricted facilities.",
+   "exampleRequirements": "Mastery test, significant contribution."
+  },
+  {
+   "id": "gr_officer",
+   "tier": 6,
+   "name": "Officer",
+   "access": "Team leadership, quest approval and local administration.",
+   "exampleRequirements": "Trust, leadership record, guild vote or appointment."
+  },
+  {
+   "id": "gr_master",
+   "tier": 7,
+   "name": "Master",
+   "access": "Regional authority, rare services and training rights.",
+   "exampleRequirements": "Exceptional achievements and senior approval."
+  },
+  {
+   "id": "gr_grandmaster",
+   "tier": 8,
+   "name": "Grandmaster",
+   "access": "Guild-wide influence and unique story access.",
+   "exampleRequirements": "Major narrative achievement; usually one or few."
+  }
+ ],
+ "facilities": [
+  "Hall and reception: membership, noticeboards, contracts and public services.",
+  "Training yard: combat practice, sparring, skill trials and weapon instruction.",
+  "Library or archive: maps, monster records, spell research and lore.",
+  "Workshop: crafting, repairs, enchanting and alchemy.",
+  "Infirmary: healing, recovery and status-effect treatment.",
+  "Stable, docks or hangar: mounts and transport where appropriate.",
+  "Vault and auction room: escrow, rare goods, guild funds and secure storage.",
+  "Private rooms: party planning, guild meetings, faction story scenes."
+ ],
+ "rivalries": [
+  {
+   "a": "gld_adventurers",
+   "b": "gld_monster_hunters",
+   "text": "Cooperate on contracts; compete for high-profile targets."
+  },
+  {
+   "a": "gld_merchants",
+   "b": "gld_bounty_registry",
+   "text": "Cooperate on caravan security; dispute reward pricing."
+  },
+  {
+   "a": "gld_mages",
+   "b": "gld_alchemists",
+   "text": "Share research; compete over patents and rare catalysts."
+  },
+  {
+   "a": "gld_beast_tamers",
+   "b": "gld_conservation",
+   "text": "Cooperate on rescue; disagree over capture and ownership."
+  },
+  {
+   "a": "gld_necromancers",
+   "b": "gld_exorcists",
+   "text": "Ideological conflict and occasional joint containment operations."
+  },
+  {
+   "a": "gld_relic_seekers",
+   "b": "gld_scholars",
+   "text": "Cooperate on translation; dispute ownership and access."
+  },
+  {
+   "a": "gld_shadow_syndicate",
+   "b": "gld_veiled_hand",
+   "text": "Share information but compete for influence."
+  }
+ ],
+ "councilNote": "The Free Cities Guild Council can mediate charters, monopolies, sanctions and inter-city conflicts.",
+ "guilds": [
+  {
+   "id": "gld_adventurers",
+   "order": 1,
+   "name": "Adventurers' Consortium",
+   "purpose": "General adventuring, party registration, quests, maps and expedition permits.",
+   "access": "public",
+   "standing": "Neutral",
+   "services": "Quest board, rank tests, party matching, expedition insurance.",
+   "usesMemberLadder": false,
+   "ours": {
+    "mapsTo": "The existing Adventurers' Guild (Canon section 2 ranks F to SSS; Data/World/guild_ranks.json). Keeps its F to SSS ladder and Rank cards; the 8-step member ladder does NOT apply to it.",
+    "canon": "Keeps the Canon name \"Adventurers' Guild\" in game; \"Consortium\" is a bible alias only."
+   }
+  },
+  {
+   "id": "gld_monster_hunters",
+   "order": 2,
+   "name": "Monster Hunters' Guild",
+   "purpose": "Specialized hunting, tracking, research and safe monster removal.",
+   "access": "public",
+   "standing": "Neutral",
+   "services": "Bounties, trophies, field reports, hunter licences.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_rangers",
+   "order": 3,
+   "name": "Ranger and Pathfinder Lodge",
+   "purpose": "Wilderness navigation, scouting, escort and route mapping.",
+   "access": "public",
+   "standing": "Generally protective",
+   "services": "Trail maps, guide contracts, safe-camp networks.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_mercenaries",
+   "order": 4,
+   "name": "Mercenary Companies' League",
+   "purpose": "Professional armed contracts, guards and battlefield services.",
+   "access": "public",
+   "standing": "Pragmatic",
+   "services": "Escort contracts, siege work, military missions.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_merchants",
+   "order": 5,
+   "name": "Merchants' Trade Union",
+   "purpose": "Trade routes, caravans, market standards and commercial disputes.",
+   "access": "public",
+   "standing": "Profit-driven",
+   "services": "Caravan protection, trade permits, auctions, price boards.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_blacksmiths",
+   "order": 6,
+   "name": "Blacksmiths' Forge Alliance",
+   "purpose": "Weapon, armour and tool crafting and repair.",
+   "access": "public",
+   "standing": "Craft-focused",
+   "services": "Craft commissions, repair services, masterwork certification.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_alchemists",
+   "order": 7,
+   "name": "Alchemists' Circle",
+   "purpose": "Potions, antidotes, catalysts, monster extracts and transmutation.",
+   "access": "public",
+   "standing": "Regulated",
+   "services": "Potion orders, ingredient contracts, research licences.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_mages",
+   "order": 8,
+   "name": "Mages' Conclave",
+   "purpose": "Arcane study, spell certification, magical research and training.",
+   "access": "public",
+   "standing": "Selective",
+   "services": "Spell lessons, magical testing, research quests.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_healers",
+   "order": 9,
+   "name": "Healers' and Apothecaries' Order",
+   "purpose": "Medical care, recovery, antidotes and battlefield treatment.",
+   "access": "public",
+   "standing": "Humanitarian",
+   "services": "Healing services, rescue missions, clinic referrals.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_scholars",
+   "order": 10,
+   "name": "Scholars' and Scribes' Society",
+   "purpose": "Lore, translation, bestiary records, archives and identification.",
+   "access": "public",
+   "standing": "Academic",
+   "services": "Research tasks, ancient language translation, monster appraisal.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_cartographers",
+   "order": 11,
+   "name": "Explorers' Cartographers' Guild",
+   "purpose": "Mapping ruins, dungeons, caves and unknown regions.",
+   "access": "public",
+   "standing": "Exploratory",
+   "services": "Survey contracts, map sales, landmark discovery.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_beast_tamers",
+   "order": 12,
+   "name": "Beast Tamers' Association",
+   "purpose": "Capture, training, breeding and care of compatible beasts.",
+   "access": "public",
+   "standing": "Regulated",
+   "services": "Taming trials, stable services, companion permits.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_bounty_registry",
+   "order": 13,
+   "name": "Bounty Hunters' Registry",
+   "purpose": "Capture or elimination of named targets and fugitives.",
+   "access": "public",
+   "standing": "Strict rules",
+   "services": "Target dossiers, proof-of-capture, reward escrow.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_maritime",
+   "order": 14,
+   "name": "Fisherfolk and Maritime Guild",
+   "purpose": "Fishing, sea routes, aquatic monster knowledge and salvage.",
+   "access": "public",
+   "standing": "Coastal",
+   "services": "Sea expeditions, salvage rights, harbour contracts.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_miners",
+   "order": 15,
+   "name": "Miners' and Delvers' Union",
+   "purpose": "Mining, excavation, tunnel safety and mineral appraisal.",
+   "access": "public",
+   "standing": "Industrial",
+   "services": "Mining rights, escort requests, cave-clearing contracts.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_enchanters",
+   "order": 16,
+   "name": "Enchanters' Atelier",
+   "purpose": "Enchantments, runes, magical item upgrades and identification.",
+   "access": "public",
+   "standing": "Specialist",
+   "services": "Enchanting commissions, rune research, item appraisal.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_jewelers",
+   "order": 17,
+   "name": "Jewelers' and Gemcutters' Guild",
+   "purpose": "Gem cutting, crystal work, jewellery and focus crafting.",
+   "access": "public",
+   "standing": "Craft-focused",
+   "services": "Gem appraisal, rare crystal procurement, commissions.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_cooks",
+   "order": 18,
+   "name": "Cooks' and Provisioners' Guild",
+   "purpose": "Rations, monster cuisine, buffs, preserved foods and supply logistics.",
+   "access": "public",
+   "standing": "Service",
+   "services": "Meal buffs, camp supply contracts, rare ingredient requests.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_stablemasters",
+   "order": 19,
+   "name": "Stablemasters' and Mount Keepers' Guild",
+   "purpose": "Mount care, breeding, transport and riding instruction.",
+   "access": "public",
+   "standing": "Regulated",
+   "services": "Mount registration, breeding services, stable rentals.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_sailors",
+   "order": 20,
+   "name": "Sailors' and Skyship Captains' Union",
+   "purpose": "Ship crews, airships, navigation and transport.",
+   "access": "public",
+   "standing": "Transport",
+   "services": "Passage contracts, convoy missions, rescue work.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_builders",
+   "order": 21,
+   "name": "Builders' and Siege Engineers' Guild",
+   "purpose": "Fortifications, bridges, traps, siege engines and settlement works.",
+   "access": "public",
+   "standing": "Industrial",
+   "services": "Construction contracts, repairs, defensive upgrades.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_farmers",
+   "order": 22,
+   "name": "Farmers' and Herbalists' Cooperative",
+   "purpose": "Food production, herb cultivation, gathering and rural defence.",
+   "access": "public",
+   "standing": "Community",
+   "services": "Harvest protection, herb orders, monster control.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_conservation",
+   "order": 23,
+   "name": "Beast Research and Conservation Society",
+   "purpose": "Study, sanctuary, relocation and protection of rare species.",
+   "access": "public",
+   "standing": "Conservation",
+   "services": "Research expeditions, rescue, habitat restoration.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_necromancers",
+   "order": 24,
+   "name": "Necromancers' Collegium",
+   "purpose": "Controlled undead research, funerary rites and containment.",
+   "access": "restricted",
+   "standing": "Controversial",
+   "services": "Containment licences, relic recovery, undead investigations.",
+   "usesMemberLadder": true,
+   "ours": {
+    "canon": "Restricted/controversial: containment and funeral rites only, consistent with Canon section 3 secrets staying unspoiled."
+   }
+  },
+  {
+   "id": "gld_exorcists",
+   "order": 25,
+   "name": "Exorcists' and Cursebreakers' Order",
+   "purpose": "Possession, curses, hauntings, corruption and spiritual threats.",
+   "access": "public",
+   "standing": "Specialist",
+   "services": "Exorcisms, curse removal, haunted-site contracts.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_relic_seekers",
+   "order": 26,
+   "name": "Relic Seekers' Society",
+   "purpose": "Recovery, authentication and protection of ancient artefacts.",
+   "access": "public",
+   "standing": "Competitive",
+   "services": "Relic expeditions, appraisal, ruin permits.",
+   "usesMemberLadder": true
+  },
+  {
+   "id": "gld_arena",
+   "order": 27,
+   "name": "Arena Champions' Association",
+   "purpose": "Organized duels, tournaments, rankings and public challenges.",
+   "access": "public",
+   "standing": "Competitive",
+   "services": "Arena matches, sponsorships, training events.",
+   "usesMemberLadder": true,
+   "ours": {
+    "canon": "No new Canon conflict, but Canon 4d forbids the arena from promoting named monsters."
+   }
+  },
+  {
+   "id": "gld_shadow_syndicate",
+   "order": 28,
+   "name": "Secretive Shadow Syndicate",
+   "purpose": "Espionage, information brokerage, infiltration and covert work.",
+   "access": "hidden",
+   "standing": "Illegal or morally grey",
+   "services": "Rumours, stealth missions, black-market intelligence.",
+   "usesMemberLadder": true,
+   "ours": {
+    "teenRating": "Information and stealth work only; no real-world crime detail."
+   }
+  },
+  {
+   "id": "gld_veiled_hand",
+   "order": 29,
+   "name": "Veiled Hand Assassins' Network",
+   "purpose": "Covert elimination, sabotage and political intrigue.",
+   "access": "hidden",
+   "standing": "Criminal",
+   "services": "High-risk contracts, faction plots, wanted notices.",
+   "usesMemberLadder": true,
+   "ours": {
+    "teenRating": "Contracts are political and implied, never shown as graphic; offer as faction plots and wanted notices. Needs a Canon section 6 OK before any assassination contract is playable."
+   }
+  },
+  {
+   "id": "gld_free_cities_council",
+   "order": 30,
+   "name": "Free Cities' Guild Council",
+   "purpose": "Coordinates guild charters, dispute resolution and inter-city standards.",
+   "access": "public",
+   "standing": "Political",
+   "services": "Guild licensing, arbitration, regional policy.",
+   "usesMemberLadder": true
+  }
+ ]
+}

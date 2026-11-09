@@ -1,0 +1,1959 @@
+{
+ "notes": "The 30 major monster groups with nine-stage progression from the Monster Classification & Guild System bible v1.0 (user PDF). DRAFT: Canon section 6 proposal in 13_Production/monster_guild_integration.md. These are naming and progression templates; no stats. familyKeys is our crosswalk to Data/Monsters/species.json (empty = the game has no matching family yet). Stage 7 to 9 names (Lord, King, Emperor) are species labels, not enemy hierarchy (Canon 4d).",
+ "stageGrammar": [
+  "Lesser",
+  "Common",
+  "Greater",
+  "Advanced",
+  "Elite",
+  "Superior",
+  "Lord",
+  "King / Queen / Emperor",
+  "Ancient / Mythical"
+ ],
+ "groups": [
+  {
+   "id": "evl_goblins",
+   "order": 1,
+   "name": "Goblins",
+   "bibleFamily": "Humanoid",
+   "familyKeys": [
+    "goblinoid"
+   ],
+   "identity": "Intelligent, adaptable, tribal and resourceful humanoids.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Goblin"
+    },
+    {
+     "stage": 2,
+     "label": "Goblin"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Goblin"
+    },
+    {
+     "stage": 4,
+     "label": "Hobgoblin"
+    },
+    {
+     "stage": 5,
+     "label": "Goblin Elite"
+    },
+    {
+     "stage": 6,
+     "label": "Goblin Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Goblin Chieftain"
+    },
+    {
+     "stage": 8,
+     "label": "Goblin King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Goblin King"
+    }
+   ],
+   "branches": [
+    "Warrior: Goblin Fighter > Hobgoblin Guard > Goblin Champion",
+    "Magic: Goblin Shaman > High Shaman > Arch Shaman",
+    "Stealth: Goblin Rogue > Assassin > Shadow Goblin",
+    "Engineering: Tinkerer > Siege Engineer > Master Inventor",
+    "Leadership: Captain > Chieftain > Goblin King"
+   ],
+   "variants": [
+    "Cave Goblin",
+    "Forest Goblin",
+    "Mountain Goblin",
+    "Swamp Goblin",
+    "Night Goblin"
+   ],
+   "signatureAbilities": "Scouting, traps, scavenging, engineering, ambushes and improvised weapons.",
+   "society": "Nests, camps, villages and fortified warrens. Strength comes from numbers, traps, adaptability and clever specialists."
+  },
+  {
+   "id": "evl_orcs",
+   "order": 2,
+   "name": "Orcs",
+   "bibleFamily": "Humanoid",
+   "familyKeys": [
+    "orc_giant"
+   ],
+   "identity": "Powerful, militaristic humanoids organized into clans and warbands.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Orc"
+    },
+    {
+     "stage": 2,
+     "label": "Common Orc"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Orc"
+    },
+    {
+     "stage": 4,
+     "label": "High Orc"
+    },
+    {
+     "stage": 5,
+     "label": "Orc Elite"
+    },
+    {
+     "stage": 6,
+     "label": "Orc Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Orc Chieftain"
+    },
+    {
+     "stage": 8,
+     "label": "Orc Warlord"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Orc Emperor"
+    }
+   ],
+   "branches": [
+    "Berserker: Orc > Berserker > Blood Berserker > War Berserker",
+    "Warrior: Orc Fighter > Elite Warrior > Orc Champion",
+    "Magic: Orc Shaman > High Shaman > Warlock",
+    "Beastmaster: Beast Tamer > War Beast Commander",
+    "Leadership: Captain > General > Chieftain > Warlord"
+   ],
+   "variants": [
+    "Iron Orc",
+    "Frost Orc",
+    "Ash Orc",
+    "Mountain Orc",
+    "Blood Orc"
+   ],
+   "signatureAbilities": "War cries, heavy weapons, clan tactics, beast mounts and battle magic.",
+   "society": "Clan confederations, fortress states or empires. Leadership is earned through strength, strategy and victories."
+  },
+  {
+   "id": "evl_trolls",
+   "order": 3,
+   "name": "Trolls",
+   "bibleFamily": "Humanoid",
+   "familyKeys": [
+    "orc_giant"
+   ],
+   "identity": "Large territorial creatures with strong regeneration and resilience.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Troll"
+    },
+    {
+     "stage": 2,
+     "label": "Common Troll"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Troll"
+    },
+    {
+     "stage": 4,
+     "label": "Cave Troll"
+    },
+    {
+     "stage": 5,
+     "label": "War Troll"
+    },
+    {
+     "stage": 6,
+     "label": "Elder Troll"
+    },
+    {
+     "stage": 7,
+     "label": "Troll Chieftain"
+    },
+    {
+     "stage": 8,
+     "label": "Troll King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Troll Titan"
+    }
+   ],
+   "branches": [
+    "Regeneration: Regenerative Troll > Immortal Troll",
+    "Stone: Stone Troll > Mountain > Living Mountain",
+    "Combat: War Troll > Berserker Troll > Destroyer Troll",
+    "Magic: Troll Shaman > Earth Troll Mage",
+    "Leadership: Elder Troll > Chieftain > Troll King"
+   ],
+   "variants": [
+    "Forest Troll",
+    "Ice Troll",
+    "Cave Troll",
+    "Swamp Troll",
+    "Stone Troll"
+   ],
+   "signatureAbilities": "Regeneration, ambush, crushing blows, terrain adaptation and endurance.",
+   "society": "Lairs, caves, bridges, ruins or wilderness territories. Fire, acid or specific magic can counter regeneration."
+  },
+  {
+   "id": "evl_ogres",
+   "order": 4,
+   "name": "Ogres",
+   "bibleFamily": "Humanoid",
+   "familyKeys": [
+    "orc_giant"
+   ],
+   "identity": "Massive humanoids with exceptional strength and durability.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Ogre"
+    },
+    {
+     "stage": 2,
+     "label": "Common Ogre"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Ogre"
+    },
+    {
+     "stage": 4,
+     "label": "High Ogre"
+    },
+    {
+     "stage": 5,
+     "label": "Ogre Brute"
+    },
+    {
+     "stage": 6,
+     "label": "Ogre Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Ogre Chieftain"
+    },
+    {
+     "stage": 8,
+     "label": "Ogre King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Ogre Colossus"
+    }
+   ],
+   "branches": [
+    "Brute: Ogre > Heavy Ogre > Giant Brute",
+    "Armoured: Ogre > Iron Ogre > Fortress Ogre",
+    "Magic: Ogre Mage > Arcane Ogre > High Ogre Magus",
+    "Hunter: Ogre Hunter > Ogre Executioner",
+    "Leadership: Chieftain > Ogre King > Colossus King"
+   ],
+   "variants": [
+    "Swamp Ogre",
+    "Mountain Ogre",
+    "Iron Ogre",
+    "Fire Ogre",
+    "Frost Ogre"
+   ],
+   "signatureAbilities": "Siege strength, heavy clubs, armour breaking, throwing attacks and intimidation.",
+   "society": "Small clans, mercenary companies or fortress tribes. They value food, territory, trophies and strength."
+  },
+  {
+   "id": "evl_hobgoblin_kind",
+   "order": 5,
+   "name": "Hobgoblin-kind",
+   "bibleFamily": "Humanoid",
+   "familyKeys": [
+    "goblinoid"
+   ],
+   "identity": "Disciplined, organized humanoids with a strong military culture; intentionally distinct from Goblins.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Hobgoblin"
+    },
+    {
+     "stage": 2,
+     "label": "Hobgoblin"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Hobgoblin"
+    },
+    {
+     "stage": 4,
+     "label": "Hobgoblin Soldier"
+    },
+    {
+     "stage": 5,
+     "label": "Hobgoblin Elite"
+    },
+    {
+     "stage": 6,
+     "label": "Hobgoblin Knight"
+    },
+    {
+     "stage": 7,
+     "label": "Hobgoblin General"
+    },
+    {
+     "stage": 8,
+     "label": "Hobgoblin Emperor"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Hobgoblin Sovereign"
+    }
+   ],
+   "branches": [
+    "Legionnaire: Soldier > Legionnaire > Iron Legionnaire",
+    "Knight: Knight > Royal Knight > Grand Marshal",
+    "Commander: Captain > General > Emperor",
+    "Magic: Battle Mage > War Strategist > Arch Tactician",
+    "Scout: Ranger > Shadow Scout > Pathfinder"
+   ],
+   "variants": [
+    "Red Hobgoblin",
+    "Black Hobgoblin",
+    "Iron Hobgoblin",
+    "Shadow Hobgoblin"
+   ],
+   "signatureAbilities": "Formation tactics, shields, siege craft, command auras and battlefield discipline.",
+   "society": "Legions, city-states, military republics or empires."
+  },
+  {
+   "id": "evl_dragons",
+   "order": 6,
+   "name": "Dragons",
+   "bibleFamily": "Draconic",
+   "familyKeys": [
+    "draconic"
+   ],
+   "identity": "Ancient scaled creatures with powerful bodies, breath weapons and often innate magic.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Dragonling"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Dragon"
+    },
+    {
+     "stage": 3,
+     "label": "Young Dragon"
+    },
+    {
+     "stage": 4,
+     "label": "Adult Dragon"
+    },
+    {
+     "stage": 5,
+     "label": "Greater Dragon"
+    },
+    {
+     "stage": 6,
+     "label": "Elder Dragon"
+    },
+    {
+     "stage": 7,
+     "label": "Dragon Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Dragon King / Emperor"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Dragon God"
+    }
+   ],
+   "branches": [
+    "Fire: Flame > Inferno > Solar Dragon",
+    "Ice: Frost > Glacier > Absolute Zero Dragon",
+    "Lightning: Storm > Thunder Dragon",
+    "Earth: Stone > Mountain Dragon",
+    "Darkness: Shadow > Abyss Dragon",
+    "Light: Radiant > Celestial Dragon"
+   ],
+   "variants": [
+    "Western Dragon",
+    "Eastern Dragon",
+    "Sea Dragon",
+    "Sky Dragon",
+    "Crystal Dragon"
+   ],
+   "signatureAbilities": "Breath weapons, flight, elemental resistance, hoards, territorial magic and ancient memory.",
+   "society": "Solitary sovereigns, ancestral houses or loose flights. Their lairs often alter the surrounding ecosystem."
+  },
+  {
+   "id": "evl_wyverns",
+   "order": 7,
+   "name": "Wyverns",
+   "bibleFamily": "Draconic",
+   "familyKeys": [
+    "draconic"
+   ],
+   "identity": "Aerial draconic predators, typically lighter and more specialized for flight.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Wyvern Hatchling"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Wyvern"
+    },
+    {
+     "stage": 3,
+     "label": "Common Wyvern"
+    },
+    {
+     "stage": 4,
+     "label": "Greater Wyvern"
+    },
+    {
+     "stage": 5,
+     "label": "War Wyvern"
+    },
+    {
+     "stage": 6,
+     "label": "Elder Wyvern"
+    },
+    {
+     "stage": 7,
+     "label": "Wyvern Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Wyvern King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Sky Wyvern"
+    }
+   ],
+   "branches": [
+    "Fire Wyvern",
+    "Frost Wyvern",
+    "Poison Wyvern",
+    "Thunder Wyvern",
+    "Armoured Wyvern",
+    "Royal Wyvern"
+   ],
+   "variants": [
+    "Cliff Wyvern",
+    "Marsh Wyvern",
+    "Desert Wyvern",
+    "Storm Wyvern"
+   ],
+   "signatureAbilities": "Aerial dives, tail strikes, venom, flock tactics and nesting territory control.",
+   "society": "Nest in cliffs, ruins and mountain ranges. Some form flocks under a dominant alpha."
+  },
+  {
+   "id": "evl_drakes",
+   "order": 8,
+   "name": "Drakes",
+   "bibleFamily": "Draconic",
+   "familyKeys": [
+    "draconic"
+   ],
+   "identity": "Ground-oriented or heavily built draconic creatures.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Drake Hatchling"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Drake"
+    },
+    {
+     "stage": 3,
+     "label": "Common Drake"
+    },
+    {
+     "stage": 4,
+     "label": "Greater Drake"
+    },
+    {
+     "stage": 5,
+     "label": "Armoured Drake"
+    },
+    {
+     "stage": 6,
+     "label": "Elder Drake"
+    },
+    {
+     "stage": 7,
+     "label": "Drake Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Drake King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Drake Colossus"
+    }
+   ],
+   "branches": [
+    "Land Drake",
+    "Fire Drake",
+    "Ice Drake",
+    "Sand Drake",
+    "Iron Drake",
+    "Crystal Drake"
+   ],
+   "variants": [
+    "Burrowing Drake",
+    "Siege Drake",
+    "Cave Drake"
+   ],
+   "signatureAbilities": "Armour, charges, burrowing, elemental glands and ground-shaking attacks.",
+   "society": "Commonly defend mineral-rich caves, canyons and volcanic valleys."
+  },
+  {
+   "id": "evl_basilisks_gorgons",
+   "order": 9,
+   "name": "Basilisks and Gorgons",
+   "bibleFamily": "Draconic",
+   "familyKeys": [
+    "reptile",
+    "serpentfolk"
+   ],
+   "identity": "Reptilian monsters whose gaze, venom or aura can petrify or weaken prey.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Basilisk"
+    },
+    {
+     "stage": 2,
+     "label": "Basilisk"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Basilisk"
+    },
+    {
+     "stage": 4,
+     "label": "Stone Basilisk"
+    },
+    {
+     "stage": 5,
+     "label": "Gorgon"
+    },
+    {
+     "stage": 6,
+     "label": "Greater Gorgon"
+    },
+    {
+     "stage": 7,
+     "label": "Gorgon Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Gorgon King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Petrifying Serpent"
+    }
+   ],
+   "branches": [
+    "Petrification",
+    "Poison",
+    "Venom",
+    "Gaze Magic",
+    "Earth Magic"
+   ],
+   "variants": [
+    "Cave Basilisk",
+    "Desert Basilisk",
+    "Marsh Basilisk",
+    "Crowned Gorgon"
+   ],
+   "signatureAbilities": "Petrifying gaze, venom, ambush, stone scales and territory denial.",
+   "society": "Lairs may contain petrified victims, mineral deposits and dangerous sight-line hazards."
+  },
+  {
+   "id": "evl_hydras",
+   "order": 10,
+   "name": "Hydras and Serpent Beasts",
+   "bibleFamily": "Draconic",
+   "familyKeys": [
+    "reptile",
+    "aquatic"
+   ],
+   "identity": "Multi-headed or giant serpentine creatures with regeneration and area control.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Serpent"
+    },
+    {
+     "stage": 2,
+     "label": "Giant Serpent"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Serpent"
+    },
+    {
+     "stage": 4,
+     "label": "Lesser Hydra"
+    },
+    {
+     "stage": 5,
+     "label": "Hydra"
+    },
+    {
+     "stage": 6,
+     "label": "Greater Hydra"
+    },
+    {
+     "stage": 7,
+     "label": "Hydra Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Hydra King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient World Hydra"
+    }
+   ],
+   "branches": [
+    "Multi-headed Hydra",
+    "Poison Hydra",
+    "Fire Hydra",
+    "Ice Hydra",
+    "Sea Hydra",
+    "Regenerative Hydra"
+   ],
+   "variants": [
+    "River Serpent",
+    "Cavern Serpent",
+    "Abyss Serpent"
+   ],
+   "signatureAbilities": "Multiple simultaneous attacks, head regeneration, constriction, venom and elemental breath.",
+   "society": "Dominate swamps, lakes, river valleys and ancient waterways. Cutting heads may trigger different outcomes by species."
+  },
+  {
+   "id": "evl_undead",
+   "order": 11,
+   "name": "Undead",
+   "bibleFamily": "Supernatural",
+   "familyKeys": [
+    "undead"
+   ],
+   "identity": "Creatures animated by necromancy, curses, lingering souls or supernatural forces.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Skeleton"
+    },
+    {
+     "stage": 2,
+     "label": "Skeleton / Zombie"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Undead"
+    },
+    {
+     "stage": 4,
+     "label": "Ghoul"
+    },
+    {
+     "stage": 5,
+     "label": "Death Knight"
+    },
+    {
+     "stage": 6,
+     "label": "Lich"
+    },
+    {
+     "stage": 7,
+     "label": "High Lich"
+    },
+    {
+     "stage": 8,
+     "label": "Undead King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Death Sovereign"
+    }
+   ],
+   "branches": [
+    "Skeleton Warrior",
+    "Zombie Brute",
+    "Ghoul Stalker",
+    "Death Knight",
+    "Necromancer",
+    "Lich",
+    "Bone Dragon"
+   ],
+   "variants": [
+    "Frozen Undead",
+    "Plague Undead",
+    "Royal Undead",
+    "Ancient Undead"
+   ],
+   "signatureAbilities": "Soul drain, necromancy, fear, reassembly, curses and command over lesser undead.",
+   "society": "Factions may be ruled by necromancers, liches, death knights or a shared death-consciousness."
+  },
+  {
+   "id": "evl_demons",
+   "order": 12,
+   "name": "Demons",
+   "bibleFamily": "Supernatural",
+   "familyKeys": [
+    "demon"
+   ],
+   "identity": "Infernal or abyssal supernatural beings with varied forms and hierarchies.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Imp"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Demon"
+    },
+    {
+     "stage": 3,
+     "label": "Common Demon"
+    },
+    {
+     "stage": 4,
+     "label": "Greater Demon"
+    },
+    {
+     "stage": 5,
+     "label": "Demon Elite"
+    },
+    {
+     "stage": 6,
+     "label": "Demon Knight"
+    },
+    {
+     "stage": 7,
+     "label": "Demon Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Demon King"
+    },
+    {
+     "stage": 9,
+     "label": "Archdemon / Primordial Demon"
+    }
+   ],
+   "branches": [
+    "Flame Demon",
+    "Shadow Demon",
+    "Blood Demon",
+    "War Demon",
+    "Demon Mage",
+    "Demon Knight"
+   ],
+   "variants": [
+    "Infernal Demon",
+    "Abyssal Demon",
+    "Fallen Demon",
+    "Ancient Demon"
+   ],
+   "signatureAbilities": "Hellfire, contracts, corruption, summoning, possession and fear auras.",
+   "society": "Feudal courts, war legions, cult networks or competing infernal houses."
+  },
+  {
+   "id": "evl_spirits",
+   "order": 13,
+   "name": "Spirits and Wraiths",
+   "bibleFamily": "Supernatural",
+   "familyKeys": [
+    "yokai",
+    "shadow"
+   ],
+   "identity": "Ethereal beings linked to souls, places, memories or natural forces.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Spirit"
+    },
+    {
+     "stage": 2,
+     "label": "Wandering Spirit"
+    },
+    {
+     "stage": 3,
+     "label": "Ghost"
+    },
+    {
+     "stage": 4,
+     "label": "Wraith"
+    },
+    {
+     "stage": 5,
+     "label": "Greater Wraith"
+    },
+    {
+     "stage": 6,
+     "label": "Spirit Knight"
+    },
+    {
+     "stage": 7,
+     "label": "Spirit Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Spirit King"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Spirit"
+    }
+   ],
+   "branches": [
+    "Wind Spirit",
+    "Water Spirit",
+    "Forest Spirit",
+    "Shadow Wraith",
+    "Soul Reaper",
+    "Astral Spirit"
+   ],
+   "variants": [
+    "Haunting Spirit",
+    "Guardian Spirit",
+    "Vengeful Spirit",
+    "Ancestral Spirit"
+   ],
+   "signatureAbilities": "Intangibility, possession, fear, soul effects, illusions and spiritual projection.",
+   "society": "Bound to shrines, forests, battlefields, objects or ancestral bloodlines."
+  },
+  {
+   "id": "evl_vampires",
+   "order": 14,
+   "name": "Vampires",
+   "bibleFamily": "Supernatural",
+   "familyKeys": [
+    "undead",
+    "vesperite"
+   ],
+   "identity": "Blood-dependent supernatural predators with bloodline abilities and social houses.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Vampire"
+    },
+    {
+     "stage": 2,
+     "label": "Common Vampire"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Vampire"
+    },
+    {
+     "stage": 4,
+     "label": "Vampire Noble"
+    },
+    {
+     "stage": 5,
+     "label": "Vampire Knight"
+    },
+    {
+     "stage": 6,
+     "label": "Vampire Lord"
+    },
+    {
+     "stage": 7,
+     "label": "High Vampire"
+    },
+    {
+     "stage": 8,
+     "label": "Vampire King"
+    },
+    {
+     "stage": 9,
+     "label": "Progenitor Vampire"
+    }
+   ],
+   "branches": [
+    "Blood Mage",
+    "Vampire Knight",
+    "Shadow Vampire",
+    "Beast Vampire",
+    "Royal Vampire",
+    "Blood Emperor"
+   ],
+   "variants": [
+    "Noble Vampire",
+    "Feral Vampire",
+    "Daywalker",
+    "Ancient Bloodline"
+   ],
+   "signatureAbilities": "Blood regeneration, heightened senses, charm, mist form and bloodline magic.",
+   "society": "Houses, courts, covens and dynasties with strict bloodline politics."
+  },
+  {
+   "id": "evl_celestials",
+   "order": 15,
+   "name": "Fallen and Celestial Monsters",
+   "bibleFamily": "Supernatural",
+   "familyKeys": [],
+   "identity": "Radiant, divine or fallen supernatural beings with sacred or corrupted celestial power.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Celestial"
+    },
+    {
+     "stage": 2,
+     "label": "Celestial Being"
+    },
+    {
+     "stage": 3,
+     "label": "Fallen Celestial"
+    },
+    {
+     "stage": 4,
+     "label": "Celestial Warrior"
+    },
+    {
+     "stage": 5,
+     "label": "High Celestial"
+    },
+    {
+     "stage": 6,
+     "label": "Archcelestial"
+    },
+    {
+     "stage": 7,
+     "label": "Celestial Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Celestial King"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Celestial"
+    }
+   ],
+   "branches": [
+    "Radiant Warrior",
+    "Fallen Knight",
+    "Divine Mage",
+    "Seraphic Guardian",
+    "Void Celestial"
+   ],
+   "variants": [
+    "Seraph",
+    "Cherub",
+    "Fallen Herald",
+    "Sanctuary Guardian"
+   ],
+   "signatureAbilities": "Purification, barriers, flight, radiant attacks, blessings and anti-undead powers.",
+   "society": "Hierarchical orders, sanctuaries or fallen hosts. Their goals need not always align with mortals."
+  },
+  {
+   "id": "evl_beasts",
+   "order": 16,
+   "name": "Beast Monsters",
+   "bibleFamily": "Beast and Insect",
+   "familyKeys": [
+    "beast",
+    "lycan"
+   ],
+   "identity": "Animal-like monsters with strong instincts, physical abilities and ecological roles.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Beast"
+    },
+    {
+     "stage": 2,
+     "label": "Common Beast"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Beast"
+    },
+    {
+     "stage": 4,
+     "label": "Dire Beast"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Beast"
+    },
+    {
+     "stage": 6,
+     "label": "Alpha Beast"
+    },
+    {
+     "stage": 7,
+     "label": "Beast Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Beast King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Beast"
+    }
+   ],
+   "branches": [
+    "Wolf: Wolf > Dire Wolf > Fenrir",
+    "Bear: Bear > Giant Bear > Earthshaker Bear",
+    "Lion: Lion > King Lion > Solar Lion",
+    "Cat: Wildcat > Shadow Panther > Phantom Panther",
+    "Hybrid: Chimera > Greater Chimera > Mythical Chimera"
+   ],
+   "variants": [
+    "Dire Wolf",
+    "Giant Bear",
+    "Thunder Lion",
+    "Shadow Panther",
+    "Chimera"
+   ],
+   "signatureAbilities": "Pack tactics, scent tracking, pounce, natural armour and territorial instincts.",
+   "society": "Packs, prides, dens and migration routes. Alpha status may be earned through challenge or age."
+  },
+  {
+   "id": "evl_insects",
+   "order": 17,
+   "name": "Insects",
+   "bibleFamily": "Beast and Insect",
+   "familyKeys": [
+    "insect",
+    "killer_insect"
+   ],
+   "identity": "Colony-based creatures with castes and specialized biological roles.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Insect"
+    },
+    {
+     "stage": 2,
+     "label": "Common Insect"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Insect"
+    },
+    {
+     "stage": 4,
+     "label": "Armoured Insect"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Insect"
+    },
+    {
+     "stage": 6,
+     "label": "Insect Commander"
+    },
+    {
+     "stage": 7,
+     "label": "Insect Queen"
+    },
+    {
+     "stage": 8,
+     "label": "Insect Empress"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Insect Sovereign"
+    }
+   ],
+   "branches": [
+    "Ant: Worker > Soldier > Elite Soldier > General > Queen",
+    "Beetle: Beetle > Armoured Beetle > Colossus Beetle",
+    "Wasp: Wasp > Hunter Wasp > Royal Wasp",
+    "Spider-like line: Broodling > Giant Weaver > Broodmother",
+    "Mantis: Mantis > Blade Mantis > Death Mantis"
+   ],
+   "variants": [
+    "Crystal Beetle",
+    "Poison Wasp",
+    "Iron Ant",
+    "Shadow Weaver",
+    "Flame Mantis"
+   ],
+   "signatureAbilities": "Hive coordination, pheromones, armour, venom, burrowing and caste abilities.",
+   "society": "Colonies with workers, soldiers, scouts, breeders, royal guards, queens and empresses."
+  },
+  {
+   "id": "evl_arachnids",
+   "order": 18,
+   "name": "Arachnids",
+   "bibleFamily": "Beast and Insect",
+   "familyKeys": [
+    "insect"
+   ],
+   "identity": "Spider- and scorpion-like monsters treated as a distinct family for richer taxonomy.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Arachnid"
+    },
+    {
+     "stage": 2,
+     "label": "Common Arachnid"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Arachnid"
+    },
+    {
+     "stage": 4,
+     "label": "Giant Arachnid"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Arachnid"
+    },
+    {
+     "stage": 6,
+     "label": "Arachnid Stalker"
+    },
+    {
+     "stage": 7,
+     "label": "Arachnid Broodmother"
+    },
+    {
+     "stage": 8,
+     "label": "Arachnid Queen"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Arachnid Goddess"
+    }
+   ],
+   "branches": [
+    "Spider",
+    "Scorpion",
+    "Tarantula",
+    "Web Weaver",
+    "Poison Stalker",
+    "Armoured Scorpion"
+   ],
+   "variants": [
+    "Cave Weaver",
+    "Desert Scorpion",
+    "Frost Spider",
+    "Royal Broodmother"
+   ],
+   "signatureAbilities": "Webs, venom, ambush, burrowing, climbing and multi-limb attacks.",
+   "society": "Solitary hunters, nesting colonies or broodmother-led territories."
+  },
+  {
+   "id": "evl_avians",
+   "order": 19,
+   "name": "Avian Monsters",
+   "bibleFamily": "Beast and Insect",
+   "familyKeys": [
+    "avian"
+   ],
+   "identity": "Flying creatures with aerial mobility, keen senses and sky-territory control.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Bird Beast"
+    },
+    {
+     "stage": 2,
+     "label": "Common Avian"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Avian"
+    },
+    {
+     "stage": 4,
+     "label": "Winged Beast"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Avian"
+    },
+    {
+     "stage": 6,
+     "label": "Royal Avian"
+    },
+    {
+     "stage": 7,
+     "label": "Sky Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Sky King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Sky Sovereign"
+    }
+   ],
+   "branches": [
+    "Eagle: Giant Eagle > Royal Eagle > Sky Emperor",
+    "Griffin: Lesser Griffin > Greater Griffin > Royal Griffin",
+    "Phoenix: Firebird > Phoenix > Eternal Phoenix",
+    "Roc: Giant Roc > Ancient Roc",
+    "Thunderbird: Storm Bird > Thunder Lord"
+   ],
+   "variants": [
+    "Giant Eagle",
+    "Griffin",
+    "Phoenix",
+    "Roc",
+    "Thunderbird"
+   ],
+   "signatureAbilities": "Flight, wind manipulation, dive attacks, talons, aerial scouting and rebirth for selected species.",
+   "society": "Cliffs, high forests, floating islands and storm peaks."
+  },
+  {
+   "id": "evl_plants",
+   "order": 20,
+   "name": "Magical Plant Monsters",
+   "bibleFamily": "Beast and Insect",
+   "familyKeys": [
+    "plant"
+   ],
+   "identity": "Living plants that hunt, defend territories and absorb magical energy.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Plant Creature"
+    },
+    {
+     "stage": 2,
+     "label": "Living Plant"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Plant"
+    },
+    {
+     "stage": 4,
+     "label": "Carnivorous Plant"
+    },
+    {
+     "stage": 5,
+     "label": "Ancient Plant"
+    },
+    {
+     "stage": 6,
+     "label": "Forest Guardian"
+    },
+    {
+     "stage": 7,
+     "label": "Treant Lord"
+    },
+    {
+     "stage": 8,
+     "label": "World Tree Guardian"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial World Tree"
+    }
+   ],
+   "branches": [
+    "Carnivorous: Man-Eater > Devourer Flower",
+    "Vine: Vine Beast > Thorn Monster > Thorn Lord",
+    "Tree: Living Tree > Treant > Ancient Treant",
+    "Fungal: Mushroom Creature > Spore Lord > Mycelium Sovereign",
+    "Floral: Magical Flower > Bloom Guardian > Eternal Blossom"
+   ],
+   "variants": [
+    "Man-Eater Flower",
+    "Thorn Vine",
+    "Ancient Treant",
+    "Spore Lord",
+    "World Tree Guardian"
+   ],
+   "signatureAbilities": "Regeneration, roots, poison spores, camouflage, pollen and environmental control.",
+   "society": "Forests, root networks, fungal minds or guardians of sacred groves."
+  },
+  {
+   "id": "evl_golems",
+   "order": 21,
+   "name": "Golems",
+   "bibleFamily": "Constructed and Elemental",
+   "familyKeys": [
+    "construct"
+   ],
+   "identity": "Artificial magical beings powered by cores, runes and command systems.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Golem"
+    },
+    {
+     "stage": 2,
+     "label": "Basic Golem"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Golem"
+    },
+    {
+     "stage": 4,
+     "label": "Advanced Golem"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Golem"
+    },
+    {
+     "stage": 6,
+     "label": "Guardian Golem"
+    },
+    {
+     "stage": 7,
+     "label": "Ancient Golem"
+    },
+    {
+     "stage": 8,
+     "label": "Royal Golem"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Golem"
+    }
+   ],
+   "branches": [
+    "Clay > Hardened Clay > Living Earth",
+    "Stone > Granite > Mountain Golem",
+    "Iron > Steel > Adamantine Golem",
+    "Crystal > Mana Crystal > Arcane Golem",
+    "Elemental Core > Elemental Golem > Supreme Golem",
+    "Mechanical Golem > War Machine > Ancient Automaton"
+   ],
+   "variants": [
+    "Clay",
+    "Stone",
+    "Iron",
+    "Crystal",
+    "Elemental",
+    "Mechanical"
+   ],
+   "signatureAbilities": "Core protection, runic barriers, heavy strikes, self-repair and command obedience.",
+   "society": "Made, awakened, inherited or discovered in ruins. Their core determines much of their capability."
+  },
+  {
+   "id": "evl_elementals",
+   "order": 22,
+   "name": "Elementals",
+   "bibleFamily": "Constructed and Elemental",
+   "familyKeys": [
+    "elemental"
+   ],
+   "identity": "Beings formed from pure elemental energy.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Elemental Spark"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Elemental"
+    },
+    {
+     "stage": 3,
+     "label": "Common Elemental"
+    },
+    {
+     "stage": 4,
+     "label": "Greater Elemental"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Elemental"
+    },
+    {
+     "stage": 6,
+     "label": "Elemental Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Elemental Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Elemental King"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Elemental"
+    }
+   ],
+   "branches": [
+    "Fire: Flame > Inferno > Solar Flame",
+    "Water: Droplet > Tide > Ocean",
+    "Earth: Pebble > Stone > Mountain",
+    "Wind: Breeze > Gale > Tempest",
+    "Ice: Frost > Glacier > Absolute Ice",
+    "Lightning: Spark > Thunder > Storm",
+    "Light: Radiance > Holy Light > Celestial Light",
+    "Darkness: Shade > Abyss > Primordial Darkness"
+   ],
+   "variants": [
+    "Fire",
+    "Water",
+    "Earth",
+    "Wind",
+    "Ice",
+    "Lightning",
+    "Light",
+    "Darkness"
+   ],
+   "signatureAbilities": "Elemental transformation, area control, energy absorption and resistance to own element.",
+   "society": "Gather around nexuses, shrines, storms, volcanoes and ley lines."
+  },
+  {
+   "id": "evl_automata",
+   "order": 23,
+   "name": "Magical Constructs and Automata",
+   "bibleFamily": "Constructed and Elemental",
+   "familyKeys": [
+    "construct"
+   ],
+   "identity": "Artificial beings made through engineering, enchanted machinery and ancient technology.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Basic Automaton"
+    },
+    {
+     "stage": 2,
+     "label": "Mechanical Servant"
+    },
+    {
+     "stage": 3,
+     "label": "Combat Automaton"
+    },
+    {
+     "stage": 4,
+     "label": "Advanced Automaton"
+    },
+    {
+     "stage": 5,
+     "label": "War Automaton"
+    },
+    {
+     "stage": 6,
+     "label": "Intelligent Construct"
+    },
+    {
+     "stage": 7,
+     "label": "Ancient Machine Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Mechanical Emperor"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Automaton"
+    }
+   ],
+   "branches": [
+    "Mechanical Soldier",
+    "Clockwork Assassin",
+    "Siege Automaton",
+    "Magical Android",
+    "Ancient War Machine"
+   ],
+   "variants": [
+    "Clockwork",
+    "Runic",
+    "Alchemical",
+    "Arcane",
+    "Relic-Tech"
+   ],
+   "signatureAbilities": "Self-repair, tactical learning, weapon integration, network coordination and modular upgrades.",
+   "society": "Follow creator commands, ancient protocols or emergent artificial intelligence."
+  },
+  {
+   "id": "evl_crystals",
+   "order": 24,
+   "name": "Crystal Monsters",
+   "bibleFamily": "Constructed and Elemental",
+   "familyKeys": [
+    "elemental",
+    "construct"
+   ],
+   "identity": "Living mineral creatures that absorb and store magical energy.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Crystal Fragment"
+    },
+    {
+     "stage": 2,
+     "label": "Crystal Creature"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Crystal Beast"
+    },
+    {
+     "stage": 4,
+     "label": "Crystal Guardian"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Crystal Monster"
+    },
+    {
+     "stage": 6,
+     "label": "Crystal Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Crystal Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Crystal King"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Crystal Sovereign"
+    }
+   ],
+   "branches": [
+    "Ruby",
+    "Sapphire",
+    "Emerald",
+    "Amethyst",
+    "Diamond",
+    "Obsidian",
+    "Mana Crystal"
+   ],
+   "variants": [
+    "Prismatic Crystal",
+    "Resonant Crystal",
+    "Void Crystal",
+    "Heart Crystal"
+   ],
+   "signatureAbilities": "Energy reflection, magical amplification, crystal armour and resonance attacks.",
+   "society": "Colonies grow around ley lines and rare mineral deposits. Their shards are valuable crafting materials."
+  },
+  {
+   "id": "evl_slimes",
+   "order": 25,
+   "name": "Slimes and Amorphous Monsters",
+   "bibleFamily": "Constructed and Elemental",
+   "familyKeys": [
+    "slime"
+   ],
+   "identity": "Shape-changing creatures with flexible bodies and absorption abilities.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Slime"
+    },
+    {
+     "stage": 2,
+     "label": "Common Slime"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Slime"
+    },
+    {
+     "stage": 4,
+     "label": "Specialized Slime"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Slime"
+    },
+    {
+     "stage": 6,
+     "label": "King Slime"
+    },
+    {
+     "stage": 7,
+     "label": "Slime Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Slime Emperor"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Slime"
+    }
+   ],
+   "branches": [
+    "Fire Slime",
+    "Water Slime",
+    "Poison Slime",
+    "Metal Slime",
+    "Healing Slime",
+    "Mimic Slime",
+    "Acid Slime",
+    "Magic Slime"
+   ],
+   "variants": [
+    "Gelatinous",
+    "Mimetic",
+    "Split-Core",
+    "Absorption",
+    "Elemental"
+   ],
+   "signatureAbilities": "Absorption, division, regeneration, mimicry, engulfing and material adaptation.",
+   "society": "Solitary, clustered or connected through a shared core network. Their division and fusion rules need clear limits."
+  },
+  {
+   "id": "evl_giants",
+   "order": 26,
+   "name": "Giants and Titans",
+   "bibleFamily": "Ancient and Mythical",
+   "familyKeys": [
+    "orc_giant"
+   ],
+   "identity": "Enormous humanoid beings tied to terrain, weather and primordial strength.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Giant"
+    },
+    {
+     "stage": 2,
+     "label": "Common Giant"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Giant"
+    },
+    {
+     "stage": 4,
+     "label": "Mountain Giant"
+    },
+    {
+     "stage": 5,
+     "label": "Ancient Giant"
+    },
+    {
+     "stage": 6,
+     "label": "Giant Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Giant Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Titan King"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Titan"
+    }
+   ],
+   "branches": [
+    "Hill Giant",
+    "Frost Giant",
+    "Fire Giant",
+    "Storm Giant",
+    "Mountain Giant",
+    "Sea Giant",
+    "Earth Titan"
+   ],
+   "variants": [
+    "Siege Titan",
+    "Runic Giant",
+    "Cyclopean Giant",
+    "World Titan"
+   ],
+   "signatureAbilities": "Earthquakes, colossal strength, weather control, terrain destruction and giant weaponry.",
+   "society": "Clans, mountain holds, ancient courts or nomadic titan families."
+  },
+  {
+   "id": "evl_aquatic",
+   "order": 27,
+   "name": "Aquatic and Sea Monsters",
+   "bibleFamily": "Ancient and Mythical",
+   "familyKeys": [
+    "aquatic"
+   ],
+   "identity": "Creatures of rivers, lakes, oceans and abyssal depths.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Aquatic Beast"
+    },
+    {
+     "stage": 2,
+     "label": "Common Sea Creature"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Aquatic Beast"
+    },
+    {
+     "stage": 4,
+     "label": "Deep Sea Monster"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Sea Monster"
+    },
+    {
+     "stage": 6,
+     "label": "Sea Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Sea Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Sea King"
+    },
+    {
+     "stage": 9,
+     "label": "Ancient Abyssal Sovereign"
+    }
+   ],
+   "branches": [
+    "Kraken",
+    "Leviathan",
+    "Sea Serpent",
+    "Abyssal Fish",
+    "Giant Shark",
+    "Merfolk",
+    "Coral Monster"
+   ],
+   "variants": [
+    "Reef Guardian",
+    "Trench Horror",
+    "Storm Leviathan",
+    "Abyssal Monarch"
+   ],
+   "signatureAbilities": "Water manipulation, pressure resistance, underwater ambush, currents and ocean storms.",
+   "society": "Reef kingdoms, trench empires, migrating shoals or isolated leviathan territories."
+  },
+  {
+   "id": "evl_fae",
+   "order": 28,
+   "name": "Fae and Fairy Monsters",
+   "bibleFamily": "Ancient and Mythical",
+   "familyKeys": [
+    "gremlin",
+    "familiar"
+   ],
+   "identity": "Magical beings connected to nature, illusion, enchantment and ancient bargains.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Pixie"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Fairy"
+    },
+    {
+     "stage": 3,
+     "label": "Fairy"
+    },
+    {
+     "stage": 4,
+     "label": "Greater Fairy"
+    },
+    {
+     "stage": 5,
+     "label": "Fae Noble"
+    },
+    {
+     "stage": 6,
+     "label": "High Fae"
+    },
+    {
+     "stage": 7,
+     "label": "Fae Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Fairy Queen"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Fae"
+    }
+   ],
+   "branches": [
+    "Pixie",
+    "Dryad",
+    "Flower Fairy",
+    "Shadow Fae",
+    "Winter Fae",
+    "Trickster Fae",
+    "Royal Fae"
+   ],
+   "variants": [
+    "Glamour Fae",
+    "Briar Fae",
+    "Moon Fae",
+    "Court Fae"
+   ],
+   "signatureAbilities": "Illusions, nature magic, charms, enchantments, bargains and dimensional travel.",
+   "society": "Courts, seasonal houses, pacts and strict rules of hospitality."
+  },
+  {
+   "id": "evl_hybrids",
+   "order": 29,
+   "name": "Mythical Hybrids",
+   "bibleFamily": "Ancient and Mythical",
+   "familyKeys": [
+    "chimera",
+    "minotaur",
+    "centaur"
+   ],
+   "identity": "Creatures combining traits from multiple species or magical lineages.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Lesser Hybrid"
+    },
+    {
+     "stage": 2,
+     "label": "Common Hybrid"
+    },
+    {
+     "stage": 3,
+     "label": "Greater Hybrid"
+    },
+    {
+     "stage": 4,
+     "label": "Advanced Hybrid"
+    },
+    {
+     "stage": 5,
+     "label": "Elite Hybrid"
+    },
+    {
+     "stage": 6,
+     "label": "Mythical Hybrid"
+    },
+    {
+     "stage": 7,
+     "label": "Hybrid Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Hybrid King"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Chimera"
+    }
+   ],
+   "branches": [
+    "Chimera",
+    "Manticore",
+    "Sphinx",
+    "Griffin Hybrid",
+    "Dragon Hybrid",
+    "Beast Hybrid",
+    "Elemental Hybrid"
+   ],
+   "variants": [
+    "Bloodline Hybrid",
+    "Alchemical Hybrid",
+    "Wild Hybrid",
+    "Engineered Hybrid"
+   ],
+   "signatureAbilities": "Mixed attacks, multiple senses, adaptable anatomy and unpredictable evolution.",
+   "society": "Naturally occurring, magically created or engineered. Their ancestry should be recorded explicitly."
+  },
+  {
+   "id": "evl_void",
+   "order": 30,
+   "name": "Cosmic and Void Monsters",
+   "bibleFamily": "Ancient and Mythical",
+   "familyKeys": [
+    "aberration",
+    "headless"
+   ],
+   "identity": "Beings from beyond the ordinary world, tied to space, dimensions and primordial forces.",
+   "stages": [
+    {
+     "stage": 1,
+     "label": "Void Fragment"
+    },
+    {
+     "stage": 2,
+     "label": "Lesser Void Creature"
+    },
+    {
+     "stage": 3,
+     "label": "Common Void Being"
+    },
+    {
+     "stage": 4,
+     "label": "Greater Void Monster"
+    },
+    {
+     "stage": 5,
+     "label": "Void Elite"
+    },
+    {
+     "stage": 6,
+     "label": "Void Champion"
+    },
+    {
+     "stage": 7,
+     "label": "Void Lord"
+    },
+    {
+     "stage": 8,
+     "label": "Void Emperor"
+    },
+    {
+     "stage": 9,
+     "label": "Primordial Cosmic Entity"
+    }
+   ],
+   "branches": [
+    "Void Stalker",
+    "Star Eater",
+    "Dimensional Horror",
+    "Astral Serpent",
+    "Cosmic Devourer",
+    "Reality Breaker"
+   ],
+   "variants": [
+    "Eldritch",
+    "Astral",
+    "Gravity",
+    "Riftborn",
+    "Null"
+   ],
+   "signatureAbilities": "Dimensional travel, space distortion, gravity manipulation, reality corruption and cosmic perception.",
+   "society": "Incomprehensible, solitary or linked through a shared void intelligence. Their presence can alter world rules."
+  }
+ ]
+}

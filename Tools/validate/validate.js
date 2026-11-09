@@ -422,8 +422,32 @@ const SINGLETONS = {
   housing: { file: 'World/housing.json', schema: 'housing' },
   crops: { file: 'Items/crops.json', schema: 'crops' },
   stables: { file: 'Companions/stables.json', schema: 'stables' },
-  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' }
+  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' },
+  evolution_lines: { file: 'Monsters/evolution_lines.json', schema: 'evolution_lines' },
+  guilds: { file: 'World/guilds.json', schema: 'guilds' },
+  variations: { file: 'Monsters/variations.json', schema: 'variations' }
 };
+
+// Bible v1.0 import cross-checks (evolution lines, guilds, variations).
+{
+  const sp = load('Monsters/species.json'); const fams = new Set(sp.map(s => s.familyKey));
+  if (fs.existsSync(path.join(DATA, 'Monsters/evolution_lines.json'))) {
+    const el = load('Monsters/evolution_lines.json'); const seen = new Set();
+    for (const g of el.groups) {
+      if (seen.has(g.id)) err(g.id, 'duplicate group id'); seen.add(g.id);
+      g.stages.forEach((st, i) => { if (st.stage !== i + 1) err(g.id, `stages must run 1..9 in order (index ${i})`); });
+      for (const k of g.familyKeys) if (!fams.has(k)) err(g.id, `familyKey "${k}" is not in species.json`);
+    }
+    if (el.groups.length !== 30) err('evolution_lines.json', `expected 30 groups, got ${el.groups.length}`);
+  }
+  if (fs.existsSync(path.join(DATA, 'World/guilds.json'))) {
+    const gd = load('World/guilds.json'); const ids = new Set(gd.guilds.map(g => g.id));
+    if (ids.size !== gd.guilds.length) err('guilds.json', 'duplicate guild id');
+    if (gd.guilds.length !== 30) err('guilds.json', `expected 30 guilds, got ${gd.guilds.length}`);
+    for (const r of gd.rivalries) for (const k of [r.a, r.b]) if (!ids.has(k)) err('guilds.json', `rivalry names unknown guild ${k}`);
+    gd.memberLadder.forEach((m, i) => { if (m.tier !== i + 1) err('guilds.json', 'memberLadder tiers must rise 1..n'); });
+  }
+}
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
   const obj = load(c.file);

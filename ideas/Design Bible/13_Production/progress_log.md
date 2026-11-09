@@ -104,3 +104,4 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 | Flyers | Moths, crows and spirits hover | 101 + 65 |
 | Whisperwood | Ring 1 test field past the gate | 100 + 64 |
 | Death, loot, saves | Coins and loot, death screen and penalties, waystones, save/load; 677 blockout monster models (local) | 100 + 64 |
+| Monster and guild bible import (draft) | 30 evolution lines, 30 guilds, 12 variations as validated data and a conflict report; Canon section 6 proposals M1 to M6 | data valid; rules tests not run (no .NET in the cloud) |

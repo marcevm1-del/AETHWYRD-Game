@@ -618,6 +618,47 @@ const SCHEMAS = {
         } } }
     } };
 }
+// --- Monster evolution lines, guilds and variations (bible v1.0 import; draft data) ---
+{
+  const S = { type: 'string', minLength: 1 };
+  const SA = { type: 'array', items: S };
+  SCHEMAS.evolution_lines = {
+    title: 'Monster evolution lines', type: 'object', additionalProperties: false, required: ['notes', 'stageGrammar', 'groups'],
+    properties: {
+      notes: S, stageGrammar: { type: 'array', minItems: 9, maxItems: 9, items: S },
+      groups: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'order', 'name', 'bibleFamily', 'familyKeys', 'identity', 'stages', 'branches', 'variants', 'signatureAbilities', 'society'],
+        properties: {
+          id: id('evl_'), order: { type: 'integer', minimum: 1, maximum: 30 }, name: S, bibleFamily: S, familyKeys: SA, identity: S,
+          stages: { type: 'array', minItems: 9, maxItems: 9, items: { type: 'object', additionalProperties: false, required: ['stage', 'label'], properties: { stage: { type: 'integer', minimum: 1, maximum: 9 }, label: S } } },
+          branches: { type: 'array', minItems: 1, items: S }, variants: { type: 'array', minItems: 1, items: S }, signatureAbilities: S, society: S
+        } } }
+    }
+  };
+  SCHEMAS.guilds = {
+    title: 'Guilds and factions', type: 'object', additionalProperties: false, required: ['notes', 'reputation', 'memberLadder', 'facilities', 'rivalries', 'councilNote', 'guilds'],
+    properties: {
+      notes: S, councilNote: S, facilities: SA,
+      reputation: { type: 'object', additionalProperties: false, required: ['perGuild', 'rules'], properties: { perGuild: { type: 'boolean' }, rules: SA } },
+      memberLadder: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'tier', 'name', 'access', 'exampleRequirements'], properties: { id: id('gr_'), tier: { type: 'integer', minimum: 1 }, name: S, access: S, exampleRequirements: S } } },
+      rivalries: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['a', 'b', 'text'], properties: { a: id('gld_'), b: id('gld_'), text: S } } },
+      guilds: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'order', 'name', 'purpose', 'access', 'standing', 'services', 'usesMemberLadder'],
+        properties: {
+          id: id('gld_'), order: { type: 'integer', minimum: 1, maximum: 30 }, name: S, purpose: S, access: { type: 'string', enum: ['public', 'restricted', 'hidden'] },
+          standing: S, services: S, usesMemberLadder: { type: 'boolean' },
+          ours: { type: 'object', additionalProperties: false, properties: { mapsTo: S, canon: S, teenRating: S } }
+        } } }
+    }
+  };
+  SCHEMAS.variations = {
+    title: 'Universal monster variations', type: 'object', additionalProperties: false, required: ['notes', 'rarityTiers', 'balanceRules', 'variations'],
+    properties: {
+      notes: S, balanceRules: SA,
+      rarityTiers: { type: 'array', minItems: 5, maxItems: 5, items: { type: 'object', additionalProperties: false, required: ['tier', 'label'], properties: { tier: { type: 'integer', minimum: 1, maximum: 5 }, label: S } } },
+      variations: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'rarityTier', 'rarityLabel', 'effect', 'subtypes'],
+        properties: { id: id('var_'), name: S, rarityTier: { type: 'integer', minimum: 1, maximum: 5 }, rarityLabel: S, effect: S, subtypes: SA, existingModifier: S } } }
+    }
+  };
+}
 require('./graph_schemas')(SCHEMAS); // Wave F-lite
 require('./audio_schemas')(SCHEMAS); // Wave D
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset

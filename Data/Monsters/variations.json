@@ -1,0 +1,196 @@
+{
+ "notes": "DRAFT from the bible v1.0 section 5. 12 universal variation modifiers with five rarity tiers. A variation modifies a creature; it never creates a new species and never sets threat rank. Overlaps with the existing Variant Modifiers in 08_Bestiary/bestiary_lore.md are recorded in ours.existingModifier. Needs the Canon section 6 OK before any is spawned.",
+ "rarityTiers": [
+  {
+   "tier": 1,
+   "label": "Common"
+  },
+  {
+   "tier": 2,
+   "label": "Uncommon"
+  },
+  {
+   "tier": 3,
+   "label": "Rare"
+  },
+  {
+   "tier": 4,
+   "label": "Very rare"
+  },
+  {
+   "tier": 5,
+   "label": "Exceptional"
+  }
+ ],
+ "balanceRules": [
+  "Each variation defines compatible groups, attribute modifiers, new abilities, weaknesses and visual cues.",
+  "Tags prevent nonsensical combinations unless a lore reason exists.",
+  "Stacking has diminishing returns or a complexity cost; some variations are mutually exclusive.",
+  "Awakened is a special state or transformation, not a routine cosmetic modifier.",
+  "Ancient indicates age or lineage and does not automatically grant a higher threat rank.",
+  "Rarity is not power: a common variation on an SSS monster can still be devastating."
+ ],
+ "variations": [
+  {
+   "id": "var_horned",
+   "name": "Horned",
+   "rarityTier": 1,
+   "rarityLabel": "Common",
+   "effect": "Physical mutation; charging and melee bonuses.",
+   "subtypes": [
+    "Single horn",
+    "Double horn",
+    "Crown horns",
+    "Antlers"
+   ]
+  },
+  {
+   "id": "var_petrified",
+   "name": "Petrified",
+   "rarityTier": 2,
+   "rarityLabel": "Uncommon",
+   "effect": "Stone transformation; high defence, reduced mobility.",
+   "subtypes": [
+    "Stone",
+    "Granite",
+    "Marble",
+    "Obsidian"
+   ]
+  },
+  {
+   "id": "var_corrupted",
+   "name": "Corrupted",
+   "rarityTier": 3,
+   "rarityLabel": "Rare",
+   "effect": "Dark or unstable energy; unusual powers and corruption effects.",
+   "subtypes": [
+    "Dark",
+    "Abyssal",
+    "Plague",
+    "Chaotic"
+   ],
+   "existingModifier": "Corrupted"
+  },
+  {
+   "id": "var_possessed",
+   "name": "Possessed",
+   "rarityTier": 4,
+   "rarityLabel": "Very rare",
+   "effect": "External entity influences or controls the host.",
+   "subtypes": [
+    "Spirit",
+    "Demon",
+    "Ancient soul",
+    "Parasite"
+   ]
+  },
+  {
+   "id": "var_blessed",
+   "name": "Blessed",
+   "rarityTier": 3,
+   "rarityLabel": "Rare",
+   "effect": "Sacred energy; healing, protection and purification.",
+   "subtypes": [
+    "Divine",
+    "Sacred",
+    "Celestial",
+    "Nature-blessed"
+   ]
+  },
+  {
+   "id": "var_cursed",
+   "name": "Cursed",
+   "rarityTier": 3,
+   "rarityLabel": "Rare",
+   "effect": "Supernatural affliction; debuffs and dangerous effects.",
+   "subtypes": [
+    "Blood curse",
+    "Death curse",
+    "Ancient curse",
+    "Soul curse"
+   ]
+  },
+  {
+   "id": "var_frozen",
+   "name": "Frozen",
+   "rarityTier": 1,
+   "rarityLabel": "Common",
+   "effect": "Ice enhancement; frost attacks and cold resistance.",
+   "subtypes": [
+    "Ice",
+    "Frost",
+    "Glacier",
+    "Absolute zero"
+   ],
+   "existingModifier": "Regional"
+  },
+  {
+   "id": "var_infernal",
+   "name": "Infernal",
+   "rarityTier": 1,
+   "rarityLabel": "Common",
+   "effect": "Fire enhancement; heat resistance and explosive attacks.",
+   "subtypes": [
+    "Flame",
+    "Magma",
+    "Hellfire",
+    "Solar"
+   ],
+   "existingModifier": "Regional"
+  },
+  {
+   "id": "var_electrified",
+   "name": "Electrified",
+   "rarityTier": 2,
+   "rarityLabel": "Uncommon",
+   "effect": "Electrical energy; speed, lightning attacks and shock effects.",
+   "subtypes": [
+    "Lightning",
+    "Thunder",
+    "Storm",
+    "Plasma"
+   ],
+   "existingModifier": "Regional"
+  },
+  {
+   "id": "var_shadow",
+   "name": "Shadow",
+   "rarityTier": 2,
+   "rarityLabel": "Uncommon",
+   "effect": "Stealth and darkness manipulation.",
+   "subtypes": [
+    "Dark",
+    "Phantom",
+    "Night",
+    "Void-shadow"
+   ]
+  },
+  {
+   "id": "var_ancient",
+   "name": "Ancient",
+   "rarityTier": 4,
+   "rarityLabel": "Very rare",
+   "effect": "Ancestral or primordial traits; forgotten abilities.",
+   "subtypes": [
+    "Primordial",
+    "Ancestral",
+    "Prehistoric",
+    "Forgotten"
+   ],
+   "existingModifier": "Ancient"
+  },
+  {
+   "id": "var_awakened",
+   "name": "Awakened",
+   "rarityTier": 5,
+   "rarityLabel": "Exceptional",
+   "effect": "Unlocks hidden potential, intelligence or advanced abilities.",
+   "subtypes": [
+    "Magical",
+    "Physical",
+    "Spiritual",
+    "Transcendental"
+   ]
+  }
+ ]
+}

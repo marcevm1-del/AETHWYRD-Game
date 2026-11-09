@@ -1,0 +1,99 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Universal monster variations",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "notes",
+  "rarityTiers",
+  "balanceRules",
+  "variations"
+ ],
+ "properties": {
+  "notes": {
+   "type": "string",
+   "minLength": 1
+  },
+  "balanceRules": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "minLength": 1
+   }
+  },
+  "rarityTiers": {
+   "type": "array",
+   "minItems": 5,
+   "maxItems": 5,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "tier",
+     "label"
+    ],
+    "properties": {
+     "tier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "variations": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "rarityTier",
+     "rarityLabel",
+     "effect",
+     "subtypes"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^var_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "rarityTier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+     },
+     "rarityLabel": {
+      "type": "string",
+      "minLength": 1
+     },
+     "effect": {
+      "type": "string",
+      "minLength": 1
+     },
+     "subtypes": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "existingModifier": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  }
+ }
+}

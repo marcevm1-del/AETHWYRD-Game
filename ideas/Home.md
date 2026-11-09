@@ -105,6 +105,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/gear_v6b_audit|13_Production/gear_v6b_audit]]
 - [[Design Bible/13_Production/housing_v6b_audit|13_Production/housing_v6b_audit]]
 - [[Design Bible/13_Production/living_world_v4_audit|13_Production/living_world_v4_audit]]
+- [[Design Bible/13_Production/monster_guild_integration|13_Production/monster_guild_integration]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
