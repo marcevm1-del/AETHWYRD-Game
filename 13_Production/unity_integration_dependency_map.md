@@ -4,8 +4,9 @@ Job 2 of the producer queue. Built from `git rev-list` of the live agent branche
 
 ## 1. Ground truth about Unity
 
-- Nothing written since 2026-10-31 has been compiled or played in Unity (handover 2026-11-02). Phase 1 wiring, Wave A1 animation and the companion wiring were all written **without a Unity run** (`animation_v11_audit.md`, "Open test risks"; ai-engineer commit message "unverified").
-- So **step 0 for every Unity slot is a verify run**, not new features: `Tools/pc/update_and_verify.cmd` (scene rebuild, PlayMode tests, player build, screenshots). Until it is green, every integration item below carries unknown compile debt.
+- **Corrected after reading the progress log:** Unity PlayMode was run on 2026-11-08: 163 of 163 passed on merged main (waves A1 to F-lite, rename, living world; commit 5311b936), then phase 1 (commit 18963dd8) reported 746 Core tests + 183 PlayMode tests with screenshots (`phase1_*.png`). The older handover line "nothing compiled since 2026-10-31" is out of date.
+- Still unverified in Unity: the `agent/ai-engineer/companion-presets-tactics` branch ("unverified" in its commit message), anything the phase 1 handoff lists as "Not persisted" (companion presets and bonds), the humanoid foot-IK path (needs a humanoid import), and everything after phase 1b.
+- A verify run (`Tools/pc/update_and_verify.cmd`) is still step 0 of any Unity slot that merges new branches, to prove the baseline before and after.
 - Only one Unity process on `Game/` at a time, and only with "UNITY OK" in the GO.
 
 ## 2. Branch inventory (ahead of `aetheria/main`)
@@ -28,9 +29,9 @@ Worktrees at base with nothing to merge (cleanup candidates, see the risk regist
 ## 3. Dependency graph (what must come before what)
 
 ```
-verify run (qa-tester, UNITY OK)  <- everything Unity below
+baseline verify run (qa-tester, UNITY OK)  <- every new Unity merge below
   |
-  +-> A. Phase 1 wiring compiles + PlayMode green   (gameplay-engineer)
+  +-> A. Phase 1 wiring: ALREADY GREEN (183 PlayMode); re-check only after merges (gameplay-engineer)
   |     |  PlayerWorldState, PlayerSave new fields, crafting, journal, accessibility
   |     +-> B. save-migration-tests merge (Core, no Unity)  -- must land BEFORE any new save field
   |     +-> C. UI windows (crafting, companions, journal, accessibility, photo) PlayMode screenshots (ui-engineer)
@@ -59,8 +60,8 @@ Hard rules that create edges: no new packages; saves backward compatible (old-sa
 
 | Slot | Agents | Work | Exit check |
 |---|---|---|---|
-| U0 | qa-tester | Verify run on `aetheria/main`; list compile errors and failing PlayMode tests | Log in `Game/Logs/verify_*`, counts in report |
-| U1 | gameplay-engineer (fixes) + core-rules-engineer (no Unity: merge `save-migration-tests`) | Fix A; then B | `npm run build` and PlayMode green |
+| U0 | qa-tester | Baseline verify run on `aetheria/main` (expect 746 + 183); stop if it regressed | Log in `Game/Logs/verify_*`, counts in report |
+| U1 | core-rules-engineer (no Unity: merge `save-migration-tests`) + gameplay-engineer | B, then persist companion presets and bonds (D) | `npm run build` and PlayMode green |
 | U2 | ai-engineer + ui-engineer | E then F; C screenshots (disjoint folders `Runtime/World` vs `Runtime/UI`) | PlayMode green, screenshots |
 | U3 | animator-rigger + save-platform-engineer | G; D | Foot IK tests green; old-save test passes |
 | U4 | world-builder-engineer + audio-designer | I behind flag; J | Ring 0 scene unchanged (screenshot diff), Batch build runs |
@@ -73,7 +74,7 @@ Non-Unity work (design, data, docs) fills the other slot whenever Unity is occup
 1. `save-migration-tests` (Core only, no conflicts expected).
 2. Data-only branches: `rune-enchant-kits`, `open-fixes`, `music-cue-sheet`.
 3. Docs branches: `rename-audit`, `review-humans`, `core-perf-review`, producer notes.
-4. `companion-presets-tactics` only after slot U0/U1 (needs the verify run).
+4. `companion-presets-tactics` after the U0 baseline, then re-run PlayMode (it is unverified).
 5. `humans-base`: inspect first; do not merge binaries.
 
 Run `npm run build` after each merge (746+ tests, 28 warnings, 0 graph findings must hold).
