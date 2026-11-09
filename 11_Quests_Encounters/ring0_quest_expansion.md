@@ -43,3 +43,21 @@ Read "first two" as the two companions available in Ring 0 who are also NPCs wit
 | `qst_comp_torvald_1_the_unfinished_blade` | *The Unfinished Blade* | Gather scrap and crude iron to relight the old forge (needs `qst_craft_blade_for_the_guild`) | ask about the blank / leave it be | `torvald_arc_forge_lit` |
 
 Hand-offs: narrative-writer owns Lyra's rival (unnamed in Canon; do not use Dax, who leads a separate party), the dawn-yard scenes and Torvald's reaction lines; Torvald's son stays off-screen and the tone gentle (teen rating). Whether the choices change Bond or Loyalty is for core-rules-engineer once `RelationshipTests` rules for quest events exist; none is written into data here.
+
+## 4. Weekly board expansion (job 4)
+
+Nine new dailies in `Data/Quests/weekly_board.json` (36 to 45), each on the day's Canon theme (`weekly_board.md` section 1) with three twists. Every day still has one special and at least 3 dailies (the validator checks); a day with more than 3 dailies now varies its board more (the board draws 3 from the day plus the Any pool).
+
+| Day | New daily | Giver | Asks for |
+|---|---|---|---|
+| Solenday | Warren Salvage Run (rank E, repeatable Warren trip) | Wendel | 3 scavengers, 2 trinkets |
+| Solenday | Guild Blade Order | Torvald | 2 scrap blade parts |
+| Maelsday | Ink and Dye | Ines | 1 inkwell dye |
+| Thorsday | Hearth Poker Order | Brannoc | Fangblade, Carapace Cap |
+| Sylvasday | Herbalist's Shelf | Fennick | 2 minor potions |
+| Kaelsday | Training Yard Snacks | Hollis | 2 hunter's skewers |
+| Morrowsday | Lantern Loaf | Caspian | hearth loaf, talk to Caspian |
+| Vexday | Cook-Off Wager | Marta | hearth stew, talk to Gilda |
+| Any | Party of Two Contract | Mina | 2 wolves, 1 boar |
+
+Note for the Core side (`WeeklyBoard.cs`): the board filters by weekday and siege state only, not by region or rank, so the Warren run can appear on the Brindlewick board for F-rank players. Its `rankMin` is E; filtering by rank is a small change for core-rules-engineer.
