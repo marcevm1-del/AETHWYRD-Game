@@ -125,7 +125,7 @@ Rules: bonuses do not stack with each other (the best one applies); a synergy ne
 Bosses may carry an **armor gauge** (`Data/Monsters/boss_weakpoints.json`, `armor`). It is separate from the Break gauge (section 4.3): hits fill armor damage first; at zero the armor **breaks** for `breakSec`, during which the boss takes `damageTakenMultWhileBroken` more damage. After `regenDelaySec` without armor damage it regenerates. A break always has a sound cue and a visible crack; it is a reward window, never a requirement. No mandatory fight needs a break to be won (Canon combat/readability contract).
 
 ### 7d. Weak points
-A weak point is a named body part (`bodyPart` from the rig hurtboxes) with its own damage multiplier and armor-damage multiplier, **exposed only in listed phases** (`exposedInPhases`, optionally for `exposedSec`). Exposure is announced: the part glows or the boss turns to show it, and the lock-on reticle gets a marker. The multiplier replaces the hurtbox multiplier for that part while exposed. Grukk has the starter record: the **cult-rune brand** on his chest, exposed in the Archers and Rage phases (x1.5 damage, x1.5 armor damage). Phases themselves stay in `boss_phases.json`.
+A weak point is a named body part (`bodyPart` from the rig hurtboxes) with its own damage multiplier and armor-damage multiplier, **exposed only in listed phases** (`exposedInPhases`, optionally for `exposedSec`). Exposure is announced: the part glows or the boss turns to show it, and the lock-on reticle gets a marker. The multiplier replaces the hurtbox multiplier for that part while exposed. Grukk has the starter record: the **cult-rune brand** on his chest, exposed in the Archers and Rage phases (x1.5 damage, x1.5 armor damage). Phases themselves stay in `boss_phases.json`. Six bosses now have records (Grukk, Ashgrave, Mother Webcrawler, Mycelia, the Drowned Choir, the Hollow Abbot); see `08_Bestiary/bosses_and_calamities.md` section 1.
 
 ### 7e. Combat sandbox (dev tool)
 A headless **combat sandbox** spawns up to ⚙ `sandbox.maxDummies` dummies (species, element, HP, optional armor), applies scripted hits (element, weight, body part, attacker) on a manual clock and returns a readout per hit: damage, multiplier breakdown, reaction, synergy, armor and break state. It is deterministic (seeded, ⚙ `sandbox.defaultSeed`) and used by tests and the designer to judge reactions and armor without playing. It is a developer tool: no menu, no game mode, not shipped to players.
@@ -186,6 +186,8 @@ Ring 0 passes when, in a 10-minute session against slimes, goblins and rabbits:
 - [ ] Wave A2: a Swirl-then-Firestorm opener makes you feel clever, and the synergy flash is readable.
 - [ ] Breaking Grukk's armor feels like a payoff you noticed (sound plus crack), and fighting without it is still fair.
 - [ ] You can tell when Grukk's rune brand is exposed without being told.
+- [ ] Each of the five dungeon bosses above has one weak point you can find by watching it (glow, turn or posture), and a fight that ignores armor entirely is still winnable.
+- [ ] Armor breaks arrive about once per fight for a player who hits heavy and weak, never twice in quick succession.
 - [ ] A goblin pack comes from several sides, retreats visibly at low HP, and never feels like a boss goblin is giving orders.
 
 **Where the fight lives (built).** Monsters stay in the forest and beyond; the town is safe ground.

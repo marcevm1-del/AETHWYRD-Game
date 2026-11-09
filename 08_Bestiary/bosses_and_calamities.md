@@ -9,8 +9,18 @@
 ### Armor and weak points (Wave A2, proposals)
 - A boss may carry an **armor gauge** and named **weak points** exposed in chosen phases; data in `Data/Monsters/boss_weakpoints.json`, rules in `12_Systems/combat.md` sections 7c and 7d. Phases stay in `Data/Monsters/boss_phases.json`.
 - Armor break and weak-point exposure are always announced (sound, visible crack, glow) and are a reward window, never required to win.
-- **Goblin Chief Grukk** (starter record): armor 300, breaks for 5 s (+25% damage taken), regenerates after 6 s; the **cult-rune brand** on his chest is exposed in the Archers and Rage phases (x1.5 damage).
-- Other bosses below (Proving Golem's rotating runes, Ozymarch's clock-core, Mycelia's hearts) are natural next records; add them one at a time.
+- **Goblin Chief Grukk** (starter record): armor 32 points (8 heavy hits), breaks for 5 s (+25% damage taken), regenerates after 6 s; the **cult-rune brand** on his chest is exposed in the Archers and Rage phases (x1.5 damage).
+- **Pass 2 (2026-11, proposals):** five more dungeon bosses have phases, armor and weak points (data in `boss_phases.json` and `boss_weakpoints.json`; every weak point is announced by a glow or a turn and is optional). No boss gains a hierarchy: the adds are the boss's own summons, as with Grukk's archers (Canon 4d).
+
+| Boss | Phases | Armor (breaks 5 s, +25%) | Weak point (exposed in) |
+|---|---|---|---|
+| Baron Ashgrave | Oathless Duel, Old Guard (2 skeleton knights), Last Charge | 56, regen 7 s | Cracked helm crest, head x1.8 (Old Guard, Last Charge, 8 s) |
+| Mother Webcrawler | Lair, Webs, Frenzy | 48, regen 6 s | Glittering eyes x2.0 (Webs, 6 s); swollen egg sac x1.8 (Frenzy, 8 s) |
+| Mycelia | Spores, Hearts, Bloom | 64, regen 7 s | Glowing spore heart (bulb) x2.0 (Hearts, Bloom, 8 s) |
+| The Drowned Choir | Harmony, Discord | 56, regen 7 s | Cracked throat-note, head x1.8 (Discord, 8 s) |
+| The Hollow Abbot | Vigil, Toll | 40, regen 6 s | Silent bell core x2.0 (Toll, 6 s) |
+
+- **Still without records** (left for later, one at a time): the Proving Golem and Vault Warden Ozymarch (no species yet), every field boss, general, elder dragon and calamity (their phases are not authored). Mycelia's "four hearts" and the Choir's "silence one" are story-level mechanics for the dungeon encounter; the records above are the single-species numbers the engine can read now.
 
 ## 2. Dungeon Bosses (sample)
 | Boss | Rank | Dungeon | Phases / Mechanics | Unique drop |
