@@ -1052,5 +1052,97 @@
   "setsFlags": [
    "warren_salvage_settled"
   ]
+ },
+ {
+  "id": "qst_comp_lyra_1_the_girl_who_couldnt_win",
+  "title": "The Girl Who Couldn't Win",
+  "rank": "F",
+  "type": "Companion",
+  "giver": "npc_lyra_brightwood",
+  "region": "reg_aldmere",
+  "summary": "Lyra has lost to her childhood rival eleven times and tells you it is fine, loudly. Watch her at Old Hollis's yard at dawn, spar three mornings, and notice what she does when she is about to lose. Then decide how to help: show her a stance of yours, ask her to try three of her own, or just swing beside her until something sticks. There is no wrong answer, and she will remember which one you picked.",
+  "requirements": {
+   "minLevel": 5,
+   "partySize": "2"
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_hollis"
+   },
+   {
+    "kind": "reach",
+    "target": "hollis_yard_dawn",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "lend_a_stance_or_ask_for_three_or_swing_beside_her"
+   }
+  ],
+  "rewards": {
+   "gp": 6,
+   "xp": 300,
+   "items": [
+    "itm_hunters_skewer"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "lyra_arc_first_morning"
+  ]
+ },
+ {
+  "id": "qst_comp_torvald_1_the_unfinished_blade",
+  "title": "The Unfinished Blade",
+  "rank": "F",
+  "type": "Companion",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "One sword blank hangs unfinished above Torvald's forge, and he changes the subject whenever you look at it. He will not say why, but he will let you gather the iron and scrap to bring the old forge back to heat. Do that, then choose: ask about the blank, or leave it be until he speaks. He sings the forge songs either way.",
+  "requirements": {
+   "minLevel": 6,
+   "partySize": "2"
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_scrap_metal",
+    "count": 4
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_crude_iron",
+    "count": 2
+   },
+   {
+    "kind": "choice",
+    "target": "ask_about_the_blank_or_leave_it_be"
+   }
+  ],
+  "rewards": {
+   "gp": 6,
+   "xp": 280,
+   "items": [
+    "itm_part_iron_blade"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_craft_blade_for_the_guild"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "torvald_arc_forge_lit"
+  ]
  }
 ]

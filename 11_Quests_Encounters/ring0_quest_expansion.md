@@ -32,3 +32,14 @@ Place: `dng_salvage_warren` (`Data/World/dungeons.json`, Great Labyrinth floors 
 | 5 | `qst_dng_warren_accord` The Tally-Keepers' Accord | Wendel | 3 Kobold Miners, choice: buy back, take a share, or seal | `warren_salvage_settled` |
 
 Rules held (`12_Systems/dungeons_and_puzzles.md`): no quest requires solving a puzzle or holding a puzzle reward (the cistern quest asks for the visit and a choice, not the lock); the key way and the lever way are both honoured in quest 2; kobolds are never allies (`coreIsAlly` false), so quest 5 offers a ruling, not a recruit; the boss is the plain Armor Beetle with no added hierarchy. Because the halls reset weekly, the repeatable run is on the weekly board (section 4).
+
+## 3. The first two companion personal quests (job 3)
+
+Read "first two" as the two companions available in Ring 0 who are also NPCs with a giver id: Lyra (first party member) and Torvald (the smith). Each gets the opener of her or his arc (arcs are 5-8 quests, `07_Characters/companions_and_npcs.md`); later chapters are not written yet. Both are type Companion, need `partySize` 2 and use no hidden relationship numbers: the choice objective is the whole decision, and the companion's reaction is authored dialogue (`quest_outcome_grammar.md`, `companion_relationship_pacing.md`).
+
+| Quest | Arc | What the player does | Choice | Flag |
+|---|---|---|---|---|
+| `qst_comp_lyra_1_the_girl_who_couldnt_win` | *The Girl Who Couldn't Win* | Watch Lyra at Hollis's yard, spar three dawns | lend a stance / ask her for three of her own / swing beside her | `lyra_arc_first_morning` |
+| `qst_comp_torvald_1_the_unfinished_blade` | *The Unfinished Blade* | Gather scrap and crude iron to relight the old forge (needs `qst_craft_blade_for_the_guild`) | ask about the blank / leave it be | `torvald_arc_forge_lit` |
+
+Hand-offs: narrative-writer owns Lyra's rival (unnamed in Canon; do not use Dax, who leads a separate party), the dawn-yard scenes and Torvald's reaction lines; Torvald's son stays off-screen and the tone gentle (teen rating). Whether the choices change Bond or Loyalty is for core-rules-engineer once `RelationshipTests` rules for quest events exist; none is written into data here.

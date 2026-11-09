@@ -83,5 +83,15 @@
   "id": "warren_salvage_settled",
   "description": "The guild has ruled on the Salvage Warren's lost-gear salvage",
   "setBy": "quest"
+ },
+ {
+  "id": "lyra_arc_first_morning",
+  "description": "Lyra's personal quest has begun: the player spent a dawn in Hollis's yard with her",
+  "setBy": "quest"
+ },
+ {
+  "id": "torvald_arc_forge_lit",
+  "description": "Torvald's personal quest has begun: the old forge is hot again and the unfinished blade has been noticed",
+  "setBy": "quest"
  }
 ]
