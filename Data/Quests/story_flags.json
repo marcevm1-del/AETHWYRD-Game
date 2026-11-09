@@ -48,5 +48,20 @@
   "id": "caspian_unmasked",
   "description": "Lantern Night, Act V: Brother Caspian is revealed as the Red Prophet",
   "setBy": "story"
+ },
+ {
+  "id": "first_commission_forged",
+  "description": "The player forged a Fangblade for Torvald's guild-wall commission",
+  "setBy": "quest"
+ },
+ {
+  "id": "small_lantern_supper",
+  "description": "The player cooked a hearth supper for the orphans of the Small Lantern",
+  "setBy": "quest"
+ },
+ {
+  "id": "first_rune_struck",
+  "description": "The player struck their first pair of runes at Torvald's rune anvil",
+  "setBy": "quest"
  }
 ]

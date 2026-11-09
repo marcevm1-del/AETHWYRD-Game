@@ -537,5 +537,313 @@
    "gp": 8,
    "xp": 260
   }
+ },
+ {
+  "id": "qst_craft_blade_for_the_guild",
+  "title": "A Blade for the Guild",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "Torvald is tired of watching rookies buy bent guild-issue swords. He will teach you the Fangblade pattern for forty copper if you forge one at his anvil and hang it on the guild wall as an example.",
+  "requirements": {
+   "minLevel": 4
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_fangblade",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 90,
+   "gp": 8,
+   "xp": 220,
+   "items": [
+    "itm_part_iron_blade"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "first_commission_forged"
+  ]
+ },
+ {
+  "id": "qst_craft_cap_for_tomlin",
+  "title": "A Cap for Tomlin",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_guard_tomlin",
+  "region": "reg_aldmere",
+  "summary": "Tomlin's helmet leaks rain down his neck, which is half the reason he naps on watch. Cure a leather cap in Wren's drying shed, then let Captain Holt see he is dressed for duty.",
+  "requirements": {
+   "minLevel": 2
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_leather_cap",
+    "count": 1
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_holt"
+   }
+  ],
+  "rewards": {
+   "gold": 45,
+   "gp": 5,
+   "xp": 130,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_craft_clinic_stock",
+  "title": "Stock for the Clinic",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "Solenne's shrine clinic is out of salve after the goblin season. Fennick will show you the alembic; Sister Pell needs three minor potions on the shelf before the next patrol comes home.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fennick_reed"
+   },
+   {
+    "kind": "collect",
+    "target": "itm_minor_hp_potion",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "gp": 6,
+   "xp": 160,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_craft_small_lantern_supper",
+  "title": "Supper for the Small Lantern",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Brother Caspian's orphans have had thin soup all week. Marta lends you the Sleeping Griffon hearth: cook three Hearth Stews, the one dish that comes out right there, and carry them up to the orphanage.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_hearth_stew",
+    "count": 3
+   },
+   {
+    "kind": "talk",
+    "target": "npc_brother_caspian"
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "gp": 6,
+   "xp": 170,
+   "items": [
+    "itm_hearth_loaf"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_bowl_of_stew"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "small_lantern_supper"
+  ]
+ },
+ {
+  "id": "qst_craft_silk_and_ink",
+  "title": "Silk and Ink",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_ines_valbuena",
+  "region": "reg_aldmere",
+  "summary": "Ines needs a silk hood and a pot of inkwell dye for a commission, and her hands are full of pins. Make both at her loom and bring them back.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_silk_hood",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_inkwell_dye",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 65,
+   "gp": 6,
+   "xp": 150,
+   "items": [
+    "itm_apprentice_robe"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_craft_first_glyph",
+  "title": "The First Glyph",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "Torvald lets you onto the rune anvil. Strike an ember rune and a stone rune, the oldest pair in Khazdur lore, and he will tell you why dwarves still hum while they work.",
+  "requirements": {
+   "minLevel": 6
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_rune_ember",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_rune_stone",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 80,
+   "gp": 8,
+   "xp": 240,
+   "items": [
+    "itm_rune_hearth"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_craft_blade_for_the_guild"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "first_rune_struck"
+  ]
+ },
+ {
+  "id": "qst_craft_library_ward",
+  "title": "A Ward for the Library",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "After the mural sketch, Eolande wants the library's oldest shelf warded against damp and mice. Inscribe a Wardweave scroll at the enchanting table and she will teach you how it is meant to be read.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_scroll_wardweave",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 110,
+   "gp": 10,
+   "xp": 300,
+   "items": [
+    "itm_scroll_vitality"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_explore_nine_thrones"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_comp_two_on_the_road",
+  "title": "Two on the Road",
+  "rank": "F",
+  "type": "Subjugation",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "Mina posts her first pair contract: a wolf pack and a boar on the Whisperwood road, sized for two people who trust each other. Bring a party member (Lyra or anyone you have recruited) and let them cover your blind side.",
+  "requirements": {
+   "minLevel": 3,
+   "partySize": "2"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 4
+   },
+   {
+    "kind": "kill",
+    "target": "mon_wild_boar",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 80,
+   "gp": 8,
+   "xp": 220,
+   "items": [
+    "itm_minor_hp_potion",
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
  }
 ]
