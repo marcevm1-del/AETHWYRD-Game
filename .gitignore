@@ -82,3 +82,4 @@ project.local.yaml
 
 # AI generation staging (images and meshes with sidecars): see 13_Production/third_party_assets.md
 Art/Generation/staging/
+Art/Blender/AnimationLibrary/
