@@ -55,7 +55,7 @@
     "Ice"
    ],
    "consumesAura": true,
-   "bonusDamageMult": 3.0
+   "bonusDamageMult": 2.0
   },
   {
    "id": "Magma",
