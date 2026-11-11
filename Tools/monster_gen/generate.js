@@ -519,7 +519,14 @@ fs.writeFileSync(path.join(MON, 'population.json'), JSON.stringify(population, n
 writeCsv(path.join(MON, 'population.csv'), population, ['id', 'name', 'speciesId', 'regionId', 'region', 'tier', 'rank', 'level', 'size', 'ring', 'look', 'spawn']);
 fs.writeFileSync(path.join(MON, 'attacks.json'), JSON.stringify([...ATTACKS.values()], null, 1), 'utf8');
 fs.writeFileSync(path.join(MON, 'loot_tables.json'), JSON.stringify([...LOOT.values()], null, 1), 'utf8');
-fs.writeFileSync(path.join(ITM, 'materials.json'), JSON.stringify([...ITEMS.values()], null, 1), 'utf8');
+// description + icon come from the hand-written Data/Items/material_descriptions.json (items-designer)
+const MAT_TEXT = JSON.parse(fs.readFileSync(path.join(ITM, 'material_descriptions.json'), 'utf8'));
+const matsOut = [...ITEMS.values()].map(m => {
+  const o = {};
+  for (const [k, v] of Object.entries(m)) { o[k] = v; if (k === 'name') { o.description = MAT_TEXT[m.id] || `A rank ${m.rank} ${m.category === 'core' ? 'monster core' : 'crafting material'}.`; o.icon = 'icon_' + m.id.replace(/^itm_/, ''); } }
+  return o;
+});
+fs.writeFileSync(path.join(ITM, 'materials.json'), JSON.stringify(matsOut, null, 1), 'utf8');
 fs.writeFileSync(path.join(DATA, 'World', 'siege_waves.json'), JSON.stringify(siegeWaves, null, 1), 'utf8');
 
 // Viewer (filterable HTML with embedded data)

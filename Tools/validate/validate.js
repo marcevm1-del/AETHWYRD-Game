@@ -423,7 +423,8 @@ const SINGLETONS = {
   housing: { file: 'World/housing.json', schema: 'housing' },
   crops: { file: 'Items/crops.json', schema: 'crops' },
   stables: { file: 'Companions/stables.json', schema: 'stables' },
-  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' }
+  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' },
+  dungeon_loot: { file: 'World/dungeon_loot.json', schema: 'dungeon_loot' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -503,6 +504,35 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
     }
     for (const [k, st] of Object.entries(obj.stations)) if (!(st in rf.stations)) err(c.file, `stations.${k}: "${st}" is not a recipe station`);
     if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
+  }
+  if (name === 'dungeon_loot' && obj.tables) {
+    // Room caches: real dungeon rooms, real items, ranks that fit the dungeon, sure drops where the player cannot miss them.
+    const dungeons = load('World/dungeons.json');
+    const RO = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
+    const tids = obj.tables.map(t => t.id);
+    if (new Set(tids).size !== tids.length) err(c.file, 'duplicate table id');
+    if (new Set(obj.caches.map(k => k.id)).size !== obj.caches.length) err(c.file, 'duplicate cache id');
+    for (const t of obj.tables) for (const en of t.entries) {
+      const it = ITEMS_BY_ID[en.itemId];
+      if (!it) { err(t.id, `item ${en.itemId} does not exist`); continue; }
+      if (en.min > en.max) err(t.id, `${en.itemId} min is above max`);
+      if (it.category === 'key') err(t.id, `${en.itemId} is a key item and cannot be loot`);
+    }
+    for (const k of obj.caches) {
+      const d = dungeons.find(x => x.id === k.dungeonId);
+      if (!d) { err(k.id, `dungeon ${k.dungeonId} does not exist`); continue; }
+      const room = d.rooms.find(r => r.id === k.roomId);
+      if (!room) { err(k.id, `room ${k.roomId} is not in ${k.dungeonId}`); continue; }
+      const t = obj.tables.find(x => x.id === k.tableId);
+      if (!t) { err(k.id, `table ${k.tableId} does not exist`); continue; }
+      if (k.kind === 'boss_cache' && room.role !== 'boss') err(k.id, 'a boss cache belongs in the boss room');
+      if (k.kind === 'secret_chest' && !room.secret) err(k.id, 'a secret chest belongs in a secret room');
+      if (k.kind !== 'secret_chest' && room.secret) err(k.id, 'a secret room holds only its secret chest');
+      const cap = RO.indexOf(d.recommendedRank) + 2; // at most two ranks above the dungeon rank
+      for (const en of t.entries) { const it = ITEMS_BY_ID[en.itemId]; if (it && it.rank && RO.indexOf(it.rank) > cap) err(k.id, `${en.itemId} is rank ${it.rank}, too high for a rank ${d.recommendedRank} dungeon`); }
+      if ((k.kind === 'boss_cache' || k.kind === 'secret_chest') && !t.entries.some(en => en.chance === 1)) err(k.id, 'a boss cache or secret chest must hold at least one sure drop (no empty reward)');
+    }
+    for (const t of obj.tables) if (!obj.caches.some(k => k.tableId === t.id)) err(t.id, 'table is used by no cache');
   }
   if (name === 'rune_skills' && obj.skills) {
     // Gear skills stay a side option: capped power, real sources, every fitting covered (Canon Slow-Life: nothing breaks).
