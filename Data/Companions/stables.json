@@ -44,6 +44,14 @@
   {
    "minSpecies": 40,
    "name": "Living Sanctuary"
+  },
+  {
+   "minSpecies": 100,
+   "name": "Wild Haven"
+  },
+  {
+   "minSpecies": 250,
+   "name": "Ark Grove"
   }
  ]
 }
