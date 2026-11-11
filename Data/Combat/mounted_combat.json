@@ -1,0 +1,136 @@
+{
+ "version": 1,
+ "notes": "Mounted combat for GROUND mounts only (12_Systems/mounted_combat.md; Canon: no flying, celestial, dragon or aquatic mounts, no mounting in interior dungeons). This file ADDS to the limits already in Data/Companions/mounts.json mountedCombat (banned skill tags big/aerial/channelled, reach cap 2.5 m, damage x0.85, 3 chain hits, stagger dismounts the rider, no interior); it never repeats or overrides them except through the explicit per-weapon-family exceptions below. All numbers are PROPOSALS for the user to tune. No Core or Unity code reads this file yet.",
+ "charge": {
+  "minRunupM": 6,
+  "minSpeedMps": 6,
+  "windupSec": 0.25,
+  "activeSec": 0.4,
+  "recoverySec": 0.5,
+  "powerMult": 1.2,
+  "weight": "heavy",
+  "knockbackM": 2,
+  "oncePerTarget": true,
+  "mountStaminaCost": 25
+ },
+ "trample": {
+  "maxTargetPoise": 50,
+  "powerMult": 0.6,
+  "cooldownSec": 3,
+  "mountStaminaCost": 5,
+  "bossesImmune": true
+ },
+ "mountedDodge": {
+  "durationSec": 0.5,
+  "iframeSec": 0.18,
+  "distanceM": 3.2,
+  "mountStaminaCost": 15,
+  "maxChain": 1
+ },
+ "dismount": {
+  "onlyOnStagger": true,
+  "graceInvulnSec": 1,
+  "remountCooldownSec": 3,
+  "mountCallSec": 2,
+  "mountUpSec": 0.8
+ },
+ "mountStamina": {
+  "notes": "The mount stamina block in mounts.json also pays for combat moves. Area attacks (ground zones, shockwaves) drain a share; at zero the rider is set down gently (no damage, no stagger) and mounted bonuses stop until the mount recovers. The mount is never killed (mounts.json knockoutOnly).",
+  "areaDamageDrainFraction": 0.1,
+  "unseatAtZero": true
+ },
+ "familyPoiseMult": {
+  "horse": 1.2,
+  "wolf": 1.1,
+  "bear": 1.6,
+  "desert_beast": 1.4,
+  "large_ground_monster": 2
+ },
+ "weaponFamilies": {
+  "wf_sword": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 2.4,
+   "note": "Sword hits from the saddle: the baseline mounted fighter."
+  },
+  "wf_greatsword": {
+   "allowed": true,
+   "maxChainHits": 1,
+   "reachCapM": 2.8,
+   "note": "One wide swing per pass; the second hit never starts."
+  },
+  "wf_twin_blades": {
+   "allowed": true,
+   "maxChainHits": 2,
+   "reachCapM": 2.0,
+   "note": "Cross slashes, two hits: speed is spent on the mount."
+  },
+  "wf_katana": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 2.5,
+   "note": "Counter Draw stays: the wider parry window works from the saddle."
+  },
+  "wf_sword_shield": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 2.5,
+   "note": "Guarding works mounted; Shield Wall and Earth Stomp are banned (big)."
+  },
+  "wf_polearm": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 3.4,
+   "note": "The mounted weapon: reach exception to 3.4 m, and the charge adds x1.4 power."
+  },
+  "wf_daggers": {
+   "allowed": true,
+   "maxChainHits": 2,
+   "reachCapM": 2.5,
+   "note": "Short reach; backstab only from the mount's flank pass."
+  },
+  "wf_bow": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 18,
+   "note": "Mounted archery: free aim works at a wider reticle drift; ranged shots are not melee reach."
+  },
+  "wf_caster_focus": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 14,
+   "note": "Bolts only; Frost Nova, Fireball and every channelled cast are banned while mounted."
+  },
+  "wf_censer_mace": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 2.5,
+   "note": "Strikes and Holy Light; Sanctuary (a planted ward) is banned."
+  },
+  "wf_fists": {
+   "allowed": false,
+   "maxChainHits": 0,
+   "reachCapM": 0,
+   "note": "Fists need the ground under you; a punch from the saddle does not read."
+  },
+  "wf_whip_rod": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 3,
+   "note": "Whip lashes work well mounted (wide reach exception, 3 m); Swap with the mount is not a companion swap."
+  },
+  "wf_instrument": {
+   "allowed": true,
+   "maxChainHits": 3,
+   "reachCapM": 2.5,
+   "note": "Chord Strikes only: songs are channelled and banned mounted."
+  },
+  "wf_workshop": {
+   "allowed": false,
+   "maxChainHits": 0,
+   "reachCapM": 0,
+   "note": "Hammer swings and deployables need footing."
+  }
+ },
+ "polearmChargeMult": 1.4
+}
