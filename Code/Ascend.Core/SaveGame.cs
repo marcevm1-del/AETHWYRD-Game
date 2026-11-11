@@ -183,7 +183,9 @@ namespace Ascend.Core
             if (string.IsNullOrEmpty(s.HairColour)) s.HairColour = AppearanceDefaults.HairColour;
             if (string.IsNullOrEmpty(s.SkinTone)) s.SkinTone = AppearanceDefaults.SkinTone;
             if (string.IsNullOrEmpty(s.OutfitColour)) s.OutfitColour = AppearanceDefaults.OutfitColour;
-            s.Version = SaveGame.CurrentVersion;
+            // Only a version in range is stamped current. A future (or invalid) version stays as it is, so Validate, which the
+            // game runs after Upgrade, still rejects it instead of an old build loading a newer save and overwriting it.
+            if (s.Version >= 1 && s.Version <= SaveGame.CurrentVersion) s.Version = SaveGame.CurrentVersion;
             return s;
         }
 

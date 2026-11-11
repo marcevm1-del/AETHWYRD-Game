@@ -419,6 +419,7 @@ const SINGLETONS = {
   companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' },
   mounts: { file: 'Companions/mounts.json', schema: 'mounts' },
   gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' },
+  rune_skills: { file: 'Classes/rune_skills.json', schema: 'rune_skills' },
   housing: { file: 'World/housing.json', schema: 'housing' },
   crops: { file: 'Items/crops.json', schema: 'crops' },
   stables: { file: 'Companions/stables.json', schema: 'stables' },
@@ -501,6 +502,39 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       for (const p of [...a.blades, ...a.hilts]) { const it = ITEMS_BY_ID[p]; if (!it || it.category !== 'part') err(a.id, `${p} is not a part item`); else if (!outputs.has(p)) err(a.id, `no recipe makes ${p}`); }
     }
     for (const [k, st] of Object.entries(obj.stations)) if (!(st in rf.stations)) err(c.file, `stations.${k}: "${st}" is not a recipe station`);
+    if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
+  }
+  if (name === 'rune_skills' && obj.skills) {
+    // Gear skills stay a side option: capped power, real sources, every fitting covered (Canon Slow-Life: nothing breaks).
+    const gr = load('Items/gear_rules.json'), R = obj.rules;
+    const words = Object.fromEntries(gr.runeWords.map(w => [w.id, w])), encs = Object.fromEntries(gr.enchantments.map(e => [e.id, e]));
+    const clsIds = new Set(rows.classes.map(cl => cl.id)), allKit = new Set(rows.classes.flatMap(cl => cl.kit.map(k => k.id)));
+    const ids = obj.skills.map(s => s.id);
+    if (new Set(ids).size !== ids.length) err(c.file, 'duplicate skill id');
+    const bySource = {};
+    for (const s of obj.skills) {
+      if (allKit.has(s.id)) err(s.id, 'id collides with a class kit skill');
+      const src = s.source.type === 'runeWord' ? words[s.source.id] : encs[s.source.id];
+      if (!src) { err(s.id, `source ${s.source.id} does not exist in gear_rules.json`); continue; }
+      (bySource[s.source.id] = bySource[s.source.id] || []).push(s.id);
+      for (const f of s.fits) if (!src.fits.includes(f)) err(s.id, `source ${s.source.id} does not fit ${f}`);
+      if (s.source.type === 'enchantment' && src.element && s.element !== src.element) err(s.id, `element ${s.element} must match the enchantment element ${src.element}`);
+      const total = s.hits.reduce((a, h) => a + h.power, 0);
+      if (total > R.maxTotalHitPower) err(s.id, `total hit power ${total} is above ${R.maxTotalHitPower}`);
+      if (s.hits.length && s.cooldownSec < R.minCooldownDamagingSec) err(s.id, `a damaging gear skill needs cooldown >= ${R.minCooldownDamagingSec}s`);
+      if (!s.costSp && !s.costMp) err(s.id, 'a gear skill must cost SP or MP');
+      if (s.appliesElement && s.element === 'None') err(s.id, 'appliesElement needs an element');
+      if (s.kind === 'buff' || s.buff) {
+        if (!s.buff) err(s.id, 'a buff skill needs a buff block');
+        else { if (Math.abs(s.buff.percent) > R.maxBuffPercent) err(s.id, `buff ${s.buff.percent}% is above ${R.maxBuffPercent}%`); if (s.buff.seconds > R.maxBuffSeconds) err(s.id, `buff lasts ${s.buff.seconds}s, above ${R.maxBuffSeconds}s`); }
+      }
+      for (const cid of s.affinityClasses || []) if (!clsIds.has(cid)) err(s.id, `unknown class ${cid}`);
+    }
+    // Derived coverage: every rune word and enchantment grants exactly one gear skill.
+    for (const sid of [...Object.keys(words), ...Object.keys(encs)]) {
+      const n = (bySource[sid] || []).length;
+      if (n !== 1) err(c.file, `${sid} grants ${n} gear skills, expected exactly 1`);
+    }
     if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
   }
   if (name === 'housing' && obj.tiers) {

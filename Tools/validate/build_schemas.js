@@ -394,6 +394,34 @@ const SCHEMAS = {
     }
   };
 }
+// --- Gear skills: skills granted by fitted rune words and enchantments (Data/Classes/rune_skills.json) ---
+{
+  const CATS = { type: 'array', minItems: 1, uniqueItems: true, items: { type: 'string', enum: ['weapon', 'armor', 'accessory'] } };
+  const HIT = { type: 'object', additionalProperties: false, required: ['power', 'weight'], properties: { power: { type: 'number', minimum: 0 }, weight: { type: 'string', enum: ['light', 'medium', 'heavy', 'launch', 'skill'] } } };
+  SCHEMAS.rune_skills = {
+    title: 'Gear skills (rune words and enchantments)', type: 'object', additionalProperties: false,
+    required: ['notes', 'rules', 'skills'],
+    properties: {
+      notes: { type: 'string' },
+      rules: { type: 'object', additionalProperties: false, required: ['gearSkillSlots', 'maxTotalHitPower', 'minCooldownDamagingSec', 'maxBuffPercent', 'maxBuffSeconds', 'powerScalesWith'], properties: {
+        gearSkillSlots: { type: 'integer', minimum: 1, maximum: 4 }, maxTotalHitPower: { type: 'number', minimum: 0 }, minCooldownDamagingSec: { type: 'number', minimum: 0 },
+        maxBuffPercent: { type: 'number', minimum: 0 }, maxBuffSeconds: { type: 'number', minimum: 0 }, powerScalesWith: { type: 'string' } } },
+      skills: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false,
+        required: ['id', 'name', 'source', 'fits', 'minLevel', 'kind', 'slot', 'animTag', 'hits', 'cooldownSec', 'element', 'effect'],
+        properties: {
+          id: id('skl_'), name: { type: 'string', minLength: 1 },
+          source: { type: 'object', additionalProperties: false, required: ['type', 'id'], properties: { type: { type: 'string', enum: ['runeWord', 'enchantment'] }, id: { type: 'string', pattern: '^(word|enc)_[a-z0-9_]+$' } } },
+          fits: CATS, minLevel: { type: 'integer', minimum: 1, maximum: 300 },
+          kind: { type: 'string', enum: ['chain', 'launcher', 'dash', 'ranged', 'aoe', 'buff', 'utility'] }, slot: { type: 'string', enum: ['skill'] },
+          animTag: { type: 'string', pattern: '^gear_[a-z0-9_]+$' }, hits: { type: 'array', items: HIT },
+          costSp: { type: 'number', minimum: 0 }, costMp: { type: 'number', minimum: 0 }, cooldownSec: { type: 'number', minimum: 0 },
+          element: EL, appliesElement: { type: 'boolean' },
+          buff: { type: 'object', additionalProperties: false, required: ['stat', 'percent', 'seconds'], properties: { stat: { type: 'string', enum: ['damageTaken', 'shield', 'regenHp', 'crit'] }, percent: { type: 'number' }, seconds: { type: 'number', exclusiveMinimum: 0 } } },
+          affinityClasses: { type: 'array', uniqueItems: true, items: id('cls_') }, effect: { type: 'string', minLength: 3 }
+        } } }
+    }
+  };
+}
 // --- Housing and farming (Step 2 of part 2; Data/World/housing.json, Data/Items/crops.json) ---
 {
   const R9 = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'] };

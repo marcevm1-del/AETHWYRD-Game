@@ -242,3 +242,4 @@ The System window is the genre's most recognisable furniture. It should feel lik
 4. Proportions match its class row in §5; eyes match §6.
 5. Region family materials on every prop (§4.2).
 6. Rendered once with `Ascend/Toon` and outlines before sign-off (contact sheets without outlines are previews, not approval).
+7. Passes `13_Production/style_consistency_checklist.md` (characters, outfits, screens: sections A to E), with every line PASS, FAIL or NOT ASSESSED; a line not looked at is never PASS.

@@ -1,0 +1,27 @@
+# Tech-debt register (started 2026-11-08)
+
+Owner: code-reviewer (read-only role; items are for the named fixer). Status key: **open** / **in progress** / **done**. Evidence key: **V** = verified by reading the code at the cited line; **U** = noted but not verified (go and look before acting). Entries come from the Core performance review (`perf_review_core_2026-11-08.md`) and a first sweep of the Unity runtime. Jobs 1 and 2 (Phase 1B front-end, human generator) have not been reviewed yet; their debt is NOT in this register. A TODO/FIXME/HACK grep over `Code/`, `Game/Assets/_Game/` and `Tools/` returned zero hits, so debt is not marked in comments; it has to be tracked here.
+
+| ID | Area | Debt | Evidence | Impact | Fixer | Size | Status |
+|---|---|---|---|---|---|---|---|
+| TD-01 | Core perf | `AggroTokens.Holders` copies the set per read; read per monster per frame at `MonsterController.cs:186` (`Loot.cs:85`) | V | GC garbage, scales with monster count | core-rules-engineer | S | open |
+| TD-02 | Core perf | `MonsterBrain.Tick` allocates `_cooldownLeft.Keys.ToList()` every frame (`MonsterAi.cs:205`); same pattern in `Skills.cs:89` | V | GC garbage per monster/player per frame | core-rules-engineer / ai-engineer | S | open |
+| TD-03 | Core perf | `MonsterBrain.Choose` uses LINQ `Where/ToList/OrderByDescending` per frame (`MonsterAi.cs:295-298`); must keep RNG draw order | V | GC garbage; determinism risk if rewritten carelessly | ai-engineer | S | open |
+| TD-04 | Core perf | `CurrentTelegraph` re-runs `Enum.TryParse` on each read (`MonsterAi.cs:141`, `Defense.cs:19`; read at `MonsterController.cs:295,473`) | V | CPU/garbage per telegraphing monster per frame | ai-engineer | S | open |
+| TD-05 | Core perf | `BossFight.Update` allocates a List each call even when no phase begins (`BossPhases.cs:59`) | V | small per-frame garbage per boss | combat-designer / core-rules-engineer | S | open |
+| TD-06 | Core perf | `MusicMachine.Update/Compose` allocate a List and a `SortedDictionary` per call (`AdaptiveMusic.cs:289,344,368`); `EnvironmentAudio.Ambience` likewise (`:217`) | V (call rate U) | garbage proportional to audio update rate | audio-designer / core-rules-engineer | M | open |
+| TD-07 | Dungeon validation | `DungeonData.RoomById` is linear; `Explore` rebuilds edges and key lists per state; `SoftLocks` is O(states^2 * edges) (`Dungeons.cs:80,104-147`) | V | only validation today; becomes slow in CI if dungeons or keys grow | core-rules-engineer | M | open (defer) |
+| TD-08 | World map | `WorldMapPainter.Paint(t, width)` clamps only the minimum width; large width allocates several W*H arrays (`WorldMapPainter.cs:43`) | V | memory spike if a caller passes a big size | ui-engineer | S | open |
+| TD-09 | Unity runtime | Per-monster hot path helpers `PickAllyTarget()` and `PackmatesNear()` in `MonsterController.cs` were not read | U | possible per-frame `FindObjectsByType`/LINQ | ai-engineer | S (to assess) | open |
+| TD-10 | Unity runtime | `FindObjectsByType`/`FindFirstObjectByType` used in many places (about 25 call sites); the ones read are event-driven (lock-on switch `LockOn.cs:63`, taming press `PlayerTaming.cs:79`, photo-mode sample `PhotoModeController.cs:151`, map capture `MapArt.cs:224`) so cost is low today | V (event-driven only; rest U) | becomes a hitch if any moves into `Update`; no registry of live monsters/companions | gameplay-engineer | M | open (defer) |
+| TD-11 | Unity runtime | UI windows use `FindFirstObjectByType ?? new GameObject(...).AddComponent` lazy singletons (`BagWindow.cs:20`, `BestiaryWindow.cs:18`, `NpcDialog.cs:36`, `PhotoModeController.cs:25`) | V | hidden creation order, harder to test, duplicates possible across scene loads | ui-engineer | M | open (defer) |
+| TD-12 | Size | Largest runtime files: `SystemWindow.cs` 646, `WorldMapWindow.cs` 581, `RingZeroHud.cs` 555 lines, `MonsterController.cs` 485 (mixed AI glue, telegraph visuals, ward, token logic) | V | review and change cost; split candidates when next touched | ui-engineer / ai-engineer | M | open (defer) |
+| TD-13 | Process | Concurrent `git worktree add` by many agents can exceed the 2 minute tool limit and leave a half-populated worktree plus a stale `index.lock`; commit-graph write errors appear (`unable to find all commit-graph files`) | V (hit once this session) | agent time lost; risk of working in an empty checkout | producer | S | open |
+
+## Reading the table
+- Sizes: S under half a day, M about a day, L more. These are reviewer estimates, not measured.
+- Nothing here is a correctness bug found in shipped behaviour; correctness reviews of Phase 1/1B windows, save wiring and the human generator are separate jobs and will add rows (or findings) when done.
+- Not assessed in this sweep (so absence of a row means "not looked at", not "clean"): save/load paths in `PlayerSave.cs` and `SaveGame.cs`, Editor scripts, `Tools/` Python and Node code, Blender pipelines, data-schema drift, hard-coded tuning numbers in Unity runtime (Core uses defaults-in-code with JSON override, e.g. `GroupTacticsTuning.Default`; whether every runtime number reads `Data/` was not audited).
+
+## Keeping it current
+When a fix lands, set the row to done with the commit, and add new debt as a new ID (never reuse IDs). Re-run the perf sweep after the TD-01..TD-06 fixes and compare allocations in the Unity Profiler (not done yet: no measurement exists).
