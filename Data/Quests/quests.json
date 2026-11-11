@@ -537,5 +537,612 @@
    "gp": 8,
    "xp": 260
   }
+ },
+ {
+  "id": "qst_craft_blade_for_the_guild",
+  "title": "A Blade for the Guild",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "Torvald is tired of watching rookies buy bent guild-issue swords. He will teach you the Fangblade pattern for forty copper if you forge one at his anvil and hang it on the guild wall as an example.",
+  "requirements": {
+   "minLevel": 4
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_fangblade",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 90,
+   "gp": 8,
+   "xp": 220,
+   "items": [
+    "itm_part_iron_blade"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "first_commission_forged"
+  ]
+ },
+ {
+  "id": "qst_craft_cap_for_tomlin",
+  "title": "A Cap for Tomlin",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_guard_tomlin",
+  "region": "reg_aldmere",
+  "summary": "Tomlin's helmet leaks rain down his neck, which is half the reason he naps on watch. Cure a leather cap in Wren's drying shed, then let Captain Holt see he is dressed for duty.",
+  "requirements": {
+   "minLevel": 2
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_leather_cap",
+    "count": 1
+   },
+   {
+    "kind": "talk",
+    "target": "npc_captain_holt"
+   }
+  ],
+  "rewards": {
+   "gold": 45,
+   "gp": 5,
+   "xp": 130,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_craft_clinic_stock",
+  "title": "Stock for the Clinic",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_sister_pell",
+  "region": "reg_aldmere",
+  "summary": "Solenne's shrine clinic is out of salve after the goblin season. Fennick will show you the alembic; Sister Pell needs three minor potions on the shelf before the next patrol comes home.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_fennick_reed"
+   },
+   {
+    "kind": "collect",
+    "target": "itm_minor_hp_potion",
+    "count": 3
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "gp": 6,
+   "xp": 160,
+   "items": [
+    "itm_healing_herb"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_craft_small_lantern_supper",
+  "title": "Supper for the Small Lantern",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Brother Caspian's orphans have had thin soup all week. Marta lends you the Sleeping Griffon hearth: cook three Hearth Stews, the one dish that comes out right there, and carry them up to the orphanage.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_hearth_stew",
+    "count": 3
+   },
+   {
+    "kind": "talk",
+    "target": "npc_brother_caspian"
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "gp": 6,
+   "xp": 170,
+   "items": [
+    "itm_hearth_loaf"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_bowl_of_stew"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "small_lantern_supper"
+  ]
+ },
+ {
+  "id": "qst_craft_silk_and_ink",
+  "title": "Silk and Ink",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_ines_valbuena",
+  "region": "reg_aldmere",
+  "summary": "Ines needs a silk hood and a pot of inkwell dye for a commission, and her hands are full of pins. Make both at her loom and bring them back.",
+  "requirements": {
+   "minLevel": 3
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_silk_hood",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_inkwell_dye",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 65,
+   "gp": 6,
+   "xp": 150,
+   "items": [
+    "itm_apprentice_robe"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_craft_first_glyph",
+  "title": "The First Glyph",
+  "rank": "F",
+  "type": "OddJob",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "Torvald lets you onto the rune anvil. Strike an ember rune and a stone rune, the oldest pair in Khazdur lore, and he will tell you why dwarves still hum while they work.",
+  "requirements": {
+   "minLevel": 6
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_rune_ember",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_rune_stone",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 80,
+   "gp": 8,
+   "xp": 240,
+   "items": [
+    "itm_rune_hearth"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_craft_blade_for_the_guild"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "first_rune_struck"
+  ]
+ },
+ {
+  "id": "qst_craft_library_ward",
+  "title": "A Ward for the Library",
+  "rank": "E",
+  "type": "OddJob",
+  "giver": "npc_eolande_fairweather",
+  "region": "reg_aldmere",
+  "summary": "After the mural sketch, Eolande wants the library's oldest shelf warded against damp and mice. Inscribe a Wardweave scroll at the enchanting table and she will teach you how it is meant to be read.",
+  "requirements": {
+   "minLevel": 9
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_scroll_wardweave",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 110,
+   "gp": 10,
+   "xp": 300,
+   "items": [
+    "itm_scroll_vitality"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_explore_nine_thrones"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_comp_two_on_the_road",
+  "title": "Two on the Road",
+  "rank": "F",
+  "type": "Subjugation",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "Mina posts her first pair contract: a wolf pack and a boar on the Whisperwood road, sized for two people who trust each other. Bring a party member (Lyra or anyone you have recruited) and let them cover your blind side.",
+  "requirements": {
+   "minLevel": 3,
+   "partySize": "2"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 4
+   },
+   {
+    "kind": "kill",
+    "target": "mon_wild_boar",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 80,
+   "gp": 8,
+   "xp": 220,
+   "items": [
+    "itm_minor_hp_potion",
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  }
+ },
+ {
+  "id": "qst_dng_warren_tally",
+  "title": "The Tally of the Lost",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_labyrinth_upper",
+  "summary": "Wendel keeps a ledger of gear adventurers lose in the Great Labyrinth, and every missing page points at the Salvage Warren under floors three and four. Go down to the Chalk Landing, thin out the scavengers, and bring back three trinkets he can match to the ledger.",
+  "requirements": {
+   "minLevel": 14,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "dng_salvage_warren"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_kobold_scavenger",
+    "count": 4
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_stolen_trinket",
+    "count": 3,
+    "from": "mon_kobold_scavenger"
+   }
+  ],
+  "rewards": {
+   "gold": 220,
+   "gp": 18,
+   "xp": 700,
+   "items": [
+    "itm_minor_hp_potion"
+   ]
+  },
+  "prerequisites": {
+   "flags": [
+    "rank_e_reached"
+   ],
+   "rank": "E"
+  }
+ },
+ {
+  "id": "qst_dng_warren_weighing",
+  "title": "Weigh the Way Down",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_examiner_garrick",
+  "region": "reg_labyrinth_upper",
+  "summary": "Garrick wants a safe way to the Warren's lower level written into the guild map. The rusted tally door needs the key from the Weighing Gallery; the old lift needs the chalk lever order. Take either, clear the Trapmaster, and tell him which you trusted. Both are fine, and nothing is lost by a wrong pull.",
+  "requirements": {
+   "minLevel": 15,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_kobold_trapmaster",
+    "count": 1
+   },
+   {
+    "kind": "reach",
+    "target": "rm_lower_landing"
+   },
+   {
+    "kind": "choice",
+    "target": "rusted_key_or_chalk_lift"
+   }
+  ],
+  "rewards": {
+   "gold": 260,
+   "gp": 20,
+   "xp": 800,
+   "items": [
+    "itm_fire_bomb"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dng_warren_tally"
+   ],
+   "rank": "E"
+  },
+  "setsFlags": [
+   "warren_lower_level_mapped"
+  ]
+ },
+ {
+  "id": "qst_dng_warren_beetle",
+  "title": "The Beetle Vault",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_rodrick_hale",
+  "region": "reg_labyrinth_upper",
+  "summary": "An Armor Beetle has made the Warren's vault its nest and sits on the lost-and-found of ten years of adventurers. Rodrick will not send anyone under E rank. Fell it, bring two carapace shards as proof, and take the chute home.",
+  "requirements": {
+   "minLevel": 16,
+   "partySize": "1-4"
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_armor_beetle",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_carapace_shard",
+    "count": 2,
+    "from": "mon_armor_beetle"
+   }
+  ],
+  "rewards": {
+   "gold": 380,
+   "gp": 28,
+   "xp": 1100,
+   "items": [
+    "itm_carapace_cap"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dng_warren_weighing"
+   ],
+   "rank": "E"
+  },
+  "setsFlags": [
+   "warren_beetle_felled"
+  ]
+ },
+ {
+  "id": "qst_dng_warren_cistern",
+  "title": "The Runesmiths' Game",
+  "rank": "E",
+  "type": "Hidden",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_labyrinth_upper",
+  "summary": "Torvald hears that a seam behind the broken lamp-post on the Warren's lower level hides a rune-lock that was a children's game before it was a lock. Find the draught, read the mural, and tell him how the sconces turn. The lock itself is optional; the visit is the quest.",
+  "requirements": {
+   "minLevel": 16
+  },
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "rm_rune_cistern"
+   },
+   {
+    "kind": "choice",
+    "target": "open_the_lock_or_leave_it_be"
+   }
+  ],
+  "rewards": {
+   "gold": 150,
+   "gp": 12,
+   "xp": 600,
+   "items": [
+    "itm_rune_gale"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_craft_first_glyph",
+    "qst_dng_warren_weighing"
+   ]
+  },
+  "setsFlags": [
+   "warren_cistern_found"
+  ]
+ },
+ {
+  "id": "qst_dng_warren_accord",
+  "title": "The Tally-Keepers' Accord",
+  "rank": "E",
+  "type": "Dungeon",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_labyrinth_upper",
+  "summary": "With the vault quiet, the kobolds stack their salvage again, and Wendel needs a ruling: sell back what is clearly an adventurer's, take a share for the guild, or seal the lower level. The dungeon-born kobolds are not allies and will not follow you, but they keep honest tally.",
+  "requirements": {
+   "minLevel": 17
+  },
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_kobold_miner",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "buy_back_share_or_seal"
+   }
+  ],
+  "rewards": {
+   "gold": 300,
+   "gp": 22,
+   "xp": 900
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_dng_warren_beetle"
+   ]
+  },
+  "setsFlags": [
+   "warren_salvage_settled"
+  ]
+ },
+ {
+  "id": "qst_comp_lyra_1_the_girl_who_couldnt_win",
+  "title": "The Girl Who Couldn't Win",
+  "rank": "F",
+  "type": "Companion",
+  "giver": "npc_lyra_brightwood",
+  "region": "reg_aldmere",
+  "summary": "Lyra has lost to her childhood rival eleven times and tells you it is fine, loudly. Watch her at Old Hollis's yard at dawn, spar three mornings, and notice what she does when she is about to lose. Then decide how to help: show her a stance of yours, ask her to try three of her own, or just swing beside her until something sticks. There is no wrong answer, and she will remember which one you picked.",
+  "requirements": {
+   "minLevel": 5,
+   "partySize": "2"
+  },
+  "objectives": [
+   {
+    "kind": "talk",
+    "target": "npc_old_hollis"
+   },
+   {
+    "kind": "reach",
+    "target": "hollis_yard_dawn",
+    "count": 3
+   },
+   {
+    "kind": "choice",
+    "target": "lend_a_stance_or_ask_for_three_or_swing_beside_her"
+   }
+  ],
+  "rewards": {
+   "gp": 6,
+   "xp": 300,
+   "items": [
+    "itm_hunters_skewer"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_main_wooden_card"
+   ],
+   "flags": [
+    "guild_registered"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "lyra_arc_first_morning"
+  ]
+ },
+ {
+  "id": "qst_comp_torvald_1_the_unfinished_blade",
+  "title": "The Unfinished Blade",
+  "rank": "F",
+  "type": "Companion",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "One sword blank hangs unfinished above Torvald's forge, and he changes the subject whenever you look at it. He will not say why, but he will let you gather the iron and scrap to bring the old forge back to heat. Do that, then choose: ask about the blank, or leave it be until he speaks. He sings the forge songs either way.",
+  "requirements": {
+   "minLevel": 6,
+   "partySize": "2"
+  },
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_mat_scrap_metal",
+    "count": 4
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_crude_iron",
+    "count": 2
+   },
+   {
+    "kind": "choice",
+    "target": "ask_about_the_blank_or_leave_it_be"
+   }
+  ],
+  "rewards": {
+   "gp": 6,
+   "xp": 280,
+   "items": [
+    "itm_part_iron_blade"
+   ]
+  },
+  "prerequisites": {
+   "quests": [
+    "qst_craft_blade_for_the_guild"
+   ],
+   "act": 1
+  },
+  "setsFlags": [
+   "torvald_arc_forge_lit"
+  ]
  }
 ]
