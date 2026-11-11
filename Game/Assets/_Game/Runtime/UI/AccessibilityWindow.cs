@@ -30,6 +30,7 @@ namespace Ascend.Game
             var p = PlayerObject;
             var save = p != null ? p.GetComponent<PlayerSave>() : null;
             if (save != null) save.Save();
+            if (World != null) GameSettings.Save(World.Accessibility); // settings.json beside the saves, so the title screen shares them
         }
 
         protected override void Build(List<Row> rows)

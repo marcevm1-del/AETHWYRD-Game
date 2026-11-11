@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "notes": "Phase 1B character creator options (06_Races_Origins/races_and_origins.md 3.1 step 2). Minimal set: 2 bodies (Canon: male and female, no locks), 4 hair styles, 8 hair colours, 6 skin tones, 8 outfit colours. The doc has 60+ styles, face sliders, eyes, marks and aura colour; those come later. The save stores these ids.",
+  "maxNameLength": 20,
+  "defaultName": "Traveller",
+  "suggestedNames": ["Haru", "Mika", "Rowan", "Sage", "Wren", "Kit", "Ash", "Noa"],
+  "raceOriginNote": "Race and origin are chosen in the prologue. Until then you travel as a human newcomer.",
+  "bodies": [
+    { "id": "masculine", "name": "Masculine", "torsoWidth": 1.0, "hipWidth": 1.0 },
+    { "id": "feminine", "name": "Feminine", "torsoWidth": 0.88, "hipWidth": 1.08 }
+  ],
+  "hairStyles": [
+    { "id": "short", "name": "Short" },
+    { "id": "long", "name": "Long" },
+    { "id": "ponytail", "name": "Ponytail" },
+    { "id": "bun", "name": "Bun" }
+  ],
+  "hairColours": [
+    { "id": "chestnut", "name": "Chestnut", "hex": "#6B4226" },
+    { "id": "ink", "name": "Ink black", "hex": "#1E2233" },
+    { "id": "honey", "name": "Honey", "hex": "#D9A441" },
+    { "id": "snow", "name": "Snow", "hex": "#E8ECF5" },
+    { "id": "ember", "name": "Ember red", "hex": "#B8402E" },
+    { "id": "sky", "name": "Sky blue", "hex": "#5C9BE0" },
+    { "id": "moss", "name": "Moss green", "hex": "#5E9A4A" },
+    { "id": "violet", "name": "Violet", "hex": "#8A64C8" }
+  ],
+  "skinTones": [
+    { "id": "porcelain", "name": "Porcelain", "hex": "#F6DCCB" },
+    { "id": "fair", "name": "Fair", "hex": "#EFC9A8" },
+    { "id": "golden", "name": "Golden", "hex": "#D9A878" },
+    { "id": "tan", "name": "Tan", "hex": "#B97F55" },
+    { "id": "umber", "name": "Umber", "hex": "#8A5A3C" },
+    { "id": "deep", "name": "Deep", "hex": "#5E3B2A" }
+  ],
+  "outfitColours": [
+    { "id": "azure", "name": "Azure", "hex": "#4D73F2" },
+    { "id": "forest", "name": "Forest", "hex": "#3E8F5A" },
+    { "id": "crimson", "name": "Crimson", "hex": "#C8453F" },
+    { "id": "saffron", "name": "Saffron", "hex": "#E6A93A" },
+    { "id": "plum", "name": "Plum", "hex": "#7A4A9E" },
+    { "id": "teal", "name": "Teal", "hex": "#2FA3A3" },
+    { "id": "slate", "name": "Slate", "hex": "#5B6478" },
+    { "id": "rose", "name": "Rose", "hex": "#D9718F" }
+  ]
+}
