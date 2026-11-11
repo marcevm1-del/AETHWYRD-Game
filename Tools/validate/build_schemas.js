@@ -661,6 +661,7 @@ SCHEMAS.dungeon_loot = {
   } };
 require('./graph_schemas')(SCHEMAS); // Wave F-lite
 require('./audio_schemas')(SCHEMAS); // Wave D
+require('./weapon_schemas')(SCHEMAS); // weapon movesets
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
 require('./encounter_schemas')(SCHEMAS); // Regional encounter tables
 for (const [name, s] of Object.entries(SCHEMAS)) {

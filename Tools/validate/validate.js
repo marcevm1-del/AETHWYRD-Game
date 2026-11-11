@@ -740,6 +740,8 @@ require('./dungeon_checks').run({ DATA, load, check, schema, err, items: new Set
 
 // 4c) Wave D: audio, accessibility and photo mode (Tools/validate/audio_checks.js)
 require('./audio_checks').run({ DATA, load, check, schema, err, companionIds: rows.companions.map(c => c.id), regionTerrain: [...new Set(rows.regions.flatMap(r => (r.map && r.map.terrain) || []))] });
+require('./weapon_checks').run({ DATA, load, check, schema, err });
+require('./reaction_balance').run({ DATA, load, err });
 
 // 4d) Wave F-lite: region graph, Labyrinth floors, Underworld layers (Tools/validate/graph_checks.js). Its findings are counted
 // separately from the map warnings above.

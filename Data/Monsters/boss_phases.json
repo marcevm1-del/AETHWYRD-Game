@@ -28,6 +28,111 @@
      "damageMult": 1.3
     }
    ]
+  },
+  {
+   "speciesId": "mon_ashgrave_the_oathless_baron",
+   "phases": [
+    {
+     "name": "Oathless Duel",
+     "atHpFraction": 1,
+     "banner": "Baron Ashgrave, the Oathless"
+    },
+    {
+     "name": "Old Guard",
+     "atHpFraction": 0.6,
+     "banner": "Ashgrave calls his old guard!",
+     "summon": [
+      {
+       "speciesId": "mon_dune_skeleton_knight",
+       "count": 2
+      }
+     ]
+    },
+    {
+     "name": "Last Charge",
+     "atHpFraction": 0.3,
+     "banner": "Ashgrave charges for the last time!",
+     "tempo": 1.25,
+     "damageMult": 1.2
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_mother_webcrawler_terror_of_the_small",
+   "phases": [
+    {
+     "name": "Lair",
+     "atHpFraction": 1,
+     "banner": "Mother Webcrawler, Terror of the Small"
+    },
+    {
+     "name": "Webs",
+     "atHpFraction": 0.66,
+     "banner": "Webs spread across the floor!"
+    },
+    {
+     "name": "Frenzy",
+     "atHpFraction": 0.33,
+     "banner": "Mother Webcrawler skitters in a frenzy!",
+     "tempo": 1.3,
+     "damageMult": 1.2
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_mycelia_the_spore_lord",
+   "phases": [
+    {
+     "name": "Spores",
+     "atHpFraction": 1,
+     "banner": "Mycelia, the Spore Lord"
+    },
+    {
+     "name": "Hearts",
+     "atHpFraction": 0.66,
+     "banner": "The spore hearts swell!"
+    },
+    {
+     "name": "Bloom",
+     "atHpFraction": 0.33,
+     "banner": "Mycelia blooms!",
+     "tempo": 1.2,
+     "damageMult": 1.2
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_the_drowned_choir_sirens_of_the_canals",
+   "phases": [
+    {
+     "name": "Harmony",
+     "atHpFraction": 1,
+     "banner": "The Drowned Choir"
+    },
+    {
+     "name": "Discord",
+     "atHpFraction": 0.5,
+     "banner": "The song breaks!",
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_the_hollow_abbot_choir_of_silence",
+   "phases": [
+    {
+     "name": "Vigil",
+     "atHpFraction": 1,
+     "banner": "The Hollow Abbot"
+    },
+    {
+     "name": "Toll",
+     "atHpFraction": 0.5,
+     "banner": "The bell tolls!",
+     "tempo": 1.2,
+     "damageMult": 1.15
+    }
+   ]
   }
  ]
 }
