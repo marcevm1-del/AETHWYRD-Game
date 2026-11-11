@@ -238,6 +238,8 @@ namespace Ascend.Core
         public StablesFile Stables { get; }
         /// <summary>Data/World/civilization_archive.json: civilizations, entries, ruin sites, fragments (empty when not loaded).</summary>
         public ArchiveFile Archive { get; }
+        /// <summary>Data/Library/libraries.json and books.json: libraries and the draft books on their shelves (empty when not loaded).</summary>
+        public LibraryCatalogue Library { get; }
         public ShopData ShopOf(string npcId) => Shops.Values.FirstOrDefault(s => s.NpcId == npcId);
 
         public GameDatabase(IEnumerable<RegionData> regions, IEnumerable<SpeciesData> species, IEnumerable<AttackData> attacks,
@@ -250,7 +252,8 @@ namespace Ascend.Core
             ReactionFile reactions = null, BossWeakPointFile weakPoints = null,
             QualityRules quality = null, LifeSkillFile lifeSkills = null,
             IEnumerable<DungeonData> dungeons = null, PuzzleFile puzzles = null, GearRules gear = null,
-            HousingFile housing = null, CropFile crops = null, StablesFile stables = null, ArchiveFile archive = null)
+            HousingFile housing = null, CropFile crops = null, StablesFile stables = null, ArchiveFile archive = null,
+            LibraryFile libraries = null, BookFile books = null)
         {
             Motion = Index(motion?.Species, m => m.SpeciesId, "species motion");
             Shops = Index(shops, s => s.Id, "shop");
@@ -268,6 +271,7 @@ namespace Ascend.Core
             Crops = crops ?? new CropFile();
             Stables = stables ?? new StablesFile();
             Archive = archive ?? new ArchiveFile();
+            Library = new LibraryCatalogue(libraries, books);
             Puzzles = puzzles ?? new PuzzleFile();
             Index(Puzzles.Puzzles, p => p.Id, "puzzle");
             Dungeons = Index(dungeons, x => x.Id, "dungeon");

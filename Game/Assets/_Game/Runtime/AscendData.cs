@@ -112,7 +112,9 @@ namespace Ascend.Game
                 housing: ReadOpt<HousingFile>("World/housing.json"),
                 crops: ReadOpt<CropFile>("Items/crops.json"),
                 stables: ReadOpt<StablesFile>("Companions/stables.json"),
-                archive: ReadOpt<ArchiveFile>("World/civilization_archive.json"));
+                archive: ReadOpt<ArchiveFile>("World/civilization_archive.json"),
+                libraries: ReadOpt<LibraryFile>("Library/libraries.json"),
+                books: ReadOpt<BookFile>("Library/books.json"));
         }
 
         public static void Reload()
