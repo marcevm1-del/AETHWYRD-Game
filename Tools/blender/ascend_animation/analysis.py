@@ -113,3 +113,36 @@ def _analyze(rig, legs, clip, speed, contact_z):
         out["footSlideMeanMps"] = round(sum(slide) / len(slide), 3) if slide else None
         out["footSlideMeanPct"] = round(100 * sum(slide) / len(slide) / speed, 1) if slide else None
     return out
+
+
+def combat_metrics(rig, legs, clip):
+    """Telegraph and contact measurements for an attack clip (CombatClip): how far the weapon hands travel from the wind-up to the
+    contact frame, how far the pose is from the ready stance at the wind-up (readability), and the lowest bone."""
+    ad = rig.obj.animation_data
+    saved = ad.action if ad else None
+    if ad:
+        ad.action = None
+    try:
+        frames = clip.frames()
+        ev = clip.events
+        ready_i, wind_i, contact_i = 0, max(1, int(round(clip.windup_t * clip.fps))), ev["ActiveBegin"]
+
+        def snap(i):
+            pose_frame(rig, legs, frames[i])
+            bpy.context.view_layer.update()
+            pb = rig.obj.pose.bones
+            return {n: pb[n].head.copy() for n in ("RightHand", "LeftHand", "Head", "Hips", "LeftFoot", "RightFoot", "Chest")}
+        r, w, c = snap(ready_i), snap(wind_i), snap(contact_i)
+        hands = max((c[h] - w[h]).length for h in ("RightHand", "LeftHand"))
+        tele = max((w[k] - r[k]).length for k in ("RightHand", "LeftHand", "Head", "Chest"))
+        # forward reach of the weapon hand from the chest at contact (-Y is forward)
+        reach = max(-(c[h].y - c["Chest"].y) for h in ("RightHand", "LeftHand"))
+        low = 9.0
+        for f in frames:
+            pose_frame(rig, legs, f)
+            bpy.context.view_layer.update()
+            low = min(low, min(min(b.head.z, b.tail.z) for b in rig.obj.pose.bones if not b.name.startswith(("Hair", "Cloak"))))
+        return dict(handTravelM=round(hands, 3), telegraphM=round(tele, 3), contactReachM=round(reach, 3), minBoneZ=round(low, 4))
+    finally:
+        if ad:
+            ad.action = saved

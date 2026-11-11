@@ -1,0 +1,4227 @@
+{
+ "schema": "combat_clips/1",
+ "rigContract": "human_v1",
+ "source": "Tools/blender/build_combat_clips.py",
+ "authoredOn": "human_male_base",
+ "tuning": {
+  "file": "Data/Combat/combat_tuning.json",
+  "block": "attackTiming",
+  "hash": "025c454d5ae0",
+  "windows": {
+   "light": {
+    "startupSec": 0.1,
+    "activeSec": 0.08,
+    "recoverySec": 0.24
+   },
+   "medium": {
+    "startupSec": 0.16,
+    "activeSec": 0.1,
+    "recoverySec": 0.36
+   },
+   "heavy": {
+    "startupSec": 0.26,
+    "activeSec": 0.12,
+    "recoverySec": 0.46
+   },
+   "launch": {
+    "startupSec": 0.14,
+    "activeSec": 0.1,
+    "recoverySec": 0.32
+   }
+  }
+ },
+ "fps": 50,
+ "weaponToFamily": {
+  "sword": "blade_1h",
+  "1h_sword": "blade_1h",
+  "short_sword": "blade_1h",
+  "katana": "blade_1h",
+  "shield": "blade_1h",
+  "tower_shield": "blade_1h",
+  "greatsword": "blade_2h",
+  "daggers": "dual_blades",
+  "dual_swords": "dual_blades",
+  "ritual_dagger": "dual_blades",
+  "short_sword_pair": "dual_blades",
+  "mace": "blunt_1h",
+  "hammer": "blunt_1h",
+  "wrench": "blunt_1h",
+  "censer": "blunt_1h",
+  "spear": "polearm",
+  "lance": "polearm",
+  "halberd": "polearm",
+  "glaive": "polearm",
+  "naginata": "polearm",
+  "trident": "polearm",
+  "bo_staff": "polearm",
+  "staff": "staff_caster",
+  "wand": "staff_caster",
+  "grimoire": "staff_caster",
+  "orb": "staff_caster",
+  "holy_tome": "staff_caster",
+  "bone_staff": "staff_caster",
+  "tool_staff": "staff_caster",
+  "tome": "staff_caster",
+  "shortbow": "bow",
+  "longbow": "bow",
+  "crossbow": "bow",
+  "throwing_knives": "bow",
+  "throwables": "bow",
+  "fists": "unarmed",
+  "knuckles": "unarmed",
+  "gauntlets": "unarmed",
+  "greaves": "unarmed",
+  "whip": "whip",
+  "rod": "whip",
+  "bell": "whip",
+  "flute_tamer": "whip",
+  "lute": "instrument",
+  "flute": "instrument",
+  "harp": "instrument",
+  "war_drum": "instrument",
+  "violin_blade": "instrument",
+  "violin": "instrument"
+ },
+ "hitRule": "A chain's hit i (0-based) plays <family>_Hit<i+1>; when a chain is longer than the family's hitCount the extra hits repeat from Hit2 (hit i -> Hit(2 + (i-1) % (hitCount-1))) so a 17-hit flurry loops its middle hits; hits are weighted light, light, ..., medium and the windows come from the weight (Special: HeavyRelease/Riposte/Slam use heavy, Launcher launch, SkillCast medium)",
+ "families": [
+  {
+   "id": "blade_1h",
+   "weapons": [
+    "sword",
+    "1h_sword",
+    "short_sword",
+    "katana",
+    "shield",
+    "tower_shield"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 4,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_blade_1h_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "blade_1h: weapon-drawn stance, breathing",
+     "hash": "8a09f414157b",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8585,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_blade_1h_Hit1",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blade_1h: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "bb429410d0c6",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.041,
+      "telegraphM": 0.619,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_blade_1h_Hit2",
+     "motion": "slash_back",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blade_1h: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "3b563385be0e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.039,
+      "telegraphM": 0.66,
+      "contactReachM": 0.473
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_blade_1h_Hit3",
+     "motion": "slash_diag",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blade_1h: slash_diag (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "66fdc5709f85",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.127,
+      "telegraphM": 0.681,
+      "contactReachM": 0.598
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit4",
+     "action": "Cmb_blade_1h_Hit4",
+     "motion": "slash_h",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "blade_1h: slash_h (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "d430414bce6a",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.145,
+      "telegraphM": 0.696,
+      "contactReachM": 0.623
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_blade_1h_Charge",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "blade_1h: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "1f7d7ff98ef4",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8625,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_blade_1h_HeavyRelease",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blade_1h: chop (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "fc0b5642fe02",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8945,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.338,
+      "telegraphM": 0.911,
+      "contactReachM": 0.606
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_blade_1h_Riposte",
+     "motion": "parry",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blade_1h: parry (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "b34951808e47",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.844,
+      "telegraphM": 0.563,
+      "contactReachM": 0.49
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_blade_1h_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "blade_1h: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "80ee42de443e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.736,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.967,
+      "telegraphM": 0.712,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_blade_1h_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blade_1h: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "fea2239c93c4",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.311,
+      "telegraphM": 0.969,
+      "contactReachM": 0.6
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_blade_1h_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "blade_1h: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "0309b416e8eb",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.095,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "fcfae92a050f"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "afd1d2b942d7"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "803bb3d7df79"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "914e35ea3d82"
+    },
+    {
+     "name": "Hit4",
+     "minBoneZ": 0.0199,
+     "hash": "df9d5200d282"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "bdd2d91b5763"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "6ec4edaba16b"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "cba358891ad0"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0163,
+     "hash": "6dd4669da218"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "4427b72f4b00"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "1650eb39736f"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/blade_1h.fbx"
+  },
+  {
+   "id": "blade_2h",
+   "weapons": [
+    "greatsword"
+   ],
+   "twoHanded": true,
+   "dualWield": false,
+   "hitCount": 4,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_blade_2h_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "blade_2h: weapon-drawn stance, breathing",
+     "hash": "b40dd4c094ab",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8285,
+      "hipsMaxZ": 0.8345,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_blade_2h_Hit1",
+     "motion": "slash_diag",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blade_2h: slash_diag (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "4d6b725df325",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8644,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.127,
+      "telegraphM": 0.711,
+      "contactReachM": 0.598
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_blade_2h_Hit2",
+     "motion": "slash_back",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blade_2h: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "00c67c8bd109",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.039,
+      "telegraphM": 0.655,
+      "contactReachM": 0.487
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_blade_2h_Hit3",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blade_2h: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "29eb39d9cbb3",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.041,
+      "telegraphM": 0.617,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit4",
+     "action": "Cmb_blade_2h_Hit4",
+     "motion": "chop",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "blade_2h: chop (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "d92f67cac17f",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8944,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.248,
+      "telegraphM": 0.849,
+      "contactReachM": 0.58
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_blade_2h_Charge",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "blade_2h: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "6735f34746cc",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8625,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_blade_2h_HeavyRelease",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blade_2h: chop (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "c2e44f45d08a",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8945,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.338,
+      "telegraphM": 0.921,
+      "contactReachM": 0.606
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_blade_2h_Riposte",
+     "motion": "parry",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blade_2h: parry (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "1c34dd1df059",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8445,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.991,
+      "telegraphM": 0.592,
+      "contactReachM": 0.642
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_blade_2h_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "blade_2h: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "8298218a8355",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7357,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.967,
+      "telegraphM": 0.689,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_blade_2h_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blade_2h: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "63e0840e93b1",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.279,
+      "telegraphM": 0.935,
+      "contactReachM": 0.577
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_blade_2h_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "blade_2h: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "b7e634aabd4b",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8545,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.097,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "8e292cd52e66"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "ce8fc7f84faa"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "5e6ad271a3b5"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "1b90b1b8d43d"
+    },
+    {
+     "name": "Hit4",
+     "minBoneZ": 0.0199,
+     "hash": "bea115a1ff17"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "03af8f8f4a14"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "b58d6e78a381"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "56ffcfb5ed61"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0162,
+     "hash": "1fb84f039125"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "239fa0c4565a"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "c88cd5b50c23"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/blade_2h.fbx"
+  },
+  {
+   "id": "dual_blades",
+   "weapons": [
+    "daggers",
+    "dual_swords",
+    "ritual_dagger",
+    "short_sword_pair"
+   ],
+   "twoHanded": false,
+   "dualWield": true,
+   "hitCount": 4,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_dual_blades_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "dual_blades: weapon-drawn stance, breathing",
+     "hash": "b095ebfc5ce3",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8085,
+      "hipsMaxZ": 0.8145,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_dual_blades_Hit1",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "dual_blades: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "2be18287fdb5",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.041,
+      "telegraphM": 0.618,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_dual_blades_Hit2",
+     "motion": "slash_back",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "dual_blades: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "d5656d411f9b",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.153,
+      "telegraphM": 0.947,
+      "contactReachM": 0.543
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_dual_blades_Hit3",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "dual_blades: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "2be18287fdb5",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.041,
+      "telegraphM": 0.618,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit4",
+     "action": "Cmb_dual_blades_Hit4",
+     "motion": "slash_diag",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "dual_blades: slash_diag (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "424c4d9f6732",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.258,
+      "telegraphM": 0.866,
+      "contactReachM": 0.641
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_dual_blades_Charge",
+     "motion": "slash_diag",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "dual_blades: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "387dfdd9dd48",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8325,
+      "hipsMaxZ": 0.8445,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_dual_blades_HeavyRelease",
+     "motion": "slash_diag",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "dual_blades: slash_diag (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "307403065322",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.362,
+      "telegraphM": 0.991,
+      "contactReachM": 0.674
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_dual_blades_Riposte",
+     "motion": "thrust",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "dual_blades: thrust (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "055076c73981",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8345,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.954,
+      "telegraphM": 0.435,
+      "contactReachM": 0.638
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_dual_blades_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "dual_blades: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "9a31da9a0876",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7354,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.968,
+      "telegraphM": 0.673,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_dual_blades_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "dual_blades: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "b51cbaacd503",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.311,
+      "telegraphM": 0.965,
+      "contactReachM": 0.6
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_dual_blades_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "dual_blades: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "adddcef434f6",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.112,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "7ec9169ca2a4"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "1a3ea1a7fc55"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "505a64c9ad7c"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "1a3ea1a7fc55"
+    },
+    {
+     "name": "Hit4",
+     "minBoneZ": 0.0199,
+     "hash": "101980e173f2"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "35bb0de0f2df"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "fe9ea0d8a0a4"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "9fca99e81bea"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0162,
+     "hash": "3713ce96b382"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "e02752d20e90"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "1a5761ed1149"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/dual_blades.fbx"
+  },
+  {
+   "id": "blunt_1h",
+   "weapons": [
+    "mace",
+    "hammer",
+    "wrench",
+    "censer"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 3,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_blunt_1h_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "blunt_1h: weapon-drawn stance, breathing",
+     "hash": "8a09f414157b",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8585,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_blunt_1h_Hit1",
+     "motion": "slash_diag",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blunt_1h: slash_diag (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "66fdc5709f85",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.127,
+      "telegraphM": 0.681,
+      "contactReachM": 0.598
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_blunt_1h_Hit2",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "blunt_1h: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "bb429410d0c6",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.041,
+      "telegraphM": 0.619,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_blunt_1h_Hit3",
+     "motion": "chop",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "blunt_1h: chop (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "84e5be414442",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8944,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.248,
+      "telegraphM": 0.858,
+      "contactReachM": 0.589
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_blunt_1h_Charge",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "blunt_1h: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "1f7d7ff98ef4",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8625,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_blunt_1h_HeavyRelease",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blunt_1h: chop (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "fc0b5642fe02",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8945,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.338,
+      "telegraphM": 0.911,
+      "contactReachM": 0.606
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_blunt_1h_Riposte",
+     "motion": "parry",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blunt_1h: parry (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "b34951808e47",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.844,
+      "telegraphM": 0.563,
+      "contactReachM": 0.49
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_blunt_1h_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "blunt_1h: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "80ee42de443e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.736,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.967,
+      "telegraphM": 0.712,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_blunt_1h_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "blunt_1h: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "fea2239c93c4",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.311,
+      "telegraphM": 0.969,
+      "contactReachM": 0.6
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_blunt_1h_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "blunt_1h: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "0309b416e8eb",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.095,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "fcfae92a050f"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "914e35ea3d82"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "afd1d2b942d7"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "ce422f055a6f"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "bdd2d91b5763"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "6ec4edaba16b"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "cba358891ad0"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0163,
+     "hash": "6dd4669da218"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "4427b72f4b00"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "1650eb39736f"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/blunt_1h.fbx"
+  },
+  {
+   "id": "polearm",
+   "weapons": [
+    "spear",
+    "lance",
+    "halberd",
+    "glaive",
+    "naginata",
+    "trident",
+    "bo_staff"
+   ],
+   "twoHanded": true,
+   "dualWield": false,
+   "hitCount": 4,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_polearm_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "polearm: weapon-drawn stance, breathing",
+     "hash": "f38603ed72f2",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8585,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_polearm_Hit1",
+     "motion": "thrust",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "polearm: thrust (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "e03d721d20bd",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.838,
+      "telegraphM": 0.319,
+      "contactReachM": 0.592
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_polearm_Hit2",
+     "motion": "thrust",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "polearm: thrust (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "e03d721d20bd",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.838,
+      "telegraphM": 0.319,
+      "contactReachM": 0.592
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_polearm_Hit3",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "polearm: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "5e5ece18ba67",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.041,
+      "telegraphM": 0.619,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit4",
+     "action": "Cmb_polearm_Hit4",
+     "motion": "thrust",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "polearm: thrust (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "2a2d3dc9038f",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.898,
+      "telegraphM": 0.352,
+      "contactReachM": 0.627
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_polearm_Charge",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "polearm: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "6735f34746cc",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8625,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_polearm_HeavyRelease",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "polearm: chop (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "01613b9df3f6",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8945,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.338,
+      "telegraphM": 0.908,
+      "contactReachM": 0.606
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_polearm_Riposte",
+     "motion": "parry",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "polearm: parry (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "8e1d06c93b35",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8045,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.991,
+      "telegraphM": 0.572,
+      "contactReachM": 0.642
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_polearm_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "polearm: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "dba7a0bc8304",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.736,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.967,
+      "telegraphM": 0.712,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_polearm_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "polearm: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "17f7c68efa63",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.279,
+      "telegraphM": 0.916,
+      "contactReachM": 0.577
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_polearm_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "polearm: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "573575559828",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.095,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "bac6a7a62ab9"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "a93d02b2b76b"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "a93d02b2b76b"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "d6f1af3cf622"
+    },
+    {
+     "name": "Hit4",
+     "minBoneZ": 0.0199,
+     "hash": "15dd73cd0c40"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "03af8f8f4a14"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "788f044243c2"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "2bf433024000"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0163,
+     "hash": "ed0512df8b1c"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "f814820bed73"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "67bd89ff597e"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/polearm.fbx"
+  },
+  {
+   "id": "staff_caster",
+   "weapons": [
+    "staff",
+    "wand",
+    "grimoire",
+    "orb",
+    "holy_tome",
+    "bone_staff",
+    "tool_staff",
+    "tome"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 3,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_staff_caster_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "staff_caster: weapon-drawn stance, breathing",
+     "hash": "2ed701acd1b9",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8785,
+      "hipsMaxZ": 0.8845,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_staff_caster_Hit1",
+     "motion": "cast",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "staff_caster: cast (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "8c306ec76adc",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8894,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.437,
+      "telegraphM": 0.152,
+      "contactReachM": 0.576
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_staff_caster_Hit2",
+     "motion": "cast",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "staff_caster: cast (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "8c306ec76adc",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8894,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.437,
+      "telegraphM": 0.152,
+      "contactReachM": 0.576
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_staff_caster_Hit3",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "staff_caster: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "54ff7814c6e6",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.472,
+      "telegraphM": 0.151,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_staff_caster_Charge",
+     "motion": "cast",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "staff_caster: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "e2afbd2ce8dc",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8225,
+      "hipsMaxZ": 0.8345,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_staff_caster_HeavyRelease",
+     "motion": "cast",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "staff_caster: cast (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "61c07a91d942",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.507,
+      "telegraphM": 0.161,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_staff_caster_Riposte",
+     "motion": "cast",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "staff_caster: cast (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "61c07a91d942",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.507,
+      "telegraphM": 0.161,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_staff_caster_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "staff_caster: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "61b4fe4d0cdc",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7363,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.967,
+      "telegraphM": 0.756,
+      "contactReachM": 0.45
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_staff_caster_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "staff_caster: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "cb3f48a32d81",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.298,
+      "telegraphM": 0.95,
+      "contactReachM": 0.547
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_staff_caster_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "staff_caster: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "54ff7814c6e6",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.472,
+      "telegraphM": 0.151,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "b885abefc495"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "3673c7eac886"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "3673c7eac886"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "a9bd55d5db35"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "018fccbd072d"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "7433933a810e"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "7433933a810e"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0163,
+     "hash": "e8b59545bcae"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "ba44e1c7294f"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "a9bd55d5db35"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/staff_caster.fbx"
+  },
+  {
+   "id": "bow",
+   "weapons": [
+    "shortbow",
+    "longbow",
+    "crossbow",
+    "throwing_knives",
+    "throwables"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 3,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_bow_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "bow: weapon-drawn stance, breathing",
+     "hash": "7a6826e1f421",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8585,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_bow_Hit1",
+     "motion": "shoot",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "bow: shoot (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "44fb5a7a5004",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.266,
+      "telegraphM": 0.179,
+      "contactReachM": 0.523
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_bow_Hit2",
+     "motion": "shoot",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "bow: shoot (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "44fb5a7a5004",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.266,
+      "telegraphM": 0.179,
+      "contactReachM": 0.523
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_bow_Hit3",
+     "motion": "shoot",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "bow: shoot (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "29bf74703e2c",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.266,
+      "telegraphM": 0.26,
+      "contactReachM": 0.506
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_bow_Charge",
+     "motion": "shoot",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "bow: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "187c05997bfd",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8325,
+      "hipsMaxZ": 0.8445,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_bow_HeavyRelease",
+     "motion": "shoot",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "bow: shoot (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "17b31e8d7465",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.267,
+      "telegraphM": 0.398,
+      "contactReachM": 0.443
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_bow_Riposte",
+     "motion": "shoot",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "bow: shoot (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "17b31e8d7465",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.267,
+      "telegraphM": 0.398,
+      "contactReachM": 0.443
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_bow_Launcher",
+     "motion": "shoot",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "bow: shoot (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "04331b6689eb",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.266,
+      "telegraphM": 0.284,
+      "contactReachM": 0.494
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_bow_Slam",
+     "motion": "shoot",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "bow: shoot (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "17b31e8d7465",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.267,
+      "telegraphM": 0.398,
+      "contactReachM": 0.443
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_bow_SkillCast",
+     "motion": "shoot",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "bow: shoot (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "29bf74703e2c",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8645,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.266,
+      "telegraphM": 0.26,
+      "contactReachM": 0.506
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "9a884ca55c9b"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "05a7e1624bd6"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "05a7e1624bd6"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "3bd0f3eeb1f8"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "acd7eb1db268"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "b403e0aa33c2"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "b403e0aa33c2"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0199,
+     "hash": "d8033e7b4517"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "b403e0aa33c2"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "3bd0f3eeb1f8"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/bow.fbx"
+  },
+  {
+   "id": "unarmed",
+   "weapons": [
+    "fists",
+    "knuckles",
+    "gauntlets",
+    "greaves"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 5,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_unarmed_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "unarmed: weapon-drawn stance, breathing",
+     "hash": "c19da9a6ef2c",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8485,
+      "hipsMaxZ": 0.8545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_unarmed_Hit1",
+     "motion": "jab",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "unarmed: jab (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "9e78999c0ecd",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8445,
+      "hipsMaxZ": 0.8624,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.558,
+      "telegraphM": 0.07,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_unarmed_Hit2",
+     "motion": "jab",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "unarmed: jab (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "6ce1d6b4d63e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8445,
+      "hipsMaxZ": 0.8624,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.558,
+      "telegraphM": 0.07,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_unarmed_Hit3",
+     "motion": "jab",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "unarmed: jab (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "9e78999c0ecd",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8445,
+      "hipsMaxZ": 0.8624,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.558,
+      "telegraphM": 0.07,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit4",
+     "action": "Cmb_unarmed_Hit4",
+     "motion": "jab",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "unarmed: jab (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "6ce1d6b4d63e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8445,
+      "hipsMaxZ": 0.8624,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.558,
+      "telegraphM": 0.07,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit5",
+     "action": "Cmb_unarmed_Hit5",
+     "motion": "kick",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "unarmed: kick (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "43540a913560",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.519,
+      "telegraphM": 0.446,
+      "contactReachM": 0.38
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_unarmed_Charge",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "unarmed: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "1f7d7ff98ef4",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8625,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_unarmed_HeavyRelease",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "unarmed: chop (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "e9ba7dbd92c5",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8945,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.338,
+      "telegraphM": 0.841,
+      "contactReachM": 0.606
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_unarmed_Riposte",
+     "motion": "jab",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "unarmed: jab (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "895ee32e507d",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8445,
+      "hipsMaxZ": 0.8625,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.637,
+      "telegraphM": 0.092,
+      "contactReachM": 0.619
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_unarmed_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "unarmed: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "8e8816eb234e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7359,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.965,
+      "telegraphM": 0.743,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_unarmed_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "unarmed: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "a948977b2aeb",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.311,
+      "telegraphM": 0.839,
+      "contactReachM": 0.6
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_unarmed_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "unarmed: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "1d566c319743",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8625,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.175,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "7faee1c51ed9"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "ba94c969280d"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "835ba679756d"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "ba94c969280d"
+    },
+    {
+     "name": "Hit4",
+     "minBoneZ": 0.0199,
+     "hash": "835ba679756d"
+    },
+    {
+     "name": "Hit5",
+     "minBoneZ": 0.0199,
+     "hash": "5d7759f87a91"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "bdd2d91b5763"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "9e5c9f00b44d"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "bab3240fbfe3"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0162,
+     "hash": "5f2a251271cb"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "3e5ca0b6d2b9"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "3f4e22514cca"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/unarmed.fbx"
+  },
+  {
+   "id": "whip",
+   "weapons": [
+    "whip",
+    "rod",
+    "bell",
+    "flute_tamer"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 3,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_whip_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "whip: weapon-drawn stance, breathing",
+     "hash": "8a09f414157b",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8585,
+      "hipsMaxZ": 0.8645,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_whip_Hit1",
+     "motion": "lash",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "whip: lash (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "0f5de0c61817",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.92,
+      "telegraphM": 0.461,
+      "contactReachM": 0.603
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_whip_Hit2",
+     "motion": "lash",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "whip: lash (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "0f5de0c61817",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8714,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.92,
+      "telegraphM": 0.461,
+      "contactReachM": 0.603
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_whip_Hit3",
+     "motion": "slash_h",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "whip: slash_h (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "d430414bce6a",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.145,
+      "telegraphM": 0.696,
+      "contactReachM": 0.623
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_whip_Charge",
+     "motion": "slash_diag",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "whip: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "387dfdd9dd48",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8325,
+      "hipsMaxZ": 0.8445,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_whip_HeavyRelease",
+     "motion": "slash_diag",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "whip: slash_diag (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "887f9423df2c",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.362,
+      "telegraphM": 0.959,
+      "contactReachM": 0.674
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_whip_Riposte",
+     "motion": "lash",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "whip: lash (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "07e0ec7e9e45",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.103,
+      "telegraphM": 0.593,
+      "contactReachM": 0.601
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_whip_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "whip: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "80ee42de443e",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.736,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.967,
+      "telegraphM": 0.712,
+      "contactReachM": 0.41
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_whip_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "whip: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "fea2239c93c4",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.311,
+      "telegraphM": 0.969,
+      "contactReachM": 0.6
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_whip_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "whip: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "0309b416e8eb",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8715,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.474,
+      "telegraphM": 0.095,
+      "contactReachM": 0.578
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "fcfae92a050f"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "744f212f1470"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "744f212f1470"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "df9d5200d282"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "35bb0de0f2df"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "c611189a5bf4"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "296874dbf9ac"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0163,
+     "hash": "6dd4669da218"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "4427b72f4b00"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "1650eb39736f"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/whip.fbx"
+  },
+  {
+   "id": "instrument",
+   "weapons": [
+    "lute",
+    "flute",
+    "harp",
+    "war_drum",
+    "violin_blade",
+    "violin"
+   ],
+   "twoHanded": false,
+   "dualWield": false,
+   "hitCount": 3,
+   "clips": [
+    {
+     "name": "Ready",
+     "action": "Cmb_instrument_Ready",
+     "motion": null,
+     "weight": null,
+     "loop": true,
+     "fps": 50,
+     "frames": 100,
+     "seconds": 2.0,
+     "notes": "instrument: weapon-drawn stance, breathing",
+     "hash": "b2c961bd16f3",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8785,
+      "hipsMaxZ": 0.8845,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "Hit1",
+     "action": "Cmb_instrument_Hit1",
+     "motion": "strike_down",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "instrument: strike_down (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "31d8fc8952fd",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8894,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.726,
+      "telegraphM": 0.396,
+      "contactReachM": 0.539
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Cmb_instrument_Hit2",
+     "motion": "slash_h",
+     "weight": "light",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "notes": "instrument: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "hash": "8601074a64db",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8545,
+      "hipsMaxZ": 0.8894,
+      "reachClamped": 0,
+      "minFootZ": 0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.04,
+      "telegraphM": 0.71,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Cmb_instrument_Hit3",
+     "motion": "strike_down",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "instrument: strike_down (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "a297a7b5d6a0",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8145,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.835,
+      "telegraphM": 0.525,
+      "contactReachM": 0.569
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Charge",
+     "action": "Cmb_instrument_Charge",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": true,
+     "fps": 50,
+     "frames": 50,
+     "seconds": 1.0,
+     "notes": "instrument: held heavy wind-up, shakes slightly more as the charge fills",
+     "hash": "09a7e426454c",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8625,
+      "hipsMaxZ": 0.8745,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0
+     }
+    },
+    {
+     "name": "HeavyRelease",
+     "action": "Cmb_instrument_HeavyRelease",
+     "motion": "chop",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "instrument: chop (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "6cff73b59195",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7145,
+      "hipsMaxZ": 0.8945,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.338,
+      "telegraphM": 0.921,
+      "contactReachM": 0.641
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Riposte",
+     "action": "Cmb_instrument_Riposte",
+     "motion": "cast",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "instrument: cast (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "e489afb67599",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.507,
+      "telegraphM": 0.192,
+      "contactReachM": 0.581
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "Launcher",
+     "action": "Cmb_instrument_Launcher",
+     "motion": "upswing",
+     "weight": "launch",
+     "loop": false,
+     "fps": 50,
+     "frames": 28,
+     "seconds": 0.56,
+     "notes": "instrument: upswing (launch), startup 0.14 / active 0.10 / recovery 0.32 s",
+     "hash": "9fd4ff562a0a",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7363,
+      "hipsMaxZ": 0.9745,
+      "reachClamped": 12,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0172,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.966,
+      "telegraphM": 0.78,
+      "contactReachM": 0.45
+     },
+     "windows": {
+      "startupSec": 0.14,
+      "activeSec": 0.1,
+      "recoverySec": 0.32
+     },
+     "events": {
+      "StartupEnd": 7,
+      "ActiveBegin": 7,
+      "ActiveEnd": 12,
+      "RecoveryEnd": 28
+     }
+    },
+    {
+     "name": "Slam",
+     "action": "Cmb_instrument_Slam",
+     "motion": "slam",
+     "weight": "heavy",
+     "loop": false,
+     "fps": 50,
+     "frames": 42,
+     "seconds": 0.84,
+     "notes": "instrument: slam (heavy), startup 0.26 / active 0.12 / recovery 0.46 s",
+     "hash": "b373c4675553",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.6745,
+      "hipsMaxZ": 0.9545,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 1.298,
+      "telegraphM": 0.879,
+      "contactReachM": 0.547
+     },
+     "windows": {
+      "startupSec": 0.26,
+      "activeSec": 0.12,
+      "recoverySec": 0.46
+     },
+     "events": {
+      "StartupEnd": 13,
+      "ActiveBegin": 13,
+      "ActiveEnd": 19,
+      "RecoveryEnd": 42
+     }
+    },
+    {
+     "name": "SkillCast",
+     "action": "Cmb_instrument_SkillCast",
+     "motion": "cast",
+     "weight": "medium",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "notes": "instrument: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "hash": "281a52a570b7",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8345,
+      "hipsMaxZ": 0.8895,
+      "reachClamped": 0,
+      "minFootZ": -0.0,
+      "minBoneZ": 0.0214,
+      "bakeErrorM": 0.0,
+      "handTravelM": 0.472,
+      "telegraphM": 0.212,
+      "contactReachM": 0.596
+     },
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Ready",
+     "minBoneZ": 0.0199,
+     "hash": "b71c971ffed8"
+    },
+    {
+     "name": "Hit1",
+     "minBoneZ": 0.0199,
+     "hash": "98419943ead8"
+    },
+    {
+     "name": "Hit2",
+     "minBoneZ": 0.0199,
+     "hash": "7fcadbfe7d52"
+    },
+    {
+     "name": "Hit3",
+     "minBoneZ": 0.0199,
+     "hash": "b0f0a578863e"
+    },
+    {
+     "name": "Charge",
+     "minBoneZ": 0.0199,
+     "hash": "85903dbad5cc"
+    },
+    {
+     "name": "HeavyRelease",
+     "minBoneZ": 0.0199,
+     "hash": "7d3675fdfc2d"
+    },
+    {
+     "name": "Riposte",
+     "minBoneZ": 0.0199,
+     "hash": "8849828c6527"
+    },
+    {
+     "name": "Launcher",
+     "minBoneZ": 0.0163,
+     "hash": "006424add163"
+    },
+    {
+     "name": "Slam",
+     "minBoneZ": 0.0199,
+     "hash": "659469809549"
+    },
+    {
+     "name": "SkillCast",
+     "minBoneZ": 0.0199,
+     "hash": "a2ef638a6886"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Combat/instrument.fbx"
+  }
+ ]
+}

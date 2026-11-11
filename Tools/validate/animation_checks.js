@@ -13,6 +13,11 @@ const NEEDED = {
 const MAX_SLIDE_PCT = 3.0;
 
 function run({ DATA, load, err }) {
+  locomotion({ DATA, load, err });
+  combat({ DATA, load, err });
+}
+
+function locomotion({ DATA, load, err }) {
   const f = 'Characters/locomotion_clips.json', w = 'locomotion_clips.json';
   if (!fs.existsSync(path.join(DATA, f))) { err(w, 'file missing (run Tools/blender/build_locomotion_clips.py)'); return; }
   const m = load(f);
@@ -46,4 +51,64 @@ function run({ DATA, load, err }) {
   if (!(m.crossCheck || []).length) err(w, 'crossCheck is empty: the clips were not measured on a second body');
 }
 
+// ---- combat clip sets (Data/Characters/combat_clips.json, written by Tools/blender/build_combat_clips.py) -------------------------
+// Attack clips are exactly startup + active + recovery of their hit weight, with the four events on exact frames, and the manifest records
+// the attackTiming block it was built from, so a tuning change that is not followed by a rebuild fails here. The weapon coverage is derived
+// from Data/Items/items.json weaponType and every Data/Classes weapon list: a weapon without a family cannot ship by being left off a list.
+const crypto = require('crypto');
+const SPECIAL = { HeavyRelease: 'heavy', Riposte: 'heavy', Launcher: 'launch', Slam: 'heavy', SkillCast: 'medium' };
+const FIXED = ['Ready', 'Charge', ...Object.keys(SPECIAL)];
+
+function combat({ DATA, load, err }) {
+  const f = 'Characters/combat_clips.json', w = 'combat_clips.json';
+  if (!fs.existsSync(path.join(DATA, f))) { err(w, 'file missing (run Tools/blender/build_combat_clips.py)'); return; }
+  const m = load(f), tuning = load('Combat/combat_tuning.json').attackTiming;
+  if (m.schema !== 'combat_clips/1') err(w, 'unknown schema ' + m.schema);
+  const hash = crypto.createHash('sha1').update(stable(tuning)).digest('hex').slice(0, 12);
+  // the same canonical form as Python's json.dumps(sort_keys=True) (default separators), see stable()
+  if (m.tuning.hash !== hash) err(w, `attackTiming changed since the clips were built (manifest ${m.tuning.hash}, now ${hash}): rebuild with build_combat_clips.py`);
+  for (const wt of ['light', 'medium', 'heavy', 'launch']) {
+    const a = m.tuning.windows[wt], b = tuning[wt];
+    if (!a || a.startupSec !== b.startupSec || a.activeSec !== b.activeSec || a.recoverySec !== b.recoverySec) err(w, `window ${wt} differs from combat_tuning.json`);
+  }
+  const fps = m.fps, near = x => Math.abs(x - Math.round(x)) < 1e-6;
+  for (const wt of ['light', 'medium', 'heavy', 'launch']) for (const k of ['startupSec', 'activeSec', 'recoverySec']) if (!near(tuning[wt][k] * fps)) err(w, `${wt}.${k} is not a whole number of frames at ${fps} fps`);
+  const families = new Map((m.families || []).map(x => [x.id, x]));
+  // weapon coverage, derived
+  const weapons = new Set();
+  for (const it of load('Items/items.json')) if (it.weaponType) weapons.add(it.weaponType);
+  const classes = load('Classes/classes.json');
+  for (const c of Array.isArray(classes) ? classes : classes.classes) for (const wp of c.weapons || []) weapons.add(wp);
+  for (const wp of weapons) if (!(wp in (m.weaponToFamily || {}))) err(w, `weapon "${wp}" has no combat family`);
+  for (const [wp, fam] of Object.entries(m.weaponToFamily || {})) if (!families.has(fam)) err(w, `weapon "${wp}" maps to unknown family ${fam}`);
+  for (const fam of families.values()) {
+    const names = new Map(fam.clips.map(c => [c.name, c]));
+    for (const n of FIXED) if (!names.has(n)) err(w, `${fam.id}: missing clip ${n}`);
+    for (let i = 1; i <= fam.hitCount; i++) if (!names.has('Hit' + i)) err(w, `${fam.id}: missing clip Hit${i}`);
+    for (const c of fam.clips) {
+      const id = `${fam.id}/${c.name}`;
+      if (Math.abs(c.frames / c.fps - c.seconds) > 1e-3) err(w, `${id}: seconds does not match frames/fps`);
+      if (c.fps !== fps) err(w, `${id}: fps ${c.fps} differs from the set's ${fps}`);
+      if (c.metrics.minBoneZ < -0.02) err(w, `${id}: a bone goes under the floor`);
+      if (c.name === 'Ready' || c.name === 'Charge') { if (!c.loop || !(c.metrics.loopClosureM <= 1e-3)) err(w, `${id}: loop does not close`); continue; }
+      const wt = SPECIAL[c.name] || (c.weight);
+      const win = tuning[wt];
+      if (!win) { err(w, `${id}: unknown weight ${wt}`); continue; }
+      const want = Math.round((win.startupSec + win.activeSec + win.recoverySec) * fps);
+      if (c.frames !== want) err(w, `${id}: ${c.frames} frames, ${wt} windows make ${want}`);
+      const ev = c.events || {};
+      if (ev.ActiveBegin !== Math.round(win.startupSec * fps) || ev.ActiveEnd !== Math.round((win.startupSec + win.activeSec) * fps) || ev.RecoveryEnd !== want || ev.StartupEnd !== ev.ActiveBegin) err(w, `${id}: events do not match the ${wt} windows`);
+      if (!(c.metrics.handTravelM >= 0.2)) err(w, `${id}: wind-up does not travel to the contact pose (telegraph)`);
+    }
+  }
+}
+
+// JSON.stringify with sorted keys and Python's default separators ", " and ": ", so the digest matches json.dumps(sort_keys=True)
+function stable(v) {
+  if (Array.isArray(v)) return '[' + v.map(stable).join(', ') + ']';
+  if (v && typeof v === 'object') return '{' + Object.keys(v).sort().map(k => JSON.stringify(k) + ': ' + stable(v[k])).join(', ') + '}';
+  return JSON.stringify(v);
+}
+
 module.exports = { run };
+
