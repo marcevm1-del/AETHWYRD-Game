@@ -9,7 +9,7 @@ The player passed the F→E trial
 
 - **Set by:** quest
 - **Written by:** [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]]
-- **Read by:** No quest prerequisite currently indexed
+- **Read by:** [[Quests/The Tally of the Lost|The Tally of the Lost]]
 
 ## State ownership
 

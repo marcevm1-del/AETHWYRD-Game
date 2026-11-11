@@ -13,7 +13,7 @@ tags: [item, part]
 |---|---|
 | Category · rank | part · F |
 | Rarity · slot | Common |
-| Value | 8 |
+| Value | 15 |
 
 ## Use in the world
 

@@ -23,4 +23,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/Status Granted|Status Granted]]
+- [[Quests/The Girl Who Couldn't Win|The Girl Who Couldn't Win]]
 - [[Quests/Weekly Board/Party Stew Night|Party Stew Night]]

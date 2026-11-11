@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-11
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Agent sessions, batch 2 | Merged work from: audio-designer, combat-designer, items-designer, narrative-writer, producer, quest-designer, systems-designer, world-designer. Includes the sound event list and free-audio source shortlist, Act I scene scripts, the producer's roadmap, risk and usage-budget plan and Unity dependency map, Ring 0 and Salvage Warren quests, item descriptions, rune items, Warren loot and a pricing pass, regional encounter tables, weapon-family movesets, armor and weak points for five dungeon bosses and a reaction balance pass (whichever of these branches passed the gate) | 755 |
+
 ## 2026-11-09
 
 | Commit | What changed | Tests |

@@ -13,7 +13,7 @@ tags: [item, consumable]
 |---|---|
 | Category · rank | consumable · F |
 | Rarity · slot | Common |
-| Value | 12 |
+| Value | 20 |
 | Stats | heal 80 |
 
 ## Use in the world

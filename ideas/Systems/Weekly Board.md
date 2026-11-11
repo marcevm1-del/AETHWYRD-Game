@@ -13,6 +13,8 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] — daily, Defense, night, any
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] — daily, OddJob, day, any
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] — daily, Escort, morning, any
+- [[Quests/Weekly Board/Warren Salvage Run|Warren Salvage Run]] — daily, Exploration, day, any
+- [[Quests/Weekly Board/Guild Blade Order|Guild Blade Order]] — daily, OddJob, day, any
 
 ## Maelsday
 
@@ -20,6 +22,7 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]] — daily, Gathering, night, any
 - [[Quests/Weekly Board/The Lost Cat (Again)|The Lost Cat (Again)]] — daily, OddJob, day, any
 - [[Quests/Weekly Board/Bad Dreams at the Orphanage|Bad Dreams at the Orphanage]] — daily, Investigation, night, any
+- [[Quests/Weekly Board/Ink and Dye|Ink and Dye]] — daily, OddJob, day, any
 
 ## Thorsday
 
@@ -27,6 +30,7 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Scrap Run|Scrap Run]] — daily, Gathering, day, any
 - [[Quests/Weekly Board/Hot Bread Delivery|Hot Bread Delivery]] — daily, Delivery, morning, any
 - [[Quests/Weekly Board/Silk for a Dress|Silk for a Dress]] — daily, Gathering, dusk, any
+- [[Quests/Weekly Board/Hearth Poker Order|Hearth Poker Order]] — daily, OddJob, morning, any
 
 ## Sylvasday
 
@@ -35,6 +39,7 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Fix the Fence|Fix the Fence]] — daily, OddJob, morning, any
 - [[Quests/Weekly Board/Granny's Taming Lesson|Granny's Taming Lesson]] — daily, Capture, day, any
 - [[Quests/Weekly Board/A Basket of Mushrooms|A Basket of Mushrooms]] — daily, Gathering, day, any
+- [[Quests/Weekly Board/Herbalist's Shelf|Herbalist's Shelf]] — daily, OddJob, day, any
 
 ## Kaelsday
 
@@ -42,6 +47,7 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Morning Sparring|Morning Sparring]] — daily, Class, morning, any
 - [[Quests/Weekly Board/Drill the Militia|Drill the Militia]] — daily, Defense, day, any
 - [[Quests/Weekly Board/Arm-Wrestling Night|Arm-Wrestling Night]] — daily, OddJob, night, any
+- [[Quests/Weekly Board/Training Yard Snacks|Training Yard Snacks]] — daily, OddJob, day, any
 
 ## Morrowsday
 
@@ -49,6 +55,7 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Babysitting Day|Babysitting Day]] — daily, OddJob, day, any
 - [[Quests/Weekly Board/Party Stew Night|Party Stew Night]] — daily, Companion, dusk, any
 - [[Quests/Weekly Board/Tidy the Graves|Tidy the Graves]] — daily, OddJob, morning, any
+- [[Quests/Weekly Board/Lantern Loaf|Lantern Loaf]] — daily, OddJob, dusk, any
 
 ## Vexday
 
@@ -56,6 +63,7 @@ The board turns the seven-day calendar into recurring local story texture. Speci
 - [[Quests/Weekly Board/Dice with a Stranger|Dice with a Stranger]] — daily, Hidden, night, any
 - [[Quests/Weekly Board/Busking with Corwin|Busking with Corwin]] — daily, OddJob, dusk, any
 - [[Quests/Weekly Board/Old Sal's Fishing Contest|Old Sal's Fishing Contest]] — daily, OddJob, morning, any
+- [[Quests/Weekly Board/Cook-Off Wager|Cook-Off Wager]] — daily, Hidden, day, any
 
 ## Player-facing rules
 

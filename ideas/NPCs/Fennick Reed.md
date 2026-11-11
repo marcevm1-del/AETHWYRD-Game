@@ -24,6 +24,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 - [[Quests/The Crying Mandrake|The Crying Mandrake]]
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]]
 - [[Quests/Weekly Board/Mandrake Harvest|Mandrake Harvest]]
+- [[Quests/Weekly Board/Herbalist's Shelf|Herbalist's Shelf]]
 
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** He supplies Elira, the excommunicated Saint, with medicine.

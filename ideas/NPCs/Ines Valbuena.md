@@ -21,4 +21,6 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/Silk and Ink|Silk and Ink]]
 - [[Quests/Weekly Board/Silk for a Dress|Silk for a Dress]]
+- [[Quests/Weekly Board/Ink and Dye|Ink and Dye]]

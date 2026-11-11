@@ -103,6 +103,12 @@ These are presentation and spawn variants of this species, not separate core com
 | `pop_00650` | Sylvaran Armor Beetle Albino | [[Regions/Sylvaran\|Sylvaran]] | Albino | D- | 40 | 1.2 m | Day & Night | Like a typical Armor Beetle, but a rare pale form with white skin or fur and red eyes. |
 | `pop_00651` | Sylvaran Armor Beetle | [[Regions/Sylvaran\|Sylvaran]] | Adult | E+ | 32 | 1.2 m | Day & Night | A typical adult Armor Beetle of this region, with moss-green coloring that blends with the undergrowth. |
 
+## Contracts and story encounters
+
+- [[Quests/The Beetle Vault|The Beetle Vault]] — rank E, in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]]
+
+These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
+
 ## Design recipe
 
 Rig `rig_hexapod` · mesh `hexapod_base` · material `chitin_gloss` · VFX `rock_debris` · palette `#cea631` `#83681e` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

@@ -27,3 +27,4 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/Weekly Board/Forge Rush|Forge Rush]]
+- [[Quests/Weekly Board/Hearth Poker Order|Hearth Poker Order]]

@@ -78,6 +78,15 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Inns/The Deep Pint|The Deep Pint]] (Labyrinth Floor 30 safe town)
 - [[Inns/The Lantern Wake|The Lantern Wake]] (Labyrinth Floor 40 ghost market)
 
+## Quests
+
+- [[Quests/The Tally of the Lost|The Tally of the Lost]] (E)
+- [[Quests/Weigh the Way Down|Weigh the Way Down]] (E)
+- [[Quests/The Beetle Vault|The Beetle Vault]] (E)
+- [[Quests/The Runesmiths' Game|The Runesmiths' Game]] (E)
+- [[Quests/The Tally-Keepers' Accord|The Tally-Keepers' Accord]] (E)
+- [[Quests/Weekly Board/Warren Salvage Run|Warren Salvage Run]] (undefined)
+
 ## Monsters (128)
 
 | Monster | Family | Rank | Level |
