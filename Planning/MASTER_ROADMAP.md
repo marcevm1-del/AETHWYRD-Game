@@ -9,7 +9,7 @@ The sixteen generic phases in the owner's command were tested against the eviden
 ## Phase 0: audit and management system
 
 - **Objective:** know what exists; have a way to manage the rest.
-- **Exit:** this folder exists and has been reviewed. **Status: done 2026-11-12.**
+- **Exit:** this folder exists, has been reviewed, and the owner has approved the plan. **Status: built and reviewed 2026-11-12; awaiting the owner's approval.**
 - **Evidence:** `Planning/audits/` (five reports), `PROJECT_STATUS.md`, `DECISION_LOG.md` D-003 to D-012.
 
 ## Phase 1: verify and judge
@@ -17,7 +17,7 @@ The sixteen generic phases in the owner's command were tested against the eviden
 - **Objective:** establish that the build still works and whether the core loop is fun.
 - **Entry:** phase 0.
 - **Deliverables:** a PC verify run on current `main` (T-001); the fun test split and played (T-002, T-003); one profiler capture (T-012); owner decisions on the Ring 0 class line-up and the canon batch.
-- **Exit criteria:** a `QUALITY_GATES.md` §3 row for the current commit with PlayMode counts; every testable fun-test box marked pass or fail; three performance numbers recorded.
+- **Exit criteria:** a verify run on the current commit with 0 PlayMode failures; every testable fun-test box marked pass or fail; **no failed fun-test item without a P0 task, and phase 2 wiring of combat does not start while a feel failure in the same area is open**; three performance numbers recorded.
 - **Dependencies:** the owner's PC and about two owner sessions.
 - **Risks:** R3, R18, R21, R23. The verify run may fail; then repair is the whole phase.
 - **Agents:** `qa-tester`, `combat-designer`, `performance-analyst`.
@@ -29,7 +29,7 @@ The sixteen generic phases in the owner's command were tested against the eviden
 
 - **Objective:** the tested rules the slice needs are used by the game.
 - **Entry:** phase 1 exit; a green baseline to compare against.
-- **Deliverables:** UPG-003 reaction table, UPG-004 magical branch (Core), UPG-005 launchable, UPG-002 group tactics, UPG-014 quest reachability test, UPG-025 dead-data report, UPG-019 rank-band fix, UPG-029 documentation sweep, UPG-039 decision records.
+- **Deliverables:** UPG-040 kill credit for ally kills (first), UPG-003 reaction table, UPG-005 launchable, UPG-002 group tactics, UPG-014 quest reachability test, UPG-025 dead-data report, UPG-019 rank-band fix, UPG-029 documentation sweep, UPG-039 decision records.
 - **Exit criteria:** each has its acceptance criteria met with PlayMode or Core evidence; the fun-test items that depended on wiring are retested; dead-data report lists only files marked reserved.
 - **Dependencies:** Unity slots for four of the nine; the rest can be done in the cloud.
 - **Risks:** R17, R24; shared-file rule on `MonsterAi.cs` (one engineer per wave).

@@ -43,10 +43,11 @@ This register continues `13_Production/risk_register_and_usage_budget.md` (produ
 | R28 | No player character: a capsule stands in; humanoid animation and foot IK are untested | CONFIRMED | H | M | M | Character, animation | - | Owner exports a VRM or approves the humans-base route | Ship the slice test with a stand-in model | Owner | OPEN |
 | R29 | Canon §6 holds 46 delegated decisions the owner has not reviewed and 48 open rows; systems are being built on both | OBSERVED | M | H | M | All design | `canon_decision_index` | One ratification pass (CD-001); code stays data-driven so an overrule is a data change | - | Owner | OPEN |
 | R30 | 167 species-region pairs sit above their region's rank band, 18 of them in Whisperwood, the only playable region | CONFIRMED DEFECT (data) | H | L | M | Bestiary, encounters | `08_Bestiary/regional_ecology.md` findings | UPG-019 before encounter tables become the spawn source | - | bestiary-designer | OPEN |
+| R31 | A kill landed by a companion or partner raises no kill event: no XP, loot, quest credit or bestiary tick, and no liberation if the target is the Tyrant (who never respawns). Missed by all five audits; found by the red-team review | CONFIRMED by reading the code; not reproduced in Unity | M | H | H | Combat, companions, quests, sieges | A PlayMode test where a companion lands the last hit | UPG-040 / T-024, first Unity task after the verify run | Until fixed: order the companion to hold during the Grukk fight | gameplay-engineer | OPEN |
 
 ## 3. Top five by severity
 
-R16 (scope against build), R17 (rules not wired), R18 (loop never judged), R3 with R23 (Unity unverified and ungated), R27 (authored content has no budget).
+R31 (companion kills give no credit; the only one that can lose a player's progress today), R16 (scope against build), R17 (rules not wired), R18 (loop never judged), R3 with R23 (Unity unverified and ungated), R27 (authored content has no budget).
 
 ## 4. Rule for adding a risk
 

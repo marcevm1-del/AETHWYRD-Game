@@ -22,6 +22,7 @@ Decision owner: **owner** = the user; **orchestrator** = may be fixed as a docum
 | CD-012 | "Appraisal" means a character stat with levels 0 to 4 in `12_Systems/hud_and_ui.md` §9, a Unique Skill in `05_Skills_Magic`, and a kill counter in code | One word, three systems | Any appraisal feature would be built on an ambiguity | Owner picks the Ring 0 meaning. Recommended: bestiary tier only for Ring 0, with one hook for a skill later (UPG-012) | owner | OPEN |
 | CD-013 | Journal confidence words: Observed / Reported / Unconfirmed (`exploration_and_discovery.md`), five confidence tiers plus source types (`reactive_world_and_field_journal.md`), Unknown / Heard / Visited (Canon §6 dungeon clue record, and the code) | Three vocabularies | - | Use Unknown / Heard / Visited plus a source label everywhere | owner | OPEN |
 | CD-014 | Seasons and gameplay weather are used by quest and ecology docs ("Autumn" migration, "seasonal recovery") but the calendar has only weekdays and day parts | A prerequisite that does not exist | Every environmental ecology item waits on it | Owner decides whether seasons exist and whether weather is gameplay | owner | OPEN |
+| CD-015 | `Canon.md` §5 promises respec vs the code: no respec exists | A canon promise with no implementation and, until now, no record | A long build cannot be corrected | UPG-035 | orchestrator | OPEN (tracked by UPG-035) |
 
 ## B. Documentation that disagrees with the repo (no rule changes; fix as tasks)
 

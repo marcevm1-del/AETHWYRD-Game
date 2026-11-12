@@ -6,9 +6,9 @@ Progress against milestones, with evidence. A milestone is done only when its "d
 
 | ID | Milestone | Phase | Done when | State on 2026-11-12 | Evidence |
 |---|---|---|---|---|---|
-| MS-0 | Management system in place | 0 | Planning folder reviewed; agents seated; audits filed | **Done** | `DECISION_LOG.md` D-003 to D-012 |
-| MS-1 | Build verified | 1 | A PlayMode count for the current commit is recorded | Not started (needs the owner's PC) | - |
-| MS-2 | Core loop judged | 1 | Every testable fun-test box is pass or fail | Not started | - |
+| MS-0 | Management system in place | 0 | Audits filed; agents seated; planning folder reviewed; **the owner has approved the plan** | **In review**: built and reviewed; awaiting the owner | `Planning/audits/` (five reports), `Planning/reviews/2026-11-12_planning_system_review.md`, `.claude/agents/` |
+| MS-1 | Build verified | 1 | A verify run on the current commit (pull succeeded, hash recorded) with 0 PlayMode failures and no fewer passes than the baseline | Not started (needs the owner's PC) | - |
+| MS-2 | Core loop judged | 1 | Every testable fun-test box is pass or fail, and every fail has a P0 task | Not started | - |
 | MS-3 | First performance number | 1 | Frame time, allocations and draw calls recorded for the Ring 0 fight | Not started | - |
 | MS-4 | Slice rules wired | 2 | Phase 2 deliverables meet their acceptance criteria | Not started | - |
 | MS-5 | Slice loop complete | 3 | Slice gate criteria 1 to 6 | Not started | - |

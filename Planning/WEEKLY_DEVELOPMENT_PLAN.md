@@ -65,7 +65,7 @@ Escalate Haiku to Sonnet when the task needs judgement; Sonnet to Opus when the 
 | Small feature or fix | 1 Sonnet agent, then reviewer |
 | Medium system improvement | 2 to 3 agents over two waves |
 | Major system redesign | 3 to 5 agents over several waves, with a red-team review |
-| Full project audit | 6 audits in two waves of 3 (as done on 2026-11-12) |
+| Full project audit | 5 to 6 audits, one or two agents at a time (three at once hit the usage limit on 2026-11-12) |
 | Milestone review | `qa-tester`, `technical-director`, `documentation-auditor`, `red-team-reviewer` |
 
 Do not use several agents when the task is simple, when the steps depend on each other, or when they would edit the same files.
@@ -78,8 +78,8 @@ Do not use several agents when the task is simple, when the steps depend on each
 |---|---|---|---|
 | Repository audit and baseline run | Orchestrator | session | Done: see `PROJECT_STATUS.md` |
 | Agent seats, six new definitions, tier pins | Orchestrator | session | Done: see `13_Production/agent_team.md` |
-| Six specialist audits | combat-designer, bestiary-designer, quest-designer, systems-designer, technical-director, qa-tester | sonnet (technical: opus) | See `Planning/audits/` |
+| Five audits | combat-designer, bestiary-designer (as creature-ecology-designer), quest-designer (as exploration-designer), systems-designer, all on sonnet; the technical, production and QA audit was written by the orchestrator after the usage limit stopped three agents | sonnet / session | `Planning/audits/` (five reports) |
 | Planning documents | Orchestrator | session | This folder |
-| Review of the planning system | red-team-reviewer, documentation-auditor, technical-director, qa-tester | opus / haiku / opus / sonnet | See `DECISION_LOG.md` |
+| Review of the planning system | red-team-reviewer, documentation-auditor (two passes in place of five reviewers) | opus / haiku | `Planning/reviews/`, `DECISION_LOG.md` D-012 |
 
 Next cycle's first tasks are listed in `DASHBOARD.md` under "Next actions".

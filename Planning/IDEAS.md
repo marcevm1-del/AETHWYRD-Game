@@ -216,7 +216,7 @@ IDEA-001 (Lying Interface), IDEA-003 (dens and signs), IDEA-011 (the companion's
 - **Content Requirements:** Follow-up ids on about ten attacks.
 - **Complexity:** M
 - **Priority:** P3
-- **Risks:** May be read as 'learning', which the canon forbids.
+- **Risks:** May be read as 'learning'. As described it reacts to the player's dodges, which `12_Systems/combat.md` §10a forbids outright ('no learning or adapting to the player'), and Canon §4d exists for a legal reason that needs an IP review before release. This idea cannot be built without a canon change by the owner.
 - **Design Questions:** Does the owner accept this as inside §4d?
 - **Related Ideas:** IDEA-023
 - **Related Upgrades:** UPG-002
@@ -375,7 +375,7 @@ IDEA-001 (Lying Interface), IDEA-003 (dens and signs), IDEA-011 (the companion's
 - **Description:** On loading a save after a break, a dismissible, spoiler-safe 'where you were' summary.
 - **Player Experience:** A long save is safe to come back to.
 - **Gameplay Purpose:** Protects a 1,000-hour game from being abandoned after a pause.
-- **Why It Belongs in AETHWYRD:** Already an open Canon §6 proposal.
+- **Why It Belongs in AETHWYRD:** Already an open Canon §6 proposal (kept here because nothing of it is built; it would move to the upgrade register once the journal pages of UPG-010 exist).
 - **Player Benefit:** No 'what was I doing?'
 - **Affected Systems:** Journal, quests
 - **Potential Dependencies:** UPG-010

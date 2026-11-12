@@ -12,13 +12,14 @@ The team is the owner, with four to five hours a week, and Claude agents limited
 
 Make AETHWYRD developable and deliverable: prove the core experience in one small, complete, playable slice, then grow by rings, never widening the content footprint faster than the proven systems can carry.
 
-## 3. Strategy: five rules
+## 3. Strategy: six rules
 
 1. **Prove before adding.** No new system is started before the vertical slice gate (`VERTICAL_SLICE_PLAN.md`). Until then the backlog only verifies, wires, fixes or fills what already exists (decision D-010).
 2. **The game is the measure.** A system counts when the player can reach it in the build and a test or a playthrough shows it. Rules and data alone are reported as rules and data (`QUALITY_GATES.md`).
 3. **Smallest thing that does the job.** Where a proposal asks for a network, a director or a framework, the plan takes the smallest connected piece first: tags before simulation, one boss before five, one weapon family before fourteen.
 4. **Ideas are kept, not built.** Every proposal lands in `UPGRADE.md` or `IDEAS.md` with its cost. Nothing moves from there to the backlog without approval.
-5. **The owner's hours go to what only the owner can do.** Playing and judging, the character, licences, canon decisions. Everything else is prepared so those hours are short.
+5. **No planning for its own sake.** Under rule 1 agents have little to build while Unity slots are scarce, and the easy output is more documents. No new planning document is created, and no register entry is added, unless a task or a decision needs it.
+6. **The owner's hours go to what only the owner can do.** Playing and judging, the character, licences, canon decisions. Everything else is prepared so those hours are short.
 
 ## 4. What the game is, so the plan protects it
 

@@ -13,7 +13,7 @@ Written code is not a finished feature. A feature moves up the status ladder onl
 | PARTIAL | Some of the designed behaviour exists | Source files, and what is absent |
 | IMPLEMENTED | The designed behaviour exists in code | Source files |
 | TESTED | Automated tests cover it and pass in a recorded run | Test file and the run (date, command, counts) |
-| VERIFIED | Seen working in the running game | A PlayMode run, a screenshot, or the owner's playtest note, with date |
+| VERIFIED | Seen working in the running game by a person | The owner's or a tester's playtest note with date and build, or a screenshot or recording of normal play. Not a PlayMode run (that is TESTED) and not output of `ScreenshotRunner`, which seeds its own state |
 | COMPLETE | Meets the acceptance criteria agreed in its task | The task's criteria, each ticked with evidence |
 
 Every system carries **two** statuses where they differ: the rules layer (`Code/Ascend.Core`) and the game (`Game/Assets/_Game/Runtime`). "Core TESTED, game not wired" is a normal, honest state here. It is never shortened to "implemented".
@@ -27,11 +27,11 @@ Every system carries **two** statuses where they differ: the rules layer (`Code/
 | 3 | Implementation | Code and data on a branch; tuning numbers read from `Data/`, not hard-coded; new data fields have schema entries; Core stays free of `UnityEngine` | The implementer |
 | 4 | Integration | Merged without behaviour change to finished features; anything unfinished sits behind a flag; `npm run build` green after the merge | Orchestrator |
 | 5 | Functional test | New rules have Core tests; new in-game behaviour has a PlayMode test or a written manual check | `qa-tester` |
-| 6 | Regression test | `npm run build`: data valid, Core tests not fewer than the last recorded count, map warnings not above 28, graph findings 0. Unity: PlayMode not fewer passing than the last recorded count | `qa-tester` |
+| 6 | Regression test | `npm run build`: data valid, Core tests not fewer than the last recorded count, map warnings not above 28, graph findings 0. Unity: 0 failures, no test newly skipped or removed without a recorded reason, and not fewer passing than the last recorded count | `qa-tester` |
 | 7 | Performance | Only when the change touches per-frame code, spawning, streaming or load. A measurement (Unity Profiler or a timed test) against the 60 fps field target, or a written reason why none is needed | `performance-analyst` |
 | 8 | Documentation | Design doc matches what was built; `SYSTEM_INVENTORY.md`, the UPGRADE / IDEA entry and the backlog task updated; progress-log row written | Orchestrator, `documentation-auditor` |
 | 9 | Acceptance | Each acceptance criterion in the task is ticked with its evidence | Someone other than the implementer |
-| 10 | Verification | The feature was seen working in the running game and the evidence is filed (run log under `Game/Logs/verify_*`, screenshot, or the owner's playtest note) | `qa-tester` or the owner |
+| 10 | Verification | The feature was seen working in normal play by a person and the evidence is filed (a playtest note, or a screenshot or recording that does not come from `ScreenshotRunner`) | `qa-tester` or the owner |
 
 A minor change (see `CHANGE_CONTROL.md` §2) needs gates 3, 5, 6 and 8.
 

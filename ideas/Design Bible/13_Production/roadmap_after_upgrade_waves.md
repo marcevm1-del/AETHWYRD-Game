@@ -1,5 +1,7 @@
 # Roadmap and milestones after the upgrade waves (producer, 2026-11-09)
 
+> **2026-11-12:** the live version is now `Planning/MASTER_ROADMAP.md` and `Planning/MILESTONE_TRACKER.md` (milestones M0 to M5 are mapped there). This file is kept as written.
+
 Job 1 of the producer queue. Sources: `ring0_plan.md` (target January 2027), `progress_log.md` (746 Core tests + 183 Unity PlayMode at phase 1), `world_upgrade_plan.md`, `handover_2026-11-02.md`, `project-stage-report.md` and the Unity dependency map in this folder. Dates are windows, not promises: capacity is set by `risk_register_and_usage_budget.md` (2 agents working at a time).
 
 ## Where we are (2026-11-09)

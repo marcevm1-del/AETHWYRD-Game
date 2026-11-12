@@ -20,6 +20,7 @@ T-001 PC verify run ──────────────┬─────
                                   │                                              │
 T-002 split fun test ─> T-003 owner plays ─> feel fixes (P0, if any)             │
                                   │                                              │
+                                  ├─> T-024 ally kill credit (P0, first Unity task)
                                   ├─> T-012 profiler capture ─> T-014 allocation fixes (only if shown)
                                   │
    (cloud, no Unity)              │   (Unity, after T-001)
@@ -68,4 +69,4 @@ Counted from §2: the PC verify run (T-001) is upstream of every Unity task. The
 
 ## 5. What can proceed with no dependency at all
 
-In the cloud, today, on approval of the first wave: T-002, T-005, T-008 (once the rule is chosen), T-013, T-020, T-021.
+In the cloud: T-002 (already approved); on approval of the first wave T-013 and T-020; T-008 and T-021 once their one answer each is given; T-005 when a second class is planned.

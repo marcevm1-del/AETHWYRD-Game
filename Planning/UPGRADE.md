@@ -25,21 +25,21 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 | UPG-001 | Run and record the Ring 0 fun test | SYS-CMB-32, SYS-CORE-09 | P0 | S | APPROVED |
 | UPG-002 | Wire group tactics into the game for the goblin pack | SYS-CMB-20, SYS-ECO-09, SYS-CMP-06 | P1 | M | PROPOSED |
 | UPG-003 | Feed `reactions.json` to the game | SYS-CMB-07, SYS-CMB-08 | P1 | S | PROPOSED |
-| UPG-004 | Magical damage path | SYS-CMB-06, SYS-PRG-06 | P1 | S | PROPOSED |
+| UPG-004 | Magical damage path | SYS-CMB-06, SYS-PRG-06 | P2 | S | PROPOSED |
 | UPG-005 | Enforce `launchable` so heavy monsters stay grounded | SYS-CMB-03 | P1 | S | PROPOSED |
 | UPG-006 | Wire the sword moveset to the Swordsman | SYS-CMB-15 | P2 | M | PROPOSED |
-| UPG-007 | Give Grukk's fight verbs: phase attack sets, armour and one weak point | SYS-CMB-21, SYS-CMB-22, SYS-CMB-10 | P2 | L | PROPOSED |
+| UPG-007 | Give Grukk's fight verbs: phase attack sets, armour and one weak point | SYS-CMB-21, SYS-CMB-22, SYS-CMB-10 | P1 | L | PROPOSED |
 | UPG-008 | Show what the player has learned in a fight | SYS-CMB-17, SYS-EXP-04 | P2 | M | PROPOSED |
 | UPG-009 | A small discovery registry and world objects that write to the journals | SYS-EXP-08, SYS-EXP-10, SYS-EXP-12, SYS-EXP-19 | P1 | M | PROPOSED |
 | UPG-010 | Journal window: a discoveries page and a quest page | SYS-EXP-08, SYS-QST-14 | P1 | S | PROPOSED |
-| UPG-011 | One bestiary knowledge vocabulary, research tasks and a route that needs no killing | SYS-ECO-10, SYS-EXP-04 | P2 | M | PROPOSED |
+| UPG-011 | One bestiary knowledge vocabulary, research tasks and a route that needs no killing | SYS-ECO-10, SYS-EXP-04 | P1 | M | PROPOSED |
 | UPG-012 | Settle what 'Appraisal' is and give it one hook | SYS-EXP-04, SYS-EXP-05 | P2 | S | PROPOSED |
 | UPG-013 | Quest choices that change something, with a receipt | SYS-QST-07 | P1 | M | PROPOSED |
 | UPG-014 | Every quest completable, or visibly parked | SYS-QST-03, SYS-QST-08 | P1 | S | PROPOSED |
 | UPG-015 | Acts and story flags as data | SYS-QST-06, SYS-QST-11 | P2 | S | PROPOSED |
-| UPG-016 | Tie the Status Window's redacted line to story flags | SYS-EXP-06 | P3 | S | PROPOSED |
+| UPG-016 | Tie the Status Window's redacted line to story flags | SYS-EXP-06 | P1 | S | PROPOSED |
 | UPG-017 | Guidance setting: quest markers on or off | SYS-EXP-17 | P3 | S | PROPOSED |
-| UPG-018 | Liberation delta: the freed region visibly changes | SYS-WLD-09, SYS-EXP-18 | P2 | M | PROPOSED |
+| UPG-018 | Liberation delta: the freed region visibly changes | SYS-WLD-09, SYS-EXP-18 | P1 | M | PROPOSED |
 | UPG-019 | Fix rank-band defects in Whisperwood before anything spawns from data | SYS-ECO-04, SYS-ECO-01 | P1 | S | PROPOSED |
 | UPG-020 | Spawn the field from `encounters.json` | SYS-WLD-12, SYS-ECO-05 | P1 | M | PROPOSED |
 | UPG-021 | A small ecology layer: role tags and a four-state region cycle | SYS-ECO-06, SYS-ECO-08 | P2 | L | PROPOSED |
@@ -60,6 +60,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 | UPG-036 | An economy sink plan before housing and farming open | SYS-ECN-12 | P3 | M | PROPOSED |
 | UPG-037 | Reach one rules-only system from a Ring 0 station | SYS-ECN-08, SYS-ECN-09, SYS-ECN-10 | P3 | M | PROPOSED |
 | UPG-038 | Dialogue as data | SYS-QST-09, SYS-QST-08 | P2 | M | PROPOSED |
+| UPG-040 | Kill credit when a companion or partner lands the last hit | SYS-CMB-26, SYS-CMP-04, SYS-CMP-07 | P0 | S | PROPOSED |
 | UPG-039 | Write the architecture decisions down | SYS-CORE-01 | P2 | S | PROPOSED |
 
 ## Entries
@@ -149,7 +150,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Dependencies:** A damage-kind field on skill data
 - **Affected Systems:** Damage, skills, classes, companions
 - **Affected Files:** `Code/Ascend.Core/Damage.cs`, new Core tests, later `PlayerCombat.Skills.cs`
-- **Priority:** P1
+- **Priority:** P2
 - **Complexity:** S
 - **Risk:** ATK-versus-MATK balance has never been exercised.
 - **Acceptance Criteria:** Same attacker with equal ATK and MATK against different DEF and MDEF gives the documented ratio; MP drops by the cost; physical results are unchanged.
@@ -158,7 +159,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Ideas:** -
 - **Related Tasks:** T-005
 - **Date Added:** 2026-11-12
-- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: combat U-4, progression U1); recorded as PROPOSED; not in the actionable backlog until approved.
+- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: combat U-4, progression U1); recorded as PROPOSED; not in the actionable backlog until approved. 2026-11-12, orchestrator, after the red-team review (M3): priority changed from P1 to P2 to follow the vertical slice.
 
 ### UPG-005: Enforce `launchable` so heavy monsters stay grounded
 
@@ -221,7 +222,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Dependencies:** UPG-003; hurtbox part names in rig data (unverified); an armour-crack cue (art, audio)
 - **Affected Systems:** Bosses
 - **Affected Files:** `Runtime/World/MonsterController.cs`, `Data/Monsters/boss_phases.json`, `BossPhaseTests`
-- **Priority:** P2
+- **Priority:** P1
 - **Complexity:** L
 - **Risk:** Needs art and sound cues that do not exist.
 - **Acceptance Criteria:** Grukk's second phase uses an attack the first does not; hitting the exposed brand breaks armour once per fight at most; a fight that ignores armour is still winnable.
@@ -230,7 +231,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Ideas:** IDEA-009
 - **Related Tasks:** -
 - **Date Added:** 2026-11-12
-- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: combat U-9, U-11); recorded as PROPOSED; not in the actionable backlog until approved.
+- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: combat U-9, U-11); recorded as PROPOSED; not in the actionable backlog until approved. 2026-11-12, orchestrator, after the red-team review (M3): priority changed from P2 to P1 to follow the vertical slice.
 
 ### UPG-008: Show what the player has learned in a fight
 
@@ -317,7 +318,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Dependencies:** Owner decision CD-011; a save field
 - **Affected Systems:** Bestiary, journal, save
 - **Affected Files:** `Code/Ascend.Core/Bestiary.cs`, `Data/World/world_tuning.json`, bestiary window
-- **Priority:** P2
+- **Priority:** P1
 - **Complexity:** M
 - **Risk:** Save change; 21 species × 2 to 3 tasks to author.
 - **Acceptance Criteria:** A species reaches the top tier with zero kills; old saves keep their tiers.
@@ -326,7 +327,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Ideas:** IDEA-003, IDEA-013
 - **Related Tasks:** -
 - **Date Added:** 2026-11-12
-- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: ecology U5); recorded as PROPOSED; not in the actionable backlog until approved.
+- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: ecology U5); recorded as PROPOSED; not in the actionable backlog until approved. 2026-11-12, orchestrator, after the red-team review (M3): priority changed from P2 to P1 to follow the vertical slice.
 
 ### UPG-012: Settle what 'Appraisal' is and give it one hook
 
@@ -434,10 +435,10 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Player Benefit:** A first hint that the System hides things.
 - **Technical Benefit:** The hook the Lying Interface will hang on.
 - **Gameplay Benefit:** Costs almost nothing.
-- **Dependencies:** Owner decision CD-002; UPG-015
+- **Dependencies:** Owner decision CD-002 (story flags already exist in the save, so UPG-015 is not needed first)
 - **Affected Systems:** HUD
 - **Affected Files:** `Runtime/UI/RingZeroHud.cs`
-- **Priority:** P3
+- **Priority:** P1
 - **Complexity:** S
 - **Risk:** None.
 - **Acceptance Criteria:** Setting the flag changes the line in a PlayMode test.
@@ -446,7 +447,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Ideas:** IDEA-001
 - **Related Tasks:** -
 - **Date Added:** 2026-11-12
-- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: exploration U6); recorded as PROPOSED; not in the actionable backlog until approved.
+- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: exploration U6); recorded as PROPOSED; not in the actionable backlog until approved. 2026-11-12, orchestrator, after the red-team review (M3): priority changed from P3 to P1 to follow the vertical slice.
 
 ### UPG-017: Guidance setting: quest markers on or off
 
@@ -485,7 +486,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Dependencies:** UPG-020 (encounter tables), UPG-009
 - **Affected Systems:** Sieges, encounters, exploration
 - **Affected Files:** Scene builder, `Data/World/encounters.json`, quest data
-- **Priority:** P2
+- **Priority:** P1
 - **Complexity:** M
 - **Risk:** Scene changes behind a flag must not break the Ring 0 tests.
 - **Acceptance Criteria:** After liberation, each of the listed changes is present in a PlayMode test and absent before.
@@ -494,7 +495,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Ideas:** IDEA-010
 - **Related Tasks:** -
 - **Date Added:** 2026-11-12
-- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: exploration U5, ecology U4); recorded as PROPOSED; not in the actionable backlog until approved.
+- **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: exploration U5, ecology U4); recorded as PROPOSED; not in the actionable backlog until approved. 2026-11-12, orchestrator, after the red-team review (M3): priority changed from P2 to P1 to follow the vertical slice.
 
 ### UPG-019: Fix rank-band defects in Whisperwood before anything spawns from data
 
@@ -680,7 +681,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Priority:** P0
 - **Complexity:** S
 - **Risk:** The run may fail; then fixing it is the next task.
-- **Acceptance Criteria:** A dated row with the commit hash, Core count and PlayMode count exists for the current `main`.
+- **Acceptance Criteria:** For the current `main`: the pull step succeeded, the hash is recorded, Core passes, PlayMode has 0 failures and no fewer passes than the last baseline. A red run is recorded as Failed and does not satisfy this entry.
 - **Testing Requirements:** The run itself.
 - **Status:** APPROVED
 - **Related Ideas:** -
@@ -999,3 +1000,27 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Tasks:** T-021
 - **Date Added:** 2026-11-12
 - **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: technical audit); recorded as PROPOSED; not in the actionable backlog until approved.
+
+### UPG-040: Kill credit when a companion or partner lands the last hit
+
+- **Existing System:** SYS-CMB-26, SYS-CMP-04, SYS-CMP-07
+- **Current Implementation Status:** Companion and partner combat IMPLEMENTED; the kill event is raised only by the player's own hits
+- **Current Problem:** If Lyra or a tamed partner lands the killing blow, the player gets no XP, no loot, no quest kill and no bestiary tick. If that blow lands on Grukk, Whisperwood is not liberated, and a Tyrant does not respawn, so the Ring 0 trial and the liberation can be lost. Found by the red-team review by reading the code; **not reproduced in Unity**.
+- **Evidence:** `Runtime/Combat/PlayerCombat.Progress.cs` lines 24 and 70 (the only place `Killed` is raised); `Runtime/World/CompanionAI.cs` line 203 and `Runtime/World/PartnerFollower.cs` line 125 (call `TakeHit` directly); subscribers in `SiegeDirector.cs` line 64, `PlayerBestiary.cs` line 26, `PlayerInventory.cs` line 43; `MonsterDummy.cs` line 204 (`Defeat` raises nothing)
+- **Proposed Improvement:** Raise a defeated event from the monster itself, carrying who struck, and move the subscribers onto it. Decide in data how much credit an ally's kill gives (recommended: full credit).
+- **Player Benefit:** Fighting beside a partner never costs you the reward, or the story.
+- **Technical Benefit:** One source of truth for a death.
+- **Gameplay Benefit:** Removes a way to soft-lock the first region's main goal.
+- **Dependencies:** A Unity slot (T-001 first)
+- **Affected Systems:** Combat, companions, partners, quests, bestiary, loot, sieges
+- **Affected Files:** `Runtime/World/MonsterDummy.cs`, `PlayerCombat.Progress.cs`, `SiegeDirector.cs`, `PlayerBestiary.cs`, `PlayerInventory.cs`, `PlayerQuests.cs`, a new PlayMode test
+- **Priority:** P0
+- **Complexity:** S
+- **Risk:** Double credit if both paths fire; XP balance if allies kill often.
+- **Acceptance Criteria:** In a PlayMode test a companion lands the last hit on Grukk and liberation, XP, loot, quest credit and the bestiary tick all happen exactly once.
+- **Testing Requirements:** New PlayMode test; first reproduce the defect on the current build.
+- **Status:** PROPOSED
+- **Related Ideas:** -
+- **Related Tasks:** T-024
+- **Date Added:** 2026-11-12
+- **Decision History:** 2026-11-12, orchestrator: entered from the red-team review of the planning system (finding B1); the orchestrator re-read the cited lines and confirms the code path, for partners as well as companions. Recorded as PROPOSED; recommended as the first Unity task after the verify run.

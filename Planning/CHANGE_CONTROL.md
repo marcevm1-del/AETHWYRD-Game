@@ -35,7 +35,9 @@ A change is **major** when it does any of these. Major changes go through every 
 - Changes anything written to the save file.
 - Costs more than about one working window of agent time (see `13_Production/risk_register_and_usage_budget.md` §3).
 
-Everything else is **minor** (a fix, tuning inside existing ranges, a doc correction) and needs only stages F to H.
+- Changes what the player experiences in the running game, however small the code change.
+
+Everything else is **minor** (a doc correction, a test, a tool fix, tuning inside existing ranges that is not yet read by the game) and needs only stages F to H.
 
 ## 3. Stages
 
@@ -60,6 +62,9 @@ No agent, including the orchestrator, decides these:
 - The player character (VRM or humans-base), voice amount, title and release decisions.
 - Installing hooks, `settings.json` or MCP bridges.
 - Deleting branches, worktrees or files that hold unmerged work.
+- A new data file type or schema, and any change to what the save file holds.
+- Any standing claim on the owner's own time (a weekly run, a playtest).
+- The strategy, the slice scope and the first backlog (`MASTER_PROJECT_PLAN.md` §8).
 
 ## 5. What no agent may do silently
 

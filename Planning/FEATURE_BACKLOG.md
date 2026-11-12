@@ -23,11 +23,12 @@ The other upgrades needed by the slice (UPG-007 Grukk's verbs, UPG-008 weakness 
 | T-001 | PC verify run on current main | UPG-026 / MS-1 | owner (run) / qa-tester (triage) | P0 | READY | yes |
 | T-002 | Split the fun test and prepare its record sheet | UPG-001 / MS-2 | combat-designer | P0 | READY | no |
 | T-003 | Play the fun test and record it | UPG-001 / MS-2 | owner | P0 | READY | yes |
-| T-005 | Magical damage branch in Core, with tests | UPG-004 | core-rules-engineer | P1 | AWAITING APPROVAL | no |
+| T-005 | Magical damage branch in Core, with tests | UPG-004 | core-rules-engineer | P2 | AWAITING APPROVAL | no |
 | T-008 | Whisperwood rank-band data fix | UPG-019 | bestiary-designer | P1 | AWAITING APPROVAL | no |
 | T-013 | Dead-data report and CI untracked-file check | UPG-025 | tools-pipeline-engineer | P2 | AWAITING APPROVAL | no |
 | T-020 | Documentation drift sweep | UPG-029 | documentation-auditor (check) / owning agents (edit) | P2 | AWAITING APPROVAL | no |
 | T-021 | Four architecture decision records | UPG-039 | technical-director | P2 | AWAITING APPROVAL | no |
+| T-024 | Reproduce and fix kill credit for companion and partner kills | UPG-040 | gameplay-engineer | P0 | AWAITING APPROVAL | yes |
 | T-004 | Pass the reaction table into the game | UPG-003 | gameplay-engineer | P1 | AWAITING APPROVAL | yes |
 | T-006 | Enforce `launchable` | UPG-005 | gameplay-engineer | P1 | AWAITING APPROVAL | yes |
 | T-007 | Wire group tactics for the goblin pack | UPG-002 | ai-engineer | P1 | AWAITING APPROVAL | yes |
@@ -36,8 +37,8 @@ The other upgrades needed by the slice (UPG-007 Grukk's verbs, UPG-008 weakness 
 | T-012 | First profiler capture | UPG-027 / MS-3 | performance-analyst (brief) / owner or qa-tester (capture) | P1 | AWAITING APPROVAL | yes |
 | T-018 | Encounter tables as the spawn source for the field, behind a flag | UPG-020 | core-rules-engineer (reader) then world-builder-engineer (spawner) | P1 | AWAITING APPROVAL | yes |
 | T-014 | Allocation fixes TD-01 to TD-04, only if T-012 shows them | UPG-027 | core-rules-engineer | P2 | AWAITING APPROVAL | partly |
-| T-019 | Show an active event's rumour on the board | UPG-022 | gameplay-engineer | P2 | AWAITING APPROVAL | yes |
-| T-023 | Acts and story flags as data | UPG-015 | core-rules-engineer | P2 | AWAITING APPROVAL | partly |
+| T-019 | Show an active event's rumour on the board | UPG-022 | gameplay-engineer | P3 | AWAITING APPROVAL | yes |
+| T-023 | Acts and story flags as data | UPG-015 | core-rules-engineer | P3 | AWAITING APPROVAL | partly |
 | T-011 | Discovery registry and four to six Whisperwood discoveries | UPG-009 | exploration-designer (design, data) / tools-pipeline-engineer (schema) / world-builder-engineer (placement) | P1 | AWAITING APPROVAL | partly |
 | T-015 | One creature from Blender into the shipping scene | UPG-024 | technical-artist / creature-artist | P1 | AWAITING APPROVAL | yes |
 | T-017 | Quest choices with outcomes and a receipt | UPG-013 | quest-designer (data) / core-rules-engineer (rules) / ui-engineer (receipt) | P1 | AWAITING APPROVAL | partly |
@@ -55,7 +56,7 @@ PARENT FEATURE:     UPG-026 / MS-1
 SYSTEM:             SYS-TEC-04, SYS-TEC-05
 DESCRIPTION:        Run `Tools/pc/update_and_verify.cmd` on `main` with this branch merged or checked out. Record commit, Core count, PlayMode count, build result.
 PLAYER BENEFIT:     A build known to start.
-IMPLEMENTATION DETAILS:Double-click the script; copy the summary line into `QUALITY_GATES.md` §3. If it fails, the failing log goes to the qa-tester as the next task.
+IMPLEMENTATION DETAILS:Commit or discard any local change first (the scene rebuild leaves a diff after each run). Double-click the script; copy the summary line into `QUALITY_GATES.md` §3. If it fails, the failing log goes to the qa-tester as the next task.
 OWNER:              owner (run) / qa-tester (triage)
 REVIEWER:           orchestrator
 MODEL TIER:         sonnet
@@ -66,7 +67,7 @@ EFFORT:             S (one owner session)
 COMPLEXITY:         S
 RISKS:              The run may fail after two unverified merge batches.
 AFFECTED FILES:     `Planning/QUALITY_GATES.md`
-ACCEPTANCE CRITERIA:A dated row with commit hash and both counts exists.
+ACCEPTANCE CRITERIA:The script's pull step says OK (not SKIPPED: a dirty tree skips the pull and tests an old commit), the recorded hash equals the remote's, Core passes, PlayMode has 0 failures and at least 183 passes, the player builds. A red run is recorded as Failed and is not a pass of this task.
 TESTING REQUIREMENTS:The run.
 DOCUMENTATION REQUIREMENTS:Gate row; progress-log row.
 NEEDS UNITY:        yes
@@ -118,7 +119,7 @@ EFFORT:             S (one owner session)
 COMPLEXITY:         S
 RISKS:              Feel problems found.
 AFFECTED FILES:     A dated note in `13_Production/`
-ACCEPTANCE CRITERIA:Every testable box is pass or fail.
+ACCEPTANCE CRITERIA:Every testable box is pass or fail against the list frozen in T-002; every fail has a P0 task.
 TESTING REQUIREMENTS:Manual.
 DOCUMENTATION REQUIREMENTS:The note; dashboard.
 NEEDS UNITY:        yes
@@ -140,9 +141,9 @@ IMPLEMENTATION DETAILS:Core only; Unity call sites stay as they are until a PC s
 OWNER:              core-rules-engineer
 REVIEWER:           code-reviewer
 MODEL TIER:         sonnet
-PRIORITY:           P1
+PRIORITY:           P2 (not needed for the slice; do after the slice gate unless a slot is free)
 STATUS:             AWAITING APPROVAL
-DEPENDENCIES:       None
+DEPENDENCIES:       A damage-kind field on skill data under a name that does not collide with the existing skill `kind` (chain, launcher)
 EFFORT:             S
 COMPLEXITY:         S
 RISKS:              Balance untested in play.
@@ -259,6 +260,32 @@ NEEDS UNITY:        no
 
 
 ## C. Proposed: needs a Unity slot on the owner's PC
+
+### T-024: Reproduce and fix kill credit for companion and partner kills
+
+```text
+TASK ID:            T-024
+TASK TITLE:         Reproduce and fix kill credit for companion and partner kills
+PARENT FEATURE:     UPG-040
+SYSTEM:             SYS-CMB-26, SYS-CMP-04, SYS-CMP-07
+DESCRIPTION:        Write a PlayMode test in which a companion lands the last hit on a quest monster and on Grukk. If it fails as the code reading predicts, raise a defeated event from the monster and move XP, loot, quest, bestiary and siege subscribers onto it.
+PLAYER BENEFIT:     Fighting beside a partner never loses the reward or the liberation.
+IMPLEMENTATION DETAILS:Test first. Credit rule from data (recommended: full credit).
+OWNER:              gameplay-engineer
+REVIEWER:           code-reviewer, qa-tester
+MODEL TIER:         sonnet
+PRIORITY:           P0
+STATUS:             AWAITING APPROVAL
+DEPENDENCIES:       T-001
+EFFORT:             S
+COMPLEXITY:         S
+RISKS:              Double credit; XP balance.
+AFFECTED FILES:     `Runtime/World/MonsterDummy.cs`, `PlayerCombat.Progress.cs`, `SiegeDirector.cs`, `PlayerBestiary.cs`, `PlayerInventory.cs`, `PlayerQuests.cs`, a PlayMode test
+ACCEPTANCE CRITERIA:Companion kill of Grukk gives liberation, XP, loot, quest credit and bestiary tick exactly once; PlayMode has 0 failures.
+TESTING REQUIREMENTS:New PlayMode test; full PlayMode run.
+DOCUMENTATION REQUIREMENTS:Inventory rows; risk R31.
+NEEDS UNITY:        yes
+```
 
 ### T-004: Pass the reaction table into the game
 
@@ -481,7 +508,7 @@ IMPLEMENTATION DETAILS:Read active events in the board.
 OWNER:              gameplay-engineer
 REVIEWER:           qa-tester
 MODEL TIER:         sonnet
-PRIORITY:           P2
+PRIORITY:           P3 (not needed for the slice; do after the slice gate unless a slot is free)
 STATUS:             AWAITING APPROVAL
 DEPENDENCIES:       T-001
 EFFORT:             S
@@ -507,7 +534,7 @@ IMPLEMENTATION DETAILS:Small.
 OWNER:              core-rules-engineer
 REVIEWER:           quest-designer
 MODEL TIER:         sonnet
-PRIORITY:           P2
+PRIORITY:           P3 (not needed for the slice; do after the slice gate unless a slot is free)
 STATUS:             AWAITING APPROVAL
 DEPENDENCIES:       T-001 for the Unity part
 EFFORT:             S

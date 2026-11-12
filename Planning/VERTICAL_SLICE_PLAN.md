@@ -41,6 +41,24 @@ One sitting of 30 to 45 minutes, no developer help:
 | The game's signature | The redacted Status line reacts to one story flag | A fixed string | A flag hook | UPG-016 (needs CD-002) |
 | The place answers | Liberation delta | Raids stop; numbers change | Visible changes | UPG-018 |
 
+## 3a. The core cut (recommended) and the stretch
+
+The red-team review judged the table above too large for one Unity slot a week: it needs two new data types, a save change and three canon decisions before the loop can close. The same loop can be proven with less. **The core cut is the recommended slice; everything else in §3 is stretch**, added only after the core passes.
+
+| Step of the loop | Core cut | Why it is enough | Entry |
+|---|---|---|---|
+| Fight with a partner without losing credit | Ally kills count | Without it the trial can be lost (R31) | UPG-040 |
+| Discover and record | 3 or 4 discoveries written through the **existing** discovery journal (its landmark, creature and secret categories exist in `Data/World/living_world.json` and are already saved), plus the journal page that shows them | No new data type and no new save field. Unverified: whether those categories can express a two-clue chain; if not, the chain is stretch | UPG-009 (reduced), UPG-010 |
+| The pack fight | Goblin pack with group tactics, on today's hand-placed camps | Encounter tables are not needed to prove the fight | UPG-002, UPG-003, UPG-005 |
+| The trial | Grukk with one attack that only his second phase uses | Armour and weak points are stretch | UPG-007 (reduced) |
+| The place answers | Three visible changes after liberation | A delta of three proves the idea | UPG-018 (reduced) |
+| The signature | The redacted Status line changes when Whisperwood is freed | One flag that already exists | UPG-016 (needs CD-002) |
+| Persistence | Save, quit, load | Already tested | - |
+
+Stretch, in this order once the core passes: encounter tables as the spawn source (UPG-020, with UPG-019), the bestiary vocabulary and research tasks (UPG-011), weakness readout (UPG-008), quest choice outcomes (UPG-013), Grukk's armour and weak point, the save version rule and product identity (UPG-028, required before any build leaves the PC).
+
+Day and night differences are not part of the test: an in-game day is 90 minutes and a sitting is 30 to 45, so night is reached only by sleeping at the inn.
+
 ## 4. Explicitly out of the slice
 
 Stated so that nothing slides in:
@@ -65,13 +83,13 @@ The slice passes when all of these hold, each with its evidence filed:
 
 | # | Criterion | Evidence |
 |---|---|---|
-| 1 | The ten steps in §2 can be played in order in the standalone build by someone who has not seen the game | A playtest note by the owner and, if possible, one outsider |
-| 2 | The fun test (`combat.md` §12) passes on every item kept in it | The dated record sheet |
-| 3 | Every quest offered can be completed | The extended scene test passes |
-| 4 | Save and load preserve every state in §2 | PlayMode save round-trip tests |
-| 5 | 60 fps in the field on the target PC with the pack fighting | A profiler capture |
-| 6 | `npm run build` and PlayMode both green on the commit that is built | A `QUALITY_GATES.md` §3 row |
-| 7 | No capsule creatures in view on the slice path; a player character on screen | Screenshots; director review |
+| 1 | One person who has not seen the game plays the loop in §2 in the standalone build without help. The owner's own run does not satisfy this | A playtest note naming the tester, plus three answers: would you play another hour; what did you notice that nobody told you; where were you lost |
+| 2 | The fun test passes on the list frozen in T-002. Items are not removed after a fail | The dated record sheet |
+| 3 | Every quest the board or an NPC offers is completed in a played run or by a PlayMode test that finishes it (presence of the giver is not enough) | Test results and the run note |
+| 4 | After save, quit and load these are unchanged: level and XP, guild rank, inventory and equipment, quest states and flags, bestiary tiers, discovery journal entries, partners and bond, Whisperwood's liberated state and its changes, the redacted line's state | PlayMode save round-trip tests, one per item |
+| 5 | 60 fps at 1080p on the owner's PC with the goblin pack fighting (the PC's GPU is recorded with the capture; `art_budgets.md` names a GTX 1650 as the floor) | A profiler capture |
+| 6 | Core green and PlayMode with 0 failures on the commit that is built | A `QUALITY_GATES.md` §3 row |
+| 7 | No capsule creatures in view on the slice path; a player character on screen | Screenshots of normal play; director review |
 | 8 | The game can be heard | Listening pass |
 
 Criteria 7 and 8 depend on the owner (character, creature art route, audio licences). If those are not available, the gate can be taken as **"systems proven, presentation pending"** on criteria 1 to 6, and the decision to widen content waits for 7 and 8.
@@ -84,4 +102,4 @@ Criteria 7 and 8 depend on the owner (character, creature art route, audio licen
 
 ## 7. Size of the work
 
-By the auditors' estimates, in usage windows (not dates): phase 2 wiring is about six small-to-medium jobs; phase 3 content about six medium jobs; most need Unity, which means the owner's PC and one slot a week. At one Unity slot a week the slice is a matter of months, not weeks, and the real limit is the owner's hours for playtests and decisions. No date is given because the production rate has not been measured; the weekly telemetry row will supply it.
+By the auditors' estimates, in usage windows (not dates): phase 2 wiring is about six small-to-medium jobs; phase 3 content about six medium jobs; most need Unity, which means the owner's PC and one slot a week. Counting the slots the roadmap gives phases 2 and 3 (8 to 11) at one Unity slot a week, with owner decisions in between, the full slice is **at least three to four months if nothing goes wrong**, before presentation work. The core cut in §3a is roughly half of that. The real limit is the owner's hours for playtests and decisions. No date is given because the production rate has not been measured; the weekly telemetry row will supply it.

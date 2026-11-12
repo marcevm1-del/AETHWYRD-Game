@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-12
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Management system (branch `claude/magical-clarke-remja3`, not yet on `main`) | New `Planning/` folder: dashboard, master plan, project status, system inventory (150 rows from five audits), roadmap, milestone tracker, vertical slice plan with a core cut, dependency map, backlog (24 tasks, 3 ready), upgrade register (40), ideas register (27), decision log, canon discrepancy register, risk register (R15 to R31 added), quality gates, change control, content pipeline, weekly cycle, release readiness, templates. Five audit reports and one review record. Six new agents (red-team-reviewer, documentation-auditor, research-analyst, exploration-designer, creature-ecology-designer, companion-ai-designer) and explicit model tiers on the seat holders. Found in review: kills by a companion or partner give no credit (R31, not yet reproduced). The build's generated encounters schema is now committed; the vault mirrors `Planning/`. No game code or design data changed | 755 (run in the cloud); PlayMode not run |
+
 ## 2026-11-11
 
 | Commit | What changed | Tests |

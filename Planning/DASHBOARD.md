@@ -7,7 +7,7 @@ Read this first. One page, refreshed at the end of every weekly cycle. Last refr
 | | |
 |---|---|
 | Overall | A large validated design, a broad tested rules library, a small playable game (one field, one class). See `PROJECT_STATUS.md` |
-| Phase | **1: verify and judge** (phase 0, the audit and this management system, finished today) |
+| Phase | **0 to 1**: the audit and this management system are built and reviewed and await your approval; phase 1 (verify and judge) can start with the two tasks already approved |
 | Milestone in progress | MS-1 build verified · MS-2 core loop judged · MS-3 first performance number |
 | Plan state | Master plan, slice scope and first backlog are **proposed, awaiting the owner** |
 
@@ -38,8 +38,8 @@ Read this first. One page, refreshed at the end of every weekly cycle. Last refr
 | State | Count | Which |
 |---|---|---|
 | Ready | 3 | T-001 PC verify run · T-002 split the fun test · T-003 play it |
-| Awaiting approval, no Unity needed | 5 | T-005, T-008, T-013, T-020, T-021 |
-| Awaiting approval, needs a Unity slot | 10 | T-004, T-006, T-007, T-009, T-010, T-012, T-014, T-018, T-019, T-023 |
+| Awaiting approval, no Unity needed | 5 | T-013 and T-020 can start on approval; T-008 and T-021 also need one answer each (decisions 14 and 25); T-005 is not needed for the slice |
+| Awaiting approval, needs a Unity slot | 11 | **T-024 first (ally kill credit, P0)**, then T-004, T-006, T-007, T-009 (also needs decision 16), T-010, T-012, T-014, T-018; T-019 and T-023 are not needed for the slice |
 | Awaiting a named owner decision | 5 | T-011, T-015, T-016, T-017, T-022 |
 | In progress / blocked / done | 0 | - |
 
@@ -47,6 +47,7 @@ Read this first. One page, refreshed at the end of every weekly cycle. Last refr
 
 | ID | Risk |
 |---|---|
+| R31 | A kill landed by a companion or partner gives no credit; on the Tyrant it can lose the region's liberation. Confirmed by reading the code, not yet reproduced |
 | R16 | The design is about two orders of magnitude larger than the build |
 | R17 | Tested rules and finished data that the game does not use |
 | R18 | The core loop has never been judged by a person |
@@ -58,11 +59,11 @@ Read this first. One page, refreshed at the end of every weekly cycle. Last refr
 
 | Register | Count | Detail |
 |---|---|---|
-| Upgrades | 39 | 2 approved (UPG-001, UPG-026) · 35 proposed · 2 blocked on the owner (UPG-030 audio, UPG-031 character) |
+| Upgrades | 40 | 2 approved (UPG-001, UPG-026) · 36 proposed · 2 blocked on the owner (UPG-030 audio, UPG-031 character) |
 | Ideas | 27 | 16 new · 2 ready for review (IDEA-001 Lying Interface, IDEA-014 returner recap) · 2 need research · 7 deferred |
-| Canon-level discrepancies | 14 | 13 open, 1 resolved |
+| Canon-level discrepancies | 15 | 14 open, 1 resolved |
 | Documentation discrepancies | 20 | 14 open, 6 resolved |
-| Risks | 30 | R1 to R14 carried, R15 to R30 new |
+| Risks | 31 | R1 to R14 carried, R15 to R31 new |
 
 ## Decisions waiting on you
 
@@ -71,8 +72,11 @@ Grouped so each can be answered in a word. Details are in the row cited.
 **To start work**
 
 1. Approve the strategy, especially "nothing new before the slice gate" (`MASTER_PROJECT_PLAN.md` §3).
-2. Approve the slice scope (`VERTICAL_SLICE_PLAN.md` §3 and §4).
-3. Approve the first wave of the backlog (the five tasks that need no Unity; then the Unity group).
+2. Approve the slice scope: the **core cut** (`VERTICAL_SLICE_PLAN.md` §3a, recommended) or the full table in §3.
+3. Approve the first wave of the backlog: T-013 and T-020 in the cloud; T-024 as the first Unity task after the verify run.
+3a. Merge this branch (`claude/magical-clarke-remja3`) into `main`. Until then the PC verify script, which checks out `main`, and the vault on the PC do not see `Planning/`.
+3b. Confirm three additions to what only you may approve: new data types, save-format changes, and standing claims on your time (`CHANGE_CONTROL.md` §4).
+3c. The management system is 20 documents. The reviewer recommends cutting to about 12 (merge the milestone tracker into the roadmap, the dependency graph into the backlog, change control with quality gates; drop release readiness while release is parked). They were all built because the command lists them; say the word and they are merged.
 
 **Canon and design (each blocks named work)**
 
@@ -113,4 +117,12 @@ None running. The team, seats and tiers: `13_Production/agent_team.md`. Six agen
 
 1. **You:** run `Tools/pc/update_and_verify.cmd` and send back the summary line (T-001).
 2. **combat-designer:** split the fun test and prepare the sheet (T-002), so that your next session is ten minutes of play (T-003).
-3. **On your approval of the first wave:** T-005 (magical damage in Core), T-013 (dead-data report), T-020 (documentation sweep), T-021 (decision records), T-008 (rank bands), two agents at a time.
+3. **On your approval of the first wave:** T-013 (dead-data report) and T-020 (documentation sweep) in the cloud, one or two agents at a time; T-024 (ally kill credit) in the first Unity slot after the verify run.
+
+## Said plainly
+
+- By the plan's own slot counts the full slice is at least three to four months away at one Unity session a week; the core cut is about half.
+- About 28 decisions wait on you. Ratifying the 46 delegated canon rows alone is likely a full session of reading.
+- The fun test will be played on a silent game with a capsule for a hero. Judge the feel of the controls and the fights, not the look.
+- Renaming the product moves the save folder. Back up your own save before the first run of a renamed build.
+- The ally-kill defect was found only when a reviewer read the Unity code line by line. The Unity side has had far less review than the rules library, and more defects of that kind should be expected.

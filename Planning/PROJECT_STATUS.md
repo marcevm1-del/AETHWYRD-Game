@@ -32,7 +32,7 @@ AETHWYRD has a very large, validated **design and data layer**, a broad and well
 - **The rules library.** 63 files and about 12,000 lines in `Code/Ascend.Core`, free of engine code, with 755 passing tests (run today). Damage, defence, reactions, style, AI, quests, saves, crafting, taming, sieges, calendar and more.
 - **The data pipeline.** Generators and a validator run in one command and in CI; data is valid today (28 known map warnings, 0 graph findings).
 - **The Ring 0 combat slice.** Attack chain, heavy and charge, launcher and air combat, dodge and perfect dodge, block and parry, Style Rank, skills and ultimate, Firestorm, telegraphs, aggro tokens, a three-phase boss. In the game, with PlayMode tests (183 passed on 2026-11-08).
-- **The Ring 0 loop around it.** Quests and the weekly board, shops, equipment, crafting with quality, gathering, taming and partners, inns and the day clock, sieges and liberation, guild rank F to E, save and load.
+- **The Ring 0 loop around it** (present in the game; most of it has no automated test of its own, and none of it has been judged in play). Quests and the weekly board, shops, equipment, crafting with quality, gathering, taming and partners, inns and the day clock, sieges and liberation, guild rank F to E, save and load.
 - **Save safety.** Bad saves are set aside, a newer save is never overwritten by an older build, migration tests exist.
 - **Tooling.** Blender generators for creatures, buildings and terrain; a vault builder; a one-click PC verify script.
 
@@ -45,7 +45,8 @@ AETHWYRD has a very large, validated **design and data layer**, a broad and well
 5. **Quest choices have no effect.** The option is stored and ignored.
 6. **The fun test has never been run.** Twelve unchecked boxes; four of them depend on unwired systems.
 7. **No performance number exists** anywhere in the repo.
-8. **The newest handover is from 2026-11-02** and is wrong about the test counts and about Unity.
+8. **Ally kills give no credit.** A kill landed by a companion or partner raises no kill event: no XP, loot, quest credit or liberation (R31; found in review, confirmed by reading, not reproduced).
+9. **The newest handover is from 2026-11-02** and is wrong about the test counts and about Unity.
 
 ## 5. What could not be inspected
 
@@ -84,4 +85,4 @@ These are counts of rows, not a percentage of the game. No completion percentage
 
 ## 8. Stage
 
-Canon's Ring 0 ("is combat fun?") is built except for the player character and the fun test. Much of Ring 1's breadth exists as rules and data. In studio terms the project is in pre-production with a vertical slice partly assembled and not yet proven.
+Canon's Ring 0 ("is combat fun?") is mostly built: the player character is missing, the fun test is unrun, four of its twelve items need systems the game does not use yet, and one confirmed defect can lose the region's main goal (R31). Much of Ring 1's breadth exists as rules and data. In studio terms the project is in pre-production with a vertical slice partly assembled and not yet proven.
