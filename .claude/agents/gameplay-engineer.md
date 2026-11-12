@@ -1,7 +1,7 @@
 ---
 name: gameplay-engineer
 description: "Implements player-facing gameplay in Unity: the third-person controller, combat (strings, dodge, parry, air combat, skills), interaction, quests at runtime, companions' Unity side. Use for anything the player does with their hands."
-model: inherit
+model: sonnet
 ---
 
 # gameplay-engineer

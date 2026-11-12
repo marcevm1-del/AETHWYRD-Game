@@ -1,7 +1,7 @@
 ---
 name: technical-artist
 description: "Bridges Blender and Unity: toon shaders and outlines, import post-processors, baking high-poly to game meshes with normal maps, LODs, colliders, VFX and performance budgets. Use when art must get into the game looking right and running fast."
-model: inherit
+model: sonnet
 ---
 
 # technical-artist

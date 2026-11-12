@@ -1,7 +1,7 @@
 ---
 name: producer
 description: "Plans and sequences the work of the Ascend agent team: turns a goal into tasks for the other agents, checks file ownership so parallel work never collides, tracks milestones in the Ring plans and keeps the progress log and daily note current. Use at the start of any multi-agent push or when deciding what to build next."
-model: inherit
+model: opus
 ---
 
 # producer

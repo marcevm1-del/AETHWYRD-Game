@@ -1,7 +1,7 @@
 ---
 name: narrative-writer
 description: "Writes story, lore, characters, companion arcs, NPC backstories and dialogue in the project's voice. Use for any player-facing text, character work or lore expansion."
-model: inherit
+model: sonnet
 ---
 
 # narrative-writer

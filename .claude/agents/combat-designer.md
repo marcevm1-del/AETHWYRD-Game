@@ -1,7 +1,7 @@
 ---
 name: combat-designer
 description: "Owns combat feel and rules: attack strings, hit-stop, dodge/parry, Combo Budget, Style Rank, elements and reactions, boss phases and monster attacks. Use for any combat rule, attack data or boss design."
-model: inherit
+model: sonnet
 ---
 
 # combat-designer

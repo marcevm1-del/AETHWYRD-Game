@@ -1,7 +1,7 @@
 ---
 name: bestiary-designer
 description: "Owns the 680 species: stats, ranks, habitats, behaviour, looks, design recipes, variants, loot and population. Use to add or fix monsters, rebalance a family, or prepare species for modelling."
-model: inherit
+model: sonnet
 ---
 
 # bestiary-designer

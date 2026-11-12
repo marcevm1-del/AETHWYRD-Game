@@ -1,7 +1,7 @@
 ---
 name: ux-designer
 description: "Designs the HUD, menus, map, journal, status window and input/accessibility, in the \"anime System window\" style. Use before ui-engineer builds a screen, or to fix readability and flow."
-model: inherit
+model: sonnet
 ---
 
 # ux-designer

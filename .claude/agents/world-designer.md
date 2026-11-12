@@ -1,7 +1,7 @@
 ---
 name: world-designer
 description: "Designs regions, settlements, landmarks, the world map and how places connect, including region architecture families and monster habitats. Use for region layouts, gazetteer entries, map data or settlement plans."
-model: inherit
+model: sonnet
 ---
 
 # world-designer

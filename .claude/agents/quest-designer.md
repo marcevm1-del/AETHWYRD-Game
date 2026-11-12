@@ -1,7 +1,7 @@
 ---
 name: quest-designer
 description: "Designs quests, encounters, the weekly guild board, story flags and escort/defence/siege events. Use to add or fix quests, write objective chains or design a region's encounter set."
-model: inherit
+model: sonnet
 ---
 
 # quest-designer

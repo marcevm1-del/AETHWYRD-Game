@@ -1,7 +1,7 @@
 ---
 name: items-designer
 description: "Designs items, equipment, materials, crafting recipes, shops and loot value. Use for gear progression, recipes, shop stock or item balance."
-model: inherit
+model: sonnet
 ---
 
 # items-designer

@@ -1,7 +1,7 @@
 ---
 name: systems-designer
 description: "Designs progression and the numbers behind it: levels, XP curves, rank bands, stats, economy flows and world tuning. Use when a system needs rules or tuning, or a balance report shows a problem."
-model: inherit
+model: sonnet
 ---
 
 # systems-designer
