@@ -65,7 +65,7 @@ AETHWYRD has a very large, validated **design and data layer**, a broad and well
 | IMPLEMENTED (no automated test found) | 5 | 41 |
 | PARTIAL or PROTOTYPE | 8 | 39 |
 | NOT WIRED, NOT STARTED or NOT RUN | 0 | 18 |
-| DATA ONLY, DESIGNED, DOCUMENTED or NONE | 25 | 17 |
+| DATA ONLY, DOCUMENTED or NONE | 25 | 17 |
 | UNCERTAIN | 0 | 3 |
 | VERIFIED or COMPLETE | 0 | 0 |
 | n/a | 14 | 10 |

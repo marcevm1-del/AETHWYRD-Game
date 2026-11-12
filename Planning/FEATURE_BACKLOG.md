@@ -42,7 +42,7 @@ The other upgrades needed by the slice (UPG-007 Grukk's verbs, UPG-008 weakness 
 | T-015 | One creature from Blender into the shipping scene | UPG-024 | technical-artist / creature-artist | P1 | AWAITING APPROVAL | yes |
 | T-017 | Quest choices with outcomes and a receipt | UPG-013 | quest-designer (data) / core-rules-engineer (rules) / ui-engineer (receipt) | P1 | AWAITING APPROVAL | partly |
 | T-022 | Save version rule and product identity | UPG-028 | save-platform-engineer | P1 | AWAITING APPROVAL | partly |
-| T-016 | File the Ring 0 quests under the confirmed region | CD-009 | quest-designer | P2 | AWAITING APPROVAL | no |
+| T-016 | File the Ring 0 quests under the confirmed region | UPG-020 / CD-009 | quest-designer | P2 | AWAITING APPROVAL | no |
 
 ## A. Approved: can start now
 
@@ -632,7 +632,7 @@ NEEDS UNITY:        partly
 ```text
 TASK ID:            T-016
 TASK TITLE:         File the Ring 0 quests under the confirmed region
-PARENT FEATURE:     CD-009
+PARENT FEATURE:     UPG-020 / CD-009
 SYSTEM:             SYS-WLD-01
 DESCRIPTION:        Move the quests filed under Aldmere if the owner confirms Brindlewick belongs to Whisperwood.
 PLAYER BENEFIT:     -

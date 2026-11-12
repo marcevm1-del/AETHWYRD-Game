@@ -17,14 +17,14 @@
 |---|---|---|---|
 | 1 | **producer** | Leadership | Ring plans, `progress_log.md`, the daily note, this roster |
 | 2 | **canon-keeper** | Leadership | `Canon.md` §6 proposals; consistency fixes |
-| 3 | **qa-tester** | Leadership | `Code/Ascend.Core.Tests/`, `Game/Assets/_Game/Tests/`, `reports/` |
+| 3 | **qa-tester** | Leadership | `Code/Ascend.Core.Tests/`, `Game/Assets/_Game/Tests/`, `reports/` (except `reports/design_review_*.md`, the anime-fantasy-director's) |
 | 4 | **code-reviewer** | Leadership | Nothing (read-only reviews) |
 | 5 | **systems-designer** | Design | `12_Systems/systems.md`, `03_Rank_System/`, `world_tuning.json`, `progression.json`, `guild_ranks.json` |
 | 6 | **combat-designer** | Design | `12_Systems/combat.md`, `combat_tuning.json`, `attacks.json`, `boss_phases.json`, `bosses_and_calamities.md` |
 | 7 | **quest-designer** | Design | `11_Quests_Encounters/`, `Data/Quests/` |
-| 8 | **world-designer** | Design | `10_World/`, `regions.json`, `gazetteer.json`, `inns.json`, `gathering.json`, `siege_waves.json`, `world_map.md` |
+| 8 | **world-designer** | Design | `10_World/` (except `exploration_and_discovery.md` and `reactive_world_and_field_journal.md`, which the exploration-designer owns), `regions.json`, `gazetteer.json`, `inns.json`, `gathering.json`, `siege_waves.json`, `world_map.md` |
 | 9 | **narrative-writer** | Design | `02_Lore/`, `07_Characters/`, `06_Races_Origins/`, NPC text in `npcs.json` |
-| 10 | **bestiary-designer** | Design | `08_Bestiary/`, `species.*`, `population.json`, `loot_tables.json`, `Tools/monster_gen/` |
+| 10 | **bestiary-designer** | Design | `08_Bestiary/` (except `regional_ecology.md`, which the creature-ecology-designer owns), `species.*`, `population.json`, `loot_tables.json`, `Tools/monster_gen/` |
 | 11 | **class-skill-designer** | Design | `04_Classes/`, `05_Skills_Magic/`, `classes.json`, `Tools/classes/` |
 | 12 | **items-designer** | Design | `09_Equipment/`, `Data/Items/` |
 | 13 | **ux-designer** | Design | `12_Systems/hud_and_ui.md`, UI specs in `13_Production/` |
@@ -92,7 +92,7 @@ The owner's master development command names eighteen roles. Each is filled by a
 
 ### Tiers
 
-Opus: producer, technical-director, creative-director, red-team-reviewer. Haiku: documentation-auditor. Sonnet: gameplay-engineer, systems-designer, combat-designer, world-designer, quest-designer, narrative-writer, economy-designer, items-designer, ux-designer, technical-artist, performance-analyst, bestiary-designer, qa-tester, tools-pipeline-engineer, the three other new agents, and the studio layer's pinned specialists. Every other agent keeps `inherit` (the session's model) until it takes a seat. `.claude/docs/model-tiers.md` predates these pins (CD-024).
+Opus: producer, technical-director, creative-director, red-team-reviewer. Haiku: documentation-auditor. Sonnet: gameplay-engineer, systems-designer, combat-designer, world-designer, quest-designer, narrative-writer, economy-designer, items-designer, ux-designer, technical-artist, performance-analyst, bestiary-designer, qa-tester, tools-pipeline-engineer, the four other new agents (research-analyst, exploration-designer, creature-ecology-designer, companion-ai-designer), and the studio layer's pinned agents (lead-programmer, devops-engineer, community-manager, prototyper and the four Unity sub-specialists). Every other agent keeps `inherit` (the session's model) until it takes a seat. `.claude/docs/model-tiers.md` predates these pins (CD-024).
 
 ## A first wave plan (proposal for the producer)
 

@@ -52,7 +52,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 | UPG-028 | Save version rule and product identity | SYS-CORE-03, SYS-TEC-06 | P1 | S | PROPOSED |
 | UPG-029 | Documentation drift sweep | SYS-TEC-11 and docs across the repo | P2 | S | PROPOSED |
 | UPG-030 | Sound in the game: play the Ring 0 cue sheet | SYS-CORE-08 | P2 | M | BLOCKED |
-| UPG-031 | A player character in the game | SYS-PRG (character), animation | P1 | M | BLOCKED |
+| UPG-031 | A player character in the game | SYS-CMB-01, SYS-EXP-01 (the player's body and animation; the character model has no inventory row of its own) | P1 | M | BLOCKED |
 | UPG-032 | Choose the shipping UI technology before polishing any screen | SYS-CORE-06 | P2 | M | PROPOSED |
 | UPG-033 | Quest board guard and a banter trace | SYS-QST-04, SYS-QST-13 | P3 | S | PROPOSED |
 | UPG-034 | Decide the class line-up for Ring 0 and the slice, and say it in the docs | SYS-PRG-04, SYS-CMB-14 | P1 | S to M | PROPOSED |
@@ -540,7 +540,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Testing Requirements:** Core tests for selection; PlayMode with the flag on and off.
 - **Status:** PROPOSED
 - **Related Ideas:** IDEA-004, IDEA-006
-- **Related Tasks:** T-018
+- **Related Tasks:** T-018, T-016
 - **Date Added:** 2026-11-12
 - **Decision History:** 2026-11-12, orchestrator: entered from the 2026-11-12 audits (source: ecology U4); recorded as PROPOSED; not in the actionable backlog until approved.
 
@@ -772,7 +772,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Gameplay Benefit:** Combat feel depends on sound.
 - **Dependencies:** Owner: audio sources and licences; `third_party_assets.md` entries
 - **Affected Systems:** Audio
-- **Affected Files:** `Runtime/Audio/`, `Game/Assets/_Game/Audio/`
+- **Affected Files:** `Game/Assets/_Game/Runtime/Audio/`, plus an asset folder to be created
 - **Priority:** P2
 - **Complexity:** M
 - **Risk:** Licence slip (R10).
@@ -786,7 +786,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 
 ### UPG-031: A player character in the game
 
-- **Existing System:** SYS-PRG (character), animation
+- **Existing System:** SYS-CMB-01, SYS-EXP-01 (the player's body and animation; the character model has no inventory row of its own)
 - **Current Implementation Status:** A capsule stands in
 - **Current Problem:** No character model. Humanoid animation, foot IK and every picture of the game are waiting on it (R28).
 - **Evidence:** `13_Production/ring0_plan.md` week 3; dependency map item H

@@ -30,6 +30,7 @@ Read this first. One page, refreshed at the end of every weekly cycle. Last refr
 | Partial or prototype | 39 | Reactions (Firestorm only), classes (1 of 12), companions (1 of 14), journals (no writers), living world (no effects), quest data (19 of 32 completable) |
 | Not wired, not started, not run | 18 | Group tactics, boss armour and weak points, weapon movesets, encounter tables, region graph, puzzles, meal buffs, runes, housing and farming, audio, terrain, the fun test |
 | Documented only, or nothing | 17 | Magic, races and origins, Field Journal evidence, appraisal of people and items, reputation, wounds, ecology relationships |
+| Uncertain (3) or not applicable (10) | 13 | Banter playback, Style Rank bonus, party synergy wiring; tool-only rows |
 | Verified or complete | **0** | No playthrough on record; no agreed acceptance criteria yet |
 
 ## Tasks (`FEATURE_BACKLOG.md`)
