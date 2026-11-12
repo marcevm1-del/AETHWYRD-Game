@@ -87,9 +87,9 @@ namespace Ascend.Game
             return first;
         }
 
-        static Material NewMaterial(Color c)
+        internal static Material NewMaterial(Color c)
         {
-            var shader = Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Universal Render Pipeline/Simple Lit") ?? Shader.Find("Standard") ?? Shader.Find("Sprites/Default");
+            var shader = Shader.Find("Universal Render Pipeline/Unlit") ?? Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Universal Render Pipeline/Simple Lit") ?? Shader.Find("Standard") ?? Shader.Find("Sprites/Default");
             var m = new Material(shader);
             Tint(m, c);
             if (m.HasProperty("_Smoothness")) m.SetFloat("_Smoothness", 0.25f);
@@ -141,7 +141,9 @@ namespace Ascend.Game
         static void SetColour(Renderer r, Color c)
         {
             var m = r.material; // an instance owned by this renderer
-            if (m == null) return;
+            // A primitive's default material is the built-in Standard shader, which a URP player draws magenta: swap it for ours.
+            string sn = m != null && m.shader != null ? m.shader.name : null;
+            if (sn == null || !(sn.StartsWith("Universal Render Pipeline") || sn.StartsWith("Ascend/"))) { r.material = NewMaterial(c); return; }
             Tint(m, c);
         }
 

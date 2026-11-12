@@ -55,10 +55,7 @@ namespace Ascend.Game
             disc.transform.localScale = new Vector3(1.5f, 0.02f, 1.5f);
             SetLayer(disc, Layer);
             var dr = disc.GetComponent<Renderer>();
-            var dm = dr.material;
-            Color stage = new Color(0.16f, 0.25f, 0.45f, 1f);
-            if (dm.HasProperty("_BaseColor")) dm.SetColor("_BaseColor", stage);
-            if (dm.HasProperty("_Color")) dm.SetColor("_Color", stage);
+            dr.material = PlaceholderPlayerBody.NewMaterial(new Color(0.16f, 0.25f, 0.45f, 1f)); // the primitive's Standard material would draw magenta in URP
 
             var lightGo = new GameObject("PreviewKey");
             lightGo.transform.SetParent(_root.transform, false);
@@ -82,7 +79,7 @@ namespace Ascend.Game
             _cam.clearFlags = CameraClearFlags.SolidColor;
             _cam.backgroundColor = new Color(0.1f, 0.15f, 0.3f, 1f);
             _cam.cullingMask = 1 << Layer;
-            _cam.fieldOfView = 26f;
+            _cam.fieldOfView = 34f;
             _cam.nearClipPlane = 0.3f;
             _cam.farClipPlane = 20f;
             _cam.targetTexture = _rt;

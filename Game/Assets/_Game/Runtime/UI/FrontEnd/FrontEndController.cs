@@ -83,10 +83,13 @@ namespace Ascend.Game
         void OnDestroy()
         {
             if (Instance == this) Instance = null;
+            if (_madeCamera != null) { DestroyImmediate(_madeCamera); _madeCamera = null; } // a camera this controller made must not outlive it (it would become Camera.main)
             _backdrop?.Dispose();
             _preview?.Dispose();
             if (_settingsHolder != null) Destroy(_settingsHolder.gameObject);
         }
+
+        static GameObject _madeCamera;
 
         static void EnsureCamera()
         {
@@ -94,6 +97,7 @@ namespace Ascend.Game
             if (cam == null)
             {
                 var go = new GameObject("Main Camera") { tag = "MainCamera" };
+                _madeCamera = go;
                 cam = go.AddComponent<Camera>();
                 go.AddComponent<AudioListener>();
             }
