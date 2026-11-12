@@ -62,6 +62,10 @@ namespace Ascend.EditorTools
             Defence(root, "millbrook_granary", "Millbrook granary", new Vector3(26f, 0, 4f), new[] { "mon_goblin:4", "mon_goblin:4" });
             Defence(root, "Training yard mock raid", "Training yard", new Vector3(-9f, 0, 15f), new[] { "mon_blue_slime:3", "mon_horned_rabbit:2" });
             Place(root, "whisperwood_ruins_mural", new Vector3(0, 0, 88f), 10f);
+            // Salvage Warren chain (quests.json): stand-in landmarks until the real dungeon spaces are built (Phase 1 decision, coordinator).
+            Landmark(root, "dng_salvage_warren", "The Salvage Warren", new Vector3(-34f, 0, -26f));
+            Landmark(root, "rm_lower_landing", "Lower Landing", new Vector3(-40f, 0, -30f));
+            Landmark(root, "rm_rune_cistern", "Rune Cistern", new Vector3(-46f, 0, -26f));
         }
 
         /// <summary>
