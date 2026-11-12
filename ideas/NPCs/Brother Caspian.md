@@ -34,6 +34,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/Weekly Board/Babysitting Day|Babysitting Day]]
+- [[Quests/Weekly Board/Lantern Loaf|Lantern Loaf]]
 
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** Host body of Malgareth Vey, the Red Prophet.

@@ -45,6 +45,15 @@ tags: [inn]
 - [[Quests/The Tavern Brawl|The Tavern Brawl]] (E, Hidden)
 - [[Quests/Goblins in the Granary|Goblins in the Granary]] (E, Defense)
 - [[Quests/Night of the Smiling Scarecrow|Night of the Smiling Scarecrow]] (E, Investigation)
+- [[Quests/A Blade for the Guild|A Blade for the Guild]] (F, OddJob)
+- [[Quests/A Cap for Tomlin|A Cap for Tomlin]] (F, OddJob)
+- [[Quests/Stock for the Clinic|Stock for the Clinic]] (F, OddJob)
+- [[Quests/Supper for the Small Lantern|Supper for the Small Lantern]] (F, OddJob)
+- [[Quests/Silk and Ink|Silk and Ink]] (F, OddJob)
+- [[Quests/The First Glyph|The First Glyph]] (F, OddJob)
+- [[Quests/A Ward for the Library|A Ward for the Library]] (E, OddJob)
+- [[Quests/The Girl Who Couldn't Win|The Girl Who Couldn't Win]] (F, Companion)
+- [[Quests/The Unfinished Blade|The Unfinished Blade]] (F, Companion)
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined, Defense)
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined, OddJob)
 - [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined, Escort)
@@ -69,6 +78,12 @@ tags: [inn]
 - [[Quests/Weekly Board/Sewer Duty|Sewer Duty]] (undefined, Subjugation)
 - [[Quests/Weekly Board/Rush Hour at the Griffon|Rush Hour at the Griffon]] (undefined, OddJob)
 - [[Quests/Weekly Board/The Guild's Weekly Commission|The Guild's Weekly Commission]] (undefined, Faction)
+- [[Quests/Weekly Board/Guild Blade Order|Guild Blade Order]] (undefined, OddJob)
+- [[Quests/Weekly Board/Ink and Dye|Ink and Dye]] (undefined, OddJob)
+- [[Quests/Weekly Board/Hearth Poker Order|Hearth Poker Order]] (undefined, OddJob)
+- [[Quests/Weekly Board/Training Yard Snacks|Training Yard Snacks]] (undefined, OddJob)
+- [[Quests/Weekly Board/Lantern Loaf|Lantern Loaf]] (undefined, OddJob)
+- [[Quests/Weekly Board/Cook-Off Wager|Cook-Off Wager]] (undefined, Hidden)
 
 ## Local people
 

@@ -35,3 +35,18 @@ Parts are items made by normal recipes: Scrap Blade and Iron Blade (forge), Pelt
 
 ## Not built here
 Gems and skill crystals, enhancement +1 to +15, reforging, awakening, evolution, extraction of enchantments, multiple enchantment slots, unstable or cursed enchantments, the rune-word puzzle mini-game, shop stock for the new items, and Unity wiring (`AscendData` loading `gear_rules.json`, a socketing screen, applying `ApplyElement`).
+
+## Wave 2 set (items-designer, 2026-11-09)
+Decided under delegated creative control; the user may overrule. Everything stays flat, small and under the validator caps.
+
+| Rune | Rank | Fits | Bonus | Made from (rune anvil) |
+|---|---|---|---|---|
+| Spark | E | weapon, accessory | +3 MATK | Rune Plate, Stinger |
+| Dusk | E | armour, accessory | +3 MDEF | Rune Plate, Shade Essence |
+| Bastion | E | armour | +3 DEF | Rune Plate, 2 Crude Iron |
+| Cinder | D | weapon | +4 ATK | Rune Plate, Brimstone, D Core |
+| Warden | D | armour, accessory | +24 HP | Rune Plate, Labyrinth Bronze, D Core |
+
+Rune words: **Cindersong** (Cinder, Spark: weapon, +3 ATK, +3 MATK), **Bastion-Vow** (Bastion, Warden: armour, +4 DEF, +20 HP), **Duskwalk** (Dusk, Gale: accessory, +2% crit, +2 MDEF).
+
+Scrolls (enchanting table): **Rimebrand** (weapon, +2 ATK, Ice), **Ironhide** (armour, +3 DEF), **Lanternlight** (accessory, +3 MATK). Each new word and enchantment grants exactly one gear skill in `Data/Classes/rune_skills.json` (the validator requires it): Cindersong, Bastion Vow, Duskwalk, Rimebrand Cut, Ironhide Brace, Lantern Glow. These six skills were written by items-designer to keep the build valid; class-skill-designer should review their numbers.

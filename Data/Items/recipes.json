@@ -1286,6 +1286,234 @@
     "npcId": "npc_marta_gruel",
     "price": 20
    }
+  },
+  {
+   "id": "rcp_rune_spark",
+   "name": "Spark Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_spark",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_stinger",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_stinger",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 90
+   }
+  },
+  {
+   "id": "rcp_rune_dusk",
+   "name": "Dusk Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_dusk",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_shade_essence",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_shade_essence",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 90
+   }
+  },
+  {
+   "id": "rcp_rune_bastion",
+   "name": "Bastion Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_bastion",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_crude_iron",
+     "count": 2
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_crude_iron",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 95
+   }
+  },
+  {
+   "id": "rcp_rune_cinder",
+   "name": "Cinder Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_cinder",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_brimstone",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_d",
+     "count": 1
+    }
+   ],
+   "lifeRank": "D",
+   "attuneItem": "itm_mat_brimstone",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 200
+   }
+  },
+  {
+   "id": "rcp_rune_warden",
+   "name": "Warden Rune",
+   "skill": "runecraft",
+   "station": "rune_anvil",
+   "output": {
+    "itemId": "itm_rune_warden",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_rune_plate",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_labyrinth_bronze",
+     "count": 1
+    },
+    {
+     "itemId": "itm_core_d",
+     "count": 1
+    }
+   ],
+   "lifeRank": "D",
+   "attuneItem": "itm_mat_labyrinth_bronze",
+   "learnFrom": {
+    "npcId": "npc_torvald_stonebeard",
+    "price": 210
+   }
+  },
+  {
+   "id": "rcp_scroll_rimebrand",
+   "name": "Scroll of Rimebrand",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_rimebrand",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_core_e",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_elemental_essence",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_ink_sac",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 100
+   }
+  },
+  {
+   "id": "rcp_scroll_ironhide",
+   "name": "Scroll of Ironhide",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_ironhide",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_crude_iron",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_silk",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_ink_sac",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 85
+   }
+  },
+  {
+   "id": "rcp_scroll_lanternlight",
+   "name": "Scroll of Lanternlight",
+   "skill": "enchanting",
+   "station": "enchanting_table",
+   "output": {
+    "itemId": "itm_scroll_lanternlight",
+    "count": 1
+   },
+   "inputs": [
+    {
+     "itemId": "itm_mat_shade_essence",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_spirit_mote",
+     "count": 1
+    },
+    {
+     "itemId": "itm_mat_ink_sac",
+     "count": 1
+    }
+   ],
+   "lifeRank": "E",
+   "attuneItem": "itm_mat_ink_sac",
+   "learnFrom": {
+    "npcId": "npc_fennick_reed",
+    "price": 85
+   }
   }
  ]
 }

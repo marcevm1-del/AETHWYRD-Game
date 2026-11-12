@@ -23,4 +23,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]]
+- [[Quests/The Beetle Vault|The Beetle Vault]]
 - [[Quests/Weekly Board/The Guild's Weekly Commission|The Guild's Weekly Commission]]

@@ -110,6 +110,7 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/The Crimson Wolves|The Crimson Wolves]] (E)
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]] (E)
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]] (E)
+- [[Quests/Two on the Road|Two on the Road]] (F)
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]] (undefined)
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]] (undefined)
 - [[Quests/Weekly Board/Scrap Run|Scrap Run]] (undefined)
@@ -122,6 +123,8 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 - [[Quests/Weekly Board/Herb Run|Herb Run]] (undefined)
 - [[Quests/Weekly Board/Wolves on the Road|Wolves on the Road]] (undefined)
 - [[Quests/Weekly Board/Open Hunting Contract|Open Hunting Contract]] (undefined)
+- [[Quests/Weekly Board/Herbalist's Shelf|Herbalist's Shelf]] (undefined)
+- [[Quests/Weekly Board/Party of Two Contract|Party of Two Contract]] (undefined)
 
 ## Monsters (91)
 

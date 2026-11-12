@@ -25,4 +25,5 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/A Cap for Tomlin|A Cap for Tomlin]]
 - [[Quests/Weekly Board/Gate Watch|Gate Watch]]
