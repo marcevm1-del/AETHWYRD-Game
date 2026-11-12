@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Game/Scenes/Title.unity
+    guid: f1dc8c246e3fb4c42aaae199d1b3742b
+  - enabled: 1
     path: Assets/_Game/Scenes/Ring0_Graybox.unity
     guid: 71fed2a7ced294749bdf8a3ab61d89a0
   m_configObjects: {}

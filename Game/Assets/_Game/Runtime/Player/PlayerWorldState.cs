@@ -102,6 +102,8 @@ namespace Ascend.Game
             });
             Guard("meals", () => _meals = new MealBuffs(_db.Items, _db.Quality));
             Guard("accessibility", () => _accessibility = CloneSettings(AscendData.Accessibility?.Defaults).Sanitize());
+            var saved = GameSettings.TryLoad(); // settings.json beside the saves wins over the data defaults (null in the editor and tests)
+            if (saved != null) _accessibility = saved;
             if (_accessibility == null) _accessibility = new AccessibilitySettings();
             Guard("music", () =>
             {
@@ -352,7 +354,7 @@ namespace Ascend.Game
                     if (!string.IsNullOrEmpty(kv.Key) && kv.Value != MapStatus.Unknown) _living.Journal.Entries[kv.Key] = kv.Value;
                 _lastEventDay = int.MinValue; // roll today again after a load (the director never re-rolls a day it has done)
             });
-            Guard("accessibility load", () => SetAccessibility(s.Accessibility));
+            Guard("accessibility load", () => SetAccessibility(GameSettings.TryLoad() ?? s.Accessibility));
             Guard("companion presets load", () =>
             {
                 _presets.Clear();
