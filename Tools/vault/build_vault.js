@@ -11,7 +11,7 @@ const load = p => JSON.parse(fs.readFileSync(path.join(ROOT, 'Data', p), 'utf8')
 const GENERATED = ['Monsters', 'Families', 'Regions', 'Clans', 'Fauna', 'NPCs', 'Quests', 'Inns', 'Items', 'Classes', 'Attacks', 'Loot Tables', 'Systems', 'Design Bible', 'Assets'];
 const BIBLE_DIRS = ['00_Questions', '01_Core_Concept', '02_Lore', '03_Rank_System', '04_Classes', '05_Skills_Magic',
   '06_Races_Origins', '07_Characters', '08_Bestiary', '09_Equipment', '10_World', '11_Quests_Encounters',
-  '12_Systems', '13_Production'];
+  '12_Systems', '13_Production', 'Planning'];
 
 const species = load('Monsters/species.json');
 const populations = load('Monsters/population.json');
