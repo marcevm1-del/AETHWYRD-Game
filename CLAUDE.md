@@ -2,13 +2,14 @@
 
 A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 URP, data-driven JSON). This repo is the design bible, the data, the tools, the Unity project and the Obsidian vault at once.
 
-**Start here:** read the latest handover in `13_Production/handover/` (state, unfinished agent work with ready briefs, what waits on the user).
+**Start here:** read `Planning/DASHBOARD.md` (state, tasks, risks, what waits on the user), then `Planning/MASTER_PROJECT_PLAN.md` for how work is approved and tracked. The handovers in `13_Production/handover/` are older snapshots (latest 2026-11-02).
 
 ## Rules that always apply
 - **Canon wins:** `Canon.md` beats every other doc; `Data/` is canonical for numbers. Never edit a locked Canon row; propose changes in Canon §6 for the user's OK.
 - **Commercial game:** take only ideas and mechanics from other studios' games, never their code, art, text or data. Third-party assets only as listed in `13_Production/third_party_assets.md`.
 - **Content:** teen rating, no fanservice, warmth over comedy.
-- **Git:** `git -c safe.directory=E:/Ideas/Project-Ascend <cmd>`; never change global git config. Remote `aetheria`, branch `main`.
+- **Git (on the PC):** `git -c safe.directory=E:/Ideas/Project-Ascend <cmd>`; never change global git config. Remote `aetheria`, branch `main`. A cloud session uses the remote and branch its own instructions name.
+- **Status words:** a system has two statuses, rules layer and game (`Planning/QUALITY_GATES.md`). Never call rules that the game does not use "implemented". Only tasks in `Planning/FEATURE_BACKLOG.md` are implemented; proposals go to `Planning/UPGRADE.md` or `Planning/IDEAS.md`.
 - **Never touch** the player's save at `%USERPROFILE%/AppData/LocalLow/DefaultCompany/Game/slot0.json`. Don't create accounts, enter keys or buy anything.
 - **Before reporting work as done,** run its checks and say exactly what ran and what it returned.
 - **After each push,** add a row to `13_Production/progress_log.md`, update the dated note at the repo root (`YYYY-MM-DD.md`) and run `node Tools/vault/build_vault.js`.
@@ -17,7 +18,8 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
 ## Layout
 | Path | What |
 |---|---|
-| `00_Questions` … `13_Production` | The design bible (13_Production holds plans, the progress log and the system docs) |
+| `00_Questions` … `13_Production` | The design bible (13_Production holds the progress log, system docs, audits and older plans) |
+| `Planning/` | The management system: dashboard, master plan, roadmap, backlog, upgrade and ideas registers, decisions, risks, quality gates |
 | `Data/` | Canonical game data (JSON, validated by `Data/Schemas/`) |
 | `Code/Ascend.Core` + `.Tests` | Engine-agnostic C# rules and their tests |
 | `Code/Unity/Runtime` | Shared Unity runtime package (monster motion, springs, hurtboxes) |
@@ -42,7 +44,7 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
 - **TripoSR image to 3D:** `E:\Ideas\AI-Game-Toolkit\TripoSR\.venv\Scripts\python.exe Tools\ai3d\triposr_run.py <image>` (docs: `Tools/ai3d/README.md`). Both tools are registered in `13_Production/third_party_assets.md`.
 
 ## The agent team
-There are 27 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
+There are 33 project specialists in `.claude/agents/` (the original 27 plus six added 2026-11-12), alongside the studio layer's 34. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
 
 ## Studio layer for AETHWYRD (Claude Code Game Studios v1.2.0, merged into `main`)
 The studio's skills for AETHWYRD (`/start`, `/help`, `/adopt`, `/map-systems`, `/sprint-plan` and the rest), 34 extra agents (directors, Unity specialists; the 10 Godot and Unreal specialists are parked in `.claude/agents-retired/`), rules, docs and helper scripts live in `.claude/`. Hooks, `settings.json` and the status line are **not** installed yet.

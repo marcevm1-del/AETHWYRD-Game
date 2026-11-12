@@ -1,5 +1,7 @@
 # Unity integration dependency map (producer, 2026-11-09)
 
+> **2026-11-12:** the live version is now `Planning/DEPENDENCY_MAP.md` for the project-level map; the branch inventory and merge order below are still the reference for the PC branches. This file is kept as written.
+
 Job 2 of the producer queue. Built from `git rev-list` of the live agent branches against `aetheria/main` (`ae78c53f`), `phase1_api.md`, `animation_v11_audit.md`, `group_tactics_wiring.md`, the v4-v11 audits and `world_upgrade_plan.md`. Items marked *unverified* were read from docs and commit messages only; no Unity or code was inspected beyond that.
 
 ## 1. Ground truth about Unity

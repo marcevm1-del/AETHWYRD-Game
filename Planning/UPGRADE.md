@@ -16,7 +16,7 @@ Priority: P0 critical defect or blocker · P1 essential · P2 high value · P3 u
 
 ## Where these came from
 
-The first 39 entries were written on 2026-11-12 from five audits (`Planning/audits/`). The auditors proposed 47 candidates; overlapping ones were merged. The owner's earlier `upgrade v2` to `upgrade v11` documents were audited in `13_Production/*_audit.md` when they arrived, and what was adopted from them is already built or in `Canon.md` §6; their unbuilt remainder is covered here only where an audit found it still worth doing. They are kept at the repo root as source material.
+The first 39 entries were written on 2026-11-12 from five audits (`Planning/audits/`). The four specialist audits proposed 42 candidates and the technical audit added its findings; overlapping ones were merged. The owner's earlier `upgrade v2` to `upgrade v11` documents were audited in `13_Production/*_audit.md` when they arrived, and what was adopted from them is already built or in `Canon.md` §6; their unbuilt remainder is covered here only where an audit found it still worth doing. They are kept at the repo root as source material.
 
 ## Index
 

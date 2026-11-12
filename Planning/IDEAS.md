@@ -15,7 +15,7 @@ Statuses: NEW · EXPLORING · NEEDS RESEARCH · READY FOR REVIEW · APPROVED · 
 
 ## Where these came from
 
-Written on 2026-11-12 from five audits (`Planning/audits/`), which triaged the owner's four prompt documents (`AETHWYRD.odt`, `AETHWYRD 2.docx`, `AETHWYRD 3.docx`, `Aethwyrd 4.docx`). Those documents are briefs asking for audits and long lists; most of what they ask for is already built, already designed, or an upgrade. What remained as a new possibility is here: 30 candidates, merged to 27. The line-by-line triage of each prompt is in section 4 of each audit.
+Written on 2026-11-12 from five audits (`Planning/audits/`), which triaged the owner's four prompt documents (`AETHWYRD.odt`, `AETHWYRD 2.docx`, `AETHWYRD 3.docx`, `Aethwyrd 4.docx`). Those documents are briefs asking for audits and long lists; most of what they ask for is already built, already designed, or an upgrade. What remained as a new possibility is here: 27 candidates merged to 24, plus three taken from the audits' system tables (IDEA-001, IDEA-009, IDEA-027). The line-by-line triage of each prompt is in section 4 of each audit.
 
 Not copied here: the 52 features of `01_Core_Concept/the_big_upgrade.md` and the 30 of `borrowed_features.md`. They are existing project documents with their own `Canon.md` §6 rows; IDEA-001 stands for the decision the first one is waiting on.
 

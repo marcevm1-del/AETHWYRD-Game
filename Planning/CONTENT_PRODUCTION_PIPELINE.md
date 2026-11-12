@@ -35,7 +35,7 @@ Three properties make this pipeline workable for two people, and every new conte
 | Audio | `13_Production/audio_*`, `Data/Audio/*.json` | - | validator `audio_checks.js`, Core `AdaptiveMusic` tests | Core state machine | **No playback in the game** (state logger only); no audio files; sources shortlisted, licences not confirmed |
 | UI screens | `12_Systems/hud_and_ui.md`, ux specs → `Runtime/UI/` | Unity | PlayMode, screenshots | Unity (IMGUI placeholder style) | Styled "System window" look: not built |
 | Scenes | Editor scene builders (`Ring0SceneBuilder`) | Unity batch | PlayMode scene tests | `Game/Assets/_Game/Scenes` | One Ring 0 field plus the Whisperwood test field |
-| Design bible → Obsidian vault | all of the above | `npm run vault` | - | `ideas/` | `Planning/` is not mirrored into the vault (see CD-008) |
+| Design bible → Obsidian vault | all of the above | `npm run vault` | - | `ideas/` | `Planning/` top-level pages are mirrored; `Planning/audits/` is not |
 
 ## 3. Bottlenecks, in order of how much they hold back
 
