@@ -11,7 +11,8 @@ Parameters (degrees and metres; missing keys take DEFAULTS):
            l_wr/r_wr (wrist flex), l_curl/r_curl (finger curl), l_sh/r_sh (shoulder shrug, deg up)
   legs IK  l_du/r_du (ankle forward of its rest position, m), l_z/r_z (ankle height above ground, m; default = rest),
            l_dx/r_dx unused, l_pitch/r_pitch (foot pitch from flat, + toe up), l_toe/r_toe (toe bend relative to the foot, + up)
-  legs FK  fk=1 switches on l_th/r_th (thigh flexion forward), l_kn/r_kn (knee flexion), l_an/r_an (ankle, + toe up)
+  pelvis   hx (m, + toward the character's left)
+  legs FK  fk=1 switches on l_ab/r_ab (thigh spread outward), l_th/r_th (thigh flexion forward), l_kn/r_kn (knee flexion), l_an/r_an (ankle, + toe up)
 """
 import math
 
@@ -25,6 +26,7 @@ DEFAULTS = dict(
     l_lower=78.0, r_lower=78.0, l_fwd=0.0, r_fwd=0.0, l_twist=0.0, r_twist=0.0, l_el=10.0, r_el=10.0,
     l_wr=0.0, r_wr=0.0, l_curl=22.0, r_curl=22.0, l_sh=0.0, r_sh=0.0,
     l_du=0.0, r_du=0.0, l_z=None, r_z=None, l_pitch=0.0, r_pitch=0.0, l_toe=0.0, r_toe=0.0,
+    hx=0.0, l_ab=0.0, r_ab=0.0,
     fk=0.0, l_th=0.0, r_th=0.0, l_kn=0.0, r_kn=0.0, l_an=0.0, r_an=0.0,
 )
 
@@ -79,7 +81,7 @@ def build_pose(rig, legs, p):
     # ---- pelvis ----
     D = P.yaw(q["hyaw"]) @ P.roll(q["hr"]) @ P.lean(q["hp"])
     pose["Hips"] = D
-    hips_off = Vector((0.0, -q["hf"], q["hz"]))
+    hips_off = Vector((q["hx"], -q["hf"], q["hz"]))
     # ---- spine and head ----
     pose["Spine"] = P.lean(q["sl"] * 0.30) @ P.roll(q["sr"] * 0.30) @ P.yaw(q["sy"] * 0.30)
     pose["Chest"] = P.lean(q["sl"] * 0.35) @ P.roll(q["sr"] * 0.35) @ P.yaw(q["sy"] * 0.35)
@@ -105,7 +107,8 @@ def build_pose(rig, legs, p):
         g = legs[sd]
         if q["fk"]:
             a1, kn, an = q[k + "th"], q[k + "kn"], q[k + "an"]
-            pose[sd + "UpperLeg"] = P.fwd_down(a1)
+            ab = q[k + "ab"]       # thigh spread outward (rotation about the vertical axis of the flexed thigh): straddling a mount
+            pose[sd + "UpperLeg"] = P._q((0, 0, 1), (1.0 if sd == "Left" else -1.0) * ab) @ P.fwd_down(a1)
             pose[sd + "LowerLeg"] = P.fwd_down(-kn)
             pose[sd + "Foot"] = P.fwd_down(an)
             pose[sd + "Toes"] = P.fwd_down(q[k + "toe"])

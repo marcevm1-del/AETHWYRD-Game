@@ -146,3 +146,41 @@ def combat_metrics(rig, legs, clip):
     finally:
         if ad:
             ad.action = saved
+
+
+SNAP_BONES = ("Hips", "Head", "LeftHand", "RightHand", "LeftFoot", "RightFoot", "LeftLowerLeg", "RightLowerLeg", "Chest")
+
+
+def snapshot(rig, legs, params):
+    """World (armature-space) positions of the key bones for one parameter dict."""
+    pose_frame(rig, legs, params)
+    bpy.context.view_layer.update()
+    pb = rig.obj.pose.bones
+    return {n: pb[n].head.copy() for n in SNAP_BONES}
+
+
+def snap_dist(a, b):
+    return max((a[n] - b[n]).length for n in a)
+
+
+def rider_metrics(rig, legs, clip, idle0):
+    """Seat measurements for a rider clip: knee spread (straddling), pelvis travel, and how far the first and last pose are from the seated Idle pose."""
+    ad = rig.obj.animation_data
+    saved = ad.action if ad else None
+    if ad:
+        ad.action = None
+    try:
+        frames = clip.frames()
+        first = snapshot(rig, legs, frames[0])
+        last = snapshot(rig, legs, frames[-1])
+        spread, hz = [], []
+        for f in frames:
+            s = snapshot(rig, legs, f)
+            spread.append(abs(s["LeftLowerLeg"].x - s["RightLowerLeg"].x))
+            hz.append(s["Hips"].z)
+        return dict(kneeSpreadMinM=round(min(spread), 3), hipsTravelM=round(max(hz) - min(hz), 3),
+                    startFromIdleM=round(snap_dist(first, idle0), 3), endFromIdleM=round(snap_dist(last, idle0), 3),
+                    startHipsDzM=round(first["Hips"].z - rig.hips_rest.z, 3), endHipsDzM=round(last["Hips"].z - rig.hips_rest.z, 3))
+    finally:
+        if ad:
+            ad.action = saved

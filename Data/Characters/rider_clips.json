@@ -1,0 +1,2249 @@
+{
+ "schema": "rider_clips/1",
+ "rigContract": "human_v1",
+ "source": "Tools/blender/build_rider_clips.py",
+ "authoredOn": "human_male_base",
+ "mountsFile": "Data/Companions/mounts.json",
+ "fps": 30,
+ "hipsRestZ": 0.9345,
+ "attackFps": 50,
+ "tuning": {
+  "file": "Data/Combat/combat_tuning.json",
+  "block": "attackTiming",
+  "hash": "025c454d5ae0"
+ },
+ "mountedCombatMaxChainHits": 3,
+ "anchors": {
+  "quad_large": {
+   "bone": "spine_02",
+   "offset": [
+    0.0,
+    0.03,
+    0.09
+   ]
+  },
+  "hexapod": {
+   "bone": "thorax",
+   "offset": [
+    0.0,
+    0.05,
+    0.1
+   ]
+  }
+ },
+ "placement": "Place the rider armature so its Hips bone sits on the saddle anchor (the mount rig bone plus the offset, in the mount rig normalised units times the mount size). Clips move the Hips by (hx, hz) metres from there. MountUp, Dismount and Stagger start or end on the ground beside the mount (standing hip height minus seatHeightM). Cycle clips are one mount gait cycle (Walk 1.1 s, Trot 0.7 s, Gallop 0.5 s): drive their normalised time from the mount gait phase. Seat offsets and heights are placeholders until calibrated on the mount models.",
+ "families": [
+  {
+   "id": "horse",
+   "label": "Horse",
+   "species": {
+    "mon_thunderhorn_elk": "quad_large"
+   },
+   "seatHeightM": 1.3,
+   "seatHeightPlaceholder": true,
+   "seat": {
+    "thighSpreadDeg": 26,
+    "thighFlexDeg": 58,
+    "kneeFlexDeg": 74
+   },
+   "clips": [
+    {
+     "name": "Idle",
+     "action": "Rid_horse_Idle",
+     "loop": true,
+     "fps": 30,
+     "frames": 72,
+     "seconds": 2.4,
+     "hash": "2a39ebc69b58",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9305,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1483,
+      "minBoneZ": 0.1483,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.498,
+      "hipsTravelM": 0.004,
+      "startFromIdleM": 0.0,
+      "endFromIdleM": 0.0,
+      "startHipsDzM": -0.002,
+      "endHipsDzM": -0.002
+     }
+    },
+    {
+     "name": "Walk",
+     "action": "Rid_horse_Walk",
+     "loop": true,
+     "fps": 30,
+     "frames": 33,
+     "seconds": 1.1,
+     "hash": "b594675b88da",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9225,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1375,
+      "minBoneZ": 0.1375,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.498,
+      "hipsTravelM": 0.012,
+      "startFromIdleM": 0.019,
+      "endFromIdleM": 0.019,
+      "startHipsDzM": -0.012,
+      "endHipsDzM": -0.012
+     },
+     "cycleSec": 1.1,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Trot",
+     "action": "Rid_horse_Trot",
+     "loop": true,
+     "fps": 30,
+     "frames": 21,
+     "seconds": 0.7,
+     "hash": "3281b63e00cf",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9045,
+      "hipsMaxZ": 0.9343,
+      "reachClamped": 0,
+      "minFootZ": 0.1175,
+      "minBoneZ": 0.1175,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.498,
+      "hipsTravelM": 0.03,
+      "startFromIdleM": 0.036,
+      "endFromIdleM": 0.036,
+      "startHipsDzM": -0.03,
+      "endHipsDzM": -0.03
+     },
+     "cycleSec": 0.7,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Gallop",
+     "action": "Rid_horse_Gallop",
+     "loop": true,
+     "fps": 30,
+     "frames": 15,
+     "seconds": 0.5,
+     "hash": "f2aa879f37b8",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9145,
+      "hipsMaxZ": 0.9343,
+      "reachClamped": 0,
+      "minFootZ": 0.1169,
+      "minBoneZ": 0.1169,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.498,
+      "hipsTravelM": 0.02,
+      "startFromIdleM": 0.068,
+      "endFromIdleM": 0.068,
+      "startHipsDzM": -0.02,
+      "endHipsDzM": -0.02
+     },
+     "cycleSec": 0.5,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Hit1",
+     "action": "Rid_horse_Hit1",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "3119003d6dd2",
+     "notes": "horse rider: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1552,
+      "minBoneZ": 0.1552,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.485,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.647,
+      "telegraphM": 0.442,
+      "contactReachM": 0.519
+     },
+     "weight": "light",
+     "motion": "slash_h",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Rid_horse_Hit2",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "89bb021c2d3a",
+     "notes": "horse rider: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1552,
+      "minBoneZ": 0.1552,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.485,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.621,
+      "telegraphM": 0.375,
+      "contactReachM": 0.454
+     },
+     "weight": "light",
+     "motion": "slash_back",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Rid_horse_Hit3",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "743f20645fc9",
+     "notes": "horse rider: slash_diag (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1552,
+      "minBoneZ": 0.1552,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.484,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.73,
+      "telegraphM": 0.62,
+      "contactReachM": 0.538
+     },
+     "weight": "medium",
+     "motion": "slash_diag",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Skill",
+     "action": "Rid_horse_Skill",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "ef321c893a8b",
+     "notes": "horse rider: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1552,
+      "minBoneZ": 0.1552,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.498,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.275,
+      "telegraphM": 0.108,
+      "contactReachM": 0.494
+     },
+     "weight": "medium",
+     "motion": "cast",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "MountUp",
+     "action": "Rid_horse_MountUp",
+     "loop": false,
+     "fps": 30,
+     "frames": 27,
+     "seconds": 0.9,
+     "hash": "35090e2ea39c",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.569,
+      "hipsMaxZ": 1.0344,
+      "reachClamped": 0,
+      "minFootZ": -0.3634,
+      "minBoneZ": -0.3504,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.0,
+      "hipsTravelM": 0.465,
+      "startFromIdleM": 1.108,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": -0.366,
+      "endHipsDzM": 0.0
+     }
+    },
+    {
+     "name": "Dismount",
+     "action": "Rid_horse_Dismount",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "63cd2a030e4b",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.569,
+      "hipsMaxZ": 1.0143,
+      "reachClamped": 0,
+      "minFootZ": -0.3608,
+      "minBoneZ": -0.3561,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.005,
+      "hipsTravelM": 0.445,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 1.213,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.366
+     }
+    },
+    {
+     "name": "Stagger",
+     "action": "Rid_horse_Stagger",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "5744f6759eb6",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8066,
+      "hipsMaxZ": 1.0038,
+      "reachClamped": 0,
+      "minFootZ": 0.1552,
+      "minBoneZ": 0.1552,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.086,
+      "hipsTravelM": 0.197,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 1.44,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.066
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Idle",
+     "kneeSpreadMinM": 0.466,
+     "startFromIdleM": 0.0,
+     "endFromIdleM": 0.0,
+     "hash": "2a39ebc69b58"
+    },
+    {
+     "name": "Walk",
+     "kneeSpreadMinM": 0.465,
+     "startFromIdleM": 0.017,
+     "endFromIdleM": 0.017,
+     "hash": "b594675b88da"
+    },
+    {
+     "name": "Trot",
+     "kneeSpreadMinM": 0.465,
+     "startFromIdleM": 0.035,
+     "endFromIdleM": 0.035,
+     "hash": "3281b63e00cf"
+    },
+    {
+     "name": "Gallop",
+     "kneeSpreadMinM": 0.466,
+     "startFromIdleM": 0.064,
+     "endFromIdleM": 0.064,
+     "hash": "f2aa879f37b8"
+    },
+    {
+     "name": "Hit1",
+     "kneeSpreadMinM": 0.454,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "3119003d6dd2"
+    },
+    {
+     "name": "Hit2",
+     "kneeSpreadMinM": 0.454,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "89bb021c2d3a"
+    },
+    {
+     "name": "Hit3",
+     "kneeSpreadMinM": 0.452,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "743f20645fc9"
+    },
+    {
+     "name": "Skill",
+     "kneeSpreadMinM": 0.466,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "ef321c893a8b"
+    },
+    {
+     "name": "MountUp",
+     "kneeSpreadMinM": 0.0,
+     "startFromIdleM": 1.112,
+     "endFromIdleM": 0.008,
+     "hash": "cdae27d1bd33"
+    },
+    {
+     "name": "Dismount",
+     "kneeSpreadMinM": 0.005,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 1.192,
+     "hash": "e905f40482e7"
+    },
+    {
+     "name": "Stagger",
+     "kneeSpreadMinM": 0.081,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 1.421,
+     "hash": "55a5c04dedb0"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Riders/horse.fbx"
+  },
+  {
+   "id": "wolf",
+   "label": "Wolf",
+   "species": {
+    "mon_forest_wolf": "quad_large",
+    "mon_dire_wolf": "quad_large",
+    "mon_frost_fenrir_pup": "quad_large"
+   },
+   "seatHeightM": 0.95,
+   "seatHeightPlaceholder": true,
+   "seat": {
+    "thighSpreadDeg": 22,
+    "thighFlexDeg": 64,
+    "kneeFlexDeg": 84
+   },
+   "clips": [
+    {
+     "name": "Idle",
+     "action": "Rid_wolf_Idle",
+     "loop": true,
+     "fps": 30,
+     "frames": 72,
+     "seconds": 2.4,
+     "hash": "de11418cdb8f",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9305,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1617,
+      "minBoneZ": 0.1617,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.468,
+      "hipsTravelM": 0.004,
+      "startFromIdleM": 0.0,
+      "endFromIdleM": 0.0,
+      "startHipsDzM": -0.002,
+      "endHipsDzM": -0.002
+     }
+    },
+    {
+     "name": "Walk",
+     "action": "Rid_wolf_Walk",
+     "loop": true,
+     "fps": 30,
+     "frames": 33,
+     "seconds": 1.1,
+     "hash": "dbff06abc426",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9205,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1488,
+      "minBoneZ": 0.1488,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.468,
+      "hipsTravelM": 0.014,
+      "startFromIdleM": 0.025,
+      "endFromIdleM": 0.025,
+      "startHipsDzM": -0.014,
+      "endHipsDzM": -0.014
+     },
+     "cycleSec": 1.1,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Trot",
+     "action": "Rid_wolf_Trot",
+     "loop": true,
+     "fps": 30,
+     "frames": 21,
+     "seconds": 0.7,
+     "hash": "58a3259da993",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9005,
+      "hipsMaxZ": 0.9343,
+      "reachClamped": 0,
+      "minFootZ": 0.1266,
+      "minBoneZ": 0.1266,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.468,
+      "hipsTravelM": 0.034,
+      "startFromIdleM": 0.058,
+      "endFromIdleM": 0.058,
+      "startHipsDzM": -0.034,
+      "endHipsDzM": -0.034
+     },
+     "cycleSec": 0.7,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Gallop",
+     "action": "Rid_wolf_Gallop",
+     "loop": true,
+     "fps": 30,
+     "frames": 15,
+     "seconds": 0.5,
+     "hash": "16b7a5d10b45",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8945,
+      "hipsMaxZ": 0.9341,
+      "reachClamped": 0,
+      "minFootZ": 0.1123,
+      "minBoneZ": 0.1123,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.468,
+      "hipsTravelM": 0.04,
+      "startFromIdleM": 0.107,
+      "endFromIdleM": 0.107,
+      "startHipsDzM": -0.04,
+      "endHipsDzM": -0.04
+     },
+     "cycleSec": 0.5,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Hit1",
+     "action": "Rid_wolf_Hit1",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "5b74ed0dd294",
+     "notes": "wolf rider: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1681,
+      "minBoneZ": 0.1681,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.456,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.008,
+      "endFromIdleM": 0.008,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.698,
+      "telegraphM": 0.486,
+      "contactReachM": 0.591
+     },
+     "weight": "light",
+     "motion": "slash_h",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Rid_wolf_Hit2",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "0eeeeac35286",
+     "notes": "wolf rider: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1681,
+      "minBoneZ": 0.1681,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.456,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.008,
+      "endFromIdleM": 0.008,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.699,
+      "telegraphM": 0.423,
+      "contactReachM": 0.547
+     },
+     "weight": "light",
+     "motion": "slash_back",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Rid_wolf_Hit3",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "c887da8dacf4",
+     "notes": "wolf rider: slash_diag (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1681,
+      "minBoneZ": 0.1681,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.454,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.008,
+      "endFromIdleM": 0.008,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.806,
+      "telegraphM": 0.688,
+      "contactReachM": 0.6
+     },
+     "weight": "medium",
+     "motion": "slash_diag",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Skill",
+     "action": "Rid_wolf_Skill",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "e6b3576202cd",
+     "notes": "wolf rider: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1681,
+      "minBoneZ": 0.1681,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.468,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.008,
+      "endFromIdleM": 0.008,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.253,
+      "telegraphM": 0.109,
+      "contactReachM": 0.543
+     },
+     "weight": "medium",
+     "motion": "cast",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "MountUp",
+     "action": "Rid_wolf_MountUp",
+     "loop": false,
+     "fps": 30,
+     "frames": 27,
+     "seconds": 0.9,
+     "hash": "cb92c97ee32d",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.919,
+      "hipsMaxZ": 1.0345,
+      "reachClamped": 0,
+      "minFootZ": -0.0134,
+      "minBoneZ": -0.0004,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.0,
+      "hipsTravelM": 0.115,
+      "startFromIdleM": 0.976,
+      "endFromIdleM": 0.008,
+      "startHipsDzM": -0.016,
+      "endHipsDzM": 0.0
+     }
+    },
+    {
+     "name": "Dismount",
+     "action": "Rid_wolf_Dismount",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "8a24743c549d",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.919,
+      "hipsMaxZ": 1.0143,
+      "reachClamped": 0,
+      "minFootZ": -0.0108,
+      "minBoneZ": -0.0061,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.009,
+      "hipsTravelM": 0.095,
+      "startFromIdleM": 0.008,
+      "endFromIdleM": 1.133,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.016
+     }
+    },
+    {
+     "name": "Stagger",
+     "action": "Rid_wolf_Stagger",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "39f3dcf8d8f4",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9291,
+      "hipsMaxZ": 1.2588,
+      "reachClamped": 0,
+      "minFootZ": 0.1681,
+      "minBoneZ": 0.1681,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.086,
+      "hipsTravelM": 0.33,
+      "startFromIdleM": 0.008,
+      "endFromIdleM": 1.382,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.285
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Idle",
+     "kneeSpreadMinM": 0.437,
+     "startFromIdleM": 0.0,
+     "endFromIdleM": 0.0,
+     "hash": "334418ed17f0"
+    },
+    {
+     "name": "Walk",
+     "kneeSpreadMinM": 0.437,
+     "startFromIdleM": 0.024,
+     "endFromIdleM": 0.024,
+     "hash": "dbff06abc426"
+    },
+    {
+     "name": "Trot",
+     "kneeSpreadMinM": 0.437,
+     "startFromIdleM": 0.056,
+     "endFromIdleM": 0.056,
+     "hash": "0cafe264a244"
+    },
+    {
+     "name": "Gallop",
+     "kneeSpreadMinM": 0.437,
+     "startFromIdleM": 0.102,
+     "endFromIdleM": 0.102,
+     "hash": "16b7a5d10b45"
+    },
+    {
+     "name": "Hit1",
+     "kneeSpreadMinM": 0.426,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "5b74ed0dd294"
+    },
+    {
+     "name": "Hit2",
+     "kneeSpreadMinM": 0.426,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "0eeeeac35286"
+    },
+    {
+     "name": "Hit3",
+     "kneeSpreadMinM": 0.424,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "02ac4e023198"
+    },
+    {
+     "name": "Skill",
+     "kneeSpreadMinM": 0.437,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 0.008,
+     "hash": "e6b3576202cd"
+    },
+    {
+     "name": "MountUp",
+     "kneeSpreadMinM": 0.0,
+     "startFromIdleM": 0.963,
+     "endFromIdleM": 0.008,
+     "hash": "fbb739e52ad4"
+    },
+    {
+     "name": "Dismount",
+     "kneeSpreadMinM": 0.007,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 1.089,
+     "hash": "f11fd86f7657"
+    },
+    {
+     "name": "Stagger",
+     "kneeSpreadMinM": 0.081,
+     "startFromIdleM": 0.008,
+     "endFromIdleM": 1.32,
+     "hash": "29eed0474158"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Riders/wolf.fbx"
+  },
+  {
+   "id": "bear",
+   "label": "Bear",
+   "species": {
+    "mon_bandit_bear": "quad_large",
+    "mon_elder_bandit_bear": "quad_large"
+   },
+   "seatHeightM": 1.35,
+   "seatHeightPlaceholder": true,
+   "seat": {
+    "thighSpreadDeg": 40,
+    "thighFlexDeg": 50,
+    "kneeFlexDeg": 60
+   },
+   "clips": [
+    {
+     "name": "Idle",
+     "action": "Rid_bear_Idle",
+     "loop": true,
+     "fps": 30,
+     "frames": 72,
+     "seconds": 2.4,
+     "hash": "0645ac7a7e42",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9305,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1232,
+      "minBoneZ": 0.1232,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.603,
+      "hipsTravelM": 0.004,
+      "startFromIdleM": 0.0,
+      "endFromIdleM": 0.0,
+      "startHipsDzM": -0.002,
+      "endHipsDzM": -0.002
+     }
+    },
+    {
+     "name": "Walk",
+     "action": "Rid_bear_Walk",
+     "loop": true,
+     "fps": 30,
+     "frames": 33,
+     "seconds": 1.1,
+     "hash": "3d851f4b682a",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9145,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.0984,
+      "minBoneZ": 0.0984,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.601,
+      "hipsTravelM": 0.02,
+      "startFromIdleM": 0.024,
+      "endFromIdleM": 0.024,
+      "startHipsDzM": -0.02,
+      "endHipsDzM": -0.02
+     },
+     "cycleSec": 1.1,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Trot",
+     "action": "Rid_bear_Trot",
+     "loop": true,
+     "fps": 30,
+     "frames": 21,
+     "seconds": 0.7,
+     "hash": "fbb5f780e492",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9005,
+      "hipsMaxZ": 0.9343,
+      "reachClamped": 0,
+      "minFootZ": 0.0854,
+      "minBoneZ": 0.0854,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.601,
+      "hipsTravelM": 0.034,
+      "startFromIdleM": 0.038,
+      "endFromIdleM": 0.038,
+      "startHipsDzM": -0.034,
+      "endHipsDzM": -0.034
+     },
+     "cycleSec": 0.7,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Gallop",
+     "action": "Rid_bear_Gallop",
+     "loop": true,
+     "fps": 30,
+     "frames": 15,
+     "seconds": 0.5,
+     "hash": "48cb7c0fd0dd",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9005,
+      "hipsMaxZ": 0.9341,
+      "reachClamped": 0,
+      "minFootZ": 0.0811,
+      "minBoneZ": 0.0811,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.603,
+      "hipsTravelM": 0.034,
+      "startFromIdleM": 0.049,
+      "endFromIdleM": 0.049,
+      "startHipsDzM": -0.034,
+      "endHipsDzM": -0.034
+     },
+     "cycleSec": 0.5,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Hit1",
+     "action": "Rid_bear_Hit1",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "eb65d3357838",
+     "notes": "bear rider: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1313,
+      "minBoneZ": 0.1313,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.587,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.711,
+      "telegraphM": 0.498,
+      "contactReachM": 0.526
+     },
+     "weight": "light",
+     "motion": "slash_h",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Rid_bear_Hit2",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "651218642d8b",
+     "notes": "bear rider: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1313,
+      "minBoneZ": 0.1313,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.587,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.71,
+      "telegraphM": 0.43,
+      "contactReachM": 0.503
+     },
+     "weight": "light",
+     "motion": "slash_back",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Rid_bear_Hit3",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "874e790e9f2c",
+     "notes": "bear rider: slash_diag (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1313,
+      "minBoneZ": 0.1313,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.585,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.822,
+      "telegraphM": 0.694,
+      "contactReachM": 0.53
+     },
+     "weight": "medium",
+     "motion": "slash_diag",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Skill",
+     "action": "Rid_bear_Skill",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "c311e49100f4",
+     "notes": "bear rider: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1313,
+      "minBoneZ": 0.1313,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.603,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.26,
+      "telegraphM": 0.109,
+      "contactReachM": 0.458
+     },
+     "weight": "medium",
+     "motion": "cast",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "MountUp",
+     "action": "Rid_bear_MountUp",
+     "loop": false,
+     "fps": 30,
+     "frames": 27,
+     "seconds": 0.9,
+     "hash": "7baa5a334009",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.519,
+      "hipsMaxZ": 1.0344,
+      "reachClamped": 0,
+      "minFootZ": -0.4134,
+      "minBoneZ": -0.4004,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.0,
+      "hipsTravelM": 0.515,
+      "startFromIdleM": 1.135,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": -0.416,
+      "endHipsDzM": 0.0
+     }
+    },
+    {
+     "name": "Dismount",
+     "action": "Rid_bear_Dismount",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "531ff2764bdb",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.519,
+      "hipsMaxZ": 1.0143,
+      "reachClamped": 0,
+      "minFootZ": -0.4108,
+      "minBoneZ": -0.4061,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.018,
+      "hipsTravelM": 0.495,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 1.368,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.416
+     }
+    },
+    {
+     "name": "Stagger",
+     "action": "Rid_bear_Stagger",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "a367e0a0ad4e",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.7891,
+      "hipsMaxZ": 1.0038,
+      "reachClamped": 0,
+      "minFootZ": 0.1313,
+      "minBoneZ": 0.1313,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.086,
+      "hipsTravelM": 0.215,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 1.469,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.116
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Idle",
+     "kneeSpreadMinM": 0.563,
+     "startFromIdleM": 0.0,
+     "endFromIdleM": 0.0,
+     "hash": "0645ac7a7e42"
+    },
+    {
+     "name": "Walk",
+     "kneeSpreadMinM": 0.561,
+     "startFromIdleM": 0.023,
+     "endFromIdleM": 0.023,
+     "hash": "3d851f4b682a"
+    },
+    {
+     "name": "Trot",
+     "kneeSpreadMinM": 0.561,
+     "startFromIdleM": 0.038,
+     "endFromIdleM": 0.038,
+     "hash": "fbb5f780e492"
+    },
+    {
+     "name": "Gallop",
+     "kneeSpreadMinM": 0.563,
+     "startFromIdleM": 0.047,
+     "endFromIdleM": 0.047,
+     "hash": "48cb7c0fd0dd"
+    },
+    {
+     "name": "Hit1",
+     "kneeSpreadMinM": 0.549,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "fe4712014e62"
+    },
+    {
+     "name": "Hit2",
+     "kneeSpreadMinM": 0.549,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "651218642d8b"
+    },
+    {
+     "name": "Hit3",
+     "kneeSpreadMinM": 0.547,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "874e790e9f2c"
+    },
+    {
+     "name": "Skill",
+     "kneeSpreadMinM": 0.563,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "c311e49100f4"
+    },
+    {
+     "name": "MountUp",
+     "kneeSpreadMinM": 0.0,
+     "startFromIdleM": 1.141,
+     "endFromIdleM": 0.009,
+     "hash": "437917e8e0a1"
+    },
+    {
+     "name": "Dismount",
+     "kneeSpreadMinM": 0.017,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 1.34,
+     "hash": "6e5303ac1641"
+    },
+    {
+     "name": "Stagger",
+     "kneeSpreadMinM": 0.081,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 1.45,
+     "hash": "003517473880"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Riders/bear.fbx"
+  },
+  {
+   "id": "desert_beast",
+   "label": "Desert beast",
+   "species": {
+    "mon_giant_lizard": "quad_large",
+    "mon_dune_scorpion": "hexapod",
+    "mon_elder_dune_scorpion": "hexapod"
+   },
+   "seatHeightM": 1.1,
+   "seatHeightPlaceholder": true,
+   "seat": {
+    "thighSpreadDeg": 34,
+    "thighFlexDeg": 54,
+    "kneeFlexDeg": 68
+   },
+   "clips": [
+    {
+     "name": "Idle",
+     "action": "Rid_desert_beast_Idle",
+     "loop": true,
+     "fps": 30,
+     "frames": 72,
+     "seconds": 2.4,
+     "hash": "df9eb4b2659a",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9305,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1308,
+      "minBoneZ": 0.1308,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.568,
+      "hipsTravelM": 0.004,
+      "startFromIdleM": 0.0,
+      "endFromIdleM": 0.0,
+      "startHipsDzM": -0.002,
+      "endHipsDzM": -0.002
+     }
+    },
+    {
+     "name": "Walk",
+     "action": "Rid_desert_beast_Walk",
+     "loop": true,
+     "fps": 30,
+     "frames": 33,
+     "seconds": 1.1,
+     "hash": "b268de7584bf",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9205,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1148,
+      "minBoneZ": 0.1148,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.567,
+      "hipsTravelM": 0.014,
+      "startFromIdleM": 0.019,
+      "endFromIdleM": 0.019,
+      "startHipsDzM": -0.014,
+      "endHipsDzM": -0.014
+     },
+     "cycleSec": 1.1,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Trot",
+     "action": "Rid_desert_beast_Trot",
+     "loop": true,
+     "fps": 30,
+     "frames": 21,
+     "seconds": 0.7,
+     "hash": "f37fa9e06f0e",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9045,
+      "hipsMaxZ": 0.9343,
+      "reachClamped": 0,
+      "minFootZ": 0.0977,
+      "minBoneZ": 0.0977,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.567,
+      "hipsTravelM": 0.03,
+      "startFromIdleM": 0.037,
+      "endFromIdleM": 0.037,
+      "startHipsDzM": -0.03,
+      "endHipsDzM": -0.03
+     },
+     "cycleSec": 0.7,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Gallop",
+     "action": "Rid_desert_beast_Gallop",
+     "loop": true,
+     "fps": 30,
+     "frames": 15,
+     "seconds": 0.5,
+     "hash": "5b4bf3f6a2a6",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9085,
+      "hipsMaxZ": 0.9342,
+      "reachClamped": 0,
+      "minFootZ": 0.0955,
+      "minBoneZ": 0.0955,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.568,
+      "hipsTravelM": 0.026,
+      "startFromIdleM": 0.057,
+      "endFromIdleM": 0.057,
+      "startHipsDzM": -0.026,
+      "endHipsDzM": -0.026
+     },
+     "cycleSec": 0.5,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Hit1",
+     "action": "Rid_desert_beast_Hit1",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "fa22abb1f8f1",
+     "notes": "desert_beast rider: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1384,
+      "minBoneZ": 0.1384,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.553,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.695,
+      "telegraphM": 0.484,
+      "contactReachM": 0.544
+     },
+     "weight": "light",
+     "motion": "slash_h",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Rid_desert_beast_Hit2",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "14938696e8a0",
+     "notes": "desert_beast rider: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1384,
+      "minBoneZ": 0.1384,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.553,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.682,
+      "telegraphM": 0.412,
+      "contactReachM": 0.436
+     },
+     "weight": "light",
+     "motion": "slash_back",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Rid_desert_beast_Hit3",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "6bd0db41de9a",
+     "notes": "desert_beast rider: slash_diag (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1384,
+      "minBoneZ": 0.1384,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.551,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.794,
+      "telegraphM": 0.679,
+      "contactReachM": 0.556
+     },
+     "weight": "medium",
+     "motion": "slash_diag",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Skill",
+     "action": "Rid_desert_beast_Skill",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "66f98688be26",
+     "notes": "desert_beast rider: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1384,
+      "minBoneZ": 0.1384,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.568,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.271,
+      "telegraphM": 0.109,
+      "contactReachM": 0.496
+     },
+     "weight": "medium",
+     "motion": "cast",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "MountUp",
+     "action": "Rid_desert_beast_MountUp",
+     "loop": false,
+     "fps": 30,
+     "frames": 27,
+     "seconds": 0.9,
+     "hash": "a2afef92a903",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.769,
+      "hipsMaxZ": 1.0345,
+      "reachClamped": 0,
+      "minFootZ": -0.1634,
+      "minBoneZ": -0.1504,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.0,
+      "hipsTravelM": 0.265,
+      "startFromIdleM": 1.033,
+      "endFromIdleM": 0.009,
+      "startHipsDzM": -0.166,
+      "endHipsDzM": 0.0
+     }
+    },
+    {
+     "name": "Dismount",
+     "action": "Rid_desert_beast_Dismount",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "fc4f805ea515",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.769,
+      "hipsMaxZ": 1.0143,
+      "reachClamped": 0,
+      "minFootZ": -0.1608,
+      "minBoneZ": -0.1561,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.016,
+      "hipsTravelM": 0.245,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 1.166,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.166
+     }
+    },
+    {
+     "name": "Stagger",
+     "action": "Rid_desert_beast_Stagger",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "75443ab3647e",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.8766,
+      "hipsMaxZ": 1.1088,
+      "reachClamped": 0,
+      "minFootZ": 0.1384,
+      "minBoneZ": 0.1384,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.086,
+      "hipsTravelM": 0.232,
+      "startFromIdleM": 0.009,
+      "endFromIdleM": 1.379,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.135
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Idle",
+     "kneeSpreadMinM": 0.53,
+     "startFromIdleM": 0.0,
+     "endFromIdleM": 0.0,
+     "hash": "df9eb4b2659a"
+    },
+    {
+     "name": "Walk",
+     "kneeSpreadMinM": 0.53,
+     "startFromIdleM": 0.019,
+     "endFromIdleM": 0.019,
+     "hash": "16c007f32061"
+    },
+    {
+     "name": "Trot",
+     "kneeSpreadMinM": 0.53,
+     "startFromIdleM": 0.036,
+     "endFromIdleM": 0.036,
+     "hash": "f37fa9e06f0e"
+    },
+    {
+     "name": "Gallop",
+     "kneeSpreadMinM": 0.53,
+     "startFromIdleM": 0.054,
+     "endFromIdleM": 0.054,
+     "hash": "7a91bf19b19b"
+    },
+    {
+     "name": "Hit1",
+     "kneeSpreadMinM": 0.517,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "fa22abb1f8f1"
+    },
+    {
+     "name": "Hit2",
+     "kneeSpreadMinM": 0.517,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "14938696e8a0"
+    },
+    {
+     "name": "Hit3",
+     "kneeSpreadMinM": 0.515,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "6bd0db41de9a"
+    },
+    {
+     "name": "Skill",
+     "kneeSpreadMinM": 0.531,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "66f98688be26"
+    },
+    {
+     "name": "MountUp",
+     "kneeSpreadMinM": 0.0,
+     "startFromIdleM": 1.027,
+     "endFromIdleM": 0.009,
+     "hash": "c2f1933021be"
+    },
+    {
+     "name": "Dismount",
+     "kneeSpreadMinM": 0.015,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 1.133,
+     "hash": "1bb32ebd9dcb"
+    },
+    {
+     "name": "Stagger",
+     "kneeSpreadMinM": 0.081,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 1.354,
+     "hash": "ade7c0693bdc"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Riders/desert_beast.fbx"
+  },
+  {
+   "id": "large_ground_monster",
+   "label": "Large ground monster",
+   "species": {
+    "mon_wild_boar": "quad_large",
+    "mon_behemoth_calf": "quad_large",
+    "mon_sabretooth_king": "quad_large"
+   },
+   "seatHeightM": 1.9,
+   "seatHeightPlaceholder": true,
+   "seat": {
+    "thighSpreadDeg": 44,
+    "thighFlexDeg": 48,
+    "kneeFlexDeg": 56
+   },
+   "clips": [
+    {
+     "name": "Idle",
+     "action": "Rid_large_ground_monster_Idle",
+     "loop": true,
+     "fps": 30,
+     "frames": 72,
+     "seconds": 2.4,
+     "hash": "b6b8baed0154",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9305,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1327,
+      "minBoneZ": 0.1327,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.624,
+      "hipsTravelM": 0.004,
+      "startFromIdleM": 0.0,
+      "endFromIdleM": 0.0,
+      "startHipsDzM": -0.002,
+      "endHipsDzM": -0.002
+     }
+    },
+    {
+     "name": "Walk",
+     "action": "Rid_large_ground_monster_Walk",
+     "loop": true,
+     "fps": 30,
+     "frames": 33,
+     "seconds": 1.1,
+     "hash": "848f87e3002f",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.9105,
+      "hipsMaxZ": 0.9344,
+      "reachClamped": 0,
+      "minFootZ": 0.1005,
+      "minBoneZ": 0.1005,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.621,
+      "hipsTravelM": 0.024,
+      "startFromIdleM": 0.028,
+      "endFromIdleM": 0.028,
+      "startHipsDzM": -0.024,
+      "endHipsDzM": -0.024
+     },
+     "cycleSec": 1.1,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Trot",
+     "action": "Rid_large_ground_monster_Trot",
+     "loop": true,
+     "fps": 30,
+     "frames": 21,
+     "seconds": 0.7,
+     "hash": "cd55fcfaa99a",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8985,
+      "hipsMaxZ": 0.9343,
+      "reachClamped": 0,
+      "minFootZ": 0.0896,
+      "minBoneZ": 0.0896,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.621,
+      "hipsTravelM": 0.036,
+      "startFromIdleM": 0.041,
+      "endFromIdleM": 0.041,
+      "startHipsDzM": -0.036,
+      "endHipsDzM": -0.036
+     },
+     "cycleSec": 0.7,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Gallop",
+     "action": "Rid_large_ground_monster_Gallop",
+     "loop": true,
+     "fps": 30,
+     "frames": 15,
+     "seconds": 0.5,
+     "hash": "984b7fa7172d",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": 0.0,
+      "hipsMinZ": 0.8985,
+      "hipsMaxZ": 0.9341,
+      "reachClamped": 0,
+      "minFootZ": 0.0855,
+      "minBoneZ": 0.0855,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.623,
+      "hipsTravelM": 0.036,
+      "startFromIdleM": 0.044,
+      "endFromIdleM": 0.044,
+      "startHipsDzM": -0.036,
+      "endHipsDzM": -0.036
+     },
+     "cycleSec": 0.5,
+     "drivenByMountGaitPhase": true
+    },
+    {
+     "name": "Hit1",
+     "action": "Rid_large_ground_monster_Hit1",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "8fe8c7280ec0",
+     "notes": "large_ground_monster rider: slash_h (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1413,
+      "minBoneZ": 0.1413,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.608,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.01,
+      "endFromIdleM": 0.01,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.687,
+      "telegraphM": 0.485,
+      "contactReachM": 0.438
+     },
+     "weight": "light",
+     "motion": "slash_h",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit2",
+     "action": "Rid_large_ground_monster_Hit2",
+     "loop": false,
+     "fps": 50,
+     "frames": 21,
+     "seconds": 0.42,
+     "hash": "9fe5cf995516",
+     "notes": "large_ground_monster rider: slash_back (light), startup 0.10 / active 0.08 / recovery 0.24 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1413,
+      "minBoneZ": 0.1413,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.608,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.01,
+      "endFromIdleM": 0.01,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.725,
+      "telegraphM": 0.444,
+      "contactReachM": 0.468
+     },
+     "weight": "light",
+     "motion": "slash_back",
+     "windows": {
+      "startupSec": 0.1,
+      "activeSec": 0.08,
+      "recoverySec": 0.24
+     },
+     "events": {
+      "StartupEnd": 5,
+      "ActiveBegin": 5,
+      "ActiveEnd": 9,
+      "RecoveryEnd": 21
+     }
+    },
+    {
+     "name": "Hit3",
+     "action": "Rid_large_ground_monster_Hit3",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "d243c685a222",
+     "notes": "large_ground_monster rider: slash_diag (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1413,
+      "minBoneZ": 0.1413,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.606,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.01,
+      "endFromIdleM": 0.01,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.858,
+      "telegraphM": 0.702,
+      "contactReachM": 0.428
+     },
+     "weight": "medium",
+     "motion": "slash_diag",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "Skill",
+     "action": "Rid_large_ground_monster_Skill",
+     "loop": false,
+     "fps": 50,
+     "frames": 31,
+     "seconds": 0.62,
+     "hash": "2020dc8f1d67",
+     "notes": "large_ground_monster rider: cast (medium), startup 0.16 / active 0.10 / recovery 0.36 s",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.9345,
+      "hipsMaxZ": 0.9345,
+      "reachClamped": 0,
+      "minFootZ": 0.1413,
+      "minBoneZ": 0.1413,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.624,
+      "hipsTravelM": 0.0,
+      "startFromIdleM": 0.01,
+      "endFromIdleM": 0.01,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": 0.0,
+      "handTravelM": 0.208,
+      "telegraphM": 0.125,
+      "contactReachM": 0.327
+     },
+     "weight": "medium",
+     "motion": "cast",
+     "windows": {
+      "startupSec": 0.16,
+      "activeSec": 0.1,
+      "recoverySec": 0.36
+     },
+     "events": {
+      "StartupEnd": 8,
+      "ActiveBegin": 8,
+      "ActiveEnd": 13,
+      "RecoveryEnd": 31
+     }
+    },
+    {
+     "name": "MountUp",
+     "action": "Rid_large_ground_monster_MountUp",
+     "loop": false,
+     "fps": 30,
+     "frames": 27,
+     "seconds": 0.9,
+     "hash": "c95fb2ae6027",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": -0.031,
+      "hipsMaxZ": 1.0344,
+      "reachClamped": 0,
+      "minFootZ": -0.9634,
+      "minBoneZ": -0.9504,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.0,
+      "hipsTravelM": 1.065,
+      "startFromIdleM": 1.492,
+      "endFromIdleM": 0.01,
+      "startHipsDzM": -0.965,
+      "endHipsDzM": 0.0
+     }
+    },
+    {
+     "name": "Dismount",
+     "action": "Rid_large_ground_monster_Dismount",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "4eeb38cd944b",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": -0.031,
+      "hipsMaxZ": 1.0143,
+      "reachClamped": 0,
+      "minFootZ": -0.9608,
+      "minBoneZ": -0.9564,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.019,
+      "hipsTravelM": 1.045,
+      "startFromIdleM": 0.01,
+      "endFromIdleM": 1.916,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.965
+     }
+    },
+    {
+     "name": "Stagger",
+     "action": "Rid_large_ground_monster_Stagger",
+     "loop": false,
+     "fps": 30,
+     "frames": 24,
+     "seconds": 0.8,
+     "hash": "3b88dc987863",
+     "notes": "",
+     "metrics": {
+      "loopClosureM": null,
+      "hipsMinZ": 0.269,
+      "hipsMaxZ": 1.0038,
+      "reachClamped": 0,
+      "minFootZ": 0.0466,
+      "minBoneZ": -0.1196,
+      "bakeErrorM": 0.0,
+      "kneeSpreadMinM": 0.086,
+      "hipsTravelM": 0.735,
+      "startFromIdleM": 0.01,
+      "endFromIdleM": 1.77,
+      "startHipsDzM": 0.0,
+      "endHipsDzM": -0.666
+     }
+    }
+   ],
+   "crossCheck": [
+    {
+     "name": "Idle",
+     "kneeSpreadMinM": 0.583,
+     "startFromIdleM": 0.0,
+     "endFromIdleM": 0.0,
+     "hash": "b6b8baed0154"
+    },
+    {
+     "name": "Walk",
+     "kneeSpreadMinM": 0.58,
+     "startFromIdleM": 0.027,
+     "endFromIdleM": 0.027,
+     "hash": "848f87e3002f"
+    },
+    {
+     "name": "Trot",
+     "kneeSpreadMinM": 0.58,
+     "startFromIdleM": 0.04,
+     "endFromIdleM": 0.04,
+     "hash": "cd55fcfaa99a"
+    },
+    {
+     "name": "Gallop",
+     "kneeSpreadMinM": 0.582,
+     "startFromIdleM": 0.043,
+     "endFromIdleM": 0.043,
+     "hash": "984b7fa7172d"
+    },
+    {
+     "name": "Hit1",
+     "kneeSpreadMinM": 0.568,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "8fe8c7280ec0"
+    },
+    {
+     "name": "Hit2",
+     "kneeSpreadMinM": 0.568,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "9fe5cf995516"
+    },
+    {
+     "name": "Hit3",
+     "kneeSpreadMinM": 0.566,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "d243c685a222"
+    },
+    {
+     "name": "Skill",
+     "kneeSpreadMinM": 0.583,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 0.009,
+     "hash": "2020dc8f1d67"
+    },
+    {
+     "name": "MountUp",
+     "kneeSpreadMinM": 0.0,
+     "startFromIdleM": 1.514,
+     "endFromIdleM": 0.009,
+     "hash": "536e46686bd6"
+    },
+    {
+     "name": "Dismount",
+     "kneeSpreadMinM": 0.018,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 1.891,
+     "hash": "82f553c68257"
+    },
+    {
+     "name": "Stagger",
+     "kneeSpreadMinM": 0.081,
+     "startFromIdleM": 0.009,
+     "endFromIdleM": 1.764,
+     "hash": "d70fe43fa95b"
+    }
+   ],
+   "file": "Art/Blender/AnimationLibrary/Riders/large_ground_monster.fbx"
+  }
+ ]
+}

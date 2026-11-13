@@ -15,6 +15,7 @@ const MAX_SLIDE_PCT = 3.0;
 function run({ DATA, load, err }) {
   locomotion({ DATA, load, err });
   combat({ DATA, load, err });
+  riders({ DATA, load, err });
 }
 
 function locomotion({ DATA, load, err }) {
@@ -101,6 +102,57 @@ function combat({ DATA, load, err }) {
       if (!(c.metrics.handTravelM >= 0.2)) err(w, `${id}: wind-up does not travel to the contact pose (telegraph)`);
     }
   }
+}
+
+
+// ---- rider pose clips (Data/Characters/rider_clips.json, written by Tools/blender/build_rider_clips.py) ---------------------------------
+// Families, species and rigs are derived from Data/Companions/mounts.json and Data/Monsters/species.json: a mount family without rider clips,
+// or a mount species whose rig has no saddle anchor, fails here. Mounted attacks use the attack windows of combat_tuning.json and exactly
+// mountedCombat.maxChainHits hits; seated clips straddle; MountUp/Dismount/Stagger join the seated pose and start/end on the ground.
+const RIDER_NEEDED = ['Idle', 'Walk', 'Trot', 'Gallop', 'Hit1', 'Hit2', 'Hit3', 'Skill', 'MountUp', 'Dismount', 'Stagger'];
+const RIDER_GROUND = ['MountUp', 'Dismount', 'Stagger'];
+const RIDER_WEIGHT = { Hit1: 'light', Hit2: 'light', Hit3: 'medium', Skill: 'medium' };
+
+function riders({ DATA, load, err }) {
+  const f = 'Characters/rider_clips.json', w = 'rider_clips.json';
+  if (!fs.existsSync(path.join(DATA, f))) { err(w, 'file missing (run Tools/blender/build_rider_clips.py)'); return; }
+  const m = load(f), mounts = load('Companions/mounts.json'), tuning = load('Combat/combat_tuning.json').attackTiming;
+  if (m.schema !== 'rider_clips/1') err(w, 'unknown schema ' + m.schema);
+  const hash = crypto.createHash('sha1').update(stable(tuning)).digest('hex').slice(0, 12);
+  if (m.tuning.hash !== hash) err(w, `attackTiming changed since the rider clips were built (manifest ${m.tuning.hash}, now ${hash}): rebuild with build_rider_clips.py`);
+  if (m.mountedCombatMaxChainHits !== mounts.mountedCombat.maxChainHits) err(w, `maxChainHits is ${mounts.mountedCombat.maxChainHits} in mounts.json but the clips were built for ${m.mountedCombatMaxChainHits}`);
+  const species = load('Monsters/species.json'), sp = Array.isArray(species) ? species : species.species;
+  const rigOf = new Map(sp.map(s => [s.id, (s.rigId || '').replace('rig_', '')]));
+  const fams = new Map((m.families || []).map(x => [x.id, x]));
+  for (const [id, fam] of Object.entries(mounts.families)) {
+    const row = fams.get(id);
+    if (!row) { err(w, `mount family ${id} has no rider clips`); continue; }
+    for (const s of fam.species) { const rg = rigOf.get(s); if (!(rg in (m.anchors || {}))) err(w, `${id}: species ${s} uses rig "${rg}" which has no saddle anchor`); }
+    const names = new Map(row.clips.map(c => [c.name, c]));
+    for (const n of RIDER_NEEDED) if (!names.has(n)) err(w, `${id}: missing clip ${n}`);
+    const stand = m.hipsRestZ - row.seatHeightM;
+    for (const c of row.clips) {
+      const cid = `${id}/${c.name}`, mt = c.metrics;
+      if (Math.abs(c.frames / c.fps - c.seconds) > 1e-3) err(w, `${cid}: seconds does not match frames/fps`);
+      if (!RIDER_GROUND.includes(c.name)) {
+        if (!(mt.kneeSpreadMinM >= 0.30)) err(w, `${cid}: knees ${mt.kneeSpreadMinM} m apart (not astride)`);
+        if (!(mt.hipsTravelM <= 0.08)) err(w, `${cid}: pelvis travels ${mt.hipsTravelM} m while seated`);
+      }
+      if (['Idle', 'Walk', 'Trot', 'Gallop'].includes(c.name) && (!c.loop || !(mt.loopClosureM <= 1e-3))) err(w, `${cid}: loop does not close`);
+      if (c.name === 'MountUp' && !(mt.endFromIdleM <= 0.03)) err(w, `${cid}: does not end on the seated pose`);
+      if (c.name === 'MountUp' && !(Math.abs(mt.startHipsDzM - stand) <= 0.02)) err(w, `${cid}: does not start standing on the ground (hips ${mt.startHipsDzM}, want ${stand.toFixed(3)})`);
+      if (c.name === 'Dismount' && (!(mt.startFromIdleM <= 0.03) || !(Math.abs(mt.endHipsDzM - stand) <= 0.02))) err(w, `${cid}: does not leave the seat and end standing on the ground`);
+      if (c.name === 'Stagger' && !(mt.startFromIdleM <= 0.03)) err(w, `${cid}: does not start on the seated pose`);
+      if (RIDER_WEIGHT[c.name]) {
+        const win = tuning[RIDER_WEIGHT[c.name]], want = Math.round((win.startupSec + win.activeSec + win.recoverySec) * m.attackFps), ev = c.events || {};
+        if (c.frames !== want) err(w, `${cid}: ${c.frames} frames, the ${RIDER_WEIGHT[c.name]} windows make ${want}`);
+        if (ev.ActiveBegin !== Math.round(win.startupSec * m.attackFps) || ev.ActiveEnd !== Math.round((win.startupSec + win.activeSec) * m.attackFps) || ev.RecoveryEnd !== want) err(w, `${cid}: events do not match the windows`);
+        if (!(mt.startFromIdleM <= 0.03 && mt.endFromIdleM <= 0.03)) err(w, `${cid}: must start and end in the seated pose`);
+      }
+    }
+    if (row.clips.filter(c => /^Hit\d+$/.test(c.name)).length !== mounts.mountedCombat.maxChainHits) err(w, `${id}: hit clips differ from mountedCombat.maxChainHits`);
+  }
+  for (const id of fams.keys()) if (!(id in mounts.families)) err(w, `rider clips for unknown mount family ${id}`);
 }
 
 // JSON.stringify with sorted keys and Python's default separators ", " and ": ", so the digest matches json.dumps(sort_keys=True)
