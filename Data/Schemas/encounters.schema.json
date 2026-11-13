@@ -1,0 +1,336 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Regional encounter tables",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "rules",
+  "regions",
+  "routes"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "note": {
+   "type": "string"
+  },
+  "rules": {
+   "type": "object"
+  },
+  "regions": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "regionId",
+     "ring",
+     "layer",
+     "rankBand",
+     "thin",
+     "rates",
+     "tables",
+     "borderBleed"
+    ],
+    "properties": {
+     "regionId": {
+      "type": "string",
+      "pattern": "^reg_[a-z0-9_]+$"
+     },
+     "ring": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9
+     },
+     "layer": {
+      "type": "string"
+     },
+     "rankBand": {
+      "type": "string"
+     },
+     "thin": {
+      "type": "boolean"
+     },
+     "theme": {
+      "type": [
+       "object",
+       "null"
+      ]
+     },
+     "rates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "roadside",
+       "wild",
+       "deep",
+       "nightMultiplier"
+      ],
+      "properties": {
+       "roadside": {
+        "type": "number",
+        "minimum": 0
+       },
+       "wild": {
+        "type": "number",
+        "minimum": 0
+       },
+       "deep": {
+        "type": "number",
+        "minimum": 0
+       },
+       "nightMultiplier": {
+        "type": "number",
+        "minimum": 1
+       }
+      }
+     },
+     "tables": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "roadside",
+       "wild",
+       "deep",
+       "night"
+      ],
+      "properties": {
+       "roadside": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "speciesId",
+          "weight",
+          "group"
+         ],
+         "properties": {
+          "speciesId": {
+           "type": "string",
+           "pattern": "^mon_[a-z0-9_]+$"
+          },
+          "weight": {
+           "type": "integer",
+           "minimum": 1
+          },
+          "group": {
+           "type": "array",
+           "minItems": 2,
+           "maxItems": 2,
+           "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+           }
+          }
+         }
+        }
+       },
+       "wild": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "speciesId",
+          "weight",
+          "group"
+         ],
+         "properties": {
+          "speciesId": {
+           "type": "string",
+           "pattern": "^mon_[a-z0-9_]+$"
+          },
+          "weight": {
+           "type": "integer",
+           "minimum": 1
+          },
+          "group": {
+           "type": "array",
+           "minItems": 2,
+           "maxItems": 2,
+           "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+           }
+          }
+         }
+        }
+       },
+       "deep": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "speciesId",
+          "weight",
+          "group"
+         ],
+         "properties": {
+          "speciesId": {
+           "type": "string",
+           "pattern": "^mon_[a-z0-9_]+$"
+          },
+          "weight": {
+           "type": "integer",
+           "minimum": 1
+          },
+          "group": {
+           "type": "array",
+           "minItems": 2,
+           "maxItems": 2,
+           "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+           }
+          }
+         }
+        }
+       },
+       "night": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "speciesId",
+          "weight",
+          "group"
+         ],
+         "properties": {
+          "speciesId": {
+           "type": "string",
+           "pattern": "^mon_[a-z0-9_]+$"
+          },
+          "weight": {
+           "type": "integer",
+           "minimum": 1
+          },
+          "group": {
+           "type": "array",
+           "minItems": 2,
+           "maxItems": 2,
+           "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+           }
+          }
+         }
+        }
+       }
+      }
+     },
+     "borderBleed": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "speciesId",
+        "from",
+        "weight",
+        "group"
+       ],
+       "properties": {
+        "speciesId": {
+         "type": "string",
+         "pattern": "^mon_[a-z0-9_]+$"
+        },
+        "from": {
+         "type": "string",
+         "pattern": "^reg_[a-z0-9_]+$"
+        },
+        "weight": {
+         "type": "integer",
+         "minimum": 1
+        },
+        "group": {
+         "type": "array",
+         "minItems": 2,
+         "maxItems": 2,
+         "items": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+         }
+        }
+       }
+      }
+     },
+     "siege": {
+      "type": [
+       "object",
+       "null"
+      ]
+     }
+    }
+   }
+  },
+  "routes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "edgeId",
+     "kind",
+     "a",
+     "b",
+     "km",
+     "mainTable",
+     "approachTable",
+     "expectedEncounters",
+     "noCombatWithinMeters"
+    ],
+    "properties": {
+     "edgeId": {
+      "type": "string"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "road",
+       "pass",
+       "sea"
+      ]
+     },
+     "a": {
+      "type": "string",
+      "pattern": "^reg_[a-z0-9_]+$"
+     },
+     "b": {
+      "type": "string",
+      "pattern": "^reg_[a-z0-9_]+$"
+     },
+     "km": {
+      "type": "number",
+      "minimum": 0
+     },
+     "mainTable": {
+      "type": "object"
+     },
+     "approachTable": {
+      "type": "object"
+     },
+     "expectedEncounters": {
+      "type": "number",
+      "minimum": 0
+     },
+     "noCombatWithinMeters": {
+      "type": "number",
+      "minimum": 0
+     }
+    }
+   }
+  }
+ }
+}

@@ -322,6 +322,14 @@ namespace Ascend.Core
             return true;
         }
 
+        /// <summary>Host use only (snapshot restore): sets where the run stands without walking there.</summary>
+        public void RestorePosition(string room, string checkpoint, bool bossDefeated, IEnumerable<string> keys)
+        {
+            Room = room; Checkpoint = checkpoint; BossDefeated = bossDefeated;
+            _keys.Clear(); foreach (var k in keys) _keys.Add(k);
+            Knowledge.VisitRoom(room);
+        }
+
         /// <summary>Falls in battle: back at the last checkpoint with every key and solved puzzle kept. Returns the room.</summary>
         public string Die()
         {

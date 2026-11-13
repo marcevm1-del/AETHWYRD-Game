@@ -140,6 +140,14 @@ namespace Ascend.Core
         protected abstract PuzzleAssist NextStep();
         protected abstract void ResetState();
 
+        /// <summary>Restores a saved outcome (Solved or Skipped). An unsolved puzzle in progress is not saved: it starts over.</summary>
+        public void RestoreOutcome(PuzzleStatus status, bool rewardClaimed)
+        {
+            Reset();
+            if (status == PuzzleStatus.Solved) { Status = PuzzleStatus.Solved; RewardClaimed = rewardClaimed && Data.Reward != null; }
+            else if (status == PuzzleStatus.Skipped) Status = PuzzleStatus.Skipped;
+        }
+
         protected void MarkSolved() { Status = PuzzleStatus.Solved; }
         /// <summary>A skipped puzzle can still be solved later; a solved one ignores further input.</summary>
         protected bool Locked => Status == PuzzleStatus.Solved;
