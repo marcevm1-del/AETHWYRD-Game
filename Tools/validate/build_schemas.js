@@ -665,6 +665,7 @@ require('./weapon_schemas')(SCHEMAS); // weapon movesets
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
 require('./front_end_schemas')(SCHEMAS); // Phase 1B
 require('./encounter_schemas')(SCHEMAS); // Regional encounter tables
+require('./difficulty_schemas')(SCHEMAS); // Difficulty and accessibility presets
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

@@ -1,0 +1,210 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Difficulty presets, sliders and the S-rank floor",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "notes",
+  "default",
+  "presets",
+  "sliders",
+  "lootRule",
+  "customRules",
+  "sRankFloor"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "default": {
+   "type": "string"
+  },
+  "presets": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "name",
+     "enemyDamageMult",
+     "enemyHpMult",
+     "enemyAggressionMult",
+     "telegraphLeadMult",
+     "maxSimultaneousAttackers",
+     "dodgeWindowMult",
+     "parryWindowMult",
+     "flashTimeDurationMult",
+     "autoDodge",
+     "lootMult",
+     "deathCopperFraction",
+     "deathXpFraction",
+     "permadeath",
+     "mortalBonds",
+     "weightMode"
+    ],
+    "properties": {
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "enemyDamageMult": {
+      "type": "number"
+     },
+     "enemyHpMult": {
+      "type": "number"
+     },
+     "enemyAggressionMult": {
+      "type": "number"
+     },
+     "telegraphLeadMult": {
+      "type": "number"
+     },
+     "maxSimultaneousAttackers": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+     },
+     "dodgeWindowMult": {
+      "type": "number"
+     },
+     "parryWindowMult": {
+      "type": "number"
+     },
+     "flashTimeDurationMult": {
+      "type": "number"
+     },
+     "autoDodge": {
+      "type": "boolean"
+     },
+     "lootMult": {
+      "type": "number"
+     },
+     "deathCopperFraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "deathXpFraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "permadeath": {
+      "type": "boolean"
+     },
+     "mortalBonds": {
+      "type": "boolean"
+     },
+     "weightMode": {
+      "type": "string",
+      "enum": [
+       "unlimited",
+       "generous",
+       "strict"
+      ]
+     }
+    }
+   }
+  },
+  "sliders": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "array",
+    "minItems": 2,
+    "maxItems": 2,
+    "items": {
+     "type": "number"
+    }
+   }
+  },
+  "lootRule": {
+   "type": "string"
+  },
+  "customRules": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "boolean"
+   }
+  },
+  "sRankFloor": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "appliesFromRank",
+    "warningRank",
+    "warningText",
+    "bruteForceEnrageTimers",
+    "autoDodge",
+    "min",
+    "max",
+    "minAttackers",
+    "keepsAccessibility",
+    "profileNames"
+   ],
+   "properties": {
+    "appliesFromRank": {
+     "type": "string",
+     "enum": [
+      "S",
+      "SS",
+      "SSS"
+     ]
+    },
+    "warningRank": {
+     "type": "string",
+     "enum": [
+      "B",
+      "A",
+      "S"
+     ]
+    },
+    "warningText": {
+     "type": "string",
+     "minLength": 1
+    },
+    "bruteForceEnrageTimers": {
+     "type": "boolean"
+    },
+    "autoDodge": {
+     "type": "boolean"
+    },
+    "min": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "number"
+     }
+    },
+    "max": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "number"
+     }
+    },
+    "minAttackers": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 6
+    },
+    "keepsAccessibility": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+     }
+    },
+    "profileNames": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

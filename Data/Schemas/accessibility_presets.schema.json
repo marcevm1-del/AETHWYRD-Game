@@ -1,0 +1,88 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Accessibility preset bundles",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "notes",
+  "presets",
+  "pairings"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "presets": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "name",
+     "summary",
+     "settings"
+    ],
+    "properties": {
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "summary": {
+      "type": "string",
+      "minLength": 1
+     },
+     "settings": {
+      "type": "object"
+     },
+     "assists": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "boolean"
+      }
+     },
+     "toggleAllHoldActions": {
+      "type": "boolean"
+     },
+     "layoutHint": {
+      "type": "string"
+     },
+     "note": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "pairings": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "with",
+     "suggest",
+     "why"
+    ],
+    "properties": {
+     "with": {
+      "type": "string"
+     },
+     "suggest": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string"
+      }
+     },
+     "why": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

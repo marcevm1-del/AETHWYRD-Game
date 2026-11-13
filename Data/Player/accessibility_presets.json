@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "notes": "One-tap accessibility bundles over the existing settings model (Data/Audio/accessibility.json, Code/Ascend.Core/Accessibility.cs AccessibilitySettings). Each preset lists only the fields it changes; every value must sit inside that file's ranges. Bundles stack in the order the player picks them (later wins) and any single setting can still be changed afterwards. Presets are independent of difficulty: choosing one never changes enemy numbers, and the S-rank floor never removes them (difficulty.json sRankFloor.keepsAccessibility). 'assists' are the non-difficulty combat cues (a visible parry timing indicator). Decided 2026-11-13 by Claude under delegated creative control; the user may overrule.",
+ "presets": {
+  "low_vision": {
+   "name": "Low vision",
+   "summary": "Bigger text and HUD, strong panel contrast, large boxed subtitles.",
+   "settings": { "textScale": 1.5, "hudScale": 1.25, "highContrastPanels": true, "subtitleSize": "large", "subtitleBackground": "box" },
+   "assists": { "parryTimingIndicator": true }
+  },
+  "colorblind_helper": {
+   "name": "Colour-vision helper",
+   "summary": "Turns on the shape-plus-colour palette that fits the chosen type; telegraph shapes are always on.",
+   "settings": { "colorblindPalette": "deuteranopia" },
+   "assists": { "parryTimingIndicator": true },
+   "note": "The player picks protanopia, deuteranopia or tritanopia; deuteranopia is the first offered because it is the most common."
+  },
+  "photosensitive": {
+   "name": "Photosensitive-safe",
+   "summary": "Reduced flash at its cap, minimal shake, no motion blur.",
+   "settings": { "reducedFlash": true, "flashIntensity": 0.25, "screenShake": 0.15, "motionBlur": 0.0 }
+  },
+  "motion_comfort": {
+   "name": "Motion comfort",
+   "summary": "Low shake and blur for players who feel sick from camera movement.",
+   "settings": { "screenShake": 0.2, "motionBlur": 0.0, "flashIntensity": 0.4 }
+  },
+  "one_handed": {
+   "name": "One-handed play",
+   "summary": "Every hold action becomes a toggle, with a visible parry timing indicator.",
+   "settings": {},
+   "toggleAllHoldActions": true,
+   "assists": { "parryTimingIndicator": true },
+   "layoutHint": "one_handed_layout"
+  },
+  "dyslexia_friendly": {
+   "name": "Dyslexia-friendly",
+   "summary": "Dyslexia font, a little larger text, boxed subtitles, a gentler dialogue pace.",
+   "settings": { "dyslexiaFont": true, "textScale": 1.2, "subtitleBackground": "box", "dialogueTextSpeed": 0.8 }
+  },
+  "hard_of_hearing": {
+   "name": "Hard of hearing",
+   "summary": "Subtitles always on and large, louder combat callouts and effects.",
+   "settings": { "subtitlesEnabled": true, "subtitleSize": "large", "subtitleBackground": "box", "volumes": { "callouts": 1.0, "effects": 1.0 } },
+   "assists": { "parryTimingIndicator": true }
+  },
+  "calm_sound": {
+   "name": "Calm sound",
+   "summary": "No combat music, reduced music intensity, softer music bed.",
+   "settings": { "noCombatMusic": true, "reducedMusicIntensity": true, "volumes": { "music": 0.5 } }
+  },
+  "relaxed_pace": {
+   "name": "Relaxed pace",
+   "summary": "Slower dialogue text so reading is never a race.",
+   "settings": { "dialogueTextSpeed": 0.6 }
+  }
+ },
+ "pairings": [
+  { "with": "story", "suggest": ["one_handed", "low_vision"], "why": "Story gives wider timing windows and auto-dodge; these add comfort without changing enemy numbers." },
+  { "with": "adventurer", "suggest": ["photosensitive", "calm_sound"], "why": "Sensory comfort at the standard challenge." }
+ ]
+}

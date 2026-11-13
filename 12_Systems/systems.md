@@ -293,7 +293,7 @@ Gods react differently: **Solenne** punishes lies, **Sylvara** punishes cruelty 
 - **Named monsters do not grow from your deaths** (Canon §4d). What they get up to reaches you through the rumor board instead.
 
 ### 10.2 Custom Difficulty
-Under any preset, sliders for: enemy damage, enemy HP, parry/dodge windows, aggro-token count (how many attack at once), loot amount, death penalty, and inventory weight. **The S-rank floor still applies**: S+ content ignores the easy settings (below). Changing difficulty is free at any time, except Hardcore, which is locked at creation.
+Under any preset, sliders for: enemy damage, enemy HP, parry/dodge windows, aggro-token count (how many attack at once), loot amount, death penalty, and inventory weight. **The S-rank floor still applies**: S+ content ignores the easy settings (below). Changing difficulty is free at any time, except Hardcore, which is locked at creation. The preset numbers, slider ranges and accessibility bundles are in `12_Systems/difficulty_and_accessibility.md` (`Data/Player/difficulty.json`).
 
 ### 10.3 Hardcore Legacy
 > Hardcore uses the **Death Game** presentation (`01_Core_Concept/borrowed_features.md` #26): the System announces that respawn is disabled. Free for everyone from the start.
