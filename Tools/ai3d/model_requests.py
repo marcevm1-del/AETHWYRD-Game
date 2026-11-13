@@ -16,6 +16,8 @@ Standard library only. Run it with any Python 3.11+:
   python Tools/ai3d/model_requests.py review warren_crate --approve --by anime-fantasy-director --note "reads well"
   python Tools/ai3d/model_requests.py finish warren_crate --by environment-artist --note "baked to Art/..."
 
+  python Tools/ai3d/model_requests.py doctor                            # is the env, GPU, code and weights ready?
+
 Statuses: requested -> generated -> approved -> finished, or needs-image (no image and no image key yet),
 failed (TripoSR or the image tool errored; the error is kept) and rejected (with the reviewer's note).
 """
@@ -33,6 +35,9 @@ ROOT = os.environ.get("MODEL_REQUESTS_ROOT") or os.path.abspath(os.path.join(HER
 QUEUE = os.path.join(ROOT, "13_Production", "model_requests")
 IMAGES = os.path.join(ROOT, "Art", "Generation", "staging", "images")
 MESHES = os.path.join(ROOT, "Art", "Generation", "staging", "meshes")
+sys.path.insert(0, HERE)
+import tsr_doctor  # noqa: E402
+
 TRIPOSR_PYTHON = os.environ.get("TRIPOSR_PYTHON", r"E:\tsr-venv\Scripts\python.exe")
 
 KINDS = ["prop", "creature", "building-part", "weapon", "armor", "plant", "terrain-feature", "character-reference"]
@@ -169,20 +174,45 @@ def default_image_tool(prompt, rid):
     raise RuntimeError("image generation failed: " + " | ".join(errors))
 
 
+CURRENT_REQUEST = None  # id of the request being processed, recorded in provenance.json
+
+# Settings tried in order when the GPU runs out of memory (first = the wrapper's defaults).
+OOM_LADDER = [[], ["--mc-resolution", "96", "--chunk-size", "1024"], ["--mc-resolution", "64", "--chunk-size", "512"]]
+
+
 def default_mesh_tool(image):
-    """Run TripoSR on one image; return (mesh path, provenance path) or raise."""
+    """Run TripoSR on one image; return (mesh path, provenance path) or raise.
+
+    Checks free GPU memory first (a busy GPU fails fast with a plain message instead of a CUDA traceback) and, if
+    the run still runs out of memory, retries with smaller settings; the settings used are in provenance.json."""
     if not os.path.exists(TRIPOSR_PYTHON):
         raise RuntimeError("TripoSR python not found at %s (set TRIPOSR_PYTHON)" % TRIPOSR_PYTHON)
+    ok, msg = tsr_doctor.gpu_preflight(tsr_doctor.MIN_FREE_MIB_TRIPOSR)
+    if not ok:
+        raise RuntimeError("GPU busy: " + msg)
     wrapper = os.path.join(ROOT, "Tools", "ai3d", "triposr_run.py")
-    p = subprocess.run([TRIPOSR_PYTHON, wrapper, image], cwd=ROOT, capture_output=True, text=True)
+    p = None
+    for extra in OOM_LADDER:
+        cmd = [TRIPOSR_PYTHON, wrapper, image] + extra
+        if CURRENT_REQUEST:
+            cmd += ["--request-id", CURRENT_REQUEST]
+        p = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
+        if p.returncode == 0 or not tsr_doctor.is_retryable_oom(p.stderr + p.stdout):
+            break
     if p.returncode != 0:
-        raise RuntimeError("TripoSR failed: " + (p.stderr or p.stdout).strip()[-600:])
+        raise RuntimeError("TripoSR failed (exit %d): %s" % (p.returncode, tsr_doctor.explain_error((p.stderr or p.stdout).strip()[-600:])))
     out_dir = os.path.join(MESHES, os.path.splitext(os.path.basename(image))[0])
     meshes = [f for f in glob.glob(os.path.join(out_dir, "**", "*"), recursive=True) if f.lower().endswith((".obj", ".glb"))]
     if not meshes:
         raise RuntimeError("TripoSR reported success but wrote no mesh in " + out_dir)
     prov = os.path.join(out_dir, "provenance.json")
-    return max(meshes, key=os.path.getmtime), (prov if os.path.exists(prov) else None)
+    if not os.path.exists(prov):
+        raise RuntimeError("TripoSR wrote a mesh but no provenance.json in " + out_dir)
+    with open(prov, encoding="utf-8") as f:
+        problems = tsr_doctor.check_provenance(json.load(f), out_dir)
+    if problems:
+        raise RuntimeError("provenance incomplete: " + "; ".join(problems))
+    return max(meshes, key=os.path.getmtime), prov
 
 
 def rel(p):
@@ -195,6 +225,8 @@ def process(req, image_tool=default_image_tool, mesh_tool=default_mesh_tool, by=
     image = src.get("image")
     if image and not os.path.isabs(image):
         image = os.path.join(ROOT, image)
+    global CURRENT_REQUEST
+    CURRENT_REQUEST = req["id"]
     try:
         if image:
             if not os.path.exists(image):
@@ -207,10 +239,11 @@ def process(req, image_tool=default_image_tool, mesh_tool=default_mesh_tool, by=
                 return req["status"]
         req["outputs"]["image"] = rel(image)
         mesh, prov = mesh_tool(image)
-        req["outputs"].update({"mesh": rel(mesh), "provenance": rel(prov), "error": None})
+        req["outputs"].update({"mesh": rel(mesh), "provenance": rel(prov), "error": None, "errorKind": None})
         set_status(req, "generated", by, "mesh ready for review")
     except Exception as e:  # keep the error on the request, move on to the next one
-        req["outputs"]["error"] = str(e)[-600:]
+        req["outputs"]["error"] = str(e)[-900:]
+        req["outputs"]["errorKind"] = tsr_doctor.classify_error(str(e))[0]  # extra field; the status model is unchanged
         set_status(req, "failed", by, "see outputs.error")
     return req["status"]
 
@@ -232,6 +265,12 @@ def cmd_run(a):
         status = process(r)
         save(r)
         print("  %s -> %s%s" % (r["id"], status, (": " + r["outputs"]["error"]) if status == "failed" else ""))
+
+
+def cmd_doctor(a):
+    checks = tsr_doctor.doctor()
+    print(tsr_doctor.format_report(checks))
+    sys.exit(tsr_doctor.worst(checks))
 
 
 def cmd_review(a):
@@ -291,6 +330,8 @@ def main(argv=None):
     r.add_argument("--only")
     r.add_argument("--dry-run", action="store_true")
     r.set_defaults(fn=cmd_run)
+    d = sub.add_parser("doctor", help="report whether venv, GPU, TripoSR code and weights are ready")
+    d.set_defaults(fn=cmd_doctor)
     v = sub.add_parser("review", help="approve or reject a generated mesh")
     v.add_argument("id")
     g = v.add_mutually_exclusive_group(required=True)

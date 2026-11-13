@@ -15,6 +15,11 @@ What this wrapper adds to upstream `run.py` (which is left unedited):
      (see 13_Production/monster_model_pipeline.md). Nothing goes into Game/ from here.
 
 TripoSR code and weights are MIT (Tripo AI and Stability AI). The weights download from Hugging Face on first run.
+
+  ... triposr_run.py --check          report whether the venv, torch+CUDA, GPU memory, code and weights are ready
+  ... triposr_run.py img.png --request-id warren_crate   record the model-request id in provenance.json
+Exit codes: 0 done, 2 bad input or missing setup, 3 GPU busy or out of memory (retry later or lower the settings),
+4 the run finished but the provenance or mesh failed validation.
 """
 import datetime
 import hashlib
@@ -26,6 +31,9 @@ import types
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
+sys.path.insert(0, HERE)
+import tsr_doctor  # noqa: E402  (readiness check, error hints, provenance validation)
+
 TRIPOSR_DIR = os.environ.get("TRIPOSR_DIR", r"E:\Ideas\AI-Game-Toolkit\TripoSR")
 STAGING = os.path.join(ROOT, "Art", "Generation", "staging", "meshes")
 DEFAULT_CHUNK = "2048"
@@ -61,7 +69,7 @@ def parse(argv):
     images, out_dir, fmt = [], None, "obj"
     i = 0
     takes_value = {"--device", "--pretrained-model-name-or-path", "--chunk-size", "--mc-resolution",
-                   "--foreground-ratio", "--output-dir", "--model-save-format", "--texture-resolution"}
+                   "--foreground-ratio", "--output-dir", "--model-save-format", "--texture-resolution", "--request-id"}
     while i < len(argv):
         a = argv[i]
         if a.startswith("--"):
@@ -85,7 +93,40 @@ def with_defaults(argv):
     return argv
 
 
-def fix_winding_and_sidecar(out_dir, fmt, images):
+def settings_from(argv):
+    """The effective settings, so a mesh can be regenerated: upstream flags with our defaults applied."""
+    out = {"chunk_size": int(DEFAULT_CHUNK), "mc_resolution": int(DEFAULT_MC_RES), "foreground_ratio": 0.85,
+           "model_save_format": "obj", "device": "cuda:0"}
+    keymap = {"--chunk-size": "chunk_size", "--mc-resolution": "mc_resolution", "--foreground-ratio": "foreground_ratio",
+              "--model-save-format": "model_save_format", "--device": "device"}
+    for i, a in enumerate(argv):
+        if a in keymap and i + 1 < len(argv):
+            v = argv[i + 1]
+            try:
+                v = float(v) if "." in v else int(v)
+            except ValueError:
+                pass
+            out[keymap[a]] = v
+    return out
+
+
+def environment_info():
+    env = {"python": sys.version.split()[0]}
+    for m in ("torch", "trimesh", "skimage"):
+        try:
+            env[m] = getattr(__import__(m), "__version__", "?")
+        except Exception:
+            env[m] = None
+    try:
+        import torch
+        env["cuda"] = torch.version.cuda
+        env["gpu"] = torch.cuda.get_device_name(0) if torch.cuda.is_available() else None
+    except Exception:
+        env["gpu"] = None
+    return env
+
+
+def fix_winding_and_sidecar(out_dir, fmt, images, argv=(), request_id=None):
     import trimesh
 
     sidecar = {
@@ -96,6 +137,11 @@ def fix_winding_and_sidecar(out_dir, fmt, images):
         "createdUtc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "inputs": [{"file": os.path.basename(p), "sha256": hashlib.sha256(open(p, "rb").read()).hexdigest()}
                    for p in images],
+        "schema": 2,
+        "requestId": request_id,
+        "settings": settings_from(argv),
+        "environment": environment_info(),
+        "outputs": [],
         "status": "staging: not registered for use in the game; finish in Blender before any import into Game/",
         "meshes": [],
     }
@@ -110,14 +156,31 @@ def fix_winding_and_sidecar(out_dir, fmt, images):
                 mesh.invert()
                 mesh.export(path)
                 flipped = True
-            sidecar["meshes"].append({"file": name, "vertices": int(len(mesh.vertices)), "faces": int(len(mesh.faces)),
+            sidecar["outputs"].append(name)
+            sidecar["meshes"].append({"file": os.path.relpath(path, out_dir).replace("\\", "/"),
+                                      "sha256": hashlib.sha256(open(path, "rb").read()).hexdigest(), "vertices": int(len(mesh.vertices)), "faces": int(len(mesh.faces)),
                                       "watertight": bool(mesh.is_watertight), "winding_flipped": flipped})
     with open(os.path.join(out_dir, "provenance.json"), "w", encoding="utf-8") as f:
         json.dump(sidecar, f, indent=2)
         f.write("\n")
 
 
+def pop_option(argv, name):
+    argv = list(argv)
+    if name in argv:
+        i = argv.index(name)
+        val = argv[i + 1] if i + 1 < len(argv) else None
+        del argv[i:i + 2]
+        return argv, val
+    return argv, None
+
+
 def main(argv):
+    if "--check" in argv:
+        checks = tsr_doctor.doctor()
+        print(tsr_doctor.format_report(checks))
+        return tsr_doctor.worst(checks)
+    argv, request_id = pop_option(argv, "--request-id")
     images, out_dir, fmt = parse(argv)
     if not images:
         print(__doc__)
@@ -135,6 +198,11 @@ def main(argv):
         argv = list(argv) + ["--output-dir", out_dir]
     argv = with_defaults([os.path.abspath(a) if a in images or os.path.isfile(a) else a for a in argv])
 
+    ok, msg = tsr_doctor.gpu_preflight(tsr_doctor.MIN_FREE_MIB_TRIPOSR)
+    print(msg, flush=True)
+    if not ok:
+        print("GPU busy: " + msg, file=sys.stderr)
+        return 3
     install_torchmcubes_shim()
     sys.path.insert(0, TRIPOSR_DIR)
     old_cwd = os.getcwd()
@@ -142,9 +210,22 @@ def main(argv):
     sys.argv = [os.path.join(TRIPOSR_DIR, "run.py")] + argv
     try:
         runpy.run_path(os.path.join(TRIPOSR_DIR, "run.py"), run_name="__main__")
+    except SystemExit as e:
+        if e.code not in (0, None):
+            raise
+    except BaseException as e:  # explain GPU / download / disk problems in plain words
+        text = "%s: %s" % (type(e).__name__, e)
+        print(tsr_doctor.explain_error(text), file=sys.stderr)
+        kind = tsr_doctor.classify_error(text)[0]
+        return 3 if kind in ("oom", "gpu-busy") else 1
     finally:
         os.chdir(old_cwd)
-    fix_winding_and_sidecar(out_dir, fmt, images)
+    fix_winding_and_sidecar(out_dir, fmt, images, argv, request_id)
+    problems = tsr_doctor.check_provenance(json.load(open(os.path.join(out_dir, "provenance.json"), encoding="utf-8")),
+                                           out_dir)
+    if problems:
+        print("provenance/mesh check FAILED:\n  - " + "\n  - ".join(problems), file=sys.stderr)
+        return 4
     print("Done. Output and provenance.json: " + out_dir)
     return 0
 
