@@ -279,3 +279,5 @@ One book for everything collectible: Bestiary, Museum halls, Earth Relics, Kaede
 
 ## 32. Screens for the newer systems
 Gear fitting, home and farm plots, stables and eggs, dungeon HUD and puzzles, the Civilization Archive, travel graph and Labyrinth map, living-world notices and the companion preset/relationship pieces are specified in [13_Production/ui_new_systems_specs.md](../13_Production/ui_new_systems_specs.md).
+
+> **Note (2026-11-13):** section 15 above is the design target. The code today differs (Start opens the Bag, Interact is D-pad down, no rebinding); the reconciled map, decisions and handover are in [13_Production/ui_input_flows.md](../13_Production/ui_input_flows.md).
