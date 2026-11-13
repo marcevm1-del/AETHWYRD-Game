@@ -411,7 +411,7 @@ def _dleg(b, pts, r0, r1, foot):
 
 
 DRAGON_WING_RATIO = 1.6   # wing tip-to-tip / nose-to-tail length, for every dragon species (was 2.2-2.5)
-DRAGON_BULK = 1.4         # body mass scale vs the 2026-10-31 build, so the body reads as the mass under the wings
+DRAGON_BULK = 1.7         # body mass scale vs the 2026-10-31 build, so the body reads as the mass under the wings
 WYVERN_WING_SPAN = 1.4    # Gargoyle and Arch Demon keep the original wyvern-plan wings (not the dragon rule)
 
 
@@ -421,7 +421,7 @@ def dragon(b, look, wyvern=False):
     slopes down to the shoulders, a tail longer than the body ending in a spade, and wings spanning >= 2.2x the
     creature's nose-to-tail length (features.wings)."""
     b.kind = "dragon"
-    fr = 0.07                       # forelimb radius; hind thighs are 1.4x
+    fr = 0.07 * (DRAGON_BULK / 1.4) ** 0.8   # forelimb radius (grows with the body mass); hind thighs are 1.4x
     if wyvern:  # two legs, the wings are its arms
         k = DRAGON_BULK
         b.ellip((0, 0.0, 0.48), (0.15 * k, 0.27, 0.15 * k), rot=(-12, 0, 0))
@@ -450,14 +450,14 @@ def dragon(b, look, wyvern=False):
         neck = [(0, -0.28, 0.48), (0, -0.4, 0.62), (0, -0.46, 0.78), (0, -0.58, 0.88)]  # a long S-curve
         tail = [(0, 0.36, 0.47), (0.03, 0.56, 0.4), (0.1, 0.76, 0.28), (-0.22, 0.93, 0.19), (-0.52, 1.06, 0.15), (-0.86, 1.16, 0.13)]
         z0 = 0.43
-    b.chain(neck, [0.115, 0.065])
+    b.chain(neck, [0.115 * (DRAGON_BULK / 1.4) ** 0.8, 0.065])
     hr = 0.1
     b.head, b.head_r = V(neck[-1]) + V(0, -0.07, 0.03), hr
     b.ellip(b.head, (hr * 0.95, hr * 1.15, hr * 0.85))
     b.snout = b.head + V(0, -hr * 1.3, -hr * 0.22)
     b.ellip(b.snout, (hr * 0.62, hr * 1.0, hr * 0.5))
     b.ellip(b.head + V(0, -hr * 0.35, hr * 0.45), (hr * 0.7, hr * 0.6, hr * 0.25))  # brow ridge
-    b.chain(tail, [0.105, 0.014])
+    b.chain(tail, [0.105 * (DRAGON_BULK / 1.4) ** 0.8, 0.016])
     b.torso_r, b.neck = 0.15 * DRAGON_BULK, V(neck[1])
     b.face = V(0, -1, -0.05).normalized()
     b.eye_size, b.eye_spread, b.eye_up = 0.2, 40, 26

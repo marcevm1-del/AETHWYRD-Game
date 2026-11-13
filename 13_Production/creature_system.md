@@ -53,6 +53,11 @@ Evidence: `reports/blender_wave_2026-11-02/creatures/w1_before.png`, `w1_after.p
 - **Tail spade:** 0.36 x 0.30 (was 0.2 x 0.17), bone-coloured, rolled 50 degrees, and the tail swings out to the side and low so the spade clears the wing at the preview camera.
 - **Gargoyle and Arch Demon** are on the wyvern plan but are not dragons: they keep the original wings (`WYVERN_WING_SPAN` 1.4, no lift). Their tail also got the side sweep.
 
+## Dragon spade and proportions (2026-11-13)
+- **Spade:** now 0.42 x 0.36 and stood on edge (roll 90 degrees, a tail fin) so its broad face shows to the preview camera and the near wing cannot flatten or hide it.
+- **Body vs wings:** `DRAGON_BULK` 1.4 -> 1.7; the forelimb, neck-base and tail-root radii scale with it (`(DRAGON_BULK/1.4)**0.8`). `DRAGON_WING_RATIO` stays 1.6 (Canon W6), so the body now reads as the mass under the wings instead of a small body hung from big wings.
+- Not changed: drakes/fire drakes (lizard profile, no spade), wyvern stinger, Gargoyle and Arch Demon (job 2).
+
 ## Using it in Blender
 
 1. **Install.** Zip `Tools/blender/ascend_creatures` and install it like the buildings add-on. `ascend_buildings` must be installed too, because the creatures reuse its mesh helpers.

@@ -987,10 +987,10 @@ def dragon_spade(c):
     tip, d = getattr(b, "tail_tip", None), getattr(b, "tail_tip_dir", None)
     if tip is None:
         return
-    L, W = 0.36, 0.3   # big enough to read at contact-sheet size (was 0.2 x 0.17, hidden by the wings)
+    L, W = 0.42, 0.36   # big enough to read at contact-sheet size (was 0.2 x 0.17, hidden by the wings)
     poly = [(0, -L * 0.05), (W * 0.32, -L * 0.12), (W * 0.5, L * 0.22), (W * 0.28, L * 0.6), (0, L), (-W * 0.28, L * 0.6),
             (-W * 0.5, L * 0.22), (-W * 0.32, -L * 0.12)]
-    c.g.slab_poly(poly[::-1], 0.022, "bone", aim(tip - d * 0.03, d) @ trs((0, 0, 0), (0, 0, 50)))
+    c.g.slab_poly(poly[::-1], 0.022, "bone", aim(tip - d * 0.03, d) @ trs((0, 0, 0), (0, 0, 90)))   # on edge (a fin), so the broad face shows to the preview camera and the wing cannot flatten it
 
 
 def breaking_shapes(c):
