@@ -50,3 +50,12 @@ The validator prints `graph findings 0`, **separate from the 28 map warnings**. 
 ## 7. Out of scope here
 
 Streaming, scene loading, Addressables, terrain and road rendering, the map UI and zoom levels, fog-of-war visuals, the World Map Studio and anything in `Game/`. All need the user's scale and tile decision first (Canon §6 WF9 and W3).
+
+## Map view (the feed for the World page)
+
+`WorldMapViews.Build(graph, knowledge, regions, dungeons, playerRegion)` (`Code/Ascend.Core/WorldMapView.cs`) returns plain lists a map UI draws without touching the graph, `MapKnowledge` or region data:
+- **Nodes:** every graph land, so the sheet keeps its shape. Unknown lands have no name, rank band or dungeons; Heard lands show name and rank band; Visited lands also list their dungeons. `IsPlayerHere` marks the current land.
+- **Edges:** a full line when both ends are known and one is Visited; a `Stub` when one end is Visited and the other Unknown. Ways between lands the player has not been to are left off.
+- `KnownRouteKm` gives the walking km between two known lands over known ground only (null otherwise).
+- Dungeons whose region is not a surface graph node (the Salvage Warren is in the Labyrinth) do not appear here; the Labyrinth registry feeds that page.
+- Tests: `WorldMapViewTests`. Not built: the Unity drawing (`WorldMapWindow` still uses its own data) and wiring `PlayerMap` to call this.
