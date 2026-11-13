@@ -3,7 +3,7 @@
 
 Run it with the TripoSR virtual environment's Python (system Python has no torch, on purpose):
 
-  E:\\Ideas\\AI-Game-Toolkit\\TripoSR\\.venv\\Scripts\\python.exe Tools\\ai3d\\triposr_run.py path\\to\\image.png [more images] [options]
+  E:\\tsr-venv\\Scripts\\python.exe Tools\\ai3d\\triposr_run.py path\\to\\image.png [more images] [options]
 
 What this wrapper adds to upstream `run.py` (which is left unedited):
   1. A pure-Python `torchmcubes` shim (scikit-image marching cubes). Upstream needs `torchmcubes` compiled from source

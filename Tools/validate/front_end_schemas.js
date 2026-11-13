@@ -1,0 +1,28 @@
+// Phase 1B schemas: character creator options and loading tips. Called from build_schemas.js.
+module.exports = function addFrontEndSchemas(SCHEMAS) {
+  const id = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
+  const hex = { type: 'string', pattern: '^#[0-9A-Fa-f]{6}$' };
+  const opt = { type: 'object', additionalProperties: false, required: ['id', 'name'], properties: { id, name: { type: 'string', minLength: 1 } } };
+  const colour = { type: 'object', additionalProperties: false, required: ['id', 'name', 'hex'], properties: { id, name: { type: 'string', minLength: 1 }, hex } };
+  SCHEMAS.player_appearance = {
+    title: 'Player appearance options (Phase 1B character creator)', type: 'object', additionalProperties: false,
+    required: ['version', 'maxNameLength', 'defaultName', 'suggestedNames', 'raceOriginNote', 'bodies', 'hairStyles', 'hairColours', 'skinTones', 'outfitColours'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      maxNameLength: { type: 'integer', minimum: 4, maximum: 32 }, defaultName: { type: 'string', minLength: 1 },
+      suggestedNames: { type: 'array', items: { type: 'string', minLength: 1 } }, raceOriginNote: { type: 'string', minLength: 1 },
+      bodies: { type: 'array', minItems: 2, items: { type: 'object', additionalProperties: false, required: ['id', 'name', 'torsoWidth', 'hipWidth'],
+        properties: { id: { type: 'string', enum: ['masculine', 'feminine'] }, name: { type: 'string', minLength: 1 }, torsoWidth: { type: 'number', minimum: 0.6, maximum: 1.4 }, hipWidth: { type: 'number', minimum: 0.6, maximum: 1.4 } } } },
+      hairStyles: { type: 'array', minItems: 1, items: opt },
+      hairColours: { type: 'array', minItems: 1, items: colour },
+      skinTones: { type: 'array', minItems: 1, items: colour },
+      outfitColours: { type: 'array', minItems: 1, items: colour }
+    } };
+  SCHEMAS.loading_tips = {
+    title: 'Loading screen tips (Phase 1B)', type: 'object', additionalProperties: false, required: ['version', 'tips'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      tips: { type: 'array', minItems: 5, items: { type: 'object', additionalProperties: false, required: ['id', 'text'],
+        properties: { id: { type: 'string', pattern: '^tip_[a-z0-9_]+$' }, text: { type: 'string', minLength: 10, maxLength: 160 } } } }
+    } };
+};

@@ -1304,5 +1304,330 @@
     "itm_minor_hp_potion"
    ]
   }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "E",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "The trinket is a child's wooden sword",
+   "A rival party has already chalked the landing",
+   "The scavengers have posted a polite sign"
+  ],
+  "id": "qst_wk_sol_warren_run",
+  "title": "Warren Salvage Run",
+  "day": "Solenday",
+  "slot": "daily",
+  "type": "Exploration",
+  "trope": "The halls reset every week",
+  "giver": "npc_guild_clerk_wendel",
+  "region": "reg_labyrinth_upper",
+  "summary": "The Salvage Warren's halls reset on the week, and so does Wendel's ledger. Clear the Chalk Landing scavengers and bring back two trinkets he can match to a name.",
+  "objectives": [
+   {
+    "kind": "reach",
+    "target": "dng_salvage_warren"
+   },
+   {
+    "kind": "kill",
+    "target": "mon_kobold_scavenger",
+    "count": 3
+   },
+   {
+    "kind": "collect",
+    "target": "itm_mat_stolen_trinket",
+    "count": 2,
+    "from": "mon_kobold_scavenger"
+   }
+  ],
+  "rewards": {
+   "gold": 110,
+   "xp": 300,
+   "gp": 10
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "The order is for a left-handed rookie",
+   "Torvald hums a different forge song",
+   "Whiskers is asleep on the anvil"
+  ],
+  "id": "qst_wk_sol_blade_order",
+  "title": "Guild Blade Order",
+  "day": "Solenday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Rookies need real steel",
+  "giver": "npc_torvald_stonebeard",
+  "region": "reg_aldmere",
+  "summary": "Torvald takes an order for guild-issue replacements. Forge him two scrap blade parts and he will fit them to the stock.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_part_scrap_blade",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 50,
+   "xp": 120,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "The dye must be exactly midnight blue",
+   "A customer asks for a dye that smells of rain",
+   "Ines has pins in her sleeve again"
+  ],
+  "id": "qst_wk_mae_ink_and_dye",
+  "title": "Ink and Dye",
+  "day": "Maelsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Dream-journal season",
+  "giver": "npc_ines_valbuena",
+  "region": "reg_aldmere",
+  "summary": "Everyone wants to write their dream down on Maelsday and nobody has ink. Ines needs one pot of inkwell dye from her loom before noon.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_inkwell_dye",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "xp": 110,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "morning",
+  "twists": [
+   "The apprentice drew the pattern backwards",
+   "Brannoc and Torvald argue over the temper",
+   "A customer wants it engraved with a joke"
+  ],
+  "id": "qst_wk_tho_hearth_poker",
+  "title": "Hearth Poker Order",
+  "day": "Thorsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "The anvil never stops",
+  "giver": "npc_brannoc_emberfist",
+  "region": "reg_aldmere",
+  "summary": "Brannoc's forge is behind on hearth tools. Bring him a Fangblade and a Carapace Cap sample for the apprentice wall to copy.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_fangblade",
+    "count": 1
+   },
+   {
+    "kind": "collect",
+    "target": "itm_carapace_cap",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 130,
+   "xp": 260,
+   "gp": 10
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "The herb is unlabelled",
+   "Fennick is sure a slime snuck in the jar",
+   "A child wants the empty bottle"
+  ],
+  "id": "qst_wk_syl_potion_shelf",
+  "title": "Herbalist's Shelf",
+  "day": "Sylvasday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Green hands, full shelves",
+  "giver": "npc_fennick_reed",
+  "region": "reg_whisperwood",
+  "summary": "Fennick restocks his shelf on Sylvasday. Brew two minor potions at the alembic and he will pay for the herbs you did not have to pick.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_minor_hp_potion",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 55,
+   "xp": 130,
+   "gp": 5
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "Lyra eats half before you arrive",
+   "Hollis refuses a skewer, then asks for two",
+   "A militia recruit cannot hold a skewer and a sword"
+  ],
+  "id": "qst_wk_kae_training_snacks",
+  "title": "Training Yard Snacks",
+  "day": "Kaelsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Banner day, hungry militia",
+  "giver": "npc_old_hollis",
+  "region": "reg_aldmere",
+  "summary": "Hollis's students forget to eat. Bring two hearth skewers from a campfire and watch the yard go quiet.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_hunters_skewer",
+    "count": 2
+   }
+  ],
+  "rewards": {
+   "gold": 45,
+   "xp": 120,
+   "gp": 4
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "dusk",
+  "twists": [
+   "Tamsin asks for the crust",
+   "Bo has already eaten the last loaf",
+   "A traveller stops for the lantern and stays for the bread"
+  ],
+  "id": "qst_wk_mor_lantern_loaf",
+  "title": "Lantern Loaf",
+  "day": "Morrowsday",
+  "slot": "daily",
+  "type": "OddJob",
+  "trope": "Quiet cooking for others",
+  "giver": "npc_brother_caspian",
+  "region": "reg_aldmere",
+  "summary": "Brother Caspian lights the Small Lantern at dusk and the children expect bread. Bake a hearth loaf at the Griffon and bring it up the hill.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_hearth_loaf",
+    "count": 1
+   },
+   {
+    "kind": "talk",
+    "target": "npc_brother_caspian"
+   }
+  ],
+  "rewards": {
+   "gold": 40,
+   "xp": 130,
+   "gp": 5
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "day",
+  "twists": [
+   "Gilda hides her rival stew in plain sight",
+   "Whiskers votes for neither",
+   "The judge is Mayor Pike, who is asleep"
+  ],
+  "id": "qst_wk_vex_gamble_the_hearth",
+  "title": "Cook-Off Wager",
+  "day": "Vexday",
+  "slot": "daily",
+  "type": "Hidden",
+  "trope": "Market day wagers",
+  "giver": "npc_marta_gruel",
+  "region": "reg_aldmere",
+  "summary": "Marta bets Gilda a gold piece that the Griffon's hearth stew beats anything from her shelf. Cook the stew and carry the proof across the square.",
+  "objectives": [
+   {
+    "kind": "collect",
+    "target": "itm_hearth_stew",
+    "count": 1
+   },
+   {
+    "kind": "talk",
+    "target": "npc_gilda_marsh"
+   }
+  ],
+  "rewards": {
+   "gold": 70,
+   "xp": 150,
+   "gp": 6
+  }
+ },
+ {
+  "repeat": "weekly",
+  "regionState": "any",
+  "rankMin": "F",
+  "rankMax": "E",
+  "timeOfDay": "any",
+  "twists": [
+   "The boar is guarding a nest",
+   "Your companion spots the wolf first",
+   "A rival pair is working the same road"
+  ],
+  "id": "qst_wk_any_party_of_two",
+  "title": "Party of Two Contract",
+  "day": "Any",
+  "slot": "daily",
+  "type": "Subjugation",
+  "trope": "A friend to cover your back",
+  "giver": "npc_mina_feathersby",
+  "region": "reg_whisperwood",
+  "summary": "A short pair contract for anyone travelling with a companion: two forest wolves and one boar, worked together.",
+  "objectives": [
+   {
+    "kind": "kill",
+    "target": "mon_forest_wolf",
+    "count": 2
+   },
+   {
+    "kind": "kill",
+    "target": "mon_wild_boar",
+    "count": 1
+   }
+  ],
+  "rewards": {
+   "gold": 60,
+   "xp": 160,
+   "gp": 6
+  }
  }
 ]

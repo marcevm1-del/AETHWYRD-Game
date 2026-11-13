@@ -26,5 +26,8 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/The Tally of the Lost|The Tally of the Lost]]
+- [[Quests/The Tally-Keepers' Accord|The Tally-Keepers' Accord]]
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]]
 - [[Quests/Weekly Board/Sewer Duty|Sewer Duty]]
+- [[Quests/Weekly Board/Warren Salvage Run|Warren Salvage Run]]

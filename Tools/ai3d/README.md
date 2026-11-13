@@ -1,10 +1,10 @@
 # TripoSR (image to 3D mesh) for AETHWYRD model work
 
-TripoSR is cloned at `E:\Ideas\AI-Game-Toolkit\TripoSR` (MIT, shallow clone, upstream unedited). It has its own Python 3.11 virtual environment there, so system Python stays clean. `triposr_run.py` here runs it.
+TripoSR is cloned at `E:\Ideas\AI-Game-Toolkit\TripoSR` (MIT, shallow clone, upstream unedited). Its Python 3.11 virtual environment is `E:\tsr-venv` (a short path: the clone's own `.venv` hit Windows long-path errors), so system Python stays clean. `triposr_run.py` here runs it.
 
 ## Run
 ```powershell
-E:\Ideas\AI-Game-Toolkit\TripoSR\.venv\Scripts\python.exe Tools\ai3d\triposr_run.py path\to\image.png
+E:\tsr-venv\Scripts\python.exe Tools\ai3d\triposr_run.py path\to\image.png
 ```
 - Output: `Art/Generation/staging/meshes/<image-name>/` (gitignored): the mesh (`.obj`, or `--model-save-format glb`) and `provenance.json`.
 - First run downloads the model weights from Hugging Face (about 1.7 GB, MIT) into the Hugging Face cache.

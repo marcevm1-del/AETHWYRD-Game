@@ -85,6 +85,13 @@ namespace Ascend.Core
         public List<CompanionBondSave> CompanionBonds { get; set; }
         /// <summary>Chosen behaviour preset per companion: companion id to preset name (null in older saves: data defaults; Upgrade fills it).</summary>
         public Dictionary<string, string> CompanionPresets { get; set; }
+        /// <summary>Character creator (Phase 1B): the name and look. Ids from Data/Characters/player_appearance.json (null in older saves: Upgrade fills the defaults).</summary>
+        public string PlayerName { get; set; }
+        public Body PlayerBody { get; set; } = Body.Masculine;
+        public string HairStyle { get; set; }
+        public string HairColour { get; set; }
+        public string SkinTone { get; set; }
+        public string OutfitColour { get; set; }
     }
 
     public sealed class SiegeSave
@@ -175,7 +182,15 @@ namespace Ascend.Core
                 if (!string.IsNullOrEmpty(kv.Key) && Enum.TryParse<CompanionPreset>(kv.Value, true, out var cp) && Enum.IsDefined(typeof(CompanionPreset), cp))
                     presets[kv.Key] = cp.ToString();
             s.CompanionPresets = presets;
-            s.Version = SaveGame.CurrentVersion;
+            s.PlayerName = AppearanceRules.CleanName(s.PlayerName, AppearanceDefaults.MaxNameLength, AppearanceDefaults.Name);
+            if (!Enum.IsDefined(typeof(Body), s.PlayerBody)) s.PlayerBody = Body.Masculine;
+            if (string.IsNullOrEmpty(s.HairStyle)) s.HairStyle = AppearanceDefaults.HairStyle;
+            if (string.IsNullOrEmpty(s.HairColour)) s.HairColour = AppearanceDefaults.HairColour;
+            if (string.IsNullOrEmpty(s.SkinTone)) s.SkinTone = AppearanceDefaults.SkinTone;
+            if (string.IsNullOrEmpty(s.OutfitColour)) s.OutfitColour = AppearanceDefaults.OutfitColour;
+            // Only a version in range is stamped current. A future (or invalid) version stays as it is, so Validate, which the
+            // game runs after Upgrade, still rejects it instead of an old build loading a newer save and overwriting it.
+            if (s.Version >= 1 && s.Version <= SaveGame.CurrentVersion) s.Version = SaveGame.CurrentVersion;
             return s;
         }
 

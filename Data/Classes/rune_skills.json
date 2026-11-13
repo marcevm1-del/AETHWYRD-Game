@@ -1,0 +1,487 @@
+{
+ "notes": "Gear skills: fitted rune words and enchantment scrolls each grant ONE extra skill while the gear is worn (12_Systems/gear_and_runes.md, 05_Skills_Magic/rune_and_enchant_skills.md). Nothing here breaks, wears out or gambles. A gear skill is small by design: its total hit power stays under every class ultimate and its cost, cooldown and level gate keep it a side option, never a replacement for the class kit. Power scales with the fitting's quality statMult (weakest rune for a word). Decided 2026-11-08 by Claude under delegated creative control; the user may overrule. ENGINE GAP: Ascend.Core does not yet grant skills from fittings and Unity combat does not read this file (flagged to core-rules-engineer and gameplay-engineer).",
+ "rules": {
+  "gearSkillSlots": 2,
+  "maxTotalHitPower": 3,
+  "minCooldownDamagingSec": 5,
+  "maxBuffPercent": 15,
+  "maxBuffSeconds": 8,
+  "powerScalesWith": "fitting quality statMult"
+ },
+ "skills": [
+  {
+   "id": "skl_word_oathstrike",
+   "name": "Oathstrike",
+   "source": {
+    "type": "runeWord",
+    "id": "word_forge_oath"
+   },
+   "fits": [
+    "weapon"
+   ],
+   "minLevel": 6,
+   "kind": "chain",
+   "slot": "skill",
+   "animTag": "gear_oathstrike",
+   "hits": [
+    {
+     "power": 1,
+     "weight": "medium"
+    },
+    {
+     "power": 1.8,
+     "weight": "heavy"
+    }
+   ],
+   "costSp": 14,
+   "cooldownSec": 8,
+   "element": "None",
+   "affinityClasses": [
+    "cls_swordsman",
+    "cls_guardian",
+    "cls_lancer"
+   ],
+   "effect": "Two-beat strike sworn on the anvil; the heavy second hit breaks a guard."
+  },
+  {
+   "id": "skl_word_stonewatch_stance",
+   "name": "Stonewatch Stance",
+   "source": {
+    "type": "runeWord",
+    "id": "word_stonewatch"
+   },
+   "fits": [
+    "armor"
+   ],
+   "minLevel": 6,
+   "kind": "buff",
+   "slot": "skill",
+   "animTag": "gear_stonewatch",
+   "hits": [],
+   "costSp": 10,
+   "cooldownSec": 20,
+   "element": "Earth",
+   "buff": {
+    "stat": "damageTaken",
+    "percent": -15,
+    "seconds": 6
+   },
+   "affinityClasses": [
+    "cls_guardian",
+    "cls_cleric",
+    "cls_artisan"
+   ],
+   "effect": "Plant your feet: damage taken -15% and no stagger for 6s. You cannot dash while it lasts."
+  },
+  {
+   "id": "skl_word_stormfast_step",
+   "name": "Stormfast Step",
+   "source": {
+    "type": "runeWord",
+    "id": "word_stormfast"
+   },
+   "fits": [
+    "accessory"
+   ],
+   "minLevel": 8,
+   "kind": "dash",
+   "slot": "skill",
+   "animTag": "gear_stormfast",
+   "hits": [
+    {
+     "power": 0.8,
+     "weight": "light"
+    }
+   ],
+   "costSp": 12,
+   "cooldownSec": 7,
+   "element": "Wind",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_rogue",
+    "cls_ranger",
+    "cls_martial_artist",
+    "cls_bard"
+   ],
+   "effect": "A gust-borne dash that clips anything in the path."
+  },
+  {
+   "id": "skl_word_hearthfire_ring",
+   "name": "Hearthfire Ring",
+   "source": {
+    "type": "runeWord",
+    "id": "word_hearthfire"
+   },
+   "fits": [
+    "weapon"
+   ],
+   "minLevel": 10,
+   "kind": "aoe",
+   "slot": "skill",
+   "animTag": "gear_hearthfire",
+   "hits": [
+    {
+     "power": 0.7,
+     "weight": "medium"
+    },
+    {
+     "power": 0.7,
+     "weight": "medium"
+    }
+   ],
+   "costMp": 16,
+   "cooldownSec": 12,
+   "element": "Fire",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_mage",
+    "cls_cleric",
+    "cls_tamer"
+   ],
+   "effect": "A ring of hearth-light: scorches foes inside it, and allies standing in it regain 4% max HP over 5s."
+  },
+  {
+   "id": "skl_brand_emberbrand_slash",
+   "name": "Emberbrand Slash",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_emberbrand"
+   },
+   "fits": [
+    "weapon"
+   ],
+   "minLevel": 3,
+   "kind": "chain",
+   "slot": "skill",
+   "animTag": "gear_emberbrand",
+   "hits": [
+    {
+     "power": 1.2,
+     "weight": "medium"
+    }
+   ],
+   "costSp": 10,
+   "cooldownSec": 6,
+   "element": "Fire",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_swordsman",
+    "cls_lancer",
+    "cls_martial_artist"
+   ],
+   "effect": "The brand flares along the blade for one burning cut."
+  },
+  {
+   "id": "skl_brand_stormthread_lance",
+   "name": "Stormthread Lance",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_stormthread"
+   },
+   "fits": [
+    "weapon"
+   ],
+   "minLevel": 5,
+   "kind": "ranged",
+   "slot": "skill",
+   "animTag": "gear_stormthread",
+   "hits": [
+    {
+     "power": 1.1,
+     "weight": "medium"
+    }
+   ],
+   "costMp": 8,
+   "cooldownSec": 6,
+   "element": "Lightning",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_mage",
+    "cls_ranger",
+    "cls_bard"
+   ],
+   "effect": "Lets the woven thread loose as a lance of lightning."
+  },
+  {
+   "id": "skl_brand_ward_pulse",
+   "name": "Ward Pulse",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_wardweave"
+   },
+   "fits": [
+    "armor"
+   ],
+   "minLevel": 3,
+   "kind": "buff",
+   "slot": "skill",
+   "animTag": "gear_wardweave",
+   "hits": [],
+   "costMp": 10,
+   "cooldownSec": 18,
+   "element": "None",
+   "buff": {
+    "stat": "shield",
+    "percent": 8,
+    "seconds": 5
+   },
+   "affinityClasses": [
+    "cls_guardian",
+    "cls_cleric",
+    "cls_artisan"
+   ],
+   "effect": "The weave pulses outward: a shield worth 8% max HP for 5s."
+  },
+  {
+   "id": "skl_brand_second_wind",
+   "name": "Second Wind",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_vitality"
+   },
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "minLevel": 4,
+   "kind": "utility",
+   "slot": "skill",
+   "animTag": "gear_vitality",
+   "hits": [],
+   "costSp": 12,
+   "cooldownSec": 30,
+   "element": "None",
+   "buff": {
+    "stat": "regenHp",
+    "percent": 8,
+    "seconds": 4
+   },
+   "affinityClasses": [
+    "cls_swordsman",
+    "cls_guardian",
+    "cls_tamer",
+    "cls_artisan"
+   ],
+   "effect": "Draw one steady breath: regain 8% max HP over 4s."
+  },
+  {
+   "id": "skl_brand_nightstep_slip",
+   "name": "Nightstep Slip",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_nightstep"
+   },
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "minLevel": 5,
+   "kind": "dash",
+   "slot": "skill",
+   "animTag": "gear_nightstep",
+   "hits": [],
+   "costSp": 10,
+   "cooldownSec": 8,
+   "element": "None",
+   "buff": {
+    "stat": "crit",
+    "percent": 5,
+    "seconds": 3
+   },
+   "affinityClasses": [
+    "cls_rogue",
+    "cls_ranger",
+    "cls_martial_artist"
+   ],
+   "effect": "A silent slip-step; your next hit within 3s has +5% crit chance."
+  },
+  {
+   "id": "skl_word_cindersong",
+   "name": "Cindersong",
+   "source": {
+    "type": "runeWord",
+    "id": "word_cindersong"
+   },
+   "fits": [
+    "weapon"
+   ],
+   "minLevel": 12,
+   "kind": "chain",
+   "slot": "skill",
+   "animTag": "gear_cindersong",
+   "hits": [
+    {
+     "power": 0.9,
+     "weight": "light"
+    },
+    {
+     "power": 1.1,
+     "weight": "medium"
+    }
+   ],
+   "costSp": 14,
+   "cooldownSec": 9,
+   "element": "Fire",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_swordsman",
+    "cls_martial_artist",
+    "cls_lancer"
+   ],
+   "effect": "A banked-ember two-step: a quick cut, then a glowing follow-through that leaves foes warm and wary."
+  },
+  {
+   "id": "skl_word_bastion_vow",
+   "name": "Bastion Vow",
+   "source": {
+    "type": "runeWord",
+    "id": "word_bastion_vow"
+   },
+   "fits": [
+    "armor"
+   ],
+   "minLevel": 12,
+   "kind": "buff",
+   "slot": "skill",
+   "animTag": "gear_bastion_vow",
+   "hits": [],
+   "costMp": 12,
+   "cooldownSec": 22,
+   "element": "Earth",
+   "buff": {
+    "stat": "shield",
+    "percent": 10,
+    "seconds": 6
+   },
+   "affinityClasses": [
+    "cls_guardian",
+    "cls_cleric",
+    "cls_artisan"
+   ],
+   "effect": "Swear to hold the line: a shield worth 10% max HP for 6s."
+  },
+  {
+   "id": "skl_word_duskwalk_slip",
+   "name": "Duskwalk",
+   "source": {
+    "type": "runeWord",
+    "id": "word_duskwalk"
+   },
+   "fits": [
+    "accessory"
+   ],
+   "minLevel": 12,
+   "kind": "dash",
+   "slot": "skill",
+   "animTag": "gear_duskwalk",
+   "hits": [
+    {
+     "power": 0.6,
+     "weight": "light"
+    }
+   ],
+   "costSp": 10,
+   "cooldownSec": 8,
+   "element": "Dark",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_rogue",
+    "cls_ranger",
+    "cls_martial_artist"
+   ],
+   "effect": "Step through the lamp-lighting hour: a shadowed dash that brushes aside whatever is in the way."
+  },
+  {
+   "id": "skl_brand_rime_cut",
+   "name": "Rimebrand Cut",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_rimebrand"
+   },
+   "fits": [
+    "weapon"
+   ],
+   "minLevel": 6,
+   "kind": "chain",
+   "slot": "skill",
+   "animTag": "gear_rimebrand",
+   "hits": [
+    {
+     "power": 1.2,
+     "weight": "medium"
+    }
+   ],
+   "costSp": 10,
+   "cooldownSec": 6,
+   "element": "Ice",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_swordsman",
+    "cls_lancer",
+    "cls_ranger"
+   ],
+   "effect": "Frost climbs the edge for one chilling cut."
+  },
+  {
+   "id": "skl_brand_ironhide_brace",
+   "name": "Ironhide Brace",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_ironhide"
+   },
+   "fits": [
+    "armor"
+   ],
+   "minLevel": 5,
+   "kind": "buff",
+   "slot": "skill",
+   "animTag": "gear_ironhide",
+   "hits": [],
+   "costSp": 10,
+   "cooldownSec": 20,
+   "element": "None",
+   "buff": {
+    "stat": "damageTaken",
+    "percent": -10,
+    "seconds": 5
+   },
+   "affinityClasses": [
+    "cls_guardian",
+    "cls_swordsman",
+    "cls_artisan"
+   ],
+   "effect": "Brace your shoulders: damage taken -10% for 5s."
+  },
+  {
+   "id": "skl_brand_lantern_glow",
+   "name": "Lantern Glow",
+   "source": {
+    "type": "enchantment",
+    "id": "enc_lanternlight"
+   },
+   "fits": [
+    "accessory"
+   ],
+   "minLevel": 6,
+   "kind": "ranged",
+   "slot": "skill",
+   "animTag": "gear_lanternlight",
+   "hits": [
+    {
+     "power": 0.9,
+     "weight": "light"
+    }
+   ],
+   "costMp": 8,
+   "cooldownSec": 7,
+   "element": "Light",
+   "appliesElement": true,
+   "affinityClasses": [
+    "cls_mage",
+    "cls_cleric",
+    "cls_bard"
+   ],
+   "effect": "Opens the lantern for one bright, warm bolt of light."
+  }
+ ]
+}

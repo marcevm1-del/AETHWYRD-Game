@@ -22,6 +22,7 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/Stock for the Clinic|Stock for the Clinic]]
 - [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]]
 - [[Quests/Weekly Board/Tidy the Graves|Tidy the Graves]]
 

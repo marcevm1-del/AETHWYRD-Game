@@ -2,6 +2,19 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-11
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Phase 1B | Front end: title screen with the AETHWYRD wordmark, main menu (Continue only with a valid save, New Game, Settings, Quit), character creator (name, body, hair, skin, outfit from Data/Characters/player_appearance.json, live preview), loading screen with tips; appearance saved in SaveGame; Title scene built by TitleSceneBuilder; stand-in landmarks for the Salvage Warren reach targets; screenshots 13_Production/phase1b_*.png | 761 + 192 |
+| Agent sessions, batch 2 | Merged work from: audio-designer, combat-designer, items-designer, narrative-writer, producer, quest-designer, systems-designer, world-designer. Includes the sound event list and free-audio source shortlist, Act I scene scripts, the producer's roadmap, risk and usage-budget plan and Unity dependency map, Ring 0 and Salvage Warren quests, item descriptions, rune items, Warren loot and a pricing pass, regional encounter tables, weapon-family movesets, armor and weak points for five dungeon bosses and a reaction balance pass (whichever of these branches passed the gate) | 755 |
+
+## 2026-11-09
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Agent sessions, batch 1 | Seven agent branches merged: canon-keeper (rename audit, decision index, consistency check, watch list), code-reviewer (Core performance review, tech-debt register), anime-fantasy-director (human, UI and contact-sheet reviews, style checklist), audio-designer (music cue sheet), bestiary-designer (Salvage Warren residents, mount species, regional ecology), class-skill-designer (9 rune and enchantment skills with schema), core-rules-engineer (save migration tests and a fix so a newer save is never overwritten by an older build) | 755 |
+
 ## 2026-11-08
 
 | Commit | What changed | Tests |

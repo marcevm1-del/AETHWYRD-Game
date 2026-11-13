@@ -31,3 +31,4 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 - [[Quests/A Thousand Swings|A Thousand Swings]]
 - [[Quests/Weekly Board/Morning Sparring|Morning Sparring]]
+- [[Quests/Weekly Board/Training Yard Snacks|Training Yard Snacks]]

@@ -106,7 +106,9 @@ These are presentation and spawn variants of this species, not separate core com
 - [[Quests/Status Granted|Status Granted]] — rank F, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/The Crimson Wolves|The Crimson Wolves]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
+- [[Quests/Two on the Road|Two on the Road]] — rank F, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Weekly Board/Wolves on the Road|Wolves on the Road]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
+- [[Quests/Weekly Board/Party of Two Contract|Party of Two Contract]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
 

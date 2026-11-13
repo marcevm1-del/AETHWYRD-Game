@@ -14,6 +14,7 @@ namespace Ascend.EditorTools
     public static class BuildPlayer
     {
         const string ScenePath = "Assets/_Game/Scenes/Ring0_Graybox.unity";
+        const string TitleScenePath = "Assets/_Game/Scenes/Title.unity";
         static readonly string[] DataFiles =
         {
             "World/regions.json", "World/world_tuning.json", "World/siege_waves.json", "World/inns.json", "World/guild_ranks.json", "World/gathering.json",
@@ -22,6 +23,7 @@ namespace Ascend.EditorTools
             "Quests/quests.json", "Quests/story_flags.json", "Quests/weekly_board.json",
             "NPCs/npcs.json", "Classes/classes.json", "Classes/progression.json",
             "Audio/accessibility.json", "Audio/music_states.json", "Audio/photo_mode.json", "Companions/companion_rules.json", "Companions/companions.json", "Companions/mounts.json", "Companions/stables.json", "Items/crafting_rules.json", "Items/crops.json", "Items/gear_rules.json", "Items/life_skills.json", "World/civilization_archive.json", "World/dungeons.json", "World/housing.json", "World/labyrinth.json", "World/living_world.json", "World/puzzles.json",
+            "Characters/player_appearance.json", "UI/loading_tips.json",
         };
 
         [MenuItem("Assets/Ascend/Build Ring 0 Player (Windows)")]
@@ -48,9 +50,11 @@ namespace Ascend.EditorTools
                 }
                 AssetDatabase.Refresh();
                 Directory.CreateDirectory(outDir);
+                // Title first (scene 0), then the field. The title scene is built by TitleSceneBuilder.BuildBatch; without it the build is Ring 0 only.
+                var scenes = File.Exists(Path.Combine(projectRoot, TitleScenePath)) ? new[] { TitleScenePath, ScenePath } : new[] { ScenePath };
                 report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
                 {
-                    scenes = new[] { ScenePath },
+                    scenes = scenes,
                     locationPathName = Path.Combine(outDir, "ProjectAscend.exe"),
                     target = BuildTarget.StandaloneWindows64,
                     options = BuildOptions.None,

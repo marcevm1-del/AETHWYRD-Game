@@ -108,7 +108,7 @@ const SCHEMAS = {
       id: id('itm_'), name: { type: 'string', minLength: 1 },
       category: { type: 'string', enum: ['material', 'core', 'weapon', 'armor', 'accessory', 'consumable', 'key', 'relic', 'rune', 'scroll', 'part', 'fragment'] },
       rank: RL, rarity: { type: 'string', enum: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic', 'Divine'] },
-      slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, setId: { type: 'string' },
+      slot: { type: 'string' }, weaponType: { type: 'string', description: 'weapons: must appear in a class weapons list' }, armorWeight: { type: 'string', enum: ['cloth', 'light', 'medium', 'heavy'] }, value: { type: 'integer', minimum: 0 }, stats: { type: 'object' }, flavor: { type: 'string' }, description: { type: 'string', minLength: 10, description: 'plain player-facing explanation of what the item is and is for' }, icon: { type: 'string', pattern: '^icon_[a-z0-9_]+$', description: 'icon id, see 09_Equipment/item_icon_list.md' }, setId: { type: 'string' },
       meal: { type: 'object', additionalProperties: false, required: ['effects', 'seconds'], description: 'cooking buff (Well Fed slot)', properties: {
         effects: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['stat', 'amount'], properties: { stat: { type: 'string', minLength: 1 }, amount: { type: 'number' } } } },
         seconds: { type: 'number', exclusiveMinimum: 0 } } }
@@ -394,6 +394,34 @@ const SCHEMAS = {
     }
   };
 }
+// --- Gear skills: skills granted by fitted rune words and enchantments (Data/Classes/rune_skills.json) ---
+{
+  const CATS = { type: 'array', minItems: 1, uniqueItems: true, items: { type: 'string', enum: ['weapon', 'armor', 'accessory'] } };
+  const HIT = { type: 'object', additionalProperties: false, required: ['power', 'weight'], properties: { power: { type: 'number', minimum: 0 }, weight: { type: 'string', enum: ['light', 'medium', 'heavy', 'launch', 'skill'] } } };
+  SCHEMAS.rune_skills = {
+    title: 'Gear skills (rune words and enchantments)', type: 'object', additionalProperties: false,
+    required: ['notes', 'rules', 'skills'],
+    properties: {
+      notes: { type: 'string' },
+      rules: { type: 'object', additionalProperties: false, required: ['gearSkillSlots', 'maxTotalHitPower', 'minCooldownDamagingSec', 'maxBuffPercent', 'maxBuffSeconds', 'powerScalesWith'], properties: {
+        gearSkillSlots: { type: 'integer', minimum: 1, maximum: 4 }, maxTotalHitPower: { type: 'number', minimum: 0 }, minCooldownDamagingSec: { type: 'number', minimum: 0 },
+        maxBuffPercent: { type: 'number', minimum: 0 }, maxBuffSeconds: { type: 'number', minimum: 0 }, powerScalesWith: { type: 'string' } } },
+      skills: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false,
+        required: ['id', 'name', 'source', 'fits', 'minLevel', 'kind', 'slot', 'animTag', 'hits', 'cooldownSec', 'element', 'effect'],
+        properties: {
+          id: id('skl_'), name: { type: 'string', minLength: 1 },
+          source: { type: 'object', additionalProperties: false, required: ['type', 'id'], properties: { type: { type: 'string', enum: ['runeWord', 'enchantment'] }, id: { type: 'string', pattern: '^(word|enc)_[a-z0-9_]+$' } } },
+          fits: CATS, minLevel: { type: 'integer', minimum: 1, maximum: 300 },
+          kind: { type: 'string', enum: ['chain', 'launcher', 'dash', 'ranged', 'aoe', 'buff', 'utility'] }, slot: { type: 'string', enum: ['skill'] },
+          animTag: { type: 'string', pattern: '^gear_[a-z0-9_]+$' }, hits: { type: 'array', items: HIT },
+          costSp: { type: 'number', minimum: 0 }, costMp: { type: 'number', minimum: 0 }, cooldownSec: { type: 'number', minimum: 0 },
+          element: EL, appliesElement: { type: 'boolean' },
+          buff: { type: 'object', additionalProperties: false, required: ['stat', 'percent', 'seconds'], properties: { stat: { type: 'string', enum: ['damageTaken', 'shield', 'regenHp', 'crit'] }, percent: { type: 'number' }, seconds: { type: 'number', exclusiveMinimum: 0 } } },
+          affinityClasses: { type: 'array', uniqueItems: true, items: id('cls_') }, effect: { type: 'string', minLength: 3 }
+        } } }
+    }
+  };
+}
 // --- Housing and farming (Step 2 of part 2; Data/World/housing.json, Data/Items/crops.json) ---
 {
   const R9 = { type: 'string', enum: ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'] };
@@ -618,10 +646,26 @@ const SCHEMAS = {
         } } }
     } };
 }
+// --- Dungeon loot: room caches and their tables (Data/World/dungeon_loot.json) ---
+SCHEMAS.dungeon_loot = {
+  title: 'Dungeon loot', type: 'object', additionalProperties: false, required: ['notes', 'tables', 'caches'],
+  properties: {
+    notes: { type: 'string' },
+    tables: { type: 'array', minItems: 1, items: SCHEMAS.loot_table },
+    caches: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['id', 'dungeonId', 'roomId', 'kind', 'tableId', 'rolls', 'once'],
+      properties: {
+        id: { type: 'string', pattern: '^cache_[a-z0-9_]+$' }, dungeonId: { type: 'string', pattern: '^dng_[a-z0-9_]+$' }, roomId: { type: 'string', pattern: '^rm_[a-z0-9_]+$' },
+        kind: { type: 'string', enum: ['salvage_pile', 'chest', 'boss_cache', 'secret_chest'] }, tableId: { type: 'string', pattern: '^loot_[a-z0-9_]+$' },
+        rolls: { type: 'integer', minimum: 1, maximum: 3 }, once: { type: 'boolean' }, label: { type: 'string' }
+      } } }
+  } };
 require('./graph_schemas')(SCHEMAS); // Wave F-lite
 require('./audio_schemas')(SCHEMAS); // Wave D
+require('./weapon_schemas')(SCHEMAS); // weapon movesets
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
 require('./library_schemas')(SCHEMAS); // Libraries and books
+require('./front_end_schemas')(SCHEMAS); // Phase 1B
+require('./encounter_schemas')(SCHEMAS); // Regional encounter tables
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

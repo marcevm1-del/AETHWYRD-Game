@@ -419,10 +419,12 @@ const SINGLETONS = {
   companion_rules: { file: 'Companions/companion_rules.json', schema: 'companion_rules' },
   mounts: { file: 'Companions/mounts.json', schema: 'mounts' },
   gear_rules: { file: 'Items/gear_rules.json', schema: 'gear_rules' },
+  rune_skills: { file: 'Classes/rune_skills.json', schema: 'rune_skills' },
   housing: { file: 'World/housing.json', schema: 'housing' },
   crops: { file: 'Items/crops.json', schema: 'crops' },
   stables: { file: 'Companions/stables.json', schema: 'stables' },
-  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' }
+  civilization_archive: { file: 'World/civilization_archive.json', schema: 'civilization_archive' },
+  dungeon_loot: { file: 'World/dungeon_loot.json', schema: 'dungeon_loot' }
 };
 for (const [name, c] of Object.entries(SINGLETONS)) {
   if (!fs.existsSync(path.join(DATA, c.file))) { err(c.file, 'file missing'); continue; }
@@ -501,6 +503,68 @@ for (const [name, c] of Object.entries(SINGLETONS)) {
       for (const p of [...a.blades, ...a.hilts]) { const it = ITEMS_BY_ID[p]; if (!it || it.category !== 'part') err(a.id, `${p} is not a part item`); else if (!outputs.has(p)) err(a.id, `no recipe makes ${p}`); }
     }
     for (const [k, st] of Object.entries(obj.stations)) if (!(st in rf.stations)) err(c.file, `stations.${k}: "${st}" is not a recipe station`);
+    if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
+  }
+  if (name === 'dungeon_loot' && obj.tables) {
+    // Room caches: real dungeon rooms, real items, ranks that fit the dungeon, sure drops where the player cannot miss them.
+    const dungeons = load('World/dungeons.json');
+    const RO = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX'];
+    const tids = obj.tables.map(t => t.id);
+    if (new Set(tids).size !== tids.length) err(c.file, 'duplicate table id');
+    if (new Set(obj.caches.map(k => k.id)).size !== obj.caches.length) err(c.file, 'duplicate cache id');
+    for (const t of obj.tables) for (const en of t.entries) {
+      const it = ITEMS_BY_ID[en.itemId];
+      if (!it) { err(t.id, `item ${en.itemId} does not exist`); continue; }
+      if (en.min > en.max) err(t.id, `${en.itemId} min is above max`);
+      if (it.category === 'key') err(t.id, `${en.itemId} is a key item and cannot be loot`);
+    }
+    for (const k of obj.caches) {
+      const d = dungeons.find(x => x.id === k.dungeonId);
+      if (!d) { err(k.id, `dungeon ${k.dungeonId} does not exist`); continue; }
+      const room = d.rooms.find(r => r.id === k.roomId);
+      if (!room) { err(k.id, `room ${k.roomId} is not in ${k.dungeonId}`); continue; }
+      const t = obj.tables.find(x => x.id === k.tableId);
+      if (!t) { err(k.id, `table ${k.tableId} does not exist`); continue; }
+      if (k.kind === 'boss_cache' && room.role !== 'boss') err(k.id, 'a boss cache belongs in the boss room');
+      if (k.kind === 'secret_chest' && !room.secret) err(k.id, 'a secret chest belongs in a secret room');
+      if (k.kind !== 'secret_chest' && room.secret) err(k.id, 'a secret room holds only its secret chest');
+      const cap = RO.indexOf(d.recommendedRank) + 2; // at most two ranks above the dungeon rank
+      for (const en of t.entries) { const it = ITEMS_BY_ID[en.itemId]; if (it && it.rank && RO.indexOf(it.rank) > cap) err(k.id, `${en.itemId} is rank ${it.rank}, too high for a rank ${d.recommendedRank} dungeon`); }
+      if ((k.kind === 'boss_cache' || k.kind === 'secret_chest') && !t.entries.some(en => en.chance === 1)) err(k.id, 'a boss cache or secret chest must hold at least one sure drop (no empty reward)');
+    }
+    for (const t of obj.tables) if (!obj.caches.some(k => k.tableId === t.id)) err(t.id, 'table is used by no cache');
+  }
+  if (name === 'rune_skills' && obj.skills) {
+    // Gear skills stay a side option: capped power, real sources, every fitting covered (Canon Slow-Life: nothing breaks).
+    const gr = load('Items/gear_rules.json'), R = obj.rules;
+    const words = Object.fromEntries(gr.runeWords.map(w => [w.id, w])), encs = Object.fromEntries(gr.enchantments.map(e => [e.id, e]));
+    const clsIds = new Set(rows.classes.map(cl => cl.id)), allKit = new Set(rows.classes.flatMap(cl => cl.kit.map(k => k.id)));
+    const ids = obj.skills.map(s => s.id);
+    if (new Set(ids).size !== ids.length) err(c.file, 'duplicate skill id');
+    const bySource = {};
+    for (const s of obj.skills) {
+      if (allKit.has(s.id)) err(s.id, 'id collides with a class kit skill');
+      const src = s.source.type === 'runeWord' ? words[s.source.id] : encs[s.source.id];
+      if (!src) { err(s.id, `source ${s.source.id} does not exist in gear_rules.json`); continue; }
+      (bySource[s.source.id] = bySource[s.source.id] || []).push(s.id);
+      for (const f of s.fits) if (!src.fits.includes(f)) err(s.id, `source ${s.source.id} does not fit ${f}`);
+      if (s.source.type === 'enchantment' && src.element && s.element !== src.element) err(s.id, `element ${s.element} must match the enchantment element ${src.element}`);
+      const total = s.hits.reduce((a, h) => a + h.power, 0);
+      if (total > R.maxTotalHitPower) err(s.id, `total hit power ${total} is above ${R.maxTotalHitPower}`);
+      if (s.hits.length && s.cooldownSec < R.minCooldownDamagingSec) err(s.id, `a damaging gear skill needs cooldown >= ${R.minCooldownDamagingSec}s`);
+      if (!s.costSp && !s.costMp) err(s.id, 'a gear skill must cost SP or MP');
+      if (s.appliesElement && s.element === 'None') err(s.id, 'appliesElement needs an element');
+      if (s.kind === 'buff' || s.buff) {
+        if (!s.buff) err(s.id, 'a buff skill needs a buff block');
+        else { if (Math.abs(s.buff.percent) > R.maxBuffPercent) err(s.id, `buff ${s.buff.percent}% is above ${R.maxBuffPercent}%`); if (s.buff.seconds > R.maxBuffSeconds) err(s.id, `buff lasts ${s.buff.seconds}s, above ${R.maxBuffSeconds}s`); }
+      }
+      for (const cid of s.affinityClasses || []) if (!clsIds.has(cid)) err(s.id, `unknown class ${cid}`);
+    }
+    // Derived coverage: every rune word and enchantment grants exactly one gear skill.
+    for (const sid of [...Object.keys(words), ...Object.keys(encs)]) {
+      const n = (bySource[sid] || []).length;
+      if (n !== 1) err(c.file, `${sid} grants ${n} gear skills, expected exactly 1`);
+    }
     if (/durab|repair|decay|break|destroy|fail/i.test((JSON.stringify(obj).match(/"[^"]+":/g) || []).join(' '))) err(c.file, 'no durability, repair or failure keys (Canon Slow-Life)');
   }
   if (name === 'housing' && obj.tiers) {
@@ -676,6 +740,8 @@ require('./dungeon_checks').run({ DATA, load, check, schema, err, items: new Set
 
 // 4c) Wave D: audio, accessibility and photo mode (Tools/validate/audio_checks.js)
 require('./audio_checks').run({ DATA, load, check, schema, err, companionIds: rows.companions.map(c => c.id), regionTerrain: [...new Set(rows.regions.flatMap(r => (r.map && r.map.terrain) || []))] });
+require('./weapon_checks').run({ DATA, load, check, schema, err });
+require('./reaction_balance').run({ DATA, load, err });
 
 // 4d) Wave F-lite: region graph, Labyrinth floors, Underworld layers (Tools/validate/graph_checks.js). Its findings are counted
 // separately from the map warnings above.
@@ -684,8 +750,12 @@ const graphChecks = require('./graph_checks').run({ DATA, load, check, schema, e
 // 4e) Upgrade v4 subset: living world (Tools/validate/living_checks.js)
 require('./living_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])), items: new Set(rows.items.map(i => i.id)), npcs: rows.npcs });
 
-// 4f) Libraries and books (Tools/validate/library_checks.js)
+// 4g) Libraries and books (Tools/validate/library_checks.js)
 const libChecks = require('./library_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
+// 4f) Phase 1B: character creator options and loading tips (Tools/validate/front_end_checks.js)
+require('./front_end_checks').run({ DATA, load, check, schema, err });
+// 4f) Regional encounter tables (Tools/validate/encounter_checks.js)
+require('./encounter_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
 
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');

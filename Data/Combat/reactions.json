@@ -10,66 +10,122 @@
  "reactions": [
   {
    "id": "Firestorm",
-   "elements": ["Fire", "Wind"],
+   "elements": [
+    "Fire",
+    "Wind"
+   ],
    "consumesAura": true,
    "bonusDamageMult": 1.5,
-   "hazard": { "kind": "fire_tornado_zone", "radiusM": 4, "durationSec": 4, "damagePerSecMult": 0.7 }
+   "hazard": {
+    "kind": "fire_tornado_zone",
+    "radiusM": 4,
+    "durationSec": 4,
+    "damagePerSecMult": 0.7
+   }
   },
   {
    "id": "StormPrison",
-   "elements": ["Water", "Lightning"],
+   "elements": [
+    "Water",
+    "Lightning"
+   ],
    "consumesAura": true,
    "bonusDamageMult": 1.2,
-   "status": { "kind": "stun", "durationSec": 1.2 }
+   "status": {
+    "kind": "stun",
+    "durationSec": 1.2
+   }
   },
   {
    "id": "Freeze",
-   "elements": ["Water", "Ice"],
+   "elements": [
+    "Water",
+    "Ice"
+   ],
    "consumesAura": true,
-   "status": { "kind": "freeze", "durationSec": 2.5 }
+   "status": {
+    "kind": "freeze",
+    "durationSec": 2.5
+   }
   },
   {
    "id": "ThermalShock",
-   "elements": ["Fire", "Ice"],
+   "elements": [
+    "Fire",
+    "Ice"
+   ],
    "consumesAura": true,
    "bonusDamageMult": 2.0
   },
   {
    "id": "Magma",
-   "elements": ["Earth", "Fire"],
+   "elements": [
+    "Earth",
+    "Fire"
+   ],
    "consumesAura": true,
    "bonusDamageMult": 1.2,
-   "hazard": { "kind": "molten_ground", "radiusM": 3, "durationSec": 5, "damagePerSecMult": 0.5 }
+   "hazard": {
+    "kind": "molten_ground",
+    "radiusM": 3,
+    "durationSec": 5,
+    "damagePerSecMult": 0.5
+   }
   },
   {
    "id": "Swirl",
-   "elements": ["Wind", "Fire"],
+   "elements": [
+    "Wind",
+    "Fire"
+   ],
    "consumesAura": false,
    "bonusDamageMult": 1.0
   },
   {
    "id": "Wildfire",
-   "elements": ["Nature", "Fire"],
+   "elements": [
+    "Nature",
+    "Fire"
+   ],
    "consumesAura": true,
    "bonusDamageMult": 1.2,
-   "dot": { "element": "Fire", "damagePerSecMult": 0.3, "durationSec": 4, "tickSec": 0.5 }
+   "dot": {
+    "element": "Fire",
+    "damagePerSecMult": 0.4,
+    "durationSec": 4,
+    "tickSec": 0.5
+   }
   },
   {
    "id": "TwilightBurst",
-   "elements": ["Light", "Dark"],
+   "elements": [
+    "Light",
+    "Dark"
+   ],
    "consumesAura": true,
-   "bonusDamageMult": 2.5
+   "bonusDamageMult": 4.5
   },
   {
    "id": "MiasmaBlast",
-   "elements": ["Poison", "Fire"],
+   "elements": [
+    "Poison",
+    "Fire"
+   ],
    "consumesAura": true,
-   "bonusDamageMult": 1.5,
-   "hazard": { "kind": "poison_fog", "radiusM": 3.5, "durationSec": 5, "damagePerSecMult": 0.3 }
+   "bonusDamageMult": 1.6,
+   "hazard": {
+    "kind": "poison_fog",
+    "radiusM": 3.5,
+    "durationSec": 5,
+    "damagePerSecMult": 0.4
+   }
   },
   {
    "id": "Grounded",
-   "elements": ["Lightning", "Earth"],
+   "elements": [
+    "Lightning",
+    "Earth"
+   ],
    "consumesAura": true,
    "bonusDamageMult": 0.8
   }

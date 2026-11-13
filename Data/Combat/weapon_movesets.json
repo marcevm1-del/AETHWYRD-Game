@@ -1,0 +1,1963 @@
+{
+ "version": 1,
+ "notes": "Weapon-family moveset spec (12_Systems/weapon_movesets.md). Seconds, metres, degrees. Every family has the five roles of combat.md section 13 (opener, punish, spacing, crowd_control, payoff). Hit timings use the combat_tuning.json attackTiming weights as the baseline (light .10/.08/.24, medium .16/.10/.36, heavy .26/.12/.46, launch .14/.10/.32) scaled per family; hit-stop and shake come from the hit weight. skillId links to a class kit entry when one exists; families without one (greatsword, twin blades, katana) are specification only until the class-skill-designer writes kit data. All numbers are PROPOSALS for the user to tune.",
+ "roles": [
+  "opener",
+  "punish",
+  "spacing",
+  "crowd_control",
+  "payoff"
+ ],
+ "families": [
+  {
+   "id": "wf_sword",
+   "name": "Sword",
+   "weaponTypes": [
+    "sword"
+   ],
+   "classes": [
+    "cls_swordsman"
+   ],
+   "identity": "The baseline: balanced reach, fast chain, honest recovery. Every other family is judged against it.",
+   "mobility": "Short lunge on every hit; Flash Step closes distance.",
+   "airBehavior": "Rising Cut launches; air chain ends in a slam.",
+   "defense": "parry",
+   "resourceRhythm": "Steady combos build Edge Flow; getting hit drops stacks.",
+   "trainingYard": "Land L-L-L-M, then Rising Cut into an air chain on the dummy.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Slash Chain",
+     "skillId": "skl_slash_chain",
+     "control": "none",
+     "moveM": 0.35,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2.2,
+       "arcDeg": 120,
+       "lungeM": 0.35
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2.2,
+       "arcDeg": 120,
+       "lungeM": 0.35
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2.2,
+       "arcDeg": 120,
+       "lungeM": 0.35
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.2,
+       "arcDeg": 120,
+       "lungeM": 0.35
+      }
+     ],
+     "note": "Three light hits then a medium finisher that knocks back."
+    },
+    {
+     "role": "punish",
+     "name": "Parry Riposte",
+     "skillId": "skl_parry_riposte",
+     "control": "stagger",
+     "moveM": 0.4,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.112,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.2,
+       "arcDeg": 90,
+       "lungeM": 0.4
+      }
+     ],
+     "note": "Quick medium hit after a blue parry; big hit-stop."
+    },
+    {
+     "role": "spacing",
+     "name": "Flash Step",
+     "skillId": "skl_flash_step",
+     "control": "none",
+     "moveM": 4,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.4,
+       "arcDeg": 60,
+       "lungeM": 3.5
+      }
+     ],
+     "note": "Dash-slash that closes a 4 m gap."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Whirlwind",
+     "skillId": "skl_whirlwind",
+     "control": "push",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.4,
+       "arcDeg": 360,
+       "lungeM": 0
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.4,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Full circle, pushes small enemies off you."
+    },
+    {
+     "role": "payoff",
+     "name": "Guard Break",
+     "skillId": "skl_guard_break",
+     "control": "guard_break",
+     "moveM": 0.5,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.312,
+       "activeSec": 0.12,
+       "recoverySec": 0.552,
+       "reachM": 2.3,
+       "arcDeg": 90,
+       "lungeM": 0.5
+      }
+     ],
+     "note": "Overhead that breaks guard; committed recovery."
+    }
+   ]
+  },
+  {
+   "id": "wf_greatsword",
+   "name": "Greatsword",
+   "weaponTypes": [
+    "greatsword"
+   ],
+   "classes": [
+    "cls_swordsman"
+   ],
+   "identity": "Heavy and wide: fewer, slower swings that stagger and carry through crowds.",
+   "mobility": "Each swing steps forward 0.8 m; no dash, the length is the spacing.",
+   "airBehavior": "Weak in the air: a single downward cleave that drives targets to the ground.",
+   "defense": "guard",
+   "resourceRhythm": "Charge a swing to level 2 for guard break; commit or cancel to a dodge.",
+   "trainingYard": "Hold the heavy for level 2 and break a guarding dummy.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Broad Cleave",
+     "control": "stagger",
+     "moveM": 0.8,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.2,
+       "activeSec": 0.1,
+       "recoverySec": 0.414,
+       "reachM": 2.8,
+       "arcDeg": 140,
+       "lungeM": 0.8
+      },
+      {
+       "weight": "heavy",
+       "startupSec": 0.299,
+       "activeSec": 0.12,
+       "recoverySec": 0.506,
+       "reachM": 2.8,
+       "arcDeg": 140,
+       "lungeM": 0.8
+      }
+     ],
+     "note": "Two slow swings; the second staggers medium targets."
+    },
+    {
+     "role": "punish",
+     "name": "Guard Counter",
+     "control": "stagger",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.6,
+       "arcDeg": 100,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Plants and swings after a block; stamina-free."
+    },
+    {
+     "role": "spacing",
+     "name": "Pole Vault Slide",
+     "control": "none",
+     "moveM": 3,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.192,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.8,
+       "arcDeg": 90,
+       "lungeM": 3
+      }
+     ],
+     "note": "Slide with the blade flat; ends in a short cleave."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Sweep",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.26,
+       "activeSec": 0.12,
+       "recoverySec": 0.414,
+       "reachM": 3,
+       "arcDeg": 200,
+       "lungeM": 0
+      }
+     ],
+     "note": "Low wide sweep knocks small enemies down."
+    },
+    {
+     "role": "payoff",
+     "name": "Earthsplitter",
+     "control": "guard_break",
+     "moveM": 0.6,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.442,
+       "activeSec": 0.144,
+       "recoverySec": 0.69,
+       "reachM": 2.8,
+       "arcDeg": 70,
+       "lungeM": 0.6
+      }
+     ],
+     "note": "Charged overhead; long recovery, big hit-stop."
+    }
+   ]
+  },
+  {
+   "id": "wf_twin_blades",
+   "name": "Twin Blades",
+   "weaponTypes": [
+    "dual_swords"
+   ],
+   "classes": [
+    "cls_swordsman"
+   ],
+   "identity": "Constant motion: short quick hits that stack small reactions and style.",
+   "mobility": "Every hit lunges slightly; a dedicated forward lunge on the second dodge.",
+   "airBehavior": "Longer air chain than any other family (5 hits).",
+   "defense": "dodge",
+   "resourceRhythm": "Rewards unbroken pressure; recovery is the shortest of any family.",
+   "trainingYard": "Land a 5-hit air chain on a launched dummy.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Cross Slashes",
+     "control": "none",
+     "moveM": 0.5,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.9,
+       "arcDeg": 130,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.9,
+       "arcDeg": 130,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.9,
+       "arcDeg": 130,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.324,
+       "reachM": 1.9,
+       "arcDeg": 130,
+       "lungeM": 0.5
+      }
+     ],
+     "note": "Four hits, fastest chain in the game."
+    },
+    {
+     "role": "punish",
+     "name": "Reverse Flurry",
+     "control": "stagger",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.07,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 1.9,
+       "arcDeg": 120,
+       "lungeM": 0.3
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.07,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 1.9,
+       "arcDeg": 120,
+       "lungeM": 0.3
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.9,
+       "arcDeg": 120,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Quick three-hit punish during recovery."
+    },
+    {
+     "role": "spacing",
+     "name": "Twin Dash",
+     "control": "none",
+     "moveM": 3.5,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 90,
+       "lungeM": 3.5
+      }
+     ],
+     "note": "Crossing dash that ends behind the target."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Spin Cut",
+     "control": "push",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 360,
+       "lungeM": 0
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Circle cut; short push."
+    },
+    {
+     "role": "payoff",
+     "name": "Blade Storm",
+     "control": "launch",
+     "moveM": 1,
+     "hits": [
+      {
+       "weight": "launch",
+       "startupSec": 0.14,
+       "activeSec": 0.1,
+       "recoverySec": 0.32,
+       "reachM": 2,
+       "arcDeg": 150,
+       "lungeM": 1
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 150,
+       "lungeM": 1
+      },
+      {
+       "weight": "heavy",
+       "startupSec": 0.286,
+       "activeSec": 0.12,
+       "recoverySec": 0.529,
+       "reachM": 2,
+       "arcDeg": 150,
+       "lungeM": 1
+      }
+     ],
+     "note": "Launch, juggle and drive down; long recovery on the final hit."
+    }
+   ]
+  },
+  {
+   "id": "wf_katana",
+   "name": "Katana",
+   "weaponTypes": [
+    "katana"
+   ],
+   "classes": [
+    "cls_swordsman"
+   ],
+   "identity": "Precision and counters: cleaner arcs, longer reach, and a wider parry window.",
+   "mobility": "Drawing step: forward 1 m on the opener.",
+   "airBehavior": "One launching draw cut, then a precise downward finish.",
+   "defense": "parry",
+   "parryWindowSec": 0.16,
+   "resourceRhythm": "Perfect timing is rewarded: parry and perfect-dodge counters hit harder.",
+   "trainingYard": "Parry a goblin and land the draw-cut riposte.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Drawing Cuts",
+     "control": "none",
+     "moveM": 1,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.128,
+       "activeSec": 0.1,
+       "recoverySec": 0.288,
+       "reachM": 2.4,
+       "arcDeg": 100,
+       "lungeM": 0.8
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2.4,
+       "arcDeg": 100,
+       "lungeM": 0.8
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.4,
+       "arcDeg": 100,
+       "lungeM": 0.8
+      }
+     ],
+     "note": "Draw cut then two follow-ups."
+    },
+    {
+     "role": "punish",
+     "name": "Counter Draw",
+     "control": "stagger",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.104,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.4,
+       "arcDeg": 80,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Wider parry window; fast, heavy-feeling riposte."
+    },
+    {
+     "role": "spacing",
+     "name": "Gliding Step",
+     "control": "none",
+     "moveM": 3.5,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2.4,
+       "arcDeg": 60,
+       "lungeM": 3.5
+      }
+     ],
+     "note": "Low glide that resets spacing to 2.4 m."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Moon Arc",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 3,
+       "arcDeg": 180,
+       "lungeM": 0
+      }
+     ],
+     "note": "Wide arc that staggers a ring of small enemies."
+    },
+    {
+     "role": "payoff",
+     "name": "Single Stroke",
+     "control": "knockdown",
+     "moveM": 2,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.39,
+       "activeSec": 0.12,
+       "recoverySec": 0.598,
+       "reachM": 3.2,
+       "arcDeg": 40,
+       "lungeM": 2
+      }
+     ],
+     "note": "Long committed draw; wrecks anything it connects with."
+    }
+   ]
+  },
+  {
+   "id": "wf_sword_shield",
+   "name": "Sword and Shield",
+   "weaponTypes": [
+    "1h_sword",
+    "mace",
+    "shield",
+    "tower_shield"
+   ],
+   "classes": [
+    "cls_guardian"
+   ],
+   "identity": "Hold the ground: the shield is a verb. Every move protects someone.",
+   "mobility": "Slow advance; Charge is a committed rush.",
+   "airBehavior": "None to speak of: shield drop-bash lands you and pins.",
+   "defense": "guard",
+   "parryWindowSec": 0.14,
+   "resourceRhythm": "Stamina is the resource: blocks cost it, bashes refund some.",
+   "trainingYard": "Block a wolf lunge, bash, then counter.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Shield Combo",
+     "skillId": "skl_shield_combo",
+     "control": "none",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 100,
+       "lungeM": 0.3
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 100,
+       "lungeM": 0.3
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 100,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Sword, bash, sword; shield up between hits."
+    },
+    {
+     "role": "punish",
+     "name": "Shield Bash",
+     "skillId": "skl_shield_bash",
+     "control": "stagger",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.128,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.8,
+       "arcDeg": 70,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Quick bash after a block; staggers."
+    },
+    {
+     "role": "spacing",
+     "name": "Charge",
+     "skillId": "skl_charge",
+     "control": "push",
+     "moveM": 5,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.192,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 70,
+       "lungeM": 5
+      }
+     ],
+     "note": "Rush that shoves small enemies aside."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Earth Stomp",
+     "skillId": "skl_earth_stomp",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.286,
+       "activeSec": 0.12,
+       "recoverySec": 0.46,
+       "reachM": 3,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ground stomp that pins small enemies."
+    },
+    {
+     "role": "payoff",
+     "name": "Shield Wall",
+     "skillId": "skl_shield_wall",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.312,
+       "activeSec": 0.12,
+       "recoverySec": 0.598,
+       "reachM": 2,
+       "arcDeg": 180,
+       "lungeM": 0
+      }
+     ],
+     "note": "Plant and cover allies; punishes anything that strikes the wall."
+    }
+   ]
+  },
+  {
+   "id": "wf_polearm",
+   "name": "Spear and Polearm",
+   "weaponTypes": [
+    "spear",
+    "lance",
+    "halberd",
+    "glaive",
+    "naginata",
+    "trident"
+   ],
+   "classes": [
+    "cls_lancer",
+    "cls_guardian"
+   ],
+   "identity": "Own the range: longest reach, safe spacing, punish at the tip.",
+   "mobility": "Vault retreats; Comet Dive covers distance in the air.",
+   "airBehavior": "Dragon Ascent launches and the dive slams.",
+   "defense": "dodge",
+   "resourceRhythm": "Hit at max range for bonus; hits too close lose it.",
+   "trainingYard": "Poke a goblin pack from outside their reach.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Spear Thrusts",
+     "skillId": "skl_spear_thrusts",
+     "control": "none",
+     "moveM": 0.5,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 3,
+       "arcDeg": 40,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 3,
+       "arcDeg": 40,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 3,
+       "arcDeg": 40,
+       "lungeM": 0.5
+      }
+     ],
+     "note": "Three quick thrusts at long reach."
+    },
+    {
+     "role": "punish",
+     "name": "Piercing Thrust",
+     "skillId": "skl_piercing_thrust",
+     "control": "stagger",
+     "moveM": 0.6,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.128,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 3.4,
+       "arcDeg": 30,
+       "lungeM": 0.6
+      }
+     ],
+     "note": "Long thrust that punishes from outside the enemy reach."
+    },
+    {
+     "role": "spacing",
+     "name": "Vault",
+     "skillId": "skl_vault",
+     "control": "none",
+     "moveM": -3,
+     "hits": [
+      {
+       "weight": "launch",
+       "startupSec": 0.14,
+       "activeSec": 0.1,
+       "recoverySec": 0.32,
+       "reachM": 2.4,
+       "arcDeg": 60,
+       "lungeM": -3
+      }
+     ],
+     "note": "Retreating vault with a launching kick."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Sweep",
+     "skillId": "skl_sweep",
+     "control": "push",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 3.2,
+       "arcDeg": 200,
+       "lungeM": 0
+      }
+     ],
+     "note": "Wide pole sweep; keeps a ring back."
+    },
+    {
+     "role": "payoff",
+     "name": "Dragon Ascent",
+     "skillId": "skl_dragon_ascent",
+     "control": "launch",
+     "moveM": 1,
+     "hits": [
+      {
+       "weight": "launch",
+       "startupSec": 0.168,
+       "activeSec": 0.1,
+       "recoverySec": 0.416,
+       "reachM": 3,
+       "arcDeg": 60,
+       "lungeM": 1
+      }
+     ],
+     "note": "Rising thrust that launches; long recovery if it whiffs."
+    }
+   ]
+  },
+  {
+   "id": "wf_daggers",
+   "name": "Daggers",
+   "weaponTypes": [
+    "daggers",
+    "short_sword",
+    "throwing_knives",
+    "ritual_dagger"
+   ],
+   "classes": [
+    "cls_rogue",
+    "cls_occultist"
+   ],
+   "identity": "Fast, close and tricky: low reach, backstab damage, light on defense.",
+   "mobility": "Shadow Step and dodge-strikes; best movement of any family.",
+   "airBehavior": "Quick flip stab; no juggle.",
+   "defense": "dodge",
+   "resourceRhythm": "Rewards position: behind the target hits harder.",
+   "trainingYard": "Backstab a distracted dummy and fan the knives.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Dagger Flurry",
+     "skillId": "skl_dagger_flurry",
+     "control": "none",
+     "moveM": 0.5,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.6,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.6,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.6,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.09,
+       "activeSec": 0.08,
+       "recoverySec": 0.216,
+       "reachM": 1.6,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.6,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      }
+     ],
+     "note": "Five quick hits at close range."
+    },
+    {
+     "role": "punish",
+     "name": "Backstab",
+     "skillId": "skl_backstab",
+     "control": "none",
+     "moveM": 0.4,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.112,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.6,
+       "arcDeg": 60,
+       "lungeM": 0.4
+      }
+     ],
+     "note": "Bonus damage from behind or a stagger."
+    },
+    {
+     "role": "spacing",
+     "name": "Shadow Step",
+     "skillId": "skl_shadow_step",
+     "control": "none",
+     "moveM": 4.5,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.128,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.8,
+       "arcDeg": 60,
+       "lungeM": 4.5
+      }
+     ],
+     "note": "Blink-step behind the target."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Fan of Knives",
+     "skillId": "skl_fan_of_knives",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 6,
+       "arcDeg": 180,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ranged cone that flinches small enemies."
+    },
+    {
+     "role": "payoff",
+     "name": "Death Lotus",
+     "skillId": "skl_death_lotus",
+     "control": "knockdown",
+     "moveM": 1,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.312,
+       "activeSec": 0.12,
+       "recoverySec": 0.598,
+       "reachM": 2.6,
+       "arcDeg": 360,
+       "lungeM": 1
+      }
+     ],
+     "note": "Ultimate-style spin; long recovery."
+    }
+   ]
+  },
+  {
+   "id": "wf_bow",
+   "name": "Bow and Crossbow",
+   "weaponTypes": [
+    "shortbow",
+    "longbow",
+    "crossbow"
+   ],
+   "classes": [
+    "cls_ranger"
+   ],
+   "identity": "Aim and space: free-aim shots with real punish windows, never an auto-win.",
+   "mobility": "Backflip Shot resets spacing; strafe while drawing.",
+   "airBehavior": "Can shoot while air-dashing; no launch.",
+   "defense": "dodge",
+   "resourceRhythm": "Draw time against damage: hold for the charged shot.",
+   "trainingYard": "Free-aim a charged shot at a distant dummy.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Quick Shots",
+     "skillId": "skl_quick_shots",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 18,
+       "arcDeg": 8,
+       "lungeM": 0
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 18,
+       "arcDeg": 8,
+       "lungeM": 0
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 18,
+       "arcDeg": 8,
+       "lungeM": 0
+      }
+     ],
+     "note": "Three arrows at fire rate; light damage."
+    },
+    {
+     "role": "punish",
+     "name": "Power Shot",
+     "skillId": "skl_power_shot",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.192,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 20,
+       "arcDeg": 5,
+       "lungeM": 0
+      }
+     ],
+     "note": "Aimed shot during a recovery; staggers."
+    },
+    {
+     "role": "spacing",
+     "name": "Backflip Shot",
+     "skillId": "skl_backflip_shot",
+     "control": "none",
+     "moveM": -3.5,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 15,
+       "arcDeg": 10,
+       "lungeM": -3.5
+      }
+     ],
+     "note": "Flip away and shoot: opens 3.5 m."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Rain of Arrows",
+     "skillId": "skl_rain_of_arrows",
+     "control": "slow",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.224,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 8,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Marked zone that slows; telegraphed."
+    },
+    {
+     "role": "payoff",
+     "name": "Starfall Volley",
+     "skillId": "skl_starfall_volley",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.39,
+       "activeSec": 0.12,
+       "recoverySec": 0.644,
+       "reachM": 20,
+       "arcDeg": 30,
+       "lungeM": 0
+      }
+     ],
+     "note": "Charged ultimate volley; long vulnerable recovery."
+    }
+   ]
+  },
+  {
+   "id": "wf_caster_focus",
+   "name": "Staff, Wand and Grimoire",
+   "weaponTypes": [
+    "staff",
+    "wand",
+    "grimoire",
+    "orb",
+    "bone_staff"
+   ],
+   "classes": [
+    "cls_mage",
+    "cls_occultist",
+    "cls_cleric"
+   ],
+   "identity": "Spell windows: cast cost time and commitment; protect it with spacing and cover.",
+   "mobility": "Blink and short drift; cannot cast while sprinting.",
+   "airBehavior": "Floating cast: slow fall while channeling.",
+   "defense": "dodge",
+   "resourceRhythm": "MP; a cast window is the reward and the risk.",
+   "trainingYard": "Fire Bolt a Wind-aura dummy and watch Firestorm.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Arcane Bolts",
+     "skillId": "skl_arcane_bolts",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 14,
+       "arcDeg": 10,
+       "lungeM": 0
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 14,
+       "arcDeg": 10,
+       "lungeM": 0
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 14,
+       "arcDeg": 10,
+       "lungeM": 0
+      }
+     ],
+     "note": "Three bolts; steady and free of MP."
+    },
+    {
+     "role": "punish",
+     "name": "Fire Bolt",
+     "skillId": "skl_fire_bolt",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 14,
+       "arcDeg": 8,
+       "lungeM": 0
+      }
+     ],
+     "note": "Fast single bolt; applies its element."
+    },
+    {
+     "role": "spacing",
+     "name": "Blink",
+     "skillId": "skl_blink",
+     "control": "none",
+     "moveM": 5,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 0,
+       "arcDeg": 0,
+       "lungeM": 5
+      }
+     ],
+     "note": "Short teleport; brief vulnerability on arrival."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Frost Nova",
+     "skillId": "skl_frost_nova",
+     "control": "slow",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.192,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 5,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ring that slows; freezes with Water aura."
+    },
+    {
+     "role": "payoff",
+     "name": "Fireball",
+     "skillId": "skl_fireball",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.416,
+       "activeSec": 0.12,
+       "recoverySec": 0.644,
+       "reachM": 16,
+       "arcDeg": 30,
+       "lungeM": 0
+      }
+     ],
+     "note": "Slow-cast area blast; the staple payoff."
+    }
+   ]
+  },
+  {
+   "id": "wf_censer_mace",
+   "name": "Mace, Censer and Tome",
+   "weaponTypes": [
+    "mace",
+    "holy_tome",
+    "censer"
+   ],
+   "classes": [
+    "cls_cleric",
+    "cls_occultist"
+   ],
+   "identity": "Support melee: strikes feed the heal and ward rhythm, not the highest damage.",
+   "mobility": "Slow; Sanctuary plants a ward rather than moving.",
+   "airBehavior": "None: grounded fighter.",
+   "defense": "ally_cover",
+   "resourceRhythm": "Strike to build; heal and ward on cooldown.",
+   "trainingYard": "Heal a wounded companion while blocking a hit.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Censer Swings",
+     "skillId": "skl_censer_swings",
+     "control": "none",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 110,
+       "lungeM": 0.3
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.12,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 110,
+       "lungeM": 0.3
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 110,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Swinging censer: blessing smoke on each hit."
+    },
+    {
+     "role": "punish",
+     "name": "Smite Undead",
+     "skillId": "skl_smite_undead",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 10,
+       "arcDeg": 20,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ranged smite; extra on undead."
+    },
+    {
+     "role": "spacing",
+     "name": "Sanctuary",
+     "skillId": "skl_sanctuary",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.208,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 4,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Plant a ward; you hold position, allies recover."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Purify",
+     "skillId": "skl_purify",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.192,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 4,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Clears status from allies and slows enemies in the ring."
+    },
+    {
+     "role": "payoff",
+     "name": "Holy Light",
+     "skillId": "skl_holy_light",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.364,
+       "activeSec": 0.12,
+       "recoverySec": 0.552,
+       "reachM": 12,
+       "arcDeg": 40,
+       "lungeM": 0
+      }
+     ],
+     "note": "Committed beam; heals allies it crosses."
+    }
+   ]
+  },
+  {
+   "id": "wf_fists",
+   "name": "Fists and Gauntlets",
+   "weaponTypes": [
+    "fists",
+    "knuckles",
+    "gauntlets",
+    "greaves",
+    "bo_staff"
+   ],
+   "classes": [
+    "cls_martial_artist"
+   ],
+   "identity": "Body as weapon: the shortest reach with the fastest hands and best counters.",
+   "mobility": "Flash Kick closes gaps; no weapon length to space with.",
+   "airBehavior": "Uppercut launcher into the best air combo.",
+   "defense": "parry",
+   "parryWindowSec": 0.13,
+   "resourceRhythm": "Counter Stance trades a hit for a heavy riposte.",
+   "trainingYard": "Uppercut, jump, air combo, land.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Jab Flurry",
+     "skillId": "skl_jab_flurry",
+     "control": "none",
+     "moveM": 0.4,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.6,
+       "arcDeg": 100,
+       "lungeM": 0.4
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.08,
+       "activeSec": 0.08,
+       "recoverySec": 0.192,
+       "reachM": 1.6,
+       "arcDeg": 100,
+       "lungeM": 0.4
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.09,
+       "activeSec": 0.08,
+       "recoverySec": 0.216,
+       "reachM": 1.6,
+       "arcDeg": 100,
+       "lungeM": 0.4
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.6,
+       "arcDeg": 100,
+       "lungeM": 0.4
+      }
+     ],
+     "note": "Short fast jabs ending in a kick."
+    },
+    {
+     "role": "punish",
+     "name": "Counter Stance",
+     "skillId": "skl_counter_stance",
+     "control": "stagger",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.112,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 1.6,
+       "arcDeg": 90,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Brace; if hit, riposte with a heavy counter."
+    },
+    {
+     "role": "spacing",
+     "name": "Flash Kick",
+     "skillId": "skl_flash_kick",
+     "control": "none",
+     "moveM": 3.5,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 60,
+       "lungeM": 3.5
+      }
+     ],
+     "note": "Dash kick that closes 3.5 m."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Palm Blast",
+     "skillId": "skl_palm_blast",
+     "control": "push",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 5,
+       "arcDeg": 60,
+       "lungeM": 0
+      }
+     ],
+     "note": "Shockwave palm that pushes a lane clear."
+    },
+    {
+     "role": "payoff",
+     "name": "Rising Uppercut",
+     "skillId": "skl_rising_uppercut",
+     "control": "launch",
+     "moveM": 0.8,
+     "hits": [
+      {
+       "weight": "launch",
+       "startupSec": 0.154,
+       "activeSec": 0.1,
+       "recoverySec": 0.384,
+       "reachM": 1.8,
+       "arcDeg": 70,
+       "lungeM": 0.8
+      }
+     ],
+     "note": "Heavy launcher; opens the air combo."
+    }
+   ]
+  },
+  {
+   "id": "wf_whip_rod",
+   "name": "Whip and Rod",
+   "weaponTypes": [
+    "whip",
+    "rod"
+   ],
+   "classes": [
+    "cls_tamer"
+   ],
+   "identity": "Command and control: mid reach, pull and bind; the party acts with you.",
+   "mobility": "Whip pulls the player toward anchors; moderate.",
+   "airBehavior": "Whip swings from marked anchors; no launch.",
+   "defense": "ally_cover",
+   "resourceRhythm": "Unison Attack with a companion is the payoff.",
+   "trainingYard": "Pull a target into a companion strike.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Whip Lashes",
+     "skillId": "skl_whip_lashes",
+     "control": "none",
+     "moveM": 0.2,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 3,
+       "arcDeg": 40,
+       "lungeM": 0.2
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 3,
+       "arcDeg": 40,
+       "lungeM": 0.2
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 3,
+       "arcDeg": 40,
+       "lungeM": 0.2
+      }
+     ],
+     "note": "Three snappy lashes at mid reach."
+    },
+    {
+     "role": "punish",
+     "name": "Command",
+     "skillId": "skl_command",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 6,
+       "arcDeg": 40,
+       "lungeM": 0
+      }
+     ],
+     "note": "Order a companion to strike the exposed target."
+    },
+    {
+     "role": "spacing",
+     "name": "Swap",
+     "skillId": "skl_swap",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 5,
+       "arcDeg": 0,
+       "lungeM": 0
+      }
+     ],
+     "note": "Swap places with a companion; you reposition at once."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Rally",
+     "skillId": "skl_rally",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 6,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Calls the team into position; no damage."
+    },
+    {
+     "role": "payoff",
+     "name": "Unison Attack",
+     "skillId": "skl_unison_attack",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.338,
+       "activeSec": 0.12,
+       "recoverySec": 0.552,
+       "reachM": 3,
+       "arcDeg": 90,
+       "lungeM": 0
+      }
+     ],
+     "note": "Coordinated strike with a companion."
+    }
+   ]
+  },
+  {
+   "id": "wf_instrument",
+   "name": "Instruments",
+   "weaponTypes": [
+    "flute",
+    "bell",
+    "lute",
+    "harp",
+    "war_drum",
+    "violin_blade"
+   ],
+   "classes": [
+    "cls_bard",
+    "cls_tamer"
+   ],
+   "identity": "Rhythm as combat: timed beats make songs stronger; fair to miss, rewarding to land.",
+   "mobility": "Plays on the move; no dash of its own.",
+   "airBehavior": "Floats while playing.",
+   "defense": "ally_cover",
+   "resourceRhythm": "Songs have a beat window; on-beat inputs add power.",
+   "trainingYard": "Play Ballad of Courage on beat for a stronger buff.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Chord Strikes",
+     "skillId": "skl_chord_strikes",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 100,
+       "lungeM": 0.2
+      },
+      {
+       "weight": "light",
+       "startupSec": 0.11,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 2,
+       "arcDeg": 100,
+       "lungeM": 0.2
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.176,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 100,
+       "lungeM": 0.2
+      }
+     ],
+     "note": "Instrument strikes with a note on each hit."
+    },
+    {
+     "role": "punish",
+     "name": "Sour Note",
+     "skillId": "skl_sour_note",
+     "control": "stagger",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 10,
+       "arcDeg": 30,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ranged discord that staggers."
+    },
+    {
+     "role": "spacing",
+     "name": "Song of Swiftness",
+     "skillId": "skl_song_of_swiftness",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "light",
+       "startupSec": 0.1,
+       "activeSec": 0.08,
+       "recoverySec": 0.24,
+       "reachM": 6,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Speed buff: spacing through movement speed."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Lullaby",
+     "skillId": "skl_lullaby",
+     "control": "bind",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.208,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 8,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Sleep that breaks on damage."
+    },
+    {
+     "role": "payoff",
+     "name": "Grand Finale",
+     "skillId": "skl_grand_finale",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.39,
+       "activeSec": 0.12,
+       "recoverySec": 0.69,
+       "reachM": 8,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ultimate; long recovery."
+    }
+   ]
+  },
+  {
+   "id": "wf_workshop",
+   "name": "Hammer and Tools",
+   "weaponTypes": [
+    "hammer",
+    "wrench",
+    "tool_staff",
+    "throwables"
+   ],
+   "classes": [
+    "cls_artisan"
+   ],
+   "identity": "Heavy tools, utility on the side: slow but sturdy, with traps and turrets.",
+   "mobility": "Short forward swing; turrets anchor the ground.",
+   "airBehavior": "Overhead slam only.",
+   "defense": "guard",
+   "resourceRhythm": "Deployables carry the fight while you hit.",
+   "trainingYard": "Plant a turret then hammer a staggered target.",
+   "moves": [
+    {
+     "role": "opener",
+     "name": "Hammer Strikes",
+     "skillId": "skl_hammer_strikes",
+     "control": "none",
+     "moveM": 0.5,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "medium",
+       "startupSec": 0.16,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      },
+      {
+       "weight": "heavy",
+       "startupSec": 0.26,
+       "activeSec": 0.12,
+       "recoverySec": 0.46,
+       "reachM": 2,
+       "arcDeg": 110,
+       "lungeM": 0.5
+      }
+     ],
+     "note": "Three slower swings."
+    },
+    {
+     "role": "punish",
+     "name": "Masterwork Strike",
+     "skillId": "skl_masterwork_strike",
+     "control": "stagger",
+     "moveM": 0.3,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.144,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 2.1,
+       "arcDeg": 90,
+       "lungeM": 0.3
+      }
+     ],
+     "note": "Hit with a built-up swing."
+    },
+    {
+     "role": "spacing",
+     "name": "Deploy Turret",
+     "skillId": "skl_deploy_turret",
+     "control": "none",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.192,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 8,
+       "arcDeg": 90,
+       "lungeM": 0
+      }
+     ],
+     "note": "Turret holds a lane while you reposition."
+    },
+    {
+     "role": "crowd_control",
+     "name": "Bomb Toss",
+     "skillId": "skl_bomb_toss",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "medium",
+       "startupSec": 0.208,
+       "activeSec": 0.1,
+       "recoverySec": 0.36,
+       "reachM": 8,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Thrown bomb; area knockdown."
+    },
+    {
+     "role": "payoff",
+     "name": "Grand Invention",
+     "skillId": "skl_grand_invention",
+     "control": "knockdown",
+     "moveM": 0,
+     "hits": [
+      {
+       "weight": "heavy",
+       "startupSec": 0.416,
+       "activeSec": 0.12,
+       "recoverySec": 0.69,
+       "reachM": 4,
+       "arcDeg": 360,
+       "lungeM": 0
+      }
+     ],
+     "note": "Ultimate area payoff."
+    }
+   ]
+  }
+ ]
+}

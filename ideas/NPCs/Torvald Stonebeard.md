@@ -22,4 +22,9 @@ This character is marked mortal in the data. Any death scene must follow the pro
 
 ## Quests given
 
+- [[Quests/A Blade for the Guild|A Blade for the Guild]]
+- [[Quests/The First Glyph|The First Glyph]]
+- [[Quests/The Runesmiths' Game|The Runesmiths' Game]]
+- [[Quests/The Unfinished Blade|The Unfinished Blade]]
 - [[Quests/Weekly Board/Scrap Run|Scrap Run]]
+- [[Quests/Weekly Board/Guild Blade Order|Guild Blade Order]]

@@ -25,7 +25,133 @@
      "bodyPart": "chest",
      "damageMult": 1.5,
      "armorDamageMult": 1.5,
-     "exposedInPhases": ["Archers", "Rage"]
+     "exposedInPhases": [
+      "Archers",
+      "Rage"
+     ]
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_ashgrave_the_oathless_baron",
+   "armor": {
+    "maxArmor": 56,
+    "breakSec": 5,
+    "damageTakenMultWhileBroken": 1.25,
+    "regenDelaySec": 7
+   },
+   "weakPoints": [
+    {
+     "id": "wp_helm_crest",
+     "label": "Cracked helm crest",
+     "bodyPart": "head",
+     "damageMult": 1.8,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": [
+      "Old Guard",
+      "Last Charge"
+     ],
+     "exposedSec": 8
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_mother_webcrawler_terror_of_the_small",
+   "armor": {
+    "maxArmor": 48,
+    "breakSec": 5,
+    "damageTakenMultWhileBroken": 1.25,
+    "regenDelaySec": 6
+   },
+   "weakPoints": [
+    {
+     "id": "wp_eyes",
+     "label": "Glittering eyes",
+     "bodyPart": "head_eyes",
+     "damageMult": 2,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": [
+      "Webs"
+     ],
+     "exposedSec": 6
+    },
+    {
+     "id": "wp_egg_sac",
+     "label": "Swollen egg sac",
+     "bodyPart": "abdomen",
+     "damageMult": 1.8,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": [
+      "Frenzy"
+     ],
+     "exposedSec": 8
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_mycelia_the_spore_lord",
+   "armor": {
+    "maxArmor": 64,
+    "breakSec": 5,
+    "damageTakenMultWhileBroken": 1.25,
+    "regenDelaySec": 7
+   },
+   "weakPoints": [
+    {
+     "id": "wp_spore_heart",
+     "label": "Glowing spore heart",
+     "bodyPart": "bulb",
+     "damageMult": 2,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": [
+      "Hearts",
+      "Bloom"
+     ],
+     "exposedSec": 8
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_the_drowned_choir_sirens_of_the_canals",
+   "armor": {
+    "maxArmor": 56,
+    "breakSec": 5,
+    "damageTakenMultWhileBroken": 1.25,
+    "regenDelaySec": 7
+   },
+   "weakPoints": [
+    {
+     "id": "wp_throat",
+     "label": "Cracked throat-note",
+     "bodyPart": "head",
+     "damageMult": 1.8,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": [
+      "Discord"
+     ],
+     "exposedSec": 8
+    }
+   ]
+  },
+  {
+   "speciesId": "mon_the_hollow_abbot_choir_of_silence",
+   "armor": {
+    "maxArmor": 40,
+    "breakSec": 5,
+    "damageTakenMultWhileBroken": 1.25,
+    "regenDelaySec": 6
+   },
+   "weakPoints": [
+    {
+     "id": "wp_bell_core",
+     "label": "Silent bell core",
+     "bodyPart": "core",
+     "damageMult": 2,
+     "armorDamageMult": 1.5,
+     "exposedInPhases": [
+      "Toll"
+     ],
+     "exposedSec": 6
     }
    ]
   }

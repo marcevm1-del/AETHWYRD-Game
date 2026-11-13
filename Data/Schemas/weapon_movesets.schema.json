@@ -1,0 +1,227 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Weapon-family movesets",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "notes",
+  "roles",
+  "families"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "roles": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "families": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "weaponTypes",
+     "classes",
+     "identity",
+     "mobility",
+     "airBehavior",
+     "defense",
+     "resourceRhythm",
+     "trainingYard",
+     "moves"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^wf_[a-z0-9_]+$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "weaponTypes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^cls_[a-z0-9_]+$"
+      }
+     },
+     "identity": {
+      "type": "string",
+      "minLength": 1
+     },
+     "mobility": {
+      "type": "string",
+      "minLength": 1
+     },
+     "airBehavior": {
+      "type": "string",
+      "minLength": 1
+     },
+     "defense": {
+      "type": "string",
+      "enum": [
+       "guard",
+       "parry",
+       "dodge",
+       "ally_cover"
+      ]
+     },
+     "parryWindowSec": {
+      "type": "number",
+      "minimum": 0.08,
+      "maximum": 0.2
+     },
+     "resourceRhythm": {
+      "type": "string",
+      "minLength": 1
+     },
+     "trainingYard": {
+      "type": "string",
+      "minLength": 1
+     },
+     "moves": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 8,
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "role",
+        "name",
+        "control",
+        "moveM",
+        "hits",
+        "note"
+       ],
+       "properties": {
+        "role": {
+         "type": "string",
+         "enum": [
+          "opener",
+          "punish",
+          "spacing",
+          "crowd_control",
+          "payoff"
+         ]
+        },
+        "name": {
+         "type": "string",
+         "minLength": 1
+        },
+        "skillId": {
+         "type": "string",
+         "pattern": "^skl_[a-z0-9_]+$"
+        },
+        "control": {
+         "type": "string",
+         "enum": [
+          "none",
+          "stagger",
+          "launch",
+          "push",
+          "pull",
+          "bind",
+          "slow",
+          "guard_break",
+          "knockdown"
+         ]
+        },
+        "moveM": {
+         "type": "number",
+         "minimum": -8,
+         "maximum": 8
+        },
+        "hits": {
+         "type": "array",
+         "minItems": 1,
+         "maxItems": 6,
+         "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "weight",
+           "startupSec",
+           "activeSec",
+           "recoverySec",
+           "reachM",
+           "arcDeg",
+           "lungeM"
+          ],
+          "properties": {
+           "weight": {
+            "type": "string",
+            "enum": [
+             "light",
+             "medium",
+             "heavy",
+             "launch"
+            ]
+           },
+           "startupSec": {
+            "type": "number",
+            "minimum": 0.06,
+            "maximum": 1.5
+           },
+           "activeSec": {
+            "type": "number",
+            "minimum": 0.04,
+            "maximum": 0.5
+           },
+           "recoverySec": {
+            "type": "number",
+            "minimum": 0.1,
+            "maximum": 1.5
+           },
+           "reachM": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 25
+           },
+           "arcDeg": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 360
+           },
+           "lungeM": {
+            "type": "number",
+            "minimum": -8,
+            "maximum": 8
+           }
+          }
+         }
+        },
+        "note": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

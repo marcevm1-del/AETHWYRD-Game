@@ -31,6 +31,15 @@ tags: [inn]
 > [!warning]- Spoiler
 > The Hostess is waiting for one specific living adventurer.
 
+## Nearby contracts
+
+- [[Quests/The Tally of the Lost|The Tally of the Lost]] (E, Dungeon)
+- [[Quests/Weigh the Way Down|Weigh the Way Down]] (E, Dungeon)
+- [[Quests/The Beetle Vault|The Beetle Vault]] (E, Dungeon)
+- [[Quests/The Runesmiths' Game|The Runesmiths' Game]] (E, Hidden)
+- [[Quests/The Tally-Keepers' Accord|The Tally-Keepers' Accord]] (E, Dungeon)
+- [[Quests/Weekly Board/Warren Salvage Run|Warren Salvage Run]] (undefined, Exploration)
+
 ## Stay and departure
 
 Use room tier, price and listed perk to make a deliberate rest choice. An inn is also a safe social hub: speak with the keeper, check regional rumours and use the settlement as a launch point for nearby contracts. Room data is authoritative for costs and effects; this note does not imply free lodging.
