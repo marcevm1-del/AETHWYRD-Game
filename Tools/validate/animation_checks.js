@@ -16,6 +16,7 @@ function run({ DATA, load, err }) {
   locomotion({ DATA, load, err });
   combat({ DATA, load, err });
   riders({ DATA, load, err });
+  face({ DATA, load, err });
 }
 
 function locomotion({ DATA, load, err }) {
@@ -153,6 +154,48 @@ function riders({ DATA, load, err }) {
     if (row.clips.filter(c => /^Hit\d+$/.test(c.name)).length !== mounts.mountedCombat.maxChainHits) err(w, `${id}: hit clips differ from mountedCombat.maxChainHits`);
   }
   for (const id of fams.keys()) if (!(id in mounts.families)) err(w, `rider clips for unknown mount family ${id}`);
+}
+
+// ---- facial shape keys and expressions (Data/Characters/face_expressions.json, written by Tools/blender/build_face_rig.py) -----------------
+// The six keys the character generator ships stay; the rig adds atomic keys per part. Every expression names only existing keys with weights
+// in 0..1, left/right keys come in complete pairs, and nothing is a viseme or phoneme (the game has no lip-sync).
+const FACE_LEGACY = { eyes: ['blink_L', 'blink_R'], brows: ['brow_up', 'brow_down'], mouth: ['smile', 'open'] };
+const FACE_REQUIRED = ['neutral', 'happy', 'sad', 'angry', 'surprised', 'worried', 'blink'];
+const FACE_FORBIDDEN = /viseme|phoneme|lip_?sync/i;
+
+function face({ DATA, load, err }) {
+  const f = 'Characters/face_expressions.json', w = 'face_expressions.json';
+  if (!fs.existsSync(path.join(DATA, f))) { err(w, 'file missing (run Tools/blender/build_face_rig.py)'); return; }
+  const m = load(f);
+  if (m.schema !== 'face_expressions/1') err(w, 'unknown schema ' + m.schema);
+  const all = new Set();
+  for (const part of ['eyes', 'brows', 'mouth']) {
+    const p = (m.parts || {})[part];
+    if (!p) { err(w, `missing part ${part}`); continue; }
+    if (JSON.stringify(p.legacyKeys) !== JSON.stringify(FACE_LEGACY[part])) err(w, `${part}: the generator's legacy keys must stay ${FACE_LEGACY[part]}`);
+    const names = (p.keys || []).map(k => k.name);
+    if (new Set(names).size !== names.length) err(w, `${part}: duplicate key`);
+    for (const k of p.keys || []) {
+      if (all.has(k.name)) err(w, `key ${k.name} appears in two parts`);
+      all.add(k.name);
+      if (FACE_FORBIDDEN.test(k.name)) err(w, `key ${k.name} is named like lip-sync`);
+      if (!(k.maxMm >= 0.5)) err(w, `key ${k.name} moves nothing (${k.maxMm} mm)`);
+      if (k.name.endsWith('_L') && !names.includes(k.name.slice(0, -2) + '_R')) err(w, `key ${k.name} has no _R pair`);
+      if (k.name.endsWith('_R') && !names.includes(k.name.slice(0, -2) + '_L')) err(w, `key ${k.name} has no _L pair`);
+    }
+  }
+  for (const n of FACE_REQUIRED) if (!(n in (m.expressions || {}))) err(w, `missing expression ${n}`);
+  for (const [name, weights] of Object.entries(m.expressions || {})) {
+    if (FACE_FORBIDDEN.test(name)) err(w, `expression ${name} is named like lip-sync`);
+    for (const [k, v] of Object.entries(weights)) {
+      if (!all.has(k)) err(w, `expression ${name} names unknown key ${k}`);
+      if (!(v >= 0 && v <= 1)) err(w, `expression ${name}: weight ${v} outside 0..1`);
+    }
+  }
+  const b = m.blink || {};
+  if (!(b.intervalSec && b.intervalSec[0] > 0 && b.intervalSec[0] < b.intervalSec[1])) err(w, 'blink.intervalSec must be an ascending pair of seconds');
+  for (const k of b.keys || []) if (!all.has(k)) err(w, `blink key ${k} is unknown`);
+  if (!(m.measured && m.measured.closestMaxVertexMm >= 2.0)) err(w, 'two expressions are the same face (closestMaxVertexMm < 2 mm)');
 }
 
 // JSON.stringify with sorted keys and Python's default separators ", " and ": ", so the digest matches json.dumps(sort_keys=True)
