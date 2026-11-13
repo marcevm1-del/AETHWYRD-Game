@@ -276,3 +276,6 @@ One book for everything collectible: Bestiary, Museum halls, Earth Relics, Kaede
 - A cork board at your home: companions **pinned to expeditions** with a string to a map location and a countdown in days.
 - When they return, a **letter-style report** with sketches and loot.
 - The courier tab shows letters in transit and their replies.
+
+## 32. Screens for the newer systems
+Gear fitting, home and farm plots, stables and eggs, dungeon HUD and puzzles, the Civilization Archive, travel graph and Labyrinth map, living-world notices and the companion preset/relationship pieces are specified in [13_Production/ui_new_systems_specs.md](../13_Production/ui_new_systems_specs.md).
