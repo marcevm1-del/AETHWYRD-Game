@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Phase 1B | Front end: title screen with the AETHWYRD wordmark, main menu (Continue only with a valid save, New Game, Settings, Quit), character creator (name, body, hair, skin, outfit from Data/Characters/player_appearance.json, live preview), loading screen with tips; appearance saved in SaveGame; Title scene built by TitleSceneBuilder; stand-in landmarks for the Salvage Warren reach targets; screenshots 13_Production/phase1b_*.png | 761 + 192 |
 | Agent sessions, batch 2 | Merged work from: audio-designer, combat-designer, items-designer, narrative-writer, producer, quest-designer, systems-designer, world-designer. Includes the sound event list and free-audio source shortlist, Act I scene scripts, the producer's roadmap, risk and usage-budget plan and Unity dependency map, Ring 0 and Salvage Warren quests, item descriptions, rune items, Warren loot and a pricing pass, regional encounter tables, weapon-family movesets, armor and weak points for five dungeon bosses and a reaction balance pass (whichever of these branches passed the gate) | 755 |
 
 ## 2026-11-09

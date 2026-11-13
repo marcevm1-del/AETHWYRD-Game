@@ -39,10 +39,12 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
   - Buildings: `Tools/blender/build_building_library.py` (docs: `13_Production/building_system.md`).
   - Creatures: `Tools/blender/build_creature_library.py` (docs: `13_Production/creature_system.md`).
 - **AI concept images (Gemini first):** `python Tools/ai_images/generate_image.py --provider gemini --prompt "..."` (docs: `Tools/ai_images/README.md`). The user sets the key in their own shell (`GEMINI_API_KEY`); Claude never enters or stores keys. Output stays in the gitignored `Art/Generation/staging/`.
-- **TripoSR image to 3D:** `E:\Ideas\AI-Game-Toolkit\TripoSR\.venv\Scripts\python.exe Tools\ai3d\triposr_run.py <image>` (docs: `Tools/ai3d/README.md`). Both tools are registered in `13_Production/third_party_assets.md`.
+- **TripoSR image to 3D:** `E:\tsr-venv\Scripts\python.exe Tools\ai3d\triposr_run.py <image>` (docs: `Tools/ai3d/README.md`). Both tools are registered in `13_Production/third_party_assets.md`.
+- **Ask for a 3D model (any new Blender asset starts here):** `python Tools/ai3d/model_requests.py new --id <id> --kind <kind> --name "<what>" --by <agent> (--image <ref> | --prompt "<draw>")`; the **triposr-modeler** agent runs the queue (`13_Production/model_requests/README.md`).
+- **Local image generation (no API key):** `E:\tsr-venv\Scripts\python.exe Tools\ai_images\local_sd.py --prompt "<what>" [--style object|concept]` (Stable Diffusion 1.5, CreativeML OpenRAIL-M; GTX 16-series runs it in full precision).
 
 ## The agent team
-There are 27 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
+There are 28 specialist subagents in `.claude/agents/`. Each owns a set of files and knows its checks. The roster, the ownership map and how to run them in parallel waves are in `13_Production/agent_team.md`. Start a multi-agent push with the **producer**.
 
 ## Studio layer for AETHWYRD (Claude Code Game Studios v1.2.0, merged into `main`)
 The studio's skills for AETHWYRD (`/start`, `/help`, `/adopt`, `/map-systems`, `/sprint-plan` and the rest), 34 extra agents (directors, Unity specialists; the 10 Godot and Unreal specialists are parked in `.claude/agents-retired/`), rules, docs and helper scripts live in `.claude/`. Hooks, `settings.json` and the status line are **not** installed yet.

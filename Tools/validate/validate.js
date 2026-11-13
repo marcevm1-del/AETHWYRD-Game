@@ -750,6 +750,8 @@ const graphChecks = require('./graph_checks').run({ DATA, load, check, schema, e
 // 4e) Upgrade v4 subset: living world (Tools/validate/living_checks.js)
 require('./living_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])), items: new Set(rows.items.map(i => i.id)), npcs: rows.npcs });
 
+// 4f) Phase 1B: character creator options and loading tips (Tools/validate/front_end_checks.js)
+require('./front_end_checks').run({ DATA, load, check, schema, err });
 // 4f) Regional encounter tables (Tools/validate/encounter_checks.js)
 require('./encounter_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
 

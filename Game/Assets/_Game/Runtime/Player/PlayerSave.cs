@@ -33,9 +33,13 @@ namespace Ascend.Game
         PlayerInventory _inv;
         PlayerRespawn _respawn;
         PlayerWorldState _world;
+        PlayerAppearance _appearance;
 
         public string Slot { get => slot; set => slot = value; }
-        public string PathOnDisk => Path.Combine(Folder ?? Application.persistentDataPath, slot + ".json");
+        public const string DefaultSlot = "slot0";
+        /// <summary>The file a slot lives in (the save folder, else the persistent data path).</summary>
+        public static string PathFor(string slotName) => Path.Combine(Folder ?? Application.persistentDataPath, slotName + ".json");
+        public string PathOnDisk => PathFor(slot);
         public string LastError { get; private set; }
         public int Saves { get; private set; }
 
@@ -44,6 +48,7 @@ namespace Ascend.Game
             _combat = GetComponent<PlayerCombat>();
             _inv = GetComponent<PlayerInventory>();
             _respawn = GetComponent<PlayerRespawn>();
+            _appearance = PlayerAppearance.Ensure(gameObject); // the creator's look (Phase 1B)
             _world = PlayerWorldState.Ensure(gameObject); // life skills, home, stables, archive, dungeons, labyrinth, living world, gear, accessibility
             _respawn.Respawned += OnRespawned;
             _respawn.PointSet += OnPointSet;
@@ -56,7 +61,13 @@ namespace Ascend.Game
             _respawn.PointSet -= OnPointSet;
         }
 
-        void Start() { if (loadOnStart) Load(); }
+        void Start()
+        {
+            // A New Game from the title screen starts fresh: the old slot is not read (it is replaced at the next autosave).
+            bool fresh = FrontEndSession.Pending == FrontEndSession.Mode.NewGame;
+            if (fresh) FrontEndSession.Clear();
+            else if (loadOnStart) Load();
+        }
 
         void OnRespawned() => Save();
         void OnPointSet() => Save();
@@ -107,6 +118,7 @@ namespace Ascend.Game
                 s.GuildRank = quests.Rank.Rank; s.RankGp = quests.Rank.Gp; s.QuestsAtRank = quests.Rank.QuestsAtRank;
             }
             _world.Capture(s);
+            if (_appearance != null) _appearance.Capture(s);
             try
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(PathOnDisk));
@@ -150,6 +162,7 @@ namespace Ascend.Game
             foreach (var n in GatherNode.All) if (n != null) n.ReadyAtHour = s.GatherNodes.TryGetValue(n.Key, out var h) ? h : double.MinValue;
             if (TryGetComponent<PlayerCrafting>(out var crafting)) crafting.Load(s.KnownRecipes, s.HandledItems);
             if (TryGetComponent<PlayerTaming>(out var taming)) taming.Load(s.Partners);
+            if (_appearance != null) _appearance.Load(s);
             _world.Apply(s); // after crafting and taming: stables need the partner roster, gear fittings need the crafter
             if (TryGetComponent<PlayerRest>(out var rest)) rest.Load(s.RestBuffs, s.TabCopper, s.TabPaidOnce, s.InnNights);
             if (TryGetComponent<PlayerQuests>(out var quests)) { quests.Load(s.Quests, s.CompletedQuests, s.GuildPoints, s.Flags); quests.LoadBoard(s.BoardDone); quests.Rank.Load(s.GuildRank, s.RankGp, s.QuestsAtRank); }
