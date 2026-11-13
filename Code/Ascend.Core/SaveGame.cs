@@ -101,6 +101,7 @@ namespace Ascend.Core
             var errors = new List<string>();
             if (s == null) { errors.Add("no save data"); return errors; }
             if (s.Version < 1 || s.Version > SaveGame.CurrentVersion) errors.Add($"unknown save version {s.Version}");
+            else if (s.Version < SaveGame.CurrentVersion) errors.Add($"save version {s.Version} was not upgraded");
             if (s.Level < 1 || s.Level > Levels.Cap) errors.Add($"level {s.Level} out of range");
             if (s.XpIntoLevel < 0) errors.Add("negative XP");
             if (s.Copper < 0 || s.LanternCopper < 0 || s.TabCopper < 0) errors.Add("negative money");
@@ -112,7 +113,10 @@ namespace Ascend.Core
             return errors;
         }
 
-        /// <summary>Brings an older save up to the current shape (nothing to do yet at version 1).</summary>
+        /// <summary>The result of the most recent <see cref="Upgrade"/> call (for logging; not thread-safe).</summary>
+        public static SaveMigrationResult LastMigration { get; private set; }
+
+        /// <summary>Brings an older save up to the current shape: null-fills new sections, then runs the version migration steps.</summary>
         public static SaveGame Upgrade(SaveGame s)
         {
             if (s == null) return null;
@@ -170,9 +174,10 @@ namespace Ascend.Core
                 if (!string.IsNullOrEmpty(kv.Key) && Enum.TryParse<CompanionPreset>(kv.Value, true, out var cp) && Enum.IsDefined(typeof(CompanionPreset), cp))
                     presets[kv.Key] = cp.ToString();
             s.CompanionPresets = presets;
-            // Only a version in range is stamped current. A future (or invalid) version stays as it is, so Validate, which the
+            // Walk the migration chain (SaveMigrator). A future or invalid version stays as it is, so Validate, which the
             // game runs after Upgrade, still rejects it instead of an old build loading a newer save and overwriting it.
-            if (s.Version >= 1 && s.Version <= SaveGame.CurrentVersion) s.Version = SaveGame.CurrentVersion;
+            // A failed step leaves the version below current, which Validate also rejects (LastMigration has the reason).
+            LastMigration = SaveMigrator.Default.Migrate(s);
             return s;
         }
 
