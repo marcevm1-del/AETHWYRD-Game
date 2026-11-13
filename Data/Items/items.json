@@ -139,7 +139,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A gift from her sister. She'll pretend it's not important."
+  "flavor": "A gift from someone she misses. She'll pretend it's not important."
  },
  {
   "id": "itm_rookie_pouch",
@@ -178,7 +178,7 @@
    "applyElement": "Fire",
    "power": 1.2
   },
-  "flavor": "Throw it at something you don't like. Ring 0's Firestorm starter."
+  "flavor": "Throw it at something you don't like. The fuse is shorter than it looks."
  },
  {
   "id": "itm_mandrake_root",
@@ -814,7 +814,7 @@
    ],
    "seconds": 600
   },
-  "flavor": "Marta ladle, Marta pot, and a seat by the fire."
+  "flavor": "Marta's ladle, Marta's pot, and a seat by the fire."
  },
  {
   "id": "itm_hearth_loaf",
@@ -925,7 +925,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 30,
-  "flavor": "A Khazdur glyph for heat, cut small enough to hold in a palm."
+  "flavor": "A Khazdur glyph for heat, cut small enough to hold in a palm. Smiths press it to the anvil before the first strike of the day."
  },
  {
   "id": "itm_rune_tide",
@@ -936,7 +936,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 30,
-  "flavor": "Cool to the touch even beside a forge."
+  "flavor": "Cool to the touch even beside a forge. Dwarf-divers carry one when they cross the flooded galleries."
  },
  {
   "id": "itm_rune_stone",
@@ -947,7 +947,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 30,
-  "flavor": "Heavy for its size. Dwarves say it remembers being a mountain."
+  "flavor": "Heavy for its size. Dwarves say it remembers being a mountain, and would like to be one again."
  },
  {
   "id": "itm_rune_anvil",
@@ -958,7 +958,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 32,
-  "flavor": "The first glyph an apprentice learns to strike."
+  "flavor": "The first glyph an apprentice learns to strike. Every dwarf remembers their own crooked first one."
  },
  {
   "id": "itm_rune_hearth",
@@ -969,7 +969,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 30,
-  "flavor": "Warm, and faintly smells of bread."
+  "flavor": "Warm, and faintly smells of bread. Cut over doorposts in Iron Hold so that no one is ever shut out in winter."
  },
  {
   "id": "itm_rune_gale",
@@ -980,7 +980,7 @@
   "rank": "E",
   "rarity": "Uncommon",
   "value": 55,
-  "flavor": "It hums when the wind turns."
+  "flavor": "It hums when the wind turns. Sky-traders pin one to a sleeve before a crossing."
  },
  {
   "id": "itm_scroll_emberbrand",
@@ -1261,7 +1261,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "The upper half of a Draconic tablet. The first line is a name too long to say in one breath."
  },
  {
   "id": "itm_frag_covenant_b",
@@ -1272,7 +1272,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "The lower half of a tablet. Claw-marks stand in place of signatures, and one is pressed deeper than the rest."
  },
  {
   "id": "itm_frag_dun_a",
@@ -1283,7 +1283,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "Dwarf-cut bronze stamped with the opening of a forge-oath. The right edge would finish the sentence."
  },
  {
   "id": "itm_frag_dun_b",
@@ -1294,7 +1294,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "The right edge of a founding plate. A single hammer-mark seals the oath. No smith has matched it since."
  },
  {
   "id": "itm_frag_seedbowl_a",
@@ -1305,7 +1305,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "Pale green glaze and a ring of leaf-stamps. It still smells faintly of rain on bark."
  },
  {
   "id": "itm_frag_seedbowl_b",
@@ -1316,7 +1316,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "The base of a shallow bowl, worn smooth from being carried. Something was meant to be planted here."
  },
  {
   "id": "itm_frag_primer_a",
@@ -1327,7 +1327,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "A first lesson in Old Weave-tongue: one letter, one small picture, repeated. The picture is a thread."
  },
  {
   "id": "itm_frag_primer_b",
@@ -1338,7 +1338,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "A row of simple words copied by careful, small hands. Someone drew a sleeping cat in the margin."
  },
  {
   "id": "itm_frag_primer_c",
@@ -1349,7 +1349,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "A stitched binding with strands of red cord still in it. These pages were read until they came loose."
  },
  {
   "id": "itm_frag_glass_a",
@@ -1360,7 +1360,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "It hums a half-note when held. Hold it near another piece and the note begins to climb."
  },
  {
   "id": "itm_frag_glass_b",
@@ -1371,7 +1371,7 @@
   "rank": "F",
   "rarity": "Uncommon",
   "value": 0,
-  "flavor": "A broken piece of something old. Perhaps it fits with another."
+  "flavor": "The curved rim of a glass circle, polished by hands, not tools. It hums lower than the shard."
  },
  {
   "id": "itm_rune_spark",
