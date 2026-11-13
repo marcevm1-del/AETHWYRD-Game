@@ -27,7 +27,7 @@ static class LibraryTests
     {
         var cat = Repo.Db.Library;
         Assert.True(cat.Libraries.Count() >= 20, "libraries loaded");
-        Assert.True(cat.Books.Count() == 500, "all 500 books are in the data (shelved or held)");
+        Assert.True(cat.Books.Count() >= 500, "all 500 drafts plus the gap books are in the data (shelved or held)");
         var regions = Repo.Db.Regions.Keys.ToHashSet();
         foreach (var l in cat.Libraries) Assert.True(regions.Contains(l.Region), l.Id + " is in a real region");
         foreach (var b in cat.Books)

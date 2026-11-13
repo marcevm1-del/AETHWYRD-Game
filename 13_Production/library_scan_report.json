@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-09",
+ "generated": "2026-11-11",
  "counts": {
-  "fix": 340,
+  "fix": 360,
   "hold": 41,
   "clear": 119
  },
@@ -467,8 +467,8 @@
    ],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.82,
-   "quality": "average"
+   "templatedShare": 0.91,
+   "quality": "templated"
   },
   "bk_030": {
    "file": "aethwyrd/030-neighbors-near-zarvan-garden-cities.md",
@@ -768,7 +768,7 @@
    ],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.96,
+   "templatedShare": 0.97,
    "quality": "templated"
   },
   "bk_049": {
@@ -2016,7 +2016,7 @@
    ],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
+   "templatedShare": 0.94,
    "quality": "templated"
   },
   "bk_131": {
@@ -2346,7 +2346,7 @@
    ],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
+   "templatedShare": 0.94,
    "quality": "templated"
   },
   "bk_153": {
@@ -3066,7 +3066,7 @@
    ],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
+   "templatedShare": 0.94,
    "quality": "templated"
   },
   "bk_201": {
@@ -7053,7 +7053,7 @@
    ],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.92,
+   "templatedShare": 0.93,
    "quality": "templated"
   },
   "bk_470": {
@@ -7608,6 +7608,306 @@
    ],
    "templatedShare": 0.62,
    "quality": "strong"
+  },
+  "bk_501": {
+   "file": "gap/reg_whisperwood-field-guide.md",
+   "title": "Neighbors Near Brindlewick",
+   "kind": "field_guide",
+   "subjectRegion": "Whisperwood",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.83,
+   "quality": "average"
+  },
+  "bk_502": {
+   "file": "gap/reg_aldmere-field-guide.md",
+   "title": "Neighbors Near Ashby",
+   "kind": "field_guide",
+   "subjectRegion": "Aldmere",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.83,
+   "quality": "average"
+  },
+  "bk_503": {
+   "file": "gap/reg_greymoor-field-guide.md",
+   "title": "Neighbors Near Greymoor stilt-village",
+   "kind": "field_guide",
+   "subjectRegion": "Greymoor",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.85,
+   "quality": "average"
+  },
+  "bk_504": {
+   "file": "gap/reg_lirian-field-guide.md",
+   "title": "Neighbors Near Lirian canal cities",
+   "kind": "field_guide",
+   "subjectRegion": "Lirian",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_505": {
+   "file": "gap/reg_mossdeep-field-guide.md",
+   "title": "Neighbors Near Thimblefolk Mushroom Town",
+   "kind": "field_guide",
+   "subjectRegion": "Mossdeep",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.9,
+   "quality": "templated"
+  },
+  "bk_506": {
+   "file": "gap/reg_sylvaran-field-guide.md",
+   "title": "Neighbors Near Canopy City Lothaniel",
+   "kind": "field_guide",
+   "subjectRegion": "Sylvaran",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.85,
+   "quality": "average"
+  },
+  "bk_507": {
+   "file": "gap/reg_fanghold-field-guide.md",
+   "title": "Neighbors Near Fanghold",
+   "kind": "field_guide",
+   "subjectRegion": "Fanghold",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_508": {
+   "file": "gap/reg_iron_hold-field-guide.md",
+   "title": "Neighbors Near Karak Dûn",
+   "kind": "field_guide",
+   "subjectRegion": "Iron Hold",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.85,
+   "quality": "average"
+  },
+  "bk_509": {
+   "file": "gap/reg_moraveil-field-guide.md",
+   "title": "Neighbors Near Moraveil goblin village",
+   "kind": "field_guide",
+   "subjectRegion": "Moraveil",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.89,
+   "quality": "average"
+  },
+  "bk_510": {
+   "file": "gap/reg_strife_marches-field-guide.md",
+   "title": "Neighbors Near border baronies",
+   "kind": "field_guide",
+   "subjectRegion": "Strife Marches",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_511": {
+   "file": "gap/reg_velmark-field-guide.md",
+   "title": "Neighbors Near Velmark ducal towns",
+   "kind": "field_guide",
+   "subjectRegion": "Velmark",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_512": {
+   "file": "gap/reg_frostveil-field-guide.md",
+   "title": "Neighbors Near Skjaldheim",
+   "kind": "field_guide",
+   "subjectRegion": "Frostveil",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_513": {
+   "file": "gap/reg_haneul-field-guide.md",
+   "title": "Neighbors Near Haneul gate-towns",
+   "kind": "field_guide",
+   "subjectRegion": "Haneul",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.86,
+   "quality": "average"
+  },
+  "bk_514": {
+   "file": "gap/reg_hoshizora-field-guide.md",
+   "title": "Neighbors Near Hoshizora City",
+   "kind": "field_guide",
+   "subjectRegion": "Hoshizora",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.85,
+   "quality": "average"
+  },
+  "bk_515": {
+   "file": "gap/reg_kitsune_isles-field-guide.md",
+   "title": "Neighbors Near Fox Shrine Isle",
+   "kind": "field_guide",
+   "subjectRegion": "Kitsune Isles",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.89,
+   "quality": "average"
+  },
+  "bk_516": {
+   "file": "gap/reg_shen_lu-field-guide.md",
+   "title": "Neighbors Near sect foothill towns",
+   "kind": "field_guide",
+   "subjectRegion": "Shen-Lu",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.83,
+   "quality": "average"
+  },
+  "bk_517": {
+   "file": "gap/reg_whitewater_reach-field-guide.md",
+   "title": "Neighbors Near ice-fishing villages",
+   "kind": "field_guide",
+   "subjectRegion": "Whitewater Reach",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.9,
+   "quality": "templated"
+  },
+  "bk_518": {
+   "file": "gap/reg_dunewhale_drift-field-guide.md",
+   "title": "Neighbors Near the town on Thalassa's back",
+   "kind": "field_guide",
+   "subjectRegion": "Dunewhale Drift",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_519": {
+   "file": "gap/reg_goldmere_coast-field-guide.md",
+   "title": "Neighbors Near Port Goldmere",
+   "kind": "field_guide",
+   "subjectRegion": "Goldmere Coast",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.84,
+   "quality": "average"
+  },
+  "bk_520": {
+   "file": "gap/reg_lumbaya-field-guide.md",
+   "title": "Neighbors Near Lumbaya temple villages",
+   "kind": "field_guide",
+   "subjectRegion": "Lumbaya",
+   "scanStatus": "fix",
+   "holdReason": "",
+   "repairs": [
+    "template_the_a x1"
+   ],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.88,
+   "quality": "average"
   }
  }
 }

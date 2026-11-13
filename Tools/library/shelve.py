@@ -17,9 +17,14 @@ DRY = '--dry' in sys.argv
 cat = json.load(open(os.path.join(books_dir, 'catalog.json'), encoding='utf-8'))
 regions = json.load(open(os.path.join(REPO, 'Data/World/regions.json'), encoding='utf-8'))
 species = json.load(open(os.path.join(REPO, 'Data/Monsters/species.json'), encoding='utf-8'))
+sys.path.insert(0, os.path.dirname(__file__))
 reg_by_name = {r['name']: r for r in regions}
 reg_by_name['Great Labyrinth (Floors 1-40)'] = next(r for r in regions if r['id'] == 'reg_labyrinth_upper')
 sp_by_name = {s['name']: s for s in species}
+import gap_books
+GAP = gap_books.make_gap(os.path.abspath(books_dir), species, regions)
+N_ORIGINAL = len(cat)
+cat = cat + GAP
 RANKS = ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX']
 
 # ---------- scan rules (Canon section 3 and the other-studio / real-world / teen checks) ----------
@@ -120,7 +125,7 @@ report, books = {}, []
 sentence_counts = collections.Counter()
 texts = {}
 for c in cat:
-    t = open(os.path.join(books_dir, c['file']), encoding='utf-8').read()
+    t = c['text'] if c.get('text') else open(os.path.join(books_dir, c['file']), encoding='utf-8').read()
     texts[c['file']] = t
     body = t.split('\n', 8)[-1]
     for s in set(x.strip() for x in re.split(r'(?<=[.!?])\s+|\n+', body) if len(x.strip()) > 30):
@@ -174,7 +179,7 @@ for i, c in enumerate(cat, 1):
              'subjectRegion': reg['id'] if reg else None, 'shelf': c['genre'], 'language': 'Common' if kind != 'valdrisian_fragment' else 'Common (copied from Old Weave-tongue)',
              'blurb': blurb, 'readingMinutes': max(1, round(words / 200)), 'words': words, 'tags': sorted(set(tags + [reg['id']] if reg else tags)),
              'reliability': reliab, 'status': 'hold' if status == 'hold' else ('clear' if status == 'clear' else 'draft'),
-             'quality': quality, 'inWorldDate': m.group(1).strip() if m else '', 'source': 'books/' + c['file'],
+             'quality': quality, 'inWorldDate': m.group(1).strip() if m else '', 'source': ('Tools/library/gap_books.py (generated gap book)' if c.get('generated') else 'books/' + c['file']),
              'text': f'02_Lore/library/{lib}/{bid}.md' if lib else None}
     if rank_gate:
         entry['rankGate'] = rank_gate

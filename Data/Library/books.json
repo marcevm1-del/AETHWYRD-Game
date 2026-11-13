@@ -798,7 +798,7 @@
    ],
    "reliability": "partial",
    "status": "hold",
-   "quality": "average",
+   "quality": "templated",
    "inWorldDate": "929 SC",
    "source": "books/aethwyrd/029-neighbors-near-ice-fishing-villages.md",
    "text": null,
@@ -12373,6 +12373,799 @@
    "inWorldDate": "891 SC, printer's copy circulating in 1024 SC",
    "source": "books/aethwyrd/500-the-knight-and-the-wyvern-princess-two-lanterns.md",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_500.md"
+  },
+  {
+   "id": "bk_501",
+   "title": "Neighbors Near Brindlewick",
+   "author": "Nia Farid of Whisperwood",
+   "kind": "field_guide",
+   "library": "lib_brindlewick_guild_shelf",
+   "region": "reg_whisperwood",
+   "subjectRegion": "reg_whisperwood",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Whisperwood: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 988,
+   "tags": [
+    "bestiary",
+    "reg_whisperwood",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1000 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_brindlewick_guild_shelf/bk_501.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_gremlin"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_walking_mushroom"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_skinwalker_mimic"
+    }
+   ]
+  },
+  {
+   "id": "bk_502",
+   "title": "Neighbors Near Ashby",
+   "author": "Corin Cho of Aldmere",
+   "kind": "field_guide",
+   "library": "lib_aldmere_royal_archive",
+   "region": "reg_aldmere",
+   "subjectRegion": "reg_aldmere",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Aldmere: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1005,
+   "tags": [
+    "bestiary",
+    "reg_aldmere",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1015 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_aldmere_royal_archive/bk_502.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_headless_rider"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_ghost"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_shade_knight"
+    }
+   ]
+  },
+  {
+   "id": "bk_503",
+   "title": "Neighbors Near Greymoor stilt-village",
+   "author": "Amira Flint of Greymoor",
+   "kind": "field_guide",
+   "library": "lib_peat_library",
+   "region": "reg_greymoor",
+   "subjectRegion": "reg_greymoor",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Greymoor: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1010,
+   "tags": [
+    "bestiary",
+    "reg_greymoor",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1010 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_peat_library/bk_503.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_naga_warrior"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_ghost"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_ghoul"
+    }
+   ]
+  },
+  {
+   "id": "bk_504",
+   "title": "Neighbors Near Lirian canal cities",
+   "author": "Ren Mori of Lirian",
+   "kind": "field_guide",
+   "library": "lib_lirian_licence_archive",
+   "region": "reg_lirian",
+   "subjectRegion": "reg_lirian",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Lirian: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1000,
+   "tags": [
+    "bestiary",
+    "reg_lirian",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1002 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_lirian_licence_archive/bk_504.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_kraken_spawn"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_drake"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_mana_fox"
+    }
+   ]
+  },
+  {
+   "id": "bk_505",
+   "title": "Neighbors Near Thimblefolk Mushroom Town",
+   "author": "Kwame Okeke of Mossdeep",
+   "kind": "field_guide",
+   "library": "lib_lothaniel_root_archive",
+   "region": "reg_sylvaran",
+   "subjectRegion": "reg_mossdeep",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Mossdeep: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1002,
+   "tags": [
+    "bestiary",
+    "reg_mossdeep",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "templated",
+   "inWorldDate": "1007 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_lothaniel_root_archive/bk_505.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_thornvine"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_jackalope"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_will_o_wisp"
+    }
+   ]
+  },
+  {
+   "id": "bk_506",
+   "title": "Neighbors Near Canopy City Lothaniel",
+   "author": "Hana Holt of Sylvaran",
+   "kind": "field_guide",
+   "library": "lib_lothaniel_root_archive",
+   "region": "reg_sylvaran",
+   "subjectRegion": "reg_sylvaran",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Sylvaran: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 983,
+   "tags": [
+    "bestiary",
+    "reg_sylvaran",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1004 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_lothaniel_root_archive/bk_506.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_pixie"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_red_slime"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_will_o_wisp"
+    }
+   ]
+  },
+  {
+   "id": "bk_507",
+   "title": "Neighbors Near Fanghold",
+   "author": "Amina Ibarra of Fanghold",
+   "kind": "field_guide",
+   "library": "lib_vharlen_legion_records",
+   "region": "reg_vharlen",
+   "subjectRegion": "reg_fanghold",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Fanghold: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 990,
+   "tags": [
+    "bestiary",
+    "reg_fanghold",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1015 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_vharlen_legion_records/bk_507.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_mana_fox"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_cockatrice"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_orc_berserker"
+    }
+   ]
+  },
+  {
+   "id": "bk_508",
+   "title": "Neighbors Near Karak Dûn",
+   "author": "Osric Diallo of Iron Hold",
+   "kind": "field_guide",
+   "library": "lib_karak_dun_records",
+   "region": "reg_iron_hold",
+   "subjectRegion": "reg_iron_hold",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Iron Hold: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1006,
+   "tags": [
+    "bestiary",
+    "reg_iron_hold",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1006 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_karak_dun_records/bk_508.md",
+   "rankGate": "D",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_gnoll_raider"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_goblin_king"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_hornet_lancer"
+    }
+   ]
+  },
+  {
+   "id": "bk_509",
+   "title": "Neighbors Near Moraveil goblin village",
+   "author": "Bramble Mori of Moraveil",
+   "kind": "field_guide",
+   "library": "lib_lirian_licence_archive",
+   "region": "reg_lirian",
+   "subjectRegion": "reg_moraveil",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Moraveil: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1000,
+   "tags": [
+    "bestiary",
+    "reg_moraveil",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1001 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_lirian_licence_archive/bk_509.md",
+   "rankGate": "D",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_highwayman_captain"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_scorpion_rider"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_goblin_bomber"
+    }
+   ]
+  },
+  {
+   "id": "bk_510",
+   "title": "Neighbors Near border baronies",
+   "author": "Bruni Flint of Strife Marches",
+   "kind": "field_guide",
+   "library": "lib_vharlen_legion_records",
+   "region": "reg_vharlen",
+   "subjectRegion": "reg_strife_marches",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Strife Marches: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1009,
+   "tags": [
+    "bestiary",
+    "reg_strife_marches",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1014 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_vharlen_legion_records/bk_510.md",
+   "rankGate": "D",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_skeleton_knight"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_mimic_slime"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_headless_rider"
+    }
+   ]
+  },
+  {
+   "id": "bk_511",
+   "title": "Neighbors Near Velmark ducal towns",
+   "author": "Corin Ibarra of Velmark",
+   "kind": "field_guide",
+   "library": "lib_lirian_licence_archive",
+   "region": "reg_lirian",
+   "subjectRegion": "reg_velmark",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Velmark: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 997,
+   "tags": [
+    "bestiary",
+    "reg_velmark",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1004 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_lirian_licence_archive/bk_511.md",
+   "rankGate": "D",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_blade_mantis"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_stone_golem"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_slaver"
+    }
+   ]
+  },
+  {
+   "id": "bk_512",
+   "title": "Neighbors Near Skjaldheim",
+   "author": "Noor Cho of Frostveil",
+   "kind": "field_guide",
+   "library": "lib_skjaldheim_skald_hall",
+   "region": "reg_frostveil",
+   "subjectRegion": "reg_frostveil",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Frostveil: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 984,
+   "tags": [
+    "bestiary",
+    "reg_frostveil",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "999 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_skjaldheim_skald_hall/bk_512.md",
+   "rankGate": "C",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_hill_giant"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_ogre"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_fenrir_blooded_lord"
+    }
+   ]
+  },
+  {
+   "id": "bk_513",
+   "title": "Neighbors Near Haneul gate-towns",
+   "author": "Chenna Cho of Haneul",
+   "kind": "field_guide",
+   "library": "lib_shen_lu_sect_library",
+   "region": "reg_shen_lu",
+   "subjectRegion": "reg_haneul",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Haneul: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1005,
+   "tags": [
+    "bestiary",
+    "reg_haneul",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "995 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_shen_lu_sect_library/bk_513.md",
+   "rankGate": "C",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_lich"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_earth_weaver"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_gremlin_king"
+    }
+   ]
+  },
+  {
+   "id": "bk_514",
+   "title": "Neighbors Near Hoshizora City",
+   "author": "Nia Park of Hoshizora",
+   "kind": "field_guide",
+   "library": "lib_hoshizora_shrine_library",
+   "region": "reg_hoshizora",
+   "subjectRegion": "reg_hoshizora",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Hoshizora: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1002,
+   "tags": [
+    "bestiary",
+    "reg_hoshizora",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1017 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_hoshizora_shrine_library/bk_514.md",
+   "rankGate": "D",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_griffon"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_slaver"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_hatchling"
+    }
+   ]
+  },
+  {
+   "id": "bk_515",
+   "title": "Neighbors Near Fox Shrine Isle",
+   "author": "Edda Flint of Kitsune Isles",
+   "kind": "field_guide",
+   "library": "lib_fox_shrine_library",
+   "region": "reg_kitsune_isles",
+   "subjectRegion": "reg_kitsune_isles",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Kitsune Isles: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1005,
+   "tags": [
+    "bestiary",
+    "reg_kitsune_isles",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "993 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_fox_shrine_library/bk_515.md",
+   "rankGate": "D",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_gnome"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_tengu"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_fox_spirit"
+    }
+   ]
+  },
+  {
+   "id": "bk_516",
+   "title": "Neighbors Near sect foothill towns",
+   "author": "Leila Ndlovu of Shen-Lu",
+   "kind": "field_guide",
+   "library": "lib_shen_lu_sect_library",
+   "region": "reg_shen_lu",
+   "subjectRegion": "reg_shen_lu",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Shen-Lu: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1002,
+   "tags": [
+    "bestiary",
+    "reg_shen_lu",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1018 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_shen_lu_sect_library/bk_516.md",
+   "rankGate": "C",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_behemoth_calf"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_hunger_colossus"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_fallen_hero"
+    }
+   ]
+  },
+  {
+   "id": "bk_517",
+   "title": "Neighbors Near ice-fishing villages",
+   "author": "Bramble Okeke of Whitewater Reach",
+   "kind": "field_guide",
+   "library": "lib_skjaldheim_skald_hall",
+   "region": "reg_frostveil",
+   "subjectRegion": "reg_whitewater_reach",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Whitewater Reach: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1018,
+   "tags": [
+    "bestiary",
+    "reg_whitewater_reach",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "templated",
+   "inWorldDate": "1007 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_skjaldheim_skald_hall/bk_517.md",
+   "rankGate": "B",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_abyssal_kraken_queen"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_adult_dragon"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_kraken_spawn"
+    }
+   ]
+  },
+  {
+   "id": "bk_518",
+   "title": "Neighbors Near the town on Thalassa's back",
+   "author": "Elowen Flint of Dunewhale Drift",
+   "kind": "field_guide",
+   "library": "lib_qadira_water_archive",
+   "region": "reg_sunscar",
+   "subjectRegion": "reg_dunewhale_drift",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Dunewhale Drift: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1031,
+   "tags": [
+    "bestiary",
+    "reg_dunewhale_drift",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "992 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_qadira_water_archive/bk_518.md",
+   "rankGate": "C",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_sand_skink"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_chimera"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_dune_scorpion"
+    }
+   ]
+  },
+  {
+   "id": "bk_519",
+   "title": "Neighbors Near Port Goldmere",
+   "author": "Bramble Adeyemi of Goldmere Coast",
+   "kind": "field_guide",
+   "library": "lib_port_goldmere_reading_room",
+   "region": "reg_goldmere_coast",
+   "subjectRegion": "reg_goldmere_coast",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Goldmere Coast: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 1008,
+   "tags": [
+    "bestiary",
+    "reg_goldmere_coast",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "998 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_port_goldmere_reading_room/bk_519.md",
+   "rankGate": "C",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_giant_octopus"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_siren"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_crocodile_wyrm"
+    }
+   ]
+  },
+  {
+   "id": "bk_520",
+   "title": "Neighbors Near Lumbaya temple villages",
+   "author": "Dugan Park of Lumbaya",
+   "kind": "field_guide",
+   "library": "lib_lumbaya_sky_temple",
+   "region": "reg_lumbaya",
+   "subjectRegion": "reg_lumbaya",
+   "shelf": "Field guide",
+   "language": "Common",
+   "blurb": "A walker's guide to the creatures near Lumbaya: what folk file them under, how to approach them, what to leave alone.",
+   "readingMinutes": 5,
+   "words": 999,
+   "tags": [
+    "bestiary",
+    "reg_lumbaya",
+    "taming"
+   ],
+   "reliability": "partial",
+   "status": "draft",
+   "quality": "average",
+   "inWorldDate": "1018 SC",
+   "source": "Tools/library/gap_books.py (generated gap book)",
+   "text": "02_Lore/library/lib_lumbaya_sky_temple/bk_520.md",
+   "rankGate": "C",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_glowfin_angler"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_lamia"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_dullahan"
+    }
+   ]
   }
  ]
 }
