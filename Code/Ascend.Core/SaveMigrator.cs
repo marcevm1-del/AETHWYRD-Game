@@ -89,7 +89,7 @@ namespace Ascend.Core
             return r;
         }
 
-        private static readonly Regex VersionField = new Regex("\"Version\"\s*:\s*(-?\d+)", RegexOptions.CultureInvariant);
+        private static readonly Regex VersionField = new Regex("\"Version\"\\s*:\\s*(-?\\d+)", RegexOptions.CultureInvariant);
 
         /// <summary>Reads the version out of raw save JSON without deserialising (so the game can decide to back up before parsing). Null if absent.</summary>
         public static int? PeekVersion(string json)
