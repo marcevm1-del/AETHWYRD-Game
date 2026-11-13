@@ -981,13 +981,13 @@ def skull_parts(c):
                (x, h.y - hr * 0.82 + abs(x) * 0.5, zb - hr * 0.01))
 
 
-def dragon_spade(c):
+def dragon_spade(c, scale=1.0):
     """Dragons and wyverns end their tail in a flat spade (review 2026-10-31 C3)."""
     b = c.b
     tip, d = getattr(b, "tail_tip", None), getattr(b, "tail_tip_dir", None)
     if tip is None:
         return
-    L, W = 0.42, 0.36   # big enough to read at contact-sheet size (was 0.2 x 0.17, hidden by the wings)
+    L, W = 0.42 * scale, 0.36 * scale   # big enough to read at contact-sheet size (was 0.2 x 0.17, hidden by the wings)
     poly = [(0, -L * 0.05), (W * 0.32, -L * 0.12), (W * 0.5, L * 0.22), (W * 0.28, L * 0.6), (0, L), (-W * 0.28, L * 0.6),
             (-W * 0.5, L * 0.22), (-W * 0.32, -L * 0.12)]
     c.g.slab_poly(poly[::-1], 0.022, "bone", aim(tip - d * 0.03, d) @ trs((0, 0, 0), (0, 0, 90)))   # on edge (a fin), so the broad face shows to the preview camera and the wing cannot flatten it
@@ -1039,7 +1039,7 @@ def hard(c):
     if getattr(b, "skull", False):
         skull_parts(c)
     if b.kind == "dragon" and not set(c.look.parts) & {"stinger", "tail_spike"}:  # one tail tip each (review)
-        dragon_spade(c)
+        dragon_spade(c, 0.62 if any(w in c.look.name.lower() for w in ("gargoyle", "arch demon", "wyvern")) else 1.0)
     if b.kind == "biped":
         breaking_shapes(c)
     if (b.kind in ("bird", "bat", "dragon") or b.P.get("wings")) and not any(p in parts for p in ("wing_cases", "wing_membrane", "wing_feathers", "membrane_wings")):
@@ -1074,6 +1074,8 @@ def hard(c):
             elif p == "rattle_tail":
                 for k in range(4):
                     c.g.sphere(r * (0.9 - k * 0.12), "bone", aim(tip + d * r * 0.7 * k, d) @ trs((0, 0, 0), (0, 0, 0), (1, 1, 0.6)), segs=10, rings=6)
+            elif p == "tail_spike" and b.kind == "dragon":
+                dragon_spade(c, 0.62)   # wyverns, gargoyles and arch demons: a smaller barbed tip (the 4 tiny spikes were invisible)
             elif p == "tail_spike":
                 for k in range(4):
                     a = k * 90

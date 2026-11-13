@@ -51,7 +51,7 @@ From `reports/design_review_2026-10-31.md` (C1, C3, C5, mushroom faces, N4), wit
 Evidence: `reports/blender_wave_2026-11-02/creatures/w1_before.png`, `w1_after.png`, `w1_after_dragons.png`.
 - **Wing/body ratio:** one rule for every dragon and wyvern species: wing tip-to-tip = `plans.DRAGON_WING_RATIO` (1.6) x nose-to-tail length (was 2.2-2.5), body mass x `DRAGON_BULK` (1.4). The wings are raised and swept back (fingers fan down less) so the membrane no longer hangs over the body and tail.
 - **Tail spade:** 0.36 x 0.30 (was 0.2 x 0.17), bone-coloured, rolled 50 degrees, and the tail swings out to the side and low so the spade clears the wing at the preview camera.
-- **Gargoyle and Arch Demon** are on the wyvern plan but are not dragons: they keep the original wings (`WYVERN_WING_SPAN` 1.4, no lift). Their tail also got the side sweep.
+- **Gargoyle and Arch Demon** are on the wyvern plan but are not dragons: they keep the side-swept tail. (Superseded 2026-11-13: see below.)
 
 ## Dragon spade and proportions (2026-11-13)
 - **Spade:** now 0.42 x 0.36 and stood on edge (roll 90 degrees, a tail fin) so its broad face shows to the preview camera and the near wing cannot flatten or hide it.

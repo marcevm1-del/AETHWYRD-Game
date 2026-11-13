@@ -412,7 +412,8 @@ def _dleg(b, pts, r0, r1, foot):
 
 DRAGON_WING_RATIO = 1.6   # wing tip-to-tip / nose-to-tail length, for every dragon species (was 2.2-2.5)
 DRAGON_BULK = 1.7         # body mass scale vs the 2026-10-31 build, so the body reads as the mass under the wings
-WYVERN_WING_SPAN = 1.4    # Gargoyle and Arch Demon keep the original wyvern-plan wings (not the dragon rule)
+GARGOYLE_WING_SPAN = 0.95  # Gargoyle: wing tip-to-tip about 2.0 x span, a little over its body length
+ARCH_DEMON_WING_SPAN = 1.6 # Arch Demon: raised and swept (span > 1.5 turns the lift on in features.wings)
 
 
 def dragon(b, look, wyvern=False):
@@ -467,12 +468,14 @@ def dragon(b, look, wyvern=False):
     b.tail_tip, b.tail_tip_dir = V(tail[-1]), b.tail_dir.copy()   # the spade sits here (features.dragon_spade)
     b.wing_root = V(0, -0.13, z0 + 0.14)
     # tip-to-tip = about 2.08 x wing_span (features.wings); one ratio for every dragon species. The Gargoyle and Arch
-    # Demon (wyvern plan, not dragons) keep the original smaller wings: see plans.WYVERN_WING_SPAN and features.wings.
+    # Demon (wyvern plan, not dragons) have their own wing spans: see plans.GARGOYLE_WING_SPAN / ARCH_DEMON_WING_SPAN and features.wings.
     length = (V(tail[-1]).y - (b.snout.y - hr * 0.8))
     b.wing_span = DRAGON_WING_RATIO * length / 2.08
     nm = look.name.lower()
-    if wyvern and any(w in nm for w in ("gargoyle", "arch demon")):
-        b.wing_span = WYVERN_WING_SPAN   # keeps its own wings (design review 2026-10-31 follow-up)
+    if wyvern and "gargoyle" in nm:
+        b.wing_span = GARGOYLE_WING_SPAN      # a squat stone sentinel: short, heavy wings, not a flyer's sail
+    elif wyvern and "arch demon" in nm:
+        b.wing_span = ARCH_DEMON_WING_SPAN    # larger than the wyvern's, so it still reads as the bigger threat
     b.mouth = b.snout + V(0, -hr * 0.7, -hr * 0.2)
     b.hands = b.feet[:2]
 
