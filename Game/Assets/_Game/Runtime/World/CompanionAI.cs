@@ -22,9 +22,15 @@ namespace Ascend.Game
         CompanionTuning _tuning;
         CompanionPreset _preset = CompanionPreset.Balanced;
         bool _retreating, _retreatCommanded;
-        float _regen;
+        float _regen, _noFightFor;
         /// <summary>Out of a fight a hurt companion recovers this fraction of max HP per second (without it a retreat could never end).</summary>
         public const float OutOfCombatRegenPerSec = 0.05f;
+        /// <summary>
+        /// How long a commanded retreat survives with no enemy in sight. A player who calls "fall back" a moment before
+        /// the enemy notices them must not lose the order to a single calm frame (her Update can run before the monster's,
+        /// so the first frame of a fight still reads as quiet), and it must not carry into the next fight either.
+        /// </summary>
+        public const float CommandedRetreatGraceSec = 3f;
         /// <summary>Quiet mode for companion banter (companion_field_ai.md: frequency control).</summary>
         public static bool QuietBanter { get; set; }
 
@@ -134,6 +140,7 @@ namespace Ascend.Game
             Command(effect.Order);
             if (effect.HoldAtPlayer && _player != null) _holdAt = _player.transform.position;
             _retreatCommanded = effect.Retreat;
+            _noFightFor = 0f;
         }
 
         void OnPlayerHit(MonsterDummy m, DamageResult r) => _lastPlayerHit = m;
@@ -174,7 +181,12 @@ namespace Ascend.Game
                 _regen += MaxHp * OutOfCombatRegenPerSec * dt; int whole = (int)_regen; _regen -= whole;
                 Hp = Mathf.Min(MaxHp, Hp + whole);
             }
-            if (!inFight) _retreatCommanded = false;
+            if (inFight) _noFightFor = 0f;
+            else if (_retreatCommanded)
+            {
+                _noFightFor += dt;
+                if (_noFightFor >= CommandedRetreatGraceSec) _retreatCommanded = false;
+            }
             double hpFraction = MaxHp > 0 ? Hp / (double)MaxHp : 1.0;
             var sense = new CompanionSense
             {
