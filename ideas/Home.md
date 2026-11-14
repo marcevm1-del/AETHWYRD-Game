@@ -114,6 +114,8 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/canon_decision_index_2026-11-08|13_Production/canon_decision_index_2026-11-08]]
 - [[Design Bible/13_Production/canon_keeper_rename_audit_2026-11-08|13_Production/canon_keeper_rename_audit_2026-11-08]]
 - [[Design Bible/13_Production/canon_watch_list_2026-11-08|13_Production/canon_watch_list_2026-11-08]]
+- [[Design Bible/13_Production/character_system|13_Production/character_system]]
+- [[Design Bible/13_Production/character_v3_audit|13_Production/character_v3_audit]]
 - [[Design Bible/13_Production/combat_v5_audit|13_Production/combat_v5_audit]]
 - [[Design Bible/13_Production/combat_wave_a2_plan|13_Production/combat_wave_a2_plan]]
 - [[Design Bible/13_Production/companions_v8_audit|13_Production/companions_v8_audit]]
