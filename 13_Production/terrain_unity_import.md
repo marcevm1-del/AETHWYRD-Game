@@ -107,3 +107,5 @@ Target: terrain + dressing under 150 MB resident on a 4 GB GTX 1650 system, unde
 2. World origin: rebase both XZ and Y to Brindlewick's pad (recommended), or keep absolute Y with an anchored Ring 0 root?
 3. OK to ask environment-artist for `_albedo.png` and `_dressing.json` exports?
 4. What should a tile beyond the 150 x 100 km map show (the last column/row grows by 3.6 / 2.4 km)?
+
+> **Update 2026-11-14:** the tiles are streamed in Unity by `WorldStreamer`; plan, measurements and limits are in `13_Production/open_world_streaming_plan.md`.

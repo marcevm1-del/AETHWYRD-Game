@@ -64,3 +64,5 @@ Streaming, scene loading, Addressables, terrain and road rendering, the map UI a
 
 `SectorStreamer` (`Code/Ascend.Core/SectorStreamer.cs`) decides which terrain tiles are resident around the player. `Update(mapX, mapY, built)` returns the tiles to `Load`, `Unload` and the `Resident` set. Rules: the tile under the player is always kept; tiles within `LoadRadiusKm` (6) of their nearest edge load; a loaded tile stays until `LoadRadiusKm + UnloadMarginKm` (2) so a border does not flicker; `MaxResident` (9) caps memory and the nearest tiles win; positions off the map change nothing. Works for both the built 10 km and settled 10.24 km tiles. Tests: `SectorStreamerTests`. Tuning numbers are placeholders for the user.
 **Still needs Unity:** a host that turns Load/Unload into additive scene or terrain loads, plus the 10.24 km terrain import (job 2).
+
+**Open world streaming (first slice built, measured):** see `13_Production/open_world_streaming_plan.md`.
