@@ -87,7 +87,9 @@ static class Repo
         LoadOpt<HousingFile>("Data/World/housing.json"),
         LoadOpt<CropFile>("Data/Items/crops.json"),
         LoadOpt<StablesFile>("Data/Companions/stables.json"),
-        LoadOpt<ArchiveFile>("Data/World/civilization_archive.json"));
+        LoadOpt<ArchiveFile>("Data/World/civilization_archive.json"),
+        LoadOpt<LibraryFile>("Data/Library/libraries.json"),
+        LoadOpt<BookFile>("Data/Library/books.json"));
 }
 
 [Tests]

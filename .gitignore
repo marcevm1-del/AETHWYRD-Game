@@ -4,6 +4,10 @@ node_modules/
 Thumbs.db
 # Unity (later)
 Library/
+# the in-world library data, texts and tools are not Unity's Library folder
+!/Data/Library/
+!/02_Lore/library/
+!/Tools/library/
 Temp/
 Obj/
 Build/
