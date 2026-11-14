@@ -101,6 +101,42 @@ try:
     mr.main(["retry", "crate_fail", "--by", "triposr-modeler"])
     check(mr.load("crate_fail")["status"] == "requested", "retry sends it back")
 
+    # props only: the queue refuses character and NPC bodies (the 2026-11-13 character test)
+    expect_exit(lambda: mr.main(["new", "--id", "body_kind", "--kind", "character-reference",
+                                 "--name", "Reference", "--by", "creature-artist", "--prompt", "a figure"]),
+                "the retired character-reference kind is refused")
+    check("character-reference" not in mr.KINDS, "character-reference is not an allowed kind")
+    errs = mr.validate({"id": "x_body", "kind": "character-reference", "name": "Reference",
+                        "requestedBy": "creature-artist", "source": {"prompt": "a figure"}, "status": "requested"})
+    check(any("ascend_characters" in e for e in errs), "the refusal points at ascend_characters")
+    expect_exit(lambda: mr.main(["new", "--id", "body_name", "--kind", "prop",
+                                 "--name", "Human male base body", "--by", "creature-artist",
+                                 "--prompt", "a figure"]),
+                "a body asked for as a prop is refused by name")
+    expect_exit(lambda: mr.main(["new", "--id", "body_prompt", "--kind", "creature",
+                                 "--name", "Reference sheet", "--by", "creature-artist",
+                                 "--prompt", "the player body, front view"]),
+                "a body asked for in the prompt is refused")
+    check(not os.path.exists(mr.path_for("body_name")), "a refused request is not filed")
+    # a legitimate request with a body word in another sense still passes
+    file_request(id="spider_body", kind="creature", name="Cave spider carapace", image=img)
+    check(mr.load("spider_body")["status"] == "requested", "a creature request is not caught by the body rule")
+
+    # run refuses, and says why, for a body request written straight into the queue
+    sneaky = {"id": "sneaky_body", "kind": "prop", "name": "npc body for the inn keeper",
+              "requestedBy": "someone", "requestedOn": "2026-11-14",
+              "source": {"image": img, "prompt": None}, "targetSizeM": 1.75, "speciesId": None,
+              "notes": "", "status": "requested", "history": [],
+              "outputs": {"image": None, "mesh": None, "provenance": None, "error": None}, "review": None}
+    with open(mr.path_for("sneaky_body"), "w", encoding="utf-8") as fh:
+        json.dump(sneaky, fh)
+    mr.main(["run", "--only", "sneaky_body"])
+    done = mr.load("sneaky_body")
+    check(done["status"] == "rejected", "run rejects a body request already on disk")
+    check("ascend_characters" in done["history"][-1]["note"], "the rejection records the reason")
+    check(done["outputs"]["mesh"] is None, "no mesh is made for a rejected request")
+    os.remove(mr.path_for("sneaky_body"))  # it is deliberately invalid; keep it out of the sweep below
+
     # files on disk are valid JSON and every saved request validates
     for f in os.listdir(mr.QUEUE):
         with open(os.path.join(mr.QUEUE, f), encoding="utf-8") as fh:

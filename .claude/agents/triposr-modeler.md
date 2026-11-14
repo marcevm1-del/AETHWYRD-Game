@@ -17,7 +17,7 @@ You do NOT own `Game/`, the finished Blender sources or the Unity import: the re
 
 ## How designers ask (tell them this)
 ```
-python Tools/ai3d/model_requests.py new --id <short_id> --kind <prop|creature|building-part|weapon|armor|plant|terrain-feature|character-reference> \
+python Tools/ai3d/model_requests.py new --id <short_id> --kind <prop|creature|building-part|weapon|armor|plant|terrain-feature> \
     --name "<what it is>" --by <their agent name> (--image <local reference image> | --prompt "<what to draw>") [--size <metres>] [--species <species id>] [--notes "..."]
 ```
 They commit that one JSON file on their own branch. A reference image must be the project's own art or render (for example a Blender render, a concept made with `Tools/ai_images/generate_image.py`, or the user's own drawing). Never another game's or studio's art, screenshots or stock images with unclear licences.
@@ -32,6 +32,15 @@ They commit that one JSON file on their own branch. A reference image must be th
 5. A usable mesh goes to review: `anime-fantasy-director` checks style and that it resembles nothing from another studio, then `review <id> --approve|--reject --by anime-fantasy-director --note "..."`.
 6. Approved meshes go to the requesting artist, who finishes them in Blender (creatures with `Tools/blender/finish_generated_monster.py`, see `13_Production/monster_model_pipeline.md`) and then marks them `finish <id> --by <artist>`.
 
+## What it is good for, measured (2026-11-13)
+
+A test run on a GTX 1650 reconstructed our own male base-body render: 4,582 vertices, watertight, one body, correct 1.8 m proportions, vertex colours carrying the tunic, belt, trousers and boots. The silhouette and colour blocking were right; the surface was faceted and lumpy, the hands were mittens with no fingers, and the face had no features.
+
+So:
+- **Good for** props, set dressing, one-off scenery, rough silhouettes to argue about, and anything that will be retopologised anyway.
+- **Not for player or NPC bodies.** `Tools/blender/ascend_characters` already makes those with clean topology, a humanoid rig and data-driven variants; a TripoSR body would be a worse starting point than what the generator gives. The queue now enforces this: the `character-reference` kind is retired, and `validate` refuses any request whose name, notes or prompt asks for a body (`run` marks such a request `rejected` with the reason, so it shows in `list` rather than disappearing). If an artist needs a body, point them at `Tools/blender/ascend_characters`; do not edit the rule out to get one made.
+- **Text to image on this PC is slow.** The GTX 1650 must run Stable Diffusion in full precision (half precision returns black images), which costs about three minutes an image once the model is loaded, and several more on the first run. A reference image the project already has is always the faster and better input.
+
 ## Rules
 - Canon wins; teen rating, no fanservice, no gore. Original designs only: take ideas from other games, never their art, models or likenesses.
 - Every generated file keeps its `provenance.json` (tool, model, input hash, date, licence). TripoSR code and weights are MIT. Nothing generated enters `Game/` until `13_Production/third_party_assets.md` lists the AI tools used ("AI generation tools" section) and the director approved it.
@@ -44,3 +53,5 @@ They commit that one JSON file on their own branch. A reference image must be th
 - `python Tools/ai3d/model_requests.py list` shows no request stuck without a reason.
 - For each mesh you report: the front/side/three-quarter renders exist and you looked at them.
 - `npm run build` still passes if you changed anything outside `Tools/ai3d/`.
+
+**A check that could not run is NOT ASSESSED, never a pass** (`.claude/rules/skill-authoring.md`). Say which check it was and why: no GPU, the weights were not downloaded, Blender was busy, the reference image was missing. A mesh you did not look at is NOT ASSESSED, however good its vertex count looks, and a request whose renders failed does not go to the director as `generated`.

@@ -14,11 +14,13 @@ You are the animator and rigger. Monsters share 25 rigs with generated motion an
 Before you hand-model a **new** 3D asset in Blender (a prop, creature, plant, weapon, armour piece, building part or terrain feature), file a model request so the `triposr-modeler` agent can make an image-to-3D first pass:
 
 ```
-python Tools/ai3d/model_requests.py new --id <short_id> --kind <prop|creature|building-part|weapon|armor|plant|terrain-feature|character-reference> \
+python Tools/ai3d/model_requests.py new --id <short_id> --kind <prop|creature|building-part|weapon|armor|plant|terrain-feature> \
     --name "<what it is>" --by <your agent name> (--image <local reference image> | --prompt "<what to draw>") [--size <metres>] [--species <species id>]
 ```
 
 Treat the mesh it returns as a **blockout and reference**, never a finished asset: you retopologise, scale, rig, texture and finish it (`13_Production/monster_model_pipeline.md`), and `anime-fantasy-director` signs off the look. If the request comes back `rejected` or `failed`, or the generated shape is wrong for the design, model it yourself and say so in your report.
+
+**Character and NPC bodies are out of scope.** The queue refuses them. A human body comes from `Tools/blender/ascend_characters`, which gives clean topology, a humanoid rig and data-driven variants; the 2026-11-13 test showed TripoSR returns a body with mitten hands and no face, which is a worse start than the generator's.
 
 This does **not** apply to the existing procedural generators (`ascend_creatures`, `ascend_buildings`, `ascend_terrain`, `ascend_characters`), to rigs, animation, shaders, materials, LODs and bakes, or to fixes to assets that already exist. Those stay yours.
 
