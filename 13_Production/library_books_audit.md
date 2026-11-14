@@ -95,7 +95,10 @@ Hand-written books live in `Tools/library/handwritten/<book-id>.md`; `shelve.py`
 | 1 | 14 (`bk_001`, `013`, `025`, `037`, `207`, `219`, `270`, `282`, `318`, `330`, `367`, `465`, `480`, `501`) | Brindlewick; Great Labyrinth floors 1-40 (the Salvage Warren) | rewritten; `bk_037` unheld |
 | 2 | 16 (`bk_048`, `060`, `084`, `128`, `140`, `152`, `164`, `174`, `186`, `198`, `288`, `300`, `399`, `411`, `432`, `444`) | Greymoor (cookery, history, household, chapel, ballad, story) | rewritten |
 | 3 | 18 (Sylvaran `bk_153`, `165`, `175`, `187`, `199`, `289`, `301`, `400`, `433`, `445`; Mossdeep `bk_208`, `220`, `271`, `283`, `368`, `466`, `481`, `505`) | Sylvaran (Lothaniel and the moonwell hamlets), Mossdeep (Thimblefolk Mushroom Town) | rewritten |
+| 4 | 16 (Iron Hold `bk_130`, `142`, `154`, `176`, `188`, `200`, `290`, `302`, `401`, `434`, `446`; Moraveil `bk_209`, `221`, `272`, `284`, `467`) | Iron Hold (Karak Dûn), Moraveil (the Truce Bridge) | rewritten |
 
 After batch 2: 30 hand-written, 251 still templated, 259 distinct excerpts (245 before the rewrite began), 480 shelved and 40 held. Every new book is a different voice with its own reason to write; all are drafts. New local lore they imply is raised as Canon section 6 row L7.
 
 After batch 3: 48 hand-written, 233 still templated, 271 distinct excerpts, status clear 156, fix 324, hold 40 (over 520 files). The resume list is `13_Production/library_rewrite_queue.md`.
+
+After batch 4: 64 hand-written, 217 still templated, 280 distinct excerpts, status clear 167, fix 313, hold 40 (over 520 files).

@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-14",
  "counts": {
-  "clear": 156,
+  "clear": 167,
   "hold": 40,
-  "fix": 324
+  "fix": 313
  },
  "books": {
   "bk_001": {
@@ -1983,18 +1983,16 @@
   },
   "bk_130": {
    "file": "aethwyrd/130-two-accounts-of-iron-hold.md",
-   "title": "Two Accounts of Iron Hold",
+   "title": "The Hall of Thanes, Face by Face",
    "kind": "local_history",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_131": {
    "file": "aethwyrd/131-two-accounts-of-hoshizora.md",
@@ -2161,18 +2159,16 @@
   },
   "bk_142": {
    "file": "aethwyrd/142-two-accounts-of-iron-hold.md",
-   "title": "Two Accounts of Iron Hold",
+   "title": "Carved in Stone, Changed with Difficulty",
    "kind": "local_history",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_143": {
    "file": "aethwyrd/143-two-accounts-of-hoshizora.md",
@@ -2337,18 +2333,16 @@
   },
   "bk_154": {
    "file": "aethwyrd/154-two-accounts-of-iron-hold.md",
-   "title": "Two Accounts of Iron Hold",
+   "title": "Steel for Both Sides",
    "kind": "local_history",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_155": {
    "file": "aethwyrd/155-two-accounts-of-hoshizora.md",
@@ -2659,18 +2653,16 @@
   },
   "bk_176": {
    "file": "aethwyrd/176-the-house-book-of-karak-d-n.md",
-   "title": "The House Book of Karak Dûn",
+   "title": "A Smith's Hearth-Stone",
    "kind": "household_book",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_177": {
    "file": "aethwyrd/177-the-house-book-of-hoshizora-city.md",
@@ -2835,18 +2827,16 @@
   },
   "bk_188": {
    "file": "aethwyrd/188-the-house-book-of-karak-d-n.md",
-   "title": "The House Book of Karak Dûn",
+   "title": "Four Generations in the Outer Mines",
    "kind": "household_book",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_189": {
    "file": "aethwyrd/189-the-house-book-of-hoshizora-city.md",
@@ -3011,18 +3001,16 @@
   },
   "bk_200": {
    "file": "aethwyrd/200-the-house-book-of-karak-d-n.md",
-   "title": "The House Book of Karak Dûn",
+   "title": "The Brewer's House and the Three-Hundred-Year Cup",
    "kind": "household_book",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_201": {
    "file": "aethwyrd/201-bench-notes-from-lumbaya-temple-villages.md",
@@ -3130,7 +3118,7 @@
   },
   "bk_209": {
    "file": "aethwyrd/209-bench-notes-from-moraveil-goblin-village.md",
-   "title": "Bench Notes from Moraveil goblin village",
+   "title": "Mushrooms for the Market: A Cave-Farmer's Notes",
    "kind": "craft_notes",
    "subjectRegion": "Moraveil",
    "scanStatus": "clear",
@@ -3138,8 +3126,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_210": {
    "file": "aethwyrd/210-bench-notes-from-fox-shrine-isle.md",
@@ -3286,7 +3274,7 @@
   },
   "bk_221": {
    "file": "aethwyrd/221-bench-notes-from-moraveil-goblin-village.md",
-   "title": "Bench Notes from Moraveil goblin village",
+   "title": "Notes on Mending a Bridge",
    "kind": "craft_notes",
    "subjectRegion": "Moraveil",
    "scanStatus": "clear",
@@ -3294,8 +3282,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_222": {
    "file": "aethwyrd/222-bench-notes-from-fox-shrine-isle.md",
@@ -4081,24 +4069,16 @@
   },
   "bk_272": {
    "file": "aethwyrd/272-branch-notes-for-moraveil-goblin-village.md",
-   "title": "Branch Notes for Moraveil goblin village",
+   "title": "The Mediation Desk: A Guide for Guild Clerks in Moraveil",
    "kind": "guild_manual",
    "subjectRegion": "Moraveil",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "kaede_founded x1",
-    "kaede_nickname x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "ranks_origin: Kaede",
-    "ranks_origin: Kaede",
-    "ranks_origin: Aoyama"
-   ],
-   "templatedShare": 0.92,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_273": {
    "file": "aethwyrd/273-branch-notes-for-fox-shrine-isle.md",
@@ -4317,24 +4297,16 @@
   },
   "bk_284": {
    "file": "aethwyrd/284-branch-notes-for-moraveil-goblin-village.md",
-   "title": "Branch Notes for Moraveil goblin village",
+   "title": "Weapons at the Door",
    "kind": "guild_manual",
    "subjectRegion": "Moraveil",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "kaede_founded x1",
-    "kaede_nickname x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "ranks_origin: Kaede",
-    "ranks_origin: Kaede",
-    "ranks_origin: Aoyama"
-   ],
-   "templatedShare": 0.92,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_285": {
    "file": "aethwyrd/285-branch-notes-for-fox-shrine-isle.md",
@@ -4415,18 +4387,16 @@
   },
   "bk_290": {
    "file": "aethwyrd/290-what-the-shrine-floor-knows-in-karak-d-n.md",
-   "title": "What the Shrine Floor Knows in Karak Dûn",
+   "title": "Thorsday at the Great Forge",
    "kind": "chapel_notes",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_291": {
    "file": "aethwyrd/291-what-the-shrine-floor-knows-in-hoshizora-city.md",
@@ -4591,18 +4561,16 @@
   },
   "bk_302": {
    "file": "aethwyrd/302-what-the-shrine-floor-knows-in-karak-d-n.md",
-   "title": "What the Shrine Floor Knows in Karak Dûn",
+   "title": "The Lost Stone: A Keeper's Rite",
    "kind": "chapel_notes",
    "subjectRegion": "Iron Hold",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_303": {
    "file": "aethwyrd/303-what-the-shrine-floor-knows-in-hoshizora-city.md",
@@ -6004,7 +5972,7 @@
   },
   "bk_401": {
    "file": "aethwyrd/401-songs-heard-in-karak-d-n.md",
-   "title": "Songs Heard in Karak Dûn",
+   "title": "Hammer-Songs of the Third Hall",
    "kind": "ballad_sheet",
    "subjectRegion": "Iron Hold",
    "scanStatus": "clear",
@@ -6012,8 +5980,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 1.0,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_402": {
    "file": "aethwyrd/402-songs-heard-in-hoshizora-city.md",
@@ -6487,7 +6455,7 @@
   },
   "bk_434": {
    "file": "aethwyrd/434-read-this-at-karak-d-n.md",
-   "title": "Read This at Karak Dûn",
+   "title": "The Hearth-Stone That Went Cold",
    "kind": "story_aloud",
    "subjectRegion": "Iron Hold",
    "scanStatus": "clear",
@@ -6495,8 +6463,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 1.0,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_435": {
    "file": "aethwyrd/435-read-this-at-hoshizora-city.md",
@@ -6643,7 +6611,7 @@
   },
   "bk_446": {
    "file": "aethwyrd/446-read-this-at-karak-d-n.md",
-   "title": "Read This at Karak Dûn",
+   "title": "The Dwarf Who Laughed Last",
    "kind": "story_aloud",
    "subjectRegion": "Iron Hold",
    "scanStatus": "clear",
@@ -6651,8 +6619,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 1.0,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_447": {
    "file": "aethwyrd/447-read-this-at-hoshizora-city.md",
@@ -6916,18 +6884,16 @@
   },
   "bk_467": {
    "file": "aethwyrd/467-potsherds-from-the-moraveil-copy.md",
-   "title": "Potsherds from the Moraveil Copy",
+   "title": "What the Goblins Keep in the Flooded Cave",
    "kind": "valdrisian_fragment",
    "subjectRegion": "Moraveil",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.92,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_468": {
    "file": "aethwyrd/468-potsherds-from-the-kitsune-isles-copy.md",

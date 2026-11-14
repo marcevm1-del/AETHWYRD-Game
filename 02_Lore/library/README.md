@@ -66,7 +66,7 @@ Lectures, copied demonstrations and the careful fragments of the old empire, kep
 - [A Lecture Copied at Nox Dominion](lib_mages_academy/bk_393.md) (Academy lecture, partial, draft): A copied academy lecture about magic as practised near Nox Dominion, with its pauses and its student's marginalia.
 - [Potsherds from the Proving Halls](lib_mages_academy/bk_465.md) (Valdrisian fragment, partial, clear): Potsherd readings of the old empire as copied in Great Labyrinth (Floors 1-40), with the copyists' doubts left in.
 - [A Sherd in the Clover](lib_mages_academy/bk_466.md) (Valdrisian fragment, partial, clear): Potsherd readings of the old empire as copied in Mossdeep, with the copyists' doubts left in.
-- [Potsherds from the Moraveil Copy](lib_mages_academy/bk_467.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Moraveil, with the copyists' doubts left in.
+- [What the Goblins Keep in the Flooded Cave](lib_mages_academy/bk_467.md) (Valdrisian fragment, partial, clear): Potsherd readings of the old empire as copied in Moraveil, with the copyists' doubts left in.
 - [Potsherds from the Kitsune Isles Copy](lib_mages_academy/bk_468.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Kitsune Isles, with the copyists' doubts left in.
 - [Potsherds from the Whitewater Reach Copy](lib_mages_academy/bk_469.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Whitewater Reach, with the copyists' doubts left in.
 - [Potsherds from the Zarvan Copy](lib_mages_academy/bk_470.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Zarvan, with the copyists' doubts left in.
@@ -90,7 +90,7 @@ Branch manuals, street-law notes and the guild's copies of local rules. Region: 
 - [Branch Notes for Root of the World](lib_aldmere_guild_hall/bk_269.md) (Guild manual, partial, draft): A guild branch manual for Root of the World: forms, slang, rank etiquette and what the board will not say.
 - [The Gate Desk: How We Work](lib_aldmere_guild_hall/bk_270.md) (Guild manual, partial, clear): A guild branch manual for Great Labyrinth (Floors 1-40): forms, slang, rank etiquette and what the board will not say.
 - [The Big-Folk Desk: Notes for the Newly Appointed](lib_aldmere_guild_hall/bk_271.md) (Guild manual, partial, clear): A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.
-- [Branch Notes for Moraveil goblin village](lib_aldmere_guild_hall/bk_272.md) (Guild manual, partial, draft): A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.
+- [The Mediation Desk: A Guide for Guild Clerks in Moraveil](lib_aldmere_guild_hall/bk_272.md) (Guild manual, partial, clear): A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Fox Shrine Isle](lib_aldmere_guild_hall/bk_273.md) (Guild manual, partial, draft): A guild branch manual for Kitsune Isles: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for ice-fishing villages](lib_aldmere_guild_hall/bk_274.md) (Guild manual, partial, draft): A guild branch manual for Whitewater Reach: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Zarvan garden cities](lib_aldmere_guild_hall/bk_275.md) (Guild manual, partial, draft): A guild branch manual for Zarvan: forms, slang, rank etiquette and what the board will not say.
@@ -102,7 +102,7 @@ Branch manuals, street-law notes and the guild's copies of local rules. Region: 
 - [Branch Notes for Root of the World](lib_aldmere_guild_hall/bk_281.md) (Guild manual, partial, draft): A guild branch manual for Root of the World: forms, slang, rank etiquette and what the board will not say.
 - [Lost, Stacked and Found](lib_aldmere_guild_hall/bk_282.md) (Guild manual, partial, clear): A guild branch manual for Great Labyrinth (Floors 1-40): forms, slang, rank etiquette and what the board will not say.
 - [Seeds in Cups: How the Council Votes, for Guild Observers](lib_aldmere_guild_hall/bk_283.md) (Guild manual, partial, clear): A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.
-- [Branch Notes for Moraveil goblin village](lib_aldmere_guild_hall/bk_284.md) (Guild manual, partial, draft): A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.
+- [Weapons at the Door](lib_aldmere_guild_hall/bk_284.md) (Guild manual, partial, clear): A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Fox Shrine Isle](lib_aldmere_guild_hall/bk_285.md) (Guild manual, partial, draft): A guild branch manual for Kitsune Isles: forms, slang, rank etiquette and what the board will not say.
 - [The Street Law of Lumbaya](lib_aldmere_guild_hall/bk_361.md) (Law notes, partial, draft): A street-law note for Lumbaya: what a neighbour, a guard and a clerk each expect of you.
 - [The Street Law of Ashira Vale](lib_aldmere_guild_hall/bk_362.md) (Law notes, partial, draft): A street-law note for Ashira Vale: what a neighbour, a guard and a clerk each expect of you.
@@ -193,8 +193,8 @@ Living-timber shelves kept by the canopy city, covering the mossy and summer lan
 
 The canal cities keep every lock licence and, beside them, the grain and market notes of the trunk river. Region: `reg_lirian`, Lirian canal cities. Source: Proposed; Lirian's lock-licence quarrels (gazetteer) suggest a records house.
 
-- [Bench Notes from Moraveil goblin village](lib_lirian_licence_archive/bk_209.md) (Craft notes, accurate, clear): Bench notes from Moraveil on materials, tools and mistakes worth making only once.
-- [Bench Notes from Moraveil goblin village](lib_lirian_licence_archive/bk_221.md) (Craft notes, accurate, clear): Bench notes from Moraveil on materials, tools and mistakes worth making only once.
+- [Mushrooms for the Market: A Cave-Farmer's Notes](lib_lirian_licence_archive/bk_209.md) (Craft notes, accurate, clear): Bench notes from Moraveil on materials, tools and mistakes worth making only once.
+- [Notes on Mending a Bridge](lib_lirian_licence_archive/bk_221.md) (Craft notes, accurate, clear): Bench notes from Moraveil on materials, tools and mistakes worth making only once.
 - [Thorgrim as Told in Velmark](lib_lirian_licence_archive/bk_241.md) (Myth telling, folk belief, draft): The gods as told in Velmark, in the voices of those who tell them and those who doubt.
 - [Vex as Told in Velmark](lib_lirian_licence_archive/bk_253.md) (Myth telling, folk belief, draft): The gods as told in Velmark, in the voices of those who tell them and those who doubt.
 - [Goods Through Velmark ducal towns](lib_lirian_licence_archive/bk_321.md) (Trade notes, accurate, draft): Trade notes on goods that pass through Velmark, with prices as rules of thumb and not promises.
@@ -268,26 +268,26 @@ Craft marks, oath records and the working notes of the mines and the clockwork h
 - [Boots Toward Aldmere](lib_karak_dun_records/bk_096.md) (Road book, accurate, draft): A road notebook that walks the legs toward Iron Hold, with weather, crossings and the habits of the road.
 - [Boots Toward Haneul](lib_karak_dun_records/bk_108.md) (Road book, accurate, draft): A road notebook that walks the legs toward Iron Hold, with weather, crossings and the habits of the road.
 - [Boots Toward Frostveil](lib_karak_dun_records/bk_120.md) (Road book, accurate, draft): A road notebook that walks the legs toward Iron Hold, with weather, crossings and the habits of the road.
-- [Two Accounts of Iron Hold](lib_karak_dun_records/bk_130.md) (Local history, partial, draft): Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.
-- [Two Accounts of Iron Hold](lib_karak_dun_records/bk_142.md) (Local history, partial, draft): Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.
-- [Two Accounts of Iron Hold](lib_karak_dun_records/bk_154.md) (Local history, partial, draft): Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.
-- [The House Book of Karak Dûn](lib_karak_dun_records/bk_176.md) (Household book, accurate, draft): A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.
-- [The House Book of Karak Dûn](lib_karak_dun_records/bk_188.md) (Household book, accurate, draft): A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.
-- [The House Book of Karak Dûn](lib_karak_dun_records/bk_200.md) (Household book, accurate, draft): A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.
+- [The Hall of Thanes, Face by Face](lib_karak_dun_records/bk_130.md) (Local history, partial, clear): Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.
+- [Carved in Stone, Changed with Difficulty](lib_karak_dun_records/bk_142.md) (Local history, partial, clear): Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.
+- [Steel for Both Sides](lib_karak_dun_records/bk_154.md) (Local history, partial, clear): Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.
+- [A Smith's Hearth-Stone](lib_karak_dun_records/bk_176.md) (Household book, accurate, clear): A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.
+- [Four Generations in the Outer Mines](lib_karak_dun_records/bk_188.md) (Household book, accurate, clear): A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.
+- [The Brewer's House and the Three-Hundred-Year Cup](lib_karak_dun_records/bk_200.md) (Household book, accurate, clear): A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.
 - [Kaelthas as Told in Cinderhole](lib_karak_dun_records/bk_235.md) (Myth telling, folk belief, draft): The gods as told in Cinderhole, in the voices of those who tell them and those who doubt.
 - [Solenne as Told in Cinderhole](lib_karak_dun_records/bk_247.md) (Myth telling, folk belief, draft): The gods as told in Cinderhole, in the voices of those who tell them and those who doubt.
 - [Kaelthas as Told in Cinderhole](lib_karak_dun_records/bk_259.md) (Myth telling, folk belief, draft): The gods as told in Cinderhole, in the voices of those who tell them and those who doubt.
-- [What the Shrine Floor Knows in Karak Dûn](lib_karak_dun_records/bk_290.md) (Chapel notes, folk belief, draft): What a shrine floor in Iron Hold sees: keepers, mourners, festival crowds and quiet hours.
-- [What the Shrine Floor Knows in Karak Dûn](lib_karak_dun_records/bk_302.md) (Chapel notes, folk belief, draft): What a shrine floor in Iron Hold sees: keepers, mourners, festival crowds and quiet hours.
+- [Thorsday at the Great Forge](lib_karak_dun_records/bk_290.md) (Chapel notes, folk belief, clear): What a shrine floor in Iron Hold sees: keepers, mourners, festival crowds and quiet hours.
+- [The Lost Stone: A Keeper's Rite](lib_karak_dun_records/bk_302.md) (Chapel notes, folk belief, clear): What a shrine floor in Iron Hold sees: keepers, mourners, festival crowds and quiet hours.
 - [Goods Through Cinderhole](lib_karak_dun_records/bk_315.md) (Trade notes, accurate, draft): Trade notes on goods that pass through Cinderhole, with prices as rules of thumb and not promises.
 - [Goods Through Cinderhole](lib_karak_dun_records/bk_327.md) (Trade notes, accurate, draft): Trade notes on goods that pass through Cinderhole, with prices as rules of thumb and not promises.
 - [Letters Left in Gearholm Undercity](lib_karak_dun_records/bk_345.md) (Letter book, partial, clear): Letters left in Gearholm: ordinary news, kept because someone could not throw them away.
 - [Letters Left in Gearholm Undercity](lib_karak_dun_records/bk_357.md) (Letter book, partial, clear): Letters left in Gearholm: ordinary news, kept because someone could not throw them away.
-- [Songs Heard in Karak Dûn](lib_karak_dun_records/bk_401.md) (Ballad sheet, folk belief, clear): Songs heard in Iron Hold, set down with the verses people disagree about.
+- [Hammer-Songs of the Third Hall](lib_karak_dun_records/bk_401.md) (Ballad sheet, folk belief, clear): Songs heard in Iron Hold, set down with the verses people disagree about.
 - [A Veilborn Kitchen in Gearholm](lib_karak_dun_records/bk_412.md) (Veilborn memoir, partial, draft): A Veilborn cook's memoir from Gearholm: an old-world kitchen made to work in a new one.
 - [A Veilborn Kitchen in Gearholm](lib_karak_dun_records/bk_424.md) (Veilborn memoir, partial, draft): A Veilborn cook's memoir from Gearholm: an old-world kitchen made to work in a new one.
-- [Read This at Karak Dûn](lib_karak_dun_records/bk_434.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Iron Hold, with the pauses marked for the reader.
-- [Read This at Karak Dûn](lib_karak_dun_records/bk_446.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Iron Hold, with the pauses marked for the reader.
+- [The Hearth-Stone That Went Cold](lib_karak_dun_records/bk_434.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Iron Hold, with the pauses marked for the reader.
+- [The Dwarf Who Laughed Last](lib_karak_dun_records/bk_446.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Iron Hold, with the pauses marked for the reader.
 - [The Latch at Karak Dûn](lib_karak_dun_records/bk_451.md) (A short play, folk belief, clear): A short play for a latch and two voices, staged in Iron Hold.
 - [The Latch at Karak Dûn](lib_karak_dun_records/bk_463.md) (A short play, folk belief, clear): A short play for a latch and two voices, staged in Iron Hold.
 - [Neighbors Near Karak Dûn](lib_karak_dun_records/bk_508.md) (Field guide, partial, draft): A walker's guide to the creatures near Iron Hold: what folk file them under, how to approach them, what to leave alone.

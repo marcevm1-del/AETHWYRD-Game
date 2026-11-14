@@ -2,12 +2,10 @@
 
 Hand-written rewrites replace the template text of a book: write `Tools/library/handwritten/<book-id>.md` (header format as in any existing file there: `# Title`, `*Author*`, Shelf/Region/In-world date/Status lines), then run `python Tools/library/shelve.py E:/Ideas/books`, `node Tools/validate/validate.js`, `node Tools/run_tests.js`. Worst-first: lowest ring first. A field guide must name only species that live in its region (`## Species name` headings).
 
-State: 48 hand-written, 233 still templated.
+State: 64 hand-written, 217 still templated.
 
 | Region | Ring | Ids still templated |
 |---|---|---|
-| Iron Hold | 4 | bk_130, bk_142, bk_154, bk_176, bk_188, bk_200, bk_290, bk_302, bk_401, bk_434, bk_446 |
-| Moraveil | 4 | bk_209, bk_221, bk_272, bk_284, bk_467 |
 | Haneul | 5 | bk_052, bk_064, bk_076, bk_132, bk_144, bk_156, bk_166, bk_178, bk_190, bk_292, bk_304, bk_403, bk_436, bk_448 |
 | Hoshizora | 5 | bk_143, bk_155, bk_177, bk_189, bk_303, bk_402, bk_435, bk_447 |
 | Kitsune Isles | 5 | bk_210, bk_222, bk_273, bk_285, bk_370, bk_483 |

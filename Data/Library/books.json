@@ -7507,8 +7507,8 @@
   },
   {
    "id": "bk_130",
-   "title": "Two Accounts of Iron Hold",
-   "author": "Soren Rahman of Iron Hold",
+   "title": "The Hall of Thanes, Face by Face",
+   "author": "Brunhild Anvilsdottir, guide of the Hall of Thanes, who has never once been asked about the ceiling",
    "kind": "local_history",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -7516,23 +7516,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1413,
+   "readingMinutes": 2,
+   "words": 438,
    "tags": [
     "history",
     "reg_iron_hold"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "910 SC",
-   "source": "books/aethwyrd/130-two-accounts-of-iron-hold.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "996 SC",
+   "source": "Tools/library/handwritten/bk_130.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_130.md",
-   "excerpt": "At Ashen Mines camps the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "A long room cut into the heart of Karak Dûn, with a roof so high the lamps do not reach it. Down both walls, in niches, are the carved faces of every High Thane the hold has elected. They are life-size, unsmiling and very patient. They watch the living the way a good teacher watches a lesson: not to interrupt, only to be present.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 910 SC, 114 years before the present (1024 SC)",
+    "era": "about 996 SC, 28 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "in a labelled box on the second rack, Karak Dûn Hall of Records"
    },
@@ -7546,21 +7546,6 @@
      "kind": "place",
      "id": "Karak Dûn",
      "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
     },
     {
      "kind": "god",
@@ -8253,8 +8238,8 @@
   },
   {
    "id": "bk_142",
-   "title": "Two Accounts of Iron Hold",
-   "author": "Amira Cho of Iron Hold",
+   "title": "Carved in Stone, Changed with Difficulty",
+   "author": "Orm Chisel-Hand, stone-cutter of the Law Wall, on why nothing is ever quickly amended",
    "kind": "local_history",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -8262,23 +8247,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1452,
+   "readingMinutes": 2,
+   "words": 392,
    "tags": [
     "history",
     "reg_iron_hold"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "922 SC",
-   "source": "books/aethwyrd/142-two-accounts-of-iron-hold.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1005 SC",
+   "source": "Tools/library/handwritten/bk_142.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_142.md",
-   "excerpt": "At Ashen Mines camps the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "The laws of Karak Dûn are carved in stone, and they are changed only with great difficulty. This is not an accident of temperament. It is the point.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 922 SC, 102 years before the present (1024 SC)",
+    "era": "about 1005 SC, 19 years before the present (1024 SC)",
     "copy": "Corners rounded by many thumbs; a tea ring on the second page.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Karak Dûn Hall of Records"
    },
@@ -8292,21 +8277,6 @@
      "kind": "place",
      "id": "Karak Dûn",
      "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -8964,8 +8934,8 @@
   },
   {
    "id": "bk_154",
-   "title": "Two Accounts of Iron Hold",
-   "author": "Rafi Flint of Iron Hold",
+   "title": "Steel for Both Sides",
+   "author": "Garrow Thrum, a steel factor of Karak Dûn, in a private letter he asked to have kept on the shelf",
    "kind": "local_history",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -8973,23 +8943,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Iron Hold, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1437,
+   "readingMinutes": 2,
+   "words": 390,
    "tags": [
     "history",
     "reg_iron_hold"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "934 SC",
-   "source": "books/aethwyrd/154-two-accounts-of-iron-hold.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1013 SC",
+   "source": "Tools/library/handwritten/bk_154.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_154.md",
-   "excerpt": "At Karak Dûn the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "You asked whether it troubles me, selling iron and steel to every kingdom in the world, including those who are at war with one another. I said I would think about it. I have thought for three weeks.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 934 SC, 90 years before the present (1024 SC)",
+    "era": "about 1013 SC, 11 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "in a labelled box on the second rack, Karak Dûn Hall of Records"
    },
@@ -9005,18 +8975,13 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
+     "kind": "item",
+     "id": "itm_mat_weapon",
+     "note": "A material or item the text mentions."
     },
     {
      "kind": "god",
      "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
      "note": "A god of the week the text names."
     }
    ],
@@ -10281,8 +10246,8 @@
   },
   {
    "id": "bk_176",
-   "title": "The House Book of Karak Dûn",
-   "author": "Kwame Flint of Iron Hold",
+   "title": "A Smith's Hearth-Stone",
+   "author": "Dagny Emberhand, smith of the Third Hall, writing the rules of her house for her apprentice",
    "kind": "household_book",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -10290,24 +10255,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1393,
+   "readingMinutes": 2,
+   "words": 411,
    "tags": [
     "daily_life",
     "housing",
     "reg_iron_hold"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "956 SC",
-   "source": "books/aethwyrd/176-the-house-book-of-karak-d-n.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1008 SC",
+   "source": "Tools/library/handwritten/bk_176.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_176.md",
-   "excerpt": "At Karak Dûn the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Every smith keeps a hearth-stone from their first forge. Lose it, and you have lost your luck, your craft and, by some accounts, your name. I do not entirely believe this. I also do not take chances.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 956 SC, 68 years before the present (1024 SC)",
+    "era": "about 1008 SC, 16 years before the present (1024 SC)",
     "copy": "Foxed with age, ink faded brown but sound.",
     "shelfPlace": "in a labelled box on the second rack, Karak Dûn Hall of Records"
    },
@@ -10318,26 +10283,6 @@
      "note": "The region this book is about (Iron Hold)."
     },
     {
-     "kind": "place",
-     "id": "Karak Dûn",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
      "kind": "god",
      "id": "Thorgrim",
      "note": "A god of the week the text names."
@@ -10346,6 +10291,9 @@
    "teaches": [
     "The small rules of a shared home in Iron Hold: lamps, guests, mending.",
     "How ordinary people of Iron Hold keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -11015,8 +10963,8 @@
   },
   {
    "id": "bk_188",
-   "title": "The House Book of Karak Dûn",
-   "author": "Rafi Ellison of Iron Hold",
+   "title": "Four Generations in the Outer Mines",
+   "author": "Mara Tallowby, a human labourer's daughter, who keeps the house book for a family that has worked the outer seams since her great-grandfather's time",
    "kind": "household_book",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -11024,24 +10972,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1437,
+   "readingMinutes": 2,
+   "words": 405,
    "tags": [
     "daily_life",
     "housing",
     "reg_iron_hold"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "968 SC",
-   "source": "books/aethwyrd/188-the-house-book-of-karak-d-n.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1016 SC",
+   "source": "Tools/library/handwritten/bk_188.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_188.md",
-   "excerpt": "At Karak Dûn the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "We are not dwarves, and we have never pretended to be. We are the people who carry the ore. In Karak Dûn they call us the outer folk, and they do not mean it unkindly. They mean it accurately.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 968 SC, 56 years before the present (1024 SC)",
+    "era": "about 1016 SC, 8 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "in a labelled box on the second rack, Karak Dûn Hall of Records"
    },
@@ -11055,21 +11003,14 @@
      "kind": "place",
      "id": "Karak Dûn",
      "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Thorgrim",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The small rules of a shared home in Iron Hold: lamps, guests, mending.",
     "How ordinary people of Iron Hold keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -11733,8 +11674,8 @@
   },
   {
    "id": "bk_200",
-   "title": "The House Book of Karak Dûn",
-   "author": "Pavel Haddad of Iron Hold",
+   "title": "The Brewer's House and the Three-Hundred-Year Cup",
+   "author": "Hagen Stoutbarrel, brewer, on the household of a man who has, in a manner of speaking, competed",
    "kind": "household_book",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -11742,24 +11683,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Iron Hold: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1424,
+   "readingMinutes": 2,
+   "words": 390,
    "tags": [
     "daily_life",
     "housing",
     "reg_iron_hold"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "980 SC",
-   "source": "books/aethwyrd/200-the-house-book-of-karak-d-n.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1019 SC",
+   "source": "Tools/library/handwritten/bk_200.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_200.md",
-   "excerpt": "At Ashen Mines camps the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "A brewer's house smells of malt, and of the particular sort of damp that comes from a cellar. I am fond of both.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 980 SC, 44 years before the present (1024 SC)",
+    "era": "about 1019 SC, 5 years before the present (1024 SC)",
     "copy": "Water-stained along the lower edge but fully legible.",
     "shelfPlace": "on the open shelf beside the copying desk, Karak Dûn Hall of Records"
    },
@@ -11770,29 +11711,17 @@
      "note": "The region this book is about (Iron Hold)."
     },
     {
-     "kind": "place",
-     "id": "Karak Dûn",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "god",
      "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The small rules of a shared home in Iron Hold: lamps, guests, mending.",
     "How ordinary people of Iron Hold keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -12214,8 +12143,8 @@
   },
   {
    "id": "bk_209",
-   "title": "Bench Notes from Moraveil goblin village",
-   "author": "Safiya Adeyemi of Moraveil",
+   "title": "Mushrooms for the Market: A Cave-Farmer's Notes",
+   "author": "Grizzle Mossback, goblin cave-farmer of Moraveil, who has been told his handwriting is very large",
    "kind": "craft_notes",
    "library": "lib_lirian_licence_archive",
    "region": "reg_lirian",
@@ -12223,23 +12152,23 @@
    "shelf": "Craft notes",
    "language": "Common",
    "blurb": "Bench notes from Moraveil on materials, tools and mistakes worth making only once.",
-   "readingMinutes": 3,
-   "words": 519,
+   "readingMinutes": 2,
+   "words": 406,
    "tags": [
     "crafting",
     "reg_moraveil"
    ],
    "reliability": "accurate",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "989 SC",
-   "source": "books/aethwyrd/209-bench-notes-from-moraveil-goblin-village.md",
+   "quality": "strong",
+   "inWorldDate": "1007 SC",
+   "source": "Tools/library/handwritten/bk_209.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lirian_licence_archive/bk_209.md",
-   "excerpt": "Copied at Moraveil market town from a maker who was willing to be watched. Nothing here makes you a master. Mastery is someone else’s trust, repeated.",
+   "excerpt": "My name is Grizzle, and I grow mushrooms. A human asked me to write down how, and offered me a pie. I accepted. This is the book.",
    "provenance": {
     "tradition": "The Truce Country tradition of Moraveil",
     "writtenIn": "reg_moraveil",
-    "era": "about 989 SC, 35 years before the present (1024 SC)",
+    "era": "about 1007 SC, 17 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "in a labelled box on the second rack, Lirian Licence Archive"
    },
@@ -12248,16 +12177,6 @@
      "kind": "region",
      "id": "reg_moraveil",
      "note": "The region this book is about (Moraveil)."
-    },
-    {
-     "kind": "place",
-     "id": "Moraveil goblin village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moraveil market town",
-     "note": "A settlement or place the text names."
     }
    ],
    "teaches": [
@@ -12803,8 +12722,8 @@
   },
   {
    "id": "bk_221",
-   "title": "Bench Notes from Moraveil goblin village",
-   "author": "Soren Haddad of Moraveil",
+   "title": "Notes on Mending a Bridge",
+   "author": "Odalys Brickwright, mason of the Truce Bridge, to the masons who come after",
    "kind": "craft_notes",
    "library": "lib_lirian_licence_archive",
    "region": "reg_lirian",
@@ -12812,23 +12731,23 @@
    "shelf": "Craft notes",
    "language": "Common",
    "blurb": "Bench notes from Moraveil on materials, tools and mistakes worth making only once.",
-   "readingMinutes": 3,
-   "words": 522,
+   "readingMinutes": 2,
+   "words": 366,
    "tags": [
     "crafting",
     "reg_moraveil"
    ],
    "reliability": "accurate",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "1001 SC",
-   "source": "books/aethwyrd/221-bench-notes-from-moraveil-goblin-village.md",
+   "quality": "strong",
+   "inWorldDate": "1014 SC",
+   "source": "Tools/library/handwritten/bk_221.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lirian_licence_archive/bk_221.md",
-   "excerpt": "Copied at Moraveil goblin village from a maker who was willing to be watched. Nothing here makes you a master. Mastery is someone else’s trust, repeated.",
+   "excerpt": "A bridge is a promise made of stone. I know that sounds grand. It is also a plain fact, and it is the first thing to learn.",
    "provenance": {
     "tradition": "The Truce Country tradition of Moraveil",
     "writtenIn": "reg_moraveil",
-    "era": "about 1001 SC, 23 years before the present (1024 SC)",
+    "era": "about 1014 SC, 10 years before the present (1024 SC)",
     "copy": "Loose gatherings tied together with a ribbon.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Lirian Licence Archive"
    },
@@ -12837,11 +12756,6 @@
      "kind": "region",
      "id": "reg_moraveil",
      "note": "The region this book is about (Moraveil)."
-    },
-    {
-     "kind": "place",
-     "id": "Moraveil goblin village",
-     "note": "A settlement or place the text names."
     }
    ],
    "teaches": [
@@ -15913,8 +15827,8 @@
   },
   {
    "id": "bk_272",
-   "title": "Branch Notes for Moraveil goblin village",
-   "author": "Idris Ndlovu of Moraveil",
+   "title": "The Mediation Desk: A Guide for Guild Clerks in Moraveil",
+   "author": "Pell Thistledown, clerk of the Guild's small desk by the Truce Bridge",
    "kind": "guild_manual",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -15922,24 +15836,24 @@
    "shelf": "Guild manual",
    "language": "Common",
    "blurb": "A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.",
-   "readingMinutes": 8,
-   "words": 1518,
+   "readingMinutes": 2,
+   "words": 418,
    "tags": [
     "guild",
     "reg_moraveil"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "932 SC",
-   "source": "books/aethwyrd/272-branch-notes-for-moraveil-goblin-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1016 SC",
+   "source": "Tools/library/handwritten/bk_272.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_272.md",
    "rankGate": "D",
-   "excerpt": "At Moraveil goblin village the work of the day sits inside market awnings and goblin-mended stalls. People eat pepper stew and fried bread and they talk about a bargain that changes if you blink the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Welcome. You have been appointed to the one Guild desk where the customers sometimes shout in two languages at once. It is a good desk. Bring a cushion.",
    "provenance": {
     "tradition": "The Truce Country tradition of Moraveil",
     "writtenIn": "reg_moraveil",
-    "era": "about 932 SC, 92 years before the present (1024 SC)",
+    "era": "about 1016 SC, 8 years before the present (1024 SC)",
     "copy": "Foxed with age, ink faded brown but sound.",
     "shelfPlace": "on the branch shelf behind the board, Aldmere Guild Hall Reading Room"
    },
@@ -15950,37 +15864,20 @@
      "note": "The region this book is about (Moraveil)."
     },
     {
-     "kind": "place",
-     "id": "Moraveil goblin village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moraveil market town",
-     "note": "A settlement or place the text names."
+     "kind": "species",
+     "id": "mon_goblin",
+     "note": "Named in this book."
     },
     {
      "kind": "item",
-     "id": "itm_mat_scale",
+     "id": "itm_mat_weapon",
      "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "How the Guild branch near Moraveil goblin village runs: forms, slang, rank etiquette.",
-    "What the board will not say out loud and the courtesy that fills the gap."
-   ],
-   "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS)."
+    "What the board will not say out loud and the courtesy that fills the gap.",
+    "Species it names: Goblin."
    ]
   },
   {
@@ -16655,8 +16552,8 @@
   },
   {
    "id": "bk_284",
-   "title": "Branch Notes for Moraveil goblin village",
-   "author": "Chenna Cho of Moraveil",
+   "title": "Weapons at the Door",
+   "author": "Marta Quillfeather, who keeps the weapons-rack of the Friendly Goblin and has opinions about each blade",
    "kind": "guild_manual",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -16664,24 +16561,24 @@
    "shelf": "Guild manual",
    "language": "Common",
    "blurb": "A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.",
-   "readingMinutes": 8,
-   "words": 1509,
+   "readingMinutes": 2,
+   "words": 366,
    "tags": [
     "guild",
     "reg_moraveil"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "944 SC",
-   "source": "books/aethwyrd/284-branch-notes-for-moraveil-goblin-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1019 SC",
+   "source": "Tools/library/handwritten/bk_284.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_284.md",
    "rankGate": "D",
-   "excerpt": "At Moraveil goblin village the work of the day sits inside market awnings and goblin-mended stalls. People eat pepper stew and fried bread and they talk about a bargain that changes if you blink the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I keep the rack. It is by the door, under the lantern, and it has fourteen pegs, which is thirteen more than any inn really needs, and just enough for a Guild party on a rainy night.",
    "provenance": {
     "tradition": "The Truce Country tradition of Moraveil",
     "writtenIn": "reg_moraveil",
-    "era": "about 944 SC, 80 years before the present (1024 SC)",
+    "era": "about 1019 SC, 5 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "on the clerk’s counter, tied with cord, Aldmere Guild Hall Reading Room"
    },
@@ -16692,37 +16589,15 @@
      "note": "The region this book is about (Moraveil)."
     },
     {
-     "kind": "place",
-     "id": "Moraveil goblin village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moraveil market town",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Kaelthas",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
+     "kind": "species",
+     "id": "mon_goblin",
+     "note": "Named in this book."
     }
    ],
    "teaches": [
     "How the Guild branch near Moraveil goblin village runs: forms, slang, rank etiquette.",
-    "What the board will not say out loud and the courtesy that fills the gap."
-   ],
-   "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS)."
+    "What the board will not say out loud and the courtesy that fills the gap.",
+    "Species it names: Goblin."
    ]
   },
   {
@@ -17014,8 +16889,8 @@
   },
   {
    "id": "bk_290",
-   "title": "What the Shrine Floor Knows in Karak Dûn",
-   "author": "Bruni Diallo of Iron Hold",
+   "title": "Thorsday at the Great Forge",
+   "author": "Ulf Hammerhall, a priest-smith of the anvil-shrine, who wishes it noted that he is also a very ordinary smith",
    "kind": "chapel_notes",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -17023,23 +16898,23 @@
    "shelf": "Chapel notes",
    "language": "Common",
    "blurb": "What a shrine floor in Iron Hold sees: keepers, mourners, festival crowds and quiet hours.",
-   "readingMinutes": 7,
-   "words": 1434,
+   "readingMinutes": 2,
+   "words": 382,
    "tags": [
     "faith",
     "reg_iron_hold"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "950 SC",
-   "source": "books/aethwyrd/290-what-the-shrine-floor-knows-in-karak-d-n.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1004 SC",
+   "source": "Tools/library/handwritten/bk_290.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_290.md",
-   "excerpt": "At Karak Dûn the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Thorsday is the day of the great forging. It is the busiest day in Karak Dûn, and the holiest, and nobody has ever found a way to tell the two apart.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 950 SC, 74 years before the present (1024 SC)",
+    "era": "about 1004 SC, 20 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "in a labelled box on the second rack, Karak Dûn Hall of Records"
    },
@@ -17055,29 +16930,17 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
      "kind": "god",
      "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "What a shrine floor in Iron Hold sees across a week.",
     "The quiet customs of keepers, mourners and festival crowds."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -17740,8 +17603,8 @@
   },
   {
    "id": "bk_302",
-   "title": "What the Shrine Floor Knows in Karak Dûn",
-   "author": "Edda Haddad of Iron Hold",
+   "title": "The Lost Stone: A Keeper's Rite",
+   "author": "Brenna Coalwick, keeper of the stone-house, in the order that the rite is performed",
    "kind": "chapel_notes",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -17749,23 +17612,23 @@
    "shelf": "Chapel notes",
    "language": "Common",
    "blurb": "What a shrine floor in Iron Hold sees: keepers, mourners, festival crowds and quiet hours.",
-   "readingMinutes": 7,
-   "words": 1440,
+   "readingMinutes": 2,
+   "words": 429,
    "tags": [
     "faith",
     "reg_iron_hold"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "962 SC",
-   "source": "books/aethwyrd/302-what-the-shrine-floor-knows-in-karak-d-n.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1015 SC",
+   "source": "Tools/library/handwritten/bk_302.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_302.md",
-   "excerpt": "At Ashen Mines camps the work of the day sits inside basalt halls and anvil-heat. People eat stout, stone-bread, and roast roots and they talk about a vow hammered where a stranger can hear it the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I keep the stone-house, which is a small room with a very large shelf. On the shelf are the hearth-stones of every smith in the Third Hall. I know them by touch, in the dark, as a mother knows her children's coughs.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 962 SC, 62 years before the present (1024 SC)",
+    "era": "about 1015 SC, 9 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "on the open shelf beside the copying desk, Karak Dûn Hall of Records"
    },
@@ -17776,23 +17639,8 @@
      "note": "The region this book is about (Iron Hold)."
     },
     {
-     "kind": "place",
-     "id": "Karak Dûn",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Ashen Mines camps",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "god",
      "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
      "note": "A god of the week the text names."
     }
    ],
@@ -23539,8 +23387,8 @@
   },
   {
    "id": "bk_401",
-   "title": "Songs Heard in Karak Dûn",
-   "author": "Soren Pell of Iron Hold",
+   "title": "Hammer-Songs of the Third Hall",
+   "author": "Set down by Rurik Beard-of-Brass, who sings bass and has never been asked to stop",
    "kind": "ballad_sheet",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -23548,23 +23396,23 @@
    "shelf": "Ballad sheet",
    "language": "Common",
    "blurb": "Songs heard in Iron Hold, set down with the verses people disagree about.",
-   "readingMinutes": 3,
-   "words": 503,
+   "readingMinutes": 2,
+   "words": 324,
    "tags": [
     "music",
     "reg_iron_hold"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "941 SC",
-   "source": "books/aethwyrd/401-songs-heard-in-karak-d-n.md",
+   "quality": "strong",
+   "inWorldDate": "1011 SC",
+   "source": "Tools/library/handwritten/bk_401.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_401.md",
-   "excerpt": "Collected at Karak Dûn. Change the name of the bridge if your bridge is the one that is out. A song that cannot survive a correction is a poster.",
+   "excerpt": "Dwarves sing at work, and the work sets the rhythm. These are three songs of the Third Hall, with the strokes marked. An upright bar is a hammer-fall.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 941 SC, 83 years before the present (1024 SC)",
+    "era": "about 1011 SC, 13 years before the present (1024 SC)",
     "copy": "Margins crowded with later readers’ notes in three hands.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Karak Dûn Hall of Records"
    },
@@ -23575,20 +23423,14 @@
      "note": "The region this book is about (Iron Hold)."
     },
     {
-     "kind": "place",
-     "id": "Karak Dûn",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "species",
-     "id": "mon_wyvern",
-     "note": "Named in this book."
+     "kind": "god",
+     "id": "Thorgrim",
+     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Songs of Iron Hold with the verses people disagree about.",
-    "How a tune moves from one town to the next and changes.",
-    "Species it names: Wyvern."
+    "How a tune moves from one town to the next and changes."
    ]
   },
   {
@@ -25313,8 +25155,8 @@
   },
   {
    "id": "bk_434",
-   "title": "Read This at Karak Dûn",
-   "author": "Bruni Sato of Iron Hold",
+   "title": "The Hearth-Stone That Went Cold",
+   "author": "A story told to dwarf children in the Third Hall, with the lamps turned low",
    "kind": "story_aloud",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -25322,23 +25164,23 @@
    "shelf": "Stories for reading aloud",
    "language": "Common",
    "blurb": "Stories to read aloud in Iron Hold, with the pauses marked for the reader.",
-   "readingMinutes": 3,
-   "words": 536,
+   "readingMinutes": 2,
+   "words": 360,
    "tags": [
     "children",
     "reg_iron_hold"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "974 SC",
-   "source": "books/aethwyrd/434-read-this-at-karak-d-n.md",
+   "quality": "strong",
+   "inWorldDate": "1009 SC",
+   "source": "Tools/library/handwritten/bk_434.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_434.md",
-   "excerpt": "These are told at Karak Dûn. They are not sermons. If a child corrects the ending, write the correction in. That is how a story stays a household thing.",
+   "excerpt": "He had a hearth-stone, as every smith does, from his first forge. It sat on the shelf by the fire. He touched it every morning. He told it his plans. But Thrain was young, and he was proud, and one day he decided the stone was only a stone.",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 974 SC, 50 years before the present (1024 SC)",
+    "era": "about 1009 SC, 15 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "in a labelled box on the second rack, Karak Dûn Hall of Records"
    },
@@ -25347,32 +25189,11 @@
      "kind": "region",
      "id": "reg_iron_hold",
      "note": "The region this book is about (Iron Hold)."
-    },
-    {
-     "kind": "place",
-     "id": "Karak Dûn",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "species",
-     "id": "mon_wyvern",
-     "note": "Named in this book."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Stories for a lamp-lit room in Iron Hold, with the pauses marked.",
-    "The small lesson each story leaves, never spelled out.",
-    "Species it names: Wyvern."
+    "The small lesson each story leaves, never spelled out."
    ]
   },
   {
@@ -26006,8 +25827,8 @@
   },
   {
    "id": "bk_446",
-   "title": "Read This at Karak Dûn",
-   "author": "Elowen Lind of Iron Hold",
+   "title": "The Dwarf Who Laughed Last",
+   "author": "A story for reading aloud in the Anvil's Rest, where it is told on slow evenings",
    "kind": "story_aloud",
    "library": "lib_karak_dun_records",
    "region": "reg_iron_hold",
@@ -26015,23 +25836,23 @@
    "shelf": "Stories for reading aloud",
    "language": "Common",
    "blurb": "Stories to read aloud in Iron Hold, with the pauses marked for the reader.",
-   "readingMinutes": 3,
-   "words": 536,
+   "readingMinutes": 2,
+   "words": 313,
    "tags": [
     "children",
     "reg_iron_hold"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "986 SC",
-   "source": "books/aethwyrd/446-read-this-at-karak-d-n.md",
+   "quality": "strong",
+   "inWorldDate": "1018 SC",
+   "source": "Tools/library/handwritten/bk_446.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_karak_dun_records/bk_446.md",
-   "excerpt": "These are told at Karak Dûn. They are not sermons. If a child corrects the ending, write the correction in. That is how a story stays a household thing.",
+   "excerpt": "*(Read this one with a straight face. The humour is in the face. If the children laugh, you are doing it wrong.)*",
    "provenance": {
     "tradition": "The Forge Under the Mountains tradition of Iron Hold",
     "writtenIn": "reg_iron_hold",
-    "era": "about 986 SC, 38 years before the present (1024 SC)",
+    "era": "about 1018 SC, 6 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "on the open shelf beside the copying desk, Karak Dûn Hall of Records"
    },
@@ -26045,27 +25866,11 @@
      "kind": "place",
      "id": "Karak Dûn",
      "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "species",
-     "id": "mon_wyvern",
-     "note": "Named in this book."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Stories for a lamp-lit room in Iron Hold, with the pauses marked.",
-    "The small lesson each story leaves, never spelled out.",
-    "Species it names: Wyvern."
+    "The small lesson each story leaves, never spelled out."
    ]
   },
   {
@@ -27186,8 +26991,8 @@
   },
   {
    "id": "bk_467",
-   "title": "Potsherds from the Moraveil Copy",
-   "author": "Chenna Okafor of Moraveil",
+   "title": "What the Goblins Keep in the Flooded Cave",
+   "author": "Dorrit Quillon, a visiting scholar of the Mages' Academy, on a fragment shown to her with some ceremony",
    "kind": "valdrisian_fragment",
    "library": "lib_mages_academy",
    "region": "reg_aldmere",
@@ -27195,18 +27000,18 @@
    "shelf": "Valdrisian fragment",
    "language": "Common (copied from Old Weave-tongue)",
    "blurb": "Potsherd readings of the old empire as copied in Moraveil, with the copyists' doubts left in.",
-   "readingMinutes": 8,
-   "words": 1579,
+   "readingMinutes": 2,
+   "words": 405,
    "tags": [
     "history",
     "reg_moraveil",
     "valdrisia"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "1007 SC",
-   "source": "books/aethwyrd/467-potsherds-from-the-moraveil-copy.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1011 SC",
+   "source": "Tools/library/handwritten/bk_467.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_mages_academy/bk_467.md",
    "rewards": [
     {
@@ -27214,11 +27019,11 @@
      "id": "civ_valdrisia"
     }
    ],
-   "excerpt": "At Moraveil goblin village the work of the day sits inside market awnings and goblin-mended stalls. People eat pepper stew and fried bread and they talk about a bargain that changes if you blink the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "It is where the truce began. The goblins keep it as a shrine, and I was asked to leave my boots at the entrance and to wade in barefoot. The water is cold, clear and ankle-deep. It reflects the roof, which is hung with small white stalactites, and the lantern-light makes them look like a ceiling of teeth.",
    "provenance": {
     "tradition": "The Truce Country tradition of Moraveil",
     "writtenIn": "reg_moraveil",
-    "era": "about 1007 SC, 17 years before the present (1024 SC)",
+    "era": "about 1011 SC, 13 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "in the copying room, third desk, The Mages' Academy Library"
    },
@@ -27229,29 +27034,9 @@
      "note": "The region this book is about (Moraveil)."
     },
     {
-     "kind": "place",
-     "id": "Moraveil goblin village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moraveil market town",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "region",
-     "id": "reg_sunscar",
-     "note": "Another region the text mentions (Sunscar)."
-    },
-    {
      "kind": "civilization",
      "id": "civ_valdrisia",
      "note": "An old civilization the text mentions (public account only)."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
