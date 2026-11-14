@@ -36,7 +36,8 @@ namespace Ascend.Game
         public Transform Target;
         /// <summary>Folder of baked tiles. Default: StreamingAssets/World.</summary>
         public string TileFolder;
-        public SectorStreamTuning Tuning = new SectorStreamTuning { LoadRadiusKm = 6, UnloadMarginKm = 2, MaxResident = 9 };
+        // 7.5 km reaches the diagonal tiles from the middle of a 10 km tile (their corner is 7.07 km away): the full 3 x 3 square.
+        [NonSerialized] public SectorStreamTuning Tuning = new SectorStreamTuning { LoadRadiusKm = 7.5, UnloadMarginKm = 2, MaxResident = 9 };
         /// <summary>Terrain objects built per frame (the build itself is about one tile's SetHeights).</summary>
         public int BuildsPerFrame = 1;
         public float HeightmapPixelError = 8f;

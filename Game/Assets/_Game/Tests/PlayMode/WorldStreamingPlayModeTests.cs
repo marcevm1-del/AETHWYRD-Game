@@ -133,19 +133,22 @@ namespace Ascend.Game.Tests
         public IEnumerator MeasureResidentCostOfANineTileWorld()
         {
             RequireTiles();
-            long before = Profiler.GetTotalAllocatedMemoryLong(), gcBefore = GC.GetTotalMemory(false);
+            var proc = System.Diagnostics.Process.GetCurrentProcess();
+            proc.Refresh(); long wsBefore = proc.WorkingSet64, privBefore = proc.PrivateMemorySize64;
+            long before = Profiler.GetTotalAllocatedMemoryLong(), gcBefore = GC.GetTotalMemory(false), gfxBefore = Profiler.GetAllocatedMemoryForGraphicsDriver();
             var (player, s) = Spawn(WorldOrigin.ToUnity(75.0, 55.0, 0f)); // the middle of tile (7,5): all 9 neighbours are wanted
             yield return null;
             for (int i = 0; i < 30; i++) yield return null;
             long after = Profiler.GetTotalAllocatedMemoryLong(), gcAfter = GC.GetTotalMemory(false);
             long gfx = Profiler.GetAllocatedMemoryForGraphicsDriver();
-            string line = $"[WorldStreamMetrics] tiles ready {s.ReadyCount}; Unity allocated {(after - before) / 1048576.0:F1} MB more than before; managed heap {(gcAfter - gcBefore) / 1048576.0:F1} MB more; graphics driver total {gfx / 1048576.0:F1} MB; last tile build {s.LastBuildMs:F1} ms, worst {s.MaxBuildMs:F1} ms";
+            proc.Refresh(); long wsAfter = proc.WorkingSet64, privAfter = proc.PrivateMemorySize64;
+            string line = $"[WorldStreamMetrics] tiles ready {s.ReadyCount}; Unity allocated {(after - before) / 1048576.0:F1} MB more than before; managed heap {(gcAfter - gcBefore) / 1048576.0:F1} MB more; graphics driver {(gfx - gfxBefore) / 1048576.0:F1} MB more; process working set {(wsAfter - wsBefore) / 1048576.0:F1} MB more, private bytes {(privAfter - privBefore) / 1048576.0:F1} MB more; last tile build {s.LastBuildMs:F1} ms, worst {s.MaxBuildMs:F1} ms";
             Debug.Log(line);
             var dir = Path.GetFullPath(Path.Combine(Application.dataPath, "..", "Logs"));
             Directory.CreateDirectory(dir);
             File.WriteAllText(Path.Combine(dir, "world_stream_metrics.txt"), line + "\n");
-            Assert.GreaterOrEqual(s.ReadyCount, 4, "a good part of the nine tiles is up");
-            Assert.LessOrEqual(s.ReadyCount, 9);
+            Assert.AreEqual(9, s.ReadyCount, "the full 3 x 3 square is up from the middle of a tile");
+            Assert.Less(s.MaxBuildMs, 250.0, "one tile builds in under a quarter of a second (one-tile-per-frame budget)");
         }
     }
 }
