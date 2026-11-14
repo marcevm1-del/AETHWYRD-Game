@@ -54,6 +54,12 @@ Solvability is checked in Core (`IsSolvable`) and in the validator, so a puzzle 
 
 `Move`, `TakeKey`, `FindClue`, `DefeatBoss`, `Die`, `Reset`, `ExitsHere`. A hidden way is not offered until its clue is found in place. The host (Unity, later) renders rooms and spawns; Core decides what is open.
 
+## 6a. Loader helpers (`DungeonPlan.cs`)
+
+- `DungeonPlanner.Plan(dungeon, worldSeed, resetCount)` returns the monsters standing in each room for one visit: counts rolled between each spawn's `min` and `max` with `DeterministicRandom` seeded by world seed, dungeon, room and reset counter (the weekly hall reset), plus the boss. Same inputs give the same halls after a reload; a new week can differ. The host maps `Slot` to spawn markers.
+- `DungeonRunSnapshots.Capture/Restore` freeze a `DungeonRun` (room, checkpoint, keys, boss, solved or skipped puzzles, reset counter) as a plain object, so quitting inside a dungeon no longer loses keys and solved puzzles. A puzzle half-way through starts over. Stale ids are ignored and a null or foreign snapshot restores nothing (old-save safe). **Not yet wired into `SaveGame`**: that field and its migration belong to the save engineer; the snapshot type is ready for it.
+- Tests: `DungeonPlanTests`.
+
 ## 7. Secrets and clues (`DungeonKnowledge`)
 
 Rooms and clues are **Unknown** (blank), **Heard** (a rumour pencilled them; a clue's `heard` line) or **Visited** (found in place). A heard secret clue pencils the secret room but reveals nothing; finding the clue in place reveals the way. Hearing never downgrades a visit. Saved in `SaveGame.Dungeons` (`DungeonSave`: per dungeon, rooms, clues and a `Cleared` flag). Older saves have no such field: it deserialises to null and `SaveRules.Upgrade` fills it, so they load with nothing known. Ids the data no longer has are ignored on load.
