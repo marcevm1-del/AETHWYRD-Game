@@ -73,3 +73,18 @@ Branch `agent/world-builder-engineer/region-graph-map`. Files: `Tools/world/bake
 ## 7. Lesson: the editor and the built player see different data
 
 The first photos from the built player showed no terrain: `WorldStreamer` threw `FileNotFoundException` for `world_scale.json` because `BuildPlayer.cs` copies only a listed set of `Data/` files into the build. In the editor `AscendData.DataRoot` reads the repo's `Data/` folder, so the PlayMode tests passed while the streamer was dead in the build. Rules: anything the streamer reads at runtime must be in the build's data list (`BuildPlayer.cs`), and a screenshot from the built player is the only check that catches this. The baked tiles live in `StreamingAssets/World/` and travel with the build (236 MB player).
+
+### Built-player findings (photos in `13_Production/screenshots/world_stream_*.png`)
+
+Getting terrain on screen in the built player took three fixes, each invisible in PlayMode: (1) `world_scale.json` was missing from the build's data list (streamer threw at start); (2) the instanced Terrain/Lit shader variant is stripped from the player, so `drawInstanced` is now off and a Resources material keeps the shader (`BuildPlayer.EnsureStreamTerrainMaterial`); (3) Unity's default camera far clip is 1 km, which hid every hill past it, so `WorldStreamer` raises the main camera's far clip to 20 km. Photos, with what each shows (all from the built player, 1600 x 900):
+
+| Photo | Position | Terrain there? |
+|---|---|---|
+| `world_stream_ring0.png` | Ring 0 start | Field, town and gate as before; the terrain pad sits under the 5 cm-lowered graybox ground and shows at the field edge |
+| `world_stream_seam_x70.png` | map x 70 km seam | Yes: green terrain with rolling relief to the horizon, player shadow on it |
+| `world_stream_seam_x80.png` | map x 80 km seam | Yes: green terrain, shadow on it (flat plain) |
+| `world_stream_aldmere_side.png` | 12 km west | Yes: green terrain |
+| `world_stream_greymoor_side.png` | 12.5 km east | Yes: green terrain |
+| `world_stream_mountain_peak.png` | 2.5 km south of the 2,815 m peak at map (86.8, 28.7) | Yes: the mountain slope fills the upper screen (ground at 1,021 m) |
+
+What the photos also show honestly: the ground is flat vegetation green everywhere, including on mountains (the generator's splat is about 80 percent vegetation even in the Dragonspine tile; rock and snow are the minority channels), there are no trees, buildings, roads or water, and the horizon is hazy white. This is terrain only; it is not yet a place that looks like AETHWYRD.

@@ -43,6 +43,8 @@ namespace Ascend.Game
         public float HeightmapPixelError = 8f;
         /// <summary>Load the tiles around the target at once in Start, so the ground exists before the first physics step.</summary>
         public bool BlockingFirstLoad = true;
+        /// <summary>Unity's default far clip is 1 km, which hides every hill past it. The streamed square reaches about 15 km, so the main camera sees that far.</summary>
+        public float FarClipMetres = 20000f;
 
         readonly Dictionary<TileIndex, TileSlot> _slots = new Dictionary<TileIndex, TileSlot>();
         readonly Dictionary<string, string> _files = new Dictionary<string, string>();
@@ -73,6 +75,8 @@ namespace Ascend.Game
         void Start()
         {
             Initialise();
+            var cam = Camera.main;
+            if (cam != null && cam.farClipPlane < FarClipMetres) cam.farClipPlane = FarClipMetres;
             if (BlockingFirstLoad && Target != null) LoadNow();
         }
 
@@ -164,11 +168,12 @@ namespace Ascend.Game
             var template = Resources.Load<Material>("World/StreamTerrain"); // also keeps URP's Terrain/Lit shader in a build
             if (template != null) terrain.materialTemplate = template;
             terrain.basemapDistance = 1000f;
-            terrain.drawInstanced = true;
+            terrain.drawInstanced = false; // the instanced Terrain/Lit variant is stripped from the player build (terrain was invisible); see the plan page
             terrain.allowAutoConnect = true; // same grouping id: Unity links neighbours as they appear
             terrain.groupingID = 0;
             s.Terrain = terrain; s.Data = td; s.Task = null;
             TilesLoadedTotal++;
+            Debug.Log($"[WorldStreamer] built {tile.Name} at {go.transform.position} size {td.size} in {(float)sw.Elapsed.TotalMilliseconds:F1} ms; material {(terrain.materialTemplate != null ? terrain.materialTemplate.shader.name : "default")}");
             LastBuildMs = sw.Elapsed.TotalMilliseconds;
             if (LastBuildMs > MaxBuildMs) MaxBuildMs = LastBuildMs;
         }
