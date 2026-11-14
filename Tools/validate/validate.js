@@ -795,6 +795,8 @@ require('./living_checks').run({ DATA, load, check, schema, err, regions: rows.r
 require('./front_end_checks').run({ DATA, load, check, schema, err });
 // 4f) Regional encounter tables (Tools/validate/encounter_checks.js)
 require('./encounter_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
+// 4f) Humanoid locomotion clips manifest (Tools/validate/animation_checks.js)
+require('./animation_checks').run({ DATA, load, err });
 
 // 3) Report
 const counts = Object.entries(rows).map(([n, l]) => `${n} ${l.length}`).concat([`recipes ${recipeCount}`]).join(' · ');
