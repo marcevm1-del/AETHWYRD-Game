@@ -85,3 +85,14 @@ Holes found: (a) Whisperwood, the opening region, had 4 books and its guild bran
 ## 7. Checks that ran
 
 See the final report of the library-shelf session and the commit log of `agent/library-shelf/shelf`: `node Tools/validate/build_schemas.js`, `node Tools/validate/validate.js` (library: 24 libraries, 479 shelved, 41 held; map warnings 28; graph findings 0), `node Tools/run_tests.js`.
+
+## 8. Hand-written rewrite progress (the real fix for section 3.2)
+
+Hand-written books live in `Tools/library/handwritten/<book-id>.md`; `shelve.py` uses them instead of the template text (and `deepen.py` excerpts them from their opening). A hand-written field guide must name only species that live in its region, or it is held. Worst-first, player-visible-first order: Ring 0 (Brindlewick) and the Salvage Warren's Labyrinth floors first, then Greymoor (the Peat Library, Ring 2).
+
+| Batch | Books | Where | Result |
+|---|---|---|---|
+| 1 | 14 (`bk_001`, `013`, `025`, `037`, `207`, `219`, `270`, `282`, `318`, `330`, `367`, `465`, `480`, `501`) | Brindlewick; Great Labyrinth floors 1-40 (the Salvage Warren) | rewritten; `bk_037` unheld |
+| 2 | 16 (`bk_048`, `060`, `084`, `128`, `140`, `152`, `164`, `174`, `186`, `198`, `288`, `300`, `399`, `411`, `432`, `444`) | Greymoor (cookery, history, household, chapel, ballad, story) | rewritten |
+
+After batch 2: 30 hand-written, 251 still templated, 259 distinct excerpts (245 before the rewrite began), 480 shelved and 40 held. Every new book is a different voice with its own reason to write; all are drafts. New local lore they imply is raised as Canon section 6 row L7.

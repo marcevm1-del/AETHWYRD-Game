@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-14",
  "counts": {
-  "clear": 131,
+  "clear": 143,
   "hold": 40,
-  "fix": 349
+  "fix": 337
  },
  "books": {
   "bk_001": {
@@ -746,18 +746,16 @@
   },
   "bk_048": {
    "file": "aethwyrd/048-greymoor-stilt-village-pot-and-argument.md",
-   "title": "Greymoor stilt-village Pot and Argument",
+   "title": "Eel Three Ways, and Why Not Four",
    "kind": "cookery",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_049": {
    "file": "aethwyrd/049-canopy-city-lothaniel-pot-and-argument.md",
@@ -929,18 +927,16 @@
   },
   "bk_060": {
    "file": "aethwyrd/060-greymoor-stilt-village-pot-and-argument.md",
-   "title": "Greymoor stilt-village Pot and Argument",
+   "title": "A Punt-Guide's Lunch",
    "kind": "cookery",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.96,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_061": {
    "file": "aethwyrd/061-canopy-city-lothaniel-pot-and-argument.md",
@@ -1298,21 +1294,16 @@
   },
   "bk_084": {
    "file": "aethwyrd/084-greymoor-stilt-village-pot-and-argument.md",
-   "title": "Greymoor stilt-village Pot and Argument",
+   "title": "Soup for the Moot",
    "kind": "cookery",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1",
-    "weekday_tuesday x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "real_world: Tuesday"
-   ],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_085": {
    "file": "aethwyrd/085-canopy-city-lothaniel-pot-and-argument.md",
@@ -1964,18 +1955,16 @@
   },
   "bk_128": {
    "file": "aethwyrd/128-two-accounts-of-greymoor.md",
-   "title": "Two Accounts of Greymoor",
+   "title": "The Abbey, Told Twice",
    "kind": "local_history",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_129": {
    "file": "aethwyrd/129-two-accounts-of-sylvaran.md",
@@ -2144,18 +2133,16 @@
   },
   "bk_140": {
    "file": "aethwyrd/140-two-accounts-of-greymoor.md",
-   "title": "Two Accounts of Greymoor",
+   "title": "Why the Fen Pays No Tax",
    "kind": "local_history",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_141": {
    "file": "aethwyrd/141-two-accounts-of-sylvaran.md",
@@ -2324,18 +2311,16 @@
   },
   "bk_152": {
    "file": "aethwyrd/152-two-accounts-of-greymoor.md",
-   "title": "Two Accounts of Greymoor",
+   "title": "The Walking Hut: A Short History",
    "kind": "local_history",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_153": {
    "file": "aethwyrd/153-two-accounts-of-sylvaran.md",
@@ -2504,18 +2489,16 @@
   },
   "bk_164": {
    "file": "aethwyrd/164-two-accounts-of-greymoor.md",
-   "title": "Two Accounts of Greymoor",
+   "title": "When the Bells Stopped",
    "kind": "local_history",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_165": {
    "file": "aethwyrd/165-two-accounts-of-sylvaran.md",
@@ -2654,18 +2637,16 @@
   },
   "bk_174": {
    "file": "aethwyrd/174-the-house-book-of-greymoor-stilt-village.md",
-   "title": "The House Book of Greymoor stilt-village",
+   "title": "The House Book of the Moot Hall",
    "kind": "household_book",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_175": {
    "file": "aethwyrd/175-the-house-book-of-canopy-city-lothaniel.md",
@@ -2834,18 +2815,16 @@
   },
   "bk_186": {
    "file": "aethwyrd/186-the-house-book-of-greymoor-stilt-village.md",
-   "title": "The House Book of Greymoor stilt-village",
+   "title": "A Peat-Cutter's House Book",
    "kind": "household_book",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_187": {
    "file": "aethwyrd/187-the-house-book-of-canopy-city-lothaniel.md",
@@ -3014,18 +2993,16 @@
   },
   "bk_198": {
    "file": "aethwyrd/198-the-house-book-of-greymoor-stilt-village.md",
-   "title": "The House Book of Greymoor stilt-village",
+   "title": "The Reed-Weaver's Book of the House",
    "kind": "household_book",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_199": {
    "file": "aethwyrd/199-the-house-book-of-canopy-city-lothaniel.md",
@@ -4438,18 +4415,16 @@
   },
   "bk_288": {
    "file": "aethwyrd/288-what-the-shrine-floor-knows-in-greymoor-stilt-village.md",
-   "title": "What the Shrine Floor Knows in Greymoor stilt-village",
+   "title": "Hand-Bells at Dusk",
    "kind": "chapel_notes",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_289": {
    "file": "aethwyrd/289-what-the-shrine-floor-knows-in-canopy-city-lothaniel.md",
@@ -4618,18 +4593,16 @@
   },
   "bk_300": {
    "file": "aethwyrd/300-what-the-shrine-floor-knows-in-greymoor-stilt-village.md",
-   "title": "What the Shrine Floor Knows in Greymoor stilt-village",
+   "title": "What the Leaning Tower Keeps",
    "kind": "chapel_notes",
    "subjectRegion": "Greymoor",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_301": {
    "file": "aethwyrd/301-what-the-shrine-floor-knows-in-canopy-city-lothaniel.md",
@@ -6037,7 +6010,7 @@
   },
   "bk_399": {
    "file": "aethwyrd/399-songs-heard-in-greymoor-stilt-village.md",
-   "title": "Songs Heard in Greymoor stilt-village",
+   "title": "Three Songs of the Fen",
    "kind": "ballad_sheet",
    "subjectRegion": "Greymoor",
    "scanStatus": "clear",
@@ -6045,8 +6018,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.98,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_400": {
    "file": "aethwyrd/400-songs-heard-in-canopy-city-lothaniel.md",
@@ -6193,7 +6166,7 @@
   },
   "bk_411": {
    "file": "aethwyrd/411-songs-heard-in-greymoor-stilt-village.md",
-   "title": "Songs Heard in Greymoor stilt-village",
+   "title": "Pole Songs, With the Rests Marked",
    "kind": "ballad_sheet",
    "subjectRegion": "Greymoor",
    "scanStatus": "clear",
@@ -6201,8 +6174,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.98,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_412": {
    "file": "aethwyrd/412-a-veilborn-kitchen-in-gearholm.md",
@@ -6520,7 +6493,7 @@
   },
   "bk_432": {
    "file": "aethwyrd/432-read-this-at-greymoor-stilt-village.md",
-   "title": "Read This at Greymoor stilt-village",
+   "title": "The Moth Who Would Not Be Jarred",
    "kind": "story_aloud",
    "subjectRegion": "Greymoor",
    "scanStatus": "clear",
@@ -6528,8 +6501,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_433": {
    "file": "aethwyrd/433-read-this-at-canopy-city-lothaniel.md",
@@ -6676,7 +6649,7 @@
   },
   "bk_444": {
    "file": "aethwyrd/444-read-this-at-greymoor-stilt-village.md",
-   "title": "Read This at Greymoor stilt-village",
+   "title": "The Punt-Guide's Daughter and the Quiet Hour",
    "kind": "story_aloud",
    "subjectRegion": "Greymoor",
    "scanStatus": "clear",
@@ -6684,8 +6657,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_445": {
    "file": "aethwyrd/445-read-this-at-canopy-city-lothaniel.md",

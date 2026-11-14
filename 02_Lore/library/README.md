@@ -131,26 +131,26 @@ Myth tellings and chapel notes left by pilgrims and keepers, shelved by the shri
 
 A bog-cave where a drowned monastery's books are dried and read with care. Region: `reg_greymoor`, Greymoor. Source: Data/World/gazetteer.json (Greymoor landmark: The Peat Library, a cave where the bog preserved a monastery's books).
 
-- [Greymoor stilt-village Pot and Argument](lib_peat_library/bk_048.md) (Cookery, accurate, draft): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
-- [Greymoor stilt-village Pot and Argument](lib_peat_library/bk_060.md) (Cookery, accurate, draft): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
+- [Eel Three Ways, and Why Not Four](lib_peat_library/bk_048.md) (Cookery, accurate, clear): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
+- [A Punt-Guide's Lunch](lib_peat_library/bk_060.md) (Cookery, accurate, clear): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
 - [Greymoor stilt-village Pot and Argument](lib_peat_library/bk_072.md) (Cookery, accurate, draft): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
-- [Greymoor stilt-village Pot and Argument](lib_peat_library/bk_084.md) (Cookery, accurate, draft): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
+- [Soup for the Moot](lib_peat_library/bk_084.md) (Cookery, accurate, clear): A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.
 - [Boots Toward Zarvan](lib_peat_library/bk_094.md) (Road book, accurate, draft): A road notebook that walks the legs toward Greymoor, with weather, crossings and the habits of the road.
 - [Boots Toward Shen-Lu](lib_peat_library/bk_106.md) (Road book, accurate, draft): A road notebook that walks the legs toward Greymoor, with weather, crossings and the habits of the road.
 - [Boots Toward Vharlen](lib_peat_library/bk_118.md) (Road book, accurate, draft): A road notebook that walks the legs toward Greymoor, with weather, crossings and the habits of the road.
-- [Two Accounts of Greymoor](lib_peat_library/bk_128.md) (Local history, partial, draft): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
-- [Two Accounts of Greymoor](lib_peat_library/bk_140.md) (Local history, partial, draft): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
-- [Two Accounts of Greymoor](lib_peat_library/bk_152.md) (Local history, partial, draft): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
-- [Two Accounts of Greymoor](lib_peat_library/bk_164.md) (Local history, partial, draft): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
-- [The House Book of Greymoor stilt-village](lib_peat_library/bk_174.md) (Household book, accurate, draft): A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.
-- [The House Book of Greymoor stilt-village](lib_peat_library/bk_186.md) (Household book, accurate, draft): A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.
-- [The House Book of Greymoor stilt-village](lib_peat_library/bk_198.md) (Household book, accurate, draft): A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.
-- [What the Shrine Floor Knows in Greymoor stilt-village](lib_peat_library/bk_288.md) (Chapel notes, folk belief, draft): What a shrine floor in Greymoor sees: keepers, mourners, festival crowds and quiet hours.
-- [What the Shrine Floor Knows in Greymoor stilt-village](lib_peat_library/bk_300.md) (Chapel notes, folk belief, draft): What a shrine floor in Greymoor sees: keepers, mourners, festival crowds and quiet hours.
-- [Songs Heard in Greymoor stilt-village](lib_peat_library/bk_399.md) (Ballad sheet, folk belief, clear): Songs heard in Greymoor, set down with the verses people disagree about.
-- [Songs Heard in Greymoor stilt-village](lib_peat_library/bk_411.md) (Ballad sheet, folk belief, clear): Songs heard in Greymoor, set down with the verses people disagree about.
-- [Read This at Greymoor stilt-village](lib_peat_library/bk_432.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Greymoor, with the pauses marked for the reader.
-- [Read This at Greymoor stilt-village](lib_peat_library/bk_444.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Greymoor, with the pauses marked for the reader.
+- [The Abbey, Told Twice](lib_peat_library/bk_128.md) (Local history, partial, clear): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
+- [Why the Fen Pays No Tax](lib_peat_library/bk_140.md) (Local history, partial, clear): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
+- [The Walking Hut: A Short History](lib_peat_library/bk_152.md) (Local history, partial, clear): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
+- [When the Bells Stopped](lib_peat_library/bk_164.md) (Local history, partial, clear): Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.
+- [The House Book of the Moot Hall](lib_peat_library/bk_174.md) (Household book, accurate, clear): A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.
+- [A Peat-Cutter's House Book](lib_peat_library/bk_186.md) (Household book, accurate, clear): A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.
+- [The Reed-Weaver's Book of the House](lib_peat_library/bk_198.md) (Household book, accurate, clear): A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.
+- [Hand-Bells at Dusk](lib_peat_library/bk_288.md) (Chapel notes, folk belief, clear): What a shrine floor in Greymoor sees: keepers, mourners, festival crowds and quiet hours.
+- [What the Leaning Tower Keeps](lib_peat_library/bk_300.md) (Chapel notes, folk belief, clear): What a shrine floor in Greymoor sees: keepers, mourners, festival crowds and quiet hours.
+- [Three Songs of the Fen](lib_peat_library/bk_399.md) (Ballad sheet, folk belief, clear): Songs heard in Greymoor, set down with the verses people disagree about.
+- [Pole Songs, With the Rests Marked](lib_peat_library/bk_411.md) (Ballad sheet, folk belief, clear): Songs heard in Greymoor, set down with the verses people disagree about.
+- [The Moth Who Would Not Be Jarred](lib_peat_library/bk_432.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Greymoor, with the pauses marked for the reader.
+- [The Punt-Guide's Daughter and the Quiet Hour](lib_peat_library/bk_444.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Greymoor, with the pauses marked for the reader.
 - [The Latch at Greymoor stilt-village](lib_peat_library/bk_461.md) (A short play, folk belief, clear): A short play for a latch and two voices, staged in Greymoor.
 - [Neighbors Near Greymoor stilt-village](lib_peat_library/bk_503.md) (Field guide, partial, draft): A walker's guide to the creatures near Greymoor: what folk file them under, how to approach them, what to leave alone.
 

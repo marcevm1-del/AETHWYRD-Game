@@ -1692,8 +1692,8 @@
   },
   {
    "id": "bk_048",
-   "title": "Greymoor stilt-village Pot and Argument",
-   "author": "Bramble Holt of Greymoor",
+   "title": "Eel Three Ways, and Why Not Four",
+   "author": "Sedge Alder, eel-wife of Greymoor stilt-village",
    "kind": "cookery",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -1701,23 +1701,23 @@
    "shelf": "Cookery",
    "language": "Common",
    "blurb": "A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.",
-   "readingMinutes": 5,
-   "words": 903,
+   "readingMinutes": 2,
+   "words": 424,
    "tags": [
     "cooking",
     "reg_greymoor"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "948 SC",
-   "source": "books/aethwyrd/048-greymoor-stilt-village-pot-and-argument.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "987 SC",
+   "source": "Tools/library/handwritten/bk_048.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_048.md",
-   "excerpt": "Bramble Holt of Greymoor keeps this book in the kitchen at the Walking Hut market, where the houses are reed thatch on stilts above peat. The everyday pot already knows eel, bog-berries, and black bread. What follows is the version you can cook when lights that are not lanterns out on the peat has made the market short, and when you still mean to sit down.",
+   "excerpt": "My mother said there were three ways to cook an eel and a fourth that was an insult. I have never found out what the fourth was, and I have stopped asking.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 948 SC, 76 years before the present (1024 SC)",
+    "era": "about 987 SC, 37 years before the present (1024 SC)",
     "copy": "Pages brittle at the fold; handle with a flat palm.",
     "shelfPlace": "in the second case from the door, The Peat Library"
    },
@@ -1733,9 +1733,14 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
+     "kind": "item",
+     "id": "itm_hearth_stew",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "recipe",
+     "id": "rcp_hearth_stew",
+     "note": "A craft the text mentions."
     },
     {
      "kind": "god",
@@ -2351,8 +2356,8 @@
   },
   {
    "id": "bk_060",
-   "title": "Greymoor stilt-village Pot and Argument",
-   "author": "Haru Berg of Greymoor",
+   "title": "A Punt-Guide's Lunch",
+   "author": "Corvin Mere, punt-guide, who has never once been lost, only late",
    "kind": "cookery",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -2360,23 +2365,23 @@
    "shelf": "Cookery",
    "language": "Common",
    "blurb": "A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.",
-   "readingMinutes": 5,
-   "words": 907,
+   "readingMinutes": 2,
+   "words": 392,
    "tags": [
     "cooking",
     "reg_greymoor"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "960 SC",
-   "source": "books/aethwyrd/060-greymoor-stilt-village-pot-and-argument.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1002 SC",
+   "source": "Tools/library/handwritten/bk_060.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_060.md",
-   "excerpt": "Haru Berg of Greymoor keeps this book in the kitchen at the Walking Hut market, where the houses are reed thatch on stilts above peat. The everyday pot already knows eel, bog-berries, and black bread. What follows is the version you can cook when lights that are not lanterns out on the peat has made the market short, and when you still mean to sit down.",
+   "excerpt": "On the fen you eat what keeps, what stays quiet and what you can hold in one hand while the other holds the pole. This is my list, and I have tested every item on someone I disliked first.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 960 SC, 64 years before the present (1024 SC)",
+    "era": "about 1002 SC, 22 years before the present (1024 SC)",
     "copy": "Loose gatherings tied together with a ribbon.",
     "shelfPlace": "on the low shelf by the window, The Peat Library"
    },
@@ -2387,18 +2392,18 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
+     "kind": "item",
+     "id": "itm_hearth_loaf",
+     "note": "A material or item the text mentions."
     },
     {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
+     "kind": "recipe",
+     "id": "rcp_hearth_loaf",
+     "note": "A craft the text mentions."
     },
     {
      "kind": "god",
-     "id": "Morrowyn",
+     "id": "Sylvara",
      "note": "A god of the week the text names."
     }
    ],
@@ -3727,8 +3732,8 @@
   },
   {
    "id": "bk_084",
-   "title": "Greymoor stilt-village Pot and Argument",
-   "author": "Anwen Reed of Greymoor",
+   "title": "Soup for the Moot",
+   "author": "Hanne Reedwright, who has fed the elders of three villages and outlived two of their arguments",
    "kind": "cookery",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -3736,23 +3741,23 @@
    "shelf": "Cookery",
    "language": "Common",
    "blurb": "A household cookery from Greymoor with plain recipes, kitchen arguments and the reasons behind them.",
-   "readingMinutes": 5,
-   "words": 909,
+   "readingMinutes": 2,
+   "words": 396,
    "tags": [
     "cooking",
     "reg_greymoor"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "984 SC",
-   "source": "books/aethwyrd/084-greymoor-stilt-village-pot-and-argument.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1013 SC",
+   "source": "Tools/library/handwritten/bk_084.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_084.md",
-   "excerpt": "Anwen Reed of Greymoor keeps this book in the kitchen at the Walking Hut market, where the houses are reed thatch on stilts above peat. The everyday pot already knows eel, bog-berries, and black bread. What follows is the version you can cook when lights that are not lanterns out on the peat has made the market short, and when you still mean to sit down.",
+   "excerpt": "In Greymoor no one rules, and so everything is decided at a table. A moot of elders will sit for a day and a night over a boundary stake or a stolen punt, and the soup is what keeps them civil. I make the soup.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 984 SC, 40 years before the present (1024 SC)",
+    "era": "about 1013 SC, 11 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "in the reading-table drawer, The Peat Library"
    },
@@ -3761,29 +3766,11 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Plain working recipes of Greymoor, with the kitchen quarrels behind them.",
     "What a household of Greymoor keeps in the larder and why."
-   ],
-   "canonNotes": [
-    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -7409,8 +7396,8 @@
   },
   {
    "id": "bk_128",
-   "title": "Two Accounts of Greymoor",
-   "author": "Corin Mori of Greymoor",
+   "title": "The Abbey, Told Twice",
+   "author": "Two accounts of the sunken abbey of Greymoor, set side by side by the Peat Library's keeper",
    "kind": "local_history",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -7418,23 +7405,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1438,
+   "readingMinutes": 2,
+   "words": 472,
    "tags": [
     "history",
     "reg_greymoor"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "908 SC",
-   "source": "books/aethwyrd/128-two-accounts-of-greymoor.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1000 SC",
+   "source": "Tools/library/handwritten/bk_128.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_128.md",
-   "excerpt": "At the Walking Hut market the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I have two accounts of the same event and I will not choose between them. The keeper's duty is to set both down and let the reader decide who benefits.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 908 SC, 116 years before the present (1024 SC)",
+    "era": "about 1000 SC, 24 years before the present (1024 SC)",
     "copy": "Corners rounded by many thumbs; a tea ring on the second page.",
     "shelfPlace": "on the low shelf by the window, The Peat Library"
    },
@@ -7445,29 +7432,9 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Maelis",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
+     "kind": "region",
+     "id": "reg_aldmere",
+     "note": "Another region the text mentions (Aldmere)."
     }
    ],
    "teaches": [
@@ -8170,8 +8137,8 @@
   },
   {
    "id": "bk_140",
-   "title": "Two Accounts of Greymoor",
-   "author": "Haru Cho of Greymoor",
+   "title": "Why the Fen Pays No Tax",
+   "author": "A surveyor's note from Aldmere, and the reply written beneath it in the witches' hand",
    "kind": "local_history",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -8179,23 +8146,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1434,
+   "readingMinutes": 2,
+   "words": 383,
    "tags": [
     "history",
     "reg_greymoor"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "920 SC",
-   "source": "books/aethwyrd/140-two-accounts-of-greymoor.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1009 SC",
+   "source": "Tools/library/handwritten/bk_140.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_140.md",
-   "excerpt": "At Greymoor stilt-village the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "\"The Crown claims the moor of Greymoor by charter, from the Greymoor River to the Witchwood. I was sent to value it for the roll. I record that I could not. The ground does not hold a measuring chain. The paths move. The only men who know where a stake may be driven decline to say, and the persons I take to be the magistrates refuse the title and say they are *a moot*.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 920 SC, 104 years before the present (1024 SC)",
+    "era": "about 1009 SC, 15 years before the present (1024 SC)",
     "copy": "Margins crowded with later readers’ notes in three hands.",
     "shelfPlace": "in the reading-table drawer, The Peat Library"
    },
@@ -8206,24 +8173,9 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Maelis",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
+     "kind": "region",
+     "id": "reg_aldmere",
+     "note": "Another region the text mentions (Aldmere)."
     }
    ],
    "teaches": [
@@ -8921,8 +8873,8 @@
   },
   {
    "id": "bk_152",
-   "title": "Two Accounts of Greymoor",
-   "author": "Soren Reed of Greymoor",
+   "title": "The Walking Hut: A Short History",
+   "author": "Pim Fenwick, apprentice to the Walking Hut's trader, learning to tell it straight",
    "kind": "local_history",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -8930,23 +8882,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1466,
+   "readingMinutes": 2,
+   "words": 393,
    "tags": [
     "history",
     "reg_greymoor"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "932 SC",
-   "source": "books/aethwyrd/152-two-accounts-of-greymoor.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1018 SC",
+   "source": "Tools/library/handwritten/bk_152.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_152.md",
-   "excerpt": "At the Walking Hut market the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I have been told to write the history of the Hut so that the next apprentice has something to read besides the trader's face. The trader has agreed to this. The trader has also told me that there is no history, only a route.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 932 SC, 92 years before the present (1024 SC)",
+    "era": "about 1018 SC, 6 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "on the top shelf, reached by the step-stool, The Peat Library"
    },
@@ -8955,26 +8907,6 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -9667,8 +9599,8 @@
   },
   {
    "id": "bk_164",
-   "title": "Two Accounts of Greymoor",
-   "author": "Hana Lind of Greymoor",
+   "title": "When the Bells Stopped",
+   "author": "Aldith Marsh, bell-ringer, retold from the village and the reeds",
    "kind": "local_history",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -9676,23 +9608,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Greymoor, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1422,
+   "readingMinutes": 2,
+   "words": 409,
    "tags": [
     "history",
     "reg_greymoor"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "944 SC",
-   "source": "books/aethwyrd/164-two-accounts-of-greymoor.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1019 SC",
+   "source": "Tools/library/handwritten/bk_164.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_164.md",
-   "excerpt": "At the Walking Hut market the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I ring the hand-bell at dusk. It is my work and I have never been paid for it. This is the account of how the bells stopped, as I have been given it, and where I have seen it for myself.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 944 SC, 80 years before the present (1024 SC)",
+    "era": "about 1019 SC, 5 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "on the top shelf, reached by the step-stool, The Peat Library"
    },
@@ -9701,26 +9633,6 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
     },
     {
      "kind": "god",
@@ -10305,8 +10217,8 @@
   },
   {
    "id": "bk_174",
-   "title": "The House Book of Greymoor stilt-village",
-   "author": "Osric Ellison of Greymoor",
+   "title": "The House Book of the Moot Hall",
+   "author": "Elder Ruth Hallam, who keeps the house book of the largest hall in the stilt-village",
    "kind": "household_book",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -10314,24 +10226,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1418,
+   "readingMinutes": 2,
+   "words": 387,
    "tags": [
     "daily_life",
     "housing",
     "reg_greymoor"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "954 SC",
-   "source": "books/aethwyrd/174-the-house-book-of-greymoor-stilt-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1007 SC",
+   "source": "Tools/library/handwritten/bk_174.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_174.md",
-   "excerpt": "At Greymoor stilt-village the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "The moot hall is the one house in the village that is never empty. I write its rules down because I have been told too often that \"everybody knows,\" and nobody does.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 954 SC, 70 years before the present (1024 SC)",
+    "era": "about 1007 SC, 17 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "in the second case from the door, The Peat Library"
    },
@@ -10340,36 +10252,14 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The small rules of a shared home in Greymoor: lamps, guests, mending.",
     "How ordinary people of Greymoor keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -11073,8 +10963,8 @@
   },
   {
    "id": "bk_186",
-   "title": "The House Book of Greymoor stilt-village",
-   "author": "Osric Park of Greymoor",
+   "title": "A Peat-Cutter's House Book",
+   "author": "Garrick Thorne, peat-cutter, written on the backs of tally-slips",
    "kind": "household_book",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -11082,24 +10972,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1466,
+   "readingMinutes": 2,
+   "words": 404,
    "tags": [
     "daily_life",
     "housing",
     "reg_greymoor"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "966 SC",
-   "source": "books/aethwyrd/186-the-house-book-of-greymoor-stilt-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1001 SC",
+   "source": "Tools/library/handwritten/bk_186.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_186.md",
-   "excerpt": "At the Walking Hut market the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Peat is cut in spring, stacked in summer and burnt in winter. Between those three, it is dried, and the drying is the whole of the art. A turf that has not dried smokes and does not warm. A turf that has dried too fast cracks and burns like paper. The right turf is the colour of strong tea and rings a little when two are knocked together.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 966 SC, 58 years before the present (1024 SC)",
+    "era": "about 1001 SC, 23 years before the present (1024 SC)",
     "copy": "Cover re-covered in oilcloth by the last keeper.",
     "shelfPlace": "in the second case from the door, The Peat Library"
    },
@@ -11110,24 +11000,17 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "god",
-     "id": "Morrowyn",
+     "id": "Thorgrim",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The small rules of a shared home in Greymoor: lamps, guests, mending.",
     "How ordinary people of Greymoor keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -11821,8 +11704,8 @@
   },
   {
    "id": "bk_198",
-   "title": "The House Book of Greymoor stilt-village",
-   "author": "Kwame Sato of Greymoor",
+   "title": "The Reed-Weaver's Book of the House",
+   "author": "Linnet Ashworth, reed-weaver, in the hours between light and sleep",
    "kind": "household_book",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -11830,24 +11713,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Greymoor: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1417,
+   "readingMinutes": 2,
+   "words": 380,
    "tags": [
     "daily_life",
     "housing",
     "reg_greymoor"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "978 SC",
-   "source": "books/aethwyrd/198-the-house-book-of-greymoor-stilt-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1015 SC",
+   "source": "Tools/library/handwritten/bk_198.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_198.md",
-   "excerpt": "At Greymoor stilt-village the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "A reed-weaver's house is a house that has been woven. The walls are mats, the roof is thatch, the floor is a layer of green stalks that are changed when they stop being green. If it were stone, it would not move with the water. Reeds give. That is why they last.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 978 SC, 46 years before the present (1024 SC)",
+    "era": "about 1015 SC, 9 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "in the reading-table drawer, The Peat Library"
    },
@@ -11856,31 +11739,6 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -17159,8 +17017,8 @@
   },
   {
    "id": "bk_288",
-   "title": "What the Shrine Floor Knows in Greymoor stilt-village",
-   "author": "Idris Ellison of Greymoor",
+   "title": "Hand-Bells at Dusk",
+   "author": "Osric Penn, keeper of the dusk-bells for the stilt-village shrine of Morrowyn",
    "kind": "chapel_notes",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -17168,23 +17026,23 @@
    "shelf": "Chapel notes",
    "language": "Common",
    "blurb": "What a shrine floor in Greymoor sees: keepers, mourners, festival crowds and quiet hours.",
-   "readingMinutes": 7,
-   "words": 1449,
+   "readingMinutes": 2,
+   "words": 398,
    "tags": [
     "faith",
     "reg_greymoor"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "948 SC",
-   "source": "books/aethwyrd/288-what-the-shrine-floor-knows-in-greymoor-stilt-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1004 SC",
+   "source": "Tools/library/handwritten/bk_288.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_288.md",
-   "excerpt": "At the Walking Hut market the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I keep the small shrine at the end of the longest walkway. It has a blue lamp, a shelf of bells and a bench that has been sat on by every person I have ever disliked and several I loved.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 948 SC, 76 years before the present (1024 SC)",
+    "era": "about 1004 SC, 20 years before the present (1024 SC)",
     "copy": "Margins crowded with later readers’ notes in three hands.",
     "shelfPlace": "on the top shelf, reached by the step-stool, The Peat Library"
    },
@@ -17195,23 +17053,8 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "god",
      "id": "Morrowyn",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
      "note": "A god of the week the text names."
     }
    ],
@@ -17920,8 +17763,8 @@
   },
   {
    "id": "bk_300",
-   "title": "What the Shrine Floor Knows in Greymoor stilt-village",
-   "author": "Imani Novak of Greymoor",
+   "title": "What the Leaning Tower Keeps",
+   "author": "Jessamy Holt, who guides pilgrims to the tower on the feast days of the sunken abbey",
    "kind": "chapel_notes",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -17929,23 +17772,23 @@
    "shelf": "Chapel notes",
    "language": "Common",
    "blurb": "What a shrine floor in Greymoor sees: keepers, mourners, festival crowds and quiet hours.",
-   "readingMinutes": 7,
-   "words": 1436,
+   "readingMinutes": 2,
+   "words": 398,
    "tags": [
     "faith",
     "reg_greymoor"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "960 SC",
-   "source": "books/aethwyrd/300-what-the-shrine-floor-knows-in-greymoor-stilt-village.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1017 SC",
+   "source": "Tools/library/handwritten/bk_300.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_300.md",
-   "excerpt": "At Greymoor stilt-village the work of the day sits inside reed thatch on stilts above peat. People eat eel, bog-berries, and black bread and they talk about lights that are not lanterns out on the peat the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Every year, on the feast days, I take whoever asks across the fen to the Leaning Tower. It is the bell tower of the abbey that sank, and it sinks a hand's width a year. By my reckoning it has three hands' widths to go before it is a reed bed. By the village's, it has never been taller than it is now.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 960 SC, 64 years before the present (1024 SC)",
+    "era": "about 1017 SC, 7 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "on the low shelf by the window, The Peat Library"
    },
@@ -17954,21 +17797,6 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Maelis",
-     "note": "A god of the week the text names."
     },
     {
      "kind": "god",
@@ -23764,8 +23592,8 @@
   },
   {
    "id": "bk_399",
-   "title": "Songs Heard in Greymoor stilt-village",
-   "author": "Amina Pell of Greymoor",
+   "title": "Three Songs of the Fen",
+   "author": "Collected by Tove Rushmere, who sang them badly until someone taught her how",
    "kind": "ballad_sheet",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -23773,23 +23601,23 @@
    "shelf": "Ballad sheet",
    "language": "Common",
    "blurb": "Songs heard in Greymoor, set down with the verses people disagree about.",
-   "readingMinutes": 3,
-   "words": 525,
+   "readingMinutes": 2,
+   "words": 379,
    "tags": [
     "music",
     "reg_greymoor"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "939 SC",
-   "source": "books/aethwyrd/399-songs-heard-in-greymoor-stilt-village.md",
+   "quality": "strong",
+   "inWorldDate": "1012 SC",
+   "source": "Tools/library/handwritten/bk_399.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_399.md",
-   "excerpt": "Collected at Greymoor stilt-village. Change the name of the bridge if your bridge is the one that is out. A song that cannot survive a correction is a poster.",
+   "excerpt": "Three songs, set down as they are sung at the Crooked Lantern. The verses marked with a star are the ones people argue about.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 939 SC, 85 years before the present (1024 SC)",
+    "era": "about 1012 SC, 12 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "on the top shelf, reached by the step-stool, The Peat Library"
    },
@@ -23800,9 +23628,14 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
+     "kind": "item",
+     "id": "itm_mat_scale",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "god",
+     "id": "Morrowyn",
+     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -24399,8 +24232,8 @@
   },
   {
    "id": "bk_411",
-   "title": "Songs Heard in Greymoor stilt-village",
-   "author": "Corin Ellison of Greymoor",
+   "title": "Pole Songs, With the Rests Marked",
+   "author": "Neddy Sallow, punt-pole singer, who says the rests are the song",
    "kind": "ballad_sheet",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -24408,23 +24241,23 @@
    "shelf": "Ballad sheet",
    "language": "Common",
    "blurb": "Songs heard in Greymoor, set down with the verses people disagree about.",
-   "readingMinutes": 3,
-   "words": 527,
+   "readingMinutes": 2,
+   "words": 341,
    "tags": [
     "music",
     "reg_greymoor"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "951 SC",
-   "source": "books/aethwyrd/411-songs-heard-in-greymoor-stilt-village.md",
+   "quality": "strong",
+   "inWorldDate": "1019 SC",
+   "source": "Tools/library/handwritten/bk_411.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_411.md",
-   "excerpt": "Collected at Greymoor stilt-village. Change the name of the bridge if your bridge is the one that is out. A song that cannot survive a correction is a poster.",
+   "excerpt": "We do not sing on the water. That is the first law of the fen, and it is the reason the pole songs are the strangest in Aethwyrd: they are sung with the mouth shut.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 951 SC, 73 years before the present (1024 SC)",
+    "era": "about 1019 SC, 5 years before the present (1024 SC)",
     "copy": "Corners rounded by many thumbs; a tea ring on the second page.",
     "shelfPlace": "on the top shelf, reached by the step-stool, The Peat Library"
    },
@@ -24435,20 +24268,14 @@
      "note": "The region this book is about (Greymoor)."
     },
     {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "species",
-     "id": "mon_wyvern",
-     "note": "Named in this book."
+     "kind": "god",
+     "id": "Sylvara",
+     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Songs of Greymoor with the verses people disagree about.",
-    "How a tune moves from one town to the next and changes.",
-    "Species it names: Wyvern."
+    "How a tune moves from one town to the next and changes."
    ]
   },
   {
@@ -25565,8 +25392,8 @@
   },
   {
    "id": "bk_432",
-   "title": "Read This at Greymoor stilt-village",
-   "author": "Amina Diallo of Greymoor",
+   "title": "The Moth Who Would Not Be Jarred",
+   "author": "A story for reading aloud by lamplight, as told in the stilt-houses of Greymoor",
    "kind": "story_aloud",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -25574,23 +25401,23 @@
    "shelf": "Stories for reading aloud",
    "language": "Common",
    "blurb": "Stories to read aloud in Greymoor, with the pauses marked for the reader.",
-   "readingMinutes": 3,
-   "words": 519,
+   "readingMinutes": 2,
+   "words": 377,
    "tags": [
     "children",
     "reg_greymoor"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "972 SC",
-   "source": "books/aethwyrd/432-read-this-at-greymoor-stilt-village.md",
+   "quality": "strong",
+   "inWorldDate": "1008 SC",
+   "source": "Tools/library/handwritten/bk_432.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_432.md",
-   "excerpt": "These are told at Greymoor stilt-village. They are not sermons. If a child corrects the ending, write the correction in. That is how a story stays a household thing.",
+   "excerpt": "Once there was a lantern-moth who lived in a jar. She did not mind. The jar was warm, and the sugar-water was sweet, and her light made a small gold circle in the window where a family sat and ate their supper.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 972 SC, 52 years before the present (1024 SC)",
+    "era": "about 1008 SC, 16 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "in the second case from the door, The Peat Library"
    },
@@ -25599,24 +25426,11 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Stories for a lamp-lit room in Greymoor, with the pauses marked.",
     "The small lesson each story leaves, never spelled out."
-   ],
-   "canonNotes": [
-    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
   {
@@ -26284,8 +26098,8 @@
   },
   {
    "id": "bk_444",
-   "title": "Read This at Greymoor stilt-village",
-   "author": "Tomasz Cho of Greymoor",
+   "title": "The Punt-Guide's Daughter and the Quiet Hour",
+   "author": "A tale for reading aloud, told by the fire in a stilt-house of the Silent Fen",
    "kind": "story_aloud",
    "library": "lib_peat_library",
    "region": "reg_greymoor",
@@ -26293,23 +26107,23 @@
    "shelf": "Stories for reading aloud",
    "language": "Common",
    "blurb": "Stories to read aloud in Greymoor, with the pauses marked for the reader.",
-   "readingMinutes": 3,
-   "words": 517,
+   "readingMinutes": 2,
+   "words": 363,
    "tags": [
     "children",
     "reg_greymoor"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "984 SC",
-   "source": "books/aethwyrd/444-read-this-at-greymoor-stilt-village.md",
+   "quality": "strong",
+   "inWorldDate": "1014 SC",
+   "source": "Tools/library/handwritten/bk_444.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_peat_library/bk_444.md",
-   "excerpt": "Two taverns on the same road served fried fish. One had the strange sauce the Veilborn brought, and one did not. A feud lasted a summer. In autumn both kitchens were busy, and the feud had become a menu. Nobody won. Everybody ate.",
+   "excerpt": "In the Silent Fen there lived a punt-guide named Marrow, and a daughter named Wren. Marrow poled the black water from dawn until the fog came down, and Wren sat in the bow and learned the way.",
    "provenance": {
     "tradition": "The Silent Fen tradition of Greymoor",
     "writtenIn": "reg_greymoor",
-    "era": "about 984 SC, 40 years before the present (1024 SC)",
+    "era": "about 1014 SC, 10 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "on the low shelf by the window, The Peat Library"
    },
@@ -26318,34 +26132,11 @@
      "kind": "region",
      "id": "reg_greymoor",
      "note": "The region this book is about (Greymoor)."
-    },
-    {
-     "kind": "place",
-     "id": "Greymoor stilt-village",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "the Walking Hut market",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Stories for a lamp-lit room in Greymoor, with the pauses marked.",
     "The small lesson each story leaves, never spelled out."
-   ],
-   "canonNotes": [
-    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
   {
