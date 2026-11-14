@@ -52,7 +52,7 @@ namespace Ascend.Game
             { enabled = false; return; }
             _id = ++_nextId;
             _rng = new DeterministicRandom(seed + (ulong)_id);
-            _brain = new MonsterBrain(species, motion, db.Attacks, _rng);
+            _brain = new MonsterBrain(species, motion, db.Attacks, _rng) { Tactics = SharedTactics(db) };
             _calc = new DamageCalculator(db.Tuning.Damage);
             _home = transform.position;
             _turnSpeed = Mathf.Max(90f, (float)motion.NavAgent.AngularSpeed);
@@ -88,6 +88,68 @@ namespace Ascend.Game
         public static System.Collections.Generic.IReadOnlyList<MonsterController> Registry => _registry;
         void OnEnable() { if (!_registry.Contains(this)) _registry.Add(this); }
         void OnDisable() => _registry.Remove(this);
+
+        // ---------------------------------------------------------------- group tactics (13_Production/handover/group_tactics_wiring.md, Canon §4d)
+        // Peers are symmetric: no leader, no rank, nothing remembered about the player, nothing kept past the fight (the yield timer
+        // and the flank axis are cleared when this monster is no longer in the fight). Slots come from sorted ids, never UnityEngine.Random.
+        static GroupTacticsTuning _tactics;
+        static GroupTacticsTuning SharedTactics(GameDatabase db) => _tactics ?? (_tactics = db.Tuning.GroupTactics.ToTuning());
+        /// <summary>Forget the cached tuning (tests that swap the loaded data).</summary>
+        public static void ResetTactics() => _tactics = null;
+
+        static readonly System.Collections.Generic.List<MonsterController> _engaged = new System.Collections.Generic.List<MonsterController>();
+        static readonly System.Collections.Generic.List<int> _engagedIds = new System.Collections.Generic.List<int>();
+        static readonly System.Collections.Generic.List<PackMember> _members = new System.Collections.Generic.List<PackMember>();
+        float _yieldUntil;
+        double _flankAngle;
+        bool _yielding, _wantedToken;
+        Vector3 _flankAxis; bool _hasFlankAxis;
+        public int FlankSlot { get; private set; }
+        public bool Yielding => _yielding;
+        public double LastThreat { get; private set; }
+
+        static bool InFight(MonsterController c) =>
+            c != null && c._brain != null && c._body != null && !c._body.IsDead
+            && c._brain.State != AiState.Idle && c._brain.State != AiState.Return && c._brain.State != AiState.Flee;
+
+        /// <summary>Fills the group fields of the sense from the live monsters fighting alongside this one (same pass for everyone).</summary>
+        void GroupSense(ref AiSense sense, Vector3 targetPos)
+        {
+            var tac = _brain.Tactics ?? GroupTacticsTuning.Default;
+            if (!tac.Enabled || _brain.State == AiState.Idle || _brain.State == AiState.Return) { ClearFight(); if (!tac.Enabled) return; }
+            _engaged.Clear(); _engagedIds.Clear(); _members.Clear();
+            Vector3 centroid = Vector3.zero;
+            int allies = 0;
+            foreach (var c in _registry)
+            {
+                if (c == null || !InFight(c)) continue;
+                if (c != this && Flat(c.transform.position - transform.position).magnitude > PackCallRadius) continue;
+                _engaged.Add(c); _engagedIds.Add(c._id);
+                centroid += Flat(c.transform.position - targetPos);
+                if (c != this) allies++;
+                _members.Add(new PackMember
+                {
+                    Id = c._id, HpFraction = c._body.MaxHp > 0 ? c._body.Hp / (double)c._body.MaxHp : 1,
+                    WantsToken = c._holdsToken || c._wantedToken,
+                });
+            }
+            sense.AlliesNear = allies;
+            if (_player != null && _player.MaxHp > 0) sense.PlayerHpFraction = _player.Hp / (double)_player.MaxHp;
+            if (_engaged.Count == 0 || !_engaged.Contains(this)) { _hasFlankAxis = false; FlankSlot = 0; return; }
+            var slots = FlankSlots.Assign(_engagedIds, tac);
+            FlankSlot = slots[_id];
+            sense.FlankSlot = FlankSlot;
+            sense.FlankSlotCount = System.Math.Min(_engaged.Count, tac.SlotCountClamped);
+            _hasFlankAxis = centroid.sqrMagnitude > 1e-4f;
+            _flankAxis = _hasFlankAxis ? centroid.normalized : Vector3.zero;
+            if (_holdsToken && Time.time >= _yieldUntil && PeerCoordinator.ShouldYield(_id, _members, tac)) { _yieldUntil = Time.time + (float)tac.YieldSec; }
+            // A monster that holds no token yet yields only when it is the contender that loses (same function everywhere).
+            bool lose = !_holdsToken && _wantedToken && PeerCoordinator.ShouldYield(_id, _members, tac);
+            _yielding = Time.time < _yieldUntil || lose;
+            sense.YieldToken = _yielding;
+        }
+
+        void ClearFight() { _yieldUntil = 0f; _yielding = false; _wantedToken = false; _hasFlankAxis = false; FlankSlot = 0; }
 
         int PackmatesNear()
         {
@@ -166,7 +228,7 @@ namespace Ascend.Game
         void Update()
         {
             if (_brain == null) return;
-            if (_body.IsDead) { ReleaseToken(); ShowTelegraph(false); return; }
+            if (_body.IsDead) { ClearFight(); ReleaseToken(); ShowTelegraph(false); return; }
             if (_player == null)
             {
                 _player = FindFirstObjectByType<PlayerDefense>();
@@ -184,13 +246,18 @@ namespace Ascend.Game
             Vector3 toPlayer = targetPos - transform.position; toPlayer.y = 0;
             Vector3 toHome = _home - transform.position; toHome.y = 0;
             bool hasToken = _holdsToken || AggroDirector.Tokens.Holders.Count < AggroDirector.Tokens.Capacity;
-            var cmd = _brain.Tick(dt, new AiSense
+            var sense = new AiSense
             {
                 DistanceToPlayer = toPlayer.magnitude, DistanceFromHome = toHome.magnitude,
                 HpFraction = _body.MaxHp > 0 ? _body.Hp / (double)_body.MaxHp : 1, HasToken = hasToken,
                 PackmatesNear = _brain.IsPack ? PackmatesNear() : 0,
                 TargetWarded = !IgnoresWard && TownWard.Contains(targetPos),
-            });
+            };
+            GroupSense(ref sense, targetPos);
+            var cmd = _brain.Tick(dt, sense);
+            _wantedToken = cmd.WantsToken;
+            LastThreat = cmd.ThreatLevel;
+            _flankAngle = cmd.FlankAngleDeg;
             if (_brain.State == AiState.Windup && !_holdsToken) _holdsToken = AggroDirector.Tokens.TryTake(_tokenId);
             if (_brain.State == AiState.Windup && _lastState != AiState.Windup) CombatFx.Play(CombatFx.Sfx.Telegraph, transform.position, 0.6f);
             _lastState = _brain.State;
@@ -225,7 +292,16 @@ namespace Ascend.Game
                 case AiMove.Toward: dir = toPlayer.normalized; break;
                 case AiMove.Away: dir = -toPlayer.normalized; break;
                 case AiMove.Home: dir = toHome.normalized; break;
-                case AiMove.Circle: dir = Vector3.Cross(Vector3.up, toPlayer).normalized; break;
+                case AiMove.Circle:
+                    dir = Vector3.Cross(Vector3.up, toPlayer).normalized;
+                    if (_hasFlankAxis && System.Math.Abs(_flankAngle) > 0.01)
+                    {
+                        // Aim at this monster's slot on the ring round the target (angle from the pack's approach axis, current radius).
+                        Vector3 slotPoint = Quaternion.AngleAxis((float)_flankAngle, Vector3.up) * _flankAxis * toPlayer.magnitude;
+                        Vector3 toSlot = Flat((transform.position - toPlayer) + slotPoint - transform.position);
+                        if (toSlot.magnitude > 0.6f) dir = toSlot.normalized;
+                    }
+                    break;
             }
             if (dir.sqrMagnitude < 1e-4f) return;
             dir = Unstick(dir, dt);

@@ -7,7 +7,8 @@ Need a quick 3D model of a prop, creature, plant, weapon, armor piece or buildin
 python Tools/ai3d/model_requests.py new --id warren_crate --kind prop --name "Salvage Warren supply crate" \
     --by environment-artist --prompt "a sturdy wooden supply crate with iron bands" --size 1.0
 ```
-- `--kind`: prop, creature, building-part, weapon, armor, plant, terrain-feature, character-reference.
+- `--kind`: prop, creature, building-part, weapon, armor, plant, terrain-feature.
+- **No character or NPC bodies.** The queue refuses them: human bodies come from `Tools/blender/ascend_characters` (clean topology, a humanoid rig, data-driven variants). A test on 2026-11-13 showed TripoSR gives a body with mitten hands and no face.
 - Give `--image` (a local reference image: our own render, our own concept, the user's own drawing) or `--prompt` (an image is made first; needs the user's image-API key, otherwise the request waits as `needs-image`).
 - Never use another game's or studio's art, screenshots or unclear stock images as a reference.
 - `--size` is the target height in metres (length for long things); `--species` links a creature to `Data/Monsters/species.json`.

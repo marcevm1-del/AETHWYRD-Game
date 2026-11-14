@@ -156,9 +156,9 @@
    "stamina": {
     "max": 160,
     "sprintDrainPerSec": 16,
-    "regenPerSec": 6,
+    "regenPerSec": 8,
     "exhaustedBelow": 8,
-    "recoverTo": 45
+    "recoverTo": 40
    },
    "carryBonus": 40,
    "unlockRank": "B",
