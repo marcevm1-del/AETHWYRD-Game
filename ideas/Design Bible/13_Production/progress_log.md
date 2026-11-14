@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-14
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Agent sessions, batch 3 | Merged work from: audio-designer, combat-designer, narrative-writer, producer, systems-designer. Includes the boss-only rock stem brief, 89 more companion banter lines, the life-skill XP curve review, stable and mount economy numbers, mounted-combat rules for ground mounts, and the companion presets and group tactics wired into the Unity runtime (its first Unity run). Verified with Unity PlayMode as well as the data and rules build | 761 |
+
 ## 2026-11-11
 
 | Commit | What changed | Tests |
