@@ -5,7 +5,7 @@
   {
    "id": "bk_001",
    "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
-   "author": "Dugan Costa of Great Labyrinth (Floors 1-40)",
+   "author": "Hesk Tallow, ledger clerk at the Labyrinth gate",
    "kind": "field_guide",
    "library": "lib_aldmere_royal_archive",
    "region": "reg_aldmere",
@@ -13,18 +13,18 @@
    "shelf": "Field guide",
    "language": "Common",
    "blurb": "A walker's guide to the creatures near Great Labyrinth (Floors 1-40): what folk file them under, how to approach them, what to leave alone.",
-   "readingMinutes": 4,
-   "words": 866,
+   "readingMinutes": 3,
+   "words": 505,
    "tags": [
     "bestiary",
     "reg_labyrinth_upper",
     "taming"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "average",
-   "inWorldDate": "901 SC",
-   "source": "books/aethwyrd/001-neighbors-near-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "998 SC",
+   "source": "Tools/library/handwritten/bk_001.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_001.md",
    "rewards": [
     {
@@ -33,18 +33,18 @@
     },
     {
      "kind": "bestiary",
-     "id": "mon_poison_slime"
+     "id": "mon_kobold_scavenger"
     },
     {
      "kind": "bestiary",
-     "id": "mon_bubble_slime"
+     "id": "mon_kobold_miner"
     }
    ],
-   "excerpt": "Around Great Labyrinth (Floors 1-40), people file the Poison Slime near guild rank E. A rank is a licence hint. It is not a measurement of your courage, and it goes stale if the ground has changed.",
+   "excerpt": "I count people in and I count people out. The difference between the two numbers is the only honest statistic in the Guild, and I am not allowed to publish it. So instead I write down what the people who come out say they met, and I add it up the way a clerk would. These are the neighbours I hear about most, in the order the gate-desk hears about them.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 901 SC, 123 years before the present (1024 SC)",
+    "era": "about 998 SC, 26 years before the present (1024 SC)",
     "copy": "Cover re-covered in oilcloth by the last keeper.",
     "shelfPlace": "in a labelled box on the second rack, Aldmere Royal and Noble Archives"
    },
@@ -56,23 +56,38 @@
     },
     {
      "kind": "species",
-     "id": "mon_poison_slime",
+     "id": "mon_kobold_scavenger",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_bubble_slime",
+     "id": "mon_hollow_mourner",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "species",
+     "id": "mon_kobold_miner",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_metal_slime",
+     "id": "mon_door_mimic",
      "note": "Named in this book."
     },
     {
      "kind": "species",
      "id": "mon_red_slime",
      "note": "Named in this book; reading it marks the species Seen."
+    },
+    {
+     "kind": "species",
+     "id": "mon_mimic",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_candle_stub",
+     "note": "A material or item the text mentions."
     },
     {
      "kind": "quest",
@@ -86,16 +101,17 @@
     },
     {
      "kind": "god",
-     "id": "Ilvaris",
+     "id": "Morrowyn",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "How folk around Great Labyrinth (Floors 1-40) file each creature by Guild rank, and what they say it fears.",
     "Which approaches locals think are mistakes, with the rumour clearly marked as rumour.",
-    "Species it names: Poison Slime, Bubble Slime, Metal Slime, Red Slime."
+    "Species it names: Kobold Scavenger, Hollow Mourner, Kobold Miner, Door Mimic, Red Slime, Mimic."
    ],
    "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday).",
     "Mentions Guild ranks (Canon section 2, F to SSS).",
     "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
@@ -387,8 +403,8 @@
   },
   {
    "id": "bk_013",
-   "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
-   "author": "Anwen Ellison of Great Labyrinth (Floors 1-40)",
+   "title": "Counting Kobolds",
+   "author": "Neris Quill, who watched the Salvage Warren from the Chalk Landing for eleven winters",
    "kind": "field_guide",
    "library": "lib_aldmere_royal_archive",
    "region": "reg_aldmere",
@@ -396,38 +412,38 @@
    "shelf": "Field guide",
    "language": "Common",
    "blurb": "A walker's guide to the creatures near Great Labyrinth (Floors 1-40): what folk file them under, how to approach them, what to leave alone.",
-   "readingMinutes": 4,
-   "words": 857,
+   "readingMinutes": 3,
+   "words": 536,
    "tags": [
     "bestiary",
     "reg_labyrinth_upper",
     "taming"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "913 SC",
-   "source": "books/aethwyrd/013-neighbors-near-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1009 SC",
+   "source": "Tools/library/handwritten/bk_013.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_013.md",
    "rewards": [
     {
      "kind": "bestiary",
-     "id": "mon_bone_weevil"
+     "id": "mon_kobold_sneak"
     },
     {
      "kind": "bestiary",
-     "id": "mon_hollow_mourner"
+     "id": "mon_kobold_shaman"
     },
     {
      "kind": "bestiary",
-     "id": "mon_bone_crawler"
+     "id": "mon_kobold_trapmaster"
     }
    ],
-   "excerpt": "Around Great Labyrinth (Floors 1-40), people file the Hollow Mourner near guild rank F. A rank is a licence hint. It is not a measurement of your courage, and it goes stale if the ground has changed.",
+   "excerpt": "Under the third and fourth floors there is a kobold den where the little dungeon-born things stack whatever adventurers lose. People call it the Salvage Warren. I call it my neighbours. I have sat on the Chalk Landing with a flask and a tally-board for eleven winters and I have grown fond of them in the way you grow fond of a leaking roof: I know every drip.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 913 SC, 111 years before the present (1024 SC)",
+    "era": "about 1009 SC, 15 years before the present (1024 SC)",
     "copy": "Loose gatherings tied together with a ribbon.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Aldmere Royal and Noble Archives"
    },
@@ -439,28 +455,28 @@
     },
     {
      "kind": "species",
-     "id": "mon_hollow_mourner",
+     "id": "mon_kobold_trapmaster",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_lantern_leech",
+     "id": "mon_kobold_packleader",
      "note": "Named in this book."
     },
     {
      "kind": "species",
-     "id": "mon_bone_crawler",
+     "id": "mon_kobold_shaman",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_bone_weevil",
+     "id": "mon_kobold_sneak",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
+     "kind": "species",
+     "id": "mon_armor_beetle",
+     "note": "Named in this book."
     },
     {
      "kind": "quest",
@@ -471,17 +487,12 @@
      "kind": "quest",
      "id": "qst_dng_warren_weighing",
      "note": "A quest in this region; the book is background reading, never a requirement."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "How folk around Great Labyrinth (Floors 1-40) file each creature by Guild rank, and what they say it fears.",
     "Which approaches locals think are mistakes, with the rumour clearly marked as rumour.",
-    "Species it names: Hollow Mourner, Lantern Leech, Bone Crawler, Bone Weevil."
+    "Species it names: Kobold Trapmaster, Kobold Packleader, Kobold Shaman, Kobold Sneak, Armor Beetle."
    ],
    "canonNotes": [
     "Mentions Guild ranks (Canon section 2, F to SSS).",
@@ -781,8 +792,8 @@
   },
   {
    "id": "bk_025",
-   "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
-   "author": "Noor Mori of Great Labyrinth (Floors 1-40)",
+   "title": "Pocket-Book of a Floor-Walker",
+   "author": "Brandt Kessel, hunter, scrawled between jobs",
    "kind": "field_guide",
    "library": "lib_aldmere_royal_archive",
    "region": "reg_aldmere",
@@ -790,38 +801,38 @@
    "shelf": "Field guide",
    "language": "Common",
    "blurb": "A walker's guide to the creatures near Great Labyrinth (Floors 1-40): what folk file them under, how to approach them, what to leave alone.",
-   "readingMinutes": 3,
-   "words": 688,
+   "readingMinutes": 2,
+   "words": 362,
    "tags": [
     "bestiary",
     "reg_labyrinth_upper",
     "taming"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "average",
-   "inWorldDate": "925 SC",
-   "source": "books/aethwyrd/025-neighbors-near-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1014 SC",
+   "source": "Tools/library/handwritten/bk_025.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_025.md",
    "rewards": [
     {
      "kind": "bestiary",
-     "id": "mon_living_armor"
+     "id": "mon_killer_ant"
     },
     {
      "kind": "bestiary",
-     "id": "mon_stone_golem"
+     "id": "mon_needle_wasp"
     },
     {
      "kind": "bestiary",
-     "id": "mon_mimic"
+     "id": "mon_bone_crawler"
     }
    ],
-   "excerpt": "Around Great Labyrinth (Floors 1-40), people file the Living Armor near guild rank E+. A rank is a licence hint. It is not a measurement of your courage, and it goes stale if the ground has changed.",
+   "excerpt": "E. No Element. Weak to Fire. Swarms. Never fight them in a corridor you cannot leave. Fire at the front, run at the back. One is a snack, forty is a funeral.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 925 SC, 99 years before the present (1024 SC)",
+    "era": "about 1014 SC, 10 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "in a labelled box on the second rack, Aldmere Royal and Noble Archives"
    },
@@ -833,23 +844,28 @@
     },
     {
      "kind": "species",
-     "id": "mon_living_armor",
+     "id": "mon_floor_crawler",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "species",
+     "id": "mon_bone_crawler",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_stone_golem",
+     "id": "mon_needle_wasp",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_mimic",
+     "id": "mon_killer_ant",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
+     "kind": "species",
+     "id": "mon_mud_doll",
+     "note": "Named in this book."
     },
     {
      "kind": "quest",
@@ -863,17 +879,21 @@
     },
     {
      "kind": "god",
-     "id": "Ilvaris",
+     "id": "Thorgrim",
+     "note": "A god of the week the text names."
+    },
+    {
+     "kind": "god",
+     "id": "Kaelthas",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "How folk around Great Labyrinth (Floors 1-40) file each creature by Guild rank, and what they say it fears.",
     "Which approaches locals think are mistakes, with the rumour clearly marked as rumour.",
-    "Species it names: Living Armor, Stone Golem, Mimic."
+    "Species it names: Floor Crawler, Bone Crawler, Needle Wasp, Killer Ant, Mud Doll."
    ],
    "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS).",
     "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
@@ -1176,28 +1196,106 @@
   },
   {
    "id": "bk_037",
-   "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
-   "author": "Bruni Holt of Great Labyrinth (Floors 1-40)",
+   "title": "What the Porter Carries",
+   "author": "Odo Brisk, porter, forty trips to Floor Ten and back",
    "kind": "field_guide",
-   "library": null,
-   "region": null,
+   "library": "lib_aldmere_royal_archive",
+   "region": "reg_aldmere",
    "subjectRegion": "reg_labyrinth_upper",
    "shelf": "Field guide",
    "language": "Common",
    "blurb": "A walker's guide to the creatures near Great Labyrinth (Floors 1-40): what folk file them under, how to approach them, what to leave alone.",
-   "readingMinutes": 1,
-   "words": 191,
+   "readingMinutes": 2,
+   "words": 412,
    "tags": [
     "bestiary",
     "reg_labyrinth_upper",
     "taming"
    ],
    "reliability": "partial",
-   "status": "hold",
-   "quality": "templated",
-   "inWorldDate": "937 SC",
-   "source": "books/aethwyrd/037-neighbors-near-great-labyrinth-floors-1-40.md",
-   "text": null
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1006 SC",
+   "source": "Tools/library/handwritten/bk_037.md (hand-written rewrite)",
+   "text": "02_Lore/library/lib_aldmere_royal_archive/bk_037.md",
+   "rewards": [
+    {
+     "kind": "bestiary",
+     "id": "mon_lantern_leech"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_gremlin"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_bubble_slime"
+    }
+   ],
+   "excerpt": "A porter's job is to arrive. Heroes are for the middle of the story. I carry the pack, the water, the rope and the bad news, and I come back with the pack, the rope and the good news. The Guild books me by the day. The rest I learned on the stairs.",
+   "provenance": {
+    "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
+    "writtenIn": "reg_labyrinth_upper",
+    "era": "about 1006 SC, 18 years before the present (1024 SC)",
+    "copy": "A child’s pencil drawing in the back, left in on purpose.",
+    "shelfPlace": "on the open shelf beside the copying desk, Aldmere Royal and Noble Archives"
+   },
+   "hooks": [
+    {
+     "kind": "region",
+     "id": "reg_labyrinth_upper",
+     "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
+    },
+    {
+     "kind": "species",
+     "id": "mon_lantern_leech",
+     "note": "Named in this book; reading it marks the species Seen."
+    },
+    {
+     "kind": "species",
+     "id": "mon_bubble_slime",
+     "note": "Named in this book; reading it marks the species Seen."
+    },
+    {
+     "kind": "species",
+     "id": "mon_wall_stalker",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "species",
+     "id": "mon_gremlin",
+     "note": "Named in this book; reading it marks the species Seen."
+    },
+    {
+     "kind": "species",
+     "id": "mon_mimic",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_candle_stub",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "quest",
+     "id": "qst_dng_warren_tally",
+     "note": "A quest in this region; the book is background reading, never a requirement."
+    },
+    {
+     "kind": "quest",
+     "id": "qst_dng_warren_weighing",
+     "note": "A quest in this region; the book is background reading, never a requirement."
+    }
+   ],
+   "teaches": [
+    "How folk around Great Labyrinth (Floors 1-40) file each creature by Guild rank, and what they say it fears.",
+    "Which approaches locals think are mistakes, with the rumour clearly marked as rumour.",
+    "Species it names: Lantern Leech, Bubble Slime, Wall Stalker, Gremlin, Mimic."
+   ],
+   "canonNotes": [
+    "Mentions Guild ranks (Canon section 2, F to SSS).",
+    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
+   ]
   },
   {
    "id": "bk_038",
@@ -12208,8 +12306,8 @@
   },
   {
    "id": "bk_207",
-   "title": "Bench Notes from Great Labyrinth (Floors 1-40)",
-   "author": "Maren Novak of Great Labyrinth (Floors 1-40)",
+   "title": "The Mender at the Foot of the Stair",
+   "author": "Ilse Brannigan, mender of salvaged gear, Labyrinth gate",
    "kind": "craft_notes",
    "library": "lib_aldmere_royal_archive",
    "region": "reg_aldmere",
@@ -12217,23 +12315,23 @@
    "shelf": "Craft notes",
    "language": "Common",
    "blurb": "Bench notes from Great Labyrinth (Floors 1-40) on materials, tools and mistakes worth making only once.",
-   "readingMinutes": 3,
-   "words": 542,
+   "readingMinutes": 2,
+   "words": 423,
    "tags": [
     "crafting",
     "reg_labyrinth_upper"
    ],
    "reliability": "accurate",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "987 SC",
-   "source": "books/aethwyrd/207-bench-notes-from-great-labyrinth-floors-1-40.md",
+   "quality": "strong",
+   "inWorldDate": "1013 SC",
+   "source": "Tools/library/handwritten/bk_207.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_207.md",
-   "excerpt": "Copied at Great Labyrinth (Floors 1-40) from a maker who was willing to be watched. Nothing here makes you a master. Mastery is someone else’s trust, repeated.",
+   "excerpt": "My bench is a plank on two barrels at the foot of the stair. People come to me with a bent greave, a cracked cap or a boot that has lost its heel to the dungeon, and I put it back together for what they can pay. This is how I do it, in case you ever have to do it yourself with a candle and a bad mood.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 987 SC, 37 years before the present (1024 SC)",
+    "era": "about 1013 SC, 11 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "on the open shelf beside the copying desk, Aldmere Royal and Noble Archives"
    },
@@ -12242,6 +12340,41 @@
      "kind": "region",
      "id": "reg_labyrinth_upper",
      "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_labyrinth_bronze",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_carapace_shard",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_bronze_greaves",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_carapace_cap",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "recipe",
+     "id": "rcp_carapace_cap",
+     "note": "A craft the text mentions."
+    },
+    {
+     "kind": "recipe",
+     "id": "rcp_bronze_greaves",
+     "note": "A craft the text mentions."
+    },
+    {
+     "kind": "god",
+     "id": "Thorgrim",
+     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -12782,8 +12915,8 @@
   },
   {
    "id": "bk_219",
-   "title": "Bench Notes from Great Labyrinth (Floors 1-40)",
-   "author": "Tamsin Okafor of Great Labyrinth (Floors 1-40)",
+   "title": "Reading the Old Tally Chalk",
+   "author": "Wenna Ashby, chalk-maker, with a note on how I learned to read it",
    "kind": "craft_notes",
    "library": "lib_aldmere_royal_archive",
    "region": "reg_aldmere",
@@ -12791,23 +12924,23 @@
    "shelf": "Craft notes",
    "language": "Common",
    "blurb": "Bench notes from Great Labyrinth (Floors 1-40) on materials, tools and mistakes worth making only once.",
-   "readingMinutes": 3,
-   "words": 517,
+   "readingMinutes": 2,
+   "words": 422,
    "tags": [
     "crafting",
     "reg_labyrinth_upper"
    ],
    "reliability": "accurate",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "999 SC",
-   "source": "books/aethwyrd/219-bench-notes-from-great-labyrinth-floors-1-40.md",
+   "quality": "strong",
+   "inWorldDate": "1001 SC",
+   "source": "Tools/library/handwritten/bk_219.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_219.md",
-   "excerpt": "Copied at Great Labyrinth (Floors 1-40) from a maker who was willing to be watched. Nothing here makes you a master. Mastery is someone else’s trust, repeated.",
+   "excerpt": "I make chalk. People laugh until they need it. Then they ask whether mine will mark wet stone, and I say yes, and I charge a copper more.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 999 SC, 25 years before the present (1024 SC)",
+    "era": "about 1001 SC, 23 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Aldmere Royal and Noble Archives"
    },
@@ -12816,6 +12949,21 @@
      "kind": "region",
      "id": "reg_labyrinth_upper",
      "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
+    },
+    {
+     "kind": "place",
+     "id": "Ashby",
+     "note": "A settlement or place the text names."
+    },
+    {
+     "kind": "god",
+     "id": "Maelis",
+     "note": "A god of the week the text names."
+    },
+    {
+     "kind": "god",
+     "id": "Vex",
+     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -12945,7 +13093,7 @@
    "inWorldDate": "1002 SC",
    "source": "books/aethwyrd/222-bench-notes-from-fox-shrine-isle.md",
    "text": "02_Lore/library/lib_fox_shrine_library/bk_222.md",
-   "excerpt": "If you cannot name the plant, you are not dyeing. You are gambling with someone’s skin. Mordant as the dyer who lives here does it. Write the plant’s name on the hem in chalk before you brag.",
+   "excerpt": "On a long stair, the nail is the ethics. Check the one at hand height and the one at the turn. Do not offer to carry a person up a height they can walk. Walking is the route.",
    "provenance": {
     "tradition": "The Isles of Fox and Promise tradition of Kitsune Isles",
     "writtenIn": "reg_kitsune_isles",
@@ -15870,8 +16018,8 @@
   },
   {
    "id": "bk_270",
-   "title": "Branch Notes for Great Labyrinth (Floors 1-40)",
-   "author": "Noor Haddad of Great Labyrinth (Floors 1-40)",
+   "title": "The Gate Desk: How We Work",
+   "author": "Marrow Penhallow, senior clerk, Guild desk at the Labyrinth gate",
    "kind": "guild_manual",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -15879,23 +16027,23 @@
    "shelf": "Guild manual",
    "language": "Common",
    "blurb": "A guild branch manual for Great Labyrinth (Floors 1-40): forms, slang, rank etiquette and what the board will not say.",
-   "readingMinutes": 8,
-   "words": 1576,
+   "readingMinutes": 2,
+   "words": 448,
    "tags": [
     "guild",
     "reg_labyrinth_upper"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "930 SC",
-   "source": "books/aethwyrd/270-branch-notes-for-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1008 SC",
+   "source": "Tools/library/handwritten/bk_270.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_270.md",
-   "excerpt": "At Great Labyrinth (Floors 1-40) the work of the day sits inside cut stairs and chalk marks. People eat whatever the pack still holds and they talk about floors that reset their halls and keep their lessons the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "The Great Labyrinth runs for a hundred and twenty floors. The first forty are the Proving Halls, and they are our business. Our rank range is F to C: the floors run from kobolds and slimes to things that have taken a long time to get angry. We are not a gate that keeps anybody out. We are a gate that makes sure somebody knows who went in.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 930 SC, 94 years before the present (1024 SC)",
+    "era": "about 1008 SC, 16 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "in the newcomers’ box under the notice wall, Aldmere Guild Hall Reading Room"
    },
@@ -15904,11 +16052,6 @@
      "kind": "region",
      "id": "reg_labyrinth_upper",
      "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
     },
     {
      "kind": "quest",
@@ -15922,12 +16065,7 @@
     },
     {
      "kind": "god",
-     "id": "Kaelthas",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
+     "id": "Morrowyn",
      "note": "A god of the week the text names."
     }
    ],
@@ -15936,6 +16074,7 @@
     "What the board will not say out loud and the courtesy that fills the gap."
    ],
    "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday).",
     "Mentions Guild ranks (Canon section 2, F to SSS).",
     "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
@@ -16628,8 +16767,8 @@
   },
   {
    "id": "bk_282",
-   "title": "Branch Notes for Great Labyrinth (Floors 1-40)",
-   "author": "Dugan Ndlovu of Great Labyrinth (Floors 1-40)",
+   "title": "Lost, Stacked and Found",
+   "author": "Tobias Wren, clerk of the Guild's lost-and-found shelf",
    "kind": "guild_manual",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -16637,23 +16776,23 @@
    "shelf": "Guild manual",
    "language": "Common",
    "blurb": "A guild branch manual for Great Labyrinth (Floors 1-40): forms, slang, rank etiquette and what the board will not say.",
-   "readingMinutes": 8,
-   "words": 1583,
+   "readingMinutes": 2,
+   "words": 403,
    "tags": [
     "guild",
     "reg_labyrinth_upper"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "942 SC",
-   "source": "books/aethwyrd/282-branch-notes-for-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1016 SC",
+   "source": "Tools/library/handwritten/bk_282.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_282.md",
-   "excerpt": "At Great Labyrinth (Floors 1-40) the work of the day sits inside cut stairs and chalk marks. People eat whatever the pack still holds and they talk about floors that reset their halls and keep their lessons the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I have the smallest desk in the Guild and, I think, the most contented. A man who keeps the lost-and-found shelf is a man who spends his days giving things back.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 942 SC, 82 years before the present (1024 SC)",
+    "era": "about 1016 SC, 8 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "on the clerk’s counter, tied with cord, Aldmere Guild Hall Reading Room"
    },
@@ -16662,11 +16801,6 @@
      "kind": "region",
      "id": "reg_labyrinth_upper",
      "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
     },
     {
      "kind": "quest",
@@ -16685,7 +16819,7 @@
     },
     {
      "kind": "god",
-     "id": "Ilvaris",
+     "id": "Sylvara",
      "note": "A god of the week the text names."
     }
    ],
@@ -16694,7 +16828,6 @@
     "What the board will not say out loud and the courtesy that fills the gap."
    ],
    "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS).",
     "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
@@ -18852,7 +18985,7 @@
   {
    "id": "bk_318",
    "title": "Goods Through Brindlewick",
-   "author": "Bramble Reed of Whisperwood",
+   "author": "Perrin Dace, factor for the mill on the Brindle river",
    "kind": "trade_notes",
    "library": "lib_brindlewick_guild_shelf",
    "region": "reg_whisperwood",
@@ -18860,23 +18993,23 @@
    "shelf": "Trade notes",
    "language": "Common",
    "blurb": "Trade notes on goods that pass through Whisperwood, with prices as rules of thumb and not promises.",
-   "readingMinutes": 5,
-   "words": 950,
+   "readingMinutes": 3,
+   "words": 604,
    "tags": [
     "reg_whisperwood",
     "trade"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "average",
-   "inWorldDate": "978 SC",
-   "source": "books/aethwyrd/318-goods-through-brindlewick.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1003 SC",
+   "source": "Tools/library/handwritten/bk_318.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_brindlewick_guild_shelf/bk_318.md",
-   "excerpt": "In Whisperwood, ask who carried it, not only who owns the stall. A thing can arrive by marriage, refuge, a contract, or a raid, and those are not the same story. The official line is shorter. The household line feeds more people.",
+   "excerpt": "Notebook of a flour factor, kept for whoever takes the counting-room after me. Read it with the sack-scales in reach, because half of it is arithmetic.",
    "provenance": {
     "tradition": "The Wood Where Every Map Begins tradition of Whisperwood",
     "writtenIn": "reg_whisperwood",
-    "era": "about 978 SC, 46 years before the present (1024 SC)",
+    "era": "about 1003 SC, 21 years before the present (1024 SC)",
     "copy": "A child’s pencil drawing in the back, left in on purpose.",
     "shelfPlace": "in the newcomers’ box under the notice wall, Brindlewick Guild Branch Shelf"
    },
@@ -18892,9 +19025,44 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "place",
-     "id": "Millbrook",
-     "note": "A settlement or place the text names."
+     "kind": "species",
+     "id": "mon_griffon",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "species",
+     "id": "mon_goblin",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_slime_jelly",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_hearth_loaf",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_goblin_ear",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_prime_meat",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "recipe",
+     "id": "rcp_hearth_loaf",
+     "note": "A craft the text mentions."
+    },
+    {
+     "kind": "region",
+     "id": "reg_aldmere",
+     "note": "Another region the text mentions (Aldmere)."
     },
     {
      "kind": "quest",
@@ -18908,18 +19076,18 @@
     },
     {
      "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
      "id": "Sylvara",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Goods that pass through Whisperwood, as rules of thumb and not promises.",
-    "Who buys what, and which quarrels over price are for show."
+    "Who buys what, and which quarrels over price are for show.",
+    "Species it names: Griffon, Goblin."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday).",
+    "Mentions Guild ranks (Canon section 2, F to SSS)."
    ]
   },
   {
@@ -19496,7 +19664,7 @@
   {
    "id": "bk_330",
    "title": "Goods Through Brindlewick",
-   "author": "Safiya Ellison of Whisperwood",
+   "author": "Ysolde Furrow, scrap and ore buyer on Forge Lane",
    "kind": "trade_notes",
    "library": "lib_brindlewick_guild_shelf",
    "region": "reg_whisperwood",
@@ -19504,23 +19672,23 @@
    "shelf": "Trade notes",
    "language": "Common",
    "blurb": "Trade notes on goods that pass through Whisperwood, with prices as rules of thumb and not promises.",
-   "readingMinutes": 5,
-   "words": 956,
+   "readingMinutes": 2,
+   "words": 492,
    "tags": [
     "reg_whisperwood",
     "trade"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "average",
-   "inWorldDate": "990 SC",
-   "source": "books/aethwyrd/330-goods-through-brindlewick.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1011 SC",
+   "source": "Tools/library/handwritten/bk_330.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_brindlewick_guild_shelf/bk_330.md",
-   "excerpt": "At Millbrook the goods sit against half-timber and hornbeam shade. People are buying mill bread, tea, and a rabbit stew and talking about goblin tracks on the mill path. Faith is present as habit: Sylvara's groves and a small Solenne window. None of that is a price list. It is why the price list is tense.",
+   "excerpt": "(Pinned inside my shutter, copied here so the next buyer has it. If you are standing at my counter reading this over my shoulder, please wipe your boots.)",
    "provenance": {
     "tradition": "The Wood Where Every Map Begins tradition of Whisperwood",
     "writtenIn": "reg_whisperwood",
-    "era": "about 990 SC, 34 years before the present (1024 SC)",
+    "era": "about 1011 SC, 13 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "on the branch shelf behind the board, Brindlewick Guild Branch Shelf"
    },
@@ -19536,9 +19704,29 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "place",
-     "id": "Millbrook",
-     "note": "A settlement or place the text names."
+     "kind": "species",
+     "id": "mon_goblin",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_stolen_trinket",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_crude_blade",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_kobold_fang",
+     "note": "A material or item the text mentions."
+    },
+    {
+     "kind": "item",
+     "id": "itm_mat_scrap_metal",
+     "note": "A material or item the text mentions."
     },
     {
      "kind": "quest",
@@ -19552,18 +19740,17 @@
     },
     {
      "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
+     "id": "Thorgrim",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Goods that pass through Whisperwood, as rules of thumb and not promises.",
-    "Who buys what, and which quarrels over price are for show."
+    "Who buys what, and which quarrels over price are for show.",
+    "Species it names: Goblin."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -21611,8 +21798,8 @@
   },
   {
    "id": "bk_367",
-   "title": "The Street Law of Great Labyrinth (Floors 1-40)",
-   "author": "Kwame Costa of Great Labyrinth (Floors 1-40)",
+   "title": "The Street Law of the Proving Halls",
+   "author": "Cassian Wherry, arbiter's clerk, who writes down what the gate-town says",
    "kind": "law_notes",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -21620,23 +21807,23 @@
    "shelf": "Law notes",
    "language": "Common",
    "blurb": "A street-law note for Great Labyrinth (Floors 1-40): what a neighbour, a guard and a clerk each expect of you.",
-   "readingMinutes": 8,
-   "words": 1625,
+   "readingMinutes": 2,
+   "words": 490,
    "tags": [
     "law",
     "reg_labyrinth_upper"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "907 SC",
-   "source": "books/aethwyrd/367-the-street-law-of-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1012 SC",
+   "source": "Tools/library/handwritten/bk_367.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_367.md",
-   "excerpt": "At Great Labyrinth (Floors 1-40) the work of the day sits inside cut stairs and chalk marks. People eat whatever the pack still holds and they talk about floors that reset their halls and keep their lessons the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "There is a written law and there is a street law. The written law is in the arbiter's book at Aldmere and I have read it twice. The street law is what the gate-town says when two parties disagree at the bottom of the stair at the end of a long day. I write down the second kind, because the first never has the answer.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 907 SC, 117 years before the present (1024 SC)",
+    "era": "about 1012 SC, 12 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "on the branch shelf behind the board, Aldmere Guild Hall Reading Room"
    },
@@ -21663,12 +21850,7 @@
     },
     {
      "kind": "god",
-     "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
+     "id": "Vex",
      "note": "A god of the week the text names."
     }
    ],
@@ -21677,6 +21859,7 @@
     "The difference between the written rule and the street rule."
    ],
    "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday).",
     "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
@@ -27286,8 +27469,8 @@
   },
   {
    "id": "bk_465",
-   "title": "Potsherds from the Great Labyrinth (Floors 1-40) Copy",
-   "author": "Osric Berg of Great Labyrinth (Floors 1-40)",
+   "title": "Potsherds from the Proving Halls",
+   "author": "Ysmay Dunlow, a copyist, writing at the Mages' Academy",
    "kind": "valdrisian_fragment",
    "library": "lib_mages_academy",
    "region": "reg_aldmere",
@@ -27295,18 +27478,18 @@
    "shelf": "Valdrisian fragment",
    "language": "Common (copied from Old Weave-tongue)",
    "blurb": "Potsherd readings of the old empire as copied in Great Labyrinth (Floors 1-40), with the copyists' doubts left in.",
-   "readingMinutes": 8,
-   "words": 1607,
+   "readingMinutes": 2,
+   "words": 422,
    "tags": [
     "history",
     "reg_labyrinth_upper",
     "valdrisia"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
+   "status": "clear",
+   "quality": "strong",
    "inWorldDate": "1005 SC",
-   "source": "books/aethwyrd/465-potsherds-from-the-great-labyrinth-floors-1-40-copy.md",
+   "source": "Tools/library/handwritten/bk_465.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_mages_academy/bk_465.md",
    "rewards": [
     {
@@ -27314,7 +27497,7 @@
      "id": "civ_valdrisia"
     }
    ],
-   "excerpt": "At Great Labyrinth (Floors 1-40) the work of the day sits inside cut stairs and chalk marks. People eat whatever the pack still holds and they talk about floors that reset their halls and keep their lessons the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I am a copyist. I copy what other people have already found, and I add a note when I am not sure. That is all the Academy asks of me, and it is a good deal more than most scholars give.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
@@ -27329,11 +27512,6 @@
      "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
     },
     {
-     "kind": "region",
-     "id": "reg_sunscar",
-     "note": "Another region the text mentions (Sunscar)."
-    },
-    {
      "kind": "civilization",
      "id": "civ_valdrisia",
      "note": "An old civilization the text mentions (public account only)."
@@ -27341,11 +27519,6 @@
     {
      "kind": "god",
      "id": "Maelis",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
      "note": "A god of the week the text names."
     }
    ],
@@ -28426,8 +28599,8 @@
   },
   {
    "id": "bk_480",
-   "title": "The Year in Great Labyrinth (Floors 1-40)",
-   "author": "Hana Haddad of Great Labyrinth (Floors 1-40)",
+   "title": "The Year at the Gate: One Household's Calendar",
+   "author": "Greta Holloway, who keeps a boarding-house at the foot of the Labyrinth stair",
    "kind": "festival_notes",
    "library": "lib_aldmere_royal_archive",
    "region": "reg_aldmere",
@@ -28435,23 +28608,23 @@
    "shelf": "Festival notes",
    "language": "Common",
    "blurb": "The year's festivals in Great Labyrinth (Floors 1-40), by household, shrine and branch hall.",
-   "readingMinutes": 8,
-   "words": 1594,
+   "readingMinutes": 2,
+   "words": 432,
    "tags": [
     "festival",
     "reg_labyrinth_upper"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "900 SC",
-   "source": "books/aethwyrd/480-the-year-in-great-labyrinth-floors-1-40.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1015 SC",
+   "source": "Tools/library/handwritten/bk_480.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_royal_archive/bk_480.md",
-   "excerpt": "At Great Labyrinth (Floors 1-40) the work of the day sits inside cut stairs and chalk marks. People eat whatever the pack still holds and they talk about floors that reset their halls and keep their lessons the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I keep a boarding-house. The year, for me, is measured in beds. I know the time of year by who is asking for a room.",
    "provenance": {
     "tradition": "The Proving Halls tradition of Great Labyrinth (Floors 1-40)",
     "writtenIn": "reg_labyrinth_upper",
-    "era": "about 900 SC, 124 years before the present (1024 SC)",
+    "era": "about 1015 SC, 9 years before the present (1024 SC)",
     "copy": "Cover re-covered in oilcloth by the last keeper.",
     "shelfPlace": "in a labelled box on the second rack, Aldmere Royal and Noble Archives"
    },
@@ -28462,18 +28635,18 @@
      "note": "The region this book is about (Great Labyrinth (Floors 1-40))."
     },
     {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
      "kind": "god",
      "id": "Solenne",
      "note": "A god of the week the text names."
     },
     {
      "kind": "god",
-     "id": "Ilvaris",
+     "id": "Morrowyn",
+     "note": "A god of the week the text names."
+    },
+    {
+     "kind": "god",
+     "id": "Vex",
      "note": "A god of the week the text names."
     }
    ],
@@ -28482,7 +28655,6 @@
     "What each festival asks of a guest."
    ],
    "canonNotes": [
-    "Uses the seven-day week of Canon section 2 (Solenday to Vexday).",
     "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
@@ -29675,7 +29847,7 @@
   {
    "id": "bk_501",
    "title": "Neighbors Near Brindlewick",
-   "author": "Nia Farid of Whisperwood",
+   "author": "Tamsin Orrel, who trained rookies at Hollis's Yard for nineteen years",
    "kind": "field_guide",
    "library": "lib_brindlewick_guild_shelf",
    "region": "reg_whisperwood",
@@ -29683,38 +29855,38 @@
    "shelf": "Field guide",
    "language": "Common",
    "blurb": "A walker's guide to the creatures near Whisperwood: what folk file them under, how to approach them, what to leave alone.",
-   "readingMinutes": 5,
-   "words": 988,
+   "readingMinutes": 3,
+   "words": 573,
    "tags": [
     "bestiary",
     "reg_whisperwood",
     "taming"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "average",
-   "inWorldDate": "1000 SC",
-   "source": "Tools/library/gap_books.py (generated gap book)",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1017 SC",
+   "source": "Tools/library/handwritten/bk_501.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_brindlewick_guild_shelf/bk_501.md",
    "rewards": [
     {
      "kind": "bestiary",
-     "id": "mon_gremlin"
+     "id": "mon_blue_slime"
     },
     {
      "kind": "bestiary",
-     "id": "mon_walking_mushroom"
+     "id": "mon_green_slime"
     },
     {
      "kind": "bestiary",
-     "id": "mon_skinwalker_mimic"
+     "id": "mon_goblin"
     }
    ],
-   "excerpt": "This guide is for walking country: half-timber and hornbeam shade. You will smell mill bread, tea, and a rabbit stew in the settlements and you will be told about goblin tracks on the mill path. The entries below are neighbors, not trophies.",
+   "excerpt": "I stopped training rookies the winter my knees stopped believing in stairs. This is the lecture I gave on the first morning, written down so that someone else can read it aloud badly and still be useful.",
    "provenance": {
     "tradition": "The Wood Where Every Map Begins tradition of Whisperwood",
     "writtenIn": "reg_whisperwood",
-    "era": "about 1000 SC, 24 years before the present (1024 SC)",
+    "era": "about 1017 SC, 7 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "on the clerk’s counter, tied with cord, Brindlewick Guild Branch Shelf"
    },
@@ -29730,39 +29902,34 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "place",
-     "id": "Millbrook",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "species",
-     "id": "mon_walking_mushroom",
-     "note": "Named in this book; reading it marks the species Seen."
-    },
-    {
-     "kind": "species",
-     "id": "mon_skinwalker_mimic",
-     "note": "Named in this book; reading it marks the species Seen."
-    },
-    {
-     "kind": "species",
-     "id": "mon_moss_tortoise",
+     "id": "mon_kobold_scavenger",
      "note": "Named in this book."
     },
     {
      "kind": "species",
-     "id": "mon_gremlin",
+     "id": "mon_goblin_archer",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "species",
+     "id": "mon_horned_rabbit",
+     "note": "Named in this book."
+    },
+    {
+     "kind": "species",
+     "id": "mon_green_slime",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "species",
-     "id": "mon_bandit",
+     "id": "mon_forest_wolf",
      "note": "Named in this book."
     },
     {
      "kind": "species",
-     "id": "mon_mimic",
-     "note": "Named in this book."
+     "id": "mon_blue_slime",
+     "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "quest",
@@ -29781,18 +29948,17 @@
     },
     {
      "kind": "god",
-     "id": "Sylvara",
+     "id": "Kaelthas",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "How folk around Brindlewick file each creature by Guild rank, and what they say it fears.",
     "Which approaches locals think are mistakes, with the rumour clearly marked as rumour.",
-    "Species it names: Walking Mushroom, Skinwalker Mimic, Moss Tortoise, Gremlin, Bandit, Mimic."
+    "Species it names: Kobold Scavenger, Goblin Archer, Horned Rabbit, Green Slime, Forest Wolf, Blue Slime."
    ],
    "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS).",
-    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
+    "Mentions Guild ranks (Canon section 2, F to SSS)."
    ]
   },
   {

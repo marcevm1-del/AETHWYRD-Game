@@ -133,6 +133,11 @@ def run(books, texts, ctx):
             if len(sents) >= 2:
                 pick = sorted(sents, key=lambda y: (sent_count[y], 0 if place in y or rname in y else 1))[:3]
                 ex = trim(' '.join(y for y in sents if y in pick))
+        if 'handwritten' in b['source']:
+            # a hand-written book is excerpted from its opening: the first body paragraph of real length
+            first = [p for p in cs if len(p) >= 100]
+            if first:
+                ex = trim(first[0])
         b['excerpt'] = ex
         m = re.match(r'(\d{3,4})', b.get('inWorldDate') or '')
         year = int(m.group(1)) if m else None

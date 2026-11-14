@@ -121,6 +121,11 @@ def rank_below(r):
     i = RANKS.index(r)
     return RANKS[max(0, i - 1)]
 
+HANDWRITTEN = {}
+for _f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), 'handwritten', 'bk_*.md'))):
+    _t = open(_f, encoding='utf-8', newline=None).read()
+    _title = re.search(r'(?m)^# (.+)$', _t); _auth = re.search(r'(?m)^\*([^*\n]+)\*\s*$', _t)
+    HANDWRITTEN[os.path.basename(_f)[:-3]] = {'title': _title.group(1).strip(), 'author': _auth.group(1).strip(), 'text': _t}
 report, books = {}, []
 final_texts = {}
 sentence_counts = collections.Counter()
@@ -141,7 +146,16 @@ for i, c in enumerate(cat, 1):
     text, fixes = repair(text, c)
     dropped = []
     kept_species = []
-    if kind == 'field_guide':
+    hw = HANDWRITTEN.get(bid)
+    if hw:
+        # a hand-written book replaces the generated text entirely (Tools/library/handwritten/<book-id>.md)
+        c = dict(c); c['title'] = hw['title']; c['author'] = hw['author']
+        text = hw['text']; pre_hold, pre_rev = [], []; fixes = []
+        kept_species = [m for m in re.findall(r'(?m)^## (.+)$', text) if m in sp_by_name]
+        dropped = [n for n in kept_species if not (reg and reg['id'] in (sp_by_name[n].get('habitats') or []))]
+    if hw:
+        pass
+    elif kind == 'field_guide':
         text, dropped, nkept = field_guide_prune(text, reg)
         if dropped:
             fixes.append('off-habitat chapters removed: ' + ', '.join(dropped))
@@ -150,13 +164,15 @@ for i, c in enumerate(cat, 1):
     status, why = 'clear', ''
     if hold_hits:
         status, why = 'hold', 'unresolved Canon section 3 / policy hit: ' + ', '.join(sorted({h['rule'] for h in hold_hits}))
+    elif hw and dropped:
+        status, why = 'hold', 'hand-written field guide names species that do not live in its region: ' + ', '.join(dropped)
     elif kind == 'field_guide' and len(kept_species) < 2:
         status, why = 'hold', f'field guide left with {len(kept_species)} habitat-correct species after repair; needs a rewrite'
     elif fixes:
         status = 'fix'
     ss = [x.strip() for x in re.split(r'(?<=[.!?])\s+|\n+', text.split('\n', 8)[-1]) if len(x.strip()) > 30]
     tshare = sum(1 for s in ss if sentence_counts[s] >= 3) / max(1, len(ss))
-    quality = 'strong' if tshare < 0.7 else 'average' if tshare < 0.9 else 'templated'
+    quality = 'strong' if (hw or tshare < 0.7) else 'average' if tshare < 0.9 else 'templated'
     words = len(re.findall(r'\w+', text))
     report[bid] = {'file': c['file'], 'title': c['title'], 'kind': kind, 'subjectRegion': c['region'], 'scanStatus': status,
                    'holdReason': why, 'repairs': fixes, 'reviewNotes': [f"{h['rule']}: {h['ctx']}" for h in rev_hits][:6],
@@ -180,7 +196,7 @@ for i, c in enumerate(cat, 1):
              'subjectRegion': reg['id'] if reg else None, 'shelf': c['genre'], 'language': 'Common' if kind != 'valdrisian_fragment' else 'Common (copied from Old Weave-tongue)',
              'blurb': blurb, 'readingMinutes': max(1, round(words / 200)), 'words': words, 'tags': sorted(set(tags + [reg['id']] if reg else tags)),
              'reliability': reliab, 'status': 'hold' if status == 'hold' else ('clear' if status == 'clear' else 'draft'),
-             'quality': quality, 'inWorldDate': m.group(1).strip() if m else '', 'source': ('Tools/library/gap_books.py (generated gap book)' if c.get('generated') else 'books/' + c['file']),
+             'quality': quality, 'inWorldDate': m.group(1).strip() if m else '', 'source': ('Tools/library/handwritten/' + bid + '.md (hand-written rewrite)' if hw else 'Tools/library/gap_books.py (generated gap book)' if c.get('generated') else 'books/' + c['file']),
              'text': f'02_Lore/library/{lib}/{bid}.md' if lib else None}
     if rank_gate:
         entry['rankGate'] = rank_gate
@@ -207,6 +223,8 @@ cnt = collections.Counter(v['scanStatus'] for v in report.values())
 print('status', dict(cnt))
 print('by library', collections.Counter(b['library'] for b in books))
 print('quality', collections.Counter(b['quality'] for b in books))
+_sh = [b for b in books if b['library']]
+print('shelved', len(_sh), '| hand-written', sum(1 for b in _sh if 'handwritten' in b['source']), '| still templated', sum(1 for b in _sh if b['quality'] == 'templated'), '| distinct excerpts', len({b['excerpt'] for b in _sh}))
 if not DRY:
     os.makedirs(os.path.join(REPO, 'Data', 'Library'), exist_ok=True)
     json.dump({'version': 1, 'note': LIB_NOTE, 'books': books}, open(os.path.join(REPO, 'Data/Library/books.json'), 'w', encoding='utf-8', newline='\n'), indent=1, ensure_ascii=False)

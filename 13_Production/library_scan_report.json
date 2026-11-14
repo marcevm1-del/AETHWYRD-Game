@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-14",
  "counts": {
-  "fix": 360,
-  "hold": 41,
-  "clear": 119
+  "clear": 131,
+  "hold": 40,
+  "fix": 349
  },
  "books": {
   "bk_001": {
@@ -11,16 +11,13 @@
    "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
    "kind": "field_guide",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1",
-    "off-habitat chapters removed: Blue Slime, Green Slime"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.88,
-   "quality": "average"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_002": {
    "file": "aethwyrd/002-neighbors-near-thimblefolk-mushroom-town.md",
@@ -200,19 +197,16 @@
   },
   "bk_013": {
    "file": "aethwyrd/013-neighbors-near-great-labyrinth-floors-1-40.md",
-   "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
+   "title": "Counting Kobolds",
    "kind": "field_guide",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1",
-    "off-habitat chapters removed: Zombie, Skeleton"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.9,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_014": {
    "file": "aethwyrd/014-neighbors-near-thimblefolk-mushroom-town.md",
@@ -392,19 +386,16 @@
   },
   "bk_025": {
    "file": "aethwyrd/025-neighbors-near-great-labyrinth-floors-1-40.md",
-   "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
+   "title": "Pocket-Book of a Floor-Walker",
    "kind": "field_guide",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1",
-    "off-habitat chapters removed: Smiling Scarecrow, Clockwork Sentinel, Iron Golem"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.87,
-   "quality": "average"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_026": {
    "file": "aethwyrd/026-neighbors-near-thimblefolk-mushroom-town.md",
@@ -584,19 +575,16 @@
   },
   "bk_037": {
    "file": "aethwyrd/037-neighbors-near-great-labyrinth-floors-1-40.md",
-   "title": "Neighbors Near Great Labyrinth (Floors 1-40)",
+   "title": "What the Porter Carries",
    "kind": "field_guide",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "hold",
-   "holdReason": "field guide left with 0 habitat-correct species after repair; needs a rewrite",
-   "repairs": [
-    "template_the_a x1",
-    "off-habitat chapters removed: Cerberus, Sphinx, Qilin, Nameless Abomination, Lamia, Naga Warrior"
-   ],
+   "scanStatus": "clear",
+   "holdReason": "",
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.91,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_038": {
    "file": "aethwyrd/038-neighbors-near-thimblefolk-mushroom-town.md",
@@ -3149,7 +3137,7 @@
   },
   "bk_207": {
    "file": "aethwyrd/207-bench-notes-from-great-labyrinth-floors-1-40.md",
-   "title": "Bench Notes from Great Labyrinth (Floors 1-40)",
+   "title": "The Mender at the Foot of the Stair",
    "kind": "craft_notes",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
    "scanStatus": "clear",
@@ -3157,8 +3145,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_208": {
    "file": "aethwyrd/208-bench-notes-from-thimblefolk-mushroom-town.md",
@@ -3305,7 +3293,7 @@
   },
   "bk_219": {
    "file": "aethwyrd/219-bench-notes-from-great-labyrinth-floors-1-40.md",
-   "title": "Bench Notes from Great Labyrinth (Floors 1-40)",
+   "title": "Reading the Old Tally Chalk",
    "kind": "craft_notes",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
    "scanStatus": "clear",
@@ -3313,8 +3301,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_220": {
    "file": "aethwyrd/220-bench-notes-from-thimblefolk-mushroom-town.md",
@@ -4100,24 +4088,16 @@
   },
   "bk_270": {
    "file": "aethwyrd/270-branch-notes-for-great-labyrinth-floors-1-40.md",
-   "title": "Branch Notes for Great Labyrinth (Floors 1-40)",
+   "title": "The Gate Desk: How We Work",
    "kind": "guild_manual",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "kaede_founded x1",
-    "kaede_nickname x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "ranks_origin: Kaede",
-    "ranks_origin: Kaede",
-    "ranks_origin: Aoyama"
-   ],
-   "templatedShare": 0.92,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_271": {
    "file": "aethwyrd/271-branch-notes-for-thimblefolk-mushroom-town.md",
@@ -4352,24 +4332,16 @@
   },
   "bk_282": {
    "file": "aethwyrd/282-branch-notes-for-great-labyrinth-floors-1-40.md",
-   "title": "Branch Notes for Great Labyrinth (Floors 1-40)",
+   "title": "Lost, Stacked and Found",
    "kind": "guild_manual",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "kaede_founded x1",
-    "kaede_nickname x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "ranks_origin: Kaede",
-    "ranks_origin: Kaede",
-    "ranks_origin: Aoyama"
-   ],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_283": {
    "file": "aethwyrd/283-branch-notes-for-thimblefolk-mushroom-town.md",
@@ -4919,15 +4891,13 @@
    "title": "Goods Through Brindlewick",
    "kind": "trade_notes",
    "subjectRegion": "Whisperwood",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_cores_moves x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.82,
-   "quality": "average"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_319": {
    "file": "aethwyrd/319-goods-through-great-labyrinth-floors-91-120.md",
@@ -5099,15 +5069,13 @@
    "title": "Goods Through Brindlewick",
    "kind": "trade_notes",
    "subjectRegion": "Whisperwood",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_cores_moves x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.82,
-   "quality": "average"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_331": {
    "file": "aethwyrd/331-goods-through-great-labyrinth-floors-91-120.md",
@@ -5601,18 +5569,16 @@
   },
   "bk_367": {
    "file": "aethwyrd/367-the-street-law-of-great-labyrinth-floors-1-40.md",
-   "title": "The Street Law of Great Labyrinth (Floors 1-40)",
+   "title": "The Street Law of the Proving Halls",
    "kind": "law_notes",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_368": {
    "file": "aethwyrd/368-the-street-law-of-mossdeep.md",
@@ -6983,18 +6949,16 @@
   },
   "bk_465": {
    "file": "aethwyrd/465-potsherds-from-the-great-labyrinth-floors-1-40-copy.md",
-   "title": "Potsherds from the Great Labyrinth (Floors 1-40) Copy",
+   "title": "Potsherds from the Proving Halls",
    "kind": "valdrisian_fragment",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.92,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_466": {
    "file": "aethwyrd/466-potsherds-from-the-mossdeep-copy.md",
@@ -7229,25 +7193,16 @@
   },
   "bk_480": {
    "file": "aethwyrd/480-the-year-in-great-labyrinth-floors-1-40.md",
-   "title": "The Year in Great Labyrinth (Floors 1-40)",
+   "title": "The Year at the Gate: One Household's Calendar",
    "kind": "festival_notes",
    "subjectRegion": "Great Labyrinth (Floors 1-40)",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "lantern_night_heading x1",
-    "lantern_night_is x1"
-   ],
-   "reviewNotes": [
-    "vesper_moon:  the names you have a right to speak. A red moon in the sky is a thing sailors mention w"
-   ],
-   "originalHits": [
-    "tomas_seal: Lantern Night",
-    "tomas_seal: Lantern Night"
-   ],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "repairs": [],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_481": {
    "file": "aethwyrd/481-the-year-in-thimblefolk-mushroom-town.md",
@@ -7614,15 +7569,13 @@
    "title": "Neighbors Near Brindlewick",
    "kind": "field_guide",
    "subjectRegion": "Whisperwood",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.83,
-   "quality": "average"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_502": {
    "file": "gap/reg_aldmere-field-guide.md",
