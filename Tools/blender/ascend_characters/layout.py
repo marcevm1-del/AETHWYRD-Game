@@ -92,8 +92,8 @@ class Layout:
         f = self.female
         a = [hi * 0.88, hi * 0.985, hi, lerp(hi, wa, 0.55), wa, wa * 1.035, lerp(wa, ch, 0.70), ch, ch * 1.03, sh * 0.995,
              sh * 0.985, lerp(nk, sh, 0.50), nk * 1.35, nk * 1.10, nk]
-        bf = [D * v for v in (0.82, 0.88, 0.90, 0.86, 0.82, 0.86, 0.94, 1.0, 1.0, 0.97, 0.92, 0.78, 0.68)]
-        bb = [D * v for v in (1.02, 1.10, 1.14, 1.02, 0.92, 0.92, 0.94, 0.96, 0.96, 0.94, 0.92, 0.80, 0.70)]
+        bf = [D * v for v in (0.82, 0.88, 0.90, 0.86, 0.80, 0.85, 0.96, 1.05, 1.04, 0.99, 0.92, 0.78, 0.68)]
+        bb = [D * v for v in (1.02, 1.12, 1.16, 1.02, 0.88, 0.90, 0.96, 1.00, 1.00, 0.97, 0.93, 0.80, 0.70)]
         if f:   # modest: a softer chest and pelvis, never an exaggeration
             bf[7] *= 1.07
             bf[8] *= 1.05
@@ -104,7 +104,7 @@ class Layout:
         # head: fractions of the half-width / depth at each ring (chin to crown)
         hs = hd / 0.0495
         jw = self.jaw
-        ha = [hd * v for v in (0.60 * jw, 0.80 * jw, 0.92 * jw, 0.985, 1.0, 1.0, 0.975, 0.80, 0.52)]
+        ha = [hd * v for v in (0.66 * jw, 0.855 * jw, 0.95 * jw, 0.99, 1.0, 1.0, 0.97, 0.79, 0.51)]
         hbf = [0.046, 0.049, 0.050, 0.0505, 0.0505, 0.0515, 0.049, 0.040, 0.026]
         hbb = [0.032, 0.040, 0.048, 0.054, 0.058, 0.060, 0.059, 0.050, 0.034]
         # ring 15 is the chin underside (narrow, jutting forward), the rest follow Z[15:]
@@ -137,7 +137,7 @@ class Layout:
         """Chin, mouth, nose and brow relief on the front of the head rings (k = 0, +-1, +-2)."""
         H = self.H
         k = lambda n: (n % NR)
-        bump = {15: (0.002, 0.0), 16: (0.005, 0.0), 17: (0.003, 0.0006), 18: (0.0125, 0.0045), 19: (0.0042, 0.001),
+        bump = {15: (0.0035, 0.0), 16: (0.0065, 0.0008), 17: (0.0052, 0.0014), 18: (0.0180, 0.0052), 19: (0.0048, 0.0012),
                 20: (0.0, 0.0)}.get(i)
         if bump:
             pts = pts.copy()
@@ -177,8 +177,8 @@ class Layout:
         width = hl * 0.60
         thick = hl * 0.20
         wrist = arm["wrist"]
-        lens = {"Index": 0.43, "Middle": 0.46, "Ring": 0.43, "Little": 0.34}
-        splay = {"Index": -4.0, "Middle": 0.0, "Ring": 3.0, "Little": 9.0}   # degrees, + towards the back
+        lens = {"Index": 0.48, "Middle": 0.52, "Ring": 0.48, "Little": 0.38}
+        splay = {"Index": -9.0, "Middle": -1.0, "Ring": 6.0, "Little": 15.0}   # degrees, + towards the back
         fingers = {}
         for n, name in enumerate(("Index", "Middle", "Ring", "Little")):
             fingers[name] = dict(y=arm["y"] + (-1.5 + n) * width / 4, x=wrist + palm, length=lens[name] * hl, splay=splay[name])

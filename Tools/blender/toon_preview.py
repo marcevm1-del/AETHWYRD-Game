@@ -43,6 +43,8 @@ from ascend_buildings import preview
 
 PREFIX = "TP_"
 SHADOW_TINT = (0.58, 0.56, 0.78)
+# Per-kind shadow tone. A kind that is not listed keeps SHADOW_TINT, so creatures and buildings are unchanged.
+SHADOW_BY_KIND = {}
 OUTLINE_MUL = 0.35
 OUTLINE_ALPHA_MUL = 0.6  # hull opacity relative to a see-through body (Phantom variants)
 RIM_COLOUR = (1.0, 0.97, 0.9)
@@ -51,6 +53,9 @@ OUTLINE_PX = {"creature": 1.5, "building": 2.0}   # art_direction.md section 3
 STEP = 0.1          # lit where N.L (times cast shadow) exceeds this
 SUN_ENERGY = math.pi  # a white diffuse facing this sun reads 1.0 through Shader-to-RGB, so the ramp works in N.L
 SUN_ROT = (math.radians(48), 0.0, math.radians(32))
+# Per-kind key light. A kind that is not listed keeps SUN_ROT, so creatures and buildings are unchanged.
+# A face wants a high, nearly frontal key: the creature angle throws the hair's shadow straight across it.
+SUN_BY_KIND = {}
 MARGIN = 1.2        # camera margin (style guide 3.1): the subject fills 1/1.2 = 83% of the tile's shorter side
 LENS = 50.0
 PITCH = {"creature": 16.0, "building": 18.0}   # style guide 3.1: pitch 16-28 degrees
@@ -230,7 +235,7 @@ def toon_material(mat, kind="creature"):
     ramp = N.new("ShaderNodeValToRGB")
     ramp.color_ramp.interpolation = "CONSTANT"
     e0, e1 = ramp.color_ramp.elements
-    e0.position, e0.color = 0.0, (*SHADOW_TINT, 1)
+    e0.position, e0.color = 0.0, (*SHADOW_BY_KIND.get(kind, SHADOW_TINT), 1)
     e1.position, e1.color = STEP, (1, 1, 1, 1)
     L.new(diff.outputs[0], s2r.inputs[0])
     L.new(s2r.outputs["Color"], bw.inputs[0])
@@ -583,6 +588,9 @@ def apply(objs, kind="creature", tile=320, frame=None, yaw=-35.0, pitch=None, ma
     """Bakes objs to toon copies with inverted-hull outlines. frame: the objects the camera will frame (defaults to
     the baked copies), used to size the outline in pixels. Returns the new objects (copies + hulls); the originals
     are hidden (pass the returned list to restore() to undo)."""
+    sun = bpy.data.objects.get(PREFIX + "Sun")
+    if sun is not None and kind in SUN_BY_KIND:
+        sun.rotation_euler = SUN_BY_KIND[kind]
     dg = bpy.context.evaluated_depsgraph_get()
     toon_cache, ol_cache, copies = {}, {}, []
     for o in objs:

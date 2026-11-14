@@ -65,10 +65,13 @@ def pose_rest(arm_obj):
 
 # Relaxed stance used for turnarounds: arms down and a little forward, one knee soft, head turned slightly.
 TEST_POSE = [
-    ("LeftUpperArm", "Y", 62), ("RightUpperArm", "Y", -62),
-    ("LeftLowerArm", "Z", -18), ("RightLowerArm", "Z", 18),
-    ("LeftUpperLeg", "X", -12), ("LeftLowerLeg", "X", 16), ("RightUpperLeg", "X", 4),
-    ("Spine", "Z", -3), ("Head", "Z", 8),
+    ("LeftUpperArm", "Y", 70), ("RightUpperArm", "Y", -70),
+    ("LeftUpperArm", "X", -6), ("RightUpperArm", "X", -4),       # a touch forward: arms in front of the side seam
+    ("LeftLowerArm", "Z", -26), ("RightLowerArm", "Z", 22),
+    ("LeftHand", "Z", -8), ("RightHand", "Z", 6),                # wrists follow the forearm instead of standing out
+    ("LeftUpperLeg", "X", -9), ("LeftLowerLeg", "X", 13), ("RightUpperLeg", "X", 3),
+    ("Hips", "Y", 2), ("Spine", "Z", -3), ("Chest", "Y", -2),    # weight on the right leg, shoulders counter to the hips
+    ("Head", "Z", 8), ("Neck", "X", -2),
 ]
 
 

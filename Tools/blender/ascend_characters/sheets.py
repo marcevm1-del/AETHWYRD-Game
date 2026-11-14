@@ -1,5 +1,6 @@
 """Turnaround sheets for characters in the toon preview standard (art_direction.md 3.1): front, side, back, three-quarter,
 plus a T-pose tile and a close-up of the face. Built on copies, so the character objects stay untouched."""
+import math
 import os
 
 import bpy
@@ -11,6 +12,10 @@ from . import rig as R
 tp.RIM.setdefault("character", 0.35)
 tp.OUTLINE_PX.setdefault("character", 1.5)
 tp.PITCH.setdefault("character", 6.0)
+# Skin in the creature shadow tone reads bruised: characters get a lighter, warmer shade.
+tp.SHADOW_BY_KIND.setdefault("character", (0.76, 0.72, 0.80))
+# High and almost frontal, a little to the character's right: the fringe then shades the brow, not the whole face.
+tp.SUN_BY_KIND.setdefault("character", (math.radians(58), 0.0, math.radians(14)))
 
 
 def joined_copy(ch, name, skip=()):

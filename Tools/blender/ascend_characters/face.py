@@ -199,6 +199,10 @@ class Face:
         z = cz + 0.0026 * self.H * (t ** 2)      # a soft smile: the corners lift
         w = 0.0022 * self.H * (1.0 - 0.5 * np.abs(t) ** 2)
         P.ribbon(np.stack([x, z], axis=1), w, self.lip, 0.0018, "mouth")
+        # lower lip: a softer, lighter band under the mouth line so the mouth has a body and catches the light
+        lo_w = np.full(n, 0.0030 * self.H) * (1.0 - 0.55 * np.abs(t) ** 1.6)
+        lo_c = tuple(min(1.0, c * 1.12 + 0.03) for c in self.lip)
+        P.ribbon(np.stack([x * 0.92, z - 0.0034 * self.H + 0.0012 * self.H * (t ** 2)], axis=1), lo_w, lo_c, 0.0015, "lip_lower")
         # a small nose tick under the nose tip
         nz = LY.Z[18] * self.H - 0.0075 * self.H
         nt = np.linspace(-1, 1, 5)
@@ -216,11 +220,11 @@ def bake(P, surf, skin_cols=None):
 def ear_mesh(L, side, skin_hex, rng):
     """A small scooped ear on the head's side (side +1 left, -1 right). Returns V, F, colours, weights."""
     H = L.H
-    cx = side * (L.head * H * 0.97)
+    cx = side * (L.head * H * 1.005)
     cz = LY.Z[LY.EYE_RING] * H - 0.004 * H
     cy = 0.004 * H
     length = L.ears_scale
-    ry, rz, rx = 0.0120 * H, 0.0210 * H * length, 0.0050 * H
+    ry, rz, rx = 0.0140 * H, 0.0265 * H * length, 0.0062 * H
     segs, rings = 12, 7
     V, F, C = [], [], []
     skin = np.array(hex_lin(skin_hex))
