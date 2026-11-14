@@ -82,3 +82,7 @@ project.local.yaml
 
 # AI generation staging (images and meshes with sidecars): see 13_Production/third_party_assets.md
 Art/Generation/staging/
+
+# Baked terrain stream tiles (Tools/world/bake_stream_tiles.py): about 110 MB, generated locally from Art/Blender/WorldTerrain.
+Game/Assets/StreamingAssets/World/
+Game/Assets/StreamingAssets/World.meta

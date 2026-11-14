@@ -132,7 +132,8 @@ namespace Ascend.EditorTools
 
             // Ground & obstacles.
             var world = new GameObject("Graybox").transform;
-            Prim(PrimitiveType.Plane, "Ground", Vector3.zero, new Vector3(20, 1, 20), ground, world);
+            // 5 cm under the streamed terrain's flat Ring 0 pad (which is exactly y = 0), so the two never z-fight; the pad carries the footsteps.
+            Prim(PrimitiveType.Plane, "Ground", new Vector3(0, -0.05f, 0), new Vector3(20, 1, 20), ground, world);
             // The map's local area: the 200 m field around Brindlewick, in Whisperwood (12_Systems/world_map.md).
             var mapArea = new GameObject("LocalMapArea").AddComponent<LocalMapArea>();
             mapArea.transform.SetParent(world, false);
@@ -160,6 +161,8 @@ namespace Ascend.EditorTools
             Prim(PrimitiveType.Cube, "Facing", new Vector3(0, 1.45f, 0.33f), new Vector3(0.18f, 0.12f, 0.2f), accent, p.transform, keepCollider: false);
             p.AddComponent<PlayerMotor>();
             p.AddComponent<PlayerCombat>();
+            // The open world: terrain tiles stream in and out around the player (13_Production/open_world_streaming_plan.md).
+            new GameObject("WorldStreamer").AddComponent<WorldStreamer>().Target = p.transform;
             // Animated placeholder visual (Ring0SceneBuilder.PlayerRig.cs): Animator + Visual rig on the root; the legacy capsule stays but is hidden.
             AttachPlayerVisual(p, player, accent);
             foreach (var legacy in new[] { "Body", "Facing" })
