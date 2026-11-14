@@ -8916,8 +8916,8 @@
   },
   {
    "id": "bk_153",
-   "title": "Two Accounts of Sylvaran",
-   "author": "Satsuki Ibarra of Sylvaran",
+   "title": "Who Owns a Branch",
+   "author": "Ilthiel Vaun, clerk of the Council of Elder Houses, writing for a human apprentice who asked",
    "kind": "local_history",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -8925,23 +8925,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1379,
+   "readingMinutes": 2,
+   "words": 422,
    "tags": [
     "history",
     "reg_sylvaran"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "933 SC",
-   "source": "books/aethwyrd/153-two-accounts-of-sylvaran.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "994 SC",
+   "source": "Tools/library/handwritten/bk_153.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_153.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "You asked me a simple question: whose is the bridge you stand on? I will answer it the way the court answers every simple question, which is at length.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 933 SC, 91 years before the present (1024 SC)",
+    "era": "about 994 SC, 30 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Lothaniel Root Archive"
    },
@@ -8950,16 +8950,6 @@
      "kind": "region",
      "id": "reg_sylvaran",
      "note": "The region this book is about (Sylvaran)."
-    },
-    {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
     },
     {
      "kind": "god",
@@ -9647,8 +9637,8 @@
   },
   {
    "id": "bk_165",
-   "title": "Two Accounts of Sylvaran",
-   "author": "Rafi Haddad of Sylvaran",
+   "title": "What We Say About the Court",
+   "author": "Brae Mossfoot, a wood elf of the moonwell hamlets, who has been to the court twice and does not intend a third",
    "kind": "local_history",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -9656,23 +9646,23 @@
    "shelf": "Local history",
    "language": "Common",
    "blurb": "Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.",
-   "readingMinutes": 7,
-   "words": 1387,
+   "readingMinutes": 2,
+   "words": 420,
    "tags": [
     "history",
     "reg_sylvaran"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "945 SC",
-   "source": "books/aethwyrd/165-two-accounts-of-sylvaran.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1010 SC",
+   "source": "Tools/library/handwritten/bk_165.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_165.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Someone asked me to write down what the hamlets think of Lothaniel. I said I would, if they promised not to print it. They have printed it. So I will be careful.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 945 SC, 79 years before the present (1024 SC)",
+    "era": "about 1010 SC, 14 years before the present (1024 SC)",
     "copy": "Bound in plain board, the title lettered by hand.",
     "shelfPlace": "in a labelled box on the second rack, Lothaniel Root Archive"
    },
@@ -9681,26 +9671,6 @@
      "kind": "region",
      "id": "reg_sylvaran",
      "note": "The region this book is about (Sylvaran)."
-    },
-    {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Thorgrim",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -10264,8 +10234,8 @@
   },
   {
    "id": "bk_175",
-   "title": "The House Book of Canopy City Lothaniel",
-   "author": "Idris Ndlovu of Sylvaran",
+   "title": "The House Book of the Ninth Bough",
+   "author": "Mirelle Auvaen, housekeeper of a court house in Lothaniel, in the old formal manner",
    "kind": "household_book",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -10273,24 +10243,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1362,
+   "readingMinutes": 2,
+   "words": 404,
    "tags": [
     "daily_life",
     "housing",
     "reg_sylvaran"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "955 SC",
-   "source": "books/aethwyrd/175-the-house-book-of-canopy-city-lothaniel.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "986 SC",
+   "source": "Tools/library/handwritten/bk_175.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_175.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "The house of the Ninth Bough is grown, not built. Its rooms are hollows in the living wood; its stairs are roots coaxed upward over three generations; its windows are gaps in the leaves that the house has agreed to keep. There is no nail in it. A nail is a small wound, and the branch remembers.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 955 SC, 69 years before the present (1024 SC)",
+    "era": "about 986 SC, 38 years before the present (1024 SC)",
     "copy": "Corners rounded by many thumbs; a tea ring on the second page.",
     "shelfPlace": "on the open shelf beside the copying desk, Lothaniel Root Archive"
    },
@@ -10299,36 +10269,14 @@
      "kind": "region",
      "id": "reg_sylvaran",
      "note": "The region this book is about (Sylvaran)."
-    },
-    {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The small rules of a shared home in Sylvaran: lamps, guests, mending.",
     "How ordinary people of Sylvaran keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -11015,8 +10963,8 @@
   },
   {
    "id": "bk_187",
-   "title": "The House Book of Canopy City Lothaniel",
-   "author": "Leila Ndlovu of Sylvaran",
+   "title": "The Lodging-House Book of Widow Pellam",
+   "author": "Ottoline Pellam, human, keeper of a boarding-house in the trade quarters of Canopy City Lothaniel",
    "kind": "household_book",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -11024,24 +10972,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1378,
+   "readingMinutes": 2,
+   "words": 438,
    "tags": [
     "daily_life",
     "housing",
     "reg_sylvaran"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "967 SC",
-   "source": "books/aethwyrd/187-the-house-book-of-canopy-city-lothaniel.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1011 SC",
+   "source": "Tools/library/handwritten/bk_187.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_187.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "I keep rooms for people the court charges twice. I charge them once, and I post the sign where the court can see it. We have not spoken since.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 967 SC, 57 years before the present (1024 SC)",
+    "era": "about 1011 SC, 13 years before the present (1024 SC)",
     "copy": "Cover re-covered in oilcloth by the last keeper.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Lothaniel Root Archive"
    },
@@ -11055,26 +11003,14 @@
      "kind": "place",
      "id": "Canopy City Lothaniel",
      "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The small rules of a shared home in Sylvaran: lamps, guests, mending.",
     "How ordinary people of Sylvaran keep a house at peace."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -11748,8 +11684,8 @@
   },
   {
    "id": "bk_199",
-   "title": "The House Book of Canopy City Lothaniel",
-   "author": "Noor Flint of Sylvaran",
+   "title": "A Cottage by the Moonwell",
+   "author": "Teague Ashleaf, wood elf, whose cottage has stood by the same pool since his grandfather planted the door",
    "kind": "household_book",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -11757,24 +11693,24 @@
    "shelf": "Household book",
    "language": "Common",
    "blurb": "A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.",
-   "readingMinutes": 7,
-   "words": 1399,
+   "readingMinutes": 2,
+   "words": 398,
    "tags": [
     "daily_life",
     "housing",
     "reg_sylvaran"
    ],
    "reliability": "accurate",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "979 SC",
-   "source": "books/aethwyrd/199-the-house-book-of-canopy-city-lothaniel.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1018 SC",
+   "source": "Tools/library/handwritten/bk_199.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_199.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "A round room has no corner for a draught to sit in, no shadow to hide a damp and no wall that is further from the fire than the others. A round room says, to anyone who enters, that everyone is equally close. I think that is the courtesy my grandfather meant.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 979 SC, 45 years before the present (1024 SC)",
+    "era": "about 1018 SC, 6 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Lothaniel Root Archive"
    },
@@ -11785,28 +11721,8 @@
      "note": "The region this book is about (Sylvaran)."
     },
     {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
      "kind": "god",
      "id": "Sylvara",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
      "note": "A god of the week the text names."
     }
    ],
@@ -12245,8 +12161,8 @@
   },
   {
    "id": "bk_208",
-   "title": "Bench Notes from Thimblefolk Mushroom Town",
-   "author": "Saoirse Sato of Mossdeep",
+   "title": "Small Tools, Done Properly",
+   "author": "Pip Cogsworth, tool-smith of Thimblefolk Mushroom Town, who is eleven fingers tall",
    "kind": "craft_notes",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -12255,22 +12171,22 @@
    "language": "Common",
    "blurb": "Bench notes from Mossdeep on materials, tools and mistakes worth making only once.",
    "readingMinutes": 2,
-   "words": 497,
+   "words": 407,
    "tags": [
     "crafting",
     "reg_mossdeep"
    ],
    "reliability": "accurate",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "988 SC",
-   "source": "books/aethwyrd/208-bench-notes-from-thimblefolk-mushroom-town.md",
+   "quality": "strong",
+   "inWorldDate": "1008 SC",
+   "source": "Tools/library/handwritten/bk_208.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_208.md",
-   "excerpt": "Copied at Thimblefolk Mushroom Town from a maker who was willing to be watched. Nothing here makes you a master. Mastery is someone else’s trust, repeated.",
+   "excerpt": "The big folk buy our tools because they are small and perfect. They do not understand that they are small *because* they are perfect. A thing made at our size cannot hide a flaw. There is nowhere for it to go.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 988 SC, 36 years before the present (1024 SC)",
+    "era": "about 1008 SC, 16 years before the present (1024 SC)",
     "copy": "Water-stained along the lower edge but fully legible.",
     "shelfPlace": "on the open shelf beside the copying desk, Lothaniel Root Archive"
    },
@@ -12284,6 +12200,11 @@
      "kind": "place",
      "id": "Thimblefolk Mushroom Town",
      "note": "A settlement or place the text names."
+    },
+    {
+     "kind": "god",
+     "id": "Thorgrim",
+     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -12834,8 +12755,8 @@
   },
   {
    "id": "bk_220",
-   "title": "Bench Notes from Thimblefolk Mushroom Town",
-   "author": "Leila Adeyemi of Mossdeep",
+   "title": "On Keeping Bees the Size of Dogs",
+   "author": "Marjoram Clover, honey-keeper, with a note on the stings",
    "kind": "craft_notes",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -12844,22 +12765,22 @@
    "language": "Common",
    "blurb": "Bench notes from Mossdeep on materials, tools and mistakes worth making only once.",
    "readingMinutes": 2,
-   "words": 497,
+   "words": 403,
    "tags": [
     "crafting",
     "reg_mossdeep"
    ],
    "reliability": "accurate",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "1000 SC",
-   "source": "books/aethwyrd/220-bench-notes-from-thimblefolk-mushroom-town.md",
+   "quality": "strong",
+   "inWorldDate": "1014 SC",
+   "source": "Tools/library/handwritten/bk_220.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_220.md",
-   "excerpt": "Copied at Thimblefolk Mushroom Town from a maker who was willing to be watched. Nothing here makes you a master. Mastery is someone else’s trust, repeated.",
+   "excerpt": "I will say at the outset that the bees are not the size of dogs. They are the size of a large cat. The dogs are, in my experience, rather smaller.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 1000 SC, 24 years before the present (1024 SC)",
+    "era": "about 1014 SC, 10 years before the present (1024 SC)",
     "copy": "Foxed with age, ink faded brown but sound.",
     "shelfPlace": "in a labelled box on the second rack, Lothaniel Root Archive"
    },
@@ -12870,9 +12791,9 @@
      "note": "The region this book is about (Mossdeep)."
     },
     {
-     "kind": "place",
-     "id": "Thimblefolk Mushroom Town",
-     "note": "A settlement or place the text names."
+     "kind": "region",
+     "id": "reg_aldmere",
+     "note": "Another region the text mentions (Aldmere)."
     }
    ],
    "teaches": [
@@ -15939,8 +15860,8 @@
   },
   {
    "id": "bk_271",
-   "title": "Branch Notes for Thimblefolk Mushroom Town",
-   "author": "Hana Farid of Mossdeep",
+   "title": "The Big-Folk Desk: Notes for the Newly Appointed",
+   "author": "Hazel Tuft, clerk of the Guild's small desk in Thimblefolk Mushroom Town",
    "kind": "guild_manual",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -15948,23 +15869,23 @@
    "shelf": "Guild manual",
    "language": "Common",
    "blurb": "A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.",
-   "readingMinutes": 8,
-   "words": 1509,
+   "readingMinutes": 2,
+   "words": 414,
    "tags": [
     "guild",
     "reg_mossdeep"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "931 SC",
-   "source": "books/aethwyrd/271-branch-notes-for-thimblefolk-mushroom-town.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1017 SC",
+   "source": "Tools/library/handwritten/bk_271.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_271.md",
-   "excerpt": "At Thimblefolk Mushroom Town the work of the day sits inside toadstool eaves and moss steps. People eat mushroom stew and last year's honey and they talk about spores that sweeten a closed room the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Congratulations. You have been appointed to the only Guild desk in Aethwyrd that is lower than the customer.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 931 SC, 93 years before the present (1024 SC)",
+    "era": "about 1017 SC, 7 years before the present (1024 SC)",
     "copy": "Corners rounded by many thumbs; a tea ring on the second page.",
     "shelfPlace": "on the branch shelf behind the board, Aldmere Guild Hall Reading Room"
    },
@@ -15980,22 +15901,14 @@
      "note": "A settlement or place the text names."
     },
     {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
-     "note": "A god of the week the text names."
+     "kind": "item",
+     "id": "itm_mat_scale",
+     "note": "A material or item the text mentions."
     }
    ],
    "teaches": [
     "How the Guild branch near Thimblefolk Mushroom Town runs: forms, slang, rank etiquette.",
     "What the board will not say out loud and the courtesy that fills the gap."
-   ],
-   "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS)."
    ]
   },
   {
@@ -16691,8 +16604,8 @@
   },
   {
    "id": "bk_283",
-   "title": "Branch Notes for Thimblefolk Mushroom Town",
-   "author": "Soren Ibarra of Mossdeep",
+   "title": "Seeds in Cups: How the Council Votes, for Guild Observers",
+   "author": "Brindle Thatch, honey-keeper and acting secretary of the council, writing for a visiting Guild examiner",
    "kind": "guild_manual",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -16700,23 +16613,23 @@
    "shelf": "Guild manual",
    "language": "Common",
    "blurb": "A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.",
-   "readingMinutes": 8,
-   "words": 1512,
+   "readingMinutes": 2,
+   "words": 342,
    "tags": [
     "guild",
     "reg_mossdeep"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "943 SC",
-   "source": "books/aethwyrd/283-branch-notes-for-thimblefolk-mushroom-town.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1019 SC",
+   "source": "Tools/library/handwritten/bk_283.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_283.md",
-   "excerpt": "At Thimblefolk Mushroom Town the work of the day sits inside toadstool eaves and moss steps. People eat mushroom stew and last year's honey and they talk about spores that sweeten a closed room the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "The Guild has asked how our council decides. It is a polite question and it deserves a plain answer.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 943 SC, 81 years before the present (1024 SC)",
+    "era": "about 1019 SC, 5 years before the present (1024 SC)",
     "copy": "Cover re-covered in oilcloth by the last keeper.",
     "shelfPlace": "on the clerk’s counter, tied with cord, Aldmere Guild Hall Reading Room"
    },
@@ -16727,24 +16640,9 @@
      "note": "The region this book is about (Mossdeep)."
     },
     {
-     "kind": "place",
-     "id": "Thimblefolk Mushroom Town",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Maelis",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
+     "kind": "region",
+     "id": "reg_aldmere",
+     "note": "Another region the text mentions (Aldmere)."
     }
    ],
    "teaches": [
@@ -16752,7 +16650,7 @@
     "What the board will not say out loud and the courtesy that fills the gap."
    ],
    "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS)."
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -17065,8 +16963,8 @@
   },
   {
    "id": "bk_289",
-   "title": "What the Shrine Floor Knows in Canopy City Lothaniel",
-   "author": "Bruni Farid of Sylvaran",
+   "title": "Sylvasday at the Root",
+   "author": "Thessaly Greenmantle, a keeper of the rootward shrine, who has not missed a Sylvasday in sixty-one years",
    "kind": "chapel_notes",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -17074,23 +16972,23 @@
    "shelf": "Chapel notes",
    "language": "Common",
    "blurb": "What a shrine floor in Sylvaran sees: keepers, mourners, festival crowds and quiet hours.",
-   "readingMinutes": 7,
-   "words": 1397,
+   "readingMinutes": 2,
+   "words": 383,
    "tags": [
     "faith",
     "reg_sylvaran"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "949 SC",
-   "source": "books/aethwyrd/289-what-the-shrine-floor-knows-in-canopy-city-lothaniel.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1006 SC",
+   "source": "Tools/library/handwritten/bk_289.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_289.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "In Sylvaran, the day-gods are honoured, but the World Tree is revered, and Sylvasday is the one day on which the two agree.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 949 SC, 75 years before the present (1024 SC)",
+    "era": "about 1006 SC, 18 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "in the clerk’s drawer, between two ledgers, Lothaniel Root Archive"
    },
@@ -17101,34 +16999,17 @@
      "note": "The region this book is about (Sylvaran)."
     },
     {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
      "kind": "god",
      "id": "Sylvara",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
      "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "What a shrine floor in Sylvaran sees across a week.",
     "The quiet customs of keepers, mourners and festival crowds."
+   ],
+   "canonNotes": [
+    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -17811,8 +17692,8 @@
   },
   {
    "id": "bk_301",
-   "title": "What the Shrine Floor Knows in Canopy City Lothaniel",
-   "author": "Idris Pell of Sylvaran",
+   "title": "The Naming and the Seed",
+   "author": "Perrin Elmgrove, keeper of the Twin Groves, who has planted four thousand seeds and watered most of them",
    "kind": "chapel_notes",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -17820,23 +17701,23 @@
    "shelf": "Chapel notes",
    "language": "Common",
    "blurb": "What a shrine floor in Sylvaran sees: keepers, mourners, festival crowds and quiet hours.",
-   "readingMinutes": 7,
-   "words": 1395,
+   "readingMinutes": 2,
+   "words": 405,
    "tags": [
     "faith",
     "reg_sylvaran"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "961 SC",
-   "source": "books/aethwyrd/301-what-the-shrine-floor-knows-in-canopy-city-lothaniel.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1016 SC",
+   "source": "Tools/library/handwritten/bk_301.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_301.md",
-   "excerpt": "At Moonwell hamlets the work of the day sits inside living timber and root-stairs. People eat waybread, honey, and leaf-tea and they talk about the old argument over felled heartwood the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Every elven child plants a seed when they are named. The tree that grows is their twin for life. This is the custom of the Twin Groves, and I am its keeper.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 961 SC, 63 years before the present (1024 SC)",
+    "era": "about 1016 SC, 8 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "on the open shelf beside the copying desk, Lothaniel Root Archive"
    },
@@ -17847,23 +17728,8 @@
      "note": "The region this book is about (Sylvaran)."
     },
     {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "god",
      "id": "Sylvara",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
      "note": "A god of the week the text names."
     }
    ],
@@ -21693,8 +21559,8 @@
   },
   {
    "id": "bk_368",
-   "title": "The Street Law of Mossdeep",
-   "author": "Dugan Ellison of Mossdeep",
+   "title": "The Law of Small Things",
+   "author": "Sorrel Fennimore, a magistrate of Thimblefolk Mushroom Town, in the form of questions people have asked her",
    "kind": "law_notes",
    "library": "lib_aldmere_guild_hall",
    "region": "reg_aldmere",
@@ -21702,23 +21568,23 @@
    "shelf": "Law notes",
    "language": "Common",
    "blurb": "A street-law note for Mossdeep: what a neighbour, a guard and a clerk each expect of you.",
-   "readingMinutes": 8,
-   "words": 1532,
+   "readingMinutes": 2,
+   "words": 359,
    "tags": [
     "law",
     "reg_mossdeep"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "908 SC",
-   "source": "books/aethwyrd/368-the-street-law-of-mossdeep.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1012 SC",
+   "source": "Tools/library/handwritten/bk_368.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_aldmere_guild_hall/bk_368.md",
-   "excerpt": "At Thimblefolk Mushroom Town the work of the day sits inside toadstool eaves and moss steps. People eat mushroom stew and last year's honey and they talk about spores that sweeten a closed room the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "The big folk pays, and pays well, in honey and in apology. It does not matter whether the step was an accident. It does not matter whether the house was in the way. A house is a house. We have a schedule of fees, set by the council, and it is longer than you would like.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 908 SC, 116 years before the present (1024 SC)",
+    "era": "about 1012 SC, 12 years before the present (1024 SC)",
     "copy": "Pages brittle at the fold; handle with a flat palm.",
     "shelfPlace": "on the branch shelf behind the board, Aldmere Guild Hall Reading Room"
    },
@@ -21737,21 +21603,6 @@
      "kind": "item",
      "id": "itm_mat_scale",
      "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "region",
-     "id": "reg_aldmere",
-     "note": "Another region the text mentions (Aldmere)."
-    },
-    {
-     "kind": "god",
-     "id": "Maelis",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -23645,8 +23496,8 @@
   },
   {
    "id": "bk_400",
-   "title": "Songs Heard in Canopy City Lothaniel",
-   "author": "Vesna Mori of Sylvaran",
+   "title": "What the Bridges Sing",
+   "author": "Collected by Fenwick Dale, who has crossed every bridge in Lothaniel and been asked to leave several",
    "kind": "ballad_sheet",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -23654,23 +23505,23 @@
    "shelf": "Ballad sheet",
    "language": "Common",
    "blurb": "Songs heard in Sylvaran, set down with the verses people disagree about.",
-   "readingMinutes": 3,
-   "words": 502,
+   "readingMinutes": 2,
+   "words": 326,
    "tags": [
     "music",
     "reg_sylvaran"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "940 SC",
-   "source": "books/aethwyrd/400-songs-heard-in-canopy-city-lothaniel.md",
+   "quality": "strong",
+   "inWorldDate": "1009 SC",
+   "source": "Tools/library/handwritten/bk_400.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_400.md",
-   "excerpt": "Collected at Moonwell hamlets. Change the name of the bridge if your bridge is the one that is out. A song that cannot survive a correction is a poster.",
+   "excerpt": "The living bridges of Lothaniel creak. They are not broken; they are talking. The court says it is a language and the hamlets say it is a lullaby, and I say that after thirty years of crossing them I have learned to sing along.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 940 SC, 84 years before the present (1024 SC)",
+    "era": "about 1009 SC, 15 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "in a labelled box on the second rack, Lothaniel Root Archive"
    },
@@ -23679,27 +23530,11 @@
      "kind": "region",
      "id": "reg_sylvaran",
      "note": "The region this book is about (Sylvaran)."
-    },
-    {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "place",
-     "id": "Moonwell hamlets",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "species",
-     "id": "mon_wyvern",
-     "note": "Named in this book."
     }
    ],
    "teaches": [
     "Songs of Sylvaran with the verses people disagree about.",
-    "How a tune moves from one town to the next and changes.",
-    "Species it names: Wyvern."
+    "How a tune moves from one town to the next and changes."
    ]
   },
   {
@@ -25435,8 +25270,8 @@
   },
   {
    "id": "bk_433",
-   "title": "Read This at Canopy City Lothaniel",
-   "author": "Hana Adeyemi of Sylvaran",
+   "title": "The Seed That Chose Late",
+   "author": "A story for reading aloud under the leaves of Sylvaran, as told to children who have not yet been named",
    "kind": "story_aloud",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -25444,23 +25279,23 @@
    "shelf": "Stories for reading aloud",
    "language": "Common",
    "blurb": "Stories to read aloud in Sylvaran, with the pauses marked for the reader.",
-   "readingMinutes": 3,
-   "words": 519,
+   "readingMinutes": 2,
+   "words": 353,
    "tags": [
     "children",
     "reg_sylvaran"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "973 SC",
-   "source": "books/aethwyrd/433-read-this-at-canopy-city-lothaniel.md",
+   "quality": "strong",
+   "inWorldDate": "1012 SC",
+   "source": "Tools/library/handwritten/bk_433.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_433.md",
-   "excerpt": "These are told at Canopy City Lothaniel. They are not sermons. If a child corrects the ending, write the correction in. That is how a story stays a household thing.",
+   "excerpt": "All round it, the other seeds were busy. The oak seed was becoming an oak. The birch was becoming a birch. The beech was being very serious about its roots, and the yew was thinking about the next thousand years.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 973 SC, 51 years before the present (1024 SC)",
+    "era": "about 1012 SC, 12 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "in a labelled box on the second rack, Lothaniel Root Archive"
    },
@@ -25469,24 +25304,11 @@
      "kind": "region",
      "id": "reg_sylvaran",
      "note": "The region this book is about (Sylvaran)."
-    },
-    {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Stories for a lamp-lit room in Sylvaran, with the pauses marked.",
     "The small lesson each story leaves, never spelled out."
-   ],
-   "canonNotes": [
-    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
   {
@@ -26141,8 +25963,8 @@
   },
   {
    "id": "bk_445",
-   "title": "Read This at Canopy City Lothaniel",
-   "author": "Amina Ellison of Sylvaran",
+   "title": "Why the Bridges Creak",
+   "author": "A fireside tale of the moonwell hamlets, told with the hands as well as the voice",
    "kind": "story_aloud",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -26150,23 +25972,23 @@
    "shelf": "Stories for reading aloud",
    "language": "Common",
    "blurb": "Stories to read aloud in Sylvaran, with the pauses marked for the reader.",
-   "readingMinutes": 3,
-   "words": 515,
+   "readingMinutes": 2,
+   "words": 300,
    "tags": [
     "children",
     "reg_sylvaran"
    ],
    "reliability": "folk belief",
    "status": "clear",
-   "quality": "templated",
-   "inWorldDate": "985 SC",
-   "source": "books/aethwyrd/445-read-this-at-canopy-city-lothaniel.md",
+   "quality": "strong",
+   "inWorldDate": "1017 SC",
+   "source": "Tools/library/handwritten/bk_445.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_445.md",
-   "excerpt": "These are told at Canopy City Lothaniel. They are not sermons. If a child corrects the ending, write the correction in. That is how a story stays a household thing.",
+   "excerpt": "It was a very quiet bridge. It carried a very quiet people over a very quiet stream, and nothing about it was ever remarked upon. It was the sort of bridge you cross without noticing and forget as soon as you have crossed.",
    "provenance": {
     "tradition": "The Canopy Kingdom tradition of Sylvaran",
     "writtenIn": "reg_sylvaran",
-    "era": "about 985 SC, 39 years before the present (1024 SC)",
+    "era": "about 1017 SC, 7 years before the present (1024 SC)",
     "copy": "Loose gatherings tied together with a ribbon.",
     "shelfPlace": "on the open shelf beside the copying desk, Lothaniel Root Archive"
    },
@@ -26175,29 +25997,11 @@
      "kind": "region",
      "id": "reg_sylvaran",
      "note": "The region this book is about (Sylvaran)."
-    },
-    {
-     "kind": "place",
-     "id": "Canopy City Lothaniel",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "god",
-     "id": "Solenne",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "Stories for a lamp-lit room in Sylvaran, with the pauses marked.",
     "The small lesson each story leaves, never spelled out."
-   ],
-   "canonNotes": [
-    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
    ]
   },
   {
@@ -27324,8 +27128,8 @@
   },
   {
    "id": "bk_466",
-   "title": "Potsherds from the Mossdeep Copy",
-   "author": "Haru Flint of Mossdeep",
+   "title": "A Sherd in the Clover",
+   "author": "Nettle Brightwater, a Thimblefolk archivist, on a fragment brought to her by a big folk who did not know what it was",
    "kind": "valdrisian_fragment",
    "library": "lib_mages_academy",
    "region": "reg_aldmere",
@@ -27333,18 +27137,18 @@
    "shelf": "Valdrisian fragment",
    "language": "Common (copied from Old Weave-tongue)",
    "blurb": "Potsherd readings of the old empire as copied in Mossdeep, with the copyists' doubts left in.",
-   "readingMinutes": 8,
-   "words": 1542,
+   "readingMinutes": 2,
+   "words": 440,
    "tags": [
     "history",
     "reg_mossdeep",
     "valdrisia"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "1006 SC",
-   "source": "books/aethwyrd/466-potsherds-from-the-mossdeep-copy.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1002 SC",
+   "source": "Tools/library/handwritten/bk_466.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_mages_academy/bk_466.md",
    "rewards": [
     {
@@ -27352,11 +27156,11 @@
      "id": "civ_valdrisia"
     }
    ],
-   "excerpt": "At Thimblefolk Mushroom Town the work of the day sits inside toadstool eaves and moss steps. People eat mushroom stew and last year's honey and they talk about spores that sweeten a closed room the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "A big folk came to my door with a piece of pottery the size of a house. I do not say this to be funny. It was the size of my house, and I had to read it from the roof.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 1006 SC, 18 years before the present (1024 SC)",
+    "era": "about 1002 SC, 22 years before the present (1024 SC)",
     "copy": "A pressed leaf marks the middle; nobody has dared remove it.",
     "shelfPlace": "in the copying room, third desk, The Mages' Academy Library"
    },
@@ -27367,34 +27171,9 @@
      "note": "The region this book is about (Mossdeep)."
     },
     {
-     "kind": "place",
-     "id": "Thimblefolk Mushroom Town",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "item",
-     "id": "itm_mat_scale",
-     "note": "A material or item the text mentions."
-    },
-    {
-     "kind": "region",
-     "id": "reg_sunscar",
-     "note": "Another region the text mentions (Sunscar)."
-    },
-    {
      "kind": "civilization",
      "id": "civ_valdrisia",
      "note": "An old civilization the text mentions (public account only)."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Vex",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
@@ -28451,8 +28230,8 @@
   },
   {
    "id": "bk_481",
-   "title": "The Year in Thimblefolk Mushroom Town",
-   "author": "Pavel Mori of Mossdeep",
+   "title": "The Pressed-Flower Calendar",
+   "author": "Sage Lindenbloom, who keeps the calendar of a Thimblefolk household, and has done for sixty years without a mistake",
    "kind": "festival_notes",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -28460,23 +28239,23 @@
    "shelf": "Festival notes",
    "language": "Common",
    "blurb": "The year's festivals in Mossdeep, by household, shrine and branch hall.",
-   "readingMinutes": 8,
-   "words": 1555,
+   "readingMinutes": 2,
+   "words": 446,
    "tags": [
     "festival",
     "reg_mossdeep"
    ],
    "reliability": "folk belief",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "901 SC",
-   "source": "books/aethwyrd/481-the-year-in-thimblefolk-mushroom-town.md",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1010 SC",
+   "source": "Tools/library/handwritten/bk_481.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_481.md",
-   "excerpt": "At Thimblefolk Mushroom Town the work of the day sits inside toadstool eaves and moss steps. People eat mushroom stew and last year's honey and they talk about spores that sweeten a closed room the way coastal towns talk about weather: often, and with corrections.",
+   "excerpt": "Every house in the town keeps a pressed-flower calendar, and a family's luck depends on keeping it accurate. I have kept ours since I was twelve, and the family has been unusually lucky ever since. I make no claim that the one thing is the cause of the other. I make a modest claim that it has not hurt.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 901 SC, 123 years before the present (1024 SC)",
+    "era": "about 1010 SC, 14 years before the present (1024 SC)",
     "copy": "Clean and stiff, plainly little read.",
     "shelfPlace": "on the open shelf beside the copying desk, Lothaniel Root Archive"
    },
@@ -28485,34 +28264,11 @@
      "kind": "region",
      "id": "reg_mossdeep",
      "note": "The region this book is about (Mossdeep)."
-    },
-    {
-     "kind": "place",
-     "id": "Thimblefolk Mushroom Town",
-     "note": "A settlement or place the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Sylvara",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Morrowyn",
-     "note": "A god of the week the text names."
-    },
-    {
-     "kind": "god",
-     "id": "Ilvaris",
-     "note": "A god of the week the text names."
     }
    ],
    "teaches": [
     "The year’s festivals in Mossdeep, by household, shrine and branch hall.",
     "What each festival asks of a guest."
-   ],
-   "canonNotes": [
-    "Uses the seven-day week of Canon section 2 (Solenday to Vexday)."
    ]
   },
   {
@@ -30078,8 +29834,8 @@
   },
   {
    "id": "bk_505",
-   "title": "Neighbors Near Thimblefolk Mushroom Town",
-   "author": "Kwame Okeke of Mossdeep",
+   "title": "The Big Things in the Ferns",
+   "author": "Wick Ashdown, a beetle-rider, for the young who wish to ride out and are not yet permitted",
    "kind": "field_guide",
    "library": "lib_lothaniel_root_archive",
    "region": "reg_sylvaran",
@@ -30087,38 +29843,38 @@
    "shelf": "Field guide",
    "language": "Common",
    "blurb": "A walker's guide to the creatures near Mossdeep: what folk file them under, how to approach them, what to leave alone.",
-   "readingMinutes": 5,
-   "words": 1002,
+   "readingMinutes": 2,
+   "words": 421,
    "tags": [
     "bestiary",
     "reg_mossdeep",
     "taming"
    ],
    "reliability": "partial",
-   "status": "draft",
-   "quality": "templated",
-   "inWorldDate": "1007 SC",
-   "source": "Tools/library/gap_books.py (generated gap book)",
+   "status": "clear",
+   "quality": "strong",
+   "inWorldDate": "1015 SC",
+   "source": "Tools/library/handwritten/bk_505.md (hand-written rewrite)",
    "text": "02_Lore/library/lib_lothaniel_root_archive/bk_505.md",
    "rewards": [
-    {
-     "kind": "bestiary",
-     "id": "mon_thornvine"
-    },
     {
      "kind": "bestiary",
      "id": "mon_jackalope"
     },
     {
      "kind": "bestiary",
-     "id": "mon_will_o_wisp"
+     "id": "mon_firefly_swarm"
+    },
+    {
+     "kind": "bestiary",
+     "id": "mon_pixie"
     }
    ],
-   "excerpt": "Around Thimblefolk Mushroom Town, people file the Treant Sapling near guild rank D. A rank is a licence hint. It is not a measurement of your courage, and it goes stale if the ground has changed.",
+   "excerpt": "You will want to ride out. Everyone does. I did. This is what I wish somebody had told me, and what somebody did tell me and I did not listen to.",
    "provenance": {
     "tradition": "The Land of Small Things tradition of Mossdeep",
     "writtenIn": "reg_mossdeep",
-    "era": "about 1007 SC, 17 years before the present (1024 SC)",
+    "era": "about 1015 SC, 9 years before the present (1024 SC)",
     "copy": "Sewn quires, the spine re-stitched in waxed thread.",
     "shelfPlace": "on the open shelf beside the copying desk, Lothaniel Root Archive"
    },
@@ -30129,18 +29885,13 @@
      "note": "The region this book is about (Mossdeep)."
     },
     {
-     "kind": "place",
-     "id": "Thimblefolk Mushroom Town",
-     "note": "A settlement or place the text names."
-    },
-    {
      "kind": "species",
      "id": "mon_treant_sapling",
      "note": "Named in this book."
     },
     {
      "kind": "species",
-     "id": "mon_will_o_wisp",
+     "id": "mon_firefly_swarm",
      "note": "Named in this book; reading it marks the species Seen."
     },
     {
@@ -30151,17 +29902,12 @@
     {
      "kind": "species",
      "id": "mon_thornvine",
-     "note": "Named in this book; reading it marks the species Seen."
+     "note": "Named in this book."
     },
     {
      "kind": "species",
      "id": "mon_pixie",
-     "note": "Named in this book."
-    },
-    {
-     "kind": "species",
-     "id": "mon_wisp",
-     "note": "Named in this book."
+     "note": "Named in this book; reading it marks the species Seen."
     },
     {
      "kind": "god",
@@ -30172,11 +29918,10 @@
    "teaches": [
     "How folk around Thimblefolk Mushroom Town file each creature by Guild rank, and what they say it fears.",
     "Which approaches locals think are mistakes, with the rumour clearly marked as rumour.",
-    "Species it names: Treant Sapling, Will-o'-Wisp, Jackalope, Thornvine, Pixie, Wisp."
+    "Species it names: Treant Sapling, Firefly Swarm, Jackalope, Thornvine, Pixie."
    ],
    "canonNotes": [
-    "Mentions Guild ranks (Canon section 2, F to SSS).",
-    "Mentions the Great Labyrinth (halls reset weekly, Canon section 6)."
+    "Mentions Guild ranks (Canon section 2, F to SSS)."
    ]
   },
   {

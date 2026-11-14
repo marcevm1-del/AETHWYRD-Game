@@ -65,7 +65,7 @@ Lectures, copied demonstrations and the careful fragments of the old empire, kep
 - [A Lecture Copied at terrace cities](lib_mages_academy/bk_392.md) (Academy lecture, partial, draft): A copied academy lecture about magic as practised near Apu Highlands, with its pauses and its student's marginalia.
 - [A Lecture Copied at Nox Dominion](lib_mages_academy/bk_393.md) (Academy lecture, partial, draft): A copied academy lecture about magic as practised near Nox Dominion, with its pauses and its student's marginalia.
 - [Potsherds from the Proving Halls](lib_mages_academy/bk_465.md) (Valdrisian fragment, partial, clear): Potsherd readings of the old empire as copied in Great Labyrinth (Floors 1-40), with the copyists' doubts left in.
-- [Potsherds from the Mossdeep Copy](lib_mages_academy/bk_466.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Mossdeep, with the copyists' doubts left in.
+- [A Sherd in the Clover](lib_mages_academy/bk_466.md) (Valdrisian fragment, partial, clear): Potsherd readings of the old empire as copied in Mossdeep, with the copyists' doubts left in.
 - [Potsherds from the Moraveil Copy](lib_mages_academy/bk_467.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Moraveil, with the copyists' doubts left in.
 - [Potsherds from the Kitsune Isles Copy](lib_mages_academy/bk_468.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Kitsune Isles, with the copyists' doubts left in.
 - [Potsherds from the Whitewater Reach Copy](lib_mages_academy/bk_469.md) (Valdrisian fragment, partial, draft): Potsherd readings of the old empire as copied in Whitewater Reach, with the copyists' doubts left in.
@@ -89,7 +89,7 @@ Branch manuals, street-law notes and the guild's copies of local rules. Region: 
 - [Branch Notes for Aurumdeep explorers' camp](lib_aldmere_guild_hall/bk_268.md) (Guild manual, partial, draft): A guild branch manual for Aurumdeep: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Root of the World](lib_aldmere_guild_hall/bk_269.md) (Guild manual, partial, draft): A guild branch manual for Root of the World: forms, slang, rank etiquette and what the board will not say.
 - [The Gate Desk: How We Work](lib_aldmere_guild_hall/bk_270.md) (Guild manual, partial, clear): A guild branch manual for Great Labyrinth (Floors 1-40): forms, slang, rank etiquette and what the board will not say.
-- [Branch Notes for Thimblefolk Mushroom Town](lib_aldmere_guild_hall/bk_271.md) (Guild manual, partial, draft): A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.
+- [The Big-Folk Desk: Notes for the Newly Appointed](lib_aldmere_guild_hall/bk_271.md) (Guild manual, partial, clear): A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Moraveil goblin village](lib_aldmere_guild_hall/bk_272.md) (Guild manual, partial, draft): A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Fox Shrine Isle](lib_aldmere_guild_hall/bk_273.md) (Guild manual, partial, draft): A guild branch manual for Kitsune Isles: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for ice-fishing villages](lib_aldmere_guild_hall/bk_274.md) (Guild manual, partial, draft): A guild branch manual for Whitewater Reach: forms, slang, rank etiquette and what the board will not say.
@@ -101,7 +101,7 @@ Branch manuals, street-law notes and the guild's copies of local rules. Region: 
 - [Branch Notes for Aurumdeep explorers' camp](lib_aldmere_guild_hall/bk_280.md) (Guild manual, partial, draft): A guild branch manual for Aurumdeep: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Root of the World](lib_aldmere_guild_hall/bk_281.md) (Guild manual, partial, draft): A guild branch manual for Root of the World: forms, slang, rank etiquette and what the board will not say.
 - [Lost, Stacked and Found](lib_aldmere_guild_hall/bk_282.md) (Guild manual, partial, clear): A guild branch manual for Great Labyrinth (Floors 1-40): forms, slang, rank etiquette and what the board will not say.
-- [Branch Notes for Thimblefolk Mushroom Town](lib_aldmere_guild_hall/bk_283.md) (Guild manual, partial, draft): A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.
+- [Seeds in Cups: How the Council Votes, for Guild Observers](lib_aldmere_guild_hall/bk_283.md) (Guild manual, partial, clear): A guild branch manual for Mossdeep: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Moraveil goblin village](lib_aldmere_guild_hall/bk_284.md) (Guild manual, partial, draft): A guild branch manual for Moraveil: forms, slang, rank etiquette and what the board will not say.
 - [Branch Notes for Fox Shrine Isle](lib_aldmere_guild_hall/bk_285.md) (Guild manual, partial, draft): A guild branch manual for Kitsune Isles: forms, slang, rank etiquette and what the board will not say.
 - [The Street Law of Lumbaya](lib_aldmere_guild_hall/bk_361.md) (Law notes, partial, draft): A street-law note for Lumbaya: what a neighbour, a guard and a clerk each expect of you.
@@ -111,7 +111,7 @@ Branch manuals, street-law notes and the guild's copies of local rules. Region: 
 - [The Street Law of Aurumdeep](lib_aldmere_guild_hall/bk_365.md) (Law notes, partial, draft): A street-law note for Aurumdeep: what a neighbour, a guard and a clerk each expect of you.
 - [The Street Law of Root of the World](lib_aldmere_guild_hall/bk_366.md) (Law notes, partial, draft): A street-law note for Root of the World: what a neighbour, a guard and a clerk each expect of you.
 - [The Street Law of the Proving Halls](lib_aldmere_guild_hall/bk_367.md) (Law notes, partial, clear): A street-law note for Great Labyrinth (Floors 1-40): what a neighbour, a guard and a clerk each expect of you.
-- [The Street Law of Mossdeep](lib_aldmere_guild_hall/bk_368.md) (Law notes, partial, draft): A street-law note for Mossdeep: what a neighbour, a guard and a clerk each expect of you.
+- [The Law of Small Things](lib_aldmere_guild_hall/bk_368.md) (Law notes, partial, clear): A street-law note for Mossdeep: what a neighbour, a guard and a clerk each expect of you.
 - [The Street Law of Moraveil](lib_aldmere_guild_hall/bk_369.md) (Law notes, partial, draft): A street-law note for Moraveil: what a neighbour, a guard and a clerk each expect of you.
 - [The Street Law of Kitsune Isles](lib_aldmere_guild_hall/bk_370.md) (Law notes, partial, draft): A street-law note for Kitsune Isles: what a neighbour, a guard and a clerk each expect of you.
 - [The Street Law of Whitewater Reach](lib_aldmere_guild_hall/bk_371.md) (Law notes, partial, draft): A street-law note for Whitewater Reach: what a neighbour, a guard and a clerk each expect of you.
@@ -167,26 +167,26 @@ Living-timber shelves kept by the canopy city, covering the mossy and summer lan
 - [Boots Toward Cinderhole](lib_lothaniel_root_archive/bk_119.md) (Road book, accurate, draft): A road notebook that walks the legs toward Sylvaran, with weather, crossings and the habits of the road.
 - [Two Accounts of Sylvaran](lib_lothaniel_root_archive/bk_129.md) (Local history, partial, draft): Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.
 - [Two Accounts of Sylvaran](lib_lothaniel_root_archive/bk_141.md) (Local history, partial, draft): Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.
-- [Two Accounts of Sylvaran](lib_lothaniel_root_archive/bk_153.md) (Local history, partial, draft): Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.
-- [Two Accounts of Sylvaran](lib_lothaniel_root_archive/bk_165.md) (Local history, partial, draft): Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.
-- [The House Book of Canopy City Lothaniel](lib_lothaniel_root_archive/bk_175.md) (Household book, accurate, draft): A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.
-- [The House Book of Canopy City Lothaniel](lib_lothaniel_root_archive/bk_187.md) (Household book, accurate, draft): A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.
-- [The House Book of Canopy City Lothaniel](lib_lothaniel_root_archive/bk_199.md) (Household book, accurate, draft): A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.
+- [Who Owns a Branch](lib_lothaniel_root_archive/bk_153.md) (Local history, partial, clear): Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.
+- [What We Say About the Court](lib_lothaniel_root_archive/bk_165.md) (Local history, partial, clear): Two retellings of the history of Sylvaran, set side by side, with the question of who benefits left open.
+- [The House Book of the Ninth Bough](lib_lothaniel_root_archive/bk_175.md) (Household book, accurate, clear): A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.
+- [The Lodging-House Book of Widow Pellam](lib_lothaniel_root_archive/bk_187.md) (Household book, accurate, clear): A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.
+- [A Cottage by the Moonwell](lib_lothaniel_root_archive/bk_199.md) (Household book, accurate, clear): A house book from Sylvaran: lamps, guests, mending and the small rules of a shared home.
 - [Bench Notes from Summer Court glades](lib_lothaniel_root_archive/bk_204.md) (Craft notes, accurate, clear): Bench notes from Everdusk on materials, tools and mistakes worth making only once.
-- [Bench Notes from Thimblefolk Mushroom Town](lib_lothaniel_root_archive/bk_208.md) (Craft notes, accurate, clear): Bench notes from Mossdeep on materials, tools and mistakes worth making only once.
+- [Small Tools, Done Properly](lib_lothaniel_root_archive/bk_208.md) (Craft notes, accurate, clear): Bench notes from Mossdeep on materials, tools and mistakes worth making only once.
 - [Bench Notes from Summer Court glades](lib_lothaniel_root_archive/bk_216.md) (Craft notes, accurate, clear): Bench notes from Everdusk on materials, tools and mistakes worth making only once.
-- [Bench Notes from Thimblefolk Mushroom Town](lib_lothaniel_root_archive/bk_220.md) (Craft notes, accurate, clear): Bench notes from Mossdeep on materials, tools and mistakes worth making only once.
+- [On Keeping Bees the Size of Dogs](lib_lothaniel_root_archive/bk_220.md) (Craft notes, accurate, clear): Bench notes from Mossdeep on materials, tools and mistakes worth making only once.
 - [Bench Notes from Summer Court glades](lib_lothaniel_root_archive/bk_228.md) (Craft notes, accurate, clear): Bench notes from Everdusk on materials, tools and mistakes worth making only once.
-- [What the Shrine Floor Knows in Canopy City Lothaniel](lib_lothaniel_root_archive/bk_289.md) (Chapel notes, folk belief, draft): What a shrine floor in Sylvaran sees: keepers, mourners, festival crowds and quiet hours.
-- [What the Shrine Floor Knows in Canopy City Lothaniel](lib_lothaniel_root_archive/bk_301.md) (Chapel notes, folk belief, draft): What a shrine floor in Sylvaran sees: keepers, mourners, festival crowds and quiet hours.
-- [Songs Heard in Canopy City Lothaniel](lib_lothaniel_root_archive/bk_400.md) (Ballad sheet, folk belief, clear): Songs heard in Sylvaran, set down with the verses people disagree about.
-- [Read This at Canopy City Lothaniel](lib_lothaniel_root_archive/bk_433.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Sylvaran, with the pauses marked for the reader.
-- [Read This at Canopy City Lothaniel](lib_lothaniel_root_archive/bk_445.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Sylvaran, with the pauses marked for the reader.
+- [Sylvasday at the Root](lib_lothaniel_root_archive/bk_289.md) (Chapel notes, folk belief, clear): What a shrine floor in Sylvaran sees: keepers, mourners, festival crowds and quiet hours.
+- [The Naming and the Seed](lib_lothaniel_root_archive/bk_301.md) (Chapel notes, folk belief, clear): What a shrine floor in Sylvaran sees: keepers, mourners, festival crowds and quiet hours.
+- [What the Bridges Sing](lib_lothaniel_root_archive/bk_400.md) (Ballad sheet, folk belief, clear): Songs heard in Sylvaran, set down with the verses people disagree about.
+- [The Seed That Chose Late](lib_lothaniel_root_archive/bk_433.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Sylvaran, with the pauses marked for the reader.
+- [Why the Bridges Creak](lib_lothaniel_root_archive/bk_445.md) (Stories for reading aloud, folk belief, clear): Stories to read aloud in Sylvaran, with the pauses marked for the reader.
 - [The Latch at Canopy City Lothaniel](lib_lothaniel_root_archive/bk_450.md) (A short play, folk belief, clear): A short play for a latch and two voices, staged in Sylvaran.
 - [The Latch at Canopy City Lothaniel](lib_lothaniel_root_archive/bk_462.md) (A short play, folk belief, clear): A short play for a latch and two voices, staged in Sylvaran.
 - [The Year in Summer Court glades](lib_lothaniel_root_archive/bk_477.md) (Festival notes, folk belief, draft): The year's festivals in Everdusk, by household, shrine and branch hall.
-- [The Year in Thimblefolk Mushroom Town](lib_lothaniel_root_archive/bk_481.md) (Festival notes, folk belief, draft): The year's festivals in Mossdeep, by household, shrine and branch hall.
-- [Neighbors Near Thimblefolk Mushroom Town](lib_lothaniel_root_archive/bk_505.md) (Field guide, partial, draft): A walker's guide to the creatures near Mossdeep: what folk file them under, how to approach them, what to leave alone.
+- [The Pressed-Flower Calendar](lib_lothaniel_root_archive/bk_481.md) (Festival notes, folk belief, clear): The year's festivals in Mossdeep, by household, shrine and branch hall.
+- [The Big Things in the Ferns](lib_lothaniel_root_archive/bk_505.md) (Field guide, partial, clear): A walker's guide to the creatures near Mossdeep: what folk file them under, how to approach them, what to leave alone.
 - [Neighbors Near Canopy City Lothaniel](lib_lothaniel_root_archive/bk_506.md) (Field guide, partial, draft): A walker's guide to the creatures near Sylvaran: what folk file them under, how to approach them, what to leave alone.
 
 ## Lirian Licence Archive (`lib_lirian_licence_archive`, archive, proposed)

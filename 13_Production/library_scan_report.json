@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-14",
  "counts": {
-  "clear": 143,
+  "clear": 156,
   "hold": 40,
-  "fix": 337
+  "fix": 324
  },
  "books": {
   "bk_001": {
@@ -2324,18 +2324,16 @@
   },
   "bk_153": {
    "file": "aethwyrd/153-two-accounts-of-sylvaran.md",
-   "title": "Two Accounts of Sylvaran",
+   "title": "Who Owns a Branch",
    "kind": "local_history",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_154": {
    "file": "aethwyrd/154-two-accounts-of-iron-hold.md",
@@ -2502,18 +2500,16 @@
   },
   "bk_165": {
    "file": "aethwyrd/165-two-accounts-of-sylvaran.md",
-   "title": "Two Accounts of Sylvaran",
+   "title": "What We Say About the Court",
    "kind": "local_history",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_166": {
    "file": "aethwyrd/166-the-house-book-of-haneul-gate-towns.md",
@@ -2650,18 +2646,16 @@
   },
   "bk_175": {
    "file": "aethwyrd/175-the-house-book-of-canopy-city-lothaniel.md",
-   "title": "The House Book of Canopy City Lothaniel",
+   "title": "The House Book of the Ninth Bough",
    "kind": "household_book",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_176": {
    "file": "aethwyrd/176-the-house-book-of-karak-d-n.md",
@@ -2828,18 +2822,16 @@
   },
   "bk_187": {
    "file": "aethwyrd/187-the-house-book-of-canopy-city-lothaniel.md",
-   "title": "The House Book of Canopy City Lothaniel",
+   "title": "The Lodging-House Book of Widow Pellam",
    "kind": "household_book",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_188": {
    "file": "aethwyrd/188-the-house-book-of-karak-d-n.md",
@@ -3006,18 +2998,16 @@
   },
   "bk_199": {
    "file": "aethwyrd/199-the-house-book-of-canopy-city-lothaniel.md",
-   "title": "The House Book of Canopy City Lothaniel",
+   "title": "A Cottage by the Moonwell",
    "kind": "household_book",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_200": {
    "file": "aethwyrd/200-the-house-book-of-karak-d-n.md",
@@ -3127,7 +3117,7 @@
   },
   "bk_208": {
    "file": "aethwyrd/208-bench-notes-from-thimblefolk-mushroom-town.md",
-   "title": "Bench Notes from Thimblefolk Mushroom Town",
+   "title": "Small Tools, Done Properly",
    "kind": "craft_notes",
    "subjectRegion": "Mossdeep",
    "scanStatus": "clear",
@@ -3135,8 +3125,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_209": {
    "file": "aethwyrd/209-bench-notes-from-moraveil-goblin-village.md",
@@ -3283,7 +3273,7 @@
   },
   "bk_220": {
    "file": "aethwyrd/220-bench-notes-from-thimblefolk-mushroom-town.md",
-   "title": "Bench Notes from Thimblefolk Mushroom Town",
+   "title": "On Keeping Bees the Size of Dogs",
    "kind": "craft_notes",
    "subjectRegion": "Mossdeep",
    "scanStatus": "clear",
@@ -3291,8 +3281,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_221": {
    "file": "aethwyrd/221-bench-notes-from-moraveil-goblin-village.md",
@@ -4078,24 +4068,16 @@
   },
   "bk_271": {
    "file": "aethwyrd/271-branch-notes-for-thimblefolk-mushroom-town.md",
-   "title": "Branch Notes for Thimblefolk Mushroom Town",
+   "title": "The Big-Folk Desk: Notes for the Newly Appointed",
    "kind": "guild_manual",
    "subjectRegion": "Mossdeep",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "kaede_founded x1",
-    "kaede_nickname x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "ranks_origin: Kaede",
-    "ranks_origin: Kaede",
-    "ranks_origin: Aoyama"
-   ],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_272": {
    "file": "aethwyrd/272-branch-notes-for-moraveil-goblin-village.md",
@@ -4322,24 +4304,16 @@
   },
   "bk_283": {
    "file": "aethwyrd/283-branch-notes-for-thimblefolk-mushroom-town.md",
-   "title": "Branch Notes for Thimblefolk Mushroom Town",
+   "title": "Seeds in Cups: How the Council Votes, for Guild Observers",
    "kind": "guild_manual",
    "subjectRegion": "Mossdeep",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "kaede_founded x1",
-    "kaede_nickname x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
-   "originalHits": [
-    "ranks_origin: Kaede",
-    "ranks_origin: Kaede",
-    "ranks_origin: Aoyama"
-   ],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_284": {
    "file": "aethwyrd/284-branch-notes-for-moraveil-goblin-village.md",
@@ -4428,18 +4402,16 @@
   },
   "bk_289": {
    "file": "aethwyrd/289-what-the-shrine-floor-knows-in-canopy-city-lothaniel.md",
-   "title": "What the Shrine Floor Knows in Canopy City Lothaniel",
+   "title": "Sylvasday at the Root",
    "kind": "chapel_notes",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_290": {
    "file": "aethwyrd/290-what-the-shrine-floor-knows-in-karak-d-n.md",
@@ -4606,18 +4578,16 @@
   },
   "bk_301": {
    "file": "aethwyrd/301-what-the-shrine-floor-knows-in-canopy-city-lothaniel.md",
-   "title": "What the Shrine Floor Knows in Canopy City Lothaniel",
+   "title": "The Naming and the Seed",
    "kind": "chapel_notes",
    "subjectRegion": "Sylvaran",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.94,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_302": {
    "file": "aethwyrd/302-what-the-shrine-floor-knows-in-karak-d-n.md",
@@ -5555,18 +5525,16 @@
   },
   "bk_368": {
    "file": "aethwyrd/368-the-street-law-of-mossdeep.md",
-   "title": "The Street Law of Mossdeep",
+   "title": "The Law of Small Things",
    "kind": "law_notes",
    "subjectRegion": "Mossdeep",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_369": {
    "file": "aethwyrd/369-the-street-law-of-moraveil.md",
@@ -6023,7 +5991,7 @@
   },
   "bk_400": {
    "file": "aethwyrd/400-songs-heard-in-canopy-city-lothaniel.md",
-   "title": "Songs Heard in Canopy City Lothaniel",
+   "title": "What the Bridges Sing",
    "kind": "ballad_sheet",
    "subjectRegion": "Sylvaran",
    "scanStatus": "clear",
@@ -6031,8 +5999,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 1.0,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_401": {
    "file": "aethwyrd/401-songs-heard-in-karak-d-n.md",
@@ -6506,7 +6474,7 @@
   },
   "bk_433": {
    "file": "aethwyrd/433-read-this-at-canopy-city-lothaniel.md",
-   "title": "Read This at Canopy City Lothaniel",
+   "title": "The Seed That Chose Late",
    "kind": "story_aloud",
    "subjectRegion": "Sylvaran",
    "scanStatus": "clear",
@@ -6514,8 +6482,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_434": {
    "file": "aethwyrd/434-read-this-at-karak-d-n.md",
@@ -6662,7 +6630,7 @@
   },
   "bk_445": {
    "file": "aethwyrd/445-read-this-at-canopy-city-lothaniel.md",
-   "title": "Read This at Canopy City Lothaniel",
+   "title": "Why the Bridges Creak",
    "kind": "story_aloud",
    "subjectRegion": "Sylvaran",
    "scanStatus": "clear",
@@ -6670,8 +6638,8 @@
    "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.97,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_446": {
    "file": "aethwyrd/446-read-this-at-karak-d-n.md",
@@ -6935,18 +6903,16 @@
   },
   "bk_466": {
    "file": "aethwyrd/466-potsherds-from-the-mossdeep-copy.md",
-   "title": "Potsherds from the Mossdeep Copy",
+   "title": "A Sherd in the Clover",
    "kind": "valdrisian_fragment",
    "subjectRegion": "Mossdeep",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.92,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_467": {
    "file": "aethwyrd/467-potsherds-from-the-moraveil-copy.md",
@@ -7179,25 +7145,16 @@
   },
   "bk_481": {
    "file": "aethwyrd/481-the-year-in-thimblefolk-mushroom-town.md",
-   "title": "The Year in Thimblefolk Mushroom Town",
+   "title": "The Pressed-Flower Calendar",
    "kind": "festival_notes",
    "subjectRegion": "Mossdeep",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x6",
-    "lantern_night_heading x1",
-    "lantern_night_is x1"
-   ],
-   "reviewNotes": [
-    "vesper_moon:  the names you have a right to speak. A red moon in the sky is a thing sailors mention w"
-   ],
-   "originalHits": [
-    "tomas_seal: Lantern Night",
-    "tomas_seal: Lantern Night"
-   ],
-   "templatedShare": 0.93,
-   "quality": "templated"
+   "repairs": [],
+   "reviewNotes": [],
+   "originalHits": [],
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_482": {
    "file": "aethwyrd/482-the-year-in-moraveil-goblin-village.md",
@@ -7597,18 +7554,16 @@
   },
   "bk_505": {
    "file": "gap/reg_mossdeep-field-guide.md",
-   "title": "Neighbors Near Thimblefolk Mushroom Town",
+   "title": "The Big Things in the Ferns",
    "kind": "field_guide",
    "subjectRegion": "Mossdeep",
-   "scanStatus": "fix",
+   "scanStatus": "clear",
    "holdReason": "",
-   "repairs": [
-    "template_the_a x1"
-   ],
+   "repairs": [],
    "reviewNotes": [],
    "originalHits": [],
-   "templatedShare": 0.9,
-   "quality": "templated"
+   "templatedShare": 0.0,
+   "quality": "strong"
   },
   "bk_506": {
    "file": "gap/reg_sylvaran-field-guide.md",
