@@ -32,6 +32,15 @@ They commit that one JSON file on their own branch. A reference image must be th
 5. A usable mesh goes to review: `anime-fantasy-director` checks style and that it resembles nothing from another studio, then `review <id> --approve|--reject --by anime-fantasy-director --note "..."`.
 6. Approved meshes go to the requesting artist, who finishes them in Blender (creatures with `Tools/blender/finish_generated_monster.py`, see `13_Production/monster_model_pipeline.md`) and then marks them `finish <id> --by <artist>`.
 
+## What it is good for, measured (2026-11-13)
+
+A test run on a GTX 1650 reconstructed our own male base-body render: 4,582 vertices, watertight, one body, correct 1.8 m proportions, vertex colours carrying the tunic, belt, trousers and boots. The silhouette and colour blocking were right; the surface was faceted and lumpy, the hands were mittens with no fingers, and the face had no features.
+
+So:
+- **Good for** props, set dressing, one-off scenery, rough silhouettes to argue about, and anything that will be retopologised anyway.
+- **Not for player or NPC bodies.** `Tools/blender/ascend_characters` already makes those with clean topology, a humanoid rig and data-driven variants; a TripoSR body would be a worse starting point than what the generator gives. Say so and send the request back if someone asks for one.
+- **Text to image on this PC is slow.** The GTX 1650 must run Stable Diffusion in full precision (half precision returns black images), which costs about three minutes an image once the model is loaded, and several more on the first run. A reference image the project already has is always the faster and better input.
+
 ## Rules
 - Canon wins; teen rating, no fanservice, no gore. Original designs only: take ideas from other games, never their art, models or likenesses.
 - Every generated file keeps its `provenance.json` (tool, model, input hash, date, licence). TripoSR code and weights are MIT. Nothing generated enters `Game/` until `13_Production/third_party_assets.md` lists the AI tools used ("AI generation tools" section) and the director approved it.
@@ -44,3 +53,5 @@ They commit that one JSON file on their own branch. A reference image must be th
 - `python Tools/ai3d/model_requests.py list` shows no request stuck without a reason.
 - For each mesh you report: the front/side/three-quarter renders exist and you looked at them.
 - `npm run build` still passes if you changed anything outside `Tools/ai3d/`.
+
+**A check that could not run is NOT ASSESSED, never a pass** (`.claude/rules/skill-authoring.md`). Say which check it was and why: no GPU, the weights were not downloaded, Blender was busy, the reference image was missing. A mesh you did not look at is NOT ASSESSED, however good its vertex count looks, and a request whose renders failed does not go to the director as `generated`.

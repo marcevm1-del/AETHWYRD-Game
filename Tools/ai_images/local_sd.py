@@ -52,9 +52,14 @@ def build_prompt(prompt, style):
 
 
 def needs_full_precision(name):
-    """GTX 16-series cards return NaN (black images) from Stable Diffusion in half precision."""
-    n = (name or "").upper()
-    return "GTX 16" in n
+    """GTX 16-series cards produce NaN (black images) from Stable Diffusion in half precision.
+
+    Measured on a GTX 1650: fp16 everywhere gives a black image, and keeping only the VAE in fp32
+    does not help, because the NaN comes out of the UNet. Full precision works but does not fit in
+    4 GB, so those cards run with model offload: about 3 minutes an image once the model is loaded,
+    and several more the first time, when it is read from disk.
+    """
+    return "GTX 16" in (name or "").upper()
 
 
 def load_pipeline(model, cpu, half=None):
@@ -75,13 +80,14 @@ def load_pipeline(model, cpu, half=None):
         pipe.enable_vae_slicing()
     except Exception:
         pass
+    note = "fp16" if dtype == torch.float16 else "fp32"
     if use_cuda:
         vram_gb = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)
         if dtype == torch.float32 and vram_gb < 6:
-            pipe.enable_model_cpu_offload()  # 4 GB card in full precision: keep only the active part on the GPU
+            pipe.enable_model_cpu_offload()  # full precision on a small card: only the active part on the GPU
         else:
             pipe = pipe.to("cuda")
-    return pipe, ("cuda (%s, %s)" % (name, "fp16" if dtype == torch.float16 else "fp32") if use_cuda else "cpu")
+    return pipe, ("cuda (%s, %s)" % (name, note) if use_cuda else "cpu")
 
 
 def main(argv=None):

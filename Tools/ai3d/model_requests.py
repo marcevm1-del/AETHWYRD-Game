@@ -186,7 +186,17 @@ def default_mesh_tool(image):
 
 
 def rel(p):
-    return None if p is None else os.path.relpath(p, ROOT).replace("\\", "/")
+    """Path as recorded on the request: relative inside the repo, absolute outside it."""
+    if p is None:
+        return None
+    p = os.path.abspath(p)
+    try:
+        r = os.path.relpath(p, ROOT)
+    except ValueError:      # another drive
+        return p.replace("\\", "/")
+    if r.startswith(".."):  # outside the repo: an escaping relative path helps nobody
+        return p.replace("\\", "/")
+    return r.replace("\\", "/")
 
 
 def process(req, image_tool=default_image_tool, mesh_tool=default_mesh_tool, by="triposr-modeler"):
