@@ -35,13 +35,13 @@ A 3D third-person, single-player, offline-complete anime fantasy RPG (Unity 6 UR
 - **Update this PC and check everything:** double-click `Tools/pc/update_and_verify.cmd` (pulls `main`, runs `npm run build`, rebuilds the scene, runs PlayMode tests, builds the player, takes screenshots; logs in `Game/Logs/verify_<time>/`).
 - **Learn from a video tutorial (youtube-beta agent):** `python Tools/tutorial_vision/tv.py fetch <url|file>` then `scan <id>`; Claude reads the frames (docs: `13_Production/tutorial_vision.md`). Self-test: `python Tools/tutorial_vision/test_tv.py`.
 - **In-game screenshot:** `Game/Builds/Ring0/ProjectAscend.exe -screen-width 1600 -screen-height 900 -screen-fullscreen 0 -ascendShot <png> [-ascendShotAt x,z] [-ascendShotYaw deg]`
-- **Blender 5.2:** `E:/SteamLibrary/steamapps/common/Blender/blender.exe -b --factory-startup -P <script>`
+- **Blender 5.3:** `E:/SteamLibrary/steamapps/common/Blender/blender.exe -b --factory-startup -P <script>`
   - Buildings: `Tools/blender/build_building_library.py` (docs: `13_Production/building_system.md`).
   - Creatures: `Tools/blender/build_creature_library.py` (docs: `13_Production/creature_system.md`).
+  - Humans (male and female base bodies and data variants): `Tools/blender/build_character_library.py`, checks `Tools/blender/check_characters.py`; run both with `--python-exit-code 1` (docs: `13_Production/character_system.md`).
 - **AI concept images (Gemini first):** `python Tools/ai_images/generate_image.py --provider gemini --prompt "..."` (docs: `Tools/ai_images/README.md`). The user sets the key in their own shell (`GEMINI_API_KEY`); Claude never enters or stores keys. Output stays in the gitignored `Art/Generation/staging/`.
-- **Model requests (props, creatures, set dressing; never character bodies):** `python Tools/ai3d/model_requests.py new ...` then the `triposr-modeler` agent runs the queue (guide: `13_Production/model_requests/README.md`). Human bodies come from `Tools/blender/ascend_characters`.
 - **TripoSR image to 3D:** `E:\tsr-venv\Scripts\python.exe Tools\ai3d\triposr_run.py <image>` (docs: `Tools/ai3d/README.md`). Both tools are registered in `13_Production/third_party_assets.md`.
-- **Ask for a 3D model (any new Blender asset starts here):** `python Tools/ai3d/model_requests.py new --id <id> --kind <kind> --name "<what>" --by <agent> (--image <ref> | --prompt "<draw>")`; the **triposr-modeler** agent runs the queue (`13_Production/model_requests/README.md`).
+- **Ask for a 3D model (any new Blender asset starts here, except human bodies):** `python Tools/ai3d/model_requests.py new --id <id> --kind <kind> --name "<what>" --by <agent> (--image <ref> | --prompt "<draw>")`; the **triposr-modeler** agent runs the queue (`13_Production/model_requests/README.md`). The queue refuses character and NPC bodies: those come from `Tools/blender/ascend_characters`.
 - **Local image generation (no API key):** `E:\tsr-venv\Scripts\python.exe Tools\ai_images\local_sd.py --prompt "<what>" [--style object|concept]` (Stable Diffusion 1.5, CreativeML OpenRAIL-M; GTX 16-series runs it in full precision).
 
 ## The agent team

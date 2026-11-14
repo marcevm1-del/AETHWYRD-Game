@@ -1,0 +1,453 @@
+{
+ "schema": "face_expressions/1",
+ "rigContract": "human_v1",
+ "source": "Tools/blender/build_face_rig.py",
+ "notes": "Facial shape keys on the three face decal objects (eyes, brows, mouth) of every human, built by Tools/blender/ascend_animation/face_rig.py on top of the six keys the character generator ships (legacyKeys, kept unchanged). Weights are 0..1 (Unity blend shape weight = 100 x). No visemes and no lip-sync. L means the character's left (+X). There is no facial animation system: the game blends the expression weights (transition) and runs the blink data.",
+ "parts": {
+  "eyes": {
+   "object": "eyes",
+   "legacyKeys": [
+    "blink_L",
+    "blink_R"
+   ],
+   "keys": [
+    {
+     "name": "eyes_close_L",
+     "vertices": 538,
+     "maxMm": 24.02,
+     "movedVertices": 269
+    },
+    {
+     "name": "eyes_close_R",
+     "vertices": 538,
+     "maxMm": 24.22,
+     "movedVertices": 269
+    },
+    {
+     "name": "eyes_happy_L",
+     "vertices": 538,
+     "maxMm": 11.11,
+     "movedVertices": 269
+    },
+    {
+     "name": "eyes_happy_R",
+     "vertices": 538,
+     "maxMm": 11.11,
+     "movedVertices": 269
+    },
+    {
+     "name": "eyes_wide_L",
+     "vertices": 538,
+     "maxMm": 3.17,
+     "movedVertices": 253
+    },
+    {
+     "name": "eyes_wide_R",
+     "vertices": 538,
+     "maxMm": 3.17,
+     "movedVertices": 253
+    },
+    {
+     "name": "eyes_narrow_L",
+     "vertices": 538,
+     "maxMm": 9.26,
+     "movedVertices": 165
+    },
+    {
+     "name": "eyes_narrow_R",
+     "vertices": 538,
+     "maxMm": 9.3,
+     "movedVertices": 165
+    },
+    {
+     "name": "eyes_look_left",
+     "vertices": 538,
+     "maxMm": 5.45,
+     "movedVertices": 328
+    },
+    {
+     "name": "eyes_look_right",
+     "vertices": 538,
+     "maxMm": 5.55,
+     "movedVertices": 328
+    },
+    {
+     "name": "eyes_look_up",
+     "vertices": 538,
+     "maxMm": 2.23,
+     "movedVertices": 328
+    },
+    {
+     "name": "eyes_look_down",
+     "vertices": 538,
+     "maxMm": 2.24,
+     "movedVertices": 328
+    }
+   ]
+  },
+  "brows": {
+   "object": "brows",
+   "legacyKeys": [
+    "brow_up",
+    "brow_down"
+   ],
+   "keys": [
+    {
+     "name": "brow_up_L",
+     "vertices": 36,
+     "maxMm": 11.88,
+     "movedVertices": 18
+    },
+    {
+     "name": "brow_up_R",
+     "vertices": 36,
+     "maxMm": 11.88,
+     "movedVertices": 18
+    },
+    {
+     "name": "brow_down_L",
+     "vertices": 36,
+     "maxMm": 9.02,
+     "movedVertices": 18
+    },
+    {
+     "name": "brow_down_R",
+     "vertices": 36,
+     "maxMm": 9.01,
+     "movedVertices": 18
+    },
+    {
+     "name": "brow_inner_up_L",
+     "vertices": 36,
+     "maxMm": 13.53,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_inner_up_R",
+     "vertices": 36,
+     "maxMm": 13.51,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_inner_down_L",
+     "vertices": 36,
+     "maxMm": 12.5,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_inner_down_R",
+     "vertices": 36,
+     "maxMm": 12.52,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_outer_up_L",
+     "vertices": 36,
+     "maxMm": 11.76,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_outer_up_R",
+     "vertices": 36,
+     "maxMm": 11.79,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_outer_down_L",
+     "vertices": 36,
+     "maxMm": 10.78,
+     "movedVertices": 16
+    },
+    {
+     "name": "brow_outer_down_R",
+     "vertices": 36,
+     "maxMm": 10.78,
+     "movedVertices": 16
+    }
+   ]
+  },
+  "mouth": {
+   "object": "mouth",
+   "legacyKeys": [
+    "smile",
+    "open"
+   ],
+   "keys": [
+    {
+     "name": "mouth_smile_wide",
+     "vertices": 28,
+     "maxMm": 12.33,
+     "movedVertices": 16
+    },
+    {
+     "name": "mouth_frown",
+     "vertices": 28,
+     "maxMm": 10.63,
+     "movedVertices": 16
+    },
+    {
+     "name": "mouth_smirk_L",
+     "vertices": 28,
+     "maxMm": 12.64,
+     "movedVertices": 16
+    },
+    {
+     "name": "mouth_smirk_R",
+     "vertices": 28,
+     "maxMm": 12.83,
+     "movedVertices": 16
+    },
+    {
+     "name": "mouth_open_small",
+     "vertices": 28,
+     "maxMm": 13.41,
+     "movedVertices": 14
+    },
+    {
+     "name": "mouth_open_wide",
+     "vertices": 28,
+     "maxMm": 37.66,
+     "movedVertices": 18
+    },
+    {
+     "name": "mouth_o",
+     "vertices": 28,
+     "maxMm": 25.64,
+     "movedVertices": 18
+    },
+    {
+     "name": "mouth_pressed",
+     "vertices": 28,
+     "maxMm": 3.19,
+     "movedVertices": 17
+    },
+    {
+     "name": "mouth_pout",
+     "vertices": 28,
+     "maxMm": 12.72,
+     "movedVertices": 17
+    }
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "part": "eyes",
+   "left": "eyes_close_L",
+   "right": "eyes_close_R"
+  },
+  {
+   "part": "eyes",
+   "left": "eyes_happy_L",
+   "right": "eyes_happy_R"
+  },
+  {
+   "part": "eyes",
+   "left": "eyes_wide_L",
+   "right": "eyes_wide_R"
+  },
+  {
+   "part": "eyes",
+   "left": "eyes_narrow_L",
+   "right": "eyes_narrow_R"
+  },
+  {
+   "part": "brows",
+   "left": "brow_up_L",
+   "right": "brow_up_R"
+  },
+  {
+   "part": "brows",
+   "left": "brow_down_L",
+   "right": "brow_down_R"
+  },
+  {
+   "part": "brows",
+   "left": "brow_inner_up_L",
+   "right": "brow_inner_up_R"
+  },
+  {
+   "part": "brows",
+   "left": "brow_inner_down_L",
+   "right": "brow_inner_down_R"
+  },
+  {
+   "part": "brows",
+   "left": "brow_outer_up_L",
+   "right": "brow_outer_up_R"
+  },
+  {
+   "part": "brows",
+   "left": "brow_outer_down_L",
+   "right": "brow_outer_down_R"
+  },
+  {
+   "part": "mouth",
+   "left": "mouth_smirk_L",
+   "right": "mouth_smirk_R"
+  }
+ ],
+ "expressions": {
+  "neutral": {},
+  "happy": {
+   "mouth_smile_wide": 0.6,
+   "brow_up_L": 0.15,
+   "brow_up_R": 0.15
+  },
+  "joy": {
+   "mouth_smile_wide": 1.0,
+   "mouth_open_small": 0.5,
+   "eyes_happy_L": 1.0,
+   "eyes_happy_R": 1.0,
+   "brow_up_L": 0.3,
+   "brow_up_R": 0.3
+  },
+  "laugh": {
+   "mouth_smile_wide": 1.0,
+   "mouth_open_wide": 0.8,
+   "eyes_happy_L": 1.0,
+   "eyes_happy_R": 1.0,
+   "brow_up_L": 0.4,
+   "brow_up_R": 0.4
+  },
+  "sad": {
+   "mouth_frown": 0.8,
+   "eyes_look_down": 0.5,
+   "brow_inner_up_L": 0.9,
+   "brow_inner_up_R": 0.9,
+   "brow_outer_down_L": 0.5,
+   "brow_outer_down_R": 0.5,
+   "eyes_narrow_L": 0.25,
+   "eyes_narrow_R": 0.25
+  },
+  "worried": {
+   "mouth_frown": 0.4,
+   "mouth_pressed": 0.3,
+   "brow_inner_up_L": 1.0,
+   "brow_inner_up_R": 1.0,
+   "eyes_wide_L": 0.15,
+   "eyes_wide_R": 0.15
+  },
+  "angry": {
+   "mouth_frown": 0.7,
+   "mouth_pressed": 0.6,
+   "brow_inner_down_L": 1.0,
+   "brow_inner_down_R": 1.0,
+   "brow_outer_up_L": 0.3,
+   "brow_outer_up_R": 0.3,
+   "eyes_narrow_L": 0.35,
+   "eyes_narrow_R": 0.35
+  },
+  "surprised": {
+   "mouth_o": 0.9,
+   "brow_up_L": 1.0,
+   "brow_up_R": 1.0,
+   "eyes_wide_L": 1.0,
+   "eyes_wide_R": 1.0
+  },
+  "shy": {
+   "mouth_smile_wide": 0.3,
+   "eyes_look_down": 0.7,
+   "eyes_look_right": 0.3,
+   "brow_inner_up_L": 0.4,
+   "brow_inner_up_R": 0.4
+  },
+  "smug": {
+   "mouth_smirk_L": 1.0,
+   "brow_up_R": 0.6,
+   "brow_down_L": 0.3,
+   "eyes_narrow_L": 0.4,
+   "eyes_narrow_R": 0.4
+  },
+  "determined": {
+   "mouth_pressed": 0.8,
+   "brow_inner_down_L": 0.6,
+   "brow_inner_down_R": 0.6,
+   "eyes_narrow_L": 0.15,
+   "eyes_narrow_R": 0.15
+  },
+  "tired": {
+   "mouth_frown": 0.25,
+   "eyes_look_down": 0.3,
+   "eyes_narrow_L": 0.8,
+   "eyes_narrow_R": 0.8,
+   "brow_inner_up_L": 0.3,
+   "brow_inner_up_R": 0.3
+  },
+  "pain": {
+   "mouth_frown": 0.6,
+   "mouth_pressed": 0.5,
+   "eyes_close_L": 1.0,
+   "eyes_close_R": 1.0,
+   "brow_inner_up_L": 1.0,
+   "brow_inner_up_R": 1.0
+  },
+  "embarrassed": {
+   "mouth_o": 0.3,
+   "mouth_smile_wide": 0.2,
+   "eyes_look_down": 0.5,
+   "brow_inner_up_L": 0.8,
+   "brow_inner_up_R": 0.8
+  },
+  "thinking": {
+   "eyes_look_up": 0.8,
+   "eyes_look_left": 0.4,
+   "brow_up_R": 0.5,
+   "mouth_smirk_R": 0.3,
+   "mouth_pressed": 0.3
+  },
+  "sleepy": {
+   "mouth_open_small": 0.3,
+   "eyes_close_L": 0.9,
+   "eyes_close_R": 0.9,
+   "brow_down_L": 0.3,
+   "brow_down_R": 0.3
+  },
+  "sulking": {
+   "mouth_pout": 1.0,
+   "eyes_look_left": 0.4,
+   "brow_inner_down_L": 0.4,
+   "brow_inner_down_R": 0.4,
+   "eyes_narrow_L": 0.3,
+   "eyes_narrow_R": 0.3
+  },
+  "wink": {
+   "eyes_close_L": 1.0,
+   "mouth_smile_wide": 0.6,
+   "brow_up_R": 0.2
+  },
+  "blink": {
+   "eyes_close_L": 1.0,
+   "eyes_close_R": 1.0
+  }
+ },
+ "blink": {
+  "intervalSec": [
+   2.0,
+   5.5
+  ],
+  "closeSec": 0.06,
+  "holdSec": 0.03,
+  "openSec": 0.09,
+  "doubleBlinkChance": 0.12,
+  "keys": [
+   "eyes_close_L",
+   "eyes_close_R"
+  ]
+ },
+ "transition": {
+  "defaultBlendSec": 0.18,
+  "notes": "blend weights linearly, ease-out; a transition to or from `blink` or `sleepy` is 0.08 s"
+ },
+ "measured": {
+  "bodies": [
+   "human_male_base",
+   "human_female_base"
+  ],
+  "closestExpressionPair": [
+   "happy",
+   "shy"
+  ],
+  "closestMaxVertexMm": 3.46
+ }
+}

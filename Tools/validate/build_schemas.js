@@ -310,6 +310,51 @@ const SCHEMAS = {
     }
   };
 }
+// --- Human character library (Data/Characters/human_library.json, a singleton; character generator) ---
+{
+  const HEX = { type: 'string', pattern: '^#[0-9A-Fa-f]{6}$' };
+  const ID = { type: 'string', pattern: '^[a-z][a-z0-9_]*$' };
+  const frac = (a, b) => ({ type: 'number', minimum: a, maximum: b });
+  const rows = (props, req) => ({ type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: req, properties: props } });
+  SCHEMAS.characters = {
+    title: 'Human character library', type: 'object', additionalProperties: false,
+    required: ['version', 'notes', 'rig', 'bodies', 'builds', 'ages', 'palettes', 'hairStyles', 'outfits', 'variants'],
+    properties: {
+      version: { type: 'integer', minimum: 1 }, notes: { type: 'string' },
+      rig: { type: 'object', additionalProperties: false, required: ['requiredBones', 'extraBones', 'maxInfluences', 'headsTall'], properties: {
+        requiredBones: { type: 'array', minItems: 52, maxItems: 52, uniqueItems: true, items: { type: 'string', pattern: '^[A-Z][A-Za-z]+$' } },
+        extraBones: { type: 'array', uniqueItems: true, items: { type: 'string', pattern: '^[A-Z][A-Za-z_0-9]+$' } },
+        maxInfluences: { type: 'integer', minimum: 1, maximum: 4 },
+        headsTall: { type: 'array', minItems: 2, maxItems: 2, items: { type: 'number', minimum: 5, maximum: 9 } } } },
+      bodies: rows({
+        id: ID, sex: { enum: ['male', 'female'] }, label: { type: 'string' },
+        heightM: frac(1.3, 2.2), heightBand: { type: 'array', minItems: 2, maxItems: 2, items: frac(1.3, 2.2) }, headsTall: frac(6.5, 7.5),
+        shoulderHalf: frac(0.05, 0.2), chestHalf: frac(0.05, 0.2), waistHalf: frac(0.04, 0.2), hipHalf: frac(0.05, 0.2),
+        chestDepth: frac(0.03, 0.1), neckHalf: frac(0.02, 0.06), headHalf: frac(0.03, 0.07),
+        hipJointZ: frac(0.45, 0.56), upperArmLen: frac(0.12, 0.22), foreArmLen: frac(0.1, 0.2), handLen: frac(0.06, 0.12),
+        thighHalf: frac(0.03, 0.08), calfHalf: frac(0.02, 0.06), ankleHalf: frac(0.01, 0.04), footLen: frac(0.1, 0.18),
+        eyeWidth: frac(0.15, 0.3), eyeHeightRatio: frac(0.5, 1.0)
+      }, ['id', 'sex', 'label', 'heightM', 'heightBand', 'headsTall', 'shoulderHalf', 'chestHalf', 'waistHalf', 'hipHalf', 'chestDepth', 'neckHalf', 'headHalf',
+        'hipJointZ', 'upperArmLen', 'foreArmLen', 'handLen', 'thighHalf', 'calfHalf', 'ankleHalf', 'footLen', 'eyeWidth', 'eyeHeightRatio']),
+      builds: rows({ id: ID, label: { type: 'string' }, girth: frac(0.7, 1.3), shoulders: frac(0.7, 1.3), waist: frac(0.7, 1.3), limbs: frac(0.7, 1.3) }, ['id', 'label', 'girth', 'shoulders', 'waist', 'limbs']),
+      ages: rows({ id: ID, label: { type: 'string' }, headScale: frac(0.9, 1.1), eyeScale: frac(0.8, 1.2), jaw: frac(0.8, 1.2), stoop: frac(0, 0.05), browDrop: frac(0, 0.01) },
+        ['id', 'label', 'headScale', 'eyeScale', 'jaw', 'stoop', 'browDrop']),
+      palettes: { type: 'object', additionalProperties: false, required: ['skin', 'hair', 'eyes', 'outfit'], properties: {
+        skin: rows({ id: ID, label: { type: 'string' }, hex: HEX, blush: HEX }, ['id', 'label', 'hex', 'blush']),
+        hair: rows({ id: ID, label: { type: 'string' }, hex: HEX, tip: HEX }, ['id', 'label', 'hex', 'tip']),
+        eyes: rows({ id: ID, label: { type: 'string' }, hex: HEX }, ['id', 'label', 'hex']),
+        outfit: rows({ id: ID, label: { type: 'string' }, primary: HEX, secondary: HEX, trim: HEX, leather: HEX, cloak: HEX }, ['id', 'label', 'primary', 'secondary', 'trim', 'leather', 'cloak']) } },
+      hairStyles: rows({ id: ID, body: { enum: ['male', 'female', 'any'] }, label: { type: 'string' } }, ['id', 'body', 'label']),
+      outfits: rows({ id: ID, body: { enum: ['male', 'female'] }, label: { type: 'string' },
+        parts: { type: 'array', minItems: 1, uniqueItems: true, items: { enum: ['top', 'bottom', 'skirt', 'belt', 'boots', 'bracers', 'cloak'] } },
+        top: { type: 'object' }, bottom: { type: 'object' } }, ['id', 'body', 'label', 'parts']),
+      variants: rows({ id: ID, body: ID, isBase: { type: 'boolean' }, seed: { type: 'integer', minimum: 0 }, heightM: frac(1.3, 2.2),
+        build: ID, age: ID, skin: ID, hair: { type: 'object', additionalProperties: false, required: ['style', 'colour'], properties: { style: ID, colour: ID } },
+        eyes: ID, outfit: { type: 'object', additionalProperties: false, required: ['id', 'colours'], properties: { id: ID, colours: ID } }, cloak: { type: 'boolean' },
+        earLength: frac(0.8, 2.0) }, ['id', 'body', 'seed', 'heightM', 'build', 'age', 'skin', 'hair', 'eyes', 'outfit'])
+    }
+  };
+}
 // --- Crafting rules, life skills and recipe rows (Wave B; Data/Items/crafting_rules.json, life_skills.json, recipes.json) ---
 {
   const TIER_ID = { type: 'string', enum: ['poor', 'normal', 'fine', 'superior', 'masterwork', 'legendary'] };
@@ -663,6 +708,7 @@ require('./graph_schemas')(SCHEMAS); // Wave F-lite
 require('./audio_schemas')(SCHEMAS); // Wave D
 require('./weapon_schemas')(SCHEMAS); // weapon movesets
 require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
+require('./library_schemas')(SCHEMAS); // Libraries and books
 require('./front_end_schemas')(SCHEMAS); // Phase 1B
 require('./encounter_schemas')(SCHEMAS); // Regional encounter tables
 for (const [name, s] of Object.entries(SCHEMAS)) {

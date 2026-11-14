@@ -61,6 +61,8 @@ namespace Ascend.Core
         public StablesSave Stables { get; set; }
         /// <summary>The Civilization Archive: entries Unknown / Heard / Visited, fragments found, artifacts restored (null in older saves; Upgrade fills it).</summary>
         public ArchiveSave Archive { get; set; }
+        /// <summary>Books heard of and read, and the knowledge rewards already given (null in older saves; Upgrade fills it).</summary>
+        public ReadingSave Reading { get; set; }
         /// <summary>The day clock: play seconds since the first morning (null in older saves: 08:00 day 1).</summary>
         public double? ClockSeconds { get; set; }
         public List<RestBuff> RestBuffs { get; set; } = new List<RestBuff>();
@@ -161,6 +163,9 @@ namespace Ascend.Core
             s.Archive.Entries ??= new Dictionary<string, MapStatus>();
             s.Archive.FoundFragments ??= new List<string>();
             s.Archive.Restored ??= new List<string>();
+            s.Reading ??= new ReadingSave();
+            s.Reading.Books ??= new Dictionary<string, MapStatus>();
+            s.Reading.RewardsGiven ??= new List<string>();
             s.Accessibility = (s.Accessibility ?? new AccessibilitySettings()).Sanitize();
             // Companions: drop unusable rows quietly (no id, duplicates keep the last), never reject the save.
             var bonds = new List<CompanionBondSave>();
