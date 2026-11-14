@@ -38,9 +38,11 @@ This character can change with story flags. Use the state list to keep dialogue,
 - [[Quests/The Wooden Card|The Wooden Card]]
 - [[Quests/Mina's Lost Earring|Mina's Lost Earring]]
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]]
+- [[Quests/Two on the Road|Two on the Road]]
 - [[Quests/Weekly Board/Goblin Cull|Goblin Cull]]
 - [[Quests/Weekly Board/Herb Run|Herb Run]]
 - [[Quests/Weekly Board/Open Hunting Contract|Open Hunting Contract]]
+- [[Quests/Weekly Board/Party of Two Contract|Party of Two Contract]]
 
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** From early Act III she is replaced by Lady Nocturne; the real Mina is imprisoned beneath Vharlen.

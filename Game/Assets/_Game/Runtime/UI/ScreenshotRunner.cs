@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Ascend.Game
 {
@@ -12,7 +13,9 @@ namespace Ascend.Game
     /// opens the map on that page instead (with <c>-ascendShotZoom z</c>, <c>-ascendShotRank E</c> to stand at a guild rank
     /// and get its map seal, and <c>-ascendShotWalk</c> to ink a stroll around the village first).
     /// <c>-ascendShotWindow crafting|companions|journal|accessibility|photo|overlay</c> opens that Phase 1 window (with a little demo data in the
-    /// throwaway save) before the shot.
+    /// throwaway save) before the shot. The player starts in the Title scene: a plain <c>-ascendShot</c> skips it and captures in the field;
+    /// <c>-ascendFront title|menu|creator|loading|settings</c> captures that front-end screen instead (FrontEndController), and
+    /// <c>-ascendSaveDir dir</c> points the saves at a folder (a demo slot is written there for <c>menu</c> when it has none).
     /// </summary>
     public sealed class ScreenshotRunner : MonoBehaviour
     {
@@ -29,13 +32,44 @@ namespace Ascend.Game
         {
             string path = Arg("-ascendShot");
             if (string.IsNullOrEmpty(path)) return;
+            // Never touch the player's own save: captures use a throwaway folder (or the one -ascendSaveDir names).
+            string saveDir = Arg("-ascendSaveDir");
+            if (!string.IsNullOrEmpty(saveDir)) { PlayerSave.Folder = Path.GetFullPath(saveDir); Directory.CreateDirectory(PlayerSave.Folder); }
+            else
+            {
+                string sandbox = Path.Combine(Application.temporaryCachePath, "ascend_shot_save");
+                if (Directory.Exists(sandbox)) Directory.Delete(sandbox, true);
+                PlayerSave.Folder = sandbox;
+            }
+            // -ascendFront: the Title scene's FrontEndController takes the shot itself.
+            if (!string.IsNullOrEmpty(Arg("-ascendFront"))) return;
+            string full = Path.GetFullPath(path);
+            // The player now starts in the Title scene: a plain -ascendShot skips the title, loads the field and captures there.
+            if (SceneManager.GetActiveScene().name != FrontEndSession.FieldScene)
+            {
+                SceneManager.sceneLoaded += OnSceneLoaded;
+                _pendingPath = full;
+                SceneManager.LoadScene(FrontEndSession.FieldScene);
+                return;
+            }
+            Spawn(full);
+        }
+
+        static string _pendingPath;
+
+        static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.name != FrontEndSession.FieldScene || _pendingPath == null) return;
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            Spawn(_pendingPath);
+            _pendingPath = null;
+        }
+
+        static void Spawn(string fullPath)
+        {
             var go = new GameObject("ScreenshotRunner");
             DontDestroyOnLoad(go);
-            go.AddComponent<ScreenshotRunner>()._path = Path.GetFullPath(path);
-            // Never touch the player's own save: captures use a throwaway folder.
-            string sandbox = Path.Combine(Application.temporaryCachePath, "ascend_shot_save");
-            if (Directory.Exists(sandbox)) Directory.Delete(sandbox, true);
-            PlayerSave.Folder = sandbox;
+            go.AddComponent<ScreenshotRunner>()._path = fullPath;
         }
 
         static string Arg(string name)

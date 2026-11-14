@@ -1,6 +1,6 @@
 # The Agent Team
 
-> 27 specialist Claude subagents that build AETHWYRD together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
+> 28 specialist Claude subagents that build AETHWYRD together. Definitions: `.claude/agents/<name>.md` (role, the files each owns, how it works, the checks it runs, the shared house rules). Shared rules for every session: `CLAUDE.md`.
 
 > **Handover:** unfinished agent tasks, with briefs ready to paste, are in `13_Production/handover/` (latest: `handover_2026-11-02.md`).
 
@@ -42,6 +42,7 @@
 | 25 | **audio-designer** | Art & audio | Audio specs in `13_Production/`, `Game/Assets/_Game/Audio/` |
 | 26 | **anime-fantasy-director** | Leadership | `13_Production/art_direction.md` (style guide), `reports/design_review_*.md`; reviews and directs everyone for genre fit and design quality |
 | 27 | **youtube-beta** (beta) | Tools | `Tools/tutorial_vision/`, `13_Production/tutorial_vision.md`, the Blender/Unity MCP entries, `TutorialVisionCapture.cs`; learns techniques from video tutorials by reading their frames and applies them in Blender or Unity |
+| 28 | **triposr-modeler** | Tools | `13_Production/model_requests/`, `Tools/ai3d/`, generated output in the gitignored `Art/Generation/staging/`. Turns designers' model requests into meshes with TripoSR (image to 3D) on the local GPU; reviewed by anime-fantasy-director, finished in Blender by the requesting artist |
 
 **Two files have shared owners:**
 - `Code/Ascend.Core/MonsterAi.cs`, `Companions.cs` and `BossPhases.cs` belong to ai-engineer together with core-rules-engineer. Only one of them edits these in any given wave.

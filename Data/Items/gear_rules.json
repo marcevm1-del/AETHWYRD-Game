@@ -1,37 +1,363 @@
 {
  "notes": "Gear customisation rules (12_Systems/gear_and_runes.md, 13_Production/gear_v6b_audit.md). Runes go into sockets, one enchantment scroll goes on a piece of gear, and a blade part plus a hilt part assemble into a sword. Everything is additive and small (09_Equipment/item_and_economy_design.md 5.4: no multiplicative stacking). Nothing here can break, wear out or destroy gear or materials: sockets and scrolls are removable, a replaced enchantment is simply replaced, assembly always succeeds. Rune and scroll magnitude scales with the item's quality tier (statMult). Decided 2026-11-08 by Claude under delegated creative control; the user may overrule.",
  "sockets": {
-  "byRarity": { "Common": 0, "Uncommon": 0, "Rare": 1, "Epic": 2, "Legendary": 3, "Mythic": 3, "Divine": 0 },
+  "byRarity": {
+   "Common": 0,
+   "Uncommon": 0,
+   "Rare": 1,
+   "Epic": 2,
+   "Legendary": 3,
+   "Mythic": 3,
+   "Divine": 0
+  },
   "masterworkBonus": 1,
   "max": 3
  },
  "enchantSlots": 1,
- "stations": { "socket": "rune_anvil", "enchant": "enchanting_table", "assemble": "forge" },
+ "stations": {
+  "socket": "rune_anvil",
+  "enchant": "enchanting_table",
+  "assemble": "forge"
+ },
  "runes": [
-  { "id": "itm_rune_ember", "fits": ["weapon"], "stats": { "atk": 2 } },
-  { "id": "itm_rune_tide", "fits": ["armor", "accessory"], "stats": { "mdef": 2 } },
-  { "id": "itm_rune_stone", "fits": ["armor"], "stats": { "def": 2 } },
-  { "id": "itm_rune_anvil", "fits": ["weapon", "armor", "accessory"], "stats": { "hp": 12 } },
-  { "id": "itm_rune_hearth", "fits": ["weapon", "accessory"], "stats": { "matk": 2 } },
-  { "id": "itm_rune_gale", "fits": ["weapon", "accessory"], "stats": { "crit": 0.01 } }
+  {
+   "id": "itm_rune_ember",
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "atk": 2
+   }
+  },
+  {
+   "id": "itm_rune_tide",
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "stats": {
+    "mdef": 2
+   }
+  },
+  {
+   "id": "itm_rune_stone",
+   "fits": [
+    "armor"
+   ],
+   "stats": {
+    "def": 2
+   }
+  },
+  {
+   "id": "itm_rune_anvil",
+   "fits": [
+    "weapon",
+    "armor",
+    "accessory"
+   ],
+   "stats": {
+    "hp": 12
+   }
+  },
+  {
+   "id": "itm_rune_hearth",
+   "fits": [
+    "weapon",
+    "accessory"
+   ],
+   "stats": {
+    "matk": 2
+   }
+  },
+  {
+   "id": "itm_rune_gale",
+   "fits": [
+    "weapon",
+    "accessory"
+   ],
+   "stats": {
+    "crit": 0.01
+   }
+  },
+  {
+   "id": "itm_rune_spark",
+   "fits": [
+    "weapon",
+    "accessory"
+   ],
+   "stats": {
+    "matk": 3
+   }
+  },
+  {
+   "id": "itm_rune_dusk",
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "stats": {
+    "mdef": 3
+   }
+  },
+  {
+   "id": "itm_rune_bastion",
+   "fits": [
+    "armor"
+   ],
+   "stats": {
+    "def": 3
+   }
+  },
+  {
+   "id": "itm_rune_cinder",
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "atk": 4
+   }
+  },
+  {
+   "id": "itm_rune_warden",
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "stats": {
+    "hp": 24
+   }
+  }
  ],
  "runeWords": [
-  { "id": "word_forge_oath", "name": "Forge-Oath", "runes": ["itm_rune_ember", "itm_rune_anvil"], "fits": ["weapon"], "stats": { "atk": 3 } },
-  { "id": "word_stonewatch", "name": "Stonewatch", "runes": ["itm_rune_stone", "itm_rune_anvil"], "fits": ["armor"], "stats": { "def": 3, "hp": 10 } },
-  { "id": "word_stormfast", "name": "Stormfast", "runes": ["itm_rune_gale", "itm_rune_tide"], "fits": ["accessory"], "stats": { "crit": 0.015 } },
-  { "id": "word_hearthfire", "name": "Hearthfire", "runes": ["itm_rune_hearth", "itm_rune_ember", "itm_rune_anvil"], "fits": ["weapon"], "stats": { "matk": 4, "atk": 2 } }
+  {
+   "id": "word_forge_oath",
+   "name": "Forge-Oath",
+   "runes": [
+    "itm_rune_ember",
+    "itm_rune_anvil"
+   ],
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "atk": 3
+   }
+  },
+  {
+   "id": "word_stonewatch",
+   "name": "Stonewatch",
+   "runes": [
+    "itm_rune_stone",
+    "itm_rune_anvil"
+   ],
+   "fits": [
+    "armor"
+   ],
+   "stats": {
+    "def": 3,
+    "hp": 10
+   }
+  },
+  {
+   "id": "word_stormfast",
+   "name": "Stormfast",
+   "runes": [
+    "itm_rune_gale",
+    "itm_rune_tide"
+   ],
+   "fits": [
+    "accessory"
+   ],
+   "stats": {
+    "crit": 0.015
+   }
+  },
+  {
+   "id": "word_hearthfire",
+   "name": "Hearthfire",
+   "runes": [
+    "itm_rune_hearth",
+    "itm_rune_ember",
+    "itm_rune_anvil"
+   ],
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "matk": 4,
+    "atk": 2
+   }
+  },
+  {
+   "id": "word_cindersong",
+   "name": "Cindersong",
+   "runes": [
+    "itm_rune_cinder",
+    "itm_rune_spark"
+   ],
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "atk": 3,
+    "matk": 3
+   }
+  },
+  {
+   "id": "word_bastion_vow",
+   "name": "Bastion-Vow",
+   "runes": [
+    "itm_rune_bastion",
+    "itm_rune_warden"
+   ],
+   "fits": [
+    "armor"
+   ],
+   "stats": {
+    "def": 4,
+    "hp": 20
+   }
+  },
+  {
+   "id": "word_duskwalk",
+   "name": "Duskwalk",
+   "runes": [
+    "itm_rune_dusk",
+    "itm_rune_gale"
+   ],
+   "fits": [
+    "accessory"
+   ],
+   "stats": {
+    "crit": 0.02,
+    "mdef": 2
+   }
+  }
  ],
  "enchantments": [
-  { "id": "enc_emberbrand", "name": "Emberbrand", "itemId": "itm_scroll_emberbrand", "fits": ["weapon"], "stats": { "atk": 2 }, "element": "Fire" },
-  { "id": "enc_wardweave", "name": "Wardweave", "itemId": "itm_scroll_wardweave", "fits": ["armor"], "stats": { "def": 2, "mdef": 2 } },
-  { "id": "enc_vitality", "name": "Vitality", "itemId": "itm_scroll_vitality", "fits": ["armor", "accessory"], "stats": { "hp": 20 } },
-  { "id": "enc_nightstep", "name": "Nightstep", "itemId": "itm_scroll_nightstep", "fits": ["armor", "accessory"], "stats": { "crit": 0.02 } },
-  { "id": "enc_stormthread", "name": "Stormthread", "itemId": "itm_scroll_stormthread", "fits": ["weapon"], "stats": { "matk": 3 }, "element": "Lightning" }
+  {
+   "id": "enc_emberbrand",
+   "name": "Emberbrand",
+   "itemId": "itm_scroll_emberbrand",
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "atk": 2
+   },
+   "element": "Fire"
+  },
+  {
+   "id": "enc_wardweave",
+   "name": "Wardweave",
+   "itemId": "itm_scroll_wardweave",
+   "fits": [
+    "armor"
+   ],
+   "stats": {
+    "def": 2,
+    "mdef": 2
+   }
+  },
+  {
+   "id": "enc_vitality",
+   "name": "Vitality",
+   "itemId": "itm_scroll_vitality",
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "stats": {
+    "hp": 20
+   }
+  },
+  {
+   "id": "enc_nightstep",
+   "name": "Nightstep",
+   "itemId": "itm_scroll_nightstep",
+   "fits": [
+    "armor",
+    "accessory"
+   ],
+   "stats": {
+    "crit": 0.02
+   }
+  },
+  {
+   "id": "enc_stormthread",
+   "name": "Stormthread",
+   "itemId": "itm_scroll_stormthread",
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "matk": 3
+   },
+   "element": "Lightning"
+  },
+  {
+   "id": "enc_rimebrand",
+   "name": "Rimebrand",
+   "itemId": "itm_scroll_rimebrand",
+   "fits": [
+    "weapon"
+   ],
+   "stats": {
+    "atk": 2
+   },
+   "element": "Ice"
+  },
+  {
+   "id": "enc_ironhide",
+   "name": "Ironhide",
+   "itemId": "itm_scroll_ironhide",
+   "fits": [
+    "armor"
+   ],
+   "stats": {
+    "def": 3
+   }
+  },
+  {
+   "id": "enc_lanternlight",
+   "name": "Lanternlight",
+   "itemId": "itm_scroll_lanternlight",
+   "fits": [
+    "accessory"
+   ],
+   "stats": {
+    "matk": 3
+   }
+  }
  ],
  "assemblies": [
-  { "id": "asm_tempered_shortsword", "name": "Tempered Shortsword", "skill": "blacksmithing", "lifeRank": "F",
-    "output": "itm_tempered_shortsword", "blades": ["itm_part_scrap_blade"], "hilts": ["itm_part_pelt_hilt", "itm_part_fang_hilt"] },
-  { "id": "asm_ironwrought_longsword", "name": "Ironwrought Longsword", "skill": "blacksmithing", "lifeRank": "E",
-    "output": "itm_ironwrought_longsword", "blades": ["itm_part_iron_blade"], "hilts": ["itm_part_pelt_hilt", "itm_part_fang_hilt"] }
+  {
+   "id": "asm_tempered_shortsword",
+   "name": "Tempered Shortsword",
+   "skill": "blacksmithing",
+   "lifeRank": "F",
+   "output": "itm_tempered_shortsword",
+   "blades": [
+    "itm_part_scrap_blade"
+   ],
+   "hilts": [
+    "itm_part_pelt_hilt",
+    "itm_part_fang_hilt"
+   ]
+  },
+  {
+   "id": "asm_ironwrought_longsword",
+   "name": "Ironwrought Longsword",
+   "skill": "blacksmithing",
+   "lifeRank": "E",
+   "output": "itm_ironwrought_longsword",
+   "blades": [
+    "itm_part_iron_blade"
+   ],
+   "hilts": [
+    "itm_part_pelt_hilt",
+    "itm_part_fang_hilt"
+   ]
+  }
  ]
 }

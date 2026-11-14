@@ -33,9 +33,11 @@ This character is marked mortal in the data. Any death scene must follow the pro
 ## Quests given
 
 - [[Quests/A Bowl of Stew|A Bowl of Stew]]
+- [[Quests/Supper for the Small Lantern|Supper for the Small Lantern]]
 - [[Quests/Weekly Board/The Lost Cat (Again)|The Lost Cat (Again)]]
 - [[Quests/Weekly Board/A Basket of Mushrooms|A Basket of Mushrooms]]
 - [[Quests/Weekly Board/Rush Hour at the Griffon|Rush Hour at the Griffon]]
+- [[Quests/Weekly Board/Cook-Off Wager|Cook-Off Wager]]
 
 > [!warning]- Spoilers (Canon §3)
 > **Secret:** She has never once collected a debt from an adventurer who died.

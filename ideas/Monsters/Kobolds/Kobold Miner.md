@@ -103,6 +103,12 @@ These are presentation and spawn variants of this species, not separate core com
 | `pop_00308` | Whisperwood Kobold Miner Scarred | [[Regions/Whisperwood\|Whisperwood]] | Scarred | E+ | 32 | 0.99 m | Day & Night | Like a typical Kobold Miner, but covered in old battle scars, with dust-grey coloring and old rune scars. |
 | `pop_00309` | Aldmere Kobold Miner Elderborn | [[Regions/Aldmere\|Aldmere]] | Elderborn | D | 48 | 1.22 m | Day & Night | Like a typical Kobold Miner, but old and wise, with greying features and a cautious hunting style, with dust-grey coloring and old rune scars. |
 
+## Contracts and story encounters
+
+- [[Quests/The Tally-Keepers' Accord|The Tally-Keepers' Accord]] — rank E, in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]]
+
+These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
+
 ## Design recipe
 
 Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `rock_debris` · palette `#a56535` `#643b21` `#d1a15a` · real-animal silhouette with one fantasy exaggeration

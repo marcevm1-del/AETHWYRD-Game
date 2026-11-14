@@ -1,0 +1,306 @@
+{
+ "notes": "Loot for the Salvage Warren (Data/World/dungeons.json dng_salvage_warren): room caches on top of what the kobolds, slimes, mourners and the Armor Beetle already drop (Monsters/loot_tables.json). A cache holds `rolls` independent passes over its table; every entry rolls on its own chance, so chance 1 means a sure drop. Caches are opened once per run (`once`), are never gated, and nothing in them can be lost or missed for good: the secret pay-chest and the boss cache hold sure drops, so a cleared Warren always yields progress. Item ranks stay at E or below, with at most D for Labyrinth bronze (labyrinth theme). Decided 2026-11-09 by items-designer under delegated creative control; the user may overrule. Unity placement of the cache props is still to do (world-builder-engineer).",
+ "tables": [
+  {
+   "id": "loot_warren_scrap_pile",
+   "family": "Salvage Warren",
+   "rank": "F",
+   "entries": [
+    {
+     "itemId": "itm_mat_scrap_metal",
+     "chance": 0.6,
+     "min": 1,
+     "max": 3
+    },
+    {
+     "itemId": "itm_mat_crude_blade",
+     "chance": 0.35,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_stolen_trinket",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_candle_stub",
+     "chance": 0.25,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_coin_purse",
+     "chance": 0.15,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_stolen_bolt",
+     "chance": 0.2,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_kobold_fang",
+     "chance": 0.3,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_weapon",
+     "chance": 0.2,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_healing_herb",
+     "chance": 0.2,
+     "min": 1,
+     "max": 2
+    }
+   ]
+  },
+  {
+   "id": "loot_warren_gallery_chest",
+   "family": "Salvage Warren",
+   "rank": "E",
+   "entries": [
+    {
+     "itemId": "itm_mat_scrap_metal",
+     "chance": 0.5,
+     "min": 2,
+     "max": 3
+    },
+    {
+     "itemId": "itm_mat_crude_iron",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_minor_hp_potion",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_rune_plate",
+     "chance": 0.2,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_part_scrap_blade",
+     "chance": 0.15,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_part_iron_blade",
+     "chance": 0.08,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "id": "loot_warren_lower_stash",
+   "family": "Salvage Warren",
+   "rank": "E",
+   "entries": [
+    {
+     "itemId": "itm_mat_kobold_fang",
+     "chance": 0.4,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_bone_dust",
+     "chance": 0.4,
+     "min": 1,
+     "max": 3
+    },
+    {
+     "itemId": "itm_mat_slime_jelly",
+     "chance": 0.3,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_grave_cloth",
+     "chance": 0.25,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_candle_stub",
+     "chance": 0.25,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_healing_potion",
+     "chance": 0.12,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "id": "loot_warren_boss_cache",
+   "family": "Salvage Warren",
+   "rank": "E",
+   "entries": [
+    {
+     "itemId": "itm_core_e",
+     "chance": 1,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_carapace_shard",
+     "chance": 1,
+     "min": 3,
+     "max": 5
+    },
+    {
+     "itemId": "itm_healing_potion",
+     "chance": 0.5,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_silk",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_mat_venom_sac",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_labyrinth_bronze",
+     "chance": 0.2,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_carapace_cap",
+     "chance": 0.25,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "id": "loot_warren_pay_chest",
+   "family": "Salvage Warren",
+   "rank": "E",
+   "entries": [
+    {
+     "itemId": "itm_rune_spark",
+     "chance": 1,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_stolen_trinket",
+     "chance": 1,
+     "min": 2,
+     "max": 3
+    },
+    {
+     "itemId": "itm_healing_potion",
+     "chance": 1,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "itemId": "itm_rune_bastion",
+     "chance": 0.5,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_scroll_rimebrand",
+     "chance": 0.35,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "itemId": "itm_mat_labyrinth_bronze",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    }
+   ]
+  }
+ ],
+ "caches": [
+  {
+   "id": "cache_warren_chalk_pile",
+   "dungeonId": "dng_salvage_warren",
+   "roomId": "rm_chalk_landing",
+   "kind": "salvage_pile",
+   "tableId": "loot_warren_scrap_pile",
+   "rolls": 1,
+   "once": true,
+   "label": "Stacked salvage by the landing"
+  },
+  {
+   "id": "cache_warren_hall_pile",
+   "dungeonId": "dng_salvage_warren",
+   "roomId": "rm_scrap_hall",
+   "kind": "salvage_pile",
+   "tableId": "loot_warren_scrap_pile",
+   "rolls": 2,
+   "once": true,
+   "label": "The big scrap heap"
+  },
+  {
+   "id": "cache_warren_gallery_chest",
+   "dungeonId": "dng_salvage_warren",
+   "roomId": "rm_weighing_gallery",
+   "kind": "chest",
+   "tableId": "loot_warren_gallery_chest",
+   "rolls": 2,
+   "once": true,
+   "label": "Tally-keepers chest behind the scales"
+  },
+  {
+   "id": "cache_warren_lower_stash",
+   "dungeonId": "dng_salvage_warren",
+   "roomId": "rm_lower_landing",
+   "kind": "salvage_pile",
+   "tableId": "loot_warren_lower_stash",
+   "rolls": 2,
+   "once": true,
+   "label": "Sorted bins under the lamp-post"
+  },
+  {
+   "id": "cache_warren_beetle_hoard",
+   "dungeonId": "dng_salvage_warren",
+   "roomId": "rm_beetle_vault",
+   "kind": "boss_cache",
+   "tableId": "loot_warren_boss_cache",
+   "rolls": 1,
+   "once": true,
+   "label": "What the beetle sat on"
+  },
+  {
+   "id": "cache_warren_pay_chest",
+   "dungeonId": "dng_salvage_warren",
+   "roomId": "rm_rune_cistern",
+   "kind": "secret_chest",
+   "tableId": "loot_warren_pay_chest",
+   "rolls": 1,
+   "once": true,
+   "label": "The tally-keepers hidden pay-chest"
+  }
+ ]
+}

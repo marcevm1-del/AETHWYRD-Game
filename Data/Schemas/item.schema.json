@@ -87,6 +87,16 @@
   "flavor": {
    "type": "string"
   },
+  "description": {
+   "type": "string",
+   "minLength": 10,
+   "description": "plain player-facing explanation of what the item is and is for"
+  },
+  "icon": {
+   "type": "string",
+   "pattern": "^icon_[a-z0-9_]+$",
+   "description": "icon id, see 09_Equipment/item_icon_list.md"
+  },
   "setId": {
    "type": "string"
   },

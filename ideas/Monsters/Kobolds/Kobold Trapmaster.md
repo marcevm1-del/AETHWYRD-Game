@@ -103,6 +103,12 @@ These are presentation and spawn variants of this species, not separate core com
 | `pop_00341` | Moraveil Kobold Trapmaster Scarred | [[Regions/Moraveil\|Moraveil]] | Scarred | D+ | 56 | 1.1 m | Day & Night | Like a typical Kobold Trapmaster, but covered in old battle scars, with pale, light-starved coloring and oversized eyes. |
 | `pop_00342` | Great Labyrinth (Floors 1-40) Kobold Trapmaster Juvenile | [[Regions/Great Labyrinth (Floors 1-40)\|Great Labyrinth (Floors 1-40)]] | Juvenile | D- | 40 | 0.85 m | Day & Night | Like a typical Kobold Trapmaster, but young, with brighter colors and unworn features, with pale, light-starved coloring and oversized eyes. |
 
+## Contracts and story encounters
+
+- [[Quests/Weigh the Way Down|Weigh the Way Down]] — rank E, in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]]
+
+These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
+
 ## Design recipe
 
 Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#b4533a` `#6e3024` `#ff8e52` · triangle-based silhouette, sharp asymmetric spikes

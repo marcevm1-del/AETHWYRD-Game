@@ -228,7 +228,7 @@ namespace Ascend.EditorTools
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             var scenes = EditorBuildSettings.scenes.Where(s => s.path != ScenePath).ToList();
-            scenes.Insert(0, new EditorBuildSettingsScene(ScenePath, true));
+            scenes.Insert(scenes.FindIndex(x => x.path.EndsWith("/Title.unity")) + 1, new EditorBuildSettingsScene(ScenePath, true)); // after the Title scene when there is one
             EditorBuildSettings.scenes = scenes.ToArray();
         }
 

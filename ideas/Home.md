@@ -27,6 +27,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/01_Core_Concept/the_big_upgrade|01_Core_Concept/the_big_upgrade]]
 - [[Design Bible/01_Core_Concept/vision|01_Core_Concept/vision]]
 - [[Design Bible/01_Core_Concept/world_response_and_information_flow|01_Core_Concept/world_response_and_information_flow]]
+- [[Design Bible/02_Lore/act1_scene_scripts|02_Lore/act1_scene_scripts]]
 - [[Design Bible/02_Lore/cosmology|02_Lore/cosmology]]
 - [[Design Bible/02_Lore/history|02_Lore/history]]
 - [[Design Bible/02_Lore/life_in_aetheria|02_Lore/life_in_aetheria]]
@@ -40,6 +41,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/04_Classes/expert_master_legendary_hidden|04_Classes/expert_master_legendary_hidden]]
 - [[Design Bible/04_Classes/monster_evolution|04_Classes/monster_evolution]]
 - [[Design Bible/04_Classes/progression_experience|04_Classes/progression_experience]]
+- [[Design Bible/05_Skills_Magic/rune_and_enchant_skills|05_Skills_Magic/rune_and_enchant_skills]]
 - [[Design Bible/05_Skills_Magic/skills_and_magic|05_Skills_Magic/skills_and_magic]]
 - [[Design Bible/06_Races_Origins/clans_guardians_fauna|06_Races_Origins/clans_guardians_fauna]]
 - [[Design Bible/06_Races_Origins/races_and_origins|06_Races_Origins/races_and_origins]]
@@ -50,13 +52,18 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/08_Bestiary/bosses_and_calamities|08_Bestiary/bosses_and_calamities]]
 - [[Design Bible/08_Bestiary/monster_design_kit|08_Bestiary/monster_design_kit]]
 - [[Design Bible/08_Bestiary/monster_motion_bible|08_Bestiary/monster_motion_bible]]
+- [[Design Bible/08_Bestiary/mount_species_notes|08_Bestiary/mount_species_notes]]
+- [[Design Bible/08_Bestiary/regional_ecology|08_Bestiary/regional_ecology]]
+- [[Design Bible/08_Bestiary/salvage_warren_residents|08_Bestiary/salvage_warren_residents]]
 - [[Design Bible/09_Equipment/gear_systems_and_sets|09_Equipment/gear_systems_and_sets]]
 - [[Design Bible/09_Equipment/item_and_economy_design|09_Equipment/item_and_economy_design]]
+- [[Design Bible/09_Equipment/item_icon_list|09_Equipment/item_icon_list]]
 - [[Design Bible/09_Equipment/legendary_artifacts|09_Equipment/legendary_artifacts]]
 - [[Design Bible/09_Equipment/monster_core_pricing|09_Equipment/monster_core_pricing]]
 - [[Design Bible/10_World/anime_town_places_and_taverns|10_World/anime_town_places_and_taverns]]
 - [[Design Bible/10_World/brindlewick|10_World/brindlewick]]
 - [[Design Bible/10_World/cultural_presence_and_named_population|10_World/cultural_presence_and_named_population]]
+- [[Design Bible/10_World/encounter_tables|10_World/encounter_tables]]
 - [[Design Bible/10_World/exploration_and_discovery|10_World/exploration_and_discovery]]
 - [[Design Bible/10_World/gazetteer|10_World/gazetteer]]
 - [[Design Bible/10_World/physical_geography|10_World/physical_geography]]
@@ -66,6 +73,7 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/11_Quests_Encounters/guild_hall_talk_and_lexicon|11_Quests_Encounters/guild_hall_talk_and_lexicon]]
 - [[Design Bible/11_Quests_Encounters/quest_outcome_grammar|11_Quests_Encounters/quest_outcome_grammar]]
 - [[Design Bible/11_Quests_Encounters/quests_and_encounters|11_Quests_Encounters/quests_and_encounters]]
+- [[Design Bible/11_Quests_Encounters/ring0_quest_expansion|11_Quests_Encounters/ring0_quest_expansion]]
 - [[Design Bible/11_Quests_Encounters/weekly_board|11_Quests_Encounters/weekly_board]]
 - [[Design Bible/12_Systems/audio_and_immersion|12_Systems/audio_and_immersion]]
 - [[Design Bible/12_Systems/civilization_archive|12_Systems/civilization_archive]]
@@ -79,9 +87,11 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/12_Systems/hud_and_ui|12_Systems/hud_and_ui]]
 - [[Design Bible/12_Systems/inns|12_Systems/inns]]
 - [[Design Bible/12_Systems/living_world|12_Systems/living_world]]
+- [[Design Bible/12_Systems/mounted_combat|12_Systems/mounted_combat]]
 - [[Design Bible/12_Systems/party_synergy|12_Systems/party_synergy]]
 - [[Design Bible/12_Systems/stables|12_Systems/stables]]
 - [[Design Bible/12_Systems/systems|12_Systems/systems]]
+- [[Design Bible/12_Systems/weapon_movesets|12_Systems/weapon_movesets]]
 - [[Design Bible/12_Systems/world_graph|12_Systems/world_graph]]
 - [[Design Bible/12_Systems/world_map|12_Systems/world_map]]
 - [[Design Bible/13_Production/adaptive_music_and_scene_pacing|13_Production/adaptive_music_and_scene_pacing]]
@@ -94,31 +104,50 @@ The AETHWYRD idea vault. Open this `ideas/` folder in Obsidian (*Open folder as 
 - [[Design Bible/13_Production/archive_v7b_audit|13_Production/archive_v7b_audit]]
 - [[Design Bible/13_Production/art_budgets|13_Production/art_budgets]]
 - [[Design Bible/13_Production/art_direction|13_Production/art_direction]]
+- [[Design Bible/13_Production/audio_music_cue_sheet|13_Production/audio_music_cue_sheet]]
+- [[Design Bible/13_Production/audio_rock_stem_brief|13_Production/audio_rock_stem_brief]]
+- [[Design Bible/13_Production/audio_sfx_event_list|13_Production/audio_sfx_event_list]]
+- [[Design Bible/13_Production/audio_source_shortlist|13_Production/audio_source_shortlist]]
 - [[Design Bible/13_Production/audio_v9_audit|13_Production/audio_v9_audit]]
 - [[Design Bible/13_Production/building_system|13_Production/building_system]]
+- [[Design Bible/13_Production/canon_consistency_new_system_docs_2026-11-08|13_Production/canon_consistency_new_system_docs_2026-11-08]]
+- [[Design Bible/13_Production/canon_decision_index_2026-11-08|13_Production/canon_decision_index_2026-11-08]]
+- [[Design Bible/13_Production/canon_keeper_rename_audit_2026-11-08|13_Production/canon_keeper_rename_audit_2026-11-08]]
+- [[Design Bible/13_Production/canon_watch_list_2026-11-08|13_Production/canon_watch_list_2026-11-08]]
 - [[Design Bible/13_Production/combat_v5_audit|13_Production/combat_v5_audit]]
 - [[Design Bible/13_Production/combat_wave_a2_plan|13_Production/combat_wave_a2_plan]]
 - [[Design Bible/13_Production/companions_v8_audit|13_Production/companions_v8_audit]]
 - [[Design Bible/13_Production/crafting_v6_audit|13_Production/crafting_v6_audit]]
 - [[Design Bible/13_Production/creature_system|13_Production/creature_system]]
+- [[Design Bible/13_Production/digest_2026-11-09|13_Production/digest_2026-11-09]]
 - [[Design Bible/13_Production/dungeon_v7_audit|13_Production/dungeon_v7_audit]]
 - [[Design Bible/13_Production/gear_v6b_audit|13_Production/gear_v6b_audit]]
+- [[Design Bible/13_Production/housing_farming_balance_2026-11-09|13_Production/housing_farming_balance_2026-11-09]]
 - [[Design Bible/13_Production/housing_v6b_audit|13_Production/housing_v6b_audit]]
+- [[Design Bible/13_Production/life_skill_xp_review_2026-11-11|13_Production/life_skill_xp_review_2026-11-11]]
 - [[Design Bible/13_Production/living_world_v4_audit|13_Production/living_world_v4_audit]]
 - [[Design Bible/13_Production/monster_model_pipeline|13_Production/monster_model_pipeline]]
 - [[Design Bible/13_Production/movement_feel|13_Production/movement_feel]]
 - [[Design Bible/13_Production/opening_music_and_memories|13_Production/opening_music_and_memories]]
+- [[Design Bible/13_Production/perf_review_core_2026-11-08|13_Production/perf_review_core_2026-11-08]]
 - [[Design Bible/13_Production/phase1_api|13_Production/phase1_api]]
+- [[Design Bible/13_Production/pricing_pass_2026-11-09|13_Production/pricing_pass_2026-11-09]]
 - [[Design Bible/13_Production/production|13_Production/production]]
 - [[Design Bible/13_Production/progress_log|13_Production/progress_log]]
 - [[Design Bible/13_Production/project-stage-report|13_Production/project-stage-report]]
 - [[Design Bible/13_Production/reference_games|13_Production/reference_games]]
 - [[Design Bible/13_Production/ring0_plan|13_Production/ring0_plan]]
+- [[Design Bible/13_Production/risk_register_and_usage_budget|13_Production/risk_register_and_usage_budget]]
+- [[Design Bible/13_Production/roadmap_after_upgrade_waves|13_Production/roadmap_after_upgrade_waves]]
+- [[Design Bible/13_Production/stable_mount_economy_2026-11-11|13_Production/stable_mount_economy_2026-11-11]]
 - [[Design Bible/13_Production/stables_v8_audit|13_Production/stables_v8_audit]]
+- [[Design Bible/13_Production/style_consistency_checklist|13_Production/style_consistency_checklist]]
+- [[Design Bible/13_Production/tech_debt_register|13_Production/tech_debt_register]]
 - [[Design Bible/13_Production/terrain_unity_import|13_Production/terrain_unity_import]]
 - [[Design Bible/13_Production/third_party_assets|13_Production/third_party_assets]]
 - [[Design Bible/13_Production/town_buildings|13_Production/town_buildings]]
 - [[Design Bible/13_Production/tutorial_vision|13_Production/tutorial_vision]]
+- [[Design Bible/13_Production/unity_integration_dependency_map|13_Production/unity_integration_dependency_map]]
 - [[Design Bible/13_Production/world_graph_v10_audit|13_Production/world_graph_v10_audit]]
 - [[Design Bible/13_Production/world_terrain|13_Production/world_terrain]]
 - [[Design Bible/13_Production/world_upgrade_plan|13_Production/world_upgrade_plan]]
@@ -1186,7 +1215,7 @@ Every population record is included in the complete register on its species note
 - [[Fauna/Reef Dragon|Reef Dragon]] — Water Base
 - [[Fauna/Turtle Drake|Turtle Drake]] — Water Base
 
-## Quests (17)
+## Quests (32)
 - [[Quests/Rabbit Season|Rabbit Season]] (F, Subjugation)
 - [[Quests/Slime in the Well|Slime in the Well]] (F, OddJob)
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] (E, Trial)
@@ -1204,6 +1233,21 @@ Every population record is included in the complete register on its species note
 - [[Quests/The Crimson Wolves|The Crimson Wolves]] (E, Subjugation)
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]] (E, SiegeDefence)
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]] (E, Subjugation)
+- [[Quests/A Blade for the Guild|A Blade for the Guild]] (F, OddJob)
+- [[Quests/A Cap for Tomlin|A Cap for Tomlin]] (F, OddJob)
+- [[Quests/Stock for the Clinic|Stock for the Clinic]] (F, OddJob)
+- [[Quests/Supper for the Small Lantern|Supper for the Small Lantern]] (F, OddJob)
+- [[Quests/Silk and Ink|Silk and Ink]] (F, OddJob)
+- [[Quests/The First Glyph|The First Glyph]] (F, OddJob)
+- [[Quests/A Ward for the Library|A Ward for the Library]] (E, OddJob)
+- [[Quests/Two on the Road|Two on the Road]] (F, Subjugation)
+- [[Quests/The Tally of the Lost|The Tally of the Lost]] (E, Dungeon)
+- [[Quests/Weigh the Way Down|Weigh the Way Down]] (E, Dungeon)
+- [[Quests/The Beetle Vault|The Beetle Vault]] (E, Dungeon)
+- [[Quests/The Runesmiths' Game|The Runesmiths' Game]] (E, Hidden)
+- [[Quests/The Tally-Keepers' Accord|The Tally-Keepers' Accord]] (E, Dungeon)
+- [[Quests/The Girl Who Couldn't Win|The Girl Who Couldn't Win]] (F, Companion)
+- [[Quests/The Unfinished Blade|The Unfinished Blade]] (F, Companion)
 
 ## Inns (20)
 - [[Inns/The Sleeping Griffon|The Sleeping Griffon]]
@@ -1227,7 +1271,7 @@ Every population record is included in the complete register on its species note
 - [[Inns/The Hour That Isn't|The Hour That Isn't]]
 - [[Inns/The Crimson Rest|The Crimson Rest]]
 
-## Items (178)
+## Items (186)
 ### accessory
 - [[Items/Rookie's Pouch|Rookie's Pouch]]
 - [[Items/Copper Compass|Copper Compass]]
@@ -1397,6 +1441,11 @@ Every population record is included in the complete register on its species note
 - [[Items/Anvil Rune|Anvil Rune]]
 - [[Items/Hearth Rune|Hearth Rune]]
 - [[Items/Gale Rune|Gale Rune]]
+- [[Items/Spark Rune|Spark Rune]]
+- [[Items/Dusk Rune|Dusk Rune]]
+- [[Items/Bastion Rune|Bastion Rune]]
+- [[Items/Cinder Rune|Cinder Rune]]
+- [[Items/Warden Rune|Warden Rune]]
 
 ### scroll
 - [[Items/Scroll of Emberbrand|Scroll of Emberbrand]]
@@ -1404,6 +1453,9 @@ Every population record is included in the complete register on its species note
 - [[Items/Scroll of Vitality|Scroll of Vitality]]
 - [[Items/Scroll of Nightstep|Scroll of Nightstep]]
 - [[Items/Scroll of Stormthread|Scroll of Stormthread]]
+- [[Items/Scroll of Rimebrand|Scroll of Rimebrand]]
+- [[Items/Scroll of Ironhide|Scroll of Ironhide]]
+- [[Items/Scroll of Lanternlight|Scroll of Lanternlight]]
 
 ### weapon
 - [[Items/Guild Issue Sword|Guild Issue Sword]]

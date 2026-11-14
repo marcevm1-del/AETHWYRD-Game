@@ -102,6 +102,13 @@ These are presentation and spawn variants of this species, not separate core com
 | `pop_00297` | Aldmere Kobold Scavenger Juvenile | [[Regions/Aldmere\|Aldmere]] | Juvenile | F- | 3 | 0.77 m | Day & Night | Like a typical Kobold Scavenger, but young, with brighter colors and unworn features, with dust-grey coloring and old rune scars. |
 | `pop_00298` | Whisperwood Kobold Scavenger Scarred | [[Regions/Whisperwood\|Whisperwood]] | Scarred | F+ | 13 | 0.99 m | Day & Night | Like a typical Kobold Scavenger, but covered in old battle scars, with dust-grey coloring and old rune scars. |
 
+## Contracts and story encounters
+
+- [[Quests/The Tally of the Lost|The Tally of the Lost]] — rank E, in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]]
+- [[Quests/Weekly Board/Warren Salvage Run|Warren Salvage Run]] — rank undefined, in [[Regions/Great Labyrinth (Floors 1-40)|Great Labyrinth (Floors 1-40)]]
+
+These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
+
 ## Design recipe
 
 Rig `rig_small_biped` · mesh `small_biped_base` · material `fur_short` · VFX `dust_puffs` · palette `#57728c` `#394a5d` `#8ab1de` · triangle-based silhouette, sharp asymmetric spikes

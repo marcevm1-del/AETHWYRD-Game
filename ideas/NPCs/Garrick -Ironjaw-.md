@@ -15,3 +15,7 @@ tags: [npc, adventurers-guild]
 | Romanceable · can die | No · No |
 
 A C-Rank examiner who has broken his jaw eleven times and judges promotion trials with brutal honesty.
+
+## Quests given
+
+- [[Quests/Weigh the Way Down|Weigh the Way Down]]

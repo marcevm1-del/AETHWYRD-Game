@@ -1,5 +1,7 @@
 # 12a — Combat Design Spec (Ring 0 target)
 
+**Weapon movesets:** see [[Design Bible/12_Systems/weapon_movesets|weapon_movesets.md]] (data: `Data/Combat/weapon_movesets.json`).  **Mounted combat:** see [[Design Bible/12_Systems/mounted_combat|mounted_combat.md]] (data: `Data/Combat/mounted_combat.json`).
+
 **Goal:** anime combat that is **fluid, fast, flashy and heavy** (Canon). Every number marked ⚙ lives in `Data/Combat/combat_tuning.json`, so feel can be tuned without code changes.
 
 **Feel references:** *Genshin Impact* (readability, elemental reactions), *Devil May Cry* (combo freedom, style meter), *Monster Hunter* (weight, telegraphs), *Sekiro* (parry satisfaction), anime fight choreography (impact frames, speed lines, smears).
@@ -102,7 +104,9 @@ Attacks apply an **element aura** to the target for ⚙ 6 s. Hitting an aura wit
 The ten pairs above now live in `Data/Combat/reactions.json` so feel can be tuned without code. With no table loaded the game behaves exactly as before.
 - Each reaction lists its two elements (order does not matter), whether it **consumes the aura** (all do except Swirl), an optional **bonus damage multiplier**, and optional **DoT**, **hazard zone** and **status** (freeze or stun).
 - **Parity (matches today):** the pairs, aura consumption, Freeze 2.5 s and Storm Prison 1.2 s (copied from ⚙ `reactions`; a test keeps them equal), and the Firestorm zone (⚙ `firestorm`).
-- **Proposals (user tunes):** bonus multipliers (Thermal Shock x2.0, Twilight Burst x2.5, Firestorm x1.5 and so on), Wildfire's burn DoT, the Magma and Miasma ground zones, and all Swirl spread numbers.
+- **Proposals (user tunes):** bonus multipliers (Thermal Shock x2.0 (pinned by the sandbox tests), Twilight Burst x4.5, Miasma Blast x1.6, Firestorm x1.5 and so on), Wildfire's burn DoT, the Magma and Miasma ground zones, and all Swirl spread numbers.
+- **Balance pass (2026-11):** a reaction's *extra value* is the damage beyond a plain hit for one target, in multiples of that hit: bonus above 1, plus DoT and hazard damage over their duration, plus the Freeze shatter bonus, plus Swirl's spread. Before the pass the rare late-game **Twilight Burst was the weakest damage reaction (1.5)** and Thermal Shock stays at 1.0 extra (its x2.0 is pinned by `CombatSandboxTests`; the pass did not touch it). After: Firestorm 3.3, Twilight Burst 3.5, Magma 2.7, Miasma Blast 2.6, Thermal Shock 1.0, Wildfire 1.8, Swirl 1.5 (area), Freeze 0.8, Storm Prison 0.2 plus its 1.2 s stun, Grounded -0.2 (a deliberate absorb). Rules kept by `Tools/validate/reaction_balance.js` (run it alone to print the table): Twilight Burst is the largest, every reaction but Grounded is worth at least 0.2, no synergy exceeds x1.5. Firestorm's numbers stay at parity with `combat_tuning.json`. Setup cost still matters: Fire + Wind is Ring 0, the others need a second element a class unlocks later, so the cheap, early reactions stay below the late one.
+- **Open (not done):** Grounded's *slow* and a boss status-resist field have no data keys yet (the schema has only freeze and stun); proposal for the core-rules-engineer and the user.
 - **Swirl** (table `swirl`; stored under Wind + Fire, but as in the table above Wind with any other element triggers it): Wind meeting a non-Wind element spreads that element to up to 3 neighbours within 5 m at x0.5 damage; the aura is kept.
 - **Readability:** every hazard is a marked ground zone with a visible edge and a countdown, never an instant kill; the UI shows aura, trigger and remaining time (section 15).
 
@@ -123,7 +127,7 @@ Rules: bonuses do not stack with each other (the best one applies); a synergy ne
 Bosses may carry an **armor gauge** (`Data/Monsters/boss_weakpoints.json`, `armor`). It is separate from the Break gauge (section 4.3): hits fill armor damage first; at zero the armor **breaks** for `breakSec`, during which the boss takes `damageTakenMultWhileBroken` more damage. After `regenDelaySec` without armor damage it regenerates. A break always has a sound cue and a visible crack; it is a reward window, never a requirement. No mandatory fight needs a break to be won (Canon combat/readability contract).
 
 ### 7d. Weak points
-A weak point is a named body part (`bodyPart` from the rig hurtboxes) with its own damage multiplier and armor-damage multiplier, **exposed only in listed phases** (`exposedInPhases`, optionally for `exposedSec`). Exposure is announced: the part glows or the boss turns to show it, and the lock-on reticle gets a marker. The multiplier replaces the hurtbox multiplier for that part while exposed. Grukk has the starter record: the **cult-rune brand** on his chest, exposed in the Archers and Rage phases (x1.5 damage, x1.5 armor damage). Phases themselves stay in `boss_phases.json`.
+A weak point is a named body part (`bodyPart` from the rig hurtboxes) with its own damage multiplier and armor-damage multiplier, **exposed only in listed phases** (`exposedInPhases`, optionally for `exposedSec`). Exposure is announced: the part glows or the boss turns to show it, and the lock-on reticle gets a marker. The multiplier replaces the hurtbox multiplier for that part while exposed. Grukk has the starter record: the **cult-rune brand** on his chest, exposed in the Archers and Rage phases (x1.5 damage, x1.5 armor damage). Phases themselves stay in `boss_phases.json`. Six bosses now have records (Grukk, Ashgrave, Mother Webcrawler, Mycelia, the Drowned Choir, the Hollow Abbot); see `08_Bestiary/bosses_and_calamities.md` section 1.
 
 ### 7e. Combat sandbox (dev tool)
 A headless **combat sandbox** spawns up to ⚙ `sandbox.maxDummies` dummies (species, element, HP, optional armor), applies scripted hits (element, weight, body part, attacker) on a manual clock and returns a readout per hit: damage, multiplier breakdown, reaction, synergy, armor and break state. It is deterministic (seeded, ⚙ `sandbox.defaultSeed`) and used by tests and the designer to judge reactions and armor without playing. It is a developer tool: no menu, no game mode, not shipped to players.
@@ -184,6 +188,8 @@ Ring 0 passes when, in a 10-minute session against slimes, goblins and rabbits:
 - [ ] Wave A2: a Swirl-then-Firestorm opener makes you feel clever, and the synergy flash is readable.
 - [ ] Breaking Grukk's armor feels like a payoff you noticed (sound plus crack), and fighting without it is still fair.
 - [ ] You can tell when Grukk's rune brand is exposed without being told.
+- [ ] Each of the five dungeon bosses above has one weak point you can find by watching it (glow, turn or posture), and a fight that ignores armor entirely is still winnable.
+- [ ] Armor breaks arrive about once per fight for a player who hits heavy and weak, never twice in quick succession.
 - [ ] A goblin pack comes from several sides, retreats visibly at low HP, and never feels like a boss goblin is giving orders.
 
 **Where the fight lives (built).** Monsters stay in the forest and beyond; the town is safe ground.

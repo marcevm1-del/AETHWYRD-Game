@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "notes": "Phase 1B loading screen tips: warm, short, teen-rated, true to what the game does today. No spoilers.",
+  "tips": [
+    { "id": "tip_waystone", "text": "Waystones remember you. Attune one and the road home gets a little shorter." },
+    { "id": "tip_rest", "text": "A warm meal and a bed at the inn do more for a tired adventurer than any potion." },
+    { "id": "tip_dodge", "text": "Every monster telegraphs its attack. Watch the shape, then move." },
+    { "id": "tip_slime", "text": "Slimes are gentle teachers. Start there and learn the rhythm of a fight." },
+    { "id": "tip_gather", "text": "Herbs and ore grow back. Walk the same path in a few days and look again." },
+    { "id": "tip_board", "text": "The guild board changes with the days. Check it when you wake up." },
+    { "id": "tip_talk", "text": "Villagers know more than their job titles suggest. Ask them about the road." },
+    { "id": "tip_map", "text": "Your map fills in as you walk. Pencil first, ink once you have seen it yourself." },
+    { "id": "tip_access", "text": "Text size, flash strength and colourblind modes can be changed in Settings at any time." },
+    { "id": "tip_lantern", "text": "If you fall, your coins wait in a lantern where it happened. Go back for it." },
+    { "id": "tip_craft", "text": "Handle a new material once and you may learn what it can become." },
+    { "id": "tip_photo", "text": "Some views deserve a picture. Photo mode lets you frame them in peace." },
+    { "id": "tip_pace", "text": "There is no rush. The world will still be here when you come back from supper." },
+    { "id": "tip_companion", "text": "Companions have opinions about how to fight. Tell them what you prefer." },
+    { "id": "tip_bomb", "text": "A well-thrown fire bomb can turn a bad moment around. Save one for emergencies." },
+    { "id": "tip_save", "text": "The game saves when you attune a waystone and after you recover. Rest easy." }
+  ]
+}
