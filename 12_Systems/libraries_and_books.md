@@ -10,6 +10,14 @@ Aethwyrd has libraries, archives, temples, schools and guild halls that keep boo
 - `Data/Library/books.json` (schema `books.schema.json`): 520 books (500 originals plus 20 gap field guides). Fields: `id` (`bk_NNN`), `title`, `author` (in-world), `kind`, `library`, `region` (the library's region), `subjectRegion` (what the book is about), `shelf`, `language`, `blurb`, `readingMinutes`, `words`, `tags` (life skill or theme, plus the subject region id), `reliability`, `status`, `quality`, `inWorldDate`, `source` (the originating file), `text` (path under `02_Lore/library/`), optional `rankGate`, optional `rewards`.
 - Texts: `02_Lore/library/<library-id>/<book-id>.md`; generated index `02_Lore/library/README.md`. The vault builder mirrors only the top-level `.md` files of each design folder, so the 479 texts add nothing to the vault and need no exclusion switch (checked: `node Tools/vault/build_vault.js` unchanged).
 
+### The deepened entry (every shelved book)
+Each of the 479 shelved books also carries (`Tools/library/deepen.py`, rerun by `shelve.py`):
+- `excerpt`: a few lines taken **verbatim** from the book's own text, chosen as the least frame-like paragraph (or, when every paragraph is shared frame text, the three rarest sentences). The validator checks it starts with lines from the text. Many templated books share excerpts of the same shape; that is the books' real state.
+- `provenance`: `tradition` (the region's gazetteer epithet), `writtenIn` (region id), `era` (from the in-world date line, counted back from the present, 1024 SC), `copy` (condition of this copy) and `shelfPlace` (where it sits in its library). **Copy condition and shelf place are generated flavour**, deterministic by book id, draft like the rest.
+- `teaches`: two lines on what the book gives a reader, plus the species it names.
+- `hooks`: pointers into game data, found by matching names the text really mentions: `region`, `place`, `species`, `item`, `recipe`, `quest` (up to two quests of the book's region, field-guide, road, history, guild, trade and law kinds only), `civilization`, `god`. Each id is checked by the validator. Hooks are background reading and never a requirement.
+- `canonNotes`: where the text touches something Canon fixes (the seven-day week, Guild ranks, the Labyrinth, the old empire's public account). They name no Canon section 3 secret.
+
 ### Reliability
 How far an in-world reader should trust the book: **accurate** (practical books: cookery, road, craft, household, trade; 170), **partial** (one-sided or second-hand: histories, guild manuals, letters, law, lectures, memoirs, fragments, field guides; 157), **folk belief** (myth, chapel, ballad, festival, children's stories, plays, the serial; 132), **propaganda** (reserved; no book carries it yet, see Canon section 6 L5).
 

@@ -122,6 +122,7 @@ def rank_below(r):
     return RANKS[max(0, i - 1)]
 
 report, books = {}, []
+final_texts = {}
 sentence_counts = collections.Counter()
 texts = {}
 for c in cat:
@@ -186,10 +187,20 @@ for i, c in enumerate(cat, 1):
     if rewards:
         entry['rewards'] = rewards
     books.append(entry)
+    if lib:
+        final_texts[bid] = text
     if lib and not DRY:
         d = os.path.join(REPO, '02_Lore', 'library', lib)
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, bid + '.md'), 'w', encoding='utf-8', newline='\n').write(text)
+
+# deepen: excerpt, provenance, teaches, hooks, canon notes (Tools/library/deepen.py)
+import deepen
+_items = json.load(open(os.path.join(REPO, 'Data/Items/materials.json'), encoding='utf-8')) + json.load(open(os.path.join(REPO, 'Data/Items/items.json'), encoding='utf-8'))
+_recipes = json.load(open(os.path.join(REPO, 'Data/Items/recipes.json'), encoding='utf-8'))['recipes']
+_gaz = json.load(open(os.path.join(REPO, 'Data/World/gazetteer.json'), encoding='utf-8'))['regions']
+deepen.run(books, final_texts, {'regions': regions, 'species': species, 'items': _items, 'recipes': _recipes, 'gaz': _gaz, 'quests': json.load(open(os.path.join(REPO, 'Data/Quests/quests.json'), encoding='utf-8')),
+                                'reg_by_id': {r['id']: r for r in regions}, 'lib_by_id': {l['id']: l for l in LIBRARIES}})
 
 # summary
 cnt = collections.Counter(v['scanStatus'] for v in report.values())

@@ -131,4 +131,25 @@ static class LibraryTests
         Assert.True(a.Status("bk_048") == MapStatus.Visited, "a later Heard cannot downgrade");
         Assert.True(a.Status("bk_gone") == MapStatus.Unknown, "unknown ids are ignored");
     }
+
+    public static void EveryShelvedBookCarriesAnExcerptProvenanceAndHooksThatPointAtRealData()
+    {
+        var cat = Repo.Db.Library;
+        int n = 0;
+        foreach (var b in cat.Books.Where(b => b.Status != "hold"))
+        {
+            n++;
+            Assert.True(!string.IsNullOrEmpty(b.Excerpt) && b.Excerpt.Length >= 40, b.Id + " has an excerpt");
+            Assert.True(b.Provenance != null && !string.IsNullOrEmpty(b.Provenance.Copy) && !string.IsNullOrEmpty(b.Provenance.ShelfPlace) && Repo.Db.Regions.ContainsKey(b.Provenance.WrittenIn), b.Id + " has provenance");
+            Assert.True(b.Teaches.Count >= 1 && b.Hooks.Count >= 1, b.Id + " says what it teaches and where it points");
+            foreach (var h in b.Hooks)
+            {
+                if (h.Kind == "species") Assert.True(Repo.Db.Species.ContainsKey(h.Id), b.Id + " species hook " + h.Id);
+                if (h.Kind == "region") Assert.True(Repo.Db.Regions.ContainsKey(h.Id), b.Id + " region hook " + h.Id);
+            }
+        }
+        Assert.True(n >= 479, "all shelved books were checked");
+        var json = JsonSerializer.Serialize(cat.Books);
+        foreach (var bad in new[] { "\"Xp", "\"Requires" }) Assert.True(!json.Contains(bad), "hooks are background only: no " + bad);
+    }
 }

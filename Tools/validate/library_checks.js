@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SECRETS = /Azrael|Noxveil|\bAdrian\b|Kaede|Aoyama|Malgareth|Malchior|Red Prophet|Night of Unweaving|Caspian|Nocturne|\bMina\b|Ezrath|Forgotten Ninth|Hooded Traveler|Whiskers|\bNyx\b|Lantern Seal|Lantern Night|Thirteenth Star|Unwoven Sky|Unclosed Knot|soul harvest|video game/;
+const GODS = ['Solenne', 'Maelis', 'Thorgrim', 'Sylvara', 'Kaelthas', 'Morrowyn', 'Vex', 'Ilvaris'];
 const MIN_WORDS = 300, MAX_WORDS = 3000, MAX_PER_LIBRARY = 60;
 
 exports.run = function (ctx) {
@@ -25,6 +26,10 @@ exports.run = function (ctx) {
     for (const r of l.covers || []) if (!regionIds.has(r)) err(l.id, `covers unknown region ${r}`);
   }
   const civ = new Set((load('World/civilization_archive.json').civilizations || []).map(c => c.id));
+  const items = new Set([...load('Items/materials.json'), ...load('Items/items.json')].map(i => i.id));
+  const recipes = new Set(load('Items/recipes.json').recipes.map(r => r.id));
+  const quests = new Set(load('Quests/quests.json').map(q => q.id));
+  const places = new Set(regions.flatMap(r => [...Object.keys((r.map && r.map.places) || {}), ...(r.defenceSettlements || [])]));
   const ids = new Set();
   const perLib = new Map();
   const ROOT = path.join(DATA, '..');
@@ -51,6 +56,14 @@ exports.run = function (ctx) {
     const txt = fs.readFileSync(tp, 'utf8');
     const m = SECRETS.exec(txt);
     if (m) err(b.id, `text names a Canon section 3 secret: "${m[0]}" (a book a player can read may not)`);
+    if (!b.excerpt || !b.provenance || !(b.teaches || []).length || !(b.hooks || []).length) err(b.id, 'a shelved book needs excerpt, provenance, teaches and hooks');
+    else if (!txt.replace(/\s+/g, ' ').includes(b.excerpt.replace(/\s+/g, ' ').slice(0, 40))) err(b.id, 'excerpt does not start with lines from the book text');
+    for (const h of b.hooks || []) {
+      const ok = h.kind === 'region' ? regionIds.has(h.id) : h.kind === 'place' ? places.has(h.id) : h.kind === 'species' ? species.has(h.id)
+        : h.kind === 'item' ? items.has(h.id) : h.kind === 'recipe' ? recipes.has(h.id) : h.kind === 'quest' ? quests.has(h.id)
+        : h.kind === 'civilization' ? civ.has(h.id) : GODS.includes(h.id);
+      if (!ok) err(b.id, `hook ${h.kind} ${h.id} does not exist`);
+    }
     for (const rw of b.rewards || []) {
       if (rw.kind === 'bestiary' && !species.has(rw.id)) err(b.id, `reward names unknown species ${rw.id}`);
       if (rw.kind === 'archive' && !civ.has(rw.id)) err(b.id, `reward names unknown civilization ${rw.id}`);

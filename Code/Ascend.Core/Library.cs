@@ -39,6 +39,23 @@ namespace Ascend.Core
         public string Id { get; set; }
     }
 
+    public sealed class BookProvenance
+    {
+        public string Tradition { get; set; }
+        public string WrittenIn { get; set; }
+        public string Era { get; set; }
+        /// <summary>The condition of this copy.</summary>
+        public string Copy { get; set; }
+        public string ShelfPlace { get; set; }
+    }
+
+    public sealed class BookHook
+    {
+        public string Kind { get; set; }
+        public string Id { get; set; }
+        public string Note { get; set; }
+    }
+
     public sealed class BookData
     {
         public string Id { get; set; }
@@ -65,6 +82,14 @@ namespace Ascend.Core
         public string Source { get; set; }
         public string Text { get; set; }
         public string RankGate { get; set; }
+        /// <summary>A few lines from the page itself (verbatim from the text).</summary>
+        public string Excerpt { get; set; }
+        public BookProvenance Provenance { get; set; }
+        /// <summary>What a reader takes away.</summary>
+        public List<string> Teaches { get; set; } = new List<string>();
+        /// <summary>Pointers into the game data (region, place, species, item, recipe, quest, civilization, god). Background only, never a requirement.</summary>
+        public List<BookHook> Hooks { get; set; } = new List<BookHook>();
+        public List<string> CanonNotes { get; set; } = new List<string>();
         public List<BookReward> Rewards { get; set; } = new List<BookReward>();
     }
 

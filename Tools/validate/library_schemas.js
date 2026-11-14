@@ -38,6 +38,13 @@ module.exports = function (SCHEMAS) {
           status: { type: 'string', enum: ['draft', 'clear', 'hold'] }, quality: { type: 'string', enum: ['strong', 'average', 'templated'] },
           inWorldDate: { type: 'string' }, source: { type: 'string', minLength: 1 }, text: { type: ['string', 'null'] },
           rankGate: RL,
+          excerpt: { type: 'string', minLength: 40 },
+          provenance: { type: 'object', additionalProperties: false, required: ['tradition', 'writtenIn', 'era', 'copy', 'shelfPlace'],
+            properties: { tradition: { type: 'string', minLength: 1 }, writtenIn: reg, era: { type: 'string', minLength: 1 }, copy: { type: 'string', minLength: 1 }, shelfPlace: { type: 'string', minLength: 1 } } },
+          teaches: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } },
+          hooks: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['kind', 'id'],
+            properties: { kind: { type: 'string', enum: ['region', 'place', 'species', 'item', 'recipe', 'quest', 'civilization', 'god'] }, id: { type: 'string', minLength: 1 }, note: { type: 'string' } } } },
+          canonNotes: { type: 'array', items: { type: 'string', minLength: 1 } },
           rewards: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['kind', 'id'],
             properties: { kind: { type: 'string', enum: ['bestiary', 'archive', 'recipe_hint', 'clue'] }, id: { type: 'string', minLength: 1 } } } }
         } } }
