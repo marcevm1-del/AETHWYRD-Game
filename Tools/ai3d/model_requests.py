@@ -16,6 +16,9 @@ Standard library only. Run it with any Python 3.11+:
   python Tools/ai3d/model_requests.py review warren_crate --approve --by anime-fantasy-director --note "reads well"
   python Tools/ai3d/model_requests.py finish warren_crate --by environment-artist --note "baked to Art/..."
 
+Scope: props, set dressing, creatures, plants, weapons, armour, building parts and terrain features. NOT character
+or NPC bodies: those come from Tools/blender/ascend_characters, and the queue refuses a request that asks for one.
+
 Statuses: requested -> generated -> approved -> finished, or needs-image (no image and no image key yet),
 failed (TripoSR or the image tool errored; the error is kept) and rejected (with the reviewer's note).
 """
@@ -35,7 +38,17 @@ IMAGES = os.path.join(ROOT, "Art", "Generation", "staging", "images")
 MESHES = os.path.join(ROOT, "Art", "Generation", "staging", "meshes")
 TRIPOSR_PYTHON = os.environ.get("TRIPOSR_PYTHON", r"E:\tsr-venv\Scripts\python.exe")
 
-KINDS = ["prop", "creature", "building-part", "weapon", "armor", "plant", "terrain-feature", "character-reference"]
+KINDS = ["prop", "creature", "building-part", "weapon", "armor", "plant", "terrain-feature"]
+
+# Retired after the character test of 2026-11-13 (the measured limits are in .claude/agents/triposr-modeler.md):
+# TripoSR reconstructed our own base-body render as a watertight 4,582-vertex blockout with the right silhouette,
+# but with mitten hands and no face. Bodies come from Tools/blender/ascend_characters, which gives clean topology,
+# a humanoid rig and data-driven variants, so the queue refuses body requests instead of making a worse start.
+BODIES_COME_FROM = "character and NPC bodies come from Tools/blender/ascend_characters, not from TripoSR"
+RETIRED_KINDS = {"character-reference": BODIES_COME_FROM}
+# Narrow on purpose: these phrases mean a humanoid body, and none of them fits a prop, a monster or a mount.
+BODY_PHRASES = ("base body", "player body", "npc body", "human body", "humanoid body", "humanoid base",
+                "character body", "player character model", "base mesh for the player")
 STATUSES = ["requested", "needs-image", "generated", "approved", "rejected", "finished", "failed"]
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{1,63}$")
 IMAGE_EXT = (".png", ".jpg", ".jpeg", ".webp")
@@ -77,7 +90,10 @@ def validate(req):
     errs = []
     if not ID_RE.match(req.get("id", "")):
         errs.append("id must be 2-64 chars of a-z, 0-9, _ or -")
-    if req.get("kind") not in KINDS:
+    kind = req.get("kind")
+    if kind in RETIRED_KINDS:
+        errs.append("kind '%s' is retired: %s" % (kind, RETIRED_KINDS[kind]))
+    elif kind not in KINDS:
         errs.append("kind must be one of " + ", ".join(KINDS))
     for k in ("name", "requestedBy"):
         if not str(req.get(k, "")).strip():
@@ -91,6 +107,11 @@ def validate(req):
             errs.append("image must be a local file, not a URL")
         elif not img.lower().endswith(IMAGE_EXT):
             errs.append("image must be " + "/".join(IMAGE_EXT))
+    said = (str(req.get("name", "")) + " " + str(req.get("notes") or "") + " " +
+            str((req.get("source") or {}).get("prompt") or "")).lower()
+    phrase = next((w for w in BODY_PHRASES if w in said), None)
+    if phrase:
+        errs.append("this asks for a '%s': %s" % (phrase, BODIES_COME_FROM))
     size = req.get("targetSizeM")
     if size is not None and not (0.05 <= float(size) <= 200):
         errs.append("targetSizeM must be between 0.05 and 200 metres")
@@ -238,6 +259,12 @@ def cmd_run(a):
             src = r["source"]
             print("would run %s: %s" % (r["id"], "image " + src["image"] if src.get("image") else "prompt -> image -> mesh"))
             continue
+        errs = validate(r)
+        if errs:
+            print("  %s -> rejected: %s" % (r["id"], "; ".join(errs)))
+            set_status(r, "rejected", "model_requests.py", "; ".join(errs))
+            save(r)
+            continue
         print("running %s ..." % r["id"], flush=True)
         status = process(r)
         save(r)
@@ -284,7 +311,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest="cmd", required=True)
     n = sub.add_parser("new", help="file a request")
     n.add_argument("--id", required=True)
-    n.add_argument("--kind", required=True, choices=KINDS)
+    n.add_argument("--kind", required=True, choices=KINDS + sorted(RETIRED_KINDS))
     n.add_argument("--name", required=True)
     n.add_argument("--by", required=True, help="the requesting agent or person")
     n.add_argument("--image", help="local reference image (own art or own render; never another game's art)")

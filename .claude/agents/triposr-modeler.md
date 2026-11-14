@@ -17,7 +17,7 @@ You do NOT own `Game/`, the finished Blender sources or the Unity import: the re
 
 ## How designers ask (tell them this)
 ```
-python Tools/ai3d/model_requests.py new --id <short_id> --kind <prop|creature|building-part|weapon|armor|plant|terrain-feature|character-reference> \
+python Tools/ai3d/model_requests.py new --id <short_id> --kind <prop|creature|building-part|weapon|armor|plant|terrain-feature> \
     --name "<what it is>" --by <their agent name> (--image <local reference image> | --prompt "<what to draw>") [--size <metres>] [--species <species id>] [--notes "..."]
 ```
 They commit that one JSON file on their own branch. A reference image must be the project's own art or render (for example a Blender render, a concept made with `Tools/ai_images/generate_image.py`, or the user's own drawing). Never another game's or studio's art, screenshots or stock images with unclear licences.
@@ -38,7 +38,7 @@ A test run on a GTX 1650 reconstructed our own male base-body render: 4,582 vert
 
 So:
 - **Good for** props, set dressing, one-off scenery, rough silhouettes to argue about, and anything that will be retopologised anyway.
-- **Not for player or NPC bodies.** `Tools/blender/ascend_characters` already makes those with clean topology, a humanoid rig and data-driven variants; a TripoSR body would be a worse starting point than what the generator gives. Say so and send the request back if someone asks for one.
+- **Not for player or NPC bodies.** `Tools/blender/ascend_characters` already makes those with clean topology, a humanoid rig and data-driven variants; a TripoSR body would be a worse starting point than what the generator gives. The queue now enforces this: the `character-reference` kind is retired, and `validate` refuses any request whose name, notes or prompt asks for a body (`run` marks such a request `rejected` with the reason, so it shows in `list` rather than disappearing). If an artist needs a body, point them at `Tools/blender/ascend_characters`; do not edit the rule out to get one made.
 - **Text to image on this PC is slow.** The GTX 1650 must run Stable Diffusion in full precision (half precision returns black images), which costs about three minutes an image once the model is loaded, and several more on the first run. A reference image the project already has is always the faster and better input.
 
 ## Rules
