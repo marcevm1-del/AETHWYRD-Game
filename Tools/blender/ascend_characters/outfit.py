@@ -199,19 +199,47 @@ def _cloak(sp, L, body, col, cloakc, trim):
         drape = max(0.0, (0.76 - z) / 0.5)
         pts = []
         for t in th:
-            rx = a + (0.034 + 0.060 * drape) * H
-            ry = bk + (0.020 + 0.075 * drape) * H
-            wave = 1.0 + 0.09 * drape * math.sin(t * 7.0)
-            pts.append((math.sin(t) * rx * wave, L.yoff(z) * H - math.cos(t) * ry * wave, z * H))
+            rx = a + (0.030 + 0.070 * drape) * H
+            ry = bk + (0.018 + 0.085 * drape) * H
+            # two frequencies, so the folds are not a regular corrugation; the hem also rises and falls, because a
+            # cloth hem cut level reads as a drawn circle from every angle
+            wave = 1.0 + 0.17 * drape * math.sin(t * 7.0) + 0.075 * drape * math.sin(t * 13.0 + 1.3)
+            dz = 0.016 * H * drape ** 2 * math.sin(t * 5.0 + 0.6)
+            pts.append((math.sin(t) * rx * wave, L.yoff(z) * H - math.cos(t) * ry * wave, z * H + dz))
         w = B.chain_weights(-z, ["UpperChest", "CloakBack_1", "CloakBack_2", "CloakBack_3"], [-0.745, -0.60, -0.46], 0.05)
         rows.append(mb.ring(np.array(pts), w, "cloak"))
     for a, b_ in zip(rows, rows[1:]):
         for j in range(n - 1):
             mb.F.append((a[j], a[j + 1], b_[j + 1], b_[j]))
 
+    # The hood: a cowl lying on the shoulders and rising behind the neck. It is what makes a cape read as a
+    # travelling cloak instead of a sheet pinned to the back. It stays on the shoulders (UpperChest), so it does
+    # not swing with the head.
+    hz = [0.800, 0.818, 0.833, 0.845, 0.853]
+    hth = np.linspace(math.radians(98), math.radians(262), n)
+    hood = []
+    for i, z in enumerate(hz):
+        u = i / (len(hz) - 1.0)
+        ri = int(np.clip(np.searchsorted(LY.Z, z) - 1, 0, LY.NECK_BASE))
+        a = L.A[ri] * H
+        # a rolled fold: it keeps its width and gets DEEPER towards the top, so the cowl bulges back over the
+        # shoulders. Shrinking it towards the top instead made a flat shelf sticking out behind the neck.
+        rx = (a * 1.02 + 0.030 * H) * (1.00 - 0.20 * u)
+        ry = (L.BB[ri] * H + 0.034 * H) * (1.00 + 0.06 * u)
+        yc = (0.008 + 0.020 * u) * H
+        pts = []
+        for t in hth:
+            fold = 1.0 + 0.055 * math.sin(t * 5.0 + 0.4)
+            pts.append((math.sin(t) * rx * fold, L.yoff(z) * H + yc - math.cos(t) * ry * fold, z * H))
+        hood.append(mb.ring(np.array(pts), {"UpperChest": 1.0}, "cloak"))
+    for a_, b_ in zip(hood, hood[1:]):
+        for j in range(n - 1):
+            mb.F.append((a_[j], a_[j + 1], b_[j + 1], b_[j]))
+
     def paint(co):
         c = np.tile(cloakc, (len(co), 1))
         c[co[:, 2] < 0.34 * H] = trim * 0.8 + cloakc * 0.2
-        c[co[:, 2] > 0.81 * H] = trim * 0.7 + cloakc * 0.3
+        band = (co[:, 2] > 0.806 * H) & (co[:, 2] < 0.829 * H)
+        c[band] = trim * 0.7 + cloakc * 0.3          # the collar band only: the hood above it stays cloak colour
         return c
     return _finish(sp["id"] + "_cloak", mb, body, col, paint, "CH_cloth", levels=1)

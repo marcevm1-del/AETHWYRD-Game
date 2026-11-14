@@ -69,7 +69,7 @@ class Hair:
         self.vol = vol
         offs = {17: 0.0100, 18: 0.0105, 19: 0.0112, 20: 0.0120, 21: 0.0122, 22: 0.0105, 23: 0.0080}
         cosv = np.cos(LY.TH)
-        limit = {17: -0.2, 18: -0.2, 19: -0.05, 20: 0.25, 21: 0.62, 22: 2.0, 23: 2.0}
+        limit = {17: -0.05, 18: -0.02, 19: 0.10, 20: 0.48, 21: 0.84, 22: 2.0, 23: 2.0}
         lo = 17 if nape else 19
         rings = {}
         for i in range(lo, 24):
@@ -91,7 +91,7 @@ class Hair:
         for k in range(LY.NR):
             mb.F.append((ids[k], ids[(k + 1) % LY.NR], apex))
 
-    def clump(self, rt, end, w0=0.0075, ctrl=(0.35, 0.2), bulge=0.0, wave=0.0, bone="Head", t_col=1.0, up=None, flat=0.32):
+    def clump(self, rt, end, w0=0.0075, ctrl=(0.35, 0.2), bulge=0.0, wave=0.0, bone="Head", t_col=1.0, up=None, flat=0.62):
         """A tapered tube from root rt to end with a cubic bend. ctrl: how far the first handle leaves the scalp (along the
         outward direction) and how much the second handle drops."""
         mb, H = self.mb, self.H
@@ -168,7 +168,11 @@ def _group(h, rings, ks, n, length, out, down, side=0.0, fwd=0.0, w0=0.0075, bon
     H = h.H
     cand = [(r, k) for r in rings for k in ks]
     h.rng.shuffle(cand)
-    for r, k in cand[:max(4, int(n * 0.30))]:
+    while len(cand) < n:                       # more strands than roots: reuse roots, the jitter separates them
+        extra = [(r, k) for r in rings for k in ks]
+        h.rng.shuffle(extra)
+        cand += extra
+    for r, k in cand[:n]:
         rt = h.root(r, k)
         sgn = 1.0 if rt[0] >= 0 else -1.0
         ln = h.rng.uniform(*length) * H
@@ -193,9 +197,10 @@ TOP = [22, 23]
 
 
 def style_crop(h):
-    h.cap(20, nape=True, vol=0.85)
-    _group(h, TOP, NOFRONT, 38, (0.040, 0.060), 0.7, 0.9, w0=0.0075, ctrl=(0.2, 0.0))
-    _group(h, [22], FRONT, 8, (0.026, 0.034), 0.15, 0.9, side=0.3, fwd=0.4, w0=0.0070)
+    h.cap(20, nape=True, vol=1.45)
+    _group(h, [20, 21, 22, 23], NOFRONT, 64, (0.045, 0.072), 0.70, 0.95, w0=0.0082, ctrl=(0.25, 0.05))
+    _group(h, [21, 22], SIDEL + SIDER, 16, (0.050, 0.070), 0.30, 1.05, w0=0.0078, ctrl=(0.18, 0.15))
+    _group(h, [21, 22, 23], FRONT, 22, (0.048, 0.066), 0.16, 1.05, side=0.38, fwd=0.42, w0=0.0078, ctrl=(0.30, 0.0))
 
 
 def style_swept_fringe(h):
@@ -238,9 +243,11 @@ def style_long_shaggy(h):
 
 
 def style_bob(h):
-    h.cap(20, nape=True, vol=1.05)
-    _group(h, TOP, NOFRONT, 46, (0.120, 0.140), 0.55, 1.0, side=-0.1, w0=0.0105, bone="Back", ctrl=(0.3, 0.1), jitter=0.10)
-    _group(h, [22], FRONT, 11, (0.030, 0.040), 0.15, 0.9, w0=0.0090, fwd=0.3)
+    h.cap(20, nape=True, vol=1.50)
+    _group(h, [20, 21, 22, 23], NOFRONT, 78, (0.115, 0.145), 0.42, 1.0, side=-0.06, w0=0.0105, bone="Back",
+           ctrl=(0.30, 0.10), jitter=0.12)
+    _group(h, [21, 22], SIDEL + SIDER, 20, (0.100, 0.130), 0.26, 1.05, w0=0.0098, bone="Back", ctrl=(0.16, 0.12))
+    _group(h, [21, 22, 23], FRONT, 24, (0.046, 0.062), 0.14, 1.05, side=0.28, fwd=0.34, w0=0.0088, ctrl=(0.28, 0.0))
 
 
 def style_long_loose(h):
