@@ -98,6 +98,14 @@ namespace Ascend.Game
                 var yawArg = Arg("-ascendShotYaw");
                 float yaw = yawArg != null ? float.Parse(yawArg, System.Globalization.CultureInfo.InvariantCulture) : 0f;
                 player.transform.SetPositionAndRotation(to, Quaternion.Euler(0f, yaw, 0f));
+                // Out in the streamed world: bring the ground up around the new spot and stand on it (the field is flat at y = 0, the hills are not).
+                var streamer = FindFirstObjectByType<WorldStreamer>();
+                if (streamer != null)
+                {
+                    streamer.LoadNow();
+                    Physics.SyncTransforms();
+                    if (Physics.Raycast(new Vector3(to.x, 6000f, to.z), Vector3.down, out var groundHit, 12000f)) player.transform.position = groundHit.point + Vector3.up * 0.1f;
+                }
                 var follow = FindFirstObjectByType<ThirdPersonCamera>();
                 if (cc != null) cc.enabled = true;
                 if (follow != null) follow.SnapBehind();

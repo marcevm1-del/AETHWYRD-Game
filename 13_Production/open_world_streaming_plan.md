@@ -69,3 +69,7 @@ Branch `agent/world-builder-engineer/region-graph-map`. Files: `Tools/world/bake
 4. Origin shifting plus making fog and area code origin-aware.
 5. Decide the region-lookup question (section 4) and write the foot/no-foot validator.
 6. Rebuild tiles at 10.24 km (Blender run) when the user wants the cleaner 513 grid.
+
+## 7. Lesson: the editor and the built player see different data
+
+The first photos from the built player showed no terrain: `WorldStreamer` threw `FileNotFoundException` for `world_scale.json` because `BuildPlayer.cs` copies only a listed set of `Data/` files into the build. In the editor `AscendData.DataRoot` reads the repo's `Data/` folder, so the PlayMode tests passed while the streamer was dead in the build. Rules: anything the streamer reads at runtime must be in the build's data list (`BuildPlayer.cs`), and a screenshot from the built player is the only check that catches this. The baked tiles live in `StreamingAssets/World/` and travel with the build (236 MB player).
