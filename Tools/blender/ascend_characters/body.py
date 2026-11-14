@@ -145,8 +145,10 @@ class Builder:
 
     # ----- arms -------------------------------------------------------------------------------------------------
     ARM_S = [0.030, 0.065, 0.105, 0.148, 0.165, 0.190, 0.230, 0.270, 0.300]
-    ARM_RF = [0.038, 0.036, 0.0335, 0.029, 0.0285, 0.0285, 0.027, 0.0235, 0.0188]
-    ARM_RU = [0.041, 0.038, 0.034, 0.030, 0.029, 0.030, 0.0275, 0.0235, 0.0150]
+    # a deltoid at the top, a real taper above the elbow and a forearm that swells under it: the old table was
+    # almost a cylinder, so arms read as sausages whatever the pose
+    ARM_RF = [0.0415, 0.0385, 0.0335, 0.0285, 0.0280, 0.0295, 0.0275, 0.0235, 0.0188]
+    ARM_RU = [0.0445, 0.0405, 0.0345, 0.0295, 0.0285, 0.0310, 0.0280, 0.0235, 0.0150]
 
     def arm_w(self, s):
         """s: distance from the shoulder joint in fractions of H."""

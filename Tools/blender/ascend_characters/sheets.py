@@ -9,8 +9,9 @@ import toon_preview as tp
 
 from . import rig as R
 
-tp.RIM.setdefault("character", 0.35)
-tp.OUTLINE_PX.setdefault("character", 1.5)
+# The frontal key keeps the face clear but flattens the form, so the rim does the separating instead.
+tp.RIM.setdefault("character", 0.36)
+tp.OUTLINE_PX.setdefault("character", 2.0)
 tp.PITCH.setdefault("character", 6.0)
 # Skin in the creature shadow tone reads bruised: characters get a lighter, warmer shade.
 tp.SHADOW_BY_KIND.setdefault("character", (0.76, 0.72, 0.80))
