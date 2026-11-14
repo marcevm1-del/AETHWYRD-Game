@@ -6,7 +6,8 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
-| Agent sessions, batch 3 | Merged work from: audio-designer, combat-designer, narrative-writer, producer, systems-designer. Includes the boss-only rock stem brief, 89 more companion banter lines, the life-skill XP curve review, stable and mount economy numbers, mounted-combat rules for ground mounts, and the companion presets and group tactics wired into the Unity runtime (its first Unity run). Verified with Unity PlayMode as well as the data and rules build | 761 |
+| Agent sessions, batch 3 | Merged work from: audio-designer, combat-designer, narrative-writer, producer, systems-designer: the boss-only rock stem brief, 89 more companion banter lines, the life-skill XP curve review, stable and mount economy numbers, mounted-combat rules for ground mounts. **Held, not merged:** ai-engineer's companion presets and group tactics, because its own new PlayMode test (FallBackCommandSendsHerBackToYouInAFight) failed. Verified with the data and rules build; the Unity gate is what held the sixth branch | 761 |
+| Model requests are props only | The character test ran the whole pipeline (queue, local Stable Diffusion image, TripoSR mesh, Blender turnaround renders) and gave a watertight 4,582-vertex blockout with mitten hands and no face, so bodies stay with Tools/blender/ascend_characters. The queue now enforces it: the character-reference kind is retired, a request whose name, notes or prompt asks for a humanoid body is refused whatever kind it claims, and run marks such a request rejected with the reason instead of skipping it. Queue tests 21 -> 32 | 761 |
 
 ## 2026-11-11
 
