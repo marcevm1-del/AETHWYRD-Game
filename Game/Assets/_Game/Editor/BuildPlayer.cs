@@ -31,6 +31,23 @@ namespace Ascend.EditorTools
 
         public static void BuildRing0() => Build(true);
 
+        const string StreamTerrainMaterialPath = "Assets/_Game/Resources/World/StreamTerrain.mat";
+
+        /// <summary>
+        /// The streamed terrain draws with URP's Terrain/Lit shader. Nothing in a scene references that shader, so a player build
+        /// strips it and the terrain shows as flat grey (found by the first built-player photos). A material asset under
+        /// Resources that WorldStreamer loads keeps the shader in the build.
+        /// </summary>
+        public static void EnsureStreamTerrainMaterial()
+        {
+            if (AssetDatabase.LoadAssetAtPath<Material>(StreamTerrainMaterialPath) != null) return;
+            var shader = Shader.Find("Universal Render Pipeline/Terrain/Lit");
+            if (shader == null) { Debug.LogWarning("[Ascend] URP Terrain/Lit shader not found; the streamed terrain will not render correctly in a build."); return; }
+            Directory.CreateDirectory(Path.GetDirectoryName(StreamTerrainMaterialPath));
+            AssetDatabase.CreateAsset(new Material(shader) { name = "StreamTerrain" }, StreamTerrainMaterialPath);
+            AssetDatabase.SaveAssets();
+        }
+
         static void Build(bool batch)
         {
             string projectRoot = Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
@@ -42,6 +59,7 @@ namespace Ascend.EditorTools
             BuildReport report = null;
             try
             {
+                EnsureStreamTerrainMaterial();
                 foreach (var rel in DataFiles)
                 {
                     string dst = Path.Combine(streamingData, rel);

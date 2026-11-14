@@ -161,6 +161,8 @@ namespace Ascend.Game
             go.transform.position = WorldOrigin.ToUnity(tile.X0Km, tile.Y0Km + tile.SizeKm, tile.MinM);
             var terrain = go.GetComponent<Terrain>();
             terrain.heightmapPixelError = HeightmapPixelError;
+            var template = Resources.Load<Material>("World/StreamTerrain"); // also keeps URP's Terrain/Lit shader in a build
+            if (template != null) terrain.materialTemplate = template;
             terrain.basemapDistance = 1000f;
             terrain.drawInstanced = true;
             terrain.allowAutoConnect = true; // same grouping id: Unity links neighbours as they appear
