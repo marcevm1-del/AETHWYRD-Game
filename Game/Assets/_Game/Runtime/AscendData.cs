@@ -55,6 +55,7 @@ namespace Ascend.Game
         static MusicFile _music; static AccessibilityFile _access; static LivingWorldData _living; static LabyrinthData _lab;
         static CompanionRules _compRules; static List<CompanionData> _companions; static MountTable _mounts; static PhotoFile _photo;
         static PlayerAppearanceFile _appearance; static LoadingTipsFile _tips; static bool _appearanceDone, _tipsDone;
+        static CustomizationFile _custom; static FaceExpressionFile _faces; static bool _customDone, _facesDone;
         static bool _musicDone, _accessDone, _livingDone, _labDone, _rulesDone, _compDone, _mountsDone, _photoDone;
 
         static T Once<T>(ref T field, ref bool done, string relative) where T : class
@@ -65,6 +66,10 @@ namespace Ascend.Game
 
         /// <summary>Data/Characters/player_appearance.json (character creator options); null when missing.</summary>
         public static PlayerAppearanceFile PlayerAppearance => Once(ref _appearance, ref _appearanceDone, "Characters/player_appearance.json");
+        /// <summary>Data/Characters/customization.json (faces, hair, outfit pieces, palettes, sockets); null when missing.</summary>
+        public static CustomizationFile Customization => Once(ref _custom, ref _customDone, "Characters/customization.json");
+        /// <summary>Data/Characters/face_expressions.json (the face rig's expressions and blink); null when missing.</summary>
+        public static FaceExpressionFile FaceExpressions => Once(ref _faces, ref _facesDone, "Characters/face_expressions.json");
         /// <summary>Data/UI/loading_tips.json; null when missing.</summary>
         public static LoadingTipsFile LoadingTips => Once(ref _tips, ref _tipsDone, "UI/loading_tips.json");
         /// <summary>Data/Audio/music_states.json (adaptive music); null when missing.</summary>
@@ -125,7 +130,7 @@ namespace Ascend.Game
         public static void Reload()
         {
             _db = null;
-            _musicDone = _accessDone = _livingDone = _labDone = _rulesDone = _compDone = _mountsDone = _photoDone = _appearanceDone = _tipsDone = false;
+            _musicDone = _accessDone = _livingDone = _labDone = _rulesDone = _compDone = _mountsDone = _photoDone = _appearanceDone = _tipsDone = _customDone = _facesDone = false;
             _music = null; _access = null; _living = null; _lab = null; _compRules = null; _companions = null; _mounts = null; _photo = null;
         }
     }

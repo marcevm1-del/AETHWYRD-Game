@@ -1,0 +1,238 @@
+// The toon shader for generated characters (Tools/blender/ascend_characters): the same two-tone lighting, rim and ink outline
+// as Ascend/Toon, with three differences so characters can be painted and recoloured without textures:
+//  1. The base colour comes from the vertex colour (the generator's per-vertex paint, exported as sRGB), times _BaseColor.
+//  2. Colour slots: UV1 = (slotA + 32 * slotB, t) and UV2.x = shade (written by slots.py at export). When _UseSlots is 1 the
+//     colour becomes lerp(_SlotColors[A], _SlotColors[B], t) * shade; slot 0 keeps the painted colour. _SlotColors and
+//     _UseSlots are set per renderer with a MaterialPropertyBlock (CharacterAppearanceApplier), so two characters sharing a
+//     material never share colours. Being outside UnityPerMaterial they make this shader SRP-Batcher incompatible: fine for
+//     a handful of characters on screen, worth measuring before crowds use it.
+//  3. The outline pushes along the smoothed normal in UV3 (written by the CharacterImport post-processor), because the
+//     vertex colour now carries the paint.
+// Target: URP 17 forward, PC (GTX 1650 floor, art_budgets.md). No textures, no keywords of its own (the variants are URP's
+// shadow and fog multi_compiles, as in Ascend/Toon). The slot branch is per vertex, not per pixel.
+Shader "Ascend/ToonCharacter"
+{
+    Properties
+    {
+        _BaseColor ("Base Color (multiplies the paint)", Color) = (1, 1, 1, 1)
+        [Toggle] _VertexColorSRGB ("Vertex colours are sRGB", Float) = 1
+        _ShadowTint ("Shadow Tint", Color) = (0.58, 0.56, 0.78, 1)
+        _ShadowStep ("Shadow Step", Range(0, 1)) = 0.5
+        _ShadowSoftness ("Shadow Softness", Range(0.001, 0.3)) = 0.03
+        _AmbientStrength ("Ambient Strength", Range(0, 1)) = 0.35
+        _RimColor ("Rim Color", Color) = (1, 0.97, 0.9, 0.22)
+        _RimPower ("Rim Power", Range(0.5, 8)) = 3.5
+        [HDR] _EmissionColor ("Emission", Color) = (0, 0, 0, 0)
+        _OutlineColor ("Outline Color", Color) = (0.16, 0.11, 0.09, 1)
+        _OutlineWidth ("Outline Width (m)", Range(0, 0.1)) = 0.03
+    }
+
+    SubShader
+    {
+        Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "Queue" = "Geometry" }
+
+        HLSLINCLUDE
+        #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+        #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+        CBUFFER_START(UnityPerMaterial)
+            half4 _BaseColor;
+            half4 _ShadowTint;
+            half _ShadowStep;
+            half _ShadowSoftness;
+            half _AmbientStrength;
+            half4 _RimColor;
+            half _RimPower;
+            half4 _EmissionColor;
+            half4 _OutlineColor;
+            half _OutlineWidth;
+            half _VertexColorSRGB;
+        CBUFFER_END
+        // per renderer, from a MaterialPropertyBlock (see the header)
+        float4 _SlotColors[32];
+        float _UseSlots;
+
+        half3 CharacterBase(half4 vcol, float2 slots, float shade)
+        {
+            half3 painted = _VertexColorSRGB > 0.5 ? SRGBToLinear(vcol.rgb) : vcol.rgb;
+            float packed = round(slots.x);
+            int a = (int)fmod(packed, 32.0);
+            int b = (int)floor(packed / 32.0 + 0.001);
+            if (_UseSlots < 0.5 || a <= 0 || a >= 32) return painted * _BaseColor.rgb;
+            b = (b <= 0 || b >= 32) ? a : b;
+            half3 c = lerp(_SlotColors[a].rgb, _SlotColors[b].rgb, saturate(slots.y)) * shade;
+            return c * _BaseColor.rgb;
+        }
+        ENDHLSL
+
+        Pass
+        {
+            Name "ToonForward"
+            Tags { "LightMode" = "UniversalForward" }
+            Cull Back
+            ZWrite On
+
+            HLSLPROGRAM
+            #pragma vertex Vert
+            #pragma fragment Frag
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
+            #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
+            #pragma multi_compile_fog
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; half4 color : COLOR; float2 slots : TEXCOORD1; float2 shade : TEXCOORD2; };
+            struct Varyings
+            {
+                float4 positionCS : SV_POSITION;
+                float3 positionWS : TEXCOORD0;
+                float3 normalWS : TEXCOORD1;
+                float fogFactor : TEXCOORD2;
+                half3 baseCol : TEXCOORD3;
+            };
+
+            Varyings Vert(Attributes v)
+            {
+                Varyings o;
+                VertexPositionInputs p = GetVertexPositionInputs(v.positionOS.xyz);
+                o.positionCS = p.positionCS;
+                o.positionWS = p.positionWS;
+                o.normalWS = TransformObjectToWorldNormal(v.normalOS);
+                o.fogFactor = ComputeFogFactor(p.positionCS.z);
+                o.baseCol = CharacterBase(v.color, v.slots, v.shade.x);
+                return o;
+            }
+
+            half4 Frag(Varyings i) : SV_Target
+            {
+                float3 n = normalize(i.normalWS);
+                Light main = GetMainLight(TransformWorldToShadowCoord(i.positionWS));
+                half ndl = dot(n, main.direction) * 0.5h + 0.5h;                       // half-Lambert
+                half lit = smoothstep(_ShadowStep - _ShadowSoftness, _ShadowStep + _ShadowSoftness, ndl * main.shadowAttenuation);
+                half3 tone = lerp(_ShadowTint.rgb, half3(1, 1, 1), lit);              // two tones: lit, or tinted shadow
+                half3 col = i.baseCol * tone * main.color + i.baseCol * SampleSH(n) * _AmbientStrength;
+                float3 view = normalize(GetWorldSpaceViewDir(i.positionWS));
+                half rim = pow(1.0h - saturate(dot(n, view)), _RimPower) * _RimColor.a * lit;
+                col += _RimColor.rgb * rim + _EmissionColor.rgb;
+                col = MixFog(col, i.fogFactor);
+                return half4(col, 1);
+            }
+            ENDHLSL
+        }
+
+        // The ink outline: back faces of a hull pushed out along the smoothed normal (UV3), drawn after the
+        // forward pass (URP draws an SRPDefaultUnlit pass for the same renderer).
+        Pass
+        {
+            Name "Outline"
+            Tags { "LightMode" = "SRPDefaultUnlit" }
+            Cull Front
+            ZWrite On
+
+            HLSLPROGRAM
+            #pragma vertex Vert
+            #pragma fragment Frag
+            #pragma multi_compile_fog
+
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; float3 smoothN : TEXCOORD3; };
+            struct Varyings { float4 positionCS : SV_POSITION; float fogFactor : TEXCOORD0; };
+
+            Varyings Vert(Attributes v)
+            {
+                Varyings o;
+                float3 smooth = v.smoothN;
+                if (dot(smooth, smooth) < 1e-4) smooth = v.normalOS;
+                float3 posOS = v.positionOS.xyz + normalize(smooth) * _OutlineWidth;
+                o.positionCS = TransformObjectToHClip(posOS);
+                o.fogFactor = ComputeFogFactor(o.positionCS.z);
+                return o;
+            }
+
+            half4 Frag(Varyings i) : SV_Target
+            {
+                return half4(MixFog(_OutlineColor.rgb, i.fogFactor), 1);
+            }
+            ENDHLSL
+        }
+
+        Pass
+        {
+            Name "ShadowCaster"
+            Tags { "LightMode" = "ShadowCaster" }
+            ZWrite On
+            ZTest LEqual
+            ColorMask 0
+            Cull Back
+
+            HLSLPROGRAM
+            #pragma vertex Vert
+            #pragma fragment Frag
+            #pragma multi_compile_vertex _ _CASTING_PUNCTUAL_LIGHT_SHADOW
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+
+            float3 _LightDirection;
+            float3 _LightPosition;
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; };
+
+            float4 Vert(Attributes v) : SV_POSITION
+            {
+                float3 posWS = TransformObjectToWorld(v.positionOS.xyz);
+                float3 nWS = TransformObjectToWorldNormal(v.normalOS);
+            #if _CASTING_PUNCTUAL_LIGHT_SHADOW
+                float3 lightDir = normalize(_LightPosition - posWS);
+            #else
+                float3 lightDir = _LightDirection;
+            #endif
+                float4 pos = TransformWorldToHClip(ApplyShadowBias(posWS, nWS, lightDir));
+            #if UNITY_REVERSED_Z
+                pos.z = min(pos.z, UNITY_NEAR_CLIP_VALUE);
+            #else
+                pos.z = max(pos.z, UNITY_NEAR_CLIP_VALUE);
+            #endif
+                return pos;
+            }
+
+            half4 Frag() : SV_Target { return 0; }
+            ENDHLSL
+        }
+
+        Pass
+        {
+            Name "DepthOnly"
+            Tags { "LightMode" = "DepthOnly" }
+            ZWrite On
+            ColorMask R
+            Cull Back
+
+            HLSLPROGRAM
+            #pragma vertex Vert
+            #pragma fragment Frag
+            struct Attributes { float4 positionOS : POSITION; };
+            float4 Vert(Attributes v) : SV_POSITION { return TransformObjectToHClip(v.positionOS.xyz); }
+            half4 Frag() : SV_Target { return 0; }
+            ENDHLSL
+        }
+
+        Pass
+        {
+            Name "DepthNormals"
+            Tags { "LightMode" = "DepthNormals" }
+            ZWrite On
+            Cull Back
+
+            HLSLPROGRAM
+            #pragma vertex Vert
+            #pragma fragment Frag
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; };
+            struct Varyings { float4 positionCS : SV_POSITION; float3 normalWS : TEXCOORD0; };
+            Varyings Vert(Attributes v)
+            {
+                Varyings o;
+                o.positionCS = TransformObjectToHClip(v.positionOS.xyz);
+                o.normalWS = TransformObjectToWorldNormal(v.normalOS);
+                return o;
+            }
+            half4 Frag(Varyings i) : SV_Target { return half4(normalize(i.normalWS), 0); }
+            ENDHLSL
+        }
+    }
+    FallBack "Hidden/Universal Render Pipeline/FallbackError"
+}

@@ -26,6 +26,9 @@ namespace Ascend.Game
 
         public Screen Current { get; private set; } = Screen.Title;
         public CharacterCreatorState Creator { get; private set; }
+        /// <summary>The full customization screen, open inside the creator panel (null when closed).</summary>
+        public CustomizerModel Customizer { get; private set; }
+        int _custSeen = -1, _creatorCursorSaved;
         public string StatusLine { get; private set; } = "";
         public string Tip { get; private set; } = "";
         public float LoadProgress { get; private set; }
@@ -364,6 +367,7 @@ namespace Ascend.Game
         void UpdateCreator(int move, int change, bool use, bool back, bool alt, int clickRow, int clickDir)
         {
             if (Creator == null) return;
+            if (Customizer != null) { UpdateCustomizer(move, change, use, back, alt, clickRow, clickDir); return; }
             var order = CharacterCreatorState.Order;
             if (_editingName)
             {
@@ -391,11 +395,152 @@ namespace Ascend.Game
                 {
                     case CharacterCreatorState.Field.Name: _editingName = true; _focusName = true; break;
                     case CharacterCreatorState.Field.Begin: BeginNewGame(); return;
+                    case CharacterCreatorState.Field.Customize: OpenCustomizer(); return;
                     case CharacterCreatorState.Field.Back: Open(Screen.Menu); return;
                     default: Creator.Cycle(f, 1); break;
                 }
             }
             _preview?.SetLook(Creator.Look);
+        }
+
+        // ------------------------------------------------------------------ the customization screen (inside the creator)
+
+        /// <summary>Opens the customization screen on the creator's current look. Null data: the row says "Not available" and nothing opens.</summary>
+        public void OpenCustomizer()
+        {
+            if (Creator?.Custom == null) return;
+            Customizer = new CustomizerModel(Creator.Custom, Creator.Look.Custom, new DeterministicRandom((ulong)System.DateTime.Now.Ticks), CharacterPresetStore.Load());
+            _creatorCursorSaved = _creatorCursor;
+            _creatorCursor = 0;
+            _custSeen = -1;
+            SyncCustomizer();
+        }
+
+        /// <summary>Closes it: the look goes back into the creator and the saved-looks book to disk.</summary>
+        public void CloseCustomizer()
+        {
+            if (Customizer == null) return;
+            Creator.SetCustom(Customizer.Look);
+            CharacterPresetStore.Save(Customizer.Book);
+            Customizer = null;
+            _creatorCursor = _creatorCursorSaved;
+            _preview?.SetLook(Creator.Look);
+        }
+
+        /// <summary>The rows the customization screen shows: the category tab row, the category's rows, then Done.</summary>
+        List<CustomizerModel.Row> CustRows()
+        {
+            var rows = new List<CustomizerModel.Row>
+            {
+                new CustomizerModel.Row { Id = "category", Label = "Category", Value = () => Customizer.Current.ToString(), Cycle = d => Customizer.StepCategory(d) },
+            };
+            rows.AddRange(Customizer.Rows);
+            rows.Add(new CustomizerModel.Row { Id = "done", Label = "Done", Value = () => "", IsButton = true, Activate = CloseCustomizer });
+            return rows;
+        }
+
+        void UpdateCustomizer(int move, int change, bool use, bool back, bool alt, int clickRow, int clickDir)
+        {
+            if (back) { CloseCustomizer(); return; }
+            if (alt) Customizer.StepCategory(1);
+            var rows = CustRows();
+            if (move != 0) _creatorCursor = Mathf.Clamp(_creatorCursor + move, 0, rows.Count - 1);
+            _creatorCursor = Mathf.Clamp(_creatorCursor, 0, rows.Count - 1);
+            if (clickRow >= 0 && clickRow < rows.Count)
+            {
+                _creatorCursor = clickRow;
+                if (clickDir != 0) change = clickDir; else use = true;
+            }
+            var row = rows[_creatorCursor];
+            if (change != 0) row.Cycle?.Invoke(change);
+            else if (use)
+            {
+                if (row.Activate != null) row.Activate();
+                else row.Cycle?.Invoke(1);
+            }
+            if (Customizer != null) SyncCustomizer();
+        }
+
+        void SyncCustomizer()
+        {
+            if (Customizer == null || Customizer.Version == _custSeen) return;
+            _custSeen = Customizer.Version;
+            Creator.SetCustom(Customizer.Look);
+            _preview?.SetLook(Creator.Look);
+        }
+
+        string HairLabel()
+        {
+            var h = Creator?.Custom != null && Creator.Look.Custom != null ? Creator.Custom.HairStyles.Find(x => x.Id == Creator.Look.Custom.HairStyle) : null;
+            return h?.Name ?? Creator.ValueText(CharacterCreatorState.Field.HairStyle);
+        }
+
+        void DrawCustomizer(Rect r, float top, float ts, float fb)
+        {
+            var rows = CustRows();
+            // category strip
+            float x = r.x + 18f;
+            foreach (var c in CustomizerModel.Categories)
+            {
+                bool on = c == Customizer.Current;
+                string label = c.ToString().ToUpperInvariant();
+                float w = 16f + label.Length * 9.5f;
+                if (on) SystemWindow.RRect(new Rect(x - 4f, top + 2f, w, 26f), SystemWindow.A(SystemWindow.Accent, 0.25f), 4f);
+                T(new Rect(x, top + 2f, w, 26f), label, 13f, on ? SystemWindow.Accent : SystemWindow.TextDim, TextAnchor.MiddleLeft, on ? FontStyle.Bold : FontStyle.Normal);
+                x += w + 6f;
+            }
+            float rh = 40f * Mathf.Min(ts, 1.3f);
+            float y0 = top + 36f;
+            int fit = Mathf.Max(3, Mathf.FloorToInt((r.yMax - fb - 64f - y0) / (rh + 4f)));
+            int first = Mathf.Clamp(_creatorCursor - fit / 2, 0, Mathf.Max(0, rows.Count - fit));
+            float y = y0;
+            for (int i = first; i < rows.Count && i < first + fit; i++)
+            {
+                var row = rows[i];
+                var rr = new Rect(r.x + 14f, y, r.width - 28f, rh);
+                y += rh + 4f;
+                _rects.Add(rr); _rectIndex.Add(i);
+                bool sel = i == _creatorCursor;
+                if (sel) { SystemWindow.RRect(rr, Contrast ? new Color(0.1f, 0.3f, 0.7f, 1f) : SystemWindow.Band, 3f); SystemWindow.Fill(new Rect(rr.x, rr.y + 3f, 3f, rr.height - 6f), SystemWindow.Accent); }
+                var labelCol = Contrast ? Color.white : SystemWindow.TextCol;
+                if (row.IsButton && string.IsNullOrEmpty(row.Value()))
+                {
+                    T(new Rect(rr.x + 12f, rr.y, rr.width - 24f, rr.height), (sel ? "▶ " : "   ") + row.Label, 19f, row.Id == "done" ? SystemWindow.Accent : labelCol, TextAnchor.MiddleLeft, row.Id == "done" ? FontStyle.Bold : FontStyle.Normal);
+                    continue;
+                }
+                T(new Rect(rr.x + 12f, rr.y, 236f, rr.height), (sel ? "▶ " : "   ") + row.Label, 17f, labelCol);
+                var vr = new Rect(rr.x + 250f, rr.y, rr.width - 270f, rr.height);
+                T(new Rect(vr.x, vr.y, 24f, vr.height), "<", 20f, sel ? SystemWindow.Accent : SystemWindow.TextDim, TextAnchor.MiddleCenter, FontStyle.Bold);
+                T(new Rect(vr.xMax - 24f, vr.y, 24f, vr.height), ">", 20f, sel ? SystemWindow.Accent : SystemWindow.TextDim, TextAnchor.MiddleCenter, FontStyle.Bold);
+                float vx = vr.x;
+                string hex = row.Swatch?.Invoke();
+                if (hex != null)
+                {
+                    var sr = new Rect(vx + 34f, vr.y + vr.height / 2f - 10f, 20f, 20f);
+                    SystemWindow.RRect(sr, CharacterSlots.ToColour(hex, Color.grey), 5f);
+                    SystemWindow.RRect(sr, new Color(1f, 1f, 1f, 0.85f), 5f, 1.5f);
+                    vx += 28f;
+                }
+                if (row.Id == "ch0" || row.Id == "ch1" || row.Id == "ch2" || row.Id == "ch3" || row.Id == "ch4" || row.Id == "ch5")
+                {
+                    // a bar under the value shows the channel at a glance
+                    int ch = row.Id[2] - '0';
+                    float v = (float)(ch == 3 ? Customizer.ChannelValue(3) / 360.0 : Customizer.ChannelValue(ch));
+                    var bar = new Rect(vr.x + 34f, vr.yMax - 9f, vr.width - 68f, 4f);
+                    SystemWindow.Fill(bar, SystemWindow.A(SystemWindow.TextDim, 0.35f));
+                    SystemWindow.Fill(new Rect(bar.x, bar.y, bar.width * Mathf.Clamp01(v), bar.height), SystemWindow.Accent);
+                }
+                T(new Rect(vx + 34f, vr.y, vr.width - 70f - (vx - vr.x), vr.height - 6f), row.Value(), 17f, Contrast ? Color.white : SystemWindow.Accent, TextAnchor.MiddleCenter, FontStyle.Bold);
+            }
+            if (Customizer.Current == CustomizerModel.Category.Colours)
+            {
+                var sw = new Rect(r.x + 26f, r.yMax - fb - 62f, 30f, 24f);
+                SystemWindow.RRect(sw, CharacterSlots.ToColour(Customizer.SlotHex(), Color.grey), 4f);
+                T(new Rect(sw.xMax + 8f, sw.y, 200f, 24f), Customizer.SlotHex(), 14f, SystemWindow.TextDim);
+            }
+            T(new Rect(r.x + 20f, r.yMax - fb - 30f, r.width - 40f, 26f), string.IsNullOrEmpty(Customizer.Status) ? "Left and Right change a choice; X changes the category. Options marked (planned) are not modelled yet." : Customizer.Status, 14f, SystemWindow.TextDim);
+            Hints(new Rect(r.x + 2f, r.yMax - fb - 2f, r.width - 4f, fb), ts,
+                new[] { (SystemWindow.PadActive ? "D-Pad" : "Arrows", "Choose / Change"), (SystemWindow.PadActive ? "A" : "Enter", "Use"), ("X", "Category"), (SystemWindow.PadActive ? "B" : "Esc", "Done") });
         }
 
         // ------------------------------------------------------------------ loading and capture
@@ -645,10 +790,13 @@ namespace Ascend.Game
             float ts = Ts;
             float pw = Mathf.Min(780f, vw * 0.5f - 60f);
             var r = new Rect(60f, 60f, pw, vh - 120f);
-            float top = Chrome(r, "CREATE YOUR CHARACTER", ts);
+            float top = Chrome(r, Customizer != null ? "CUSTOMIZE YOUR LOOK" : "CREATE YOUR CHARACTER", ts);
             var order = CharacterCreatorState.Order;
             float fb = 40f * ts;
             float y = top + 12f;
+            if (Customizer != null) DrawCustomizer(r, top, ts, fb);
+            else
+            {
             for (int i = 0; i < order.Length; i++)
             {
                 var f = order[i];
@@ -707,6 +855,7 @@ namespace Ascend.Game
             Hints(new Rect(r.x + 2f, r.yMax - fb - 2f, r.width - 4f, fb), ts, _editingName
                 ? new[] { ("Enter", "Done"), ("Esc", "Done") }
                 : new[] { (SystemWindow.PadActive ? "D-Pad" : "Arrows", "Choose / Change"), (SystemWindow.PadActive ? "A" : "Enter", "Use"), ("X", "Suggest name"), (SystemWindow.PadActive ? "B" : "Esc", "Back") });
+            }
 
             // the portrait card: the turning preview
             var card = new Rect(r.xMax + 50f, 60f, vw - r.xMax - 110f, vh - 120f);
@@ -723,7 +872,7 @@ namespace Ascend.Game
             SystemWindow.Fill(plate, new Color(0.03f, 0.05f, 0.12f, 0.72f));
             SystemWindow.Fill(new Rect(plate.x, plate.y, plate.width, 1f), SystemWindow.A(SystemWindow.Accent, 0.5f));
             T(new Rect(plate.x + 16f, plate.y + 4f, plate.width - 32f, 44f), Creator.Look.PlayerName, 30f, SystemWindow.TextCol, TextAnchor.MiddleLeft, FontStyle.Bold);
-            T(new Rect(plate.x + 16f, plate.y + 44f, plate.width - 32f, 28f), Creator.ValueText(CharacterCreatorState.Field.Body) + "  ·  " + Creator.ValueText(CharacterCreatorState.Field.HairStyle) + " hair", 16f, SystemWindow.TextDim);
+            T(new Rect(plate.x + 16f, plate.y + 44f, plate.width - 32f, 28f), Creator.ValueText(CharacterCreatorState.Field.Body) + "  ·  " + HairLabel() + " hair", 16f, SystemWindow.TextDim);
             T(new Rect(card.x + 16f, card.y + 10f, 200f, 24f), "PREVIEW", 13f, SystemWindow.A(SystemWindow.Accent, 0.85f), TextAnchor.MiddleLeft, FontStyle.Bold);
         }
 

@@ -9,22 +9,35 @@ namespace Ascend.Game
     /// The character creator's state, without any drawing (06_Races_Origins/races_and_origins.md section 3.1 step 2; the
     /// controller draws it). Every option comes from Data/Characters/player_appearance.json and every change goes through
     /// <see cref="AppearanceRules"/>, so a look can never hold an unknown id or an over-long name.
-    /// Rows: Name, Body, Hair style, Hair colour, Skin tone, Outfit colour, a read-only Race and origin note, Begin, Back.
+    /// Rows: Name, Body, Hair style, Hair colour, Skin tone, Outfit colour, Customize look, a read-only Race and origin note, Begin, Back.
+    /// "Customize look" opens the full customization screen (<see cref="CustomizerModel"/>, Data/Characters/customization.json); the
+    /// quick rows above it write into the same look, so the two never disagree.
     /// </summary>
     public sealed class CharacterCreatorState
     {
-        public enum Field { Name, Body, HairStyle, HairColour, SkinTone, OutfitColour, RaceOrigin, Begin, Back }
+        public enum Field { Name, Body, HairStyle, HairColour, SkinTone, OutfitColour, RaceOrigin, Begin, Back, Customize }
 
-        public static readonly Field[] Order = { Field.Name, Field.Body, Field.HairStyle, Field.HairColour, Field.SkinTone, Field.OutfitColour, Field.RaceOrigin, Field.Begin, Field.Back };
+        public static readonly Field[] Order = { Field.Name, Field.Body, Field.HairStyle, Field.HairColour, Field.SkinTone, Field.OutfitColour, Field.Customize, Field.RaceOrigin, Field.Begin, Field.Back };
 
         public PlayerAppearanceFile Data { get; }
+        /// <summary>Data/Characters/customization.json; null when the file is missing (the creator then works as before).</summary>
+        public CustomizationFile Custom { get; }
         public AppearanceChoice Look { get; private set; }
         int _suggest = -1;
 
-        public CharacterCreatorState(PlayerAppearanceFile data, AppearanceChoice start = null)
+        public CharacterCreatorState(PlayerAppearanceFile data, AppearanceChoice start = null, CustomizationFile custom = null)
         {
             Data = data ?? new PlayerAppearanceFile();
+            Custom = custom ?? AscendData.Customization;
             Look = AppearanceRules.Normalize(start != null ? start.Clone() : new AppearanceChoice(), Data);
+            Look.Custom = CustomizationRules.EnsureFor(Look, Data, Custom);
+        }
+
+        /// <summary>Takes the customization screen's result.</summary>
+        public void SetCustom(CustomLook look)
+        {
+            Look.Custom = look?.Clone();
+            Look.Custom = CustomizationRules.EnsureFor(Look, Data, Custom);
         }
 
         public static bool Selectable(Field f) => f != Field.RaceOrigin;
@@ -63,13 +76,23 @@ namespace Ascend.Game
                 case Field.OutfitColour: Look.OutfitColour = AppearanceRules.Step(Data.OutfitColours.Select(x => x.Id).ToList(), Look.OutfitColour, dir); break;
             }
             Look = AppearanceRules.Normalize(Look, Data);
+            // the quick rows write into the custom look too
+            Look.Custom = CustomizationRules.EnsureFor(Look, Data, Custom);
+            if (Look.Custom != null && Custom != null)
+            {
+                if (f == Field.HairColour) CustomizationRules.SetColour(Look.Custom, Custom, "hair_base", Data.HairColours.FirstOrDefault(x => x.Id == Look.HairColour)?.Hex);
+                if (f == Field.OutfitColour) CustomizationRules.SetColour(Look.Custom, Custom, "cloth_primary", Data.OutfitColours.FirstOrDefault(x => x.Id == Look.OutfitColour)?.Hex);
+                if (f == Field.HairColour || f == Field.OutfitColour) Look.Custom.Palette = null;
+            }
         }
 
         /// <summary>The look to start the game with (name finished, ids clamped).</summary>
         public AppearanceChoice Finish()
         {
             FinishName();
-            return AppearanceRules.Normalize(Look.Clone(), Data);
+            var c = AppearanceRules.Normalize(Look.Clone(), Data);
+            c.Custom = CustomizationRules.EnsureFor(c, Data, Custom);
+            return c;
         }
 
         // ------------------------------------------------------------------ what a row shows
@@ -81,6 +104,7 @@ namespace Ascend.Game
                 case Field.Name: return Look.PlayerName;
                 case Field.Body: return AppearanceRules.BodyOf(Data, Look.Body).Name ?? Look.Body.ToString();
                 case Field.HairStyle: return Data.HairStyles.FirstOrDefault(x => x.Id == Look.HairStyle)?.Name ?? Look.HairStyle;
+                case Field.Customize: return Custom == null ? "Not available" : Custom.Palette(Look.Custom?.Palette)?.Name ?? "Your own colours";
                 case Field.HairColour: return Data.HairColours.FirstOrDefault(x => x.Id == Look.HairColour)?.Name ?? Look.HairColour;
                 case Field.SkinTone: return Data.SkinTones.FirstOrDefault(x => x.Id == Look.SkinTone)?.Name ?? Look.SkinTone;
                 case Field.OutfitColour: return Data.OutfitColours.FirstOrDefault(x => x.Id == Look.OutfitColour)?.Name ?? Look.OutfitColour;
@@ -100,6 +124,7 @@ namespace Ascend.Game
                 case Field.OutfitColour: return "Outfit colour";
                 case Field.RaceOrigin: return "Race and origin";
                 case Field.Begin: return "Begin your journey";
+                case Field.Customize: return "Customize look";
                 default: return "Back";
             }
         }

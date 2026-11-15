@@ -116,6 +116,12 @@ namespace Ascend.Game
             Color outfit = ToColour(Find(data?.OutfitColours, look.OutfitColour), new Color(0.3f, 0.45f, 0.95f));
             Color hair = ToColour(Find(data?.HairColours, look.HairColour), new Color(0.42f, 0.26f, 0.15f));
             Color boots = new Color(outfit.r * 0.45f, outfit.g * 0.45f, outfit.b * 0.45f, 1f);
+            if (look.Custom?.Colours != null)   // the customization layer wins where it has a colour
+            {
+                hair = CharacterSlots.ToColour(Slot(look, "hair_base"), hair);
+                outfit = CharacterSlots.ToColour(Slot(look, "cloth_primary"), outfit);
+                boots = CharacterSlots.ToColour(Slot(look, "footwear"), boots);
+            }
 
             foreach (var r in visual.GetComponentsInChildren<Renderer>(true))
             {
@@ -137,6 +143,16 @@ namespace Ascend.Game
         }
 
         const string HairPath = "Hips/Spine/Head/" + HairName;
+
+        static string Slot(AppearanceChoice look, string slot) => look.Custom != null && look.Custom.Colours.TryGetValue(slot, out var h) ? h : null;
+
+        /// <summary>The placeholder hair shape: the custom style's stand-in (customization.json "placeholder") or the Phase 1B id.</summary>
+        static string HairShape(AppearanceChoice look)
+        {
+            var f = AscendData.Customization;
+            var h = look.Custom != null && f != null ? f.HairStyles.Find(x => x.Id == look.Custom.HairStyle) : null;
+            return h?.Placeholder ?? look.HairStyle;
+        }
 
         static void SetColour(Renderer r, Color c)
         {
@@ -179,7 +195,7 @@ namespace Ascend.Game
             var hair = new GameObject(HairName).transform; hair.SetParent(head, false);
             // Every style has the cap; the rest differs. Placeholder shapes until real hair meshes exist.
             Hair(hair, "Hair_Cap", PrimitiveType.Sphere, new Vector3(0f, 0.055f, -0.01f), new Vector3(0.29f, 0.22f, 0.29f), hairColour);
-            switch (look.HairStyle)
+            switch (HairShape(look))
             {
                 case "long":
                     Hair(hair, "Hair_Back", PrimitiveType.Cube, new Vector3(0f, -0.2f, -0.12f), new Vector3(0.26f, 0.5f, 0.07f), hairColour);

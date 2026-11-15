@@ -368,3 +368,29 @@ static class CharacterCustomizerTests
         Assert.True(d.HairStyles.Any(h => h.Id == book.Entries[0].Look.HairStyle), "repair replaces a retired option");
     }
 }
+
+[Tests]
+static class CharacterCreatorSyncTests
+{
+    static CustomizationFile Data => Repo.Load<CustomizationFile>("Data/Characters/customization.json");
+    static PlayerAppearanceFile Legacy => Repo.Load<PlayerAppearanceFile>("Data/Characters/player_appearance.json");
+    static string J(object o) => JsonSerializer.Serialize(o);
+
+    public static void TheCustomLookFollowsTheCreatorsBodyAndSurvivesWithoutOne()
+    {
+        var d = Data; var legacy = Legacy;
+        var c = new AppearanceChoice { Body = Body.Feminine, HairColour = "violet" };
+        var fresh = CustomizationRules.EnsureFor(c, legacy, d);
+        Assert.Equal("feminine", fresh.Family, "built from the legacy fields");
+        c.Custom = fresh;
+        CustomizationRules.SetColour(c.Custom, d, "cloth_accent", "#3F64C9");
+        c.Body = Body.Masculine;
+        var moved = CustomizationRules.EnsureFor(c, legacy, d);
+        Assert.Equal("masculine", moved.Family, "follows the body");
+        Assert.Equal(c.Custom.Colours["cloth_accent"], moved.Colours["cloth_accent"], "keeps the colours");
+        Assert.True(d.HairStyles.First(h => h.Id == moved.HairStyle).FitsFamily("masculine"), "and gets a male hair style");
+        c.Custom = moved;
+        Assert.Equal(J(moved), J(CustomizationRules.EnsureFor(c, legacy, d)), "stable when nothing changed");
+        Assert.Equal(null, CustomizationRules.EnsureFor(new AppearanceChoice(), legacy, null), "no data, no look");
+    }
+}

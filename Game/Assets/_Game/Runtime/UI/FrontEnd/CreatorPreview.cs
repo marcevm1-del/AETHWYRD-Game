@@ -104,6 +104,7 @@ namespace Ascend.Game
                 _built = look.Body;
             }
             PlaceholderPlayerBody.Apply(_turn, look, _data);
+            CharacterLook.Apply(_turn, look, _data);
             SetLayer(_turn.gameObject, Layer); // new hair and face parts join the preview layer
         }
 

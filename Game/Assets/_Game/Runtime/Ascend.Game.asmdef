@@ -1,7 +1,7 @@
 {
   "name": "Ascend.Game",
   "rootNamespace": "Ascend.Game",
-  "references": ["Ascend.Core", "Unity.InputSystem"],
+  "references": ["Ascend.Core", "Ascend.Monsters", "Unity.InputSystem"],
   "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,

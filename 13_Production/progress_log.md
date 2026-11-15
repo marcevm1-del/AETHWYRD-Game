@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-15
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Character customization (branch `claude/magical-clarke-remja3`) | The owner's character-system brief: `Data/Characters/customization.json` (2 families, 15 colour slots, the 8 palettes inside the art-direction guard, faces, 21 hair styles, 24 outfit pieces, accessories, weapons, sockets, built vs planned checked against the generator); a 60-concept silhouette library (`silhouettes.json`, sheets in `07_Characters/silhouettes/`, distinctness measured); Core rules and the customization screen as a tested model; colour-slot masks written by the character generator (verified in Blender, error at most 0.019 per part); the `Ascend/ToonCharacter` shader, import post-processor, appearance applier, face expression driver and hair springs; a "Customize look" screen in the creator; saving through the save file and a saved-looks book. Unity side compiled only against stand-ins: not run in Unity. `main` merged in first | 789; PlayMode not run |
+
 ## 2026-11-14
 
 | Commit | What changed | Tests |

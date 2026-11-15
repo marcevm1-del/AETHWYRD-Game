@@ -28,6 +28,9 @@ The other upgrades needed by the slice (UPG-007 Grukk's verbs, UPG-008 weakness 
 | T-013 | Dead-data report and CI untracked-file check | UPG-025 | tools-pipeline-engineer | P2 | AWAITING APPROVAL | no |
 | T-020 | Documentation drift sweep | UPG-029 | documentation-auditor (check) / owning agents (edit) | P2 | AWAITING APPROVAL | no |
 | T-021 | Four architecture decision records | UPG-039 | technical-director | P2 | AWAITING APPROVAL | no |
+| T-025 | Verify the character system in Unity | UPG-041 | qa-tester | P1 | READY | yes |
+| T-026 | Import generated bodies as the player bodies | UPG-041 | technical-artist | P1 | READY | yes |
+| T-027 | Model the violet samurai pieces in the character generator | UPG-041 | creature-artist | P2 | READY | no |
 | T-024 | Reproduce and fix kill credit for companion and partner kills | UPG-040 | gameplay-engineer | P0 | AWAITING APPROVAL | yes |
 | T-004 | Pass the reaction table into the game | UPG-003 | gameplay-engineer | P1 | AWAITING APPROVAL | yes |
 | T-006 | Enforce `launchable` | UPG-005 | gameplay-engineer | P1 | AWAITING APPROVAL | yes |
@@ -260,6 +263,84 @@ NEEDS UNITY:        no
 
 
 ## C. Proposed: needs a Unity slot on the owner's PC
+
+### T-025: Verify the character system in Unity
+
+```text
+TASK ID:            T-025
+TASK TITLE:         Verify the character system in Unity
+PARENT FEATURE:     UPG-041
+SYSTEM:             SYS-CHR-01
+DESCRIPTION:        Compile the 2026-11-15 character work (Runtime/Characters, CharacterImport, Ascend/ToonCharacter, creator changes) and run PlayMode, including CharacterCustomizationPlayModeTests. Fix compile or test failures.
+PLAYER BENEFIT:     The customization screen works.
+IMPLEMENTATION DETAILS:Part of the PC verify run (T-001); then open the creator, choose Customize look, try every category.
+OWNER:              qa-tester (with gameplay-engineer for fixes)
+REVIEWER:           code-reviewer
+MODEL TIER:         sonnet
+PRIORITY:           P1
+STATUS:             READY
+DEPENDENCIES:       T-001
+EFFORT:             S
+COMPLEXITY:         S
+RISKS:              Unity API differences from the stand-ins used to compile in the cloud.
+AFFECTED FILES:     Game/Assets/_Game/Runtime/Characters/, Runtime/UI/FrontEnd/, Editor/CharacterImport.cs, Art/Shaders/AscendToonCharacter.shader
+ACCEPTANCE CRITERIA:0 compile errors; PlayMode 0 failures; the new tests pass; a screenshot of the customization screen.
+TESTING REQUIREMENTS:Full PlayMode suite.
+DOCUMENTATION REQUIREMENTS:Status rows in 12_Systems/character_customization.md.
+NEEDS UNITY:        yes
+```
+
+### T-026: Import generated bodies as the player bodies
+
+```text
+TASK ID:            T-026
+TASK TITLE:         Import generated bodies as the player bodies
+PARENT FEATURE:     UPG-041
+SYSTEM:             SYS-CHR-01
+DESCRIPTION:        Regenerate human_female_base and human_male_base with the current generator (slot masks), copy the FBX into Game/Assets/_Game/Art/Models/Characters/, make prefabs Resources/PlayerBodies/Feminine and Masculine with a "Visual" root and the player Animator.
+PLAYER BENEFIT:     A real character instead of a capsule.
+IMPLEMENTATION DETAILS:CharacterImport sets Humanoid, the shader and UV3. Check the avatar maps all 52 bones.
+OWNER:              technical-artist
+REVIEWER:           anime-fantasy-director
+MODEL TIER:         sonnet
+PRIORITY:           P1
+STATUS:             READY
+DEPENDENCIES:       T-025
+EFFORT:             M
+COMPLEXITY:         M
+RISKS:              FBX size in LFS; the locomotion clips on the new avatar.
+AFFECTED FILES:     Game/Assets/_Game/Art/Models/Characters/, Game/Assets/Resources/PlayerBodies/
+ACCEPTANCE CRITERIA:The player runs, fights and changes colour per slot in the field; FootIK's humanoid path works; frame time noted.
+TESTING REQUIREMENTS:PlayMode; a profiler capture with the new body.
+DOCUMENTATION REQUIREMENTS:13_Production/character_system.md import section.
+NEEDS UNITY:        yes
+```
+
+### T-027: Model the violet samurai pieces in the character generator
+
+```text
+TASK ID:            T-027
+TASK TITLE:         Model the violet samurai pieces in the character generator
+PARENT FEATURE:     UPG-041
+SYSTEM:             SYS-CHR-01
+DESCRIPTION:        Add to Tools/blender/ascend_characters/outfit.py and hair.py the pieces the two samurai looks need: haori (knee coat, wide sleeves), kimono wrap top, hakama, obi with knot, knee-length layered skirt, tabi boots, sleeve guards; samurai ponytail, messy and topknot hair. Mark them built in customization.json.
+PLAYER BENEFIT:     The concept sheet's look becomes playable.
+IMPLEMENTATION DETAILS:Shells built like the existing pieces; colours from the slot palette so slots.py classifies them; turnaround sheets per piece.
+OWNER:              creature-artist (character generator)
+REVIEWER:           anime-fantasy-director
+MODEL TIER:         sonnet
+PRIORITY:           P2
+STATUS:             READY
+DEPENDENCIES:       None (Blender only; works in the cloud)
+EFFORT:             L
+COMPLEXITY:         M
+RISKS:              Clipping of long garments when walking; the 30k triangle budget.
+AFFECTED FILES:     Tools/blender/ascend_characters/, Data/Characters/human_library.json, Data/Characters/customization.json
+ACCEPTANCE CRITERIA:Both samurai looks validate as built; check_characters.py passes; reconstruction error under 0.02 per part; director review passes the teen-rating rule.
+TESTING REQUIREMENTS:check_characters.py; npm run build.
+DOCUMENTATION REQUIREMENTS:character_system.md.
+NEEDS UNITY:        no
+```
 
 ### T-024: Reproduce and fix kill credit for companion and partner kills
 

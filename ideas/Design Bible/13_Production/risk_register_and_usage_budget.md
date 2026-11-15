@@ -1,6 +1,8 @@
 # Risk register and usage-budget plan (producer, 2026-11-09)
 
-Job 4 of the producer queue. Inputs: `handover_2026-11-02.md` (the 5-hour limit hit twice with 3 agents in parallel), the Main v1 report (limit hit five times in total; about a dozen simultaneous git worktree checkouts overloaded the slow disk), `world_upgrade_plan.md` ("at most two agents at once"), and `git worktree list` on 2026-11-09 (28 worktrees registered, 6 locked, 1 detached outside the repo at `E:/Ideas/wt-ai-tools`).
+> **2026-11-12:** the live version is now `Planning/TECHNICAL_RISK_REGISTER.md` for the risk table (R1 to R14 keep their numbers there, R15 onward are new); sections 1 to 3 and 5 below, the usage-budget rules, stay in force. This file is kept as written.
+
+Job 4 of the producer queue. Inputs: `handover_2026-11-02.md` (the 5-hour limit hit twice with 3 agents in parallel), the Main v1 report (limit hit five times in total; about a dozen simultaneous git worktree checkouts overloaded the slow disk), `world_upgrade_plan.md` ("at most two agents at once"), and `git worktree list` on 2026-11-09 (20 worktrees registered, 6 locked, 1 detached outside the repo at `E:/Ideas/wt-ai-tools`).
 
 No usage numbers were measured for this note (no billing data available to it). Every figure below is a **planning default to tune** after the first week, not a fact.
 

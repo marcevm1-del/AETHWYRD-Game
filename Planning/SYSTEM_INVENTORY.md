@@ -234,6 +234,13 @@ Responsible: tools-pipeline-engineer / qa-tester. Evidence and full notes: `audi
 | SYS-TEC-12 | Version control | IMPLEMENTED | n/a | P2 | Owner: prune or push | - | - |
 | SYS-TEC-13 | Release and deployment | DOCUMENTED | n/a | P4 | None until the slice gate | - | - |
 
+## Characters (added 2026-11-15)
+
+| ID | System | Rules layer | In the game | Priority | Next action | Upgrades and ideas | Same system as |
+|---|---|---|---|---|---|---|---|
+| SYS-CHR-01 | Character customization (faces, hair, outfits, gear, colours, silhouettes, creator screen, saving) | TESTED | IMPLEMENTED (not compiled in Unity) | P1 | T-025 verify in Unity | UPG-041 | SYS-PRG-01 |
+| SYS-CHR-02 | Generated human bodies (Tools/blender/ascend_characters) with colour-slot masks | TESTED (generator checks; masks verified 2026-11-15) | NOT WIRED (no body imported as the player yet) | P1 | T-026 | UPG-031, UPG-041 | - |
+
 ## Counts (150 rows)
 
 Counted from the tables above. Rows that describe the same system from two audits are both counted, so treat these as proportions, not exact totals. No row is VERIFIED or COMPLETE.

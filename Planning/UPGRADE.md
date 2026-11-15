@@ -60,6 +60,7 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 | UPG-036 | An economy sink plan before housing and farming open | SYS-ECN-12 | P3 | M | PROPOSED |
 | UPG-037 | Reach one rules-only system from a Ring 0 station | SYS-ECN-08, SYS-ECN-09, SYS-ECN-10 | P3 | M | PROPOSED |
 | UPG-038 | Dialogue as data | SYS-QST-09, SYS-QST-08 | P2 | M | PROPOSED |
+| UPG-041 | Character customization system on the generated bodies | SYS-CHR-01 | P1 | L | IMPLEMENTED |
 | UPG-040 | Kill credit when a companion or partner lands the last hit | SYS-CMB-26, SYS-CMP-04, SYS-CMP-07 | P0 | S | PROPOSED |
 | UPG-039 | Write the architecture decisions down | SYS-CORE-01 | P2 | S | PROPOSED |
 
@@ -1024,3 +1025,27 @@ The first 39 entries were written on 2026-11-12 from five audits (`Planning/audi
 - **Related Tasks:** T-024
 - **Date Added:** 2026-11-12
 - **Decision History:** 2026-11-12, orchestrator: entered from the red-team review of the planning system (finding B1); the orchestrator re-read the cited lines and confirms the code path, for partners as well as companions. Recorded as PROPOSED; recommended as the first Unity task after the verify run.
+
+### UPG-041: Character customization system on the generated bodies
+
+- **Existing System:** SYS-CHR-01 (the Phase 1B creator, the character generator, the face rig)
+- **Current Implementation Status:** Rules TESTED (Core, 19 tests); generator slot masks VERIFIED in Blender; Unity side IMPLEMENTED, not compiled in Unity
+- **Current Problem:** The creator offered 4 placeholder hair shapes and 3 colour choices; generated bodies could not be recoloured; the toon shader would have drawn a generated character in one flat colour per material
+- **Evidence:** `12_Systems/character_customization.md`; `Code/Ascend.Core/CharacterCustomization.cs`, `CharacterCustomizer.cs`; `Tools/blender/ascend_characters/slots.py`; `Game/Assets/_Game/Art/Shaders/AscendToonCharacter.shader`
+- **Proposed Improvement:** Built 2026-11-15 (see the doc). Remaining: the Unity verify, importing the generated bodies as the player bodies, and modelling the planned pieces
+- **Player Benefit:** A character of your own: face, hair, outfit, gear and any colour
+- **Technical Benefit:** Recolour without textures or material copies; one look format for creator, save and saved looks
+- **Gameplay Benefit:** Identity; the base for companions' and NPCs' variety
+- **Dependencies:** PC verify run (T-001); generated FBX import (T-026)
+- **Affected Systems:** Creator, save, player, rendering
+- **Affected Files:** listed in the doc
+- **Priority:** P1
+- **Complexity:** L
+- **Risk:** Unity API or shader compile errors not seen in the cloud; SRP Batcher incompatibility at crowd scale
+- **Acceptance Criteria:** CharacterCustomizationPlayModeTests pass; a generated body in the creator preview changes colour per slot and expression; a saved look survives quit and reload; no PlayMode regression
+- **Testing Requirements:** PlayMode suite on the PC; screenshot of the preview with two palettes
+- **Status:** IMPLEMENTED
+- **Related Ideas:** -
+- **Related Tasks:** T-025, T-026, T-027
+- **Date Added:** 2026-11-15
+- **Decision History:** 2026-11-15, owner: asked for the system (D-013). 2026-11-15, orchestrator: built the rules, data, generator masks and Unity side; verified everything a cloud session can verify; Unity verification outstanding.

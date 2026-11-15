@@ -561,6 +561,30 @@ namespace Ascend.Core
             return Normalize(look, f);
         }
 
+        /// <summary>The other body: that family's default face, hair and outfit, keeping every colour, the palette label and the guard.</summary>
+        public static CustomLook SwitchFamily(CustomLook look, CustomizationFile f, string family)
+        {
+            var next = Default(f, family);
+            if (look == null) return next;
+            next.Colours = new Dictionary<string, string>(look.Colours ?? new Dictionary<string, string>());
+            next.Palette = look.Palette;
+            next.StyleGuard = look.StyleGuard;
+            return Normalize(next, f);
+        }
+
+        /// <summary>
+        /// The custom look that goes with a Phase 1B choice: built from the legacy fields when there is none (an old save), moved
+        /// to the right family when the body changed, normalised otherwise. Null only when there is no customization data.
+        /// </summary>
+        public static CustomLook EnsureFor(AppearanceChoice c, PlayerAppearanceFile legacy, CustomizationFile f)
+        {
+            if (f == null || c == null) return c?.Custom;
+            string fam = FamilyOf(c.Body);
+            if (c.Custom == null) return FromLegacy(c, legacy, f);
+            if (c.Custom.Family != fam) return SwitchFamily(c.Custom, f, fam);
+            return Normalize(c.Custom, f);
+        }
+
         /// <summary>The colour slot a material category takes on a given piece (the piece's override first, then the file's map).</summary>
         public static string SlotForMaterial(CustomizationFile f, OutfitPiece piece, string materialCategory)
         {

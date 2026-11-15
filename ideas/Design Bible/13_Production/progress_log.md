@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-15
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Character customization (branch `claude/magical-clarke-remja3`) | The owner's character-system brief: `Data/Characters/customization.json` (2 families, 15 colour slots, the 8 palettes inside the art-direction guard, faces, 21 hair styles, 24 outfit pieces, accessories, weapons, sockets, built vs planned checked against the generator); a 60-concept silhouette library (`silhouettes.json`, sheets in `07_Characters/silhouettes/`, distinctness measured); Core rules and the customization screen as a tested model; colour-slot masks written by the character generator (verified in Blender, error at most 0.019 per part); the `Ascend/ToonCharacter` shader, import post-processor, appearance applier, face expression driver and hair springs; a "Customize look" screen in the creator; saving through the save file and a saved-looks book. Unity side compiled only against stand-ins: not run in Unity. `main` merged in first | 789; PlayMode not run |
+
 ## 2026-11-14
 
 | Commit | What changed | Tests |
@@ -13,6 +19,12 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 | Human base characters | claude/humans-base-aca467, merged. The procedural generator Tools/blender/ascend_characters (body, face, hair, outfit, rig, skeleton, export, turnaround sheets, validator), the build and check scripts, Data/Characters/human_library.json with its schema, and the character system docs. Every human is a data variant of two bases, so NPCs and companions cost rows, not meshes. Three same-shape merge conflicts resolved by keeping both sides. Canon gains section 6 proposals C1 to C4, no locked row touched. Blender checks: 8 variants generate, validate, hash the same on a repeat, keep the contract bone set and hit their heights, and the validator is caught failing on a renamed bone, stripped weights and a broken hierarchy | 761 + 196 |
 | Companion presets and group tactics | ai-engineer's held branch, now merged. The branch was right and the runtime was wrong: CompanionAI cleared a commanded retreat on any frame with no fight in sight, and because her Update runs before the monster's, the frame a fight starts still reads as quiet, so "fall back" given an instant early was silently dropped. A commanded retreat now survives 3 s of quiet. Whole PlayMode suite 196 passed, 0 failed (the three earlier worktree failures were missing monster art, not code) | 761 + 196 |
 | Model requests are props only | The character test ran the whole pipeline (queue, local Stable Diffusion image, TripoSR mesh, Blender turnaround renders) and gave a watertight 4,582-vertex blockout with mitten hands and no face, so bodies stay with Tools/blender/ascend_characters. The queue now enforces it: the character-reference kind is retired, a request whose name, notes or prompt asks for a humanoid body is refused whatever kind it claims, and run marks such a request rejected with the reason instead of skipping it. Queue tests 21 -> 32 | 761 |
+
+## 2026-11-12
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Management system (branch `claude/magical-clarke-remja3`, not yet on `main`) | New `Planning/` folder: dashboard, master plan, project status, system inventory (150 rows from five audits), roadmap, milestone tracker, vertical slice plan with a core cut, dependency map, backlog (24 tasks, 3 ready), upgrade register (40), ideas register (27), decision log, canon discrepancy register, risk register (R15 to R31 added), quality gates, change control, content pipeline, weekly cycle, release readiness, templates. Five audit reports and one review record. Six new agents (red-team-reviewer, documentation-auditor, research-analyst, exploration-designer, creature-ecology-designer, companion-ai-designer) and explicit model tiers on the seat holders. Found in review: kills by a companion or partner give no credit (R31, not yet reproduced). The build's generated encounters schema is now committed; the vault mirrors `Planning/`. No game code or design data changed | 755 (run in the cloud); PlayMode not run |
 
 ## 2026-11-11
 

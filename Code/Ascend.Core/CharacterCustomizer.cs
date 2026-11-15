@@ -72,10 +72,7 @@ namespace Ascend.Core
         public void SetFamily(string family)
         {
             if (Data.Family(family) == null || family == Look.Family) return;
-            var colours = new Dictionary<string, string>(Look.Colours);
-            var next = CustomizationRules.Default(Data, family);
-            next.Colours = colours; next.Palette = Look.Palette; next.StyleGuard = Look.StyleGuard;
-            Commit(next, "Body changed: face, hair and outfit reset to that body's defaults; colours kept.");
+            Commit(CustomizationRules.SwitchFamily(Look, Data, family), "Body changed: face, hair and outfit reset to that body's defaults; colours kept.");
         }
 
         public void SetShowPlanned(bool on) { ShowPlanned = on; Commit(Look, on ? "Showing planned options (not modelled yet)." : "Showing built options only."); }

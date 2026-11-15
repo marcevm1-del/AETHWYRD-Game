@@ -31,7 +31,9 @@ namespace Ascend.Game
         public void Set(AppearanceChoice look)
         {
             Current = AppearanceRules.Normalize(look != null ? look.Clone() : new AppearanceChoice(), _data);
+            Current.Custom = CustomizationRules.EnsureFor(Current, _data, AscendData.Customization);
             PlaceholderPlayerBody.Apply(transform, Current, _data);
+            CharacterLook.Apply(transform, Current, _data);
         }
 
         public void Capture(SaveGame s)

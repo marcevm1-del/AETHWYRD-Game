@@ -23,7 +23,7 @@ namespace Ascend.EditorTools
             "Quests/quests.json", "Quests/story_flags.json", "Quests/weekly_board.json",
             "NPCs/npcs.json", "Classes/classes.json", "Classes/progression.json",
             "Audio/accessibility.json", "Audio/music_states.json", "Audio/photo_mode.json", "Companions/companion_rules.json", "Companions/companions.json", "Companions/mounts.json", "Companions/stables.json", "Items/crafting_rules.json", "Items/crops.json", "Items/gear_rules.json", "Items/life_skills.json", "World/civilization_archive.json", "World/dungeons.json", "World/housing.json", "World/labyrinth.json", "World/living_world.json", "World/puzzles.json",
-            "Characters/player_appearance.json", "UI/loading_tips.json",
+            "Characters/player_appearance.json", "Characters/customization.json", "Characters/face_expressions.json", "UI/loading_tips.json",
         };
 
         [MenuItem("Assets/Ascend/Build Ring 0 Player (Windows)")]
