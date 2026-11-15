@@ -21,7 +21,7 @@ namespace Ascend.Game
 
         static readonly CompanionPreset[] Presets = { CompanionPreset.Aggressive, CompanionPreset.Defensive, CompanionPreset.Supportive, CompanionPreset.Balanced };
 
-        /// <summary>The command wheel rows that map onto the existing orders (Retreat and Interact have no runtime behaviour yet).</summary>
+        /// <summary>The command wheel rows that map onto the existing orders (Retreat is "Fall back"; Interact has no runtime behaviour yet).</summary>
         static readonly (CompanionCommand cmd, string label)[] Commands =
         {
             (CompanionCommand.Follow, "Follow me"),
@@ -29,6 +29,7 @@ namespace Ascend.Game
             (CompanionCommand.Attack, "Focus my target"),
             (CompanionCommand.Defend, "Guard here"),
             (CompanionCommand.Assist, "Assist me"),
+            (CompanionCommand.Retreat, "Fall back"),
         };
 
         protected override string Title => "COMPANIONS";
@@ -108,15 +109,14 @@ namespace Ascend.Game
             {
                 string first = (c.Name ?? "").Split(' ')[0];
                 foreach (var ai in JoinedCompanions())
-                    if (first.Length > 0 && (ai.Name ?? "").IndexOf(first, StringComparison.OrdinalIgnoreCase) >= 0) ai.Command(rules.Preset(next).Order);
+                    if (first.Length > 0 && (ai.Name ?? "").IndexOf(first, StringComparison.OrdinalIgnoreCase) >= 0) ai.SetPreset(next);
             }
             Line = $"{c.Name}: stance set to {next}.";
         }
 
         void Command(CompanionCommand command)
         {
-            var effect = CompanionCommands.Map(command);
-            foreach (var ai in JoinedCompanions()) ai.Command(effect.Order);
+            foreach (var ai in JoinedCompanions()) ai.CommandWheel(command);
             Line = "Order given: " + Commands.First(x => x.cmd == command).label + ".";
         }
 

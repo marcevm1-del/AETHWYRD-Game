@@ -1,0 +1,282 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Mounted combat (ground mounts)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "notes",
+  "charge",
+  "trample",
+  "mountedDodge",
+  "dismount",
+  "mountStamina",
+  "familyPoiseMult",
+  "weaponFamilies",
+  "polearmChargeMult"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "charge": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "minRunupM",
+    "minSpeedMps",
+    "windupSec",
+    "activeSec",
+    "recoverySec",
+    "powerMult",
+    "weight",
+    "knockbackM",
+    "oncePerTarget",
+    "mountStaminaCost"
+   ],
+   "properties": {
+    "minRunupM": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 30
+    },
+    "minSpeedMps": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 20
+    },
+    "windupSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 2
+    },
+    "activeSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 2
+    },
+    "recoverySec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 3
+    },
+    "powerMult": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 4
+    },
+    "weight": {
+     "type": "string",
+     "enum": [
+      "medium",
+      "heavy",
+      "launch"
+     ]
+    },
+    "knockbackM": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 8
+    },
+    "oncePerTarget": {
+     "type": "boolean"
+    },
+    "mountStaminaCost": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 100
+    }
+   }
+  },
+  "trample": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "maxTargetPoise",
+    "powerMult",
+    "cooldownSec",
+    "mountStaminaCost",
+    "bossesImmune"
+   ],
+   "properties": {
+    "maxTargetPoise": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 400
+    },
+    "powerMult": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 2
+    },
+    "cooldownSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 30
+    },
+    "mountStaminaCost": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 100
+    },
+    "bossesImmune": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    }
+   }
+  },
+  "mountedDodge": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "durationSec",
+    "iframeSec",
+    "distanceM",
+    "mountStaminaCost",
+    "maxChain"
+   ],
+   "properties": {
+    "durationSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 2
+    },
+    "iframeSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 1
+    },
+    "distanceM": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 10
+    },
+    "mountStaminaCost": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 100
+    },
+    "maxChain": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 3
+    }
+   }
+  },
+  "dismount": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "onlyOnStagger",
+    "graceInvulnSec",
+    "remountCooldownSec",
+    "mountCallSec",
+    "mountUpSec"
+   ],
+   "properties": {
+    "onlyOnStagger": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    },
+    "graceInvulnSec": {
+     "type": "number",
+     "minimum": 0.5,
+     "maximum": 3
+    },
+    "remountCooldownSec": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 30
+    },
+    "mountCallSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 30
+    },
+    "mountUpSec": {
+     "type": "number",
+     "exclusiveMinimum": 0,
+     "maximum": 5
+    }
+   }
+  },
+  "mountStamina": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "notes",
+    "areaDamageDrainFraction",
+    "unseatAtZero"
+   ],
+   "properties": {
+    "notes": {
+     "type": "string"
+    },
+    "areaDamageDrainFraction": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "unseatAtZero": {
+     "type": "boolean",
+     "enum": [
+      true
+     ]
+    }
+   }
+  },
+  "familyPoiseMult": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "number",
+    "minimum": 1,
+    "maximum": 3
+   }
+  },
+  "weaponFamilies": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "allowed",
+     "maxChainHits",
+     "reachCapM",
+     "note"
+    ],
+    "properties": {
+     "allowed": {
+      "type": "boolean"
+     },
+     "maxChainHits": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 6
+     },
+     "reachCapM": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 25
+     },
+     "note": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "polearmChargeMult": {
+   "type": "number",
+   "exclusiveMinimum": 0,
+   "maximum": 3
+  }
+ }
+}

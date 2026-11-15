@@ -1,8 +1,6 @@
 # Risk register and usage-budget plan (producer, 2026-11-09)
 
-> **2026-11-12:** the live version is now `Planning/TECHNICAL_RISK_REGISTER.md` for the risk table (R1 to R14 keep their numbers there, R15 onward are new); sections 1 to 3 and 5 below, the usage-budget rules, stay in force. This file is kept as written.
-
-Job 4 of the producer queue. Inputs: `handover_2026-11-02.md` (the 5-hour limit hit twice with 3 agents in parallel), the Main v1 report (limit hit five times in total; about a dozen simultaneous git worktree checkouts overloaded the slow disk), `world_upgrade_plan.md` ("at most two agents at once"), and `git worktree list` on 2026-11-09 (20 worktrees registered, 6 locked, 1 detached outside the repo at `E:/Ideas/wt-ai-tools`).
+Job 4 of the producer queue. Inputs: `handover_2026-11-02.md` (the 5-hour limit hit twice with 3 agents in parallel), the Main v1 report (limit hit five times in total; about a dozen simultaneous git worktree checkouts overloaded the slow disk), `world_upgrade_plan.md` ("at most two agents at once"), and `git worktree list` on 2026-11-09 (28 worktrees registered, 6 locked, 1 detached outside the repo at `E:/Ideas/wt-ai-tools`).
 
 No usage numbers were measured for this note (no billing data available to it). Every figure below is a **planning default to tune** after the first week, not a fact.
 
@@ -27,7 +25,7 @@ No usage numbers were measured for this note (no billing data available to it). 
 
 1. **Sparse worktrees.** Create with `git worktree add --no-checkout -b <branch> <path> aetheria/main`, then `git sparse-checkout set --no-cone <paths>` and `git checkout`. A docs or Data job needs `13_Production`, `Data`, `CLAUDE.md`, `Canon.md`, one agent file. This job's own worktree was made this way. Only Unity and Blender jobs need `Game/` or `Tools/blender/`.
 2. **Never run `git gc` / commit-graph writes concurrently.** Seen on this run: `error: failed to write commit-graph` during `fetch` (non-fatal). Set it aside: the parent runs one maintenance pass between waves, with no agents active.
-3. **Prune.** 20 worktrees are registered now, many for finished work (`phase1`/wave branches, locked `integrate-agents-1`, `library-shelf`, `audio-designer-sfx-event-list`, `class-skill-designer-companion-kits` still at the base commit `ae78c53f`, i.e. no commits). The parent should merge or archive, then `git worktree remove` the clean ones and keep branches. Four worktrees point at `ae78c53f` with nothing committed: first candidates.
+3. **Prune.** 28 worktrees are registered now, many for finished work (`phase1`/wave branches, locked `integrate-agents-1`, `library-shelf`, `audio-designer-sfx-event-list`, `class-skill-designer-companion-kits` still at the base commit `ae78c53f`, i.e. no commits). The parent should merge or archive, then `git worktree remove` the clean ones and keep branches. Four worktrees point at `ae78c53f` with nothing committed: first candidates.
 4. **Stagger starts.** Start the second agent only after the first has finished its checkout (about a minute on a normal disk, longer here); never start both in the same minute.
 5. **Heavy folders stay out.** `Game/Library`, `Art/Models`, `Art/Blender`, `.blend/.fbx/.glb` are gitignored and local only; never copy them per worktree. Unity runs only in the main checkout path agreed in the GO, not in agent worktrees, unless told.
 6. **Keep logs out of worktrees:** write test XML and logs to the session scratchpad with absolute paths.
@@ -54,7 +52,7 @@ Likelihood and impact: H/M/L. Owner is who acts; the parent merges everything.
 |---|---|---|---|---|---|
 | R1 | 5-hour limit hit mid-job again | H | M | Section 3 caps; commit per task; at most 2 working agents | Parent |
 | R2 | Disk overload from simultaneous worktrees/checkouts | H | M | Section 2: 4 worktrees max, sparse checkout, staggered starts, prune | Parent |
-| R3 | Nothing compiled or played in Unity for a long stretch; phase 1 wiring (`phase1_api.md`) and Wave A1 animation tests were written without running Unity (`animation_v11_audit.md`, "Open test risks") | H | H | One scheduled UNITY OK slot per week: `Tools/pc/update_and_verify.cmd`; fix compile errors before any new Unity work; qa-tester runs first | qa-tester + gameplay-engineer |
+| R3 | Branches written without a Unity run (companion presets and tactics) and the untested humanoid foot-IK path; the Unity baseline itself was green on 2026-11-08 (163, then 183 PlayMode) | H | H | One scheduled UNITY OK slot per week: `Tools/pc/update_and_verify.cmd`; fix compile errors before any new Unity work; qa-tester runs first | qa-tester + gameplay-engineer |
 | R4 | Unity project mutated by two sessions at once (Library lock, scene corruption) | M | H | One Unity process; check Task Manager; "UNITY OK" only from the parent | Parent |
 | R5 | Merge conflicts: about 20 live agent branches off `aetheria/main` at different commits | H | M | Merge in dependency order (section on job 2 later), rebase small branches first, one integration branch (`integrate/agents-1`) | Parent + producer |
 | R6 | Locked Canon rows or data drift across parallel design agents (12 Canon §6 rows awaiting the user) | M | H | Design agents stay in owned folders; canon-keeper batch-checks before each merge; `npm run build` green (746+ tests, 28 warnings, 0 graph findings) | canon-keeper |

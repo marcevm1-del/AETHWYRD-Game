@@ -1,6 +1,6 @@
 # 12a — Combat Design Spec (Ring 0 target)
 
-**Weapon movesets:** see [[Design Bible/12_Systems/weapon_movesets|weapon_movesets.md]] (data: `Data/Combat/weapon_movesets.json`).
+**Weapon movesets:** see [[Design Bible/12_Systems/weapon_movesets|weapon_movesets.md]] (data: `Data/Combat/weapon_movesets.json`).  **Mounted combat:** see [[Design Bible/12_Systems/mounted_combat|mounted_combat.md]] (data: `Data/Combat/mounted_combat.json`).
 
 **Goal:** anime combat that is **fluid, fast, flashy and heavy** (Canon). Every number marked ⚙ lives in `Data/Combat/combat_tuning.json`, so feel can be tuned without code changes.
 

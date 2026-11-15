@@ -285,15 +285,15 @@ namespace Ascend.Game
         // ------------------------------------------------------------------ drawing
 
         // System palette (art_direction.md section 8): navy glass, cyan voice, coral for what is missing.
-        static readonly Color Panel = new Color(0.055f, 0.075f, 0.14f, 0.84f);
-        static readonly Color Accent = new Color(0.498f, 0.89f, 1f, 1f);        // #7FE3FF
-        static readonly Color Coral = new Color(1f, 0.478f, 0.42f, 1f);          // #FF7A6B
-        static readonly Color Warn = new Color(1f, 0.82f, 0.45f, 1f);
-        static readonly Color TextCol = new Color(0.96f, 0.97f, 1f, 1f);
-        static readonly Color TextDim = new Color(0.72f, 0.78f, 0.88f, 1f);       // #B8C8E0, over 7:1 on the panel
-        static readonly Color Band = new Color(0.16f, 0.32f, 0.55f, 0.85f);
+        internal static readonly Color Panel = new Color(0.055f, 0.075f, 0.14f, 0.84f);
+        internal static readonly Color Accent = new Color(0.498f, 0.89f, 1f, 1f);        // #7FE3FF
+        internal static readonly Color Coral = new Color(1f, 0.478f, 0.42f, 1f);          // #FF7A6B
+        internal static readonly Color Warn = new Color(1f, 0.82f, 0.45f, 1f);
+        internal static readonly Color TextCol = new Color(0.96f, 0.97f, 1f, 1f);
+        internal static readonly Color TextDim = new Color(0.72f, 0.78f, 0.88f, 1f);       // #B8C8E0, over 7:1 on the panel
+        internal static readonly Color Band = new Color(0.16f, 0.32f, 0.55f, 0.85f);
 
-        static void Fill(Rect r, Color c)
+        internal static void Fill(Rect r, Color c)
         {
             _white ??= Texture2D.whiteTexture;
             var old = GUI.color;
@@ -303,13 +303,13 @@ namespace Ascend.Game
         }
 
         /// <summary>A rounded rectangle: filled when <paramref name="border"/> is 0, an outline of that width otherwise.</summary>
-        static void RRect(Rect r, Color c, float radius, float border = 0f)
+        internal static void RRect(Rect r, Color c, float radius, float border = 0f)
         {
             _white ??= Texture2D.whiteTexture;
             GUI.DrawTexture(r, _white, ScaleMode.StretchToFill, true, 0f, c, new Vector4(border, border, border, border), new Vector4(radius, radius, radius, radius));
         }
 
-        static Color A(Color c, float a) => new Color(c.r, c.g, c.b, a);
+        internal static Color A(Color c, float a) => new Color(c.r, c.g, c.b, a);
 
         void EnsureStyles()
         {
@@ -523,7 +523,7 @@ namespace Ascend.Game
             GUI.matrix = oldMatrix;
         }
 
-        static void DrawBrackets(Rect r)
+        internal static void DrawBrackets(Rect r)
         {
             const float L = 14f, T = 2f, o = 3f;
             var c = Accent;
@@ -535,7 +535,7 @@ namespace Ascend.Game
         }
 
         /// <summary>A faint diamond sigil (two nested outlines and a dot) for pages with nothing on them yet.</summary>
-        static void DrawSigil(Vector2 c, float size)
+        internal static void DrawSigil(Vector2 c, float size)
         {
             var old = GUI.matrix;
             GUIUtility.RotateAroundPivot(45f, c);
