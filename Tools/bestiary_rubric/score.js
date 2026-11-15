@@ -215,11 +215,13 @@ function scoreSpecies(s, ctx) {
   // accessibility cap in Canon (reduced-flash 0.25) and a common simple-reaction
   // figure; anything under it is not a window a player can use.
   C.push({ k: 'C2 punish window usable (>=0.35s)', pts: a.longestRecovery >= 0.5 ? 6 : a.longestRecovery >= 0.35 ? 3 : 0, max: 6, note: `longest recovery ${a.longestRecovery}s` });
-  // C3: jitter must not swallow the discriminable step. Weber step at this
-  // duration is ~0.17-0.21 of the interval (Rammsayer et al. 2015); jitter is
-  // +/- a fraction of windupSec in MonsterMotion.cs:83, so jitter above ~0.17
-  // makes two neighbouring tell tiers overlap.
-  C.push({ k: 'C3 jitter below the Weber step (<=0.17)', pts: a.jitter <= 0.17 ? 4 : a.jitter <= 0.25 ? 2 : 0, max: 4, note: `max windupJitter ${a.jitter}` });
+  // C3: its own attacks must not all wind up alike, or the moveset is one
+  // attack wearing hats. Tiers are the identifiable levels of 2.1.
+  // (windupJitter is deliberately NOT scored: MonsterMotion.BeginAttack, the
+  // only code that applies it, has no caller, and MonsterBrain.StartWindup uses
+  // the raw WindupSec. Rule 1 - score only what something reads.)
+  const tiers = new Set(a.atk.map((x) => (x.windupSec < 0.55 ? 'fast' : x.windupSec < 1.1 ? 'mid' : 'slow')));
+  C.push({ k: 'C3 its attacks span more than one tell tier', pts: tiers.size >= 3 ? 4 : tiers.size === 2 ? 3 : 0, max: 4, note: `tell tiers used: ${[...tiers].join('+')}` });
   // C4: more than one telegraph colour, so the defence choice is a choice
   const nTel = a.telegraph === 'none' ? 0 : a.telegraph.split('+').length;
   C.push({ k: 'C4 telegraph mix forces a defence choice', pts: nTel >= 3 ? 4 : nTel === 2 ? 2 : 0, max: 4, note: `telegraphs: ${a.telegraph}` });
@@ -233,15 +235,23 @@ function scoreSpecies(s, ctx) {
   const actionable = /back away|keep|stay|break|interrupt|dodge|parry|block|use |fire|light|avoid|do not|don't|aim|target|wait|lure|stand|look|camera|listen|burn|scatter/.test(fn);
   const onlyWeakness = /^weak to \w+\.?$/.test(fn.trim());
   D.push({ k: 'D2 field note gives an actionable counter', pts: !fn ? 0 : onlyWeakness ? 0 : actionable ? 6 : 2, max: 6, note: fn ? (actionable ? 'names an action' : 'states facts only') : 'no field note' });
-  // D3: an ecological role is recoverable from the data, not just a label.
-  // Executed proxies: a non-default approach class, or a behaviour note.
-  const notes = ((motById[s.id].behavior || {}).notes || []).length;
-  D.push({ k: 'D3 role is in data, not only prose', pts: a.approach !== 'default' && notes >= 2 ? 4 : a.approach !== 'default' || notes >= 2 ? 2 : 0, max: 4, note: `approach ${a.approach}, ${notes} behaviour notes` });
-  // D4: an aftermath/observation hook — freezeWhenObserved, audioRevealRadius,
-  // or a non-zero retreatHpPct: something the player sees out of combat.
+  // D3: its engagement profile must actually differ from the crowd. alertRadius
+  // and preferredRange are both read every tick by MonsterBrain.Tick, so a
+  // species that notices you much sooner or later than the median, or that holds
+  // a distance the median does not, plays a visibly different role.
+  // (behavior.notes is NOT scored: it is prose and nothing reads it.)
   const mm = motById[s.id];
-  const hooks = [mm.menace && mm.menace.freezeWhenObserved, (mm.menace && mm.menace.audioRevealRadius) > 0, (mm.behavior && mm.behavior.retreatHpPct) > 0].filter(Boolean).length;
-  D.push({ k: 'D4 out-of-combat behaviour hook', pts: hooks >= 2 ? 4 : hooks === 1 ? 2 : 0, max: 4, note: `${hooks} of 3 hooks (freezeWhenObserved, audioRevealRadius, retreatHpPct)` });
+  const far = ctx.iqr.alert, pr = ctx.iqr.pref;
+  const ar = mm.behavior.alertRadius, prf = mm.behavior.preferredRange;
+  const distinctive = [ar < far[0] || ar > far[1], prf < pr[0] || prf > pr[1]].filter(Boolean).length;
+  D.push({ k: 'D3 engagement profile is distinctive', pts: distinctive === 2 ? 4 : distinctive === 1 ? 2 : 0, max: 4, note: `alertRadius ${ar.toFixed(1)} (mid 50% ${far[0].toFixed(1)}-${far[1].toFixed(1)}), preferredRange ${prf.toFixed(1)} (mid 50% ${pr[0].toFixed(1)}-${pr[1].toFixed(1)})` });
+  // D4: behaviour the player can see outside a fight. Both scored fields are
+  // read: freezeWhenObserved is baked into a FreezeWhenObserved component by
+  // MonsterPrefabBuilder.cs:189, and retreatHpPct drives AiState.Flee in
+  // MonsterAi.cs. (audioRevealRadius is NOT scored: no reader found.)
+  const freeze = !!(mm.menace && mm.menace.freezeWhenObserved);
+  const flees = (mm.behavior && mm.behavior.retreatHpPct) > 0;
+  D.push({ k: 'D4 out-of-combat behaviour the player can see', pts: (freeze ? 2 : 0) + (flees ? 2 : 0), max: 4, note: `freezeWhenObserved ${freeze}, retreatHpPct ${(mm.behavior && mm.behavior.retreatHpPct) || 0}` });
   out.cats.D = D;
 
   // ---- E. Remembered a week later (20)
@@ -285,7 +295,14 @@ function scoreSpecies(s, ctx) {
 }
 
 // ---------------------------------------------------------------- context
-const ctx = { byRig: {}, vectorPeers: {}, rigAttackCounts: {}, bySignature: {}, byVectorAndRig: {} };
+const ctx = { byRig: {}, vectorPeers: {}, rigAttackCounts: {}, bySignature: {}, byVectorAndRig: {}, iqr: {} };
+// middle 50% of alertRadius / preferredRange across the whole bestiary, for D3
+{
+  const q = (xs, f) => { const a = xs.slice().sort((x, y) => x - y); return a[Math.floor(a.length * f)]; };
+  const al = motion.map((m) => m.behavior.alertRadius), pf = motion.map((m) => m.behavior.preferredRange);
+  ctx.iqr.alert = [q(al, 0.25), q(al, 0.75)];
+  ctx.iqr.pref = [q(pf, 0.25), q(pf, 0.75)];
+}
 for (const s of species) (ctx.byRig[s.rigId] = ctx.byRig[s.rigId] || []).push(s);
 for (const [rig, list] of Object.entries(ctx.byRig)) {
   const c = {};
@@ -336,6 +353,18 @@ const bespokeN = assessed.filter((x) => x.cats.A[0].pts > 0).length;
 console.log(`species with a bespoke silhouette rule in profile.py/plans.py: ${bespokeN} (${pct(bespokeN)})`);
 const exclN = assessed.filter((x) => x.cats.B[1].pts === 6).length;
 console.log(`species with at least one attack exclusive on their rig: ${exclN} (${pct(exclN)})`);
+
+// --- by rank band: does rank buy identity?
+console.log('\n## mean score by rank band');
+// EX must be tested before E, or "EX" is swallowed by /^E/.
+const band = (r) => (/^EX/.test(r) ? 'EX' : /^F/.test(r) ? 'F' : /^E/.test(r) ? 'E' : /^D/.test(r) ? 'D' : /^C/.test(r) ? 'C' : /^B/.test(r) ? 'B' : /^A/.test(r) ? 'A' : /^SSS/.test(r) ? 'SSS' : /^SS/.test(r) ? 'SS' : 'S');
+const bands = {};
+assessed.forEach((x) => (bands[band(x.rank)] = bands[band(x.rank)] || []).push(x));
+for (const k of ['F', 'E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS', 'EX']) {
+  if (!bands[k]) continue;
+  const g = bands[k];
+  console.log(`  ${k.padEnd(4)} n=${String(g.length).padStart(3)}  total ${mean(g.map((x) => x.total)).toFixed(1).padStart(5)}   A ${mean(g.map((x) => x.cats.A_total)).toFixed(1).padStart(4)}   B ${mean(g.map((x) => x.cats.B_total)).toFixed(1).padStart(4)}   E ${mean(g.map((x) => x.cats.E_total)).toFixed(1).padStart(4)}`);
+}
 
 // --- by region: distinct vectors vs species count
 console.log('\n## per region: species vs distinct fight vectors');

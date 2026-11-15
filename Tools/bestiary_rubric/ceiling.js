@@ -61,6 +61,19 @@ console.log(`distinct MILLER vectors (identifiable levels)    : ${uniq(rows.map(
 console.log(`distinct MILLER vectors ignoring size/flight     : ${uniq(rows.map((x) => x.p.miller.split('|').slice(0, 5).join('|')))}`);
 console.log(`distinct MILLER + rig  (what you see + how it fights): ${uniq(rows.map((x) => x.p.miller + '#' + x.p.rig))}`);
 
+// What would splitting the default "rush" class into its three declared
+// patterns be worth? aggressive_chase / ambush_strike / passive_wander all take
+// the same branch today (MonsterAi.cs:145-159).
+{
+  const split = rows.map((x) => {
+    const m = motById[x.s.id];
+    const p = (m.behavior && m.behavior.aiPattern) || '';
+    const a = approach(p);
+    return x.p.miller.replace('|rush|', '|' + (a === 'rush' ? p.split('+')[0] : a) + '|');
+  });
+  console.log(`distinct MILLER vectors if aggressive/ambush/passive were separate: ${uniq(split)}`);
+}
+
 // how many species sit in each Miller class
 const groups = {};
 rows.forEach((x) => (groups[x.p.miller] = groups[x.p.miller] || []).push(x.s.name));
