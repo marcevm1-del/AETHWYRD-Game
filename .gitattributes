@@ -5,3 +5,7 @@
 *.wav filter=lfs diff=lfs merge=lfs -text
 *.cmd text eol=crlf
 *.bat text eol=crlf
+
+# Small reference images that must push from cloud sessions, where the LFS upload is not available (2026-11-15)
+07_Characters/reference/*.png -filter -diff -merge -text
+07_Characters/silhouettes/*.png -filter -diff -merge -text
