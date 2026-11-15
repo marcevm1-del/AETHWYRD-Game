@@ -163,3 +163,127 @@ Both follow from reading the existing code against the documentation above, and 
 **2. There are two parallel volume systems.** `FeedbackSettings.SfxVolume` (`HitFeedback.cs`, default `0.8f`) scales combat sound, and `AccessibilitySettings` holds the six Canon bus volumes (master, music, effects 1.0, ambience, dialogue, companion callouts) that `SaveGame.Accessibility` persists. Neither knows about the other. Whichever ships to a settings screen first, the other becomes a hidden multiplier that silently contradicts it. They should be one system, with `FeedbackSettings.SfxVolume` deleted or reduced to a read of the effects bus.
 
 Neither defect is a criticism of the Wave D work, which deliberately stopped at the Unity boundary and said so. They are the seam between a finished rules layer and an unstarted engine layer, and that seam is exactly where the first ten things to do start.
+
+---
+
+## Part 2 — Where the sound comes from
+
+Four ways to get audio, and they are not alternatives — a one-person studio uses all four, each where it is strongest:
+
+| Approach | Strongest at | Weakest at | Costs |
+|---|---|---|---|
+| **Procedural synthesis** (code) | UI, impacts, telegraphs, magic, drones, sub pads, abstract/spirit material | Realistic foley, any voice, orchestral music | Nothing. No licence, no account, no file |
+| **Openly licensed libraries** | Ambience beds, weather, footsteps, foley, room tones, animal material | Stylised JRPG orchestral and anime-rock; anything needing a specific melodic identity | Download time, disk, and licence bookkeeping |
+| **Commissioning** | Music that carries identity: region motifs, boss stems, main theme | Everything else — it is the most expensive hour available | Money, and the user's decision |
+| **AI generation** | Placeholder and prototyping, idea-finding | Anything shipped, on current US copyright guidance (see §2.6) | Account + money, and an unresolved rights question |
+
+### 2.1 Music
+
+**What a one-person studio realistically does: placeholder from free sources now, commission the identity-carrying minutes later, and never try to get shippable anime-orchestral music out of free libraries.**
+
+This is the one category where the free route does not reach shippable, and the existing docs already say so — `audio_source_shortlist.md` §3: "Free libraries are rich in realistic foley and weak on stylised JRPG orchestral and rock." That judgement is correct and worth restating, because music is also the category where this game's identity lives. Canon §1 asks for regional folk instruments fused with orchestra (the cue sheet's instrument palette names koto, shakuhachi, erhu, guzheng, gayageum, kora, balafon, oud, ney, duduk, gamelan, charango, panpipes) and anime-rock for bosses. A CC0 library will not contain a gayageum motif in Gyemyeonjo mode at 100 BPM that shares a key and bar grid with 49 other cues.
+
+The realistic path, which the project's own docs have already half-written:
+
+1. **Placeholder now, from free sources,** so the adaptive system can be built, heard and tuned against real audio. Any instrumental CC0 or CC-BY bed works for this; it does not need to be good, it needs to exist and loop. This unblocks to-do 5.
+2. **Commission the keyed minutes later, in stages.** §4 derives the real ask: **about 190 minutes (~3.2 hours) of unique music** on the reduced path, against ~1,120 files on the naive path. That is a commissionable quantity, and it is only commissionable because the design docs already did the reduction work — shared layers per palette family instead of per region, four rock-stem families instead of 65 boss themes, day-part variants as mixer snapshots instead of new takes.
+3. **Order the commission by what the player hears first and most:** the 4 rock-stem families and the Ring 0 regions' motifs and beds, not all 49 regions at once. `adaptive_music_and_scene_pacing.md` already says to commission bespoke vocal/rock tracks only after the boss and story sequence is locked, and `audio_rock_stem_brief.md` §7 says the same. Follow it.
+4. **Work-for-hire with a written assignment of copyright**, per `audio_rock_stem_brief.md` §7. A commissioned stem the project does not own is worse than no stem. Vocal performers need written consent and credit.
+5. **Never send another game's or anime's track to a composer as a reference.** The rock stem brief already forbids it: describe mood, tempo and key instead. This is the same rule as the project's "ideas only" rule for other studios, applied to the brief itself.
+
+**Commission rates are NOT SOURCEABLE** — I read no composer's rate card or industry rate survey, and a figure from memory here would be exactly the kind of confidently-wrong number this document is supposed to avoid. What I can say is the *quantity* to get quoted (190 minutes, stageable, with the first stage being roughly 4 rock stems plus ~8 Ring 0 region motifs and beds ≈ 15 minutes). Getting quotes is a user action and involves money.
+
+**Free music sources, if placeholder music is wanted on a public build:** Incompetech (CC BY 4.0) is the best-documented option, but every CC-BY track adds a mandatory credits-screen line, and `audio_source_shortlist.md` already flags the open question of whether placeholder music is acceptable on a public build at all. My recommendation: placeholder music in private builds freely; on any public build, either ship with the music bus quiet in regions that have no real cue, or ship only CC0 music, because a credits screen listing borrowed placeholder tracks on a premium game reads as unfinished. The music machine already supports this gracefully — `MusicPrefs` and the layer-gain model mean a layer with no clip is a silent layer, though **whether the Unity director plays silence cleanly for a layer with no clip is not built or checked** (the rock stem brief flags this same gap).
+
+### 2.2 Ambience
+
+**Openly licensed libraries, and this is where they are at their best.** Ambience is long, realistic, non-melodic field recording — precisely what professional SFX libraries are full of. The requirement is 11 biome beds as 60–90 s seamless loops, 7 weather layers, 7 time-of-day layers, ~20 zone layers and 10 region signature beds (§4).
+
+**Sonniss GameAudioGDC is the right primary pool,** and its licence is the best of any source I read. Per the **Sonniss GDC Bundle Licence v2.0, effective 27 August 2026 [read 2026-11-15]**: a "worldwide, non-exclusive, royalty-free license to use all or any of the sound effects"; use "on an unlimited number of projects for the entirety of their life time"; "use and modify the licensed sound effects for personal and commercial projects" and "without attribution to the original creator"; "Games, films, videos, podcasts, apps and interactive projects all count". Sonniss "warrants full authority to license and distribute all of the sound effects libraries under the terms of this agreement", which answers whether the single licence covers every contributing publisher in the bundle — the licence says it does.
+
+Three terms to respect:
+- **No redistribution as sound effects.** You "may not distribute, publish, sub-license or otherwise supply the sound effects as sound effects to any other person" and "may not sell any of the sound effects as they come" — but "This does not restrict the Licensee's finished projects, which may be shared, published and sold in the normal way." So shipping them inside the game is fine; leaving raw `.wav` files in an open asset folder, a public repo or a mod-accessible directory is not. The project already keeps third-party packs out of git, which is the right habit; it needs to extend to the shipped build's asset layout.
+- **No AI/ML training.** "expressly prohibited from using any sound effects licensed under this Agreement for the purpose of training artificial intelligence technologies". The project does not train audio models, so this is satisfied by doing nothing — but it means Sonniss material must never be fed to a generation tool, which interacts with §2.6.
+- **The licence is versioned.** "Files downloaded earlier are governed by the version published on the download date." So the licence text must be saved *on the day of download* and filed next to the row in `third_party_assets.md`. A link is not evidence; the page will change.
+
+**Whether downloading requires an account is NOT SOURCEABLE** — the bundle page shows direct download links per bundle and does not state an account requirement, but it also advertises accounts for re-downloading. Either way the download is a user action: the bundles run to tens of gigabytes, and `audio_source_shortlist.md` already lists this as an open question for the user.
+
+### 2.3 Combat and creature sounds
+
+**This is the largest single block of audio in the game and the one where the naive approach is impossible.** 680 species × 5 vocal types × 3 variants is 10,200 files — 78% of the naive total on its own (§4). No one-person studio records that, and no library contains it.
+
+**The answer is already in the project's data, and the SFX event list already found it:** key creature audio to the *classification*, not the species. The data supports this better than the docs assumed — 680 species resolve to **31 families**, **25 rigs**, **26 types** and **5 size bands**. `audio_sfx_event_list.md` §2 already proposes `sfx_mon_step_<size>_<surface>` with four size bands explicitly "so one set of recordings covers 680 species", and `sfx_mon_wing_<size>` for fliers. Extend the same principle to vocals:
+
+- **One vocal set per family** (31 families × 5 types × 4 variants = 620 clips), sourced from library animal and creature material plus synthesis for the non-animal families (Slimes, Constructs, Elementals, Shadows, Dungeon-born).
+- **Per-species differentiation by pitch and formant offset held in data**, not by new recordings. A `vocalSetId` plus a pitch offset per species gives 680 distinguishable voices from 31 recorded sets. The Audio Random Container's pitch randomisation (cent scale, additive with the AudioSource) does the within-set variation for free; the per-species offset is a value on the AudioSource.
+- **Synthesis for everything non-biological.** Slimes (43 species), Constructs & Mimics (27), Elementals & Spirits (23), Shadows (14) and the Dungeon-born have no real-world referent to record. They are better synthesised than recorded, and `CombatFx.cs` already proves the approach works in this codebase.
+
+Combat impacts, telegraphs and skill sounds: **nine already exist and are synthesised** (§3). The telegraph sound in particular should stay synthetic — it is a gameplay-critical readability cue (Canon's combat readability contract), and a synthesised tone is perfectly consistent, perfectly short, and trivially tunable, which a recording is not.
+
+### 2.4 Footsteps and foley
+
+**Libraries, with the Audio Random Container doing all the variation work.** 15 surfaces × 3 gaits × 6 variants = 270 clips is the irreducible core, and footsteps deserve that budget because they are the most-heard sound in the game: they play continuously, and bad footsteps make a world feel cheap in a way nothing else does.
+
+What makes this tractable without an audio team is that the hard part is not the clips, it is the variation logic — and §1.7 establishes that Unity 6 now ships that logic as an asset. One Audio Random Container per surface per gait, `Playback Mode: Shuffle` (which "avoid[s] repetition until all audio clips have played"), `Avoid Repeating Last` set, and pitch and volume randomisation ranges matching the spec's ±2 semitones and ±1.5 dB. The `audio_sfx_event_list.md` §1 variation specification is implemented by configuring assets, with no code at all.
+
+Sonniss covers surfaces with real-world referents. The two surfaces that do not have one — `spirit_glow` ("almost silent tonal tick, a faint glass chime per step") and `cinder` ("glassy cinder crackle, slight ember pop") — are synthesis or library-plus-processing jobs, which is convenient, because they are also the two that most need to sound non-real.
+
+**Recording your own foley is a genuine option here and nowhere else.** Footsteps, cloth, gear jingle and prop handling are the classic DIY foley set: they need no performer, no studio, and no musical skill, and the source material (gravel in a tray, a bag of cornflour for snow) is household. Whether that is a good use of the user's hours is their call, not mine, but it is the one category where one person with a phone and a quiet room can produce shippable material. It also sidesteps every licence question completely, since the recording is ours.
+
+### 2.5 UI
+
+**Pure synthesis, plus Kenney CC0 for anything synthesis is awkward for. This is the cheapest complete win in the whole audio plan, and it should be done first after the mixer.**
+
+`audio_sfx_event_list.md` §4.1 specifies the generic family as: open = glassy chime up with a rune burst tail, close = reverse chime, hover = soft rune hum, confirm = crisp click, cancel = low tone, tab = light slide, error = short dull buzz "never harsh", scroll = faint tick. Every one of those is a short, abstract, tonal sound — which is to say, every one of them is a few lines of synthesis of exactly the kind `CombatFx.Synth` already does. The existing `Sfx.Parry` is three summed sine partials at 1320/1980/2640 Hz with an exponential envelope; a glassy chime is the same thing with different numbers.
+
+Eight synthesised generic sounds, hooked to the window open/close/hover/confirm/cancel events, would make **every menu interaction in the game audible** for a few hours' work, no licence, no file, no account, no download. The ~60 distinctive per-window sounds (parchment unroll, quill, wax seal crack, coin clink, leather bag clasp) are foley and come from libraries — Kenney's CC0 UI and interface packs are a direct match and the project already uses Kenney packs for 3D.
+
+**Kenney [read 2026-11-15, kenney.nl/support]:** "all game assets on the asset pages are public domain licensed (CC0)", "free to use them, even in commercial projects", attribution optional (a Kenney mention or badge is "a way to support the creators"), and a request not to use the Kenney logo separately. The page does **not** address reselling or redistribution and directs readers to the licence file included with each asset — so the per-pack `License.txt` is the evidence to file, exactly as the project already does for its Kenney 3D packs. This read resolves the `audio_source_shortlist.md` row that was marked SECONDARY because the support page was blocked on 2026-11-09.
+
+### 2.6 Generation, and the rights question it raises
+
+Two separate questions, often conflated, and the second is the one that matters.
+
+**(a) Does the generator's own licence let us use the output commercially?** Varies per service, and every such service needs an account and usually payment — so this is the user's decision, not ours, and Claude cannot evaluate it by signing up. **NOT SOURCEABLE: I read no AI music or SFX generator's terms of service in this session,** so this document names no generator as safe or unsafe. Whichever is considered, its output-ownership and commercial-use clauses must be read and filed in `third_party_assets.md` like any other third-party source.
+
+**(b) Can we hold copyright in AI-generated audio we ship?** This one I can source, from the primary document. The U.S. Copyright Office, *Copyright and Artificial Intelligence, Part 2: Copyrightability* (January 2025) **[read 2026-11-15, full report text]** concludes:
+
+> - The use of AI tools to assist rather than stand in for human creativity does not affect the availability of copyright protection for the output.
+> - Copyright protects the original expression in a work created by a human author, even if the work also includes AI-generated material.
+> - **Copyright does not extend to purely AI-generated material, or material where there is insufficient human control over the expressive elements.**
+> - Whether human contributions to AI-generated outputs are sufficient to constitute authorship must be analyzed on a case-by-case basis.
+> - **Based on the functioning of current generally available technology, prompts do not alone provide sufficient control.**
+> - Human authors are entitled to copyright in their works of authorship that are perceptible in AI-generated outputs, as well as **the creative selection, coordination, or arrangement of material in the outputs, or creative modifications of the outputs.**
+
+And in the body: "the Office concludes that, given current generally available technology, prompts alone do not provide sufficient human control to make users of an AI system the authors of the output. Prompts essentially function as instructions that convey unprotectible ideas."
+
+**What that means for this game, concretely.** A boss theme generated from a prompt and shipped as rendered is, on this guidance, probably not protected by copyright in the US. Anyone could lift it and we would have no claim. For a premium commercial game whose music is a load-bearing part of its identity — Canon §1 makes the score a product feature, and `opening_music_and_memories.md` builds a recurring main-theme motif into the opening, the menus and the final boss — that is a bad trade on the single asset class we would least want to be unable to defend.
+
+But the same guidance points at what *is* defensible: "creative selection, coordination, or arrangement of material in the outputs, or creative modifications of the outputs". AI output treated as raw material — generated, then edited, layered, re-pitched, arranged into a bar-aligned stem set and placed inside our own adaptive system — is a different case from a rendered track shipped as-is, and the human arrangement can carry protection. Note the limits honestly: this is the Copyright Office's position and registration practice, not a court holding; it is US law only; and the report explicitly defers training-data liability and licensing to a later Part, so **that** question is open by the Office's own account.
+
+**My recommendation.** Use AI generation freely for **placeholder and idea-finding**, where protectability is irrelevant because the asset will be replaced. Do not ship AI-generated audio as a final asset without the user making an informed decision, and treat music as the category to hold the line on.
+
+**Also NOT SOURCEABLE: Valve's AI-content disclosure requirements for Steam.** I could not read them — the Steam news post and the Steamworks announcement both returned only page furniture with no article body, and the Steamworks partner documentation requires a login I will not use. Wired to the recommendation: **no AI-generated audio ships until the user has read Valve's current AI-content disclosure rules in the Steamworks partner docs and decided what the store page must declare.** Until that happens, the generation tier is placeholder-only, and that is not a judgement about AI but about an unread requirement.
+
+### 2.7 The source table, with every licence mark
+
+| Source | Content | Licence | Commercial game | Attribution | Account to download | Mark |
+|---|---|---|---|---|---|---|
+| **Sonniss GameAudioGDC** | Pro SFX, ambience, foley | Sonniss GDC Bundle Licence **v2.0, eff. 27 Aug 2026** | **Yes** — unlimited projects, lifetime, royalty-free | **None required** | Not stated; direct links shown | **[read]** full licence text |
+| **Kenney** audio packs | UI, impacts, interface | **CC0 1.0** | **Yes** | **Not required** (optional) | No | **[read]** kenney.nl/support + per-pack `License.txt` to file |
+| **Freesound**, CC0 only | Single sounds, field recordings | Per sound: CC0 / CC-BY / CC-BY-NC | CC0 **yes**; CC-BY yes with credit; **CC-BY-NC no** | CC0 none; CC-BY required | **Yes — login required** | **[read]** FAQ |
+| **OpenGameArt** (audio) | Mixed | Per file: CC0, CC-BY 3.0/4.0, CC-BY-SA, GPL, OGA-BY | CC0/CC-BY **yes**; **CC-BY-SA and GPL are poor fits** (share-alike / viral) | Per licence; FAQ gives a credit format | Not stated | **[read]** FAQ |
+| **Zapsplat** free (Basic) | SFX, music | Standard License Agreement, **upd. 8 May 2026** | **Yes**, unlimited commercial projects | **Required** — credit "ZapSplat" | **Yes**, and no automated access | **[read]** full agreement |
+| **Pixabay** | Music, SFX | Pixabay Content Licence (**CC0 only if published before 9 Jan 2019**) | Yes, **but no standalone distribution** of the audio file | Not required | Not stated | **[read]** full ToS |
+| **Incompetech** (Kevin MacLeod) | Music | CC BY 4.0 | Yes, with credit | **Required**, exact wording given | — | **[inherited 2026-11-09, VERIFIED by audio-designer — I did not re-read]** |
+| **FreePD** | Music | Site says "Public Domain", no terms found | **Unclear** | Unclear | — | **[inherited, NOT VERIFIED]** → **do not use** |
+| **BBC Sound Effects** | SFX | RemArc (believed personal/educational/research) | **Believed no** | — | — | **[inherited, NOT VERIFIED]** → **exclude** |
+| **Musopen / Internet Archive** | Classical recordings | Per recording; **composition PD ≠ recording PD** | Per recording | Per recording | — | **[inherited, NOT VERIFIED]** → only with a clear per-recording statement |
+| **AI generators** | Music, SFX | Per service — **not read** | Service-dependent; output likely **unprotectable** if prompt-only (§2.6) | Service-dependent | Account + usually payment | **NOT SOURCEABLE** → placeholder only |
+| **Own synthesis / own foley** | UI, impacts, drones, footsteps | **Ours** | Yes | None | None | n/a — no third party involved |
+
+**Confidence, stated plainly.**
+
+- **Most confident:** Sonniss (read the operative licence clause by clause, including its version-pinning rule), Zapsplat (read the whole agreement, dated), Pixabay (read the ToS including the standalone-use definition and the pre-2019 CC0 cutoff), the Copyright Office conclusions (read the report text verbatim), FMOD and Wwise pricing and FMOD's logo rule (§1.3), Steam Audio's Apache-2.0 (confirmed from the repository's own licence metadata), and the Unity 6000.6 engine features (read at our exact editor version).
+- **Least confident, and why:** **Incompetech, FreePD, BBC and Musopen are all inherited and none was re-read by me** — the three NOT VERIFIED rows must stay off the use list until someone reads them. **Pixabay's Content ID exposure is unknown**: the ToS says nothing about Content ID or platform claims, so a Pixabay track in a trailer carries unquantified risk. **Whether OpenGameArt lets you pick one licence when an artist lists several** — I saw the FAQ ask that exact question but did not read its answer, and it matters, because multi-licensed files are common there. **Whether Sonniss requires an account.** **Wwise's logo/credit requirements** (not on the pricing page) and **Wwise prices for the user's own region** (the page served the Asia chart). **Console audio certification.** And every AI generator's terms.
+- **A caution that applies to the whole table:** Zapsplat's free tier is **mp3 only**. For game audio that is a real technical defect, not a nuisance — a lossy source re-encoded by Unity's importer compounds artefacts, and mp3 is poor for seamless loops, which is exactly what the 11 ambience beds need. Treat Zapsplat free as a one-shot gap-filler, never as a source of loops or beds. Its wav tier costs money, so it is a user decision.
