@@ -1,0 +1,1766 @@
+{
+ "version": 1,
+ "notes": "Character customization catalog (12_Systems/character_customization.md). Built options exist as meshes from Tools/blender/ascend_characters; planned options are designed and listed so the creator and the save can grow without code changes, but the creator only offers built options until their meshes exist. Colours are stored per slot as #RRGGBB, so any colour can be chosen; palettes fill every slot at once. Skin tone stays in player_appearance.json.",
+ "families": [
+  {
+   "id": "feminine",
+   "name": "Female",
+   "body": "feminine",
+   "generatorBody": "human_female_base",
+   "heightM": {
+    "min": 1.55,
+    "max": 1.8,
+    "default": 1.66
+   },
+   "builds": [
+    "slim",
+    "average",
+    "sturdy"
+   ],
+   "defaultLook": "look_rank_f_feminine"
+  },
+  {
+   "id": "masculine",
+   "name": "Male",
+   "body": "masculine",
+   "generatorBody": "human_male_base",
+   "heightM": {
+    "min": 1.62,
+    "max": 1.92,
+    "default": 1.74
+   },
+   "builds": [
+    "slim",
+    "average",
+    "sturdy"
+   ],
+   "defaultLook": "look_rank_f_masculine"
+  }
+ ],
+ "colourSlots": [
+  {
+   "id": "hair_base",
+   "name": "Hair",
+   "group": "hair"
+  },
+  {
+   "id": "hair_highlight",
+   "name": "Hair highlights",
+   "group": "hair"
+  },
+  {
+   "id": "hair_tip",
+   "name": "Hair tips",
+   "group": "hair"
+  },
+  {
+   "id": "eye_iris",
+   "name": "Eyes",
+   "group": "face"
+  },
+  {
+   "id": "cloth_primary",
+   "name": "Clothing, main",
+   "group": "clothing"
+  },
+  {
+   "id": "cloth_secondary",
+   "name": "Clothing, second",
+   "group": "clothing"
+  },
+  {
+   "id": "cloth_accent",
+   "name": "Clothing, accent",
+   "group": "clothing"
+  },
+  {
+   "id": "cloth_trim",
+   "name": "Trim",
+   "group": "clothing"
+  },
+  {
+   "id": "footwear",
+   "name": "Shoes and boots",
+   "group": "clothing"
+  },
+  {
+   "id": "gloves",
+   "name": "Gloves",
+   "group": "clothing"
+  },
+  {
+   "id": "armor",
+   "name": "Armour",
+   "group": "gear"
+  },
+  {
+   "id": "accessory",
+   "name": "Accessories",
+   "group": "gear"
+  },
+  {
+   "id": "decoration",
+   "name": "Decorations",
+   "group": "gear"
+  },
+  {
+   "id": "weapon_handle",
+   "name": "Weapon handle",
+   "group": "weapon"
+  },
+  {
+   "id": "weapon_blade",
+   "name": "Weapon blade",
+   "group": "weapon"
+  }
+ ],
+ "materialSlots": {
+  "CH_skin": "skin",
+  "CH_face": "skin",
+  "CH_eyes": "eye_iris",
+  "CH_hair": "hair_base",
+  "CH_cloth": "cloth_primary",
+  "CH_leather": "footwear",
+  "CH_metal": "armor"
+ },
+ "styleGuard": {
+  "minValue": 0.12,
+  "maxValue": 0.95,
+  "maxSaturation": 0.9,
+  "notes": "art_direction.md section 2. The colour picker applies this when the player leaves the guard on (default); it can be turned off."
+ },
+ "palettes": [
+  {
+   "id": "pal_violet_samurai",
+   "name": "A · Original Purple Samurai",
+   "swatches": [
+    "#1B1724",
+    "#3B1E5A",
+    "#8A4FD8",
+    "#C8287F",
+    "#EDE8F1",
+    "#D1A64C"
+   ],
+   "slots": {
+    "hair_base": "#1B1724",
+    "hair_highlight": "#8A4FD8",
+    "hair_tip": "#3B1E5A",
+    "eye_iris": "#C8287F",
+    "cloth_primary": "#1B1724",
+    "cloth_secondary": "#EDE8F1",
+    "cloth_accent": "#C8287F",
+    "cloth_trim": "#8A4FD8",
+    "footwear": "#1B1724",
+    "gloves": "#26202F",
+    "armor": "#3B1E5A",
+    "accessory": "#C8287F",
+    "decoration": "#D1A64C",
+    "weapon_handle": "#1B1724",
+    "weapon_blade": "#B9A8E6"
+   }
+  },
+  {
+   "id": "pal_crimson",
+   "name": "B · Crimson Warrior",
+   "swatches": [
+    "#221C1F",
+    "#5A1A1F",
+    "#BE2A3C",
+    "#BFC4CC",
+    "#F1EEEA"
+   ],
+   "slots": {
+    "hair_base": "#221C1F",
+    "hair_highlight": "#BE2A3C",
+    "hair_tip": "#5A1A1F",
+    "eye_iris": "#BE2A3C",
+    "cloth_primary": "#221C1F",
+    "cloth_secondary": "#F1EEEA",
+    "cloth_accent": "#BE2A3C",
+    "cloth_trim": "#BFC4CC",
+    "footwear": "#221C1F",
+    "gloves": "#5A1A1F",
+    "armor": "#BFC4CC",
+    "accessory": "#BE2A3C",
+    "decoration": "#BFC4CC",
+    "weapon_handle": "#5A1A1F",
+    "weapon_blade": "#D3D7DE"
+   }
+  },
+  {
+   "id": "pal_ice",
+   "name": "C · Ice Warrior",
+   "swatches": [
+    "#E6EDF2",
+    "#A9D6EE",
+    "#3EBFD3",
+    "#C3CBD3",
+    "#1C2742"
+   ],
+   "slots": {
+    "hair_base": "#E6EDF2",
+    "hair_highlight": "#A9D6EE",
+    "hair_tip": "#3EBFD3",
+    "eye_iris": "#3EBFD3",
+    "cloth_primary": "#E6EDF2",
+    "cloth_secondary": "#1C2742",
+    "cloth_accent": "#3EBFD3",
+    "cloth_trim": "#C3CBD3",
+    "footwear": "#1C2742",
+    "gloves": "#C3CBD3",
+    "armor": "#C3CBD3",
+    "accessory": "#A9D6EE",
+    "decoration": "#C3CBD3",
+    "weapon_handle": "#1C2742",
+    "weapon_blade": "#D6E8F2"
+   }
+  },
+  {
+   "id": "pal_forest",
+   "name": "D · Forest Warrior",
+   "swatches": [
+    "#21402A",
+    "#2E9A62",
+    "#1A1F1B",
+    "#CDA84B",
+    "#EDE4CC"
+   ],
+   "slots": {
+    "hair_base": "#1A1F1B",
+    "hair_highlight": "#2E9A62",
+    "hair_tip": "#21402A",
+    "eye_iris": "#2E9A62",
+    "cloth_primary": "#21402A",
+    "cloth_secondary": "#EDE4CC",
+    "cloth_accent": "#CDA84B",
+    "cloth_trim": "#2E9A62",
+    "footwear": "#1A1F1B",
+    "gloves": "#21402A",
+    "armor": "#1A1F1B",
+    "accessory": "#CDA84B",
+    "decoration": "#CDA84B",
+    "weapon_handle": "#21402A",
+    "weapon_blade": "#D6D9D2"
+   }
+  },
+  {
+   "id": "pal_golden",
+   "name": "E · Golden Warrior",
+   "swatches": [
+    "#221C16",
+    "#D6AC42",
+    "#986A35",
+    "#F2EEE3",
+    "#3D2819"
+   ],
+   "slots": {
+    "hair_base": "#3D2819",
+    "hair_highlight": "#D6AC42",
+    "hair_tip": "#986A35",
+    "eye_iris": "#D6AC42",
+    "cloth_primary": "#221C16",
+    "cloth_secondary": "#F2EEE3",
+    "cloth_accent": "#D6AC42",
+    "cloth_trim": "#986A35",
+    "footwear": "#3D2819",
+    "gloves": "#3D2819",
+    "armor": "#986A35",
+    "accessory": "#D6AC42",
+    "decoration": "#D6AC42",
+    "weapon_handle": "#3D2819",
+    "weapon_blade": "#E3D9C2"
+   }
+  },
+  {
+   "id": "pal_pink_fantasy",
+   "name": "F · Pink Fantasy",
+   "swatches": [
+    "#1D1820",
+    "#EF8DB6",
+    "#C4506E",
+    "#B9A3E1",
+    "#EFE8EE"
+   ],
+   "slots": {
+    "hair_base": "#EF8DB6",
+    "hair_highlight": "#EFE8EE",
+    "hair_tip": "#B9A3E1",
+    "eye_iris": "#C4506E",
+    "cloth_primary": "#1D1820",
+    "cloth_secondary": "#EFE8EE",
+    "cloth_accent": "#EF8DB6",
+    "cloth_trim": "#B9A3E1",
+    "footwear": "#1D1820",
+    "gloves": "#EFE8EE",
+    "armor": "#B9A3E1",
+    "accessory": "#C4506E",
+    "decoration": "#EF8DB6",
+    "weapon_handle": "#1D1820",
+    "weapon_blade": "#E9DFF0"
+   }
+  },
+  {
+   "id": "pal_midnight",
+   "name": "G · Midnight",
+   "swatches": [
+    "#14161F",
+    "#1B2440",
+    "#5B3A99",
+    "#BCC2CC",
+    "#3E6ED6"
+   ],
+   "slots": {
+    "hair_base": "#1B2440",
+    "hair_highlight": "#3E6ED6",
+    "hair_tip": "#5B3A99",
+    "eye_iris": "#3E6ED6",
+    "cloth_primary": "#14161F",
+    "cloth_secondary": "#1B2440",
+    "cloth_accent": "#5B3A99",
+    "cloth_trim": "#BCC2CC",
+    "footwear": "#14161F",
+    "gloves": "#1B2440",
+    "armor": "#BCC2CC",
+    "accessory": "#3E6ED6",
+    "decoration": "#BCC2CC",
+    "weapon_handle": "#14161F",
+    "weapon_blade": "#C9D2E6"
+   }
+  },
+  {
+   "id": "pal_neon",
+   "name": "H · Neon",
+   "swatches": [
+    "#1C1C26",
+    "#3A72F2",
+    "#A04AEF",
+    "#EE4AA3",
+    "#3EDCDC"
+   ],
+   "slots": {
+    "hair_base": "#1C1C26",
+    "hair_highlight": "#3EDCDC",
+    "hair_tip": "#A04AEF",
+    "eye_iris": "#EE4AA3",
+    "cloth_primary": "#1C1C26",
+    "cloth_secondary": "#3A72F2",
+    "cloth_accent": "#EE4AA3",
+    "cloth_trim": "#3EDCDC",
+    "footwear": "#1C1C26",
+    "gloves": "#A04AEF",
+    "armor": "#3A72F2",
+    "accessory": "#EE4AA3",
+    "decoration": "#3EDCDC",
+    "weapon_handle": "#1C1C26",
+    "weapon_blade": "#B1EEEE"
+   },
+   "notes": "The brief's neon colours are pulled to saturation 90% or less and value 12% or more (art_direction.md section 2). Interaction cyan #7FE3FF is reserved for markers, so this cyan is greener."
+  }
+ ],
+ "hairColours": [
+  {
+   "id": "hair_black",
+   "name": "Black",
+   "hex": "#1E1B24"
+  },
+  {
+   "id": "hair_dark_purple",
+   "name": "Dark purple",
+   "hex": "#3B2251"
+  },
+  {
+   "id": "hair_violet",
+   "name": "Violet",
+   "hex": "#7B4FC4"
+  },
+  {
+   "id": "hair_lavender",
+   "name": "Lavender",
+   "hex": "#B7A2DE"
+  },
+  {
+   "id": "hair_white",
+   "name": "White",
+   "hex": "#EDEBF0"
+  },
+  {
+   "id": "hair_silver",
+   "name": "Silver",
+   "hex": "#BFC3CC"
+  },
+  {
+   "id": "hair_blonde",
+   "name": "Blonde",
+   "hex": "#E2C06A"
+  },
+  {
+   "id": "hair_brown",
+   "name": "Brown",
+   "hex": "#6B4630"
+  },
+  {
+   "id": "hair_red",
+   "name": "Red",
+   "hex": "#B53A32"
+  },
+  {
+   "id": "hair_pink",
+   "name": "Pink",
+   "hex": "#E68DB0"
+  },
+  {
+   "id": "hair_blue",
+   "name": "Blue",
+   "hex": "#3F64C9"
+  },
+  {
+   "id": "hair_cyan",
+   "name": "Cyan",
+   "hex": "#3DB8C9"
+  },
+  {
+   "id": "hair_green",
+   "name": "Green",
+   "hex": "#4E9A57"
+  },
+  {
+   "id": "hair_orange",
+   "name": "Orange",
+   "hex": "#D9772E"
+  }
+ ],
+ "irisColours": [
+  {
+   "id": "iris_violet",
+   "name": "Violet",
+   "hex": "#8A55D6"
+  },
+  {
+   "id": "iris_magenta",
+   "name": "Magenta",
+   "hex": "#C8287F"
+  },
+  {
+   "id": "iris_crimson",
+   "name": "Crimson",
+   "hex": "#B8303F"
+  },
+  {
+   "id": "iris_amber",
+   "name": "Amber",
+   "hex": "#D19A2E"
+  },
+  {
+   "id": "iris_brown",
+   "name": "Brown",
+   "hex": "#7A5233"
+  },
+  {
+   "id": "iris_blue",
+   "name": "Blue",
+   "hex": "#3E6ED6"
+  },
+  {
+   "id": "iris_cyan",
+   "name": "Cyan",
+   "hex": "#36B5C8"
+  },
+  {
+   "id": "iris_green",
+   "name": "Green",
+   "hex": "#3E9A5B"
+  },
+  {
+   "id": "iris_grey",
+   "name": "Grey",
+   "hex": "#8C93A1"
+  },
+  {
+   "id": "iris_gold",
+   "name": "Gold",
+   "hex": "#D6AC42"
+  },
+  {
+   "id": "iris_pink",
+   "name": "Pink",
+   "hex": "#E07AA6"
+  }
+ ],
+ "eyeShapes": [
+  {
+   "id": "eye_round",
+   "name": "Round",
+   "status": "planned",
+   "decal": {
+    "widthScale": 1.0,
+    "heightRatio": 1.0,
+    "tiltDeg": 0,
+    "lidCurve": 0.5
+   }
+  },
+  {
+   "id": "eye_sharp",
+   "name": "Sharp",
+   "status": "planned",
+   "decal": {
+    "widthScale": 1.05,
+    "heightRatio": 0.78,
+    "tiltDeg": 8,
+    "lidCurve": 0.35
+   }
+  },
+  {
+   "id": "eye_narrow",
+   "name": "Narrow",
+   "status": "planned",
+   "decal": {
+    "widthScale": 1.0,
+    "heightRatio": 0.62,
+    "tiltDeg": 4,
+    "lidCurve": 0.3
+   }
+  },
+  {
+   "id": "eye_soft",
+   "name": "Soft",
+   "status": "planned",
+   "decal": {
+    "widthScale": 1.0,
+    "heightRatio": 0.92,
+    "tiltDeg": -4,
+    "lidCurve": 0.6
+   }
+  },
+  {
+   "id": "eye_large",
+   "name": "Large expressive",
+   "status": "planned",
+   "decal": {
+    "widthScale": 1.12,
+    "heightRatio": 1.1,
+    "tiltDeg": 0,
+    "lidCurve": 0.55
+   }
+  },
+  {
+   "id": "eye_generator",
+   "name": "As generated",
+   "status": "built",
+   "decal": {
+    "widthScale": 1.0,
+    "heightRatio": 1.0,
+    "tiltDeg": 0,
+    "lidCurve": 0.5
+   },
+   "notes": "What Tools/blender/ascend_characters/face.py draws today: one eye shape per body and age"
+  }
+ ],
+ "pupilStyles": [
+  {
+   "id": "pupil_round",
+   "name": "Round",
+   "status": "built"
+  },
+  {
+   "id": "pupil_slit",
+   "name": "Slit",
+   "status": "planned"
+  },
+  {
+   "id": "pupil_ring",
+   "name": "Ring",
+   "status": "planned"
+  },
+  {
+   "id": "pupil_diamond",
+   "name": "Diamond",
+   "status": "planned"
+  }
+ ],
+ "brows": [
+  {
+   "id": "brow_generator",
+   "name": "As generated",
+   "status": "built"
+  },
+  {
+   "id": "brow_thin",
+   "name": "Thin",
+   "status": "planned"
+  },
+  {
+   "id": "brow_thick",
+   "name": "Thick",
+   "status": "planned"
+  },
+  {
+   "id": "brow_straight",
+   "name": "Straight",
+   "status": "planned"
+  },
+  {
+   "id": "brow_curved",
+   "name": "Curved",
+   "status": "planned"
+  },
+  {
+   "id": "brow_sharp",
+   "name": "Sharp (stern)",
+   "status": "planned"
+  },
+  {
+   "id": "brow_soft",
+   "name": "Soft",
+   "status": "planned"
+  }
+ ],
+ "mouths": [
+  {
+   "id": "mouth_generator",
+   "name": "As generated",
+   "status": "built"
+  },
+  {
+   "id": "mouth_small",
+   "name": "Small",
+   "status": "planned"
+  },
+  {
+   "id": "mouth_wide",
+   "name": "Wide",
+   "status": "planned"
+  },
+  {
+   "id": "mouth_neutral",
+   "name": "Neutral line",
+   "status": "planned"
+  }
+ ],
+ "expressions": [
+  {
+   "id": "expr_neutral",
+   "name": "Neutral",
+   "faceExpression": "neutral",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_happy",
+   "name": "Happy",
+   "faceExpression": "joy",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_sad",
+   "name": "Sad",
+   "faceExpression": "sad",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_angry",
+   "name": "Angry",
+   "faceExpression": "angry",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_surprised",
+   "name": "Surprised",
+   "faceExpression": "surprised",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_confused",
+   "name": "Confused",
+   "faceExpression": "thinking",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_determined",
+   "name": "Determined",
+   "faceExpression": "determined",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_smiling",
+   "name": "Smiling",
+   "faceExpression": "happy",
+   "intensity": 1.0
+  },
+  {
+   "id": "expr_serious",
+   "name": "Serious",
+   "faceExpression": "determined",
+   "intensity": 0.55
+  },
+  {
+   "id": "expr_frustrated",
+   "name": "Frustrated",
+   "faceExpression": "sulking",
+   "intensity": 1.0
+  }
+ ],
+ "faces": [
+  {
+   "id": "face_gentle",
+   "name": "Gentle",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_soft",
+   "brows": "brow_soft",
+   "mouth": "mouth_small",
+   "restExpression": "expr_smiling"
+  },
+  {
+   "id": "face_bold",
+   "name": "Bold",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_sharp",
+   "brows": "brow_sharp",
+   "mouth": "mouth_neutral",
+   "restExpression": "expr_determined"
+  },
+  {
+   "id": "face_bright",
+   "name": "Bright",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_large",
+   "brows": "brow_curved",
+   "mouth": "mouth_wide",
+   "restExpression": "expr_happy"
+  },
+  {
+   "id": "face_calm",
+   "name": "Calm",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_narrow",
+   "brows": "brow_straight",
+   "mouth": "mouth_neutral",
+   "restExpression": "expr_neutral"
+  },
+  {
+   "id": "face_classic",
+   "name": "Classic",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_round",
+   "brows": "brow_thin",
+   "mouth": "mouth_small",
+   "restExpression": "expr_smiling"
+  },
+  {
+   "id": "face_stern",
+   "name": "Stern",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_sharp",
+   "brows": "brow_thick",
+   "mouth": "mouth_neutral",
+   "restExpression": "expr_serious"
+  },
+  {
+   "id": "face_generator",
+   "name": "As generated",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "eyes": "eye_generator",
+   "brows": "brow_generator",
+   "mouth": "mouth_generator",
+   "restExpression": "expr_smiling",
+   "notes": "The only face preset the current generator can build; the others need face.py to read the eye, brow and mouth shapes"
+  }
+ ],
+ "hairStyles": [
+  {
+   "id": "hair_crop",
+   "name": "Short crop",
+   "families": [
+    "masculine"
+   ],
+   "length": "short",
+   "status": "built",
+   "placeholder": "short",
+   "generatorStyle": "crop"
+  },
+  {
+   "id": "hair_swept_fringe",
+   "name": "Side-swept fringe",
+   "families": [
+    "masculine"
+   ],
+   "length": "short",
+   "status": "built",
+   "placeholder": "short",
+   "generatorStyle": "swept_fringe"
+  },
+  {
+   "id": "hair_spiky",
+   "name": "Spiky",
+   "families": [
+    "masculine"
+   ],
+   "length": "short",
+   "status": "built",
+   "placeholder": "short",
+   "generatorStyle": "spiky"
+  },
+  {
+   "id": "hair_tied_back",
+   "name": "Tied back",
+   "families": [
+    "masculine"
+   ],
+   "length": "medium",
+   "status": "built",
+   "placeholder": "ponytail",
+   "generatorStyle": "tied_back",
+   "secondaryMotion": "tail"
+  },
+  {
+   "id": "hair_long_shaggy",
+   "name": "Long and shaggy",
+   "families": [
+    "masculine"
+   ],
+   "length": "long",
+   "status": "built",
+   "placeholder": "long",
+   "generatorStyle": "long_shaggy",
+   "secondaryMotion": "locks"
+  },
+  {
+   "id": "hair_bob",
+   "name": "Bob",
+   "families": [
+    "feminine"
+   ],
+   "length": "short",
+   "status": "built",
+   "placeholder": "short",
+   "generatorStyle": "bob"
+  },
+  {
+   "id": "hair_long_loose",
+   "name": "Long and loose",
+   "families": [
+    "feminine"
+   ],
+   "length": "long",
+   "status": "built",
+   "placeholder": "long",
+   "generatorStyle": "long_loose",
+   "secondaryMotion": "locks"
+  },
+  {
+   "id": "hair_high_ponytail",
+   "name": "High ponytail",
+   "families": [
+    "feminine"
+   ],
+   "length": "long",
+   "status": "built",
+   "placeholder": "ponytail",
+   "generatorStyle": "high_ponytail",
+   "secondaryMotion": "tail"
+  },
+  {
+   "id": "hair_side_braid",
+   "name": "Side braid",
+   "families": [
+    "feminine"
+   ],
+   "length": "long",
+   "status": "built",
+   "placeholder": "long",
+   "generatorStyle": "side_braid",
+   "secondaryMotion": "tail"
+  },
+  {
+   "id": "hair_short_flick",
+   "name": "Short with a flick",
+   "families": [
+    "feminine"
+   ],
+   "length": "short",
+   "status": "built",
+   "placeholder": "short",
+   "generatorStyle": "short_flick"
+  },
+  {
+   "id": "hair_bun_fringe",
+   "name": "Bun with fringe",
+   "families": [
+    "feminine"
+   ],
+   "length": "medium",
+   "status": "built",
+   "placeholder": "bun",
+   "generatorStyle": "bun_fringe"
+  },
+  {
+   "id": "hair_samurai_ponytail",
+   "name": "Samurai ponytail (long, with fringe)",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "length": "long",
+   "status": "planned",
+   "placeholder": "ponytail",
+   "secondaryMotion": "tail"
+  },
+  {
+   "id": "hair_twin_tails",
+   "name": "Twin tails",
+   "families": [
+    "feminine"
+   ],
+   "length": "long",
+   "status": "planned",
+   "placeholder": "long",
+   "secondaryMotion": "tail"
+  },
+  {
+   "id": "hair_messy",
+   "name": "Messy",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "length": "medium",
+   "status": "planned",
+   "placeholder": "short"
+  },
+  {
+   "id": "hair_curly",
+   "name": "Curly",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "length": "medium",
+   "status": "planned",
+   "placeholder": "short"
+  },
+  {
+   "id": "hair_layered",
+   "name": "Layered",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "length": "medium",
+   "status": "planned",
+   "placeholder": "long",
+   "secondaryMotion": "locks"
+  },
+  {
+   "id": "hair_anime_fringe",
+   "name": "Heavy anime fringe",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "length": "medium",
+   "status": "planned",
+   "placeholder": "short"
+  },
+  {
+   "id": "hair_braided_crown",
+   "name": "Braided crown",
+   "families": [
+    "feminine"
+   ],
+   "length": "medium",
+   "status": "planned",
+   "placeholder": "bun"
+  },
+  {
+   "id": "hair_undercut",
+   "name": "Undercut",
+   "families": [
+    "masculine"
+   ],
+   "length": "short",
+   "status": "planned",
+   "placeholder": "short"
+  },
+  {
+   "id": "hair_topknot",
+   "name": "Topknot",
+   "families": [
+    "masculine"
+   ],
+   "length": "short",
+   "status": "planned",
+   "placeholder": "bun"
+  },
+  {
+   "id": "hair_straight_long",
+   "name": "Straight and long",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "length": "long",
+   "status": "planned",
+   "placeholder": "long",
+   "secondaryMotion": "locks"
+  }
+ ],
+ "outfitPieces": [
+  {
+   "id": "top_rank_f_tunic",
+   "name": "Rank-F tunic",
+   "slot": "top",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "built",
+   "parts": [
+    "top"
+   ],
+   "materials": {
+    "CH_cloth": "cloth_primary"
+   }
+  },
+  {
+   "id": "bottom_rank_f_trousers",
+   "name": "Rank-F trousers",
+   "slot": "bottom",
+   "families": [
+    "masculine"
+   ],
+   "status": "built",
+   "parts": [
+    "bottom"
+   ],
+   "materials": {
+    "CH_cloth": "cloth_secondary"
+   }
+  },
+  {
+   "id": "bottom_rank_f_leggings",
+   "name": "Rank-F leggings",
+   "slot": "bottom",
+   "families": [
+    "feminine"
+   ],
+   "status": "built",
+   "parts": [
+    "bottom"
+   ],
+   "materials": {
+    "CH_cloth": "cloth_secondary"
+   }
+  },
+  {
+   "id": "skirt_rank_f",
+   "name": "Rank-F skirt",
+   "slot": "skirt",
+   "families": [
+    "feminine"
+   ],
+   "status": "built",
+   "parts": [
+    "skirt"
+   ],
+   "materials": {
+    "CH_cloth": "cloth_secondary"
+   }
+  },
+  {
+   "id": "belt_rank_f",
+   "name": "Belt and pouch",
+   "slot": "belt",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "built",
+   "parts": [
+    "belt"
+   ],
+   "materials": {
+    "CH_leather": "cloth_accent"
+   }
+  },
+  {
+   "id": "boots_rank_f",
+   "name": "Travel boots",
+   "slot": "footwear",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "built",
+   "parts": [
+    "boots"
+   ],
+   "materials": {
+    "CH_leather": "footwear"
+   }
+  },
+  {
+   "id": "bracers_rank_f",
+   "name": "Bracers",
+   "slot": "arms",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "built",
+   "parts": [
+    "bracers"
+   ],
+   "materials": {
+    "CH_leather": "gloves"
+   }
+  },
+  {
+   "id": "cloak_rank_f",
+   "name": "Travel cloak",
+   "slot": "outer",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "built",
+   "parts": [
+    "cloak"
+   ],
+   "materials": {
+    "CH_cloth": "cloth_trim"
+   }
+  },
+  {
+   "id": "outer_haori",
+   "name": "Long haori (knee, wide sleeves)",
+   "slot": "outer",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "sleeves_wide",
+    "coat_knee"
+   ]
+  },
+  {
+   "id": "top_kimono_wrap",
+   "name": "Wrapped kimono top",
+   "slot": "top",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "collar_cross"
+   ]
+  },
+  {
+   "id": "bottom_hakama",
+   "name": "Hakama (wide, pleated, to the ankle)",
+   "slot": "bottom",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "hides": [
+    "skirt"
+   ],
+   "silhouette": [
+    "legs_wide"
+   ]
+  },
+  {
+   "id": "belt_obi",
+   "name": "Obi sash with knot",
+   "slot": "belt",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "waist_band_wide"
+   ]
+  },
+  {
+   "id": "skirt_layered_knee",
+   "name": "Layered skirt to the knee",
+   "slot": "skirt",
+   "families": [
+    "feminine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "skirt_knee"
+   ]
+  },
+  {
+   "id": "footwear_tabi_boots",
+   "name": "Tabi boots",
+   "slot": "footwear",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "boots_split_toe"
+   ]
+  },
+  {
+   "id": "gloves_fingerless",
+   "name": "Fingerless gloves",
+   "slot": "gloves",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "arms_sleeve_guards",
+   "name": "Sleeve guards (kote)",
+   "slot": "arms",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "hides": [
+    "bracers"
+   ],
+   "silhouette": [
+    "forearm_plate"
+   ]
+  },
+  {
+   "id": "shoulder_sode",
+   "name": "Shoulder plates (sode)",
+   "slot": "shoulder",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "shoulder_wide"
+   ]
+  },
+  {
+   "id": "neck_scarf_long",
+   "name": "Long scarf",
+   "slot": "neck",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "tail_scarf"
+   ]
+  },
+  {
+   "id": "outer_short_jacket",
+   "name": "Short jacket",
+   "slot": "outer",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "coat_waist"
+   ]
+  },
+  {
+   "id": "outer_long_coat",
+   "name": "Long coat",
+   "slot": "outer",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "coat_calf"
+   ]
+  },
+  {
+   "id": "top_hoodie",
+   "name": "Hoodie",
+   "slot": "top",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "hood"
+   ]
+  },
+  {
+   "id": "bottom_cargo",
+   "name": "Cargo trousers",
+   "slot": "bottom",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "legs_loose"
+   ]
+  },
+  {
+   "id": "outer_robe",
+   "name": "Robe",
+   "slot": "outer",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "hides": [
+    "skirt"
+   ],
+   "silhouette": [
+    "robe_floor"
+   ]
+  },
+  {
+   "id": "armor_breastplate",
+   "name": "Breastplate",
+   "slot": "armor",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "silhouette": [
+    "chest_plate"
+   ]
+  }
+ ],
+ "accessories": [
+  {
+   "id": "acc_hair_ribbon",
+   "name": "Hair ribbon",
+   "socket": "hair_back",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_flower_pin",
+   "name": "Flower pin",
+   "socket": "hair_side",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_hairpin",
+   "name": "Hairpin",
+   "socket": "hair_side",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_earrings",
+   "name": "Earrings",
+   "socket": "ears",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_necklace",
+   "name": "Necklace",
+   "socket": "neck",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_tassel_charm",
+   "name": "Tassel charm",
+   "socket": "hip_r",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_arm_band",
+   "name": "Arm band",
+   "socket": "arm_l",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_shoulder_cord",
+   "name": "Shoulder cord",
+   "socket": "shoulder_r",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  },
+  {
+   "id": "acc_back_bow",
+   "name": "Back bow",
+   "socket": "back",
+   "families": [
+    "feminine",
+    "masculine"
+   ],
+   "status": "planned",
+   "colourSlot": "accessory"
+  }
+ ],
+ "weapons": [
+  {
+   "id": "wpn_katana",
+   "name": "Katana",
+   "weaponFamily": "wf_katana",
+   "held": "hand_r",
+   "sheathed": "hip_l",
+   "status": "planned"
+  },
+  {
+   "id": "wpn_short_sword",
+   "name": "Short sword",
+   "weaponFamily": "wf_sword",
+   "held": "hand_r",
+   "sheathed": "hip_l",
+   "status": "planned"
+  },
+  {
+   "id": "wpn_dual_blades",
+   "name": "Dual blades",
+   "weaponFamily": "wf_twin_blades",
+   "held": "hand_r",
+   "heldOff": "hand_l",
+   "sheathed": "back",
+   "status": "planned"
+  },
+  {
+   "id": "wpn_dagger",
+   "name": "Decorative dagger",
+   "weaponFamily": "wf_daggers",
+   "held": "hand_r",
+   "sheathed": "hip_r",
+   "status": "planned"
+  },
+  {
+   "id": "wpn_fantasy_sword",
+   "name": "Fantasy sword",
+   "weaponFamily": "wf_greatsword",
+   "held": "hand_r",
+   "sheathed": "back",
+   "status": "planned"
+  },
+  {
+   "id": "wpn_staff",
+   "name": "Staff",
+   "weaponFamily": "wf_caster_focus",
+   "held": "hand_r",
+   "sheathed": "back",
+   "status": "planned"
+  }
+ ],
+ "sockets": [
+  {
+   "id": "hand_r",
+   "bone": "RightHand",
+   "position": [
+    0.0,
+    -0.08,
+    0.02
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    -90
+   ]
+  },
+  {
+   "id": "hand_l",
+   "bone": "LeftHand",
+   "position": [
+    0.0,
+    -0.08,
+    0.02
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    90
+   ]
+  },
+  {
+   "id": "hip_l",
+   "bone": "Hips",
+   "position": [
+    -0.17,
+    0.02,
+    0.05
+   ],
+   "rotationEuler": [
+    -60,
+    0,
+    10
+   ]
+  },
+  {
+   "id": "hip_r",
+   "bone": "Hips",
+   "position": [
+    0.16,
+    0.0,
+    0.04
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "back",
+   "bone": "UpperChest",
+   "position": [
+    0.0,
+    0.05,
+    -0.16
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    40
+   ]
+  },
+  {
+   "id": "hair_back",
+   "bone": "Head",
+   "position": [
+    0.0,
+    0.08,
+    -0.1
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "hair_side",
+   "bone": "Head",
+   "position": [
+    0.08,
+    0.1,
+    0.0
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "ears",
+   "bone": "Head",
+   "position": [
+    0.0,
+    0.02,
+    0.0
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "neck",
+   "bone": "Neck",
+   "position": [
+    0.0,
+    -0.03,
+    0.04
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "arm_l",
+   "bone": "LeftUpperArm",
+   "position": [
+    0.0,
+    -0.12,
+    0.0
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "shoulder_r",
+   "bone": "RightShoulder",
+   "position": [
+    0.06,
+    0.03,
+    0.0
+   ],
+   "rotationEuler": [
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "looks": [
+  {
+   "id": "look_rank_f_feminine",
+   "name": "Rank-F adventurer (female)",
+   "family": "feminine",
+   "face": "face_generator",
+   "hair": "hair_high_ponytail",
+   "build": "average",
+   "outfit": {
+    "top": "top_rank_f_tunic",
+    "bottom": "bottom_rank_f_leggings",
+    "skirt": "skirt_rank_f",
+    "belt": "belt_rank_f",
+    "footwear": "boots_rank_f",
+    "arms": "bracers_rank_f",
+    "outer": "cloak_rank_f"
+   },
+   "palette": "pal_violet_samurai",
+   "accessories": [],
+   "status": "built"
+  },
+  {
+   "id": "look_rank_f_masculine",
+   "name": "Rank-F adventurer (male)",
+   "family": "masculine",
+   "face": "face_generator",
+   "hair": "hair_spiky",
+   "build": "average",
+   "outfit": {
+    "top": "top_rank_f_tunic",
+    "bottom": "bottom_rank_f_trousers",
+    "belt": "belt_rank_f",
+    "footwear": "boots_rank_f",
+    "arms": "bracers_rank_f",
+    "outer": "cloak_rank_f"
+   },
+   "palette": "pal_violet_samurai",
+   "accessories": [],
+   "status": "built"
+  },
+  {
+   "id": "look_violet_samurai_f",
+   "name": "Violet samurai (female)",
+   "family": "feminine",
+   "face": "face_bright",
+   "hair": "hair_samurai_ponytail",
+   "build": "average",
+   "outfit": {
+    "top": "top_kimono_wrap",
+    "outer": "outer_haori",
+    "skirt": "skirt_layered_knee",
+    "bottom": "bottom_rank_f_leggings",
+    "belt": "belt_obi",
+    "footwear": "footwear_tabi_boots",
+    "arms": "arms_sleeve_guards"
+   },
+   "palette": "pal_violet_samurai",
+   "accessories": [
+    "acc_hair_ribbon",
+    "acc_flower_pin",
+    "acc_tassel_charm"
+   ],
+   "status": "planned",
+   "weapon": "wpn_katana",
+   "notes": "From the owner's concept sheet (07_Characters/reference/violet_samurai_concept.png), adapted to the teen rating: a wrapped top instead of the cut-out bodice, a knee-length layered skirt over leggings instead of the short skirt and thigh-highs (art_direction.md 6.2, Canon section 1)"
+  },
+  {
+   "id": "look_violet_samurai_m",
+   "name": "Violet samurai (male)",
+   "family": "masculine",
+   "face": "face_bold",
+   "hair": "hair_messy",
+   "build": "average",
+   "outfit": {
+    "top": "top_kimono_wrap",
+    "outer": "outer_haori",
+    "bottom": "bottom_hakama",
+    "belt": "belt_obi",
+    "footwear": "footwear_tabi_boots",
+    "arms": "arms_sleeve_guards"
+   },
+   "palette": "pal_violet_samurai",
+   "accessories": [
+    "acc_tassel_charm",
+    "acc_shoulder_cord"
+   ],
+   "status": "planned",
+   "weapon": "wpn_katana",
+   "notes": "From the owner's concept sheet (07_Characters/reference/violet_samurai_concept.png)"
+  }
+ ]
+}

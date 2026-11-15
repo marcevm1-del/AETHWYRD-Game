@@ -71,8 +71,15 @@ namespace Ascend.Core
         public string HairColour { get; set; } = AppearanceDefaults.HairColour;
         public string SkinTone { get; set; } = AppearanceDefaults.SkinTone;
         public string OutfitColour { get; set; } = AppearanceDefaults.OutfitColour;
+        /// <summary>The customization layer (CharacterCustomization.cs); null until a creator or a save fills it.</summary>
+        public CustomLook Custom { get; set; }
 
-        public AppearanceChoice Clone() => (AppearanceChoice)MemberwiseClone();
+        public AppearanceChoice Clone()
+        {
+            var c = (AppearanceChoice)MemberwiseClone();
+            c.Custom = Custom?.Clone();
+            return c;
+        }
     }
 
     public static class AppearanceRules
@@ -149,6 +156,7 @@ namespace Ascend.Core
         {
             s.PlayerName = c.PlayerName; s.PlayerBody = c.Body; s.HairStyle = c.HairStyle;
             s.HairColour = c.HairColour; s.SkinTone = c.SkinTone; s.OutfitColour = c.OutfitColour;
+            s.Customization = c.Custom?.Clone();
         }
 
         /// <summary>Reads a look from a save (a normalised copy).</summary>
@@ -158,6 +166,7 @@ namespace Ascend.Core
             {
                 PlayerName = s.PlayerName, Body = s.PlayerBody, HairStyle = s.HairStyle,
                 HairColour = s.HairColour, SkinTone = s.SkinTone, OutfitColour = s.OutfitColour,
+                Custom = s.Customization?.Clone(),
             }, f);
         }
     }

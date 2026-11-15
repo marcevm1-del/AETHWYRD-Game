@@ -92,6 +92,9 @@ namespace Ascend.Core
         public string HairColour { get; set; }
         public string SkinTone { get; set; }
         public string OutfitColour { get; set; }
+        /// <summary>The customization layer: face, hair style, outfit pieces, accessories, weapon look and colour per slot
+        /// (Data/Characters/customization.json). Null in older saves: the game builds one with CustomizationRules.FromLegacy.</summary>
+        public CustomLook Customization { get; set; }
     }
 
     public sealed class SiegeSave

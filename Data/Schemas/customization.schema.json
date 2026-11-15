@@ -1,0 +1,1036 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Character customization catalog",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "version",
+  "families",
+  "colourSlots",
+  "materialSlots",
+  "styleGuard",
+  "palettes",
+  "hairColours",
+  "irisColours",
+  "eyeShapes",
+  "pupilStyles",
+  "brows",
+  "mouths",
+  "expressions",
+  "faces",
+  "hairStyles",
+  "outfitPieces",
+  "accessories",
+  "weapons",
+  "sockets",
+  "looks"
+ ],
+ "properties": {
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "notes": {
+   "type": "string"
+  },
+  "families": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "body",
+     "generatorBody",
+     "heightM",
+     "builds",
+     "defaultLook"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "enum": [
+       "feminine",
+       "masculine"
+      ]
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "body": {
+      "type": "string",
+      "enum": [
+       "feminine",
+       "masculine"
+      ]
+     },
+     "generatorBody": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "heightM": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "min",
+       "max",
+       "default"
+      ],
+      "properties": {
+       "min": {
+        "type": "number",
+        "minimum": 1.3
+       },
+       "max": {
+        "type": "number",
+        "maximum": 2.2
+       },
+       "default": {
+        "type": "number"
+       }
+      }
+     },
+     "builds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     },
+     "defaultLook": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     }
+    }
+   }
+  },
+  "colourSlots": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "group"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "group": {
+      "type": "string",
+      "enum": [
+       "hair",
+       "face",
+       "clothing",
+       "gear",
+       "weapon"
+      ]
+     }
+    }
+   }
+  },
+  "materialSlots": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]*$"
+   }
+  },
+  "styleGuard": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "minValue",
+    "maxValue",
+    "maxSaturation"
+   ],
+   "properties": {
+    "minValue": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "maxValue": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "maxSaturation": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "notes": {
+     "type": "string"
+    }
+   }
+  },
+  "palettes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "swatches",
+     "slots"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "notes": {
+      "type": "string"
+     },
+     "swatches": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+       "type": "string",
+       "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+     },
+     "slots": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "string",
+       "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+     }
+    }
+   }
+  },
+  "hairColours": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "hex"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     }
+    }
+   }
+  },
+  "irisColours": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "hex"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     }
+    }
+   }
+  },
+  "eyeShapes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     },
+     "decal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "widthScale",
+       "heightRatio",
+       "tiltDeg",
+       "lidCurve"
+      ],
+      "properties": {
+       "widthScale": {
+        "type": "number",
+        "minimum": 0.8,
+        "maximum": 1.3
+       },
+       "heightRatio": {
+        "type": "number",
+        "minimum": 0.5,
+        "maximum": 1.3
+       },
+       "tiltDeg": {
+        "type": "number",
+        "minimum": -15,
+        "maximum": 15
+       },
+       "lidCurve": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "pupilStyles": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     },
+     "decal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "widthScale",
+       "heightRatio",
+       "tiltDeg",
+       "lidCurve"
+      ],
+      "properties": {
+       "widthScale": {
+        "type": "number",
+        "minimum": 0.8,
+        "maximum": 1.3
+       },
+       "heightRatio": {
+        "type": "number",
+        "minimum": 0.5,
+        "maximum": 1.3
+       },
+       "tiltDeg": {
+        "type": "number",
+        "minimum": -15,
+        "maximum": 15
+       },
+       "lidCurve": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "brows": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     },
+     "decal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "widthScale",
+       "heightRatio",
+       "tiltDeg",
+       "lidCurve"
+      ],
+      "properties": {
+       "widthScale": {
+        "type": "number",
+        "minimum": 0.8,
+        "maximum": 1.3
+       },
+       "heightRatio": {
+        "type": "number",
+        "minimum": 0.5,
+        "maximum": 1.3
+       },
+       "tiltDeg": {
+        "type": "number",
+        "minimum": -15,
+        "maximum": 15
+       },
+       "lidCurve": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "mouths": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     },
+     "decal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "widthScale",
+       "heightRatio",
+       "tiltDeg",
+       "lidCurve"
+      ],
+      "properties": {
+       "widthScale": {
+        "type": "number",
+        "minimum": 0.8,
+        "maximum": 1.3
+       },
+       "heightRatio": {
+        "type": "number",
+        "minimum": 0.5,
+        "maximum": 1.3
+       },
+       "tiltDeg": {
+        "type": "number",
+        "minimum": -15,
+        "maximum": 15
+       },
+       "lidCurve": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "expressions": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "faceExpression",
+     "intensity"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "faceExpression": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "intensity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     }
+    }
+   }
+  },
+  "faces": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "families",
+     "eyes",
+     "brows",
+     "mouth",
+     "restExpression"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "families": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "feminine",
+        "masculine"
+       ]
+      }
+     },
+     "eyes": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "brows": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "mouth": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "restExpression": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "notes": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "hairStyles": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "families",
+     "length",
+     "status",
+     "placeholder"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "families": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "feminine",
+        "masculine"
+       ]
+      }
+     },
+     "length": {
+      "type": "string",
+      "enum": [
+       "short",
+       "medium",
+       "long"
+      ]
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "generatorStyle": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "placeholder": {
+      "type": "string",
+      "enum": [
+       "short",
+       "long",
+       "ponytail",
+       "bun"
+      ]
+     },
+     "secondaryMotion": {
+      "type": "string",
+      "enum": [
+       "tail",
+       "locks"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "outfitPieces": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "slot",
+     "families",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "slot": {
+      "type": "string",
+      "enum": [
+       "top",
+       "outer",
+       "bottom",
+       "skirt",
+       "belt",
+       "footwear",
+       "gloves",
+       "arms",
+       "shoulder",
+       "neck",
+       "armor"
+      ]
+     },
+     "families": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "feminine",
+        "masculine"
+       ]
+      }
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "parts": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     },
+     "materials": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     },
+     "hides": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "top",
+        "outer",
+        "bottom",
+        "skirt",
+        "belt",
+        "footwear",
+        "gloves",
+        "arms",
+        "shoulder",
+        "neck",
+        "armor",
+        "skirt",
+        "bracers"
+       ]
+      }
+     },
+     "silhouette": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     },
+     "notes": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "accessories": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "socket",
+     "families",
+     "status",
+     "colourSlot"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "socket": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "families": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "enum": [
+        "feminine",
+        "masculine"
+       ]
+      }
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "colourSlot": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "notes": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "weapons": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "weaponFamily",
+     "held",
+     "sheathed",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "weaponFamily": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "held": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "heldOff": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "sheathed": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "sockets": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "bone",
+     "position",
+     "rotationEuler"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "bone": {
+      "type": "string",
+      "minLength": 1
+     },
+     "position": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+       "type": "number"
+      }
+     },
+     "rotationEuler": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+       "type": "number"
+      }
+     }
+    }
+   }
+  },
+  "looks": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "family",
+     "face",
+     "hair",
+     "build",
+     "outfit",
+     "palette",
+     "accessories",
+     "status"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "family": {
+      "type": "string",
+      "enum": [
+       "feminine",
+       "masculine"
+      ]
+     },
+     "face": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "hair": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "build": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "outfit": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     },
+     "palette": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "accessories": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z][a-z0-9_]*$"
+      }
+     },
+     "weapon": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "built",
+       "planned"
+      ]
+     },
+     "notes": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

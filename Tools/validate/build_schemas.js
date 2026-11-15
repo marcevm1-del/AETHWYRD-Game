@@ -711,6 +711,7 @@ require('./living_schemas')(SCHEMAS); // Upgrade v4 subset
 require('./library_schemas')(SCHEMAS); // Libraries and books
 require('./front_end_schemas')(SCHEMAS); // Phase 1B
 require('./encounter_schemas')(SCHEMAS); // Regional encounter tables
+require('./character_schemas')(SCHEMAS); // Character customization and silhouettes
 for (const [name, s] of Object.entries(SCHEMAS)) {
   fs.writeFileSync(path.join(OUT, `${name}.schema.json`), JSON.stringify({ $schema: 'http://json-schema.org/draft-07/schema#', ...s }, null, 1));
 }

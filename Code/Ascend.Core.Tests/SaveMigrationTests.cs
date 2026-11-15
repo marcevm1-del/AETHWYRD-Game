@@ -18,6 +18,8 @@ static class SaveMigrationTests
     {
         nameof(SaveGame.SavedAtUtc), nameof(SaveGame.Respawn), nameof(SaveGame.WaystoneId), nameof(SaveGame.Lantern),
         nameof(SaveGame.Companion), nameof(SaveGame.Equipment), nameof(SaveGame.ClockSeconds), nameof(SaveGame.Sieges), nameof(SaveGame.Map),
+        // the loader (PlayerAppearance.Load) builds it with CustomizationRules.FromLegacy, which needs customization.json
+        nameof(SaveGame.Customization),
     };
 
     // Value-type fields: they default to zero/false/first enum value in an older save, which is the intended starting value.

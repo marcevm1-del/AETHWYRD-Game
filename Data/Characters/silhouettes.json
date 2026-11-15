@@ -1,0 +1,1662 @@
+{
+ "version": 1,
+ "notes": "The silhouette library (12_Systems/character_customization.md section 4): 30 outline concepts per family, 3 per category, described on shared axes so each can be drawn (Tools/characters/silhouettes.py) and checked for distinctness. The first ten axes are outline axes; footwear and accent are decorative and do not count toward distinctness. A concept is a design target, not a model; 'uses' names the customization options it would need.",
+ "categories": [
+  {
+   "id": "samurai",
+   "name": "Samurai"
+  },
+  {
+   "id": "kunoichi",
+   "name": "Kunoichi"
+  },
+  {
+   "id": "modern_fighter",
+   "name": "Modern anime fighter"
+  },
+  {
+   "id": "casual_adventurer",
+   "name": "Casual adventurer"
+  },
+  {
+   "id": "fantasy_warrior",
+   "name": "Fantasy warrior"
+  },
+  {
+   "id": "light_assassin",
+   "name": "Lightweight assassin"
+  },
+  {
+   "id": "heavy_fighter",
+   "name": "Heavy fighter"
+  },
+  {
+   "id": "elegant",
+   "name": "Elegant"
+  },
+  {
+   "id": "streetwear",
+   "name": "Streetwear"
+  },
+  {
+   "id": "experimental",
+   "name": "Original experimental"
+  }
+ ],
+ "axes": {
+  "hair": [
+   "cap_short",
+   "spiky",
+   "bob",
+   "fringe_heavy",
+   "ponytail_high",
+   "twin_tails",
+   "long_straight",
+   "long_wild",
+   "bun",
+   "topknot",
+   "braid_side",
+   "undercut",
+   "curly",
+   "hidden"
+  ],
+  "hairLength": [
+   "short",
+   "medium",
+   "long",
+   "very_long"
+  ],
+  "outer": [
+   "none",
+   "short_jacket",
+   "haori_knee",
+   "long_coat",
+   "cape",
+   "robe_floor",
+   "hooded_cloak",
+   "vest",
+   "scarf_long"
+  ],
+  "sleeves": [
+   "sleeveless",
+   "short",
+   "fitted",
+   "wide",
+   "bell"
+  ],
+  "lower": [
+   "trousers_slim",
+   "trousers_wide",
+   "hakama",
+   "shorts_leggings",
+   "skirt_knee",
+   "skirt_long",
+   "skirt_split",
+   "cargo"
+  ],
+  "armor": [
+   "none",
+   "shoulder_one",
+   "shoulders_both",
+   "chest_plate",
+   "lamellar",
+   "gauntlets_heavy",
+   "full_heavy"
+  ],
+  "weapon": [
+   "none",
+   "katana_hip",
+   "katana_back",
+   "dual_hip",
+   "dual_back",
+   "staff",
+   "greatsword_back",
+   "dagger_belt",
+   "bow_back",
+   "shield_arm"
+  ],
+  "build": [
+   "slim",
+   "average",
+   "sturdy",
+   "heavy"
+  ],
+  "stance": [
+   "neutral",
+   "guard",
+   "wide",
+   "lean",
+   "crouch",
+   "draw_ready",
+   "arms_crossed",
+   "casual"
+  ],
+  "headwear": [
+   "none",
+   "ribbon_bow",
+   "kasa_hat",
+   "hood_up",
+   "headband_tails",
+   "mask_half",
+   "cap",
+   "flower_pin",
+   "horned_helm"
+  ],
+  "footwear": [
+   "boots_tall",
+   "boots_heavy",
+   "sandals",
+   "sneakers",
+   "tabi"
+  ],
+  "accent": [
+   "none",
+   "tassels",
+   "sash_tails",
+   "belt_pouches",
+   "scarf",
+   "chains",
+   "feathers"
+  ]
+ },
+ "silhouettes": [
+  {
+   "id": "sil_f_01",
+   "name": "Ronin in a long haori",
+   "family": "feminine",
+   "category": "samurai",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "long",
+    "outer": "haori_knee",
+    "sleeves": "wide",
+    "lower": "hakama",
+    "armor": "shoulder_one",
+    "weapon": "katana_hip",
+    "build": "average",
+    "stance": "draw_ready",
+    "headwear": "none",
+    "footwear": "tabi",
+    "accent": "sash_tails"
+   },
+   "readsAs": "A tall ponytail over a knee-length coat with wide sleeves; the katana breaks the outline at the hip",
+   "uses": [
+    "hair_samurai_ponytail",
+    "outer_haori",
+    "bottom_hakama",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_f_02",
+   "name": "Shrine guardian",
+   "family": "feminine",
+   "category": "samurai",
+   "shape": {
+    "hair": "bun",
+    "hairLength": "medium",
+    "outer": "none",
+    "sleeves": "wide",
+    "lower": "skirt_knee",
+    "armor": "none",
+    "weapon": "staff",
+    "build": "average",
+    "stance": "guard",
+    "headwear": "ribbon_bow",
+    "footwear": "sandals",
+    "accent": "tassels"
+   },
+   "readsAs": "Wide sleeves raised in guard over a knee skirt, with a tall staff",
+   "uses": [
+    "outer_haori",
+    "bottom_hakama",
+    "wpn_staff"
+   ]
+  },
+  {
+   "id": "sil_f_03",
+   "name": "Wandering blade",
+   "family": "feminine",
+   "category": "samurai",
+   "shape": {
+    "hair": "long_straight",
+    "hairLength": "very_long",
+    "outer": "scarf_long",
+    "sleeves": "fitted",
+    "lower": "skirt_long",
+    "armor": "none",
+    "weapon": "katana_back",
+    "build": "slim",
+    "stance": "neutral",
+    "headwear": "kasa_hat",
+    "footwear": "tabi",
+    "accent": "none"
+   },
+   "readsAs": "A wide straw hat on a slim column; the scarf tails stream to one side",
+   "uses": [
+    "hair_straight_long",
+    "neck_scarf_long",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_f_04",
+   "name": "Shadow runner",
+   "family": "feminine",
+   "category": "kunoichi",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "long",
+    "outer": "none",
+    "sleeves": "fitted",
+    "lower": "shorts_leggings",
+    "armor": "gauntlets_heavy",
+    "weapon": "dual_back",
+    "build": "slim",
+    "stance": "crouch",
+    "headwear": "mask_half",
+    "footwear": "tabi",
+    "accent": "scarf"
+   },
+   "readsAs": "Low crouch, two hilts over the shoulders and a half mask: small and spiky",
+   "uses": [
+    "wpn_dual_blades"
+   ]
+  },
+  {
+   "id": "sil_f_05",
+   "name": "Moon dancer",
+   "family": "feminine",
+   "category": "kunoichi",
+   "shape": {
+    "hair": "twin_tails",
+    "hairLength": "very_long",
+    "outer": "short_jacket",
+    "sleeves": "bell",
+    "lower": "skirt_split",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "flower_pin",
+    "footwear": "boots_tall",
+    "accent": "sash_tails"
+   },
+   "readsAs": "Twin tails and bell sleeves swing out; the split skirt reads as two points",
+   "uses": [
+    "hair_twin_tails",
+    "wpn_dagger"
+   ]
+  },
+  {
+   "id": "sil_f_06",
+   "name": "Lantern scout",
+   "family": "feminine",
+   "category": "kunoichi",
+   "shape": {
+    "hair": "braid_side",
+    "hairLength": "long",
+    "outer": "hooded_cloak",
+    "sleeves": "short",
+    "lower": "skirt_knee",
+    "armor": "none",
+    "weapon": "bow_back",
+    "build": "average",
+    "stance": "casual",
+    "headwear": "hood_up",
+    "footwear": "boots_tall",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "A hooded triangle with a bow arc over the back",
+   "uses": [
+    "hair_side_braid",
+    "cloak_rank_f"
+   ]
+  },
+  {
+   "id": "sil_f_07",
+   "name": "Arena brawler",
+   "family": "feminine",
+   "category": "modern_fighter",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "short",
+    "outer": "short_jacket",
+    "sleeves": "short",
+    "lower": "shorts_leggings",
+    "armor": "gauntlets_heavy",
+    "weapon": "none",
+    "build": "sturdy",
+    "stance": "guard",
+    "headwear": "headband_tails",
+    "footwear": "sneakers",
+    "accent": "none"
+   },
+   "readsAs": "Big fists up, headband tails behind: a compact boxer shape",
+   "uses": [
+    "hair_spiky",
+    "outer_short_jacket",
+    "gloves_fingerless"
+   ]
+  },
+  {
+   "id": "sil_f_08",
+   "name": "Sky kicker",
+   "family": "feminine",
+   "category": "modern_fighter",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "long",
+    "outer": "vest",
+    "sleeves": "sleeveless",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "wide",
+    "headwear": "none",
+    "footwear": "sneakers",
+    "accent": "scarf"
+   },
+   "readsAs": "A wide-legged kick stance; the ponytail and scarf make a long diagonal",
+   "uses": [
+    "hair_high_ponytail"
+   ]
+  },
+  {
+   "id": "sil_f_09",
+   "name": "Guild duelist",
+   "family": "feminine",
+   "category": "modern_fighter",
+   "shape": {
+    "hair": "bob",
+    "hairLength": "short",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "katana_hip",
+    "build": "average",
+    "stance": "draw_ready",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "chains"
+   },
+   "readsAs": "A short bob on a long straight coat; the drawn blade points forward",
+   "uses": [
+    "hair_bob",
+    "outer_long_coat",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_f_10",
+   "name": "Road-worn traveller",
+   "family": "feminine",
+   "category": "casual_adventurer",
+   "shape": {
+    "hair": "bun",
+    "hairLength": "medium",
+    "outer": "cape",
+    "sleeves": "short",
+    "lower": "skirt_knee",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "average",
+    "stance": "casual",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "Rounded cape and bun: the friendly Rank-F outline",
+   "uses": [
+    "hair_bun_fringe",
+    "cloak_rank_f"
+   ]
+  },
+  {
+   "id": "sil_f_11",
+   "name": "Herbalist",
+   "family": "feminine",
+   "category": "casual_adventurer",
+   "shape": {
+    "hair": "curly",
+    "hairLength": "medium",
+    "outer": "vest",
+    "sleeves": "short",
+    "lower": "trousers_wide",
+    "armor": "none",
+    "weapon": "staff",
+    "build": "average",
+    "stance": "neutral",
+    "headwear": "flower_pin",
+    "footwear": "sandals",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "A tall staff beside loose trousers and curls",
+   "uses": [
+    "hair_curly",
+    "wpn_staff"
+   ]
+  },
+  {
+   "id": "sil_f_12",
+   "name": "Map maker",
+   "family": "feminine",
+   "category": "casual_adventurer",
+   "shape": {
+    "hair": "cap_short",
+    "hairLength": "short",
+    "outer": "scarf_long",
+    "sleeves": "fitted",
+    "lower": "shorts_leggings",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "arms_crossed",
+    "headwear": "cap",
+    "footwear": "boots_tall",
+    "accent": "feathers"
+   },
+   "readsAs": "Arms crossed under a cap, a long scarf behind",
+   "uses": [
+    "hair_short_flick",
+    "neck_scarf_long"
+   ]
+  },
+  {
+   "id": "sil_f_13",
+   "name": "Knight of the vale",
+   "family": "feminine",
+   "category": "fantasy_warrior",
+   "shape": {
+    "hair": "long_straight",
+    "hairLength": "long",
+    "outer": "cape",
+    "sleeves": "fitted",
+    "lower": "skirt_long",
+    "armor": "chest_plate",
+    "weapon": "shield_arm",
+    "build": "average",
+    "stance": "guard",
+    "headwear": "none",
+    "footwear": "boots_heavy",
+    "accent": "none"
+   },
+   "readsAs": "A shield disc on one arm and a long cape: a classic knight triangle",
+   "uses": [
+    "armor_breastplate",
+    "hair_straight_long"
+   ]
+  },
+  {
+   "id": "sil_f_14",
+   "name": "Spellblade",
+   "family": "feminine",
+   "category": "fantasy_warrior",
+   "shape": {
+    "hair": "long_wild",
+    "hairLength": "very_long",
+    "outer": "long_coat",
+    "sleeves": "bell",
+    "lower": "skirt_split",
+    "armor": "shoulder_one",
+    "weapon": "greatsword_back",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "feathers"
+   },
+   "readsAs": "A huge sword diagonal over flowing hair and coat tails",
+   "uses": [
+    "outer_long_coat",
+    "wpn_fantasy_sword"
+   ]
+  },
+  {
+   "id": "sil_f_15",
+   "name": "Rune warden",
+   "family": "feminine",
+   "category": "fantasy_warrior",
+   "shape": {
+    "hair": "bob",
+    "hairLength": "short",
+    "outer": "robe_floor",
+    "sleeves": "wide",
+    "lower": "skirt_long",
+    "armor": "shoulders_both",
+    "weapon": "staff",
+    "build": "average",
+    "stance": "neutral",
+    "headwear": "horned_helm",
+    "footwear": "sandals",
+    "accent": "tassels"
+   },
+   "readsAs": "A floor-length robe bell with a horned helm on top",
+   "uses": [
+    "outer_robe",
+    "wpn_staff"
+   ]
+  },
+  {
+   "id": "sil_f_16",
+   "name": "Night needle",
+   "family": "feminine",
+   "category": "light_assassin",
+   "shape": {
+    "hair": "hidden",
+    "hairLength": "short",
+    "outer": "hooded_cloak",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "slim",
+    "stance": "crouch",
+    "headwear": "hood_up",
+    "footwear": "tabi",
+    "accent": "none"
+   },
+   "readsAs": "A tight hooded wedge, very low to the ground",
+   "uses": [
+    "wpn_dagger"
+   ]
+  },
+  {
+   "id": "sil_f_17",
+   "name": "Silk wire",
+   "family": "feminine",
+   "category": "light_assassin",
+   "shape": {
+    "hair": "braid_side",
+    "hairLength": "very_long",
+    "outer": "none",
+    "sleeves": "sleeveless",
+    "lower": "trousers_wide",
+    "armor": "gauntlets_heavy",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "wide",
+    "headwear": "mask_half",
+    "footwear": "sandals",
+    "accent": "chains"
+   },
+   "readsAs": "A wide stance with heavy fists and a long braid; wide trousers flare at the ankle",
+   "uses": [
+    "hair_side_braid"
+   ]
+  },
+  {
+   "id": "sil_f_18",
+   "name": "Petal knife",
+   "family": "feminine",
+   "category": "light_assassin",
+   "shape": {
+    "hair": "fringe_heavy",
+    "hairLength": "medium",
+    "outer": "short_jacket",
+    "sleeves": "short",
+    "lower": "shorts_leggings",
+    "armor": "none",
+    "weapon": "dual_hip",
+    "build": "slim",
+    "stance": "draw_ready",
+    "headwear": "ribbon_bow",
+    "footwear": "sneakers",
+    "accent": "sash_tails"
+   },
+   "readsAs": "A big bow on the head; two blades low at the hips",
+   "uses": [
+    "hair_anime_fringe",
+    "wpn_dual_blades"
+   ]
+  },
+  {
+   "id": "sil_f_19",
+   "name": "Iron maiden of the gate",
+   "family": "feminine",
+   "category": "heavy_fighter",
+   "shape": {
+    "hair": "bun",
+    "hairLength": "short",
+    "outer": "none",
+    "sleeves": "fitted",
+    "lower": "trousers_wide",
+    "armor": "full_heavy",
+    "weapon": "greatsword_back",
+    "build": "heavy",
+    "stance": "wide",
+    "headwear": "horned_helm",
+    "footwear": "boots_heavy",
+    "accent": "none"
+   },
+   "readsAs": "A full plate block with a sword taller than the helm",
+   "uses": [
+    "wpn_fantasy_sword",
+    "armor_breastplate"
+   ]
+  },
+  {
+   "id": "sil_f_20",
+   "name": "Lamellar spear-sister",
+   "family": "feminine",
+   "category": "heavy_fighter",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "long",
+    "outer": "haori_knee",
+    "sleeves": "short",
+    "lower": "hakama",
+    "armor": "lamellar",
+    "weapon": "staff",
+    "build": "sturdy",
+    "stance": "guard",
+    "headwear": "headband_tails",
+    "footwear": "tabi",
+    "accent": "tassels"
+   },
+   "readsAs": "Layered armour skirt and a pole held high",
+   "uses": [
+    "hair_samurai_ponytail",
+    "bottom_hakama"
+   ]
+  },
+  {
+   "id": "sil_f_21",
+   "name": "Gauntlet smith",
+   "family": "feminine",
+   "category": "heavy_fighter",
+   "shape": {
+    "hair": "undercut",
+    "hairLength": "short",
+    "outer": "vest",
+    "sleeves": "sleeveless",
+    "lower": "cargo",
+    "armor": "gauntlets_heavy",
+    "weapon": "none",
+    "build": "heavy",
+    "stance": "arms_crossed",
+    "headwear": "none",
+    "footwear": "boots_heavy",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "Huge forearms crossed over a broad vest",
+   "uses": [
+    "gloves_fingerless",
+    "bottom_cargo"
+   ]
+  },
+  {
+   "id": "sil_f_22",
+   "name": "Court poet",
+   "family": "feminine",
+   "category": "elegant",
+   "shape": {
+    "hair": "long_straight",
+    "hairLength": "very_long",
+    "outer": "robe_floor",
+    "sleeves": "bell",
+    "lower": "skirt_long",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "neutral",
+    "headwear": "flower_pin",
+    "footwear": "sandals",
+    "accent": "sash_tails"
+   },
+   "readsAs": "A long robe and sleeves pooled at the floor: one smooth bell",
+   "uses": [
+    "outer_robe",
+    "hair_straight_long"
+   ]
+  },
+  {
+   "id": "sil_f_23",
+   "name": "Moonlit fan dancer",
+   "family": "feminine",
+   "category": "elegant",
+   "shape": {
+    "hair": "bun",
+    "hairLength": "medium",
+    "outer": "none",
+    "sleeves": "wide",
+    "lower": "skirt_split",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "ribbon_bow",
+    "footwear": "tabi",
+    "accent": "tassels"
+   },
+   "readsAs": "Wide sleeves held out like wings over a split skirt",
+   "uses": [
+    "hair_braided_crown"
+   ]
+  },
+  {
+   "id": "sil_f_24",
+   "name": "Noble swordswoman",
+   "family": "feminine",
+   "category": "elegant",
+   "shape": {
+    "hair": "braid_side",
+    "hairLength": "long",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "skirt_knee",
+    "armor": "shoulder_one",
+    "weapon": "katana_hip",
+    "build": "average",
+    "stance": "casual",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "chains"
+   },
+   "readsAs": "A tailored coat and one shoulder plate; the hand rests on the hilt",
+   "uses": [
+    "outer_long_coat",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_f_25",
+   "name": "Festival kid",
+   "family": "feminine",
+   "category": "streetwear",
+   "shape": {
+    "hair": "twin_tails",
+    "hairLength": "long",
+    "outer": "short_jacket",
+    "sleeves": "short",
+    "lower": "shorts_leggings",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "casual",
+    "headwear": "cap",
+    "footwear": "sneakers",
+    "accent": "chains"
+   },
+   "readsAs": "Cap and twin tails on an oversized short jacket",
+   "uses": [
+    "hair_twin_tails",
+    "outer_short_jacket"
+   ]
+  },
+  {
+   "id": "sil_f_26",
+   "name": "Hoodie hunter",
+   "family": "feminine",
+   "category": "streetwear",
+   "shape": {
+    "hair": "hidden",
+    "hairLength": "medium",
+    "outer": "none",
+    "sleeves": "fitted",
+    "lower": "cargo",
+    "armor": "none",
+    "weapon": "katana_back",
+    "build": "average",
+    "stance": "neutral",
+    "headwear": "hood_up",
+    "footwear": "sneakers",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "A hood and a sheathed blade over the shoulder: an urban outline",
+   "uses": [
+    "top_hoodie",
+    "bottom_cargo",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_f_27",
+   "name": "Courier",
+   "family": "feminine",
+   "category": "streetwear",
+   "shape": {
+    "hair": "bob",
+    "hairLength": "short",
+    "outer": "vest",
+    "sleeves": "short",
+    "lower": "cargo",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "sturdy",
+    "stance": "casual",
+    "headwear": "headband_tails",
+    "footwear": "sneakers",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "Pockets and pouches on a sturdy, relaxed frame",
+   "uses": [
+    "hair_bob",
+    "bottom_cargo"
+   ]
+  },
+  {
+   "id": "sil_f_28",
+   "name": "Starfall oracle",
+   "family": "feminine",
+   "category": "experimental",
+   "shape": {
+    "hair": "long_wild",
+    "hairLength": "very_long",
+    "outer": "cape",
+    "sleeves": "bell",
+    "lower": "skirt_split",
+    "armor": "none",
+    "weapon": "staff",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "horned_helm",
+    "footwear": "sandals",
+    "accent": "feathers"
+   },
+   "readsAs": "A star-tipped staff and a cape spread like wings",
+   "uses": [
+    "wpn_staff"
+   ]
+  },
+  {
+   "id": "sil_f_29",
+   "name": "Clockwork ranger",
+   "family": "feminine",
+   "category": "experimental",
+   "shape": {
+    "hair": "curly",
+    "hairLength": "medium",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "shorts_leggings",
+    "armor": "gauntlets_heavy",
+    "weapon": "bow_back",
+    "build": "sturdy",
+    "stance": "wide",
+    "headwear": "cap",
+    "footwear": "boots_heavy",
+    "accent": "chains"
+   },
+   "readsAs": "One huge mechanical gauntlet and a bow: lopsided on purpose",
+   "uses": [
+    "outer_long_coat"
+   ]
+  },
+  {
+   "id": "sil_f_30",
+   "name": "Ribbon warden",
+   "family": "feminine",
+   "category": "experimental",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "very_long",
+    "outer": "scarf_long",
+    "sleeves": "fitted",
+    "lower": "skirt_split",
+    "armor": "none",
+    "weapon": "dual_back",
+    "build": "slim",
+    "stance": "wide",
+    "headwear": "ribbon_bow",
+    "footwear": "tabi",
+    "accent": "sash_tails"
+   },
+   "readsAs": "A wide stance with a split skirt; ribbons and scarf trail in long lines",
+   "uses": [
+    "hair_samurai_ponytail",
+    "bottom_hakama",
+    "wpn_dual_blades"
+   ]
+  },
+  {
+   "id": "sil_m_01",
+   "name": "Haori swordsman",
+   "family": "masculine",
+   "category": "samurai",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "medium",
+    "outer": "haori_knee",
+    "sleeves": "wide",
+    "lower": "hakama",
+    "armor": "shoulder_one",
+    "weapon": "katana_hip",
+    "build": "average",
+    "stance": "draw_ready",
+    "headwear": "none",
+    "footwear": "tabi",
+    "accent": "sash_tails"
+   },
+   "readsAs": "The concept sheet's male: spiky hair, knee coat with wide sleeves, wide hakama, hand on the hilt",
+   "uses": [
+    "hair_messy",
+    "outer_haori",
+    "bottom_hakama",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_m_02",
+   "name": "Topknot veteran",
+   "family": "masculine",
+   "category": "samurai",
+   "shape": {
+    "hair": "topknot",
+    "hairLength": "short",
+    "outer": "none",
+    "sleeves": "wide",
+    "lower": "hakama",
+    "armor": "lamellar",
+    "weapon": "katana_back",
+    "build": "sturdy",
+    "stance": "guard",
+    "headwear": "headband_tails",
+    "footwear": "sandals",
+    "accent": "tassels"
+   },
+   "readsAs": "A topknot spike over layered armour; the hilt rises behind the head",
+   "uses": [
+    "hair_topknot",
+    "bottom_hakama",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_m_03",
+   "name": "Straw-hat drifter",
+   "family": "masculine",
+   "category": "samurai",
+   "shape": {
+    "hair": "long_wild",
+    "hairLength": "long",
+    "outer": "scarf_long",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "katana_hip",
+    "build": "slim",
+    "stance": "casual",
+    "headwear": "kasa_hat",
+    "footwear": "sandals",
+    "accent": "scarf"
+   },
+   "readsAs": "A big hat on a thin frame; the scarf flags behind",
+   "uses": [
+    "neck_scarf_long",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_m_04",
+   "name": "Crow shinobi",
+   "family": "masculine",
+   "category": "kunoichi",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "short",
+    "outer": "hooded_cloak",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "gauntlets_heavy",
+    "weapon": "dual_back",
+    "build": "slim",
+    "stance": "crouch",
+    "headwear": "mask_half",
+    "footwear": "tabi",
+    "accent": "none"
+   },
+   "readsAs": "Masked and crouched; two hilts make a V over the shoulders",
+   "uses": [
+    "wpn_dual_blades"
+   ]
+  },
+  {
+   "id": "sil_m_05",
+   "name": "Smoke step",
+   "family": "masculine",
+   "category": "kunoichi",
+   "shape": {
+    "hair": "undercut",
+    "hairLength": "short",
+    "outer": "none",
+    "sleeves": "sleeveless",
+    "lower": "hakama",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "headband_tails",
+    "footwear": "tabi",
+    "accent": "sash_tails"
+   },
+   "readsAs": "Bare arms and wide hakama in a forward lean",
+   "uses": [
+    "hair_undercut",
+    "bottom_hakama",
+    "wpn_dagger"
+   ]
+  },
+  {
+   "id": "sil_m_06",
+   "name": "Rooftop scout",
+   "family": "masculine",
+   "category": "kunoichi",
+   "shape": {
+    "hair": "fringe_heavy",
+    "hairLength": "medium",
+    "outer": "vest",
+    "sleeves": "short",
+    "lower": "cargo",
+    "armor": "shoulder_one",
+    "weapon": "bow_back",
+    "build": "average",
+    "stance": "wide",
+    "headwear": "hood_up",
+    "footwear": "tabi",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "A hood and a bow arc on a wide stance",
+   "uses": [
+    "hair_anime_fringe",
+    "bottom_cargo"
+   ]
+  },
+  {
+   "id": "sil_m_07",
+   "name": "Street champion",
+   "family": "masculine",
+   "category": "modern_fighter",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "short",
+    "outer": "short_jacket",
+    "sleeves": "short",
+    "lower": "trousers_slim",
+    "armor": "gauntlets_heavy",
+    "weapon": "none",
+    "build": "sturdy",
+    "stance": "guard",
+    "headwear": "headband_tails",
+    "footwear": "sneakers",
+    "accent": "none"
+   },
+   "readsAs": "Guard up, fists big, jacket boxy",
+   "uses": [
+    "hair_spiky",
+    "outer_short_jacket"
+   ]
+  },
+  {
+   "id": "sil_m_08",
+   "name": "Tournament ace",
+   "family": "masculine",
+   "category": "modern_fighter",
+   "shape": {
+    "hair": "cap_short",
+    "hairLength": "short",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "katana_hip",
+    "build": "slim",
+    "stance": "draw_ready",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "chains"
+   },
+   "readsAs": "A long straight coat with the blade drawn forward",
+   "uses": [
+    "hair_crop",
+    "outer_long_coat",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_m_09",
+   "name": "Flying kick",
+   "family": "masculine",
+   "category": "modern_fighter",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "medium",
+    "outer": "vest",
+    "sleeves": "sleeveless",
+    "lower": "trousers_wide",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "wide",
+    "headwear": "none",
+    "footwear": "sneakers",
+    "accent": "scarf"
+   },
+   "readsAs": "Wide kicking stance; ponytail and scarf trail in one diagonal",
+   "uses": [
+    "hair_tied_back"
+   ]
+  },
+  {
+   "id": "sil_m_10",
+   "name": "Rank-F wanderer",
+   "family": "masculine",
+   "category": "casual_adventurer",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "short",
+    "outer": "cape",
+    "sleeves": "short",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "average",
+    "stance": "casual",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "The default Rank-F outline: spiky hair, cloak and boots",
+   "uses": [
+    "hair_spiky",
+    "cloak_rank_f"
+   ]
+  },
+  {
+   "id": "sil_m_11",
+   "name": "Fisherman's son",
+   "family": "masculine",
+   "category": "casual_adventurer",
+   "shape": {
+    "hair": "curly",
+    "hairLength": "medium",
+    "outer": "vest",
+    "sleeves": "short",
+    "lower": "shorts_leggings",
+    "armor": "none",
+    "weapon": "staff",
+    "build": "average",
+    "stance": "neutral",
+    "headwear": "cap",
+    "footwear": "sandals",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "A pole taller than he is and a cap",
+   "uses": [
+    "hair_curly",
+    "wpn_staff"
+   ]
+  },
+  {
+   "id": "sil_m_12",
+   "name": "Bookish guide",
+   "family": "masculine",
+   "category": "casual_adventurer",
+   "shape": {
+    "hair": "fringe_heavy",
+    "hairLength": "medium",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "trousers_wide",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "arms_crossed",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "scarf"
+   },
+   "readsAs": "Arms crossed inside a long coat; a heavy fringe",
+   "uses": [
+    "hair_anime_fringe",
+    "outer_long_coat"
+   ]
+  },
+  {
+   "id": "sil_m_13",
+   "name": "Banner knight",
+   "family": "masculine",
+   "category": "fantasy_warrior",
+   "shape": {
+    "hair": "cap_short",
+    "hairLength": "short",
+    "outer": "cape",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "chest_plate",
+    "weapon": "shield_arm",
+    "build": "sturdy",
+    "stance": "guard",
+    "headwear": "none",
+    "footwear": "boots_heavy",
+    "accent": "none"
+   },
+   "readsAs": "Shield disc, cape and a breastplate: a wide triangle",
+   "uses": [
+    "armor_breastplate",
+    "cloak_rank_f"
+   ]
+  },
+  {
+   "id": "sil_m_14",
+   "name": "Sword saint",
+   "family": "masculine",
+   "category": "fantasy_warrior",
+   "shape": {
+    "hair": "long_straight",
+    "hairLength": "very_long",
+    "outer": "long_coat",
+    "sleeves": "bell",
+    "lower": "trousers_wide",
+    "armor": "shoulder_one",
+    "weapon": "greatsword_back",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "feathers"
+   },
+   "readsAs": "A sword taller than the man crossing a long coat",
+   "uses": [
+    "hair_straight_long",
+    "wpn_fantasy_sword"
+   ]
+  },
+  {
+   "id": "sil_m_15",
+   "name": "Rune priest",
+   "family": "masculine",
+   "category": "fantasy_warrior",
+   "shape": {
+    "hair": "bun",
+    "hairLength": "short",
+    "outer": "robe_floor",
+    "sleeves": "wide",
+    "lower": "skirt_long",
+    "armor": "shoulders_both",
+    "weapon": "staff",
+    "build": "average",
+    "stance": "neutral",
+    "headwear": "horned_helm",
+    "footwear": "sandals",
+    "accent": "tassels"
+   },
+   "readsAs": "Floor robe bell under a horned helm",
+   "uses": [
+    "outer_robe",
+    "wpn_staff"
+   ]
+  },
+  {
+   "id": "sil_m_16",
+   "name": "Whisper",
+   "family": "masculine",
+   "category": "light_assassin",
+   "shape": {
+    "hair": "hidden",
+    "hairLength": "short",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "trousers_wide",
+    "armor": "none",
+    "weapon": "dual_hip",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "hood_up",
+    "footwear": "tabi",
+    "accent": "none"
+   },
+   "readsAs": "A hooded lean in a long coat, two blades at the hips",
+   "uses": [
+    "wpn_dual_blades"
+   ]
+  },
+  {
+   "id": "sil_m_17",
+   "name": "Chain dancer",
+   "family": "masculine",
+   "category": "light_assassin",
+   "shape": {
+    "hair": "braid_side",
+    "hairLength": "long",
+    "outer": "none",
+    "sleeves": "sleeveless",
+    "lower": "trousers_wide",
+    "armor": "gauntlets_heavy",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "mask_half",
+    "footwear": "sandals",
+    "accent": "chains"
+   },
+   "readsAs": "A long braid and a half mask in a narrow lean"
+  },
+  {
+   "id": "sil_m_18",
+   "name": "Twin fang",
+   "family": "masculine",
+   "category": "light_assassin",
+   "shape": {
+    "hair": "undercut",
+    "hairLength": "short",
+    "outer": "short_jacket",
+    "sleeves": "short",
+    "lower": "shorts_leggings",
+    "armor": "none",
+    "weapon": "dual_hip",
+    "build": "slim",
+    "stance": "draw_ready",
+    "headwear": "headband_tails",
+    "footwear": "sneakers",
+    "accent": "sash_tails"
+   },
+   "readsAs": "Two short blades low at the hips under a cropped jacket",
+   "uses": [
+    "hair_undercut",
+    "wpn_dual_blades"
+   ]
+  },
+  {
+   "id": "sil_m_19",
+   "name": "Gate breaker",
+   "family": "masculine",
+   "category": "heavy_fighter",
+   "shape": {
+    "hair": "cap_short",
+    "hairLength": "short",
+    "outer": "none",
+    "sleeves": "fitted",
+    "lower": "trousers_wide",
+    "armor": "full_heavy",
+    "weapon": "greatsword_back",
+    "build": "heavy",
+    "stance": "wide",
+    "headwear": "horned_helm",
+    "footwear": "boots_heavy",
+    "accent": "none"
+   },
+   "readsAs": "Full plate, huge sword and a horned helm: the widest outline",
+   "uses": [
+    "wpn_fantasy_sword",
+    "armor_breastplate"
+   ]
+  },
+  {
+   "id": "sil_m_20",
+   "name": "Ashigaru captain",
+   "family": "masculine",
+   "category": "heavy_fighter",
+   "shape": {
+    "hair": "topknot",
+    "hairLength": "short",
+    "outer": "haori_knee",
+    "sleeves": "short",
+    "lower": "hakama",
+    "armor": "lamellar",
+    "weapon": "staff",
+    "build": "sturdy",
+    "stance": "guard",
+    "headwear": "headband_tails",
+    "footwear": "tabi",
+    "accent": "tassels"
+   },
+   "readsAs": "Layered armour skirt and a pole held high",
+   "uses": [
+    "hair_topknot",
+    "bottom_hakama"
+   ]
+  },
+  {
+   "id": "sil_m_21",
+   "name": "Forge giant",
+   "family": "masculine",
+   "category": "heavy_fighter",
+   "shape": {
+    "hair": "undercut",
+    "hairLength": "short",
+    "outer": "vest",
+    "sleeves": "sleeveless",
+    "lower": "cargo",
+    "armor": "gauntlets_heavy",
+    "weapon": "none",
+    "build": "heavy",
+    "stance": "arms_crossed",
+    "headwear": "none",
+    "footwear": "boots_heavy",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "Massive forearms crossed over a broad vest",
+   "uses": [
+    "gloves_fingerless",
+    "bottom_cargo"
+   ]
+  },
+  {
+   "id": "sil_m_22",
+   "name": "Court strategist",
+   "family": "masculine",
+   "category": "elegant",
+   "shape": {
+    "hair": "long_straight",
+    "hairLength": "very_long",
+    "outer": "robe_floor",
+    "sleeves": "bell",
+    "lower": "skirt_long",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "neutral",
+    "headwear": "none",
+    "footwear": "sandals",
+    "accent": "sash_tails"
+   },
+   "readsAs": "A floor-length robe and pooled sleeves: one smooth bell",
+   "uses": [
+    "outer_robe",
+    "hair_straight_long"
+   ]
+  },
+  {
+   "id": "sil_m_23",
+   "name": "Tea house host",
+   "family": "masculine",
+   "category": "elegant",
+   "shape": {
+    "hair": "cap_short",
+    "hairLength": "short",
+    "outer": "haori_knee",
+    "sleeves": "wide",
+    "lower": "trousers_slim",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "casual",
+    "headwear": "flower_pin",
+    "footwear": "tabi",
+    "accent": "tassels"
+   },
+   "readsAs": "An open haori over slim trousers; a flower pin",
+   "uses": [
+    "outer_haori"
+   ]
+  },
+  {
+   "id": "sil_m_24",
+   "name": "Prince in exile",
+   "family": "masculine",
+   "category": "elegant",
+   "shape": {
+    "hair": "long_wild",
+    "hairLength": "long",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "trousers_slim",
+    "armor": "shoulder_one",
+    "weapon": "katana_hip",
+    "build": "average",
+    "stance": "casual",
+    "headwear": "none",
+    "footwear": "boots_tall",
+    "accent": "chains"
+   },
+   "readsAs": "A tailored coat and one shoulder plate; the hand on the hilt",
+   "uses": [
+    "hair_long_shaggy",
+    "outer_long_coat",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_m_25",
+   "name": "Night market kid",
+   "family": "masculine",
+   "category": "streetwear",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "short",
+    "outer": "short_jacket",
+    "sleeves": "short",
+    "lower": "shorts_leggings",
+    "armor": "none",
+    "weapon": "none",
+    "build": "slim",
+    "stance": "casual",
+    "headwear": "cap",
+    "footwear": "sneakers",
+    "accent": "chains"
+   },
+   "readsAs": "Cap, oversized short jacket, chains",
+   "uses": [
+    "outer_short_jacket"
+   ]
+  },
+  {
+   "id": "sil_m_26",
+   "name": "Hoodie blade",
+   "family": "masculine",
+   "category": "streetwear",
+   "shape": {
+    "hair": "hidden",
+    "hairLength": "medium",
+    "outer": "none",
+    "sleeves": "fitted",
+    "lower": "cargo",
+    "armor": "none",
+    "weapon": "katana_back",
+    "build": "average",
+    "stance": "neutral",
+    "headwear": "hood_up",
+    "footwear": "sneakers",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "Hood up, a sheathed blade over the shoulder",
+   "uses": [
+    "top_hoodie",
+    "bottom_cargo",
+    "wpn_katana"
+   ]
+  },
+  {
+   "id": "sil_m_27",
+   "name": "Courier",
+   "family": "masculine",
+   "category": "streetwear",
+   "shape": {
+    "hair": "spiky",
+    "hairLength": "short",
+    "outer": "vest",
+    "sleeves": "short",
+    "lower": "cargo",
+    "armor": "none",
+    "weapon": "dagger_belt",
+    "build": "sturdy",
+    "stance": "wide",
+    "headwear": "none",
+    "footwear": "sneakers",
+    "accent": "belt_pouches"
+   },
+   "readsAs": "A sturdy courier in a wide stance, pockets and pouches",
+   "uses": [
+    "bottom_cargo"
+   ]
+  },
+  {
+   "id": "sil_m_28",
+   "name": "Comet monk",
+   "family": "masculine",
+   "category": "experimental",
+   "shape": {
+    "hair": "topknot",
+    "hairLength": "short",
+    "outer": "cape",
+    "sleeves": "bell",
+    "lower": "skirt_split",
+    "armor": "none",
+    "weapon": "staff",
+    "build": "slim",
+    "stance": "lean",
+    "headwear": "none",
+    "footwear": "sandals",
+    "accent": "feathers"
+   },
+   "readsAs": "Bell sleeves and a cape spread like wings around a staff",
+   "uses": [
+    "wpn_staff",
+    "hair_topknot"
+   ]
+  },
+  {
+   "id": "sil_m_29",
+   "name": "Clockwork ranger",
+   "family": "masculine",
+   "category": "experimental",
+   "shape": {
+    "hair": "curly",
+    "hairLength": "medium",
+    "outer": "long_coat",
+    "sleeves": "fitted",
+    "lower": "shorts_leggings",
+    "armor": "gauntlets_heavy",
+    "weapon": "bow_back",
+    "build": "sturdy",
+    "stance": "wide",
+    "headwear": "cap",
+    "footwear": "boots_heavy",
+    "accent": "chains"
+   },
+   "readsAs": "One huge gauntlet and a bow: lopsided on purpose",
+   "uses": [
+    "outer_long_coat"
+   ]
+  },
+  {
+   "id": "sil_m_30",
+   "name": "Ribbon swordsman",
+   "family": "masculine",
+   "category": "experimental",
+   "shape": {
+    "hair": "ponytail_high",
+    "hairLength": "very_long",
+    "outer": "scarf_long",
+    "sleeves": "wide",
+    "lower": "hakama",
+    "armor": "shoulder_one",
+    "weapon": "dual_back",
+    "build": "average",
+    "stance": "draw_ready",
+    "headwear": "ribbon_bow",
+    "footwear": "tabi",
+    "accent": "sash_tails"
+   },
+   "readsAs": "Ribbons and scarf trailing from a calm centre",
+   "uses": [
+    "hair_samurai_ponytail",
+    "bottom_hakama",
+    "wpn_dual_blades"
+   ]
+  }
+ ]
+}

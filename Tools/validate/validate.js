@@ -795,6 +795,7 @@ require('./living_checks').run({ DATA, load, check, schema, err, regions: rows.r
 const libChecks = require('./library_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
 // 4f) Phase 1B: character creator options and loading tips (Tools/validate/front_end_checks.js)
 require('./front_end_checks').run({ DATA, load, check, schema, err });
+const charChecks = require('./character_checks').run({ DATA, load, check, schema, err });
 // 4f) Regional encounter tables (Tools/validate/encounter_checks.js)
 require('./encounter_checks').run({ DATA, load, check, schema, err, regions: rows.regions, species: new Map(rows.species.map(s => [s.id, s])) });
 // 4f) Humanoid locomotion clips manifest (Tools/validate/animation_checks.js)
@@ -808,6 +809,7 @@ if (errors.length) {
 }
 for (const w of mapChecks.warnings) console.warn('  ! ' + w);
 console.log(`✓ Data valid. ${counts}`);
+if (charChecks) console.log(`  characters: ${charChecks.silhouettes} silhouettes · closest pair differs on ${charChecks.minOutlineDifference} outline axes (${charChecks.closestPair})`);
 console.log(`  ${mapChecks.summary}`);
 for (const w of graphChecks.warnings) console.warn('  ! ' + w);
 console.log(`  ${graphChecks.summary}`);
