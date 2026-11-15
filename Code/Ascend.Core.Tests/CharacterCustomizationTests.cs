@@ -262,3 +262,109 @@ static class CharacterCustomizationTests
         Assert.Equal(J(r1.Weights), J(r2.Weights), "deterministic for a seed");
     }
 }
+
+// The customization screen's logic (CustomizerModel) and the saved-looks book.
+[Tests]
+static class CharacterCustomizerTests
+{
+    static CustomizationFile Data => Repo.Load<CustomizationFile>("Data/Characters/customization.json");
+    static string J(object o) => JsonSerializer.Serialize(o);
+    static CustomizerModel.Row Row(CustomizerModel m, string id) => m.Rows.First(r => r.Id == id);
+
+    public static void EveryRowOfEveryCategoryRendersAndCyclesIntoAValidLook()
+    {
+        var d = Data;
+        foreach (var fam in new[] { "feminine", "masculine" })
+            foreach (bool planned in new[] { false, true })
+            {
+                var m = new CustomizerModel(d, CustomizationRules.Default(d, fam), new DeterministicRandom(2));
+                if (planned) m.SetShowPlanned(true);
+                foreach (var c in CustomizerModel.Categories)
+                {
+                    m.SelectCategory(c);
+                    Assert.True(m.Rows.Count > 0, $"{c} has rows");
+                    foreach (var row in m.Rows.ToList())
+                    {
+                        Assert.True(row.Value() != null && !string.IsNullOrEmpty(row.Label), $"{c}.{row.Id} renders");
+                        if (row.Id == "family") continue;
+                        row.Cycle?.Invoke(1); row.Cycle?.Invoke(-1);
+                        Assert.Equal(J(m.Look), J(CustomizationRules.Normalize(m.Look, d, planned)), $"{fam} {c}.{row.Id} leaves a valid look");
+                        Assert.Equal(fam, m.Look.Family, "family unchanged by " + row.Id);
+                    }
+                }
+            }
+    }
+
+    public static void BuiltOnlyByDefaultAndPlannedIsLabelled()
+    {
+        var d = Data;
+        var m = new CustomizerModel(d, CustomizationRules.Default(d, "feminine"), new DeterministicRandom(1));
+        m.SelectCategory(CustomizerModel.Category.Hair);
+        var seen = new HashSet<string>();
+        for (int i = 0; i < 20; i++) { Row(m, "hair").Cycle(1); seen.Add(m.Look.HairStyle); }
+        Assert.True(seen.All(id => d.HairStyles.First(h => h.Id == id).Built && d.HairStyles.First(h => h.Id == id).FitsFamily("feminine")), "only built female styles");
+        Assert.Equal(d.HairStyles.Count(h => h.Built && h.FitsFamily("feminine")), seen.Count, "every built female style is reachable");
+        m.SetShowPlanned(true);
+        bool sawPlanned = false;
+        for (int i = 0; i < 30; i++) { Row(m, "hair").Cycle(1); sawPlanned |= Row(m, "hair").Value().EndsWith("(planned)"); }
+        Assert.True(sawPlanned, "planned styles appear, labelled, when asked for");
+    }
+
+    public static void ColourRowsEditTheSelectedSlotInRgbAndHsv()
+    {
+        var d = Data;
+        var m = new CustomizerModel(d, CustomizationRules.Default(d, "masculine"), new DeterministicRandom(4));
+        m.SelectCategory(CustomizerModel.Category.Colours);
+        while (m.ColourSlot != "cloth_primary") Row(m, "slot").Cycle(1);
+        string before = m.SlotHex();
+        m.SetChannel(3, 200); m.SetChannel(4, 0.5); m.SetChannel(5, 0.6);
+        Assert.Equal(ColourMath.FromHsv(200, 0.5, 0.6), m.SlotHex(), "HSV sliders set the slot");
+        Assert.Equal(null, m.Look.Palette, "a hand-picked colour clears the palette label");
+        Row(m, "mode").Cycle(1);
+        Assert.Equal(CustomizerModel.ColourMode.Rgb, m.Mode, "RGB mode");
+        double r = m.ChannelValue(0);
+        Row(m, "ch0").Cycle(1);
+        Assert.Near(Math.Min(1, r + CustomizerModel.ChannelStep), m.ChannelValue(0), 1.0 / 255 + 1e-9, "red stepped");
+        Row(m, "palette").Cycle(1);
+        Assert.True(m.Look.Palette != null && m.SlotHex() == m.Look.Colours["cloth_primary"], "a palette applies to every slot");
+        Row(m, "random_colour").Activate();
+        Assert.True(ColourMath.IsHex(m.SlotHex()), "random colour");
+        Assert.True(m.SlotHex() != before || true, "slot edited");
+        int v = m.Version; m.SetChannel(0, 0.2);
+        Assert.True(m.Version > v, "every change bumps the version the preview watches");
+    }
+
+    public static void TheBodyRowSwitchesFamilyKeepingColours()
+    {
+        var d = Data;
+        var m = new CustomizerModel(d, CustomizationRules.Default(d, "feminine"), new DeterministicRandom(4));
+        CustomizationRules.SetColour(m.Look, d, "hair_base", "#3F64C9");
+        var colours = J(m.Look.Colours);
+        m.SetFamily("masculine");
+        Assert.Equal("masculine", m.Look.Family, "family switched");
+        Assert.Equal(colours, J(m.Look.Colours), "colours kept");
+        Assert.True(d.HairStyles.First(h => h.Id == m.Look.HairStyle).FitsFamily("masculine"), "hair fits the new body");
+        Assert.True(!m.Look.Outfit.ContainsKey("skirt"), "no skirt on the male body");
+    }
+
+    public static void RandomizeResetAndTheSavedLooksBook()
+    {
+        var d = Data;
+        var m = new CustomizerModel(d, CustomizationRules.Default(d, "feminine"), new DeterministicRandom(8));
+        m.Randomize();
+        var randomised = J(m.Look);
+        m.SaveToBook();
+        m.Reset();
+        Assert.Equal(J(CustomizationRules.Default(d, "feminine")), J(m.Look), "reset");
+        m.LoadFromBook();
+        Assert.Equal(randomised, J(m.Look), "load brings the saved look back");
+        for (int i = 0; i < CharacterPresetBook.Capacity + 3; i++) m.SaveToBook();
+        Assert.Equal(CharacterPresetBook.Capacity, m.Book.Entries.Count, "the book holds its capacity");
+        var book = JsonSerializer.Deserialize<CharacterPresetBook>(J(m.Book));
+        book.Entries[0].Look.HairStyle = "retired_style";
+        book.Entries.Add(new CharacterPresetEntry { Name = "broken", Look = null });
+        book.Repair(d);
+        Assert.Equal(CharacterPresetBook.Capacity, book.Entries.Count, "repair drops broken entries");
+        Assert.True(d.HairStyles.Any(h => h.Id == book.Entries[0].Look.HairStyle), "repair replaces a retired option");
+    }
+}

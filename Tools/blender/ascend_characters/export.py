@@ -35,8 +35,10 @@ def sidecar(ch):
         rig=dict(contract="human_v1", armature=arm.name, restPose="T", forward="-Y in Blender, +Z in Unity after the FBX axis fix",
                  humanoidBones=len(SK.HUMANOID_NAMES), extraBones=SK.EXTRA_NAMES, bones=bones),
         parts=parts, materials=sorted({p["material"] for p in parts if p["material"]}),
+        slotMasks=dict(order=__import__("ascend_characters.slots", fromlist=["slot_order"]).slot_order(), pack=32, uv=dict(slots=1, shade=2, outlineNormal=3),
+                       parts=ch.get("slotMasks", {})),
         unity=dict(avatar="Humanoid", note="Set Rig > Animation Type = Humanoid (Create From This Model); materials map by name to the toon shader; "
-                                           "the Col colour attribute is the base colour (vertex colour)."),
+                                           "the Col colour attribute is the base colour (vertex colour); UV1 and UV2 hold the colour-slot masks for Ascend/ToonCharacter (slots.py)."),
     )
 
 
@@ -59,6 +61,8 @@ def export(ch, out_dir, fbx=True, glb=True):
     name = ch["spec"]["id"]
     os.makedirs(out_dir, exist_ok=True)
     _activate_colours(ch)
+    from . import slots as SL
+    ch["slotMasks"] = SL.encode(ch["parts"], ch["spec"])   # UV1/UV2 colour-slot masks for runtime recolouring (slots.py)
     out = {}
     side = os.path.join(out_dir, name + ".json")
     with open(side, "w", encoding="utf8") as f:
