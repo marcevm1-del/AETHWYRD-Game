@@ -1,0 +1,6 @@
+{
+  "notes": "Numbers too slow to compute on every dashboard refresh. Refresh after a full run: npm run build for rulesTests, the Unity PlayMode suite for unityTests. Stale is better than wrong, so keep checkedOn honest.",
+  "rulesTests": 770,
+  "unityTests": 196,
+  "checkedOn": "2026-11-15"
+}

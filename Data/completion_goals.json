@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "notes": "What 'done' means for AETHWYRD, as numbers the dashboard can compute. Read 13_Production/completion_plan.md before changing anything here. Each goal scores twice: quantity (how much exists, counted from the repo) and quality (how good it is, a level from 0 to 4 that a human or a gate sets deliberately). A goal's score is quantity x quality, because 680 blockout monsters are not 680 finished monsters. Targets marked estimated are design guesses, not Canon, and should be replaced as the design firms up.",
+  "qualityLevels": {
+    "0": "absent - nothing exists, or nothing that runs in the game",
+    "1": "blockout - exists but is placeholder: right shape, wrong finish",
+    "2": "working - in the game and functioning, not yet good",
+    "3": "polished - good enough to show someone without apologising",
+    "4": "shippable - passes its gates and would survive a review"
+  },
+  "goals": [
+    {"id": "regions", "area": "World", "label": "Regions designed", "weight": 4,
+     "count": {"file": "Data/World/regions.json"}, "target": 49, "targetEstimated": false,
+     "quality": 2, "evidence": "All 49 exist in data and the graph validates; streaming crosses a seam with no gap. Art is blockout terrain, settlements are stand-ins."},
+
+    {"id": "streaming", "area": "World", "label": "Open world streams as one place", "weight": 4,
+     "manual": 1, "target": 4, "targetEstimated": true,
+     "quality": 2, "evidence": "Ring 0 and neighbours stream with 0 frames without ground and a 0.0000 m seam crack across the x=80 km seam; 150 tiles baked, 113 MB. Only one slice of the world is covered, and the built player needed a data-list fix before terrain appeared at all."},
+
+    {"id": "species", "area": "Bestiary", "label": "Species in the bestiary", "weight": 3,
+     "count": {"file": "Data/Monsters/species.json"}, "target": 680, "targetEstimated": false,
+     "quality": 1, "evidence": "680 species with tuning, attacks, loot and population, and 677 blockout models. No rubric has been run, so whether they read as 680 creatures or one creature in 680 palettes is NOT ASSESSED."},
+
+    {"id": "quests", "area": "Content", "label": "Quests written", "weight": 5,
+     "count": {"file": "Data/Quests/quests.json"}, "target": 120, "targetEstimated": true,
+     "quality": 2, "evidence": "32 quests validate and the Ring 0 chain is playable. The 120 target is a guess at what a 30-hour RPG needs and should be replaced by a real content plan."},
+
+    {"id": "items", "area": "Content", "label": "Items", "weight": 2,
+     "count": {"file": "Data/Items/items.json"}, "target": 300, "targetEstimated": true,
+     "quality": 2, "evidence": "100 items with pricing, materials and flavour; gear rules and crafting validate."},
+
+    {"id": "recipes", "area": "Content", "label": "Recipes", "weight": 1,
+     "count": {"file": "Data/Items/recipes.json", "key": "recipes"}, "target": 120, "targetEstimated": true,
+     "quality": 2, "evidence": "58 recipes across the life skills, validated against materials."},
+
+    {"id": "companions", "area": "Content", "label": "Companions", "weight": 2,
+     "count": {"file": "Data/Companions/companions.json"}, "target": 14, "targetEstimated": false,
+     "quality": 2, "evidence": "14 companions with presets, tactics, 197 banter lines, and the field AI running in Unity. Voices and faces are not done."},
+
+    {"id": "books", "area": "Content", "label": "Library books shelved", "weight": 1,
+     "manual": 479, "target": 500, "targetEstimated": false,
+     "quality": 1, "evidence": "479 shelved with excerpts, provenance and hooks, but only 245 of the excerpts are distinct because the source texts are templated. A hand-rewrite is under way and had reached 48 books when the session hit its limit."},
+
+    {"id": "rules_tests", "area": "Engineering", "label": "Rules and data tests", "weight": 3,
+     "snapshot": "rulesTests", "target": 900, "targetEstimated": true,
+     "quality": 3, "evidence": "770 passing, run on every change, and they have caught real regressions this week."},
+
+    {"id": "unity_tests", "area": "Engineering", "label": "Unity PlayMode tests", "weight": 3,
+     "snapshot": "unityTests", "target": 260, "targetEstimated": true,
+     "quality": 3, "evidence": "196 passing with graphics. They caught the companion retreat bug; they did not catch that the built player could not find world_scale.json, which only a screenshot found."},
+
+    {"id": "save", "area": "Engineering", "label": "Save, migration and settings", "weight": 2,
+     "manual": 2, "target": 3, "targetEstimated": true,
+     "quality": 2, "evidence": "Save/load, versioned migration and a regression suite exist. Cloud saves and crash capture are planned, not built."},
+
+    {"id": "frontend", "area": "Engineering", "label": "Front end and menus", "weight": 3,
+     "manual": 3, "target": 4, "targetEstimated": true,
+     "quality": 2, "evidence": "Title, main menu, character creator, loading screen and settings all build and run. The accessibility window still offers options the game does not read."},
+
+    {"id": "audio", "area": "Audio", "label": "Audio in the game", "weight": 4,
+     "manual": 0, "target": 5, "targetEstimated": true,
+     "quality": 0, "evidence": "Not one sound plays in the build. Cue sheets, an ambience list and a CC0 shortlist exist on branches; the engine decision between Unity audio, FMOD and Wwise has not been made."},
+
+    {"id": "characters", "area": "Art", "label": "Human characters", "weight": 3,
+     "count": {"file": "Data/Characters/human_library.json", "key": "variants"}, "target": 24, "targetEstimated": true,
+     "quality": 2, "evidence": "Two base bodies and a procedural generator that passes its own Blender checks, with hair, cloak, face and proportions rebuilt on 2026-11-15. Good enough to look at, not yet good enough to ship."},
+
+    {"id": "animation", "area": "Art", "label": "Animation clips", "weight": 3,
+     "manual": 3, "target": 5, "targetEstimated": true,
+     "quality": 1, "evidence": "Locomotion, 106 combat clips, 55 rider clips and 19 facial expressions per base, all generated and checked in Blender. None of it has been imported into Unity or played on a character, so how it feels is NOT ASSESSED."},
+
+    {"id": "monster_art", "area": "Art", "label": "Monster models", "weight": 3,
+     "manual": 677, "target": 680, "targetEstimated": false,
+     "quality": 1, "evidence": "677 blockout models generated locally. Blockouts, not finished creatures."},
+
+    {"id": "environment_art", "area": "Art", "label": "Buildings and environment", "weight": 2,
+     "manual": 1, "target": 4, "targetEstimated": true,
+     "quality": 1, "evidence": "Procedural building and terrain generators exist and the Ring 0 scene builds. Everything in it is a stand-in."},
+
+    {"id": "steam", "area": "Release", "label": "Steam readiness", "weight": 3,
+     "manual": 0, "target": 6, "targetEstimated": true,
+     "quality": 0, "evidence": "project.yaml says cert_tier steam and that is the entire record. No Steamworks account, no store page, no age rating, and nobody has checked what the current build would fail."}
+  ]
+}
