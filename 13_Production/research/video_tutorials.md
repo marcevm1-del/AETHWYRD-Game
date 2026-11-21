@@ -266,3 +266,54 @@ near-identical scraper domains and no primary source. Searching YouTube directly
 (`ytsearch<N>:<query>` with `--flat-playlist --print`) returns real ids, durations, channels and view
 counts, which makes it possible to prefer Unity's own channel and Unite talks over affiliate content.
 That technique is worth reusing and costs nothing.
+
+---
+
+## Added 2026-11-21: three Blender tutorials, mined while teaching myself Blender
+
+Fetched and scanned with `tv.py` (cache `Youtube_<id>`). Of the five short Blender videos queued, **three
+scanned**, one (`4tt3tW1Pz5U`, colour-palette atlas textures) returned **HTTP 403 on the video data**, and one
+(`agpDTz4ZqYA`, Blender 4.5 vertex colours into Unity 6 — the most directly relevant) was **refused with HTTP
+429**. Neither was worked around. **Both stay NOT ASSESSED.**
+
+### 6. Rigging for impatient people — Joey Carlino, 10:02 (`DDeB4tDVCGY`)
+
+`Verified: source read` for the chapter list and the weight-paint frames I opened (contact sheet 2, 3:19–4:40);
+the other four sheets were **not read**. https://www.youtube.com/watch?v=DDeB4tDVCGY
+
+**What it teaches.** Chapters: armature setup (0:00), names and symmetry (1:23), **automatic weights and common
+issues (1:56)**, weight tricks (3:13), weight-paint settings (4:17), rigid rigging (5:34), inverse kinematics
+(7:32). What is on screen, including what the narration does not say:
+
+| Time | On screen |
+|---|---|
+| 3:36 | The Weight Paint **Weights menu**: *Assign Automatic from Bones*, *Assign from Bone Envelopes*, *Normalize All*, *Normalize*, *Mirror*, *Invert*, *Clean*, *Quantize*, *Levels*, *Smooth*, **Transfer Weights**, **Limit Total**, *Fix Deforms*, *Set Weight*, *Locks*. This is the whole toolbox in one menu |
+| 3:39 | A split view labelled "old weights / new weights" on a creature-shaped mesh with four limbs — the before/after of fixing a bad auto-weight on an arm |
+| 3:53 | **Edit → Lock Object Modes** ticked. The tutorial turns it *off* so that you can switch between the armature and the mesh without leaving weight-paint — the single most useful workflow switch shown |
+| 4:27–4:40 | Weight-paint **Options**: *Auto Normalize*, *Lock-Relative*, *Multi-Paint*, *Restrict*; a mesh with a heat-map of one bone's influence fading across the shoulder |
+
+**What it does for us.** It is the manual counterpart to the automatic path this session verified
+([blender_primer.md](blender_primer.md) §13) and to `Tools/blender/rig_creature.py`, which caps weights at four
+influences. **Limit Total is that cap's UI name**, and **Transfer Weights is the tool for the missing LOD1/LOD2
+weight transfer** the monster sweep identified ([§16b](blender_primer.md)). The common issues it shows at
+1:56 (an arm pulling in the torso) are what to look for when `rig_creature.py` output deforms badly.
+
+**Cost and verdict.** Free; Blender 3.x-era UI, so menu positions drift in 5.3 but the operation names match
+the API. **Effort:** none to adopt, it is reference. **Verdict: adopt as reading** for whoever debugs a rig
+by hand. `NOT ASSESSED` — chapters 5:34 (rigid rigging) and 7:32 (IK) were not read frame by frame.
+
+### 7. Video Game Textures Explained — Vertex Arcade, 5:29 (`53Rdzthjuu0`) and 8. What are Blender Geometry Nodes? — Blender, 4:25 (`kMDB7c0ZiKA`)
+
+**Scanned, not read.** I have only the chapter lists: textures — Texture Types (0:50), Other Texture Types
+(2:15), **Packed Texture (3:40)**, Node Wrangler (4:25); geometry nodes — what they are (0:09), how they work
+(0:49), the power of procedural systems (2:45). The textures video bears on **channel packing**, which is the
+same idea as the vertex-channel budget in [blender_primer.md](blender_primer.md) §15 (E22); the Geometry Nodes
+one is Blender's own 4-minute orientation. **NOT ASSESSED** beyond that — the sheets are in the cache for a
+later pass.
+
+### Queue additions
+
+- `agpDTz4ZqYA` — Blender 4.5 vertex colours into Unity 6 (3:33): **first priority**, retry spaced out.
+- `4tt3tW1Pz5U` — colour-palette texture atlas (5:44): retry.
+- The 49-minute official Blender scripting talk (`wWTAQP7-ZUQ`) was **stopped mid-download** and is read from
+  its captions only ([blender_primer.md](blender_primer.md) §10).
