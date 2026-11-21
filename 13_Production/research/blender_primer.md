@@ -329,16 +329,18 @@ Decimate modifier types (83 modifier types in all).
   → `{'FINISHED'}`, vertex groups `['root', 'mid', 'top']` created. Posing the `mid` bone 40° moved the
   topmost vertex from y = 0.40 to y = −1.36, so the weights really deform the mesh. (`parent_set` needs the
   mesh selected and the armature active.)
-- **Rigify does not work headless here.** `addon_utils.enable("rigify")` returned False and raised
-  `KeyError: key "rigify" not found`; the metarig operators exist and the human metarig added **159
-  bones**, but **`bpy.ops.pose.rigify_generate()` fails with `'RigifyParameters' object has no attribute
-  'make_custom_pivot'`** — the generator's Python is not loaded. In 5.x Rigify is an *extension* that has
-  to be installed, which needs the internet and is **the user's action**. Metarig adders present in 5.3:
-  `human`, `basic_human`, `basic_quadruped`, `bird`, `cat`, `horse`, `shark`, `wolf` — useful as bone-layout
-  references for creature rigs even without the generator.
+- **Rigify works headless — but only with `default_set=True`, in a fresh process.** My first attempt
+  (`default_set=False`) failed with `'RigifyParameters' object has no attribute 'make_custom_pivot'` and I
+  wrongly concluded the generator was not installed. **That conclusion was wrong** (a research subagent
+  measured the opposite and I re-ran it): `addon_utils.enable("rigify", default_set=True, persistent=False)`
+  then `armature_basic_quadruped_metarig_add()` and `bpy.ops.pose.rigify_generate()` → `{'FINISHED'}`, **283
+  bones (46 deform) in 0.3 s**. Retrying a different variant *in the same process* collides with the
+  half-registered add-on (`already registered as a subclass`), so test each variant in a fresh process.
+  Metarig adders in 5.3: `human`, `basic_human`, `basic_quadruped`, `bird`, `cat`, `horse`, `shark`, `wolf`.
+  The generated rigs are heavy for trash monsters (see section 16b).
 
 **What this means for the repo:** `Tools/blender/rig_creature.py` and `build_rig.py` build rigs by hand
-(936 and 367 lines); that is a valid reason they exist, because the in-box generator is unavailable. Weight
+(936 and 367 lines); that is justified by weight, not availability: Rigify's output is 46–197 deform bones against the repo's 3–63. Weight
 transfer between creature variants and spline-IK tails remain **NOT TESTED**.
 
 ## 14. What survives the FBX round trip — RAN, with the repo's own export settings
@@ -367,3 +369,165 @@ two disagreed. And **`NOT TESTED` — whether Unity honours the FBX's custom nor
 has a Normals setting; "Import" is what would be needed) **and whether it reads the shape keys as
 blendshapes.** That is a Unity-side check, one imported file, and it decides whether the anime face-shading
 trick in section 11 reaches the game.
+
+---
+
+## 15. Anime-character strategies — from a research sweep, cross-checked against what ran
+
+A research subagent produced 22 entries (E1–E22); the full file is a scratchpad artefact. The verdict table
+below is its work; the **"ran here" column is mine**, added where one of this session's experiments tests
+the same claim. Its own caveat: the Guilty Gear Xrd slides refused the connection and the archive was
+blocked, so every Xrd detail is `SECONDARY`; Unity's model-import page returned 404; several Blender
+manual pages were navigation-only; Apple's ARKit list is from recall.
+
+**What the repo already has** (read directly): an inverted-hull `AscendToon.shader`, an EEVEE
+Shader-to-RGB preview, FBX export with `-Z` forward / `Y` up and a rig-export axis fix, 4-influence weight
+capping and shape keys in `rig_creature.py`, and colour attribute `Col`. **The gap the sweep found is a
+humanoid hero/NPC pipeline** — Humanoid avatar, face blendshapes, hair, face shadow, lip sync, secondary
+motion. Everything so far was built for monsters and buildings.
+
+| # | Technique | Verdict | Hours | Ran here |
+|---|---|---|---|---|
+| E1 | Character triangle budget **30k / 12k / 4k** (LOD0/1/2); the only real figure found is ~40k for a Guilty Gear Xrd hero, `SECONDARY` | adopt | 2 | — |
+| E2 | Anime face topology | hold — **NOT SOURCEABLE**, no primary worked example | — | — |
+| E3 | One shared humanoid base mesh | trial | 12–20 | — |
+| E4 | Hair as opaque clumps, cards only for strays | adopt clumps | 6–10 | — |
+| E5 | Layered eyes plus an eyebrow stencil through the hair | trial | 8–14 | — |
+| E6 | **Inverted hull plus a per-vertex outline-width mask** (Solidify option names VERIFIED in the 4.3 manual) | adopt | 4–6 | **outline RAN, section 11** |
+| E7 | Geometry-nodes outlines (Blender Studio "Wing It!") | **reject** — camera-locked, so unusable at runtime; files are behind a membership | — | — |
+| E8 | Face shading by proxy or edited normals | adopt / trial | 4–8 | **RAN: 6.25° → 0.10°, survives FBX, section 14** |
+| E9 | Face-shadow SDF texture, **painted ourselves** | trial | 10–16 | — |
+| E10 | Vertex-painted shadow-threshold offset | adopt | 3–5 | — |
+| E11 | Shader-to-RGB as the Blender preview of the Unity ramp | adopt (already in use) | 0 | **RAN, section 3** |
+| E12 | lilToon and Unity Toon Shader — read, do not ship | hold | 2 | — |
+| E13 | Shape-key basics | adopt | 0 | **RAN: survive FBX only without a modifier** |
+| E14 | **The 17 VRM 1.0 preset names as our face-shape contract** (VERIFIED from the vrm-specification): `aa ih ou ee oh`, blink, `look*`, emotions | adopt | 6–10 | — |
+| E15 | ARKit-52 naming | reject — 30–50 h | — | — |
+| E16 | Lip sync (uLipSync, Rhubarb) | trial, only if voiced | 6–10 | — |
+| E17 | Humanoid look-at plus gaze shapes | adopt | 4–6 | — |
+| E18 | Hand-built or Rigify Humanoid deform rig; Unity's Humanoid needs at least **15 bones**, a T-pose, optional Eye and Jaw bones (VERIFIED) | adopt; Auto-Rig Pro **reject** (paid, $25–50) | 10–16 | **Rigify generator does not run here — section 13** |
+| E19 | 4-influence weights, reuse `rig_creature.py` | adopt | 3–5 | **auto weights RAN, section 13** |
+| E20 | Our own spring-bone script for hair and capes; Wiggle Bones (GPL-3.0-or-later, VERIFIED) is fine for *authoring* only; Magica Cloth 2 is paid (~$17.50, `SECONDARY`) | trial; Magica reject unless approved | 8–12 | — |
+| E21 | Keep the repo's FBX axis and scale settings | adopt | 1–2 | **RAN: round trip clean, section 14** |
+| E22 | A **vertex-channel budget** so paint, smoothed normal, outline width and shadow threshold do not collide | adopt | 3–4 | — |
+
+**Two warnings the sweep raised that I am repeating because they are easy to get wrong:**
+- **Another studio's assets are an explicit reject.** A public Unity repository implementing a Genshin-style
+  face shadow ships *face-shadow maps derived from that game's models*. Take the **technique** (E9) and paint
+  our own textures; **do not use that repository, its textures or any of its code.**
+- **Check what a membership hides.** The Blender Studio's anime-outline and toon-character material is behind
+  a subscription (EUR 11.50 a month). That is the user's decision, and nothing here depends on it.
+
+**The sequencing this implies for the missing humanoid pipeline** (my synthesis, not the sweep's):
+(1) **one humanoid base** (E3) with the E18 deform skeleton; (2) **the vertex-channel budget (E22) before
+anything paints a channel**, since E6, E10 and the smoothed normal all want one; (3) face shading by proxy
+normals (E8, now verified to survive the pipeline); (4) VRM preset names for the blendshapes (E14), written
+into shape keys with the **operator-not-modifier** rule from section 14. Items 1–3 can all be tested
+headless exactly as this primer's experiments were.
+
+---
+
+## 16. Monster and creature strategies — from a research sweep, with its measurements
+
+A second subagent produced 25 entries (E01–E25) and ran two experiments of its own on the repo's creatures
+(`rigify_test.py`, `lod_compare.py`; they imported repo code with bytecode writing off and wrote nothing into
+the repo). **Where its measurement and mine overlap I re-ran mine, and one of us was wrong: it was me, on
+Rigify (section 13, now corrected).** Tags are the sweep's: **VERIFIED** (read at the primary page or
+measured here), **SECONDARY** (a search summary or vendor listing), **NOT SOURCEABLE**.
+
+### 16a. Making the body
+
+- **E01 — Skin modifier from a skeleton graph. VERIFIED (4.5 manual) and RAN (section 12).** `Mark Root`
+  sets the vertex used for limb rotation and the root bone of `Create Armature`; `Mark Loose` lets a branch
+  vertex stretch between its neighbours; `Equalize Radii` evens the axes; the usual stack is
+  Mirror → Skin → Subdivision. One tutorial calls it a *base-mesh tool, not for fine detail* (`SECONDARY`),
+  which matches the featureless blob I got.
+- **E02 — what the repo does is metaballs plus polygonise.** The sweep's point is that **Voxel Remesh or Mesh
+  to Volume are alternatives, not upgrades**; no change recommended.
+- **E03 — a data-driven body-plan table with per-species parameters.** This is the structural idea behind
+  680 species: the *graph and radii* are data (my 17-point quadruped), the species is a row.
+- **E06 — scales, spikes, horns via Geometry Nodes.** VERIFIED for the node semantics, and **RAN (section 12,
+  365 instances)**. One gotcha from a Blender Artists thread (`SECONDARY`): **instances placed on an
+  armature-deformed mesh pop or rotate wrongly** — build the points *before* the Armature modifier and
+  instance them separately, or realise and weight the result.
+- **E07 — stylised fur and feathers with Geometry Nodes** (an 80.lv tutorial on Blender 5.2 LTS) and **E08 —
+  a "chunked rock" creature via Decimate Collapse plus extrude-by-face-area**. Both `SECONDARY`; the second
+  is a cheap route to the faceted stylised look.
+
+### 16b. Rigging non-humanoids — **and my Rigify correction**
+
+- **E10 — Rigify works headless. VERIFIED, and re-run by me.** `addon_utils.enable("rigify", default_set=True,
+  persistent=False)` in a **fresh process**, then any of the eight metarig adders and
+  `bpy.ops.pose.rigify_generate()`: `{'FINISHED'}`, **283 bones (46 deform) from `basic_quadruped` in 0.3 s**.
+  **My earlier "does not work" was wrong:** I passed `default_set=False` (the add-on then never registered
+  its parameter class, giving `'RigifyParameters' object has no attribute 'make_custom_pivot'`), and a retry
+  *in the same process* collided with the half-registered add-on (`already registered as a subclass`). **Lesson:
+  Blender add-on state is per-process; test each variant in a fresh one.**
+- **But the generated rigs are too heavy for trash monsters.** `basic_quadruped` is 46 deform bones (283
+  total); `wolf` is **197 deform (823 total)**. The repo's `rigs.json` has **25 rigs of 3–63 bones**. Rigify
+  is the right tool for *authoring a rich hero rig*, not for 680 species. Rigify's `generate.py` header is
+  **GPL-2.0-or-later** (VERIFIED); using it to author rigs is fine, shipping its Python is not the question.
+- **E11 — Spline IK for tails and necks does not export.** VERIFIED for the options (Chain Length, Even
+  Divisions, Use Curve Radius…); `SECONDARY` for export: forum reports say **Unity does not reproduce Spline IK
+  or bendy bones from FBX** ("snakes rock like a plank"). Workarounds: bake onto plain bones, bake bendy bones
+  to shape keys, or solve the chain at runtime in Unity (a travelling sine wave on plain FK chains — E11 adopt).
+- **E12 — Unity Generic rigs, one avatar shared across species.** VERIFIED from Unity's docs: Generic rigs
+  have a Root node and *Optimize Game Objects*; **"Copy From Other Avatar" needs an identical source rig.**
+  The implication — **25 clip sets could serve all 680 species** — is the largest multiplier in the sweep,
+  and it is **NOT TESTED in Unity** (translation-curve scaling across different-sized species is the first
+  thing to check). Verdict: adopt, test first.
+- **E13 — weight transfer to LOD1 and LOD2 is the missing step.** Auto-weights are fine on organic meshes
+  (confirmed by my run); the repo gap is that **`art_budgets.md` describes the LODs as static**, so
+  `bake_to_game.py` produces unskinned LOD1 and LOD2. **Adopt: the only hard blocker between static LODs and
+  skinned monsters. Not done, not tested.**
+- **E14 — Auto-Rig Pro, Bonebrush, IKForge: paid third-party riggers.** Reject without a purchase decision,
+  which is the user's.
+
+### 16c. Animating many creatures cheaply
+
+- **E15 — Spider Walker** (Blender add-on, v1.0.6): bakes procedural leg stepping to keyframes. Licence
+  **MIT** per the article and the repo sidebar, but **the LICENSE text was not displayed**, so it is not
+  "adopt now". Trial, for hexapod and octopod gait clips offline.
+- **E16 — stop-motion "on twos".** Two routes: a Graph Editor **Stepped F-Curve modifier** (Step Size 2 gives
+  a 12 fps feel at 24) or the extension **Stop Motion Style Animator** (**GPL-3.0-or-later**, Blender 5.0+,
+  v0.3.2, 2026-08-01, VERIFIED). **How Unity treats stepped F-curves from FBX is NOT SOURCEABLE.** The sweep's
+  recommendation, which I agree with, is to **sample "on twos" at runtime in `MonsterAnimator`**: it gives the
+  look without depending on export behaviour (and `Code/Unity/Runtime/SteppedAnimator.cs` already exists).
+- **E17 retargeting, E18 vertex-animation-texture crowds:** not opened at source; hold.
+
+### 16d. LODs — measured, and it confirms the pipeline
+
+On the repo's own creatures, same Blender, same machine:
+**`mon_forest_wolf` 179k → 6k triangles and `mon_young_dragon` 320k → 10k.**
+
+| Method | Result |
+|---|---|
+| **Quadric collapse** (what `bake_to_game.py` uses) | Fastest or near-fastest and most faithful. **Kept `Col` (error under 1 %)**; the dragon took **3.5 s at 0.05 % mean deviation** |
+| Voxel remesh (modifier) | **Dropped `Col`**; on the dragon 1.2–4.6 M-triangle intermediates, **19–97 s**, 3.5–4.2 % deviation (cause not diagnosed) |
+| QuadriFlow | **Dropped `Col`**; **missed its target** (5,356 from a 6,000 request; 6,708 from 10,000); 22 s on the dragon |
+
+**Verdict (E19, E20): keep quadric collapse; add a face-protect vertex group** so eyes and mouth are not eaten.
+Voxel remesh stays the right tool for buildings (hollow shells), where the repo uses it. **This independently
+confirms the correction in section 6** — the QuadriFlow script I first recommended would have made things worse.
+Two smaller repo findings: **E21 — `monster_model_pipeline.md` lists triangle caps (6k / 12k / 20k / 30k) that
+differ from `art_budgets.md`**; one of them is stale and should be reconciled. And only two species were
+measured, so the figures are a spot check, not a survey.
+
+### 16e. Design principles (ideas only, mostly `SECONDARY`)
+
+**E23** silhouette test: fill the model solid black and ask whether it is still distinct; settle shape language
+before material; the creature should read in greyscale; strong variants differ by posture or a dominant feature,
+not just colour. **E24** a Unity-blog case study of enemy design (Tempest Tower, read). **E25** colour scripting
+by tier. None changes a file; all feed `anime-fantasy-director` reviews.
+
+### 16f. The sweep's top five, by value per hour
+
+1. **E13 — weight transfer to LOD1/LOD2 in `bake_to_game.py`.** Adopt; the one hard blocker.
+2. **E12 — Generic rigs with Copy From Other Avatar per `rigId`.** Adopt; test the translation-curve scaling first.
+3. **E16 — runtime "on twos" in `MonsterAnimator`.** Adopt.
+4. **E19 — keep quadric collapse, add a face-protect group.** Adopt.
+5. **E15 + E11 — Spider Walker for multi-leg gaits (trial) and plain FK plus a runtime wave for tails (adopt).**
+
+**Still open (the sweep's list):** no Unity editor tests were run (Copy From Other Avatar across species sizes;
+stepped-curve import); Retarget, ReNim and the paid add-on licences were not opened at source; VAT crowds not
+researched; the QuadriFlow manual page and `blender.org/about/license` did not load.

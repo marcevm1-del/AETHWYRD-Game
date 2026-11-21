@@ -508,3 +508,57 @@ Queue for the next pass, in priority order.
 sweep and are answered in [mcp_servers.md](mcp_servers.md) §1 and §1d from the package source — it is
 `ahujasid/blender-mcp` (MIT), and `disable_telemetry` only sets consent false while leaving a pseudonymous
 usage stream running.
+
+---
+
+## 7. `arjun988/blender-skills` — a pack the user asked to be cloned
+
+**VERIFIED — cloned (`--depth 1`) to `E:/Ideas/blender-skills` and read; nothing in it was run, installed or
+copied into the repo.** The folder sits outside both worktrees and is untracked. Licence read from `LICENSE`:
+**MIT, "Copyright (c) 2026 blender-skills contributors"**; every skill's frontmatter also says `license: MIT`.
+
+**1. What it is.** A pack of **94 skills** (95 directories) for Blender art direction and technical art —
+modelling, rigging, retopology, geometry nodes, LOD, engine export, dozens of genre and style packs (horror,
+anime, chibi, manga, pixel, noir), plus a `blender-director` orchestrator that routes a request to the right
+skill. **309 KB of Markdown in total; the average `SKILL.md` is 2.2 KB**, and the `references/` files are
+shorter still. The rest of the clone is a Next.js marketing site (ignore it) and a `.mcp.json` that runs the
+same `blender-mcp` we use, via `cmd /c uvx --python 3.11 blender-mcp` with `DISABLE_TELEMETRY=true` — a good
+default, but unpinned.
+
+**2. What it would do for us.** Little that the repo does not already do better. I audited it against what
+this session verified in Blender 5.3:
+- **It contains no version-specific API knowledge at all.** A search of all 94 skills for `BLENDER_EEVEE`,
+  `use_auto_smooth`, `use_nodes`, `Specular IOR Level`, `Coat Weight`, `use_backface_culling`,
+  `ARMATURE_AUTO`, `quadriflow`, `DATA_TRANSFER`, `VERTEX_COLORS`, `wm.fbx_import` and `rigify` found **zero
+  hits in any file**. It cannot be wrong about 5.x, because it says nothing about it; it is art-direction
+  checklists, not scripting knowledge.
+- **Its MCP guidance has drifted from the server we run.** Seven files name `get_viewport_screenshot`; the
+  installed server (2.2.9) exposes `look`. It never mentions `get_addon_status`, `search_assets` or
+  `import_asset`, so it warns of **none of the licence and telemetry traps** documented in
+  [mcp_servers.md](mcp_servers.md) §1a and §1e. (It does hedge: "tool names may vary by version".)
+- **Depth is thin.** `anime-style` is a ~60-line checklist whose cel-shader reference is five bullets
+  ("Diffuse → ColorRamp (constant) 2–4 stops"); `unity-export` recommends GLB for static meshes and "Scale
+  Factor 1.0" without the normals-import or vertex-colour handling this pipeline needs; `lod-strategies`
+  recommends **octahedral impostors at 50 m+**, which this library rejects for a 4 GB card
+  ([techniques B1](techniques_and_systems.md)). Our own `art_direction.md`, `art_budgets.md` and the 27 agents
+  are more specific to this game in every case checked.
+- **Roughly a third of it is wrong-genre for a teen-rated game**: body-horror, cosmic-eldritch, folk-horror,
+  PSX-horror, analog found-footage and mascot-puppet-horror skills.
+
+**3. Cost, licence and requirements.** Free, MIT, no key or account. The hidden cost is **context**: its 94
+descriptions total about **15,000 characters**, which every session would load — and
+[skills_and_plugins.md](skills_and_plugins.md) §3f established that this project's sessions already carry far
+more skill and plugin text than they use, across ~40 sessions. It also adds names that collide with ours
+(`creature-artist`, `environment-artist`, `character-artist`, `rigging`) beside agents of the same names.
+
+**4. Effort and risk.** About 1 h to evaluate (done) and 1–2 h to copy a chosen handful into
+`.claude/skills/`. The risk is dilution: third-party instructions competing with
+`13_Production/art_direction.md` inside a session. The pack's text is **untrusted instructions** like any
+downloaded content, which is another reason to copy selectively and read what is copied.
+
+**5. Verdict. Hold — do not install the pack; read a handful of skills as references.** If a few are wanted,
+the ones with substance for this game are `anime-style`, `chibi-style`, `manga-style`, `character-artist`
+(its `facial-topology.md` has concrete loop counts for lids and lips, `SECONDARY`, the only face-topology
+guidance in this library), `creature-artist` (`quadruped-anatomy.md`, `flying-creatures.md`), `rigging`,
+`retopology`, `geometry-nodes`, `procedural-modeling` and `genre-rpg`. **Copy at most those, and fix the tool
+names first.** Leave out the horror and retro packs.

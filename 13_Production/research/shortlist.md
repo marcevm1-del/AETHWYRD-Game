@@ -17,6 +17,13 @@
 | 9 | **Add the memory profiler and profile analyzer packages, and measure three real tiles on the GTX 1650** | 3–5 | The 4 GB budget is currently arithmetic, not measurement. Streaming decisions (Addressables, GPU Resident Drawer, impostors) all wait on it | [mcp §6](mcp_servers.md), [techniques B1](techniques_and_systems.md) |
 | 10 | **Path-map the 12 code-side agents and the ~25 file-writing skills; retire `analytics-engineer` and three more** | 5–10 | The path-map reached 22 of 61 agents and 0 of 74 skills — and missed every engineer. `analytics-engineer` contradicts offline-complete | [skills §5](skills_and_plugins.md) |
 
+**From the Blender sweeps (see [blender_primer.md](blender_primer.md) §15–16):** weight transfer to LOD1 and LOD2 in
+`bake_to_game.py` (the one hard blocker between static LODs and skinned monsters, not yet done); Unity Generic rigs
+shared per rig id with Copy From Other Avatar (25 clip sets could serve 680 species — test the translation curves
+first); runtime stop-motion "on twos" in `MonsterAnimator`; the 17 VRM preset names as the face-shape contract and a
+vertex-channel budget before any humanoid work starts; `Unity` import check that custom normals and shape keys
+survive (they survive Blender's FBX round trip; the Unity side is untested).
+
 **Also worth doing, just below the line:** barks as dialogues from the unused `ThreatLevel` hook (8–16 h,
 the best perceived-intelligence per hour); lock-on and follow constants into JSON (under 2 h);
 `@gltf-transform/cli` after `bake_to_game.py` (2–4 h); incremental contact-sheet rebuilds (3–6 h, skip

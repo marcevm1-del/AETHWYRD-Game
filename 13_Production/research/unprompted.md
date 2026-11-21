@@ -17,6 +17,15 @@
 | 7 | **`com.unity.modules.unityanalytics` and `adaptiveperformance` are in the manifest**, probably by default. A shipped analytics module in an offline-complete teen-rated game is worth a deliberate decision. | [mcp_servers §8](mcp_servers.md) | 15 min |
 | 8 | **The Unity splash screen is on** (`m_ShowUnitySplashScreen: 1`) though Unity 6 makes it optional. | [asset_sources A3](asset_sources.md) | under 1 h |
 
+## A2. Found by running Blender (see [blender_primer.md](blender_primer.md))
+
+- **The Steam Blender is 5.3.0; every doc says 5.2.**
+- **`wm.fbx_import` reads FBX 6.1; the register says it cannot.**
+- **A goblin leaves the generator at 151,423 faces against a 1,500-triangle LOD0 budget** (by design, `bake_to_game.py` reduces it) — and quadric collapse beats voxel remesh and QuadriFlow on creatures, which also keep `Col` only under collapse.
+- **`bake_to_game.py` produces static LODs; skinned monsters need weight transfer to LOD1/LOD2** (not built).
+- **Custom normals and `Col` survive FBX; shape keys survive only if no modifier is on the object** — write normals with the operator.
+- **`arjun988/blender-skills`** (cloned to `E:/Ideas/blender-skills`, MIT): 94 thin skills with no 5.x API content and stale MCP tool names; hold. ([skills_and_plugins §7](skills_and_plugins.md))
+
 ## B. Documentation that is wrong
 
 - **`13_Production/tutorial_vision.md` says MCP for Unity is "editor-only". It is not**: its Runtime
