@@ -25,7 +25,7 @@ from a clean checkout dirties that file — worth knowing before committing.)
 
 | Finding | Evidence | Consequence |
 |---|---|---|
-| **`BLENDER_EEVEE_NEXT` does not exist in 5.3.** Setting it raises `TypeError: enum "BLENDER_EEVEE_NEXT" not found in ('BLENDER_EEVEE', 'BLENDER_WORKBENCH', 'CYCLES')` | RAN | Any `Tools/blender/` script that lists `BLENDER_EEVEE_NEXT` must fall back; `toon_preview.py` already tries `BLENDER_EEVEE` first and the repo's guarded loops cope. `NOT TESTED` — which versions needed the NEXT name |
+| **`BLENDER_EEVEE_NEXT` does not exist in 5.3.** Setting it raises `TypeError: enum "BLENDER_EEVEE_NEXT" not found in ('BLENDER_EEVEE', 'BLENDER_WORKBENCH', 'CYCLES')` | RAN | Any `Tools/blender/` script that lists `BLENDER_EEVEE_NEXT` must fall back; `toon_preview.py` already tries `BLENDER_EEVEE` first and the repo's guarded loops cope. DOCS: `BLENDER_EEVEE_NEXT` existed in 4.2 to 4.5 and 5.0 renamed it back (section 7) |
 | **`Material.use_nodes` is deprecated and "expected to be removed in Blender 6.0"** — Blender prints this on every use | RAN (the warning is emitted) | **34 uses in 14 files** under `Tools/` will break at 6.0. Not urgent; worth a tracked item in `tech_debt_register.md` |
 | **The Python FBX importer rejects FBX 6.1; the `bpy.ops.wm.fbx_import` importer accepts it** | RAN on `Art/ThirdParty/nobiax_rocks/*.fbx`: `import_scene.fbx` → `Error: Version 6100 unsupported, must be 7100 or later`; `wm.fbx_import` → `FINISHED` | **`third_party_assets.md` says FBX 6.1 "is too old for Blender 5, so the OBJs beside them are imported". That is true only of `import_scene.fbx`.** `wm.fbx_import` gave rock_01 = 102 verts / 200 faces / 1 UV layer, rock_02 = 252 / 500, rock_03 = 252 / 500 — **identical counts to the OBJ**. Scale differs: FBX dims 1.4 m vs OBJ 140 (centimetres). No materials came across |
 | **Enum introspection is unreliable in background mode.** `view_settings.view_transform` lists only `['NONE']` yet assigning `Standard`, `AgX` and `Filmic` all succeed | RAN | Never validate against the enum; **assign inside `try/except TypeError`**, exactly as the Blender MCP server's own instructions say and `toon_preview.setup_world` does |
@@ -188,3 +188,50 @@ rests on Blender's own runtime warning (RAN).` Also from 4.2: `Material.blend_me
 `toon_preview.py:105`, `setattr(sc.eevee, "use_gtao", False)` inside `try/except AttributeError`, so the
 5.0 removal is already handled and the generator ran cleanly on 5.3. **No 5.0 breakage found in the repo
 scripts.** The only forward risk found is `Material.use_nodes` at Blender 6.0 (34 uses in 14 files).
+
+## 8. Baking to vertex colours works headless — RAN
+
+A UV sphere with a Principled material whose Base Color is a red/blue Checker texture, a
+`BYTE_COLOR` / `CORNER` colour attribute named `Col` made active with
+`me.color_attributes.active_color = ca`, `scene.render.engine = "CYCLES"`, 4 samples, CPU, and
+`bpy.ops.object.bake(type="DIFFUSE", pass_filter={"COLOR"}, target="VERTEX_COLORS")` →
+**`{'FINISHED'}` in 0.28 s under `--factory-startup`**, with the result in `Col` containing exactly the
+two source colours (**0.96, 0, 0** and **0, 0, 0.96** — 992 corners each). Notes:
+
+- **`render.bake.target` has two values here: `IMAGE_TEXTURES` and `VERTEX_COLORS`.** The operator takes
+  `target=` too; pass both consistently.
+- Cycles is selectable headless without enabling any add-on (`render.engine = "CYCLES"` succeeded), which
+  answers the "NOT TESTED" in section 7.
+- **The baked colour is 0.96, not 1.0.** The Principled diffuse pass does not return the raw albedo. If a
+  pipeline needs the exact flat colour of a face (as `art_direction.md` and the Unity toon shader do), bake
+  from an **Emission** material, or read the colour from the material directly as `bake_to_game.py`'s
+  "every face's exact flat colour into the vertex colour `Col`" step evidently does. `NOT TESTED` — which
+  of the two `bake_to_game.py` actually uses.
+- This is the same attribute name, domain and kind `13_Production/art_budgets.md` describes the toon
+  shader reading, so the technique matches what the game consumes.
+
+## 9. What crashes Blender scripts — DOCS (`info_gotchas_crashes`), and what to do about it
+
+For generators that build hundreds of objects (this repo's buildings, creatures, terrain tiles):
+
+- **Adding to a container can re-allocate it and invalidate earlier references** (mesh elements, curve
+  points). Re-fetch after the add; **store indices or string keys, not references.**
+- **After `bpy.ops.object.mode_set`, data from before the switch is unsafe** — it re-allocates mesh, bone
+  and curve data. Re-read `mesh.polygons` afterwards.
+- **Assume undo and redo invalidate every `ID` instance and its sub-data.**
+- **Never touch anything you have `remove()`d**, including its sub-data — the variable raises, but other
+  references to the sub-data can crash.
+- **Copy before iterating when you mutate**: `list(collection.all_objects)` before changing
+  `hide_viewport`, `hide_select` or `hide_render`; convert a `bpy.data` iterator to a list before setting
+  any `name`, because renaming re-sorts the data-blocks.
+- Debugging: **`faulthandler`** points at the script line that triggered a crash, even when the crash is in
+  C++; and a stray `sys.exit()` in a library can quit Blender silently — `sys.exit = None` reveals the line
+  (the docs call it dirty).
+- Style and speed (`info_best_practice`): avoid `+` for building strings in loops (use `"".join`), avoid
+  `try` in hot loops (it is "significantly slower than `if`"), avoid `in`, `index` and `count` on big lists,
+  and **time things with `time.time()`**, which is what the probes in this file did.
+  `NOT SOURCEABLE — the best-practice page says nothing about bmesh, avoiding bpy.ops, or large object
+  counts.`
+
+None of these is exotic. The practical rule for a generator script: **hold a dict of what you created,
+re-fetch rather than cache across mode switches, and iterate over a copy.**
