@@ -43,7 +43,8 @@ def slug(s):
 
 def main():
     ascend_creatures.register()
-    out_dir = os.path.join(ROOT, "Art", "Blender", "CreatureLibrary")
+    # --out lets a run write somewhere else; without it, the library lands beside the repo as before.
+    out_dir = arg("--out") or os.path.join(ROOT, "Art", "Blender", "CreatureLibrary")
     sheet_dir = None if arg("--no-sheets") else os.path.join(ROOT, "13_Production", "screenshots", "creatures")
     detail = arg("--detail", "high")
     species = list(generate.species_list().values())
@@ -135,7 +136,9 @@ def main():
             if sheet_dir:
                 os.makedirs(sheet_dir, exist_ok=True)
                 blib.tile_sheet(tiles, os.path.join(sheet_dir, "%s.png" % slug(fam)), cols=8, tile=(320, 320))
-        path = os.path.join(out_dir, "%s.blend" % slug(fam))
+        # A non-high build is an LOD: it gets its own file so it can never overwrite the source library.
+        suffix = "" if detail == "high" else "_" + detail
+        path = os.path.join(out_dir, "%s%s.blend" % (slug(fam), suffix))
         bpy.ops.wm.save_as_mainfile(filepath=path, compress=True, copy=True)
         print("[AC] %-28s %3d creatures  %6.1f MB  %5.0fs%s" % (fam, len(objs), os.path.getsize(path) / 1e6, time.time() - t,
                                                               ("  FAILED: " + "; ".join(failed)) if failed else ""))

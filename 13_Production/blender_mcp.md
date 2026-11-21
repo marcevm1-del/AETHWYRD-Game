@@ -138,3 +138,33 @@ at low. That is a workflow gain, not a game one.
 species resolve to 193 distinguishable fight profiles, 41.8% duplicate another species' whole profile within their
 own region and ring, and the rubric scores "reads at a glance" at 7.7/20. That is a design problem, not a triangle
 problem, and no amount of regeneration touches it.
+
+## The LOD regeneration, done 2026-11-21
+
+Asked for again after the measurements above, so it was built. All **680 species × 2 levels, 31 families, zero
+failures**, in **17 minutes** — low 6.6, medium 10.4 — with `--no-sheets`, which skips the per-family contact
+sheet renders that dominate a normal build.
+
+| Level | Files | Size |
+|---|---|---|
+| high (source, untouched) | 31 | 2.4 GB |
+| medium | 31 | 893 MB |
+| low | 31 | 316 MB |
+
+Two changes to `build_creature_library.py` made it safe and repeatable:
+
+- `--out <dir>` so a run can write somewhere other than beside the repo.
+- a non-high build writes `<family>_<detail>.blend`, so an LOD build **cannot overwrite the source library**. Before
+  this, `--detail low` would have silently replaced 2.4 GB of high-detail work with low-detail files of the same name.
+
+Checked, not assumed: `beasts_low.blend` holds all 45 beasts at 12,096 to 31,562 triangles (median 18,124), and
+they were looked at — bodies smooth, ears, tails and eyes intact, silhouettes clean.
+
+**What this is and is not.** It is a working library that opens quickly: 316 MB against 2.4 GB. It is **not** an
+improvement to the game, for the reason measured in the section above — Unity already loads 6k–10k triangle FBX,
+decimated on export, which is *lower* than these LODs. Nothing in `Game/` changed and nothing should be re-exported
+from these files expecting a gain.
+
+One correction to my own arithmetic along the way: a first pass at counting the build log reported 405 creatures,
+which was a parsing mistake on my side — family names contain spaces, so the column I summed was part of the name.
+The real figure is 680 at each level.
