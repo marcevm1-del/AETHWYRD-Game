@@ -168,3 +168,40 @@ from these files expecting a gain.
 One correction to my own arithmetic along the way: a first pass at counting the build log reported 405 creatures,
 which was a parsing mistake on my side — family names contain spaces, so the column I summed was part of the name.
 The real figure is 680 at each level.
+
+## Polishing the monster models, 2026-11-21
+
+Done the way the character pass was done: look first, measure the cause, change one thing, look again.
+
+**What the live viewport showed.** Beasts ended in rounded stumps. The plan does build mitten hands and feet — the
+Bog Werewolf's body carries 2 hands, 2 feet and 2 shoulders among its 361 metaball elements — but the wrist was
+`r1 * 0.72` against a hand of `fist * 0.85`, close enough that the metaball union swallowed the hand into the
+forearm. Pinching the wrist to `0.56` and the ankle to `0.58`, and enlarging the hand and foot, makes both read.
+Nothing was added to the plan; what was already there simply became visible.
+
+**The flat colour had a specific cause.** The Bog Werewolf is described as "brown, with sickly green markings" and
+"a distinctive marking runs along its back", and its accent colour is a vivid green — but its pattern was `none`,
+so the accent was never painted. The reason was one line in `looks.py`:
+
+```python
+self.pattern = o.get("pattern") or (pattern if pattern == "none" else rng.choice([pattern, pattern, "none", "spots"]))
+```
+
+A surface whose style says `none` should stay plain; that is a design decision. But a **patterned** hide had a
+1-in-4 chance of rolling `none` and losing its accent colour for no design reason.
+
+**Measured across all 680, before and after**, by running the generator both ways:
+
+| | plain | patterned |
+|---|---|---|
+| before | 290 | 390 |
+| after | 160 | 520 |
+
+**130 creatures got their markings back.** The 160 still plain are the surfaces whose style says `none` on
+purpose — gel, smoke, elemental, paper, porcelain, soft fur, horse coat, cloth.
+
+Checked afterwards: 60 species spanning the roster built with zero errors in 6.8 s, 4,920 to 27,710 faces.
+
+**This does not reach the game by itself.** The 680 FBX in `Game/` were exported before these changes, so they
+still carry stumps and missing markings. They improve only when re-exported through
+`finish_generated_monster.py`, which is a separate job.

@@ -68,7 +68,11 @@ class Look:
         st = STYLE.get(self.style, STYLE["thick_skin"])
         self.surface, pattern, self.belly, self.cavity, self.bump = st
         # most patterned hides vary by species: plain, the default pattern, or spots
-        self.pattern = o.get("pattern") or (pattern if pattern == "none" else rng.choice([pattern, pattern, "none", "spots"]))
+        # A surface whose style says "none" stays plain - that is a design decision. But a patterned hide used to
+        # have a 1-in-4 chance of rolling "none", which quietly threw away the species' accent colour and left the
+        # creature a single flat hue. The Bog Werewolf is described as brown with sickly green markings and had
+        # none. Variation now stays between real patterns (looked at in the viewport, 2026-11-21).
+        self.pattern = o.get("pattern") or (pattern if pattern == "none" else rng.choice([pattern, pattern, "spots", "patches"]))
         self.pattern_scale = rng.uniform(4.0, 8.0)
         self.spot_light = rng.random() < 0.5
         self.back_dark = 0.55

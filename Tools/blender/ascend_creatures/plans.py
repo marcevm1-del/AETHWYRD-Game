@@ -17,30 +17,34 @@ def _j(b, x, amt=0.08):
 def leg(b, hip, knee, foot, r0, r1, foot_size=None, taper=False):
     # Tapered, with a thigh swell a third of the way down (design review C5: limbs were tubes of one thickness).
     # taper=True (bipeds, review 2026-10-31): a visible taper, thigh >= 1.3x shin: narrow knee, thinner ankle.
+    # Same reason as the wrist: a thick ankle makes the foot disappear into the shin.
     if taper:
-        b.chain([hip, knee, foot], [r0, r1 * 0.95, r1 * 0.72])
+        b.chain([hip, knee, foot], [r0, r1 * 0.95, r1 * 0.58])
         b.ball(V(hip).lerp(V(knee), 0.32), r0 * 1.15)
     else:
-        b.chain([hip, knee, foot], [r0, r0 * 0.38 + r1 * 0.62, r1])
+        b.chain([hip, knee, foot], [r0, r0 * 0.38 + r1 * 0.62, r1 * 0.78])
         b.ball(V(hip).lerp(V(knee), 0.35), r0 * 1.08)
     if foot_size:
-        b.ellip(V(foot) + V(0, -foot_size[1] * 0.45, -foot_size[2] * 0.3), foot_size)
+        b.ellip(V(foot) + V(0, -foot_size[1] * 0.45, -foot_size[2] * 0.3),
+                (foot_size[0] * 1.15, foot_size[1] * 1.15, foot_size[2] * 1.1))
     b.hips.append(V(hip))
     b.feet.append(V(foot))
 
 
 def arm(b, sh, el, hand, r0, r1, fist, taper=False):
     # Tapered with an upper-arm swell, and a mitten hand with a thumb instead of a ball (design review C5).
+    # The wrist has to be much thinner than the hand or the metaball union swallows the hand and the arm ends in a
+    # rounded stump (looked at in the live viewport, 2026-11-21: every beast read as a sausage with no hands).
     if taper:  # bipeds: upper arm >= 1.3x forearm, thin wrist
-        b.chain([sh, el, hand], [r0, r1 * 0.95, r1 * 0.72])
+        b.chain([sh, el, hand], [r0, r1 * 0.95, r1 * 0.56])
         b.ball(V(sh).lerp(V(el), 0.4), r0 * 1.15)
     else:
-        b.chain([sh, el, hand], [r0, r0 * 0.38 + r1 * 0.62, r1])
+        b.chain([sh, el, hand], [r0, r0 * 0.38 + r1 * 0.62, r1 * 0.72])
         b.ball(V(sh).lerp(V(el), 0.4), r0 * 1.08)
     d = (V(hand) - V(el)).normalized()
-    b.ball(hand, fist * 0.85)
-    b.ball(V(hand) + d * fist * 0.75, fist * 0.72)
-    b.ball(V(hand) + d * fist * 0.15 + V(0, -fist * 0.7, 0), fist * 0.38)  # thumb, forward
+    b.ball(hand, fist * 1.05)
+    b.ball(V(hand) + d * fist * 0.85, fist * 0.80)
+    b.ball(V(hand) + d * fist * 0.20 + V(0, -fist * 0.85, 0), fist * 0.44)  # thumb, forward and clear of the palm
     b.shoulders.append(V(sh))
     b.hands.append(V(hand))
 
