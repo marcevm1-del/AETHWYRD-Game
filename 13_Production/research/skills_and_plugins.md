@@ -325,7 +325,12 @@ compile errors the Editor boots into **Safe Mode**, where the Pipeline package d
 cannot connect at all — and the skill says so, names the cause, and tells you not to fall back to blind
 file-editing. That is obligation 3 satisfied by a third party.
 
-**Why it cannot be "adopt now".** The install is `irm …/install.ps1 | iex` with
+> **Correction from the MCP sweep ([mcp_servers.md](mcp_servers.md) §2a):** the CLI is **already
+> installed on this machine** (`unity --version` → `1.0.0-beta.13`) and has an MCP server built in
+> (`unity mcp`). The install caution below applies only to `com.unity.pipeline`, which still needs adding
+> to `Game/Packages/manifest.json`. The licence gap and the beta status stand.
+
+**Why it cannot be "adopt now".** The documented install is `irm …/install.ps1 | iex` with
 `UNITY_CLI_CHANNEL='beta'` — piping a remote script into the shell, on a beta channel, which is the
 user's call and not Claude's. It adds `com.unity.pipeline` to `Game/Packages/manifest.json`, and
 `unity command eval` running arbitrary C# in the live Editor deserves a deliberate decision.
