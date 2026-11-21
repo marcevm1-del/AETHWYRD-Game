@@ -241,9 +241,77 @@ record now, because it is a constraint on `AscendToon.shader` that nothing in th
 
 # Part B — the external survey
 
-Still being written: comparable-RPG streaming and LOD with published numbers, Unity 6 Addressables versus
-additive scene streaming for 49 regions, golden-save corpus practice, companion-AI "don't be annoying"
-design, group tactics and alert propagation, and sourced combat-feel numbers. The repo's own
-[reference_games.md](../reference_games.md) already records what has been borrowed (RimWorld's taming
-fields; Project Greyborn's unsticking and reflex hop) and three ideas still on its "to consider" list
-(utility goals with hysteresis, a path budget, evolution stages by level), so Part B starts past those.
+> **Source quality, stated plainly.** Searching for open-world streaming budgets returns engine docs,
+> affiliate blogs and forum anecdote. `NOT SOURCEABLE — published streaming radii, resident-memory budgets
+> and frame-time costs from a shipped comparable single-player open-world RPG are not covered by the
+> sources consulted.` The plan's own arithmetic in `terrain_unity_import.md` §6 is a better budget than
+> anything borrowed from another game on other hardware, so the next step for streaming is **measure three
+> real tiles in Unity**, not more searching. Part A's repo findings are the stronger half of this file.
+
+## B1. World streaming and LOD
+
+| Entry | What | Verdict |
+|---|---|---|
+| **GPU Resident Drawer** | Needs a Forward+ or Deferred+ renderer, shaders supporting BatchRendererGroup, and no Enlighten realtime GI. `Ascend_Renderer.asset` has `m_RenderingMode: 0` (the serialised value was read, not the inspector; confirm before acting) and `AscendToon.shader` has no DOTS-instancing block. **Animated monsters, companions and NPCs are excluded regardless** (objects under Animator hierarchies are skipped), as are objects using MaterialPropertyBlock. Cost: a renderer-path migration (6–12 h of toon-look re-verification) plus a shader job of unknown size. `Verified: source read` (Unity 6000.6 manual) | **Hold.** Revisit only if a GTX 1650 profile shows the streamed world is CPU-draw-call-bound. The SRP Batcher path the plan names is the right default |
+| **Addressables** | Not in `Game/Packages/manifest.json`. An offline game gains nothing from its remote-delivery half. Unity's migration docs warn that content in both Addressables and the player build is *duplicated in memory*, a real hazard at 4 GB. Community reports (`SECONDARY`, forum posts) put hitches in **instantiation and shader warm-up, not the loading mechanism** | **Hold; prefer additive `SceneManager.LoadSceneAsync` first.** Whatever the loader: **budget and pre-warm** — spawn dressing over several frames under a hard per-frame cap, and warm shader variants before the player reaches a tile |
+| **Terrain neighbour stitching** | The plan assumes manual `SetNeighbors`; Unity's Terrain also has auto-connect with a shared Grouping ID, which is exactly the streaming case. `heightmapPixelError` is a popping-versus-polygons dial, not a seam control, so the plan's 5 (near) versus 12 (far ring) risks a visible LOD mismatch *at the ring boundary*. `TerrainQualityOverrides.PixelError` gives a GTX 1650 coarser terrain without touching streaming code. `Verified: docs only`; confirm `SetNeighbors` in the 6000.6 method list | **Adopt the plan, but spend an afternoon trying auto-connect first** (4–8 h of manual wiring may be avoidable) |
+| **Octahedral impostors** | Blog-level figures (`SECONDARY`, other genres and hardware): ~150 MB for 500 unique 1024² impostors; one project cut them for being 200 MB over a Switch texture budget. The plan targets under 150 MB resident for terrain plus dressing | **Reject** (hundreds of hours; the atlas alone could eat the VRAM budget). **Adopt the plan's far ring**: a decimated static mesh with a baked colour map, under fog. A flat-tone cel look is the *easiest* case for cheap distant LOD |
+| **AI Navigation package** | **Not installed** — only `com.unity.modules.ai` is. Per-tile navmesh streaming needs the package, and `reference_games.md` already says a path budget is "needed when Ring 1 gets a navmesh". `NOT SOURCEABLE — which navmesh-streaming APIs sit in the built-in module versus the package in 6000.6, and navmesh behaviour under a transform move` | **Trial.** Add the package and read its docs first, and **decide the origin question (A1) before building navmesh streaming, or it gets done twice** |
+
+## B2. Save migration
+
+| Entry | What | Verdict |
+|---|---|---|
+| **Golden-save fixture corpus** | Freeze real saves generated **by the code at each release tag**, never regenerate, and pair each input `vN.json` with a pinned `vN.migrated.json`. Golden tests that only read the current build's own fixtures miss data written by an *older* binary — precisely the hole in the current suite. Regeneration should need an explicit opt-in flag (the pattern seen was `UPDATE_GOLDEN=1`) so drift fails by default; with no code review on a one-person project the flag *is* the review. `SECONDARY` (repository policies; no authoritative standard exists) | **Adopt now.** 3–6 h, then ~15 min per shipped version. Version 1 has not shipped, so the whole corpus is still free to create |
+| **Additive schema plus migration chain** | The project already does the hard part (reflection-driven "every field has a migration decision" test, idempotence fixed point, future versions rejected rather than rewritten) | Keep. The pattern breaks at the first *coordinate transform* (A2), which null-fill cannot express |
+| **Corruption resilience** | Three-file rotation (`.new`, flush, live to `.bak`, `.new` to live) plus fault-injection tests that kill the process between each step | **Adopt now** — a correctness bug (A3b), not an optimisation |
+
+## B3. Companion and monster AI
+
+The Game AI Pro chapters were read; the repo hooks were read from source.
+
+- **Barks as *dialogues* (F.E.A.R., Game AI Pro 2 ch. 2). Adopt — highest perceived intelligence per
+  hour.** Orkin's line is *"if the AI didn't say it, it didn't happen"*: two or three canned lines between
+  squad members, triggered when enough are in proximity. **The hook already exists and nothing reads it:**
+  `AiCommand.ThreatLevel` (0–1), computed per frame by `Code/Ascend.Core/GroupTactics.cs` and documented in
+  `handover/group_tactics_wiring.md` as "information only (animation barks, tuning telemetry)". A hit made
+  legible through *someone else's* mouth ("what's your status?" / "I'm hit!") also hints at health with no
+  health bar, which suits a deliberately minimal HUD. **8–16 h for the system; the content (lines per species
+  family) is the open-ended cost.** The queue must verify the responder still exists before committing.
+- **The follow system in *The Last of Us*: a rated candidate-position field plus movement filters.**
+  **Trial the rating, scoped down; adopt the movement filters now** — nearly free, and they carry most of
+  the felt quality.
+- **"Don't be annoying": four rules, three existing numbers to review.** (1) *Never teleport to keep up*,
+  except under camera cover; `CompanionBrain.Decide` already agrees, with a comment proving it was thought
+  about. (2) *Do not pre-emptively move out of the player's way; dodge at the last second with a canned
+  animation and a line* — counter-intuitive and the most worth copying: the fix is a reactive animation,
+  not better avoidance. Two more rules cover stealth and speech pacing. **2–6 h of tuning** in `Data/` and
+  `CompanionTuning`. These are judgements about *that* game's pacing: adopt the reasoning, re-derive the
+  numbers in playtest.
+- **Further Game AI Pro chapters worth reading** are listed in the raw notes and **not yet read**.
+
+## B4. Combat feel
+
+Honest accounting first: `NOT SOURCEABLE — published lock-on or soft-target-assist tuning values from a
+studio talk or engineering post are not covered by the sources consulted.` An extended search returned
+nothing; the next step is GDC Vault searched directly.
+
+- **Hit pause versus hit freeze — trial, scoped, measure first.** The project's hitstop is a global
+  `Time.timeScale = 0`; the usual alternative is per-entity pause. The cost shows in group fights, where
+  repeated global freezes can obscure telegraphs. **Do not rewrite speculatively.** Build a fight with three
+  or more attackers; if telegraphs are lost, the cheap fixes are shortening or suppressing hitstop above N
+  engaged monsters, or freezing only the attacker's and victim's animators.
+- **The existing hitstop durations are already in the sourced band — adopt nothing.** Where a source
+  (Street Fighter figures) disagrees, it is a genre difference, not an error.
+- **Camera shake:** the accessibility slider already exists; the only unadopted idea is *directional*
+  shake. Trial.
+- **Input buffering and leniency:** already built and sourced; `movement_feel.md` is better sourced than
+  anything found. Adopt nothing.
+- **A repo finding, not a technique: `LockOn.cs` breaks the project's own data-driven rule.** Its tuning is
+  one hardcoded line — `Range = 18f, ReleaseRange = 24f, GraceSec = 1.0f, FlickMouse = 25f, FlickStick =
+  0.8f, SwitchCooldown = 0.3f` — and `Data/Combat/combat_tuning.json` has no `lockOn` key, though the
+  related `softLockAngleDeg` (45), `camera.distance`, `fov` and `shakeMax` all live there. **The lock-on feel
+  values are the one part of the combat-feel surface that cannot be tuned without a recompile.**
+  `PartnerFollower.cs` has the same problem (`FollowDistance = 2.5f, EngageRange = 8f, AttackInterval =
+  1.2f, ReachM = 1.4f, ScoutRange = 18f`, while `CompanionTuning` holds the equivalents as data). **Under
+  2 h to fix; worth one sweep for hardcoded feel constants that escaped the JSON.** Adopt.
