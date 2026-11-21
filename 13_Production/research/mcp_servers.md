@@ -374,8 +374,10 @@ choice, but it should be a **conscious** one, recorded in `tutorial_vision.md`.
 
 Three of the four best tools are already on this machine. An MCP server would add only indirection.
 
-- **Blender's QuadriFlow remesh and Decimate modifier, via a headless script — adopt now. The highest
-  value per hour in the whole sweep.** This is the named gap in
+- **Blender's QuadriFlow remesh and Decimate modifier, via a headless script — SUPERSEDED. Do not build
+  this for game LODs:** running the pipeline showed `bake_to_game.py` already does LODs (voxel remesh plus
+  quadric collapse) and the goblin source is 151,423 faces; see [blender_primer.md](blender_primer.md) §6.
+  The remaining use is rig-prep quad topology, untested. Original text follows: This is the named gap in
   [monster_model_pipeline.md](../monster_model_pipeline.md): `Tools/ai3d/triposr_run.py` and
   `Tools/monster_gen/` produce dense output that needs retopology before `Tools/blender/rig_creature.py`
   can weight it. A `Tools/blender/retopo_creature.py` beside the existing generators, **2–4 h**, mostly
