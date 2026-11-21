@@ -177,7 +177,7 @@
       "target": 24,
       "targetEstimated": true,
       "quality": 2,
-      "evidence": "Two base bodies and a procedural generator that passes its own Blender checks, with hair, cloak, face and proportions rebuilt on 2026-11-15. Good enough to look at, not yet good enough to ship."
+      "evidence": "Two base bodies and a procedural generator that passes its own Blender checks, with hair, cloak, face and proportions rebuilt on 2026-11-15. Good enough to look at, not yet good enough to ship. Measured independently on 2026-11-21 through the Blender MCP: the body is 5,106 faces, 100% quads, with 0 non-manifold edges, 0 boundary edges and 0 loose vertices, every mesh has 0 unweighted vertices, and the female base weights her hair across all seven swing chains. Clean topology is what animation deforms, so this is the half of character quality our renders could never show."
     },
     {
       "id": "animation",
