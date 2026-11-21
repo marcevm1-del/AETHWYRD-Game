@@ -531,3 +531,49 @@ by tier. None changes a file; all feed `anime-fantasy-director` reviews.
 **Still open (the sweep's list):** no Unity editor tests were run (Copy From Other Avatar across species sizes;
 stepped-curve import); Retarget, ReNim and the paid add-on licences were not opened at source; VAT crowds not
 researched; the QuadriFlow manual page and `blender.org/about/license` did not load.
+
+---
+
+## 17. Weight transfer to a decimated LOD — RAN, and it closes the gap named in section 16
+
+The monster sweep found that `bake_to_game.py` produces **static** LOD1 and LOD2, so a skinned monster has no
+weights on its lower LODs. This experiment tests the missing step on the smallest possible rig: a 1,946-face
+tube skinned to three bones with `ARMATURE_AUTO`, a 443-face LOD1 made by `DECIMATE` collapse (ratio 0.15) on
+a copy **with its vertex groups cleared**, then:
+
+```
+# source (LOD0) active, target (LOD1) selected
+bpy.ops.object.data_transfer(use_reverse_transfer=False, data_type="VGROUP_WEIGHTS",
+        vert_mapping="POLYINTERP_NEAREST", layers_select_src="ALL", layers_select_dst="NAME",
+        use_object_transform=True)
+```
+
+→ `{'FINISHED'}`, and LOD1 gained the groups **`['root', 'mid', 'top']`**. After adding an Armature modifier to
+LOD1 and bending the `mid` bone 40°:
+
+| | Top vertex (x, y, z) |
+|---|---|
+| LOD0 (1,946 faces, auto weights) | (0.00, −1.36, 1.65) |
+| LOD1 **with** transferred weights | (0.00, −1.36, 1.65) — **0.000 m apart** |
+| LOD1 **without** weights (the failed first attempt) | (0.10, 0.39, 2.00) — **did not deform at all** |
+
+The posed LOD1 vertices sit a mean **0.072 m** (max 0.31 m, tube radius 0.4 m) from the nearest LOD0 vertex;
+treat that as an **upper bound on error**, because it compares two differently sampled point clouds, so
+sampling density is mixed into it. The fair claim is only that the coarse mesh follows the fine one and the
+top vertex is exact.
+
+**The keyword trap I hit, worth writing down:** the operator's mapping properties are **`layers_select_src`
+and `layers_select_dst`** (values `ALL`/`ACTIVE`/`BONE_SELECT`/`BONE_DEFORM` and `NAME`/`INDEX`).
+`layers_vgroup_select_src` — which a related operator, `datalayout_transfer`, uses — raises *"keyword
+unrecognized"* here. Read the operator's properties rather than guessing:
+`[p.identifier for p in bpy.ops.object.data_transfer.get_rna_type().properties]` gave
+`vert_mapping, edge_mapping, loop_mapping, poly_mapping, layers_select_src, layers_select_dst`.
+
+**What it means for `Tools/blender/bake_to_game.py`.** The step slots in after each collapse: copy the LOD0
+armature binding, run the transfer from the *previous* LOD, add the Armature modifier, and **carry the bone
+weights through the four-influence cap** that `rig_creature.py` applies (Limit Total in the weight-paint menu;
+the transfer can exceed four influences on a decimated mesh, which `NOT TESTED` here). The FBX export then
+needs the armature to travel with the LODs. **Estimate 3–5 hours**, including a skinned-creature PlayMode
+check in Unity — which is **NOT TESTED**, as is a *real creature* rather than a tube: face and limb joints
+are where weight transfer fails, and that is the "face-protect vertex group" the sweep recommended
+alongside quadric collapse.
