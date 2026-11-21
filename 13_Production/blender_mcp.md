@@ -73,9 +73,14 @@ that matters, and never at a scene somebody has open and unsaved. Nothing here e
 
 Measured 2026-11-21 in the live session, across eight species chosen one per rig family.
 
-**The shipped library builds every creature at 52,000 to 204,000 triangles.** For comparison, a whole human
-character — body, hair, cloak, boots, the lot — is 11,484 faces, and its body alone is 5,106. A single monster is
-10 to 40 times a hero character.
+**The Blender library builds every creature at 52,000 to 204,000 triangles.** For comparison, a whole human
+character — body, hair, cloak, boots, the lot — is 11,484 faces.
+
+**This is not what the game carries, and the first version of this page implied it was.** The 680 FBX in
+`Game/Assets/_Game/Art/Models/Monsters/` measure **6,134 to 10,438 triangles** — Goblin 6,408, Horned Rabbit
+10,438, Naga Priestess 6,134 — because `finish_generated_monster.py` decimates each export to a size-scaled
+budget: 6k under 0.6 m, 12k under 2.5 m, 20k under 8 m, 30k above. The library mesh is a *source* asset. The
+export pipeline was already doing its job.
 
 **`--detail medium` and `--detail low` did nothing for five of the eight.** High, medium and low returned
 identical face counts. The cause is in `ascend_creatures/generate.py`:
@@ -115,3 +120,21 @@ the front and three-quarter views. Thirteen times the triangles buys nothing you
 regenerating all eight and comparing face counts against the recorded originals, all eight identical. The change
 only affects medium and low, which previously did nothing at all. **Regenerating the 677 models as LODs is a
 separate decision** and belongs to whoever owns the creature pipeline.
+
+## Should the 677 be regenerated as LODs? No
+
+Asked and answered on 2026-11-21, after the measurement above and before spending hours on it.
+
+The detail fix is real and the library knob now works, but **regenerating the 677 would give the game nothing**.
+What Unity loads is already 6k–10k triangles, inside the documented budget, and *lower* than the 9k–27k that
+`--detail low` produces. The LOD work would take hours of GPU time and ship meshes no better than the ones already
+there.
+
+Where the fix does earn its place: anyone opening a family library in Blender to look at or edit creatures now has
+a medium and low option that previously did nothing, and a 4.9 GB library of 31 files becomes far cheaper to open
+at low. That is a workflow gain, not a game one.
+
+**What would actually improve the monsters** is the finding from `13_Production/research/monsters.md`: the 680
+species resolve to 193 distinguishable fight profiles, 41.8% duplicate another species' whole profile within their
+own region and ring, and the rubric scores "reads at a glance" at 7.7/20. That is a design problem, not a triangle
+problem, and no amount of regeneration touches it.

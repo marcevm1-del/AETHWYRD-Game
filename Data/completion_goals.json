@@ -199,7 +199,7 @@
       "target": 680,
       "targetEstimated": false,
       "quality": 1,
-      "evidence": "677 blockout models generated locally. Measured through the Blender MCP on 2026-11-21: they build at 52,000 to 204,000 triangles each, 10 to 40 times a whole human character (11,484 faces), and the --detail medium/low settings did nothing for five of eight sampled species because a hard 0.004 m floor overrode them. Fixed by scaling the floor with the detail level, which gives usable LODs at 7-18% of the face count with no visible difference side by side; high is unchanged, so nothing shipped was altered. Regenerating the 677 as LODs is still to do."
+      "evidence": "677 blockout models. Corrected 2026-11-21 after measuring what Unity actually loads: the shipped FBX are 6,134 to 10,438 triangles (Goblin 6,408, Horned Rabbit 10,438, Naga Priestess 6,134), because finish_generated_monster.py decimates to a size-scaled budget - 6k under 0.6 m, 12k under 2.5 m, 20k under 8 m, 30k above. The 52,000 to 204,000 triangle figure is the Blender LIBRARY source, which is a source asset and not what ships. The --detail knob in the generator was inert and is now fixed, but the game never needed it. Quality stays at blockout because they are blockouts, not because they are heavy."
     },
     {
       "id": "environment_art",
