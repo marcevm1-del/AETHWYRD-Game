@@ -32,7 +32,11 @@ namespace Ascend.Game
         public static void Play(Sfx s, Vector3 at, float volume = 1f)
         {
             if (!FeedbackSettings.Sfx || !Application.isPlaying) return;
-            AudioSource.PlayClipAtPoint(Clip(s), at, Mathf.Clamp01(volume * FeedbackSettings.SfxVolume));
+            // Through the effects bus, not PlayClipAtPoint: that API cannot take a mixer group, so every sound
+            // played this way bypassed all six volume sliders, and it allocated a GameObject per sound
+            // (13_Production/research/audio_plan.md item 2). FeedbackSettings.SfxVolume stays as a per-sound trim;
+            // the player's Effects slider is applied on the bus.
+            AudioBuses.PlayAt(Clip(s), at, Mathf.Clamp01(volume * FeedbackSettings.SfxVolume), AudioBuses.Bus.Effects);
             Played++;
         }
 

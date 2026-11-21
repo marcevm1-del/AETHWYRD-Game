@@ -19,7 +19,7 @@ namespace Ascend.EditorTools
 {
     public static class CreateAudioMixer
     {
-        public const string AssetPath = "Assets/_Game/Audio/AethwyrdMixer.mixer";
+        public const string AssetPath = "Assets/_Game/Resources/AethwyrdMixer.mixer";
 
         /// <summary>The six buses from 12_Systems, plus a UI sub-group under Effects (audio_plan.md item 1).</summary>
         static readonly (string Group, string Parent, string Param)[] Buses =
@@ -117,21 +117,58 @@ namespace Ascend.EditorTools
             }
 
             // Expose each group's volume so AudioBuses can drive it with SetFloat at runtime.
-            var expose = ctrlType.GetMethod("AddExposedParameter", BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic);
-            foreach (var (group, _, param) in Buses.Concat(new[] { ("Master", "", "vol_master") }))
+            // The first attempt passed (string, group) and silently produced m_ExposedParameters: []. The real
+            // signature, found by introspection, is AddExposedParameter(AudioParameterPath), where the path is
+            // AudioGroupParameterPath(AudioMixerGroupController group, GUID parameter) and the GUID comes from the
+            // group's own GetGUIDForVolume(). Exposing it gives the parameter a default name, so the names are then
+            // written back through the exposedParameters array.
+            var pathType = AppDomain.CurrentDomain.GetAssemblies()
+                .Select(a => a.GetType("UnityEditor.Audio.AudioGroupParameterPath")).FirstOrDefault(x => x != null);
+            var expose = ctrlType.GetMethod("AddExposedParameter", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            if (pathType == null || expose == null)
             {
-                if (expose == null) break;
+                why = "AudioGroupParameterPath or AddExposedParameter not found";
+                return false;
+            }
+            var pathCtor = pathType.GetConstructors(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).FirstOrDefault();
+            var wanted = Buses.Select(b => (b.Group, b.Param)).Concat(new[] { ("Master", "vol_master") }).ToArray();
+            foreach (var (group, param) in wanted)
+            {
                 var grp = mixer.FindMatchingGroups(group).FirstOrDefault(g => g.name == group);
-                if (grp == null) continue;
-                try
+                if (grp == null) { why = "group missing after creation: " + group; return false; }
+                var guidMethod = grp.GetType().GetMethod("GetGUIDForVolume", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                if (guidMethod == null) { why = "GetGUIDForVolume not found on " + grp.GetType().FullName; return false; }
+                var guid = guidMethod.Invoke(grp, null);
+                var path = pathCtor.Invoke(new[] { grp, guid });
+                expose.Invoke(controller, new[] { path });
+            }
+
+            // Name them. ExposedAudioParameter carries a guid and a name; match on the guid we just exposed.
+            var expProp = ctrlType.GetProperty("exposedParameters", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            var arr = expProp?.GetValue(controller) as Array;
+            if (arr == null) { why = "exposedParameters did not read back as an array"; return false; }
+            var nameField = arr.GetType().GetElementType().GetField("name", BindingFlags.Public | BindingFlags.Instance);
+            var guidField = arr.GetType().GetElementType().GetField("guid", BindingFlags.Public | BindingFlags.Instance);
+            if (nameField == null || guidField == null) { why = "ExposedAudioParameter has no name/guid field"; return false; }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                var entry = arr.GetValue(i);
+                var g = guidField.GetValue(entry);
+                foreach (var (group, param) in wanted)
                 {
-                    expose.Invoke(controller, new object[] { param, grp });
-                }
-                catch (Exception)
-                {
-                    // already exposed, or a different signature: SetFloat will tell us at runtime either way
+                    var grp = mixer.FindMatchingGroups(group).FirstOrDefault(x => x.name == group);
+                    var gm = grp?.GetType().GetMethod("GetGUIDForVolume", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                    if (gm == null) continue;
+                    if (Equals(gm.Invoke(grp, null), g))
+                    {
+                        nameField.SetValue(entry, param);
+                        arr.SetValue(entry, i);
+                        break;
+                    }
                 }
             }
+            expProp.SetValue(controller, arr);
+            Debug.Log("[mixer] exposed " + arr.Length + " parameters");
 
             EditorUtility.SetDirty(mixer);
             AssetDatabase.SaveAssets();
