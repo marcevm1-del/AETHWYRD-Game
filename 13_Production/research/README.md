@@ -31,13 +31,14 @@ wired to the verdict rather than sitting beside it.
 
 | File | Area | State |
 |---|---|---|
-| [mcp_servers.md](mcp_servers.md) | MCP servers for a Unity + Blender pipeline, including the ones already configured here | pending |
-| [skills_and_plugins.md](skills_and_plugins.md) | Claude Code skills, plugins, hooks and marketplaces | pending |
-| [video_tutorials.md](video_tutorials.md) | Video tutorials and conference talks, mined frame by frame with `Tools/tutorial_vision/` | pending |
-| [techniques_and_systems.md](techniques_and_systems.md) | World streaming, companion and monster AI, combat feel, save migration | pending |
-| [asset_sources.md](asset_sources.md) | Free and openly licensed asset sources, with exact licence terms | pending |
-| [unprompted.md](unprompted.md) | Things nobody asked about: findings that fell out of the sweeps | pending |
-| [shortlist.md](shortlist.md) | The top ten across all areas, ranked by help per hour of work | pending |
+| [mcp_servers.md](mcp_servers.md) | MCP servers for a Unity + Blender pipeline, including the ones already configured here | written |
+| [skills_and_plugins.md](skills_and_plugins.md) | Claude Code skills, plugins, hooks and marketplaces | written |
+| [video_tutorials.md](video_tutorials.md) | Video tutorials and conference talks, mined frame by frame with `Tools/tutorial_vision/` | written, 3 of 8 videos NOT ASSESSED |
+| [techniques_and_systems.md](techniques_and_systems.md) | World streaming, companion and monster AI, combat feel, save migration | written |
+| [asset_sources.md](asset_sources.md) | Free and openly licensed asset sources, with exact licence terms | Part A written, **Part B not surveyed** |
+| [unprompted.md](unprompted.md) | Things nobody asked about: findings that fell out of the sweeps | written |
+| [books.md](books.md) | *Not part of this sweep* — written by a sibling session onto this branch | sibling |
+| [shortlist.md](shortlist.md) | The top ten across all areas, ranked by help per hour of work | written |
 
 ## Scope boundaries
 
@@ -50,12 +51,38 @@ These are deliberately **not** covered here, because the work is already done or
 
 ## Queue and open items
 
-Written here so a session that is cut off mid-sweep can be resumed by the next one.
+Written here so a session that is cut off can be resumed by the next one. **Start with `shortlist.md`.**
 
-- [ ] Nothing yet — the library was just opened.
+- [ ] **asset_sources.md Part B was never surveyed** (characters and base meshes, animations, textures and
+      HDRIs, 3D kits, fonts, 2D and icons, aggregators). The plan is in that file. Also: web-source the
+      three unsourced archives, read OpenDungeons' art licence, find `rts-props.blend`'s download page,
+      and read TripoSR's model-card licence and the Gemini and OpenAI output terms.
+- [ ] **Three tutorials are NOT ASSESSED** (YouTube 429): the two Unite 2025 talks (Valheim asset streaming,
+      Unity memory) and the Blender geometry-nodes dungeon video. Retry from the home connection, spaced
+      out. Two more were held: foot IK from 1:10 onward, and a toon-shader video that needs a re-scan once
+      `tv.py` can ignore a webcam region.
+- [ ] **skills_and_plugins.md "Still open"** lists ten unread items (the unity-cli advanced reference, the
+      `com.unity.pipeline` licence, the settings and CLI references, the code-intelligence docs).
+- [ ] **mcp_servers.md:** the CoplayDev server's telemetry is unread; the official Blender Lab server's
+      page returned 403 and its licence and tool list are unread; Mixamo's live terms are unread.
+- [ ] **techniques Part B** could not source published streaming numbers or lock-on values; the further
+      Game AI Pro chapters are listed in the raw notes and unread.
+- [ ] `13_Production/completion_plan.md` and `Tools/dashboard/agent_dashboard.py` (reported to exist, scoring
+      the game 25.4%) are **not present at base `8a81418e`**, so the shortlist names files and systems
+      rather than dashboard goal ids. Re-read it against the dashboard when that lands.
 
-**Canon §6 candidates** raised by this research (collected here; `Canon.md` is never edited from this branch):
+**Canon section 6 candidates** (collected here; `Canon.md` is never edited from this branch):
 
-- None yet.
+- **World origin.** `Data/World/world_scale.json` records the north-west corner as decided 2026-11-07 under
+  delegated creative control; the plan recommended Brindlewick, and the float-precision case favours a
+  central origin. The user may wish to overrule it deliberately rather than by default.
+- **AI-generated content policy.** Whether TripoSR output may ship (requiring a Steam disclosure) or is
+  limited to blockout and reference.
+- **Credits screen as a data-driven deliverable**, carrying every CC-BY credit and the Unity section 2.12
+  notice.
+- **Retire four studio agents** that contradict product constraints (`analytics-engineer`,
+  `network-programmer`, `live-ops-designer`, `community-manager`).
 
-**Not present at base `8a81418e`:** `13_Production/completion_plan.md` and `Tools/dashboard/agent_dashboard.py`, which a sibling session reports exist and score the game at 25.4%. Entries here therefore name files and systems rather than that board's goal ids. When the dashboard lands, the shortlist should be re-read against it.
+**Verification status of this library:** every entry carries a tag. The strongest were read from package
+source on disk, licence files and the vendors' own pages; the weakest are marked `SECONDARY` or
+`NOT SOURCEABLE` and none of those carries an "adopt now" verdict.
