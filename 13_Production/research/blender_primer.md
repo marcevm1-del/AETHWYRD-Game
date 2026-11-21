@@ -340,3 +340,30 @@ Decimate modifier types (83 modifier types in all).
 **What this means for the repo:** `Tools/blender/rig_creature.py` and `build_rig.py` build rigs by hand
 (936 and 367 lines); that is a valid reason they exist, because the in-box generator is unavailable. Weight
 transfer between creature variants and spline-IK tails remain **NOT TESTED**.
+
+## 14. What survives the FBX round trip — RAN, with the repo's own export settings
+
+The settings are the ones `bake_to_game.py` documents: `axis_forward="-Z"`, `axis_up="Y"`,
+`apply_scale_options="FBX_SCALE_UNITS"`, `bake_space_transform=True`, `mesh_smooth_type="FACE"`,
+`colors_type="SRGB"`, `add_leaf_bones=False`. A 1,152-face head carrying shape keys, a `Col` vertex-colour
+attribute and transferred custom normals was exported with them and re-imported with `wm.fbx_import`:
+
+| Feature | With a `DATA_TRANSFER` **modifier** on the object | With the one-shot **`bpy.ops.object.data_transfer`** operator |
+|---|---|---|
+| Custom normals | survived (0.15° from the sphere) | survived (**0.10°**; was 6.25° before the transfer) |
+| `Col` colour attribute | survived (`CORNER`, `BYTE_COLOR`) | survived |
+| **Shape keys** | **LOST** — `shape_keys: None` | **survived** (`Basis`, `Smile`) |
+
+**The rule this gives the pipeline: write the custom normals with the operator, never leave the transfer as
+a modifier.** With a modifier on the object, `use_mesh_modifiers=True` made the exporter drop the shape keys
+(a no-modifier control export kept them, which isolates the cause). The operator is called with the
+**source active and the targets selected**: `bpy.ops.object.data_transfer(use_reverse_transfer=False,
+data_type="CUSTOM_NORMAL", use_object_transform=True, loop_mapping="POLYINTERP_NEAREST")` → `{'FINISHED'}`,
+leaving no modifiers behind.
+
+Two honesty notes. My pre-export measurement of the operator variant read 5.94° because I measured it from an
+evaluated mesh; **the re-import figure is the one that counts**, and I am not claiming to understand why the
+two disagreed. And **`NOT TESTED` — whether Unity honours the FBX's custom normals on import** (the importer
+has a Normals setting; "Import" is what would be needed) **and whether it reads the shape keys as
+blendshapes.** That is a Unity-side check, one imported file, and it decides whether the anime face-shading
+trick in section 11 reaches the game.
