@@ -199,7 +199,7 @@
       "target": 680,
       "targetEstimated": false,
       "quality": 1,
-      "evidence": "677 blockout models generated locally. Blockouts, not finished creatures."
+      "evidence": "677 blockout models generated locally. Measured through the Blender MCP on 2026-11-21: they build at 52,000 to 204,000 triangles each, 10 to 40 times a whole human character (11,484 faces), and the --detail medium/low settings did nothing for five of eight sampled species because a hard 0.004 m floor overrode them. Fixed by scaling the floor with the detail level, which gives usable LODs at 7-18% of the face count with no visible difference side by side; high is unchanged, so nothing shipped was altered. Regenerating the 677 as LODs is still to do."
     },
     {
       "id": "environment_art",

@@ -84,7 +84,8 @@ def build(species_id, seed=0, detail="high", overrides=None):
     features.organic(body, look)
     # resolve thin limbs: the finest element sets the grid, within a budget
     min_r = min(e[2] * B.SURFACE * (1.0 if e[0] == "CUBE" else min(e[3])) for e in body.els if not e[5])
-    res = max(0.004, min(DETAIL_RES.get(detail, 0.0075), min_r * 0.75))
+    _floor = {"high": 0.004, "medium": 0.010, "low": 0.020}.get(detail, 0.004)
+    res = max(_floor, min(DETAIL_RES.get(detail, 0.0075), min_r * 0.75))
     verts, faces = B.tessellate(body, res)
     edges = B.edges_of(faces, len(verts))
     verts = B.relax(verts, edges, 2 if detail != "low" else 1)

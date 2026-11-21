@@ -68,3 +68,50 @@ _3 892, each HairSide 92–108). Checked before reporting, because the male figu
 An LLM running `bpy` in a live Blender can destroy unsaved work. Point it at a scratch file, never at a `.blend`
 that matters, and never at a scene somebody has open and unsaved. Nothing here enters `Game/` without going through
 `13_Production/third_party_assets.md` first.
+
+## Creature detail: a knob that was doing nothing
+
+Measured 2026-11-21 in the live session, across eight species chosen one per rig family.
+
+**The shipped library builds every creature at 52,000 to 204,000 triangles.** For comparison, a whole human
+character — body, hair, cloak, boots, the lot — is 11,484 faces, and its body alone is 5,106. A single monster is
+10 to 40 times a hero character.
+
+**`--detail medium` and `--detail low` did nothing for five of the eight.** High, medium and low returned
+identical face counts. The cause is in `ascend_creatures/generate.py`:
+
+```python
+res = max(0.004, min(DETAIL_RES.get(detail, 0.0075), min_r * 0.75))
+```
+
+`min_r` is the creature's smallest feature. Where that feature is small — an ear tip, a claw, a whisker, which is
+most creatures — `min_r * 0.75` falls below the hard 0.004 m floor, `max()` clamps to the floor, and the detail
+setting cannot reach the result. Confirmed by instrumenting the call: the werewolf and the fox both tessellated at
+`res=0.00400` whether asked for high (0.0075) or low (0.0200).
+
+**A reordering does not fix it.** Trying `res = min(detail, max(0.004, min_r * 0.75))` was measured and changed
+nothing, because the floor still wins for small features. Recorded because it is the obvious fix and it is wrong.
+
+**What works** is letting the floor itself follow the detail level:
+
+```python
+_floor = {"high": 0.004, "medium": 0.010, "low": 0.020}.get(detail, 0.004)
+res = max(_floor, min(DETAIL_RES.get(detail, 0.0075), min_r * 0.75))
+```
+
+| Species | high | medium | low | low as % of high |
+|---|---|---|---|---|
+| mon_bog_werewolf | 142,665 | 37,405 | 11,061 | 8% |
+| mon_grakkus_the_orc_disaster | 204,111 | 78,103 | 21,295 | 10% |
+| mon_mana_fox | 181,592 | 46,364 | 12,524 | 7% |
+| mon_meadow_armor_beetle | 75,325 | 42,521 | 11,049 | 15% |
+| mon_bog_lich | 52,295 | 23,851 | 9,175 | 18% |
+| mon_phantom_cube_slime | 186,591 | 73,663 | 27,335 | 15% |
+
+Looked at as well as counted: the werewolf at 142,665 faces and at 11,061 are indistinguishable side by side from
+the front and three-quarter views. Thirteen times the triangles buys nothing you can see at normal distance.
+
+**Why this was safe to land.** The library builds at `--detail high`, and high is unchanged — verified by
+regenerating all eight and comparing face counts against the recorded originals, all eight identical. The change
+only affects medium and low, which previously did nothing at all. **Regenerating the 677 models as LODs is a
+separate decision** and belongs to whoever owns the creature pipeline.
