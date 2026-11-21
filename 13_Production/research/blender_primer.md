@@ -235,3 +235,35 @@ For generators that build hundreds of objects (this repo's buildings, creatures,
 
 None of these is exotic. The practical rule for a generator script: **hold a dict of what you created,
 re-fetch rather than cache across mode switches, and iterate over a copy.**
+
+## 10. Methods for learning Blender that work — from the official scripting talk and from doing it
+
+**The Blender conference talk "Getting Started with Scripting in Python" (Blender's own channel, 49:24,
+`wWTAQP7-ZUQ`).** Read from its cached captions only; **the video itself was not mined** — the 1080p
+download crawled and was stopped, and a later fetch got HTTP 403. So this is `Verified: captions only`,
+and the captions are auto-generated, so API names are sometimes mangled. It is an introductory talk, and
+its most useful content is how to *discover* the API rather than what the API is:
+
+1. **Do something in the UI, then read the Info log** (the scripting workspace's log pane). Blender prints
+   the exact `bpy.ops` call it just ran — his demonstration is an extrude, whose operator call he copies
+   from the log and pastes into the Python console to repeat it. This is the fastest way to learn which
+   operator does what.
+2. **Turn on Python tooltips** in Preferences → Interface. Hovering any UI property then shows its API
+   path (for example `bpy.data.objects["Cube"].show_bounds`), and editing it in the UI prints the same
+   assignment to the log. Every property in the interface has a script spelling you can read off.
+3. **`help(bpy)`, `type(obj)`, and tab-completion in the console** to explore: `type(bpy.context.active_object)`
+   gives `bpy.types.Object`, and `.data` is the mesh. Up-arrow recalls history.
+4. **All of Python is available** — `random`, `time`, `sys` — so a generator can use ordinary libraries.
+5. His worked project turns a script into an **operator class** that registers into a menu; the repo's
+   generators do not need that, since they run headless with `-P`.
+
+**What I did that worked here (this session):** every claim in sections 1–8 comes from a short script run
+under `blender -b --factory-startup`, each answering one question with a number, and each caught something
+a document had wrong. That is the method to keep: **ask the binary, not the docs, and time it.**
+`Tools/blender/` already has a CLI shape (`-- --ids ...`) that makes a single-creature run take eight
+seconds, so experiments are cheap.
+
+**Mining the short tutorials — NOT ASSESSED at the time of writing.** Five short Blender videos were
+queued (colour-palette atlas textures, vertex colours from Blender 4.5 into Unity 6, what Geometry Nodes
+are, game-texture basics, rigging). The first fetch failed with **HTTP 403 on the video data**. The tool
+does not work around that and I did not. They stay queued in [video_tutorials.md](video_tutorials.md).

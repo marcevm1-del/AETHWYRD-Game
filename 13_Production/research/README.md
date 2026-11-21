@@ -38,6 +38,7 @@ wired to the verdict rather than sitting beside it.
 | [asset_sources.md](asset_sources.md) | Free and openly licensed asset sources, with exact licence terms | Part A written, **Part B not surveyed** |
 | [unprompted.md](unprompted.md) | Things nobody asked about: findings that fell out of the sweeps | written |
 | [books.md](books.md) | *Not part of this sweep* — written by a sibling session onto this branch | sibling |
+| [blender_primer.md](blender_primer.md) | What was learned about Blender by running 5.3 headless and reading its docs; corrects the Blender version and the FBX 6.1 and retopology claims | written, still growing |
 | [shortlist.md](shortlist.md) | The top ten across all areas, ranked by help per hour of work | written |
 
 ## Scope boundaries
