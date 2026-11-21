@@ -577,3 +577,103 @@ needs the armature to travel with the LODs. **Estimate 3–5 hours**, including 
 check in Unity — which is **NOT TESTED**, as is a *real creature* rather than a tube: face and limb joints
 are where weight transfer fails, and that is the "face-protect vertex group" the sweep recommended
 alongside quadric collapse.
+
+---
+
+## 18. A second learner's lessons — RAN on Blender 5.3.0 (Python 3.13.13), each with its render or output
+
+> Written by a second session working the same brief in parallel (2026-11-21), which ran its own five-lesson
+> curriculum before reading sections 1–17. Everything here is **new to this primer**; where a lesson simply
+> re-derived something above (QuadriFlow drops `Col`, Data Transfer restores it, weight transfer, the FBX
+> mesh round trip), it is left out. Lesson scripts are kept outside the repo; the recipes below are complete.
+
+### 18a. Why a cel-shaded object renders in its shadow tone everywhere — two independent causes
+
+A lantern post built with `bmesh` (cone, then two `extrude_face_region` steps) rendered entirely in the shadow
+colour although the sun was on the camera's side. **Diagnosis method worth reusing:** put a white UV sphere
+beside the subject with a debug material — `Diffuse BSDF → Shader to RGB → Emission`, no ramp — and route the
+same raw value into the subject's material. The sphere lit correctly; the post's raw value was **pure black**.
+
+1. **Inward normals from bmesh extrusion.** A centroid test (`face.normal · (face.center − mesh centre) < 0`)
+   found **10 of 28 faces pointing inward**; `bmesh.ops.recalc_face_normals(bm, faces=bm.faces)` brought it to
+   1 (the concave underside of the lamp box, where the centroid test is only approximate). **Rule: call
+   `recalc_face_normals` after any bmesh construction that extrudes.** A cel shader hides this fault worse
+   than a PBR one, because an inward face simply drops into the shadow band rather than looking broken.
+2. **The inverted-hull outline shadows its own object.** Even with normals fixed, the post stayed dark: the
+   Solidify hull (flipped normals, `material_offset` to an ink slot) is a closed shell *around* the body, and
+   `use_backface_culling` hides it from the **camera only** — the sun still sees it. Fix:
+   `ink.use_backface_culling_shadow = True`. **`Tools/blender/toon_preview.py:362` already does exactly
+   this**, so this section explains an existing line rather than adding a rule; it is recorded so nobody
+   removes it as redundant.
+
+Result after both fixes: lit `#C9A66B`, a clean shadow band on the far facets, the lamp box's shadow on the
+post, a cast shadow on the grass, ink outline and rim — the house look, reached from first principles.
+
+### 18b. Socket traps in node scripting
+
+- **`ShaderNodeMix` has duplicate socket names**, one A/B pair per data type (`A_Float`, `A_Vector`,
+  `A_Color`, …). With `data_type = "RGBA"`, **`mix.inputs["A"]` returns `A_Float`, which is disabled** — the
+  link is made and silently does nothing. **Pick inputs by identifier:**
+  `next(s for s in mix.inputs if s.identifier == "A_Color")`. Output lookup by name *did* return the enabled
+  `Result_Color` in this run, so the trap is asymmetric — do not rely on that either.
+  `FunctionNodeRandomValue` has the same shape: choose the output with `o.enabled and o.type == "VALUE"`.
+- **ColorRamp positions are stored as float32**: `elements[1].position == 0.45` is `False` (it is
+  `0.4499…`). Compare with a tolerance.
+- **`hasattr(bpy.ops.wm, "collada_export")` is `True` on 5.3 although the operator is gone** —
+  `bpy.ops.<module>` builds a wrapper for any name. Test existence with
+  `getattr(bpy.ops.wm, name).get_rna_type()` inside `try/except (KeyError, AttributeError)`: that returned
+  `False` for `collada_export` and `True` for `wm.obj_export`, `export_scene.fbx`, `export_scene.gltf`.
+- **`RenderSettings.engine`'s static `enum_items` lists only `BLENDER_EEVEE`.** The real set comes from the
+  error of a bad assignment: `('BLENDER_EEVEE', 'BLENDER_WORKBENCH', 'CYCLES')`. (The Blender MCP's own
+  instructions give the same advice.)
+
+### 18c. A sky the camera sees but that does not light the subject
+
+Lesson 1's pale world lifted every shadow above the ramp threshold. The world node tree fix, which is what
+`toon_preview.py` describes as "a painted-sky world that does not light the subject":
+`Light Path.Is Camera Ray → Mix Shader.Fac`, shader 1 = black `Background`, shader 2 = the sky
+`Background`. Only camera rays see the sky. Also: **material and world colour fields are linear** — palette
+hexes from `art_direction.md` need the sRGB→linear transform (`c/12.92` below 0.04045, else
+`((c+0.055)/1.055)^2.4`) or every colour reads washed out.
+
+### 18d. Geometry Nodes authored from Python — fills the gap listed in section 5
+
+A scatter tree built entirely in code, verified by the evaluated vertex count (121 → **3,121**):
+
+- Interface: `ng.interface.new_socket(name, in_out="INPUT"|"OUTPUT", socket_type="NodeSocketGeometry"|"NodeSocketFloat")`;
+  the returned socket's `.identifier` (`Socket_1`) is what the modifier is keyed by.
+- `Join Geometry` has a **multi-input** socket: link to `join.inputs["Geometry"]` once per input.
+- **Setting a modifier input on 5.3: `getattr(mod.properties.inputs, "Socket_1").value = 6.0` worked** — the
+  5.2 RNA path, confirmed on 5.3 by running it. The legacy `mod["Socket_1"]` is the fallback for older files.
+- Read the result through the depsgraph: `obj.evaluated_get(bpy.context.evaluated_depsgraph_get())`.
+
+### 18e. Animation through the FBX round trip — not covered by section 14
+
+A 4-bone rig (non-deforming `root`, three connected `spine_*`), bone-heat weights through
+`parent_set(type="ARMATURE_AUTO")` in a `temp_override` (0 of 720 vertices unweighted), and a 24-frame
+sway keyed with `pose_bone.keyframe_insert("rotation_euler", frame=f)`. The keys land in a **slotted Action**
+(slot `OBRig`, 6 F-curves, read through `bpy_extras.anim_utils.action_get_channelbag_for_slot`). Exported with
+the `build_rig.py` settings (`bake_space_transform=False`, `bake_anim=True`, `bake_anim_use_all_actions=False`)
+and re-imported:
+
+| Survived | Did not survive as written |
+|---|---|
+| Bone names and hierarchy; vertex groups; `Col`; root rotation 0 and scale 1 | **The action name**: `sway` came back as **`Rig|Scene`** — the FBX take is named after the scene when `bake_anim_use_all_actions=False` |
+| The animation itself | **The frame range**: authored 1–24, re-imported as **2–25**. Observed, **not explained** |
+
+Both matter for Unity, which names clips from FBX takes. **The rule this suggests: export clips with
+`bake_anim_use_all_actions=True` so each Action becomes a take under its own name**, and check the first
+frame in Unity rather than in Blender's re-import. `NOT TESTED — what Unity's importer shows for the take
+name and the first frame`; one imported file settles it.
+
+### 18f. Script-authoring traps that cost time here
+
+- **`exec(open(other_lesson).read())` shares globals**: the included script reassigned my output-path
+  variable, so a "fixed" render was written to the scratch path — twice, in two lessons. Chain lessons with
+  functions and unique names, never by `exec`.
+- **Bash heredocs with apostrophes broke** a multi-hundred-line write (the repo's CLAUDE.md already warns);
+  write the script with a file tool and run it.
+- The Blender MCP could not be used (`localhost:9876` refused: Blender not open, and the installed add-ons
+  under both `5.2/` and `5.3/` are flagged outdated for protocol 16). **Headless `-b --factory-startup`
+  plus rendering a PNG and looking at it was enough for every lesson** — and it touches none of the user's
+  open files and sends no telemetry.
