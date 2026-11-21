@@ -267,3 +267,76 @@ seconds, so experiments are cheap.
 queued (colour-palette atlas textures, vertex colours from Blender 4.5 into Unity 6, what Geometry Nodes
 are, game-texture basics, rigging). The first fetch failed with **HTTP 403 on the video data**. The tool
 does not work around that and I did not. They stay queued in [video_tutorials.md](video_tutorials.md).
+
+---
+
+## 11. Anime-character techniques — each RAN headless on Blender 5.3
+
+**Inverted-hull outline — works.** Duplicate the mesh, give the copy a **Solidify** modifier
+(`thickness = 0.04`, `offset = 1.0`, `use_flip_normals = True`; all four properties exist in 5.3) and a flat
+emission material with **`material.use_backface_culling = True`** (the property exists in 5.3). EEVEE
+rendered a clean dark ring around a toon-shaded egg; I confirmed it by reading the image, not by trusting
+a number. The numeric check I first wrote **failed for a reason worth recording: `image.pixels` returns
+sRGB-encoded values**, so a linear 0.05 outline colour reads as ≈0.25, and my "dark pixel" threshold of
+0.12 counted nothing. **Always threshold in display space.** (This is the same technique as the Outline
+pass in `Game/Assets/_Game/Art/Shaders/AscendToon.shader` — `Cull Front`, vertices pushed along the
+smoothed normal — so the Blender preview and the Unity shader agree.) Cost of the Blender-side hull is a
+second copy of the mesh; in the game the second *pass* replaces it.
+
+**Clean face shading by transferring normals — works, and is measurable.** A sphere deformed with a nose
+bump and cheek ripples had a mean **6.25°** deviation from a pure sphere's normals; adding a
+**`DATA_TRANSFER`** modifier (`use_loop_data = True`, `data_types_loops = {"CUSTOM_NORMAL"}`,
+`loop_mapping = "POLYINTERP_NEAREST"`) from a smooth sphere proxy took it to **0.1°**. This is the standard
+anime trick (a face that shades like a smooth ball despite its relief), and in 5.3 it needs no auto-smooth
+setting. Read corner normals with `mesh.corner_normals`. Whether the FBX export carries custom normals into
+Unity is **NOT TESTED** and decides whether the trick survives the pipeline.
+
+**Shape keys (blendshapes) — work.** `obj.shape_key_add(name="Basis", from_mix=False)` then a second key,
+edit its `data[i].co`, set `.value`; evaluating the mesh showed bounding-box width go from **2.0 to 2.263**
+as `Smile.value` went 0 → 1. Names are free-form, so a Unity/VRM/ARKit-style naming scheme is a convention
+to choose, not an API constraint. `NOT TESTED` — FBX export of shape keys.
+
+## 12. Monster techniques — RAN
+
+**Skin modifier from a skeleton graph — the strongest finding for a 680-species generator.** A mesh of
+**17 vertices and 16 edges** (spine, neck, head, four two-segment legs, tail) given a `SKIN` modifier with
+per-vertex radii (`me.skin_vertices[0].data[i].radius = (rx, ry)`) and a `SUBSURF` modifier at level 2
+evaluated to **2,122 vertices / 2,120 faces** and rendered as a clearly recognisable quadruped silhouette.
+Species variation becomes **data**: change the graph and the radii. Applying both modifiers
+(`modifier_apply`) gives a plain mesh the existing bake step can take. That is a far smaller input than the
+repo's current generators build by hand, and it is the technique most of the Blender creature tutorials
+use. The result is a smooth blob with no features — it is a *body*, and horns, eyes and limbs-with-joints
+still need adding. `NOT TESTED` — whether it reads as the house style once toon-shaded and detailed.
+
+**Geometry Nodes scatter, built from Python, works — with two traps.**
+`bpy.data.node_groups.new("Spikes", "GeometryNodeTree")`, sockets via `ng.interface.new_socket(name=…,
+in_out="INPUT"|"OUTPUT", socket_type="NodeSocketGeometry")`, then Distribute Points on Faces → Instance on
+Points → Join Geometry gave **365 spike instances on a 1,152-face sphere**. The traps, both hit for real:
+1. **Socket availability depends on the distribute method.** In `POISSON` mode the density input is
+   **`Density Max`**, not `Density` (that socket exists in the list but is disabled), so
+   `inputs["Density"]` raised `KeyError`. Check `[s.name for s in node.inputs if s.enabled]`.
+2. **Instances are not geometry until realised.** Before adding a **Realize Instances** node the evaluated
+   mesh still had 1,152 faces ("0 instances"); after it, 3,707. Anything that exports through a mesh path
+   needs the node; the in-engine alternative is to keep them as instances.
+
+Also confirmed present in 5.3: the Skin, Remesh, Subdivision, Boolean, Solidify, Weld, Displace and
+Decimate modifier types (83 modifier types in all).
+
+## 13. Rigging — RAN
+
+- **Armature plus automatic weights works headless.** A subdivided cylinder, a three-bone armature built
+  through `edit_bones` (`new()`, `parent`, `use_connect`), and `bpy.ops.object.parent_set(type="ARMATURE_AUTO")`
+  → `{'FINISHED'}`, vertex groups `['root', 'mid', 'top']` created. Posing the `mid` bone 40° moved the
+  topmost vertex from y = 0.40 to y = −1.36, so the weights really deform the mesh. (`parent_set` needs the
+  mesh selected and the armature active.)
+- **Rigify does not work headless here.** `addon_utils.enable("rigify")` returned False and raised
+  `KeyError: key "rigify" not found`; the metarig operators exist and the human metarig added **159
+  bones**, but **`bpy.ops.pose.rigify_generate()` fails with `'RigifyParameters' object has no attribute
+  'make_custom_pivot'`** — the generator's Python is not loaded. In 5.x Rigify is an *extension* that has
+  to be installed, which needs the internet and is **the user's action**. Metarig adders present in 5.3:
+  `human`, `basic_human`, `basic_quadruped`, `bird`, `cat`, `horse`, `shark`, `wolf` — useful as bone-layout
+  references for creature rigs even without the generator.
+
+**What this means for the repo:** `Tools/blender/rig_creature.py` and `build_rig.py` build rigs by hand
+(936 and 367 lines); that is a valid reason they exist, because the in-box generator is unavailable. Weight
+transfer between creature variants and spline-IK tails remain **NOT TESTED**.
