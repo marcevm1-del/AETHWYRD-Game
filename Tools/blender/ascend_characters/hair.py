@@ -257,11 +257,23 @@ def style_bob(h):
 
 
 def style_long_loose(h):
-    h.cap(20, nape=True, vol=1.0)
-    _group(h, TOP, NOFRONT, 54, (0.280, 0.340), 0.45, 1.0, w0=0.0100, bone="Back", ctrl=(0.3, 0.25), jitter=0.18)
-    _group(h, [22], FRONT, 9, (0.034, 0.050), 0.25, 0.85, side=0.5, fwd=0.35, w0=0.0085, min_z=0.947)
-    _group(h, [22], SIDEL, 6, (0.17, 0.21), 0.5, 1.0, w0=0.0090, bone="SideL")
-    _group(h, [22], SIDER, 6, (0.17, 0.21), 0.5, 1.0, w0=0.0090, bone="SideR")
+    # Rebuilt 2026-11-22. It read as a curtain of separate noodles with the scalp showing between them, because
+    # 54 strands were rooted on TOP alone - two rings, about 22 distinct roots - so strands tripled up on the same
+    # spots and left gaps everywhere else, and out=0.45 pushed the whole curtain away from the head. Now: roots
+    # over the whole back of the skull, three length layers so the mass is closed near the head and long at the
+    # ends (the big-medium-small idea), and the fall hugs the head instead of standing off it.
+    h.cap(20, nape=True, vol=1.30)
+    # Counts trimmed after the first attempt came out at 37,142 triangles against a 30,000 budget - the art gate
+    # caught it. The long layer carries the silhouette so it keeps most of its strands; the two filler layers
+    # exist only to close gaps near the head, where fewer and slightly wider strands do the same job.
+    _group(h, [19, 20, 21, 22, 23], NOFRONT, 92, (0.270, 0.340), 0.26, 1.0, w0=0.0104, bone="Back",
+           ctrl=(0.22, 0.22), jitter=0.16)
+    _group(h, [20, 21, 22], NOFRONT, 34, (0.120, 0.190), 0.22, 1.0, w0=0.0104, bone="Back",
+           ctrl=(0.20, 0.16), jitter=0.20)
+    _group(h, [19, 20, 21], NOFRONT, 20, (0.050, 0.090), 0.18, 1.0, w0=0.0098, ctrl=(0.16, 0.10), jitter=0.22)
+    _group(h, [21, 22, 23], FRONT, 16, (0.040, 0.056), 0.22, 0.95, side=0.45, fwd=0.35, w0=0.0085, min_z=0.947)
+    _group(h, [21, 22], SIDEL, 10, (0.17, 0.22), 0.34, 1.0, w0=0.0090, bone="SideL")
+    _group(h, [21, 22], SIDER, 10, (0.17, 0.22), 0.34, 1.0, w0=0.0090, bone="SideR")
 
 
 def style_high_ponytail(h):

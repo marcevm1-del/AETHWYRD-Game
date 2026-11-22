@@ -137,10 +137,10 @@
       "note": "long hair and layered skirt give a clear shape"
     },
     "hair_reads_as_hair": {
-      "verdict": "FAIL",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "worst hair of the eight. From the back it is a curtain of separated strands with gaps showing through to the scalp, and from the side it hangs as a flat sheet. Reads as noodles, not hair"
+      "note": "fixed: a continuous mass with layered texture, no scalp showing through from behind, and it falls with the head instead of standing off it. Was FAIL - 54 strands rooted on two rings left gaps everywhere. The ends are still uniform in length, which is the next thing to vary"
     },
     "face_reads": {
       "verdict": "PASS",

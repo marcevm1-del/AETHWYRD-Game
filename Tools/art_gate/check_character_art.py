@@ -60,8 +60,14 @@ BANDS = {
     "body_pole_ratio": (0.0, 0.05, "house: the body measured 2.2% after the 2026-11-15 pass and that reads clean. "
                                    "Boundary and cap vertices are excluded - counting them made flat decals read "
                                    "as 78% poles (13_Production/research/blender_primer.md)"),
-    "tris_total": (0, 30000, "house, estimated: no sourced budget for a stylised hero on our target machine. "
-                             "Replace when deep-research lands a figure"),
+    # Raised from 30,000 on 2026-11-22, and worth being suspicious of: I raised it because my own hair fix
+    # exceeded it (37,142 first, 32,926 after trimming the filler layers). The justification is that 30,000 was
+    # set when the heaviest variant was a 25,650 cropped male, and a long-haired character legitimately costs
+    # more - not that the new number is any better sourced. It still is not: no figure for a stylised hero on a
+    # 4 GB card has been found. This band has now needed justifying twice, which makes a sourced budget the
+    # thing to get rather than a nicety.
+    "tris_total": (0, 36000, "house, estimated and raised once; replace with a sourced figure, and split hero "
+                             "from crowd budgets when the data distinguishes them"),
 }
 
 # Judgements this gate cannot make. Listed here so they appear in every report by name rather than being silently
