@@ -337,12 +337,39 @@ curve, and it is the reason to build this one.
 The palette now does work: the creature **lightens in value** as the fight goes on, visibly closer to bone at the
 end. That is the whole design in one glance.
 
-## What this costs, honestly
+## What this costs: measured 2026-11-22, no longer NOT ASSESSED
 
-The shed slabs must persist as collidable props for the length of the fight, and must not break pathing for the
-player or for anything else in the arena. That is Unity work we have not done and have not measured:
-**NOT ASSESSED**. If the slabs cannot persist, the design loses its best third and should be reconsidered rather
-than shipped hollow, because an arena-changing monster whose arena does not change is a charging beast again.
+The open question was whether debris breaks the monsters that have to move through it. Monsters here do not use a
+NavMesh: `MonsterController` steps with `transform.position += Blocked(dir, speed * dt)`, and `Blocked` slides along
+a wall **at most twice** before returning zero. Two slides is fine against one wall and is the obvious thing to fail
+in a cluster, so `SlabFieldPlayModeTests` measures it with a goblin chasing the player across a field of slabs.
+
+| Case | Slabs | Spacing | Ground closed | Stalled far from the player |
+|---|---|---|---|---|
+| control, open ground | 0 | — | 6.21 m | no |
+| flat slabs | 18 | 0.9 m | **6.21 m** | no |
+| upright slabs | 24 | 0.9 m | 8.25 m | no |
+| upright, dense | 35 | 0.65 m | 9.59 m | **yes** |
+
+**Three findings, and they change the design.**
+
+1. **Debris must land on edge.** The flat field produced a result identical to the control, to the centimetre,
+   because `MonsterController.Solid` treats any surface with `normal.y > 0.6` as walkable ground. A slab lying flat
+   is not an obstacle and is not cover — it is a 50 mm doormat. If the Vaultbreaker's plate falls flat, the arena
+   does not change at all and the best third of the design quietly does nothing.
+2. **On edge at about 0.9 m apart, it works.** The monster crossed a 24-slab field and reached the player with no
+   jam, and in fact closed *more* ground than the control because it started further back. The design is viable.
+3. **At 0.65 m it jams.** Gaps near body width trap the thing for more than a second and a half at a time. It still
+   arrived, but it was stuck on the way, which in a real fight reads as a broken monster.
+
+**So the design gets a rule:** shed slabs land on edge, and no closer than roughly **0.9 m** to another slab. That
+is a spacing constraint on wherever the shedding is implemented, not new avoidance code, and it is cheap. If a
+future fight wants denser debris than that, `Blocked`'s two slide iterations are what would need revisiting first.
+
+One note on how this was measured, because it nearly went wrong. The first version of the test called any period of
+standing still a jam — and it failed the **open-ground control**, which has no slabs in it at all. The monster was
+not jammed; it had arrived and was attacking, and attacking monsters do not move. The metric now only counts
+standing still while more than 4 m from the player. A test whose control fails is telling you about the test.
 
 Earth, menace 5, about 2.8 m at the shoulder falling to roughly 2.2 m as it spends its plate. Iron Hold and the
 Strife Marches, where there are vaults worth breaking.
