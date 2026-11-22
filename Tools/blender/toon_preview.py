@@ -227,8 +227,13 @@ def _strip(mat):
     return m, base, ecol, estr, alpha
 
 
-def toon_material(mat, kind="creature"):
-    """A two-tone (plus rim on creatures) emission copy of mat."""
+def toon_material(mat, kind="creature", base_hint=None):
+    """A two-tone (plus rim on creatures) emission copy of mat.
+
+    base_hint: the surface's representative linear RGB, when the caller knows it (apply() reads it from the
+    mesh's Col attribute). It drives SHADOW_LIFT_BY_KIND: the darker the surface, the less the shadow darkens
+    it, because a plain multiply collapses dark skin into a flat mask while leaving light skin readable.
+    """
     m, base, ecol, estr, alpha = _strip(mat)
     m.name = PREFIX + mat.name
     nt = m.node_tree
@@ -241,36 +246,20 @@ def toon_material(mat, kind="creature"):
     ramp = N.new("ShaderNodeValToRGB")
     ramp.color_ramp.interpolation = "CONSTANT"
     e0, e1 = ramp.color_ramp.elements
-    e0.position, e0.color = 0.0, (*SHADOW_BY_KIND.get(kind, SHADOW_TINT), 1)
+    tint = SHADOW_BY_KIND.get(kind, SHADOW_TINT)
+    lift = SHADOW_LIFT_BY_KIND.get(kind, 0.0)
+    if lift > 0 and base_hint is not None:
+        lum = 0.2126 * base_hint[0] + 0.7152 * base_hint[1] + 0.0722 * base_hint[2]
+        amt = max(0.0, min(1.0, (1.0 - lum) * lift))
+        tint = tuple(c + (1.0 - c) * amt for c in tint)   # towards white, in proportion to how dark the surface is
+    e0.position, e0.color = 0.0, (*tint, 1)
     e1.position, e1.color = STEP, (1, 1, 1, 1)
     L.new(diff.outputs[0], s2r.inputs[0])
     L.new(s2r.outputs["Color"], bw.inputs[0])
     L.new(bw.outputs[0], ramp.inputs["Fac"])
     mul, a, b, res = _mix(nt, "MULTIPLY")
     _feed(nt, base[0], base[1], a)
-    shadow_col = ramp.outputs["Color"]
-    lift = SHADOW_LIFT_BY_KIND.get(kind, 0.0)
-    if lift > 0:
-        # factor = (1 - luminance(base)) * lift, so a black base is lifted most and a white base not at all
-        lum = N.new("ShaderNodeRGBToBW")
-        _feed(nt, base[0], base[1], lum.inputs[0])
-        inv = N.new("ShaderNodeMath")
-        inv.operation = "SUBTRACT"
-        inv.inputs[0].default_value = 1.0
-        L.new(lum.outputs[0], inv.inputs[1])
-        amt = N.new("ShaderNodeMath")
-        amt.operation = "MULTIPLY"
-        amt.use_clamp = True
-        amt.inputs[1].default_value = lift
-        L.new(inv.outputs[0], amt.inputs[0])
-        lift_mix = N.new("ShaderNodeMix")
-        lift_mix.data_type = "RGBA"
-        lift_mix.blend_type = "MIX"
-        L.new(amt.outputs[0], lift_mix.inputs["Factor"])
-        L.new(shadow_col, lift_mix.inputs[6])
-        lift_mix.inputs[7].default_value = (1, 1, 1, 1)
-        shadow_col = lift_mix.outputs[2]
-    L.new(shadow_col, b)
+    L.new(ramp.outputs["Color"], b)
     col = res
     rim = RIM.get(kind, 0.0)
     if rim > 0:
@@ -612,6 +601,36 @@ def outline_thickness(objs, kind="creature", tile=320, margin=MARGIN, yaw=-35.0,
     return OUTLINE_PX.get(kind, 1.5) * (2 * th * D) / float(w)
 
 
+def _slot_colour(obj, slot):
+    """Mean linear colour of the faces using this material slot, from the mesh's Col attribute. None when the mesh
+    carries no vertex colour, in which case the shadow lift cannot be judged and is left off."""
+    me = obj.data
+    attr = None
+    for name in ("Col", "Color", "Attribute"):
+        if hasattr(me, "color_attributes") and name in me.color_attributes:
+            attr = me.color_attributes[name]
+            break
+    if attr is None:
+        return None
+    try:
+        per_point = attr.domain == "POINT"
+        total = [0.0, 0.0, 0.0]
+        n = 0
+        for poly in me.polygons:
+            if poly.material_index != slot:
+                continue
+            for li in poly.loop_indices:
+                idx = me.loops[li].vertex_index if per_point else li
+                c = attr.data[idx].color
+                total[0] += c[0]; total[1] += c[1]; total[2] += c[2]
+                n += 1
+        if not n:
+            return None
+        return (total[0] / n, total[1] / n, total[2] / n)
+    except Exception:
+        return None
+
+
 def apply(objs, kind="creature", tile=320, frame=None, yaw=-35.0, pitch=None, margin=MARGIN):
     """Bakes objs to toon copies with inverted-hull outlines. frame: the objects the camera will frame (defaults to
     the baked copies), used to size the outline in pixels. Returns the new objects (copies + hulls); the originals
@@ -628,11 +647,13 @@ def apply(objs, kind="creature", tile=320, frame=None, yaw=-35.0, pitch=None, ma
         for i, m in enumerate(c.data.materials):
             if m is None:
                 continue
-            if m.name not in toon_cache:
-                tm = toon_material(m, kind)
+            hint = _slot_colour(c, i) if kind in SHADOW_LIFT_BY_KIND else None
+            key = (m.name, None if hint is None else tuple(round(v, 2) for v in hint))
+            if key not in toon_cache:
+                tm = toon_material(m, kind, base_hint=hint)
                 tm["tp_src"] = m.name
-                toon_cache[m.name] = tm
-            c.data.materials[i] = toon_cache[m.name]
+                toon_cache[key] = tm
+            c.data.materials[i] = toon_cache[key]
         copies.append(c)
     bpy.context.view_layer.update()
     t = outline_thickness(frame or copies, kind, tile, margin, yaw, pitch) if copies else 0.01
