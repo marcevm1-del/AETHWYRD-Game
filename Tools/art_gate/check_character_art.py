@@ -242,6 +242,11 @@ def measure(vid):
         r.add("body_pole_ratio", NOT_ASSESSED, "no _body mesh")
 
     # --- the rig's swing chains: carried bones that nothing uses are dead weight in every clip ------------------
+    # The rig carries a fixed 62-bone contract on every character, so a cropped head has nothing to weight to the
+    # Hair* chain and a character with no cloak has nothing for CloakBack_*. The first version of this check
+    # flagged all of that and produced eight CONCERNS that were simply correct behaviour - a check that fires on
+    # a thing being right teaches people to ignore it. It now asks the only question that means anything: when
+    # the PART exists and is long enough to swing, is its chain actually weighted?
     swing = [b.name for b in rig.data.bones if b.name.startswith(("Hair", "Cloak"))]
     if not swing:
         r.add("swing_bones_used", NOT_ASSESSED, "this rig declares no Hair*/Cloak* bones")
@@ -253,10 +258,26 @@ def measure(vid):
                 for g in v.groups:
                     if g.weight > 1e-5 and names.get(g.group, "").startswith(("Hair", "Cloak")):
                         used.add(names[g.group])
-        unused = sorted(set(swing) - used)
-        r.add("swing_bones_used", CONCERNS if unused else PASS,
-              ("carried but unused: " + ", ".join(unused)) if unused else
-              "all %d swing bones are weighted" % len(swing), len(unused))
+        problems, notes = [], []
+        nape = 0.86 * H                      # below the nape is where hair starts needing to swing
+        for prefix, part_suffix, label in (("Hair", "_hair", "hair"), ("Cloak", "_cloak", "cloak")):
+            chain = [b for b in swing if b.startswith(prefix)]
+            if not chain:
+                continue
+            part = next((o for o in meshes if o.name.endswith(part_suffix)), None)
+            if part is None:
+                notes.append("no %s on this variant, so its chain is idle by design" % label)
+                continue
+            lowest = min((part.matrix_world @ v.co).z for v in part.data.vertices)
+            if prefix == "Hair" and lowest > nape:
+                notes.append("hair ends above the nape, so it has nothing to swing")
+                continue
+            if not (set(chain) & used):
+                problems.append("%s reaches to %.2f m but no %s* bone is weighted" % (label, lowest, prefix))
+            else:
+                notes.append("%s is weighted to its chain" % label)
+        r.add("swing_bones_used", CONCERNS if problems else PASS,
+              "; ".join(problems) if problems else "; ".join(notes) or "nothing to check", len(problems))
 
     # --- what this gate cannot judge ---------------------------------------------------------------------------
     # These stay NOT ASSESSED until somebody renders the character, looks at it, and records a verdict with their

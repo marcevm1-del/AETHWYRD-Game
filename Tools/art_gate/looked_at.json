@@ -27,10 +27,10 @@
       "note": "frontal key keeps the terminator off the face"
     },
     "outfit_reads": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "cloak has folds and an uneven hem, but the hood still reads as a stiff shelf from the side"
+      "note": "fixed: the hood is a rolled fold with thickness now, not a single-walled shell seen edge-on. Reads as a hood from the side and the back. Was CONCERNS on all four cloaked variants for the same cause; cloak has folds and an uneven hem, but the hood still reads as a stiff shelf from the side"
     }
   },
   "human_male_young_slim": {
@@ -91,10 +91,10 @@
       "note": "fixed: the shadow lift keeps dark skin separated from its own shadow instead of collapsing into it"
     },
     "outfit_reads": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "blue cape drapes well; hood is the same stiff shelf from the side"
+      "note": "fixed: the hood is a rolled fold with thickness now, not a single-walled shell seen edge-on. Reads as a hood from the side and the back. Was CONCERNS on all four cloaked variants for the same cause"
     }
   },
   "human_male_elder_wayfarer": {
@@ -123,10 +123,10 @@
       "note": "even"
     },
     "outfit_reads": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "red cloak reads; hood shelf again"
+      "note": "fixed: the hood is a rolled fold with thickness now, not a single-walled shell seen edge-on. Reads as a hood from the side and the back. Was CONCERNS on all four cloaked variants for the same cause; red cloak reads"
     }
   },
   "human_female_base": {
@@ -219,10 +219,10 @@
       "note": "even"
     },
     "outfit_reads": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "green tunic, cape and layered skirt all read; hood shelf again"
+      "note": "fixed: the hood is a rolled fold with thickness now, not a single-walled shell seen edge-on. Reads as a hood from the side and the back. Was CONCERNS on all four cloaked variants for the same cause"
     }
   },
   "human_female_elder_scholar": {

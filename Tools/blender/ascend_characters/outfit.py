@@ -213,24 +213,39 @@ def _cloak(sp, L, body, col, cloakc, trim):
             mb.F.append((a[j], a[j + 1], b_[j + 1], b_[j]))
 
     # The hood: a cowl lying on the shoulders and rising behind the neck. It is what makes a cape read as a
-    # travelling cloak instead of a sheet pinned to the back. It stays on the shoulders (UpperChest), so it does
-    # not swing with the head.
-    hz = [0.800, 0.818, 0.833, 0.845, 0.853]
+    # travelling cloak instead of a sheet pinned to the back, and it stays on the shoulders (UpperChest) so it
+    # does not swing with the head.
+    #
+    # Third attempt. A stack of rings rising from the shoulders is a single-walled open shell: from the side you
+    # look straight at its open edge and it reads as a flat plate, which is what every cloaked variant was marked
+    # down for. This sweeps a PROFILE around the neck instead - out and up from the shoulder, over the top of the
+    # fold, then back down and inwards - so the hood has thickness and a rolled edge from every angle.
+    #
+    # Profile points are (radius multiplier, height in fractions of H, extra lean back in fractions of H).
+    # Trimmed about a fifth after the first sweep: it was unmistakably a hood, but big enough to read as a travel
+    # pillow, and this project's rule is warmth over comedy.
+    prof = [(1.00, 0.000, 0.000),   # sitting on the shoulder, outer face
+            (1.07, 0.014, 0.005),   # bulging out and up
+            (1.09, 0.030, 0.011),   # the widest part of the roll
+            (1.03, 0.044, 0.016),   # rolling over the top
+            (0.90, 0.050, 0.018),   # coming back down, inside the fold
+            (0.78, 0.040, 0.014),   # inner wall
+            (0.72, 0.024, 0.008)]   # tucked in towards the neck
+    base_z = 0.800
+    ri = int(np.clip(np.searchsorted(LY.Z, base_z) - 1, 0, LY.NECK_BASE))
+    a0 = L.A[ri] * H * 1.02 + 0.030 * H
+    b0 = L.BB[ri] * H + 0.034 * H
     hth = np.linspace(math.radians(98), math.radians(262), n)
     hood = []
-    for i, z in enumerate(hz):
-        u = i / (len(hz) - 1.0)
-        ri = int(np.clip(np.searchsorted(LY.Z, z) - 1, 0, LY.NECK_BASE))
-        a = L.A[ri] * H
-        # a rolled fold: it keeps its width and gets DEEPER towards the top, so the cowl bulges back over the
-        # shoulders. Shrinking it towards the top instead made a flat shelf sticking out behind the neck.
-        rx = (a * 1.02 + 0.030 * H) * (1.00 - 0.20 * u)
-        ry = (L.BB[ri] * H + 0.034 * H) * (1.00 + 0.06 * u)
-        yc = (0.008 + 0.020 * u) * H
+    for mult, dz, lean in prof:
+        z = base_z + dz
         pts = []
         for t in hth:
             fold = 1.0 + 0.055 * math.sin(t * 5.0 + 0.4)
-            pts.append((math.sin(t) * rx * fold, L.yoff(z) * H + yc - math.cos(t) * ry * fold, z * H))
+            rx = a0 * mult * fold
+            ry = b0 * mult * fold
+            yc = (0.008 + lean) * H
+            pts.append((math.sin(t) * rx, L.yoff(z) * H + yc - math.cos(t) * ry, z * H))
         hood.append(mb.ring(np.array(pts), {"UpperChest": 1.0}, "cloak"))
     for a_, b_ in zip(hood, hood[1:]):
         for j in range(n - 1):
