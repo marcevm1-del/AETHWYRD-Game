@@ -1,6 +1,6 @@
 # Agent registry
 
-**Status: PROPOSED.** The owner has not yet chosen between mapping the directive's eight roles onto existing agents (this file) and creating eight new definitions. See DECISION_LOG D-02.
+**Status: APPROVED 2026-11-23 (DECISION_LOG D-02).** The directive's roles are leads over the existing agents. No new agent definitions are created.
 
 ## Runtime facts (checked 2026-11-23, Claude Code 2.1.316, desktop app)
 | Capability | State | Source |
@@ -23,7 +23,7 @@ A model or effort level listed below is what the overseer **requested**. The run
 | 04 | World & Level Designer | `world-designer`, `world-builder-engineer`, `level-designer` | Sonnet / high | M1 audit done | Idle |
 | 05 | AI & Creature Engineer | `ai-engineer`, `bestiary-designer` | Sonnet / high | M1 audit done | Idle |
 | 06 | RPG Systems Engineer | `systems-designer`, `class-skill-designer`, `items-designer`, `economy-designer`, `quest-designer` | Sonnet / high | M1 audit done | Idle |
-| 07 | QA & Performance | `qa-lead`, `qa-tester`, `code-reviewer`, `performance-analyst` | Sonnet / high–xhigh | Not started | Idle |
+| 07 | QA & Performance | `qa-lead`, `qa-tester`, `code-reviewer`, `performance-analyst` | Sonnet / high | Read-only inventory of local edits and branches (D-05) | Active |
 | 08 | Research & Docs | `canon-keeper`, `youtube-beta` | Haiku–Sonnet / medium | Not started | Idle |
 
 File ownership is unchanged. It stays as written in `13_Production/agent_team.md`.

@@ -20,3 +20,5 @@ This folder adds to the existing production records and does not replace them:
 - Audits run as read-only subagents. Take a `git status` snapshot before and after.
 - Work that changes files goes on a branch or worktree with one owner per file set (see `agent_team.md`). Nothing goes to `main` without the owner's review.
 - Every session updates `NEXT_ACTIONS.md` before it ends.
+- **Unity evidence (D-06):** Unity work counts as "Tested" only after a fresh `Tools/pc/update_and_verify.cmd` run on a clean tree, started by the owner. Rules tests (`npm run build`) prove nothing about Unity code.
+- **Review flow (D-07):** agents push `agent/*` branches and open PRs. Only the owner merges to `main`.

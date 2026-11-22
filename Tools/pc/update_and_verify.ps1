@@ -8,13 +8,18 @@
 # The player's save in AppData/LocalLow is never touched: tests and screenshots use temporary save folders.
 #
 # Double-click Tools/pc/update_and_verify.cmd, or run:
-#   powershell -ExecutionPolicy Bypass -File Tools/pc/update_and_verify.ps1 [-SkipPull] [-SkipPlayer]
+#   powershell -ExecutionPolicy Bypass -File Tools/pc/update_and_verify.ps1 [-SkipPull] [-SkipPlayer] [-AllowDirty]
+#
+# A verify run counts as evidence only on a clean tree (13_Production/studio/DECISION_LOG.md D-06), so the script
+# stops before doing anything if there are uncommitted changes. -AllowDirty runs anyway, and the summary is then
+# marked "DIRTY TREE - not a baseline".
 param(
     [string]$Unity = "E:/Unity/Editors/6000.6.7f1/Editor/Unity.exe",
     [string]$Remote = "aetheria",
     [string]$Branch = "main",
     [switch]$SkipPull,
-    [switch]$SkipPlayer
+    [switch]$SkipPlayer,
+    [switch]$AllowDirty
 )
 
 $ErrorActionPreference = "Stop"
@@ -40,10 +45,21 @@ function RunUnity([string]$Log, [string[]]$UnityArgs) {
 
 Write-Host "AETHWYRD: update and verify ($Repo)" -ForegroundColor Cyan
 
+# 0. Clean tree, or nothing this run proves is a baseline.
+$dirty = RepoGit status --porcelain
+if ($dirty -and -not $AllowDirty) {
+    $n = @($dirty).Count
+    Write-Host "Stopped: $n uncommitted change(s). A verify run is evidence only on a clean tree." -ForegroundColor Red
+    @($dirty) | Select-Object -First 15 | ForEach-Object { Write-Host "  $_" }
+    Write-Host "Commit or stash them and run again, or pass -AllowDirty to run anyway (the result is then not a baseline)." -ForegroundColor Yellow
+    @("AETHWYRD verify $Stamp", "STOPPED  dirty tree ($n uncommitted change(s)); nothing was run") |
+        Set-Content -Encoding UTF8 (Join-Path $Out "summary.txt")
+    exit 2
+}
+
 # 1. Pull.
 if ($SkipPull) { Step "Pull from GitHub" "SKIPPED" "-SkipPull" }
 else {
-    $dirty = RepoGit status --porcelain
     if ($dirty) {
         Step "Pull from GitHub" "SKIPPED" "you have uncommitted changes; commit or stash them, then run again"
     } else {
@@ -109,7 +125,9 @@ if (-not (Test-Path $Unity)) {
     }
 }
 
-$summary = @("AETHWYRD verify $Stamp") + ($Results | ForEach-Object { "{0,-8} {1,-24} {2}" -f $_.Status, $_.Step, $_.Detail })
+$head = (RepoGit log --oneline -1).Trim()
+$treeNote = if ($dirty) { "DIRTY TREE - not a baseline" } else { "clean tree at start" }
+$summary = @("AETHWYRD verify $Stamp", "Commit: $head ($treeNote)") + ($Results | ForEach-Object { "{0,-8} {1,-24} {2}" -f $_.Status, $_.Step, $_.Detail })
 $summary | Set-Content -Encoding UTF8 (Join-Path $Out "summary.txt")
 Write-Host ""
 $summary | ForEach-Object { Write-Host $_ }

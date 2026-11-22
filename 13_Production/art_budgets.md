@@ -102,6 +102,8 @@ These assume a 55° vertical field of view (the Whisperwood camera). Unity's `LO
 
 Shadow casters: at most 0.6 M triangles in any scene (60 m, one cascade). Character numbers are an assumption for the character-artist to confirm.
 
+> **Superseded for characters (2026-11-23, D-03):** the owner's low-poly tier in [[art_direction]] §12 caps the player at 15k and named NPCs at 10k, with background townsfolk at 6k. The "player 30k, NPCs 15k each" assumption in the village row above is retired. The character column now leaves headroom, and the scene totals stand as upper bounds. Building, creature and prop budgets on this page are unchanged and are the tier's figures.
+
 ## The bake (how `bake_to_game.py` meets these)
 
 ```bash
