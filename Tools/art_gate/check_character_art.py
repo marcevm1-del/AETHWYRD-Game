@@ -55,8 +55,10 @@ BANDS = {
     # her narrower shoulders deliberately (shoulderHalf 0.1125 against the male's 0.1255) and she is shorter, so
     # her head is relatively larger - both push this ratio down. A gate calibrated on one figure and applied to
     # the other is a false alarm waiting to happen. Pre-fix she measured about 1.24.
-    "shoulder_joints_in_heads_female": (1.38, 1.78, "house, female, 2026-11-22: 1.24 read as weak, 1.46 reads "
-                                                    "right"),
+    "shoulder_joints_in_heads_female": (1.34, 1.78, "house, female, 2026-11-22: 1.24 read as weak, 1.46 reads "
+                                                    "right. Lower bound moved from 1.38 after the slim build "
+                                                    "measured 1.405 and reads correctly - a variant that is "
+                                                    "meant to be slighter should not sit on the edge"),
     "body_pole_ratio": (0.0, 0.05, "house: the body measured 2.2% after the 2026-11-15 pass and that reads clean. "
                                    "Boundary and cap vertices are excluded - counting them made flat decals read "
                                    "as 78% poles (13_Production/research/blender_primer.md)"),

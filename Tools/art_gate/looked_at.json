@@ -15,10 +15,10 @@
       "note": "mass over the crown, layered locks, hairline sits on the brow; back of the head is covered"
     },
     "face_reads": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "eyes, lips and ears read; the nose barely breaks the front view and is carried by shading alone"
+      "note": "fixed: the nose reads in the front view now. Was CONCERNS - a single-vertex bump of 1.8% of height was averaged away by the subdivision, so it was widened across its neighbours as well as pushed out"
     },
     "shading_clean": {
       "verdict": "PASS",
@@ -41,10 +41,10 @@
       "note": "slim build and spiked hair read clearly apart from the base"
     },
     "hair_reads_as_hair": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "good volume front and back; from the side the spikes read as flat petals rather than clumps"
+      "note": "fixed: the spikes read as rounded clumps from the side instead of flat petals. The clump cross-section was squashed to 0.62 of its width, which suits a lock lying on the head and not a spike standing off it"
     },
     "face_reads": {
       "verdict": "PASS",
@@ -169,10 +169,10 @@
       "note": "slight build, shoulder-length hair, reads apart from the base"
     },
     "hair_reads_as_hair": {
-      "verdict": "CONCERNS",
+      "verdict": "PASS",
       "by": "claude",
       "on": "2026-11-22",
-      "note": "reads from the front; from behind there are gaps at the crown where the scalp shows between strands"
+      "note": "fixed: the crown is covered from behind. The gather took strands from the two crown rings only, so the scalp showed between them; it now roots over four rings with nearly twice the strands"
     },
     "face_reads": {
       "verdict": "PASS",

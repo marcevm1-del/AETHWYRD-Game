@@ -216,10 +216,10 @@ def style_swept_fringe(h):
 
 
 def style_spiky(h):
-    h.cap(20, nape=True, vol=0.9)
-    _group(h, TOP, ALL, 30, (0.050, 0.085), 0.9, -0.55, w0=0.0090, ctrl=(0.55, -0.15), bulge=0.25)
-    _group(h, [22], FRONT, 7, (0.030, 0.045), 0.3, 0.8, side=0.5, fwd=0.55, w0=0.0080, min_z=0.947)
-    _group(h, TOP, SIDEL + SIDER + BACK, 14, (0.060, 0.090), 0.7, 0.9, w0=0.0075)
+    h.cap(20, nape=True, vol=1.05)
+    _group(h, [21, 22, 23], ALL, 34, (0.050, 0.085), 0.9, -0.55, w0=0.0094, ctrl=(0.55, -0.15), bulge=0.3, flat=0.9)
+    _group(h, [22, 23], FRONT, 9, (0.030, 0.045), 0.3, 0.8, side=0.5, fwd=0.55, w0=0.0084, flat=0.85, min_z=0.947)
+    _group(h, [21, 22], SIDEL + SIDER + BACK, 20, (0.060, 0.090), 0.7, 0.9, w0=0.0080, flat=0.85)
 
 
 def _gather(h, n, centre, spread, length, bone="Back", w0=0.0090, rings=(22, 23), ks=None, drop=0.9):
@@ -277,8 +277,9 @@ def style_long_loose(h):
 
 
 def style_high_ponytail(h):
-    h.cap(20, nape=False, vol=0.95)
-    _gather(h, 24, (0.0, 0.040, 1.012), 0.008, (0.24, 0.30), w0=0.0105, drop=0.85)
+    h.cap(20, nape=False, vol=1.20)
+    _gather(h, 46, (0.0, 0.040, 1.012), 0.008, (0.24, 0.30), w0=0.0105, drop=0.85,
+            rings=(20, 21, 22, 23))
     _group(h, [22], FRONT, 8, (0.028, 0.040), 0.15, 0.9, side=0.4, fwd=0.4, w0=0.0080, min_z=0.947)
     _group(h, [22], SIDEL, 4, (0.08, 0.10), 0.4, 1.0, w0=0.0080, bone="SideL")
     _group(h, [22], SIDER, 4, (0.08, 0.10), 0.4, 1.0, w0=0.0080, bone="SideR")
