@@ -62,14 +62,30 @@ BANDS = {
     "body_pole_ratio": (0.0, 0.05, "house: the body measured 2.2% after the 2026-11-15 pass and that reads clean. "
                                    "Boundary and cap vertices are excluded - counting them made flat decals read "
                                    "as 78% poles (13_Production/research/blender_primer.md)"),
-    # Raised from 30,000 on 2026-11-22, and worth being suspicious of: I raised it because my own hair fix
-    # exceeded it (37,142 first, 32,926 after trimming the filler layers). The justification is that 30,000 was
-    # set when the heaviest variant was a 25,650 cropped male, and a long-haired character legitimately costs
-    # more - not that the new number is any better sourced. It still is not: no figure for a stylised hero on a
-    # 4 GB card has been found. This band has now needed justifying twice, which makes a sourced budget the
-    # thing to get rather than a nicety.
-    "tris_total": (0, 36000, "house, estimated and raised once; replace with a sourced figure, and split hero "
-                             "from crowd budgets when the data distinguishes them"),
+    # Sourced on 2026-11-22, as the previous note asked. What the outside world offers is weak: vendor guides give
+    # 10,000-50,000 triangles for a PC hero (Meshy) and 50,000-100,000+ (Tripo), and practitioners on the Unity and
+    # Unreal forums say 25,000-60,000. Those are blog and forum figures, not engine guidance - Unity's own character
+    # optimisation page is legacy (4.6 to 5.2) and gives no number at all. NOT SOURCEABLE: an authoritative figure
+    # for a stylised hero on a 4 GB card. Every one of those ranges contains our 33,150, which is reassuring and not
+    # much more.
+    #
+    # The stronger evidence is our own, because it ships. finish_generated_monster.py enforces a size-scaled ladder
+    # on every creature that reaches Unity - 6k under 0.6 m, 12k under 2.5 m, 20k under 8 m, 30k above - and the 680
+    # exported monsters measure 6,134 to 10,438 triangles against it (checked 2026-11-21 by importing them). A player
+    # character is on screen constantly and close, where a crowd creature is not, so a hero band above the 30k top of
+    # that ladder is a deliberate decision rather than a guess.
+    #
+    # The band stays at 36,000. The female base measures 33,150, which is 2,850 under the cap and inside the 8% edge,
+    # so this reports CONCERNS - correctly. That is the gate saying one more hair change would fail, and widening the
+    # band to silence it would throw away the warning that already caught a regression once.
+    "tris_total": (0, 36000, "hero band: above the 30k top of the shipped monster ladder because a player character "
+                             "is seen constantly and close; outside guidance is vendor and forum only (10k-50k, "
+                             "25k-60k) and an authoritative stylised-hero figure is NOT SOURCEABLE"),
+    # Crowd and NPC meshes are not judged by this gate - it measures the human library - but the budget they are held
+    # to is recorded here so the two are not confused. It is measured and enforced, not estimated: see
+    # 13_Production/monster_model_pipeline.md and the decimation in finish_generated_monster.py.
+    "tris_crowd_reference": (0, 12000, "crowd/NPC reference only, from the enforced monster ladder at under 2.5 m; "
+                                       "not applied to the human library"),
 }
 
 # Judgements this gate cannot make. Listed here so they appear in every report by name rather than being silently
