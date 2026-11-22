@@ -15,6 +15,10 @@ tp.OUTLINE_PX.setdefault("character", 2.0)
 tp.PITCH.setdefault("character", 6.0)
 # Skin in the creature shadow tone reads bruised: characters get a lighter, warmer shade.
 tp.SHADOW_BY_KIND.setdefault("character", (0.76, 0.72, 0.80))
+# Dark skin collapsed into a mask under a plain multiply shadow (2026-11-22, human_male_sturdy_dark): the
+# darker the base, the smaller the lit-to-shadow gap. This lifts the shadow towards white in proportion to
+# how dark the surface is, which leaves light skin where it was.
+tp.SHADOW_LIFT_BY_KIND.setdefault("character", 0.55)
 # High and almost frontal, a little to the character's right: the fringe then shades the brow, not the whole face.
 tp.SUN_BY_KIND.setdefault("character", (math.radians(58), 0.0, math.radians(14)))
 

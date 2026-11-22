@@ -164,7 +164,11 @@ class Hair:
 # --------------------------------------------------------------------------------------------------------------------
 # Presets. Lengths are fractions of height. dirs: (out, down, side, fwd) of the end point relative to the root.
 
-def _group(h, rings, ks, n, length, out, down, side=0.0, fwd=0.0, w0=0.0075, bone="Head", jitter=0.25, **kw):
+def _group(h, rings, ks, n, length, out, down, side=0.0, fwd=0.0, w0=0.0075, bone="Head", jitter=0.25,
+           min_z=None, **kw):
+    """min_z: the lowest point a lock tip may reach, as a fraction of height. The fringe uses it so hair cannot
+    hang over the eyes - on human_male_sturdy_dark the locks covered both eyes and the face stopped reading at
+    body distance (2026-11-22). Side locks deliberately do not use it: falling past the cheek is their job."""
     H = h.H
     cand = [(r, k) for r in rings for k in ks]
     h.rng.shuffle(cand)
@@ -184,6 +188,8 @@ def _group(h, rings, ks, n, length, out, down, side=0.0, fwd=0.0, w0=0.0075, bon
         tang = np.array([o[1], -o[0], 0.0])        # around the head
         e = rt + (o * out * j() + np.array([0, 0, -1.0]) * down * j() + tang * side * sgn * 0 + np.array([sgn, 0, 0]) * side * j() +
                   np.array([0, -1.0, 0]) * fwd) * ln
+        if min_z is not None:
+            e[2] = max(e[2], min_z * H)
         h.clump(rt, e, w0=w0 * 3.3 * (0.85 + 0.3 * h.rng.random()), bone=bone, **kw)
 
 
@@ -200,19 +206,19 @@ def style_crop(h):
     h.cap(20, nape=True, vol=1.45)
     _group(h, [20, 21, 22, 23], NOFRONT, 64, (0.045, 0.072), 0.70, 0.95, w0=0.0082, ctrl=(0.25, 0.05))
     _group(h, [21, 22], SIDEL + SIDER, 16, (0.050, 0.070), 0.30, 1.05, w0=0.0078, ctrl=(0.18, 0.15))
-    _group(h, [21, 22, 23], FRONT, 22, (0.048, 0.066), 0.16, 1.05, side=0.38, fwd=0.42, w0=0.0078, ctrl=(0.30, 0.0))
+    _group(h, [21, 22, 23], FRONT, 22, (0.048, 0.066), 0.16, 1.05, side=0.38, fwd=0.42, w0=0.0078, ctrl=(0.30, 0.0), min_z=0.947)
 
 
 def style_swept_fringe(h):
     h.cap(20, nape=True, vol=0.95)
-    _group(h, [22], FRONT, 9, (0.040, 0.058), 0.35, 0.75, side=0.6, fwd=0.5, w0=0.0085, ctrl=(0.45, 0.1))
+    _group(h, [22], FRONT, 9, (0.040, 0.058), 0.35, 0.75, side=0.6, fwd=0.5, w0=0.0085, ctrl=(0.45, 0.1), min_z=0.947)
     _group(h, TOP, NOFRONT, 34, (0.060, 0.090), 0.5, 1.0, w0=0.0080)
 
 
 def style_spiky(h):
     h.cap(20, nape=True, vol=0.9)
     _group(h, TOP, ALL, 30, (0.050, 0.085), 0.9, -0.55, w0=0.0090, ctrl=(0.55, -0.15), bulge=0.25)
-    _group(h, [22], FRONT, 7, (0.030, 0.045), 0.3, 0.8, side=0.5, fwd=0.55, w0=0.0080)
+    _group(h, [22], FRONT, 7, (0.030, 0.045), 0.3, 0.8, side=0.5, fwd=0.55, w0=0.0080, min_z=0.947)
     _group(h, TOP, SIDEL + SIDER + BACK, 14, (0.060, 0.090), 0.7, 0.9, w0=0.0075)
 
 
@@ -232,14 +238,14 @@ def _gather(h, n, centre, spread, length, bone="Back", w0=0.0090, rings=(22, 23)
 def style_tied_back(h):
     h.cap(20, nape=True, vol=0.9)
     _gather(h, 26, (0.0, 0.066, 0.925), 0.010, (0.075, 0.095), w0=0.0095)
-    _group(h, [22], FRONT, 6, (0.028, 0.038), 0.2, 0.9, side=0.35, fwd=0.35, w0=0.0075)
+    _group(h, [22], FRONT, 6, (0.028, 0.038), 0.2, 0.9, side=0.35, fwd=0.35, w0=0.0075, min_z=0.947)
     _group(h, [22], SIDEL + SIDER, 8, (0.045, 0.060), 0.4, 0.9, w0=0.0075)
 
 
 def style_long_shaggy(h):
     h.cap(20, nape=True, vol=1.0)
     _group(h, TOP, NOFRONT, 44, (0.20, 0.27), 0.55, 1.0, w0=0.0100, bone="Back", ctrl=(0.3, 0.2), jitter=0.3)
-    _group(h, [22], FRONT, 9, (0.032, 0.046), 0.2, 0.85, side=0.5, fwd=0.4, w0=0.0085)
+    _group(h, [22], FRONT, 9, (0.032, 0.046), 0.2, 0.85, side=0.5, fwd=0.4, w0=0.0085, min_z=0.947)
 
 
 def style_bob(h):
@@ -247,13 +253,13 @@ def style_bob(h):
     _group(h, [20, 21, 22, 23], NOFRONT, 78, (0.115, 0.145), 0.42, 1.0, side=-0.06, w0=0.0105, bone="Back",
            ctrl=(0.30, 0.10), jitter=0.12)
     _group(h, [21, 22], SIDEL + SIDER, 20, (0.100, 0.130), 0.26, 1.05, w0=0.0098, bone="Back", ctrl=(0.16, 0.12))
-    _group(h, [21, 22, 23], FRONT, 24, (0.046, 0.062), 0.14, 1.05, side=0.28, fwd=0.34, w0=0.0088, ctrl=(0.28, 0.0))
+    _group(h, [21, 22, 23], FRONT, 24, (0.046, 0.062), 0.14, 1.05, side=0.28, fwd=0.34, w0=0.0088, ctrl=(0.28, 0.0), min_z=0.947)
 
 
 def style_long_loose(h):
     h.cap(20, nape=True, vol=1.0)
     _group(h, TOP, NOFRONT, 54, (0.280, 0.340), 0.45, 1.0, w0=0.0100, bone="Back", ctrl=(0.3, 0.25), jitter=0.18)
-    _group(h, [22], FRONT, 9, (0.034, 0.050), 0.25, 0.85, side=0.5, fwd=0.35, w0=0.0085)
+    _group(h, [22], FRONT, 9, (0.034, 0.050), 0.25, 0.85, side=0.5, fwd=0.35, w0=0.0085, min_z=0.947)
     _group(h, [22], SIDEL, 6, (0.17, 0.21), 0.5, 1.0, w0=0.0090, bone="SideL")
     _group(h, [22], SIDER, 6, (0.17, 0.21), 0.5, 1.0, w0=0.0090, bone="SideR")
 
@@ -261,7 +267,7 @@ def style_long_loose(h):
 def style_high_ponytail(h):
     h.cap(20, nape=False, vol=0.95)
     _gather(h, 24, (0.0, 0.040, 1.012), 0.008, (0.24, 0.30), w0=0.0105, drop=0.85)
-    _group(h, [22], FRONT, 8, (0.028, 0.040), 0.15, 0.9, side=0.4, fwd=0.4, w0=0.0080)
+    _group(h, [22], FRONT, 8, (0.028, 0.040), 0.15, 0.9, side=0.4, fwd=0.4, w0=0.0080, min_z=0.947)
     _group(h, [22], SIDEL, 4, (0.08, 0.10), 0.4, 1.0, w0=0.0080, bone="SideL")
     _group(h, [22], SIDER, 4, (0.08, 0.10), 0.4, 1.0, w0=0.0080, bone="SideR")
 
@@ -269,7 +275,7 @@ def style_high_ponytail(h):
 def style_side_braid(h):
     h.cap(20, nape=True, vol=1.0)
     H = h.H
-    _group(h, [22], FRONT, 9, (0.032, 0.048), 0.2, 0.9, side=0.5, fwd=0.4, w0=0.0085)
+    _group(h, [22], FRONT, 9, (0.032, 0.048), 0.2, 0.9, side=0.5, fwd=0.4, w0=0.0085, min_z=0.947)
     _group(h, TOP, BACK + SIDER, 24, (0.10, 0.13), 0.5, 1.0, w0=0.0095, bone="Back")
     for dx, dy in ((0.0, 0.0), (0.004, 0.003), (-0.004, 0.003)):     # the braid: three fat strands over the left shoulder
         rt = h.root(22, 5)
@@ -280,7 +286,7 @@ def style_side_braid(h):
 def style_short_flick(h):
     h.cap(20, nape=True, vol=0.95)
     _group(h, TOP, NOFRONT, 40, (0.050, 0.075), 0.95, 0.75, w0=0.0090, ctrl=(0.35, -0.1), bulge=0.2)
-    _group(h, [22], FRONT, 9, (0.032, 0.046), 0.25, 0.8, side=0.45, fwd=0.45, w0=0.0080)
+    _group(h, [22], FRONT, 9, (0.032, 0.046), 0.25, 0.8, side=0.45, fwd=0.45, w0=0.0080, min_z=0.947)
 
 
 def style_bun_fringe(h):
@@ -288,7 +294,7 @@ def style_bun_fringe(h):
     H = h.H
     h.sphere(np.array([0.0, h.cy + 0.040 * H, 1.012 * H]), 0.030 * H, squash=0.85)
     _gather(h, 16, (0.0, 0.040, 0.995), 0.006, (0.02, 0.03), w0=0.010, drop=0.2)
-    _group(h, [22], FRONT, 11, (0.030, 0.042), 0.15, 0.95, side=0.35, fwd=0.35, w0=0.0085)
+    _group(h, [22], FRONT, 11, (0.030, 0.042), 0.15, 0.95, side=0.35, fwd=0.35, w0=0.0085, min_z=0.947)
     _group(h, [22], SIDEL + SIDER, 8, (0.05, 0.07), 0.4, 1.0, w0=0.0080)
 
 

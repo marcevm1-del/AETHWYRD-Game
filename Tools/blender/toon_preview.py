@@ -45,6 +45,12 @@ PREFIX = "TP_"
 SHADOW_TINT = (0.58, 0.56, 0.78)
 # Per-kind shadow tone. A kind that is not listed keeps SHADOW_TINT, so creatures and buildings are unchanged.
 SHADOW_BY_KIND = {}
+# Per-kind shadow lift, 0 to 1. The two-tone shadow is a MULTIPLY, so the darker the base colour the smaller the
+# absolute gap between lit and shadow: light skin keeps its features in shadow and dark skin collapses into a mask.
+# Measured 2026-11-22 on human_male_sturdy_dark, whose face lost its eyes entirely at body distance.
+# With a lift, the shadow colour is mixed towards white in proportion to how dark the base is, so a dark surface is
+# darkened proportionally less. A kind that is not listed gets 0 and behaves exactly as before.
+SHADOW_LIFT_BY_KIND = {}
 OUTLINE_MUL = 0.35
 OUTLINE_ALPHA_MUL = 0.6  # hull opacity relative to a see-through body (Phantom variants)
 RIM_COLOUR = (1.0, 0.97, 0.9)
@@ -242,7 +248,29 @@ def toon_material(mat, kind="creature"):
     L.new(bw.outputs[0], ramp.inputs["Fac"])
     mul, a, b, res = _mix(nt, "MULTIPLY")
     _feed(nt, base[0], base[1], a)
-    L.new(ramp.outputs["Color"], b)
+    shadow_col = ramp.outputs["Color"]
+    lift = SHADOW_LIFT_BY_KIND.get(kind, 0.0)
+    if lift > 0:
+        # factor = (1 - luminance(base)) * lift, so a black base is lifted most and a white base not at all
+        lum = N.new("ShaderNodeRGBToBW")
+        _feed(nt, base[0], base[1], lum.inputs[0])
+        inv = N.new("ShaderNodeMath")
+        inv.operation = "SUBTRACT"
+        inv.inputs[0].default_value = 1.0
+        L.new(lum.outputs[0], inv.inputs[1])
+        amt = N.new("ShaderNodeMath")
+        amt.operation = "MULTIPLY"
+        amt.use_clamp = True
+        amt.inputs[1].default_value = lift
+        L.new(inv.outputs[0], amt.inputs[0])
+        lift_mix = N.new("ShaderNodeMix")
+        lift_mix.data_type = "RGBA"
+        lift_mix.blend_type = "MIX"
+        L.new(amt.outputs[0], lift_mix.inputs["Factor"])
+        L.new(shadow_col, lift_mix.inputs[6])
+        lift_mix.inputs[7].default_value = (1, 1, 1, 1)
+        shadow_col = lift_mix.outputs[2]
+    L.new(shadow_col, b)
     col = res
     rim = RIM.get(kind, 0.0)
     if rim > 0:

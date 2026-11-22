@@ -1,68 +1,260 @@
 {
-  "_note": "Verdicts a person recorded after rendering each variant and looking at the turnaround and face sheet. Pass with --looked-at. Only PASS, CONCERNS and FAIL count; anything else leaves the criterion NOT ASSESSED. Re-judge after any change to the generator: a verdict against an old render is worth nothing, and the date is here so staleness is visible.",
+  "_note": "Verdicts a person recorded after rendering each variant and looking at the turnaround and face sheet. Pass with --looked-at. Only PASS, CONCERNS and FAIL count; anything else leaves the criterion NOT ASSESSED. Re-judge after any change to the generator: a verdict against an old render is worth nothing, and the date is here so staleness is visible. Re-rendered and re-judged in full on 2026-11-22 after the shadow lift and the fringe floor; every verdict here was made against reports/characters_2026-11-22/.",
   "_renders": "reports/characters_2026-11-22/",
-
   "human_male_base": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "reads as an adventurer at thumbnail size; cloak, boots and hair give it a shape of its own"},
-    "hair_reads_as_hair": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "mass over the crown, layered locks, hairline sits on the brow; back of the head is covered"},
-    "face_reads": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "eyes, lips and ears read; the nose barely breaks the front view and is carried by shading alone"},
-    "shading_clean": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "frontal key keeps the terminator off the face"},
-    "outfit_reads": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "cloak has folds and an uneven hem, but the hood still reads as a stiff shelf from the side"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "reads as an adventurer at thumbnail size; cloak, boots and hair give it a shape of its own"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "mass over the crown, layered locks, hairline sits on the brow; back of the head is covered"
+    },
+    "face_reads": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "eyes, lips and ears read; the nose barely breaks the front view and is carried by shading alone"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "frontal key keeps the terminator off the face"
+    },
+    "outfit_reads": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "cloak has folds and an uneven hem, but the hood still reads as a stiff shelf from the side"
+    }
   },
-
   "human_male_young_slim": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "slim build and spiked hair read clearly apart from the base"},
-    "hair_reads_as_hair": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "good volume front and back; from the side the spikes read as flat petals rather than clumps"},
-    "face_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "green eyes and mouth legible at body distance"},
-    "shading_clean": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "even, no terminator across the face"},
-    "outfit_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "ochre tunic with cream hem and belt reads as cloth; no cloak on this variant"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "slim build and spiked hair read clearly apart from the base"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "good volume front and back; from the side the spikes read as flat petals rather than clumps"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "green eyes and mouth legible at body distance"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "even, no terminator across the face"
+    },
+    "outfit_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "ochre tunic with cream hem and belt reads as cloth; no cloak on this variant"
+    }
   },
-
   "human_male_sturdy_dark": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "heaviest build of the eight and it shows"},
-    "hair_reads_as_hair": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "good mass, but the fringe hangs across one eye in the front view"},
-    "face_reads": {"verdict": "FAIL", "by": "claude", "on": "2026-11-22", "note": "at body distance the face is a dark mask: dark skin under the shadow tone, with dark hair over it, loses the eyes entirely. Legible only in the face close-up"},
-    "shading_clean": {"verdict": "FAIL", "by": "claude", "on": "2026-11-22", "note": "same root cause: the cel shadow tone was calibrated on light skin and crushes the dark tones. The lit and shadow values are too close together to separate features"},
-    "outfit_reads": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "blue cape drapes well; hood is the same stiff shelf from the side"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "heaviest build of the eight and it shows"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "fixed: mass is unchanged and the fringe no longer covers an eye"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "fixed: both eyes, brows and mouth read at body distance. Was FAIL - the fringe hung over both eyes and the shadow tone crushed the dark skin; the fringe floor and the luminance-aware shadow lift fixed it"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "fixed: the shadow lift keeps dark skin separated from its own shadow instead of collapsing into it"
+    },
+    "outfit_reads": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "blue cape drapes well; hood is the same stiff shelf from the side"
+    }
   },
-
   "human_male_elder_wayfarer": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "older, slighter stoop, reads apart from the base"},
-    "hair_reads_as_hair": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "white swept hair with mass and a clean hairline"},
-    "face_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "clearest face of the eight: light skin, white hair, good contrast"},
-    "shading_clean": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "even"},
-    "outfit_reads": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "red cloak reads; hood shelf again"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "older, slighter stoop, reads apart from the base"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "white swept hair with mass and a clean hairline"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "clearest face of the eight: light skin, white hair, good contrast"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "even"
+    },
+    "outfit_reads": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "red cloak reads; hood shelf again"
+    }
   },
-
   "human_female_base": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "long hair and layered skirt give a clear shape"},
-    "hair_reads_as_hair": {"verdict": "FAIL", "by": "claude", "on": "2026-11-22", "note": "worst hair of the eight. From the back it is a curtain of separated strands with gaps showing through to the scalp, and from the side it hangs as a flat sheet. Reads as noodles, not hair"},
-    "face_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "large blue eyes, lips and brows all legible"},
-    "shading_clean": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "even"},
-    "outfit_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "the skirt is no longer a cone: layered over a cream underskirt with a shaped hem"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "long hair and layered skirt give a clear shape"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "FAIL",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "worst hair of the eight. From the back it is a curtain of separated strands with gaps showing through to the scalp, and from the side it hangs as a flat sheet. Reads as noodles, not hair"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "large blue eyes, lips and brows all legible"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "even"
+    },
+    "outfit_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "the skirt is no longer a cone: layered over a cream underskirt with a shaped hem"
+    }
   },
-
   "human_female_young_slim": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "slight build, shoulder-length hair, reads apart from the base"},
-    "hair_reads_as_hair": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "reads from the front; from behind there are gaps at the crown where the scalp shows between strands"},
-    "face_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "legible at body distance"},
-    "shading_clean": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "even"},
-    "outfit_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "red tunic and layered skirt read as cloth"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "slight build, shoulder-length hair, reads apart from the base"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "reads from the front; from behind there are gaps at the crown where the scalp shows between strands"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "legible at body distance"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "even"
+    },
+    "outfit_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "red tunic and layered skirt read as cloth"
+    }
   },
-
   "human_female_sturdy_tall": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "tallest female, side tails, clearly its own shape"},
-    "hair_reads_as_hair": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "crown covered, two side tails, texture reads from every angle"},
-    "face_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "mid-brown skin keeps enough contrast for the eyes and mouth"},
-    "shading_clean": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "even"},
-    "outfit_reads": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "green tunic, cape and layered skirt all read; hood shelf again"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "tallest female, side tails, clearly its own shape"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "crown covered, two side tails, texture reads from every angle"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "mid-brown skin keeps enough contrast for the eyes and mouth"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "even"
+    },
+    "outfit_reads": {
+      "verdict": "CONCERNS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "green tunic, cape and layered skirt all read; hood shelf again"
+    }
   },
-
   "human_female_elder_scholar": {
-    "silhouette_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "bun and skirt give a distinct older silhouette"},
-    "hair_reads_as_hair": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "the bun reads from behind and the side; fringe sits properly on the brow"},
-    "face_reads": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "darker than the light-skinned variants and dimmer for it, but the white hair and blue eyes carry it. Same root cause as sturdy dark, milder"},
-    "shading_clean": {"verdict": "CONCERNS", "by": "claude", "on": "2026-11-22", "note": "shadow tone is too heavy on dark skin; readable here only because the hair frames the face"},
-    "outfit_reads": {"verdict": "PASS", "by": "claude", "on": "2026-11-22", "note": "ochre top and layered skirt read as cloth"}
+    "silhouette_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "bun and skirt give a distinct older silhouette"
+    },
+    "hair_reads_as_hair": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "the bun reads from behind and the side; fringe sits properly on the brow"
+    },
+    "face_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "fixed: warm even skin, blue eyes and mouth legible at body distance. Was CONCERNS for the same reason as sturdy dark, more mildly"
+    },
+    "shading_clean": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "fixed by the same shadow lift"
+    },
+    "outfit_reads": {
+      "verdict": "PASS",
+      "by": "claude",
+      "on": "2026-11-22",
+      "note": "ochre top and layered skirt read as cloth"
+    }
   }
 }
