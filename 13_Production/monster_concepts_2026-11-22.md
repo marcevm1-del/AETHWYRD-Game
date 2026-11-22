@@ -15,7 +15,7 @@ character likenesses are used, per `CLAUDE.md`. Teen rating: eerie, never gory.
 
 ---
 
-## 1. The Vaultbreaker — aggressive
+## 1. The Vaultbreaker — aggressive *(reworked 2026-11-22, see the Rework section below)*
 
 **Shape language: a forward wedge.** At thumbnail size it is an arrow pointing at you.
 
@@ -257,3 +257,92 @@ token yielding, all already running.
 Not started here, deliberately — the brief was to choose a concept first. In order: a blockout of the stack at the
 heights in §3 to confirm the silhouette at 32 px; the drape as a single surface over all four; then the break
 animation, early, because it is the risk. The model is the easy half.
+
+
+---
+
+# Rework: the Vaultbreaker
+
+I called this one "an excellent execution of a familiar thing" and then said I would build it next. Those two
+statements do not sit together. A design worth building is worth making original first, so this is the redesign.
+
+## What was weak
+
+Strip the good details away and the first version is **a big armoured quadruped that charges you**. The ram-plate
+face, the side-set eyes and the toolmarked scars are genuinely good, but they decorate a fight every player has had:
+something heavy telegraphs, something heavy arrives, you move sideways. The silhouette is strong and static. It
+looks the same in the last second of the fight as in the first, which wastes the one thing a boss has that a concept
+sketch does not: **time**.
+
+Kept: the forward wedge, the faceless chisel plate, the eyes out on the sides, no front teeth, the career written in
+dents. Those are the parts nobody else owns.
+
+## The new idea: it disarms itself and arms you
+
+**Every slam breaks the Vaultbreaker as much as the wall.** The plate is laminated bone grown in layers, and each
+impact spalls a layer off, whole slabs half a metre across that fall and stay fallen. It is not shedding because it
+is dying. This is how it works: it grows armour in order to spend it, the way a bee spends a sting, and it will
+spend every layer and walk away lighter.
+
+Three things follow, and each is why the design is now worth building.
+
+**The arena changes, and the monster changes it.** Those slabs land where they land and stay, as cover, as high
+ground, as something between you and the next slam. By the end you are fighting in a field of debris the fight
+itself produced. No arena scripting and no phase-triggered scenery: the creature builds the stage.
+
+**It has two silhouettes, not one.** It opens as a hunched wedge, so broad across the shoulders it looks immovable.
+It ends lean, long-limbed and fast, because the small hind legs that looked vestigial under all that armour turn out
+to be what it actually runs on. The same creature reads as two different animals at the start and the end of one
+fight, and the player watches it change without a cutscene.
+
+**Its health bar is on its body.** You can see how much plate is left. Someone who has fought it once knows at a
+glance how far in they are, and that "nearly naked" means "fast now". That is a readable phase system with no UI at
+all, and our bestiary's worst measured score is reads-at-a-glance, 7.7/20.
+
+## Anatomy, revised
+
+- **Plate:** seven laminated layers over the skull and shoulders, each 40 to 60 mm thick, visibly stratified at the
+  edges like slate. The layer seams are the fracture lines, so breakage reads as intended rather than as damage.
+  Freshly exposed layers are pale and clean; the outermost is weathered and scarred. **The colour tells you the
+  phase**: a creature showing pale has spent most of itself.
+- **Hind legs:** long, folded, deliberately hidden under the plate overhang at the start. The reveal is that they
+  were always there.
+- **Face:** unchanged, and still the best part. No eyes at the front, a chisel of bone, eyes far out on the sides of
+  the plate. As layers spall, the eyes sit closer to the edge, and in the last phase they are on a thin rim, exposed,
+  which makes the thing finally look vulnerable and a little pitiable.
+- **No front teeth.** Unchanged. It has never needed them.
+
+## The fight, in three reads
+
+1. **Loaded.** Seven layers. Rocks back three quarters of a second, slams one body length. Slow, enormous, almost
+   stationary. You learn the timing.
+2. **Spending.** Three to five layers. Faster between slams; the first slabs are down and you are using them. It
+   starts repositioning rather than waiting.
+3. **Spent.** One or two layers. It runs. The slam is gone, because it has nothing left to spend, and it fights with
+   its body, quick and frantic, in an arena full of its own discarded armour.
+
+A fight that gets faster and lighter as it goes, rather than slower and bigger, is the opposite of the usual boss
+curve, and it is the reason to build this one.
+
+## Palette, revised
+
+| Role | Hex | Where |
+|---|---|---|
+| Weathered plate | `#6B6257` | the outer layers, the ones you meet first |
+| Fresh plate | `#C9BFA6` | newly exposed laminate, the phase tell |
+| Seam shadow | `#3A342C` | between layers, and along the fracture lines |
+| Hide | `#4A3B33` | the body under the armour, barely seen at first |
+| Eye | `#E8A33D` | warm amber, the only saturated colour on the animal |
+
+The palette now does work: the creature **lightens in value** as the fight goes on, visibly closer to bone at the
+end. That is the whole design in one glance.
+
+## What this costs, honestly
+
+The shed slabs must persist as collidable props for the length of the fight, and must not break pathing for the
+player or for anything else in the arena. That is Unity work we have not done and have not measured:
+**NOT ASSESSED**. If the slabs cannot persist, the design loses its best third and should be reconsidered rather
+than shipped hollow, because an arena-changing monster whose arena does not change is a charging beast again.
+
+Earth, menace 5, about 2.8 m at the shoulder falling to roughly 2.2 m as it spends its plate. Iron Hold and the
+Strife Marches, where there are vaults worth breaking.
