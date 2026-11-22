@@ -2,6 +2,12 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-23
+
+| Commit | What changed | Tests |
+|---|---|---|
+| Studio records and the M1 audit | Branch `studio/m1-audit`, pushed, not merged. Six read-only specialist audits of `main @ 8e6bc72c`, consolidated in `13_Production/studio/`: the audit (design figures vs data, implementation matrix, ten conflicting recommendations, roadmap), a proposed agent registry, a decision log and next actions. **No code, data or scene changed.** Unity was not run, so the latest PlayMode figure is still the 2026-11-13 run on a dirty tree | 770 |
+
 ## 2026-11-14
 
 | Commit | What changed | Tests |
