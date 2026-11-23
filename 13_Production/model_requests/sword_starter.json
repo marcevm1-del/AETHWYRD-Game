@@ -1,0 +1,36 @@
+{
+  "id": "sword_starter",
+  "kind": "weapon",
+  "name": "Guild Issue Sword (Swordsman starter)",
+  "requestedBy": "environment-artist",
+  "requestedOn": "2026-11-23",
+  "source": {
+    "image": "reports/weapon_2026-11-23/raw/sword_side.png",
+    "prompt": null
+  },
+  "targetSizeM": 1.19,
+  "speciesId": null,
+  "notes": "Not generated with TripoSR: owner decision D-03 (direct low-poly authoring). Built directly at 256 tris by Tools/blender/build_weapon_sword.py -> Game/Assets/_Game/Art/Models/Weapons/sword_starter.fbx. Do not run TripoSR on this request. Reference image is our own Blender render.",
+  "status": "finished",
+  "history": [
+    {
+      "at": "2026-11-23T23:23:07",
+      "status": "requested",
+      "by": "environment-artist",
+      "note": ""
+    },
+    {
+      "at": "2026-11-23T23:30:00",
+      "status": "finished",
+      "by": "environment-artist",
+      "note": "Not generated with TripoSR: owner decision D-03 (direct low-poly authoring). Built directly at 256 tris by Tools/blender/build_weapon_sword.py -> Game/Assets/_Game/Art/Models/Weapons/sword_starter.fbx. Do not run TripoSR on this request. Reference image is our own Blender render."
+    }
+  ],
+  "outputs": {
+    "image": null,
+    "mesh": null,
+    "provenance": null,
+    "error": null
+  },
+  "review": null
+}

@@ -165,9 +165,9 @@ The FBX files re-import into Blender with the same counts, give or take a few de
 ## Next steps
 
 - **One-slot path (shader; technical-artist plus world-builder-engineer):**
-  - **The clash:** `Ascend/Toon`'s outline pass reads the smoothed outline normal from the vertex colour, which `BuildingImport.cs` writes there, so `Col` albedo and the outline currently compete for one channel.
-  - **Fix:** move the smoothed normal to UV3 (TEXCOORD3) in the shader and the importer, and read albedo from `COLOR` × `_BaseColor`. Every asset then drops to one or two slots, and the draws column above drops by about 3×.
-  - **Until then:** creature FBX vertex colours must not go through an importer that overwrites `COLOR`.
+  - **Done in code (needs a Unity verify run):** the smoothed outline normal now lives in UV3 (`TEXCOORD3`; UV1 is the lightmap UV and UV2 realtime GI, nothing here uses UV3). `BuildingImport.cs` writes it and sets `COLOR` to opaque white; the outline pass reads it and falls back to the vertex normal when the length is near zero (skinned meshes never get UV3, since UV data is not skinned). `GetVersion()` was bumped so Unity reimports the buildings by itself.
+  - **Albedo:** the forward pass multiplies `COLOR` (sRGB in the FBX, converted with `SRGBToLinear`) into `_BaseColor`, in the direct and ambient terms. Characters and monsters therefore need `_BaseColor` white (their postprocessors already set it).
+  - **Still open:** the slot cuts in the table above stay until the baked-building importer drops buildings to one slot and the building materials are rebuilt from `Col`. What Unity supplies for a missing `COLOR` stream is not documented, so every mesh on `Ascend/Toon` must carry `COLOR` (buildings now do).
 - **Normal maps:** not baked yet. The selected-to-active Cycles bake from the realized source to LOD0 needs UVs, a cage and about a minute per building on the CPU. It is optional for the cel look, so it waits until the shader samples a normal map.
 - **Unity import:** nothing from `Art/Blender/GameReady` is in `Game/Assets` yet. Next comes an importer that pairs `_LOD0..2` into a `LODGroup` using the h values above, turns the outline off at LOD2 and adds `_COL` as a convex `MeshCollider`.
 - **Rigs:** creature LODs are static. Skinning needs `Tools/blender/build_rig.py` run on LOD0, with weights transferred to LOD1 and LOD2.

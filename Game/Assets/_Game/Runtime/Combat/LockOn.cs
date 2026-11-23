@@ -5,18 +5,19 @@ namespace Ascend.Game
 {
     /// <summary>
     /// Lock-on (combat.md §2, controls R3 / middle mouse): picks the best monster in view, flick the right stick or
-    /// mouse to switch, keeps the lock for a grace period while the target is hidden, and releases it on death or
+    /// mouse (a fast, deliberate flick) to switch, keeps the lock for a grace period while the target is hidden, and releases it on death or
     /// beyond range. The camera keeps the target framed; the player faces it while not sprinting; the soft-lock
     /// prefers it.
     /// </summary>
     [RequireComponent(typeof(PlayerMotor))]
     public sealed class LockOn : MonoBehaviour
     {
-        public const float Range = 18f, ReleaseRange = 24f, GraceSec = 1.0f, FlickMouse = 25f, FlickStick = 0.8f, SwitchCooldown = 0.3f;
+        public const float Range = 18f, ReleaseRange = 24f, GraceSec = 1.0f, FlickStick = 0.8f, SwitchCooldown = 0.3f;
 
         PlayerMotor _motor;
         PlayerCombat _combat;
         float _hiddenFor, _switchReady;
+        Ascend.Core.FlickDetector _flick;
 
         public MonsterDummy Target { get; private set; }
         public bool IsLocked => Target != null;
@@ -25,7 +26,12 @@ namespace Ascend.Game
         {
             _motor = GetComponent<PlayerMotor>();
             _combat = GetComponent<PlayerCombat>();
+            var t = AscendData.Db.Tuning.LockOn;
+            _flick = new Ascend.Core.FlickDetector(t.FlickVelocityPxPerSec, t.FlickDeadzonePx, t.SwitchCooldownSec);
         }
+
+        /// <summary>Raised whenever the lock target changes (the camera re-centres its mouse offset).</summary>
+        public int Version { get; private set; }
 
         public void Toggle()
         {
@@ -48,6 +54,8 @@ namespace Ascend.Game
         void Set(MonsterDummy t)
         {
             Target = t;
+            Version++;
+            _flick?.Arm();
             _hiddenFor = 0f;
             if (_combat != null) _combat.LockTarget = t;
             if (t == null) _motor.FaceDirection = null;
@@ -104,12 +112,15 @@ namespace Ascend.Game
 
             _motor.FaceDirection = to.sqrMagnitude > 0.01f ? to : (Vector3?)null;
 
-            // Flick to switch.
-            if (Time.unscaledTime < _switchReady) return;
-            float x = 0f;
-            if (Mouse.current != null) x = Mouse.current.delta.ReadValue().x / FlickMouse;
-            if (Gamepad.current != null) { float s = Gamepad.current.rightStick.ReadValue().x / FlickStick; if (Mathf.Abs(s) > Mathf.Abs(x)) x = s; }
-            if (Mathf.Abs(x) >= 1f && Switch(x > 0 ? 1 : -1)) _switchReady = Time.unscaledTime + SwitchCooldown;
+            // Switch: a deliberate mouse flick (speed + size + cooldown, tuned in combat_tuning.json lockOn) or the stick as before.
+            float dt = Time.unscaledDeltaTime;
+            int side = Mouse.current != null && !WorldMapWindow.IsOpen ? _flick.Feed(Mouse.current.delta.ReadValue().x, dt) : 0;
+            if (side == 0 && Time.unscaledTime >= _switchReady && Gamepad.current != null)
+            {
+                float s = Gamepad.current.rightStick.ReadValue().x / FlickStick;
+                if (Mathf.Abs(s) >= 1f) { side = s > 0 ? 1 : -1; _switchReady = Time.unscaledTime + SwitchCooldown; }
+            }
+            if (side != 0) Switch(side);
         }
     }
 }

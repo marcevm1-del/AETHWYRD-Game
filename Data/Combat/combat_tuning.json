@@ -7,7 +7,23 @@
   "distance": 4.5,
   "fov": 60,
   "groupPullBackDistance": 6,
-  "shakeMax": 0.6
+  "shakeMax": 0.6,
+  "shoulderOffset": 0.55,
+  "heightOffset": 0.1,
+  "followLagSec": 0.08,
+  "angleLagSec": 0.04,
+  "collisionInLagSec": 0.04,
+  "collisionOutLagSec": 0.45,
+  "groupLagSec": 0.6,
+  "groupEngagedCount": 3
+ },
+ "lockOn": {
+  "notes": "Mouse lock-on feel (combat.md section 2). The mouse orbits within mouseYawRangeDeg of the target framing; a deliberate flick (speed and size) switches target, then switchCooldownSec must pass. Gamepad stick behaviour is unchanged.",
+  "mouseYawRangeDeg": 35,
+  "flickVelocityPxPerSec": 2400,
+  "flickDeadzonePx": 18,
+  "switchCooldownSec": 0.6,
+  "recenterSec": 1.5
  },
  "movement": {
   "walkSpeed": 2.2,
