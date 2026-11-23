@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 ![[mon_grakkus_the_orc_disaster_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_grakkus_the_orc_disaster_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,194 tris · 3.865 × 2.45 × 4.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 5.316 × 2.477 × 4.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_grakkus_the_orc_disaster.fbx`
 
 > The Grakkus, the Orc Disaster is a large creature with a towering, heavy-limbed body, about 4.5 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Guild sketches always show a body swollen with devoured power and a crown of goblin bones. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
 

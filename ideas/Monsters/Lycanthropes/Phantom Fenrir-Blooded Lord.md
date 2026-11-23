@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_phantom_fenrir_blooded_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_fenrir_blooded_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,074 tris · 1.382 × 0.944 × 3.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.243 × 3.045 × 3.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_phantom_fenrir_blooded_lord.fbx`
 
 > The Phantom Fenrir-Blooded Lord is a large creature with a broad-shouldered humanoid build, about 3.6 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in black-brown, with gold markings. Its most striking feature is a crown of frost spikes growing from its mane. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

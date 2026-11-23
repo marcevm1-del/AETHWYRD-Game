@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_ghoul_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ghoul_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,180 tris · 0.614 × 0.859 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,990 tris · 0.528 × 0.35 × 1.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_ghoul.fbx`
 
 > The Ghoul is a person-sized creature with a lean humanoid frame, about 1.6 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with violet markings. Its most striking feature is grey, hairless skin and long black nails. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by shadows that lean toward it.
 

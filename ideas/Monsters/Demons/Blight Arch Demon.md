@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_blight_arch_demon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_blight_arch_demon_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,270 tris · 12.522 × 8 × 8.889 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 12.6 × 8.001 × 5.459 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_blight_arch_demon.fbx`
 
 > The Blight Arch Demon is a huge creature with a sleek flying build, about 8 m long. Its hide is rough, scarred and spiked, colored in brimstone red, with sickly green markings. Its most striking feature is four wings and a voice like a choir. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

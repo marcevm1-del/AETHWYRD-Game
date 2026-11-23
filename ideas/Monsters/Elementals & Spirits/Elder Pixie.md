@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_elder_pixie_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_pixie_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,492 tris · 0.511 × 0.417 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 5,996 tris · 0.599 × 0.266 × 0.3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_elder_pixie.fbx`
 
 > The Elder Pixie is a tiny creature with a small winged body, about 0.3 m tall. Its body is smooth and clean, colored in pale jade and cloud white. Its most striking feature is dragonfly wings and a mischievous grin. It has wide curious eyes with star-shaped highlights. A distinctive marking runs along its back. It waddles, surrounded by swirling leaves and a constant breeze. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

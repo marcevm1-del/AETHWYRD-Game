@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_dark_cultist_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dark_cultist_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,768 tris · 0.751 × 1.382 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.878 × 0.728 × 1.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Humanoid Enemies/mon_dark_cultist.fbx`
 
 > The Dark Cultist is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in leather browns and dull steel, with crimson markings. Survivors describe red robes and a mask shaped like a crescent moon. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by a faint red mist that smells of iron.
 

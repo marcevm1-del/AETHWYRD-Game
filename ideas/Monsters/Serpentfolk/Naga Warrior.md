@@ -11,7 +11,7 @@ tags: [monster, serpentfolk]
 ![[mon_naga_warrior_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_naga_warrior_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (5,570 tris · 2.023 × 4 × 2.554 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.91 × 4 × 4.352 m · local file `Game/Assets/_Game/Art/Models/Monsters/Serpentfolk/mon_naga_warrior.fbx`
 
 > The Naga Warrior is a large creature with a coiling half-serpent frame, about 4 m long. Its scales are rough, scarred and spiked, colored in violet, with sea-blue markings. Look for four arms holding four blades. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by fine mist and droplets that orbit it.
 

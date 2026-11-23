@@ -11,7 +11,7 @@ tags: [monster, avians, tyrant, unique]
 ![[mon_raikaru_the_storm_roc_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_raikaru_the_storm_roc_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,822 tris · 33.058 × 26.029 × 35 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,998 tris · 17.265 × 43.302 × 35 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_raikaru_the_storm_roc.fbx`
 
 > The Raikaru, the Storm Roc is a colossal creature with a tall, long-legged bird build, about 35 m tall. Its plumage is rough, scarred and spiked, colored in brown, with electric-yellow markings. Survivors describe wings that carry the weekly world-storm on their back. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 

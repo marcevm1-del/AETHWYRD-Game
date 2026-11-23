@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 ![[mon_diego_alvarez_voice_of_the_choir_of_chains_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_diego_alvarez_voice_of_the_choir_of_chains_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,742 tris · 0.691 × 0.766 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.964 × 0.766 × 1.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Humanoid Enemies/mon_diego_alvarez_voice_of_the_choir_of_chains.fbx`
 
 > The Diego Alvarez, Voice of the Choir of Chains is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its clothing and gear are patchy and subtly wrong, as if assembled from memory, colored in leather browns and dull steel, with crimson markings. Look for a Veilborn con man in a red silk coat, smiling like a salesman. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron.
 

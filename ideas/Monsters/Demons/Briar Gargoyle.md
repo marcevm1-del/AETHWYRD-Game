@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_briar_gargoyle_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_briar_gargoyle_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,738 tris · 3.131 × 2 × 2.222 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 3.074 × 2 × 1.331 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_briar_gargoyle.fbx`
 
 > The Briar Gargoyle is a person-sized creature with a lean, wing-armed drake frame, about 2 m long. Its hide is rough, scarred and spiked, colored in char-black, with leaf-green markings. Survivors describe a stone body that cracks when it moves. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

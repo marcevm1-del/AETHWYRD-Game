@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_giant_crow_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_giant_crow_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,770 tris · 0.567 × 0.446 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.298 × 0.737 × 0.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_giant_crow.fbx`
 
 > The Giant Crow is a small creature with a feathered avian body, about 0.6 m tall. Its plumage is weathered and natural, colored in crow-black, with violet markings. Guild sketches always show a beak full of stolen shiny things. It has amber predator eyes. It has no ornament at all: simple, readable shapes. It stalks low to the ground, surrounded by shadows that lean toward it.
 

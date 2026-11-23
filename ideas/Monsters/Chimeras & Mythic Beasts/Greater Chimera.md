@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_greater_chimera_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_chimera_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,822 tris · 1.288 × 5.6 × 2.514 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,994 tris · 5.995 × 5.599 × 3.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Chimeras & Mythic Beasts/mon_greater_chimera.fbx`
 
 > The Greater Chimera is a huge creature with a powerful four-legged hunter's body, about 5.6 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ember-orange markings. Its most striking feature is lion, goat and serpent heads on one body. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

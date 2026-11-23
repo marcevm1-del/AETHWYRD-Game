@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_elder_storm_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_storm_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,928 tris · 2.02 × 2.02 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 2.137 × 2.084 × 1.899 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_elder_storm_slime.fbx`
 
 > The Elder Storm Slime is a person-sized creature with a wobbling mound of translucent gel, about 1.9 m tall. Its gel is weathered and natural, colored in storm violet shot through with electric yellow. Survivors describe a storm-cloud interior that flashes with tiny lightning. It has dark, wary eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by crackling arcs that jump across its body. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_vesper_touched_long_neck_lady_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_long_neck_lady_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,320 tris · 1.613 × 1.607 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.407 × 1.528 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_vesper_touched_long_neck_lady.fbx`
 
 > The Vesper-Touched Long-Neck Lady is a person-sized creature with a tall, impossibly thin frame, about 1.7 m tall. Its form is stretched, stitched and constantly shifting, colored in lacquer red, with violet markings. Guild sketches always show a neck that stretches across rooftops. It has a human-like face in the wrong place. Battle-worn plates and trophies hang from its body. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

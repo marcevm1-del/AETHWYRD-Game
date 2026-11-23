@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_brine_crow_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_brine_crow_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,736 tris · 0.569 × 0.448 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.299 × 0.549 × 0.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_brine_crow.fbx`
 
 > The Brine Crow is a small creature with a broad-winged bird frame, about 0.6 m tall. Its plumage is weathered and natural, colored in crow-black, with sea-blue markings. Guild sketches always show a beak full of stolen shiny things. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

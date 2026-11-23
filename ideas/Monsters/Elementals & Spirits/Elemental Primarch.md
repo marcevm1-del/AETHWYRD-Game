@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits, unique]
 ![[mon_elemental_primarch_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elemental_primarch_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,886 tris · 36.975 × 34.222 × 40 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,998 tris · 28.733 × 31.678 × 40 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_elemental_primarch.fbx`
 
 > The Elemental Primarch is a colossal creature with a bodiless, glowing form, about 40 m tall. Its body is rough, scarred and spiked, colored in starless black with faint violet edges. Its most striking feature is four elements orbiting a void core. It has burning slit pupils. Its presence is world-scale; the sky changes color when it appears. It circles its prey, surrounded by warped air, as if space bends around it.
 

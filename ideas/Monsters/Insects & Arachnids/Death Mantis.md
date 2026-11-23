@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_death_mantis_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_death_mantis_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,898 tris · 1.771 × 3 × 2.187 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.691 × 3 × 1.519 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_death_mantis.fbx`
 
 > The Death Mantis is a large creature with a segmented six-limbed frame, about 3 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in blue-black, with violet markings. Its most striking feature is black chitin and a skull-like head. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by shadows that lean toward it.
 

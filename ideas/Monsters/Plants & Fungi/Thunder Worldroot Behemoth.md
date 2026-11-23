@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_thunder_worldroot_behemoth_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_thunder_worldroot_behemoth_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,094 tris · 56.102 × 36.071 × 80 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 53.798 × 37.645 × 79.998 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_thunder_worldroot_behemoth.fbx`
 
 > The Thunder Worldroot Behemoth is a colossal creature with a walking body of bark and root, about 80 m tall. Its bark and leaves are rough, scarred and spiked, colored in deep fern green and dark bark, with electric-yellow markings. Survivors describe a walking forest with a glowing heartwood core. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

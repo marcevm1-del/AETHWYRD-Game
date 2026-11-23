@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_greater_giant_ant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_giant_ant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,486 tris · 0.66 × 1 × 0.577 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.886 × 1.001 × 0.514 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_greater_giant_ant.fbx`
 
 > The Greater Giant Ant is a small creature with a low, wide insectoid build, about 1 m long. Its chitin is weathered and natural, colored in glossy brown, with ochre markings. Look for red-brown chitin and mandibles like pliers. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

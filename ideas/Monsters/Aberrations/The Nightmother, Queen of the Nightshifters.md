@@ -11,7 +11,7 @@ tags: [monster, aberrations, tyrant, unique]
 ![[mon_the_nightmother_queen_of_the_nightshifters_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_nightmother_queen_of_the_nightshifters_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,632 tris · 2.397 × 2.11 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 4.731 × 1.851 × 2.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aberrations/mon_the_nightmother_queen_of_the_nightshifters.fbx`
 
 > The The Nightmother, Queen of the Nightshifters is a person-sized creature with a tall, impossibly thin frame, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in mauve, with violet markings. Survivors describe a kindly village grandmother whose shadow has wings. It has a human-like face in the wrong place. An elegant crest and glowing veins of mana mark it as a champion of its kind. It crawls across ceilings, surrounded by shadows that lean toward it.
 

@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_wraith_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_wraith_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,606 tris · 0.932 × 1.449 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.554 × 1.648 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_wraith.fbx`
 
 > The Wraith is a person-sized creature with a bodiless, glowing form, about 2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with violet markings. Look for a hooded shape of smoke with cold blue eyes. It has eyes that never blink. A distinctive marking runs along its back. It glides without moving its legs, surrounded by shadows that lean toward it.
 

@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_ember_ooze_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ember_ooze_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,966 tris · 1.531 × 1.531 × 1.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.687 × 1.621 × 1.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_ember_ooze.fbx`
 
 > The Ember Ooze is a person-sized creature with a wobbling mound of translucent gel, about 1.5 m tall. Its gel is rough, scarred and spiked, colored in ember reds fading to soot black. Its most striking feature is molten trails that harden into glass behind it. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

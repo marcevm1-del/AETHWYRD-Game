@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_forest_wolf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_forest_wolf_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,708 tris · 0.463 × 1.2 × 1.044 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.301 × 1.2 × 0.722 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_forest_wolf.fbx`
 
 > The Forest Wolf is a person-sized creature with a long-legged predatory quadruped build, about 1.2 m long. Its coat is weathered and natural, colored in grey-green with a cream ruff. Look for a grey-green coat that blends with ferns. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
 

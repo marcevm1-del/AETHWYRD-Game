@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_blight_firefly_swarm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_blight_firefly_swarm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,296 tris · 0.079 × 0.05 × 0.055 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.072 × 0.05 × 0.065 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_blight_firefly_swarm.fbx`
 
 > The Blight Firefly Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is smooth and clean, colored in amber, with sickly green markings. Guild sketches always show hundreds of soft lantern lights moving together. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

@@ -11,7 +11,7 @@ tags: [monster, gremlins]
 ![[mon_ancient_gremlin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_gremlin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,722 tris · 0.446 × 0.483 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.548 × 0.793 × 0.9 m · local file `Game/Assets/_Game/Art/Models/Monsters/Gremlins/mon_ancient_gremlin.fbx`
 
 > The Ancient Gremlin is a small creature with a small, compact humanoid body, about 0.9 m tall. Its skin is weathered and natural, colored in lime-green, with electric-yellow markings. Look for bat ears, a wrench and a laugh like a squeaky hinge. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It stalks low to the ground, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

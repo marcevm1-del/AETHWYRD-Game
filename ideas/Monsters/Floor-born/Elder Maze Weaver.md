@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_elder_maze_weaver_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_maze_weaver_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (4,154 tris · 3.895 × 4.8 × 5.957 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,994 tris · 4.275 × 4.801 × 2.138 m · local file `Game/Assets/_Game/Art/Models/Monsters/Floor-born/mon_elder_maze_weaver.fbx`
 
 > The Elder Maze Weaver is a large creature with a squat, many-legged arachnid build, about 4.8 m long. Its stone-like hide is patchy and subtly wrong, as if assembled from memory, colored in dungeon stone, with violet markings. It rebuilds corridors behind you. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

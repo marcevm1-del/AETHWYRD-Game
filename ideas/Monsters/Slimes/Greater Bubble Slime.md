@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_greater_bubble_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_bubble_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,856 tris · 0.604 × 0.604 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 5,992 tris · 0.569 × 0.547 × 0.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_greater_bubble_slime.fbx`
 
 > The Greater Bubble Slime is a small creature with a teardrop-shaped jelly body, about 0.5 m tall. Its gel is smooth and clean, colored in deep blues with a glassy shine. Look for a cluster of soap-bright spheres that split apart when hit. It has big round glossy eyes. A distinctive marking runs along its back. It waddles, surrounded by fine mist and droplets that orbit it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

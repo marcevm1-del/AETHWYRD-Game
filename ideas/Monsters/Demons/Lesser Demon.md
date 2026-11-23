@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_lesser_demon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_lesser_demon_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,484 tris · 1.296 × 0.899 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.148 × 1.042 × 2.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_lesser_demon.fbx`
 
 > The Lesser Demon is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in brimstone red, with violet markings. Survivors describe curled horns and a leathery hide. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it.
 

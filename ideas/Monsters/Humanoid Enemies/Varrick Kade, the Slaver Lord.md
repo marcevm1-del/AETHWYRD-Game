@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies, tyrant, unique]
 ![[mon_varrick_kade_the_slaver_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_varrick_kade_the_slaver_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,188 tris · 1.03 × 1.107 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,999 tris · 1.007 × 0.881 × 1.9 m · local file `Game/Assets/_Game/Art/Models/Monsters/Humanoid Enemies/mon_varrick_kade_the_slaver_lord.fbx`
 
 > The Varrick Kade, the Slaver Lord is a person-sized creature with an upright humanoid build, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in worn green and leather brown. Look for a whip of braided chains and a ledger of every beastkin he has sold. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

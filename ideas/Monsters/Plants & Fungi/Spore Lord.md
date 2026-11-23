@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_spore_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_spore_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,492 tris · 1.53 × 1.034 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.258 × 1.93 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_spore_lord.fbx`
 
 > The Spore Lord is a large creature with a walking body of bark and root, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in warm brown, with sickly green markings. Survivors describe a mushroom crown and a cloak of mycelium. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground.
 

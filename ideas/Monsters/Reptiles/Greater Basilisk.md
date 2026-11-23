@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_greater_basilisk_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_basilisk_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,824 tris · 2.208 × 6.4 × 7.033 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,996 tris · 2.132 × 6.401 × 1.601 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_greater_basilisk.fbx`
 
 > The Greater Basilisk is a huge creature with a long-legged predatory quadruped build, about 6.4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in teal-grey, with ochre markings. Look for a crown of horns and eyes that petrify. It has eyes that never blink. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

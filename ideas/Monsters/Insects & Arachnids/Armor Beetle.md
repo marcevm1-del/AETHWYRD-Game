@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_armor_beetle_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_armor_beetle_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,860 tris · 1.26 × 1.2 × 1.102 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.073 × 1.201 × 0.618 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_armor_beetle.fbx`
 
 > The Armor Beetle is a person-sized creature with a six-legged armored body, about 1.2 m long. Its chitin is weathered and natural, colored in amber, with ochre markings. Survivors describe a shell like polished bronze. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by pebbles that tremble and float near it.
 

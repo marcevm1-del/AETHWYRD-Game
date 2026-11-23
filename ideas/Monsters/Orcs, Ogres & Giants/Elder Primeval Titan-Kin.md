@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants, unique]
 ![[mon_elder_primeval_titan_kin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_primeval_titan_kin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,518 tris · 54.969 × 31.601 × 64 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 81.967 × 50.053 × 64.007 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_elder_primeval_titan_kin.fbx`
 
 > The Elder Primeval Titan-Kin is a colossal creature with a giant, barrel-chested humanoid body, about 64 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with ochre markings. Survivors describe a body of living bedrock wearing fragments of Titan armor. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_phantom_firefly_swarm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_firefly_swarm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,296 tris · 0.062 × 0.05 × 0.045 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.041 × 0.05 × 0.035 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_phantom_firefly_swarm.fbx`
 
 > The Phantom Firefly Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is weathered and natural, colored in amber, with gold markings. Look for hundreds of soft lantern lights moving together. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It lopes in long strides, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_cloud_mimic_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cloud_mimic_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (858 tris · 0.984 × 1.06 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.097 × 1.271 × 0.999 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_cloud_mimic.fbx`
 
 > The Cloud Mimic is a small creature with a hollow shell posing as an everyday object, about 1 m tall. Its surface is stretched, stitched and constantly shifting, colored in weathered stone, with pale jade markings. Survivors describe a treasure chest with a tongue and a ring of teeth. It has no eyes at all, only a wide and patient mouth. A distinctive marking runs along its back. It unfolds into something larger, surrounded by swirling leaves and a constant breeze. Adapted to sky lands, it has cloud-pale coloring and lighter bones.
 

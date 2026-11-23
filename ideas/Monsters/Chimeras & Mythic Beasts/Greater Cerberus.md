@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_greater_cerberus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_cerberus_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,862 tris · 3.085 × 8 × 6.959 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,996 tris · 3.294 × 8.001 × 4.993 m · local file `Game/Assets/_Game/Art/Models/Monsters/Chimeras & Mythic Beasts/mon_greater_cerberus.fbx`
 
 > The Greater Cerberus is a huge creature with a powerful four-legged hunter's body, about 8 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ember-orange markings. Survivors describe three heads with three different moods. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

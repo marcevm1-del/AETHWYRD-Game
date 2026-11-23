@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_skeleton_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_skeleton_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,606 tris · 0.921 × 1.516 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.584 × 0.654 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_skeleton.fbx`
 
 > The Skeleton is a person-sized creature with a lean humanoid frame, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in bleached bone and grave-cloth, with violet markings. Look for yellowed bones held together by blue grave-light. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It circles its prey, surrounded by shadows that lean toward it.
 

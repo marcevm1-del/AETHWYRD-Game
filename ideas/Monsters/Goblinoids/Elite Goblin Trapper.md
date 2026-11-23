@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_elite_goblin_trapper_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elite_goblin_trapper_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,122 tris · 0.805 × 0.947 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,996 tris · 1.36 × 0.889 × 1.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_elite_goblin_trapper.fbx`
 
 > The Elite Goblin Trapper is a person-sized creature with a small, compact humanoid body, about 1.6 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is snares and rusted bells hanging from its belt. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

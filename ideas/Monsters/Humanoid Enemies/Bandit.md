@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_bandit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bandit_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,816 tris · 1.061 × 1.327 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.963 × 1.089 × 1.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Humanoid Enemies/mon_bandit.fbx`
 
 > The Bandit is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its clothing and gear are rough, scarred and spiked, colored in leather browns and dull steel. Its most striking feature is a patched cloak and a mismatched sword. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

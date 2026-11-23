@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_vesper_touched_manticore_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_manticore_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,680 tris · 0.924 × 3 × 2.545 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.88 × 3 × 1.898 m · local file `Game/Assets/_Game/Art/Models/Monsters/Chimeras & Mythic Beasts/mon_vesper_touched_manticore.fbx`
 
 > The Vesper-Touched Manticore is a large creature with a long-legged predatory quadruped build, about 3 m long. Its hide is patchy and subtly wrong, as if assembled from memory, colored in lion-tawny, with sickly green markings. Its most striking feature is a lion's body, a scorpion tail and a too-human smile. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_ruin_great_tengu_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_great_tengu_king_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,302 tris · 2.623 × 8.689 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.723 × 4.976 × 6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_ruin_great_tengu_king.fbx`
 
 > The Ruin Great Tengu King is a huge creature with a tall, long-legged bird build, about 6 m tall. Its form is weathered and natural, colored in lacquer red, with violet markings. Survivors describe a mask of red lacquer and a fan that summons typhoons. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It lopes in long strides, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_sky_arachne_matriarch_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sky_arachne_matriarch_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,426 tris · 6.444 × 8 × 4.986 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 7.037 × 8 × 3.903 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_sky_arachne_matriarch.fbx`
 
 > The Sky Arachne Matriarch is a huge creature with a squat, many-legged arachnid build, about 8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in glossy brown, with pale jade markings. Guild sketches always show a crown of silk and eight eyes like jewels. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It moves in jerky stop-motion bursts, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_zephyr_hornet_lancer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_zephyr_hornet_lancer_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,870 tris · 2.499 × 2.042 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 2.519 × 1.339 × 1.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_zephyr_hornet_lancer.fbx`
 
 > The Zephyr Hornet Lancer is a person-sized creature with a tiny, darting winged build, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in black, with pale jade markings. Its most striking feature is a lance-like stinger and humming armored wings. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

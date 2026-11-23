@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids, unique]
 ![[mon_hive_mother_of_the_abyss_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hive_mother_of_the_abyss_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,920 tris · 58.752 × 57.533 × 60 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 55.66 × 65.642 × 60.003 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_hive_mother_of_the_abyss.fbx`
 
 > The Hive Mother of the Abyss is a colossal creature with an asymmetric body with too many limbs, about 60 m tall. Its chitin is stretched, stitched and constantly shifting, colored in glossy brown, with violet-edged markings. Look for a living hive-mountain that sings. It has a human-like face in the wrong place. Its presence is world-scale; the sky changes color when it appears. It crawls across ceilings, surrounded by warped air, as if space bends around it.
 

@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_abyssal_kraken_queen_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_abyssal_kraken_queen_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,998 tris · 172.258 × 200 × 234.778 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 199.763 × 200 × 201.555 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_abyssal_kraken_queen.fbx`
 
 > The Abyssal Kraken Queen is a colossal creature with a tentacled, soft-bodied form, about 200 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with violet-edged markings. Guild sketches always show tentacles that can wrap around whole islands. It has pale, pupil-less eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It glides without moving its legs, surrounded by warped air, as if space bends around it.
 

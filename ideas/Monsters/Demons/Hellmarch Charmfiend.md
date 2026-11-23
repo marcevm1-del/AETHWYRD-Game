@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_hellmarch_charmfiend_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hellmarch_charmfiend_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,768 tris · 0.751 × 1.382 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.957 × 1.38 × 1.801 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_hellmarch_charmfiend.fbx`
 
 > The Hellmarch Charmfiend is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in brimstone red, with violet markings. Guild sketches always show a beautiful porcelain mask hiding a hollow face. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Adapted to demon lands, it has red-black coloring with faint ember veins.
 

@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_rot_vampire_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rot_vampire_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,240 tris · 1.061 × 1.745 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.613 × 0.689 × 1.801 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_rot_vampire.fbx`
 
 > The Rot Vampire is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its flesh and bone are rough, scarred and spiked, colored in grave-mould grey-green. Its most striking feature is aristocratic clothes and eyes like garnets. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

@@ -11,7 +11,7 @@ tags: [monster, shadows]
 ![[mon_mirror_shade_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mirror_shade_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,438 tris · 1.051 × 0.6 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.956 × 1.046 × 1.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Shadows/mon_mirror_shade.fbx`
 
 > The Mirror Shade is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its smoke-like body is stretched, stitched and constantly shifting, colored in smoky violet. Guild sketches always show your own silhouette, a heartbeat behind you. It has a human-like face in the wrong place. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by shadows that lean toward it.
 

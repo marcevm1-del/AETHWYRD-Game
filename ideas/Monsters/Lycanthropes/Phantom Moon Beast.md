@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_phantom_moon_beast_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_moon_beast_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,806 tris · 1.537 × 1.889 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.708 × 2.516 × 2.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_phantom_moon_beast.fbx`
 
 > The Phantom Moon Beast is a large creature with an upright humanoid build, about 2.8 m tall. Its fur is stretched, stitched and constantly shifting, colored in black-brown, with gold markings. Survivors describe fur that ripples like oil under moonlight. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It copies the walk of whatever it hunts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

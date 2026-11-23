@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_ember_kitten_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ember_kitten_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,154 tris · 0.155 × 0.4 × 0.257 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 5,998 tris · 0.09 × 0.4 × 0.211 m · local file `Game/Assets/_Game/Art/Models/Monsters/Familiars & Gentle Creatures/mon_ember_kitten.fbx`
 
 > The Ember Kitten is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pastel pink, with ember-orange markings. Guild sketches always show fur that flickers like candle flame. It has two bright dot eyes. Small scars and rough edges mark it as a survivor. It bounces happily, surrounded by heat-shimmer and drifting sparks.
 

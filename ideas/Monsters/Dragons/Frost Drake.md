@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_frost_drake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_frost_drake_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,942 tris · 1.157 × 3 × 2.61 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 0.903 × 3 × 0.721 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_frost_drake.fbx`
 
 > The Frost Drake is a large creature with a long-legged predatory quadruped build, about 3 m long. Its scales are rough, scarred and spiked, colored in emerald, with frost-blue markings. Guild sketches always show blue-white scales with frost on every edge. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by falling snow motes and frosted ground where it steps.
 

@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_frost_arachne_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_frost_arachne_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (4,152 tris · 2.732 × 3 × 2.96 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.368 × 3 × 1.816 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_frost_arachne.fbx`
 
 > The Frost Arachne is a large creature with a squat, many-legged arachnid build, about 3 m long. Its chitin is rough, scarred and spiked, colored in blue-black. Guild sketches always show a woman's upper body rising from a spider's. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

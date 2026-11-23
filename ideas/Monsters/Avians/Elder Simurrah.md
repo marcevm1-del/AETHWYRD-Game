@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_elder_simurrah_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_simurrah_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,302 tris · 15.903 × 52.683 × 32 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 15.809 × 39.407 × 32 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_elder_simurrah.fbx`
 
 > The Elder Simurrah is a colossal creature with a feathered avian body, about 32 m tall. Its plumage is smooth and clean, colored in blue, with gold markings. Look for a healing bird with peacock-eyed plumage. It has big round glossy eyes. The air distorts slightly around its outline. It hops in little bursts, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

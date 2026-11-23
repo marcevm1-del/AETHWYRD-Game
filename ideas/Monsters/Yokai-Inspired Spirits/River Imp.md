@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_river_imp_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_river_imp_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,490 tris · 0.503 × 0.574 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.524 × 0.873 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_river_imp.fbx`
 
 > The River Imp is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its form is weathered and natural, colored in lacquer red, with sea-blue markings. Look for a dish-like hollow on its head full of water. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it.
 

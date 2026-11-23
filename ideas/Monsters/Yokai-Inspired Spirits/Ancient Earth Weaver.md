@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_ancient_earth_weaver_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_earth_weaver_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,408 tris · 7.831 × 9 × 5.296 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,996 tris · 10.191 × 9.002 × 4.699 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_ancient_earth_weaver.fbx`
 
 > The Ancient Earth Weaver is a huge creature with a squat, many-legged arachnid build, about 9 m long. Its form is patchy and subtly wrong, as if assembled from memory, colored in lacquer red, with ochre markings. Look for a tiger-striped spider the size of a house. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

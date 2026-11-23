@@ -11,7 +11,7 @@ tags: [monster, aberrations]
 ![[mon_the_many_mouthed_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_many_mouthed_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,388 tris · 3.891 × 3.836 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.677 × 4.149 × 3.999 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aberrations/mon_the_many_mouthed.fbx`
 
 > The The Many-Mouthed is a large creature with an asymmetric body with too many limbs, about 4 m tall. Its skin is stretched, stitched and constantly shifting, colored in sickly teal, with violet-edged markings. Its most striking feature is mouths opening along its arms, all whispering. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It copies the walk of whatever it hunts, surrounded by warped air, as if space bends around it.
 

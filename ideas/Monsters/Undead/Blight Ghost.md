@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_blight_ghost_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_blight_ghost_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,672 tris · 1.314 × 1.454 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.219 × 1.328 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_blight_ghost.fbx`
 
 > The Blight Ghost is a person-sized creature with a floating, cloth-like shape, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in bleached bone and grave-cloth, with sickly green markings. Its most striking feature is a translucent figure frozen in its last moment. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

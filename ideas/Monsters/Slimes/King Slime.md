@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_king_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_king_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,304 tris · 3.357 × 3.357 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.353 × 3.22 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_king_slime.fbx`
 
 > The King Slime is a large creature with a wobbling mound of translucent gel, about 3 m tall. Its gel is weathered and natural, colored in deep blues with a glassy shine. Survivors describe a crown made of smaller slimes fused together. It has amber predator eyes. Battle-worn plates and trophies hang from its body. It prowls, surrounded by fine mist and droplets that orbit it.
 

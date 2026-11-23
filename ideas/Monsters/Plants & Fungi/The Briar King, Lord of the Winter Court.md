@@ -11,7 +11,7 @@ tags: [monster, plants-fungi, tyrant, unique]
 ![[mon_the_briar_king_lord_of_the_winter_court_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_briar_king_lord_of_the_winter_court_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,826 tris · 2.823 × 1.79 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.707 × 1.921 × 4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_the_briar_king_lord_of_the_winter_court.fbx`
 
 > The The Briar King, Lord of the Winter Court is a large creature with a walking body of bark and root, about 4 m tall. Its bark and leaves are rough, scarred and spiked, colored in moss green and lichen grey, with frost-blue markings. Survivors describe a crown of frozen thorns and a cloak of dead roses. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It circles its prey, surrounded by falling snow motes and frosted ground where it steps.
 

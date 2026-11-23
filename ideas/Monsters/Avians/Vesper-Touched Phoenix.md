@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_vesper_touched_phoenix_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_phoenix_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,302 tris · 2.623 × 8.689 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.95 × 5.319 × 6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_vesper_touched_phoenix.fbx`
 
 > The Vesper-Touched Phoenix is a huge creature with a broad-winged bird frame, about 6 m tall. Its plumage is weathered and natural, colored in pale buff, with ember-orange markings. Its most striking feature is feathers of living flame that fall as embers. It has alert animal eyes. The air distorts slightly around its outline. It prowls, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

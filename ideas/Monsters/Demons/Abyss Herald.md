@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_abyss_herald_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_abyss_herald_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,526 tris · 4.173 × 5.898 × 10 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 5.059 × 7.289 × 10.001 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_abyss_herald.fbx`
 
 > The Abyss Herald is a huge creature with a lean humanoid frame, about 10 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in char-black, with violet-edged markings. Its most striking feature is a tall figure with a void where its face should be. It has eyes that never blink. The air distorts slightly around its outline. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
 

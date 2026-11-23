@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_rime_wyvern_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rime_wyvern_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,788 tris · 12.522 × 8 × 8.889 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 13.121 × 8.001 × 5.565 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_rime_wyvern.fbx`
 
 > The Rime Wyvern is a huge creature with a sleek flying build, about 8 m long. Its scales are rough, scarred and spiked, colored in emerald, with frost-blue markings. Its most striking feature is tattered wings and a venom-tipped tail. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It circles its prey, surrounded by falling snow motes and frosted ground where it steps. Adapted to tundra lands, it has a thick, frost-rimed coat.
 

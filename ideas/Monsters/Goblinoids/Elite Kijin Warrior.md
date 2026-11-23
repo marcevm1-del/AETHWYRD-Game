@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_elite_kijin_warrior_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elite_kijin_warrior_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,582 tris · 2.059 × 2.604 × 3.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,998 tris · 2.283 × 1.85 × 3.801 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_elite_kijin_warrior.fbx`
 
 > The Elite Kijin Warrior is a large creature with a broad-shouldered humanoid build, about 3.8 m tall. Its skin is rough, scarred and spiked, colored in olive and hide brown, with ember-orange markings. Its most striking feature is twin horns, a disciplined stance and a lacquered blade. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

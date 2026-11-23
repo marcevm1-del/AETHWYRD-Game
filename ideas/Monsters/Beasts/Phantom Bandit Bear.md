@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_phantom_bandit_bear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_bandit_bear_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,322 tris · 0.506 × 2.2 × 0.988 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,992 tris · 0.851 × 2.2 × 1.33 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_phantom_bandit_bear.fbx`
 
 > The Phantom Bandit Bear is a person-sized creature with a long-legged predatory quadruped build, about 2.2 m long. Its coat is rough, scarred and spiked, colored in ash-grey, with gold markings. Guild sketches always show a dark mask-like band across its eyes. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

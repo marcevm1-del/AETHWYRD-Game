@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_walking_mushroom_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_walking_mushroom_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,532 tris · 0.494 × 0.353 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.443 × 0.386 × 0.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_walking_mushroom.fbx`
 
 > The Walking Mushroom is a small creature with a walking body of bark and root, about 0.6 m tall. Its bark and leaves are smooth and clean, colored in red with pale spots, with leaf-green markings. Look for a waddling cap on stubby legs. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by drifting pollen and tiny blossoms.
 

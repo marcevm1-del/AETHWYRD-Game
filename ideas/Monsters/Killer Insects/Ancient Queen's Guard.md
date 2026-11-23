@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_ancient_queen_s_guard_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_queen_s_guard_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,418 tris · 3.1 × 3 × 2.712 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,996 tris · 2.631 × 3 × 1.531 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_ancient_queen_s_guard.fbx`
 
 > The Ancient Queen's Guard is a large creature with a segmented six-limbed frame, about 3 m long. Its chitin is rough, scarred and spiked, colored in black, with ochre markings. Its most striking feature is a shield-shaped head plate. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

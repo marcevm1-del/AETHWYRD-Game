@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_clockwork_sentinel_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_clockwork_sentinel_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (838 tris · 2.477 × 1.53 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.409 × 0.985 × 2.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_clockwork_sentinel.fbx`
 
 > The Clockwork Sentinel is a large creature with a heavy, hand-built humanoid shell, about 2.5 m tall. Its surface is rough, scarred and spiked, colored in weathered stone, with electric-yellow markings. Guild sketches always show brass gears visible through its ribs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by crackling arcs that jump across its body.
 

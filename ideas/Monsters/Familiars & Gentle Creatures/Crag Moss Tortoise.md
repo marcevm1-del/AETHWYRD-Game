@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_crag_moss_tortoise_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_crag_moss_tortoise_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,312 tris · 0.309 × 0.8 × 0.515 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.416 × 0.8 × 0.298 m · local file `Game/Assets/_Game/Art/Models/Monsters/Familiars & Gentle Creatures/mon_crag_moss_tortoise.fbx`
 
 > The Crag Moss Tortoise is a small creature with a low, springy quadruped build, about 0.8 m long. Its coat is smooth and clean, colored in pastel pink, with ochre markings. Survivors describe herbs and flowers growing on its shell. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 

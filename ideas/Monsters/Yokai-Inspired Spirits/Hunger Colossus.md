@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_hunger_colossus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hunger_colossus_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,148 tris · 18.251 × 12.169 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 34.214 × 25.046 × 30.006 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_hunger_colossus.fbx`
 
 > The Hunger Colossus is a colossal creature with a giant, barrel-chested humanoid body, about 30 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in indigo, with violet markings. Look for a skeleton giant built from the bones of the starved. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It glides without moving its legs, surrounded by shadows that lean toward it.
 

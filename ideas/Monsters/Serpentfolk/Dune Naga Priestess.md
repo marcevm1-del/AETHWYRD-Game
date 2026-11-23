@@ -11,7 +11,7 @@ tags: [monster, serpentfolk]
 ![[mon_dune_naga_priestess_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dune_naga_priestess_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (5,558 tris · 1.626 × 4 × 2.083 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.843 × 4 × 5.16 m · local file `Game/Assets/_Game/Art/Models/Monsters/Serpentfolk/mon_dune_naga_priestess.fbx`
 
 > The Dune Naga Priestess is a large creature with a humanoid upper body on a long serpent tail, about 4 m long. Its scales are rough, scarred and spiked, colored in green, with ochre markings. Guild sketches always show a hood of jeweled scales and temple tattoos. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it. Adapted to desert lands, it has sun-bleached, sand-scoured coloring.
 

@@ -11,7 +11,7 @@ tags: [monster, aquatic, tyrant, unique]
 ![[mon_krakenmother_ys_queen_of_the_wreck_tide_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_krakenmother_ys_queen_of_the_wreck_tide_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,898 tris · 34.452 × 40 × 45.496 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 39.953 × 40 × 40.311 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_krakenmother_ys_queen_of_the_wreck_tide.fbx`
 
 > The Krakenmother Ys, Queen of the Wreck Tide is a colossal creature with a tentacled, soft-bodied form, about 40 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in sea-blue. Look for a mother kraken wearing sunken ships like jewelry. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by fine mist and droplets that orbit it.
 

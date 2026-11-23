@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_blade_mantis_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_blade_mantis_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,830 tris · 2.067 × 2 × 1.808 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.821 × 1.999 × 1.031 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_blade_mantis.fbx`
 
 > The Blade Mantis is a person-sized creature with a low, wide insectoid build, about 2 m long. Its chitin is rough, scarred and spiked, colored in iridescent green, with pale jade markings. Its most striking feature is forearms shaped like curved scythes. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by swirling leaves and a constant breeze.
 

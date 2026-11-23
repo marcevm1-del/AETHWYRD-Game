@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_vesper_touched_cyclops_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_cyclops_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,136 tris · 3.65 × 2.515 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 6.385 × 4.7 × 6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_vesper_touched_cyclops.fbx`
 
 > The Vesper-Touched Cyclops is a huge creature with a towering, heavy-limbed body, about 6 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in sun-brown, with ochre markings. Its most striking feature is a single huge eye and a hammer made from a millstone. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

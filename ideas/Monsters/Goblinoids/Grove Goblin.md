@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_grove_goblin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_grove_goblin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,154 tris · 0.495 × 0.583 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,998 tris · 0.828 × 0.533 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_grove_goblin.fbx`
 
 > The Grove Goblin is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in olive and hide brown, with leaf-green markings. Survivors describe a grin of needle teeth under a stolen tin helmet. It has narrow glowing eyes. It has no ornament at all: simple, readable shapes. It charges without hesitation, surrounded by drifting pollen and tiny blossoms. Adapted to forest lands, it has moss-green coloring that blends with the undergrowth.
 

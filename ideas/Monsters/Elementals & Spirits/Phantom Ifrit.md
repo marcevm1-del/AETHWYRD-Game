@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_phantom_ifrit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_ifrit_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,464 tris · 3.633 × 3.622 × 5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.637 × 3.872 × 5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_phantom_ifrit.fbx`
 
 > The Phantom Ifrit is a huge creature with a bodiless, glowing form, about 5 m tall. Its body is patchy and subtly wrong, as if assembled from memory, colored in warm gold and pearl white. Its most striking feature is a torso of fire rising from a smoking lamp. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

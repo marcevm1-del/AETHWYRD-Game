@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_piranha_swarm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_piranha_swarm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,334 tris · 0.278 × 0.2 × 0.227 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.239 × 0.2 × 0.223 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_piranha_swarm.fbx`
 
 > The Piranha Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.2 m long, but the swarm covers several meters. Its scales and skin are rough, scarred and spiked, colored in sea-blue. Its most striking feature is silver flashes and red teeth. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
 

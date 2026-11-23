@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_starmetal_colossus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_starmetal_colossus_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,268 tris · 114.081 × 70.493 × 120 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 114.9 × 39.634 × 120.021 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_starmetal_colossus.fbx`
 
 > The Starmetal Colossus is a colossal creature with a towering machine-like frame, about 120 m tall. Its surface is weathered and natural, colored in bronze, with gold markings. Survivors describe a starmetal body that hums with Titan songs. It has amber predator eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It prowls, surrounded by soft radiance and floating motes of light.
 

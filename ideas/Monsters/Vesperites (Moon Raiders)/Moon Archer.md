@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders]
 ![[mon_moon_archer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_moon_archer_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,608 tris · 1.084 × 1.371 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.306 × 1.303 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Vesperites (Moon Raiders)/mon_moon_archer.fbx`
 
 > The Moon Archer is a person-sized creature with a lean humanoid frame, about 2 m tall. Its porcelain shell is rough, scarred and spiked, colored in twilight blue, with crimson markings. Guild sketches always show a bow of red glass and robes like falling silk. It has narrow glowing eyes. Faint runes glow along its body when it fights. It circles its prey, surrounded by a faint red mist that smells of iron.
 

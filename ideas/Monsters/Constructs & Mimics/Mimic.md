@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_mimic_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mimic_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (798 tris · 0.984 × 1.06 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.097 × 1.264 × 0.999 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_mimic.fbx`
 
 > The Mimic is a small creature with an object-shaped body that hides its true form, about 1 m tall. Its surface is stretched, stitched and constantly shifting, colored in weathered stone. Look for a treasure chest with a tongue and a ring of teeth. It has no eyes at all, only a wide and patient mouth. A distinctive marking runs along its back. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it.
 

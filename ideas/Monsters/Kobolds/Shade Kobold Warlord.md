@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_shade_kobold_warlord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_shade_kobold_warlord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,122 tris · 0.705 × 0.829 × 1.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.843 × 1.62 × 1.4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_shade_kobold_warlord.fbx`
 
 > The Shade Kobold Warlord is a person-sized creature with a hunched, wiry humanoid frame, about 1.4 m tall. Its mangy fur is rough, scarred and spiked, colored in rust-red, with violet markings. Look for scavenged knight armor hammered to fit. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

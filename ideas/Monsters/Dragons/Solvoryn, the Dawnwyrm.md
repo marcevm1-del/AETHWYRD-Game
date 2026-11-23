@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_solvoryn_the_dawnwyrm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_solvoryn_the_dawnwyrm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,026 tris · 146.209 × 150 × 91.601 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 315.767 × 150 × 107.018 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_solvoryn_the_dawnwyrm.fbx`
 
 > The Solvoryn, the Dawnwyrm is a colossal creature with a four-legged, two-winged dragon body, about 150 m long. Its scales are weathered and natural, colored in emerald, with gold markings. Survivors describe feathered wings of golden light. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It lopes in long strides, surrounded by soft radiance and floating motes of light.
 

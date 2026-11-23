@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_orc_warrior_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_orc_warrior_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,182 tris · 1.138 × 1.439 × 2.1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,995 tris · 1.426 × 1.197 × 2.1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_orc_warrior.fbx`
 
 > The Orc Warrior is a person-sized creature with a broad-shouldered humanoid build, about 2.1 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Guild sketches always show a fur mantle and rust-stained chain mail. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

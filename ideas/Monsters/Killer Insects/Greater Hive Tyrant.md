@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_greater_hive_tyrant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_hive_tyrant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,224 tris · 15.686 × 11.2 × 15.72 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 18.279 × 11.2 × 7.753 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_greater_hive_tyrant.fbx`
 
 > The Greater Hive Tyrant is a huge creature with a sleek flying build, about 11.2 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in lacquer-red, with sickly green markings. Guild sketches always show a winged queen-killer with a crown of stingers. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

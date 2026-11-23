@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_swamp_toad_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_swamp_toad_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,840 tris · 0.12 × 0.5 × 0.201 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.294 × 0.5 × 0.206 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_swamp_toad.fbx`
 
 > The Swamp Toad is a small creature with a low, springy quadruped build, about 0.5 m long. Its scales are smooth and clean, colored in teal-grey, with sea-blue markings. Survivors describe a wide smile and bulging golden eyes. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by fine mist and droplets that orbit it.
 

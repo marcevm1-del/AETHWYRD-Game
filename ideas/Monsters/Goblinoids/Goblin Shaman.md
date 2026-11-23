@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_shaman_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_shaman_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,720 tris · 0.494 × 0.501 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.843 × 0.543 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_goblin_shaman.fbx`
 
 > The Goblin Shaman is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather, with ember-orange markings. Survivors describe a skull headdress and a staff hung with smoking charms. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

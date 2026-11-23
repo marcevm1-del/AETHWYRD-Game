@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen, unique]
 ![[mon_taurgrim_the_maze_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_taurgrim_the_maze_king_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,602 tris · 5.153 × 3.155 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.342 × 5.621 × 5.999 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_taurgrim_the_maze_king.fbx`
 
 > The Taurgrim, the Maze King is a huge creature with a towering, heavy-limbed body, about 6 m tall. Its hide is rough, scarred and spiked, colored in tan, with ochre markings. Guild sketches always show a crown fused to its horns and a labrys of starmetal. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 

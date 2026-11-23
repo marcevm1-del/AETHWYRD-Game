@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_bone_dragon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bone_dragon_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,190 tris · 17.442 × 20 × 15.428 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 32.016 × 20 × 14.323 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_bone_dragon.fbx`
 
 > The Bone Dragon is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 20 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with violet markings. Its most striking feature is a dragon skeleton held together by green fire. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

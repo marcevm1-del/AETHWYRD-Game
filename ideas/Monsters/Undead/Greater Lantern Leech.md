@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_greater_lantern_leech_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_lantern_leech_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,938 tris · 0.204 × 1 × 0.531 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.343 × 1 × 0.502 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_greater_lantern_leech.fbx`
 
 > The Greater Lantern Leech is a small creature with a massive snake-like frame, about 1 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with sea-blue markings. Look for a glow on its back like a lost traveler's lantern. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It glides without moving its legs, surrounded by fine mist and droplets that orbit it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_moon_beast_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_moon_beast_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,560 tris · 1.075 × 1.977 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.666 × 2.368 × 2.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_moon_beast.fbx`
 
 > The Moon Beast is a large creature with a lean humanoid frame, about 2.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in black-brown, with violet markings. Its most striking feature is fur that ripples like oil under moonlight. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by shadows that lean toward it.
 

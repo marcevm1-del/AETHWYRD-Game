@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_greater_iron_golem_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_iron_golem_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,496 tris · 6.084 × 4.161 × 6.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,998 tris · 6.072 × 2.716 × 6.4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_greater_iron_golem.fbx`
 
 > The Greater Iron Golem is a huge creature with a heavy, hand-built humanoid shell, about 6.4 m tall. Its surface is weathered and natural, colored in riveted iron, with ochre markings. Survivors describe riveted iron and a furnace heart. It has amber predator eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

@@ -11,7 +11,7 @@ tags: [monster, sandborne]
 ![[mon_elder_dune_scorpion_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_dune_scorpion_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,830 tris · 3.307 × 3.2 × 2.893 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,992 tris · 2.035 × 3.2 × 1.141 m · local file `Game/Assets/_Game/Art/Models/Monsters/Sandborne/mon_elder_dune_scorpion.fbx`
 
 > The Elder Dune Scorpion is a large creature with a low, wide insectoid build, about 3.2 m long. Its sand-scoured hide is rough, scarred and spiked, colored in sunbaked clay, with sickly green markings. Look for a glass-like tail stinger. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

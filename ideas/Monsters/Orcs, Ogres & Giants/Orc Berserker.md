@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_orc_berserker_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_orc_berserker_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,484 tris · 1.296 × 0.899 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,999 tris · 1.487 × 0.859 × 2.199 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_orc_berserker.fbx`
 
 > The Orc Berserker is a person-sized creature with a lean humanoid frame, about 2.2 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with ember-orange markings. Its most striking feature is blood-red war paint and broken chains on its wrists. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It charges without hesitation, surrounded by heat-shimmer and drifting sparks.
 

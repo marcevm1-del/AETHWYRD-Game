@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders, tyrant, unique]
 ![[mon_ilyanthe_the_moon_harvester_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ilyanthe_the_moon_harvester_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,660 tris · 6.178 × 5.739 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.67 × 5.486 × 6.001 m · local file `Game/Assets/_Game/Art/Models/Monsters/Vesperites (Moon Raiders)/mon_ilyanthe_the_moon_harvester.fbx`
 
 > The Ilyanthe, the Moon Harvester is a huge creature with a bodiless, glowing form, about 6 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in dusk violet, with crimson markings. Its most striking feature is a lantern cage of red glass holding the stolen souls of the gem-folk. It has too many eyes, opening one after another. Its regal silhouette is crowned by a halo-like ring of aura. It copies the walk of whatever it hunts, surrounded by a faint red mist that smells of iron.
 

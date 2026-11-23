@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_grove_goblin_trapper_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_grove_goblin_trapper_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,716 tris · 0.502 × 0.509 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.909 × 0.491 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_grove_goblin_trapper.fbx`
 
 > The Grove Goblin Trapper is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is snares and rusted bells hanging from its belt. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms. Adapted to forest lands, it has moss-green coloring that blends with the undergrowth.
 

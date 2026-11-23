@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_radiant_killer_ant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_radiant_killer_ant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,486 tris · 0.59 × 1 × 0.729 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.881 × 1.001 × 0.511 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_radiant_killer_ant.fbx`
 
 > The Radiant Killer Ant is a small creature with a segmented six-limbed frame, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in black, with gold markings. Look for a pale soldier ant with a jaw that never stops working. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

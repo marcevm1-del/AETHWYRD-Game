@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_vesper_touched_goblin_general_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_goblin_general_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,524 tris · 0.918 × 1.689 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.247 × 0.777 × 2.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_vesper_touched_goblin_general.fbx`
 
 > The Vesper-Touched Goblin General is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in grey-green and patched leather, with crimson markings. Its most striking feature is a war banner and a horn carved from an ogre's tusk. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

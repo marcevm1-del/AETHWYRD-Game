@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_general_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_general_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,482 tris · 1.296 × 1.393 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,992 tris · 1.268 × 1.064 × 2.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_goblin_general.fbx`
 
 > The Goblin General is a person-sized creature with a broad-shouldered humanoid build, about 2.2 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Its most striking feature is a war banner and a horn carved from an ogre's tusk. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It charges without hesitation. It has no visible aura; you hear its breathing before you see it.
 

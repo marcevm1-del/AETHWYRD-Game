@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_vesper_touched_red_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_red_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,894 tris · 0.51 × 0.51 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.624 × 0.527 × 0.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_vesper_touched_red_slime.fbx`
 
 > The Vesper-Touched Red Slime is a small creature with a teardrop-shaped jelly body, about 0.5 m tall. Its gel is rough, scarred and spiked, colored in ember reds fading to soot black. Guild sketches always show a faint ember core pulsing like a heartbeat. It has narrow glowing eyes. A distinctive marking runs along its back. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

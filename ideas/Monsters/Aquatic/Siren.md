@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_siren_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_siren_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (5,908 tris · 0.913 × 2 × 1.628 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.422 × 2 × 2.553 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_siren.fbx`
 
 > The Siren is a person-sized creature with a humanoid upper body on a long serpent tail, about 2 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with sea-blue markings. Look for a fish tail and a voice that sounds like home. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by fine mist and droplets that orbit it.
 

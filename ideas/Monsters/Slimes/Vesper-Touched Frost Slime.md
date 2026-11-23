@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_vesper_touched_frost_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_frost_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,510 tris · 0.51 × 0.51 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.602 × 0.525 × 0.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_vesper_touched_frost_slime.fbx`
 
 > The Vesper-Touched Frost Slime is a small creature with a teardrop-shaped jelly body, about 0.5 m tall. Its gel is rough, scarred and spiked, colored in pale blues and frost-white. Survivors describe frost crystals growing from its crown. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

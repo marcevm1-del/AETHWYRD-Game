@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_ancient_lantern_leech_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_lantern_leech_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,560 tris · 0.214 × 0.9 × 0.494 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,992 tris · 0.308 × 0.9 × 0.449 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_ancient_lantern_leech.fbx`
 
 > The Ancient Lantern Leech is a small creature with a long, sinuous serpentine body, about 0.9 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with sea-blue markings. Its most striking feature is a glow on its back like a lost traveler's lantern. It has pale, pupil-less eyes. Small scars and rough edges mark it as a survivor. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

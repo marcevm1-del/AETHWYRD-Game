@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_phantom_werebear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_werebear_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,794 tris · 1.252 × 2.303 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.487 × 1.97 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_phantom_werebear.fbx`
 
 > The Phantom Werebear is a large creature with an upright humanoid build, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with gold markings. Look for tribal tattoos showing through thick bear fur. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_scarab_swarm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_scarab_swarm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,334 tris · 0.082 × 0.05 × 0.066 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.049 × 0.05 × 0.045 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_scarab_swarm.fbx`
 
 > The Scarab Swarm is a tiny creature with a swarm of many small bodies moving as one, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is rough, scarred and spiked, colored in iridescent green, with violet markings. Look for golden beetles that flow like spilled coins. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it.
 

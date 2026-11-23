@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders]
 ![[mon_ruin_vesper_shard_thrall_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_vesper_shard_thrall_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,106 tris · 0.751 × 0.8 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.227 × 0.564 × 1.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Vesperites (Moon Raiders)/mon_ruin_vesper_shard_thrall.fbx`
 
 > The Ruin Vesper Shard-Thrall is a person-sized creature with an upright humanoid build, about 1.8 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in dusk violet. Guild sketches always show porcelain skin cracked with red light. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

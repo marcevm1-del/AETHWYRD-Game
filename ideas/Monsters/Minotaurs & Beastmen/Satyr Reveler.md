@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_satyr_reveler_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_satyr_reveler_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,706 tris · 1.002 × 0.994 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.895 × 1.297 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_satyr_reveler.fbx`
 
 > The Satyr Reveler is a person-sized creature with a broad-shouldered humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in charcoal, with leaf-green markings. Look for goat legs and a panpipe that makes you dance. It has alert animal eyes. A distinctive marking runs along its back. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
 

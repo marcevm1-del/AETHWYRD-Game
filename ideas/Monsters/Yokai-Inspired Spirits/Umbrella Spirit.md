@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_umbrella_spirit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_umbrella_spirit_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,256 tris · 0.458 × 0.522 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.5 × 0.569 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_umbrella_spirit.fbx`
 
 > The Umbrella Spirit is a small creature with a small, compact humanoid body, about 0.8 m tall. Its form is smooth and clean, colored in lacquer red, with sea-blue markings. Survivors describe a one-eyed paper umbrella hopping on one leg. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by fine mist and droplets that orbit it.
 

@@ -2,6 +2,13 @@
 
 _Last updated 2026-11-23 by the executive overseer session._
 
+## Latest state (supersedes the older lists below)
+- PRs 11 to 17 are merged; `main` = `402a88f4`. Owner checkout fast-forwarded.
+- Unity verify `verify_2026-11-23_2228`: 803 rules tests, 207 of 207 PlayMode, player built, 3 screenshots. DIRTY TREE label, so not a clean baseline.
+- On hold (weekly usage limit): combat feel, toon shader, over-the-shoulder camera, Whisperwood foliage, Swordsman sword, Brindlewick region data. The sword and foliage briefs must go through the model-request queue (CLAUDE.md); their first briefs missed it.
+- Open: nothing in the Unity runtime reads the loaded `ReactionTable`; `MonsterDummy.cs` still uses `Tuning.Reactions`.
+- Seen in the verify screenshots: placeholder player and NPC capsules, skewed window quads on some towers, a large grey slab intruding on the plaza, overlapping distant name labels.
+
 ## Session handoff
 - **Done:**
   - M1 read-only audit ([M1_AUDIT_2026-11-23.md](M1_AUDIT_2026-11-23.md)).

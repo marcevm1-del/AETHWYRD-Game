@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_kobold_trapmaster_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_kobold_trapmaster_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,730 tris · 0.495 × 0.583 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.608 × 1.364 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_kobold_trapmaster.fbx`
 
 > The Kobold Trapmaster is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its mangy fur is rough, scarred and spiked, colored in rust-red. Survivors describe a harness of gears, springs and tripwires. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 

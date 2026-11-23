@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_starfall_wyrm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_starfall_wyrm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,178 tris · 58.484 × 60 × 36.641 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 95.981 × 59.997 × 42.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_starfall_wyrm.fbx`
 
 > The Starfall Wyrm is a colossal creature with a four-legged, two-winged dragon body, about 60 m long. Its scales are rough, scarred and spiked, colored in emerald, with gold markings. Look for scales flecked with fallen starmetal that glitter like a night sky. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It strides with heavy steps, surrounded by soft radiance and floating motes of light.
 

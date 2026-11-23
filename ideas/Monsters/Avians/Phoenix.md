@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_phoenix_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phoenix_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,240 tris · 2.998 × 9.932 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.981 × 5.437 × 6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_phoenix.fbx`
 
 > The Phoenix is a huge creature with a broad-winged bird frame, about 6 m tall. Its plumage is smooth and clean, colored in pale buff, with ember-orange markings. Look for feathers of living flame that fall as embers. It has wide curious eyes with star-shaped highlights. Its regal silhouette is crowned by a halo-like ring of aura. It waddles, surrounded by heat-shimmer and drifting sparks.
 

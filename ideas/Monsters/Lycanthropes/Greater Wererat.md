@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_greater_wererat_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_wererat_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,682 tris · 1.002 × 0.67 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 1.469 × 2.388 × 2.401 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_greater_wererat.fbx`
 
 > The Greater Wererat is a person-sized creature with a lean humanoid frame, about 2.4 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in snow-white, with sickly green markings. Look for a hunched rodent body with human hands. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

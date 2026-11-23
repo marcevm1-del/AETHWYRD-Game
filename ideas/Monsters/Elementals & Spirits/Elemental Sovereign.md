@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_elemental_sovereign_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elemental_sovereign_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,886 tris · 18.488 × 17.111 × 20 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 14.412 × 15.664 × 20 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_elemental_sovereign.fbx`
 
 > The Elemental Sovereign is a colossal creature with a bodiless, glowing form, about 20 m tall. Its body is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Look for four orbiting crowns of fire, ice, storm and stone. It has burning slit pupils. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 

@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_mud_doll_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mud_doll_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,494 tris · 0.449 × 0.44 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.459 × 0.363 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_mud_doll.fbx`
 
 > The Mud Doll is a small creature with a scrawny biped with long arms and bowed legs, about 0.8 m tall. Its surface is smooth and clean, colored in bronze, with ochre markings. Look for a child's clay figure with thumbprint eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It bounces happily, surrounded by pebbles that tremble and float near it.
 

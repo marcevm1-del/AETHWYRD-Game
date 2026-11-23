@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_phantom_goblin_archer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_goblin_archer_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,722 tris · 0.351 × 0.425 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.867 × 0.787 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_phantom_goblin_archer.fbx`
 
 > The Phantom Goblin Archer is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in grey-green and patched leather, with gold markings. Guild sketches always show a crooked bow strung with gut and a quiver of bone-tipped arrows. It has eyes that never blink. Small scars and rough edges mark it as a survivor. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

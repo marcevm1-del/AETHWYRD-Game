@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_vesper_touched_young_dragon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_young_dragon_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,482 tris · 10.465 × 12 × 9.257 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 19.201 × 12 × 8.561 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_vesper_touched_young_dragon.fbx`
 
 > The Vesper-Touched Young Dragon is a huge creature with a vast quadruped dragon frame with cathedral wings, about 12 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in bronze, with ember-orange markings. Guild sketches always show a proud crest and scales that shine like new coins. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by heat-shimmer and drifting sparks. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

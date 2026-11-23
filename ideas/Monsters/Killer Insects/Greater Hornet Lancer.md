@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_greater_hornet_lancer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_hornet_lancer_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,906 tris · 3.957 × 3.234 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,998 tris · 3.988 × 2.264 × 1.9 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_greater_hornet_lancer.fbx`
 
 > The Greater Hornet Lancer is a person-sized creature with a small winged body, about 1.9 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Guild sketches always show a lance-like stinger and humming armored wings. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

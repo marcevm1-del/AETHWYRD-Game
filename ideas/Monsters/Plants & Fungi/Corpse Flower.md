@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_corpse_flower_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_corpse_flower_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,784 tris · 2.893 × 2.434 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.723 × 2.215 × 4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_corpse_flower.fbx`
 
 > The Corpse Flower is a large creature with a rooted plant body, about 4 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in deep fern green and dark bark, with violet markings. Its most striking feature is a rotting bloom the size of a cart. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

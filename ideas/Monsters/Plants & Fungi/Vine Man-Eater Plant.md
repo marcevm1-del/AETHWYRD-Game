@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_vine_man_eater_plant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vine_man_eater_plant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,762 tris · 2.606 × 1.961 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 0.968 × 1.201 × 2.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_vine_man_eater_plant.fbx`
 
 > The Vine Man-Eater Plant is a large creature with a huge bulbous flower on a thick stalk, about 2.5 m tall. Its bark and leaves are rough, scarred and spiked, colored in moss green and lichen grey. Guild sketches always show a flower with jaws made of petals. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
 

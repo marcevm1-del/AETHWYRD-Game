@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_sky_snowmole_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sky_snowmole_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,606 tris · 0.096 × 0.4 × 0.16 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.113 × 0.4 × 0.177 m · local file `Game/Assets/_Game/Art/Models/Monsters/Familiars & Gentle Creatures/mon_sky_snowmole.fbx`
 
 > The Sky Snowmole is a tiny creature with a small, quick four-legged body, about 0.4 m long. Its coat is smooth and clean, colored in pastel pink, with pale jade markings. Look for a white nose and shovel-like paws. It has big round glossy eyes. Small scars and rough edges mark it as a survivor. It waddles, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 
