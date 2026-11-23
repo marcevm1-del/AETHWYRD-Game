@@ -1,0 +1,1121 @@
+{
+ "id": "human_male_base",
+ "body": "human_male_base",
+ "sex": "male",
+ "seed": 1,
+ "heightM": 1.78,
+ "hash": "6bdb4bf26bab608c",
+ "build": "average",
+ "age": "adult",
+ "skin": "light",
+ "hair": {
+  "style": "swept_fringe",
+  "colour": "chestnut"
+ },
+ "eyes": "amber",
+ "outfit": {
+  "id": "rank_f_adventurer_m",
+  "parts": [
+   "top",
+   "bottom",
+   "belt",
+   "boots",
+   "bracers",
+   "cloak"
+  ]
+ },
+ "rig": {
+  "contract": "human_v1",
+  "armature": "human_male_base_rig",
+  "restPose": "T",
+  "forward": "-Y in Blender, +Z in Unity after the FBX axis fix",
+  "humanoidBones": 52,
+  "extraBones": [
+   "HairBack_1",
+   "HairBack_2",
+   "HairBack_3",
+   "HairSideL_1",
+   "HairSideL_2",
+   "HairSideR_1",
+   "HairSideR_2",
+   "CloakBack_1",
+   "CloakBack_2",
+   "CloakBack_3"
+  ],
+  "bones": [
+   {
+    "name": "Hips",
+    "parent": null,
+    "head": [
+     0.0,
+     -0.0,
+     0.9345
+    ],
+    "tail": [
+     0.0,
+     -0.0,
+     1.0057
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "Spine",
+    "parent": "Hips",
+    "head": [
+     0.0,
+     -0.0,
+     1.0057
+    ],
+    "tail": [
+     0.0,
+     -0.0,
+     1.1125
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "Chest",
+    "parent": "Spine",
+    "head": [
+     0.0,
+     -0.0,
+     1.1125
+    ],
+    "tail": [
+     0.0,
+     -0.0,
+     1.2371
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "UpperChest",
+    "parent": "Chest",
+    "head": [
+     0.0,
+     -0.0,
+     1.2371
+    ],
+    "tail": [
+     0.0,
+     -0.0,
+     1.4062
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "Neck",
+    "parent": "UpperChest",
+    "head": [
+     0.0,
+     -0.0,
+     1.4062
+    ],
+    "tail": [
+     0.0,
+     -0.0,
+     1.51834
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "Head",
+    "parent": "Neck",
+    "head": [
+     0.0,
+     -0.0,
+     1.51834
+    ],
+    "tail": [
+     0.0,
+     -0.0,
+     1.78
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "HairBack_1",
+    "parent": "Head",
+    "head": [
+     0.0,
+     0.09256,
+     1.7177
+    ],
+    "tail": [
+     0.0,
+     0.1068,
+     1.6376
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "HairBack_2",
+    "parent": "HairBack_1",
+    "head": [
+     0.0,
+     0.1068,
+     1.6376
+    ],
+    "tail": [
+     0.0,
+     0.11392,
+     1.5486
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "HairBack_3",
+    "parent": "HairBack_2",
+    "head": [
+     0.0,
+     0.11392,
+     1.5486
+    ],
+    "tail": [
+     0.0,
+     0.11748,
+     1.4507
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "HairSideL_1",
+    "parent": "Head",
+    "head": [
+     0.08188,
+     -0.0178,
+     1.6821
+    ],
+    "tail": [
+     0.089,
+     -0.00712,
+     1.6109
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "HairSideL_2",
+    "parent": "HairSideL_1",
+    "head": [
+     0.089,
+     -0.00712,
+     1.6109
+    ],
+    "tail": [
+     0.09256,
+     0.0,
+     1.5397
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "HairSideR_1",
+    "parent": "Head",
+    "head": [
+     -0.08188,
+     -0.0178,
+     1.6821
+    ],
+    "tail": [
+     -0.089,
+     -0.00712,
+     1.6109
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "HairSideR_2",
+    "parent": "HairSideR_1",
+    "head": [
+     -0.089,
+     -0.00712,
+     1.6109
+    ],
+    "tail": [
+     -0.09256,
+     0.0,
+     1.5397
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "LeftShoulder",
+    "parent": "UpperChest",
+    "head": [
+     0.02136,
+     -0.0,
+     1.4062
+    ],
+    "tail": [
+     0.19888,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftUpperArm",
+    "parent": "LeftShoulder",
+    "head": [
+     0.19888,
+     -0.0,
+     1.3706
+    ],
+    "tail": [
+     0.49316,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftLowerArm",
+    "parent": "LeftUpperArm",
+    "head": [
+     0.49316,
+     -0.0,
+     1.3706
+    ],
+    "tail": [
+     0.73255,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftHand",
+    "parent": "LeftLowerArm",
+    "head": [
+     0.73255,
+     -0.0,
+     1.3706
+    ],
+    "tail": [
+     0.81699,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftThumbProximal",
+    "parent": "LeftHand",
+    "head": [
+     0.76126,
+     -0.04691,
+     1.3706
+    ],
+    "tail": [
+     0.77718,
+     -0.06728,
+     1.36595
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftThumbIntermediate",
+    "parent": "LeftThumbProximal",
+    "head": [
+     0.77718,
+     -0.06728,
+     1.36595
+    ],
+    "tail": [
+     0.78855,
+     -0.08183,
+     1.36262
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftThumbDistal",
+    "parent": "LeftThumbIntermediate",
+    "head": [
+     0.78855,
+     -0.08183,
+     1.36262
+    ],
+    "tail": [
+     0.79916,
+     -0.09542,
+     1.35952
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftIndexProximal",
+    "parent": "LeftHand",
+    "head": [
+     0.81699,
+     -0.03518,
+     1.3706
+    ],
+    "tail": [
+     0.85109,
+     -0.04058,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftIndexIntermediate",
+    "parent": "LeftIndexProximal",
+    "head": [
+     0.85109,
+     -0.04058,
+     1.3706
+    ],
+    "tail": [
+     0.87333,
+     -0.04411,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftIndexDistal",
+    "parent": "LeftIndexIntermediate",
+    "head": [
+     0.87333,
+     -0.04411,
+     1.3706
+    ],
+    "tail": [
+     0.89112,
+     -0.04692,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftMiddleProximal",
+    "parent": "LeftHand",
+    "head": [
+     0.81699,
+     -0.01173,
+     1.3706
+    ],
+    "tail": [
+     0.85439,
+     -0.01238,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftMiddleIntermediate",
+    "parent": "LeftMiddleProximal",
+    "head": [
+     0.85439,
+     -0.01238,
+     1.3706
+    ],
+    "tail": [
+     0.87878,
+     -0.01281,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftMiddleDistal",
+    "parent": "LeftMiddleIntermediate",
+    "head": [
+     0.87878,
+     -0.01281,
+     1.3706
+    ],
+    "tail": [
+     0.89829,
+     -0.01315,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftRingProximal",
+    "parent": "LeftHand",
+    "head": [
+     0.81699,
+     0.01173,
+     1.3706
+    ],
+    "tail": [
+     0.85133,
+     0.01534,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftRingIntermediate",
+    "parent": "LeftRingProximal",
+    "head": [
+     0.85133,
+     0.01534,
+     1.3706
+    ],
+    "tail": [
+     0.87372,
+     0.01769,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftRingDistal",
+    "parent": "LeftRingIntermediate",
+    "head": [
+     0.87372,
+     0.01769,
+     1.3706
+    ],
+    "tail": [
+     0.89163,
+     0.01957,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftLittleProximal",
+    "parent": "LeftHand",
+    "head": [
+     0.81699,
+     0.03518,
+     1.3706
+    ],
+    "tail": [
+     0.84339,
+     0.04226,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftLittleIntermediate",
+    "parent": "LeftLittleProximal",
+    "head": [
+     0.84339,
+     0.04226,
+     1.3706
+    ],
+    "tail": [
+     0.86061,
+     0.04687,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftLittleDistal",
+    "parent": "LeftLittleIntermediate",
+    "head": [
+     0.86061,
+     0.04687,
+     1.3706
+    ],
+    "tail": [
+     0.87438,
+     0.05056,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightShoulder",
+    "parent": "UpperChest",
+    "head": [
+     -0.02136,
+     -0.0,
+     1.4062
+    ],
+    "tail": [
+     -0.19888,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightUpperArm",
+    "parent": "RightShoulder",
+    "head": [
+     -0.19888,
+     -0.0,
+     1.3706
+    ],
+    "tail": [
+     -0.49316,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightLowerArm",
+    "parent": "RightUpperArm",
+    "head": [
+     -0.49316,
+     -0.0,
+     1.3706
+    ],
+    "tail": [
+     -0.73255,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightHand",
+    "parent": "RightLowerArm",
+    "head": [
+     -0.73255,
+     -0.0,
+     1.3706
+    ],
+    "tail": [
+     -0.81699,
+     -0.0,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightThumbProximal",
+    "parent": "RightHand",
+    "head": [
+     -0.76126,
+     -0.04691,
+     1.3706
+    ],
+    "tail": [
+     -0.77718,
+     -0.06728,
+     1.36595
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightThumbIntermediate",
+    "parent": "RightThumbProximal",
+    "head": [
+     -0.77718,
+     -0.06728,
+     1.36595
+    ],
+    "tail": [
+     -0.78855,
+     -0.08183,
+     1.36262
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightThumbDistal",
+    "parent": "RightThumbIntermediate",
+    "head": [
+     -0.78855,
+     -0.08183,
+     1.36262
+    ],
+    "tail": [
+     -0.79916,
+     -0.09542,
+     1.35952
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightIndexProximal",
+    "parent": "RightHand",
+    "head": [
+     -0.81699,
+     -0.03518,
+     1.3706
+    ],
+    "tail": [
+     -0.85109,
+     -0.04058,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightIndexIntermediate",
+    "parent": "RightIndexProximal",
+    "head": [
+     -0.85109,
+     -0.04058,
+     1.3706
+    ],
+    "tail": [
+     -0.87333,
+     -0.04411,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightIndexDistal",
+    "parent": "RightIndexIntermediate",
+    "head": [
+     -0.87333,
+     -0.04411,
+     1.3706
+    ],
+    "tail": [
+     -0.89112,
+     -0.04692,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightMiddleProximal",
+    "parent": "RightHand",
+    "head": [
+     -0.81699,
+     -0.01173,
+     1.3706
+    ],
+    "tail": [
+     -0.85439,
+     -0.01238,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightMiddleIntermediate",
+    "parent": "RightMiddleProximal",
+    "head": [
+     -0.85439,
+     -0.01238,
+     1.3706
+    ],
+    "tail": [
+     -0.87878,
+     -0.01281,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightMiddleDistal",
+    "parent": "RightMiddleIntermediate",
+    "head": [
+     -0.87878,
+     -0.01281,
+     1.3706
+    ],
+    "tail": [
+     -0.89829,
+     -0.01315,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightRingProximal",
+    "parent": "RightHand",
+    "head": [
+     -0.81699,
+     0.01173,
+     1.3706
+    ],
+    "tail": [
+     -0.85133,
+     0.01534,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightRingIntermediate",
+    "parent": "RightRingProximal",
+    "head": [
+     -0.85133,
+     0.01534,
+     1.3706
+    ],
+    "tail": [
+     -0.87372,
+     0.01769,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightRingDistal",
+    "parent": "RightRingIntermediate",
+    "head": [
+     -0.87372,
+     0.01769,
+     1.3706
+    ],
+    "tail": [
+     -0.89163,
+     0.01957,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightLittleProximal",
+    "parent": "RightHand",
+    "head": [
+     -0.81699,
+     0.03518,
+     1.3706
+    ],
+    "tail": [
+     -0.84339,
+     0.04226,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightLittleIntermediate",
+    "parent": "RightLittleProximal",
+    "head": [
+     -0.84339,
+     0.04226,
+     1.3706
+    ],
+    "tail": [
+     -0.86061,
+     0.04687,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightLittleDistal",
+    "parent": "RightLittleIntermediate",
+    "head": [
+     -0.86061,
+     0.04687,
+     1.3706
+    ],
+    "tail": [
+     -0.87438,
+     0.05056,
+     1.3706
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "CloakBack_1",
+    "parent": "UpperChest",
+    "head": [
+     0.0,
+     0.10324,
+     1.424
+    ],
+    "tail": [
+     0.0,
+     0.11748,
+     1.2282
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "CloakBack_2",
+    "parent": "CloakBack_1",
+    "head": [
+     0.0,
+     0.11748,
+     1.2282
+    ],
+    "tail": [
+     0.0,
+     0.12816,
+     1.0324
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "CloakBack_3",
+    "parent": "CloakBack_2",
+    "head": [
+     0.0,
+     0.12816,
+     1.0324
+    ],
+    "tail": [
+     0.0,
+     0.13884,
+     0.8366
+    ],
+    "humanoid": false
+   },
+   {
+    "name": "LeftUpperLeg",
+    "parent": "Hips",
+    "head": [
+     0.09881,
+     0.0,
+     0.9256
+    ],
+    "tail": [
+     0.09169,
+     -0.00534,
+     0.5073
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftLowerLeg",
+    "parent": "LeftUpperLeg",
+    "head": [
+     0.09169,
+     -0.00534,
+     0.5073
+    ],
+    "tail": [
+     0.08457,
+     0.0,
+     0.0801
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftFoot",
+    "parent": "LeftLowerLeg",
+    "head": [
+     0.08457,
+     0.0,
+     0.0801
+    ],
+    "tail": [
+     0.08457,
+     -0.09942,
+     0.03026
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "LeftToes",
+    "parent": "LeftFoot",
+    "head": [
+     0.08457,
+     -0.09942,
+     0.03026
+    ],
+    "tail": [
+     0.08457,
+     -0.19308,
+     0.02136
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightUpperLeg",
+    "parent": "Hips",
+    "head": [
+     -0.09881,
+     0.0,
+     0.9256
+    ],
+    "tail": [
+     -0.09169,
+     -0.00534,
+     0.5073
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightLowerLeg",
+    "parent": "RightUpperLeg",
+    "head": [
+     -0.09169,
+     -0.00534,
+     0.5073
+    ],
+    "tail": [
+     -0.08457,
+     0.0,
+     0.0801
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightFoot",
+    "parent": "RightLowerLeg",
+    "head": [
+     -0.08457,
+     0.0,
+     0.0801
+    ],
+    "tail": [
+     -0.08457,
+     -0.09942,
+     0.03026
+    ],
+    "humanoid": true
+   },
+   {
+    "name": "RightToes",
+    "parent": "RightFoot",
+    "head": [
+     -0.08457,
+     -0.09942,
+     0.03026
+    ],
+    "tail": [
+     -0.08457,
+     -0.19308,
+     0.02136
+    ],
+    "humanoid": true
+   }
+  ]
+ },
+ "parts": [
+  {
+   "part": "belt",
+   "object": "human_male_base_belt",
+   "group": "outfit",
+   "material": "CH_leather",
+   "vertices": 70,
+   "triangles": 96,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "body",
+   "object": "human_male_base_body",
+   "group": "body",
+   "material": "CH_skin",
+   "vertices": 5108,
+   "triangles": 10212,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "boots",
+   "object": "human_male_base_boots",
+   "group": "outfit",
+   "material": "CH_leather",
+   "vertices": 962,
+   "triangles": 1880,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "bottom",
+   "object": "human_male_base_bottom",
+   "group": "outfit",
+   "material": "CH_cloth",
+   "vertices": 1205,
+   "triangles": 2336,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "bracers",
+   "object": "human_male_base_bracers",
+   "group": "outfit",
+   "material": "CH_leather",
+   "vertices": 120,
+   "triangles": 160,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "brows",
+   "object": "human_male_base_brows",
+   "group": "face",
+   "material": "CH_face",
+   "vertices": 36,
+   "triangles": 32,
+   "shapeKeys": [
+    "brow_up",
+    "brow_down"
+   ],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "cloak",
+   "object": "human_male_base_cloak",
+   "group": "outfit",
+   "material": "CH_cloth",
+   "vertices": 986,
+   "triangles": 1792,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "ears",
+   "object": "human_male_base_ears",
+   "group": "face",
+   "material": "CH_skin",
+   "vertices": 192,
+   "triangles": 336,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "eyes",
+   "object": "human_male_base_eyes",
+   "group": "face",
+   "material": "CH_eyes",
+   "vertices": 538,
+   "triangles": 760,
+   "shapeKeys": [
+    "blink_L",
+    "blink_R"
+   ],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "hair",
+   "object": "human_male_base_hair",
+   "group": "hair",
+   "material": "CH_hair",
+   "vertices": 1638,
+   "triangles": 3074,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "mouth",
+   "object": "human_male_base_mouth",
+   "group": "face",
+   "material": "CH_face",
+   "vertices": 46,
+   "triangles": 40,
+   "shapeKeys": [
+    "smile",
+    "open"
+   ],
+   "colourAttribute": "Col"
+  },
+  {
+   "part": "top",
+   "object": "human_male_base_top",
+   "group": "outfit",
+   "material": "CH_cloth",
+   "vertices": 1182,
+   "triangles": 2256,
+   "shapeKeys": [],
+   "colourAttribute": "Col"
+  }
+ ],
+ "materials": [
+  "CH_cloth",
+  "CH_eyes",
+  "CH_face",
+  "CH_hair",
+  "CH_leather",
+  "CH_skin"
+ ],
+ "unity": {
+  "avatar": "Humanoid",
+  "note": "Set Rig > Animation Type = Humanoid (Create From This Model); materials map by name to the toon shader; the Col colour attribute is the base colour (vertex colour)."
+ }
+}

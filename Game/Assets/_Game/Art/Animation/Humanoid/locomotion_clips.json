@@ -1,0 +1,311 @@
+{
+ "schema": "locomotion_clips/1",
+ "rigContract": "human_v1",
+ "source": "Tools/blender/build_locomotion_clips.py",
+ "authoredOn": "human_male_base",
+ "convention": "Humanoid, in place, Blender -Y forward (Unity +Z after the FBX axis fix), feet on y=0, 30 fps (Dodge 50 fps so 0.42 s is exactly 21 frames)",
+ "clips": [
+  {
+   "name": "Idle",
+   "state": "Locomotion tree @ 0",
+   "loop": true,
+   "fps": 30,
+   "frames": 90,
+   "seconds": 3.0,
+   "rootMotion": false,
+   "designSpeedMps": null,
+   "strideM": null,
+   "notes": "breathing, one slow weight shift, a glance",
+   "metrics": {
+    "frames": 90,
+    "fps": 30,
+    "seconds": 3.0,
+    "loopClosureM": 0.0,
+    "hipsMinZ": 0.9175,
+    "hipsMaxZ": 0.9205,
+    "reachClamped": 0,
+    "minFootZ": -0.0,
+    "minBoneZ": 0.0214,
+    "hash": "82e9c85d3a02",
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "Walk",
+   "state": "Locomotion tree @ 2.2",
+   "loop": true,
+   "fps": 30,
+   "frames": 27,
+   "seconds": 0.9,
+   "rootMotion": false,
+   "designSpeedMps": 2.2,
+   "strideM": 1.98,
+   "notes": "stride 1.98 m per cycle at 2.2 m/s, stance 60%",
+   "metrics": {
+    "frames": 27,
+    "fps": 30,
+    "seconds": 0.9,
+    "loopClosureM": 0.0,
+    "hipsMinZ": 0.6967,
+    "hipsMaxZ": 0.9002,
+    "reachClamped": 9,
+    "minFootZ": -0.0,
+    "minBoneZ": 0.0196,
+    "hash": "e6bea1137f14",
+    "footContactFrames": 24,
+    "footSlideMaxMps": 0.042,
+    "footSlideMeanMps": 0.003,
+    "footSlideMeanPct": 0.1,
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "Run",
+   "state": "Locomotion tree @ 6.5",
+   "loop": true,
+   "fps": 30,
+   "frames": 18,
+   "seconds": 0.6,
+   "rootMotion": false,
+   "designSpeedMps": 6.5,
+   "strideM": 3.9,
+   "notes": "stride 3.90 m per cycle at 6.5 m/s, stance 30%",
+   "metrics": {
+    "frames": 18,
+    "fps": 30,
+    "seconds": 0.6,
+    "loopClosureM": 0.0,
+    "hipsMinZ": 0.6816,
+    "hipsMaxZ": 0.8844,
+    "reachClamped": 0,
+    "minFootZ": -0.0,
+    "minBoneZ": 0.0193,
+    "hash": "deec05f273f3",
+    "footContactFrames": 8,
+    "footSlideMaxMps": 0.022,
+    "footSlideMeanMps": 0.006,
+    "footSlideMeanPct": 0.1,
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "Sprint",
+   "state": "Locomotion tree @ 9.5",
+   "loop": true,
+   "fps": 30,
+   "frames": 15,
+   "seconds": 0.5,
+   "rootMotion": false,
+   "designSpeedMps": 9.5,
+   "strideM": 4.75,
+   "notes": "stride 4.75 m per cycle at 9.5 m/s, stance 25%",
+   "metrics": {
+    "frames": 15,
+    "fps": 30,
+    "seconds": 0.5,
+    "loopClosureM": 0.0,
+    "hipsMinZ": 0.6603,
+    "hipsMaxZ": 0.8798,
+    "reachClamped": 0,
+    "minFootZ": -0.0,
+    "minBoneZ": 0.0036,
+    "hash": "17211821f69b",
+    "footContactFrames": 4,
+    "footSlideMaxMps": 0.004,
+    "footSlideMeanMps": 0.001,
+    "footSlideMeanPct": 0.0,
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "JumpStart",
+   "state": "JumpStart",
+   "loop": false,
+   "fps": 30,
+   "frames": 14,
+   "seconds": 0.4667,
+   "rootMotion": false,
+   "designSpeedMps": null,
+   "strideM": null,
+   "notes": "crouch, drive up on the toes, leave the ground; the clip ends airborne and hands over to Fall",
+   "metrics": {
+    "frames": 14,
+    "fps": 30,
+    "seconds": 0.4667,
+    "loopClosureM": null,
+    "hipsMinZ": 0.7249,
+    "hipsMaxZ": 0.9495,
+    "reachClamped": 0,
+    "minFootZ": -0.0,
+    "minBoneZ": 0.016,
+    "hash": "59e8bb1e440e",
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "Fall",
+   "state": "Fall",
+   "loop": true,
+   "fps": 30,
+   "frames": 24,
+   "seconds": 0.8,
+   "rootMotion": false,
+   "designSpeedMps": null,
+   "strideM": null,
+   "notes": "airborne loop: arms out, legs trailing, a small flutter",
+   "metrics": {
+    "frames": 24,
+    "fps": 30,
+    "seconds": 0.8,
+    "loopClosureM": 0.0,
+    "hipsMinZ": 0.9345,
+    "hipsMaxZ": 0.9345,
+    "reachClamped": 0,
+    "minFootZ": 0.1162,
+    "minBoneZ": 0.1162,
+    "hash": "96f5db40f8a3",
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "Land",
+   "state": "Land",
+   "loop": false,
+   "fps": 30,
+   "frames": 11,
+   "seconds": 0.3667,
+   "rootMotion": false,
+   "designSpeedMps": null,
+   "strideM": null,
+   "notes": "soft landing: absorb with the knees and hips, spring back to the idle stance",
+   "metrics": {
+    "frames": 11,
+    "fps": 30,
+    "seconds": 0.3667,
+    "loopClosureM": null,
+    "hipsMinZ": 0.7377,
+    "hipsMaxZ": 0.9345,
+    "reachClamped": 0,
+    "minFootZ": 0.0,
+    "minBoneZ": 0.0185,
+    "hash": "7d1e361b8b34",
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "LandHard",
+   "state": "(optional second Land state)",
+   "loop": false,
+   "fps": 30,
+   "frames": 21,
+   "seconds": 0.7,
+   "rootMotion": false,
+   "designSpeedMps": null,
+   "strideM": null,
+   "notes": "heavy landing from a long fall: deep crouch, one hand reaching down, a slow rise (not wired in the controller yet)",
+   "metrics": {
+    "frames": 21,
+    "fps": 30,
+    "seconds": 0.7,
+    "loopClosureM": null,
+    "hipsMinZ": 0.5545,
+    "hipsMaxZ": 0.9345,
+    "reachClamped": 0,
+    "minFootZ": -0.0,
+    "minBoneZ": 0.0184,
+    "hash": "1fe4ac42fdc9",
+    "bakeErrorM": 0.0
+   }
+  },
+  {
+   "name": "Dodge",
+   "state": "Dodge",
+   "loop": false,
+   "fps": 50,
+   "frames": 21,
+   "seconds": 0.42,
+   "rootMotion": false,
+   "designSpeedMps": null,
+   "strideM": null,
+   "notes": "forward roll in place (the motor moves 4.2 m); a full 360 degree pitch of the pelvis, curled up, out into a run stance",
+   "metrics": {
+    "frames": 21,
+    "fps": 50,
+    "seconds": 0.42,
+    "loopClosureM": null,
+    "hipsMinZ": 0.5345,
+    "hipsMaxZ": 0.9828,
+    "reachClamped": 0,
+    "minFootZ": 0.012,
+    "minBoneZ": 0.012,
+    "hash": "cf492e9c0cea",
+    "bakeErrorM": 0.0
+   }
+  }
+ ],
+ "crossCheck": [
+  {
+   "name": "Idle",
+   "body": "human_female_base",
+   "footSlideMeanPct": null,
+   "minFootZ": -0.0,
+   "hash": "d8cf8ac51834"
+  },
+  {
+   "name": "Walk",
+   "body": "human_female_base",
+   "footSlideMeanPct": 0.1,
+   "minFootZ": -0.0,
+   "hash": "bbab99ab8d59"
+  },
+  {
+   "name": "Run",
+   "body": "human_female_base",
+   "footSlideMeanPct": 0.1,
+   "minFootZ": -0.0,
+   "hash": "21d56a7aa768"
+  },
+  {
+   "name": "Sprint",
+   "body": "human_female_base",
+   "footSlideMeanPct": 0.0,
+   "minFootZ": -0.0,
+   "hash": "619566791c1e"
+  },
+  {
+   "name": "JumpStart",
+   "body": "human_female_base",
+   "footSlideMeanPct": null,
+   "minFootZ": -0.0,
+   "hash": "e3bd996773c1"
+  },
+  {
+   "name": "Fall",
+   "body": "human_female_base",
+   "footSlideMeanPct": null,
+   "minFootZ": 0.1246,
+   "hash": "c64b20cfa051"
+  },
+  {
+   "name": "Land",
+   "body": "human_female_base",
+   "footSlideMeanPct": null,
+   "minFootZ": -0.0,
+   "hash": "00a2ef0b46d7"
+  },
+  {
+   "name": "LandHard",
+   "body": "human_female_base",
+   "footSlideMeanPct": null,
+   "minFootZ": -0.0,
+   "hash": "06be26a99738"
+  },
+  {
+   "name": "Dodge",
+   "body": "human_female_base",
+   "footSlideMeanPct": null,
+   "minFootZ": 0.012,
+   "hash": "5977500a6770"
+  }
+ ]
+}

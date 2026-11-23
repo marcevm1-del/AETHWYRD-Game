@@ -26,7 +26,7 @@
     "reachClamped": 0,
     "minFootZ": -0.0,
     "minBoneZ": 0.0214,
-    "hash": "39ed35740ad0",
+    "hash": "82e9c85d3a02",
     "bakeErrorM": 0.0
    }
   },
@@ -51,7 +51,7 @@
     "reachClamped": 9,
     "minFootZ": -0.0,
     "minBoneZ": 0.0196,
-    "hash": "dce44a092dba",
+    "hash": "e6bea1137f14",
     "footContactFrames": 24,
     "footSlideMaxMps": 0.042,
     "footSlideMeanMps": 0.003,
@@ -80,7 +80,7 @@
     "reachClamped": 0,
     "minFootZ": -0.0,
     "minBoneZ": 0.0193,
-    "hash": "421285c474d0",
+    "hash": "deec05f273f3",
     "footContactFrames": 8,
     "footSlideMaxMps": 0.022,
     "footSlideMeanMps": 0.006,
@@ -109,7 +109,7 @@
     "reachClamped": 0,
     "minFootZ": -0.0,
     "minBoneZ": 0.0036,
-    "hash": "e25d2aff8bf1",
+    "hash": "17211821f69b",
     "footContactFrames": 4,
     "footSlideMaxMps": 0.004,
     "footSlideMeanMps": 0.001,
@@ -138,7 +138,7 @@
     "reachClamped": 0,
     "minFootZ": -0.0,
     "minBoneZ": 0.016,
-    "hash": "618ec906f901",
+    "hash": "59e8bb1e440e",
     "bakeErrorM": 0.0
    }
   },
@@ -163,7 +163,7 @@
     "reachClamped": 0,
     "minFootZ": 0.1162,
     "minBoneZ": 0.1162,
-    "hash": "2c68fe6f2e53",
+    "hash": "96f5db40f8a3",
     "bakeErrorM": 0.0
    }
   },
@@ -188,7 +188,7 @@
     "reachClamped": 0,
     "minFootZ": 0.0,
     "minBoneZ": 0.0185,
-    "hash": "78d3a1ab92d3",
+    "hash": "7d1e361b8b34",
     "bakeErrorM": 0.0
    }
   },
@@ -213,7 +213,7 @@
     "reachClamped": 0,
     "minFootZ": -0.0,
     "minBoneZ": 0.0184,
-    "hash": "802a242481dd",
+    "hash": "1fe4ac42fdc9",
     "bakeErrorM": 0.0
    }
   },
@@ -238,7 +238,7 @@
     "reachClamped": 0,
     "minFootZ": 0.012,
     "minBoneZ": 0.012,
-    "hash": "8cd51e20338a",
+    "hash": "cf492e9c0cea",
     "bakeErrorM": 0.0
    }
   }
@@ -249,63 +249,63 @@
    "body": "human_female_base",
    "footSlideMeanPct": null,
    "minFootZ": -0.0,
-   "hash": "82a94a53befc"
+   "hash": "d8cf8ac51834"
   },
   {
    "name": "Walk",
    "body": "human_female_base",
    "footSlideMeanPct": 0.1,
    "minFootZ": -0.0,
-   "hash": "b3647e15deff"
+   "hash": "bbab99ab8d59"
   },
   {
    "name": "Run",
    "body": "human_female_base",
    "footSlideMeanPct": 0.1,
    "minFootZ": -0.0,
-   "hash": "dcb4801fb853"
+   "hash": "21d56a7aa768"
   },
   {
    "name": "Sprint",
    "body": "human_female_base",
    "footSlideMeanPct": 0.0,
    "minFootZ": -0.0,
-   "hash": "4d114d6897fa"
+   "hash": "619566791c1e"
   },
   {
    "name": "JumpStart",
    "body": "human_female_base",
    "footSlideMeanPct": null,
    "minFootZ": -0.0,
-   "hash": "13ae429afacb"
+   "hash": "e3bd996773c1"
   },
   {
    "name": "Fall",
    "body": "human_female_base",
    "footSlideMeanPct": null,
    "minFootZ": 0.1246,
-   "hash": "7c6d3888e8bd"
+   "hash": "c64b20cfa051"
   },
   {
    "name": "Land",
    "body": "human_female_base",
    "footSlideMeanPct": null,
    "minFootZ": -0.0,
-   "hash": "4739a2ff286a"
+   "hash": "00a2ef0b46d7"
   },
   {
    "name": "LandHard",
    "body": "human_female_base",
    "footSlideMeanPct": null,
    "minFootZ": -0.0,
-   "hash": "190a733984e1"
+   "hash": "06be26a99738"
   },
   {
    "name": "Dodge",
    "body": "human_female_base",
    "footSlideMeanPct": null,
    "minFootZ": 0.012,
-   "hash": "ab9fc7ee9085"
+   "hash": "5977500a6770"
   }
  ]
 }
