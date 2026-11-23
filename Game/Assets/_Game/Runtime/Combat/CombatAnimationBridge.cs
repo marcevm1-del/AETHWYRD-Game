@@ -60,7 +60,7 @@ namespace Ascend.Game
         void LateUpdate()
         {
             // Self-tick only when no driver calls Tick (the driver runs earlier or later, but always every frame).
-            if (!_externallyDriven) TickInternal(Time.deltaTime);
+            if (!_externallyDriven) TickInternal(PlayerInputDriver.PlayerDelta);
         }
 
         /// <summary>Advance by dt. Called by the animation driver (or tests); disables the self-tick.</summary>

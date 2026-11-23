@@ -118,25 +118,26 @@ namespace Ascend.Game
         }
 
         /// <summary>
-        /// Heavy button pressed. In the air: slam. After two or more light hits: launcher (L L H).
+        /// Heavy button pressed; true if accepted (false: refused, e.g. in attack startup, so the input buffer can retry). In the air: slam. After two or more light hits: launcher (L L H).
         /// Otherwise start charging a heavy (cancels a chain in recovery).
         /// </summary>
-        public void BeginHeavy()
+        public bool BeginHeavy()
         {
-            if (_motor.IsDodging || (_special != null && _special.IsBusy)) return;
+            if (_motor.IsDodging || (_special != null && _special.IsBusy)) return false;
             if (!_motor.IsGrounded)
             {
                 StartSpecial(Special.Slam, KitPower("skl_comet_dive", DefaultSlamPower), "heavy", -1f, 1.5);
-                return;
+                return true;
             }
             if (_stringHits >= 2 && (!_chain.IsBusy || _chain.CanDodgeCancel))
             {
                 _stringHits = 0;
                 StartSpecial(Special.Launcher, KitPower("skl_rising_cut", DefaultLaunchPower), "launch", -1f, 1.0);
-                return;
+                return true;
             }
-            if (_chain.IsBusy && !_chain.Cancel()) return;
+            if (_chain.IsBusy && !_chain.Cancel()) return false; // startup: the input buffer retries it
             _charge.Begin();
+            return true;
         }
 
         /// <summary>
