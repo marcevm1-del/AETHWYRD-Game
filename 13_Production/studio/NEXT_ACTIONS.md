@@ -36,8 +36,25 @@ _Last updated 2026-11-23 by the executive overseer session._
 - The clean clone's `origin` now points at `marcevm1-del/AETHWYRD-Game`. The working checkout's remote `aetheria` still uses the old URL, which redirects.
 - **Approved branch plan (inventory "Suggested order"):** PRs go out in that order once `gh` works. The `library-shelf` Canon row L7 edit is flagged for the owner in its PR.
 
+## Open PRs (opened 2026-11-23; `gh` signed in as the owner)
+| PR | Branch | Order |
+|---|---|---|
+| [#11](https://github.com/marcevm1-del/AETHWYRD-Game/pull/11) | `agent/producer/fresh-clone-fixes` | Any time |
+| [#12](https://github.com/marcevm1-del/AETHWYRD-Game/pull/12) | `studio/m1-audit` (these records) | Any time |
+| [#13](https://github.com/marcevm1-del/AETHWYRD-Game/pull/13) | `agent/qa-tester/save-regression` | Save step 1 |
+| [#14](https://github.com/marcevm1-del/AETHWYRD-Game/pull/14) | `agent/save-platform-engineer/save-version-manager` | Save step 2, after #13 |
+
+Next PRs from the approved plan, opened as these merge:
+- the rest of the save stack, after reconciling `GameSettings`
+- wiring `AtomicFile` into `PlayerSave` (new work)
+- research and UX docs (commit the onboarding doc first)
+- the data branches
+- `dungeon-loader` and the Core commits from `region-graph-map`
+
+`main` has **no branch protection** (checked with `gh api`, HTTP 404).
+
 ## Waiting on the owner
-1. **`gh`:** run `winget install GitHub.cli`, then `gh auth login` (D-07). This unblocks the PRs.
+1. ~~`gh`~~: done 2026-11-23. Review and merge #11 to #14.
 2. **Unity baseline:** run `Tools/pc/update_and_verify.cmd`. The working checkout is still not clean (keeper files, `Resources/`, Codex config), so the script will stop until the fresh-clone branch merges or `-AllowDirty` is used.
 3. **`Resources/` (1 GB):** not gitignored. The owner did not approve ignoring it, so it stays as it is until they decide.
 
