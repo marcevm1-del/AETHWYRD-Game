@@ -372,13 +372,14 @@ namespace Ascend.Game.Tests
                 var hips = Bone(HumanBodyBones.Hips);
                 var low = float.MaxValue;
                 var high = float.MinValue;
-                for (var i = 0; i <= 12; i++)
+                // Every authored frame, not 13 even steps: a fast clip like Dodge (21 frames) has its extremes between samples.
+                foreach (var t in AuthoredFrames(entry, clip))
                 {
                     // Foot IK OFF here on purpose. This test asks whether the retarget reproduces the motion the
                     // generator authored, and foot IK is a correction applied on top of it: with IK on, Walk and
                     // Sprint read 5-6 cm high at both ends of the band, because IK lifts the body to keep a toe
                     // out of the floor. One test per question - the foot test below is the one that runs with IK.
-                    SampleAt(clip, clip.length * i / 12f, footIK: false);
+                    SampleAt(clip, t, footIK: false);
                     low = Mathf.Min(low, hips.position.y);
                     high = Mathf.Max(high, hips.position.y);
                 }
