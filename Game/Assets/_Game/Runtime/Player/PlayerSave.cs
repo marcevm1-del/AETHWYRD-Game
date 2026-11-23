@@ -122,10 +122,8 @@ namespace Ascend.Game
             try
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(PathOnDisk));
-                string tmp = PathOnDisk + ".tmp";
-                File.WriteAllText(tmp, JsonConvert.SerializeObject(s, Json));
-                if (File.Exists(PathOnDisk)) File.Delete(PathOnDisk);
-                File.Move(tmp, PathOnDisk); // write-then-move: a crash mid-save never leaves half a file
+                // temp file, then File.Replace with the old save kept as .bak: a crash at any step leaves a loadable file
+                AtomicFile.WriteAllText(PathOnDisk, JsonConvert.SerializeObject(s, Json));
                 Saves++;
                 _inv.Toast("Saved");
             }
@@ -135,12 +133,28 @@ namespace Ascend.Game
         /// <summary>Loads the slot if it exists; returns whether a save was applied.</summary>
         public bool Load()
         {
-            if (!File.Exists(PathOnDisk)) return false;
-            SaveGame s;
-            try { s = SaveRules.Upgrade(JsonConvert.DeserializeObject<SaveGame>(File.ReadAllText(PathOnDisk), Json)); }
-            catch (Exception e) { return Reject("unreadable: " + e.Message); }
-            var errors = SaveRules.Validate(s);
-            if (errors.Count > 0) return Reject(string.Join("; ", errors));
+            if (!AtomicFile.AnyExists(PathOnDisk)) return false;
+            // main file, then .bak, then a leftover .tmp: the first one that parses and validates wins
+            SaveGame s = null;
+            string why = null;
+            string text = AtomicFile.ReadWithRecovery(PathOnDisk, t =>
+            {
+                try
+                {
+                    var parsed = SaveRules.Upgrade(JsonConvert.DeserializeObject<SaveGame>(t, Json));
+                    var errors = SaveRules.Validate(parsed);
+                    if (errors.Count > 0) { why ??= string.Join("; ", errors); return false; }
+                    s = parsed; return true;
+                }
+                catch (Exception e) { why ??= "unreadable: " + e.Message; return false; }
+            }, out string source);
+            if (text == null) return Reject(why ?? "no readable save");
+            if (source != "main")
+            {
+                Debug.LogWarning($"Save {PathOnDisk}: main file {(File.Exists(PathOnDisk) ? "was rejected (" + why + ")" : "is missing")}; loaded the {source} copy instead");
+                if (File.Exists(PathOnDisk)) CopyAsideBad();
+            }
+            else Debug.Log($"Save {PathOnDisk}: loaded main file");
 
             SaveRules.Apply(s, _combat.Progress, _inv.Items);
             _combat.SetLevel(_combat.Progress.Level); // stats, skills and max HP follow the loaded level
@@ -178,8 +192,14 @@ namespace Ascend.Game
         {
             LastError = why;
             Debug.LogWarning($"Save {PathOnDisk} not loaded ({why}); kept as .bad");
-            try { File.Copy(PathOnDisk, PathOnDisk + ".bad", true); } catch (Exception) { }
+            CopyAsideBad();
             return false;
+        }
+
+        void CopyAsideBad()
+        {
+            // the corrupt main file is kept as .bad for inspection (unchanged behaviour)
+            try { if (File.Exists(PathOnDisk)) File.Copy(PathOnDisk, PathOnDisk + ".bad", true); } catch (Exception) { }
         }
     }
 }
