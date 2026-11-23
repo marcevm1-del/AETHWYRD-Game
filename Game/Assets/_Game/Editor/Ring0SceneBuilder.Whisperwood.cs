@@ -78,8 +78,16 @@ namespace Ascend.EditorTools
             Building(root, "watchtower_ruin", WatchtowerAt, 210f, "Old_Watchtower");
 
             // Trees: seeded so the layout is the same every build; kept clear of the path, the camps and the clearing.
+            // The foliage kit (Art/Models/Foliage, Tools/blender/build_foliage_kit.py) replaces the old sphere-on-cylinder
+            // primitives; without the FBX files (a clone without Git LFS) the primitives are used so the scene still builds.
+            var foliage = new GameObject("Whisperwood_Foliage").transform;
+            foliage.SetParent(root, false);
+            var kitTrees = LoadFoliage("tree_broadleaf_a", "tree_broadleaf_b", "tree_broadleaf_c");
+            var kitPine = LoadFoliage("tree_pine_a");
+            bool kit = kitTrees.Length > 0;
             var rng = new System.Random(1);
-            int placed = 0;
+            var spots = new List<Vector3>();
+            int placed = 0, pines = 0;
             for (int tries = 0; tries < 600 && placed < 110; tries++)
             {
                 var at = new Vector3((float)(rng.NextDouble() * 66 - 33), 0, (float)(rng.NextDouble() * 66 + 27));
@@ -91,11 +99,28 @@ namespace Ascend.EditorTools
                 foreach (var c in WhisperwoodCamps.Concat(FieldCamps)) if (new Vector2(at.x - c.x, at.z - c.z).magnitude < c.spread + 2.5f) { nearCamp = true; break; }
                 if (nearCamp) continue;
                 float h = 3f + (float)rng.NextDouble() * 4f;
-                Prim(PrimitiveType.Cylinder, $"Trunk_{placed}", at + Vector3.up * h * 0.5f, new Vector3(0.5f, h * 0.5f, 0.5f), bark, root);
                 float crown = 2.2f + (float)rng.NextDouble() * 1.6f;
-                Prim(PrimitiveType.Sphere, $"Crown_{placed}", at + Vector3.up * (h + crown * 0.3f), Vector3.one * crown, leaves, root, keepCollider: false);
+                spots.Add(at);
+                if (kit)
+                {
+                    // The same two draws as before, now choosing the size and the turn; every sixth tree is a pine.
+                    bool pine = kitPine.Length > 0 && (placed % 6) == 5;
+                    var prefab = pine ? kitPine[0] : kitTrees[placed % kitTrees.Length];
+                    float scale = 0.8f + (h - 3f) / 4f * 0.6f;
+                    float yaw = (crown - 2.2f) / 1.6f * 360f;
+                    var tree = PlaceFoliage(foliage, prefab, $"Tree_{placed}", at, yaw, scale, true);
+                    var trunkCol = tree.AddComponent<CapsuleCollider>();
+                    trunkCol.radius = 0.4f; trunkCol.height = 3.5f; trunkCol.center = new Vector3(0f, 1.75f, 0f);
+                    if (pine) pines++;
+                }
+                else
+                {
+                    Prim(PrimitiveType.Cylinder, $"Trunk_{placed}", at + Vector3.up * h * 0.5f, new Vector3(0.5f, h * 0.5f, 0.5f), bark, root);
+                    Prim(PrimitiveType.Sphere, $"Crown_{placed}", at + Vector3.up * (h + crown * 0.3f), Vector3.one * crown, leaves, root, keepCollider: false);
+                }
                 placed++;
             }
+            if (kit) ScatterFoliage(foliage, spots, WhisperwoodCamps.Concat(FieldCamps).ToArray());
             // Ruins in the clearing (Whisperwood is forest and ruins) and Grukk's camp among them.
             var ruins = new (string id, Vector3 at, float yaw)[]
             {
@@ -128,7 +153,91 @@ namespace Ascend.EditorTools
                     Dummy(monsters, c.id, PrimitiveType.Capsule, at + Vector3.up * s.y, s, fallback);
                 }
             }
-            Debug.Log($"[Ascend] Whisperwood: {placed} trees, {monsters.childCount} monster objects ({models} with models)");
+            Debug.Log($"[Ascend] Whisperwood: {placed} trees ({(kit ? "foliage kit, " + pines + " pines" : "primitive fallback")}), {monsters.childCount} monster objects ({models} with models)");
+        }
+
+        const string FoliageDir = "Assets/_Game/Art/Models/Foliage";
+
+        static GameObject[] LoadFoliage(params string[] ids) =>
+            ids.Select(id => AssetDatabase.LoadAssetAtPath<GameObject>($"{FoliageDir}/{id}.fbx")).Where(a => a != null).ToArray();
+
+        /// <summary>Instantiates a foliage prefab with the Ascend/Toon twins of its fol_* materials (no outline pass, see FoliageImport).</summary>
+        static GameObject PlaceFoliage(Transform parent, GameObject prefab, string name, Vector3 at, float yaw, float scale, bool batch)
+        {
+            var go = (GameObject)PrefabUtility.InstantiatePrefab(prefab, parent);
+            go.name = name;
+            go.transform.SetPositionAndRotation(new Vector3(at.x, 0.02f, at.z), Quaternion.Euler(0f, yaw, 0f));
+            go.transform.localScale = go.transform.localScale * scale;
+            foreach (var r in go.GetComponentsInChildren<Renderer>())
+            {
+                var mats = r.sharedMaterials;
+                for (int i = 0; i < mats.Length; i++) mats[i] = ToonMaterial(mats[i], false);
+                r.sharedMaterials = mats;
+            }
+            if (batch) GameObjectUtility.SetStaticEditorFlags(go, StaticEditorFlags.BatchingStatic);
+            return go;
+        }
+
+        /// <summary>Bushes, ferns, rocks, flower clusters (one kind per cluster) and grass tufts between the trees; seeded, clear of the path, camps, clearings and trunks.</summary>
+        static void ScatterFoliage(Transform parent, List<Vector3> trees, (string id, int count, float x, float z, float spread)[] camps)
+        {
+            var bushes = LoadFoliage("bush_a", "bush_b");
+            var ferns = LoadFoliage("fern_clump");
+            var rocks = LoadFoliage("rock_mossy_a");
+            var flowers = LoadFoliage("flower_clump");
+            var grass = LoadFoliage("grass_tuft");
+            var rng = new System.Random(2);
+
+            bool Clear(Vector3 at, float trunkGap, float pathGap)
+            {
+                if (Mathf.Abs(at.x) < pathGap) return false;
+                if (new Vector2(at.x, at.z - 88f).magnitude < 11f) return false;
+                if (new Vector2(at.x - WatchtowerAt.x, at.z - WatchtowerAt.z).magnitude < 6.5f) return false;
+                if (at.z < 37f && Mathf.Abs(at.x) < 17f) return false;
+                foreach (var c in camps) if (new Vector2(at.x - c.x, at.z - c.z).magnitude < c.spread + 1.5f) return false;
+                foreach (var t in trees) if (new Vector2(at.x - t.x, at.z - t.z).magnitude < trunkGap) return false;
+                return true;
+            }
+            Vector3 Random2D() => new Vector3((float)(rng.NextDouble() * 66 - 33), 0, (float)(rng.NextDouble() * 66 + 27));
+            void Many(GameObject[] kit, string name, int count, float trunkGap, float pathGap, float minScale, float maxScale)
+            {
+                if (kit.Length == 0) return;
+                int n = 0;
+                for (int tries = 0; tries < count * 12 && n < count; tries++)
+                {
+                    var at = Random2D();
+                    if (!Clear(at, trunkGap, pathGap)) continue;
+                    float s = minScale + (float)rng.NextDouble() * (maxScale - minScale);
+                    var go = PlaceFoliage(parent, kit[rng.Next(kit.Length)], $"{name}_{n}", at, (float)rng.NextDouble() * 360f, s, true);
+                    if (name == "Rock")
+                    {
+                        var bounds = new Bounds(go.transform.position, Vector3.zero);
+                        foreach (var r in go.GetComponentsInChildren<Renderer>()) bounds.Encapsulate(r.bounds);
+                        var box = go.AddComponent<BoxCollider>();
+                        box.center = go.transform.InverseTransformPoint(bounds.center);
+                        box.size = bounds.size / go.transform.localScale.x;
+                    }
+                    n++;
+                }
+            }
+            Many(bushes, "Bush", 70, 2.2f, 3f, 0.85f, 1.35f);
+            Many(ferns, "Fern", 45, 1.4f, 2.6f, 0.9f, 1.4f);
+            Many(rocks, "Rock", 14, 2f, 3.5f, 0.7f, 1.5f);
+            Many(grass, "Grass", 260, 0.8f, 1.2f, 0.9f, 1.7f);
+            // Flowers grow in clusters: five clumps round each of four centres.
+            if (flowers.Length > 0)
+                for (int c = 0, made = 0; c < 80 && made < 4; c++)
+                {
+                    var centre = Random2D();
+                    if (!Clear(centre, 3f, 4f)) continue;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        var at = centre + new Vector3((float)(rng.NextDouble() * 3 - 1.5), 0, (float)(rng.NextDouble() * 3 - 1.5));
+                        if (!Clear(at, 1.2f, 3f)) continue;
+                        PlaceFoliage(parent, flowers[0], $"Flowers_{made}_{i}", at, (float)rng.NextDouble() * 360f, 0.9f + (float)rng.NextDouble() * 0.4f, true);
+                    }
+                    made++;
+                }
         }
 
         /// <summary>A still from the gate looking up the Whisperwood path (13_Production/screenshots/whisperwood_field.png).</summary>

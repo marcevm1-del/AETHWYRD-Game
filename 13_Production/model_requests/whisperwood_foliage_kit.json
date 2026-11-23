@@ -1,0 +1,36 @@
+{
+  "id": "whisperwood_foliage_kit",
+  "kind": "plant",
+  "name": "Whisperwood foliage kit (3 broadleaf, pine, 2 bushes, grass, fern, flowers, mossy rock)",
+  "requestedBy": "environment-artist",
+  "requestedOn": "2026-11-23",
+  "source": {
+    "image": "reports/foliage_2026-11-23/contact_sheet.png",
+    "prompt": null
+  },
+  "targetSizeM": 8.0,
+  "speciesId": null,
+  "notes": "Authored directly at budget in Blender by Tools/blender/build_foliage_kit.py per owner decision D-03. No TripoSR mesh wanted or run; the kit is already built and shipped (PR 24). Filed for the record only.",
+  "status": "finished",
+  "history": [
+    {
+      "at": "2026-11-23T23:24:47",
+      "status": "requested",
+      "by": "environment-artist",
+      "note": ""
+    },
+    {
+      "at": "2026-11-23T23:30:00",
+      "status": "finished",
+      "by": "environment-artist",
+      "note": "Direct low-poly authoring (D-03); no TripoSR run."
+    }
+  ],
+  "outputs": {
+    "image": null,
+    "mesh": null,
+    "provenance": null,
+    "error": null
+  },
+  "review": null
+}
