@@ -132,6 +132,17 @@ static class InputBufferTests
         Assert.Near(3.0, g.PressedAt.Value, 1e-9, "a buffered press fired at its first legal moment opens the window then");
     }
 
+    public static void BlockPressedWhileSwingingOpensNoParryWindow()
+    {
+        var g = new GuardState();
+        g.Update(true, true, 5.0); // press edge during an attack or dodge
+        Assert.True(g.PressedAt == null, "no window opens while suppressed");
+        var r = DefenseJudge.Resolve(Telegraph.Blue, 5.05, null, false, g.PressedAt, g.Blocking, C.Dodge, C.Parry);
+        Assert.True(r != DefenseResult.Parried, "a blue hit inside the old window is not parried mid-swing");
+        g.Update(true, false, 5.2); // attack over, still held: a plain block, no parry
+        Assert.True(g.Blocking && g.PressedAt == null, "block resumes without a parry window");
+    }
+
     public static void DodgeEndingDoesNotReopenTheParryWindow()
     {
         var g = new GuardState();

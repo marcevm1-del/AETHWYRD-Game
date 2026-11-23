@@ -71,7 +71,8 @@ namespace Ascend.Core
         /// <param name="suppressed">Attacking or dodging: the guard is down but the button state is still tracked.</param>
         public void Update(bool held, bool suppressed, double now)
         {
-            if (held && !_prevHeld) PressedAt = now;
+            // A press while attacking or dodging opens no window (no parrying mid-swing); a buffered press stamps later via StampBufferedPress.
+            if (held && !_prevHeld && !suppressed) PressedAt = now;
             _prevHeld = held;
             Blocking = held && !suppressed;
         }

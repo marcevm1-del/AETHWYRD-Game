@@ -82,7 +82,8 @@ namespace Ascend.Game
             bool attacking = _combat != null && _combat.IsAttacking;
             if (_defense != null && (_defense.IsHeld || _defense.IsDead) || UiModal.Any)
             {
-                // Grabbed, fallen or talking: only gravity runs.
+                // Grabbed, fallen or talking: only gravity runs. Drop buffered presses so they cannot fire when this ends.
+                _buffer.Clear();
                 if (_combat != null) _combat.Tick(dt);
                 _motor.Tick(Vector3.zero, false, false, dt);
                 return;
@@ -134,7 +135,7 @@ namespace Ascend.Game
             {
                 if (!padFaceBusy && _light.WasPressedThisFrame()) _combat.Attack();
                 if (!padFaceBusy && _heavy.WasPressedThisFrame() && !_combat.BeginHeavy()) _buffer.Press(BufferedAction.Heavy);
-                if (_heavy.WasReleasedThisFrame()) { _combat.ReleaseHeavy(); _buffer.Clear(BufferedAction.Heavy); }
+                if (_heavy.WasReleasedThisFrame()) _combat.ReleaseHeavy(); // a tap released before the buffered heavy fires still fires (see FireBuffered)
                 _combat.Tick(dt);
             }
             _buffer.Tick(dt);
@@ -168,7 +169,7 @@ namespace Ascend.Game
                 case BufferedAction.Dodge: return TryDodge(world);
                 case BufferedAction.Jump: return TryJump();
                 case BufferedAction.Block:
-                    if (_combat != null && _combat.IsAttacking) return false;
+                    if ((_combat != null && _combat.IsAttacking) || _motor.IsDodging) return false;
                     if (_block.IsPressed() && _defense != null) _defense.StampBufferedBlockPress(); // still held: a real press, just late
                     return true;
                 case BufferedAction.Heavy:
