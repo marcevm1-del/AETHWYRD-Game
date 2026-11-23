@@ -39,6 +39,43 @@ static class ShopTests
         Assert.Equal(0L, Open("shop_reed_remedies").SellPrice("itm_core_f"), "only the Guild buys cores");
     }
 
+    public static void SellingAllCoresPaysTheQuoteAndLeavesTheRest()
+    {
+        var guild = Open("shop_guild_core_buyback");
+        var inv = new Inventory(); inv.Add("itm_core_f", 30); inv.Add("itm_core_e", 2); inv.Add("itm_mat_slime_jelly", 4);
+        var quote = guild.QuoteAllCores(inv);
+        Assert.Equal(32, quote.count, "every core is counted");
+        Assert.Equal(68L, quote.total, "30 x 2 + 2 x 4");
+        var done = guild.SellAllCores(inv);
+        Assert.Equal(32, done.sold, "every core sold");
+        Assert.Equal(68L, done.paid, "paid what was quoted");
+        Assert.Equal(68L, inv.Copper, "and the purse has it");
+        Assert.Equal(0, inv.Count("itm_core_f") + inv.Count("itm_core_e"), "no cores left");
+        Assert.Equal(4, inv.Count("itm_mat_slime_jelly"), "nothing else was touched");
+        Assert.Equal(0, guild.SellAllCores(inv).sold, "a second press sells nothing");
+    }
+
+    public static void SellingAllCoresKeepsQuestCoresAndOtherShopsRefuse()
+    {
+        var guild = Open("shop_guild_core_buyback");
+        var inv = new Inventory(); inv.Add("itm_core_f", 5); inv.Add("itm_core_e", 3);
+        var keep = new[] { "itm_core_f" };
+        Assert.Equal(3, guild.QuoteAllCores(inv, keep).count, "quest cores are not in the quote");
+        Assert.Equal(12L, guild.SellAllCores(inv, keep).paid, "only the E cores sold");
+        Assert.Equal(5, inv.Count("itm_core_f"), "the quest keeps its cores");
+        Assert.Equal(0, Open("shop_reed_remedies").QuoteAllCores(inv).count, "only the Guild buys cores");
+    }
+
+    public static void SellingAQuantityStopsAtWhatYouHave()
+    {
+        var guild = Open("shop_guild_core_buyback");
+        var inv = new Inventory(); inv.Add("itm_core_f", 7);
+        var five = guild.SellMany("itm_core_f", 5, inv);
+        Assert.True(five.sold == 5 && five.paid == 10L, "five for 10 copper");
+        var rest = guild.SellMany("itm_core_f", 50, inv);
+        Assert.True(rest.sold == 2 && inv.Copper == 14L, "only the two left");
+    }
+
     public static void ShopsPayAFractionAndNeverBuyKeys()
     {
         var reed = Open("shop_reed_remedies");

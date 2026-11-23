@@ -87,6 +87,41 @@ namespace Ascend.Core
             return TradeResult.Ok;
         }
 
+        /// <summary>Sells up to <paramref name="quantity"/> of one item at the shop's price. Returns how many sold and the copper paid; quest items never sell.</summary>
+        public (int sold, long paid) SellMany(string itemId, int quantity, Inventory inv, ICollection<string> questProtected = null)
+        {
+            int sold = 0;
+            long before = inv.Copper;
+            while (sold < quantity && Sell(itemId, inv, questProtected) == TradeResult.Ok) sold++;
+            return (sold, inv.Copper - before);
+        }
+
+        /// <summary>Monster cores (monster_core_pricing.md): the itm_core_ family.</summary>
+        public static bool IsMonsterCore(string itemId) => itemId != null && ItemQuality.BaseId(itemId).StartsWith("itm_core_", StringComparison.Ordinal);
+
+        /// <summary>What <see cref="SellAllCores"/> would sell and pay right now, leaving out cores a quest needs.</summary>
+        public (int count, long total) QuoteAllCores(Inventory inv, ICollection<string> questProtected = null)
+        {
+            int count = 0; long total = 0;
+            foreach (var (_, n, price) in SellableCores(inv, questProtected)) { count += n; total += n * price; }
+            return (count, total);
+        }
+
+        /// <summary>Sells every monster core this shop buys, except those a quest needs.</summary>
+        public (int sold, long paid) SellAllCores(Inventory inv, ICollection<string> questProtected = null)
+        {
+            int sold = 0; long paid = 0;
+            foreach (var (id, n, _) in SellableCores(inv, questProtected).ToList())
+            {
+                var r = SellMany(id, n, inv, questProtected);
+                sold += r.sold; paid += r.paid;
+            }
+            return (sold, paid);
+        }
+
+        IEnumerable<(string itemId, int count, long price)> SellableCores(Inventory inv, ICollection<string> questProtected) =>
+            Sellable(inv).Where(x => IsMonsterCore(x.itemId) && (questProtected == null || !(questProtected.Contains(x.itemId) || questProtected.Contains(ItemQuality.BaseId(x.itemId)))));
+
         /// <summary>Buys back the <paramref name="index"/>-th thing you sold here, at what you were paid.</summary>
         public TradeResult BuyBack(int index, Inventory inv)
         {

@@ -23,7 +23,8 @@ namespace Ascend.Game
         PlayerRespawn _respawn;
         PlayerQuests _quests;
         PlayerRest _rest;
-        InputAction _status;
+        InputAction _status, _pause;
+        bool _wasModal;
         string _banner;
         float _bannerUntil, _toastUntil;
         long _toastXp;
@@ -37,12 +38,14 @@ namespace Ascend.Game
         void Awake()
         {
             _status = new InputAction("Status", InputActionType.Button);
-            _status.AddBinding("<Keyboard>/tab"); _status.AddBinding("<Keyboard>/escape"); _status.AddBinding("<Gamepad>/start");
+            _status.AddBinding("<Keyboard>/tab");
+            _pause = new InputAction("Pause", InputActionType.Button);
+            _pause.AddBinding("<Keyboard>/escape"); _pause.AddBinding("<Gamepad>/start");
         }
 
-        void OnEnable() => _status.Enable();
-        void OnDisable() => _status.Disable();
-        void OnDestroy() { _status.Dispose(); MonsterDummy.WorldLabels = true; }
+        void OnEnable() { _status.Enable(); _pause.Enable(); }
+        void OnDisable() { _status.Disable(); _pause.Disable(); }
+        void OnDestroy() { _status.Dispose(); _pause.Dispose(); MonsterDummy.WorldLabels = true; }
 
         void Start()
         {
@@ -79,6 +82,16 @@ namespace Ascend.Game
         void Update()
         {
             if (_status.WasPressedThisFrame() && !UiModal.Any) StatusOpen = !StatusOpen;
+            bool modal = UiModal.Any;
+            if (_pause.WasPressedThisFrame())
+            {
+                var pad = Gamepad.current;
+                if (PauseMenu.IsOpen && pad != null && pad.startButton.wasPressedThisFrame) PauseMenu.Instance.Resume();
+                else if (StatusOpen) StatusOpen = false;
+                // _wasModal: the Esc that just closed another window must not also pause.
+                else if (!modal && !_wasModal) PauseMenu.TryOpen(FindFirstObjectByType<PlayerCombat>());
+            }
+            _wasModal = modal;
         }
 
         // ---------------------------------------------------------------- content (testable without drawing)
