@@ -9,6 +9,7 @@ namespace Ascend.Core
         public double InputBufferSec { get; set; }
         public double SoftLockAngleDeg { get; set; }
         public CameraTuning Camera { get; set; } = new CameraTuning();
+        public LockOnTuning LockOn { get; set; } = new LockOnTuning();
         public MovementTuning Movement { get; set; } = new MovementTuning();
         public DodgeTuning Dodge { get; set; } = new DodgeTuning();
         public FlashTimeTuning FlashTime { get; set; } = new FlashTimeTuning();
@@ -30,7 +31,43 @@ namespace Ascend.Core
         public DamageTuning Damage { get; set; } = new DamageTuning();
     }
 
-    public sealed class CameraTuning { public double Distance { get; set; } public double Fov { get; set; } public double GroupPullBackDistance { get; set; } public double ShakeMax { get; set; } }
+    public sealed class CameraTuning
+    {
+        public double Distance { get; set; }
+        public double Fov { get; set; }
+        public double GroupPullBackDistance { get; set; }
+        public double ShakeMax { get; set; }
+        /// <summary>Over-the-shoulder offset in metres to the right of the pivot (negative = left shoulder).</summary>
+        public double ShoulderOffset { get; set; } = 0.55;
+        /// <summary>Extra pivot height in metres above the target height.</summary>
+        public double HeightOffset { get; set; } = 0.1;
+        /// <summary>Position follow lag in seconds (0 = rigid).</summary>
+        public double FollowLagSec { get; set; } = 0.08;
+        /// <summary>Yaw/pitch follow lag in seconds (0 = rigid).</summary>
+        public double AngleLagSec { get; set; } = 0.04;
+        /// <summary>Lag when a wall pulls the camera in (short: never clip).</summary>
+        public double CollisionInLagSec { get; set; } = 0.04;
+        /// <summary>Lag when easing back out after the wall clears (long: no pop).</summary>
+        public double CollisionOutLagSec { get; set; } = 0.45;
+        /// <summary>Lag of the group pull-back distance change.</summary>
+        public double GroupLagSec { get; set; } = 0.6;
+        /// <summary>This many engaged monsters trigger the group pull-back.</summary>
+        public int GroupEngagedCount { get; set; } = 3;
+    }
+    /// <summary>Lock-on camera and mouse switching feel (combat.md section 2). Gamepad stick thresholds stay in code.</summary>
+    public sealed class LockOnTuning
+    {
+        /// <summary>How far the mouse may swing the camera either side of the target framing.</summary>
+        public double MouseYawRangeDeg { get; set; } = 35;
+        /// <summary>Speed a horizontal mouse move must reach to count as a flick.</summary>
+        public double FlickVelocityPxPerSec { get; set; } = 2400;
+        /// <summary>Smallest single-frame move that can be a flick.</summary>
+        public double FlickDeadzonePx { get; set; } = 18;
+        /// <summary>Wait after any switch before the mouse can switch again.</summary>
+        public double SwitchCooldownSec { get; set; } = 0.6;
+        /// <summary>Seconds without mouse movement before the framing eases back to centre (0 = stay).</summary>
+        public double RecenterSec { get; set; } = 1.5;
+    }
     public sealed class MovementTuning
     {
         public double WalkSpeed { get; set; }
