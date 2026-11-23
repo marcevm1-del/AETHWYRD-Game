@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -30,6 +31,8 @@ namespace Ascend.EditorTools
         public const string Dir = "Assets/_Game/Art/Animation";
         public const string ClipDir = Dir + "/Clips";
         public const string ControllerPath = Dir + "/Player.controller";
+        /// <summary>Same states and parameters as Player.controller, but on the Humanoid body (Ring0SceneBuilder.PlayerRig.cs).</summary>
+        public const string HumanoidControllerPath = Dir + "/PlayerHumanoid.controller";
 
         // Bone paths (clip curve paths), relative to the Animator root.
         public const string PathHips = "Visual/Hips";
@@ -139,11 +142,45 @@ namespace Ascend.EditorTools
                 Debug.Log("PlayerAnimationAssets: Data/Player/locomotion.json not usable, blend thresholds fall back to 0 / 2.2 / 6.5 / 9.5.");
 
             var clips = BuildClips(LoadDodgeSeconds());
-            var ctrl = BuildController(clips, thr);
+            var ctrl = BuildController(ControllerPath, clips, thr, false);
 
             EditorUtility.SetDirty(ctrl);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+            return ctrl;
+        }
+
+        /// <summary>
+        /// Builds PlayerHumanoid.controller from the imported Humanoid locomotion clips (base layer) and the
+        /// upper-body muscle poses from <see cref="PlayerHumanoidCombat"/> (combat layer). State and parameter names
+        /// are those of Player.controller, so PlayerAnimationDriver and CombatAnimationBridge drive it unchanged.
+        /// Returns null, with the reason in <paramref name="problem"/>, when any Humanoid clip is missing, so the caller
+        /// can fall back to the placeholder. LandHard is imported but not wired: there is no state for it yet.
+        /// </summary>
+        public static AnimatorController BuildHumanoidController(out string problem)
+        {
+            problem = null;
+            var clips = new Dictionary<string, AnimationClip>();
+            foreach (var name in new[] { "Idle", "Walk", "Run", "Sprint", "JumpStart", "Fall", "Land", "Dodge" })
+            {
+                var path = CharacterModelPostprocessor.ClipDir + "/" + name + ".fbx";
+                var clip = AssetDatabase.LoadAllAssetsAtPath(path).OfType<AnimationClip>()
+                                        .FirstOrDefault(c => !c.name.StartsWith("__preview__"));
+                if (clip == null || !clip.humanMotion)
+                {
+                    problem = "Humanoid clip " + name + " is " + (clip == null ? "missing" : "not human motion") + " at " + path;
+                    return null;
+                }
+                clips[name] = clip;
+            }
+            if (!PlayerHumanoidCombat.TryBuildClips(clips, out problem)) return null;
+
+            EnsureFolder("Assets/_Game/Art", "Animation");
+            if (!TryLoadThresholds(out var thr))
+                Debug.Log("PlayerAnimationAssets: Data/Player/locomotion.json not usable, blend thresholds fall back to 0 / 2.2 / 6.5 / 9.5.");
+            var ctrl = BuildController(HumanoidControllerPath, clips, thr, true);
+            EditorUtility.SetDirty(ctrl);
+            AssetDatabase.SaveAssets();
             return ctrl;
         }
 
@@ -460,16 +497,16 @@ namespace Ascend.EditorTools
 
         // ------------------------------------------------------------------ controller
 
-        static AnimatorController BuildController(Dictionary<string, AnimationClip> clips, float[] thr)
+        static AnimatorController BuildController(string path, Dictionary<string, AnimationClip> clips, float[] thr, bool humanoid)
         {
-            var ctrl = AssetDatabase.LoadAssetAtPath<AnimatorController>(ControllerPath);
+            var ctrl = AssetDatabase.LoadAssetAtPath<AnimatorController>(path);
             if (ctrl == null)
             {
-                ctrl = AnimatorController.CreateAnimatorControllerAtPath(ControllerPath);
+                ctrl = AnimatorController.CreateAnimatorControllerAtPath(path);
             }
             else
             {
-                ctrl = ResetController(ctrl);
+                ctrl = ResetController(ctrl, path);
             }
 
             // Layers: exactly "Base" then "Combat".
@@ -490,17 +527,25 @@ namespace Ascend.EditorTools
 
             var layers = ctrl.layers;
             layers[0].defaultWeight = 1f;
+            layers[0].iKPass = humanoid;   // FootIK.OnAnimatorIK only runs on a layer with IK Pass ticked
             layers[1].defaultWeight = 0f;
             layers[1].blendingMode = AnimatorLayerBlendingMode.Override;
             ctrl.layers = layers;
 
             BuildBaseLayer(ctrl, ctrl.layers[0].stateMachine, clips, thr);
             BuildCombatLayer(ctrl, ctrl.layers[1].stateMachine, clips);
+            if (humanoid)
+            {
+                // The combat poses drive only the upper body; the legs keep playing locomotion underneath.
+                var withMask = ctrl.layers;
+                withMask[1].avatarMask = PlayerHumanoidCombat.UpperBodyMask();
+                ctrl.layers = withMask;
+            }
             return ctrl;
         }
 
         /// <summary>Empties an existing controller in place so the asset file (and GUID) is kept.</summary>
-        static AnimatorController ResetController(AnimatorController c)
+        static AnimatorController ResetController(AnimatorController c, string path)
         {
             try
             {
@@ -515,14 +560,14 @@ namespace Ascend.EditorTools
             {
                 // Could not clear in place: recreate. The GUID changes in this fallback only.
                 Debug.LogWarning("PlayerAnimationAssets: recreating Player.controller (GUID will change).");
-                AssetDatabase.DeleteAsset(ControllerPath);
-                return AnimatorController.CreateAnimatorControllerAtPath(ControllerPath);
+                AssetDatabase.DeleteAsset(path);
+                return AnimatorController.CreateAnimatorControllerAtPath(path);
             }
 
             while (c.parameters.Length > 0) c.RemoveParameter(0);
 
             // Purge orphaned sub-assets (old states, transitions, blend trees) left behind by the removed layers.
-            foreach (var o in AssetDatabase.LoadAllAssetsAtPath(ControllerPath))
+            foreach (var o in AssetDatabase.LoadAllAssetsAtPath(path))
             {
                 if (o == null || o is AnimatorController) continue;
                 Object.DestroyImmediate(o, true);
