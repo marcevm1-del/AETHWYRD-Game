@@ -10,7 +10,7 @@ tags: [npc, mages-academy]
 |---|---|
 | Role | Mage trainer, town librarian |
 | Race | Elf |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Mages' Academy |
 | Romanceable · can die | No · Yes |
 

@@ -12,7 +12,7 @@ tags: [quest, investigation]
 |---|---|
 | Rank · type | E · Investigation |
 | Giver | [[NPCs/Odo Hensley\|Odo Hensley]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 10 |
 | Rewards | 220 gold, 18 GP, 700 XP, [[Items/Fire Bomb\|Fire Bomb]] |
 

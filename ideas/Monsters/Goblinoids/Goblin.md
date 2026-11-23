@@ -104,8 +104,8 @@ These are presentation and spawn variants of this species, not separate core com
 ## Contracts and story encounters
 
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
-- [[Quests/Goblins in the Granary|Goblins in the Granary]] — rank E, in [[Regions/Aldmere|Aldmere]]
-- [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
+- [[Quests/Goblins in the Granary|Goblins in the Granary]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
+- [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Weekly Board/Goblin Cull|Goblin Cull]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.

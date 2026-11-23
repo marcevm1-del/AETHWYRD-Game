@@ -3,11 +3,11 @@
 _Last updated 2026-11-23 by the executive overseer session._
 
 ## Latest state (supersedes the older lists below)
-- PRs 11 to 17 are merged; `main` = `402a88f4`. Owner checkout fast-forwarded.
-- Unity verify `verify_2026-11-23_2228`: 803 rules tests, 207 of 207 PlayMode, player built, 3 screenshots. DIRTY TREE label, so not a clean baseline.
-- On hold (weekly usage limit): combat feel, toon shader, over-the-shoulder camera, Whisperwood foliage, Swordsman sword, Brindlewick region data. The sword and foliage briefs must go through the model-request queue (CLAUDE.md); their first briefs missed it.
-- Open: nothing in the Unity runtime reads the loaded `ReactionTable`; `MonsterDummy.cs` still uses `Tuning.Reactions`.
-- Seen in the verify screenshots: placeholder player and NPC capsules, skewed window quads on some towers, a large grey slab intruding on the plaza, overlapping distant name labels.
+- PRs 11 to 25 are merged; `main` = `22f40a89`.
+- Last Unity verify: `verify_2026-11-23_2331` on the combined test branch, 822 rules tests, PlayMode 219 of 220. Re-run needed to confirm PR 21's changed map test (expect 220).
+- Suggested next: sword in hand, real NPC bodies, plaza grey slab, skewed tower windows, label clutter, body under 15k triangles, real sword attack clips.
+- Open: no runtime code reads the loaded `ReactionTable`; `Resources/` (1 GB) is untracked and makes every verify a dirty tree; the committed scene is older than the scene builder, so run the verify or the builder to see the new player and forest.
+- Agents run at medium effort even when high is requested (seen in the app).
 
 ## Session handoff
 - **Done:**

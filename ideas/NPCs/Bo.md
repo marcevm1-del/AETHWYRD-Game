@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Orphan, Orphanage of the Small Lantern |
 | Race | Rabbit-kin |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · No |
 
 A shy six-year-old rabbit-kin who only speaks to Whiskers and draws pictures of the two moons.

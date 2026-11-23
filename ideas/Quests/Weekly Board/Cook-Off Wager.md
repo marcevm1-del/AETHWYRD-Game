@@ -16,7 +16,7 @@ tags: [quest, weekly-board, hidden]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Marta Gruel\|Marta Gruel]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Marta Gruel\|Marta Gruel]] |
 | Type · trope | Hidden · Market day wagers |
 | Rewards | 70 gold, 6 GP, 150 XP |
 

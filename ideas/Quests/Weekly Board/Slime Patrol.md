@@ -16,7 +16,7 @@ tags: [quest, weekly-board, subjugation]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Odo Hensley\|Odo Hensley]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Odo Hensley\|Odo Hensley]] |
 | Type · trope | Subjugation · The classic F-rank slime quest |
 | Rewards | 30 gold, 3 GP, 90 XP |
 

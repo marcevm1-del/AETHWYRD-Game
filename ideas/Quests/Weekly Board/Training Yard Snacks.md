@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Old Hollis\|Old Hollis]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Old Hollis\|Old Hollis]] |
 | Type · trope | OddJob · Banner day, hungry militia |
 | Rewards | 45 gold, 4 GP, 120 XP |
 

@@ -10,7 +10,7 @@ tags: [npc, adventurers-guild]
 |---|---|
 | Role | Guild Master |
 | Race | Bear-kin |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Adventurers' Guild |
 | Romanceable · can die | No · Yes |
 

@@ -10,7 +10,7 @@ tags: [npc, adventurers-guild]
 |---|---|
 | Role | Leader of the Crimson Wolves (rival party) |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Adventurers' Guild |
 | Romanceable · can die | No · Yes |
 

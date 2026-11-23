@@ -16,7 +16,7 @@ tags: [quest, weekly-board, divine]
 | Repeat · time | weekly · night |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Widow Aster\|Widow Aster]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Widow Aster\|Widow Aster]] |
 | Type · trope | Divine · Quiet night at the graveyard, ghosts with unfinished business |
 | Rewards | 70 gold, 5 GP, 200 XP |
 

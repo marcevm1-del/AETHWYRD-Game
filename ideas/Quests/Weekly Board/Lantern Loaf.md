@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · dusk |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Brother Caspian\|Brother Caspian]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Brother Caspian\|Brother Caspian]] |
 | Type · trope | OddJob · Quiet cooking for others |
 | Rewards | 40 gold, 5 GP, 130 XP |
 

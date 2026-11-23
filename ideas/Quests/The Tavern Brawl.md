@@ -12,7 +12,7 @@ tags: [quest, hidden]
 |---|---|
 | Rank · type | E · Hidden |
 | Giver | [[NPCs/Brutus Kale\|Brutus Kale]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 10 |
 | Rewards | 10 GP, 250 XP |
 

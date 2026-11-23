@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Torvald Stonebeard\|Torvald Stonebeard]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Torvald Stonebeard\|Torvald Stonebeard]] |
 | Type · trope | OddJob · Rookies need real steel |
 | Rewards | 50 gold, 4 GP, 120 XP |
 

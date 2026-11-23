@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | E · OddJob |
 | Giver | [[NPCs/Magistra Eolande Fairweather\|Magistra Eolande Fairweather]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 9 |
 | Prerequisites | quest [[Quests/The Mural of Nine Thrones\|The Mural of Nine Thrones]]; Act 1 |
 | Rewards | 110 gold, 10 GP, 300 XP, [[Items/Scroll of Vitality\|Scroll of Vitality]] |

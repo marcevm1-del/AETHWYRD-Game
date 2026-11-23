@@ -16,7 +16,7 @@ tags: [quest, weekly-board, investigation]
 | Repeat · time | weekly · dusk |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Magistra Eolande Fairweather\|Magistra Eolande Fairweather]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Magistra Eolande Fairweather\|Magistra Eolande Fairweather]] |
 | Type · trope | Investigation · Ominous fortune that comes true (sort of) |
 | Rewards | 90 gold, 6 GP, 220 XP, [[Items/Copper Compass\|Copper Compass]] |
 

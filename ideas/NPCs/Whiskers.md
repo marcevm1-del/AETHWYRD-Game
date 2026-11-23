@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | The inn cat |
 | Race | Cat (Vex in disguise) |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · No |
 
 A fat orange cat who sleeps on the warmest table in the Sleeping Griffon and has, according to the town records, been doing so for four hundred years.

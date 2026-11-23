@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Baker |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A huge, soft-spoken baker who starts work at four in the morning and gives yesterday's bread to the orphanage every noon.

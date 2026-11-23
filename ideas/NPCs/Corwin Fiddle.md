@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Street musician |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A blind fiddler who plays in Guild Square for coins and can tell an adventurer's rank by the sound of their footsteps.

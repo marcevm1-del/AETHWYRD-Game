@@ -17,6 +17,20 @@ Central tuning values for movement, camera, defense, attacks, poise, reactions, 
 | `camera.fov` | 60 |
 | `camera.groupPullBackDistance` | 6 |
 | `camera.shakeMax` | 0.6 |
+| `camera.shoulderOffset` | 0.55 |
+| `camera.heightOffset` | 0.1 |
+| `camera.followLagSec` | 0.08 |
+| `camera.angleLagSec` | 0.04 |
+| `camera.collisionInLagSec` | 0.04 |
+| `camera.collisionOutLagSec` | 0.45 |
+| `camera.groupLagSec` | 0.6 |
+| `camera.groupEngagedCount` | 3 |
+| `lockOn.notes` | Mouse lock-on feel (combat.md section 2). The mouse orbits within mouseYawRangeDeg of the target framing; a deliberate flick (speed and size) switches target, then switchCooldownSec must pass. Gamepad stick behaviour is unchanged. |
+| `lockOn.mouseYawRangeDeg` | 35 |
+| `lockOn.flickVelocityPxPerSec` | 2400 |
+| `lockOn.flickDeadzonePx` | 18 |
+| `lockOn.switchCooldownSec` | 0.6 |
+| `lockOn.recenterSec` | 1.5 |
 | `movement.walkSpeed` | 2.2 |
 | `movement.runSpeed` | 6.5 |
 | `movement.sprintSpeed` | 9.5 |
@@ -40,6 +54,8 @@ Central tuning values for movement, camera, defense, attacks, poise, reactions, 
 | `flashTime.durationSec` | 0.8 |
 | `parry.parryWindowSec` | 0.12 |
 | `parry.blockDamageReduction` | 0.7 |
+| `parry.blockStaminaPerHit` | 12 |
+| `parry.blockStaminaPerSec` | 0 |
 | `parry.riposteHitstopSec` | 0.16 |
 | `combo.budgetPerString` | 3 |
 | `combo.budgetRefillSec` | 2 |

@@ -16,7 +16,7 @@ tags: [quest, weekly-board, investigation]
 | Repeat · time | weekly · night |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Tamsin\|Tamsin]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Tamsin\|Tamsin]] |
 | Type · trope | Investigation · Kids' ghost story turns real |
 | Rewards | 25 gold, 3 GP, 90 XP |
 

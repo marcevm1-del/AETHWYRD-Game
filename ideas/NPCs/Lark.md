@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Orphan, Orphanage of the Small Lantern |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · No |
 
 A ten-year-old who has been told she will be "adopted" soon and is so happy about it that she tells everyone.

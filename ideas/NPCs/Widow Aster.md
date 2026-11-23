@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Candlemaker, Temple Hill |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A candlemaker who makes the lanterns for Lantern Night and lights one every evening for a son who never came back from Whisperwood.

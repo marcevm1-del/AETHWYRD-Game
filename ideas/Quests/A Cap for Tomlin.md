@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Tomlin Harker\|Tomlin Harker]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 2 |
 | Prerequisites | flag [[Systems/Flags/guild_registered\|guild_registered]]; Act 1 |
 | Rewards | 45 gold, 5 GP, 130 XP, [[Items/Minor Healing Potion\|Minor Healing Potion]] |

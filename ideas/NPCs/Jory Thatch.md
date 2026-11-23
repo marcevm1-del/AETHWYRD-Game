@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Miller |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 The miller on the Brindle river, whose family has ground the town's flour for six generations and who knows every flood mark on the wheel.

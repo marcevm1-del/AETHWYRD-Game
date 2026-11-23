@@ -16,7 +16,7 @@ tags: [quest, weekly-board, class]
 | Repeat · time | weekly · morning |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Old Hollis\|Old Hollis]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Old Hollis\|Old Hollis]] |
 | Type · trope | Class · Training montage with the old master |
 | Rewards | 2 GP, 160 XP |
 

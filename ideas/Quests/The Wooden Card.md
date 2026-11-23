@@ -12,7 +12,7 @@ tags: [quest, main]
 |---|---|
 | Rank · type | F · Main |
 | Giver | [[NPCs/Mina Feathersby\|Mina Feathersby]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 1 |
 | Prerequisites | quest [[Quests/Status Granted\|Status Granted]]; Act 1 |
 | Rewards | 20 gold, [[Items/Oak Guild Card\|Oak Guild Card]], [[Items/Rookie's Pouch\|Rookie's Pouch]] |

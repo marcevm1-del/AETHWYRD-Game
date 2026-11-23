@@ -10,7 +10,7 @@ tags: [npc, iron-hold]
 |---|---|
 | Role | Smith, companion (Artisan) |
 | Race | Dwarf |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Iron Hold |
 | Romanceable · can die | Yes · Yes |
 

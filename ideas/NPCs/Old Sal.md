@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Fisherman, Millrace dock |
 | Race | Lizard-kin |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 An ancient lizard-kin fisherman who claims to have caught a legendary fish in every river of Aldmere and has the scales to prove it.

@@ -16,7 +16,7 @@ tags: [quest, weekly-board, delivery]
 | Repeat · time | weekly · morning |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Hugo Brand\|Hugo Brand]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Hugo Brand\|Hugo Brand]] |
 | Type · trope | Delivery · Timed delivery across town |
 | Rewards | 30 gold, 2 GP, 70 XP |
 

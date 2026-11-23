@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Tailor |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A sharp-tongued tailor from the south who mends adventurers' cloaks and lectures them about bloodstains.

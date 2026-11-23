@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Owner, Gilda's General Goods |
 | Race | Halfling |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A halfling shopkeeper with an abacus she claims was a gift from a Veilborn hero; she haggles for fun and loses on purpose to children.

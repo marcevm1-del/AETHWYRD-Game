@@ -16,7 +16,7 @@ tags: [quest, weekly-board, faction]
 | Repeat · time | weekly · any |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Rodrick -Old Bear- Hale\|Rodrick "Old Bear" Hale]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Rodrick -Old Bear- Hale\|Rodrick "Old Bear" Hale]] |
 | Type · trope | Faction · Weekly guild point target |
 | Rewards | 200 gold, 15 GP, 400 XP, [[Items/Minor Healing Potion\|Minor Healing Potion]] |
 

@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Tamer trainer |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Millbrook |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Millbrook |
 | Romanceable · can die | No · Yes |
 
 A farmer who keeps forty "chickens" that are actually cockatrices, and teaches taming with endless patience.

@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · morning |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Old Sal\|Old Sal]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Old Sal\|Old Sal]] |
 | Type · trope | OddJob · Fishing contest, legendary fish |
 | Rewards | 35 gold, 1 GP, 60 XP |
 

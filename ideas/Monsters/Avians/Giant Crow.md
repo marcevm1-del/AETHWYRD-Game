@@ -104,7 +104,7 @@ These are presentation and spawn variants of this species, not separate core com
 ## Contracts and story encounters
 
 - [[Quests/Mina's Lost Earring|Mina's Lost Earring]] — rank F, in [[Regions/Whisperwood|Whisperwood]]
-- [[Quests/Weekly Board/The Fortune Is Always Bad|The Fortune Is Always Bad]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
+- [[Quests/Weekly Board/The Fortune Is Always Bad|The Fortune Is Always Bad]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
 

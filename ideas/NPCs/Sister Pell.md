@@ -10,7 +10,7 @@ tags: [npc, holy-church-of-lumina]
 |---|---|
 | Role | Cleric trainer, Solenne's shrine |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Holy Church of Lumina |
 | Romanceable · can die | No · Yes |
 

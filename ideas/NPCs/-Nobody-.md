@@ -10,7 +10,7 @@ tags: [npc, shadow-syndicate]
 |---|---|
 | Role | Rogue trainer, Syndicate leader |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Shadow Syndicate |
 | Romanceable · can die | No · Yes |
 

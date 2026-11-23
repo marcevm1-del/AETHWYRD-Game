@@ -16,7 +16,7 @@ tags: [quest, weekly-board, companion]
 | Repeat · time | weekly · dusk |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Lyra Brightwood\|Lyra Brightwood]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Lyra Brightwood\|Lyra Brightwood]] |
 | Type · trope | Companion · Cozy campfire meal with the party |
 | Rewards | 60 XP |
 
