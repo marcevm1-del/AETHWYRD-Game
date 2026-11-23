@@ -11,6 +11,28 @@ namespace Ascend.Game
     {
         static float _stopUntil = -1f, _flashUntil = -1f, _flashScale = 1f;
         static Runner _runner;
+        static float _pausedAt;
+
+        /// <summary>The pause menu holds the game: timeScale stays 0 until it lets go, whatever combat effects ask for.</summary>
+        public static bool Paused { get; private set; }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() { Paused = false; _stopUntil = _flashUntil = -1f; }
+
+        /// <summary>Pauses or resumes. Hit-stop and Flash Time keep the time they had left.</summary>
+        public static void SetPaused(bool paused)
+        {
+            if (paused == Paused || !Application.isPlaying) return;
+            if (paused) _pausedAt = Time.unscaledTime;
+            else
+            {
+                float held = Time.unscaledTime - _pausedAt;
+                if (_stopUntil >= 0f) _stopUntil += held;
+                if (_flashUntil >= 0f) _flashUntil += held;
+            }
+            Paused = paused;
+            Apply();
+        }
 
         public static bool HitStopActive => Application.isPlaying && Time.unscaledTime < _stopUntil;
         public static bool FlashTimeActive => Application.isPlaying && Time.unscaledTime < _flashUntil;
@@ -34,12 +56,12 @@ namespace Ascend.Game
         public static void Clear()
         {
             _stopUntil = _flashUntil = -1f;
-            Time.timeScale = 1f;
+            Time.timeScale = Paused ? 0f : 1f;
         }
 
         static void Apply()
         {
-            Time.timeScale = HitStopActive ? 0f : FlashTimeActive ? _flashScale : 1f;
+            Time.timeScale = Paused ? 0f : HitStopActive ? 0f : FlashTimeActive ? _flashScale : 1f;
             if (_runner == null)
             {
                 var go = new GameObject("[GameTime]") { hideFlags = HideFlags.HideAndDontSave };
@@ -52,10 +74,11 @@ namespace Ascend.Game
         {
             void Update()
             {
+                if (Paused) return; // effects wait for the resume
                 if (_stopUntil >= 0f || _flashUntil >= 0f) Apply();
                 if (!HitStopActive && !FlashTimeActive) _stopUntil = _flashUntil = -1f;
             }
-            void OnDestroy() => Clear();
+            void OnDestroy() { Paused = false; Clear(); }
         }
     }
 

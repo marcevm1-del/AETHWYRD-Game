@@ -19,6 +19,7 @@ namespace Ascend.Game
             Keep(CompanionWindow.Instance);
             Keep(JournalWindow.Instance);
             Keep(AccessibilityWindow.Instance);
+            Keep(PauseMenu.Instance);
             Keep(PhotoModeController.Instance);
             Keep(PlaytestOverlay.Instance);
         }

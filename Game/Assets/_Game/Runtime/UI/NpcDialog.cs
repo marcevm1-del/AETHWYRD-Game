@@ -62,8 +62,9 @@ namespace Ascend.Game
         /// <summary>Lyra travels with you once her opening quest is done (ranks.md §4: one companion at rank F).</summary>
         public const string CompanionGate = "qst_main_status_granted";
 
-        enum Page { Main, Buy, Sell, Buyback, Rooms, Workbench }
+        enum Page { Main, Buy, Sell, SellQuantity, SellCores, Buyback, Rooms, Workbench }
         Page _page;
+        string _sellItem;
 
         void Rebuild()
         {
@@ -232,17 +233,52 @@ namespace Ascend.Game
                     break;
                 case Page.Sell:
                     var protectedItems = _quests.ProtectedItems();
-                    foreach (var (itemId, count, price) in shop.Sellable(inv.Items).Take(7))
+                    var cores = shop.QuoteAllCores(inv.Items, protectedItems);
+                    if (cores.count > 0) _options.Add(new Option { Text = $"Sell all monster cores ({cores.count}) — {Money.Format(cores.total, cur)}", Act = () => Go(Page.SellCores, "Every core, then?") });
+                    foreach (var (itemId, count, price) in shop.Sellable(inv.Items).Take(cores.count > 0 ? 6 : 7))
                     {
                         string id = itemId;
                         string guard = protectedItems.Contains(ItemQuality.BaseId(id)) ? " [quest]" : "";
                         _options.Add(new Option
                         {
                             Text = $"Sell {Name(id)} ×{count}{guard} — {Money.Format(price, cur)} each",
-                            Act = () => Did(shop.Sell(id, inv.Items, protectedItems), $"Sold {Name(id)}."),
+                            Act = () =>
+                            {
+                                if (count > 1 && guard == "") { _sellItem = id; Go(Page.SellQuantity, "How many?"); }
+                                else Did(shop.Sell(id, inv.Items, protectedItems), $"Sold {Name(id)}.");
+                            },
                         });
                     }
                     if (_options.Count == 0) _line = "You've nothing I'd buy.";
+                    break;
+                case Page.SellQuantity:
+                    int have = inv.Items.Count(_sellItem);
+                    long each = shop.SellPrice(_sellItem);
+                    foreach (int n in new[] { 1, 5, 10, have }.Where(n => n <= have && n > 0).Distinct())
+                    {
+                        int amount = n;
+                        _options.Add(new Option
+                        {
+                            Text = $"Sell {(amount == have && amount > 1 ? "all " : "")}{amount} × {Name(_sellItem)} — {Money.Format(amount * each, cur)}",
+                            Act = () =>
+                            {
+                                var r = shop.SellMany(_sellItem, amount, inv.Items, _quests.ProtectedItems());
+                                Go(Page.Sell, r.sold > 0 ? $"Sold {r.sold} × {Name(_sellItem)} for {Money.Format(r.paid, cur)}." : "You'll need that for a job you've taken.");
+                            },
+                        });
+                    }
+                    break;
+                case Page.SellCores:
+                    var quote = shop.QuoteAllCores(inv.Items, _quests.ProtectedItems());
+                    _options.Add(new Option
+                    {
+                        Text = $"Yes, sell {quote.count} cores for {Money.Format(quote.total, cur)}",
+                        Act = () =>
+                        {
+                            var r = shop.SellAllCores(inv.Items, _quests.ProtectedItems());
+                            Go(Page.Sell, $"Sold {r.sold} cores for {Money.Format(r.paid, cur)}.");
+                        },
+                    });
                     break;
                 case Page.Buyback:
                     for (int i = 0; i < shop.Buyback.Count && i < 7; i++)
@@ -252,7 +288,8 @@ namespace Ascend.Game
                     }
                     break;
             }
-            _options.Add(new Option { Text = _page == Page.Buy ? "Back" : "Back to wares", Act = () => Go(_page == Page.Buy ? Page.Main : Page.Buy, "") });
+            bool asking = _page == Page.SellQuantity || _page == Page.SellCores;
+            _options.Add(new Option { Text = asking ? "No, go back" : _page == Page.Buy ? "Back" : "Back to wares", Act = () => Go(asking ? Page.Sell : _page == Page.Buy ? Page.Main : Page.Buy, "") });
             _cursor = Mathf.Clamp(_cursor, 0, _options.Count - 1);
         }
 

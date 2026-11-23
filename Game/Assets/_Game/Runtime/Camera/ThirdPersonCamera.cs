@@ -68,7 +68,7 @@ namespace Ascend.Game
 
         void LateUpdate()
         {
-            if (target == null) return;
+            if (target == null || GameTime.Paused) return;
             Vector2 d = WorldMapWindow.IsOpen ? Vector2.zero : _look.ReadValue<Vector2>(); // the map uses the mouse
             bool stick = Gamepad.current != null && Gamepad.current.rightStick.ReadValue().sqrMagnitude > 0.01f;
             if (stick) d *= Time.deltaTime; // stick is a rate, mouse is a delta

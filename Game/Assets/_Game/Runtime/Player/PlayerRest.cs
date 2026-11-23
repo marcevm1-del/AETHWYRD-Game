@@ -32,7 +32,7 @@ namespace Ascend.Game
 
         void Update()
         {
-            if (Buffs.Count > 0) InnStay.Consume(Buffs, Time.unscaledDeltaTime / 3600.0); // hours of play
+            if (Buffs.Count > 0 && !GameTime.Paused) InnStay.Consume(Buffs, Time.unscaledDeltaTime / 3600.0); // hours of play
         }
 
         /// <summary>Can this room be paid for, or put on the tab here?</summary>

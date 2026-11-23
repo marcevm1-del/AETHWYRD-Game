@@ -181,7 +181,7 @@ namespace Ascend.Game
         }
 
         /// <summary>The player's time step: 0 in hit-stop, real time during Flash Time, otherwise game time.</summary>
-        public static float PlayerDelta => GameTime.HitStopActive ? 0f : GameTime.FlashTimeActive ? Time.unscaledDeltaTime : Time.deltaTime;
+        public static float PlayerDelta => GameTime.Paused || GameTime.HitStopActive ? 0f : GameTime.FlashTimeActive ? Time.unscaledDeltaTime : Time.deltaTime;
 
         static bool WasPadPressed(Gamepad pad, int slot)
         {
