@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Sister Pell\|Sister Pell]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 3 |
 | Prerequisites | flag [[Systems/Flags/guild_registered\|guild_registered]]; Act 1 |
 | Rewards | 70 gold, 6 GP, 160 XP, [[Items/Healing Herb\|Healing Herb]] |

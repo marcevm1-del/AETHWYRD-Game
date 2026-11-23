@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Innkeeper, the Sleeping Griffon |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A broad, loud widow who feeds every rookie on credit and remembers every debt to the copper. She lost her husband to a wyvern twenty years ago and keeps his sword over the bar.

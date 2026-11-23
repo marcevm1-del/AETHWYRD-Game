@@ -12,7 +12,7 @@ tags: [quest, class]
 |---|---|
 | Rank · type | F · Class |
 | Giver | [[NPCs/Old Hollis\|Old Hollis]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 5 |
 | Rewards | 400 XP, [[Items/Hollis's Practice Blade\|Hollis's Practice Blade]] |
 

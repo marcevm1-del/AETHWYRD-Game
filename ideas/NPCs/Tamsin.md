@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Orphan, Orphanage of the Small Lantern |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · No |
 
 A sharp eight-year-old who runs the other orphans like a small general and wants to be a guild receptionist like Mina.

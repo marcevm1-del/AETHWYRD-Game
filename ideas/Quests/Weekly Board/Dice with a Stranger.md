@@ -16,7 +16,7 @@ tags: [quest, weekly-board, hidden]
 | Repeat · time | weekly · night |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Wandering Merchant Ottoline\|Wandering Merchant Ottoline]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Wandering Merchant Ottoline\|Wandering Merchant Ottoline]] |
 | Type · trope | Hidden · Gambling with a suspicious lucky stranger |
 | Rewards | 60 gold, 50 XP |
 

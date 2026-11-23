@@ -12,7 +12,7 @@ tags: [quest, subjugation]
 |---|---|
 | Rank · type | F · Subjugation |
 | Giver | [[NPCs/Mina Feathersby\|Mina Feathersby]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 1; partySize: 1-2 |
 | Prerequisites | rank F |
 | Rewards | 60 gold, 8 GP, 120 XP, [[Items/Minor Healing Potion\|Minor Healing Potion]] |

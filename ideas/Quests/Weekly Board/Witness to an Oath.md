@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Sister Pell\|Sister Pell]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Sister Pell\|Sister Pell]] |
 | Type · trope | OddJob · Formal ceremony, nervous rookie |
 | Rewards | 30 gold, 3 GP, 80 XP |
 

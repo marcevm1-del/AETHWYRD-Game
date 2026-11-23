@@ -2,7 +2,7 @@
 
 > *"Every legend in Aldmere starts the same way: a wooden card, a bowl of stew at the Sleeping Griffon, and Mina saying 'Welcome to Brindlewick!' a little too loudly."*
 
-**Region:** `reg_aldmere` (town) bordering `reg_whisperwood` (north). **Rank band of surroundings:** F–E. **Population:** ~600. **Prosperity at start:** Stage 2 · Stable (see Systems → Settlement Prosperity). **NPCs:** `Data/NPCs/npcs.json` (filter `settlement: "Brindlewick"`). **Quests:** `Data/Quests/quests.json` (Ring 1).
+**Region:** `reg_whisperwood` (town, with Millbrook; Canon §6 "Brindlewick's region", decided 2026-11-07). Aldmere City lies up the Reeve's Road. **Rank band of surroundings:** F–E. **Population:** ~600. **Prosperity at start:** Stage 2 · Stable (see Systems → Settlement Prosperity). **NPCs:** `Data/NPCs/npcs.json` (filter `settlement: "Brindlewick"`). **Quests:** `Data/Quests/quests.json` (Ring 1).
 
 ## 1. History in Brief
 - **~300 SC:** a palisade fort built on a ley-line crossing to guard the road north into Whisperwood after the Gorrumvar war.

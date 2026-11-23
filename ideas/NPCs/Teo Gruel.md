@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Stable boy, the Sleeping Griffon |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · No |
 
 Marta's fourteen-year-old son, who wants to be an adventurer more than anything and practices with a broom in the stables.

@@ -105,7 +105,7 @@ These are presentation and spawn variants of this species, not separate core com
 ## Contracts and story encounters
 
 - [[Quests/The Mural of Nine Thrones|The Mural of Nine Thrones]] — rank E, in [[Regions/Whisperwood|Whisperwood]]
-- [[Quests/Weekly Board/Lantern Vigil|Lantern Vigil]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
+- [[Quests/Weekly Board/Lantern Vigil|Lantern Vigil]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
 

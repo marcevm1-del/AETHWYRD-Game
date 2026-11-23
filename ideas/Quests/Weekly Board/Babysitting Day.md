@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Brother Caspian\|Brother Caspian]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Brother Caspian\|Brother Caspian]] |
 | Type · trope | OddJob · Adventurer vs. small children |
 | Rewards | 15 gold, 2 GP, 80 XP |
 

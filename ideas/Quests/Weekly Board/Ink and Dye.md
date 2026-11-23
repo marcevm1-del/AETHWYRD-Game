@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Ines Valbuena\|Ines Valbuena]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Ines Valbuena\|Ines Valbuena]] |
 | Type · trope | OddJob · Dream-journal season |
 | Rewards | 40 gold, 4 GP, 110 XP |
 

@@ -103,8 +103,8 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Contracts and story encounters
 
-- [[Quests/Rabbit Season|Rabbit Season]] — rank F, in [[Regions/Aldmere|Aldmere]]
-- [[Quests/Weekly Board/Fix the Fence|Fix the Fence]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
+- [[Quests/Rabbit Season|Rabbit Season]] — rank F, in [[Regions/Whisperwood|Whisperwood]]
+- [[Quests/Weekly Board/Fix the Fence|Fix the Fence]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 - [[Quests/Weekly Board/Granny's Taming Lesson|Granny's Taming Lesson]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.

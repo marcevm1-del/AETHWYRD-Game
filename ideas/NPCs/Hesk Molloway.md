@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Turnip farmer, Millbrook |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Millbrook |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Millbrook |
 | Romanceable · can die | No · Yes |
 
 A farmer whose granary is raided by goblins every autumn and who has started leaving out food for them, without telling anyone.

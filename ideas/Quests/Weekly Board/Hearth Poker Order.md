@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · morning |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Brannoc Emberfist\|Brannoc Emberfist]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Brannoc Emberfist\|Brannoc Emberfist]] |
 | Type · trope | OddJob · The anvil never stops |
 | Rewards | 130 gold, 10 GP, 260 XP |
 

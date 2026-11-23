@@ -12,7 +12,7 @@ tags: [quest, companion]
 |---|---|
 | Rank · type | F · Companion |
 | Giver | [[NPCs/Torvald Stonebeard\|Torvald Stonebeard]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 6; partySize: 2 |
 | Prerequisites | quest [[Quests/A Blade for the Guild\|A Blade for the Guild]]; Act 1 |
 | Rewards | 6 GP, 280 XP, [[Items/Iron Blade\|Iron Blade]] |

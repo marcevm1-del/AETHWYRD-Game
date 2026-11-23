@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · morning |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Sister Pell\|Sister Pell]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Sister Pell\|Sister Pell]] |
 | Type · trope | OddJob · Humble chore, hidden lore |
 | Rewards | 15 gold, 2 GP, 70 XP |
 

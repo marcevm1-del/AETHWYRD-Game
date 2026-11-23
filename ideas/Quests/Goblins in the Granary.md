@@ -12,7 +12,7 @@ tags: [quest, defense]
 |---|---|
 | Rank · type | E · Defense |
 | Giver | [[NPCs/Hesk Molloway\|Hesk Molloway]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 9 |
 | Rewards | 180 gold, 15 GP, 600 XP |
 

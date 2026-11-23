@@ -16,7 +16,7 @@ tags: [quest, weekly-board, defense]
 | Repeat · time | weekly · night |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Tomlin Harker\|Tomlin Harker]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Tomlin Harker\|Tomlin Harker]] |
 | Type · trope | Defense · Rookie guard duty |
 | Rewards | 45 gold, 4 GP, 110 XP |
 

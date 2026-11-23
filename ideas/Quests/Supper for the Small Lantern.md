@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Marta Gruel\|Marta Gruel]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 3 |
 | Prerequisites | quest [[Quests/A Bowl of Stew\|A Bowl of Stew]]; Act 1 |
 | Rewards | 60 gold, 6 GP, 170 XP, [[Items/Hearth Loaf\|Hearth Loaf]] |

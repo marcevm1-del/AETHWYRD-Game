@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Brannoc Emberfist\|Brannoc Emberfist]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Brannoc Emberfist\|Brannoc Emberfist]] |
 | Type · trope | OddJob · Crafting minigame with a grumpy master |
 | Rewards | 80 gold, 4 GP, 150 XP, [[Items/Guild Issue Sword\|Guild Issue Sword]] |
 

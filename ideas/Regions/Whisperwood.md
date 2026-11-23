@@ -97,33 +97,117 @@ Use the rank band and terrain together when planning an outing. Listed monsters 
 
 ## People
 
+- [[NPCs/Mina Feathersby|Mina Feathersby]]: Guild receptionist
+- [[NPCs/-Nobody-|"Nobody"]]: Rogue trainer, Syndicate leader
+- [[NPCs/Rodrick -Old Bear- Hale|Rodrick "Old Bear" Hale]]: Guild Master
+- [[NPCs/Old Hollis|Old Hollis]]: Swordsman trainer
+- [[NPCs/Brother Caspian|Brother Caspian]]: Orphanage keeper, Morrowyn's shrine
+- [[NPCs/Lyra Brightwood|Lyra Brightwood]]: Companion (Swordsman)
+- [[NPCs/Granny Mabel|Granny Mabel]]: Tamer trainer
+- [[NPCs/Torvald Stonebeard|Torvald Stonebeard]]: Smith, companion (Artisan)
+- [[NPCs/Odo Hensley|Odo Hensley]]: Wheat farmer
+- [[NPCs/Marta Gruel|Marta Gruel]]: Innkeeper, the Sleeping Griffon
+- [[NPCs/Teo Gruel|Teo Gruel]]: Stable boy, the Sleeping Griffon
+- [[NPCs/Whiskers|Whiskers]]: The inn cat
+- [[NPCs/Sister Pell|Sister Pell]]: Cleric trainer, Solenne's shrine
+- [[NPCs/Magistra Eolande Fairweather|Magistra Eolande Fairweather]]: Mage trainer, town librarian
+- [[NPCs/Brannoc Emberfist|Brannoc Emberfist]]: Artisan trainer, blacksmith
+- [[NPCs/Rosalind -Rosie- Quill|Rosalind "Rosie" Quill]]: Bard trainer, tavern singer
 - [[NPCs/Wren Ashbourne|Wren Ashbourne]]: Ranger trainer, Whisperwood hunter
+- [[NPCs/Mayor Bertrand Pike|Mayor Bertrand Pike]]: Mayor of Brindlewick
+- [[NPCs/Captain Agnes Holt|Captain Agnes Holt]]: Captain of the town guard
+- [[NPCs/Gilda Marsh|Gilda Marsh]]: Owner, Gilda's General Goods
+- [[NPCs/Fennick Reed|Fennick Reed]]: Herbalist
+- [[NPCs/Hugo Brand|Hugo Brand]]: Baker
+- [[NPCs/Ines Valbuena|Ines Valbuena]]: Tailor
+- [[NPCs/Old Sal|Old Sal]]: Fisherman, Millrace dock
+- [[NPCs/Dax Rowan|Dax Rowan]]: Leader of the Crimson Wolves (rival party)
+- [[NPCs/Isolde Marr|Isolde Marr]]: Crimson Wolves mage
+- [[NPCs/Pim Tallow|Pim Tallow]]: Crimson Wolves scout
+- [[NPCs/Brutus Kale|Brutus Kale]]: Tavern bully, D-Rank adventurer
+- [[NPCs/Tamsin|Tamsin]]: Orphan, Orphanage of the Small Lantern
+- [[NPCs/Bo|Bo]]: Orphan, Orphanage of the Small Lantern
+- [[NPCs/Lark|Lark]]: Orphan, Orphanage of the Small Lantern
+- [[NPCs/Jory Thatch|Jory Thatch]]: Miller
+- [[NPCs/Tomlin Harker|Tomlin Harker]]: North gate guard
+- [[NPCs/Widow Aster|Widow Aster]]: Candlemaker, Temple Hill
+- [[NPCs/Corwin Fiddle|Corwin Fiddle]]: Street musician
+- [[NPCs/Wendel Pratt|Wendel Pratt]]: Guild clerk
+- [[NPCs/Hesk Molloway|Hesk Molloway]]: Turnip farmer, Millbrook
 - [[NPCs/Wandering Merchant Ottoline|Wandering Merchant Ottoline]]: Traveling merchant
 
 ## Quests
 
+- [[Quests/Rabbit Season|Rabbit Season]] (F)
+- [[Quests/Slime in the Well|Slime in the Well]] (F)
 - [[Quests/The Goblin Chief of Hollowpine|The Goblin Chief of Hollowpine]] (E)
+- [[Quests/The Silver Wolf of Mistvale|The Silver Wolf of Mistvale]] (C)
 - [[Quests/Status Granted|Status Granted]] (F)
+- [[Quests/The Wooden Card|The Wooden Card]] (F)
+- [[Quests/A Bowl of Stew|A Bowl of Stew]] (F)
 - [[Quests/Mina's Lost Earring|Mina's Lost Earring]] (F)
 - [[Quests/The Crying Mandrake|The Crying Mandrake]] (F)
+- [[Quests/A Thousand Swings|A Thousand Swings]] (F)
+- [[Quests/The Tavern Brawl|The Tavern Brawl]] (E)
+- [[Quests/Goblins in the Granary|Goblins in the Granary]] (E)
+- [[Quests/Night of the Smiling Scarecrow|Night of the Smiling Scarecrow]] (E)
 - [[Quests/The Mural of Nine Thrones|The Mural of Nine Thrones]] (E)
 - [[Quests/The Crimson Wolves|The Crimson Wolves]] (E)
 - [[Quests/Hold the Line- {settlement}|Hold the Line: {settlement}]] (E)
 - [[Quests/Whisperwood Hunting Contract|Whisperwood Hunting Contract]] (E)
+- [[Quests/A Blade for the Guild|A Blade for the Guild]] (F)
+- [[Quests/A Cap for Tomlin|A Cap for Tomlin]] (F)
+- [[Quests/Stock for the Clinic|Stock for the Clinic]] (F)
+- [[Quests/Supper for the Small Lantern|Supper for the Small Lantern]] (F)
+- [[Quests/Silk and Ink|Silk and Ink]] (F)
+- [[Quests/The First Glyph|The First Glyph]] (F)
+- [[Quests/A Ward for the Library|A Ward for the Library]] (E)
 - [[Quests/Two on the Road|Two on the Road]] (F)
+- [[Quests/The Girl Who Couldn't Win|The Girl Who Couldn't Win]] (F)
+- [[Quests/The Unfinished Blade|The Unfinished Blade]] (F)
 - [[Quests/Weekly Board/Fresh Posters|Fresh Posters]] (undefined)
+- [[Quests/Weekly Board/Gate Watch|Gate Watch]] (undefined)
+- [[Quests/Weekly Board/Witness to an Oath|Witness to an Oath]] (undefined)
+- [[Quests/Weekly Board/The First-Day Cart|The First-Day Cart]] (undefined)
+- [[Quests/Weekly Board/The Fortune Is Always Bad|The Fortune Is Always Bad]] (undefined)
 - [[Quests/Weekly Board/Moonbloom Picking|Moonbloom Picking]] (undefined)
+- [[Quests/Weekly Board/The Lost Cat (Again)|The Lost Cat (Again)]] (undefined)
+- [[Quests/Weekly Board/Bad Dreams at the Orphanage|Bad Dreams at the Orphanage]] (undefined)
+- [[Quests/Weekly Board/Forge Rush|Forge Rush]] (undefined)
 - [[Quests/Weekly Board/Scrap Run|Scrap Run]] (undefined)
+- [[Quests/Weekly Board/Hot Bread Delivery|Hot Bread Delivery]] (undefined)
 - [[Quests/Weekly Board/Silk for a Dress|Silk for a Dress]] (undefined)
 - [[Quests/Weekly Board/Mandrake Harvest|Mandrake Harvest]] (undefined)
+- [[Quests/Weekly Board/Slime Patrol|Slime Patrol]] (undefined)
+- [[Quests/Weekly Board/Fix the Fence|Fix the Fence]] (undefined)
 - [[Quests/Weekly Board/Granny's Taming Lesson|Granny's Taming Lesson]] (undefined)
 - [[Quests/Weekly Board/A Basket of Mushrooms|A Basket of Mushrooms]] (undefined)
 - [[Quests/Weekly Board/Race the Crimson Wolves|Race the Crimson Wolves]] (undefined)
+- [[Quests/Weekly Board/Morning Sparring|Morning Sparring]] (undefined)
+- [[Quests/Weekly Board/Drill the Militia|Drill the Militia]] (undefined)
+- [[Quests/Weekly Board/Arm-Wrestling Night|Arm-Wrestling Night]] (undefined)
+- [[Quests/Weekly Board/Lantern Vigil|Lantern Vigil]] (undefined)
+- [[Quests/Weekly Board/Babysitting Day|Babysitting Day]] (undefined)
+- [[Quests/Weekly Board/Party Stew Night|Party Stew Night]] (undefined)
+- [[Quests/Weekly Board/Tidy the Graves|Tidy the Graves]] (undefined)
+- [[Quests/Weekly Board/Market Day Mayhem|Market Day Mayhem]] (undefined)
+- [[Quests/Weekly Board/Dice with a Stranger|Dice with a Stranger]] (undefined)
+- [[Quests/Weekly Board/Busking with Corwin|Busking with Corwin]] (undefined)
+- [[Quests/Weekly Board/Old Sal's Fishing Contest|Old Sal's Fishing Contest]] (undefined)
 - [[Quests/Weekly Board/Goblin Cull|Goblin Cull]] (undefined)
 - [[Quests/Weekly Board/Herb Run|Herb Run]] (undefined)
+- [[Quests/Weekly Board/Sewer Duty|Sewer Duty]] (undefined)
 - [[Quests/Weekly Board/Wolves on the Road|Wolves on the Road]] (undefined)
 - [[Quests/Weekly Board/Open Hunting Contract|Open Hunting Contract]] (undefined)
+- [[Quests/Weekly Board/Rush Hour at the Griffon|Rush Hour at the Griffon]] (undefined)
+- [[Quests/Weekly Board/The Guild's Weekly Commission|The Guild's Weekly Commission]] (undefined)
+- [[Quests/Weekly Board/Guild Blade Order|Guild Blade Order]] (undefined)
+- [[Quests/Weekly Board/Ink and Dye|Ink and Dye]] (undefined)
+- [[Quests/Weekly Board/Hearth Poker Order|Hearth Poker Order]] (undefined)
 - [[Quests/Weekly Board/Herbalist's Shelf|Herbalist's Shelf]] (undefined)
+- [[Quests/Weekly Board/Training Yard Snacks|Training Yard Snacks]] (undefined)
+- [[Quests/Weekly Board/Lantern Loaf|Lantern Loaf]] (undefined)
+- [[Quests/Weekly Board/Cook-Off Wager|Cook-Off Wager]] (undefined)
 - [[Quests/Weekly Board/Party of Two Contract|Party of Two Contract]] (undefined)
 
 ## Monsters (91)

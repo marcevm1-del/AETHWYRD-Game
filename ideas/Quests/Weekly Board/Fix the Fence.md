@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · morning |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Hesk Molloway\|Hesk Molloway]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Hesk Molloway\|Hesk Molloway]] |
 | Type · trope | OddJob · Farm chores between fights |
 | Rewards | 30 gold, 2 GP, 80 XP |
 

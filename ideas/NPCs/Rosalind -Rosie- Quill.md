@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Bard trainer, tavern singer |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A flamboyant singer who knows every song in Aldmere and every secret in Brindlewick, and charges for neither.

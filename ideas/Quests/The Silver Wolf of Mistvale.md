@@ -12,7 +12,7 @@ tags: [quest, bounty]
 |---|---|
 | Rank · type | C · Bounty |
 | Giver | [[NPCs/Mina Feathersby\|Mina Feathersby]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 61; partySize: 1-4 |
 | Prerequisites | rank D |
 | Rewards | 4500 gold, 260 GP, 18000 XP, [[Items/Silver Wolf Pelt\|Silver Wolf Pelt]], [[Items/Moonfang Dagger\|Moonfang Dagger]] |

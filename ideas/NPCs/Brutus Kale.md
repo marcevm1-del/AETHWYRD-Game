@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Tavern bully, D-Rank adventurer |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A loud D-Rank brawler who has been stuck at D for six years and takes it out on every rookie with a wooden card.

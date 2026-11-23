@@ -10,7 +10,7 @@ tags: [npc, red-moon-cult]
 |---|---|
 | Role | Orphanage keeper, Morrowyn's shrine |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Faction | Red Moon Cult |
 | Romanceable · can die | No · Yes |
 

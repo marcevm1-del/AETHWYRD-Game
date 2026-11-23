@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · day |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Marta Gruel\|Marta Gruel]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Marta Gruel\|Marta Gruel]] |
 | Type · trope | OddJob · Find the lost cat |
 | Rewards | 20 gold, 2 GP, 60 XP |
 

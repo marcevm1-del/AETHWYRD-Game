@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Odo Hensley\|Odo Hensley]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 1 |
 | Prerequisites | rank F |
 | Rewards | 40 gold, 6 GP, 90 XP |

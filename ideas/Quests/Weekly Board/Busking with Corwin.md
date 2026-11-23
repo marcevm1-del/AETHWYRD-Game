@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · dusk |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Corwin Fiddle\|Corwin Fiddle]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Corwin Fiddle\|Corwin Fiddle]] |
 | Type · trope | OddJob · Street performance rhythm game |
 | Rewards | 40 gold, 1 GP, 70 XP |
 

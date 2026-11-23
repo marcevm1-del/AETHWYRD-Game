@@ -104,7 +104,7 @@ These are presentation and spawn variants of this species, not separate core com
 
 ## Contracts and story encounters
 
-- [[Quests/Weekly Board/Sewer Duty|Sewer Duty]] — rank undefined, in [[Regions/Aldmere|Aldmere]]
+- [[Quests/Weekly Board/Sewer Duty|Sewer Duty]] — rank undefined, in [[Regions/Whisperwood|Whisperwood]]
 
 These links show where the species already matters to authored play. A contract target is not a claim that every local population is hostile; check the quest objective and the creature’s behavior before engaging.
 

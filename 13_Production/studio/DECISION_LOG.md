@@ -14,6 +14,8 @@ Owner decisions only. Proposals stay under "Open" until the owner says yes or no
 | D-07 | 2026-11-23 | **The owner installs `gh` and signs in. Agents push `agent/*` branches and open PRs; only the owner merges to `main`.** CODEOWNERS and a branch-protection check follow once `gh` works | Waiting on the owner: `winget install GitHub.cli`, then `gh auth login` | Owner, in chat |
 
 | D-08 | 2026-11-23 | **One-time exception to D-07:** the overseer merged PRs 11 to 17. It is not standing permission to merge | Each PR was pinned to its tested commit, with checks passing | Owner, in chat ("Yes, merge all 7") |
+| D-09 | 2026-11-23 | **One-time exceptions to D-07:** the overseer merged PRs 18 to 25 on explicit owner approval, group by group. Not standing permission | PR 20 was merged above the section 12 hero cap; slimming the body is open | Owner, in chat |
+| D-10 | 2026-11-23 | **The overseer may start the Unity check** when the owner says so for that run | Amends D-06 per run | Owner, in chat |
 
 ## Open
 None.

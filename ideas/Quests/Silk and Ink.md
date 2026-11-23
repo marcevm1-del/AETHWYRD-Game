@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Ines Valbuena\|Ines Valbuena]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 3 |
 | Prerequisites | flag [[Systems/Flags/guild_registered\|guild_registered]]; Act 1 |
 | Rewards | 65 gold, 6 GP, 150 XP, [[Items/Apprentice Robe\|Apprentice Robe]] |

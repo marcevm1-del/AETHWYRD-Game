@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · night |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Brutus Kale\|Brutus Kale]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Brutus Kale\|Brutus Kale]] |
 | Type · trope | OddJob · Tavern strength contest |
 | Rewards | 50 gold, 1 GP, 60 XP |
 

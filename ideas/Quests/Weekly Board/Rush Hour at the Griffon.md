@@ -16,7 +16,7 @@ tags: [quest, weekly-board, oddjob]
 | Repeat · time | weekly · dusk |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Marta Gruel\|Marta Gruel]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Marta Gruel\|Marta Gruel]] |
 | Type · trope | OddJob · Part-time job at the inn |
 | Rewards | 45 gold, 1 GP, 80 XP |
 

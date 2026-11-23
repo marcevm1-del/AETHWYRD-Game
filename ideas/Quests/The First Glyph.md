@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Torvald Stonebeard\|Torvald Stonebeard]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 6 |
 | Prerequisites | quest [[Quests/A Blade for the Guild\|A Blade for the Guild]]; Act 1 |
 | Rewards | 80 gold, 8 GP, 240 XP, [[Items/Hearth Rune\|Hearth Rune]] |

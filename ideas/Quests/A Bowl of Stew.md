@@ -12,7 +12,7 @@ tags: [quest, main]
 |---|---|
 | Rank · type | F · Main |
 | Giver | [[NPCs/Marta Gruel\|Marta Gruel]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Prerequisites | quest [[Quests/The Wooden Card\|The Wooden Card]]; flag [[Systems/Flags/guild_registered\|guild_registered]]; Act 1 |
 | Rewards | 40 XP |
 

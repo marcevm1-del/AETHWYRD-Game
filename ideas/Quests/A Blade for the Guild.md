@@ -12,7 +12,7 @@ tags: [quest, oddjob]
 |---|---|
 | Rank · type | F · OddJob |
 | Giver | [[NPCs/Torvald Stonebeard\|Torvald Stonebeard]] |
-| Region | [[Regions/Aldmere\|Aldmere]] |
+| Region | [[Regions/Whisperwood\|Whisperwood]] |
 | Requirements | minLevel: 4 |
 | Prerequisites | quest [[Quests/The Wooden Card\|The Wooden Card]]; flag [[Systems/Flags/guild_registered\|guild_registered]]; Act 1 |
 | Rewards | 90 gold, 8 GP, 220 XP, [[Items/Iron Blade\|Iron Blade]] |

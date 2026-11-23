@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Herbalist |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A gentle herbalist who buys every herb rookies bring him and quietly throws away the poisonous ones they mistook for healing grass.

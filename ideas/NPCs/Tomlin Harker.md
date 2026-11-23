@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | North gate guard |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A young guard who failed the Guild registration and now waves rookies through the north gate with quiet envy.

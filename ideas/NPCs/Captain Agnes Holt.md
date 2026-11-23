@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Captain of the town guard |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Brindlewick |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Brindlewick |
 | Romanceable · can die | No · Yes |
 
 A grey-haired gate captain who has watched three generations of rookies walk out the north gate and counts every one that comes back.

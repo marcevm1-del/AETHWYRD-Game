@@ -10,7 +10,7 @@ tags: [npc, none]
 |---|---|
 | Role | Wheat farmer |
 | Race | Human |
-| Home | [[Regions/Aldmere\|Aldmere]] · Millbrook |
+| Home | [[Regions/Whisperwood\|Whisperwood]] · Millbrook |
 | Romanceable · can die | No · Yes |
 
 Third-generation wheat farmer who swears the scarecrow in his east field moved last night.

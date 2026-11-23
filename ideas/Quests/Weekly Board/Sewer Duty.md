@@ -16,7 +16,7 @@ tags: [quest, weekly-board, subjugation]
 | Repeat · time | weekly · any |
 | Rank band | F–E |
 | Region state | any |
-| Region · giver | [[Regions/Aldmere\|Aldmere]] · [[NPCs/Wendel Pratt\|Wendel Pratt]] |
+| Region · giver | [[Regions/Whisperwood\|Whisperwood]] · [[NPCs/Wendel Pratt\|Wendel Pratt]] |
 | Type · trope | Subjugation · The sewer job nobody wants |
 | Rewards | 40 gold, 3 GP, 110 XP |
 
