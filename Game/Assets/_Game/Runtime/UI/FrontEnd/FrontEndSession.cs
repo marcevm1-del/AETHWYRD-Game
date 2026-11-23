@@ -66,10 +66,22 @@ namespace Ascend.Game
             try
             {
                 var path = SlotPath;
-                if (!File.Exists(path)) return false;
-                var s = SaveRules.Upgrade(JsonConvert.DeserializeObject<SaveGame>(File.ReadAllText(path), Json));
-                if (s == null || SaveRules.Validate(s).Count > 0 || s.Fallen) return false;
-                save = s;
+                if (!AtomicFile.AnyExists(path)) return false;
+                SaveGame found = null;
+                // main, then .bak, then .tmp; a valid but fallen hardcore main ends the search (never an older living backup)
+                AtomicFile.ReadWithRecovery(path, t =>
+                {
+                    try
+                    {
+                        var s = SaveRules.Upgrade(JsonConvert.DeserializeObject<SaveGame>(t, Json));
+                        if (s == null || SaveRules.Validate(s).Count > 0) return AtomicFile.Verdict.Reject;
+                        if (s.Fallen) return AtomicFile.Verdict.Stop;
+                        found = s; return AtomicFile.Verdict.Accept;
+                    }
+                    catch (Exception) { return AtomicFile.Verdict.Reject; }
+                }, out _);
+                if (found == null) return false;
+                save = found;
                 return true;
             }
             catch (Exception) { return false; }

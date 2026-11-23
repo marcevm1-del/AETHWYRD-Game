@@ -102,4 +102,51 @@ static class AtomicFileTests
         }
         finally { Directory.Delete(d, true); }
     }
+
+    public static void AGoodBackupSurvivesTheNextSaveAfterARecovery()
+    {
+        var d = TempDir();
+        try
+        {
+            var p = Path.Combine(d, "slot0.json");
+            AtomicFile.WriteAllText(p, "{\"v\":1}");
+            AtomicFile.WriteAllText(p, "{\"v\":2}");
+            File.WriteAllText(p, "{\"v\":2"); // main corrupted, .bak holds v1
+            AtomicFile.ReadWithRecovery(p, Good, out var src);
+            Assert.Equal("backup", src, "recovered from the backup");
+            Assert.True(AtomicFile.QuarantineMain(p), "corrupt main moved aside");
+            Assert.True(!File.Exists(p), "main slot cleared");
+            Assert.Equal("{\"v\":2", File.ReadAllText(p + ".bad"), "corrupt copy kept as .bad");
+            AtomicFile.WriteAllText(p, "{\"v\":3}"); // the next save
+            Assert.Equal("{\"v\":3}", File.ReadAllText(p), "new main");
+            Assert.Equal("{\"v\":1}", File.ReadAllText(AtomicFile.BackupPath(p)), "the good backup was not replaced by the corrupt file");
+        }
+        finally { Directory.Delete(d, true); }
+    }
+
+    public static void QuarantineDoesNothingWhenThereIsNoMainFile()
+    {
+        var d = TempDir();
+        try
+        {
+            var p = Path.Combine(d, "slot0.json");
+            Assert.True(!AtomicFile.QuarantineMain(p), "nothing to quarantine");
+            Assert.True(!File.Exists(p + ".bad"), "no .bad invented");
+        }
+        finally { Directory.Delete(d, true); }
+    }
+
+    public static void AStopVerdictEndsTheSearchInsteadOfFallingToTheBackup()
+    {
+        var d = TempDir();
+        try
+        {
+            var p = Path.Combine(d, "slot0.json");
+            AtomicFile.WriteAllText(p, "{\"alive\":true}");
+            AtomicFile.WriteAllText(p, "{\"fallen\":true}"); // .bak is the older, living save
+            var t = AtomicFile.ReadWithRecovery(p, x => x.Contains("fallen") ? AtomicFile.Verdict.Stop : AtomicFile.Verdict.Accept, out var src);
+            Assert.True(t == null && src == null, "a fallen main must not fall through to the living backup");
+        }
+        finally { Directory.Delete(d, true); }
+    }
 }

@@ -49,11 +49,18 @@ namespace Ascend.Core
             return text;
         }
 
+        /// <summary>What a reader says about one candidate file: take it, skip it and try the next, or end the search with no result.</summary>
+        public enum Verdict { Accept, Reject, Stop }
+
         /// <summary>
         /// Reads the first candidate that <paramref name="accept"/> takes: main, then <c>.bak</c>, then a leftover <c>.tmp</c>
         /// (a crash after the temp file was written but before the swap). <paramref name="source"/> is "main", "backup", "temp" or null.
         /// </summary>
         public static string ReadWithRecovery(string path, Func<string, bool> accept, out string source, bool includeTemp = true)
+            => ReadWithRecovery(path, t => accept == null || accept(t) ? Verdict.Accept : Verdict.Reject, out source, includeTemp);
+
+        /// <summary>As above, but the reader can return <see cref="Verdict.Stop"/> to end the search (a valid but fallen hardcore main must not fall through to an older living backup).</summary>
+        public static string ReadWithRecovery(string path, Func<string, Verdict> judge, out string source, bool includeTemp = true)
         {
             source = null;
             var candidates = includeTemp
@@ -65,11 +72,32 @@ namespace Ascend.Core
                 {
                     if (!File.Exists(p)) continue;
                     var text = File.ReadAllText(p);
-                    if (accept == null || accept(text)) { source = name; return text; }
+                    var v = judge(text);
+                    if (v == Verdict.Accept) { source = name; return text; }
+                    if (v == Verdict.Stop) return null;
                 }
                 catch (Exception) { }
             }
             return null;
+        }
+
+        /// <summary>
+        /// After a good copy was recovered from .bak or .tmp: keeps the rejected main file as <c>path.bad</c>, and removes it from the main slot
+        /// only once the .bad copy exists with the same length. The next write then takes the plain move path, so the good .bak is not
+        /// replaced by the corrupt file. Deletes nothing if the copy failed. Returns whether the main slot was cleared.
+        /// </summary>
+        public static bool QuarantineMain(string path)
+        {
+            try
+            {
+                if (!File.Exists(path)) return false;
+                var bad = path + ".bad";
+                File.Copy(path, bad, true);
+                if (!File.Exists(bad) || new FileInfo(bad).Length != new FileInfo(path).Length) return false;
+                File.Delete(path);
+                return true;
+            }
+            catch (Exception) { return false; }
         }
 
         /// <summary>True when the main file, its backup or a leftover temp file exists.</summary>

@@ -152,7 +152,7 @@ namespace Ascend.Game
             if (source != "main")
             {
                 Debug.LogWarning($"Save {PathOnDisk}: main file {(File.Exists(PathOnDisk) ? "was rejected (" + why + ")" : "is missing")}; loaded the {source} copy instead");
-                if (File.Exists(PathOnDisk)) CopyAsideBad();
+                if (File.Exists(PathOnDisk)) AtomicFile.QuarantineMain(PathOnDisk); // keep the corrupt file as .bad and out of the way, so the next save cannot turn it into the .bak
             }
             else Debug.Log($"Save {PathOnDisk}: loaded main file");
 
