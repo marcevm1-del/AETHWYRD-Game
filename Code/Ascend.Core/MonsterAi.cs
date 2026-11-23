@@ -144,6 +144,34 @@ namespace Ascend.Core
         public string Pattern => _motion.Behavior.AiPattern ?? "aggressive_chase";
         public bool IsSkittish => Pattern.StartsWith("skittish");
         public bool IsPack => Pattern.StartsWith("pack") || Pattern.StartsWith("swarm");
+        /// <summary>passive_*: idles and never starts a fight from proximity alone; engages only once hit or called by a packmate.</summary>
+        public bool IsPassive => Pattern.StartsWith("passive");
+        /// <summary>ambush_*: holds still in Idle until the player is inside a short trigger radius, then opens with a strike.</summary>
+        public bool IsAmbush => Pattern.StartsWith("ambush");
+        /// <summary>The "+stalker" suffix: trails the player at a distance and commits only when the player is busy or hurt.</summary>
+        public bool IsStalker => Pattern.Contains("+stalker");
+
+        /// <summary>Base patterns motion.json may declare. Every one is read by the brain; tests check all 680 species map to one.</summary>
+        public static readonly string[] BasePatterns = { "aggressive_chase", "pack_flank", "swarm_surround", "territorial_guard", "guardian_hold", "skittish_flee", "passive_wander", "ambush_strike" };
+        public const string StalkerSuffix = "+stalker";
+        public static bool IsKnownPattern(string pattern)
+        {
+            if (string.IsNullOrEmpty(pattern)) return false;
+            if (pattern.EndsWith(StalkerSuffix)) pattern = pattern.Substring(0, pattern.Length - StalkerSuffix.Length);
+            return Array.IndexOf(BasePatterns, pattern) >= 0;
+        }
+
+        /// <summary>An ambusher reveals itself at its alertRadius, but never farther than this (a colossal's 80 m alert radius is not an ambush).</summary>
+        public const double AmbushMaxTriggerM = 6.0;
+        /// <summary>A stalker commits once the player's HP fraction drops below this.</summary>
+        public const double StalkCommitPlayerHp = 0.5;
+        /// <summary>A stalker trails at this fraction of its alert radius (at least StalkMinTrailM), within a +-StalkBandM band.</summary>
+        public const double StalkTrailFrac = 0.6, StalkMinTrailM = 3.0, StalkBandM = 0.5;
+
+        bool _engaged;        // provoked (hit, called, staggered): passive monsters fight, stalkers commit; cleared on returning to Idle
+        bool _committed;      // stalker: the commit condition was met; stays until Idle
+        bool _opening = true; // ambusher: the opening strike is still owed
+        double _lastHp = -1;
 
         /// <summary>Seconds left of a raised alarm (a packmate was attacked): it comes for you even from beyond its alert radius.</summary>
         public double AlertedFor { get; private set; }
@@ -153,6 +181,7 @@ namespace Ascend.Core
         public void Alert()
         {
             AlertedFor = AlarmSec;
+            _engaged = true;
             if (State == AiState.Idle) Enter(IsSkittish ? AiState.Flee : AiState.Chase);
         }
 
@@ -196,6 +225,7 @@ namespace Ascend.Core
         public void Stun(double seconds)
         {
             _staggerFor = Math.Max(0.05, seconds);
+            _engaged = true;
             Enter(AiState.Staggered);
             CurrentAttack = null; CurrentTiming = null;
         }
@@ -209,6 +239,8 @@ namespace Ascend.Core
             if (s.TargetWarded) { AlertedFor = 0; s.DistanceToPlayer = double.MaxValue; } // out of reach behind the ward
             var nav = _motion.NavAgent;
             var cmd = new AiCommand { Move = AiMove.None, Speed = 0 };
+            // Being hit = the HP fraction dropped since the last tick (no extra input needed from the game).
+            if (s.HpFraction > 0) { if (_lastHp > 0 && s.HpFraction < _lastHp - 1e-9) _engaged = true; _lastHp = s.HpFraction; }
             var tac = Tactics ?? GroupTacticsTuning.Default;
             // Tactics disabled (groupTactics.enabled = false): behave exactly like the brain before tactics. The player's HP counts
             // as "not supplied" for the retreat rules, there is no yielding, no flank angle and no threat score.
@@ -224,13 +256,23 @@ namespace Ascend.Core
             if (!busy && s.TargetWarded && (State == AiState.Chase || State == AiState.Reposition || State == AiState.Flee)) Enter(AiState.Return);
             // A pack hunter left alone and hurt falls back home instead of fighting on (Greyborn's fight-or-flee odds).
             if (!busy && IsPack && s.PackmatesNear == 0 && s.HpFraction > 0 && s.HpFraction < RetreatRule.LoneThreshold(LoneRetreatHp, playerHp, tac) && State == AiState.Chase) Enter(AiState.Return);
-            if (!busy && State != AiState.Flee && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= RetreatRule.SpeciesThreshold(b.RetreatHpPct, playerHp, tac) && State != AiState.Return)
+            if (!busy && State != AiState.Flee && (!IsPassive || _engaged) && b.RetreatHpPct > 0 && s.HpFraction > 0 && s.HpFraction <= RetreatRule.SpeciesThreshold(b.RetreatHpPct, playerHp, tac) && State != AiState.Return)
                 Enter(AiState.Flee);
 
             switch (State)
             {
                 case AiState.Idle:
-                    if (s.DistanceToPlayer <= b.AlertRadius) Enter(IsSkittish ? AiState.Flee : AiState.Chase);
+                    if (IsPassive)
+                    {
+                        // Ignores you: only a hit or a packmate's call (both set _engaged) starts the fight.
+                        if (_engaged) Enter(IsSkittish ? AiState.Flee : AiState.Chase);
+                    }
+                    else if (IsAmbush)
+                    {
+                        // Dormant until you step inside the short trigger radius (or hurt it), then the opening strike.
+                        if (_engaged || s.DistanceToPlayer <= Math.Min(b.AlertRadius, AmbushMaxTriggerM)) Enter(AiState.Chase);
+                    }
+                    else if (s.DistanceToPlayer <= b.AlertRadius) Enter(IsSkittish ? AiState.Flee : AiState.Chase);
                     break;
 
                 case AiState.Return:
@@ -247,11 +289,30 @@ namespace Ascend.Core
                 case AiState.Reposition:
                 {
                     cmd.Face = true;
-                    var choice = Choose(s.DistanceToPlayer);
+                    // Stalker: trail at a distance until the player is busy with another enemy or hurt (or it was hit itself).
+                    if (IsStalker && !_committed)
+                    {
+                        bool busyPlayer = Math.Max(s.PackmatesNear, s.AlliesNear) > 0;
+                        bool hurtPlayer = s.PlayerHpFraction > 0 && s.PlayerHpFraction < StalkCommitPlayerHp;
+                        if (_engaged || busyPlayer || hurtPlayer) _committed = true;
+                    }
+                    if (IsStalker && !_committed && !(IsAmbush && _opening))
+                    {
+                        if (State == AiState.Reposition) Enter(AiState.Chase);
+                        double trail = Math.Min(Math.Max(StalkMinTrailM, b.AlertRadius * StalkTrailFrac), Math.Max(b.AlertRadius, StalkMinTrailM));
+                        double d = s.DistanceToPlayer;
+                        cmd.ReleaseToken = true;
+                        double slow = nav.WalkSpeed > 0 ? nav.WalkSpeed : nav.Speed * 0.4;
+                        if (d > trail + StalkBandM) { cmd.Move = AiMove.Toward; cmd.Speed = nav.Speed; }
+                        else if (d < trail - StalkBandM) { cmd.Move = AiMove.Away; cmd.Speed = slow; }
+                        else { cmd.Move = AiMove.Circle; cmd.Speed = slow; }
+                        break;
+                    }
+                    var choice = IsAmbush && _opening ? ChooseOpening(s.DistanceToPlayer) : Choose(s.DistanceToPlayer);
                     if (choice.data != null)
                     {
                         cmd.WantsToken = true;
-                        if (s.HasToken && !yieldToken) { StartWindup(choice); cmd.Move = AiMove.None; break; }
+                        if (s.HasToken && !yieldToken) { _opening = false; StartWindup(choice); cmd.Move = AiMove.None; break; }
                         Enter(AiState.Reposition);
                         cmd.Move = AiMove.Circle; cmd.Speed = nav.WalkSpeed > 0 ? nav.WalkSpeed : nav.Speed * 0.4;
                         if (yieldToken) { cmd.WantsToken = false; cmd.ReleaseToken = true; }
@@ -299,6 +360,14 @@ namespace Ascend.Core
             return ready[(int)(_rng.NextDouble() * ready.Count) % ready.Count];
         }
 
+        /// <summary>The ambusher's opening strike: the ready attack with the longest reach (a lunge, dash or ranged one), ignoring the upper reach limit so it can cover the trigger radius.</summary>
+        (AttackData data, AttackTimingData timing) ChooseOpening(double distance)
+        {
+            var ready = _attacks.Where(a => Cooldown(a.data.Id) <= 0 && distance >= MinRangeOf(a.timing)).ToList();
+            if (ready.Count == 0) return default;
+            return ready.OrderByDescending(a => ReachOf(a.timing)).ThenByDescending(a => a.data.Power).First();
+        }
+
         double Cooldown(string id) => _cooldownLeft.TryGetValue(id, out var c) ? c : 0;
 
         void StartWindup((AttackData data, AttackTimingData timing) a)
@@ -309,6 +378,10 @@ namespace Ascend.Core
             Enter(AiState.Windup);
         }
 
-        void Enter(AiState s) { State = s; _stateTime = 0; }
+        void Enter(AiState s)
+        {
+            State = s; _stateTime = 0;
+            if (s == AiState.Idle) { _engaged = false; _committed = false; _opening = true; }
+        }
     }
 }

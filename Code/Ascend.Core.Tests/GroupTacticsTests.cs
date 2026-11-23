@@ -136,10 +136,10 @@ static class GroupTacticsTests
 
     public static void ASpeciesWithARetreatPercentageFleesAtItAndPressesOnAgainstAWeakPlayer()
     {
-        const string Id = "mon_bubble_slime";   // passive_wander, retreatHpPct 0.6
+        const string Id = "mon_bubble_slime";   // passive_wander (engaged here by a hit), retreatHpPct 0.6
         var m = Repo.Db.Motion[Id].Behavior;
         Assert.True(m.RetreatHpPct > 0, "test setup: it retreats");
-        MonsterBrain Chasing() { var b = Brain(Id); b.Tick(Dt, Sense(m.AlertRadius - 1)); Assert.Equal(AiState.Chase, b.State, "chasing"); return b; }
+        MonsterBrain Chasing() { var b = Brain(Id); b.Tick(Dt, Sense(m.AlertRadius + 5)); b.Tick(Dt, Sense(m.AlertRadius - 1, hp: 0.99)); Assert.Equal(AiState.Chase, b.State, "chasing"); return b; }
 
         var above = Chasing();
         above.Tick(Dt, Sense(m.AlertRadius - 1, hp: m.RetreatHpPct + 0.1));
