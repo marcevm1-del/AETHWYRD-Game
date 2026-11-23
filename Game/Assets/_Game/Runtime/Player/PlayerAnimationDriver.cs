@@ -62,7 +62,22 @@ namespace Ascend.Game
 
         void LateUpdate()
         {
-            if (!_externallyTicked) TickInternal(Time.deltaTime);
+            SyncAnimatorTime();
+            if (!_externallyTicked) TickInternal(PlayerInputDriver.PlayerDelta);
+        }
+
+        AnimatorUpdateMode? _baseMode;
+
+        /// <summary>
+        /// Flash Time slows the world but the player keeps real-time speed, so the player Animator runs on unscaled
+        /// time then. Hit-stop freezes everyone, so it goes back to scaled time (timeScale 0 holds the pose).
+        /// </summary>
+        void SyncAnimatorTime()
+        {
+            if (Animator == null) return;
+            if (_baseMode == null) _baseMode = Animator.updateMode;
+            var want = GameTime.FlashTimeActive && !GameTime.HitStopActive ? AnimatorUpdateMode.UnscaledTime : _baseMode.Value;
+            if (Animator.updateMode != want) Animator.updateMode = want;
         }
 
         /// <summary>Advance one step. Called by tests (disables the LateUpdate self-tick).</summary>

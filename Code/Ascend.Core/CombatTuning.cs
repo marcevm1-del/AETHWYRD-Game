@@ -57,7 +57,16 @@ namespace Ascend.Core
     }
     public sealed class DodgeTuning { public double DurationSec { get; set; } public double IframeSec { get; set; } public double Distance { get; set; } public double StaminaCost { get; set; } public int MaxChain { get; set; } public double PerfectDodgeWindowSec { get; set; } }
     public sealed class FlashTimeTuning { public double TimeScale { get; set; } public double DurationSec { get; set; } }
-    public sealed class ParryTuning { public double ParryWindowSec { get; set; } public double BlockDamageReduction { get; set; } public double RiposteHitstopSec { get; set; } }
+    public sealed class ParryTuning
+    {
+        public double ParryWindowSec { get; set; }
+        public double BlockDamageReduction { get; set; }
+        public double RiposteHitstopSec { get; set; }
+        /// <summary>Stamina a blocked hit drains (combat.md §5: block drains stamina). Parries and dodges cost none here.</summary>
+        public double BlockStaminaPerHit { get; set; }
+        /// <summary>Stamina drained per second while block is held (0 = holding is free).</summary>
+        public double BlockStaminaPerSec { get; set; }
+    }
     public sealed class ComboTuning
     {
         public int BudgetPerString { get; set; }
