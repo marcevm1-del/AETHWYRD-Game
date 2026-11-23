@@ -58,7 +58,7 @@
   "type": "Defense",
   "trope": "Rookie guard duty",
   "giver": "npc_guard_tomlin",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Tomlin needs someone awake on the north gate while he \"rests his eyes.\"",
   "objectives": [
    {
@@ -92,7 +92,7 @@
   "type": "OddJob",
   "trope": "Formal ceremony, nervous rookie",
   "giver": "npc_sister_pell",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Two farmers settling a fence dispute need an adventurer to witness their oath at Solenne's shrine.",
   "objectives": [
    {
@@ -132,7 +132,7 @@
   "type": "Escort",
   "trope": "Merchant escort, bandit ambush",
   "giver": "npc_traveling_merchant_pell",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Pell's cart leaves for Millbrook at first light and he swears this road is cursed.",
   "objectives": [
    {
@@ -169,7 +169,7 @@
   "type": "Investigation",
   "trope": "Ominous fortune that comes true (sort of)",
   "giver": "npc_eolande_fairweather",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Eolande reads your week in tea leaves: \"a crow will steal what you love.\" Then something actually goes missing.",
   "objectives": [
    {
@@ -251,7 +251,7 @@
   "type": "OddJob",
   "trope": "Find the lost cat",
   "giver": "npc_marta_gruel",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Whiskers is missing. Again. Marta insists he's \"never been gone this long\" (he has).",
   "objectives": [
    {
@@ -287,7 +287,7 @@
   "type": "Investigation",
   "trope": "Kids' ghost story turns real",
   "giver": "npc_tamsin_orphan",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Tamsin says something taps on the window every Maelsday night. Brother Caspian says it's the wind.",
   "objectives": [
    {
@@ -324,7 +324,7 @@
   "type": "OddJob",
   "trope": "Crafting minigame with a grumpy master",
   "giver": "npc_brannoc_emberfist",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brannoc has a rush order of guild swords and one apprentice who fainted. Pump the bellows, hit the beat, don't burn your eyebrows.",
   "objectives": [
    {
@@ -398,7 +398,7 @@
   "type": "Delivery",
   "trope": "Timed delivery across town",
   "giver": "npc_hugo_brand",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Six loaves, six doors, before they go cold. Hugo is timing you.",
   "objectives": [
    {
@@ -517,7 +517,7 @@
   "type": "Subjugation",
   "trope": "The classic F-rank slime quest",
   "giver": "npc_farmer_odo",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Slimes are back in Odo's cabbages. They always come back.",
   "objectives": [
    {
@@ -551,7 +551,7 @@
   "type": "OddJob",
   "trope": "Farm chores between fights",
   "giver": "npc_farmer_hesk",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Horned rabbits punched holes in Hesk's turnip fence. Mend it before they come back.",
   "objectives": [
    {
@@ -691,7 +691,7 @@
   "type": "Class",
   "trope": "Training montage with the old master",
   "giver": "npc_old_hollis",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Hollis wants a dozen clean parries before breakfast. He will not say \"good job.\" He might nod.",
   "objectives": [
    {
@@ -722,7 +722,7 @@
   "type": "Defense",
   "trope": "Training nervous villagers",
   "giver": "npc_captain_holt",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Captain Holt wants the town militia ready for the next raid. They are farmers holding spears backwards.",
   "objectives": [
    {
@@ -758,7 +758,7 @@
   "type": "OddJob",
   "trope": "Tavern strength contest",
   "giver": "npc_brutus_kale",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brutus challenges anyone to arm-wrestle. Losers pay for drinks; nobody has won in a month.",
   "objectives": [
    {
@@ -790,7 +790,7 @@
   "type": "Divine",
   "trope": "Quiet night at the graveyard, ghosts with unfinished business",
   "giver": "npc_widow_aster",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Every Morrowsday the town lights lanterns for the dead. Some of the dead come to look.",
   "objectives": [
    {
@@ -832,7 +832,7 @@
   "type": "OddJob",
   "trope": "Adventurer vs. small children",
   "giver": "npc_brother_caspian",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brother Caspian needs the afternoon off. The orphans need supervising. You will lose.",
   "objectives": [
    {
@@ -872,7 +872,7 @@
   "type": "Companion",
   "trope": "Cozy campfire meal with the party",
   "giver": "npc_lyra_brightwood",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "No contracts tonight. Lyra wants everyone to cook together, which is a terrible idea.",
   "objectives": [
    {
@@ -908,7 +908,7 @@
   "type": "OddJob",
   "trope": "Humble chore, hidden lore",
   "giver": "npc_sister_pell",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Sweep leaves, wipe names, set flowers. Old gravestones tell old stories.",
   "objectives": [
    {
@@ -945,7 +945,7 @@
   "type": "OddJob",
   "trope": "Market-stall part-time job",
   "giver": "npc_gilda_marsh",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Gilda's assistant quit on market day. Run the stall, haggle, and catch the pickpocket working the crowd.",
   "objectives": [
    {
@@ -985,7 +985,7 @@
   "type": "Hidden",
   "trope": "Gambling with a suspicious lucky stranger",
   "giver": "npc_traveling_merchant_pell",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "A hooded stranger at the Sleeping Griffon plays dice and never seems to lose. Pell wants his money back.",
   "objectives": [
    {
@@ -1016,7 +1016,7 @@
   "type": "OddJob",
   "trope": "Street performance rhythm game",
   "giver": "npc_fiddler_corwin",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Corwin needs a second performer for the market crowd. Can you sing? Doesn't matter.",
   "objectives": [
    {
@@ -1047,7 +1047,7 @@
   "type": "OddJob",
   "trope": "Fishing contest, legendary fish",
   "giver": "npc_old_sal",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Biggest fish by noon wins Sal's lucky hook. Sal has been talking about \"Old Gnasher\" for forty years.",
   "objectives": [
    {
@@ -1149,7 +1149,7 @@
   "type": "Subjugation",
   "trope": "The sewer job nobody wants",
   "giver": "npc_guild_clerk_wendel",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Giant ants have nested in the old drains. The smell is included free.",
   "objectives": [
    {
@@ -1254,7 +1254,7 @@
   "type": "OddJob",
   "trope": "Part-time job at the inn",
   "giver": "npc_marta_gruel",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Payday crowd, one cook, zero patience. Marta hands you an apron: take orders, carry stew, stop the brawl before it starts.",
   "objectives": [
    {
@@ -1288,7 +1288,7 @@
   "type": "Faction",
   "trope": "Weekly guild point target",
   "giver": "npc_rodrick_hale",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Rodrick posts a weekly goal: finish any 7 board quests before the week ends. Meet it and the guild remembers.",
   "objectives": [
    {
@@ -1366,7 +1366,7 @@
   "type": "OddJob",
   "trope": "Rookies need real steel",
   "giver": "npc_torvald_stonebeard",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Torvald takes an order for guild-issue replacements. Forge him two scrap blade parts and he will fit them to the stock.",
   "objectives": [
    {
@@ -1399,7 +1399,7 @@
   "type": "OddJob",
   "trope": "Dream-journal season",
   "giver": "npc_ines_valbuena",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Everyone wants to write their dream down on Maelsday and nobody has ink. Ines needs one pot of inkwell dye from her loom before noon.",
   "objectives": [
    {
@@ -1432,7 +1432,7 @@
   "type": "OddJob",
   "trope": "The anvil never stops",
   "giver": "npc_brannoc_emberfist",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brannoc's forge is behind on hearth tools. Bring him a Fangblade and a Carapace Cap sample for the apprentice wall to copy.",
   "objectives": [
    {
@@ -1503,7 +1503,7 @@
   "type": "OddJob",
   "trope": "Banner day, hungry militia",
   "giver": "npc_old_hollis",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Hollis's students forget to eat. Bring two hearth skewers from a campfire and watch the yard go quiet.",
   "objectives": [
    {
@@ -1536,7 +1536,7 @@
   "type": "OddJob",
   "trope": "Quiet cooking for others",
   "giver": "npc_brother_caspian",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brother Caspian lights the Small Lantern at dusk and the children expect bread. Bake a hearth loaf at the Griffon and bring it up the hill.",
   "objectives": [
    {
@@ -1573,7 +1573,7 @@
   "type": "Hidden",
   "trope": "Market day wagers",
   "giver": "npc_marta_gruel",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Marta bets Gilda a gold piece that the Griffon's hearth stew beats anything from her shelf. Cook the stew and carry the proof across the square.",
   "objectives": [
    {

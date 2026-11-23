@@ -5,7 +5,7 @@
   "rank": "F",
   "type": "Subjugation",
   "giver": "npc_mina_feathersby",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Horned rabbits ate a farmer's carrots. One of them is enormous.",
   "requirements": {
    "minLevel": 1,
@@ -36,7 +36,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_farmer_odo",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Blue slimes have moved into Millbrook's well. Gently remove them, or don't be gentle.",
   "requirements": {
    "minLevel": 1
@@ -110,7 +110,7 @@
   "rank": "C",
   "type": "Bounty",
   "giver": "npc_mina_feathersby",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Livestock vanish under the full moon. Witnesses describe a wolf of silver light.",
   "requirements": {
    "minLevel": 61,
@@ -181,7 +181,7 @@
   "rank": "F",
   "type": "Main",
   "giver": "npc_mina_feathersby",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Register at the Guild. The appraisal crystal flickers strangely, and Mina covers for it.",
   "requirements": {
    "minLevel": 1
@@ -219,7 +219,7 @@
   "rank": "F",
   "type": "Main",
   "giver": "npc_marta_gruel",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Marta feeds you on credit. Brother Caspian arrives with the orphans and offers you a blanket and a place to sleep.",
   "objectives": [
    {
@@ -315,7 +315,7 @@
   "rank": "F",
   "type": "Class",
   "giver": "npc_old_hollis",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Swing at the training post at dawn for seven days, then beat Hollis. He uses a broom.",
   "requirements": {
    "minLevel": 5
@@ -347,7 +347,7 @@
   "rank": "E",
   "type": "Hidden",
   "giver": "npc_brutus_kale",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brutus mocks your wooden card one time too many. One punch later, the whole tavern learns what you really are.",
   "requirements": {
    "minLevel": 10
@@ -369,7 +369,7 @@
   "rank": "E",
   "type": "Defense",
   "giver": "npc_farmer_hesk",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Goblins raid Hesk's granary every night. One of them is a starving child sent to scout.",
   "requirements": {
    "minLevel": 9
@@ -401,7 +401,7 @@
   "rank": "E",
   "type": "Investigation",
   "giver": "npc_farmer_odo",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "The scarecrow in Odo's east field is in a different field every morning. Watch it at night. Don't look away.",
   "requirements": {
    "minLevel": 10
@@ -544,7 +544,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_torvald_stonebeard",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Torvald is tired of watching rookies buy bent guild-issue swords. He will teach you the Fangblade pattern for forty copper if you forge one at his anvil and hang it on the guild wall as an example.",
   "requirements": {
    "minLevel": 4
@@ -583,7 +583,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_guard_tomlin",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Tomlin's helmet leaks rain down his neck, which is half the reason he naps on watch. Cure a leather cap in Wren's drying shed, then let Captain Holt see he is dressed for duty.",
   "requirements": {
    "minLevel": 2
@@ -620,7 +620,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_sister_pell",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Solenne's shrine clinic is out of salve after the goblin season. Fennick will show you the alembic; Sister Pell needs three minor potions on the shelf before the next patrol comes home.",
   "requirements": {
    "minLevel": 3
@@ -657,7 +657,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_marta_gruel",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Brother Caspian's orphans have had thin soup all week. Marta lends you the Sleeping Griffon hearth: cook three Hearth Stews, the one dish that comes out right there, and carry them up to the orphanage.",
   "requirements": {
    "minLevel": 3
@@ -697,7 +697,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_ines_valbuena",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Ines needs a silk hood and a pot of inkwell dye for a commission, and her hands are full of pins. Make both at her loom and bring them back.",
   "requirements": {
    "minLevel": 3
@@ -735,7 +735,7 @@
   "rank": "F",
   "type": "OddJob",
   "giver": "npc_torvald_stonebeard",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Torvald lets you onto the rune anvil. Strike an ember rune and a stone rune, the oldest pair in Khazdur lore, and he will tell you why dwarves still hum while they work.",
   "requirements": {
    "minLevel": 6
@@ -776,7 +776,7 @@
   "rank": "E",
   "type": "OddJob",
   "giver": "npc_eolande_fairweather",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "After the mural sketch, Eolande wants the library's oldest shelf warded against damp and mice. Inscribe a Wardweave scroll at the enchanting table and she will teach you how it is meant to be read.",
   "requirements": {
    "minLevel": 9
@@ -1059,7 +1059,7 @@
   "rank": "F",
   "type": "Companion",
   "giver": "npc_lyra_brightwood",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "Lyra has lost to her childhood rival eleven times and tells you it is fine, loudly. Watch her at Old Hollis's yard at dawn, spar three mornings, and notice what she does when she is about to lose. Then decide how to help: show her a stance of yours, ask her to try three of her own, or just swing beside her until something sticks. There is no wrong answer, and she will remember which one you picked.",
   "requirements": {
    "minLevel": 5,
@@ -1106,7 +1106,7 @@
   "rank": "F",
   "type": "Companion",
   "giver": "npc_torvald_stonebeard",
-  "region": "reg_aldmere",
+  "region": "reg_whisperwood",
   "summary": "One sword blank hangs unfinished above Torvald's forge, and he changes the subject whenever you look at it. He will not say why, but he will let you gather the iron and scrap to bring the old forge back to heat. Do that, then choose: ask about the blank, or leave it be until he speaks. He sings the forge songs either way.",
   "requirements": {
    "minLevel": 6,

@@ -38,6 +38,8 @@ No quest touches road_04/05/06/12 or any steep settlement. Giver and target sett
 ## Mismatch to note (not a typo, not fixed)
 Map and regions.json put Brindlewick and Millbrook in `reg_whisperwood`, but 31 of 53 quests (giver in those towns, region `reg_aldmere`) file them under Aldmere. This is the open Canon row "Brindlewick's region" / W7a(iii).
 
+**Resolved 2026-11-23:** Canon §6 (decided 2026-11-07) keeps Brindlewick and Millbrook in `reg_whisperwood`; the quest, weekly-board and NPC `reg_aldmere` rows for those towns were re-filed under `reg_whisperwood`.
+
 ## Affected by pending proposals (Canon §6, "2026-11-02 world upgrade")
 - W2b (Karak Dûn to Oathdeep), road_04/05, Karak Dûn Pass: 0 quests. No quest text or doc in 11_Quests_Encounters mentions Karak.
 - W7c (21 steep settlements, nudge/terrace) and W7b (lake cells): 0 quests; Brindlewick and Millbrook are not on the list.
