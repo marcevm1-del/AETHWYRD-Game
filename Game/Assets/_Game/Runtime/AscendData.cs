@@ -86,6 +86,9 @@ namespace Ascend.Game
 
         public static GameDatabase Load()
         {
+            var reactions = ReadOpt<ReactionFile>("Combat/reactions.json");
+            if (reactions == null || reactions.Reactions == null || reactions.Reactions.Count == 0)
+                Debug.LogWarning("Ascend data file Combat/reactions.json missing or empty: falling back to the built-in ReactionTable.Default.");
             var items = Read<List<ItemData>>("Items/materials.json").Concat(Read<List<ItemData>>("Items/items.json"));
             return new GameDatabase(
                 Read<List<RegionData>>("World/regions.json"),
@@ -109,6 +112,7 @@ namespace Ascend.Game
                 Read<GuildRankData>("World/guild_ranks.json"),
                 Read<GatheringFile>("World/gathering.json"),
                 Read<BossFile>("Monsters/boss_phases.json"),
+                reactions: reactions,
                 quality: ReadOpt<QualityRules>("Items/crafting_rules.json"),
                 lifeSkills: ReadOpt<LifeSkillFile>("Items/life_skills.json"),
                 dungeons: ReadOpt<List<DungeonData>>("World/dungeons.json"),
