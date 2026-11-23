@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_front/side/back.jpg`).*
 
-> [!note] 3D model: hand-built Ring 0 model, or not exported yet.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.917 × 0.498 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_goblin.fbx`
 
 > The Goblin is a small creature with a hunched, wiry humanoid frame, about 1 m tall. Its skin is rough, scarred and spiked, colored in moss green and leather brown. Guild sketches always show a grin of needle teeth under a stolen tin helmet. It has burning slit pupils. It has no ornament at all: simple, readable shapes. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 

@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_phantom_wild_boar_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_wild_boar_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,942 tris · 0.54 × 1.4 × 1.218 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,998 tris · 0.49 × 1.4 × 0.776 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_phantom_wild_boar.fbx`
 
 > The Phantom Wild Boar is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its coat is rough, scarred and spiked, colored in warm brown, with gold markings. Look for curved tusks and a ridge of bristles like iron wire. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_basilisk_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_basilisk_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,188 tris · 0.823 × 4 × 2.269 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.204 × 4 × 0.961 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_basilisk.fbx`
 
 > The Basilisk is a large creature with a powerful four-legged hunter's body, about 4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in teal-grey, with ochre markings. Its most striking feature is a crown of horns and eyes that petrify. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it.
 

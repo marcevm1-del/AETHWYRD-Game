@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_vesper_touched_ghost_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_ghost_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,990 tris · 1.033 × 1.278 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.332 × 1.302 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_vesper_touched_ghost.fbx`
 
 > The Vesper-Touched Ghost is a person-sized creature with a bodiless, glowing form, about 1.7 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with violet markings. Guild sketches always show a translucent figure frozen in its last moment. It has pale, pupil-less eyes. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

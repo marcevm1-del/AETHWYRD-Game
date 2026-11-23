@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_phantom_harpy_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_harpy_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,878 tris · 1.075 × 1.424 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.789 × 1.952 × 1.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_phantom_harpy.fbx`
 
 > The Phantom Harpy is a person-sized creature with a feathered avian body, about 1.6 m tall. Its plumage is patchy and subtly wrong, as if assembled from memory, colored in crow-black, with gold markings. Its most striking feature is a bird body with a shrieking human-like face. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

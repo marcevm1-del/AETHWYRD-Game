@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_crag_djinn_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_crag_djinn_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,430 tris · 3.698 × 2.896 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.048 × 3.361 × 4.001 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_crag_djinn.fbx`
 
 > The Crag Djinn is a large creature with a floating, cloth-like shape, about 4 m tall. Its body is rough, scarred and spiked, colored in ochre, clay and mossy stone. Its most striking feature is a cloud body with lightning tattoos. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 

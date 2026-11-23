@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_greater_poison_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_poison_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,134 tris · 1.02 × 1.02 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.125 × 1.08 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_greater_poison_slime.fbx`
 
 > The Greater Poison Slime is a small creature with a wobbling mound of translucent gel, about 1 m tall. Its gel is rough, scarred and spiked, colored in bruise purple with sickly green. Survivors describe purple bubbles that hiss when they pop. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

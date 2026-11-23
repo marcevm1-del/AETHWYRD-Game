@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_vesper_touched_wraith_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_wraith_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,822 tris · 1.711 × 1.914 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.737 × 1.667 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_vesper_touched_wraith.fbx`
 
 > The Vesper-Touched Wraith is a person-sized creature with a bodiless, glowing form, about 2 m tall. Its flesh and bone are stretched, stitched and constantly shifting, colored in grave-mould grey-green, with violet markings. Guild sketches always show a hooded shape of smoke with cold blue eyes. It has too many eyes, opening one after another. Battle-worn plates and trophies hang from its body. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

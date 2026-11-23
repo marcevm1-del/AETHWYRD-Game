@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_fenrir_blooded_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_fenrir_blooded_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,840 tris · 2.121 × 3.491 × 3.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,994 tris · 2.179 × 3.37 × 3.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_fenrir_blooded_lord.fbx`
 
 > The Fenrir-Blooded Lord is a large creature with a lean humanoid frame, about 3.6 m tall. Its fur is rough, scarred and spiked, colored in black-brown, with frost-blue markings. Its most striking feature is a crown of frost spikes growing from its mane. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 

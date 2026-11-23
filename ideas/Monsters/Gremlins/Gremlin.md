@@ -11,7 +11,7 @@ tags: [monster, gremlins]
 ![[mon_gremlin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_gremlin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,518 tris · 0.297 × 0.339 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.323 × 0.516 × 0.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Gremlins/mon_gremlin.fbx`
 
 > The Gremlin is a small creature with a scrawny biped with long arms and bowed legs, about 0.6 m tall. Its skin is weathered and natural, colored in lime-green, with electric-yellow markings. Its most striking feature is bat ears, a wrench and a laugh like a squeaky hinge. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by crackling arcs that jump across its body.
 

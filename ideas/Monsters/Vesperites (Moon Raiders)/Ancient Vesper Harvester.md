@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders]
 ![[mon_ancient_vesper_harvester_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_vesper_harvester_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,606 tris · 5.905 × 8.364 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 7.833 × 9.277 × 9 m · local file `Game/Assets/_Game/Art/Models/Monsters/Vesperites (Moon Raiders)/mon_ancient_vesper_harvester.fbx`
 
 > The Ancient Vesper Harvester is a huge creature with a drifting, half-formed body, about 9 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in dusk violet, with crimson markings. Survivors describe a lantern cage that holds stolen souls. It has no eyes at all, only a wide and patient mouth. The air distorts slightly around its outline. It unfolds into something larger, surrounded by a faint red mist that smells of iron. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

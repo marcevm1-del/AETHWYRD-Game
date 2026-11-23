@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_vampire_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vampire_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,852 tris · 0.976 × 1.221 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.61 × 0.693 × 1.801 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_vampire.fbx`
 
 > The Vampire is a person-sized creature with a lean humanoid frame, about 1.8 m tall. Its flesh and bone are rough, scarred and spiked, colored in grave-mould grey-green, with crimson markings. Guild sketches always show aristocratic clothes and eyes like garnets. It has narrow glowing eyes. Faint runes glow along its body when it fights. It circles its prey, surrounded by a faint red mist that smells of iron.
 

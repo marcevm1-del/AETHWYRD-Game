@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_bog_piranha_swarm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bog_piranha_swarm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,334 tris · 0.232 × 0.2 × 0.221 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.233 × 0.2 × 0.175 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_bog_piranha_swarm.fbx`
 
 > The Bog Piranha Swarm is a tiny creature with a living carpet of small bodies, each one is about 0.2 m long, but the swarm covers several meters. Its scales and skin are rough, scarred and spiked, colored in sea-blue, with sickly green markings. Guild sketches always show silver flashes and red teeth. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It strides with heavy steps, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 

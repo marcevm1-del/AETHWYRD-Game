@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_owlbear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_owlbear_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,862 tris · 1.003 × 2.6 × 2.262 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,998 tris · 1.093 × 2.6 × 1.739 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_owlbear.fbx`
 
 > The Owlbear is a large creature with a long-legged predatory quadruped build, about 2.6 m long. Its coat is rough, scarred and spiked, colored in warm brown. Survivors describe an owl's feathered face on a bear's muscled body. It has burning slit pupils. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 

@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_zephyros_the_endless_sky_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_zephyros_the_endless_sky_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,708 tris · 87.725 × 90 × 54.961 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 144.008 × 90 × 64.211 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_zephyros_the_endless_sky.fbx`
 
 > The Zephyros, the Endless Sky is a colossal creature with a vast quadruped dragon frame with cathedral wings, about 90 m long. Its scales are weathered and natural, colored in sapphire, with pale jade markings. Guild sketches always show a body made half of clouds. It has dark, wary eyes. Its presence is world-scale; the sky changes color when it appears. It stalks low to the ground, surrounded by swirling leaves and a constant breeze.
 

@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_night_silver_fenrir_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_night_silver_fenrir_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,308 tris · 2.314 × 6 × 5.219 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,998 tris · 1.761 × 6 × 3.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_night_silver_fenrir.fbx`
 
 > The Night Silver Fenrir is a huge creature with a heavy, muscular quadruped frame, about 6 m long. Its coat is weathered and natural, colored in warm brown, with violet markings. Guild sketches always show silver fur that glows like moonlight. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

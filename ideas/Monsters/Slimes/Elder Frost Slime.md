@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_elder_frost_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_frost_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,592 tris · 0.851 × 0.851 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.838 × 0.857 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_elder_frost_slime.fbx`
 
 > The Elder Frost Slime is a small creature with a wobbling mound of translucent gel, about 0.8 m tall. Its gel is weathered and natural, colored in pale blues and frost-white. Guild sketches always show frost crystals growing from its crown. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It lopes in long strides, surrounded by falling snow motes and frosted ground where it steps. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

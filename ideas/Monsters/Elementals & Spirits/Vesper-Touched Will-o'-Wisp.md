@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_vesper_touched_will_o_wisp_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_will_o_wisp_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,822 tris · 0.257 × 0.288 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.241 × 0.257 × 0.3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_vesper_touched_will_o_wisp.fbx`
 
 > The Vesper-Touched Will-o'-Wisp is a tiny creature with a bodiless, glowing form, about 0.3 m tall. Its body is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Its most striking feature is a pale flame that leads travelers into bogs. It has too many eyes, opening one after another. A distinctive marking runs along its back. It copies the walk of whatever it hunts, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

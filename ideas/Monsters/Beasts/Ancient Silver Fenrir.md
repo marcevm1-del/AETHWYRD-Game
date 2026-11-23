@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_ancient_silver_fenrir_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_silver_fenrir_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,784 tris · 2.07 × 9 × 4.041 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 2.958 × 9 × 5.596 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_ancient_silver_fenrir.fbx`
 
 > The Ancient Silver Fenrir is a huge creature with a powerful four-legged hunter's body, about 9 m long. Its coat is weathered and natural, colored in warm brown, with gold markings. Guild sketches always show silver fur that glows like moonlight. It has alert animal eyes. The air distorts slightly around its outline. It lopes in long strides, surrounded by soft radiance and floating motes of light. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

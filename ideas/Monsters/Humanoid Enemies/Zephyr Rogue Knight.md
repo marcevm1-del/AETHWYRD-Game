@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_zephyr_rogue_knight_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_zephyr_rogue_knight_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,840 tris · 1.178 × 1.939 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.061 × 1.599 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Humanoid Enemies/mon_zephyr_rogue_knight.fbx`
 
 > The Zephyr Rogue Knight is a person-sized creature with a lean humanoid frame, about 2 m tall. Its clothing and gear are rough, scarred and spiked, colored in leather browns and dull steel, with pale jade markings. Its most striking feature is a broken oath engraved on its blade. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

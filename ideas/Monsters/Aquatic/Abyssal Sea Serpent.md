@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_abyssal_sea_serpent_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_abyssal_sea_serpent_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,976 tris · 4.55 × 20 × 8.407 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 7.258 × 20 × 10.781 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_abyssal_sea_serpent.fbx`
 
 > The Abyssal Sea Serpent is a colossal creature with a massive snake-like frame, about 20 m long. Its scales and skin are rough, scarred and spiked, colored in silver, with sea-blue markings. Guild sketches always show a long fin running down its spine. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by fine mist and droplets that orbit it. Adapted to sea lands, it has deep-water coloring and glowing lures.
 

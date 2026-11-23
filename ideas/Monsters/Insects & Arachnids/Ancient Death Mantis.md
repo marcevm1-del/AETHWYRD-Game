@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_ancient_death_mantis_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_death_mantis_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,486 tris · 2.656 × 4.5 × 3.28 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,996 tris · 4.079 × 4.5 × 2.297 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_ancient_death_mantis.fbx`
 
 > The Ancient Death Mantis is a large creature with a low, wide insectoid build, about 4.5 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in blue-black, with violet markings. Guild sketches always show black chitin and a skull-like head. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

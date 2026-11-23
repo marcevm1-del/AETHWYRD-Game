@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_frost_giant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_frost_giant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,534 tris · 7.73 × 5.108 × 9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 9.017 × 4.638 × 9.001 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_frost_giant.fbx`
 
 > The Frost Giant is a huge creature with a massive hunched brute frame, about 9 m tall. Its hide is rough, scarred and spiked, colored in stone-grey, with frost-blue markings. Survivors describe a beard of icicles and armor of glacier ice. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 

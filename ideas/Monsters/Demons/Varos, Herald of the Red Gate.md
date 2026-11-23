@@ -11,7 +11,7 @@ tags: [monster, demons, tyrant, unique]
 ![[mon_varos_herald_of_the_red_gate_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_varos_herald_of_the_red_gate_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,142 tris · 1.152 × 1.226 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.523 × 2.205 × 3.001 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_varos_herald_of_the_red_gate.fbx`
 
 > The Varos, Herald of the Red Gate is a large creature with a lean humanoid frame, about 3 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in brimstone red, with violet-edged markings. Guild sketches always show a demon who steps out of every Gate that opens in Haneul's towns. It has pale, pupil-less eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
 

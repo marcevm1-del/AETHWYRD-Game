@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_vesper_touched_werebear_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_werebear_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,204 tris · 1.152 × 2.118 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.388 × 1.193 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_vesper_touched_werebear.fbx`
 
 > The Vesper-Touched Werebear is a large creature with a lean humanoid frame, about 3 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with ochre markings. Look for tribal tattoos showing through thick bear fur. It has pale, pupil-less eyes. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

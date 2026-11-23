@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_crag_salamander_spirit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_crag_salamander_spirit_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,582 tris · 0.266 × 1 × 0.424 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.342 × 1 × 0.501 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_crag_salamander_spirit.fbx`
 
 > The Crag Salamander Spirit is a small creature with a coiling, legless body, about 1 m long. Its body is weathered and natural, colored in ochre, clay and mossy stone. Guild sketches always show a lizard of living flame. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 

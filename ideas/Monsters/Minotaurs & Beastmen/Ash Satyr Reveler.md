@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_ash_satyr_reveler_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ash_satyr_reveler_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,742 tris · 0.921 × 0.914 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.887 × 1.283 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_ash_satyr_reveler.fbx`
 
 > The Ash Satyr Reveler is a person-sized creature with an upright humanoid build, about 1.7 m tall. Its hide is weathered and natural, colored in charcoal, with ember-orange markings. Survivors describe goat legs and a panpipe that makes you dance. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

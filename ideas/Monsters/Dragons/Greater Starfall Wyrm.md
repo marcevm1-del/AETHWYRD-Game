@@ -11,7 +11,7 @@ tags: [monster, dragons, unique]
 ![[mon_greater_starfall_wyrm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_starfall_wyrm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,240 tris · 93.574 × 96 × 58.625 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 153.57 × 95.995 × 68.48 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_greater_starfall_wyrm.fbx`
 
 > The Greater Starfall Wyrm is a colossal creature with an ancient, serpentine dragon body, about 96 m long. Its scales are rough, scarred and spiked, colored in emerald, with gold markings. Look for scales flecked with fallen starmetal that glitter like a night sky. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It charges without hesitation, surrounded by soft radiance and floating motes of light. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

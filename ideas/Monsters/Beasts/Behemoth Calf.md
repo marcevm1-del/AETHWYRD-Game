@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_behemoth_calf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_behemoth_calf_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,580 tris · 1.356 × 4 × 2.686 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.823 × 4.001 × 2.897 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_behemoth_calf.fbx`
 
 > The Behemoth Calf is a large creature with a powerful four-legged hunter's body, about 4 m long. Its coat is weathered and natural, colored in warm brown, with ochre markings. Its most striking feature is a stone-plated back and stump-like legs. It has dark, wary eyes. Faint runes glow along its body when it fights. It lopes in long strides, surrounded by pebbles that tremble and float near it.
 

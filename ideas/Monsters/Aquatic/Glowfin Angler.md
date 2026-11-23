@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_glowfin_angler_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_glowfin_angler_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,366 tris · 1.252 × 3 × 2.156 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 0.948 × 3 × 1.324 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_glowfin_angler.fbx`
 
 > The Glowfin Angler is a large creature with a streamlined aquatic body, about 3 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with violet markings. Survivors describe a lure of light dangling over a mouth of glass teeth. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

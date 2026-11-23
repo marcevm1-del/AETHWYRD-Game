@@ -11,7 +11,7 @@ tags: [monster, goblinoids, tyrant, unique]
 ![[mon_grukk_goblin_chief_of_hollowpine_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_grukk_goblin_chief_of_hollowpine_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,120 tris · 1.301 × 0.902 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,986 tris · 1.371 × 1.159 × 2.4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_grukk_goblin_chief_of_hollowpine.fbx`
 
 > The Grukk, Goblin Chief of Hollowpine is a person-sized creature with a lean humanoid frame, about 2.4 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather, with ember-orange markings. Its most striking feature is cult runes carved into its red-eyed hide and a cleaver named Hungry. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

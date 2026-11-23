@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_vesper_touched_cockatrice_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_cockatrice_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,782 tris · 0.756 × 0.896 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.38 × 1.025 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_vesper_touched_cockatrice.fbx`
 
 > The Vesper-Touched Cockatrice is a small creature with a tall, long-legged bird build, about 0.8 m tall. Its plumage is rough, scarred and spiked, colored in blue, with ochre markings. Its most striking feature is a rooster's head and a lizard's tail. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

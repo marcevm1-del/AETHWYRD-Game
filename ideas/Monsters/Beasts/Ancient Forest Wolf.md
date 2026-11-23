@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_ancient_forest_wolf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_forest_wolf_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,824 tris · 0.694 × 1.8 × 1.566 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,992 tris · 0.513 × 1.8 × 1.093 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_ancient_forest_wolf.fbx`
 
 > The Ancient Forest Wolf is a person-sized creature with a powerful four-legged hunter's body, about 1.8 m long. Its coat is weathered and natural, colored in dark brown. Its most striking feature is a grey-green coat that blends with ferns. It has dark, wary eyes. Small scars and rough edges mark it as a survivor. It prowls. It has no visible aura; you hear its breathing before you see it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

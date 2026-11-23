@@ -11,7 +11,7 @@ tags: [monster, shadows]
 ![[mon_shade_knight_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_shade_knight_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,146 tris · 1.355 × 1.714 × 2.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.162 × 1.091 × 2.301 m · local file `Game/Assets/_Game/Art/Models/Monsters/Shadows/mon_shade_knight.fbx`
 
 > The Shade Knight is a person-sized creature with an upright humanoid build, about 2.3 m tall. Its smoke-like body is rough, scarred and spiked, colored in storm-grey, with violet markings. Guild sketches always show armor with nothing but darkness inside. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It strides with heavy steps, surrounded by shadows that lean toward it.
 

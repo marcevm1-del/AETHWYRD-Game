@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_vesper_touched_scarab_swarm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_scarab_swarm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,128 tris · 0.056 × 0.05 × 0.054 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.056 × 0.05 × 0.046 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_vesper_touched_scarab_swarm.fbx`
 
 > The Vesper-Touched Scarab Swarm is a tiny creature with a cloud of tiny creatures, each one is about 0.05 m long, but the swarm covers several meters. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in iridescent green, with violet markings. Its most striking feature is golden beetles that flow like spilled coins. It has eyes that never blink. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

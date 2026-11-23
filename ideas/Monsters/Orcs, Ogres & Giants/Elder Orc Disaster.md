@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_elder_orc_disaster_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_orc_disaster_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,182 tris · 5.497 × 3.379 × 6.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 8.54 × 4.184 × 6.401 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_elder_orc_disaster.fbx`
 
 > The Elder Orc Disaster is a huge creature with a massive hunched brute frame, about 6.4 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Guild sketches always show a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. The air distorts slightly around its outline. It charges without hesitation, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

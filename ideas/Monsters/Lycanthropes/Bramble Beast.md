@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_bramble_beast_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bramble_beast_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,448 tris · 1.075 × 0.596 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.692 × 2.35 × 2.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_bramble_beast.fbx`
 
 > The Bramble Beast is a large creature with a lean humanoid frame, about 2.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in black-brown, with leaf-green markings. Survivors describe fur that ripples like oil under moonlight. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It freezes whenever it is looked at, surrounded by drifting pollen and tiny blossoms. This Nature-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

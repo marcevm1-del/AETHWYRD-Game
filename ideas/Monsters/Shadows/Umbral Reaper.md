@@ -11,7 +11,7 @@ tags: [monster, shadows]
 ![[mon_umbral_reaper_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_umbral_reaper_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,394 tris · 1.822 × 2.037 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.875 × 1.897 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Shadows/mon_umbral_reaper.fbx`
 
 > The Umbral Reaper is a large creature with a drifting, half-formed body, about 3 m tall. Its smoke-like body is patchy and subtly wrong, as if assembled from memory, colored in smoky violet. Look for a scythe of night and a hood with no face. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

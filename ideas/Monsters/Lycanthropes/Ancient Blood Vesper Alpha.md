@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_ancient_blood_vesper_alpha_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_blood_vesper_alpha_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,806 tris · 1.843 × 2.577 × 4.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,994 tris · 3.24 × 4.12 × 4.799 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_ancient_blood_vesper_alpha.fbx`
 
 > The Ancient Blood Vesper Alpha is a large creature with a broad-shouldered humanoid build, about 4.8 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in wolf-grey, with crimson markings. Guild sketches always show red-veined fur that only appears under the red moon. It has eyes that never blink. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by a faint red mist that smells of iron. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

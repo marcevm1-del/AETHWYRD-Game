@@ -11,7 +11,7 @@ tags: [monster, serpentfolk]
 ![[mon_vine_lamia_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vine_lamia_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (5,558 tris · 1.423 × 3.5 × 1.823 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.487 × 3.5 × 4.515 m · local file `Game/Assets/_Game/Art/Models/Monsters/Serpentfolk/mon_vine_lamia.fbx`
 
 > The Vine Lamia is a large creature with an elegant serpentfolk build, about 3.5 m long. Its scales are rough, scarred and spiked, colored in green. Guild sketches always show a coiling tail and hypnotic golden eyes. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by drifting pollen and tiny blossoms. Adapted to jungle lands, it has vivid tropical markings.
 

@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics, tyrant, unique]
 ![[mon_the_tithe_colossus_hunger_of_the_foundation_stones_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_tithe_colossus_hunger_of_the_foundation_stones_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (406 tris · 6.935 × 4.602 × 7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 6.797 × 3.072 × 7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_the_tithe_colossus_hunger_of_the_foundation_stones.fbx`
 
 > The The Tithe Colossus, Hunger of the Foundation Stones is a huge creature with a heavy, hand-built humanoid shell, about 7 m tall. Its surface is rough, scarred and spiked, colored in riveted iron, with gold markings. Look for a Foundation Stone that woke up hungry for the nobles' mana. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by soft radiance and floating motes of light.
 

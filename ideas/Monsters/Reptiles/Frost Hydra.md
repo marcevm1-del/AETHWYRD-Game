@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_frost_hydra_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_frost_hydra_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,948 tris · 2.047 × 9 × 3.703 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 3.42 × 9 × 4.849 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_frost_hydra.fbx`
 
 > The Frost Hydra is a huge creature with a long, sinuous serpentine body, about 9 m long. Its scales are rough, scarred and spiked, colored in teal-grey, with frost-blue markings. Guild sketches always show five heads on long necks, each with its own temper. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

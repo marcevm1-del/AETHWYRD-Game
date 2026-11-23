@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_gorgon_wyrm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_gorgon_wyrm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (4,056 tris · 2.85 × 14 × 7.434 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 4.93 × 14 × 7.318 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_gorgon_wyrm.fbx`
 
 > The Gorgon Wyrm is a huge creature with a coiling, legless body, about 14 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in teal-grey, with ochre markings. Its most striking feature is a stone-crusted body that leaves statues in its wake. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It glides without moving its legs, surrounded by pebbles that tremble and float near it.
 

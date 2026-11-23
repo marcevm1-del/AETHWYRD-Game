@@ -11,7 +11,7 @@ tags: [monster, demons, unique]
 ![[mon_ancient_abyss_prince_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_abyss_prince_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,788 tris · 3.252 × 3.494 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,998 tris · 8.146 × 5.167 × 6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_ancient_abyss_prince.fbx`
 
 > The Ancient Abyss Prince is a huge creature with an upright humanoid build, about 6 m tall. Its hide is rough, scarred and spiked, colored in char-black, with violet-edged markings. Its most striking feature is a crown of black flame and wings of torn night. It has narrow glowing eyes. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by warped air, as if space bends around it. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

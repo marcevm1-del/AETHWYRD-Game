@@ -11,7 +11,7 @@ tags: [monster, humanoid-enemies]
 ![[mon_slaver_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_slaver_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,850 tris · 1.03 × 1.695 × 1.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.006 × 0.879 × 1.9 m · local file `Game/Assets/_Game/Art/Models/Monsters/Humanoid Enemies/mon_slaver.fbx`
 
 > The Slaver is a person-sized creature with a lean humanoid frame, about 1.9 m tall. Its clothing and gear are rough, scarred and spiked, colored in leather browns and dull steel. Its most striking feature is chains on its belt and a cruel smile. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 

@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts, tyrant, unique]
 ![[mon_mansacor_the_gold_eating_manticore_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mansacor_the_gold_eating_manticore_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,746 tris · 1.15 × 5 × 2.245 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.785 × 5 × 3.149 m · local file `Game/Assets/_Game/Art/Models/Monsters/Chimeras & Mythic Beasts/mon_mansacor_the_gold_eating_manticore.fbx`
 
 > The Mansacor, the Gold-Eating Manticore is a huge creature with a powerful four-legged hunter's body, about 5 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ochre markings. Look for a hide studded with swallowed gold coins that ring when it moves. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 

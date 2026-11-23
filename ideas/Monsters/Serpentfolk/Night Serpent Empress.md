@@ -11,7 +11,7 @@ tags: [monster, serpentfolk]
 ![[mon_night_serpent_empress_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_night_serpent_empress_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (5,514 tris · 6.07 × 12 × 7.874 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 13.207 × 11.999 × 15.671 m · local file `Game/Assets/_Game/Art/Models/Monsters/Serpentfolk/mon_night_serpent_empress.fbx`
 
 > The Night Serpent Empress is a huge creature with a humanoid upper body on a long serpent tail, about 12 m long. Its scales are rough, scarred and spiked, colored in violet. Guild sketches always show a crown of living snakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

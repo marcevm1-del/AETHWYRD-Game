@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_tide_thunderbird_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_tide_thunderbird_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,654 tris · 7.556 × 5.95 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 3.98 × 9.844 × 8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_tide_thunderbird.fbx`
 
 > The Tide Thunderbird is a huge creature with a feathered avian body, about 8 m tall. Its plumage is rough, scarred and spiked, colored in blue. Look for wings that drum thunder. It has burning slit pupils. Faint runes glow along its body when it fights. It circles its prey, surrounded by fine mist and droplets that orbit it. This Water-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

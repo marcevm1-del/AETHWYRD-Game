@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_vesper_touched_calf_minotaur_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_calf_minotaur_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,196 tris · 1.217 × 0.836 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.868 × 2.027 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_vesper_touched_calf_minotaur.fbx`
 
 > The Vesper-Touched Calf Minotaur is a person-sized creature with a massive hunched brute frame, about 2 m tall. Its hide is patchy and subtly wrong, as if assembled from memory, colored in tan, with crimson markings. Look for stubby horns and a bronze nose ring. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

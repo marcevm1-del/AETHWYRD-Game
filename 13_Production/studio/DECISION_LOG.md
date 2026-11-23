@@ -13,5 +13,7 @@ Owner decisions only. Proposals stay under "Open" until the owner says yes or no
 | D-06 | 2026-11-23 | **Unity is verified manually for now, not in CI.** Agents may not mark Unity work "Tested" without a fresh `Tools/pc/update_and_verify.cmd` run on a clean tree, started by the owner. The script refuses a dirty tree. Revisit before Steam prep | Rule added to README.md. Verify script hardened | Owner, in chat |
 | D-07 | 2026-11-23 | **The owner installs `gh` and signs in. Agents push `agent/*` branches and open PRs; only the owner merges to `main`.** CODEOWNERS and a branch-protection check follow once `gh` works | Waiting on the owner: `winget install GitHub.cli`, then `gh auth login` | Owner, in chat |
 
+| D-08 | 2026-11-23 | **One-time exception to D-07:** the overseer merged PRs 11 to 17. It is not standing permission to merge | Each PR was pinned to its tested commit, with checks passing | Owner, in chat ("Yes, merge all 7") |
+
 ## Open
 None.

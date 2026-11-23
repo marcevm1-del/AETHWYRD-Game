@@ -11,7 +11,7 @@ tags: [monster, dragons, tyrant, unique]
 ![[mon_vyrmax_the_drake_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vyrmax_the_drake_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,270 tris · 21.914 × 14 × 15.557 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 22.961 × 14.001 × 9.739 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_vyrmax_the_drake_lord.fbx`
 
 > The Vyrmax, the Drake Lord is a huge creature with a bipedal winged body with wing-arms, about 14 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with ember-orange markings. Look for a crown of broken horns from every rival drake it killed. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by heat-shimmer and drifting sparks.
 

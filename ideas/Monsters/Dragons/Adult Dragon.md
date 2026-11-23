@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_adult_dragon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_adult_dragon_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,346 tris · 24.368 × 25 × 15.267 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 39.992 × 24.999 × 17.833 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_adult_dragon.fbx`
 
 > The Adult Dragon is a colossal creature with an ancient, serpentine dragon body, about 25 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with electric-yellow markings. Survivors describe cathedral wings and a voice that shakes stone. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 

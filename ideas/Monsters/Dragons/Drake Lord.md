@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_drake_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_drake_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,642 tris · 15.653 × 10 × 11.112 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 15.989 × 10.001 × 6.782 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_drake_lord.fbx`
 
 > The Drake Lord is a huge creature with a sleek flying build, about 10 m long. Its scales are rough, scarred and spiked, colored in crimson, with ember-orange markings. Guild sketches always show a crown of broken horns from rivals it killed. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

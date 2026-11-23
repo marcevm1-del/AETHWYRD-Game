@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_queen_ant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_queen_ant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,794 tris · 3.183 × 3.5 × 1.973 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.111 × 3.5 × 1.728 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_queen_ant.fbx`
 
 > The Queen Ant is a large creature with a low, wide insectoid build, about 3.5 m long. Its chitin is rough, scarred and spiked, colored in glossy brown, with ochre markings. Look for a swollen abdomen pulsing with eggs. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
 

@@ -11,7 +11,7 @@ tags: [monster, undead, tyrant, unique]
 ![[mon_the_hollow_abbot_choir_of_silence_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_hollow_abbot_choir_of_silence_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,660 tris · 1.598 × 1.653 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.597 × 1.692 × 2.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_the_hollow_abbot_choir_of_silence.fbx`
 
 > The The Hollow Abbot, Choir of Silence is a person-sized creature with a bodiless, glowing form, about 2.2 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with violet markings. Look for a monk with no face beneath his cowl who erases the names of the dead. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 

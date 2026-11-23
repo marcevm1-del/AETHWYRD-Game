@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_vesper_touched_thornvine_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_thornvine_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,764 tris · 2.454 × 2.065 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.313 × 1.271 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_vesper_touched_thornvine.fbx`
 
 > The Vesper-Touched Thornvine is a large creature with a cluster of vines around a central bloom, about 3 m tall. Its bark and leaves are patchy and subtly wrong, as if assembled from memory, colored in leaf green over bark brown. Survivors describe vines covered in hooked thorns. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by drifting pollen and tiny blossoms. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

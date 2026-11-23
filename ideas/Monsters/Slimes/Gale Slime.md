@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_gale_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_gale_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,556 tris · 0.508 × 0.508 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.455 × 0.52 × 0.4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_gale_slime.fbx`
 
 > The Gale Slime is a tiny creature with a wobbling mound of translucent gel, about 0.4 m tall. Its gel is smooth and clean, colored in pale jade and cloud white. Its most striking feature is fallen leaves suspended inside its jelly. It has big round glossy eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

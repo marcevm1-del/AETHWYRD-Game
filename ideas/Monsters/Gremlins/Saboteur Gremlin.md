@@ -11,7 +11,7 @@ tags: [monster, gremlins]
 ![[mon_saboteur_gremlin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_saboteur_gremlin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,678 tris · 0.351 × 0.31 × 0.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.362 × 0.648 × 0.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Gremlins/mon_saboteur_gremlin.fbx`
 
 > The Saboteur Gremlin is a small creature with a hunched, wiry humanoid frame, about 0.7 m tall. Its skin is rough, scarred and spiked, colored in lavender, with electric-yellow markings. Guild sketches always show goggles and a bag of stolen bolts. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 

@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_greater_arachne_matriarch_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_arachne_matriarch_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,274 tris · 10.386 × 12.8 × 7.024 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,998 tris · 11.328 × 12.8 × 5.33 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_greater_arachne_matriarch.fbx`
 
 > The Greater Arachne Matriarch is a huge creature with a bulbous spider frame on long jointed legs, about 12.8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in glossy brown, with violet markings. Guild sketches always show a crown of silk and eight eyes like jewels. It has eyes that never blink. The air distorts slightly around its outline. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

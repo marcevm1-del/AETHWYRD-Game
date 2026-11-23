@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_glacier_cube_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_glacier_cube_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,940 tris · 0.851 × 0.851 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.87 × 0.817 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_glacier_cube_slime.fbx`
 
 > The Glacier Cube Slime is a small creature with a dome-shaped gelatinous body, about 0.8 m tall. Its gel is weathered and natural, colored in pale blues and frost-white. Survivors describe a perfectly cubic body with swallowed debris visible inside. It has amber predator eyes. A distinctive marking runs along its back. It stalks low to the ground, surrounded by falling snow motes and frosted ground where it steps. This Ice-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

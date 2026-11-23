@@ -11,7 +11,7 @@ tags: [monster, aberrations]
 ![[mon_faceless_one_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_faceless_one_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,532 tris · 2.021 × 2.11 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 2.283 × 2.273 × 2.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aberrations/mon_faceless_one.fbx`
 
 > The Faceless One is a person-sized creature with a shape that keeps rearranging itself, about 2.2 m tall. Its skin is stretched, stitched and constantly shifting, colored in mauve, with violet-edged markings. Look for a smooth blank face that slowly learns to look like yours. It has too many eyes, opening one after another. Battle-worn plates and trophies hang from its body. It crawls across ceilings, surrounded by warped air, as if space bends around it.
 

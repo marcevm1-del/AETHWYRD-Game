@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_cavern_spider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cavern_spider_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (4,334 tris · 1.361 × 1.4 × 1.475 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.572 × 1.4 × 0.781 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_cavern_spider.fbx`
 
 > The Cavern Spider is a person-sized creature with an eight-legged arachnid body, about 1.4 m long. Its chitin is rough, scarred and spiked, colored in amber, with ochre markings. Guild sketches always show green-striped legs and dripping fangs. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 

@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_ghost_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ghost_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,432 tris · 1.314 × 1.314 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.381 × 1.185 × 1.7 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_ghost.fbx`
 
 > The Ghost is a person-sized creature with a bodiless, glowing form, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in bleached bone and grave-cloth, with violet markings. Look for a translucent figure frozen in its last moment. It has burning slit pupils. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
 

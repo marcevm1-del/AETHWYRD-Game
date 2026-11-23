@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 ![[mon_ymgrir_the_frost_sovereign_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ymgrir_the_frost_sovereign_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,194 tris · 9.448 × 5.813 × 11 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 11.075 × 5.427 × 10.999 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_ymgrir_the_frost_sovereign.fbx`
 
 > The Ymgrir, the Frost Sovereign is a huge creature with a massive hunched brute frame, about 11 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with frost-blue markings. Survivors describe a crown of glacier ice and a voice that starts avalanches. It has narrow glowing eyes. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 

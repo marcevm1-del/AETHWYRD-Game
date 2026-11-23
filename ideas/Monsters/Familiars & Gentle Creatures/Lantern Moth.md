@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_lantern_moth_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_lantern_moth_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,492 tris · 0.511 × 0.417 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.613 × 0.29 × 0.3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Familiars & Gentle Creatures/mon_lantern_moth.fbx`
 
 > The Lantern Moth is a tiny creature with a small winged body, about 0.3 m tall. Its coat is smooth and clean, colored in soft cream, with gold markings. Survivors describe wings that glow like paper lanterns. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It waddles, surrounded by soft radiance and floating motes of light.
 

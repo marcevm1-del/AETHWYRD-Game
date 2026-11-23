@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_sphinx_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_sphinx_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,708 tris · 2.314 × 6 × 5.219 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 6.296 × 5.998 × 4.146 m · local file `Game/Assets/_Game/Art/Models/Monsters/Chimeras & Mythic Beasts/mon_sphinx.fbx`
 
 > The Sphinx is a huge creature with a long-legged predatory quadruped build, about 6 m long. Its hide is weathered and natural, colored in lion-tawny, with gold markings. Guild sketches always show a lion's body and a calm, ancient face. It has dark, wary eyes. Its regal silhouette is crowned by a halo-like ring of aura. It stalks low to the ground, surrounded by soft radiance and floating motes of light.
 

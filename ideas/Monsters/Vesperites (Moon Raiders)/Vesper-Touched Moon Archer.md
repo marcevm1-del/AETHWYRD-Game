@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders]
 ![[mon_vesper_touched_moon_archer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_moon_archer_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,124 tris · 0.835 × 1.535 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.419 × 1.179 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Vesperites (Moon Raiders)/mon_vesper_touched_moon_archer.fbx`
 
 > The Vesper-Touched Moon Archer is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its porcelain shell is patchy and subtly wrong, as if assembled from memory, colored in twilight blue, with crimson markings. Its most striking feature is a bow of red glass and robes like falling silk. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

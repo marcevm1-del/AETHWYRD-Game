@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_ruin_ooze_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_ooze_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,894 tris · 1.531 × 1.531 × 1.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.687 × 1.621 × 1.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_ruin_ooze.fbx`
 
 > The Ruin Ooze is a person-sized creature with a dome-shaped gelatinous body, about 1.5 m tall. Its gel is rough, scarred and spiked, colored in ink black with bruised violet. Survivors describe molten trails that harden into glass behind it. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

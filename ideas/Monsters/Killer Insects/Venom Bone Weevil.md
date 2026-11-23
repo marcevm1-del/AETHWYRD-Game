@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_venom_bone_weevil_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_venom_bone_weevil_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,380 tris · 0.925 × 1 × 1.142 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.905 × 0.999 × 0.525 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_venom_bone_weevil.fbx`
 
 > The Venom Bone Weevil is a small creature with a six-legged armored body, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in lacquer-red, with sickly green markings. Survivors describe a shell made from the bones it eats. It has pale, pupil-less eyes. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

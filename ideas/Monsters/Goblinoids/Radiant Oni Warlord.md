@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_radiant_oni_warlord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_radiant_oni_warlord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,638 tris · 3.865 × 2.375 × 4.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.691 × 3.68 × 4.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_radiant_oni_warlord.fbx`
 
 > The Radiant Oni Warlord is a large creature with a giant, barrel-chested humanoid body, about 4.5 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather, with gold markings. Look for a towering horned silhouette carrying an iron club wrapped in prayer chains. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

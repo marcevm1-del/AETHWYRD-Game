@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_vesper_touched_kobold_trapmaster_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_kobold_trapmaster_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,490 tris · 0.356 × 0.455 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.607 × 1.24 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_vesper_touched_kobold_trapmaster.fbx`
 
 > The Vesper-Touched Kobold Trapmaster is a small creature with a small, compact humanoid body, about 1 m tall. Its mangy fur is patchy and subtly wrong, as if assembled from memory, colored in rust-red, with crimson markings. Its most striking feature is a harness of gears, springs and tripwires. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

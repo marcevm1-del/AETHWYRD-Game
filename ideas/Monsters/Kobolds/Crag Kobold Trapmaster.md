@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_crag_kobold_trapmaster_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_crag_kobold_trapmaster_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,348 tris · 0.495 × 0.583 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.625 × 1.24 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_crag_kobold_trapmaster.fbx`
 
 > The Crag Kobold Trapmaster is a small creature with a small, compact humanoid body, about 1 m tall. Its mangy fur is rough, scarred and spiked, colored in rust-red, with ochre markings. Guild sketches always show a harness of gears, springs and tripwires. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Adapted to mountain lands, it has slate-grey coloring and hardened hide.
 

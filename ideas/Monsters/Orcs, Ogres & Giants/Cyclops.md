@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_cyclops_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cyclops_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,166 tris · 5.153 × 2.963 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 6.119 × 4.754 × 6.001 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_cyclops.fbx`
 
 > The Cyclops is a huge creature with a giant, barrel-chested humanoid body, about 6 m tall. Its hide is rough, scarred and spiked, colored in sun-brown, with ochre markings. Survivors describe a single huge eye and a hammer made from a millstone. It has burning slit pupils. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 

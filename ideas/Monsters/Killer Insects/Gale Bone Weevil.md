@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_gale_bone_weevil_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_gale_bone_weevil_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,792 tris · 0.925 × 1 × 1.142 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.669 × 1 × 0.384 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_gale_bone_weevil.fbx`
 
 > The Gale Bone Weevil is a small creature with a six-legged armored body, about 1 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in lacquer-red, with pale jade markings. Look for a shell made from the bones it eats. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It glides without moving its legs, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

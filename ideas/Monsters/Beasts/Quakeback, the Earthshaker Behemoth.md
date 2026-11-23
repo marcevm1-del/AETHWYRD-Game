@@ -11,7 +11,7 @@ tags: [monster, beasts, tyrant, unique]
 ![[mon_quakeback_the_earthshaker_behemoth_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_quakeback_the_earthshaker_behemoth_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,794 tris · 5.156 × 20 × 11.631 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 9.247 × 20.003 × 14.359 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_quakeback_the_earthshaker_behemoth.fbx`
 
 > The Quakeback, the Earthshaker Behemoth is a colossal creature with a long-legged predatory quadruped build, about 20 m long. Its coat is rough, scarred and spiked, colored in ash-grey, with ochre markings. Survivors describe a back of shifting tectonic plates that sets off the hourly quakes. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 

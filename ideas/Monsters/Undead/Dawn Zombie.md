@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_dawn_zombie_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dawn_zombie_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,606 tris · 0.921 × 1.516 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.591 × 0.659 × 1.701 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_dawn_zombie.fbx`
 
 > The Dawn Zombie is a person-sized creature with a lean humanoid frame, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in dusk-violet, with gold markings. Look for grey skin, burial clothes and a slack jaw. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It strides with heavy steps, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

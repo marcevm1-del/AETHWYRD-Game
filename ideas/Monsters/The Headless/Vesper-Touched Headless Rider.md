@@ -11,7 +11,7 @@ tags: [monster, the-headless]
 ![[mon_vesper_touched_headless_rider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_headless_rider_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,630 tris · 1.501 × 0.956 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.513 × 1.229 × 2.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/The Headless/mon_vesper_touched_headless_rider.fbx`
 
 > The Vesper-Touched Headless Rider is a large creature with a tall, headless knightly build, about 2.6 m tall. Its armor is stretched, stitched and constantly shifting, colored in gunmetal, with violet markings. Survivors describe a lantern burning where its head should be. It has no eyes at all, only a wide and patient mouth. Faint runes glow along its body when it fights. It crawls across ceilings, surrounded by shadows that lean toward it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

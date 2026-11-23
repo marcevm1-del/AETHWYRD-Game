@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_goblin_wolf_rider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_goblin_wolf_rider_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,334 tris · 0.495 × 0.583 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.842 × 0.537 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_goblin_wolf_rider.fbx`
 
 > The Goblin Wolf Rider is a small creature with a small, compact humanoid body, about 1 m tall. Its skin is rough, scarred and spiked, colored in grey-green and patched leather. Look for a bone saddle on a snarling war-wolf mount. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It circles its prey. It has no visible aura; you hear its breathing before you see it.
 

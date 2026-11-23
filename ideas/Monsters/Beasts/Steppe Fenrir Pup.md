@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_steppe_fenrir_pup_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_steppe_fenrir_pup_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,336 tris · 0.387 × 1.5 × 0.872 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,998 tris · 0.446 × 1.501 × 0.928 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_steppe_fenrir_pup.fbx`
 
 > The Steppe Fenrir Pup is a person-sized creature with a powerful four-legged hunter's body, about 1.5 m long. Its coat is weathered and natural, colored in warm brown, with pale jade markings. Look for frosted fur and breath that freezes the air. It has dark, wary eyes. Faint runes glow along its body when it fights. It prowls, surrounded by swirling leaves and a constant breeze. Adapted to steppe lands, it has wind-burnt coloring and a lean frame.
 

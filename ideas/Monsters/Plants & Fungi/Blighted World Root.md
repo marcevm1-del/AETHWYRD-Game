@@ -11,7 +11,7 @@ tags: [monster, plants-fungi, unique]
 ![[mon_blighted_world_root_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_blighted_world_root_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,496 tris · 222.353 × 229.833 × 300 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 144.833 × 154.815 × 300 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_blighted_world_root.fbx`
 
 > The Blighted World Root is a colossal creature with a huge bulbous flower on a thick stalk, about 300 m tall. Its bark and leaves are stretched, stitched and constantly shifting, colored in deep fern green and dark bark, with violet markings. Guild sketches always show black roots that pulse like veins. It has no eyes at all, only a wide and patient mouth. Its presence is world-scale; the sky changes color when it appears. It unfolds into something larger, surrounded by shadows that lean toward it.
 

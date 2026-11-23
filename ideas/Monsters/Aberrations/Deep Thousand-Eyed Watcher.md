@@ -11,7 +11,7 @@ tags: [monster, aberrations]
 ![[mon_deep_thousand_eyed_watcher_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_deep_thousand_eyed_watcher_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,420 tris · 6.178 × 5.161 × 6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.295 × 4.704 × 6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aberrations/mon_deep_thousand_eyed_watcher.fbx`
 
 > The Deep Thousand-Eyed Watcher is a huge creature with a floating, cloth-like shape, about 6 m tall. Its skin is stretched, stitched and constantly shifting, colored in sickly teal, with violet markings. Survivors describe a cloud of eyes that blink in sequence. It has too many eyes, opening one after another. An elegant crest and glowing veins of mana mark it as a champion of its kind. It copies the walk of whatever it hunts, surrounded by shadows that lean toward it. Adapted to underworld lands, it has bioluminescent spots along its body.
 

@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_radiant_centipede_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_radiant_centipede_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,728 tris · 1.429 × 6 × 3.296 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.129 × 6 × 3.285 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_radiant_centipede.fbx`
 
 > The Radiant Centipede is a huge creature with a long, sinuous serpentine body, about 6 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in black, with gold markings. Guild sketches always show a hundred legs and a head like a split mask. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

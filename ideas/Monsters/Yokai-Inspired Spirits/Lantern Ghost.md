@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_lantern_ghost_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_lantern_ghost_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,646 tris · 0.555 × 0.464 × 0.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.436 × 0.468 × 0.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_lantern_ghost.fbx`
 
 > The Lantern Ghost is a small creature with a floating, cloth-like shape, about 0.6 m tall. Its form is rough, scarred and spiked, colored in paper white, with ember-orange markings. Its most striking feature is a paper lantern with a torn mouth. It has narrow glowing eyes. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

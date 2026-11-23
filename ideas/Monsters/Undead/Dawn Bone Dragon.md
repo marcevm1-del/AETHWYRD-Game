@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_dawn_bone_dragon_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_dawn_bone_dragon_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,308 tris · 17.442 × 20 × 15.428 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 32.006 × 19.999 × 14.272 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_dawn_bone_dragon.fbx`
 
 > The Dawn Bone Dragon is a colossal creature with an ancient, serpentine dragon body, about 20 m long. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in bleached bone and grave-cloth, with gold markings. Guild sketches always show a dragon skeleton held together by green fire. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by soft radiance and floating motes of light. This Light-attuned variant carries one extra elemental feature, like glowing vein-lines, in its element's colors.
 

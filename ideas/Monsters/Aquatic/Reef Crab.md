@@ -11,7 +11,7 @@ tags: [monster, aquatic]
 ![[mon_reef_crab_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_reef_crab_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,360 tris · 1.05 × 1 × 0.919 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,998 tris · 0.905 × 1.001 × 0.495 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_reef_crab.fbx`
 
 > The Reef Crab is a small creature with a segmented six-limbed frame, about 1 m long. Its scales and skin are weathered and natural, colored in teal, with sea-blue markings. Guild sketches always show one claw much bigger than the other. It has amber predator eyes. It has no ornament at all: simple, readable shapes. It prowls, surrounded by fine mist and droplets that orbit it. Adapted to coast lands, it has salt-crusted, barnacle-flecked hide.
 

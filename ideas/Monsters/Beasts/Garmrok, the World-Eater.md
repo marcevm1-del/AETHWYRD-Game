@@ -11,7 +11,7 @@ tags: [monster, beasts, unique]
 ![[mon_garmrok_the_world_eater_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_garmrok_the_world_eater_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,728 tris · 41.401 × 120 × 131.861 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 35.283 × 120.003 × 74.104 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_garmrok_the_world_eater.fbx`
 
 > The Garmrok, the World-Eater is a colossal creature with a heavy, muscular quadruped frame, about 120 m long. Its coat is patchy and subtly wrong, as if assembled from memory, colored in ash-grey, with violet-edged markings. Its most striking feature is a wolf so vast its broken chains drag across the sky. It has eyes set slightly too far apart. Its presence is world-scale; the sky changes color when it appears. It moves in jerky stop-motion bursts, surrounded by warped air, as if space bends around it.
 

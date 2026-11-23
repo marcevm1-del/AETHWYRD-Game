@@ -11,7 +11,7 @@ tags: [monster, demons, tyrant, unique]
 ![[mon_morvane_vanguard_of_the_overlord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_morvane_vanguard_of_the_overlord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,146 tris · 1.532 × 1.937 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.324 × 1.097 × 2.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_morvane_vanguard_of_the_overlord.fbx`
 
 > The Morvane, Vanguard of the Overlord is a large creature with a broad-shouldered humanoid build, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in char-black, with violet markings. Its most striking feature is black-steel armor engraved with the Overlord's sigil and a banner of the Red Gate. It has narrow glowing eyes. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by shadows that lean toward it.
 

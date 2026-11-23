@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_kobold_sneak_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_kobold_sneak_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,730 tris · 0.396 × 0.466 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.491 × 1.084 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_kobold_sneak.fbx`
 
 > The Kobold Sneak is a small creature with a small, compact humanoid body, about 0.8 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue, with violet markings. Survivors describe soot-blackened fur for hiding in tunnels. It has eyes that catch torchlight like coins. Small scars and rough edges mark it as a survivor. It circles its prey, surrounded by shadows that lean toward it.
 

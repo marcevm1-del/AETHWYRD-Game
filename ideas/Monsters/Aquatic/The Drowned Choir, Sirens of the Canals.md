@@ -11,7 +11,7 @@ tags: [monster, aquatic, tyrant, unique]
 ![[mon_the_drowned_choir_sirens_of_the_canals_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_drowned_choir_sirens_of_the_canals_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (6,032 tris · 0.913 × 2 × 1.673 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.422 × 2 × 2.553 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_the_drowned_choir_sirens_of_the_canals.fbx`
 
 > The The Drowned Choir, Sirens of the Canals is a person-sized creature with an elegant serpentfolk build, about 2 m long. Its scales and skin are patchy and subtly wrong, as if assembled from memory, colored in silver, with sea-blue markings. Survivors describe three sirens who sing in harmony; silence one and the song breaks. It has eyes set slightly too far apart. Faint runes glow along its body when it fights. It moves in jerky stop-motion bursts, surrounded by fine mist and droplets that orbit it.
 

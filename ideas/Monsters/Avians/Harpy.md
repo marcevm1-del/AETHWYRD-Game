@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_harpy_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_harpy_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,278 tris · 0.703 × 2.33 × 1.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.784 × 1.46 × 1.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_harpy.fbx`
 
 > The Harpy is a person-sized creature with a broad-winged bird frame, about 1.6 m tall. Its plumage is rough, scarred and spiked, colored in crow-black, with pale jade markings. Its most striking feature is a bird body with a shrieking human-like face. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by swirling leaves and a constant breeze.
 

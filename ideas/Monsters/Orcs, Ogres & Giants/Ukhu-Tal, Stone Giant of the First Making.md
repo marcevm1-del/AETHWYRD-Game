@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants, tyrant, unique]
 ![[mon_ukhu_tal_stone_giant_of_the_first_making_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ukhu_tal_stone_giant_of_the_first_making_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,136 tris · 21.472 × 13.65 × 25 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 28.52 × 14.087 × 25.004 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_ukhu_tal_stone_giant_of_the_first_making.fbx`
 
 > The Ukhu-Tal, Stone Giant of the First Making is a colossal creature with a massive hunched brute frame, about 25 m tall. Its hide is weathered and natural, colored in olive-green, with ochre markings. Survivors describe a body of terraced stone older than the Titans' war. It has alert animal eyes. Its regal silhouette is crowned by a halo-like ring of aura. It prowls, surrounded by pebbles that tremble and float near it.
 

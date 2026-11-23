@@ -11,7 +11,7 @@ tags: [monster, aquatic, unique]
 ![[mon_leviathan_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_leviathan_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,364 tris · 282.828 × 600 × 344.92 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 214.881 × 600 × 376.903 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_leviathan.fbx`
 
 > The Leviathan is a colossal creature with a heavy-jawed fish frame, about 600 m long. Its scales and skin are rough, scarred and spiked, colored in sea-blue. Look for a body so vast it moves the horizon. It has eyes that catch torchlight like coins. Its presence is world-scale; the sky changes color when it appears. It strides with heavy steps, surrounded by fine mist and droplets that orbit it.
 

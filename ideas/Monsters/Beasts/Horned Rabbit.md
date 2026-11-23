@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_horned_rabbit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_horned_rabbit_front/side/back.jpg`).*
 
-> [!note] 3D model: hand-built Ring 0 model, or not exported yet.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.13 × 0.4 × 0.301 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_horned_rabbit.fbx`
 
 > The Horned Rabbit is a tiny creature with a low, springy quadruped build, about 0.4 m long. Its coat is weathered and natural, colored in warm brown with a cream belly. Survivors describe a single spiral horn and oversized hind feet. It has dark, wary eyes. It has no ornament at all: simple, readable shapes. It prowls. It has no visible aura; you hear its breathing before you see it.
 

@@ -11,7 +11,7 @@ tags: [monster, familiars-gentle-creatures]
 ![[mon_rainbow_koi_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_rainbow_koi_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,366 tris · 0.233 × 0.5 × 0.25 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.178 × 0.5 × 0.315 m · local file `Game/Assets/_Game/Art/Models/Monsters/Familiars & Gentle Creatures/mon_rainbow_koi.fbx`
 
 > The Rainbow Koi is a small creature with a streamlined aquatic body, about 0.5 m long. Its coat is smooth and clean, colored in mint, with sea-blue markings. Guild sketches always show scales that shimmer every color. It has two bright dot eyes. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by fine mist and droplets that orbit it.
 

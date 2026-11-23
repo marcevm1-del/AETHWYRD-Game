@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_vesper_touched_armor_beetle_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_armor_beetle_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,880 tris · 0.704 × 1.2 × 0.436 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.124 × 1.199 × 0.614 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_vesper_touched_armor_beetle.fbx`
 
 > The Vesper-Touched Armor Beetle is a person-sized creature with a segmented six-limbed frame, about 1.2 m long. Its chitin is rough, scarred and spiked, colored in amber, with ochre markings. Look for a shell like polished bronze. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

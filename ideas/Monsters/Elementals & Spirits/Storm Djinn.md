@@ -11,7 +11,7 @@ tags: [monster, elementals-spirits]
 ![[mon_storm_djinn_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_storm_djinn_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,504 tris · 3.091 × 3.422 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.061 × 3.338 × 4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Elementals & Spirits/mon_storm_djinn.fbx`
 
 > The Storm Djinn is a large creature with a drifting, half-formed body, about 4 m tall. Its body is rough, scarred and spiked, colored in storm violet shot through with electric yellow. Its most striking feature is a cloud body with lightning tattoos. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It strides with heavy steps, surrounded by crackling arcs that jump across its body.
 

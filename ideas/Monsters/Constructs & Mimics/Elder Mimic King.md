@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_elder_mimic_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_mimic_king_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (858 tris · 9.45 × 10.176 × 9.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 10.532 × 12.161 × 9.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_elder_mimic_king.fbx`
 
 > The Elder Mimic King is a huge creature with an object-shaped body that hides its true form, about 9.6 m tall. Its surface is stretched, stitched and constantly shifting, colored in riveted iron. Survivors describe a treasure vault that walks on a hundred stolen legs. It has a human-like face in the wrong place. Its regal silhouette is crowned by a halo-like ring of aura. It crawls across ceilings. It has no visible aura; you hear its breathing before you see it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

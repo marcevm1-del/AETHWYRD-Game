@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits, tyrant, unique]
 ![[mon_the_hollow_bride_matriarch_of_the_long_necks_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_the_hollow_bride_matriarch_of_the_long_necks_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,820 tris · 1.488 × 1.501 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 2.244 × 2.209 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_the_hollow_bride_matriarch_of_the_long_necks.fbx`
 
 > The The Hollow Bride, Matriarch of the Long Necks is a person-sized creature with a shape that keeps rearranging itself, about 2 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in indigo, with violet markings. Its most striking feature is a wedding veil over a neck that stretches across rooftops. It has eyes set slightly too far apart. An elegant crest and glowing veins of mana mark it as a champion of its kind. It moves in jerky stop-motion bursts, surrounded by shadows that lean toward it.
 

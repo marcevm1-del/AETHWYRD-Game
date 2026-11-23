@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_elder_gorgon_wyrm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_gorgon_wyrm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,742 tris · 4.559 × 22.4 × 11.643 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,998 tris · 7.942 × 22.4 × 11.709 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_elder_gorgon_wyrm.fbx`
 
 > The Elder Gorgon Wyrm is a colossal creature with a coiling, legless body, about 22.4 m long. Its scales are patchy and subtly wrong, as if assembled from memory, colored in teal-grey, with ochre markings. Guild sketches always show a stone-crusted body that leaves statues in its wake. It has eyes set slightly too far apart. The air distorts slightly around its outline. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

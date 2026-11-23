@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_hornet_lancer_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_hornet_lancer_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,490 tris · 1.796 × 1.465 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 2.384 × 1.373 × 1.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_hornet_lancer.fbx`
 
 > The Hornet Lancer is a person-sized creature with a bat-like flying frame, about 1.2 m tall. Its chitin is rough, scarred and spiked, colored in black, with sickly green markings. Its most striking feature is a lance-like stinger and humming armored wings. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by a low toxic haze that clings to the ground.
 

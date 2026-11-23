@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_gnoll_raider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_gnoll_raider_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,788 tris · 1.084 × 1.165 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.15 × 2.261 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_gnoll_raider.fbx`
 
 > The Gnoll Raider is a person-sized creature with a broad-shouldered humanoid build, about 2 m tall. Its hide is rough, scarred and spiked, colored in tan. Guild sketches always show a hyena head and a laugh that carries for miles. It has eyes that catch torchlight like coins. A distinctive marking runs along its back. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 

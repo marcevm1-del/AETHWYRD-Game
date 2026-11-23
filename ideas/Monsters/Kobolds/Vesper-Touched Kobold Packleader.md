@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_vesper_touched_kobold_packleader_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_kobold_packleader_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,860 tris · 0.428 × 0.518 × 1.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.727 × 1.354 × 1.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_vesper_touched_kobold_packleader.fbx`
 
 > The Vesper-Touched Kobold Packleader is a person-sized creature with a small, compact humanoid body, about 1.2 m tall. Its mangy fur is patchy and subtly wrong, as if assembled from memory, colored in slate-blue, with crimson markings. Survivors describe a collar of teeth from rival packs. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

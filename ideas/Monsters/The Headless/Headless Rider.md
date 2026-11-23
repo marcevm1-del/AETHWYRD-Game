@@ -11,7 +11,7 @@ tags: [monster, the-headless]
 ![[mon_headless_rider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_headless_rider_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,692 tris · 1.073 × 2.411 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.644 × 0.716 × 2.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/The Headless/mon_headless_rider.fbx`
 
 > The Headless Rider is a large creature with a headless rider frame, about 2.6 m tall. Its armor is patchy and subtly wrong, as if assembled from memory, colored in gunmetal, with violet markings. Guild sketches always show a lantern burning where its head should be. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

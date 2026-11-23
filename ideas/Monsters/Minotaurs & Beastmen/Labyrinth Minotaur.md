@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_labyrinth_minotaur_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_labyrinth_minotaur_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,158 tris · 3.436 × 1.975 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.747 × 4.216 × 4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_labyrinth_minotaur.fbx`
 
 > The Labyrinth Minotaur is a large creature with a towering, heavy-limbed body, about 4 m tall. Its hide is rough, scarred and spiked, colored in dark chestnut, with ochre markings. Survivors describe horns carved with maze runes. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by pebbles that tremble and float near it.
 

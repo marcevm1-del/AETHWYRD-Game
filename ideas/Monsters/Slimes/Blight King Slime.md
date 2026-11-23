@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_blight_king_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_blight_king_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,304 tris · 3.398 × 3.398 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.412 × 3.197 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_blight_king_slime.fbx`
 
 > The Blight King Slime is a large creature with a dome-shaped gelatinous body, about 3 m tall. Its gel is weathered and natural, colored in bruise purple with sickly green. Guild sketches always show a crown made of smaller slimes fused together. It has alert animal eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by a low toxic haze that clings to the ground. This Poison-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

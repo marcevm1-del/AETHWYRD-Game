@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_primeval_titan_kin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_primeval_titan_kin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,174 tris · 34.355 × 20.304 × 40 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 45.528 × 21.974 × 39.996 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_primeval_titan_kin.fbx`
 
 > The Primeval Titan-Kin is a colossal creature with a towering, heavy-limbed body, about 40 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with ochre markings. Its most striking feature is a body of living bedrock wearing fragments of Titan armor. It has narrow glowing eyes. Its outline is crowned by slowly turning rings of light; lesser monsters flee from it. It circles its prey, surrounded by pebbles that tremble and float near it.
 

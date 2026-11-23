@@ -11,7 +11,7 @@ tags: [monster, beasts]
 ![[mon_moon_hare_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_moon_hare_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,330 tris · 0.193 × 0.5 × 0.322 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.162 × 0.5 × 0.375 m · local file `Game/Assets/_Game/Art/Models/Monsters/Beasts/mon_moon_hare.fbx`
 
 > The Moon Hare is a small creature with a low, springy quadruped build, about 0.5 m long. Its coat is smooth and clean, colored in cream, with gold markings. Survivors describe white fur that glows under the full moon. It has two bright dot eyes. A distinctive marking runs along its back. It bounces happily, surrounded by soft radiance and floating motes of light.
 

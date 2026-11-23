@@ -11,7 +11,7 @@ tags: [monster, vesperites-moon-raiders]
 ![[mon_phantom_crimson_choir_seraph_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_crimson_choir_seraph_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,776 tris · 3.604 × 3.011 × 3.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 7.955 × 3.772 × 3.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Vesperites (Moon Raiders)/mon_phantom_crimson_choir_seraph.fbx`
 
 > The Phantom Crimson Choir Seraph is a large creature with a drifting, half-formed body, about 3.5 m tall. Its porcelain shell is stretched, stitched and constantly shifting, colored in twilight blue, with gold markings. Survivors describe six wings of red glass and a singing mask. It has a human-like face in the wrong place. An elegant crest and glowing veins of mana mark it as a champion of its kind. It unfolds into something larger, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

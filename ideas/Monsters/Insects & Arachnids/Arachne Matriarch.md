@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_arachne_matriarch_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_arachne_matriarch_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (4,202 tris · 6.734 × 8 × 9.99 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 7.08 × 8 × 3.3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_arachne_matriarch.fbx`
 
 > The Arachne Matriarch is a huge creature with a squat, many-legged arachnid build, about 8 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in glossy brown, with violet markings. Survivors describe a crown of silk and eight eyes like jewels. It has pale, pupil-less eyes. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

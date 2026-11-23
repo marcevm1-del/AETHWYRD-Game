@@ -11,7 +11,7 @@ tags: [monster, dragons]
 ![[mon_ancient_thunder_drake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ancient_thunder_drake_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,698 tris · 1.548 × 4.5 × 3.022 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,998 tris · 1.499 × 4.5 × 1.126 m · local file `Game/Assets/_Game/Art/Models/Monsters/Dragons/mon_ancient_thunder_drake.fbx`
 
 > The Ancient Thunder Drake is a large creature with a heavy, muscular quadruped frame, about 4.5 m long. Its scales are rough, scarred and spiked, colored in iron-grey, with electric-yellow markings. Look for horns that work like lightning rods. It has narrow glowing eyes. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by crackling arcs that jump across its body. Moss, crystals and centuries-old scars cover its body; it has outlived every hunter sent after it.
 

@@ -11,7 +11,7 @@ tags: [monster, undead]
 ![[mon_zombie_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_zombie_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,164 tris · 0.921 × 0.627 × 1.7 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,992 tris · 0.585 × 0.658 × 1.701 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_zombie.fbx`
 
 > The Zombie is a person-sized creature with an upright humanoid build, about 1.7 m tall. Its flesh and bone are rough, scarred and spiked, colored in dusk-violet. Guild sketches always show grey skin, burial clothes and a slack jaw. It has eyes that catch torchlight like coins. It has no ornament at all: simple, readable shapes. It strides with heavy steps, surrounded by shadows that lean toward it.
 

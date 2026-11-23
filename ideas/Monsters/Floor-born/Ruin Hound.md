@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_ruin_hound_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_hound_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,242 tris · 0.317 × 1.4 × 0.629 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.373 × 1.4 × 0.887 m · local file `Game/Assets/_Game/Art/Models/Monsters/Floor-born/mon_ruin_hound.fbx`
 
 > The Ruin Hound is a person-sized creature with a long-legged predatory quadruped build, about 1.4 m long. Its stone-like hide is rough, scarred and spiked, colored in rusted iron, with violet markings. Look for a brick-patterned hide. It has burning slit pupils. A distinctive marking runs along its back. It charges without hesitation, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

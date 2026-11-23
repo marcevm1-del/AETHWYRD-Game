@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits, tyrant, unique]
 ![[mon_wuxiang_the_hunger_colossus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_wuxiang_the_hunger_colossus_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,544 tris · 18.251 × 12.24 × 30 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 34.382 × 25.167 × 30.005 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_wuxiang_the_hunger_colossus.fbx`
 
 > The Wuxiang, the Hunger Colossus is a colossal creature with a massive hunched brute frame, about 30 m tall. Its form is patchy and subtly wrong, as if assembled from memory, colored in lacquer red, with violet markings. Guild sketches always show a skeleton giant built from the bones of the starved. It has eyes set slightly too far apart. Its regal silhouette is crowned by a halo-like ring of aura. It freezes whenever it is looked at, surrounded by shadows that lean toward it.
 

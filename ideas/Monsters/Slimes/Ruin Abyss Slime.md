@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_ruin_abyss_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ruin_abyss_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,220 tris · 4.726 × 4.779 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.499 × 4.322 × 4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_ruin_abyss_slime.fbx`
 
 > The Ruin Abyss Slime is a large creature with a teardrop-shaped jelly body, about 4 m tall. Its gel is stretched, stitched and constantly shifting, colored in ink black with bruised violet. Survivors describe starless black jelly that swallows all light. It has too many eyes, opening one after another. Its regal silhouette is crowned by a halo-like ring of aura. It unfolds into something larger, surrounded by shadows that lean toward it. Adapted to ruins lands, it has dust-grey coloring and old rune scars.
 

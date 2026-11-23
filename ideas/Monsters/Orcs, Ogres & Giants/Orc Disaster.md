@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_orc_disaster_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_orc_disaster_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,610 tris · 3.436 × 2.09 × 4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.764 × 2.405 × 4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_orc_disaster.fbx`
 
 > The Orc Disaster is a large creature with a giant, barrel-chested humanoid body, about 4 m tall. Its hide is rough, scarred and spiked, colored in olive-green, with violet markings. Look for a body bloated with devoured power and a crown of bones. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by shadows that lean toward it.
 

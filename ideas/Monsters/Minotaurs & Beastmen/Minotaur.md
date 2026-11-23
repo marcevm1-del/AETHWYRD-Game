@@ -11,7 +11,7 @@ tags: [monster, minotaurs-beastmen]
 ![[mon_minotaur_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_minotaur_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,274 tris · 2.748 × 1.73 × 3.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,996 tris · 2.314 × 2.995 × 3.2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Minotaurs & Beastmen/mon_minotaur.fbx`
 
 > The Minotaur is a large creature with a towering, heavy-limbed body, about 3.2 m tall. Its hide is rough, scarred and spiked, colored in tan, with ochre markings. Its most striking feature is a bull's head, a massive labrys axe and snorting breath. It has burning slit pupils. Battle-worn plates and trophies hang from its body. It circles its prey, surrounded by pebbles that tremble and float near it.
 

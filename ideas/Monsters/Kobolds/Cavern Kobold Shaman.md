@@ -11,7 +11,7 @@ tags: [monster, kobolds]
 ![[mon_cavern_kobold_shaman_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cavern_kobold_shaman_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,522 tris · 0.453 × 0.533 × 0.9 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.555 × 1.135 × 0.9 m · local file `Game/Assets/_Game/Art/Models/Monsters/Kobolds/mon_cavern_kobold_shaman.fbx`
 
 > The Cavern Kobold Shaman is a small creature with a hunched, wiry humanoid frame, about 0.9 m tall. Its mangy fur is rough, scarred and spiked, colored in slate-blue, with ochre markings. Its most striking feature is tin-can wind chimes and singed whiskers. It has burning slit pupils. A distinctive marking runs along its back. It circles its prey, surrounded by pebbles that tremble and float near it. Adapted to cave lands, it has pale, light-starved coloring and oversized eyes.
 

@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_volt_smiling_scarecrow_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_volt_smiling_scarecrow_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,770 tris · 1.207 × 1.483 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.02 × 0.846 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_volt_smiling_scarecrow.fbx`
 
 > The Volt Smiling Scarecrow is a person-sized creature with an upright humanoid build, about 2 m tall. Its surface is stretched, stitched and constantly shifting, colored in bronze, with electric-yellow markings. Survivors describe a stitched sack face with a painted smile that is never in the same field twice. It has too many eyes, opening one after another. It has no ornament at all: simple, readable shapes. It copies the walk of whatever it hunts, surrounded by crackling arcs that jump across its body. This Lightning-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

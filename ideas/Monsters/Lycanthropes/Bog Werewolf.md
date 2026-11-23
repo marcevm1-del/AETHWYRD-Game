@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_bog_werewolf_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_bog_werewolf_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,742 tris · 0.845 × 0.937 × 2.2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.319 × 1.853 × 2.199 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_bog_werewolf.fbx`
 
 > The Bog Werewolf is a person-sized creature with an upright humanoid build, about 2.2 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in brown, with sickly green markings. Look for a wolf's head on a twisted human body, torn clothing still clinging. It has eyes set slightly too far apart. A distinctive marking runs along its back. It freezes whenever it is looked at, surrounded by a low toxic haze that clings to the ground. Adapted to swamp lands, it has mud-slick, algae-streaked skin.
 

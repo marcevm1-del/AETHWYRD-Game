@@ -11,7 +11,7 @@ tags: [monster, reptiles]
 ![[mon_salamander_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_salamander_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,346 tris · 0.617 × 1.6 × 1.392 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.449 × 1.6 × 0.381 m · local file `Game/Assets/_Game/Art/Models/Monsters/Reptiles/mon_salamander.fbx`
 
 > The Salamander is a person-sized creature with a powerful four-legged hunter's body, about 1.6 m long. Its scales are rough, scarred and spiked, colored in green, with ember-orange markings. Guild sketches always show a tail that burns like a torch. It has narrow glowing eyes. A distinctive marking runs along its back. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

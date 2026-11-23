@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_demon_knight_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_demon_knight_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,826 tris · 1.355 × 1.695 × 2.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.393 × 1.538 × 2.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_demon_knight.fbx`
 
 > The Demon Knight is a large creature with a broad-shouldered humanoid build, about 2.5 m tall. Its hide is rough, scarred and spiked, colored in bruised violet. Its most striking feature is black-steel armor engraved with the Overlord's sigil. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It charges without hesitation, surrounded by shadows that lean toward it.
 

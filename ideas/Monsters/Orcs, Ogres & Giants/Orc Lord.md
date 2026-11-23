@@ -11,7 +11,7 @@ tags: [monster, orcs-ogres-giants]
 ![[mon_orc_lord_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_orc_lord_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,508 tris · 1.532 × 1.646 × 2.6 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 1.743 × 1.46 × 2.6 m · local file `Game/Assets/_Game/Art/Models/Monsters/Orcs, Ogres & Giants/mon_orc_lord.fbx`
 
 > The Orc Lord is a large creature with a lean humanoid frame, about 2.6 m tall. Its hide is rough, scarred and spiked, colored in olive-green. Its most striking feature is a horned helm and a cloak of wolf pelts. It has narrow glowing eyes. Faint runes glow along its body when it fights. It strides with heavy steps. It has no visible aura; you hear its breathing before you see it.
 

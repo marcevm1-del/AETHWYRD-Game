@@ -11,7 +11,7 @@ tags: [monster, sandborne]
 ![[mon_elder_sandworm_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_sandworm_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,584 tris · 17.037 × 64 × 24.349 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 21.948 × 64 × 32.026 m · local file `Game/Assets/_Game/Art/Models/Monsters/Sandborne/mon_elder_sandworm.fbx`
 
 > The Elder Sandworm is a colossal creature with a coiling, legless body, about 64 m long. Its sand-scoured hide is rough, scarred and spiked, colored in sunbaked clay, with ochre markings. Its most striking feature is a round mouth ringed with crystal teeth. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

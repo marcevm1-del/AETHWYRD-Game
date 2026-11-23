@@ -11,7 +11,7 @@ tags: [monster, plants-fungi]
 ![[mon_mandrake_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mandrake_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,028 tris · 0.208 × 0.13 × 0.3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.219 × 0.129 × 0.3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Plants & Fungi/mon_mandrake.fbx`
 
 > The Mandrake is a tiny creature with a tall, tree-like walking frame, about 0.3 m tall. Its bark and leaves are weathered and natural, colored in moss green and lichen grey. Its most striking feature is a screaming root with a leafy tuft. It has alert animal eyes. It has no ornament at all: simple, readable shapes. It lopes in long strides, surrounded by drifting pollen and tiny blossoms.
 

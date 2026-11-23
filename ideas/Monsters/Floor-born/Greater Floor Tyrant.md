@@ -11,7 +11,7 @@ tags: [monster, floor-born]
 ![[mon_greater_floor_tyrant_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_floor_tyrant_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,558 tris · 10.994 × 6.642 × 12.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 16.266 × 8.22 × 12.803 m · local file `Game/Assets/_Game/Art/Models/Monsters/Floor-born/mon_greater_floor_tyrant.fbx`
 
 > The Greater Floor Tyrant is a huge creature with a giant, barrel-chested humanoid body, about 12.8 m tall. Its stone-like hide is rough, scarred and spiked, colored in rusted iron, with ochre markings. Look for a crown of stalactites. It has eyes that catch torchlight like coins. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

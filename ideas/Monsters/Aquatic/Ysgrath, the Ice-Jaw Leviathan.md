@@ -11,7 +11,7 @@ tags: [monster, aquatic, tyrant, unique]
 ![[mon_ysgrath_the_ice_jaw_leviathan_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ysgrath_the_ice_jaw_leviathan_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,488 tris · 17.799 × 45 × 21.707 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 16.116 × 45 × 28.268 m · local file `Game/Assets/_Game/Art/Models/Monsters/Aquatic/mon_ysgrath_the_ice_jaw_leviathan.fbx`
 
 > The Ysgrath, the Ice-Jaw Leviathan is a colossal creature with a streamlined aquatic body, about 45 m long. Its scales and skin are rough, scarred and spiked, colored in sea-blue. Look for jaws of blue ice that break the frozen sea from below. It has burning slit pupils. Its regal silhouette is crowned by a halo-like ring of aura. It strides with heavy steps, surrounded by falling snow motes and frosted ground where it steps.
 

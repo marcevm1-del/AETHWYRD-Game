@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_vesper_touched_tengu_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_tengu_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,198 tris · 0.874 × 1.923 × 2 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.911 × 1.654 × 2 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_vesper_touched_tengu.fbx`
 
 > The Vesper-Touched Tengu is a person-sized creature with a feathered avian body, about 2 m tall. Its form is rough, scarred and spiked, colored in indigo, with pale jade markings. Guild sketches always show crow wings, a long red mask and a feather fan. It has narrow glowing eyes. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by swirling leaves and a constant breeze. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

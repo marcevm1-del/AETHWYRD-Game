@@ -11,7 +11,7 @@ tags: [monster, demons]
 ![[mon_mud_hellhound_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_mud_hellhound_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,370 tris · 0.387 × 1.5 × 0.872 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.39 × 1.5 × 0.944 m · local file `Game/Assets/_Game/Art/Models/Monsters/Demons/mon_mud_hellhound.fbx`
 
 > The Mud Hellhound is a person-sized creature with a long-legged predatory quadruped build, about 1.5 m long. Its hide is rough, scarred and spiked, colored in char-black, with ochre markings. Guild sketches always show a dog with a furnace glow inside its ribs. It has narrow glowing eyes. A distinctive marking runs along its back. It charges without hesitation, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

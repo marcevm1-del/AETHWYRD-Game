@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_zephyr_goblin_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_zephyr_goblin_king_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,562 tris · 2.405 × 1.383 × 2.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 2.02 × 2.211 × 2.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_zephyr_goblin_king.fbx`
 
 > The Zephyr Goblin King is a large creature with a giant, barrel-chested humanoid body, about 2.8 m tall. Its skin is rough, scarred and spiked, colored in moss green and leather brown, with pale jade markings. Survivors describe throne-backed armor and a crown of hammered coins. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by swirling leaves and a constant breeze. This Wind-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

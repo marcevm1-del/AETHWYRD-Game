@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_night_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_night_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,604 tris · 0.483 × 0.483 × 0.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.455 × 0.526 × 0.4 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_night_slime.fbx`
 
 > The Night Slime is a tiny creature with a teardrop-shaped jelly body, about 0.4 m tall. Its gel is smooth and clean, colored in ink black with bruised violet. Guild sketches always show a teardrop body with a glossy highlight and two dot eyes. It has wide curious eyes with star-shaped highlights. It has no ornament at all: simple, readable shapes. It hops in little bursts, surrounded by shadows that lean toward it. This Dark-attuned variant carries one extra elemental feature, like a crest of elemental energy, in its element's colors.
 

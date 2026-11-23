@@ -11,7 +11,7 @@ tags: [monster, chimeras-mythic-beasts]
 ![[mon_cerberus_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_cerberus_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,370 tris · 1.289 × 5 × 2.908 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 19,996 tris · 2.241 × 4.999 × 3.27 m · local file `Game/Assets/_Game/Art/Models/Monsters/Chimeras & Mythic Beasts/mon_cerberus.fbx`
 
 > The Cerberus is a huge creature with a long-legged predatory quadruped build, about 5 m long. Its hide is rough, scarred and spiked, colored in brown and dark umber, with ember-orange markings. Its most striking feature is three heads with three different moods. It has eyes that catch torchlight like coins. An elegant crest and glowing veins of mana mark it as a champion of its kind. It circles its prey, surrounded by heat-shimmer and drifting sparks.
 

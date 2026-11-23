@@ -11,7 +11,7 @@ tags: [monster, killer-insects]
 ![[mon_iron_centipede_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_iron_centipede_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,742 tris · 1.221 × 6 × 3.119 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 3.129 × 6 × 2.862 m · local file `Game/Assets/_Game/Art/Models/Monsters/Killer Insects/mon_iron_centipede.fbx`
 
 > The Iron Centipede is a huge creature with a long, sinuous serpentine body, about 6 m long. Its chitin is patchy and subtly wrong, as if assembled from memory, colored in black, with ochre markings. Guild sketches always show a hundred legs and a head like a split mask. It has eyes set slightly too far apart. Battle-worn plates and trophies hang from its body. It freezes whenever it is looked at, surrounded by pebbles that tremble and float near it. This Earth-attuned variant carries one extra elemental feature, like element-scarred hide, in its element's colors.
 

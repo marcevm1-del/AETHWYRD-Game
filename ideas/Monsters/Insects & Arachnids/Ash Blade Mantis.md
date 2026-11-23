@@ -11,7 +11,7 @@ tags: [monster, insects-arachnids]
 ![[mon_ash_blade_mantis_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_ash_blade_mantis_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,294 tris · 1.819 × 2 × 1.128 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 1.831 × 1.999 × 1.005 m · local file `Game/Assets/_Game/Art/Models/Monsters/Insects & Arachnids/mon_ash_blade_mantis.fbx`
 
 > The Ash Blade Mantis is a person-sized creature with a six-legged armored body, about 2 m long. Its chitin is rough, scarred and spiked, colored in iridescent green, with ember-orange markings. Survivors describe forearms shaped like curved scythes. It has eyes that catch torchlight like coins. Battle-worn plates and trophies hang from its body. It charges without hesitation, surrounded by heat-shimmer and drifting sparks. This Fire-attuned variant carries one extra elemental feature, like crystal spikes, in its element's colors.
 

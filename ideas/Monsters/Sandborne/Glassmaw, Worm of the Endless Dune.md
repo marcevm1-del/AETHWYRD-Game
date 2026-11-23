@@ -11,7 +11,7 @@ tags: [monster, sandborne, tyrant, unique]
 ![[mon_glassmaw_worm_of_the_endless_dune_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_glassmaw_worm_of_the_endless_dune_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,584 tris · 18.634 × 70 × 26.632 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 30,000 tris · 23.858 × 70 × 34.942 m · local file `Game/Assets/_Game/Art/Models/Monsters/Sandborne/mon_glassmaw_worm_of_the_endless_dune.fbx`
 
 > The Glassmaw, Worm of the Endless Dune is a colossal creature with a massive snake-like frame, about 70 m long. Its sand-scoured hide is rough, scarred and spiked, colored in sunbaked clay, with ochre markings. Its most striking feature is a round mouth ringed with teeth of desert glass. It has burning slit pupils. An elegant crest and glowing veins of mana mark it as a champion of its kind. It strides with heavy steps, surrounded by pebbles that tremble and float near it.
 

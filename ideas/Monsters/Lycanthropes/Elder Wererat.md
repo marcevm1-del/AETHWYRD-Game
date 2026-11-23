@@ -11,7 +11,7 @@ tags: [monster, lycanthropes]
 ![[mon_elder_wererat_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_elder_wererat_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,804 tris · 0.921 × 1.695 × 2.4 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,996 tris · 1.458 × 2.411 × 2.401 m · local file `Game/Assets/_Game/Art/Models/Monsters/Lycanthropes/mon_elder_wererat.fbx`
 
 > The Elder Wererat is a person-sized creature with a lean humanoid frame, about 2.4 m tall. Its fur is patchy and subtly wrong, as if assembled from memory, colored in snow-white, with sickly green markings. Its most striking feature is a hunched rodent body with human hands. It has eyes that never blink. Battle-worn plates and trophies hang from its body. It moves in jerky stop-motion bursts, surrounded by a low toxic haze that clings to the ground. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 

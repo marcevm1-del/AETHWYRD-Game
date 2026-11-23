@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_phantom_goblin_wolf_rider_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_phantom_goblin_wolf_rider_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,108 tris · 0.351 × 0.384 × 1 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.828 × 0.747 × 1 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_phantom_goblin_wolf_rider.fbx`
 
 > The Phantom Goblin Wolf Rider is a small creature with a scrawny biped with long arms and bowed legs, about 1 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in grey-green and patched leather, with gold markings. Survivors describe a bone saddle on a snarling war-wolf mount. It has eyes set slightly too far apart. A distinctive marking runs along its back. It moves in jerky stop-motion bursts, surrounded by soft radiance and floating motes of light. Its body is translucent blue, half in the spirit world; weapons pass through it unless they are blessed or enchanted.
 

@@ -11,7 +11,7 @@ tags: [monster, yokai-inspired-spirits]
 ![[mon_vesper_touched_umbrella_spirit_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_umbrella_spirit_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,122 tris · 0.396 × 0.388 × 0.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 12,000 tris · 0.504 × 0.59 × 0.8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Yokai-Inspired Spirits/mon_vesper_touched_umbrella_spirit.fbx`
 
 > The Vesper-Touched Umbrella Spirit is a small creature with a hunched, wiry humanoid frame, about 0.8 m tall. Its form is weathered and natural, colored in lacquer red, with sea-blue markings. Survivors describe a one-eyed paper umbrella hopping on one leg. It has amber predator eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by fine mist and droplets that orbit it. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

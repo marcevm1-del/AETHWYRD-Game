@@ -11,7 +11,7 @@ tags: [monster, avians]
 ![[mon_thunderbird_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_thunderbird_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,150 tris · 3.516 × 7.736 × 8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 29,998 tris · 3.858 × 6.982 × 8 m · local file `Game/Assets/_Game/Art/Models/Monsters/Avians/mon_thunderbird.fbx`
 
 > The Thunderbird is a huge creature with a feathered avian body, about 8 m tall. Its plumage is rough, scarred and spiked, colored in blue, with electric-yellow markings. Survivors describe wings that drum thunder. It has eyes that catch torchlight like coins. Faint runes glow along its body when it fights. It charges without hesitation, surrounded by crackling arcs that jump across its body.
 

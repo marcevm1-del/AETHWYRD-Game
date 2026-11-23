@@ -11,7 +11,7 @@ tags: [monster, undead, unique]
 ![[mon_no_life_king_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_no_life_king_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (2,744 tris · 1.252 × 1.751 × 3 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 0.985 × 1.034 × 3 m · local file `Game/Assets/_Game/Art/Models/Monsters/Undead/mon_no_life_king.fbx`
 
 > The No-Life King is a large creature with a broad-shouldered humanoid build, about 3 m tall. Its flesh and bone are patchy and subtly wrong, as if assembled from memory, colored in grave-mould grey-green, with violet markings. Guild sketches always show a king of bone on a throne of a thousand skulls. It has eyes that never blink. Its presence is world-scale; the sky changes color when it appears. It glides without moving its legs, surrounded by shadows that lean toward it.
 

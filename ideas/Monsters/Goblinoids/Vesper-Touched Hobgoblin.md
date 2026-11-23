@@ -11,7 +11,7 @@ tags: [monster, goblinoids]
 ![[mon_vesper_touched_hobgoblin_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_vesper_touched_hobgoblin_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (3,036 tris · 0.751 × 0.833 × 1.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 11,994 tris · 0.977 × 0.429 × 1.801 m · local file `Game/Assets/_Game/Art/Models/Monsters/Goblinoids/mon_vesper_touched_hobgoblin.fbx`
 
 > The Vesper-Touched Hobgoblin is a person-sized creature with a broad-shouldered humanoid build, about 1.8 m tall. Its skin is patchy and subtly wrong, as if assembled from memory, colored in grey-green and patched leather, with crimson markings. Survivors describe a broad scarred chest and a helmet two sizes too small. It has eyes set slightly too far apart. A distinctive marking runs along its back. It glides without moving its legs, surrounded by a faint red mist that smells of iron. Red veins of Vesper light crawl under its skin, its eyes glow crimson, and it grows bolder under the red moon.
 

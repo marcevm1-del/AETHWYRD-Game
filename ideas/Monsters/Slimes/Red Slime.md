@@ -11,7 +11,7 @@ tags: [monster, slimes]
 ![[mon_red_slime_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_red_slime_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (1,436 tris · 0.532 × 0.532 × 0.5 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 6,000 tris · 0.563 × 0.54 × 0.5 m · local file `Game/Assets/_Game/Art/Models/Monsters/Slimes/mon_red_slime.fbx`
 
 > The Red Slime is a small creature with a dome-shaped gelatinous body, about 0.5 m tall. Its gel is weathered and natural, colored in ember reds fading to soot black. Its most striking feature is a faint ember core pulsing like a heartbeat. It has alert animal eyes. Small scars and rough edges mark it as a survivor. It prowls, surrounded by heat-shimmer and drifting sparks.
 

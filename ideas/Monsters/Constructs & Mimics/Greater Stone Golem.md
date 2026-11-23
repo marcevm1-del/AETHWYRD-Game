@@ -11,7 +11,7 @@ tags: [monster, constructs-mimics]
 ![[mon_greater_stone_golem_sheet.jpg]]
 *Blockout turnaround: front, side, back (views: `mon_greater_stone_golem_front/side/back.jpg`).*
 
-> [!note] 3D model: procedural blockout in Unity (360 tris · 4.755 × 3.072 × 4.8 m) until the AI model is generated. Prompt in `Art/Generation/monster_model_prompts.json`.
+> [!success] 3D model: generated 2026-11-22 with ascend_creatures · 20,000 tris · 4.771 × 2.096 × 4.801 m · local file `Game/Assets/_Game/Art/Models/Monsters/Constructs & Mimics/mon_greater_stone_golem.fbx`
 
 > The Greater Stone Golem is a large creature with a blocky construct body, about 4.8 m tall. Its surface is weathered and natural, colored in riveted iron, with ochre markings. Its most striking feature is a rune glowing on its back. It has dark, wary eyes. Battle-worn plates and trophies hang from its body. It stalks low to the ground, surrounded by pebbles that tremble and float near it. It is far larger than its kin, with a battle-scarred silhouette and a commanding presence; others of its kind follow it.
 
