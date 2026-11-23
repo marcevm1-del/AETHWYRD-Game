@@ -1,7 +1,9 @@
 // Anime-style toon shading for buildings and structures (13_Production/anime_building_style.md):
 // two-tone cel shading with a cool, violet-tinted shadow, a soft rim light, emission for lamps and runes, and an
-// inverted-hull ink outline. The outline pushes vertices along the smoothed normal the import step writes into the
-// vertex colour (BuildingImport.cs), so flat-shaded hard edges don't crack; meshes without it fall back to the normal.
+// inverted-hull ink outline. The outline pushes vertices along the smoothed normal the import step writes into UV3
+// (TEXCOORD3, BuildingImport.cs), so flat-shaded hard edges don't crack; meshes without it (all skinned ones) fall back
+// to the vertex normal. The vertex colour (COLOR) is albedo: characters and monsters are painted into the Blender
+// colour attribute `Col`, exported as sRGB, and multiplied into _BaseColor here (converted to linear first).
 Shader "Ascend/Toon"
 {
     Properties
@@ -53,13 +55,14 @@ Shader "Ascend/Toon"
             #pragma multi_compile_fog
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
-            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; };
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; float4 color : COLOR; };
             struct Varyings
             {
                 float4 positionCS : SV_POSITION;
                 float3 positionWS : TEXCOORD0;
                 float3 normalWS : TEXCOORD1;
                 float fogFactor : TEXCOORD2;
+                half3 albedoMul : TEXCOORD3;   // vertex colour, linear
             };
 
             Varyings Vert(Attributes v)
@@ -70,6 +73,7 @@ Shader "Ascend/Toon"
                 o.positionWS = p.positionWS;
                 o.normalWS = TransformObjectToWorldNormal(v.normalOS);
                 o.fogFactor = ComputeFogFactor(p.positionCS.z);
+                o.albedoMul = SRGBToLinear(saturate(v.color.rgb));   // FBX vertex colours arrive sRGB-encoded
                 return o;
             }
 
@@ -80,7 +84,8 @@ Shader "Ascend/Toon"
                 half ndl = dot(n, main.direction) * 0.5h + 0.5h;                       // half-Lambert
                 half lit = smoothstep(_ShadowStep - _ShadowSoftness, _ShadowStep + _ShadowSoftness, ndl * main.shadowAttenuation);
                 half3 tone = lerp(_ShadowTint.rgb, half3(1, 1, 1), lit);              // two tones: lit, or tinted shadow
-                half3 col = _BaseColor.rgb * tone * main.color + _BaseColor.rgb * SampleSH(n) * _AmbientStrength;
+                half3 albedo = _BaseColor.rgb * i.albedoMul;                            // material tint x painted vertex colour
+                half3 col = albedo * tone * main.color + albedo * SampleSH(n) * _AmbientStrength;
                 float3 view = normalize(GetWorldSpaceViewDir(i.positionWS));
                 half rim = pow(1.0h - saturate(dot(n, view)), _RimPower) * _RimColor.a * lit;
                 col += _RimColor.rgb * rim + _EmissionColor.rgb;
@@ -90,7 +95,7 @@ Shader "Ascend/Toon"
             ENDHLSL
         }
 
-        // The ink outline: back faces of a hull pushed out along the smoothed normal (vertex colour), drawn after the
+        // The ink outline: back faces of a hull pushed out along the smoothed normal (UV3), drawn after the
         // forward pass (URP draws an SRPDefaultUnlit pass for the same renderer).
         Pass
         {
@@ -104,14 +109,14 @@ Shader "Ascend/Toon"
             #pragma fragment Frag
             #pragma multi_compile_fog
 
-            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; float4 color : COLOR; };
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; float3 smoothOS : TEXCOORD3; };
             struct Varyings { float4 positionCS : SV_POSITION; float fogFactor : TEXCOORD0; };
 
             Varyings Vert(Attributes v)
             {
                 Varyings o;
-                float3 smooth = v.color.a > 0.5 ? v.color.rgb * 2.0 - 1.0 : v.normalOS;
-                if (dot(smooth, smooth) < 1e-4) smooth = v.normalOS;
+                // A missing UV channel reads as zero, so a zero-length vector means 'no smoothed normal': use the normal.
+                float3 smooth = dot(v.smoothOS, v.smoothOS) < 1e-4 ? v.normalOS : v.smoothOS;
                 float3 posOS = v.positionOS.xyz + normalize(smooth) * _OutlineWidth;
                 o.positionCS = TransformObjectToHClip(posOS);
                 o.fogFactor = ComputeFogFactor(o.positionCS.z);
