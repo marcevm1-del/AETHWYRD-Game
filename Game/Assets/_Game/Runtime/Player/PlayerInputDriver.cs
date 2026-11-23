@@ -1,3 +1,4 @@
+using Ascend.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +26,7 @@ namespace Ascend.Game
         PlayerCombat _combat;
         PlayerDefense _defense;
         LockOn _lockOn;
+        InputBuffer _buffer;
         InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion, _bag, _bestiary, _map;
         readonly InputAction[] _skillKeys = new InputAction[4];
 
@@ -34,6 +36,7 @@ namespace Ascend.Game
             _combat = GetComponent<PlayerCombat>();
             _defense = GetComponent<PlayerDefense>();
             _lockOn = GetComponent<LockOn>();
+            _buffer = new InputBuffer(AscendData.Db.Tuning);
             if (cameraTransform == null && Camera.main != null) cameraTransform = Camera.main.transform;
 
             _move = new InputAction("Move", InputActionType.Value);
@@ -79,7 +82,8 @@ namespace Ascend.Game
             bool attacking = _combat != null && _combat.IsAttacking;
             if (_defense != null && (_defense.IsHeld || _defense.IsDead) || UiModal.Any)
             {
-                // Grabbed, fallen or talking: only gravity runs.
+                // Grabbed, fallen or talking: only gravity runs. Drop buffered presses so they cannot fire when this ends.
+                _buffer.Clear();
                 if (_combat != null) _combat.Tick(dt);
                 _motor.Tick(Vector3.zero, false, false, dt);
                 return;
@@ -117,22 +121,63 @@ namespace Ascend.Game
             bool padFaceBusy = skillMode && pad != null;
             bool ultimateChord = pad != null && pad.leftStickButton.isPressed && pad.rightStickButton.isPressed;
 
-            if (!padFaceBusy && _jump.WasPressedThisFrame() && !(_combat != null && _combat.TryJumpCancel()) && !attacking) _motor.Jump();
+            // A press the current attack refuses is buffered (inputBufferSec) and fires at the first legal moment.
+            if (!padFaceBusy && _jump.WasPressedThisFrame() && !TryJump()) _buffer.Press(BufferedAction.Jump);
             if (_jump.WasReleasedThisFrame()) _motor.ReleaseJump();
             if (_lock.WasPressedThisFrame() && !ultimateChord && _lockOn != null) _lockOn.Toggle();
-            if (!padFaceBusy && _dodge.WasPressedThisFrame() && (_combat == null || _combat.TryCancelForDodge())) _motor.Dodge(world);
-            if (_defense != null) _defense.SetBlock(_block.IsPressed() && !attacking);
+            if (!padFaceBusy && _dodge.WasPressedThisFrame() && !TryDodge(world)) _buffer.Press(BufferedAction.Dodge);
+            if (_defense != null)
+            {
+                _defense.SetBlock(_block.IsPressed(), attacking, dt);
+                if (_block.WasPressedThisFrame() && attacking) _buffer.Press(BufferedAction.Block);
+            }
             if (_combat != null)
             {
                 if (!padFaceBusy && _light.WasPressedThisFrame()) _combat.Attack();
-                if (!padFaceBusy && _heavy.WasPressedThisFrame()) _combat.BeginHeavy();
-                if (_heavy.WasReleasedThisFrame()) _combat.ReleaseHeavy();
+                if (!padFaceBusy && _heavy.WasPressedThisFrame() && !_combat.BeginHeavy()) _buffer.Press(BufferedAction.Heavy);
+                if (_heavy.WasReleasedThisFrame()) _combat.ReleaseHeavy(); // a tap released before the buffered heavy fires still fires (see FireBuffered)
                 _combat.Tick(dt);
             }
+            _buffer.Tick(dt);
+            _buffer.Poll(a => FireBuffered(a, world));
             // Attacks and blocking root the player (the lunge moves them); gravity and dodges still run through the motor.
             bool rooted = (_combat != null && _combat.IsAttacking) || (_defense != null && _defense.IsBlocking);
             bool sprint = _dodge.IsPressed() && !_motor.IsDodging;
             _motor.Tick(rooted ? Vector3.zero : world, _walk.IsPressed(), sprint, dt);
+        }
+
+        bool TryJump()
+        {
+            if (_combat != null && _combat.TryJumpCancel()) return true;
+            if (_combat != null && _combat.IsAttacking) return false;
+            _motor.Jump();
+            return true;
+        }
+
+        /// <summary>Dodge if the motor allows it and the current attack permits a cancel (not during startup).</summary>
+        bool TryDodge(Vector3 world)
+        {
+            if (!_motor.CanDodge) return false;
+            if (_combat != null && !_combat.TryCancelForDodge()) return false;
+            return _motor.Dodge(world);
+        }
+
+        bool FireBuffered(BufferedAction a, Vector3 world)
+        {
+            switch (a)
+            {
+                case BufferedAction.Dodge: return TryDodge(world);
+                case BufferedAction.Jump: return TryJump();
+                case BufferedAction.Block:
+                    if ((_combat != null && _combat.IsAttacking) || _motor.IsDodging) return false;
+                    if (_block.IsPressed() && _defense != null) _defense.StampBufferedBlockPress(); // still held: a real press, just late
+                    return true;
+                case BufferedAction.Heavy:
+                    if (_combat == null || !_combat.BeginHeavy()) return false;
+                    if (!_heavy.IsPressed()) _combat.ReleaseHeavy(); // released while it waited: fire it as a tap
+                    return true;
+            }
+            return true;
         }
 
         /// <summary>The player's time step: 0 in hit-stop, real time during Flash Time, otherwise game time.</summary>

@@ -170,6 +170,12 @@ namespace Ascend.Game
             _cc.Move(worldOffset + (_cc.isGrounded ? Vector3.down * 0.05f : Vector3.zero));
         }
 
+        /// <summary>True when a dodge could start now (not mid-dodge, chain and stamina allow it).</summary>
+        public bool CanDodge => !IsDodging && _dodgeChain < _dodge.MaxChain && Stamina >= (float)_dodge.StaminaCost;
+
+        /// <summary>Spends stamina (blocking drains it, combat.md section 5); regeneration pauses as for any use.</summary>
+        public void DrainStamina(float amount) { if (amount > 0f) UseStamina(amount); }
+
         /// <summary>Gives stamina back (a perfect dodge refunds its cost: free defense).</summary>
         public void RefundStamina(float amount) => Stamina = Mathf.Min(maxStamina, Stamina + Mathf.Max(0f, amount));
 

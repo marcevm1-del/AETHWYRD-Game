@@ -39,6 +39,8 @@
  "parry": {
   "parryWindowSec": 0.12,
   "blockDamageReduction": 0.7,
+  "blockStaminaPerHit": 12,
+  "blockStaminaPerSec": 0,
   "riposteHitstopSec": 0.16
  },
  "combo": {

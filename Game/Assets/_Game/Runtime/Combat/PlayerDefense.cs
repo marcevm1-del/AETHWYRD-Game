@@ -16,7 +16,7 @@ namespace Ascend.Game
         PlayerMotor _motor;
         PlayerCombat _combat;
         CombatTuning _t;
-        double? _blockPressedAt;
+        readonly GuardState _guard = new GuardState();
 
         public int MaxHp { get; private set; } = 100;
         public int Hp { get; private set; } = 100;
@@ -53,18 +53,29 @@ namespace Ascend.Game
             };
         }
 
-        /// <summary>Block button state; a fresh press starts the parry window.</summary>
-        public void SetBlock(bool held)
+        /// <summary>Block button state; only a true press edge starts the parry window.</summary>
+        public void SetBlock(bool held) => SetBlock(held, false, 0f);
+
+        /// <summary>
+        /// Block with the button state and whether an attack suppresses the guard. Holding block through an attack or
+        /// dodge does not reopen the parry window when it ends. Optional held drain (`blockStaminaPerSec`); the guard
+        /// is down at 0 stamina.
+        /// </summary>
+        public void SetBlock(bool held, bool suppressed, float dt)
         {
-            if (held && !IsBlocking) _blockPressedAt = Time.unscaledTimeAsDouble;
-            IsBlocking = held && !_motor.IsDodging;
+            _guard.Update(held, suppressed || _motor.IsDodging, Time.unscaledTimeAsDouble);
+            IsBlocking = _guard.Blocking && _motor.Stamina > 0f;
+            if (IsBlocking && dt > 0f && _t.Parry.BlockStaminaPerSec > 0) _motor.DrainStamina((float)_t.Parry.BlockStaminaPerSec * dt);
         }
+
+        /// <summary>A block press buffered during an attack fired at its first legal moment: opens the parry window now.</summary>
+        public void StampBufferedBlockPress() => _guard.StampBufferedPress(Time.unscaledTimeAsDouble);
 
         public DefenseResult ReceiveAttack(int rawDamage, Telegraph telegraph, MonsterDummy attacker = null)
         {
             if (IsDead) return DefenseResult.Dodged; // nothing more can happen to a fallen player
             var r = DefenseJudge.Resolve(telegraph, Time.unscaledTimeAsDouble, _motor.DodgeStartedAt, _motor.IsInvulnerable,
-                _blockPressedAt, IsBlocking, _t.Dodge, _t.Parry);
+                _guard.PressedAt, IsBlocking, _t.Dodge, _t.Parry, _motor.Stamina > 0f);
             int taken = DefenseJudge.DamageTaken(r, rawDamage, _t.Parry);
             Hp = Mathf.Max(0, Hp - taken);
             if (taken > 0 && _combat != null) _combat.Caster.GainAwakeningFromDamage(taken, MaxHp);
@@ -77,7 +88,7 @@ namespace Ascend.Game
                     CombatFx.Play(CombatFx.Sfx.PerfectDodge, transform.position);
                     break;
                 case DefenseResult.Parried:
-                    _blockPressedAt = null; // one parry per press
+                    _guard.ConsumeParry(); // one parry per press
                     if (attacker != null) attacker.Stagger(transform.position);
                     if (_combat != null) { _combat.OpenRiposte(); _combat.Style.RegisterEvent(StyleEvent.Parry); }
                     HitStop.Trigger((float)_t.Hitstop.Medium);
@@ -87,6 +98,7 @@ namespace Ascend.Game
                     CameraShake.Kick(HitWeight.Medium);
                     break;
                 case DefenseResult.Blocked:
+                    _motor.DrainStamina((float)_t.Parry.BlockStaminaPerHit); // combat.md section 5: block drains stamina; at 0 the next block fails
                     CameraShake.Kick(HitWeight.Light);
                     CombatFx.Play(CombatFx.Sfx.Block, transform.position);
                     CombatFx.Rumble(HitWeight.Light);
@@ -108,7 +120,7 @@ namespace Ascend.Game
         }
 
         /// <summary>Back to full health (respawn).</summary>
-        public void Revive() { Hp = MaxHp; _heldUntil = -1f; IsBlocking = false; }
+        public void Revive() { Hp = MaxHp; _heldUntil = -1f; IsBlocking = false; _guard.Reset(); }
 
         public void Heal(int amount) => Hp = Mathf.Min(MaxHp, Hp + Mathf.Max(0, amount));
     }

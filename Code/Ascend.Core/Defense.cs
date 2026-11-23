@@ -24,21 +24,25 @@ namespace Ascend.Core
         /// <param name="invulnerableAtHit">Whether the player is inside dodge i-frames at hitTime.</param>
         /// <param name="blockPress">When block was last pressed, or null.</param>
         /// <param name="blocking">Whether block is held at hitTime.</param>
+        /// <param name="guardHolds">False when the guard has no stamina left: a held block then fails and the hit lands (red and gold are unaffected).</param>
         public static DefenseResult Resolve(Telegraph telegraph, double hitTime, double? dodgeStart, bool invulnerableAtHit,
-            double? blockPress, bool blocking, DodgeTuning dodge, ParryTuning parry)
+            double? blockPress, bool blocking, DodgeTuning dodge, ParryTuning parry, bool guardHolds = true)
         {
             if (invulnerableAtHit && dodgeStart.HasValue)
                 return hitTime - dodgeStart.Value <= dodge.PerfectDodgeWindowSec ? DefenseResult.PerfectDodge : DefenseResult.Dodged;
             bool parryable = telegraph == Telegraph.Blue || telegraph == Telegraph.None;
             if (parryable && blockPress.HasValue && hitTime >= blockPress.Value && hitTime - blockPress.Value <= parry.ParryWindowSec)
                 return DefenseResult.Parried;
-            if (blocking)
+            if (blocking && guardHolds)
             {
                 if (telegraph == Telegraph.Gold) return DefenseResult.Grabbed;
                 if (parryable) return DefenseResult.Blocked;
             }
             return telegraph == Telegraph.Gold ? DefenseResult.Grabbed : DefenseResult.Hit;
         }
+
+        /// <summary>Stamina left after a blocked hit drains its cost (never below 0). At 0 the next block fails.</summary>
+        public static double StaminaAfterBlockedHit(double stamina, ParryTuning parry) => Math.Max(0, stamina - parry.BlockStaminaPerHit);
 
         /// <summary>Damage taken after the defence result (blocked hits are reduced by `blockDamageReduction`).</summary>
         public static int DamageTaken(DefenseResult r, int raw, ParryTuning parry)
@@ -50,6 +54,33 @@ namespace Ascend.Core
                 default: return 0;
             }
         }
+    }
+
+    /// <summary>
+    /// Block button state. The parry window opens only on a true press edge (or a buffered press that fires), never
+    /// because a held block became active again after an attack or dodge ended. Engine-free.
+    /// </summary>
+    public sealed class GuardState
+    {
+        bool _prevHeld;
+        public bool Blocking { get; private set; }
+        /// <summary>When the parry window opened, or null.</summary>
+        public double? PressedAt { get; private set; }
+
+        /// <param name="held">Block button held.</param>
+        /// <param name="suppressed">Attacking or dodging: the guard is down but the button state is still tracked.</param>
+        public void Update(bool held, bool suppressed, double now)
+        {
+            // A press while attacking or dodging opens no window (no parrying mid-swing); a buffered press stamps later via StampBufferedPress.
+            if (held && !_prevHeld && !suppressed) PressedAt = now;
+            _prevHeld = held;
+            Blocking = held && !suppressed;
+        }
+
+        /// <summary>A buffered block press fired at its first legal moment: opens the parry window then.</summary>
+        public void StampBufferedPress(double now) => PressedAt = now;
+        public void ConsumeParry() => PressedAt = null;
+        public void Reset() { _prevHeld = false; Blocking = false; PressedAt = null; }
     }
 
     /// <summary>
