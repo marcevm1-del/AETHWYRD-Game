@@ -6,6 +6,8 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| Branch backup and the PC tidy-up | The 19 local-only branches pushed to GitHub as backups (19 of 19 verified, none merged). New branch `agent/producer/fresh-clone-fixes` (pushed, not merged): the 680-species `monster_models.json`, three missing `.meta` files, the never-committed `encounters.schema.json`, a quest audit doc, and Codex config ignored. The PC's working checkout: three regenerated files discarded (copies kept), two duplicate `.cs` removed, `main` fast-forwarded 82 commits to `8e6bc72c` | 770 |
+| Owner decisions and the art tier | `studio/m1-audit`: decisions D-02 to D-07 recorded; `art_direction.md` §12 low-poly tier (hero 15k, NPC 10k); `update_and_verify.ps1` stops on a dirty tree; local-work inventory | 770 |
 | Studio records and the M1 audit | Branch `studio/m1-audit`, pushed, not merged. Six read-only specialist audits of `main @ 8e6bc72c`, consolidated in `13_Production/studio/`: the audit (design figures vs data, implementation matrix, ten conflicting recommendations, roadmap), a proposed agent registry, a decision log and next actions. **No code, data or scene changed.** Unity was not run, so the latest PlayMode figure is still the 2026-11-13 run on a dirty tree | 770 |
 
 ## 2026-11-14

@@ -20,10 +20,26 @@ _Last updated 2026-11-23 by the executive overseer session._
   2. Run `git status` and `git log` in both checkouts.
   3. Check what the owner approved from the local-work inventory.
 
+## Done after the inventory (owner approved 2026-11-23)
+- The 19 local-only branches are pushed to GitHub as backups: 19 of 19 verified, none merged.
+- `agent/producer/fresh-clone-fixes` is pushed (`de9014c7`), not merged. It holds:
+  - `monster_models.json` (680 species)
+  - `Editor/Audio.meta`, `MonsterMaterialPostprocessor.cs.meta`, `ReimportMonsters.cs.meta`
+  - `encounters.schema.json`
+  - the quest audit
+  - `.gitignore` entries for `/.agents/`, `/.codex/`, `/AGENTS.md`
+- Working checkout `E:\Ideas\Project-Ascend`:
+  - The 3 regenerated files were discarded. Copies are in the session scratchpad, which is temporary.
+  - The 2 duplicate `.cs` files were deleted.
+  - `main` was fast-forwarded to `8e6bc72c`, and the LFS files are present.
+  - Still untracked there, and identical to the branch: the keeper files. Delete them before fast-forwarding past that branch's merge, or git will refuse.
+- The clean clone's `origin` now points at `marcevm1-del/AETHWYRD-Game`. The working checkout's remote `aetheria` still uses the old URL, which redirects.
+- **Approved branch plan (inventory "Suggested order"):** PRs go out in that order once `gh` works. The `library-shelf` Canon row L7 edit is flagged for the owner in its PR.
+
 ## Waiting on the owner
-1. **`gh`:** run `winget install GitHub.cli`, then `gh auth login` (D-07).
-2. **Local-work inventory (D-05):** approve merge, keep or archive for each item once the read-only inventory is presented.
-3. **Unity baseline:** run `Tools/pc/update_and_verify.cmd` on a clean tree once the working checkout is sorted out.
+1. **`gh`:** run `winget install GitHub.cli`, then `gh auth login` (D-07). This unblocks the PRs.
+2. **Unity baseline:** run `Tools/pc/update_and_verify.cmd`. The working checkout is still not clean (keeper files, `Resources/`, Codex config), so the script will stop until the fresh-clone branch merges or `-AllowDirty` is used.
+3. **`Resources/` (1 GB):** not gitignored. The owner did not approve ignoring it, so it stays as it is until they decide.
 
 ## Ready for agents (Phase 0), each on its own `agent/*` branch and PR (D-07)
 | Task | Lead role | Depends on |

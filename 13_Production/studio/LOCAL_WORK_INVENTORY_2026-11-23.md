@@ -2,6 +2,15 @@
 
 This is a read-only review by Agent 07 (QA) of the owner's working checkout `E:\Ideas\Project-Ascend` and its 19 unmerged local branches. Nothing was changed: `git status` was identical before and after. The owner approves each group below before anything happens. "Not assessed" means the agent could not check it.
 
+## Owner approval, 2026-11-23
+- **Approved and done:**
+  - Branch backup: 19 of 19 verified on GitHub.
+  - Checkout tidy and fast-forward to `8e6bc72c`.
+  - Keepers moved to `agent/producer/fresh-clone-fixes`.
+  - Codex config ignored.
+- **Approved for later:** the Part B branch plan, as PRs once `gh` works.
+- **Not approved:** ignoring `/Resources/`. It stays untracked and unignored.
+
 ## Key facts
 - **Fast-forward is possible.** Local `main` (`8a81418e`) is a strict ancestor of GitHub `main` (`8e6bc72c`), 82 commits back. The only blockers are two untracked `.cs` files that are blob-identical to files on `main`.
 - **None of the 19 branches exists on GitHub.** They live only on this PC, so back them up before any cleanup.
