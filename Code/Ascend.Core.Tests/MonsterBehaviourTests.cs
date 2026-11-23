@@ -117,7 +117,7 @@ static class MonsterBehaviourTests
         Assert.True(b.IsStalker, "stalker suffix is read");
         double d = alert * 0.9;
         // A lone, healthy player right in front of it: it trails and never attacks, however long.
-        for (int i = 0; i < 60 * 20; i++)
+        for (int i = 0; i < 60 * 7; i++)
         {
             var c = b.Tick(Dt, S(1.5)); if (i == 0) continue; // first tick leaves Idle
             Assert.True(!c.StrikeNow, "uncommitted stalker never strikes a lone healthy player");
@@ -139,6 +139,16 @@ static class MonsterBehaviourTests
         hit.Tick(Dt, S(1.2));
         hit.Tick(Dt, S(1.2, hp: 0.9));
         Assert.True(Strikes(hit, _ => S(1.2, hp: 0.9), 6), "commits once hit");
+    }
+
+    public static void ALoneStalkerBesideAHealthyIdlePlayerStillAttacksWithinTheTrailCap()
+    {
+        string id = Repo.Db.Motion.Values.Where(m => (m.Behavior.AiPattern ?? "").StartsWith("aggressive_chase+stalker"))
+            .Select(m => m.SpeciesId).First(i => BrainOf(i).Attacks.Count > 0 && !Repo.Db.Species[i].IsUnique && !Repo.Db.Species[i].IsTyrant);
+        var b = BrainOf(id);
+        Assert.True(Strikes(b, _ => S(1.2, playerHp: 1.0), MonsterBrain.StalkMaxTrailSec + 3), "a lone stalker commits after the trail cap");
+        var boss = Repo.Db.Motion.Values.Select(m => m.SpeciesId).FirstOrDefault(i => Repo.Db.Motion[i].Behavior.AiPattern == "aggressive_chase+stalker" && BrainOf(i).Attacks.Count > 0 && (Repo.Db.Species[i].IsUnique || Repo.Db.Species[i].IsTyrant));
+        if (boss != null) Assert.True(Strikes(BrainOf(boss), _ => S(1.2, playerHp: 1.0), 6), "a unique or tyrant stalker does not trail");
     }
 
     public static void NonStalkersAreUnchangedByTheNewPatterns()

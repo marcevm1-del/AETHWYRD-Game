@@ -166,9 +166,12 @@ namespace Ascend.Core
         /// <summary>A stalker commits once the player's HP fraction drops below this.</summary>
         public const double StalkCommitPlayerHp = 0.5;
         /// <summary>A stalker trails at this fraction of its alert radius (at least StalkMinTrailM), within a +-StalkBandM band.</summary>
+        /// <summary>A stalker that has trailed this long without another trigger commits anyway: a lone stalker must not trail forever.</summary>
+        public const double StalkMaxTrailSec = 8.0;
         public const double StalkTrailFrac = 0.6, StalkMinTrailM = 3.0, StalkBandM = 0.5;
 
         bool _engaged;        // provoked (hit, called, staggered): passive monsters fight, stalkers commit; cleared on returning to Idle
+        double _trailed;      // stalker: seconds spent trailing without committing; reset with _committed
         bool _committed;      // stalker: the commit condition was met; stays until Idle
         bool _opening = true; // ambusher: the opening strike is still owed
         double _lastHp = -1;
@@ -294,13 +297,16 @@ namespace Ascend.Core
                     {
                         bool busyPlayer = Math.Max(s.PackmatesNear, s.AlliesNear) > 0;
                         bool hurtPlayer = s.PlayerHpFraction > 0 && s.PlayerHpFraction < StalkCommitPlayerHp;
-                        if (_engaged || busyPlayer || hurtPlayer) _committed = true;
+                        // AlliesNear/PackmatesNear count monsters near THIS one: only a proxy for "the player is busy".
+                        // Uniques and tyrants never trail; everyone else commits after StalkMaxTrailSec at the latest.
+                        if (_engaged || busyPlayer || hurtPlayer || _species.IsUnique || _species.IsTyrant || _trailed >= StalkMaxTrailSec) _committed = true;
                     }
                     if (IsStalker && !_committed && !(IsAmbush && _opening))
                     {
                         if (State == AiState.Reposition) Enter(AiState.Chase);
                         double trail = Math.Min(Math.Max(StalkMinTrailM, b.AlertRadius * StalkTrailFrac), Math.Max(b.AlertRadius, StalkMinTrailM));
                         double d = s.DistanceToPlayer;
+                        _trailed += dt;
                         cmd.ReleaseToken = true;
                         double slow = nav.WalkSpeed > 0 ? nav.WalkSpeed : nav.Speed * 0.4;
                         if (d > trail + StalkBandM) { cmd.Move = AiMove.Toward; cmd.Speed = nav.Speed; }
@@ -381,7 +387,7 @@ namespace Ascend.Core
         void Enter(AiState s)
         {
             State = s; _stateTime = 0;
-            if (s == AiState.Idle) { _engaged = false; _committed = false; _opening = true; }
+            if (s == AiState.Idle) { _engaged = false; _committed = false; _trailed = 0; _opening = true; }
         }
     }
 }
