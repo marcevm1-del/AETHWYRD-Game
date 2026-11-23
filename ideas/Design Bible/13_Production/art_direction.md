@@ -1,6 +1,6 @@
 # Art Direction: the AETHWYRD Style Guide
 
-> **Owner:** anime-fantasy-director. **Status:** v1.1, 2026-10-31 (adds §3.1 contact-sheet preview standard; Umbravel lantern and water-key notes in §4.2). Every art, shader, UI and bestiary agent builds to this page. When it disagrees with a tool's defaults, this page wins. When it disagrees with `Canon.md`, Canon wins and this page is the bug.
+> **Owner:** anime-fantasy-director. **Status:** v1.2, 2026-11-23 (adds §12, the owner's low-poly production tier, D-03). v1.1, 2026-10-31 (adds §3.1 contact-sheet preview standard; Umbravel lantern and water-key notes in §4.2). Every art, shader, UI and bestiary agent builds to this page. When it disagrees with a tool's defaults, this page wins. When it disagrees with `Canon.md`, Canon wins and this page is the bug.
 > **Sources:** Canon §1 (bright, flowing, Genshin-style cel-shaded anime; teen; no fanservice; warmth over comedy) · [[anime_building_style]] · [[building_system]] · [[creature_system]] · `12_Systems/hud_and_ui.md` · `08_Bestiary/monster_motion_bible.md` · `Tools/blender/ascend_buildings/styles.py`.
 > **Latest review:** `reports/design_review_2026-10-31.md` (previous: `reports/design_review_2026-10-25.md`).
 
@@ -243,3 +243,36 @@ The System window is the genre's most recognisable furniture. It should feel lik
 5. Region family materials on every prop (§4.2).
 6. Rendered once with `Ascend/Toon` and outlines before sign-off (contact sheets without outlines are previews, not approval).
 7. Passes `13_Production/style_consistency_checklist.md` (characters, outfits, screens: sections A to E), with every line PASS, FAIL or NOT ASSESSED; a line not looked at is never PASS.
+8. Its game mesh is inside its row in §12 at LOD0.
+
+---
+
+## 12. Production tier: stylized low-poly (owner decision D-03, 2026-11-23)
+
+The owner set the production art path on 2026-11-23 (`13_Production/studio/DECISION_LOG.md` D-03).
+
+**The rules**
+- **Look:** stylized low-poly anime fantasy, cel-shaded with outlines. Everything in §1 to §11 still applies.
+- **Canon:** Canon §1 ("Genshin-style cel-shaded") is unchanged. "Cel-shaded" names the shading; this tier sets the polycount.
+- **Authoring:** every in-game mesh is authored directly at its budget, the way the Brindlewick town kit was built. A model is not made high-poly and baked down afterwards.
+- **Blender generators:** the high-poly building and creature generators (`building_system.md`, `creature_system.md`) are now for reference, concepts and silhouette studies only. They are not the path to game meshes.
+- **Priority:** a readable silhouette and flat colour come before surface detail. If a shape does not read at 25 % size in greyscale (§11.1), more triangles will not save it.
+
+**Budgets.** These are ceilings at LOD0. Lower is welcome when the silhouette still reads.
+
+| Asset | LOD0 ceiling | Source |
+|---|---|---|
+| Hero (the player) | **15,000** (aim 8,000–15,000) | new; replaces 30k |
+| Named NPC or companion | **10,000** (aim 6,000–10,000) | new; replaces 15k |
+| Background townsfolk | 6,000 | new |
+| Trash monster | 6,000 (small trash: 3,000) | `art_budgets.md`, unchanged |
+| Elite monster | 10,000 | `art_budgets.md`, unchanged |
+| Boss / giant | 25,000 / 40,000 | `art_budgets.md`, unchanged |
+| Buildings: small / medium | 1,500 / 8,000 | `art_budgets.md`, unchanged |
+| Buildings: large / landmark | 15,000 / 30,000 (exceptions, one or two per view) | `art_budgets.md`, unchanged |
+| Weapon (held) | 1,500 | new |
+| Props | as in `art_budgets.md` (50–10,000 by class) | unchanged |
+
+**Known gaps this creates (work, not exceptions):**
+- **Human bodies:** they currently measure about 21,000–33,000 triangles (`character_system.md`). The art gate's cap is 36,000 (`Tools/art_gate`). Both must come down to the hero and NPC rows above. Owners: the character work and the gate.
+- **Other docs:** `art_budgets.md` and `character_system.md` still give the old human figures. They should point here.
