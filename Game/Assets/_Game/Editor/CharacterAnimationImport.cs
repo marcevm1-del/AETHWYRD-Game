@@ -84,7 +84,48 @@ namespace Ascend.EditorTools
 
         // ---------------------------------------------------------------- the import
 
-        public static void Run()
+        /// <summary>Batch entry point: imports in order, prints the report and exits non-zero on failure.</summary>
+        public static void Run() => Execute(true);
+
+        /// <summary>
+        /// For the scene build: makes sure the body and clips are imported as Humanoid, in order, without exiting
+        /// the Editor. Returns true only when the whole import checked out; the reason is in
+        /// <paramref name="problem"/> otherwise. A clone without Git LFS content (FBX still a pointer file) returns
+        /// false quietly-by-design so the caller can fall back to the placeholder body.
+        /// </summary>
+        public static bool EnsureImported(out string problem)
+        {
+            problem = null;
+            var root = Path.GetDirectoryName(Application.dataPath) ?? ".";
+            var body = Path.Combine(root, CharacterModelPostprocessor.SourceBodyPath);
+            if (!File.Exists(body) || new FileInfo(body).Length < 1024)
+            {
+                problem = "the body FBX is absent or a Git LFS pointer (run git lfs pull, or python Tools/unity/stage_character_art.py)";
+                return false;
+            }
+            if (AlreadyImported()) return true;
+            if (Execute(false)) return true;
+            problem = "the Humanoid import report says FAIL; see the [char-anim] lines above";
+            return false;
+        }
+
+        /// <summary>The cheap yes: body avatar valid and Human, and every manifest clip loads as human motion.</summary>
+        static bool AlreadyImported()
+        {
+            var avatar = AssetDatabase.LoadAssetAtPath<Avatar>(CharacterModelPostprocessor.SourceBodyPath);
+            if (avatar == null || !avatar.isValid || !avatar.isHuman) return false;
+            var manifest = LoadManifest(out _);
+            if (manifest == null) return false;
+            foreach (var entry in manifest.clips)
+            {
+                var clip = AssetDatabase.LoadAllAssetsAtPath(CharacterModelPostprocessor.ClipDir + "/" + entry.name + ".fbx")
+                                        .OfType<AnimationClip>().FirstOrDefault(c => !c.name.StartsWith("__preview__"));
+                if (clip == null || !clip.humanMotion) return false;
+            }
+            return true;
+        }
+
+        static bool Execute(bool exitInBatchMode)
         {
             var report = new List<string>();
             var failures = new List<string>();
@@ -93,8 +134,7 @@ namespace Ascend.EditorTools
             var manifest = LoadManifest(out var manifestProblem);
             if (manifest == null)
             {
-                Finish(report, new List<string> { manifestProblem }, notAssessed);
-                return;
+                return Finish(report, new List<string> { manifestProblem }, notAssessed, exitInBatchMode);
             }
             report.Add("manifest: " + manifest.clips.Count + " clips, rig contract " + manifest.rigContract
                        + ", authored on " + manifest.authoredOn);
@@ -105,8 +145,7 @@ namespace Ascend.EditorTools
             {
                 failures.Add("the body is not staged at " + bodyPath
                              + " - run python Tools/unity/stage_character_art.py");
-                Finish(report, failures, notAssessed);
-                return;
+                return Finish(report, failures, notAssessed, exitInBatchMode);
             }
 
             var bodyImporter = AssetImporter.GetAtPath(bodyPath) as ModelImporter;
@@ -119,8 +158,7 @@ namespace Ascend.EditorTools
             if (bodyImporter == null)
             {
                 failures.Add("Unity produced no ModelImporter for " + bodyPath + ", so the avatar could not be built");
-                Finish(report, failures, notAssessed);
-                return;
+                return Finish(report, failures, notAssessed, exitInBatchMode);
             }
 
             CharacterModelPostprocessor.ApplyBodyRig(bodyImporter);
@@ -132,7 +170,7 @@ namespace Ascend.EditorTools
             else if (!avatar.isHuman) failures.Add("the avatar from " + bodyPath + " is valid but not Human");
             else report.Add("avatar: " + avatar.name + " valid=true human=true");
 
-            if (failures.Count > 0) { Finish(report, failures, notAssessed); return; }
+            if (failures.Count > 0) return Finish(report, failures, notAssessed, exitInBatchMode);
 
             // --- 2. the clips, each copying that avatar.
             foreach (var entry in manifest.clips)
@@ -253,7 +291,7 @@ namespace Ascend.EditorTools
                             + "authored pose, not that walking reads as walking. Capture frames and look at them "
                             + "(HumanoidLocomotionCapture), then record a verdict.");
 
-            Finish(report, failures, notAssessed);
+            return Finish(report, failures, notAssessed, exitInBatchMode);
         }
 
         /// <summary>
@@ -342,7 +380,7 @@ namespace Ascend.EditorTools
 
         // ---------------------------------------------------------------- report
 
-        static void Finish(List<string> report, List<string> failures, List<string> notAssessed)
+        static bool Finish(List<string> report, List<string> failures, List<string> notAssessed, bool exitInBatchMode)
         {
             var sb = new System.Text.StringBuilder();
             sb.AppendLine("[char-anim] ---- humanoid import report ----");
@@ -360,7 +398,8 @@ namespace Ascend.EditorTools
             else Debug.Log(sb.ToString());
 
             AssetDatabase.SaveAssets();
-            if (Application.isBatchMode) EditorApplication.Exit(failures.Count > 0 ? 1 : 0);
+            if (exitInBatchMode && Application.isBatchMode) EditorApplication.Exit(failures.Count > 0 ? 1 : 0);
+            return failures.Count == 0;
         }
     }
 }
