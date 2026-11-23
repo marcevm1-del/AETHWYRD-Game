@@ -15,16 +15,25 @@ namespace Ascend.EditorTools
     {
         const string ScenePath = "Assets/_Game/Scenes/Ring0_Graybox.unity";
         const string TitleScenePath = "Assets/_Game/Scenes/Title.unity";
-        static readonly string[] DataFiles =
+        // One rule instead of a hand-kept list: every Data/**/*.json is shipped except what is excluded below.
+        // Tools/validate/data_manifest_check.js (part of `npm run build`) reads these two arrays and fails when a
+        // Data path the runtime reads is excluded or missing, so the player cannot silently drift from the editor.
+        // Excluding costs nothing to maintain only while the list stays short: give every entry a reason.
+        static readonly string[] ExcludedDataDirs =
         {
-            "World/regions.json", "World/world_tuning.json", "World/siege_waves.json", "World/inns.json", "World/guild_ranks.json", "World/gathering.json",
-            "Monsters/species.json", "Monsters/attacks.json", "Monsters/loot_tables.json", "Monsters/motion.json", "Monsters/boss_phases.json",
-            "Items/items.json", "Items/materials.json", "Items/shops.json", "Items/recipes.json", "Combat/combat_tuning.json",
-            "Quests/quests.json", "Quests/story_flags.json", "Quests/weekly_board.json",
-            "NPCs/npcs.json", "Classes/classes.json", "Classes/progression.json",
-            "Audio/accessibility.json", "Audio/music_states.json", "Audio/photo_mode.json", "Companions/companion_rules.json", "Companions/companions.json", "Companions/mounts.json", "Companions/stables.json", "Items/crafting_rules.json", "Items/crops.json", "Items/gear_rules.json", "Items/life_skills.json", "World/civilization_archive.json", "World/dungeons.json", "World/housing.json", "World/labyrinth.json", "World/living_world.json", "World/puzzles.json",
-            "Characters/player_appearance.json", "UI/loading_tips.json",
+            "Schemas", // JSON-schema files for the validator, never read by the game
         };
+        static readonly string[] ExcludedDataFiles =
+        {
+            // "World/physical_map.json", // example: add a path (relative to Data/, forward slashes) with a reason here
+        };
+
+        static bool IsExcluded(string rel)
+        {
+            foreach (var d in ExcludedDataDirs) if (rel.StartsWith(d + "/")) return true;
+            foreach (var f in ExcludedDataFiles) if (rel == f) return true;
+            return false;
+        }
 
         [MenuItem("Assets/Ascend/Build Ring 0 Player (Windows)")]
         public static void BuildRing0Menu() => Build(false);
@@ -42,12 +51,17 @@ namespace Ascend.EditorTools
             BuildReport report = null;
             try
             {
-                foreach (var rel in DataFiles)
+                int copied = 0; long bytes = 0;
+                foreach (var file in Directory.GetFiles(repoData, "*.json", SearchOption.AllDirectories))
                 {
+                    string rel = Path.GetRelativePath(repoData, file).Replace('\\', '/');
+                    if (IsExcluded(rel)) continue;
                     string dst = Path.Combine(streamingData, rel);
                     Directory.CreateDirectory(Path.GetDirectoryName(dst));
-                    File.Copy(Path.Combine(repoData, rel), dst, true);
+                    File.Copy(file, dst, true);
+                    copied++; bytes += new FileInfo(file).Length;
                 }
+                Debug.Log($"[Ascend] Data copied to StreamingAssets: {copied} files, {bytes / (1024f * 1024f):0.0} MB");
                 AssetDatabase.Refresh();
                 Directory.CreateDirectory(outDir);
                 // Title first (scene 0), then the field. The title scene is built by TitleSceneBuilder.BuildBatch; without it the build is Ring 0 only.
