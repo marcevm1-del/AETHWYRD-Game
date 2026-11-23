@@ -101,16 +101,20 @@ namespace Ascend.Game.Tests
             var tuning = AscendData.Db.World.Map;
             var heard = tuning.StartHeard.ToList();
             tuning.StartHeard.Remove("reg_aldmere");
+            // The starter quests are Whisperwood's, and you start in (Visited) Whisperwood, so file one under Aldmere for this test only.
+            var quest = AscendData.Db.Quests["qst_gld_f_rabbit_season"];
+            var region = quest.Region;
+            quest.Region = "reg_aldmere";
             try
             {
                 MakePlayer();
                 yield return null;
                 Assert.AreEqual(MapStatus.Unknown, _map.Knowledge.StatusOf("reg_aldmere"));
-                Assert.IsTrue(_player.GetComponent<PlayerQuests>().Accept(AscendData.Db.Quests["qst_gld_f_rabbit_season"]));
+                Assert.IsTrue(_player.GetComponent<PlayerQuests>().Accept(quest));
                 Assert.AreEqual(MapStatus.Heard, _map.Knowledge.StatusOf("reg_aldmere"), "the quest's land is pencilled in");
                 Assert.IsTrue(_player.GetComponent<PlayerInventory>().Toasts.Any(t => t.Contains("Aldmere pencilled in")), "and a toast says so");
             }
-            finally { tuning.StartHeard.Clear(); tuning.StartHeard.AddRange(heard); }
+            finally { quest.Region = region; tuning.StartHeard.Clear(); tuning.StartHeard.AddRange(heard); }
         }
 
         [UnityTest]
