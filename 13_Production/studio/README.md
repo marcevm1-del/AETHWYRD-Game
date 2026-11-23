@@ -11,9 +11,10 @@ This folder adds to the existing production records and does not replace them:
 | File | What it holds | Status |
 |---|---|---|
 | [M1_AUDIT_2026-11-23.md](M1_AUDIT_2026-11-23.md) | Milestone 1 technical audit: design figures vs data, the implementation matrix, 10 conflicting recommendations, the roadmap and open decisions | Final for `main @ 8e6bc72c` |
-| [AGENT_REGISTRY.md](AGENT_REGISTRY.md) | Directive roles mapped to existing agents, with requested model and effort, and the runtime facts | Proposed, awaiting owner |
+| [AGENT_REGISTRY.md](AGENT_REGISTRY.md) | Directive roles mapped to existing agents, with requested model and effort, and the runtime facts | Approved (D-02) |
 | [DECISION_LOG.md](DECISION_LOG.md) | Owner decisions with date and source | Live |
 | [NEXT_ACTIONS.md](NEXT_ACTIONS.md) | What waits on the owner, what agents may start, and the session handoff | Live |
+| [LOCAL_WORK_INVENTORY_2026-11-23.md](LOCAL_WORK_INVENTORY_2026-11-23.md) | Read-only review of the working checkout and its 19 unmerged branches, with per-item recommendations (D-05) | Awaiting owner approval |
 
 ## Rules for the overseer
 - Never present a design figure, concept or self-reported result as built or tested. Use the status words from the audit: Designed, Data-only, Code, Tested, In-build.
