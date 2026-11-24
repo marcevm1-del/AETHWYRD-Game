@@ -27,7 +27,7 @@ namespace Ascend.Game
         PlayerDefense _defense;
         LockOn _lockOn;
         InputBuffer _buffer;
-        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion, _bag, _bestiary, _map;
+        InputAction _move, _dodge, _walk, _jump, _light, _heavy, _heavyMod, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion, _bag, _bestiary, _map;
         readonly InputAction[] _skillKeys = new InputAction[4];
 
         void Awake()
@@ -42,33 +42,47 @@ namespace Ascend.Game
             _move = new InputAction("Move", InputActionType.Value);
             _move.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/w").With("Down", "<Keyboard>/s").With("Left", "<Keyboard>/a").With("Right", "<Keyboard>/d");
             _move.AddBinding("<Gamepad>/leftStick");
-            _dodge = Button("Dodge", "<Keyboard>/leftShift", "<Gamepad>/buttonEast");
+            _dodge = Button("Dodge", "<Keyboard>/space", "<Gamepad>/buttonEast");
             _walk = Button("Walk", "<Keyboard>/leftAlt");
-            _jump = Button("Jump", "<Keyboard>/space", "<Gamepad>/buttonSouth");
-            _light = Button("Light", "<Mouse>/leftButton", "<Gamepad>/buttonWest");
-            _heavy = Button("Heavy", "<Mouse>/rightButton", "<Gamepad>/buttonNorth");
-            _block = Button("Block", "<Keyboard>/q", "<Gamepad>/rightTrigger");
-            _lock = Button("LockOn", "<Mouse>/middleButton", "<Gamepad>/rightStickPress");
-            _skillMod = Button("SkillModifier", "<Gamepad>/rightShoulder");
-            _ultimate = Button("Ultimate", "<Keyboard>/r");
+            _jump = Button("Jump", "<Keyboard>/f", "<Gamepad>/buttonSouth");
+            _light = Button("Light", "<Mouse>/leftButton", "<Gamepad>/rightShoulder");
+            _heavy = Button("Heavy", "<Gamepad>/rightTrigger");
+            _heavy.AddCompositeBinding("OneModifier").With("Modifier", "<Keyboard>/leftShift").With("Binding", "<Mouse>/leftButton");
+            _heavyMod = Button("HeavyModifier", "<Keyboard>/leftShift");
+            _block = Button("Block", "<Mouse>/rightButton", "<Gamepad>/leftShoulder");
+            _lock = Button("LockOn", "<Keyboard>/q", "<Mouse>/middleButton", "<Gamepad>/rightStickPress");
+            _skillMod = Button("SkillModifier", "<Gamepad>/leftTrigger");
+            _ultimate = Button("Ultimate", "<Keyboard>/x");
             _l3 = Button("L3", "<Gamepad>/leftStickPress");
             _bomb = Button("QuickItem", "<Keyboard>/g", "<Gamepad>/dpad/up");
-            _interact = Button("Interact", "<Keyboard>/e", "<Gamepad>/dpad/down");
-            _potion = Button("Potion", "<Keyboard>/h", "<Gamepad>/dpad/right");
-            _bag = Button("Bag", "<Keyboard>/i", "<Gamepad>/start");
+            _interact = Button("Interact", "<Keyboard>/e", "<Gamepad>/buttonNorth");
+            _potion = Button("Potion", "<Keyboard>/r", "<Gamepad>/buttonWest");
+            _bag = Button("Bag", "<Keyboard>/i", "<Gamepad>/dpad/right");
             _bestiary = Button("Bestiary", "<Keyboard>/b");
             _map = Button("Map", "<Keyboard>/tab", "<Keyboard>/m", "<Gamepad>/select");
             for (int i = 0; i < 4; i++) _skillKeys[i] = Button($"Skill{i + 1}", $"<Keyboard>/{i + 1}");
         }
 
+        static readonly System.Collections.Generic.HashSet<(string action, string path)> Bound = new System.Collections.Generic.HashSet<(string, string)>();
+
+        /// <summary>Every plain key or button a player action is bound to (no composites); tests check none is used twice.</summary>
+        public static System.Collections.Generic.IEnumerable<string> SimpleBindings
+        {
+            get
+            {
+                foreach (var b in Bound) yield return b.path;
+            }
+        }
+
         static InputAction Button(string name, params string[] bindings)
         {
+            foreach (var b in bindings) Bound.Add((name, b));
             var a = new InputAction(name, InputActionType.Button);
             foreach (var b in bindings) a.AddBinding(b);
             return a;
         }
 
-        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion, _bag, _bestiary, _map,
+        InputAction[] Actions => new[] { _move, _dodge, _walk, _jump, _light, _heavy, _heavyMod, _block, _lock, _skillMod, _ultimate, _l3, _bomb, _interact, _potion, _bag, _bestiary, _map,
             _skillKeys[0], _skillKeys[1], _skillKeys[2], _skillKeys[3] };
 
         void OnEnable() { foreach (var a in Actions) a.Enable(); }
@@ -107,8 +121,8 @@ namespace Ascend.Game
             if (_bestiary.WasPressedThisFrame() && !UiModal.Any && TryGetComponent<PlayerBestiary>(out var book)) { BestiaryWindow.Instance.Toggle(book); return; }
             if (_map.WasPressedThisFrame() && !UiModal.Any && TryGetComponent<PlayerMap>(out var map)) { WorldMapWindow.Instance.Toggle(map); return; }
             if (_bag.WasPressedThisFrame() && _combat != null && !NpcDialog.IsOpen) { BagWindow.Instance.Toggle(_combat); return; }
-            if (_potion.WasPressedThisFrame() && TryGetComponent<PlayerInventory>(out var inv)) inv.DrinkHealingPotion();
-            if (_interact.WasPressedThisFrame())
+            if (!skillMode && _potion.WasPressedThisFrame() && TryGetComponent<PlayerInventory>(out var inv)) inv.DrinkHealingPotion();
+            if (!skillMode && _interact.WasPressedThisFrame())
             {
                 var quests = GetComponent<PlayerQuests>();
                 var giver = quests != null ? QuestGiver.Nearest(transform.position) : null;
@@ -133,7 +147,9 @@ namespace Ascend.Game
             }
             if (_combat != null)
             {
-                if (!padFaceBusy && _light.WasPressedThisFrame()) _combat.Attack();
+                // Shift + click is the heavy attack, so it is not also a light one.
+                bool shiftClick = _heavyMod.IsPressed() && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
+                if (!padFaceBusy && !shiftClick && _light.WasPressedThisFrame()) _combat.Attack();
                 if (!padFaceBusy && _heavy.WasPressedThisFrame() && !_combat.BeginHeavy()) _buffer.Press(BufferedAction.Heavy);
                 if (_heavy.WasReleasedThisFrame()) _combat.ReleaseHeavy(); // a tap released before the buffered heavy fires still fires (see FireBuffered)
                 _combat.Tick(dt);

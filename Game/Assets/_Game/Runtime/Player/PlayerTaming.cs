@@ -48,7 +48,7 @@ namespace Ascend.Game
             _tame = new InputAction("Tame", InputActionType.Button);
             _tame.AddBinding("<Keyboard>/t"); _tame.AddBinding("<Gamepad>/dpad/left");
             _order = new InputAction("PartnerOrder", InputActionType.Button);
-            _order.AddBinding("<Keyboard>/z"); _order.AddBinding("<Gamepad>/leftShoulder");
+            _order.AddBinding("<Keyboard>/z"); _order.AddBinding("<Gamepad>/dpad/down");
         }
 
         void OnEnable() { _tame.Enable(); _order.Enable(); }

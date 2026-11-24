@@ -64,12 +64,33 @@ namespace Ascend.Game
             double luck = 1 + StyleRewards.DropBonus(_combat.Style.Rank, db.Tuning.Style);
             foreach (var d in LootRoller.Roll(table, _rng, luck))
             {
-                Items.Add(d.ItemId, d.Count);
+                if (Shop.IsMonsterCore(d.ItemId))
+                {
+                    // Cores fall to the ground; everything else is taken on the spot.
+                    var glow = GlowOf(db.Items.TryGetValue(d.ItemId, out var core) ? core.Rank : "F");
+                    LootPickup.Spawn(d.ItemId, d.Count, m.transform.position, transform, glow, p => Gain(p.ItemId, p.Count));
+                }
+                else Gain(d.ItemId, d.Count);
                 if (TryGetComponent<PlayerBestiary>(out var book)) book.Dropped(m.SpeciesId, d.ItemId);
-                string name = db.Items.TryGetValue(d.ItemId, out var it) ? it.Name : d.ItemId;
-                Toast($"+ {name}{(d.Count > 1 ? $" ×{d.Count}" : "")}");
             }
         }
+
+        void Gain(string itemId, int count)
+        {
+            Items.Add(itemId, count);
+            string name = AscendData.Db.Items.TryGetValue(itemId, out var it) ? it.Name : itemId;
+            Toast($"+ {name}{(count > 1 ? $" ×{count}" : "")}");
+        }
+
+        /// <summary>A core glows brighter and warmer with its rank.</summary>
+        static Color GlowOf(string rank) => rank switch
+        {
+            "F" => new Color(0.55f, 0.9f, 1f),
+            "E" => new Color(0.5f, 1f, 0.6f),
+            "D" => new Color(1f, 0.85f, 0.35f),
+            "C" => new Color(1f, 0.55f, 0.3f),
+            _ => new Color(0.85f, 0.5f, 1f),
+        };
 
         /// <summary>Drinks the weakest healing consumable you carry (stats.heal); false when you have none or are at full HP.</summary>
         public bool DrinkHealingPotion()

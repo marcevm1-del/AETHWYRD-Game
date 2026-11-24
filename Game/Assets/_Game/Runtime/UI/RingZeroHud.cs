@@ -38,7 +38,7 @@ namespace Ascend.Game
         void Awake()
         {
             _status = new InputAction("Status", InputActionType.Button);
-            _status.AddBinding("<Keyboard>/tab");
+            _status.AddBinding("<Keyboard>/c");
             _pause = new InputAction("Pause", InputActionType.Button);
             _pause.AddBinding("<Keyboard>/escape"); _pause.AddBinding("<Gamepad>/start");
         }
@@ -218,7 +218,7 @@ namespace Ascend.Game
             }
             SkillSlot(new Rect(bx + 4 * (slot + gap), by, slot, slot), "G", $"Bomb ×{player.FireBombs}", 0);
             bool ready = c.Ultimate != null && c.Awakening >= c.MaxAwakening;
-            SkillSlot(new Rect(bx + 5 * (slot + gap), by, slot, slot), "R", c.Ultimate != null ? (ready ? "READY" : $"{c.Awakening:0}%") : "", 0, ready ? new Color(0.85f, 0.4f, 1f) : (Color?)null);
+            SkillSlot(new Rect(bx + 5 * (slot + gap), by, slot, slot), "X", c.Ultimate != null ? (ready ? "READY" : $"{c.Awakening:0}%") : "", 0, ready ? new Color(0.85f, 0.4f, 1f) : (Color?)null);
 
             // ---- Bottom-right: party order.
             var taming = player.GetComponent<PlayerTaming>();
