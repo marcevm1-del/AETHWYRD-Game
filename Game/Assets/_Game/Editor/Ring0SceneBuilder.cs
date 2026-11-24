@@ -142,8 +142,8 @@ namespace Ascend.EditorTools
             Prim(PrimitiveType.Cube, "Platform", new Vector3(8, 2.2f, 11), new Vector3(6, 0.4f, 6), stone, world);
             // Brindlewick's buildings, gatehouse and palisade (Ring0SceneBuilder.Town.cs).
             BuildTown(world);
-            for (int i = 0; i < 6; i++) // stair steps
-                Prim(PrimitiveType.Cube, $"Step_{i}", new Vector3(-14, 0.15f + i * 0.3f, -4 + i * 0.6f), new Vector3(3, 0.3f + i * 0.6f, 0.6f), stone, world);
+            for (int i = 0; i < 6; i++) // stair steps, 0.3 m each: under the 0.35 m step offset
+                Prim(PrimitiveType.Cube, $"Step_{i}", new Vector3(-14, 0.15f + i * 0.15f, -4 + i * 0.6f), new Vector3(3, 0.3f + i * 0.3f, 0.6f), stone, world);
             for (int i = 0; i < 8; i++) // pillars for camera-collision checks (not in the gateway or the guild hall)
                 if (i != 2 && i != 6) Prim(PrimitiveType.Cylinder, $"Pillar_{i}", new Vector3(Mathf.Cos(i * 0.785f) * 18, 2, Mathf.Sin(i * 0.785f) * 18), new Vector3(1, 2, 1), accent, world);
 
