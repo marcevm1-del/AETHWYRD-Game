@@ -132,9 +132,9 @@ namespace Ascend.Game
         {
             rows.Add(BackRow());
             rows.Add(Header("KEYBOARD AND MOUSE"));
-            foreach (var s in new[] { "Move: W A S D", "Look: mouse", "1 to 4: skills", "G: fire bomb    R: ultimate", "E: talk, gather", "Esc: pause" }) rows.Add(NoteRow(s));
+            foreach (var s in new[] { "W A S D: move    Mouse: look", "Space: dodge (hold: sprint)    F: jump    Alt: walk", "Left click: light attack    Shift + left click: heavy (hold to charge)", "Right click: block and parry    Q or middle click: lock on", "1 to 4: skills    X: ultimate    G: fire bomb    R: potion", "E: talk, gather    T: tame    Z: partner orders    V: swap shoulder", "I: bag    B: bestiary    Tab or M: map    C: status    Esc: pause" }) rows.Add(NoteRow(s));
             rows.Add(Header("CONTROLLER"));
-            foreach (var s in new[] { "Left stick: move    Right stick: look", "Hold RB + face button: skills 1 to 4", "L3 + R3: ultimate", "Start: pause" }) rows.Add(NoteRow(s));
+            foreach (var s in new[] { "Left stick: move    Right stick: look    R3: lock on", "A: jump    B: dodge (hold: sprint)    X: potion    Y: talk, gather", "RB: light attack    RT: heavy    LB: block and parry", "Hold LT + face button: skills 1 to 4    L3 + R3: ultimate", "D-pad: up bomb, down orders, left tame, right bag", "Select: map    Start: pause" }) rows.Add(NoteRow(s));
             rows.Add(Info("Keys cannot be changed yet.", true));
         }
 
@@ -216,6 +216,7 @@ namespace Ascend.Game
         {
             var save = PlayerObject != null ? PlayerObject.GetComponent<PlayerSave>() : null;
             if (save == null) { Line = "There is nothing to save here."; return false; }
+            LootPickup.CollectAll();
             int before = save.Saves;
             save.Save();
             if (save.Saves > before) return true;
