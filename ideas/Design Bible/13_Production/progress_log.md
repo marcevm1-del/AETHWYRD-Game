@@ -6,6 +6,7 @@ Newest first. Each entry is one push to GitHub; the vault copy is pulled right a
 
 | Commit | What changed | Tests |
 |---|---|---|
+| PR 29, playtest 02 | Key layout without double bindings (Tab, Start), souls-style defaults; monster cores drop on the ground. Unity `verify_2026-11-24_1628` (dirty-tree label): player built, PlayMode 228 of 228. Not tried by hand when logged. Known: a played game can stay running after it is closed (cause unknown) | 825 + 228/228 |
 | PR 27 merged (`f51c75a1`) | Playtest 01: pause menu, full screen, sell-all cores and quantities. Unity `verify_2026-11-24_0018` (dirty-tree label, player build skipped) ran on the same code before the last docs-and-metas commit. Not tried by hand | 825 + 225/225 |
 | Scenario skills | Branch `agent/producer/scenario-skills`: 15 MIT skill documents from scenario-labs/skills assigned to 16 agents; no scripts; rules in `.claude/skills/SCENARIO_SKILLS.md` | 825 |
 
