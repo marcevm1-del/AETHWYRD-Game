@@ -2,6 +2,13 @@
 
 Newest first. Each entry is one push to GitHub; the vault copy is pulled right after. Test counts are Core rules + Unity PlayMode. The milestone table and controls are in [[ring0_plan]].
 
+## 2026-11-24
+
+| Commit | What changed | Tests |
+|---|---|---|
+| PR 27 merged (`f51c75a1`) | Playtest 01: pause menu, full screen, sell-all cores and quantities. Unity `verify_2026-11-24_0018` (dirty-tree label, player build skipped) ran on the same code before the last docs-and-metas commit. Not tried by hand | 825 + 225/225 |
+| Scenario skills | Branch `agent/producer/scenario-skills`: 15 MIT skill documents from scenario-labs/skills assigned to 16 agents; no scripts; rules in `.claude/skills/SCENARIO_SKILLS.md` | 825 |
+
 ## 2026-11-23
 
 | Commit | What changed | Tests |

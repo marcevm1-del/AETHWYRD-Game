@@ -165,3 +165,6 @@ Escalation target for:
 - Any cross-system technical conflict
 - Performance budget violations
 - Technology adoption requests
+
+## Extra skills (third-party)
+Read one only when the task needs it, not at the start: `.claude/skills/scenario-unity-expert/SKILL.md`, `.claude/skills/scenario-unity-architecture/SKILL.md`, `.claude/skills/scenario-unity-performance/SKILL.md`. `.claude/skills/SCENARIO_SKILLS.md` overrides them, and so do `CLAUDE.md`, Canon and this file.

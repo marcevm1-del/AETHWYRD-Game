@@ -54,3 +54,6 @@ Unity: `"E:/Unity/Editors/6000.6.7f1/Editor/Unity.exe"` with `-batchmode -projec
 - **Git:** always `git -c safe.directory=E:/Ideas/Project-Ascend ...`; never change global git config. Commit or push only when the task says so (remote `aetheria`, branch `main`), using the commit attribution line the session gives you.
 - **Never:** touch the player's save (`%USERPROFILE%/AppData/LocalLow/DefaultCompany/Game/slot0.json`; screenshot runs use their own sandbox); create accounts; enter keys or passwords; buy anything.
 - **Shell:** bash heredocs containing apostrophes or non-ASCII break; write scripts to a file and run them. Background anything longer than about 2 minutes.
+
+## Extra skills (third-party)
+Read one only when the task needs it, not at the start: `.claude/skills/scenario-unity-shaders/SKILL.md`, `.claude/skills/scenario-unity-rendering-lighting/SKILL.md`, `.claude/skills/scenario-unity-vfx/SKILL.md`, `.claude/skills/scenario-blender-export/SKILL.md`. `.claude/skills/SCENARIO_SKILLS.md` overrides them, and so do `CLAUDE.md`, Canon and this file.
