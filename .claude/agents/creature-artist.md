@@ -49,3 +49,6 @@ This does **not** apply to the existing procedural generators (`ascend_creatures
 - **Git:** always `git -c safe.directory=E:/Ideas/Project-Ascend ...`; never change global git config. Commit or push only when the task says so (remote `aetheria`, branch `main`), using the commit attribution line the session gives you.
 - **Never:** touch the player's save (`%USERPROFILE%/AppData/LocalLow/DefaultCompany/Game/slot0.json`; screenshot runs use their own sandbox); create accounts; enter keys or passwords; buy anything.
 - **Shell:** bash heredocs containing apostrophes or non-ASCII break; write scripts to a file and run them. Background anything longer than about 2 minutes.
+
+## Extra skills (third-party)
+Read one only when the task needs it, not at the start: `.claude/skills/scenario-blender-expert/SKILL.md`, `.claude/skills/scenario-blender-rigging/SKILL.md`, `.claude/skills/scenario-blender-retopology/SKILL.md`, `.claude/skills/scenario-blender-export/SKILL.md`. `.claude/skills/SCENARIO_SKILLS.md` overrides them, and so do `CLAUDE.md`, Canon and this file.

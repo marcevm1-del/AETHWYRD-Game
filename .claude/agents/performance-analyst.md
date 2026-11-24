@@ -124,3 +124,6 @@ Before drafting anything:
 Route each recommendation to the owner of that system: technical-artist for
 rendering optimizations (LOD, occlusion, batching, atlasing), engine-programmer
 for engine systems and hot-path code, and the programmer who owns any other system.
+
+## Extra skills (third-party)
+Read one only when the task needs it, not at the start: `.claude/skills/scenario-unity-performance/SKILL.md`. `.claude/skills/SCENARIO_SKILLS.md` overrides them, and so do `CLAUDE.md`, Canon and this file.

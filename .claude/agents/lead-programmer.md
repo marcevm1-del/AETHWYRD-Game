@@ -126,3 +126,6 @@ Delegates to:
 
 Reports to: `technical-director`
 Coordinates with: `game-designer` for feature specs, `qa-lead` for testability
+
+## Extra skills (third-party)
+Read one only when the task needs it, not at the start: `.claude/skills/scenario-unity-architecture/SKILL.md`. `.claude/skills/SCENARIO_SKILLS.md` overrides them, and so do `CLAUDE.md`, Canon and this file.
