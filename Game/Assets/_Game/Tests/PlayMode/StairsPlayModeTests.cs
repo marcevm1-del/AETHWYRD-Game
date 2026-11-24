@@ -45,9 +45,12 @@ namespace Ascend.Game.Tests
         void ManorStairs(float firstTop, float rise)
         {
             for (int i = 0; i < 4; i++) { float top = firstTop + i * rise; Box(new Vector3(500f, top / 2f, 499f + i * 0.35f), new Vector3(4f, top, 0.6f)); }
+            // The landing is long: at run speed the player covers about 7.8 m, and must not run off the far end.
             float landing = firstTop + 3 * rise;
-            Box(new Vector3(500f, landing / 2f, 501.5f), new Vector3(4f, landing, 2.6f));
+            Box(new Vector3(500f, landing / 2f, 504.6f), new Vector3(4f, landing, 8.8f));
         }
+
+        string Where => "ended at " + _motor.transform.position.ToString("F2");
 
         [UnityTest]
         public IEnumerator ManorStairs_AsRebuilt_AreClimbed()
@@ -55,16 +58,17 @@ namespace Ascend.Game.Tests
             Player(PlayerMotor.StepHeight);
             ManorStairs(0.2f, 0.2f);
             yield return WalkNorth(1.2f);
-            Assert.Greater(_motor.transform.position.y, 0.75f, "standing on the landing");
+            Assert.Greater(_motor.transform.position.y, 0.75f, Where);
+            Assert.Greater(_motor.transform.position.z, 501f, Where);
         }
 
         [UnityTest]
-        public IEnumerator ManorStairs_InTheOldShape_AreNot()
+        public IEnumerator ManorStairs_InTheOldShape_StopTheOldStepHeight()
         {
-            Player(PlayerMotor.StepHeight);
+            Player(0.35f);
             ManorStairs(0.2f, 0.4f);
             yield return WalkNorth(1.2f);
-            Assert.Less(_motor.transform.position.y, 1.0f, "0.4 m rises on 0.35 m treads: why the model had to change");
+            Assert.Less(_motor.transform.position.z, 500f, "the reported bug: " + Where);
         }
 
         [UnityTest]
@@ -73,7 +77,8 @@ namespace Ascend.Game.Tests
             Player(PlayerMotor.StepHeight);
             Box(new Vector3(500f, 0.4f, 500f), new Vector3(4f, 0.8f, 1f));
             yield return WalkNorth(1.2f);
-            Assert.Less(_motor.transform.position.y, 0.3f);
+            Assert.Less(_motor.transform.position.y, 0.3f, Where);
+            Assert.Less(_motor.transform.position.z, 499.5f, "stopped in front of it, " + Where);
         }
 
         [Test]

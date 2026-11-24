@@ -49,7 +49,7 @@ namespace Ascend.Game
         public double? DodgeStartedAt => IsDodging ? _dodgeStartedAt : (double?)null;
         double _dodgeStartedAt;
 
-        /// <summary>The tallest step the player walks up: two of the 0.2 m risers, because a 0.35 m tread is no deeper than the body.</summary>
+        /// <summary>The tallest step the player walks up.</summary>
         public const float StepHeight = 0.45f;
 
         void Awake()
