@@ -49,9 +49,12 @@ namespace Ascend.Game
         public double? DodgeStartedAt => IsDodging ? _dodgeStartedAt : (double?)null;
         double _dodgeStartedAt;
 
+        /// <summary>The tallest step the player walks up (the town kit has 0.4 m rises).</summary>
+        public const float StepHeight = 0.45f;
+
         void Awake()
         {
-            _cc = GetComponent<CharacterController>();
+            _cc = GetComponent<CharacterController>(); _cc.stepOffset = StepHeight;
             var t = AscendData.Db.Tuning;
             _move = t.Movement;
             _dodge = t.Dodge;

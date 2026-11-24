@@ -1435,7 +1435,7 @@ def manor():
         dormer(p, x, -2.6, 8.6, roof="slate", wall="plaster")
     # The grand entrance: stairs, two columns and a balcony over the door.
     for i in range(4):
-        p.box((0, -D / 2 - 1.6 + i * 0.35, 0.1 + i * 0.2), (4.0 - i * 0.3, 0.6, 0.2 + i * 0.4), "stone")
+        p.box((0, -D / 2 - 1.6 + i * 0.35, 0.1 + i * 0.1), (4.0 - i * 0.3, 0.6, 0.2 + i * 0.2), "stone")
     for x in (-1.4, 1.4):
         p.cylinder((x, -D / 2 - 0.9, 0.8 + 1.8), 0.25, 3.6, "white", segs=10)
     balcony(p, 0, -D / 2 - 0.1, 4.5, w=3.6)

@@ -155,7 +155,7 @@ namespace Ascend.EditorTools
             // Player: CharacterController root with a capsule body and a "nose" to show facing.
             var p = new GameObject("Player");
             var cc = p.AddComponent<CharacterController>();
-            cc.height = 1.8f; cc.radius = 0.35f; cc.center = new Vector3(0, 0.9f, 0); cc.stepOffset = 0.35f; cc.slopeLimit = 50f;
+            cc.height = 1.8f; cc.radius = 0.35f; cc.center = new Vector3(0, 0.9f, 0); cc.stepOffset = PlayerMotor.StepHeight; cc.slopeLimit = 50f;
             Prim(PrimitiveType.Capsule, "Body", new Vector3(0, 0.9f, 0), new Vector3(0.7f, 0.9f, 0.7f), player, p.transform, keepCollider: false);
             Prim(PrimitiveType.Cube, "Facing", new Vector3(0, 1.45f, 0.33f), new Vector3(0.18f, 0.12f, 0.2f), accent, p.transform, keepCollider: false);
             p.AddComponent<PlayerMotor>();
