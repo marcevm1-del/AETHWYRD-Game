@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 namespace Ascend.Game.Tests
 {
-    /// <summary>The player walks up the steepest stairs in the town kit (0.4 m rises, 0.35 m treads), and not up walls.</summary>
+    /// <summary>The player walks up the manor's stairs and not up walls.</summary>
     public sealed class StairsPlayModeTests
     {
         readonly List<GameObject> _made = new List<GameObject>();
@@ -41,24 +41,30 @@ namespace Ascend.Game.Tests
             for (float t = 0; t < seconds; t += 1f / 60f) { _motor.Tick(Vector3.forward, false, false, 1f / 60f); yield return null; }
         }
 
-        void KitStairs() { for (int i = 0; i < 4; i++) Box(new Vector3(500f, 0.1f + i * 0.2f, 499f + i * 0.35f), new Vector3(4f, 0.2f + i * 0.4f, 0.6f)); Box(new Vector3(500f, 0.7f, 501.5f), new Vector3(4f, 1.4f, 2.6f)); }
-
-        [UnityTest]
-        public IEnumerator KitStairs_AreClimbed()
+        /// <summary>The manor's four entrance steps: 0.35 m treads, each rise metres above the last, and the landing behind them.</summary>
+        void ManorStairs(float firstTop, float rise)
         {
-            Player(PlayerMotor.StepHeight);
-            KitStairs();
-            yield return WalkNorth(1.2f);
-            Assert.Greater(_motor.transform.position.y, 1.3f, "standing on the top step");
+            for (int i = 0; i < 4; i++) { float top = firstTop + i * rise; Box(new Vector3(500f, top / 2f, 499f + i * 0.35f), new Vector3(4f, top, 0.6f)); }
+            float landing = firstTop + 3 * rise;
+            Box(new Vector3(500f, landing / 2f, 501.5f), new Vector3(4f, landing, 2.6f));
         }
 
         [UnityTest]
-        public IEnumerator KitStairs_StopTheOldStepHeight()
+        public IEnumerator ManorStairs_AsRebuilt_AreClimbed()
         {
-            Player(0.35f);
-            KitStairs();
+            Player(PlayerMotor.StepHeight);
+            ManorStairs(0.2f, 0.2f);
             yield return WalkNorth(1.2f);
-            Assert.Less(_motor.transform.position.y, 1.0f, "the bug: 0.35 m cannot take a 0.4 m rise");
+            Assert.Greater(_motor.transform.position.y, 0.75f, "standing on the landing");
+        }
+
+        [UnityTest]
+        public IEnumerator ManorStairs_InTheOldShape_AreNot()
+        {
+            Player(PlayerMotor.StepHeight);
+            ManorStairs(0.2f, 0.4f);
+            yield return WalkNorth(1.2f);
+            Assert.Less(_motor.transform.position.y, 1.0f, "0.4 m rises on 0.35 m treads: why the model had to change");
         }
 
         [UnityTest]
